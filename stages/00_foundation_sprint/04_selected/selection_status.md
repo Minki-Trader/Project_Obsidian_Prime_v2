@@ -2,22 +2,23 @@
 
 ## Current Read
 
-- current incumbent: `none`
-- current challenger: `none`
-- current read: `v2 is intentionally held in foundation mode until state, artifact identity, and parity planning are explicit`
+- current incumbent: `none, by policy`
+- current challenger: `none, by policy`
+- current read: `v2 is intentionally held in foundation mode until the reboot charter, dataset contract, runtime parity closure, and artifact identity closure are explicit`
 - scoreboard used: `foundation_stage_read`
 
 ## Promotion Gates
 
 - `workspace_state.yaml` must stay current and readable
 - durable registers must exist before new heavy artifacts appear
-- the first dataset-freeze and parity-harness plan must be explicit before opening a new alpha stage
+- the first dataset-freeze, row-state, parity, and artifact-identity contracts must be explicit before opening a new alpha stage
 
 ## Scoreboards
 
 - structural_scout: `n/a`
 - regular_risk_execution: `n/a`
-- parity / special scoreboard: `legacy evidence exists, v2 parity not started`
+- parity / special scoreboard: `legacy evidence exists, v2 parity not yet re-closed`
+- foundation interpretation: `this is a closure-readiness read, not an alpha comparison board`
 
 ## Headline
 
@@ -36,8 +37,8 @@
 ## Diagnostics
 
 - legacy lesson carried: `localized parity in the old project stayed open until contract-matching ATR and Stochastic logic replaced MT5 built-ins`
-- legacy operating hint carried: `34D contract-aligned min_margin=0.06000 was the best tested legacy contract candidate after the Stage 42 helper-path cleanup`
-- v2 interpretation rule: `those are prior signals, not current v2 promotion facts`
+- legacy operating hint carried: `34D contract-aligned min_margin=0.06000 remains prior evidence only after the Stage 42 helper-path cleanup`
+- v2 interpretation rule: `those are archive notes and design signals, not current v2 promotion facts`
 
 ## Execution
 
@@ -45,6 +46,10 @@
 - placeholder weights copied: `yes`
 - policy skeleton created: `yes`
 - registers created: `yes`
+- Stage 01 to 05 roadmap defined: `yes`
+- foundation closure path: `01_dataset_contract_freeze -> 02_feature_dataset_closure -> 03_runtime_parity_closure -> 04_artifact_identity_closure -> 05_exploration_kernel_freeze`
+- dataset and row-state contract written: `yes`
+- runtime parity and artifact-identity contract written: `yes`
 - first dataset freeze card: `not written yet`
 - first parity report: `not written yet`
 
@@ -52,13 +57,13 @@
 
 - keep_or_replace: `keep foundation mode`
 - promoted / kept / closed: `Stage 00 remains open`
-- next required evidence: `explicit dataset-freeze plan plus explicit parity-harness plan`
+- next required evidence: `explicit dataset contract closure plus explicit runtime parity closure plus explicit artifact identity closure`
 
 ## Follow-Up Bias
 
 - continue: `small, durable foundation tasks only`
-- do_not_reopen_without_new_hypothesis: `broad alpha search before Stage 00 closes`
-- next best question: `what is the minimal v2 fixture and registry set needed to restart safely?`
+- do_not_reopen_without_new_hypothesis: `new alpha or range stage before Stage 01 to 05 closure is explicit`
+- next best question: `what is the minimal v2 dataset, parity, and artifact bundle needed to open exploration-only mode safely?`
 
 ## Report Refs
 

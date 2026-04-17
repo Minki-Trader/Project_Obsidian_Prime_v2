@@ -1,6 +1,6 @@
 # Current Working State
 
-- updated_on: `2026-04-16`
+- updated_on: `2026-04-18`
 - workspace: `Project_Obsidian_Prime_v2`
 - project_mode: `foundation_restart`
 - active_stage: `00_foundation_sprint`
@@ -8,21 +8,26 @@
 
 ## Read This First
 
-1. `AGENTS.md`
-2. `docs/workspace/workspace_state.yaml`
-3. `stages/00_foundation_sprint/00_spec/stage_brief.md`
-4. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-5. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-6. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
-7. `stages/00_foundation_sprint/03_reviews/review_index.md`
-8. `stages/00_foundation_sprint/04_selected/selection_status.md`
+1. `README.md`
+2. `AGENTS.md`
+3. `docs/workspace/workspace_state.yaml`
+4. `stages/00_foundation_sprint/00_spec/stage_brief.md`
+5. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
+6. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+7. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+8. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
+9. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
+10. `stages/00_foundation_sprint/03_reviews/review_index.md`
+11. `stages/00_foundation_sprint/04_selected/selection_status.md`
 
 ## Current Read
 
-- this workspace is a clean restart, not a continuation of the old stage tree
-- no v2 alpha incumbent has been promoted yet
-- the v2 priority is foundation quality, not new alpha search
-- the old project remains the evidence source for legacy lessons, but not the automatic source of current v2 truth
+- this workspace is a concept-preserving reboot, not a legacy continuation
+- no v2 alpha incumbent has been promoted yet, by policy rather than by delay
+- current v2 truth begins only after the first dataset freeze, the first parity harness, and the first artifact identity closure exist
+- until those closures exist, the workspace stays in foundation mode
+- legacy winners remain archive notes and design evidence only; they do not define current v2 truth
+- the shared root skeleton now treats `docs/`, `data/`, and `foundation/` as the reusable base while `stages/` stays stage-local
 
 ## Legacy Lessons Carried Forward
 
@@ -35,14 +40,25 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. keep state and durable decisions in Git-tracked docs from day one
-2. define the first v2 dataset freeze and registry identities
-3. define the first v2 parity harness plan before any new alpha work
-4. keep the Stage 00 deliverables small, explicit, and re-entry friendly
+1. lock the concept contract and reboot charter language across root and Stage 00 documents
+2. define `01_dataset_contract_freeze` and its row-state closure before opening alpha work
+3. define `02_feature_dataset_closure` and the first dataset freeze identity
+4. define `03_runtime_parity_closure` and `04_artifact_identity_closure`
+5. keep `05_exploration_kernel_freeze` closed before opening new range stages
+
+## Foundation Closure Path
+
+1. `00_foundation_sprint`
+2. `01_dataset_contract_freeze`
+3. `02_feature_dataset_closure`
+4. `03_runtime_parity_closure`
+5. `04_artifact_identity_closure`
+6. `05_exploration_kernel_freeze`
 
 ## Do Not Do First
 
 - do not open a fresh alpha stage before Stage 00 foundation gates close
+- do not treat legacy winners or legacy operating defaults as the starting line for v2
 - do not treat bundle handoff verification as full parity closure
 - do not treat platform built-ins as contract-equivalent just because they are convenient
 - do not let durable conclusions live only in branch notes or scratch files

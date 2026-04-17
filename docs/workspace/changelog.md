@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-04-18
+
+- aligned the workspace charter around a concept-preserving reboot and explicit foundation-first closure language
+- clarified the contract hierarchy as three constitutional contracts plus one auxiliary frozen mirror
+- added dataset/row-state and runtime parity/artifact identity supplemental contracts for Stage 00 foundation closure
+- aligned Stage 00 documents around closure-readiness instead of alpha comparison semantics
+
+## 2026-04-17
+
+- aligned the shared non-stage workspace skeleton across `docs/`, `data/`, and `foundation/`
+- added tracked README placeholders so the `data/` tree can stay visible in Git while heavy artifacts remain local
+- added `docs/archive/` and foundation subfolders for collectors, features, pipelines, MT5 helpers, parity assets, and shared reports
+
 ## 2026-04-16
 
 - created the clean restart workspace `Project_Obsidian_Prime_v2`

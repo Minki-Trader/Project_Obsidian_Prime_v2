@@ -24,5 +24,5 @@
 
 ## Open Questions
 
-- what is the first frozen v2 dataset identity?
-- what is the smallest v2 parity fixture set that should exist before alpha work resumes?
+- what is the first frozen v2 dataset and row-state identity?
+- what is the smallest v2 parity and artifact-identity fixture set that should exist before alpha work resumes?

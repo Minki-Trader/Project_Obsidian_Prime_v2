@@ -5,7 +5,7 @@
 - `decision_id`: `2026-04-16_v2_restart`
 - `reviewed_on`: `2026-04-16`
 - `owner`: `codex + user`
-- `decision`: `start a clean v2 workspace next to the legacy project and treat Stage 00 as a foundation sprint`
+- `decision`: `start a clean v2 workspace next to the legacy project and treat Stage 00 as a foundation sprint for a concept-preserving reboot`
 
 ## What Was Decided
 
@@ -13,10 +13,12 @@
   - preserve the legacy project untouched
   - create `Project_Obsidian_Prime_v2` as a sibling workspace
   - copy the core contract documents and placeholder weights
-  - start v2 with state, registry, and parity-governance setup before new alpha search
+  - preserve the concept contract while cutting winner lineage and operating-default inheritance
+  - start v2 with state, registry, dataset, and parity-governance setup before new alpha search
 - not adopted:
   - continuing the old stage tree in-place
   - treating legacy Stage 42 as an automatic v2 operating promotion
+  - treating legacy winners or thresholds as automatic v2 starting points
   - reopening broad alpha search immediately
 
 ## Why
@@ -27,9 +29,10 @@
 
 ## What Remains Open
 
-- the first v2 dataset freeze id and fingerprint
-- the first v2 parity harness plan and gold fixture set
-- whether the legacy `34D` contract-aligned `min_margin=0.06000` line survives as a v2 operating reference after revalidation
+- the first v2 dataset freeze id, row-state contract, and feature-order fingerprint
+- the first v2 parity harness, artifact identity contract, and gold fixture set
+- the explicit close criteria for Stages `01` to `05` before exploration-only mode opens
+- whether any legacy contract-aligned evidence remains informative after independent v2 revalidation
 
 ## Evidence Used
 
@@ -42,5 +45,6 @@
 
 - `current_operating_reference updated?`: `no`
 - `shadow updated?`: `no`
+- `automatic carry-forward from legacy?`: `no`
 - `workspace_state update needed?`: `yes, completed on workspace creation`
-- `next mandatory follow-up`: `close Stage 00 foundation gates before any new alpha stage`
+- `next mandatory follow-up`: `close the Stage 01 to 04 foundation gates before any new alpha stage`

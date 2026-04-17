@@ -13,14 +13,23 @@ This workspace is the clean-restart FPMarkets `US100` `M5` data, feature, runtim
 - Python-led orchestration, MT5 as execution and verification engine
 - one regular operating alpha line at a time
 - diagnostic evidence is not the same thing as operating promotion
+- legacy is a lesson source, not an automatic truth source
+- concept contract is inherited, promotion history is not
+- foundation closure comes before new alpha search
 
 ## Contract Hierarchy
 
 - `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
 - `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
 - `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+- auxiliary frozen mirror: `docs/contracts/feature-list_fpmarkets_v2.txt`
 
-Implementation notes, reviews, and selection files do not override those contracts.
+Implementation notes, review files, selection files, and the auxiliary frozen mirror do not override the three constitutional contracts.
+
+## Working Vocabulary
+
+- use `foundation gate`, `parity closure`, `artifact identity closure`, and `promotion gate`
+- avoid `release gate` and `release closure`
 
 ## Directory Rules
 
@@ -65,10 +74,19 @@ Implementation notes, reviews, and selection files do not override those contrac
 ## Stage Governance
 
 - start v2 with `00_foundation_sprint` before any new alpha search
+- keep the foundation closure path explicit before opening range exploration:
+  - `00_foundation_sprint`
+  - `01_dataset_contract_freeze`
+  - `02_feature_dataset_closure`
+  - `03_runtime_parity_closure`
+  - `04_artifact_identity_closure`
+  - `05_exploration_kernel_freeze`
 - every new stage needs a clear brief or charter before branching into runs
 - diagnostic stages can close questions but cannot promote the operating line by themselves
 - if execution semantics change, keep `structural_scout` and `regular_risk_execution` separate
 - new telemetry cannot become a promotion gate until the incumbent/reference family is backfilled
+- treat legacy winners, challengers, and operating defaults as archived evidence, not automatic v2 starting points
+- do not open a new alpha or range stage until the foundation closure path is explicitly closed
 
 ## Document Placement
 
@@ -77,19 +95,23 @@ Implementation notes, reviews, and selection files do not override those contrac
 - `stages/*/03_reviews/review_index.md` is the active stage reading map
 - `docs/decisions/*.md` records durable operating decisions
 - `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
+- `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
 - heavy local artifacts may stay outside Git, but their identity must stay in Git-tracked docs
 
 ## Re-entry Rule
 
 Read in this order:
 
-1. `AGENTS.md`
-2. `docs/workspace/workspace_state.yaml`
-3. `docs/context/current_working_state.md`
-4. `stages/00_foundation_sprint/00_spec/stage_brief.md`
-5. the three contract docs in `docs/contracts/`
-6. the latest active stage `03_reviews/review_index.md`
-7. the latest active stage `04_selected/selection_status.md`
+1. `README.md`
+2. `AGENTS.md`
+3. `docs/workspace/workspace_state.yaml`
+4. `docs/context/current_working_state.md`
+5. `stages/00_foundation_sprint/00_spec/stage_brief.md`
+6. the three constitutional contracts in `docs/contracts/`
+7. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
+8. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
+9. the latest active stage `03_reviews/review_index.md`
+10. the latest active stage `04_selected/selection_status.md`
 
 ## Change Discipline
 

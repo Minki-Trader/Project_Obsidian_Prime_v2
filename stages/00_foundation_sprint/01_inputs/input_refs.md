@@ -10,6 +10,11 @@
 - `docs/context/migration_note_fpmarkets_v2.md`
 - `foundation/config/top3_monthly_weights_fpmarkets_v2.csv`
 
+## Stage 00 Contract Extensions
+
+- `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
+- `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
+
 ## Legacy Evidence Sources
 
 The old workspace remains preserved as a sibling folder. The following legacy reads shaped the v2 restart direction:

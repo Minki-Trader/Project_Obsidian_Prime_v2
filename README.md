@@ -1,8 +1,8 @@
 # Project Obsidian Prime v2
 
-This workspace is a clean restart for the FPMarkets `US100` `M5` pipeline.
+This workspace is a concept-preserving reboot for the FPMarkets `US100` `M5` pipeline.
 
-The old project remains preserved next to this folder. This workspace starts from the same contract philosophy, but resets the operating surface so a new thread can re-enter quickly without inheriting stage clutter, stale runtime assumptions, or undocumented artifact identity.
+The old project remains preserved next to this folder. This workspace inherits the concept contract of Obsidian Prime, but deliberately resets alpha lineage, operating defaults, and stage-to-stage inheritance so a new thread can re-enter quickly without carrying forward stale promotion logic, undocumented artifact identity, or partial parity assumptions.
 
 ## Read First
 
@@ -13,6 +13,8 @@ The old project remains preserved next to this folder. This workspace starts fro
 5. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
 6. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
 7. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+8. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
+9. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
 
 ## Current Mode
 
@@ -23,14 +25,40 @@ The old project remains preserved next to this folder. This workspace starts fro
 
 ## Root Map
 
-- `docs/`: contracts, policies, workspace state, decisions, registers, templates
-- `data/`: raw and processed artifacts only
-- `foundation/`: reusable shared code and configuration
+- `docs/`: contracts, policies, workspace state, decisions, registers, templates, archive notes
+- `data/`: shared raw, processed, and snapshot roots; heavy contents stay local and only the skeleton is tracked
+- `foundation/`: reusable shared code, MT5/runtime parity helpers, reports, and configuration
 - `stages/`: stage-specific work history and selected reads
+
+## Shared Skeleton
+
+- `docs/archive/`: sealed legacy lessons and carry-forward notes
+- `data/raw/mt5_bars/m5/`: broker-native `M5` source bars by symbol
+- `data/raw/real_ticks/us100/`: optional `US100` real-tick source exports for tester/runtime checks
+- `data/processed/datasets/`: reusable dataset outputs
+- `data/processed/coverage_audits/`: shared row/alignment audit artifacts
+- `data/processed/runtime_snapshots/`: shared runtime parity snapshots
+- `data/snapshots/`: frozen identity snapshots that are reusable across stages
+- `foundation/collectors/`: source loaders and export collectors
+- `foundation/features/`: contract-aligned feature helpers
+- `foundation/pipelines/`: shared dataset and bundle pipelines
+- `foundation/mt5/`: MT5-facing runtime helpers, templates, or wrappers
+- `foundation/parity/`: Python to MT5 comparison helpers and fixtures
+- `foundation/reports/`: reusable shared notes and audit writeups
+
+## Foundation Roadmap
+
+- `00_foundation_sprint`: align the reboot charter, read path, and durable state
+- `01_dataset_contract_freeze`: freeze dataset meaning, row states, and shared input semantics
+- `02_feature_dataset_closure`: close deterministic parser output on the frozen `58`-feature contract surface
+- `03_runtime_parity_closure`: close Python to MT5 parity on the contract surface
+- `04_artifact_identity_closure`: close machine-readable dataset, bundle, runtime, and report identity
+- `05_exploration_kernel_freeze`: freeze the exploration kernel so later stages only change search variables
 
 ## Intent
 
-- keep the strategy concept
-- keep the contract-first runtime philosophy
-- rebuild state, artifact identity, and parity discipline before new alpha search
-- make new-thread re-entry fast and low-risk
+- keep the strategy concept and its contract surface
+- keep the contract-first runtime philosophy while cutting legacy winner lineage and operating defaults
+- close dataset, parity, and artifact identity foundations before any new alpha search
+- enter exploration-only mode only after the foundation closure path is explicit and closed
+- make new-thread re-entry fast, low-risk, and unambiguous
