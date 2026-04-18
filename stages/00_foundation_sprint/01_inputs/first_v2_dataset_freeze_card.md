@@ -22,7 +22,7 @@
 ## Feature Contract
 - feature_contract_version: `docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-16`
 - parser_contract_version: `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-16`
-- feature_order_hash: `pending_first_materialized_export`
+- feature_order_hash: `fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2`
 - weights_version: `foundation/config/top3_monthly_weights_fpmarkets_v2.csv@2026-04-16 (placeholder_equal_weight)`
 
 ## Row Summary
@@ -35,10 +35,10 @@
 - main_output_path: `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/features.parquet`
 - validity_output_path: `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/row_validity_report.json`
 - summary_json_path: `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/dataset_summary.json`
-- artifact_fingerprints: `feature_order_hash=pending_first_materialized_export|features_parquet_sha256=pending_first_materialized_export|dataset_summary_sha256=pending_first_materialized_export`
+- artifact_fingerprints: `feature_order_hash=fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2|features_parquet_sha256=pending_first_materialized_export|dataset_summary_sha256=pending_first_materialized_export`
 
 ## Notes
 - known weak periods: `not yet audited in v2`
 - known symbol issues: `GOOGL.xnas is the contract Google symbol and exact timestamp matching remains required across all required external symbols`
 - placeholder caveats: `top3 monthly weights remain an equal-weight placeholder, so this card is a planning freeze and not yet a materialized dataset freeze`
-- reuse guidance: `safe for Stage 00 naming and identity planning; not sufficient for exploration-only mode until row summary, source identities, and feature fingerprint are materialized`
+- reuse guidance: `safe for Stage 00 naming and identity planning; contract-order feature fingerprint is now fixed, but row summary and source identities must still be materialized before exploration-only mode`

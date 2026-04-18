@@ -11,6 +11,9 @@
 - widened `artifact_registry.csv` so dataset, fixture, bundle, runtime, and report identity can become machine-readable
 - added artifact-registry serialization rules so composite CSV fields can stay machine-readable without ad hoc prose
 - wrote the first v2 planning freeze card and registered it as a draft Stage 00 identity artifact
+- fixed the contract-order feature hash for the planning freeze using the frozen 58-feature order
+- wrote the first planning gold fixture inventory and first planning runtime parity report scaffold
+- aligned Stage 00 live docs so remaining work now points only to materialized row summaries, bound fixture timestamps, and evaluated parity results
 
 ## 2026-04-17
 

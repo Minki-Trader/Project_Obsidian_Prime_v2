@@ -50,7 +50,10 @@
 - `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
 - `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
 - `docs/registers/*`
+- `stages/00_foundation_sprint/01_inputs/first_v2_dataset_freeze_card.md`
+- `stages/00_foundation_sprint/01_inputs/first_v2_gold_fixture_inventory.md`
 - `stages/00_foundation_sprint/03_reviews/review_index.md`
+- `stages/00_foundation_sprint/03_reviews/first_v2_runtime_parity_report.md`
 - `stages/00_foundation_sprint/04_selected/selection_status.md`
 
 ## Foundation Closure Path
@@ -64,5 +67,5 @@
 
 ## Close Bias
 
-- close Stage 00 only after the Stage 01 to 05 closure path is explicit and the first dataset, parity, and artifact-identity contracts are defined
+- close Stage 00 only after the Stage 01 to 05 closure path is explicit, the first planning freeze/fixture/report artifacts exist, and the remaining materialized blockers are made explicit in live state docs
 - do not let Stage 00 turn into a broad design rabbit hole

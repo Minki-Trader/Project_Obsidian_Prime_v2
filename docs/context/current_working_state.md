@@ -29,7 +29,8 @@
 - legacy winners remain archive notes and design evidence only; they do not define current v2 truth
 - the shared root skeleton now treats `docs/`, `data/`, and `foundation/` as the reusable base while `stages/` stays stage-local
 - the supporting freeze/parity templates and artifact registry schema are now aligned to the Stage 00 supplemental contracts so the first reusable evidence pack can be written without ad hoc fields
-- the first planning freeze card now exists for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`, but its row summary, source identities, and feature fingerprint are still pending the first materialized export
+- the first planning freeze card now exists for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`, and its contract-order feature fingerprint is now fixed
+- the first planning gold fixture inventory and first planning runtime parity report now exist, but all snapshot-backed timestamps, row summaries, and parity results remain pending the first materialized export
 
 ## Legacy Lessons Carried Forward
 
@@ -42,10 +43,10 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. replace the planning-freeze placeholders with the first materialized row summary, source identities, and feature-order fingerprint
-2. write the first gold fixture inventory and link it into artifact identity
-3. write the first `03_runtime_parity_closure` evidence pack on top of that fixture set
-4. keep `04_artifact_identity_closure` explicit and machine-readable
+1. replace the planning-freeze placeholders with the first materialized row summary and source identities
+2. bind exact timestamps and snapshot refs into `fixture_fpmarkets_v2_runtime_minimum_0001`
+3. replace the planning parity scaffold with the first evaluated `03_runtime_parity_closure` evidence pack
+4. keep `04_artifact_identity_closure` explicit and machine-readable across dataset, fixture, snapshot, and parity artifacts
 5. keep `05_exploration_kernel_freeze` closed before opening new range stages
 
 ## Foundation Closure Path

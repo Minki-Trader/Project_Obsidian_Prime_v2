@@ -51,15 +51,15 @@
 - dataset and row-state contract written: `yes`
 - runtime parity and artifact-identity contract written: `yes`
 - foundation evidence templates aligned: `yes`
-- first dataset freeze card: `yes (planning freeze only; materialized export fields pending)`
-- first gold fixture inventory: `not written yet`
-- first parity report: `not written yet`
+- first dataset freeze card: `yes (planning freeze with fixed contract-order feature hash; materialized row summary and source identities still pending)`
+- first gold fixture inventory: `yes (planning inventory only; exact timestamps and source refs pending)`
+- first parity report: `yes (planning scaffold only; evaluated parity results and snapshot artifacts pending)`
 
 ## Decision
 
 - keep_or_replace: `keep foundation mode`
 - promoted / kept / closed: `Stage 00 remains open`
-- next required evidence: `materialized dataset row summary and feature-order fingerprint plus explicit gold fixture inventory plus explicit runtime parity closure plus explicit artifact identity closure`
+- next required evidence: `materialized dataset row summary and source identities plus bound fixture timestamps/source refs plus explicit runtime parity closure plus explicit artifact identity closure`
 
 ## Follow-Up Bias
 
@@ -71,5 +71,8 @@
 
 - `../00_spec/stage_brief.md`
 - `../01_inputs/input_refs.md`
+- `../01_inputs/first_v2_dataset_freeze_card.md`
+- `../01_inputs/first_v2_gold_fixture_inventory.md`
+- `../03_reviews/first_v2_runtime_parity_report.md`
 - `../../../../docs/context/current_working_state.md`
 - `../../../../docs/decisions/2026-04-16_v2_restart_decision.md`

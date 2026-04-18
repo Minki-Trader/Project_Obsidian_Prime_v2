@@ -4,7 +4,8 @@
 
 1. `../00_spec/stage_brief.md`
 2. `../01_inputs/input_refs.md`
-3. `../04_selected/selection_status.md`
+3. `first_v2_runtime_parity_report.md`
+4. `../04_selected/selection_status.md`
 
 ## Latest Regular Read
 
@@ -15,7 +16,7 @@
 ## Latest Structural / Diagnostic Read
 
 - structural read: `not used`
-- diagnostic read: `legacy evidence only; no v2 parity report yet`
+- diagnostic read: `planning parity scaffold exists, but no v2 evaluated parity report yet`
 - do not confuse with regular line: `legacy Stage 40 to 42 evidence guides design, but does not define current v2 truth`
 
 ## Closed Branches
@@ -24,5 +25,5 @@
 
 ## Open Questions
 
-- what are the first materialized row summary, source identities, and feature-order fingerprint for the v2 planning freeze?
-- what is the smallest v2 parity and artifact-identity fixture set that should exist before alpha work resumes?
+- what are the first materialized row summary and source identities for the v2 planning freeze?
+- which exact timestamps, snapshot refs, and evaluated parity results will turn the planning fixture and report pair into reusable Stage 00 evidence?

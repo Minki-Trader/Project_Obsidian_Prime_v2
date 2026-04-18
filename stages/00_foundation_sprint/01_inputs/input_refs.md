@@ -18,6 +18,7 @@
 ## Stage 00 Planning Evidence
 
 - `stages/00_foundation_sprint/01_inputs/first_v2_dataset_freeze_card.md`
+- `stages/00_foundation_sprint/01_inputs/first_v2_gold_fixture_inventory.md`
 
 ## Legacy Evidence Sources
 
@@ -32,6 +33,6 @@ The old workspace remains preserved as a sibling folder. The following legacy re
 
 ## Immediate Missing Inputs
 
-- first materialized dataset row summary and feature-order fingerprint for the v2 planning freeze
-- first v2 parity report
-- first v2 gold fixture inventory
+- first materialized dataset row summary and source identities for the v2 planning freeze
+- exact closed-bar timestamps and snapshot refs for `fixture_fpmarkets_v2_runtime_minimum_0001`
+- first evaluated runtime parity results for `report_fpmarkets_v2_runtime_parity_0001`
