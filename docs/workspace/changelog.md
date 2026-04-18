@@ -9,6 +9,8 @@
 - aligned the dataset freeze and runtime parity templates to the supplemental contracts instead of looser placeholder fields
 - added a reusable gold fixture inventory template for the first v2 parity fixture pack
 - widened `artifact_registry.csv` so dataset, fixture, bundle, runtime, and report identity can become machine-readable
+- added artifact-registry serialization rules so composite CSV fields can stay machine-readable without ad hoc prose
+- wrote the first v2 planning freeze card and registered it as a draft Stage 00 identity artifact
 
 ## 2026-04-17
 

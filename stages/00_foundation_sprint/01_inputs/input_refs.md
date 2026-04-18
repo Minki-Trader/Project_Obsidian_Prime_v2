@@ -15,6 +15,10 @@
 - `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
 - `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
 
+## Stage 00 Planning Evidence
+
+- `stages/00_foundation_sprint/01_inputs/first_v2_dataset_freeze_card.md`
+
 ## Legacy Evidence Sources
 
 The old workspace remains preserved as a sibling folder. The following legacy reads shaped the v2 restart direction:
@@ -28,6 +32,6 @@ The old workspace remains preserved as a sibling folder. The following legacy re
 
 ## Immediate Missing Inputs
 
-- first v2 dataset freeze card
+- first materialized dataset row summary and feature-order fingerprint for the v2 planning freeze
 - first v2 parity report
 - first v2 gold fixture inventory

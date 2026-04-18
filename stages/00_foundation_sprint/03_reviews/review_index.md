@@ -24,5 +24,5 @@
 
 ## Open Questions
 
-- what is the first frozen v2 dataset and row-state identity?
+- what are the first materialized row summary, source identities, and feature-order fingerprint for the v2 planning freeze?
 - what is the smallest v2 parity and artifact-identity fixture set that should exist before alpha work resumes?

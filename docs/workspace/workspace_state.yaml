@@ -8,7 +8,7 @@ current_contract_aligned_lane: "rebuild_after_v2_foundation"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "provisional_until_stage00_dataset_freeze"
+  status: "planning_freeze_written_materialization_pending"
 practical_modeling_start: "2022-09-01"
 tester_defaults:
   symbol: "US100"
@@ -25,9 +25,9 @@ parity_status:
   broader_sample: "not_started_in_v2"
   carried_path: "not_started_in_v2"
 current_focus:
-  - "use aligned templates and registry schema to write the first reusable v2 dataset-freeze and parity evidence pack"
-  - "close `01_dataset_contract_freeze` and `02_feature_dataset_closure` before alpha work"
+  - "use the planning freeze card and registry conventions to materialize the first reusable v2 dataset-freeze evidence pack"
   - "write the first gold fixture inventory and then close `03_runtime_parity_closure`, `04_artifact_identity_closure`, and `05_exploration_kernel_freeze` before exploration-only mode"
+  - "replace placeholder row counts, source identities, and feature-order fingerprint with materialized values for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`"
 do_not_reopen_without_new_hypothesis:
   - "new regular alpha or range stage before Stage 01 to 05 foundation gates close"
   - "legacy winners, thresholds, or defaults as automatic v2 starting points"
@@ -37,11 +37,12 @@ must_read_next:
   - "AGENTS.md"
   - "docs/context/current_working_state.md"
   - "stages/00_foundation_sprint/00_spec/stage_brief.md"
+  - "stages/00_foundation_sprint/01_inputs/first_v2_dataset_freeze_card.md"
   - "docs/contracts/feature_calculation_spec_fpmarkets_v2.md"
   - "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md"
   - "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md"
   - "docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md"
   - "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md"
 open_questions:
-  - "What is the first v2 dataset freeze id, row-state contract, and exact feature-order fingerprint?"
+  - "What are the first materialized row summary, source identities, and exact feature-order fingerprint for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`?"
   - "What is the smallest gold fixture set and artifact identity bundle that can re-close Python to MT5 parity quickly in v2?"

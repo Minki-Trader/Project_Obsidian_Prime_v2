@@ -51,7 +51,7 @@
 - dataset and row-state contract written: `yes`
 - runtime parity and artifact-identity contract written: `yes`
 - foundation evidence templates aligned: `yes`
-- first dataset freeze card: `not written yet`
+- first dataset freeze card: `yes (planning freeze only; materialized export fields pending)`
 - first gold fixture inventory: `not written yet`
 - first parity report: `not written yet`
 
@@ -59,7 +59,7 @@
 
 - keep_or_replace: `keep foundation mode`
 - promoted / kept / closed: `Stage 00 remains open`
-- next required evidence: `explicit dataset freeze card plus explicit gold fixture inventory plus explicit runtime parity closure plus explicit artifact identity closure`
+- next required evidence: `materialized dataset row summary and feature-order fingerprint plus explicit gold fixture inventory plus explicit runtime parity closure plus explicit artifact identity closure`
 
 ## Follow-Up Bias
 

@@ -29,6 +29,7 @@
 - legacy winners remain archive notes and design evidence only; they do not define current v2 truth
 - the shared root skeleton now treats `docs/`, `data/`, and `foundation/` as the reusable base while `stages/` stays stage-local
 - the supporting freeze/parity templates and artifact registry schema are now aligned to the Stage 00 supplemental contracts so the first reusable evidence pack can be written without ad hoc fields
+- the first planning freeze card now exists for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`, but its row summary, source identities, and feature fingerprint are still pending the first materialized export
 
 ## Legacy Lessons Carried Forward
 
@@ -41,10 +42,10 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. use the aligned dataset freeze card, runtime parity report, gold fixture inventory template, and artifact registry schema to write the first reusable Stage 00 evidence pack
-2. write the first `01_dataset_contract_freeze` evidence pack and its row-state closure before opening alpha work
-3. define `02_feature_dataset_closure` and the first dataset freeze identity
-4. write the first gold fixture inventory and then close `03_runtime_parity_closure` and `04_artifact_identity_closure`
+1. replace the planning-freeze placeholders with the first materialized row summary, source identities, and feature-order fingerprint
+2. write the first gold fixture inventory and link it into artifact identity
+3. write the first `03_runtime_parity_closure` evidence pack on top of that fixture set
+4. keep `04_artifact_identity_closure` explicit and machine-readable
 5. keep `05_exploration_kernel_freeze` closed before opening new range stages
 
 ## Foundation Closure Path
