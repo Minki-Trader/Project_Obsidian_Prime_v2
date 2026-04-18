@@ -13,6 +13,8 @@
 - latest durable decisions to expect during that pass:
   - `docs/decisions/2026-04-18_tiered_readiness_exploration_boundary.md`
   - `docs/decisions/2026-04-18_stage02_close_and_stage03_open.md`
+  - `docs/decisions/2026-04-18_stage03_bound_minimum_fixture_pack.md`
+  - `docs/decisions/2026-04-18_stage03_first_v2_native_evaluated_pack_mismatch_open.md`
 
 ## Current Read
 
@@ -31,6 +33,11 @@
 - the first materialized processed dataset outputs now exist under `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/`, with `raw_rows=261344`, `valid_rows=24280`, `invalid_rows=237064`, and tracked hashes for the first reusable freeze
 - a second rerun of the first materialized freeze reproduced the same row summary, invalid-reason breakdown, and tracked output hashes, so deterministic feature-dataset closure now exists
 - the first planning gold fixture inventory and first planning runtime parity report now exist, but those remain Stage 03 and 04 follow-up inputs rather than Stage 00 blockers
+- the first bound Stage 03 minimum fixture inventory now exists under `stages/03_runtime_parity_closure/01_inputs/first_bound_runtime_minimum_fixture_inventory.md`
+- the first Stage 03 Python-side snapshot artifact, matching MT5 request window spec, and v2-native MT5 audit path now exist under `stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/` and `foundation/mt5/`
+- the first v2-native MT5 snapshot artifact and the first evaluated Python to MT5 parity report now exist, but the honest verdict is still `first_evaluated_pack_mismatch_open`, so Stage 03 remains active and no v2 parity closure claim is safe yet
+- the first v2-native evaluated pack already reproduces the expected `4 ready rows + 1 negative non-ready row`, including the negative fixture `skip_reason=EXTERNAL_TIMESTAMP_MISMATCH_AAPL.xnas`, but exact and tolerance parity both remain open because the dominant drift still concentrates in `ema50_ema200_diff` with smaller `rsi_50`, `atr_50`, `atr_14_over_atr_50`, and `ema20_ema50_diff` mismatches
+- the current MT5 JSONL snapshot artifact is reusable Stage 03 evidence, but it still lacks explicit embedded identity fields such as `dataset_id`, `bundle_id`, and `runtime_id`, so this does not close Stage 04 artifact identity yet
 - `Tier A / Tier B / Tier C readiness` is now accepted as a downstream exploration vocabulary for a future separate reduced-risk line, but the current runtime rule remains the strict Tier A contract line
 - the detailed downstream matrix for that idea now lives in `docs/policies/tiered_readiness_exploration.md`
 
@@ -45,9 +52,9 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. bind the first fixture timestamps and snapshot refs for the minimum runtime parity pack
-2. evaluate the first Python to MT5 parity report on the frozen `58`-feature contract surface
-3. keep `04_artifact_identity_closure` explicit and machine-readable across dataset, fixture, snapshot, and parity artifacts
+1. inspect and repair the localized drift on the first v2-native evaluated five-window pack, starting with `ema50_ema200_diff`
+2. keep the evaluated mismatch-open read synchronized across `workspace_state.yaml`, Stage 03 selection docs, and `artifact_registry.csv`
+3. keep `04_artifact_identity_closure` explicit and machine-readable across dataset, fixture, snapshot, request, comparison, and parity artifacts
 4. keep `05_exploration_kernel_freeze` closed before opening new range stages
 5. keep placeholder weights caveat explicit until a real monthly-weight source replaces the equal-weight table
 6. keep tiered-readiness exploration explicitly downstream of Stages `03` to `05` so it does not get mistaken for a current Stage 03 runtime rule
