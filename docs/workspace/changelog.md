@@ -16,6 +16,7 @@
 - aligned Stage 00 live docs so remaining work now points only to materialized row summaries, bound fixture timestamps, and evaluated parity results
 - closed `00_foundation_sprint` as planning scaffold complete and opened `01_dataset_contract_freeze`
 - moved the first materialized dataset evidence tasks into Stage 01 while keeping parity and broader artifact identity closure assigned to later foundation stages
+- added a repo-scoped skill layer and trigger policy for re-entry reads, claim discipline, and stage-transition sync
 
 ## 2026-04-17
 

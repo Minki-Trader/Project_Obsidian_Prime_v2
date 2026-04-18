@@ -33,7 +33,7 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 
 ## Directory Rules
 
-- keep the root limited to `docs`, `data`, `foundation`, and `stages`
+- keep the root limited to `docs`, `data`, `foundation`, and `stages`, with repo-scoped `.agents/skills/` allowed as a narrow exception for reusable agent triggers
 - keep source-of-truth contracts in `docs/contracts`
 - keep current state in `docs/workspace`
 - keep policies in `docs/policies`
@@ -96,6 +96,8 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `docs/decisions/*.md` records durable operating decisions
 - `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
 - `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
+- `docs/policies/agent_trigger_policy.md` records repo-scoped trigger-to-skill routing
+- `.agents/skills/` stores repo-scoped reusable Codex skills for re-entry, claim discipline, and stage-transition workflows
 - heavy local artifacts may stay outside Git, but their identity must stay in Git-tracked docs
 
 ## Re-entry Rule

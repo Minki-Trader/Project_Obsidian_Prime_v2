@@ -10,13 +10,14 @@ The old project remains preserved next to this folder. This workspace inherits t
 2. `docs/workspace/workspace_state.yaml`
 3. `docs/context/current_working_state.md`
 4. `stages/00_foundation_sprint/04_selected/selection_status.md`
-5. `stages/01_dataset_contract_freeze/00_spec/stage_brief.md`
-6. `stages/01_dataset_contract_freeze/01_inputs/input_refs.md`
-7. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-8. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-9. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
-10. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
-11. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
+5. `docs/policies/agent_trigger_policy.md`
+6. `stages/01_dataset_contract_freeze/00_spec/stage_brief.md`
+7. `stages/01_dataset_contract_freeze/01_inputs/input_refs.md`
+8. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
+9. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+10. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+11. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
+12. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
 
 ## Current Mode
 
@@ -32,6 +33,7 @@ The old project remains preserved next to this folder. This workspace inherits t
 - `data/`: shared raw, processed, and snapshot roots; heavy contents stay local and only the skeleton is tracked
 - `foundation/`: reusable shared code, MT5/runtime parity helpers, reports, and configuration
 - `stages/`: stage-specific work history and selected reads
+- `.agents/skills/`: repo-scoped Codex skills for strong re-entry, claim-discipline, and stage-transition triggers
 
 ## Shared Skeleton
 
