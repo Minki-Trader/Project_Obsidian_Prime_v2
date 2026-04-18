@@ -13,10 +13,10 @@ The old project remains preserved next to this folder. This workspace inherits t
 ## Current Mode
 
 - `project_mode`: `foundation_restart`
-- `active_stage`: `01_dataset_contract_freeze`
+- `active_stage`: `03_runtime_parity_closure`
 - `active_branch`: `main`
 - `v2_alpha_status`: `no_promoted_v2_incumbent_yet`
-- `foundation_status`: `Stage 00 closed as planning scaffold complete; Stage 01 dataset contract freeze is active`
+- `foundation_status`: `Stage 00 closed as planning scaffold complete; Stage 01 dataset contract freeze is closed; Stage 02 feature dataset closure is closed; Stage 03 runtime parity closure is active`
 
 ## Root Map
 
@@ -45,9 +45,9 @@ The old project remains preserved next to this folder. This workspace inherits t
 ## Foundation Roadmap
 
 - `00_foundation_sprint`: align the reboot charter, read path, and durable state; now closed as planning scaffold complete
-- `01_dataset_contract_freeze`: materialize dataset meaning, row states, and shared input semantics on the first reusable freeze
-- `02_feature_dataset_closure`: close deterministic parser output on the frozen `58`-feature contract surface
-- `03_runtime_parity_closure`: close Python to MT5 parity on the contract surface
+- `01_dataset_contract_freeze`: materialize dataset meaning, row states, and shared input semantics on the first reusable freeze; now closed with the first materialized dataset-contract evidence pack
+- `02_feature_dataset_closure`: close deterministic parser output on the frozen `58`-feature contract surface; now closed after a matching rerun
+- `03_runtime_parity_closure`: close Python to MT5 parity on the contract surface; now active
 - `04_artifact_identity_closure`: close machine-readable dataset, bundle, runtime, and report identity
 - `05_exploration_kernel_freeze`: freeze the exploration kernel so later stages only change search variables
 

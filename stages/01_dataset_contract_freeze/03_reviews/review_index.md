@@ -16,14 +16,16 @@
 ## Latest Structural / Diagnostic Read
 
 - structural read: `not used`
-- diagnostic read: `Stage 01 is active to materialize the first dataset-contract evidence pack`
+- diagnostic read: `Stage 01 closed after materializing the first dataset-contract evidence pack and recording the first reusable row summary plus dataset-output hashes`
 - do not confuse with regular line: `Stage 01 is still foundation work and does not compare alpha candidates`
 
 ## Closed Branches
 
-- none yet
+- first materialized row summary for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01` is now recorded
+- first machine-readable dataset-output hashes for the reusable freeze are now recorded
+- first local-only processed dataset root now exists and is bound to tracked source identities plus tracked dataset identity
 
 ## Open Questions
 
-- what are the first materialized row summary and source identities for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`?
-- which processed output hashes will make the first reusable dataset freeze machine-readable and durable?
+- none inside Stage 01 scope
+- downstream home: `02_feature_dataset_closure` now owns deterministic rerun checks and the explicit coverage explanation for the large exact-match `external_alignment_missing` share

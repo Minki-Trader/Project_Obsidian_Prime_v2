@@ -23,6 +23,12 @@
 - added `docs/policies/artifact_registry_schema.md` to define registry enums and hash-update discipline
 - added a reusable MT5 raw-bar export script and materialized the first raw `M5` source roots plus manifests for all 12 required Stage 01 symbols
 - added a tracked raw-source identity inventory so the local-only exports have Git-visible identity before processed dataset closure
+- materialized the first reusable Stage 01 dataset freeze under `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/`
+- wrote the first row summary, invalid-reason breakdown, and processed-output hashes back into the freeze card and artifact registry
+- closed `01_dataset_contract_freeze` and opened `02_feature_dataset_closure`
+- reran the first materialized freeze and confirmed the same row summary, invalid-reason breakdown, and tracked output hashes on repeat
+- closed `02_feature_dataset_closure` and opened `03_runtime_parity_closure`
+- added a downstream `Tier A / Tier B / Tier C` readiness exploration policy so future reduced-risk partial-context work stays separate from the current strict Tier A line
 
 ## 2026-04-17
 
