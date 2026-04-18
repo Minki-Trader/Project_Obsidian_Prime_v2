@@ -8,6 +8,7 @@
 - keep stage-specific one-off outputs under `stages/<nn_name>/02_runs/`
 - promote only stable reusable outputs into `data/processed/`
 - do not let `data/processed/` become a dump of one-off experiment clutter
+- use `docs/policies/artifact_registry_schema.md` for registry columns, enums, and hash-update procedure
 
 ## Artifact Registry Serialization
 

@@ -94,7 +94,9 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `stages/*/04_selected/selection_status.md` is the active stage read
 - `stages/*/03_reviews/review_index.md` is the active stage reading map
 - `docs/decisions/*.md` records durable operating decisions
+- `docs/policies/reentry_order.md` defines the canonical re-entry order and truth precedence
 - `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
+- `docs/policies/artifact_registry_schema.md` defines registry columns, enums, and hash-update discipline
 - `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
 - `docs/policies/agent_trigger_policy.md` records repo-scoped trigger-to-skill routing
 - `.agents/skills/` stores repo-scoped reusable Codex skills for re-entry, claim discipline, and stage-transition workflows
@@ -102,23 +104,16 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 
 ## Re-entry Rule
 
-Read in this order:
-
-1. `README.md`
-2. `AGENTS.md`
-3. `docs/workspace/workspace_state.yaml`
-4. `docs/context/current_working_state.md`
-5. `stages/00_foundation_sprint/00_spec/stage_brief.md`
-6. the three constitutional contracts in `docs/contracts/`
-7. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
-8. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
-9. the latest active stage `03_reviews/review_index.md`
-10. the latest active stage `04_selected/selection_status.md`
+- the single authoritative re-entry order and truth precedence live in `docs/policies/reentry_order.md`
+- `README.md`, status notes, and repo-scoped skills may point to that policy but must not maintain a second full ordered list
+- if project documents disagree, use the precedence defined in `docs/policies/reentry_order.md`
 
 ## Change Discipline
 
 - update `AGENTS.md` only when project-wide rules change
+- update `docs/policies/reentry_order.md` when the canonical re-entry order or truth precedence changes
 - update `docs/workspace/workspace_state.yaml` when current truth changes
 - update `docs/decisions` when a durable operating decision is taken
 - update registers when new durable artifact identity appears
+- update `docs/policies/artifact_registry_schema.md` when registry columns, enums, or hash-update rules change
 - keep Korean `.md` and `.txt` documents in `UTF-8 with BOM` when editing them for Windows-facing workflows

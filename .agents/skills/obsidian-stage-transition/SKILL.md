@@ -30,6 +30,12 @@ Update in the same pass:
    - runtime parity closure
    - artifact identity closure
 4. Keep `active_stage` aligned everywhere after the transition.
+5. Derive current and next stage names from `docs/workspace/workspace_state.yaml`, decision memos, and stage docs; do not hard-code the active stage name in this skill.
+
+## Validation
+
+- after the sync pass, verify that `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, and the active stage `selection_status.md` all name the same active stage
+- if the transition changes durable meaning, make sure a `docs/decisions/*.md` memo exists in the same pass
 
 ## Project-Specific Guardrails
 

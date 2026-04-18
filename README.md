@@ -6,18 +6,9 @@ The old project remains preserved next to this folder. This workspace inherits t
 
 ## Read First
 
-1. `AGENTS.md`
-2. `docs/workspace/workspace_state.yaml`
-3. `docs/context/current_working_state.md`
-4. `stages/00_foundation_sprint/04_selected/selection_status.md`
-5. `docs/policies/agent_trigger_policy.md`
-6. `stages/01_dataset_contract_freeze/00_spec/stage_brief.md`
-7. `stages/01_dataset_contract_freeze/01_inputs/input_refs.md`
-8. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-9. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-10. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
-11. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
-12. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
+- bootstrap entrypoint: `AGENTS.md`
+- canonical re-entry order and truth precedence: `docs/policies/reentry_order.md`
+- current trigger routing for repo-scoped skills: `docs/policies/agent_trigger_policy.md`
 
 ## Current Mode
 

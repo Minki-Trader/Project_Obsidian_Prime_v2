@@ -29,6 +29,8 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 2. Use precise language:
    - `planning scaffold`
    - `materialized evidence`
+   - `foundation truth`
+   - `operating truth`
    - `model-input parity`
    - `runtime-helper parity`
    - `bundle handoff verification`
@@ -40,5 +42,6 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 ## Project-Specific Guardrails
 
 - `planning scaffold` is not `materialized evidence`.
+- `foundation truth` is not `operating truth`.
 - `foundation stage closure` is not `exploration-ready`.
 - `handoff verification` is not `runtime parity closure`.

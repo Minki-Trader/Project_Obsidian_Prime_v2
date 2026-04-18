@@ -17,6 +17,10 @@
 - closed `00_foundation_sprint` as planning scaffold complete and opened `01_dataset_contract_freeze`
 - moved the first materialized dataset evidence tasks into Stage 01 while keeping parity and broader artifact identity closure assigned to later foundation stages
 - added a repo-scoped skill layer and trigger policy for re-entry reads, claim discipline, and stage-transition sync
+- centralized the canonical re-entry order and truth precedence into `docs/policies/reentry_order.md`
+- removed duplicated full read-order lists from repo entry docs and switched them to policy references
+- reduced active-stage hardcoding inside repo-scoped skills and added validation around stage alignment
+- added `docs/policies/artifact_registry_schema.md` to define registry enums and hash-update discipline
 
 ## 2026-04-17
 

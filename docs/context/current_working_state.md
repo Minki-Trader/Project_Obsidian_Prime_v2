@@ -8,30 +8,19 @@
 
 ## Read This First
 
-1. `README.md`
-2. `AGENTS.md`
-3. `docs/workspace/workspace_state.yaml`
-4. `stages/00_foundation_sprint/04_selected/selection_status.md`
-5. `docs/decisions/2026-04-18_stage00_close_and_stage01_open.md`
-6. `docs/policies/agent_trigger_policy.md`
-7. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-8. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-9. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
-10. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
-11. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
-12. `stages/01_dataset_contract_freeze/00_spec/stage_brief.md`
-13. `stages/01_dataset_contract_freeze/01_inputs/input_refs.md`
-14. `stages/01_dataset_contract_freeze/03_reviews/review_index.md`
-15. `stages/01_dataset_contract_freeze/04_selected/selection_status.md`
+- bootstrap entrypoint: `AGENTS.md`
+- canonical re-entry order and truth precedence: `docs/policies/reentry_order.md`
+- current handoff decision to expect during that pass: `docs/decisions/2026-04-18_stage00_close_and_stage01_open.md`
 
 ## Current Read
 
 - this workspace is a concept-preserving reboot, not a legacy continuation
 - no v2 alpha incumbent has been promoted yet, by policy rather than by delay
-- current v2 truth begins only after the first dataset freeze, the first parity harness, and the first artifact identity closure exist
+- current v2 foundation truth already exists and is anchored in `workspace_state.yaml`, the active stage `selection_status.md`, and durable decision memos
+- current v2 operating truth begins only after the first dataset-contract closure, the first evaluated runtime-parity closure, and the first artifact-identity closure exist
 - until those closures exist, the workspace stays in foundation mode
 - `00_foundation_sprint` is now closed as planning scaffold complete, and `01_dataset_contract_freeze` is the active foundation stage
-- legacy winners remain archive notes and design evidence only; they do not define current v2 truth
+- legacy winners remain archive notes and design evidence only; they do not define current v2 foundation truth or current v2 operating truth
 - the shared root skeleton now treats `docs/`, `data/`, and `foundation/` as the reusable base while `stages/` stays stage-local
 - repo-scoped skills now exist under `.agents/skills/` to reinforce re-entry reads, claim discipline, and stage-transition sync
 - the supporting freeze/parity templates and artifact registry schema are now aligned to the Stage 00 supplemental contracts so the first reusable evidence pack can be written without ad hoc fields

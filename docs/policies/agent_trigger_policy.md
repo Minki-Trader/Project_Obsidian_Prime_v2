@@ -2,6 +2,8 @@
 
 This note defines the repo-scoped `skills` layer that complements `AGENTS.md`.
 
+Canonical re-entry order and truth precedence live in `docs/policies/reentry_order.md`. This note should not maintain a second full ordered read list or a competing precedence list.
+
 ## Purpose
 
 - keep `AGENTS.md` focused on always-on project rules
@@ -16,15 +18,8 @@ This note defines the repo-scoped `skills` layer that complements `AGENTS.md`.
 
 ## Precedence
 
-When a skill and a project document appear to disagree, resolve in this order:
-
-1. `docs/workspace/workspace_state.yaml`
-2. active stage `04_selected/selection_status.md`
-3. latest durable `docs/decisions/*.md`
-4. `docs/context/current_working_state.md`
-5. `AGENTS.md`
-6. this trigger policy
-7. stage briefs, review indexes, and templates
+- use the truth precedence defined in `docs/policies/reentry_order.md`
+- this policy may refine skill routing but does not override that precedence
 
 ## Core Trigger Map
 
@@ -78,13 +73,11 @@ Required effect:
 
 - `planning scaffold` is not `materialized evidence`
 - `handoff verification` is not `runtime parity closure`
-- `legacy prior evidence` is not `current v2 truth`
+- `legacy prior evidence` is not `current v2 foundation truth` or `current v2 operating truth`
 - `foundation stage closure` is not `exploration-ready`
 
-## Current Active Routing
+## Dynamic Active Routing
 
-- current active stage: `01_dataset_contract_freeze`
-- immediate primary skill pair:
-  - `obsidian-reentry-read`
-  - `obsidian-claim-discipline`
-- use `obsidian-stage-transition` whenever Stage 01 changes durable project state
+- derive the current active stage from `docs/workspace/workspace_state.yaml` and the active stage `selection_status.md`
+- use `obsidian-reentry-read` and `obsidian-claim-discipline` as the default primary pair for any new or resumed thread
+- use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
