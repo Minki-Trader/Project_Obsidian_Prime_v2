@@ -25,6 +25,7 @@
 - repo-scoped skills now exist under `.agents/skills/` to reinforce re-entry reads, claim discipline, and stage-transition sync
 - the supporting freeze/parity templates and artifact registry schema are now aligned to the Stage 00 supplemental contracts so the first reusable evidence pack can be written without ad hoc fields
 - the first planning freeze card now exists for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`, and its contract-order feature fingerprint is now fixed
+- the first raw `M5` source exports and manifests for all `12` required symbols now exist under `data/raw/mt5_bars/m5/`, and their tracked identity note now lives in `stages/01_dataset_contract_freeze/01_inputs/first_raw_source_inventory.md`
 - the first planning gold fixture inventory and first planning runtime parity report now exist, but those remain Stage 03 and 04 follow-up inputs rather than Stage 00 blockers
 
 ## Legacy Lessons Carried Forward
@@ -38,7 +39,7 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. replace the planning-freeze placeholders with the first materialized row summary, source identities, and output hashes
+1. replace the remaining planning-freeze placeholders with the first materialized row summary, invalid-reason breakdown, and output hashes
 2. update the Stage 01 dataset freeze evidence and artifact registry rows so the first reusable dataset-contract pack is durable
 3. keep exact fixture timestamps and snapshot refs queued for `03_runtime_parity_closure`
 4. keep `04_artifact_identity_closure` explicit and machine-readable across dataset, fixture, snapshot, and parity artifacts

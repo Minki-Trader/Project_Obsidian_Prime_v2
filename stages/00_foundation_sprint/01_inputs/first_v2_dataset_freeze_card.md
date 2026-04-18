@@ -7,7 +7,7 @@
 
 ## Sources
 - raw source roots: `FPMarkets terminal-native history export; path pending first collection`
-- source_identities: `pending_first_materialized_export`
+- source_identities: `see stages/01_dataset_contract_freeze/01_inputs/first_raw_source_inventory.md; first raw M5 source exports for all 12 required symbols were materialized on 2026-04-18`
 - symbols: `US100, VIX, US10YR, USDX, NVDA, AAPL, MSFT, AMZN, AMD, GOOGL.xnas, META, TSLA`
 - timeframe: `M5`
 - session/calendar assumptions: `closed-bar only, storage may be UTC, session features derive in America/New_York, and required external symbols must match the US100 bar-close timestamp exactly`
@@ -40,5 +40,5 @@
 ## Notes
 - known weak periods: `not yet audited in v2`
 - known symbol issues: `GOOGL.xnas is the contract Google symbol and exact timestamp matching remains required across all required external symbols`
-- placeholder caveats: `top3 monthly weights remain an equal-weight placeholder, so this card is a planning freeze and not yet a materialized dataset freeze`
-- reuse guidance: `safe for Stage 00 naming and identity planning; contract-order feature fingerprint is now fixed, but row summary and source identities must still be materialized before exploration-only mode`
+- placeholder caveats: `top3 monthly weights remain an equal-weight placeholder, and row summary plus processed dataset hashes are still pending, so this card is not yet a materialized dataset freeze`
+- reuse guidance: `safe for Stage 00 naming and identity planning; contract-order feature fingerprint is fixed and raw source identities are now recorded, but row summary and processed dataset hashes must still be materialized before exploration-only mode`

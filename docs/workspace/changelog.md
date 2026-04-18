@@ -21,6 +21,8 @@
 - removed duplicated full read-order lists from repo entry docs and switched them to policy references
 - reduced active-stage hardcoding inside repo-scoped skills and added validation around stage alignment
 - added `docs/policies/artifact_registry_schema.md` to define registry enums and hash-update discipline
+- added a reusable MT5 raw-bar export script and materialized the first raw `M5` source roots plus manifests for all 12 required Stage 01 symbols
+- added a tracked raw-source identity inventory so the local-only exports have Git-visible identity before processed dataset closure
 
 ## 2026-04-17
 

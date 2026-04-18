@@ -29,7 +29,7 @@
 ## Risk
 
 - biggest current risk: `treating planning freeze evidence as if it were already materialized dataset evidence`
-- state fragmentation risk: `reduced by the Stage 00 to Stage 01 handoff, but still sensitive to local-only data paths`
+- state fragmentation risk: `reduced by the Stage 00 to Stage 01 handoff and the now-materialized raw source roots, but still sensitive to later processed-output backfill`
 - parity overconfidence risk: `deferred to Stage 03 and must not be implied by Stage 01 progress`
 - current v2 operating risk metrics: `n/a`
 
@@ -39,12 +39,13 @@
 - inherited planning gold fixture inventory: `yes`
 - inherited planning parity scaffold: `yes`
 - fixed contract-order feature hash: `yes`
+- first raw source inventory: `yes`
 - placeholder weights caveat: `still open`
 
 ## Execution
 
 - materialized row summary: `no`
-- source identities materialized: `no`
+- source identities materialized: `yes`
 - dataset output hashes recorded: `no`
 - registry backfill for materialized dataset evidence: `no`
 - stage status: `open`
@@ -53,7 +54,7 @@
 
 - keep_or_replace: `keep foundation mode`
 - promoted / kept / closed: `Stage 01 open`
-- next required evidence: `materialized row summary, source identities, and dataset-output hashes for the first reusable freeze`
+- next required evidence: `materialized row summary, invalid-reason breakdown, and dataset-output hashes for the first reusable freeze`
 
 ## Follow-Up Bias
 

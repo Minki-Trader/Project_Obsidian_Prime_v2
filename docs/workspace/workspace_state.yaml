@@ -26,7 +26,8 @@ parity_status:
   carried_path: "not_started_in_v2"
 current_focus:
   - "materialize the first reusable dataset-contract evidence pack inside `01_dataset_contract_freeze`"
-  - "replace placeholder row counts, source identities, and output hashes for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`"
+  - "replace the remaining placeholder row counts, invalid-reason breakdown, and output hashes for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`"
+  - "use the now-materialized raw `M5` source roots under `data/raw/mt5_bars/m5/` as the Stage 01 intake base"
   - "keep fixture timestamp binding, evaluated runtime parity, and broader artifact identity closure queued for Stages 03 and 04"
   - "use the canonical re-entry order, truth precedence, and repo-scoped skills to keep claim language and stage transitions disciplined"
 do_not_reopen_without_new_hypothesis:
@@ -44,6 +45,7 @@ must_read_next:
   - "docs/policies/artifact_registry_schema.md"
   - "stages/01_dataset_contract_freeze/00_spec/stage_brief.md"
   - "stages/01_dataset_contract_freeze/01_inputs/input_refs.md"
+  - "stages/01_dataset_contract_freeze/01_inputs/first_raw_source_inventory.md"
   - "stages/01_dataset_contract_freeze/04_selected/selection_status.md"
   - "stages/00_foundation_sprint/01_inputs/first_v2_dataset_freeze_card.md"
   - "stages/00_foundation_sprint/01_inputs/first_v2_gold_fixture_inventory.md"
@@ -54,5 +56,5 @@ must_read_next:
   - "docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md"
   - "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md"
 open_questions:
-  - "What are the first materialized row summary, source identities, and output hashes for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`?"
-  - "Which local raw export roots and first processed artifacts will anchor the reusable Stage 01 dataset-contract evidence pack?"
+  - "What are the first materialized row summary, invalid-reason breakdown, and output hashes for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`?"
+  - "Which first processed artifacts will anchor the reusable Stage 01 dataset-contract evidence pack now that the raw source roots are materialized?"
