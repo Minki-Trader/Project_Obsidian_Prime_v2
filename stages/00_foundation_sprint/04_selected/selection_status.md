@@ -50,14 +50,16 @@
 - foundation closure path: `01_dataset_contract_freeze -> 02_feature_dataset_closure -> 03_runtime_parity_closure -> 04_artifact_identity_closure -> 05_exploration_kernel_freeze`
 - dataset and row-state contract written: `yes`
 - runtime parity and artifact-identity contract written: `yes`
+- foundation evidence templates aligned: `yes`
 - first dataset freeze card: `not written yet`
+- first gold fixture inventory: `not written yet`
 - first parity report: `not written yet`
 
 ## Decision
 
 - keep_or_replace: `keep foundation mode`
 - promoted / kept / closed: `Stage 00 remains open`
-- next required evidence: `explicit dataset contract closure plus explicit runtime parity closure plus explicit artifact identity closure`
+- next required evidence: `explicit dataset freeze card plus explicit gold fixture inventory plus explicit runtime parity closure plus explicit artifact identity closure`
 
 ## Follow-Up Bias
 

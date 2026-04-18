@@ -6,6 +6,9 @@
 - clarified the contract hierarchy as three constitutional contracts plus one auxiliary frozen mirror
 - added dataset/row-state and runtime parity/artifact identity supplemental contracts for Stage 00 foundation closure
 - aligned Stage 00 documents around closure-readiness instead of alpha comparison semantics
+- aligned the dataset freeze and runtime parity templates to the supplemental contracts instead of looser placeholder fields
+- added a reusable gold fixture inventory template for the first v2 parity fixture pack
+- widened `artifact_registry.csv` so dataset, fixture, bundle, runtime, and report identity can become machine-readable
 
 ## 2026-04-17
 
