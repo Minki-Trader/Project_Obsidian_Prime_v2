@@ -1,0 +1,58 @@
+# Stage 05 Exploration Kernel Freeze
+
+- stage: `05_exploration_kernel_freeze`
+- stage_type: `foundation_stage`
+- updated_on: `2026-04-19`
+- owner_path: `stages/05_exploration_kernel_freeze/`
+
+## Purpose
+
+- freeze the first downstream exploration kernel after the explicit Stage 04 artifact-identity closure
+- define which post-foundation lane may open first without blurring strict Tier A runtime truth with future reduced-risk or exploration-only work
+- keep exploration-kernel freeze distinct from runtime-helper parity closure, broader-sample parity closure, and operating promotion
+
+## Inherited Context
+
+- `00_foundation_sprint` is closed as planning scaffold complete
+- `01_dataset_contract_freeze` is closed after the first materialized dataset-contract evidence pack
+- `02_feature_dataset_closure` is closed after a deterministic rerun reproduced the same row summary and tracked output hashes
+- `03_runtime_parity_closure` is closed after the first v2-native five-window pack matched within the agreed tolerance while the remaining exact-open note was bounded to floating-point serialization drift
+- `04_artifact_identity_closure` is closed after the explicit first-pack read confirmed machine-readable identity alignment, required-hash consistency, and the first runtime self-check meaning
+
+## Scope
+
+- in scope:
+  - the first explicit Stage 05 exploration-kernel freeze read
+  - the ordering boundary between broader-sample parity, runtime-helper parity, and future exploration-only work
+  - the separation between the current strict Tier A line and any later Tier B or Tier C exploration family
+  - the live Stage 05 read path and selection note
+- not in scope:
+  - operating promotion
+  - new alpha or range search
+  - claiming runtime-helper parity is already closed
+  - claiming broader-sample parity is already closed
+
+## Success Criteria
+
+- the first Stage 05 read states clearly which downstream lane may open first and what still remains separately bounded
+- the strict Tier A runtime rule remains distinct from any future Tier B or Tier C exploration family
+- any remaining blocker to post-foundation exploration has an explicit durable home rather than living as branch-only context
+
+## Required Inputs
+
+- `../01_inputs/input_refs.md`
+- `../../04_artifact_identity_closure/03_reviews/review_index.md`
+- `../../04_artifact_identity_closure/04_selected/selection_status.md`
+- `../../../docs/policies/tiered_readiness_exploration.md`
+- `../../../docs/context/current_working_state.md`
+
+## Required Outputs
+
+- updated `03_reviews/review_index.md`
+- updated `04_selected/selection_status.md`
+- explicit Stage 05 kernel-freeze decision or blocker
+
+## Close Bias
+
+- close Stage 05 only after the first downstream exploration boundary is frozen clearly enough that alpha or range work cannot drift open by implication
+- do not let Stage 05 imply that runtime-helper parity, broader-sample parity, or Tier B exploration are already closed or promoted

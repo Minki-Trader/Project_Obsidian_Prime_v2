@@ -17,15 +17,16 @@
 ## Latest Structural / Diagnostic Read
 
 - structural read: `not used`
-- diagnostic read: `Stage 04 opened after Stage 03 closed model-input parity within tolerance and materialized a first machine-readable identity chain across the request, MT5 snapshot, and comparison summary, while the rendered report and registry already carry linked evidence for the same pack`
+- diagnostic read: `Stage 04 is now closed because the first v2-native five-window pack carries one aligned machine-readable identity chain across the request, MT5 snapshot, comparison summary, rendered report, and registry rows, and the explicit read confirms the linked required hashes stay internally consistent on the materialized first pack`
 - do not confuse with regular line: `Stage 04 is still foundation work and does not compare alpha candidates`
 
 ## Closed Branches
 
 - Stage 03 already closed the first model-input parity read on the five-window pack within the agreed tolerance
-- the first MT5 snapshot rows now include machine-readable identity fields and the comparison summary confirms they match the request identities and tracked comparison-side hashes; the rendered report remains linked through `required_artifact_hashes_checked` and registry rows
+- the first MT5 snapshot rows include machine-readable identity fields and the comparison summary confirms they match the declared request identities and the tracked comparison-side hashes
+- the rendered report and artifact registry carry the same dataset, fixture, bundle, runtime, report, parser, and contract-order identities for the first pack, and the tracked request, snapshot, comparison, and report hashes remain internally consistent
+- the Stage 04 runtime self-check meaning is satisfied because the MT5 audit path echoed the loaded identity inputs into every snapshot row and the comparison summary verified those exported values and derived feature-order hashes against the declared request pack
 
 ## Open Questions
 
-- does the first machine-readable identity chain plus the recorded hashes already satisfy the explicit Stage 04 closure read?
-- if not, what is the smallest additional runtime self-check note needed to close Stage 04 without reopening Stage 03?
+- none inside Stage 04; the downstream home is now `05_exploration_kernel_freeze`

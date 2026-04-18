@@ -29,4 +29,4 @@
 ## Immediate Missing Inputs
 
 - no missing file input remains for the first machine-readable identity chain
-- the explicit Stage 04 closure read and any one-line runtime self-check conclusion still need to be written from the existing artifacts
+- the explicit Stage 04 closure read is now written from the existing artifacts and its downstream home is the new Stage 05 handoff

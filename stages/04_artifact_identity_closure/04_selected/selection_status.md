@@ -4,7 +4,7 @@
 
 - current incumbent: `none, by policy`
 - current challenger: `none, by policy`
-- current read: `Stage 04 now owns the explicit artifact-identity closure read; the first v2-native five-window pack already carries machine-readable dataset, fixture, bundle, runtime, report, parser, and contract-order identities across the request, MT5 snapshot, and comparison summary, while the rendered report and artifact registry already link the same pack through the report required-artifact-hashes record and registry rows, but the stage remains open until that identity chain is signed off as the official closure read`
+- current read: `Stage 04 is now closed because the first v2-native five-window pack carries aligned machine-readable dataset, fixture, bundle, runtime, report, parser, and contract-order identities across the request, MT5 snapshot, comparison summary, rendered report, and registry rows, the linked required hashes stay internally consistent on the materialized pack, and the runtime self-check meaning is satisfied by the MT5 audit path echoing the loaded identity inputs into every snapshot row and by the comparison summary verifying those values against the declared request pack`
 - scoreboard used: `foundation_stage_read`
 
 ## Promotion Gates
@@ -17,7 +17,7 @@
 
 - structural_scout: `n/a`
 - regular_risk_execution: `n/a`
-- parity / special scoreboard: `Stage 04 active`
+- parity / special scoreboard: `Stage 04 closed`
 
 ## Headline
 
@@ -28,39 +28,41 @@
 
 ## Risk
 
-- biggest current risk: `overstating Stage 04 as closed merely because the identity fields now exist without writing the explicit closure read and hash-consistency conclusion`
-- state fragmentation risk: `high if the branch truth, Stage 04 docs, and artifact registry are not updated in the same pass`
-- artifact-identity overconfidence risk: `high if machine-readable identity trace is treated as automatic operating promotion`
+- biggest current risk: `treating the closed Stage 04 artifact-identity read as if it also closes runtime-helper parity, broader-sample parity, or operating promotion`
+- state fragmentation risk: `high if the new Stage 05 active-stage read drifts away from this closed Stage 04 handoff`
+- artifact-identity overconfidence risk: `still high if machine-readable identity trace is treated as automatic exploration readiness without the Stage 05 kernel-freeze read`
 - current v2 operating risk metrics: `n/a`
 
 ## Diagnostics
 
 - first machine-readable identity chain across request and MT5 snapshot: `yes`
 - comparison summary identity match: `yes`
-- comparison summary direct report proof: `not yet; report stays linked through required hashes and registry rows`
+- comparison summary direct report proof: `not used; the explicit Stage 04 closure read closes on linked report and registry evidence rather than on direct comparison-summary ingestion of the rendered report`
 - required artifact hashes recorded in the report: `yes`
-- explicit Stage 04 closure read written: `not yet`
+- report and registry hash chain internally consistent: `yes`
+- runtime self-check meaning satisfied on the first pack: `yes`
+- explicit Stage 04 closure read written: `yes`
 - placeholder weights caveat: `still open`
 
 ## Execution
 
 - identity fields embedded in MT5 snapshot rows: `yes`
 - request and MT5 identity values match: `yes`
-- registry sync required this pass: `yes`
-- stage status: `open`
+- registry sync required this pass: `no`
+- stage status: `closed`
 
 ## Decision
 
 - keep_or_replace: `keep foundation mode`
-- promoted / kept / closed: `Stage 04 open`
-- next required evidence: `an explicit Stage 04 closure or blocker read that names the first-pack identity chain and its required hashes`
+- promoted / kept / closed: `Stage 04 closed`
+- next required evidence: `open Stage 05 and write the first kernel-freeze read that names the first allowed downstream lane`
 
 ## Follow-Up Bias
 
-- continue: `use the already materialized first-pack identity chain to write the explicit Stage 04 closure read without reopening Stage 03`
-- do_not_reopen_without_new_hypothesis: `runtime-helper parity, broader-sample parity, or alpha search should not be folded into Stage 04 without a new contradiction`
-- next best question: `does the current first-pack identity chain already satisfy the runtime self-check meaning required by the contract?`
-- downstream note: `Stage 05 remains later and should only open after Stage 04 is explicitly closed or explicitly bounded`
+- continue: `hand the now-closed Stage 04 artifact-identity read into Stage 05 without reopening Stage 03 or Stage 04 unless a new identity or hash contradiction appears`
+- do_not_reopen_without_new_hypothesis: `runtime-helper parity, broader-sample parity, or alpha search should not be folded back into Stage 04 without a new contradiction`
+- next best question: `which downstream lane should Stage 05 freeze first: broader-sample parity, runtime-helper parity, or a separate exploration charter?`
+- downstream note: `Stage 05 is now the active last foundation gate before any exploration-only mode may open`
 
 ## Report Refs
 

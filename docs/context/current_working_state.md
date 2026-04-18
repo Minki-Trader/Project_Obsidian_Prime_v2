@@ -3,7 +3,7 @@
 - updated_on: `2026-04-19`
 - workspace: `Project_Obsidian_Prime_v2`
 - project_mode: `foundation_restart`
-- active_stage: `04_artifact_identity_closure`
+- active_stage: `05_exploration_kernel_freeze`
 - active_branch: `codex/stage03-v2-native-parity-sync`
 
 ## Read This First
@@ -11,6 +11,7 @@
 - bootstrap entrypoint: `AGENTS.md`
 - canonical re-entry order and truth precedence: `docs/policies/reentry_order.md`
 - latest durable decisions to expect during that pass:
+  - `docs/decisions/2026-04-19_stage04_close_and_stage05_open.md`
   - `docs/decisions/2026-04-19_stage03_close_and_stage04_open.md`
   - `docs/decisions/2026-04-18_tiered_readiness_exploration_boundary.md`
   - `docs/decisions/2026-04-18_stage03_bound_minimum_fixture_pack.md`
@@ -20,13 +21,15 @@
 - this workspace is a concept-preserving reboot, not a legacy continuation
 - no v2 alpha incumbent has been promoted yet, by policy rather than by delay
 - current v2 foundation truth already exists and is anchored in `workspace_state.yaml`, the active stage `selection_status.md`, and durable decision memos
-- current v2 operating truth still begins only after the first artifact-identity closure and the later exploration-kernel freeze exist; the dataset-contract closure, deterministic feature-dataset closure, and first model-input parity closure now exist, but they still do not by themselves promote an operating line
+- current v2 operating truth still begins only after the later exploration-kernel freeze exists; the dataset-contract closure, deterministic feature-dataset closure, first model-input parity closure, and first artifact-identity closure now exist, but they still do not by themselves promote an operating line
 - `00_foundation_sprint` is closed as planning scaffold complete, `01_dataset_contract_freeze` is closed as the first materialized dataset-contract evidence pack, `02_feature_dataset_closure` is closed after a deterministic rerun match, and `03_runtime_parity_closure` is now closed after the first v2-native five-window pack matched within the agreed tolerance
 - the first Stage 03 evaluated pack now closes model-input parity on the contract surface with `tolerance_parity=true`, `max_abs_diff=1.6846210968424202e-06`, `4 ready rows + 1 negative non-ready row`, and zero features over the agreed tolerance
 - the remaining `exact_parity=false` note is bounded to floating-point serialization drift and is not treated as a contract-surface blocker for Stage 03
 - the first v2-native MT5 snapshot rows now carry explicit machine-readable identity fields including `dataset_id`, `fixture_set_id`, `bundle_id`, `report_id`, `runtime_id`, `parser_version`, `feature_contract_version`, `runtime_contract_version`, and `feature_order_hash`
 - the first parity comparison summary now proves that the request and MT5 snapshot agree on those identity values and on the tracked comparison-side artifact hashes for the first pack; the rendered report and artifact registry still carry linked evidence for the same pack through `required_artifact_hashes_checked` and registry rows rather than through direct comparison-summary proof
-- `04_artifact_identity_closure` is now the active stage because the first identity chain is materialized, but the explicit Stage 04 closure read and any remaining runtime self-check proof still need to be written without conflating that work with runtime-helper parity
+- `04_artifact_identity_closure` is now closed because the explicit Stage 04 read names one aligned machine-readable identity chain across the request pack, MT5 snapshot rows, comparison summary, rendered report, and registry rows, and the recorded hashes remain internally consistent on the materialized first pack
+- the Stage 04 runtime self-check meaning is satisfied on the first pack because the MT5 audit path loaded the declared identity inputs, echoed them into every snapshot row, and the comparison summary verified those exported values and derived feature-order hashes against the declared request pack
+- `05_exploration_kernel_freeze` is now the active stage because the last remaining foundation boundary is no longer artifact identity itself, but the explicit freeze of which downstream exploration lane may open first, and the first Stage 05 blocker read now keeps that unresolved ordering in a durable home
 - legacy winners remain archive notes and design evidence only; they do not define current v2 foundation truth or current v2 operating truth
 - `Tier A / Tier B / Tier C readiness` remains a downstream exploration vocabulary only; it does not relax the current strict-line foundation read
 
@@ -41,12 +44,11 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. keep the Stage 03 closure read synchronized across `workspace_state.yaml`, the closing Stage 03 docs, and the artifact registry
-2. write the explicit Stage 04 artifact-identity closure read from the now machine-readable first-pack identity chain
-3. verify that the recorded request, snapshot, comparison, report, and registry hashes stay internally consistent through the Stage 04 pass
-4. keep runtime-helper parity and broader-sample parity explicit as separate downstream questions
-5. keep placeholder weights caveat explicit until a real monthly-weight source replaces the equal-weight table
-6. keep branch truth aligned to `codex/stage03-v2-native-parity-sync` until the handoff is merged
+1. resolve the explicit Stage 05 kernel-freeze blocker by deciding whether broader-sample parity, runtime-helper parity, or a separate exploration charter is the first allowed downstream lane
+2. keep `Tier A / Tier B / Tier C` readiness downstream-only and separate from the current strict runtime rule
+3. keep the Stage 04 closure bounded to artifact identity rather than runtime-helper parity or operating promotion
+4. keep placeholder weights caveat explicit until a real monthly-weight source replaces the equal-weight table
+5. keep branch truth aligned to `codex/stage03-v2-native-parity-sync` until the handoff is merged
 
 ## Foundation Closure Path
 
@@ -62,5 +64,5 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 - do not reopen `03_runtime_parity_closure` unless a new hypothesis breaks the first tolerance-closed pack or the agreed tolerance itself changes
 - do not treat Stage 03 closure as runtime-helper parity closure
 - do not treat the first machine-readable identity chain as automatic operating promotion
-- do not open a fresh alpha or range stage before Stages `04` to `05` close
+- do not open a fresh alpha or range stage before Stage `05` closes
 - do not let durable conclusions live only in branch notes or scratch files

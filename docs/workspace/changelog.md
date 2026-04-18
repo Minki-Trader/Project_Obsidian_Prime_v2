@@ -9,6 +9,8 @@
 - closed `03_runtime_parity_closure` and opened `04_artifact_identity_closure`
 - synchronized the workspace read to the working branch `codex/stage03-v2-native-parity-sync`
 - aligned the artifact registry schema to carry `parser_version` and corrected the Stage 04 live-state wording to match the current automated proof boundary
+- closed `04_artifact_identity_closure` on the explicit first-pack identity and required-hash read and opened `05_exploration_kernel_freeze`
+- wrote the first explicit Stage 05 blocker read so the unresolved downstream ordering between broader-sample parity, runtime-helper parity, and later exploration work now has a durable home
 
 ## 2026-04-18
 
