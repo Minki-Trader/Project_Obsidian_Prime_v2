@@ -19,6 +19,7 @@
 
 - `stages/00_foundation_sprint/01_inputs/first_v2_dataset_freeze_card.md`
 - `stages/00_foundation_sprint/01_inputs/first_v2_gold_fixture_inventory.md`
+- `stages/00_foundation_sprint/03_reviews/first_v2_runtime_parity_report.md`
 
 ## Legacy Evidence Sources
 
@@ -31,8 +32,12 @@ The old workspace remains preserved as a sibling folder. The following legacy re
 - legacy Stage 41 threshold and margin replay chain
 - legacy Stage 42 selection status
 
-## Immediate Missing Inputs
+## Handoff To Stage 01
 
 - first materialized dataset row summary and source identities for the v2 planning freeze
+- first processed artifact hashes and source roots for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`
+
+## Deferred To Later Foundation Stages
+
 - exact closed-bar timestamps and snapshot refs for `fixture_fpmarkets_v2_runtime_minimum_0001`
 - first evaluated runtime parity results for `report_fpmarkets_v2_runtime_parity_0001`

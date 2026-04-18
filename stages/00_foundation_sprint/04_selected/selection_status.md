@@ -4,7 +4,7 @@
 
 - current incumbent: `none, by policy`
 - current challenger: `none, by policy`
-- current read: `v2 is intentionally held in foundation mode until the reboot charter, dataset contract, runtime parity closure, and artifact identity closure are explicit`
+- current read: `Stage 00 is closed as planning scaffold complete; v2 remains in foundation mode and Stage 01 now owns the first materialized dataset-contract evidence`
 - scoreboard used: `foundation_stage_read`
 
 ## Promotion Gates
@@ -58,14 +58,14 @@
 ## Decision
 
 - keep_or_replace: `keep foundation mode`
-- promoted / kept / closed: `Stage 00 remains open`
-- next required evidence: `materialized dataset row summary and source identities plus bound fixture timestamps/source refs plus explicit runtime parity closure plus explicit artifact identity closure`
+- promoted / kept / closed: `Stage 00 closed as planning scaffold complete; open Stage 01_dataset_contract_freeze`
+- next required evidence: `Stage 01 materialized dataset row summary, source identities, and output hashes, followed later by explicit runtime parity closure and explicit artifact identity closure`
 
 ## Follow-Up Bias
 
-- continue: `small, durable foundation tasks only`
+- continue: `small, durable foundation tasks only, beginning with Stage 01 dataset-contract materialization`
 - do_not_reopen_without_new_hypothesis: `new alpha or range stage before Stage 01 to 05 closure is explicit`
-- next best question: `what is the minimal v2 dataset, parity, and artifact bundle needed to open exploration-only mode safely?`
+- next best question: `what is the minimal first materialized dataset evidence set needed to close Stage 01 safely?`
 
 ## Report Refs
 
@@ -74,5 +74,7 @@
 - `../01_inputs/first_v2_dataset_freeze_card.md`
 - `../01_inputs/first_v2_gold_fixture_inventory.md`
 - `../03_reviews/first_v2_runtime_parity_report.md`
-- `../../../../docs/context/current_working_state.md`
-- `../../../../docs/decisions/2026-04-16_v2_restart_decision.md`
+- `../../01_dataset_contract_freeze/00_spec/stage_brief.md`
+- `../../../docs/context/current_working_state.md`
+- `../../../docs/decisions/2026-04-16_v2_restart_decision.md`
+- `../../../docs/decisions/2026-04-18_stage00_close_and_stage01_open.md`

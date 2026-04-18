@@ -9,19 +9,22 @@ The old project remains preserved next to this folder. This workspace inherits t
 1. `AGENTS.md`
 2. `docs/workspace/workspace_state.yaml`
 3. `docs/context/current_working_state.md`
-4. `stages/00_foundation_sprint/00_spec/stage_brief.md`
-5. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-6. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-7. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
-8. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
-9. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
+4. `stages/00_foundation_sprint/04_selected/selection_status.md`
+5. `stages/01_dataset_contract_freeze/00_spec/stage_brief.md`
+6. `stages/01_dataset_contract_freeze/01_inputs/input_refs.md`
+7. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
+8. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+9. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+10. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
+11. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
 
 ## Current Mode
 
 - `project_mode`: `foundation_restart`
-- `active_stage`: `00_foundation_sprint`
+- `active_stage`: `01_dataset_contract_freeze`
 - `active_branch`: `main`
 - `v2_alpha_status`: `no_promoted_v2_incumbent_yet`
+- `foundation_status`: `Stage 00 closed as planning scaffold complete; Stage 01 dataset contract freeze is active`
 
 ## Root Map
 
@@ -48,8 +51,8 @@ The old project remains preserved next to this folder. This workspace inherits t
 
 ## Foundation Roadmap
 
-- `00_foundation_sprint`: align the reboot charter, read path, and durable state
-- `01_dataset_contract_freeze`: freeze dataset meaning, row states, and shared input semantics
+- `00_foundation_sprint`: align the reboot charter, read path, and durable state; now closed as planning scaffold complete
+- `01_dataset_contract_freeze`: materialize dataset meaning, row states, and shared input semantics on the first reusable freeze
 - `02_feature_dataset_closure`: close deterministic parser output on the frozen `58`-feature contract surface
 - `03_runtime_parity_closure`: close Python to MT5 parity on the contract surface
 - `04_artifact_identity_closure`: close machine-readable dataset, bundle, runtime, and report identity

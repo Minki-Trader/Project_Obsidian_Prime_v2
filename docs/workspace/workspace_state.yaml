@@ -1,14 +1,14 @@
 updated_on: "2026-04-18"
 project_mode: "foundation_restart"
 active_branch: "main"
-active_stage: "00_foundation_sprint"
+active_stage: "01_dataset_contract_freeze"
 current_operating_reference: null
 current_shadow_challenger: null
 current_contract_aligned_lane: "rebuild_after_v2_foundation"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "planning_freeze_written_materialization_pending"
+  status: "planning_freeze_written_stage01_materialization_pending"
 practical_modeling_start: "2022-09-01"
 tester_defaults:
   symbol: "US100"
@@ -25,9 +25,9 @@ parity_status:
   broader_sample: "not_started_in_v2"
   carried_path: "not_started_in_v2"
 current_focus:
-  - "use the planning freeze card, planning fixture inventory, and planning parity scaffold to materialize the first reusable v2 evidence pack"
-  - "replace placeholder row counts and source identities for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`"
-  - "bind exact timestamps and snapshot refs into `fixture_fpmarkets_v2_runtime_minimum_0001`, then replace the planning parity scaffold with evaluated results"
+  - "materialize the first reusable dataset-contract evidence pack inside `01_dataset_contract_freeze`"
+  - "replace placeholder row counts, source identities, and output hashes for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`"
+  - "keep fixture timestamp binding, evaluated runtime parity, and broader artifact identity closure queued for Stages 03 and 04"
 do_not_reopen_without_new_hypothesis:
   - "new regular alpha or range stage before Stage 01 to 05 foundation gates close"
   - "legacy winners, thresholds, or defaults as automatic v2 starting points"
@@ -36,7 +36,11 @@ must_read_next:
   - "README.md"
   - "AGENTS.md"
   - "docs/context/current_working_state.md"
-  - "stages/00_foundation_sprint/00_spec/stage_brief.md"
+  - "stages/00_foundation_sprint/04_selected/selection_status.md"
+  - "docs/decisions/2026-04-18_stage00_close_and_stage01_open.md"
+  - "stages/01_dataset_contract_freeze/00_spec/stage_brief.md"
+  - "stages/01_dataset_contract_freeze/01_inputs/input_refs.md"
+  - "stages/01_dataset_contract_freeze/04_selected/selection_status.md"
   - "stages/00_foundation_sprint/01_inputs/first_v2_dataset_freeze_card.md"
   - "stages/00_foundation_sprint/01_inputs/first_v2_gold_fixture_inventory.md"
   - "stages/00_foundation_sprint/03_reviews/first_v2_runtime_parity_report.md"
@@ -46,5 +50,5 @@ must_read_next:
   - "docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md"
   - "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md"
 open_questions:
-  - "What are the first materialized row summary and source identities for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`?"
-  - "Which exact closed-bar timestamps, snapshot refs, and evaluated parity results will instantiate `fixture_fpmarkets_v2_runtime_minimum_0001` and `report_fpmarkets_v2_runtime_parity_0001`?"
+  - "What are the first materialized row summary, source identities, and output hashes for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`?"
+  - "Which local raw export roots and first processed artifacts will anchor the reusable Stage 01 dataset-contract evidence pack?"

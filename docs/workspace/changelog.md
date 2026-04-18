@@ -14,6 +14,8 @@
 - fixed the contract-order feature hash for the planning freeze using the frozen 58-feature order
 - wrote the first planning gold fixture inventory and first planning runtime parity report scaffold
 - aligned Stage 00 live docs so remaining work now points only to materialized row summaries, bound fixture timestamps, and evaluated parity results
+- closed `00_foundation_sprint` as planning scaffold complete and opened `01_dataset_contract_freeze`
+- moved the first materialized dataset evidence tasks into Stage 01 while keeping parity and broader artifact identity closure assigned to later foundation stages
 
 ## 2026-04-17
 

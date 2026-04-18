@@ -3,7 +3,7 @@
 - updated_on: `2026-04-18`
 - workspace: `Project_Obsidian_Prime_v2`
 - project_mode: `foundation_restart`
-- active_stage: `00_foundation_sprint`
+- active_stage: `01_dataset_contract_freeze`
 - active_branch: `main`
 
 ## Read This First
@@ -11,14 +11,17 @@
 1. `README.md`
 2. `AGENTS.md`
 3. `docs/workspace/workspace_state.yaml`
-4. `stages/00_foundation_sprint/00_spec/stage_brief.md`
-5. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-6. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-7. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
-8. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
-9. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
-10. `stages/00_foundation_sprint/03_reviews/review_index.md`
-11. `stages/00_foundation_sprint/04_selected/selection_status.md`
+4. `stages/00_foundation_sprint/04_selected/selection_status.md`
+5. `docs/decisions/2026-04-18_stage00_close_and_stage01_open.md`
+6. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
+7. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+8. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+9. `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
+10. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
+11. `stages/01_dataset_contract_freeze/00_spec/stage_brief.md`
+12. `stages/01_dataset_contract_freeze/01_inputs/input_refs.md`
+13. `stages/01_dataset_contract_freeze/03_reviews/review_index.md`
+14. `stages/01_dataset_contract_freeze/04_selected/selection_status.md`
 
 ## Current Read
 
@@ -26,11 +29,12 @@
 - no v2 alpha incumbent has been promoted yet, by policy rather than by delay
 - current v2 truth begins only after the first dataset freeze, the first parity harness, and the first artifact identity closure exist
 - until those closures exist, the workspace stays in foundation mode
+- `00_foundation_sprint` is now closed as planning scaffold complete, and `01_dataset_contract_freeze` is the active foundation stage
 - legacy winners remain archive notes and design evidence only; they do not define current v2 truth
 - the shared root skeleton now treats `docs/`, `data/`, and `foundation/` as the reusable base while `stages/` stays stage-local
 - the supporting freeze/parity templates and artifact registry schema are now aligned to the Stage 00 supplemental contracts so the first reusable evidence pack can be written without ad hoc fields
 - the first planning freeze card now exists for `dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01`, and its contract-order feature fingerprint is now fixed
-- the first planning gold fixture inventory and first planning runtime parity report now exist, but all snapshot-backed timestamps, row summaries, and parity results remain pending the first materialized export
+- the first planning gold fixture inventory and first planning runtime parity report now exist, but those remain Stage 03 and 04 follow-up inputs rather than Stage 00 blockers
 
 ## Legacy Lessons Carried Forward
 
@@ -43,9 +47,9 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. replace the planning-freeze placeholders with the first materialized row summary and source identities
-2. bind exact timestamps and snapshot refs into `fixture_fpmarkets_v2_runtime_minimum_0001`
-3. replace the planning parity scaffold with the first evaluated `03_runtime_parity_closure` evidence pack
+1. replace the planning-freeze placeholders with the first materialized row summary, source identities, and output hashes
+2. update the Stage 01 dataset freeze evidence and artifact registry rows so the first reusable dataset-contract pack is durable
+3. keep exact fixture timestamps and snapshot refs queued for `03_runtime_parity_closure`
 4. keep `04_artifact_identity_closure` explicit and machine-readable across dataset, fixture, snapshot, and parity artifacts
 5. keep `05_exploration_kernel_freeze` closed before opening new range stages
 
@@ -60,8 +64,9 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Do Not Do First
 
-- do not open a fresh alpha stage before Stage 00 foundation gates close
+- do not open a fresh alpha stage before Stage 01 to 05 foundation gates close
 - do not treat legacy winners or legacy operating defaults as the starting line for v2
+- do not treat Stage 00 closure as proof of materialized dataset closure or runtime parity closure
 - do not treat bundle handoff verification as full parity closure
 - do not treat platform built-ins as contract-equivalent just because they are convenient
 - do not let durable conclusions live only in branch notes or scratch files

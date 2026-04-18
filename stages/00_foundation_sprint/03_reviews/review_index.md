@@ -16,14 +16,15 @@
 ## Latest Structural / Diagnostic Read
 
 - structural read: `not used`
-- diagnostic read: `planning parity scaffold exists, but no v2 evaluated parity report yet`
+- diagnostic read: `planning scaffold complete; no v2 evaluated parity report yet`
 - do not confuse with regular line: `legacy Stage 40 to 42 evidence guides design, but does not define current v2 truth`
 
 ## Closed Branches
 
-- none yet
+- branch / wave: `Stage 00 planning scaffold completion`
+- why closed: `the charter, contracts, planning freeze, planning fixture inventory, and planning parity scaffold now exist and the remaining work has explicit downstream stages`
+- reopen trigger: `project-wide charter, contract hierarchy, or Stage 01 to 05 foundation roadmap changes`
 
 ## Open Questions
 
-- what are the first materialized row summary and source identities for the v2 planning freeze?
-- which exact timestamps, snapshot refs, and evaluated parity results will turn the planning fixture and report pair into reusable Stage 00 evidence?
+- none at the Stage 00 planning layer; remaining materialized dataset questions move to Stage 01 and later parity questions move to Stage 03 and Stage 04
