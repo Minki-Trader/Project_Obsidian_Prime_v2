@@ -103,6 +103,8 @@ def classify_scope(comparison: dict[str, Any]) -> str:
         return "first_mt5_snapshot_materialized_but_comparison_incomplete"
     if aggregate["exact_parity"]:
         return "first_evaluated_pack_exact_match"
+    if aggregate["tolerance_parity"] and comparison["identity"]["machine_readable_identity_trace"]["traceable"]:
+        return "first_evaluated_pack_tolerance_closed_identity_trace_materialized_exact_open"
     if aggregate["tolerance_parity"]:
         return "first_evaluated_pack_tolerance_match_exact_open"
     return "first_evaluated_pack_mismatch_open"
@@ -129,11 +131,11 @@ def likely_root_cause(comparison: dict[str, Any]) -> str:
 def what_remains_open(comparison: dict[str, Any]) -> str:
     aggregate = comparison["aggregate_results"]
     matching = comparison["matching"]
+    identity_trace = comparison["identity"]["machine_readable_identity_trace"]
     if aggregate["tolerance_parity"]:
-        return (
-            "runtime-helper parity, machine-readable MT5 identity fields inside the snapshot rows, broader-sample parity beyond the first five windows, "
-            "and Stage 04 artifact-identity closure"
-        )
+        if identity_trace["traceable"]:
+            return "runtime-helper parity, broader-sample parity beyond the first five windows, and the explicit Stage 04 artifact-identity closure read"
+        return "runtime-helper parity, machine-readable MT5 identity fields inside the snapshot rows, broader-sample parity beyond the first five windows, and Stage 04 artifact-identity closure"
     if matching["missing_fixture_ids"]:
         return "complete the missing MT5 fixture rows, then rerun the comparison and re-read the first pack verdict"
     return "inspect the dominant drift features, re-check timestamp identity, and confirm whether the mismatch is localized or systemic before any closure claim"
@@ -142,10 +144,9 @@ def what_remains_open(comparison: dict[str, Any]) -> str:
 def next_sampling_plan(comparison: dict[str, Any]) -> str:
     aggregate = comparison["aggregate_results"]
     if aggregate["tolerance_parity"]:
-        return (
-            "update the tracked Stage 03 report and selection read from this evaluated pack, then decide whether the next step is broader-sample parity "
-            "or direct Stage 04 artifact-identity preparation"
-        )
+        if comparison["identity"]["machine_readable_identity_trace"]["traceable"]:
+            return "close the Stage 03 model-input parity read, hand the machine-readable identity chain to Stage 04, and decide whether the next sample is broader-sample parity or explicit runtime self-check closure"
+        return "update the tracked Stage 03 report and selection read from this evaluated pack, then decide whether the next step is broader-sample parity or direct Stage 04 artifact-identity preparation"
     return "repair the localized MT5 export or feature mismatch, rerun the five-window comparison, and only then revisit the Stage 03 closure read"
 
 
@@ -166,6 +167,7 @@ def render_report(
     windows_utc = "|".join(fixture["timestamp_utc"] for fixture in fixtures)
     windows_ny = "|".join(fixture["timestamp_america_new_york"] for fixture in fixtures)
     identity = comparison["identity"]["expected"]
+    identity_trace = comparison["identity"]["machine_readable_identity_trace"]
 
     negative_fixture = comparison["fixtures"]["fix_negative_required_missing_0001"]
     negative_result = (
@@ -202,6 +204,13 @@ def render_report(
 - runtime_contract_version: `{mt5_request['runtime_contract_version']}`
 - feature_order_hash: `{python_snapshot['feature_order_hash']}`
 - required_artifact_hashes_checked: `fixture_bindings_sha256=sha256:{sha256_file(fixture_bindings_path)}|python_snapshot_sha256=sha256:{sha256_file(python_snapshot_path)}|mt5_request_sha256=sha256:{sha256_file(mt5_request_path)}|mt5_snapshot_sha256=sha256:{sha256_file(mt5_snapshot_path)}`
+
+## Identity Trace
+
+- request_consistent: `{format_bool(bool(identity_trace['request_consistent']))}`
+- mt5_identity_fields_present: `{format_bool(bool(identity_trace['mt5_fields_present']))}`
+- mt5_identity_values_match: `{format_bool(bool(identity_trace['mt5_values_match']))}`
+- machine_readable_identity_trace: `{format_bool(bool(identity_trace['traceable']))}`
 
 ## Fixture Coverage
 

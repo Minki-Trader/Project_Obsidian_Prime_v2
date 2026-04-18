@@ -35,6 +35,6 @@
 
 ## Immediate Missing Inputs
 
-- no missing files remain for the first evaluated five-window pack
-- a localized root-cause note or repaired rerun is still needed before any Stage 03 closure claim
-- explicit embedded MT5-side identity fields remain a later Stage 04 artifact-identity follow-up
+- no Stage 03 blocker remains on the first five-window parity pack
+- the machine-readable first-pack identity chain now exists inside the MT5 snapshot rows and the comparison summary, but the explicit Stage 04 artifact-identity closure read remains open downstream
+- runtime-helper parity and broader-sample parity remain later separate follow-up lines

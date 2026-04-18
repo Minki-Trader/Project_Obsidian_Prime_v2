@@ -31,11 +31,24 @@ def load_json(path: Path) -> dict[str, Any]:
 def render_set(mt5_request: dict[str, Any]) -> str:
     lines = [
         "; Stage 03 runtime parity MT5 feature snapshot audit inputs",
-        "InpEnableFeatureSnapshotAudit=true",
-        "InpFeatureSnapshotAuditUseCommonFiles=true",
-        f"InpFeatureSnapshotAuditPath={mt5_request['common_files_output_path']}",
-        f"InpFeatureSnapshotAuditTargetWindowsUtc={mt5_request['target_windows_utc']}",
-        "InpFeatureSnapshotAuditIncludeSkipRows=true",
+        f"InpOutputPath={mt5_request['common_files_output_path']}",
+        "InpOutputUseCommonFiles=true",
+        f"InpTargetWindowsUtc={mt5_request['target_windows_utc']}",
+        "InpMainSymbol=US100",
+        "InpTimeframe=5",
+        "InpMainWarmupBars=300",
+        "InpExternalWarmupBars=25",
+        f"InpWindowStartUtc={mt5_request['window_start_utc'].replace('T', ' ').replace('Z', '')}",
+        f"InpDatasetId={mt5_request['dataset_id']}",
+        f"InpFixtureSetId={mt5_request['fixture_set_id']}",
+        f"InpBundleId={mt5_request['bundle_id']}",
+        f"InpRuntimeId={mt5_request['target_runtime_id']}",
+        f"InpReportId={mt5_request['report_id']}",
+        f"InpParserVersion={mt5_request['parser_version']}",
+        f"InpParserContractVersion={mt5_request['parser_contract_version']}",
+        f"InpFeatureContractVersion={mt5_request['feature_contract_version']}",
+        f"InpRuntimeContractVersion={mt5_request['runtime_contract_version']}",
+        f"InpFeatureOrderHash={mt5_request['feature_order_hash']}",
     ]
     return "\n".join(lines) + "\n"
 

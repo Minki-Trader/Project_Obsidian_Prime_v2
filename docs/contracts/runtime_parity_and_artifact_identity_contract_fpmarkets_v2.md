@@ -30,7 +30,7 @@ Every parity and artifact-identity bundle must define at least:
 - `runtime_contract_version`
 - `feature_order_hash`
 
-Those fields must match across Python snapshot, MT5 snapshot, parity report, and artifact registry entries.
+Those fields must match across Python snapshot, MT5 snapshot, and parity report outputs. Artifact registry entries that represent the same durable bundle must record the same identities in scalar registry columns, including `parser_version`.
 
 ## Required Feature, Order, And Hash Rules
 

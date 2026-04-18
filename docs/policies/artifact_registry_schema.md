@@ -19,6 +19,7 @@ Use `docs/policies/artifact_policy.md` for serialization syntax. Use this file f
 - `bundle_id`: bundle identity when the artifact belongs to a model or runtime bundle
 - `runtime_id`: runtime snapshot or execution identity
 - `report_id`: report identity when the artifact is a review or parity report
+- `parser_version`: parser implementation identity when the artifact belongs to a parser-produced or parser-bound bundle
 - `feature_order_hash`: contract-order feature fingerprint when relevant
 - `path_or_ref`: repo-relative path or stable external reference for the backing artifact
 - `produced_by_stage`: stage that created or materially updated the artifact
@@ -77,6 +78,7 @@ Do not use free-form approval text in the CSV.
 - `status` uses an allowed enum value
 - `approved_for` uses an allowed enum value
 - `path_or_ref` is a repo-relative forward-slash path or a stable external reference
+- `parser_version` is a plain scalar when present and uses an allowed pending token when the row is still planning-only
 - composite fields follow the serialization rules in `docs/policies/artifact_policy.md`
 - pending values use only the allowed pending tokens from `docs/policies/artifact_policy.md`
 - `notes` carries prose; composite fields do not

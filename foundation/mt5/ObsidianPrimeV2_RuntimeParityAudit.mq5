@@ -8,6 +8,17 @@ input string InpMainSymbol = "US100";
 input ENUM_TIMEFRAMES InpTimeframe = PERIOD_M5;
 input int    InpMainWarmupBars = 300;
 input int    InpExternalWarmupBars = 25;
+input string InpWindowStartUtc = "2022.08.01 00:00:00";
+input string InpDatasetId = "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01";
+input string InpFixtureSetId = "fixture_fpmarkets_v2_runtime_minimum_0001";
+input string InpBundleId = "bundle_fpmarkets_v2_runtime_minimum_0001";
+input string InpRuntimeId = "runtime_fpmarkets_v2_mt5_snapshot_0001";
+input string InpReportId = "report_fpmarkets_v2_runtime_parity_0001";
+input string InpParserVersion = "fpmarkets_v2_stage01_materializer_v1";
+input string InpParserContractVersion = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-16";
+input string InpFeatureContractVersion = "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-16";
+input string InpRuntimeContractVersion = "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md@2026-04-16";
+input string InpFeatureOrderHash = "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2";
 
 string FEATURE_NAMES[58] =
   {
@@ -132,6 +143,13 @@ string FormatUtc(const datetime value)
    return TimeToString(value, TIME_DATE | TIME_SECONDS);
   }
 
+string FormatUtcIso(const datetime value)
+  {
+   MqlDateTime dt;
+   TimeToStruct(value, dt);
+   return StringFormat("%04d-%02d-%02dT%02d:%02d:%02dZ", dt.year, dt.mon, dt.day, dt.hour, dt.min, dt.sec);
+  }
+
 bool ParseUtcText(const string raw_text, datetime &out_value)
   {
    string text = raw_text;
@@ -225,6 +243,29 @@ datetime ToNewYorkTime(const datetime utc_time)
   {
    int offset_hours = IsNewYorkDstActive(utc_time) ? -4 : -5;
    return utc_time + (offset_hours * 3600);
+  }
+
+string OffsetText(const int offset_hours)
+  {
+   string sign = (offset_hours >= 0 ? "+" : "-");
+   return StringFormat("%s%02d:00", sign, MathAbs(offset_hours));
+  }
+
+string FormatNewYorkIso(const datetime utc_time)
+  {
+   int offset_hours = IsNewYorkDstActive(utc_time) ? -4 : -5;
+   datetime ny_time = utc_time + (offset_hours * 3600);
+   MqlDateTime dt;
+   TimeToStruct(ny_time, dt);
+   return StringFormat("%04d-%02d-%02dT%02d:%02d:%02d%s", dt.year, dt.mon, dt.day, dt.hour, dt.min, dt.sec, OffsetText(offset_hours));
+  }
+
+string CanonicalWindowStartUtc()
+  {
+   datetime parsed = 0;
+   if(!ParseUtcText(InpWindowStartUtc, parsed))
+      return "";
+   return FormatUtcIso(parsed);
   }
 
 double SafeDivide(const double numerator, const double denominator)
@@ -561,9 +602,16 @@ bool LoadAlignedClosedWindow(const string symbol, const datetime target_close, c
       return false;
      }
 
-   // Use a wider time span because session gaps and weekends can leave a much
-   // smaller bar count than a naive bars_needed * timeframe backstep would imply.
-   datetime start_open = target_close - (bars_needed * PeriodSeconds(InpTimeframe) * 12);
+   datetime start_open = 0;
+   datetime parsed_window_start = 0;
+   if(symbol == InpMainSymbol && ParseUtcText(InpWindowStartUtc, parsed_window_start))
+      start_open = parsed_window_start - PeriodSeconds(InpTimeframe);
+   else
+     {
+      // Use a wider time span because session gaps and weekends can leave a much
+      // smaller bar count than a naive bars_needed * timeframe backstep would imply.
+      start_open = target_close - (bars_needed * PeriodSeconds(InpTimeframe) * 12);
+     }
    datetime end_open = target_close - PeriodSeconds(InpTimeframe);
 
    MqlRates loaded[];
@@ -589,8 +637,12 @@ bool LoadAlignedClosedWindow(const string symbol, const datetime target_close, c
      }
 
    int start_index = target_index - bars_needed + 1;
-   ArrayResize(out_rates, bars_needed);
-   for(int i = 0; i < bars_needed; i++)
+   if(symbol == InpMainSymbol && parsed_window_start > 0)
+      start_index = 0;
+
+   int out_count = target_index - start_index + 1;
+   ArrayResize(out_rates, out_count);
+   for(int i = 0; i < out_count; i++)
       out_rates[i] = loaded[start_index + i];
 
    return true;
@@ -707,6 +759,24 @@ string BuildExternalAuditJson(const ExternalAuditItem &items[])
      }
    out += "]";
    return out;
+  }
+
+string BuildSnapshotIdentityJson(const datetime target_close)
+  {
+   return
+      "\"dataset_id\":" + JsonQuoted(InpDatasetId) + ","
+      "\"fixture_set_id\":" + JsonQuoted(InpFixtureSetId) + ","
+      "\"bundle_id\":" + JsonQuoted(InpBundleId) + ","
+      "\"report_id\":" + JsonQuoted(InpReportId) + ","
+      "\"runtime_id\":" + JsonQuoted(InpRuntimeId) + ","
+      "\"parser_version\":" + JsonQuoted(InpParserVersion) + ","
+      "\"parser_contract_version\":" + JsonQuoted(InpParserContractVersion) + ","
+      "\"feature_contract_version\":" + JsonQuoted(InpFeatureContractVersion) + ","
+      "\"runtime_contract_version\":" + JsonQuoted(InpRuntimeContractVersion) + ","
+      "\"feature_order_hash\":" + JsonQuoted(InpFeatureOrderHash) + ","
+      "\"window_start_utc\":" + JsonQuoted(CanonicalWindowStartUtc()) + ","
+      "\"timestamp_utc\":" + JsonQuoted(FormatUtcIso(target_close)) + ","
+      "\"timestamp_america_new_york\":" + JsonQuoted(FormatNewYorkIso(target_close)) + ",";
   }
 
 void FillZeroFeatures(double &features[])
@@ -1181,7 +1251,8 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
       FillZeroFeatures(features);
 
    json_line =
-      "{"
+      "{" +
+      BuildSnapshotIdentityJson(target_close) +
       "\"event_timestamp_utc\":" + JsonQuoted(FormatUtc(target_close)) + ","
       "\"bar_time_server\":" + JsonQuoted(FormatUtc(target_close)) + ","
       "\"symbol\":" + JsonQuoted(InpMainSymbol) + ","
@@ -1194,7 +1265,7 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
       "\"row_ready\":" + JsonBool(row_ready) + ","
       "\"skip_reason\":" + JsonQuoted(error) + ","
       "\"feature_checksum\":0,"
-      "\"feature_fingerprint\":\"fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2\","
+      "\"feature_fingerprint\":" + JsonQuoted(InpFeatureOrderHash) + ","
       "\"external_inputs\":" + BuildExternalAuditJson(audit_items) + ","
       "\"features\":" + BuildFeatureJson(features) +
       "}";

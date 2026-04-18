@@ -470,24 +470,65 @@ def build_identity_summary(
         "bundle_id": python_snapshot.get("bundle_id"),
         "report_id": python_snapshot.get("report_id"),
         "runtime_id": mt5_request.get("target_runtime_id"),
+        "parser_version": python_snapshot.get("parser_version"),
+        "feature_contract_version": python_snapshot.get("feature_contract_version"),
+        "runtime_contract_version": mt5_request.get("runtime_contract_version"),
         "feature_order_hash": python_snapshot.get("feature_order_hash"),
     }
 
+    tracked_fields = (
+        "dataset_id",
+        "fixture_set_id",
+        "bundle_id",
+        "report_id",
+        "runtime_id",
+        "parser_version",
+        "feature_contract_version",
+        "runtime_contract_version",
+        "feature_order_hash",
+    )
+
+    mt5_identity_values = {
+        field: unique_non_empty(
+            [
+                None if record["raw"].get(field) is None else str(record["raw"].get(field))
+                for record in mt5_records
+            ]
+        )
+        for field in tracked_fields
+    }
     mt5_identity_fields_present = {
         field: any(field in record["raw"] for record in mt5_records)
-        for field in ("dataset_id", "fixture_set_id", "bundle_id", "report_id", "runtime_id", "feature_order_hash")
+        for field in tracked_fields
     }
+    mt5_identity_matches = {
+        field: (len(values) == 1 and values[0] == str(expected[field])) if expected[field] is not None else None
+        for field, values in mt5_identity_values.items()
+    }
+    request_consistency = {
+        "dataset_id_match": mt5_request.get("dataset_id") == expected["dataset_id"],
+        "fixture_set_id_match": mt5_request.get("fixture_set_id") == expected["fixture_set_id"],
+        "bundle_id_match": mt5_request.get("bundle_id") == expected["bundle_id"],
+        "report_id_match": mt5_request.get("report_id") == expected["report_id"],
+        "parser_version_match": mt5_request.get("parser_version") == expected["parser_version"],
+        "feature_contract_version_match": mt5_request.get("feature_contract_version") == expected["feature_contract_version"],
+        "runtime_contract_version_match": mt5_request.get("runtime_contract_version") == expected["runtime_contract_version"],
+        "feature_order_hash_match": mt5_request.get("feature_order_hash") == expected["feature_order_hash"],
+    }
+    machine_readable_identity_trace = {
+        "request_consistent": all(bool(value) for value in request_consistency.values()),
+        "mt5_fields_present": all(bool(value) for value in mt5_identity_fields_present.values()),
+        "mt5_values_match": all(bool(value) for value in mt5_identity_matches.values()),
+    }
+    machine_readable_identity_trace["traceable"] = all(machine_readable_identity_trace.values())
 
     return {
         "expected": expected,
-        "request_consistency": {
-            "dataset_id_match": mt5_request.get("dataset_id") == expected["dataset_id"],
-            "fixture_set_id_match": mt5_request.get("fixture_set_id") == expected["fixture_set_id"],
-            "bundle_id_match": mt5_request.get("bundle_id") == expected["bundle_id"],
-            "report_id_match": mt5_request.get("report_id") == expected["report_id"],
-            "feature_order_hash_match": mt5_request.get("feature_order_hash") == expected["feature_order_hash"],
-        },
+        "request_consistency": request_consistency,
         "mt5_identity_fields_present": mt5_identity_fields_present,
+        "mt5_identity_values": mt5_identity_values,
+        "mt5_identity_matches": mt5_identity_matches,
+        "machine_readable_identity_trace": machine_readable_identity_trace,
         "artifact_hashes": {
             "python_snapshot_sha256": sha256_file(python_snapshot_path),
             "mt5_request_sha256": sha256_file(mt5_request_path),

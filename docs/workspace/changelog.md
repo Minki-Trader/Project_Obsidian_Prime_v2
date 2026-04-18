@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-04-19
+
+- repaired the v2-native MT5 audit path so the main symbol uses the full contract window history through each audited close rather than a short trailing slice
+- reran the first five-window v2-native parity pack and closed Stage 03 model-input parity within the agreed tolerance with `tolerance_parity=true`
+- embedded machine-readable identity fields directly into the MT5 snapshot rows and extended the comparison summary to verify the first request-to-snapshot identity chain
+- aligned the rendered parity report to distinguish tolerance-based closure from the bounded exact-open float-noise note
+- closed `03_runtime_parity_closure` and opened `04_artifact_identity_closure`
+- synchronized the workspace read to the working branch `codex/stage03-v2-native-parity-sync`
+- aligned the artifact registry schema to carry `parser_version` and corrected the Stage 04 live-state wording to match the current automated proof boundary
+
 ## 2026-04-18
 
 - aligned the workspace charter around a concept-preserving reboot and explicit foundation-first closure language
