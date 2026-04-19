@@ -642,6 +642,58 @@ bool EnsureAscendingRates(MqlRates &rates[])
    return true;
   }
 
+bool AreCloseRelative(const double left, const double right, const double tolerance_fraction)
+  {
+   if(!IsUsableValue(left) || !IsUsableValue(right) || left <= 0.0 || right <= 0.0 || tolerance_fraction < 0.0)
+      return false;
+
+   double base = MathMax(MathAbs(left), MathAbs(right));
+   if(base <= 0.0)
+      return false;
+   return MathAbs(left - right) <= (base * tolerance_fraction);
+  }
+
+int FindNeighborUsableCloseIndex(const MqlRates &rates[], const int start_index, const int step)
+  {
+   int idx = start_index + step;
+   while(idx >= 0 && idx < ArraySize(rates))
+     {
+      if(IsUsableValue(rates[idx].close) && rates[idx].close > 0.0)
+         return idx;
+      idx += step;
+     }
+   return -1;
+  }
+
+bool IsDecimalScaleArtifact(const MqlRates &rates[], const int index)
+  {
+   if(index < 0 || index >= ArraySize(rates))
+      return false;
+
+   double candidate_close = rates[index].close;
+   if(!IsUsableValue(candidate_close) || candidate_close <= 0.0)
+      return false;
+
+   int prev_index = FindNeighborUsableCloseIndex(rates, index, -1);
+   int next_index = FindNeighborUsableCloseIndex(rates, index, +1);
+   if(prev_index < 0 || next_index < 0)
+      return false;
+
+   double prev_close = rates[prev_index].close;
+   double next_close = rates[next_index].close;
+   if(!AreCloseRelative(prev_close, next_close, 0.15))
+      return false;
+
+   // Skip single-bar decimal-shift artifacts that the tester can synthesize between two otherwise aligned closes.
+   if(AreCloseRelative(candidate_close * 10.0, prev_close, 0.15) &&
+      AreCloseRelative(candidate_close * 10.0, next_close, 0.15))
+      return true;
+   if(AreCloseRelative(candidate_close / 10.0, prev_close, 0.15) &&
+      AreCloseRelative(candidate_close / 10.0, next_close, 0.15))
+      return true;
+   return false;
+  }
+
 int FindExactBarShiftByCloseTime(const string symbol, const datetime target_close, string &error)
   {
    datetime target_open = target_close - PeriodSeconds(InpTimeframe);
@@ -701,12 +753,73 @@ bool LoadAlignedClosedWindow(const string symbol, const datetime target_close, c
       return false;
      }
 
-   int start_index = (symbol == InpMainSymbol && parsed_window_start > 0) ? 0 : (target_index - bars_needed + 1);
+   int start_index = (parsed_window_start > 0) ? 0 : (target_index - bars_needed + 1);
    int out_count = target_index - start_index + 1;
    ArrayResize(out_rates, out_count);
    for(int i = 0; i < out_count; i++)
       out_rates[i] = loaded[start_index + i];
 
+   return true;
+  }
+
+int FindPreviousUsableCloseIndex(const MqlRates &rates[], const int from_index, const int usable_bars_back)
+  {
+   if(from_index <= 0 || usable_bars_back <= 0)
+      return -1;
+
+   int found = 0;
+   for(int idx = from_index - 1; idx >= 0; idx--)
+     {
+      if(!IsUsableValue(rates[idx].close) || rates[idx].close <= 0.0)
+         continue;
+      if(IsDecimalScaleArtifact(rates, idx))
+         continue;
+      found++;
+      if(found == usable_bars_back)
+         return idx;
+     }
+   return -1;
+  }
+
+bool ComputeStockReturnMetrics(const MqlRates &rates[], double &return_1, double &return_5, double &log_return_1, string &error, const string symbol)
+  {
+   return_1 = EMPTY_VALUE;
+   return_5 = EMPTY_VALUE;
+   log_return_1 = EMPTY_VALUE;
+
+   int target_index = ArraySize(rates) - 1;
+   if(target_index < 0)
+     {
+      error = "WARMUP_INSUFFICIENT_" + symbol;
+      return false;
+     }
+
+   double current_close = rates[target_index].close;
+   if(!IsUsableValue(current_close) || current_close <= 0.0)
+     {
+      error = "NUMERIC_INVALID_" + symbol;
+      return false;
+     }
+
+   int prev1_index = FindPreviousUsableCloseIndex(rates, target_index, 1);
+   int prev5_index = FindPreviousUsableCloseIndex(rates, target_index, 5);
+   if(prev1_index < 0 || prev5_index < 0)
+     {
+      error = "WARMUP_INSUFFICIENT_" + symbol;
+      return false;
+     }
+
+   double ratio_1 = SafeDivide(current_close, rates[prev1_index].close);
+   double ratio_5 = SafeDivide(current_close, rates[prev5_index].close);
+   if(!IsUsableValue(ratio_1) || !IsUsableValue(ratio_5) || ratio_1 <= 0.0 || ratio_5 <= 0.0)
+     {
+      error = "NUMERIC_INVALID_" + symbol;
+      return false;
+     }
+
+   return_1 = ratio_1 - 1.0;
+   return_5 = ratio_5 - 1.0;
+   log_return_1 = MathLog(ratio_1);
    return true;
   }
 
@@ -1102,16 +1215,13 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
    double is_last_30m_before_cash_close = 0.0;
    ComputeSessionValues(target_close, is_us_cash_open, minutes_from_cash_open, is_first_30m_after_open, is_last_30m_before_cash_close);
 
-   double overnight_return = ComputeOvernightReturn(main_rates, count, t, error);
-   if(!IsUsableValue(overnight_return) && error == "")
-      error = "SESSION_OVERNIGHT_NOT_READY";
-
    double external_values[16];
    for(int ev = 0; ev < 16; ev++)
       external_values[ev] = EMPTY_VALUE;
 
    ExternalAuditItem audit_items[];
    ArrayResize(audit_items, 0);
+   string external_error = "";
 
    string proxy_symbols[3] = {"VIX", "US10YR", "USDX"};
    for(int proxy = 0; proxy < 3; proxy++)
@@ -1129,8 +1239,8 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
          audit_items[slot_fail].fallback_used = false;
          audit_items[slot_fail].stale_bars = 0;
          audit_items[slot_fail].detail = proxy_error;
-         if(error == "")
-            error = proxy_error;
+         if(external_error == "")
+            external_error = proxy_error;
          continue;
         }
 
@@ -1190,8 +1300,8 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
          audit_items[slot_fail2].fallback_used = false;
          audit_items[slot_fail2].stale_bars = 0;
          audit_items[slot_fail2].detail = stock_error;
-         if(error == "")
-            error = stock_error;
+         if(external_error == "")
+            external_error = stock_error;
          continue;
         }
 
@@ -1205,22 +1315,41 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
       audit_items[slot2].stale_bars = 0;
       audit_items[slot2].detail = "";
 
-      int stt = ArraySize(stock_rates) - 1;
-      mega8_return_1[stock] = SafeDivide(stock_rates[stt].close, stock_rates[stt - 1].close) - 1.0;
-      mega8_return_5[stock] = SafeDivide(stock_rates[stt].close, stock_rates[stt - 5].close) - 1.0;
+      double stock_return_1 = EMPTY_VALUE;
+      double stock_return_5 = EMPTY_VALUE;
+      double stock_log_return_1 = EMPTY_VALUE;
+      string compute_error = "";
+      if(!ComputeStockReturnMetrics(stock_rates, stock_return_1, stock_return_5, stock_log_return_1, compute_error, g_stock_symbols[stock]))
+        {
+         audit_items[slot2].detail = compute_error;
+         if(external_error == "")
+            external_error = compute_error;
+         continue;
+        }
+
+      mega8_return_1[stock] = stock_return_1;
+      mega8_return_5[stock] = stock_return_5;
       if(mega8_return_1[stock] > 0.0)
          positive_count++;
 
-      double log_return_1 = MathLog(stock_rates[stt].close / stock_rates[stt - 1].close);
       if(g_stock_symbols[stock] == "NVDA.xnas")
-         external_values[6] = log_return_1;
+         external_values[6] = stock_log_return_1;
       else if(g_stock_symbols[stock] == "AAPL.xnas")
-         external_values[7] = log_return_1;
+         external_values[7] = stock_log_return_1;
       else if(g_stock_symbols[stock] == "MSFT.xnas")
-         external_values[8] = log_return_1;
+         external_values[8] = stock_log_return_1;
       else if(g_stock_symbols[stock] == "AMZN.xnas")
-         external_values[9] = log_return_1;
+         external_values[9] = stock_log_return_1;
      }
+
+   string session_error = "";
+   double overnight_return = ComputeOvernightReturn(main_rates, count, t, session_error);
+   if(!IsUsableValue(overnight_return) && session_error == "")
+      session_error = "SESSION_OVERNIGHT_NOT_READY";
+   if(external_error != "")
+      error = external_error;
+   else if(session_error != "")
+      error = session_error;
 
    double mega8_equal = RollingMeanSlice(mega8_return_1, 0, 8);
    double top3_weighted = EMPTY_VALUE;

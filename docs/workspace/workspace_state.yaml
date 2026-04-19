@@ -8,7 +8,7 @@ current_contract_aligned_lane: "rebuild_after_v2_foundation"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "first_materialized_freeze_written_stage03_tolerance_closed_stage04_artifact_identity_closed_stage05_broader_0002_evaluated_mismatch_open"
+  status: "first_materialized_freeze_written_stage03_tolerance_closed_stage04_artifact_identity_closed_stage05_broader_0002_first_evaluated_pack_tolerance_closed_exact_open"
 practical_modeling_start: "2022-09-01"
 tester_defaults:
   symbol: "US100"
@@ -22,14 +22,14 @@ legacy_reference_context:
 parity_status:
   model_input_localized: "first_v2_native_tolerance_closed_exact_open"
   runtime_helper_path: "not_yet_separately_evaluated_in_v2"
-  broader_sample: "broader_0002_evaluated_mismatch_open_after_localized_alignment_fixes"
+  broader_sample: "broader_0002_first_evaluated_pack_tolerance_closed_exact_open_stage05_still_open"
   carried_path: "not_started_in_v2"
 current_focus:
   - "carry the explicit Stage 04 artifact-identity closure read forward without conflating it with runtime-helper parity, broader-sample parity, or operating promotion"
   - "keep broader-sample parity frozen as the first downstream validation lane while Stage 05 remains active"
-  - "retain `broader_0001` as pre-alignment mismatch evidence and treat `broader_0002` as the active contract-aligned broader pack"
-  - "inspect the localized early-history equity and breadth drift that remains on `broader_0002` before opening any downstream lane or rewriting the charter"
-  - "inspect the pre-open negative skip-reason divergence on the same frozen `broader_0002` pack rather than changing timestamps, scope, or public runtime interfaces"
+  - "retain `broader_0001` as pre-alignment mismatch evidence and treat `broader_0002` as the first tolerance-closed active broader pack"
+  - "keep the active `broader_0002` exact-open note bounded to floating-point serialization drift rather than a contract-surface blocker"
+  - "decide whether the next Stage 05 evidence is additional broader-sample coverage or a separate runtime-helper parity lane"
   - "keep active branch truth aligned to `codex/stage05-broader-rebind` until the handoff is merged"
   - "keep runtime-helper parity separate from model-input parity and artifact identity closure"
   - "keep `Tier A / Tier B / Tier C` readiness as a downstream exploration framework only; current runtime truth remains the strict Tier A line"
@@ -73,7 +73,6 @@ must_read_next:
   - "docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md"
   - "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md"
 open_questions:
-  - "Why does `fix_regular_cash_session_0001` still carry early-history `NVDA` and breadth drift on MT5 even though the active `broader_0002` row is ready and every external timestamp match remains exact?"
-  - "Why do `fix_negative_off_hours_pre_open_0001` and `fix_negative_off_hours_pre_open_0002` stay non-ready on both sides yet still resolve to `SESSION_CASH_OPEN_NOT_FOUND` on MT5 instead of the Python-side external-alignment-missing expectation?"
-  - "Is any symbol-specific early-history equity raw-series handling still diverging inside the active `broader_0002` pack even after the `raw-series-first` proxy fix and the MT5 supertrend seed alignment?"
+  - "Which explicit next evidence should Stage 05 request after the first broader tolerance-closed pack: additional broader-sample coverage or a separate runtime-helper parity lane?"
+  - "Does the remaining exact-open float drift require tighter serialization discipline before a later explicit broader-sample closure read, or is the current tolerance boundary sufficient?"
   - "What minimum reporting and registry boundary must a future Tier B reduced-risk line carry so it never blurs with the strict Tier A contract line?"

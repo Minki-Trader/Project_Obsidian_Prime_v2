@@ -36,7 +36,9 @@
 - the first broader evaluated pack `broader_0001` is retained as pre-alignment mismatch-open evidence rather than active Stage 05 truth; it remains useful diagnostic evidence, but it no longer carries the active broader request-pack identity after the localized contract-alignment fixes landed
 - those localized fixes are now materialized in the active code path: Python external proxy features are computed `raw-series-first`, the MT5 broader audit loader uses the full declared contract window through each audited close instead of the earlier short trailing slice, and the MT5 `supertrend_10_3` seed rule now follows the current Python contract surface
 - the active charter-aligned broader-sample inventory, machine-readable selection manifest, Python snapshot, MT5 request, MT5 input `.set`, tester `.ini`, imported MT5 snapshot, broader comparison summary, and rendered broader parity report now exist under the `broader_0002` identity family in `stages/05_exploration_kernel_freeze/`
-- the active broader evaluated pack `broader_0002` still remains `mismatch_open` rather than closure evidence: all `24` frozen fixtures matched by id and timestamp with zero unexpected MT5 rows, `15` of `16` ready rows now match within tolerance, all `8` negative rows remain non-ready, but `exact_parity=false`, `tolerance_parity=false`, `max_abs_diff=3.021929825070319`, one localized early-history ready-row drift remains on `fix_regular_cash_session_0001` across `nvda_xnas_log_return_1`, `mega8_equal_return_1`, `top3_weighted_return_1`, `us100_minus_mega8_equal_return_1`, and `us100_minus_top3_weighted_return_1`, and two pre-open negative rows still differ on skip-reason semantics as `SESSION_CASH_OPEN_NOT_FOUND`
+- the active broader evaluated pack `broader_0002` now reaches the first broader tolerance-closed read rather than mismatch-open evidence: all `24` frozen fixtures matched by id and timestamp with zero unexpected MT5 rows, all `16` ready rows match within tolerance, all `8` negative rows match on the strict non-ready comparison rule, `exact_parity=false`, `tolerance_parity=true`, `max_abs_diff=3.9019953135266405e-06`, and zero features remain over the agreed tolerance
+- the localized Stage 05 blocker on the active pack is now resolved on materialized evidence: the MT5 audit path skips a tester-synthesized single-bar decimal-scale artifact in early-history `NVDA` history, and the pre-open negative rows now resolve to the same external-alignment-missing skip-reason family that the Python side expects
+- that first broader tolerance-closed read does not by itself close runtime-helper parity, does not by itself close broader-sample parity as a separate stage read, and does not promote any operating line; the remaining `exact_parity=false` note stays bounded to floating-point serialization drift
 - legacy winners remain archive notes and design evidence only; they do not define current v2 foundation truth or current v2 operating truth
 - `Tier A / Tier B / Tier C readiness` remains a downstream exploration vocabulary only; it does not relax the current strict-line foundation read
 
@@ -51,9 +53,9 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. inspect the localized early-history equity and breadth drift that remains on `broader_0002` without changing the public runtime interfaces or the frozen Stage 05 charter
-2. inspect the two pre-open negative rows that now remain non-ready on both sides but still diverge on skip-reason semantics
-3. keep `runtime-helper parity` and `Tier B / Tier C` work explicitly downstream from the new broader-sample lane
+1. carry the first broader tolerance-closed pack forward without conflating it with runtime-helper parity closure, broader-sample parity closure, or operating promotion
+2. decide whether the next Stage 05 evidence is additional broader-sample coverage or a separate runtime-helper parity lane
+3. keep the active broader `exact_parity=false` note bounded to floating-point serialization drift rather than a contract blocker
 4. keep the Stage 04 closure bounded to artifact identity rather than runtime-helper parity or operating promotion
 5. keep placeholder weights caveat explicit until a real monthly-weight source replaces the equal-weight table
 6. keep branch truth aligned to `codex/stage05-broader-rebind` until the handoff is merged

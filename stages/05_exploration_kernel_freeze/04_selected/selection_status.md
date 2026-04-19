@@ -4,7 +4,7 @@
 
 - current incumbent: `none, by policy`
 - current challenger: `none, by policy`
-- current read: `Stage 05 now owns the last foundation boundary before exploration-only mode may open; Stage 04 already closed on the explicit first-pack artifact-identity read, the first downstream lane is frozen to broader-sample parity through an explicit charter, broader_0001 is retained as pre-alignment mismatch evidence, and the active contract-aligned broader_0002 pack is now evaluated on the frozen twenty-four-window shape, but that active evaluated pack still remains mismatch-open evidence and does not close Stage 05`
+- current read: `Stage 05 now owns the last foundation boundary before exploration-only mode may open; Stage 04 already closed on the explicit first-pack artifact-identity read, the first downstream lane is frozen to broader-sample parity through an explicit charter, broader_0001 is retained as pre-alignment mismatch evidence, and the active contract-aligned broader_0002 pack now reaches the first broader tolerance-closed read on the frozen twenty-four-window shape with identity trace materialized and exact-open bounded to floating-point serialization drift, but that first broader evaluated pack still does not close Stage 05`
 - scoreboard used: `foundation_stage_read`
 
 ## Promotion Gates
@@ -28,7 +28,7 @@
 
 ## Risk
 
-- biggest current risk: `treating the active broader_0002 mismatch-open pack as if it either closes Stage 05 or invalidates the already closed Stage 03 and Stage 04 reads without a localized residual-mismatch hypothesis`
+- biggest current risk: `treating the active broader_0002 first tolerance-closed pack as if it automatically closes Stage 05, runtime-helper parity, or broader-sample parity as a separate stage read`
 - state fragmentation risk: `high if the active Stage 05 read, workspace state, and current working state drift apart after the Stage 04 handoff`
 - exploration-boundary overconfidence risk: `high if the broader-sample charter is mistaken for broader-sample parity closure or alpha readiness`
 - current v2 operating risk metrics: `n/a`
@@ -51,7 +51,8 @@
 - active broader comparison summary written: `broader_0002`
 - active broader rendered report written: `broader_0002`
 - active broader pack evaluated: `yes`
-- active broader pack closure scope: `first_evaluated_pack_mismatch_open`
+- active broader pack tolerance closure reached: `yes`
+- active broader pack closure scope: `first_evaluated_pack_tolerance_closed_identity_trace_materialized_exact_open`
 - Tier B downstream-only boundary accepted: `yes`
 - explicit Stage 05 freeze read written: `yes`
 - explicit Stage 05 ordering blocker currently active: `no`
@@ -68,13 +69,13 @@
 
 - keep_or_replace: `keep foundation mode`
 - promoted / kept / closed: `Stage 05 open`
-- next required evidence: `a localized explanation for the residual broader_0002 early-history equity drift and pre-open skip-reason divergence plus a rerun on the same frozen twenty-four-window charter without reopening Stage 03, Stage 04, or the broader-sample charter`
+- next required evidence: `an explicit Stage 05 read that carries forward the first broader tolerance-closed pack, keeps exact-open bounded to floating-point serialization drift, and chooses whether the next lane is additional broader-sample coverage or separate runtime-helper parity without reopening Stage 03 or Stage 04`
 
 ## Follow-Up Bias
 
-- continue: `reuse the active broader_0002 inventory and frozen request-pack artifacts, keep broader_0001 as retained evidence, inspect the localized mismatch-open evidence, and rerun the same active pack without reopening the already closed Stage 03 or Stage 04 reads`
+- continue: `reuse the active broader_0002 inventory and frozen request-pack artifacts as the first tolerance-closed broader pack, keep broader_0001 as retained evidence, and choose the next Stage 05 evidence lane without reopening the already closed Stage 03 or Stage 04 reads`
 - do_not_reopen_without_new_hypothesis: `runtime-helper parity, broader-sample parity, or alpha search should not backflow into Stage 05 as if they were already closed`
-- next best question: `which localized repair hypothesis best explains the remaining early-history NVDA and breadth drift plus the two pre-open skip-reason mismatches on the active broader_0002 pack?`
+- next best question: `should the next Stage 05 evidence extend broader-sample coverage again or open a separate runtime-helper parity lane while keeping the first broader tolerance-closed pack as the current read?`
 - downstream note: `no new alpha or range stage should open until Stage 05 is explicitly closed or explicitly bounded`
 
 ## Report Refs

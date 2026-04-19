@@ -21,7 +21,7 @@
 ## Latest Structural / Diagnostic Read
 
 - structural read: `not used`
-- diagnostic read: `Stage 05 remains open, the first downstream lane is frozen to broader-sample parity, broader_0001 is retained as pre-alignment mismatch evidence, and the active contract-aligned broader_0002 twenty-four-window pack is now fully evaluated on frozen ids and timestamps; that active evaluated pack still remains mismatch-open evidence rather than broader-sample closure`
+- diagnostic read: `Stage 05 remains open, the first downstream lane is frozen to broader-sample parity, broader_0001 is retained as pre-alignment mismatch evidence, and the active contract-aligned broader_0002 twenty-four-window pack now reaches the first broader tolerance-closed read with identity trace materialized and exact-open bounded to floating-point serialization drift; that first broader evaluated pack still does not by itself close broader-sample parity as a separate stage read`
 - do not confuse with regular line: `Stage 05 is still foundation work and does not compare alpha candidates`
 
 ## Closed Branches
@@ -31,10 +31,11 @@
 - Stage 05 already retained `broader_0001` as pre-alignment mismatch evidence instead of overwriting that first evaluated broader pack
 - Stage 05 already rebound `broader_0002` on the same fixed `24-window` charter shape after the localized contract-alignment fixes landed
 - Stage 05 already imported the active `broader_0002` MT5 snapshot and rendered the active broader comparison summary plus report on the same frozen `24-window` pack
+- Stage 05 already reran the active `broader_0002` pack to a first tolerance-closed exact-open report on the same frozen `24-window` charter without reopening Stage 03 or Stage 04
 - the strict Tier A runtime rule remains the only current runtime rule; future Tier B and Tier C paths remain downstream-only exploration vocabulary
 
 ## Open Questions
 
-- why does `fix_regular_cash_session_0001` still carry early-history `NVDA` and breadth drift on the active `broader_0002` pack even though every external timestamp match remains exact?
-- why do `fix_negative_off_hours_pre_open_0001` and `fix_negative_off_hours_pre_open_0002` stay non-ready on both sides yet still resolve to `SESSION_CASH_OPEN_NOT_FOUND` on MT5 instead of the Python-side external-alignment-missing expectation?
-- what remaining symbol-specific early-history equity handling still differs inside the active `broader_0002` pack after the `raw-series-first` proxy fix and the MT5 supertrend seed alignment?
+- should the next Stage 05 evidence extend broader-sample coverage again or open a separate runtime-helper parity lane while keeping the first broader tolerance-closed pack as the active read?
+- does the remaining exact-open float drift require tighter serialization discipline before any later explicit broader-sample closure read, or is the current tolerance boundary sufficient?
+- what minimum reporting and registry boundary must any future Tier B reduced-risk line carry so it never blurs with the strict Tier A runtime rule?

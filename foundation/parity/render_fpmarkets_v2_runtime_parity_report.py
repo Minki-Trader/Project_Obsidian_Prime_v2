@@ -168,13 +168,20 @@ def negative_fixture_summary(
 
     matched_non_ready = 0
     missing_fixture_ids: list[str] = []
+    mismatched_skip_reason_ids: list[str] = []
     skip_reason_counts: Counter[str] = Counter()
     for fixture_id in negative_ids:
         fixture_result = comparison["fixtures"].get(fixture_id, {})
-        if fixture_result.get("status") == "matched" and fixture_result.get("actual_row_ready") is False:
+        if (
+            fixture_result.get("status") == "matched"
+            and fixture_result.get("actual_row_ready") is False
+            and fixture_result.get("negative_skip_reason_match") is not False
+        ):
             matched_non_ready += 1
             skip_reason = str(fixture_result.get("skip_reason") or "").strip() or "empty"
             skip_reason_counts[skip_reason] += 1
+        elif fixture_result.get("status") == "matched" and fixture_result.get("actual_row_ready") is False:
+            mismatched_skip_reason_ids.append(fixture_id)
         else:
             missing_fixture_ids.append(fixture_id)
 
@@ -182,6 +189,8 @@ def negative_fixture_summary(
     if skip_reason_counts:
         ordered_reasons = sorted(skip_reason_counts.items(), key=lambda item: (-item[1], item[0]))
         parts.append("skip_reasons=" + ",".join(f"{name}={count}" for name, count in ordered_reasons))
+    if mismatched_skip_reason_ids:
+        parts.append("mismatched_skip_reason=" + ",".join(sorted(mismatched_skip_reason_ids)))
     if missing_fixture_ids:
         parts.append("missing=" + ",".join(sorted(missing_fixture_ids)))
     return "; ".join(parts)

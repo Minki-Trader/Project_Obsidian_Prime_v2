@@ -5,6 +5,7 @@ import sys
 import unittest
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 
@@ -50,6 +51,24 @@ class MaterializeDatasetTests(unittest.TestCase):
             raise RuntimeError(f"Timestamp not found in raw source {symbol}: {timestamp_utc}")
         return float(row.iloc[0][field])
 
+    def direct_stock_value(self, symbol: str, timestamp_utc: str, *, field: str) -> float:
+        source = self.module.load_raw_symbol(RAW_ROOT, self.bindings[symbol]).copy()
+        source["simple_return_1"] = source["close"] / source["close"].shift(1) - 1.0
+        source["simple_return_5"] = source["close"] / source["close"].shift(5) - 1.0
+        source["log_return_1"] = np.log(source["close"] / source["close"].shift(1))
+        row = source.loc[source["timestamp"] == pd.Timestamp(timestamp_utc)]
+        if row.empty:
+            raise RuntimeError(f"Timestamp not found in raw source {symbol}: {timestamp_utc}")
+        return float(row.iloc[0][field])
+
+    def previous_available_timestamp(self, symbol: str, timestamp_utc: str) -> pd.Timestamp:
+        source = self.module.load_raw_symbol(RAW_ROOT, self.bindings[symbol]).copy()
+        target_index = source.index[source["timestamp"] == pd.Timestamp(timestamp_utc)]
+        if len(target_index) != 1:
+            raise RuntimeError(f"Timestamp not found in raw source {symbol}: {timestamp_utc}")
+        index = int(target_index[0])
+        return pd.Timestamp(source.iloc[index - 1]["timestamp"])
+
     def test_proxy_features_are_computed_on_raw_symbol_series_before_merge(self) -> None:
         row = self.row_at("2025-09-30T20:05:00Z")
 
@@ -87,3 +106,44 @@ class MaterializeDatasetTests(unittest.TestCase):
         self.assertTrue(pd.isna(state.iloc[8]))
         self.assertEqual(float(state.iloc[9]), -1.0)
         self.assertEqual(float(state.iloc[10]), -1.0)
+
+    def test_gap_stock_returns_follow_previous_available_bar_before_merge(self) -> None:
+        row = self.row_at("2022-09-01T16:40:00Z")
+        weights = self.module.load_weights().set_index("month").loc["2022-09"]
+
+        self.assertTrue(bool(row["valid_row"]))
+        self.assertEqual(
+            self.previous_available_timestamp("NVDA", "2022-09-01T16:40:00Z"),
+            pd.Timestamp("2022-08-31T22:55:00Z"),
+        )
+
+        expected_nvda = self.direct_stock_value("NVDA", "2022-09-01T16:40:00Z", field="log_return_1")
+        expected_aapl = self.direct_stock_value("AAPL", "2022-09-01T16:40:00Z", field="simple_return_1")
+        expected_msft = self.direct_stock_value("MSFT", "2022-09-01T16:40:00Z", field="simple_return_1")
+
+        basket_symbols = ("AAPL", "AMZN", "AMD", "GOOGL.xnas", "META", "MSFT", "NVDA", "TSLA")
+        basket_returns = [
+            self.direct_stock_value(symbol, "2022-09-01T16:40:00Z", field="simple_return_1")
+            for symbol in basket_symbols
+        ]
+        expected_mega8 = float(sum(basket_returns) / len(basket_returns))
+        expected_top3 = (
+            float(weights["msft_xnas_weight"]) * expected_msft
+            + float(weights["nvda_xnas_weight"]) * (np.exp(expected_nvda) - 1.0)
+            + float(weights["aapl_xnas_weight"]) * expected_aapl
+        )
+        expected_us100_simple = float(row["close_prev_close_ratio"]) - 1.0
+
+        self.assertAlmostEqual(float(row["nvda_xnas_log_return_1"]), expected_nvda, places=12)
+        self.assertAlmostEqual(float(row["mega8_equal_return_1"]), expected_mega8, places=12)
+        self.assertAlmostEqual(float(row["top3_weighted_return_1"]), expected_top3, places=12)
+        self.assertAlmostEqual(
+            float(row["us100_minus_mega8_equal_return_1"]),
+            expected_us100_simple - expected_mega8,
+            places=12,
+        )
+        self.assertAlmostEqual(
+            float(row["us100_minus_top3_weighted_return_1"]),
+            expected_us100_simple - expected_top3,
+            places=12,
+        )
