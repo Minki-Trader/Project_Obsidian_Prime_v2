@@ -7,34 +7,39 @@ import sys
 from pathlib import Path
 from typing import Any
 
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from foundation.parity.runtime_pack_paths import DEFAULT_MT5_REQUEST, resolve_runtime_pack_paths
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Import the MT5 snapshot audit, compare it to the Python snapshot, and render the Stage 03 report."
+        description="Import the MT5 snapshot audit, compare it to the Python snapshot, and render the runtime parity report for the resolved pack."
     )
     parser.add_argument(
         "--mt5-request",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_snapshot_request_fpmarkets_v2_runtime_minimum_0001.json",
+        default=str(DEFAULT_MT5_REQUEST),
         help="Repo-relative path to the MT5 request pack JSON.",
     )
     parser.add_argument(
         "--python-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/python_snapshot_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative path to the Python snapshot JSON.",
     )
     parser.add_argument(
         "--comparison-json",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/runtime_parity_comparison_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative path for the comparison summary JSON.",
     )
     parser.add_argument(
         "--mt5-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_minimum_0001.jsonl",
+        default=None,
         help="Repo-relative path for the imported MT5 snapshot JSONL.",
     )
     parser.add_argument(
         "--report-path",
-        default="stages/03_runtime_parity_closure/03_reviews/report_fpmarkets_v2_runtime_parity_0001.md",
+        default=None,
         help="Repo-relative path for the rendered markdown report.",
     )
     parser.add_argument(
@@ -88,7 +93,14 @@ def run_step(args: list[str], cwd: Path) -> dict[str, Any]:
 def main() -> int:
     args = parse_args()
     repo_root = Path.cwd()
-    mt5_request_path = Path(args.mt5_request)
+    resolved_paths = resolve_runtime_pack_paths(
+        Path(args.mt5_request),
+        python_snapshot_path=Path(args.python_snapshot) if args.python_snapshot else None,
+        mt5_snapshot_path=Path(args.mt5_snapshot) if args.mt5_snapshot else None,
+        comparison_json_path=Path(args.comparison_json) if args.comparison_json else None,
+        report_path=Path(args.report_path) if args.report_path else None,
+    )
+    mt5_request_path = resolved_paths.mt5_request_path
 
     import_summary: dict[str, Any] | None = None
     if not args.skip_import:
@@ -96,9 +108,9 @@ def main() -> int:
             sys.executable,
             "foundation/parity/import_fpmarkets_v2_mt5_snapshot_audit.py",
             "--mt5-request",
-            args.mt5_request,
+            str(mt5_request_path),
             "--destination-path",
-            args.mt5_snapshot,
+            str(resolved_paths.mt5_snapshot_path),
         ]
         if args.common_root:
             import_cmd.extend(["--common-root", args.common_root])
@@ -110,13 +122,13 @@ def main() -> int:
         sys.executable,
         "foundation/parity/compare_fpmarkets_v2_runtime_parity.py",
         "--python-snapshot",
-        args.python_snapshot,
+        str(resolved_paths.python_snapshot_path),
         "--mt5-request",
-        args.mt5_request,
+        str(mt5_request_path),
         "--mt5-snapshot",
-        args.mt5_snapshot,
+        str(resolved_paths.mt5_snapshot_path),
         "--output-json",
-        args.comparison_json,
+        str(resolved_paths.comparison_json_path),
         "--tolerance",
         str(args.tolerance),
     ]
@@ -126,25 +138,26 @@ def main() -> int:
         sys.executable,
         "foundation/parity/render_fpmarkets_v2_runtime_parity_report.py",
         "--comparison-json",
-        args.comparison_json,
+        str(resolved_paths.comparison_json_path),
         "--python-snapshot",
-        args.python_snapshot,
+        str(resolved_paths.python_snapshot_path),
         "--mt5-request",
-        args.mt5_request,
+        str(mt5_request_path),
         "--mt5-snapshot",
-        args.mt5_snapshot,
+        str(resolved_paths.mt5_snapshot_path),
         "--report-path",
-        args.report_path,
+        str(resolved_paths.report_path),
     ]
     if args.reviewed_on:
         render_cmd.extend(["--reviewed-on", args.reviewed_on])
     render_summary = run_step(render_cmd, cwd=repo_root)
 
-    mt5_request = load_json(mt5_request_path)
+    mt5_request = resolved_paths.mt5_request
     print(
         json.dumps(
             {
                 "status": "ok",
+                "stage_name": resolved_paths.stage_name,
                 "import_performed": not args.skip_import,
                 "import_summary": import_summary,
                 "compare_summary": compare_summary,

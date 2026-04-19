@@ -4,6 +4,9 @@
 input string InpOutputPath = "Project_Obsidian_Prime_v2/runtime_parity/runtime_parity_pack_0001/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_minimum_0001.jsonl";
 input bool   InpOutputUseCommonFiles = true;
 input string InpTargetWindowsUtc = "2022.09.02 17:00:00;2022.09.01 20:00:00;2022.11.09 21:00:00;2022.09.01 19:55:00;2022.09.01 13:35:00";
+input string InpTargetWindowsUtcPart2 = "";
+input string InpTargetWindowsUtcPart3 = "";
+input string InpTargetWindowsUtcPart4 = "";
 input string InpMainSymbol = "US100";
 input ENUM_TIMEFRAMES InpTimeframe = PERIOD_M5;
 input int    InpMainWarmupBars = 300;
@@ -169,8 +172,15 @@ int SplitText(const string raw_text, const string delimiter, string &parts[])
 bool BuildTargetWindows(datetime &windows[])
   {
    ArrayResize(windows, 0);
+   string combined = InpTargetWindowsUtc;
+   if(InpTargetWindowsUtcPart2 != "")
+      combined += ";" + InpTargetWindowsUtcPart2;
+   if(InpTargetWindowsUtcPart3 != "")
+      combined += ";" + InpTargetWindowsUtcPart3;
+   if(InpTargetWindowsUtcPart4 != "")
+      combined += ";" + InpTargetWindowsUtcPart4;
    string parts[];
-   int part_count = SplitText(InpTargetWindowsUtc, ";", parts);
+   int part_count = SplitText(combined, ";", parts);
    if(part_count <= 0)
       return false;
 
@@ -593,6 +603,50 @@ int FindBarIndexByCloseTime(const MqlRates &rates[], const datetime target_close
    return -1;
   }
 
+void ReverseRatesInPlace(MqlRates &rates[])
+  {
+   int left = 0;
+   int right = ArraySize(rates) - 1;
+   while(left < right)
+     {
+      MqlRates temp = rates[left];
+      rates[left] = rates[right];
+      rates[right] = temp;
+      left++;
+      right--;
+     }
+  }
+
+bool EnsureAscendingRates(MqlRates &rates[])
+  {
+   int count = ArraySize(rates);
+   if(count <= 1)
+      return true;
+   if(rates[0].time <= rates[count - 1].time)
+      return true;
+   ReverseRatesInPlace(rates);
+   return true;
+  }
+
+int FindExactBarShiftByCloseTime(const string symbol, const datetime target_close, string &error)
+  {
+   datetime target_open = target_close - PeriodSeconds(InpTimeframe);
+   int target_shift = iBarShift(symbol, InpTimeframe, target_open, true);
+   if(target_shift < 0)
+     {
+      error = "EXTERNAL_TIMESTAMP_MISMATCH_" + symbol;
+      return -1;
+     }
+
+   datetime actual_open = iTime(symbol, InpTimeframe, target_shift);
+   if(actual_open != target_open)
+     {
+      error = "EXTERNAL_TIMESTAMP_MISMATCH_" + symbol;
+      return -1;
+     }
+   return target_shift;
+  }
+
 bool LoadAlignedClosedWindow(const string symbol, const datetime target_close, const int bars_needed, MqlRates &out_rates[], string &error)
   {
    ArrayResize(out_rates, 0);
@@ -604,14 +658,10 @@ bool LoadAlignedClosedWindow(const string symbol, const datetime target_close, c
 
    datetime start_open = 0;
    datetime parsed_window_start = 0;
-   if(symbol == InpMainSymbol && ParseUtcText(InpWindowStartUtc, parsed_window_start))
+   if(ParseUtcText(InpWindowStartUtc, parsed_window_start))
       start_open = parsed_window_start - PeriodSeconds(InpTimeframe);
    else
-     {
-      // Use a wider time span because session gaps and weekends can leave a much
-      // smaller bar count than a naive bars_needed * timeframe backstep would imply.
       start_open = target_close - (bars_needed * PeriodSeconds(InpTimeframe) * 12);
-     }
    datetime end_open = target_close - PeriodSeconds(InpTimeframe);
 
    MqlRates loaded[];
@@ -623,6 +673,7 @@ bool LoadAlignedClosedWindow(const string symbol, const datetime target_close, c
      }
 
    ArraySetAsSeries(loaded, false);
+   EnsureAscendingRates(loaded);
    int target_index = FindBarIndexByCloseTime(loaded, target_close);
    if(target_index < 0)
      {
@@ -636,10 +687,7 @@ bool LoadAlignedClosedWindow(const string symbol, const datetime target_close, c
       return false;
      }
 
-   int start_index = target_index - bars_needed + 1;
-   if(symbol == InpMainSymbol && parsed_window_start > 0)
-      start_index = 0;
-
+   int start_index = (symbol == InpMainSymbol && parsed_window_start > 0) ? 0 : (target_index - bars_needed + 1);
    int out_count = target_index - start_index + 1;
    ArrayResize(out_rates, out_count);
    for(int i = 0; i < out_count; i++)
@@ -963,28 +1011,49 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
       final_lower[st] = EMPTY_VALUE;
      }
 
+   double basic_upper_values[];
+   double basic_lower_values[];
+   ArrayResize(basic_upper_values, count);
+   ArrayResize(basic_lower_values, count);
+   for(int st1 = 0; st1 < count; st1++)
+     {
+      basic_upper_values[st1] = EMPTY_VALUE;
+      basic_lower_values[st1] = EMPTY_VALUE;
+      if(!IsUsableValue(atr10[st1]))
+         continue;
+      double hl2_seed = (main_rates[st1].high + main_rates[st1].low) / 2.0;
+      basic_upper_values[st1] = hl2_seed + (3.0 * atr10[st1]);
+      basic_lower_values[st1] = hl2_seed - (3.0 * atr10[st1]);
+      final_upper[st1] = basic_upper_values[st1];
+      final_lower[st1] = basic_lower_values[st1];
+     }
+
    for(int st2 = 1; st2 < count; st2++)
      {
       if(!IsUsableValue(atr10[st2]))
          continue;
-      double hl2 = (main_rates[st2].high + main_rates[st2].low) / 2.0;
-      double basic_upper = hl2 + (3.0 * atr10[st2]);
-      double basic_lower = hl2 - (3.0 * atr10[st2]);
-      if(!IsUsableValue(supertrend_state[st2 - 1]))
-        {
+      double basic_upper = basic_upper_values[st2];
+      double basic_lower = basic_lower_values[st2];
+      if(IsUsableValue(final_upper[st2 - 1]) &&
+         (basic_upper < final_upper[st2 - 1] || main_rates[st2 - 1].close > final_upper[st2 - 1]))
          final_upper[st2] = basic_upper;
-         final_lower[st2] = basic_lower;
-         supertrend_state[st2] = (main_rates[st2].close >= basic_lower ? 1.0 : -1.0);
-        }
       else
-        {
-         final_upper[st2] = (basic_upper < final_upper[st2 - 1] || main_rates[st2 - 1].close > final_upper[st2 - 1]) ? basic_upper : final_upper[st2 - 1];
-         final_lower[st2] = (basic_lower > final_lower[st2 - 1] || main_rates[st2 - 1].close < final_lower[st2 - 1]) ? basic_lower : final_lower[st2 - 1];
-         if(supertrend_state[st2 - 1] == 1.0)
-            supertrend_state[st2] = (main_rates[st2].close < final_lower[st2] ? -1.0 : 1.0);
-         else
-            supertrend_state[st2] = (main_rates[st2].close > final_upper[st2] ? 1.0 : -1.0);
-        }
+         final_upper[st2] = final_upper[st2 - 1];
+
+      if(IsUsableValue(final_lower[st2 - 1]) &&
+         (basic_lower > final_lower[st2 - 1] || main_rates[st2 - 1].close < final_lower[st2 - 1]))
+         final_lower[st2] = basic_lower;
+      else
+         final_lower[st2] = final_lower[st2 - 1];
+
+      double prev_state = supertrend_state[st2 - 1];
+      if(!IsUsableValue(prev_state))
+         prev_state = (IsUsableValue(final_lower[st2]) && main_rates[st2].close >= final_lower[st2]) ? 1.0 : -1.0;
+
+      if(prev_state == 1.0)
+         supertrend_state[st2] = (IsUsableValue(final_lower[st2]) && main_rates[st2].close < final_lower[st2]) ? -1.0 : 1.0;
+      else
+         supertrend_state[st2] = (IsUsableValue(final_upper[st2]) && main_rates[st2].close > final_upper[st2]) ? 1.0 : -1.0;
      }
 
    double vortex_indicator[];

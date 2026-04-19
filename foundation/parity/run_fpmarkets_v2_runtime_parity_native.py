@@ -9,23 +9,20 @@ import time
 from pathlib import Path
 from typing import Any
 
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from foundation.parity.runtime_pack_paths import DEFAULT_MT5_REQUEST, resolve_runtime_pack_paths
+
 
 DEFAULT_TERMINAL_PATH = Path(r"C:\Program Files\MetaTrader 5\terminal64.exe")
-DEFAULT_MT5_REQUEST = Path(
-    "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/"
-    "mt5_snapshot_request_fpmarkets_v2_runtime_minimum_0001.json"
-)
-DEFAULT_TESTER_INI = Path(
-    "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/"
-    "mt5_tester_runtime_parity_pack_0001.ini"
-)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
             "Run the v2-native MT5 runtime parity audit tester, "
-            "then import, compare, and render the Stage 03 parity artifacts."
+            "then import, compare, and render the runtime parity artifacts for the resolved pack."
         )
     )
     parser.add_argument(
@@ -35,7 +32,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--tester-ini",
-        default=str(DEFAULT_TESTER_INI),
+        default=None,
         help="Repo-relative path to the MT5 Strategy Tester ini.",
     )
     parser.add_argument(
@@ -50,22 +47,22 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--python-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/python_snapshot_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative Python snapshot path.",
     )
     parser.add_argument(
         "--mt5-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_minimum_0001.jsonl",
+        default=None,
         help="Repo-relative imported MT5 snapshot path.",
     )
     parser.add_argument(
         "--comparison-json",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/runtime_parity_comparison_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative comparison summary path.",
     )
     parser.add_argument(
         "--report-path",
-        default="stages/03_runtime_parity_closure/03_reviews/report_fpmarkets_v2_runtime_parity_0001.md",
+        default=None,
         help="Repo-relative rendered report path.",
     )
     parser.add_argument(
@@ -188,19 +185,31 @@ def run_json_step(args: list[str], cwd: Path) -> dict[str, Any]:
 def main() -> int:
     args = parse_args()
     repo_root = Path.cwd()
-    mt5_request_path = Path(args.mt5_request)
-    tester_ini_path = Path(args.tester_ini)
+    resolved_paths = resolve_runtime_pack_paths(
+        Path(args.mt5_request),
+        python_snapshot_path=Path(args.python_snapshot) if args.python_snapshot else None,
+        mt5_snapshot_path=Path(args.mt5_snapshot) if args.mt5_snapshot else None,
+        comparison_json_path=Path(args.comparison_json) if args.comparison_json else None,
+        report_path=Path(args.report_path) if args.report_path else None,
+        tester_ini_path=Path(args.tester_ini) if args.tester_ini else None,
+    )
+    mt5_request_path = resolved_paths.mt5_request_path
+    tester_ini_path = resolved_paths.tester_ini_path
     terminal_path = Path(args.terminal_path)
 
     if not terminal_path.exists():
         raise RuntimeError(f"terminal64.exe was not found: {terminal_path}")
+    if tester_ini_path is None:
+        raise RuntimeError(
+            "Could not resolve a single tester ini from the MT5 request pack. Pass --tester-ini explicitly."
+        )
     if not tester_ini_path.exists():
         raise RuntimeError(f"Tester ini was not found: {tester_ini_path}")
 
-    mt5_request = load_json(mt5_request_path)
+    mt5_request = resolved_paths.mt5_request
     common_root = Path(args.common_root) if args.common_root else default_common_root()
     common_output_path = common_root / mt5_request["common_files_output_path"]
-    repo_snapshot_path = Path(args.mt5_snapshot)
+    repo_snapshot_path = resolved_paths.mt5_snapshot_path
 
     common_output_path.parent.mkdir(parents=True, exist_ok=True)
     repo_snapshot_path.parent.mkdir(parents=True, exist_ok=True)
@@ -224,15 +233,15 @@ def main() -> int:
             sys.executable,
             "foundation/parity/run_fpmarkets_v2_runtime_parity_after_mt5.py",
             "--mt5-request",
-            args.mt5_request,
+            str(mt5_request_path),
             "--python-snapshot",
-            args.python_snapshot,
+            str(resolved_paths.python_snapshot_path),
             "--mt5-snapshot",
-            args.mt5_snapshot,
+            str(resolved_paths.mt5_snapshot_path),
             "--comparison-json",
-            args.comparison_json,
+            str(resolved_paths.comparison_json_path),
             "--report-path",
-            args.report_path,
+            str(resolved_paths.report_path),
             "--tolerance",
             str(args.tolerance),
         ]
@@ -246,6 +255,7 @@ def main() -> int:
         json.dumps(
             {
                 "status": "ok",
+                "stage_name": resolved_paths.stage_name,
                 "tester_ini_path": str(tester_ini_path.resolve()),
                 "terminal_path": str(terminal_path.resolve()),
                 "common_output_path": str(common_output_path.resolve()),

@@ -3,33 +3,39 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from foundation.parity.runtime_pack_paths import DEFAULT_MT5_REQUEST, resolve_runtime_pack_paths
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Compare the Stage 03 Python snapshot against an MT5 feature snapshot audit export."
+        description="Compare a materialized Python runtime snapshot against an MT5 feature snapshot audit export."
     )
     parser.add_argument(
         "--python-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/python_snapshot_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative path to the materialized Python runtime snapshot JSON.",
     )
     parser.add_argument(
         "--mt5-request",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_snapshot_request_fpmarkets_v2_runtime_minimum_0001.json",
+        default=str(DEFAULT_MT5_REQUEST),
         help="Repo-relative path to the MT5 request pack JSON.",
     )
     parser.add_argument(
         "--mt5-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_minimum_0001.jsonl",
+        default=None,
         help="Repo-relative path to the MT5 feature snapshot audit JSONL export.",
     )
     parser.add_argument(
         "--output-json",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/runtime_parity_comparison_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative path for the comparison summary JSON.",
     )
     parser.add_argument(
@@ -539,13 +545,19 @@ def build_identity_summary(
 
 def main() -> int:
     args = parse_args()
-    python_snapshot_path = Path(args.python_snapshot)
-    mt5_request_path = Path(args.mt5_request)
-    mt5_snapshot_path = Path(args.mt5_snapshot)
-    output_json_path = Path(args.output_json)
+    resolved_paths = resolve_runtime_pack_paths(
+        Path(args.mt5_request),
+        python_snapshot_path=Path(args.python_snapshot) if args.python_snapshot else None,
+        mt5_snapshot_path=Path(args.mt5_snapshot) if args.mt5_snapshot else None,
+        comparison_json_path=Path(args.output_json) if args.output_json else None,
+    )
+    python_snapshot_path = resolved_paths.python_snapshot_path
+    mt5_request_path = resolved_paths.mt5_request_path
+    mt5_snapshot_path = resolved_paths.mt5_snapshot_path
+    output_json_path = resolved_paths.comparison_json_path
 
     python_snapshot = load_json(python_snapshot_path)
-    mt5_request = load_json(mt5_request_path)
+    mt5_request = resolved_paths.mt5_request
     mt5_raw_records = load_jsonl(mt5_snapshot_path)
     mt5_records = [normalize_mt5_record(record) for record in mt5_raw_records]
 

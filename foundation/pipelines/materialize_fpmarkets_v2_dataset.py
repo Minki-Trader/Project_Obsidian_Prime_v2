@@ -392,9 +392,33 @@ def load_weights() -> pd.DataFrame:
     return weights
 
 
-def attach_external_series(base: pd.DataFrame, external_frames: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, dict[str, int]]:
+def merge_exact_timestamp_presence(
+    base: pd.DataFrame,
+    source: pd.DataFrame,
+    *,
+    match_column: str,
+) -> pd.DataFrame:
+    presence = source[["timestamp"]].copy()
+    presence[match_column] = True
+    merged = base.merge(presence, on="timestamp", how="left")
+    merged[match_column] = merged[match_column].eq(True)
+    return merged
+
+
+def build_proxy_feature_source(source: pd.DataFrame, prefix: str) -> pd.DataFrame:
+    prepared = source[["timestamp", "close"]].copy()
+    prepared[f"{prefix}_change_1"] = prepared["close"] / prepared["close"].shift(1) - 1.0
+    prepared[f"{prefix}_zscore_20"] = rolling_zscore(prepared["close"], 20)
+    return prepared.rename(columns={"close": f"{prefix}_close"})
+
+
+def attach_external_series(
+    base: pd.DataFrame,
+    external_frames: dict[str, pd.DataFrame],
+) -> tuple[pd.DataFrame, dict[str, int], list[str]]:
     merged = base.copy()
     alignment_missing_counts: dict[str, int] = {}
+    exact_match_columns: list[str] = []
 
     proxy_configs = {
         "VIX": ("vix", external_frames["VIX"]),
@@ -402,11 +426,12 @@ def attach_external_series(base: pd.DataFrame, external_frames: dict[str, pd.Dat
         "USDX": ("usdx", external_frames["USDX"]),
     }
     for contract_symbol, (prefix, source) in proxy_configs.items():
-        source_view = source[["timestamp", "close"]].rename(columns={"close": f"{prefix}_close"})
+        match_column = f"__exact_match__{prefix}"
+        exact_match_columns.append(match_column)
+        merged = merge_exact_timestamp_presence(merged, source, match_column=match_column)
+        source_view = build_proxy_feature_source(source, prefix)
         merged = merged.merge(source_view, on="timestamp", how="left")
-        alignment_missing_counts[contract_symbol] = int(merged[f"{prefix}_close"].isna().sum())
-        merged[f"{prefix}_change_1"] = merged[f"{prefix}_close"] / merged[f"{prefix}_close"].shift(1) - 1.0
-        merged[f"{prefix}_zscore_20"] = rolling_zscore(merged[f"{prefix}_close"], 20)
+        alignment_missing_counts[contract_symbol] = int((~merged[match_column]).sum())
 
     stock_return_symbols = {
         "NVDA": "nvda_xnas_log_return_1",
@@ -416,10 +441,14 @@ def attach_external_series(base: pd.DataFrame, external_frames: dict[str, pd.Dat
     }
     for contract_symbol, feature_name in stock_return_symbols.items():
         source = external_frames[contract_symbol].copy()
+        token = contract_symbol.lower().replace(".", "_")
+        match_column = f"__exact_match__{token}"
+        exact_match_columns.append(match_column)
+        merged = merge_exact_timestamp_presence(merged, source, match_column=match_column)
         source[feature_name] = np.log(source["close"] / source["close"].shift(1))
         source_view = source[["timestamp", feature_name]]
         merged = merged.merge(source_view, on="timestamp", how="left")
-        alignment_missing_counts[contract_symbol] = int(merged[feature_name].isna().sum())
+        alignment_missing_counts[contract_symbol] = int((~merged[match_column]).sum())
 
     basket_symbols = ["AAPL", "AMZN", "AMD", "GOOGL.xnas", "META", "MSFT", "NVDA", "TSLA"]
     basket_return_1_cols: list[str] = []
@@ -427,6 +456,10 @@ def attach_external_series(base: pd.DataFrame, external_frames: dict[str, pd.Dat
     for contract_symbol in basket_symbols:
         source = external_frames[contract_symbol].copy()
         token = contract_symbol.lower().replace(".", "_")
+        match_column = f"__exact_match__{token}"
+        if match_column not in exact_match_columns:
+            exact_match_columns.append(match_column)
+            merged = merge_exact_timestamp_presence(merged, source, match_column=match_column)
         return_1_col = f"{token}_simple_return_1"
         return_5_col = f"{token}_simple_return_5"
         source[return_1_col] = source["close"] / source["close"].shift(1) - 1.0
@@ -435,7 +468,7 @@ def attach_external_series(base: pd.DataFrame, external_frames: dict[str, pd.Dat
         merged = merged.merge(source_view, on="timestamp", how="left")
         basket_return_1_cols.append(return_1_col)
         basket_return_5_cols.append(return_5_col)
-        alignment_missing_counts.setdefault(contract_symbol, int(merged[return_1_col].isna().sum()))
+        alignment_missing_counts.setdefault(contract_symbol, int((~merged[match_column]).sum()))
 
     merged["mega8_equal_return_1"] = merged[basket_return_1_cols].mean(axis=1)
     merged["mega8_pos_breadth_1"] = (merged[basket_return_1_cols] > 0).mean(axis=1)
@@ -454,7 +487,7 @@ def attach_external_series(base: pd.DataFrame, external_frames: dict[str, pd.Dat
     merged["us100_minus_mega8_equal_return_1"] = merged["us100_simple_return_1"] - merged["mega8_equal_return_1"]
     merged["us100_minus_top3_weighted_return_1"] = merged["us100_simple_return_1"] - merged["top3_weighted_return_1"]
 
-    return merged, alignment_missing_counts
+    return merged, alignment_missing_counts, exact_match_columns
 
 
 def compute_main_features(base: pd.DataFrame) -> pd.DataFrame:
@@ -543,7 +576,7 @@ def build_feature_frame(raw_root: Path) -> tuple[pd.DataFrame, dict[str, object]
     frames = {binding.contract_symbol: load_raw_symbol(raw_root, binding) for binding in SYMBOL_BINDINGS}
     base = frames["US100"].copy()
     base = compute_main_features(base)
-    base, alignment_missing_counts = attach_external_series(base, frames)
+    base, alignment_missing_counts, exact_match_columns = attach_external_series(base, frames)
 
     base["vix_change_1"] = base["vix_change_1"]
     base["vix_zscore_20"] = base["vix_zscore_20"]
@@ -558,25 +591,7 @@ def build_feature_frame(raw_root: Path) -> tuple[pd.DataFrame, dict[str, object]
     main_symbol_missing_mask = base[["open", "high", "low", "close"]].isna().any(axis=1)
     main_symbol_missing_mask |= (base["high"] < base["low"])
 
-    external_feature_columns = [
-        "vix_change_1",
-        "vix_zscore_20",
-        "us10yr_change_1",
-        "us10yr_zscore_20",
-        "usdx_change_1",
-        "usdx_zscore_20",
-        "nvda_xnas_log_return_1",
-        "aapl_xnas_log_return_1",
-        "msft_xnas_log_return_1",
-        "amzn_xnas_log_return_1",
-        "mega8_equal_return_1",
-        "top3_weighted_return_1",
-        "mega8_pos_breadth_1",
-        "mega8_dispersion_5",
-        "us100_minus_mega8_equal_return_1",
-        "us100_minus_top3_weighted_return_1",
-    ]
-    external_alignment_missing_mask = base[external_feature_columns].isna().any(axis=1)
+    external_alignment_missing_mask = ~base[exact_match_columns].all(axis=1)
     session_semantics_missing_mask = base["overnight_return"].isna()
     weights_unavailable_mask = base[["msft_xnas_weight", "nvda_xnas_weight", "aapl_xnas_weight"]].isna().any(axis=1)
     numeric_invalid_mask = base[FEATURE_ORDER].replace([np.inf, -np.inf], np.nan).isna().any(axis=1)
@@ -599,6 +614,7 @@ def build_feature_frame(raw_root: Path) -> tuple[pd.DataFrame, dict[str, object]
     for mask in invalid_reason_flags.values():
         invalid_mask |= mask
     base["valid_row"] = ~invalid_mask
+    base = base.drop(columns=exact_match_columns)
 
     source_identities = [load_source_identity(raw_root, binding) for binding in SYMBOL_BINDINGS]
     counts = {

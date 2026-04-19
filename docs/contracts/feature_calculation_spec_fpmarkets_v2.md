@@ -17,6 +17,7 @@ This document freezes the feature calculation contract for the current FPMarkets
 - `log` means the natural logarithm.
 - Naming rule: features with `ratio` are raw ratios; features with `return`, `change`, or `percent` are centered return-like quantities.
 - External series must be aligned by the same bar-close timestamp as the US100 series. No future fill. Forward-fill across exchange/session boundaries is forbidden.
+- External-symbol features must be computed on each symbol's own raw `M5` series first, then merged onto the `US100` frame by exact bar-close timestamp.
 - If an external source is missing for a required timestamp and no same-session resampling rule exists, the row is invalid for model input.
 - ONNX input order is frozen to the feature order in Section 4. Changing order requires a new model artifact version.
 
@@ -51,6 +52,7 @@ This document freezes the feature calculation contract for the current FPMarkets
 
 - `supertrend_10_3` is stored as **trend state** rather than raw line value: `+1` for uptrend, `-1` for downtrend.
 - Supertrend baseline uses `hl2 = (high + low) / 2` and ATR(10) with multiplier `3`.
+- Supertrend state is seeded from the current bar after the current `final_upper` / `final_lower` updates are applied. If the previous state is still undefined, evaluate the seed against the updated current `final_lower`; if that band is still unavailable, the seed resolves to the downtrend state `-1`.
 - `vortex_indicator` is stored as a single spread value `VI+ - VI-` with lookback `14`.
 
 ### 3.3 Breadth basket conventions

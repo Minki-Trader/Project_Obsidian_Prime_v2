@@ -4,17 +4,23 @@ import argparse
 import json
 import os
 import shutil
+import sys
 from pathlib import Path
 from typing import Any
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from foundation.parity.runtime_pack_paths import DEFAULT_MT5_REQUEST, resolve_runtime_pack_paths
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Import the MT5 feature snapshot audit JSONL from Common Files into the Stage 03 run folder."
+        description="Import the MT5 feature snapshot audit JSONL from Common Files into the resolved runtime parity pack folder."
     )
     parser.add_argument(
         "--mt5-request",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_snapshot_request_fpmarkets_v2_runtime_minimum_0001.json",
+        default=str(DEFAULT_MT5_REQUEST),
         help="Repo-relative path to the MT5 request pack JSON.",
     )
     parser.add_argument(
@@ -49,10 +55,14 @@ def default_common_root() -> Path:
 
 def main() -> int:
     args = parse_args()
-    mt5_request = load_json(Path(args.mt5_request))
+    mt5_request_path = Path(args.mt5_request)
+    resolved_paths = resolve_runtime_pack_paths(mt5_request_path)
+    mt5_request = resolved_paths.mt5_request
     common_root = Path(args.common_root) if args.common_root else default_common_root()
     source_path = Path(args.source_path) if args.source_path else common_root / mt5_request["common_files_output_path"]
-    destination_path = Path(args.destination_path) if args.destination_path else Path(mt5_request["repo_import_path"])
+    destination_path = (
+        Path(args.destination_path) if args.destination_path else resolved_paths.mt5_snapshot_path
+    )
 
     if not source_path.exists():
         raise RuntimeError(f"MT5 snapshot audit source file does not exist yet: {source_path}")

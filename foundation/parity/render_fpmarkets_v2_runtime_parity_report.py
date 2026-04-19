@@ -3,43 +3,50 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
+from collections import Counter
 from datetime import date
 from pathlib import Path
 from typing import Any
 
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from foundation.parity.runtime_pack_paths import DEFAULT_MT5_REQUEST, resolve_runtime_pack_paths
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Render the Stage 03 runtime parity report from a materialized comparison summary."
+        description="Render a runtime parity report from a materialized comparison summary."
     )
     parser.add_argument(
         "--comparison-json",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/runtime_parity_comparison_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative path to the machine-readable parity comparison summary.",
     )
     parser.add_argument(
         "--python-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/python_snapshot_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative path to the Python snapshot JSON.",
     )
     parser.add_argument(
         "--mt5-request",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_snapshot_request_fpmarkets_v2_runtime_minimum_0001.json",
+        default=str(DEFAULT_MT5_REQUEST),
         help="Repo-relative path to the MT5 request pack JSON.",
     )
     parser.add_argument(
         "--mt5-snapshot",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_minimum_0001.jsonl",
+        default=None,
         help="Repo-relative path to the MT5 snapshot JSONL artifact.",
     )
     parser.add_argument(
         "--fixture-bindings",
-        default="stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/fixture_bindings_fpmarkets_v2_runtime_minimum_0001.json",
+        default=None,
         help="Repo-relative path to the fixture bindings JSON.",
     )
     parser.add_argument(
         "--report-path",
-        default="stages/03_runtime_parity_closure/03_reviews/report_fpmarkets_v2_runtime_parity_0001.md",
+        default=None,
         help="Repo-relative output path for the rendered markdown report.",
     )
     parser.add_argument(
@@ -110,7 +117,7 @@ def classify_scope(comparison: dict[str, Any]) -> str:
     return "first_evaluated_pack_mismatch_open"
 
 
-def likely_root_cause(comparison: dict[str, Any]) -> str:
+def likely_root_cause(comparison: dict[str, Any], *, ready_row_count: int) -> str:
     aggregate = comparison["aggregate_results"]
     matching = comparison["matching"]
     warnings = comparison.get("warnings", [])
@@ -118,42 +125,142 @@ def likely_root_cause(comparison: dict[str, Any]) -> str:
     if matching["missing_fixture_ids"]:
         return "the MT5 snapshot export is incomplete because one or more bound fixture windows are still missing"
     if matching["unexpected_record_count"] > 0:
-        return "the MT5 snapshot export includes unmatched rows, so the first pack identity is not yet cleanly isolated"
+        return "the MT5 snapshot export includes unmatched rows, so the frozen runtime parity pack is not yet cleanly isolated"
     if aggregate["exact_parity"]:
-        return "no contract-surface mismatch was detected on the first five-window pack"
+        return f"no contract-surface mismatch was detected across the evaluated ready rows ({ready_row_count})"
     if aggregate["tolerance_parity"]:
-        return "the first pack stays within tolerance and the remaining exact mismatch is consistent with floating-point serialization drift"
+        return "the evaluated pack stays within tolerance and the remaining exact mismatch is consistent with floating-point serialization drift"
     if warnings:
         return "localized mismatch remains on the contract surface; inspect the warning list and dominant drift features before any closure claim"
-    return "localized model-input mismatch remains on the first pack"
+    return "localized model-input mismatch remains on the evaluated runtime parity pack"
 
 
-def what_remains_open(comparison: dict[str, Any]) -> str:
+def count_by(items: list[dict[str, Any]], field_name: str, *, fallback_to_fixture_id: bool) -> Counter[str]:
+    counter: Counter[str] = Counter()
+    for fixture in items:
+        value = fixture.get(field_name)
+        if value is None and fallback_to_fixture_id:
+            value = fixture.get("fixture_id")
+        if value is None:
+            value = "not_labeled"
+        counter[str(value)] += 1
+    return counter
+
+
+def format_counts(counter: Counter[str]) -> str:
+    if not counter:
+        return "not_applicable"
+    ordered = sorted(counter.items(), key=lambda item: (item[0]))
+    return "|".join(f"{name}={count}" for name, count in ordered)
+
+
+def negative_fixture_summary(
+    python_snapshot: dict[str, Any],
+    comparison: dict[str, Any],
+) -> str:
+    negative_ids = [
+        fixture_id
+        for fixture_id, payload in python_snapshot["fixtures"].items()
+        if not bool(payload["valid_row"])
+    ]
+    if not negative_ids:
+        return "not_applicable"
+
+    matched_non_ready = 0
+    missing_fixture_ids: list[str] = []
+    skip_reason_counts: Counter[str] = Counter()
+    for fixture_id in negative_ids:
+        fixture_result = comparison["fixtures"].get(fixture_id, {})
+        if fixture_result.get("status") == "matched" and fixture_result.get("actual_row_ready") is False:
+            matched_non_ready += 1
+            skip_reason = str(fixture_result.get("skip_reason") or "").strip() or "empty"
+            skip_reason_counts[skip_reason] += 1
+        else:
+            missing_fixture_ids.append(fixture_id)
+
+    parts = [f"matched_non_ready={matched_non_ready}/{len(negative_ids)}"]
+    if skip_reason_counts:
+        ordered_reasons = sorted(skip_reason_counts.items(), key=lambda item: (-item[1], item[0]))
+        parts.append("skip_reasons=" + ",".join(f"{name}={count}" for name, count in ordered_reasons))
+    if missing_fixture_ids:
+        parts.append("missing=" + ",".join(sorted(missing_fixture_ids)))
+    return "; ".join(parts)
+
+
+def stage_specific_what_this_does_not_prove(stage_name: str) -> str:
+    if stage_name == "05_exploration_kernel_freeze":
+        return (
+            "no runtime-helper parity closure, no separate broader-sample parity closure read, "
+            "no Tier B or Tier C readiness claim, and no operating promotion"
+        )
+    if stage_name == "03_runtime_parity_closure":
+        return "no runtime-helper parity closure, no broader-sample parity closure, and no operating promotion"
+    return "no runtime-helper parity closure and no operating promotion"
+
+
+def what_remains_open(stage_name: str, comparison: dict[str, Any]) -> str:
     aggregate = comparison["aggregate_results"]
     matching = comparison["matching"]
     identity_trace = comparison["identity"]["machine_readable_identity_trace"]
-    if aggregate["tolerance_parity"]:
-        if identity_trace["traceable"]:
-            return "runtime-helper parity, broader-sample parity beyond the first five windows, and the explicit Stage 04 artifact-identity closure read"
-        return "runtime-helper parity, machine-readable MT5 identity fields inside the snapshot rows, broader-sample parity beyond the first five windows, and Stage 04 artifact-identity closure"
     if matching["missing_fixture_ids"]:
-        return "complete the missing MT5 fixture rows, then rerun the comparison and re-read the first pack verdict"
+        return "complete the missing MT5 fixture rows, then rerun the comparison and re-read the evaluated pack verdict"
+    if matching["unexpected_record_count"] > 0:
+        return "remove or isolate the unexpected MT5 rows, then rerun the same frozen pack before any new claim is made"
+    if aggregate["tolerance_parity"]:
+        if stage_name == "05_exploration_kernel_freeze":
+            if identity_trace["traceable"]:
+                return (
+                    "runtime-helper parity, any explicit broader-sample closure read beyond this first broader evaluated pack, "
+                    "and any downstream exploration or operating promotion"
+                )
+            return (
+                "runtime-helper parity, fully traceable MT5 identity fields across the broader pack, "
+                "and any downstream exploration or operating promotion"
+            )
+        if identity_trace["traceable"]:
+            return "runtime-helper parity, broader-sample parity beyond the first five windows, and any downstream operating promotion"
+        return "runtime-helper parity, fully traceable MT5 identity fields, broader-sample parity beyond the first five windows, and any downstream operating promotion"
+    if stage_name == "05_exploration_kernel_freeze":
+        return "inspect the broader-pack mismatch, update the Stage 05 blocker read, and rerun the same frozen 24-window pack before opening any new lane"
     return "inspect the dominant drift features, re-check timestamp identity, and confirm whether the mismatch is localized or systemic before any closure claim"
 
 
-def next_sampling_plan(comparison: dict[str, Any]) -> str:
+def next_sampling_plan(stage_name: str, comparison: dict[str, Any]) -> str:
     aggregate = comparison["aggregate_results"]
+    if stage_name == "05_exploration_kernel_freeze":
+        if aggregate["tolerance_parity"]:
+            return (
+                "update the Stage 05 read from this first broader evaluated pack, keep Stage 05 open, "
+                "and decide whether the next evidence is additional broader-sample coverage or a separate runtime-helper parity lane"
+            )
+        return (
+            "inspect the broader-pack mismatch, update the Stage 05 mismatch-open read, "
+            "and rerun the same frozen 24-window pack before opening any downstream lane"
+        )
     if aggregate["tolerance_parity"]:
-        if comparison["identity"]["machine_readable_identity_trace"]["traceable"]:
-            return "close the Stage 03 model-input parity read, hand the machine-readable identity chain to Stage 04, and decide whether the next sample is broader-sample parity or explicit runtime self-check closure"
-        return "update the tracked Stage 03 report and selection read from this evaluated pack, then decide whether the next step is broader-sample parity or direct Stage 04 artifact-identity preparation"
-    return "repair the localized MT5 export or feature mismatch, rerun the five-window comparison, and only then revisit the Stage 03 closure read"
+        return (
+            "use this evaluated pack to maintain the bounded Stage 03 model-input parity read and keep any "
+            "broader-sample or runtime-helper work explicitly downstream"
+        )
+    return "repair the localized MT5 export or feature mismatch, rerun the same frozen pack, and only then revisit the stage read"
+
+
+def gate_before_closure(stage_name: str) -> str:
+    if stage_name == "05_exploration_kernel_freeze":
+        return (
+            "Stage 05 state docs, review read, and registry rows must be updated in the same pass while keeping Stage 05 open; "
+            "do not blur this evaluated pack into runtime-helper parity, Tier B or Tier C readiness, or operating promotion"
+        )
+    if stage_name == "03_runtime_parity_closure":
+        return "Stage 03 selection docs and workspace state must be updated in the same pass before any Stage 03 closure claim is made from this evaluated pack"
+    return "the active stage read and registry must be updated in the same pass before any closure claim is made from this evaluated pack"
 
 
 def render_report(
     comparison: dict[str, Any],
     python_snapshot: dict[str, Any],
     mt5_request: dict[str, Any],
+    stage_name: str,
     fixture_bindings_path: Path,
     python_snapshot_path: Path,
     mt5_request_path: Path,
@@ -168,14 +275,8 @@ def render_report(
     windows_ny = "|".join(fixture["timestamp_america_new_york"] for fixture in fixtures)
     identity = comparison["identity"]["expected"]
     identity_trace = comparison["identity"]["machine_readable_identity_trace"]
-
-    negative_fixture = comparison["fixtures"]["fix_negative_required_missing_0001"]
-    negative_result = (
-        f"MT5-side non-ready evidence is materialized at {negative_fixture['expected_timestamp_utc']} "
-        f"with skip_reason={negative_fixture['skip_reason'] or 'empty'}"
-        if negative_fixture["status"] == "matched"
-        else "the negative fixture is still missing from the MT5-side export"
-    )
+    stratum_counts = count_by(fixtures, "selection_stratum", fallback_to_fixture_id=True)
+    bucket_counts = count_by(fixtures, "selection_bucket", fallback_to_fixture_id=True)
 
     report = f"""# Runtime Parity Report
 
@@ -187,13 +288,13 @@ def render_report(
 - reviewed_on: `{reviewed_on}`
 - bundle_id: `{identity['bundle_id']}`
 - runtime_id: `{identity['runtime_id']}`
-- stage: `03_runtime_parity_closure`
+- stage: `{stage_name}`
 
 ## Scope
 
 - closure_scope: `{classify_scope(comparison)}`
 - audited_window(s): `{windows_utc}`
-- audited_row_count: `{ready_rows} ready rows + {non_ready_rows} negative non-ready row`
+- audited_row_count: `{ready_rows} ready rows + {non_ready_rows} negative non-ready rows`
 
 ## Inputs
 
@@ -214,11 +315,9 @@ def render_report(
 
 ## Fixture Coverage
 
-- regular_closed_bar_sample: `fix_regular_closed_bar_0001`
-- session_boundary_sample: `fix_session_boundary_0001`
-- dst_sensitive_sample: `fix_dst_sensitive_0001`
-- external_alignment_sample: `fix_external_alignment_0001`
-- negative_fixture_result: `{negative_result}`
+- fixture_strata: `{format_counts(stratum_counts)}`
+- fixture_buckets: `{format_counts(bucket_counts)}`
+- negative_fixture_result: `{negative_fixture_summary(python_snapshot, comparison)}`
 
 ## Timestamp Identity
 
@@ -236,14 +335,14 @@ def render_report(
 
 ## Interpretation
 
-- likely_root_cause: `{likely_root_cause(comparison)}`
-- what_this_does_not_prove: `no runtime-helper parity closure, no broader-sample parity claim, and no Stage 04 artifact-identity closure yet`
-- what_remains_open: `{what_remains_open(comparison)}`
+- likely_root_cause: `{likely_root_cause(comparison, ready_row_count=ready_rows)}`
+- what_this_does_not_prove: `{stage_specific_what_this_does_not_prove(stage_name)}`
+- what_remains_open: `{what_remains_open(stage_name, comparison)}`
 
 ## Required Follow-Up
 
-- next_sampling_plan: `{next_sampling_plan(comparison)}`
-- gate_before_closure: `Stage 03 selection docs and workspace state must be updated in the same pass before any closure claim is made from this evaluated pack`
+- next_sampling_plan: `{next_sampling_plan(stage_name, comparison)}`
+- gate_before_closure: `{gate_before_closure(stage_name)}`
 - owner: `Project_Obsidian_Prime_v2 workspace`
 """
     return report
@@ -251,21 +350,30 @@ def render_report(
 
 def main() -> int:
     args = parse_args()
-    comparison_path = Path(args.comparison_json)
-    python_snapshot_path = Path(args.python_snapshot)
-    mt5_request_path = Path(args.mt5_request)
-    mt5_snapshot_path = Path(args.mt5_snapshot)
-    fixture_bindings_path = Path(args.fixture_bindings)
-    report_path = Path(args.report_path)
+    resolved_paths = resolve_runtime_pack_paths(
+        Path(args.mt5_request),
+        fixture_bindings_path=Path(args.fixture_bindings) if args.fixture_bindings else None,
+        python_snapshot_path=Path(args.python_snapshot) if args.python_snapshot else None,
+        mt5_snapshot_path=Path(args.mt5_snapshot) if args.mt5_snapshot else None,
+        comparison_json_path=Path(args.comparison_json) if args.comparison_json else None,
+        report_path=Path(args.report_path) if args.report_path else None,
+    )
+    comparison_path = resolved_paths.comparison_json_path
+    python_snapshot_path = resolved_paths.python_snapshot_path
+    mt5_request_path = resolved_paths.mt5_request_path
+    mt5_snapshot_path = resolved_paths.mt5_snapshot_path
+    fixture_bindings_path = resolved_paths.fixture_bindings_path
+    report_path = resolved_paths.report_path
 
     comparison = load_json(comparison_path)
     python_snapshot = load_json(python_snapshot_path)
-    mt5_request = load_json(mt5_request_path)
+    mt5_request = resolved_paths.mt5_request
 
     rendered = render_report(
         comparison=comparison,
         python_snapshot=python_snapshot,
         mt5_request=mt5_request,
+        stage_name=resolved_paths.stage_name,
         fixture_bindings_path=fixture_bindings_path,
         python_snapshot_path=python_snapshot_path,
         mt5_request_path=mt5_request_path,
@@ -281,6 +389,7 @@ def main() -> int:
             {
                 "status": "ok",
                 "report_path": str(report_path.resolve()),
+                "stage_name": resolved_paths.stage_name,
                 "closure_scope": classify_scope(comparison),
                 "exact_parity": comparison["aggregate_results"]["exact_parity"],
                 "tolerance_parity": comparison["aggregate_results"]["tolerance_parity"],

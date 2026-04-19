@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-04-20
+
+- realigned the active working branch name from the lingering Stage 03 label to `codex/stage05-broader-rebind` so the live workspace truth matches the actual Stage 05 foundation boundary
+- synchronized `workspace_state.yaml` and `current_working_state.md` to the active Stage 05 branch truth instead of the older Stage 03 handoff branch name
+- carried the active Stage 05 read forward so `broader_0001` stays retained pre-alignment evidence, `broader_0002` stays the active contract-aligned pack, and Stage 05 still remains open on localized residual mismatch evidence
+- appended the `broader_0002` artifact identity rows to `artifact_registry.csv` instead of overwriting the retained `broader_0001` evidence chain
+
 ## 2026-04-19
 
 - repaired the v2-native MT5 audit path so the main symbol uses the full contract window history through each audited close rather than a short trailing slice
@@ -11,6 +18,16 @@
 - aligned the artifact registry schema to carry `parser_version` and corrected the Stage 04 live-state wording to match the current automated proof boundary
 - closed `04_artifact_identity_closure` on the explicit first-pack identity and required-hash read and opened `05_exploration_kernel_freeze`
 - wrote the first explicit Stage 05 blocker read so the unresolved downstream ordering between broader-sample parity, runtime-helper parity, and later exploration work now has a durable home
+- froze `broader-sample parity` as the first downstream Stage 05 lane and added a fixed `24-window` stratified charter without changing the current strict Tier A runtime rule
+- generalized the runtime-pack materializer into a shared `minimum_0001 | broader_0001` builder and kept the old minimum-pack entrypoint as a compatibility wrapper
+- bound the first Stage 05 broader-sample `24-window` inventory and machine-readable selection manifest and materialized the first local broader Python snapshot, MT5 request, MT5 helper `.set`, and MT5 tester `.ini` pack without claiming broader parity closure
+- generalized the runtime parity import, compare, render, and native-run flows around `mt5_request`-anchored pack-aware path resolution instead of Stage 03-only default paths
+- split the Stage 05 broader MT5 target-window helper inputs across multiple EA input fields so the full frozen `24-window` pack reaches MT5 without truncation
+- imported the first Stage 05 broader MT5 snapshot, wrote the first broader comparison summary and rendered broader parity report on the same frozen `24-window` pack, and kept Stage 05 open because that first evaluated pack remains `mismatch_open`
+- corrected Python proxy external features to compute on each symbol's own raw `M5` series before exact-timestamp merge and documented that raw-series-first rule explicitly in the feature contract
+- aligned the MT5 broader audit path to the full declared contract window and aligned MT5 `supertrend_10_3` seeding to the current Python contract surface
+- retained `broader_0001` as pre-alignment mismatch evidence, rebound the active Stage 05 broader pack to `broader_0002`, and evaluated that active pack without closing Stage 05
+- synchronized the active Stage 05 read so `broader_0002` is the active contract-aligned pack, `broader_0001` remains retained evidence, and the remaining residual mismatch stays localized to early-history equity drift plus pre-open skip-reason semantics
 
 ## 2026-04-18
 

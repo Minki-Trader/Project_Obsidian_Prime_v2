@@ -8,7 +8,7 @@ from typing import Any
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Render an MT5 .set helper for the Stage 03 feature snapshot audit."
+        description="Render an MT5 .set helper for the runtime feature snapshot audit."
     )
     parser.add_argument(
         "--mt5-request",
@@ -28,12 +28,41 @@ def load_json(path: Path) -> dict[str, Any]:
         return json.load(handle)
 
 
+def split_target_windows_spec(target_windows_utc: str, *, max_chunk_length: int = 230) -> list[str]:
+    chunks: list[str] = []
+    current: list[str] = []
+    current_length = 0
+
+    for raw_window in target_windows_utc.split(";"):
+        window = raw_window.strip()
+        if not window:
+            continue
+        candidate_length = len(window) if not current else current_length + 1 + len(window)
+        if current and candidate_length > max_chunk_length:
+            chunks.append(";".join(current))
+            current = [window]
+            current_length = len(window)
+            continue
+        if not current and len(window) > max_chunk_length:
+            raise RuntimeError(f"Single MT5 target window exceeds chunk limit: {window}")
+        current.append(window)
+        current_length = candidate_length
+
+    if current:
+        chunks.append(";".join(current))
+    return chunks or [""]
+
+
 def render_set(mt5_request: dict[str, Any]) -> str:
+    target_window_chunks = split_target_windows_spec(str(mt5_request["target_windows_utc"]))
     lines = [
-        "; Stage 03 runtime parity MT5 feature snapshot audit inputs",
+        "; Runtime parity MT5 feature snapshot audit inputs",
         f"InpOutputPath={mt5_request['common_files_output_path']}",
         "InpOutputUseCommonFiles=true",
-        f"InpTargetWindowsUtc={mt5_request['target_windows_utc']}",
+        f"InpTargetWindowsUtc={target_window_chunks[0]}",
+        f"InpTargetWindowsUtcPart2={target_window_chunks[1] if len(target_window_chunks) > 1 else ''}",
+        f"InpTargetWindowsUtcPart3={target_window_chunks[2] if len(target_window_chunks) > 2 else ''}",
+        f"InpTargetWindowsUtcPart4={target_window_chunks[3] if len(target_window_chunks) > 3 else ''}",
         "InpMainSymbol=US100",
         "InpTimeframe=5",
         "InpMainWarmupBars=300",

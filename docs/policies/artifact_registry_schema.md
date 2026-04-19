@@ -13,7 +13,7 @@ Use `docs/policies/artifact_policy.md` for serialization syntax. Use this file f
 ## Column Meaning
 
 - `artifact_id`: stable logical id for one durable artifact record
-- `artifact_role`: the artifact's role, such as `dataset_freeze_card`, `gold_fixture_inventory`, or `runtime_parity_report`
+- `artifact_role`: the artifact's role, such as `dataset_freeze_card`, `gold_fixture_inventory`, `fixture_selection_manifest`, or `runtime_parity_report`
 - `dataset_id`: dataset identity when the artifact belongs to a dataset
 - `fixture_set_id`: fixture identity when the artifact belongs to a parity fixture set
 - `bundle_id`: bundle identity when the artifact belongs to a model or runtime bundle
@@ -50,6 +50,7 @@ Do not invent new status labels inside the CSV. If a new lifecycle state is genu
 - `feature_dataset_closure`
 - `runtime_parity_closure`
 - `artifact_identity_closure`
+- `exploration_kernel_freeze`
 - `operating_reference`
 - `archive_note`
 - `not_applicable`

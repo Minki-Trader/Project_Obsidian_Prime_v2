@@ -8,7 +8,7 @@
 ## Purpose
 
 - freeze the first downstream exploration kernel after the explicit Stage 04 artifact-identity closure
-- define which post-foundation lane may open first without blurring strict Tier A runtime truth with future reduced-risk or exploration-only work
+- freeze `broader-sample parity` as the first post-foundation validation lane without blurring strict Tier A runtime truth with future reduced-risk or exploration-only work
 - keep exploration-kernel freeze distinct from runtime-helper parity closure, broader-sample parity closure, and operating promotion
 
 ## Inherited Context
@@ -23,7 +23,8 @@
 
 - in scope:
   - the first explicit Stage 05 exploration-kernel freeze read
-  - the ordering boundary between broader-sample parity, runtime-helper parity, and future exploration-only work
+  - the decision that `broader-sample parity` is the first downstream lane
+  - the execution charter for the first `24-window` broader-sample audit pack
   - the separation between the current strict Tier A line and any later Tier B or Tier C exploration family
   - the live Stage 05 read path and selection note
 - not in scope:
@@ -34,13 +35,17 @@
 
 ## Success Criteria
 
-- the first Stage 05 read states clearly which downstream lane may open first and what still remains separately bounded
+- the first Stage 05 read states clearly that `broader-sample parity` is the first downstream lane and what still remains separately bounded
+- the broader-sample charter fixes pack size, strata, selection rules, reserved identifiers, and reusable artifact-family expectations
+- the first charter-aligned broader-sample inventory, selection manifest, and local request-pack materialization exist without claiming that broader-sample parity is already evaluated or closed
 - the strict Tier A runtime rule remains distinct from any future Tier B or Tier C exploration family
 - any remaining blocker to post-foundation exploration has an explicit durable home rather than living as branch-only context
 
 ## Required Inputs
 
 - `../01_inputs/input_refs.md`
+- `../../../docs/decisions/2026-04-19_stage05_broader_sample_first_lane.md`
+- `../../../docs/adr/0002_broader_sample_parity_charter.md`
 - `../../04_artifact_identity_closure/03_reviews/review_index.md`
 - `../../04_artifact_identity_closure/04_selected/selection_status.md`
 - `../../../docs/policies/tiered_readiness_exploration.md`
@@ -50,7 +55,10 @@
 
 - updated `03_reviews/review_index.md`
 - updated `04_selected/selection_status.md`
-- explicit Stage 05 kernel-freeze decision or blocker
+- explicit Stage 05 kernel-freeze decision
+- broader-sample parity charter with fixed pack shape, selection rules, and reserved identifiers
+- first broader-sample fixture inventory and machine-readable selection manifest
+- first local broader request-pack materialization path under `02_runs/`
 
 ## Close Bias
 
