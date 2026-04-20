@@ -2,6 +2,7 @@
 
 ## 2026-04-20
 
+- aligned the same-pass synchronization norm across `docs/policies/agent_trigger_policy.md`, `.agents/skills/obsidian-stage-transition/SKILL.md`, and the runtime parity reporter `gate_before_closure` wording so policy/skill/reporter drift is reduced and `artifact_registry.csv` inclusion is explicit
 - realigned the active working branch name from the lingering Stage 03 label to `codex/stage05-broader-rebind` so the live workspace truth matches the actual Stage 05 foundation boundary
 - synchronized `workspace_state.yaml` and `current_working_state.md` to the active Stage 05 branch truth instead of the older Stage 03 handoff branch name
 - carried the active Stage 05 read forward so `broader_0001` stays retained pre-alignment evidence, `broader_0002` stays the active contract-aligned pack, and Stage 05 still remains open on localized residual mismatch evidence

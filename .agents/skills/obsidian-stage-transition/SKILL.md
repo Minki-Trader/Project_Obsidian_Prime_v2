@@ -9,6 +9,8 @@ Use this skill whenever a stage opens, closes, or hands work to another stage.
 
 ## Required Sync Pass
 
+Use the canonical same-pass sync norm from `docs/policies/agent_trigger_policy.md`.
+
 Update in the same pass:
 
 - `docs/workspace/workspace_state.yaml`
@@ -18,6 +20,7 @@ Update in the same pass:
 - next stage `00_spec/stage_brief.md`
 - next stage `01_inputs/input_refs.md`
 - `docs/decisions/*.md` when the transition is durable
+- `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
 - `docs/workspace/changelog.md`
 
 ## Transition Rules

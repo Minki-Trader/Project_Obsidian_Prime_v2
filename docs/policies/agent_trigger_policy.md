@@ -61,13 +61,22 @@ Use when:
 
 Required effect:
 
-- update in the same pass:
-  - `docs/workspace/workspace_state.yaml`
-  - `docs/context/current_working_state.md`
-  - the active stage `04_selected/selection_status.md`
-  - the active stage `03_reviews/review_index.md` when needed
-  - `docs/decisions/*.md` when the change is durable
+- follow the canonical same-pass sync list defined in this policy
 - never close a stage by implying later-stage evidence is already complete
+
+## Canonical Same-Pass Sync Norm
+
+The canonical same-pass sync norm lives in this file and applies whenever stage-level operational meaning changes durably.
+
+Required same-pass files:
+
+- `docs/workspace/workspace_state.yaml`
+- `docs/context/current_working_state.md`
+- the active or closing stage `04_selected/selection_status.md`
+- the active or closing stage `03_reviews/review_index.md` when needed
+- `docs/decisions/*.md` when the change is durable
+- `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
+- `docs/workspace/changelog.md`
 
 ## Always-On Claim Guardrails
 

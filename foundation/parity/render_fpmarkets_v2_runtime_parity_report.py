@@ -255,14 +255,19 @@ def next_sampling_plan(stage_name: str, comparison: dict[str, Any]) -> str:
 
 
 def gate_before_closure(stage_name: str) -> str:
+    policy_anchor = (
+        "follow the canonical same-pass sync norm in docs/policies/agent_trigger_policy.md "
+        "(align workspace state + current working state + active-stage selection/review read, "
+        "add a durable decision memo when meaning changes, and update artifact registry rows when identity changes)"
+    )
     if stage_name == "05_exploration_kernel_freeze":
         return (
-            "Stage 05 state docs, review read, and registry rows must be updated in the same pass while keeping Stage 05 open; "
-            "do not blur this evaluated pack into runtime-helper parity, Tier B or Tier C readiness, or operating promotion"
+            f"{policy_anchor}; keep Stage 05 open for this evaluated pack and do not blur it into runtime-helper parity, "
+            "Tier B or Tier C readiness, or operating promotion"
         )
     if stage_name == "03_runtime_parity_closure":
-        return "Stage 03 selection docs and workspace state must be updated in the same pass before any Stage 03 closure claim is made from this evaluated pack"
-    return "the active stage read and registry must be updated in the same pass before any closure claim is made from this evaluated pack"
+        return f"{policy_anchor} before any Stage 03 closure claim is made from this evaluated pack"
+    return f"{policy_anchor} before any closure claim is made from this evaluated pack"
 
 
 def render_report(
