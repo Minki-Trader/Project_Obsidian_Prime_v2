@@ -5,6 +5,7 @@ import json
 import os
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 from typing import Any
@@ -168,18 +169,55 @@ def wait_for_file(path: Path, timeout_seconds: int) -> None:
     raise RuntimeError(f"Timed out waiting for MT5 snapshot output: {path}")
 
 
-def run_json_step(args: list[str], cwd: Path) -> dict[str, Any]:
+def _tail_lines(text: str, count: int = 20) -> str:
+    lines = [line for line in text.splitlines() if line.strip()]
+    if not lines:
+        return "<empty>"
+    return "\n".join(lines[-count:])
+
+
+def _load_step_summary_from_stdout(*, stdout: str, stderr: str, step_id: str) -> dict[str, Any]:
+    lines = [line.strip() for line in stdout.splitlines() if line.strip()]
+    if not lines:
+        raise RuntimeError(
+            f"[{step_id}] Missing structured summary on stdout. "
+            f"stderr_tail:\n{_tail_lines(stderr)}\nstdout_tail:\n{_tail_lines(stdout)}"
+        )
+    try:
+        return json.loads(lines[-1])
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(
+            f"[{step_id}] Failed to decode structured summary JSON from stdout last line: {exc}. "
+            f"stderr_tail:\n{_tail_lines(stderr)}\nstdout_tail:\n{_tail_lines(stdout)}"
+        ) from exc
+
+
+def run_json_step(
+    args: list[str],
+    cwd: Path,
+    *,
+    step_id: str,
+    summary_json_path: Path | None = None,
+) -> dict[str, Any]:
+    cmd = list(args)
+    if summary_json_path is not None:
+        cmd.extend(["--summary-json", str(summary_json_path)])
+
     result = subprocess.run(
-        args,
+        cmd,
         cwd=cwd,
         capture_output=True,
         text=True,
         check=True,
     )
-    stdout = result.stdout.strip()
-    if not stdout:
-        return {}
-    return json.loads(stdout)
+    if summary_json_path is not None:
+        if not summary_json_path.exists():
+            raise RuntimeError(
+                f"[{step_id}] --summary-json output was not created: {summary_json_path}. "
+                f"stderr_tail:\n{_tail_lines(result.stderr)}\nstdout_tail:\n{_tail_lines(result.stdout)}"
+            )
+        return load_json(summary_json_path)
+    return _load_step_summary_from_stdout(stdout=result.stdout, stderr=result.stderr, step_id=step_id)
 
 
 def main() -> int:
@@ -249,7 +287,13 @@ def main() -> int:
             runner_cmd.extend(["--common-root", args.common_root])
         if args.reviewed_on:
             runner_cmd.extend(["--reviewed-on", args.reviewed_on])
-        after_summary = run_json_step(runner_cmd, cwd=repo_root)
+        with tempfile.TemporaryDirectory(prefix="runtime_parity_native_after_") as temp_dir:
+            after_summary = run_json_step(
+                runner_cmd,
+                cwd=repo_root,
+                step_id="after",
+                summary_json_path=Path(temp_dir) / "after_summary.json",
+            )
 
     print(
         json.dumps(

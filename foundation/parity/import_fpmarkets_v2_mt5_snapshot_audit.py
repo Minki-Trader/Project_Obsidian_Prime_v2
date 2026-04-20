@@ -38,6 +38,11 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional explicit destination JSONL path. Overrides the path derived from the MT5 request.",
     )
+    parser.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional path to write the structured step summary JSON.",
+    )
     return parser.parse_args()
 
 
@@ -70,17 +75,17 @@ def main() -> int:
     destination_path.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(source_path, destination_path)
 
-    print(
-        json.dumps(
-            {
-                "status": "ok",
-                "source_path": str(source_path.resolve()),
-                "destination_path": str(destination_path.resolve()),
-                "copied_bytes": source_path.stat().st_size,
-            },
-            indent=2,
-        )
-    )
+    summary = {
+        "status": "ok",
+        "source_path": str(source_path.resolve()),
+        "destination_path": str(destination_path.resolve()),
+        "copied_bytes": source_path.stat().st_size,
+    }
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    print(json.dumps(summary, indent=2))
     return 0
 
 

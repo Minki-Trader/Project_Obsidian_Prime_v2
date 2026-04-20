@@ -54,6 +54,11 @@ def parse_args() -> argparse.Namespace:
         default=date.today().isoformat(),
         help="Date stamp to write into the rendered report.",
     )
+    parser.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional path to write the structured step summary JSON.",
+    )
     return parser.parse_args()
 
 
@@ -393,19 +398,19 @@ def main() -> int:
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(rendered, encoding="utf-8")
 
-    print(
-        json.dumps(
-            {
-                "status": "ok",
-                "report_path": str(report_path.resolve()),
-                "stage_name": resolved_paths.stage_name,
-                "closure_scope": classify_scope(comparison),
-                "exact_parity": comparison["aggregate_results"]["exact_parity"],
-                "tolerance_parity": comparison["aggregate_results"]["tolerance_parity"],
-            },
-            indent=2,
-        )
-    )
+    step_summary = {
+        "status": "ok",
+        "report_path": str(report_path.resolve()),
+        "stage_name": resolved_paths.stage_name,
+        "closure_scope": classify_scope(comparison),
+        "exact_parity": comparison["aggregate_results"]["exact_parity"],
+        "tolerance_parity": comparison["aggregate_results"]["tolerance_parity"],
+    }
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(step_summary, indent=2), encoding="utf-8")
+    print(json.dumps(step_summary, indent=2))
     return 0
 
 
