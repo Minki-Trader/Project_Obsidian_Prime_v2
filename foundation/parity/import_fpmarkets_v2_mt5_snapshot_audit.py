@@ -38,6 +38,11 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional explicit destination JSONL path. Overrides the path derived from the MT5 request.",
     )
+    parser.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional path to write the structured step summary JSON.",
+    )
     return parser.parse_args()
 
 
@@ -53,6 +58,18 @@ def default_common_root() -> Path:
     return Path(appdata) / "MetaQuotes" / "Terminal" / "Common" / "Files"
 
 
+def ensure_path_within_common_root(path: Path, *, common_root: Path, field_name: str) -> Path:
+    resolved_common_root = common_root.resolve()
+    resolved_path = path.resolve()
+    try:
+        resolved_path.relative_to(resolved_common_root)
+    except ValueError as exc:
+        raise RuntimeError(
+            f"{field_name} escapes common_root {resolved_common_root}: {path}"
+        ) from exc
+    return resolved_path
+
+
 def main() -> int:
     args = parse_args()
     mt5_request_path = Path(args.mt5_request)
@@ -63,6 +80,14 @@ def main() -> int:
     destination_path = (
         Path(args.destination_path) if args.destination_path else resolved_paths.mt5_snapshot_path
     )
+    source_path = ensure_path_within_common_root(
+        source_path,
+        common_root=common_root,
+        field_name="source_path",
+    )
+    destination_path = resolve_runtime_pack_paths(
+        mt5_request_path, mt5_snapshot_path=destination_path
+    ).mt5_snapshot_path
 
     if not source_path.exists():
         raise RuntimeError(f"MT5 snapshot audit source file does not exist yet: {source_path}")
@@ -70,17 +95,17 @@ def main() -> int:
     destination_path.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(source_path, destination_path)
 
-    print(
-        json.dumps(
-            {
-                "status": "ok",
-                "source_path": str(source_path.resolve()),
-                "destination_path": str(destination_path.resolve()),
-                "copied_bytes": source_path.stat().st_size,
-            },
-            indent=2,
-        )
-    )
+    summary = {
+        "status": "ok",
+        "source_path": str(source_path.resolve()),
+        "destination_path": str(destination_path.resolve()),
+        "copied_bytes": source_path.stat().st_size,
+    }
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    print(json.dumps(summary, indent=2))
     return 0
 
 

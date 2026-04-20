@@ -62,6 +62,13 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - if built-in MT5 helpers disagree with the contract surface, the contract wins
 - all required inputs missing means `all-or-skip`, not degrade-with-warning
 
+## Verification Discipline (`검증 규율`)
+
+- use the narrowest sufficient verification first, but include a real-environment check (`실환경 검증`) before calling work verified when the change touches MT5 execution, tester orchestration, import/export boundaries, runtime parity flow, or another path where mocks can miss environment-specific behavior
+- prefer the active stage pack and the native MT5 runner as the real-environment check when that is the closest contract-surface verification
+- docs-only, wording-only, registry-only, or isolated pure-Python changes may stop at local tests when they do not change an environment-dependent path
+- if a real-environment check is not needed or is not feasible, say so explicitly and name the blocker or rationale instead of implying end-to-end verification
+
 ## Tester Defaults
 
 - symbol: `US100`

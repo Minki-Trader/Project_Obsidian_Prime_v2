@@ -27,6 +27,26 @@ class ResolvedRuntimePackPaths:
     mt5_request: dict[str, Any]
 
 
+def repo_root() -> Path:
+    return Path(__file__).resolve().parents[2]
+
+
+def _ensure_repo_relative_stage_run_path(path: Path, *, stage_name: str, field_name: str) -> Path:
+    if path.is_absolute():
+        raise RuntimeError(f"{field_name} must be a repo-relative path under stages/{stage_name}/02_runs: {path}")
+
+    repo = repo_root().resolve()
+    stage_runs_root = (repo / "stages" / stage_name / "02_runs").resolve()
+    resolved_path = (repo / path).resolve()
+    try:
+        resolved_path.relative_to(stage_runs_root)
+    except ValueError as exc:
+        raise RuntimeError(
+            f"{field_name} escapes allowed root stages/{stage_name}/02_runs: {path}"
+        ) from exc
+    return resolved_path.relative_to(repo)
+
+
 def read_text_robust(path: Path) -> str:
     payload = path.read_bytes()
     for encoding in ("utf-8-sig", "utf-8", "cp1252"):
@@ -119,6 +139,11 @@ def resolve_runtime_pack_paths(
     )
     resolved_tester_ini_path = (
         tester_ini_path if tester_ini_path is not None else find_single_tester_ini(run_root)
+    )
+    resolved_mt5_snapshot_path = _ensure_repo_relative_stage_run_path(
+        resolved_mt5_snapshot_path,
+        stage_name=stage_name,
+        field_name="repo_import_path" if mt5_snapshot_path is None else "destination_path",
     )
 
     return ResolvedRuntimePackPaths(

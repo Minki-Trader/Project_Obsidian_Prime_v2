@@ -2,7 +2,7 @@
 
 - stage: `05_exploration_kernel_freeze`
 - stage_type: `foundation_stage`
-- updated_on: `2026-04-19`
+- updated_on: `2026-04-20`
 - owner_path: `stages/05_exploration_kernel_freeze/`
 
 ## Purpose
@@ -24,7 +24,9 @@
 - in scope:
   - the first explicit Stage 05 exploration-kernel freeze read
   - the decision that `broader-sample parity` is the first downstream lane
+  - the ordered next-step plan that first opened `runtime-helper parity` after the current broader_0002 read, then materialized `broader_0003` as the additive broader reinforcement family, and now keeps native evaluation of that reinforcement pack as the required next follow-up lane
   - the execution charter for the first `24-window` broader-sample audit pack
+  - the first helper-focused `8-window` reuse subset derived from the active broader_0002 family
   - the separation between the current strict Tier A line and any later Tier B or Tier C exploration family
   - the live Stage 05 read path and selection note
 - not in scope:
@@ -36,14 +38,18 @@
 ## Success Criteria
 
 - the first Stage 05 read states clearly that `broader-sample parity` is the first downstream lane and what still remains separately bounded
+- the active Stage 05 read states clearly that `helper_0001` now exists as the first helper-focused evaluated pack, `broader_0003` now exists as the first additive broader reinforcement family, and the native evaluation of `broader_0003` is the next required follow-up without claiming Stage 05 closure
 - the broader-sample charter fixes pack size, strata, selection rules, reserved identifiers, and reusable artifact-family expectations
 - the first charter-aligned broader-sample inventory, selection manifest, and local request-pack materialization exist without claiming that broader-sample parity is already evaluated or closed
+- the first helper-focused inventory, selection manifest, local request-pack materialization, and evaluated read exist without claiming runtime-helper parity closure
 - the strict Tier A runtime rule remains distinct from any future Tier B or Tier C exploration family
 - any remaining blocker to post-foundation exploration has an explicit durable home rather than living as branch-only context
 
 ## Required Inputs
 
 - `../01_inputs/input_refs.md`
+- `../01_inputs/next_evidence_dual_lane_plan.md`
+- `../../../docs/decisions/2026-04-20_stage05_dual_followup_order.md`
 - `../../../docs/decisions/2026-04-19_stage05_broader_sample_first_lane.md`
 - `../../../docs/adr/0002_broader_sample_parity_charter.md`
 - `../../04_artifact_identity_closure/03_reviews/review_index.md`
@@ -59,6 +65,10 @@
 - broader-sample parity charter with fixed pack shape, selection rules, and reserved identifiers
 - first broader-sample fixture inventory and machine-readable selection manifest
 - first local broader request-pack materialization path under `02_runs/`
+- first helper-focused fixture inventory and machine-readable selection manifest
+- first local helper-focused request-pack materialization path under `02_runs/`
+- first additive broader reinforcement fixture inventory and machine-readable selection manifest when the ordered follow-up lane opens
+- first additive broader reinforcement request-pack materialization path under `02_runs/` when the ordered follow-up lane opens
 
 ## Close Bias
 
