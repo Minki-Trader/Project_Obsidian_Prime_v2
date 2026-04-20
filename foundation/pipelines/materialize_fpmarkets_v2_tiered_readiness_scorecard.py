@@ -237,6 +237,7 @@ def _all_columns_present(frame: pd.DataFrame, columns: Sequence[str]) -> pd.Seri
 def compute_group_states(frame: pd.DataFrame) -> tuple[dict[str, pd.Series], dict[str, dict[str, pd.Series]]]:
     g1_complete = _all_columns_present(frame, ["open", "high", "low", "close"])
     g1_complete &= ~frame["invalid__main_symbol_missing"]
+    g1_complete &= ~frame["invalid__numeric_invalid"]
     g1_complete &= ~frame["invalid__contract_version_mismatch"]
 
     g2_complete = _all_columns_present(frame, SESSION_COLUMNS)
