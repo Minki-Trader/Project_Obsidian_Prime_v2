@@ -1,4 +1,4 @@
-# Agent Trigger Policy
+﻿﻿# Agent Trigger Policy
 
 This note defines the repo-scoped `skills` layer that complements `AGENTS.md`.
 
@@ -64,6 +64,26 @@ Required effect:
 - follow the canonical same-pass sync list defined in this policy
 - never close a stage by implying later-stage evidence is already complete
 
+### `obsidian-publish-merge`
+
+Use when:
+
+- the user explicitly asks for `브랜치랑 메인머지까지`
+- the user explicitly asks to `메인까지 올려줘`
+- the user explicitly asks for push plus branch-to-`main` completion in one pass
+- requested implementation work materially changes tracked files and reaches a finished verified state in the current pass, unless the user explicitly asks to stop before publish
+
+Required effect:
+
+- finish the requested work before starting the publish flow
+- stage and commit only the intended scope
+- push the working branch first
+- update against the latest remote `main` before merging
+- merge into local `main` only when the branch is ready and the working tree is clean
+- push `origin/main` in the same pass when no blocker remains
+- stop and surface the blocker explicitly if remote `main`, branch history, or working-tree state makes a clean merge unsafe
+- do not auto-publish analysis-only, question-only, brainstorming, or explicitly partial-progress turns
+
 ## Canonical Same-Pass Sync Norm
 
 The canonical same-pass sync norm lives in this file and applies whenever stage-level operational meaning changes durably.
@@ -98,3 +118,5 @@ Required same-pass files:
 - derive the current active stage from `docs/workspace/workspace_state.yaml` and the active stage `selection_status.md`
 - use `obsidian-reentry-read` and `obsidian-claim-discipline` as the default primary pair for any new or resumed thread
 - use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
+- use `obsidian-publish-merge` whenever the user explicitly asks for branch push plus `main` merge completion in the same pass
+- also use `obsidian-publish-merge` by default after a successful implementation pass when tracked files changed, relevant verification completed, and the user did not explicitly ask to stop before publish or keep the work branch-only
