@@ -61,13 +61,22 @@ Use when:
 
 Required effect:
 
-- update in the same pass:
-  - `docs/workspace/workspace_state.yaml`
-  - `docs/context/current_working_state.md`
-  - the active stage `04_selected/selection_status.md`
-  - the active stage `03_reviews/review_index.md` when needed
-  - `docs/decisions/*.md` when the change is durable
+- follow the canonical same-pass sync list defined in this policy
 - never close a stage by implying later-stage evidence is already complete
+
+## Canonical Same-Pass Sync Norm
+
+The canonical same-pass sync norm lives in this file and applies whenever stage-level operational meaning changes durably.
+
+Required same-pass files:
+
+- `docs/workspace/workspace_state.yaml`
+- `docs/context/current_working_state.md`
+- the active or closing stage `04_selected/selection_status.md`
+- the active or closing stage `03_reviews/review_index.md` when needed
+- `docs/decisions/*.md` when the change is durable
+- `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
+- `docs/workspace/changelog.md`
 
 ## Always-On Claim Guardrails
 
@@ -75,6 +84,14 @@ Required effect:
 - `handoff verification` is not `runtime parity closure`
 - `legacy prior evidence` is not `current v2 foundation truth` or `current v2 operating truth`
 - `foundation stage closure` is not `exploration-ready`
+
+## Verification Escalation (`검증 상향 규칙`)
+
+- start with the smallest sufficient local verification
+- if a change touches MT5 execution, tester orchestration, runtime parity flow, file import/export boundaries, or another environment-dependent path, add the narrowest real-environment check (`실환경 검증`) before reporting the work as verified
+- prefer the active stage pack plus the native MT5 runner when that is the closest contract-surface check
+- docs-only, wording-only, registry-only, or isolated pure-Python changes may stop at local verification when they do not alter an environment-dependent path
+- when real-environment verification is skipped, state why it was unnecessary or infeasible
 
 ## Dynamic Active Routing
 

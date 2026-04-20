@@ -2,6 +2,15 @@
 
 ## 2026-04-20
 
+- evaluated `broader_0003` on the native MT5 path as the first additive Stage 05 broader reinforcement pack with `matched_fixtures=24`, `unexpected_record_count=0`, `tolerance_parity=true`, and `max_abs_diff=7.160007811535252e-06`
+- added a League/Riot process guard to the native MT5 runner so live game sessions are blocked by default and only proceed when `--allow-conflicting-games` is passed explicitly
+- closed `05_exploration_kernel_freeze` on the explicit `broader_0002 + helper_0001 + broader_0003` kernel-freeze read and opened `06_tiered_readiness_exploration` as the first downstream exploration-only stage
+- materialized `broader_0003` as the first additive Stage 05 broader reinforcement family on a non-overlapping twenty-four-window charter pack, while keeping native evaluation of that pack as the next required follow-up
+- materialized and evaluated `helper_0001` as the first helper-focused Stage 05 subset derived from the active `broader_0002` pack; the separate helper pack now reaches a first tolerance-closed exact-open read on `8` frozen fixtures while Stage 05 still remains open
+- fixed the next Stage 05 follow-up order so the first separate runtime-helper parity lane now opens before any additional broader-sample coverage pass, while the active broader_0002 read remains the current broader evidence
+- reran the active Stage 05 broader_0002 pack through the native MT5 path after the tooling-hardening pass and reproduced the same first broader tolerance-closed exact-open read instead of changing the Stage 05 boundary
+- added a project-wide verification discipline so agent work now escalates to the narrowest real-environment check for MT5 execution, orchestration, import/export, and other environment-dependent paths instead of stopping at local-only validation when the risk surface requires more
+- aligned the same-pass synchronization norm across `docs/policies/agent_trigger_policy.md`, `.agents/skills/obsidian-stage-transition/SKILL.md`, and the runtime parity reporter `gate_before_closure` wording so policy/skill/reporter drift is reduced and `artifact_registry.csv` inclusion is explicit
 - realigned the active working branch name from the lingering Stage 03 label to `codex/stage05-broader-rebind` so the live workspace truth matches the actual Stage 05 foundation boundary
 - synchronized `workspace_state.yaml` and `current_working_state.md` to the active Stage 05 branch truth instead of the older Stage 03 handoff branch name
 - carried the active Stage 05 read forward so `broader_0001` stays retained pre-alignment evidence, `broader_0002` stays the active contract-aligned pack, and Stage 05 still remains open on localized residual mismatch evidence
