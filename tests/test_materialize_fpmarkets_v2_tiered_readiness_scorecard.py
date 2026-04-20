@@ -124,6 +124,32 @@ class ReadinessRuleUnitTests(unittest.TestCase):
         )
         self.assertEqual(rendered, "VIX|AAPL.xnas|META.xnas")
 
+    def test_group1_fails_when_numeric_invalid_flag_is_set(self) -> None:
+        row = {
+            "open": 1.0,
+            "high": 2.0,
+            "low": 0.5,
+            "close": 1.5,
+            "invalid__main_symbol_missing": False,
+            "invalid__numeric_invalid": True,
+            "invalid__contract_version_mismatch": False,
+        }
+        for column in self.module.SESSION_COLUMNS:
+            row[column] = 1.0
+        for columns in self.module.G3_SYMBOL_COLUMNS.values():
+            for column in columns:
+                row[column] = 1.0
+        for columns in self.module.G4_SYMBOL_COLUMNS.values():
+            for column in columns:
+                row[column] = 1.0
+        for column in self.module.G5_ALL_COLUMNS:
+            row[column] = 1.0
+
+        frame = pd.DataFrame([row])
+        group_complete, _ = self.module.compute_group_states(frame)
+
+        self.assertFalse(bool(group_complete["g1_contract_base"].iloc[0]))
+
 
 class ScorecardIntegrationTests(unittest.TestCase):
     @classmethod
@@ -177,4 +203,3 @@ class ScorecardIntegrationTests(unittest.TestCase):
             self.assertIn("strict `Tier A` (엄격 `Tier A`) remains the only current runtime rule", report_text)
             self.assertIn("`Tier B` (부분 준비도 `Tier B`) is exploration-only", report_text)
             self.assertIn("no operating promotion (운영 승격) is claimed", report_text)
-
