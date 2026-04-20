@@ -1,7 +1,14 @@
-# Changelog
+﻿# Changelog
+
+## 2026-04-21
+
+- materialized the first Stage 06 tiered-readiness scorecard as row-level labels plus a machine-readable summary and review report with shared-window counts `tier_a=56988`, `tier_b=88303`, `tier_c=116053` and practical-window counts `tier_a=55457`, `tier_b=86192`, `tier_c=113352`
+- added the first Stage 06 registry rows for `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report` without claiming any reduced-risk runtime family or operating promotion
+- added a dedicated Stage 06 scorecard materializer, real-data regression tests, and Git tracking exceptions for the first tracked `02_runs/tiered_readiness_scorecard_0001` artifact family
 
 ## 2026-04-20
 
+- fixed the first Stage 06 deterministic readiness boundary as a docs-only governance lock, demoted heuristic Tier B notes to non-binding exploration notes, and synchronized Stage 06 plus workspace truth without adding new registry rows
 - evaluated `broader_0003` on the native MT5 path as the first additive Stage 05 broader reinforcement pack with `matched_fixtures=24`, `unexpected_record_count=0`, `tolerance_parity=true`, and `max_abs_diff=7.160007811535252e-06`
 - added a League/Riot process guard to the native MT5 runner so live game sessions are blocked by default and only proceed when `--allow-conflicting-games` is passed explicitly
 - closed `05_exploration_kernel_freeze` on the explicit `broader_0002 + helper_0001 + broader_0003` kernel-freeze read and opened `06_tiered_readiness_exploration` as the first downstream exploration-only stage

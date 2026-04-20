@@ -1,6 +1,6 @@
-# Current Working State
+﻿# Current Working State
 
-- updated_on: `2026-04-20`
+- updated_on: `2026-04-21`
 - workspace: `Project_Obsidian_Prime_v2`
 - project_mode: `foundation_restart`
 - active_stage: `06_tiered_readiness_exploration`
@@ -11,6 +11,8 @@
 - bootstrap entrypoint: `AGENTS.md`
 - canonical re-entry order and truth precedence: `docs/policies/reentry_order.md`
 - latest durable decisions to expect during that pass:
+  - `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
+  - `docs/decisions/2026-04-20_stage06_first_readiness_boundary.md`
   - `docs/decisions/2026-04-20_stage05_close_and_stage06_open.md`
   - `docs/decisions/2026-04-20_stage05_broader_0003_reinforcement_pack_materialized.md`
   - `docs/decisions/2026-04-20_stage05_helper_0001_first_focused_pack.md`
@@ -33,7 +35,14 @@
 - that Stage 05 closure does not claim separate runtime-helper parity closure, does not claim separate broader-sample parity closure, and does not promote any operating line; it closes only the exploration-kernel freeze boundary by making the first downstream exploration family explicit enough that later work cannot drift open by implication
 - `06_tiered_readiness_exploration` is now the active stage because the future `Tier A / Tier B / Tier C` readiness family already had an accepted policy home, and Stage 05 now hands that downstream exploration family a bounded foundation evidence base instead of a branch-only question
 - Stage 06 begins with the Stage 05 evidence family frozen in place: `broader_0002` remains the first active broader pack, `helper_0001` remains the first helper-focused pack, and `broader_0003` remains additive reinforcement evidence rather than a replacement for the active broader read
-- all future Tier B or Tier C exploration must stay separate from the current strict Tier A runtime rule and must carry explicit readiness labels, missing-group summaries, and separate reporting lanes
+- the first Stage 06 docs-only governance lock now fixes the deterministic boundary as: if `Group 1` or `Group 2` fails -> `tier_c`; else if `Group 3`, `Group 4`, and `Group 5` are all complete -> `tier_a`; else if exactly `1` or `2` of `Group 3` to `Group 5` are complete -> `tier_b`; else -> `tier_c`
+- `group complete` is now fixed to exact-timestamp required-symbol and required-field presence with no forward-fill, no fabricate path, and computable required semantics
+- all future Tier B or Tier C exploration must stay separate from the current strict Tier A runtime rule and must carry the fixed `readiness_tier`, `missing_groups`, `missing_symbols`, and `reporting_lane` interface
+- `B-mixed-partial` remains a vocabulary-only candidate term and is not an eligible materialized readiness rule in the first Stage 06 boundary
+- the first Stage 06 scorecard family is now materialized as row-level labels under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet`, a machine-readable summary under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_scorecard_fpmarkets_v2_tiered_readiness_0001.json`, and a review report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tiered_readiness_0001.md`
+- that first scorecard keeps the current strict Tier A runtime rule unchanged and reads the shared window as `tier_a=56988`, `tier_b=88303`, `tier_c=116053` plus the practical window as `tier_a=55457`, `tier_b=86192`, `tier_c=113352`
+- the same pass also writes the first Stage 06 registry rows for `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report`
+- no reduced-risk runtime family is materialized yet and no operating promotion is claimed from the scorecard alone
 - legacy winners remain archive notes and design evidence only; they do not define current v2 foundation truth or current v2 operating truth
 
 ## Legacy Lessons Carried Forward
@@ -47,12 +56,11 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. materialize the first explicit Stage 06 `Tier B / Tier C` readiness boundary so reduced-risk exploration cannot blur with the current strict Tier A line
-2. decide the first durable readiness-label and missing-group-summary scheme for any Stage 06 dataset, runtime, report, or scorecard artifact
-3. decide whether any first Stage 06 reduced-risk experiment can reuse the frozen Stage 05 evidence family as-is or needs additional helper-lane or broader-lane support first
+1. decide whether scorecard_0001 is enough to open the first Tier B reduced-risk experiment or whether additional helper-lane or broader-lane evidence is still required first
+2. decide whether Tier B should reuse the current model family with explicit readiness features or require a separate model family and calibration path
+3. decide whether any first Tier B experiment can proceed under the placeholder weights caveat or should wait for a real monthly-weight source
 4. keep the current strict Tier A runtime rule unchanged until a later exploration read says otherwise
-5. keep placeholder weights caveat explicit until a real monthly-weight source replaces the equal-weight table
-6. keep branch truth aligned to `codex/stage06-tiered-readiness-open` until the handoff is merged
+5. keep branch truth aligned to `codex/stage06-tiered-readiness-open` until the handoff is merged
 
 ## Foundation Closure Path
 
@@ -74,5 +82,6 @@ All six foundation stages are now explicitly closed.
 - do not reopen `05_exploration_kernel_freeze` unless a new contradiction breaks the frozen `broader_0002 + helper_0001 + broader_0003` read
 - do not treat Stage 05 closure as runtime-helper parity closure, broader-sample parity closure, or operating promotion
 - do not let any Stage 06 artifact imply that Tier B is contract-equivalent to the current strict Tier A line
+- do not treat `B-mixed-partial` or any other non-binding vocabulary as an eligible first-boundary rule
 - do not compare future Tier B reduced-risk outputs head-to-head with Tier A without separate reporting lanes
 - do not let durable conclusions live only in branch notes or scratch files
