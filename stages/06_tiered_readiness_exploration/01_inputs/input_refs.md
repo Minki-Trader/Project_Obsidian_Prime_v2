@@ -1,4 +1,4 @@
-# Stage 06 Input Refs
+﻿# Stage 06 Input Refs
 
 ## Required Contracts And Policies
 
@@ -11,6 +11,8 @@
 
 ## Carry-Forward Evidence
 
+- `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
+- `docs/decisions/2026-04-20_stage06_first_readiness_boundary.md`
 - `docs/decisions/2026-04-20_stage05_close_and_stage06_open.md`
 - `docs/decisions/2026-04-18_tiered_readiness_exploration_boundary.md`
 - `docs/decisions/2026-04-20_stage05_broader_0003_reinforcement_pack_materialized.md`
@@ -34,10 +36,29 @@
 - Stage 05 broader fixture manifests under `stages/05_exploration_kernel_freeze/01_inputs/second_bound_runtime_broader_fixture_manifest_0002.json` and `stages/05_exploration_kernel_freeze/01_inputs/third_bound_runtime_broader_fixture_manifest_0003.json`
 - Stage 05 helper fixture manifest under `stages/05_exploration_kernel_freeze/01_inputs/first_bound_runtime_helper_fixture_manifest_0001.json`
 - dataset validity source under `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/row_validity_report.json`
+- Stage 06 row-level readiness labels under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet`
+- Stage 06 machine-readable scorecard summary under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_scorecard_fpmarkets_v2_tiered_readiness_0001.json`
+- Stage 06 first scorecard review report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tiered_readiness_0001.md`
+
+## Stage 06 Boundary Interface
+
+- canonical readiness rule:
+  - if `Group 1` or `Group 2` fails -> `tier_c`
+  - else if `Group 3`, `Group 4`, and `Group 5` are all complete -> `tier_a`
+  - else if exactly `1` or `2` of `Group 3` to `Group 5` are complete -> `tier_b`
+  - else -> `tier_c`
+- `group complete` means that the group's required symbols and required fields exist at the exact timestamp, no forward-fill or fabricate path is used, and the group's required semantics are computable
+- future Stage 06 artifacts must use:
+  - `readiness_tier`: `tier_a | tier_b | tier_c`
+  - `missing_groups`: `g1_contract_base | g2_session_semantics | g3_macro_proxy | g4_leader_equity | g5_breadth_extension`
+  - `missing_symbols`: symbol-level missing explanation
+  - `reporting_lane`: `strict_tier_a | tier_b_exploration`
+- `tier_c` remains a skip classification rather than a reporting lane
+- the first materialized Stage 06 scorecard family now exists and is registered as `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report`
 
 ## Immediate Missing Inputs
 
-- no Stage 06-specific readiness-label artifact exists yet
-- no Stage 06-specific missing-group-summary artifact exists yet
-- no Stage 06-specific report or registry convention has been materialized yet for Tier B or Tier C work
-- the next missing durable artifact is the first explicit Stage 06 boundary read for readiness labels and reporting lanes
+- no Stage 06-specific reduced-risk runtime family exists yet
+- no Stage 06-specific reduced-risk experiment charter exists yet
+- model-family choice for any future Tier B runtime family remains open by decision
+- the next missing durable artifact is either the first Tier B reduced-risk experiment charter or an explicit evidence decision that says additional helper-lane or broader-lane support is still required before experimentation
