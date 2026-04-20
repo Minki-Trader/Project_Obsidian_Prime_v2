@@ -11,6 +11,7 @@
 
 ## Carry-Forward Evidence
 
+- `docs/decisions/2026-04-21_stage06_first_tier_b_charter_adopted.md`
 - `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
 - `docs/decisions/2026-04-20_stage06_first_readiness_boundary.md`
 - `docs/decisions/2026-04-20_stage05_close_and_stage06_open.md`
@@ -20,6 +21,7 @@
 - `docs/decisions/2026-04-20_stage05_dual_followup_order.md`
 - `docs/decisions/2026-04-19_stage05_broader_0002_contract_aligned_rebind.md`
 - `docs/decisions/2026-04-19_stage05_broader_sample_first_lane.md`
+- `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`
 - `docs/adr/0002_broader_sample_parity_charter.md`
 - `docs/context/current_working_state.md`
 - `docs/registers/artifact_registry.csv`
@@ -53,12 +55,14 @@
   - `missing_groups`: `g1_contract_base | g2_session_semantics | g3_macro_proxy | g4_leader_equity | g5_breadth_extension`
   - `missing_symbols`: symbol-level missing explanation
   - `reporting_lane`: `strict_tier_a | tier_b_exploration`
+- future Tier B offline evaluation artifacts must summarize KPI reads separately for `strict_tier_a` and `tier_b_exploration`, and any mixed aggregate remains info-only
 - `tier_c` remains a skip classification rather than a reporting lane
 - the first materialized Stage 06 scorecard family now exists and is registered as `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report`
 
 ## Immediate Missing Inputs
 
 - no Stage 06-specific reduced-risk runtime family exists yet
-- no Stage 06-specific reduced-risk experiment charter exists yet
-- model-family choice for any future Tier B runtime family remains open by decision
-- the next missing durable artifact is either the first Tier B reduced-risk experiment charter or an explicit evidence decision that says additional helper-lane or broader-lane support is still required before experimentation
+- the first Stage 06-specific reduced-risk experiment charter now exists under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`
+- the first charter fixes baseline-family reuse with separate calibration and separate `tier_b_exploration` reporting without changing the current strict Tier A runtime rule
+- placeholder monthly weights are allowed only for offline Tier B exploration and not for promotion, simulated execution, or MT5-path expansion
+- the next missing durable artifact is the first Tier B offline evaluation pack or the first Tier B offline evaluation report

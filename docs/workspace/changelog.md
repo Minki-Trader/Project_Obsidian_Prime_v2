@@ -2,6 +2,7 @@
 
 ## 2026-04-21
 
+- adopted the first Stage 06 offline-only Tier B experiment charter on baseline-family reuse plus separate calibration and separate `tier_b_exploration` reporting, while keeping placeholder monthly weights bounded to offline exploration only
 - materialized the first Stage 06 tiered-readiness scorecard as row-level labels plus a machine-readable summary and review report with shared-window counts `tier_a=56988`, `tier_b=88303`, `tier_c=116053` and practical-window counts `tier_a=55457`, `tier_b=86192`, `tier_c=113352`
 - added the first Stage 06 registry rows for `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report` without claiming any reduced-risk runtime family or operating promotion
 - added a dedicated Stage 06 scorecard materializer, real-data regression tests, and Git tracking exceptions for the first tracked `02_runs/tiered_readiness_scorecard_0001` artifact family

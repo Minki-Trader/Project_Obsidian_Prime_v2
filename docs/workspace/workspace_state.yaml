@@ -1,6 +1,6 @@
 updated_on: "2026-04-21"
 project_mode: "foundation_restart"
-active_branch: "codex/stage06-tiered-readiness-open"
+active_branch: "main"
 active_stage: "06_tiered_readiness_exploration"
 current_operating_reference: null
 current_shadow_challenger: null
@@ -32,8 +32,11 @@ current_focus:
   - "keep `B-mixed-partial` as vocabulary only and not as an eligible materialized readiness rule in the first Stage 06 boundary"
   - "keep the first Stage 06 scorecard materialized under `tiered_readiness_scorecard_0001` with shared-window counts `tier_a=56988`, `tier_b=88303`, `tier_c=116053` and practical-window counts `tier_a=55457`, `tier_b=86192`, `tier_c=113352` while keeping that artifact additive rather than promotive"
   - "keep Stage 06 row-label, summary, and report artifacts bound to `readiness_tier`, `missing_groups`, `missing_symbols`, and `reporting_lane` while no reduced-risk runtime family is materialized yet"
+  - "keep the first Stage 06 offline-only Tier B experiment charter adopted under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md` with baseline-family reuse, separate calibration, and separate `tier_b_exploration` reporting"
+  - "keep placeholder monthly weights allowed only for offline Tier B exploration and not as evidence for simulated execution, MT5-path expansion, or operating promotion"
+  - "keep the next Stage 06 durable output fixed to the first Tier B offline evaluation pack or report rather than reopening whether a charter should exist"
   - "keep no v2 operating reference promoted until a later explicit exploration and promotion read exists"
-  - "keep active branch truth aligned to `codex/stage06-tiered-readiness-open` until the handoff is merged"
+  - "keep active branch truth aligned to `main` now that `codex/stage06-tiered-readiness-open` is already merged"
   - "keep exact-open notes bounded to floating-point serialization drift unless a later contradiction appears"
   - "keep runtime-helper parity and broader-sample parity separate from operating promotion even though Stage 05 is now closed"
 do_not_reopen_without_new_hypothesis:
@@ -46,6 +49,8 @@ must_read_next:
   - "AGENTS.md"
   - "docs/policies/reentry_order.md"
   - "docs/context/current_working_state.md"
+  - "docs/decisions/2026-04-21_stage06_first_tier_b_charter_adopted.md"
+  - "docs/adr/0003_tier_b_reduced_risk_experiment_charter.md"
   - "docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md"
   - "docs/decisions/2026-04-20_stage06_first_readiness_boundary.md"
   - "docs/decisions/2026-04-20_stage05_close_and_stage06_open.md"
@@ -74,6 +79,6 @@ must_read_next:
   - "docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md"
   - "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md"
 open_questions:
-  - "Does the first materialized Stage 06 scorecard justify opening a Tier B reduced-risk experiment immediately or is additional helper-lane or broader-lane evidence still required before experimentation begins?"
-  - "Should Tier B reuse the current model family with explicit readiness features or require a separate model family and calibration path?"
-  - "Can any first Tier B experiment proceed under the placeholder monthly-weight source with the caveat carried explicitly or must a real weight source land first?"
+  - "What should the first Tier B offline evaluation pack or report quantify beyond coverage counts: separate KPI summary, threshold sweep, calibration curve, or all three?"
+  - "What is the narrowest first separate calibration path for the reused baseline family on Tier B inputs?"
+  - "Does the placeholder monthly-weight caveat require a real-weight rerun before any later simulated execution or MT5-path experiment?"
