@@ -21,7 +21,37 @@ Canonical re-entry order and truth precedence live in `docs/policies/reentry_ord
 - use the truth precedence defined in `docs/policies/reentry_order.md`
 - this policy may refine skill routing but does not override that precedence
 
+## Session Mode Contract
+
+Every working turn should first fit one primary session mode:
+
+- `reentry_only`
+- `status_summary`
+- `next_task_planning`
+- `implementation_pass`
+- `verification_pass`
+- `stage_transition`
+- `publish_pass`
+
+If the user prompt is broad, choose the narrowest mode that still completes the turn safely.
+
 ## Core Trigger Map
+
+### `obsidian-session-intake`
+
+Use when:
+
+- a new thread starts in this repo
+- work resumes after a pause
+- the user asks for status, current progress, or the next safest task
+- implementation is requested but no current task packet is fixed yet
+
+Required effect:
+
+- choose one primary session mode before doing substantial work
+- run a full cold re-entry only when the thread is cold, the active stage is unclear, or durable meaning may have shifted
+- prefer a same-thread delta check when the thread is warm and the active stage is already stable
+- restate the active stage, current foundation truth, current operating-truth boundary, planning-only items, materialized items, open items, forbidden shortcuts, recommended next task, allowed scope, stop conditions, and default publish target before drifting into implementation
 
 ### `obsidian-reentry-read`
 
@@ -36,6 +66,7 @@ Required effect:
 - read the repo in the documented re-entry order
 - restate the active stage, current foundation status, and current truth boundary before making decisions
 - do not begin stage work from stale assumptions
+- do not repeat a full cold re-entry inside the same stable thread when a narrower delta check is sufficient
 
 ### `obsidian-claim-discipline`
 
@@ -50,6 +81,22 @@ Required effect:
 - downgrade claims when the evidence state is still planning or pending
 - distinguish `planning scaffold`, `materialized evidence`, `runtime parity closure`, and `exploration-ready` explicitly
 - mark legacy findings as `prior evidence only` unless a v2 artifact closes the same question
+
+### `obsidian-task-packet`
+
+Use when:
+
+- the user asks `계획 수립해줘`
+- the user asks `작업 패킷 만들어줘`
+- implementation or verification should be narrowed before files change
+- the current packet is missing, stale, or too broad for a safe pass
+
+Required effect:
+
+- choose one primary task only
+- derive that task from the active stage brief, selection status, current decision memos, and current session mode
+- output a bounded packet with `task_id`, `goal`, `allowed_paths`, `do_not_touch`, `expected_artifacts`, `verification_minimum`, `real_env_required`, `publish_target`, `stop_conditions`, and `done_definition`
+- keep `publish_target` at `branch_only` or `none` unless the user explicitly asks for `main` completion
 
 ### `obsidian-stage-transition`
 
@@ -71,7 +118,7 @@ Use when:
 - the user explicitly asks for `브랜치랑 메인머지까지`
 - the user explicitly asks to `메인까지 올려줘`
 - the user explicitly asks for push plus branch-to-`main` completion in one pass
-- requested implementation work materially changes tracked files and reaches a finished verified state in the current pass, unless the user explicitly asks to stop before publish
+- an approved current task packet explicitly names `publish_target=main`
 
 Required effect:
 
@@ -82,7 +129,7 @@ Required effect:
 - merge into local `main` only when the branch is ready and the working tree is clean
 - push `origin/main` in the same pass when no blocker remains
 - stop and surface the blocker explicitly if remote `main`, branch history, or working-tree state makes a clean merge unsafe
-- do not auto-publish analysis-only, question-only, brainstorming, or explicitly partial-progress turns
+- do not infer `main` publish from implementation completion alone
 
 ## Canonical Same-Pass Sync Norm
 
@@ -113,10 +160,20 @@ Required same-pass files:
 - docs-only, wording-only, registry-only, or isolated pure-Python changes may stop at local verification when they do not alter an environment-dependent path
 - when real-environment verification is skipped, state why it was unnecessary or infeasible
 
+## Prompt Routing Hints
+
+- `현재 진행사항 파악해줘`, `지금 어디까지 왔어`, `상태 요약해줘`: start with `obsidian-session-intake`
+- `바로 다음 작업은?`, `다음 작업 골라줘`: start with `obsidian-session-intake` and return one recommended next task
+- `계획 수립해줘`, `작업 패킷 만들어줘`: use `obsidian-task-packet`
+- `진행해줘`: execute the current approved task packet; if none exists, create or reconstruct one before implementation
+- `브랜치랑 메인머지까지`, `메인까지 올려줘`: use `obsidian-publish-merge`
+
 ## Dynamic Active Routing
 
 - derive the current active stage from `docs/workspace/workspace_state.yaml` and the active stage `selection_status.md`
-- use `obsidian-reentry-read` and `obsidian-claim-discipline` as the default primary pair for any new or resumed thread
+- use `obsidian-session-intake` and `obsidian-claim-discipline` as the default primary pair for any new or resumed thread
+- let `obsidian-session-intake` decide whether the thread needs full cold re-entry or only a same-thread delta check
+- use `obsidian-task-packet` before implementation or verification whenever the current packet is missing or ambiguous
 - use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
-- use `obsidian-publish-merge` whenever the user explicitly asks for branch push plus `main` merge completion in the same pass
-- also use `obsidian-publish-merge` by default after a successful implementation pass when tracked files changed, relevant verification completed, and the user did not explicitly ask to stop before publish or keep the work branch-only
+- use `obsidian-publish-merge` only when the user explicitly asks for branch push plus `main` merge completion in the same pass or an approved task packet explicitly names `publish_target=main`
+- do not auto-trigger `obsidian-publish-merge` only because a verified implementation pass finished
