@@ -1,7 +1,17 @@
 ﻿# Changelog
 
+## 2026-04-22
+
+- replaced the Stage 06 `baseline-family reuse` working hypothesis with `legacy non-inheritance` plus a first `Tier A`-trained `v2-native baseline seed`, then materialized the first `Tier B offline evaluation report` and `calibration read` without changing the strict Tier A runtime rule
+- added a Stage 06 local baseline-seed spec, a dedicated `Gaussian Naive Bayes` materializer, and real-data tests for the first `tier_b_offline_eval_0001` artifact family
+- added five new Stage 06 registry rows for the baseline-seed manifest, probability table, evaluation summary, calibration read, and report while keeping `approved_for=not_applicable` and leaving runtime-family or promotion claims closed
+
 ## 2026-04-21
 
+- added repo-scoped `obsidian-session-intake` and `obsidian-task-packet` skills so turns now choose a narrow session mode, prefer warm-thread delta checks over repeated cold re-entry, and fix one bounded task packet before implementation drifts open
+- weakened `obsidian-publish-merge` from default auto-publish to explicit-user-or-packet-gated `main` publish, while keeping `branch_only` as the default publish target
+- expanded branch policy so one approved task packet can map to one branch more cleanly and stale ahead/behind branches now require an explicit `merge`, `re-cut-needed`, `superseded`, or `archived` resolution
+- added a Stage 06 execution contract block so the next offline Tier B artifact stays bounded by allowed paths, do-not-touch rules, verification minimums, stop conditions, and a branch-first publish default
 - adopted the first Stage 06 offline-only Tier B experiment charter on baseline-family reuse plus separate calibration and separate `tier_b_exploration` reporting, while keeping placeholder monthly weights bounded to offline exploration only
 - materialized the first Stage 06 tiered-readiness scorecard as row-level labels plus a machine-readable summary and review report with shared-window counts `tier_a=56988`, `tier_b=88303`, `tier_c=116053` and practical-window counts `tier_a=55457`, `tier_b=86192`, `tier_c=113352`
 - added the first Stage 06 registry rows for `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report` without claiming any reduced-risk runtime family or operating promotion

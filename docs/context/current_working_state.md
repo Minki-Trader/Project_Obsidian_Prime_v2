@@ -1,6 +1,6 @@
 ﻿# Current Working State
 
-- updated_on: `2026-04-21`
+- updated_on: `2026-04-22`
 - workspace: `Project_Obsidian_Prime_v2`
 - project_mode: `foundation_restart`
 - active_stage: `06_tiered_readiness_exploration`
@@ -11,6 +11,7 @@
 - bootstrap entrypoint: `AGENTS.md`
 - canonical re-entry order and truth precedence: `docs/policies/reentry_order.md`
 - latest durable decisions to expect during that pass:
+  - `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
   - `docs/decisions/2026-04-21_stage06_first_tier_b_charter_adopted.md`
   - `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
   - `docs/decisions/2026-04-20_stage06_first_readiness_boundary.md`
@@ -43,9 +44,11 @@
 - the first Stage 06 scorecard family is now materialized as row-level labels under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet`, a machine-readable summary under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_scorecard_fpmarkets_v2_tiered_readiness_0001.json`, and a review report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tiered_readiness_0001.md`
 - that first scorecard keeps the current strict Tier A runtime rule unchanged and reads the shared window as `tier_a=56988`, `tier_b=88303`, `tier_c=116053` plus the practical window as `tier_a=55457`, `tier_b=86192`, `tier_c=113352`
 - the same pass also writes the first Stage 06 registry rows for `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report`
-- the first Stage 06 offline-only Tier B experiment charter is now accepted under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`; it reuses the current baseline model family as the first design hypothesis on the same input-contract surface, but requires separate calibration and separate `tier_b_exploration` reporting before any Tier B performance claim
+- the first Stage 06 offline-only Tier B experiment charter remains accepted under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`, but its original baseline-family reuse hypothesis is now superseded by `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
+- the first Stage 06 `v2-native baseline seed (v2 고유 기준선 시드)` is now materialized under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/`; it fits a first `3-class Gaussian Naive Bayes (3분류 가우시안 나이브 베이즈)` model on `34695` `Tier A` train rows only with `q33=-0.00035087247936272335` and `q67=0.0004049556640609367`
+- the paired report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_offline_evaluation_0001.md` now separates `validation (검증)` and `holdout (보류 평가)` KPI reads for `strict_tier_a` and `tier_b_exploration` while keeping mixed aggregates `info-only (정보용)` and leaving runtime or promotion meaning closed
 - the placeholder weights table remains allowed only for that offline-only charter and does not justify simulated execution, MT5-path expansion, or operating promotion
-- no reduced-risk runtime family is materialized yet and no operating promotion is claimed from the scorecard or charter alone
+- no reduced-risk runtime family is materialized yet and no operating promotion is claimed from the scorecard, baseline seed, calibration read, or charter alone
 - legacy winners remain archive notes and design evidence only; they do not define current v2 foundation truth or current v2 operating truth
 
 ## Legacy Lessons Carried Forward
@@ -59,11 +62,10 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. materialize the first Tier B offline evaluation pack or report on the separate `tier_b_exploration` lane
-2. define the narrowest separate calibration and threshold read for the reused baseline model family on Tier B inputs
-3. decide whether the placeholder weights caveat forces a real-weight rerun before any later simulated execution or MT5 path
-4. keep the current strict Tier A runtime rule unchanged until a later exploration read says otherwise
-5. keep branch truth aligned to `main` now that `codex/stage06-tiered-readiness-open` is already merged
+1. materialize the first separate `threshold read (임계값 판독)` or `calibration fit (보정 적합)` follow-up for the v2-native baseline seed family
+2. decide whether the placeholder weights caveat forces a real-weight rerun before any later simulated execution or MT5 path
+3. keep the current strict Tier A runtime rule unchanged until a later exploration read says otherwise
+4. keep branch truth aligned to `main` now that `codex/stage06-tiered-readiness-open` is already merged
 
 ## Foundation Closure Path
 
@@ -86,6 +88,7 @@ All six foundation stages are now explicitly closed.
 - do not treat Stage 05 closure as runtime-helper parity closure, broader-sample parity closure, or operating promotion
 - do not let any Stage 06 artifact imply that Tier B is contract-equivalent to the current strict Tier A line
 - do not treat the adopted Tier B charter as a materialized runtime family or as permission to open simulated execution or MT5-path work
+- do not treat the first v2-native baseline seed or its KPI report as an operating reference or as permission to skip the next threshold-or-calibration follow-up
 - do not treat `B-mixed-partial` or any other non-binding vocabulary as an eligible first-boundary rule
 - do not compare future Tier B reduced-risk outputs head-to-head with Tier A without separate reporting lanes
 - do not let durable conclusions live only in branch notes or scratch files

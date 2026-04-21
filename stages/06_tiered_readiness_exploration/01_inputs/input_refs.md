@@ -11,6 +11,7 @@
 
 ## Carry-Forward Evidence
 
+- `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
 - `docs/decisions/2026-04-21_stage06_first_tier_b_charter_adopted.md`
 - `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
 - `docs/decisions/2026-04-20_stage06_first_readiness_boundary.md`
@@ -37,10 +38,15 @@
 - Stage 05 additive broader reinforcement parity report under `stages/05_exploration_kernel_freeze/03_reviews/report_fpmarkets_v2_runtime_broader_parity_0003.md`
 - Stage 05 broader fixture manifests under `stages/05_exploration_kernel_freeze/01_inputs/second_bound_runtime_broader_fixture_manifest_0002.json` and `stages/05_exploration_kernel_freeze/01_inputs/third_bound_runtime_broader_fixture_manifest_0003.json`
 - Stage 05 helper fixture manifest under `stages/05_exploration_kernel_freeze/01_inputs/first_bound_runtime_helper_fixture_manifest_0001.json`
+- Stage 06 local baseline-seed spec under `stages/06_tiered_readiness_exploration/01_inputs/stage06_v2_baseline_seed_local_spec.md`
 - dataset validity source under `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/row_validity_report.json`
 - Stage 06 row-level readiness labels under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet`
 - Stage 06 machine-readable scorecard summary under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_scorecard_fpmarkets_v2_tiered_readiness_0001.json`
 - Stage 06 first scorecard review report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tiered_readiness_0001.md`
+- Stage 06 baseline-seed manifest under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/baseline_seed_manifest_fpmarkets_v2_tier_b_offline_eval_0001.json`
+- Stage 06 baseline evaluation summary under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/baseline_evaluation_summary_fpmarkets_v2_tier_b_offline_eval_0001.json`
+- Stage 06 baseline calibration read under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/baseline_calibration_read_fpmarkets_v2_tier_b_offline_eval_0001.json`
+- Stage 06 Tier B offline evaluation report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_offline_evaluation_0001.md`
 
 ## Stage 06 Boundary Interface
 
@@ -63,6 +69,6 @@
 
 - no Stage 06-specific reduced-risk runtime family exists yet
 - the first Stage 06-specific reduced-risk experiment charter now exists under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`
-- the first charter fixes baseline-family reuse with separate calibration and separate `tier_b_exploration` reporting without changing the current strict Tier A runtime rule
+- the first charter now reads through `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`, which replaces baseline-family reuse with legacy non-inheritance plus a first `Tier A`-trained v2-native baseline seed
 - placeholder monthly weights are allowed only for offline Tier B exploration and not for promotion, simulated execution, or MT5-path expansion
-- the next missing durable artifact is the first Tier B offline evaluation pack or the first Tier B offline evaluation report
+- the next missing durable artifact is the first separate `threshold read (임계값 판독)` or `calibration fit (보정 적합)` follow-up for the v2-native baseline seed family

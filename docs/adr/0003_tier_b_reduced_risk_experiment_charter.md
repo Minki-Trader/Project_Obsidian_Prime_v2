@@ -3,7 +3,7 @@
 ## Status
 
 - `adr_id`: `0003`
-- `reviewed_on`: `2026-04-21`
+- `reviewed_on`: `2026-04-22`
 - `status`: `accepted`
 - `scope`: `Stage 06` first `Tier B (부분 준비)` `offline-only (오프라인 전용)` `experiment charter (실험 헌장)` only; no `reduced-risk runtime family (축소위험 런타임 계열)` is materialized
 
@@ -22,6 +22,12 @@
 - reuse the current `baseline model family (기준선 모델 계열)` and current `public input-contract surface (공용 입력 계약 표면)` as the first design hypothesis
 - do not copy current `Tier A` trained outputs, thresholds, or calibration unchanged onto `Tier B`
 - require `separate calibration (별도 보정)` or a separate `offline evaluation read (오프라인 평가 판독)` before any `Tier B` performance claim
+
+## Current Interpretation (현재 해석)
+
+- the historical `baseline-family reuse (기준선 계열 재사용)` hypothesis is now superseded by `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
+- current Stage 06 truth now uses a first `v2-native baseline seed (v2 고유 기준선 시드)` trained on `Tier A (엄격 준비)` rows only while keeping the same `public input-contract surface (공용 입력 계약 표면)` and separate `reporting lanes (보고 레인)`
+- no legacy `model (모델)`, `bundle (번들)`, `threshold (임계값)`, or `calibration (보정)` artifact is inherited as the active Stage 06 default
 
 ## Allowed Changes
 
@@ -54,12 +60,13 @@
 
 ## Next Durable Outputs
 
-- the first `Tier B offline evaluation pack (Tier B 오프라인 평가 팩)` or `report (평가 보고서)`
-- the first separate `calibration (보정)` or `threshold read (임계값 판독)` for the reused baseline family on `Tier B` rows
+- the first `Tier B offline evaluation report (Tier B 오프라인 평가 보고서)` is now materialized under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_offline_evaluation_0001.md`
+- the next missing durable output is the first separate `threshold read (임계값 판독)` or `calibration fit (보정 적합)` follow-up for the v2-native baseline seed family
 
 ## Related Docs
 
 - `docs/policies/tiered_readiness_exploration.md`
 - `docs/decisions/2026-04-20_stage06_first_readiness_boundary.md`
 - `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
+- `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
 - `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tiered_readiness_0001.md`
