@@ -2,6 +2,7 @@
 
 ## 2026-04-22
 
+- added a draft-only Stage 06 anchor note plus `review_index` routing for the current `Tier B reduced-context model` preference so later sessions can resume from one shared Tier B model plus subtype tags without changing any official state document
 - materialized an additive Stage 06 `tier_b_followup_pack_0001` with separate `Tier B calibration fit`, coarse `threshold / exposure / sizing` sensitivity, robustness segmentation, placeholder-weight verdict, and draft-only `Stage 07` design/readout documents without reflecting an official stage transition
 - added a Stage 06 local follow-up-pack spec plus a dedicated follow-up materializer and real-data tests for the calibration, control, robustness, and weight-verdict surfaces
 - added new Stage 06 registry rows for the follow-up-pack manifest, four machine-readable summaries, four evaluation reports, and two draft-only handoff documents while keeping the official active-stage truth unchanged in this pass
