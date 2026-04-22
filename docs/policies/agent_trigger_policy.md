@@ -21,6 +21,13 @@ Canonical re-entry order and truth precedence live in `docs/policies/reentry_ord
 - use the truth precedence defined in `docs/policies/reentry_order.md`
 - this policy may refine skill routing but does not override that precedence
 
+## README State Hygiene
+
+- treat `README.md` as an orientation entrypoint, not as the authoritative live-state source
+- keep mutable current-state facts such as `active_stage`, stage closure status, current branch truth, and current priorities in `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, the active stage `selection_status.md`, and durable decision memos
+- if `README.md` still contains mutable current-state wording, the same pass that changes that meaning must either sync those lines or replace them with pointers to the authoritative current-truth docs
+- prefer removing volatile status snapshots from `README.md` over maintaining a second state ledger there
+
 ## Session Mode Contract
 
 Every working turn should first fit one primary session mode:
@@ -81,6 +88,7 @@ Required effect:
 - downgrade claims when the evidence state is still planning or pending
 - distinguish `planning scaffold`, `materialized evidence`, `runtime parity closure`, and `exploration-ready` explicitly
 - mark legacy findings as `prior evidence only` unless a v2 artifact closes the same question
+- if an overview document such as `README.md` contains mutable live-state wording, either sync it in the same pass or rewrite it so it points at the authoritative current-truth docs instead
 
 ### `obsidian-task-packet`
 
@@ -110,6 +118,7 @@ Required effect:
 
 - follow the canonical same-pass sync list defined in this policy
 - never close a stage by implying later-stage evidence is already complete
+- if `README.md` carries mutable stage or closure wording, sync or neutralize it in the same pass so it does not become a competing stale state source
 
 ### `obsidian-publish-merge`
 
@@ -144,6 +153,7 @@ Required same-pass files:
 - `docs/decisions/*.md` when the change is durable
 - `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
 - `docs/workspace/changelog.md`
+- `README.md` when it still contains mutable current-state language that the same pass would otherwise leave stale
 
 ## Always-On Claim Guardrails
 

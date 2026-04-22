@@ -38,6 +38,7 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 3. If a closure claim is made, name the backing artifact, report, or decision memo.
 4. If legacy evidence is referenced, mark it `prior evidence only`.
 5. If local-only artifacts are relied upon, ensure their identity is represented in `docs/registers/artifact_registry.csv` before describing them as reusable.
+6. Do not let `README.md` or another overview doc carry mutable live-state claims unless they are synchronized in the same pass; prefer pointers to the authoritative current-truth docs.
 
 ## Project-Specific Guardrails
 

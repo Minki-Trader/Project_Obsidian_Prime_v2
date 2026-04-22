@@ -22,6 +22,7 @@ Update in the same pass:
 - `docs/decisions/*.md` when the transition is durable
 - `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
 - `docs/workspace/changelog.md`
+- `README.md` when it still contains mutable stage, closure, or current-mode wording that this transition would otherwise leave stale
 
 ## Transition Rules
 
@@ -34,6 +35,7 @@ Update in the same pass:
    - artifact identity closure
 4. Keep `active_stage` aligned everywhere after the transition.
 5. Derive current and next stage names from `docs/workspace/workspace_state.yaml`, decision memos, and stage docs; do not hard-code the active stage name in this skill.
+6. Prefer replacing volatile `README.md` status snapshots with pointers to the authoritative current-truth docs instead of maintaining a second live-state ledger there.
 
 ## Validation
 
