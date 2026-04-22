@@ -39,6 +39,7 @@
 - Stage 05 broader fixture manifests under `stages/05_exploration_kernel_freeze/01_inputs/second_bound_runtime_broader_fixture_manifest_0002.json` and `stages/05_exploration_kernel_freeze/01_inputs/third_bound_runtime_broader_fixture_manifest_0003.json`
 - Stage 05 helper fixture manifest under `stages/05_exploration_kernel_freeze/01_inputs/first_bound_runtime_helper_fixture_manifest_0001.json`
 - Stage 06 local baseline-seed spec under `stages/06_tiered_readiness_exploration/01_inputs/stage06_v2_baseline_seed_local_spec.md`
+- Stage 06 local follow-up-pack spec under `stages/06_tiered_readiness_exploration/01_inputs/stage06_v2_followup_pack_local_spec.md`
 - dataset validity source under `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/row_validity_report.json`
 - Stage 06 row-level readiness labels under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet`
 - Stage 06 machine-readable scorecard summary under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_scorecard_fpmarkets_v2_tiered_readiness_0001.json`
@@ -47,6 +48,17 @@
 - Stage 06 baseline evaluation summary under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/baseline_evaluation_summary_fpmarkets_v2_tier_b_offline_eval_0001.json`
 - Stage 06 baseline calibration read under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/baseline_calibration_read_fpmarkets_v2_tier_b_offline_eval_0001.json`
 - Stage 06 Tier B offline evaluation report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_offline_evaluation_0001.md`
+- Stage 06 follow-up-pack manifest under `stages/06_tiered_readiness_exploration/02_runs/tier_b_followup_pack_0001/followup_pack_manifest_fpmarkets_v2_tier_b_followup_pack_0001.json`
+- Stage 06 calibration-fit summary under `stages/06_tiered_readiness_exploration/02_runs/tier_b_followup_pack_0001/tier_b_calibration_fit_summary_fpmarkets_v2_tier_b_followup_pack_0001.json`
+- Stage 06 control-sensitivity summary under `stages/06_tiered_readiness_exploration/02_runs/tier_b_followup_pack_0001/tier_b_control_sensitivity_summary_fpmarkets_v2_tier_b_followup_pack_0001.json`
+- Stage 06 robustness summary under `stages/06_tiered_readiness_exploration/02_runs/tier_b_followup_pack_0001/tier_b_robustness_summary_fpmarkets_v2_tier_b_followup_pack_0001.json`
+- Stage 06 weight-verdict summary under `stages/06_tiered_readiness_exploration/02_runs/tier_b_followup_pack_0001/tier_b_weight_verdict_summary_fpmarkets_v2_tier_b_followup_pack_0001.json`
+- Stage 06 calibration-fit report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_calibration_fit_0001.md`
+- Stage 06 control-sensitivity report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_control_sensitivity_0001.md`
+- Stage 06 robustness report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_robustness_0001.md`
+- Stage 06 weight-verdict report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_weight_verdict_0001.md`
+- Stage 07 alpha design draft under `stages/06_tiered_readiness_exploration/03_reviews/stage07_alpha_design_draft_0001.md`
+- Stage 06 close / Stage 07 open readout draft under `stages/06_tiered_readiness_exploration/03_reviews/stage06_close_stage07_open_readout_draft_0001.md`
 
 ## Stage 06 Boundary Interface
 
@@ -70,5 +82,6 @@
 - no Stage 06-specific reduced-risk runtime family exists yet
 - the first Stage 06-specific reduced-risk experiment charter now exists under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`
 - the first charter now reads through `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`, which replaces baseline-family reuse with legacy non-inheritance plus a first `Tier A`-trained v2-native baseline seed
+- the additive follow-up pack now exists, but the official decision reflection that would update `selection_status.md`, `workspace_state.yaml`, or `current_working_state.md` does not exist yet
 - placeholder monthly weights are allowed only for offline Tier B exploration and not for promotion, simulated execution, or MT5-path expansion
-- the next missing durable artifact is the first separate `threshold read (임계값 판독)` or `calibration fit (보정 적합)` follow-up for the v2-native baseline seed family
+- the next missing official artifact is the decision-only read that says whether the additive follow-up pack is enough to close Stage 06 or open Stage 07

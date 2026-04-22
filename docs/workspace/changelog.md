@@ -2,6 +2,9 @@
 
 ## 2026-04-22
 
+- materialized an additive Stage 06 `tier_b_followup_pack_0001` with separate `Tier B calibration fit`, coarse `threshold / exposure / sizing` sensitivity, robustness segmentation, placeholder-weight verdict, and draft-only `Stage 07` design/readout documents without reflecting an official stage transition
+- added a Stage 06 local follow-up-pack spec plus a dedicated follow-up materializer and real-data tests for the calibration, control, robustness, and weight-verdict surfaces
+- added new Stage 06 registry rows for the follow-up-pack manifest, four machine-readable summaries, four evaluation reports, and two draft-only handoff documents while keeping the official active-stage truth unchanged in this pass
 - replaced the Stage 06 `baseline-family reuse` working hypothesis with `legacy non-inheritance` plus a first `Tier A`-trained `v2-native baseline seed`, then materialized the first `Tier B offline evaluation report` and `calibration read` without changing the strict Tier A runtime rule
 - added a Stage 06 local baseline-seed spec, a dedicated `Gaussian Naive Bayes` materializer, and real-data tests for the first `tier_b_offline_eval_0001` artifact family
 - added five new Stage 06 registry rows for the baseline-seed manifest, probability table, evaluation summary, calibration read, and report while keeping `approved_for=not_applicable` and leaving runtime-family or promotion claims closed
