@@ -11,6 +11,7 @@
 
 ## Carry-Forward Evidence
 
+- `docs/decisions/2026-04-22_stage06_close_and_stage07_open.md`
 - `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
 - `docs/decisions/2026-04-21_stage06_first_tier_b_charter_adopted.md`
 - `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
@@ -40,6 +41,7 @@
 - Stage 05 helper fixture manifest under `stages/05_exploration_kernel_freeze/01_inputs/first_bound_runtime_helper_fixture_manifest_0001.json`
 - Stage 06 local baseline-seed spec under `stages/06_tiered_readiness_exploration/01_inputs/stage06_v2_baseline_seed_local_spec.md`
 - Stage 06 local follow-up-pack spec under `stages/06_tiered_readiness_exploration/01_inputs/stage06_v2_followup_pack_local_spec.md`
+- Stage 06 local reduced-context spec under `stages/06_tiered_readiness_exploration/01_inputs/stage06_tier_b_reduced_context_local_spec.md`
 - dataset validity source under `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01/row_validity_report.json`
 - Stage 06 row-level readiness labels under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet`
 - Stage 06 machine-readable scorecard summary under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_scorecard_fpmarkets_v2_tiered_readiness_0001.json`
@@ -57,8 +59,19 @@
 - Stage 06 control-sensitivity report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_control_sensitivity_0001.md`
 - Stage 06 robustness report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_robustness_0001.md`
 - Stage 06 weight-verdict report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_weight_verdict_0001.md`
+- Stage 06 reduced-context manifest under `stages/06_tiered_readiness_exploration/02_runs/tier_b_reduced_context_0001/reduced_context_manifest_fpmarkets_v2_tier_b_reduced_context_0001.json`
+- Stage 06 reduced-context probability table under `stages/06_tiered_readiness_exploration/02_runs/tier_b_reduced_context_0001/reduced_context_probability_table_fpmarkets_v2_tier_b_reduced_context_0001.parquet`
+- Stage 06 reduced-context evaluation summary under `stages/06_tiered_readiness_exploration/02_runs/tier_b_reduced_context_0001/reduced_context_evaluation_summary_fpmarkets_v2_tier_b_reduced_context_0001.json`
+- Stage 06 reduced-context calibration read under `stages/06_tiered_readiness_exploration/02_runs/tier_b_reduced_context_0001/reduced_context_calibration_read_fpmarkets_v2_tier_b_reduced_context_0001.json`
+- Stage 06 reduced-context report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_reduced_context_0001.md`
 - Stage 07 alpha design draft under `stages/06_tiered_readiness_exploration/03_reviews/stage07_alpha_design_draft_0001.md`
 - Stage 06 close / Stage 07 open readout draft under `stages/06_tiered_readiness_exploration/03_reviews/stage06_close_stage07_open_readout_draft_0001.md`
+
+## Draft-Only Planning Inputs
+
+- Stage 06 reduced-context modeling anchor under `stages/06_tiered_readiness_exploration/03_reviews/note_fpmarkets_v2_tier_b_reduced_context_model_anchor_0001.md`
+- Stage 06 Tier B-safe feature schema draft under `stages/06_tiered_readiness_exploration/01_inputs/stage06_tier_b_safe_feature_schema_draft_0001.md`
+- both draft-only planning inputs remain `planning scaffold (계획 비계)` only and do not update `workspace_state.yaml`, `current_working_state.md`, or the active `selection_status.md`
 
 ## Stage 06 Boundary Interface
 
@@ -82,6 +95,7 @@
 - no Stage 06-specific reduced-risk runtime family exists yet
 - the first Stage 06-specific reduced-risk experiment charter now exists under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`
 - the first charter now reads through `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`, which replaces baseline-family reuse with legacy non-inheritance plus a first `Tier A`-trained v2-native baseline seed
-- the additive follow-up pack now exists, but the official decision reflection that would update `selection_status.md`, `workspace_state.yaml`, or `current_working_state.md` does not exist yet
+- the additive follow-up pack and reduced-context model are now reflected into the official Stage 06 close and Stage 07 open decision
+- the first shared `Tier B reduced-context model` now exists on the `keep=42` active surface, and no optional `macro-aware` variant is required for the official Stage 07 opening
 - placeholder monthly weights are allowed only for offline Tier B exploration and not for promotion, simulated execution, or MT5-path expansion
-- the next missing official artifact is the decision-only read that says whether the additive follow-up pack is enough to close Stage 06 or open Stage 07
+- the next missing downstream artifact is the first bounded Stage 07 alpha-search pack across the Tier A main lane and the separate Tier B offline-only lane

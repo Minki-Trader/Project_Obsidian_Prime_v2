@@ -2,6 +2,9 @@
 
 ## 2026-04-22
 
+- closed `06_tiered_readiness_exploration` and opened `07_alpha_search` after syncing the additive follow-up pack plus the first shared keep42 `Tier B reduced-context model (Tier B 축약 문맥 모델)` into the official read while keeping the strict `Tier A` runtime rule unchanged and the separate `Tier B` lane `offline-only (오프라인 전용)`
+- materialized the first shared Stage 06 `Tier B reduced-context model` on a fixed `keep=42` feature surface with a separate evaluation summary calibration read and report; the current Tier B holdout `log_loss` improved from `1.963620` on the full baseline to `1.503578` while all meaning stayed offline-only
+- added a draft-only Stage 06 `Tier B-safe feature schema` so the first shared reduced-context model can start from a fixed keep=42, conditional=6, drop=10 surface without changing any official state document
 - added a draft-only Stage 06 anchor note plus `review_index` routing for the current `Tier B reduced-context model` preference so later sessions can resume from one shared Tier B model plus subtype tags without changing any official state document
 - materialized an additive Stage 06 `tier_b_followup_pack_0001` with separate `Tier B calibration fit`, coarse `threshold / exposure / sizing` sensitivity, robustness segmentation, placeholder-weight verdict, and draft-only `Stage 07` design/readout documents without reflecting an official stage transition
 - added a Stage 06 local follow-up-pack spec plus a dedicated follow-up materializer and real-data tests for the calibration, control, robustness, and weight-verdict surfaces
