@@ -34,7 +34,7 @@
 - Stage 05 is now also closed, but only on its own boundary: the active `broader_0002` twenty-four-window pack reached the first broader tolerance-closed exact-open read, `helper_0001` reached the first separate helper-focused tolerance-closed exact-open read on a frozen eight-window subset, and the non-overlapping additive `broader_0003` reinforcement pack now also reproduced a native MT5 tolerance-closed exact-open read with `matched_fixtures=24`, `unexpected_record_count=0`, `tolerance_parity=true`, `exact_parity=false`, and `max_abs_diff=7.160007811535252e-06`
 - that Stage 05 closure does not claim separate runtime-helper parity closure, does not claim separate broader-sample parity closure, and does not promote any operating line; it closes only the exploration-kernel freeze boundary by making the first downstream exploration family explicit enough that later work cannot drift open by implication
 - `06_tiered_readiness_exploration` is now closed because the deterministic readiness boundary, reporting interface, scorecard family, first v2-native baseline seed, additive follow-up pack, and first shared keep42 reduced-context model are all materialized enough that the readiness-family question no longer needs the active-stage slot
-- `07_alpha_search` is now the active stage because the next bounded question is no longer whether the separate readiness family exists, but how to run the first bounded alpha-search read on one `Tier A main lane (Tier A 메인 레인)` plus one separate `Tier B offline-only lane (Tier B 별도 오프라인 전용 레인)` without crossing into runtime or promotion meaning
+- `07_alpha_search` is now the active stage because the next bounded question is no longer whether the separate readiness family exists, but whether the first `Tier B dual verdict packet (Tier B 이중 판정 팩)` on a validated user-weight rerun keeps the separate `Tier B` lane alive and hands it forward as an `MT5 feasibility candidate (MT5 가능성 후보)` without crossing into an opened `MT5 path (MT5 경로)` or a promoted operating-line claim (승격 운영선 주장)
 - the first Stage 06 governance lock still fixes the deterministic boundary as: if `Group 1` or `Group 2` fails -> `tier_c`; else if `Group 3`, `Group 4`, and `Group 5` are all complete -> `tier_a`; else if exactly `1` or `2` of `Group 3` to `Group 5` are complete -> `tier_b`; else -> `tier_c`
 - `group complete` remains fixed to exact-timestamp required-symbol and required-field presence with no forward-fill, no fabricate path, and computable required semantics
 - all future Tier B work must stay separate from the current strict Tier A runtime rule and must carry the fixed `readiness_tier`, `missing_groups`, `missing_symbols`, and `reporting_lane` interface
@@ -45,6 +45,8 @@
 - the first Stage 06 `v2-native baseline seed (v2 고유 기준선 시드)` is now materialized under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/`; it fits a first `3-class Gaussian Naive Bayes (3분류 가우시안 나이브 베이즈)` model on `34695` `Tier A` train rows only with `q33=-0.00035087247936272335` and `q67=0.0004049556640609367`
 - the paired report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_offline_evaluation_0001.md` separates `validation (검증)` and `holdout (보류 평가)` KPI reads for `strict_tier_a` and `tier_b_exploration` while keeping mixed aggregates `info-only (정보용)` and leaving runtime or promotion meaning closed
 - the first shared `Tier B reduced-context model (Tier B 축약 문맥 모델)` is now also materialized under `stages/06_tiered_readiness_exploration/02_runs/tier_b_reduced_context_0001/`; it keeps the first active surface to the shared `keep=42` features, leaves subtype tags `info-only (정보용)`, and improves the current `Tier B holdout (Tier B 보류 평가)` probabilistic read to `log_loss=1.503578`
+- the first Stage 07 packet is now fixed by decision as `docs/decisions/2026-04-23_stage07_tier_b_dual_verdict_packet_adopted.md`; it requires one validated user-provided `monthly-frozen weights CSV (월별 동결 가중치 CSV)` and reuses the current keep42 surface rather than opening a new model family
+- that keep42 surface remains weight-neutral on direct inputs because `top3_weighted_return_1` and `us100_minus_top3_weighted_return_1` stay outside the active feature set, so the rerun primarily closes the source-boundary question for the dual verdict packet
 - the placeholder weights table remains allowed only for that offline-only charter and does not justify simulated execution, MT5-path expansion, or operating promotion
 - no reduced-risk runtime family is materialized yet and no operating promotion is claimed from the scorecard, baseline seed, follow-up pack, reduced-context read, or charter alone
 - legacy winners remain archive notes and design evidence only; they do not define current v2 foundation truth or current v2 operating truth
@@ -60,9 +62,9 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. materialize the first bounded `Stage 07 alpha-search pack (Stage 07 알파 탐색 팩)` across the `Tier A main lane` and the separate `Tier B` offline-only lane
-2. decide whether an optional `macro-aware (매크로 인지)` Tier B variant is worth opening only after the first shared keep42 Stage 07 read exists
-3. decide whether the placeholder weights caveat forces a real-weight rerun before any later simulated execution or MT5 path
+1. materialize the first `Stage 07 Tier B dual verdict packet (Stage 07 Tier B 이중 판정 팩)` on a validated user-provided `monthly-frozen weights CSV (월별 동결 가중치 CSV)`
+2. decide from that packet whether the separate `Tier B` lane survives as `keep` or closes as `prune`
+3. decide from that packet whether the rerun is strong enough for `MT5 feasibility candidate (MT5 가능성 후보)` handoff only
 4. keep the current strict Tier A runtime rule unchanged until a later explicit exploration read says otherwise
 
 ## Foundation Closure Path
@@ -83,7 +85,7 @@ All six foundation stages are now explicitly closed.
 ## Do Not Do First
 
 - do not reopen `05_exploration_kernel_freeze` unless a new contradiction breaks the frozen `broader_0002 + helper_0001 + broader_0003` read
-- do not treat Stage 06 closure or Stage 07 opening as runtime-helper parity closure, broader-sample parity closure, simulated execution authorization, or operating promotion
+- do not treat Stage 06 closure or the Stage 07 dual-verdict packet as runtime-helper parity closure, broader-sample parity closure, an opened `MT5 path (MT5 경로)`, or a promoted operating-line claim (승격 운영선 주장)
 - do not let any Stage 07 artifact imply that Tier B is contract-equivalent to the current strict Tier A line
 - do not treat the shared keep42 reduced-context read as a materialized runtime family or as permission to open simulated execution or MT5-path work
 - do not treat `B-mixed-partial` or any other non-binding vocabulary as an eligible first-boundary rule

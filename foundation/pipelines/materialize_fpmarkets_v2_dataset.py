@@ -20,6 +20,7 @@ FEATURE_CONTRACT_VERSION = "docs/contracts/feature_calculation_spec_fpmarkets_v2
 PARSER_CONTRACT_VERSION = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-16"
 WEIGHTS_VERSION = "foundation/config/top3_monthly_weights_fpmarkets_v2.csv@2026-04-16 (placeholder_equal_weight)"
 PARSER_VERSION = "fpmarkets_v2_stage01_materializer_v1"
+DEFAULT_WEIGHTS_PATH = Path("foundation/config/top3_monthly_weights_fpmarkets_v2.csv")
 
 FEATURE_ORDER = [
     "log_return_1",
@@ -386,8 +387,9 @@ def compute_session_features(frame: pd.DataFrame) -> dict[str, pd.Series]:
     }
 
 
-def load_weights() -> pd.DataFrame:
-    weights = pd.read_csv("foundation/config/top3_monthly_weights_fpmarkets_v2.csv")
+def load_weights(weights_path: Path | None = None) -> pd.DataFrame:
+    source_path = DEFAULT_WEIGHTS_PATH if weights_path is None else Path(weights_path)
+    weights = pd.read_csv(source_path)
     weights["month"] = weights["month"].astype(str)
     return weights
 
@@ -415,6 +417,8 @@ def build_proxy_feature_source(source: pd.DataFrame, prefix: str) -> pd.DataFram
 def attach_external_series(
     base: pd.DataFrame,
     external_frames: dict[str, pd.DataFrame],
+    *,
+    weights_path: Path | None = None,
 ) -> tuple[pd.DataFrame, dict[str, int], list[str]]:
     merged = base.copy()
     alignment_missing_counts: dict[str, int] = {}
@@ -474,7 +478,7 @@ def attach_external_series(
     merged["mega8_pos_breadth_1"] = (merged[basket_return_1_cols] > 0).mean(axis=1)
     merged["mega8_dispersion_5"] = merged[basket_return_5_cols].std(axis=1, ddof=0)
 
-    weights = load_weights()
+    weights = load_weights(weights_path)
     merged["month"] = merged["timestamp"].dt.strftime("%Y-%m")
     merged = merged.merge(weights, on="month", how="left")
     merged["top3_weighted_return_1"] = (
@@ -572,11 +576,27 @@ def compute_main_features(base: pd.DataFrame) -> pd.DataFrame:
     return frame
 
 
-def build_feature_frame(raw_root: Path) -> tuple[pd.DataFrame, dict[str, object]]:
+def build_feature_frame(
+    raw_root: Path,
+    *,
+    weights_path: Path | None = None,
+    weights_version_label: str | None = None,
+) -> tuple[pd.DataFrame, dict[str, object]]:
+    weights_version = (
+        WEIGHTS_VERSION
+        if weights_path is None and weights_version_label is None
+        else weights_version_label
+        if weights_version_label is not None
+        else f"{Path(weights_path).as_posix()} (custom_weight_source)"
+    )
     frames = {binding.contract_symbol: load_raw_symbol(raw_root, binding) for binding in SYMBOL_BINDINGS}
     base = frames["US100"].copy()
     base = compute_main_features(base)
-    base, alignment_missing_counts, exact_match_columns = attach_external_series(base, frames)
+    base, alignment_missing_counts, exact_match_columns = attach_external_series(
+        base,
+        frames,
+        weights_path=weights_path,
+    )
 
     base["vix_change_1"] = base["vix_change_1"]
     base["vix_zscore_20"] = base["vix_zscore_20"]
@@ -621,6 +641,7 @@ def build_feature_frame(raw_root: Path) -> tuple[pd.DataFrame, dict[str, object]
         "raw_rows": int(len(base)),
         "valid_rows": int(base["valid_row"].sum()),
         "invalid_rows": int((~base["valid_row"]).sum()),
+        "weights_version": weights_version,
         "invalid_reason_breakdown": {
             reason_code: int(mask.sum()) for reason_code, mask in invalid_reason_flags.items()
         },
@@ -659,7 +680,7 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
         "invalid_rows": counts["invalid_rows"],
         "invalid_reason_breakdown": invalid_reason_breakdown,
         "alignment_missing_counts": counts["alignment_missing_counts"],
-        "weights_version": WEIGHTS_VERSION,
+        "weights_version": counts["weights_version"],
         "raw_source_time_binding_assumption": "time_close_unix and time_open_unix interpreted as UTC epoch seconds from MetaTrader5.copy_rates_range",
     }
     validity_path.write_text(json.dumps(row_validity_payload, indent=2), encoding="utf-8")
@@ -675,7 +696,7 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
         "practical_modeling_start": PRACTICAL_MODELING_START_UTC.isoformat(),
         "warmup_bars": WARMUP_BARS,
         "preload_policy": "300 bars minimum; practical modeling start remains 2022-09-01",
-        "weights_version": WEIGHTS_VERSION,
+        "weights_version": counts["weights_version"],
         "feature_contract_version": FEATURE_CONTRACT_VERSION,
         "parser_contract_version": PARSER_CONTRACT_VERSION,
         "raw_rows": counts["raw_rows"],
@@ -708,7 +729,7 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
             {
                 "dataset_id": DATASET_ID,
                 "alignment_missing_counts": counts["alignment_missing_counts"],
-                "weights_version": WEIGHTS_VERSION,
+                "weights_version": counts["weights_version"],
             },
             indent=2,
         ),
