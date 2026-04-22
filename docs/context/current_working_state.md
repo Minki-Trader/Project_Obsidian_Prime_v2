@@ -1,10 +1,10 @@
 ﻿# Current Working State
 
-- updated_on: `2026-04-22`
+- updated_on: `2026-04-23`
 - workspace: `Project_Obsidian_Prime_v2`
 - project_mode: `foundation_restart`
 - active_stage: `07_alpha_search`
-- active_branch: `codex/stage06-tierb-feature-schema`
+- active_branch: `main`
 
 ## Read This First
 

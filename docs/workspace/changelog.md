@@ -1,5 +1,9 @@
 ﻿# Changelog
 
+## 2026-04-23
+
+- synchronized the published Stage 07 workspace truth back to `main` after merging `codex/stage06-tierb-feature-schema` so the active-branch read no longer lags the merged repository state
+
 ## 2026-04-22
 
 - closed `06_tiered_readiness_exploration` and opened `07_alpha_search` after syncing the additive follow-up pack plus the first shared keep42 `Tier B reduced-context model (Tier B 축약 문맥 모델)` into the official read while keeping the strict `Tier A` runtime rule unchanged and the separate `Tier B` lane `offline-only (오프라인 전용)`
