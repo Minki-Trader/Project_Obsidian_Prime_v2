@@ -54,6 +54,11 @@ def parse_args() -> argparse.Namespace:
         default=date.today().isoformat(),
         help="Date stamp to write into the rendered report.",
     )
+    parser.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional path to write the structured step summary JSON.",
+    )
     return parser.parse_args()
 
 
@@ -103,17 +108,49 @@ def collect_dominant_drifts(comparison: dict[str, Any]) -> str:
     return "|".join(f"{name}={abs_diff:.6g}" for name, abs_diff in ordered)
 
 
-def classify_scope(comparison: dict[str, Any]) -> str:
+def stage05_lane(mt5_request: dict[str, Any], comparison: dict[str, Any]) -> str:
+    fixture_set_id = str(
+        comparison.get("identity", {}).get("expected", {}).get("fixture_set_id")
+        or mt5_request.get("fixture_set_id")
+        or ""
+    )
+    if "runtime_helper" in fixture_set_id:
+        return "runtime_helper"
+    if "runtime_broader_0003" in fixture_set_id:
+        return "broader_reinforcement"
+    if "runtime_broader" in fixture_set_id:
+        return "broader"
+    return "generic"
+
+
+def classify_scope(comparison: dict[str, Any], mt5_request: dict[str, Any] | None = None) -> str:
     aggregate = comparison["aggregate_results"]
     matching = comparison["matching"]
+    lane = stage05_lane(mt5_request or {}, comparison)
     if matching["missing_fixture_ids"] or matching["unexpected_record_count"] > 0:
         return "first_mt5_snapshot_materialized_but_comparison_incomplete"
     if aggregate["exact_parity"]:
+        if lane == "runtime_helper":
+            return "first_helper_focused_pack_exact_match"
+        if lane == "broader_reinforcement":
+            return "additional_broader_reinforcement_pack_exact_match"
         return "first_evaluated_pack_exact_match"
     if aggregate["tolerance_parity"] and comparison["identity"]["machine_readable_identity_trace"]["traceable"]:
+        if lane == "runtime_helper":
+            return "first_helper_focused_pack_tolerance_closed_identity_trace_materialized_exact_open"
+        if lane == "broader_reinforcement":
+            return "additional_broader_reinforcement_pack_tolerance_closed_identity_trace_materialized_exact_open"
         return "first_evaluated_pack_tolerance_closed_identity_trace_materialized_exact_open"
     if aggregate["tolerance_parity"]:
+        if lane == "runtime_helper":
+            return "first_helper_focused_pack_tolerance_match_exact_open"
+        if lane == "broader_reinforcement":
+            return "additional_broader_reinforcement_pack_tolerance_match_exact_open"
         return "first_evaluated_pack_tolerance_match_exact_open"
+    if lane == "runtime_helper":
+        return "first_helper_focused_pack_mismatch_open"
+    if lane == "broader_reinforcement":
+        return "additional_broader_reinforcement_pack_mismatch_open"
     return "first_evaluated_pack_mismatch_open"
 
 
@@ -196,8 +233,17 @@ def negative_fixture_summary(
     return "; ".join(parts)
 
 
-def stage_specific_what_this_does_not_prove(stage_name: str) -> str:
+def stage_specific_what_this_does_not_prove(
+    stage_name: str,
+    mt5_request: dict[str, Any],
+    comparison: dict[str, Any],
+) -> str:
     if stage_name == "05_exploration_kernel_freeze":
+        if stage05_lane(mt5_request, comparison) == "runtime_helper":
+            return (
+                "no runtime-helper parity closure yet, no separate broader-sample reinforcement closure read, "
+                "no Tier B or Tier C readiness claim, and no operating promotion"
+            )
         return (
             "no runtime-helper parity closure, no separate broader-sample parity closure read, "
             "no Tier B or Tier C readiness claim, and no operating promotion"
@@ -207,7 +253,7 @@ def stage_specific_what_this_does_not_prove(stage_name: str) -> str:
     return "no runtime-helper parity closure and no operating promotion"
 
 
-def what_remains_open(stage_name: str, comparison: dict[str, Any]) -> str:
+def what_remains_open(stage_name: str, comparison: dict[str, Any], mt5_request: dict[str, Any]) -> str:
     aggregate = comparison["aggregate_results"]
     matching = comparison["matching"]
     identity_trace = comparison["identity"]["machine_readable_identity_trace"]
@@ -217,6 +263,28 @@ def what_remains_open(stage_name: str, comparison: dict[str, Any]) -> str:
         return "remove or isolate the unexpected MT5 rows, then rerun the same frozen pack before any new claim is made"
     if aggregate["tolerance_parity"]:
         if stage_name == "05_exploration_kernel_freeze":
+            lane = stage05_lane(mt5_request, comparison)
+            if lane == "runtime_helper":
+                if identity_trace["traceable"]:
+                    return (
+                        "an explicit Stage 05 helper-lane closure read, the ordered additional broader-sample coverage pass "
+                        "beyond the active broader_0002 pack, and any downstream exploration or operating promotion"
+                    )
+                return (
+                    "an explicit Stage 05 helper-lane closure read, fully traceable MT5 identity fields across the helper-focused pack, "
+                    "the ordered additional broader-sample coverage pass beyond the active broader_0002 pack, and any downstream exploration or operating promotion"
+                )
+            if lane == "broader_reinforcement":
+                if identity_trace["traceable"]:
+                    return (
+                        "an explicit Stage 05 closure read that keeps broader_0002 as the first broader pack, "
+                        "helper_0001 as the first helper-focused pack, this broader reinforcement pass as additive evidence, "
+                        "and any downstream exploration or operating promotion"
+                    )
+                return (
+                    "an explicit Stage 05 closure read, fully traceable MT5 identity fields across the broader reinforcement pack, "
+                    "and any downstream exploration or operating promotion"
+                )
             if identity_trace["traceable"]:
                 return (
                     "runtime-helper parity, any explicit broader-sample closure read beyond this first broader evaluated pack, "
@@ -230,17 +298,48 @@ def what_remains_open(stage_name: str, comparison: dict[str, Any]) -> str:
             return "runtime-helper parity, broader-sample parity beyond the first five windows, and any downstream operating promotion"
         return "runtime-helper parity, fully traceable MT5 identity fields, broader-sample parity beyond the first five windows, and any downstream operating promotion"
     if stage_name == "05_exploration_kernel_freeze":
+        if stage05_lane(mt5_request, comparison) == "runtime_helper":
+            return (
+                "inspect the helper-focused pack mismatch, keep broader_0002 as the active broader read, "
+                "and rerun the same frozen helper subset before any later helper or broader follow-up claim"
+            )
+        if stage05_lane(mt5_request, comparison) == "broader_reinforcement":
+            return (
+                "inspect the broader reinforcement-pack mismatch, keep broader_0002 and helper_0001 as the current Stage 05 evidence, "
+                "and rerun the same frozen reinforcement pack before any Stage 05 closure claim"
+            )
         return "inspect the broader-pack mismatch, update the Stage 05 blocker read, and rerun the same frozen 24-window pack before opening any new lane"
     return "inspect the dominant drift features, re-check timestamp identity, and confirm whether the mismatch is localized or systemic before any closure claim"
 
 
-def next_sampling_plan(stage_name: str, comparison: dict[str, Any]) -> str:
+def next_sampling_plan(stage_name: str, comparison: dict[str, Any], mt5_request: dict[str, Any]) -> str:
     aggregate = comparison["aggregate_results"]
     if stage_name == "05_exploration_kernel_freeze":
+        lane = stage05_lane(mt5_request, comparison)
         if aggregate["tolerance_parity"]:
+            if lane == "runtime_helper":
+                return (
+                    "update the Stage 05 helper-lane read from this first helper-focused evaluated pack, "
+                    "keep broader_0002 as the active broader evidence, and run the ordered additional broader-sample coverage follow-up"
+                )
+            if lane == "broader_reinforcement":
+                return (
+                    "update the Stage 05 read from this broader reinforcement pack, keep broader_0002 plus helper_0001 as retained evidence, "
+                    "and evaluate whether the exploration boundary is now explicit enough for a same-pass Stage 05 closure read"
+                )
             return (
                 "update the Stage 05 read from this first broader evaluated pack, keep Stage 05 open, "
-                "and decide whether the next evidence is additional broader-sample coverage or a separate runtime-helper parity lane"
+                "and open the ordered runtime-helper parity lane before any additional broader-sample coverage follow-up"
+            )
+        if lane == "runtime_helper":
+            return (
+                "inspect the helper-focused pack mismatch, keep broader_0002 as the active broader evidence, "
+                "and rerun the same frozen helper subset before any later follow-up lane"
+            )
+        if lane == "broader_reinforcement":
+            return (
+                "inspect the broader reinforcement-pack mismatch, keep broader_0002 plus helper_0001 as retained evidence, "
+                "and rerun the same frozen reinforcement pack before any Stage 05 closure pass"
             )
         return (
             "inspect the broader-pack mismatch, update the Stage 05 mismatch-open read, "
@@ -255,14 +354,19 @@ def next_sampling_plan(stage_name: str, comparison: dict[str, Any]) -> str:
 
 
 def gate_before_closure(stage_name: str) -> str:
+    policy_anchor = (
+        "follow the canonical same-pass sync norm in docs/policies/agent_trigger_policy.md "
+        "(align workspace state + current working state + active-stage selection/review read, "
+        "add a durable decision memo when meaning changes, and update artifact registry rows when identity changes)"
+    )
     if stage_name == "05_exploration_kernel_freeze":
         return (
-            "Stage 05 state docs, review read, and registry rows must be updated in the same pass while keeping Stage 05 open; "
-            "do not blur this evaluated pack into runtime-helper parity, Tier B or Tier C readiness, or operating promotion"
+            f"{policy_anchor}; keep Stage 05 open for this evaluated pack and do not blur it into runtime-helper parity, "
+            "Tier B or Tier C readiness, or operating promotion"
         )
     if stage_name == "03_runtime_parity_closure":
-        return "Stage 03 selection docs and workspace state must be updated in the same pass before any Stage 03 closure claim is made from this evaluated pack"
-    return "the active stage read and registry must be updated in the same pass before any closure claim is made from this evaluated pack"
+        return f"{policy_anchor} before any Stage 03 closure claim is made from this evaluated pack"
+    return f"{policy_anchor} before any closure claim is made from this evaluated pack"
 
 
 def render_report(
@@ -301,7 +405,7 @@ def render_report(
 
 ## Scope
 
-- closure_scope: `{classify_scope(comparison)}`
+- closure_scope: `{classify_scope(comparison, mt5_request)}`
 - audited_window(s): `{windows_utc}`
 - audited_row_count: `{ready_rows} ready rows + {non_ready_rows} negative non-ready rows`
 
@@ -345,12 +449,12 @@ def render_report(
 ## Interpretation
 
 - likely_root_cause: `{likely_root_cause(comparison, ready_row_count=ready_rows)}`
-- what_this_does_not_prove: `{stage_specific_what_this_does_not_prove(stage_name)}`
-- what_remains_open: `{what_remains_open(stage_name, comparison)}`
+- what_this_does_not_prove: `{stage_specific_what_this_does_not_prove(stage_name, mt5_request, comparison)}`
+- what_remains_open: `{what_remains_open(stage_name, comparison, mt5_request)}`
 
 ## Required Follow-Up
 
-- next_sampling_plan: `{next_sampling_plan(stage_name, comparison)}`
+- next_sampling_plan: `{next_sampling_plan(stage_name, comparison, mt5_request)}`
 - gate_before_closure: `{gate_before_closure(stage_name)}`
 - owner: `Project_Obsidian_Prime_v2 workspace`
 """
@@ -393,19 +497,19 @@ def main() -> int:
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(rendered, encoding="utf-8")
 
-    print(
-        json.dumps(
-            {
-                "status": "ok",
-                "report_path": str(report_path.resolve()),
-                "stage_name": resolved_paths.stage_name,
-                "closure_scope": classify_scope(comparison),
-                "exact_parity": comparison["aggregate_results"]["exact_parity"],
-                "tolerance_parity": comparison["aggregate_results"]["tolerance_parity"],
-            },
-            indent=2,
-        )
-    )
+    step_summary = {
+        "status": "ok",
+        "report_path": str(report_path.resolve()),
+        "stage_name": resolved_paths.stage_name,
+        "closure_scope": classify_scope(comparison, mt5_request),
+        "exact_parity": comparison["aggregate_results"]["exact_parity"],
+        "tolerance_parity": comparison["aggregate_results"]["tolerance_parity"],
+    }
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(step_summary, indent=2), encoding="utf-8")
+    print(json.dumps(step_summary, indent=2))
     return 0
 
 
