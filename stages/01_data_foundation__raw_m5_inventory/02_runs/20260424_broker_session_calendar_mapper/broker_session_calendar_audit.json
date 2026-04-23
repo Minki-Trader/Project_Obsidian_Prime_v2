@@ -1,0 +1,368 @@
+{
+  "summary": {
+    "audit_version": "FPMARKETS_V2_BROKER_SESSION_CALENDAR_AUDIT_V1",
+    "generated_at_utc": "2026-04-23T16:45:26.811592Z",
+    "raw_root": "data/raw/mt5_bars/m5",
+    "broker_clock_timezone": "Europe/Athens",
+    "session_timezone": "America/New_York",
+    "symbols_checked": [
+      "US100",
+      "AAPL",
+      "MSFT",
+      "AMZN",
+      "AMD",
+      "GOOGL.xnas",
+      "META",
+      "NVDA",
+      "TSLA"
+    ],
+    "cash_session_days": 8370,
+    "full_cash_session_days": 7149,
+    "partial_cash_session_days": 1221,
+    "full_cash_session_ratio": 0.854122,
+    "status": "reviewed_mapper_ready",
+    "boundary": "This verifies the broker-clock to event-time mapper for session features. It does not claim model readiness, runtime authority, or operating promotion."
+  },
+  "symbols": [
+    {
+      "contract_symbol": "US100",
+      "broker_symbol": "US100",
+      "raw_rows": 261345,
+      "cash_session_rows": 73054,
+      "cash_session_days": 953,
+      "full_cash_session_days": 913,
+      "partial_cash_session_days": 40,
+      "full_cash_session_ratio": 0.958027,
+      "first_cash_close_clock_distribution": {
+        "09:35": 953
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 918,
+        "13:05": 13,
+        "13:00": 11,
+        "13:20": 5,
+        "13:15": 4,
+        "09:35": 1,
+        "12:00": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 913,
+        "43": 13,
+        "42": 11,
+        "46": 5,
+        "77": 4,
+        "45": 4,
+        "70": 1,
+        "1": 1,
+        "30": 1
+      }
+    },
+    {
+      "contract_symbol": "AAPL",
+      "broker_symbol": "AAPL.xnas",
+      "raw_rows": 71935,
+      "cash_session_rows": 71047,
+      "cash_session_days": 927,
+      "full_cash_session_days": 833,
+      "partial_cash_session_days": 94,
+      "full_cash_session_ratio": 0.898598,
+      "first_cash_close_clock_distribution": {
+        "09:35": 852,
+        "10:35": 69,
+        "11:35": 5,
+        "10:20": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 917,
+        "13:00": 5,
+        "13:05": 2,
+        "14:00": 1,
+        "15:45": 1,
+        "15:55": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 833,
+        "66": 70,
+        "77": 6,
+        "42": 5,
+        "54": 5,
+        "76": 3,
+        "43": 2,
+        "69": 1,
+        "53": 1,
+        "75": 1
+      }
+    },
+    {
+      "contract_symbol": "MSFT",
+      "broker_symbol": "MSFT.xnas",
+      "raw_rows": 71910,
+      "cash_session_rows": 71022,
+      "cash_session_days": 927,
+      "full_cash_session_days": 830,
+      "partial_cash_session_days": 97,
+      "full_cash_session_ratio": 0.895361,
+      "first_cash_close_clock_distribution": {
+        "09:35": 848,
+        "10:35": 70,
+        "11:35": 5,
+        "09:45": 1,
+        "09:40": 1,
+        "10:20": 1,
+        "10:30": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 917,
+        "13:00": 4,
+        "13:05": 3,
+        "14:00": 1,
+        "15:45": 1,
+        "15:55": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 830,
+        "66": 71,
+        "77": 6,
+        "54": 5,
+        "42": 4,
+        "76": 3,
+        "43": 3,
+        "75": 2,
+        "69": 1,
+        "53": 1,
+        "67": 1
+      }
+    },
+    {
+      "contract_symbol": "AMZN",
+      "broker_symbol": "AMZN.xnas",
+      "raw_rows": 71933,
+      "cash_session_rows": 71045,
+      "cash_session_days": 927,
+      "full_cash_session_days": 832,
+      "partial_cash_session_days": 95,
+      "full_cash_session_ratio": 0.897519,
+      "first_cash_close_clock_distribution": {
+        "09:35": 852,
+        "10:35": 69,
+        "11:35": 5,
+        "10:20": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 917,
+        "13:00": 4,
+        "13:05": 3,
+        "14:00": 1,
+        "15:45": 1,
+        "15:55": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 832,
+        "66": 70,
+        "77": 7,
+        "54": 5,
+        "42": 4,
+        "43": 3,
+        "76": 2,
+        "69": 1,
+        "53": 1,
+        "75": 1,
+        "74": 1
+      }
+    },
+    {
+      "contract_symbol": "AMD",
+      "broker_symbol": "AMD.xnas",
+      "raw_rows": 71932,
+      "cash_session_rows": 71044,
+      "cash_session_days": 927,
+      "full_cash_session_days": 832,
+      "partial_cash_session_days": 95,
+      "full_cash_session_ratio": 0.897519,
+      "first_cash_close_clock_distribution": {
+        "09:35": 851,
+        "10:35": 69,
+        "11:35": 5,
+        "09:45": 1,
+        "10:20": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 917,
+        "13:00": 4,
+        "13:05": 3,
+        "14:00": 1,
+        "15:45": 1,
+        "15:55": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 832,
+        "66": 70,
+        "77": 6,
+        "54": 5,
+        "42": 4,
+        "76": 3,
+        "43": 3,
+        "69": 1,
+        "53": 1,
+        "75": 1,
+        "74": 1
+      }
+    },
+    {
+      "contract_symbol": "GOOGL.xnas",
+      "broker_symbol": "GOOGL.xnas",
+      "raw_rows": 71917,
+      "cash_session_rows": 71029,
+      "cash_session_days": 927,
+      "full_cash_session_days": 832,
+      "partial_cash_session_days": 95,
+      "full_cash_session_ratio": 0.897519,
+      "first_cash_close_clock_distribution": {
+        "09:35": 850,
+        "10:35": 69,
+        "11:35": 5,
+        "10:30": 2,
+        "10:20": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 917,
+        "13:05": 4,
+        "13:00": 3,
+        "14:00": 1,
+        "15:45": 1,
+        "15:55": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 832,
+        "66": 70,
+        "77": 6,
+        "54": 5,
+        "43": 4,
+        "42": 3,
+        "76": 2,
+        "67": 2,
+        "69": 1,
+        "53": 1,
+        "75": 1
+      }
+    },
+    {
+      "contract_symbol": "META",
+      "broker_symbol": "META.xnas",
+      "raw_rows": 71916,
+      "cash_session_rows": 71028,
+      "cash_session_days": 927,
+      "full_cash_session_days": 832,
+      "partial_cash_session_days": 95,
+      "full_cash_session_ratio": 0.897519,
+      "first_cash_close_clock_distribution": {
+        "09:35": 850,
+        "10:35": 69,
+        "11:35": 5,
+        "10:20": 1,
+        "10:30": 1,
+        "10:15": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 917,
+        "13:00": 5,
+        "13:05": 2,
+        "14:00": 1,
+        "15:45": 1,
+        "15:55": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 832,
+        "66": 70,
+        "77": 5,
+        "42": 5,
+        "54": 5,
+        "75": 2,
+        "76": 2,
+        "43": 2,
+        "69": 1,
+        "53": 1,
+        "67": 1,
+        "70": 1
+      }
+    },
+    {
+      "contract_symbol": "NVDA",
+      "broker_symbol": "NVDA.xnas",
+      "raw_rows": 71046,
+      "cash_session_rows": 70192,
+      "cash_session_days": 928,
+      "full_cash_session_days": 412,
+      "partial_cash_session_days": 516,
+      "full_cash_session_ratio": 0.443966,
+      "first_cash_close_clock_distribution": {
+        "09:40": 432,
+        "09:35": 420,
+        "10:35": 36,
+        "10:40": 34,
+        "11:35": 5,
+        "10:00": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 488,
+        "15:55": 431,
+        "13:00": 5,
+        "13:05": 4
+      },
+      "cash_row_count_distribution": {
+        "76": 428,
+        "78": 412,
+        "66": 36,
+        "65": 34,
+        "54": 5,
+        "42": 4,
+        "43": 3,
+        "41": 2,
+        "72": 1,
+        "74": 1,
+        "70": 1,
+        "77": 1
+      }
+    },
+    {
+      "contract_symbol": "TSLA",
+      "broker_symbol": "TSLA.xnas",
+      "raw_rows": 71916,
+      "cash_session_rows": 71026,
+      "cash_session_days": 927,
+      "full_cash_session_days": 833,
+      "partial_cash_session_days": 94,
+      "full_cash_session_ratio": 0.898598,
+      "first_cash_close_clock_distribution": {
+        "09:35": 849,
+        "10:35": 69,
+        "11:35": 5,
+        "09:45": 1,
+        "10:20": 1,
+        "10:30": 1,
+        "10:40": 1
+      },
+      "last_cash_close_clock_distribution": {
+        "16:00": 918,
+        "13:00": 4,
+        "13:05": 3,
+        "14:00": 1,
+        "15:45": 1
+      },
+      "cash_row_count_distribution": {
+        "78": 833,
+        "66": 70,
+        "54": 5,
+        "77": 4,
+        "42": 4,
+        "76": 3,
+        "43": 3,
+        "69": 1,
+        "53": 1,
+        "75": 1,
+        "67": 1,
+        "65": 1
+      }
+    }
+  ]
+}

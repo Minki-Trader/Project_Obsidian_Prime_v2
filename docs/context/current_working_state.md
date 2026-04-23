@@ -69,9 +69,22 @@
 
 ## 다음 일(Next Useful Work, 다음 작업)
 
-1. 브로커 세션 달력 매퍼(broker session calendar mapper, 브로커 세션 달력 매퍼)를 만든다.
-2. 첫 깨끗한 피처 프레임(feature frame, 피처 프레임)에 쓸 창(window, 기간)을 정한다.
-3. 학습 데이터셋(training dataset, 학습 데이터셋)은 피처 프레임과 검증 규칙(validation rule, 검증 규칙)이 준비된 뒤 정한다.
+## 세션 달력 매퍼(Session Calendar Mapper, 세션 달력 매퍼)
+
+`20260424_broker_session_calendar_mapper` 실행(run, 실행)이 브로커 시계 정렬 키(broker-clock alignment key, 브로커 시계 정렬 키)를 이벤트 UTC(event UTC, 이벤트 UTC)와 뉴욕 세션 시간(New York session time, 뉴욕 세션 시간)으로 바꾸는 매퍼(mapper, 매퍼)를 검토했다.
+
+- 브로커 시계 시간대(broker clock timezone, 브로커 시계 시간대): `Europe/Athens`
+- 세션 시간대(session timezone, 세션 시간대): `America/New_York`
+- 전체 정규장 일수(cash session days, 정규장 일수): `8370`
+- 완전 정규장 일수(full cash session days, 완전 정규장 일수): `7149`
+- 부분 정규장 일수(partial cash session days, 부분 정규장 일수): `1221`
+
+효과(effect, 효과): 세션 피처(session features, 세션 피처)는 이제 직접 UTC 가정(direct UTC assumption, 직접 UTC 가정)에 기대지 않는다. 부분 세션(partial sessions, 부분 세션)은 숨기지 않고 표시한다.
+
+## 다음 일(Next Useful Work, 다음 작업)
+
+1. 첫 깨끗한 피처 프레임(feature frame, 피처 프레임)에 쓸 창(window, 기간)을 정한다.
+2. 학습 데이터셋(training dataset, 학습 데이터셋)은 피처 프레임과 검증 규칙(validation rule, 검증 규칙)이 준비된 뒤 정한다.
 
 ## 현재 진실이 아닌 것(Not Current Truth, 현재 진실 아님)
 

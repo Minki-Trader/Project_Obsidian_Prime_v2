@@ -125,8 +125,16 @@ class MaterializeDatasetTests(unittest.TestCase):
         )
         self.assertEqual(
             self.counts["session_time_policy_status"],
-            "unclosed_pending_timestamp_event_utc_or_broker_session_calendar",
+            "closed_by_broker_session_calendar_mapper_v1",
         )
+
+    def test_session_features_use_broker_clock_mapper(self) -> None:
+        row = self.row_at("2022-09-01T16:40:00Z")
+
+        self.assertEqual(pd.Timestamp(row["timestamp_event_utc"]), pd.Timestamp("2022-09-01T13:40:00Z"))
+        self.assertEqual(pd.Timestamp(row["timestamp_ny"]), pd.Timestamp("2022-09-01T09:40:00-0400"))
+        self.assertEqual(float(row["minutes_from_cash_open"]), 10.0)
+        self.assertEqual(float(row["is_us_cash_open"]), 1.0)
 
     def test_supertrend_seed_rule_defaults_to_downtrend_until_updated_band_exists(self) -> None:
         high = pd.Series([11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], dtype="float64")

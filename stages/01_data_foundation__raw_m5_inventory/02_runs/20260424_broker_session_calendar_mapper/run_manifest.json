@@ -1,0 +1,11 @@
+{
+  "run_id": "20260424_broker_session_calendar_mapper",
+  "lane": "evidence",
+  "stage_id": "01_data_foundation__raw_m5_inventory",
+  "command": "python foundation/features/session_calendar.py --raw-root data/raw/mt5_bars/m5 --output-dir stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_broker_session_calendar_mapper",
+  "outputs": [
+    "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_broker_session_calendar_mapper/broker_session_calendar_audit.json",
+    "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_broker_session_calendar_mapper/broker_session_calendar_audit.md"
+  ],
+  "judgment_boundary": "Evidence run only. This closes the broker-clock to session-time mapper, not model readiness or runtime authority."
+}

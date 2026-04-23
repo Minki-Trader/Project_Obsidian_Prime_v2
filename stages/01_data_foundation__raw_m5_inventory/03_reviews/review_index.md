@@ -13,3 +13,4 @@
 - `raw_m5_inventory_review.md`: `20260424_raw_m5_inventory` 실행 결과 판독(readout, 판독)
 - `time_semantics_probe_review.md`: `20260424_time_semantics_probe` 실행 결과 판독(readout, 판독)
 - `docs/decisions/2026-04-24_stage01_timestamp_policy.md`: timestamp policy(타임스탬프 정책) 결정(decision, 결정)
+- `broker_session_calendar_mapper_review.md`: `20260424_broker_session_calendar_mapper` 실행 결과 판독(readout, 판독)

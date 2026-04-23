@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -10,19 +11,30 @@ from typing import Iterable
 import numpy as np
 import pandas as pd
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from foundation.features.session_calendar import (
+    BROKER_CLOCK_TIMEZONE,
+    SESSION_TIMEZONE,
+    attach_event_time_columns,
+    compute_us_cash_session_features,
+)
+
 
 DATASET_ID = "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01"
 WINDOW_START_UTC = pd.Timestamp("2022-08-01T00:00:00Z")
 WINDOW_END_UTC = pd.Timestamp("2026-04-13T23:55:00Z")
 PRACTICAL_MODELING_START_UTC = pd.Timestamp("2022-09-01T00:00:00Z")
 WARMUP_BARS = 300
-FEATURE_CONTRACT_VERSION = "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-16"
+FEATURE_CONTRACT_VERSION = "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-24"
 PARSER_CONTRACT_VERSION = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-24"
 TIME_AXIS_POLICY_VERSION = "docs/contracts/time_axis_policy_fpmarkets_v2.md@2026-04-24"
 RAW_TIME_AXIS_POLICY = "raw_broker_clock_bar_close_key_not_direct_utc"
-SESSION_TIME_POLICY_STATUS = "unclosed_pending_timestamp_event_utc_or_broker_session_calendar"
+SESSION_TIME_POLICY_STATUS = "closed_by_broker_session_calendar_mapper_v1"
 WEIGHTS_VERSION = "foundation/config/top3_monthly_weights_fpmarkets_v2.csv@2026-04-16 (placeholder_equal_weight)"
-PARSER_VERSION = "fpmarkets_v2_stage01_materializer_v1"
+PARSER_VERSION = "fpmarkets_v2_stage01_materializer_v2"
 DEFAULT_WEIGHTS_PATH = Path("foundation/config/top3_monthly_weights_fpmarkets_v2.csv")
 
 FEATURE_ORDER = [
@@ -162,6 +174,7 @@ def load_raw_symbol(raw_root: Path, binding: SymbolBinding) -> pd.DataFrame:
         raise RuntimeError(f"Raw CSV {csv_path} is missing columns: {sorted(missing)}")
     frame["timestamp"] = pd.to_datetime(frame["time_close_unix"], unit="s", utc=True)
     frame["timestamp_policy"] = RAW_TIME_AXIS_POLICY
+    frame = attach_event_time_columns(frame)
     frame = frame.sort_values("timestamp").reset_index(drop=True)
     frame = frame.loc[(frame["timestamp"] >= WINDOW_START_UTC) & (frame["timestamp"] <= WINDOW_END_UTC)].copy()
     if frame["timestamp"].duplicated().any():
@@ -351,45 +364,7 @@ def compute_vortex(high: pd.Series, low: pd.Series, close: pd.Series, period: in
 
 
 def compute_session_features(frame: pd.DataFrame) -> dict[str, pd.Series]:
-    session_timestamp = frame["timestamp_event_utc"] if "timestamp_event_utc" in frame.columns else frame["timestamp"]
-    timestamp_ny = session_timestamp.dt.tz_convert("America/New_York")
-    close_time = timestamp_ny.dt.time
-    ny_date = timestamp_ny.dt.date
-    session_midnight = timestamp_ny.dt.normalize()
-    is_us_cash_open = (
-        ((timestamp_ny.dt.hour > 9) | ((timestamp_ny.dt.hour == 9) & (timestamp_ny.dt.minute >= 35)))
-        & ((timestamp_ny.dt.hour < 16) | ((timestamp_ny.dt.hour == 16) & (timestamp_ny.dt.minute == 0)))
-    ).astype(float)
-
-    session_open_ts = session_midnight + pd.Timedelta(hours=9, minutes=30)
-    minutes_from_cash_open = (timestamp_ny - session_open_ts).dt.total_seconds() / 60.0
-    is_first_30m_after_open = ((minutes_from_cash_open > 0) & (minutes_from_cash_open <= 30)).astype(float)
-
-    session_close_ts = session_midnight + pd.Timedelta(hours=16)
-    minutes_to_cash_close = (session_close_ts - timestamp_ny).dt.total_seconds() / 60.0
-    is_last_30m_before_cash_close = (
-        (minutes_to_cash_close >= 0) & (minutes_to_cash_close <= 25)
-    ).astype(float)
-
-    cash_open_mask = (timestamp_ny.dt.hour == 9) & (timestamp_ny.dt.minute == 35)
-    cash_close_mask = (timestamp_ny.dt.hour == 16) & (timestamp_ny.dt.minute == 0)
-
-    cash_open_today = frame["open"].where(cash_open_mask).groupby(ny_date).transform("first")
-    cash_close_by_date = frame.loc[cash_close_mask, ["close"]].copy()
-    cash_close_by_date["ny_date"] = ny_date.loc[cash_close_mask].values
-    cash_close_prev_lookup = cash_close_by_date.groupby("ny_date")["close"].last().shift(1)
-    cash_close_prev_session = pd.Series(ny_date).map(cash_close_prev_lookup)
-    overnight_return = cash_open_today / cash_close_prev_session - 1.0
-    overnight_return = overnight_return.groupby(ny_date).ffill()
-
-    return {
-        "timestamp_ny": timestamp_ny,
-        "is_us_cash_open": is_us_cash_open,
-        "minutes_from_cash_open": minutes_from_cash_open,
-        "is_first_30m_after_open": is_first_30m_after_open,
-        "is_last_30m_before_cash_close": is_last_30m_before_cash_close,
-        "overnight_return": overnight_return,
-    }
+    return compute_us_cash_session_features(frame)
 
 
 def load_weights(weights_path: Path | None = None) -> pd.DataFrame:
@@ -650,6 +625,8 @@ def build_feature_frame(
         "time_axis_policy_version": TIME_AXIS_POLICY_VERSION,
         "raw_time_axis_policy": RAW_TIME_AXIS_POLICY,
         "session_time_policy_status": SESSION_TIME_POLICY_STATUS,
+        "broker_clock_timezone": BROKER_CLOCK_TIMEZONE,
+        "session_timezone": SESSION_TIMEZONE,
         "invalid_reason_breakdown": {
             reason_code: int(mask.sum()) for reason_code, mask in invalid_reason_flags.items()
         },
@@ -692,6 +669,8 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
         "time_axis_policy_version": counts["time_axis_policy_version"],
         "raw_time_axis_policy": counts["raw_time_axis_policy"],
         "session_time_policy_status": counts["session_time_policy_status"],
+        "broker_clock_timezone": counts["broker_clock_timezone"],
+        "session_timezone": counts["session_timezone"],
         "raw_source_time_binding_assumption": "time_close_unix and time_open_unix are broker-clock bar-close/open keys, not direct UTC epoch seconds",
     }
     validity_path.write_text(json.dumps(row_validity_payload, indent=2), encoding="utf-8")
@@ -718,6 +697,8 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
         "source_identities": source_identities,
         "raw_time_axis_policy": counts["raw_time_axis_policy"],
         "session_time_policy_status": counts["session_time_policy_status"],
+        "broker_clock_timezone": counts["broker_clock_timezone"],
+        "session_timezone": counts["session_timezone"],
         "raw_source_time_binding_assumption": "time_close_unix and time_open_unix are broker-clock bar-close/open keys, not direct UTC epoch seconds",
     }
     summary_path.write_text(json.dumps(summary_payload, indent=2), encoding="utf-8")
@@ -736,6 +717,8 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
                 "output_root": str(output_root.as_posix()),
                 "raw_time_axis_policy": RAW_TIME_AXIS_POLICY,
                 "session_time_policy_status": SESSION_TIME_POLICY_STATUS,
+                "broker_clock_timezone": BROKER_CLOCK_TIMEZONE,
+                "session_timezone": SESSION_TIMEZONE,
             },
             indent=2,
         ),
