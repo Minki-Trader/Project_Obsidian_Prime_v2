@@ -129,6 +129,11 @@ Apply the rule below exactly until a later explicit Stage 06 decision replaces i
   - hard skip
   - not tradable
   - not eligible for reduced-risk substitution
+- research meaning:
+  - if `Group 1` and `Group 2` are valid but `Group 3` to `Group 5` are all incomplete, the row may be studied as `tier_c_local_research`
+  - `tier_c_local_research` means indicator-only model or logic research on the local `US100` and session surface
+  - `tier_c_local_research` is not a trading lane, not a reduced-risk substitute, and not a promotion argument
+  - if `Group 1` or `Group 2` fails, the row remains hard skip and is not eligible for local research
 
 ## What Tier B Is Allowed To Change
 
@@ -151,11 +156,12 @@ Apply the rule below exactly until a later explicit Stage 06 decision replaces i
 Future Stage 06 artifacts that touch tiered readiness must use the interface below:
 
 - `readiness_tier`: `tier_a | tier_b | tier_c`
+- `research_tier`: `none | tier_c_local_research`
 - `missing_groups`: `g1_contract_base | g2_session_semantics | g3_macro_proxy | g4_leader_equity | g5_breadth_extension`
 - `missing_symbols`: the symbol list that explains why a group was not complete at the exact timestamp
-- `reporting_lane`: `strict_tier_a | tier_b_exploration`
+- `reporting_lane`: `strict_tier_a | tier_b_exploration | tier_c_local_research`
 
-`tier_c` is a skip classification, not a reporting lane.
+`tier_c` is a runtime skip classification. `tier_c_local_research` is a research lane only when base/session semantics are valid and external context is the missing part.
 
 ## Data And Reporting Requirements
 
@@ -167,6 +173,7 @@ If a future stage explores tiered readiness, every affected artifact must record
 - tier-specific row counts
 - tier-specific KPI summary
 - whether the run used `strict_tier_a`, `tier_b_exploration`, or both
+- whether any Tier C rows were used only as `tier_c_local_research`
 - any first materialized dataset, runtime, or report identity artifact that adopts this interface must add the corresponding `artifact_registry.csv` rows in the same pass
 
 ## Non-Binding Future Exploration Notes
@@ -191,4 +198,4 @@ The notes below are not part of the canonical readiness rule and must not overri
 
 - current v2 runtime rule: `Tier A only`
 - Tier B status: `accepted as a future exploration design with the first deterministic boundary fixed and the first materialized Stage 06 row-label scorecard plus review report now written on that boundary; no reduced-risk runtime family or operating promotion is materialized yet`
-- Tier C status: `hard skip remains current policy whenever strict contract requirements fail`
+- Tier C status: `runtime hard skip remains current policy; local-only research is allowed only when base/session semantics are valid and external context is the missing part`

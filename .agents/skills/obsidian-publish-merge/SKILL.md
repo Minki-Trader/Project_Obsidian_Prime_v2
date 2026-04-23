@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 name: obsidian-publish-merge
 description: Finish Project Obsidian Prime v2 work by pushing the working branch and merging into main in one safe pass only when the user explicitly asks for it or an approved task packet explicitly names main as the publish target.
 ---

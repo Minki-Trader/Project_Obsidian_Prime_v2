@@ -1,4 +1,4 @@
-# Project Obsidian Prime v2
+﻿# Project Obsidian Prime v2
 
 ## Scope
 
@@ -15,7 +15,17 @@ This workspace is the clean-restart FPMarkets `US100` `M5` data, feature, runtim
 - diagnostic evidence is not the same thing as operating promotion
 - legacy is a lesson source, not an automatic truth source
 - concept contract is inherited, promotion history is not
+- legacy exploration mandate is inherited, legacy code/result/promotion history is not
 - foundation closure comes before new alpha search
+- operating discipline and exploration discipline must stay separate
+- every run must leave measurement, management, and lane-aware judgment before it is treated as closed
+- hard gates apply to operating truth claims, not to every candidate or runtime probe
+
+## Codex Response Rule
+
+- when using English expressions, pair them with Korean notation in the same local context
+- avoid unexplained abbreviations; expand terms such as WFO (`walk-forward optimization`, 워크포워드 최적화) and OOS (`out-of-sample`, 표본외) before relying on them
+- when describing an action, also describe the effect of that action so users do not have to infer the meaning from context
 
 ## Contract Hierarchy
 
@@ -29,7 +39,18 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 ## Working Vocabulary
 
 - use `foundation gate`, `parity closure`, `artifact identity closure`, and `promotion gate`
+- use `promotion_candidate` for a candidate read that does not replace the incumbent operating line
+- use `operating_promotion` for an incumbent replacement or confirmation claim
+- use `runtime_probe` for runtime observation without parity-closure authority
+- use `runtime_authority` for runtime parity closure, bundle handoff authority, or live-like readiness claims
 - avoid `release gate` and `release closure`
+
+## Progressive Hardening (`점진적 경화`)
+
+- early exploration/scout (`초기 탐색/스카우트`) may start with partial evidence when missing evidence is labeled
+- candidate/probe (`후보/탐침`) work may open before every hard gate is closed when the evidence boundary is explicit
+- hard gates (`강한 게이트`) apply to operating truth (`운영 진실`) claims such as `operating_promotion` and `runtime_authority`
+- missing WFO (`walk-forward optimization`, 워크포워드 최적화), full parity (`전체 동등성`), or runtime closure (`런타임 폐쇄`) limits the claim boundary but does not kill the idea by default
 
 ## Directory Rules
 
@@ -61,6 +82,34 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - bundle handoff verification is a separate gate from full parity closure
 - if built-in MT5 helpers disagree with the contract surface, the contract wins
 - all required inputs missing means `all-or-skip`, not degrade-with-warning
+
+## Architecture Invariants (`구조 불변 규칙`)
+
+- `docs/policies/architecture_invariants.md` owns cross-stage architecture guardrails (`단계 공통 구조 가드레일`)
+- `foundation/features` owns reusable feature logic (`재사용 피처 로직`); `foundation/pipelines` may orchestrate (`조율`) but must not become the feature source of truth (`피처 진실 원천`)
+- a model is not `materialized` (`물질화됨`) unless a reproducible model artifact (`재현 가능한 모델 산출물`) or frozen parameter/spec bundle (`동결 파라미터/규격 번들`) exists under a tracked stage run path or registered artifact path
+- alpha search (`알파 탐색`) must not silently become only source cleanup (`소스 정리`) or validation debt closure (`검증 부채 정리`) without an explicit durable decision
+- known architecture debt (`구조 부채`) belongs in `docs/registers/architecture_debt_register.md`; registered debt is not a healthy pattern to copy
+
+## Exploration Mandate (`탐색 명령`)
+
+- `docs/policies/exploration_mandate.md` owns the stage-agnostic exploration rules (`단계 독립 탐색 규칙`)
+- every non-trivial task must name a primary lane (`주 레인`): `exploration` (`탐색`), `evidence` (`근거`), `promotion` (`승격`), `runtime` (`런타임`), or `extra` (`추가`)
+- promotion-ineligible (`승격 부적격`) does not mean idea-dead (`아이디어 사망`)
+- progressive hardening (`점진적 경화`) is the default: early scout work may carry partial evidence, candidate/probe work must label its evidence boundary, and only operating truth claims require hard gates
+- alpha search (`알파 탐색`) should push serious ideas through broad sweep (`광역 탐색`), extreme sweep (`극단값 탐색`), WFO (`walk-forward optimization`, 워크포워드 최적화), stress/readout (`스트레스/판독`), and negative-result memory (`부정 결과 기록`) when relevant
+- micro search (`미세 탐색`) without broad evidence may be scout-only (`탐색 전용`), but it must not be described as robust evidence (`견고한 근거`)
+- Tier A/B/C (`티어 A/B/C`) remains the default readiness vocabulary (`준비도 어휘`), but Tier C (`티어 C`) may support local-only research (`로컬 전용 연구`) only when base/session semantics are valid and external context is the missing part
+- user-requested extra stages (`사용자 요청 추가 단계`) are allowed, but they must declare charter (`헌장`), lane (`레인`), exit condition (`종료 조건`), and no-promotion boundary (`비승격 경계`)
+
+## Run Evidence System (`실행 근거 시스템`)
+
+- `docs/policies/kpi_measurement_standard.md` owns KPI measurement (`핵심 성과 지표 측정`) layers and scoreboard (`점수판`) vocabulary
+- `docs/policies/run_result_management.md` owns run identity (`실행 정체성`), run lifecycle (`실행 생애주기`), and `run_registry.csv` (`실행 등록부`) rules
+- `docs/policies/result_judgment_policy.md` owns result judgment (`결과 판정`) and separates `positive` (`긍정`), `negative` (`부정`), `inconclusive` (`불충분`), and `invalid` (`무효`)
+- `negative` (`부정`) is reusable evidence; `invalid` (`무효`) is uninterpretable until the broken contract, data, parity, or execution assumption is repaired or excluded
+- planned/running/completed (`계획/실행 중/완료`) runs may carry partial records; reviewed/selected (`검토/선택`) runs need measurement, management, and judgment
+- a reviewed run (`검토된 실행`) must have measurable evidence (`측정 가능한 근거`), managed identity (`관리되는 정체성`), and lane-aware judgment (`레인별 판정`)
 
 ## Verification Discipline (`검증 규율`)
 
@@ -103,7 +152,14 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `docs/decisions/*.md` records durable operating decisions
 - `docs/policies/reentry_order.md` defines the canonical re-entry order and truth precedence
 - `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
+- `docs/registers/run_registry.csv` records run identity, evidence pointers, status, and result judgment
+- `docs/registers/idea_registry.md` records durable exploration ideas
+- `docs/registers/negative_result_register.md` records reusable failed or closed hypotheses
+- `docs/registers/legacy_lesson_register.md` records abstract legacy lessons without importing legacy code or run results
 - `docs/policies/artifact_registry_schema.md` defines registry columns, enums, and hash-update discipline
+- `docs/policies/architecture_invariants.md` defines stage-agnostic structure and encoding guardrails
+- `docs/policies/exploration_mandate.md` defines exploration discipline, lane separation, WFO defaults, and failure-memory rules
+- `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md` define run evidence measurement, management, and judgment
 - `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
 - `docs/policies/agent_trigger_policy.md` records repo-scoped trigger-to-skill routing
 - `.agents/skills/` stores repo-scoped reusable Codex skills for re-entry, claim discipline, and stage-transition workflows
@@ -123,4 +179,10 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - update `docs/decisions` when a durable operating decision is taken
 - update registers when new durable artifact identity appears
 - update `docs/policies/artifact_registry_schema.md` when registry columns, enums, or hash-update rules change
+- update `docs/policies/architecture_invariants.md` only when cross-stage architecture guardrails change
+- update `docs/policies/exploration_mandate.md` only when cross-stage exploration discipline changes
+- update `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, or `docs/policies/result_judgment_policy.md` only when cross-stage run evidence rules change
+- update `docs/registers/architecture_debt_register.md` when known architecture debt is discovered, reduced, deepened, or retired
+- update `docs/registers/run_registry.csv` when a run becomes durable, reviewed, selected, archived, invalidated, or superseded
+- update `docs/registers/idea_registry.md`, `docs/registers/negative_result_register.md`, or `docs/registers/legacy_lesson_register.md` when durable idea, failure, or legacy-lesson memory changes
 - keep Korean `.md` and `.txt` documents in `UTF-8 with BOM` when editing them for Windows-facing workflows
