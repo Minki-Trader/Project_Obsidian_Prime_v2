@@ -153,6 +153,7 @@ class ImportMt5SnapshotAuditTests(unittest.TestCase):
                 mock.patch("builtins.print") as mock_print,
             ):
                 result = self.module.main()
+
             self.assertEqual(result, 0)
             self.assertTrue(destination.exists())
             self.assertEqual(destination.read_text(encoding="utf-8"), payload)
