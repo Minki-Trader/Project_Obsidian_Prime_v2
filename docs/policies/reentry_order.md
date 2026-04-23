@@ -25,6 +25,7 @@ Do not maintain a second full ordered re-entry list in `README.md`, `AGENTS.md`,
 12. `docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md`
 13. `docs/policies/agent_trigger_policy.md` when the task will use repo-scoped skills
 14. `docs/policies/artifact_registry_schema.md` when the task will create, update, or review durable artifact identity
+15. `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the task touches feature/model/pipeline/artifact architecture, alpha-search framing, repo-scoped skills, agent settings, or Korean encoding
 
 ## Truth Precedence
 
@@ -37,7 +38,8 @@ When repo documents disagree, resolve in this order:
 5. `AGENTS.md`
 6. this file
 7. `docs/policies/agent_trigger_policy.md`
-8. stage briefs, review indexes, templates, and other supporting notes
+8. `docs/policies/architecture_invariants.md` for architecture ownership and encoding guardrails
+9. stage briefs, review indexes, templates, and other supporting notes
 
 If `workspace_state.yaml` and the active stage `selection_status.md` imply different active stages, treat that as state fragmentation and resolve it before continuing.
 
@@ -48,6 +50,8 @@ If `workspace_state.yaml` and the active stage `selection_status.md` imply diffe
 - `planning scaffold`: a named or registered planning artifact with structure and intent but without the full materialized backing values
 - `materialized evidence`: an artifact whose row counts, source identities, hashes, snapshots, or evaluated results are backed by real outputs rather than placeholders or planning tokens
 - `prior evidence only`: legacy findings or archived notes that may guide design but do not define current v2 foundation truth or current v2 operating truth
+- `architecture debt`: a known structure problem recorded in `docs/registers/architecture_debt_register.md`; it is bounded debt, not a normal pattern to copy
+- `materialized model`: a model with a reproducible artifact or frozen parameter/spec bundle, not only a probability table or review summary
 
 ## Re-entry Output Expectation
 
@@ -59,6 +63,7 @@ After following this order, restate all of the following before making durable c
 - what is still planning only
 - what is already materialized
 - what remains open
+- whether architecture-sensitive work needs the architecture guard
 
 ## Maintenance Rule
 

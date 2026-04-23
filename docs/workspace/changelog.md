@@ -2,6 +2,7 @@
 
 ## 2026-04-23
 
+- added stage-agnostic architecture guardrails for feature/model/pipeline ownership, materialized-model claim discipline, alpha-search integrity, and Korean BOM/encoding validation; registered the current Stage 06/07 issues as architecture debt rather than normal project style
 - synchronized the published Stage 07 workspace truth back to `main` after merging `codex/stage06-tierb-feature-schema` so the active-branch read no longer lags the merged repository state
 
 ## 2026-04-22

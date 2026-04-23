@@ -1,4 +1,4 @@
-# Release / Live Readiness Review
+﻿# Release / Live Readiness Review
 
 ## Candidate Identity
 - candidate:

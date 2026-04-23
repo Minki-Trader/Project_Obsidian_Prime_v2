@@ -1,4 +1,4 @@
-﻿﻿# Agent Trigger Policy
+﻿# Agent Trigger Policy
 
 This note defines the repo-scoped `skills` layer that complements `AGENTS.md`.
 
@@ -9,6 +9,7 @@ Canonical re-entry order and truth precedence live in `docs/policies/reentry_ord
 - keep `AGENTS.md` focused on always-on project rules
 - route repetitive agent behavior through narrow reusable skills
 - reduce repeated mistakes around re-entry, claim language, and stage transitions
+- prevent cross-stage architecture drift around feature logic, model artifacts, alpha-search framing, and Korean encoding
 
 ## Placement
 
@@ -87,8 +88,25 @@ Required effect:
 
 - downgrade claims when the evidence state is still planning or pending
 - distinguish `planning scaffold`, `materialized evidence`, `runtime parity closure`, and `exploration-ready` explicitly
+- distinguish probability-output evidence from materialized model artifacts
 - mark legacy findings as `prior evidence only` unless a v2 artifact closes the same question
 - if an overview document such as `README.md` contains mutable live-state wording, either sync it in the same pass or rewrite it so it points at the authoritative current-truth docs instead
+
+### `obsidian-architecture-guard`
+
+Use when:
+
+- work touches feature calculation, model training/export, pipeline materialization, artifact identity, alpha-search framing, stage transition, repo-scoped skills, agent settings, or Korean encoding
+- a task might move reusable logic into a stage-local script or orchestration pipeline
+- a summary might call a model, feature layer, alpha lane, or artifact `materialized`, `ready`, or `closed`
+- Korean `.md` or `.txt` files are edited
+
+Required effect:
+
+- read `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md`
+- output `architecture_risk`, `debt_interaction`, `allowed_debt_change`, and `encoding_check`
+- treat registered architecture debt as known debt, not as a project pattern to copy
+- run the architecture guard validator after editing agent settings, repo-scoped skills, architecture policies, debt registers, or Korean docs
 
 ### `obsidian-task-packet`
 
@@ -104,6 +122,7 @@ Required effect:
 - choose one primary task only
 - derive that task from the active stage brief, selection status, current decision memos, and current session mode
 - output a bounded packet with `task_id`, `goal`, `allowed_paths`, `do_not_touch`, `expected_artifacts`, `verification_minimum`, `real_env_required`, `publish_target`, `stop_conditions`, and `done_definition`
+- add `architecture_guard_required`, `debt_register_update`, and `encoding_verification` when the task is architecture-sensitive
 - keep `publish_target` at `branch_only` or `none` unless the user explicitly asks for `main` completion
 
 ### `obsidian-stage-transition`
@@ -118,6 +137,7 @@ Required effect:
 
 - follow the canonical same-pass sync list defined in this policy
 - never close a stage by implying later-stage evidence is already complete
+- verify that the new or closing stage does not copy registered architecture debt as normal project style
 - if `README.md` carries mutable stage or closure wording, sync or neutralize it in the same pass so it does not become a competing stale state source
 
 ### `obsidian-publish-merge`
@@ -161,6 +181,8 @@ Required same-pass files:
 - `handoff verification` is not `runtime parity closure`
 - `legacy prior evidence` is not `current v2 foundation truth` or `current v2 operating truth`
 - `foundation stage closure` is not `exploration-ready`
+- probability tables, summaries, calibration reads, and reports are not by themselves a materialized model artifact
+- registered architecture debt is not a pattern to repeat
 
 ## Verification Escalation (`검증 상향 규칙`)
 
@@ -177,6 +199,7 @@ Required same-pass files:
 - `계획 수립해줘`, `작업 패킷 만들어줘`: use `obsidian-task-packet`
 - `진행해줘`: execute the current approved task packet; if none exists, create or reconstruct one before implementation
 - `브랜치랑 메인머지까지`, `메인까지 올려줘`: use `obsidian-publish-merge`
+- feature/model/pipeline/artifact/agent-settings/encoding work: also use `obsidian-architecture-guard`
 
 ## Dynamic Active Routing
 
@@ -184,6 +207,7 @@ Required same-pass files:
 - use `obsidian-session-intake` and `obsidian-claim-discipline` as the default primary pair for any new or resumed thread
 - let `obsidian-session-intake` decide whether the thread needs full cold re-entry or only a same-thread delta check
 - use `obsidian-task-packet` before implementation or verification whenever the current packet is missing or ambiguous
+- use `obsidian-architecture-guard` for feature, model, pipeline, artifact, alpha-search, stage-transition, agent-settings, or Korean-encoding work regardless of stage number
 - use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
 - use `obsidian-publish-merge` only when the user explicitly asks for branch push plus `main` merge completion in the same pass or an approved task packet explicitly names `publish_target=main`
 - do not auto-trigger `obsidian-publish-merge` only because a verified implementation pass finished

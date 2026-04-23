@@ -23,6 +23,7 @@ Update in the same pass:
 - `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
 - `docs/workspace/changelog.md`
 - `README.md` when it still contains mutable stage, closure, or current-mode wording that this transition would otherwise leave stale
+- `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the transition changes feature/model/pipeline/artifact ownership, alpha-search framing, or encoding-sensitive agent behavior
 
 ## Transition Rules
 
@@ -36,11 +37,14 @@ Update in the same pass:
 4. Keep `active_stage` aligned everywhere after the transition.
 5. Derive current and next stage names from `docs/workspace/workspace_state.yaml`, decision memos, and stage docs; do not hard-code the active stage name in this skill.
 6. Prefer replacing volatile `README.md` status snapshots with pointers to the authoritative current-truth docs instead of maintaining a second live-state ledger there.
+7. Do not let a new stage inherit registered architecture debt as if it were normal project style.
+8. If the transition opens alpha search, separate source cleanup or validation debt closure from the actual alpha-search question.
 
 ## Validation
 
 - after the sync pass, verify that `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, and the active stage `selection_status.md` all name the same active stage
 - if the transition changes durable meaning, make sure a `docs/decisions/*.md` memo exists in the same pass
+- if architecture-sensitive docs or skills changed, run the architecture guard validator
 
 ## Project-Specific Guardrails
 

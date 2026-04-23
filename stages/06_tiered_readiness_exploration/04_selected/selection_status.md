@@ -1,4 +1,4 @@
-﻿# Selection Status
+# Selection Status
 
 ## Current Read
 

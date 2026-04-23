@@ -26,6 +26,7 @@ Use this skill at the start of a working turn when the user asks for current sta
    - `publish_pass`
 2. Decide whether the thread is cold or warm.
 3. If the thread is warm and the active stage is stable, prefer a delta check instead of repeating full cold re-entry.
+4. Decide whether the requested turn is architecture-sensitive: feature/model/pipeline/artifact, alpha-search framing, stage transition, repo-scoped skill, agent setting, or Korean encoding work.
 
 ## Must Read
 
@@ -33,6 +34,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 - `docs/context/current_working_state.md` when the current read needs support
 - the active stage `04_selected/selection_status.md`
 - the latest durable decision memo only when it changes current meaning or the user asks why
+- `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the requested turn is architecture-sensitive
 
 ## Must Output
 
@@ -48,6 +50,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 - `allowed_scope`
 - `stop_conditions`
 - `publish_default`
+- `architecture_guard_required` when relevant
 
 ## Do Not
 
@@ -55,6 +58,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 - invent a new active stage or reopen a closed stage from chat momentum alone
 - let orientation docs outrank `workspace_state.yaml`, stage selection status, or durable decisions
 - drift from status intake straight into implementation without first fixing the scope
+- ignore architecture debt when the turn touches feature/model/pipeline/artifact, alpha-search, stage-transition, skill, agent-setting, or encoding work
 
 ## Stop Conditions
 
@@ -66,9 +70,11 @@ Use this skill at the start of a working turn when the user asks for current sta
 
 - check that the named active stage is the same across the current truth sources you used
 - if a current task packet already exists, confirm it still fits the active stage and current durable decisions
+- if architecture-sensitive, confirm whether the architecture guard validator is part of the verification surface
 
 ## Completion Criteria
 
 - one session mode is selected
 - one recommended next task is named
 - the allowed scope and publish default are explicit enough that the next step can stay narrow
+- architecture-sensitive work is routed to `obsidian-architecture-guard` regardless of active stage number

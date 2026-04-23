@@ -1,4 +1,4 @@
-# AGENTS.md (v2 skeleton)
+﻿# AGENTS.md (v2 skeleton)
 
 ## Scope
 - 이 저장소/워크스페이스의 범위

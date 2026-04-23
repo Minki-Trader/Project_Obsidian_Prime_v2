@@ -1,4 +1,4 @@
-﻿# Stage 06 Review Index
+# Stage 06 Review Index
 
 ## Reading Order
 

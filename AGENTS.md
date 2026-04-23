@@ -1,4 +1,4 @@
-# Project Obsidian Prime v2
+﻿# Project Obsidian Prime v2
 
 ## Scope
 
@@ -62,6 +62,14 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - if built-in MT5 helpers disagree with the contract surface, the contract wins
 - all required inputs missing means `all-or-skip`, not degrade-with-warning
 
+## Architecture Invariants (`구조 불변 규칙`)
+
+- `docs/policies/architecture_invariants.md` owns cross-stage architecture guardrails (`단계 공통 구조 가드레일`)
+- `foundation/features` owns reusable feature logic (`재사용 피처 로직`); `foundation/pipelines` may orchestrate (`조율`) but must not become the feature source of truth (`피처 진실 원천`)
+- a model is not `materialized` (`물질화됨`) unless a reproducible model artifact (`재현 가능한 모델 산출물`) or frozen parameter/spec bundle (`동결 파라미터/규격 번들`) exists under a tracked stage run path or registered artifact path
+- alpha search (`알파 탐색`) must not silently become only source cleanup (`소스 정리`) or validation debt closure (`검증 부채 정리`) without an explicit durable decision
+- known architecture debt (`구조 부채`) belongs in `docs/registers/architecture_debt_register.md`; registered debt is not a healthy pattern to copy
+
 ## Verification Discipline (`검증 규율`)
 
 - use the narrowest sufficient verification first, but include a real-environment check (`실환경 검증`) before calling work verified when the change touches MT5 execution, tester orchestration, import/export boundaries, runtime parity flow, or another path where mocks can miss environment-specific behavior
@@ -104,6 +112,7 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `docs/policies/reentry_order.md` defines the canonical re-entry order and truth precedence
 - `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
 - `docs/policies/artifact_registry_schema.md` defines registry columns, enums, and hash-update discipline
+- `docs/policies/architecture_invariants.md` defines stage-agnostic structure and encoding guardrails
 - `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
 - `docs/policies/agent_trigger_policy.md` records repo-scoped trigger-to-skill routing
 - `.agents/skills/` stores repo-scoped reusable Codex skills for re-entry, claim discipline, and stage-transition workflows
@@ -123,4 +132,6 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - update `docs/decisions` when a durable operating decision is taken
 - update registers when new durable artifact identity appears
 - update `docs/policies/artifact_registry_schema.md` when registry columns, enums, or hash-update rules change
+- update `docs/policies/architecture_invariants.md` only when cross-stage architecture guardrails change
+- update `docs/registers/architecture_debt_register.md` when known architecture debt is discovered, reduced, deepened, or retired
 - keep Korean `.md` and `.txt` documents in `UTF-8 with BOM` when editing them for Windows-facing workflows
