@@ -32,6 +32,16 @@ Use this file when work touches feature calculation (피처 계산), model train
 - A source-boundary packet (소스 경계 팩) must not prune or promote an alpha lane (알파 레인) when the active feature surface (활성 피처 표면) is unaffected by that source.
 - Placeholder inputs (임시 입력) may be used only within their stated boundary and must not later become a promotion gate (승격 게이트) without a durable decision explaining why.
 
+## Path Rules (경로 규칙)
+
+- Repo-internal references (저장소 내부 참조) must use repo-relative paths (저장소 상대경로) by default in documents, manifests, registries, tests, and stage artifacts.
+- Absolute paths (절대경로) are allowed only for local diagnostics (로컬 진단), user-facing clickable file links (사용자용 클릭 파일 링크), external tool invocation (외부 도구 호출), or MT5 environment handoff (MT5 환경 인계) when a machine path is required.
+- Durable artifact identity (지속 산출물 정체성) must not depend on an absolute terminal install path (터미널 설치 절대경로); use repo-relative path plus hash, run id, bundle id, or registry fields instead.
+- Stage and run directories (단계 및 실행 디렉터리) already carry context, so filenames should avoid repeating long dataset, stage, run, or project identifiers unless a contract or registry schema explicitly requires them.
+- If one tool can enumerate a file but another reports `Cannot find path` or `False`, treat Windows long path handling (윈도우 긴 경로 처리) as a first suspect before declaring the artifact missing.
+- Archive snapshots (아카이브 스냅샷) of deep stage trees should prefer ZIP plus manifest (ZIP 및 목록) over nested folder copies, because ZIP preserves internal relative paths while avoiding destination path expansion.
+- `\\?\` long-path prefixes (긴 경로 접두사) may be used in local scripts or one-off tooling, but committed docs and registry fields should stay repo-relative.
+
 ## Debt Handling (부채 처리)
 
 - Known architecture debt (알려진 구조 부채) belongs in `docs/registers/architecture_debt_register.md`.

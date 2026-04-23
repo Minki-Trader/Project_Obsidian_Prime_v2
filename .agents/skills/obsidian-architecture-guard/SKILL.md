@@ -1,6 +1,6 @@
 ﻿---
 name: obsidian-architecture-guard
-description: Guard Project Obsidian Prime v2 against stage-agnostic architecture and code-surface drift. Use when work touches feature calculation, model training/export, pipeline materialization, artifact claims, architecture debt, code placement, stage transitions, alpha search, repo-scoped skills, agent settings, or Korean BOM/encoding-sensitive docs.
+description: Guard Project Obsidian Prime v2 against stage-agnostic architecture and code-surface drift. Use when work touches feature calculation, model training/export, pipeline materialization, artifact claims, architecture debt, code placement, path identity, Windows long-path handling, stage transitions, alpha search, repo-scoped skills, agent settings, or Korean BOM/encoding-sensitive docs.
 ---
 
 # Obsidian Architecture Guard
@@ -18,6 +18,7 @@ Use this guard for work touching any of:
 - code placement or reusable logic ownership (코드 배치 또는 재사용 로직 소유권)
 - stage transition or alpha search (단계 전환 또는 알파 탐색)
 - repo-scoped skills or agent settings (저장소 범위 스킬 또는 에이전트 설정)
+- durable path references, archive behavior, or long artifact names (지속 경로 참조, 아카이브 동작, 긴 산출물 파일명)
 - Korean `.md` or `.txt` docs (한국어 문서)
 
 Do not key this guard to Stage 06 or Stage 07 only. It applies to all future stages.
@@ -39,6 +40,7 @@ Every architecture-sensitive packet or summary must include:
 - `debt_interaction`: whether it touches registered architecture debt
 - `allowed_debt_change`: `reduce`, `leave_unchanged`, or `blocked_without_decision`
 - `encoding_check`: whether Korean docs or repo-scoped skills need UTF-8 with BOM validation
+- `path_safety_check`: whether repo-relative paths are used for durable identity, whether absolute paths are local-only, and whether Windows long path risk is controlled
 - `code_surface_check`: whether owner module, caller, input/output, and artifact/report effect must be named
 
 ## Guardrails
@@ -48,6 +50,9 @@ Every architecture-sensitive packet or summary must include:
 - Do not add reusable feature logic to a stage script or orchestration pipeline when it belongs in `foundation/features`.
 - Do not create all-in-one EA or pipeline monoliths when reusable logic can live in a smaller owner module.
 - Do not let alpha search become source cleanup only unless a durable decision says so.
+- Do not store absolute terminal install paths as artifact identity; use repo-relative paths plus hash, run id, bundle id, or registry fields.
+- Do not call a file missing when one tool enumerates it but another path API fails; rule out Windows long-path handling first.
+- Prefer ZIP plus manifest for deep archive snapshots, and keep `\\?\` long-path prefixes local to tooling rather than committed docs.
 - Do not edit Korean `.md` or `.txt` docs without preserving UTF-8 with BOM.
 
 ## Validator

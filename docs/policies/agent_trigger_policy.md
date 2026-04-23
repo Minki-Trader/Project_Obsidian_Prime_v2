@@ -114,7 +114,7 @@ Required effect:
 
 Use when:
 
-- work touches feature calculation, model training/export, pipeline materialization, artifact identity, alpha-search framing, stage transition, repo-scoped skills, agent settings, or Korean encoding
+- work touches feature calculation, model training/export, pipeline materialization, artifact identity, alpha-search framing, stage transition, repo-scoped skills, agent settings, path identity, archive behavior, or Korean encoding
 - a task might move reusable logic into a stage-local script or orchestration pipeline
 - a summary might call a model, feature layer, alpha lane, or artifact `materialized`, `ready`, or `closed`
 - Korean `.md` or `.txt` files are edited
@@ -122,7 +122,7 @@ Use when:
 Required effect:
 
 - read `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md`
-- output `architecture_risk`, `debt_interaction`, `allowed_debt_change`, and `encoding_check`
+- output `architecture_risk`, `debt_interaction`, `allowed_debt_change`, `encoding_check`, and `path_safety_check`
 - treat registered architecture debt as known debt, not as a project pattern to copy
 - run the architecture guard validator after editing agent settings, repo-scoped skills, architecture policies, debt registers, or Korean docs
 
@@ -200,7 +200,7 @@ Required effect:
 - choose one primary task only
 - derive that task from the active stage brief, selection status, current decision memos, and current session mode
 - output a bounded packet with `task_id`, `goal`, `allowed_paths`, `do_not_touch`, `expected_artifacts`, `verification_minimum`, `real_env_required`, `publish_target`, `stop_conditions`, and `done_definition`
-- add `architecture_guard_required`, `debt_register_update`, and `encoding_verification` when the task is architecture-sensitive
+- add `architecture_guard_required`, `debt_register_update`, `encoding_verification`, and `path_safety_check` when the task is architecture-sensitive
 - add `lane`, `idea_id`, `tier_scope`, `wfo_required`, `extreme_sweep_allowed`, `micro_search_gate`, `negative_result_required`, `promotion_gate_applicable`, and `code_surface_map_required` when relevant
 - add `run_evidence_required`, `run_registry_update`, `kpi_record_required`, and `result_judgment_required` when a run or KPI result is created, reviewed, summarized, or closed
 - add `hard_gate_applicable` and `operating_truth_claim` when promotion/runtime meaning is in scope
@@ -288,6 +288,14 @@ Required same-pass files:
 - `negative` is not `invalid`; `inconclusive` is not a quiet success; `structural_scout` is not an operating promotion read
 - `promotion_candidate` is not `operating_promotion`; `runtime_probe` is not `runtime_authority`
 
+## Always-On Path Guardrails (`항상 적용 경로 가드레일`)
+
+- Repo-internal references (`저장소 내부 참조`) should be repo-relative paths (`저장소 상대경로`) unless an external tool or MT5 handoff (`MT5 인계`) requires an absolute machine path.
+- Absolute paths (`절대경로`) in user-facing replies may be used for clickable file links, but durable docs, manifests, and registries should not store absolute terminal install paths as identity.
+- Long artifact filenames (`긴 산출물 파일명`) should not repeat context already present in stage or run directories unless a contract, schema, or tool integration requires the full name.
+- If file enumeration succeeds but `Test-Path`, `Get-Item`, copy, or archive commands fail, first suspect Windows long path handling (`윈도우 긴 경로 처리`) and verify through a short-root workspace, ZIP archive, or `\\?\` long-path prefix before calling the file missing.
+- Deep archive snapshots (`깊은 아카이브 스냅샷`) should prefer ZIP plus manifest (`ZIP 및 목록`) over copied folder trees.
+
 ## Verification Escalation (`검증 상향 규칙`)
 
 - start with the smallest sufficient local verification
@@ -303,7 +311,7 @@ Required same-pass files:
 - `계획 수립해줘`, `작업 패킷 만들어줘`: use `obsidian-task-packet`
 - `진행해줘`: execute the current approved task packet; if none exists, create or reconstruct one before implementation
 - `브랜치랑 메인머지까지`, `메인까지 올려줘`: use `obsidian-publish-merge`
-- feature/model/pipeline/artifact/agent-settings/encoding work: also use `obsidian-architecture-guard`
+- feature/model/pipeline/artifact/path/agent-settings/encoding work: also use `obsidian-architecture-guard`
 - alpha search, idea variants, Tier B/C research, WFO, extreme sweep, or negative-result closure: use `obsidian-lane-classifier` and `obsidian-exploration-mandate`
 - run creation, run closeout, KPI reporting, result judgment, or run registry updates: use `obsidian-run-evidence-system`
 - code placement or reusable logic work: use `obsidian-code-surface-guard` and `obsidian-architecture-guard`
@@ -314,12 +322,13 @@ Required same-pass files:
 - use `obsidian-session-intake` and `obsidian-claim-discipline` as the default primary pair for any new or resumed thread
 - let `obsidian-session-intake` decide whether the thread needs full cold re-entry or only a same-thread delta check
 - use `obsidian-task-packet` before implementation or verification whenever the current packet is missing or ambiguous
-- use `obsidian-architecture-guard` for feature, model, pipeline, artifact, alpha-search, stage-transition, agent-settings, or Korean-encoding work regardless of stage number
+- use `obsidian-architecture-guard` for feature, model, pipeline, artifact, path, archive, alpha-search, stage-transition, agent-settings, or Korean-encoding work regardless of stage number
 - use `obsidian-lane-classifier` before applying operating-promotion or runtime-authority gates to exploration, evidence, Tier B/C research, or extra-stage work
 - apply hard gates only when the task claims operating truth, `operating_promotion`, or `runtime_authority`
 - use `obsidian-exploration-mandate` for exploration-sensitive work regardless of active stage number
 - use `obsidian-run-evidence-system` whenever a run result needs measurement, management, or judgment
 - use `obsidian-code-surface-guard` whenever code placement, reusable logic ownership, or monolith risk is involved
+- use `obsidian-architecture-guard` when a task creates deep stage artifacts, changes archive behavior, introduces long filenames, or records paths in durable docs
 - use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
 - use `obsidian-publish-merge` only when the user explicitly asks for branch push plus `main` merge completion in the same pass or an approved task packet explicitly names `publish_target=main`
 - do not auto-trigger `obsidian-publish-merge` only because a verified implementation pass finished

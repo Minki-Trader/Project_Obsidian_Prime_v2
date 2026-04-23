@@ -65,6 +65,15 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - keep stage-local outputs under `stages/<nn_name>/`
 - do not create a top-level dump folder for scratch artifacts
 
+## Path Discipline (`경로 규율`)
+
+- use repo-relative paths (`저장소 상대경로`) for repo-internal documents, manifests, registries, tests, and stage artifacts by default
+- use absolute paths (`절대경로`) only for local diagnostics, user-facing clickable file links, external tools, or MT5 environment handoff (`MT5 환경 인계`) where the full machine path is required
+- do not treat an absolute terminal install path (`터미널 설치 절대경로`) as artifact identity (`산출물 정체성`); durable identity must stay in repo-relative path plus hash or registry fields
+- avoid repeating long stage, dataset, or run identifiers inside filenames when the parent directory already carries that context; shorter filenames reduce Windows long path (`윈도우 긴 경로`) failures without reducing artifact meaning
+- if `rg` or directory enumeration sees a file but `Test-Path`, `Get-Item`, copy, or archive tooling reports it missing, suspect Windows long path handling (`윈도우 긴 경로 처리`) before claiming a missing artifact
+- use ZIP plus manifest (`ZIP 및 목록`) for sealed archive snapshots when nested stage paths are long; use `\\?\` long-path prefixes only in local tooling, not in committed repo references
+
 ## Data And Time Semantics
 
 - use `US100` `M5` as the base frame
