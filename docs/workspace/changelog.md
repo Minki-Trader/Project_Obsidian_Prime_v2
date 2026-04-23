@@ -1,7 +1,45 @@
-# Changelog
+﻿# Changelog
+
+## 2026-04-23
+
+- added stage-agnostic architecture guardrails for feature/model/pipeline ownership, materialized-model claim discipline, alpha-search integrity, and Korean BOM/encoding validation; registered the current Stage 06/07 issues as architecture debt rather than normal project style
+- synchronized the published Stage 07 workspace truth back to `main` after merging `codex/stage06-tierb-feature-schema` so the active-branch read no longer lags the merged repository state
+
+## 2026-04-22
+
+- closed `06_tiered_readiness_exploration` and opened `07_alpha_search` after syncing the additive follow-up pack plus the first shared keep42 `Tier B reduced-context model (Tier B 축약 문맥 모델)` into the official read while keeping the strict `Tier A` runtime rule unchanged and the separate `Tier B` lane `offline-only (오프라인 전용)`
+- materialized the first shared Stage 06 `Tier B reduced-context model` on a fixed `keep=42` feature surface with a separate evaluation summary calibration read and report; the current Tier B holdout `log_loss` improved from `1.963620` on the full baseline to `1.503578` while all meaning stayed offline-only
+- added a draft-only Stage 06 `Tier B-safe feature schema` so the first shared reduced-context model can start from a fixed keep=42, conditional=6, drop=10 surface without changing any official state document
+- added a draft-only Stage 06 anchor note plus `review_index` routing for the current `Tier B reduced-context model` preference so later sessions can resume from one shared Tier B model plus subtype tags without changing any official state document
+- materialized an additive Stage 06 `tier_b_followup_pack_0001` with separate `Tier B calibration fit`, coarse `threshold / exposure / sizing` sensitivity, robustness segmentation, placeholder-weight verdict, and draft-only `Stage 07` design/readout documents without reflecting an official stage transition
+- added a Stage 06 local follow-up-pack spec plus a dedicated follow-up materializer and real-data tests for the calibration, control, robustness, and weight-verdict surfaces
+- added new Stage 06 registry rows for the follow-up-pack manifest, four machine-readable summaries, four evaluation reports, and two draft-only handoff documents while keeping the official active-stage truth unchanged in this pass
+- replaced the Stage 06 `baseline-family reuse` working hypothesis with `legacy non-inheritance` plus a first `Tier A`-trained `v2-native baseline seed`, then materialized the first `Tier B offline evaluation report` and `calibration read` without changing the strict Tier A runtime rule
+- added a Stage 06 local baseline-seed spec, a dedicated `Gaussian Naive Bayes` materializer, and real-data tests for the first `tier_b_offline_eval_0001` artifact family
+- added five new Stage 06 registry rows for the baseline-seed manifest, probability table, evaluation summary, calibration read, and report while keeping `approved_for=not_applicable` and leaving runtime-family or promotion claims closed
+
+## 2026-04-21
+
+- added repo-scoped `obsidian-session-intake` and `obsidian-task-packet` skills so turns now choose a narrow session mode, prefer warm-thread delta checks over repeated cold re-entry, and fix one bounded task packet before implementation drifts open
+- weakened `obsidian-publish-merge` from default auto-publish to explicit-user-or-packet-gated `main` publish, while keeping `branch_only` as the default publish target
+- expanded branch policy so one approved task packet can map to one branch more cleanly and stale ahead/behind branches now require an explicit `merge`, `re-cut-needed`, `superseded`, or `archived` resolution
+- added a Stage 06 execution contract block so the next offline Tier B artifact stays bounded by allowed paths, do-not-touch rules, verification minimums, stop conditions, and a branch-first publish default
+- adopted the first Stage 06 offline-only Tier B experiment charter on baseline-family reuse plus separate calibration and separate `tier_b_exploration` reporting, while keeping placeholder monthly weights bounded to offline exploration only
+- materialized the first Stage 06 tiered-readiness scorecard as row-level labels plus a machine-readable summary and review report with shared-window counts `tier_a=56988`, `tier_b=88303`, `tier_c=116053` and practical-window counts `tier_a=55457`, `tier_b=86192`, `tier_c=113352`
+- added the first Stage 06 registry rows for `readiness_row_labels`, `readiness_scorecard_summary`, and `readiness_scorecard_report` without claiming any reduced-risk runtime family or operating promotion
+- added a dedicated Stage 06 scorecard materializer, real-data regression tests, and Git tracking exceptions for the first tracked `02_runs/tiered_readiness_scorecard_0001` artifact family
 
 ## 2026-04-20
 
+- fixed the first Stage 06 deterministic readiness boundary as a docs-only governance lock, demoted heuristic Tier B notes to non-binding exploration notes, and synchronized Stage 06 plus workspace truth without adding new registry rows
+- evaluated `broader_0003` on the native MT5 path as the first additive Stage 05 broader reinforcement pack with `matched_fixtures=24`, `unexpected_record_count=0`, `tolerance_parity=true`, and `max_abs_diff=7.160007811535252e-06`
+- added a League/Riot process guard to the native MT5 runner so live game sessions are blocked by default and only proceed when `--allow-conflicting-games` is passed explicitly
+- closed `05_exploration_kernel_freeze` on the explicit `broader_0002 + helper_0001 + broader_0003` kernel-freeze read and opened `06_tiered_readiness_exploration` as the first downstream exploration-only stage
+- materialized `broader_0003` as the first additive Stage 05 broader reinforcement family on a non-overlapping twenty-four-window charter pack, while keeping native evaluation of that pack as the next required follow-up
+- materialized and evaluated `helper_0001` as the first helper-focused Stage 05 subset derived from the active `broader_0002` pack; the separate helper pack now reaches a first tolerance-closed exact-open read on `8` frozen fixtures while Stage 05 still remains open
+- fixed the next Stage 05 follow-up order so the first separate runtime-helper parity lane now opens before any additional broader-sample coverage pass, while the active broader_0002 read remains the current broader evidence
+- reran the active Stage 05 broader_0002 pack through the native MT5 path after the tooling-hardening pass and reproduced the same first broader tolerance-closed exact-open read instead of changing the Stage 05 boundary
+- added a project-wide verification discipline so agent work now escalates to the narrowest real-environment check for MT5 execution, orchestration, import/export, and other environment-dependent paths instead of stopping at local-only validation when the risk surface requires more
 - aligned the same-pass synchronization norm across `docs/policies/agent_trigger_policy.md`, `.agents/skills/obsidian-stage-transition/SKILL.md`, and the runtime parity reporter `gate_before_closure` wording so policy/skill/reporter drift is reduced and `artifact_registry.csv` inclusion is explicit
 - realigned the active working branch name from the lingering Stage 03 label to `codex/stage05-broader-rebind` so the live workspace truth matches the actual Stage 05 foundation boundary
 - synchronized `workspace_state.yaml` and `current_working_state.md` to the active Stage 05 branch truth instead of the older Stage 03 handoff branch name

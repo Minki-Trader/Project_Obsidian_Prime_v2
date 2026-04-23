@@ -4,6 +4,7 @@ import argparse
 import json
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -68,6 +69,11 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional explicit review date for the rendered markdown report.",
     )
+    parser.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional path to write the final orchestrator JSON summary.",
+    )
     return parser.parse_args()
 
 
@@ -76,18 +82,57 @@ def load_json(path: Path) -> dict[str, Any]:
         return json.load(handle)
 
 
-def run_step(args: list[str], cwd: Path) -> dict[str, Any]:
+def _tail_lines(text: str, count: int = 20) -> str:
+    lines = [line for line in text.splitlines() if line.strip()]
+    if not lines:
+        return "<empty>"
+    return "\n".join(lines[-count:])
+
+
+def _load_step_summary_from_stdout(*, stdout: str, stderr: str, step_id: str) -> dict[str, Any]:
+    lines = [line.strip() for line in stdout.splitlines() if line.strip()]
+    if not lines:
+        raise RuntimeError(
+            f"[{step_id}] Missing structured summary on stdout. "
+            f"stderr_tail:\n{_tail_lines(stderr)}\nstdout_tail:\n{_tail_lines(stdout)}"
+        )
+    try:
+        return json.loads(lines[-1])
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(
+            f"[{step_id}] Failed to decode structured summary JSON from stdout last line: {exc}. "
+            f"stderr_tail:\n{_tail_lines(stderr)}\nstdout_tail:\n{_tail_lines(stdout)}"
+        ) from exc
+
+
+def run_step(
+    args: list[str],
+    cwd: Path,
+    *,
+    step_id: str,
+    summary_json_path: Path | None = None,
+) -> dict[str, Any]:
+    cmd = list(args)
+    if summary_json_path is not None:
+        cmd.extend(["--summary-json", str(summary_json_path)])
+
     result = subprocess.run(
-        args,
+        cmd,
         cwd=cwd,
         capture_output=True,
         text=True,
         check=True,
     )
-    stdout = result.stdout.strip()
-    if not stdout:
-        return {}
-    return json.loads(stdout)
+
+    if summary_json_path is not None:
+        if not summary_json_path.exists():
+            raise RuntimeError(
+                f"[{step_id}] --summary-json output was not created: {summary_json_path}. "
+                f"stderr_tail:\n{_tail_lines(result.stderr)}\nstdout_tail:\n{_tail_lines(result.stdout)}"
+            )
+        return load_json(summary_json_path)
+
+    return _load_step_summary_from_stdout(stdout=result.stdout, stderr=result.stderr, step_id=step_id)
 
 
 def main() -> int:
@@ -102,72 +147,92 @@ def main() -> int:
     )
     mt5_request_path = resolved_paths.mt5_request_path
 
-    import_summary: dict[str, Any] | None = None
-    if not args.skip_import:
-        import_cmd = [
+    with tempfile.TemporaryDirectory(prefix="runtime_parity_after_mt5_") as temp_dir:
+        temp_dir_path = Path(temp_dir)
+
+        import_summary: dict[str, Any] | None = None
+        if not args.skip_import:
+            import_cmd = [
+                sys.executable,
+                "foundation/parity/import_fpmarkets_v2_mt5_snapshot_audit.py",
+                "--mt5-request",
+                str(mt5_request_path),
+                "--destination-path",
+                str(resolved_paths.mt5_snapshot_path),
+            ]
+            if args.common_root:
+                import_cmd.extend(["--common-root", args.common_root])
+            if args.source_path:
+                import_cmd.extend(["--source-path", args.source_path])
+            import_summary = run_step(
+                import_cmd,
+                cwd=repo_root,
+                step_id="import",
+                summary_json_path=temp_dir_path / "import_summary.json",
+            )
+
+        compare_cmd = [
             sys.executable,
-            "foundation/parity/import_fpmarkets_v2_mt5_snapshot_audit.py",
+            "foundation/parity/compare_fpmarkets_v2_runtime_parity.py",
+            "--python-snapshot",
+            str(resolved_paths.python_snapshot_path),
             "--mt5-request",
             str(mt5_request_path),
-            "--destination-path",
+            "--mt5-snapshot",
             str(resolved_paths.mt5_snapshot_path),
+            "--output-json",
+            str(resolved_paths.comparison_json_path),
+            "--tolerance",
+            str(args.tolerance),
         ]
-        if args.common_root:
-            import_cmd.extend(["--common-root", args.common_root])
-        if args.source_path:
-            import_cmd.extend(["--source-path", args.source_path])
-        import_summary = run_step(import_cmd, cwd=repo_root)
+        compare_summary = run_step(
+            compare_cmd,
+            cwd=repo_root,
+            step_id="compare",
+            summary_json_path=temp_dir_path / "compare_summary.json",
+        )
 
-    compare_cmd = [
-        sys.executable,
-        "foundation/parity/compare_fpmarkets_v2_runtime_parity.py",
-        "--python-snapshot",
-        str(resolved_paths.python_snapshot_path),
-        "--mt5-request",
-        str(mt5_request_path),
-        "--mt5-snapshot",
-        str(resolved_paths.mt5_snapshot_path),
-        "--output-json",
-        str(resolved_paths.comparison_json_path),
-        "--tolerance",
-        str(args.tolerance),
-    ]
-    compare_summary = run_step(compare_cmd, cwd=repo_root)
-
-    render_cmd = [
-        sys.executable,
-        "foundation/parity/render_fpmarkets_v2_runtime_parity_report.py",
-        "--comparison-json",
-        str(resolved_paths.comparison_json_path),
-        "--python-snapshot",
-        str(resolved_paths.python_snapshot_path),
-        "--mt5-request",
-        str(mt5_request_path),
-        "--mt5-snapshot",
-        str(resolved_paths.mt5_snapshot_path),
-        "--report-path",
-        str(resolved_paths.report_path),
-    ]
-    if args.reviewed_on:
-        render_cmd.extend(["--reviewed-on", args.reviewed_on])
-    render_summary = run_step(render_cmd, cwd=repo_root)
+        render_cmd = [
+            sys.executable,
+            "foundation/parity/render_fpmarkets_v2_runtime_parity_report.py",
+            "--comparison-json",
+            str(resolved_paths.comparison_json_path),
+            "--python-snapshot",
+            str(resolved_paths.python_snapshot_path),
+            "--mt5-request",
+            str(mt5_request_path),
+            "--mt5-snapshot",
+            str(resolved_paths.mt5_snapshot_path),
+            "--report-path",
+            str(resolved_paths.report_path),
+        ]
+        if args.reviewed_on:
+            render_cmd.extend(["--reviewed-on", args.reviewed_on])
+        render_summary = run_step(
+            render_cmd,
+            cwd=repo_root,
+            step_id="render",
+            summary_json_path=temp_dir_path / "render_summary.json",
+        )
 
     mt5_request = resolved_paths.mt5_request
-    print(
-        json.dumps(
-            {
-                "status": "ok",
-                "stage_name": resolved_paths.stage_name,
-                "import_performed": not args.skip_import,
-                "import_summary": import_summary,
-                "compare_summary": compare_summary,
-                "render_summary": render_summary,
-                "common_files_output_path": mt5_request.get("common_files_output_path"),
-                "repo_import_path": mt5_request.get("repo_import_path"),
-            },
-            indent=2,
-        )
-    )
+    summary = {
+        "status": "ok",
+        "stage_name": resolved_paths.stage_name,
+        "import_performed": not args.skip_import,
+        "import_summary": import_summary,
+        "compare_summary": compare_summary,
+        "render_summary": render_summary,
+        "common_files_output_path": mt5_request.get("common_files_output_path"),
+        "repo_import_path": mt5_request.get("repo_import_path"),
+    }
+
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+
+    print(json.dumps(summary, indent=2))
     return 0
 
 

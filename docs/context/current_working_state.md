@@ -1,46 +1,55 @@
-# Current Working State
+﻿# Current Working State
 
-- updated_on: `2026-04-20`
+- updated_on: `2026-04-23`
 - workspace: `Project_Obsidian_Prime_v2`
 - project_mode: `foundation_restart`
-- active_stage: `05_exploration_kernel_freeze`
-- active_branch: `codex/stage05-broader-rebind`
+- active_stage: `07_alpha_search`
+- active_branch: `main`
 
 ## Read This First
 
 - bootstrap entrypoint: `AGENTS.md`
 - canonical re-entry order and truth precedence: `docs/policies/reentry_order.md`
 - latest durable decisions to expect during that pass:
-  - `docs/decisions/2026-04-19_stage05_broader_0002_contract_aligned_rebind.md`
-  - `docs/decisions/2026-04-19_stage05_broader_sample_first_lane.md`
-  - `docs/decisions/2026-04-19_stage04_close_and_stage05_open.md`
-  - `docs/decisions/2026-04-19_stage03_close_and_stage04_open.md`
+  - `docs/decisions/2026-04-22_stage06_close_and_stage07_open.md`
+  - `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
+  - `docs/decisions/2026-04-21_stage06_first_tier_b_charter_adopted.md`
+  - `docs/decisions/2026-04-21_stage06_first_scorecard_materialized.md`
+  - `docs/decisions/2026-04-20_stage06_first_readiness_boundary.md`
+  - `docs/decisions/2026-04-20_stage05_close_and_stage06_open.md`
+  - `docs/decisions/2026-04-20_stage05_broader_0003_reinforcement_pack_materialized.md`
+  - `docs/decisions/2026-04-20_stage05_helper_0001_first_focused_pack.md`
+  - `docs/decisions/2026-04-20_stage05_dual_followup_order.md`
   - `docs/decisions/2026-04-18_tiered_readiness_exploration_boundary.md`
-  - `docs/decisions/2026-04-18_stage03_bound_minimum_fixture_pack.md`
 
 ## Current Read
 
 - this workspace is a concept-preserving reboot, not a legacy continuation
 - no v2 alpha incumbent has been promoted yet, by policy rather than by delay
-- current v2 foundation truth already exists and is anchored in `workspace_state.yaml`, the active stage `selection_status.md`, and durable decision memos
-- current v2 operating truth still begins only after the later exploration-kernel freeze exists; the dataset-contract closure, deterministic feature-dataset closure, first model-input parity closure, and first artifact-identity closure now exist, but they still do not by themselves promote an operating line
-- `00_foundation_sprint` is closed as planning scaffold complete, `01_dataset_contract_freeze` is closed as the first materialized dataset-contract evidence pack, `02_feature_dataset_closure` is closed after a deterministic rerun match, and `03_runtime_parity_closure` is now closed after the first v2-native five-window pack matched within the agreed tolerance
-- the first Stage 03 evaluated pack now closes model-input parity on the contract surface with `tolerance_parity=true`, `max_abs_diff=1.6846210968424202e-06`, `4 ready rows + 1 negative non-ready row`, and zero features over the agreed tolerance
-- the remaining `exact_parity=false` note is bounded to floating-point serialization drift and is not treated as a contract-surface blocker for Stage 03
-- the first v2-native MT5 snapshot rows now carry explicit machine-readable identity fields including `dataset_id`, `fixture_set_id`, `bundle_id`, `report_id`, `runtime_id`, `parser_version`, `feature_contract_version`, `runtime_contract_version`, and `feature_order_hash`
-- the first parity comparison summary now proves that the request and MT5 snapshot agree on those identity values and on the tracked comparison-side artifact hashes for the first pack; the rendered report and artifact registry still carry linked evidence for the same pack through `required_artifact_hashes_checked` and registry rows rather than through direct comparison-summary proof
-- `04_artifact_identity_closure` is now closed because the explicit Stage 04 read names one aligned machine-readable identity chain across the request pack, MT5 snapshot rows, comparison summary, rendered report, and registry rows, and the recorded hashes remain internally consistent on the materialized first pack
-- the Stage 04 runtime self-check meaning is satisfied on the first pack because the MT5 audit path loaded the declared identity inputs, echoed them into every snapshot row, and the comparison summary verified those exported values and derived feature-order hashes against the declared request pack
-- `05_exploration_kernel_freeze` remains the active stage, and the first downstream lane is now frozen to `broader-sample parity` rather than `runtime-helper parity` or a separate exploration charter
-- the new broader-sample charter treats that lane as a `pre-exploration validation lane` only; it extends the existing minimum-pack artifact family into a fixed `24-window` stratified audit pack and does not change the current strict Tier A runtime rule
-- the first broader evaluated pack `broader_0001` is retained as pre-alignment mismatch-open evidence rather than active Stage 05 truth; it remains useful diagnostic evidence, but it no longer carries the active broader request-pack identity after the localized contract-alignment fixes landed
-- those localized fixes are now materialized in the active code path: Python external proxy features are computed `raw-series-first`, the MT5 broader audit loader uses the full declared contract window through each audited close instead of the earlier short trailing slice, and the MT5 `supertrend_10_3` seed rule now follows the current Python contract surface
-- the active charter-aligned broader-sample inventory, machine-readable selection manifest, Python snapshot, MT5 request, MT5 input `.set`, tester `.ini`, imported MT5 snapshot, broader comparison summary, and rendered broader parity report now exist under the `broader_0002` identity family in `stages/05_exploration_kernel_freeze/`
-- the active broader evaluated pack `broader_0002` now reaches the first broader tolerance-closed read rather than mismatch-open evidence: all `24` frozen fixtures matched by id and timestamp with zero unexpected MT5 rows, all `16` ready rows match within tolerance, all `8` negative rows match on the strict non-ready comparison rule, `exact_parity=false`, `tolerance_parity=true`, `max_abs_diff=3.9019953135266405e-06`, and zero features remain over the agreed tolerance
-- the localized Stage 05 blocker on the active pack is now resolved on materialized evidence: the MT5 audit path skips a tester-synthesized single-bar decimal-scale artifact in early-history `NVDA` history, and the pre-open negative rows now resolve to the same external-alignment-missing skip-reason family that the Python side expects
-- that first broader tolerance-closed read does not by itself close runtime-helper parity, does not by itself close broader-sample parity as a separate stage read, and does not promote any operating line; the remaining `exact_parity=false` note stays bounded to floating-point serialization drift
+- the foundation closure path is now explicit through `05_exploration_kernel_freeze`; `00_foundation_sprint`, `01_dataset_contract_freeze`, `02_feature_dataset_closure`, `03_runtime_parity_closure`, `04_artifact_identity_closure`, and `05_exploration_kernel_freeze` are all now closed on materialized v2 evidence
+- current v2 operating truth still has no promoted operating line; the only current runtime rule remains the strict `Tier A` contract-aligned line, and Stage `07` does not change that by itself
+- the first Stage 03 evaluated pack still closes model-input parity on the contract surface with `tolerance_parity=true`, `max_abs_diff=1.6846210968424202e-06`, `4 ready rows + 1 negative non-ready row`, and zero features over the agreed tolerance
+- the remaining `exact_parity=false` note on Stage 03 remains bounded to floating-point serialization drift and is not treated as a contract-surface blocker
+- Stage 04 remains closed because the first v2-native machine-readable identity chain stayed aligned across the request pack, MT5 snapshot rows, comparison summary, rendered report, and registry rows
+- Stage 05 is now also closed, but only on its own boundary: the active `broader_0002` twenty-four-window pack reached the first broader tolerance-closed exact-open read, `helper_0001` reached the first separate helper-focused tolerance-closed exact-open read on a frozen eight-window subset, and the non-overlapping additive `broader_0003` reinforcement pack now also reproduced a native MT5 tolerance-closed exact-open read with `matched_fixtures=24`, `unexpected_record_count=0`, `tolerance_parity=true`, `exact_parity=false`, and `max_abs_diff=7.160007811535252e-06`
+- that Stage 05 closure does not claim separate runtime-helper parity closure, does not claim separate broader-sample parity closure, and does not promote any operating line; it closes only the exploration-kernel freeze boundary by making the first downstream exploration family explicit enough that later work cannot drift open by implication
+- `06_tiered_readiness_exploration` is now closed because the deterministic readiness boundary, reporting interface, scorecard family, first v2-native baseline seed, additive follow-up pack, and first shared keep42 reduced-context model are all materialized enough that the readiness-family question no longer needs the active-stage slot
+- `07_alpha_search` is now the active stage because the next bounded question is no longer whether the separate readiness family exists, but whether the first `Tier B dual verdict packet (Tier B 이중 판정 팩)` on a validated user-weight rerun keeps the separate `Tier B` lane alive and hands it forward as an `MT5 feasibility candidate (MT5 가능성 후보)` without crossing into an opened `MT5 path (MT5 경로)` or a promoted operating-line claim (승격 운영선 주장)
+- the first Stage 06 governance lock still fixes the deterministic boundary as: if `Group 1` or `Group 2` fails -> `tier_c`; else if `Group 3`, `Group 4`, and `Group 5` are all complete -> `tier_a`; else if exactly `1` or `2` of `Group 3` to `Group 5` are complete -> `tier_b`; else -> `tier_c`
+- `group complete` remains fixed to exact-timestamp required-symbol and required-field presence with no forward-fill, no fabricate path, and computable required semantics
+- all future Tier B work must stay separate from the current strict Tier A runtime rule and must carry the fixed `readiness_tier`, `missing_groups`, `missing_symbols`, and `reporting_lane` interface
+- `B-mixed-partial` remains a vocabulary-only candidate term and is not an eligible materialized readiness rule in the first Stage 06 boundary
+- the first Stage 06 scorecard family remains materialized as row-level labels under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet`, a machine-readable summary under `stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_scorecard_fpmarkets_v2_tiered_readiness_0001.json`, and a review report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tiered_readiness_0001.md`
+- that first scorecard keeps the current strict Tier A runtime rule unchanged and reads the shared window as `tier_a=56988`, `tier_b=88303`, `tier_c=116053` plus the practical window as `tier_a=55457`, `tier_b=86192`, `tier_c=113352`
+- the first Stage 06 offline-only Tier B experiment charter remains accepted under `docs/adr/0003_tier_b_reduced_risk_experiment_charter.md`, but its original baseline-family reuse hypothesis is now superseded by `docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md`
+- the first Stage 06 `v2-native baseline seed (v2 고유 기준선 시드)` is now materialized under `stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/`; it fits a first `3-class Gaussian Naive Bayes (3분류 가우시안 나이브 베이즈)` model on `34695` `Tier A` train rows only with `q33=-0.00035087247936272335` and `q67=0.0004049556640609367`
+- the paired report under `stages/06_tiered_readiness_exploration/03_reviews/report_fpmarkets_v2_tier_b_offline_evaluation_0001.md` separates `validation (검증)` and `holdout (보류 평가)` KPI reads for `strict_tier_a` and `tier_b_exploration` while keeping mixed aggregates `info-only (정보용)` and leaving runtime or promotion meaning closed
+- the first shared `Tier B reduced-context model (Tier B 축약 문맥 모델)` is now also materialized under `stages/06_tiered_readiness_exploration/02_runs/tier_b_reduced_context_0001/`; it keeps the first active surface to the shared `keep=42` features, leaves subtype tags `info-only (정보용)`, and improves the current `Tier B holdout (Tier B 보류 평가)` probabilistic read to `log_loss=1.503578`
+- the first Stage 07 packet is now fixed by decision as `docs/decisions/2026-04-23_stage07_tier_b_dual_verdict_packet_adopted.md`; it requires one validated user-provided `monthly-frozen weights CSV (월별 동결 가중치 CSV)` and reuses the current keep42 surface rather than opening a new model family
+- that keep42 surface remains weight-neutral on direct inputs because `top3_weighted_return_1` and `us100_minus_top3_weighted_return_1` stay outside the active feature set, so the rerun primarily closes the source-boundary question for the dual verdict packet
+- the placeholder weights table remains allowed only for that offline-only charter and does not justify simulated execution, MT5-path expansion, or operating promotion
+- no reduced-risk runtime family is materialized yet and no operating promotion is claimed from the scorecard, baseline seed, follow-up pack, reduced-context read, or charter alone
 - legacy winners remain archive notes and design evidence only; they do not define current v2 foundation truth or current v2 operating truth
-- `Tier A / Tier B / Tier C readiness` remains a downstream exploration vocabulary only; it does not relax the current strict-line foundation read
 
 ## Legacy Lessons Carried Forward
 
@@ -53,12 +62,10 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 
 ## Immediate Priorities
 
-1. carry the first broader tolerance-closed pack forward without conflating it with runtime-helper parity closure, broader-sample parity closure, or operating promotion
-2. decide whether the next Stage 05 evidence is additional broader-sample coverage or a separate runtime-helper parity lane
-3. keep the active broader `exact_parity=false` note bounded to floating-point serialization drift rather than a contract blocker
-4. keep the Stage 04 closure bounded to artifact identity rather than runtime-helper parity or operating promotion
-5. keep placeholder weights caveat explicit until a real monthly-weight source replaces the equal-weight table
-6. keep branch truth aligned to `codex/stage05-broader-rebind` until the handoff is merged
+1. materialize the first `Stage 07 Tier B dual verdict packet (Stage 07 Tier B 이중 판정 팩)` on a validated user-provided `monthly-frozen weights CSV (월별 동결 가중치 CSV)`
+2. decide from that packet whether the separate `Tier B` lane survives as `keep` or closes as `prune`
+3. decide from that packet whether the rerun is strong enough for `MT5 feasibility candidate (MT5 가능성 후보)` handoff only
+4. keep the current strict Tier A runtime rule unchanged until a later explicit exploration read says otherwise
 
 ## Foundation Closure Path
 
@@ -69,10 +76,18 @@ Use those findings as prior evidence and design guidance. Do not treat them as a
 5. `04_artifact_identity_closure`
 6. `05_exploration_kernel_freeze`
 
+All six foundation stages are now explicitly closed.
+
+## Active Exploration Stage
+
+1. `07_alpha_search`
+
 ## Do Not Do First
 
-- do not reopen `03_runtime_parity_closure` unless a new hypothesis breaks the first tolerance-closed pack or the agreed tolerance itself changes
-- do not treat Stage 03 closure as runtime-helper parity closure
-- do not treat the first machine-readable identity chain as automatic operating promotion
-- do not open a fresh alpha or range stage before Stage `05` closes
+- do not reopen `05_exploration_kernel_freeze` unless a new contradiction breaks the frozen `broader_0002 + helper_0001 + broader_0003` read
+- do not treat Stage 06 closure or the Stage 07 dual-verdict packet as runtime-helper parity closure, broader-sample parity closure, an opened `MT5 path (MT5 경로)`, or a promoted operating-line claim (승격 운영선 주장)
+- do not let any Stage 07 artifact imply that Tier B is contract-equivalent to the current strict Tier A line
+- do not treat the shared keep42 reduced-context read as a materialized runtime family or as permission to open simulated execution or MT5-path work
+- do not treat `B-mixed-partial` or any other non-binding vocabulary as an eligible first-boundary rule
+- do not compare future Tier B outputs head-to-head with Tier A without separate reporting lanes
 - do not let durable conclusions live only in branch notes or scratch files

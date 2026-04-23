@@ -44,6 +44,11 @@ def parse_args() -> argparse.Namespace:
         default=1e-5,
         help="Absolute tolerance for ready-row feature comparisons.",
     )
+    parser.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional path to write the structured step summary JSON.",
+    )
     return parser.parse_args()
 
 
@@ -713,21 +718,21 @@ def main() -> int:
     output_json_path.parent.mkdir(parents=True, exist_ok=True)
     output_json_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-    print(
-        json.dumps(
-            {
-                "status": "ok",
-                "output_json": str(output_json_path.resolve()),
-                "matched_fixtures": len(matched_records),
-                "missing_fixtures": missing_fixture_ids,
-                "unexpected_record_count": len(unexpected_records),
-                "exact_parity": exact_parity,
-                "tolerance_parity": tolerance_parity,
-                "max_abs_diff": summary["aggregate_results"]["max_abs_diff"],
-            },
-            indent=2,
-        )
-    )
+    step_summary = {
+        "status": "ok",
+        "output_json": str(output_json_path.resolve()),
+        "matched_fixtures": len(matched_records),
+        "missing_fixtures": missing_fixture_ids,
+        "unexpected_record_count": len(unexpected_records),
+        "exact_parity": exact_parity,
+        "tolerance_parity": tolerance_parity,
+        "max_abs_diff": summary["aggregate_results"]["max_abs_diff"],
+    }
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(step_summary, indent=2), encoding="utf-8")
+    print(json.dumps(step_summary, indent=2))
     return 0
 
 

@@ -5,6 +5,7 @@ import hashlib
 import json
 import sys
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -47,6 +48,34 @@ REPAIR_BUCKET_ORDER = (
 MINIMUM_BINDINGS_SEED_PATH = Path(
     "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/"
     "fixture_bindings_fpmarkets_v2_runtime_minimum_0001.json"
+)
+HELPER_SOURCE_BINDINGS_PATH = Path(
+    "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/"
+    "fixture_bindings_fpmarkets_v2_runtime_broader_0002.json"
+)
+BROADER_0002_SOURCE_MANIFEST_PATH = Path(
+    "stages/05_exploration_kernel_freeze/01_inputs/"
+    "second_bound_runtime_broader_fixture_manifest_0002.json"
+)
+HELPER_SOURCE_FIXTURE_IDS = (
+    "fix_regular_cash_session_0001",
+    "fix_cash_close_boundary_1555_0002",
+    "fix_cash_close_boundary_1600_0002",
+    "fix_dst_sensitive_utc4_0001",
+    "fix_dst_sensitive_utc5_0002",
+    "fix_full_external_alignment_0002",
+    "fix_negative_cash_open_missing_equities_0002",
+    "fix_negative_off_hours_post_close_0002",
+)
+HELPER_EXPECTED_BUCKETS = (
+    "regular_cash_session",
+    "cash_close_boundary_1555",
+    "cash_close_boundary_1600",
+    "dst_sensitive_utc4",
+    "dst_sensitive_utc5",
+    "full_external_alignment",
+    "negative_cash_open_missing_equities",
+    "negative_off_hours_post_close",
 )
 
 
@@ -192,6 +221,80 @@ PROFILES = {
         ),
         input_set_path=(
             "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/"
+            "mt5_snapshot_audit_inputs.set"
+        ),
+        source_stage="05_exploration_kernel_freeze",
+        emit_mt5_helpers=True,
+    ),
+    "broader_0003": ProfileConfig(
+        name="broader_0003",
+        description="Materialize the additional Stage 05 broader-sample reinforcement pack on the same frozen charter shape without reusing the active broader_0002 timestamps.",
+        fixture_set_id="fixture_fpmarkets_v2_runtime_broader_0003",
+        bundle_id="bundle_fpmarkets_v2_runtime_broader_0003",
+        report_id="report_fpmarkets_v2_runtime_broader_parity_0003",
+        python_snapshot_id="snapshot_fpmarkets_v2_runtime_python_broader_0003",
+        mt5_runtime_id="runtime_fpmarkets_v2_mt5_snapshot_broader_0003",
+        fixture_bindings_filename="fixture_bindings_fpmarkets_v2_runtime_broader_0003.json",
+        python_snapshot_filename="python_snapshot_fpmarkets_v2_runtime_broader_0003.json",
+        mt5_request_filename="mt5_snapshot_request_fpmarkets_v2_runtime_broader_0003.json",
+        mt5_windows_filename="mt5_target_windows_utc.txt",
+        hashes_filename="artifact_hashes.json",
+        mt5_audit_target_filename="mt5_feature_snapshot_audit_fpmarkets_v2_runtime_broader_0003.jsonl",
+        mt5_input_set_filename="mt5_snapshot_audit_inputs.set",
+        mt5_tester_ini_filename="mt5_tester_runtime_broader_pack_0003.ini",
+        mt5_common_files_relative_path=(
+            "Project_Obsidian_Prime_v2/runtime_parity/runtime_broader_pack_0003/"
+            "mt5_feature_snapshot_audit_fpmarkets_v2_runtime_broader_0003.jsonl"
+        ),
+        default_output_root="stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0003",
+        default_inventory_path="stages/05_exploration_kernel_freeze/01_inputs/third_bound_runtime_broader_fixture_inventory.md",
+        default_selection_manifest_path=(
+            "stages/05_exploration_kernel_freeze/01_inputs/"
+            "third_bound_runtime_broader_fixture_manifest_0003.json"
+        ),
+        repo_import_path=(
+            "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0003/"
+            "mt5_feature_snapshot_audit_fpmarkets_v2_runtime_broader_0003.jsonl"
+        ),
+        input_set_path=(
+            "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0003/"
+            "mt5_snapshot_audit_inputs.set"
+        ),
+        source_stage="05_exploration_kernel_freeze",
+        emit_mt5_helpers=True,
+    ),
+    "helper_0001": ProfileConfig(
+        name="helper_0001",
+        description="Materialize the first Stage 05 helper-focused runtime parity pack as a bounded subset of the active broader_0002 family.",
+        fixture_set_id="fixture_fpmarkets_v2_runtime_helper_0001",
+        bundle_id="bundle_fpmarkets_v2_runtime_helper_0001",
+        report_id="report_fpmarkets_v2_runtime_helper_parity_0001",
+        python_snapshot_id="snapshot_fpmarkets_v2_runtime_python_helper_0001",
+        mt5_runtime_id="runtime_fpmarkets_v2_mt5_snapshot_helper_0001",
+        fixture_bindings_filename="fixture_bindings_fpmarkets_v2_runtime_helper_0001.json",
+        python_snapshot_filename="python_snapshot_fpmarkets_v2_runtime_helper_0001.json",
+        mt5_request_filename="mt5_snapshot_request_fpmarkets_v2_runtime_helper_0001.json",
+        mt5_windows_filename="mt5_target_windows_utc.txt",
+        hashes_filename="artifact_hashes.json",
+        mt5_audit_target_filename="mt5_feature_snapshot_audit_fpmarkets_v2_runtime_helper_0001.jsonl",
+        mt5_input_set_filename="mt5_snapshot_audit_inputs.set",
+        mt5_tester_ini_filename="mt5_tester_runtime_helper_pack_0001.ini",
+        mt5_common_files_relative_path=(
+            "Project_Obsidian_Prime_v2/runtime_parity/runtime_helper_pack_0001/"
+            "mt5_feature_snapshot_audit_fpmarkets_v2_runtime_helper_0001.jsonl"
+        ),
+        default_output_root="stages/05_exploration_kernel_freeze/02_runs/runtime_helper_pack_0001",
+        default_inventory_path="stages/05_exploration_kernel_freeze/01_inputs/first_bound_runtime_helper_fixture_inventory.md",
+        default_selection_manifest_path=(
+            "stages/05_exploration_kernel_freeze/01_inputs/"
+            "first_bound_runtime_helper_fixture_manifest_0001.json"
+        ),
+        repo_import_path=(
+            "stages/05_exploration_kernel_freeze/02_runs/runtime_helper_pack_0001/"
+            "mt5_feature_snapshot_audit_fpmarkets_v2_runtime_helper_0001.jsonl"
+        ),
+        input_set_path=(
+            "stages/05_exploration_kernel_freeze/02_runs/runtime_helper_pack_0001/"
             "mt5_snapshot_audit_inputs.set"
         ),
         source_stage="05_exploration_kernel_freeze",
@@ -467,6 +570,17 @@ def selected_timestamps(fixtures: list[SelectedFixture]) -> set[pd.Timestamp]:
     return {fixture.row["timestamp"] for fixture in fixtures}
 
 
+def manifest_timestamp_set(manifest: dict[str, Any]) -> set[pd.Timestamp]:
+    return {
+        pd.Timestamp(str(fixture["timestamp_utc"]), tz="UTC")
+        for fixture in list(manifest.get("fixtures") or [])
+    }
+
+
+def load_manifest_timestamp_set(path: Path) -> set[pd.Timestamp]:
+    return manifest_timestamp_set(json.loads(path.read_text(encoding="utf-8")))
+
+
 def min_day_distance(candidate_row: pd.Series, chosen_rows: list[SelectedFixture]) -> int:
     if not chosen_rows:
         return -1
@@ -532,7 +646,11 @@ def select_bucket_rows(
     return rows
 
 
-def broader_bucket_candidates(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
+def broader_bucket_candidates(
+    base: pd.DataFrame,
+    *,
+    excluded_timestamps: set[pd.Timestamp] | None = None,
+) -> dict[str, pd.DataFrame]:
     practical = base.loc[base["timestamp"] >= PRACTICAL_MODELING_START_UTC].copy()
     valid = practical.loc[practical["valid_row"]].copy()
     invalid = practical.loc[~practical["valid_row"]].copy()
@@ -551,7 +669,8 @@ def broader_bucket_candidates(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         & ~invalid["invalid__weights_unavailable"]
     )
 
-    return {
+    excluded = excluded_timestamps or set()
+    buckets = {
         "regular_cash_session": valid.loc[
             valid["is_us_cash_open"].eq(1.0)
             & valid["is_first_30m_after_open"].eq(0.0)
@@ -574,6 +693,12 @@ def broader_bucket_candidates(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         "negative_off_hours_post_close": invalid.loc[
             shared_negative_mask & (invalid["ny_time"] > "16:00")
         ].copy(),
+    }
+    if not excluded:
+        return buckets
+    return {
+        bucket_name: frame.loc[~frame["timestamp"].isin(excluded)].copy()
+        for bucket_name, frame in buckets.items()
     }
 
 
@@ -691,8 +816,12 @@ def repair_broader_selection(
         )
 
 
-def select_broader_fixtures(base: pd.DataFrame) -> list[SelectedFixture]:
-    candidates = broader_bucket_candidates(base)
+def select_broader_fixtures(
+    base: pd.DataFrame,
+    *,
+    excluded_timestamps: set[pd.Timestamp] | None = None,
+) -> list[SelectedFixture]:
+    candidates = broader_bucket_candidates(base, excluded_timestamps=excluded_timestamps)
     chosen_global: list[SelectedFixture] = []
     selected_by_bucket: dict[str, list[SelectedFixture]] = {}
 
@@ -958,12 +1087,266 @@ def fixtures_from_manifest(base: pd.DataFrame, manifest: dict[str, Any]) -> list
     return fixtures
 
 
+def validate_helper_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
+    fixtures = list(manifest.get("fixtures") or [])
+    if len(fixtures) != 8:
+        raise RuntimeError(f"Expected 8 helper-focused fixtures, found {len(fixtures)}.")
+
+    timestamps = [fixture["timestamp_utc"] for fixture in fixtures]
+    if len(set(timestamps)) != 8:
+        raise RuntimeError("The helper manifest does not contain 8 distinct timestamps.")
+
+    ready_count = sum(1 for fixture in fixtures if bool(fixture["valid_row"]))
+    negative_count = len(fixtures) - ready_count
+    if ready_count != 6 or negative_count != 2:
+        raise RuntimeError(
+            f"Expected 6 ready rows and 2 negative rows, found {ready_count} ready and {negative_count} negative."
+        )
+
+    months = {fixture["month_ny"] for fixture in fixtures}
+    weekdays = {fixture["weekday_ny"] for fixture in fixtures}
+    offsets = {int(fixture["utc_offset_minutes"]) for fixture in fixtures}
+    if len(months) < 6:
+        raise RuntimeError("The helper manifest does not meet the six-month minimum.")
+    if len(weekdays) < 3:
+        raise RuntimeError("The helper manifest does not meet the three-weekday minimum.")
+    if not REQUIRED_UTC_OFFSETS.issubset(offsets):
+        raise RuntimeError("The helper manifest does not cover both UTC-4 and UTC-5.")
+
+    bucket_counts: dict[str, int] = {}
+    for fixture in fixtures:
+        bucket = str(fixture["bucket"])
+        bucket_counts[bucket] = bucket_counts.get(bucket, 0) + 1
+
+    for bucket in HELPER_EXPECTED_BUCKETS:
+        actual_count = bucket_counts.get(bucket, 0)
+        if actual_count != 1:
+            raise RuntimeError(f"Helper bucket {bucket} expected 1 fixture, found {actual_count}.")
+
+    return {
+        "fixture_count": len(fixtures),
+        "ready_count": ready_count,
+        "negative_count": negative_count,
+        "distinct_month_count_ny": len(months),
+        "distinct_weekday_count_ny": len(weekdays),
+        "utc_offsets_present": sorted(offsets),
+        "bucket_counts": bucket_counts,
+    }
+
+
+def validate_broader_manifest_distinct_from_source(
+    manifest: dict[str, Any],
+    source_manifest_path: Path,
+) -> None:
+    source_manifest = json.loads(source_manifest_path.read_text(encoding="utf-8"))
+    overlap = manifest_timestamp_set(manifest).intersection(manifest_timestamp_set(source_manifest))
+    if overlap:
+        overlap_text = ", ".join(sorted(iso_z(timestamp) for timestamp in overlap))
+        raise RuntimeError(
+            "The broader reinforcement manifest reuses timestamps from the active broader_0002 pack: "
+            f"{overlap_text}"
+        )
+
+
+def select_helper_fixtures(base: pd.DataFrame) -> list[SelectedFixture]:
+    if not HELPER_SOURCE_BINDINGS_PATH.exists():
+        raise RuntimeError(
+            "The helper-focused Stage 05 pack depends on the active broader_0002 bindings, "
+            f"but they are missing: {HELPER_SOURCE_BINDINGS_PATH}"
+        )
+
+    broader_bindings = json.loads(HELPER_SOURCE_BINDINGS_PATH.read_text(encoding="utf-8"))
+    broader_fixtures = fixtures_from_existing_bindings(base, broader_bindings)
+    by_id = {fixture.fixture_id: fixture for fixture in broader_fixtures}
+
+    ordered: list[SelectedFixture] = []
+    for selection_rank, (fixture_id, expected_bucket) in enumerate(
+        zip(HELPER_SOURCE_FIXTURE_IDS, HELPER_EXPECTED_BUCKETS),
+        start=1,
+    ):
+        fixture = by_id.get(fixture_id)
+        if fixture is None:
+            raise RuntimeError(
+                "The helper-focused Stage 05 pack could not find the required broader_0002 source fixture: "
+                f"{fixture_id}"
+            )
+        if fixture.bucket != expected_bucket:
+            raise RuntimeError(
+                f"Helper source fixture {fixture_id} expected bucket {expected_bucket}, "
+                f"found {fixture.bucket}."
+            )
+        ordered.append(
+            SelectedFixture(
+                fixture_id=fixture.fixture_id,
+                stratum=fixture.stratum,
+                bucket=fixture.bucket,
+                expected_behavior=fixture.expected_behavior,
+                row=fixture.row,
+                selection_rank=selection_rank,
+                bucket_rank=1,
+            )
+        )
+
+    helper_manifest = helper_selection_manifest(PROFILES["helper_0001"], ordered)
+    validate_helper_manifest(helper_manifest)
+    return ordered
+
+
+def helper_selection_manifest(profile: ProfileConfig, fixtures: list[SelectedFixture]) -> dict[str, Any]:
+    summary = broader_constraint_summary(fixtures)
+    return {
+        "profile": profile.name,
+        "selection_method": "reuse_active_broader_0002_helper_sensitive_subset_v1",
+        "source_fixture_set_id": "fixture_fpmarkets_v2_runtime_broader_0002",
+        "source_bundle_id": "bundle_fpmarkets_v2_runtime_broader_0002",
+        "source_report_id": "report_fpmarkets_v2_runtime_broader_parity_0002",
+        "source_fixture_bindings_ref": HELPER_SOURCE_BINDINGS_PATH.as_posix(),
+        "dataset_id": DATASET_ID,
+        "fixture_set_id": profile.fixture_set_id,
+        "bundle_id": profile.bundle_id,
+        "report_id": profile.report_id,
+        "python_snapshot_id": profile.python_snapshot_id,
+        "target_runtime_id": profile.mt5_runtime_id,
+        "parser_version": PARSER_VERSION,
+        "feature_contract_version": FEATURE_CONTRACT_VERSION,
+        "parser_contract_version": PARSER_CONTRACT_VERSION,
+        "runtime_contract_version": RUNTIME_CONTRACT_VERSION,
+        "feature_order_hash": EXPECTED_FEATURE_ORDER_HASH,
+        "selection_constraints": {
+            "fixture_count": 8,
+            "ready_rows": 6,
+            "negative_non_ready_rows": 2,
+            "minimum_distinct_months_ny": 6,
+            "minimum_distinct_weekdays_ny": 3,
+            "required_utc_offsets": sorted(REQUIRED_UTC_OFFSETS),
+            "required_buckets": list(HELPER_EXPECTED_BUCKETS),
+            "source_fixture_family": "runtime_broader_pack_0002",
+        },
+        "selection_coverage": {
+            "distinct_month_count_ny": summary["distinct_month_count"],
+            "distinct_weekday_count_ny": summary["distinct_weekday_count"],
+            "utc_offsets_present": summary["utc_offsets"],
+            "bucket_counts": summary["bucket_counts"],
+        },
+        "fixtures": [
+            {
+                "fixture_id": fixture.fixture_id,
+                "selection_rank": fixture.selection_rank,
+                "bucket_rank": fixture.bucket_rank,
+                "stratum": fixture.stratum,
+                "bucket": fixture.bucket,
+                "timestamp_utc": iso_z(fixture.row["timestamp"]),
+                "timestamp_america_new_york": fixture.row["timestamp_ny"].isoformat(),
+                "month_ny": str(fixture.row["month_ny"]),
+                "weekday_ny": str(fixture.row["weekday_ny"]),
+                "utc_offset_minutes": int(fixture.row["utc_offset_minutes"]),
+                "valid_row": bool(fixture.row["valid_row"]),
+                "expected_behavior": fixture.expected_behavior,
+            }
+            for fixture in fixtures
+        ],
+    }
+
+
+def render_helper_inventory(
+    profile: ProfileConfig,
+    fixtures: list[SelectedFixture],
+    manifest_repo_path: str,
+    python_snapshot_relative_ref: str,
+    run_root_name: str,
+) -> str:
+    summary = validate_helper_manifest(helper_selection_manifest(profile, fixtures))
+    lines = [
+        "# Bound Runtime Helper Fixture Inventory",
+        "",
+        "## Identity",
+        "",
+        f"- profile: `{profile.name}`",
+        f"- fixture_set_id: `{profile.fixture_set_id}`",
+        f"- created_on: `{date.today().isoformat()}`",
+        "- owner: `Project_Obsidian_Prime_v2 workspace`",
+        f"- dataset_id: `{DATASET_ID}`",
+        "- source_fixture_set_id: `fixture_fpmarkets_v2_runtime_broader_0002`",
+        "- source_bundle_id: `bundle_fpmarkets_v2_runtime_broader_0002`",
+        f"- bundle_id: `{profile.bundle_id}`",
+        f"- python_snapshot_id: `{profile.python_snapshot_id}`",
+        f"- target_mt5_runtime_id: `{profile.mt5_runtime_id}`",
+        f"- report_id: `{profile.report_id}`",
+        "",
+        "## Contract Versions",
+        "",
+        f"- feature_contract_version: `{FEATURE_CONTRACT_VERSION}`",
+        f"- parser_version: `{PARSER_VERSION}`",
+        f"- parser_contract_version: `{PARSER_CONTRACT_VERSION}`",
+        f"- runtime_contract_version: `{RUNTIME_CONTRACT_VERSION}`",
+        f"- feature_order_hash: `{EXPECTED_FEATURE_ORDER_HASH}`",
+        "",
+        "## Coverage Summary",
+        "",
+        "- pack_type: `helper-focused reuse subset`",
+        f"- fixture_count: `{summary['fixture_count']}`",
+        f"- ready_rows: `{summary['ready_count']}`",
+        f"- negative_non_ready_rows: `{summary['negative_count']}`",
+        f"- distinct_month_count_ny: `{summary['distinct_month_count_ny']}`",
+        f"- distinct_weekday_count_ny: `{summary['distinct_weekday_count_ny']}`",
+        f"- utc_offsets_present: `{', '.join(str(value) for value in summary['utc_offsets_present'])}`",
+        "- source_fixture_family: `runtime_broader_pack_0002`",
+        f"- selection_manifest_ref: `{manifest_repo_path}`",
+        "",
+    ]
+
+    grouped: dict[str, list[SelectedFixture]] = {}
+    for fixture in fixtures:
+        grouped.setdefault(fixture.stratum, []).append(fixture)
+
+    for heading in (
+        "regular_cash_session",
+        "cash_close_boundary",
+        "dst_sensitive",
+        "full_external_alignment",
+        "cash_open_missing_equities",
+        "off_hours_external_alignment_missing",
+    ):
+        if heading not in grouped:
+            continue
+        lines.extend([f"## {heading}", ""])
+        for fixture in grouped[heading]:
+            lines.append(f"### {fixture.fixture_id}")
+            lines.append(f"- stratum: `{fixture.stratum}`")
+            lines.append(f"- bucket: `{fixture.bucket}`")
+            lines.append(f"- evaluated_timestamp_utc: `{iso_z(fixture.row['timestamp'])}`")
+            lines.append(f"- evaluated_timestamp_america_new_york: `{fixture.row['timestamp_ny'].isoformat()}`")
+            lines.append(f"- month_ny: `{fixture.row['month_ny']}`")
+            lines.append(f"- weekday_ny: `{fixture.row['weekday_ny']}`")
+            lines.append(f"- utc_offset_minutes: `{int(fixture.row['utc_offset_minutes'])}`")
+            lines.append(f"- expected_row_ready: `{bool(fixture.row['valid_row'])}`")
+            lines.append(f"- expected_contract_behavior: `{fixture.expected_behavior}`")
+            lines.append("- source_fixture_family: `runtime_broader_pack_0002`")
+            lines.append(f"- source_artifact_ref: `{python_snapshot_relative_ref}`")
+            lines.append("")
+
+    lines.extend(
+        [
+            "## Notes",
+            "",
+            "- known_caveats: `this helper-focused fixture inventory, selection manifest, Python snapshot, MT5 request, and MT5 helper pack are materialized, but helper-path closure is still pending the paired evaluation pass and later Stage 05 read update`",
+            f"- mt5_request_ref: `../02_runs/{run_root_name}/{profile.mt5_request_filename}`",
+            f"- mt5_window_spec_ref: `../02_runs/{run_root_name}/{profile.mt5_windows_filename}`",
+            f"- selection_manifest_ref: `{manifest_repo_path}`",
+            "- reuse_guidance: `this inventory freezes the first helper-focused Stage 05 subset derived from the active broader_0002 pack; the paired MT5 snapshot export and parity comparison must reuse these same timestamps and ids rather than sampling a new helper window set`",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def render_broader_inventory(
     profile: ProfileConfig,
     fixtures: list[SelectedFixture],
     manifest_repo_path: str,
     python_snapshot_relative_ref: str,
     run_root_name: str,
+    source_manifest_repo_path: str | None = None,
 ) -> str:
     summary = broader_constraint_summary(fixtures)
     lines = [
@@ -973,7 +1356,7 @@ def render_broader_inventory(
         "",
         f"- profile: `{profile.name}`",
         f"- fixture_set_id: `{profile.fixture_set_id}`",
-        "- created_on: `2026-04-19`",
+        f"- created_on: `{date.today().isoformat()}`",
         "- owner: `Project_Obsidian_Prime_v2 workspace`",
         f"- dataset_id: `{DATASET_ID}`",
         f"- bundle_id: `{profile.bundle_id}`",
@@ -1001,6 +1384,16 @@ def render_broader_inventory(
         f"- selection_manifest_ref: `{manifest_repo_path}`",
         "",
     ]
+    if source_manifest_repo_path is not None:
+        lines.extend(
+            [
+                "## Reinforcement Boundary",
+                "",
+                "- reinforcement_role: `additional broader-sample coverage without reusing the active broader_0002 timestamps`",
+                f"- excluded_source_selection_manifest_ref: `{source_manifest_repo_path}`",
+                "",
+            ]
+        )
 
     grouped: dict[str, list[SelectedFixture]] = {}
     for fixture in fixtures:
@@ -1040,6 +1433,11 @@ def render_broader_inventory(
             f"- mt5_request_ref: `../02_runs/{run_root_name}/{profile.mt5_request_filename}`",
             f"- mt5_window_spec_ref: `../02_runs/{run_root_name}/{profile.mt5_windows_filename}`",
             f"- selection_manifest_ref: `{manifest_repo_path}`",
+            *(
+                [f"- excluded_source_selection_manifest_ref: `{source_manifest_repo_path}`"]
+                if source_manifest_repo_path is not None
+                else []
+            ),
             "- reuse_guidance: `this inventory now freezes the selected Stage 05 broader-sample twenty-four-window pack; the paired MT5 snapshot export and parity comparison must reuse these same timestamps and ids rather than sampling a new window set`",
             "",
         ]
@@ -1249,14 +1647,29 @@ def broader_selection_materialize(
     output_root: Path,
     force_reselect: bool,
 ) -> tuple[list[SelectedFixture], dict[str, Any]]:
+    source_manifest_path = (
+        BROADER_0002_SOURCE_MANIFEST_PATH if profile.name == "broader_0003" else None
+    )
+    excluded_timestamps = (
+        load_manifest_timestamp_set(source_manifest_path) if source_manifest_path is not None else set()
+    )
     if manifest_path.exists() and not force_reselect:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         validate_broader_manifest(manifest)
+        if source_manifest_path is not None:
+            validate_broader_manifest_distinct_from_source(manifest, source_manifest_path)
         fixtures = fixtures_from_manifest(base=base, manifest=manifest)
     else:
-        fixtures = select_broader_fixtures(base)
+        fixtures = select_broader_fixtures(base, excluded_timestamps=excluded_timestamps)
         manifest = broader_selection_manifest(profile, fixtures)
+        if source_manifest_path is not None:
+            manifest["selection_method"] = "balance_first_global_and_bucket_greedy_excluding_active_broader_0002_v1"
+            manifest["excluded_source_fixture_set_id"] = "fixture_fpmarkets_v2_runtime_broader_0002"
+            manifest["excluded_source_bundle_id"] = "bundle_fpmarkets_v2_runtime_broader_0002"
+            manifest["excluded_source_selection_manifest_ref"] = source_manifest_path.as_posix()
         validate_broader_manifest(manifest)
+        if source_manifest_path is not None:
+            validate_broader_manifest_distinct_from_source(manifest, source_manifest_path)
         write_json(manifest_path, manifest)
 
     raw_presence = build_raw_presence(raw_root)
@@ -1270,6 +1683,7 @@ def broader_selection_materialize(
         manifest_repo_path=manifest_path.as_posix(),
         python_snapshot_relative_ref=f"../02_runs/{run_root_name}/{profile.python_snapshot_filename}",
         run_root_name=run_root_name,
+        source_manifest_repo_path=source_manifest_path.as_posix() if source_manifest_path is not None else None,
     )
     inventory_path.parent.mkdir(parents=True, exist_ok=True)
     inventory_path.write_text(inventory_markdown, encoding="utf-8")
@@ -1279,6 +1693,53 @@ def broader_selection_materialize(
         "inventory_path": str(inventory_path.resolve()),
         **generated_paths,
         "selection_coverage": validate_broader_manifest(
+            json.loads(manifest_path.read_text(encoding="utf-8"))
+        ),
+    }
+    if source_manifest_path is not None:
+        summary["excluded_source_selection_manifest_path"] = str(source_manifest_path.resolve())
+    return fixtures, summary
+
+
+def helper_selection_materialize(
+    profile: ProfileConfig,
+    raw_root: Path,
+    base: pd.DataFrame,
+    manifest_path: Path,
+    inventory_path: Path,
+    output_root: Path,
+    force_reselect: bool,
+) -> tuple[list[SelectedFixture], dict[str, Any]]:
+    if manifest_path.exists() and not force_reselect:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        validate_helper_manifest(manifest)
+        fixtures = fixtures_from_manifest(base=base, manifest=manifest)
+    else:
+        fixtures = select_helper_fixtures(base)
+        manifest = helper_selection_manifest(profile, fixtures)
+        validate_helper_manifest(manifest)
+        write_json(manifest_path, manifest)
+
+    raw_presence = build_raw_presence(raw_root)
+    payload = build_runtime_payload(profile=profile, fixtures=fixtures, raw_presence=raw_presence)
+    generated_paths = write_runtime_pack(profile=profile, output_root=output_root, payload=payload, fixtures=fixtures)
+
+    run_root_name = output_root.name
+    inventory_markdown = render_helper_inventory(
+        profile=profile,
+        fixtures=fixtures,
+        manifest_repo_path=manifest_path.as_posix(),
+        python_snapshot_relative_ref=f"../02_runs/{run_root_name}/{profile.python_snapshot_filename}",
+        run_root_name=run_root_name,
+    )
+    inventory_path.parent.mkdir(parents=True, exist_ok=True)
+    inventory_path.write_text(inventory_markdown, encoding="utf-8")
+
+    summary = {
+        "selection_manifest_path": str(manifest_path.resolve()),
+        "inventory_path": str(inventory_path.resolve()),
+        **generated_paths,
+        "selection_coverage": validate_helper_manifest(
             json.loads(manifest_path.read_text(encoding="utf-8"))
         ),
     }
@@ -1328,19 +1789,32 @@ def materialize_runtime_pack(
     manifest_path = selection_manifest_path or Path(profile.default_selection_manifest_path or "")
     inventory_path = inventory_path or Path(profile.default_inventory_path or "")
     if not manifest_path:
-        raise RuntimeError("The broader runtime profile requires a selection manifest path.")
+        raise RuntimeError("The selected runtime profile requires a selection manifest path.")
     if not inventory_path:
-        raise RuntimeError("The broader runtime profile requires an inventory path.")
+        raise RuntimeError("The selected runtime profile requires an inventory path.")
 
-    fixtures, summary = broader_selection_materialize(
-        profile=profile,
-        raw_root=raw_root,
-        base=base,
-        manifest_path=manifest_path,
-        inventory_path=inventory_path,
-        output_root=output_root,
-        force_reselect=force_reselect,
-    )
+    if profile_name.startswith("broader_"):
+        fixtures, summary = broader_selection_materialize(
+            profile=profile,
+            raw_root=raw_root,
+            base=base,
+            manifest_path=manifest_path,
+            inventory_path=inventory_path,
+            output_root=output_root,
+            force_reselect=force_reselect,
+        )
+    elif profile_name == "helper_0001":
+        fixtures, summary = helper_selection_materialize(
+            profile=profile,
+            raw_root=raw_root,
+            base=base,
+            manifest_path=manifest_path,
+            inventory_path=inventory_path,
+            output_root=output_root,
+            force_reselect=force_reselect,
+        )
+    else:
+        raise RuntimeError(f"Unhandled runtime pack profile: {profile_name}")
     return {
         "status": "ok",
         "profile": profile.name,

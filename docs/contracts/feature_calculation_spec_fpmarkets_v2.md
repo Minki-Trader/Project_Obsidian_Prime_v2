@@ -1,4 +1,4 @@
-﻿# Feature Calculation Specification FPMarkets v2
+# Feature Calculation Specification FPMarkets v2
 
 This document freezes the feature calculation contract for the current FPMarkets US100 / M5 research pipeline. It is intended to keep Python preprocessing, dataset export, ONNX training/inference, and MT5 EA runtime aligned.
 
