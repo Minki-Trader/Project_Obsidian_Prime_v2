@@ -12,3 +12,5 @@
 - `2026-04-24_stage01_timestamp_policy` 결정(decision, 결정)으로 이중 시간축 정책(dual time axis policy, 이중 시간축 정책)을 채택했다. 원천 정렬(alignment, 정렬)은 브로커 시계 키(broker-clock key, 브로커 시계 키)를 쓰고, 세션 피처(session features, 세션 피처)는 검증된 이벤트 UTC(event UTC, 이벤트 UTC) 또는 브로커 세션 달력(broker session calendar, 브로커 세션 달력)이 필요하다.
 - `20260424_broker_session_calendar_mapper` 실행(run, 실행)으로 `Europe/Athens` 브로커 시계(broker clock, 브로커 시계)에서 `America/New_York` 세션 시간(session time, 세션 시간)으로 가는 매퍼(mapper, 매퍼)를 만들고 검토했다.
 - 외부 검증 지연 방지(External Verification Anti-Deferral, 외부 검증 지연 방지) 규칙을 추가했다. 효과(effect, 효과)는 MT5(`MetaTrader 5`, 메타트레이더5), 전략 테스터(strategy tester, 전략 테스터), 런타임 동등성(runtime parity, 런타임 동등성)이 필요한 주장을 다음 작업(next work, 다음 작업)으로 반복해서 미루지 못하게 하는 것이다.
+- `20260424_feature_frame_target_probe` 실행(run, 실행)으로 첫 clean feature frame target(첫 깨끗한 피처 프레임 목표)을 `practical_start_full_cash_day_valid_rows_only`로 선택했다.
+- Stage 01(1단계)을 닫고 `02_feature_frame__practical_full_cash_freeze`를 열었다. 효과(effect, 효과)는 첫 shared freeze(공유 동결 산출물)를 실제로 물질화할 단계가 분명해졌다는 것이다.

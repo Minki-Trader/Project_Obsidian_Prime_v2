@@ -2,7 +2,7 @@
 
 - updated_on: `2026-04-24`
 - project_mode: `clean_stage_restart`
-- active_stage: `01_data_foundation__raw_m5_inventory`
+- active_stage: `02_feature_frame__practical_full_cash_freeze`
 - active_branch: `main`
 
 ## 쉬운 설명(Plain Read, 쉬운 설명)
@@ -25,66 +25,45 @@
 
 둘 다 완전히 탐색할 수 있다. 티어(tier, 티어)는 어떤 표본(sample, 표본)을 공부했는지 알려주는 라벨(label, 라벨)이다.
 
-## 현재 단계(Current Stage, 현재 단계)
+## 방금 닫힌 단계(Just Closed Stage, 방금 닫힌 단계)
 
 `01_data_foundation__raw_m5_inventory`
 
-이 단계는 간단한 질문(question, 질문)을 답한다.
+Stage 01(1단계)은 원천 `M5` 재고(raw M5 inventory, 원천 M5 재고), 시간 의미(time semantics, 시간 의미), 세션 달력(session calendar, 세션 달력), 첫 clean feature frame target(첫 깨끗한 피처 프레임 목표)을 정리한 뒤 닫혔다.
 
-우리가 실제로 가진 `M5` 데이터가 무엇이고, 그 데이터가 어떤 첫 모델링 창(modeling window, 모델링 창)을 지탱할 수 있는가?
+`20260424_feature_frame_target_probe` 실행(run, 실행)이 고른 목표는 이거다.
 
-## 확인된 재고(Confirmed Inventory, 확인된 재고)
+- target_id(목표 ID): `practical_start_full_cash_day_valid_rows_only`
+- practical modeling start(실용 모델링 시작): `2022-09-01T00:00:00Z`
+- row scope(행 범위): `valid_row_only`
+- day scope(일 범위): `full_cash_session_days_only`
+- valid rows(유효행 수): `54439`
+- full cash days(완전 정규장 일수): `890`
+- valid-row NY days(유효행이 실제로 존재한 뉴욕 일수): `887`
+- excluded partial cash days(제외된 부분 정규장 일수): `40`
+- excluded partial-day valid rows(제외된 부분 정규장 유효행 수): `252`
 
-`20260424_raw_m5_inventory` 실행(run, 실행)이 원천 `M5` 재고(raw M5 inventory, 원천 M5 재고)를 만들었다.
+효과(effect, 효과): practical start(실용 시작)는 유지하면서, 첫 freeze(첫 동결)는 부분 정규장 일자를 끌고 가지 않아도 된다.
 
-- 예상 심볼(expected symbols, 예상 심볼): `12`
-- 사용 가능 심볼(usable symbols, 사용 가능 심볼): `12`
-- 공통 첫 봉(common first open, 공통 첫 봉): `2022-08-01T16:35:00Z`
-- 공통 마지막 봉(common last open, 공통 마지막 봉): `2026-04-13T22:55:00Z`
-- `US100` 첫 봉(first open, 첫 봉): `2022-08-01T01:00:00Z`
-- `US100` 마지막 봉(last open, 마지막 봉): `2026-04-13T23:55:00Z`
+## 현재 단계(Current Stage, 현재 단계)
 
-효과(effect, 효과): Stage 01은 이제 “파일이 있는지”를 추측하지 않아도 된다. 다음 작업은 시간대(timezone, 시간대) 해석을 묶고 첫 피처 프레임(feature frame, 피처 프레임)을 정하는 것이다.
+`02_feature_frame__practical_full_cash_freeze`
 
-## 시간 의미 판독(Time Semantics Read, 시간 의미 판독)
+지금 질문(question, 질문)은 이거다.
 
-`20260424_time_semantics_probe` 실행(run, 실행)이 원천 timestamp(타임스탬프)를 미국 주식 정규장(US cash session, 미국 현물 정규장)과 비교했다.
+선택된 target(목표)을 실제 shared feature frame freeze(공유 피처 프레임 동결 산출물)로 물질화할 수 있는가?
 
-- 후보 해석(candidate interpretation, 후보 해석): `broker_server_wall_clock_candidate`
-- 직접 UTC 일치율(direct UTC match ratio, 직접 UTC 일치율): `0.0`
-- 브로커 시계 유사율(broker wall-clock-like ratio, 브로커 시계 유사율): `0.929082`
+필요한 일(work, 작업)은 다음이다.
 
-쉽게 말하면, 원천 timestamp(타임스탬프)를 UTC(협정세계시)로 바로 읽으면 미국 주식 정규장 시간이 맞지 않는다. 대부분은 뉴욕 정규장 UTC 시간보다 `+2h` 또는 `+3h` 늦은 브로커/서버 시계(broker/server clock, 브로커/서버 시계)처럼 보인다.
+- 선택된 범위(selected scope, 선택된 범위)로 피처 프레임(feature frame, 피처 프레임)을 만든다.
+- dataset summary(데이터셋 요약), row validity(행 유효성), feature order hash(피처 순서 해시), source identity(원천 정체성)를 남긴다.
+- shared artifact identity(공유 산출물 정체성)를 등록할 수 있게 만든다.
 
-효과(effect, 효과): 첫 피처 프레임(feature frame, 피처 프레임)을 만들기 전에 timestamp policy(타임스탬프 정책)를 정해야 한다. 이 결정을 미루면 세션 피처(session features, 세션 피처)가 틀어질 수 있다.
+## 현재 경계(Current Boundary, 현재 경계)
 
-## 시간축 정책(Time Axis Policy, 시간축 정책)
+이 상태는 아직 model training(모델 학습)도 아니고 runtime authority(런타임 권위)도 아니다.
 
-`2026-04-24_stage01_timestamp_policy` 결정(decision, 결정)으로 이중 시간축 정책(dual time axis policy, 이중 시간축 정책)을 채택했다.
-
-- 원천 `timestamp(타임스탬프)` 또는 `bar_close_key(봉 닫힘 키)`는 브로커 시계 정렬 키(broker-clock alignment key, 브로커 시계 정렬 키)로 유지한다.
-- 세션 피처(session features, 세션 피처)는 검증된 `timestamp_event_utc(이벤트 UTC 타임스탬프)` 또는 브로커 세션 달력(broker session calendar, 브로커 세션 달력)이 생기기 전에는 닫힌 것으로 보지 않는다.
-
-효과(effect, 효과): 외부 심볼 정렬(external symbol alignment, 외부 심볼 정렬)은 안정적으로 이어가되, 미국 정규장 피처(US cash-session features, 미국 정규장 피처)는 잘못된 UTC 가정에 기대지 않는다.
-
-## 다음 일(Next Useful Work, 다음 작업)
-
-## 세션 달력 매퍼(Session Calendar Mapper, 세션 달력 매퍼)
-
-`20260424_broker_session_calendar_mapper` 실행(run, 실행)이 브로커 시계 정렬 키(broker-clock alignment key, 브로커 시계 정렬 키)를 이벤트 UTC(event UTC, 이벤트 UTC)와 뉴욕 세션 시간(New York session time, 뉴욕 세션 시간)으로 바꾸는 매퍼(mapper, 매퍼)를 검토했다.
-
-- 브로커 시계 시간대(broker clock timezone, 브로커 시계 시간대): `Europe/Athens`
-- 세션 시간대(session timezone, 세션 시간대): `America/New_York`
-- 전체 정규장 일수(cash session days, 정규장 일수): `8370`
-- 완전 정규장 일수(full cash session days, 완전 정규장 일수): `7149`
-- 부분 정규장 일수(partial cash session days, 부분 정규장 일수): `1221`
-
-효과(effect, 효과): 세션 피처(session features, 세션 피처)는 이제 직접 UTC 가정(direct UTC assumption, 직접 UTC 가정)에 기대지 않는다. 부분 세션(partial sessions, 부분 세션)은 숨기지 않고 표시한다.
-
-## 다음 일(Next Useful Work, 다음 작업)
-
-1. 첫 깨끗한 피처 프레임(feature frame, 피처 프레임)에 쓸 창(window, 기간)을 정한다.
-2. 학습 데이터셋(training dataset, 학습 데이터셋)은 피처 프레임과 검증 규칙(validation rule, 검증 규칙)이 준비된 뒤 정한다.
+지금은 shared feature frame freeze(공유 피처 프레임 동결 산출물)를 정직하게 만들기 위한 단계다.
 
 ## 현재 진실이 아닌 것(Not Current Truth, 현재 진실 아님)
 
