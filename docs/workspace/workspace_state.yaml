@@ -1,6 +1,6 @@
 updated_on: "2026-04-24"
 project_mode: "clean_stage_restart"
-active_branch: "codex/clean-stage-restart"
+active_branch: "codex/stage01-raw-m5-inventory"
 active_stage: "01_data_foundation__raw_m5_inventory"
 current_operating_reference: null
 current_shadow_challenger: null
@@ -8,16 +8,25 @@ exploration_rule: "tier_a_and_tier_b_are_both_open_to_full_exploration"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "candidate_window_from_existing_contract_docs_pending_clean_inventory"
+  status: "raw_m5_inventory_complete_pending_timezone_binding_and_feature_frame_decision"
 practical_modeling_start: "2022-09-01"
 current_focus:
-  - "rebuild the project from a clean stage structure"
-  - "preserve agent skills, contracts, concept notes, data, and reusable foundation tools"
-  - "remove old Stage 00 to Stage 07 defensive flow from current truth"
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
-  - "start model study when a stage has training data and validation rules ready"
+  - "use the completed raw M5 inventory as the Stage 01 evidence base"
+  - "decide the first clean feature-frame question without claiming model readiness yet"
+stage01_raw_m5_inventory:
+  run_id: "20260424_raw_m5_inventory"
+  status: "complete"
+  usable_symbol_count: 12
+  expected_symbol_count: 12
+  common_first_open_utc: "2022-08-01T16:35:00Z"
+  common_last_open_utc: "2026-04-13T22:55:00Z"
+  us100_first_open_utc: "2022-08-01T01:00:00Z"
+  us100_last_open_utc: "2026-04-13T23:55:00Z"
+  timezone_status: "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+  report_path: "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_raw_m5_inventory/raw_m5_inventory.md"
 open_items:
-  - "confirm raw M5 inventory and symbol coverage"
+  - "bind or explicitly document the raw export timezone and calendar interpretation"
   - "confirm the first clean feature frame target"
   - "decide the first model-study stage only after data and validation are ready"
 forbidden_shortcuts:

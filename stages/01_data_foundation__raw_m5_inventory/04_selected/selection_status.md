@@ -3,13 +3,21 @@
 ## 현재 판독(Current Read, 현재 판독)
 
 - active_stage(활성 단계): `01_data_foundation__raw_m5_inventory`
-- status(상태): `open`
+- status(상태): `evidence_complete_next_decision_open`
 - current operating reference(현재 운영 기준): `none`
 - exploration rule(탐색 규칙): `Tier A(티어 A)`와 `Tier B(티어 B)`는 둘 다 완전히 탐색 가능
 
+## 확인된 근거(Confirmed Evidence, 확인된 근거)
+
+- run_id(실행 ID): `20260424_raw_m5_inventory`
+- judgment(판정): `positive(긍정)` for raw inventory only
+- usable symbols(사용 가능 심볼): `12 / 12`
+- common usable window(공통 사용 기간): `2022-08-01T16:35:00Z` through `2026-04-13T22:55:00Z`
+- report(보고서): `stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_raw_m5_inventory/raw_m5_inventory.md`
+
 ## 다음 근거(Next Evidence, 다음 근거)
 
-심볼 커버리지(symbol coverage, 심볼 범위), 날짜 커버리지(date coverage, 날짜 범위), 누락 원천 메모(missing-source notes, 누락 원천 메모)를 담은 원천 `M5` 재고(raw M5 inventory, 원천 M5 재고)를 만든다.
+원천 export(내보내기)의 시간대(timezone, 시간대)와 캘린더(calendar, 달력) 해석을 묶고, 첫 피처 프레임(feature frame, 피처 프레임)에 쓸 창(window, 기간)을 정한다.
 
 ## 경계(Boundary, 경계)
 

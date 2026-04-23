@@ -1,0 +1,556 @@
+{
+  "summary": {
+    "inventory_version": "FPMARKETS_V2_RAW_M5_INVENTORY_V1",
+    "generated_at_utc": "2026-04-23T16:04:45.792723Z",
+    "raw_root": "data/raw/mt5_bars/m5",
+    "expected_symbol_count": 12,
+    "discovered_symbol_dirs": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "GOOGL.xnas",
+      "META",
+      "MSFT",
+      "NVDA",
+      "TSLA",
+      "US100",
+      "US10YR",
+      "USDX",
+      "VIX"
+    ],
+    "extra_symbol_dirs": [],
+    "usable_symbol_count": 12,
+    "non_usable_symbols": [],
+    "symbols_with_manifest_mismatch": [],
+    "symbols_with_timing_issue": [],
+    "common_first_open_unix": 1659371700,
+    "common_last_open_unix": 1776120900,
+    "common_first_open_utc": "2022-08-01T16:35:00Z",
+    "common_last_open_utc": "2026-04-13T22:55:00Z",
+    "us100_first_open_utc": "2022-08-01T01:00:00Z",
+    "us100_last_open_utc": "2026-04-13T23:55:00Z",
+    "timezone_status_values": [
+      "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+    ],
+    "status": "complete",
+    "boundary": "Raw inventory only. This does not claim feature readiness, model readiness, runtime authority, or operating promotion."
+  },
+  "symbols": [
+    {
+      "contract_symbol": "US100",
+      "expected_broker_symbol": "US100",
+      "symbol_dir": "data/raw/mt5_bars/m5/US100",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "manifest_sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "csv_size_bytes": 38125907,
+      "row_count": 261345,
+      "first_open_unix": 1659315600,
+      "last_open_unix": 1776124500,
+      "first_open_utc": "2022-08-01T01:00:00Z",
+      "last_open_utc": "2026-04-13T23:55:00Z",
+      "contract_symbol_values": [
+        "US100"
+      ],
+      "broker_symbol_values": [
+        "US100"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 967,
+      "largest_forward_gap_seconds": 349800,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "VIX",
+      "expected_broker_symbol": "VIX",
+      "symbol_dir": "data/raw/mt5_bars/m5/VIX",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/VIX/bars_vix_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/VIX/bars_vix_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "29b0ea35acba3da3dc50cc1a42034d782949c9ee42494387d9be21fa731db9b2",
+      "manifest_sha256": "0d4e2d8dc90e3ee32e12061e10f3446ca4d05f46b314ae380e8c6e23e478511a",
+      "csv_size_bytes": 20287645,
+      "row_count": 158415,
+      "first_open_unix": 1659315600,
+      "last_open_unix": 1776124500,
+      "first_open_utc": "2022-08-01T01:00:00Z",
+      "last_open_utc": "2026-04-13T23:55:00Z",
+      "contract_symbol_values": [
+        "VIX"
+      ],
+      "broker_symbol_values": [
+        "VIX"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 29475,
+      "largest_forward_gap_seconds": 351000,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "US10YR",
+      "expected_broker_symbol": "US10YR",
+      "symbol_dir": "data/raw/mt5_bars/m5/US10YR",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/US10YR/bars_us10yr_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/US10YR/bars_us10yr_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "3628169dbede3f1dc8ddea5c32b34872fb9d70addb961c7a04a121c93c2f72cb",
+      "manifest_sha256": "e7f33a4f15aa3c7c17cd00d19d88b4ae01c68089cc23970b28548a83833b85f3",
+      "csv_size_bytes": 30665407,
+      "row_count": 223363,
+      "first_open_unix": 1659315600,
+      "last_open_unix": 1776124500,
+      "first_open_utc": "2022-08-01T01:00:00Z",
+      "last_open_utc": "2026-04-13T23:55:00Z",
+      "contract_symbol_values": [
+        "US10YR"
+      ],
+      "broker_symbol_values": [
+        "US10YR"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 23003,
+      "largest_forward_gap_seconds": 411900,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "USDX",
+      "expected_broker_symbol": "USDX",
+      "symbol_dir": "data/raw/mt5_bars/m5/USDX",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/USDX/bars_usdx_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/USDX/bars_usdx_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "9646370bfe9915aff915011f736e9a35177b81703e8a626b6dd77a5f14ecb0c3",
+      "manifest_sha256": "d31b8611a443c0ac859179d1d2bfd30f97c2198e4ede5b95be9716cc30e542bf",
+      "csv_size_bytes": 32715455,
+      "row_count": 238993,
+      "first_open_unix": 1659322800,
+      "last_open_unix": 1776124500,
+      "first_open_utc": "2022-08-01T03:00:00Z",
+      "last_open_utc": "2026-04-13T23:55:00Z",
+      "contract_symbol_values": [
+        "USDX"
+      ],
+      "broker_symbol_values": [
+        "USDX"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 1057,
+      "largest_forward_gap_seconds": 357000,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "NVDA",
+      "expected_broker_symbol": "NVDA.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/NVDA",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/NVDA/bars_nvda_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/NVDA/bars_nvda_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "0ca43d90e41e727a65937f1bf0def6e8721cd7894c02b6b7a718f26d03a0f251",
+      "manifest_sha256": "c93bd064196220df4beda11de234fd207320ec52ed4f30b6ee4322e5d5263de1",
+      "csv_size_bytes": 9717608,
+      "row_count": 71046,
+      "first_open_unix": 1659371700,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:35:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "NVDA"
+      ],
+      "broker_symbol_values": [
+        "NVDA.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 934,
+      "largest_forward_gap_seconds": 333300,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "AAPL",
+      "expected_broker_symbol": "AAPL.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/AAPL",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/AAPL/bars_aapl_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/AAPL/bars_aapl_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "00145aae5d2528c3b1c7f5444080d4a0dd6002a5992509dcea977bb1cafe8763",
+      "manifest_sha256": "57d4aab69f003cb6f9e29abc15bb8822c671a6ed703bb139a946d75e486b03ea",
+      "csv_size_bytes": 10044635,
+      "row_count": 71935,
+      "first_open_unix": 1659371400,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:30:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "AAPL"
+      ],
+      "broker_symbol_values": [
+        "AAPL.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 938,
+      "largest_forward_gap_seconds": 408900,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "MSFT",
+      "expected_broker_symbol": "MSFT.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/MSFT",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/MSFT/bars_msft_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/MSFT/bars_msft_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "6bc740c555671ad800456cc654a1b7815c7ed3d9b25de85a1b1e3cdd9d9b39a5",
+      "manifest_sha256": "a67c6ea4105313232f90743e6842446ed49d2d61cbcf927da4163a8c80fda44b",
+      "csv_size_bytes": 10039870,
+      "row_count": 71910,
+      "first_open_unix": 1659371400,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:30:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "MSFT"
+      ],
+      "broker_symbol_values": [
+        "MSFT.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 936,
+      "largest_forward_gap_seconds": 408900,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "AMZN",
+      "expected_broker_symbol": "AMZN.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/AMZN",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/AMZN/bars_amzn_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/AMZN/bars_amzn_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "71f26096cff63480265b2a37ca2a234881bb22f9b729099a36a66af7991abc5d",
+      "manifest_sha256": "2c0c1e233fcb028085757ec5263871d15deecb264c20a451cbb934fdc31eaee1",
+      "csv_size_bytes": 10016210,
+      "row_count": 71933,
+      "first_open_unix": 1659371400,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:30:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "AMZN"
+      ],
+      "broker_symbol_values": [
+        "AMZN.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 939,
+      "largest_forward_gap_seconds": 408900,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "AMD",
+      "expected_broker_symbol": "AMD.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/AMD",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/AMD/bars_amd_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/AMD/bars_amd_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "66c2c1f3210628a65429fd0dab97d4f8f153f2f52265ae4dd5db3d17a26197f2",
+      "manifest_sha256": "0772dd402f3a4868d271710f90ea139ccb8bc5c26d0e4ef8ca27bc919f97d589",
+      "csv_size_bytes": 9828077,
+      "row_count": 71932,
+      "first_open_unix": 1659371400,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:30:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "AMD"
+      ],
+      "broker_symbol_values": [
+        "AMD.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 938,
+      "largest_forward_gap_seconds": 408900,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "GOOGL.xnas",
+      "expected_broker_symbol": "GOOGL.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/GOOGL.xnas",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/GOOGL.xnas/bars_googl_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/GOOGL.xnas/bars_googl_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "f2df284fd4947afb6b8f7165c1a4b8652c05a555e0d52ba7217c896d1abfbf09",
+      "manifest_sha256": "496fdbf91a1e7481669053d407067fa9e9f3123e4ee2b24cf8ead5626c43f742",
+      "csv_size_bytes": 10399656,
+      "row_count": 71917,
+      "first_open_unix": 1659371400,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:30:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "GOOGL.xnas"
+      ],
+      "broker_symbol_values": [
+        "GOOGL.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 936,
+      "largest_forward_gap_seconds": 408900,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "META",
+      "expected_broker_symbol": "META.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/META",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/META/bars_meta_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/META/bars_meta_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "90bf2e0abfb76f939643f604c973c51ce4f73b8c45b16dc0fb570fc2ed16336e",
+      "manifest_sha256": "0f6fb9911dd9d61cfd3395bf1ec89cf3d0d972daba9cd37de0acd333acc18363",
+      "csv_size_bytes": 10049717,
+      "row_count": 71916,
+      "first_open_unix": 1659371400,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:30:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "META"
+      ],
+      "broker_symbol_values": [
+        "META.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 937,
+      "largest_forward_gap_seconds": 408900,
+      "manifest_mismatches": [],
+      "notes": []
+    },
+    {
+      "contract_symbol": "TSLA",
+      "expected_broker_symbol": "TSLA.xnas",
+      "symbol_dir": "data/raw/mt5_bars/m5/TSLA",
+      "status": "usable_raw_inventory",
+      "csv_status": "ok",
+      "manifest_status": "ok",
+      "csv_path": "data/raw/mt5_bars/m5/TSLA/bars_tsla_xnas_m5_mt5api_raw.csv",
+      "manifest_path": "data/raw/mt5_bars/m5/TSLA/bars_tsla_xnas_m5_mt5api_raw.manifest.json",
+      "csv_sha256": "93a8c1a64477e37724cc6e278aa73af52212a4001961fbbf8307aaf67eee98c7",
+      "manifest_sha256": "d52015d56b3df2d1afeb4d958f2b4e7093064f8f2f0244d9481575efeb3c475b",
+      "csv_size_bytes": 10047420,
+      "row_count": 71916,
+      "first_open_unix": 1659371400,
+      "last_open_unix": 1776120900,
+      "first_open_utc": "2022-08-01T16:30:00Z",
+      "last_open_utc": "2026-04-13T22:55:00Z",
+      "contract_symbol_values": [
+        "TSLA"
+      ],
+      "broker_symbol_values": [
+        "TSLA.xnas"
+      ],
+      "timeframe_values": [
+        "M5"
+      ],
+      "price_basis_values": [
+        "Bid"
+      ],
+      "timezone_status_values": [
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING"
+      ],
+      "missing_columns": [],
+      "unexpected_columns": [],
+      "open_alignment_error_count": 0,
+      "close_span_error_count": 0,
+      "duplicate_open_count": 0,
+      "backwards_step_count": 0,
+      "non_m5_forward_step_count": 937,
+      "largest_forward_gap_seconds": 408900,
+      "manifest_mismatches": [],
+      "notes": []
+    }
+  ]
+}
