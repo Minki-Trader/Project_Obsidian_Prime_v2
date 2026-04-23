@@ -8,3 +8,4 @@
 - `Tier A(티어 A)`와 `Tier B(티어 B)`를 둘 다 완전히 탐색 가능한 표본 라벨(sample label, 표본 라벨)로 다시 정의했다.
 - 첫 단계(first stage, 첫 단계)로 `01_data_foundation__raw_m5_inventory`를 열었다.
 - `20260424_raw_m5_inventory` 실행(run, 실행)으로 원천 `M5` 재고(raw M5 inventory, 원천 M5 재고)를 확인했다. 예상 심볼(expected symbols, 예상 심볼) 12개가 모두 사용 가능했고, 공통 사용 창(common usable window, 공통 사용 기간)은 `2022-08-01T16:35:00Z`부터 `2026-04-13T22:55:00Z`까지다.
+- `20260424_time_semantics_probe` 실행(run, 실행)으로 원천 timestamp(타임스탬프)가 직접 UTC(direct UTC, 직접 협정세계시)로는 미국 주식 정규장과 맞지 않고, 브로커/서버 시계 후보(broker/server clock candidate, 브로커/서버 시계 후보)에 가깝다는 근거를 남겼다.

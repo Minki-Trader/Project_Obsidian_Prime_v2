@@ -2,7 +2,7 @@
 
 ## 현재 판독(Current Read, 현재 판독)
 
-원천 `M5` 재고 검토(raw M5 inventory review, 원천 M5 재고 검토)가 작성되었다.
+원천 `M5` 재고 검토(raw M5 inventory review, 원천 M5 재고 검토)와 시간 의미 검토(time semantics review, 시간 의미 검토)가 작성되었다.
 
 ## 다음 검토(Next Review, 다음 검토)
 
@@ -11,3 +11,4 @@
 ## 검토 목록(Review List, 검토 목록)
 
 - `raw_m5_inventory_review.md`: `20260424_raw_m5_inventory` 실행 결과 판독(readout, 판독)
+- `time_semantics_probe_review.md`: `20260424_time_semantics_probe` 실행 결과 판독(readout, 판독)

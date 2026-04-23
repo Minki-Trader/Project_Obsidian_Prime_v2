@@ -3,7 +3,7 @@
 - updated_on: `2026-04-24`
 - project_mode: `clean_stage_restart`
 - active_stage: `01_data_foundation__raw_m5_inventory`
-- active_branch: `codex/stage01-raw-m5-inventory`
+- active_branch: `main`
 
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
@@ -46,9 +46,21 @@
 
 효과(effect, 효과): Stage 01은 이제 “파일이 있는지”를 추측하지 않아도 된다. 다음 작업은 시간대(timezone, 시간대) 해석을 묶고 첫 피처 프레임(feature frame, 피처 프레임)을 정하는 것이다.
 
+## 시간 의미 판독(Time Semantics Read, 시간 의미 판독)
+
+`20260424_time_semantics_probe` 실행(run, 실행)이 원천 timestamp(타임스탬프)를 미국 주식 정규장(US cash session, 미국 현물 정규장)과 비교했다.
+
+- 후보 해석(candidate interpretation, 후보 해석): `broker_server_wall_clock_candidate`
+- 직접 UTC 일치율(direct UTC match ratio, 직접 UTC 일치율): `0.0`
+- 브로커 시계 유사율(broker wall-clock-like ratio, 브로커 시계 유사율): `0.929082`
+
+쉽게 말하면, 원천 timestamp(타임스탬프)를 UTC(협정세계시)로 바로 읽으면 미국 주식 정규장 시간이 맞지 않는다. 대부분은 뉴욕 정규장 UTC 시간보다 `+2h` 또는 `+3h` 늦은 브로커/서버 시계(broker/server clock, 브로커/서버 시계)처럼 보인다.
+
+효과(effect, 효과): 첫 피처 프레임(feature frame, 피처 프레임)을 만들기 전에 timestamp policy(타임스탬프 정책)를 정해야 한다. 이 결정을 미루면 세션 피처(session features, 세션 피처)가 틀어질 수 있다.
+
 ## 다음 일(Next Useful Work, 다음 작업)
 
-1. 원천 export(내보내기)의 시간대(timezone, 시간대)와 캘린더(calendar, 달력) 해석을 분명히 적는다.
+1. 피처 프레임(feature frame, 피처 프레임)의 timestamp policy(타임스탬프 정책)를 정한다.
 2. 첫 깨끗한 피처 프레임(feature frame, 피처 프레임)에 쓸 창(window, 기간)을 정한다.
 3. 학습 데이터셋(training dataset, 학습 데이터셋)은 피처 프레임과 검증 규칙(validation rule, 검증 규칙)이 준비된 뒤 정한다.
 
