@@ -13,6 +13,12 @@
 
 `invalid(무효)`는 깨진 부분(broken part, 깨진 부분)이 고쳐질 때까지 해석하지 않는다.
 
+외부 검증(external verification, 외부 검증)이 필요한 주장(claim, 주장)에 외부 검증이 빠졌다면 그 주장은 `positive(긍정)`로 닫지 않는다.
+
+- 검증을 시도할 수 있었는데 안 했다면 `inconclusive(불충분)`로 둔다.
+- 검증을 시도했지만 환경이나 설정이 깨졌다면 `invalid(무효)` 또는 `blocked(차단)`로 둔다.
+- 주장을 낮춰서 외부 검증이 필요 없는 범위만 말한다면, 낮춘 범위(scope, 범위)를 명시한다.
+
 ## 경계 어휘(Boundary Vocabulary, 경계 어휘)
 
 결과 판정(result judgment, 결과 판정)은 탐색 경계(exploration boundary, 탐색 경계)를 같이 적어야 한다.
