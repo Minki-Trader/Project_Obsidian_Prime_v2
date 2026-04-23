@@ -1,19 +1,19 @@
 updated_on: "2026-04-24"
 project_mode: "clean_stage_restart"
 active_branch: "main"
-active_stage: "02_feature_frame__practical_full_cash_freeze"
+active_stage: "03_training_dataset__label_split_contract"
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: "tier_a_and_tier_b_are_both_open_to_full_exploration"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "stage01_closed_first_feature_frame_target_selected_stage02_feature_frame_freeze_open"
+  status: "stage01_closed_stage02_closed_stage03_training_dataset_contract_open"
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
-  - "materialize the first shared feature frame freeze from the selected practical full-cash target"
-  - "keep broader valid-row scopes as later candidates, not as dead ideas"
+  - "define the first training label and split contract on top of the first shared feature-frame freeze"
+  - "keep runtime parity and operating claims outside the Stage 03 training-dataset contract scope"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -55,6 +55,7 @@ stage01_feature_frame_target:
   target_id: "practical_start_full_cash_day_valid_rows_only"
   start_utc: "2022-09-01T00:00:00Z"
   row_scope: "valid_row_only"
+  session_scope: "cash_open_rows_only"
   day_scope: "full_cash_session_days_only"
   valid_rows: 54439
   full_cash_day_count: 890
@@ -62,12 +63,31 @@ stage01_feature_frame_target:
   excluded_partial_cash_days: 40
   excluded_partial_day_valid_rows: 252
   report_path: "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_feature_frame_target_probe/feature_frame_target_probe.md"
+stage02_first_shared_feature_frame_freeze:
+  run_id: "20260424_practical_full_cash_freeze_materialization"
+  status: "reviewed_closed_handoff_complete"
+  dataset_id: "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01"
+  row_scope: "valid_row_only"
+  session_scope: "cash_open_rows_only"
+  day_scope: "full_cash_session_days_only"
+  raw_rows: 255001
+  valid_rows: 55408
+  invalid_rows: 199593
+  selected_rows: 54439
+  eligible_full_cash_day_count: 890
+  selected_valid_row_ny_days: 887
+  excluded_partial_cash_days: 40
+  excluded_partial_day_valid_rows: 252
+  feature_count: 58
+  feature_order_hash: "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+  dataset_summary_path: "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json"
+  review_path: "stages/02_feature_frame__practical_full_cash_freeze/03_reviews/first_shared_feature_frame_freeze_review.md"
 open_items:
-  - "materialize the first shared feature frame freeze for the selected practical full-cash target"
-  - "register dataset artifact identity only after the first freeze summary and hashes exist"
-  - "decide the first model-study stage only after the shared freeze is reviewed"
+  - "define the first training label contract and split boundaries on top of the shared freeze"
+  - "materialize the first training dataset package after the label and split contract is fixed"
+  - "keep broader valid-row or partial-day scopes as later candidates instead of silently widening the first freeze"
 forbidden_shortcuts:
   - "do not resurrect old Stage 06 or Stage 07 conclusions as current truth"
   - "do not turn Tier labels into exploration permissions"
-  - "do not claim operating promotion or runtime authority from exploration results"
-  - "do not silently widen the first freeze back to partial cash-session days without new evidence"
+  - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
+  - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

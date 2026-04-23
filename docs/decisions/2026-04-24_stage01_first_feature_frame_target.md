@@ -6,6 +6,7 @@ Stage 01(1단계)의 첫 clean feature frame target(첫 깨끗한 피처 프레�
 
 - start_utc(시작 UTC): `2022-09-01T00:00:00Z`
 - row_scope(행 범위): `valid_row_only`
+- session_scope(세션 범위): `cash_open_rows_only`
 - day_scope(일 범위): `full_cash_session_days_only`
 
 ## 이유(Why, 이유)

@@ -5,3 +5,4 @@
 - `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
 - `docs/contracts/time_axis_policy_fpmarkets_v2.md`
 - `foundation/pipelines/materialize_fpmarkets_v2_dataset.py`
+- `foundation/pipelines/materialize_feature_frame_freeze.py`

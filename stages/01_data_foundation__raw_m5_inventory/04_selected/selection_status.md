@@ -31,6 +31,9 @@
 - run_id(실행 ID): `20260424_feature_frame_target_probe`
 - judgment(판정): `positive(긍정)` for first clean feature-frame target selection
 - target_id(목표 ID): `practical_start_full_cash_day_valid_rows_only`
+- row scope(행 범위): `valid_row_only`
+- session scope(세션 범위): `cash_open_rows_only`
+- day scope(일 범위): `full_cash_session_days_only`
 - selected rows(선택 유효행 수): `54439`
 - selected full cash days(선택 완전 정규장 일수): `890`
 - excluded partial cash days(제외된 부분 정규장 일수): `40`
@@ -40,7 +43,7 @@
 
 Stage 01(1단계)은 닫는다.
 
-효과(effect, 효과)는 다음 데이터 질문(next data question, 다음 데이터 질문)이 분명해졌다는 것이다. Stage 02(2단계)는 선택된 practical full cash target(실용 정규장 목표)을 실제 shared freeze(공유 동결 산출물)로 물질화한다.
+효과(effect, 효과)는 다음 데이터 질문(next data question, 다음 데이터 질문)이 분명해졌다는 것이다. Stage 02(2단계)는 선택된 practical full cash target(실용 완전 정규장 목표)을 실제 shared freeze(공유 동결 산출물)로 물질화한다.
 
 ## 경계(Boundary, 경계)
 

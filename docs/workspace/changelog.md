@@ -14,3 +14,5 @@
 - 외부 검증 지연 방지(External Verification Anti-Deferral, 외부 검증 지연 방지) 규칙을 추가했다. 효과(effect, 효과)는 MT5(`MetaTrader 5`, 메타트레이더5), 전략 테스터(strategy tester, 전략 테스터), 런타임 동등성(runtime parity, 런타임 동등성)이 필요한 주장을 다음 작업(next work, 다음 작업)으로 반복해서 미루지 못하게 하는 것이다.
 - `20260424_feature_frame_target_probe` 실행(run, 실행)으로 첫 clean feature frame target(첫 깨끗한 피처 프레임 목표)을 `practical_start_full_cash_day_valid_rows_only`로 선택했다.
 - Stage 01(1단계)을 닫고 `02_feature_frame__practical_full_cash_freeze`를 열었다. 효과(effect, 효과)는 첫 shared freeze(공유 동결 산출물)를 실제로 물질화할 단계가 분명해졌다는 것이다.
+- `20260424_practical_full_cash_freeze_materialization` 실행(run, 실행)으로 첫 shared feature frame freeze(공유 피처 프레임 동결 산출물)를 실제로 만들었다. 데이터셋 ID(dataset ID, 데이터셋 ID)는 `dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01`이고, 선택 행(selected rows, 선택 행)은 `54439`다.
+- Stage 02(2단계)를 닫고 `03_training_dataset__label_split_contract`를 열었다. 효과(effect, 효과)는 이제 라벨(label, 라벨)과 분할(split, 분할)을 실제 공유 동결 산출물 위에서 정할 수 있다는 것이다.

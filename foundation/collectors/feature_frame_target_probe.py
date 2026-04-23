@@ -13,7 +13,6 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from foundation.pipelines.materialize_fpmarkets_v2_dataset import (  # noqa: E402
-    DATASET_ID,
     PRACTICAL_MODELING_START_UTC,
     build_feature_frame,
 )
@@ -52,6 +51,7 @@ def _candidate_payload(
     label: str,
     start_utc: pd.Timestamp,
     day_scope: str,
+    session_scope: str,
     row_scope: str,
     rows: int,
     ny_day_count: int,
@@ -61,6 +61,7 @@ def _candidate_payload(
         "label": label,
         "start_utc": start_utc.isoformat(),
         "day_scope": day_scope,
+        "session_scope": session_scope,
         "row_scope": row_scope,
         "rows": rows,
         "ny_day_count": ny_day_count,
@@ -105,6 +106,7 @@ def analyze_feature_frame_target(raw_root: Path) -> dict[str, object]:
             label="full shared window valid rows only",
             start_utc=pd.Timestamp(frame["timestamp"].min()),
             day_scope="all_days",
+            session_scope="all_rows",
             row_scope="valid_row_only",
             rows=int(len(full_window_valid)),
             ny_day_count=int(full_window_valid["date_ny"].nunique()),
@@ -114,6 +116,7 @@ def analyze_feature_frame_target(raw_root: Path) -> dict[str, object]:
             label="practical start valid rows only",
             start_utc=PRACTICAL_MODELING_START_UTC,
             day_scope="all_days",
+            session_scope="all_rows",
             row_scope="valid_row_only",
             rows=int(len(practical_valid)),
             ny_day_count=int(practical_valid["date_ny"].nunique()),
@@ -123,6 +126,7 @@ def analyze_feature_frame_target(raw_root: Path) -> dict[str, object]:
             label="practical start cash-open valid rows only",
             start_utc=PRACTICAL_MODELING_START_UTC,
             day_scope="cash_open_rows",
+            session_scope="cash_open_rows_only",
             row_scope="valid_row_only",
             rows=int(len(practical_cash_valid)),
             ny_day_count=int(practical_cash_valid["date_ny"].nunique()),
@@ -132,6 +136,7 @@ def analyze_feature_frame_target(raw_root: Path) -> dict[str, object]:
             label="practical start full-cash-session-day valid rows only",
             start_utc=PRACTICAL_MODELING_START_UTC,
             day_scope="full_cash_session_days_only",
+            session_scope="cash_open_rows_only",
             row_scope="valid_row_only",
             rows=int(len(practical_full_cash_valid)),
             ny_day_count=int(practical_full_cash_valid["date_ny"].nunique()),
@@ -143,7 +148,6 @@ def analyze_feature_frame_target(raw_root: Path) -> dict[str, object]:
     ).copy()
     selected_target.update(
         {
-            "dataset_id": DATASET_ID,
             "practical_modeling_start": PRACTICAL_MODELING_START_UTC.isoformat(),
             "first_valid_timestamp": _iso(practical_full_cash_valid["timestamp"].min()),
             "last_valid_timestamp": _iso(practical_full_cash_valid["timestamp"].max()),
@@ -176,7 +180,6 @@ def analyze_feature_frame_target(raw_root: Path) -> dict[str, object]:
     payload = {
         "probe_version": "FPMARKETS_V2_STAGE01_FEATURE_FRAME_TARGET_PROBE_V1",
         "run_id": RUN_ID,
-        "dataset_id": DATASET_ID,
         "measurement_scope": "feature-frame target evidence only",
         "management_state": "run artifacts tracked under Stage 01 02_runs",
         "judgment_class": "positive",
@@ -221,15 +224,16 @@ def render_markdown(payload: dict[str, object]) -> str:
         "",
         f"`{payload['run_id']}` 실행(run, 실행)은 `positive(긍정)`로 본다.",
         "",
-        "쉽게 말하면, 첫 clean feature frame target(첫 깨끗한 피처 프레임 목표)은 "
-        "실용 시작(practical modeling start, 실용 모델링 시작) 이후 `valid_row(유효행)`만 쓰고 "
-        "부분 정규장(partial cash session, 부분 정규장) 일자를 뺀 범위로 잡는 것이 가장 깔끔했다.",
+        "쉽게 말하면 첫 clean feature frame target(첫 깨끗한 피처 프레임 목표)은 "
+        "practical modeling start(실용 모델링 시작) 이후 `valid_row(유효행)`만 쓰고, "
+        "partial cash session(부분 정규장) 일자를 빼는 범위가 가장 깔끔하다.",
         "",
-        "## 선택한 목표(Selected Target, 선택한 목표)",
+        "## 선택된 목표(Selected Target, 선택된 목표)",
         "",
         f"- target_id(목표 ID): `{selected['target_id']}`",
         f"- start_utc(시작 UTC): `{selected['start_utc']}`",
         f"- row_scope(행 범위): `{selected['row_scope']}`",
+        f"- session_scope(세션 범위): `{selected['session_scope']}`",
         f"- day_scope(일 범위): `{selected['day_scope']}`",
         f"- valid rows(유효행 수): `{selected['rows']}`",
         f"- NY days(뉴욕 일수): `{selected['ny_day_count']}`",
@@ -240,12 +244,12 @@ def render_markdown(payload: dict[str, object]) -> str:
         "",
         "## 후보 비교(Candidate Comparison, 후보 비교)",
         "",
-        "| target_id | rows | ny_day_count | day_scope |",
-        "|---|---:|---:|---|",
+        "| target_id | rows | ny_day_count | session_scope | day_scope |",
+        "|---|---:|---:|---|---|",
     ]
     for candidate in candidates:
         lines.append(
-            f"| `{candidate['target_id']}` | `{candidate['rows']}` | `{candidate['ny_day_count']}` | `{candidate['day_scope']}` |"
+            f"| `{candidate['target_id']}` | `{candidate['rows']}` | `{candidate['ny_day_count']}` | `{candidate['session_scope']}` | `{candidate['day_scope']}` |"
         )
 
     lines.extend(
@@ -256,10 +260,10 @@ def render_markdown(payload: dict[str, object]) -> str:
             f"- cash-open valid ratio(정규장 유효 비율): `{payload['cash_open_valid_ratio_total']:.6f}`",
             f"- full cash days(완전 정규장 일수): `{payload['full_cash_days_total']}`",
             f"- partial cash days(부분 정규장 일수): `{payload['partial_cash_days_total']}`",
-            "- 부분 정규장(partial cash session, 부분 정규장) 일자는 휴장일(holiday, 휴장일)이나 조기 종료(early close, 조기 종료)처럼 "
-            "행 형태(row shape, 행 형태)가 흔들리는 경우가 많았다.",
-            "- 첫 freeze(첫 동결)는 가능한 한 균일한 NY core session day boundary(뉴욕 핵심 정규장 일 경계)로 잡는 편이 "
-            "다음 단계의 산출물 정체성(artifact identity, 산출물 정체성)을 더 단순하게 만든다.",
+            "- partial cash session(부분 정규장) 일자는 holiday(휴일) 전후나 early close(조기 종료)처럼 "
+            "행 형태(row shape, 행 형태)가 흔들리는 경우가 많다.",
+            "- 첫 freeze(첫 동결)를 가능한 한 균일한 NY core session day boundary(뉴욕 핵심 정규장 일 경계)로 묶는 편이 "
+            "다음 단계의 artifact identity(산출물 정체성)를 더 단순하게 만든다.",
             "",
             "## 부분 정규장 예시(Worst Partial-Day Examples, 부분 정규장 예시)",
             "",
@@ -277,15 +281,15 @@ def render_markdown(payload: dict[str, object]) -> str:
             "",
             "## 효과(Effect, 효과)",
             "",
-            "Stage 01(1단계)은 이제 첫 feature frame target(피처 프레임 목표)을 분명하게 넘길 수 있다.",
+            "Stage 01(1단계)은 이제 첫 feature frame target(피처 프레임 목표)을 분명하게 갖고 있다.",
             "다음 단계(next stage, 다음 단계)는 이 목표를 실제 shared freeze(공유 동결 산출물)로 물질화하는 일이다.",
             "",
             "## 경계(Boundary, 경계)",
             "",
-            "이 검토(review, 검토)는 첫 clean target(첫 깨끗한 목표)을 고르는 근거다.",
+            "이 검토(review, 검토)는 첫 clean target(깨끗한 목표)을 고르는 근거다.",
             "더 넓은 valid-row scope(유효행 범위)가 무효라는 뜻은 아니다. "
-            "모델 준비(model readiness, 모델 준비), 런타임 권위(runtime authority, 런타임 권위), "
-            "운영 승격(operating promotion, 운영 승격)은 주장하지 않는다.",
+            "model readiness(모델 준비), runtime authority(런타임 권위), "
+            "operating promotion(운영 승격)을 주장하지도 않는다.",
         ]
     )
     return "\n".join(lines) + "\n"

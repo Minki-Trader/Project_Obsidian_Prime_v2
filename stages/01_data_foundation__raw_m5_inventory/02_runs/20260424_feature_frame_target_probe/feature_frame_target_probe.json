@@ -1,7 +1,6 @@
 {
   "probe_version": "FPMARKETS_V2_STAGE01_FEATURE_FRAME_TARGET_PROBE_V1",
   "run_id": "20260424_feature_frame_target_probe",
-  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
   "measurement_scope": "feature-frame target evidence only",
   "management_state": "run artifacts tracked under Stage 01 02_runs",
   "judgment_class": "positive",
@@ -27,10 +26,10 @@
     "label": "practical start full-cash-session-day valid rows only",
     "start_utc": "2022-09-01T00:00:00+00:00",
     "day_scope": "full_cash_session_days_only",
+    "session_scope": "cash_open_rows_only",
     "row_scope": "valid_row_only",
     "rows": 54439,
     "ny_day_count": 887,
-    "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
     "practical_modeling_start": "2022-09-01T00:00:00+00:00",
     "first_valid_timestamp": "2022-09-01T16:40:00+00:00",
     "last_valid_timestamp": "2026-04-13T23:00:00+00:00",
@@ -44,6 +43,7 @@
       "label": "full shared window valid rows only",
       "start_utc": "2022-08-01T01:05:00+00:00",
       "day_scope": "all_days",
+      "session_scope": "all_rows",
       "row_scope": "valid_row_only",
       "rows": 56939,
       "ny_day_count": 914
@@ -53,6 +53,7 @@
       "label": "practical start valid rows only",
       "start_utc": "2022-09-01T00:00:00+00:00",
       "day_scope": "all_days",
+      "session_scope": "all_rows",
       "row_scope": "valid_row_only",
       "rows": 55408,
       "ny_day_count": 892
@@ -62,6 +63,7 @@
       "label": "practical start cash-open valid rows only",
       "start_utc": "2022-09-01T00:00:00+00:00",
       "day_scope": "cash_open_rows",
+      "session_scope": "cash_open_rows_only",
       "row_scope": "valid_row_only",
       "rows": 54691,
       "ny_day_count": 892
@@ -71,6 +73,7 @@
       "label": "practical start full-cash-session-day valid rows only",
       "start_utc": "2022-09-01T00:00:00+00:00",
       "day_scope": "full_cash_session_days_only",
+      "session_scope": "cash_open_rows_only",
       "row_scope": "valid_row_only",
       "rows": 54439,
       "ny_day_count": 887

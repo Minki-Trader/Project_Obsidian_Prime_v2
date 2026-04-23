@@ -33,6 +33,7 @@ class FeatureFrameTargetProbeTests(unittest.TestCase):
         self.assertEqual(selected["target_id"], "practical_start_full_cash_day_valid_rows_only")
         self.assertEqual(selected["start_utc"], "2022-09-01T00:00:00+00:00")
         self.assertEqual(selected["day_scope"], "full_cash_session_days_only")
+        self.assertEqual(selected["session_scope"], "cash_open_rows_only")
         self.assertEqual(selected["row_scope"], "valid_row_only")
 
     def test_selected_target_counts_are_stable(self) -> None:
