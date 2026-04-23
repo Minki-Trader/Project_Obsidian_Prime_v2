@@ -1,4 +1,4 @@
-# Feature Calculation Specification FPMarkets v2
+﻿# Feature Calculation Specification FPMarkets v2
 
 This document freezes the feature calculation contract for the current FPMarkets US100 / M5 research pipeline. It is intended to keep Python preprocessing, dataset export, ONNX training/inference, and MT5 EA runtime aligned.
 
@@ -8,7 +8,9 @@ This document freezes the feature calculation contract for the current FPMarkets
 - Broker context: `FPMarkets` MT5 environment.
 - Broker-native external symbols for this version: `VIX`, `US10YR`, `USDX`.
 - Timestamp basis: all features are computed on the **most recently closed bar** only. No partially formed bar values are allowed.
-- Storage timezone: timestamps may be stored in UTC, but all session features must be derived in `America/New_York`.
+- Time-axis policy(시간축 정책): see `docs/contracts/time_axis_policy_fpmarkets_v2.md`. FPMarkets raw `time_open_unix` and `time_close_unix` are broker-clock alignment keys(브로커 시계 정렬 키) until a verified event-UTC conversion(이벤트 UTC 변환) or broker session calendar(브로커 세션 달력) is materialized.
+- Storage timezone: stored timestamps may carry UTC-aware types for sorting, but session features must not treat raw broker-clock keys(원천 브로커 시계 키) as direct UTC(직접 협정세계시).
+- Session timestamp: all session features must be derived from verified `timestamp_event_utc(이벤트 UTC 타임스탬프)` / `timestamp_ny(뉴욕 타임스탬프)` or an explicitly validated broker session calendar(브로커 세션 달력).
 - Session definition: NY core cash session = 09:30 to 16:00 New York time. Daylight saving transitions must follow the IANA `America/New_York` calendar.
 - Rolling windows are right-aligned and **include the current closed bar**.
 - `min_periods = window`. Before warmup is complete, the feature value is `NaN`.

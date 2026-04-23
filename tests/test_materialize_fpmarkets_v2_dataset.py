@@ -30,7 +30,7 @@ class MaterializeDatasetTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.module = load_dataset_module()
-        cls.frame, _ = cls.module.build_feature_frame(RAW_ROOT)
+        cls.frame, cls.counts = cls.module.build_feature_frame(RAW_ROOT)
         cls.bindings = {
             binding.contract_symbol: binding for binding in cls.module.SYMBOL_BINDINGS
         }
@@ -116,6 +116,16 @@ class MaterializeDatasetTests(unittest.TestCase):
             float(row["us10yr_zscore_20"]),
             self.direct_proxy_value("US10YR", "2025-09-30T20:05:00Z", "zscore_20"),
             places=12,
+        )
+
+    def test_materializer_metadata_rejects_direct_utc_raw_time_assumption(self) -> None:
+        self.assertEqual(
+            self.module.RAW_TIME_AXIS_POLICY,
+            "raw_broker_clock_bar_close_key_not_direct_utc",
+        )
+        self.assertEqual(
+            self.counts["session_time_policy_status"],
+            "unclosed_pending_timestamp_event_utc_or_broker_session_calendar",
         )
 
     def test_supertrend_seed_rule_defaults_to_downtrend_until_updated_band_exists(self) -> None:

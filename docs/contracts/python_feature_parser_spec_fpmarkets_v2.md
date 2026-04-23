@@ -112,9 +112,11 @@ FPMarkets v2 parser는 **raw feature**를 산출한다.
 - `symbol`
 
 ### 4.3 timezone contract
-- 저장 timezone은 UTC여도 된다.
-- 그러나 session feature 계산은 반드시 `America/New_York` 기준으로 수행한다.
-- 내부적으로는 `timestamp_utc`와 `timestamp_ny`를 모두 유지하는 것을 권장한다.
+- 시간축 정책(time-axis policy, 시간축 정책)은 `docs/contracts/time_axis_policy_fpmarkets_v2.md`를 따른다.
+- 원천 `time_open_unix`와 `time_close_unix`는 직접 UTC(direct UTC, 직접 협정세계시)가 아니라 브로커 시계 정렬 키(broker-clock alignment key, 브로커 시계 정렬 키)로 취급한다.
+- 외부 심볼 정렬(external symbol alignment, 외부 심볼 정렬)은 같은 브로커 시계 닫힘 키(broker-clock close key, 브로커 시계 닫힘 키)를 기준으로 한다.
+- session feature(세션 피처) 계산은 검증된 `timestamp_event_utc(이벤트 UTC 타임스탬프)`와 `timestamp_ny(뉴욕 타임스탬프)`, 또는 명시적으로 검증된 브로커 세션 달력(broker session calendar, 브로커 세션 달력)이 있을 때만 닫힌 것으로 본다.
+- 원천 브로커 시계 키(raw broker-clock key, 원천 브로커 시계 키)에 직접 `tz_convert("America/New_York")`를 적용하는 방식은 feature-frame closure(피처 프레임 폐쇄) 근거가 아니다.
 
 ---
 
@@ -167,7 +169,7 @@ FPMarkets v2 parser는 **raw feature**를 산출한다.
 `feature_calculation_spec_fpmarkets_v2.md`에 정의된 메인 심볼 feature를 계산한다.
 
 ### Step 4. session feature 계산
-`timestamp_ny` 기준으로 다음을 계산한다.
+검증된 `timestamp_ny(뉴욕 타임스탬프)` 또는 브로커 세션 달력(broker session calendar, 브로커 세션 달력) 기준으로 다음을 계산한다.
 
 - `is_us_cash_open`
 - `minutes_from_cash_open`

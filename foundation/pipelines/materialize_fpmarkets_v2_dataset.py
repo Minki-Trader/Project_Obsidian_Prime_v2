@@ -17,7 +17,10 @@ WINDOW_END_UTC = pd.Timestamp("2026-04-13T23:55:00Z")
 PRACTICAL_MODELING_START_UTC = pd.Timestamp("2022-09-01T00:00:00Z")
 WARMUP_BARS = 300
 FEATURE_CONTRACT_VERSION = "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-16"
-PARSER_CONTRACT_VERSION = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-16"
+PARSER_CONTRACT_VERSION = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-24"
+TIME_AXIS_POLICY_VERSION = "docs/contracts/time_axis_policy_fpmarkets_v2.md@2026-04-24"
+RAW_TIME_AXIS_POLICY = "raw_broker_clock_bar_close_key_not_direct_utc"
+SESSION_TIME_POLICY_STATUS = "unclosed_pending_timestamp_event_utc_or_broker_session_calendar"
 WEIGHTS_VERSION = "foundation/config/top3_monthly_weights_fpmarkets_v2.csv@2026-04-16 (placeholder_equal_weight)"
 PARSER_VERSION = "fpmarkets_v2_stage01_materializer_v1"
 DEFAULT_WEIGHTS_PATH = Path("foundation/config/top3_monthly_weights_fpmarkets_v2.csv")
@@ -158,6 +161,7 @@ def load_raw_symbol(raw_root: Path, binding: SymbolBinding) -> pd.DataFrame:
     if missing:
         raise RuntimeError(f"Raw CSV {csv_path} is missing columns: {sorted(missing)}")
     frame["timestamp"] = pd.to_datetime(frame["time_close_unix"], unit="s", utc=True)
+    frame["timestamp_policy"] = RAW_TIME_AXIS_POLICY
     frame = frame.sort_values("timestamp").reset_index(drop=True)
     frame = frame.loc[(frame["timestamp"] >= WINDOW_START_UTC) & (frame["timestamp"] <= WINDOW_END_UTC)].copy()
     if frame["timestamp"].duplicated().any():
@@ -347,7 +351,8 @@ def compute_vortex(high: pd.Series, low: pd.Series, close: pd.Series, period: in
 
 
 def compute_session_features(frame: pd.DataFrame) -> dict[str, pd.Series]:
-    timestamp_ny = frame["timestamp"].dt.tz_convert("America/New_York")
+    session_timestamp = frame["timestamp_event_utc"] if "timestamp_event_utc" in frame.columns else frame["timestamp"]
+    timestamp_ny = session_timestamp.dt.tz_convert("America/New_York")
     close_time = timestamp_ny.dt.time
     ny_date = timestamp_ny.dt.date
     session_midnight = timestamp_ny.dt.normalize()
@@ -642,6 +647,9 @@ def build_feature_frame(
         "valid_rows": int(base["valid_row"].sum()),
         "invalid_rows": int((~base["valid_row"]).sum()),
         "weights_version": weights_version,
+        "time_axis_policy_version": TIME_AXIS_POLICY_VERSION,
+        "raw_time_axis_policy": RAW_TIME_AXIS_POLICY,
+        "session_time_policy_status": SESSION_TIME_POLICY_STATUS,
         "invalid_reason_breakdown": {
             reason_code: int(mask.sum()) for reason_code, mask in invalid_reason_flags.items()
         },
@@ -681,7 +689,10 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
         "invalid_reason_breakdown": invalid_reason_breakdown,
         "alignment_missing_counts": counts["alignment_missing_counts"],
         "weights_version": counts["weights_version"],
-        "raw_source_time_binding_assumption": "time_close_unix and time_open_unix interpreted as UTC epoch seconds from MetaTrader5.copy_rates_range",
+        "time_axis_policy_version": counts["time_axis_policy_version"],
+        "raw_time_axis_policy": counts["raw_time_axis_policy"],
+        "session_time_policy_status": counts["session_time_policy_status"],
+        "raw_source_time_binding_assumption": "time_close_unix and time_open_unix are broker-clock bar-close/open keys, not direct UTC epoch seconds",
     }
     validity_path.write_text(json.dumps(row_validity_payload, indent=2), encoding="utf-8")
 
@@ -699,12 +710,15 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
         "weights_version": counts["weights_version"],
         "feature_contract_version": FEATURE_CONTRACT_VERSION,
         "parser_contract_version": PARSER_CONTRACT_VERSION,
+        "time_axis_policy_version": TIME_AXIS_POLICY_VERSION,
         "raw_rows": counts["raw_rows"],
         "valid_rows": counts["valid_rows"],
         "invalid_rows": counts["invalid_rows"],
         "invalid_reason_breakdown": invalid_reason_breakdown,
         "source_identities": source_identities,
-        "raw_source_time_binding_assumption": "time_close_unix and time_open_unix interpreted as UTC epoch seconds from MetaTrader5.copy_rates_range",
+        "raw_time_axis_policy": counts["raw_time_axis_policy"],
+        "session_time_policy_status": counts["session_time_policy_status"],
+        "raw_source_time_binding_assumption": "time_close_unix and time_open_unix are broker-clock bar-close/open keys, not direct UTC epoch seconds",
     }
     summary_path.write_text(json.dumps(summary_payload, indent=2), encoding="utf-8")
 
@@ -716,9 +730,12 @@ def write_outputs(output_root: Path, frame: pd.DataFrame, counts: dict[str, obje
                 "parser_version": PARSER_VERSION,
                 "feature_contract_version": FEATURE_CONTRACT_VERSION,
                 "parser_contract_version": PARSER_CONTRACT_VERSION,
+                "time_axis_policy_version": TIME_AXIS_POLICY_VERSION,
                 "feature_order_sha256": feature_hash,
                 "raw_root": "data/raw/mt5_bars/m5",
                 "output_root": str(output_root.as_posix()),
+                "raw_time_axis_policy": RAW_TIME_AXIS_POLICY,
+                "session_time_policy_status": SESSION_TIME_POLICY_STATUS,
             },
             indent=2,
         ),

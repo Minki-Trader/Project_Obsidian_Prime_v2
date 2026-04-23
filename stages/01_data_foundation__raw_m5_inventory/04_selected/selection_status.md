@@ -3,7 +3,7 @@
 ## 현재 판독(Current Read, 현재 판독)
 
 - active_stage(활성 단계): `01_data_foundation__raw_m5_inventory`
-- status(상태): `time_semantics_evidence_complete_next_policy_open`
+- status(상태): `timestamp_policy_decided_next_calendar_mapper_open`
 - current operating reference(현재 운영 기준): `none`
 - exploration rule(탐색 규칙): `Tier A(티어 A)`와 `Tier B(티어 B)`는 둘 다 완전히 탐색 가능
 
@@ -19,10 +19,13 @@
 - direct UTC match ratio(직접 UTC 일치율): `0.0`
 - broker wall-clock-like ratio(브로커 시계 유사율): `0.929082`
 - report(보고서): `stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_time_semantics_probe/time_semantics_probe.md`
+- decision(결정): `2026-04-24_stage01_timestamp_policy`
+- contract(계약): `docs/contracts/time_axis_policy_fpmarkets_v2.md`
+- policy(정책): 이중 시간축 정책(dual time axis policy, 이중 시간축 정책)
 
 ## 다음 근거(Next Evidence, 다음 근거)
 
-피처 프레임(feature frame, 피처 프레임)의 timestamp policy(타임스탬프 정책)를 정한다. 선택지는 원천 브로커 시계 키(raw broker-clock key, 원천 브로커 시계 키)를 유지하는 방식과 명시적 UTC 이벤트 시간(explicit UTC event time, 명시적 UTC 이벤트 시간)으로 변환하는 방식이다.
+브로커 세션 달력 매퍼(broker session calendar mapper, 브로커 세션 달력 매퍼)를 만든다. 효과(effect, 효과)는 미국 정규장 피처(US cash-session features, 미국 정규장 피처)를 직접 UTC 가정(direct UTC assumption, 직접 UTC 가정) 없이 계산할 수 있게 하는 것이다.
 
 ## 경계(Boundary, 경계)
 

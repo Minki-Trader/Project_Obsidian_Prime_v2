@@ -9,3 +9,4 @@
 - 첫 단계(first stage, 첫 단계)로 `01_data_foundation__raw_m5_inventory`를 열었다.
 - `20260424_raw_m5_inventory` 실행(run, 실행)으로 원천 `M5` 재고(raw M5 inventory, 원천 M5 재고)를 확인했다. 예상 심볼(expected symbols, 예상 심볼) 12개가 모두 사용 가능했고, 공통 사용 창(common usable window, 공통 사용 기간)은 `2022-08-01T16:35:00Z`부터 `2026-04-13T22:55:00Z`까지다.
 - `20260424_time_semantics_probe` 실행(run, 실행)으로 원천 timestamp(타임스탬프)가 직접 UTC(direct UTC, 직접 협정세계시)로는 미국 주식 정규장과 맞지 않고, 브로커/서버 시계 후보(broker/server clock candidate, 브로커/서버 시계 후보)에 가깝다는 근거를 남겼다.
+- `2026-04-24_stage01_timestamp_policy` 결정(decision, 결정)으로 이중 시간축 정책(dual time axis policy, 이중 시간축 정책)을 채택했다. 원천 정렬(alignment, 정렬)은 브로커 시계 키(broker-clock key, 브로커 시계 키)를 쓰고, 세션 피처(session features, 세션 피처)는 검증된 이벤트 UTC(event UTC, 이벤트 UTC) 또는 브로커 세션 달력(broker session calendar, 브로커 세션 달력)이 필요하다.

@@ -18,9 +18,10 @@
 10. `docs/policies/run_result_management.md`
 11. `docs/policies/result_judgment_policy.md`
 12. `docs/policies/agent_trigger_policy.md`
-13. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-14. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-15. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+13. `docs/contracts/time_axis_policy_fpmarkets_v2.md`
+14. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
+15. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+16. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
 
 ## 진실 우선순위(Truth Precedence, 진실 우선순위)
 
