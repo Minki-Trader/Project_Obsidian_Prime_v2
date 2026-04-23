@@ -41,6 +41,10 @@ If any relevant field contains one of these tokens, switch into strict claim dis
    - `probability-output evidence`
    - `frozen model artifact`
    - `architecture debt`
+   - `exploration evidence`
+   - `promotion-ineligible`
+   - `idea-dead`
+   - `tier_c_local_research`
 3. If a closure claim is made, name the backing artifact, report, or decision memo.
 4. If legacy evidence is referenced, mark it `prior evidence only`.
 5. If local-only artifacts are relied upon, ensure their identity is represented in `docs/registers/artifact_registry.csv` before describing them as reusable.
@@ -48,6 +52,9 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 7. Do not describe a model as materialized unless a reproducible model artifact or frozen parameter/spec bundle exists.
 8. Do not describe `foundation/features` or another reusable feature layer as ready when reusable logic still lives only in a pipeline or stage-local script.
 9. Do not treat registered architecture debt as a normal pattern to inherit.
+10. Do not describe a promotion-ineligible idea as worthless, dead, or fully closed unless negative-result memory records why it failed, what was salvaged, and when to reopen it.
+11. Do not describe Tier C local research as a trading lane, reduced-risk substitute, or promotion argument.
+12. Do not describe a legacy lesson as v2 truth unless a v2 artifact closes the same question.
 
 ## Project-Specific Guardrails
 
@@ -57,3 +64,6 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 - `handoff verification` is not `runtime parity closure`.
 - `probability-output evidence` is not a `frozen model artifact`.
 - `architecture debt` is not an accepted architecture pattern.
+- `promotion-ineligible` is not `idea-dead`.
+- `tier_c_local_research` is not a runtime lane.
+- `legacy exploration spirit` is not `legacy result inheritance`.

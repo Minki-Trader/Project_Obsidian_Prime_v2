@@ -11,6 +11,14 @@ Use this file when work touches feature calculation (피처 계산), model train
 - Stage-local scripts (단계 로컬 스크립트) may materialize experiment outputs, but they must not quietly become the long-term owner of reusable feature, model, or runtime contracts.
 - `foundation/mt5` may implement MT5 runtime or parity logic (MT5 런타임 또는 동등성 로직), but duplicated calculation surfaces must name their Python owner and parity evidence (파이썬 소유자 및 동등성 근거).
 
+## Code Surface Rules (코드 표면 규칙)
+
+- Reusable feature/model/runtime logic (재사용 피처/모델/런타임 로직) belongs under the correct `foundation` owner module.
+- `foundation/pipelines` owns orchestration (조율), stage scripts own materialization and stage-local analysis (물질화 및 단계 로컬 분석), and MT5 EA code owns execution and verification (실행 및 검증).
+- New code must name where it is used: caller (호출자), input contract (입력 계약), output contract (출력 계약), and artifact/report effect (산출물/보고 효과).
+- Do not concentrate broad feature, model, runtime, and reporting logic in one EA or one pipeline file when smaller owner modules can carry the reusable logic.
+- A task packet (작업 패킷) that cannot explain code placement and effect must stop before implementation.
+
 ## Model Artifact Rules (모델 산출물 규칙)
 
 - A model is not `materialized` (물질화됨) unless a reproducible model artifact (재현 가능한 모델 산출물) or frozen parameter/spec bundle (동결 파라미터/규격 번들) exists under a tracked stage run path or a registered artifact path.

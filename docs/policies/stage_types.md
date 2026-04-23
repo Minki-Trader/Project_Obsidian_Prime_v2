@@ -32,6 +32,27 @@ Rules:
 - must declare primary KPI, guardrails, and disqualifiers
 - must end with a durable promotion or no-promotion read
 
+## exploration_stage
+
+Used when the goal is to generate, mutate, stress, or archive alpha ideas without making an operating promotion decision.
+
+Rules:
+
+- must declare idea hypothesis, lane, tier scope, broad sweep, extreme sweep, WFO default, and negative-result memory rule
+- may produce useful failure evidence without producing a promotion candidate
+- must not be blocked only because promotion/runtime gates are not yet satisfied
+- must not inherit legacy code, run results, or promotion history
+
+## extra_stage
+
+Used when the user asks for a non-standard side question outside the current default stage path.
+
+Rules:
+
+- must declare charter, lane, allowed evidence, exit condition, and no-promotion boundary
+- may not bypass Tier A/B/C, WFO defaults, artifact identity, or runtime parity rules
+- must record whether its result updates idea, negative-result, or legacy-lesson memory
+
 ## runtime_recalibration_stage
 
 Used when the model/rule family stays frozen and only a bounded runtime gate or policy surface is rechecked.

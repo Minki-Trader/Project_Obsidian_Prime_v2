@@ -24,6 +24,7 @@ Update in the same pass:
 - `docs/workspace/changelog.md`
 - `README.md` when it still contains mutable stage, closure, or current-mode wording that this transition would otherwise leave stale
 - `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the transition changes feature/model/pipeline/artifact ownership, alpha-search framing, or encoding-sensitive agent behavior
+- `docs/policies/exploration_mandate.md`, `docs/registers/idea_registry.md`, and `docs/registers/negative_result_register.md` when the transition opens, closes, archives, or hands off exploration work
 
 ## Transition Rules
 
@@ -39,12 +40,15 @@ Update in the same pass:
 6. Prefer replacing volatile `README.md` status snapshots with pointers to the authoritative current-truth docs instead of maintaining a second live-state ledger there.
 7. Do not let a new stage inherit registered architecture debt as if it were normal project style.
 8. If the transition opens alpha search, separate source cleanup or validation debt closure from the actual alpha-search question.
+9. If the transition opens a user-requested extra stage, require charter, lane, question, allowed evidence, exit condition, and no-promotion boundary unless a promotion packet is explicitly opened.
+10. If the transition closes exploration, require negative-result memory or a positive archive record before treating the idea as durable knowledge.
 
 ## Validation
 
 - after the sync pass, verify that `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, and the active stage `selection_status.md` all name the same active stage
 - if the transition changes durable meaning, make sure a `docs/decisions/*.md` memo exists in the same pass
 - if architecture-sensitive docs or skills changed, run the architecture guard validator
+- if exploration-sensitive docs or skills changed, verify that lane routing, WFO default, and failure-memory references are still linked from the trigger policy
 
 ## Project-Specific Guardrails
 

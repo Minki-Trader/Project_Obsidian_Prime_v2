@@ -10,6 +10,7 @@ Canonical re-entry order and truth precedence live in `docs/policies/reentry_ord
 - route repetitive agent behavior through narrow reusable skills
 - reduce repeated mistakes around re-entry, claim language, and stage transitions
 - prevent cross-stage architecture drift around feature logic, model artifacts, alpha-search framing, and Korean encoding
+- separate exploration discipline from operating discipline so promotion/runtime conservatism does not suppress useful alpha research
 
 ## Placement
 
@@ -40,6 +41,14 @@ Every working turn should first fit one primary session mode:
 - `verification_pass`
 - `stage_transition`
 - `publish_pass`
+
+Every non-trivial turn should also name a primary lane:
+
+- `exploration`
+- `evidence`
+- `promotion`
+- `runtime`
+- `extra`
 
 If the user prompt is broad, choose the narrowest mode that still completes the turn safely.
 
@@ -108,6 +117,47 @@ Required effect:
 - treat registered architecture debt as known debt, not as a project pattern to copy
 - run the architecture guard validator after editing agent settings, repo-scoped skills, architecture policies, debt registers, or Korean docs
 
+### `obsidian-lane-classifier`
+
+Use when:
+
+- a task involves alpha search, idea variants, Tier B/C readiness, promotion, runtime verification, extra stages, or ambiguous user intent
+- operating discipline might be applied to exploration before the lane is clear
+- a task packet needs a `lane`, `promotion_gate_applicable`, or `runtime_gate_applicable` field
+
+Required effect:
+
+- classify the primary lane as `exploration`, `evidence`, `promotion`, `runtime`, or `extra`
+- state whether exploration discipline, operating discipline, or handoff discipline applies
+- keep promotion-ineligible ideas separate from idea-dead conclusions
+
+### `obsidian-exploration-mandate`
+
+Use when:
+
+- work involves alpha search, idea variants, Tier B or Tier C research, WFO planning, extreme sweeps, or negative-result closure
+- legacy lessons are used as inspiration but must not become code/result inheritance
+- an idea is being archived, reopened, or closed as no-promotion
+
+Required effect:
+
+- read `docs/policies/exploration_mandate.md`
+- name `idea_id`, hypothesis, legacy relation, tier scope, broad sweep, extreme sweep, micro-search gate, WFO plan, and failure-memory requirements
+- treat Tier C local research as research-only, not runtime or promotion evidence
+
+### `obsidian-code-surface-guard`
+
+Use when:
+
+- adding, moving, or modifying code in `foundation`, `foundation/pipelines`, MT5 EA files, stage scripts, model builders, feature calculators, runtime helpers, or report materialization paths
+- a task could deepen monolith behavior in EA or pipeline code
+- a task packet must explain where code lives and where it is used
+
+Required effect:
+
+- output owner module, caller, input contract, output contract, artifact/report relation, monolith risk, and placement decision
+- prevent reusable logic from being hidden inside an all-in-one EA, pipeline, or stage script
+
 ### `obsidian-task-packet`
 
 Use when:
@@ -123,6 +173,7 @@ Required effect:
 - derive that task from the active stage brief, selection status, current decision memos, and current session mode
 - output a bounded packet with `task_id`, `goal`, `allowed_paths`, `do_not_touch`, `expected_artifacts`, `verification_minimum`, `real_env_required`, `publish_target`, `stop_conditions`, and `done_definition`
 - add `architecture_guard_required`, `debt_register_update`, and `encoding_verification` when the task is architecture-sensitive
+- add `lane`, `idea_id`, `tier_scope`, `wfo_required`, `extreme_sweep_allowed`, `micro_search_gate`, `negative_result_required`, `promotion_gate_applicable`, and `code_surface_map_required` when relevant
 - keep `publish_target` at `branch_only` or `none` unless the user explicitly asks for `main` completion
 
 ### `obsidian-stage-transition`
@@ -138,6 +189,8 @@ Required effect:
 - follow the canonical same-pass sync list defined in this policy
 - never close a stage by implying later-stage evidence is already complete
 - verify that the new or closing stage does not copy registered architecture debt as normal project style
+- verify that the new or closing stage does not copy legacy results or suppress exploration through promotion gates
+- allow user-requested extra stages only with a charter, lane, exit condition, and no-promotion boundary
 - if `README.md` carries mutable stage or closure wording, sync or neutralize it in the same pass so it does not become a competing stale state source
 
 ### `obsidian-publish-merge`
@@ -183,6 +236,10 @@ Required same-pass files:
 - `foundation stage closure` is not `exploration-ready`
 - probability tables, summaries, calibration reads, and reports are not by themselves a materialized model artifact
 - registered architecture debt is not a pattern to repeat
+- `promotion-ineligible` is not `idea-dead`
+- `tier_c_local_research` is not a runtime lane
+- `legacy exploration mandate` is not `legacy code/result inheritance`
+- WFO is the default exploration optimization frame unless a packet marks a result scout-only or gives an explicit exception
 
 ## Verification Escalation (`검증 상향 규칙`)
 
@@ -200,6 +257,8 @@ Required same-pass files:
 - `진행해줘`: execute the current approved task packet; if none exists, create or reconstruct one before implementation
 - `브랜치랑 메인머지까지`, `메인까지 올려줘`: use `obsidian-publish-merge`
 - feature/model/pipeline/artifact/agent-settings/encoding work: also use `obsidian-architecture-guard`
+- alpha search, idea variants, Tier B/C research, WFO, extreme sweep, or negative-result closure: use `obsidian-lane-classifier` and `obsidian-exploration-mandate`
+- code placement or reusable logic work: use `obsidian-code-surface-guard` and `obsidian-architecture-guard`
 
 ## Dynamic Active Routing
 
@@ -208,6 +267,9 @@ Required same-pass files:
 - let `obsidian-session-intake` decide whether the thread needs full cold re-entry or only a same-thread delta check
 - use `obsidian-task-packet` before implementation or verification whenever the current packet is missing or ambiguous
 - use `obsidian-architecture-guard` for feature, model, pipeline, artifact, alpha-search, stage-transition, agent-settings, or Korean-encoding work regardless of stage number
+- use `obsidian-lane-classifier` before applying promotion/runtime gates to exploration, evidence, Tier B/C research, or extra-stage work
+- use `obsidian-exploration-mandate` for exploration-sensitive work regardless of active stage number
+- use `obsidian-code-surface-guard` whenever code placement, reusable logic ownership, or monolith risk is involved
 - use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
 - use `obsidian-publish-merge` only when the user explicitly asks for branch push plus `main` merge completion in the same pass or an approved task packet explicitly names `publish_target=main`
 - do not auto-trigger `obsidian-publish-merge` only because a verified implementation pass finished

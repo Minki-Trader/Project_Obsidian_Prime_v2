@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import re
@@ -16,10 +16,17 @@ MOJIBAKE_RE = re.compile(
 REQUIRED_PATHS = [
     "AGENTS.md",
     "docs/policies/architecture_invariants.md",
+    "docs/policies/exploration_mandate.md",
     "docs/registers/architecture_debt_register.md",
+    "docs/registers/idea_registry.md",
+    "docs/registers/negative_result_register.md",
+    "docs/registers/legacy_lesson_register.md",
     "docs/policies/agent_trigger_policy.md",
     "docs/policies/reentry_order.md",
     ".agents/skills/obsidian-architecture-guard/SKILL.md",
+    ".agents/skills/obsidian-lane-classifier/SKILL.md",
+    ".agents/skills/obsidian-exploration-mandate/SKILL.md",
+    ".agents/skills/obsidian-code-surface-guard/SKILL.md",
 ]
 
 
@@ -94,16 +101,28 @@ def check_policy_links(repo_root: Path) -> list[str]:
     reentry = (repo_root / "docs/policies/reentry_order.md").read_text(encoding="utf-8-sig")
     agents = (repo_root / "AGENTS.md").read_text(encoding="utf-8-sig")
     debt = (repo_root / "docs/registers/architecture_debt_register.md").read_text(encoding="utf-8-sig")
+    exploration = (repo_root / "docs/policies/exploration_mandate.md").read_text(encoding="utf-8-sig")
 
     required_pairs = [
         ("agent_trigger_policy.md", trigger_policy, "obsidian-architecture-guard"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-lane-classifier"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-exploration-mandate"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-code-surface-guard"),
         ("agent_trigger_policy.md", trigger_policy, "architecture_invariants.md"),
+        ("agent_trigger_policy.md", trigger_policy, "exploration_mandate.md"),
         ("reentry_order.md", reentry, "architecture_invariants.md"),
+        ("reentry_order.md", reentry, "exploration_mandate.md"),
         ("AGENTS.md", agents, "Architecture Invariants"),
+        ("AGENTS.md", agents, "Exploration Mandate"),
         ("architecture_debt_register.md", debt, "AD-001"),
         ("architecture_debt_register.md", debt, "AD-002"),
         ("architecture_debt_register.md", debt, "AD-003"),
         ("architecture_debt_register.md", debt, "AD-004"),
+        ("architecture_debt_register.md", debt, "AD-005"),
+        ("architecture_debt_register.md", debt, "AD-006"),
+        ("exploration_mandate.md", exploration, "promotion-ineligible"),
+        ("exploration_mandate.md", exploration, "tier_c_local_research"),
+        ("exploration_mandate.md", exploration, "WFO"),
     ]
     for label, text, needle in required_pairs:
         if needle not in text:

@@ -15,7 +15,15 @@ This workspace is the clean-restart FPMarkets `US100` `M5` data, feature, runtim
 - diagnostic evidence is not the same thing as operating promotion
 - legacy is a lesson source, not an automatic truth source
 - concept contract is inherited, promotion history is not
+- legacy exploration mandate is inherited, legacy code/result/promotion history is not
 - foundation closure comes before new alpha search
+- operating discipline and exploration discipline must stay separate
+
+## Codex Response Rule
+
+- when using English expressions, pair them with Korean notation in the same local context
+- avoid unexplained abbreviations; expand terms such as WFO (`walk-forward optimization`, 워크포워드 최적화) and OOS (`out-of-sample`, 표본외) before relying on them
+- when describing an action, also describe the effect of that action so users do not have to infer the meaning from context
 
 ## Contract Hierarchy
 
@@ -70,6 +78,16 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - alpha search (`알파 탐색`) must not silently become only source cleanup (`소스 정리`) or validation debt closure (`검증 부채 정리`) without an explicit durable decision
 - known architecture debt (`구조 부채`) belongs in `docs/registers/architecture_debt_register.md`; registered debt is not a healthy pattern to copy
 
+## Exploration Mandate (`탐색 명령`)
+
+- `docs/policies/exploration_mandate.md` owns the stage-agnostic exploration rules (`단계 독립 탐색 규칙`)
+- every non-trivial task must name a primary lane (`주 레인`): `exploration` (`탐색`), `evidence` (`근거`), `promotion` (`승격`), `runtime` (`런타임`), or `extra` (`추가`)
+- promotion-ineligible (`승격 부적격`) does not mean idea-dead (`아이디어 사망`)
+- alpha search (`알파 탐색`) should push serious ideas through broad sweep (`광역 탐색`), extreme sweep (`극단값 탐색`), WFO (`walk-forward optimization`, 워크포워드 최적화), stress/readout (`스트레스/판독`), and negative-result memory (`부정 결과 기록`) when relevant
+- micro search (`미세 탐색`) is allowed only after broad evidence identifies a robust region (`견고한 구간`)
+- Tier A/B/C (`티어 A/B/C`) remains the default readiness vocabulary (`준비도 어휘`), but Tier C (`티어 C`) may support local-only research (`로컬 전용 연구`) only when base/session semantics are valid and external context is the missing part
+- user-requested extra stages (`사용자 요청 추가 단계`) are allowed, but they must declare charter (`헌장`), lane (`레인`), exit condition (`종료 조건`), and no-promotion boundary (`비승격 경계`)
+
 ## Verification Discipline (`검증 규율`)
 
 - use the narrowest sufficient verification first, but include a real-environment check (`실환경 검증`) before calling work verified when the change touches MT5 execution, tester orchestration, import/export boundaries, runtime parity flow, or another path where mocks can miss environment-specific behavior
@@ -111,8 +129,12 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `docs/decisions/*.md` records durable operating decisions
 - `docs/policies/reentry_order.md` defines the canonical re-entry order and truth precedence
 - `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
+- `docs/registers/idea_registry.md` records durable exploration ideas
+- `docs/registers/negative_result_register.md` records reusable failed or closed hypotheses
+- `docs/registers/legacy_lesson_register.md` records abstract legacy lessons without importing legacy code or run results
 - `docs/policies/artifact_registry_schema.md` defines registry columns, enums, and hash-update discipline
 - `docs/policies/architecture_invariants.md` defines stage-agnostic structure and encoding guardrails
+- `docs/policies/exploration_mandate.md` defines exploration discipline, lane separation, WFO defaults, and failure-memory rules
 - `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
 - `docs/policies/agent_trigger_policy.md` records repo-scoped trigger-to-skill routing
 - `.agents/skills/` stores repo-scoped reusable Codex skills for re-entry, claim discipline, and stage-transition workflows
@@ -133,5 +155,7 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - update registers when new durable artifact identity appears
 - update `docs/policies/artifact_registry_schema.md` when registry columns, enums, or hash-update rules change
 - update `docs/policies/architecture_invariants.md` only when cross-stage architecture guardrails change
+- update `docs/policies/exploration_mandate.md` only when cross-stage exploration discipline changes
 - update `docs/registers/architecture_debt_register.md` when known architecture debt is discovered, reduced, deepened, or retired
+- update `docs/registers/idea_registry.md`, `docs/registers/negative_result_register.md`, or `docs/registers/legacy_lesson_register.md` when durable idea, failure, or legacy-lesson memory changes
 - keep Korean `.md` and `.txt` documents in `UTF-8 with BOM` when editing them for Windows-facing workflows

@@ -20,6 +20,8 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 2. Read the active stage `00_spec/stage_brief.md` and `01_inputs/input_refs.md` only as far as needed to choose one primary task.
 3. If a same-thread session-intake summary already exists, reuse it instead of rebuilding the whole read.
 4. Decide whether the task is architecture-sensitive: feature/model/pipeline/artifact, alpha-search framing, stage transition, repo-scoped skill, agent setting, or Korean encoding work.
+5. Decide whether the task is exploration-sensitive: alpha search, idea variants, Tier B/C research, WFO planning, extreme sweep, negative-result closure, or user-requested extra stage.
+6. If code will change, decide whether `obsidian-code-surface-guard` must produce a placement/effect map before implementation.
 
 ## Must Read
 
@@ -29,14 +31,25 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - the active stage `01_inputs/input_refs.md`
 - the latest relevant decision memo when it changes the next required evidence
 - `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the task is architecture-sensitive
+- `docs/policies/exploration_mandate.md`, `docs/registers/idea_registry.md`, and `docs/registers/negative_result_register.md` when the task is exploration-sensitive
+- `docs/registers/legacy_lesson_register.md` when legacy lessons are mentioned
 
 ## Must Output
 
 - `task_id`
+- `lane`
+- `idea_id`
+- `tier_scope`
 - `goal`
 - `allowed_paths`
 - `do_not_touch`
 - `expected_artifacts`
+- `wfo_required`
+- `extreme_sweep_allowed`
+- `micro_search_gate`
+- `negative_result_required`
+- `promotion_gate_applicable`
+- `code_surface_map_required`
 - `verification_minimum`
 - `real_env_required`
 - `publish_target`
@@ -53,6 +66,10 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - treat `publish_target=main` as the default
 - leave verification, stop conditions, or expected artifacts implicit
 - normalize registered architecture debt as acceptable project style
+- treat `promotion_gate_applicable=no` as a reason to skip exploration records
+- open micro search before broad sweep evidence identifies a robust region
+- use a single-window optimized run as robust evidence without WFO or an explicit scout-only boundary
+- let a code task proceed without naming owner, caller, and effect when reusable logic or runtime behavior changes
 
 ## Stop Conditions
 
@@ -60,6 +77,8 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - the needed changes would fall outside the packet's allowed paths
 - the packet would require real-environment verification that cannot be run or justified in the current pass
 - the packet would deepen registered architecture debt without an explicit decision memo
+- the packet would close an exploration idea without salvage value and reopen condition
+- the packet would use Tier C local research as a runtime or promotion lane
 
 ## Verification
 
@@ -67,6 +86,8 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - mark `real_env_required=yes` only when MT5 execution, tester orchestration, runtime parity flow, import/export boundaries, or another environment-dependent path is touched
 - keep `publish_target` at `branch_only` or `none` unless the user explicitly asks for `main` or a durable operating packet already authorizes it
 - run the architecture guard validator when agent settings, repo-scoped skills, architecture policies, debt registers, or Korean docs are touched
+- for exploration tasks, verify that the output can update `idea_registry.md` or `negative_result_register.md` when the result becomes durable
+- for code tasks, verify that owner module, caller, input/output, and artifact/report effect are explicit before implementation
 
 ## Completion Criteria
 
@@ -74,3 +95,4 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - the packet is narrow enough that `진행해줘` can execute it without improvising new scope
 - the packet makes the publish default and stop conditions explicit before files change
 - architecture risk and encoding verification are explicit when relevant
+- lane, WFO default, failure-memory rule, and code-surface rule are explicit when relevant
