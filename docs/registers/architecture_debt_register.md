@@ -1,21 +1,16 @@
-﻿# Architecture Debt Register (구조 부채 등록부)
+﻿# Architecture Debt Register
 
-This register tracks known architecture debt (알려진 구조 부채) so future stages do not copy it as normal project style.
+이 등록부(register, 등록부)는 구조 부채(architecture debt, 구조 부채)를 기록해서, 나중에 정상 패턴(normal pattern, 정상 패턴)처럼 복사하지 않게 한다.
 
-Registering a debt means: known, bounded, and not safe to repeat. It does not mean accepted as a healthy pattern.
+| debt_id | scope(범위) | symptom(증상) | why_it_matters(중요한 이유) | status(상태) |
+|---|---|---|---|---|
+| `AD-001` | feature ownership(피처 소유권) | 재사용 피처 로직(reusable feature logic, 재사용 피처 로직)이 파이프라인(pipeline, 파이프라인)으로 밀릴 수 있음 | 피처 진실(feature truth, 피처 진실)을 감사하기 어려워짐 | open |
+| `AD-002` | model artifacts(모델 산출물) | 보고서(report, 보고서)가 모델 산출물(model artifact, 모델 산출물)로 오해될 수 있음 | 재현성(reproducibility, 재현성)을 과장할 수 있음 | open |
+| `AD-003` | alpha framing(알파 틀짓기) | 소스 정리(source cleanup, 소스 정리)가 알파 탐색(alpha search, 알파 탐색)처럼 보일 수 있음 | 탐색(exploration, 탐색)이 지연됨 | open |
+| `AD-004` | Korean encoding(한국어 인코딩) | 한국어 문서가 UTF-8 BOM(UTF-8 BOM 포함)을 잃을 수 있음 | Windows 표시가 깨질 수 있음 | open |
+| `AD-005` | exploration discipline(탐색 규율) | 운영 게이트(operating gate, 운영 게이트)가 탐색을 누를 수 있음 | 좋은 아이디어가 너무 일찍 막힘 | open |
+| `AD-006` | code surface(코드 표면) | 큰 파이프라인이나 EA(all-in-one file, 일체형 파일)가 자랄 수 있음 | 소유권(ownership, 소유권)과 테스트(test, 테스트)가 흐려짐 | open |
 
-| debt_id | scope (범위) | symptom (증상) | why_it_matters (중요한 이유) | allowed_until (허용 조건) | must_not_repeat (반복 금지 조건) |
-|---|---|---|---|---|---|
-| `AD-001` | reusable feature layer (재사용 피처 계층) | `foundation/features` has only `README.md`, while reusable Python feature logic currently lives in `foundation/pipelines/materialize_fpmarkets_v2_dataset.py`. | Future agents may mistake pipeline-local feature calculation (파이프라인 로컬 피처 계산) for the intended architecture. | Existing Stage 01 to Stage 07 evidence may remain readable as historical materialized evidence until a dedicated feature-layer migration is approved. | Do not add new reusable feature calculation to `foundation/pipelines` when it belongs in `foundation/features`. |
-| `AD-002` | model artifact identity (모델 산출물 정체성) | Stage 06 reduced-context model reads produced probability tables and summaries, but no tracked `.joblib`, `.pkl`, `.onnx`, or frozen parameter/spec bundle. | Calling this a materialized model (물질화된 모델) can overstate reproducibility and handoff readiness. | Existing Stage 06/07 docs may keep their historical wording only when paired with claim discipline that distinguishes probability-output evidence from frozen model artifacts. | Do not describe a future model as materialized unless a reproducible artifact or frozen parameter/spec bundle exists. |
-| `AD-003` | alpha search boundary (알파 탐색 경계) | Stage 07 opening narrowed toward a Tier B dual-verdict source-boundary packet even though the current keep42 surface is weight-neutral on direct inputs. | Alpha search (알파 탐색) can drift into validation debt closure (검증 부채 정리) while looking like search progress. | Treat this as an existing Stage 07 framing debt until a later Stage 07 realignment packet is approved. | Do not let future alpha stages become source cleanup only without an explicit decision and separate alpha-search question. |
-| `AD-004` | Korean encoding (한국어 인코딩) | Some Korean `.md` files lacked UTF-8 BOM, and `obsidian-task-packet` contained mojibake in Korean trigger phrases. | Windows-facing workflows can display broken Korean text and agents may copy corrupted triggers. | Existing files must be normalized during the agent-settings hardening pass. | Do not edit Korean `.md` or `.txt` docs without preserving UTF-8 with BOM and checking for mojibake. |
-| `AD-005` | exploration versus operating discipline (탐색/운영 규율 분리) | Operating conservatism around parity, runtime, and promotion was able to constrain alpha-search framing before lane classification. | Useful ideas can be blocked before they produce reusable exploration evidence, and promotion-ineligible can be mistaken for idea-dead. | Existing Stage 06/07 framing may remain historical, but future work must classify lanes and apply `exploration_mandate.md`. | Do not apply promotion/runtime gates to exploration work before `obsidian-lane-classifier` names the lane and `obsidian-exploration-mandate` defines the exploration boundary. |
-| `AD-006` | code surface concentration (코드 표면 집중) | Legacy-style EA and pipeline growth can encourage broad all-in-one files that own feature, model, runtime, and reporting behavior together. | Monoliths make ownership, parity, reuse, and artifact effects hard to audit. | Existing files may remain until a dedicated refactor is approved. | Do not add new reusable logic without naming owner module, caller, input/output contract, and artifact/report effect. |
-| `AD-007` | path identity and Windows long path handling (경로 정체성 및 윈도우 긴 경로 처리) | The MT5 terminal workspace root is already deep, and long stage/run artifact names can make PowerShell or .NET file APIs report existing files as missing. | Agents can misdiagnose artifacts as absent, fail archive/copy steps, or write durable docs with brittle absolute terminal paths. | Existing long paths may remain readable as historical evidence, but future work must prefer repo-relative references, shorter filenames when context is already in the directory, and ZIP-plus-manifest archives for deep snapshots. | Do not store absolute terminal install paths as artifact identity, do not repeat long context in filenames without a schema reason, and do not call a file missing until long-path handling has been ruled out. |
+## 재시작 메모(Restart Note, 재시작 메모)
 
-## Use Rule (사용 규칙)
-
-- Before feature/model/pipeline/stage/claim work, check whether the task touches any debt above.
-- If it does, state whether the pass reduces the debt (부채 감소), leaves it unchanged (부채 유지), or would deepen it (부채 심화).
-- Debt-deepening changes require an explicit decision memo or task packet.
+오래된 Stage 00부터 Stage 07까지의 흐름(flow, 흐름)은 현재 진실(current truth, 현재 진실)에서 제거했다. 효과(effect, 효과)는 `AD-003`과 `AD-005`를 줄이는 것이다.

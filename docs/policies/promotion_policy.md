@@ -1,17 +1,16 @@
 ﻿# Promotion Policy
 
-- diagnostic evidence can justify a follow-up, but cannot by itself replace the operating line
-- `promotion_candidate` (`승격 후보`) may be opened for bounded comparison before every operating gate is closed, as long as the evidence boundary and missing gates are labeled
-- `operating_promotion` (`운영 승격`) means incumbent replacement or confirmation and requires:
-  - a clear inherited reference
-  - primary KPI and guardrail reads
-  - a current `selection_status.md`
-  - a durable decision memo
-- if a new telemetry field is part of the promotion story, the incumbent/reference family must be backfilled first
-- handoff verification and runtime parity closure are separate approval gates
-- if the candidate depends on a contract-aligned runtime lane, parity status must be stated explicitly
-- `runtime_probe` (`런타임 탐침`) may observe runtime behavior without claiming runtime parity closure
-- `runtime_authority` (`런타임 권위`) means runtime parity closure, bundle handoff authority, or live-like readiness and requires the relevant hard-gate evidence
-- when the evidence is useful but not promotion-worthy, close with an explicit `no promotion` read instead of leaving ambiguity
-- `promotion-ineligible` does not mean `idea-dead`; exploration closure requires negative-result memory, salvage value, and reopen condition
-- Tier B and Tier C local research may inform future exploration, but they do not become promotion arguments unless a later promotion packet explicitly opens the required gates
+탐색(exploration, 탐색)과 승격(promotion, 승격)은 다르다.
+
+## 어휘(Vocabulary, 어휘)
+
+- `promotion_candidate(승격 후보)`: 운영선 교체(incumbent replacement, 현행선 교체) 없이 연구할 후보
+- `operating_promotion(운영 승격)`: 운영선을 교체하거나 확인한다는 주장
+- `runtime_probe(런타임 탐침)`: 권위(authority, 권위) 없는 런타임 관찰
+- `runtime_authority(런타임 권위)`: 런타임 동등성 폐쇄(runtime parity closure, 런타임 동등성 폐쇄), 번들 인계 권위(bundle handoff authority, 번들 인계 권위), 또는 실거래 유사 준비(live-like readiness, 실거래 유사 준비)
+
+## 규칙(Rule, 규칙)
+
+승격 게이트(promotion gate, 승격 게이트)는 운영 의미(operating meaning, 운영 의미)를 주장할 때만 적용한다.
+
+탐색 결과(exploration result, 탐색 결과)는 승격할 수 없어도 흥미로울 수 있다.

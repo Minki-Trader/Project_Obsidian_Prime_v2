@@ -1,197 +1,92 @@
 ﻿# Project Obsidian Prime v2
 
-## Scope
+## 핵심 의도(Core Intent, 핵심 의도)
 
-This workspace is the clean-restart FPMarkets `US100` `M5` data, feature, runtime, and stage pipeline for Project Obsidian Prime.
+이 작업공간은 FPMarkets `US100` `M5` 연구와 실행을 위한 깨끗한 프로젝트다.
 
-## Core Principles
+Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symbol contract, 브로커 심볼 계약)은 유지한다. 하지만 과거 승자(winner, 승자), 과거 승격 이력(promotion history, 승격 이력), 과거 단계 압력(stage pressure, 단계 압력)은 물려받지 않는다.
 
-- contract-first
-- closed-bar only
-- exact timestamp alignment
-- contract fidelity over platform built-in convenience
-- Python-led orchestration, MT5 as execution and verification engine
-- one regular operating alpha line at a time
-- diagnostic evidence is not the same thing as operating promotion
-- legacy is a lesson source, not an automatic truth source
-- concept contract is inherited, promotion history is not
-- legacy exploration mandate is inherited, legacy code/result/promotion history is not
-- foundation closure comes before new alpha search
-- operating discipline and exploration discipline must stay separate
-- every run must leave measurement, management, and lane-aware judgment before it is treated as closed
-- hard gates apply to operating truth claims, not to every candidate or runtime probe
+## 응답 규칙(Language Rule, 언어 규칙)
 
-## Codex Response Rule
+- 영어 표현(English expression, 영어 표현)을 쓸 때는 같은 문맥 안에 한국어 표기를 함께 쓴다.
+- 행동(action, 행동)을 설명할 때는 그 행동의 효과(effect, 효과)도 같이 설명한다.
+- 설명은 짧고 쉽게 쓴다.
 
-- when using English expressions, pair them with Korean notation in the same local context
-- avoid unexplained abbreviations; expand terms such as WFO (`walk-forward optimization`, 워크포워드 최적화) and OOS (`out-of-sample`, 표본외) before relying on them
-- when describing an action, also describe the effect of that action so users do not have to infer the meaning from context
+## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)
 
-## Contract Hierarchy
+탐색(exploration, 탐색)에는 게이트(gate, 제한문)가 없다.
 
-- `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-- `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-- `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
-- auxiliary frozen mirror: `docs/contracts/feature-list_fpmarkets_v2.txt`
+`Tier A(티어 A)`와 `Tier B(티어 B)`는 둘 다 완전히 탐색할 수 있다. 티어(tier, 티어)는 데이터 완전성(data completeness, 데이터 완전성)이나 문맥 상태(context quality, 문맥 품질)를 설명하는 라벨(label, 라벨)일 뿐이다.
 
-Implementation notes, review files, selection files, and the auxiliary frozen mirror do not override the three constitutional contracts.
+제한(restriction, 제한)은 운영 의미(operational meaning, 운영 의미)를 주장할 때만 붙는다. 예를 들면 실거래(live use, 실거래), 런타임 권위(runtime authority, 런타임 권위), 운영 승격(operating promotion, 운영 승격)이다.
 
-## Working Vocabulary
+## 점진적 경화(Progressive Hardening, 점진적 경화)
 
-- use `foundation gate`, `parity closure`, `artifact identity closure`, and `promotion gate`
-- use `promotion_candidate` for a candidate read that does not replace the incumbent operating line
-- use `operating_promotion` for an incumbent replacement or confirmation claim
-- use `runtime_probe` for runtime observation without parity-closure authority
-- use `runtime_authority` for runtime parity closure, bundle handoff authority, or live-like readiness claims
-- avoid `release gate` and `release closure`
+- 초기 탐색(early exploration, 초기 탐색)은 빠진 근거를 이름 붙이면 시작할 수 있다.
+- `promotion_candidate(승격 후보)`는 비교할 가치가 있다는 뜻이지, 운영선을 교체한다는 뜻이 아니다.
+- `runtime_probe(런타임 탐침)`는 런타임을 관찰한다는 뜻이지, 런타임 권위가 닫혔다는 뜻이 아니다.
+- `operating_promotion(운영 승격)`과 `runtime_authority(런타임 권위)`는 강한 근거가 필요하다.
+- `promotion-ineligible(승격 부적격)`은 아이디어 사망(idea-dead, 아이디어 사망)이 아니다.
 
-## Progressive Hardening (`점진적 경화`)
+## 단계 규칙(Stage Rule, 단계 규칙)
 
-- early exploration/scout (`초기 탐색/스카우트`) may start with partial evidence when missing evidence is labeled
-- candidate/probe (`후보/탐침`) work may open before every hard gate is closed when the evidence boundary is explicit
-- hard gates (`강한 게이트`) apply to operating truth (`운영 진실`) claims such as `operating_promotion` and `runtime_authority`
-- missing WFO (`walk-forward optimization`, 워크포워드 최적화), full parity (`전체 동등성`), or runtime closure (`런타임 폐쇄`) limits the claim boundary but does not kill the idea by default
+프로젝트는 단계(stage, 단계)로 관리한다.
 
-## Directory Rules
+각 단계는 번호(number, 번호)와 짧은 부제(subtitle, 부제)를 함께 쓴다.
 
-- keep the root limited to `docs`, `data`, `foundation`, and `stages`, with repo-scoped `.agents/skills/` allowed as a narrow exception for reusable agent triggers
-- keep source-of-truth contracts in `docs/contracts`
-- keep current state in `docs/workspace`
-- keep policies in `docs/policies`
-- keep durable decisions in `docs/decisions` and `docs/adr`
-- keep registries in `docs/registers`
-- keep reusable code in `foundation`
-- keep shared datasets in `data/processed`
-- keep stage-local outputs under `stages/<nn_name>/`
-- do not create a top-level dump folder for scratch artifacts
+`NN_area__specific_question`
 
-## Path Discipline (`경로 규율`)
+부제(subtitle, 부제)는 이번 단계의 질문(question, 질문)을 설명한다. 미래의 모든 알파(alpha, 알파)를 한 단계 안에 가두면 안 된다.
 
-- use repo-relative paths (`저장소 상대경로`) for repo-internal documents, manifests, registries, tests, and stage artifacts by default
-- use absolute paths (`절대경로`) only for local diagnostics, user-facing clickable file links, external tools, or MT5 environment handoff (`MT5 환경 인계`) where the full machine path is required
-- do not treat an absolute terminal install path (`터미널 설치 절대경로`) as artifact identity (`산출물 정체성`); durable identity must stay in repo-relative path plus hash or registry fields
-- avoid repeating long stage, dataset, or run identifiers inside filenames when the parent directory already carries that context; shorter filenames reduce Windows long path (`윈도우 긴 경로`) failures without reducing artifact meaning
-- if `rg` or directory enumeration sees a file but `Test-Path`, `Get-Item`, copy, or archive tooling reports it missing, suspect Windows long path handling (`윈도우 긴 경로 처리`) before claiming a missing artifact
-- use ZIP plus manifest (`ZIP 및 목록`) for sealed archive snapshots when nested stage paths are long; use `\\?\` long-path prefixes only in local tooling, not in committed repo references
+모델 학습(model training, 모델 학습)과 검증(validation, 검증)이 실제로 가능해지는 순간부터 알파 탐색(alpha research, 알파 탐색)을 시작할 수 있다. 고정된 단계 번호에 묶지 않는다.
 
-## Data And Time Semantics
+## 티어 규칙(Tier Rule, 티어 규칙)
 
-- use `US100` `M5` as the base frame
-- compute external-symbol features on each symbol's own raw `M5` series, then merge onto the `US100` frame by bar-close timestamp
-- use `GOOGL.xnas` as the contract Google symbol unless explicitly changed
-- treat `foundation/config/top3_monthly_weights_fpmarkets_v2.csv` as a placeholder until real monthly weights are supplied
-- default shared working window: `2022-08-01` through `2026-04-13` inclusive, pending the first v2 dataset freeze
-- default practical modeling start: `2022-09-01`
-- no partial current-bar values are allowed in model inputs
+- `Tier A(티어 A)`: 전체 문맥 표본(full-context sample, 전체 문맥 표본)
+- `Tier B(티어 B)`: 부분 문맥 표본(partial-context sample, 부분 문맥 표본)
+- `Tier C(티어 C)`: 약한 표본(weak sample, 약한 표본) 또는 명시적으로 허용된 로컬 연구(local research, 로컬 연구)
 
-## Runtime Fidelity Rule
+모든 티어(tier, 티어)는 탐색할 수 있다. 보고서(report, 보고서)는 무엇을 탐색했는지만 정직하게 라벨링(labeling, 라벨링)하면 된다.
 
-- model-input feature parity is a first-class gate
-- helper/runtime parity is a separate gate from model-input parity
-- bundle handoff verification is a separate gate from full parity closure
-- if built-in MT5 helpers disagree with the contract surface, the contract wins
-- all required inputs missing means `all-or-skip`, not degrade-with-warning
+## 구조 불변 규칙(Architecture Invariants, 구조 불변 규칙)
 
-## Architecture Invariants (`구조 불변 규칙`)
+`docs/policies/architecture_invariants.md`가 코드 배치(code placement, 코드 배치)와 경로 규칙(path rule, 경로 규칙)을 담당한다.
 
-- `docs/policies/architecture_invariants.md` owns cross-stage architecture guardrails (`단계 공통 구조 가드레일`)
-- `foundation/features` owns reusable feature logic (`재사용 피처 로직`); `foundation/pipelines` may orchestrate (`조율`) but must not become the feature source of truth (`피처 진실 원천`)
-- a model is not `materialized` (`물질화됨`) unless a reproducible model artifact (`재현 가능한 모델 산출물`) or frozen parameter/spec bundle (`동결 파라미터/규격 번들`) exists under a tracked stage run path or registered artifact path
-- alpha search (`알파 탐색`) must not silently become only source cleanup (`소스 정리`) or validation debt closure (`검증 부채 정리`) without an explicit durable decision
-- known architecture debt (`구조 부채`) belongs in `docs/registers/architecture_debt_register.md`; registered debt is not a healthy pattern to copy
+- 재사용 피처 로직(reusable feature logic, 재사용 피처 로직)은 `foundation/features`에 둔다.
+- 재사용 모델 로직(reusable model logic, 재사용 모델 로직)이 생기면 별도 소유 모듈(owner module, 소유 모듈)에 둔다.
+- `foundation/pipelines`는 조율(orchestration, 조율)을 담당한다. 숨은 진실 원천(source of truth, 진실 원천)이 되면 안 된다.
+- `stages/*`는 단계 로컬 산출물(stage-local artifact, 단계 로컬 산출물), 보고서(report, 보고서), 실행 근거(run evidence, 실행 근거)를 담는다.
 
-## Exploration Mandate (`탐색 명령`)
+## 탐색 명령(Exploration Mandate, 탐색 명령)
 
-- `docs/policies/exploration_mandate.md` owns the stage-agnostic exploration rules (`단계 독립 탐색 규칙`)
-- every non-trivial task must name a primary lane (`주 레인`): `exploration` (`탐색`), `evidence` (`근거`), `promotion` (`승격`), `runtime` (`런타임`), or `extra` (`추가`)
-- promotion-ineligible (`승격 부적격`) does not mean idea-dead (`아이디어 사망`)
-- progressive hardening (`점진적 경화`) is the default: early scout work may carry partial evidence, candidate/probe work must label its evidence boundary, and only operating truth claims require hard gates
-- alpha search (`알파 탐색`) should push serious ideas through broad sweep (`광역 탐색`), extreme sweep (`극단값 탐색`), WFO (`walk-forward optimization`, 워크포워드 최적화), stress/readout (`스트레스/판독`), and negative-result memory (`부정 결과 기록`) when relevant
-- micro search (`미세 탐색`) without broad evidence may be scout-only (`탐색 전용`), but it must not be described as robust evidence (`견고한 근거`)
-- Tier A/B/C (`티어 A/B/C`) remains the default readiness vocabulary (`준비도 어휘`), but Tier C (`티어 C`) may support local-only research (`로컬 전용 연구`) only when base/session semantics are valid and external context is the missing part
-- user-requested extra stages (`사용자 요청 추가 단계`) are allowed, but they must declare charter (`헌장`), lane (`레인`), exit condition (`종료 조건`), and no-promotion boundary (`비승격 경계`)
+`docs/policies/exploration_mandate.md`가 탐색 규율(exploration discipline, 탐색 규율)을 담당한다.
 
-## Run Evidence System (`실행 근거 시스템`)
+탐색은 아이디어를 자유롭게 만들고, 정직하게 시험하고, 실패를 기록하며, 운영 조심성(operating caution, 운영 조심성)이 아이디어 필터(idea filter, 아이디어 필터)가 되지 않게 하는 일이다.
 
-- `docs/policies/kpi_measurement_standard.md` owns KPI measurement (`핵심 성과 지표 측정`) layers and scoreboard (`점수판`) vocabulary
-- `docs/policies/run_result_management.md` owns run identity (`실행 정체성`), run lifecycle (`실행 생애주기`), and `run_registry.csv` (`실행 등록부`) rules
-- `docs/policies/result_judgment_policy.md` owns result judgment (`결과 판정`) and separates `positive` (`긍정`), `negative` (`부정`), `inconclusive` (`불충분`), and `invalid` (`무효`)
-- `negative` (`부정`) is reusable evidence; `invalid` (`무효`) is uninterpretable until the broken contract, data, parity, or execution assumption is repaired or excluded
-- planned/running/completed (`계획/실행 중/완료`) runs may carry partial records; reviewed/selected (`검토/선택`) runs need measurement, management, and judgment
-- a reviewed run (`검토된 실행`) must have measurable evidence (`측정 가능한 근거`), managed identity (`관리되는 정체성`), and lane-aware judgment (`레인별 판정`)
+## 실행 근거 시스템(Run Evidence System, 실행 근거 시스템)
 
-## Verification Discipline (`검증 규율`)
+`docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, `docs/policies/result_judgment_policy.md`가 실행 근거(run evidence, 실행 근거)를 담당한다.
 
-- use the narrowest sufficient verification first, but include a real-environment check (`실환경 검증`) before calling work verified when the change touches MT5 execution, tester orchestration, import/export boundaries, runtime parity flow, or another path where mocks can miss environment-specific behavior
-- prefer the active stage pack and the native MT5 runner as the real-environment check when that is the closest contract-surface verification
-- docs-only, wording-only, registry-only, or isolated pure-Python changes may stop at local tests when they do not change an environment-dependent path
-- if a real-environment check is not needed or is not feasible, say so explicitly and name the blocker or rationale instead of implying end-to-end verification
+실행(run, 실행)은 측정(measurement, 측정), 정체성(identity, 정체성), 판정(judgment, 판정)이 있어야 검토된 실행(reviewed run, 검토된 실행)이 된다.
 
-## Tester Defaults
+## 현재 진실(Current Truth, 현재 진실)
 
-- symbol: `US100`
-- timeframe: `M5`
-- tester model: `Every tick based on real ticks`
-- deposit: `500 USD`
-- leverage: `1:100`
-- signal timing: new closed `M5` bar only
+- 현재 상태(current state, 현재 상태): `docs/workspace/workspace_state.yaml`
+- 현재 설명(current narrative, 현재 설명): `docs/context/current_working_state.md`
+- 재진입 순서(re-entry order, 재진입 순서): `docs/policies/reentry_order.md`
+- 에이전트 라우팅(agent routing, 에이전트 라우팅): `docs/policies/agent_trigger_policy.md`
 
-## Stage Governance
+## 폴더 규칙(Folder Rules, 폴더 규칙)
 
-- start v2 with `00_foundation_sprint` before any new alpha search
-- keep the foundation closure path explicit before opening range exploration:
-  - `00_foundation_sprint`
-  - `01_dataset_contract_freeze`
-  - `02_feature_dataset_closure`
-  - `03_runtime_parity_closure`
-  - `04_artifact_identity_closure`
-  - `05_exploration_kernel_freeze`
-- every new stage needs a clear brief or charter before branching into runs
-- diagnostic stages can close questions but cannot promote the operating line by themselves
-- if execution semantics change, keep `structural_scout` and `regular_risk_execution` separate
-- new telemetry cannot become a promotion gate until the incumbent/reference family is backfilled
-- treat legacy winners, challengers, and operating defaults as archived evidence, not automatic v2 starting points
-- do not open a new alpha or range stage until the foundation closure path is explicitly closed
+- `docs/`: 계약(contract, 계약), 정책(policy, 정책), 현재 상태(current state, 현재 상태), 결정(decision, 결정), 등록부(register, 등록부), 템플릿(template, 템플릿)
+- `data/`: 원천 데이터(raw data, 원천 데이터)와 처리 데이터(processed data, 처리 데이터)
+- `foundation/`: 재사용 코드(reusable code, 재사용 코드)와 공유 도구(shared tools, 공유 도구)
+- `stages/`: 번호가 붙은 단계 작업(numbered stage work, 번호 단계 작업)
+- `tests/`: 재사용 코드 테스트(test, 테스트)
+- `.agents/skills/`: 저장소 전용 에이전트 스킬(repo-scoped agent skills, 저장소 전용 에이전트 스킬)
 
-## Document Placement
+최상위 임시 폴더(scratch folder, 임시 폴더)는 만들지 않는다.
 
-- `docs/workspace/workspace_state.yaml` is the current state source
-- `stages/*/04_selected/selection_status.md` is the active stage read
-- `stages/*/03_reviews/review_index.md` is the active stage reading map
-- `docs/decisions/*.md` records durable operating decisions
-- `docs/policies/reentry_order.md` defines the canonical re-entry order and truth precedence
-- `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
-- `docs/registers/run_registry.csv` records run identity, evidence pointers, status, and result judgment
-- `docs/registers/idea_registry.md` records durable exploration ideas
-- `docs/registers/negative_result_register.md` records reusable failed or closed hypotheses
-- `docs/registers/legacy_lesson_register.md` records abstract legacy lessons without importing legacy code or run results
-- `docs/policies/artifact_registry_schema.md` defines registry columns, enums, and hash-update discipline
-- `docs/policies/architecture_invariants.md` defines stage-agnostic structure and encoding guardrails
-- `docs/policies/exploration_mandate.md` defines exploration discipline, lane separation, WFO defaults, and failure-memory rules
-- `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md` define run evidence measurement, management, and judgment
-- `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
-- `docs/policies/agent_trigger_policy.md` records repo-scoped trigger-to-skill routing
-- `.agents/skills/` stores repo-scoped reusable Codex skills for re-entry, claim discipline, and stage-transition workflows
-- heavy local artifacts may stay outside Git, but their identity must stay in Git-tracked docs
+## 인코딩 규칙(Encoding Rule, 인코딩 규칙)
 
-## Re-entry Rule
-
-- the single authoritative re-entry order and truth precedence live in `docs/policies/reentry_order.md`
-- `README.md`, status notes, and repo-scoped skills may point to that policy but must not maintain a second full ordered list
-- if project documents disagree, use the precedence defined in `docs/policies/reentry_order.md`
-
-## Change Discipline
-
-- update `AGENTS.md` only when project-wide rules change
-- update `docs/policies/reentry_order.md` when the canonical re-entry order or truth precedence changes
-- update `docs/workspace/workspace_state.yaml` when current truth changes
-- update `docs/decisions` when a durable operating decision is taken
-- update registers when new durable artifact identity appears
-- update `docs/policies/artifact_registry_schema.md` when registry columns, enums, or hash-update rules change
-- update `docs/policies/architecture_invariants.md` only when cross-stage architecture guardrails change
-- update `docs/policies/exploration_mandate.md` only when cross-stage exploration discipline changes
-- update `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, or `docs/policies/result_judgment_policy.md` only when cross-stage run evidence rules change
-- update `docs/registers/architecture_debt_register.md` when known architecture debt is discovered, reduced, deepened, or retired
-- update `docs/registers/run_registry.csv` when a run becomes durable, reviewed, selected, archived, invalidated, or superseded
-- update `docs/registers/idea_registry.md`, `docs/registers/negative_result_register.md`, or `docs/registers/legacy_lesson_register.md` when durable idea, failure, or legacy-lesson memory changes
-- keep Korean `.md` and `.txt` documents in `UTF-8 with BOM` when editing them for Windows-facing workflows
+한국어 `.md`와 `.txt` 문서는 UTF-8 with BOM(UTF-8 BOM 포함)을 유지한다.

@@ -1,54 +1,23 @@
-﻿# Result Judgment Policy (결과 판정 정책)
+﻿# Result Judgment Policy
 
-This policy defines how Project Obsidian Prime v2 judges run (`실행`) results after measurement (`측정`) and management (`관리`) evidence exists.
+## 판정(Judgment Classes, 판정 분류)
 
-## Core Rule
+- `positive(긍정)`: 계속 밀어볼 가치가 있는 결과
+- `negative(부정)`: 가설을 약화하거나 닫는 유효한 결과
+- `inconclusive(불충분)`: 근거가 부족한 결과
+- `invalid(무효)`: 설정(setup, 설정), 데이터(data, 데이터), 가정(assumption, 가정)이 깨진 결과
 
-Judgment must be lane-aware (`레인별`) and evidence-bounded (`근거 범위 제한`). A run can be useful evidence without being eligible for promotion (`승격`).
+## 규칙(Rule, 규칙)
 
-Do not make hard-gate language broader than the claim. `promotion_candidate` (`승격 후보`) and `runtime_probe` (`런타임 탐침`) are bounded study states. `operating_promotion` (`운영 승격`) and `runtime_authority` (`런타임 권위`) are operating-truth claim states and require hard-gate evidence.
+`negative(부정)`은 재사용 가능한 근거(reusable evidence, 재사용 근거)다.
 
-## Result Classes
+`invalid(무효)`는 깨진 부분(broken part, 깨진 부분)이 고쳐질 때까지 해석하지 않는다.
 
-Allowed `result_class` (`결과 분류`) values:
+## 경계 어휘(Boundary Vocabulary, 경계 어휘)
 
-- `positive` (`긍정`): supports the hypothesis within the declared lane and evidence boundary.
-- `negative` (`부정`): weakens or closes the hypothesis but remains reusable evidence.
-- `inconclusive` (`불충분`): ran but cannot answer the question because of sample, coverage, or measurement limits.
-- `invalid` (`무효`): should not be interpreted because contract, data, parity, or execution assumptions failed.
+결과 판정(result judgment, 결과 판정)은 탐색 경계(exploration boundary, 탐색 경계)를 같이 적어야 한다.
 
-Never treat `negative` and `invalid` as the same. A negative result teaches something; an invalid result first requires repair or exclusion.
-
-## Lane-Aware Judgment
-
-- `exploration` (`탐색`): judge idea value, search boundary, failure mode, salvage value, and reopen condition.
-- `evidence` (`근거`): judge comparability, artifact identity, KPI completeness, and registry completeness.
-- `promotion` (`승격`): distinguish `promotion_candidate` study from `operating_promotion` replacement or confirmation.
-- `runtime` (`런타임`): distinguish `runtime_probe` observation from `runtime_authority` closure, handoff, or live-like readiness.
-- `extra` (`추가`): judge against the extra stage charter, not hidden promotion assumptions.
-
-`promotion-ineligible` (`승격 부적격`) does not mean `idea-dead` (`아이디어 사망`). An idea is `idea-dead` only when negative memory records why it failed, what was salvaged, and when it can be reopened.
-
-## Guardrail And Disqualifier Handling
-
-Each reviewed run should state:
-
-- `primary_kpi` (`주요 핵심 성과 지표`) outcome
-- `guardrail_status` (`보호 지표 상태`): `pass`, `warn`, `fail`, or `n/a`
-- `disqualifier` (`실격 조건`) if any
-- `parity_level` (`동등성 레벨`)
-- `wfo_status` (`워크포워드 상태`)
-
-A guardrail failure may produce `negative` or `inconclusive` depending on whether the failure answers the question. A contract, data, or parity failure that makes the result uninterpretable must be `invalid`. Missing WFO, full parity, or runtime authority does not automatically make an early scout result invalid; it limits the result boundary.
-
-## Closure Requirements
-
-Before a run result is called closed (`닫힘`):
-
-- measurement exists in `kpi_record.json` or every unavailable field has an `n/a` reason
-- identity exists in `run_manifest.json` or equivalent registered artifacts
-- registry row exists in `docs/registers/run_registry.csv`
-- judgment is one of the allowed result classes
-- negative exploration closure records salvage value and reopen condition
-
-Do not promote from `structural_scout` (`구조 탐색 점수판`) alone. Do not claim `operating_promotion` (`운영 승격`) from `promotion_candidate` (`승격 후보`) evidence. Do not claim `runtime_authority` (`런타임 권위`) or `P4_full_runtime_parity_closed` (`전체 런타임 동등성 폐쇄`) from `runtime_probe` (`런타임 탐침`) or `P2_model_input_parity_closed` (`모델 입력 동등성 폐쇄`) evidence.
+- `promotion_candidate(승격 후보)`: 비교할 수 있지만 운영 승격은 아닌 결과
+- `operating_promotion(운영 승격)`: 운영선을 교체하거나 확인하는 결과
+- `runtime_probe(런타임 탐침)`: 런타임을 관찰했지만 권위는 없는 결과
+- `runtime_authority(런타임 권위)`: 런타임 권위를 주장하는 결과

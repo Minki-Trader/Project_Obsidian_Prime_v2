@@ -1,16 +1,11 @@
-# Parity
+﻿# Parity
 
-Put reusable Python to MT5 comparison helpers, fixtures, and shared parity assets here.
+Python과 MT5 비교 도구(comparison helpers, 비교 도구)를 둔다.
 
-Keep stage-local parity investigations inside the relevant stage unless the artifact becomes a reusable shared tool or fixture.
+깨끗한 재시작(clean restart, 깨끗한 재시작) 이후에는 옛 단계 이름(old stage names, 오래된 단계 이름)을 기본값(defaults, 기본값)으로 가진 런타임 팩(runtime pack, 런타임 팩)과 오케스트레이션(orchestration, 조율) 표면을 제거했다.
 
-Current reusable helpers:
+현재 남긴 실행 도구(current executable helpers, 현재 실행 도구):
 
-- `materialize_fpmarkets_v2_runtime_pack.py`: shared runtime-pack builder that materializes the Stage 03 minimum pack, the Stage 05 broader-sample pack family including the additive broader reinforcement family, and the Stage 05 helper-focused subset pack from the same selection and serialization chain
-- `materialize_fpmarkets_v2_runtime_minimum_pack.py`: compatibility wrapper that keeps the original Stage 03 minimum-pack entrypoint while delegating to the shared runtime-pack builder
-- `compare_fpmarkets_v2_runtime_parity.py`: compare the materialized Python snapshot against an MT5 feature snapshot audit JSONL export and write a machine-readable parity summary
-- `render_fpmarkets_v2_runtime_parity_report.py`: render a stage-aware markdown runtime parity report from the machine-readable comparison summary
-- `render_fpmarkets_v2_mt5_snapshot_audit_set.py`: render a loadable MT5 `.set` helper for a runtime parity snapshot audit input pack; currently supports up to 4 target-window chunks (`InpTargetWindowsUtc` + `InpTargetWindowsUtcPart2..Part4`) and raises immediately if more chunks are required
-- `import_fpmarkets_v2_mt5_snapshot_audit.py`: copy the MT5 snapshot audit JSONL from Common Files into the resolved runtime parity pack folder before comparison
-- `run_fpmarkets_v2_runtime_parity_after_mt5.py`: run the import, compare, and report-render sequence in one pass after the MT5 JSONL export exists for the resolved runtime parity pack
-- `run_fpmarkets_v2_runtime_parity_native.py`: guard against an already-running `terminal64.exe`, block known League or Riot game processes unless explicitly overridden, launch the v2-native MT5 tester ini, wait for the Common Files JSONL, then hand off to the import/compare/render chain for the resolved runtime parity pack
+- 없음. 옛 단계(stage, 단계)에 묶인 도구는 현재 표면(current surface, 현재 표면)에서 제거했다.
+
+다음 런타임 검증(runtime verification, 런타임 검증) 도구는 새 단계(stage, 단계)가 실제로 필요로 할 때 새 이름과 새 경계(boundary, 경계)로 다시 만든다.

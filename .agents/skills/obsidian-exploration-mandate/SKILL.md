@@ -40,7 +40,8 @@ Use this skill when the task is primarily exploration or when promotion discipli
 
 ## Tier Rules
 
-- Tier A may be promotion/runtime eligible only after the relevant gates close.
-- Tier B is a separate exploration/reporting lane, not a relaxed Tier A.
-- Tier C is runtime skip by default, but may be `tier_c_local_research` when base/session are valid and only external context is absent.
+- Tier A and Tier B are both fully open to exploration.
+- Tier labels describe sample context; they do not grant or deny permission to study an idea.
+- Tier A or Tier B may become promotion/runtime evidence only after the relevant operating gates close.
+- Tier C is weak or unusable by default, but may be `tier_c_local_research` when a stage explicitly allows local-only research.
 - `tier_c_local_research` must not become a trading lane, reduced-risk substitute, or promotion argument.

@@ -1,63 +1,33 @@
-# Project Obsidian Prime v2
+﻿# Project Obsidian Prime v2
 
-This workspace is a concept-preserving reboot for the FPMarkets `US100` `M5` pipeline.
+FPMarkets `US100` `M5` 파이프라인(pipeline, 파이프라인)을 위한 깨끗한 연구 작업공간(research workspace, 연구 작업공간)이다.
 
-The old project remains preserved next to this folder. This workspace inherits the concept contract of Obsidian Prime, but deliberately resets alpha lineage, operating defaults, and stage-to-stage inheritance so a new thread can re-enter quickly without carrying forward stale promotion logic, undocumented artifact identity, or partial parity assumptions.
+이 저장소는 `2026-04-24`에 깨끗한 단계 재시작(clean stage restart, 깨끗한 단계 재시작)으로 정리했다. 이전 추적 상태(tracked state, 추적 상태)는 저장소 바깥 압축 스냅샷(zip snapshot, 압축 스냅샷)에 보존했다.
 
-## Read First
+## 먼저 읽을 것(Read First, 먼저 읽기)
 
-- bootstrap entrypoint: `AGENTS.md`
-- canonical re-entry order and truth precedence: `docs/policies/reentry_order.md`
-- current trigger routing for repo-scoped skills: `docs/policies/agent_trigger_policy.md`
+- 프로젝트 규칙(project rules, 프로젝트 규칙): `AGENTS.md`
+- 현재 상태(current state, 현재 상태): `docs/workspace/workspace_state.yaml`
+- 현재 설명(current narrative, 현재 설명): `docs/context/current_working_state.md`
+- 재진입 순서(re-entry order, 재진입 순서): `docs/policies/reentry_order.md`
 
-## Current Truth
+## 작업 원칙(Working Rule, 작업 원칙)
 
-`README.md` is an orientation entrypoint, not the live state source.
+탐색(exploration, 탐색)은 열려 있다. `Tier A(티어 A)`와 `Tier B(티어 B)`는 둘 다 탐색 가능한 표본 라벨(sample label, 표본 라벨)이다. 허가 게이트(permission gate, 허가 게이트)가 아니다.
 
-- authoritative current state: `docs/workspace/workspace_state.yaml`
-- narrative current status: `docs/context/current_working_state.md`
-- active stage read: the active stage `stages/*/04_selected/selection_status.md`
-- durable handoffs and state transitions: `docs/decisions/*.md`
+운영 주장(operational claim, 운영 주장)은 별도 문제다. 실거래(live use, 실거래), 런타임 권위(runtime authority, 런타임 권위), 운영 승격(operating promotion, 운영 승격)은 더 강한 증거가 필요하다.
 
-If these documents disagree, use the precedence defined in `docs/policies/reentry_order.md`.
+## 폴더 지도(Folder Map, 폴더 지도)
 
-## Root Map
+- `docs/`: 계약, 정책, 상태, 결정, 등록부, 템플릿
+- `data/`: 원천 데이터와 처리 데이터
+- `foundation/`: 재사용 수집기, 피처 작업, 파이프라인, MT5 도구, 동등성 도구
+- `stages/`: 번호와 부제가 있는 단계 작업
+- `tests/`: 재사용 코드 테스트
+- `.agents/skills/`: 저장소 전용 Codex 스킬
 
-- `docs/`: contracts, policies, workspace state, decisions, registers, templates, archive notes
-- `data/`: shared raw, processed, and snapshot roots; heavy contents stay local and only the skeleton is tracked
-- `foundation/`: reusable shared code, MT5/runtime parity helpers, reports, and configuration
-- `stages/`: stage-specific work history and selected reads
-- `.agents/skills/`: repo-scoped Codex skills for strong re-entry, claim-discipline, and stage-transition triggers
+## 현재 단계(Current Stage, 현재 단계)
 
-## Shared Skeleton
+`01_data_foundation__raw_m5_inventory`
 
-- `docs/archive/`: sealed legacy lessons and carry-forward notes
-- `data/raw/mt5_bars/m5/`: broker-native `M5` source bars by symbol
-- `data/raw/real_ticks/us100/`: optional `US100` real-tick source exports for tester/runtime checks
-- `data/processed/datasets/`: reusable dataset outputs
-- `data/processed/coverage_audits/`: shared row/alignment audit artifacts
-- `data/processed/runtime_snapshots/`: shared runtime parity snapshots
-- `data/snapshots/`: frozen identity snapshots that are reusable across stages
-- `foundation/collectors/`: source loaders and export collectors
-- `foundation/features/`: contract-aligned feature helpers
-- `foundation/pipelines/`: shared dataset and bundle pipelines
-- `foundation/mt5/`: MT5-facing runtime helpers, templates, or wrappers
-- `foundation/parity/`: Python to MT5 comparison helpers and fixtures
-- `foundation/reports/`: reusable shared notes and audit writeups
-
-## Foundation Roadmap
-
-- `00_foundation_sprint`: align the reboot charter, read path, and durable state
-- `01_dataset_contract_freeze`: materialize dataset meaning, row states, and shared input semantics on the first reusable freeze
-- `02_feature_dataset_closure`: close deterministic parser output on the frozen `58`-feature contract surface
-- `03_runtime_parity_closure`: close Python to MT5 parity on the contract surface
-- `04_artifact_identity_closure`: close machine-readable dataset, bundle, runtime, and report identity
-- `05_exploration_kernel_freeze`: freeze the exploration kernel so later stages only change search variables
-
-## Intent
-
-- keep the strategy concept and its contract surface
-- keep the contract-first runtime philosophy while cutting legacy winner lineage and operating defaults
-- close dataset, parity, and artifact identity foundations before any new alpha search
-- enter exploration-only mode only after the foundation closure path is explicit and closed
-- make new-thread re-entry fast, low-risk, and unambiguous
+목표(goal, 목표)는 데이터 기반(data foundation, 데이터 기반)부터 다시 세우는 것이다. 학습(training, 학습)과 검증(validation, 검증)이 정직하게 가능해지는 순간부터 모델 연구(model study, 모델 연구)를 시작한다.

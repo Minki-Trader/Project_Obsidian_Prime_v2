@@ -1,334 +1,49 @@
 ﻿# Agent Trigger Policy
 
-This note defines the repo-scoped `skills` layer that complements `AGENTS.md`.
+이 문서는 저장소 전용 스킬(repo-scoped skills, 저장소 전용 스킬)을 언제 쓰는지 정한다.
 
-Canonical re-entry order and truth precedence live in `docs/policies/reentry_order.md`. This note should not maintain a second full ordered read list or a competing precedence list.
+## 목적(Purpose, 목적)
 
-## Purpose
+- `AGENTS.md`를 짧게 유지한다.
+- 재진입(re-entry, 재진입)을 일정하게 만든다.
+- 오래된 단계 드리프트(stage drift, 단계 드리프트)를 막는다.
+- 탐색(exploration, 탐색)이 운영 게이트(operating gate, 운영 게이트)에 눌리지 않게 한다.
+- 실행 근거(run evidence, 실행 근거)를 읽기 쉽게 유지한다.
 
-- keep `AGENTS.md` focused on always-on project rules
-- route repetitive agent behavior through narrow reusable skills
-- reduce repeated mistakes around re-entry, claim language, and stage transitions
-- prevent cross-stage architecture drift around feature logic, model artifacts, alpha-search framing, and Korean encoding
-- separate exploration discipline from operating truth discipline so hard gates do not suppress useful alpha research
-- keep run evidence consistent across KPI measurement, run-result management, and result judgment
-- keep hard gates attached to operating truth claims, not to every candidate or runtime probe
+## 스킬(Skills, 스킬)
 
-## Placement
+- `obsidian-session-intake`: 상태(status, 상태), 계획(planning, 계획), 구현(implementation, 구현)을 시작할 때 쓴다.
+- `obsidian-reentry-read`: 저장소 작업을 재개할 때 쓴다.
+- `obsidian-stage-transition`: `active_stage(활성 단계)`나 단계 의미(stage meaning, 단계 의미)가 바뀔 때 쓴다.
+- `obsidian-lane-classifier`: 승격(promotion, 승격)이나 런타임(runtime, 런타임) 언어를 붙이기 전에 쓴다.
+- `obsidian-exploration-mandate`: 알파 아이디어(alpha idea, 알파 아이디어), 티어 작업(Tier work, 티어 작업), WFO(`walk-forward optimization`, 워크포워드 최적화), 극단값 탐색(extreme sweep, 극단값 탐색), 실패 기록(negative memory, 실패 기록)에 쓴다.
+- `obsidian-code-surface-guard`: 코드 배치(code placement, 코드 배치)나 재사용 로직(reusable logic, 재사용 로직)을 바꿀 때 쓴다.
+- `obsidian-architecture-guard`: `architecture_invariants.md`, 에이전트 설정(agent settings, 에이전트 설정), 경로(path, 경로), 한국어 인코딩(Korean encoding, 한국어 인코딩), 정책 편집(policy edit, 정책 편집)에 쓴다.
+- `obsidian-run-evidence-system`: 실행 근거(run evidence, 실행 근거), KPI(`key performance indicator`, 핵심 성과 지표), 결과 판정(result judgment, 결과 판정), `run_registry.csv(실행 등록부)`에 쓴다.
 
-- repo-scoped skills live in `.agents/skills/`
-- this is a narrow allowed root exception for reusable agent workflows only
-- current trigger policy lives in `docs/policies/agent_trigger_policy.md`
+## 필수 정책 링크(Required Policy Links, 필수 정책 링크)
 
-## Precedence
+- `architecture_invariants.md`
+- `exploration_mandate.md`
+- `kpi_measurement_standard.md`
+- `run_result_management.md`
+- `result_judgment_policy.md`
 
-- use the truth precedence defined in `docs/policies/reentry_order.md`
-- this policy may refine skill routing but does not override that precedence
+## 같은 회차 동기화(Same-Pass Sync, 같은 회차 동기화)
 
-## README State Hygiene
-
-- treat `README.md` as an orientation entrypoint, not as the authoritative live-state source
-- keep mutable current-state facts such as `active_stage`, stage closure status, current branch truth, and current priorities in `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, the active stage `selection_status.md`, and durable decision memos
-- if `README.md` still contains mutable current-state wording, the same pass that changes that meaning must either sync those lines or replace them with pointers to the authoritative current-truth docs
-- prefer removing volatile status snapshots from `README.md` over maintaining a second state ledger there
-
-## Session Mode Contract
-
-Every working turn should first fit one primary session mode:
-
-- `reentry_only`
-- `status_summary`
-- `next_task_planning`
-- `implementation_pass`
-- `verification_pass`
-- `stage_transition`
-- `publish_pass`
-
-Every non-trivial turn should also name a primary lane:
-
-- `exploration`
-- `evidence`
-- `promotion`
-- `runtime`
-- `extra`
-
-Promotion/runtime sub-states:
-
-- `promotion_candidate`: candidate study without incumbent replacement claim
-- `operating_promotion`: incumbent replacement or confirmation claim
-- `runtime_probe`: runtime observation without parity-closure authority
-- `runtime_authority`: runtime parity closure, bundle handoff authority, or live-like readiness claim
-
-If the user prompt is broad, choose the narrowest mode that still completes the turn safely.
-
-## Core Trigger Map
-
-### `obsidian-session-intake`
-
-Use when:
-
-- a new thread starts in this repo
-- work resumes after a pause
-- the user asks for status, current progress, or the next safest task
-- implementation is requested but no current task packet is fixed yet
-
-Required effect:
-
-- choose one primary session mode before doing substantial work
-- run a full cold re-entry only when the thread is cold, the active stage is unclear, or durable meaning may have shifted
-- prefer a same-thread delta check when the thread is warm and the active stage is already stable
-- restate the active stage, current foundation truth, current operating-truth boundary, planning-only items, materialized items, open items, forbidden shortcuts, recommended next task, allowed scope, stop conditions, and default publish target before drifting into implementation
-
-### `obsidian-reentry-read`
-
-Use when:
-
-- a new thread starts in this repo
-- work resumes after a pause
-- the active stage or current read is unclear
-
-Required effect:
-
-- read the repo in the documented re-entry order
-- restate the active stage, current foundation status, and current truth boundary before making decisions
-- do not begin stage work from stale assumptions
-- do not repeat a full cold re-entry inside the same stable thread when a narrower delta check is sufficient
-
-### `obsidian-claim-discipline`
-
-Use when:
-
-- writing or editing freeze cards, review notes, status notes, decisions, or user-facing summaries
-- any field contains `pending_*`, `planning_*`, `draft`, `placeholder_*`, `not_yet_evaluated`, or `not_applicable`
-- closure, materialization, readiness, or parity claims are being made
-
-Required effect:
-
-- downgrade claims when the evidence state is still planning or pending
-- distinguish `planning scaffold`, `materialized evidence`, `runtime parity closure`, and `exploration-ready` explicitly
-- distinguish probability-output evidence from materialized model artifacts
-- mark legacy findings as `prior evidence only` unless a v2 artifact closes the same question
-- if an overview document such as `README.md` contains mutable live-state wording, either sync it in the same pass or rewrite it so it points at the authoritative current-truth docs instead
-
-### `obsidian-architecture-guard`
-
-Use when:
-
-- work touches feature calculation, model training/export, pipeline materialization, artifact identity, alpha-search framing, stage transition, repo-scoped skills, agent settings, path identity, archive behavior, or Korean encoding
-- a task might move reusable logic into a stage-local script or orchestration pipeline
-- a summary might call a model, feature layer, alpha lane, or artifact `materialized`, `ready`, or `closed`
-- Korean `.md` or `.txt` files are edited
-
-Required effect:
-
-- read `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md`
-- output `architecture_risk`, `debt_interaction`, `allowed_debt_change`, `encoding_check`, and `path_safety_check`
-- treat registered architecture debt as known debt, not as a project pattern to copy
-- run the architecture guard validator after editing agent settings, repo-scoped skills, architecture policies, debt registers, or Korean docs
-
-### `obsidian-lane-classifier`
-
-Use when:
-
-- a task involves alpha search, idea variants, Tier B/C readiness, promotion, runtime verification, extra stages, or ambiguous user intent
-- operating discipline might be applied to exploration before the lane is clear
-- a task packet needs a `lane`, `promotion_gate_applicable`, or `runtime_gate_applicable` field
-
-Required effect:
-
-- classify the primary lane as `exploration`, `evidence`, `promotion`, `runtime`, or `extra`
-- distinguish `promotion_candidate` from `operating_promotion` and `runtime_probe` from `runtime_authority`
-- state whether exploration discipline, operating discipline, or handoff discipline applies
-- keep promotion-ineligible ideas separate from idea-dead conclusions
-
-### `obsidian-exploration-mandate`
-
-Use when:
-
-- work involves alpha search, idea variants, Tier B or Tier C research, WFO planning, extreme sweeps, or negative-result closure
-- legacy lessons are used as inspiration but must not become code/result inheritance
-- an idea is being archived, reopened, or closed as no-promotion
-
-Required effect:
-
-- read `docs/policies/exploration_mandate.md`
-- name `idea_id`, hypothesis, legacy relation, tier scope, broad sweep, extreme sweep, micro-search gate, WFO plan, and failure-memory requirements
-- treat Tier C local research as research-only, not runtime or promotion evidence
-
-### `obsidian-code-surface-guard`
-
-Use when:
-
-- adding, moving, or modifying code in `foundation`, `foundation/pipelines`, MT5 EA files, stage scripts, model builders, feature calculators, runtime helpers, or report materialization paths
-- a task could deepen monolith behavior in EA or pipeline code
-- a task packet must explain where code lives and where it is used
-
-Required effect:
-
-- output owner module, caller, input contract, output contract, artifact/report relation, monolith risk, and placement decision
-- prevent reusable logic from being hidden inside an all-in-one EA, pipeline, or stage script
-
-### `obsidian-run-evidence-system`
-
-Use when:
-
-- creating, reviewing, closing, selecting, archiving, invalidating, or superseding a run
-- writing KPI reports, result summaries, stage run reviews, or run registry rows
-- deciding whether a result is `positive`, `negative`, `inconclusive`, or `invalid`
-- a run needs `run_manifest.json`, `kpi_record.json`, `result_summary.md`, or `docs/registers/run_registry.csv`
-
-Required effect:
-
-- read `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md`
-- output measurement scope, management state, judgment class, scoreboard, parity level, WFO status, registry update need, and negative-memory need
-- output hard-gate applicability and evidence boundary when candidate/probe evidence is involved
-- keep `negative` distinct from `invalid`
-- keep `structural_scout` evidence distinct from `regular_risk_execution` evidence
-- keep Tier B/C research KPI separate from promotion/runtime KPI
-
-### `obsidian-task-packet`
-
-Use when:
-
-- the user asks `계획 수립해줘`
-- the user asks `작업 패킷 만들어줘`
-- implementation or verification should be narrowed before files change
-- the current packet is missing, stale, or too broad for a safe pass
-
-Required effect:
-
-- choose one primary task only
-- derive that task from the active stage brief, selection status, current decision memos, and current session mode
-- output a bounded packet with `task_id`, `goal`, `allowed_paths`, `do_not_touch`, `expected_artifacts`, `verification_minimum`, `real_env_required`, `publish_target`, `stop_conditions`, and `done_definition`
-- add `architecture_guard_required`, `debt_register_update`, `encoding_verification`, and `path_safety_check` when the task is architecture-sensitive
-- add `lane`, `idea_id`, `tier_scope`, `wfo_required`, `extreme_sweep_allowed`, `micro_search_gate`, `negative_result_required`, `promotion_gate_applicable`, and `code_surface_map_required` when relevant
-- add `run_evidence_required`, `run_registry_update`, `kpi_record_required`, and `result_judgment_required` when a run or KPI result is created, reviewed, summarized, or closed
-- add `hard_gate_applicable` and `operating_truth_claim` when promotion/runtime meaning is in scope
-- keep `publish_target` at `branch_only` or `none` unless the user explicitly asks for `main` completion
-
-### `obsidian-stage-transition`
-
-Use when:
-
-- a stage opens, closes, or hands off work to the next stage
-- `active_stage` changes
-- a selection note changes operational meaning
-
-Required effect:
-
-- follow the canonical same-pass sync list defined in this policy
-- never close a stage by implying later-stage evidence is already complete
-- verify that the new or closing stage does not copy registered architecture debt as normal project style
-- verify that the new or closing stage does not copy legacy results or suppress exploration through promotion gates
-- allow user-requested extra stages only with a charter, lane, exit condition, and no-promotion boundary
-- if `README.md` carries mutable stage or closure wording, sync or neutralize it in the same pass so it does not become a competing stale state source
-
-### `obsidian-publish-merge`
-
-Use when:
-
-- the user explicitly asks for `브랜치랑 메인머지까지`
-- the user explicitly asks to `메인까지 올려줘`
-- the user explicitly asks for push plus branch-to-`main` completion in one pass
-- an approved current task packet explicitly names `publish_target=main`
-
-Required effect:
-
-- finish the requested work before starting the publish flow
-- stage and commit only the intended scope
-- push the working branch first
-- update against the latest remote `main` before merging
-- merge into local `main` only when the branch is ready and the working tree is clean
-- push `origin/main` in the same pass when no blocker remains
-- stop and surface the blocker explicitly if remote `main`, branch history, or working-tree state makes a clean merge unsafe
-- do not infer `main` publish from implementation completion alone
-
-## Canonical Same-Pass Sync Norm
-
-The canonical same-pass sync norm lives in this file and applies whenever stage-level operational meaning changes durably.
-
-Required same-pass files:
+단계 의미(stage meaning, 단계 의미)가 바뀌면 같은 작업 회차(pass, 회차)에 다음을 맞춘다.
 
 - `docs/workspace/workspace_state.yaml`
 - `docs/context/current_working_state.md`
-- the active or closing stage `04_selected/selection_status.md`
-- the active or closing stage `03_reviews/review_index.md` when needed
-- `docs/decisions/*.md` when the change is durable
-- `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
-- `docs/registers/run_registry.csv` when run identity, result status, or result judgment changes durably
-- `docs/workspace/changelog.md`
-- `README.md` when it still contains mutable current-state language that the same pass would otherwise leave stale
-
-## Canonical Same-Pass Sync Norm
-
-The canonical same-pass sync norm lives in this file and applies whenever stage-level operational meaning changes durably.
-
-Required same-pass files:
-
-- `docs/workspace/workspace_state.yaml`
-- `docs/context/current_working_state.md`
-- the active or closing stage `04_selected/selection_status.md`
-- the active or closing stage `03_reviews/review_index.md` when needed
-- `docs/decisions/*.md` when the change is durable
-- `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
+- 활성 단계(active stage, 활성 단계) `04_selected/selection_status.md`
+- 필요하면 활성 단계(active stage, 활성 단계) `03_reviews/review_index.md`
+- 변경이 지속 결정(durable decision, 지속 결정)이면 `docs/decisions/*.md`
+- 산출물 정체성(artifact identity, 산출물 정체성)이 바뀌면 `docs/registers/artifact_registry.csv`
+- 실행 상태(run status, 실행 상태)가 바뀌면 `docs/registers/run_registry.csv`
 - `docs/workspace/changelog.md`
 
-## Always-On Claim Guardrails
+## 강한 게이트 규칙(Hard Gate Rule, 강한 게이트 규칙)
 
-- `planning scaffold` is not `materialized evidence`
-- `handoff verification` is not `runtime parity closure`
-- `legacy prior evidence` is not `current v2 foundation truth` or `current v2 operating truth`
-- `foundation stage closure` is not `exploration-ready`
-- probability tables, summaries, calibration reads, and reports are not by themselves a materialized model artifact
-- registered architecture debt is not a pattern to repeat
-- `promotion-ineligible` is not `idea-dead`
-- `tier_c_local_research` is not a runtime lane
-- `legacy exploration mandate` is not `legacy code/result inheritance`
-- WFO is the default exploration optimization frame unless a packet marks a result scout-only or gives an explicit exception
-- `negative` is not `invalid`; `inconclusive` is not a quiet success; `structural_scout` is not an operating promotion read
-- `promotion_candidate` is not `operating_promotion`; `runtime_probe` is not `runtime_authority`
+강한 게이트(hard gate, 강한 게이트)는 `operating_promotion(운영 승격)`과 `runtime_authority(런타임 권위)`에만 적용한다.
 
-## Always-On Path Guardrails (`항상 적용 경로 가드레일`)
-
-- Repo-internal references (`저장소 내부 참조`) should be repo-relative paths (`저장소 상대경로`) unless an external tool or MT5 handoff (`MT5 인계`) requires an absolute machine path.
-- Absolute paths (`절대경로`) in user-facing replies may be used for clickable file links, but durable docs, manifests, and registries should not store absolute terminal install paths as identity.
-- Long artifact filenames (`긴 산출물 파일명`) should not repeat context already present in stage or run directories unless a contract, schema, or tool integration requires the full name.
-- If file enumeration succeeds but `Test-Path`, `Get-Item`, copy, or archive commands fail, first suspect Windows long path handling (`윈도우 긴 경로 처리`) and verify through a short-root workspace, ZIP archive, or `\\?\` long-path prefix before calling the file missing.
-- Deep archive snapshots (`깊은 아카이브 스냅샷`) should prefer ZIP plus manifest (`ZIP 및 목록`) over copied folder trees.
-
-## Verification Escalation (`검증 상향 규칙`)
-
-- start with the smallest sufficient local verification
-- if a change touches MT5 execution, tester orchestration, runtime parity flow, file import/export boundaries, or another environment-dependent path, add the narrowest real-environment check (`실환경 검증`) before reporting the work as verified
-- prefer the active stage pack plus the native MT5 runner when that is the closest contract-surface check
-- docs-only, wording-only, registry-only, or isolated pure-Python changes may stop at local verification when they do not alter an environment-dependent path
-- when real-environment verification is skipped, state why it was unnecessary or infeasible
-
-## Prompt Routing Hints
-
-- `현재 진행사항 파악해줘`, `지금 어디까지 왔어`, `상태 요약해줘`: start with `obsidian-session-intake`
-- `바로 다음 작업은?`, `다음 작업 골라줘`: start with `obsidian-session-intake` and return one recommended next task
-- `계획 수립해줘`, `작업 패킷 만들어줘`: use `obsidian-task-packet`
-- `진행해줘`: execute the current approved task packet; if none exists, create or reconstruct one before implementation
-- `브랜치랑 메인머지까지`, `메인까지 올려줘`: use `obsidian-publish-merge`
-- feature/model/pipeline/artifact/path/agent-settings/encoding work: also use `obsidian-architecture-guard`
-- alpha search, idea variants, Tier B/C research, WFO, extreme sweep, or negative-result closure: use `obsidian-lane-classifier` and `obsidian-exploration-mandate`
-- run creation, run closeout, KPI reporting, result judgment, or run registry updates: use `obsidian-run-evidence-system`
-- code placement or reusable logic work: use `obsidian-code-surface-guard` and `obsidian-architecture-guard`
-
-## Dynamic Active Routing
-
-- derive the current active stage from `docs/workspace/workspace_state.yaml` and the active stage `selection_status.md`
-- use `obsidian-session-intake` and `obsidian-claim-discipline` as the default primary pair for any new or resumed thread
-- let `obsidian-session-intake` decide whether the thread needs full cold re-entry or only a same-thread delta check
-- use `obsidian-task-packet` before implementation or verification whenever the current packet is missing or ambiguous
-- use `obsidian-architecture-guard` for feature, model, pipeline, artifact, path, archive, alpha-search, stage-transition, agent-settings, or Korean-encoding work regardless of stage number
-- use `obsidian-lane-classifier` before applying operating-promotion or runtime-authority gates to exploration, evidence, Tier B/C research, or extra-stage work
-- apply hard gates only when the task claims operating truth, `operating_promotion`, or `runtime_authority`
-- use `obsidian-exploration-mandate` for exploration-sensitive work regardless of active stage number
-- use `obsidian-run-evidence-system` whenever a run result needs measurement, management, or judgment
-- use `obsidian-code-surface-guard` whenever code placement, reusable logic ownership, or monolith risk is involved
-- use `obsidian-architecture-guard` when a task creates deep stage artifacts, changes archive behavior, introduces long filenames, or records paths in durable docs
-- use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
-- use `obsidian-publish-merge` only when the user explicitly asks for branch push plus `main` merge completion in the same pass or an approved task packet explicitly names `publish_target=main`
-- do not auto-trigger `obsidian-publish-merge` only because a verified implementation pass finished
+강한 게이트(hard gate, 강한 게이트)는 탐색 아이디어(exploration idea, 탐색 아이디어)를 시도할 수 있는지 결정하지 않는다.
