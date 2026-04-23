@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+MAX_TARGET_WINDOW_CHUNKS = 4
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -55,6 +57,13 @@ def split_target_windows_spec(target_windows_utc: str, *, max_chunk_length: int 
 
 def render_set(mt5_request: dict[str, Any]) -> str:
     target_window_chunks = split_target_windows_spec(str(mt5_request["target_windows_utc"]))
+    if len(target_window_chunks) > MAX_TARGET_WINDOW_CHUNKS:
+        raise RuntimeError(
+            "MT5 target window input exceeds supported chunk count: "
+            f"{len(target_window_chunks)} chunks generated, "
+            f"maximum supported is {MAX_TARGET_WINDOW_CHUNKS} "
+            "(InpTargetWindowsUtc + InpTargetWindowsUtcPart2..Part4)."
+        )
     lines = [
         "; Runtime parity MT5 feature snapshot audit inputs",
         f"InpOutputPath={mt5_request['common_files_output_path']}",

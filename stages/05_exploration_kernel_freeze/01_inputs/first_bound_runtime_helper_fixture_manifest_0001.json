@@ -1,0 +1,173 @@
+{
+  "profile": "helper_0001",
+  "selection_method": "reuse_active_broader_0002_helper_sensitive_subset_v1",
+  "source_fixture_set_id": "fixture_fpmarkets_v2_runtime_broader_0002",
+  "source_bundle_id": "bundle_fpmarkets_v2_runtime_broader_0002",
+  "source_report_id": "report_fpmarkets_v2_runtime_broader_parity_0002",
+  "source_fixture_bindings_ref": "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/fixture_bindings_fpmarkets_v2_runtime_broader_0002.json",
+  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+  "fixture_set_id": "fixture_fpmarkets_v2_runtime_helper_0001",
+  "bundle_id": "bundle_fpmarkets_v2_runtime_helper_0001",
+  "report_id": "report_fpmarkets_v2_runtime_helper_parity_0001",
+  "python_snapshot_id": "snapshot_fpmarkets_v2_runtime_python_helper_0001",
+  "target_runtime_id": "runtime_fpmarkets_v2_mt5_snapshot_helper_0001",
+  "parser_version": "fpmarkets_v2_stage01_materializer_v1",
+  "feature_contract_version": "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-16",
+  "parser_contract_version": "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-16",
+  "runtime_contract_version": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md@2026-04-16",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "selection_constraints": {
+    "fixture_count": 8,
+    "ready_rows": 6,
+    "negative_non_ready_rows": 2,
+    "minimum_distinct_months_ny": 6,
+    "minimum_distinct_weekdays_ny": 3,
+    "required_utc_offsets": [
+      -300,
+      -240
+    ],
+    "required_buckets": [
+      "regular_cash_session",
+      "cash_close_boundary_1555",
+      "cash_close_boundary_1600",
+      "dst_sensitive_utc4",
+      "dst_sensitive_utc5",
+      "full_external_alignment",
+      "negative_cash_open_missing_equities",
+      "negative_off_hours_post_close"
+    ],
+    "source_fixture_family": "runtime_broader_pack_0002"
+  },
+  "selection_coverage": {
+    "distinct_month_count_ny": 8,
+    "distinct_weekday_count_ny": 5,
+    "utc_offsets_present": [
+      -300,
+      -240
+    ],
+    "bucket_counts": {
+      "regular_cash_session": 1,
+      "cash_close_boundary_1555": 1,
+      "cash_close_boundary_1600": 1,
+      "dst_sensitive_utc4": 1,
+      "dst_sensitive_utc5": 1,
+      "full_external_alignment": 1,
+      "negative_cash_open_missing_equities": 1,
+      "negative_off_hours_post_close": 1
+    }
+  },
+  "fixtures": [
+    {
+      "fixture_id": "fix_regular_cash_session_0001",
+      "selection_rank": 1,
+      "bucket_rank": 1,
+      "stratum": "regular_cash_session",
+      "bucket": "regular_cash_session",
+      "timestamp_utc": "2022-09-01T16:40:00Z",
+      "timestamp_america_new_york": "2022-09-01T12:40:00-04:00",
+      "month_ny": "2022-09",
+      "weekday_ny": "Thursday",
+      "utc_offset_minutes": -240,
+      "valid_row": true,
+      "expected_behavior": "all required inputs remain runtime-ready on a normal US cash-session middle-segment sample"
+    },
+    {
+      "fixture_id": "fix_cash_close_boundary_1555_0002",
+      "selection_rank": 2,
+      "bucket_rank": 1,
+      "stratum": "cash_close_boundary",
+      "bucket": "cash_close_boundary_1555",
+      "timestamp_utc": "2026-03-31T19:55:00Z",
+      "timestamp_america_new_york": "2026-03-31T15:55:00-04:00",
+      "month_ny": "2026-03",
+      "weekday_ny": "Tuesday",
+      "utc_offset_minutes": -240,
+      "valid_row": true,
+      "expected_behavior": "cash-close pre-boundary semantics remain exact on a 15:55 America/New_York contract-surface sample"
+    },
+    {
+      "fixture_id": "fix_cash_close_boundary_1600_0002",
+      "selection_rank": 3,
+      "bucket_rank": 1,
+      "stratum": "cash_close_boundary",
+      "bucket": "cash_close_boundary_1600",
+      "timestamp_utc": "2026-02-27T21:00:00Z",
+      "timestamp_america_new_york": "2026-02-27T16:00:00-05:00",
+      "month_ny": "2026-02",
+      "weekday_ny": "Friday",
+      "utc_offset_minutes": -300,
+      "valid_row": true,
+      "expected_behavior": "cash-close boundary semantics remain exact on a 16:00 America/New_York contract-surface sample"
+    },
+    {
+      "fixture_id": "fix_dst_sensitive_utc4_0001",
+      "selection_rank": 4,
+      "bucket_rank": 1,
+      "stratum": "dst_sensitive",
+      "bucket": "dst_sensitive_utc4",
+      "timestamp_utc": "2023-03-13T20:00:00Z",
+      "timestamp_america_new_york": "2023-03-13T16:00:00-04:00",
+      "month_ny": "2023-03",
+      "weekday_ny": "Monday",
+      "utc_offset_minutes": -240,
+      "valid_row": true,
+      "expected_behavior": "the same contract surface survives a DST transition-week 16:00 sample on the UTC-4 side without timezone drift"
+    },
+    {
+      "fixture_id": "fix_dst_sensitive_utc5_0002",
+      "selection_rank": 5,
+      "bucket_rank": 1,
+      "stratum": "dst_sensitive",
+      "bucket": "dst_sensitive_utc5",
+      "timestamp_utc": "2025-11-04T21:00:00Z",
+      "timestamp_america_new_york": "2025-11-04T16:00:00-05:00",
+      "month_ny": "2025-11",
+      "weekday_ny": "Tuesday",
+      "utc_offset_minutes": -300,
+      "valid_row": true,
+      "expected_behavior": "the same contract surface survives a DST transition-week 16:00 sample on the UTC-5 side without timezone drift"
+    },
+    {
+      "fixture_id": "fix_full_external_alignment_0002",
+      "selection_rank": 6,
+      "bucket_rank": 1,
+      "stratum": "full_external_alignment",
+      "bucket": "full_external_alignment",
+      "timestamp_utc": "2026-01-30T19:00:00Z",
+      "timestamp_america_new_york": "2026-01-30T14:00:00-05:00",
+      "month_ny": "2026-01",
+      "weekday_ny": "Friday",
+      "utc_offset_minutes": -300,
+      "valid_row": true,
+      "expected_behavior": "all required external symbols exact-timestamp match on a non-boundary afternoon sample"
+    },
+    {
+      "fixture_id": "fix_negative_cash_open_missing_equities_0002",
+      "selection_rank": 7,
+      "bucket_rank": 1,
+      "stratum": "cash_open_missing_equities",
+      "bucket": "negative_cash_open_missing_equities",
+      "timestamp_utc": "2025-12-31T14:35:00Z",
+      "timestamp_america_new_york": "2025-12-31T09:35:00-05:00",
+      "month_ny": "2025-12",
+      "weekday_ny": "Wednesday",
+      "utc_offset_minutes": -300,
+      "valid_row": false,
+      "expected_behavior": "equity external alignment missing keeps the 09:35 cash-open row non-ready under all-or-skip semantics"
+    },
+    {
+      "fixture_id": "fix_negative_off_hours_post_close_0002",
+      "selection_rank": 8,
+      "bucket_rank": 1,
+      "stratum": "off_hours_external_alignment_missing",
+      "bucket": "negative_off_hours_post_close",
+      "timestamp_utc": "2025-09-30T20:55:00Z",
+      "timestamp_america_new_york": "2025-09-30T16:55:00-04:00",
+      "month_ny": "2025-09",
+      "weekday_ny": "Tuesday",
+      "utc_offset_minutes": -240,
+      "valid_row": false,
+      "expected_behavior": "off-hours external alignment missing keeps the post-close row non-ready with no reduced substitute"
+    }
+  ]
+}

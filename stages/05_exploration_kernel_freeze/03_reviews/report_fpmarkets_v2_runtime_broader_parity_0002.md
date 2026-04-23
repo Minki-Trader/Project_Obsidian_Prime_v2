@@ -61,6 +61,6 @@
 
 ## Required Follow-Up
 
-- next_sampling_plan: `update the Stage 05 read from this first broader evaluated pack, keep Stage 05 open, and decide whether the next evidence is additional broader-sample coverage or a separate runtime-helper parity lane`
-- gate_before_closure: `Stage 05 state docs, review read, and registry rows must be updated in the same pass while keeping Stage 05 open; do not blur this evaluated pack into runtime-helper parity, Tier B or Tier C readiness, or operating promotion`
+- next_sampling_plan: `update the Stage 05 read from this first broader evaluated pack, keep Stage 05 open, and open the ordered runtime-helper parity lane before any additional broader-sample coverage follow-up`
+- gate_before_closure: `follow the canonical same-pass sync norm in docs/policies/agent_trigger_policy.md (align workspace state + current working state + active-stage selection/review read, add a durable decision memo when meaning changes, and update artifact registry rows when identity changes); keep Stage 05 open for this evaluated pack and do not blur it into runtime-helper parity, Tier B or Tier C readiness, or operating promotion`
 - owner: `Project_Obsidian_Prime_v2 workspace`

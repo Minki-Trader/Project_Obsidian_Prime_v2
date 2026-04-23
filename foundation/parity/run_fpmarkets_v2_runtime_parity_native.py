@@ -17,6 +17,14 @@ from foundation.parity.runtime_pack_paths import DEFAULT_MT5_REQUEST, resolve_ru
 
 
 DEFAULT_TERMINAL_PATH = Path(r"C:\Program Files\MetaTrader 5\terminal64.exe")
+CONFLICTING_GAME_PROCESS_NAMES = (
+    "League of Legends.exe",
+    "LeagueClient.exe",
+    "LeagueClientUx.exe",
+    "LeagueClientUxRender.exe",
+    "RiotClientServices.exe",
+    "RiotClientUx.exe",
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -95,6 +103,11 @@ def parse_args() -> argparse.Namespace:
         help="Force-close running terminal64.exe before the tester launch.",
     )
     parser.add_argument(
+        "--allow-conflicting-games",
+        action="store_true",
+        help="Allow the MT5 tester launch even when League or Riot game processes are already running.",
+    )
+    parser.add_argument(
         "--skip-after",
         action="store_true",
         help="Run the MT5 tester only; skip the import/compare/render chain.",
@@ -114,9 +127,9 @@ def default_common_root() -> Path:
     return Path(appdata) / "MetaQuotes" / "Terminal" / "Common" / "Files"
 
 
-def list_running_terminal_rows() -> list[str]:
+def list_running_process_rows(image_name: str) -> list[str]:
     result = subprocess.run(
-        ["tasklist", "/FI", "IMAGENAME eq terminal64.exe", "/FO", "CSV", "/NH"],
+        ["tasklist", "/FI", f"IMAGENAME eq {image_name}", "/FO", "CSV", "/NH"],
         capture_output=True,
         text=True,
         check=True,
@@ -126,10 +139,35 @@ def list_running_terminal_rows() -> list[str]:
         line = raw_line.strip()
         if not line or "No tasks are running" in line:
             continue
-        if "terminal64.exe" not in line.lower():
+        if image_name.lower() not in line.lower():
             continue
         rows.append(line)
     return rows
+
+
+def list_running_terminal_rows() -> list[str]:
+    return list_running_process_rows("terminal64.exe")
+
+
+def list_running_conflicting_game_rows() -> list[str]:
+    rows: list[str] = []
+    for image_name in CONFLICTING_GAME_PROCESS_NAMES:
+        rows.extend(list_running_process_rows(image_name))
+    return rows
+
+
+def ensure_no_conflicting_games(allow_conflicting_games: bool) -> list[str]:
+    running = list_running_conflicting_game_rows()
+    if not running:
+        return []
+    if allow_conflicting_games:
+        return running
+    running_text = "\n".join(running)
+    raise RuntimeError(
+        "League or Riot game processes are already running. "
+        "Close the game client first or rerun with --allow-conflicting-games.\n"
+        f"running_process_rows:\n{running_text}"
+    )
 
 
 def ensure_terminal_ready(force_close_terminal: bool) -> list[str]:
@@ -255,6 +293,7 @@ def main() -> int:
     unlink_if_exists(common_output_path)
     unlink_if_exists(repo_snapshot_path)
 
+    running_games_before = ensure_no_conflicting_games(args.allow_conflicting_games)
     running_before = ensure_terminal_ready(args.force_close_terminal)
 
     subprocess.run(
@@ -305,6 +344,8 @@ def main() -> int:
                 "common_output_path": str(common_output_path.resolve()),
                 "repo_snapshot_path": str(repo_snapshot_path.resolve()),
                 "force_close_terminal": args.force_close_terminal,
+                "allow_conflicting_games": args.allow_conflicting_games,
+                "running_conflicting_game_rows_before_launch": running_games_before,
                 "running_terminal_rows_before_launch": running_before,
                 "after_summary": after_summary,
             },

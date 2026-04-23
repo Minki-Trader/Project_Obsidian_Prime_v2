@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -68,6 +69,27 @@ class MaterializeDatasetTests(unittest.TestCase):
             raise RuntimeError(f"Timestamp not found in raw source {symbol}: {timestamp_utc}")
         index = int(target_index[0])
         return pd.Timestamp(source.iloc[index - 1]["timestamp"])
+
+    def write_weights_csv(
+        self,
+        path: Path,
+        *,
+        default_weight: float = 1.0 / 3.0,
+        overrides: dict[str, dict[str, float]] | None = None,
+    ) -> None:
+        month_index = pd.period_range("2022-08", "2026-04", freq="M").astype(str)
+        rows = []
+        overrides = overrides or {}
+        for month in month_index:
+            row = {
+                "month": month,
+                "msft_xnas_weight": default_weight,
+                "nvda_xnas_weight": default_weight,
+                "aapl_xnas_weight": default_weight,
+            }
+            row.update(overrides.get(month, {}))
+            rows.append(row)
+        pd.DataFrame(rows).to_csv(path, index=False)
 
     def test_proxy_features_are_computed_on_raw_symbol_series_before_merge(self) -> None:
         row = self.row_at("2025-09-30T20:05:00Z")
@@ -147,3 +169,40 @@ class MaterializeDatasetTests(unittest.TestCase):
             expected_us100_simple - expected_top3,
             places=12,
         )
+
+    def test_build_feature_frame_accepts_custom_weight_source(self) -> None:
+        baseline_row = self.row_at("2022-09-01T16:40:00Z")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            weights_path = Path(temp_dir) / "real_weights.csv"
+            self.write_weights_csv(
+                weights_path,
+                overrides={
+                    "2022-09": {
+                        "msft_xnas_weight": 0.6,
+                        "nvda_xnas_weight": 0.2,
+                        "aapl_xnas_weight": 0.2,
+                    }
+                },
+            )
+
+            custom_frame, custom_counts = self.module.build_feature_frame(
+                RAW_ROOT,
+                weights_path=weights_path,
+                weights_version_label="test_real_weights_v1",
+            )
+            custom_row = custom_frame.loc[
+                custom_frame["timestamp"] == pd.Timestamp("2022-09-01T16:40:00Z")
+            ].iloc[0]
+
+            self.assertEqual(custom_counts["weights_version"], "test_real_weights_v1")
+            self.assertEqual(self.module.build_feature_frame(RAW_ROOT)[1]["weights_version"], self.module.WEIGHTS_VERSION)
+            self.assertNotAlmostEqual(
+                float(custom_row["top3_weighted_return_1"]),
+                float(baseline_row["top3_weighted_return_1"]),
+                places=12,
+            )
+            self.assertNotAlmostEqual(
+                float(custom_row["us100_minus_top3_weighted_return_1"]),
+                float(baseline_row["us100_minus_top3_weighted_return_1"]),
+                places=12,
+            )

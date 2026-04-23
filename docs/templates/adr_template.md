@@ -1,4 +1,4 @@
-# ADR-XXXX 제목
+﻿# ADR-XXXX 제목
 
 ## Status
 - proposed / accepted / superseded

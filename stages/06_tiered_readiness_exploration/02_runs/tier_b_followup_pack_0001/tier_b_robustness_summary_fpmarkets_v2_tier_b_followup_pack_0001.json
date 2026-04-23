@@ -1,0 +1,478 @@
+{
+  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+  "scorecard_id": "scorecard_fpmarkets_v2_tiered_readiness_0001",
+  "baseline_seed_id": "baseline_seed_fpmarkets_v2_tier_b_offline_eval_0001",
+  "followup_pack_id": "followup_pack_fpmarkets_v2_tier_b_0001",
+  "report_id": "report_fpmarkets_v2_tier_b_robustness_0001",
+  "model_family_id": "gaussian_nb_3class_tier_a_seed_0001",
+  "produced_by_stage": "06_tiered_readiness_exploration",
+  "local_spec_ref": "stages/06_tiered_readiness_exploration/01_inputs/stage06_v2_followup_pack_local_spec.md@2026-04-22",
+  "decision_ref": "docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md@2026-04-22",
+  "pattern_metrics": {
+    "validation": [
+      {
+        "missing_groups": "g3_macro_proxy",
+        "row_share": 0.13588806252363544,
+        "row_count": 2156,
+        "class_balance": {
+          "short": 468,
+          "flat": 1270,
+          "long": 418
+        },
+        "predicted_balance": {
+          "short": 55,
+          "flat": 2084,
+          "long": 17
+        },
+        "log_loss": 3.1425149086810658,
+        "macro_f1": 0.2886598742834972,
+        "balanced_accuracy": 0.35020136652958866,
+        "multiclass_brier_score": 0.7829547731412764,
+        "mean_max_probability": 0.9780244648093515,
+        "rows_with_imputation": 2156,
+        "mean_missing_feature_count": 2.12152133580705
+      },
+      {
+        "missing_groups": "g4_leader_equity|g5_breadth_extension",
+        "row_share": 0.8641119374763645,
+        "row_count": 13710,
+        "class_balance": {
+          "short": 3150,
+          "flat": 7649,
+          "long": 2911
+        },
+        "predicted_balance": {
+          "short": 2678,
+          "flat": 10987,
+          "long": 45
+        },
+        "log_loss": 2.3221887170121227,
+        "macro_f1": 0.35045352505636895,
+        "balanced_accuracy": 0.393827252980475,
+        "multiclass_brier_score": 0.760432897051426,
+        "mean_max_probability": 0.9074452139680219,
+        "rows_with_imputation": 13710,
+        "mean_missing_feature_count": 9.0
+      }
+    ],
+    "holdout": [
+      {
+        "missing_groups": "g3_macro_proxy",
+        "row_share": 0.09450439425965068,
+        "row_count": 1699,
+        "class_balance": {
+          "short": 357,
+          "flat": 1033,
+          "long": 309
+        },
+        "predicted_balance": {
+          "short": 115,
+          "flat": 1560,
+          "long": 24
+        },
+        "log_loss": 2.66384506526388,
+        "macro_f1": 0.3155158155141814,
+        "balanced_accuracy": 0.3577853614087922,
+        "multiclass_brier_score": 0.726241560491551,
+        "mean_max_probability": 0.954428156073952,
+        "rows_with_imputation": 1699,
+        "mean_missing_feature_count": 2.1153619776339023
+      },
+      {
+        "missing_groups": "g4_leader_equity|g5_breadth_extension",
+        "row_share": 0.9054399822004673,
+        "row_count": 16278,
+        "class_balance": {
+          "short": 3101,
+          "flat": 10437,
+          "long": 2740
+        },
+        "predicted_balance": {
+          "short": 1946,
+          "flat": 14303,
+          "long": 29
+        },
+        "log_loss": 1.8906555846756425,
+        "macro_f1": 0.33803363903329847,
+        "balanced_accuracy": 0.37066037903851695,
+        "multiclass_brier_score": 0.6533090779917866,
+        "mean_max_probability": 0.9183776930273925,
+        "rows_with_imputation": 16278,
+        "mean_missing_feature_count": 8.996314043494287
+      },
+      {
+        "missing_groups": "g5_breadth_extension",
+        "row_share": 5.5623539882078096e-05,
+        "row_count": 1,
+        "class_balance": {
+          "short": 0,
+          "flat": 0,
+          "long": 1
+        },
+        "predicted_balance": {
+          "short": 0,
+          "flat": 0,
+          "long": 1
+        },
+        "log_loss": 1.3996137582337445e-11,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.3333333333333333,
+        "multiclass_brier_score": 3.917813010493106e-22,
+        "mean_max_probability": 0.9999999999860039,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      }
+    ]
+  },
+  "month_metrics": {
+    "validation": [
+      {
+        "month": "2025-01",
+        "row_count": 1498,
+        "class_balance": {
+          "short": 322,
+          "flat": 846,
+          "long": 330
+        },
+        "predicted_balance": {
+          "short": 237,
+          "flat": 1254,
+          "long": 7
+        },
+        "log_loss": 2.6637510073632735,
+        "macro_f1": 0.3322827886350072,
+        "balanced_accuracy": 0.3751431321274059,
+        "multiclass_brier_score": 0.8149194678245636,
+        "mean_max_probability": 0.9353476653256518,
+        "rows_with_imputation": 1498,
+        "mean_missing_feature_count": 7.797062750333779
+      },
+      {
+        "month": "2025-02",
+        "row_count": 1408,
+        "class_balance": {
+          "short": 295,
+          "flat": 865,
+          "long": 248
+        },
+        "predicted_balance": {
+          "short": 173,
+          "flat": 1233,
+          "long": 2
+        },
+        "log_loss": 2.3536627437141906,
+        "macro_f1": 0.307530710295248,
+        "balanced_accuracy": 0.3484471441167826,
+        "multiclass_brier_score": 0.7421975368750932,
+        "mean_max_probability": 0.9286423773842358,
+        "rows_with_imputation": 1408,
+        "mean_missing_feature_count": 7.809659090909091
+      },
+      {
+        "month": "2025-03",
+        "row_count": 2356,
+        "class_balance": {
+          "short": 638,
+          "flat": 1168,
+          "long": 550
+        },
+        "predicted_balance": {
+          "short": 408,
+          "flat": 1946,
+          "long": 2
+        },
+        "log_loss": 2.4792759607243022,
+        "macro_f1": 0.30067660650039363,
+        "balanced_accuracy": 0.35856905140206985,
+        "multiclass_brier_score": 0.8843948773346523,
+        "mean_max_probability": 0.8963733181914203,
+        "rows_with_imputation": 2356,
+        "mean_missing_feature_count": 8.820033955857385
+      },
+      {
+        "month": "2025-04",
+        "row_count": 3101,
+        "class_balance": {
+          "short": 1009,
+          "flat": 1127,
+          "long": 965
+        },
+        "predicted_balance": {
+          "short": 1379,
+          "flat": 1688,
+          "long": 34
+        },
+        "log_loss": 3.1396073733426872,
+        "macro_f1": 0.35048691595278886,
+        "balanced_accuracy": 0.42061077569765076,
+        "multiclass_brier_score": 0.940529022819911,
+        "mean_max_probability": 0.8613790534482192,
+        "rows_with_imputation": 3101,
+        "mean_missing_feature_count": 8.961625282167043
+      },
+      {
+        "month": "2025-05",
+        "row_count": 2120,
+        "class_balance": {
+          "short": 495,
+          "flat": 1168,
+          "long": 457
+        },
+        "predicted_balance": {
+          "short": 246,
+          "flat": 1864,
+          "long": 10
+        },
+        "log_loss": 2.459377145834537,
+        "macro_f1": 0.30711950775701435,
+        "balanced_accuracy": 0.3566503173578051,
+        "multiclass_brier_score": 0.8127311578664567,
+        "mean_max_probability": 0.9118544437143813,
+        "rows_with_imputation": 2120,
+        "mean_missing_feature_count": 7.966981132075472
+      },
+      {
+        "month": "2025-06",
+        "row_count": 2118,
+        "class_balance": {
+          "short": 397,
+          "flat": 1354,
+          "long": 367
+        },
+        "predicted_balance": {
+          "short": 127,
+          "flat": 1988,
+          "long": 3
+        },
+        "log_loss": 2.250645479817352,
+        "macro_f1": 0.3079264883039192,
+        "balanced_accuracy": 0.3524052756573551,
+        "multiclass_brier_score": 0.6790413889246003,
+        "mean_max_probability": 0.9529587757014125,
+        "rows_with_imputation": 2118,
+        "mean_missing_feature_count": 8.076015108593012
+      },
+      {
+        "month": "2025-07",
+        "row_count": 1658,
+        "class_balance": {
+          "short": 227,
+          "flat": 1236,
+          "long": 195
+        },
+        "predicted_balance": {
+          "short": 83,
+          "flat": 1575,
+          "long": 0
+        },
+        "log_loss": 1.7074345597450205,
+        "macro_f1": 0.33167089353270374,
+        "balanced_accuracy": 0.35566034149285514,
+        "multiclass_brier_score": 0.4877321698097865,
+        "mean_max_probability": 0.9546367880499457,
+        "rows_with_imputation": 1658,
+        "mean_missing_feature_count": 6.668878166465621
+      },
+      {
+        "month": "2025-08",
+        "row_count": 1607,
+        "class_balance": {
+          "short": 235,
+          "flat": 1155,
+          "long": 217
+        },
+        "predicted_balance": {
+          "short": 80,
+          "flat": 1523,
+          "long": 4
+        },
+        "log_loss": 1.8167041054704893,
+        "macro_f1": 0.32030067358451136,
+        "balanced_accuracy": 0.3496985741323422,
+        "multiclass_brier_score": 0.5462025700171207,
+        "mean_max_probability": 0.948187601130621,
+        "rows_with_imputation": 1607,
+        "mean_missing_feature_count": 7.2594897324206595
+      }
+    ],
+    "holdout": [
+      {
+        "month": "2025-09",
+        "row_count": 1559,
+        "class_balance": {
+          "short": 208,
+          "flat": 1177,
+          "long": 174
+        },
+        "predicted_balance": {
+          "short": 82,
+          "flat": 1472,
+          "long": 5
+        },
+        "log_loss": 1.653675762611347,
+        "macro_f1": 0.3299910840157888,
+        "balanced_accuracy": 0.35135093091103403,
+        "multiclass_brier_score": 0.4773442116800712,
+        "mean_max_probability": 0.9531523502040216,
+        "rows_with_imputation": 1559,
+        "mean_missing_feature_count": 6.831943553559975
+      },
+      {
+        "month": "2025-10",
+        "row_count": 2995,
+        "class_balance": {
+          "short": 413,
+          "flat": 2238,
+          "long": 344
+        },
+        "predicted_balance": {
+          "short": 219,
+          "flat": 2771,
+          "long": 5
+        },
+        "log_loss": 1.4160928441136793,
+        "macro_f1": 0.36519912664693305,
+        "balanced_accuracy": 0.38026281001600165,
+        "multiclass_brier_score": 0.46313414797330615,
+        "mean_max_probability": 0.9402010166898707,
+        "rows_with_imputation": 2995,
+        "mean_missing_feature_count": 8.502504173622704
+      },
+      {
+        "month": "2025-11",
+        "row_count": 1848,
+        "class_balance": {
+          "short": 469,
+          "flat": 963,
+          "long": 416
+        },
+        "predicted_balance": {
+          "short": 369,
+          "flat": 1464,
+          "long": 15
+        },
+        "log_loss": 2.4340721373752756,
+        "macro_f1": 0.3261293133608693,
+        "balanced_accuracy": 0.37194516928440763,
+        "multiclass_brier_score": 0.8407006798136125,
+        "mean_max_probability": 0.889881453612454,
+        "rows_with_imputation": 1847,
+        "mean_missing_feature_count": 8.20021645021645
+      },
+      {
+        "month": "2025-12",
+        "row_count": 2356,
+        "class_balance": {
+          "short": 292,
+          "flat": 1775,
+          "long": 289
+        },
+        "predicted_balance": {
+          "short": 108,
+          "flat": 2241,
+          "long": 7
+        },
+        "log_loss": 1.4970040032792278,
+        "macro_f1": 0.33569559599440074,
+        "balanced_accuracy": 0.356330119250206,
+        "multiclass_brier_score": 0.4663920066058705,
+        "mean_max_probability": 0.9512267359780998,
+        "rows_with_imputation": 2356,
+        "mean_missing_feature_count": 8.070882852292021
+      },
+      {
+        "month": "2026-01",
+        "row_count": 2337,
+        "class_balance": {
+          "short": 402,
+          "flat": 1602,
+          "long": 333
+        },
+        "predicted_balance": {
+          "short": 161,
+          "flat": 2171,
+          "long": 5
+        },
+        "log_loss": 1.8209137825595312,
+        "macro_f1": 0.31861943017141536,
+        "balanced_accuracy": 0.35127211732947106,
+        "multiclass_brier_score": 0.5955162914477033,
+        "mean_max_probability": 0.9373879786410566,
+        "rows_with_imputation": 2337,
+        "mean_missing_feature_count": 8.369276850663244
+      },
+      {
+        "month": "2026-02",
+        "row_count": 2336,
+        "class_balance": {
+          "short": 560,
+          "flat": 1297,
+          "long": 479
+        },
+        "predicted_balance": {
+          "short": 302,
+          "flat": 2023,
+          "long": 11
+        },
+        "log_loss": 2.314345436066765,
+        "macro_f1": 0.32503260829672215,
+        "balanced_accuracy": 0.3716872505034483,
+        "multiclass_brier_score": 0.7876909258861257,
+        "mean_max_probability": 0.9242239389110429,
+        "rows_with_imputation": 2336,
+        "mean_missing_feature_count": 8.409674657534246
+      },
+      {
+        "month": "2026-03",
+        "row_count": 3367,
+        "class_balance": {
+          "short": 893,
+          "flat": 1676,
+          "long": 798
+        },
+        "predicted_balance": {
+          "short": 631,
+          "flat": 2730,
+          "long": 6
+        },
+        "log_loss": 2.4050250931145167,
+        "macro_f1": 0.2994802028971451,
+        "balanced_accuracy": 0.3539769781093842,
+        "multiclass_brier_score": 0.8878489619592839,
+        "mean_max_probability": 0.8790823820694881,
+        "rows_with_imputation": 3367,
+        "mean_missing_feature_count": 8.934065934065934
+      },
+      {
+        "month": "2026-04",
+        "row_count": 1180,
+        "class_balance": {
+          "short": 221,
+          "flat": 742,
+          "long": 217
+        },
+        "predicted_balance": {
+          "short": 189,
+          "flat": 991,
+          "long": 0
+        },
+        "log_loss": 2.2865026377935274,
+        "macro_f1": 0.3211724581181184,
+        "balanced_accuracy": 0.35631553056636295,
+        "multiclass_brier_score": 0.7318590922686418,
+        "mean_max_probability": 0.9109615603955623,
+        "rows_with_imputation": 1180,
+        "mean_missing_feature_count": 8.86949152542373
+      }
+    ]
+  },
+  "draft_evidence_read": {
+    "observed_missing_pattern_count": {
+      "validation": 2,
+      "holdout": 3
+    },
+    "dominant_holdout_pattern": "g4_leader_equity|g5_breadth_extension",
+    "dominant_holdout_pattern_share": 0.9054399822004673,
+    "stage05_carry_forward_read": "current broader_0002 + helper_0001 + broader_0003 evidence remains sufficient for continued offline Tier B exploration, but the follow-up pack still does not authorize MT5-path work or operating promotion"
+  }
+}

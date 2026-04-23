@@ -1,4 +1,4 @@
-# Negative Result Register
+﻿# Negative Result Register
 
 | ID | 가설 | 어디서 시험했는가 | 왜 실패로 판단했는가 | 다시 열 수 있는 조건 | 마지막 검토일 |
 |---|---|---|---|---|---|
