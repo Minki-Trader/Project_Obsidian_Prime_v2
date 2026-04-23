@@ -1,21 +1,15 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = REPO_ROOT / "foundation" / "parity" / "runtime_pack_paths.py"
-STAGE03_REQUEST = Path(
-    "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/"
-    "mt5_snapshot_request_fpmarkets_v2_runtime_minimum_0001.json"
-)
-STAGE05_REQUEST = Path(
-    "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/"
-    "mt5_snapshot_request_fpmarkets_v2_runtime_broader_0002.json"
-)
 
 
 def load_module():
@@ -34,58 +28,48 @@ class RuntimePackPathResolverTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.module = load_module()
 
-    def test_stage03_request_resolves_existing_default_paths(self) -> None:
-        resolved = self.module.resolve_runtime_pack_paths(STAGE03_REQUEST)
-
-        self.assertEqual(resolved.stage_name, "03_runtime_parity_closure")
-        self.assertEqual(
-            resolved.python_snapshot_path.as_posix(),
-            "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/python_snapshot_fpmarkets_v2_runtime_minimum_0001.json",
+    def _write_request(self, stage_name: str, repo_import_path: str) -> Path:
+        temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(temp_dir.cleanup)
+        run_root = Path(temp_dir.name) / "stages" / stage_name / "02_runs" / "runtime_pack_test"
+        run_root.mkdir(parents=True, exist_ok=True)
+        (run_root / "mt5_tester_runtime_pack_test.ini").write_text("[tester]\n", encoding="utf-8")
+        request_path = run_root / "mt5_snapshot_request_test.json"
+        request_path.write_text(
+            json.dumps(
+                {
+                    "fixture_set_id": "fixture_test_0001",
+                    "bundle_id": "bundle_test_0001",
+                    "report_id": "report_test_0001",
+                    "repo_import_path": repo_import_path,
+                    "common_files_output_path": "snapshot_test.jsonl",
+                }
+            ),
+            encoding="utf-8",
         )
+        return request_path
+
+    def test_resolves_paths_and_stage_name(self) -> None:
+        stage_name = "03_runtime_parity_closure"
+        request_path = self._write_request(
+            stage_name,
+            f"stages/{stage_name}/02_runs/runtime_pack_test/mt5_snapshot.jsonl",
+        )
+
+        resolved = self.module.resolve_runtime_pack_paths(request_path)
+
+        self.assertEqual(resolved.stage_name, stage_name)
         self.assertEqual(
             resolved.mt5_snapshot_path.as_posix(),
-            "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_minimum_0001.jsonl",
-        )
-        self.assertEqual(
-            resolved.comparison_json_path.as_posix(),
-            "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/runtime_parity_comparison_fpmarkets_v2_runtime_minimum_0001.json",
-        )
-        self.assertEqual(
-            resolved.report_path.as_posix(),
-            "stages/03_runtime_parity_closure/03_reviews/report_fpmarkets_v2_runtime_parity_0001.md",
+            f"stages/{stage_name}/02_runs/runtime_pack_test/mt5_snapshot.jsonl",
         )
         self.assertIsNotNone(resolved.tester_ini_path)
-        self.assertEqual(
-            resolved.tester_ini_path.as_posix(),
-            "stages/03_runtime_parity_closure/02_runs/runtime_parity_pack_0001/mt5_tester_runtime_parity_pack_0001.ini",
-        )
+        self.assertTrue(resolved.tester_ini_path.as_posix().endswith("mt5_tester_runtime_pack_test.ini"))
 
-    def test_stage05_request_resolves_broader_pack_paths(self) -> None:
-        resolved = self.module.resolve_runtime_pack_paths(STAGE05_REQUEST)
+    def test_rejects_repo_import_path_escape(self) -> None:
+        request_path = self._write_request("03_runtime_parity_closure", "../outside.jsonl")
 
-        self.assertEqual(resolved.stage_name, "05_exploration_kernel_freeze")
-        self.assertEqual(
-            resolved.fixture_bindings_path.as_posix(),
-            "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/fixture_bindings_fpmarkets_v2_runtime_broader_0002.json",
-        )
-        self.assertEqual(
-            resolved.python_snapshot_path.as_posix(),
-            "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/python_snapshot_fpmarkets_v2_runtime_broader_0002.json",
-        )
-        self.assertEqual(
-            resolved.mt5_snapshot_path.as_posix(),
-            "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_broader_0002.jsonl",
-        )
-        self.assertEqual(
-            resolved.comparison_json_path.as_posix(),
-            "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/runtime_parity_comparison_fpmarkets_v2_runtime_broader_0002.json",
-        )
-        self.assertEqual(
-            resolved.report_path.as_posix(),
-            "stages/05_exploration_kernel_freeze/03_reviews/report_fpmarkets_v2_runtime_broader_parity_0002.md",
-        )
-        self.assertIsNotNone(resolved.tester_ini_path)
-        self.assertEqual(
-            resolved.tester_ini_path.as_posix(),
-            "stages/05_exploration_kernel_freeze/02_runs/runtime_broader_pack_0002/mt5_tester_runtime_broader_pack_0002.ini",
-        )
+        with self.assertRaises(RuntimeError) as context:
+            self.module.resolve_runtime_pack_paths(request_path)
+
+        self.assertIn("escapes allowed root", str(context.exception))

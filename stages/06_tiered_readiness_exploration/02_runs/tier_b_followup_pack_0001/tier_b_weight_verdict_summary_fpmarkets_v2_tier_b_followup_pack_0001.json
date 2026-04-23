@@ -1,0 +1,405 @@
+{
+  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+  "scorecard_id": "scorecard_fpmarkets_v2_tiered_readiness_0001",
+  "baseline_seed_id": "baseline_seed_fpmarkets_v2_tier_b_offline_eval_0001",
+  "followup_pack_id": "followup_pack_fpmarkets_v2_tier_b_0001",
+  "report_id": "report_fpmarkets_v2_tier_b_weight_verdict_0001",
+  "model_family_id": "gaussian_nb_3class_tier_a_seed_0001",
+  "weights_version": "foundation/config/top3_monthly_weights_fpmarkets_v2.csv@2026-04-16 (placeholder_equal_weight)",
+  "scenario_rows": [
+    {
+      "scenario_name": "equal_placeholder",
+      "weights": {
+        "msft_xnas_weight": 0.3333333333333333,
+        "nvda_xnas_weight": 0.3333333333333333,
+        "aapl_xnas_weight": 0.3333333333333333
+      },
+      "label_thresholds": {
+        "q33": -0.00035087247936272335,
+        "q67": 0.0004049556640609367
+      },
+      "validation": {
+        "strict_tier_a": {
+          "row_count": 10618,
+          "class_balance": {
+            "short": 3396,
+            "flat": 3798,
+            "long": 3424
+          },
+          "predicted_balance": {
+            "short": 3166,
+            "flat": 6269,
+            "long": 1183
+          },
+          "log_loss": 3.1991409149548615,
+          "macro_f1": 0.38343097401047177,
+          "balanced_accuracy": 0.4182891933505959,
+          "multiclass_brier_score": 0.9199298166609283,
+          "mean_max_probability": 0.8432109815785638,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 15866,
+          "class_balance": {
+            "short": 3618,
+            "flat": 8919,
+            "long": 3329
+          },
+          "predicted_balance": {
+            "short": 2733,
+            "flat": 13071,
+            "long": 62
+          },
+          "log_loss": 2.433661253835392,
+          "macro_f1": 0.34634070737156847,
+          "balanced_accuracy": 0.3885783656640273,
+          "multiclass_brier_score": 0.7634933511576683,
+          "mean_max_probability": 0.9170360916192155,
+          "rows_with_imputation": 15866,
+          "mean_missing_feature_count": 8.065296861212657
+        }
+      },
+      "holdout": {
+        "strict_tier_a": {
+          "row_count": 10144,
+          "class_balance": {
+            "short": 3130,
+            "flat": 4096,
+            "long": 2918
+          },
+          "predicted_balance": {
+            "short": 3264,
+            "flat": 6177,
+            "long": 703
+          },
+          "log_loss": 2.9522355626968073,
+          "macro_f1": 0.38144165837873617,
+          "balanced_accuracy": 0.4169430327970563,
+          "multiclass_brier_score": 0.8660388400175063,
+          "mean_max_probability": 0.8370893751325627,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 17978,
+          "class_balance": {
+            "short": 3458,
+            "flat": 11470,
+            "long": 3050
+          },
+          "predicted_balance": {
+            "short": 2061,
+            "flat": 15863,
+            "long": 54
+          },
+          "log_loss": 1.96362022323024,
+          "macro_f1": 0.33643698324380455,
+          "balanced_accuracy": 0.36929039799144725,
+          "multiclass_brier_score": 0.6601651787087212,
+          "mean_max_probability": 0.9217891603220311,
+          "rows_with_imputation": 17977,
+          "mean_missing_feature_count": 8.34553342974747
+        }
+      }
+    },
+    {
+      "scenario_name": "nvda_tilt_60",
+      "weights": {
+        "msft_xnas_weight": 0.2,
+        "nvda_xnas_weight": 0.6,
+        "aapl_xnas_weight": 0.2
+      },
+      "label_thresholds": {
+        "q33": -0.00035087247936272335,
+        "q67": 0.0004049556640609367
+      },
+      "validation": {
+        "strict_tier_a": {
+          "row_count": 10618,
+          "class_balance": {
+            "short": 3396,
+            "flat": 3798,
+            "long": 3424
+          },
+          "predicted_balance": {
+            "short": 3159,
+            "flat": 6265,
+            "long": 1194
+          },
+          "log_loss": 3.189365121433856,
+          "macro_f1": 0.3852135329067318,
+          "balanced_accuracy": 0.4195571776751999,
+          "multiclass_brier_score": 0.920245062477186,
+          "mean_max_probability": 0.8434791447148206,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 15866,
+          "class_balance": {
+            "short": 3618,
+            "flat": 8919,
+            "long": 3329
+          },
+          "predicted_balance": {
+            "short": 2754,
+            "flat": 13052,
+            "long": 60
+          },
+          "log_loss": 2.426413413435148,
+          "macro_f1": 0.3458679085921912,
+          "balanced_accuracy": 0.38826077888829663,
+          "multiclass_brier_score": 0.7631721648577771,
+          "mean_max_probability": 0.9161366982014263,
+          "rows_with_imputation": 15866,
+          "mean_missing_feature_count": 8.065296861212657
+        }
+      },
+      "holdout": {
+        "strict_tier_a": {
+          "row_count": 10144,
+          "class_balance": {
+            "short": 3130,
+            "flat": 4096,
+            "long": 2918
+          },
+          "predicted_balance": {
+            "short": 3313,
+            "flat": 6175,
+            "long": 656
+          },
+          "log_loss": 2.941538569181836,
+          "macro_f1": 0.3799971538544636,
+          "balanced_accuracy": 0.41704960865590834,
+          "multiclass_brier_score": 0.8668561173239555,
+          "mean_max_probability": 0.838125411182127,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 17978,
+          "class_balance": {
+            "short": 3458,
+            "flat": 11470,
+            "long": 3050
+          },
+          "predicted_balance": {
+            "short": 2087,
+            "flat": 15838,
+            "long": 53
+          },
+          "log_loss": 1.9559895412539487,
+          "macro_f1": 0.3368031398005104,
+          "balanced_accuracy": 0.3696325925266335,
+          "multiclass_brier_score": 0.6598640997728398,
+          "mean_max_probability": 0.9208877510022768,
+          "rows_with_imputation": 17977,
+          "mean_missing_feature_count": 8.34553342974747
+        }
+      }
+    },
+    {
+      "scenario_name": "msft_tilt_60",
+      "weights": {
+        "msft_xnas_weight": 0.6,
+        "nvda_xnas_weight": 0.2,
+        "aapl_xnas_weight": 0.2
+      },
+      "label_thresholds": {
+        "q33": -0.00035087247936272335,
+        "q67": 0.0004049556640609367
+      },
+      "validation": {
+        "strict_tier_a": {
+          "row_count": 10618,
+          "class_balance": {
+            "short": 3396,
+            "flat": 3798,
+            "long": 3424
+          },
+          "predicted_balance": {
+            "short": 3118,
+            "flat": 6261,
+            "long": 1239
+          },
+          "log_loss": 3.181895884938239,
+          "macro_f1": 0.386056288407034,
+          "balanced_accuracy": 0.41938717442578116,
+          "multiclass_brier_score": 0.915736698232068,
+          "mean_max_probability": 0.8380118497003767,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 15866,
+          "class_balance": {
+            "short": 3618,
+            "flat": 8919,
+            "long": 3329
+          },
+          "predicted_balance": {
+            "short": 2707,
+            "flat": 13088,
+            "long": 71
+          },
+          "log_loss": 2.4233059615216743,
+          "macro_f1": 0.34664188239711696,
+          "balanced_accuracy": 0.3884860595230959,
+          "multiclass_brier_score": 0.7608110105047775,
+          "mean_max_probability": 0.9146493227053901,
+          "rows_with_imputation": 15866,
+          "mean_missing_feature_count": 8.065296861212657
+        }
+      },
+      "holdout": {
+        "strict_tier_a": {
+          "row_count": 10144,
+          "class_balance": {
+            "short": 3130,
+            "flat": 4096,
+            "long": 2918
+          },
+          "predicted_balance": {
+            "short": 3117,
+            "flat": 6140,
+            "long": 887
+          },
+          "log_loss": 2.940777674422739,
+          "macro_f1": 0.3898295953409921,
+          "balanced_accuracy": 0.4193528450278617,
+          "multiclass_brier_score": 0.8588052901515909,
+          "mean_max_probability": 0.8296176026866635,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 17978,
+          "class_balance": {
+            "short": 3458,
+            "flat": 11470,
+            "long": 3050
+          },
+          "predicted_balance": {
+            "short": 2041,
+            "flat": 15874,
+            "long": 63
+          },
+          "log_loss": 1.9557057230384405,
+          "macro_f1": 0.336491113950405,
+          "balanced_accuracy": 0.36916309878206954,
+          "multiclass_brier_score": 0.6583707820750994,
+          "mean_max_probability": 0.9200563894245705,
+          "rows_with_imputation": 17977,
+          "mean_missing_feature_count": 8.34553342974747
+        }
+      }
+    },
+    {
+      "scenario_name": "aapl_tilt_60",
+      "weights": {
+        "msft_xnas_weight": 0.2,
+        "nvda_xnas_weight": 0.2,
+        "aapl_xnas_weight": 0.6
+      },
+      "label_thresholds": {
+        "q33": -0.00035087247936272335,
+        "q67": 0.0004049556640609367
+      },
+      "validation": {
+        "strict_tier_a": {
+          "row_count": 10618,
+          "class_balance": {
+            "short": 3396,
+            "flat": 3798,
+            "long": 3424
+          },
+          "predicted_balance": {
+            "short": 3055,
+            "flat": 6215,
+            "long": 1348
+          },
+          "log_loss": 3.2107011571210387,
+          "macro_f1": 0.38591786165802455,
+          "balanced_accuracy": 0.4176906154448587,
+          "multiclass_brier_score": 0.9190796866865684,
+          "mean_max_probability": 0.8427074111139312,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 15866,
+          "class_balance": {
+            "short": 3618,
+            "flat": 8919,
+            "long": 3329
+          },
+          "predicted_balance": {
+            "short": 2736,
+            "flat": 13061,
+            "long": 69
+          },
+          "log_loss": 2.4324492414922787,
+          "macro_f1": 0.3465912601367627,
+          "balanced_accuracy": 0.3884702519201379,
+          "multiclass_brier_score": 0.7638071624750783,
+          "mean_max_probability": 0.9175530258418098,
+          "rows_with_imputation": 15866,
+          "mean_missing_feature_count": 8.065296861212657
+        }
+      },
+      "holdout": {
+        "strict_tier_a": {
+          "row_count": 10144,
+          "class_balance": {
+            "short": 3130,
+            "flat": 4096,
+            "long": 2918
+          },
+          "predicted_balance": {
+            "short": 3138,
+            "flat": 6121,
+            "long": 885
+          },
+          "log_loss": 2.958156585440649,
+          "macro_f1": 0.3910937828838033,
+          "balanced_accuracy": 0.4204697450879484,
+          "multiclass_brier_score": 0.8649084089008732,
+          "mean_max_probability": 0.836263264711013,
+          "rows_with_imputation": 0,
+          "mean_missing_feature_count": 0.0
+        },
+        "tier_b_exploration": {
+          "row_count": 17978,
+          "class_balance": {
+            "short": 3458,
+            "flat": 11470,
+            "long": 3050
+          },
+          "predicted_balance": {
+            "short": 2063,
+            "flat": 15859,
+            "long": 56
+          },
+          "log_loss": 1.9643459856505843,
+          "macro_f1": 0.33637005875769116,
+          "balanced_accuracy": 0.36914877530369195,
+          "multiclass_brier_score": 0.660332826919718,
+          "mean_max_probability": 0.9221414266477301,
+          "rows_with_imputation": 17977,
+          "mean_missing_feature_count": 8.34553342974747
+        }
+      }
+    }
+  ],
+  "spread_summary": {
+    "tier_b_holdout_log_loss_spread": 0.00864026261214379,
+    "tier_b_holdout_brier_spread": 0.0019620448446185934,
+    "tier_b_holdout_macro_f1_spread": 0.00043308104281924997
+  },
+  "draft_verdict": {
+    "offline_screen_sufficient": true,
+    "real_weight_rerun_required_before_simulated_or_mt5": true,
+    "verdict_text": "placeholder weights look stable enough for Stage 06 offline screening because the coarse tilt scenarios keep Tier B holdout metrics in a narrow band, but a real-weight rerun still remains required before any simulated execution, MT5-path expansion, or operating promotion claim"
+  }
+}

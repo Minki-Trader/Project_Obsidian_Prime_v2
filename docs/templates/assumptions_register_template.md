@@ -1,4 +1,4 @@
-# Assumptions Register
+﻿# Assumptions Register
 
 | ID | 가정 | 왜 중요함 | 깨질 수 있는 신호 | 현재 상태 | 마지막 검토일 |
 |---|---|---|---|---|---|

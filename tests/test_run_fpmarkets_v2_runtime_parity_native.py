@@ -31,6 +31,25 @@ class RunRuntimeParityNativeTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.module = load_module()
 
+    def test_ensure_no_conflicting_games_raises_without_allow_flag(self) -> None:
+        with patch.object(
+            self.module,
+            "list_running_conflicting_game_rows",
+            return_value=['"League of Legends.exe","321"'],
+        ):
+            with self.assertRaises(RuntimeError):
+                self.module.ensure_no_conflicting_games(allow_conflicting_games=False)
+
+    def test_ensure_no_conflicting_games_returns_rows_when_allowed(self) -> None:
+        with patch.object(
+            self.module,
+            "list_running_conflicting_game_rows",
+            return_value=['"LeagueClientUx.exe","654"'],
+        ):
+            rows = self.module.ensure_no_conflicting_games(allow_conflicting_games=True)
+
+        self.assertEqual(rows, ['"LeagueClientUx.exe","654"'])
+
     def test_ensure_terminal_ready_raises_without_force_close(self) -> None:
         with patch.object(self.module, "list_running_terminal_rows", return_value=['"terminal64.exe","123"']):
             with self.assertRaises(RuntimeError):
@@ -105,12 +124,14 @@ class RunRuntimeParityNativeTests(unittest.TestCase):
                 timeout_seconds=45,
                 wait_seconds=20,
                 force_close_terminal=False,
+                allow_conflicting_games=False,
                 skip_after=True,
             )
 
             with (
                 patch.object(self.module, "parse_args", return_value=args),
                 patch.object(self.module, "resolve_runtime_pack_paths", return_value=resolved),
+                patch.object(self.module, "ensure_no_conflicting_games", return_value=[]),
                 patch.object(self.module, "ensure_terminal_ready", return_value=[]),
                 patch.object(self.module, "wait_for_file") as mock_wait,
                 patch.object(self.module, "run_json_step") as mock_after,
@@ -119,18 +140,19 @@ class RunRuntimeParityNativeTests(unittest.TestCase):
             ):
                 rc = self.module.main()
 
-            self.assertEqual(rc, 0)
-            self.assertEqual(mock_run.call_count, 1)
-            launch_cmd = mock_run.call_args.args[0]
-            self.assertEqual(launch_cmd[0], str(terminal_path))
-            self.assertIn(f"/config:{tester_ini.resolve()}", launch_cmd)
-            mock_wait.assert_called_once()
-            mock_after.assert_not_called()
+        self.assertEqual(rc, 0)
+        self.assertEqual(mock_run.call_count, 1)
+        launch_cmd = mock_run.call_args.args[0]
+        self.assertEqual(launch_cmd[0], str(terminal_path))
+        self.assertIn(f"/config:{tester_ini.resolve()}", launch_cmd)
+        mock_wait.assert_called_once()
+        mock_after.assert_not_called()
 
-            summary = json.loads(mock_print.call_args.args[0])
-            self.assertEqual(summary["status"], "ok")
-            self.assertIsNone(summary["after_summary"])
-            self.assertEqual(summary["running_terminal_rows_before_launch"], [])
+        summary = json.loads(mock_print.call_args.args[0])
+        self.assertEqual(summary["status"], "ok")
+        self.assertIsNone(summary["after_summary"])
+        self.assertEqual(summary["running_conflicting_game_rows_before_launch"], [])
+        self.assertEqual(summary["running_terminal_rows_before_launch"], [])
 
 
 if __name__ == "__main__":

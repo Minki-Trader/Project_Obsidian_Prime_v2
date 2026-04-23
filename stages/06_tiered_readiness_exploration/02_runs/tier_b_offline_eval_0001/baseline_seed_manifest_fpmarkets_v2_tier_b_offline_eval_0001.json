@@ -1,0 +1,48 @@
+{
+  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+  "scorecard_id": "scorecard_fpmarkets_v2_tiered_readiness_0001",
+  "baseline_seed_id": "baseline_seed_fpmarkets_v2_tier_b_offline_eval_0001",
+  "report_id": "report_fpmarkets_v2_tier_b_offline_evaluation_0001",
+  "model_family_id": "gaussian_nb_3class_tier_a_seed_0001",
+  "produced_by_stage": "06_tiered_readiness_exploration",
+  "parser_version": "fpmarkets_v2_stage01_materializer_v1",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "row_labels_path": "stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet",
+  "local_spec_ref": "stages/06_tiered_readiness_exploration/01_inputs/stage06_v2_baseline_seed_local_spec.md@2026-04-22",
+  "decision_ref": "docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md@2026-04-22",
+  "adr_ref": "docs/adr/0003_tier_b_reduced_risk_experiment_charter.md@2026-04-22",
+  "fit_lane": "strict_tier_a_only",
+  "model_type": "gaussian_naive_bayes",
+  "class_order": [
+    "short",
+    "flat",
+    "long"
+  ],
+  "probability_output_order": [
+    "p_short",
+    "p_flat",
+    "p_long"
+  ],
+  "imputation_policy": "train_mean_fill_for_missing_features_before_inference_only",
+  "frame_source": "build_feature_frame() rebuilt under the current parser identity because features.parquet excludes Tier B rows",
+  "train_window": {
+    "start": "2022-09-01T00:00:00+00:00",
+    "end_inclusive": "2024-12-31T23:55:00+00:00",
+    "readiness_tier": "tier_a",
+    "row_count": 34695
+  },
+  "validation_window": {
+    "start": "2025-01-01T00:00:00+00:00",
+    "end_inclusive": "2025-08-31T23:55:00+00:00"
+  },
+  "holdout_window": {
+    "start": "2025-09-01T00:00:00+00:00",
+    "end_inclusive": "2026-04-13T23:55:00+00:00"
+  },
+  "label_rule": {
+    "future_target": "future_log_return_1",
+    "q33": -0.00035087247936272335,
+    "q67": 0.0004049556640609367,
+    "rule": "x <= q33 -> short; q33 < x < q67 -> flat; x >= q67 -> long"
+  }
+}

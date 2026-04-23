@@ -1,0 +1,78 @@
+{
+  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+  "scorecard_id": "scorecard_fpmarkets_v2_tiered_readiness_0001",
+  "produced_by_stage": "06_tiered_readiness_exploration",
+  "parser_version": "fpmarkets_v2_stage01_materializer_v1",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "readiness_policy_ref": "docs/policies/tiered_readiness_exploration.md@2026-04-20",
+  "readiness_decision_ref": "docs/decisions/2026-04-20_stage06_first_readiness_boundary.md@2026-04-20",
+  "row_labels_path": "stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet",
+  "shared_window": {
+    "start": "2022-08-01",
+    "end_inclusive": "2026-04-13",
+    "row_count": 261344,
+    "tier_counts": {
+      "tier_a": 56988,
+      "tier_b": 88303,
+      "tier_c": 116053
+    },
+    "lane_counts": {
+      "strict_tier_a": 56988,
+      "tier_b_exploration": 88303,
+      "null": 116053
+    },
+    "missing_group_counts": {
+      "g2_session_semantics": 12490,
+      "g3_macro_proxy": 126987,
+      "g4_leader_equity": 190431,
+      "g5_breadth_extension": 190434
+    },
+    "missing_symbol_counts": {
+      "VIX": 103244,
+      "US10YR": 38410,
+      "USDX": 23858,
+      "NVDA.xnas": 190387,
+      "AAPL.xnas": 189459,
+      "MSFT.xnas": 189484,
+      "AMZN.xnas": 189461,
+      "AMD.xnas": 189466,
+      "GOOGL.xnas": 189481,
+      "META.xnas": 189482,
+      "TSLA.xnas": 189482
+    }
+  },
+  "practical_window": {
+    "start": "2022-09-01",
+    "end_inclusive": "2026-04-13",
+    "row_count": 255001,
+    "tier_counts": {
+      "tier_a": 55457,
+      "tier_b": 86192,
+      "tier_c": 113352
+    },
+    "lane_counts": {
+      "strict_tier_a": 55457,
+      "tier_b_exploration": 86192,
+      "null": 113352
+    },
+    "missing_group_counts": {
+      "g2_session_semantics": 12039,
+      "g3_macro_proxy": 124328,
+      "g4_leader_equity": 185826,
+      "g5_breadth_extension": 185826
+    },
+    "missing_symbol_counts": {
+      "VIX": 100871,
+      "US10YR": 38059,
+      "USDX": 23287,
+      "NVDA.xnas": 185791,
+      "AAPL.xnas": 184900,
+      "MSFT.xnas": 184925,
+      "AMZN.xnas": 184902,
+      "AMD.xnas": 184903,
+      "GOOGL.xnas": 184918,
+      "META.xnas": 184919,
+      "TSLA.xnas": 184921
+    }
+  }
+}

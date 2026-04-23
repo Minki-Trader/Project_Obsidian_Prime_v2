@@ -1,4 +1,4 @@
-# Stage Charter
+﻿# Stage Charter
 
 ## 1. Basic Identity
 - stage_name:

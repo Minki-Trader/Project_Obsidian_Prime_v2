@@ -1,0 +1,381 @@
+{
+  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+  "scorecard_id": "scorecard_fpmarkets_v2_tiered_readiness_0001",
+  "reduced_context_id": "reduced_context_model_fpmarkets_v2_tier_b_0001",
+  "report_id": "report_fpmarkets_v2_tier_b_reduced_context_0001",
+  "model_family_id": "gaussian_nb_3class_tier_b_reduced_context_keep42_0001",
+  "produced_by_stage": "06_tiered_readiness_exploration",
+  "parser_version": "fpmarkets_v2_stage01_materializer_v1",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "row_labels_path": "stages/06_tiered_readiness_exploration/02_runs/tiered_readiness_scorecard_0001/readiness_row_labels_fpmarkets_v2_tiered_readiness_0001.parquet",
+  "baseline_summary_ref": "stages/06_tiered_readiness_exploration/02_runs/tier_b_offline_eval_0001/baseline_evaluation_summary_fpmarkets_v2_tier_b_offline_eval_0001.json",
+  "local_spec_ref": "stages/06_tiered_readiness_exploration/01_inputs/stage06_tier_b_reduced_context_local_spec.md@2026-04-22",
+  "schema_ref": "stages/06_tiered_readiness_exploration/01_inputs/stage06_tier_b_safe_feature_schema_draft_0001.md@2026-04-22",
+  "anchor_ref": "stages/06_tiered_readiness_exploration/03_reviews/note_fpmarkets_v2_tier_b_reduced_context_model_anchor_0001.md@2026-04-22",
+  "decision_ref": "docs/decisions/2026-04-22_stage06_v2_baseline_seed_first.md@2026-04-22",
+  "adr_ref": "docs/adr/0003_tier_b_reduced_risk_experiment_charter.md@2026-04-22",
+  "fit_lane": "strict_tier_a_only_reduced_context_keep42",
+  "probability_output_order": [
+    "p_short",
+    "p_flat",
+    "p_long"
+  ],
+  "feature_schema": {
+    "active_feature_count": 42,
+    "conditional_feature_count": 6,
+    "dropped_feature_count": 10,
+    "active_feature_names": [
+      "log_return_1",
+      "log_return_3",
+      "hl_range",
+      "close_open_ratio",
+      "gap_percent",
+      "close_prev_close_ratio",
+      "return_zscore_20",
+      "hl_zscore_50",
+      "return_1_over_atr_14",
+      "close_ema20_ratio",
+      "close_ema50_ratio",
+      "ema9_ema20_diff",
+      "ema20_ema50_diff",
+      "ema50_ema200_diff",
+      "ema20_ema50_spread_zscore_50",
+      "sma50_sma200_ratio",
+      "rsi_14",
+      "rsi_50",
+      "rsi_14_slope_3",
+      "rsi_14_minus_50",
+      "stoch_kd_diff",
+      "stochrsi_kd_diff",
+      "ppo_hist_12_26_9",
+      "roc_12",
+      "trix_15",
+      "atr_14",
+      "atr_50",
+      "atr_14_over_atr_50",
+      "bollinger_width_20",
+      "bb_position_20",
+      "bb_squeeze",
+      "historical_vol_20",
+      "historical_vol_5_over_20",
+      "adx_14",
+      "di_spread_14",
+      "supertrend_10_3",
+      "vortex_indicator",
+      "overnight_return",
+      "is_us_cash_open",
+      "minutes_from_cash_open",
+      "is_first_30m_after_open",
+      "is_last_30m_before_cash_close"
+    ],
+    "conditional_feature_names": [
+      "vix_change_1",
+      "vix_zscore_20",
+      "us10yr_change_1",
+      "us10yr_zscore_20",
+      "usdx_change_1",
+      "usdx_zscore_20"
+    ],
+    "dropped_feature_names": [
+      "nvda_xnas_log_return_1",
+      "aapl_xnas_log_return_1",
+      "msft_xnas_log_return_1",
+      "amzn_xnas_log_return_1",
+      "mega8_equal_return_1",
+      "top3_weighted_return_1",
+      "mega8_pos_breadth_1",
+      "mega8_dispersion_5",
+      "us100_minus_mega8_equal_return_1",
+      "us100_minus_top3_weighted_return_1"
+    ]
+  },
+  "splits": {
+    "train": {
+      "strict_tier_a": {
+        "row_count": 34695,
+        "class_balance": {
+          "short": 11450,
+          "flat": 11795,
+          "long": 11450
+        },
+        "predicted_balance": {
+          "short": 7057,
+          "flat": 22572,
+          "long": 5066
+        },
+        "log_loss": 2.336503253866807,
+        "macro_f1": 0.35537965178522596,
+        "balanced_accuracy": 0.3930665240063605,
+        "multiclass_brier_score": 0.9271988816811357,
+        "mean_max_probability": 0.7760435036770877,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      }
+    },
+    "validation": {
+      "strict_tier_a": {
+        "row_count": 10618,
+        "class_balance": {
+          "short": 3396,
+          "flat": 3798,
+          "long": 3424
+        },
+        "predicted_balance": {
+          "short": 2806,
+          "flat": 5721,
+          "long": 2091
+        },
+        "log_loss": 2.2795416347234014,
+        "macro_f1": 0.40593906561387966,
+        "balanced_accuracy": 0.4249949200298739,
+        "multiclass_brier_score": 0.8188194794182472,
+        "mean_max_probability": 0.7501441061274512,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      },
+      "tier_b_exploration": {
+        "row_count": 15866,
+        "class_balance": {
+          "short": 3618,
+          "flat": 8919,
+          "long": 3329
+        },
+        "predicted_balance": {
+          "short": 2359,
+          "flat": 10715,
+          "long": 2792
+        },
+        "log_loss": 1.8408238656733198,
+        "macro_f1": 0.3900904873638658,
+        "balanced_accuracy": 0.3915563703280076,
+        "multiclass_brier_score": 0.7270801325745977,
+        "mean_max_probability": 0.7622286639006604,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      },
+      "mixed_info_only": {
+        "row_count": 26484,
+        "class_balance": {
+          "short": 7014,
+          "flat": 12717,
+          "long": 6753
+        },
+        "predicted_balance": {
+          "short": 5165,
+          "flat": 16436,
+          "long": 4883
+        },
+        "log_loss": 2.0167151687911935,
+        "macro_f1": 0.40370719664658195,
+        "balanced_accuracy": 0.4096693005973145,
+        "multiclass_brier_score": 0.7638603917796222,
+        "mean_max_probability": 0.7573837071556091,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      }
+    },
+    "holdout": {
+      "strict_tier_a": {
+        "row_count": 10144,
+        "class_balance": {
+          "short": 3130,
+          "flat": 4096,
+          "long": 2918
+        },
+        "predicted_balance": {
+          "short": 2333,
+          "flat": 5319,
+          "long": 2492
+        },
+        "log_loss": 2.1367291039005663,
+        "macro_f1": 0.4219534896000395,
+        "balanced_accuracy": 0.4298973244576441,
+        "multiclass_brier_score": 0.7713174357966939,
+        "mean_max_probability": 0.7397324085044172,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      },
+      "tier_b_exploration": {
+        "row_count": 17978,
+        "class_balance": {
+          "short": 3458,
+          "flat": 11470,
+          "long": 3050
+        },
+        "predicted_balance": {
+          "short": 2309,
+          "flat": 12574,
+          "long": 3095
+        },
+        "log_loss": 1.5035784272328496,
+        "macro_f1": 0.3728357269186551,
+        "balanced_accuracy": 0.3718662562421086,
+        "multiclass_brier_score": 0.658587566517912,
+        "mean_max_probability": 0.7395493122310735,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      },
+      "mixed_info_only": {
+        "row_count": 28122,
+        "class_balance": {
+          "short": 6588,
+          "flat": 15566,
+          "long": 5968
+        },
+        "predicted_balance": {
+          "short": 4642,
+          "flat": 17893,
+          "long": 5587
+        },
+        "log_loss": 1.731964760499236,
+        "macro_f1": 0.403069681405422,
+        "balanced_accuracy": 0.4035208114608086,
+        "multiclass_brier_score": 0.6992508121606104,
+        "mean_max_probability": 0.739615357626024,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0
+      }
+    }
+  },
+  "comparison_to_full_baseline_seed": {
+    "validation": {
+      "strict_tier_a": {
+        "log_loss_delta_vs_full_baseline": -0.9195992802314632,
+        "macro_f1_delta_vs_full_baseline": 0.022508091603407887,
+        "balanced_accuracy_delta_vs_full_baseline": 0.00670572667927799,
+        "multiclass_brier_score_delta_vs_full_baseline": -0.10111033724268459
+      },
+      "tier_b_exploration": {
+        "log_loss_delta_vs_full_baseline": -0.5928373881620883,
+        "macro_f1_delta_vs_full_baseline": 0.043749779992297344,
+        "balanced_accuracy_delta_vs_full_baseline": 0.0029780046639802937,
+        "multiclass_brier_score_delta_vs_full_baseline": -0.036413218583075446
+      }
+    },
+    "holdout": {
+      "strict_tier_a": {
+        "log_loss_delta_vs_full_baseline": -0.8155064587962597,
+        "macro_f1_delta_vs_full_baseline": 0.04051183122130331,
+        "balanced_accuracy_delta_vs_full_baseline": 0.012954291660587813,
+        "multiclass_brier_score_delta_vs_full_baseline": -0.09472140422081565
+      },
+      "tier_b_exploration": {
+        "log_loss_delta_vs_full_baseline": -0.46004179599740125,
+        "macro_f1_delta_vs_full_baseline": 0.03639874367485052,
+        "balanced_accuracy_delta_vs_full_baseline": 0.002575858250661367,
+        "multiclass_brier_score_delta_vs_full_baseline": -0.0015776121908124274
+      }
+    }
+  },
+  "tier_b_subtype_info_only": {
+    "validation": {
+      "b_eq_dark": {
+        "row_count": 13710,
+        "class_balance": {
+          "short": 3150,
+          "flat": 7649,
+          "long": 2911
+        },
+        "predicted_balance": {
+          "short": 2311,
+          "flat": 8669,
+          "long": 2730
+        },
+        "log_loss": 1.8192335738458882,
+        "macro_f1": 0.3949869366737014,
+        "balanced_accuracy": 0.39486256736205144,
+        "multiclass_brier_score": 0.7250040504923632,
+        "mean_max_probability": 0.7339906747420324,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0,
+        "row_share_within_tier_b": 0.8641119374763645
+      },
+      "b_macro_late": {
+        "row_count": 2156,
+        "class_balance": {
+          "short": 468,
+          "flat": 1270,
+          "long": 418
+        },
+        "predicted_balance": {
+          "short": 48,
+          "flat": 2046,
+          "long": 62
+        },
+        "log_loss": 1.9781164913477551,
+        "macro_f1": 0.30766922103465155,
+        "balanced_accuracy": 0.3586488966513832,
+        "multiclass_brier_score": 0.7402819346837977,
+        "mean_max_probability": 0.9417939845707851,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0,
+        "row_share_within_tier_b": 0.13588806252363544
+      }
+    },
+    "holdout": {
+      "b_eq_dark": {
+        "row_count": 16278,
+        "class_balance": {
+          "short": 3101,
+          "flat": 10437,
+          "long": 2740
+        },
+        "predicted_balance": {
+          "short": 2199,
+          "flat": 11092,
+          "long": 2987
+        },
+        "log_loss": 1.4807597432156083,
+        "macro_f1": 0.3740082342619728,
+        "balanced_accuracy": 0.3724531805954782,
+        "multiclass_brier_score": 0.6571834468626512,
+        "mean_max_probability": 0.7228595184869937,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0,
+        "row_share_within_tier_b": 0.9054399822004673
+      },
+      "b_macro_late": {
+        "row_count": 1699,
+        "class_balance": {
+          "short": 357,
+          "flat": 1033,
+          "long": 309
+        },
+        "predicted_balance": {
+          "short": 110,
+          "flat": 1482,
+          "long": 107
+        },
+        "log_loss": 1.7226898245689473,
+        "macro_f1": 0.35180411518698707,
+        "balanced_accuracy": 0.37381889036344,
+        "multiclass_brier_score": 0.6721464888679504,
+        "mean_max_probability": 0.8995889175718996,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0,
+        "row_share_within_tier_b": 0.09450439425965068
+      },
+      "b_residual_sparse": {
+        "row_count": 1,
+        "class_balance": {
+          "short": 0,
+          "flat": 0,
+          "long": 1
+        },
+        "predicted_balance": {
+          "short": 0,
+          "flat": 0,
+          "long": 1
+        },
+        "log_loss": 0.6758527858591179,
+        "macro_f1": 0.3333333333333333,
+        "balanced_accuracy": 0.3333333333333333,
+        "multiclass_brier_score": 0.4782382421378433,
+        "mean_max_probability": 0.5087224042997639,
+        "rows_with_imputation": 0,
+        "mean_missing_feature_count": 0.0,
+        "row_share_within_tier_b": 5.5623539882078096e-05
+      }
+    }
+  }
+}
