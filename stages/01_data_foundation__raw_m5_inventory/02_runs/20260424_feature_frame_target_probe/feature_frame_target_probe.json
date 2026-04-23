@@ -1,0 +1,247 @@
+{
+  "probe_version": "FPMARKETS_V2_STAGE01_FEATURE_FRAME_TARGET_PROBE_V1",
+  "run_id": "20260424_feature_frame_target_probe",
+  "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+  "measurement_scope": "feature-frame target evidence only",
+  "management_state": "run artifacts tracked under Stage 01 02_runs",
+  "judgment_class": "positive",
+  "scoreboard": "diagnostic_special",
+  "parity_level": "P1_dataset_feature_aligned",
+  "wfo_status": "not_applicable",
+  "registry_update_required": "yes",
+  "negative_memory_required": "no",
+  "hard_gate_applicable": "no",
+  "evidence_boundary": "reviewed",
+  "external_verification_status": "not_applicable",
+  "raw_rows": 261344,
+  "valid_rows": 56939,
+  "invalid_rows": 204405,
+  "practical_modeling_start": "2022-09-01T00:00:00+00:00",
+  "cash_open_rows_total": 73054,
+  "cash_open_valid_rows_total": 56222,
+  "cash_open_valid_ratio_total": 0.7695950940400252,
+  "full_cash_days_total": 913,
+  "partial_cash_days_total": 40,
+  "selected_target": {
+    "target_id": "practical_start_full_cash_day_valid_rows_only",
+    "label": "practical start full-cash-session-day valid rows only",
+    "start_utc": "2022-09-01T00:00:00+00:00",
+    "day_scope": "full_cash_session_days_only",
+    "row_scope": "valid_row_only",
+    "rows": 54439,
+    "ny_day_count": 887,
+    "dataset_id": "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01",
+    "practical_modeling_start": "2022-09-01T00:00:00+00:00",
+    "first_valid_timestamp": "2022-09-01T16:40:00+00:00",
+    "last_valid_timestamp": "2026-04-13T23:00:00+00:00",
+    "excluded_partial_cash_days": 40,
+    "excluded_partial_day_valid_rows": 252,
+    "full_cash_day_count": 890
+  },
+  "candidate_targets": [
+    {
+      "target_id": "full_window_valid_rows_only",
+      "label": "full shared window valid rows only",
+      "start_utc": "2022-08-01T01:05:00+00:00",
+      "day_scope": "all_days",
+      "row_scope": "valid_row_only",
+      "rows": 56939,
+      "ny_day_count": 914
+    },
+    {
+      "target_id": "practical_start_valid_rows_only",
+      "label": "practical start valid rows only",
+      "start_utc": "2022-09-01T00:00:00+00:00",
+      "day_scope": "all_days",
+      "row_scope": "valid_row_only",
+      "rows": 55408,
+      "ny_day_count": 892
+    },
+    {
+      "target_id": "practical_start_cash_open_valid_rows_only",
+      "label": "practical start cash-open valid rows only",
+      "start_utc": "2022-09-01T00:00:00+00:00",
+      "day_scope": "cash_open_rows",
+      "row_scope": "valid_row_only",
+      "rows": 54691,
+      "ny_day_count": 892
+    },
+    {
+      "target_id": "practical_start_full_cash_day_valid_rows_only",
+      "label": "practical start full-cash-session-day valid rows only",
+      "start_utc": "2022-09-01T00:00:00+00:00",
+      "day_scope": "full_cash_session_days_only",
+      "row_scope": "valid_row_only",
+      "rows": 54439,
+      "ny_day_count": 887
+    }
+  ],
+  "worst_partial_days": [
+    {
+      "date_ny": "2025-01-09",
+      "cash_rows": 1,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2025-01-09T16:35:00+00:00",
+      "last_timestamp": "2025-01-09T16:35:00+00:00"
+    },
+    {
+      "date_ny": "2025-09-01",
+      "cash_rows": 30,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2025-09-01T16:35:00+00:00",
+      "last_timestamp": "2025-09-01T19:00:00+00:00"
+    },
+    {
+      "date_ny": "2022-11-24",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2022-11-24T16:35:00+00:00",
+      "last_timestamp": "2022-11-24T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2023-02-20",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2023-02-20T16:35:00+00:00",
+      "last_timestamp": "2023-02-20T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2023-05-29",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2023-05-29T16:35:00+00:00",
+      "last_timestamp": "2023-05-29T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2023-06-19",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2023-06-19T16:35:00+00:00",
+      "last_timestamp": "2023-06-19T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2023-07-04",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2023-07-04T16:35:00+00:00",
+      "last_timestamp": "2023-07-04T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2024-01-15",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2024-01-15T16:35:00+00:00",
+      "last_timestamp": "2024-01-15T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2024-02-19",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2024-02-19T16:35:00+00:00",
+      "last_timestamp": "2024-02-19T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2025-05-26",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2025-05-26T16:35:00+00:00",
+      "last_timestamp": "2025-05-26T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2025-06-19",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2025-06-19T16:35:00+00:00",
+      "last_timestamp": "2025-06-19T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2025-07-04",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2025-07-04T16:35:00+00:00",
+      "last_timestamp": "2025-07-04T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2026-02-16",
+      "cash_rows": 42,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2026-02-16T16:35:00+00:00",
+      "last_timestamp": "2026-02-16T20:00:00+00:00"
+    },
+    {
+      "date_ny": "2022-09-05",
+      "cash_rows": 43,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2022-09-05T16:35:00+00:00",
+      "last_timestamp": "2022-09-05T20:05:00+00:00"
+    },
+    {
+      "date_ny": "2023-01-16",
+      "cash_rows": 43,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2023-01-16T16:35:00+00:00",
+      "last_timestamp": "2023-01-16T20:05:00+00:00"
+    },
+    {
+      "date_ny": "2023-09-04",
+      "cash_rows": 43,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2023-09-04T16:35:00+00:00",
+      "last_timestamp": "2023-09-04T20:05:00+00:00"
+    },
+    {
+      "date_ny": "2023-11-23",
+      "cash_rows": 43,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2023-11-23T16:35:00+00:00",
+      "last_timestamp": "2023-11-23T20:05:00+00:00"
+    },
+    {
+      "date_ny": "2024-05-27",
+      "cash_rows": 43,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2024-05-27T16:35:00+00:00",
+      "last_timestamp": "2024-05-27T20:05:00+00:00"
+    },
+    {
+      "date_ny": "2024-06-19",
+      "cash_rows": 43,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2024-06-19T16:35:00+00:00",
+      "last_timestamp": "2024-06-19T20:05:00+00:00"
+    },
+    {
+      "date_ny": "2024-07-04",
+      "cash_rows": 43,
+      "valid_rows": 0,
+      "valid_ratio": 0.0,
+      "first_timestamp": "2024-07-04T16:35:00+00:00",
+      "last_timestamp": "2024-07-04T20:05:00+00:00"
+    }
+  ],
+  "rationale": [
+    "keep the existing practical modeling start instead of reopening the earlier warmup period",
+    "use parser-level valid_row rows only so the first target matches the current contract surface",
+    "exclude partial cash-session days so the first freeze keeps a uniform NY core session day boundary",
+    "do not mark broader valid-row scopes dead; leave them as later candidates after the first clean freeze exists"
+  ]
+}
