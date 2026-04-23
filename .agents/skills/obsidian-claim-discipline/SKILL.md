@@ -43,6 +43,10 @@ If any relevant field contains one of these tokens, switch into strict claim dis
    - `architecture debt`
    - `exploration evidence`
    - `promotion-ineligible`
+   - `promotion_candidate`
+   - `operating_promotion`
+   - `runtime_probe`
+   - `runtime_authority`
    - `idea-dead`
    - `tier_c_local_research`
 3. If a closure claim is made, name the backing artifact, report, or decision memo.
@@ -58,6 +62,8 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 13. Do not confuse `negative` (`부정`) with `invalid` (`무효`); a negative result is interpretable evidence, while an invalid result is not.
 14. Do not describe `inconclusive` (`불충분`) as success, closure, or failure unless the missing evidence and remaining question are named.
 15. Do not call a run `reviewed`, `selected`, `archived`, or `closed` unless measurement evidence, managed identity, and lane-aware judgment are present or explicitly marked `n/a` with reasons.
+16. Do not describe `promotion_candidate` (`승격 후보`) as `operating_promotion` (`운영 승격`).
+17. Do not describe `runtime_probe` (`런타임 탐침`) as `runtime_authority` (`런타임 권위`) or runtime parity closure.
 
 ## Project-Specific Guardrails
 
@@ -73,3 +79,5 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 - `negative` is not `invalid`.
 - `inconclusive` is not quiet approval.
 - `structural_scout` is not an operating promotion read.
+- `promotion_candidate` is not `operating_promotion`.
+- `runtime_probe` is not `runtime_authority`.

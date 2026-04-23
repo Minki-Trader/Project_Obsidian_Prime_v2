@@ -10,8 +10,9 @@ Canonical re-entry order and truth precedence live in `docs/policies/reentry_ord
 - route repetitive agent behavior through narrow reusable skills
 - reduce repeated mistakes around re-entry, claim language, and stage transitions
 - prevent cross-stage architecture drift around feature logic, model artifacts, alpha-search framing, and Korean encoding
-- separate exploration discipline from operating discipline so promotion/runtime conservatism does not suppress useful alpha research
+- separate exploration discipline from operating truth discipline so hard gates do not suppress useful alpha research
 - keep run evidence consistent across KPI measurement, run-result management, and result judgment
+- keep hard gates attached to operating truth claims, not to every candidate or runtime probe
 
 ## Placement
 
@@ -50,6 +51,13 @@ Every non-trivial turn should also name a primary lane:
 - `promotion`
 - `runtime`
 - `extra`
+
+Promotion/runtime sub-states:
+
+- `promotion_candidate`: candidate study without incumbent replacement claim
+- `operating_promotion`: incumbent replacement or confirmation claim
+- `runtime_probe`: runtime observation without parity-closure authority
+- `runtime_authority`: runtime parity closure, bundle handoff authority, or live-like readiness claim
 
 If the user prompt is broad, choose the narrowest mode that still completes the turn safely.
 
@@ -129,6 +137,7 @@ Use when:
 Required effect:
 
 - classify the primary lane as `exploration`, `evidence`, `promotion`, `runtime`, or `extra`
+- distinguish `promotion_candidate` from `operating_promotion` and `runtime_probe` from `runtime_authority`
 - state whether exploration discipline, operating discipline, or handoff discipline applies
 - keep promotion-ineligible ideas separate from idea-dead conclusions
 
@@ -172,6 +181,7 @@ Required effect:
 
 - read `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md`
 - output measurement scope, management state, judgment class, scoreboard, parity level, WFO status, registry update need, and negative-memory need
+- output hard-gate applicability and evidence boundary when candidate/probe evidence is involved
 - keep `negative` distinct from `invalid`
 - keep `structural_scout` evidence distinct from `regular_risk_execution` evidence
 - keep Tier B/C research KPI separate from promotion/runtime KPI
@@ -193,6 +203,7 @@ Required effect:
 - add `architecture_guard_required`, `debt_register_update`, and `encoding_verification` when the task is architecture-sensitive
 - add `lane`, `idea_id`, `tier_scope`, `wfo_required`, `extreme_sweep_allowed`, `micro_search_gate`, `negative_result_required`, `promotion_gate_applicable`, and `code_surface_map_required` when relevant
 - add `run_evidence_required`, `run_registry_update`, `kpi_record_required`, and `result_judgment_required` when a run or KPI result is created, reviewed, summarized, or closed
+- add `hard_gate_applicable` and `operating_truth_claim` when promotion/runtime meaning is in scope
 - keep `publish_target` at `branch_only` or `none` unless the user explicitly asks for `main` completion
 
 ### `obsidian-stage-transition`
@@ -261,6 +272,7 @@ Required same-pass files:
 - `legacy exploration mandate` is not `legacy code/result inheritance`
 - WFO is the default exploration optimization frame unless a packet marks a result scout-only or gives an explicit exception
 - `negative` is not `invalid`; `inconclusive` is not a quiet success; `structural_scout` is not an operating promotion read
+- `promotion_candidate` is not `operating_promotion`; `runtime_probe` is not `runtime_authority`
 
 ## Verification Escalation (`검증 상향 규칙`)
 
@@ -289,7 +301,8 @@ Required same-pass files:
 - let `obsidian-session-intake` decide whether the thread needs full cold re-entry or only a same-thread delta check
 - use `obsidian-task-packet` before implementation or verification whenever the current packet is missing or ambiguous
 - use `obsidian-architecture-guard` for feature, model, pipeline, artifact, alpha-search, stage-transition, agent-settings, or Korean-encoding work regardless of stage number
-- use `obsidian-lane-classifier` before applying promotion/runtime gates to exploration, evidence, Tier B/C research, or extra-stage work
+- use `obsidian-lane-classifier` before applying operating-promotion or runtime-authority gates to exploration, evidence, Tier B/C research, or extra-stage work
+- apply hard gates only when the task claims operating truth, `operating_promotion`, or `runtime_authority`
 - use `obsidian-exploration-mandate` for exploration-sensitive work regardless of active stage number
 - use `obsidian-run-evidence-system` whenever a run result needs measurement, management, or judgment
 - use `obsidian-code-surface-guard` whenever code placement, reusable logic ownership, or monolith risk is involved

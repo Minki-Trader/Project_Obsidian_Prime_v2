@@ -23,7 +23,7 @@ For any stage that changes exit behavior, position sizing, or execution semantic
    - live-like risk sizing and stop behavior
    - goal: decide the real incumbent / challenger relationship
 
-Do not treat the `structural_scout` winner as the operating winner unless the `regular_risk_execution` scoreboard agrees.
+Do not treat the `structural_scout` winner as `operating_promotion` unless the `regular_risk_execution` scoreboard agrees and the remaining hard gates are closed. It may become `promotion_candidate` evidence, but not `operating_promotion` by itself.
 
 These scoreboard names are also part of `docs/policies/kpi_measurement_standard.md`. Stage reports may summarize them, but detailed machine-readable KPI evidence should live in each run's `kpi_record.json` when a run is reviewed.
 
@@ -78,6 +78,8 @@ For reviewed run outputs, keep three surfaces distinct:
 - `result_summary.md`: human readout and lane-aware judgment
 
 Record the durable row in `docs/registers/run_registry.csv` when a run becomes reviewed, selected, archived, invalidated, or superseded.
+
+Use `runtime_probe` for runtime observation without closure authority, and reserve `runtime_authority` for closure, handoff, or live-like readiness claims.
 
 ## Branch Re-entry Standard
 

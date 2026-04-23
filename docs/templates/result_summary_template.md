@@ -6,8 +6,11 @@
 - lane (`레인`):
 - tier_scope (`티어 범위`):
 - scoreboard (`점수판`):
+- evidence_boundary (`근거 경계`):
 - parity_level (`동등성 레벨`):
 - wfo_status (`워크포워드 상태`):
+- hard_gate_applicable (`강한 게이트 적용 여부`):
+- operating_truth_claim (`운영 진실 주장 여부`):
 
 ## Current Read (현재 판독)
 
@@ -35,6 +38,7 @@ Use `n/a` (`해당 없음`) with a reason for unavailable layers.
 - guardrail_status (`보호 지표 상태`):
 - disqualifier (`실격 조건`):
 - promotion_boundary (`승격 경계`):
+- runtime_boundary (`런타임 경계`):
 
 ## Failure / Salvage / Reopen (실패 / 회수 / 재개)
 

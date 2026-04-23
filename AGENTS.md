@@ -19,6 +19,7 @@ This workspace is the clean-restart FPMarkets `US100` `M5` data, feature, runtim
 - foundation closure comes before new alpha search
 - operating discipline and exploration discipline must stay separate
 - every run must leave measurement, management, and lane-aware judgment before it is treated as closed
+- hard gates apply to operating truth claims, not to every candidate or runtime probe
 
 ## Codex Response Rule
 
@@ -38,7 +39,18 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 ## Working Vocabulary
 
 - use `foundation gate`, `parity closure`, `artifact identity closure`, and `promotion gate`
+- use `promotion_candidate` for a candidate read that does not replace the incumbent operating line
+- use `operating_promotion` for an incumbent replacement or confirmation claim
+- use `runtime_probe` for runtime observation without parity-closure authority
+- use `runtime_authority` for runtime parity closure, bundle handoff authority, or live-like readiness claims
 - avoid `release gate` and `release closure`
+
+## Progressive Hardening (`점진적 경화`)
+
+- early exploration/scout (`초기 탐색/스카우트`) may start with partial evidence when missing evidence is labeled
+- candidate/probe (`후보/탐침`) work may open before every hard gate is closed when the evidence boundary is explicit
+- hard gates (`강한 게이트`) apply to operating truth (`운영 진실`) claims such as `operating_promotion` and `runtime_authority`
+- missing WFO (`walk-forward optimization`, 워크포워드 최적화), full parity (`전체 동등성`), or runtime closure (`런타임 폐쇄`) limits the claim boundary but does not kill the idea by default
 
 ## Directory Rules
 
@@ -84,8 +96,9 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `docs/policies/exploration_mandate.md` owns the stage-agnostic exploration rules (`단계 독립 탐색 규칙`)
 - every non-trivial task must name a primary lane (`주 레인`): `exploration` (`탐색`), `evidence` (`근거`), `promotion` (`승격`), `runtime` (`런타임`), or `extra` (`추가`)
 - promotion-ineligible (`승격 부적격`) does not mean idea-dead (`아이디어 사망`)
+- progressive hardening (`점진적 경화`) is the default: early scout work may carry partial evidence, candidate/probe work must label its evidence boundary, and only operating truth claims require hard gates
 - alpha search (`알파 탐색`) should push serious ideas through broad sweep (`광역 탐색`), extreme sweep (`극단값 탐색`), WFO (`walk-forward optimization`, 워크포워드 최적화), stress/readout (`스트레스/판독`), and negative-result memory (`부정 결과 기록`) when relevant
-- micro search (`미세 탐색`) is allowed only after broad evidence identifies a robust region (`견고한 구간`)
+- micro search (`미세 탐색`) without broad evidence may be scout-only (`탐색 전용`), but it must not be described as robust evidence (`견고한 근거`)
 - Tier A/B/C (`티어 A/B/C`) remains the default readiness vocabulary (`준비도 어휘`), but Tier C (`티어 C`) may support local-only research (`로컬 전용 연구`) only when base/session semantics are valid and external context is the missing part
 - user-requested extra stages (`사용자 요청 추가 단계`) are allowed, but they must declare charter (`헌장`), lane (`레인`), exit condition (`종료 조건`), and no-promotion boundary (`비승격 경계`)
 
@@ -95,6 +108,7 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `docs/policies/run_result_management.md` owns run identity (`실행 정체성`), run lifecycle (`실행 생애주기`), and `run_registry.csv` (`실행 등록부`) rules
 - `docs/policies/result_judgment_policy.md` owns result judgment (`결과 판정`) and separates `positive` (`긍정`), `negative` (`부정`), `inconclusive` (`불충분`), and `invalid` (`무효`)
 - `negative` (`부정`) is reusable evidence; `invalid` (`무효`) is uninterpretable until the broken contract, data, parity, or execution assumption is repaired or excluded
+- planned/running/completed (`계획/실행 중/완료`) runs may carry partial records; reviewed/selected (`검토/선택`) runs need measurement, management, and judgment
 - a reviewed run (`검토된 실행`) must have measurable evidence (`측정 가능한 근거`), managed identity (`관리되는 정체성`), and lane-aware judgment (`레인별 판정`)
 
 ## Verification Discipline (`검증 규율`)

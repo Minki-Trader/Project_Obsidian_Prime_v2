@@ -7,8 +7,16 @@ This policy defines how Project Obsidian Prime v2 inherits the legacy exploratio
 - v2 inherits the exploration mandate (탐색 명령): create ideas freely, push serious ideas to a meaningful boundary, and preserve failed ideas as reusable evidence.
 - v2 does not inherit legacy code, run results, winners, challengers, operating defaults, KPI choices, or promotion history.
 - Legacy material is prior evidence only (과거 근거 전용). It may inspire an abstract lesson, but it must not become a shortcut to v2 truth.
-- Promotion-ineligible (승격 부적격) does not mean idea-dead (아이디어 사망); write `promotion-ineligible` explicitly when a candidate is blocked only at the promotion boundary.
+- Promotion-ineligible (승격 부적격) does not mean idea-dead (아이디어 사망); write `promotion-ineligible` explicitly when a candidate is blocked only at the operating-promotion boundary.
 - Exploration may be unconstrained in idea generation, but it must be constrained in memory (기록).
+
+## Progressive Hardening (점진적 경화)
+
+- Early exploration or scout work (초기 탐색 또는 스카우트 작업) may start with partial evidence when the missing evidence is labeled.
+- `promotion_candidate` (승격 후보) means a candidate can be studied without claiming incumbent replacement (현행선 교체).
+- `runtime_probe` (런타임 탐침) means runtime observation is allowed without claiming parity closure (동등성 폐쇄).
+- `operating_promotion` (운영 승격) and `runtime_authority` (런타임 권위) are the hard-gate surfaces; they require the relevant parity, artifact, runtime, and decision evidence before they can be claimed.
+- Missing WFO, full parity, or runtime closure should label the result boundary, not kill the idea by default.
 
 ## Lane Separation (레인 분리)
 
@@ -20,7 +28,7 @@ Every non-trivial task must name one primary lane (주 레인):
 - `runtime` (런타임): verify execution, parity, packaging, and environment behavior.
 - `extra` (추가): user-requested side stage or non-standard question that must still declare its own charter.
 
-Operating discipline (운영 규율) applies to `promotion` and `runtime`. Exploration discipline (탐색 규율) applies to `exploration` and asks whether the idea was pursued, stressed, learned from, and recorded.
+Operating discipline (운영 규율) applies to `operating_promotion` and `runtime_authority`. `promotion_candidate` and `runtime_probe` may open earlier when their evidence boundary is explicit. Exploration discipline (탐색 규율) applies to `exploration` and asks whether the idea was pursued, stressed, learned from, and recorded.
 
 ## Idea Lifecycle (아이디어 생애주기)
 
@@ -37,14 +45,14 @@ Use this default lifecycle for alpha search (알파 탐색), tiered readiness re
 
 - Start coarse. Fine tuning before broad coverage is a search smell (탐색 냄새).
 - Extreme sweep is encouraged when it teaches boundaries, failure modes, or invariance.
-- Micro search (미세 탐색) is allowed only after a robust region (견고한 구간) appears in broad or WFO evidence.
+- Micro search (미세 탐색) without a robust region (견고한 구간) may only be labeled as scout-only (탐색 전용); it must not be described as robust evidence.
 - Do not spend a stage shaving tiny parameter increments unless the expected effect is named and the prior sweep shows the region is worth refining.
 - Record discarded ranges when they teach a durable constraint.
 
 ## WFO Default (워크포워드 최적화 기본값)
 
-- WFO (워크포워드 최적화) is the default optimization frame for exploration.
-- Single-window optimization (단일 구간 최적화) is allowed only as a scout read (탐색 판독) or an explicitly justified exception.
+- WFO (워크포워드 최적화) is the default optimization frame for robust exploration evidence.
+- Single-window optimization (단일 구간 최적화) is allowed as a scout read (탐색 판독) or an explicitly justified exception.
 - Do not present a 2025-heavy optimized result as robust without WFO, reverse-window, or independent OOS (표본외) support.
 - A WFO packet should record the in-sample window (표본내 구간), out-of-sample window (표본외 구간), roll cadence (이동 주기), selection rule (선택 규칙), catastrophic veto (치명적 거부 조건), and locked final read (고정 최종 판독).
 
@@ -64,7 +72,7 @@ References (참고 근거):
 
 ## Tiered Readiness Exploration (계층 준비도 탐색)
 
-- Tier A (티어 A) remains the strict full contract-ready lane (완전 계약 준비 레인) for promotion/runtime comparison.
+- Tier A (티어 A) remains the strict full contract-ready lane (완전 계약 준비 레인) for operating-promotion or runtime-authority comparison.
 - Tier B (티어 B) is a partial external-context exploration lane (부분 외부 문맥 탐색 레인), not a relaxed spelling of Tier A.
 - Tier C (티어 C) is runtime skip (런타임 스킵) by default.
 - If base and session semantics are valid but external context is absent, Tier C may support `tier_c_local_research` (티어 C 로컬 연구) for indicator-only model or logic research (지표 전용 모델/로직 연구).

@@ -26,13 +26,15 @@ Use this skill when the task is primarily exploration or when promotion discipli
 - `micro_search_gate`: condition required before fine search
 - `wfo_plan`: walk-forward frame or explicit exception
 - `failure_memory`: negative result, salvage value, and reopen condition requirements
+- `evidence_boundary`: scout-only, candidate, probe, reviewed, selected, operating-promotion, or runtime-authority boundary
 
 ## Exploration Rules
 
 - Start with broad sweep before micro search.
 - Include extreme values when they can reveal cliffs, saturation, or failure boundaries.
-- Use WFO as the default optimization frame.
+- Use WFO as the default optimization frame for robust evidence.
 - Treat single-window optimization as a scout read unless a packet explicitly justifies otherwise.
+- Do not kill an idea only because WFO, full parity, or runtime closure is absent; label the result boundary instead.
 - Record failed ideas as evidence, not waste.
 - Keep legacy material as lesson-only unless a v2 artifact closes the same question.
 

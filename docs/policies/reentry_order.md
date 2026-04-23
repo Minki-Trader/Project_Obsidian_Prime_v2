@@ -59,6 +59,10 @@ If `workspace_state.yaml` and the active stage `selection_status.md` imply diffe
 - `materialized model`: a model with a reproducible artifact or frozen parameter/spec bundle, not only a probability table or review summary
 - `exploration mandate`: the inherited spirit of pushing ideas to meaningful evidence boundaries without inheriting legacy code, run results, or promotion history
 - `promotion-ineligible`: not eligible for operating promotion; this does not by itself mean the idea is dead
+- `promotion_candidate`: a bounded candidate read that does not replace or confirm the operating line
+- `operating_promotion`: an incumbent replacement or confirmation claim that requires hard-gate evidence
+- `runtime_probe`: runtime observation without runtime parity closure or live-like authority
+- `runtime_authority`: runtime parity closure, bundle handoff authority, or live-like readiness claim
 - `tier_c_local_research`: local-only research on valid base/session rows with missing external context; it is not a runtime lane
 - `run evidence`: the combined measurement, managed identity, and lane-aware judgment required before a run can be treated as reviewed or closed
 - `negative result`: a valid result that weakens or closes a hypothesis while preserving reusable evidence
@@ -76,6 +80,7 @@ After following this order, restate all of the following before making durable c
 - what remains open
 - whether architecture-sensitive work needs the architecture guard
 - the primary lane and whether exploration-sensitive work needs lane classification or exploration-mandate handling
+- whether promotion/runtime language is candidate/probe evidence or an operating-truth claim
 - whether run/KPI/result work needs the run evidence system
 
 ## Maintenance Rule

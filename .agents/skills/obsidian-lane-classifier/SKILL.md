@@ -26,13 +26,17 @@ Use this skill before a task packet or implementation when lane confusion could 
 - `lane`: one primary lane
 - `secondary_lane`: optional supporting lane
 - `discipline`: `exploration_discipline`, `operating_discipline`, or `handoff_discipline`
+- `promotion_state`: `none`, `promotion_candidate`, or `operating_promotion`
+- `runtime_state`: `none`, `runtime_probe`, or `runtime_authority`
 - `promotion_gate_applicable`: `yes` or `no`
 - `runtime_gate_applicable`: `yes` or `no`
+- `hard_gate_applicable`: `yes` only for operating truth claims
 - `failure_memory_required`: `yes` or `no`
 
 ## Guardrails
 
-- Do not apply promotion/runtime gates to early exploration unless the task asks for promotion or runtime readiness.
+- Do not apply operating-promotion or runtime-authority gates to early exploration unless the task asks for an operating truth claim.
+- Allow `promotion_candidate` and `runtime_probe` when the evidence boundary is explicit.
 - Do not call an idea worthless because it is blocked for promotion.
 - Do not let an `extra` stage bypass Tier A/B/C, WFO defaults, artifact identity, or runtime parity rules.
 - If the user intent is informal, infer the lane from the work effect and state the inference.

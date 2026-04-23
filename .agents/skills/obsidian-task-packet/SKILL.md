@@ -51,6 +51,8 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - `micro_search_gate`
 - `negative_result_required`
 - `promotion_gate_applicable`
+- `hard_gate_applicable`
+- `operating_truth_claim`
 - `code_surface_map_required`
 - `run_evidence_required`
 - `run_registry_update`
@@ -68,12 +70,13 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 ## Do Not
 
 - put more than one primary task in the packet
-- widen the packet into stage transition or operating promotion unless the user explicitly asked for that
+- widen the packet into stage transition or `operating_promotion` unless the user explicitly asked for that
 - treat `publish_target=main` as the default
 - leave verification, stop conditions, or expected artifacts implicit
 - normalize registered architecture debt as acceptable project style
 - treat `promotion_gate_applicable=no` as a reason to skip exploration records
-- open micro search before broad sweep evidence identifies a robust region
+- treat `promotion_candidate` or `runtime_probe` as `operating_promotion` or `runtime_authority`
+- describe micro search without a robust region as robust evidence
 - use a single-window optimized run as robust evidence without WFO or an explicit scout-only boundary
 - close or review a run without naming the KPI record, run identity surface, registry update, and result judgment class
 - confuse `negative` with `invalid`, or treat `inconclusive` as quiet success
@@ -87,6 +90,7 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - the packet would deepen registered architecture debt without an explicit decision memo
 - the packet would close an exploration idea without salvage value and reopen condition
 - the packet would use Tier C local research as a runtime or promotion lane
+- the packet would claim operating truth from candidate/probe evidence
 - the packet would mark a run reviewed without a run registry update or explicit `n/a` rationale
 
 ## Verification
@@ -106,4 +110,5 @@ Use this skill when the user asks for a plan, asks to create a task packet, or a
 - the packet makes the publish default and stop conditions explicit before files change
 - architecture risk and encoding verification are explicit when relevant
 - lane, WFO default, failure-memory rule, and code-surface rule are explicit when relevant
+- hard-gate applicability and operating-truth claim status are explicit when relevant
 - run evidence measurement, management, and judgment are explicit when a run result is created, reviewed, summarized, or closed

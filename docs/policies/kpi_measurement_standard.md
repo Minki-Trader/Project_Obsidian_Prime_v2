@@ -4,7 +4,7 @@ This policy defines how Project Obsidian Prime v2 records KPI (`key performance 
 
 ## Core Rule
 
-Every non-trivial run must record KPI evidence in layered form before it is treated as reviewed (`검토됨`) or closed (`닫힘`). A single headline score is not enough.
+Every non-trivial reviewed or selected run must record KPI evidence in layered form before it is treated as reviewed (`검토됨`) or closed (`닫힘`). Early scout runs (`초기 스카우트 실행`) may carry partial KPI records when the missing layers are labeled.
 
 Use `n/a` (`not applicable`, 해당 없음) with a reason when a value is unavailable. Do not leave blanks or write ambiguous `None`.
 
@@ -16,7 +16,7 @@ Use `n/a` (`not applicable`, 해당 없음) with a reason when a value is unavai
 - `runtime_parity` (`런타임 동등성`): execution or feature parity evidence, not alpha performance.
 - `diagnostic_special` (`특수 진단`): bounded diagnostic read with its own charter.
 
-Do not treat a `structural_scout` winner as an operating winner unless a matching `regular_risk_execution` read agrees.
+Do not treat a `structural_scout` winner as `operating_promotion` unless a matching `regular_risk_execution` read agrees and the remaining hard gates are closed.
 
 ## KPI Layers
 
@@ -34,10 +34,11 @@ Each `kpi_record.json` should use these layers when applicable:
 
 ## Tier And Lane Boundaries
 
-- Tier A (`티어 A`) KPI may become promotion (`승격`) evidence only after the relevant promotion/runtime gates close.
-- Tier B (`티어 B`) KPI must stay in its own exploration/reporting lane unless a later packet explicitly promotes it through stricter gates.
+- Tier A (`티어 A`) KPI may become operating-promotion (`운영 승격`) evidence only after the relevant operating-promotion/runtime-authority gates close.
+- Tier A KPI may still support `promotion_candidate` (`승격 후보`) comparison before those gates close when the evidence boundary is explicit.
+- Tier B (`티어 B`) KPI must stay in its own exploration/reporting lane unless a later packet explicitly opens a candidate or promotion handoff through stricter gates.
 - Tier C local research (`티어 C 로컬 연구`) may record indicator-only research KPI, but it is not runtime, reduced-risk, or promotion evidence.
-- Runtime parity (`런타임 동등성`) KPI must not be blended into alpha performance KPI. It answers whether a result can be trusted, not whether an idea is profitable.
+- Runtime parity (`런타임 동등성`) KPI must not be blended into alpha performance KPI. A `runtime_probe` (`런타임 탐침`) observes behavior; `runtime_authority` (`런타임 권위`) claims closure.
 
 ## WFO And Search Accounting
 

@@ -113,6 +113,7 @@ def check_policy_links(repo_root: Path) -> list[str]:
     kpi = (repo_root / "docs/policies/kpi_measurement_standard.md").read_text(encoding="utf-8-sig")
     run_management = (repo_root / "docs/policies/run_result_management.md").read_text(encoding="utf-8-sig")
     judgment = (repo_root / "docs/policies/result_judgment_policy.md").read_text(encoding="utf-8-sig")
+    promotion = (repo_root / "docs/policies/promotion_policy.md").read_text(encoding="utf-8-sig")
 
     required_pairs = [
         ("agent_trigger_policy.md", trigger_policy, "obsidian-architecture-guard"),
@@ -133,6 +134,7 @@ def check_policy_links(repo_root: Path) -> list[str]:
         ("AGENTS.md", agents, "Architecture Invariants"),
         ("AGENTS.md", agents, "Exploration Mandate"),
         ("AGENTS.md", agents, "Run Evidence System"),
+        ("AGENTS.md", agents, "Progressive Hardening"),
         ("architecture_debt_register.md", debt, "AD-001"),
         ("architecture_debt_register.md", debt, "AD-002"),
         ("architecture_debt_register.md", debt, "AD-003"),
@@ -150,11 +152,34 @@ def check_policy_links(repo_root: Path) -> list[str]:
         ("result_judgment_policy.md", judgment, "positive"),
         ("result_judgment_policy.md", judgment, "negative"),
         ("result_judgment_policy.md", judgment, "invalid"),
+        ("promotion_policy.md", promotion, "promotion_candidate"),
+        ("promotion_policy.md", promotion, "operating_promotion"),
+        ("promotion_policy.md", promotion, "runtime_probe"),
+        ("promotion_policy.md", promotion, "runtime_authority"),
     ]
     for label, text, needle in required_pairs:
         if needle not in text:
             errors.append(f"{label}: missing required reference `{needle}`")
     return errors
+
+
+def check_progressive_hardening_warnings(repo_root: Path) -> list[str]:
+    warnings: list[str] = []
+    checks = [
+        ("AGENTS.md", repo_root / "AGENTS.md"),
+        ("exploration_mandate.md", repo_root / "docs/policies/exploration_mandate.md"),
+        ("result_judgment_policy.md", repo_root / "docs/policies/result_judgment_policy.md"),
+        ("obsidian-lane-classifier/SKILL.md", repo_root / ".agents/skills/obsidian-lane-classifier/SKILL.md"),
+        ("obsidian-run-evidence-system/SKILL.md", repo_root / ".agents/skills/obsidian-run-evidence-system/SKILL.md"),
+        ("obsidian-task-packet/SKILL.md", repo_root / ".agents/skills/obsidian-task-packet/SKILL.md"),
+    ]
+    required_terms = ("promotion_candidate", "operating_promotion", "runtime_probe", "runtime_authority")
+    for label, path in checks:
+        text = path.read_text(encoding="utf-8-sig")
+        for term in required_terms:
+            if term not in text:
+                warnings.append(f"{label}: progressive hardening warning: missing `{term}`")
+    return warnings
 
 
 def check_skill_frontmatter(repo_root: Path) -> list[str]:
@@ -201,6 +226,7 @@ def main() -> int:
     warnings.extend(doc_warnings)
     if not errors:
         errors.extend(check_policy_links(repo_root))
+        warnings.extend(check_progressive_hardening_warnings(repo_root))
     errors.extend(check_skill_frontmatter(repo_root))
 
     for warning in warnings:

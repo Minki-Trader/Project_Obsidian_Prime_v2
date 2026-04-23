@@ -27,13 +27,17 @@ Use this skill when a task creates, reviews, closes, summarizes, or registers ru
 - `wfo_status`: `not_applicable`, `planned`, `partial`, `complete`, or `exception`
 - `registry_update_required`: `yes` or `no`
 - `negative_memory_required`: `yes` or `no`
+- `hard_gate_applicable`: `yes` only for `operating_promotion` or `runtime_authority`
+- `evidence_boundary`: `scout-only`, `candidate`, `probe`, `reviewed`, `selected`, `operating_promotion`, or `runtime_authority`
 
 ## Guardrails
 
-- Do not close a reviewed run without machine-readable KPI evidence or explicit `n/a` reasons.
+- Early scout runs may use partial evidence if the missing layers and evidence boundary are labeled.
+- Do not close a reviewed or selected run without machine-readable KPI evidence or explicit `n/a` reasons.
 - Do not confuse `negative` (`부정`) with `invalid` (`무효`).
 - Do not treat `inconclusive` (`불충분`) as either success or failure.
-- Do not promote from `structural_scout` (`구조 탐색 점수판`) alone.
+- Do not claim `operating_promotion` (`운영 승격`) from `structural_scout` (`구조 탐색 점수판`) or `promotion_candidate` (`승격 후보`) evidence alone.
+- Do not claim `runtime_authority` (`런타임 권위`) from `runtime_probe` (`런타임 탐침`) evidence.
 - Do not blend Tier B/C research KPI with Tier A promotion or runtime KPI.
 - Do not claim `P4_full_runtime_parity_closed` from lower-level parity evidence.
 - Keep large artifacts outside Git only when their identity, path, and hash are represented in Git-tracked evidence.
@@ -48,3 +52,5 @@ Before marking a run as reviewed, selected, archived, invalidated, or superseded
 4. Confirm `docs/registers/run_registry.csv` has or will receive a row.
 5. Classify the result as `positive`, `negative`, `inconclusive`, or `invalid`.
 6. If the result closes an exploration idea negatively, record salvage value and reopen condition.
+
+Before claiming `operating_promotion` or `runtime_authority`, confirm the relevant hard-gate evidence exists and the claim is backed by a durable decision or closure artifact.

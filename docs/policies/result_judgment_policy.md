@@ -6,6 +6,8 @@ This policy defines how Project Obsidian Prime v2 judges run (`실행`) results 
 
 Judgment must be lane-aware (`레인별`) and evidence-bounded (`근거 범위 제한`). A run can be useful evidence without being eligible for promotion (`승격`).
 
+Do not make hard-gate language broader than the claim. `promotion_candidate` (`승격 후보`) and `runtime_probe` (`런타임 탐침`) are bounded study states. `operating_promotion` (`운영 승격`) and `runtime_authority` (`런타임 권위`) are operating-truth claim states and require hard-gate evidence.
+
 ## Result Classes
 
 Allowed `result_class` (`결과 분류`) values:
@@ -21,8 +23,8 @@ Never treat `negative` and `invalid` as the same. A negative result teaches some
 
 - `exploration` (`탐색`): judge idea value, search boundary, failure mode, salvage value, and reopen condition.
 - `evidence` (`근거`): judge comparability, artifact identity, KPI completeness, and registry completeness.
-- `promotion` (`승격`): judge whether operating replacement or confirmation gates are met.
-- `runtime` (`런타임`): judge execution, parity, packaging, and environment behavior only.
+- `promotion` (`승격`): distinguish `promotion_candidate` study from `operating_promotion` replacement or confirmation.
+- `runtime` (`런타임`): distinguish `runtime_probe` observation from `runtime_authority` closure, handoff, or live-like readiness.
 - `extra` (`추가`): judge against the extra stage charter, not hidden promotion assumptions.
 
 `promotion-ineligible` (`승격 부적격`) does not mean `idea-dead` (`아이디어 사망`). An idea is `idea-dead` only when negative memory records why it failed, what was salvaged, and when it can be reopened.
@@ -37,7 +39,7 @@ Each reviewed run should state:
 - `parity_level` (`동등성 레벨`)
 - `wfo_status` (`워크포워드 상태`)
 
-A guardrail failure may produce `negative` or `inconclusive` depending on whether the failure answers the question. A contract, data, or parity failure that makes the result uninterpretable must be `invalid`.
+A guardrail failure may produce `negative` or `inconclusive` depending on whether the failure answers the question. A contract, data, or parity failure that makes the result uninterpretable must be `invalid`. Missing WFO, full parity, or runtime authority does not automatically make an early scout result invalid; it limits the result boundary.
 
 ## Closure Requirements
 
@@ -49,4 +51,4 @@ Before a run result is called closed (`닫힘`):
 - judgment is one of the allowed result classes
 - negative exploration closure records salvage value and reopen condition
 
-Do not promote from `structural_scout` (`구조 탐색 점수판`) alone. Do not claim `P4_full_runtime_parity_closed` (`전체 런타임 동등성 폐쇄`) from `P2_model_input_parity_closed` (`모델 입력 동등성 폐쇄`) evidence.
+Do not promote from `structural_scout` (`구조 탐색 점수판`) alone. Do not claim `operating_promotion` (`운영 승격`) from `promotion_candidate` (`승격 후보`) evidence. Do not claim `runtime_authority` (`런타임 권위`) or `P4_full_runtime_parity_closed` (`전체 런타임 동등성 폐쇄`) from `runtime_probe` (`런타임 탐침`) or `P2_model_input_parity_closed` (`모델 입력 동등성 폐쇄`) evidence.

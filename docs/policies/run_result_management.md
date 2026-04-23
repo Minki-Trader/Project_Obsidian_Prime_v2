@@ -6,6 +6,8 @@ This policy defines how Project Obsidian Prime v2 manages run (`실행`) results
 
 Every run must have managed identity (`관리되는 정체성`) before it is treated as reviewed (`검토됨`), selected (`선택됨`), archived (`보관됨`), invalidated (`무효화됨`), or superseded (`대체됨`).
 
+Progressive hardening (`점진적 경화`) applies: `planned`, `running`, and `completed` runs may carry partial records; `reviewed` and `selected` runs need measurement, management, and judgment; `operating_promotion` and `runtime_authority` claims need strict evidence.
+
 Stage-local folders store source artifacts. Git-tracked registers store the map.
 
 ## Run Folder Contract
@@ -43,7 +45,7 @@ Allowed `status` (`상태`) values:
 - `invalidated` (`무효화됨`)
 - `superseded` (`대체됨`)
 
-Do not use `reviewed` unless `kpi_record.json`, `result_summary.md`, and `docs/registers/run_registry.csv` can point to the run's evidence or explicitly state why a field is `n/a`.
+Do not use `reviewed` unless `kpi_record.json`, `result_summary.md`, and `docs/registers/run_registry.csv` can point to the run's evidence or explicitly state why a field is `n/a`. Do not force an early scout run into `invalidated` only because its record is partial; label it `completed`, `scout-only`, or `inconclusive` as appropriate.
 
 ## Run Registry
 
@@ -52,7 +54,7 @@ Do not use `reviewed` unless `kpi_record.json`, `result_summary.md`, and `docs/r
 Required columns:
 
 ```text
-run_id,stage_id,idea_id,lane,tier_scope,scoreboard,status,result_class,primary_kpi,guardrail_status,parity_level,wfo_status,artifact_hash,kpi_record_path,summary_path,created_at,reviewed_at
+run_id,stage_id,idea_id,lane,tier_scope,scoreboard,evidence_boundary,status,result_class,primary_kpi,guardrail_status,parity_level,wfo_status,hard_gate_applicable,operating_truth_claim,artifact_hash,kpi_record_path,summary_path,created_at,reviewed_at
 ```
 
 Use `n/a` (`해당 없음`) when a column does not apply. Use `pending` (`대기`) only for planned rows that have not produced evidence yet.
