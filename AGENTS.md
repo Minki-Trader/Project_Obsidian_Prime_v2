@@ -18,6 +18,7 @@ This workspace is the clean-restart FPMarkets `US100` `M5` data, feature, runtim
 - legacy exploration mandate is inherited, legacy code/result/promotion history is not
 - foundation closure comes before new alpha search
 - operating discipline and exploration discipline must stay separate
+- every run must leave measurement, management, and lane-aware judgment before it is treated as closed
 
 ## Codex Response Rule
 
@@ -88,6 +89,14 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - Tier A/B/C (`티어 A/B/C`) remains the default readiness vocabulary (`준비도 어휘`), but Tier C (`티어 C`) may support local-only research (`로컬 전용 연구`) only when base/session semantics are valid and external context is the missing part
 - user-requested extra stages (`사용자 요청 추가 단계`) are allowed, but they must declare charter (`헌장`), lane (`레인`), exit condition (`종료 조건`), and no-promotion boundary (`비승격 경계`)
 
+## Run Evidence System (`실행 근거 시스템`)
+
+- `docs/policies/kpi_measurement_standard.md` owns KPI measurement (`핵심 성과 지표 측정`) layers and scoreboard (`점수판`) vocabulary
+- `docs/policies/run_result_management.md` owns run identity (`실행 정체성`), run lifecycle (`실행 생애주기`), and `run_registry.csv` (`실행 등록부`) rules
+- `docs/policies/result_judgment_policy.md` owns result judgment (`결과 판정`) and separates `positive` (`긍정`), `negative` (`부정`), `inconclusive` (`불충분`), and `invalid` (`무효`)
+- `negative` (`부정`) is reusable evidence; `invalid` (`무효`) is uninterpretable until the broken contract, data, parity, or execution assumption is repaired or excluded
+- a reviewed run (`검토된 실행`) must have measurable evidence (`측정 가능한 근거`), managed identity (`관리되는 정체성`), and lane-aware judgment (`레인별 판정`)
+
 ## Verification Discipline (`검증 규율`)
 
 - use the narrowest sufficient verification first, but include a real-environment check (`실환경 검증`) before calling work verified when the change touches MT5 execution, tester orchestration, import/export boundaries, runtime parity flow, or another path where mocks can miss environment-specific behavior
@@ -129,12 +138,14 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - `docs/decisions/*.md` records durable operating decisions
 - `docs/policies/reentry_order.md` defines the canonical re-entry order and truth precedence
 - `docs/registers/artifact_registry.csv` records dataset, bundle, runtime, and report identity
+- `docs/registers/run_registry.csv` records run identity, evidence pointers, status, and result judgment
 - `docs/registers/idea_registry.md` records durable exploration ideas
 - `docs/registers/negative_result_register.md` records reusable failed or closed hypotheses
 - `docs/registers/legacy_lesson_register.md` records abstract legacy lessons without importing legacy code or run results
 - `docs/policies/artifact_registry_schema.md` defines registry columns, enums, and hash-update discipline
 - `docs/policies/architecture_invariants.md` defines stage-agnostic structure and encoding guardrails
 - `docs/policies/exploration_mandate.md` defines exploration discipline, lane separation, WFO defaults, and failure-memory rules
+- `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md` define run evidence measurement, management, and judgment
 - `docs/archive/` stores sealed legacy lessons and background notes, not current operating truth
 - `docs/policies/agent_trigger_policy.md` records repo-scoped trigger-to-skill routing
 - `.agents/skills/` stores repo-scoped reusable Codex skills for re-entry, claim discipline, and stage-transition workflows
@@ -156,6 +167,8 @@ Implementation notes, review files, selection files, and the auxiliary frozen mi
 - update `docs/policies/artifact_registry_schema.md` when registry columns, enums, or hash-update rules change
 - update `docs/policies/architecture_invariants.md` only when cross-stage architecture guardrails change
 - update `docs/policies/exploration_mandate.md` only when cross-stage exploration discipline changes
+- update `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, or `docs/policies/result_judgment_policy.md` only when cross-stage run evidence rules change
 - update `docs/registers/architecture_debt_register.md` when known architecture debt is discovered, reduced, deepened, or retired
+- update `docs/registers/run_registry.csv` when a run becomes durable, reviewed, selected, archived, invalidated, or superseded
 - update `docs/registers/idea_registry.md`, `docs/registers/negative_result_register.md`, or `docs/registers/legacy_lesson_register.md` when durable idea, failure, or legacy-lesson memory changes
 - keep Korean `.md` and `.txt` documents in `UTF-8 with BOM` when editing them for Windows-facing workflows

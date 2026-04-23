@@ -28,6 +28,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 3. If the thread is warm and the active stage is stable, prefer a delta check instead of repeating full cold re-entry.
 4. Decide whether the requested turn is architecture-sensitive: feature/model/pipeline/artifact, alpha-search framing, stage transition, repo-scoped skill, agent setting, or Korean encoding work.
 5. Decide whether the requested turn is exploration-sensitive: alpha search, idea variants, Tier B/C research, WFO planning, extreme sweep, negative-result closure, or user-requested extra stage.
+6. Decide whether the requested turn is run-evidence-sensitive: run creation, run closeout, KPI report, result summary, result judgment, or run registry update.
 
 ## Must Read
 
@@ -37,6 +38,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 - the latest durable decision memo only when it changes current meaning or the user asks why
 - `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the requested turn is architecture-sensitive
 - `docs/policies/exploration_mandate.md`, `docs/registers/idea_registry.md`, and `docs/registers/negative_result_register.md` when the requested turn is exploration-sensitive
+- `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, `docs/policies/result_judgment_policy.md`, and `docs/registers/run_registry.csv` when the requested turn is run-evidence-sensitive
 
 ## Must Output
 
@@ -55,6 +57,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 - `architecture_guard_required` when relevant
 - `lane`
 - `exploration_guard_required` when relevant
+- `run_evidence_required` when relevant
 
 ## Do Not
 
@@ -65,6 +68,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 - ignore architecture debt when the turn touches feature/model/pipeline/artifact, alpha-search, stage-transition, skill, agent-setting, or encoding work
 - let promotion/runtime discipline block exploration before classifying the lane
 - treat promotion-ineligible ideas as worthless ideas
+- treat a run as reviewed or closed before measurement, management, and judgment are named
 
 ## Stop Conditions
 
@@ -78,6 +82,7 @@ Use this skill at the start of a working turn when the user asks for current sta
 - if a current task packet already exists, confirm it still fits the active stage and current durable decisions
 - if architecture-sensitive, confirm whether the architecture guard validator is part of the verification surface
 - if exploration-sensitive, confirm whether `obsidian-lane-classifier` and `obsidian-exploration-mandate` are part of the planning surface
+- if run-evidence-sensitive, confirm whether `obsidian-run-evidence-system` is part of the planning surface
 
 ## Completion Criteria
 
@@ -86,3 +91,4 @@ Use this skill at the start of a working turn when the user asks for current sta
 - the allowed scope and publish default are explicit enough that the next step can stay narrow
 - architecture-sensitive work is routed to `obsidian-architecture-guard` regardless of active stage number
 - exploration-sensitive work is routed by lane rather than by active stage number
+- run-evidence-sensitive work is routed to measurement, management, and judgment rules before closeout

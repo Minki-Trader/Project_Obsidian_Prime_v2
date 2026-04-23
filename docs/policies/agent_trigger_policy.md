@@ -11,6 +11,7 @@ Canonical re-entry order and truth precedence live in `docs/policies/reentry_ord
 - reduce repeated mistakes around re-entry, claim language, and stage transitions
 - prevent cross-stage architecture drift around feature logic, model artifacts, alpha-search framing, and Korean encoding
 - separate exploration discipline from operating discipline so promotion/runtime conservatism does not suppress useful alpha research
+- keep run evidence consistent across KPI measurement, run-result management, and result judgment
 
 ## Placement
 
@@ -158,6 +159,23 @@ Required effect:
 - output owner module, caller, input contract, output contract, artifact/report relation, monolith risk, and placement decision
 - prevent reusable logic from being hidden inside an all-in-one EA, pipeline, or stage script
 
+### `obsidian-run-evidence-system`
+
+Use when:
+
+- creating, reviewing, closing, selecting, archiving, invalidating, or superseding a run
+- writing KPI reports, result summaries, stage run reviews, or run registry rows
+- deciding whether a result is `positive`, `negative`, `inconclusive`, or `invalid`
+- a run needs `run_manifest.json`, `kpi_record.json`, `result_summary.md`, or `docs/registers/run_registry.csv`
+
+Required effect:
+
+- read `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md`
+- output measurement scope, management state, judgment class, scoreboard, parity level, WFO status, registry update need, and negative-memory need
+- keep `negative` distinct from `invalid`
+- keep `structural_scout` evidence distinct from `regular_risk_execution` evidence
+- keep Tier B/C research KPI separate from promotion/runtime KPI
+
 ### `obsidian-task-packet`
 
 Use when:
@@ -174,6 +192,7 @@ Required effect:
 - output a bounded packet with `task_id`, `goal`, `allowed_paths`, `do_not_touch`, `expected_artifacts`, `verification_minimum`, `real_env_required`, `publish_target`, `stop_conditions`, and `done_definition`
 - add `architecture_guard_required`, `debt_register_update`, and `encoding_verification` when the task is architecture-sensitive
 - add `lane`, `idea_id`, `tier_scope`, `wfo_required`, `extreme_sweep_allowed`, `micro_search_gate`, `negative_result_required`, `promotion_gate_applicable`, and `code_surface_map_required` when relevant
+- add `run_evidence_required`, `run_registry_update`, `kpi_record_required`, and `result_judgment_required` when a run or KPI result is created, reviewed, summarized, or closed
 - keep `publish_target` at `branch_only` or `none` unless the user explicitly asks for `main` completion
 
 ### `obsidian-stage-transition`
@@ -225,6 +244,7 @@ Required same-pass files:
 - the active or closing stage `03_reviews/review_index.md` when needed
 - `docs/decisions/*.md` when the change is durable
 - `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
+- `docs/registers/run_registry.csv` when run identity, result status, or result judgment changes durably
 - `docs/workspace/changelog.md`
 - `README.md` when it still contains mutable current-state language that the same pass would otherwise leave stale
 
@@ -240,6 +260,7 @@ Required same-pass files:
 - `tier_c_local_research` is not a runtime lane
 - `legacy exploration mandate` is not `legacy code/result inheritance`
 - WFO is the default exploration optimization frame unless a packet marks a result scout-only or gives an explicit exception
+- `negative` is not `invalid`; `inconclusive` is not a quiet success; `structural_scout` is not an operating promotion read
 
 ## Verification Escalation (`검증 상향 규칙`)
 
@@ -258,6 +279,7 @@ Required same-pass files:
 - `브랜치랑 메인머지까지`, `메인까지 올려줘`: use `obsidian-publish-merge`
 - feature/model/pipeline/artifact/agent-settings/encoding work: also use `obsidian-architecture-guard`
 - alpha search, idea variants, Tier B/C research, WFO, extreme sweep, or negative-result closure: use `obsidian-lane-classifier` and `obsidian-exploration-mandate`
+- run creation, run closeout, KPI reporting, result judgment, or run registry updates: use `obsidian-run-evidence-system`
 - code placement or reusable logic work: use `obsidian-code-surface-guard` and `obsidian-architecture-guard`
 
 ## Dynamic Active Routing
@@ -269,6 +291,7 @@ Required same-pass files:
 - use `obsidian-architecture-guard` for feature, model, pipeline, artifact, alpha-search, stage-transition, agent-settings, or Korean-encoding work regardless of stage number
 - use `obsidian-lane-classifier` before applying promotion/runtime gates to exploration, evidence, Tier B/C research, or extra-stage work
 - use `obsidian-exploration-mandate` for exploration-sensitive work regardless of active stage number
+- use `obsidian-run-evidence-system` whenever a run result needs measurement, management, or judgment
 - use `obsidian-code-surface-guard` whenever code placement, reusable logic ownership, or monolith risk is involved
 - use `obsidian-stage-transition` whenever `active_stage` or stage-level operational meaning changes durably
 - use `obsidian-publish-merge` only when the user explicitly asks for branch push plus `main` merge completion in the same pass or an approved task packet explicitly names `publish_target=main`

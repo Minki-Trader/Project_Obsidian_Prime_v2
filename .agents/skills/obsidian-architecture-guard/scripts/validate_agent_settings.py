@@ -17,16 +17,24 @@ REQUIRED_PATHS = [
     "AGENTS.md",
     "docs/policies/architecture_invariants.md",
     "docs/policies/exploration_mandate.md",
+    "docs/policies/kpi_measurement_standard.md",
+    "docs/policies/run_result_management.md",
+    "docs/policies/result_judgment_policy.md",
     "docs/registers/architecture_debt_register.md",
+    "docs/registers/run_registry.csv",
     "docs/registers/idea_registry.md",
     "docs/registers/negative_result_register.md",
     "docs/registers/legacy_lesson_register.md",
+    "docs/templates/run_manifest_template.json",
+    "docs/templates/kpi_record_template.json",
+    "docs/templates/result_summary_template.md",
     "docs/policies/agent_trigger_policy.md",
     "docs/policies/reentry_order.md",
     ".agents/skills/obsidian-architecture-guard/SKILL.md",
     ".agents/skills/obsidian-lane-classifier/SKILL.md",
     ".agents/skills/obsidian-exploration-mandate/SKILL.md",
     ".agents/skills/obsidian-code-surface-guard/SKILL.md",
+    ".agents/skills/obsidian-run-evidence-system/SKILL.md",
 ]
 
 
@@ -102,18 +110,29 @@ def check_policy_links(repo_root: Path) -> list[str]:
     agents = (repo_root / "AGENTS.md").read_text(encoding="utf-8-sig")
     debt = (repo_root / "docs/registers/architecture_debt_register.md").read_text(encoding="utf-8-sig")
     exploration = (repo_root / "docs/policies/exploration_mandate.md").read_text(encoding="utf-8-sig")
+    kpi = (repo_root / "docs/policies/kpi_measurement_standard.md").read_text(encoding="utf-8-sig")
+    run_management = (repo_root / "docs/policies/run_result_management.md").read_text(encoding="utf-8-sig")
+    judgment = (repo_root / "docs/policies/result_judgment_policy.md").read_text(encoding="utf-8-sig")
 
     required_pairs = [
         ("agent_trigger_policy.md", trigger_policy, "obsidian-architecture-guard"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-lane-classifier"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-exploration-mandate"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-code-surface-guard"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-run-evidence-system"),
         ("agent_trigger_policy.md", trigger_policy, "architecture_invariants.md"),
         ("agent_trigger_policy.md", trigger_policy, "exploration_mandate.md"),
+        ("agent_trigger_policy.md", trigger_policy, "kpi_measurement_standard.md"),
+        ("agent_trigger_policy.md", trigger_policy, "run_result_management.md"),
+        ("agent_trigger_policy.md", trigger_policy, "result_judgment_policy.md"),
         ("reentry_order.md", reentry, "architecture_invariants.md"),
         ("reentry_order.md", reentry, "exploration_mandate.md"),
+        ("reentry_order.md", reentry, "kpi_measurement_standard.md"),
+        ("reentry_order.md", reentry, "run_result_management.md"),
+        ("reentry_order.md", reentry, "result_judgment_policy.md"),
         ("AGENTS.md", agents, "Architecture Invariants"),
         ("AGENTS.md", agents, "Exploration Mandate"),
+        ("AGENTS.md", agents, "Run Evidence System"),
         ("architecture_debt_register.md", debt, "AD-001"),
         ("architecture_debt_register.md", debt, "AD-002"),
         ("architecture_debt_register.md", debt, "AD-003"),
@@ -123,6 +142,14 @@ def check_policy_links(repo_root: Path) -> list[str]:
         ("exploration_mandate.md", exploration, "promotion-ineligible"),
         ("exploration_mandate.md", exploration, "tier_c_local_research"),
         ("exploration_mandate.md", exploration, "WFO"),
+        ("kpi_measurement_standard.md", kpi, "structural_scout"),
+        ("kpi_measurement_standard.md", kpi, "regular_risk_execution"),
+        ("kpi_measurement_standard.md", kpi, "trade_shape"),
+        ("run_result_management.md", run_management, "run_registry.csv"),
+        ("run_result_management.md", run_management, "run_manifest.json"),
+        ("result_judgment_policy.md", judgment, "positive"),
+        ("result_judgment_policy.md", judgment, "negative"),
+        ("result_judgment_policy.md", judgment, "invalid"),
     ]
     for label, text, needle in required_pairs:
         if needle not in text:

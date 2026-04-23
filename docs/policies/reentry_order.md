@@ -27,7 +27,8 @@ Do not maintain a second full ordered re-entry list in `README.md`, `AGENTS.md`,
 14. `docs/policies/artifact_registry_schema.md` when the task will create, update, or review durable artifact identity
 15. `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the task touches feature/model/pipeline/artifact architecture, alpha-search framing, repo-scoped skills, agent settings, or Korean encoding
 16. `docs/policies/exploration_mandate.md`, `docs/registers/idea_registry.md`, and `docs/registers/negative_result_register.md` when the task touches exploration, idea variants, Tier B/C research, WFO, negative-result closure, legacy lessons, or extra stages
-17. `docs/registers/legacy_lesson_register.md` when legacy lessons are used
+17. `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, `docs/policies/result_judgment_policy.md`, and `docs/registers/run_registry.csv` when the task touches run creation, KPI reporting, run review, result judgment, or run closeout
+18. `docs/registers/legacy_lesson_register.md` when legacy lessons are used
 
 ## Truth Precedence
 
@@ -42,7 +43,8 @@ When repo documents disagree, resolve in this order:
 7. `docs/policies/agent_trigger_policy.md`
 8. `docs/policies/architecture_invariants.md` for architecture ownership and encoding guardrails
 9. `docs/policies/exploration_mandate.md` for exploration discipline and lane separation
-10. stage briefs, review indexes, templates, and other supporting notes
+10. `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md` for run evidence measurement, management, and judgment
+11. stage briefs, review indexes, templates, and other supporting notes
 
 If `workspace_state.yaml` and the active stage `selection_status.md` imply different active stages, treat that as state fragmentation and resolve it before continuing.
 
@@ -58,6 +60,9 @@ If `workspace_state.yaml` and the active stage `selection_status.md` imply diffe
 - `exploration mandate`: the inherited spirit of pushing ideas to meaningful evidence boundaries without inheriting legacy code, run results, or promotion history
 - `promotion-ineligible`: not eligible for operating promotion; this does not by itself mean the idea is dead
 - `tier_c_local_research`: local-only research on valid base/session rows with missing external context; it is not a runtime lane
+- `run evidence`: the combined measurement, managed identity, and lane-aware judgment required before a run can be treated as reviewed or closed
+- `negative result`: a valid result that weakens or closes a hypothesis while preserving reusable evidence
+- `invalid result`: a result that should not be interpreted because a contract, data, parity, or execution assumption failed
 
 ## Re-entry Output Expectation
 
@@ -71,6 +76,7 @@ After following this order, restate all of the following before making durable c
 - what remains open
 - whether architecture-sensitive work needs the architecture guard
 - the primary lane and whether exploration-sensitive work needs lane classification or exploration-mandate handling
+- whether run/KPI/result work needs the run evidence system
 
 ## Maintenance Rule
 

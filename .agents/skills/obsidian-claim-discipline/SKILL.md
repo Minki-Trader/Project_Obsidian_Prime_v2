@@ -1,4 +1,4 @@
----
+﻿---
 name: obsidian-claim-discipline
 description: Enforce claim discipline in Project Obsidian Prime v2 by downgrading planning or pending states, separating parity levels, and preventing overstatement of closure or readiness. Use when writing docs, reviews, status notes, or user-facing summaries.
 ---
@@ -55,6 +55,9 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 10. Do not describe a promotion-ineligible idea as worthless, dead, or fully closed unless negative-result memory records why it failed, what was salvaged, and when to reopen it.
 11. Do not describe Tier C local research as a trading lane, reduced-risk substitute, or promotion argument.
 12. Do not describe a legacy lesson as v2 truth unless a v2 artifact closes the same question.
+13. Do not confuse `negative` (`부정`) with `invalid` (`무효`); a negative result is interpretable evidence, while an invalid result is not.
+14. Do not describe `inconclusive` (`불충분`) as success, closure, or failure unless the missing evidence and remaining question are named.
+15. Do not call a run `reviewed`, `selected`, `archived`, or `closed` unless measurement evidence, managed identity, and lane-aware judgment are present or explicitly marked `n/a` with reasons.
 
 ## Project-Specific Guardrails
 
@@ -67,3 +70,6 @@ If any relevant field contains one of these tokens, switch into strict claim dis
 - `promotion-ineligible` is not `idea-dead`.
 - `tier_c_local_research` is not a runtime lane.
 - `legacy exploration spirit` is not `legacy result inheritance`.
+- `negative` is not `invalid`.
+- `inconclusive` is not quiet approval.
+- `structural_scout` is not an operating promotion read.

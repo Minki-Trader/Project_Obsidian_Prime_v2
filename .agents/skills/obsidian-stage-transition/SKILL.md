@@ -21,10 +21,12 @@ Update in the same pass:
 - next stage `01_inputs/input_refs.md`
 - `docs/decisions/*.md` when the transition is durable
 - `docs/registers/artifact_registry.csv` when dataset, bundle, runtime, or report identity rows are added or superseded
+- `docs/registers/run_registry.csv` when run identity, result status, or result judgment changes durably
 - `docs/workspace/changelog.md`
 - `README.md` when it still contains mutable stage, closure, or current-mode wording that this transition would otherwise leave stale
 - `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the transition changes feature/model/pipeline/artifact ownership, alpha-search framing, or encoding-sensitive agent behavior
 - `docs/policies/exploration_mandate.md`, `docs/registers/idea_registry.md`, and `docs/registers/negative_result_register.md` when the transition opens, closes, archives, or hands off exploration work
+- `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, and `docs/policies/result_judgment_policy.md` when the transition changes run evidence rules or closes a stage based on run results
 
 ## Transition Rules
 
@@ -42,6 +44,7 @@ Update in the same pass:
 8. If the transition opens alpha search, separate source cleanup or validation debt closure from the actual alpha-search question.
 9. If the transition opens a user-requested extra stage, require charter, lane, question, allowed evidence, exit condition, and no-promotion boundary unless a promotion packet is explicitly opened.
 10. If the transition closes exploration, require negative-result memory or a positive archive record before treating the idea as durable knowledge.
+11. If the transition closes a run-producing stage, require run measurement, managed identity, and lane-aware judgment for the selected or archived run evidence.
 
 ## Validation
 
@@ -49,6 +52,7 @@ Update in the same pass:
 - if the transition changes durable meaning, make sure a `docs/decisions/*.md` memo exists in the same pass
 - if architecture-sensitive docs or skills changed, run the architecture guard validator
 - if exploration-sensitive docs or skills changed, verify that lane routing, WFO default, and failure-memory references are still linked from the trigger policy
+- if run evidence docs or skills changed, verify that KPI measurement, run-result management, and result judgment references are still linked from the trigger policy
 
 ## Project-Specific Guardrails
 

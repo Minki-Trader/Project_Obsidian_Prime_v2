@@ -30,6 +30,7 @@ Rules:
 
 - must identify inherited references
 - must declare primary KPI, guardrails, and disqualifiers
+- must keep run evidence measurement, management, and judgment explicit before closing selected results
 - must end with a durable promotion or no-promotion read
 
 ## exploration_stage
@@ -39,6 +40,7 @@ Used when the goal is to generate, mutate, stress, or archive alpha ideas withou
 Rules:
 
 - must declare idea hypothesis, lane, tier scope, broad sweep, extreme sweep, WFO default, and negative-result memory rule
+- must record reviewed runs through the run evidence system when results become durable
 - may produce useful failure evidence without producing a promotion candidate
 - must not be blocked only because promotion/runtime gates are not yet satisfied
 - must not inherit legacy code, run results, or promotion history
@@ -51,7 +53,7 @@ Rules:
 
 - must declare charter, lane, allowed evidence, exit condition, and no-promotion boundary
 - may not bypass Tier A/B/C, WFO defaults, artifact identity, or runtime parity rules
-- must record whether its result updates idea, negative-result, or legacy-lesson memory
+- must record whether its result updates run, idea, negative-result, or legacy-lesson memory
 
 ## runtime_recalibration_stage
 
