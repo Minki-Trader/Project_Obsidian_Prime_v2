@@ -16,3 +16,4 @@
 - Stage 01(1단계)을 닫고 `02_feature_frame__practical_full_cash_freeze`를 열었다. 효과(effect, 효과)는 첫 shared freeze(공유 동결 산출물)를 실제로 물질화할 단계가 분명해졌다는 것이다.
 - `20260424_practical_full_cash_freeze_materialization` 실행(run, 실행)으로 첫 shared feature frame freeze(공유 피처 프레임 동결 산출물)를 실제로 만들었다. 데이터셋 ID(dataset ID, 데이터셋 ID)는 `dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01`이고, 선택 행(selected rows, 선택 행)은 `54439`다.
 - Stage 02(2단계)를 닫고 `03_training_dataset__label_split_contract`를 열었다. 효과(effect, 효과)는 이제 라벨(label, 라벨)과 분할(split, 분할)을 실제 공유 동결 산출물 위에서 정할 수 있다는 것이다.
+- agent guard(에이전트 가드)와 policy routing(정책 라우팅)을 단순화했다. 효과(effect, 효과)는 낡은 stage ownership(단계 소유권) 문구를 제거하고, claim discipline(주장 규율)을 공식 라우팅에 남기며, agent settings validator(에이전트 설정 검사기)가 `openai.yaml`의 필수 설명을 확인하게 된 것이다.

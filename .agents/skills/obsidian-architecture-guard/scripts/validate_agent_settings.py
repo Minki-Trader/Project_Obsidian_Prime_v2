@@ -31,11 +31,24 @@ REQUIRED_PATHS = [
     "docs/policies/agent_trigger_policy.md",
     "docs/policies/reentry_order.md",
     ".agents/skills/obsidian-architecture-guard/SKILL.md",
+    ".agents/skills/obsidian-architecture-guard/agents/openai.yaml",
     ".agents/skills/obsidian-lane-classifier/SKILL.md",
     ".agents/skills/obsidian-exploration-mandate/SKILL.md",
     ".agents/skills/obsidian-code-surface-guard/SKILL.md",
     ".agents/skills/obsidian-run-evidence-system/SKILL.md",
 ]
+REQUIRED_AGENT_INTERFACE_KEYS = ("display_name", "short_description", "default_prompt")
+AGENT_PROMPT_REQUIRED_CONCEPTS = {
+    ".agents/skills/obsidian-architecture-guard/agents/openai.yaml": (
+        "architecture",
+        "agent settings",
+        "repo-scoped skills",
+        "policy",
+        "artifact",
+        "path",
+        "encoding",
+    )
+}
 
 
 def has_utf8_bom(data: bytes) -> bool:
@@ -117,6 +130,7 @@ def check_policy_links(repo_root: Path) -> list[str]:
 
     required_pairs = [
         ("agent_trigger_policy.md", trigger_policy, "obsidian-architecture-guard"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-claim-discipline"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-lane-classifier"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-exploration-mandate"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-code-surface-guard"),
@@ -171,7 +185,6 @@ def check_progressive_hardening_warnings(repo_root: Path) -> list[str]:
         ("result_judgment_policy.md", repo_root / "docs/policies/result_judgment_policy.md"),
         ("obsidian-lane-classifier/SKILL.md", repo_root / ".agents/skills/obsidian-lane-classifier/SKILL.md"),
         ("obsidian-run-evidence-system/SKILL.md", repo_root / ".agents/skills/obsidian-run-evidence-system/SKILL.md"),
-        ("obsidian-task-packet/SKILL.md", repo_root / ".agents/skills/obsidian-task-packet/SKILL.md"),
     ]
     required_terms = ("promotion_candidate", "operating_promotion", "runtime_probe", "runtime_authority")
     for label, path in checks:
@@ -180,6 +193,51 @@ def check_progressive_hardening_warnings(repo_root: Path) -> list[str]:
             if term not in text:
                 warnings.append(f"{label}: progressive hardening warning: missing `{term}`")
     return warnings
+
+
+def read_simple_agent_interface(path: Path) -> dict[str, str]:
+    interface: dict[str, str] = {}
+    in_interface = False
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        if raw_line.strip() == "interface:":
+            in_interface = True
+            continue
+        if not in_interface:
+            continue
+        if raw_line and not raw_line.startswith((" ", "\t")):
+            break
+        match = re.match(r"^\s+([A-Za-z0-9_]+):\s*(.*)\s*$", raw_line)
+        if not match:
+            continue
+        key, value = match.groups()
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1]
+        interface[key] = value.strip()
+    return interface
+
+
+def check_agent_settings(repo_root: Path) -> list[str]:
+    errors: list[str] = []
+    for rel_path, required_concepts in AGENT_PROMPT_REQUIRED_CONCEPTS.items():
+        path = repo_root / rel_path
+        if not path.exists():
+            errors.append(f"{rel_path}: missing agent settings file")
+            continue
+        interface = read_simple_agent_interface(path)
+        if not interface:
+            errors.append(f"{rel_path}: missing interface section")
+            continue
+        for key in REQUIRED_AGENT_INTERFACE_KEYS:
+            if not interface.get(key):
+                errors.append(f"{rel_path}: missing or empty interface.{key}")
+        prompt_text = " ".join(
+            interface.get(key, "") for key in ("short_description", "default_prompt")
+        ).lower()
+        for concept in required_concepts:
+            if concept.lower() not in prompt_text:
+                errors.append(f"{rel_path}: agent prompt missing required concept `{concept}`")
+    return errors
 
 
 def check_skill_frontmatter(repo_root: Path) -> list[str]:
@@ -227,6 +285,7 @@ def main() -> int:
     if not errors:
         errors.extend(check_policy_links(repo_root))
         warnings.extend(check_progressive_hardening_warnings(repo_root))
+    errors.extend(check_agent_settings(repo_root))
     errors.extend(check_skill_frontmatter(repo_root))
 
     for warning in warnings:

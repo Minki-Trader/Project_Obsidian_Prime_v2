@@ -56,7 +56,6 @@ Update in the same pass:
 
 ## Project-Specific Guardrails
 
-- `Stage 00` may close as planning scaffold complete.
-- `Stage 01` owns the first materialized dataset-contract evidence.
-- `Stage 03` owns evaluated runtime parity.
-- `Stage 04` owns broader artifact identity closure.
+- Do not hard-code durable ownership to a numbered stage.
+- Derive each stage's current question, closure boundary, and handoff meaning from `docs/workspace/workspace_state.yaml`, the active stage docs, and durable decision memos.
+- Do not pull runtime parity, artifact identity, or operating-promotion meaning into a stage unless the current truth sources explicitly put that work in scope.

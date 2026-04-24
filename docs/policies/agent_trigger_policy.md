@@ -14,6 +14,7 @@
 
 - `obsidian-session-intake`: 상태(status, 상태), 계획(planning, 계획), 구현(implementation, 구현)을 시작할 때 쓴다.
 - `obsidian-reentry-read`: 저장소 작업을 재개할 때 쓴다.
+- `obsidian-claim-discipline`: 문서, 검토, 상태 설명, 사용자 요약(user-facing summary, 사용자 요약)을 쓸 때 주장(claim, 주장)이 너무 강해지지 않게 할 때 쓴다.
 - `obsidian-stage-transition`: `active_stage(활성 단계)`나 단계 의미(stage meaning, 단계 의미)가 바뀔 때 쓴다.
 - `obsidian-lane-classifier`: 승격(promotion, 승격)이나 런타임(runtime, 런타임) 언어를 붙이기 전에 쓴다.
 - `obsidian-exploration-mandate`: 알파 아이디어(alpha idea, 알파 아이디어), 티어 작업(Tier work, 티어 작업), WFO(`walk-forward optimization`, 워크포워드 최적화), 극단값 탐색(extreme sweep, 극단값 탐색), 실패 기록(negative memory, 실패 기록)에 쓴다.
