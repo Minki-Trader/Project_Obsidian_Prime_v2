@@ -30,11 +30,26 @@ Before changing direction, identify:
 - `next_action`: continue, fetch material, build tool, fix environment, lower claim, or ask user
 - `drift_risk`: what nearby task could distract from the real blocker?
 
+## Material Recovery Order
+
+If required material is missing, do not stop at "design is still possible" when the requested product needs that material.
+
+Use this order:
+
+1. Check whether the material already exists inside the current repo or declared current-project data root.
+2. Check whether a current repo tool can regenerate it.
+3. Check whether the required source data exists inside the current project boundary.
+4. If the material cannot be recovered inside the current project boundary, mark the task `blocked` or lower the claim.
+5. Do not use legacy snapshots, external folders, old project outputs, forum files, or ad hoc internet artifacts unless the user explicitly asks.
+
+External or legacy material is not a default fallback.
+
 ## Guardrails
 
 - If source data is missing, do not create processed outputs as if the source data existed.
 - If the required tool or runtime is missing, do not simulate success unless the task is explicitly to create a mock.
 - If the job is to build a tool, do not turn the pass into repeated source-data auditing unless new evidence makes that necessary.
+- If material is required and missing, name the shortest current-project path to restore or regenerate it.
 - If verification cannot run, name whether the blocker is material, tool, environment, or permission.
 - If the original goal changes, say that it changed before proceeding.
 - Do not close the task with a polished report that only explains why the real work did not happen.
