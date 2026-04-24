@@ -32,9 +32,13 @@ REQUIRED_PATHS = [
     "docs/policies/reentry_order.md",
     ".agents/skills/obsidian-architecture-guard/SKILL.md",
     ".agents/skills/obsidian-architecture-guard/agents/openai.yaml",
+    ".agents/skills/obsidian-answer-clarity/SKILL.md",
+    ".agents/skills/obsidian-code-quality/SKILL.md",
     ".agents/skills/obsidian-lane-classifier/SKILL.md",
     ".agents/skills/obsidian-exploration-mandate/SKILL.md",
     ".agents/skills/obsidian-code-surface-guard/SKILL.md",
+    ".agents/skills/obsidian-workflow-drift-guard/SKILL.md",
+    ".agents/skills/obsidian-reference-scout/SKILL.md",
     ".agents/skills/obsidian-run-evidence-system/SKILL.md",
 ]
 REQUIRED_AGENT_INTERFACE_KEYS = ("display_name", "short_description", "default_prompt")
@@ -130,10 +134,14 @@ def check_policy_links(repo_root: Path) -> list[str]:
 
     required_pairs = [
         ("agent_trigger_policy.md", trigger_policy, "obsidian-architecture-guard"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-answer-clarity"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-claim-discipline"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-code-quality"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-lane-classifier"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-exploration-mandate"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-code-surface-guard"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-workflow-drift-guard"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-reference-scout"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-run-evidence-system"),
         ("agent_trigger_policy.md", trigger_policy, "architecture_invariants.md"),
         ("agent_trigger_policy.md", trigger_policy, "exploration_mandate.md"),
