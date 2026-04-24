@@ -44,12 +44,27 @@ Use this order:
 
 External or legacy material is not a default fallback.
 
+## Recovery Action Rule
+
+Missing required material, tools, or environment is not a reason to abandon or quietly defer the original task.
+
+Use this order:
+
+1. If Codex can restore, regenerate, install, configure, fetch, or run the required current-project material or tool within available permissions, do that first.
+2. If user action is required, ask for the exact action and explain what work resumes after it is done.
+3. After recovery, return to the original product instead of drifting into a new task.
+4. Only mark the task blocked when neither Codex action nor a clear user action can complete the prerequisite in the current pass.
+
+Example: if MT5 installation, broker login, terminal setup, or account connection is required, ask the user for that setup explicitly. Once available, resume the current project regeneration or verification path.
+
 ## Guardrails
 
 - If source data is missing, do not create processed outputs as if the source data existed.
 - If the required tool or runtime is missing, do not simulate success unless the task is explicitly to create a mock.
 - If the job is to build a tool, do not turn the pass into repeated source-data auditing unless new evidence makes that necessary.
 - If material is required and missing, name the shortest current-project path to restore or regenerate it.
+- If Codex can remove the blocker within available permissions, remove it before reporting `blocked`.
+- If user cooperation is required, ask for the exact setup, credential, local data, terminal action, or permission needed and state the resume point.
 - If verification cannot run, name whether the blocker is material, tool, environment, or permission.
 - If the original goal changes, say that it changed before proceeding.
 - Do not close the task with a polished report that only explains why the real work did not happen.

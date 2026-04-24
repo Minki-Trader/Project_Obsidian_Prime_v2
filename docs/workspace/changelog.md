@@ -19,3 +19,4 @@
 - agent guard(에이전트 가드)와 policy routing(정책 라우팅)을 단순화했다. 효과(effect, 효과)는 낡은 stage ownership(단계 소유권) 문구를 제거하고, claim discipline(주장 규율)을 공식 라우팅에 남기며, agent settings validator(에이전트 설정 검사기)가 `openai.yaml`의 필수 설명을 확인하게 된 것이다.
 - 답변 명확성(answer clarity, 답변 명확성), 코드 품질(code quality, 코드 품질), workflow drift guard(작업 드리프트 가드), reference scout(참고자료 탐색) 스킬을 추가했다. 효과(effect, 효과)는 Codex 답변, 구현 품질, 막힘 상황 분류, 외부 사용법 확인을 더 직접적으로 다루는 것이다.
 - workflow drift guard(작업 드리프트 가드)에 material recovery order(재료 복구 순서)를 추가했다. 효과(effect, 효과)는 필요한 재료가 없을 때 외부/레거시를 기본 대체 경로로 쓰지 않고, 현재 프로젝트 안에서 복구 또는 재생성할 수 있는지 먼저 확인하게 하는 것이다.
+- workflow drift guard(작업 드리프트 가드)에 recovery action rule(복구 행동 규칙)을 추가했다. 효과(effect, 효과)는 Codex가 직접 풀 수 있는 blocker(차단 지점)는 직접 풀고, 사용자 협조가 필요한 경우에는 정확한 요청과 복귀 지점을 남기게 하는 것이다.
