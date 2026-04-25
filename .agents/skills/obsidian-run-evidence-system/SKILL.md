@@ -7,6 +7,12 @@ description: Manage Project Obsidian Prime v2 run evidence across KPI measuremen
 
 Use this skill when a task creates, reviews, closes, summarizes, or registers run (`실행`) evidence.
 
+## Automatic Bundle
+
+When this skill triggers for run creation(실행 생성), run closeout(실행 종료), KPI report(KPI 보고), result summary(결과 요약), or run registry update(실행 등록부 갱신), pair it with `obsidian-claim-discipline`.
+
+Effect(효과): measurement(측정), identity(정체성), judgment(판정), and registry boundary(등록부 경계) stay explicit before any run is called reviewed(검토됨), selected(선택됨), positive(긍정), negative(부정), inconclusive(불충분), invalid(무효), operating_promotion(운영 승격), or runtime_authority(런타임 권위).
+
 ## Must Read
 
 - `docs/policies/kpi_measurement_standard.md`

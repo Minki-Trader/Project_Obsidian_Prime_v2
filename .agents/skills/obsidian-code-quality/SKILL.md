@@ -9,6 +9,12 @@ Use this skill when implementation quality matters, especially for quant researc
 
 This is different from `obsidian-code-surface-guard`. Code surface decides where code belongs. Code quality decides whether the implementation itself is clear, disciplined, and trustworthy.
 
+## Automatic Bundle
+
+Trigger automatically after `obsidian-code-surface-guard` for non-trivial code edit(비사소 코드 변경) in Python(파이썬), MQL5, feature(피처), label(라벨), split(분할), model(모델), dataset(데이터셋), parity(동등성), report(보고서), or test(테스트) code.
+
+Effect(효과): code quality(코드 품질), responsibility(책임), flow(흐름), contract(계약), and test intent(검증 의도)를 구현 중에 점검해서 실행만 되는 큰 스크립트로 흐르지 않게 한다.
+
 ## Quality Standard
 
 Code should read like a good expert answer:

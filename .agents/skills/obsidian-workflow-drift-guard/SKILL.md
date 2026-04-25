@@ -7,6 +7,12 @@ description: Prevent work from drifting away from the actual blocker by separati
 
 Use this skill when the work may drift from the original job into a nearby but different job.
 
+## Automatic Bundle
+
+Trigger automatically when source material(원재료), tool(도구), environment(환경), permission(권한), MT5 output(MT5 출력), external verification(외부 검증), or recovery(복구) is missing, broken, unavailable, or uncertain.
+
+Effect(효과): blocker(차단 사유)를 source material(원재료), tool(도구), environment(환경), permission(권한), code(코드), or unclear goal(불명확한 목표)로 나누고, 가능한 recovery(복구)나 retry(재시도)를 먼저 시도한다.
+
 ## Simple Model
 
 Think of making pottery:

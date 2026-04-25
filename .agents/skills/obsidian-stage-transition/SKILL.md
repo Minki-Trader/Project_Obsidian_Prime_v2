@@ -1,4 +1,4 @@
----
+﻿---
 name: obsidian-stage-transition
 description: Open, close, or hand off stages in Project Obsidian Prime v2 without state fragmentation. Use when active_stage changes, a stage is closed, or work is passed to the next foundation stage.
 ---
@@ -6,6 +6,12 @@ description: Open, close, or hand off stages in Project Obsidian Prime v2 withou
 # Obsidian Stage Transition
 
 Use this skill whenever a stage opens, closes, or hands work to another stage.
+
+## Automatic Bundle
+
+When this skill triggers for stage transition(단계 전환), active_stage(활성 단계) change, closeout(종료), handoff(인계), workspace_state(작업공간 상태), selection status(선택 상태), or registry(등록부) sync, pair it with `obsidian-claim-discipline`.
+
+Effect(효과): same-pass sync(같은 회차 동기화)와 claim boundary(주장 경계)를 함께 지켜서 단계 상태가 조각나지 않는다.
 
 ## Required Sync Pass
 

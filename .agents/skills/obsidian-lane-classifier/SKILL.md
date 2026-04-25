@@ -1,4 +1,4 @@
----
+﻿---
 name: obsidian-lane-classifier
 description: Classify Project Obsidian Prime v2 work into exploration, evidence, promotion, runtime, or extra lanes before planning or implementation. Use when a task involves alpha search, stage work, tiered readiness, promotion, runtime verification, extra stages, or ambiguous user intent that could mix exploration and operating discipline.
 ---
@@ -6,6 +6,12 @@ description: Classify Project Obsidian Prime v2 work into exploration, evidence,
 # Obsidian Lane Classifier
 
 Use this skill before a task packet or implementation when lane confusion could change the required discipline.
+
+## Automatic Bundle
+
+Trigger automatically when a task mixes lane(레인), exploration(탐색), evidence(근거), promotion(승격), runtime(런타임), Tier A/B/C(티어 A/B/C), hard gate(강한 게이트), operating_promotion(운영 승격), or runtime_authority(런타임 권위) language.
+
+Effect(효과): hard gate(강한 게이트)를 exploration permission(탐색 허가)으로 잘못 쓰지 않고, operating discipline(운영 규율)이 필요한 주장만 강하게 막는다.
 
 ## Must Read
 

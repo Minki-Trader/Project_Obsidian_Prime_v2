@@ -7,6 +7,12 @@ description: Explain Project Obsidian Prime v2 work in plain, beginner-readable 
 
 Use this skill whenever the answer is meant for the user, not only for another engineer.
 
+## Automatic Bundle
+
+For user-facing status summary(상태 요약), result report(결과 보고), completion report(완료 보고), plan(계획), or review explanation(검토 설명), apply this skill after the technical skill and pair it with `obsidian-claim-discipline`.
+
+Effect(효과): current meaning(현재 의미), not-yet-true boundary(아직 사실 아님 경계), and next action(다음 행동)을 쉽게 말하면서도 claim(주장)이 강해지지 않는다.
+
 ## Strong Triggers
 
 This skill is mandatory, not optional, for:

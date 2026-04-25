@@ -7,6 +7,12 @@ description: Enforce claim discipline in Project Obsidian Prime v2 by downgradin
 
 Use this skill when writing, editing, or summarizing project state.
 
+## Automatic Companion
+
+Run this skill as the companion check for user-facing report(사용자 보고), run evidence(실행 근거), stage transition(단계 전환), promotion(승격), runtime(런타임), and blocker(차단 사유) work.
+
+Effect(효과): claim boundary(주장 경계)를 낮출 곳은 낮추고, closure(종료), positive judgment(긍정 판정), operating promotion(운영 승격), runtime authority(런타임 권위)를 근거 없이 쓰지 않는다.
+
 ## Trigger Tokens
 
 If any relevant field contains one of these tokens, switch into strict claim discipline:
