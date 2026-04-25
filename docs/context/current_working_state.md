@@ -2,12 +2,12 @@
 
 - updated_on: `2026-04-25`
 - project_mode: `clean_stage_restart`
-- active_stage: `07_model_training_baseline__contract_preprocessing_smoke`
+- active_stage: `08_alpha_entry_protocol__tier_reporting_search_rules`
 - active_branch: `main`
 
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
-프로젝트는 깨끗한 단계 구조(clean stage structure, 깨끗한 단계 구조)로 다시 시작한 뒤, shared feature frame freeze(공유 피처 프레임 동결 산출물), training label/split(학습 라벨/분할), Stage 04(4단계) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사), Stage 06(6단계) runtime parity closed handoff(런타임 동등성 폐쇄 인계)까지 처리했다.
+프로젝트는 깨끗한 단계 구조(clean stage structure, 깨끗한 단계 구조)로 다시 시작한 뒤, shared feature frame freeze(공유 피처 프레임 동결 산출물), training label/split(학습 라벨/분할), Stage 04(4단계) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사), Stage 06(6단계) runtime parity closed handoff(런타임 동등성 폐쇄 인계), Stage 07(7단계) baseline training smoke(기준선 학습 스모크)까지 처리했다.
 
 이전 `Stage 00`부터 `Stage 07`까지의 흐름(flow, 흐름)은 현재 진실(current truth, 현재 진실)이 아니다. 저장소 바깥 압축 스냅샷(zip snapshot, 압축 스냅샷)으로 남겨 둔 과거 이력(prior history, 과거 이력)일 뿐이다.
 
@@ -123,31 +123,53 @@ Stage 06(6단계)의 질문(question, 질문)은 Python/MT5 parity(파이썬/MT5
 
 경계(boundary, 경계): 이 runtime authority(런타임 권위)는 Stage 06(6단계)의 minimum fixture set(최소 표본 묶음)에 대한 Python/MT5 parity(파이썬/MT5 동등성) 권위다. model quality(모델 품질), alpha quality(알파 품질), operating promotion(운영 승격)을 뜻하지 않는다.
 
-## 현재 단계(Current Stage, 현재 단계)
+## 최근 닫힌 Stage 07(최근 닫힌 7단계)
 
 `07_model_training_baseline__contract_preprocessing_smoke`
 
-Stage 07(7단계)의 질문(question, 질문)은 첫 baseline model training(기준선 모델 학습)을 재현 가능한 run(실행)으로 만들 수 있는가다.
+Stage 07(7단계)의 질문(question, 질문)은 첫 baseline model training(기준선 모델 학습)을 재현 가능한 run(실행)으로 만들 수 있는가였다.
 
 Stage 07(7단계)의 입력(input, 입력)은 Stage 04(4단계)의 58 feature(58개 피처) model input(모델 입력), Stage 05(5단계)의 feature integrity audit(피처 무결성 감사), Stage 06(6단계)의 runtime parity closed handoff(런타임 동등성 폐쇄 인계)다.
 
-효과(effect, 효과): 이제 Python-side preprocessing policy(파이썬 측 전처리 정책), training run contract(학습 실행 계약), baseline smoke training(기준선 스모크 학습)을 다룬다. MT5 runtime authority(MT5 런타임 권위)는 Stage 06(6단계) 최소 표본 묶음 기준으로 닫혔지만, 모델 품질(model quality, 모델 품질)은 아직 별도 검증 대상이다.
+결과(result, 결과)는 reviewed baseline training smoke closed(검토된 기준선 학습 스모크 폐쇄)다.
+
+- run_id(실행 ID): `20260425_stage07_baseline_training_smoke_v1`
+- judgment(판정): `positive_baseline_training_smoke_passed`
+- model artifact id(모델 산출물 ID): `model_fpmarkets_v2_stage07_logreg_smoke_v1`
+- model family(모델 계열): `sklearn_logistic_regression_multiclass`
+- feature count(피처 수): `58`
+- train/validation/OOS(학습/검증/표본외): `29222/9844/7584`
+- validation accuracy(검증 정확도): `0.45672490857375053`
+- OOS accuracy(표본외 정확도): `0.457542194092827`
+- run path(실행 경로): `stages/07_model_training_baseline__contract_preprocessing_smoke/02_runs/20260425_stage07_baseline_training_smoke_v1`
+
+효과(effect, 효과): preprocessing policy(전처리 정책), training run contract(학습 실행 계약), KPI record(KPI 기록), model artifact identity(모델 산출물 정체성)가 재현 가능한 실행(run, 실행)으로 묶였다.
+
+경계(boundary, 경계): 이 실행은 Python-side training smoke(파이썬 측 학습 스모크)다. model quality(모델 품질), alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)을 뜻하지 않는다.
+
+## 현재 단계(Current Stage, 현재 단계)
+
+`08_alpha_entry_protocol__tier_reporting_search_rules`
+
+Stage 08(8단계)의 질문(question, 질문)은 alpha exploration(알파 탐색)을 어떤 규칙으로 시작하고, Tier A/B(티어 A/B)를 어떻게 보고할 것인가다.
+
+효과(effect, 효과): 이제 alpha search protocol(알파 탐색 규칙), single split scout(단일 분할 탐색 판독), WFO(walk-forward optimization, 워크포워드 최적화) 경계, negative result memory(부정 결과 기억)를 문서로 고정한다.
 
 ## Pre-Alpha Stage Queue(알파 전 단계 대기열)
 
-model-backed alpha exploration(모델 근거 알파 탐색) 전에 남은 작업은 Stage 07~09(7~9단계)다.
+model-backed alpha exploration(모델 근거 알파 탐색) 전에 남은 작업은 Stage 08~09(8~9단계)다.
 
-- Stage 07(7단계): preprocessing policy(전처리 정책), model training run contract(모델 학습 실행 계약), baseline smoke training(기준선 스모크 학습)
-- Stage 08(8단계): alpha search protocol(알파 탐색 규칙)과 Tier A/B reporting(티어 A/B 보고)
+- Stage 07(7단계): closed(폐쇄됨) - preprocessing policy(전처리 정책), model training run contract(모델 학습 실행 계약), baseline smoke training(기준선 스모크 학습)
+- Stage 08(8단계): active(활성) - alpha search protocol(알파 탐색 규칙)과 Tier A/B reporting(티어 A/B 보고)
 - Stage 09(9단계): registry/current truth/publish handoff(등록부/현재 진실/게시 인계)
 
 효과(effect, 효과): 다음 작업 때 해야 할 일이 한 단계 안에서 섞이지 않는다.
 
 ## 현재 경계(Current Boundary, 현재 경계)
 
-이 상태는 아직 model training(모델 학습) 완료나 operating promotion(운영 승격)이 아니다.
+이 상태는 아직 alpha search opened(알파 탐색 개시)나 operating promotion(운영 승격)이 아니다.
 
-지금 닫힌 주장은 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치), 58 feature(58개 피처) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사) 통과, 그리고 Stage 06(6단계) minimum fixture set(최소 표본 묶음)의 Python/MT5 runtime parity(파이썬/MT5 런타임 동등성) 통과라는 evidence claim(근거 주장)이다.
+지금 닫힌 주장은 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치), 58 feature(58개 피처) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사) 통과, Stage 06(6단계) minimum fixture set(최소 표본 묶음)의 Python/MT5 runtime parity(파이썬/MT5 런타임 동등성) 통과, Stage 07(7단계)의 Python-side training smoke(파이썬 측 학습 스모크) 통과라는 evidence claim(근거 주장)이다.
 
 이 가중치는 NDX 실제 구성비(actual NDX index weights, 실제 NDX 지수 가중치), QQQ 보유비중(QQQ holdings weights, QQQ 보유비중), 시가총액(market cap, 시가총액), 유동주식수(float, 유동주식수)를 반영하지 않는다.
 
@@ -158,3 +180,4 @@ model-backed alpha exploration(모델 근거 알파 탐색) 전에 남은 작업
 - `Tier A(티어 A)`만 탐색의 기준선(anchor, 기준선)이라는 주장
 - `Tier B(티어 B)`가 모델 연구(model study, 모델 연구) 전에 끝없는 사전검증(pre-validation, 사전검증)을 받아야 한다는 주장
 - MT5 price-proxy weights(MT5 가격 대리 가중치)를 actual index weights(실제 지수 가중치)로 읽는 주장
+- Stage 07(7단계) baseline training smoke(기준선 학습 스모크)를 alpha quality(알파 품질)나 live readiness(실거래 준비)로 읽는 주장
