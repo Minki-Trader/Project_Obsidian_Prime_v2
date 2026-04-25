@@ -69,6 +69,8 @@
    - 트리거(trigger, 작동 조건): source material(원재료), tool(도구), environment(환경), permission(권한), MT5 output(MT5 출력), external verification(외부 검증)이 없거나 틀린 작업
    - 자동 호출(auto-call, 자동 호출): `obsidian-workflow-drift-guard(작업 드리프트 가드)`
    - 효과(effect, 효과): 진짜 blocker(차단 사유)를 복구하거나, 복구가 안 되면 claim(주장)을 낮춰 blocked(차단)로 남긴다.
+   - blocked(차단) 전 필수 증거(required evidence, 필수 증거): recovery attempt(복구 시도), created or patched tool(생성/수정한 도구), execution attempt(실행 시도), failure log(실패 로그), required user action(필요 사용자 행동) 중 하나를 남긴다.
+   - MT5 주의(MT5 caution, MT5 주의): MetaEditor compile(메타에디터 컴파일)은 MT5 snapshot(MT5 스냅샷), terminal file output(터미널 파일 출력), strategy tester output(전략 테스터 출력)을 대체하지 않는다.
 7. 확대 코드 품질 자동 묶음(Code Quality Auto Bundle, 코드 품질 자동 묶음)
    - 트리거(trigger, 작동 조건): 모델 학습(model training, 모델 학습), feature(피처), label(라벨), split(분할), parity(동등성), report materializer(보고서 물질화 도구), test(테스트)처럼 결과 해석을 바꿀 수 있는 비사소 코드 변경(non-trivial code edit, 비사소 코드 변경)
    - 자동 호출(auto-call, 자동 호출): `obsidian-code-quality(코드 품질)`를 코드 표면 가드(code-surface guard, 코드 표면 가드) 뒤에 붙인다.

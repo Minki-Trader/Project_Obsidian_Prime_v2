@@ -1,0 +1,149 @@
+{
+  "run_id": "20260425_stage06_runtime_parity_closed_v1",
+  "stage_id": "06_runtime_parity__python_mt5_runtime_authority",
+  "lane": "runtime",
+  "secondary_lane": "evidence",
+  "materializer_version": "fpmarkets_v2_stage06_runtime_parity_v2",
+  "status": "reviewed",
+  "stage_status": "reviewed_runtime_parity_closed",
+  "judgment": "positive_runtime_parity_passed",
+  "external_verification_status": "completed",
+  "hard_gate_applicable": "yes",
+  "runtime_state": "runtime_authority",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "tolerance": 1e-05,
+  "source_dataset_id": "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58",
+  "model_input_dataset_id": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+  "model_input_rows": 46650,
+  "stage05_judgment": "positive_feature_integrity_audit_passed",
+  "input_hashes": {
+    "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "model_input_summary_sha256": "af3745cbf1f6d62dc85a489bcda55899d882c910d62021b935e1cea8ab4d4a40",
+    "weights_sha256": "08531dbf5235a166e5b2e9dc675ec3d41a0cc84066d00592c37f500aa8f89981",
+    "stage05_audit_sha256": "db2f2ef8f726a28216454ae9d811923c5cc741ca3e9be626e98292fbf7f7b889"
+  },
+  "fixtures": [
+    {
+      "fixture_id": "regular_cash_session_20250303_1830",
+      "fixture_type": "regular_cash_session",
+      "description": "US100 cash-session flow(US100 \uc815\uaddc\uc7a5 \ud750\ub984) \uc548\uc758 normal closed bar(\uc815\uc0c1 \ud655\uc815\ubd09)",
+      "timestamp": "2025-03-03T18:30:00+00:00"
+    },
+    {
+      "fixture_id": "session_boundary_cash_open_20240610_1635",
+      "fixture_type": "session_boundary_cash_open",
+      "description": "cash-open boundary row(\uc815\uaddc\uc7a5 \uc2dc\uc791 \uacbd\uacc4 \ud589)\uc774\uba70 session flags(\uc138\uc158 \ud50c\ub798\uadf8)\ub97c \uac80\uc99d",
+      "timestamp": "2024-06-10T16:35:00+00:00"
+    },
+    {
+      "fixture_id": "dst_sensitive_20240311_1640",
+      "fixture_type": "dst_sensitive",
+      "description": "New York DST transition week(\ub274\uc695 \uc11c\uba38\ud0c0\uc784 \uc804\ud658 \uc8fc\uac04) \uc774\ud6c4 row(\ud589)",
+      "timestamp": "2024-03-11T16:40:00+00:00"
+    },
+    {
+      "fixture_id": "external_alignment_20250102_1730",
+      "fixture_type": "external_alignment",
+      "description": "required external-symbol features(\ud544\uc218 \uc678\ubd80 \uc2ec\ubcfc \ud53c\ucc98)\ub97c \ubaa8\ub450 \uac00\uc9c4 row(\ud589)",
+      "timestamp": "2025-01-02T17:30:00+00:00"
+    },
+    {
+      "fixture_id": "negative_required_missing_input_20250102_1730",
+      "fixture_type": "negative_required_missing_input",
+      "description": "synthetic required-missing-input fixture(\ud569\uc131 \ud544\uc218 \uc785\ub825 \ub204\ub77d \ud45c\ubcf8); VIX \uc81c\uac70; row_ready(\ud589 \uc900\ube44 \uc0c1\ud0dc)\ub294 false(\uac70\uc9d3)",
+      "timestamp": "2025-01-02T17:30:00+00:00",
+      "synthetic_missing_input": "VIX",
+      "claim_scope": "validator_behavior_only_until_mt5_runtime_snapshot_exists"
+    }
+  ],
+  "snapshot_counts": {
+    "python_rows": 5,
+    "mt5_rows": 5
+  },
+  "comparison": {
+    "status": "pass",
+    "compared_fixture_count": 5,
+    "ready_fixture_count": 4,
+    "max_abs_diff": 1.7512503873717833e-06,
+    "max_abs_diff_feature": "atr_50",
+    "tolerance": 1e-05,
+    "failures": []
+  },
+  "mt5_source_audit": {
+    "status": "pass",
+    "items": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+        "exists": true,
+        "sha256": "b19a300c98591a6048f95ee07e7e529e7e5663bbea2e6f67f8375f288116bd5c",
+        "equal_weight_marker_present": false,
+        "current_dataset_id_present": true,
+        "price_proxy_weight_table_present": true,
+        "status": "current_or_not_applicable"
+      },
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+        "exists": true,
+        "sha256": "1c368150155d1f7af16e8f14be29eb2c5422d2c5f3ca3f19df380ebaf82300f6",
+        "equal_weight_marker_present": false,
+        "current_dataset_id_present": true,
+        "price_proxy_weight_table_present": true,
+        "status": "current_or_not_applicable"
+      }
+    ],
+    "failures": []
+  },
+  "compile_log_audit": {
+    "status": "pass",
+    "items": [
+      {
+        "path": "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/metaeditor_script_compile.log",
+        "exists": true,
+        "sha256": "9c9f1191710e57115c2a27d0600486a6d0a254324577564769e30257067ba276",
+        "line_count": 39,
+        "status": "available"
+      },
+      {
+        "path": "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/metaeditor_ea_compile.log",
+        "exists": true,
+        "sha256": "5725408d7930be6048d27f61115b40e6142a993d7fbc04b7b92a626011fe6adf",
+        "line_count": 39,
+        "status": "available"
+      }
+    ],
+    "failures": []
+  },
+  "handoff_package": {
+    "dataset_id": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+    "fixture_set_id": "fixture_fpmarkets_v2_stage06_runtime_minimum_v1",
+    "bundle_id": "bundle_fpmarkets_v2_stage06_runtime_parity_v1",
+    "runtime_id": "runtime_fpmarkets_v2_python_mt5_stage06_parity_v1",
+    "report_id": "report_fpmarkets_v2_stage06_runtime_parity_closed_v1",
+    "parser_version": "fpmarkets_v2_stage04_model_input_feature_set_v2_mt5_price_proxy_58",
+    "parser_contract_version": "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-25",
+    "feature_contract_version": "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-25",
+    "runtime_contract_version": "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md@2026-04-25",
+    "mt5_input_order_contract_version": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md@2026-04-25",
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "run_id": "20260425_stage06_runtime_parity_closed_v1",
+    "stage_id": "06_runtime_parity__python_mt5_runtime_authority",
+    "target_windows_raw_broker_clock": [
+      "2025.03.03 18:30:00",
+      "2024.06.10 16:35:00",
+      "2024.03.11 16:40:00",
+      "2025.01.02 17:30:00"
+    ],
+    "target_windows_input_string": "2025.03.03 18:30:00;2024.06.10 16:35:00;2024.03.11 16:40:00;2025.01.02 17:30:00",
+    "negative_fixture": {
+      "fixture_id": "negative_required_missing_input_20250102_1730",
+      "required_missing_input": "VIX",
+      "expected_row_ready": false
+    },
+    "python_snapshot_path": "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/python_feature_snapshot.jsonl",
+    "expected_mt5_snapshot_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/runtime_parity/20260425_stage06_runtime_parity_closed_v1/mt5_feature_snapshot.jsonl",
+    "weights_path": "foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv",
+    "mt5_tool_boundary": "Checked-in MT5 audit tools(\uc800\uc7a5\uc18c MT5 \uac10\uc0ac \ub3c4\uad6c)\ub294 MT5 price-proxy monthly top3 weights(MT5 \uac00\uaca9 \ub300\ub9ac \uc6d4\ubcc4 top3 \uac00\uc911\uce58)\ub97c \uc77d\uace0 \uc774 package(\ubb36\uc74c)\uc640 \uac19\uc740 identity fields(\uc815\uccb4\uc131 \ud544\ub4dc)\ub97c \ucd9c\ub825\ud558\uae30 \uc804\uae4c\uc9c0 stale(\ub0a1\uc74c)\ub85c \ub2e4\ub8ec\ub2e4."
+  },
+  "evidence_boundary": "Stage 06 run evidence(Stage 06 \uc2e4\ud589 \uadfc\uac70) only(\ud55c\uc815). runtime authority(\ub7f0\ud0c0\uc784 \uad8c\uc704)\ub97c \uc8fc\uc7a5\ud558\ub824\uba74 completed MT5 runtime snapshot(\uc644\ub8cc\ub41c MT5 \ub7f0\ud0c0\uc784 \uc2a4\ub0c5\uc0f7)\uc774 \ud544\uc694\ud558\ub2e4. blocked(\ucc28\ub2e8) \uc0c1\ud0dc\uc5d0\uc11c\ub294 fixture packet(\ud45c\ubcf8 \ubb36\uc74c), Python snapshot(\ud30c\uc774\uc36c \uc2a4\ub0c5\uc0f7), stale MT5 tool audit(\ub0a1\uc740 MT5 \ub3c4\uad6c \uac10\uc0ac), retry condition(\uc7ac\uc2dc\ub3c4 \uc870\uac74)\ub9cc \uae30\ub85d\ud55c\ub2e4.",
+  "blockers": []
+}

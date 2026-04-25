@@ -8,7 +8,7 @@ exploration_rule: "tier_a_and_tier_b_are_both_open_to_full_exploration"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_blocked_stage07_active"
+  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_active"
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
@@ -16,12 +16,12 @@ current_focus:
   - "treat the 56-feature model input as an interim quarantine artifact, not the final pre-alpha path"
   - "treat the Stage 04 top3 weights as MT5 price-proxy weights, not actual NDX/QQQ weights"
   - "treat the Stage 05 audit as feature-integrity evidence, not model quality or runtime authority"
-  - "treat the Stage 06 runtime parity packet as blocked evidence, not runtime authority"
+  - "treat the Stage 06 runtime parity packet as completed MT5 runtime-authority evidence for the minimum fixture set"
   - "use the audited 58-feature MT5 price-proxy model input as the Stage 07 training smoke surface"
   - "follow the Stage 04-09 pre-alpha stage queue before model-backed alpha exploration"
-  - "treat runtime parity as blocked until a current MT5 price-proxy runtime snapshot is produced"
+  - "use the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority handoff into Stage 07"
 pre_alpha_stage_queue:
-  status: "stage04_closed_stage05_closed_stage06_blocked_stage07_active"
+  status: "stage04_closed_stage05_closed_stage06_closed_stage07_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
   decision_path: "docs/decisions/2026-04-25_pre_alpha_stage_queue.md"
   formal_pre_alpha_feature_count: 58
@@ -38,7 +38,7 @@ pre_alpha_stage_queue:
     stage06:
       stage_id: "06_runtime_parity__python_mt5_runtime_authority"
       ownership: "python_mt5_parity_and_full_mt5_runtime_authority"
-      status: "reviewed_blocked_handoff_to_stage07_complete"
+      status: "reviewed_runtime_parity_closed_handoff_to_stage07_complete"
     stage07:
       stage_id: "07_model_training_baseline__contract_preprocessing_smoke"
       ownership: "preprocessing_policy_model_training_contract_and_baseline_smoke_run"
@@ -228,7 +228,7 @@ stage05_feature_integrity_audit:
   audit_summary_path: "stages/05_feature_integrity__formula_time_alignment_leakage_audit/02_runs/20260425_stage05_feature_integrity_audit_v1/audit_summary.json"
 stage06_runtime_parity_blocked:
   run_id: "20260425_stage06_runtime_parity_blocked_v1"
-  status: "reviewed_blocked_handoff_to_stage07_complete"
+  status: "superseded_by_20260425_stage06_runtime_parity_closed_v1"
   judgment: "blocked_runtime_authority_mt5_snapshot_missing_or_stale"
   external_verification_status: "blocked"
   runtime_state: "runtime_probe_blocked"
@@ -245,9 +245,30 @@ stage06_runtime_parity_blocked:
   boundary: "blocked_runtime_probe_not_runtime_authority"
   run_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1"
   report_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1/runtime_parity_report.json"
+stage06_runtime_parity_closed:
+  run_id: "20260425_stage06_runtime_parity_closed_v1"
+  status: "reviewed_runtime_parity_closed_handoff_to_stage07_complete"
+  judgment: "positive_runtime_parity_passed"
+  external_verification_status: "completed"
+  runtime_state: "runtime_authority"
+  fixture_set_id: "fixture_fpmarkets_v2_stage06_runtime_minimum_v1"
+  bundle_id: "bundle_fpmarkets_v2_stage06_runtime_parity_v1"
+  report_id: "report_fpmarkets_v2_stage06_runtime_parity_closed_v1"
+  python_snapshot_rows: 5
+  mt5_snapshot_rows: 5
+  compared_fixture_count: 5
+  ready_fixture_count: 4
+  max_abs_diff: 0.0000017512503873717833
+  max_abs_diff_feature: "atr_50"
+  tolerance: 0.00001
+  metaeditor_compile_status: "pass_0_errors_0_warnings"
+  mt5_strategy_tester_status: "pass_snapshot_written"
+  boundary: "runtime_authority_for_stage06_minimum_fixture_set_not_model_quality_or_operating_promotion"
+  run_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1"
+  report_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/runtime_parity_report.json"
+  mt5_snapshot_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/mt5_feature_snapshot.jsonl"
 open_items:
   - "Stage 07: fix scaler/preprocessing policy, write the first model training run contract, and run a baseline smoke training"
-  - "Runtime follow-up: replace or update stale MT5 audit tools so they load MT5 price-proxy monthly top3 weights and emit the Stage 06 identity fields"
   - "Stage 08: write alpha search protocol and Tier A/B reporting rules"
   - "Stage 09: sync registries, current truth docs, changelog, commit/PR boundary, and alpha entry packet"
   - "only open model-backed alpha exploration after the Stage 04-09 queue has explicit handoff status"
@@ -260,6 +281,7 @@ forbidden_shortcuts:
   - "do not treat the 56-feature interim quarantine artifact as the final pre-alpha model input"
   - "do not treat MT5 price-proxy weights as actual index, fund, market-cap, or float-adjusted weights"
   - "do not treat the Stage 05 feature-integrity audit as runtime parity or model quality"
-  - "do not treat the Stage 06 blocked runtime probe as runtime authority"
+  - "do not treat the superseded Stage 06 blocked runtime probe as current truth"
+  - "do not treat Stage 06 runtime authority as model quality or operating promotion"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

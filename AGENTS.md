@@ -74,8 +74,11 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 외부 검증(external verification, 외부 검증)이 필요한 주장(claim, 주장)은 다음 작업(next work, 다음 작업)으로 반복해서 밀 수 없다.
 
 - MT5(`MetaTrader 5`, 메타트레이더5), 브로커 터미널(broker terminal, 브로커 터미널), 전략 테스터(strategy tester, 전략 테스터), 파일 인계(file handoff, 파일 인계), 런타임 동등성(runtime parity, 런타임 동등성)에 기대는 주장은 같은 작업 회차(pass, 회차)에서 가장 좁은 충분한 외부 검증(narrow sufficient external check, 좁은 충분 외부 검증)을 먼저 시도한다.
+- 도구(tool, 도구), 스크립트(script, 스크립트), 설정(configuration, 설정), 실행 인계 파일(handoff file, 인계 파일)이 낡았거나 없으면 blocked(차단)로 닫기 전에 현재 프로젝트 기준으로 만들거나 고쳐서 실행을 먼저 시도한다.
+- MT5 검증(MT5 verification, MT5 검증)에서 MetaEditor compile(메타에디터 컴파일)은 좁은 외부 검증(narrow external check, 좁은 외부 검증)의 일부일 수 있지만, MT5 snapshot(MT5 스냅샷), strategy tester output(전략 테스터 출력), terminal file output(터미널 파일 출력)을 대체하지 않는다.
 - 외부 검증이 없으면 그 주장은 검토 완료(reviewed, 검토됨)나 긍정 판정(positive judgment, 긍정 판정)으로 닫지 않는다. 대신 범위를 낮춰 말하거나, 불충분(inconclusive, 불충분), 무효(invalid, 무효), 또는 차단(blocked, 차단)으로 적는다.
-- 같은 빠진 외부 검증(missing external verification, 빠진 외부 검증)을 두 번 연속 next work(다음 작업)로만 남기지 않는다. 실행하거나, 주장을 낮추거나, 차단 사유(blocker, 차단 사유)를 기록한다.
+- 같은 빠진 외부 검증(missing external verification, 빠진 외부 검증)을 두 번 연속 next work(다음 작업)로만 남기지 않는다. 실행하거나, 현재 도구를 생성/수정해서 실행을 시도하거나, 사용자 행동(user action, 사용자 행동)이 필요한 정확한 terminal action(터미널 행동)을 요청하거나, 주장을 낮추거나, 차단 사유(blocker, 차단 사유)를 기록한다.
+- blocked(차단) 판정은 복구 시도(recovery attempt, 복구 시도), 실행 명령(execution command, 실행 명령), 실패 로그(failure log, 실패 로그), 또는 필요한 사용자 행동(user action, 사용자 행동)을 남긴 뒤에만 쓴다.
 
 ## 현재 진실(Current Truth, 현재 진실)
 

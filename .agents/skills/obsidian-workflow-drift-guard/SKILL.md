@@ -56,12 +56,37 @@ Missing required material, tools, or environment is not a reason to abandon or q
 
 Use this order:
 
-1. If Codex can restore, regenerate, install, configure, fetch, or run the required current-project material or tool within available permissions, do that first.
-2. If user action is required, ask for the exact action and explain what work resumes after it is done.
-3. After recovery, return to the original product instead of drifting into a new task.
-4. Only mark the task blocked when neither Codex action nor a clear user action can complete the prerequisite in the current pass.
+1. If Codex can restore, regenerate, install, configure, fetch, create, patch, or run the required current-project material or tool within available permissions, do that first.
+2. If the current tool is stale, wrong-surface, or missing, create or patch the narrow current-project tool before reporting `blocked`.
+3. If an external runtime check is required, execute the narrowest real runtime check that can produce the requested artifact or failure log.
+4. If user action is required, ask for the exact action and explain what work resumes after it is done.
+5. After recovery, return to the original product instead of drifting into a new task.
+6. Only mark the task blocked when neither Codex action nor a clear user action can complete the prerequisite in the current pass.
 
 Example: if MT5 installation, broker login, terminal setup, or account connection is required, ask the user for that setup explicitly. Once available, resume the current project regeneration or verification path.
+
+## Pre-Blocked Evidence Rule
+
+Before writing `blocked`, produce at least one of these evidence types:
+
+- `recovery_attempt`: the exact source material(원재료), tool(도구), or environment(환경) recovery tried in the current pass
+- `created_or_patched_tool`: the current-project tool created or patched to remove the blocker
+- `execution_attempt`: the command, terminal action, MT5 run, strategy tester run, or script invocation that tried to produce the requested output
+- `failure_log`: the error, missing terminal state, permission failure, or unavailable environment that stopped the run
+- `required_user_action`: the exact user action needed, with the resume point after it is done
+
+Effect(효과): `blocked(차단)` means the pass tried the narrow recovery path first, not merely that the missing work was noticed.
+
+## MT5 Runtime Rule
+
+For MT5(`MetaTrader 5`, 메타트레이더5), MetaEditor compile(메타에디터 컴파일) is not enough when the requested product is MT5 snapshot(MT5 스냅샷), terminal file output(터미널 파일 출력), strategy tester output(전략 테스터 출력), or runtime parity(런타임 동등성).
+
+Required behavior:
+
+1. If the checked-in MQL5 tool is stale, create or patch a narrow current-project script/EA before blocked reporting.
+2. Try to run it through the available terminal path, command-line path, or explicit user terminal action.
+3. If Codex cannot drive the MT5 terminal, ask for the exact terminal action and name the output file that should appear.
+4. Report `blocked` only with recovery attempt(복구 시도), execution attempt(실행 시도), failure log(실패 로그), or required user action(필요 사용자 행동).
 
 ## Guardrails
 
@@ -72,6 +97,7 @@ Example: if MT5 installation, broker login, terminal setup, or account connectio
 - If Codex can remove the blocker within available permissions, remove it before reporting `blocked`.
 - If user cooperation is required, ask for the exact setup, credential, local data, terminal action, or permission needed and state the resume point.
 - If verification cannot run, name whether the blocker is material, tool, environment, or permission.
+- Do not treat compile-only evidence as runtime output when the requested artifact is a runtime snapshot or terminal-generated file.
 - If the original goal changes, say that it changed before proceeding.
 - Do not close the task with a polished report that only explains why the real work did not happen.
 

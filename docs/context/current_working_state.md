@@ -7,7 +7,7 @@
 
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
-프로젝트는 깨끗한 단계 구조(clean stage structure, 깨끗한 단계 구조)로 다시 시작한 뒤, shared feature frame freeze(공유 피처 프레임 동결 산출물), training label/split(학습 라벨/분할), Stage 04(4단계) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사), Stage 06(6단계) blocked runtime parity handoff(차단된 런타임 동등성 인계)까지 처리했다.
+프로젝트는 깨끗한 단계 구조(clean stage structure, 깨끗한 단계 구조)로 다시 시작한 뒤, shared feature frame freeze(공유 피처 프레임 동결 산출물), training label/split(학습 라벨/분할), Stage 04(4단계) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사), Stage 06(6단계) runtime parity closed handoff(런타임 동등성 폐쇄 인계)까지 처리했다.
 
 이전 `Stage 00`부터 `Stage 07`까지의 흐름(flow, 흐름)은 현재 진실(current truth, 현재 진실)이 아니다. 저장소 바깥 압축 스냅샷(zip snapshot, 압축 스냅샷)으로 남겨 둔 과거 이력(prior history, 과거 이력)일 뿐이다.
 
@@ -103,21 +103,25 @@ Stage 05(5단계)는 Stage 04(4단계)에서 선택한 58 feature(58개 피처) 
 
 Stage 06(6단계)의 질문(question, 질문)은 Python/MT5 parity(파이썬/MT5 동등성)와 full MT5 runtime authority(완전 MT5 런타임 권위)를 alpha exploration(알파 탐색) 전 기준으로 닫을 수 있는가였다.
 
-결과(result, 결과)는 blocked handoff(차단 인계)다.
+결과(result, 결과)는 reviewed runtime parity closed(검토된 런타임 동등성 폐쇄)다.
 
-- run_id(실행 ID): `20260425_stage06_runtime_parity_blocked_v1`
-- judgment(판정): `blocked_runtime_authority_mt5_snapshot_missing_or_stale`
-- external verification status(외부 검증 상태): `blocked(차단)`
-- runtime state(런타임 상태): `runtime_probe_blocked(차단된 런타임 탐침)`
+- run_id(실행 ID): `20260425_stage06_runtime_parity_closed_v1`
+- judgment(판정): `positive_runtime_parity_passed`
+- external verification status(외부 검증 상태): `completed(완료)`
+- runtime state(런타임 상태): `runtime_authority(런타임 권위)`
 - Python snapshot rows(파이썬 스냅샷 행): `5`
+- MT5 snapshot rows(MT5 스냅샷 행): `5`
+- compared fixtures(비교 표본): `5`
 - ready fixtures(준비 표본): `4`
-- MT5 snapshot rows(MT5 스냅샷 행): `0`
+- max abs diff(최대 절대 차이): `0.0000017512503873717833`
+- max diff feature(최대 차이 피처): `atr_50`
 - MetaEditor compile(메타에디터 컴파일): `0 errors, 0 warnings(오류 0, 경고 0)`
-- report path(보고서 경로): `stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1/runtime_parity_report.json`
+- MT5 strategy tester(전략 테스터): `snapshot_written(스냅샷 작성됨)`
+- report path(보고서 경로): `stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/runtime_parity_report.json`
 
-효과(effect, 효과): Stage 06(6단계)은 다음 작업으로 미루기만 한 상태가 아니다. 최소 표본 묶음(minimum fixture set, 최소 표본 묶음), Python snapshot(파이썬 스냅샷), MT5 handoff package(MT5 인계 묶음), 컴파일 로그(compile log, 컴파일 로그), 차단 사유(blocker, 차단 사유)를 남겼다.
+효과(effect, 효과): Stage 06(6단계)은 MT5 price-proxy weights(MT5 가격 대리 가중치)를 쓰는 현재 MT5 audit tool(MT5 감사 도구), Python snapshot(파이썬 스냅샷), MT5 snapshot(MT5 스냅샷), fixture set(표본 묶음), compile log(컴파일 로그), strategy tester run(전략 테스터 실행) 근거로 닫혔다.
 
-차단 사유(blocker, 차단 사유)는 MT5 snapshot(MT5 스냅샷)이 없고, 기존 MT5 audit tool(MT5 감사 도구)이 Stage 04(4단계)의 MT5 price-proxy weights(MT5 가격 대리 가중치)가 아니라 equal weight(동일가중) 기준이라는 점이다.
+경계(boundary, 경계): 이 runtime authority(런타임 권위)는 Stage 06(6단계)의 minimum fixture set(최소 표본 묶음)에 대한 Python/MT5 parity(파이썬/MT5 동등성) 권위다. model quality(모델 품질), alpha quality(알파 품질), operating promotion(운영 승격)을 뜻하지 않는다.
 
 ## 현재 단계(Current Stage, 현재 단계)
 
@@ -125,9 +129,9 @@ Stage 06(6단계)의 질문(question, 질문)은 Python/MT5 parity(파이썬/MT5
 
 Stage 07(7단계)의 질문(question, 질문)은 첫 baseline model training(기준선 모델 학습)을 재현 가능한 run(실행)으로 만들 수 있는가다.
 
-Stage 07(7단계)의 입력(input, 입력)은 Stage 04(4단계)의 58 feature(58개 피처) model input(모델 입력), Stage 05(5단계)의 feature integrity audit(피처 무결성 감사), Stage 06(6단계)의 blocked runtime handoff(차단된 런타임 인계)다.
+Stage 07(7단계)의 입력(input, 입력)은 Stage 04(4단계)의 58 feature(58개 피처) model input(모델 입력), Stage 05(5단계)의 feature integrity audit(피처 무결성 감사), Stage 06(6단계)의 runtime parity closed handoff(런타임 동등성 폐쇄 인계)다.
 
-효과(effect, 효과): 이제 Python-side preprocessing policy(파이썬 측 전처리 정책), training run contract(학습 실행 계약), baseline smoke training(기준선 스모크 학습)을 다룬다. MT5 runtime authority(MT5 런타임 권위)는 전제하지 않는다.
+효과(effect, 효과): 이제 Python-side preprocessing policy(파이썬 측 전처리 정책), training run contract(학습 실행 계약), baseline smoke training(기준선 스모크 학습)을 다룬다. MT5 runtime authority(MT5 런타임 권위)는 Stage 06(6단계) 최소 표본 묶음 기준으로 닫혔지만, 모델 품질(model quality, 모델 품질)은 아직 별도 검증 대상이다.
 
 ## Pre-Alpha Stage Queue(알파 전 단계 대기열)
 
@@ -141,9 +145,9 @@ model-backed alpha exploration(모델 근거 알파 탐색) 전에 남은 작업
 
 ## 현재 경계(Current Boundary, 현재 경계)
 
-이 상태는 아직 model training(모델 학습) 완료도 아니고 runtime authority(런타임 권위)도 아니다.
+이 상태는 아직 model training(모델 학습) 완료나 operating promotion(운영 승격)이 아니다.
 
-지금 닫힌 주장은 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치), 58 feature(58개 피처) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사) 통과, 그리고 Stage 06(6단계)이 blocked runtime probe(차단된 런타임 탐침)로 인계됐다는 evidence claim(근거 주장)뿐이다.
+지금 닫힌 주장은 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치), 58 feature(58개 피처) model input(모델 입력), Stage 05(5단계) feature integrity audit(피처 무결성 감사) 통과, 그리고 Stage 06(6단계) minimum fixture set(최소 표본 묶음)의 Python/MT5 runtime parity(파이썬/MT5 런타임 동등성) 통과라는 evidence claim(근거 주장)이다.
 
 이 가중치는 NDX 실제 구성비(actual NDX index weights, 실제 NDX 지수 가중치), QQQ 보유비중(QQQ holdings weights, QQQ 보유비중), 시가총액(market cap, 시가총액), 유동주식수(float, 유동주식수)를 반영하지 않는다.
 

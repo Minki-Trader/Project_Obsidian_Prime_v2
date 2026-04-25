@@ -130,6 +130,9 @@ AGENT_PROMPT_REQUIRED_CONCEPTS = {
         "environment",
         "recovery",
         "retry",
+        "external verification",
+        "terminal action",
+        "pre-block evidence",
     ),
     ".agents/skills/obsidian-code-quality/agents/openai.yaml": (
         "code quality",

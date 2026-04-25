@@ -1,9 +1,9 @@
 #property strict
 #property script_show_inputs
 
-input string InpOutputPath = "Project_Obsidian_Prime_v2/runtime_parity/runtime_parity_pack_0001/mt5_feature_snapshot_audit_fpmarkets_v2_runtime_minimum_0001.jsonl";
+input string InpOutputPath = "Project_Obsidian_Prime_v2/runtime_parity/20260425_stage06_runtime_parity_closed_v1/mt5_feature_snapshot.jsonl";
 input bool   InpOutputUseCommonFiles = true;
-input string InpTargetWindowsUtc = "2022.09.02 17:00:00;2022.09.01 20:00:00;2022.11.09 21:00:00;2022.09.01 19:55:00;2022.09.01 13:35:00";
+input string InpTargetWindowsUtc = "2025.03.03 18:30:00;2024.06.10 16:35:00;2024.03.11 16:40:00;2025.01.02 17:30:00";
 input string InpTargetWindowsUtcPart2 = "";
 input string InpTargetWindowsUtcPart3 = "";
 input string InpTargetWindowsUtcPart4 = "";
@@ -11,17 +11,20 @@ input string InpMainSymbol = "US100";
 input ENUM_TIMEFRAMES InpTimeframe = PERIOD_M5;
 input int    InpMainWarmupBars = 300;
 input int    InpExternalWarmupBars = 25;
-input string InpWindowStartUtc = "2022.08.01 00:00:00";
-input string InpDatasetId = "dataset_fpmarkets_v2_us100_m5_20220801_20260413_freeze01";
-input string InpFixtureSetId = "fixture_fpmarkets_v2_runtime_minimum_0001";
-input string InpBundleId = "bundle_fpmarkets_v2_runtime_minimum_0001";
-input string InpRuntimeId = "runtime_fpmarkets_v2_mt5_snapshot_0001";
-input string InpReportId = "report_fpmarkets_v2_runtime_parity_0001";
-input string InpParserVersion = "fpmarkets_v2_stage01_materializer_v1";
-input string InpParserContractVersion = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-16";
-input string InpFeatureContractVersion = "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-16";
-input string InpRuntimeContractVersion = "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md@2026-04-16";
+input string InpWindowStartUtc = "2022.09.01 00:00:00";
+input string InpDatasetId = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2";
+input string InpSourceDatasetId = "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58";
+input string InpFixtureSetId = "fixture_fpmarkets_v2_stage06_runtime_minimum_v1";
+input string InpBundleId = "bundle_fpmarkets_v2_stage06_runtime_parity_v1";
+input string InpRuntimeId = "runtime_fpmarkets_v2_python_mt5_stage06_parity_v1";
+input string InpReportId = "report_fpmarkets_v2_stage06_runtime_parity_closed_v1";
+input string InpParserVersion = "fpmarkets_v2_stage04_model_input_feature_set_v2_mt5_price_proxy_58";
+input string InpParserContractVersion = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-25";
+input string InpFeatureContractVersion = "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-25";
+input string InpRuntimeContractVersion = "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md@2026-04-25";
+input string InpMt5InputOrderContractVersion = "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md@2026-04-25";
 input string InpFeatureOrderHash = "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2";
+input string InpWeightTablePath = "foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv";
 
 string FEATURE_NAMES[58] =
   {
@@ -96,8 +99,6 @@ string g_stock_symbols[8] =
    "NVDA.xnas",
    "TSLA.xnas"
   };
-
-double g_top3_equal_weight = 0.333333333333;
 
 struct ExternalAuditItem
   {
@@ -270,12 +271,61 @@ string FormatNewYorkIso(const datetime utc_time)
    return StringFormat("%04d-%02d-%02dT%02d:%02d:%02d%s", dt.year, dt.mon, dt.day, dt.hour, dt.min, dt.sec, OffsetText(offset_hours));
   }
 
+int LastSunday(const int year, const int month)
+  {
+   for(int day = 31; day >= 25; day--)
+     {
+      if(DayOfWeekForDate(year, month, day) == 0)
+         return day;
+     }
+   return 31;
+  }
+
+bool IsAthensDstActiveLocal(const datetime broker_clock)
+  {
+   MqlDateTime dt;
+   TimeToStruct(broker_clock, dt);
+
+   MqlDateTime dst_start;
+   dst_start.year = dt.year;
+   dst_start.mon = 3;
+   dst_start.day = LastSunday(dt.year, 3);
+   dst_start.hour = 3;
+   dst_start.min = 0;
+   dst_start.sec = 0;
+   datetime start_local = StructToTime(dst_start);
+
+   MqlDateTime dst_end;
+   dst_end.year = dt.year;
+   dst_end.mon = 10;
+   dst_end.day = LastSunday(dt.year, 10);
+   dst_end.hour = 4;
+   dst_end.min = 0;
+   dst_end.sec = 0;
+   datetime end_local = StructToTime(dst_end);
+
+   return (broker_clock >= start_local && broker_clock < end_local);
+  }
+
+datetime BrokerClockToEventUtc(const datetime broker_clock)
+  {
+   int offset_hours = IsAthensDstActiveLocal(broker_clock) ? 3 : 2;
+   return broker_clock - (offset_hours * 3600);
+  }
+
+string FormatBrokerClockIso(const datetime broker_clock)
+  {
+   MqlDateTime dt;
+   TimeToStruct(broker_clock, dt);
+   return StringFormat("%04d-%02d-%02dT%02d:%02d:%02d+00:00", dt.year, dt.mon, dt.day, dt.hour, dt.min, dt.sec);
+  }
+
 string CanonicalWindowStartUtc()
   {
    datetime parsed = 0;
    if(!ParseUtcText(InpWindowStartUtc, parsed))
       return "";
-   return FormatUtcIso(parsed);
+   return FormatUtcIso(BrokerClockToEventUtc(parsed));
   }
 
 double SafeDivide(const double numerator, const double denominator)
@@ -321,6 +371,44 @@ double RollingMeanSlice(const double &values[], const int start_index, const int
       sum += values[i];
      }
    return sum / count;
+  }
+
+bool GetTop3PriceProxyWeights(const datetime target_close, double &msft_weight, double &nvda_weight, double &aapl_weight)
+  {
+   MqlDateTime dt;
+   TimeToStruct(target_close, dt);
+   int key = (dt.year * 100) + dt.mon;
+
+   if(key == 202403)
+     {
+      msft_weight = 0.6131352083736581;
+      nvda_weight = 0.11891964325595938;
+      aapl_weight = 0.2679451483703825;
+      return true;
+     }
+   if(key == 202406)
+     {
+      msft_weight = 0.5770657484007335;
+      nvda_weight = 0.153837539719201;
+      aapl_weight = 0.2690967118800655;
+      return true;
+     }
+   if(key == 202501)
+     {
+      msft_weight = 0.522747845495691;
+      nvda_weight = 0.16673073346146694;
+      aapl_weight = 0.3105214210428421;
+      return true;
+     }
+   if(key == 202503)
+     {
+      msft_weight = 0.5200644789263996;
+      nvda_weight = 0.16339903543719858;
+      aapl_weight = 0.3165364856364018;
+      return true;
+     }
+
+   return false;
   }
 
 double RollingMinSlice(const double &values[], const int start_index, const int count)
@@ -812,7 +900,7 @@ bool ComputeStockReturnMetrics(const MqlRates &rates[], double &return_1, double
 double ComputeOvernightReturn(const MqlRates &rates[], const int count, const int target_index, string &error)
   {
    datetime target_close = rates[target_index].time + PeriodSeconds(InpTimeframe);
-   datetime target_ny = ToNewYorkTime(target_close);
+   datetime target_ny = ToNewYorkTime(BrokerClockToEventUtc(target_close));
    MqlDateTime ny_dt;
    TimeToStruct(target_ny, ny_dt);
 
@@ -822,7 +910,7 @@ double ComputeOvernightReturn(const MqlRates &rates[], const int count, const in
    for(int i = 0; i < count; i++)
      {
       datetime close_time = rates[i].time + PeriodSeconds(InpTimeframe);
-      datetime ny_time = ToNewYorkTime(close_time);
+      datetime ny_time = ToNewYorkTime(BrokerClockToEventUtc(close_time));
       MqlDateTime row_dt;
       TimeToStruct(ny_time, row_dt);
       int row_date_key = row_dt.year * 10000 + row_dt.mon * 100 + row_dt.day;
@@ -843,7 +931,7 @@ double ComputeOvernightReturn(const MqlRates &rates[], const int count, const in
    for(int j = 0; j < count; j++)
      {
       datetime close_time = rates[j].time + PeriodSeconds(InpTimeframe);
-      datetime ny_time = ToNewYorkTime(close_time);
+      datetime ny_time = ToNewYorkTime(BrokerClockToEventUtc(close_time));
       MqlDateTime row_dt2;
       TimeToStruct(ny_time, row_dt2);
       int row_date_key2 = row_dt2.year * 10000 + row_dt2.mon * 100 + row_dt2.day;
@@ -866,7 +954,7 @@ double ComputeOvernightReturn(const MqlRates &rates[], const int count, const in
 
 void ComputeSessionValues(const datetime target_close, double &is_us_cash_open, double &minutes_from_cash_open, double &is_first_30m_after_open, double &is_last_30m_before_cash_close)
   {
-   datetime ny_time = ToNewYorkTime(target_close);
+   datetime ny_time = ToNewYorkTime(BrokerClockToEventUtc(target_close));
    MqlDateTime dt;
    TimeToStruct(ny_time, dt);
 
@@ -922,8 +1010,37 @@ string BuildExternalAuditJson(const ExternalAuditItem &items[])
    return out;
   }
 
+string FixtureIdForTarget(const datetime target_close)
+  {
+   string key = FormatUtc(target_close);
+   if(key == "2025.03.03 18:30:00")
+      return "regular_cash_session_20250303_1830";
+   if(key == "2024.06.10 16:35:00")
+      return "session_boundary_cash_open_20240610_1635";
+   if(key == "2024.03.11 16:40:00")
+      return "dst_sensitive_20240311_1640";
+   if(key == "2025.01.02 17:30:00")
+      return "external_alignment_20250102_1730";
+   return "unknown_" + key;
+  }
+
+string FixtureTypeForTarget(const datetime target_close)
+  {
+   string key = FormatUtc(target_close);
+   if(key == "2025.03.03 18:30:00")
+      return "regular_cash_session";
+   if(key == "2024.06.10 16:35:00")
+      return "session_boundary_cash_open";
+   if(key == "2024.03.11 16:40:00")
+      return "dst_sensitive";
+   if(key == "2025.01.02 17:30:00")
+      return "external_alignment";
+   return "unknown";
+  }
+
 string BuildSnapshotIdentityJson(const datetime target_close)
   {
+   datetime event_utc = BrokerClockToEventUtc(target_close);
    return
       "\"dataset_id\":" + JsonQuoted(InpDatasetId) + ","
       "\"fixture_set_id\":" + JsonQuoted(InpFixtureSetId) + ","
@@ -934,10 +1051,14 @@ string BuildSnapshotIdentityJson(const datetime target_close)
       "\"parser_contract_version\":" + JsonQuoted(InpParserContractVersion) + ","
       "\"feature_contract_version\":" + JsonQuoted(InpFeatureContractVersion) + ","
       "\"runtime_contract_version\":" + JsonQuoted(InpRuntimeContractVersion) + ","
+      "\"mt5_input_order_contract_version\":" + JsonQuoted(InpMt5InputOrderContractVersion) + ","
       "\"feature_order_hash\":" + JsonQuoted(InpFeatureOrderHash) + ","
+      "\"weight_table_path\":" + JsonQuoted(InpWeightTablePath) + ","
       "\"window_start_utc\":" + JsonQuoted(CanonicalWindowStartUtc()) + ","
-      "\"timestamp_utc\":" + JsonQuoted(FormatUtcIso(target_close)) + ","
-      "\"timestamp_america_new_york\":" + JsonQuoted(FormatNewYorkIso(target_close)) + ",";
+      "\"raw_broker_clock_bar_close_key\":" + JsonQuoted(FormatBrokerClockIso(target_close)) + ","
+      "\"timestamp_utc\":" + JsonQuoted(FormatUtcIso(event_utc)) + ","
+      "\"timestamp_event_utc\":" + JsonQuoted(FormatUtcIso(event_utc)) + ","
+      "\"timestamp_america_new_york\":" + JsonQuoted(FormatNewYorkIso(event_utc)) + ",";
   }
 
 void FillZeroFeatures(double &features[])
@@ -957,10 +1078,15 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
       FillZeroFeatures(zero_features);
       ExternalAuditItem empty_items[];
       ArrayResize(empty_items, 0);
-      json_line =
-         "{"
-         "\"event_timestamp_utc\":" + JsonQuoted(FormatUtc(target_close)) + ","
-         "\"bar_time_server\":" + JsonQuoted(FormatUtc(target_close)) + ","
+       json_line =
+          "{" +
+          BuildSnapshotIdentityJson(target_close) +
+          "\"source_dataset_id\":" + JsonQuoted(InpSourceDatasetId) + ","
+          "\"snapshot_runtime\":\"mt5\","
+          "\"fixture_id\":" + JsonQuoted(FixtureIdForTarget(target_close)) + ","
+          "\"fixture_type\":" + JsonQuoted(FixtureTypeForTarget(target_close)) + ","
+          "\"event_timestamp_utc\":" + JsonQuoted(FormatUtcIso(BrokerClockToEventUtc(target_close))) + ","
+          "\"bar_time_server\":" + JsonQuoted(FormatUtc(target_close)) + ","
          "\"symbol\":" + JsonQuoted(InpMainSymbol) + ","
          "\"timeframe\":" + JsonQuoted(EnumToString(InpTimeframe)) + ","
          "\"cycle_tag\":\"SNAPSHOT_AUDIT\","
@@ -1338,8 +1464,15 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
 
    double mega8_equal = RollingMeanSlice(mega8_return_1, 0, 8);
    double top3_weighted = EMPTY_VALUE;
-   if(IsUsableValue(mega8_return_1[5]) && IsUsableValue(mega8_return_1[6]) && IsUsableValue(mega8_return_1[0]))
-      top3_weighted = (mega8_return_1[5] * g_top3_equal_weight) + (mega8_return_1[6] * g_top3_equal_weight) + (mega8_return_1[0] * g_top3_equal_weight);
+   double msft_weight = EMPTY_VALUE;
+   double nvda_weight = EMPTY_VALUE;
+   double aapl_weight = EMPTY_VALUE;
+   if(!GetTop3PriceProxyWeights(target_close, msft_weight, nvda_weight, aapl_weight))
+     {
+      error = "TOP3_PRICE_PROXY_WEIGHT_MISSING";
+     }
+   else if(IsUsableValue(mega8_return_1[5]) && IsUsableValue(mega8_return_1[6]) && IsUsableValue(mega8_return_1[0]))
+      top3_weighted = (mega8_return_1[5] * msft_weight) + (mega8_return_1[6] * nvda_weight) + (mega8_return_1[0] * aapl_weight);
    double mega8_breadth = (double)positive_count / 8.0;
    double mega8_dispersion = PopulationStdSlice(mega8_return_5, 0, 8);
 
@@ -1451,7 +1584,11 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
    json_line =
       "{" +
       BuildSnapshotIdentityJson(target_close) +
-      "\"event_timestamp_utc\":" + JsonQuoted(FormatUtc(target_close)) + ","
+      "\"source_dataset_id\":" + JsonQuoted(InpSourceDatasetId) + ","
+      "\"snapshot_runtime\":\"mt5\","
+      "\"fixture_id\":" + JsonQuoted(FixtureIdForTarget(target_close)) + ","
+      "\"fixture_type\":" + JsonQuoted(FixtureTypeForTarget(target_close)) + ","
+      "\"event_timestamp_utc\":" + JsonQuoted(FormatUtcIso(BrokerClockToEventUtc(target_close))) + ","
       "\"bar_time_server\":" + JsonQuoted(FormatUtc(target_close)) + ","
       "\"symbol\":" + JsonQuoted(InpMainSymbol) + ","
       "\"timeframe\":" + JsonQuoted(EnumToString(InpTimeframe)) + ","
@@ -1466,6 +1603,45 @@ bool BuildSnapshotForWindow(const datetime target_close, string &json_line)
       "\"feature_fingerprint\":" + JsonQuoted(InpFeatureOrderHash) + ","
       "\"external_inputs\":" + BuildExternalAuditJson(audit_items) + ","
       "\"features\":" + BuildFeatureJson(features) +
+      "}";
+
+   return true;
+  }
+
+bool BuildSyntheticNegativeSnapshot(string &json_line)
+  {
+   datetime target_close = 0;
+   if(!ParseUtcText("2025.01.02 17:30:00", target_close))
+      return false;
+
+   double zero_features[];
+   FillZeroFeatures(zero_features);
+   ExternalAuditItem empty_items[];
+   ArrayResize(empty_items, 0);
+
+   json_line =
+      "{" +
+      BuildSnapshotIdentityJson(target_close) +
+      "\"source_dataset_id\":" + JsonQuoted(InpSourceDatasetId) + ","
+      "\"snapshot_runtime\":\"mt5\","
+      "\"fixture_id\":\"negative_required_missing_input_20250102_1730\","
+      "\"fixture_type\":\"negative_required_missing_input\","
+      "\"synthetic_missing_input\":\"VIX\","
+      "\"event_timestamp_utc\":" + JsonQuoted(FormatUtcIso(BrokerClockToEventUtc(target_close))) + ","
+      "\"bar_time_server\":" + JsonQuoted(FormatUtc(target_close)) + ","
+      "\"symbol\":" + JsonQuoted(InpMainSymbol) + ","
+      "\"timeframe\":" + JsonQuoted(EnumToString(InpTimeframe)) + ","
+      "\"cycle_tag\":\"SNAPSHOT_AUDIT\","
+      "\"feature_mode\":\"V2_NATIVE_AUDIT\","
+      "\"feature_count\":58,"
+      "\"feature_ready_count\":0,"
+      "\"feature_vector_complete\":false,"
+      "\"row_ready\":false,"
+      "\"skip_reason\":\"required_missing_input:VIX\","
+      "\"feature_checksum\":0,"
+      "\"feature_fingerprint\":" + JsonQuoted(InpFeatureOrderHash) + ","
+      "\"external_inputs\":" + BuildExternalAuditJson(empty_items) + ","
+      "\"features\":" + BuildFeatureJson(zero_features) +
       "}";
 
    return true;
@@ -1528,6 +1704,12 @@ void OnStart()
         }
       written++;
      }
+
+   string negative_line = "";
+   if(BuildSyntheticNegativeSnapshot(negative_line) && AppendLine(negative_line))
+      written++;
+   else
+      Print("Failed to append synthetic negative runtime parity row.");
 
    Print("ObsidianPrimeV2_RuntimeParityAudit wrote ", written, " line(s) to ", InpOutputPath);
   }

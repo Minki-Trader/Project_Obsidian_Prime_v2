@@ -64,6 +64,18 @@ class Stage06RuntimeParityTests(unittest.TestCase):
         self.assertEqual(result["status"], "fail")
         self.assertIn("regular:log_return_1_abs_diff_over_tolerance", result["failures"])
 
+    def test_compare_snapshot_rows_accepts_mt5_named_feature_array(self) -> None:
+        python_row = self._ready_row()
+        mt5_row = self._ready_row()
+        mt5_row["features"] = [
+            {"index": index, "name": feature, "value": value}
+            for index, (feature, value) in enumerate(python_row["features"].items())
+        ]
+
+        result = self.module.compare_snapshot_rows([python_row], [mt5_row], tolerance=1e-5)
+
+        self.assertEqual(result["status"], "pass")
+
     def test_negative_fixture_requires_non_ready_mt5_row(self) -> None:
         python_row = self._ready_row("negative")
         python_row["fixture_type"] = "negative_required_missing_input"

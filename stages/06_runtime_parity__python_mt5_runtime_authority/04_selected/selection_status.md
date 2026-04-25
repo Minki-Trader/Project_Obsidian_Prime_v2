@@ -3,26 +3,26 @@
 ## 현재 판독(Current Read, 현재 판독)
 
 - stage(단계): `06_runtime_parity__python_mt5_runtime_authority`
-- status(상태): `reviewed_blocked_handoff_to_stage07_complete`
+- status(상태): `reviewed_runtime_parity_closed_handoff_to_stage07_complete`
 - current operating reference(현재 운영 기준): `none`
 
 ## 선택된 실행(Selected Run, 선택 실행)
 
-- run_id(실행 ID): `20260425_stage06_runtime_parity_blocked_v1`
-- judgment(판정): `blocked_runtime_authority_mt5_snapshot_missing_or_stale`
-- external verification status(외부 검증 상태): `blocked(차단)`
-- runtime state(런타임 상태): `runtime_probe_blocked(차단된 런타임 탐침)`
-- report(보고서): `stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1/runtime_parity_report.json`
+- run_id(실행 ID): `20260425_stage06_runtime_parity_closed_v1`
+- judgment(판정): `positive_runtime_parity_passed`
+- external verification status(외부 검증 상태): `completed(완료)`
+- runtime state(런타임 상태): `runtime_authority(런타임 권위)`
+- report(보고서): `stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/runtime_parity_report.json`
 
 ## 인계 조건(Handoff Condition, 인계 조건)
 
-Stage 05(5단계)가 `20260425_stage05_feature_integrity_audit_v1` 실행(run, 실행)으로 feature formula/time/external/label audit(피처 공식/시간/외부/라벨 감사)를 통과했으므로 시작한다.
+Stage 05(5단계)가 `20260425_stage05_feature_integrity_audit_v1` 실행(run, 실행)으로 feature formula/time/external/label audit(피처 공식/시간/외부/라벨 감사)를 통과했으므로 시작했다.
 
 ## 인계 결과(Handoff Result, 인계 결과)
 
-Stage 06(6단계)은 Python snapshot(파이썬 스냅샷), MT5 handoff package(MT5 인계 묶음), fixture set(표본 묶음), MetaEditor compile log(메타에디터 컴파일 로그)를 남겼다.
+Stage 06(6단계)은 Python snapshot(파이썬 스냅샷), MT5 snapshot(MT5 스냅샷), fixture set(표본 묶음), MetaEditor compile log(메타에디터 컴파일 로그), strategy tester evidence(전략 테스터 근거)를 남겼다.
 
-효과(effect, 효과): 다음 Stage 07(7단계)은 model training smoke(모델 학습 스모크)를 시작할 수 있지만, runtime authority(런타임 권위)는 닫힌 것으로 읽으면 안 된다.
+효과(effect, 효과): 다음 Stage 07(7단계)은 model training smoke(모델 학습 스모크)를 진행할 때 Stage 06(6단계) minimum fixture set(최소 표본 묶음)의 runtime authority(런타임 권위)를 입력 근거로 볼 수 있다.
 
 ## 선택된 입력(Selected Inputs, 선택 입력)
 
@@ -34,9 +34,6 @@ Stage 06(6단계)은 Python snapshot(파이썬 스냅샷), MT5 handoff package(M
 
 ## 경계(Boundary, 경계)
 
-이 문서는 Stage 06(6단계)의 차단 인계 상태다. parity-closed(동등성 폐쇄), runtime authority(런타임 권위), operating promotion(운영 승격)을 뜻하지 않는다.
+이 문서는 Stage 06(6단계)의 runtime parity closed(런타임 동등성 폐쇄) 상태다.
 
-차단 사유(blocker, 차단 사유)는 두 가지다.
-
-- MT5 snapshot(MT5 스냅샷)이 아직 없다.
-- 기존 MT5 audit tool(MT5 감사 도구)은 `equal weight(동일가중)` 기준이라 Stage 04(4단계)의 MT5 price-proxy weights(MT5 가격 대리 가중치) 표면을 닫지 못한다.
+parity-closed(동등성 폐쇄)는 model quality(모델 품질), alpha quality(알파 품질), operating promotion(운영 승격)을 뜻하지 않는다.

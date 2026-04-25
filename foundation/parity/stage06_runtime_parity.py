@@ -21,17 +21,17 @@ from foundation.pipelines.materialize_fpmarkets_v2_dataset import (  # noqa: E40
 )
 
 
-RUN_ID = "20260425_stage06_runtime_parity_blocked_v1"
+RUN_ID = "20260425_stage06_runtime_parity_closed_v1"
 STAGE_ID = "06_runtime_parity__python_mt5_runtime_authority"
 LANE = "runtime"
-MATERIALIZER_VERSION = "fpmarkets_v2_stage06_runtime_parity_v1"
+MATERIALIZER_VERSION = "fpmarkets_v2_stage06_runtime_parity_v2"
 
 MODEL_INPUT_DATASET_ID = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
 SOURCE_DATASET_ID = "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58"
 FIXTURE_SET_ID = "fixture_fpmarkets_v2_stage06_runtime_minimum_v1"
 BUNDLE_ID = "bundle_fpmarkets_v2_stage06_runtime_parity_v1"
 RUNTIME_ID = "runtime_fpmarkets_v2_python_mt5_stage06_parity_v1"
-REPORT_ID = "report_fpmarkets_v2_stage06_runtime_parity_blocked_v1"
+REPORT_ID = "report_fpmarkets_v2_stage06_runtime_parity_closed_v1"
 PARSER_VERSION = "fpmarkets_v2_stage04_model_input_feature_set_v2_mt5_price_proxy_58"
 PARSER_CONTRACT_VERSION = "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-25"
 FEATURE_CONTRACT_VERSION = "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-25"
@@ -321,6 +321,12 @@ def _feature_map(row: dict[str, Any]) -> dict[str, Any]:
     if isinstance(features, dict):
         return features
     if isinstance(features, list):
+        named_features: dict[str, Any] = {}
+        for item in features:
+            if isinstance(item, dict) and "name" in item:
+                named_features[str(item["name"])] = item.get("value")
+        if named_features:
+            return named_features
         return {feature: value for feature, value in zip(FEATURE_ORDER, features, strict=False)}
     return {}
 
@@ -593,6 +599,7 @@ def build_stage06_audit(
         ),
         "blockers": external_failures,
         "_python_rows": python_rows,
+        "_mt5_rows": mt5_rows,
     }
 
 
@@ -658,6 +665,7 @@ def write_stage06_outputs(audit: dict[str, Any], run_output_root: Path) -> dict[
     paths = {
         "fixture_set": run_output_root / "fixture_set.json",
         "python_snapshot": run_output_root / "python_feature_snapshot.jsonl",
+        "mt5_snapshot": run_output_root / "mt5_feature_snapshot.jsonl",
         "mt5_handoff_package": run_output_root / "mt5_handoff_package.json",
         "runtime_parity_report": run_output_root / "runtime_parity_report.json",
         "run_manifest": run_output_root / "run_manifest.json",
@@ -667,9 +675,10 @@ def write_stage06_outputs(audit: dict[str, Any], run_output_root: Path) -> dict[
 
     write_json(paths["fixture_set"], {"fixture_set_id": FIXTURE_SET_ID, "fixtures": audit["fixtures"]})
     write_jsonl(paths["python_snapshot"], audit["_python_rows"])
+    write_jsonl(paths["mt5_snapshot"], audit["_mt5_rows"])
     write_json(paths["mt5_handoff_package"], audit["handoff_package"])
 
-    report = {key: value for key, value in audit.items() if key != "_python_rows"}
+    report = {key: value for key, value in audit.items() if key not in {"_python_rows", "_mt5_rows"}}
     write_json(paths["runtime_parity_report"], report)
 
     run_manifest = {

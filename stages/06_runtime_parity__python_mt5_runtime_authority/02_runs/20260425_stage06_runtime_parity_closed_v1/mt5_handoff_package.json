@@ -1,0 +1,31 @@
+{
+  "dataset_id": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+  "fixture_set_id": "fixture_fpmarkets_v2_stage06_runtime_minimum_v1",
+  "bundle_id": "bundle_fpmarkets_v2_stage06_runtime_parity_v1",
+  "runtime_id": "runtime_fpmarkets_v2_python_mt5_stage06_parity_v1",
+  "report_id": "report_fpmarkets_v2_stage06_runtime_parity_closed_v1",
+  "parser_version": "fpmarkets_v2_stage04_model_input_feature_set_v2_mt5_price_proxy_58",
+  "parser_contract_version": "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md@2026-04-25",
+  "feature_contract_version": "docs/contracts/feature_calculation_spec_fpmarkets_v2.md@2026-04-25",
+  "runtime_contract_version": "docs/contracts/runtime_parity_and_artifact_identity_contract_fpmarkets_v2.md@2026-04-25",
+  "mt5_input_order_contract_version": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md@2026-04-25",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "run_id": "20260425_stage06_runtime_parity_closed_v1",
+  "stage_id": "06_runtime_parity__python_mt5_runtime_authority",
+  "target_windows_raw_broker_clock": [
+    "2025.03.03 18:30:00",
+    "2024.06.10 16:35:00",
+    "2024.03.11 16:40:00",
+    "2025.01.02 17:30:00"
+  ],
+  "target_windows_input_string": "2025.03.03 18:30:00;2024.06.10 16:35:00;2024.03.11 16:40:00;2025.01.02 17:30:00",
+  "negative_fixture": {
+    "fixture_id": "negative_required_missing_input_20250102_1730",
+    "required_missing_input": "VIX",
+    "expected_row_ready": false
+  },
+  "python_snapshot_path": "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/python_feature_snapshot.jsonl",
+  "expected_mt5_snapshot_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/runtime_parity/20260425_stage06_runtime_parity_closed_v1/mt5_feature_snapshot.jsonl",
+  "weights_path": "foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv",
+  "mt5_tool_boundary": "Checked-in MT5 audit tools(\uc800\uc7a5\uc18c MT5 \uac10\uc0ac \ub3c4\uad6c)\ub294 MT5 price-proxy monthly top3 weights(MT5 \uac00\uaca9 \ub300\ub9ac \uc6d4\ubcc4 top3 \uac00\uc911\uce58)\ub97c \uc77d\uace0 \uc774 package(\ubb36\uc74c)\uc640 \uac19\uc740 identity fields(\uc815\uccb4\uc131 \ud544\ub4dc)\ub97c \ucd9c\ub825\ud558\uae30 \uc804\uae4c\uc9c0 stale(\ub0a1\uc74c)\ub85c \ub2e4\ub8ec\ub2e4."
+}

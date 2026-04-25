@@ -1,0 +1,37 @@
+{
+  "fixture_set_id": "fixture_fpmarkets_v2_stage06_runtime_minimum_v1",
+  "fixtures": [
+    {
+      "fixture_id": "regular_cash_session_20250303_1830",
+      "fixture_type": "regular_cash_session",
+      "description": "US100 cash-session flow(US100 \uc815\uaddc\uc7a5 \ud750\ub984) \uc548\uc758 normal closed bar(\uc815\uc0c1 \ud655\uc815\ubd09)",
+      "timestamp": "2025-03-03T18:30:00+00:00"
+    },
+    {
+      "fixture_id": "session_boundary_cash_open_20240610_1635",
+      "fixture_type": "session_boundary_cash_open",
+      "description": "cash-open boundary row(\uc815\uaddc\uc7a5 \uc2dc\uc791 \uacbd\uacc4 \ud589)\uc774\uba70 session flags(\uc138\uc158 \ud50c\ub798\uadf8)\ub97c \uac80\uc99d",
+      "timestamp": "2024-06-10T16:35:00+00:00"
+    },
+    {
+      "fixture_id": "dst_sensitive_20240311_1640",
+      "fixture_type": "dst_sensitive",
+      "description": "New York DST transition week(\ub274\uc695 \uc11c\uba38\ud0c0\uc784 \uc804\ud658 \uc8fc\uac04) \uc774\ud6c4 row(\ud589)",
+      "timestamp": "2024-03-11T16:40:00+00:00"
+    },
+    {
+      "fixture_id": "external_alignment_20250102_1730",
+      "fixture_type": "external_alignment",
+      "description": "required external-symbol features(\ud544\uc218 \uc678\ubd80 \uc2ec\ubcfc \ud53c\ucc98)\ub97c \ubaa8\ub450 \uac00\uc9c4 row(\ud589)",
+      "timestamp": "2025-01-02T17:30:00+00:00"
+    },
+    {
+      "fixture_id": "negative_required_missing_input_20250102_1730",
+      "fixture_type": "negative_required_missing_input",
+      "description": "synthetic required-missing-input fixture(\ud569\uc131 \ud544\uc218 \uc785\ub825 \ub204\ub77d \ud45c\ubcf8); VIX \uc81c\uac70; row_ready(\ud589 \uc900\ube44 \uc0c1\ud0dc)\ub294 false(\uac70\uc9d3)",
+      "timestamp": "2025-01-02T17:30:00+00:00",
+      "synthetic_missing_input": "VIX",
+      "claim_scope": "validator_behavior_only_until_mt5_runtime_snapshot_exists"
+    }
+  ]
+}
