@@ -145,6 +145,16 @@ def parse_args() -> argparse.Namespace:
         default=f"data/processed/datasets/{DATASET_ID}",
         help="Repo-relative output root for the processed dataset.",
     )
+    parser.add_argument(
+        "--weights-path",
+        default=None,
+        help="Optional repo-relative top3 monthly weights CSV.",
+    )
+    parser.add_argument(
+        "--weights-version-label",
+        default=None,
+        help="Optional durable label for the supplied weights source.",
+    )
     return parser.parse_args()
 
 
@@ -752,7 +762,11 @@ def main() -> int:
     args = parse_args()
     raw_root = Path(args.raw_root)
     output_root = Path(args.output_root)
-    frame, counts = build_feature_frame(raw_root)
+    frame, counts = build_feature_frame(
+        raw_root,
+        weights_path=Path(args.weights_path) if args.weights_path else None,
+        weights_version_label=args.weights_version_label,
+    )
     hashes = write_outputs(output_root, frame, counts)
     payload = {
         "status": "ok",

@@ -10,10 +10,17 @@ Stage 04(4단계)는 model-input readiness(모델 입력 준비도) 단계다.
 - run(실행): `stages/04_model_input_readiness__weights_parity_feature_audit/02_runs/20260425_model_input_feature_set_v1`
 - output(출력): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_summary.json`
 
-이 검토는 interim quarantine artifact(임시 격리 산출물)를 확인한 것이다. 정식 pre-alpha(알파 전) model input(모델 입력)은 real monthly top3 weights(진짜 월별 top3 가중치)를 만든 뒤 58 feature(58개 피처)로 다시 검토한다.
+이 검토는 interim quarantine artifact(임시 격리 산출물)를 확인한 것이다.
 
-## 다음 검토(Next Review, 다음 검토)
+## 닫힌 검토(Closed Review, 닫힌 검토)
 
-다음 검토(review, 검토)는 real monthly top3 weights(진짜 월별 top3 가중치)와 58 feature(58개 피처) model input(모델 입력) 재물질화를 대상으로 한다.
+다음 검토(review, 검토)는 MT5 price-proxy weights(MT5 가격 대리 가중치)와 58 feature(58개 피처) model input(모델 입력) 재물질화를 대상으로 했다.
 
-이 검토가 닫히기 전에는 runtime authority(런타임 권위)나 alpha-ready(알파 준비 완료)를 주장하지 않는다.
+- review(검토): `stages/04_model_input_readiness__weights_parity_feature_audit/03_reviews/mt5_price_proxy_58_feature_model_input_review.md`
+- weight run(가중치 실행): `stages/04_model_input_readiness__weights_parity_feature_audit/02_runs/20260425_top3_price_proxy_weights_v1`
+- model input run(모델 입력 실행): `stages/04_model_input_readiness__weights_parity_feature_audit/02_runs/20260425_mi_v2_proxy58`
+- output(출력): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json`
+
+이 검토는 Stage 04(4단계) model-input readiness(모델 입력 준비도)를 Stage 05(5단계) 감사 입력으로 넘긴다.
+
+경계(boundary, 경계): runtime authority(런타임 권위), alpha-ready(알파 준비 완료), actual NDX/QQQ weights(실제 NDX/QQQ 가중치)를 주장하지 않는다.

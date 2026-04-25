@@ -17,7 +17,7 @@ monthly top3 weights(월별 top3 가중치)는 아직 `placeholder_equal_weight(
 
 원천 training dataset(학습 데이터셋)을 바로 다시 만들면 Stage 02/03(2/3단계) 정체성(identity, 정체성)이 흔들린다. 그래서 먼저 model input feature set(모델 입력 피처 세트)에서 해당 feature(피처)를 격리했다.
 
-이제 정식 pre-alpha(알파 전) 경로는 real monthly top3 weights(진짜 월별 top3 가중치)를 만든 뒤 58 feature(58개 피처) 입력을 다시 물질화하는 것이다.
+이후 정식 pre-alpha(알파 전) 경로는 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)를 만든 뒤 58 feature(58개 피처) 입력을 다시 물질화하는 것으로 갱신됐다.
 
 ## 효과(Effect, 효과)
 
@@ -28,7 +28,7 @@ monthly top3 weights(월별 top3 가중치)는 아직 `placeholder_equal_weight(
 
 ## 남은 준비도(Readiness Still Open, 남은 준비도)
 
-- real monthly top3 weights(진짜 월별 top3 가중치) 계약과 산출물
+- MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치) 계약과 산출물
 - 58 feature(58개 피처) model input(모델 입력) 재물질화
 - 56 feature(56개 피처) interim quarantine artifact(임시 격리 산출물)와 58 feature(58개 피처) 정식 경로 관계 기록
 - Stage 05(5단계) feature/time/external/label audit(피처/시간/외부/라벨 감사) 인계

@@ -101,3 +101,18 @@ class MaterializeModelInputDatasetTests(unittest.TestCase):
             self.assertEqual(quarantine_manifest["first_baseline_policy"], "exclude_from_model_input")
             for feature_name in self.module.QUARANTINED_FEATURES:
                 self.assertNotIn(feature_name, materialized.columns)
+
+    def test_build_model_input_dataset_58_feature_proxy_mode_restores_weight_features(self) -> None:
+        model_input, summary = self.module.build_model_input_dataset(
+            self._sample_training_frame(),
+            mode=self.module.MODE_MT5_PRICE_PROXY_58,
+        )
+
+        self.assertEqual(len(model_input), 2)
+        self.assertEqual(summary["source_feature_count"], 58)
+        self.assertEqual(summary["included_feature_count"], 58)
+        self.assertEqual(summary["quarantined_feature_count"], 0)
+        self.assertEqual(summary["weight_source_status"], self.module.WEIGHT_PRICE_PROXY_STATUS)
+        for feature_name in self.module.QUARANTINED_FEATURES:
+            self.assertIn(feature_name, model_input.columns)
+            self.assertIn(feature_name, summary["restored_features"])

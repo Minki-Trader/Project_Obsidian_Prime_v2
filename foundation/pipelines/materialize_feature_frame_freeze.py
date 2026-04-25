@@ -80,6 +80,16 @@ def parse_args() -> argparse.Namespace:
         default="full_cash_session_days_only",
         help="Day-scope selector. Current supported value: full_cash_session_days_only.",
     )
+    parser.add_argument(
+        "--weights-path",
+        default=None,
+        help="Optional repo-relative top3 monthly weights CSV.",
+    )
+    parser.add_argument(
+        "--weights-version-label",
+        default=None,
+        help="Optional durable label for the supplied weights source.",
+    )
     return parser.parse_args()
 
 
@@ -363,8 +373,14 @@ def materialize_selected_freeze(
     output_root: Path,
     dataset_id: str,
     selection: FreezeSelectionSpec,
+    weights_path: Path | None = None,
+    weights_version_label: str | None = None,
 ) -> dict[str, object]:
-    frame, counts = build_feature_frame(raw_root)
+    frame, counts = build_feature_frame(
+        raw_root,
+        weights_path=weights_path,
+        weights_version_label=weights_version_label,
+    )
     selection_payload = select_freeze_rows(frame, counts, selection)
     write_payload = write_selected_freeze_outputs(
         output_root=output_root,
@@ -402,6 +418,8 @@ def main() -> int:
         output_root=output_root,
         dataset_id=args.dataset_id,
         selection=selection,
+        weights_path=Path(args.weights_path) if args.weights_path else None,
+        weights_version_label=args.weights_version_label,
     )
     print(json.dumps(payload, indent=2))
     return 0

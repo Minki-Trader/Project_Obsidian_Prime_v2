@@ -26,7 +26,7 @@ Stage 03(3단계)는 첫 training label(학습 라벨)과 split contract(분할 
 ## 남은 준비도(Readiness Still Open, 남은 준비도)
 
 - monthly top3 weights(월별 top3 가중치)는 `placeholder_equal_weight(임시 동일가중)` 상태였고, Stage 04(4단계) 첫 실행에서 해당 의존 feature(피처)를 56 feature(56개 피처) interim model input(임시 모델 입력) 기준으로 격리했다.
-- 정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 real monthly top3 weights(진짜 월별 top3 가중치)를 만들고 58 feature(58개 피처) model input(모델 입력)을 다시 물질화해야 한다.
+- 정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)를 만들고 58 feature(58개 피처) model input(모델 입력)을 다시 물질화하는 것으로 갱신됐다.
 - Stage 05~09(5~9단계)는 feature audit(피처 감사), runtime parity(런타임 동등성), model training smoke(모델 학습 스모크), alpha protocol(알파 규칙), handoff packet(인계 묶음)을 각각 맡는다.
 
 ## 경계(Boundary, 경계)

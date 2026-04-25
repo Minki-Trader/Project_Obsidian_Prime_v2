@@ -12,16 +12,18 @@
 
 Stage 04(4단계)에서 만든 56 feature(56개 피처) model input(모델 입력)은 `placeholder_equal_weight(임시 동일가중)` 오염을 막기 위한 interim quarantine artifact(임시 격리 산출물)이다. 최종 pre-alpha(알파 전) 경로가 아니다.
 
+Stage 04(4단계)의 정식 58 feature(58개 피처) 경로는 `MT5 price-proxy weights(MT5 가격 대리 가중치)`로 물질화했다. 이것은 actual NDX/QQQ weights(실제 NDX/QQQ 가중치)가 아니다.
+
 ## Stage Queue(단계 대기열)
 
 ### Stage 04(4단계): `04_model_input_readiness__weights_parity_feature_audit`
 
-소유 질문(owner question, 소유 질문): 진짜 monthly top3 weights(월별 top3 가중치)를 만들고 58 feature(58개 피처) model input(모델 입력)을 다시 고정할 수 있는가?
+소유 질문(owner question, 소유 질문): MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)를 만들고 58 feature(58개 피처) model input(모델 입력)을 다시 고정할 수 있는가?
 
 맡는 작업:
 
-- real monthly top3 weights(진짜 월별 top3 가중치) 계약
-- real monthly top3 weights(진짜 월별 top3 가중치) 생성
+- MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치) 계약
+- MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치) 생성
 - 58 feature set(58개 피처 세트) 복구
 - feature frame(피처 프레임), training dataset(학습 데이터셋), model input(모델 입력) 재물질화
 - 56 feature(56개 피처) interim quarantine artifact(임시 격리 산출물)를 최종 경로가 아닌 보조 근거로 표시

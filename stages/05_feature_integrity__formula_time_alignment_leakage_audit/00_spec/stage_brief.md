@@ -4,12 +4,15 @@
 
 58 feature(58개 피처), time axis(시간축), external alignment(외부 정렬), label(라벨)이 alpha exploration(알파 탐색) 전에 의심 없이 읽힐 수 있는가?
 
+현재 감사 표면(audit surface, 감사 표면)은 Stage 04(4단계)의 MT5 price-proxy weights(MT5 가격 대리 가중치) 기반 58 feature(58개 피처) model input(모델 입력)이다.
+
 ## 범위(Scope, 범위)
 
 - feature formula audit(피처 공식 감사)
 - session/time audit(세션/시간 감사)
 - external alignment audit(외부 정렬 감사)
 - label leakage audit(라벨 누수 감사)
+- MT5 price-proxy top3 weights(MT5 가격 대리 top3 가중치)가 actual index weight(실제 지수 가중치)로 오해되지 않는지 확인
 - Tier A/B sample label(티어 A/B 표본 라벨) 보존 확인
 
 ## 범위 밖(Not In Scope, 범위 밖)

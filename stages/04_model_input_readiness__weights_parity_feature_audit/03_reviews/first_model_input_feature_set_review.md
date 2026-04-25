@@ -6,7 +6,7 @@
 
 쉽게 말하면, 원천 training dataset(학습 데이터셋)은 보존하고, 첫 모델에게 실제로 줄 입력 파일에서는 임시 가중치 피처를 뺐다.
 
-단, 이 파일은 final pre-alpha path(최종 알파 전 경로)가 아니다. 정식 경로는 real monthly top3 weights(진짜 월별 top3 가중치)를 만든 뒤 58 feature(58개 피처) 입력을 다시 물질화하는 것이다.
+단, 이 파일은 final pre-alpha path(최종 알파 전 경로)가 아니다. 이후 정식 Stage 04(4단계) 경로는 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)를 만든 뒤 58 feature(58개 피처) 입력을 다시 물질화하는 것으로 닫았다.
 
 ## 핵심 수치(Key Numbers, 핵심 수치)
 
@@ -53,7 +53,7 @@ label/split(라벨/분할)은 Stage 03(3단계) 산출물과 동일하게 유지
 
 ## 남은 일(Remaining Work, 남은 일)
 
-- real monthly top3 weights(진짜 월별 top3 가중치) 계약과 산출물
+- MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치) 계약과 산출물
 - 58 feature(58개 피처) model input(모델 입력) 재물질화
 - 56 feature(56개 피처) interim quarantine artifact(임시 격리 산출물)와 58 feature(58개 피처) 정식 경로 관계 기록
 - Stage 05(5단계) feature/time/external/label audit(피처/시간/외부/라벨 감사) 인계

@@ -79,6 +79,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--raw-root", default=str(DEFAULT_RAW_ROOT))
     parser.add_argument("--output-root", default=str(DEFAULT_OUTPUT_ROOT))
     parser.add_argument("--run-output-root", default=str(DEFAULT_RUN_OUTPUT_ROOT))
+    parser.add_argument("--run-id", default=RUN_ID)
+    parser.add_argument("--stage-id", default=STAGE_ID)
     return parser.parse_args()
 
 
@@ -275,6 +277,8 @@ def write_training_outputs(
     raw_root: Path,
     training_frame: pd.DataFrame,
     summary: dict[str, object],
+    run_id: str = RUN_ID,
+    stage_id: str = STAGE_ID,
 ) -> dict[str, object]:
     output_root.mkdir(parents=True, exist_ok=True)
     run_output_root.mkdir(parents=True, exist_ok=True)
@@ -352,8 +356,8 @@ def write_training_outputs(
 
     raw_csv = find_us100_raw_csv(raw_root)
     run_manifest = {
-        "run_id": RUN_ID,
-        "stage_id": STAGE_ID,
+        "run_id": run_id,
+        "stage_id": stage_id,
         "lane": "evidence",
         "status": "reviewed",
         "command": (
@@ -381,7 +385,7 @@ def write_training_outputs(
     (run_output_root / "run_manifest.json").write_text(json.dumps(run_manifest, indent=2), encoding="utf-8")
 
     kpi_record = {
-        "run_id": RUN_ID,
+        "run_id": run_id,
         "scoreboard": "structural_scout",
         "measurement": {
             "training_rows": summary["rows"],
@@ -395,7 +399,7 @@ def write_training_outputs(
     (run_output_root / "kpi_record.json").write_text(json.dumps(_json_ready(kpi_record), indent=2), encoding="utf-8")
 
     run_summary = {
-        "run_id": RUN_ID,
+        "run_id": run_id,
         "training_dataset_id": training_dataset_id,
         "source_dataset_id": source_dataset_id,
         "rows": summary["rows"],
@@ -432,11 +436,11 @@ def write_training_outputs(
 def render_result_summary(run_summary: dict[str, object]) -> str:
     split_summary = run_summary["split_summary"]
     lines = [
-        "# Stage 03 First Training Label/Split Materialization",
+        "# Training Label/Split Materialization",
         "",
         "## 판독(Read, 판독)",
         "",
-        "`20260425_label_v1_fwd12_split_v1_materialization` 실행(run, 실행)은 첫 training label(학습 라벨)과 split contract(분할 계약)를 물질화했다.",
+        f"`{run_summary['run_id']}` 실행(run, 실행)은 training label(학습 라벨)과 split contract(분할 계약)를 물질화했다.",
         "",
         "쉽게 말하면, 모델에게 줄 첫 시험지의 정답 기준과 연습/검증/표본외 구간을 실제 파일로 만들었다.",
         "",
@@ -475,6 +479,8 @@ def materialize_training_label_split_dataset(
     output_root: Path,
     run_output_root: Path,
     spec: TrainingLabelSplitSpec | None = None,
+    run_id: str = RUN_ID,
+    stage_id: str = STAGE_ID,
 ) -> dict[str, object]:
     active_spec = spec or TrainingLabelSplitSpec()
     feature_frame = load_feature_dataset(features_path)
@@ -490,6 +496,8 @@ def materialize_training_label_split_dataset(
         raw_root=raw_root,
         training_frame=training_frame,
         summary=summary,
+        run_id=run_id,
+        stage_id=stage_id,
     )
 
 
@@ -503,6 +511,8 @@ def main() -> int:
         raw_root=Path(args.raw_root),
         output_root=Path(args.output_root),
         run_output_root=Path(args.run_output_root),
+        run_id=args.run_id,
+        stage_id=args.stage_id,
     )
     print(json.dumps(_json_ready({"status": "ok", **payload}), indent=2))
     return 0

@@ -13,4 +13,4 @@ Stage 03(3단계)는 첫 training label(학습 라벨)과 split contract(분할 
 
 `placeholder_equal_weight(임시 동일가중)` 월별 top3 weights(월별 top3 가중치)는 56 feature(56개 피처) interim model input(임시 모델 입력)에서만 격리됐다.
 
-정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 real monthly top3 weights(진짜 월별 top3 가중치)를 만들고 58 feature(58개 피처) model input(모델 입력)을 다시 물질화해야 한다. 이후 Stage 05~09(5~9단계) pre-alpha queue(알파 전 대기열)를 따른다.
+정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)를 만들고 58 feature(58개 피처) model input(모델 입력)을 다시 물질화하는 것으로 갱신됐다. 이후 Stage 05~09(5~9단계) pre-alpha queue(알파 전 대기열)를 따른다.

@@ -34,7 +34,7 @@
 단, 다음 작업(next work, 다음 작업)은 바로 alpha exploration(알파 탐색)이 아니라 Stage 04(4단계) model-input readiness(모델 입력 준비도) 점검이다.
 
 - `placeholder_equal_weight(임시 동일가중)` 월별 top3 weights(월별 top3 가중치)는 Stage 04(4단계) 첫 실행에서 56 feature(56개 피처) interim model input(임시 모델 입력) 기준으로 격리했다.
-- 정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 real monthly top3 weights(진짜 월별 top3 가중치)와 58 feature(58개 피처) model input(모델 입력)을 다시 만든 뒤 Stage 05~09(5~9단계) 대기열을 따라야 한다.
+- 정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)와 58 feature(58개 피처) model input(모델 입력)을 다시 만든 뒤 Stage 05~09(5~9단계) 대기열을 따르는 것으로 갱신됐다.
 - 이 준비도(readiness, 준비도) 전체가 닫히기 전에는 alpha-ready(알파 준비 완료)나 model-ready(모델 준비 완료)로 말하지 않는다.
 
 ## 경계(Boundary, 경계)

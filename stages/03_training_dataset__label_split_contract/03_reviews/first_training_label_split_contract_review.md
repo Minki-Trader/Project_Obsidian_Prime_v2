@@ -51,5 +51,5 @@ Stage 03(3단계)는 label/split contract(라벨/분할 계약) 기준으로 sta
 먼저 model-input readiness(모델 입력 준비도) 점검으로 다음을 다룬다.
 
 - `placeholder_equal_weight(임시 동일가중)` 월별 top3 weights(월별 top3 가중치)는 Stage 04(4단계) 첫 실행에서 56 feature(56개 피처) interim model input(임시 모델 입력) 기준으로 격리했다.
-- 정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 real monthly top3 weights(진짜 월별 top3 가중치)와 58 feature(58개 피처) model input(모델 입력)을 다시 만든 뒤 Stage 05~09(5~9단계) 대기열을 따라야 한다.
+- 정식 pre-alpha(알파 전) 경로는 Stage 04(4단계)에서 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)와 58 feature(58개 피처) model input(모델 입력)을 다시 만든 뒤 Stage 05~09(5~9단계) 대기열을 따르는 것으로 갱신됐다.
 - 다음은 임시 피처(feature, 피처)를 제외한 baseline(기준선) 기준으로 parity(동등성)와 전처리(preprocessing, 전처리)를 점검한다.

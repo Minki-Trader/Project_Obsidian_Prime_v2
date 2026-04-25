@@ -19,7 +19,7 @@ model-backed alpha exploration(모델 근거 알파 탐색) 전 작업을 Stage 
 
 ## 효과(Effect, 효과)
 
-- Stage 04(4단계)는 real monthly top3 weights(진짜 월별 top3 가중치)와 58 feature(58개 피처) 재물질화를 소유한다.
+- Stage 04(4단계)는 MT5 price-proxy monthly top3 weights(MT5 가격 대리 월별 top3 가중치)와 58 feature(58개 피처) 재물질화를 소유한다.
 - Stage 05(5단계)는 feature/time/external/label audit(피처/시간/외부/라벨 감사)를 소유한다.
 - Stage 06(6단계)는 Python/MT5 parity(파이썬/MT5 동등성)와 full MT5 runtime authority(완전 MT5 런타임 권위)를 소유한다.
 - Stage 07(7단계)는 preprocessing/model training smoke(전처리/모델 학습 스모크 실행)를 소유한다.
