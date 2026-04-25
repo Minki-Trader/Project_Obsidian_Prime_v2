@@ -3,9 +3,22 @@
 ## 현재 판독(Current Read, 현재 판독)
 
 - stage(단계): `09_pre_alpha_handoff__registry_publish_packet`
-- status(상태): `planning_scaffold_waiting_for_stage08_handoff`
+- status(상태): `active_waiting_for_pre_alpha_handoff_packet`
 - current operating reference(현재 운영 기준): `none`
+
+## 인계 조건(Handoff Condition, 인계 조건)
+
+Stage 08(8단계)이 `stage08_alpha_entry_protocol_v1` 묶음(packet, 묶음)으로 alpha search protocol(알파 탐색 규칙), Tier A/B reporting(티어 A/B 보고), failure memory(실패 기억), no-promotion boundary(승격 아님 경계)를 닫고 Stage 09(9단계)로 인계했으므로 시작한다.
+
+효과(effect, 효과): Stage 09(9단계)는 registry(등록부), current truth(현재 진실), changelog(변경기록), publish boundary(게시 경계), alpha entry packet(알파 진입 묶음)을 정리할 수 있다.
+
+## 선택된 입력(Selected Inputs, 선택 입력)
+
+- Stage 08 policy(Stage 08 정책): `docs/policies/alpha_entry_protocol.md`
+- Stage 08 report template(Stage 08 보고 틀): `docs/templates/alpha_exploration_report_template.md`
+- Stage 08 review(Stage 08 검토): `stages/08_alpha_entry_protocol__tier_reporting_search_rules/03_reviews/alpha_entry_protocol_review.md`
+- Stage 08 decision(Stage 08 결정): `docs/decisions/2026-04-25_stage08_alpha_entry_protocol.md`
 
 ## 경계(Boundary, 경계)
 
-이 문서는 계획 골격(planning scaffold, 계획 골격)이다. 아직 alpha-ready(알파 준비 완료), operating promotion(운영 승격), runtime authority(런타임 권위)를 뜻하지 않는다.
+이 문서는 Stage 09(9단계) 활성 상태다. 아직 alpha-ready(알파 준비 완료), official alpha result(공식 알파 결과), operating promotion(운영 승격), runtime authority(런타임 권위)를 뜻하지 않는다.

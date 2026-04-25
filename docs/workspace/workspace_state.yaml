@@ -1,14 +1,14 @@
 updated_on: "2026-04-25"
 project_mode: "clean_stage_restart"
 active_branch: "main"
-active_stage: "08_alpha_entry_protocol__tier_reporting_search_rules"
+active_stage: "09_pre_alpha_handoff__registry_publish_packet"
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: "tier_a_and_tier_b_are_both_open_to_full_exploration"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_active"
+  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_active"
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
@@ -21,9 +21,10 @@ current_focus:
   - "use the audited 58-feature MT5 price-proxy model input as the first model-backed alpha protocol input surface"
   - "follow the Stage 04-09 pre-alpha stage queue before model-backed alpha exploration"
   - "preserve the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority input behind the Stage 07 smoke"
-  - "write Stage 08 alpha search protocol and Tier A/B reporting rules before official alpha results"
+  - "treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result"
+  - "complete Stage 09 registry, current truth, changelog, commit/PR boundary, and alpha entry packet before opening official alpha results"
 pre_alpha_stage_queue:
-  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_active"
+  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
   decision_path: "docs/decisions/2026-04-25_pre_alpha_stage_queue.md"
   formal_pre_alpha_feature_count: 58
@@ -48,11 +49,11 @@ pre_alpha_stage_queue:
     stage08:
       stage_id: "08_alpha_entry_protocol__tier_reporting_search_rules"
       ownership: "alpha_search_protocol_and_tier_a_b_reporting_rules"
-      status: "active"
+      status: "reviewed_closed_handoff_to_stage09_complete_with_alpha_entry_protocol"
     stage09:
       stage_id: "09_pre_alpha_handoff__registry_publish_packet"
       ownership: "registry_current_truth_publish_boundary_and_alpha_entry_packet"
-      status: "planning_scaffold_waiting_for_stage08_handoff"
+      status: "active_waiting_for_pre_alpha_handoff_packet"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -291,10 +292,19 @@ stage07_baseline_training_smoke:
   run_path: "stages/07_model_training_baseline__contract_preprocessing_smoke/02_runs/20260425_stage07_baseline_training_smoke_v1"
   model_manifest_path: "stages/07_model_training_baseline__contract_preprocessing_smoke/02_runs/20260425_stage07_baseline_training_smoke_v1/model_artifact_manifest.json"
   review_path: "stages/07_model_training_baseline__contract_preprocessing_smoke/03_reviews/baseline_training_smoke_review.md"
+stage08_alpha_entry_protocol:
+  packet_id: "stage08_alpha_entry_protocol_v1"
+  status: "reviewed_closed_handoff_to_stage09_complete_with_alpha_entry_protocol"
+  judgment: "positive_alpha_entry_protocol_defined"
+  external_verification_status: "not_applicable"
+  boundary: "alpha_entry_protocol_defined_not_alpha_quality_or_operating_promotion"
+  policy_path: "docs/policies/alpha_entry_protocol.md"
+  report_template_path: "docs/templates/alpha_exploration_report_template.md"
+  review_path: "stages/08_alpha_entry_protocol__tier_reporting_search_rules/03_reviews/alpha_entry_protocol_review.md"
+  decision_path: "docs/decisions/2026-04-25_stage08_alpha_entry_protocol.md"
 open_items:
-  - "Stage 08: write alpha search protocol and Tier A/B reporting rules"
   - "Stage 09: sync registries, current truth docs, changelog, commit/PR boundary, and alpha entry packet"
-  - "only open model-backed alpha exploration after the Stage 04-09 queue has explicit handoff status"
+  - "only open official model-backed alpha results after Stage 09 has explicit handoff status"
   - "keep label/horizon variants as later exploration candidates instead of silently changing the default contract"
   - "keep broader valid-row or partial-day scopes as later candidates instead of silently widening the first freeze"
   - "do not read MT5 price-proxy top3 weights as actual NDX/QQQ weights"
@@ -307,5 +317,6 @@ forbidden_shortcuts:
   - "do not treat the superseded Stage 06 blocked runtime probe as current truth"
   - "do not treat Stage 06 runtime authority as model quality or operating promotion"
   - "do not treat the Stage 07 baseline training smoke as alpha quality, live readiness, or operating promotion"
+  - "do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality judgment"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

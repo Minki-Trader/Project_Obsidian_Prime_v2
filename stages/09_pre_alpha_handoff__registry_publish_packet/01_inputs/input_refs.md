@@ -2,7 +2,10 @@
 
 ## 이전 단계 입력(Previous Inputs, 이전 입력)
 
-- Stage 08(8단계) alpha search protocol(알파 탐색 규칙)
+- Stage 08(8단계) alpha search protocol(알파 탐색 규칙): `docs/policies/alpha_entry_protocol.md`
+- Stage 08(8단계) alpha exploration report template(알파 탐색 보고 틀): `docs/templates/alpha_exploration_report_template.md`
+- Stage 08(8단계) review(검토): `stages/08_alpha_entry_protocol__tier_reporting_search_rules/03_reviews/alpha_entry_protocol_review.md`
+- Stage 08(8단계) decision(결정): `docs/decisions/2026-04-25_stage08_alpha_entry_protocol.md`
 - `docs/workspace/workspace_state.yaml`
 - `docs/context/current_working_state.md`
 - `docs/registers/artifact_registry.csv`
