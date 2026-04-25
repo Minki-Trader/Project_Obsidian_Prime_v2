@@ -65,6 +65,38 @@ single split scout(단일 분할 탐색 판독)는 빠른 구조 판독(structur
 
 single split scout(단일 분할 탐색 판독) 결과는 `positive(긍정)`, `negative(부정)`, `inconclusive(불충분)`, `invalid(무효)`로 판정할 수 있다. 하지만 그 판정은 scout boundary(탐색 판독 경계) 안에서만 유효하다.
 
+## Main Alpha Scope(메인 알파 범위)
+
+Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫히는 단계(stage, 단계)까지는 다음 축(axis, 축)을 기본 main alpha scope(메인 알파 범위)로 연다.
+
+- label(라벨)
+- feature(피처)
+- model(모델)
+- decision surface(의사결정 표면)
+- entry(진입)
+- exit(청산)
+- sizing/overlay(사이징/오버레이)
+- retrain/carry(재학습/유지)
+- combination mainline(조합형 메인라인)
+
+이 축(axis, 축)은 edge exploration(엣지 탐색, 가장자리 탐색)이 아니라 기본 알파 탐색(alpha exploration, 알파 탐색)이다. 효과(effect, 효과)는 모델 점수(model score, 모델 점수)만 보지 않고, MT5(`MetaTrader 5`, 메타트레이더5) 실행 표면(execution surface, 실행 표면)에서 실제 거래 구조(trade structure, 거래 구조)가 살아남는지 보게 하는 것이다.
+
+## Mainline Run Discipline(메인라인 실행 규율)
+
+각 알파 탐색 단계(alpha exploration stage, 알파 탐색 단계)는 하나의 핵심 주제(core topic, 핵심 주제)를 끝까지 학습(training, 학습), 최적화(optimization, 최적화), 압박 시험(stress test, 압박 시험)한다.
+
+- `run01A`, `run01B`, `run01C`는 미리 정한 단계별 역할(role, 역할)이 아니다.
+- 각 실행(run, 실행)은 같은 핵심 주제(core topic, 핵심 주제)를 계속 미는 순서 번호(sequence number, 순서 번호)다.
+- 실행 목적(run purpose, 실행 목적)은 각 `run_manifest.json(실행 목록)`에 따로 적는다. 예시는 base learning(기본 학습), neighborhood shake(주변 흔들기), extreme sweep(극단값 탐색), boundary check(경계값 확인), MT5(`MetaTrader 5`, 메타트레이더5) rerun(MT5 재실행), recovery run(복구 실행)이다.
+- `run02A`는 새 핵심 주제(new core topic, 새 핵심 주제)나 새 stage(새 단계)를 뜻하지 않는다. 같은 단계(stage, 단계) 안에서 탐색 묶음(exploration packet, 탐색 묶음)을 새로 나눌 필요가 있을 때 쓴다.
+- 실행 개수(run count, 실행 개수), 후보 수(candidate count, 후보 수), 탐색 폭(search width, 탐색 폭)은 미리 닫지 않는다.
+
+다음 단계(next stage, 다음 단계)는 현재 단계(stage, 단계)의 핵심 주제(core topic, 핵심 주제)가 충분히 밀렸고, 남은 갈래(branches, 갈래)가 positive handoff(긍정 인계), negative memory(부정 기억), inconclusive boundary(불충분 경계), invalid setup(무효 설정), blocked retry condition(차단 재시도 조건) 중 하나로 정리됐을 때만 연다.
+
+효과(effect, 효과)는 한 단계(stage, 단계) 안에서 label(라벨), feature(피처), model(모델), decision surface(의사결정 표면), entry(진입), exit(청산), sizing/overlay(사이징/오버레이), retrain/carry(재학습/유지)를 충분히 밀어붙이되, 실행마다 무엇을 흔들었는지 잃지 않게 하는 것이다.
+
+탐색 라벨(exploration label, 탐색 라벨)과 실행 번호(run number, 실행 번호)는 `docs/policies/stage_structure.md`의 알파 탐색 이름 규칙(Alpha Exploration Naming, 알파 탐색 이름 규칙)과 알파 탐색 실행 번호 규칙(Alpha Run Numbering, 알파 실행 번호 규칙)을 따른다.
+
 ## WFO(walk-forward optimization, 워크포워드 최적화)
 
 WFO(walk-forward optimization, 워크포워드 최적화)는 serious optimization(진지한 최적화)의 기본 방식이다.

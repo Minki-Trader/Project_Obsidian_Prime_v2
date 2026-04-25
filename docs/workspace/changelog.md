@@ -59,3 +59,4 @@
 - Stage 09(9단계)는 run-producing stage(실행 생성 단계)가 아니므로 `run_registry.csv(실행 등록부)`에 새 실행(run, 실행)을 추가하지 않았다. 효과(effect, 효과)는 reviewed run(검토된 실행)이라는 말을 측정(measurement, 측정), 정체성(identity, 정체성), 판정(judgment, 판정)이 있는 실행에만 남기는 것이다.
 - Stage 10(10단계) `10_alpha_scout__default_split_model_threshold_scan`을 활성화했다. 효과(effect, 효과)는 default split(기본 분할) 위의 첫 `single_split_scout(단일 분할 탐색 판독)`을 준비할 수 있다는 것이다.
 - Stage 10(10단계)의 활성화는 alpha result(알파 결과), alpha quality(알파 품질), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격)을 뜻하지 않는다고 현재 진실(current truth, 현재 진실)에 명시했다.
+- Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫히는 단계(stage, 단계)까지 탐색 라벨(exploration label, 탐색 라벨)과 실행 번호(run number, 실행 번호) 규칙을 추가했다. 효과(effect, 효과)는 `stage10_Model__LGBM` 같은 짧은 탐색 이름과 `run01A/run01B/run01C` 같은 순서 번호(sequence number, 순서 번호)로 같은 단계(stage, 단계)의 핵심 주제(core topic, 핵심 주제)를 끝까지 밀어붙이게 하는 것이다. 실행 번호(run number, 실행 번호)는 탐색 상한(limit, 한계)이나 역할 고정(role lock, 역할 고정)이 아니다.

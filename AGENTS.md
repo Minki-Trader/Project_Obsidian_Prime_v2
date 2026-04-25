@@ -40,6 +40,18 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 
 모델 학습(model training, 모델 학습)과 검증(validation, 검증)이 실제로 가능해지는 순간부터 알파 탐색(alpha research, 알파 탐색)을 시작할 수 있다. 고정된 단계 번호에 묶지 않는다.
 
+## 알파 탐색 단계 규칙(Alpha Exploration Stage Rule, 알파 탐색 단계 규칙)
+
+Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫히는 단계(stage, 단계)까지는 탐색 라벨(exploration label, 탐색 라벨)과 실행 번호(run number, 실행 번호) 규칙을 쓴다.
+
+- 정식 단계 이름(canonical stage id, 정식 단계 ID)은 `NN_area__specific_question`을 유지한다.
+- 탐색 라벨(exploration label, 탐색 라벨)은 `stageN_exploration_group__specific_detail`을 쓴다. 예: `stage10_Model__LGBM`.
+- 실행 번호(run number, 실행 번호)는 `run01A`, `run01B`, `run01C`처럼 단계 로컬 순서 번호(stage-local sequence number, 단계 로컬 순서 번호)다.
+- 실행 번호(run number, 실행 번호)는 탐색 상한(limit, 한계)이나 역할 고정(role lock, 역할 고정)이 아니다.
+- 해당 단계(stage, 단계)는 핵심 주제(core topic, 핵심 주제)를 끝까지 학습(training, 학습), 최적화(optimization, 최적화), 압박 시험(stress test, 압박 시험)한 뒤 다음 단계(next stage, 다음 단계)로 간다.
+
+효과(effect, 효과)는 모든 새 작업 회차(pass, 회차)가 알파 탐색(alpha exploration, 알파 탐색)을 좁게 닫지 않고, 같은 단계(stage, 단계) 안에서 끝까지 밀어붙이게 하는 것이다.
+
 ## 티어 규칙(Tier Rule, 티어 규칙)
 
 - `Tier A(티어 A)`: 전체 문맥 표본(full-context sample, 전체 문맥 표본)
