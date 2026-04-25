@@ -5,3 +5,5 @@
 - `data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/freeze_selection.json`
 - `docs/contracts/dataset_freeze_and_row_state_contract_fpmarkets_v2.md`
 - `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+- `docs/contracts/training_label_split_contract_fpmarkets_v2.md`
+- `foundation/pipelines/materialize_training_label_split_dataset.py`

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import os
 import sys
 import unittest
 from pathlib import Path
@@ -9,6 +10,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = REPO_ROOT / "foundation" / "collectors" / "feature_frame_target_probe.py"
 RAW_ROOT = REPO_ROOT / "data" / "raw" / "mt5_bars" / "m5"
+RUN_SLOW_INTEGRATION_TESTS = os.environ.get("OBSIDIAN_RUN_SLOW_TESTS") == "1"
+SLOW_INTEGRATION_SKIP_REASON = "set OBSIDIAN_RUN_SLOW_TESTS=1 to run raw-data integration tests"
 
 
 def load_probe_module():
@@ -22,6 +25,7 @@ def load_probe_module():
     return module
 
 
+@unittest.skipUnless(RUN_SLOW_INTEGRATION_TESTS, SLOW_INTEGRATION_SKIP_REASON)
 class FeatureFrameTargetProbeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

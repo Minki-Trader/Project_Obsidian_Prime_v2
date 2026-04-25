@@ -20,3 +20,14 @@
 - 답변 명확성(answer clarity, 답변 명확성), 코드 품질(code quality, 코드 품질), workflow drift guard(작업 드리프트 가드), reference scout(참고자료 탐색) 스킬을 추가했다. 효과(effect, 효과)는 Codex 답변, 구현 품질, 막힘 상황 분류, 외부 사용법 확인을 더 직접적으로 다루는 것이다.
 - workflow drift guard(작업 드리프트 가드)에 material recovery order(재료 복구 순서)를 추가했다. 효과(effect, 효과)는 필요한 재료가 없을 때 외부/레거시를 기본 대체 경로로 쓰지 않고, 현재 프로젝트 안에서 복구 또는 재생성할 수 있는지 먼저 확인하게 하는 것이다.
 - workflow drift guard(작업 드리프트 가드)에 recovery action rule(복구 행동 규칙)을 추가했다. 효과(effect, 효과)는 Codex가 직접 풀 수 있는 blocker(차단 지점)는 직접 풀고, 사용자 협조가 필요한 경우에는 정확한 요청과 복귀 지점을 남기게 하는 것이다.
+
+## 2026-04-25
+
+- `20260425_label_v1_fwd12_split_v1_materialization` 실행(run, 실행)으로 첫 training label(학습 라벨)과 split contract(분할 계약)를 물질화했다. 효과(effect, 효과)는 첫 model training(모델 학습) 또는 alpha exploration(알파 탐색)에 필요한 기본 정답지와 분할이 생겼다는 것이다.
+- 첫 training dataset(학습 데이터셋)은 `data/processed/training_datasets/label_v1_fwd12_split_v1/training_dataset.parquet`에 있다. 행 수(rows, 행 수)는 `46650`이고, train/validation/OOS(학습/검증/표본외)는 `29222/9844/7584`다.
+- 다만 바로 alpha/model exploration(알파/모델 탐색)을 열지는 않는다. `placeholder_equal_weight(임시 동일가중)` 월별 top3 weights(월별 top3 가중치)는 먼저 격리했고, 정식 pre-alpha(알파 전) 경로는 real monthly top3 weights(진짜 월별 top3 가중치)와 58 feature(58개 피처) 입력으로 다시 닫는다.
+- Stage 03(3단계)을 Stage 04(4단계) model-input readiness(모델 입력 준비도)로 인계했다. 효과(effect, 효과)는 label/split(라벨/분할) 작업과 입력 준비도 작업을 분리한 것이다.
+- `20260425_model_input_feature_set_v1_no_placeholder_top3_weights` 실행(run, 실행)으로 56 feature(56개 피처) interim model input dataset(임시 모델 입력 데이터셋)을 물질화했다. 효과(effect, 효과)는 `placeholder_equal_weight(임시 동일가중)`에 의존하는 `top3_weighted_return_1`, `us100_minus_top3_weighted_return_1`을 임시 입력에서 격리한 것이다.
+- interim model input dataset(임시 모델 입력 데이터셋)은 `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_dataset.parquet`에 있다. 행 수(rows, 행 수)는 `46650`, 포함 feature(피처)는 `56`, included feature order hash(포함 피처 순서 해시)는 `84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89`다.
+- pre-alpha stage queue(알파 전 단계 대기열)를 Stage 04~09(4~9단계)로 고정했다. 효과(effect, 효과)는 real monthly top3 weights(진짜 월별 top3 가중치), feature integrity audit(피처 무결성 감사), Python/MT5 parity(파이썬/MT5 동등성), baseline smoke training(기준선 스모크 학습), alpha protocol(알파 규칙), registry handoff(등록부 인계)가 서로 섞이지 않게 하는 것이다.
+- raw data integration tests(원천 데이터 통합 테스트)를 `OBSIDIAN_RUN_SLOW_TESTS=1` opt-in(명시 선택)으로 분리했다. 효과(effect, 효과)는 기본 `unittest discover`(단위 테스트 발견)가 timeout(시간 초과) 없이 빠른 검증으로 끝나고, 전체 원천 데이터 검증은 별도로 실행되는 것이다.

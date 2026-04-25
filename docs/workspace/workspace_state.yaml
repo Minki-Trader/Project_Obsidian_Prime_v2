@@ -1,19 +1,53 @@
-updated_on: "2026-04-24"
+updated_on: "2026-04-25"
 project_mode: "clean_stage_restart"
 active_branch: "main"
-active_stage: "03_training_dataset__label_split_contract"
+active_stage: "04_model_input_readiness__weights_parity_feature_audit"
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: "tier_a_and_tier_b_are_both_open_to_full_exploration"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "stage01_closed_stage02_closed_stage03_training_dataset_contract_open"
+  status: "stage01_closed_stage02_closed_stage03_training_label_split_materialized_stage04_model_input_readiness_open"
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
-  - "define the first training label and split contract on top of the first shared feature-frame freeze"
-  - "keep runtime parity and operating claims outside the Stage 03 training-dataset contract scope"
+  - "use the first default training label and split contract as the starting evidence surface"
+  - "treat the 56-feature model input as an interim quarantine artifact, not the final pre-alpha path"
+  - "complete Stage 04 with real monthly top3 weights and a rematerialized 58-feature model input"
+  - "follow the Stage 04-09 pre-alpha stage queue before model-backed alpha exploration"
+  - "treat runtime parity as verification work until Stage 06 closes full MT5 runtime authority or records a blocker"
+pre_alpha_stage_queue:
+  status: "planned_not_execution_evidence"
+  plan_path: "docs/workspace/pre_alpha_stage_plan.md"
+  decision_path: "docs/decisions/2026-04-25_pre_alpha_stage_queue.md"
+  formal_pre_alpha_feature_count: 58
+  interim_quarantine_feature_count: 56
+  stages:
+    stage04:
+      stage_id: "04_model_input_readiness__weights_parity_feature_audit"
+      ownership: "real_monthly_top3_weights_and_58_feature_model_input_rematerialization"
+      status: "active"
+    stage05:
+      stage_id: "05_feature_integrity__formula_time_alignment_leakage_audit"
+      ownership: "feature_formula_time_external_alignment_and_label_leakage_audits"
+      status: "planning_scaffold_waiting_for_stage04_handoff"
+    stage06:
+      stage_id: "06_runtime_parity__python_mt5_runtime_authority"
+      ownership: "python_mt5_parity_and_full_mt5_runtime_authority"
+      status: "planning_scaffold_waiting_for_stage05_handoff"
+    stage07:
+      stage_id: "07_model_training_baseline__contract_preprocessing_smoke"
+      ownership: "preprocessing_policy_model_training_contract_and_baseline_smoke_run"
+      status: "planning_scaffold_waiting_for_stage06_handoff"
+    stage08:
+      stage_id: "08_alpha_entry_protocol__tier_reporting_search_rules"
+      ownership: "alpha_search_protocol_and_tier_a_b_reporting_rules"
+      status: "planning_scaffold_waiting_for_stage07_handoff"
+    stage09:
+      stage_id: "09_pre_alpha_handoff__registry_publish_packet"
+      ownership: "registry_current_truth_publish_boundary_and_alpha_entry_packet"
+      status: "planning_scaffold_waiting_for_stage08_handoff"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -82,12 +116,59 @@ stage02_first_shared_feature_frame_freeze:
   feature_order_hash: "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
   dataset_summary_path: "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json"
   review_path: "stages/02_feature_frame__practical_full_cash_freeze/03_reviews/first_shared_feature_frame_freeze_review.md"
+stage03_first_training_label_split_contract:
+  run_id: "20260425_label_v1_fwd12_split_v1_materialization"
+  status: "reviewed_materialized_handoff_to_stage04_complete"
+  label_id: "label_v1_fwd12_m5_logret_train_q33_3class"
+  split_id: "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413"
+  training_dataset_id: "training_fpmarkets_v2_us100_m5_label_v1_fwd12_m5_logret_train_q33_3class_split_v1"
+  source_dataset_id: "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01"
+  horizon_bars: 12
+  horizon_minutes: 60
+  threshold_log_return: 0.001277833051854688
+  rows: 46650
+  train_rows: 29222
+  validation_rows: 9844
+  oos_rows: 7584
+  training_dataset_summary_path: "data/processed/training_datasets/label_v1_fwd12_split_v1/training_dataset_summary.json"
+  training_dataset_path: "data/processed/training_datasets/label_v1_fwd12_split_v1/training_dataset.parquet"
+  review_path: "stages/03_training_dataset__label_split_contract/03_reviews/first_training_label_split_contract_review.md"
+stage04_first_model_input_feature_set:
+  run_id: "20260425_model_input_feature_set_v1_no_placeholder_top3_weights"
+  status: "reviewed_interim_quarantine_artifact_not_final_pre_alpha_path"
+  model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_feature_set_v1_no_placeholder_top3_weights"
+  source_training_dataset_id: "training_fpmarkets_v2_us100_m5_label_v1_fwd12_m5_logret_train_q33_3class_split_v1"
+  feature_set_id: "feature_set_v1_no_placeholder_top3_weight_features"
+  model_input_policy_id: "model_input_v1_quarantine_placeholder_top3_weight_features"
+  formal_pre_alpha_required_feature_count: 58
+  formal_pre_alpha_next_action: "create_real_monthly_top3_weights_and_rematerialize_58_feature_model_input"
+  source_feature_count: 58
+  included_feature_count: 56
+  quarantined_features:
+    - "top3_weighted_return_1"
+    - "us100_minus_top3_weighted_return_1"
+  included_feature_order_hash: "84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89"
+  rows: 46650
+  train_rows: 29222
+  validation_rows: 9844
+  oos_rows: 7584
+  model_input_dataset_summary_path: "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_summary.json"
+  model_input_dataset_path: "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_dataset.parquet"
+  review_path: "stages/04_model_input_readiness__weights_parity_feature_audit/03_reviews/first_model_input_feature_set_review.md"
 open_items:
-  - "define the first training label contract and split boundaries on top of the shared freeze"
-  - "materialize the first training dataset package after the label and split contract is fixed"
+  - "Stage 04: create real monthly top3 weights contract and artifact"
+  - "Stage 04: rematerialize the 58-feature feature frame/training/model-input path and reconcile the 56-feature interim quarantine artifact"
+  - "Stage 05: run feature formula, time/session, external alignment, and label leakage audits"
+  - "Stage 06: close or explicitly block Python/MT5 parity and full MT5 runtime authority"
+  - "Stage 07: fix scaler/preprocessing policy, write the first model training run contract, and run a baseline smoke training"
+  - "Stage 08: write alpha search protocol and Tier A/B reporting rules"
+  - "Stage 09: sync registries, current truth docs, changelog, commit/PR boundary, and alpha entry packet"
+  - "only open model-backed alpha exploration after the Stage 04-09 queue has explicit handoff status"
+  - "keep label/horizon variants as later exploration candidates instead of silently changing the default contract"
   - "keep broader valid-row or partial-day scopes as later candidates instead of silently widening the first freeze"
 forbidden_shortcuts:
   - "do not resurrect old Stage 06 or Stage 07 conclusions as current truth"
   - "do not turn Tier labels into exploration permissions"
+  - "do not treat the 56-feature interim quarantine artifact as the final pre-alpha model input"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"
