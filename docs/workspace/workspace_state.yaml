@@ -1,14 +1,14 @@
 updated_on: "2026-04-25"
 project_mode: "clean_stage_restart"
-active_branch: "main"
-active_stage: "09_pre_alpha_handoff__registry_publish_packet"
+active_branch: "codex/stage09-pre-alpha-handoff"
+active_stage: "10_alpha_scout__default_split_model_threshold_scan"
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: "tier_a_and_tier_b_are_both_open_to_full_exploration"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_active"
+  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_active"
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
@@ -22,9 +22,10 @@ current_focus:
   - "follow the Stage 04-09 pre-alpha stage queue before model-backed alpha exploration"
   - "preserve the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority input behind the Stage 07 smoke"
   - "treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result"
-  - "complete Stage 09 registry, current truth, changelog, commit/PR boundary, and alpha entry packet before opening official alpha results"
+  - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
+  - "keep Stage 10 as single_split_scout exploration until a reviewed scout run exists"
 pre_alpha_stage_queue:
-  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_active"
+  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
   decision_path: "docs/decisions/2026-04-25_pre_alpha_stage_queue.md"
   formal_pre_alpha_feature_count: 58
@@ -53,7 +54,11 @@ pre_alpha_stage_queue:
     stage09:
       stage_id: "09_pre_alpha_handoff__registry_publish_packet"
       ownership: "registry_current_truth_publish_boundary_and_alpha_entry_packet"
-      status: "active_waiting_for_pre_alpha_handoff_packet"
+      status: "reviewed_closed_handoff_to_stage10_complete_with_pre_alpha_handoff_packet"
+    stage10:
+      stage_id: "10_alpha_scout__default_split_model_threshold_scan"
+      ownership: "default_split_model_threshold_single_split_scout"
+      status: "active_protocol_ready_waiting_for_first_single_split_scout"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -302,9 +307,25 @@ stage08_alpha_entry_protocol:
   report_template_path: "docs/templates/alpha_exploration_report_template.md"
   review_path: "stages/08_alpha_entry_protocol__tier_reporting_search_rules/03_reviews/alpha_entry_protocol_review.md"
   decision_path: "docs/decisions/2026-04-25_stage08_alpha_entry_protocol.md"
+stage09_pre_alpha_handoff:
+  packet_id: "stage09_pre_alpha_handoff_packet_v1"
+  status: "reviewed_closed_handoff_to_stage10_complete_with_pre_alpha_handoff_packet"
+  judgment: "positive_pre_alpha_handoff_packet_complete"
+  external_verification_status: "not_applicable"
+  boundary: "registry_current_truth_publish_boundary_closed_not_alpha_result_or_operating_promotion"
+  packet_path: "stages/09_pre_alpha_handoff__registry_publish_packet/03_reviews/pre_alpha_handoff_packet.md"
+  decision_path: "docs/decisions/2026-04-25_stage09_pre_alpha_handoff.md"
+stage10_alpha_scout:
+  stage_id: "10_alpha_scout__default_split_model_threshold_scan"
+  status: "active_protocol_ready_waiting_for_first_single_split_scout"
+  lane: "exploration"
+  scout_boundary: "single_split_scout"
+  source_model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
+  default_split_id: "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413"
+  boundary: "stage_open_no_alpha_result_no_alpha_quality_no_operating_promotion"
+  selection_status_path: "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md"
 open_items:
-  - "Stage 09: sync registries, current truth docs, changelog, commit/PR boundary, and alpha entry packet"
-  - "only open official model-backed alpha results after Stage 09 has explicit handoff status"
+  - "Stage 10: define and run the first single_split_scout packet before recording any alpha result"
   - "keep label/horizon variants as later exploration candidates instead of silently changing the default contract"
   - "keep broader valid-row or partial-day scopes as later candidates instead of silently widening the first freeze"
   - "do not read MT5 price-proxy top3 weights as actual NDX/QQQ weights"
@@ -318,5 +339,7 @@ forbidden_shortcuts:
   - "do not treat Stage 06 runtime authority as model quality or operating promotion"
   - "do not treat the Stage 07 baseline training smoke as alpha quality, live readiness, or operating promotion"
   - "do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality judgment"
+  - "do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality judgment"
+  - "do not treat Stage 10 active status as a reviewed scout result, live readiness, runtime authority, or operating promotion"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"
