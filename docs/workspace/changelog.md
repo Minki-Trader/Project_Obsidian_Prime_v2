@@ -36,3 +36,6 @@
 - 이 가중치는 actual NDX/QQQ weights(실제 NDX/QQQ 가중치), QQQ holdings weights(QQQ 보유비중), market cap(시가총액), float(유동주식수)를 반영하지 않는다고 계약(contract, 계약)에 명시했다. 효과(effect, 효과)는 대리값(proxy, 대리값)을 운영 의미(operational meaning, 운영 의미)로 잘못 승격하지 않게 하는 것이다.
 - `20260425_model_input_feature_set_v2_mt5_price_proxy_58` 실행(run, 실행)으로 58 feature(58개 피처) model input(모델 입력)을 물질화했다. 효과(effect, 효과)는 `top3_weighted_return_1`, `us100_minus_top3_weighted_return_1`이 MT5 price-proxy weights(MT5 가격 대리 가중치)로 복구된 것이다.
 - Stage 04(4단계)를 `reviewed_closed_handoff_to_stage05_complete`로 닫고 Stage 05(5단계) `05_feature_integrity__formula_time_alignment_leakage_audit`를 열었다. 효과(effect, 효과)는 이제 학습 전에 feature/time/external/label audit(피처/시간/외부/라벨 감사)을 진행할 수 있다는 것이다.
+- `20260425_stage05_feature_integrity_audit_v1` 실행(run, 실행)으로 Stage 05(5단계) 통합 감사(integrated audit, 통합 감사)를 완료했다. 공식(formula, 공식), 시간/세션(time/session, 시간/세션), 외부 정렬(external alignment, 외부 정렬), 라벨 누수(label leakage, 라벨 누수)가 통과했다.
+- Stage 05(5단계)를 `reviewed_closed_handoff_to_stage06_complete`로 닫고 Stage 06(6단계) `06_runtime_parity__python_mt5_runtime_authority`를 열었다. 효과(effect, 효과)는 감사된 58 feature(58개 피처) 입력을 Python/MT5 parity(파이썬/MT5 동등성) 검증으로 넘기는 것이다.
+- `obsidian-answer-clarity(답변 명확성)` 트리거(trigger, 작동 조건)를 계획 세우기(planning, 계획)와 결과 보고(result report, 결과 보고)에 강하게 걸었다. 효과(effect, 효과)는 사용자 보고가 파일 목록이나 명령 로그보다 결론, 현재 의미, 아직 아닌 것, 다음 행동을 먼저 말하게 하는 것이다.

@@ -1,11 +1,22 @@
 ﻿---
 name: obsidian-answer-clarity
-description: Explain Project Obsidian Prime v2 work in plain, beginner-readable language without shrinking the substance. Use when writing user-facing answers, summaries, reviews, PR explanations, decision notes, or status updates that contain project terms, trading terms, engineering terms, or agent-policy terms.
+description: Explain Project Obsidian Prime v2 work in plain, beginner-readable language without shrinking the substance. Strongly trigger for planning, proposed plans, result reports, completion reports, status summaries, reviews, PR explanations, decision notes, or any user-facing answer that contains project terms, trading terms, engineering terms, or agent-policy terms.
 ---
 
 # Obsidian Answer Clarity
 
 Use this skill whenever the answer is meant for the user, not only for another engineer.
+
+## Strong Triggers
+
+This skill is mandatory, not optional, for:
+
+- planning replies(plan, 계획), including proposed plan(제안 계획) and next-task plan(다음 작업 계획)
+- result reports(결과 보고), completion reports(완료 보고), and status summaries(상태 요약)
+- stage closeout(단계 종료), handoff(인계), run result(실행 결과), review finding(검토 발견사항), or failure report(실패 보고)
+- answers after implementation(구현 후 답변), verification(검증), or file edits(파일 수정)
+
+If another skill produced a technical result, apply this skill last before answering the user.
 
 ## Purpose
 
@@ -28,10 +39,20 @@ Do not treat Korean parallel notation as explanation by itself. A term like `run
 
 ## Preferred Shape
 
-- Start with the plain answer.
-- Then unpack the project meaning.
-- Then name the practical effect.
-- Then list the exact file, PR, run, stage, or artifact when needed.
+For planning replies(plan, 계획):
+
+- Start with the intended outcome in one plain sentence.
+- Then name what will change and what will not change.
+- Then name the verification/check that proves the plan worked.
+- Then list exact files, runs, stages, or artifacts only when needed.
+
+For result reports(결과 보고):
+
+- Start with the result in one plain sentence.
+- Then say what is true now.
+- Then say what is not yet true.
+- Then name the next practical step.
+- Then list exact files, runs, stages, artifacts, or tests only when they help the user act.
 
 ## Do Not
 
@@ -39,6 +60,8 @@ Do not treat Korean parallel notation as explanation by itself. A term like `run
 - Do not hide uncertainty behind formal wording.
 - Do not use a defensive phrase like "noted for future work" unless the missing work, blocker, and next condition are clear.
 - Do not over-compress the answer when the user is asking for understanding.
+- Do not lead user-facing result reports with a file inventory, command log, or test log.
+- Do not bury the stage meaning behind implementation detail.
 
 ## Example Standard
 

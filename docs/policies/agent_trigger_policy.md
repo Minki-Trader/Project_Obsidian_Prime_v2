@@ -14,7 +14,7 @@
 
 - `obsidian-session-intake`: 상태(status, 상태), 계획(planning, 계획), 구현(implementation, 구현)을 시작할 때 쓴다.
 - `obsidian-reentry-read`: 저장소 작업을 재개할 때 쓴다.
-- `obsidian-answer-clarity`: 사용자 답변(user-facing answer, 사용자 답변), 리뷰 설명(review explanation, 리뷰 설명), 상태 보고(status report, 상태 보고)를 쉽게 풀어야 할 때 쓴다.
+- `obsidian-answer-clarity`: 사용자 답변(user-facing answer, 사용자 답변), 계획 세우기(planning, 계획), 제안 계획(proposed plan, 제안 계획), 결과 보고(result report, 결과 보고), 완료 보고(completion report, 완료 보고), 리뷰 설명(review explanation, 리뷰 설명), 상태 보고(status report, 상태 보고)를 쉽게 풀어야 할 때 쓴다.
 - `obsidian-claim-discipline`: 문서, 검토, 상태 설명, 사용자 요약(user-facing summary, 사용자 요약)을 쓸 때 주장(claim, 주장)이 너무 강해지지 않게 할 때 쓴다.
 - `obsidian-stage-transition`: `active_stage(활성 단계)`나 단계 의미(stage meaning, 단계 의미)가 바뀔 때 쓴다.
 - `obsidian-lane-classifier`: 승격(promotion, 승격)이나 런타임(runtime, 런타임) 언어를 붙이기 전에 쓴다.
@@ -33,6 +33,18 @@
 - `kpi_measurement_standard.md`
 - `run_result_management.md`
 - `result_judgment_policy.md`
+
+## 답변 명확성 강제 트리거(Answer Clarity Hard Trigger, 답변 명확성 강제 트리거)
+
+다음 user-facing output(사용자용 출력)은 `obsidian-answer-clarity`를 마지막에 적용한다.
+
+- 계획 세우기(plan, 계획), 제안 계획(proposed plan, 제안 계획), 다음 작업 계획(next-task plan, 다음 작업 계획)
+- 결과 보고(result report, 결과 보고), 완료 보고(completion report, 완료 보고), 상태 요약(status summary, 상태 요약)
+- 단계 종료(stage closeout, 단계 종료), 인계(handoff, 인계), 실행 결과(run result, 실행 결과), 검토 결과(review result, 검토 결과)
+
+효과(effect, 효과): 답변은 파일 목록(file inventory, 파일 목록)이나 명령 로그(command log, 명령 기록)로 시작하지 않고, 결론(conclusion, 결론), 현재 의미(current meaning, 현재 의미), 아직 아닌 것(not-yet-true, 아직 사실 아님), 다음 행동(next action, 다음 행동)을 먼저 말한다.
+
+다른 스킬(skill, 작업 지침)이 기술 판단(technical judgment, 기술 판단)을 만들었더라도, 사용자에게 답할 때는 이 트리거(trigger, 작동 조건)를 마지막 필터(final filter, 최종 필터)로 적용한다.
 
 ## 같은 회차 동기화(Same-Pass Sync, 같은 회차 동기화)
 

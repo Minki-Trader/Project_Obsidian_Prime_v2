@@ -2,7 +2,7 @@
 
 ## 상태(Status, 상태)
 
-`planning_scaffold(계획 골격)`
+`active_waiting_for_first_parity_review(첫 동등성 검토 대기)`
 
 Stage 06(6단계)는 아직 실행되지 않았다.
 
