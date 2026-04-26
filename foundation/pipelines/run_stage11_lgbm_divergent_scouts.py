@@ -44,6 +44,7 @@ class DivergentSpec:
     lane: str
     decision_surface_id: str
     mode: str
+    allowed_side: str
     tier_a_quantile: float
     tier_b_quantile: float
     tier_a_margin: float
@@ -62,6 +63,7 @@ SPECS: dict[str, DivergentSpec] = {
         lane="alpha_direction_isolation_scout",
         decision_surface_id="run02C_lgbm_long_only_direction_surface_hold9_slice200_220",
         mode="long_only",
+        allowed_side="long",
         tier_a_quantile=0.94,
         tier_b_quantile=0.94,
         tier_a_margin=0.08,
@@ -77,6 +79,7 @@ SPECS: dict[str, DivergentSpec] = {
         lane="alpha_direction_isolation_scout",
         decision_surface_id="run02D_lgbm_short_only_direction_surface_hold9_slice200_220",
         mode="short_only",
+        allowed_side="short",
         tier_a_quantile=0.94,
         tier_b_quantile=0.94,
         tier_a_margin=0.08,
@@ -92,6 +95,7 @@ SPECS: dict[str, DivergentSpec] = {
         lane="alpha_confidence_rejection_scout",
         decision_surface_id="run02E_lgbm_extreme_confidence_surface_hold9_slice200_220",
         mode="extreme_confidence",
+        allowed_side="both",
         tier_a_quantile=0.99,
         tier_b_quantile=0.99,
         tier_a_margin=0.20,
@@ -107,17 +111,188 @@ SPECS: dict[str, DivergentSpec] = {
         lane="alpha_context_gate_scout",
         decision_surface_id="run02F_lgbm_calm_trend_context_gate_surface_hold9_slice200_220",
         mode="context_gate",
+        allowed_side="both",
         tier_a_quantile=0.96,
         tier_b_quantile=0.96,
         tier_a_margin=0.12,
         tier_b_margin=0.08,
         context_gate="adx14_gte25_hvol5over20_lte125",
     ),
+    "run02G": DivergentSpec(
+        key="run02G",
+        run_number="run02G",
+        run_id="run02G_lgbm_long_pullback_salvage_v1",
+        exploration_label="stage11_Context__LGBMLongPullback",
+        idea_id="IDEA-ST11-LGBM-LONG-PULLBACK",
+        hypothesis="RUN02C long-only salvage may improve if long entries are limited to RSI and Bollinger pullback rows.",
+        lane="alpha_context_direction_scout",
+        decision_surface_id="run02G_lgbm_long_pullback_surface_hold9_slice200_220",
+        mode="long_pullback",
+        allowed_side="long",
+        tier_a_quantile=0.93,
+        tier_b_quantile=0.93,
+        tier_a_margin=0.06,
+        tier_b_margin=0.04,
+        context_gate="rsi14_lte45_bbpos_lte45",
+    ),
+    "run02H": DivergentSpec(
+        key="run02H",
+        run_number="run02H",
+        run_id="run02H_lgbm_bull_trend_long_v1",
+        exploration_label="stage11_Context__LGBMBullTrendLong",
+        idea_id="IDEA-ST11-LGBM-BULL-TREND-LONG",
+        hypothesis="Long-only LGBM signals may need bullish trend confirmation instead of generic confidence filtering.",
+        lane="alpha_context_direction_scout",
+        decision_surface_id="run02H_lgbm_bull_trend_long_surface_hold9_slice200_220",
+        mode="bull_trend_long",
+        allowed_side="long",
+        tier_a_quantile=0.94,
+        tier_b_quantile=0.94,
+        tier_a_margin=0.07,
+        tier_b_margin=0.05,
+        context_gate="adx14_gte20_di_spread_gt0",
+    ),
+    "run02I": DivergentSpec(
+        key="run02I",
+        run_number="run02I",
+        run_id="run02I_lgbm_low_vol_extreme_confidence_v1",
+        exploration_label="stage11_Context__LGBMLowVolExtremeConfidence",
+        idea_id="IDEA-ST11-LGBM-LOW-VOL-EXTREME-CONFIDENCE",
+        hypothesis="Extreme-confidence LGBM signals may only survive when short-term volatility is below the longer ATR regime.",
+        lane="alpha_context_confidence_scout",
+        decision_surface_id="run02I_lgbm_low_vol_extreme_confidence_surface_hold9_slice200_220",
+        mode="low_vol_extreme_confidence",
+        allowed_side="both",
+        tier_a_quantile=0.985,
+        tier_b_quantile=0.985,
+        tier_a_margin=0.18,
+        tier_b_margin=0.14,
+        context_gate="hvol5over20_lte90_atr_lte115",
+    ),
+    "run02J": DivergentSpec(
+        key="run02J",
+        run_number="run02J",
+        run_id="run02J_lgbm_balanced_midband_context_v1",
+        exploration_label="stage11_Context__LGBMBalancedMidband",
+        idea_id="IDEA-ST11-LGBM-BALANCED-MIDBAND",
+        hypothesis="LGBM may be less unstable in mid-band RSI and Bollinger rows where price is not stretched.",
+        lane="alpha_context_gate_scout",
+        decision_surface_id="run02J_lgbm_balanced_midband_surface_hold9_slice200_220",
+        mode="balanced_midband",
+        allowed_side="both",
+        tier_a_quantile=0.95,
+        tier_b_quantile=0.95,
+        tier_a_margin=0.10,
+        tier_b_margin=0.07,
+        context_gate="rsi14_between45_60_bbpos_between35_75",
+    ),
+    "run02K": DivergentSpec(
+        key="run02K",
+        run_number="run02K",
+        run_id="run02K_lgbm_quiet_return_zscore_v1",
+        exploration_label="stage11_Context__LGBMQuietReturnZScore",
+        idea_id="IDEA-ST11-LGBM-QUIET-RETURN-ZSCORE",
+        hypothesis="LGBM probability ranks may be cleaner when the immediate return z-score is not already stretched.",
+        lane="alpha_context_gate_scout",
+        decision_surface_id="run02K_lgbm_quiet_return_zscore_surface_hold9_slice200_220",
+        mode="quiet_return_zscore",
+        allowed_side="both",
+        tier_a_quantile=0.96,
+        tier_b_quantile=0.96,
+        tier_a_margin=0.12,
+        tier_b_margin=0.08,
+        context_gate="return_zscore_abs_lte70",
+    ),
+    "run02L": DivergentSpec(
+        key="run02L",
+        run_number="run02L",
+        run_id="run02L_lgbm_range_compression_v1",
+        exploration_label="stage11_Context__LGBMRangeCompression",
+        idea_id="IDEA-ST11-LGBM-RANGE-COMPRESSION",
+        hypothesis="LGBM may behave differently when DI spread and ADX imply compression rather than directional chase.",
+        lane="alpha_context_gate_scout",
+        decision_surface_id="run02L_lgbm_range_compression_surface_hold9_slice200_220",
+        mode="range_compression",
+        allowed_side="both",
+        tier_a_quantile=0.96,
+        tier_b_quantile=0.96,
+        tier_a_margin=0.10,
+        tier_b_margin=0.06,
+        context_gate="di_spread_abs_lte8_adx_lte25",
+    ),
+    "run02M": DivergentSpec(
+        key="run02M",
+        run_number="run02M",
+        run_id="run02M_lgbm_high_vol_momentum_alignment_v1",
+        exploration_label="stage11_Context__LGBMHighVolMomentumAlignment",
+        idea_id="IDEA-ST11-LGBM-HIGH-VOL-MOMENTUM-ALIGN",
+        hypothesis="The weak LGBM surface may need volatility expansion plus aligned ROC and PPO momentum before it becomes tradable.",
+        lane="alpha_context_momentum_scout",
+        decision_surface_id="run02M_lgbm_high_vol_momentum_alignment_surface_hold9_slice200_220",
+        mode="high_vol_momentum_alignment",
+        allowed_side="both",
+        tier_a_quantile=0.94,
+        tier_b_quantile=0.94,
+        tier_a_margin=0.08,
+        tier_b_margin=0.05,
+        context_gate="atr_ratio_gte115_momentum_align",
+    ),
+    "run02N": DivergentSpec(
+        key="run02N",
+        run_number="run02N",
+        run_id="run02N_lgbm_squeeze_breakout_probe_v1",
+        exploration_label="stage11_Context__LGBMSqueezeBreakout",
+        idea_id="IDEA-ST11-LGBM-SQUEEZE-BREAKOUT",
+        hypothesis="LGBM may only carry edge around Bollinger squeeze breakout conditions where the next move is more discrete.",
+        lane="alpha_context_momentum_scout",
+        decision_surface_id="run02N_lgbm_squeeze_breakout_surface_hold9_slice200_220",
+        mode="squeeze_breakout",
+        allowed_side="both",
+        tier_a_quantile=0.94,
+        tier_b_quantile=0.94,
+        tier_a_margin=0.08,
+        tier_b_margin=0.05,
+        context_gate="bb_squeeze_true",
+    ),
+    "run02O": DivergentSpec(
+        key="run02O",
+        run_number="run02O",
+        run_id="run02O_lgbm_bull_vortex_long_v1",
+        exploration_label="stage11_Context__LGBMBullVortexLong",
+        idea_id="IDEA-ST11-LGBM-BULL-VORTEX-LONG",
+        hypothesis="RUN02C long-only salvage may be concentrated in bullish vortex rows with RSI50 support.",
+        lane="alpha_context_direction_scout",
+        decision_surface_id="run02O_lgbm_bull_vortex_long_surface_hold9_slice200_220",
+        mode="bull_vortex_long",
+        allowed_side="long",
+        tier_a_quantile=0.94,
+        tier_b_quantile=0.94,
+        tier_a_margin=0.07,
+        tier_b_margin=0.05,
+        context_gate="vortex_positive_rsi50_gte50",
+    ),
+    "run02P": DivergentSpec(
+        key="run02P",
+        run_number="run02P",
+        run_id="run02P_lgbm_bear_vortex_short_v1",
+        exploration_label="stage11_Context__LGBMBearVortexShort",
+        idea_id="IDEA-ST11-LGBM-BEAR-VORTEX-SHORT",
+        hypothesis="Although RUN02D was weak, short-only rows may need bearish vortex and RSI50 confirmation before being rejected broadly.",
+        lane="alpha_context_direction_scout",
+        decision_surface_id="run02P_lgbm_bear_vortex_short_surface_hold9_slice200_220",
+        mode="bear_vortex_short",
+        allowed_side="short",
+        tier_a_quantile=0.94,
+        tier_b_quantile=0.94,
+        tier_a_margin=0.07,
+        tier_b_margin=0.05,
+        context_gate="vortex_negative_rsi50_lte50",
+    ),
 }
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run Stage 11 RUN02C-RUN02F divergent LGBM scouts.")
+    parser = argparse.ArgumentParser(description="Run Stage 11 divergent LGBM scouts.")
     parser.add_argument("--source-run-root", default=str(DEFAULT_SOURCE_ROOT))
     parser.add_argument("--run-root", default=str(Path("stages") / STAGE_ID / "02_runs"))
     parser.add_argument("--variants", nargs="+", default=["run02C", "run02D", "run02E", "run02F"])
@@ -165,10 +340,12 @@ def threshold_id(prefix: str, mode: str, quantile: float, short_threshold: float
 def build_rule(frame: pd.DataFrame, *, spec: DivergentSpec, tier_prefix: str, quantile: float, margin: float) -> scout.ThresholdRule:
     short_threshold = validation_quantile(frame, "p_short", quantile)
     long_threshold = validation_quantile(frame, "p_long", quantile)
-    if spec.mode == "long_only":
+    if spec.allowed_side == "long":
         short_threshold = 1.0
-    elif spec.mode == "short_only":
+    elif spec.allowed_side == "short":
         long_threshold = 1.0
+    elif spec.allowed_side != "both":
+        raise ValueError(f"Unknown allowed_side: {spec.allowed_side}")
     return scout.ThresholdRule(
         threshold_id=threshold_id(tier_prefix, spec.mode, quantile, short_threshold, long_threshold, margin),
         short_threshold=float(short_threshold),
@@ -191,6 +368,32 @@ def timestamp_key(series: pd.Series) -> pd.Series:
 def context_gate_mask(frame: pd.DataFrame, gate: str) -> pd.Series:
     if gate == "adx14_gte25_hvol5over20_lte125":
         return frame["adx_14"].astype(float).ge(25.0) & frame["historical_vol_5_over_20"].astype(float).le(1.25)
+    if gate == "rsi14_lte45_bbpos_lte45":
+        return frame["rsi_14"].astype(float).le(45.0) & frame["bb_position_20"].astype(float).le(0.45)
+    if gate == "adx14_gte20_di_spread_gt0":
+        return frame["adx_14"].astype(float).ge(20.0) & frame["di_spread_14"].astype(float).gt(0.0)
+    if gate == "hvol5over20_lte90_atr_lte115":
+        return frame["historical_vol_5_over_20"].astype(float).le(0.90) & frame["atr_14_over_atr_50"].astype(float).le(1.15)
+    if gate == "rsi14_between45_60_bbpos_between35_75":
+        return (
+            frame["rsi_14"].astype(float).between(45.0, 60.0, inclusive="both")
+            & frame["bb_position_20"].astype(float).between(0.35, 0.75, inclusive="both")
+        )
+    if gate == "return_zscore_abs_lte70":
+        return frame["return_zscore_20"].astype(float).abs().le(0.70)
+    if gate == "di_spread_abs_lte8_adx_lte25":
+        return frame["di_spread_14"].astype(float).abs().le(8.0) & frame["adx_14"].astype(float).le(25.0)
+    if gate == "atr_ratio_gte115_momentum_align":
+        return (
+            frame["atr_14_over_atr_50"].astype(float).ge(1.15)
+            & (frame["ppo_hist_12_26_9"].astype(float) * frame["roc_12"].astype(float)).gt(0.0)
+        )
+    if gate == "bb_squeeze_true":
+        return frame["bb_squeeze"].astype(float).ge(0.5)
+    if gate == "vortex_positive_rsi50_gte50":
+        return frame["vortex_indicator"].astype(float).gt(0.0) & frame["rsi_50"].astype(float).ge(50.0)
+    if gate == "vortex_negative_rsi50_lte50":
+        return frame["vortex_indicator"].astype(float).lt(0.0) & frame["rsi_50"].astype(float).le(50.0)
     raise ValueError(f"Unknown context gate: {gate}")
 
 
@@ -300,6 +503,7 @@ def materialize_run_registry_row(
             ("comparison_reference", RUN01Y_REFERENCE["run_id"]),
             ("decision_surface", spec.decision_surface_id),
             ("variant_mode", spec.mode),
+            ("allowed_side", spec.allowed_side),
             ("context_gate", spec.context_gate),
             ("session_slice", RUN01Y_REFERENCE["session_slice_id"]),
             ("max_hold_bars", RUN01Y_REFERENCE["max_hold_bars"]),
@@ -351,6 +555,57 @@ def write_result_summary(
 
     def mt5(view: str, key: str) -> Any:
         return mt5_by_view.get(view, {}).get(key)
+
+    lines = [
+        f"# Stage 11 {spec.run_number.upper()} LGBM Divergent Scout",
+        "",
+        f"- run_id(실행 ID): `{spec.run_id}`",
+        f"- idea_id(아이디어 ID): `{spec.idea_id}`",
+        f"- hypothesis(가설): {spec.hypothesis}",
+        f"- mode(방식): `{spec.mode}`",
+        f"- allowed side(허용 방향): `{spec.allowed_side}`",
+        f"- selected threshold(선택 임계값): `{threshold_id}`",
+        f"- context gate(문맥 제한): `{spec.context_gate or 'none(없음)'}`",
+        f"- external verification status(외부 검증 상태): `{external_status}`",
+        "",
+        "## Python Signal Views(파이썬 신호 보기)",
+        "",
+        "| view(보기) | rows(행) | signal count(신호 수) | coverage(커버리지) | short/long(숏/롱) |",
+        "|---|---:|---:|---:|---:|",
+        (
+            f"| Tier A separate(Tier A 분리) | `{py('tier_a_separate', 'rows')}` | "
+            f"`{py('tier_a_separate', 'signal_count')}` | `{py('tier_a_separate', 'signal_coverage')}` | "
+            f"`{py('tier_a_separate', 'short_count')}/{py('tier_a_separate', 'long_count')}` |"
+        ),
+        (
+            f"| Tier B separate(Tier B 분리) | `{py('tier_b_separate', 'rows')}` | "
+            f"`{py('tier_b_separate', 'signal_count')}` | `{py('tier_b_separate', 'signal_coverage')}` | "
+            f"`{py('tier_b_separate', 'short_count')}/{py('tier_b_separate', 'long_count')}` |"
+        ),
+        (
+            f"| Tier A+B combined(Tier A+B 합산) | `{py('tier_ab_combined', 'rows')}` | "
+            f"`{py('tier_ab_combined', 'signal_count')}` | `{py('tier_ab_combined', 'signal_coverage')}` | "
+            f"`{py('tier_ab_combined', 'short_count')}/{py('tier_ab_combined', 'long_count')}` |"
+        ),
+        "",
+        "## MT5 Routed Probe(MT5 라우팅 탐침)",
+        "",
+        f"- validation routed net/PF(검증 라우팅 순수익/수익 팩터): `{mt5('mt5_routed_total_validation_is', 'net_profit')}` / `{mt5('mt5_routed_total_validation_is', 'profit_factor')}`",
+        f"- OOS routed net/PF(표본외 라우팅 순수익/수익 팩터): `{mt5('mt5_routed_total_oos', 'net_profit')}` / `{mt5('mt5_routed_total_oos', 'profit_factor')}`",
+        f"- validation Tier B fallback used(검증 Tier B 대체 사용): `{mt5('mt5_routed_total_validation_is', 'tier_b_fallback_used_count')}`",
+        f"- OOS Tier B fallback used(표본외 Tier B 대체 사용): `{mt5('mt5_routed_total_oos', 'tier_b_fallback_used_count')}`",
+        "",
+        "## Boundary(경계)",
+        "",
+        "이 실행(run, 실행)은 divergent scout(발산형 탐색)이자 MT5 runtime_probe(MT5 런타임 탐침)다.",
+        "효과(effect, 효과)는 RUN01(실행 01) 근처 튜닝이 아니라 LightGBM(라이트GBM)의 다른 실패 구조를 빠르게 분리해서 보는 것이다.",
+        "",
+        "이 실행은 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)을 주장하지 않는다.",
+        "",
+    ]
+    _io_path(path.parent).mkdir(parents=True, exist_ok=True)
+    _io_path(path).write_text("\n".join(lines), encoding="utf-8-sig")
+    return
 
     lines = [
         f"# Stage 11 {spec.run_number.upper()} LGBM Divergent Scout",
@@ -670,13 +925,14 @@ def run_one_spec(
         "tier_scope": "mixed_tier_a_tier_b",
         "broad_sweep": {
             "variant": spec.mode,
+            "allowed_side": spec.allowed_side,
             "tier_a_quantile": spec.tier_a_quantile,
             "tier_b_quantile": spec.tier_b_quantile,
             "tier_a_margin": spec.tier_a_margin,
             "tier_b_margin": spec.tier_b_margin,
             "context_gate": spec.context_gate,
         },
-        "extreme_sweep": "run02E uses q0.99 and high margins; run02C/run02D disable one direction with threshold 1.0.",
+        "extreme_sweep": "Single-side variants disable the opposite direction with threshold 1.0; high-confidence variants use upper probability quantiles and larger margins.",
         "micro_search_gate": "Only consider fine search if routed validation and OOS both stop the RUN02A/RUN02B drawdown pattern.",
         "wfo_plan": "explicit_exception_single_window_runtime_probe_first; WFO deferred until a structurally different idea is worth hardening.",
         "failure_memory": "If weak, preserve as negative evidence and reopen only with new label, model family, or context feature.",

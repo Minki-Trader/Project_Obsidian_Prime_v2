@@ -9,7 +9,7 @@
 
 프로젝트는 clean stage restart(깨끗한 단계 재시작) 이후 Stage 02~09(2~9단계)를 닫았다.
 
-효과(effect, 효과): Stage 10(10단계)은 `run01Y/run01Z/run01AA/run01AB/run01AC(실행 01Y/01Z/01AA/01AB/01AC)` 200~220 closeout(마감) runtime_probe(런타임 탐침)로 닫혔다. Stage 11(11단계)은 `RUN02A~RUN02F(실행 02A~02F)` LGBM(`LightGBM`, 라이트GBM) training/threshold/divergent scouts(학습/임계값/발산형 탐색)를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 실행했고, `run01Y(실행 01Y)`는 비교 점수판(comparison scoreboard, 비교 점수판)으로만 둔다.
+효과(effect, 효과): Stage 10(10단계)은 `run01Y/run01Z/run01AA/run01AB/run01AC(실행 01Y/01Z/01AA/01AB/01AC)` 200~220 closeout(마감) runtime_probe(런타임 탐침)로 닫혔다. Stage 11(11단계)은 `RUN02A~RUN02P(실행 02A~02P)` LGBM(`LightGBM`, 라이트GBM) training/threshold/divergent/idea burst scouts(학습/임계값/발산형/아이디어 무더기 탐색)를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 실행했고, `run01Y(실행 01Y)`는 비교 점수판(comparison scoreboard, 비교 점수판)으로만 둔다.
 
 아직 alpha result(알파 결과), alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)은 없다.
 
@@ -125,8 +125,8 @@ Tier B fallback-only(Tier B 대체 구간 단독)는 run01Y/run01Z/run01AA/run01
 
 ## 현재 Stage 11 상태(Current Stage 11 State, 현재 Stage 11 상태)
 
-- status(상태): `active_run02C_run02F_divergent_runtime_probe_completed`
-- current run packet(현재 실행 묶음): `run02C_run02F_lgbm_divergent_scout_packet_v1`
+- status(상태): `active_run02G_run02P_idea_burst_runtime_probe_completed`
+- current run packet(현재 실행 묶음): `run02G_run02P_lgbm_idea_burst_packet_v1`
 - model family(모델 계열): `lightgbm_lgbmclassifier_multiclass`
 - comparison reference(비교 기준): `run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1`
 - selected slice(선택 구간): `200 < minutes_from_cash_open <= 220`
@@ -165,16 +165,33 @@ RUN02C~RUN02F(실행 02C~02F)는 RUN01(실행 01)식 근처 튜닝을 피하고 
 
 효과(effect, 효과): RUN02C(실행 02C)와 RUN02E(실행 02E)는 회수 가치(salvage value, 회수 가치)를 남겼지만, 둘 다 validation/OOS(검증/표본외)를 동시에 회복하지 못했다. 그래서 지금은 LGBM(라이트GBM) 세부 조정보다 새 label/model/context(라벨/모델/문맥) 축을 여는 쪽이 낫다.
 
+RUN02G~RUN02P(실행 02G~02P)는 RUN02C/RUN02E(실행 02C/02E)의 회수 가치를 바로 세부 탐색하지 않고, context/direction/confidence(문맥/방향/확신) 아이디어 10개로 더 넓게 발산시킨 묶음이다.
+
+| run(실행) | idea(아이디어) | validation net/PF(검증 순수익/수익 팩터) | OOS net/PF(표본외 순수익/수익 팩터) | read(판독) |
+|---|---|---:|---:|---|
+| RUN02G(실행 02G) | long pullback(롱 되돌림) | `-138.39 / 0.54` | `238.68 / 3.44` | OOS(표본외) 회수 가치는 큼, validation(검증)은 약함 |
+| RUN02H(실행 02H) | bull trend long(상승 추세 롱) | `-210.68 / 0.19` | `11.52 / 1.21` | 작은 OOS(표본외) 양수, validation(검증) 약함 |
+| RUN02I(실행 02I) | low-vol extreme confidence(저변동성 극단 확신) | `-509.12 / 0.00` | `-231.42 / 0.00` | 실패 |
+| RUN02J(실행 02J) | balanced midband(균형 중간대) | `70.10 / 1.29` | `-121.32 / 0.55` | validation(검증)만 양수 |
+| RUN02K(실행 02K) | quiet return z-score(조용한 수익률 z점수) | `-496.54 / 0.02` | `-494.23 / 0.19` | 실패 |
+| RUN02L(실행 02L) | range compression(횡보 압축) | `-352.49 / 0.34` | `-250.36 / 0.05` | 실패 |
+| RUN02M(실행 02M) | high-vol momentum alignment(고변동성 모멘텀 정렬) | `-496.38 / 0.25` | `-305.93 / 0.31` | 실패 |
+| RUN02N(실행 02N) | squeeze breakout(압축 돌파) | `-125.51 / 0.62` | `107.14 / 55.11` | OOS(표본외) 회수 가치는 있으나 거래 수 3개 |
+| RUN02O(실행 02O) | bull vortex long(상승 보텍스 롱) | `-86.88 / 0.55` | `6.04 / 1.20` | 작은 OOS(표본외) 양수, validation(검증) 약함 |
+| RUN02P(실행 02P) | bear vortex short(하락 보텍스 숏) | `1.78 / 1.02` | `24.33 / 1.37` | 양쪽 모두 양수지만 규모가 작아 불충분 |
+
+효과(effect, 효과): RUN02G/RUN02N/RUN02P(실행 02G/02N/02P)는 회수 가치(salvage value, 회수 가치)를 남겼다. 하지만 RUN02G/RUN02N(실행 02G/02N)은 validation(검증)이 약하고, RUN02P(실행 02P)는 순수익(net profit, 순수익)과 거래 수가 작아서 아직 세부 탐색 후보일 뿐이다.
+
 ## 현재 경계(Current Boundary, 현재 경계)
 
 현재 상태는 아직 alpha-ready(알파 준비 완료), official alpha result(공식 알파 결과), live readiness(실거래 준비), operating promotion(운영 승격)이 아니다.
 
-Stage 10(10단계) `run01Y/run01Z/run01AA/run01AB/run01AC(실행 01Y/01Z/01AA/01AB/01AC)`를 실행했다는 뜻은 200~220 closeout runtime_probe(마감 런타임 탐침)를 완료했다는 뜻이다. Stage 11(11단계) `RUN02A~RUN02F(실행 02A~02F)`는 LightGBM(라이트GBM) 학습방법, LGBM-specific threshold(LGBM 전용 임계값), 발산형 runtime_probe(런타임 탐침)를 완료했다는 뜻이다. 아직 WFO(워크포워드 최적화) 결과, promotion_candidate(승격 후보), operating_promotion(운영 승격)은 없다.
+Stage 10(10단계) `run01Y/run01Z/run01AA/run01AB/run01AC(실행 01Y/01Z/01AA/01AB/01AC)`를 실행했다는 뜻은 200~220 closeout runtime_probe(마감 런타임 탐침)를 완료했다는 뜻이다. Stage 11(11단계) `RUN02A~RUN02P(실행 02A~02P)`는 LightGBM(라이트GBM) 학습방법, LGBM-specific threshold(LGBM 전용 임계값), 발산형/아이디어 무더기 runtime_probe(런타임 탐침)를 완료했다는 뜻이다. 아직 WFO(워크포워드 최적화) 결과, promotion_candidate(승격 후보), operating_promotion(운영 승격)은 없다.
 
 ## 남은 작업(Open Items, 남은 작업)
 
-- Stage 11(11단계): `RUN02C/RUN02E(실행 02C/02E)`의 회수 가치(salvage value, 회수 가치)는 보존하되, 바로 micro search(세부 탐색)로 들어가지 않기
-- Stage 11(11단계): 다음 발산 축은 새 label/model/context(라벨/모델/문맥) 중 하나로 열기
+- Stage 11(11단계): `RUN02G/RUN02N/RUN02P(실행 02G/02N/02P)`의 회수 가치(salvage value, 회수 가치)는 보존하되, 바로 promotion_candidate(승격 후보)로 올리지 않기
+- Stage 11(11단계): 다음 발산 축은 short-specific label(숏 전용 라벨), squeeze breakout(압축 돌파) 하위 문맥, 또는 long pullback(롱 되돌림) validation(검증) 손실 축소로 열기
 - Stage 11(11단계): `run01Y(실행 01Y)` WFO/label-horizon sensitivity(WFO/라벨-예측수평선 민감도)는 LGBM 발산형 판독 뒤에도 아직 승격 검증으로 읽지 않기
 - Stage 10(10단계): `run01Y/run01Z/run01AA/run01AB/run01AC(실행 01Y/01Z/01AA/01AB/01AC)`는 closed inconclusive runtime probe(닫힌 불충분 런타임 탐침)로 유지하기
 - `run01A(실행 01A)`부터 `run01AC(실행 01AC)`까지의 Tier A only/Tier B fallback-only/routed total(Tier A 단독/Tier B 대체 구간 단독/라우팅 전체) 장부와 KPI(핵심 성과 지표)를 다음 실행 비교 기준으로 유지하기
@@ -195,4 +212,4 @@ Stage 10(10단계) `run01Y/run01Z/run01AA/run01AB/run01AC(실행 01Y/01Z/01AA/01
 - Stage 09(9단계) handoff packet(인계 묶음)을 alpha result(알파 결과)로 읽는 주장
 - Stage 10(10단계) `run01A(실행 01A)`부터 `run01AC(실행 01AC)`까지의 runtime probe(런타임 탐침)를 alpha quality(알파 품질), live readiness(실거래 준비), runtime authority expansion(런타임 권위 확장), operating promotion(운영 승격)으로 읽는 주장
 - Stage 11(11단계) scaffold(뼈대)를 Stage 11 run result(실행 결과), alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)으로 읽는 주장
-- Stage 11(11단계) `RUN02A~RUN02F(실행 02A~02F)` LightGBM MT5 runtime_probe(라이트GBM MT5 런타임 탐침)를 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)으로 읽는 주장
+- Stage 11(11단계) `RUN02A~RUN02P(실행 02A~02P)` LightGBM MT5 runtime_probe(라이트GBM MT5 런타임 탐침)를 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)으로 읽는 주장

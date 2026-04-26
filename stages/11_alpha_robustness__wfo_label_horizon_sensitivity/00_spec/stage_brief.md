@@ -29,6 +29,6 @@ Stage 11(11단계)은 `run01Y(실행 01Y)` 계열과 model training method chall
 
 ## 현재 판독(Current Read, 현재 판독)
 
-`RUN02A(실행 02A)` LightGBM(`LightGBM`, 라이트GBM) training-method scout(학습방법 탐색), `RUN02B(실행 02B)` LGBM-specific rank-target threshold scout(LGBM 전용 순위 기반 임계값 탐색), `RUN02C~RUN02F(실행 02C~02F)` divergent scouts(발산형 탐색)는 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 완료했다.
+`RUN02A(실행 02A)` LightGBM(`LightGBM`, 라이트GBM) training-method scout(학습방법 탐색), `RUN02B(실행 02B)` LGBM-specific rank-target threshold scout(LGBM 전용 순위 기반 임계값 탐색), `RUN02C~RUN02F(실행 02C~02F)` divergent scouts(발산형 탐색), `RUN02G~RUN02P(실행 02G~02P)` idea burst scouts(아이디어 무더기 탐색)는 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 완료했다.
 
-효과(effect, 효과): RUN02C(실행 02C) long-only(롱만)는 OOS(표본외) `82.69 / 1.35`로 회수 가치(salvage value, 회수 가치)를 남겼지만 validation(검증)이 `-154.01 / 0.68`이라 불안정하다. RUN02E(실행 02E) extreme confidence(극단 확신)는 OOS(표본외) `-6.35 / 0.96`까지 손실을 줄였지만 validation(검증)이 `-115.17 / 0.31`로 약하다. 현재는 LGBM(라이트GBM) 세부 조정보다 새 label/model/context(라벨/모델/문맥) 축을 열어야 한다.
+효과(effect, 효과): RUN02G(실행 02G) long pullback(롱 되돌림)은 OOS(표본외) `238.68 / 3.44`로 강한 회수 가치를 남겼지만 validation(검증)이 `-138.39 / 0.54`라 불안정하다. RUN02N(실행 02N) squeeze breakout(압축 돌파)은 OOS(표본외) `107.14 / 55.11`이지만 trade count(거래 수)가 3개뿐이고 validation(검증)이 약하다. RUN02P(실행 02P) bear vortex short(하락 보텍스 숏)는 validation/OOS(검증/표본외)가 모두 양수지만 순수익(net profit, 순수익)이 `1.78`, `24.33`으로 작다. 현재는 LGBM(라이트GBM)을 promotion_candidate(승격 후보)로 올리지 않고, RUN02G/RUN02N/RUN02P(실행 02G/02N/02P)를 회수 가치 메모로 보존한다.

@@ -25,7 +25,7 @@ current_focus:
   - "treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result"
   - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
   - "treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01A-run01X remain comparison baselines, not live readiness or operating promotion"
-  - "treat Stage 11 run02A-run02F as completed LightGBM training, threshold, and divergent MT5 runtime_probe evidence against the run01Y comparison scoreboard, not alpha quality or operating promotion"
+  - "treat Stage 11 run02A-run02P as completed LightGBM training, threshold, divergent, and idea-burst MT5 runtime_probe evidence against the run01Y comparison scoreboard, not alpha quality or operating promotion"
 pre_alpha_stage_queue:
   status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
@@ -64,7 +64,7 @@ pre_alpha_stage_queue:
     stage11:
       stage_id: "11_alpha_robustness__wfo_label_horizon_sensitivity"
       ownership: "run01Y_robustness_and_training_method_scout"
-      status: "active_run02C_run02F_divergent_runtime_probe_completed"
+      status: "active_run02G_run02P_idea_burst_runtime_probe_completed"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -545,19 +545,19 @@ stage10_alpha_scout:
   closeout_decision_path: "docs/decisions/2026-04-27_stage10_alpha_scout_closeout.md"
 stage11_alpha_robustness:
   stage_id: "11_alpha_robustness__wfo_label_horizon_sensitivity"
-  status: "active_run02C_run02F_divergent_runtime_probe_completed"
+  status: "active_run02G_run02P_idea_burst_runtime_probe_completed"
   lane: "exploration"
-  scout_boundary: "divergent_lgbm_scout_mt5_runtime_probe"
-  current_run_packet_id: "run02C_run02F_lgbm_divergent_scout_packet_v1"
-  current_run_id: "run02F_lgbm_calm_trend_context_gate_v1"
-  current_run_judgment: "inconclusive_divergent_lgbm_runtime_probe_packet_completed"
+  scout_boundary: "idea_burst_lgbm_scout_mt5_runtime_probe"
+  current_run_packet_id: "run02G_run02P_lgbm_idea_burst_packet_v1"
+  current_run_id: "run02P_lgbm_bear_vortex_short_v1"
+  current_run_judgment: "inconclusive_idea_burst_lgbm_runtime_probe_packet_completed"
   current_run_external_verification_status: "completed"
   current_run_model_family: "lightgbm_lgbmclassifier_multiclass"
   current_run_source_model_run_id: "run02A_lgbm_training_method_scout_v1"
   current_run_comparison_reference: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
-  current_run_decision_surface_id: "run02C_run02F_divergent_direction_confidence_context_surface"
-  current_run_threshold_method: "divergent_direction_confidence_context"
-  current_run_selected_threshold: "derived_from_run02B_lgbm_rank_target_plus_direction_confidence_context_filters"
+  current_run_decision_surface_id: "run02G_run02P_idea_burst_direction_confidence_context_surface"
+  current_run_threshold_method: "idea_burst_direction_confidence_context"
+  current_run_selected_threshold: "derived_from_run02B_lgbm_rank_target_plus_context_direction_filters"
   current_run_session_slice: "mid_second_overlap_200_220"
   current_run_max_hold_bars: 9
   current_run_source_onnx_parity_passed: true
@@ -631,28 +631,126 @@ stage11_alpha_robustness:
       oos_mt5_routed_recovery_factor: -0.5
       read: "context_gate_failed"
   current_packet_salvage_reads:
-    - "run02C_oos_positive_validation_weak"
-    - "run02E_oos_near_breakeven_validation_weak"
+    - "run02G_oos_strong_validation_weak"
+    - "run02N_oos_positive_three_trades_validation_weak"
+    - "run02P_tiny_dual_positive_inconclusive"
+  idea_burst_runs:
+    run02G:
+      run_id: "run02G_lgbm_long_pullback_salvage_v1"
+      idea_id: "IDEA-ST11-LGBM-LONG-PULLBACK"
+      signal_counts_tier_a_tier_b_combined: "49/3/52"
+      validation_mt5_routed_net_profit: -138.39
+      validation_mt5_routed_profit_factor: 0.54
+      validation_mt5_routed_trades: 9
+      oos_mt5_routed_net_profit: 238.68
+      oos_mt5_routed_profit_factor: 3.44
+      oos_mt5_routed_trades: 7
+      read: "oos_salvage_value_validation_weak"
+    run02H:
+      run_id: "run02H_lgbm_bull_trend_long_v1"
+      idea_id: "IDEA-ST11-LGBM-BULL-TREND-LONG"
+      signal_counts_tier_a_tier_b_combined: "21/3/24"
+      validation_mt5_routed_net_profit: -210.68
+      validation_mt5_routed_profit_factor: 0.19
+      oos_mt5_routed_net_profit: 11.52
+      oos_mt5_routed_profit_factor: 1.21
+      read: "small_oos_positive_validation_weak"
+    run02I:
+      run_id: "run02I_lgbm_low_vol_extreme_confidence_v1"
+      idea_id: "IDEA-ST11-LGBM-LOW-VOL-EXTREME-CONFIDENCE"
+      signal_counts_tier_a_tier_b_combined: "14/4/18"
+      validation_mt5_routed_net_profit: -509.12
+      validation_mt5_routed_profit_factor: 0.0
+      oos_mt5_routed_net_profit: -231.42
+      oos_mt5_routed_profit_factor: 0.0
+      read: "negative_result"
+    run02J:
+      run_id: "run02J_lgbm_balanced_midband_context_v1"
+      idea_id: "IDEA-ST11-LGBM-BALANCED-MIDBAND"
+      signal_counts_tier_a_tier_b_combined: "21/3/24"
+      validation_mt5_routed_net_profit: 70.1
+      validation_mt5_routed_profit_factor: 1.29
+      oos_mt5_routed_net_profit: -121.32
+      oos_mt5_routed_profit_factor: 0.55
+      read: "validation_only_positive_oos_failed"
+    run02K:
+      run_id: "run02K_lgbm_quiet_return_zscore_v1"
+      idea_id: "IDEA-ST11-LGBM-QUIET-RETURN-ZSCORE"
+      signal_counts_tier_a_tier_b_combined: "44/5/49"
+      validation_mt5_routed_net_profit: -496.54
+      validation_mt5_routed_profit_factor: 0.02
+      oos_mt5_routed_net_profit: -494.23
+      oos_mt5_routed_profit_factor: 0.19
+      read: "negative_result"
+    run02L:
+      run_id: "run02L_lgbm_range_compression_v1"
+      idea_id: "IDEA-ST11-LGBM-RANGE-COMPRESSION"
+      signal_counts_tier_a_tier_b_combined: "18/4/22"
+      validation_mt5_routed_net_profit: -352.49
+      validation_mt5_routed_profit_factor: 0.34
+      oos_mt5_routed_net_profit: -250.36
+      oos_mt5_routed_profit_factor: 0.05
+      read: "negative_result"
+    run02M:
+      run_id: "run02M_lgbm_high_vol_momentum_alignment_v1"
+      idea_id: "IDEA-ST11-LGBM-HIGH-VOL-MOMENTUM-ALIGN"
+      signal_counts_tier_a_tier_b_combined: "67/3/70"
+      validation_mt5_routed_net_profit: -496.38
+      validation_mt5_routed_profit_factor: 0.25
+      oos_mt5_routed_net_profit: -305.93
+      oos_mt5_routed_profit_factor: 0.31
+      read: "negative_result"
+    run02N:
+      run_id: "run02N_lgbm_squeeze_breakout_probe_v1"
+      idea_id: "IDEA-ST11-LGBM-SQUEEZE-BREAKOUT"
+      signal_counts_tier_a_tier_b_combined: "13/3/16"
+      validation_mt5_routed_net_profit: -125.51
+      validation_mt5_routed_profit_factor: 0.62
+      validation_mt5_routed_trades: 5
+      oos_mt5_routed_net_profit: 107.14
+      oos_mt5_routed_profit_factor: 55.11
+      oos_mt5_routed_trades: 3
+      read: "oos_salvage_value_tiny_sample_validation_weak"
+    run02O:
+      run_id: "run02O_lgbm_bull_vortex_long_v1"
+      idea_id: "IDEA-ST11-LGBM-BULL-VORTEX-LONG"
+      signal_counts_tier_a_tier_b_combined: "16/2/18"
+      validation_mt5_routed_net_profit: -86.88
+      validation_mt5_routed_profit_factor: 0.55
+      oos_mt5_routed_net_profit: 6.04
+      oos_mt5_routed_profit_factor: 1.2
+      read: "small_oos_positive_validation_weak"
+    run02P:
+      run_id: "run02P_lgbm_bear_vortex_short_v1"
+      idea_id: "IDEA-ST11-LGBM-BEAR-VORTEX-SHORT"
+      signal_counts_tier_a_tier_b_combined: "34/1/35"
+      validation_mt5_routed_net_profit: 1.78
+      validation_mt5_routed_profit_factor: 1.02
+      validation_mt5_routed_trades: 4
+      oos_mt5_routed_net_profit: 24.33
+      oos_mt5_routed_profit_factor: 1.37
+      oos_mt5_routed_trades: 6
+      read: "tiny_dual_positive_inconclusive"
   inherited_baseline_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
   inherited_baseline_stage: "10_alpha_scout__default_split_model_threshold_scan"
   inherited_baseline_slice: "200 < minutes_from_cash_open <= 220"
   inherited_baseline_hold_bars: 9
   inherited_baseline_threshold: "short0.600_long0.450_margin0.000"
   inherited_baseline_routing_mode: "tier_a_primary_no_fallback"
-  intended_next_question: "run02C-run02F divergent packet did not produce stable LGBM recovery; preserve run02C and run02E salvage reads, then open a new label, model, or context axis before deferred WFO and label/horizon sensitivity"
+  intended_next_question: "run02G-run02P idea burst did not produce stable LGBM recovery; preserve run02G, run02N, and run02P salvage reads, then test a stronger label, model family, or WFO frame before any promotion claim"
   boundary: "mt5_runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion"
   stage_brief_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/stage_brief.md"
   input_references_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/01_inputs/input_references.md"
   selection_status_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/04_selected/selection_status.md"
-  current_run_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02F_lgbm_calm_trend_context_gate_v1"
-  current_run_manifest_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02F_lgbm_calm_trend_context_gate_v1/run_manifest.json"
-  current_run_result_summary_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02F_lgbm_calm_trend_context_gate_v1/reports/result_summary.md"
-  current_run_packet_plan_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md"
-  current_run_packet_review_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02C_run02F_divergent_packet.md"
+  current_run_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02P_lgbm_bear_vortex_short_v1"
+  current_run_manifest_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02P_lgbm_bear_vortex_short_v1/run_manifest.json"
+  current_run_result_summary_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02P_lgbm_bear_vortex_short_v1/reports/result_summary.md"
+  current_run_packet_plan_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md"
+  current_run_packet_review_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02G_run02P_idea_burst_packet.md"
   current_stage_run_ledger_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage_run_ledger.csv"
 open_items:
-  - "Stage 11: preserve run02C and run02E LGBM salvage reads but do not enter micro search until a stronger validation/OOS structure appears"
-  - "Stage 11: open the next divergent axis around a new label, model family, or context regime before repeating the same run01-style threshold neighborhood"
+  - "Stage 11: preserve run02G, run02N, and run02P LGBM salvage reads but do not treat them as promotion candidates"
+  - "Stage 11: open the next axis around short-specific labels, squeeze breakout sub-context, long-pullback validation repair, or a new model family before repeating the same threshold neighborhood"
   - "Stage 11: defer run01Y WFO and label/horizon sensitivity until after the model-method and divergent LGBM read is recorded as inconclusive"
   - "preserve Stage 10 run01Y-run01AC as closed inconclusive runtime_probe evidence, not a promotion"
   - "compare Tier B partial-context fallback subtype quality before treating fallback coverage as alpha quality"
@@ -672,6 +770,6 @@ forbidden_shortcuts:
   - "do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality judgment"
   - "do not treat Stage 10 run01A-run01AC runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not treat the Stage 11 scaffold as a Stage 11 run result or robustness proof"
-  - "do not treat Stage 11 run02A-run02F LightGBM MT5 runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
+  - "do not treat Stage 11 run02A-run02P LightGBM MT5 runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

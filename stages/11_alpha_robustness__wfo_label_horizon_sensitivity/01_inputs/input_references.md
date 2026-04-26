@@ -47,8 +47,19 @@
 - RUN02E result summary(RUN02E 결과 요약): `stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02E_lgbm_extreme_confidence_rejection_v1/reports/result_summary.md`
 - RUN02F result summary(RUN02F 결과 요약): `stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02F_lgbm_calm_trend_context_gate_v1/reports/result_summary.md`
 
+## RUN02G~RUN02P 입력(RUN02G~RUN02P Inputs, 실행 02G~02P 입력)
+
+- plan(계획): `stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md`
+- idea burst script(아이디어 무더기 스크립트): `foundation/pipelines/run_stage11_lgbm_divergent_scouts.py`
+- source model run(원천 모델 실행): `run02A_lgbm_training_method_scout_v1`
+- source ONNX models(원천 ONNX 온닉스 모델): RUN02A(실행 02A)의 Tier A 58-feature model(Tier A 58개 피처 모델)과 Tier B core42 model(Tier B 핵심42 모델)
+- MT5 attempt policy(MT5 시도 정책): `routed_only(라우팅 전용)`, validation/OOS(검증/표본외) 각각 실행
+- review packet(검토 묶음): `stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02G_run02P_idea_burst_packet.md`
+- run scope(실행 범위): RUN02G/RUN02H/RUN02I/RUN02J/RUN02K/RUN02L/RUN02M/RUN02N/RUN02O/RUN02P(실행 02G~02P) 10개 아이디어
+- external verification status(외부 검증 상태): `completed(완료)`
+
 ## 시작 경계(Start Boundary, 시작 경계)
 
-Stage 11(11단계)은 Stage 10(10단계)의 `runtime_probe(런타임 탐침)` 결과를 비교 기준으로 받고, RUN02A(실행 02A)는 Python-side training-method scout(파이썬 측 학습방법 탐색)로 시작해 MT5 runtime_probe(MT5 런타임 탐침)까지 완료했다. RUN02B(실행 02B)는 RUN01(실행 01)의 absolute grid(절대값 격자)를 반복하지 않는 LGBM-specific threshold scout(LGBM 전용 임계값 탐색)로 완료했다. RUN02C~RUN02F(실행 02C~02F)는 direction/confidence/context(방향/확신/문맥) 발산형 탐색으로 완료했다.
+Stage 11(11단계)은 Stage 10(10단계)의 `runtime_probe(런타임 탐침)` 결과를 비교 기준으로 받고, RUN02A(실행 02A)는 Python-side training-method scout(파이썬 측 학습방법 탐색)로 시작해 MT5 runtime_probe(MT5 런타임 탐침)까지 완료했다. RUN02B(실행 02B)는 RUN01(실행 01)의 absolute grid(절대값 격자)를 반복하지 않는 LGBM-specific threshold scout(LGBM 전용 임계값 탐색)로 완료했다. RUN02C~RUN02F(실행 02C~02F)는 direction/confidence/context(방향/확신/문맥) 발산형 탐색으로 완료했다. RUN02G~RUN02P(실행 02G~02P)는 idea burst(아이디어 무더기) 탐색으로 완료했다.
 
 효과(effect, 효과): Stage 11(11단계)은 운영 주장(operating claim, 운영 주장)을 이어받지 않고, 견고성 질문(robustness question, 견고성 질문)과 학습방법 비교 질문(training-method comparison question, 학습방법 비교 질문)만 이어받는다.
