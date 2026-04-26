@@ -2,11 +2,12 @@
 
 ## 질문(Question, 질문)
 
-Stage 10(10단계)의 `run01Y(실행 01Y)` 기준 후보가 WFO(`walk-forward optimization`, 워크포워드 최적화)와 label/horizon sensitivity(라벨/예측수평선 민감도)에서도 구조적으로 버티는가?
+Stage 10(10단계)의 `run01Y(실행 01Y)` 기준 후보와 그 주변 탐색 후보가 WFO(`walk-forward optimization`, 워크포워드 최적화), label/horizon sensitivity(라벨/예측수평선 민감도), model training method sensitivity(모델 학습방법 민감도)에서도 구조적으로 버티는가?
 
 ## 범위(Scope, 범위)
 
 - `run01Y(실행 01Y)` baseline candidate(기준 후보)
+- model training method challenger(모델 학습방법 도전자)
 - WFO(워크포워드 최적화) 또는 walk-forward-style split(워크포워드식 분할) 설계
 - label/horizon variants(라벨/예측수평선 변형)
 - Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B combined(Tier A+B 합산) 기록
@@ -22,6 +23,12 @@ Stage 10(10단계)의 `run01Y(실행 01Y)` 기준 후보가 WFO(`walk-forward op
 
 ## 종료 조건(Exit Condition, 종료 조건)
 
-Stage 11(11단계)은 `run01Y(실행 01Y)` 계열이 WFO/label-horizon(워크포워드/라벨-예측수평선)에서 유지, 약화, 무효, 또는 재탐색 필요 중 하나로 정리되면 닫을 수 있다.
+Stage 11(11단계)은 `run01Y(실행 01Y)` 계열과 model training method challenger(모델 학습방법 도전자)가 유지, 약화, 무효, 또는 재탐색 필요 중 하나로 정리되면 닫을 수 있다.
 
-효과(effect, 효과): Stage 10(10단계)의 단일 분할 결과를 alpha quality(알파 품질)처럼 과장하지 않고, 다음 판단에 필요한 견고성 근거(robustness evidence, 견고성 근거)를 만든다.
+효과(effect, 효과): Stage 10(10단계)의 단일 분할 결과를 alpha quality(알파 품질)처럼 과장하지 않고, 다음 판단에 필요한 견고성 근거(robustness evidence, 견고성 근거)와 학습방법 비교 근거(training-method evidence, 학습방법 근거)를 만든다.
+
+## 현재 판독(Current Read, 현재 판독)
+
+`RUN02A(실행 02A)` LightGBM(`LightGBM`, 라이트GBM) training-method scout(학습방법 탐색), `RUN02B(실행 02B)` LGBM-specific rank-target threshold scout(LGBM 전용 순위 기반 임계값 탐색), `RUN02C~RUN02F(실행 02C~02F)` divergent scouts(발산형 탐색)는 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 완료했다.
+
+효과(effect, 효과): RUN02C(실행 02C) long-only(롱만)는 OOS(표본외) `82.69 / 1.35`로 회수 가치(salvage value, 회수 가치)를 남겼지만 validation(검증)이 `-154.01 / 0.68`이라 불안정하다. RUN02E(실행 02E) extreme confidence(극단 확신)는 OOS(표본외) `-6.35 / 0.96`까지 손실을 줄였지만 validation(검증)이 `-115.17 / 0.31`로 약하다. 현재는 LGBM(라이트GBM) 세부 조정보다 새 label/model/context(라벨/모델/문맥) 축을 열어야 한다.
