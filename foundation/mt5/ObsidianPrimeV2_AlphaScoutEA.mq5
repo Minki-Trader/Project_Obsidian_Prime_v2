@@ -44,6 +44,9 @@ input string          InpFallbackFeatureOrderHash = "";
 input double          InpShortThreshold = 0.55;
 input double          InpLongThreshold = 0.55;
 input double          InpMinMargin = 0.05;
+input double          InpFallbackShortThreshold = 0.55;
+input double          InpFallbackLongThreshold = 0.55;
+input double          InpFallbackMinMargin = 0.05;
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -64,6 +67,7 @@ COpFeatureCsvInput   g_fallback_feature_input;
 COpModelRuntime      g_model_runtime;
 COpModelRuntime      g_fallback_model_runtime;
 COpDecisionSurface   g_decision_surface;
+COpDecisionSurface   g_fallback_decision_surface;
 COpExecutionBridge   g_execution_bridge;
 COpRuntimeTelemetry  g_telemetry;
 
@@ -294,7 +298,10 @@ void ProcessClosedBar()
      }
 
    SOpDecisionResult decision;
-   g_decision_surface.Evaluate(p_short, p_flat, p_long, decision);
+   if(active_tier == "tier_b_fallback")
+      g_fallback_decision_surface.Evaluate(p_short, p_flat, p_long, decision);
+   else
+      g_decision_surface.Evaluate(p_short, p_flat, p_long, decision);
 
    SOpExecutionResult execution;
    const bool execution_ok = g_execution_bridge.Execute(decision.signal, execution);
@@ -397,6 +404,9 @@ int OnInit()
    g_decision_surface.Configure(InpShortThreshold,
                                 InpLongThreshold,
                                 InpMinMargin);
+   g_fallback_decision_surface.Configure(InpFallbackShortThreshold,
+                                         InpFallbackLongThreshold,
+                                         InpFallbackMinMargin);
 
    g_execution_bridge.Configure(InpMainSymbol,
                                 InpMagic,

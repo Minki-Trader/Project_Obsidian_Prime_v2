@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 import pandas as pd
@@ -59,6 +60,41 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         )
         self.assertEqual(decisions.loc[0, "decision_label_class"], 0)
         self.assertEqual(decisions.loc[1, "decision_label_class"], 2)
+
+    def test_configured_run_identity_flows_into_default_tier_records(self) -> None:
+        original = {
+            "run_number": self.module.RUN_NUMBER,
+            "run_id": self.module.RUN_ID,
+            "exploration_label": self.module.EXPLORATION_LABEL,
+            "common_run_root": self.module.COMMON_RUN_ROOT,
+        }
+        try:
+            self.module.configure_run_identity(
+                run_number="runXX",
+                run_id="unit_run_id",
+                exploration_label="unit_label",
+                common_run_root="Project_Obsidian_Prime_v2/stage10/unit_run_id",
+            )
+            records = self.module.build_paired_tier_records(
+                {
+                    "tier_a_separate": pd.DataFrame(
+                        {
+                            "decision_label": ["long"],
+                            "p_short": [0.1],
+                            "p_flat": [0.2],
+                            "p_long": [0.7],
+                            "threshold_id": ["unit_threshold"],
+                            "partial_context_subtype": ["Tier_A_full_context"],
+                        }
+                    )
+                }
+            )
+        finally:
+            self.module.configure_run_identity(**original)
+
+        self.assertTrue(records)
+        self.assertTrue(all(record["run_id"] == "unit_run_id" for record in records))
+        self.assertTrue(all(record["ledger_row_id"].startswith("unit_run_id__") for record in records))
 
     def test_paired_tier_records_include_separate_and_combined_views(self) -> None:
         predictions = pd.DataFrame(
@@ -179,16 +215,60 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
                     long_threshold=0.4,
                     min_margin=0.0,
                 ),
+                fallback_rule=self.module.ThresholdRule(
+                    threshold_id="fallback_unit",
+                    short_threshold=0.9,
+                    long_threshold=0.5,
+                    min_margin=0.025,
+                ),
+                max_hold_bars=9,
                 from_date="2025.01.01",
                 to_date="2025.10.01",
             )
             set_text = Path(attempt["set"]["path"]).read_text(encoding="utf-8")
 
         self.assertEqual(attempt["routing_mode"], "tier_a_primary_tier_b_fallback")
+        self.assertTrue(attempt["fallback_enabled"])
         self.assertIn("InpFeatureCount=58", set_text)
         self.assertIn("InpFallbackEnabled=true", set_text)
         self.assertIn("InpFallbackFeatureCount=56", set_text)
         self.assertIn("InpFallbackFeatureOrderHash=hash_b", set_text)
+        self.assertIn("InpFallbackShortThreshold=0.9", set_text)
+        self.assertIn("InpFallbackLongThreshold=0.5", set_text)
+        self.assertIn("InpFallbackMinMargin=0.025", set_text)
+        self.assertIn("InpMaxHoldBars=9", set_text)
+
+    def test_materialize_routed_mt5_attempt_can_disable_fallback(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            attempt = self.module.materialize_mt5_routed_attempt_files(
+                run_output_root=root,
+                split_name="oos",
+                primary_onnx_path=root / "tier_a.onnx",
+                primary_feature_matrix_path=root / "tier_a_features.csv",
+                primary_feature_count=58,
+                primary_feature_order_hash="hash_a",
+                fallback_onnx_path=root / "tier_b.onnx",
+                fallback_feature_matrix_path=root / "tier_b_features.csv",
+                fallback_feature_count=42,
+                fallback_feature_order_hash="hash_b",
+                rule=self.module.ThresholdRule(
+                    threshold_id="unit",
+                    short_threshold=0.6,
+                    long_threshold=0.45,
+                    min_margin=0.0,
+                ),
+                fallback_enabled=False,
+                max_hold_bars=9,
+                from_date="2025.10.01",
+                to_date="2026.04.14",
+            )
+            set_text = Path(attempt["set"]["path"]).read_text(encoding="utf-8")
+
+        self.assertEqual(attempt["routing_mode"], self.module.ROUTING_MODE_A_ONLY)
+        self.assertFalse(attempt["fallback_enabled"])
+        self.assertIn("InpFallbackEnabled=false", set_text)
+        self.assertIn("InpMaxHoldBars=9", set_text)
 
     def test_materialize_tier_only_mt5_attempt_can_label_b_fallback_as_primary(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -213,6 +293,7 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
                 record_view_prefix=self.module.MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
                 primary_active_tier="tier_b_fallback",
                 attempt_role="tier_b_fallback_only_total",
+                max_hold_bars=6,
             )
             set_text = Path(attempt["set"]["path"]).read_text(encoding="utf-8")
 
@@ -221,6 +302,9 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         self.assertIn("InpPrimaryActiveTier=tier_b_fallback", set_text)
         self.assertIn("InpFallbackEnabled=false", set_text)
         self.assertIn("InpFeatureCount=42", set_text)
+        self.assertIn("InpFallbackShortThreshold=0.6", set_text)
+        self.assertIn("InpFallbackLongThreshold=0.4", set_text)
+        self.assertIn("InpMaxHoldBars=6", set_text)
 
     def test_routed_mt5_kpi_records_are_not_synthetic_sum(self) -> None:
         result = {
@@ -281,6 +365,54 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         self.assertEqual(records[1]["metrics"]["profit_attribution"], "not_separable_from_single_routed_account_path")
         self.assertEqual(records[2]["metrics"]["aggregation"], "actual_routed_tester_run")
         self.assertNotEqual(records[2]["metrics"].get("aggregation"), "synthetic_sum_of_separate_tier_tester_runs")
+
+    def test_no_fallback_routed_mt5_kpi_records_skip_b_component(self) -> None:
+        result = {
+            "status": "completed",
+            "tier": self.module.TIER_AB,
+            "split": "oos",
+            "routing_mode": self.module.ROUTING_MODE_A_ONLY,
+            "runtime_outputs": {
+                "last_summary": {
+                    "order_attempt_count": 4,
+                    "order_fill_count": 4,
+                    "feature_skip_count": 9,
+                    "feature_ready_count": 10,
+                    "model_ok_count": 10,
+                    "model_fail_count": 0,
+                    "tier_a_used_count": 10,
+                    "tier_b_fallback_used_count": 0,
+                    "no_tier_count": 9,
+                    "tier_a_long_count": 4,
+                    "tier_a_short_count": 2,
+                    "tier_a_flat_count": 4,
+                    "tier_a_order_attempt_count": 4,
+                    "tier_a_order_fill_count": 4,
+                }
+            },
+            "strategy_tester_report": {
+                "metrics": {
+                    "status": "completed",
+                    "net_profit": 7.0,
+                    "profit_factor": 1.1,
+                    "expectancy": 0.3,
+                    "trade_count": 12,
+                    "win_rate_percent": 50.0,
+                    "max_drawdown_amount": 5.0,
+                    "max_drawdown_percent": 1.0,
+                    "recovery_factor": 1.4,
+                }
+            },
+        }
+
+        records = self.module.build_mt5_kpi_records([result])
+
+        self.assertEqual(
+            [record["record_view"] for record in records],
+            ["mt5_routed_tier_a_used_oos", "mt5_routed_total_oos"],
+        )
+        self.assertEqual(records[0]["metrics"]["route_bar_count"], 10)
+        self.assertEqual(records[1]["metrics"]["tier_b_fallback_used_count"], 0)
 
     def test_tier_only_mt5_kpi_record_keeps_direct_profit_metrics(self) -> None:
         result = {
@@ -353,6 +485,179 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         self.assertEqual(classified["missing_feature_group_mask"].tolist(), [case[2] for case in cases])
         self.assertEqual(classified["available_feature_group_mask"].tolist(), [case[3] for case in cases])
 
+    def test_session_slice_filters_minutes_from_cash_open(self) -> None:
+        session_slice = self.module.session_slice_payload("mid")
+        frame = pd.DataFrame(
+            {
+                "split": ["validation", "validation", "oos", "oos"],
+                "minutes_from_cash_open": [110.0, 115.0, 220.0, 225.0],
+            }
+        )
+
+        filtered = self.module.apply_session_slice(frame, session_slice)
+
+        self.assertEqual(filtered["minutes_from_cash_open"].tolist(), [115.0, 220.0])
+
+    def test_mid_session_halves_are_non_overlapping(self) -> None:
+        frame = pd.DataFrame(
+            {
+                "split": ["validation"] * 5,
+                "minutes_from_cash_open": [110.0, 115.0, 165.0, 170.0, 220.0],
+            }
+        )
+
+        first = self.module.apply_session_slice(frame, self.module.session_slice_payload("mid_first"))
+        second = self.module.apply_session_slice(frame, self.module.session_slice_payload("mid_second"))
+
+        self.assertEqual(first["minutes_from_cash_open"].tolist(), [115.0, 165.0])
+        self.assertEqual(second["minutes_from_cash_open"].tolist(), [170.0, 220.0])
+
+    def test_mid_second_subslices_are_non_overlapping(self) -> None:
+        frame = pd.DataFrame(
+            {
+                "split": ["validation"] * 5,
+                "minutes_from_cash_open": [165.0, 170.0, 195.0, 200.0, 220.0],
+            }
+        )
+
+        first = self.module.apply_session_slice(frame, self.module.session_slice_payload("mid_second_first"))
+        second = self.module.apply_session_slice(frame, self.module.session_slice_payload("mid_second_second"))
+
+        self.assertEqual(first["minutes_from_cash_open"].tolist(), [170.0, 195.0])
+        self.assertEqual(second["minutes_from_cash_open"].tolist(), [200.0, 220.0])
+
+    def test_mid_second_second_subslices_are_non_overlapping(self) -> None:
+        frame = pd.DataFrame(
+            {
+                "split": ["validation"] * 6,
+                "minutes_from_cash_open": [195.0, 200.0, 205.0, 210.0, 215.0, 220.0],
+            }
+        )
+
+        first = self.module.apply_session_slice(
+            frame,
+            self.module.session_slice_payload("mid_second_second_first"),
+        )
+        second = self.module.apply_session_slice(
+            frame,
+            self.module.session_slice_payload("mid_second_second_second"),
+        )
+
+        self.assertEqual(first["minutes_from_cash_open"].tolist(), [200.0, 205.0, 210.0])
+        self.assertEqual(second["minutes_from_cash_open"].tolist(), [215.0, 220.0])
+
+    def test_mid_second_overlap_slices_keep_expected_boundaries(self) -> None:
+        frame = pd.DataFrame(
+            {
+                "split": ["validation"] * 7,
+                "minutes_from_cash_open": [190.0, 195.0, 200.0, 205.0, 210.0, 215.0, 220.0],
+            }
+        )
+
+        overlap_190_210 = self.module.apply_session_slice(
+            frame,
+            self.module.session_slice_payload("mid_second_overlap_190_210"),
+        )
+        overlap_195_215 = self.module.apply_session_slice(
+            frame,
+            self.module.session_slice_payload("mid_second_overlap_195_215"),
+        )
+        overlap_200_220 = self.module.apply_session_slice(
+            frame,
+            self.module.session_slice_payload("mid_second_overlap_200_220"),
+        )
+
+        self.assertEqual(overlap_190_210["minutes_from_cash_open"].tolist(), [195.0, 200.0, 205.0, 210.0])
+        self.assertEqual(overlap_195_215["minutes_from_cash_open"].tolist(), [200.0, 205.0, 210.0, 215.0])
+        self.assertEqual(overlap_200_220["minutes_from_cash_open"].tolist(), [205.0, 210.0, 215.0, 220.0])
+
+    def test_eval_route_coverage_summary_uses_session_sliced_counts(self) -> None:
+        base = {
+            "policy_id": "policy",
+            "dataset_id": "dataset",
+            "feature_set_id": "features",
+            "feature_count": 42,
+            "feature_order_hash": "hash",
+            "tier_b_training_rows": 100,
+        }
+        tier_a = pd.DataFrame({"split": ["validation", "oos"]})
+        tier_b = pd.DataFrame(
+            {
+                "split": ["validation", "validation", "oos"],
+                "partial_context_subtype": ["B_core_only", "B_macro_missing", "B_core_only"],
+            }
+        )
+        no_tier = pd.DataFrame({"split": ["validation"]})
+
+        summary = self.module.build_eval_route_coverage_summary(
+            base_summary=base,
+            tier_a_eval_frame=tier_a,
+            tier_b_eval_frame=tier_b,
+            no_tier_eval_frame=no_tier,
+            session_slice=self.module.session_slice_payload("early"),
+        )
+
+        self.assertEqual(summary["tier_a_primary_rows"], 2)
+        self.assertEqual(summary["tier_b_fallback_rows"], 3)
+        self.assertEqual(summary["no_tier_labelable_rows"], 1)
+        self.assertEqual(summary["by_split"]["validation"]["routed_labelable_rows"], 3)
+        self.assertEqual(summary["tier_b_fallback_by_split_subtype"]["oos"], {"B_core_only": 1})
+        self.assertEqual(summary["session_slice"]["slice_id"], "early")
+
+    def test_tier_b_fallback_subtype_filter_moves_rows_out_of_route(self) -> None:
+        tier_b = pd.DataFrame(
+            {
+                "split": ["validation", "validation", "oos"],
+                "partial_context_subtype": [
+                    "B_macro_missing",
+                    "B_full_context_outside_tier_a_scope",
+                    "B_macro_missing",
+                ],
+                "route_role": [self.module.ROUTE_ROLE_B_FALLBACK] * 3,
+            }
+        )
+
+        filtered, filtered_out = self.module.apply_tier_b_fallback_subtype_filter(
+            tier_b,
+            ("B_macro_missing",),
+        )
+
+        self.assertEqual(filtered["partial_context_subtype"].tolist(), ["B_macro_missing", "B_macro_missing"])
+        self.assertEqual(filtered_out["partial_context_subtype"].tolist(), ["B_full_context_outside_tier_a_scope"])
+        self.assertEqual(filtered_out["route_role"].tolist(), [self.module.ROUTE_ROLE_NO_TIER])
+        self.assertEqual(
+            filtered_out["context_reject_reason"].tolist(),
+            ["tier_b_fallback_subtype_filtered_out"],
+        )
+
+    def test_eval_route_coverage_summary_records_filtered_out_subtypes(self) -> None:
+        base = {"policy_id": "policy", "dataset_id": "dataset", "feature_set_id": "features"}
+        tier_a = pd.DataFrame({"split": ["validation"]})
+        tier_b = pd.DataFrame({"split": ["validation"], "partial_context_subtype": ["B_macro_missing"]})
+        filtered_out = pd.DataFrame(
+            {
+                "split": ["validation", "oos"],
+                "partial_context_subtype": ["B_core_only", "B_full_context_outside_tier_a_scope"],
+            }
+        )
+        no_tier = pd.concat([pd.DataFrame({"split": ["oos"]}), filtered_out], ignore_index=True, sort=False)
+
+        summary = self.module.build_eval_route_coverage_summary(
+            base_summary=base,
+            tier_a_eval_frame=tier_a,
+            tier_b_eval_frame=tier_b,
+            no_tier_eval_frame=no_tier,
+            session_slice=None,
+            tier_b_filtered_out_frame=filtered_out,
+            tier_b_allowed_subtypes=("B_macro_missing",),
+        )
+
+        self.assertEqual(summary["tier_b_fallback_rows"], 1)
+        self.assertEqual(summary["tier_b_fallback_filtered_out_rows"], 2)
+        self.assertEqual(summary["no_tier_labelable_rows"], 3)
+        self.assertEqual(summary["by_split"]["validation"]["tier_b_fallback_filtered_out_rows"], 1)
+        self.assertEqual(summary["tier_b_fallback_allowed_subtypes"], ["B_macro_missing"])
+
     def test_mt5_kpi_records_are_enriched_with_route_coverage(self) -> None:
         records = [
             {
@@ -403,6 +708,45 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
             self.module._io_path(long_path).write_text("ok", encoding="utf-8")
 
             self.assertTrue(self.module._path_exists(long_path))
+        finally:
+            shutil.rmtree(self.module._io_path(root), ignore_errors=True)
+
+    def test_compile_mql5_ea_uses_short_command_log_for_long_artifact_path(self) -> None:
+        temp_dir = tempfile.mkdtemp()
+        root = Path(temp_dir)
+        try:
+            metaeditor = root / "MetaEditor64.exe"
+            source = root / "ObsidianPrimeV2_AlphaScoutEA.mq5"
+            metaeditor.write_text("", encoding="utf-8")
+            source.write_text("", encoding="utf-8")
+            long_dir = root
+            for index in range(7):
+                long_dir = long_dir / f"segment_{index:02d}_{'x' * 36}"
+            target_log = long_dir / "mt5_compile.log"
+            seen: dict[str, list[str]] = {}
+
+            class Proc:
+                returncode = 0
+                stdout = ""
+                stderr = ""
+
+            def fake_run(command: list[str], **_kwargs):
+                seen["command"] = command
+                log_arg = next(item for item in command if item.startswith("/log:"))
+                command_log = Path(log_arg.removeprefix("/log:"))
+                command_log.parent.mkdir(parents=True, exist_ok=True)
+                command_log.write_text("Result: 0 errors, 0 warnings", encoding="utf-16")
+                return Proc()
+
+            with patch.object(self.module.subprocess, "run", side_effect=fake_run):
+                payload = self.module.compile_mql5_ea(metaeditor, source, target_log)
+
+            command_log_arg = next(item for item in seen["command"] if item.startswith("/log:"))
+            command_log = Path(command_log_arg.removeprefix("/log:"))
+            self.assertEqual(payload["status"], "completed")
+            self.assertTrue(self.module._path_exists(target_log))
+            self.assertLess(len(str(command_log.resolve())), len(str(target_log.resolve())))
+            self.assertEqual(payload["log_path"], target_log.as_posix())
         finally:
             shutil.rmtree(self.module._io_path(root), ignore_errors=True)
 

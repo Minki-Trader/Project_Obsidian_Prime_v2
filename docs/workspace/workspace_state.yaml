@@ -1,14 +1,14 @@
-updated_on: "2026-04-26"
+updated_on: "2026-04-27"
 project_mode: "clean_stage_restart"
 active_branch: "main"
-active_stage: "10_alpha_scout__default_split_model_threshold_scan"
+active_stage: "11_alpha_robustness__wfo_label_horizon_sensitivity"
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: "tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with component and total records"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_active"
+  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_active"
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
@@ -24,9 +24,10 @@ current_focus:
   - "preserve the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority input behind the Stage 07 smoke"
   - "treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result"
   - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
-  - "treat Stage 10 run01A as completed Tier A only, Tier B fallback-only, and A+B routed MT5 runtime_probe evidence but not live readiness or operating promotion"
+  - "treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01A-run01X remain comparison baselines, not live readiness or operating promotion"
+  - "start Stage 11 as WFO and label/horizon sensitivity exploration from the run01Y baseline without creating a Stage 11 result yet"
 pre_alpha_stage_queue:
-  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_active"
+  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
   decision_path: "docs/decisions/2026-04-25_pre_alpha_stage_queue.md"
   formal_pre_alpha_feature_count: 58
@@ -59,7 +60,11 @@ pre_alpha_stage_queue:
     stage10:
       stage_id: "10_alpha_scout__default_split_model_threshold_scan"
       ownership: "default_split_model_threshold_single_split_scout"
-      status: "active_run01A_completed_runtime_probe"
+      status: "reviewed_closed_handoff_to_stage11_ready"
+    stage11:
+      stage_id: "11_alpha_robustness__wfo_label_horizon_sensitivity"
+      ownership: "run01Y_wfo_label_horizon_robustness_scout"
+      status: "active_scaffolded_no_runs_yet"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -318,42 +323,249 @@ stage09_pre_alpha_handoff:
   decision_path: "docs/decisions/2026-04-25_stage09_pre_alpha_handoff.md"
 stage10_alpha_scout:
   stage_id: "10_alpha_scout__default_split_model_threshold_scan"
-  status: "active_run01A_completed_runtime_probe"
+  status: "reviewed_closed_handoff_to_stage11_ready"
   lane: "exploration"
   scout_boundary: "single_split_scout"
-  current_run_id: "run01A_logreg_threshold_mt5_scout_v1"
-  current_run_label: "stage10_Model__LogReg_MT5Scout"
-  current_run_judgment: "inconclusive_single_split_scout_mt5_routed_completed"
+  current_run_packet_id: "run01Y_run01AC_logreg_a_base_no_fallback_200_220_hold_threshold_closeout_v1"
+  current_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  current_run_label: "stage10_Model__LogReg_ABaseNoFallbackHold9SessionMidSecondOverlap200220"
+  current_run_judgment: "inconclusive_single_split_scout_mt5_closeout_completed"
   current_run_external_verification_status: "completed"
-  current_run_routing_mode: "tier_a_primary_tier_b_partial_context_fallback"
-  current_run_validation_is_net_profit: 355.65
-  current_run_validation_is_profit_factor: 1.33
-  current_run_validation_is_max_drawdown: 146.24
-  current_run_validation_is_recovery_factor: 2.43
-  current_run_oos_net_profit: 174.89
-  current_run_oos_profit_factor: 1.21
-  current_run_oos_max_drawdown: 209.15
-  current_run_oos_recovery_factor: 0.84
-  current_run_tier_b_fallback_rows: 12398
-  current_run_no_tier_labelable_rows: 1053
-  current_run_validation_is_tier_a_used_count: 9844
-  current_run_validation_is_tier_b_fallback_used_count: 2366
-  current_run_validation_is_no_tier_labelable_count: 203
-  current_run_oos_tier_a_used_count: 7584
-  current_run_oos_tier_b_fallback_used_count: 1062
-  current_run_oos_no_tier_labelable_count: 159
+  current_run_routing_mode: "tier_a_primary_no_fallback"
+  current_run_routed_fallback_enabled: false
+  current_run_selected_threshold: "a_short0.600_long0.450_margin0.000__b_disabled__hold9__slice_mid_second_overlap_200_220"
+  current_run_tier_a_rule: "short0.600_long0.450_margin0.000"
+  current_run_tier_b_fallback_rule: "short0.600_long0.450_margin0.000"
+  current_run_tier_b_fallback_allowed_subtypes: "all"
+  current_run_max_hold_bars: 9
+  current_run_session_slice: "mid_second_overlap_200_220"
+  current_run_validation_is_net_profit: 318.48
+  current_run_validation_is_profit_factor: 3.88
+  current_run_validation_is_max_drawdown: 182.07
+  current_run_validation_is_recovery_factor: 1.75
+  current_run_oos_net_profit: 313.14
+  current_run_oos_profit_factor: 3.99
+  current_run_oos_max_drawdown: 144.65
+  current_run_oos_recovery_factor: 2.16
+  closeout_packet_id: "run01Y_run01AC_logreg_a_base_no_fallback_200_220_hold_threshold_closeout_v1"
+  closeout_baseline_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  closeout_slice: "200 < minutes_from_cash_open <= 220"
+  closeout_routing_mode: "tier_a_primary_no_fallback"
+  closeout_external_verification_status: "completed"
+  closeout_hold6_run_id: "run01Z_logreg_a_base_no_fallback_hold6_session_mid_second_overlap_200_220_v1"
+  closeout_hold6_validation_net_profit: 264.14
+  closeout_hold6_validation_profit_factor: 2.99
+  closeout_hold6_validation_max_drawdown: 182.07
+  closeout_hold6_validation_recovery_factor: 1.45
+  closeout_hold6_oos_net_profit: 109.65
+  closeout_hold6_oos_profit_factor: 1.66
+  closeout_hold6_oos_max_drawdown: 161.79
+  closeout_hold6_oos_recovery_factor: 0.68
+  closeout_hold12_run_id: "run01AA_logreg_a_base_no_fallback_hold12_session_mid_second_overlap_200_220_v1"
+  closeout_hold12_validation_net_profit: 447.76
+  closeout_hold12_validation_profit_factor: 4.55
+  closeout_hold12_validation_max_drawdown: 182.07
+  closeout_hold12_validation_recovery_factor: 2.46
+  closeout_hold12_oos_net_profit: 225.69
+  closeout_hold12_oos_profit_factor: 2.57
+  closeout_hold12_oos_max_drawdown: 170.11
+  closeout_hold12_oos_recovery_factor: 1.33
+  closeout_margin025_run_id: "run01AB_logreg_a_strict_margin025_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  closeout_margin025_validation_net_profit: 318.48
+  closeout_margin025_validation_profit_factor: 3.88
+  closeout_margin025_validation_max_drawdown: 182.07
+  closeout_margin025_validation_recovery_factor: 1.75
+  closeout_margin025_oos_net_profit: 313.14
+  closeout_margin025_oos_profit_factor: 3.99
+  closeout_margin025_oos_max_drawdown: 144.65
+  closeout_margin025_oos_recovery_factor: 2.16
+  closeout_strict_prob_run_id: "run01AC_logreg_a_strict_prob_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  closeout_strict_prob_validation_net_profit: 143.91
+  closeout_strict_prob_validation_profit_factor: 2.30
+  closeout_strict_prob_validation_max_drawdown: 182.07
+  closeout_strict_prob_validation_recovery_factor: 0.79
+  closeout_strict_prob_oos_net_profit: 219.09
+  closeout_strict_prob_oos_profit_factor: 5.53
+  closeout_strict_prob_oos_max_drawdown: 147.09
+  closeout_strict_prob_oos_recovery_factor: 1.49
+  closeout_tier_b_fallback_only_validation_trades: 0
+  closeout_tier_b_fallback_only_oos_trades: 0
+  closeout_interpretation: "run01Y remains the best net/recovery balance; hold6 is weaker, hold12 is validation-favored but OOS weaker, margin0.025 is not binding, and strict probability improves OOS PF but lowers net/recovery"
+  hold_stress_holds: "3,6,9,12,18,24"
+  hold_stress_routing_mode: "tier_a_primary_no_fallback"
+  hold_stress_best_oos_hold_bars: 9
+  hold_stress_best_oos_net_profit: 256.99
+  hold_stress_best_oos_profit_factor: 1.34
+  hold_stress_best_oos_recovery_factor: 2.05
+  hold_stress_best_validation_hold_bars: 24
+  hold_stress_best_validation_net_profit: 454.69
+  hold_stress_interpretation: "hold9 is best on OOS net profit, PF, and recovery; hold24 is validation-favored but weaker OOS, so no promotion claim"
+  session_slice_slices: "early,mid,late"
+  session_slice_routing_mode: "tier_a_primary_no_fallback"
+  session_slice_hold_bars: 9
+  session_slice_best_oos_slice: "mid"
+  session_slice_best_oos_net_profit: 203.97
+  session_slice_best_oos_profit_factor: 1.71
+  session_slice_best_oos_recovery_factor: 2.01
+  session_slice_early_oos_net_profit: -76.39
+  session_slice_late_oos_net_profit: -12.63
+  session_slice_interpretation: "hold9 OOS strength is concentrated in the mid-session slice; early is negative in validation and OOS, late is validation-strong but OOS-negative"
+  mid_session_half_slices: "mid_first,mid_second"
+  mid_session_half_routing_mode: "tier_a_primary_no_fallback"
+  mid_session_half_hold_bars: 9
+  mid_session_half_best_consistency_slice: "mid_second"
+  mid_session_half_first_validation_net_profit: -146.00
+  mid_session_half_first_validation_profit_factor: 0.79
+  mid_session_half_first_oos_net_profit: 115.23
+  mid_session_half_first_oos_profit_factor: 1.37
+  mid_session_half_first_oos_recovery_factor: 0.66
+  mid_session_half_second_validation_net_profit: 331.36
+  mid_session_half_second_validation_profit_factor: 2.38
+  mid_session_half_second_oos_net_profit: 136.54
+  mid_session_half_second_oos_profit_factor: 1.80
+  mid_session_half_second_oos_recovery_factor: 1.01
+  mid_session_half_interpretation: "mid_second is validation/OOS positive and more consistent; mid_first is OOS positive but validation-negative and riskier, so mid strength is not evenly distributed"
+  mid_second_narrow_slices: "mid_second_first,mid_second_second"
+  mid_second_narrow_routing_mode: "tier_a_primary_no_fallback"
+  mid_second_narrow_hold_bars: 9
+  mid_second_narrow_first_run_id: "run01S_logreg_a_base_no_fallback_hold9_session_mid_second_first_v1"
+  mid_second_narrow_first_slice: "165 < minutes_from_cash_open <= 195"
+  mid_second_narrow_first_validation_net_profit: -17.45
+  mid_second_narrow_first_validation_profit_factor: 0.95
+  mid_second_narrow_first_validation_max_drawdown: 244.72
+  mid_second_narrow_first_validation_recovery_factor: -0.07
+  mid_second_narrow_first_oos_net_profit: 200.05
+  mid_second_narrow_first_oos_profit_factor: 1.58
+  mid_second_narrow_first_oos_max_drawdown: 221.78
+  mid_second_narrow_first_oos_recovery_factor: 0.90
+  mid_second_narrow_first_validation_tier_a_used_count: 864
+  mid_second_narrow_first_oos_tier_a_used_count: 696
+  mid_second_narrow_second_run_id: "run01T_logreg_a_base_no_fallback_hold9_session_mid_second_second_v1"
+  mid_second_narrow_second_slice: "195 < minutes_from_cash_open <= 220"
+  mid_second_narrow_second_validation_net_profit: 262.33
+  mid_second_narrow_second_validation_profit_factor: 2.37
+  mid_second_narrow_second_validation_max_drawdown: 182.07
+  mid_second_narrow_second_validation_recovery_factor: 1.44
+  mid_second_narrow_second_oos_net_profit: 277.88
+  mid_second_narrow_second_oos_profit_factor: 2.67
+  mid_second_narrow_second_oos_max_drawdown: 120.89
+  mid_second_narrow_second_oos_recovery_factor: 2.30
+  mid_second_narrow_second_validation_tier_a_used_count: 729
+  mid_second_narrow_second_oos_tier_a_used_count: 580
+  mid_second_narrow_interpretation: "mid_second_second is the clearer validation/OOS positive slice; mid_second_first is OOS positive but validation-negative, so do not treat the full mid_second strength as uniform"
+  mid_second_second_narrow_slices: "mid_second_second_first,mid_second_second_second"
+  mid_second_second_narrow_routing_mode: "tier_a_primary_no_fallback"
+  mid_second_second_narrow_hold_bars: 9
+  mid_second_second_narrow_first_run_id: "run01U_logreg_a_base_no_fallback_hold9_session_mid_second_second_first_v1"
+  mid_second_second_narrow_first_slice: "195 < minutes_from_cash_open <= 210"
+  mid_second_second_narrow_first_validation_net_profit: 106.72
+  mid_second_second_narrow_first_validation_profit_factor: 1.69
+  mid_second_second_narrow_first_validation_max_drawdown: 231.58
+  mid_second_second_narrow_first_validation_recovery_factor: 0.46
+  mid_second_second_narrow_first_oos_net_profit: 274.65
+  mid_second_second_narrow_first_oos_profit_factor: 2.95
+  mid_second_second_narrow_first_oos_max_drawdown: 141.82
+  mid_second_second_narrow_first_oos_recovery_factor: 1.94
+  mid_second_second_narrow_first_validation_tier_a_used_count: 434
+  mid_second_second_narrow_first_oos_tier_a_used_count: 345
+  mid_second_second_narrow_second_run_id: "run01V_logreg_a_base_no_fallback_hold9_session_mid_second_second_second_v1"
+  mid_second_second_narrow_second_slice: "210 < minutes_from_cash_open <= 220"
+  mid_second_second_narrow_second_validation_net_profit: 299.93
+  mid_second_second_narrow_second_validation_profit_factor: 2.61
+  mid_second_second_narrow_second_validation_max_drawdown: 206.68
+  mid_second_second_narrow_second_validation_recovery_factor: 1.45
+  mid_second_second_narrow_second_oos_net_profit: 14.98
+  mid_second_second_narrow_second_oos_profit_factor: 1.09
+  mid_second_second_narrow_second_oos_max_drawdown: 208.78
+  mid_second_second_narrow_second_oos_recovery_factor: 0.07
+  mid_second_second_narrow_second_validation_tier_a_used_count: 295
+  mid_second_second_narrow_second_oos_tier_a_used_count: 235
+  mid_second_second_narrow_interpretation: "run01U carries most of the OOS strength while run01V is validation-favored and OOS-weak; full run01T remains the more balanced wider slice"
+  late_mid_overlap_windows: "mid_second_overlap_190_210,mid_second_overlap_195_215,mid_second_overlap_200_220"
+  late_mid_overlap_routing_mode: "tier_a_primary_no_fallback"
+  late_mid_overlap_hold_bars: 9
+  late_mid_overlap_first_run_id: "run01W_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_190_210_v1"
+  late_mid_overlap_first_slice: "190 < minutes_from_cash_open <= 210"
+  late_mid_overlap_first_validation_net_profit: 68.22
+  late_mid_overlap_first_validation_profit_factor: 1.33
+  late_mid_overlap_first_validation_max_drawdown: 219.94
+  late_mid_overlap_first_validation_recovery_factor: 0.31
+  late_mid_overlap_first_oos_net_profit: 237.21
+  late_mid_overlap_first_oos_profit_factor: 2.11
+  late_mid_overlap_first_oos_max_drawdown: 140.63
+  late_mid_overlap_first_oos_recovery_factor: 1.69
+  late_mid_overlap_second_run_id: "run01X_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_195_215_v1"
+  late_mid_overlap_second_slice: "195 < minutes_from_cash_open <= 215"
+  late_mid_overlap_second_validation_net_profit: 366.02
+  late_mid_overlap_second_validation_profit_factor: 3.84
+  late_mid_overlap_second_validation_max_drawdown: 182.07
+  late_mid_overlap_second_validation_recovery_factor: 2.01
+  late_mid_overlap_second_oos_net_profit: 242.64
+  late_mid_overlap_second_oos_profit_factor: 2.18
+  late_mid_overlap_second_oos_max_drawdown: 149.39
+  late_mid_overlap_second_oos_recovery_factor: 1.62
+  late_mid_overlap_third_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  late_mid_overlap_third_slice: "200 < minutes_from_cash_open <= 220"
+  late_mid_overlap_third_validation_net_profit: 318.48
+  late_mid_overlap_third_validation_profit_factor: 3.88
+  late_mid_overlap_third_validation_max_drawdown: 182.07
+  late_mid_overlap_third_validation_recovery_factor: 1.75
+  late_mid_overlap_third_oos_net_profit: 313.14
+  late_mid_overlap_third_oos_profit_factor: 3.99
+  late_mid_overlap_third_oos_max_drawdown: 144.65
+  late_mid_overlap_third_oos_recovery_factor: 2.16
+  late_mid_overlap_interpretation: "run01Y is the strongest balanced overlap window; shifting earlier to 190-210 weakens validation, while 195-215 is validation-strong but lower OOS than 200-220"
+  fallback_filter_run_id: "run01R_logreg_a_base_fallback_bmacro_hold9_session_mid_second_v1"
+  fallback_filter_allowed_subtypes: "B_macro_missing"
+  fallback_filter_a_only_baseline_run_id: "run01Q_logreg_a_base_no_fallback_hold9_session_mid_second_v1"
+  fallback_filter_validation_routed_net_profit: 288.81
+  fallback_filter_validation_routed_profit_factor: 2.21
+  fallback_filter_oos_routed_net_profit: 128.25
+  fallback_filter_oos_routed_profit_factor: 1.71
+  fallback_filter_oos_b_fallback_used_count: 165
+  fallback_filter_interpretation: "B_macro_missing fallback did not improve actual routed total versus run01Q A-only; B-only OOS looked strong but single-account routed path was weaker"
+  current_run_tier_b_fallback_rows: 696
+  current_run_tier_b_fallback_filtered_out_rows: 0
+  current_run_no_tier_labelable_rows: 0
+  current_run_validation_is_tier_a_used_count: 588
+  current_run_validation_is_tier_b_fallback_used_count: 0
+  current_run_validation_is_no_tier_labelable_count: 0
+  current_run_oos_tier_a_used_count: 460
+  current_run_oos_tier_b_fallback_used_count: 0
+  current_run_oos_no_tier_labelable_count: 0
   current_run_tier_b_fallback_by_subtype:
-    B_macro_missing: 10740
-    B_mixed_partial_context: 1240
-    B_full_context_outside_tier_a_scope: 217
-    B_core_only: 200
-    B_constituent_missing: 1
+    B_full_context_outside_tier_a_scope: 12
+    B_macro_missing: 684
+  current_run_tier_b_fallback_filtered_out_by_subtype: {}
   source_model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
   default_split_id: "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413"
   boundary: "runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion"
   selection_status_path: "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md"
+  closeout_packet_path: "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md"
+  closeout_decision_path: "docs/decisions/2026-04-27_stage10_alpha_scout_closeout.md"
+stage11_alpha_robustness:
+  stage_id: "11_alpha_robustness__wfo_label_horizon_sensitivity"
+  status: "active_scaffolded_no_runs_yet"
+  lane: "exploration"
+  scout_boundary: "robustness_scout"
+  current_run_packet_id: null
+  current_run_id: null
+  current_run_judgment: null
+  current_run_external_verification_status: "not_applicable_no_stage11_runs_yet"
+  inherited_baseline_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  inherited_baseline_stage: "10_alpha_scout__default_split_model_threshold_scan"
+  inherited_baseline_slice: "200 < minutes_from_cash_open <= 220"
+  inherited_baseline_hold_bars: 9
+  inherited_baseline_threshold: "short0.600_long0.450_margin0.000"
+  inherited_baseline_routing_mode: "tier_a_primary_no_fallback"
+  intended_next_question: "does run01Y survive WFO and label/horizon sensitivity as a robustness scout"
+  boundary: "stage_scaffold_only_no_alpha_quality_no_live_readiness_no_operating_promotion"
+  stage_brief_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/stage_brief.md"
+  input_references_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/01_inputs/input_references.md"
+  selection_status_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/04_selected/selection_status.md"
 open_items:
-  - "Stage 10: interpret run01A as an inconclusive runtime_probe and choose the next scout variant"
+  - "Stage 11: design the first WFO and label/horizon sensitivity packet from the run01Y baseline"
+  - "preserve Stage 10 run01Y-run01AC as closed inconclusive runtime_probe evidence, not a promotion"
   - "compare Tier B partial-context fallback subtype quality before treating fallback coverage as alpha quality"
   - "keep label/horizon variants as later exploration candidates instead of silently changing the default contract"
   - "keep broader valid-row or partial-day scopes as later candidates instead of silently widening the first freeze"
@@ -369,6 +581,7 @@ forbidden_shortcuts:
   - "do not treat the Stage 07 baseline training smoke as alpha quality, live readiness, or operating promotion"
   - "do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality judgment"
   - "do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality judgment"
-  - "do not treat Stage 10 run01A runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
+  - "do not treat Stage 10 run01A-run01AC runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
+  - "do not treat the Stage 11 scaffold as a Stage 11 run result or robustness proof"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

@@ -10,7 +10,7 @@
 
 정식 alpha exploration(알파 탐색) 전 경로는 58 feature(58개 피처) 기준이다.
 
-현재 상태(current state, 현재 상태): Stage 04~09(4~9단계)는 `stage09_pre_alpha_handoff_packet_v1`로 닫혔다. 효과(effect, 효과)는 Stage 10(10단계) `10_alpha_scout__default_split_model_threshold_scan`이 첫 `single_split_scout(단일 분할 탐색 판독)`을 준비할 수 있다는 것이다.
+현재 상태(current state, 현재 상태): Stage 04~09(4~9단계)는 `stage09_pre_alpha_handoff_packet_v1`로 닫혔고, Stage 10(10단계)은 `stage10_alpha_scout_closeout_packet_v1`로 닫혔다. 효과(effect, 효과)는 Stage 11(11단계) `11_alpha_robustness__wfo_label_horizon_sensitivity`가 `run01Y(실행 01Y)` 기준선을 WFO(`walk-forward optimization`, 워크포워드 최적화)와 label/horizon sensitivity(라벨/예측수평선 민감도)로 압박할 수 있다는 것이다.
 
 Stage 04(4단계)에서 만든 56 feature(56개 피처) model input(모델 입력)은 `placeholder_equal_weight(임시 동일가중)` 오염을 막기 위한 interim quarantine artifact(임시 격리 산출물)이다. 최종 pre-alpha(알파 전) 경로가 아니다.
 
@@ -97,3 +97,4 @@ Stage 04(4단계)의 정식 58 feature(58개 피처) 경로는 `MT5 price-proxy 
 - Stage 08(8단계) 전에는 alpha search result(알파 탐색 결과)를 공식 결과처럼 남기지 않는다.
 - Stage 09(9단계) handoff packet(인계 묶음)을 alpha result(알파 결과)로 말하지 않는다.
 - Stage 10(10단계)이 active(활성)라고 해서 alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격)을 주장하지 않는다.
+- Stage 11(11단계) scaffold(뼈대)를 Stage 11 run result(실행 결과), alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격)으로 말하지 않는다.

@@ -73,3 +73,11 @@
 - run01A(실행 01A)의 Tier B partial-context fallback(Tier B 부분 문맥 대체)은 validation_is(검증/표본내) `2366`행, OOS(표본외) `1062`행을 실제로 메웠다. 전체 routing coverage(라우팅 커버리지)는 Tier A primary(Tier A 우선) `46650`행, Tier B fallback(Tier B 대체) `12398`행, no_tier labelable(티어 없음 라벨 가능) `1053`행이다.
 - MT5(`MetaTrader 5`, 메타트레이더5) routed total(라우팅 전체)은 validation_is(검증/표본내) net profit(순수익) `355.65`, profit factor(수익 팩터) `1.33`, max drawdown(최대 손실) `146.24`, recovery factor(회복 계수) `2.43`이고, OOS(표본외)는 net profit(순수익) `174.89`, profit factor(수익 팩터) `1.21`, max drawdown(최대 손실) `209.15`, recovery factor(회복 계수) `0.84`다.
 - 판정(judgment, 판정)은 `inconclusive_single_split_scout_mt5_routed_completed`로 남겼다. 효과(effect, 효과)는 runtime_probe(런타임 탐침)는 닫았지만 alpha quality(알파 품질), live readiness(실거래 준비), runtime authority expansion(런타임 권위 확장), operating promotion(운영 승격)을 주장하지 않게 하는 것이다.
+
+## 2026-04-27
+
+- Stage 10(10단계) `run01Y/run01Z/run01AA/run01AB/run01AC(실행 01Y/01Z/01AA/01AB/01AC)` closeout packet(마감 묶음)을 완료했다. 효과(effect, 효과)는 `run01Y(실행 01Y)`를 Stage 10(10단계)의 best balanced baseline(최고 균형 기준선)으로 남기고 Stage 11(11단계)로 넘긴 것이다.
+- `run01Y(실행 01Y)`는 hold9(9봉 보유), `200 < minutes_from_cash_open <= 220`, threshold(임계값) `short0.600_long0.450_margin0.000`에서 validation/OOS(검증/표본외) `318.48/313.14` net profit(순수익), `3.88/3.99` profit factor(수익 팩터)를 기록했다.
+- hold6(6봉 보유), hold12(12봉 보유), margin0.025(마진 0.025), strict probability(엄격 확률)를 비교했다. 효과(effect, 효과)는 hold6은 약하고, hold12는 validation(검증)에 치우치고, margin0.025는 비구속(non-binding, 비구속)이고, strict probability는 OOS PF(표본외 수익 팩터)는 높지만 net/recovery(순수익/회복)가 낮다는 점을 확인한 것이다.
+- Stage 10(10단계)을 `stage10_alpha_scout_closeout_packet_v1`과 `2026-04-27_stage10_alpha_scout_closeout` 결정(decision, 결정)으로 닫았다. 효과(effect, 효과)는 Stage 10 결과를 runtime_probe(런타임 탐침)로 보존하되 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)으로 과장하지 않는 것이다.
+- Stage 11(11단계) `11_alpha_robustness__wfo_label_horizon_sensitivity` scaffold(뼈대)를 만들었다. 효과(effect, 효과)는 새 채팅에서 WFO(`walk-forward optimization`, 워크포워드 최적화)와 label/horizon sensitivity(라벨/예측수평선 민감도)를 바로 시작할 수 있게 하는 것이다.

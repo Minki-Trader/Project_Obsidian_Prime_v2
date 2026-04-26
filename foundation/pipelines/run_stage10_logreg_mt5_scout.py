@@ -10,6 +10,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from dataclasses import asdict, dataclass
 from html.parser import HTMLParser
@@ -50,7 +51,7 @@ MODEL_INPUT_DATASET_ID = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split
 FEATURE_SET_ID = "feature_set_v2_mt5_price_proxy_top3_weights_58_features"
 TIER_B_MODEL_INPUT_DATASET_ID = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_feature_set_v1_no_placeholder_top3_weights"
 TIER_B_FEATURE_SET_ID = "feature_set_v1_no_placeholder_top3_weight_features"
-TIER_B_PARTIAL_CONTEXT_DATASET_ID = "stage10_run01A_tier_b_partial_context_core42_v1"
+TIER_B_PARTIAL_CONTEXT_DATASET_ID = "stage10_tier_b_partial_context_core42_v1"
 TIER_B_PARTIAL_CONTEXT_FEATURE_SET_ID = "feature_set_stage10_tier_b_core42_us100_session_v1"
 TIER_B_PARTIAL_CONTEXT_POLICY_ID = "tier_b_partial_context_core42_fallback_v1"
 FEATURE_ORDER_HASH = "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
@@ -91,8 +92,33 @@ TIER_AB = "Tier A+B"
 ROUTE_ROLE_A_PRIMARY = "tier_a_primary"
 ROUTE_ROLE_B_FALLBACK = "tier_b_fallback"
 ROUTE_ROLE_NO_TIER = "no_tier"
+ROUTING_MODE_A_B_FALLBACK = "tier_a_primary_tier_b_fallback"
+ROUTING_MODE_A_ONLY = "tier_a_primary_no_fallback"
 MT5_RECORD_TIER_A_ONLY_PREFIX = "mt5_tier_a_only"
 MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX = "mt5_tier_b_fallback_only"
+TIER_B_PARTIAL_CONTEXT_SUBTYPES = (
+    "B_full_context_outside_tier_a_scope",
+    "B_macro_missing",
+    "B_constituent_missing",
+    "B_basket_missing",
+    "B_core_only",
+    "B_mixed_partial_context",
+)
+SESSION_SLICE_DEFINITIONS: dict[str, tuple[float, float, str]] = {
+    "early": (0.0, 110.0, "cash_session_early_0_110_minutes"),
+    "mid": (110.0, 220.0, "cash_session_mid_110_220_minutes"),
+    "mid_first": (110.0, 165.0, "cash_session_mid_first_110_165_minutes"),
+    "mid_second": (165.0, 220.0, "cash_session_mid_second_165_220_minutes"),
+    "mid_second_first": (165.0, 195.0, "cash_session_mid_second_first_165_195_minutes"),
+    "mid_second_second": (195.0, 220.0, "cash_session_mid_second_second_195_220_minutes"),
+    "mid_second_second_first": (195.0, 210.0, "cash_session_mid_second_second_first_195_210_minutes"),
+    "mid_second_second_second": (210.0, 220.0, "cash_session_mid_second_second_second_210_220_minutes"),
+    "mid_second_overlap_190_210": (190.0, 210.0, "cash_session_mid_second_overlap_190_210_minutes"),
+    "mid_second_overlap_195_215": (195.0, 215.0, "cash_session_mid_second_overlap_195_215_minutes"),
+    "mid_second_overlap_200_220": (200.0, 220.0, "cash_session_mid_second_overlap_200_220_minutes"),
+    "late": (220.0, 330.0, "cash_session_late_220_330_minutes"),
+}
+METAEDITOR_LOG_MAX_PATH_CHARS = 240
 TIER_B_CORE_FEATURE_ORDER = (
     "log_return_1",
     "log_return_3",
@@ -183,6 +209,50 @@ class ThresholdRule:
     min_margin: float = 0.05
 
 
+def default_common_run_root(run_id: str) -> str:
+    return f"Project_Obsidian_Prime_v2/stage10/{run_id}"
+
+
+def configure_run_identity(
+    *,
+    run_number: str,
+    run_id: str,
+    exploration_label: str,
+    common_run_root: str | None = None,
+) -> None:
+    global RUN_NUMBER, RUN_ID, EXPLORATION_LABEL, DEFAULT_RUN_OUTPUT_ROOT, COMMON_RUN_ROOT
+
+    RUN_NUMBER = run_number
+    RUN_ID = run_id
+    EXPLORATION_LABEL = exploration_label
+    DEFAULT_RUN_OUTPUT_ROOT = Path("stages") / STAGE_ID / "02_runs" / RUN_ID
+    COMMON_RUN_ROOT = common_run_root or default_common_run_root(run_id)
+
+
+def threshold_rule_payload(rule: ThresholdRule) -> dict[str, Any]:
+    return {
+        "threshold_id": rule.threshold_id,
+        "short_threshold": rule.short_threshold,
+        "long_threshold": rule.long_threshold,
+        "min_margin": rule.min_margin,
+    }
+
+
+def threshold_rule_from_values(
+    *,
+    short_threshold: float,
+    long_threshold: float,
+    min_margin: float,
+    threshold_id: str | None = None,
+) -> ThresholdRule:
+    return ThresholdRule(
+        threshold_id=threshold_id or _threshold_id(short_threshold, long_threshold, min_margin),
+        short_threshold=float(short_threshold),
+        long_threshold=float(long_threshold),
+        min_margin=float(min_margin),
+    )
+
+
 @dataclass(frozen=True)
 class TesterMaterializationConfig:
     expert: str = EA_EXPERT_PATH
@@ -205,7 +275,11 @@ class TesterMaterializationConfig:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Materialize the Stage 10 run01A logistic MT5 scout payload.")
+    parser = argparse.ArgumentParser(description="Materialize a Stage 10 logistic MT5 scout payload.")
+    parser.add_argument("--run-number", default=RUN_NUMBER)
+    parser.add_argument("--run-id", default=RUN_ID)
+    parser.add_argument("--exploration-label", default=EXPLORATION_LABEL)
+    parser.add_argument("--common-run-root", default=None)
     parser.add_argument("--model-input-path", default=str(DEFAULT_MODEL_INPUT_PATH))
     parser.add_argument("--feature-order-path", default=str(DEFAULT_FEATURE_ORDER_PATH))
     parser.add_argument("--tier-b-model-input-path", default=str(DEFAULT_TIER_B_MODEL_INPUT_PATH))
@@ -213,7 +287,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--raw-root", default=str(DEFAULT_RAW_ROOT))
     parser.add_argument("--training-summary-path", default=str(DEFAULT_TRAINING_SUMMARY_PATH))
     parser.add_argument("--stage07-model-path", default=str(DEFAULT_STAGE07_MODEL_PATH))
-    parser.add_argument("--run-output-root", default=str(DEFAULT_RUN_OUTPUT_ROOT))
+    parser.add_argument("--run-output-root", default=None)
     parser.add_argument("--common-files-root", default=str(DEFAULT_COMMON_FILES_ROOT))
     parser.add_argument("--terminal-data-root", default=str(DEFAULT_TERMINAL_DATA_ROOT))
     parser.add_argument("--tester-profile-root", default=str(DEFAULT_TESTER_PROFILE_ROOT))
@@ -221,6 +295,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--random-seed", type=int, default=10)
     parser.add_argument("--max-iter", type=int, default=2000)
     parser.add_argument("--parity-rows", type=int, default=128)
+    parser.add_argument("--max-hold-bars", type=int, default=12)
+    parser.add_argument("--tier-a-threshold-id", default=None)
+    parser.add_argument("--tier-a-short-threshold", type=float, default=None)
+    parser.add_argument("--tier-a-long-threshold", type=float, default=None)
+    parser.add_argument("--tier-a-min-margin", type=float, default=None)
+    parser.add_argument("--tier-b-threshold-id", default=None)
+    parser.add_argument("--tier-b-short-threshold", type=float, default=None)
+    parser.add_argument("--tier-b-long-threshold", type=float, default=None)
+    parser.add_argument("--tier-b-min-margin", type=float, default=None)
+    parser.add_argument("--disable-routed-fallback", action="store_true")
+    parser.add_argument("--tier-b-fallback-allowed-subtypes", default=None)
+    parser.add_argument("--session-slice-id", choices=sorted(SESSION_SLICE_DEFINITIONS), default=None)
     parser.add_argument("--attempt-mt5", action="store_true")
     parser.add_argument("--terminal-path", default=r"C:\Program Files\MetaTrader 5\terminal64.exe")
     parser.add_argument("--metaeditor-path", default=r"C:\Program Files\MetaTrader 5\MetaEditor64.exe")
@@ -238,6 +324,14 @@ def _io_path(path: Path) -> Path:
 
 def _path_exists(path: Path) -> bool:
     return _io_path(path).exists()
+
+
+def metaeditor_command_log_path(log_path: Path) -> Path:
+    resolved = log_path.resolve()
+    if len(str(resolved)) <= METAEDITOR_LOG_MAX_PATH_CHARS:
+        return log_path
+    digest = hashlib.sha256(str(resolved).encode("utf-8")).hexdigest()[:16]
+    return Path(tempfile.gettempdir()) / "obsidian_prime_mt5_compile" / f"compile_{digest}.log"
 
 
 def sha256_file(path: Path) -> str:
@@ -574,6 +668,133 @@ def _subtype_counts_by_split(frame: pd.DataFrame) -> dict[str, dict[str, int]]:
         split_frame = frame.loc[frame["split"].astype(str).eq(split)] if "split" in frame.columns else frame.iloc[0:0]
         payload[split] = _subtype_counts(split_frame)
     return payload
+
+
+def session_slice_payload(session_slice_id: str | None) -> dict[str, Any] | None:
+    if not session_slice_id:
+        return None
+    start_minute, end_minute, policy_id = SESSION_SLICE_DEFINITIONS[session_slice_id]
+    return {
+        "slice_id": session_slice_id,
+        "policy_id": policy_id,
+        "minute_column": "minutes_from_cash_open",
+        "start_exclusive": start_minute,
+        "end_inclusive": end_minute,
+        "timezone_basis": "precomputed_session_feature",
+    }
+
+
+def apply_session_slice(frame: pd.DataFrame, session_slice: Mapping[str, Any] | None) -> pd.DataFrame:
+    if not session_slice:
+        return frame.copy().reset_index(drop=True)
+    minute_column = str(session_slice["minute_column"])
+    if minute_column not in frame.columns:
+        raise RuntimeError(f"Session slice requires missing column: {minute_column}")
+    minutes = pd.to_numeric(frame[minute_column], errors="coerce")
+    mask = minutes.gt(float(session_slice["start_exclusive"])) & minutes.le(float(session_slice["end_inclusive"]))
+    return frame.loc[mask].copy().reset_index(drop=True)
+
+
+def parse_tier_b_fallback_allowed_subtypes(raw_value: str | None) -> tuple[str, ...] | None:
+    if not raw_value:
+        return None
+    values = tuple(part.strip() for part in re.split(r"[,;]", raw_value) if part.strip())
+    unknown = sorted(set(values).difference(TIER_B_PARTIAL_CONTEXT_SUBTYPES))
+    if unknown:
+        raise RuntimeError(f"Unknown Tier B fallback subtypes: {unknown}")
+    return values
+
+
+def normalize_tier_b_fallback_allowed_subtypes(
+    allowed_subtypes: Sequence[str] | None,
+) -> tuple[str, ...] | None:
+    if not allowed_subtypes:
+        return None
+    values = tuple(str(value).strip() for value in allowed_subtypes if str(value).strip())
+    unknown = sorted(set(values).difference(TIER_B_PARTIAL_CONTEXT_SUBTYPES))
+    if unknown:
+        raise RuntimeError(f"Unknown Tier B fallback subtypes: {unknown}")
+    return values
+
+
+def apply_tier_b_fallback_subtype_filter(
+    frame: pd.DataFrame,
+    allowed_subtypes: Sequence[str] | None,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    normalized = normalize_tier_b_fallback_allowed_subtypes(allowed_subtypes)
+    if not normalized:
+        return frame.copy().reset_index(drop=True), frame.iloc[0:0].copy().reset_index(drop=True)
+    if "partial_context_subtype" not in frame.columns:
+        raise RuntimeError("Tier B fallback subtype filter requires partial_context_subtype")
+    mask = frame["partial_context_subtype"].astype(str).isin(normalized)
+    filtered = frame.loc[mask].copy().reset_index(drop=True)
+    filtered_out = frame.loc[~mask].copy().reset_index(drop=True)
+    if not filtered_out.empty:
+        filtered_out["route_role"] = ROUTE_ROLE_NO_TIER
+        filtered_out["context_reject_reason"] = "tier_b_fallback_subtype_filtered_out"
+    return filtered, filtered_out
+
+
+def build_eval_route_coverage_summary(
+    *,
+    base_summary: Mapping[str, Any],
+    tier_a_eval_frame: pd.DataFrame,
+    tier_b_eval_frame: pd.DataFrame,
+    no_tier_eval_frame: pd.DataFrame,
+    session_slice: Mapping[str, Any] | None,
+    tier_b_filtered_out_frame: pd.DataFrame | None = None,
+    tier_b_allowed_subtypes: Sequence[str] | None = None,
+) -> dict[str, Any]:
+    filtered_out = (
+        tier_b_filtered_out_frame.reset_index(drop=True)
+        if tier_b_filtered_out_frame is not None
+        else tier_b_eval_frame.iloc[0:0].copy().reset_index(drop=True)
+    )
+    allowed_subtypes = normalize_tier_b_fallback_allowed_subtypes(tier_b_allowed_subtypes)
+    by_split: dict[str, dict[str, int]] = {}
+    for split in ("train", "validation", "oos"):
+        a_count = int(tier_a_eval_frame["split"].astype(str).eq(split).sum())
+        b_count = int(tier_b_eval_frame["split"].astype(str).eq(split).sum())
+        no_tier_count = int(no_tier_eval_frame["split"].astype(str).eq(split).sum())
+        filtered_out_count = int(filtered_out["split"].astype(str).eq(split).sum()) if "split" in filtered_out.columns else 0
+        by_split[split] = {
+            "tier_a_primary_rows": a_count,
+            "tier_b_fallback_rows": b_count,
+            "tier_b_fallback_filtered_out_rows": filtered_out_count,
+            "no_tier_labelable_rows": no_tier_count,
+            "routed_labelable_rows": a_count + b_count,
+        }
+    summary = {
+        "policy_id": base_summary.get("policy_id"),
+        "dataset_id": base_summary.get("dataset_id"),
+        "feature_set_id": base_summary.get("feature_set_id"),
+        "feature_count": base_summary.get("feature_count"),
+        "feature_order_hash": base_summary.get("feature_order_hash"),
+        "label_threshold_log_return": base_summary.get("label_threshold_log_return"),
+        "source_raw_rows": base_summary.get("source_raw_rows"),
+        "source_valid_rows": base_summary.get("source_valid_rows"),
+        "labelable_rows": int(len(tier_a_eval_frame) + len(tier_b_eval_frame) + len(no_tier_eval_frame)),
+        "tier_a_primary_rows": int(len(tier_a_eval_frame)),
+        "tier_b_training_rows": base_summary.get("tier_b_training_rows"),
+        "tier_b_fallback_rows": int(len(tier_b_eval_frame)),
+        "tier_b_fallback_allowed_subtypes": list(allowed_subtypes) if allowed_subtypes else None,
+        "tier_b_fallback_filter_policy": "allowed_subtypes" if allowed_subtypes else "none",
+        "tier_b_fallback_filtered_out_rows": int(len(filtered_out)),
+        "tier_b_fallback_filtered_out_by_subtype": _subtype_counts(filtered_out),
+        "tier_b_fallback_filtered_out_by_split_subtype": _subtype_counts_by_split(filtered_out),
+        "no_tier_labelable_rows": int(len(no_tier_eval_frame)),
+        "by_split": by_split,
+        "tier_b_fallback_by_subtype": _subtype_counts(tier_b_eval_frame),
+        "tier_b_fallback_by_split_subtype": _subtype_counts_by_split(tier_b_eval_frame),
+        "no_tier_by_split": _split_counts(no_tier_eval_frame),
+        "session_slice": dict(session_slice) if session_slice else None,
+        "note": (
+            "Session-sliced evaluation rows derived from the base Tier A/Tier B route coverage."
+            if session_slice
+            else base_summary.get("note")
+        ),
+    }
+    return summary
 
 
 def build_tier_b_partial_context_frames(
@@ -949,6 +1170,8 @@ def prediction_view_metrics(view: pd.DataFrame) -> dict[str, Any]:
         payload["no_trade_count"] = int(decision_labels.eq(DECISION_LABEL_NO_TRADE).sum())
         payload["signal_count"] = int(payload["short_count"] + payload["long_count"])
         payload["signal_coverage"] = float(payload["signal_count"] / rows)
+    if "threshold_id" in view.columns:
+        payload["threshold_ids"] = sorted(str(value) for value in view["threshold_id"].dropna().unique())
 
     if all(name in view.columns for name in PROBABILITY_COLUMNS):
         matrix = probability_matrix(view.loc[:, PROBABILITY_COLUMNS])
@@ -967,13 +1190,15 @@ def prediction_view_metrics(view: pd.DataFrame) -> dict[str, Any]:
 def build_paired_tier_records(
     tier_views: Mapping[str, pd.DataFrame],
     *,
-    run_id: str = RUN_ID,
-    stage_id: str = STAGE_ID,
+    run_id: str | None = None,
+    stage_id: str | None = None,
     base_path: str | Path | None = None,
     kpi_scope: str = "signal_probability_threshold",
     scoreboard_lane: str = "structural_scout",
     external_verification_status: str = "out_of_scope_by_claim",
 ) -> list[dict[str, Any]]:
+    run_id = run_id or RUN_ID
+    stage_id = stage_id or STAGE_ID
     records: list[dict[str, Any]] = []
     base = None if base_path is None else Path(base_path)
     for record_view, tier_scope in REQUIRED_TIER_VIEWS:
@@ -1288,6 +1513,7 @@ def materialize_mt5_attempt_files(
     record_view_prefix: str | None = None,
     primary_active_tier: str = "tier_a",
     attempt_role: str = "tier_only_total",
+    max_hold_bars: int = 12,
 ) -> dict[str, Any]:
     tier_slug = tier_name.lower().replace(" ", "_").replace("+", "ab")
     stem = f"{stem_prefix or tier_slug}_{split_name}"
@@ -1323,9 +1549,12 @@ def materialize_mt5_attempt_files(
             "InpShortThreshold": rule.short_threshold,
             "InpLongThreshold": rule.long_threshold,
             "InpMinMargin": rule.min_margin,
+            "InpFallbackShortThreshold": rule.short_threshold,
+            "InpFallbackLongThreshold": rule.long_threshold,
+            "InpFallbackMinMargin": rule.min_margin,
             "InpAllowTrading": "true",
             "InpFixedLot": 0.1,
-            "InpMaxHoldBars": 12,
+            "InpMaxHoldBars": int(max_hold_bars),
             "InpMaxConcurrentPositions": 1,
             "InpFeatureOrderHash": feature_order_hash,
             "InpMagic": 1001001 if tier_name == TIER_A else 1001002,
@@ -1355,6 +1584,8 @@ def materialize_mt5_attempt_files(
         "common_telemetry_path": common_telemetry,
         "common_summary_path": common_summary,
         "local_feature_matrix_path": local_feature_matrix_path.as_posix(),
+        "threshold_rule": threshold_rule_payload(rule),
+        "max_hold_bars": int(max_hold_bars),
     }
 
 
@@ -1373,7 +1604,17 @@ def materialize_mt5_routed_attempt_files(
     rule: ThresholdRule,
     from_date: str,
     to_date: str,
+    fallback_rule: ThresholdRule | None = None,
+    max_hold_bars: int = 12,
+    fallback_enabled: bool = True,
 ) -> dict[str, Any]:
+    fallback_rule = fallback_rule or rule
+    routing_mode = ROUTING_MODE_A_B_FALLBACK if fallback_enabled else ROUTING_MODE_A_ONLY
+    routing_detail = (
+        "tier_a_primary_tier_b_partial_context_fallback"
+        if fallback_enabled
+        else "tier_a_primary_no_fallback"
+    )
     stem = f"routed_{split_name}"
     common_primary_model = common_ref("models", primary_onnx_path.name)
     common_primary_matrix = common_ref("features", primary_feature_matrix_path.name)
@@ -1405,7 +1646,7 @@ def materialize_mt5_routed_attempt_files(
             "InpFeatureStrictHeader": "true",
             "InpCsvTimestampIsBarClose": "true",
             "InpFeatureOrderHash": primary_feature_order_hash,
-            "InpFallbackEnabled": "true",
+            "InpFallbackEnabled": "true" if fallback_enabled else "false",
             "InpFallbackTierLabel": "Tier B partial-context fallback",
             "InpFallbackFeatureCsvPath": common_fallback_matrix,
             "InpFallbackFeatureCount": fallback_feature_count,
@@ -1418,9 +1659,12 @@ def materialize_mt5_routed_attempt_files(
             "InpShortThreshold": rule.short_threshold,
             "InpLongThreshold": rule.long_threshold,
             "InpMinMargin": rule.min_margin,
+            "InpFallbackShortThreshold": fallback_rule.short_threshold,
+            "InpFallbackLongThreshold": fallback_rule.long_threshold,
+            "InpFallbackMinMargin": fallback_rule.min_margin,
             "InpAllowTrading": "true",
             "InpFixedLot": 0.1,
-            "InpMaxHoldBars": 12,
+            "InpMaxHoldBars": int(max_hold_bars),
             "InpMaxConcurrentPositions": 1,
             "InpMagic": 1001010,
         },
@@ -1440,8 +1684,9 @@ def materialize_mt5_routed_attempt_files(
     return {
         "tier": TIER_AB,
         "split": split_name,
-        "routing_mode": "tier_a_primary_tier_b_fallback",
-        "routing_detail": "tier_a_primary_tier_b_partial_context_fallback",
+        "routing_mode": routing_mode,
+        "routing_detail": routing_detail,
+        "fallback_enabled": bool(fallback_enabled),
         "set": set_payload,
         "ini": ini_payload,
         "common_model_path": common_primary_model,
@@ -1456,6 +1701,7 @@ def materialize_mt5_routed_attempt_files(
             "feature_count": primary_feature_count,
             "feature_order_hash": primary_feature_order_hash,
             "local_feature_matrix_path": primary_feature_matrix_path.as_posix(),
+            "threshold_rule": threshold_rule_payload(rule),
         },
         "fallback": {
             "tier": TIER_B,
@@ -1466,7 +1712,11 @@ def materialize_mt5_routed_attempt_files(
             "feature_order_hash": fallback_feature_order_hash,
             "policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID,
             "local_feature_matrix_path": fallback_feature_matrix_path.as_posix(),
+            "threshold_rule": threshold_rule_payload(fallback_rule),
         },
+        "threshold_rule": threshold_rule_payload(rule),
+        "fallback_threshold_rule": threshold_rule_payload(fallback_rule),
+        "max_hold_bars": int(max_hold_bars),
     }
 
 
@@ -1483,20 +1733,26 @@ def copy_to_common_files(common_files_root: Path, local_path: Path, common_path:
 
 
 def compile_mql5_ea(metaeditor_path: Path, source_path: Path, log_path: Path) -> dict[str, Any]:
-    command = [str(metaeditor_path), f"/compile:{source_path.resolve()}", f"/log:{log_path.resolve()}"]
+    command_log_path = metaeditor_command_log_path(log_path)
+    command = [str(metaeditor_path), f"/compile:{source_path.resolve()}", f"/log:{command_log_path.resolve()}"]
     if not _path_exists(metaeditor_path):
         return {
             "status": "blocked",
             "command": command,
             "returncode": None,
             "log_path": log_path.as_posix(),
+            "command_log_path": command_log_path.as_posix(),
             "blocker": "metaeditor_missing",
         }
     _io_path(log_path.parent).mkdir(parents=True, exist_ok=True)
+    _io_path(command_log_path.parent).mkdir(parents=True, exist_ok=True)
+    for stale_log_path in {log_path, command_log_path}:
+        if _path_exists(stale_log_path):
+            _io_path(stale_log_path).unlink()
     proc = subprocess.run(command, cwd=REPO_ROOT, text=True, capture_output=True, timeout=120)
-    actual_log_path = log_path
+    actual_log_path = command_log_path
     if not _path_exists(actual_log_path) and log_path.suffix:
-        extensionless_log = log_path.with_suffix("")
+        extensionless_log = command_log_path.with_suffix("")
         if _path_exists(extensionless_log):
             actual_log_path = extensionless_log
 
@@ -1511,19 +1767,67 @@ def compile_mql5_ea(metaeditor_path: Path, source_path: Path, log_path: Path) ->
                 continue
         if not log_text:
             log_text = raw_log.decode("utf-8", errors="ignore")
+    else:
+        # MetaEditor can truncate the requested log filename when the full path is near MAX_PATH.
+        parent = actual_log_path.parent
+        if _path_exists(parent):
+            prefixes = {
+                actual_log_path.stem.lower(),
+                actual_log_path.stem.lower()[:8],
+                actual_log_path.stem.lower()[:6],
+                actual_log_path.stem.lower()[:5],
+            }
+            candidates: list[Path] = []
+            for name in os.listdir(_io_path(parent)):
+                lower_name = name.lower()
+                if not any(lower_name.startswith(prefix) for prefix in prefixes if prefix):
+                    continue
+                candidate = parent / name
+                if _io_path(candidate).is_file():
+                    candidates.append(candidate)
+            if not candidates:
+                for name in os.listdir(_io_path(parent)):
+                    candidate = parent / name
+                    if not _io_path(candidate).is_file():
+                        continue
+                    if _io_path(candidate).stat().st_size > 2 * 1024 * 1024:
+                        continue
+                    candidates.append(candidate)
+            for candidate in sorted(candidates, key=lambda item: _io_path(item).stat().st_mtime, reverse=True):
+                raw_log = _io_path(candidate).read_bytes()
+                candidate_text = ""
+                for encoding in ("utf-16", "utf-8-sig", "cp949"):
+                    try:
+                        candidate_text = raw_log.decode(encoding)
+                        break
+                    except UnicodeDecodeError:
+                        continue
+                if not candidate_text:
+                    candidate_text = raw_log.decode("utf-8", errors="ignore")
+                if "Result:" not in candidate_text and "error" not in candidate_text.lower():
+                    continue
+                actual_log_path = candidate
+                log_text = candidate_text
+                break
 
     lowered = log_text.lower()
     zero_errors = "0 errors" in lowered or "0 error" in lowered or "0 error(s)" in lowered
     has_error = "error" in lowered and not zero_errors
     completed = (proc.returncode == 0 or zero_errors) and not has_error
+    final_log_path = actual_log_path
+    if _path_exists(actual_log_path) and actual_log_path.resolve() != log_path.resolve():
+        shutil.copy2(_io_path(actual_log_path), _io_path(log_path))
+        final_log_path = log_path
     return {
         "status": "completed" if completed else "blocked",
         "command": command,
         "returncode": proc.returncode,
         "stdout": proc.stdout[-2000:],
         "stderr": proc.stderr[-2000:],
-        "log_path": actual_log_path.as_posix(),
-        "log_sha256": sha256_file(actual_log_path) if _path_exists(actual_log_path) else None,
+        "log_path": final_log_path.as_posix(),
+        "command_log_path": command_log_path.as_posix(),
+        "actual_log_path": actual_log_path.as_posix(),
+        "log_sha256": sha256_file(final_log_path) if _path_exists(final_log_path) else None,
     }
 
 
@@ -1768,11 +2072,12 @@ def build_mt5_kpi_records(execution_results: Sequence[Mapping[str, Any]]) -> lis
         tier = str(result.get("tier"))
         split = str(result.get("split"))
         metrics = mt5_metrics_with_runtime_counts(result)
-        if result.get("routing_mode") == "tier_a_primary_tier_b_fallback":
-            for route_role, record_view, tier_scope in (
-                ("primary_used", f"mt5_routed_tier_a_used_{split}", TIER_A),
-                ("fallback_used", f"mt5_routed_tier_b_fallback_used_{split}", TIER_B),
-            ):
+        routing_mode = result.get("routing_mode")
+        if routing_mode in {ROUTING_MODE_A_B_FALLBACK, ROUTING_MODE_A_ONLY}:
+            component_specs = [("primary_used", f"mt5_routed_tier_a_used_{split}", TIER_A)]
+            if routing_mode == ROUTING_MODE_A_B_FALLBACK:
+                component_specs.append(("fallback_used", f"mt5_routed_tier_b_fallback_used_{split}", TIER_B))
+            for route_role, record_view, tier_scope in component_specs:
                 component = routed_component_metrics(metrics, route_role)
                 records.append(
                     {
@@ -1928,6 +2233,7 @@ def build_alpha_ledger_rows(
                     (
                         ("prob_sum_err", metrics.get("probability_row_sum_max_abs_error")),
                         ("selected_threshold", selected_threshold_id),
+                        ("threshold_ids", metrics.get("threshold_ids")),
                         ("subtype_counts", metrics.get("partial_context_subtype_counts")),
                     )
                 ),
@@ -2105,6 +2411,7 @@ def materialize_run_registry_row(
     mt5_kpi_records: Sequence[Mapping[str, Any]],
     run_output_root: Path,
     external_verification_status: str,
+    routing_mode: str = ROUTING_MODE_A_B_FALLBACK,
 ) -> dict[str, Any]:
     by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
     validation = by_view.get("mt5_routed_total_validation_is", {})
@@ -2113,10 +2420,18 @@ def materialize_run_registry_row(
     a_oos = by_view.get(f"{MT5_RECORD_TIER_A_ONLY_PREFIX}_oos", {})
     b_validation = by_view.get(f"{MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX}_validation_is", {})
     b_oos = by_view.get(f"{MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX}_oos", {})
+    mt5_views = (
+        "tier_a_only;tier_b_fallback_only;tier_a_primary_no_fallback"
+        if routing_mode == ROUTING_MODE_A_ONLY
+        else "tier_a_only;tier_b_fallback_only;tier_a_primary_tier_b_fallback"
+    )
     notes = _ledger_pairs(
         (
-            ("mt5_views", "tier_a_only;tier_b_fallback_only;tier_a_primary_tier_b_fallback"),
+            ("mt5_views", mt5_views),
+            ("routing_mode", routing_mode),
             ("tier_b_fallback_rows", route_coverage.get("tier_b_fallback_rows")),
+            ("tier_b_fallback_allowed_subtypes", route_coverage.get("tier_b_fallback_allowed_subtypes")),
+            ("tier_b_fallback_filtered_out_rows", route_coverage.get("tier_b_fallback_filtered_out_rows")),
             ("no_tier_labelable_rows", route_coverage.get("no_tier_labelable_rows")),
             ("validation_a_only_net_profit", a_validation.get("net_profit")),
             ("validation_a_only_pf", a_validation.get("profit_factor")),
@@ -2399,10 +2714,24 @@ def run_stage10_logreg_mt5_scout(
     random_seed: int = 10,
     max_iter: int = 2000,
     parity_rows: int = 128,
+    max_hold_bars: int = 12,
+    tier_a_threshold_rule: ThresholdRule | None = None,
+    tier_b_threshold_rule: ThresholdRule | None = None,
+    routed_fallback_enabled: bool = True,
+    session_slice_id: str | None = None,
+    tier_b_fallback_allowed_subtypes: Sequence[str] | None = None,
     attempt_mt5: bool = False,
     terminal_path: Path = Path(r"C:\Program Files\MetaTrader 5\terminal64.exe"),
     metaeditor_path: Path = Path(r"C:\Program Files\MetaTrader 5\MetaEditor64.exe"),
 ) -> dict[str, Any]:
+    routing_mode = ROUTING_MODE_A_B_FALLBACK if routed_fallback_enabled else ROUTING_MODE_A_ONLY
+    routing_detail = (
+        "tier_a_primary_tier_b_partial_context_fallback"
+        if routed_fallback_enabled
+        else "tier_a_primary_no_fallback"
+    )
+    session_slice = session_slice_payload(session_slice_id)
+    allowed_fallback_subtypes = normalize_tier_b_fallback_allowed_subtypes(tier_b_fallback_allowed_subtypes)
     tier_a_feature_order = load_feature_order(feature_order_path)
     tier_a_feature_hash = ordered_hash(tier_a_feature_order)
     if tier_a_feature_hash != FEATURE_ORDER_HASH:
@@ -2499,15 +2828,71 @@ def run_stage10_logreg_mt5_scout(
         sweep.to_csv(_io_path(threshold_sweep_paths[view_name]), index=False)
     threshold_sweep = threshold_sweeps["tier_ab_combined"]
     selected = select_threshold_from_sweep(threshold_sweep)
-    rule = ThresholdRule(
+    selected_sweep_rule = ThresholdRule(
         threshold_id=str(selected["threshold_id"]),
         short_threshold=float(selected["short_threshold"]),
         long_threshold=float(selected["long_threshold"]),
         min_margin=float(selected["min_margin"]),
     )
+    tier_a_rule = tier_a_threshold_rule or selected_sweep_rule
+    tier_b_rule = tier_b_threshold_rule or tier_a_rule
+    rule = tier_a_rule
+    threshold_selection = dict(selected)
+    threshold_selection.update(
+        {
+            "selection_source": "explicit_override" if tier_a_threshold_rule or tier_b_threshold_rule else "validation_combined_sweep",
+            "threshold_id": (
+                (
+                    f"a_{tier_a_rule.threshold_id}__b_{tier_b_rule.threshold_id}__hold{int(max_hold_bars)}"
+                    if routed_fallback_enabled
+                    else f"a_{tier_a_rule.threshold_id}__b_disabled__hold{int(max_hold_bars)}"
+                )
+                + (f"__slice_{session_slice_id}" if session_slice_id else "")
+                + (
+                    "__bsub_" + "_".join(re.sub(r"[^A-Za-z0-9]+", "", subtype) for subtype in allowed_fallback_subtypes)
+                    if allowed_fallback_subtypes
+                    else ""
+                )
+            ),
+            "selected_combined_sweep_rule": threshold_rule_payload(selected_sweep_rule),
+            "tier_a_rule": threshold_rule_payload(tier_a_rule),
+            "tier_b_fallback_rule": threshold_rule_payload(tier_b_rule),
+            "routed_fallback_enabled": bool(routed_fallback_enabled),
+            "session_slice": session_slice,
+            "tier_b_fallback_allowed_subtypes": list(allowed_fallback_subtypes) if allowed_fallback_subtypes else None,
+            "max_hold_bars": int(max_hold_bars),
+            "short_threshold": tier_a_rule.short_threshold,
+            "long_threshold": tier_a_rule.long_threshold,
+            "min_margin": tier_a_rule.min_margin,
+        }
+    )
 
-    tier_a_predictions = build_prediction_frame(tier_a_model, tier_a_frame, tier_a_feature_order, rule)
-    tier_b_predictions = build_prediction_frame(tier_b_model, tier_b_frame, tier_b_feature_order, rule)
+    tier_a_eval_frame = apply_session_slice(tier_a_frame, session_slice)
+    tier_b_eval_frame_unfiltered = apply_session_slice(tier_b_frame, session_slice)
+    tier_b_eval_frame, tier_b_filtered_out_frame = apply_tier_b_fallback_subtype_filter(
+        tier_b_eval_frame_unfiltered,
+        allowed_fallback_subtypes,
+    )
+    no_tier_eval_frame_base = apply_session_slice(no_tier_frame, session_slice)
+    no_tier_eval_frame = (
+        pd.concat([no_tier_eval_frame_base, tier_b_filtered_out_frame], ignore_index=True, sort=False)
+        if not tier_b_filtered_out_frame.empty
+        else no_tier_eval_frame_base
+    )
+    if tier_a_eval_frame.empty:
+        raise RuntimeError(f"Tier A evaluation frame is empty for session slice: {session_slice_id}")
+    route_coverage = build_eval_route_coverage_summary(
+        base_summary=route_coverage,
+        tier_a_eval_frame=tier_a_eval_frame,
+        tier_b_eval_frame=tier_b_eval_frame,
+        no_tier_eval_frame=no_tier_eval_frame,
+        session_slice=session_slice,
+        tier_b_filtered_out_frame=tier_b_filtered_out_frame,
+        tier_b_allowed_subtypes=allowed_fallback_subtypes,
+    )
+
+    tier_a_predictions = build_prediction_frame(tier_a_model, tier_a_eval_frame, tier_a_feature_order, tier_a_rule)
+    tier_b_predictions = build_prediction_frame(tier_b_model, tier_b_eval_frame, tier_b_feature_order, tier_b_rule)
     tier_a_predictions[tier_column] = TIER_A
     tier_b_predictions[tier_column] = TIER_B
     tier_a_predictions["feature_count"] = len(tier_a_feature_order)
@@ -2518,7 +2903,7 @@ def run_stage10_logreg_mt5_scout(
     _io_path(predictions_root).mkdir(parents=True, exist_ok=True)
     tier_a_predictions.to_parquet(_io_path(tier_a_predictions_path), index=False)
     tier_b_predictions.to_parquet(_io_path(tier_b_predictions_path), index=False)
-    no_tier_frame.to_parquet(_io_path(no_tier_route_path), index=False)
+    no_tier_eval_frame.to_parquet(_io_path(no_tier_route_path), index=False)
     predictions.to_parquet(_io_path(combined_predictions_path), index=False)
     write_json(route_coverage_path, route_coverage)
 
@@ -2558,8 +2943,8 @@ def run_stage10_logreg_mt5_scout(
 
     mt5_feature_matrices: dict[tuple[str, str], dict[str, Any]] = {}
     for split_label, (source_split, from_date, to_date) in split_specs.items():
-        tier_a_split = tier_a_frame.loc[tier_a_frame["split"].astype(str).eq(source_split)].copy()
-        tier_b_split = tier_b_frame.loc[tier_b_frame["split"].astype(str).eq(source_split)].copy()
+        tier_a_split = tier_a_eval_frame.loc[tier_a_eval_frame["split"].astype(str).eq(source_split)].copy()
+        tier_b_split = tier_b_eval_frame.loc[tier_b_eval_frame["split"].astype(str).eq(source_split)].copy()
         tier_a_feature_matrix_path = mt5_root / f"tier_a_{split_label}_feature_matrix.csv"
         tier_b_feature_matrix_path = mt5_root / f"tier_b_{split_label}_feature_matrix.csv"
         tier_a_matrix_payload = export_mt5_feature_matrix_csv(
@@ -2597,6 +2982,7 @@ def run_stage10_logreg_mt5_scout(
             record_view_prefix=MT5_RECORD_TIER_A_ONLY_PREFIX,
             primary_active_tier="tier_a",
             attempt_role="tier_only_total",
+            max_hold_bars=max_hold_bars,
         )
         tier_a_attempt["feature_matrix"] = tier_a_matrix_payload
         mt5_attempts.append(tier_a_attempt)
@@ -2609,13 +2995,14 @@ def run_stage10_logreg_mt5_scout(
             local_feature_matrix_path=tier_b_feature_matrix_path,
             feature_count=len(tier_b_feature_order),
             feature_order_hash=tier_b_feature_hash,
-            rule=rule,
+            rule=tier_b_rule,
             from_date=from_date,
             to_date=to_date,
             stem_prefix="tier_b_fallback_only",
             record_view_prefix=MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
             primary_active_tier="tier_b_fallback",
             attempt_role="tier_b_fallback_only_total",
+            max_hold_bars=max_hold_bars,
         )
         tier_b_attempt["feature_matrix"] = tier_b_matrix_payload
         mt5_attempts.append(tier_b_attempt)
@@ -2632,6 +3019,9 @@ def run_stage10_logreg_mt5_scout(
             fallback_feature_count=len(tier_b_feature_order),
             fallback_feature_order_hash=tier_b_feature_hash,
             rule=rule,
+            fallback_rule=tier_b_rule,
+            max_hold_bars=max_hold_bars,
+            fallback_enabled=routed_fallback_enabled,
             from_date=from_date,
             to_date=to_date,
         )
@@ -2648,7 +3038,7 @@ def run_stage10_logreg_mt5_scout(
                 if _path_exists(output_path):
                     _io_path(output_path).unlink()
             remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
-        compile_payload = compile_mql5_ea(metaeditor_path, EA_SOURCE_PATH, run_output_root / "mt5" / "metaeditor_alphascout_compile.log")
+        compile_payload = compile_mql5_ea(metaeditor_path, EA_SOURCE_PATH, run_output_root / "mt5" / "mt5_compile.log")
         if compile_payload["status"] == "completed":
             for attempt in mt5_attempts:
                 result = run_mt5_tester(
@@ -2757,7 +3147,7 @@ def run_stage10_logreg_mt5_scout(
     ledger_rows = build_alpha_ledger_rows(
         tier_records=tier_records,
         mt5_kpi_records=mt5_kpi_records,
-        selected_threshold_id=rule.threshold_id,
+        selected_threshold_id=str(threshold_selection["threshold_id"]),
         run_output_root=run_output_root,
         external_verification_status=external_status,
     )
@@ -2767,6 +3157,7 @@ def run_stage10_logreg_mt5_scout(
         mt5_kpi_records=mt5_kpi_records,
         run_output_root=run_output_root,
         external_verification_status=external_status,
+        routing_mode=routing_mode,
     )
     artifacts.extend(
         [
@@ -2782,16 +3173,18 @@ def run_stage10_logreg_mt5_scout(
         exploration_label=EXPLORATION_LABEL,
         input_refs=input_refs,
         artifacts=artifacts,
-        threshold_selection=selected,
+        threshold_selection=threshold_selection,
         tier_records=tier_records,
         onnx_parity=onnx_parity,
         external_verification_status=external_status,
     )
     manifest["routing_design"] = {
-        "routing_mode": "tier_a_primary_tier_b_partial_context_fallback",
+        "routing_mode": routing_detail,
         "primary_tier": TIER_A,
-        "fallback_tier": TIER_B,
-        "fallback_policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID,
+        "fallback_enabled": bool(routed_fallback_enabled),
+        "fallback_tier": TIER_B if routed_fallback_enabled else None,
+        "fallback_policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID if routed_fallback_enabled else "out_of_scope_by_claim",
+        "fallback_allowed_subtypes": list(allowed_fallback_subtypes) if allowed_fallback_subtypes else None,
         "route_coverage": route_coverage,
     }
     manifest["mt5"] = {
@@ -2808,7 +3201,7 @@ def run_stage10_logreg_mt5_scout(
             "deposit": 500,
             "leverage": "1:100",
             "fixed_lot": 0.1,
-            "max_hold_bars": 12,
+            "max_hold_bars": int(max_hold_bars),
             "max_concurrent_positions": 1,
         },
     }
@@ -2821,7 +3214,10 @@ def run_stage10_logreg_mt5_scout(
         onnx_parity=onnx_parity,
         mt5_kpi_records=mt5_kpi_records,
     )
-    kpi["routing"]["routing_mode"] = "tier_a_primary_tier_b_partial_context_fallback"
+    kpi["threshold"]["selected_threshold_id"] = threshold_selection["threshold_id"]
+    kpi["threshold"]["actual_selection"] = threshold_selection
+    kpi["routing"]["routing_mode"] = routing_detail
+    kpi["routing"]["fallback_enabled"] = bool(routed_fallback_enabled)
     kpi["routing"]["route_coverage_design"] = route_coverage
     kpi["mt5"] = {
         "scoreboard_lane": "runtime_probe",
@@ -2840,7 +3236,7 @@ def run_stage10_logreg_mt5_scout(
         "stage_id": STAGE_ID,
         "status": "completed_payload" if onnx_parity["passed"] else "invalid_payload",
         "judgment": "inconclusive_single_split_scout_payload" if external_status != "completed" else "inconclusive_single_split_scout_mt5_routed_completed",
-        "selected_threshold": selected,
+        "selected_threshold": threshold_selection,
         "tier_records": tier_records,
         "onnx_parity": onnx_parity,
         "external_verification_status": external_status,
@@ -2860,32 +3256,44 @@ def run_stage10_logreg_mt5_scout(
         record = mt5_records_by_view.get(record_view, {})
         return record.get("metrics", {}).get(metric_name)
 
+    routed_view_label = (
+        "`Tier A+B routed total(Tier A+B 라우팅 전체)`"
+        if routed_fallback_enabled
+        else "`Tier A-only routed total(Tier A 단독 라우팅 전체)`"
+    )
 
     result_summary_lines = [
-        "# Stage 10 run01A LogReg Threshold MT5 Scout(로지스틱 회귀 임계값 MT5 탐색)",
+        f"# Stage 10 {RUN_NUMBER} LogReg Threshold MT5 Scout(로지스틱 임계값 MT5 탐색)",
         "",
         f"- run_id(실행 ID): `{RUN_ID}`",
-        f"- selected threshold(선택 임계값): `{rule.threshold_id}`",
+        f"- selected threshold(선택 임계값): `{threshold_selection['threshold_id']}`",
+        f"- Tier A rule(Tier A 규칙): `{tier_a_rule.threshold_id}`",
+        f"- Tier B fallback rule(Tier B 대체 규칙): `{tier_b_rule.threshold_id}`",
+        f"- routed fallback enabled(라우팅 대체 사용): `{bool(routed_fallback_enabled)}`",
+        f"- Tier B fallback allowed subtypes(Tier B 대체 허용 하위유형): "
+        f"`{list(allowed_fallback_subtypes) if allowed_fallback_subtypes else 'all'}`",
+        f"- session slice(시간대 조각): `{session_slice_id or 'full'}`",
+        f"- max hold bars(최대 보유 봉 수): `{int(max_hold_bars)}`",
         f"- external verification status(외부 검증 상태): `{external_status}`",
-        f"- Tier A rows(Tier A 행 수): `{len(tier_a_predictions)}`",
-        f"- Tier B fallback rows(Tier B 대체 행 수): `{len(tier_b_predictions)}`",
-        f"- no_tier labelable rows(티어 없음 라벨 가능 행 수): `{len(no_tier_frame)}`",
+        f"- Tier A rows(Tier A 행): `{len(tier_a_predictions)}`",
+        f"- Tier B fallback rows(Tier B 대체 행): `{len(tier_b_predictions)}`",
+        f"- no_tier labelable rows(티어 없음 라벨 가능 행): `{len(no_tier_eval_frame)}`",
         f"- MT5 KPI records(MT5 핵심 성과 지표 기록): `{len(mt5_kpi_records)}`",
         "- MT5 comparison views(MT5 비교 보기): `Tier A only(Tier A 단독)`, "
         "`Tier B fallback-only(Tier B 대체 구간 단독)`, "
-        "`Tier A+B routed total(Tier A+B 라우팅 전체)`",
+        f"{routed_view_label}",
         f"- Tier B fallback subtype counts(Tier B 대체 하위유형 수): `{route_coverage.get('tier_b_fallback_by_subtype', {})}`",
         "",
-        "## Validation IS(검증/표본내)",
+        "## Validation IS(검증 표본내)",
         "",
         f"- Tier A only net profit(Tier A 단독 순수익): `{result_metric('mt5_tier_a_only_validation_is', 'net_profit')}`",
         f"- Tier A only profit factor(Tier A 단독 수익 팩터): `{result_metric('mt5_tier_a_only_validation_is', 'profit_factor')}`",
         f"- Tier B fallback-only net profit(Tier B 대체 구간 단독 순수익): `{result_metric('mt5_tier_b_fallback_only_validation_is', 'net_profit')}`",
         f"- Tier B fallback-only profit factor(Tier B 대체 구간 단독 수익 팩터): `{result_metric('mt5_tier_b_fallback_only_validation_is', 'profit_factor')}`",
-        f"- A+B routed net profit(A+B 라우팅 순수익): `{result_metric('mt5_routed_total_validation_is', 'net_profit')}`",
-        f"- A+B routed profit factor(A+B 라우팅 수익 팩터): `{result_metric('mt5_routed_total_validation_is', 'profit_factor')}`",
-        f"- A+B routed Tier A used(A+B 라우팅 Tier A 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_a_used_count')}`",
-        f"- A+B routed Tier B fallback used(A+B 라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_b_fallback_used_count')}`",
+        f"- Routed net profit(라우팅 순수익): `{result_metric('mt5_routed_total_validation_is', 'net_profit')}`",
+        f"- Routed profit factor(라우팅 수익 팩터): `{result_metric('mt5_routed_total_validation_is', 'profit_factor')}`",
+        f"- Routed Tier A used(라우팅 Tier A 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_a_used_count')}`",
+        f"- Routed Tier B fallback used(라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_b_fallback_used_count')}`",
         "",
         "## OOS(표본외)",
         "",
@@ -2893,10 +3301,10 @@ def run_stage10_logreg_mt5_scout(
         f"- Tier A only profit factor(Tier A 단독 수익 팩터): `{result_metric('mt5_tier_a_only_oos', 'profit_factor')}`",
         f"- Tier B fallback-only net profit(Tier B 대체 구간 단독 순수익): `{result_metric('mt5_tier_b_fallback_only_oos', 'net_profit')}`",
         f"- Tier B fallback-only profit factor(Tier B 대체 구간 단독 수익 팩터): `{result_metric('mt5_tier_b_fallback_only_oos', 'profit_factor')}`",
-        f"- A+B routed net profit(A+B 라우팅 순수익): `{result_metric('mt5_routed_total_oos', 'net_profit')}`",
-        f"- A+B routed profit factor(A+B 라우팅 수익 팩터): `{result_metric('mt5_routed_total_oos', 'profit_factor')}`",
-        f"- A+B routed Tier A used(A+B 라우팅 Tier A 사용): `{result_metric('mt5_routed_total_oos', 'tier_a_used_count')}`",
-        f"- A+B routed Tier B fallback used(A+B 라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_oos', 'tier_b_fallback_used_count')}`",
+        f"- Routed net profit(라우팅 순수익): `{result_metric('mt5_routed_total_oos', 'net_profit')}`",
+        f"- Routed profit factor(라우팅 수익 팩터): `{result_metric('mt5_routed_total_oos', 'profit_factor')}`",
+        f"- Routed Tier A used(라우팅 Tier A 사용): `{result_metric('mt5_routed_total_oos', 'tier_a_used_count')}`",
+        f"- Routed Tier B fallback used(라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_oos', 'tier_b_fallback_used_count')}`",
         "",
         "## Boundary(경계)",
         "",
@@ -2911,7 +3319,7 @@ def run_stage10_logreg_mt5_scout(
         "status": "ok" if onnx_parity["passed"] else "failed",
         "run_id": RUN_ID,
         "run_output_root": run_output_root.as_posix(),
-        "threshold_id": rule.threshold_id,
+        "threshold_id": str(threshold_selection["threshold_id"]),
         "onnx_parity": onnx_parity,
         "external_verification_status": external_status,
         "mt5_attempted": attempt_mt5,
@@ -2923,8 +3331,54 @@ def run_stage10_logreg_mt5_scout(
     }
 
 
+def threshold_rule_from_cli(
+    *,
+    label: str,
+    threshold_id: str | None,
+    short_threshold: float | None,
+    long_threshold: float | None,
+    min_margin: float | None,
+) -> ThresholdRule | None:
+    values = (short_threshold, long_threshold, min_margin)
+    if all(value is None for value in values):
+        return None
+    if any(value is None for value in values):
+        raise ValueError(f"{label} threshold override requires short, long, and min-margin values.")
+    return threshold_rule_from_values(
+        threshold_id=threshold_id,
+        short_threshold=float(short_threshold),
+        long_threshold=float(long_threshold),
+        min_margin=float(min_margin),
+    )
+
+
 def main() -> int:
     args = parse_args()
+    configure_run_identity(
+        run_number=args.run_number,
+        run_id=args.run_id,
+        exploration_label=args.exploration_label,
+        common_run_root=args.common_run_root or default_common_run_root(args.run_id),
+    )
+    run_output_root = (
+        Path(args.run_output_root)
+        if args.run_output_root
+        else Path("stages") / STAGE_ID / "02_runs" / args.run_id
+    )
+    tier_a_rule = threshold_rule_from_cli(
+        label="Tier A",
+        threshold_id=args.tier_a_threshold_id,
+        short_threshold=args.tier_a_short_threshold,
+        long_threshold=args.tier_a_long_threshold,
+        min_margin=args.tier_a_min_margin,
+    )
+    tier_b_rule = threshold_rule_from_cli(
+        label="Tier B",
+        threshold_id=args.tier_b_threshold_id,
+        short_threshold=args.tier_b_short_threshold,
+        long_threshold=args.tier_b_long_threshold,
+        min_margin=args.tier_b_min_margin,
+    )
     payload = run_stage10_logreg_mt5_scout(
         model_input_path=Path(args.model_input_path),
         feature_order_path=Path(args.feature_order_path),
@@ -2933,7 +3387,7 @@ def main() -> int:
         raw_root=Path(args.raw_root),
         training_summary_path=Path(args.training_summary_path),
         stage07_model_path=Path(args.stage07_model_path),
-        run_output_root=Path(args.run_output_root),
+        run_output_root=run_output_root,
         common_files_root=Path(args.common_files_root),
         terminal_data_root=Path(args.terminal_data_root),
         tester_profile_root=Path(args.tester_profile_root),
@@ -2941,6 +3395,14 @@ def main() -> int:
         random_seed=args.random_seed,
         max_iter=args.max_iter,
         parity_rows=args.parity_rows,
+        max_hold_bars=args.max_hold_bars,
+        tier_a_threshold_rule=tier_a_rule,
+        tier_b_threshold_rule=tier_b_rule,
+        routed_fallback_enabled=not args.disable_routed_fallback,
+        session_slice_id=args.session_slice_id,
+        tier_b_fallback_allowed_subtypes=parse_tier_b_fallback_allowed_subtypes(
+            args.tier_b_fallback_allowed_subtypes
+        ),
         attempt_mt5=args.attempt_mt5,
         terminal_path=Path(args.terminal_path),
         metaeditor_path=Path(args.metaeditor_path),
