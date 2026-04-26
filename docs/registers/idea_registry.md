@@ -1,4 +1,4 @@
-# Idea Registry
+﻿# Idea Registry
 
 | idea_id | stage_id | hypothesis | tier_scope | status | notes |
 |---|---|---|---|---|---|

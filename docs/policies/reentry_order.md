@@ -9,22 +9,24 @@
 1. `AGENTS.md`
 2. `docs/workspace/workspace_state.yaml`
 3. `docs/context/current_working_state.md`
-4. `docs/workspace/pre_alpha_stage_plan.md`
-5. 활성 단계(active stage, 활성 단계) `04_selected/selection_status.md`
-6. 활성 단계(active stage, 활성 단계) `00_spec/stage_brief.md`
-7. `docs/policies/stage_structure.md`
-8. `docs/policies/exploration_mandate.md`
-9. `docs/policies/architecture_invariants.md`
-10. `docs/policies/kpi_measurement_standard.md`
-11. `docs/policies/run_result_management.md`
-12. `docs/policies/result_judgment_policy.md`
-13. `docs/policies/agent_trigger_policy.md`
-14. `docs/contracts/time_axis_policy_fpmarkets_v2.md`
-15. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
-16. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-17. `docs/contracts/training_label_split_contract_fpmarkets_v2.md`
-18. `docs/contracts/model_input_feature_set_contract_fpmarkets_v2.md`
-19. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+4. `docs/registers/alpha_run_ledger.csv`
+5. 활성 단계(active stage, 활성 단계) `03_reviews/stage_run_ledger.csv`
+6. `docs/workspace/pre_alpha_stage_plan.md`
+7. 활성 단계(active stage, 활성 단계) `04_selected/selection_status.md`
+8. 활성 단계(active stage, 활성 단계) `00_spec/stage_brief.md`
+9. `docs/policies/stage_structure.md`
+10. `docs/policies/exploration_mandate.md`
+11. `docs/policies/architecture_invariants.md`
+12. `docs/policies/kpi_measurement_standard.md`
+13. `docs/policies/run_result_management.md`
+14. `docs/policies/result_judgment_policy.md`
+15. `docs/policies/agent_trigger_policy.md`
+16. `docs/contracts/time_axis_policy_fpmarkets_v2.md`
+17. `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
+18. `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+19. `docs/contracts/training_label_split_contract_fpmarkets_v2.md`
+20. `docs/contracts/model_input_feature_set_contract_fpmarkets_v2.md`
+21. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
 
 ## 진실 우선순위(Truth Precedence, 진실 우선순위)
 

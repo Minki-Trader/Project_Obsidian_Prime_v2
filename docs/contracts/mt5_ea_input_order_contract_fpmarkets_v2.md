@@ -82,6 +82,21 @@ indicator handle, ONNX session, external symbol subscription은 초기화 단계
 - 외부 심볼 준비 상태
 - top3 weight table
 
+### 4.3 EA Module Boundary(EA 모듈 경계)
+
+EA(`Expert Advisor`, 전문가 자문)는 한 파일(all-in-one file, 일체형 파일)로 계속 확장하지 않는다.
+
+- entrypoint(진입점): `.mq5` 파일은 `OnInit`, `OnTick`, `OnDeinit`, input parameter(입력 파라미터), file handoff(파일 인계)만 연결한다.
+- feature input module(피처 입력 모듈): closed bar(닫힌 봉), external symbol(외부 심볼), session calendar(세션 달력), weight table(가중치 표) 준비 상태를 맡는다.
+- model runtime module(모델 런타임 모듈): ONNX session(ONNX 세션), input/output shape(입출력 형태), feature order hash(피처 순서 해시)를 맡는다.
+- decision surface module(의사결정 표면 모듈): probability(확률), threshold(임계값), no-trade rule(무거래 규칙), long/short mix(롱/숏 비율)를 맡는다.
+- execution bridge module(실행 연결 모듈): order request(주문 요청), broker constraint(브로커 제약), fill/reject result(체결/거부 결과)를 맡는다.
+- runtime telemetry module(런타임 기록 모듈): skip reason(스킵 사유), feature readiness(피처 준비 상태), decision output(판정 출력), tester output(테스터 출력)을 맡는다.
+
+권장 소유 위치(owner location, 소유 위치)는 `foundation/mt5/include/ObsidianPrime/`이다.
+
+효과(effect, 효과): Python/MT5 parity(파이썬/MT5 동등성), 모델 추론(model inference, 모델 추론), 주문 실행(order execution, 주문 실행), KPI 기록(KPI record, KPI 기록)을 서로 다른 검토 단위(review unit, 검토 단위)로 분리한다.
+
 ---
 
 ## 5. 데이터 획득 원칙

@@ -9,7 +9,7 @@
 | `AD-003` | alpha framing(알파 틀짓기) | 소스 정리(source cleanup, 소스 정리)가 알파 탐색(alpha search, 알파 탐색)처럼 보일 수 있음 | 탐색(exploration, 탐색)이 지연됨 | open |
 | `AD-004` | Korean encoding(한국어 인코딩) | 한국어 문서가 UTF-8 BOM(UTF-8 BOM 포함)을 잃을 수 있음 | Windows 표시가 깨질 수 있음 | open |
 | `AD-005` | exploration discipline(탐색 규율) | 운영 게이트(operating gate, 운영 게이트)가 탐색을 누를 수 있음 | 좋은 아이디어가 너무 일찍 막힘 | open |
-| `AD-006` | code surface(코드 표면) | 큰 파이프라인이나 EA(all-in-one file, 일체형 파일)가 자랄 수 있음 | 소유권(ownership, 소유권)과 테스트(test, 테스트)가 흐려짐 | open |
+| `AD-006` | code surface(코드 표면) | 큰 파이프라인이나 EA(all-in-one file, 일체형 파일)가 자랄 수 있음 | 소유권(ownership, 소유권)과 테스트(test, 테스트)가 흐려짐 | open_mitigated_by_modular_policy |
 
 ## 재시작 메모(Restart Note, 재시작 메모)
 

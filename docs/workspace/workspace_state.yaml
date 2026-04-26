@@ -1,10 +1,10 @@
-updated_on: "2026-04-25"
+updated_on: "2026-04-26"
 project_mode: "clean_stage_restart"
 active_branch: "codex/stage09-pre-alpha-handoff"
 active_stage: "10_alpha_scout__default_split_model_threshold_scan"
 current_operating_reference: null
 current_shadow_challenger: null
-exploration_rule: "tier_a_and_tier_b_are_both_open_to_full_exploration"
+exploration_rule: "tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with component and total records"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
@@ -12,6 +12,7 @@ shared_window:
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
+  - "record Tier A, Tier B, and Tier A+B views together in stage and project alpha ledgers; routed MT5 runs read these as A-used, B-fallback-used, and actual routed total"
   - "use the first default training label and split contract as the starting evidence surface"
   - "treat the 56-feature model input as an interim quarantine artifact, not the final pre-alpha path"
   - "treat the Stage 04 top3 weights as MT5 price-proxy weights, not actual NDX/QQQ weights"
@@ -23,7 +24,7 @@ current_focus:
   - "preserve the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority input behind the Stage 07 smoke"
   - "treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result"
   - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
-  - "keep Stage 10 as single_split_scout exploration until a reviewed scout run exists"
+  - "treat Stage 10 run01A as completed routed MT5 runtime_probe evidence but not live readiness or operating promotion"
 pre_alpha_stage_queue:
   status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
@@ -58,7 +59,7 @@ pre_alpha_stage_queue:
     stage10:
       stage_id: "10_alpha_scout__default_split_model_threshold_scan"
       ownership: "default_split_model_threshold_single_split_scout"
-      status: "active_protocol_ready_waiting_for_first_single_split_scout"
+      status: "active_run01A_completed_runtime_probe"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -317,15 +318,43 @@ stage09_pre_alpha_handoff:
   decision_path: "docs/decisions/2026-04-25_stage09_pre_alpha_handoff.md"
 stage10_alpha_scout:
   stage_id: "10_alpha_scout__default_split_model_threshold_scan"
-  status: "active_protocol_ready_waiting_for_first_single_split_scout"
+  status: "active_run01A_completed_runtime_probe"
   lane: "exploration"
   scout_boundary: "single_split_scout"
+  current_run_id: "run01A_logreg_threshold_mt5_scout_v1"
+  current_run_label: "stage10_Model__LogReg_MT5Scout"
+  current_run_judgment: "inconclusive_single_split_scout_mt5_routed_completed"
+  current_run_external_verification_status: "completed"
+  current_run_routing_mode: "tier_a_primary_tier_b_partial_context_fallback"
+  current_run_validation_is_net_profit: 355.65
+  current_run_validation_is_profit_factor: 1.33
+  current_run_validation_is_max_drawdown: 146.24
+  current_run_validation_is_recovery_factor: 2.43
+  current_run_oos_net_profit: 174.89
+  current_run_oos_profit_factor: 1.21
+  current_run_oos_max_drawdown: 209.15
+  current_run_oos_recovery_factor: 0.84
+  current_run_tier_b_fallback_rows: 12398
+  current_run_no_tier_labelable_rows: 1053
+  current_run_validation_is_tier_a_used_count: 9844
+  current_run_validation_is_tier_b_fallback_used_count: 2366
+  current_run_validation_is_no_tier_labelable_count: 203
+  current_run_oos_tier_a_used_count: 7584
+  current_run_oos_tier_b_fallback_used_count: 1062
+  current_run_oos_no_tier_labelable_count: 159
+  current_run_tier_b_fallback_by_subtype:
+    B_macro_missing: 10740
+    B_mixed_partial_context: 1240
+    B_full_context_outside_tier_a_scope: 217
+    B_core_only: 200
+    B_constituent_missing: 1
   source_model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
   default_split_id: "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413"
-  boundary: "stage_open_no_alpha_result_no_alpha_quality_no_operating_promotion"
+  boundary: "runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion"
   selection_status_path: "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md"
 open_items:
-  - "Stage 10: define and run the first single_split_scout packet before recording any alpha result"
+  - "Stage 10: interpret run01A as an inconclusive runtime_probe and choose the next scout variant"
+  - "compare Tier B partial-context fallback subtype quality before treating fallback coverage as alpha quality"
   - "keep label/horizon variants as later exploration candidates instead of silently changing the default contract"
   - "keep broader valid-row or partial-day scopes as later candidates instead of silently widening the first freeze"
   - "do not read MT5 price-proxy top3 weights as actual NDX/QQQ weights"
@@ -340,6 +369,6 @@ forbidden_shortcuts:
   - "do not treat the Stage 07 baseline training smoke as alpha quality, live readiness, or operating promotion"
   - "do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality judgment"
   - "do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality judgment"
-  - "do not treat Stage 10 active status as a reviewed scout result, live readiness, runtime authority, or operating promotion"
+  - "do not treat Stage 10 run01A runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

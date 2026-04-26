@@ -46,9 +46,9 @@
 아래 묶음(bundle, 묶음)은 작업 종류가 보이면 자동으로 붙인다. 효과(effect, 효과)는 필요한 검토 관문(review gate, 검토 관문)을 기억에 맡기지 않고, 작업 의미와 보고 경계를 같은 회차(pass, 회차)에 고정하는 것이다.
 
 1. 실행 생성/종료 자동 묶음(Run Evidence Auto Bundle, 실행 근거 자동 묶음)
-   - 트리거(trigger, 작동 조건): run creation(실행 생성), run closeout(실행 종료), KPI report(KPI 보고), result summary(결과 요약), run registry update(실행 등록부 갱신)
+   - 트리거(trigger, 작동 조건): run creation(실행 생성), run closeout(실행 종료), KPI report(KPI 보고), result summary(결과 요약), run registry update(실행 등록부 갱신), Tier A primary + Tier B fallback routing(Tier A 우선 + Tier B 대체 라우팅)
    - 자동 호출(auto-call, 자동 호출): `obsidian-run-evidence-system(실행 근거 시스템)` + `obsidian-claim-discipline(주장 규율)`
-   - 효과(effect, 효과): measurement(측정), identity(정체성), judgment(판정), registry boundary(등록부 경계)를 갖춘 실행만 reviewed run(검토된 실행)으로 말한다.
+   - 효과(effect, 효과): measurement(측정), identity(정체성), judgment(판정), registry boundary(등록부 경계)를 갖춘 실행만 reviewed run(검토된 실행)으로 말하고, routed total(라우팅 전체)을 synthetic sum(합성 합산)과 섞지 않는다.
 2. 단계 변경 자동 묶음(Stage Transition Auto Bundle, 단계 전환 자동 묶음)
    - 트리거(trigger, 작동 조건): active_stage(활성 단계) 변경, stage closeout(단계 종료), handoff(인계), selection status(선택 상태) 변경
    - 자동 호출(auto-call, 자동 호출): `obsidian-stage-transition(단계 전환)` + `obsidian-claim-discipline(주장 규율)`
@@ -75,6 +75,13 @@
    - 트리거(trigger, 작동 조건): 모델 학습(model training, 모델 학습), feature(피처), label(라벨), split(분할), parity(동등성), report materializer(보고서 물질화 도구), test(테스트)처럼 결과 해석을 바꿀 수 있는 비사소 코드 변경(non-trivial code edit, 비사소 코드 변경)
    - 자동 호출(auto-call, 자동 호출): `obsidian-code-quality(코드 품질)`를 코드 표면 가드(code-surface guard, 코드 표면 가드) 뒤에 붙인다.
    - 효과(effect, 효과): responsibility(책임), flow(흐름), contract(계약), test intent(검증 의도)가 코드 안에서 읽히게 한다.
+8. EA 실행 변형 강제 묶음(EA Run Variant Hard Bundle, EA 실행 변형 강제 묶음)
+   - 트리거(trigger, 작동 조건): MT5 EA(`Expert Advisor`, 전문가 자문), `.mq5`, `.mqh`, `.set`, Strategy Tester(전략 테스터), optimization pass(최적화 회차), tester property(테스터 속성), runtime package(런타임 패키지), model bundle(모델 번들), EA run config(EA 실행 설정), Tier A primary + Tier B fallback routing(Tier A 우선 + Tier B 대체 라우팅), module hash(모듈 해시)를 만들거나 바꾸는 작업
+   - 자동 호출(auto-call, 자동 호출): `obsidian-code-surface-guard(코드 표면 가드)` + `obsidian-reference-scout(레퍼런스 탐색)` + `obsidian-run-evidence-system(실행 근거 시스템)` + `obsidian-claim-discipline(주장 규율)`
+   - 사전 판정(required precheck, 필수 사전 판정): run별 차이(run-specific difference, 실행별 차이)가 parameter-only(파라미터만), module-change(모듈 변경), entrypoint-change(진입점 변경), new-runner-required(새 실행기 필요) 중 무엇인지 먼저 적는다.
+   - 금지(default no, 기본 금지): run마다 새 `.mq5` 파일을 복제(copy, 복사)해서 관리하지 않는다.
+   - 필수 정체성(required identity, 필수 정체성): `ea_entrypoint`, `.set` path(설정 파일 경로), input params hash(입력 파라미터 해시), module hashes(모듈 해시), model/bundle hash(모델/번들 해시), tester model/deposit/leverage(테스터 모델/예치금/레버리지), output path(출력 경로)를 실행 근거(run evidence, 실행 근거)에 남긴다.
+   - 효과(effect, 효과): EA run(실행) 결과가 어느 코드(code, 코드), 어느 설정(set, 설정), 어느 모델/번들(model/bundle, 모델/번들), 어느 테스터 조건(tester condition, 테스터 조건)에서 나온 것인지 끊기지 않는다.
 
 ## 필수 정책 링크(Required Policy Links, 필수 정책 링크)
 
@@ -83,6 +90,7 @@
 - `kpi_measurement_standard.md`
 - `run_result_management.md`
 - `result_judgment_policy.md`
+- `mt5_ea_input_order_contract_fpmarkets_v2.md`
 
 ## 답변 명확성 강제 트리거(Answer Clarity Hard Trigger, 답변 명확성 강제 트리거)
 

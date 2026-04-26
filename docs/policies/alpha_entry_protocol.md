@@ -51,6 +51,32 @@ Tier label(티어 라벨)은 sample label(표본 라벨)이다. exploration perm
 
 Tier A(티어 A)와 Tier B(티어 B)를 한 표에 같이 보일 수 있다. 다만 각 행(row, 행)은 자신의 tier label(티어 라벨)과 split/window(분할/창)를 유지한다.
 
+## Tier Pair Discipline(티어 쌍 규율)
+
+Stage 10(10단계) 이후 alpha exploration run(알파 탐색 실행)은 Tier A(티어 A)와 Tier B(티어 B)를 항상 같은 작업 묶음(work packet, 작업 묶음) 안에서 다룬다.
+
+필수 기록(required record, 필수 기록):
+
+- Tier A separate record(Tier A 분리 기록)
+- Tier B separate record(Tier B 분리 기록)
+- Tier A+B combined record(Tier A+B 합산 기록)
+
+이 행동(action, 행동)의 효과(effect, 효과)는 Tier A(티어 A)만 본 결과를 전체 alpha read(알파 판독)처럼 과장하지 않고, Tier B(티어 B)의 부분 문맥 표본(partial-context sample, 부분 문맥 표본)이 같은 아이디어에서 무엇을 바꾸는지 같이 보게 하는 것이다.
+
+MT5(`MetaTrader 5`, 메타트레이더5)에서 Tier A primary + Tier B fallback(Tier A 우선 + Tier B 대체) 방식을 쓰는 실행(run, 실행)은 위 세 기록을 `Tier A used(Tier A 사용)`, `Tier B fallback used(Tier B 대체 사용)`, `actual routed total(실제 라우팅 전체)`로 해석한다.
+
+효과(effect, 효과)는 사용자가 의도한 빈 구간 보강(fallback fill, 대체 메움)을 한 실행 경로(run path, 실행 경로) 안에서 확인하고, separate tester run(분리 테스터 실행)의 synthetic sum(합성 합산)을 combined result(합산 결과)처럼 말하지 않게 하는 것이다.
+
+Tier B(티어 B) 표본이나 결합 기록(combined record, 합산 기록)을 만들 수 없으면 그 실행(run, 실행)은 완전한 reviewed alpha run(검토 완료 알파 실행)이 아니다. 그때는 `blocked_tier_pair_incomplete(티어 쌍 미완료 차단)`, `inconclusive_tier_pair_incomplete(티어 쌍 미완료 불충분)`, 또는 `out_of_scope_by_claim(주장 범위 밖)` 중 하나로 낮춰 적는다.
+
+기록 위치(record placement, 기록 위치):
+
+- Stage-local ledger(단계 내부 장부): `stages/<stage_id>/03_reviews/stage_run_ledger.csv`
+- Project ledger(프로젝트 장부): `docs/registers/alpha_run_ledger.csv`
+- Run folder(실행 폴더): 각 실행의 `run_manifest.json(실행 목록)`, `kpi_record.json(KPI 기록)`, report(보고서)
+
+효과(effect, 효과)는 stage 내부(stage-local, 단계 내부)에서 바로 읽을 수 있고, 프로젝트 전체(project-wide, 프로젝트 전체)에서도 run/subrun(실행/하위 실행)을 한 줄씩 추적할 수 있게 하는 것이다.
+
 ## Single Split Scout(단일 분할 탐색 판독)
 
 single split scout(단일 분할 탐색 판독)는 빠른 구조 판독(structural scout, 구조 스카우트)이다.
