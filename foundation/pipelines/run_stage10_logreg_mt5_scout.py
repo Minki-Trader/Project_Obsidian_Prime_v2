@@ -234,12 +234,21 @@ def _io_path(path: Path) -> Path:
     return resolved
 
 
+def _path_exists(path: Path) -> bool:
+    return _io_path(path).exists()
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with _io_path(path).open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def sha256_file_lf_normalized(path: Path) -> str:
+    raw = _io_path(path).read_bytes()
+    return hashlib.sha256(raw.replace(b"\r\n", b"\n")).hexdigest()
 
 
 def ordered_hash(names: Sequence[str]) -> str:
@@ -249,11 +258,11 @@ def ordered_hash(names: Sequence[str]) -> str:
 def mt5_runtime_module_hashes() -> list[dict[str, Any]]:
     include_root = REPO_ROOT / "foundation" / "mt5" / "include" / "ObsidianPrime"
     paths = [REPO_ROOT / EA_SOURCE_PATH]
-    if include_root.exists():
+    if _path_exists(include_root):
         paths.extend(sorted(include_root.glob("*.mqh")))
     modules: list[dict[str, Any]] = []
     for path in paths:
-        if not path.exists():
+        if not _path_exists(path):
             modules.append({"path": path.relative_to(REPO_ROOT).as_posix(), "status": "missing", "sha256": None})
             continue
         modules.append(
@@ -1463,7 +1472,7 @@ def copy_to_common_files(common_files_root: Path, local_path: Path, common_path:
 
 def compile_mql5_ea(metaeditor_path: Path, source_path: Path, log_path: Path) -> dict[str, Any]:
     command = [str(metaeditor_path), f"/compile:{source_path.resolve()}", f"/log:{log_path.resolve()}"]
-    if not metaeditor_path.exists():
+    if not _path_exists(metaeditor_path):
         return {
             "status": "blocked",
             "command": command,
@@ -1474,13 +1483,13 @@ def compile_mql5_ea(metaeditor_path: Path, source_path: Path, log_path: Path) ->
     _io_path(log_path.parent).mkdir(parents=True, exist_ok=True)
     proc = subprocess.run(command, cwd=REPO_ROOT, text=True, capture_output=True, timeout=120)
     actual_log_path = log_path
-    if not actual_log_path.exists() and log_path.suffix:
+    if not _path_exists(actual_log_path) and log_path.suffix:
         extensionless_log = log_path.with_suffix("")
-        if extensionless_log.exists():
+        if _path_exists(extensionless_log):
             actual_log_path = extensionless_log
 
     log_text = ""
-    if actual_log_path.exists():
+    if _path_exists(actual_log_path):
         raw_log = _io_path(actual_log_path).read_bytes()
         for encoding in ("utf-16", "utf-8-sig", "cp949"):
             try:
@@ -1502,7 +1511,7 @@ def compile_mql5_ea(metaeditor_path: Path, source_path: Path, log_path: Path) ->
         "stdout": proc.stdout[-2000:],
         "stderr": proc.stderr[-2000:],
         "log_path": actual_log_path.as_posix(),
-        "log_sha256": sha256_file(actual_log_path) if actual_log_path.exists() else None,
+        "log_sha256": sha256_file(actual_log_path) if _path_exists(actual_log_path) else None,
     }
 
 
@@ -1528,7 +1537,7 @@ def run_mt5_tester(
         }
 
     command = [str(terminal_path), f"/config:{execution_ini_path.resolve()}"]
-    if not terminal_path.exists():
+    if not _path_exists(terminal_path):
         return {
             "status": "blocked",
             "command": command,
@@ -1569,7 +1578,7 @@ def remove_existing_mt5_report_artifacts(terminal_data_root: Path, attempt: Mapp
     report_name = report_name_from_attempt(attempt)
     for suffix in (".htm", ".html", ".png"):
         path = terminal_data_root / f"{report_name}{suffix}"
-        if path.exists():
+        if _path_exists(path):
             _io_path(path).unlink()
 
 
@@ -1598,7 +1607,7 @@ def collect_mt5_strategy_report_artifacts(
             "status": "missing",
         }
         html_source = next(
-            (terminal_data_root / f"{report_name}{suffix}" for suffix in (".htm", ".html") if (terminal_data_root / f"{report_name}{suffix}").exists()),
+            (path for path in (terminal_data_root / f"{report_name}{suffix}" for suffix in (".htm", ".html")) if _path_exists(path)),
             None,
         )
         if html_source is not None:
@@ -1613,7 +1622,7 @@ def collect_mt5_strategy_report_artifacts(
             record["status"] = record["metrics"]["status"]
 
         chart_source = terminal_data_root / f"{report_name}.png"
-        if chart_source.exists():
+        if _path_exists(chart_source):
             chart_destination = reports_root / chart_source.name
             shutil.copy2(_io_path(chart_source), _io_path(chart_destination))
             record["chart"] = {
@@ -1992,7 +2001,7 @@ def build_alpha_ledger_rows(
 
 
 def _read_csv_rows(path: Path) -> list[dict[str, str]]:
-    if not path.exists():
+    if not _path_exists(path):
         return []
     with _io_path(path).open("r", encoding="utf-8-sig", newline="") as handle:
         return [dict(row) for row in csv.DictReader(handle)]
@@ -2019,7 +2028,13 @@ def _upsert_csv_rows(
     merged = [row for row in existing if str(row.get(key)) not in new_keys]
     merged.extend(dict(row) for row in rows)
     _write_csv_rows(path, columns, merged)
-    return {"path": path.as_posix(), "sha256": sha256_file(path), "rows": len(merged), "upserted_rows": len(rows)}
+    return {
+        "path": path.as_posix(),
+        "sha256": sha256_file_lf_normalized(path),
+        "hash_policy": "lf_normalized_text_register",
+        "rows": len(merged),
+        "upserted_rows": len(rows),
+    }
 
 
 def materialize_alpha_ledgers(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
@@ -2073,13 +2088,13 @@ def validate_mt5_runtime_outputs(common_files_root: Path, attempt: Mapping[str, 
     payload: dict[str, Any] = {
         "telemetry_path": telemetry_path.as_posix(),
         "summary_path": summary_path.as_posix(),
-        "telemetry_exists": telemetry_path.exists(),
-        "summary_exists": summary_path.exists(),
+        "telemetry_exists": _path_exists(telemetry_path),
+        "summary_exists": _path_exists(summary_path),
         "status": "blocked",
     }
-    if telemetry_path.exists():
+    if _path_exists(telemetry_path):
         payload["telemetry_sha256"] = sha256_file(telemetry_path)
-    if summary_path.exists():
+    if _path_exists(summary_path):
         payload["summary_sha256"] = sha256_file(summary_path)
         try:
             summary = pd.read_csv(_io_path(summary_path))
@@ -2524,7 +2539,7 @@ def run_stage10_logreg_mt5_scout(
         for attempt in mt5_attempts:
             for common_output_key in ("common_telemetry_path", "common_summary_path"):
                 output_path = common_files_root / Path(str(attempt[common_output_key]))
-                if output_path.exists():
+                if _path_exists(output_path):
                     _io_path(output_path).unlink()
             remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
         compile_payload = compile_mql5_ea(metaeditor_path, EA_SOURCE_PATH, run_output_root / "mt5" / "metaeditor_alphascout_compile.log")

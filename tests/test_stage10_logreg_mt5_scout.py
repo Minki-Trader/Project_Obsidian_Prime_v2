@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import shutil
 import sys
 import tempfile
 import unittest
@@ -310,6 +311,35 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         self.assertEqual(enriched[0]["metrics"]["no_tier_labelable_rows"], 1)
         self.assertEqual(enriched[1]["metrics"]["tier_a_primary_labelable_rows"], 7)
         self.assertEqual(enriched[1]["metrics"]["partial_context_subtype_counts"], {"B_core_only": 1})
+
+    def test_path_exists_uses_long_path_adapter(self) -> None:
+        temp_dir = tempfile.mkdtemp()
+        root = Path(temp_dir)
+        try:
+            long_dir = root
+            for index in range(6):
+                long_dir = long_dir / f"segment_{index:02d}_{'x' * 32}"
+            long_path = long_dir / "stage10_long_path_probe.txt"
+
+            self.module._io_path(long_path.parent).mkdir(parents=True, exist_ok=True)
+            self.module._io_path(long_path).write_text("ok", encoding="utf-8")
+
+            self.assertTrue(self.module._path_exists(long_path))
+        finally:
+            shutil.rmtree(self.module._io_path(root), ignore_errors=True)
+
+    def test_lf_normalized_hash_is_stable_across_crlf(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            lf_path = root / "ledger_lf.csv"
+            crlf_path = root / "ledger_crlf.csv"
+            lf_path.write_bytes(b"a,b\n1,2\n")
+            crlf_path.write_bytes(b"a,b\r\n1,2\r\n")
+
+            self.assertEqual(
+                self.module.sha256_file_lf_normalized(lf_path),
+                self.module.sha256_file_lf_normalized(crlf_path),
+            )
 
 
 if __name__ == "__main__":

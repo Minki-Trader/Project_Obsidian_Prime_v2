@@ -3,7 +3,7 @@
 - updated_on: `2026-04-26`
 - project_mode: `clean_stage_restart`
 - active_stage: `10_alpha_scout__default_split_model_threshold_scan`
-- active_branch: `codex/stage09-pre-alpha-handoff`
+- active_branch: `main`
 
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 

@@ -146,6 +146,18 @@ private:
       return true;
      }
 
+   bool IsRoutineTimestampSkip(const bool feature_ready, const string skip_reason)
+     {
+      if(feature_ready || skip_reason == "")
+         return false;
+
+      if(StringFind(skip_reason, "feature_csv_timestamp_not_found") == 0)
+         return true;
+
+      return (StringFind(skip_reason, "tier_a_missing:feature_csv_timestamp_not_found") >= 0 &&
+              StringFind(skip_reason, "|tier_b_missing:feature_csv_timestamp_not_found") >= 0);
+     }
+
 public:
    COpRuntimeTelemetry()
      {
@@ -312,7 +324,7 @@ public:
       if(skip_reason != "")
          m_last_skip_reason = skip_reason;
 
-      if(!feature_ready && StringFind(skip_reason, "feature_csv_timestamp_not_found") == 0)
+      if(IsRoutineTimestampSkip(feature_ready, skip_reason))
          return true;
 
       const string header = "record_type,written_at,run_id,active_tier,model_id,feature_order_hash,bar_time,source_time,symbol,timeframe,feature_ready,model_ok,skip_reason,input_hash,p_short,p_flat,p_long,decision,decision_reason,position_before,position_after,exec_action,order_attempted,order_filled,trade_retcode,trade_comment,event,detail";
