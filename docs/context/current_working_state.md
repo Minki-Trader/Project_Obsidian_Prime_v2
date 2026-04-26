@@ -104,17 +104,17 @@ Stage 10(10단계)의 기본 레인(lane, 레인)은 `exploration(탐색)`이고
 - boundary(경계): `runtime_probe(런타임 탐침)`
 - key artifacts(핵심 산출물): `run_manifest.json`, `kpi_record.json`, MT5 Strategy Tester report(MT5 전략 테스터 리포트)
 
-효과(effect, 효과): Python(파이썬) threshold sweep(임계값 스윕), ONNX(`Open Neural Network Exchange`, 온닉스) parity(동등성), MT5(`MetaTrader 5`, 메타트레이더5) validation/OOS(검증/표본외) 수익·위험·실행 KPI(핵심 성과 지표)를 한 실행 근거(run evidence, 실행 근거)로 묶었다.
+효과(effect, 효과): Python(파이썬) threshold sweep(임계값 스윕), ONNX(`Open Neural Network Exchange`, 온닉스) parity(동등성), MT5(`MetaTrader 5`, 메타트레이더5) Tier A only/Tier B fallback-only/A+B routed(Tier A 단독/Tier B 대체 구간 단독/A+B 라우팅) validation/OOS(검증/표본외) 수익·위험·실행 KPI(핵심 성과 지표)를 한 실행 근거(run evidence, 실행 근거)로 묶었다.
 
 run01A(실행 01A)의 routing coverage(라우팅 커버리지)는 Tier A primary(Tier A 우선) `46650`행, Tier B partial-context fallback(Tier B 부분 문맥 대체) `12398`행, no_tier labelable(티어 없음 라벨 가능) `1053`행이다.
 
-MT5(`MetaTrader 5`, 메타트레이더5) validation_is(검증/표본내)는 Tier A used(Tier A 사용) `9844`행, Tier B fallback used(Tier B 대체 사용) `2366`행이다. routed total(라우팅 전체)은 net profit(순수익) `355.65`, profit factor(수익 팩터) `1.33`, max drawdown(최대 손실) `146.24`, recovery factor(회복 계수) `2.43`, fill count(체결 수) `461`이다.
+MT5(`MetaTrader 5`, 메타트레이더5) validation_is(검증/표본내)는 Tier A only(Tier A 단독) net profit(순수익) `324.13`, profit factor(수익 팩터) `1.30`, max drawdown(최대 손실) `144.98`, recovery factor(회복 계수) `2.24`; Tier B fallback-only(Tier B 대체 구간 단독) net profit(순수익) `49.48`, profit factor(수익 팩터) `2.76`, max drawdown(최대 손실) `40.59`, recovery factor(회복 계수) `1.22`; A+B routed total(A+B 라우팅 전체) net profit(순수익) `355.65`, profit factor(수익 팩터) `1.33`, max drawdown(최대 손실) `146.24`, recovery factor(회복 계수) `2.43`, fill count(체결 수) `461`이다.
 
-MT5(`MetaTrader 5`, 메타트레이더5) OOS(표본외)는 Tier A used(Tier A 사용) `7584`행, Tier B fallback used(Tier B 대체 사용) `1062`행이다. routed total(라우팅 전체)은 net profit(순수익) `174.89`, profit factor(수익 팩터) `1.21`, max drawdown(최대 손실) `209.15`, recovery factor(회복 계수) `0.84`, fill count(체결 수) `396`이다.
+MT5(`MetaTrader 5`, 메타트레이더5) OOS(표본외)는 Tier A only(Tier A 단독) net profit(순수익) `130.01`, profit factor(수익 팩터) `1.15`, max drawdown(최대 손실) `198.17`, recovery factor(회복 계수) `0.66`; Tier B fallback-only(Tier B 대체 구간 단독) net profit(순수익) `-19.15`, profit factor(수익 팩터) `0.87`, max drawdown(최대 손실) `140.92`, recovery factor(회복 계수) `-0.14`; A+B routed total(A+B 라우팅 전체) net profit(순수익) `174.89`, profit factor(수익 팩터) `1.21`, max drawdown(최대 손실) `209.15`, recovery factor(회복 계수) `0.84`, fill count(체결 수) `396`이다.
 
 Tier B fallback subtype(티어 B 대체 하위유형)는 전체 기준 `B_macro_missing(B 거시 결측)` `10740`, `B_mixed_partial_context(B 혼합 부분 문맥)` `1240`, `B_full_context_outside_tier_a_scope(B 전체문맥이나 Tier A 밖)` `217`, `B_core_only(B 핵심만)` `200`, `B_constituent_missing(B 구성종목 결측)` `1`이다.
 
-효과(effect, 효과): Tier A(티어 A)의 all skip(전체 스킵) 구간 중 Tier B(티어 B)가 실제로 메운 부분과 여전히 no_tier(티어 없음)로 남은 부분을 분리해서 읽는다. 단, 이는 single_split runtime_probe(단일 분할 런타임 탐침)이지 alpha quality(알파 품질)나 operating promotion(운영 승격)이 아니다.
+효과(effect, 효과): Tier A(티어 A)의 all skip(전체 스킵) 구간 중 Tier B(티어 B)가 실제로 메운 부분과 여전히 no_tier(티어 없음)로 남은 부분을 분리하고, A 단독(A only, A 단독)과 B 단독(B fallback-only, B 대체 구간 단독)이 A+B 라우팅(A+B routed, A+B 라우팅)에 무엇을 보탰는지 비교한다. 단, 이는 single_split runtime_probe(단일 분할 런타임 탐침)이지 alpha quality(알파 품질)나 operating promotion(운영 승격)이 아니다.
 
 ## 현재 경계(Current Boundary, 현재 경계)
 
@@ -125,7 +125,7 @@ Stage 10(10단계) `run01A(실행 01A)`를 실행했다는 뜻은 first runtime 
 ## 남은 작업(Open Items, 남은 작업)
 
 - Stage 10(10단계): `run01A(실행 01A)`를 inconclusive runtime probe(불충분 런타임 탐침)로 해석하고 다음 scout variant(탐색 변형)를 고르기
-- `run01A(실행 01A)`의 Tier A-used/B-fallback-used/routed-total(Tier A 사용/B 대체 사용/라우팅 전체) 장부와 KPI(핵심 성과 지표)를 다음 실행 비교 기준으로 유지하기
+- `run01A(실행 01A)`의 Tier A only/Tier B fallback-only/A+B routed(Tier A 단독/Tier B 대체 구간 단독/A+B 라우팅) 장부와 KPI(핵심 성과 지표)를 다음 실행 비교 기준으로 유지하기
 - Tier B partial-context fallback(Tier B 부분 문맥 대체)의 subtype(하위유형)별 신호 품질과 거래 품질을 다음 scout variant(탐색 변형)에서 비교하기
 - label/horizon variants(라벨/예측수평선 변형)는 나중 후보로 두고 기본 계약(default contract, 기본 계약)을 조용히 바꾸지 않기
 - broader valid-row scope(더 넓은 유효행 범위)나 partial-day scope(부분일 범위)는 나중 후보로 두고 첫 freeze(동결 산출물)를 조용히 넓히지 않기

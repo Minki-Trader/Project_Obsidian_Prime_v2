@@ -6,7 +6,7 @@
 
 Stage 10(10단계)은 Stage 09(9단계) `stage09_pre_alpha_handoff_packet_v1` 묶음(packet, 묶음)을 입력으로 받아 시작한다.
 
-현재 첫 scout run(탐색 판독 실행)인 `run01A_logreg_threshold_mt5_scout_v1`은 MT5(`MetaTrader 5`, 메타트레이더5) routed validation/OOS(라우팅 검증/표본외) 외부 검증(external verification, 외부 검증)을 완료했다.
+현재 첫 scout run(탐색 판독 실행)인 `run01A_logreg_threshold_mt5_scout_v1`은 MT5(`MetaTrader 5`, 메타트레이더5) Tier A only/Tier B fallback-only/A+B routed(Tier A 단독/Tier B 대체 구간 단독/A+B 라우팅) validation/OOS(검증/표본외) 외부 검증(external verification, 외부 검증)을 완료했다.
 
 효과(effect, 효과): 이 검토 색인(review index, 검토 색인)은 `selection_status.md(선택 상태 문서)`와 같은 현재 상태(current state, 현재 상태)를 가리킨다.
 

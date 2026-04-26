@@ -30,9 +30,13 @@ Stage 09(9단계)이 `stage09_pre_alpha_handoff_packet_v1` 묶음(packet, 묶음
 - external verification status(외부 검증 상태): `completed(완료)`
 - judgment(판정): `inconclusive_single_split_scout_mt5_routed_completed`
 - routing mode(라우팅 방식): `tier_a_primary_tier_b_partial_context_fallback`
-- evidence(근거): Python(파이썬) threshold sweep(임계값 스윕), ONNX(`Open Neural Network Exchange`, 온닉스) probability parity(확률 동등성), MT5(`MetaTrader 5`, 메타트레이더5) Strategy Tester(전략 테스터) routed validation/OOS(라우팅 검증/표본외)
+- evidence(근거): Python(파이썬) threshold sweep(임계값 스윕), ONNX(`Open Neural Network Exchange`, 온닉스) probability parity(확률 동등성), MT5(`MetaTrader 5`, 메타트레이더5) Strategy Tester(전략 테스터) Tier A only/Tier B fallback-only/A+B routed validation/OOS(Tier A 단독/Tier B 대체 구간 단독/A+B 라우팅 검증/표본외)
 
-Tier B partial-context fallback(Tier B 부분 문맥 대체)은 validation_is(검증/표본내)에서 `2366`행, OOS(표본외)에서 `1062`행 사용됐다. routed total(라우팅 전체)은 validation_is(검증/표본내) net profit(순수익) `355.65`, profit factor(수익 팩터) `1.33`, OOS(표본외) net profit(순수익) `174.89`, profit factor(수익 팩터) `1.21`이다.
+MT5(`MetaTrader 5`, 메타트레이더5) validation_is(검증/표본내)는 Tier A only(Tier A 단독) net profit(순수익) `324.13`, profit factor(수익 팩터) `1.30`; Tier B fallback-only(Tier B 대체 구간 단독) net profit(순수익) `49.48`, profit factor(수익 팩터) `2.76`; A+B routed total(A+B 라우팅 전체) net profit(순수익) `355.65`, profit factor(수익 팩터) `1.33`이다.
+
+MT5(`MetaTrader 5`, 메타트레이더5) OOS(표본외)는 Tier A only(Tier A 단독) net profit(순수익) `130.01`, profit factor(수익 팩터) `1.15`; Tier B fallback-only(Tier B 대체 구간 단독) net profit(순수익) `-19.15`, profit factor(수익 팩터) `0.87`; A+B routed total(A+B 라우팅 전체) net profit(순수익) `174.89`, profit factor(수익 팩터) `1.21`이다.
+
+Tier B partial-context fallback(Tier B 부분 문맥 대체)은 validation_is(검증/표본내)에서 `2366`행, OOS(표본외)에서 `1062`행 사용됐다.
 
 효과(effect, 효과)는 Tier A(티어 A)가 비운 구간을 Tier B(티어 B)가 실제로 메웠다는 사실을 기록하되, 이 결과를 alpha quality(알파 품질)나 operating promotion(운영 승격)으로 과장하지 않는 것이다.
 

@@ -10,6 +10,7 @@
 input string          InpRunId = "stage10_run01A";
 input string          InpExplorationLabel = "stage10_Model__AlphaScoutEA";
 input string          InpTierLabel = "Tier A";
+input string          InpPrimaryActiveTier = "tier_a";
 input string          InpSplitLabel = "validation_is";
 input string          InpMainSymbol = "US100";
 input ENUM_TIMEFRAMES InpTimeframe = PERIOD_M5;
@@ -160,12 +161,14 @@ bool ResolveRoutedFeatures(const datetime target_time,
                            string &skip_reason,
                            string &active_tier,
                            string &active_model_id,
-                           string &active_feature_order_hash)
+                           string &active_feature_order_hash,
+                           bool &use_fallback_model)
   {
+   use_fallback_model = false;
    string primary_reason = "";
    if(g_feature_input.ReadForTime(target_time, features, source_time, input_hash, primary_reason))
      {
-      active_tier = "tier_a";
+      active_tier = InpPrimaryActiveTier;
       active_model_id = InpModelId;
       active_feature_order_hash = InpFeatureOrderHash;
       skip_reason = "";
@@ -200,6 +203,7 @@ bool ResolveRoutedFeatures(const datetime target_time,
       active_tier = "tier_b_fallback";
       active_model_id = InpFallbackModelId;
       active_feature_order_hash = InpFallbackFeatureOrderHash;
+      use_fallback_model = true;
       skip_reason = "";
       return true;
      }
@@ -228,6 +232,7 @@ void ProcessClosedBar()
    string active_tier = "none";
    string active_model_id = "";
    string active_feature_order_hash = "";
+   bool use_fallback_model = false;
    const bool feature_ready = ResolveRoutedFeatures(target_time,
                                                     features,
                                                     source_time,
@@ -235,7 +240,8 @@ void ProcessClosedBar()
                                                     reason,
                                                     active_tier,
                                                     active_model_id,
-                                                    active_feature_order_hash);
+                                                    active_feature_order_hash,
+                                                    use_fallback_model);
    if(!feature_ready)
      {
       RecordSkippedBar(target_time,
@@ -253,7 +259,7 @@ void ProcessClosedBar()
    double p_flat = 0.0;
    double p_long = 0.0;
    string model_reason = "";
-   const bool model_ok = active_tier == "tier_b_fallback"
+   const bool model_ok = use_fallback_model
                          ? g_fallback_model_runtime.Run(features, p_short, p_flat, p_long, model_reason)
                          : g_model_runtime.Run(features, p_short, p_flat, p_long, model_reason);
    if(!model_ok)

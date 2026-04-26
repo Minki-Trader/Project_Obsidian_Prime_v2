@@ -190,6 +190,38 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         self.assertIn("InpFallbackFeatureCount=56", set_text)
         self.assertIn("InpFallbackFeatureOrderHash=hash_b", set_text)
 
+    def test_materialize_tier_only_mt5_attempt_can_label_b_fallback_as_primary(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            attempt = self.module.materialize_mt5_attempt_files(
+                run_output_root=root,
+                tier_name=self.module.TIER_B,
+                split_name="oos",
+                local_onnx_path=root / "tier_b.onnx",
+                local_feature_matrix_path=root / "tier_b_features.csv",
+                feature_count=42,
+                feature_order_hash="hash_b",
+                rule=self.module.ThresholdRule(
+                    threshold_id="unit",
+                    short_threshold=0.6,
+                    long_threshold=0.4,
+                    min_margin=0.0,
+                ),
+                from_date="2025.10.01",
+                to_date="2026.04.14",
+                stem_prefix="tier_b_fallback_only",
+                record_view_prefix=self.module.MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
+                primary_active_tier="tier_b_fallback",
+                attempt_role="tier_b_fallback_only_total",
+            )
+            set_text = Path(attempt["set"]["path"]).read_text(encoding="utf-8")
+
+        self.assertEqual(attempt["record_view_prefix"], self.module.MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX)
+        self.assertEqual(attempt["attempt_role"], "tier_b_fallback_only_total")
+        self.assertIn("InpPrimaryActiveTier=tier_b_fallback", set_text)
+        self.assertIn("InpFallbackEnabled=false", set_text)
+        self.assertIn("InpFeatureCount=42", set_text)
+
     def test_routed_mt5_kpi_records_are_not_synthetic_sum(self) -> None:
         result = {
             "status": "completed",
@@ -249,6 +281,52 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         self.assertEqual(records[1]["metrics"]["profit_attribution"], "not_separable_from_single_routed_account_path")
         self.assertEqual(records[2]["metrics"]["aggregation"], "actual_routed_tester_run")
         self.assertNotEqual(records[2]["metrics"].get("aggregation"), "synthetic_sum_of_separate_tier_tester_runs")
+
+    def test_tier_only_mt5_kpi_record_keeps_direct_profit_metrics(self) -> None:
+        result = {
+            "status": "completed",
+            "tier": self.module.TIER_A,
+            "split": "validation_is",
+            "attempt_role": "tier_only_total",
+            "record_view_prefix": self.module.MT5_RECORD_TIER_A_ONLY_PREFIX,
+            "runtime_outputs": {
+                "last_summary": {
+                    "order_attempt_count": 4,
+                    "order_fill_count": 4,
+                    "feature_skip_count": 3,
+                    "feature_ready_count": 10,
+                    "model_ok_count": 10,
+                    "model_fail_count": 0,
+                    "tier_a_used_count": 10,
+                    "tier_a_long_count": 6,
+                    "tier_a_short_count": 1,
+                    "tier_a_flat_count": 3,
+                    "tier_a_order_attempt_count": 4,
+                    "tier_a_order_fill_count": 4,
+                }
+            },
+            "strategy_tester_report": {
+                "metrics": {
+                    "status": "completed",
+                    "net_profit": 7.5,
+                    "profit_factor": 1.5,
+                    "expectancy": 0.75,
+                    "trade_count": 10,
+                    "win_rate_percent": 60.0,
+                    "max_drawdown_amount": 5.0,
+                    "max_drawdown_percent": 1.0,
+                    "recovery_factor": 1.5,
+                }
+            },
+        }
+
+        records = self.module.build_mt5_kpi_records([result])
+
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0]["record_view"], "mt5_tier_a_only_validation_is")
+        self.assertEqual(records[0]["route_role"], "tier_only_total")
+        self.assertEqual(records[0]["metrics"]["net_profit"], 7.5)
+        self.assertEqual(records[0]["metrics"]["aggregation"], "actual_tier_only_tester_run")
 
     def test_tier_b_partial_context_subtypes_are_explicit(self) -> None:
         module = self.module

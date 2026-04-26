@@ -91,6 +91,8 @@ TIER_AB = "Tier A+B"
 ROUTE_ROLE_A_PRIMARY = "tier_a_primary"
 ROUTE_ROLE_B_FALLBACK = "tier_b_fallback"
 ROUTE_ROLE_NO_TIER = "no_tier"
+MT5_RECORD_TIER_A_ONLY_PREFIX = "mt5_tier_a_only"
+MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX = "mt5_tier_b_fallback_only"
 TIER_B_CORE_FEATURE_ORDER = (
     "log_return_1",
     "log_return_3",
@@ -1282,8 +1284,13 @@ def materialize_mt5_attempt_files(
     feature_order_hash: str,
     from_date: str,
     to_date: str,
+    stem_prefix: str | None = None,
+    record_view_prefix: str | None = None,
+    primary_active_tier: str = "tier_a",
+    attempt_role: str = "tier_only_total",
 ) -> dict[str, Any]:
-    stem = f"{tier_name.lower().replace(' ', '_').replace('+', 'ab')}_{split_name}"
+    tier_slug = tier_name.lower().replace(" ", "_").replace("+", "ab")
+    stem = f"{stem_prefix or tier_slug}_{split_name}"
     common_model = common_ref("models", local_onnx_path.name)
     common_matrix = common_ref("features", local_feature_matrix_path.name)
     common_telemetry = common_ref("telemetry", f"{stem}_telemetry.csv")
@@ -1295,11 +1302,12 @@ def materialize_mt5_attempt_files(
             "InpRunId": RUN_ID,
             "InpExplorationLabel": EXPLORATION_LABEL,
             "InpTierLabel": tier_name,
+            "InpPrimaryActiveTier": primary_active_tier,
             "InpSplitLabel": split_name,
             "InpMainSymbol": "US100",
             "InpTimeframe": 5,
             "InpModelPath": common_model,
-            "InpModelId": f"{RUN_ID}_{tier_name.lower().replace(' ', '_').replace('+', 'ab')}",
+            "InpModelId": f"{RUN_ID}_{stem_prefix or tier_slug}",
             "InpModelUseCommonFiles": "true",
             "InpFeatureCsvPath": common_matrix,
             "InpFeatureCount": feature_count,
@@ -1308,6 +1316,7 @@ def materialize_mt5_attempt_files(
             "InpFeatureAllowLatestFallback": "false",
             "InpFeatureStrictHeader": "true",
             "InpCsvTimestampIsBarClose": "true",
+            "InpFallbackEnabled": "false",
             "InpTelemetryCsvPath": common_telemetry,
             "InpSummaryCsvPath": common_summary,
             "InpTelemetryUseCommonFiles": "true",
@@ -1337,6 +1346,8 @@ def materialize_mt5_attempt_files(
     return {
         "tier": tier_name,
         "split": split_name,
+        "attempt_role": attempt_role,
+        "record_view_prefix": record_view_prefix or f"mt5_{stem_prefix or tier_slug}",
         "set": set_payload,
         "ini": ini_payload,
         "common_model_path": common_model,
@@ -1379,6 +1390,7 @@ def materialize_mt5_routed_attempt_files(
             "InpRunId": RUN_ID,
             "InpExplorationLabel": EXPLORATION_LABEL,
             "InpTierLabel": TIER_AB,
+            "InpPrimaryActiveTier": "tier_a",
             "InpSplitLabel": split_name,
             "InpMainSymbol": "US100",
             "InpTimeframe": 5,
@@ -1791,12 +1803,18 @@ def build_mt5_kpi_records(execution_results: Sequence[Mapping[str, Any]]) -> lis
                 }
             )
             continue
+        metrics["aggregation"] = "actual_tier_only_tester_run"
+        metrics["route_role"] = result.get("attempt_role", "tier_only_total")
+        record_view_prefix = str(
+            result.get("record_view_prefix") or f"mt5_{tier.lower().replace(' ', '_').replace('+', 'ab')}"
+        )
         records.append(
             {
-                "record_view": f"mt5_{tier.lower().replace(' ', '_').replace('+', 'ab')}_{split}",
+                "record_view": f"{record_view_prefix}_{split}",
                 "tier_scope": tier,
                 "split": split,
                 "status": metrics.get("status", "partial"),
+                "route_role": result.get("attempt_role", "tier_only_total"),
                 "metrics": metrics,
                 "report": result.get("strategy_tester_report", {}),
             }
@@ -1821,7 +1839,7 @@ def enrich_mt5_kpi_records_with_route_coverage(
         metrics["tier_b_fallback_labelable_rows"] = split_summary.get("tier_b_fallback_rows")
         metrics["no_tier_labelable_rows"] = no_tier_by_split.get(split)
         metrics["routed_labelable_rows"] = split_summary.get("routed_labelable_rows")
-        if record.get("route_role") in {"fallback_used", "routed_total"}:
+        if record.get("route_role") in {"fallback_used", "routed_total", "tier_b_fallback_only_total"}:
             metrics["partial_context_subtype_counts"] = subtype_by_split.get(split, {})
     return list(records)
 
@@ -1871,13 +1889,13 @@ def build_alpha_ledger_rows(
         report = record.get("report", {})
         if not isinstance(report, Mapping):
             continue
-        split = str(record.get("split"))
+        record_view_key = str(record.get("record_view"))
         html_report = report.get("html_report", {})
         metrics_report = report.get("metrics", {})
         if isinstance(html_report, Mapping) and html_report.get("path"):
-            report_paths[split] = html_report.get("path")
+            report_paths[record_view_key] = html_report.get("path")
         elif isinstance(metrics_report, Mapping) and metrics_report.get("report_path"):
-            report_paths[split] = metrics_report.get("report_path")
+            report_paths[record_view_key] = metrics_report.get("report_path")
 
     for record in tier_records:
         record_view = str(record.get("record_view"))
@@ -1925,12 +1943,15 @@ def build_alpha_ledger_rows(
         )
 
     for record in mt5_kpi_records:
+        record_view = str(record.get("record_view"))
         metrics = record.get("metrics", {})
         route_role = str(record.get("route_role") or "")
         split = str(record.get("split"))
-        is_total = route_role == "routed_total"
-        row_path = report_paths.get(split) if is_total else kpi_record_path
-        if is_total:
+        is_component = route_role in {"primary_used", "fallback_used"}
+        is_routed_total = route_role == "routed_total"
+        is_trading_total = not is_component
+        row_path = report_paths.get(record_view, kpi_record_path)
+        if is_trading_total:
             primary_kpi = _ledger_pairs(
                 (
                     ("net_profit", metrics.get("net_profit")),
@@ -1940,19 +1961,45 @@ def build_alpha_ledger_rows(
                     ("win_rate", metrics.get("win_rate_percent")),
                 )
             )
-            guardrail_kpi = _ledger_pairs(
-                (
-                    ("a_used", metrics.get("tier_a_used_count")),
-                    ("b_fallback", metrics.get("tier_b_fallback_used_count")),
-                    ("no_tier_labelable", metrics.get("no_tier_labelable_rows")),
-                    ("max_dd", metrics.get("max_drawdown_amount")),
-                    ("recovery", metrics.get("recovery_factor")),
-                    ("fill", metrics.get("fill_count")),
-                    ("reject", metrics.get("reject_count")),
-                    ("skip", metrics.get("skip_count")),
+            if is_routed_total:
+                guardrail_kpi = _ledger_pairs(
+                    (
+                        ("a_used", metrics.get("tier_a_used_count")),
+                        ("b_fallback", metrics.get("tier_b_fallback_used_count")),
+                        ("no_tier_labelable", metrics.get("no_tier_labelable_rows")),
+                        ("max_dd", metrics.get("max_drawdown_amount")),
+                        ("recovery", metrics.get("recovery_factor")),
+                        ("fill", metrics.get("fill_count")),
+                        ("reject", metrics.get("reject_count")),
+                        ("skip", metrics.get("skip_count")),
+                    )
                 )
-            )
-            notes = "Actual routed total from one MT5 tester account path; not a synthetic sum."
+                notes = "Actual routed total from one MT5 tester account path; not a synthetic sum."
+            else:
+                labelable_count = (
+                    metrics.get("tier_b_fallback_labelable_rows")
+                    if record.get("tier_scope") == TIER_B
+                    else metrics.get("tier_a_primary_labelable_rows")
+                )
+                guardrail_kpi = _ledger_pairs(
+                    (
+                        ("labelable", labelable_count),
+                        ("feature_ready", metrics.get("feature_ready_count")),
+                        ("model_ok", metrics.get("model_ok_count")),
+                        ("no_tier_labelable", metrics.get("no_tier_labelable_rows")),
+                        ("max_dd", metrics.get("max_drawdown_amount")),
+                        ("recovery", metrics.get("recovery_factor")),
+                        ("fill", metrics.get("fill_count")),
+                        ("reject", metrics.get("reject_count")),
+                        ("skip", metrics.get("skip_count")),
+                        ("subtypes", metrics.get("partial_context_subtype_counts")),
+                    )
+                )
+                notes = (
+                    "Tier B fallback-only standalone MT5 tester run."
+                    if record.get("tier_scope") == TIER_B
+                    else "Tier A only standalone MT5 tester run."
+                )
         else:
             primary_kpi = _ledger_pairs(
                 (
@@ -1977,19 +2024,27 @@ def build_alpha_ledger_rows(
                 if route_role == "fallback_used"
                 else "Tier A primary used component from one routed MT5 tester run."
             )
+        if is_routed_total:
+            judgment = "inconclusive_routed_total_runtime_probe"
+        elif route_role == "tier_b_fallback_only_total":
+            judgment = "inconclusive_tier_b_fallback_only_runtime_probe"
+        elif is_trading_total:
+            judgment = "inconclusive_tier_only_runtime_probe"
+        else:
+            judgment = "inconclusive_routed_component_runtime_probe"
         rows.append(
             {
-                "ledger_row_id": f"{RUN_ID}__{record.get('record_view')}",
+                "ledger_row_id": f"{RUN_ID}__{record_view}",
                 "stage_id": STAGE_ID,
                 "run_id": RUN_ID,
-                "subrun_id": str(record.get("record_view")),
+                "subrun_id": record_view,
                 "parent_run_id": RUN_ID,
-                "record_view": str(record.get("record_view")),
+                "record_view": record_view,
                 "tier_scope": str(record.get("tier_scope")),
-                "kpi_scope": "trading_risk_execution" if is_total else "routed_signal_execution_usage",
+                "kpi_scope": "trading_risk_execution" if is_trading_total else "routed_signal_execution_usage",
                 "scoreboard_lane": "runtime_probe",
                 "status": _ledger_status(record.get("status")),
-                "judgment": "inconclusive_routed_total_runtime_probe" if is_total else "inconclusive_routed_component_runtime_probe",
+                "judgment": judgment,
                 "path": _ledger_path(row_path),
                 "primary_kpi": primary_kpi,
                 "guardrail_kpi": guardrail_kpi,
@@ -2028,6 +2083,7 @@ def _upsert_csv_rows(
     merged = [row for row in existing if str(row.get(key)) not in new_keys]
     merged.extend(dict(row) for row in rows)
     _write_csv_rows(path, columns, merged)
+
     return {
         "path": path.as_posix(),
         "sha256": sha256_file_lf_normalized(path),
@@ -2050,17 +2106,29 @@ def materialize_run_registry_row(
     run_output_root: Path,
     external_verification_status: str,
 ) -> dict[str, Any]:
-    totals = {str(record.get("split")): record.get("metrics", {}) for record in mt5_kpi_records if record.get("route_role") == "routed_total"}
-    validation = totals.get("validation_is", {})
-    oos = totals.get("oos", {})
+    by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
+    validation = by_view.get("mt5_routed_total_validation_is", {})
+    oos = by_view.get("mt5_routed_total_oos", {})
+    a_validation = by_view.get(f"{MT5_RECORD_TIER_A_ONLY_PREFIX}_validation_is", {})
+    a_oos = by_view.get(f"{MT5_RECORD_TIER_A_ONLY_PREFIX}_oos", {})
+    b_validation = by_view.get(f"{MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX}_validation_is", {})
+    b_oos = by_view.get(f"{MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX}_oos", {})
     notes = _ledger_pairs(
         (
-            ("routing", "tier_a_primary_tier_b_partial_context_fallback"),
+            ("mt5_views", "tier_a_only;tier_b_fallback_only;tier_a_primary_tier_b_fallback"),
             ("tier_b_fallback_rows", route_coverage.get("tier_b_fallback_rows")),
             ("no_tier_labelable_rows", route_coverage.get("no_tier_labelable_rows")),
+            ("validation_a_only_net_profit", a_validation.get("net_profit")),
+            ("validation_a_only_pf", a_validation.get("profit_factor")),
+            ("validation_b_only_net_profit", b_validation.get("net_profit")),
+            ("validation_b_only_pf", b_validation.get("profit_factor")),
             ("validation_net_profit", validation.get("net_profit")),
             ("validation_pf", validation.get("profit_factor")),
             ("validation_b_fallback_used", validation.get("tier_b_fallback_used_count")),
+            ("oos_a_only_net_profit", a_oos.get("net_profit")),
+            ("oos_a_only_pf", a_oos.get("profit_factor")),
+            ("oos_b_only_net_profit", b_oos.get("net_profit")),
+            ("oos_b_only_pf", b_oos.get("profit_factor")),
             ("oos_net_profit", oos.get("net_profit")),
             ("oos_pf", oos.get("profit_factor")),
             ("oos_b_fallback_used", oos.get("tier_b_fallback_used_count")),
@@ -2514,7 +2582,45 @@ def run_stage10_logreg_mt5_scout(
         )
         mt5_feature_matrices[(TIER_A, split_label)] = tier_a_matrix_payload
         mt5_feature_matrices[(TIER_B, split_label)] = tier_b_matrix_payload
-        attempt = materialize_mt5_routed_attempt_files(
+        tier_a_attempt = materialize_mt5_attempt_files(
+            run_output_root=run_output_root,
+            tier_name=TIER_A,
+            split_name=split_label,
+            local_onnx_path=tier_a_onnx_path,
+            local_feature_matrix_path=tier_a_feature_matrix_path,
+            feature_count=len(tier_a_feature_order),
+            feature_order_hash=tier_a_feature_hash,
+            rule=rule,
+            from_date=from_date,
+            to_date=to_date,
+            stem_prefix="tier_a_only",
+            record_view_prefix=MT5_RECORD_TIER_A_ONLY_PREFIX,
+            primary_active_tier="tier_a",
+            attempt_role="tier_only_total",
+        )
+        tier_a_attempt["feature_matrix"] = tier_a_matrix_payload
+        mt5_attempts.append(tier_a_attempt)
+
+        tier_b_attempt = materialize_mt5_attempt_files(
+            run_output_root=run_output_root,
+            tier_name=TIER_B,
+            split_name=split_label,
+            local_onnx_path=tier_b_onnx_path,
+            local_feature_matrix_path=tier_b_feature_matrix_path,
+            feature_count=len(tier_b_feature_order),
+            feature_order_hash=tier_b_feature_hash,
+            rule=rule,
+            from_date=from_date,
+            to_date=to_date,
+            stem_prefix="tier_b_fallback_only",
+            record_view_prefix=MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
+            primary_active_tier="tier_b_fallback",
+            attempt_role="tier_b_fallback_only_total",
+        )
+        tier_b_attempt["feature_matrix"] = tier_b_matrix_payload
+        mt5_attempts.append(tier_b_attempt)
+
+        routed_attempt = materialize_mt5_routed_attempt_files(
             run_output_root=run_output_root,
             split_name=split_label,
             primary_onnx_path=tier_a_onnx_path,
@@ -2529,9 +2635,9 @@ def run_stage10_logreg_mt5_scout(
             from_date=from_date,
             to_date=to_date,
         )
-        attempt["primary_feature_matrix"] = tier_a_matrix_payload
-        attempt["fallback_feature_matrix"] = tier_b_matrix_payload
-        mt5_attempts.append(attempt)
+        routed_attempt["primary_feature_matrix"] = tier_a_matrix_payload
+        routed_attempt["fallback_feature_matrix"] = tier_b_matrix_payload
+        mt5_attempts.append(routed_attempt)
 
     compile_payload = None
     mt5_execution_results: list[dict[str, Any]] = []
@@ -2556,6 +2662,10 @@ def run_stage10_logreg_mt5_scout(
                 result["split"] = attempt["split"]
                 if "routing_mode" in attempt:
                     result["routing_mode"] = attempt["routing_mode"]
+                if "attempt_role" in attempt:
+                    result["attempt_role"] = attempt["attempt_role"]
+                if "record_view_prefix" in attempt:
+                    result["record_view_prefix"] = attempt["record_view_prefix"]
                 result["ini_path"] = attempt["ini"]["path"]
                 result["runtime_outputs"] = wait_for_mt5_runtime_outputs(common_files_root, attempt)
                 if result["runtime_outputs"]["status"] != "completed":
@@ -2634,8 +2744,11 @@ def run_stage10_logreg_mt5_scout(
             },
         },
     }
+    expected_mt5_kpi_record_count = sum(
+        3 if attempt.get("routing_mode") == "tier_a_primary_tier_b_fallback" else 1 for attempt in mt5_attempts
+    )
     mt5_runtime_completed = bool(mt5_execution_results) and all(item["status"] == "completed" for item in mt5_execution_results)
-    mt5_reports_completed = len(mt5_kpi_records) >= 6 and all(
+    mt5_reports_completed = len(mt5_kpi_records) >= expected_mt5_kpi_record_count and all(
         item.get("status") == "completed" for item in mt5_kpi_records
     )
     external_status = "completed" if mt5_runtime_completed and mt5_reports_completed else (
@@ -2747,38 +2860,52 @@ def run_stage10_logreg_mt5_scout(
         record = mt5_records_by_view.get(record_view, {})
         return record.get("metrics", {}).get(metric_name)
 
-    _io_path(result_summary_path).write_text(
-        "\n".join(
-            [
-                "# Stage 10 run01A LogReg Threshold MT5 Scout(로지스틱 회귀 임계값 MT5 탐색)",
-                "",
-                f"- run_id(실행 ID): `{RUN_ID}`",
-                f"- selected threshold(선택 임계값): `{rule.threshold_id}`",
-                f"- external verification status(외부 검증 상태): `{external_status}`",
-                f"- Tier A rows(Tier A 행 수): `{len(tier_a_predictions)}`",
-                f"- Tier B fallback rows(Tier B 대체 행 수): `{len(tier_b_predictions)}`",
-                f"- no_tier labelable rows(티어 없음 라벨 가능 행 수): `{len(no_tier_frame)}`",
-                f"- MT5 KPI records(MT5 KPI 기록): `{len(mt5_kpi_records)}`",
-                "- routing mode(라우팅 방식): `tier_a_primary_tier_b_partial_context_fallback`",
-                f"- Tier B fallback subtype counts(Tier B 대체 하위유형 수): `{route_coverage.get('tier_b_fallback_by_subtype', {})}`",
-                f"- validation Tier A used(검증 Tier A 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_a_used_count')}`",
-                f"- validation Tier B fallback used(검증 Tier B 대체 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_b_fallback_used_count')}`",
-                f"- validation net profit(검증 순수익): `{result_metric('mt5_routed_total_validation_is', 'net_profit')}`",
-                f"- validation profit factor(검증 수익 팩터): `{result_metric('mt5_routed_total_validation_is', 'profit_factor')}`",
-                f"- OOS Tier A used(표본외 Tier A 사용): `{result_metric('mt5_routed_total_oos', 'tier_a_used_count')}`",
-                f"- OOS Tier B fallback used(표본외 Tier B 대체 사용): `{result_metric('mt5_routed_total_oos', 'tier_b_fallback_used_count')}`",
-                f"- OOS net profit(표본외 순수익): `{result_metric('mt5_routed_total_oos', 'net_profit')}`",
-                f"- OOS profit factor(표본외 수익 팩터): `{result_metric('mt5_routed_total_oos', 'profit_factor')}`",
-                "",
-                "## Boundary(경계)",
-                "",
-                "`single_split_scout(단일 분할 탐색)`이며 alpha quality(알파 품질), live readiness(실거래 준비), "
-                "runtime authority expansion(런타임 권위 확장), operating promotion(운영 승격)을 주장하지 않는다.",
-                "",
-            ]
-        ),
-        encoding="utf-8-sig",
-    )
+
+    result_summary_lines = [
+        "# Stage 10 run01A LogReg Threshold MT5 Scout(로지스틱 회귀 임계값 MT5 탐색)",
+        "",
+        f"- run_id(실행 ID): `{RUN_ID}`",
+        f"- selected threshold(선택 임계값): `{rule.threshold_id}`",
+        f"- external verification status(외부 검증 상태): `{external_status}`",
+        f"- Tier A rows(Tier A 행 수): `{len(tier_a_predictions)}`",
+        f"- Tier B fallback rows(Tier B 대체 행 수): `{len(tier_b_predictions)}`",
+        f"- no_tier labelable rows(티어 없음 라벨 가능 행 수): `{len(no_tier_frame)}`",
+        f"- MT5 KPI records(MT5 핵심 성과 지표 기록): `{len(mt5_kpi_records)}`",
+        "- MT5 comparison views(MT5 비교 보기): `Tier A only(Tier A 단독)`, "
+        "`Tier B fallback-only(Tier B 대체 구간 단독)`, "
+        "`Tier A+B routed total(Tier A+B 라우팅 전체)`",
+        f"- Tier B fallback subtype counts(Tier B 대체 하위유형 수): `{route_coverage.get('tier_b_fallback_by_subtype', {})}`",
+        "",
+        "## Validation IS(검증/표본내)",
+        "",
+        f"- Tier A only net profit(Tier A 단독 순수익): `{result_metric('mt5_tier_a_only_validation_is', 'net_profit')}`",
+        f"- Tier A only profit factor(Tier A 단독 수익 팩터): `{result_metric('mt5_tier_a_only_validation_is', 'profit_factor')}`",
+        f"- Tier B fallback-only net profit(Tier B 대체 구간 단독 순수익): `{result_metric('mt5_tier_b_fallback_only_validation_is', 'net_profit')}`",
+        f"- Tier B fallback-only profit factor(Tier B 대체 구간 단독 수익 팩터): `{result_metric('mt5_tier_b_fallback_only_validation_is', 'profit_factor')}`",
+        f"- A+B routed net profit(A+B 라우팅 순수익): `{result_metric('mt5_routed_total_validation_is', 'net_profit')}`",
+        f"- A+B routed profit factor(A+B 라우팅 수익 팩터): `{result_metric('mt5_routed_total_validation_is', 'profit_factor')}`",
+        f"- A+B routed Tier A used(A+B 라우팅 Tier A 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_a_used_count')}`",
+        f"- A+B routed Tier B fallback used(A+B 라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_b_fallback_used_count')}`",
+        "",
+        "## OOS(표본외)",
+        "",
+        f"- Tier A only net profit(Tier A 단독 순수익): `{result_metric('mt5_tier_a_only_oos', 'net_profit')}`",
+        f"- Tier A only profit factor(Tier A 단독 수익 팩터): `{result_metric('mt5_tier_a_only_oos', 'profit_factor')}`",
+        f"- Tier B fallback-only net profit(Tier B 대체 구간 단독 순수익): `{result_metric('mt5_tier_b_fallback_only_oos', 'net_profit')}`",
+        f"- Tier B fallback-only profit factor(Tier B 대체 구간 단독 수익 팩터): `{result_metric('mt5_tier_b_fallback_only_oos', 'profit_factor')}`",
+        f"- A+B routed net profit(A+B 라우팅 순수익): `{result_metric('mt5_routed_total_oos', 'net_profit')}`",
+        f"- A+B routed profit factor(A+B 라우팅 수익 팩터): `{result_metric('mt5_routed_total_oos', 'profit_factor')}`",
+        f"- A+B routed Tier A used(A+B 라우팅 Tier A 사용): `{result_metric('mt5_routed_total_oos', 'tier_a_used_count')}`",
+        f"- A+B routed Tier B fallback used(A+B 라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_oos', 'tier_b_fallback_used_count')}`",
+        "",
+        "## Boundary(경계)",
+        "",
+        "`single_split_scout(단일 분할 탐색)`이며 alpha quality(알파 품질), "
+        "live readiness(실거래 준비), runtime authority expansion(런타임 권위 확장), "
+        "operating promotion(운영 승격)을 주장하지 않는다.",
+        "",
+    ]
+    _io_path(result_summary_path).write_text("\n".join(result_summary_lines), encoding="utf-8-sig")
 
     return {
         "status": "ok" if onnx_parity["passed"] else "failed",
