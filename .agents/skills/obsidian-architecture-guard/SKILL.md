@@ -61,3 +61,5 @@ Every architecture-sensitive packet or summary must include:
 ## Validator
 
 Run `scripts/validate_agent_settings.py --repo-root .` after editing agent settings, repo-scoped skills, architecture policies, debt registers, or Korean docs.
+
+The validator intentionally treats `agents/openai.yaml` as a small repo-local format: top-level `interface:` and `policy:` sections with two-space indented one-line scalar fields. If richer YAML is needed later, add an explicit YAML dependency and update the validator instead of silently relying on unsupported syntax.

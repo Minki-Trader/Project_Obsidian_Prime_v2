@@ -30,244 +30,10 @@ REQUIRED_PATHS = [
     "docs/templates/result_summary_template.md",
     "docs/policies/agent_trigger_policy.md",
     "docs/policies/reentry_order.md",
-    ".agents/skills/obsidian-architecture-guard/SKILL.md",
-    ".agents/skills/obsidian-architecture-guard/agents/openai.yaml",
-    ".agents/skills/obsidian-session-intake/SKILL.md",
-    ".agents/skills/obsidian-session-intake/agents/openai.yaml",
-    ".agents/skills/obsidian-reentry-read/SKILL.md",
-    ".agents/skills/obsidian-reentry-read/agents/openai.yaml",
-    ".agents/skills/obsidian-claim-discipline/SKILL.md",
-    ".agents/skills/obsidian-claim-discipline/agents/openai.yaml",
-    ".agents/skills/obsidian-stage-transition/SKILL.md",
-    ".agents/skills/obsidian-stage-transition/agents/openai.yaml",
-    ".agents/skills/obsidian-answer-clarity/SKILL.md",
-    ".agents/skills/obsidian-answer-clarity/agents/openai.yaml",
-    ".agents/skills/obsidian-code-quality/SKILL.md",
-    ".agents/skills/obsidian-code-quality/agents/openai.yaml",
-    ".agents/skills/obsidian-lane-classifier/SKILL.md",
-    ".agents/skills/obsidian-lane-classifier/agents/openai.yaml",
-    ".agents/skills/obsidian-exploration-mandate/SKILL.md",
-    ".agents/skills/obsidian-exploration-mandate/agents/openai.yaml",
-    ".agents/skills/obsidian-work-packet-router/SKILL.md",
-    ".agents/skills/obsidian-work-packet-router/agents/openai.yaml",
-    ".agents/skills/obsidian-experiment-design/SKILL.md",
-    ".agents/skills/obsidian-experiment-design/agents/openai.yaml",
-    ".agents/skills/obsidian-data-integrity/SKILL.md",
-    ".agents/skills/obsidian-data-integrity/agents/openai.yaml",
-    ".agents/skills/obsidian-model-validation/SKILL.md",
-    ".agents/skills/obsidian-model-validation/agents/openai.yaml",
-    ".agents/skills/obsidian-runtime-parity/SKILL.md",
-    ".agents/skills/obsidian-runtime-parity/agents/openai.yaml",
-    ".agents/skills/obsidian-backtest-forensics/SKILL.md",
-    ".agents/skills/obsidian-backtest-forensics/agents/openai.yaml",
-    ".agents/skills/obsidian-performance-attribution/SKILL.md",
-    ".agents/skills/obsidian-performance-attribution/agents/openai.yaml",
-    ".agents/skills/obsidian-environment-reproducibility/SKILL.md",
-    ".agents/skills/obsidian-environment-reproducibility/agents/openai.yaml",
-    ".agents/skills/obsidian-artifact-lineage/SKILL.md",
-    ".agents/skills/obsidian-artifact-lineage/agents/openai.yaml",
-    ".agents/skills/obsidian-result-judgment/SKILL.md",
-    ".agents/skills/obsidian-result-judgment/agents/openai.yaml",
-    ".agents/skills/obsidian-code-surface-guard/SKILL.md",
-    ".agents/skills/obsidian-code-surface-guard/agents/openai.yaml",
-    ".agents/skills/obsidian-workflow-drift-guard/SKILL.md",
-    ".agents/skills/obsidian-workflow-drift-guard/agents/openai.yaml",
-    ".agents/skills/obsidian-reference-scout/SKILL.md",
-    ".agents/skills/obsidian-reference-scout/agents/openai.yaml",
-    ".agents/skills/obsidian-run-evidence-system/SKILL.md",
-    ".agents/skills/obsidian-run-evidence-system/agents/openai.yaml",
+    ".agents/skills",
 ]
 REQUIRED_AGENT_INTERFACE_KEYS = ("display_name", "short_description", "default_prompt")
-AGENT_PROMPT_REQUIRED_CONCEPTS = {
-    ".agents/skills/obsidian-session-intake/agents/openai.yaml": (
-        "current truth",
-        "cold",
-        "warm",
-        "work packet lifecycle",
-        "skill routing",
-        "final answer",
-    ),
-    ".agents/skills/obsidian-reentry-read/agents/openai.yaml": (
-        "starting",
-        "resuming",
-        "workspace state",
-        "active stage",
-        "policy",
-        "register",
-    ),
-    ".agents/skills/obsidian-architecture-guard/agents/openai.yaml": (
-        "architecture",
-        "agent settings",
-        "repo-scoped skills",
-        "policy",
-        "artifact",
-        "path",
-        "encoding",
-    ),
-    ".agents/skills/obsidian-code-surface-guard/agents/openai.yaml": (
-        "code writing",
-        "owner module",
-        "caller",
-        "contract",
-        "artifact",
-        "monolith",
-        "reference_scout_pairing",
-    ),
-    ".agents/skills/obsidian-exploration-mandate/agents/openai.yaml": (
-        "exploration",
-        "idea variants",
-        "tier",
-        "wfo",
-        "operating promotion",
-        "runtime authority",
-    ),
-    ".agents/skills/obsidian-work-packet-router/agents/openai.yaml": (
-        "work packet lifecycle",
-        "skill selection",
-        "phase plan",
-        "stop conditions",
-        "final answer filter",
-    ),
-    ".agents/skills/obsidian-experiment-design/agents/openai.yaml": (
-        "hypothesis",
-        "baseline",
-        "controls",
-        "sample scope",
-        "criteria",
-        "evidence plan",
-    ),
-    ".agents/skills/obsidian-data-integrity/agents/openai.yaml": (
-        "data source",
-        "time axis",
-        "sample scope",
-        "feature-label boundary",
-        "split boundary",
-        "leakage risk",
-    ),
-    ".agents/skills/obsidian-model-validation/agents/openai.yaml": (
-        "model",
-        "threshold",
-        "calibration",
-        "split",
-        "wfo",
-        "overfit",
-    ),
-    ".agents/skills/obsidian-runtime-parity/agents/openai.yaml": (
-        "python",
-        "mt5",
-        "runtime",
-        "shared contract",
-        "parity check",
-        "claim boundary",
-    ),
-    ".agents/skills/obsidian-backtest-forensics/agents/openai.yaml": (
-        "strategy tester",
-        "tester identity",
-        "ea identity",
-        "trade evidence",
-        "spread",
-        "commission",
-    ),
-    ".agents/skills/obsidian-performance-attribution/agents/openai.yaml": (
-        "kpi",
-        "baseline",
-        "drivers",
-        "segment checks",
-        "trade shape",
-        "confidence",
-    ),
-    ".agents/skills/obsidian-environment-reproducibility/agents/openai.yaml": (
-        "clean checkout",
-        "dependency",
-        "environment",
-        "entry command",
-        "local assumptions",
-        "reproducibility judgment",
-    ),
-    ".agents/skills/obsidian-artifact-lineage/agents/openai.yaml": (
-        "source inputs",
-        "producer",
-        "consumer",
-        "artifact paths",
-        "hashes",
-        "lineage judgment",
-    ),
-    ".agents/skills/obsidian-result-judgment/agents/openai.yaml": (
-        "evidence",
-        "missing",
-        "judgment label",
-        "claim boundary",
-        "next condition",
-        "answer-clarity",
-    ),
-    ".agents/skills/obsidian-reference-scout/agents/openai.yaml": (
-        "code writing",
-        "official docs",
-        "maintained source",
-        "api",
-        "mql5",
-        "library behavior",
-        "not_required",
-    ),
-    ".agents/skills/obsidian-run-evidence-system/agents/openai.yaml": (
-        "run evidence",
-        "measurement",
-        "identity",
-        "judgment",
-        "run registry",
-        "external verification",
-    ),
-    ".agents/skills/obsidian-claim-discipline/agents/openai.yaml": (
-        "claim",
-        "boundary",
-        "runtime authority",
-        "operating promotion",
-        "positive",
-        "blocked",
-    ),
-    ".agents/skills/obsidian-stage-transition/agents/openai.yaml": (
-        "stage transition",
-        "active_stage",
-        "handoff",
-        "workspace_state",
-        "selection status",
-        "registry",
-    ),
-    ".agents/skills/obsidian-answer-clarity/agents/openai.yaml": (
-        "user-facing",
-        "status summary",
-        "result report",
-        "completion report",
-        "current meaning",
-        "next action",
-    ),
-    ".agents/skills/obsidian-lane-classifier/agents/openai.yaml": (
-        "lane",
-        "exploration",
-        "evidence",
-        "promotion",
-        "runtime",
-        "hard gate",
-    ),
-    ".agents/skills/obsidian-workflow-drift-guard/agents/openai.yaml": (
-        "blocker",
-        "source material",
-        "tool",
-        "environment",
-        "recovery",
-        "retry",
-        "external verification",
-        "terminal action",
-        "pre-block evidence",
-    ),
-    ".agents/skills/obsidian-code-quality/agents/openai.yaml": (
-        "code quality",
-        "responsibility",
-        "flow",
-        "contract",
-        "test intent",
-    ),
-}
+OPENAI_YAML_TOP_LEVEL_SECTIONS = {"interface", "policy"}
 
 
 def has_utf8_bom(data: bytes) -> bool:
@@ -348,28 +114,6 @@ def check_policy_links(repo_root: Path) -> list[str]:
     promotion = (repo_root / "docs/policies/promotion_policy.md").read_text(encoding="utf-8-sig")
 
     required_pairs = [
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-architecture-guard"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-session-intake"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-reentry-read"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-work-packet-router"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-answer-clarity"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-claim-discipline"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-code-quality"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-lane-classifier"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-exploration-mandate"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-experiment-design"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-data-integrity"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-model-validation"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-runtime-parity"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-backtest-forensics"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-performance-attribution"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-environment-reproducibility"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-artifact-lineage"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-result-judgment"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-code-surface-guard"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-workflow-drift-guard"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-reference-scout"),
-        ("agent_trigger_policy.md", trigger_policy, "obsidian-run-evidence-system"),
         ("agent_trigger_policy.md", trigger_policy, "architecture_invariants.md"),
         ("agent_trigger_policy.md", trigger_policy, "exploration_mandate.md"),
         ("agent_trigger_policy.md", trigger_policy, "kpi_measurement_standard.md"),
@@ -434,48 +178,88 @@ def check_progressive_hardening_warnings(repo_root: Path) -> list[str]:
     return warnings
 
 
-def read_simple_agent_interface(path: Path) -> dict[str, str]:
-    interface: dict[str, str] = {}
-    in_interface = False
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
-        if raw_line.strip() == "interface:":
-            in_interface = True
+def iter_skill_files(repo_root: Path) -> list[Path]:
+    skills_root = repo_root / ".agents" / "skills"
+    if not skills_root.exists():
+        return []
+    return sorted(skills_root.glob("*/SKILL.md"))
+
+
+def parse_simple_openai_yaml(path: Path) -> tuple[dict[str, dict[str, str]], list[str]]:
+    """Parse the repo's intentionally small openai.yaml subset.
+
+    The validator avoids adding a PyYAML dependency. To keep the format
+    predictable, repo-scoped agent metadata allows only top-level
+    `interface:`/`policy:` sections and one-line scalar child keys.
+    """
+    parsed: dict[str, dict[str, str]] = {"interface": {}, "policy": {}}
+    errors: list[str] = []
+    current_section: str | None = None
+    rel = path.as_posix()
+
+    for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        if not raw_line.strip() or raw_line.lstrip().startswith("#"):
             continue
-        if not in_interface:
+        if raw_line.startswith("\t"):
+            errors.append(f"{rel}:{line_number}: tabs are not allowed in openai.yaml")
             continue
-        if raw_line and not raw_line.startswith((" ", "\t")):
-            break
-        match = re.match(r"^\s+([A-Za-z0-9_]+):\s*(.*)\s*$", raw_line)
+        if not raw_line.startswith(" "):
+            section_match = re.fullmatch(r"([A-Za-z0-9_]+):", raw_line.strip())
+            if not section_match:
+                errors.append(f"{rel}:{line_number}: only simple top-level sections are allowed")
+                current_section = None
+                continue
+            section = section_match.group(1)
+            if section not in OPENAI_YAML_TOP_LEVEL_SECTIONS:
+                errors.append(f"{rel}:{line_number}: unsupported top-level section `{section}`")
+            current_section = section
+            continue
+
+        if current_section is None:
+            errors.append(f"{rel}:{line_number}: nested key has no supported parent section")
+            continue
+        match = re.fullmatch(r"  ([A-Za-z0-9_]+):\s*(.+)", raw_line)
         if not match:
+            errors.append(
+                f"{rel}:{line_number}: only two-space indented one-line scalar keys are allowed"
+            )
             continue
         key, value = match.groups()
         value = value.strip()
+        if value in {"|", ">"}:
+            errors.append(f"{rel}:{line_number}: multiline scalars are not allowed")
+            continue
         if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
             value = value[1:-1]
-        interface[key] = value.strip()
-    return interface
+        parsed.setdefault(current_section, {})[key] = value.strip()
+
+    return parsed, errors
 
 
 def check_agent_settings(repo_root: Path) -> list[str]:
     errors: list[str] = []
-    for rel_path, required_concepts in AGENT_PROMPT_REQUIRED_CONCEPTS.items():
-        path = repo_root / rel_path
-        if not path.exists():
-            errors.append(f"{rel_path}: missing agent settings file")
+    for skill_file in iter_skill_files(repo_root):
+        skill_dir = skill_file.parent
+        skill_name = frontmatter_name(skill_file) or skill_dir.name
+        openai_yaml = skill_dir / "agents" / "openai.yaml"
+        rel_yaml = openai_yaml.relative_to(repo_root).as_posix()
+        if not openai_yaml.exists():
+            errors.append(f"{skill_dir.relative_to(repo_root).as_posix()}: missing agents/openai.yaml")
             continue
-        interface = read_simple_agent_interface(path)
+        parsed, parse_errors = parse_simple_openai_yaml(openai_yaml)
+        errors.extend(parse_errors)
+        interface = parsed.get("interface", {})
+        policy = parsed.get("policy", {})
         if not interface:
-            errors.append(f"{rel_path}: missing interface section")
+            errors.append(f"{rel_yaml}: missing interface section")
             continue
         for key in REQUIRED_AGENT_INTERFACE_KEYS:
             if not interface.get(key):
-                errors.append(f"{rel_path}: missing or empty interface.{key}")
-        prompt_text = " ".join(
-            interface.get(key, "") for key in ("short_description", "default_prompt")
-        ).lower()
-        for concept in required_concepts:
-            if concept.lower() not in prompt_text:
-                errors.append(f"{rel_path}: agent prompt missing required concept `{concept}`")
+                errors.append(f"{rel_yaml}: missing or empty interface.{key}")
+        if f"${skill_name}" not in interface.get("default_prompt", ""):
+            errors.append(f"{rel_yaml}: interface.default_prompt must mention `${skill_name}`")
+        if policy.get("allow_implicit_invocation") != "true":
+            errors.append(f"{rel_yaml}: policy.allow_implicit_invocation must be true")
     return errors
 
 
@@ -486,7 +270,7 @@ def check_skill_frontmatter(repo_root: Path) -> list[str]:
         errors.append("missing repo-scoped skills root: .agents/skills")
         return errors
 
-    for skill_file in sorted(skills_root.glob("*/SKILL.md")):
+    for skill_file in iter_skill_files(repo_root):
         rel = skill_file.relative_to(repo_root).as_posix()
         text = skill_file.read_text(encoding="utf-8-sig")
         lines = text.splitlines()
@@ -524,6 +308,21 @@ def frontmatter_name(skill_file: Path) -> str | None:
     return match.group(1).strip()
 
 
+def extract_skill_routes(trigger_policy: str) -> set[str]:
+    routes: set[str] = set()
+    in_skills_section = False
+    for raw_line in trigger_policy.splitlines():
+        if raw_line.startswith("## "):
+            in_skills_section = raw_line.startswith("## 스킬(") or raw_line.strip() == "## 스킬"
+            continue
+        if not in_skills_section:
+            continue
+        match = re.match(r"^- `([^`]+)`:", raw_line)
+        if match:
+            routes.add(match.group(1))
+    return routes
+
+
 def check_skill_routing_completeness(repo_root: Path) -> list[str]:
     errors: list[str] = []
     skills_root = repo_root / ".agents" / "skills"
@@ -532,28 +331,26 @@ def check_skill_routing_completeness(repo_root: Path) -> list[str]:
         return errors
 
     trigger_policy = trigger_policy_path.read_text(encoding="utf-8-sig")
-    for skill_file in sorted(skills_root.glob("*/SKILL.md")):
+    routed_skills = extract_skill_routes(trigger_policy)
+    if not routed_skills:
+        errors.append("agent_trigger_policy.md: missing structured `## 스킬` routing list")
+
+    skill_names: set[str] = set()
+    for skill_file in iter_skill_files(repo_root):
         skill_dir = skill_file.parent
         rel_dir = skill_dir.relative_to(repo_root).as_posix()
         skill_name = frontmatter_name(skill_file) or skill_dir.name
+        skill_names.add(skill_name)
 
-        if skill_name not in trigger_policy:
-            errors.append(f"{rel_dir}: skill `{skill_name}` is not routed in agent_trigger_policy.md")
+        if skill_name not in routed_skills:
+            errors.append(f"{rel_dir}: skill `{skill_name}` is not listed in agent_trigger_policy.md `## 스킬`")
 
         openai_yaml = skill_dir / "agents" / "openai.yaml"
         if not openai_yaml.exists():
             errors.append(f"{rel_dir}: missing agents/openai.yaml; every repo skill must expose routing metadata")
-            continue
 
-        interface = read_simple_agent_interface(openai_yaml)
-        for key in REQUIRED_AGENT_INTERFACE_KEYS:
-            if not interface.get(key):
-                rel_yaml = openai_yaml.relative_to(repo_root).as_posix()
-                errors.append(f"{rel_yaml}: missing or empty interface.{key}")
-        yaml_text = openai_yaml.read_text(encoding="utf-8")
-        if not re.search(r"allow_implicit_invocation:\s*true\b", yaml_text):
-            rel_yaml = openai_yaml.relative_to(repo_root).as_posix()
-            errors.append(f"{rel_yaml}: policy.allow_implicit_invocation must be true for repo-scoped skills")
+    for routed_skill in sorted(routed_skills - skill_names):
+        errors.append(f"agent_trigger_policy.md: routed skill `{routed_skill}` has no matching SKILL.md")
 
     return errors
 
