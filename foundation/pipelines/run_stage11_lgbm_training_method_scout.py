@@ -20,8 +20,8 @@ if str(REPO_ROOT) not in sys.path:
 
 from foundation.models.baseline_training import LABEL_NAMES, LABEL_ORDER, validate_model_input_frame  # noqa: E402
 from foundation.pipelines import run_stage10_logreg_mt5_scout as scout  # noqa: E402
-from foundation.scouting import alpha_ledgers  # noqa: E402
-from foundation.scouting.ledger import (  # noqa: E402
+from foundation.control_plane import alpha_run_ledgers  # noqa: E402
+from foundation.control_plane.ledger import (  # noqa: E402
     ledger_pairs as _ledger_pairs,
     upsert_csv_rows as _upsert_csv_rows,
 )
@@ -380,7 +380,7 @@ def build_python_alpha_ledger_rows(
 
 
 def materialize_ledgers(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
-    return alpha_ledgers.materialize_alpha_ledgers(
+    return alpha_run_ledgers.materialize_alpha_ledgers(
         stage_run_ledger_path=STAGE_RUN_LEDGER_PATH,
         project_alpha_ledger_path=PROJECT_ALPHA_LEDGER_PATH,
         rows=rows,
@@ -455,7 +455,7 @@ def build_mt5_alpha_ledger_rows(
     run_output_root: Path,
     external_verification_status: str,
 ) -> list[dict[str, str]]:
-    return alpha_ledgers.build_mt5_alpha_ledger_rows(
+    return alpha_run_ledgers.build_mt5_alpha_ledger_rows(
         run_id=run_id,
         stage_id=STAGE_ID,
         mt5_kpi_records=mt5_kpi_records,

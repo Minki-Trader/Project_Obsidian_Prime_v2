@@ -4,15 +4,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from foundation.scouting import alpha_ledgers
+from foundation.control_plane import alpha_run_ledgers
 
 
-class AlphaLedgerTests(unittest.TestCase):
+class AlphaRunLedgerTests(unittest.TestCase):
     def test_routed_component_rows_do_not_claim_profit(self) -> None:
         records = [
             {
                 "record_view": "mt5_routed_tier_a_used_validation_is",
-                "tier_scope": alpha_ledgers.TIER_A,
+                "tier_scope": alpha_run_ledgers.TIER_A,
                 "status": "completed",
                 "route_role": "primary_used",
                 "metrics": {
@@ -30,7 +30,7 @@ class AlphaLedgerTests(unittest.TestCase):
             },
             {
                 "record_view": "mt5_routed_total_validation_is",
-                "tier_scope": alpha_ledgers.TIER_AB,
+                "tier_scope": alpha_run_ledgers.TIER_AB,
                 "status": "completed",
                 "route_role": "routed_total",
                 "metrics": {
@@ -52,7 +52,7 @@ class AlphaLedgerTests(unittest.TestCase):
             },
         ]
 
-        rows = alpha_ledgers.build_mt5_alpha_ledger_rows(
+        rows = alpha_run_ledgers.build_mt5_alpha_ledger_rows(
             run_id="unit_run",
             stage_id="unit_stage",
             mt5_kpi_records=records,
@@ -77,7 +77,7 @@ class AlphaLedgerTests(unittest.TestCase):
             "subrun_id": "mt5_routed_total_validation_is",
             "parent_run_id": "unit_run",
             "record_view": "mt5_routed_total_validation_is",
-            "tier_scope": alpha_ledgers.TIER_AB,
+            "tier_scope": alpha_run_ledgers.TIER_AB,
             "kpi_scope": "trading_risk_execution",
             "scoreboard_lane": "runtime_probe",
             "status": "completed",
@@ -90,7 +90,7 @@ class AlphaLedgerTests(unittest.TestCase):
         }
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            payload = alpha_ledgers.materialize_alpha_ledgers(
+            payload = alpha_run_ledgers.materialize_alpha_ledgers(
                 stage_run_ledger_path=root / "stage_run_ledger.csv",
                 project_alpha_ledger_path=root / "alpha_run_ledger.csv",
                 rows=[row],
@@ -104,4 +104,3 @@ class AlphaLedgerTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

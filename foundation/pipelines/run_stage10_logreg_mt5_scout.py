@@ -40,8 +40,8 @@ from foundation.pipelines.materialize_training_label_split_dataset import (  # n
     build_label_candidates,
     load_us100_close_series,
 )
-from foundation.scouting import alpha_ledgers  # noqa: E402
-from foundation.scouting.ledger import (  # noqa: E402
+from foundation.control_plane import alpha_run_ledgers  # noqa: E402
+from foundation.control_plane.ledger import (  # noqa: E402
     ALPHA_LEDGER_COLUMNS,
     RUN_REGISTRY_COLUMNS,
     ledger_pairs as _ledger_pairs,
@@ -90,9 +90,9 @@ DEFAULT_COMMON_FILES_ROOT = Path.home() / "AppData/Roaming/MetaQuotes/Terminal/C
 DEFAULT_TERMINAL_DATA_ROOT = REPO_ROOT.parents[2]
 DEFAULT_TESTER_PROFILE_ROOT = REPO_ROOT.parents[1] / "Profiles" / "Tester"
 COMMON_RUN_ROOT = "Project_Obsidian_Prime_v2/stage10/run01A_logreg_threshold_mt5_scout_v1"
-EA_SOURCE_PATH = Path("foundation/mt5/ObsidianPrimeV2_AlphaScoutEA.mq5")
-EA_EXPERT_PATH = "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_AlphaScoutEA.ex5"
-EA_TESTER_SET_NAME = "ObsidianPrimeV2_AlphaScoutEA.set"
+EA_SOURCE_PATH = Path("foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5")
+EA_EXPERT_PATH = "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5"
+EA_TESTER_SET_NAME = "ObsidianPrimeV2_RuntimeProbeEA.set"
 PROBABILITY_COLUMNS = ["p_short", "p_flat", "p_long"]
 DECISION_CLASS_NO_TRADE = -1
 DECISION_LABEL_NO_TRADE = "no_trade"
@@ -2196,7 +2196,7 @@ def build_alpha_ledger_rows(
         )
 
     rows.extend(
-        alpha_ledgers.build_mt5_alpha_ledger_rows(
+        alpha_run_ledgers.build_mt5_alpha_ledger_rows(
             run_id=RUN_ID,
             stage_id=STAGE_ID,
             mt5_kpi_records=mt5_kpi_records,
@@ -2208,7 +2208,7 @@ def build_alpha_ledger_rows(
     return rows
 
 def materialize_alpha_ledgers(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
-    return alpha_ledgers.materialize_alpha_ledgers(
+    return alpha_run_ledgers.materialize_alpha_ledgers(
         stage_run_ledger_path=STAGE_RUN_LEDGER_PATH,
         project_alpha_ledger_path=PROJECT_ALPHA_LEDGER_PATH,
         rows=rows,

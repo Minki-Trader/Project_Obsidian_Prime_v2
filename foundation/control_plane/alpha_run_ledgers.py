@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
-from foundation.scouting.ledger import (
+from foundation.control_plane.ledger import (
     ALPHA_LEDGER_COLUMNS,
     ledger_pairs,
     ledger_path,
@@ -167,4 +167,3 @@ def materialize_alpha_ledgers(
     stage_payload = upsert_csv_rows(stage_run_ledger_path, ALPHA_LEDGER_COLUMNS, rows, key="ledger_row_id")
     project_payload = upsert_csv_rows(project_alpha_ledger_path, ALPHA_LEDGER_COLUMNS, rows, key="ledger_row_id")
     return {"stage_run_ledger": stage_payload, "project_alpha_run_ledger": project_payload}
-
