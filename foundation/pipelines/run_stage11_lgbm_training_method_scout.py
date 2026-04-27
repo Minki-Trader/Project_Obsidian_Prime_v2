@@ -394,8 +394,13 @@ def materialize_run_registry_row(
     route_coverage: Mapping[str, Any],
     tier_records: Sequence[Mapping[str, Any]],
     model_family: str,
+    decision_surface_id: str = DECISION_SURFACE_ID,
+    lane: str = "alpha_training_method_scout",
+    judgment_prefix: str = "training_method_scout",
     external_verification_status: str = "out_of_scope_by_claim",
     mt5_kpi_records: Sequence[Mapping[str, Any]] = (),
+    session_slice_id: str = RUN01Y_REFERENCE["session_slice_id"],
+    max_hold_bars: int = RUN01Y_REFERENCE["max_hold_bars"],
 ) -> dict[str, Any]:
     by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in tier_records}
     by_mt5_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
@@ -405,9 +410,9 @@ def materialize_run_registry_row(
         (
             ("model_family", model_family),
             ("comparison_reference", RUN01Y_REFERENCE["run_id"]),
-            ("decision_surface", DECISION_SURFACE_ID),
-            ("session_slice", RUN01Y_REFERENCE["session_slice_id"]),
-            ("max_hold_bars", RUN01Y_REFERENCE["max_hold_bars"]),
+            ("decision_surface", decision_surface_id),
+            ("session_slice", session_slice_id),
+            ("max_hold_bars", max_hold_bars),
             ("tier_b_fallback_rows", route_coverage.get("tier_b_fallback_rows")),
             ("no_tier_labelable_rows", route_coverage.get("no_tier_labelable_rows")),
             ("tier_a_signal_coverage", by_view.get("tier_a_separate", {}).get("signal_coverage")),
@@ -433,14 +438,14 @@ def materialize_run_registry_row(
     row = {
         "run_id": run_id,
         "stage_id": STAGE_ID,
-        "lane": "alpha_training_method_scout",
+        "lane": lane,
         "status": "reviewed",
         "judgment": (
-            "inconclusive_training_method_scout_mt5_runtime_probe_completed"
+            f"inconclusive_{judgment_prefix}_mt5_runtime_probe_completed"
             if external_verification_status == "completed"
-            else "inconclusive_training_method_scout_mt5_runtime_probe_blocked"
+            else f"inconclusive_{judgment_prefix}_mt5_runtime_probe_blocked"
             if external_verification_status == "blocked"
-            else "inconclusive_python_side_training_method_scout"
+            else f"inconclusive_python_side_{judgment_prefix}"
         ),
         "path": run_output_root.as_posix(),
         "notes": notes,
@@ -551,6 +556,8 @@ def write_result_summary(
     model_metrics: Mapping[str, Any],
     external_verification_status: str = "out_of_scope_by_claim",
     mt5_kpi_records: Sequence[Mapping[str, Any]] = (),
+    session_slice_id: str = RUN01Y_REFERENCE["session_slice_id"],
+    max_hold_bars: int = RUN01Y_REFERENCE["max_hold_bars"],
 ) -> None:
     by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in tier_records}
     by_mt5_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
@@ -568,8 +575,8 @@ def write_result_summary(
         f"- model family(모델 계열): `{MODEL_FAMILY}`",
         f"- comparison reference(비교 기준): `{RUN01Y_REFERENCE['run_id']}`",
         f"- selected threshold(선택 임계값): `{selected_threshold_id}`",
-        f"- session slice(시간 구간): `{RUN01Y_REFERENCE['session_slice_id']}`",
-        f"- max hold bars(최대 보유 봉 수): `{RUN01Y_REFERENCE['max_hold_bars']}`",
+        f"- session slice(시간 구간): `{session_slice_id}`",
+        f"- max hold bars(최대 보유 봉 수): `{max_hold_bars}`",
         f"- external verification status(외부 검증 상태): `{external_verification_status}`",
         "",
         "## Python Signal Views(파이썬 신호 보기)",
@@ -652,11 +659,17 @@ def run_stage11_lgbm_training_method_scout(
     tier_a_rule: scout.ThresholdRule,
     tier_b_rule: scout.ThresholdRule,
     attempt_mt5: bool = False,
+    label_spec: Any | None = None,
+    tier_a_model_input_dataset_id: str = MODEL_INPUT_DATASET_ID,
+    tier_a_feature_set_id: str = FEATURE_SET_ID,
+    decision_surface_id: str = DECISION_SURFACE_ID,
+    selection_policy: str = "reuse_run01Y_threshold_surface_for_method_only_comparison",
+    hypothesis: str | None = None,
+    run_registry_lane: str = "alpha_training_method_scout",
+    judgment_prefix: str = "training_method_scout",
 ) -> dict[str, Any]:
     if max_hold_bars != RUN01Y_REFERENCE["max_hold_bars"]:
         raise RuntimeError("RUN02A keeps run01Y max_hold_bars fixed for method-only comparison.")
-    if session_slice_id != RUN01Y_REFERENCE["session_slice_id"]:
-        raise RuntimeError("RUN02A keeps run01Y session slice fixed for method-only comparison.")
     scout.configure_run_identity(
         run_number=run_number,
         run_id=run_id,
@@ -676,6 +689,7 @@ def run_stage11_lgbm_training_method_scout(
         raise RuntimeError(f"Tier B core feature order is missing Stage04 reference features: {missing_core_features}")
     tier_b_feature_hash = scout.ordered_hash(tier_b_feature_order)
     label_threshold = scout.load_label_threshold(training_summary_path)
+    active_label_spec = label_spec or scout.TrainingLabelSplitSpec()
 
     tier_a_frame = pd.read_parquet(_io_path(model_input_path))
     tier_a_frame["timestamp"] = pd.to_datetime(tier_a_frame["timestamp"], utc=True)
@@ -693,6 +707,7 @@ def run_stage11_lgbm_training_method_scout(
         tier_a_feature_order=tier_a_feature_order,
         tier_b_feature_order=tier_b_feature_order,
         label_threshold=label_threshold,
+        label_spec=active_label_spec,
     )
     tier_b_training_frame = tier_b_context["tier_b_training_frame"]
     tier_b_frame = tier_b_context["tier_b_fallback_frame"]
@@ -819,6 +834,11 @@ def run_stage11_lgbm_training_method_scout(
         route_coverage=route_coverage,
         tier_records=tier_records,
         model_family=config.model_family,
+        decision_surface_id=decision_surface_id,
+        lane=run_registry_lane,
+        judgment_prefix=judgment_prefix,
+        session_slice_id=session_slice_id,
+        max_hold_bars=max_hold_bars,
     )
 
     _io_path(models_root).mkdir(parents=True, exist_ok=True)
@@ -1082,8 +1102,13 @@ def run_stage11_lgbm_training_method_scout(
         route_coverage=route_coverage,
         tier_records=tier_records,
         model_family=config.model_family,
+        decision_surface_id=decision_surface_id,
+        lane=run_registry_lane,
+        judgment_prefix=judgment_prefix,
         external_verification_status=external_status,
         mt5_kpi_records=mt5_kpi_records,
+        session_slice_id=session_slice_id,
+        max_hold_bars=max_hold_bars,
     )
 
     artifacts = [
@@ -1118,8 +1143,8 @@ def run_stage11_lgbm_training_method_scout(
 
     input_refs = {
         "tier_a": {
-            "model_input_dataset_id": MODEL_INPUT_DATASET_ID,
-            "feature_set_id": FEATURE_SET_ID,
+            "model_input_dataset_id": tier_a_model_input_dataset_id,
+            "feature_set_id": tier_a_feature_set_id,
             "model_input_path": model_input_path.as_posix(),
             "model_input_sha256": scout.sha256_file(model_input_path),
             "feature_order_path": feature_order_path.as_posix(),
@@ -1155,11 +1180,11 @@ def run_stage11_lgbm_training_method_scout(
         "model_family": config.model_family,
         "comparison_reference": RUN01Y_REFERENCE,
         "decision_surface": {
-            "decision_surface_id": DECISION_SURFACE_ID,
+            "decision_surface_id": decision_surface_id,
             "tier_a_rule": scout.threshold_rule_payload(tier_a_rule),
             "tier_b_rule": scout.threshold_rule_payload(tier_b_rule),
             "selected_threshold_id": selected_threshold_id,
-            "selection_policy": "reuse_run01Y_threshold_surface_for_method_only_comparison",
+            "selection_policy": selection_policy,
             "diagnostic_threshold_selection": diagnostic_threshold_selection,
         },
         "route_coverage": route_coverage,
@@ -1206,14 +1231,14 @@ def run_stage11_lgbm_training_method_scout(
             "model_family": config.model_family,
             "status": "reviewed_payload",
             "judgment": (
-                "inconclusive_training_method_scout_mt5_runtime_probe_completed"
+                f"inconclusive_{judgment_prefix}_mt5_runtime_probe_completed"
                 if external_status == "completed"
-                else "inconclusive_training_method_scout_mt5_runtime_probe_blocked"
+                else f"inconclusive_{judgment_prefix}_mt5_runtime_probe_blocked"
                 if external_status == "blocked"
-                else "inconclusive_python_side_training_method_scout"
+                else f"inconclusive_python_side_{judgment_prefix}"
             ),
         },
-        "hypothesis": (
+        "hypothesis": hypothesis or (
             "LightGBM training can improve the signal surface versus the run01Y logistic-regression comparison "
             "reference while keeping the same feature, label/split, session slice, hold, and threshold surface."
         ),
@@ -1265,6 +1290,8 @@ def run_stage11_lgbm_training_method_scout(
         model_metrics=model_metrics,
         external_verification_status=external_status,
         mt5_kpi_records=mt5_kpi_records,
+        session_slice_id=session_slice_id,
+        max_hold_bars=max_hold_bars,
     )
 
     return {

@@ -44,9 +44,11 @@ input string          InpFallbackFeatureOrderHash = "";
 input double          InpShortThreshold = 0.55;
 input double          InpLongThreshold = 0.55;
 input double          InpMinMargin = 0.05;
+input bool            InpInvertSignal = false;
 input double          InpFallbackShortThreshold = 0.55;
 input double          InpFallbackLongThreshold = 0.55;
 input double          InpFallbackMinMargin = 0.05;
+input bool            InpFallbackInvertSignal = false;
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -403,10 +405,12 @@ int OnInit()
 
    g_decision_surface.Configure(InpShortThreshold,
                                 InpLongThreshold,
-                                InpMinMargin);
+                                InpMinMargin,
+                                InpInvertSignal);
    g_fallback_decision_surface.Configure(InpFallbackShortThreshold,
                                          InpFallbackLongThreshold,
-                                         InpFallbackMinMargin);
+                                         InpFallbackMinMargin,
+                                         InpFallbackInvertSignal);
 
    g_execution_bridge.Configure(InpMainSymbol,
                                 InpMagic,
