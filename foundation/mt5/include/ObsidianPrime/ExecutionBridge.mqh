@@ -121,7 +121,7 @@ private:
       request.deviation = m_deviation_points;
       request.type_time = ORDER_TIME_GTC;
       request.type_filling = ResolveFillingType();
-      request.comment = "ObsidianPrimeV2 AlphaScout";
+      request.comment = "ObsidianPrimeV2 RuntimeProbe";
 
       if(signal == OP_DECISION_LONG)
         {

@@ -1,4 +1,4 @@
----
+﻿---
 name: obsidian-session-intake
 description: Start each Project Obsidian Prime v2 turn by establishing current truth, deciding cold re-entry versus warm-thread delta check, and handing the request to a project-wide work-packet router instead of treating code, experiment, evidence, and report as separate modes.
 ---
@@ -43,6 +43,7 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 ## Must Output
 
 - `intake_context`
+- `routing_receipt`
 - `work_packet_lifecycle`
 - `phase_plan`
 - `skills_considered`
@@ -68,6 +69,8 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 - `run_evidence_required` when relevant
 - `reproducibility_guard_required` when relevant
 - `final_answer_filter`
+
+For low-risk `information_only` turns(낮은 위험 정보 작업), output(출력)은 compact(압축)할 수 있다. 하지만 `routing_receipt(라우팅 기록)`, selected skills(선택된 스킬), high-relevance not-used reasons(관련성이 높은데 쓰지 않은 이유)는 반드시 남긴다. code/experiment/MT5/policy/publish/ambiguous work(코드/실험/MT5/정책/발행/애매한 작업)는 full fields(전체 필드)를 확장한다.
 
 ## Do Not
 

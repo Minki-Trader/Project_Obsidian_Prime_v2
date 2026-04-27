@@ -53,7 +53,11 @@
 9. result judgment(결과 판정)과 claim boundary(주장 경계) 정리
 10. `obsidian-answer-clarity`로 쉬운 사용자 보고(user-facing report, 사용자 보고)
 
-모든 작업 시작 시 `obsidian-session-intake`가 current truth(현재 진실)를 잡고, `obsidian-work-packet-router`가 다음 필드를 만든다.
+모든 작업 시작 시 `obsidian-session-intake`가 current truth(현재 진실)를 잡고, `obsidian-work-packet-router`가 `routing_receipt(라우팅 기록)`를 항상 짧게 남긴다. 효과(effect, 효과)는 관련 skill(스킬)을 조용히 버리지 않되, 작은 작업까지 긴 administrative report(행정 보고)가 되지 않게 하는 것이다.
+
+`routing_receipt(라우팅 기록)`에는 최소한 lifecycle(생명주기), selected skills(선택된 스킬), high-relevance skills not used(관련성이 높은데 쓰지 않은 스킬)와 reason(이유)을 적는다.
+
+code(코드), experiment(실험), MT5(`MetaTrader 5`, 메타트레이더5), policy(정책), publish(발행), ambiguous work(애매한 작업)에서는 `obsidian-work-packet-router`가 다음 필드를 확장한다.
 
 - `work_packet_lifecycle`
 - `phase_plan`

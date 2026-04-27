@@ -164,4 +164,3 @@ def upsert_csv_rows(
         "rows": len(merged),
         "upserted_rows": len(rows),
     }
-
