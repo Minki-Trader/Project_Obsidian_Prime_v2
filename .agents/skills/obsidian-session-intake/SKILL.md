@@ -20,12 +20,13 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 
 1. Decide whether the thread is cold or warm.
 2. If the thread is warm and the active stage is stable, prefer a delta check instead of repeating full cold re-entry.
-3. Identify the likely work packet lifecycle. Do not force a single mode when the work naturally spans several phases.
-4. Hand the lifecycle to `obsidian-work-packet-router` so it can attach skills to each phase.
-5. Decide whether the requested turn is architecture-sensitive: feature/model/pipeline/artifact, alpha-search framing, stage transition, repo-scoped skill, agent setting, or Korean encoding work.
-6. Decide whether the requested turn is exploration-sensitive: alpha search, idea variants, Tier B/C research, WFO planning, extreme sweep, negative-result closure, or user-requested extra stage.
-7. Decide whether the requested turn is run-evidence-sensitive: run creation, run closeout, KPI report, result summary, result judgment, or run registry update.
-8. Decide whether the requested turn is reproducibility-sensitive: clean checkout, dependency, CI, artifact path, MT5 terminal path, or external environment setup.
+3. Check whether the current branch/worktree matches the requested stage, PR, experiment, or policy scope.
+4. Identify the likely work packet lifecycle. Do not force a single mode when the work naturally spans several phases.
+5. Hand the lifecycle to `obsidian-work-packet-router` so it can attach skills to each phase.
+6. Decide whether the requested turn is architecture-sensitive: feature/model/pipeline/artifact, alpha-search framing, stage transition, repo-scoped skill, agent setting, or Korean encoding work.
+7. Decide whether the requested turn is exploration-sensitive: alpha search, idea variants, Tier B/C research, WFO planning, extreme sweep, negative-result closure, or user-requested extra stage.
+8. Decide whether the requested turn is run-evidence-sensitive: run creation, run closeout, KPI report, result summary, result judgment, or run registry update.
+9. Decide whether the requested turn is reproducibility-sensitive: clean checkout, dependency, CI, artifact path, MT5 terminal path, or external environment setup.
 
 ## Must Read
 
@@ -33,6 +34,7 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 - `docs/context/current_working_state.md` when the current read needs support
 - the active stage `04_selected/selection_status.md`
 - `docs/policies/agent_trigger_policy.md`
+- `docs/policies/branch_policy.md`
 - the latest durable decision memo only when it changes current meaning or the user asks why
 - `docs/policies/architecture_invariants.md` and `docs/registers/architecture_debt_register.md` when the requested turn is architecture-sensitive
 - `docs/policies/exploration_mandate.md`, `docs/registers/idea_registry.md`, and `docs/registers/negative_result_register.md` when the requested turn is exploration-sensitive
@@ -47,6 +49,8 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 - `skills_selected`
 - `skills_not_used`
 - `skill_routing_reason`
+- `branch_worktree_fit`
+- `branch_action`
 - `active_stage`
 - `current_foundation_truth`
 - `current_operating_truth_boundary`
@@ -71,6 +75,7 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 - invent a new active stage or reopen a closed stage from chat momentum alone
 - let orientation docs outrank `workspace_state.yaml`, stage selection status, or durable decisions
 - drift from status intake straight into implementation without first fixing the lifecycle and skill route
+- work on a branch/worktree whose scope does not match the requested stage, PR, experiment, or policy packet
 - treat code, experiment, evidence, and report as mutually exclusive categories
 - stop after code edits when the request naturally requires verification, evidence, judgment, or user-facing explanation
 - ignore architecture debt when the turn touches feature/model/pipeline/artifact, alpha-search, stage-transition, skill, agent-setting, or encoding work
@@ -83,10 +88,12 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 - `workspace_state.yaml` and the active stage `selection_status.md` disagree on the active stage
 - a durable decision memo contradicts the supposed current boundary
 - the requested turn would cross from status or planning into implementation without an approved lifecycle packet
+- the current branch/worktree is scoped to different work and switching would risk mixing unrelated changes
 
 ## Verification
 
 - check that the named active stage is the same across the current truth sources you used
+- check that the branch/worktree matches the requested work packet, or record the switch/new-branch/stop decision
 - if a current task packet already exists, confirm it still fits the active stage and current durable decisions
 - confirm that `obsidian-work-packet-router` is part of the planning surface unless the turn is strictly informational
 - if architecture-sensitive, confirm whether the architecture guard validator is part of the verification surface
@@ -96,6 +103,7 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 ## Completion Criteria
 
 - one lifecycle is selected, even if it contains several phases
+- branch/worktree fit is explicit before file edits
 - one recommended next task is named
 - the allowed scope and publish default are explicit enough that the next step can stay narrow
 - required skills are attached phase-by-phase, and unused skills have short reasons

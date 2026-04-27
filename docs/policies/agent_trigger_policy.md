@@ -45,12 +45,13 @@
 1. current truth(현재 진실) 확인
 2. work packet lifecycle(작업 묶음 생명주기) 결정
 3. skill routing(스킬 배치) 결정
-4. 설계(design, 설계) 또는 실험 가설(experiment hypothesis, 실험 가설) 정리
-5. 코드 작성/수정(code writing/edit, 코드 작성/수정)
-6. 실행(run, 실행), 검증(verification, 검증), 또는 backtest(백테스트)
-7. evidence(근거), artifact lineage(산출물 계보), registry(등록부) 정리
-8. result judgment(결과 판정)과 claim boundary(주장 경계) 정리
-9. `obsidian-answer-clarity`로 쉬운 사용자 보고(user-facing report, 사용자 보고)
+4. branch/worktree fit(브랜치/작업트리 적합성) 확인
+5. 설계(design, 설계) 또는 실험 가설(experiment hypothesis, 실험 가설) 정리
+6. 코드 작성/수정(code writing/edit, 코드 작성/수정)
+7. 실행(run, 실행), 검증(verification, 검증), 또는 backtest(백테스트)
+8. evidence(근거), artifact lineage(산출물 계보), registry(등록부) 정리
+9. result judgment(결과 판정)과 claim boundary(주장 경계) 정리
+10. `obsidian-answer-clarity`로 쉬운 사용자 보고(user-facing report, 사용자 보고)
 
 모든 작업 시작 시 `obsidian-session-intake`가 current truth(현재 진실)를 잡고, `obsidian-work-packet-router`가 다음 필드를 만든다.
 
@@ -60,6 +61,8 @@
 - `skills_selected`
 - `skills_not_used`
 - `skill_routing_reason`
+- `branch_worktree_fit`
+- `branch_action`
 - `phase_stop_conditions`
 - `final_answer_filter`
 
@@ -88,6 +91,7 @@
    - 트리거(trigger, 작동 조건): 새 작업 시작, 재개, 구현 요청, 실험 요청, 보고 요청, 정책/스킬 변경, 발행 요청
    - 자동 호출(auto-call, 자동 호출): `obsidian-session-intake(세션 인입)` + `obsidian-work-packet-router(작업 묶음 라우터)`
    - 효과(effect, 효과): 단일 mode(모드)를 고르는 대신, 설계부터 최종 보고까지 필요한 phase(단계)와 스킬(skill, 스킬)을 먼저 배치한다.
+   - 브랜치/작업트리 확인(branch/worktree check, 브랜치/작업트리 확인): 현재 branch/worktree(브랜치/작업트리)가 요청한 stage(단계), PR, experiment(실험), policy packet(정책 묶음)과 맞는지 확인한다. 맞지 않으면 stay(유지), switch(전환), create_new_branch(새 브랜치), create_or_select_worktree(작업트리 선택/생성), stop_for_user(사용자 확인 후 중단) 중 하나를 기록한다.
 1. 실행 생성/종료 자동 묶음(Run Evidence Auto Bundle, 실행 근거 자동 묶음)
    - 트리거(trigger, 작동 조건): run creation(실행 생성), run closeout(실행 종료), KPI report(KPI 보고), result summary(결과 요약), run registry update(실행 등록부 갱신), Tier A primary + Tier B fallback routing(Tier A 우선 + Tier B 대체 라우팅)
    - 자동 호출(auto-call, 자동 호출): `obsidian-run-evidence-system(실행 근거 시스템)` + `obsidian-artifact-lineage(산출물 계보)` + `obsidian-result-judgment(결과 판정)` + `obsidian-claim-discipline(주장 규율)`

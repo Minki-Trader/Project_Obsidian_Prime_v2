@@ -20,6 +20,7 @@ REQUIRED_PATHS = [
     "docs/policies/kpi_measurement_standard.md",
     "docs/policies/run_result_management.md",
     "docs/policies/result_judgment_policy.md",
+    "docs/policies/branch_policy.md",
     "docs/registers/architecture_debt_register.md",
     "docs/registers/run_registry.csv",
     "docs/registers/idea_registry.md",
