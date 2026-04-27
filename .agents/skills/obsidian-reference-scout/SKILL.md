@@ -5,7 +5,7 @@ description: Find and use external references for correct API usage, syntax, imp
 
 # Obsidian Reference Scout
 
-Use this skill when outside references can improve correctness or idea quality.
+Use this skill when outside references can improve correctness, idea quality, or confidence in environment behavior.
 
 This skill is for scouting and grounding, not copying.
 
@@ -15,7 +15,7 @@ For every code-writing packet(code-writing packet, 코드 작성 묶음), run th
 
 Use external lookup(외부 확인) when the code touches MQL5/MT5(MetaTrader 5, 메타트레이더5), MetaEditor(메타에디터), strategy tester(전략 테스터), file handoff(파일 인계), external API(외부 API), CLI, or library behavior(라이브러리 동작) such as pandas/sklearn/numpy/LightGBM.
 
-If the code is pure internal logic(순수 내부 로직) with no uncertain API(API 사용법), syntax(구문), version-sensitive behavior(버전 민감 동작), or external pattern(외부 패턴), record `reference_scout: not_required(레퍼런스 탐색 불필요)` with the reason(reason, 이유).
+If the code is pure internal logic(순수 내부 로직) with no uncertain API(API 사용법), syntax(구문), version-sensitive behavior(버전 민감 동작), or external pattern(외부 패턴), record `reference_scout: not_required(레퍼런스 탐색 불필요)` with the reason(reason, 이유). This record belongs in the implementation precheck or completion report; do not leave it implicit.
 
 Effect(effect, 효과): implementation(구현)을 프로젝트 기억(project memory, 프로젝트 기억)만으로 단정하지 않고, 필요한 곳에서는 official docs(공식 문서)나 maintained source(유지보수되는 원천)로 접지한다.
 
@@ -27,6 +27,8 @@ Effect(effect, 효과): implementation(구현)을 프로젝트 기억(project me
 - EA(`Expert Advisor`, 전문가 자문) management touches `#include(포함)`, `input/sinput(입력/고정 입력)`, `OnInit/OnTick/OnTester(초기화/틱/테스터)`, `.set` files(설정 파일), tester properties(테스터 속성), or optimization frames(최적화 프레임)
 - LightGBM, pandas, sklearn, numpy, or another library usage needs confirmation
 - implementation patterns from maintained GitHub projects may help
+- dependency, packaging, clean checkout, or CI behavior may differ by environment
+- quant method choice, validation frame, backtest method, or runtime parity needs grounding
 - alpha exploration is stuck and outside examples may suggest new ideas
 - forum posts may reveal practical edge cases
 
@@ -46,6 +48,7 @@ Effect(effect, 효과): implementation(구현)을 프로젝트 기억(project me
 - `project_fit`: how it fits or conflicts with this repo's contracts
 - `do_not_copy`: what should not be copied directly
 - `recommended_use`: adopt, adapt, treat as idea, or reject
+- `not_required_reason`: only when no lookup was needed
 
 ## EA Reference Hard Trigger(EA 레퍼런스 강제 트리거)
 

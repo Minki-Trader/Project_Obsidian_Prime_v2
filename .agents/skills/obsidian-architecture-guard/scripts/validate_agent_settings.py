@@ -33,7 +33,9 @@ REQUIRED_PATHS = [
     ".agents/skills/obsidian-architecture-guard/SKILL.md",
     ".agents/skills/obsidian-architecture-guard/agents/openai.yaml",
     ".agents/skills/obsidian-session-intake/SKILL.md",
+    ".agents/skills/obsidian-session-intake/agents/openai.yaml",
     ".agents/skills/obsidian-reentry-read/SKILL.md",
+    ".agents/skills/obsidian-reentry-read/agents/openai.yaml",
     ".agents/skills/obsidian-claim-discipline/SKILL.md",
     ".agents/skills/obsidian-claim-discipline/agents/openai.yaml",
     ".agents/skills/obsidian-stage-transition/SKILL.md",
@@ -45,6 +47,27 @@ REQUIRED_PATHS = [
     ".agents/skills/obsidian-lane-classifier/SKILL.md",
     ".agents/skills/obsidian-lane-classifier/agents/openai.yaml",
     ".agents/skills/obsidian-exploration-mandate/SKILL.md",
+    ".agents/skills/obsidian-exploration-mandate/agents/openai.yaml",
+    ".agents/skills/obsidian-work-packet-router/SKILL.md",
+    ".agents/skills/obsidian-work-packet-router/agents/openai.yaml",
+    ".agents/skills/obsidian-experiment-design/SKILL.md",
+    ".agents/skills/obsidian-experiment-design/agents/openai.yaml",
+    ".agents/skills/obsidian-data-integrity/SKILL.md",
+    ".agents/skills/obsidian-data-integrity/agents/openai.yaml",
+    ".agents/skills/obsidian-model-validation/SKILL.md",
+    ".agents/skills/obsidian-model-validation/agents/openai.yaml",
+    ".agents/skills/obsidian-runtime-parity/SKILL.md",
+    ".agents/skills/obsidian-runtime-parity/agents/openai.yaml",
+    ".agents/skills/obsidian-backtest-forensics/SKILL.md",
+    ".agents/skills/obsidian-backtest-forensics/agents/openai.yaml",
+    ".agents/skills/obsidian-performance-attribution/SKILL.md",
+    ".agents/skills/obsidian-performance-attribution/agents/openai.yaml",
+    ".agents/skills/obsidian-environment-reproducibility/SKILL.md",
+    ".agents/skills/obsidian-environment-reproducibility/agents/openai.yaml",
+    ".agents/skills/obsidian-artifact-lineage/SKILL.md",
+    ".agents/skills/obsidian-artifact-lineage/agents/openai.yaml",
+    ".agents/skills/obsidian-result-judgment/SKILL.md",
+    ".agents/skills/obsidian-result-judgment/agents/openai.yaml",
     ".agents/skills/obsidian-code-surface-guard/SKILL.md",
     ".agents/skills/obsidian-code-surface-guard/agents/openai.yaml",
     ".agents/skills/obsidian-workflow-drift-guard/SKILL.md",
@@ -56,6 +79,22 @@ REQUIRED_PATHS = [
 ]
 REQUIRED_AGENT_INTERFACE_KEYS = ("display_name", "short_description", "default_prompt")
 AGENT_PROMPT_REQUIRED_CONCEPTS = {
+    ".agents/skills/obsidian-session-intake/agents/openai.yaml": (
+        "current truth",
+        "cold",
+        "warm",
+        "work packet lifecycle",
+        "skill routing",
+        "final answer",
+    ),
+    ".agents/skills/obsidian-reentry-read/agents/openai.yaml": (
+        "starting",
+        "resuming",
+        "workspace state",
+        "active stage",
+        "policy",
+        "register",
+    ),
     ".agents/skills/obsidian-architecture-guard/agents/openai.yaml": (
         "architecture",
         "agent settings",
@@ -73,6 +112,93 @@ AGENT_PROMPT_REQUIRED_CONCEPTS = {
         "artifact",
         "monolith",
         "reference_scout_pairing",
+    ),
+    ".agents/skills/obsidian-exploration-mandate/agents/openai.yaml": (
+        "exploration",
+        "idea variants",
+        "tier",
+        "wfo",
+        "operating promotion",
+        "runtime authority",
+    ),
+    ".agents/skills/obsidian-work-packet-router/agents/openai.yaml": (
+        "work packet lifecycle",
+        "skill selection",
+        "phase plan",
+        "stop conditions",
+        "final answer filter",
+    ),
+    ".agents/skills/obsidian-experiment-design/agents/openai.yaml": (
+        "hypothesis",
+        "baseline",
+        "controls",
+        "sample scope",
+        "criteria",
+        "evidence plan",
+    ),
+    ".agents/skills/obsidian-data-integrity/agents/openai.yaml": (
+        "data source",
+        "time axis",
+        "sample scope",
+        "feature-label boundary",
+        "split boundary",
+        "leakage risk",
+    ),
+    ".agents/skills/obsidian-model-validation/agents/openai.yaml": (
+        "model",
+        "threshold",
+        "calibration",
+        "split",
+        "wfo",
+        "overfit",
+    ),
+    ".agents/skills/obsidian-runtime-parity/agents/openai.yaml": (
+        "python",
+        "mt5",
+        "runtime",
+        "shared contract",
+        "parity check",
+        "claim boundary",
+    ),
+    ".agents/skills/obsidian-backtest-forensics/agents/openai.yaml": (
+        "strategy tester",
+        "tester identity",
+        "ea identity",
+        "trade evidence",
+        "spread",
+        "commission",
+    ),
+    ".agents/skills/obsidian-performance-attribution/agents/openai.yaml": (
+        "kpi",
+        "baseline",
+        "drivers",
+        "segment checks",
+        "trade shape",
+        "confidence",
+    ),
+    ".agents/skills/obsidian-environment-reproducibility/agents/openai.yaml": (
+        "clean checkout",
+        "dependency",
+        "environment",
+        "entry command",
+        "local assumptions",
+        "reproducibility judgment",
+    ),
+    ".agents/skills/obsidian-artifact-lineage/agents/openai.yaml": (
+        "source inputs",
+        "producer",
+        "consumer",
+        "artifact paths",
+        "hashes",
+        "lineage judgment",
+    ),
+    ".agents/skills/obsidian-result-judgment/agents/openai.yaml": (
+        "evidence",
+        "missing",
+        "judgment label",
+        "claim boundary",
+        "next condition",
+        "answer-clarity",
     ),
     ".agents/skills/obsidian-reference-scout/agents/openai.yaml": (
         "code writing",
@@ -223,11 +349,23 @@ def check_policy_links(repo_root: Path) -> list[str]:
 
     required_pairs = [
         ("agent_trigger_policy.md", trigger_policy, "obsidian-architecture-guard"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-session-intake"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-reentry-read"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-work-packet-router"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-answer-clarity"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-claim-discipline"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-code-quality"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-lane-classifier"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-exploration-mandate"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-experiment-design"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-data-integrity"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-model-validation"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-runtime-parity"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-backtest-forensics"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-performance-attribution"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-environment-reproducibility"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-artifact-lineage"),
+        ("agent_trigger_policy.md", trigger_policy, "obsidian-result-judgment"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-code-surface-guard"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-workflow-drift-guard"),
         ("agent_trigger_policy.md", trigger_policy, "obsidian-reference-scout"),
@@ -242,16 +380,20 @@ def check_policy_links(repo_root: Path) -> list[str]:
         ("reentry_order.md", reentry, "kpi_measurement_standard.md"),
         ("reentry_order.md", reentry, "run_result_management.md"),
         ("reentry_order.md", reentry, "result_judgment_policy.md"),
+        ("reentry_order.md", reentry, "obsidian-work-packet-router"),
         ("AGENTS.md", agents, "Architecture Invariants"),
         ("AGENTS.md", agents, "Exploration Mandate"),
         ("AGENTS.md", agents, "Run Evidence System"),
         ("AGENTS.md", agents, "Progressive Hardening"),
+        ("AGENTS.md", agents, "Codex Work Lifecycle"),
+        ("AGENTS.md", agents, "obsidian-work-packet-router"),
         ("architecture_debt_register.md", debt, "AD-001"),
         ("architecture_debt_register.md", debt, "AD-002"),
         ("architecture_debt_register.md", debt, "AD-003"),
         ("architecture_debt_register.md", debt, "AD-004"),
         ("architecture_debt_register.md", debt, "AD-005"),
         ("architecture_debt_register.md", debt, "AD-006"),
+        ("architecture_debt_register.md", debt, "AD-007"),
         ("exploration_mandate.md", exploration, "promotion-ineligible"),
         ("exploration_mandate.md", exploration, "tier_c_local_research"),
         ("exploration_mandate.md", exploration, "WFO"),
@@ -366,8 +508,58 @@ def check_skill_frontmatter(repo_root: Path) -> list[str]:
     return errors
 
 
+def frontmatter_name(skill_file: Path) -> str | None:
+    text = skill_file.read_text(encoding="utf-8-sig")
+    lines = text.splitlines()
+    if not lines or lines[0].strip().lstrip("\ufeff") != "---":
+        return None
+    try:
+        end_index = lines[1:].index("---") + 1
+    except ValueError:
+        return None
+    frontmatter = "\n".join(lines[1:end_index])
+    match = re.search(r"^name:\s*(\S+)", frontmatter, flags=re.MULTILINE)
+    if not match:
+        return None
+    return match.group(1).strip()
+
+
+def check_skill_routing_completeness(repo_root: Path) -> list[str]:
+    errors: list[str] = []
+    skills_root = repo_root / ".agents" / "skills"
+    trigger_policy_path = repo_root / "docs/policies/agent_trigger_policy.md"
+    if not skills_root.exists() or not trigger_policy_path.exists():
+        return errors
+
+    trigger_policy = trigger_policy_path.read_text(encoding="utf-8-sig")
+    for skill_file in sorted(skills_root.glob("*/SKILL.md")):
+        skill_dir = skill_file.parent
+        rel_dir = skill_dir.relative_to(repo_root).as_posix()
+        skill_name = frontmatter_name(skill_file) or skill_dir.name
+
+        if skill_name not in trigger_policy:
+            errors.append(f"{rel_dir}: skill `{skill_name}` is not routed in agent_trigger_policy.md")
+
+        openai_yaml = skill_dir / "agents" / "openai.yaml"
+        if not openai_yaml.exists():
+            errors.append(f"{rel_dir}: missing agents/openai.yaml; every repo skill must expose routing metadata")
+            continue
+
+        interface = read_simple_agent_interface(openai_yaml)
+        for key in REQUIRED_AGENT_INTERFACE_KEYS:
+            if not interface.get(key):
+                rel_yaml = openai_yaml.relative_to(repo_root).as_posix()
+                errors.append(f"{rel_yaml}: missing or empty interface.{key}")
+        yaml_text = openai_yaml.read_text(encoding="utf-8")
+        if not re.search(r"allow_implicit_invocation:\s*true\b", yaml_text):
+            rel_yaml = openai_yaml.relative_to(repo_root).as_posix()
+            errors.append(f"{rel_yaml}: policy.allow_implicit_invocation must be true for repo-scoped skills")
+
+    return errors
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate Obsidian agent settings, architecture guard links, and Korean encoding.")
+    parser = argparse.ArgumentParser(description="Validate Obsidian agent settings, skill routing, architecture guard links, and Korean encoding.")
     parser.add_argument("--repo-root", default=".", help="Repository root to validate.")
     args = parser.parse_args()
 
@@ -384,6 +576,7 @@ def main() -> int:
         warnings.extend(check_progressive_hardening_warnings(repo_root))
     errors.extend(check_agent_settings(repo_root))
     errors.extend(check_skill_frontmatter(repo_root))
+    errors.extend(check_skill_routing_completeness(repo_root))
 
     for warning in warnings:
         print(f"WARNING: {warning}")
@@ -392,7 +585,7 @@ def main() -> int:
             print(f"ERROR: {error}")
         return 1
 
-    print("OK: agent settings, architecture guard links, and Korean encoding checks passed.")
+    print("OK: agent settings, skill routing, architecture guard links, and Korean encoding checks passed.")
     return 0
 
 
