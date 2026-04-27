@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import sys
 from dataclasses import asdict, dataclass
@@ -21,6 +20,11 @@ if str(REPO_ROOT) not in sys.path:
 
 from foundation.models.baseline_training import LABEL_NAMES, LABEL_ORDER, validate_model_input_frame  # noqa: E402
 from foundation.pipelines import run_stage10_logreg_mt5_scout as scout  # noqa: E402
+from foundation.control_plane import alpha_run_ledgers  # noqa: E402
+from foundation.control_plane.ledger import (  # noqa: E402
+    ledger_pairs as _ledger_pairs,
+    upsert_csv_rows as _upsert_csv_rows,
+)
 
 
 STAGE_ID = "11_alpha_robustness__wfo_label_horizon_sensitivity"
@@ -319,10 +323,6 @@ def build_lgbm_prediction_frame(
     return pd.concat([result, decisions], axis=1)
 
 
-def _ledger_pairs(pairs: Sequence[tuple[str, Any]]) -> str:
-    return scout._ledger_pairs(pairs)
-
-
 def build_python_alpha_ledger_rows(
     *,
     run_id: str,
@@ -379,47 +379,12 @@ def build_python_alpha_ledger_rows(
     return rows
 
 
-def _read_csv_rows(path: Path) -> list[dict[str, str]]:
-    if not scout._path_exists(path):
-        return []
-    with _io_path(path).open("r", encoding="utf-8-sig", newline="") as handle:
-        return [dict(row) for row in csv.DictReader(handle)]
-
-
-def _write_csv_rows(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, Any]]) -> None:
-    _io_path(path.parent).mkdir(parents=True, exist_ok=True)
-    with _io_path(path).open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(columns), lineterminator="\n")
-        writer.writeheader()
-        for row in rows:
-            writer.writerow({column: scout._ledger_value(row.get(column, "")) for column in columns})
-
-
-def _upsert_csv_rows(
-    path: Path,
-    columns: Sequence[str],
-    rows: Sequence[Mapping[str, Any]],
-    *,
-    key: str,
-) -> dict[str, Any]:
-    existing = _read_csv_rows(path)
-    new_keys = {str(row.get(key)) for row in rows}
-    merged = [row for row in existing if str(row.get(key)) not in new_keys]
-    merged.extend(dict(row) for row in rows)
-    _write_csv_rows(path, columns, merged)
-    return {
-        "path": path.as_posix(),
-        "sha256": scout.sha256_file_lf_normalized(path),
-        "hash_policy": "lf_normalized_text_register",
-        "rows": len(merged),
-        "upserted_rows": len(rows),
-    }
-
-
 def materialize_ledgers(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
-    stage_payload = _upsert_csv_rows(STAGE_RUN_LEDGER_PATH, scout.ALPHA_LEDGER_COLUMNS, rows, key="ledger_row_id")
-    project_payload = _upsert_csv_rows(PROJECT_ALPHA_LEDGER_PATH, scout.ALPHA_LEDGER_COLUMNS, rows, key="ledger_row_id")
-    return {"stage_run_ledger": stage_payload, "project_alpha_run_ledger": project_payload}
+    return alpha_run_ledgers.materialize_alpha_ledgers(
+        stage_run_ledger_path=STAGE_RUN_LEDGER_PATH,
+        project_alpha_ledger_path=PROJECT_ALPHA_LEDGER_PATH,
+        rows=rows,
+    )
 
 
 def materialize_run_registry_row(
@@ -490,131 +455,14 @@ def build_mt5_alpha_ledger_rows(
     run_output_root: Path,
     external_verification_status: str,
 ) -> list[dict[str, str]]:
-    rows: list[dict[str, str]] = []
-    kpi_record_path = (run_output_root / "kpi_record.json").as_posix()
-    report_paths: dict[str, Any] = {}
-    for record in mt5_kpi_records:
-        report = record.get("report", {})
-        if not isinstance(report, Mapping):
-            continue
-        record_view_key = str(record.get("record_view"))
-        html_report = report.get("html_report", {})
-        metrics_report = report.get("metrics", {})
-        if isinstance(html_report, Mapping) and html_report.get("path"):
-            report_paths[record_view_key] = html_report.get("path")
-        elif isinstance(metrics_report, Mapping) and metrics_report.get("report_path"):
-            report_paths[record_view_key] = metrics_report.get("report_path")
-
-    for record in mt5_kpi_records:
-        record_view = str(record.get("record_view"))
-        metrics = record.get("metrics", {})
-        route_role = str(record.get("route_role") or "")
-        is_component = route_role in {"primary_used", "fallback_used"}
-        is_routed_total = route_role == "routed_total"
-        is_trading_total = not is_component
-        row_path = report_paths.get(record_view, kpi_record_path)
-        if is_trading_total:
-            primary_kpi = _ledger_pairs(
-                (
-                    ("net_profit", metrics.get("net_profit")),
-                    ("pf", metrics.get("profit_factor")),
-                    ("expectancy", metrics.get("expectancy")),
-                    ("trades", metrics.get("trade_count")),
-                    ("win_rate", metrics.get("win_rate_percent")),
-                )
-            )
-            if is_routed_total:
-                guardrail_kpi = _ledger_pairs(
-                    (
-                        ("a_used", metrics.get("tier_a_used_count")),
-                        ("b_fallback", metrics.get("tier_b_fallback_used_count")),
-                        ("no_tier_labelable", metrics.get("no_tier_labelable_rows")),
-                        ("max_dd", metrics.get("max_drawdown_amount")),
-                        ("recovery", metrics.get("recovery_factor")),
-                        ("fill", metrics.get("fill_count")),
-                        ("reject", metrics.get("reject_count")),
-                        ("skip", metrics.get("skip_count")),
-                    )
-                )
-                notes = "Actual routed total from one MT5 tester account path; not a synthetic sum."
-            else:
-                labelable_count = (
-                    metrics.get("tier_b_fallback_labelable_rows")
-                    if record.get("tier_scope") == scout.TIER_B
-                    else metrics.get("tier_a_primary_labelable_rows")
-                )
-                guardrail_kpi = _ledger_pairs(
-                    (
-                        ("labelable", labelable_count),
-                        ("feature_ready", metrics.get("feature_ready_count")),
-                        ("model_ok", metrics.get("model_ok_count")),
-                        ("no_tier_labelable", metrics.get("no_tier_labelable_rows")),
-                        ("max_dd", metrics.get("max_drawdown_amount")),
-                        ("recovery", metrics.get("recovery_factor")),
-                        ("fill", metrics.get("fill_count")),
-                        ("reject", metrics.get("reject_count")),
-                        ("skip", metrics.get("skip_count")),
-                        ("subtypes", metrics.get("partial_context_subtype_counts")),
-                    )
-                )
-                notes = (
-                    "Tier B fallback-only standalone MT5 tester run."
-                    if record.get("tier_scope") == scout.TIER_B
-                    else "Tier A only standalone MT5 tester run."
-                )
-        else:
-            primary_kpi = _ledger_pairs(
-                (
-                    ("route_bars", metrics.get("route_bar_count")),
-                    ("route_share", metrics.get("route_share")),
-                    ("signals", metrics.get("signal_count")),
-                    ("long", metrics.get("long_count")),
-                    ("short", metrics.get("short_count")),
-                    ("fills", metrics.get("fill_count")),
-                )
-            )
-            guardrail_kpi = _ledger_pairs(
-                (
-                    ("profit_attribution", metrics.get("profit_attribution")),
-                    ("reject", metrics.get("reject_count")),
-                    ("skip", metrics.get("skip_count")),
-                    ("subtypes", metrics.get("partial_context_subtype_counts")),
-                )
-            )
-            notes = (
-                "Tier B partial-context fallback used component from one routed MT5 tester run."
-                if route_role == "fallback_used"
-                else "Tier A primary used component from one routed MT5 tester run."
-            )
-        if is_routed_total:
-            judgment = "inconclusive_routed_total_runtime_probe"
-        elif route_role == "tier_b_fallback_only_total":
-            judgment = "inconclusive_tier_b_fallback_only_runtime_probe"
-        elif is_trading_total:
-            judgment = "inconclusive_tier_only_runtime_probe"
-        else:
-            judgment = "inconclusive_routed_component_runtime_probe"
-        rows.append(
-            {
-                "ledger_row_id": f"{run_id}__{record_view}",
-                "stage_id": STAGE_ID,
-                "run_id": run_id,
-                "subrun_id": record_view,
-                "parent_run_id": run_id,
-                "record_view": record_view,
-                "tier_scope": str(record.get("tier_scope")),
-                "kpi_scope": "trading_risk_execution" if is_trading_total else "routed_signal_execution_usage",
-                "scoreboard_lane": "runtime_probe",
-                "status": scout._ledger_status(record.get("status")),
-                "judgment": judgment,
-                "path": scout._ledger_path(row_path),
-                "primary_kpi": primary_kpi,
-                "guardrail_kpi": guardrail_kpi,
-                "external_verification_status": external_verification_status,
-                "notes": notes,
-            }
-        )
-    return rows
+    return alpha_run_ledgers.build_mt5_alpha_ledger_rows(
+        run_id=run_id,
+        stage_id=STAGE_ID,
+        mt5_kpi_records=mt5_kpi_records,
+        run_output_root=run_output_root,
+        external_verification_status=external_verification_status,
+        tier_b=scout.TIER_B,
+    )
 
 
 def write_result_summary(

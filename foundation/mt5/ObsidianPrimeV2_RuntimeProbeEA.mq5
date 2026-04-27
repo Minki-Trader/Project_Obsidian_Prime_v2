@@ -7,8 +7,8 @@
 #include "include/ObsidianPrime/ExecutionBridge.mqh"
 #include "include/ObsidianPrime/RuntimeTelemetry.mqh"
 
-input string          InpRunId = "stage10_run01A";
-input string          InpExplorationLabel = "stage10_Model__AlphaScoutEA";
+input string          InpRunId = "runtime_probe_default";
+input string          InpExplorationLabel = "foundation_RuntimeProbeEA";
 input string          InpTierLabel = "Tier A";
 input string          InpPrimaryActiveTier = "tier_a";
 input string          InpSplitLabel = "validation_is";
@@ -16,7 +16,7 @@ input string          InpMainSymbol = "US100";
 input ENUM_TIMEFRAMES InpTimeframe = PERIOD_M5;
 input bool            InpEnforceM5 = true;
 
-input string          InpFeatureCsvPath = "Project_Obsidian_Prime_v2/stage10/run01A/features.csv";
+input string          InpFeatureCsvPath = "Project_Obsidian_Prime_v2/runtime_probe/default/features.csv";
 input int             InpFeatureCount = 58;
 input bool            InpFeatureCsvUseCommonFiles = true;
 input bool            InpFeatureRequireTimestampMatch = true;
@@ -25,8 +25,8 @@ input bool            InpFeatureStrictHeader = true;
 input string          InpFeatureCsvDelimiter = ",";
 input bool            InpCsvTimestampIsBarClose = true;
 
-input string          InpModelPath = "Project_Obsidian_Prime_v2/stage10/run01A/model.onnx";
-input string          InpModelId = "stage10_run01A_model";
+input string          InpModelPath = "Project_Obsidian_Prime_v2/runtime_probe/default/model.onnx";
+input string          InpModelId = "runtime_probe_default_model";
 input bool            InpModelUseCommonFiles = true;
 input bool            InpModelUseCpuOnly = true;
 input bool            InpModelNoConversion = false;
@@ -35,10 +35,10 @@ input string          InpFeatureOrderHash = "fa06973c24462298ea38d84528b07ca0adf
 
 input bool            InpFallbackEnabled = false;
 input string          InpFallbackTierLabel = "Tier B fallback";
-input string          InpFallbackFeatureCsvPath = "Project_Obsidian_Prime_v2/stage10/run01A/fallback_features.csv";
+input string          InpFallbackFeatureCsvPath = "Project_Obsidian_Prime_v2/runtime_probe/default/fallback_features.csv";
 input int             InpFallbackFeatureCount = 56;
-input string          InpFallbackModelPath = "Project_Obsidian_Prime_v2/stage10/run01A/fallback_model.onnx";
-input string          InpFallbackModelId = "stage10_run01A_tier_b_fallback_model";
+input string          InpFallbackModelPath = "Project_Obsidian_Prime_v2/runtime_probe/default/fallback_model.onnx";
+input string          InpFallbackModelId = "runtime_probe_default_tier_b_fallback_model";
 input string          InpFallbackFeatureOrderHash = "";
 
 input double          InpShortThreshold = 0.55;
@@ -59,8 +59,8 @@ input int             InpMaxConcurrentPositions = 1;
 
 input bool            InpTelemetryEnabled = true;
 input bool            InpTelemetryUseCommonFiles = true;
-input string          InpTelemetryCsvPath = "Project_Obsidian_Prime_v2/stage10/run01A/runtime_telemetry.csv";
-input string          InpSummaryCsvPath = "Project_Obsidian_Prime_v2/stage10/run01A/runtime_summary.csv";
+input string          InpTelemetryCsvPath = "Project_Obsidian_Prime_v2/runtime_probe/default/runtime_telemetry.csv";
+input string          InpSummaryCsvPath = "Project_Obsidian_Prime_v2/runtime_probe/default/runtime_summary.csv";
 
 COpFeatureCsvInput   g_feature_input;
 COpFeatureCsvInput   g_fallback_feature_input;
@@ -95,7 +95,7 @@ string DeinitReasonText(const int reason)
 void PrintTelemetryFailure(const string where, const string reason)
   {
    if(reason != "")
-      PrintFormat("[ObsidianPrimeV2][AlphaScout][telemetry][%s] %s", where, reason);
+      PrintFormat("[ObsidianPrimeV2][RuntimeProbe][telemetry][%s] %s", where, reason);
   }
 
 int FailInit(const string detail)
@@ -103,7 +103,7 @@ int FailInit(const string detail)
    string telemetry_reason = "";
    g_telemetry.RecordLifecycle("init_failed", detail, telemetry_reason);
    PrintTelemetryFailure("init_failed", telemetry_reason);
-   PrintFormat("[ObsidianPrimeV2][AlphaScout][init_failed] %s", detail);
+   PrintFormat("[ObsidianPrimeV2][RuntimeProbe][init_failed] %s", detail);
    g_model_runtime.Deinit();
    g_fallback_model_runtime.Deinit();
    g_runtime_ready = false;
@@ -425,7 +425,7 @@ int OnInit()
       return FailInit(telemetry_reason);
 
    g_runtime_ready = true;
-   Print("[ObsidianPrimeV2][AlphaScout] init_ok");
+   Print("[ObsidianPrimeV2][RuntimeProbe] init_ok");
    return INIT_SUCCEEDED;
   }
 

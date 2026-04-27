@@ -716,7 +716,7 @@ class Stage10LogregMt5ScoutTests(unittest.TestCase):
         root = Path(temp_dir)
         try:
             metaeditor = root / "MetaEditor64.exe"
-            source = root / "ObsidianPrimeV2_AlphaScoutEA.mq5"
+            source = root / "ObsidianPrimeV2_RuntimeProbeEA.mq5"
             metaeditor.write_text("", encoding="utf-8")
             source.write_text("", encoding="utf-8")
             long_dir = root
