@@ -1,5 +1,9 @@
 ﻿# Workspace Changelog
 
+## 2026-04-28
+
+- Stage 12(12단계) `RUN03C(실행 03C)` `run03C_et_standalone_mt5_runtime_probe_v1`를 standalone ExtraTrees MT5 runtime_probe(단독 엑스트라 트리 MT5 런타임 탐침)로 실행했다. 효과(effect, 효과)는 RUN03B(실행 03B) 단독 모델을 ONNX(온닉스), MT5 feature matrix(MT5 피처 행렬), Strategy Tester(전략 테스터) 근거로 연결하되 Stage 10/11(10/11단계) threshold/session/context/baseline(임계값/세션/문맥/기준선)을 쓰지 않게 하는 것이다. 외부 검증 상태(external verification status, 외부 검증 상태)는 `completed`다.
+
 ## 2026-04-24
 
 - 깨끗한 단계 재시작(clean stage restart, 깨끗한 단계 재시작)을 만들었다.
@@ -119,3 +123,11 @@
 - RUN02AC/RUN02AD/RUN02AE(실행 02AC/02AD/02AE) Tier A-only(Tier A 단독)는 OOS(표본외) 밀도와 순수익이 routed(라우팅)보다 약했다. 효과(effect, 효과)는 현재 중심 표면에서 Tier B fallback(Tier B 대체)을 끄는 가설을 낮추는 것이다.
 - RUN02AI/RUN02AJ/RUN02AK(실행 02AI/02AJ/02AK) session stress(세션 압박)는 `200-220` 중심을 유지했다. 효과(effect, 효과)는 `195-215`와 `205-225`를 보조 후보로 남기되, `190-210` validation-heavy(검증 치우침)는 낮추는 것이다.
 - Stage 11(11단계)을 `stage11_alpha_robustness_closeout_packet_v1`로 닫았다. 효과(effect, 효과)는 RUN02Z(실행 02Z) 계열의 작은 표본 양수 단서를 보존하되, alpha quality(알파 품질), promotion_candidate(승격 후보), live readiness(실거래 준비), operating promotion(운영 승격)으로 읽지 않게 하는 것이다.
+- Stage 12(12단계) `12_model_family_challenge__extratrees_training_effect`를 열었다. 효과(effect, 효과)는 Stage 10(10단계) LogReg(로지스틱 회귀), Stage 11(11단계) LightGBM(라이트GBM)과 다른 ExtraTrees(엑스트라 트리) 모델 계열(model family, 모델 계열)의 학습 효과(training effect, 학습 효과)를 분리해서 볼 수 있게 한 것이다.
+- Stage 12(12단계) `RUN03A(실행 03A)` ExtraTrees fwd18 inverse-rank context scout(엑스트라 트리 fwd18 역방향 순위 문맥 탐침)를 Python structural scout(파이썬 구조 탐침)로 실행했다. 효과(effect, 효과)는 fwd18(90분), `ADX<=25`, `abs(di_spread_14)<=8`, `200-220`, hold(보유) `9`를 고정하고 모델만 바꾼 비교 근거를 만든 것이다.
+- RUN03A(실행 03A)는 Tier A+B combined(Tier A+B 합산) `1293`행 중 신호 `2`개, validation(검증) 신호 `0`개, OOS(표본외) 신호 `1`개, OOS hit rate(표본외 적중률) `0.0`을 기록했다. 효과(effect, 효과)는 ExtraTrees(엑스트라 트리)를 그대로 MT5 runtime_probe(MT5 런타임 탐침)로 넘기기에는 신호가 너무 적다는 판정을 남기는 것이다.
+- RUN03A(실행 03A)의 ONNX(`Open Neural Network Exchange`, 온닉스) probability parity(확률 동등성)는 통과했다. 효과(effect, 효과)는 모델 산출물 변환은 재현 가능하지만, 거래 실행 효과(trading execution effect, 거래 실행 효과)는 아직 보지 않았다고 구분하는 것이다.
+- 사용자 정정에 따라 RUN03A(실행 03A)를 `invalid_for_standalone_scope(단독 범위 무효)`로 낮췄다. 효과(effect, 효과)는 Stage 10/11(10/11단계)의 comparison reference(비교 기준)와 Stage 11(11단계)의 context surface(문맥 표면)를 쓴 실행을 standalone Stage 12 evidence(단독 12단계 근거)로 오해하지 않게 하는 것이다.
+- Stage 12(12단계) `RUN03B(실행 03B)` `run03B_et_standalone_fwd12_v1`을 standalone ExtraTrees scout(단독 엑스트라 트리 탐침)로 실행했다. 효과(effect, 효과)는 Stage 10/11(10/11단계) threshold/session/context/model surface(임계값/세션/문맥/모델 표면)를 쓰지 않고, fwd12(60분) foundation input(기반 입력) 위에서 ExtraTrees(엑스트라 트리) 학습 효과만 본 것이다.
+- RUN03B(실행 03B)는 validation/OOS(검증/표본외) 신호 `604/463`, hit rate(적중률) `0.352649/0.427646`, macro F1(매크로 F1) `0.424607/0.446554`를 기록했다. 효과(effect, 효과)는 신호 밀도는 생겼지만 검증/표본외 품질이 약해서 `inconclusive_standalone_extratrees_training_effect(불충분 단독 엑스트라 트리 학습 효과)`로 남기는 것이다.
+- 2026-04-28: `run03D_et_standalone_batch20_v1` completed(완료). Stage12 standalone batch20(단독 20개 묶음) Python structural scout(파이썬 구조 탐색), best(최상위) `v11_base_leaf20_q85` validation/OOS hit(검증/표본외 적중) `0.392688` / `0.457317`, MT5 external verification(메타트레이더5 외부 검증) `out_of_scope_by_claim`.

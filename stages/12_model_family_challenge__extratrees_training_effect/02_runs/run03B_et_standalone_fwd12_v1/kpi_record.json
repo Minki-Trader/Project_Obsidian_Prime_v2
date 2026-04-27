@@ -1,0 +1,226 @@
+{
+  "run_id": "run03B_et_standalone_fwd12_v1",
+  "kpi_scope": "standalone_model_training_effect",
+  "run_number": "run03B",
+  "stage_id": "12_model_family_challenge__extratrees_training_effect",
+  "status": "completed",
+  "judgment": "inconclusive_standalone_extratrees_training_effect",
+  "exploration_label": "stage12_Model__ExtraTreesStandaloneFwd12",
+  "model_family": "sklearn_extratreesclassifier_multiclass",
+  "standalone_scope": true,
+  "stage10_11_inheritance": false,
+  "model_input_dataset_id": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+  "feature_set_id": "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "model_metrics": {
+    "train": {
+      "rows": 29222,
+      "accuracy": 0.6923550749435357,
+      "balanced_accuracy": 0.6940378276148941,
+      "macro_f1": 0.6939896007657641,
+      "log_loss": 0.9558261942867295,
+      "true_class_distribution": {
+        "short": 9064,
+        "flat": 9643,
+        "long": 10515
+      },
+      "predicted_class_distribution": {
+        "short": 9537,
+        "flat": 11284,
+        "long": 8401
+      },
+      "mean_probability": {
+        "p_short": 0.3315760009734767,
+        "p_flat": 0.3332101092321705,
+        "p_long": 0.3352138897943544
+      }
+    },
+    "validation": {
+      "rows": 9844,
+      "accuracy": 0.43376676147907356,
+      "balanced_accuracy": 0.42607942030402945,
+      "macro_f1": 0.4246068031038796,
+      "log_loss": 1.0542880047553638,
+      "true_class_distribution": {
+        "short": 2920,
+        "flat": 3631,
+        "long": 3293
+      },
+      "predicted_class_distribution": {
+        "short": 3123,
+        "flat": 3809,
+        "long": 2912
+      },
+      "mean_probability": {
+        "p_short": 0.33393897818704477,
+        "p_flat": 0.3237598865159463,
+        "p_long": 0.3423011352970104
+      }
+    },
+    "oos": {
+      "rows": 7584,
+      "accuracy": 0.45147679324894513,
+      "balanced_accuracy": 0.4451050010000637,
+      "macro_f1": 0.44655366112413875,
+      "log_loss": 1.0498679835907299,
+      "true_class_distribution": {
+        "short": 2259,
+        "flat": 2968,
+        "long": 2357
+      },
+      "predicted_class_distribution": {
+        "short": 2429,
+        "flat": 2521,
+        "long": 2634
+      },
+      "mean_probability": {
+        "p_short": 0.3377033325485295,
+        "p_flat": 0.31707391434271287,
+        "p_long": 0.3452227531087589
+      }
+    },
+    "probability_checks": {
+      "finite": true,
+      "row_sum_max_abs_error": 3.774758283725532e-15
+    }
+  },
+  "signal_metrics": {
+    "rows": 46650,
+    "signal_count": 3273,
+    "short_count": 1963,
+    "long_count": 1310,
+    "signal_coverage": 0.07016077170418006,
+    "directional_correct_count": 2413,
+    "directional_hit_rate": 0.7372441185456767,
+    "by_split": {
+      "train": {
+        "rows": 29222,
+        "signal_count": 2206,
+        "short_count": 1363,
+        "long_count": 843,
+        "signal_coverage": 0.07549106837314352,
+        "directional_correct_count": 2002,
+        "directional_hit_rate": 0.9075249320036265
+      },
+      "validation": {
+        "rows": 9844,
+        "signal_count": 604,
+        "short_count": 304,
+        "long_count": 300,
+        "signal_coverage": 0.061357171881349044,
+        "directional_correct_count": 213,
+        "directional_hit_rate": 0.3526490066225166
+      },
+      "oos": {
+        "rows": 7584,
+        "signal_count": 463,
+        "short_count": 296,
+        "long_count": 167,
+        "signal_coverage": 0.06104957805907173,
+        "directional_correct_count": 198,
+        "directional_hit_rate": 0.42764578833693306
+      }
+    }
+  },
+  "threshold_rule": {
+    "threshold_method": "standalone_validation_nonflat_confidence_q90",
+    "confidence_quantile": 0.9,
+    "nonflat_confidence_threshold": 0.4516214515113969,
+    "selection_split": "validation",
+    "decision_policy": "predict short or long only when predicted non-flat class confidence is at or above the validation q90 threshold",
+    "inherited_from_stage10_or_stage11": false
+  },
+  "tier_records": {
+    "tier_a_separate": {
+      "status": "completed",
+      "metrics": {
+        "rows": 46650,
+        "signal_count": 3273,
+        "short_count": 1963,
+        "long_count": 1310,
+        "signal_coverage": 0.07016077170418006,
+        "directional_correct_count": 2413,
+        "directional_hit_rate": 0.7372441185456767,
+        "by_split": {
+          "train": {
+            "rows": 29222,
+            "signal_count": 2206,
+            "short_count": 1363,
+            "long_count": 843,
+            "signal_coverage": 0.07549106837314352,
+            "directional_correct_count": 2002,
+            "directional_hit_rate": 0.9075249320036265
+          },
+          "validation": {
+            "rows": 9844,
+            "signal_count": 604,
+            "short_count": 304,
+            "long_count": 300,
+            "signal_coverage": 0.061357171881349044,
+            "directional_correct_count": 213,
+            "directional_hit_rate": 0.3526490066225166
+          },
+          "oos": {
+            "rows": 7584,
+            "signal_count": 463,
+            "short_count": 296,
+            "long_count": 167,
+            "signal_coverage": 0.06104957805907173,
+            "directional_correct_count": 198,
+            "directional_hit_rate": 0.42764578833693306
+          }
+        }
+      }
+    },
+    "tier_b_separate": {
+      "status": "not_produced",
+      "judgment": "out_of_scope_by_claim_standalone_tier_a_only"
+    },
+    "tier_ab_combined": {
+      "status": "not_produced",
+      "judgment": "out_of_scope_by_claim_standalone_tier_a_only"
+    }
+  },
+  "external_verification_status": "out_of_scope_by_claim",
+  "artifacts": [
+    {
+      "role": "model",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/models/model.joblib",
+      "sha256": "8ecec4add0ea78e706516f0980785d4554eaf713c56d770cf330abc99acc81cf"
+    },
+    {
+      "role": "feature_order",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/models/features.txt",
+      "sha256": "d44f31835e43b4037678d745fb8d73e0b62d964a61723b4660eab63c7eddf696"
+    },
+    {
+      "role": "predictions",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/predictions/preds.parquet",
+      "sha256": "d9fd048b3084baf4c8577383319f49f256a621e3ac44675b021c3d0f8f389fce"
+    },
+    {
+      "role": "scored_predictions",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/predictions/scored.parquet",
+      "sha256": "bb81c6b6b577e490290db1d4725a62cf4fdcd91474a6699a06a9cdf072ebfbc3"
+    },
+    {
+      "role": "feature_importance",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/feature_importance/fi.csv",
+      "sha256": "1d3188dcb629b42f2197903a1f756641852d72ebe6685633f19708002b71a18b"
+    },
+    {
+      "role": "threshold_rule",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/threshold_rule.json",
+      "sha256": "a18f8ecc548c4a9b98bafd15f6e782e5416e8245347f07b591b2b4595b7af27f"
+    }
+  ],
+  "result_judgment": {
+    "result_subject": "Stage 12 RUN03B standalone ExtraTrees training effect scout",
+    "evidence_available": "Tier A full-context Python model metrics, standalone confidence signal rule, predictions, feature importance, ledgers",
+    "evidence_missing": "Tier B partial-context model, combined routed view, MT5 Strategy Tester output, trading-risk execution KPI",
+    "judgment_label": "inconclusive_standalone_extratrees_training_effect",
+    "claim_boundary": "standalone Python structural training effect only; no Stage 10/11 inheritance and no runtime or operating claim",
+    "next_condition": "only create a new run if the standalone threshold or model design is intentionally changed before any MT5 runtime_probe",
+    "user_explanation_hook": "새 모델은 단독으로 학습했지만 아직 거래 실행 효과는 보지 않았다."
+  }
+}

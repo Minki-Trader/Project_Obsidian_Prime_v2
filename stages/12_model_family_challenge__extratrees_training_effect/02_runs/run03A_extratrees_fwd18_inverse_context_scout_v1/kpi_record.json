@@ -1,0 +1,444 @@
+{
+  "run_id": "run03A_extratrees_fwd18_inverse_context_scout_v1",
+  "stage_id": "12_model_family_challenge__extratrees_training_effect",
+  "scoreboard_lane": "structural_scout",
+  "kpi_scope": "model_training_signal_probability_rank_context",
+  "model_metrics": {
+    "tier_a": {
+      "train": {
+        "rows": 26613,
+        "accuracy": 0.5204223499793335,
+        "balanced_accuracy": 0.525598269498427,
+        "macro_f1": 0.5188817346945046,
+        "log_loss": 1.0368420276190695,
+        "predicted_class_distribution": {
+          "short": 9415,
+          "flat": 10982,
+          "long": 6216
+        },
+        "true_class_distribution": {
+          "short": 8171,
+          "flat": 8782,
+          "long": 9660
+        },
+        "mean_probability": {
+          "p_short": 0.3325227051831767,
+          "p_flat": 0.33334504530536424,
+          "p_long": 0.3341322495114593
+        }
+      },
+      "validation": {
+        "rows": 9014,
+        "accuracy": 0.44142445085422677,
+        "balanced_accuracy": 0.43421747042577313,
+        "macro_f1": 0.4300686111949923,
+        "log_loss": 1.057102222845719,
+        "predicted_class_distribution": {
+          "short": 3131,
+          "flat": 3570,
+          "long": 2313
+        },
+        "true_class_distribution": {
+          "short": 2687,
+          "flat": 3340,
+          "long": 2987
+        },
+        "mean_probability": {
+          "p_short": 0.3357394821021124,
+          "p_flat": 0.325047486525831,
+          "p_long": 0.33921303137205683
+        }
+      },
+      "oos": {
+        "rows": 6940,
+        "accuracy": 0.4597982708933718,
+        "balanced_accuracy": 0.45502533600308565,
+        "macro_f1": 0.4548831160530626,
+        "log_loss": 1.0586846602460342,
+        "predicted_class_distribution": {
+          "short": 2486,
+          "flat": 2292,
+          "long": 2162
+        },
+        "true_class_distribution": {
+          "short": 2033,
+          "flat": 2766,
+          "long": 2141
+        },
+        "mean_probability": {
+          "p_short": 0.3383276245320062,
+          "p_flat": 0.3181704869822832,
+          "p_long": 0.3435018884857108
+        }
+      }
+    },
+    "tier_b": {
+      "train": {
+        "rows": 34720,
+        "accuracy": 0.5332661290322581,
+        "balanced_accuracy": 0.5357003851909282,
+        "macro_f1": 0.5309820158565003,
+        "log_loss": 1.0252140962672904,
+        "predicted_class_distribution": {
+          "short": 12424,
+          "flat": 14208,
+          "long": 8088
+        },
+        "true_class_distribution": {
+          "short": 10279,
+          "flat": 12311,
+          "long": 12130
+        },
+        "mean_probability": {
+          "p_short": 0.33160004377318486,
+          "p_flat": 0.33475617494708193,
+          "p_long": 0.3336437812797384
+        }
+      },
+      "validation": {
+        "rows": 11100,
+        "accuracy": 0.4727927927927928,
+        "balanced_accuracy": 0.4548215901883652,
+        "macro_f1": 0.4506878234451533,
+        "log_loss": 1.0429744196161908,
+        "predicted_class_distribution": {
+          "short": 3844,
+          "flat": 4646,
+          "long": 2610
+        },
+        "true_class_distribution": {
+          "short": 3095,
+          "flat": 4569,
+          "long": 3436
+        },
+        "mean_probability": {
+          "p_short": 0.33338963714337094,
+          "p_flat": 0.3300039047728421,
+          "p_long": 0.3366064580837921
+        }
+      },
+      "oos": {
+        "rows": 7860,
+        "accuracy": 0.45572519083969465,
+        "balanced_accuracy": 0.45339092967933475,
+        "macro_f1": 0.4512003614589483,
+        "log_loss": 1.0551114990289097,
+        "predicted_class_distribution": {
+          "short": 3007,
+          "flat": 2446,
+          "long": 2407
+        },
+        "true_class_distribution": {
+          "short": 2254,
+          "flat": 3238,
+          "long": 2368
+        },
+        "mean_probability": {
+          "p_short": 0.34344561125760603,
+          "p_flat": 0.31039143413669484,
+          "p_long": 0.346162954605704
+        }
+      }
+    }
+  },
+  "signal": {
+    "tier_a_separate": {
+      "tier_scope": "Tier A",
+      "metrics": {
+        "rows": 1020,
+        "signal_count": 1,
+        "short_count": 0,
+        "long_count": 1,
+        "signal_coverage": 0.000980392156862745,
+        "directional_hit_rate": 0.0,
+        "directional_correct_count": 0,
+        "by_split": {
+          "oos": {
+            "rows": 160,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          },
+          "train": {
+            "rows": 649,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.0015408320493066256,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "validation": {
+            "rows": 211,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          }
+        },
+        "probability_row_sum_max_abs_error": 2.4424906541753444e-15,
+        "mean_probability": {
+          "p_short": 0.31082994343444525,
+          "p_flat": 0.37991419558500705,
+          "p_long": 0.3092558609805484
+        },
+        "partial_context_subtype_counts": {
+          "Tier_A_full_context": 1020
+        }
+      }
+    },
+    "tier_b_separate": {
+      "tier_scope": "Tier B",
+      "metrics": {
+        "rows": 273,
+        "signal_count": 1,
+        "short_count": 0,
+        "long_count": 1,
+        "signal_coverage": 0.003663003663003663,
+        "directional_hit_rate": 0.0,
+        "directional_correct_count": 0,
+        "by_split": {
+          "oos": {
+            "rows": 28,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.03571428571428571,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "train": {
+            "rows": 175,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          },
+          "validation": {
+            "rows": 70,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          }
+        },
+        "probability_row_sum_max_abs_error": 7.549516567451064e-15,
+        "mean_probability": {
+          "p_short": 0.28459764828324785,
+          "p_flat": 0.42960918881041554,
+          "p_long": 0.2857931629063428
+        },
+        "partial_context_subtype_counts": {
+          "B_macro_missing": 266,
+          "B_full_context_outside_tier_a_scope": 7
+        }
+      }
+    },
+    "tier_ab_combined": {
+      "tier_scope": "Tier A+B",
+      "metrics": {
+        "rows": 1293,
+        "signal_count": 2,
+        "short_count": 0,
+        "long_count": 2,
+        "signal_coverage": 0.0015467904098994587,
+        "directional_hit_rate": 0.0,
+        "directional_correct_count": 0,
+        "by_split": {
+          "oos": {
+            "rows": 188,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.005319148936170213,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "train": {
+            "rows": 824,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.0012135922330097086,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "validation": {
+            "rows": 281,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          }
+        },
+        "probability_row_sum_max_abs_error": 7.549516567451064e-15,
+        "mean_probability": {
+          "p_short": 0.30529133819370524,
+          "p_flat": 0.39040664195046454,
+          "p_long": 0.3043020198558322
+        },
+        "partial_context_subtype_counts": {
+          "Tier_A_full_context": 1020,
+          "B_macro_missing": 266,
+          "B_full_context_outside_tier_a_scope": 7
+        }
+      }
+    }
+  },
+  "threshold": {
+    "rank_quantile": 0.96,
+    "tier_a_rule": {
+      "threshold_id": "tier_a_rankq0.960_short0.431_long0.398_margin0.120",
+      "short_threshold": 0.43149492676573875,
+      "long_threshold": 0.39828600194305036,
+      "min_margin": 0.12
+    },
+    "tier_b_rule": {
+      "threshold_id": "tier_b_rankq0.960_short0.351_long0.394_margin0.080",
+      "short_threshold": 0.35054310738273964,
+      "long_threshold": 0.3938903370925687,
+      "min_margin": 0.08
+    },
+    "selected_threshold_id": "a_tier_a_rankq0.960_short0.431_long0.398_margin0.120__b_tier_b_rankq0.960_short0.351_long0.394_margin0.080__hold9__slice_mid_second_overlap_200_220__model_extratrees_rank_target_inverse__ctx_di_spread_abs_lte8_adx_lte25",
+    "decision_mode": "inverse",
+    "context_gate": "di_spread_abs_lte8_adx_lte25"
+  },
+  "route_coverage": {
+    "policy_id": "tier_b_partial_context_core42_fallback_v1",
+    "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+    "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+    "feature_count": 42,
+    "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+    "label_threshold_log_return": 0.0015403193874070408,
+    "source_raw_rows": 261344,
+    "source_valid_rows": 56939,
+    "labelable_rows": 1293,
+    "tier_a_primary_rows": 1020,
+    "tier_b_training_rows": 53680,
+    "tier_b_fallback_rows": 273,
+    "tier_b_fallback_allowed_subtypes": null,
+    "tier_b_fallback_filter_policy": "none",
+    "tier_b_fallback_filtered_out_rows": 0,
+    "tier_b_fallback_filtered_out_by_subtype": {},
+    "tier_b_fallback_filtered_out_by_split_subtype": {
+      "train": {},
+      "validation": {},
+      "oos": {}
+    },
+    "no_tier_labelable_rows": 0,
+    "by_split": {
+      "train": {
+        "tier_a_primary_rows": 649,
+        "tier_b_fallback_rows": 175,
+        "tier_b_fallback_filtered_out_rows": 0,
+        "no_tier_labelable_rows": 0,
+        "routed_labelable_rows": 824
+      },
+      "validation": {
+        "tier_a_primary_rows": 211,
+        "tier_b_fallback_rows": 70,
+        "tier_b_fallback_filtered_out_rows": 0,
+        "no_tier_labelable_rows": 0,
+        "routed_labelable_rows": 281
+      },
+      "oos": {
+        "tier_a_primary_rows": 160,
+        "tier_b_fallback_rows": 28,
+        "tier_b_fallback_filtered_out_rows": 0,
+        "no_tier_labelable_rows": 0,
+        "routed_labelable_rows": 188
+      }
+    },
+    "tier_b_fallback_by_subtype": {
+      "B_full_context_outside_tier_a_scope": 7,
+      "B_macro_missing": 266
+    },
+    "tier_b_fallback_by_split_subtype": {
+      "train": {
+        "B_full_context_outside_tier_a_scope": 7,
+        "B_macro_missing": 168
+      },
+      "validation": {
+        "B_macro_missing": 70
+      },
+      "oos": {
+        "B_macro_missing": 28
+      }
+    },
+    "no_tier_by_split": {
+      "train": 0,
+      "validation": 0,
+      "oos": 0
+    },
+    "session_slice": {
+      "slice_id": "mid_second_overlap_200_220",
+      "policy_id": "cash_session_mid_second_overlap_200_220_minutes",
+      "minute_column": "minutes_from_cash_open",
+      "start_exclusive": 200.0,
+      "end_inclusive": 220.0,
+      "timezone_basis": "precomputed_session_feature"
+    },
+    "note": "Session and context filtered structural scout rows; no MT5 PnL.",
+    "context_gate": "di_spread_abs_lte8_adx_lte25"
+  },
+  "onnx_probability_parity": {
+    "passed": true,
+    "tier_a": {
+      "passed": true,
+      "rows": 128,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.1293561419378761e-07,
+      "mean_abs_diff": 3.274876851203495e-08,
+      "onnx_row_sum_max_abs_error": 2.086162567138672e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "label",
+        "probabilities"
+      ]
+    },
+    "tier_b": {
+      "passed": true,
+      "rows": 128,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.4360875255636785e-07,
+      "mean_abs_diff": 2.7888195535160042e-08,
+      "onnx_row_sum_max_abs_error": 1.7881393432617188e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "label",
+        "probabilities"
+      ]
+    }
+  },
+  "external_verification_status": "out_of_scope_by_claim",
+  "judgment": {
+    "result_subject": "Stage 12 RUN03A ExtraTrees fwd18 inverse-rank context structural scout",
+    "evidence_available": "Python predictions, model metrics, ONNX parity, rank sweeps, ledgers",
+    "evidence_missing": "MT5 Strategy Tester output and trading-risk execution KPI",
+    "judgment_label": "inconclusive_extratrees_structural_scout_payload",
+    "claim_boundary": "new model training effect observed structurally; no runtime or operating claim",
+    "next_condition": "run a narrow MT5 runtime_probe only if the structural read is worth external verification",
+    "user_explanation_hook": "\uc0c8 \ubaa8\ub378\uc740 \ud559\uc2b5\ub410\uc9c0\ub9cc \uc544\uc9c1 \uac70\ub798 \uc2e4\ud589 \ud6a8\uacfc\ub294 \ubcf4\uc9c0 \uc54a\uc558\ub2e4."
+  }
+}

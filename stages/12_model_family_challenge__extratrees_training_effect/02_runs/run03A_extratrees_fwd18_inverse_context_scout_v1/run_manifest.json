@@ -1,0 +1,739 @@
+{
+  "identity": {
+    "run_id": "run03A_extratrees_fwd18_inverse_context_scout_v1",
+    "run_number": "run03A",
+    "stage_id": "12_model_family_challenge__extratrees_training_effect",
+    "exploration_label": "stage12_Model__ExtraTreesFwd18InverseContext",
+    "model_family": "sklearn_extratreesclassifier_multiclass",
+    "lane": "alpha_model_family_challenger",
+    "scoreboard_lane": "structural_scout",
+    "status": "completed_payload",
+    "judgment": "inconclusive_extratrees_structural_scout_payload"
+  },
+  "hypothesis": "ExtraTrees can produce a different fwd18 inverse-rank context probability surface than Stage 10 LogReg and Stage 11 LightGBM while the label, split, session, context, and hold stay fixed.",
+  "comparison_references": {
+    "stage10": {
+      "run_id": "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1",
+      "model_family": "sklearn_logistic_regression_multiclass",
+      "stage_id": "10_alpha_scout__default_split_model_threshold_scan",
+      "threshold_id": "short0.600_long0.450_margin0.000",
+      "session_slice_id": "mid_second_overlap_200_220",
+      "max_hold_bars": 9,
+      "validation_mt5_net_profit": 318.48,
+      "validation_mt5_profit_factor": 3.88,
+      "oos_mt5_net_profit": 313.14,
+      "oos_mt5_profit_factor": 3.99,
+      "boundary": "comparison_scoreboard_only_not_operating_reference"
+    },
+    "stage11": {
+      "run_id": "run02Z_lgbm_fwd18_inverse_rank_context_v1",
+      "model_family": "lightgbm_lgbmclassifier_multiclass",
+      "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+      "selected_surface": "fwd18_inverse_rank_di_spread_abs_lte8_adx_lte25_hold9_slice200_220",
+      "validation_mt5_net_profit": 386.06,
+      "validation_mt5_profit_factor": 7.25,
+      "validation_trades": 9,
+      "oos_mt5_net_profit": 352.63,
+      "oos_mt5_profit_factor": 52.03,
+      "oos_trades": 5,
+      "boundary": "tiny_sample_runtime_probe_not_promotion"
+    }
+  },
+  "experiment_design": {
+    "decision_use": "Decide whether a non-LightGBM model-family surface deserves an MT5 runtime_probe.",
+    "control_variables": {
+      "symbol": "US100",
+      "timeframe": "M5",
+      "label": "label_v1_fwd18_m5_logret_train_q33_3class",
+      "split": "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413",
+      "session_slice_id": "mid_second_overlap_200_220",
+      "context_gate": "abs(di_spread_14)<=8 and adx_14<=25",
+      "decision_mode": "inverse_rank",
+      "max_hold_bars": 9
+    },
+    "changed_variables": {
+      "model_family": "sklearn_extratreesclassifier_multiclass"
+    },
+    "success_criteria": "Enough validation and OOS structural signals with non-fragile directional hit rates.",
+    "failure_criteria": "Too few signals or validation/OOS hit rates that do not support an MT5 runtime_probe.",
+    "invalid_conditions": "Feature hash mismatch, missing split, non-finite features, or ONNX parity failure.",
+    "stop_conditions": "No operating or promotion claim without MT5 Strategy Tester evidence."
+  },
+  "data_integrity": {
+    "data_source": "data/processed/model_inputs/label_v1_fwd18_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "time_axis": "broker-derived bar close timestamp normalized as UTC for Python artifacts",
+    "sample_scope": "Tier A 58-feature full-context and Tier B core42 partial-context rows in fwd18 split v1",
+    "split_boundary": "train < 2025-01-01; validation 2025-01-01..2025-09-30; OOS >= 2025-10-01",
+    "feature_label_boundary": "features are closed-bar inputs; fwd18 label uses future close only as target",
+    "leakage_risk": "validation-selected rank thresholds can overfit; this run is structural only",
+    "data_hash_or_identity": {
+      "tier_a_model_input_sha256": "adda3aaa6b489bb3511598d074809d4bffd374bba1d224e3d86597cba724bc59",
+      "tier_a_feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "tier_b_feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306"
+    },
+    "integrity_judgment": "usable_with_boundary"
+  },
+  "model_validation": {
+    "model_family": "sklearn_extratreesclassifier_multiclass",
+    "target_and_label": "3-class short/flat/long fwd18 log-return label",
+    "split_method": "fixed chronological train/validation/OOS",
+    "selection_metric": "validation rank quantile threshold with structural directional hit read",
+    "secondary_metrics": [
+      "macro_f1",
+      "balanced_accuracy",
+      "signal_count",
+      "signal_coverage",
+      "OOS hit_rate"
+    ],
+    "threshold_policy": "rank quantile q0.96, inverse signal, context filtered",
+    "overfit_risk": "threshold and context inherited from Stage 11; model-family testing still adds multiple-testing risk",
+    "calibration_risk": "ExtraTrees probabilities are used as ranks, not calibrated probabilities",
+    "comparison_baseline": "run02Z_lgbm_fwd18_inverse_rank_context_v1",
+    "validation_judgment": "exploratory"
+  },
+  "environment_reproducibility": {
+    "execution_environment": "local Windows PowerShell with repository Python environment",
+    "dependency_surface": "sklearn, pandas, numpy, pyarrow, joblib, skl2onnx, onnxruntime",
+    "entry_command": "python foundation/pipelines/run_stage12_extratrees_training_effect_scout.py",
+    "local_assumptions": "raw MT5 CSVs and processed fwd18 model input already exist in workspace",
+    "clean_checkout_status": "reproducible_with_setup",
+    "recovery_instruction": "regenerate fwd18 model input artifacts before rerunning if processed data is missing",
+    "reproducibility_judgment": "reproducible_with_setup"
+  },
+  "threshold": {
+    "rank_quantile": 0.96,
+    "tier_a_rule": {
+      "threshold_id": "tier_a_rankq0.960_short0.431_long0.398_margin0.120",
+      "short_threshold": 0.43149492676573875,
+      "long_threshold": 0.39828600194305036,
+      "min_margin": 0.12
+    },
+    "tier_b_rule": {
+      "threshold_id": "tier_b_rankq0.960_short0.351_long0.394_margin0.080",
+      "short_threshold": 0.35054310738273964,
+      "long_threshold": 0.3938903370925687,
+      "min_margin": 0.08
+    },
+    "selected_threshold_id": "a_tier_a_rankq0.960_short0.431_long0.398_margin0.120__b_tier_b_rankq0.960_short0.351_long0.394_margin0.080__hold9__slice_mid_second_overlap_200_220__model_extratrees_rank_target_inverse__ctx_di_spread_abs_lte8_adx_lte25",
+    "decision_mode": "inverse",
+    "context_gate": "di_spread_abs_lte8_adx_lte25"
+  },
+  "route_coverage": {
+    "policy_id": "tier_b_partial_context_core42_fallback_v1",
+    "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+    "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+    "feature_count": 42,
+    "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+    "label_threshold_log_return": 0.0015403193874070408,
+    "source_raw_rows": 261344,
+    "source_valid_rows": 56939,
+    "labelable_rows": 1293,
+    "tier_a_primary_rows": 1020,
+    "tier_b_training_rows": 53680,
+    "tier_b_fallback_rows": 273,
+    "tier_b_fallback_allowed_subtypes": null,
+    "tier_b_fallback_filter_policy": "none",
+    "tier_b_fallback_filtered_out_rows": 0,
+    "tier_b_fallback_filtered_out_by_subtype": {},
+    "tier_b_fallback_filtered_out_by_split_subtype": {
+      "train": {},
+      "validation": {},
+      "oos": {}
+    },
+    "no_tier_labelable_rows": 0,
+    "by_split": {
+      "train": {
+        "tier_a_primary_rows": 649,
+        "tier_b_fallback_rows": 175,
+        "tier_b_fallback_filtered_out_rows": 0,
+        "no_tier_labelable_rows": 0,
+        "routed_labelable_rows": 824
+      },
+      "validation": {
+        "tier_a_primary_rows": 211,
+        "tier_b_fallback_rows": 70,
+        "tier_b_fallback_filtered_out_rows": 0,
+        "no_tier_labelable_rows": 0,
+        "routed_labelable_rows": 281
+      },
+      "oos": {
+        "tier_a_primary_rows": 160,
+        "tier_b_fallback_rows": 28,
+        "tier_b_fallback_filtered_out_rows": 0,
+        "no_tier_labelable_rows": 0,
+        "routed_labelable_rows": 188
+      }
+    },
+    "tier_b_fallback_by_subtype": {
+      "B_full_context_outside_tier_a_scope": 7,
+      "B_macro_missing": 266
+    },
+    "tier_b_fallback_by_split_subtype": {
+      "train": {
+        "B_full_context_outside_tier_a_scope": 7,
+        "B_macro_missing": 168
+      },
+      "validation": {
+        "B_macro_missing": 70
+      },
+      "oos": {
+        "B_macro_missing": 28
+      }
+    },
+    "no_tier_by_split": {
+      "train": 0,
+      "validation": 0,
+      "oos": 0
+    },
+    "session_slice": {
+      "slice_id": "mid_second_overlap_200_220",
+      "policy_id": "cash_session_mid_second_overlap_200_220_minutes",
+      "minute_column": "minutes_from_cash_open",
+      "start_exclusive": 200.0,
+      "end_inclusive": 220.0,
+      "timezone_basis": "precomputed_session_feature"
+    },
+    "note": "Session and context filtered structural scout rows; no MT5 PnL.",
+    "context_gate": "di_spread_abs_lte8_adx_lte25"
+  },
+  "model_metrics": {
+    "tier_a": {
+      "train": {
+        "rows": 26613,
+        "accuracy": 0.5204223499793335,
+        "balanced_accuracy": 0.525598269498427,
+        "macro_f1": 0.5188817346945046,
+        "log_loss": 1.0368420276190695,
+        "predicted_class_distribution": {
+          "short": 9415,
+          "flat": 10982,
+          "long": 6216
+        },
+        "true_class_distribution": {
+          "short": 8171,
+          "flat": 8782,
+          "long": 9660
+        },
+        "mean_probability": {
+          "p_short": 0.3325227051831767,
+          "p_flat": 0.33334504530536424,
+          "p_long": 0.3341322495114593
+        }
+      },
+      "validation": {
+        "rows": 9014,
+        "accuracy": 0.44142445085422677,
+        "balanced_accuracy": 0.43421747042577313,
+        "macro_f1": 0.4300686111949923,
+        "log_loss": 1.057102222845719,
+        "predicted_class_distribution": {
+          "short": 3131,
+          "flat": 3570,
+          "long": 2313
+        },
+        "true_class_distribution": {
+          "short": 2687,
+          "flat": 3340,
+          "long": 2987
+        },
+        "mean_probability": {
+          "p_short": 0.3357394821021124,
+          "p_flat": 0.325047486525831,
+          "p_long": 0.33921303137205683
+        }
+      },
+      "oos": {
+        "rows": 6940,
+        "accuracy": 0.4597982708933718,
+        "balanced_accuracy": 0.45502533600308565,
+        "macro_f1": 0.4548831160530626,
+        "log_loss": 1.0586846602460342,
+        "predicted_class_distribution": {
+          "short": 2486,
+          "flat": 2292,
+          "long": 2162
+        },
+        "true_class_distribution": {
+          "short": 2033,
+          "flat": 2766,
+          "long": 2141
+        },
+        "mean_probability": {
+          "p_short": 0.3383276245320062,
+          "p_flat": 0.3181704869822832,
+          "p_long": 0.3435018884857108
+        }
+      }
+    },
+    "tier_b": {
+      "train": {
+        "rows": 34720,
+        "accuracy": 0.5332661290322581,
+        "balanced_accuracy": 0.5357003851909282,
+        "macro_f1": 0.5309820158565003,
+        "log_loss": 1.0252140962672904,
+        "predicted_class_distribution": {
+          "short": 12424,
+          "flat": 14208,
+          "long": 8088
+        },
+        "true_class_distribution": {
+          "short": 10279,
+          "flat": 12311,
+          "long": 12130
+        },
+        "mean_probability": {
+          "p_short": 0.33160004377318486,
+          "p_flat": 0.33475617494708193,
+          "p_long": 0.3336437812797384
+        }
+      },
+      "validation": {
+        "rows": 11100,
+        "accuracy": 0.4727927927927928,
+        "balanced_accuracy": 0.4548215901883652,
+        "macro_f1": 0.4506878234451533,
+        "log_loss": 1.0429744196161908,
+        "predicted_class_distribution": {
+          "short": 3844,
+          "flat": 4646,
+          "long": 2610
+        },
+        "true_class_distribution": {
+          "short": 3095,
+          "flat": 4569,
+          "long": 3436
+        },
+        "mean_probability": {
+          "p_short": 0.33338963714337094,
+          "p_flat": 0.3300039047728421,
+          "p_long": 0.3366064580837921
+        }
+      },
+      "oos": {
+        "rows": 7860,
+        "accuracy": 0.45572519083969465,
+        "balanced_accuracy": 0.45339092967933475,
+        "macro_f1": 0.4512003614589483,
+        "log_loss": 1.0551114990289097,
+        "predicted_class_distribution": {
+          "short": 3007,
+          "flat": 2446,
+          "long": 2407
+        },
+        "true_class_distribution": {
+          "short": 2254,
+          "flat": 3238,
+          "long": 2368
+        },
+        "mean_probability": {
+          "p_short": 0.34344561125760603,
+          "p_flat": 0.31039143413669484,
+          "p_long": 0.346162954605704
+        }
+      }
+    }
+  },
+  "tier_records": {
+    "tier_a_separate": {
+      "tier_scope": "Tier A",
+      "metrics": {
+        "rows": 1020,
+        "signal_count": 1,
+        "short_count": 0,
+        "long_count": 1,
+        "signal_coverage": 0.000980392156862745,
+        "directional_hit_rate": 0.0,
+        "directional_correct_count": 0,
+        "by_split": {
+          "oos": {
+            "rows": 160,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          },
+          "train": {
+            "rows": 649,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.0015408320493066256,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "validation": {
+            "rows": 211,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          }
+        },
+        "probability_row_sum_max_abs_error": 2.4424906541753444e-15,
+        "mean_probability": {
+          "p_short": 0.31082994343444525,
+          "p_flat": 0.37991419558500705,
+          "p_long": 0.3092558609805484
+        },
+        "partial_context_subtype_counts": {
+          "Tier_A_full_context": 1020
+        }
+      }
+    },
+    "tier_b_separate": {
+      "tier_scope": "Tier B",
+      "metrics": {
+        "rows": 273,
+        "signal_count": 1,
+        "short_count": 0,
+        "long_count": 1,
+        "signal_coverage": 0.003663003663003663,
+        "directional_hit_rate": 0.0,
+        "directional_correct_count": 0,
+        "by_split": {
+          "oos": {
+            "rows": 28,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.03571428571428571,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "train": {
+            "rows": 175,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          },
+          "validation": {
+            "rows": 70,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          }
+        },
+        "probability_row_sum_max_abs_error": 7.549516567451064e-15,
+        "mean_probability": {
+          "p_short": 0.28459764828324785,
+          "p_flat": 0.42960918881041554,
+          "p_long": 0.2857931629063428
+        },
+        "partial_context_subtype_counts": {
+          "B_macro_missing": 266,
+          "B_full_context_outside_tier_a_scope": 7
+        }
+      }
+    },
+    "tier_ab_combined": {
+      "tier_scope": "Tier A+B",
+      "metrics": {
+        "rows": 1293,
+        "signal_count": 2,
+        "short_count": 0,
+        "long_count": 2,
+        "signal_coverage": 0.0015467904098994587,
+        "directional_hit_rate": 0.0,
+        "directional_correct_count": 0,
+        "by_split": {
+          "oos": {
+            "rows": 188,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.005319148936170213,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "train": {
+            "rows": 824,
+            "signal_count": 1,
+            "short_count": 0,
+            "long_count": 1,
+            "signal_coverage": 0.0012135922330097086,
+            "directional_hit_rate": 0.0,
+            "directional_correct_count": 0
+          },
+          "validation": {
+            "rows": 281,
+            "signal_count": 0,
+            "short_count": 0,
+            "long_count": 0,
+            "signal_coverage": 0.0,
+            "directional_hit_rate": null,
+            "directional_correct_count": 0
+          }
+        },
+        "probability_row_sum_max_abs_error": 7.549516567451064e-15,
+        "mean_probability": {
+          "p_short": 0.30529133819370524,
+          "p_flat": 0.39040664195046454,
+          "p_long": 0.3043020198558322
+        },
+        "partial_context_subtype_counts": {
+          "Tier_A_full_context": 1020,
+          "B_macro_missing": 266,
+          "B_full_context_outside_tier_a_scope": 7
+        }
+      }
+    }
+  },
+  "onnx_probability_parity": {
+    "passed": true,
+    "tier_a": {
+      "passed": true,
+      "rows": 128,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.1293561419378761e-07,
+      "mean_abs_diff": 3.274876851203495e-08,
+      "onnx_row_sum_max_abs_error": 2.086162567138672e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "label",
+        "probabilities"
+      ]
+    },
+    "tier_b": {
+      "passed": true,
+      "rows": 128,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.4360875255636785e-07,
+      "mean_abs_diff": 2.7888195535160042e-08,
+      "onnx_row_sum_max_abs_error": 1.7881393432617188e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "label",
+        "probabilities"
+      ]
+    }
+  },
+  "external_verification_status": "out_of_scope_by_claim",
+  "artifacts": [
+    {
+      "role": "tier_a_extratrees_model",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/models/tier_a_extratrees_58_model.joblib",
+      "format": "joblib",
+      "sha256": "a6694ff34aeb40c34172c42235027be1361ef05927d5d9b133cfae60d0933841"
+    },
+    {
+      "role": "tier_b_extratrees_model",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/models/tier_b_extratrees_core42_model.joblib",
+      "format": "joblib",
+      "sha256": "63a4db29aa86084f7146c3a458a348894bae83cdfed75b14dff1ef520434869f"
+    },
+    {
+      "role": "tier_a_feature_order",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/models/tier_a_58_feature_order.txt",
+      "format": "txt",
+      "sha256": "d44f31835e43b4037678d745fb8d73e0b62d964a61723b4660eab63c7eddf696"
+    },
+    {
+      "role": "tier_b_feature_order",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/models/tier_b_core42_feature_order.txt",
+      "format": "txt",
+      "sha256": "7853d66246b7a44c561d9887b5079a12387682b4e6898d8525f62e02864c349a"
+    },
+    {
+      "role": "tier_a_onnx_model",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/models/tier_a_extratrees_58_model.onnx",
+      "sha256": "9fb62a035d1347ca9de34bbea4c1617f48fa19d51615ea2bcfec10c57d075359",
+      "input_name": "float_input",
+      "target_opset": 12,
+      "zipmap_disabled": true,
+      "outputs": [
+        {
+          "name": "label",
+          "value_type": "tensor_type",
+          "shape": [
+            null
+          ]
+        },
+        {
+          "name": "probabilities",
+          "value_type": "tensor_type",
+          "shape": [
+            null,
+            3
+          ]
+        }
+      ],
+      "probability_output_name": "probabilities",
+      "format": "onnx"
+    },
+    {
+      "role": "tier_b_onnx_model",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/models/tier_b_extratrees_core42_model.onnx",
+      "sha256": "95d0b98f0e16f44bb9bece6be584ae97f7e5069fda5b6425e01afe64750fa578",
+      "input_name": "float_input",
+      "target_opset": 12,
+      "zipmap_disabled": true,
+      "outputs": [
+        {
+          "name": "label",
+          "value_type": "tensor_type",
+          "shape": [
+            null
+          ]
+        },
+        {
+          "name": "probabilities",
+          "value_type": "tensor_type",
+          "shape": [
+            null,
+            3
+          ]
+        }
+      ],
+      "probability_output_name": "probabilities",
+      "format": "onnx"
+    },
+    {
+      "role": "onnx_probability_parity",
+      "parity": {
+        "passed": true,
+        "tier_a": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.1293561419378761e-07,
+          "mean_abs_diff": 3.274876851203495e-08,
+          "onnx_row_sum_max_abs_error": 2.086162567138672e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        },
+        "tier_b": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4360875255636785e-07,
+          "mean_abs_diff": 2.7888195535160042e-08,
+          "onnx_row_sum_max_abs_error": 1.7881393432617188e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        }
+      }
+    },
+    {
+      "role": "tier_a_predictions",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/predictions/tier_a_predictions.parquet",
+      "format": "parquet",
+      "sha256": "27f0f84f75f0d63620594c7f05c33f36562c0a32907de0d1dd8fb089e8b28d65"
+    },
+    {
+      "role": "tier_b_predictions",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/predictions/tier_b_predictions.parquet",
+      "format": "parquet",
+      "sha256": "7a42bd9ffe99abf65afeeaedda61fff3b14a2af3fac5452514d2b002dd102f64"
+    },
+    {
+      "role": "tier_ab_combined_predictions",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/predictions/tier_ab_combined_predictions.parquet",
+      "format": "parquet",
+      "sha256": "5895a599957e56a0ca1b1dd709c2d63cb0779272a086a5ddc9013afb78be0bef"
+    },
+    {
+      "role": "route_coverage_summary",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/predictions/route_coverage_summary.json",
+      "format": "json",
+      "sha256": "f7fc73f29ca5d3a5ae15658e4707c10d018a860c03cdbae966fe4603a648550f"
+    },
+    {
+      "role": "rank_quantile_sweep_tier_a",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/sweeps/rank_quantile_sweep_tier_a.csv",
+      "format": "csv",
+      "sha256": "ef43bb86a62a4efd9bbc17be98b0e608176aac7544ed8d6c3afd2637f63d6d54"
+    },
+    {
+      "role": "rank_quantile_sweep_tier_b",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/sweeps/rank_quantile_sweep_tier_b.csv",
+      "format": "csv",
+      "sha256": "475c20964ccfc942c141cc0100cc962c35798d273bc5640c438d655da6f69fca"
+    },
+    {
+      "role": "rank_quantile_sweep_combined",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1/sweeps/rank_quantile_sweep_combined.csv",
+      "format": "csv",
+      "sha256": "c80b46eac06c942bc014d095a275bb66ab23debcdfa84031e9970d6673531588"
+    },
+    {
+      "role": "stage_run_ledger",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv",
+      "sha256": "ff4400f112ba7579d44925a81f258e4941828ff84e6b216720798ef0b8cab683",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 3,
+      "upserted_rows": 3
+    },
+    {
+      "role": "project_alpha_run_ledger",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "sha256": "280e35c5532ba32e7739ad0a1a3fdb5fd5a9173e38c0964b0c0590b51df01440",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 617,
+      "upserted_rows": 3
+    },
+    {
+      "role": "project_run_registry",
+      "path": "docs/registers/run_registry.csv",
+      "sha256": "85bdb4aba9c1eff4277d0bf3f7a8a35042058e29ce6c8774221f25cc5ca8daa5",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 81,
+      "upserted_rows": 1
+    },
+    {
+      "role": "stage_docs",
+      "paths": {
+        "stage_brief_path": "stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md",
+        "plan_path": "stages/12_model_family_challenge__extratrees_training_effect/00_spec/run03A_extratrees_training_effect_plan.md",
+        "input_refs_path": "stages/12_model_family_challenge__extratrees_training_effect/01_inputs/input_references.md",
+        "packet_path": "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03A_extratrees_training_effect_packet.md",
+        "selection_status_path": "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md"
+      }
+    }
+  ],
+  "result_judgment": {
+    "result_subject": "Stage 12 RUN03A ExtraTrees fwd18 inverse-rank context structural scout",
+    "evidence_available": "Python predictions, model metrics, ONNX parity, rank sweeps, ledgers",
+    "evidence_missing": "MT5 Strategy Tester output and trading-risk execution KPI",
+    "judgment_label": "inconclusive_extratrees_structural_scout_payload",
+    "claim_boundary": "new model training effect observed structurally; no runtime or operating claim",
+    "next_condition": "run a narrow MT5 runtime_probe only if the structural read is worth external verification",
+    "user_explanation_hook": "\uc0c8 \ubaa8\ub378\uc740 \ud559\uc2b5\ub410\uc9c0\ub9cc \uc544\uc9c1 \uac70\ub798 \uc2e4\ud589 \ud6a8\uacfc\ub294 \ubcf4\uc9c0 \uc54a\uc558\ub2e4."
+  }
+}

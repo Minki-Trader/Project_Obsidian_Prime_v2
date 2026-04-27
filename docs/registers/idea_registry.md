@@ -28,6 +28,30 @@
 | `IDEA-ST11-LABEL-HORIZON-FWD18-INVERSE-RANK-CONTEXT` | `11_alpha_robustness__wfo_label_horizon_sensitivity` | fwd18(90분) inverse rank(역방향 순위)는 DI spread/ADX(DI 차이/ADX) 압축 문맥에서 런타임 거래 품질을 회복할 수 있다 | `Tier A primary + Tier B fallback(Tier A 우선 + Tier B 대체)` | `runtime_probe_completed_positive_tiny_sample` | RUN02Z(실행 02Z); routed validation/OOS(라우팅 검증/표본외) `386.06 / 7.25 / 9 trades(거래)`, `352.63 / 52.03 / 5 trades(거래)`; stress test(압박 시험) 필요, promotion(승격) 아님 |
 | `IDEA-ST11-LABEL-HORIZON-FWD18-INVERSE-RANK-CONTEXT-STRESS` | `11_alpha_robustness__wfo_label_horizon_sensitivity` | RUN02Z(실행 02Z)의 fwd18 inverse rank context(fwd18 역방향 순위 문맥)는 ADX cutoff(ADX 절단값), routing(라우팅), session slice(세션 구간) 압박에서도 중심 조건을 유지할 수 있다 | `Tier A primary + Tier B fallback(Tier A 우선 + Tier B 대체)` | `runtime_probe_completed_stress_survived_center_tiny_sample` | RUN02AA~RUN02AK(실행 02AA~02AK); `ADX<=25`, `200-220`, routed(라우팅)가 best center(최고 중심); promotion_candidate(승격 후보) 아님 |
 
+### Stage 12(12단계) run03D standalone(단독) batch-20(20개 묶음)
+
+| idea_id(아이디어 ID) | status(상태) | hypothesis(가설) | evidence(근거) |
+|---|---|---|---|
+| `IDEA-ST12-ET-BATCH20-V01` | `inconclusive_standalone_structural_scout` | 기본 잎 20 구조가 단독 Stage12 신호를 만든다. | `run03D_et_standalone_batch20_v1` `v01_base_leaf20_q90` val_hit(검증 적중)=0.384772, oos_hit(표본외 적중)=0.472727 |
+| `IDEA-ST12-ET-BATCH20-V02` | `inconclusive_standalone_structural_scout` | 잎 10의 촘촘한 구조가 약한 방향 신호를 더 잘 잡는다. | `run03D_et_standalone_batch20_v1` `v02_dense_leaf10_q90` val_hit(검증 적중)=0.377665, oos_hit(표본외 적중)=0.448586 |
+| `IDEA-ST12-ET-BATCH20-V03` | `inconclusive_standalone_structural_scout` | 잎 40의 부드러운 구조가 잡음을 줄인다. | `run03D_et_standalone_batch20_v1` `v03_smooth_leaf40_q90` val_hit(검증 적중)=0.362437, oos_hit(표본외 적중)=0.437252 |
+| `IDEA-ST12-ET-BATCH20-V04` | `inconclusive_standalone_structural_scout` | 분기마다 더 적은 피처를 보면 과적합이 줄어든다. | `run03D_et_standalone_batch20_v1` `v04_log2_features_leaf20_q90` val_hit(검증 적중)=0.385787, oos_hit(표본외 적중)=0.441137 |
+| `IDEA-ST12-ET-BATCH20-V05` | `inconclusive_standalone_structural_scout` | 절반 피처 샘플링이 방향 신호 다양성을 만든다. | `run03D_et_standalone_batch20_v1` `v05_half_features_leaf20_q90` val_hit(검증 적중)=0.375635, oos_hit(표본외 적중)=0.465496 |
+| `IDEA-ST12-ET-BATCH20-V06` | `inconclusive_standalone_structural_scout` | 엔트로피 분할 기준이 비대칭 라벨 구조를 더 잘 본다. | `run03D_et_standalone_batch20_v1` `v06_entropy_leaf20_q90` val_hit(검증 적중)=0.376650, oos_hit(표본외 적중)=0.455629 |
+| `IDEA-ST12-ET-BATCH20-V07` | `inconclusive_standalone_structural_scout` | 부트스트랩 균형 가중치가 클래스 불균형을 완화한다. | `run03D_et_standalone_batch20_v1` `v07_balanced_subsample_leaf20_q90` val_hit(검증 적중)=0.366497, oos_hit(표본외 적중)=0.462264 |
+| `IDEA-ST12-ET-BATCH20-V08` | `inconclusive_standalone_structural_scout` | 깊이 12 제한이 표본외 흔들림을 줄인다. | `run03D_et_standalone_batch20_v1` `v08_depth12_leaf20_q90` val_hit(검증 적중)=0.385787, oos_hit(표본외 적중)=0.452349 |
+| `IDEA-ST12-ET-BATCH20-V09` | `inconclusive_standalone_structural_scout` | 얕은 깊이와 촘촘한 잎 조합이 안정 신호를 만든다. | `run03D_et_standalone_batch20_v1` `v09_depth8_leaf10_q90` val_hit(검증 적중)=0.392893, oos_hit(표본외 적중)=0.482663 |
+| `IDEA-ST12-ET-BATCH20-V10` | `inconclusive_standalone_structural_scout` | 70% 부트스트랩 표본이 모델 분산을 낮춘다. | `run03D_et_standalone_batch20_v1` `v10_bootstrap70_leaf20_q90` val_hit(검증 적중)=0.382741, oos_hit(표본외 적중)=0.442667 |
+| `IDEA-ST12-ET-BATCH20-V11` | `inconclusive_standalone_structural_scout` | 더 낮은 임계값이 신호 밀도를 회복한다. | `run03D_et_standalone_batch20_v1` `v11_base_leaf20_q85` val_hit(검증 적중)=0.392688, oos_hit(표본외 적중)=0.457317 |
+| `IDEA-ST12-ET-BATCH20-V12` | `inconclusive_standalone_structural_scout` | 더 높은 임계값이 신호 품질을 선별한다. | `run03D_et_standalone_batch20_v1` `v12_base_leaf20_q95` val_hit(검증 적중)=0.326572, oos_hit(표본외 적중)=0.438776 |
+| `IDEA-ST12-ET-BATCH20-V13` | `inconclusive_standalone_structural_scout` | 0.02 마진 요구가 애매한 예측을 걸러낸다. | `run03D_et_standalone_batch20_v1` `v13_base_margin002_q90` val_hit(검증 적중)=0.385875, oos_hit(표본외 적중)=0.472656 |
+| `IDEA-ST12-ET-BATCH20-V14` | `inconclusive_standalone_structural_scout` | 0.05 마진 요구가 강한 예측만 남긴다. | `run03D_et_standalone_batch20_v1` `v14_base_margin005_q90` val_hit(검증 적중)=0.375271, oos_hit(표본외 적중)=0.466045 |
+| `IDEA-ST12-ET-BATCH20-V15` | `inconclusive_standalone_structural_scout` | 숏 방향만 남기면 비대칭 수익 신호가 보인다. | `run03D_et_standalone_batch20_v1` `v15_base_short_only_q90` val_hit(검증 적중)=0.362069, oos_hit(표본외 적중)=0.463303 |
+| `IDEA-ST12-ET-BATCH20-V16` | `inconclusive_standalone_structural_scout` | 롱 방향만 남기면 비대칭 수익 신호가 보인다. | `run03D_et_standalone_batch20_v1` `v16_base_long_only_q90` val_hit(검증 적중)=0.404990, oos_hit(표본외 적중)=0.485030 |
+| `IDEA-ST12-ET-BATCH20-V17` | `inconclusive_standalone_structural_scout` | 훈련 중요도 상위 30개 피처가 약한 피처 잡음을 줄인다. | `run03D_et_standalone_batch20_v1` `v17_top30_features_q90` val_hit(검증 적중)=0.381726, oos_hit(표본외 적중)=0.460859 |
+| `IDEA-ST12-ET-BATCH20-V18` | `inconclusive_standalone_structural_scout` | 핵심 42개 피처만으로도 단독 Stage12 신호가 유지된다. | `run03D_et_standalone_batch20_v1` `v18_core42_features_q90` val_hit(검증 적중)=0.367513, oos_hit(표본외 적중)=0.467202 |
+| `IDEA-ST12-ET-BATCH20-V19` | `inconclusive_standalone_structural_scout` | 보조 문맥 16개 피처만으로 독립 신호가 있는지 본다. | `run03D_et_standalone_batch20_v1` `v19_context16_features_q90` val_hit(검증 적중)=0.393909, oos_hit(표본외 적중)=0.430622 |
+| `IDEA-ST12-ET-BATCH20-V20` | `mixed_unstable_standalone_structural_scout` | 확률 방향을 반대로 쓰면 구조적 역방향성이 드러난다. | `run03D_et_standalone_batch20_v1` `v20_base_inverse_q90` val_hit(검증 적중)=0.432487, oos_hit(표본외 적중)=0.309091 |
 ## Rule
 
 Register ideas when they become durable work, not for every passing thought.

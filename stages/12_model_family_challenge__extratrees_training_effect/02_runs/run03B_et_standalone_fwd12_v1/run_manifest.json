@@ -1,0 +1,75 @@
+{
+  "identity": {
+    "run_id": "run03B_et_standalone_fwd12_v1",
+    "run_number": "run03B",
+    "stage_id": "12_model_family_challenge__extratrees_training_effect",
+    "exploration_label": "stage12_Model__ExtraTreesStandaloneFwd12",
+    "model_family": "sklearn_extratreesclassifier_multiclass",
+    "status": "completed",
+    "judgment": "inconclusive_standalone_extratrees_training_effect"
+  },
+  "experiment_design": {
+    "hypothesis": "ExtraTrees standalone model training can be evaluated without Stage 10/11 thresholds, context gates, session slices, or comparison baselines.",
+    "decision_use": "Decide whether the standalone model family deserves more standalone design work.",
+    "comparison_baseline": null,
+    "control_variables": {
+      "symbol": "US100",
+      "timeframe": "M5",
+      "dataset": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+      "feature_set": "feature_set_v2_mt5_price_proxy_top3_weights_58_features"
+    },
+    "changed_variables": {
+      "model_family": "sklearn_extratreesclassifier_multiclass"
+    },
+    "sample_scope": "Tier A full-context fwd12 split v1 Python model input",
+    "success_criteria": "sufficient validation/OOS standalone signals with non-fragile directional hit rate",
+    "failure_criteria": "weak OOS hit rate or sparse/unstable standalone signals",
+    "invalid_conditions": "feature hash mismatch, missing split, non-finite features",
+    "stop_conditions": "no MT5 or operating claim without external verification",
+    "evidence_plan": "manifest, KPI record, summary, predictions, feature importance, ledgers"
+  },
+  "non_inheritance_guardrail": {
+    "stage10_threshold_used": false,
+    "stage10_session_slice_used": false,
+    "stage11_lightgbm_surface_used": false,
+    "stage11_fwd18_inverse_context_used": false,
+    "comparison_reference_used": false
+  },
+  "paths": {
+    "kpi_record": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/kpi_record.json",
+    "summary": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/summary.json",
+    "result_summary": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/reports/result_summary.md"
+  },
+  "artifacts": [
+    {
+      "role": "model",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/models/model.joblib",
+      "sha256": "8ecec4add0ea78e706516f0980785d4554eaf713c56d770cf330abc99acc81cf"
+    },
+    {
+      "role": "feature_order",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/models/features.txt",
+      "sha256": "d44f31835e43b4037678d745fb8d73e0b62d964a61723b4660eab63c7eddf696"
+    },
+    {
+      "role": "predictions",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/predictions/preds.parquet",
+      "sha256": "d9fd048b3084baf4c8577383319f49f256a621e3ac44675b021c3d0f8f389fce"
+    },
+    {
+      "role": "scored_predictions",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/predictions/scored.parquet",
+      "sha256": "bb81c6b6b577e490290db1d4725a62cf4fdcd91474a6699a06a9cdf072ebfbc3"
+    },
+    {
+      "role": "feature_importance",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/feature_importance/fi.csv",
+      "sha256": "1d3188dcb629b42f2197903a1f756641852d72ebe6685633f19708002b71a18b"
+    },
+    {
+      "role": "threshold_rule",
+      "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03B_et_standalone_fwd12_v1/threshold_rule.json",
+      "sha256": "a18f8ecc548c4a9b98bafd15f6e782e5416e8245347f07b591b2b4595b7af27f"
+    }
+  ]
+}

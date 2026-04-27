@@ -1,14 +1,14 @@
-updated_on: "2026-04-27"
+﻿updated_on: "2026-04-28"
 project_mode: "clean_stage_restart"
-active_branch: "codex/stage11-run02qrs-salvage-scout"
-active_stage: null
+active_branch: "main"
+active_stage: "12_model_family_challenge__extratrees_training_effect"
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: "tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with component and total records"
 shared_window:
   start: "2022-08-01"
   end_inclusive: "2026-04-13"
-  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed"
+  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_active"
 practical_modeling_start: "2022-09-01"
 current_focus:
   - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
@@ -26,8 +26,9 @@ current_focus:
   - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
   - "treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01A-run01X remain comparison baselines, not live readiness or operating promotion"
   - "treat Stage 11 as reviewed_closed_no_next_stage_opened; run02A-run02S, run02W-run02Z, and run02AA-run02AK are completed LightGBM training, threshold, divergent, idea-burst, salvage-extension, fwd18-retrain, fwd18 inverse-rank context, and stress MT5 runtime_probe evidence, not alpha quality or operating promotion"
+  - "treat Stage 12 as active standalone(단독) ExtraTrees(엑스트라 트리) MT5 runtime_probe(런타임 탐침); RUN03A is invalid_for_standalone_scope(단독 범위 무효), RUN03B is source Python scout(원천 파이썬 탐침), and RUN03C is current MT5 probe(현재 MT5 탐침)"
 pre_alpha_stage_queue:
-  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed"
+  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
   decision_path: "docs/decisions/2026-04-25_pre_alpha_stage_queue.md"
   formal_pre_alpha_feature_count: 58
@@ -65,6 +66,10 @@ pre_alpha_stage_queue:
       stage_id: "11_alpha_robustness__wfo_label_horizon_sensitivity"
       ownership: "run01Y_robustness_and_training_method_scout"
       status: "reviewed_closed_no_next_stage_opened"
+    stage12:
+      stage_id: "12_model_family_challenge__extratrees_training_effect"
+      ownership: "standalone ExtraTrees model-family training effect without Stage 10/11 inheritance"
+      status: "active_standalone_mt5_runtime_probe_open"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -889,8 +894,32 @@ stage11_alpha_robustness:
   current_run_packet_plan_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md"
   current_run_packet_review_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02X_run02Z_fwd18_rank_context_packet.md"
   current_stage_run_ledger_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage_run_ledger.csv"
+stage12_model_family_challenge:
+  stage_id: "12_model_family_challenge__extratrees_training_effect"
+  status: "active_standalone_batch20_python_structural_scout_completed"
+  lane: "standalone_python_batch20_structural_scout"
+  current_run_id: "run03D_et_standalone_batch20_v1"
+  current_run_label: "stage12_Model__ExtraTreesStandaloneBatch20"
+  current_status: "stage12_standalone_batch20_python_structural_scout_completed"
+  current_summary:
+    boundary: "Stage12 standalone(단독); no Stage10/11 inheritance(10/11단계 비계승) or baseline(기준선)"
+    latest_mt5_runtime_probe: "run03C_et_standalone_mt5_runtime_probe_v1"
+    latest_python_package: "run03D_et_standalone_batch20_v1"
+    variant_count: 20
+    best_variant: "v11_base_leaf20_q85"
+    best_validation_hit_rate: 0.392687880840
+    best_oos_hit_rate: 0.457317073171
+    package_judgment: "inconclusive_standalone_batch20_structural_scout"
+    external_verification: "out_of_scope_by_claim_standalone_python_structural_scout"
+    next_action: "Choose narrow MT5 runtime probe(좁은 메타트레이더5 런타임 탐침) candidate(후보) only after standalone package review(단독 패키지 검토)"
+
 open_items: []
 closed_memory:
+  - "Stage 12 is active_standalone_structural_scout_open with RUN03B ExtraTrees Python structural evidence"
+  - "Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison and Stage 11 context surface"
+  - "Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run"
+  - "Stage 12 RUN03C is the latest standalone(단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행)"
+  - "Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is inconclusive(불충분)"
   - "Stage 11 is reviewed_closed_no_next_stage_opened"
   - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
   - "Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion"
@@ -909,5 +938,7 @@ forbidden_shortcuts:
   - "do not treat Stage 10 run01A-run01AC runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not treat the Stage 11 scaffold as a Stage 11 run result or robustness proof"
   - "do not treat Stage 11 run02A-run02S, run02W-run02Z, and run02AA-run02AK LightGBM MT5 runtime_probe or run02T-run02V/run02X-run02Y Python structural probes as alpha quality, live readiness, runtime authority expansion, or operating promotion"
+  - "do not treat Stage 12 RUN03A as standalone evidence; it is invalid_for_standalone_scope"
+  - "do not treat Stage 12 RUN03B ExtraTrees standalone Python structural scout as MT5 runtime evidence, alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"
