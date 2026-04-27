@@ -896,22 +896,29 @@ stage11_alpha_robustness:
   current_stage_run_ledger_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage_run_ledger.csv"
 stage12_model_family_challenge:
   stage_id: "12_model_family_challenge__extratrees_training_effect"
-  status: "active_standalone_batch20_python_structural_scout_completed"
-  lane: "standalone_python_batch20_structural_scout"
-  current_run_id: "run03D_et_standalone_batch20_v1"
-  current_run_label: "stage12_Model__ExtraTreesStandaloneBatch20"
-  current_status: "stage12_standalone_batch20_python_structural_scout_completed"
+  status: "active_standalone_batch20_top_mt5_probe_completed"
+  lane: "standalone_batch20_top_mt5_runtime_probe"
+  current_run_id: "run03E_et_batch20_top_v11_mt5_probe_v1"
+  current_run_label: "stage12_Model__ExtraTreesBatch20TopV11MT5Probe"
+  current_status: "reviewed"
   current_summary:
     boundary: "Stage12 standalone(단독); no Stage10/11 inheritance(10/11단계 비계승) or baseline(기준선)"
-    latest_mt5_runtime_probe: "run03C_et_standalone_mt5_runtime_probe_v1"
     latest_python_package: "run03D_et_standalone_batch20_v1"
-    variant_count: 20
-    best_variant: "v11_base_leaf20_q85"
-    best_validation_hit_rate: 0.392687880840
-    best_oos_hit_rate: 0.457317073171
-    package_judgment: "inconclusive_standalone_batch20_structural_scout"
-    external_verification: "out_of_scope_by_claim_standalone_python_structural_scout"
-    next_action: "Choose narrow MT5 runtime probe(좁은 메타트레이더5 런타임 탐침) candidate(후보) only after standalone package review(단독 패키지 검토)"
+    latest_mt5_runtime_probe: "run03E_et_batch20_top_v11_mt5_probe_v1"
+    source_variant: "v11_base_leaf20_q85"
+    python_validation_hit_rate: 0.392687880840
+    python_oos_hit_rate: 0.457317073171
+    validation_net_profit: -205.14
+    validation_profit_factor: 0.88
+    validation_trades: 301
+    oos_net_profit: 362.83
+    oos_profit_factor: 1.44
+    oos_trades: 210
+    package_judgment: "inconclusive_run03d_top_variant_mt5_runtime_probe_completed"
+    external_verification: "completed"
+    result_summary_path: "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03E_et_batch20_top_v11_mt5_probe_v1/reports/result_summary.md"
+    summary_path: "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03E_et_batch20_top_v11_mt5_probe_v1/summary.json"
+    next_action: "Review whether v16/v09/v13(변형 후보) deserve separate MT5 probes(MT5 탐침)"
 
 open_items: []
 closed_memory:
@@ -920,6 +927,7 @@ closed_memory:
   - "Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run"
   - "Stage 12 RUN03C is the latest standalone(단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행)"
   - "Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is inconclusive(불충분)"
+  - "Stage 12 RUN03E completed MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85"
   - "Stage 11 is reviewed_closed_no_next_stage_opened"
   - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
   - "Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion"
