@@ -288,6 +288,57 @@ SPECS: dict[str, DivergentSpec] = {
         tier_b_margin=0.05,
         context_gate="vortex_negative_rsi50_lte50",
     ),
+    "run02Q": DivergentSpec(
+        key="run02Q",
+        run_number="run02Q",
+        run_id="run02Q_lgbm_bear_vortex_short_density_v1",
+        exploration_label="stage11_Context__LGBMBearVortexShortDensity",
+        idea_id="IDEA-ST11-LGBM-BEAR-VORTEX-SHORT-DENSITY",
+        hypothesis="RUN02P dual-positive short-side read may need a looser bearish vortex gate and lower rank threshold to test whether the tiny sample can scale.",
+        lane="alpha_context_direction_scout",
+        decision_surface_id="run02Q_lgbm_bear_vortex_short_density_surface_hold9_slice200_220",
+        mode="bear_vortex_short_density",
+        allowed_side="short",
+        tier_a_quantile=0.88,
+        tier_b_quantile=0.88,
+        tier_a_margin=0.03,
+        tier_b_margin=0.03,
+        context_gate="vortex_negative",
+    ),
+    "run02R": DivergentSpec(
+        key="run02R",
+        run_number="run02R",
+        run_id="run02R_lgbm_long_pullback_adx_repair_v1",
+        exploration_label="stage11_Context__LGBMLongPullbackAdxRepair",
+        idea_id="IDEA-ST11-LGBM-LONG-PULLBACK-ADX-REPAIR",
+        hypothesis="RUN02G OOS strength may survive with a deeper pullback plus minimum ADX gate that attempts to reduce validation-side noise.",
+        lane="alpha_context_direction_scout",
+        decision_surface_id="run02R_lgbm_long_pullback_adx_repair_surface_hold9_slice200_220",
+        mode="long_pullback_adx_repair",
+        allowed_side="long",
+        tier_a_quantile=0.90,
+        tier_b_quantile=0.90,
+        tier_a_margin=0.04,
+        tier_b_margin=0.04,
+        context_gate="rsi14_lte42_bbpos_lte40_adx14_gte18",
+    ),
+    "run02S": DivergentSpec(
+        key="run02S",
+        run_number="run02S",
+        run_id="run02S_lgbm_squeeze_density_v1",
+        exploration_label="stage11_Context__LGBMSqueezeDensity",
+        idea_id="IDEA-ST11-LGBM-SQUEEZE-DENSITY",
+        hypothesis="RUN02N squeeze breakout read may need a slightly wider low-bandwidth context and lower rank threshold to test whether the three-trade OOS read can scale.",
+        lane="alpha_context_momentum_scout",
+        decision_surface_id="run02S_lgbm_squeeze_density_surface_hold9_slice200_220",
+        mode="squeeze_density",
+        allowed_side="both",
+        tier_a_quantile=0.90,
+        tier_b_quantile=0.90,
+        tier_a_margin=0.04,
+        tier_b_margin=0.04,
+        context_gate="bb_squeeze_or_bwidth_lte0030",
+    ),
 }
 
 
@@ -381,8 +432,13 @@ def context_gate_mask(frame: pd.DataFrame, gate: str) -> pd.Series:
         )
     if gate == "return_zscore_abs_lte70":
         return frame["return_zscore_20"].astype(float).abs().le(0.70)
-    if gate == "di_spread_abs_lte8_adx_lte25":
-        return frame["di_spread_14"].astype(float).abs().le(8.0) & frame["adx_14"].astype(float).le(25.0)
+    if gate in {"di_spread_abs_lte8_adx_lte20", "di_spread_abs_lte8_adx_lte25", "di_spread_abs_lte8_adx_lte30"}:
+        adx_limit = {
+            "di_spread_abs_lte8_adx_lte20": 20.0,
+            "di_spread_abs_lte8_adx_lte25": 25.0,
+            "di_spread_abs_lte8_adx_lte30": 30.0,
+        }[gate]
+        return frame["di_spread_14"].astype(float).abs().le(8.0) & frame["adx_14"].astype(float).le(adx_limit)
     if gate == "atr_ratio_gte115_momentum_align":
         return (
             frame["atr_14_over_atr_50"].astype(float).ge(1.15)
@@ -390,10 +446,20 @@ def context_gate_mask(frame: pd.DataFrame, gate: str) -> pd.Series:
         )
     if gate == "bb_squeeze_true":
         return frame["bb_squeeze"].astype(float).ge(0.5)
+    if gate == "bb_squeeze_or_bwidth_lte0030":
+        return frame["bb_squeeze"].astype(float).ge(0.5) | frame["bollinger_width_20"].astype(float).le(0.0030)
     if gate == "vortex_positive_rsi50_gte50":
         return frame["vortex_indicator"].astype(float).gt(0.0) & frame["rsi_50"].astype(float).ge(50.0)
     if gate == "vortex_negative_rsi50_lte50":
         return frame["vortex_indicator"].astype(float).lt(0.0) & frame["rsi_50"].astype(float).le(50.0)
+    if gate == "vortex_negative":
+        return frame["vortex_indicator"].astype(float).lt(0.0)
+    if gate == "rsi14_lte42_bbpos_lte40_adx14_gte18":
+        return (
+            frame["rsi_14"].astype(float).le(42.0)
+            & frame["bb_position_20"].astype(float).le(0.40)
+            & frame["adx_14"].astype(float).ge(18.0)
+        )
     raise ValueError(f"Unknown context gate: {gate}")
 
 
@@ -549,12 +615,66 @@ def write_result_summary(
 ) -> None:
     py_by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in tier_records}
     mt5_by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
+    salvage_extension_runs = {"run02Q", "run02R", "run02S"}
+    scout_kind = "Salvage Extension Scout" if spec.run_number in salvage_extension_runs else "Divergent Scout"
+    scout_kind_ko = "회수 확장 탐색" if spec.run_number in salvage_extension_runs else "발산형 탐색"
 
     def py(view: str, key: str) -> Any:
         return py_by_view.get(view, {}).get(key)
 
     def mt5(view: str, key: str) -> Any:
         return mt5_by_view.get(view, {}).get(key)
+
+    lines = [
+        f"# Stage 11 {spec.run_number.upper()} LGBM {scout_kind}(11단계 {spec.run_number.upper()} LGBM {scout_kind_ko})",
+        "",
+        f"- run_id(실행 ID): `{spec.run_id}`",
+        f"- idea_id(아이디어 ID): `{spec.idea_id}`",
+        f"- hypothesis(가설): {spec.hypothesis}",
+        f"- mode(방식): `{spec.mode}`",
+        f"- allowed side(허용 방향): `{spec.allowed_side}`",
+        f"- selected threshold(선택 임계값): `{threshold_id}`",
+        f"- context gate(문맥 제한): `{spec.context_gate or 'none(없음)'}`",
+        f"- external verification status(외부 검증 상태): `{external_status}`",
+        "",
+        "## Python Signal Views(파이썬 신호 보기)",
+        "",
+        "| view(보기) | rows(행) | signal count(신호 수) | coverage(커버리지) | short/long(숏/롱) |",
+        "|---|---:|---:|---:|---:|",
+        (
+            f"| Tier A separate(Tier A 분리) | `{py('tier_a_separate', 'rows')}` | "
+            f"`{py('tier_a_separate', 'signal_count')}` | `{py('tier_a_separate', 'signal_coverage')}` | "
+            f"`{py('tier_a_separate', 'short_count')}/{py('tier_a_separate', 'long_count')}` |"
+        ),
+        (
+            f"| Tier B separate(Tier B 분리) | `{py('tier_b_separate', 'rows')}` | "
+            f"`{py('tier_b_separate', 'signal_count')}` | `{py('tier_b_separate', 'signal_coverage')}` | "
+            f"`{py('tier_b_separate', 'short_count')}/{py('tier_b_separate', 'long_count')}` |"
+        ),
+        (
+            f"| Tier A+B combined(Tier A+B 합산) | `{py('tier_ab_combined', 'rows')}` | "
+            f"`{py('tier_ab_combined', 'signal_count')}` | `{py('tier_ab_combined', 'signal_coverage')}` | "
+            f"`{py('tier_ab_combined', 'short_count')}/{py('tier_ab_combined', 'long_count')}` |"
+        ),
+        "",
+        "## MT5 Routed Probe(MT5 라우팅 탐침)",
+        "",
+        f"- validation routed net/PF(검증 라우팅 순수익/수익 팩터): `{mt5('mt5_routed_total_validation_is', 'net_profit')}` / `{mt5('mt5_routed_total_validation_is', 'profit_factor')}`",
+        f"- OOS routed net/PF(표본외 라우팅 순수익/수익 팩터): `{mt5('mt5_routed_total_oos', 'net_profit')}` / `{mt5('mt5_routed_total_oos', 'profit_factor')}`",
+        f"- validation Tier B fallback used(검증 Tier B 대체 사용): `{mt5('mt5_routed_total_validation_is', 'tier_b_fallback_used_count')}`",
+        f"- OOS Tier B fallback used(표본외 Tier B 대체 사용): `{mt5('mt5_routed_total_oos', 'tier_b_fallback_used_count')}`",
+        "",
+        "## Boundary(경계)",
+        "",
+        f"이 실행(run, 실행)은 {scout_kind}({scout_kind_ko})와 MT5 runtime_probe(MT5 런타임 탐침)다.",
+        "효과(effect, 효과)는 RUN01(실행 01) 근처 튜닝이 아니라 LightGBM(라이트GBM)의 다른 실패 구조를 빠르게 분리해서 보는 것이다.",
+        "",
+        "이 실행은 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)을 주장하지 않는다.",
+        "",
+    ]
+    _io_path(path.parent).mkdir(parents=True, exist_ok=True)
+    _io_path(path).write_text("\n".join(lines), encoding="utf-8-sig")
+    return
 
     lines = [
         f"# Stage 11 {spec.run_number.upper()} LGBM Divergent Scout",
@@ -1015,13 +1135,16 @@ def run_one_spec(
         external_status=external_status,
     )
 
+    artifact_scout_label = (
+        "salvage-extension LGBM scout" if spec.run_number in {"run02Q", "run02R", "run02S"} else "divergent LGBM scout"
+    )
     artifact_rows = [
         {
             "artifact_id": f"stage11_{spec.run_number}_manifest",
             "type": "run_manifest",
             "path": manifest_path.as_posix(),
             "status": "local_generated_reviewed",
-            "notes": f"Stage 11 {spec.run_number} divergent LGBM scout; manifest_sha256 {scout.sha256_file(manifest_path)}; boundary runtime_probe only",
+            "notes": f"Stage 11 {spec.run_number} {artifact_scout_label}; manifest_sha256 {scout.sha256_file(manifest_path)}; boundary runtime_probe only",
         },
         {
             "artifact_id": f"stage11_{spec.run_number}_kpi_record",

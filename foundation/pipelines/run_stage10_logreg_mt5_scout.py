@@ -127,6 +127,7 @@ SESSION_SLICE_DEFINITIONS: dict[str, tuple[float, float, str]] = {
     "mid_second_overlap_190_210": (190.0, 210.0, "cash_session_mid_second_overlap_190_210_minutes"),
     "mid_second_overlap_195_215": (195.0, 215.0, "cash_session_mid_second_overlap_195_215_minutes"),
     "mid_second_overlap_200_220": (200.0, 220.0, "cash_session_mid_second_overlap_200_220_minutes"),
+    "mid_late_overlap_205_225": (205.0, 225.0, "cash_session_mid_late_overlap_205_225_minutes"),
     "late": (220.0, 330.0, "cash_session_late_220_330_minutes"),
 }
 METAEDITOR_LOG_MAX_PATH_CHARS = 240
@@ -794,8 +795,9 @@ def build_tier_b_partial_context_frames(
     tier_a_feature_order: Sequence[str],
     tier_b_feature_order: Sequence[str],
     label_threshold: float,
+    label_spec: TrainingLabelSplitSpec | None = None,
 ) -> dict[str, Any]:
-    spec = TrainingLabelSplitSpec()
+    spec = label_spec or TrainingLabelSplitSpec()
     feature_frame, source_counts = build_feature_frame(raw_root)
     feature_frame = feature_frame.copy()
     feature_frame["timestamp"] = pd.to_datetime(feature_frame["timestamp"], utc=True)
@@ -1503,6 +1505,7 @@ def materialize_mt5_attempt_files(
     record_view_prefix: str | None = None,
     primary_active_tier: str = "tier_a",
     attempt_role: str = "tier_only_total",
+    invert_signal: bool = False,
     max_hold_bars: int = 12,
 ) -> dict[str, Any]:
     tier_slug = tier_name.lower().replace(" ", "_").replace("+", "ab")
@@ -1539,9 +1542,11 @@ def materialize_mt5_attempt_files(
             "InpShortThreshold": rule.short_threshold,
             "InpLongThreshold": rule.long_threshold,
             "InpMinMargin": rule.min_margin,
+            "InpInvertSignal": bool(invert_signal),
             "InpFallbackShortThreshold": rule.short_threshold,
             "InpFallbackLongThreshold": rule.long_threshold,
             "InpFallbackMinMargin": rule.min_margin,
+            "InpFallbackInvertSignal": bool(invert_signal),
             "InpAllowTrading": "true",
             "InpFixedLot": 0.1,
             "InpMaxHoldBars": int(max_hold_bars),
@@ -1575,6 +1580,7 @@ def materialize_mt5_attempt_files(
         "common_summary_path": common_summary,
         "local_feature_matrix_path": local_feature_matrix_path.as_posix(),
         "threshold_rule": threshold_rule_payload(rule),
+        "invert_signal": bool(invert_signal),
         "max_hold_bars": int(max_hold_bars),
     }
 
@@ -1595,6 +1601,8 @@ def materialize_mt5_routed_attempt_files(
     from_date: str,
     to_date: str,
     fallback_rule: ThresholdRule | None = None,
+    invert_signal: bool = False,
+    fallback_invert_signal: bool = False,
     max_hold_bars: int = 12,
     fallback_enabled: bool = True,
 ) -> dict[str, Any]:
@@ -1649,9 +1657,11 @@ def materialize_mt5_routed_attempt_files(
             "InpShortThreshold": rule.short_threshold,
             "InpLongThreshold": rule.long_threshold,
             "InpMinMargin": rule.min_margin,
+            "InpInvertSignal": bool(invert_signal),
             "InpFallbackShortThreshold": fallback_rule.short_threshold,
             "InpFallbackLongThreshold": fallback_rule.long_threshold,
             "InpFallbackMinMargin": fallback_rule.min_margin,
+            "InpFallbackInvertSignal": bool(fallback_invert_signal),
             "InpAllowTrading": "true",
             "InpFixedLot": 0.1,
             "InpMaxHoldBars": int(max_hold_bars),
@@ -1692,6 +1702,7 @@ def materialize_mt5_routed_attempt_files(
             "feature_order_hash": primary_feature_order_hash,
             "local_feature_matrix_path": primary_feature_matrix_path.as_posix(),
             "threshold_rule": threshold_rule_payload(rule),
+            "invert_signal": bool(invert_signal),
         },
         "fallback": {
             "tier": TIER_B,
@@ -1703,9 +1714,12 @@ def materialize_mt5_routed_attempt_files(
             "policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID,
             "local_feature_matrix_path": fallback_feature_matrix_path.as_posix(),
             "threshold_rule": threshold_rule_payload(fallback_rule),
+            "invert_signal": bool(fallback_invert_signal),
         },
         "threshold_rule": threshold_rule_payload(rule),
         "fallback_threshold_rule": threshold_rule_payload(fallback_rule),
+        "invert_signal": bool(invert_signal),
+        "fallback_invert_signal": bool(fallback_invert_signal),
         "max_hold_bars": int(max_hold_bars),
     }
 

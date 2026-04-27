@@ -20,6 +20,7 @@ private:
    double m_short_threshold;
    double m_long_threshold;
    double m_min_margin;
+   bool   m_invert_signal;
 
    bool IsFiniteProbability(const double value)
      {
@@ -32,15 +33,18 @@ public:
       m_short_threshold = 0.55;
       m_long_threshold = 0.55;
       m_min_margin = 0.05;
+      m_invert_signal = false;
      }
 
    void Configure(const double short_threshold,
                   const double long_threshold,
-                  const double min_margin)
+                  const double min_margin,
+                  const bool invert_signal=false)
      {
       m_short_threshold = short_threshold;
       m_long_threshold = long_threshold;
       m_min_margin = min_margin;
+      m_invert_signal = invert_signal;
      }
 
    void Evaluate(const double p_short,
@@ -67,9 +71,9 @@ public:
 
       if(long_ok && (!short_ok || p_long >= p_short))
         {
-         result.signal = OP_DECISION_LONG;
-         result.label = "long";
-         result.reason = "long_threshold_met";
+         result.signal = m_invert_signal ? OP_DECISION_SHORT : OP_DECISION_LONG;
+         result.label = m_invert_signal ? "short" : "long";
+         result.reason = m_invert_signal ? "inverse_long_threshold_met" : "long_threshold_met";
          result.confidence = p_long;
          result.margin = long_margin;
          return;
@@ -77,9 +81,9 @@ public:
 
       if(short_ok)
         {
-         result.signal = OP_DECISION_SHORT;
-         result.label = "short";
-         result.reason = "short_threshold_met";
+         result.signal = m_invert_signal ? OP_DECISION_LONG : OP_DECISION_SHORT;
+         result.label = m_invert_signal ? "long" : "short";
+         result.reason = m_invert_signal ? "inverse_short_threshold_met" : "short_threshold_met";
          result.confidence = p_short;
          result.margin = short_margin;
          return;

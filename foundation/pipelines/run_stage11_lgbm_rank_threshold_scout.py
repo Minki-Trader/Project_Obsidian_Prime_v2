@@ -18,6 +18,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from foundation.pipelines import run_stage10_logreg_mt5_scout as scout  # noqa: E402
 from foundation.pipelines import run_stage11_lgbm_training_method_scout as run02a  # noqa: E402
+from foundation.pipelines import run_stage11_lgbm_divergent_scouts as divergent  # noqa: E402
 
 
 STAGE_ID = "11_alpha_robustness__wfo_label_horizon_sensitivity"
@@ -49,18 +50,33 @@ DECISION_COLUMNS = (
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run Stage 11 RUN02B LGBM rank-target threshold scout.")
+    parser = argparse.ArgumentParser(description="Run Stage 11 LGBM rank-target threshold scout.")
     parser.add_argument("--source-run-root", default=str(DEFAULT_SOURCE_ROOT))
     parser.add_argument("--run-output-root", default=str(DEFAULT_RUN_OUTPUT_ROOT))
     parser.add_argument("--run-id", default=RUN_ID)
     parser.add_argument("--run-number", default=RUN_NUMBER)
     parser.add_argument("--exploration-label", default=EXPLORATION_LABEL)
+    parser.add_argument("--source-run-id", default=SOURCE_RUN_ID)
+    parser.add_argument("--decision-surface-id", default=DECISION_SURFACE_ID)
+    parser.add_argument("--selection-policy", default="lgbm_validation_quantile_rank_target_not_run01_absolute_grid")
+    parser.add_argument("--run-registry-lane", default="alpha_threshold_scout")
+    parser.add_argument("--judgment-prefix", default="lgbm_rank_threshold")
+    parser.add_argument(
+        "--hypothesis",
+        default=(
+            "LightGBM needs distribution-aware rank-target thresholds instead of the run01Y absolute LogReg "
+            "threshold surface."
+        ),
+    )
     parser.add_argument("--max-hold-bars", type=int, default=9)
     parser.add_argument("--session-slice-id", default="mid_second_overlap_200_220")
     parser.add_argument("--tier-a-quantile", type=float, default=0.96)
     parser.add_argument("--tier-a-min-margin", type=float, default=0.12)
     parser.add_argument("--tier-b-quantile", type=float, default=0.96)
     parser.add_argument("--tier-b-min-margin", type=float, default=0.08)
+    parser.add_argument("--invert-decisions", action="store_true")
+    parser.add_argument("--context-gate", default=None)
+    parser.add_argument("--disable-routed-fallback", action="store_true")
     parser.add_argument("--attempt-mt5", action="store_true")
     parser.add_argument("--common-files-root", default=str(DEFAULT_COMMON_FILES_ROOT))
     parser.add_argument("--terminal-data-root", default=str(DEFAULT_TERMINAL_DATA_ROOT))
@@ -120,9 +136,23 @@ def quantile_rule(
     )
 
 
-def recompute_predictions(frame: pd.DataFrame, rule: scout.ThresholdRule) -> pd.DataFrame:
+def invert_signal_decisions(decisions: pd.DataFrame) -> pd.DataFrame:
+    inverted = decisions.copy()
+    short_mask = inverted["decision_label_class"].astype("int64").eq(0)
+    long_mask = inverted["decision_label_class"].astype("int64").eq(2)
+    inverted.loc[short_mask, "decision_label_class"] = 2
+    inverted.loc[short_mask, "decision_label"] = "long"
+    inverted.loc[long_mask, "decision_label_class"] = 0
+    inverted.loc[long_mask, "decision_label"] = "short"
+    inverted.loc[short_mask | long_mask, "threshold_id"] = inverted.loc[short_mask | long_mask, "threshold_id"].astype(str) + "_inverse"
+    return inverted
+
+
+def recompute_predictions(frame: pd.DataFrame, rule: scout.ThresholdRule, *, invert_decisions: bool = False) -> pd.DataFrame:
     identity = frame.loc[:, [column for column in frame.columns if column not in DECISION_COLUMNS]].reset_index(drop=True)
     decisions = scout.apply_threshold_rule(frame.loc[:, list(PROBABILITY_COLUMNS)].to_numpy(dtype="float64"), rule)
+    if invert_decisions:
+        decisions = invert_signal_decisions(decisions)
     return pd.concat([identity, decisions], axis=1)
 
 
@@ -144,12 +174,36 @@ def signal_metrics(frame: pd.DataFrame) -> dict[str, Any]:
     return payload
 
 
+def allowed_timestamps_from_feature_matrix(path: Path, context_gate: str | None) -> set[str] | None:
+    if context_gate is None:
+        return None
+    source = pd.read_csv(_io_path(path))
+    mask = divergent.context_gate_mask(source, context_gate)
+    return set(divergent.timestamp_key(source.loc[mask, "timestamp_utc"]))
+
+
+def copy_or_filter_feature_matrix(source: Path, destination: Path, context_gate: str | None) -> dict[str, Any]:
+    if context_gate is None:
+        return copy_artifact(source, destination)
+    payload = dict(
+        divergent.write_matrix_for_variant(
+            source_path=source,
+            destination_path=destination,
+            context_gate=context_gate,
+        )
+    )
+    allowed_timestamps = payload.pop("allowed_timestamps", set())
+    payload["allowed_timestamp_count"] = len(allowed_timestamps)
+    return payload
+
+
 def quantile_sweep(
     frame: pd.DataFrame,
     *,
     tier_name: str,
     quantiles: Sequence[float],
     margins: Sequence[float],
+    invert_decisions: bool = False,
 ) -> pd.DataFrame:
     rows: list[dict[str, Any]] = []
     validation = frame.loc[frame["split"].astype(str).eq("validation")]
@@ -163,8 +217,8 @@ def quantile_sweep(
                 min_margin=float(margin),
                 prefix=tier_name.lower().replace(" ", "_"),
             )
-            validation_pred = recompute_predictions(validation, rule)
-            oos_pred = recompute_predictions(oos, rule)
+            validation_pred = recompute_predictions(validation, rule, invert_decisions=invert_decisions)
+            oos_pred = recompute_predictions(oos, rule, invert_decisions=invert_decisions)
             validation_metrics = signal_metrics(validation_pred)
             oos_metrics = signal_metrics(oos_pred)
             rows.append(
@@ -175,6 +229,7 @@ def quantile_sweep(
                     "short_threshold": rule.short_threshold,
                     "long_threshold": rule.long_threshold,
                     "min_margin": rule.min_margin,
+                    "invert_decisions": bool(invert_decisions),
                     "validation_signal_count": validation_metrics["signal_count"],
                     "validation_signal_coverage": validation_metrics["signal_coverage"],
                     "validation_directional_hit_rate": validation_metrics["directional_hit_rate"],
@@ -205,10 +260,15 @@ def write_result_summary(
     *,
     path: Path,
     run_id: str,
+    run_number: str,
+    source_run_id: str,
+    decision_direction_mode: str,
+    context_gate: str | None,
     selected_threshold_id: str,
     tier_records: Sequence[Mapping[str, Any]],
     mt5_kpi_records: Sequence[Mapping[str, Any]],
     external_status: str,
+    routing_mode: str,
 ) -> None:
     by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
 
@@ -220,10 +280,18 @@ def write_result_summary(
     def py_metric(view: str, key: str) -> Any:
         return python_by_view.get(view, {}).get(key)
 
+    routing_boundary = (
+        "Tier A-only MT5 runtime_probe(Tier A 단독 MT5 런타임 탐침)"
+        if routing_mode == scout.ROUTING_MODE_A_ONLY
+        else "routed MT5 runtime_probe(라우팅 MT5 런타임 탐침)"
+    )
     lines = [
-        "# Stage 11 RUN02B LGBM Rank-Target Threshold Scout",
+        f"# Stage 11 {run_number.upper()} LGBM Rank-Target Threshold Scout",
         "",
         f"- run_id(실행 ID): `{run_id}`",
+        f"- source run(원천 실행): `{source_run_id}`",
+        f"- decision direction(판정 방향): `{decision_direction_mode}`",
+        f"- context gate(문맥 제한): `{context_gate or 'none'}`",
         f"- model family(모델 계열): `{MODEL_FAMILY}`",
         f"- selected threshold(선택 임계값): `{selected_threshold_id}`",
         f"- threshold method(임계값 방식): `rank-target quantile(순위 기반 분위수)`",
@@ -261,7 +329,7 @@ def write_result_summary(
         "",
         "## Boundary(경계)",
         "",
-        "이 실행(run, 실행)은 LGBM-specific threshold scout(LGBM 전용 임계값 탐색)와 routed-only MT5 runtime_probe(라우팅 전용 MT5 런타임 탐침)다.",
+        f"이 실행(run, 실행)은 LGBM-specific threshold scout(LGBM 전용 임계값 탐색)와 {routing_boundary}다.",
         "효과(effect, 효과)는 RUN01(실행 01)처럼 같은 absolute grid(절대값 격자)를 반복하지 않고, LGBM(라이트GBM) 확률 분포의 상위 순위 신호만 시험하는 것이다.",
         "",
         "이 실행은 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)을 주장하지 않는다.",
@@ -279,6 +347,13 @@ def materialize_run_registry_row(
     tier_records: Sequence[Mapping[str, Any]],
     mt5_kpi_records: Sequence[Mapping[str, Any]],
     external_verification_status: str,
+    decision_surface_id: str,
+    lane: str,
+    judgment_prefix: str,
+    invert_decisions: bool,
+    context_gate: str | None,
+    session_slice_id: str,
+    routing_mode: str,
 ) -> dict[str, Any]:
     by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in tier_records}
     by_mt5_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
@@ -288,10 +363,12 @@ def materialize_run_registry_row(
         (
             ("model_family", MODEL_FAMILY),
             ("comparison_reference", RUN01Y_REFERENCE["run_id"]),
-            ("decision_surface", DECISION_SURFACE_ID),
+            ("decision_surface", decision_surface_id),
             ("threshold_method", "rank_target_quantile"),
-            ("routed_attempt_policy", "routed_only"),
-            ("session_slice", RUN01Y_REFERENCE["session_slice_id"]),
+            ("decision_direction_mode", "inverse" if invert_decisions else "normal"),
+            ("context_gate", context_gate or "none"),
+            ("routed_attempt_policy", routing_mode),
+            ("session_slice", session_slice_id),
             ("max_hold_bars", RUN01Y_REFERENCE["max_hold_bars"]),
             ("tier_b_fallback_rows", route_coverage.get("tier_b_fallback_rows")),
             ("no_tier_labelable_rows", route_coverage.get("no_tier_labelable_rows")),
@@ -311,12 +388,12 @@ def materialize_run_registry_row(
     row = {
         "run_id": run_id,
         "stage_id": STAGE_ID,
-        "lane": "alpha_threshold_scout",
+        "lane": lane,
         "status": "reviewed" if external_verification_status == "completed" else "payload_only",
         "judgment": (
-            "inconclusive_lgbm_rank_threshold_mt5_runtime_probe_completed"
+            f"inconclusive_{judgment_prefix}_mt5_runtime_probe_completed"
             if external_verification_status == "completed"
-            else "inconclusive_lgbm_rank_threshold_payload"
+            else f"inconclusive_{judgment_prefix}_payload"
         ),
         "path": run_output_root.as_posix(),
         "notes": notes,
@@ -331,12 +408,21 @@ def run_stage11_lgbm_rank_threshold_scout(
     run_id: str,
     run_number: str,
     exploration_label: str,
+    source_run_id: str,
+    decision_surface_id: str,
+    selection_policy: str,
+    run_registry_lane: str,
+    judgment_prefix: str,
+    hypothesis: str,
     max_hold_bars: int,
     session_slice_id: str,
     tier_a_quantile: float,
     tier_a_min_margin: float,
     tier_b_quantile: float,
     tier_b_min_margin: float,
+    invert_decisions: bool,
+    context_gate: str | None,
+    routed_fallback_enabled: bool,
     attempt_mt5: bool,
     common_files_root: Path,
     terminal_data_root: Path,
@@ -345,9 +431,10 @@ def run_stage11_lgbm_rank_threshold_scout(
     metaeditor_path: Path,
 ) -> dict[str, Any]:
     if max_hold_bars != RUN01Y_REFERENCE["max_hold_bars"]:
-        raise RuntimeError("RUN02B keeps run01Y max_hold_bars fixed for threshold-only comparison.")
-    if session_slice_id != RUN01Y_REFERENCE["session_slice_id"]:
-        raise RuntimeError("RUN02B keeps run01Y session slice fixed for threshold-only comparison.")
+        raise RuntimeError("Rank threshold scout keeps run01Y max_hold_bars fixed for threshold-only comparison.")
+    if session_slice_id not in scout.SESSION_SLICE_DEFINITIONS:
+        raise RuntimeError(f"Unknown session slice id: {session_slice_id}")
+    routing_mode = scout.ROUTING_MODE_A_B_FALLBACK if routed_fallback_enabled else scout.ROUTING_MODE_A_ONLY
 
     scout.configure_run_identity(
         run_number=run_number,
@@ -363,9 +450,27 @@ def run_stage11_lgbm_rank_threshold_scout(
     reports_root = run_output_root / "reports"
 
     source_summary = read_json(source_run_root / "summary.json")
-    route_coverage = source_summary["route_coverage"]
+    base_route_coverage = source_summary["route_coverage"]
+    split_specs = {
+        "validation_is": ("2025.01.01", "2025.10.01"),
+        "oos": ("2025.10.01", "2026.04.14"),
+    }
     tier_a_source = pd.read_parquet(_io_path(source_run_root / "predictions" / "tier_a_predictions.parquet"))
     tier_b_source = pd.read_parquet(_io_path(source_run_root / "predictions" / "tier_b_predictions.parquet"))
+    tier_a_allowed_by_split = {
+        split_name: allowed_timestamps_from_feature_matrix(
+            source_run_root / "mt5" / f"tier_a_{split_name}_feature_matrix.csv",
+            context_gate,
+        )
+        for split_name in split_specs
+    }
+    tier_b_allowed_by_split = {
+        split_name: allowed_timestamps_from_feature_matrix(
+            source_run_root / "mt5" / f"tier_b_{split_name}_feature_matrix.csv",
+            context_gate,
+        )
+        for split_name in split_specs
+    }
 
     tier_a_rule = quantile_rule(
         tier_a_source,
@@ -384,11 +489,33 @@ def run_stage11_lgbm_rank_threshold_scout(
     selected_threshold_id = (
         f"a_{tier_a_rule.threshold_id}__b_{tier_b_rule.threshold_id}"
         f"__hold{max_hold_bars}__slice_{session_slice_id}__model_lgbm_rank_target"
+        f"{'_inverse' if invert_decisions else ''}"
+        f"{'__ctx_' + context_gate if context_gate else ''}"
     )
 
-    tier_a_predictions = recompute_predictions(tier_a_source, tier_a_rule)
-    tier_b_predictions = recompute_predictions(tier_b_source, tier_b_rule)
+    tier_a_predictions = recompute_predictions(tier_a_source, tier_a_rule, invert_decisions=invert_decisions)
+    tier_b_predictions = recompute_predictions(tier_b_source, tier_b_rule, invert_decisions=invert_decisions)
+    if context_gate is not None:
+        tier_a_predictions = divergent.filter_predictions_for_context(
+            tier_a_predictions,
+            allowed_by_split=tier_a_allowed_by_split,
+        )
+        tier_b_predictions = divergent.filter_predictions_for_context(
+            tier_b_predictions,
+            allowed_by_split=tier_b_allowed_by_split,
+        )
     predictions = pd.concat([tier_a_predictions, tier_b_predictions], ignore_index=True)
+    route_coverage = (
+        scout.build_eval_route_coverage_summary(
+            base_summary=base_route_coverage,
+            tier_a_eval_frame=tier_a_predictions,
+            tier_b_eval_frame=tier_b_predictions,
+            no_tier_eval_frame=tier_a_predictions.iloc[0:0].copy(),
+            session_slice=None,
+        )
+        if context_gate is not None
+        else base_route_coverage
+    )
 
     _io_path(predictions_root).mkdir(parents=True, exist_ok=True)
     tier_a_predictions_path = predictions_root / "tier_a_predictions.parquet"
@@ -401,8 +528,8 @@ def run_stage11_lgbm_rank_threshold_scout(
     _io_path(sweeps_root).mkdir(parents=True, exist_ok=True)
     quantiles = (0.80, 0.85, 0.90, 0.94, 0.96, 0.98, 0.99)
     margins = (0.00, 0.02, 0.05, 0.08, 0.12)
-    tier_a_sweep = quantile_sweep(tier_a_source, tier_name=scout.TIER_A, quantiles=quantiles, margins=margins)
-    tier_b_sweep = quantile_sweep(tier_b_source, tier_name=scout.TIER_B, quantiles=quantiles, margins=margins)
+    tier_a_sweep = quantile_sweep(tier_a_source, tier_name=scout.TIER_A, quantiles=quantiles, margins=margins, invert_decisions=invert_decisions)
+    tier_b_sweep = quantile_sweep(tier_b_source, tier_name=scout.TIER_B, quantiles=quantiles, margins=margins, invert_decisions=invert_decisions)
     tier_a_sweep_path = sweeps_root / "rank_quantile_sweep_tier_a.csv"
     tier_b_sweep_path = sweeps_root / "rank_quantile_sweep_tier_b.csv"
     combined_sweep_path = sweeps_root / "rank_quantile_sweep_combined.csv"
@@ -454,10 +581,6 @@ def run_stage11_lgbm_rank_threshold_scout(
     tier_a_feature_hash = scout.ordered_hash(tier_a_feature_order)
     tier_b_feature_hash = scout.ordered_hash(tier_b_feature_order)
 
-    split_specs = {
-        "validation_is": ("2025.01.01", "2025.10.01"),
-        "oos": ("2025.10.01", "2026.04.14"),
-    }
     mt5_attempts: list[dict[str, Any]] = []
     common_copies: list[dict[str, Any]] = []
     _io_path(mt5_root).mkdir(parents=True, exist_ok=True)
@@ -472,8 +595,8 @@ def run_stage11_lgbm_rank_threshold_scout(
         tier_b_matrix_path = mt5_root / source_tier_b_matrix.name
         copied_feature_matrices.extend(
             [
-                {"tier": scout.TIER_A, "split": split_name, **copy_artifact(source_tier_a_matrix, tier_a_matrix_path)},
-                {"tier": scout.TIER_B, "split": split_name, **copy_artifact(source_tier_b_matrix, tier_b_matrix_path)},
+                {"tier": scout.TIER_A, "split": split_name, **copy_or_filter_feature_matrix(source_tier_a_matrix, tier_a_matrix_path, context_gate)},
+                {"tier": scout.TIER_B, "split": split_name, **copy_or_filter_feature_matrix(source_tier_b_matrix, tier_b_matrix_path, context_gate)},
             ]
         )
         common_copies.append(scout.copy_to_common_files(common_files_root, tier_a_matrix_path, scout.common_ref("features", tier_a_matrix_path.name)))
@@ -491,8 +614,10 @@ def run_stage11_lgbm_rank_threshold_scout(
             fallback_feature_order_hash=tier_b_feature_hash,
             rule=tier_a_rule,
             fallback_rule=tier_b_rule,
+            invert_signal=bool(invert_decisions),
+            fallback_invert_signal=bool(invert_decisions),
             max_hold_bars=max_hold_bars,
-            fallback_enabled=True,
+            fallback_enabled=bool(routed_fallback_enabled),
             from_date=from_date,
             to_date=to_date,
         )
@@ -546,7 +671,9 @@ def run_stage11_lgbm_rank_threshold_scout(
     scout.attach_mt5_report_metrics(mt5_execution_results, mt5_report_records)
     mt5_kpi_records = scout.build_mt5_kpi_records(mt5_execution_results)
     mt5_kpi_records = scout.enrich_mt5_kpi_records_with_route_coverage(mt5_kpi_records, route_coverage)
-    expected_mt5_kpi_record_count = len(mt5_attempts) * 3
+    expected_mt5_kpi_record_count = sum(
+        3 if attempt.get("routing_mode") == scout.ROUTING_MODE_A_B_FALLBACK else 2 for attempt in mt5_attempts
+    )
     mt5_runtime_completed = bool(mt5_execution_results) and all(item.get("status") == "completed" for item in mt5_execution_results)
     mt5_reports_completed = len(mt5_kpi_records) >= expected_mt5_kpi_record_count and all(
         item.get("status") == "completed" for item in mt5_kpi_records
@@ -574,6 +701,13 @@ def run_stage11_lgbm_rank_threshold_scout(
         tier_records=tier_records,
         external_verification_status=external_status,
         mt5_kpi_records=mt5_kpi_records,
+        decision_surface_id=decision_surface_id,
+        lane=run_registry_lane,
+        judgment_prefix=judgment_prefix,
+        invert_decisions=bool(invert_decisions),
+        context_gate=context_gate,
+        session_slice_id=session_slice_id,
+        routing_mode=routing_mode,
     )
 
     manifest_path = run_output_root / "run_manifest.json"
@@ -602,9 +736,11 @@ def run_stage11_lgbm_rank_threshold_scout(
         {"role": "project_run_registry", **run_registry_payload},
     ]
     decision_surface = {
-        "decision_surface_id": DECISION_SURFACE_ID,
-        "selection_policy": "lgbm_validation_quantile_rank_target_not_run01_absolute_grid",
-        "source_run_id": SOURCE_RUN_ID,
+        "decision_surface_id": decision_surface_id,
+        "selection_policy": selection_policy,
+        "source_run_id": source_run_id,
+        "decision_direction_mode": "inverse" if invert_decisions else "normal",
+        "context_gate": context_gate,
         "tier_a_rule": scout.threshold_rule_payload(tier_a_rule),
         "tier_b_rule": scout.threshold_rule_payload(tier_b_rule),
         "selected_threshold_id": selected_threshold_id,
@@ -612,7 +748,8 @@ def run_stage11_lgbm_rank_threshold_scout(
             "quantiles": list(quantiles),
             "margins": list(margins),
             "selection_scope": "validation_only",
-            "mt5_attempt_policy": "routed_total_only_with_component_ledger_rows",
+            "mt5_attempt_policy": routing_mode,
+            "invert_decisions": bool(invert_decisions),
         },
     }
     manifest = {
@@ -624,24 +761,22 @@ def run_stage11_lgbm_rank_threshold_scout(
             "model_family": MODEL_FAMILY,
             "status": "reviewed_payload",
             "judgment": (
-                "inconclusive_lgbm_rank_threshold_mt5_runtime_probe_completed"
+                f"inconclusive_{judgment_prefix}_mt5_runtime_probe_completed"
                 if external_status == "completed"
-                else "inconclusive_lgbm_rank_threshold_payload"
+                else f"inconclusive_{judgment_prefix}_payload"
             ),
         },
-        "hypothesis": (
-            "LightGBM needs distribution-aware rank-target thresholds instead of the run01Y absolute LogReg "
-            "threshold surface."
-        ),
+        "hypothesis": hypothesis,
         "comparison_reference": RUN01Y_REFERENCE,
-        "source_run_id": SOURCE_RUN_ID,
+        "source_run_id": source_run_id,
         "decision_surface": decision_surface,
         "route_coverage": route_coverage,
         "tier_records": tier_records,
         "artifacts": artifacts,
         "mt5": {
             "attempted": bool(attempt_mt5),
-            "attempt_policy": "routed_only",
+            "attempt_policy": routing_mode,
+            "fallback_enabled": bool(routed_fallback_enabled),
             "compile": compile_payload,
             "execution_results": mt5_execution_results,
             "strategy_tester_reports": mt5_report_records,
@@ -687,10 +822,15 @@ def run_stage11_lgbm_rank_threshold_scout(
     write_result_summary(
         path=result_summary_path,
         run_id=run_id,
+        run_number=run_number,
+        source_run_id=source_run_id,
+        decision_direction_mode="inverse" if invert_decisions else "normal",
+        context_gate=context_gate,
         selected_threshold_id=selected_threshold_id,
         tier_records=tier_records,
         mt5_kpi_records=mt5_kpi_records,
         external_status=external_status,
+        routing_mode=routing_mode,
     )
 
     return {
@@ -718,12 +858,21 @@ def main() -> int:
         run_id=args.run_id,
         run_number=args.run_number,
         exploration_label=args.exploration_label,
+        source_run_id=args.source_run_id,
+        decision_surface_id=args.decision_surface_id,
+        selection_policy=args.selection_policy,
+        run_registry_lane=args.run_registry_lane,
+        judgment_prefix=args.judgment_prefix,
+        hypothesis=args.hypothesis,
         max_hold_bars=args.max_hold_bars,
         session_slice_id=args.session_slice_id,
         tier_a_quantile=args.tier_a_quantile,
         tier_a_min_margin=args.tier_a_min_margin,
         tier_b_quantile=args.tier_b_quantile,
         tier_b_min_margin=args.tier_b_min_margin,
+        invert_decisions=bool(args.invert_decisions),
+        context_gate=args.context_gate,
+        routed_fallback_enabled=not bool(args.disable_routed_fallback),
         attempt_mt5=bool(args.attempt_mt5),
         common_files_root=Path(args.common_files_root),
         terminal_data_root=Path(args.terminal_data_root),
