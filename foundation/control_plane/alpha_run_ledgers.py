@@ -48,7 +48,8 @@ def build_mt5_alpha_ledger_rows(
 
     for record in mt5_kpi_records:
         record_view = str(record.get("record_view"))
-        metrics = record.get("metrics", {})
+        raw_metrics = record.get("metrics", {})
+        metrics = raw_metrics if isinstance(raw_metrics, Mapping) else {}
         route_role = str(record.get("route_role") or "")
         is_component = route_role in {"primary_used", "fallback_used"}
         is_routed_total = route_role == "routed_total"

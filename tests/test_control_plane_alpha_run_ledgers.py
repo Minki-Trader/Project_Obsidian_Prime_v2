@@ -5,9 +5,44 @@ import unittest
 from pathlib import Path
 
 from foundation.control_plane import alpha_run_ledgers
+from foundation.control_plane import ledger
 
 
 class AlphaRunLedgerTests(unittest.TestCase):
+    def test_ledger_value_treats_non_finite_float_as_na_without_numpy(self) -> None:
+        self.assertEqual(ledger.ledger_value(float("nan")), "NA")
+        self.assertEqual(ledger.ledger_value(float("inf")), "NA")
+        self.assertEqual(ledger.ledger_value(float("-inf")), "NA")
+
+    def test_upsert_csv_rows_rejects_missing_or_empty_key(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "ledger.csv"
+            with self.assertRaises(ValueError):
+                ledger.upsert_csv_rows(path, ["ledger_row_id", "status"], [{"status": "completed"}], key="ledger_row_id")
+            with self.assertRaises(ValueError):
+                ledger.upsert_csv_rows(path, ["ledger_row_id", "status"], [{"ledger_row_id": " ", "status": "completed"}], key="ledger_row_id")
+
+    def test_mt5_ledger_rows_treat_non_mapping_metrics_as_empty(self) -> None:
+        rows = alpha_run_ledgers.build_mt5_alpha_ledger_rows(
+            run_id="unit_run",
+            stage_id="unit_stage",
+            mt5_kpi_records=[
+                {
+                    "record_view": "mt5_routed_total_validation_is",
+                    "tier_scope": alpha_run_ledgers.TIER_AB,
+                    "status": "completed",
+                    "route_role": "routed_total",
+                    "metrics": None,
+                    "report": {},
+                }
+            ],
+            run_output_root=Path("stages/unit_stage/02_runs/unit_run"),
+            external_verification_status="completed",
+        )
+
+        self.assertEqual(rows[0]["kpi_scope"], "trading_risk_execution")
+        self.assertIn("net_profit=NA", rows[0]["primary_kpi"])
+
     def test_routed_component_rows_do_not_claim_profit(self) -> None:
         records = [
             {

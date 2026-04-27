@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import math
 import sys
 from pathlib import Path
 from typing import Any, Mapping, Sequence
@@ -76,9 +77,7 @@ def json_ready(value: Any) -> Any:
     if np is not None and isinstance(value, np.bool_):
         return bool(value)
     if isinstance(value, float):
-        if np is not None:
-            return value if np.isfinite(value) else None
-        return value
+        return value if math.isfinite(value) else None
     return value
 
 
@@ -102,7 +101,7 @@ def ledger_value(value: Any) -> str:
             return str(int(number))
         return f"{number:.6g}"
     if isinstance(value, float):
-        if np is not None and not np.isfinite(value):
+        if not math.isfinite(value):
             return "NA"
         if value.is_integer():
             return str(int(value))
@@ -136,6 +135,16 @@ def write_csv_rows(path: Path, columns: Sequence[str], rows: Sequence[Mapping[st
             writer.writerow({column: ledger_value(row.get(column, "")) for column in columns})
 
 
+def required_row_key(row: Mapping[str, Any], key: str, row_index: int) -> str:
+    if key not in row:
+        raise ValueError(f"row {row_index} is missing required key `{key}`")
+    value = row.get(key)
+    text = str(value).strip() if value is not None else ""
+    if not text:
+        raise ValueError(f"row {row_index} has empty required key `{key}`")
+    return text
+
+
 def upsert_csv_rows(
     path: Path,
     columns: Sequence[str],
@@ -144,8 +153,8 @@ def upsert_csv_rows(
     key: str,
 ) -> dict[str, Any]:
     existing = read_csv_rows(path)
-    new_keys = {str(row.get(key)) for row in rows}
-    merged = [row for row in existing if str(row.get(key)) not in new_keys]
+    new_keys = {required_row_key(row, key, index) for index, row in enumerate(rows)}
+    merged = [row for row in existing if str(row.get(key, "")).strip() not in new_keys]
     merged.extend(dict(row) for row in rows)
     write_csv_rows(path, columns, merged)
     return {
