@@ -45,3 +45,9 @@
 오래된 Stage 00부터 Stage 07까지의 흐름은 현재 진실(current truth, 현재 진실)이 아니다. 과거 추적 이력(prior tracked history, 과거 추적 이력)일 뿐이다.
 
 탐색(exploration, 탐색)을 진행할 수 있는지 판단할 때 오래된 방어 리뷰 문장(defensive review language, 방어 리뷰 문장)을 쓰지 않는다.
+
+## 재진입 후 라우팅(After Re-entry Routing, 재진입 후 라우팅)
+
+재진입(re-entry, 재진입)이 끝나면 작업을 단일 mode(모드)로 자르지 않는다. `obsidian-session-intake(세션 인입)`가 current truth(현재 진실)를 잡고, `obsidian-work-packet-router(작업 묶음 라우터)`가 code(코드), experiment(실험), verification(검증), evidence(근거), judgment(판정), report(보고)를 하나의 lifecycle(생명주기)로 배치한다.
+
+효과(effect, 효과)는 코드 수정만 하고 끝내거나, 실험 결과를 전문 용어로만 보고하거나, 레퍼런스/재현성/산출물 계보 스킬을 방치하는 일을 줄이는 것이다.

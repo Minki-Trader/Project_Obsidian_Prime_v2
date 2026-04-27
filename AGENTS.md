@@ -12,6 +12,14 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 - 행동(action, 행동)을 설명할 때는 그 행동의 효과(effect, 효과)도 같이 설명한다.
 - 설명은 짧고 쉽게 쓴다.
 
+## Codex 작업 생명주기(Codex Work Lifecycle, 코덱스 작업 생명주기)
+
+작업(work, 작업)을 코드(code, 코드), 실험(experiment, 실험), 보고(report, 보고) 중 하나로만 고르지 않는다. 대부분의 작업은 하나의 work packet(작업 묶음) 안에서 설계(design, 설계), 코드 작성(code writing, 코드 작성), 실행(run, 실행), 근거 기록(evidence recording, 근거 기록), 결과 판정(result judgment, 결과 판정), 사용자 보고(user-facing report, 사용자 보고)를 함께 지난다.
+
+모든 작업 시작 시 `obsidian-session-intake(세션 인입)`로 현재 진실(current truth, 현재 진실)을 잡고, `obsidian-work-packet-router(작업 묶음 라우터)`로 `phase_plan(단계 계획)`, `skills_considered(검토한 스킬)`, `skills_selected(선택한 스킬)`, `skills_not_used(쓰지 않은 스킬과 이유)`, `final_answer_filter(최종 답변 필터)`를 정한다.
+
+효과(effect, 효과)는 강하게 트리거(trigger, 작동 조건)되는 코드 스킬만 쓰고 `answer-clarity(답변 명확성)`, `reference-scout(레퍼런스 탐색)`, `data-integrity(데이터 무결성)`, `environment-reproducibility(환경 재현성)` 같은 스킬이 방치되는 일을 막는 것이다.
+
 ## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)
 
 탐색(exploration, 탐색)에는 게이트(gate, 제한문)가 없다.

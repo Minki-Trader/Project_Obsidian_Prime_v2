@@ -7,6 +7,8 @@ description: Explain Project Obsidian Prime v2 work in plain, beginner-readable 
 
 Use this skill whenever the answer is meant for the user, not only for another engineer.
 
+Default assumption: the user should not need to ask a second time for a plain explanation. Every project report should be understandable to a smart beginner while keeping the technical meaning intact.
+
 ## Automatic Bundle
 
 For user-facing status summary(상태 요약), result report(결과 보고), completion report(완료 보고), plan(계획), or review explanation(검토 설명), apply this skill after the technical skill and pair it with `obsidian-claim-discipline`.
@@ -21,6 +23,7 @@ This skill is mandatory, not optional, for:
 - result reports(결과 보고), completion reports(완료 보고), and status summaries(상태 요약)
 - stage closeout(단계 종료), handoff(인계), run result(실행 결과), review finding(검토 발견사항), or failure report(실패 보고)
 - answers after implementation(구현 후 답변), verification(검증), or file edits(파일 수정)
+- run packaging, individual experiment closeout, KPI interpretation, artifact handoff, PR summary, or policy/skill review
 
 If another skill produced a technical result, apply this skill last before answering the user.
 
@@ -55,10 +58,21 @@ For planning replies(plan, 계획):
 For result reports(결과 보고):
 
 - Start with the result in one plain sentence.
-- Then say what is true now.
-- Then say what is not yet true.
-- Then name the next practical step.
+- Explain the plain meaning before the dense technical details.
+- Say what is true now.
+- Say what is not yet true.
+- Say why it matters for the next project decision.
+- Name the next practical step.
 - Then list exact files, runs, stages, artifacts, or tests only when they help the user act.
+
+For run, experiment, package, or PR closeout:
+
+- `Conclusion`: what changed or what the result means.
+- `Plain meaning`: explain it as if the reader is new to coding and trading research.
+- `Confirmed`: what the evidence now supports.
+- `Not yet confirmed`: what must not be claimed yet.
+- `Evidence`: commands, KPI, files, artifacts, hashes, or PR links when useful.
+- `Next action`: the smallest useful follow-up.
 
 ## Do Not
 
@@ -68,6 +82,8 @@ For result reports(결과 보고):
 - Do not over-compress the answer when the user is asking for understanding.
 - Do not lead user-facing result reports with a file inventory, command log, or test log.
 - Do not bury the stage meaning behind implementation detail.
+- Do not make the user ask "what does this mean?" after a normal completion report.
+- Do not use a specialist term as the main explanation when a plain sentence can carry the meaning.
 
 ## Example Standard
 

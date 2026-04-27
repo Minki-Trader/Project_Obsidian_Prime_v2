@@ -18,6 +18,7 @@ Use this guard for work touching any of:
 - code placement or reusable logic ownership (코드 배치 또는 재사용 로직 소유권)
 - stage transition or alpha search (단계 전환 또는 알파 탐색)
 - repo-scoped skills or agent settings (저장소 범위 스킬 또는 에이전트 설정)
+- work packet routing, skill bundles, or final answer filters
 - durable path references, archive behavior, or long artifact names (지속 경로 참조, 아카이브 동작, 긴 산출물 파일명)
 - Korean `.md` or `.txt` docs (한국어 문서)
 
@@ -42,6 +43,7 @@ Every architecture-sensitive packet or summary must include:
 - `encoding_check`: whether Korean docs or repo-scoped skills need UTF-8 with BOM validation
 - `path_safety_check`: whether repo-relative paths are used for durable identity, whether absolute paths are local-only, and whether Windows long path risk is controlled
 - `code_surface_check`: whether owner module, caller, input/output, and artifact/report effect must be named
+- `skill_routing_check`: whether `obsidian-work-packet-router` considered the full skill inventory and attached answer clarity plus claim discipline for the final user-facing report
 
 ## Guardrails
 
@@ -49,6 +51,7 @@ Every architecture-sensitive packet or summary must include:
 - Do not describe a model as `materialized` unless a model artifact or frozen parameter/spec bundle exists.
 - Do not add reusable feature logic to a stage script or orchestration pipeline when it belongs in `foundation/features`.
 - Do not create all-in-one EA or pipeline monoliths when reusable logic can live in a smaller owner module.
+- Do not leave repo-scoped skills present but unrouted; every skill needs routing policy and agent metadata unless a durable exception explains why.
 - Do not let alpha search become source cleanup only unless a durable decision says so.
 - Do not store absolute terminal install paths as artifact identity; use repo-relative paths plus hash, run id, bundle id, or registry fields.
 - Do not call a file missing when one tool enumerates it but another path API fails; rule out Windows long-path handling first.
@@ -58,3 +61,5 @@ Every architecture-sensitive packet or summary must include:
 ## Validator
 
 Run `scripts/validate_agent_settings.py --repo-root .` after editing agent settings, repo-scoped skills, architecture policies, debt registers, or Korean docs.
+
+The validator intentionally treats `agents/openai.yaml` as a small repo-local format: top-level `interface:` and `policy:` sections with two-space indented one-line scalar fields. If richer YAML is needed later, add an explicit YAML dependency and update the validator instead of silently relying on unsupported syntax.
