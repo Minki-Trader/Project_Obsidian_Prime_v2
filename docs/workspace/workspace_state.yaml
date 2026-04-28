@@ -1,4 +1,4 @@
-﻿updated_on: "2026-04-28"
+﻿updated_on: "2026-04-29"
 project_mode: "clean_stage_restart"
 active_branch: "main"
 active_stage: "12_model_family_challenge__extratrees_training_effect"
@@ -26,7 +26,8 @@ current_focus:
   - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
   - "treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01A-run01X remain comparison baselines, not live readiness or operating promotion"
   - "treat Stage 11 as reviewed_closed_no_next_stage_opened; run02A-run02S, run02W-run02Z, and run02AA-run02AK are completed LightGBM training, threshold, divergent, idea-burst, salvage-extension, fwd18-retrain, fwd18 inverse-rank context, and stress MT5 runtime_probe evidence, not alpha quality or operating promotion"
-  - "treat Stage 12 as active standalone(단독) ExtraTrees(엑스트라 트리) MT5 runtime_probe(런타임 탐침); RUN03A is invalid_for_standalone_scope(단독 범위 무효), RUN03B is source Python scout(원천 파이썬 탐침), and RUN03C is current MT5 probe(현재 MT5 탐침)"
+  - "treat Stage 12 as active standalone(단독) ExtraTrees(엑스트라 트리) lane(레인); RUN03A is invalid_for_standalone_scope(단독 범위 무효), RUN03B is source Python scout(원천 파이썬 탐침), RUN03D is latest standalone batch20 Python package(최신 단독 20개 묶음 파이썬 패키지), and RUN03E is current MT5 runtime_probe(현재 MT5 런타임 탐침)"
+  - "treat agent-control KPI rebuild packets(에이전트 제어 KPI 재구축 묶음) as cross-stage evidence management(교차 단계 근거 관리), not alpha quality(알파 품질), live readiness(실거래 준비), or operating promotion(운영 승격)"
 pre_alpha_stage_queue:
   status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
@@ -920,14 +921,54 @@ stage12_model_family_challenge:
     summary_path: "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03E_et_batch20_top_v11_mt5_probe_v1/summary.json"
     next_action: "Review whether v16/v09/v13(변형 후보) deserve separate MT5 probes(MT5 탐침)"
 
+agent_control_kpi_rebuild:
+  status: "partial_trade_attribution_recorded"
+  git_sync_target: "origin/main"
+  previous_pushed_evidence_commit: "1b557a463f49005bcf5e8bac5b128037b653fa0e"
+  current_sync_rule: "after document sync(문서 동기화) commits, read latest pushed state(최신 푸시 상태) from git HEAD(깃 HEAD)"
+  operating_format_status: "work packet(작업 묶음), run plan(실행 계획), skill receipt(스킬 영수증), KPI source authority(KPI 원천 권위), and n/a reason(해당없음 사유) contracts(계약) are materialized(물질화됨)"
+  packets:
+    inventory:
+      packet_id: "kpi_rebuild_inventory_v1"
+      status: "inventory_confirmed"
+      target_runs: 70
+      path: "docs/agent_control/packets/kpi_rebuild_inventory_v1"
+    mt5_recording:
+      packet_id: "kpi_rebuild_mt5_recording_v1"
+      status: "partial_existing_report_recording"
+      target_runs: 70
+      runs_with_mt5_reports: 65
+      missing_runs: 5
+      normalized_kpi_rows: 448
+      path: "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1"
+    mt5_execution:
+      packet_id: "kpi_rebuild_mt5_execution_v1"
+      status: "partial_mt5_execution_complete"
+      mt5_attempts_completed: 22
+      mt5_reports_created: 22
+      blocked_runs: 5
+      blocked_reason: "mt5_inputs_not_materialized(MT5 입력 미물질화)"
+      path: "docs/agent_control/packets/kpi_rebuild_mt5_execution_v1"
+    trade_attribution:
+      packet_id: "kpi_trade_attribution_v1"
+      status: "partial_trade_attribution"
+      actual_records_requiring_trade_attribution: 266
+      records_with_trade_attribution: 241
+      zero_trade_records_without_attribution: 25
+      trade_level_rows: 15803
+      parser_errors: 0
+      path: "docs/agent_control/packets/kpi_trade_attribution_v1"
+  boundary: "KPI rebuild(핵심 성과 지표 재구축) is evidence management(근거 관리) only; it does not change Stage 12 alpha judgment(12단계 알파 판정) or create promotion meaning(승격 의미)."
+
 open_items: []
 closed_memory:
   - "Stage 12 is active_standalone_structural_scout_open with RUN03B ExtraTrees Python structural evidence"
   - "Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison and Stage 11 context surface"
   - "Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run"
-  - "Stage 12 RUN03C is the latest standalone(단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행)"
+  - "Stage 12 RUN03C is a prior standalone(이전 단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행), not the current run(현재 실행)"
   - "Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is inconclusive(불충분)"
   - "Stage 12 RUN03E completed MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85"
+  - "Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, and trade attribution packets(목록, MT5 기록, MT5 실행, 거래 귀속 묶음) as cross-stage evidence records(교차 단계 근거 기록)"
   - "Stage 11 is reviewed_closed_no_next_stage_opened"
   - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
   - "Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion"
