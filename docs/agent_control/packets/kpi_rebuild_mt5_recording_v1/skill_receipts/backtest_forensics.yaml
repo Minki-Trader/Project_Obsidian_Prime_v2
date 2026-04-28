@@ -1,0 +1,10 @@
+packet_id: kpi_rebuild_mt5_recording_v1
+created_at_utc: '2026-04-29T00:00:00Z'
+skill: obsidian-backtest-forensics
+status: executed
+tester_identity: read from existing .ini/.set/kpi_record where available; missing
+  fields remain n/a
+report_identity: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl
+trade_evidence: headline and risk KPI parsed from MT5 Strategy Tester reports
+backtest_judgment: usable_with_boundary
+boundary: Existing reports are recorded; missing MT5 runs are not silently filled.

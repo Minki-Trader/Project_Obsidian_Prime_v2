@@ -1,0 +1,102 @@
+{
+  "kpi_standard_version": "kpi_7layer_v1",
+  "row_grain": {
+    "run_id": {"value": "", "n/a_reason": null},
+    "variant_id": {"value": null, "n/a_reason": "run_has_no_variant_layer"},
+    "split": {"value": "not_applicable", "n/a_reason": null},
+    "tier_scope": {"value": "not_applicable", "n/a_reason": null},
+    "record_view": {"value": "not_applicable", "n/a_reason": null},
+    "route_role": {"value": "not_applicable", "n/a_reason": null}
+  },
+  "run_identity": {
+    "run_id": {"value": "", "n/a_reason": null, "authority": "work_packet_and_run_manifest"},
+    "variant_id": {"value": null, "n/a_reason": "run_has_no_variant_layer", "authority": "work_packet_and_run_manifest"},
+    "idea_id": {"value": null, "n/a_reason": "", "authority": "work_packet_and_run_manifest"},
+    "stage_id": {"value": "", "n/a_reason": null, "authority": "work_packet_and_run_manifest"},
+    "model_family": {"value": null, "n/a_reason": "", "authority": "work_packet_and_run_manifest"},
+    "feature_set_id": {"value": null, "n/a_reason": "", "authority": "work_packet_and_run_manifest"},
+    "label_id": {"value": null, "n/a_reason": "", "authority": "work_packet_and_run_manifest"},
+    "split_contract": {"value": null, "n/a_reason": "", "authority": "work_packet_and_run_manifest"},
+    "stage_inheritance": {"value": null, "n/a_reason": "", "authority": "work_packet_and_run_manifest"},
+    "artifact_hashes": {"value": {}, "n/a_reason": null, "authority": "work_packet_and_run_manifest"}
+  },
+  "signal_model": {
+    "train_accuracy": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "validation_accuracy": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "oos_accuracy": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "macro_f1": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "log_loss": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "signal_count": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "signal_coverage": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "short_count": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "long_count": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "directional_hit_rate": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "threshold": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"},
+    "threshold_method": {"value": null, "n/a_reason": "", "authority": "python_training_or_signal_output"}
+  },
+  "mt5_trading_headline": {
+    "net_profit": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "gross_profit": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "gross_loss": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "profit_factor": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "expectancy": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "trade_count": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "win_rate": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "avg_win": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "avg_loss": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "payoff_ratio": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "recovery_factor": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "sharpe_ratio": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"}
+  },
+  "risk": {
+    "max_drawdown_amount": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "max_drawdown_percent": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "equity_drawdown_amount": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "equity_drawdown_percent": {"value": null, "n/a_reason": "python_structural_only_no_mt5_report", "authority": "mt5_strategy_tester_report"},
+    "time_under_water": {"value": null, "n/a_reason": "equity_curve_missing", "authority": "equity_curve_reconstruction"},
+    "longest_recovery_duration": {"value": null, "n/a_reason": "equity_curve_missing", "authority": "equity_curve_reconstruction"},
+    "worst_day": {"value": null, "n/a_reason": "trade_list_missing", "authority": "python_recomputed_from_mt5_deals"},
+    "worst_week": {"value": null, "n/a_reason": "trade_list_missing", "authority": "python_recomputed_from_mt5_deals"},
+    "consecutive_losses": {"value": null, "n/a_reason": "trade_list_missing", "authority": "python_recomputed_from_mt5_deals"},
+    "ulcer_index": {"value": null, "n/a_reason": "equity_curve_missing", "authority": "equity_curve_reconstruction"}
+  },
+  "trade_diagnostics": {
+    "long_trade_count": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "short_trade_count": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "long_net_profit": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "short_net_profit": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "long_expectancy": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "short_expectancy": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "avg_hold_bars": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "hold_distribution": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "mfe_mean": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "mae_mean": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "realized_over_mfe": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "loss_trade_mfe": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"},
+    "win_trade_mae": {"value": null, "n/a_reason": "trade_telemetry_missing", "authority": "mt5_trade_telemetry"}
+  },
+  "regime_slice_attribution": {
+    "session_slice": {"value": null, "n/a_reason": "", "authority": "python_attribution_from_signal_and_trade_join"},
+    "volatility_regime": {"value": null, "n/a_reason": "", "authority": "python_attribution_from_signal_and_trade_join"},
+    "trend_regime": {"value": null, "n/a_reason": "", "authority": "python_attribution_from_signal_and_trade_join"},
+    "adx_bucket": {"value": null, "n/a_reason": "", "authority": "python_attribution_from_signal_and_trade_join"},
+    "spread_regime": {"value": null, "n/a_reason": "", "authority": "python_attribution_from_signal_and_trade_join"},
+    "month_pnl": {"value": null, "n/a_reason": "trade_list_missing", "authority": "python_attribution_from_signal_and_trade_join"},
+    "quarter_pnl": {"value": null, "n/a_reason": "trade_list_missing", "authority": "python_attribution_from_signal_and_trade_join"},
+    "subperiod_consistency": {"value": null, "n/a_reason": "trade_list_missing", "authority": "python_attribution_from_signal_and_trade_join"},
+    "validation_oos_gap": {"value": null, "n/a_reason": "", "authority": "python_attribution_from_signal_and_trade_join"}
+  },
+  "execution": {
+    "order_attempt_count": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "order_fill_count": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "fill_rate": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "reject_count": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "skip_count": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "avg_spread": {"value": null, "n/a_reason": "metric_not_emitted_by_mt5", "authority": "mt5_runtime_telemetry_summary"},
+    "avg_slippage": {"value": null, "n/a_reason": "metric_not_emitted_by_mt5", "authority": "mt5_runtime_telemetry_summary"},
+    "external_mismatch_count": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "model_fail_count": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "feature_ready_count": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"},
+    "data_readiness_failures": {"value": null, "n/a_reason": "runtime_telemetry_missing", "authority": "mt5_runtime_telemetry_summary"}
+  }
+}

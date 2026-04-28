@@ -1,0 +1,46 @@
+run_plan_id: kpi_rebuild_mt5_recording_v1_run_plan
+packet_id: kpi_rebuild_mt5_recording_v1
+created_at_utc: '2026-04-29T00:00:00Z'
+stage_id: cross_stage_kpi_rebuild_mt5_recording
+execution_scope:
+  target_runs_total: 70
+  existing_mt5_report_ingestion: true
+  new_mt5_strategy_tester_execution: false
+  no_existing_ledger_overwrite: true
+  normalized_records_expected_from_existing_reports: 448
+phases:
+- id: phase_1_existing_report_ingestion
+  status: complete
+  effect: MT5 reports become machine-readable 7-layer KPI rows.
+- id: phase_2_missing_mt5_rerun_packet
+  status: next_required
+  effect: Runs with no MT5 reports are handled in a separate execution packet.
+missing_mt5_runs:
+- run_id: run02T_label_horizon_priority_probe_v1
+  stage_id: 11_alpha_robustness__wfo_label_horizon_sensitivity
+  reason: mt5_report_missing
+  detail: no mt5_records, mt5.kpi_records, or report files
+- run_id: run02U_wfo_lite_priority_probe_v1
+  stage_id: 11_alpha_robustness__wfo_label_horizon_sensitivity
+  reason: mt5_report_missing
+  detail: no mt5_records, mt5.kpi_records, or report files
+- run_id: run02V_short_specific_priority_probe_v1
+  stage_id: 11_alpha_robustness__wfo_label_horizon_sensitivity
+  reason: mt5_report_missing
+  detail: no mt5_records, mt5.kpi_records, or report files
+- run_id: run03B_et_standalone_fwd12_v1
+  stage_id: 12_model_family_challenge__extratrees_training_effect
+  reason: mt5_report_missing
+  detail: no mt5_records, mt5.kpi_records, or report files
+- run_id: run03D_et_standalone_batch20_v1
+  stage_id: 12_model_family_challenge__extratrees_training_effect
+  reason: mt5_report_missing
+  detail: no mt5_records, mt5.kpi_records, or report files
+artifact_plan:
+  normalized_kpi_records: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl
+  normalized_kpi_summary: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_summary.csv
+  recording_summary: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/recording_summary.json
+forbidden_actions:
+- overwrite_alpha_run_ledger
+- claim_all_70_rerun_complete
+- claim_operating_promotion

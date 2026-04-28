@@ -1,0 +1,86 @@
+version: codex_operating_format_v1
+purpose: "Define the project-wide operating lifecycle for non-trivial Codex work."
+compatibility:
+  extends:
+    - docs/policies/agent_trigger_policy.md
+    - docs/policies/run_result_management.md
+    - docs/policies/kpi_measurement_standard.md
+    - docs/policies/result_judgment_policy.md
+    - docs/policies/architecture_invariants.md
+  does_not_replace:
+    - docs/registers/run_registry.csv
+    - docs/registers/alpha_run_ledger.csv
+    - stages/<stage_id>/03_reviews/stage_run_ledger.csv
+lifecycle:
+  - phase: intake
+    required_outputs:
+      - current_truth_reference
+      - user_quote
+      - prompt_risk_scan
+      - preflight_clarification_result
+    effect: "Fix the user request before any silent scope reduction can happen."
+  - phase: work_packet
+    required_outputs:
+      - work_packet.yaml
+      - acceptance_criteria
+      - scope_reduction_policy
+      - forbidden_claims
+    effect: "Turn the request into a checkable contract."
+  - phase: run_plan
+    required_outputs:
+      - run_plan.yaml
+      - row_grain_contract
+      - kpi_source_authority
+      - artifact_contract
+    effect: "Fix what will be run, what will be measured, and where evidence must come from."
+  - phase: execution
+    required_outputs:
+      - source_artifacts
+      - machine_readable_records
+      - human_readable_reports
+    effect: "Separate raw evidence, machine records, and user-facing explanation."
+  - phase: closeout
+    required_outputs:
+      - skill_receipts
+      - gate_result.json
+      - final_claim_guard
+      - closeout_report
+    effect: "Forbid unsupported completed, verified, promotion, or runtime-authority claims."
+artifact_roles:
+  raw_evidence:
+    examples:
+      - mt5/reports/*.htm
+      - predictions/*.parquet
+      - results/*.csv
+      - external telemetry csv
+    rule: "Raw evidence proves what actually ran."
+  machine_readable:
+    examples:
+      - work_packet.yaml
+      - run_plan.yaml
+      - run_manifest.json
+      - kpi_record.normalized.json
+      - summary.json
+      - gate_result.json
+      - skill_receipts/*.yaml
+    rule: "Machine records are used by gates and audits."
+  human_readable:
+    examples:
+      - reports/result_summary.md
+      - closeout_report.md
+      - stages/<stage_id>/03_reviews/*packet.md
+      - docs/context/current_working_state.md
+    rule: "Human reports must not contradict machine records."
+completion_rule:
+  completed_requires:
+    - all_acceptance_criteria_passed
+    - required_skill_receipts_executed
+    - kpi_contract_passed
+    - artifact_lineage_connected_or_bounded
+    - final_claim_guard_passed
+  blocked_requires_one_of:
+    - recovery_attempt
+    - execution_attempt
+    - failure_log
+    - required_user_action
+    - claim_lowered_with_boundary

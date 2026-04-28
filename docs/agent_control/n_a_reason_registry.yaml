@@ -1,0 +1,65 @@
+version: n_a_reason_registry_v1
+rule: "A missing KPI field must use an allowed n/a_reason instead of a blank value."
+allowed_reasons:
+  run_has_no_variant_layer:
+    category: identity
+    use_when: "The run has no variant concept, such as a single fixed run."
+  split_not_applicable:
+    category: identity
+    use_when: "The record is not tied to train, validation, or OOS."
+  tier_not_applicable:
+    category: identity
+    use_when: "The run does not use Tier A, Tier B, or Tier A+B views."
+  route_role_not_applicable:
+    category: identity
+    use_when: "The row is not an MT5 routed or tier-only record."
+  python_structural_only_no_mt5_report:
+    category: mt5
+    use_when: "The work explicitly stopped at Python structural evidence."
+  mt5_report_missing:
+    category: mt5
+    use_when: "MT5 was required, but the Strategy Tester report is missing."
+  mt5_not_requested_by_user_quote:
+    category: mt5
+    use_when: "The user explicitly excluded MT5 for this packet."
+  metric_not_emitted_by_mt5:
+    category: source
+    use_when: "The MT5 report does not provide this metric directly."
+  telemetry_missing:
+    category: source
+    use_when: "Required telemetry or trade log is unavailable."
+  trade_telemetry_missing:
+    category: source
+    use_when: "Trade-level telemetry needed for MFE, MAE, or hold diagnostics is unavailable."
+  runtime_telemetry_missing:
+    category: source
+    use_when: "Runtime summary needed for execution diagnostics is unavailable."
+  equity_curve_missing:
+    category: risk
+    use_when: "Equity curve data is not available for duration or ulcer calculations."
+  trade_list_missing:
+    category: trade_diagnostics
+    use_when: "Trade-level list is unavailable."
+  gross_loss_is_zero:
+    category: math
+    use_when: "Profit factor denominator is zero."
+  insufficient_trade_count:
+    category: judgment
+    use_when: "The metric exists but sample size is too small for the requested interpretation."
+  source_artifact_missing:
+    category: artifact
+    use_when: "The required source artifact is absent."
+  external_artifact_local_only:
+    category: artifact
+    use_when: "The artifact exists only in a local external path."
+  blocked_missing_required_input:
+    category: blocked
+    use_when: "A required input is missing and the packet is blocked."
+  invalid_scope_mismatch:
+    category: invalid
+    use_when: "The run used inputs or inheritance outside the requested scope."
+forbidden_freeform_examples:
+  - not needed
+  - handled implicitly
+  - covered elsewhere
+  - future work

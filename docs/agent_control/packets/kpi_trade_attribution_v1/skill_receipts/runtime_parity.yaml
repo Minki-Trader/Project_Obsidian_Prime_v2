@@ -1,0 +1,7 @@
+packet_id: kpi_trade_attribution_v1
+runtime_path: MT5 strategy tester reports and Common/Files telemetry
+research_path: foundation.control_plane.mt5_trade_attribution
+runtime_claim_boundary: runtime_probe
+known_differences:
+- MFE/MAE are recomputed from exported OHLC bars, not read as scalar fields from MT5
+  report.

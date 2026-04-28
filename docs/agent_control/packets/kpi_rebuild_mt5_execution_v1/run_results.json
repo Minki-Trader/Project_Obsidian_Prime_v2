@@ -1,0 +1,2861 @@
+[
+  {
+    "attempt_count": 2,
+    "attempt_rows": [
+      {
+        "attempt_name": "routed_oos",
+        "net_profit": 62.51,
+        "profit_factor": 1.23,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02X_lgbm_fwd18_rank_threshold_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 19
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "net_profit": -42.96,
+        "profit_factor": 0.92,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02X_lgbm_fwd18_rank_threshold_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 27
+      }
+    ],
+    "completed_reports": 2,
+    "execution_results": [
+      {
+        "attempt_name": "routed_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 524,
+            "feature_skip_count": 36813,
+            "flat_count": 37293,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 10,
+            "model_fail_count": 36813,
+            "model_id": "run02X_lgbm_fwd18_rank_threshold_v1_tier_a_primary",
+            "model_ok_count": 524,
+            "no_tier_count": 36813,
+            "order_attempt_count": 36,
+            "order_fill_count": 36,
+            "run_id": "run02X_lgbm_fwd18_rank_threshold_v1",
+            "short_count": 34,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 428,
+            "tier_a_long_count": 3,
+            "tier_a_order_attempt_count": 23,
+            "tier_a_order_fill_count": 23,
+            "tier_a_short_count": 29,
+            "tier_a_used_count": 460,
+            "tier_b_fallback_flat_count": 52,
+            "tier_b_fallback_long_count": 7,
+            "tier_b_fallback_order_attempt_count": 13,
+            "tier_b_fallback_order_fill_count": 13,
+            "tier_b_fallback_short_count": 5,
+            "tier_b_fallback_used_count": 64,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02X_lgbm_fwd18_rank_threshold_v1/telemetry/routed_oos_summary.csv",
+          "summary_sha256": "32c640dca0e3b49fb7aaa6c511ab2128cc245c95a69754654c754718ecea466d",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02X_lgbm_fwd18_rank_threshold_v1/telemetry/routed_oos_telemetry.csv",
+          "telemetry_sha256": "afaf7a652e95e1209fd10707157ef22711da4c1eaac3ca286ddd39e3ad00914c",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.ini",
+            "sha256": "a9c7fcdb4d6818ab833849cb623f153065643c67651f4ad8c703235c445fa651",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/routed_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "b987273929ecadb6853c1df0b33202632512078820632b08f0f167b641b114c5",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/routed_oos.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 740,
+            "feature_skip_count": 52068,
+            "flat_count": 52746,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 31,
+            "model_fail_count": 52068,
+            "model_id": "run02X_lgbm_fwd18_rank_threshold_v1_tier_a_primary",
+            "model_ok_count": 740,
+            "no_tier_count": 52068,
+            "order_attempt_count": 51,
+            "order_fill_count": 51,
+            "run_id": "run02X_lgbm_fwd18_rank_threshold_v1",
+            "short_count": 31,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 540,
+            "tier_a_long_count": 24,
+            "tier_a_order_attempt_count": 38,
+            "tier_a_order_fill_count": 38,
+            "tier_a_short_count": 24,
+            "tier_a_used_count": 588,
+            "tier_b_fallback_flat_count": 138,
+            "tier_b_fallback_long_count": 7,
+            "tier_b_fallback_order_attempt_count": 13,
+            "tier_b_fallback_order_fill_count": 13,
+            "tier_b_fallback_short_count": 7,
+            "tier_b_fallback_used_count": 152,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02X_lgbm_fwd18_rank_threshold_v1/telemetry/routed_validation_is_summary.csv",
+          "summary_sha256": "313fdd392c7f6529f7aba7f23452a9af97e00c5ecb0c2abed87d21c0c72b36cd",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02X_lgbm_fwd18_rank_threshold_v1/telemetry/routed_validation_is_telemetry.csv",
+          "telemetry_sha256": "c1a39bab7ebdced01e16f2449eedef2417109316586cef917590e808b73a888e",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.ini",
+            "sha256": "2de583ee764890903ba79544a15cb3d0bd418c40a5acdb4e0c13c0483acd7b46",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/routed_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "24bff799e3680388251d4e40be1600b37f1c622bdf6778f4372ff14f2736a38a",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/routed_validation_is.set"
+          }
+        },
+        "tier": "Tier A+B"
+      }
+    ],
+    "report_records": [
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.png",
+          "sha256": "55ed7dc1f096c1b945cb0f30999b5730b57a1a40571bd00efec799b1140e2f7e",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.htm",
+          "sha256": "19848e20ee3ce7f30e770f20d67ed76db26c599b6f39cf3d5f5a2fb0f9ce07eb",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 114.85,
+          "balance_drawdown_maximal_percent": 16.96,
+          "deal_count": 38,
+          "equity_drawdown_maximal_amount": 194.72,
+          "equity_drawdown_maximal_percent": 35.51,
+          "expectancy": 3.29,
+          "gross_loss": -270.96,
+          "gross_profit": 333.47,
+          "long_trade_count": 6,
+          "long_win_rate_percent": 50.0,
+          "losing_trade_count": 9,
+          "loss_rate_percent": 47.37,
+          "max_drawdown_amount": 194.72,
+          "max_drawdown_percent": 35.51,
+          "missing_required_metrics": [],
+          "net_profit": 62.51,
+          "parsed_row_count": 161,
+          "profit_factor": 1.23,
+          "recovery_factor": 0.32,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos.htm",
+          "sharpe_ratio": 0.6,
+          "short_trade_count": 13,
+          "short_win_rate_percent": 53.85,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 19,
+          "win_rate_percent": 52.63,
+          "winning_trade_count": 10
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.png",
+          "sha256": "eafa0cd0d870255635849a013f32c8f08d4fe7e026fa928b4676ed1bdb535ea9",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.htm",
+          "sha256": "a0e9c523fcd15ea2000b382c6e90c18463aeaada3f93819fdbbb2a72188d80e1",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 387.07,
+          "balance_drawdown_maximal_percent": 67.94,
+          "deal_count": 54,
+          "equity_drawdown_maximal_amount": 503.69,
+          "equity_drawdown_maximal_percent": 83.24,
+          "expectancy": -1.59,
+          "gross_loss": -567.58,
+          "gross_profit": 524.62,
+          "long_trade_count": 13,
+          "long_win_rate_percent": 69.23,
+          "losing_trade_count": 15,
+          "loss_rate_percent": 55.56,
+          "max_drawdown_amount": 503.69,
+          "max_drawdown_percent": 83.24,
+          "missing_required_metrics": [],
+          "net_profit": -42.96,
+          "parsed_row_count": 193,
+          "profit_factor": 0.92,
+          "recovery_factor": -0.09,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is.htm",
+          "sharpe_ratio": -0.18,
+          "short_trade_count": 14,
+          "short_win_rate_percent": 21.43,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 27,
+          "win_rate_percent": 44.44,
+          "winning_trade_count": 12
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02X_lgbm_fwd18_rank_threshold_v1_routed_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      }
+    ],
+    "run_id": "run02X_lgbm_fwd18_rank_threshold_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02X_lgbm_fwd18_rank_threshold_v1",
+    "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+  },
+  {
+    "attempt_count": 2,
+    "attempt_rows": [
+      {
+        "attempt_name": "routed_oos",
+        "net_profit": -80.75,
+        "profit_factor": 0.76,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02Y_lgbm_fwd18_inverse_rank_threshold_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 19
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "net_profit": 16.21,
+        "profit_factor": 1.03,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02Y_lgbm_fwd18_inverse_rank_threshold_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 27
+      }
+    ],
+    "completed_reports": 2,
+    "execution_results": [
+      {
+        "attempt_name": "routed_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 524,
+            "feature_skip_count": 36813,
+            "flat_count": 37293,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 34,
+            "model_fail_count": 36813,
+            "model_id": "run02Y_lgbm_fwd18_inverse_rank_threshold_v1_tier_a_primary",
+            "model_ok_count": 524,
+            "no_tier_count": 36813,
+            "order_attempt_count": 36,
+            "order_fill_count": 36,
+            "run_id": "run02Y_lgbm_fwd18_inverse_rank_threshold_v1",
+            "short_count": 10,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 428,
+            "tier_a_long_count": 29,
+            "tier_a_order_attempt_count": 23,
+            "tier_a_order_fill_count": 23,
+            "tier_a_short_count": 3,
+            "tier_a_used_count": 460,
+            "tier_b_fallback_flat_count": 52,
+            "tier_b_fallback_long_count": 5,
+            "tier_b_fallback_order_attempt_count": 13,
+            "tier_b_fallback_order_fill_count": 13,
+            "tier_b_fallback_short_count": 7,
+            "tier_b_fallback_used_count": 64,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/telemetry/routed_oos_summary.csv",
+          "summary_sha256": "79b8bab63a85eb9531d7b8daf96c27158600a56673c91c03ac3d70178bc0002e",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/telemetry/routed_oos_telemetry.csv",
+          "telemetry_sha256": "6e5c957dc5eaba3c13694a6ae540b9cdc22fa2b34ad24763d94dafbeb3d416ab",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.ini",
+            "sha256": "52f1bf0935a99ebb69b26f2378590961d9f4a8703927d302f464dcc3fca215cc",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/routed_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "0d6db36c93c93f1df1efe9431bf1e6d87b0cbf53d62127f556c6f5d18c2fa71e",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/routed_oos.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 740,
+            "feature_skip_count": 52068,
+            "flat_count": 52746,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 31,
+            "model_fail_count": 52068,
+            "model_id": "run02Y_lgbm_fwd18_inverse_rank_threshold_v1_tier_a_primary",
+            "model_ok_count": 740,
+            "no_tier_count": 52068,
+            "order_attempt_count": 51,
+            "order_fill_count": 51,
+            "run_id": "run02Y_lgbm_fwd18_inverse_rank_threshold_v1",
+            "short_count": 31,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 540,
+            "tier_a_long_count": 24,
+            "tier_a_order_attempt_count": 38,
+            "tier_a_order_fill_count": 38,
+            "tier_a_short_count": 24,
+            "tier_a_used_count": 588,
+            "tier_b_fallback_flat_count": 138,
+            "tier_b_fallback_long_count": 7,
+            "tier_b_fallback_order_attempt_count": 13,
+            "tier_b_fallback_order_fill_count": 13,
+            "tier_b_fallback_short_count": 7,
+            "tier_b_fallback_used_count": 152,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/telemetry/routed_validation_is_summary.csv",
+          "summary_sha256": "569b5330b0d1f3989f068e13cbd3320b7ae56730a03c2e8ab4fe141276450020",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/telemetry/routed_validation_is_telemetry.csv",
+          "telemetry_sha256": "3c5c4ead0f3dd77afe302a33fe56bdae5afa293fcf151a3adfd0eb38ef5ab89b",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.ini",
+            "sha256": "dbfa5664a31b370d7a12503ca151d28db6ae94ad3212917d56cada1d24a52022",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/routed_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "28d0028b2249fc9c2d1e94d25ebaaf84cedc3075d73b756007adeb3a248dfcce",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/routed_validation_is.set"
+          }
+        },
+        "tier": "Tier A+B"
+      }
+    ],
+    "report_records": [
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.png",
+          "sha256": "3ab4ddcd89a17b0b91486f582869a62d2c1a9491b15409812f6d84d89b5e40eb",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.htm",
+          "sha256": "1f05e9821998cf6068bedf0bba62b5f79874ca8431d177711acaedb2eb0aac61",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 279.59,
+          "balance_drawdown_maximal_percent": 47.33,
+          "deal_count": 38,
+          "equity_drawdown_maximal_amount": 343.69,
+          "equity_drawdown_maximal_percent": 53.43,
+          "expectancy": -4.25,
+          "gross_loss": -343.13,
+          "gross_profit": 262.38,
+          "long_trade_count": 13,
+          "long_win_rate_percent": 46.15,
+          "losing_trade_count": 10,
+          "loss_rate_percent": 52.63,
+          "max_drawdown_amount": 343.69,
+          "max_drawdown_percent": 53.43,
+          "missing_required_metrics": [],
+          "net_profit": -80.75,
+          "parsed_row_count": 161,
+          "profit_factor": 0.76,
+          "recovery_factor": -0.23,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos.htm",
+          "sharpe_ratio": -0.66,
+          "short_trade_count": 6,
+          "short_win_rate_percent": 50.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 19,
+          "win_rate_percent": 47.37,
+          "winning_trade_count": 9
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.png",
+          "sha256": "30cbe980b5f0a078a41ee45dbe76e1881ae7e5d666633ef2054224ae7f513349",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.htm",
+          "sha256": "1c6ef3a7fe0a2311c3e9614c0212e165040ec10464722eb7d7c30d09e49e2585",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 359.5,
+          "balance_drawdown_maximal_percent": 44.62,
+          "deal_count": 54,
+          "equity_drawdown_maximal_amount": 460.0,
+          "equity_drawdown_maximal_percent": 51.85,
+          "expectancy": 0.6,
+          "gross_loss": -536.64,
+          "gross_profit": 552.85,
+          "long_trade_count": 14,
+          "long_win_rate_percent": 71.43,
+          "losing_trade_count": 13,
+          "loss_rate_percent": 48.15,
+          "max_drawdown_amount": 460.0,
+          "max_drawdown_percent": 51.85,
+          "missing_required_metrics": [],
+          "net_profit": 16.21,
+          "parsed_row_count": 193,
+          "profit_factor": 1.03,
+          "recovery_factor": 0.04,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1/mt5/reports/Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is.htm",
+          "sharpe_ratio": 0.14,
+          "short_trade_count": 13,
+          "short_win_rate_percent": 30.77,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 27,
+          "win_rate_percent": 51.85,
+          "winning_trade_count": 14
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02Y_lgbm_fwd18_inverse_rank_threshold_v1_routed_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      }
+    ],
+    "run_id": "run02Y_lgbm_fwd18_inverse_rank_threshold_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Y_lgbm_fwd18_inverse_rank_threshold_v1",
+    "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+  },
+  {
+    "attempt_count": 6,
+    "attempt_rows": [
+      {
+        "attempt_name": "routed_oos",
+        "net_profit": -176.49,
+        "profit_factor": 0.75,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 34
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "net_profit": 6.64,
+        "profit_factor": 1.01,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 35
+      },
+      {
+        "attempt_name": "tier_a_only_oos",
+        "net_profit": -194.69,
+        "profit_factor": 0.74,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A",
+        "trade_count": 33
+      },
+      {
+        "attempt_name": "tier_a_only_validation_is",
+        "net_profit": -19.45,
+        "profit_factor": 0.97,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A",
+        "trade_count": 31
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_oos",
+        "net_profit": -60.39,
+        "profit_factor": 0.67,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier B",
+        "trade_count": 3
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_validation_is",
+        "net_profit": 175.53,
+        "profit_factor": 0.0,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier B",
+        "trade_count": 4
+      }
+    ],
+    "completed_reports": 6,
+    "execution_results": [
+      {
+        "attempt_name": "routed_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 524,
+            "feature_skip_count": 36813,
+            "flat_count": 37211,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 108,
+            "model_fail_count": 36813,
+            "model_id": "run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_primary",
+            "model_ok_count": 524,
+            "no_tier_count": 36813,
+            "order_attempt_count": 64,
+            "order_fill_count": 64,
+            "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+            "short_count": 18,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 345,
+            "tier_a_long_count": 102,
+            "tier_a_order_attempt_count": 59,
+            "tier_a_order_fill_count": 59,
+            "tier_a_short_count": 18,
+            "tier_a_used_count": 465,
+            "tier_b_fallback_flat_count": 53,
+            "tier_b_fallback_long_count": 6,
+            "tier_b_fallback_order_attempt_count": 5,
+            "tier_b_fallback_order_fill_count": 5,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 59,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/routed_oos_summary.csv",
+          "summary_sha256": "938958ecf59a93c245c2a4001114a8b77a12e516d90311b9c1589d261d4f4772",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/routed_oos_telemetry.csv",
+          "telemetry_sha256": "3c860cb4a5d220bb73d2c71d0bf97894bee80a4fe79699685689e518133d7457",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.ini",
+            "sha256": "a7652cb65bfe397b25a219d46a1facd712efa14f81084e1f333e852cfb833e52",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/routed_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "84303e8e09bd8a7e4c7c8d2428821b8c9535928cbb72088fcac3d5cf1e86aed2",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/routed_oos.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 740,
+            "feature_skip_count": 52068,
+            "flat_count": 52673,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 113,
+            "model_fail_count": 52068,
+            "model_id": "run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_primary",
+            "model_ok_count": 740,
+            "no_tier_count": 52068,
+            "order_attempt_count": 62,
+            "order_fill_count": 62,
+            "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+            "short_count": 22,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 451,
+            "tier_a_long_count": 109,
+            "tier_a_order_attempt_count": 56,
+            "tier_a_order_fill_count": 56,
+            "tier_a_short_count": 19,
+            "tier_a_used_count": 579,
+            "tier_b_fallback_flat_count": 154,
+            "tier_b_fallback_long_count": 4,
+            "tier_b_fallback_order_attempt_count": 6,
+            "tier_b_fallback_order_fill_count": 6,
+            "tier_b_fallback_short_count": 3,
+            "tier_b_fallback_used_count": 161,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/routed_validation_is_summary.csv",
+          "summary_sha256": "ad6ca227541135b05ea80f3a4261f6b2edf2125c0cc2bbfa8cf16b3123e46708",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/routed_validation_is_telemetry.csv",
+          "telemetry_sha256": "41f1c2c74e21cfd79192e3cb40c43bf57bdb1009c37db6b27d63770843eba635",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.ini",
+            "sha256": "e3936316b47e27d68b1ab59d8f7f10f8f7f4c68395c561c074f056a281799540",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/routed_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "721280b507970bfd551d886f56159f09cc5505e01a19d485d38da57edee356b2",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/routed_validation_is.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "tier_a_only_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 465,
+            "feature_skip_count": 36872,
+            "flat_count": 37217,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 102,
+            "model_fail_count": 36872,
+            "model_id": "run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only",
+            "model_ok_count": 465,
+            "no_tier_count": 36872,
+            "order_attempt_count": 61,
+            "order_fill_count": 61,
+            "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+            "short_count": 18,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 345,
+            "tier_a_long_count": 102,
+            "tier_a_order_attempt_count": 61,
+            "tier_a_order_fill_count": 61,
+            "tier_a_short_count": 18,
+            "tier_a_used_count": 465,
+            "tier_b_fallback_flat_count": 0,
+            "tier_b_fallback_long_count": 0,
+            "tier_b_fallback_order_attempt_count": 0,
+            "tier_b_fallback_order_fill_count": 0,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 0,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_a_only_oos_summary.csv",
+          "summary_sha256": "57305a603617f2b5878fb536d689d9b29e545e8414adafd369eded7da02602a2",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_a_only_oos_telemetry.csv",
+          "telemetry_sha256": "db32603f51ff973aed4f2578f268ff5301850517e21cf21f942d19cc67a6062d",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.ini",
+            "sha256": "fdfbd0728ba67c057b5cc6dda9ccd454ad7ab4b30254dd8fa87f31512b5985cb",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_a_only_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "be36af2c5d2cb8e0b2d4b81e75bcdfb8f58906cd3d94be56066cf676be988a90",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_a_only_oos.set"
+          }
+        },
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "tier_a_only_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 579,
+            "feature_skip_count": 52229,
+            "flat_count": 52680,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 109,
+            "model_fail_count": 52229,
+            "model_id": "run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only",
+            "model_ok_count": 579,
+            "no_tier_count": 52229,
+            "order_attempt_count": 54,
+            "order_fill_count": 54,
+            "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+            "short_count": 19,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 451,
+            "tier_a_long_count": 109,
+            "tier_a_order_attempt_count": 54,
+            "tier_a_order_fill_count": 54,
+            "tier_a_short_count": 19,
+            "tier_a_used_count": 579,
+            "tier_b_fallback_flat_count": 0,
+            "tier_b_fallback_long_count": 0,
+            "tier_b_fallback_order_attempt_count": 0,
+            "tier_b_fallback_order_fill_count": 0,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 0,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_a_only_validation_is_summary.csv",
+          "summary_sha256": "21956244500497f4eafff88805d55eebd8d00c7319a73b462c86e680611cb690",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_a_only_validation_is_telemetry.csv",
+          "telemetry_sha256": "44cb7a4e04f8df616f6e3154e7c3d579c32b86bdaa88dddad2ae6c6d8da3f926",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.ini",
+            "sha256": "35fc2f4e4e8acf8bd6f37ddb0b38fc8f03fb6963336bec53dd8d42301740ba6b",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_a_only_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "8ab89e8b10f1999779803237557be78f99c7c18e221968a847483744b0f14e24",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_a_only_validation_is.set"
+          }
+        },
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "feature_ready_count": 59,
+            "feature_skip_count": 37278,
+            "flat_count": 37331,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 6,
+            "model_fail_count": 37278,
+            "model_id": "run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only",
+            "model_ok_count": 59,
+            "no_tier_count": 37278,
+            "order_attempt_count": 5,
+            "order_fill_count": 5,
+            "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+            "short_count": 0,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 0,
+            "tier_a_long_count": 0,
+            "tier_a_order_attempt_count": 0,
+            "tier_a_order_fill_count": 0,
+            "tier_a_short_count": 0,
+            "tier_a_used_count": 0,
+            "tier_b_fallback_flat_count": 53,
+            "tier_b_fallback_long_count": 6,
+            "tier_b_fallback_order_attempt_count": 5,
+            "tier_b_fallback_order_fill_count": 5,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 59,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_b_fallback_only_oos_summary.csv",
+          "summary_sha256": "290d8db4d1ca984824b5aaab8563be90c4eec54505546e69e0a7f230bbdd9c1d",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_b_fallback_only_oos_telemetry.csv",
+          "telemetry_sha256": "17306ddc3e51159b65144f9db6c86b3946bfdcd0345a9a79813a87434c3b189c",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.ini",
+            "sha256": "79568208adf958e57eb9a22fcb0972c30954164c12ece1869f27a480e89e98c7",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_b_fallback_only_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "080359e722e1ff3d70412858b9aceaa63a801278d42e8e409e5388cea008de95",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_b_fallback_only_oos.set"
+          }
+        },
+        "tier": "Tier B"
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "feature_ready_count": 161,
+            "feature_skip_count": 52647,
+            "flat_count": 52801,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 4,
+            "model_fail_count": 52647,
+            "model_id": "run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only",
+            "model_ok_count": 161,
+            "no_tier_count": 52647,
+            "order_attempt_count": 8,
+            "order_fill_count": 8,
+            "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+            "short_count": 3,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 0,
+            "tier_a_long_count": 0,
+            "tier_a_order_attempt_count": 0,
+            "tier_a_order_fill_count": 0,
+            "tier_a_short_count": 0,
+            "tier_a_used_count": 0,
+            "tier_b_fallback_flat_count": 154,
+            "tier_b_fallback_long_count": 4,
+            "tier_b_fallback_order_attempt_count": 8,
+            "tier_b_fallback_order_fill_count": 8,
+            "tier_b_fallback_short_count": 3,
+            "tier_b_fallback_used_count": 161,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_b_fallback_only_validation_is_summary.csv",
+          "summary_sha256": "7426e8cf06431e76a0b704b665d9e1877e7c86287d83ec5f79657cb7f29feb59",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AF_lgbm_fwd18_source_session_190_210_v1/telemetry/tier_b_fallback_only_validation_is_telemetry.csv",
+          "telemetry_sha256": "7effb3abd5cef5bcff26a959e74c06dcf0e3da3fd8674ca0c3f5202ba5668b79",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.ini",
+            "sha256": "3e684e5e1de1f45cc93ab82ab02aff131548fd73eb3e9af15b3c08100b4a6eb9",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_b_fallback_only_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "dc1a189c64988f08816c4b51c3b326bbf4645fb5b131644ccc2be5668632f78c",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/tier_b_fallback_only_validation_is.set"
+          }
+        },
+        "tier": "Tier B"
+      }
+    ],
+    "report_records": [
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.png",
+          "sha256": "584fef198254bf34394bb232bc76b4e8e697fb8c337dbf9ac668a9c0b79add76",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.htm",
+          "sha256": "1843e3c1adf323f61987c69ec187f92329ab7d372ff6fd34b40c743633a4eb35",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 393.23,
+          "balance_drawdown_maximal_percent": 61.62,
+          "deal_count": 68,
+          "equity_drawdown_maximal_amount": 446.05,
+          "equity_drawdown_maximal_percent": 67.68,
+          "expectancy": -5.19,
+          "gross_loss": -709.84,
+          "gross_profit": 533.35,
+          "long_trade_count": 27,
+          "long_win_rate_percent": 44.44,
+          "losing_trade_count": 20,
+          "loss_rate_percent": 58.82,
+          "max_drawdown_amount": 446.05,
+          "max_drawdown_percent": 67.68,
+          "missing_required_metrics": [],
+          "net_profit": -176.49,
+          "parsed_row_count": 221,
+          "profit_factor": 0.75,
+          "recovery_factor": -0.4,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos.htm",
+          "sharpe_ratio": -1.12,
+          "short_trade_count": 7,
+          "short_win_rate_percent": 28.57,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 34,
+          "win_rate_percent": 41.18,
+          "winning_trade_count": 14
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.png",
+          "sha256": "3fa0e4b61aed04ef4cf454767d8d1bd2baee290a49d516d91881fd6483878fce",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.htm",
+          "sha256": "6fde1a7e6294992ccfceb040bb14c929f250aef05b74d60d8efcb51962f88163",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 301.29,
+          "balance_drawdown_maximal_percent": 52.53,
+          "deal_count": 70,
+          "equity_drawdown_maximal_amount": 393.26,
+          "equity_drawdown_maximal_percent": 66.48,
+          "expectancy": 0.19,
+          "gross_loss": -721.75,
+          "gross_profit": 728.39,
+          "long_trade_count": 28,
+          "long_win_rate_percent": 64.29,
+          "losing_trade_count": 15,
+          "loss_rate_percent": 42.86,
+          "max_drawdown_amount": 393.26,
+          "max_drawdown_percent": 66.48,
+          "missing_required_metrics": [],
+          "net_profit": 6.64,
+          "parsed_row_count": 225,
+          "profit_factor": 1.01,
+          "recovery_factor": 0.02,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is.htm",
+          "sharpe_ratio": 0.03,
+          "short_trade_count": 7,
+          "short_win_rate_percent": 28.57,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 35,
+          "win_rate_percent": 57.14,
+          "winning_trade_count": 20
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_routed_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.png",
+          "sha256": "527b03393882bb2fa8cdbacc1856800c4f53a5c2e30c970c51af5aaf1a0aba83",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.htm",
+          "sha256": "cbe598d417ee7eef11e043d1cf2e5cce93ae6231bdb1a5937ad6a3828f986cad",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 379.44,
+          "balance_drawdown_maximal_percent": 62.56,
+          "deal_count": 66,
+          "equity_drawdown_maximal_amount": 432.26,
+          "equity_drawdown_maximal_percent": 68.89,
+          "expectancy": -5.9,
+          "gross_loss": -762.02,
+          "gross_profit": 567.33,
+          "long_trade_count": 26,
+          "long_win_rate_percent": 46.15,
+          "losing_trade_count": 19,
+          "loss_rate_percent": 57.58,
+          "max_drawdown_amount": 432.26,
+          "max_drawdown_percent": 68.89,
+          "missing_required_metrics": [],
+          "net_profit": -194.69,
+          "parsed_row_count": 217,
+          "profit_factor": 0.74,
+          "recovery_factor": -0.45,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos.htm",
+          "sharpe_ratio": -1.18,
+          "short_trade_count": 7,
+          "short_win_rate_percent": 28.57,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 33,
+          "win_rate_percent": 42.42,
+          "winning_trade_count": 14
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.png",
+          "sha256": "3439ab708c6fb44beae4a5771418314070f8fb84084458e3011d159a6df2319a",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.htm",
+          "sha256": "36d34a59c7f8baa8d5072d2836c58de612539cc09b3b11d4b064aa1c111bfbd2",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 305.94,
+          "balance_drawdown_maximal_percent": 53.34,
+          "deal_count": 62,
+          "equity_drawdown_maximal_amount": 397.91,
+          "equity_drawdown_maximal_percent": 67.27,
+          "expectancy": -0.63,
+          "gross_loss": -702.34,
+          "gross_profit": 682.89,
+          "long_trade_count": 25,
+          "long_win_rate_percent": 64.0,
+          "losing_trade_count": 13,
+          "loss_rate_percent": 41.94,
+          "max_drawdown_amount": 397.91,
+          "max_drawdown_percent": 67.27,
+          "missing_required_metrics": [],
+          "net_profit": -19.45,
+          "parsed_row_count": 209,
+          "profit_factor": 0.97,
+          "recovery_factor": -0.05,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is.htm",
+          "sharpe_ratio": -0.09,
+          "short_trade_count": 6,
+          "short_win_rate_percent": 33.33,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 31,
+          "win_rate_percent": 58.06,
+          "winning_trade_count": 18
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_a_only_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.png",
+          "sha256": "b428dc0bce0db535a2c039e89b61ed8ec6182e648314a68f64aa200bbd7462b6",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.htm",
+          "sha256": "9fbc5e188dc024aa68b8325c4ff33a24763d97091359fd93334995d2121c2f7d",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 184.91,
+          "balance_drawdown_maximal_percent": 36.98,
+          "deal_count": 6,
+          "equity_drawdown_maximal_amount": 275.24,
+          "equity_drawdown_maximal_percent": 54.88,
+          "expectancy": -20.13,
+          "gross_loss": -184.91,
+          "gross_profit": 124.52,
+          "long_trade_count": 3,
+          "long_win_rate_percent": 33.33,
+          "losing_trade_count": 2,
+          "loss_rate_percent": 66.67,
+          "max_drawdown_amount": 275.24,
+          "max_drawdown_percent": 54.88,
+          "missing_required_metrics": [],
+          "net_profit": -60.39,
+          "parsed_row_count": 97,
+          "profit_factor": 0.67,
+          "recovery_factor": -0.22,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos.htm",
+          "sharpe_ratio": -0.02,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 3,
+          "win_rate_percent": 33.33,
+          "winning_trade_count": 1
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.png",
+          "sha256": "600f9545c7ec316953f355f7248e013bc1b78d2821ddb7dc1068856ade4ffd85",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.htm",
+          "sha256": "9b83bf792b6435dc201bb47be1db121093ceafc9a2029dd65273dddc4893acae",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 0.0,
+          "balance_drawdown_maximal_percent": 0.0,
+          "deal_count": 8,
+          "equity_drawdown_maximal_amount": 103.47,
+          "equity_drawdown_maximal_percent": 14.31,
+          "expectancy": 43.88,
+          "gross_loss": 0.0,
+          "gross_profit": 175.53,
+          "long_trade_count": 3,
+          "long_win_rate_percent": 100.0,
+          "losing_trade_count": 0,
+          "loss_rate_percent": 0.0,
+          "max_drawdown_amount": 103.47,
+          "max_drawdown_percent": 14.31,
+          "missing_required_metrics": [],
+          "net_profit": 175.53,
+          "parsed_row_count": 101,
+          "profit_factor": 0.0,
+          "recovery_factor": 1.7,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is.htm",
+          "sharpe_ratio": 0.16,
+          "short_trade_count": 1,
+          "short_win_rate_percent": 100.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 4,
+          "win_rate_percent": 100.0,
+          "winning_trade_count": 4
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AF_lgbm_fwd18_source_session_190_210_v1_tier_b_fallback_only_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier B"
+      }
+    ],
+    "run_id": "run02AF_lgbm_fwd18_source_session_190_210_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AF_lgbm_fwd18_source_session_190_210_v1",
+    "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+  },
+  {
+    "attempt_count": 6,
+    "attempt_rows": [
+      {
+        "attempt_name": "routed_oos",
+        "net_profit": -67.01,
+        "profit_factor": 0.89,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 35
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "net_profit": 18.97,
+        "profit_factor": 1.02,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 40
+      },
+      {
+        "attempt_name": "tier_a_only_oos",
+        "net_profit": -29.59,
+        "profit_factor": 0.95,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A",
+        "trade_count": 33
+      },
+      {
+        "attempt_name": "tier_a_only_validation_is",
+        "net_profit": -0.04,
+        "profit_factor": 1.0,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A",
+        "trade_count": 36
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_oos",
+        "net_profit": 36.63,
+        "profit_factor": 1.17,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier B",
+        "trade_count": 5
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_validation_is",
+        "net_profit": 210.53,
+        "profit_factor": 0.0,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier B",
+        "trade_count": 4
+      }
+    ],
+    "completed_reports": 6,
+    "execution_results": [
+      {
+        "attempt_name": "routed_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 524,
+            "feature_skip_count": 36813,
+            "flat_count": 37211,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 106,
+            "model_fail_count": 36813,
+            "model_id": "run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_primary",
+            "model_ok_count": 524,
+            "no_tier_count": 36813,
+            "order_attempt_count": 64,
+            "order_fill_count": 64,
+            "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+            "short_count": 20,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 344,
+            "tier_a_long_count": 98,
+            "tier_a_order_attempt_count": 59,
+            "tier_a_order_fill_count": 59,
+            "tier_a_short_count": 20,
+            "tier_a_used_count": 462,
+            "tier_b_fallback_flat_count": 54,
+            "tier_b_fallback_long_count": 8,
+            "tier_b_fallback_order_attempt_count": 5,
+            "tier_b_fallback_order_fill_count": 5,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 62,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/routed_oos_summary.csv",
+          "summary_sha256": "3291be85b367080bada53c7f81e5e7f79fd496abc2fd86a4246fecfbcaf2cff3",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/routed_oos_telemetry.csv",
+          "telemetry_sha256": "fbf7eefa932f2df31e18f47979d09dd7a70ba380f17b2bec9c3652b6f1361154",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.ini",
+            "sha256": "8ad87589938b07d4f3281bbe1fd26a83e420ad2f2c707ff0b3c67b6052dc4a2b",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/routed_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "dedc68718b4c8330fa9d654b7dc25dcd733e4eb9c816a8a90da0c4c5affad387",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/routed_oos.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 740,
+            "feature_skip_count": 52068,
+            "flat_count": 52665,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 125,
+            "model_fail_count": 52068,
+            "model_id": "run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_primary",
+            "model_ok_count": 740,
+            "no_tier_count": 52068,
+            "order_attempt_count": 72,
+            "order_fill_count": 72,
+            "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+            "short_count": 18,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 453,
+            "tier_a_long_count": 120,
+            "tier_a_order_attempt_count": 67,
+            "tier_a_order_fill_count": 67,
+            "tier_a_short_count": 16,
+            "tier_a_used_count": 589,
+            "tier_b_fallback_flat_count": 144,
+            "tier_b_fallback_long_count": 5,
+            "tier_b_fallback_order_attempt_count": 5,
+            "tier_b_fallback_order_fill_count": 5,
+            "tier_b_fallback_short_count": 2,
+            "tier_b_fallback_used_count": 151,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/routed_validation_is_summary.csv",
+          "summary_sha256": "05e502e9f8390870d8e64056064fe3672f126bf518b32b376269cc5529fb1788",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/routed_validation_is_telemetry.csv",
+          "telemetry_sha256": "7169c72657ce9a4bb8baabd9152b390a5a2d5e737786ddd3904ef2f57b20ad56",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.ini",
+            "sha256": "405d1650406843af87c00803f1e3eb0f61e1267bb924c82b36e0cadd6981863f",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/routed_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "bb27bbc36cc9c90532352d403166342be67efcdd6168bba50a78bea7b17c63cf",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/routed_validation_is.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "tier_a_only_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 462,
+            "feature_skip_count": 36875,
+            "flat_count": 37219,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 98,
+            "model_fail_count": 36875,
+            "model_id": "run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only",
+            "model_ok_count": 462,
+            "no_tier_count": 36875,
+            "order_attempt_count": 59,
+            "order_fill_count": 59,
+            "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+            "short_count": 20,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 344,
+            "tier_a_long_count": 98,
+            "tier_a_order_attempt_count": 59,
+            "tier_a_order_fill_count": 59,
+            "tier_a_short_count": 20,
+            "tier_a_used_count": 462,
+            "tier_b_fallback_flat_count": 0,
+            "tier_b_fallback_long_count": 0,
+            "tier_b_fallback_order_attempt_count": 0,
+            "tier_b_fallback_order_fill_count": 0,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 0,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_a_only_oos_summary.csv",
+          "summary_sha256": "f67d42dd17a1cfdabf03740f0ea9d923d4762d79775b9c07326fe7d2f55a190a",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_a_only_oos_telemetry.csv",
+          "telemetry_sha256": "f01f4725c14ba1e32e26385415eab11b8dd83b4c097764964f365080dd64fa44",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.ini",
+            "sha256": "1a62826bf52df815311e469e0ecc5c61596a93fa48bafc759d0b55eea9db1a49",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_a_only_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "9378564dcb04384936d75b8652fc8ac5302648e40810cfdeb1c436e1ee7230d9",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_a_only_oos.set"
+          }
+        },
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "tier_a_only_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 589,
+            "feature_skip_count": 52219,
+            "flat_count": 52672,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 120,
+            "model_fail_count": 52219,
+            "model_id": "run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only",
+            "model_ok_count": 589,
+            "no_tier_count": 52219,
+            "order_attempt_count": 64,
+            "order_fill_count": 64,
+            "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+            "short_count": 16,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 453,
+            "tier_a_long_count": 120,
+            "tier_a_order_attempt_count": 64,
+            "tier_a_order_fill_count": 64,
+            "tier_a_short_count": 16,
+            "tier_a_used_count": 589,
+            "tier_b_fallback_flat_count": 0,
+            "tier_b_fallback_long_count": 0,
+            "tier_b_fallback_order_attempt_count": 0,
+            "tier_b_fallback_order_fill_count": 0,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 0,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_a_only_validation_is_summary.csv",
+          "summary_sha256": "fe4c2887bb6be3dc91beb81210e8db5941b2ef0eadd97ea425761261430e6f4a",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_a_only_validation_is_telemetry.csv",
+          "telemetry_sha256": "f90a609bae453fba68d56a2426eaf85e0a51ecbf9dd31d8b71acea3336da7f65",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.ini",
+            "sha256": "bce4f51e99279c8d05d953ed76ec8e03762782518876ffda3087f02f843d09d2",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_a_only_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "97a395cb275dbd5da5a99da82af92b89bdde31f6cf6307f08c75cf6e33620464",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_a_only_validation_is.set"
+          }
+        },
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "feature_ready_count": 62,
+            "feature_skip_count": 37275,
+            "flat_count": 37329,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 8,
+            "model_fail_count": 37275,
+            "model_id": "run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only",
+            "model_ok_count": 62,
+            "no_tier_count": 37275,
+            "order_attempt_count": 10,
+            "order_fill_count": 10,
+            "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+            "short_count": 0,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 0,
+            "tier_a_long_count": 0,
+            "tier_a_order_attempt_count": 0,
+            "tier_a_order_fill_count": 0,
+            "tier_a_short_count": 0,
+            "tier_a_used_count": 0,
+            "tier_b_fallback_flat_count": 54,
+            "tier_b_fallback_long_count": 8,
+            "tier_b_fallback_order_attempt_count": 10,
+            "tier_b_fallback_order_fill_count": 10,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 62,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_b_fallback_only_oos_summary.csv",
+          "summary_sha256": "8168322f227bdfbe6894bfc35e3108002653696871c7ae3d4211433031d587d7",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_b_fallback_only_oos_telemetry.csv",
+          "telemetry_sha256": "80d3450656061cfcf91c87e292db8cbc6ce35423a744548d93b437cea854cca8",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.ini",
+            "sha256": "e0cfdd67852fb73721c13cbb24f39114e8f16ba7a7ce03cf80268290ded1a031",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_b_fallback_only_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "3db4252f6a0f165a9c918c5fe9bbe0136ef70ce2ae75ccf4b97ccf3af8a20a67",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_b_fallback_only_oos.set"
+          }
+        },
+        "tier": "Tier B"
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "feature_ready_count": 151,
+            "feature_skip_count": 52657,
+            "flat_count": 52801,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 5,
+            "model_fail_count": 52657,
+            "model_id": "run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only",
+            "model_ok_count": 151,
+            "no_tier_count": 52657,
+            "order_attempt_count": 8,
+            "order_fill_count": 8,
+            "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+            "short_count": 2,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 0,
+            "tier_a_long_count": 0,
+            "tier_a_order_attempt_count": 0,
+            "tier_a_order_fill_count": 0,
+            "tier_a_short_count": 0,
+            "tier_a_used_count": 0,
+            "tier_b_fallback_flat_count": 144,
+            "tier_b_fallback_long_count": 5,
+            "tier_b_fallback_order_attempt_count": 8,
+            "tier_b_fallback_order_fill_count": 8,
+            "tier_b_fallback_short_count": 2,
+            "tier_b_fallback_used_count": 151,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_b_fallback_only_validation_is_summary.csv",
+          "summary_sha256": "24cf350b70cbe830e6332675f10e5ac0664ff77673ec937e33f2c36728a93fdf",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AG_lgbm_fwd18_source_session_195_215_v1/telemetry/tier_b_fallback_only_validation_is_telemetry.csv",
+          "telemetry_sha256": "4d86a06caa9fb337fc2f64e75ffda8b91e7e454f6bbba72d0ddc4fdd918efab4",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.ini",
+            "sha256": "b57f04a928c745abb246c7cb6ba050b4978bfc6b2b98049f16845e9dc45e0b9b",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_b_fallback_only_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "2df50bdf6e7dd6703dd1e87adcf363a0ff46e9517e1504e17390a33e91b93a97",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/tier_b_fallback_only_validation_is.set"
+          }
+        },
+        "tier": "Tier B"
+      }
+    ],
+    "report_records": [
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.png",
+          "sha256": "7288980e0ebcc9ebdb6e327734f4c9f6b27cdf21787133e676aa8c75770eb119",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.htm",
+          "sha256": "5c85b51a8a0fac0ad27e08273c7f001b28c6a2f0c205e284fbb5d0ac4cefcfd1",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 290.09,
+          "balance_drawdown_maximal_percent": 46.45,
+          "deal_count": 70,
+          "equity_drawdown_maximal_amount": 339.37,
+          "equity_drawdown_maximal_percent": 52.87,
+          "expectancy": -1.91,
+          "gross_loss": -597.06,
+          "gross_profit": 530.05,
+          "long_trade_count": 27,
+          "long_win_rate_percent": 51.85,
+          "losing_trade_count": 17,
+          "loss_rate_percent": 48.57,
+          "max_drawdown_amount": 339.37,
+          "max_drawdown_percent": 52.87,
+          "missing_required_metrics": [],
+          "net_profit": -67.01,
+          "parsed_row_count": 225,
+          "profit_factor": 0.89,
+          "recovery_factor": -0.2,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos.htm",
+          "sharpe_ratio": -0.42,
+          "short_trade_count": 8,
+          "short_win_rate_percent": 50.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 35,
+          "win_rate_percent": 51.43,
+          "winning_trade_count": 18
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.png",
+          "sha256": "eae7aab0637509ca0bdebcdd7f3fd97194df5e00c5b584ed5305cf5af84b165b",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.htm",
+          "sha256": "ce89a5740980db69d7f60993c7b6d420f4ce255f61a7c695880762939b126413",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 425.93,
+          "balance_drawdown_maximal_percent": 73.56,
+          "deal_count": 80,
+          "equity_drawdown_maximal_amount": 544.32,
+          "equity_drawdown_maximal_percent": 90.96,
+          "expectancy": 0.47,
+          "gross_loss": -855.51,
+          "gross_profit": 874.48,
+          "long_trade_count": 33,
+          "long_win_rate_percent": 60.61,
+          "losing_trade_count": 18,
+          "loss_rate_percent": 45.0,
+          "max_drawdown_amount": 544.32,
+          "max_drawdown_percent": 90.96,
+          "missing_required_metrics": [],
+          "net_profit": 18.97,
+          "parsed_row_count": 245,
+          "profit_factor": 1.02,
+          "recovery_factor": 0.03,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is.htm",
+          "sharpe_ratio": 0.04,
+          "short_trade_count": 7,
+          "short_win_rate_percent": 28.57,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 40,
+          "win_rate_percent": 55.0,
+          "winning_trade_count": 22
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_routed_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.png",
+          "sha256": "2c5e03b261d3f50f6da7db992af165c12222f52d18b14cb182f021cd5847aed1",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.htm",
+          "sha256": "4c31e9e2d592140b2e8953ae01bbed125164491b67c292636c6f07a968f0711e",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 300.4,
+          "balance_drawdown_maximal_percent": 43.37,
+          "deal_count": 66,
+          "equity_drawdown_maximal_amount": 342.88,
+          "equity_drawdown_maximal_percent": 48.76,
+          "expectancy": -0.9,
+          "gross_loss": -572.85,
+          "gross_profit": 543.26,
+          "long_trade_count": 25,
+          "long_win_rate_percent": 56.0,
+          "losing_trade_count": 15,
+          "loss_rate_percent": 45.45,
+          "max_drawdown_amount": 342.88,
+          "max_drawdown_percent": 48.76,
+          "missing_required_metrics": [],
+          "net_profit": -29.59,
+          "parsed_row_count": 217,
+          "profit_factor": 0.95,
+          "recovery_factor": -0.09,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos.htm",
+          "sharpe_ratio": -0.2,
+          "short_trade_count": 8,
+          "short_win_rate_percent": 50.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 33,
+          "win_rate_percent": 54.55,
+          "winning_trade_count": 18
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.png",
+          "sha256": "f3ba9c6da90a5952fc0b5da98b77a0998fdf06edd585bc169630709b5771e6ac",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.htm",
+          "sha256": "029680a2bf8a9ba57b4c01e93288658b51c644e6c234ec2cf35c654518874f2a",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 462.18,
+          "balance_drawdown_maximal_percent": 79.82,
+          "deal_count": 72,
+          "equity_drawdown_maximal_amount": 580.57,
+          "equity_drawdown_maximal_percent": 97.02,
+          "expectancy": 0.0,
+          "gross_loss": -833.16,
+          "gross_profit": 833.12,
+          "long_trade_count": 30,
+          "long_win_rate_percent": 60.0,
+          "losing_trade_count": 16,
+          "loss_rate_percent": 44.44,
+          "max_drawdown_amount": 580.57,
+          "max_drawdown_percent": 97.02,
+          "missing_required_metrics": [],
+          "net_profit": -0.04,
+          "parsed_row_count": 229,
+          "profit_factor": 1.0,
+          "recovery_factor": 0.0,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is.htm",
+          "sharpe_ratio": 0.0,
+          "short_trade_count": 6,
+          "short_win_rate_percent": 33.33,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 36,
+          "win_rate_percent": 55.56,
+          "winning_trade_count": 20
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_a_only_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.png",
+          "sha256": "c8c57db7a1248b681a4daa261bb8b2b39e75d0a9eccccf00dcbaf5f16b106239",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.htm",
+          "sha256": "c23c4c39e396ade18167edf67a076fff9c03297c50e9303eb6dca7d6b7981d67",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 131.3,
+          "balance_drawdown_maximal_percent": 19.66,
+          "deal_count": 10,
+          "equity_drawdown_maximal_amount": 282.24,
+          "equity_drawdown_maximal_percent": 41.23,
+          "expectancy": 7.33,
+          "gross_loss": -211.86,
+          "gross_profit": 248.49,
+          "long_trade_count": 5,
+          "long_win_rate_percent": 60.0,
+          "losing_trade_count": 2,
+          "loss_rate_percent": 40.0,
+          "max_drawdown_amount": 282.24,
+          "max_drawdown_percent": 41.23,
+          "missing_required_metrics": [],
+          "net_profit": 36.63,
+          "parsed_row_count": 105,
+          "profit_factor": 1.17,
+          "recovery_factor": 0.13,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos.htm",
+          "sharpe_ratio": 0.01,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 5,
+          "win_rate_percent": 60.0,
+          "winning_trade_count": 3
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.png",
+          "sha256": "9b8dea8f14e8871b87ad4adda660b332eb72ce40e83e375d87f8dc4898f315f3",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.htm",
+          "sha256": "0b5869d82a274d7ca698024e6c6bda40bd152ab360693e66830838b3c6789017",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 0.0,
+          "balance_drawdown_maximal_percent": 0.0,
+          "deal_count": 8,
+          "equity_drawdown_maximal_amount": 66.11,
+          "equity_drawdown_maximal_percent": 10.33,
+          "expectancy": 52.63,
+          "gross_loss": 0.0,
+          "gross_profit": 210.53,
+          "long_trade_count": 3,
+          "long_win_rate_percent": 100.0,
+          "losing_trade_count": 0,
+          "loss_rate_percent": 0.0,
+          "max_drawdown_amount": 66.11,
+          "max_drawdown_percent": 10.33,
+          "missing_required_metrics": [],
+          "net_profit": 210.53,
+          "parsed_row_count": 101,
+          "profit_factor": 0.0,
+          "recovery_factor": 3.18,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is.htm",
+          "sharpe_ratio": 0.22,
+          "short_trade_count": 1,
+          "short_win_rate_percent": 100.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 4,
+          "win_rate_percent": 100.0,
+          "winning_trade_count": 4
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AG_lgbm_fwd18_source_session_195_215_v1_tier_b_fallback_only_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier B"
+      }
+    ],
+    "run_id": "run02AG_lgbm_fwd18_source_session_195_215_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AG_lgbm_fwd18_source_session_195_215_v1",
+    "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+  },
+  {
+    "attempt_count": 6,
+    "attempt_rows": [
+      {
+        "attempt_name": "routed_oos",
+        "net_profit": -243.05,
+        "profit_factor": 0.62,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 34
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "net_profit": -495.68,
+        "profit_factor": 0.23,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A+B",
+        "trade_count": 19
+      },
+      {
+        "attempt_name": "tier_a_only_oos",
+        "net_profit": -152.23,
+        "profit_factor": 0.72,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A",
+        "trade_count": 31
+      },
+      {
+        "attempt_name": "tier_a_only_validation_is",
+        "net_profit": -497.41,
+        "profit_factor": 0.21,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier A",
+        "trade_count": 17
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_oos",
+        "net_profit": -92.0,
+        "profit_factor": 0.69,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.htm",
+        "report_status": "completed",
+        "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier B",
+        "trade_count": 5
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_validation_is",
+        "net_profit": 128.95,
+        "profit_factor": 3.3,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.htm",
+        "report_status": "completed",
+        "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+        "runtime_status": "completed",
+        "split": "validation",
+        "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+        "tester_status": "completed",
+        "tier_scope": "Tier B",
+        "trade_count": 6
+      }
+    ],
+    "completed_reports": 6,
+    "execution_results": [
+      {
+        "attempt_name": "routed_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 524,
+            "feature_skip_count": 36813,
+            "flat_count": 37216,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 100,
+            "model_fail_count": 36813,
+            "model_id": "run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_primary",
+            "model_ok_count": 524,
+            "no_tier_count": 36813,
+            "order_attempt_count": 59,
+            "order_fill_count": 59,
+            "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+            "short_count": 21,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 352,
+            "tier_a_long_count": 91,
+            "tier_a_order_attempt_count": 53,
+            "tier_a_order_fill_count": 53,
+            "tier_a_short_count": 20,
+            "tier_a_used_count": 463,
+            "tier_b_fallback_flat_count": 51,
+            "tier_b_fallback_long_count": 9,
+            "tier_b_fallback_order_attempt_count": 6,
+            "tier_b_fallback_order_fill_count": 6,
+            "tier_b_fallback_short_count": 1,
+            "tier_b_fallback_used_count": 61,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/routed_oos_summary.csv",
+          "summary_sha256": "78c578c55cf32cba2ea40d995aaeb45fc50955254f01b8f2c0717c01b6cd780e",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/routed_oos_telemetry.csv",
+          "telemetry_sha256": "080c6626ca22e1904d1039aabbbd217623a6de857c2883df38b0894836b2b0ba",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.ini",
+            "sha256": "08ede2a57badb700ffd9839b45dbfbb3c97ce4c73d7c957383fd695b054ff917",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/routed_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "06a499b0134f18bfe05d63bd23a4f3027660b097619fe1d095c203dafc84470b",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/routed_oos.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "routed_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 18254,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 256,
+            "feature_skip_count": 17998,
+            "flat_count": 18176,
+            "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.04.04 21:40:00|tier_b_missing:feature_csv_timestamp_not_found:2025.04.04 21:40:00",
+            "long_count": 66,
+            "model_fail_count": 17998,
+            "model_id": "run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_primary",
+            "model_ok_count": 256,
+            "no_tier_count": 17998,
+            "order_attempt_count": 31,
+            "order_fill_count": 31,
+            "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+            "short_count": 12,
+            "ticks_seen": 26155092,
+            "tier_a_flat_count": 141,
+            "tier_a_long_count": 65,
+            "tier_a_order_attempt_count": 31,
+            "tier_a_order_fill_count": 31,
+            "tier_a_short_count": 12,
+            "tier_a_used_count": 218,
+            "tier_b_fallback_flat_count": 37,
+            "tier_b_fallback_long_count": 1,
+            "tier_b_fallback_order_attempt_count": 0,
+            "tier_b_fallback_order_fill_count": 0,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 38,
+            "written_at": "2025.04.04 21:44:00"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/routed_validation_is_summary.csv",
+          "summary_sha256": "23a4159c80ea5ae1bff075b3df03b89386aa1be02678e4d733579656d2ae2df5",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/routed_validation_is_telemetry.csv",
+          "telemetry_sha256": "7ec03c8b63cf2ffb0673b6f924e7d9d6a55f749b680e556fc2e9f08064aa6680",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.ini",
+            "sha256": "c06f6eedf803fd00de4902b2ce553c4c524d475c710f7c690017c6515183f935",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/routed_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "57d26f864f73548fc82fd94b6531637ad73882e8e821dea1145c28035c0a3563",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/routed_validation_is.set"
+          }
+        },
+        "tier": "Tier A+B"
+      },
+      {
+        "attempt_name": "tier_a_only_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 463,
+            "feature_skip_count": 36874,
+            "flat_count": 37226,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 91,
+            "model_fail_count": 36874,
+            "model_id": "run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only",
+            "model_ok_count": 463,
+            "no_tier_count": 36874,
+            "order_attempt_count": 54,
+            "order_fill_count": 54,
+            "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+            "short_count": 20,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 352,
+            "tier_a_long_count": 91,
+            "tier_a_order_attempt_count": 54,
+            "tier_a_order_fill_count": 54,
+            "tier_a_short_count": 20,
+            "tier_a_used_count": 463,
+            "tier_b_fallback_flat_count": 0,
+            "tier_b_fallback_long_count": 0,
+            "tier_b_fallback_order_attempt_count": 0,
+            "tier_b_fallback_order_fill_count": 0,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 0,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_a_only_oos_summary.csv",
+          "summary_sha256": "5075899edd12b68047668a5f6b3af2759ec41811b9159800375aa70b61ac5431",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_a_only_oos_telemetry.csv",
+          "telemetry_sha256": "8b6d6f67be6f55dd5eeb314df7bd55782d00c6f9d7bee888c1d7c8e209690662",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.ini",
+            "sha256": "283c6abc9fe9fbcd788b96cc3f811667c35e48723792a8448358e78a2e459316",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_a_only_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "f2d97e1d8d5ad5c91cc211842d0c88db66ba8b525e74af5e77d5836eb63d1863",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_a_only_oos.set"
+          }
+        },
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "tier_a_only_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 18207,
+            "deinit_reason": "remove",
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "feature_ready_count": 214,
+            "feature_skip_count": 17993,
+            "flat_count": 18134,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2025.04.04 17:45:00",
+            "long_count": 61,
+            "model_fail_count": 17993,
+            "model_id": "run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only",
+            "model_ok_count": 214,
+            "no_tier_count": 17993,
+            "order_attempt_count": 28,
+            "order_fill_count": 28,
+            "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+            "short_count": 12,
+            "ticks_seen": 25949956,
+            "tier_a_flat_count": 141,
+            "tier_a_long_count": 61,
+            "tier_a_order_attempt_count": 28,
+            "tier_a_order_fill_count": 28,
+            "tier_a_short_count": 12,
+            "tier_a_used_count": 214,
+            "tier_b_fallback_flat_count": 0,
+            "tier_b_fallback_long_count": 0,
+            "tier_b_fallback_order_attempt_count": 0,
+            "tier_b_fallback_order_fill_count": 0,
+            "tier_b_fallback_short_count": 0,
+            "tier_b_fallback_used_count": 0,
+            "written_at": "2025.04.04 17:50:00"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_a_only_validation_is_summary.csv",
+          "summary_sha256": "ff8daa988c4161997c44a3a2a9358eb7d71880a843a2954fe7803b4bd83f06d7",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_a_only_validation_is_telemetry.csv",
+          "telemetry_sha256": "7ef4104ece758fd61812197759871eebb8cef16aae4bff790b3f95b299c83c32",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.ini",
+            "sha256": "8002257297219b481c94fd495f7a4c7433a5c7a066b51fcdcf7f09727c852bb9",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_a_only_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "a4e01ed44f4e0f0e86d85fe064d9d6615580c1e6aa71dcb9ee51be38778642d2",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_a_only_validation_is.set"
+          }
+        },
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_oos",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 37337,
+            "deinit_reason": "remove",
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "feature_ready_count": 61,
+            "feature_skip_count": 37276,
+            "flat_count": 37327,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+            "long_count": 9,
+            "model_fail_count": 37276,
+            "model_id": "run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only",
+            "model_ok_count": 61,
+            "no_tier_count": 37276,
+            "order_attempt_count": 8,
+            "order_fill_count": 8,
+            "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+            "short_count": 1,
+            "ticks_seen": 69271646,
+            "tier_a_flat_count": 0,
+            "tier_a_long_count": 0,
+            "tier_a_order_attempt_count": 0,
+            "tier_a_order_fill_count": 0,
+            "tier_a_short_count": 0,
+            "tier_a_used_count": 0,
+            "tier_b_fallback_flat_count": 51,
+            "tier_b_fallback_long_count": 9,
+            "tier_b_fallback_order_attempt_count": 8,
+            "tier_b_fallback_order_fill_count": 8,
+            "tier_b_fallback_short_count": 1,
+            "tier_b_fallback_used_count": 61,
+            "written_at": "2026.04.13 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_b_fallback_only_oos_summary.csv",
+          "summary_sha256": "134b78883adbedb671a45858293cfcd28b17c342fe2d62d4ec0e22c1f926ef41",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_b_fallback_only_oos_telemetry.csv",
+          "telemetry_sha256": "a2e75575dcc02bc39c93e3dc7a62bcfa3574a1c95d7000ffe8ebac5578b3838c",
+          "wait_status": "completed"
+        },
+        "split": "oos",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.ini",
+            "sha256": "5a26f7f226cb7649782b8312e008e2f7c2187b728a59ed519d9e21fead8a6450",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_b_fallback_only_oos.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "44e6ae96be21b744f14dd1331605192dd3033ff3303434b2a467a708b4352b45",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_b_fallback_only_oos.set"
+          }
+        },
+        "tier": "Tier B"
+      },
+      {
+        "attempt_name": "tier_b_fallback_only_validation_is",
+        "runtime": {
+          "last_summary": {
+            "bars_seen": 52808,
+            "deinit_reason": "remove",
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "feature_ready_count": 156,
+            "feature_skip_count": 52652,
+            "flat_count": 52798,
+            "last_skip_reason": "feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+            "long_count": 8,
+            "model_fail_count": 52652,
+            "model_id": "run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only",
+            "model_ok_count": 156,
+            "no_tier_count": 52652,
+            "order_attempt_count": 12,
+            "order_fill_count": 12,
+            "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+            "short_count": 2,
+            "ticks_seen": 67473626,
+            "tier_a_flat_count": 0,
+            "tier_a_long_count": 0,
+            "tier_a_order_attempt_count": 0,
+            "tier_a_order_fill_count": 0,
+            "tier_a_short_count": 0,
+            "tier_a_used_count": 0,
+            "tier_b_fallback_flat_count": 146,
+            "tier_b_fallback_long_count": 8,
+            "tier_b_fallback_order_attempt_count": 12,
+            "tier_b_fallback_order_fill_count": 12,
+            "tier_b_fallback_short_count": 2,
+            "tier_b_fallback_used_count": 156,
+            "written_at": "2025.09.30 23:59:58"
+          },
+          "status": "completed",
+          "summary_exists": true,
+          "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_b_fallback_only_validation_is_summary.csv",
+          "summary_sha256": "7cc9521ecaaf38d9f80b315c9716790ac4d5889c78dcbe698ef04dcd3b94825c",
+          "telemetry_exists": true,
+          "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage11/run02AH_lgbm_fwd18_source_session_205_225_v1/telemetry/tier_b_fallback_only_validation_is_telemetry.csv",
+          "telemetry_sha256": "554bef5bfd9a9d48326f6dbf3b1f99c0fae74ae08afbc191a5fb6f661e047f10",
+          "wait_status": "completed"
+        },
+        "split": "validation_is",
+        "tester": {
+          "command": [
+            "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.ini"
+          ],
+          "returncode": 0,
+          "status": "completed",
+          "stderr": "",
+          "stdout": "",
+          "tester_profile_ini_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_kpi_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.ini",
+            "sha256": "faf2f1a4a219374d926edd34fe0f16b8d3b6dd3ceceac97c68a254d6c0e50907",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_b_fallback_only_validation_is.ini"
+          },
+          "tester_profile_set_copy": {
+            "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "b41e3ed6fe0df44e3615a855c0e00d0535cfa6a4a206124663a6823265e96de8",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/tier_b_fallback_only_validation_is.set"
+          }
+        },
+        "tier": "Tier B"
+      }
+    ],
+    "report_records": [
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.png",
+          "sha256": "5dd652ad528307e767aa498cbb4616c5587b78f00c19eb2267ad1ff6e0129680",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.htm",
+          "sha256": "8cf9d39fdeaa7d0fd015bbe0fe10507718acf9e1944dd3ffe25295773f59abf8",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 316.66,
+          "balance_drawdown_maximal_percent": 55.21,
+          "deal_count": 68,
+          "equity_drawdown_maximal_amount": 373.22,
+          "equity_drawdown_maximal_percent": 64.76,
+          "expectancy": -7.15,
+          "gross_loss": -645.9,
+          "gross_profit": 402.85,
+          "long_trade_count": 27,
+          "long_win_rate_percent": 37.04,
+          "losing_trade_count": 20,
+          "loss_rate_percent": 58.82,
+          "max_drawdown_amount": 373.22,
+          "max_drawdown_percent": 64.76,
+          "missing_required_metrics": [],
+          "net_profit": -243.05,
+          "parsed_row_count": 221,
+          "profit_factor": 0.62,
+          "recovery_factor": -0.65,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos.htm",
+          "sharpe_ratio": -1.76,
+          "short_trade_count": 7,
+          "short_win_rate_percent": 57.14,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 34,
+          "win_rate_percent": 41.18,
+          "winning_trade_count": 14
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.png",
+          "sha256": "36ddbbd26edff569902232d457807002a760c9b15d28a754e0a8d68ac8dd189c",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.htm",
+          "sha256": "6430323e1d793b25b337da799133d6dd09883dcdb6f9b96091e15ec1d60cda1d",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 565.41,
+          "balance_drawdown_maximal_percent": 99.24,
+          "deal_count": 38,
+          "equity_drawdown_maximal_amount": 577.01,
+          "equity_drawdown_maximal_percent": 99.26,
+          "expectancy": -26.09,
+          "gross_loss": -647.52,
+          "gross_profit": 151.84,
+          "long_trade_count": 14,
+          "long_win_rate_percent": 21.43,
+          "losing_trade_count": 14,
+          "loss_rate_percent": 73.68,
+          "max_drawdown_amount": 577.01,
+          "max_drawdown_percent": 99.26,
+          "missing_required_metrics": [],
+          "net_profit": -495.68,
+          "parsed_row_count": 161,
+          "profit_factor": 0.23,
+          "recovery_factor": -0.86,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is.htm",
+          "sharpe_ratio": -4.71,
+          "short_trade_count": 5,
+          "short_win_rate_percent": 40.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 19,
+          "win_rate_percent": 26.32,
+          "winning_trade_count": 5
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_routed_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.png",
+          "sha256": "313af1735e46c7332320305b048e59206a6e0b1bf03268f2ad3ee7b9ec368c68",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.htm",
+          "sha256": "c0edbd1b3292706f29ff7adbfd66325c09eb38e4da2fe6c865655fc6d8d40a71",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 307.32,
+          "balance_drawdown_maximal_percent": 48.49,
+          "deal_count": 62,
+          "equity_drawdown_maximal_amount": 366.45,
+          "equity_drawdown_maximal_percent": 57.34,
+          "expectancy": -4.91,
+          "gross_loss": -534.98,
+          "gross_profit": 382.75,
+          "long_trade_count": 24,
+          "long_win_rate_percent": 45.83,
+          "losing_trade_count": 16,
+          "loss_rate_percent": 51.61,
+          "max_drawdown_amount": 366.45,
+          "max_drawdown_percent": 57.34,
+          "missing_required_metrics": [],
+          "net_profit": -152.23,
+          "parsed_row_count": 209,
+          "profit_factor": 0.72,
+          "recovery_factor": -0.42,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos.htm",
+          "sharpe_ratio": -1.12,
+          "short_trade_count": 7,
+          "short_win_rate_percent": 57.14,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 31,
+          "win_rate_percent": 48.39,
+          "winning_trade_count": 15
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.png",
+          "sha256": "76051372cb9c709b6074db119c1c2c44b9a9f232d9dc110d8ce03baca39f8725",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.htm",
+          "sha256": "d24f2a20309d441ca5c5a3e84471c5f03a1d5dfd181af27e4b97b4480b37ccb8",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 567.14,
+          "balance_drawdown_maximal_percent": 99.55,
+          "deal_count": 34,
+          "equity_drawdown_maximal_amount": 578.74,
+          "equity_drawdown_maximal_percent": 99.55,
+          "expectancy": -29.26,
+          "gross_loss": -632.17,
+          "gross_profit": 134.76,
+          "long_trade_count": 13,
+          "long_win_rate_percent": 23.08,
+          "losing_trade_count": 13,
+          "loss_rate_percent": 76.47,
+          "max_drawdown_amount": 578.74,
+          "max_drawdown_percent": 99.55,
+          "missing_required_metrics": [],
+          "net_profit": -497.41,
+          "parsed_row_count": 153,
+          "profit_factor": 0.21,
+          "recovery_factor": -0.86,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is.htm",
+          "sharpe_ratio": -4.87,
+          "short_trade_count": 4,
+          "short_win_rate_percent": 25.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 17,
+          "win_rate_percent": 23.53,
+          "winning_trade_count": 4
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_a_only_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.png",
+          "sha256": "4ebbcc5f6f4b11ee68e3237981c3ef5b40c1bcadb00469080d08000a92bf495c",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.htm",
+          "sha256": "f86e45035e9659213cc2399428726f4a9e508c3c44f6a4993c93a1eb84085b52",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 297.57,
+          "balance_drawdown_maximal_percent": 42.17,
+          "deal_count": 10,
+          "equity_drawdown_maximal_amount": 317.72,
+          "equity_drawdown_maximal_percent": 43.78,
+          "expectancy": -18.4,
+          "gross_loss": -297.57,
+          "gross_profit": 205.57,
+          "long_trade_count": 4,
+          "long_win_rate_percent": 75.0,
+          "losing_trade_count": 2,
+          "loss_rate_percent": 40.0,
+          "max_drawdown_amount": 317.72,
+          "max_drawdown_percent": 43.78,
+          "missing_required_metrics": [],
+          "net_profit": -92.0,
+          "parsed_row_count": 105,
+          "profit_factor": 0.69,
+          "recovery_factor": -0.29,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos.htm",
+          "sharpe_ratio": -0.03,
+          "short_trade_count": 1,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 5,
+          "win_rate_percent": 60.0,
+          "winning_trade_count": 3
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier B"
+      },
+      {
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.png",
+          "sha256": "87ce4ad0f3432ccb47c597403a6552af9e8f12f4f86a6c3d623f79916ef1df64",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.htm",
+          "sha256": "d82af4fc4487da0e6b92d31843ac204e6ce469bb0128cce00716945bdd403a4e",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 39.12,
+          "balance_drawdown_maximal_percent": 5.86,
+          "deal_count": 12,
+          "equity_drawdown_maximal_amount": 116.46,
+          "equity_drawdown_maximal_percent": 23.2,
+          "expectancy": 21.49,
+          "gross_loss": -56.07,
+          "gross_profit": 185.02,
+          "long_trade_count": 4,
+          "long_win_rate_percent": 50.0,
+          "losing_trade_count": 3,
+          "loss_rate_percent": 50.0,
+          "max_drawdown_amount": 116.46,
+          "max_drawdown_percent": 23.2,
+          "missing_required_metrics": [],
+          "net_profit": 128.95,
+          "parsed_row_count": 109,
+          "profit_factor": 3.3,
+          "recovery_factor": 1.11,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1/mt5/reports/Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is.htm",
+          "sharpe_ratio": 0.1,
+          "short_trade_count": 2,
+          "short_win_rate_percent": 50.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 6,
+          "win_rate_percent": 50.0,
+          "winning_trade_count": 3
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run02AH_lgbm_fwd18_source_session_205_225_v1_tier_b_fallback_only_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier B"
+      }
+    ],
+    "run_id": "run02AH_lgbm_fwd18_source_session_205_225_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02AH_lgbm_fwd18_source_session_205_225_v1",
+    "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+  }
+]

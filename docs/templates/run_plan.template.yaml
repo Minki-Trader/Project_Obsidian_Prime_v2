@@ -1,0 +1,46 @@
+run_plan_id: ""
+packet_id: ""
+stage_id: ""
+run_sequence:
+  run_id: ""
+  run_number: ""
+  exploration_label: ""
+planned_work:
+  hypothesis: ""
+  model_family:
+    value: null
+    n_a_reason: ""
+  feature_set_id:
+    value: null
+    n_a_reason: ""
+  label_id:
+    value: null
+    n_a_reason: ""
+  split_contract:
+    value: null
+    n_a_reason: ""
+  stage_inheritance:
+    value: false
+    n_a_reason: ""
+execution_scope:
+  variants: []
+  splits:
+    - validation
+    - oos
+  tier_scopes: []
+  route_roles: []
+kpi_source_authority:
+  reference: docs/agent_control/kpi_source_authority.yaml
+  mt5_headline_authority: mt5_strategy_tester_report
+  python_recompute_role: parity_cross_check
+artifact_plan:
+  run_manifest: run_manifest.json
+  normalized_kpi_record: kpi_record.normalized.json
+  summary: summary.json
+  result_summary: reports/result_summary.md
+  gate_result: gate_result.json
+stop_conditions:
+  - missing_required_input
+  - mt5_required_but_report_missing
+  - scope_reduction_without_user_quote
+  - final_claim_guard_blocked

@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-04-29T00:00:00Z",
+  "inputs": {
+    "inventory_csv": "docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv",
+    "normalized_template": "docs/templates/kpi_record_normalized.template.json",
+    "target_confirmation": "docs/agent_control/packets/kpi_rebuild_inventory_v1/target_confirmation.yaml"
+  },
+  "inventory_packet_id": "kpi_rebuild_inventory_v1",
+  "missing_runs": [
+    {
+      "detail": "no mt5_records, mt5.kpi_records, or report files",
+      "reason": "mt5_report_missing",
+      "run_id": "run02T_label_horizon_priority_probe_v1",
+      "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+    },
+    {
+      "detail": "no mt5_records, mt5.kpi_records, or report files",
+      "reason": "mt5_report_missing",
+      "run_id": "run02U_wfo_lite_priority_probe_v1",
+      "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+    },
+    {
+      "detail": "no mt5_records, mt5.kpi_records, or report files",
+      "reason": "mt5_report_missing",
+      "run_id": "run02V_short_specific_priority_probe_v1",
+      "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity"
+    },
+    {
+      "detail": "no mt5_records, mt5.kpi_records, or report files",
+      "reason": "mt5_report_missing",
+      "run_id": "run03B_et_standalone_fwd12_v1",
+      "stage_id": "12_model_family_challenge__extratrees_training_effect"
+    },
+    {
+      "detail": "no mt5_records, mt5.kpi_records, or report files",
+      "reason": "mt5_report_missing",
+      "run_id": "run03D_et_standalone_batch20_v1",
+      "stage_id": "12_model_family_challenge__extratrees_training_effect"
+    }
+  ],
+  "normalized_records_written": 448,
+  "outputs": {
+    "normalized_kpi_records": "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl",
+    "normalized_kpi_summary": "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_summary.csv",
+    "recording_summary": "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/recording_summary.json"
+  },
+  "packet_id": "kpi_rebuild_mt5_recording_v1",
+  "parser_error_count": 0,
+  "parser_errors": [],
+  "source_authority": {
+    "execution": "mt5_runtime_telemetry_summary_when_available",
+    "mt5_trading_headline": "mt5_strategy_tester_report",
+    "python": "cross_check_or_signal_layer_only",
+    "risk": "mt5_strategy_tester_report"
+  },
+  "status": "partial_existing_report_recording",
+  "target_runs_missing_mt5_records": 5,
+  "target_runs_total": 70,
+  "target_runs_with_mt5_records": 65,
+  "workspace_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2"
+}

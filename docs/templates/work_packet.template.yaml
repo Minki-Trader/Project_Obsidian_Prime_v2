@@ -1,0 +1,66 @@
+packet_id: ""
+created_at_utc: ""
+user_request:
+  user_quote: ""
+  requested_action: ""
+  requested_count:
+    value: null
+    n_a_reason: ""
+  ambiguous_terms: []
+current_truth:
+  active_stage: ""
+  current_run: ""
+  source_documents: []
+preflight:
+  needs_clarification: false
+  selected_option_id: ""
+  selected_option_user_quote: ""
+  blocked_until_answer: false
+interpreted_scope:
+  variants_requested:
+    value: null
+    n_a_reason: ""
+  verification_layers: []
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+  - id: AC-001
+    text: ""
+    expected_artifact: ""
+    verification_method: ""
+    required: true
+row_grain:
+  reference: docs/agent_control/row_grain_contract.yaml
+  normalized_row_key:
+    - run_id
+    - variant_id
+    - split
+    - tier_scope
+    - record_view
+    - route_role
+kpi_contract:
+  kpi_standard_version: kpi_7layer_v1
+  normalized_record_path: ""
+  source_authority_reference: docs/agent_control/kpi_source_authority.yaml
+  n_a_reason_reference: docs/agent_control/n_a_reason_registry.yaml
+artifact_contract:
+  raw_evidence: []
+  machine_readable: []
+  human_readable: []
+  external_artifacts: []
+skill_routing:
+  skills_considered: []
+  skills_selected: []
+  skills_not_used: []
+  required_skill_receipts: []
+gates:
+  scope_completion_gate: pending
+  skill_receipt_lint: pending
+  kpi_contract_audit: pending
+  artifact_lineage_audit: pending
+  final_claim_guard: pending
+final_claim_policy:
+  allowed_claims: []
+  forbidden_claims: []
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

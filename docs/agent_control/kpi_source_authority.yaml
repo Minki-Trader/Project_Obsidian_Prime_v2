@@ -1,0 +1,122 @@
+version: kpi_source_authority_v1
+rule: "Each KPI field must record an authority source and optional cross-check source."
+layers:
+  run_identity:
+    authority: work_packet_and_run_manifest
+    fallback: run_registry
+    fields:
+      - run_id
+      - variant_id
+      - idea_id
+      - stage_id
+      - model_family
+      - feature_set_id
+      - label_id
+      - split_contract
+      - stage_inheritance
+      - artifact_hashes
+  signal_model:
+    authority: python_training_or_signal_output
+    fallback: variant_results_csv
+    mt5_role: not_authority
+    fields:
+      - train_accuracy
+      - validation_accuracy
+      - oos_accuracy
+      - macro_f1
+      - log_loss
+      - signal_count
+      - signal_coverage
+      - short_count
+      - long_count
+      - directional_hit_rate
+      - threshold
+      - threshold_method
+  mt5_trading_headline:
+    authority: mt5_strategy_tester_report
+    fallback: mt5_metrics_parser_output
+    python_role: cross_check_only
+    fields:
+      - net_profit
+      - gross_profit
+      - gross_loss
+      - profit_factor
+      - expectancy
+      - trade_count
+      - win_rate
+      - avg_win
+      - avg_loss
+      - payoff_ratio
+      - recovery_factor
+      - sharpe_ratio
+  risk:
+    authority: mt5_strategy_tester_report
+    fallback: equity_curve_reconstruction
+    fields:
+      - max_drawdown_amount
+      - max_drawdown_percent
+      - equity_drawdown_amount
+      - equity_drawdown_percent
+      - time_under_water
+      - longest_recovery_duration
+      - worst_day
+      - worst_week
+      - consecutive_losses
+      - ulcer_index
+  trade_diagnostics:
+    authority: mt5_trade_telemetry
+    fallback: python_recomputed_from_mt5_deals
+    fields:
+      - long_trade_count
+      - short_trade_count
+      - long_net_profit
+      - short_net_profit
+      - long_expectancy
+      - short_expectancy
+      - avg_hold_bars
+      - hold_distribution
+      - mfe_mean
+      - mae_mean
+      - realized_over_mfe
+      - loss_trade_mfe
+      - win_trade_mae
+  regime_slice_attribution:
+    authority: python_attribution_from_signal_and_trade_join
+    fallback: annotated_mt5_telemetry
+    fields:
+      - session_slice
+      - volatility_regime
+      - trend_regime
+      - adx_bucket
+      - spread_regime
+      - month_pnl
+      - quarter_pnl
+      - subperiod_consistency
+      - validation_oos_gap
+  execution:
+    authority: mt5_runtime_telemetry_summary
+    fallback: kpi_record_runtime_summary
+    fields:
+      - order_attempt_count
+      - order_fill_count
+      - fill_rate
+      - reject_count
+      - skip_count
+      - avg_spread
+      - avg_slippage
+      - external_mismatch_count
+      - model_fail_count
+      - feature_ready_count
+      - data_readiness_failures
+special_policies:
+  profit_factor:
+    if_gross_loss_zero:
+      value: null
+      n_a_reason: gross_loss_is_zero
+      raw_mt5_display_allowed: true
+  gross_loss:
+    storage_sign: mt5_raw_sign
+    normalized_abs_field_allowed: gross_loss_abs
+  mt5_vs_python_conflict:
+    headline_authority: mt5_strategy_tester_report
+    python_value_role: parity_cross_check

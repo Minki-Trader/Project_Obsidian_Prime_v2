@@ -1,0 +1,53 @@
+version: row_grain_contract_v1
+normalized_row_key:
+  - run_id
+  - variant_id
+  - split
+  - tier_scope
+  - record_view
+  - route_role
+required_identity_columns:
+  - run_id
+  - variant_id
+  - idea_id
+  - stage_id
+  - model_family
+  - feature_set_id
+  - label_id
+  - split_contract
+  - stage_inheritance
+  - artifact_hashes
+allowed_values:
+  split:
+    - train
+    - validation
+    - oos
+    - full_surface
+    - not_applicable
+  tier_scope:
+    - tier_a
+    - tier_b
+    - tier_ab
+    - not_applicable
+  record_view:
+    - python_tier_a_separate
+    - python_tier_b_separate
+    - python_tier_ab_combined
+    - mt5_tier_a_only
+    - mt5_tier_b_fallback_only
+    - mt5_routed_tier_a_used
+    - mt5_routed_tier_b_fallback_used
+    - mt5_routed_total
+    - standalone_variant
+    - not_applicable
+  route_role:
+    - tier_only_total
+    - primary_used
+    - fallback_used
+    - routed_total
+    - not_applicable
+rules:
+  - "Every normalized KPI row must include the normalized_row_key."
+  - "If a key does not apply, use value null plus an allowed n/a_reason."
+  - "MT5 routed component rows cannot claim profit unless profit attribution is separable."
+  - "Routed total rows must be actual tester output, not a synthetic sum."

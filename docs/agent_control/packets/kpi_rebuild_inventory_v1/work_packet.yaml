@@ -1,0 +1,135 @@
+packet_id: kpi_rebuild_inventory_v1
+created_at_utc: '2026-04-29T00:00:00Z'
+user_request:
+  user_quote: 다음 순서는 기존 실험 목록(inventory, 목록)만 뽑아서 새 work_packet(작업 묶음)과 run_plan(실행
+    계획)으로 재작업 대상을 확정하는 단계
+  requested_action: inventory_only_define_kpi_rebuild_targets
+  requested_count:
+    value: null
+    n_a_reason: inventory_scope_derived_from_run_registry
+  ambiguous_terms:
+  - 기존 실험 목록
+  - 재작업 대상
+current_truth:
+  active_stage: 12_model_family_challenge__extratrees_training_effect
+  current_run: run03E_et_batch20_top_v11_mt5_probe_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - docs/registers/run_registry.csv
+  - docs/registers/alpha_run_ledger.csv
+preflight:
+  needs_clarification: false
+  selected_option_id: inventory_only_no_rerun
+  selected_option_user_quote: 기존 실험 목록만 뽑아서 재작업 대상을 확정
+  blocked_until_answer: false
+interpreted_scope:
+  variants_requested:
+    value: null
+    n_a_reason: inventory_only_no_new_variants
+  verification_layers:
+  - run_registry_inventory
+  - alpha_ledger_row_count
+  - stage_ledger_row_count
+  - artifact_presence_scan
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+- id: AC-001
+  text: Every docs/registers/run_registry.csv row is represented in experiment_inventory.csv.
+  expected_artifact: docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv
+  verification_method: row_count_equals_run_registry
+  required: true
+- id: AC-002
+  text: Stage10-to-active run01/run02/run03 experiments are separated from foundation
+    reference rows.
+  expected_artifact: docs/agent_control/packets/kpi_rebuild_inventory_v1/inventory_summary.json
+  verification_method: by_rework_scope_counts
+  required: true
+- id: AC-003
+  text: Invalid scope-mismatch runs are inventoried but not default rerun targets.
+  expected_artifact: docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv
+  verification_method: invalid_reference_only_scope
+  required: true
+- id: AC-004
+  text: No experiment, MT5 tester, or KPI ledger overwrite is performed in this packet.
+  expected_artifact: docs/agent_control/packets/kpi_rebuild_inventory_v1/run_plan.yaml
+  verification_method: execution_scope_no_rerun
+  required: true
+row_grain:
+  reference: docs/agent_control/row_grain_contract.yaml
+  normalized_row_key:
+  - run_id
+  - variant_id
+  - split
+  - tier_scope
+  - record_view
+  - route_role
+kpi_contract:
+  kpi_standard_version: kpi_7layer_v1
+  normalized_record_path: ''
+  source_authority_reference: docs/agent_control/kpi_source_authority.yaml
+  n_a_reason_reference: docs/agent_control/n_a_reason_registry.yaml
+artifact_contract:
+  raw_evidence:
+  - docs/registers/run_registry.csv
+  - docs/registers/alpha_run_ledger.csv
+  - stages/<stage_id>/03_reviews/stage_run_ledger.csv
+  machine_readable:
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/inventory_summary.json
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/work_packet.yaml
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/run_plan.yaml
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/skill_receipts/*.yaml
+  human_readable:
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/run_plan.yaml
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/inventory_summary.json
+  external_artifacts: []
+skill_routing:
+  skills_considered:
+  - obsidian-session-intake
+  - obsidian-work-packet-router
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-experiment-design
+  - obsidian-run-evidence-system
+  - obsidian-runtime-parity
+  skills_selected:
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-experiment-design
+  skills_not_used:
+  - skill: obsidian-runtime-parity
+    allowed_not_used_reason: no_related_surface_touched
+  required_skill_receipts:
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/skill_receipts/session_intake.yaml
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/skill_receipts/artifact_lineage.yaml
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/skill_receipts/experiment_design.yaml
+gates:
+  scope_completion_gate: inventory_only_pass
+  skill_receipt_lint: receipts_materialized
+  kpi_contract_audit: not_applicable_inventory_only
+  artifact_lineage_audit: connected_with_boundary
+  final_claim_guard: completed_claim_for_inventory_only_allowed
+final_claim_policy:
+  allowed_claims:
+  - inventory_only_complete
+  - rework_targets_proposed
+  forbidden_claims:
+  - kpi_rebuild_completed
+  - mt5_verification_complete
+  - normalized_kpi_ledger_verified
+  - operating_promotion
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml
+summary_counts:
+  inventory_rows: 85
+  run_registry_rows: 85
+  alpha_ledger_rows: 651
+  stage10_to_active_rows: 71
+  default_rework_targets: 70
+  foundation_reference_only: 14
+  invalid_reference_only: 1
+  missing_run_paths: 0
+  long_path_risk_runs: 27
+  runs_without_alpha_rows: 14

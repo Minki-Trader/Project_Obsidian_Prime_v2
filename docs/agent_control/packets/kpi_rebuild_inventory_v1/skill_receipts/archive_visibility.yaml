@@ -1,0 +1,24 @@
+packet_id: kpi_rebuild_inventory_v1
+created_at_utc: "2026-04-29T00:00:00Z"
+skill: obsidian-architecture-guard
+status: executed
+architecture_risk: true
+debt_interaction: leave_unchanged
+allowed_debt_change: leave_unchanged
+encoding_check: "no Korean md or txt edited in this receipt"
+path_safety_check:
+  durable_identity_paths_are_repo_relative: true
+  absolute_paths_local_only: true
+  workspace_escape_check: pass
+  long_path_handling: "zip plus manifest; no committed long-path prefix"
+archive_behavior:
+  strategy: "zip_plus_manifest"
+  archive_zip: data/snapshots/archives/kpi_rebuild_preclean_stage10_12_v1/stage10_12_prior_work.zip
+  archive_manifest: docs/agent_control/packets/kpi_rebuild_inventory_v1/archive_manifest.json
+  original_paths_preserved: true
+  hidden_attribute_applied:
+    - stages/10_alpha_scout__default_split_model_threshold_scan
+    - stages/11_alpha_robustness__wfo_label_horizon_sensitivity
+    - stages/12_model_family_challenge__extratrees_training_effect
+lineage_judgment: connected_with_boundary
+boundary: "archive visibility only; no KPI rebuild completion or MT5 verification claim"

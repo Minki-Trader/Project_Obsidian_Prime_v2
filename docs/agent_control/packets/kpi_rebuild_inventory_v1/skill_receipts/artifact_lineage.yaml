@@ -1,0 +1,24 @@
+packet_id: kpi_rebuild_inventory_v1
+created_at_utc: '2026-04-29T00:00:00Z'
+skill: obsidian-artifact-lineage
+status: executed
+source_inputs:
+- docs/registers/run_registry.csv
+- docs/registers/alpha_run_ledger.csv
+- stages/<stage_id>/03_reviews/stage_run_ledger.csv
+- stages/<stage_id>/02_runs/<run_id>/*
+producer: foundation.control_plane.experiment_inventory
+consumer: next KPI rebuild packet and user target confirmation
+artifact_paths:
+- docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv
+- docs/agent_control/packets/kpi_rebuild_inventory_v1/inventory_summary.json
+- docs/agent_control/packets/kpi_rebuild_inventory_v1/work_packet.yaml
+- docs/agent_control/packets/kpi_rebuild_inventory_v1/run_plan.yaml
+- docs/agent_control/packets/kpi_rebuild_inventory_v1/skill_receipts
+artifact_hashes: recorded_for_source_registers_in_inventory_summary_json
+registry_links:
+- docs/registers/run_registry.csv
+- docs/registers/alpha_run_ledger.csv
+availability: tracked
+lineage_judgment: connected_with_boundary
+boundary: inventory only; no KPI completeness or MT5 performance claim

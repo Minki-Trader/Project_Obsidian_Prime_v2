@@ -1,0 +1,14 @@
+packet_id: kpi_trade_attribution_v1
+observed_change: trade diagnostics and regime/slice fields populated from deal-level
+  evidence
+segment_checks:
+- session_slice
+- volatility_regime
+- trend_regime
+- adx_bucket
+- spread_regime
+- month_pnl
+- quarter_pnl
+attribution_confidence: medium
+next_probe: compare enriched validation/OOS gaps against selected candidates before
+  new experiment choice

@@ -1,0 +1,86 @@
+packet_id: kpi_rebuild_mt5_recording_v1
+created_at_utc: '2026-04-29T00:00:00Z'
+user_request:
+  user_quote: 이제 진짜 MT5까지 연동해서 KPI 기록 시작하자
+  requested_action: record_normalized_kpi_from_mt5_strategy_tester_reports
+  requested_count:
+    value: 70
+    n_a_reason: null
+  ambiguous_terms:
+  - MT5까지 연동
+  - KPI 기록 시작
+current_truth:
+  active_stage: 12_model_family_challenge__extratrees_training_effect
+  source_documents:
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/target_confirmation.yaml
+  - docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv
+  - docs/agent_control/kpi_source_authority.yaml
+preflight:
+  needs_clarification: false
+  selected_option_id: existing_mt5_reports_first_no_ledger_overwrite
+  selected_option_user_quote: MT5까지 연동해서 KPI 기록 시작
+  blocked_until_answer: false
+interpreted_scope:
+  target_runs: 70
+  execution_layers:
+  - existing_mt5_strategy_tester_reports
+  - existing_runtime_telemetry_summary
+  new_mt5_rerun_this_packet: false
+  no_existing_ledger_overwrite: true
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+- id: AC-001
+  text: Read confirmed KPI rebuild targets from inventory packet.
+  expected_artifact: docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv
+  verification_method: target_run_count
+  required: true
+- id: AC-002
+  text: Use MT5 Strategy Tester reports as authority for headline and risk KPI.
+  expected_artifact: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl
+  verification_method: source_authority_fields
+  required: true
+- id: AC-003
+  text: Do not overwrite existing run folders or alpha ledgers.
+  expected_artifact: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/recording_summary.json
+  verification_method: packet_outputs_only
+  required: true
+kpi_contract:
+  kpi_standard_version: kpi_7layer_v1
+  normalized_record_path: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl
+  source_authority_reference: docs/agent_control/kpi_source_authority.yaml
+  n_a_reason_reference: docs/agent_control/n_a_reason_registry.yaml
+artifact_contract:
+  raw_evidence:
+  - stages/*/02_runs/*/mt5/reports/*.htm
+  - stages/*/02_runs/*/kpi_record.json
+  machine_readable:
+  - docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl
+  - docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_summary.csv
+  - docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/recording_summary.json
+  human_readable:
+  - docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/run_plan.yaml
+skill_routing:
+  skills_selected:
+  - obsidian-reentry-read
+  - obsidian-run-evidence-system
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-artifact-lineage
+  required_skill_receipts:
+  - docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/skill_receipts/runtime_parity.yaml
+  - docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/skill_receipts/backtest_forensics.yaml
+  - docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/skill_receipts/artifact_lineage.yaml
+final_claim_policy:
+  allowed_claims:
+  - mt5_existing_report_recording_started
+  - partial_kpi_recording_complete
+  forbidden_claims:
+  - all_70_mt5_rerun_complete
+  - operating_promotion
+  - runtime_authority
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml
+summary_counts:
+  target_runs_total: 70
+  target_runs_with_mt5_records: 65
+  target_runs_missing_mt5_records: 5
+  normalized_records_written: 448
