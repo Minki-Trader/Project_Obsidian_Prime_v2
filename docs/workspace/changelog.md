@@ -2,6 +2,9 @@
 
 ## 2026-04-29
 
+- `kpi_tier_balance_completion_v1(티어 균형 보강 묶음)`을 실행했다. 효과(effect, 효과)는 `RUN02AL~RUN02AP(실행 02AL~02AP)`와 `RUN03F(실행 03F)`에서 빠진 Tier A only/Tier B only/A+B routed(Tier A 단독/Tier B 단독/A+B 라우팅) MT5(`MetaTrader 5`, 메타트레이더5) KPI(핵심 성과 지표)를 validation/OOS(검증/표본외)까지 채우는 것이다.
+- MT5 Strategy Tester(전략 테스터) 시도 `36 / 36`개가 완료됐고, normalized KPI rows(정규화 KPI 행) `60`, trade attribution rows(거래 귀속 행) `35`, trade-level rows(거래 단위 행) `1,837`, parser errors(파서 오류) `0`을 기록했다. 효과(effect, 효과)는 run02/run03(실행 02/03)의 티어 불균형을 빈칸이 아니라 실제 MT5 근거로 보강한 것이다.
+- Stage 12(12단계) 현재 실행(current run, 현재 실행)을 `RUN03F(실행 03F)` tier-balance supplement(티어 균형 보강)로 갱신했다. 효과(effect, 효과)는 `RUN03E(실행 03E)` Tier A 단독 결과를 최신 전체 판독처럼 오해하지 않고, Tier A/B/routed(Tier A/B/라우팅) 비교를 함께 보게 하는 것이다.
 - 코드 표면 감사(code-surface audit, 코드 표면 감사)를 `foundation.control_plane.code_surface_audit`로 추가했다. 효과(effect, 효과)는 큰 pipeline/EA(파이프라인/EA), 폴더 배치(folder placement, 폴더 배치), `foundation/control_plane(제어면)`의 stage pipeline direct import(단계 파이프라인 직접 가져오기)를 기계적으로 검사하는 것이다.
 - `docs/agent_control/code_surface_baseline.yaml`을 추가했다. 효과(effect, 효과)는 이미 큰 파일은 registered debt(등록된 부채)로 보이게 하고, 새로 더 커지거나 새 직접 의존성(direct dependency, 직접 의존성)이 생기면 차단하는 것이다.
 - MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서)를 `foundation/mt5/strategy_report.py`로 옮겼다. 효과(effect, 효과)는 Stage10 pipeline(10단계 파이프라인)이 공통 MT5 report parsing(보고서 파싱)의 숨은 진실 원천(source of truth, 진실 원천)이 되지 않게 하는 것이다.

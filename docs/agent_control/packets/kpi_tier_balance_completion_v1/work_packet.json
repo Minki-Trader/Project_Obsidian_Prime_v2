@@ -1,0 +1,27 @@
+{
+  "acceptance_criteria": [
+    "Create supplemental run folders instead of overwriting prior source runs.",
+    "Run MT5 for Tier A only, Tier B fallback only, and actual routed total on validation and OOS.",
+    "Write normalized 7-layer KPI records and trade attribution records.",
+    "Update run registry and alpha ledgers with runtime_probe-only boundary."
+  ],
+  "created_at_utc": "2026-04-28T22:57:03Z",
+  "interpreted_scope": {
+    "no_prior_raw_report_overwrite": true,
+    "required_views": [
+      "tier_a_only",
+      "tier_b_fallback_only",
+      "routed_total"
+    ],
+    "run02_sources": [
+      "run02X_lgbm_fwd18_rank_threshold_v1",
+      "run02Y_lgbm_fwd18_inverse_rank_threshold_v1",
+      "run02AC_lgbm_fwd18_inverse_rank_context_adx20_tier_a_only_v1",
+      "run02AD_lgbm_fwd18_inverse_rank_context_adx25_tier_a_only_v1",
+      "run02AE_lgbm_fwd18_inverse_rank_context_adx30_tier_a_only_v1"
+    ],
+    "run03_supplement": "run03F_et_v11_tier_balance_mt5_v1"
+  },
+  "packet_id": "kpi_tier_balance_completion_v1",
+  "user_quote": "run 02 03 missing KPI must be filled through MT5 tier-balance reinforcement"
+}

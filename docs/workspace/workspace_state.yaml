@@ -26,7 +26,7 @@ current_focus:
   - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
   - "treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01A-run01X remain comparison baselines, not live readiness or operating promotion"
   - "treat Stage 11 as reviewed_closed_no_next_stage_opened; run02A-run02S, run02W-run02Z, and run02AA-run02AK are completed LightGBM training, threshold, divergent, idea-burst, salvage-extension, fwd18-retrain, fwd18 inverse-rank context, and stress MT5 runtime_probe evidence, not alpha quality or operating promotion"
-  - "treat Stage 12 as active standalone(단독) ExtraTrees(엑스트라 트리) lane(레인); RUN03A is invalid_for_standalone_scope(단독 범위 무효), RUN03B is source Python scout(원천 파이썬 탐침), RUN03D is latest standalone batch20 Python package(최신 단독 20개 묶음 파이썬 패키지), and RUN03E is current MT5 runtime_probe(현재 MT5 런타임 탐침)"
+  - "treat Stage 12 as active standalone(단독) ExtraTrees(엑스트라 트리) lane(레인); RUN03A is invalid_for_standalone_scope(단독 범위 무효), RUN03B is source Python scout(원천 파이썬 탐침), RUN03D is latest standalone batch20 Python package(최신 단독 20개 묶음 파이썬 패키지), RUN03E is the prior Tier A-only MT5 runtime_probe(이전 Tier A 단독 MT5 런타임 탐침), and RUN03F is current Tier A/B/routed MT5 tier-balance supplement(현재 Tier A/B/라우팅 MT5 티어 균형 보강)"
   - "treat agent-control KPI rebuild packets(에이전트 제어 KPI 재구축 묶음) as cross-stage evidence management(교차 단계 근거 관리), not alpha quality(알파 품질), live readiness(실거래 준비), or operating promotion(운영 승격)"
 pre_alpha_stage_queue:
   status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_active"
@@ -897,29 +897,34 @@ stage11_alpha_robustness:
   current_stage_run_ledger_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage_run_ledger.csv"
 stage12_model_family_challenge:
   stage_id: "12_model_family_challenge__extratrees_training_effect"
-  status: "active_standalone_batch20_top_mt5_probe_completed"
-  lane: "standalone_batch20_top_mt5_runtime_probe"
-  current_run_id: "run03E_et_batch20_top_v11_mt5_probe_v1"
-  current_run_label: "stage12_Model__ExtraTreesBatch20TopV11MT5Probe"
+  status: "active_standalone_tier_balance_mt5_supplement_completed"
+  lane: "standalone_batch20_top_tier_balance_mt5_runtime_probe"
+  current_run_id: "run03F_et_v11_tier_balance_mt5_v1"
+  current_run_label: "stage12_Model__ExtraTreesV11TierBalanceMT5"
   current_status: "reviewed"
   current_summary:
     boundary: "Stage12 standalone(단독); no Stage10/11 inheritance(10/11단계 비계승) or baseline(기준선)"
     latest_python_package: "run03D_et_standalone_batch20_v1"
-    latest_mt5_runtime_probe: "run03E_et_batch20_top_v11_mt5_probe_v1"
+    previous_mt5_runtime_probe: "run03E_et_batch20_top_v11_mt5_probe_v1"
+    latest_mt5_runtime_probe: "run03F_et_v11_tier_balance_mt5_v1"
     source_variant: "v11_base_leaf20_q85"
     python_validation_hit_rate: 0.392687880840
     python_oos_hit_rate: 0.457317073171
-    validation_net_profit: -205.14
-    validation_profit_factor: 0.88
-    validation_trades: 301
-    oos_net_profit: 362.83
-    oos_profit_factor: 1.44
-    oos_trades: 210
-    package_judgment: "inconclusive_run03d_top_variant_mt5_runtime_probe_completed"
+    validation_routed_net_profit: -194.48
+    validation_routed_profit_factor: 0.90
+    validation_routed_trades: 444
+    validation_tier_a_only_net_profit: -189.47
+    validation_tier_b_only_net_profit: 0.48
+    oos_routed_net_profit: 546.79
+    oos_routed_profit_factor: 1.47
+    oos_routed_trades: 368
+    oos_tier_a_only_net_profit: 399.59
+    oos_tier_b_only_net_profit: 88.69
+    package_judgment: "inconclusive_runtime_probe_tier_balance_supplement_completed"
     external_verification: "completed"
-    result_summary_path: "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03E_et_batch20_top_v11_mt5_probe_v1/reports/result_summary.md"
-    summary_path: "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03E_et_batch20_top_v11_mt5_probe_v1/summary.json"
-    next_action: "Review whether v16/v09/v13(변형 후보) deserve separate MT5 probes(MT5 탐침)"
+    result_summary_path: "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03F_et_v11_tier_balance_mt5_v1/reports/result_summary.md"
+    summary_path: "docs/agent_control/packets/kpi_tier_balance_completion_v1/packet_summary.json"
+    next_action: "Review tier-balance supplement(티어 균형 보강) before deciding whether v16/v09/v13(변형 후보) deserve separate MT5 probes(MT5 탐침)"
 
 agent_control_kpi_rebuild:
   status: "partial_trade_attribution_recorded"
@@ -958,6 +963,19 @@ agent_control_kpi_rebuild:
       trade_level_rows: 15803
       parser_errors: 0
       path: "docs/agent_control/packets/kpi_trade_attribution_v1"
+    tier_balance_completion:
+      packet_id: "kpi_tier_balance_completion_v1"
+      status: "completed"
+      target_runs: 6
+      target_run_ids: "run02AL,run02AM,run02AN,run02AO,run02AP,run03F"
+      mt5_attempts_completed: 36
+      mt5_kpi_records: 60
+      normalized_kpi_rows: 60
+      trade_attribution_records: 35
+      trade_level_rows: 1837
+      zero_trade_records_without_attribution: 1
+      parser_errors: 0
+      path: "docs/agent_control/packets/kpi_tier_balance_completion_v1"
   boundary: "KPI rebuild(핵심 성과 지표 재구축) is evidence management(근거 관리) only; it does not change Stage 12 alpha judgment(12단계 알파 판정) or create promotion meaning(승격 의미)."
 
 agent_control_code_surface:
@@ -966,7 +984,7 @@ agent_control_code_surface:
   baseline_path: "docs/agent_control/code_surface_baseline.yaml"
   gate_command: "python -m foundation.control_plane.code_surface_audit --root ."
   latest_audit_status: "pass"
-  large_files_over_attention: 13
+  large_files_over_attention: 14
   compatibility_warning: "foundation/mt5/runtime_support.py delegates(위임) to legacy Stage 10 orchestration(기존 10단계 조율 파일) until shared MT5 runtime helpers(공유 MT5 런타임 도구) are decomposed(분해됨)"
   refactor_completed:
     - "MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서) moved to foundation/mt5/strategy_report.py"
@@ -981,8 +999,9 @@ closed_memory:
   - "Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run"
   - "Stage 12 RUN03C is a prior standalone(이전 단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행), not the current run(현재 실행)"
   - "Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is inconclusive(불충분)"
-  - "Stage 12 RUN03E completed MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85"
-  - "Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, and trade attribution packets(목록, MT5 기록, MT5 실행, 거래 귀속 묶음) as cross-stage evidence records(교차 단계 근거 기록)"
+  - "Stage 12 RUN03E completed prior MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85"
+  - "Stage 12 RUN03F completed Tier A/B/routed MT5 tier-balance supplement(Tier A/B/라우팅 MT5 티어 균형 보강) for the v11 ExtraTrees(엑스트라 트리) surface"
+  - "Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, trade attribution, and tier-balance completion packets(목록, MT5 기록, MT5 실행, 거래 귀속, 티어 균형 보강 묶음) as cross-stage evidence records(교차 단계 근거 기록)"
   - "Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치), and control-plane direct stage imports(제어면의 단계 직접 가져오기)"
   - "Stage 11 is reviewed_closed_no_next_stage_opened"
   - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
@@ -1004,5 +1023,6 @@ forbidden_shortcuts:
   - "do not treat Stage 11 run02A-run02S, run02W-run02Z, and run02AA-run02AK LightGBM MT5 runtime_probe or run02T-run02V/run02X-run02Y Python structural probes as alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not treat Stage 12 RUN03A as standalone evidence; it is invalid_for_standalone_scope"
   - "do not treat Stage 12 RUN03B ExtraTrees standalone Python structural scout as MT5 runtime evidence, alpha quality, live readiness, runtime authority expansion, or operating promotion"
+  - "do not treat Stage 12 RUN03F tier-balance MT5 runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

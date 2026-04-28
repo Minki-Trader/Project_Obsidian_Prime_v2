@@ -1,0 +1,98 @@
+{
+  "packet_id": "kpi_tier_balance_completion_v1",
+  "status": "pass",
+  "completed_forbidden": false,
+  "audits": [
+    {
+      "audit_name": "scope_completion_gate",
+      "status": "complete",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "target_runs": {
+          "expected": 6,
+          "actual": 6,
+          "evidence_label": "target_matrix",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "mt5_attempts": {
+          "expected": 36,
+          "actual": 36,
+          "evidence_label": "attempt_summary",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "normalized_kpi_rows": {
+          "expected": 60,
+          "actual": 60,
+          "evidence_label": "normalized_kpi_summary",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "trade_attribution_rows": {
+          "expected": 35,
+          "actual": 35,
+          "evidence_label": "trade_attribution_summary",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "parser_errors": {
+          "expected": 0,
+          "actual": 0,
+          "evidence_label": "parser_errors",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        }
+      },
+      "allowed_claims": [
+        "completed",
+        "verified"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-experiment-design",
+          "obsidian-runtime-parity",
+          "obsidian-backtest-forensics",
+          "obsidian-run-evidence-system",
+          "obsidian-artifact-lineage",
+          "obsidian-performance-attribution"
+        ],
+        "receipt_count": 6
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "completed"
+      ],
+      "source_audits": [
+        "scope_completion_gate",
+        "skill_receipt_lint"
+      ]
+    },
+    "allowed_claims": [
+      "completed"
+    ],
+    "forbidden_claims": []
+  }
+}
