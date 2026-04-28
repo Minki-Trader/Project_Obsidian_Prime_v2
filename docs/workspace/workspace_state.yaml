@@ -960,6 +960,20 @@ agent_control_kpi_rebuild:
       path: "docs/agent_control/packets/kpi_trade_attribution_v1"
   boundary: "KPI rebuild(핵심 성과 지표 재구축) is evidence management(근거 관리) only; it does not change Stage 12 alpha judgment(12단계 알파 판정) or create promotion meaning(승격 의미)."
 
+agent_control_code_surface:
+  status: "guarded_with_registered_debt"
+  audit_path: "docs/agent_control/code_surface_audit_latest.json"
+  baseline_path: "docs/agent_control/code_surface_baseline.yaml"
+  gate_command: "python -m foundation.control_plane.code_surface_audit --root ."
+  latest_audit_status: "pass"
+  large_files_over_attention: 13
+  compatibility_warning: "foundation/mt5/runtime_support.py delegates(위임) to legacy Stage 10 orchestration(기존 10단계 조율 파일) until shared MT5 runtime helpers(공유 MT5 런타임 도구) are decomposed(분해됨)"
+  refactor_completed:
+    - "MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서) moved to foundation/mt5/strategy_report.py"
+    - "foundation/control_plane(제어면) no longer imports Stage10 pipeline(10단계 파이프라인) directly for MT5 report parsing"
+    - "direct control-plane to stage-pipeline imports(제어면에서 단계 파이프라인 직접 가져오기) are now blocked by code_surface_audit(코드 표면 감사)"
+  boundary: "This reduces code-surface drift(코드 표면 드리프트) and records remaining debt(남은 부채); it does not claim full Stage10 pipeline decomposition(10단계 파이프라인 완전 분해)."
+
 open_items: []
 closed_memory:
   - "Stage 12 is active_standalone_structural_scout_open with RUN03B ExtraTrees Python structural evidence"
@@ -969,6 +983,7 @@ closed_memory:
   - "Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is inconclusive(불충분)"
   - "Stage 12 RUN03E completed MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85"
   - "Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, and trade attribution packets(목록, MT5 기록, MT5 실행, 거래 귀속 묶음) as cross-stage evidence records(교차 단계 근거 기록)"
+  - "Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치), and control-plane direct stage imports(제어면의 단계 직접 가져오기)"
   - "Stage 11 is reviewed_closed_no_next_stage_opened"
   - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
   - "Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion"

@@ -33,6 +33,19 @@ lifecycle:
       - kpi_source_authority
       - artifact_contract
     effect: "Fix what will be run, what will be measured, and where evidence must come from."
+  - phase: code_surface_precheck
+    required_when:
+      - code_or_policy_edit
+      - MT5_EA_or_module_edit
+      - large_pipeline_edit
+      - reusable_logic_move
+    required_outputs:
+      - code_surface_audit_result
+      - owner_module_decision
+      - caller_and_artifact_effect
+      - monolith_risk
+    gate_command: "python -m foundation.control_plane.code_surface_audit --root ."
+    effect: "Catch folder placement, direct cross-owner imports, and monolith growth before more code is added."
   - phase: execution
     required_outputs:
       - source_artifacts

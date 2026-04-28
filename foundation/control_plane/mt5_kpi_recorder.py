@@ -11,7 +11,7 @@ from typing import Any, Mapping, Sequence
 import yaml
 
 from foundation.control_plane.ledger import io_path, path_exists, read_csv_rows, sha256_file_lf_normalized, write_csv_rows
-from foundation.pipelines.run_stage10_logreg_mt5_scout import extract_mt5_strategy_report_metrics
+from foundation.mt5.strategy_report import extract_mt5_strategy_report_metrics
 
 
 PACKET_ID_DEFAULT = "kpi_rebuild_mt5_recording_v1"
@@ -396,7 +396,7 @@ def _normalized_record(
         "kpi_record_path": _repo_or_abs(kpi_path),
         "mt5_report_path": _repo_or_abs(report_path),
         "mt5_report_sha256": report_hash,
-        "parser": "foundation.pipelines.run_stage10_logreg_mt5_scout.extract_mt5_strategy_report_metrics",
+        "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
     }
     return record
 

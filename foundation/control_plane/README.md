@@ -87,3 +87,21 @@ Example:
 python -m foundation.control_plane.experiment_inventory `
   --packet-id kpi_rebuild_inventory_v1
 ```
+
+## Code-surface audit
+
+Use `foundation.control_plane.code_surface_audit` before editing large pipeline files, MT5 EA files, `.mqh` modules, reusable logic, or run materializers.
+
+The audit checks:
+
+- large file line budgets against `docs/agent_control/code_surface_baseline.yaml`
+- direct `foundation/control_plane` imports from stage pipelines
+- the temporary MT5 runtime compatibility shim
+
+Example:
+
+```powershell
+python -m foundation.control_plane.code_surface_audit --root .
+```
+
+The effect is that code placement and monolith growth are checked by a machine-readable gate, not only by memory or review notes.

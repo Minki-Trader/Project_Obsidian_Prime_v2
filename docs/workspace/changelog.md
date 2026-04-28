@@ -1,5 +1,12 @@
 ﻿# Workspace Changelog
 
+## 2026-04-29
+
+- 코드 표면 감사(code-surface audit, 코드 표면 감사)를 `foundation.control_plane.code_surface_audit`로 추가했다. 효과(effect, 효과)는 큰 pipeline/EA(파이프라인/EA), 폴더 배치(folder placement, 폴더 배치), `foundation/control_plane(제어면)`의 stage pipeline direct import(단계 파이프라인 직접 가져오기)를 기계적으로 검사하는 것이다.
+- `docs/agent_control/code_surface_baseline.yaml`을 추가했다. 효과(effect, 효과)는 이미 큰 파일은 registered debt(등록된 부채)로 보이게 하고, 새로 더 커지거나 새 직접 의존성(direct dependency, 직접 의존성)이 생기면 차단하는 것이다.
+- MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서)를 `foundation/mt5/strategy_report.py`로 옮겼다. 효과(effect, 효과)는 Stage10 pipeline(10단계 파이프라인)이 공통 MT5 report parsing(보고서 파싱)의 숨은 진실 원천(source of truth, 진실 원천)이 되지 않게 하는 것이다.
+- Stage11(11단계) RUN02Q~RUN02S plan/packet(계획/묶음) 문서의 mojibake(문자 깨짐)를 UTF-8 BOM(UTF-8 BOM 포함) 한국어 문서로 복구했다. 효과(effect, 효과)는 architecture guard validator(구조 가드 검사기)가 다시 통과하는 것이다.
+
 ## 2026-04-28
 
 - Stage 12(12단계) `RUN03C(실행 03C)` `run03C_et_standalone_mt5_runtime_probe_v1`를 standalone ExtraTrees MT5 runtime_probe(단독 엑스트라 트리 MT5 런타임 탐침)로 실행했다. 효과(effect, 효과)는 RUN03B(실행 03B) 단독 모델을 ONNX(온닉스), MT5 feature matrix(MT5 피처 행렬), Strategy Tester(전략 테스터) 근거로 연결하되 Stage 10/11(10/11단계) threshold/session/context/baseline(임계값/세션/문맥/기준선)을 쓰지 않게 하는 것이다. 외부 검증 상태(external verification status, 외부 검증 상태)는 `completed`다.

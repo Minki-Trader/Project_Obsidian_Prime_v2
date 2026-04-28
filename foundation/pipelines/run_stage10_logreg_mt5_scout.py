@@ -12,7 +12,6 @@ import sys
 import tempfile
 import time
 from dataclasses import asdict, dataclass
-from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
@@ -32,6 +31,7 @@ from foundation.models.baseline_training import (  # noqa: E402
     load_feature_order,
     train_baseline_model,
 )
+from foundation.mt5.strategy_report import extract_mt5_strategy_report_metrics  # noqa: E402
 from foundation.pipelines.materialize_fpmarkets_v2_dataset import build_feature_frame  # noqa: E402
 from foundation.pipelines.materialize_training_label_split_dataset import (  # noqa: E402
     TrainingLabelSplitSpec,
@@ -365,200 +365,6 @@ def mt5_runtime_module_hashes() -> list[dict[str, Any]]:
 def write_json(path: Path, payload: Mapping[str, Any]) -> None:
     _io_path(path.parent).mkdir(parents=True, exist_ok=True)
     _io_path(path).write_text(json.dumps(_json_ready(payload), indent=2), encoding="utf-8")
-
-
-class _Mt5ReportTableParser(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.rows: list[list[str]] = []
-        self._current_row: list[str] | None = None
-        self._current_cell: list[str] | None = None
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        tag = tag.lower()
-        if tag == "tr":
-            self._current_row = []
-        elif tag in {"td", "th"} and self._current_row is not None:
-            self._current_cell = []
-
-    def handle_data(self, data: str) -> None:
-        if self._current_cell is not None:
-            self._current_cell.append(data)
-
-    def handle_endtag(self, tag: str) -> None:
-        tag = tag.lower()
-        if tag in {"td", "th"} and self._current_cell is not None and self._current_row is not None:
-            text = " ".join("".join(self._current_cell).split())
-            self._current_row.append(text)
-            self._current_cell = None
-        elif tag == "tr" and self._current_row is not None:
-            if any(cell for cell in self._current_row):
-                self.rows.append(self._current_row)
-            self._current_row = None
-
-
-_REPORT_NUMBER_RE = re.compile(r"([-+]?\d[\d\s,]*(?:\.\d+)?)(\s*%)?")
-
-
-def read_text_best_effort(path: Path) -> tuple[str, str]:
-    raw = _io_path(path).read_bytes()
-    for encoding in ("utf-16", "utf-8-sig", "utf-8", "cp949"):
-        try:
-            return raw.decode(encoding), encoding
-        except UnicodeDecodeError:
-            continue
-    return raw.decode("utf-8", errors="ignore"), "utf-8-ignore"
-
-
-def _report_numbers(value: Any) -> list[tuple[float, bool]]:
-    text = str(value or "").replace("\xa0", " ")
-    numbers: list[tuple[float, bool]] = []
-    for match in _REPORT_NUMBER_RE.finditer(text):
-        number_text = match.group(1).replace(" ", "").replace(",", "")
-        try:
-            numbers.append((float(number_text), bool(match.group(2))))
-        except ValueError:
-            continue
-    return numbers
-
-
-def parse_report_number(value: Any) -> float | None:
-    numbers = _report_numbers(value)
-    return numbers[0][0] if numbers else None
-
-
-def parse_count_percent(value: Any) -> dict[str, Any]:
-    numbers = _report_numbers(value)
-    count = int(round(numbers[0][0])) if numbers else None
-    percent = next((number for number, is_percent in numbers if is_percent), None)
-    if percent is None and len(numbers) > 1:
-        percent = numbers[1][0]
-    return {"count": count, "percent": percent}
-
-
-def parse_amount_percent(value: Any) -> dict[str, Any]:
-    numbers = _report_numbers(value)
-    amount = next((number for number, is_percent in numbers if not is_percent), None)
-    percent = next((number for number, is_percent in numbers if is_percent), None)
-    if amount is None and numbers:
-        amount = numbers[0][0]
-    if percent is None and len(numbers) > 1:
-        percent = numbers[1][0]
-    return {"amount": amount, "percent": percent}
-
-
-def _normalize_report_label(value: Any) -> str:
-    return str(value or "").strip().rstrip(":").casefold()
-
-
-def _cell_after(row: Sequence[str], aliases: Sequence[str]) -> str | None:
-    normalized_aliases = {_normalize_report_label(alias) for alias in aliases}
-    for index, cell in enumerate(row[:-1]):
-        if _normalize_report_label(cell) in normalized_aliases:
-            for next_cell in row[index + 1 :]:
-                if str(next_cell).strip():
-                    return next_cell
-    return None
-
-
-def _first_cell_after(rows: Sequence[Sequence[str]], aliases: Sequence[str]) -> str | None:
-    for row in rows:
-        value = _cell_after(row, aliases)
-        if value is not None:
-            return value
-    return None
-
-
-def _first_row_containing(rows: Sequence[Sequence[str]], aliases: Sequence[str]) -> Sequence[str] | None:
-    normalized_aliases = {_normalize_report_label(alias) for alias in aliases}
-    for row in rows:
-        row_labels = {_normalize_report_label(cell) for cell in row}
-        if row_labels & normalized_aliases:
-            return row
-    return None
-
-
-def extract_mt5_strategy_report_metrics(report_path: Path) -> dict[str, Any]:
-    text, encoding = read_text_best_effort(report_path)
-    parser = _Mt5ReportTableParser()
-    parser.feed(text)
-    rows = parser.rows
-
-    metrics: dict[str, Any] = {
-        "status": "partial",
-        "report_path": report_path.as_posix(),
-        "source_encoding": encoding,
-        "parsed_row_count": len(rows),
-    }
-
-    scalar_fields = {
-        "net_profit": ("총수입", "Total Net Profit"),
-        "gross_profit": ("누적 수익", "Gross Profit"),
-        "gross_loss": ("누적 손실", "Gross Loss"),
-        "profit_factor": ("Profit Factor",),
-        "expectancy": ("예상 비용", "Expected Payoff"),
-        "recovery_factor": ("Recovery Factor",),
-        "sharpe_ratio": ("Sharpe Ratio",),
-    }
-    for field, aliases in scalar_fields.items():
-        metrics[field] = parse_report_number(_first_cell_after(rows, aliases))
-
-    for field, aliases in {
-        "balance_drawdown_maximal": ("Balance Drawdown Maximal",),
-        "equity_drawdown_maximal": ("Equity Drawdown Maximal",),
-    }.items():
-        parsed = parse_amount_percent(_first_cell_after(rows, aliases))
-        metrics[f"{field}_amount"] = parsed["amount"]
-        metrics[f"{field}_percent"] = parsed["percent"]
-
-    trade_row = _first_row_containing(rows, ("매도거래수 (won %)", "Short Trades (won %)"))
-    trade_count_value = _cell_after(trade_row, ("총 거래횟수", "Total Trades")) if trade_row else None
-    metrics["trade_count"] = None if trade_count_value is None else int(round(parse_report_number(trade_count_value) or 0))
-    if trade_row is not None:
-        short = parse_count_percent(_cell_after(trade_row, ("매도거래수 (won %)", "Short Trades (won %)")))
-        long = parse_count_percent(_cell_after(trade_row, ("매수거래수 (won %)", "Long Trades (won %)")))
-        metrics["short_trade_count"] = short["count"]
-        metrics["short_win_rate_percent"] = short["percent"]
-        metrics["long_trade_count"] = long["count"]
-        metrics["long_win_rate_percent"] = long["percent"]
-
-    profit_row = _first_row_containing(rows, ("수익거래수 (% of total)", "Profit Trades (% of total)"))
-    if profit_row is not None:
-        deal_count_value = _cell_after(profit_row, ("총 거래횟수", "Total Deals"))
-        metrics["deal_count"] = None if deal_count_value is None else int(round(parse_report_number(deal_count_value) or 0))
-        winners = parse_count_percent(_cell_after(profit_row, ("수익거래수 (% of total)", "Profit Trades (% of total)")))
-        losers = parse_count_percent(_cell_after(profit_row, ("손실거래수 (% of total)", "Loss Trades (% of total)")))
-        metrics["winning_trade_count"] = winners["count"]
-        metrics["win_rate_percent"] = winners["percent"]
-        metrics["losing_trade_count"] = losers["count"]
-        metrics["loss_rate_percent"] = losers["percent"]
-
-    metrics["max_drawdown_amount"] = (
-        metrics.get("equity_drawdown_maximal_amount") or metrics.get("balance_drawdown_maximal_amount")
-    )
-    metrics["max_drawdown_percent"] = (
-        metrics.get("equity_drawdown_maximal_percent") or metrics.get("balance_drawdown_maximal_percent")
-    )
-    if metrics.get("expectancy") is None and metrics.get("trade_count"):
-        metrics["expectancy"] = float(metrics["net_profit"] / metrics["trade_count"]) if metrics.get("net_profit") is not None else None
-    if metrics.get("profit_factor") is None and metrics.get("gross_profit") is not None and metrics.get("gross_loss"):
-        metrics["profit_factor"] = float(metrics["gross_profit"] / abs(metrics["gross_loss"]))
-    if metrics.get("recovery_factor") is None and metrics.get("net_profit") is not None and metrics.get("max_drawdown_amount"):
-        metrics["recovery_factor"] = float(metrics["net_profit"] / metrics["max_drawdown_amount"])
-
-    required = [
-        "net_profit",
-        "profit_factor",
-        "expectancy",
-        "trade_count",
-        "win_rate_percent",
-        "max_drawdown_amount",
-        "recovery_factor",
-    ]
-    missing = [field for field in required if metrics.get(field) is None]
-    metrics["missing_required_metrics"] = missing
-    metrics["status"] = "completed" if not missing else "partial"
-    return metrics
 
 
 def _json_ready(value: Any) -> Any:

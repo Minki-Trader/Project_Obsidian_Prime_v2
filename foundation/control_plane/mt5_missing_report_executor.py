@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 from foundation.control_plane.ledger import io_path, path_exists, read_csv_rows
-from foundation.pipelines import run_stage10_logreg_mt5_scout as mt5
+from foundation.mt5 import runtime_support as mt5
 
 
 PACKET_ID_DEFAULT = "kpi_rebuild_mt5_execution_v1"

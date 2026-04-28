@@ -1,0 +1,31 @@
+version: code_surface_baseline_v1
+purpose: "Keep code-surface drift(코드 표면 드리프트), monolith growth(일체형 파일 성장), and cross-owner imports(소유권 교차 import)를 visible(가시화) and gated(제한) before more run work."
+line_count_policy:
+  attention_lines: 800
+  blocking_lines: 1600
+  max_lines_by_path:
+    foundation/pipelines/run_stage10_logreg_mt5_scout.py:
+      max_lines: 3050
+      reason: "legacy orchestration(기존 조율 파일); do not grow, extract reusable logic(재사용 로직) before edits"
+    foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5:
+      max_lines: 1725
+      reason: "legacy parity audit EA(기존 동등성 감사 EA); do not copy for run variants(실행 변형)"
+    foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5:
+      max_lines: 1785
+      reason: "legacy parity audit EA(기존 동등성 감사 EA); do not copy for run variants(실행 변형)"
+ownership_policy:
+  blocked_direct_imports:
+    - importer_owner: foundation/control_plane
+      imported_owner: foundation/pipelines/run_stage*
+      reason: "control plane(제어면) must not use stage pipeline(단계 파이프라인) as hidden shared owner(숨은 공유 소유자)"
+  compatibility_shims:
+    - path: foundation/mt5/runtime_support.py
+      status: "temporary_warning"
+      reason: "keeps control-plane imports clean while shared MT5 runtime helpers are decomposed(공유 MT5 런타임 도구 분해 전 임시 경고)"
+required_gate:
+  command: "python -m foundation.control_plane.code_surface_audit --root ."
+  run_before:
+    - "editing large pipeline files(큰 파이프라인 파일 수정)"
+    - "editing MT5 EA or .mqh modules(MT5 EA 또는 .mqh 모듈 수정)"
+    - "moving reusable logic(재사용 로직 이동)"
+    - "adding new run materializer scripts(새 실행 물질화 스크립트 추가)"

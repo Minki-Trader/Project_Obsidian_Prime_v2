@@ -1,28 +1,27 @@
 ﻿# RUN02Q~RUN02S Salvage Extension Plan
 
-## 吏덈Ц(Question, 吏덈Ц)
+## 질문(Question, 질문)
 
-RUN02G/RUN02N/RUN02P(?ㅽ뻾 02G/02N/02P)媛 ?④릿 ?뚯닔 媛移?salvage value, ?뚯닔 媛移?瑜?媛숈? Stage 11(11?④퀎) ?묒뾽 臾띠쓬(work packet, ?묒뾽 臾띠쓬)?먯꽌 ???볧???validation/OOS(寃利??쒕낯??媛 ?숈떆??踰꾪떚?붽??
+RUN02G/RUN02N/RUN02P(실행 02G/02N/02P)가 남긴 salvage value(회수 가치)를 같은 Stage 11(11단계) work packet(작업 묶음)에서 더 넓혀 validation/OOS(검증/표본외)가 동시에 버티는지 본다.
 
-?④낵(effect, ?④낵): ?묒? ?묒닔 ?먮룆??諛붾줈 promotion_candidate(?밴꺽 ?꾨낫)濡??щ━吏 ?딄퀬, 嫄곕옒 ?섎? ?섎━嫄곕굹 寃利??먯떎??以꾩?????援ъ“媛 ?좎??섎뒗吏 蹂몃떎.
+효과(effect, 효과): 작은 양수 판독을 바로 promotion_candidate(승격 후보)로 올리지 않고, 거래 수를 늘리거나 검증 손실을 줄일 수 있는 구조가 실제로 있는지 확인한다.
 
-## ?ㅽ뻾 ?ㅺ퀎(Run Design, ?ㅽ뻾 ?ㅺ퀎)
+## 실행 설계(Run Design, 실행 설계)
 
-| run(?ㅽ뻾) | source read(?먯쿇 ?먮룆) | hypothesis(媛?? | context gate(臾몃㎘ ?쒗븳) | side(諛⑺뼢) |
+| run(실행) | source read(원천 판독) | hypothesis(가설) | context gate(문맥 제한) | side(방향) |
 |---|---|---|---|---|
-| RUN02Q(?ㅽ뻾 02Q) | RUN02P(?ㅽ뻾 02P) | bear vortex short(?섎씫 蹂댄뀓???????묒? dual-positive(?묒そ ?묒닔) ?먮룆? looser density(?먯뒯??諛??濡?而ㅼ쭏 ???덈떎 | `vortex_negative` | short(?? |
-| RUN02R(?ㅽ뻾 02R) | RUN02G(?ㅽ뻾 02G) | long pullback(濡??섎룎由???OOS(?쒕낯?? 媛뺤젏? deeper pullback plus ADX(??源딆? ?섎룎由쇨낵 ADX)濡?validation(寃利???蹂듦뎄?????덈떎 | `rsi14_lte42_bbpos_lte40_adx14_gte18` | long(濡? |
-| RUN02S(?ㅽ뻾 02S) | RUN02N(?ㅽ뻾 02N) | squeeze breakout(?뺤텞 ?뚰뙆)??tiny OOS(?묒? ?쒕낯?? ?먮룆? wider low-bandwidth context(???볦? ????룺 臾몃㎘)?먯꽌 而ㅼ쭏 ???덈떎 | `bb_squeeze_or_bwidth_lte0030` | both(?묐갑?? |
+| RUN02Q(실행 02Q) | RUN02P(실행 02P) | bear vortex short(하락 보텍스 숏) 양수 단서를 더 느슨한 density(밀도)로 키울 수 있는지 본다 | `vortex_negative` | short(숏) |
+| RUN02R(실행 02R) | RUN02G(실행 02G) | long pullback(롱 되돌림) OOS(표본외) 강점을 deeper pullback plus ADX(더 깊은 되돌림+ADX)로 validation(검증)까지 복구할 수 있는지 본다 | `rsi14_lte42_bbpos_lte40_adx14_gte18` | long(롱) |
+| RUN02S(실행 02S) | RUN02N(실행 02N) | squeeze breakout(압축 돌파)의 tiny OOS(작은 표본외) 단서를 wider low-bandwidth context(더 넓은 저대역폭 문맥)에서 키울 수 있는지 본다 | `bb_squeeze_or_bwidth_lte0030` | both(양방향) |
 
-## ?깃났/?ㅽ뙣 湲곗?(Success/Failure Criteria, ?깃났/?ㅽ뙣 湲곗?)
+## 성공/실패 기준(Success/Failure Criteria, 성공/실패 기준)
 
-- success(?깃났): validation/OOS(寃利??쒕낯?? routed total(?쇱슦???꾩껜)??????non-negative(?뚯닔 ?꾨떂)?닿퀬 PF(`profit factor`, ?섏씡 ?⑺꽣)媛 1 ?댁긽?대떎.
-- weak salvage(?쏀븳 ?뚯닔): ?쒖そ留??묒닔?닿굅?? ????嫄곗쓽 蹂몄쟾?댁뼱??trade count(嫄곕옒 ??媛 ?묐떎.
-- failure(?ㅽ뙣): validation/OOS(寃利??쒕낯?? 以??섎굹媛 紐낇솗???뚯닔?닿퀬 PF(?섏씡 ?⑺꽣)媛 1 ?꾨옒??
+- success(성공): validation/OOS(검증/표본외) routed total(라우팅 전체)이 둘 다 non-negative(비손실)이고 PF(`profit factor`, 수익 팩터)가 1 이상이다.
+- weak salvage(약한 회수): 한쪽만 양수이거나 손실이 거의 본전이며 trade count(거래 수)가 작다.
+- failure(실패): validation/OOS(검증/표본외) 중 하나가 명확한 손실이고 PF(수익 팩터)가 1 아래다.
 
-?④낵(effect, ?④낵): 媛숈? ?꾧퀎媛?二쇰???臾댄븳 諛섎났?섏? ?딄퀬, ?대뼡 異뺤쓣 蹂댁〈?섍퀬 ?대뼡 異뺤쓣 遺??湲곗뼲(negative memory, 遺??湲곗뼲)?쇰줈 ?④만吏 ?뺥븳??
+효과(effect, 효과): 같은 단서를 무한 반복하지 않고, 어떤 축을 보존하고 어떤 축을 negative memory(부정 기억)로 넘길지 정한다.
 
-## 寃쎄퀎(Boundary, 寃쎄퀎)
+## 경계(Boundary, 경계)
 
-??臾띠쓬? MT5(`MetaTrader 5`, 硫뷀??몃젅?대뜑5) runtime_probe(?고????먯묠)?? alpha quality(?뚰뙆 ?덉쭏), live readiness(?ㅺ굅??以鍮?, operating promotion(?댁쁺 ?밴꺽), runtime authority expansion(?고???沅뚯쐞 ?뺤옣)??二쇱옣?섏? ?딅뒗??
-
+이 묶음은 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)다. alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격), runtime authority expansion(런타임 권위 확장)을 주장하지 않는다.

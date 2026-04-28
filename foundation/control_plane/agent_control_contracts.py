@@ -13,6 +13,7 @@ from foundation.control_plane.ledger import io_path, path_exists
 REQUIRED_AGENT_CONTROL_FILES = (
     "docs/agent_control/codex_operating_format.yaml",
     "docs/agent_control/work_packet.schema.yaml",
+    "docs/agent_control/code_surface_baseline.yaml",
     "docs/agent_control/n_a_reason_registry.yaml",
     "docs/agent_control/claim_vocabulary.yaml",
     "docs/agent_control/kpi_source_authority.yaml",
