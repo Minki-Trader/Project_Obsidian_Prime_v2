@@ -12,7 +12,10 @@ from foundation.control_plane.kpi_contract_audit import KpiContract
 from foundation.control_plane.ledger import io_path, path_exists
 from foundation.control_plane.scope_completion_gate import ScopeCountCheck
 from foundation.control_plane.skill_receipt_lint import SkillReceipt
+from foundation.control_plane.skill_receipt_schema_lint import audit_skill_receipt_schemas, load_receipts
+from foundation.control_plane.state_sync_audit import audit_state_sync
 from foundation.control_plane.work_packet_gate import evaluate_work_packet_closeout
+from foundation.control_plane.work_packet_schema_lint import audit_work_packet_schema_path
 
 
 def _read_json(path: Path) -> Any:
@@ -101,6 +104,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--packet-id", required=True)
     parser.add_argument("--requested-claim", action="append", default=[])
+    parser.add_argument("--work-packet")
+    parser.add_argument("--validate-work-packet-schema", action="store_true")
+    parser.add_argument("--state-sync-audit", action="store_true")
     parser.add_argument(
         "--scope-csv-rows",
         action="append",
@@ -127,6 +133,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--required-skill", action="append", default=[])
     parser.add_argument("--skill-receipt-json")
+    parser.add_argument("--skill-receipt-schema")
     parser.add_argument("--kpi-run-id")
     parser.add_argument("--kpi-stage-id", default="")
     parser.add_argument("--kpi-run-root")
@@ -143,6 +150,24 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     claims = tuple(args.requested_claim or ("completed",))
+    extra_audits = []
+    if args.validate_work_packet_schema:
+        if not args.work_packet:
+            raise ValueError("--validate-work-packet-schema requires --work-packet")
+        extra_audits.append(audit_work_packet_schema_path(Path(args.work_packet)))
+    if args.state_sync_audit:
+        extra_audits.append(audit_state_sync(Path(".")))
+    if args.skill_receipt_schema:
+        if not args.skill_receipt_json:
+            raise ValueError("--skill-receipt-schema requires --skill-receipt-json")
+        extra_audits.append(
+            audit_skill_receipt_schemas(
+                load_receipts(Path(args.skill_receipt_json)),
+                schema_path=Path(args.skill_receipt_schema),
+                root=Path("."),
+                requested_claims=claims,
+            )
+        )
     report = evaluate_work_packet_closeout(
         packet_id=args.packet_id,
         requested_claims=claims,
@@ -150,6 +175,7 @@ def main(argv: list[str] | None = None) -> int:
         required_skills=args.required_skill,
         skill_receipts=_skill_receipts_from_args(args),
         kpi_contracts=_kpi_contract_from_args(args),
+        extra_audits=extra_audits,
     )
     payload = report.to_dict()
     text = json.dumps(payload, ensure_ascii=False, indent=2)

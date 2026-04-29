@@ -1,0 +1,247 @@
+version: work_packet_schema_v2
+packet_id: codex_control_plane_v2_incremental_v1
+created_at_utc: "2026-04-29T00:00:00Z"
+user_request:
+  user_quote: "PLEASE IMPLEMENT THIS PLAN: Codex Operating Control Plane v2 단계형 구현 계획"
+  requested_action: implement_control_plane_v2_incremental
+  requested_count:
+    value: null
+    n_a_reason: not_counted_scope
+  ambiguous_terms:
+    - "단계형 구현"
+    - "자가 실험"
+current_truth:
+  active_stage: "12_model_family_challenge__extratrees_training_effect"
+  current_run: "run03F_et_v11_tier_balance_mt5_v1"
+  source_documents:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+    - stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md
+work_classification:
+  primary_family: policy_skill_governance
+  detected_families:
+    - policy_skill_governance
+    - state_sync
+    - code_edit
+    - code_refactor
+    - artifact_lineage
+  touched_surfaces:
+    - docs_current_truth
+    - policies_and_skills
+    - foundation_code
+    - run_artifacts
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    state_sync_risk: high
+    claim_boundary_risk: high
+    skill_abandonment_risk: high
+    evidence_gap_risk: medium
+    code_surface_risk: high
+    answer_clarity_risk: medium
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+    - work_packet_schema_lint
+    - state_sync_audit
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - code_surface_audit
+    - agent_control_contracts
+    - final_claim_guard
+  required_skills:
+    - obsidian-reentry-read
+    - obsidian-stage-transition
+    - obsidian-code-surface-guard
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-answer-clarity
+  forbidden_claims:
+    - runtime_authority
+    - operating_promotion
+decision_lock:
+  mode: user_explicit_instruction
+  assumptions:
+    file_edit_allowed: true
+    execution_allowed: true
+    ledger_write_allowed: false
+    destructive_change_allowed: false
+    report_only: false
+  questions: []
+  required_user_decisions: []
+preflight:
+  needs_clarification: false
+  selected_option_id: user_explicit_implement_plan
+  selected_option_user_quote: "PLEASE IMPLEMENT THIS PLAN"
+  blocked_until_answer: false
+interpreted_scope:
+  work_families:
+    - policy_skill_governance
+    - state_sync
+    - code_edit
+    - code_refactor
+    - artifact_lineage
+  target_surfaces:
+    - docs_current_truth
+    - policies_and_skills
+    - foundation_code
+    - run_artifacts
+  scope_units:
+    - document
+    - code_module
+    - policy
+    - report
+  execution_layers:
+    - document_edit
+    - code_edit
+    - python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: "PLEASE IMPLEMENT THIS PLAN"
+  evidence_layers:
+    - current_truth_reference
+    - machine_readable_gate_output
+    - unit_test_output
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: true
+  claim_boundary:
+    allowed_claims:
+      - completed
+      - current_truth_synced
+      - contracts_ready
+    forbidden_claims:
+      - runtime_authority
+      - operating_promotion
+  variants_requested:
+    value: null
+    n_a_reason: not_run_or_variant_work
+  verification_layers:
+    - local_unit_tests
+    - state_sync_audit
+    - closeout_gate
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+  - id: AC-001
+    text: "State sync audit detects the pre-existing RUN03E/RUN03F conflict before sync."
+    expected_artifact: docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_before.json
+    verification_method: audit_status_blocked
+    required: true
+  - id: AC-002
+    text: "State documents are synchronized to run03F and state_sync_audit passes."
+    expected_artifact: docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json
+    verification_method: audit_status_pass
+    required: true
+  - id: AC-003
+    text: "Prompt classification, risk vector, decision lock, packet schema, and skill receipt schema tests pass."
+    expected_artifact: unittest_output
+    verification_method: python_unittest
+    required: true
+  - id: AC-004
+    text: "Closeout gate blocks bad packet/receipt cases and passes this packet only after required evidence exists."
+    expected_artifact: docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+    verification_method: closeout_gate_status_pass
+    required: true
+work_plan:
+  phases:
+    - id: intake
+      actions:
+        - read_current_truth
+        - run_state_sync_audit_before
+    - id: implement
+      actions:
+        - add_control_plane_registries
+        - add_classifier_risk_decision_modules
+        - add_state_sync_audit
+        - add_schema_lints
+        - extend_closeout_gate
+    - id: self_test
+      actions:
+        - add_regression_tests
+        - run_unit_tests
+        - run_closeout_gate
+    - id: publish
+      actions:
+        - commit
+        - push
+  expected_outputs:
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_before.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+  stop_conditions:
+    - state_sync_audit_after_blocked
+    - skill_receipt_schema_lint_blocked
+    - work_packet_schema_lint_blocked
+row_grain:
+  reference: docs/agent_control/row_grain_contract.yaml
+kpi_contract:
+  kpi_standard_version: kpi_7layer_v1
+  normalized_record_path: ""
+  source_authority_reference: docs/agent_control/kpi_source_authority.yaml
+  n_a_reason_reference: docs/agent_control/n_a_reason_registry.yaml
+artifact_contract:
+  raw_evidence:
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_before.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json
+  machine_readable:
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_packet.yaml
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_plan.yaml
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+  human_readable: []
+  external_artifacts: []
+evidence_contract:
+  raw_evidence:
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_before.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json
+  machine_readable:
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_packet.yaml
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_plan.yaml
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+  human_readable: []
+skill_routing:
+  skills_considered:
+    - obsidian-reentry-read
+    - obsidian-stage-transition
+    - obsidian-code-surface-guard
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-answer-clarity
+  skills_selected:
+    - obsidian-reentry-read
+    - obsidian-stage-transition
+    - obsidian-code-surface-guard
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-answer-clarity
+  skills_not_used: []
+  required_skill_receipts:
+    - obsidian-reentry-read
+    - obsidian-stage-transition
+    - obsidian-code-surface-guard
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-answer-clarity
+gates:
+  work_packet_schema_lint: pending
+  state_sync_audit: pass
+  skill_receipt_lint: pending
+  skill_receipt_schema_lint: pending
+  kpi_contract_audit: not_applicable
+  artifact_lineage_audit: receipt_backed
+  final_claim_guard: pending
+final_claim_policy:
+  allowed_claims:
+    - completed
+    - current_truth_synced
+    - contracts_ready
+  forbidden_claims:
+    - runtime_authority
+    - operating_promotion
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

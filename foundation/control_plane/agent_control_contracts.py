@@ -18,11 +18,16 @@ REQUIRED_AGENT_CONTROL_FILES = (
     "docs/agent_control/claim_vocabulary.yaml",
     "docs/agent_control/kpi_source_authority.yaml",
     "docs/agent_control/row_grain_contract.yaml",
+    "docs/agent_control/work_family_registry.yaml",
+    "docs/agent_control/surface_registry.yaml",
+    "docs/agent_control/risk_flag_registry.yaml",
+    "docs/agent_control/skill_receipt_schema.yaml",
 )
 
 REQUIRED_TEMPLATE_FILES = (
     "docs/templates/work_packet.template.yaml",
     "docs/templates/run_plan.template.yaml",
+    "docs/templates/work_plan.template.yaml",
     "docs/templates/closeout_report.template.yaml",
     "docs/templates/kpi_record_normalized.template.json",
 )
@@ -38,6 +43,43 @@ EXPECTED_KPI_LAYERS = (
 )
 
 EXPECTED_ROW_GRAIN_KEYS = ("run_id", "variant_id", "split", "tier_scope", "record_view", "route_role")
+EXPECTED_WORK_FAMILIES = (
+    "information_only",
+    "state_sync",
+    "policy_skill_governance",
+    "code_edit",
+    "code_refactor",
+    "experiment_design",
+    "experiment_execution",
+    "runtime_backtest",
+    "kpi_evidence",
+    "artifact_lineage",
+    "cleanup_archive",
+    "publish_handoff",
+)
+EXPECTED_SURFACES = (
+    "docs_current_truth",
+    "policies_and_skills",
+    "foundation_code",
+    "pipelines",
+    "mt5_runtime",
+    "kpi_ledgers",
+    "run_artifacts",
+)
+EXPECTED_RISK_FLAGS = (
+    "scope_ambiguous",
+    "mutation_ambiguous",
+    "state_sync_risk",
+    "claim_boundary_risk",
+    "skill_abandonment_risk",
+    "evidence_gap_risk",
+    "runtime_parity_risk",
+    "kpi_source_risk",
+    "code_surface_risk",
+    "destructive_change_risk",
+    "unattended_autonomy_risk",
+    "answer_clarity_risk",
+)
 
 
 def audit_agent_control_contracts(root: Path | str = Path(".")) -> AuditResult:
@@ -76,6 +118,7 @@ def audit_agent_control_contracts(root: Path | str = Path(".")) -> AuditResult:
     _check_claim_vocabulary(payloads, findings)
     _check_normalized_kpi_template(payloads, findings)
     _check_work_packet_schema(payloads, findings)
+    _check_control_plane_v2_registries(payloads, findings)
 
     status = "blocked" if any(finding.is_blocking for finding in findings) else "pass"
     return AuditResult(
@@ -216,3 +259,58 @@ def _check_work_packet_schema(payloads: Mapping[str, Mapping[str, Any]], finding
                     details={"missing": key},
                 )
             )
+
+
+def _check_control_plane_v2_registries(payloads: Mapping[str, Mapping[str, Any]], findings: list[AuditFinding]) -> None:
+    family_payload = payloads.get("docs/agent_control/work_family_registry.yaml", {})
+    families = family_payload.get("families", {})
+    if not isinstance(families, Mapping):
+        families = {}
+    missing_families = [family for family in EXPECTED_WORK_FAMILIES if family not in families]
+    if missing_families:
+        findings.append(
+            AuditFinding(
+                check_id="work_family_registry::missing_families",
+                message="Work family registry is missing required families.",
+                details={"missing": missing_families},
+            )
+        )
+
+    surface_payload = payloads.get("docs/agent_control/surface_registry.yaml", {})
+    surfaces = surface_payload.get("surfaces", {})
+    if not isinstance(surfaces, Mapping):
+        surfaces = {}
+    missing_surfaces = [surface for surface in EXPECTED_SURFACES if surface not in surfaces]
+    if missing_surfaces:
+        findings.append(
+            AuditFinding(
+                check_id="surface_registry::missing_surfaces",
+                message="Surface registry is missing required surfaces.",
+                details={"missing": missing_surfaces},
+            )
+        )
+
+    risk_payload = payloads.get("docs/agent_control/risk_flag_registry.yaml", {})
+    risks = risk_payload.get("risks", {})
+    if not isinstance(risks, Mapping):
+        risks = {}
+    missing_risks = [risk for risk in EXPECTED_RISK_FLAGS if risk not in risks]
+    if missing_risks:
+        findings.append(
+            AuditFinding(
+                check_id="risk_flag_registry::missing_risks",
+                message="Risk flag registry is missing required risk axes.",
+                details={"missing": missing_risks},
+            )
+        )
+
+    receipt_payload = payloads.get("docs/agent_control/skill_receipt_schema.yaml", {})
+    schemas = receipt_payload.get("schemas", {})
+    if not isinstance(schemas, Mapping) or "default" not in schemas:
+        findings.append(
+            AuditFinding(
+                check_id="skill_receipt_schema::missing_default",
+                message="Skill receipt schema must define a default receipt schema.",
+                details={},
+            )
+        )

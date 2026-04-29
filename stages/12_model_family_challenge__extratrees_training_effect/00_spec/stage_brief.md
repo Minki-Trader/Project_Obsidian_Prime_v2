@@ -23,4 +23,4 @@ Stage 12(12단계)는 Stage 10/11(10/11단계)을 계승하지 않는 standalone
 
 ## 경계(Boundary, 경계)
 
-Python structural scout(파이썬 구조 탐침)만 주장한다. MT5 runtime_probe(MT5 런타임 탐침), alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격)은 주장하지 않는다.
+Python structural scout(파이썬 구조 탐침)와 MT5 runtime_probe(MT5 런타임 탐침) 근거를 함께 기록할 수 있다. 다만 현재 근거는 single split runtime_probe(단일 분할 런타임 탐침)이므로 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격), runtime authority(런타임 권위)는 주장하지 않는다.

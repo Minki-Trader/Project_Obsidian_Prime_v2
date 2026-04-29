@@ -70,7 +70,7 @@ pre_alpha_stage_queue:
     stage12:
       stage_id: "12_model_family_challenge__extratrees_training_effect"
       ownership: "standalone ExtraTrees model-family training effect without Stage 10/11 inheritance"
-      status: "active_standalone_mt5_runtime_probe_open"
+      status: "active_standalone_tier_balance_mt5_supplement_completed"
 stage01_raw_m5_inventory:
   run_id: "20260424_raw_m5_inventory"
   status: "complete"
@@ -992,9 +992,26 @@ agent_control_code_surface:
     - "direct control-plane to stage-pipeline imports(제어면에서 단계 파이프라인 직접 가져오기) are now blocked by code_surface_audit(코드 표면 감사)"
   boundary: "This reduces code-surface drift(코드 표면 드리프트) and records remaining debt(남은 부채); it does not claim full Stage10 pipeline decomposition(10단계 파이프라인 완전 분해)."
 
+agent_control_control_plane_v2:
+  status: "completed"
+  packet_id: "codex_control_plane_v2_incremental_v1"
+  packet_path: "docs/agent_control/packets/codex_control_plane_v2_incremental_v1"
+  work_packet_schema: "work_packet_schema_v2_compatible"
+  state_sync_audit_status: "pass"
+  closeout_gate_status: "pass"
+  completed_forbidden: false
+  new_gate_modules:
+    - "foundation/control_plane/prompt_intake_classifier.py"
+    - "foundation/control_plane/risk_vector_scan.py"
+    - "foundation/control_plane/decision_lock.py"
+    - "foundation/control_plane/state_sync_audit.py"
+    - "foundation/control_plane/work_packet_schema_lint.py"
+    - "foundation/control_plane/skill_receipt_schema_lint.py"
+  boundary: "Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장) and evidence gates(근거 제한문); it does not change trading alpha judgment(거래 알파 판정), runtime authority(런타임 권위), or operating promotion(운영 승격)."
+
 open_items: []
 closed_memory:
-  - "Stage 12 is active_standalone_structural_scout_open with RUN03B ExtraTrees Python structural evidence"
+  - "Stage 12 is active_standalone_tier_balance_mt5_supplement_completed with RUN03F ExtraTrees Tier A/B/routed MT5 tier-balance evidence"
   - "Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison and Stage 11 context surface"
   - "Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run"
   - "Stage 12 RUN03C is a prior standalone(이전 단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행), not the current run(현재 실행)"
@@ -1003,6 +1020,7 @@ closed_memory:
   - "Stage 12 RUN03F completed Tier A/B/routed MT5 tier-balance supplement(Tier A/B/라우팅 MT5 티어 균형 보강) for the v11 ExtraTrees(엑스트라 트리) surface"
   - "Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, trade attribution, and tier-balance completion packets(목록, MT5 기록, MT5 실행, 거래 귀속, 티어 균형 보강 묶음) as cross-stage evidence records(교차 단계 근거 기록)"
   - "Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치), and control-plane direct stage imports(제어면의 단계 직접 가져오기)"
+  - "Control Plane v2(제어면 v2) now routes Codex prompts(코덱스 프롬프트) through work family(작업군), surface(작업 표면), risk vector(위험축), decision lock(결정 고정), work packet schema(작업 묶음 스키마), skill receipt schema(스킬 영수증 스키마), and closeout gate(마감 제한문)"
   - "Stage 11 is reviewed_closed_no_next_stage_opened"
   - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
   - "Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion"

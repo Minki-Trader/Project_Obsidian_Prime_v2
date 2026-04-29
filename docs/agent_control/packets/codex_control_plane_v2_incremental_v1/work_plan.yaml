@@ -1,0 +1,57 @@
+packet_id: codex_control_plane_v2_incremental_v1
+phases:
+  - id: intake
+    actions:
+      - read_current_truth_docs
+      - run_state_sync_audit_before
+      - preserve_blocked_evidence
+  - id: state_sync
+    actions:
+      - sync_selection_status_to_run03F
+      - update_stage12_boundary_for_mt5_runtime_probe_evidence
+      - run_state_sync_audit_after
+  - id: control_plane_v2
+    actions:
+      - add_work_family_surface_risk_registries
+      - add_prompt_classifier
+      - add_risk_vector_scan
+      - add_decision_lock
+      - add_work_packet_schema_lint
+      - add_skill_receipt_schema_lint
+      - extend_closeout_gate
+  - id: self_test
+    actions:
+      - add_unit_tests
+      - run_targeted_tests
+      - run_full_test_suite
+      - run_agent_control_contracts
+      - run_code_surface_audit
+      - run_closeout_gate
+  - id: publish
+    actions:
+      - git_commit
+      - git_push
+no_mutation: false
+expected_outputs:
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_before.json
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+stop_conditions:
+  - state_sync_audit_after_blocked
+  - unit_tests_failed
+  - closeout_gate_blocked
+run_plan:
+  applies: false
+  run_count:
+    value: null
+    n_a_reason: not_run_or_variant_work
+  expected_python_results:
+    value: null
+    n_a_reason: not_experiment_execution
+  expected_mt5_validation_reports:
+    value: null
+    n_a_reason: not_runtime_backtest
+  expected_mt5_oos_reports:
+    value: null
+    n_a_reason: not_runtime_backtest

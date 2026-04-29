@@ -1,0 +1,66 @@
+version: risk_flag_registry_v1
+risks:
+  scope_ambiguous:
+    meaning: "Scope/count/target is ambiguous(범위/수량/대상이 애매함)"
+    safe_default:
+      - report_only_when_user_asked_for_explanation
+  mutation_ambiguous:
+    meaning: "File edit versus report-only is ambiguous(파일 수정인지 보고 전용인지 애매함)"
+    safe_default:
+      - no_file_edit
+  state_sync_risk:
+    meaning: "Current truth documents can disagree(현재 진실 문서끼리 다를 수 있음)"
+    required_gates:
+      - state_sync_audit
+    forbidden_claims_if_missing:
+      - current_truth_synced
+      - stage_transition_completed
+  claim_boundary_risk:
+    meaning: "Completion/verification/promotion wording can overstate evidence(완료/검증/승격 표현이 근거를 과장할 수 있음)"
+    required_gates:
+      - final_claim_guard
+  skill_abandonment_risk:
+    meaning: "Required skill can be skipped without receipt(필수 스킬이 영수증 없이 빠질 수 있음)"
+    required_gates:
+      - skill_receipt_lint
+      - skill_receipt_schema_lint
+  evidence_gap_risk:
+    meaning: "Raw evidence, machine record, or human report can be missing(원본 근거/기계 기록/사람 보고가 빠질 수 있음)"
+    required_gates:
+      - artifact_lineage_audit
+  runtime_parity_risk:
+    meaning: "Python and MT5/runtime meaning can diverge(파이썬과 MT5/런타임 의미가 어긋날 수 있음)"
+    required_skills:
+      - obsidian-runtime-parity
+      - obsidian-backtest-forensics
+    forbidden_claims_if_missing:
+      - runtime_verified
+      - mt5_verification_complete
+      - runtime_authority
+  kpi_source_risk:
+    meaning: "KPI source authority or row grain can drift(KPI 원천 권위나 행 단위가 흔들릴 수 있음)"
+    required_gates:
+      - kpi_contract_audit
+      - row_grain_audit
+      - source_authority_audit
+  code_surface_risk:
+    meaning: "Code can land in the wrong owner module(코드가 잘못된 소유 모듈에 들어갈 수 있음)"
+    required_gates:
+      - code_surface_audit
+      - semantic_code_surface_audit
+  destructive_change_risk:
+    meaning: "Delete/overwrite/archive/reset can lose evidence(삭제/덮어쓰기/보관/초기화가 근거를 잃게 할 수 있음)"
+    required_user_quote: true
+    required_gates:
+      - destructive_change_guard
+  unattended_autonomy_risk:
+    meaning: "Unattended work can silently reduce scope(무인 작업이 몰래 범위를 줄일 수 있음)"
+    required:
+      - explicit_completion_conditions
+      - explicit_blocked_conditions
+      - scope_completion_gate
+  answer_clarity_risk:
+    meaning: "Technical wording can hide the plain meaning(전문 용어가 쉬운 의미를 숨길 수 있음)"
+    required_skills:
+      - obsidian-answer-clarity
+      - obsidian-claim-discipline

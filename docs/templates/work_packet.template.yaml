@@ -11,12 +11,43 @@ current_truth:
   active_stage: ""
   current_run: ""
   source_documents: []
+work_classification:
+  primary_family: ""
+  detected_families: []
+  touched_surfaces: []
+  mutation_intent: false
+  execution_intent: false
+risk_vector_scan:
+  risks: {}
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates: []
+  forbidden_claims: []
+decision_lock:
+  mode: assume_safe_default
+  assumptions: {}
+  questions: []
+  required_user_decisions: []
 preflight:
   needs_clarification: false
   selected_option_id: ""
   selected_option_user_quote: ""
   blocked_until_answer: false
 interpreted_scope:
+  work_families: []
+  target_surfaces: []
+  scope_units: []
+  execution_layers: []
+  mutation_policy:
+    allowed: false
+    user_quote: ""
+  evidence_layers: []
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: true
+  claim_boundary:
+    allowed_claims: []
+    forbidden_claims: []
   variants_requested:
     value: null
     n_a_reason: ""
@@ -30,6 +61,10 @@ acceptance_criteria:
     expected_artifact: ""
     verification_method: ""
     required: true
+work_plan:
+  phases: []
+  expected_outputs: []
+  stop_conditions: []
 row_grain:
   reference: docs/agent_control/row_grain_contract.yaml
   normalized_row_key:
@@ -49,6 +84,10 @@ artifact_contract:
   machine_readable: []
   human_readable: []
   external_artifacts: []
+evidence_contract:
+  raw_evidence: []
+  machine_readable: []
+  human_readable: []
 skill_routing:
   skills_considered: []
   skills_selected: []

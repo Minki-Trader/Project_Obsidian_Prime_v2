@@ -141,6 +141,14 @@ def analyze_prompt_for_clarification(
     )
 
 
+def analyze_experiment_runtime_clarification(
+    prompt: str,
+    *,
+    context: Mapping[str, Any] | None = None,
+) -> PreflightClarificationResult:
+    return analyze_prompt_for_clarification(prompt, context=context)
+
+
 def format_clarification_for_user(result: PreflightClarificationResult) -> str:
     if not result.needs_clarification:
         return (

@@ -1,0 +1,144 @@
+version: work_family_registry_v1
+families:
+  information_only:
+    description: "Read/explain only(읽기/설명 전용 작업)"
+    mutation_default: false
+    execution_default: false
+    required_skills:
+      - obsidian-answer-clarity
+      - obsidian-claim-discipline
+    required_gates:
+      - final_claim_guard
+  state_sync:
+    description: "Current truth/state document sync(현재 진실/상태 문서 동기화)"
+    mutation_default: requires_decision_lock
+    execution_default: false
+    required_skills:
+      - obsidian-reentry-read
+      - obsidian-stage-transition
+      - obsidian-artifact-lineage
+      - obsidian-claim-discipline
+    required_gates:
+      - state_sync_audit
+      - final_claim_guard
+  policy_skill_governance:
+    description: "AGENTS/policy/skill/control contract governance(에이전트/정책/스킬/제어 계약 관리)"
+    mutation_default: requires_decision_lock
+    execution_default: false
+    required_skills:
+      - obsidian-architecture-guard
+      - obsidian-work-packet-router
+      - obsidian-claim-discipline
+    required_gates:
+      - agent_control_contracts
+      - work_packet_schema_lint
+      - skill_receipt_schema_lint
+  code_edit:
+    description: "Code edit(코드 수정)"
+    mutation_default: true
+    execution_default: false
+    required_skills:
+      - obsidian-code-surface-guard
+      - obsidian-reference-scout
+      - obsidian-code-quality
+    required_gates:
+      - code_surface_audit
+      - test_gate
+  code_refactor:
+    description: "Code refactor/module split(코드 리팩터/모듈 분리)"
+    mutation_default: requires_decision_lock
+    execution_default: false
+    required_skills:
+      - obsidian-code-surface-guard
+      - obsidian-code-quality
+      - obsidian-architecture-guard
+      - obsidian-reference-scout
+    required_gates:
+      - code_surface_audit
+      - semantic_code_surface_audit
+      - regression_test_gate
+  experiment_design:
+    description: "Experiment design(실험 설계)"
+    mutation_default: maybe
+    execution_default: false
+    required_skills:
+      - obsidian-experiment-design
+      - obsidian-data-integrity
+      - obsidian-model-validation
+    required_gates:
+      - work_packet_schema_lint
+  experiment_execution:
+    description: "Python/model/variant experiment execution(파이썬/모델/변형 실험 실행)"
+    mutation_default: true
+    execution_default: true
+    required_skills:
+      - obsidian-experiment-design
+      - obsidian-data-integrity
+      - obsidian-model-validation
+      - obsidian-run-evidence-system
+      - obsidian-artifact-lineage
+    required_gates:
+      - scope_completion_gate
+      - kpi_contract_audit
+      - skill_receipt_lint
+  runtime_backtest:
+    description: "MT5/runtime/backtest execution(MT5/런타임/백테스트 실행)"
+    mutation_default: true
+    execution_default: true
+    required_skills:
+      - obsidian-runtime-parity
+      - obsidian-backtest-forensics
+      - obsidian-reference-scout
+      - obsidian-run-evidence-system
+      - obsidian-artifact-lineage
+    required_gates:
+      - runtime_evidence_gate
+      - scope_completion_gate
+      - kpi_contract_audit
+      - final_claim_guard
+  kpi_evidence:
+    description: "KPI/ledger/source authority evidence(KPI/장부/원천 권위 근거)"
+    mutation_default: requires_decision_lock
+    execution_default: false
+    required_skills:
+      - obsidian-run-evidence-system
+      - obsidian-artifact-lineage
+      - obsidian-result-judgment
+      - obsidian-performance-attribution
+    required_gates:
+      - kpi_contract_audit
+      - row_grain_audit
+      - source_authority_audit
+  artifact_lineage:
+    description: "Artifact lineage/hash/report linking(산출물 계보/해시/보고 연결)"
+    mutation_default: maybe
+    execution_default: false
+    required_skills:
+      - obsidian-artifact-lineage
+      - obsidian-environment-reproducibility
+    required_gates:
+      - artifact_lineage_audit
+  cleanup_archive:
+    description: "Cleanup/archive/delete/move work(정리/보관/삭제/이동 작업)"
+    mutation_default: requires_decision_lock
+    execution_default: false
+    required_skills:
+      - obsidian-artifact-lineage
+      - obsidian-environment-reproducibility
+      - obsidian-claim-discipline
+    required_gates:
+      - destructive_change_guard
+      - archive_manifest_gate
+  publish_handoff:
+    description: "Publish/handoff/git sync work(게시/인계/깃 동기화 작업)"
+    mutation_default: requires_decision_lock
+    execution_default: true
+    required_skills:
+      - obsidian-stage-transition
+      - obsidian-artifact-lineage
+      - obsidian-claim-discipline
+      - obsidian-answer-clarity
+    required_gates:
+      - state_sync_audit
+      - closeout_gate
+      - final_claim_guard

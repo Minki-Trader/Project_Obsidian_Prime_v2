@@ -1,0 +1,116 @@
+version: skill_receipt_schema_v1
+description: "Required content for skill receipts before completed/reviewed/verified claims are allowed."
+schemas:
+  default:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+  obsidian-reentry-read:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - source_current_truth_docs
+      - active_stage
+      - current_run
+      - detected_conflicts
+      - allowed_claims
+      - forbidden_claims
+  obsidian-stage-transition:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - source_current_truth_docs
+      - changed_or_checked_docs
+      - detected_conflicts
+      - canonical_state_after
+      - allowed_claims
+      - forbidden_claims
+  obsidian-code-surface-guard:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - owner_module
+      - caller
+      - input_contract
+      - output_contract
+      - artifact_or_report_effect
+      - monolith_risk
+      - placement_decision
+  obsidian-runtime-parity:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - python_artifact
+      - runtime_artifact
+      - compared_surface
+      - parity_level
+      - tester_identity
+      - missing_evidence
+      - allowed_claims
+      - forbidden_claims
+  obsidian-run-evidence-system:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - source_inputs
+      - produced_artifacts
+      - ledger_rows
+      - missing_evidence
+      - allowed_claims
+      - forbidden_claims
+  obsidian-artifact-lineage:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - source_inputs
+      - produced_artifacts
+      - raw_evidence
+      - machine_readable
+      - human_readable
+      - hashes_or_missing_reasons
+      - lineage_boundary
+  obsidian-result-judgment:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - judgment_boundary
+      - allowed_claims
+      - forbidden_claims
+      - evidence_used
+  obsidian-performance-attribution:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - attribution_layers_checked
+      - missing_layers
+      - allowed_claims
+      - forbidden_claims
+  obsidian-claim-discipline:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - requested_claims
+      - allowed_claims
+      - forbidden_claims
+      - final_status
+  obsidian-answer-clarity:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - plain_conclusion
+      - confirmed
+      - not_yet_confirmed
+      - why_it_matters
+      - next_action
+      - forbidden_claims_avoided

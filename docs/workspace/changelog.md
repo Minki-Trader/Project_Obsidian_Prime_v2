@@ -2,6 +2,10 @@
 
 ## 2026-04-29
 
+- `codex_control_plane_v2_incremental_v1(코덱스 제어면 v2 단계형 묶음)`을 구현했다. 효과(effect, 효과)는 Codex prompt(프롬프트)를 work family(작업군), surface(작업 표면), risk vector(위험축), decision lock(결정 고정), evidence gate(근거 제한문), final claim(최종 주장)으로 나눠 처리하게 하는 것이다.
+- `state_sync_audit(상태 동기화 감사)`를 추가했고, 실제 RUN03E/RUN03F 충돌을 먼저 `blocked(차단)`로 잡은 뒤 RUN03F 기준으로 동기화해 `pass(통과)`를 확인했다. 효과(effect, 효과)는 current_truth_synced(현재 진실 동기화됨) 같은 주장을 문서 불일치 상태에서 못 하게 하는 것이다.
+- `work_family_registry(작업군 등록부)`, `surface_registry(작업 표면 등록부)`, `risk_flag_registry(위험축 등록부)`, `prompt_intake_classifier(프롬프트 분류기)`, `risk_vector_scan(위험축 스캔)`, `decision_lock(결정 고정)`을 추가했다. 효과(effect, 효과)는 20개/MT5 같은 키워드 추가 방식이 아니라 모든 작업을 공통 운영 구조로 분해하는 것이다.
+- `work_packet_schema_lint(작업 묶음 스키마 검사)`와 `skill_receipt_schema_lint(스킬 영수증 내용 검사)`를 추가하고 `closeout_gate(마감 제한문)`에 연결했다. 효과(effect, 효과)는 스킬 이름만 적거나 v1 run-only(기존 실행 전용) packet(묶음)으로 non-run work(비실행 작업)를 완료 처리하는 것을 차단하는 것이다.
 - `kpi_tier_balance_completion_v1(티어 균형 보강 묶음)`을 실행했다. 효과(effect, 효과)는 `RUN02AL~RUN02AP(실행 02AL~02AP)`와 `RUN03F(실행 03F)`에서 빠진 Tier A only/Tier B only/A+B routed(Tier A 단독/Tier B 단독/A+B 라우팅) MT5(`MetaTrader 5`, 메타트레이더5) KPI(핵심 성과 지표)를 validation/OOS(검증/표본외)까지 채우는 것이다.
 - MT5 Strategy Tester(전략 테스터) 시도 `36 / 36`개가 완료됐고, normalized KPI rows(정규화 KPI 행) `60`, trade attribution rows(거래 귀속 행) `35`, trade-level rows(거래 단위 행) `1,837`, parser errors(파서 오류) `0`을 기록했다. 효과(effect, 효과)는 run02/run03(실행 02/03)의 티어 불균형을 빈칸이 아니라 실제 MT5 근거로 보강한 것이다.
 - Stage 12(12단계) 현재 실행(current run, 현재 실행)을 `RUN03F(실행 03F)` tier-balance supplement(티어 균형 보강)로 갱신했다. 효과(effect, 효과)는 `RUN03E(실행 03E)` Tier A 단독 결과를 최신 전체 판독처럼 오해하지 않고, Tier A/B/routed(Tier A/B/라우팅) 비교를 함께 보게 하는 것이다.

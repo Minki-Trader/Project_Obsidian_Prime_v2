@@ -1,0 +1,71 @@
+version: surface_registry_v1
+surfaces:
+  docs_current_truth:
+    paths:
+      - docs/workspace/workspace_state.yaml
+      - docs/context/current_working_state.md
+      - stages/*/04_selected/selection_status.md
+      - stages/*/00_spec/stage_brief.md
+    risks:
+      - state_sync_risk
+      - claim_boundary_risk
+    gates:
+      - state_sync_audit
+  policies_and_skills:
+    paths:
+      - AGENTS.md
+      - docs/policies/**
+      - .agents/skills/**
+      - docs/agent_control/**
+    risks:
+      - policy_drift_risk
+      - skill_abandonment_risk
+      - encoding_risk
+    gates:
+      - agent_control_contracts
+      - architecture_guard
+  foundation_code:
+    paths:
+      - foundation/**
+    risks:
+      - code_surface_risk
+      - regression_risk
+    gates:
+      - code_surface_audit
+      - test_gate
+  pipelines:
+    paths:
+      - foundation/pipelines/**
+    risks:
+      - orchestration_owner_leak_risk
+      - monolith_growth_risk
+    gates:
+      - semantic_code_surface_audit
+  mt5_runtime:
+    paths:
+      - foundation/mt5/**
+      - stages/*/02_runs/*/mt5/**
+    risks:
+      - runtime_parity_risk
+      - backtest_forensics_risk
+    gates:
+      - runtime_evidence_gate
+  kpi_ledgers:
+    paths:
+      - docs/registers/alpha_run_ledger.csv
+      - docs/registers/run_registry.csv
+      - stages/*/03_reviews/stage_run_ledger.csv
+    risks:
+      - kpi_row_grain_risk
+      - source_authority_risk
+    gates:
+      - kpi_contract_audit
+      - row_grain_audit
+  run_artifacts:
+    paths:
+      - stages/*/02_runs/**
+    risks:
+      - artifact_lineage_risk
+      - ignored_artifact_risk
+    gates:
+      - artifact_lineage_audit

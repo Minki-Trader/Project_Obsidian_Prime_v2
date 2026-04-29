@@ -1,4 +1,7 @@
-version: work_packet_schema_v1
+version: work_packet_schema_v2_compatible
+compatibility:
+  accepts_v1_packets: true
+  accepts_v2_packets: true
 required_top_level:
   - packet_id
   - created_at_utc
@@ -13,6 +16,53 @@ required_top_level:
   - skill_routing
   - gates
   - final_claim_policy
+v2_required_top_level:
+  - packet_id
+  - created_at_utc
+  - user_request
+  - current_truth
+  - work_classification
+  - risk_vector_scan
+  - decision_lock
+  - interpreted_scope
+  - acceptance_criteria
+  - work_plan
+  - skill_routing
+  - evidence_contract
+  - gates
+  - final_claim_policy
+v2_interpreted_scope_required_fields:
+  - work_families
+  - target_surfaces
+  - scope_units
+  - execution_layers
+  - mutation_policy
+  - evidence_layers
+  - reduction_policy
+  - claim_boundary
+scope_units_allowed:
+  - file
+  - document
+  - stage
+  - run
+  - variant
+  - code_module
+  - kpi_row
+  - ledger
+  - artifact
+  - report
+  - policy
+  - skill
+execution_layers_allowed:
+  - read_only
+  - document_edit
+  - code_edit
+  - python_execution
+  - mt5_execution
+  - kpi_recording
+  - ledger_update
+  - archive
+  - publish
 fields:
   packet_id:
     required: true
@@ -37,6 +87,45 @@ fields:
       - mt5_required
       - top_k_reduction_allowed
       - scope_reduction_requires_user_quote
+    v2_required_fields:
+      - work_families
+      - target_surfaces
+      - scope_units
+      - execution_layers
+      - mutation_policy
+      - evidence_layers
+      - reduction_policy
+      - claim_boundary
+  work_classification:
+    required_fields:
+      - primary_family
+      - detected_families
+      - touched_surfaces
+      - mutation_intent
+      - execution_intent
+  risk_vector_scan:
+    required_fields:
+      - risks
+      - hard_stop_risks
+      - required_decision_locks
+      - required_gates
+      - forbidden_claims
+  decision_lock:
+    required_fields:
+      - mode
+      - assumptions
+      - questions
+      - required_user_decisions
+  work_plan:
+    required_fields:
+      - phases
+      - expected_outputs
+      - stop_conditions
+  evidence_contract:
+    required_fields:
+      - raw_evidence
+      - machine_readable
+      - human_readable
   acceptance_criteria:
     item_required_fields:
       - id

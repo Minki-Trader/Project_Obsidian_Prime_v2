@@ -39,6 +39,7 @@ def evaluate_work_packet_closeout(
     required_skills: Iterable[str] = (),
     skill_receipts: Iterable[SkillReceipt | Mapping[str, object]] = (),
     kpi_contracts: Iterable[KpiContract] = (),
+    extra_audits: Iterable[AuditResult] = (),
 ) -> WorkPacketGateReport:
     audits: list[AuditResult] = []
 
@@ -52,6 +53,8 @@ def evaluate_work_packet_closeout(
 
     for contract in kpi_contracts:
         audits.append(audit_kpi_contract(contract))
+
+    audits.extend(extra_audits)
 
     final_guard = guard_final_claims(requested_claims=requested_claims, audit_results=audits)
     if final_guard.status == "blocked":

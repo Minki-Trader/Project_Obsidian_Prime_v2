@@ -1,0 +1,150 @@
+{
+  "receipts": [
+    {
+      "packet_id": "codex_control_plane_v2_incremental_v1",
+      "skill": "obsidian-reentry-read",
+      "triggered": true,
+      "status": "executed",
+      "blocking": false,
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md"
+      ],
+      "active_stage": "12_model_family_challenge__extratrees_training_effect",
+      "current_run": "run03F_et_v11_tier_balance_mt5_v1",
+      "detected_conflicts": [
+        "pre_sync_selection_status_used_run03E_while_workspace_state_used_run03F"
+      ],
+      "allowed_claims": [
+        "current_truth_synced"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "codex_control_plane_v2_incremental_v1",
+      "skill": "obsidian-stage-transition",
+      "triggered": true,
+      "status": "executed",
+      "blocking": false,
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md"
+      ],
+      "changed_or_checked_docs": [
+        "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md"
+      ],
+      "detected_conflicts": [
+        "RUN03E_selection_status_stale_before_sync"
+      ],
+      "canonical_state_after": {
+        "active_stage": "12_model_family_challenge__extratrees_training_effect",
+        "current_run": "run03F_et_v11_tier_balance_mt5_v1"
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "codex_control_plane_v2_incremental_v1",
+      "skill": "obsidian-code-surface-guard",
+      "triggered": true,
+      "status": "executed",
+      "blocking": false,
+      "owner_module": "foundation/control_plane",
+      "caller": "foundation/control_plane/closeout_gate.py and tests",
+      "input_contract": "prompt classification, risk scan, packet/receipt schema, current truth docs",
+      "output_contract": "AuditResult objects passed to final_claim_guard",
+      "artifact_or_report_effect": "Adds gate evidence without moving model or MT5 runtime logic into pipelines",
+      "monolith_risk": "low",
+      "placement_decision": "New reusable control-plane checks live under foundation/control_plane"
+    },
+    {
+      "packet_id": "codex_control_plane_v2_incremental_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "blocking": false,
+      "source_inputs": [
+        "user plan",
+        "state_sync_audit_before.json",
+        "state_sync_audit_after.json"
+      ],
+      "produced_artifacts": [
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_packet.yaml",
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_plan.yaml",
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json"
+      ],
+      "raw_evidence": [
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_before.json",
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_packet.yaml",
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_plan.yaml",
+        "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json"
+      ],
+      "human_readable": [
+        "final user report"
+      ],
+      "hashes_or_missing_reasons": [
+        "hashes not required for control-plane source patch closeout"
+      ],
+      "lineage_boundary": "This packet governs Codex operation controls, not trading promotion or runtime authority."
+    },
+    {
+      "packet_id": "codex_control_plane_v2_incremental_v1",
+      "skill": "obsidian-claim-discipline",
+      "triggered": true,
+      "status": "executed",
+      "blocking": false,
+      "requested_claims": [
+        "completed"
+      ],
+      "allowed_claims": [
+        "completed",
+        "current_truth_synced",
+        "contracts_ready"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion"
+      ],
+      "final_status": "completed_after_closeout_gate_pass"
+    },
+    {
+      "packet_id": "codex_control_plane_v2_incremental_v1",
+      "skill": "obsidian-answer-clarity",
+      "triggered": true,
+      "status": "executed",
+      "blocking": false,
+      "plain_conclusion": "Control Plane v2 adds machine checks so Codex cannot claim completion when required evidence is missing.",
+      "confirmed": [
+        "state sync audit catches and clears RUN03F conflict",
+        "packet schema lint and skill receipt schema lint exist",
+        "closeout gate accepts extra audits"
+      ],
+      "not_yet_confirmed": [
+        "none"
+      ],
+      "why_it_matters": "This turns operating rules into executable gates rather than advice.",
+      "next_action": "commit and push after full verification",
+      "forbidden_claims_avoided": [
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    }
+  ]
+}
