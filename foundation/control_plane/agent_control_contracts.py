@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -29,6 +31,7 @@ REQUIRED_TEMPLATE_FILES = (
     "docs/templates/run_plan.template.yaml",
     "docs/templates/work_plan.template.yaml",
     "docs/templates/closeout_report.template.yaml",
+    "docs/templates/closeout_report.template.md",
     "docs/templates/kpi_record_normalized.template.json",
 )
 
@@ -133,6 +136,8 @@ def audit_agent_control_contracts(root: Path | str = Path(".")) -> AuditResult:
 
 def _load_structured(path: Path) -> Mapping[str, Any]:
     text = io_path(path).read_text(encoding="utf-8-sig")
+    if path.suffix == ".md":
+        return {"text": text}
     if path.suffix == ".json":
         payload = json.loads(text)
     else:
@@ -275,6 +280,31 @@ def _check_control_plane_v2_registries(payloads: Mapping[str, Mapping[str, Any]]
                 details={"missing": missing_families},
             )
         )
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Audit Project Obsidian agent-control contracts and templates.")
+    parser.add_argument("--root", default=".")
+    parser.add_argument("--output-json")
+    parser.add_argument("--allow-blocked-exit-zero", action="store_true")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    result = audit_agent_control_contracts(Path(args.root))
+    payload = result.to_dict()
+    text = json.dumps(payload, ensure_ascii=False, indent=2)
+    if args.output_json:
+        output = Path(args.output_json)
+        io_path(output.parent).mkdir(parents=True, exist_ok=True)
+        io_path(output).write_text(text + "\n", encoding="utf-8")
+    print(text)
+    return 0 if args.allow_blocked_exit_zero or result.status == "pass" else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))
 
     surface_payload = payloads.get("docs/agent_control/surface_registry.yaml", {})
     surfaces = surface_payload.get("surfaces", {})

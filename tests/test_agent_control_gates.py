@@ -301,6 +301,74 @@ class AgentControlGateTests(unittest.TestCase):
             self.assertIn("work_packet_schema::v2::missing_top_level::decision_lock", payload)
             self.assertIn("skill_receipt_schema::obsidian-answer-clarity::missing_fields", payload)
 
+    def test_closeout_gate_includes_required_gate_coverage(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            work_packet = root / "work_packet.yaml"
+            output_path = root / "gate.json"
+            work_packet.write_text(
+                "\n".join(
+                    [
+                        "version: work_packet_schema_v2",
+                        "packet_id: unit_packet",
+                        "created_at_utc: '2026-04-29T00:00:00Z'",
+                        "user_request: {requested_action: state_sync}",
+                        "current_truth: {}",
+                        "work_classification: {primary_family: state_sync}",
+                        "risk_vector_scan:",
+                        "  risks: {state_sync_risk: low}",
+                        "  required_gates: [work_packet_schema_lint, required_gate_coverage_audit, final_claim_guard]",
+                        "decision_lock: {mode: assume_safe_default, assumptions: {report_only: true}}",
+                        "interpreted_scope:",
+                        "  work_families: [state_sync]",
+                        "  target_surfaces: [docs_current_truth]",
+                        "  scope_units: [document]",
+                        "  execution_layers: [read_only]",
+                        "  mutation_policy: {allowed: false}",
+                        "  evidence_layers: [current_truth_reference]",
+                        "  reduction_policy: {reduction_allowed: false}",
+                        "  claim_boundary: {allowed_claims: [state_sync_findings_reported]}",
+                        "acceptance_criteria: []",
+                        "work_plan: {phases: []}",
+                        "skill_routing: {}",
+                        "evidence_contract: {raw_evidence: [], machine_readable: [], human_readable: []}",
+                        "gates:",
+                        "  required: [work_packet_schema_lint, required_gate_coverage_audit, final_claim_guard]",
+                        "  actual_status_source: gate.json",
+                        "final_claim_policy: {}",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "foundation.control_plane.closeout_gate",
+                    "--packet-id",
+                    "unit_packet",
+                    "--requested-claim",
+                    "completed",
+                    "--work-packet",
+                    str(work_packet),
+                    "--validate-work-packet-schema",
+                    "--required-gate-coverage",
+                    "--output-json",
+                    str(output_path),
+                ],
+                cwd=Path(__file__).resolve().parents[1],
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+
+            self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+            payload = output_path.read_text(encoding="utf-8")
+            self.assertIn('"audit_name": "required_gate_coverage_audit"', payload)
+            self.assertIn('"status": "pass"', payload)
+
     def test_preflight_clarifier_blocks_ambiguous_batch_verification_prompt(self) -> None:
         result = analyze_prompt_for_clarification("20개 정도 가설 세워서 검증까지 돌려봐")
 

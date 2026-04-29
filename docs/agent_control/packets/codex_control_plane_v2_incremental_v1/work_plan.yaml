@@ -36,11 +36,16 @@ expected_outputs:
   - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_before.json
   - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json
   - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/agent_control_contracts.json
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/code_surface_audit.json
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/required_gate_coverage.json
   - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+  - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_report.md
 stop_conditions:
   - state_sync_audit_after_blocked
   - unit_tests_failed
   - closeout_gate_blocked
+  - required_gate_coverage_blocked
 run_plan:
   applies: false
   run_count:

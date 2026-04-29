@@ -8,8 +8,10 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from foundation.control_plane.audit_result import AuditFinding, AuditResult
 from foundation.control_plane.kpi_contract_audit import KpiContract
 from foundation.control_plane.ledger import io_path, path_exists
+from foundation.control_plane.required_gate_coverage_audit import audit_required_gate_coverage
 from foundation.control_plane.scope_completion_gate import ScopeCountCheck
 from foundation.control_plane.skill_receipt_lint import SkillReceipt
 from foundation.control_plane.skill_receipt_schema_lint import audit_skill_receipt_schemas, load_receipts
@@ -36,6 +38,82 @@ def _csv_row_count(path: Path) -> int:
 
 def _glob_count(pattern: str) -> int:
     return len([path for path in glob.glob(pattern, recursive=True) if path_exists(Path(path))])
+
+
+def _audit_result_from_json(path: Path) -> AuditResult:
+    payload = _read_json(path)
+    if not isinstance(payload, dict):
+        raise ValueError(f"{path} must contain an audit result object")
+    findings = tuple(
+        AuditFinding(
+            check_id=str(finding.get("check_id", "")),
+            message=str(finding.get("message", "")),
+            severity=str(finding.get("severity", "blocking")),
+            details=finding.get("details", {}) if isinstance(finding.get("details", {}), dict) else {},
+        )
+        for finding in payload.get("findings", ())
+        if isinstance(finding, dict)
+    )
+    return AuditResult(
+        audit_name=str(payload.get("audit_name", path.stem)),
+        status=str(payload.get("status", "blocked")),
+        findings=findings,
+        counts=payload.get("counts", {}) if isinstance(payload.get("counts", {}), dict) else {},
+        allowed_claims=tuple(str(claim) for claim in payload.get("allowed_claims", ()) if claim),
+        forbidden_claims=tuple(str(claim) for claim in payload.get("forbidden_claims", ()) if claim),
+    )
+
+
+def _audit_closeout_report(path: Path) -> AuditResult:
+    findings: list[AuditFinding] = []
+    required_headings = (
+        "Conclusion",
+        "What changed",
+        "What gates passed",
+        "What gates were not applicable",
+        "What is still not enforced",
+        "Allowed claims",
+        "Forbidden claims",
+        "Next hardening step",
+    )
+    if not path_exists(path):
+        findings.append(
+            AuditFinding(
+                check_id="closeout_report::missing",
+                message="Closeout report file is missing.",
+                details={"path": path.as_posix()},
+            )
+        )
+        text = ""
+    else:
+        text = io_path(path).read_text(encoding="utf-8-sig")
+        if not text.strip():
+            findings.append(
+                AuditFinding(
+                    check_id="closeout_report::empty",
+                    message="Closeout report file is empty.",
+                    details={"path": path.as_posix()},
+                )
+            )
+    text_lower = text.lower()
+    missing = [heading for heading in required_headings if heading.lower() not in text_lower]
+    if missing:
+        findings.append(
+            AuditFinding(
+                check_id="closeout_report::missing_sections",
+                message="Closeout report is missing required human-readable sections.",
+                details={"missing": missing, "path": path.as_posix()},
+            )
+        )
+    status = "blocked" if any(finding.is_blocking for finding in findings) else "pass"
+    return AuditResult(
+        audit_name="closeout_report_check",
+        status=status,
+        findings=tuple(findings),
+        counts={"path": path.as_posix(), "required_headings": required_headings},
+        allowed_claims=("human_closeout_available",) if status == "pass" else ("blocked",),
+        forbidden_claims=() if status == "pass" else ("completed", "reviewed", "verified"),
+    )
 
 
 def _scope_checks_from_args(args: argparse.Namespace) -> list[ScopeCountCheck]:
@@ -134,6 +212,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--required-skill", action="append", default=[])
     parser.add_argument("--skill-receipt-json")
     parser.add_argument("--skill-receipt-schema")
+    parser.add_argument("--code-surface-audit-json")
+    parser.add_argument("--agent-control-contracts-json")
+    parser.add_argument("--required-gate-coverage", action="store_true")
+    parser.add_argument("--closeout-report")
     parser.add_argument("--kpi-run-id")
     parser.add_argument("--kpi-stage-id", default="")
     parser.add_argument("--kpi-run-root")
@@ -145,6 +227,18 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--output-json")
     parser.add_argument("--allow-blocked-exit-zero", action="store_true")
     return parser.parse_args(argv)
+
+
+def _evaluate_report(args: argparse.Namespace, claims: tuple[str, ...], extra_audits: list[AuditResult]):
+    return evaluate_work_packet_closeout(
+        packet_id=args.packet_id,
+        requested_claims=claims,
+        scope_checks=_scope_checks_from_args(args),
+        required_skills=args.required_skill,
+        skill_receipts=_skill_receipts_from_args(args),
+        kpi_contracts=_kpi_contract_from_args(args),
+        extra_audits=extra_audits,
+    )
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -168,15 +262,23 @@ def main(argv: list[str] | None = None) -> int:
                 requested_claims=claims,
             )
         )
-    report = evaluate_work_packet_closeout(
-        packet_id=args.packet_id,
-        requested_claims=claims,
-        scope_checks=_scope_checks_from_args(args),
-        required_skills=args.required_skill,
-        skill_receipts=_skill_receipts_from_args(args),
-        kpi_contracts=_kpi_contract_from_args(args),
-        extra_audits=extra_audits,
-    )
+    if args.code_surface_audit_json:
+        extra_audits.append(_audit_result_from_json(Path(args.code_surface_audit_json)))
+    if args.agent_control_contracts_json:
+        extra_audits.append(_audit_result_from_json(Path(args.agent_control_contracts_json)))
+    if args.closeout_report:
+        extra_audits.append(_audit_closeout_report(Path(args.closeout_report)))
+
+    report = _evaluate_report(args, claims, extra_audits)
+    if args.required_gate_coverage:
+        if not args.work_packet:
+            raise ValueError("--required-gate-coverage requires --work-packet")
+        coverage = audit_required_gate_coverage(
+            yaml_or_json_work_packet(Path(args.work_packet)),
+            report.to_dict(),
+            extra_executed_audits=("required_gate_coverage_audit",),
+        )
+        report = _evaluate_report(args, claims, [*extra_audits, coverage])
     payload = report.to_dict()
     text = json.dumps(payload, ensure_ascii=False, indent=2)
     if args.output_json:
@@ -185,6 +287,16 @@ def main(argv: list[str] | None = None) -> int:
     if args.allow_blocked_exit_zero:
         return 0
     return 2 if report.completed_forbidden else 0
+
+
+def yaml_or_json_work_packet(path: Path) -> dict[str, Any]:
+    import yaml
+
+    text = io_path(path).read_text(encoding="utf-8-sig")
+    payload = json.loads(text) if path.suffix.lower() == ".json" else yaml.safe_load(text)
+    if not isinstance(payload, dict):
+        raise ValueError("--work-packet must point to a mapping file")
+    return payload
 
 
 if __name__ == "__main__":

@@ -50,6 +50,8 @@ risk_vector_scan:
     - skill_receipt_schema_lint
     - code_surface_audit
     - agent_control_contracts
+    - closeout_report_check
+    - required_gate_coverage_audit
     - final_claim_guard
   required_skills:
     - obsidian-reentry-read
@@ -146,6 +148,11 @@ acceptance_criteria:
     expected_artifact: docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
     verification_method: closeout_gate_status_pass
     required: true
+  - id: AC-005
+    text: "Required gates declared in the work packet are covered by executed closeout audits."
+    expected_artifact: docs/agent_control/packets/codex_control_plane_v2_incremental_v1/required_gate_coverage.json
+    verification_method: required_gate_coverage_status_pass
+    required: true
 work_plan:
   phases:
     - id: intake
@@ -173,6 +180,8 @@ work_plan:
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/state_sync_audit_after.json
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/required_gate_coverage.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_report.md
   stop_conditions:
     - state_sync_audit_after_blocked
     - skill_receipt_schema_lint_blocked
@@ -192,8 +201,12 @@ artifact_contract:
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_packet.yaml
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_plan.yaml
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/agent_control_contracts.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/code_surface_audit.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/required_gate_coverage.json
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
-  human_readable: []
+  human_readable:
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_report.md
   external_artifacts: []
 evidence_contract:
   raw_evidence:
@@ -203,8 +216,12 @@ evidence_contract:
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_packet.yaml
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/work_plan.yaml
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/skill_receipts.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/agent_control_contracts.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/code_surface_audit.json
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/required_gate_coverage.json
     - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
-  human_readable: []
+  human_readable:
+    - docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_report.md
 skill_routing:
   skills_considered:
     - obsidian-reentry-read
@@ -229,13 +246,22 @@ skill_routing:
     - obsidian-claim-discipline
     - obsidian-answer-clarity
 gates:
-  work_packet_schema_lint: pending
-  state_sync_audit: pass
-  skill_receipt_lint: pending
-  skill_receipt_schema_lint: pending
-  kpi_contract_audit: not_applicable
-  artifact_lineage_audit: receipt_backed
-  final_claim_guard: pending
+  required:
+    - skill_receipt_lint
+    - work_packet_schema_lint
+    - state_sync_audit
+    - skill_receipt_schema_lint
+    - code_surface_audit
+    - agent_control_contracts
+    - closeout_report_check
+    - required_gate_coverage_audit
+    - final_claim_guard
+  actual_status_source: docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_gate.json
+  not_applicable_with_reason:
+    kpi_contract_audit: "This packet changes Codex operating controls, not KPI rows."
+    runtime_evidence_gate: "This packet does not execute MT5 runtime or strategy tester work."
+    destructive_change_guard: "No delete, reset, archive, or destructive move was performed."
+  declared_not_implemented: {}
 final_claim_policy:
   allowed_claims:
     - completed

@@ -999,6 +999,8 @@ agent_control_control_plane_v2:
   work_packet_schema: "work_packet_schema_v2_compatible"
   state_sync_audit_status: "pass"
   closeout_gate_status: "pass"
+  required_gate_coverage_status: "pass"
+  closeout_report_path: "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_report.md"
   completed_forbidden: false
   new_gate_modules:
     - "foundation/control_plane/prompt_intake_classifier.py"
@@ -1007,7 +1009,8 @@ agent_control_control_plane_v2:
     - "foundation/control_plane/state_sync_audit.py"
     - "foundation/control_plane/work_packet_schema_lint.py"
     - "foundation/control_plane/skill_receipt_schema_lint.py"
-  boundary: "Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장) and evidence gates(근거 제한문); it does not change trading alpha judgment(거래 알파 판정), runtime authority(런타임 권위), or operating promotion(운영 승격)."
+    - "foundation/control_plane/required_gate_coverage_audit.py"
+  boundary: "Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장), required gate coverage(필수 제한문 포함 여부), and evidence gates(근거 제한문); it does not change trading alpha judgment(거래 알파 판정), runtime authority(런타임 권위), or operating promotion(운영 승격)."
 
 open_items: []
 closed_memory:
