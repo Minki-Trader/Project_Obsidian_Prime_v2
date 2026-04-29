@@ -11,6 +11,7 @@
 - Added work family, surface, and risk registries.
 - Added prompt classification, risk vector scan, decision lock, state sync audit, work packet schema lint, skill receipt schema lint, and required gate coverage audit.
 - Extended closeout gate so external audit JSON, human closeout report, and required gate coverage can support or block final claims.
+- Fixed agent control contracts so surface registry, risk flag registry, and skill receipt default schema validation run through reachable audit code.
 - Synced Stage 12 current truth to `run03F_et_v11_tier_balance_mt5_v1`.
 
 ## What Gates Passed
@@ -36,6 +37,7 @@
 - Some registry gate names are declared before full dedicated implementations exist.
 - Classifier logic is still deterministic keyword/term matching; ambiguity handling exists, but semantic classification can still be improved.
 - Large packet receipt storage mode still needs a stronger split between embedded receipts and per-skill receipt files.
+- Not-applicable gate reasons are still free text and need policy linting before they are hard to abuse.
 
 ## Allowed Claims
 
@@ -53,4 +55,4 @@
 
 ## Next Hardening Step
 
-Implement storage-mode enforcement for skill receipts: small packets may embed receipts in `skill_receipts.json`, while runtime or experiment packets must use `skill_receipts/*.yaml`.
+Implement not-applicability policy linting so a gate can only be marked N/A when the work family, surface, execution layer, and risk vector truly make that gate irrelevant.
