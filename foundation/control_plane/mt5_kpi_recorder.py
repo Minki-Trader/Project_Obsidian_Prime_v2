@@ -74,7 +74,8 @@ def build_mt5_kpi_recording_packet(
 ) -> dict[str, Any]:
     root_path = Path(root)
     created_at = created_at_utc or _utc_now()
-    inventory_rows = _target_inventory_rows(root_path)
+    target_selection = _target_inventory_selection(root_path)
+    inventory_rows = target_selection["rows"]
     records, summary_rows, missing_runs, parser_errors = build_normalized_records(root_path, inventory_rows)
     summary = _build_summary(
         root_path,
@@ -84,6 +85,7 @@ def build_mt5_kpi_recording_packet(
         records=records,
         missing_runs=missing_runs,
         parser_errors=parser_errors,
+        target_confirmation=target_selection,
     )
     return {
         "records": records,
@@ -113,7 +115,7 @@ def build_normalized_records(
             missing_runs.append(_missing_run(run_row, "source_artifact_missing", "kpi_record.json missing"))
             continue
         kpi_payload = _load_json(kpi_path)
-        mt5_records = _mt5_records_from_kpi(root, run_row, kpi_payload)
+        mt5_records = _mt5_records_from_kpi(root, run_row, kpi_payload, parser_errors=parser_errors)
         if not mt5_records:
             missing_runs.append(_missing_run(run_row, "mt5_report_missing", "no mt5_records, mt5.kpi_records, or report files"))
             continue
@@ -154,6 +156,7 @@ def build_normalized_records(
                 mt5_record=mt5_record,
                 report_path=report_path,
                 metrics=merged_metrics,
+                parsed_metrics=parsed_metrics,
             )
             records.append(normalized)
             summary_rows.append(_summary_row(normalized, report_path))
@@ -188,8 +191,65 @@ def write_mt5_kpi_recording_packet(
 
 
 def _target_inventory_rows(root: Path) -> list[dict[str, str]]:
+    return _target_inventory_selection(root)["rows"]
+
+
+def _target_inventory_selection(root: Path) -> dict[str, Any]:
     rows = read_csv_rows(root / CONFIRMED_INVENTORY_PATH)
-    return [row for row in rows if str(row.get("default_rework_target", "")).lower() in {"1", "true"}]
+    default_rows = [row for row in rows if str(row.get("default_rework_target", "")).lower() in {"1", "true"}]
+    confirmation_path = root / TARGET_CONFIRMATION_PATH
+    if not path_exists(confirmation_path):
+        return {
+            "rows": default_rows,
+            "status": "missing_fallback_inventory_only",
+            "findings": [{"check_id": "target_confirmation_missing", "severity": "warning"}],
+            "expected_target_rows": None,
+            "excluded_run_ids": [],
+            "selected_target_rows": len(default_rows),
+        }
+
+    confirmation = yaml.safe_load(io_path(confirmation_path).read_text(encoding="utf-8-sig")) or {}
+    interpretation = confirmation.get("interpretation", {}) if isinstance(confirmation, Mapping) else {}
+    scope = confirmation.get("next_packet_scope", {}) if isinstance(confirmation, Mapping) else {}
+    expected = interpretation.get("kpi_rebuild_default_target_rows") if isinstance(interpretation, Mapping) else None
+    excluded = {
+        str(run_id)
+        for run_id in (interpretation.get("excluded_run_ids", []) if isinstance(interpretation, Mapping) else [])
+        if str(run_id)
+    }
+    do_not_rerun_invalid = bool(scope.get("do_not_rerun_invalid_reference")) if isinstance(scope, Mapping) else False
+    excluded_selected = [row for row in default_rows if str(row.get("run_id", "")) in excluded]
+    selected = [row for row in default_rows if str(row.get("run_id", "")) not in excluded]
+
+    findings: list[dict[str, Any]] = []
+    status = "confirmed"
+    if expected is not None and int(expected) != len(selected):
+        status = "blocked"
+        findings.append(
+            {
+                "check_id": "target_confirmation_mismatch",
+                "expected_target_rows": int(expected),
+                "selected_target_rows": len(selected),
+            }
+        )
+    if excluded_selected:
+        status = "blocked" if do_not_rerun_invalid else status
+        findings.append(
+            {
+                "check_id": "target_confirmation_excluded_run_selected",
+                "excluded_run_ids": [str(row.get("run_id", "")) for row in excluded_selected],
+                "do_not_rerun_invalid_reference": do_not_rerun_invalid,
+            }
+        )
+    return {
+        "rows": selected,
+        "status": status,
+        "findings": findings,
+        "expected_target_rows": None if expected is None else int(expected),
+        "excluded_run_ids": sorted(excluded),
+        "selected_target_rows": len(selected),
+        "default_target_rows_before_exclusion": len(default_rows),
+    }
 
 
 def _load_template(root: Path) -> dict[str, Any]:
@@ -200,12 +260,24 @@ def _load_json(path: Path) -> dict[str, Any]:
     return json.loads(io_path(path).read_text(encoding="utf-8-sig"))
 
 
-def _mt5_records_from_kpi(root: Path, run_row: Mapping[str, str], payload: Mapping[str, Any]) -> list[Mapping[str, Any]]:
+def _with_report_identity_source(record: Mapping[str, Any], source: str) -> Mapping[str, Any]:
+    payload = dict(record)
+    payload.setdefault("report_identity_source", source)
+    return payload
+
+
+def _mt5_records_from_kpi(
+    root: Path,
+    run_row: Mapping[str, str],
+    payload: Mapping[str, Any],
+    *,
+    parser_errors: list[dict[str, Any]] | None = None,
+) -> list[Mapping[str, Any]]:
     records = payload.get("mt5_records")
     if isinstance(records, list):
         direct_records = [record for record in records if isinstance(record, Mapping)]
         if direct_records:
-            return direct_records
+            return [_with_report_identity_source(record, "kpi_record_mt5_records") for record in direct_records]
 
     mt5 = payload.get("mt5", {})
     if isinstance(mt5, Mapping):
@@ -213,12 +285,128 @@ def _mt5_records_from_kpi(root: Path, run_row: Mapping[str, str], payload: Mappi
         if isinstance(records, list):
             nested_records = [record for record in records if isinstance(record, Mapping)]
             if nested_records:
-                return nested_records
+                return [_with_report_identity_source(record, "kpi_record_nested_mt5_records") for record in nested_records]
 
-    return _mt5_records_from_report_scan(root, run_row)
+    manifest_records = _mt5_records_from_manifest(root, run_row)
+    if manifest_records:
+        return manifest_records
+    return _mt5_records_from_report_scan(root, run_row, parser_errors=parser_errors)
 
 
-def _mt5_records_from_report_scan(root: Path, run_row: Mapping[str, str]) -> list[Mapping[str, Any]]:
+def _mt5_records_from_manifest(root: Path, run_row: Mapping[str, str]) -> list[Mapping[str, Any]]:
+    manifest_path = root / str(run_row.get("path", "")) / "run_manifest.json"
+    if not path_exists(manifest_path):
+        return []
+    try:
+        manifest = _load_json(manifest_path)
+    except Exception:
+        return []
+
+    candidates: list[Mapping[str, Any]] = []
+    for key in ("mt5_strategy_tester_reports", "strategy_tester_reports", "mt5_report_records"):
+        value = manifest.get(key)
+        if isinstance(value, list):
+            candidates.extend(record for record in value if isinstance(record, Mapping))
+    mt5 = manifest.get("mt5", {})
+    if isinstance(mt5, Mapping):
+        for key in ("strategy_tester_reports", "report_records", "kpi_records"):
+            value = mt5.get(key)
+            if isinstance(value, list):
+                candidates.extend(record for record in value if isinstance(record, Mapping))
+    for result in manifest.get("execution_results", []) if isinstance(manifest.get("execution_results"), list) else []:
+        if isinstance(result, Mapping) and isinstance(result.get("strategy_tester_report"), Mapping):
+            report = dict(result["strategy_tester_report"])
+            report.setdefault("tier", result.get("tier"))
+            report.setdefault("split", result.get("split"))
+            report.setdefault("routing_mode", result.get("routing_mode"))
+            candidates.append(report)
+
+    records: list[Mapping[str, Any]] = []
+    for candidate in candidates:
+        report_path = _candidate_report_path(candidate)
+        if not report_path:
+            continue
+        identity = _identity_from_report_metadata(candidate)
+        if identity is None:
+            continue
+        records.append(
+            _with_report_identity_source(
+                {
+                    **identity,
+                    "status": candidate.get("status", "completed"),
+                    "metrics": candidate.get("metrics", {}),
+                    "report": {"html_report": {"path": str(report_path)}},
+                },
+                "run_manifest_report_identity",
+            )
+        )
+    return records
+
+
+def _candidate_report_path(candidate: Mapping[str, Any]) -> str | None:
+    html_report = candidate.get("html_report")
+    if isinstance(html_report, Mapping):
+        for key in ("path", "source_path"):
+            if html_report.get(key):
+                return str(html_report[key])
+    if candidate.get("report_path"):
+        return str(candidate["report_path"])
+    report = candidate.get("report")
+    if isinstance(report, Mapping):
+        return _candidate_report_path(report)
+    return None
+
+
+def _identity_from_report_metadata(candidate: Mapping[str, Any]) -> dict[str, str] | None:
+    if all(candidate.get(key) for key in ("record_view", "tier_scope", "split", "route_role")):
+        return {
+            "record_view": str(candidate["record_view"]),
+            "tier_scope": str(candidate["tier_scope"]),
+            "split": str(candidate["split"]),
+            "route_role": str(candidate["route_role"]),
+        }
+    tier = str(candidate.get("tier") or candidate.get("tier_scope") or "")
+    split = str(candidate.get("split") or "")
+    if split not in {"validation_is", "validation", "oos", "train"}:
+        return None
+    routing_mode = str(candidate.get("routing_mode") or "")
+    if routing_mode in {"tier_a_primary_tier_b_fallback", "tier_a_primary_no_fallback"}:
+        return {
+            "record_view": f"mt5_routed_total_{split}",
+            "tier_scope": "Tier A+B",
+            "split": split,
+            "route_role": "routed_total",
+        }
+    if tier == "Tier A":
+        return {
+            "record_view": f"mt5_tier_a_only_{split}",
+            "tier_scope": "Tier A",
+            "split": split,
+            "route_role": "tier_only_total",
+        }
+    if tier == "Tier B":
+        return {
+            "record_view": f"mt5_tier_b_fallback_only_{split}",
+            "tier_scope": "Tier B",
+            "split": split,
+            "route_role": "tier_b_fallback_only_total",
+        }
+    if tier == "Tier A+B":
+        return {
+            "record_view": f"mt5_routed_total_{split}",
+            "tier_scope": "Tier A+B",
+            "split": split,
+            "route_role": "routed_total",
+        }
+    return None
+
+
+def _mt5_records_from_report_scan(
+    root: Path,
+    run_row: Mapping[str, str],
+    *,
+    parser_errors: list[dict[str, Any]] | None = None,
+) -> list[Mapping[str, Any]]:
     reports_dir = root / str(run_row.get("path", "")) / "mt5" / "reports"
     if not path_exists(reports_dir):
         return []
@@ -232,6 +420,17 @@ def _mt5_records_from_report_scan(root: Path, run_row: Mapping[str, str]) -> lis
             continue
         report_path = reports_dir / report_name
         identity = _report_identity_from_name(report_name)
+        if identity is None:
+            if parser_errors is not None:
+                parser_errors.append(
+                    {
+                        "run_id": run_row.get("run_id"),
+                        "record_view": None,
+                        "error": "mt5_report_identity_unresolved",
+                        "path": report_path.as_posix(),
+                    }
+                )
+            continue
         records.append(
             {
                 "record_view": identity["record_view"],
@@ -241,14 +440,17 @@ def _mt5_records_from_report_scan(root: Path, run_row: Mapping[str, str]) -> lis
                 "route_role": identity["route_role"],
                 "metrics": {},
                 "report": {"html_report": {"path": report_path.as_posix()}},
+                "report_identity_source": "filename_scan_fallback",
             }
         )
     return records
 
 
-def _report_identity_from_name(report_name: str) -> dict[str, str]:
+def _report_identity_from_name(report_name: str) -> dict[str, str] | None:
     stem = Path(report_name).stem.lower()
-    split = "oos" if stem.endswith("_oos") else "validation_is" if stem.endswith("_validation_is") else "not_applicable"
+    split = "oos" if stem.endswith("_oos") else "validation_is" if stem.endswith("_validation_is") else None
+    if split is None:
+        return None
 
     if "_tier_b_fallback_only_" in stem:
         return {
@@ -271,12 +473,7 @@ def _report_identity_from_name(report_name: str) -> dict[str, str]:
             "split": split,
             "route_role": "routed_total",
         }
-    return {
-        "record_view": f"mt5_report_{split}",
-        "tier_scope": "not_applicable",
-        "split": split,
-        "route_role": "not_applicable",
-    }
+    return None
 
 
 def _merge_metrics(parsed_metrics: Mapping[str, Any], mt5_record: Mapping[str, Any]) -> dict[str, Any]:
@@ -340,6 +537,7 @@ def _normalized_record(
     mt5_record: Mapping[str, Any],
     report_path: Path,
     metrics: Mapping[str, Any],
+    parsed_metrics: Mapping[str, Any],
 ) -> dict[str, Any]:
     record = deepcopy(template)
     run_id = str(run_row.get("run_id", ""))
@@ -396,6 +594,10 @@ def _normalized_record(
         "kpi_record_path": _repo_or_abs(kpi_path),
         "mt5_report_path": _repo_or_abs(report_path),
         "mt5_report_sha256": report_hash,
+        "mt5_report_parse_status": parsed_metrics.get("status"),
+        "mt5_report_missing_required_metrics": list(parsed_metrics.get("missing_required_metrics", []) or []),
+        "mt5_report_source_encoding": parsed_metrics.get("source_encoding"),
+        "report_identity_source": mt5_record.get("report_identity_source", "unknown"),
         "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
     }
     return record
@@ -561,6 +763,7 @@ def _build_summary(
     records: Sequence[Mapping[str, Any]],
     missing_runs: Sequence[Mapping[str, Any]],
     parser_errors: Sequence[Mapping[str, Any]],
+    target_confirmation: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     run_ids_with_records = sorted({str(record["row_grain"]["run_id"]["value"]) for record in records})
     status = "blocked_no_mt5_records"
@@ -568,6 +771,9 @@ def _build_summary(
         status = "mt5_existing_report_recording_complete"
     elif records:
         status = "partial_existing_report_recording"
+    target_confirmation = dict(target_confirmation or {})
+    if target_confirmation.get("status") == "blocked":
+        status = "blocked_target_confirmation"
     return {
         "packet_id": packet_id,
         "created_at_utc": created_at_utc,
@@ -578,6 +784,14 @@ def _build_summary(
         "target_runs_missing_mt5_records": len(missing_runs),
         "normalized_records_written": len(records),
         "parser_error_count": len(parser_errors),
+        "target_confirmation_status": target_confirmation.get("status", "not_checked"),
+        "target_confirmation_expected_target_rows": target_confirmation.get("expected_target_rows"),
+        "target_confirmation_selected_target_rows": target_confirmation.get("selected_target_rows"),
+        "target_confirmation_default_target_rows_before_exclusion": target_confirmation.get(
+            "default_target_rows_before_exclusion"
+        ),
+        "target_confirmation_excluded_run_ids": target_confirmation.get("excluded_run_ids", []),
+        "target_confirmation_findings": target_confirmation.get("findings", []),
         "missing_runs": list(missing_runs),
         "parser_errors": list(parser_errors),
         "source_authority": {

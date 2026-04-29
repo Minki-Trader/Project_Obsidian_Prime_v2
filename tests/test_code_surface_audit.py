@@ -18,10 +18,13 @@ class CodeSurfaceAuditTests(unittest.TestCase):
         self.assertEqual(result.status, "pass", [finding.to_dict() for finding in result.findings])
         self.assertFalse(result.completed_forbidden)
         self.assertGreater(result.counts["scanned_files"], 0)
-        self.assertIn(
+        self.assertNotIn(
             "compatibility_shim::foundation/mt5/runtime_support.py",
-            {finding.check_id for finding in result.findings if finding.severity == "warning"},
+            {finding.check_id for finding in result.findings},
         )
+        runtime_support = ROOT / "foundation/mt5/runtime_support.py"
+        text = runtime_support.read_text(encoding="utf-8")
+        self.assertNotRegex(text, r"run_stage10_logreg_mt5_scout|foundation\.pipelines")
 
     def test_direct_control_plane_stage_pipeline_import_blocks(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

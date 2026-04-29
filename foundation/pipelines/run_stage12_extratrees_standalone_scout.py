@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import hashlib
 import json
 import sys
@@ -23,6 +22,11 @@ from foundation.models.baseline_training import (  # noqa: E402
     LABEL_ORDER,
     load_feature_order,
     validate_model_input_frame,
+)
+from foundation.control_plane.ledger import (  # noqa: E402
+    ALPHA_LEDGER_COLUMNS,
+    RUN_REGISTRY_COLUMNS,
+    upsert_csv_rows,
 )
 
 
@@ -233,31 +237,6 @@ def feature_importance_frame(model: ExtraTreesClassifier, feature_order: list[st
     ).sort_values(["importance", "feature"], ascending=[False, True])
 
 
-def csv_upsert(path: Path, rows: list[dict[str, str]], key: str, fieldnames: list[str]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    existing: list[dict[str, str]] = []
-    if path.exists():
-        with path.open("r", encoding="utf-8-sig", newline="") as handle:
-            reader = csv.DictReader(handle)
-            for row in reader:
-                existing.append({name: row.get(name, "") for name in fieldnames})
-
-    by_key = {row.get(key, ""): row for row in existing if row.get(key, "")}
-    for row in rows:
-        by_key[row[key]] = {name: str(row.get(name, "")) for name in fieldnames}
-
-    ordered_keys = [row.get(key, "") for row in existing if row.get(key, "")]
-    for row in rows:
-        if row[key] not in ordered_keys:
-            ordered_keys.append(row[key])
-
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
-        writer.writeheader()
-        for item_key in ordered_keys:
-            writer.writerow(by_key[item_key])
-
-
 def update_registries(
     summary: dict[str, Any],
     signal: dict[str, Any],
@@ -265,10 +244,10 @@ def update_registries(
     summary_path: Path,
 ) -> None:
     run_registry_path = ROOT / "docs/registers/run_registry.csv"
-    run_registry_fields = ["run_id", "stage_id", "lane", "status", "judgment", "path", "notes"]
     run03a_path = f"stages/{STAGE_ID}/02_runs/run03A_extratrees_fwd18_inverse_context_scout_v1"
-    csv_upsert(
+    upsert_csv_rows(
         run_registry_path,
+        RUN_REGISTRY_COLUMNS,
         [
             {
                 "run_id": "run03A_extratrees_fwd18_inverse_context_scout_v1",
@@ -300,27 +279,8 @@ def update_registries(
             },
         ],
         key="run_id",
-        fieldnames=run_registry_fields,
     )
 
-    ledger_fields = [
-        "ledger_row_id",
-        "stage_id",
-        "run_id",
-        "subrun_id",
-        "parent_run_id",
-        "record_view",
-        "tier_scope",
-        "kpi_scope",
-        "scoreboard_lane",
-        "status",
-        "judgment",
-        "path",
-        "primary_kpi",
-        "guardrail_kpi",
-        "external_verification_status",
-        "notes",
-    ]
     ledger_rows = [
         {
             "ledger_row_id": f"{RUN_ID}__python_tier_a_standalone",
@@ -407,8 +367,8 @@ def update_registries(
             }
         )
 
-    csv_upsert(ROOT / "docs/registers/alpha_run_ledger.csv", ledger_rows, "ledger_row_id", ledger_fields)
-    csv_upsert(STAGE_ROOT / "03_reviews/stage_run_ledger.csv", ledger_rows, "ledger_row_id", ledger_fields)
+    upsert_csv_rows(ROOT / "docs/registers/alpha_run_ledger.csv", ALPHA_LEDGER_COLUMNS, ledger_rows, key="ledger_row_id")
+    upsert_csv_rows(STAGE_ROOT / "03_reviews/stage_run_ledger.csv", ALPHA_LEDGER_COLUMNS, ledger_rows, key="ledger_row_id")
 
 
 def write_stage_docs(

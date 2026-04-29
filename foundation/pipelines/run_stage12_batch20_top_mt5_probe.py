@@ -25,7 +25,7 @@ from foundation.control_plane.ledger import (  # noqa: E402
     upsert_csv_rows,
 )
 from foundation.models.baseline_training import LABEL_ORDER, load_feature_order, validate_model_input_frame  # noqa: E402
-from foundation.pipelines import run_stage10_logreg_mt5_scout as mt5  # noqa: E402
+from foundation.mt5 import runtime_support as mt5  # noqa: E402
 
 
 STAGE_ID = "12_model_family_challenge__extratrees_training_effect"
@@ -119,9 +119,15 @@ def split_date_range(frame: pd.DataFrame, split_name: str) -> tuple[str, str]:
 
 def probability_matrix(model: ExtraTreesClassifier, values: np.ndarray) -> np.ndarray:
     raw = model.predict_proba(values)
-    probs = np.zeros((len(values), 3), dtype=float)
-    for idx, klass in enumerate(model.classes_):
-        probs[:, [0, 1, 2].index(int(klass))] = raw[:, idx]
+    required = [int(label) for label in LABEL_ORDER]
+    classes = [int(klass) for klass in model.classes_]
+    missing = [label for label in required if label not in set(classes)]
+    if missing:
+        raise RuntimeError(f"Model probability classes missing required labels: {missing}")
+    probs = np.zeros((len(values), len(required)), dtype=float)
+    class_to_index = {klass: idx for idx, klass in enumerate(classes)}
+    for output_idx, klass in enumerate(required):
+        probs[:, output_idx] = raw[:, class_to_index[klass]]
     return probs
 
 
@@ -589,12 +595,6 @@ def update_current_truth(source_variant: Mapping[str, Any], records: Sequence[Ma
 
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
-    mt5.configure_run_identity(
-        run_number=RUN_NUMBER,
-        run_id=RUN_ID,
-        exploration_label=EXPLORATION_LABEL,
-        common_run_root=COMMON_RUN_ROOT,
-    )
     run_output_root = Path(args.run_output_root)
     for folder in ("models", "predictions", "mt5", "reports"):
         io(run_output_root / folder).mkdir(parents=True, exist_ok=True)

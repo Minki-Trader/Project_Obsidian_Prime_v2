@@ -7,6 +7,9 @@ from pathlib import Path
 from foundation.mt5.strategy_report import extract_mt5_strategy_report_metrics
 
 
+FIXTURE_ROOT = Path(__file__).resolve().parent / "fixtures" / "mt5_reports"
+
+
 class Mt5StrategyReportTests(unittest.TestCase):
     def test_korean_report_aliases_include_drawdown_and_trade_counts(self) -> None:
         html = """
@@ -31,6 +34,18 @@ class Mt5StrategyReportTests(unittest.TestCase):
         self.assertEqual(metrics["long_trade_count"], 6)
         self.assertEqual(metrics["max_drawdown_amount"], 6.25)
         self.assertEqual(metrics["recovery_factor"], 2.0)
+
+    def test_sourced_run03e_report_excerpt_parses_core_metrics(self) -> None:
+        metrics = extract_mt5_strategy_report_metrics(FIXTURE_ROOT / "run03e_validation_sourced_excerpt.htm")
+
+        self.assertEqual(metrics["status"], "completed", metrics)
+        self.assertEqual(metrics["source_encoding"], "utf-8-sig")
+        self.assertEqual(metrics["net_profit"], -205.14)
+        self.assertEqual(metrics["trade_count"], 301)
+        self.assertEqual(metrics["profit_factor"], 0.88)
+        self.assertEqual(metrics["max_drawdown_amount"], 335.29)
+        self.assertEqual(metrics["recovery_factor"], -0.61)
+        self.assertEqual(metrics["missing_required_metrics"], [])
 
     def test_trade_count_parse_failure_stays_none_not_zero(self) -> None:
         html = """

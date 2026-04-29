@@ -67,6 +67,10 @@ class Mt5KpiRecorderTests(unittest.TestCase):
             self.assertEqual(record["risk"]["max_drawdown_amount"]["value"], 6.25)
             self.assertEqual(record["execution"]["order_attempt_count"]["value"], 5)
             self.assertEqual(record["signal_model"]["directional_hit_rate"]["value"], 0.75)
+            self.assertEqual(record["source_evidence"]["mt5_report_parse_status"], "completed")
+            self.assertEqual(record["source_evidence"]["mt5_report_missing_required_metrics"], [])
+            self.assertEqual(record["source_evidence"]["mt5_report_source_encoding"], "utf-16")
+            self.assertEqual(record["source_evidence"]["report_identity_source"], "kpi_record_mt5_records")
 
     def test_profit_factor_denominator_zero_gets_n_a_reason(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -221,6 +225,138 @@ class Mt5KpiRecorderTests(unittest.TestCase):
             self.assertEqual(record["row_grain"]["record_view"]["value"], "mt5_routed_total_oos")
             self.assertEqual(record["row_grain"]["tier_scope"]["value"], "Tier A+B")
             self.assertEqual(record["mt5_trading_headline"]["net_profit"]["value"], 12.5)
+            self.assertEqual(record["source_evidence"]["report_identity_source"], "filename_scan_fallback")
+
+    def test_target_confirmation_filters_excluded_run_and_count(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            _seed_inventory_many(
+                root,
+                [
+                    ("run_a", "unit_stage", "stages/unit_stage/02_runs/run_a", "1"),
+                    ("run_b", "unit_stage", "stages/unit_stage/02_runs/run_b", "1"),
+                    ("run_excluded", "unit_stage", "stages/unit_stage/02_runs/run_excluded", "0"),
+                ],
+            )
+            _seed_target_confirmation(root, expected=2, excluded=["run_excluded"])
+
+            packet = write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            self.assertEqual(packet["summary"]["target_runs_total"], 2)
+            self.assertEqual(packet["summary"]["target_confirmation_status"], "confirmed")
+
+    def test_target_confirmation_blocks_when_excluded_default_target_is_selected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            _seed_inventory_many(
+                root,
+                [
+                    ("run_a", "unit_stage", "stages/unit_stage/02_runs/run_a", "1"),
+                    ("run_b", "unit_stage", "stages/unit_stage/02_runs/run_b", "1"),
+                    ("run_excluded", "unit_stage", "stages/unit_stage/02_runs/run_excluded", "1"),
+                ],
+            )
+            _seed_target_confirmation(root, expected=2, excluded=["run_excluded"])
+
+            packet = write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            self.assertEqual(packet["summary"]["status"], "blocked_target_confirmation")
+            self.assertIn(
+                "target_confirmation_excluded_run_selected",
+                {finding["check_id"] for finding in packet["summary"]["target_confirmation_findings"]},
+            )
+
+    def test_target_confirmation_blocks_count_mismatch(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            _seed_inventory_many(
+                root,
+                [
+                    ("run_a", "unit_stage", "stages/unit_stage/02_runs/run_a", "1"),
+                    ("run_b", "unit_stage", "stages/unit_stage/02_runs/run_b", "1"),
+                ],
+            )
+            _seed_target_confirmation(root, expected=3, excluded=[])
+
+            packet = write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            self.assertEqual(packet["summary"]["status"], "blocked_target_confirmation")
+            self.assertIn(
+                "target_confirmation_mismatch",
+                {finding["check_id"] for finding in packet["summary"]["target_confirmation_findings"]},
+            )
+
+    def test_target_confirmation_missing_falls_back_to_inventory(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            _seed_inventory_many(
+                root,
+                [("run_a", "unit_stage", "stages/unit_stage/02_runs/run_a", "1")],
+            )
+
+            packet = write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            self.assertEqual(packet["summary"]["target_runs_total"], 1)
+            self.assertEqual(packet["summary"]["target_confirmation_status"], "missing_fallback_inventory_only")
+
+    def test_kpi_record_report_identity_wins_over_filename(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            run_root = root / "stages/unit_stage/02_runs/unit_run"
+            report_path = run_root / "mt5/reports/unknown_name.htm"
+            report_path.parent.mkdir(parents=True)
+            report_path.write_text(_report_html(gross_loss="-10.00", profit_factor="2.25"), encoding="utf-16")
+            (run_root / "kpi_record.json").write_text(
+                json.dumps(
+                    {
+                        "run_id": "unit_run",
+                        "stage_id": "unit_stage",
+                        "mt5_records": [
+                            {
+                                "record_view": "mt5_tier_a_only_oos",
+                                "tier_scope": "Tier A",
+                                "split": "oos",
+                                "route_role": "tier_only_total",
+                                "metrics": {},
+                                "report": {"html_report": {"path": report_path.as_posix()}},
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            _seed_inventory(root, "unit_run", "unit_stage", "stages/unit_stage/02_runs/unit_run")
+
+            write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            record_path = root / "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl"
+            record = json.loads(record_path.read_text(encoding="utf-8").splitlines()[0])
+            self.assertEqual(record["row_grain"]["record_view"]["value"], "mt5_tier_a_only_oos")
+            self.assertEqual(record["source_evidence"]["report_identity_source"], "kpi_record_mt5_records")
+
+    def test_unknown_report_filename_is_parser_error_not_normalized_row(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            run_root = root / "stages/unit_stage/02_runs/unit_run"
+            report_path = run_root / "mt5/reports/unknown_name.htm"
+            report_path.parent.mkdir(parents=True)
+            report_path.write_text(_report_html(gross_loss="-10.00", profit_factor="2.25"), encoding="utf-16")
+            (run_root / "kpi_record.json").write_text(json.dumps({"run_id": "unit_run"}), encoding="utf-8")
+            _seed_inventory(root, "unit_run", "unit_stage", "stages/unit_stage/02_runs/unit_run")
+
+            packet = write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            self.assertEqual(packet["summary"]["normalized_records_written"], 0)
+            self.assertIn(
+                "mt5_report_identity_unresolved",
+                {error["error"] for error in packet["summary"]["parser_errors"]},
+            )
 
 
 def _seed_template(root: Path) -> None:
@@ -230,20 +366,45 @@ def _seed_template(root: Path) -> None:
 
 
 def _seed_inventory(root: Path, run_id: str, stage_id: str, path: str) -> None:
+    _seed_inventory_many(root, [(run_id, stage_id, path, "1")])
+
+
+def _seed_inventory_many(root: Path, rows: list[tuple[str, str, str, str]]) -> None:
     inventory_path = root / "docs/agent_control/packets/kpi_rebuild_inventory_v1/experiment_inventory.csv"
     inventory_path.parent.mkdir(parents=True)
     with inventory_path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=["run_id", "stage_id", "path", "default_rework_target", "judgment"])
         writer.writeheader()
-        writer.writerow(
-            {
-                "run_id": run_id,
-                "stage_id": stage_id,
-                "path": path,
-                "default_rework_target": "1",
-                "judgment": "unit_judgment",
-            }
-        )
+        for run_id, stage_id, path, default_target in rows:
+            writer.writerow(
+                {
+                    "run_id": run_id,
+                    "stage_id": stage_id,
+                    "path": path,
+                    "default_rework_target": default_target,
+                    "judgment": "unit_judgment",
+                }
+            )
+
+
+def _seed_target_confirmation(root: Path, *, expected: int, excluded: list[str]) -> None:
+    path = root / "docs/agent_control/packets/kpi_rebuild_inventory_v1/target_confirmation.yaml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    excluded_lines = ["  excluded_run_ids: []"] if not excluded else ["  excluded_run_ids:", *[f"    - {run_id}" for run_id in excluded]]
+    path.write_text(
+        "\n".join(
+            [
+                "confirmation_id: unit",
+                "interpretation:",
+                f"  kpi_rebuild_default_target_rows: {expected}",
+                *excluded_lines,
+                "next_packet_scope:",
+                "  do_not_rerun_invalid_reference: true",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
 
 
 def _report_html(*, gross_loss: str, profit_factor: str) -> str:

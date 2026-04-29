@@ -1,47 +1,62 @@
 from __future__ import annotations
 
-"""MT5 runtime support compatibility owner.
-
-This module gives non-pipeline code a stable MT5 owner import while the older
-Stage 10 orchestration file is being decomposed. New shared MT5 runtime logic
-should move here or into narrower modules instead of adding more helpers to a
-stage pipeline.
-"""
+"""Stable MT5 runtime support imports for non-orchestration code."""
 
 from foundation.control_plane.mt5_kpi_records import (
+    ROUTING_MODE_A_B_FALLBACK,
+    ROUTING_MODE_A_ONLY,
+    TIER_A,
+    TIER_AB,
+    TIER_B,
     build_mt5_kpi_records,
     enrich_mt5_kpi_records_with_route_coverage,
 )
+from foundation.control_plane.tier_context_materialization import (
+    TIER_B_CORE_FEATURE_ORDER,
+    build_tier_b_partial_context_frames,
+)
+from foundation.models.baseline_training import LABEL_ORDER
+from foundation.models.decision_surface import (
+    DECISION_CLASS_NO_TRADE,
+    DECISION_LABEL_NO_TRADE,
+    PROBABILITY_COLUMNS,
+    ThresholdRule,
+    apply_threshold_rule,
+    probability_matrix,
+    threshold_rule_from_values,
+    threshold_rule_payload,
+    validate_threshold_rule,
+)
+from foundation.models.onnx_bridge import (
+    _find_probability_output,
+    _onnx_output_shape,
+    check_onnxruntime_probability_parity,
+    ordered_hash,
+    ordered_sklearn_probabilities,
+    export_sklearn_to_onnx_zipmap_disabled,
+)
+from foundation.mt5.mql5_compile import compile_mql5_ea, metaeditor_command_log_path
+from foundation.mt5.runtime_artifacts import (
+    EA_EXPERT_PATH,
+    EA_SOURCE_PATH,
+    EA_TESTER_SET_NAME,
+    _io_path,
+    _json_ready,
+    _path_exists,
+    attach_mt5_report_metrics,
+    collect_mt5_strategy_report_artifacts,
+    copy_to_common_files,
+    export_mt5_feature_matrix_csv,
+    mt5_runtime_module_hashes,
+    remove_existing_mt5_report_artifacts,
+    report_name_from_attempt,
+    sha256_file,
+    sha256_file_lf_normalized,
+    validate_feature_matrix,
+    write_json,
+)
+from foundation.mt5.terminal_runner import run_mt5_tester, validate_mt5_runtime_outputs, wait_for_mt5_runtime_outputs
 from foundation.mt5.tester_files import TesterMaterializationConfig, materialize_tester_ini_file, materialize_tester_set_file
-from foundation.pipelines import run_stage10_logreg_mt5_scout as _stage10
 
 
-collect_mt5_strategy_report_artifacts = _stage10.collect_mt5_strategy_report_artifacts
-attach_mt5_report_metrics = _stage10.attach_mt5_report_metrics
-remove_existing_mt5_report_artifacts = _stage10.remove_existing_mt5_report_artifacts
-report_name_from_attempt = _stage10.report_name_from_attempt
-run_mt5_tester = _stage10.run_mt5_tester
-wait_for_mt5_runtime_outputs = _stage10.wait_for_mt5_runtime_outputs
-
-build_tier_b_partial_context_frames = _stage10.build_tier_b_partial_context_frames
-check_onnxruntime_probability_parity = _stage10.check_onnxruntime_probability_parity
-compile_mql5_ea = _stage10.compile_mql5_ea
-copy_to_common_files = _stage10.copy_to_common_files
-export_mt5_feature_matrix_csv = _stage10.export_mt5_feature_matrix_csv
-export_sklearn_to_onnx_zipmap_disabled = _stage10.export_sklearn_to_onnx_zipmap_disabled
-ordered_hash = _stage10.ordered_hash
-ordered_sklearn_probabilities = _stage10.ordered_sklearn_probabilities
-threshold_rule_from_values = _stage10.threshold_rule_from_values
-threshold_rule_payload = _stage10.threshold_rule_payload
-
-EA_SOURCE_PATH = _stage10.EA_SOURCE_PATH
-FEATURE_ORDER_HASH = _stage10.FEATURE_ORDER_HASH
-LABEL_ORDER = _stage10.LABEL_ORDER
-TIER_A = _stage10.TIER_A
-TIER_B = _stage10.TIER_B
-TIER_AB = _stage10.TIER_AB
-TIER_B_CORE_FEATURE_ORDER = _stage10.TIER_B_CORE_FEATURE_ORDER
-ThresholdRule = _stage10.ThresholdRule
-TrainingLabelSplitSpec = _stage10.TrainingLabelSplitSpec
-ROUTING_MODE_A_B_FALLBACK = _stage10.ROUTING_MODE_A_B_FALLBACK
-ROUTING_MODE_A_ONLY = _stage10.ROUTING_MODE_A_ONLY
+FEATURE_ORDER_HASH = "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"

@@ -20,8 +20,8 @@ ownership_policy:
       reason: "control plane(제어면) must not use stage pipeline(단계 파이프라인) as hidden shared owner(숨은 공유 소유자)"
   compatibility_shims:
     - path: foundation/mt5/runtime_support.py
-      status: "temporary_warning"
-      reason: "keeps control-plane imports clean while shared MT5 runtime helpers are decomposed(공유 MT5 런타임 도구 분해 전 임시 경고)"
+      status: "resolved_no_stage_pipeline_import"
+      reason: "runtime_support imports owner modules directly; stage orchestration delegation was removed(런타임 지원이 소유 모듈을 직접 가져오며 단계 조율 파일 위임은 제거됨)"
 required_gate:
   command: "python -m foundation.control_plane.code_surface_audit --root ."
   run_before:
