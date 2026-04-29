@@ -57,10 +57,10 @@ RISK_MAP = {
 
 EXECUTION_MAP = {
     "order_attempt_count": "order_attempt_count",
-    "order_fill_count": "fill_count",
+    "order_fill_count": ("fill_count", "order_fill_count"),
     "fill_rate": "fill_rate",
     "reject_count": "reject_count",
-    "skip_count": "skip_count",
+    "skip_count": ("skip_count", "feature_skip_count"),
     "model_fail_count": "model_fail_count",
     "feature_ready_count": "feature_ready_count",
 }
@@ -530,7 +530,7 @@ def _fill_regime(record: dict[str, Any]) -> None:
 
 def _fill_execution(record: dict[str, Any], metrics: Mapping[str, Any]) -> None:
     for field, source in EXECUTION_MAP.items():
-        value = metrics.get(source)
+        value = _first_metric(metrics, source)
         record["execution"][field] = _cell(
             value,
             None if value is not None else "runtime_telemetry_missing",
@@ -540,6 +540,16 @@ def _fill_execution(record: dict[str, Any], metrics: Mapping[str, Any]) -> None:
         record["execution"][field] = _cell(None, "metric_not_emitted_by_mt5", "mt5_runtime_telemetry_summary")
     record["execution"]["external_mismatch_count"] = _cell(None, "runtime_telemetry_missing", "mt5_runtime_telemetry_summary")
     record["execution"]["data_readiness_failures"] = _cell(None, "runtime_telemetry_missing", "mt5_runtime_telemetry_summary")
+
+
+def _first_metric(metrics: Mapping[str, Any], source: str | Sequence[str]) -> Any:
+    if isinstance(source, str):
+        return metrics.get(source)
+    for key in source:
+        value = metrics.get(key)
+        if value is not None:
+            return value
+    return None
 
 
 def _build_summary(

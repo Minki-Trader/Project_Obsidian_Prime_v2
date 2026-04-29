@@ -464,7 +464,16 @@ def _regime_from_trades(trades: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
 def _apply_trade_stats(record: dict[str, Any], stats: Mapping[str, Any]) -> None:
     diagnostics = stats["trade_diagnostics"]
     for field, value in diagnostics.items():
-        record["trade_diagnostics"][field] = _cell(value, authority="python_recomputed_from_mt5_deals")
+        n_a_reason = None
+        if field == "long_expectancy" and value is None and diagnostics.get("long_trade_count") == 0:
+            n_a_reason = "no_long_trades"
+        elif field == "short_expectancy" and value is None and diagnostics.get("short_trade_count") == 0:
+            n_a_reason = "no_short_trades"
+        record["trade_diagnostics"][field] = _cell(
+            value,
+            n_a_reason,
+            authority="python_recomputed_from_mt5_deals",
+        )
     for field, value in stats["risk"].items():
         record["risk"][field] = _cell(value, authority="python_recomputed_from_mt5_deals")
     for field, value in stats["regime_slice_attribution"].items():

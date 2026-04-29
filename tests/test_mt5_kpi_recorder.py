@@ -160,6 +160,47 @@ class Mt5KpiRecorderTests(unittest.TestCase):
             )
             self.assertEqual(record["execution"]["order_attempt_count"]["value"], 3)
 
+    def test_execution_aliases_accept_stage10_runtime_summary_names(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            run_root = root / "stages/unit_stage/02_runs/unit_run"
+            report_path = run_root / "mt5/reports/unit_report.htm"
+            report_path.parent.mkdir(parents=True)
+            report_path.write_text(_report_html(gross_loss="-10.00", profit_factor="2.25"), encoding="utf-16")
+            (run_root / "kpi_record.json").write_text(
+                json.dumps(
+                    {
+                        "run_id": "unit_run",
+                        "stage_id": "unit_stage",
+                        "mt5_records": [
+                            {
+                                "record_view": "mt5_routed_total_validation_is",
+                                "tier_scope": "Tier A+B",
+                                "split": "validation_is",
+                                "route_role": "routed_total",
+                                "metrics": {
+                                    "order_attempt_count": 5,
+                                    "order_fill_count": 4,
+                                    "feature_skip_count": 7,
+                                },
+                                "report": {"html_report": {"path": report_path.as_posix()}},
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            _seed_inventory(root, "unit_run", "unit_stage", "stages/unit_stage/02_runs/unit_run")
+
+            write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            record_path = root / "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl"
+            record = json.loads(record_path.read_text(encoding="utf-8").splitlines()[0])
+
+            self.assertEqual(record["execution"]["order_fill_count"]["value"], 4)
+            self.assertEqual(record["execution"]["skip_count"]["value"], 7)
+
     def test_scans_reports_folder_when_kpi_records_are_missing(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

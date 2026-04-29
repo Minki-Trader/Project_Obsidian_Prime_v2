@@ -8,13 +8,16 @@ should move here or into narrower modules instead of adding more helpers to a
 stage pipeline.
 """
 
+from foundation.control_plane.mt5_kpi_records import (
+    build_mt5_kpi_records,
+    enrich_mt5_kpi_records_with_route_coverage,
+)
+from foundation.mt5.tester_files import TesterMaterializationConfig, materialize_tester_ini_file, materialize_tester_set_file
 from foundation.pipelines import run_stage10_logreg_mt5_scout as _stage10
 
 
 collect_mt5_strategy_report_artifacts = _stage10.collect_mt5_strategy_report_artifacts
 attach_mt5_report_metrics = _stage10.attach_mt5_report_metrics
-build_mt5_kpi_records = _stage10.build_mt5_kpi_records
-enrich_mt5_kpi_records_with_route_coverage = _stage10.enrich_mt5_kpi_records_with_route_coverage
 remove_existing_mt5_report_artifacts = _stage10.remove_existing_mt5_report_artifacts
 report_name_from_attempt = _stage10.report_name_from_attempt
 run_mt5_tester = _stage10.run_mt5_tester

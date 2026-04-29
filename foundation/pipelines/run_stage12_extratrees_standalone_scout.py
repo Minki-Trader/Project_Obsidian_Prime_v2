@@ -82,9 +82,11 @@ def ordered_predict_proba(model: ExtraTreesClassifier, values: np.ndarray) -> np
     raw = np.asarray(model.predict_proba(values), dtype="float64")
     ordered = np.zeros((raw.shape[0], len(LABEL_ORDER)), dtype="float64")
     class_to_index = {int(label): index for index, label in enumerate(model.classes_)}
+    missing = [label for label in LABEL_ORDER if label not in class_to_index]
+    if missing:
+        raise RuntimeError(f"Model probability classes missing required labels: {missing}")
     for output_index, label in enumerate(LABEL_ORDER):
-        if label in class_to_index:
-            ordered[:, output_index] = raw[:, class_to_index[label]]
+        ordered[:, output_index] = raw[:, class_to_index[label]]
     return ordered
 
 

@@ -25,6 +25,9 @@ allowed_values:
     - full_surface
     - not_applicable
   tier_scope:
+    - Tier A
+    - Tier B
+    - Tier A+B
     - tier_a
     - tier_b
     - tier_ab
@@ -35,13 +38,24 @@ allowed_values:
     - python_tier_ab_combined
     - mt5_tier_a_only
     - mt5_tier_b_fallback_only
+    - mt5_tier_a_only_validation_is
+    - mt5_tier_a_only_oos
+    - mt5_tier_b_fallback_only_validation_is
+    - mt5_tier_b_fallback_only_oos
     - mt5_routed_tier_a_used
+    - mt5_routed_tier_a_used_validation_is
+    - mt5_routed_tier_a_used_oos
     - mt5_routed_tier_b_fallback_used
+    - mt5_routed_tier_b_fallback_used_validation_is
+    - mt5_routed_tier_b_fallback_used_oos
     - mt5_routed_total
+    - mt5_routed_total_validation_is
+    - mt5_routed_total_oos
     - standalone_variant
     - not_applicable
   route_role:
     - tier_only_total
+    - tier_b_fallback_only_total
     - primary_used
     - fallback_used
     - routed_total

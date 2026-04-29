@@ -253,6 +253,9 @@ def _resolve_feature_sets(feature_order: list[str], train_frame: pd.DataFrame) -
 def _ensure_probs(model: ExtraTreesClassifier, x_frame: pd.DataFrame) -> np.ndarray:
     raw = model.predict_proba(x_frame)
     probs = np.zeros((len(x_frame), len(ALL_CLASSES)), dtype=float)
+    missing = [cls for cls in ALL_CLASSES if cls not in {int(label) for label in model.classes_}]
+    if missing:
+        raise RuntimeError(f"Model probability classes missing required labels: {missing}")
     for col_idx, cls in enumerate(model.classes_):
         probs[:, ALL_CLASSES.index(int(cls))] = raw[:, col_idx]
     return probs

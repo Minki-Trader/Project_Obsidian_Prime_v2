@@ -10,7 +10,7 @@
       "severity": "warning",
       "details": {
         "path": "foundation/control_plane/mt5_kpi_recorder.py",
-        "lines": 932,
+        "lines": 942,
         "attention_lines": 800
       }
     },
@@ -30,7 +30,7 @@
       "severity": "warning",
       "details": {
         "path": "foundation/control_plane/mt5_trade_attribution.py",
-        "lines": 982,
+        "lines": 991,
         "attention_lines": 800
       }
     },
@@ -79,7 +79,7 @@
       "severity": "warning",
       "details": {
         "path": "foundation/pipelines/run_stage10_logreg_mt5_scout.py",
-        "lines": 3045,
+        "lines": 2570,
         "attention_lines": 800
       }
     },
@@ -129,7 +129,7 @@
       "severity": "warning",
       "details": {
         "path": "foundation/pipelines/run_stage12_extratrees_standalone_batch20.py",
-        "lines": 1018,
+        "lines": 1021,
         "attention_lines": 800
       }
     },
@@ -157,7 +157,7 @@
   "counts": {
     "attention_lines": 800,
     "blocking_lines": 1600,
-    "scanned_files": 93,
+    "scanned_files": 101,
     "files_over_attention": 14,
     "lines::.agents/skills/obsidian-architecture-guard/scripts/validate_agent_settings.py": 391,
     "lines::foundation/collectors/export_fpmarkets_v2_mt5_bars.py": 283,
@@ -175,19 +175,23 @@
     "lines::foundation/control_plane/final_claim_guard.py": 42,
     "lines::foundation/control_plane/kpi_contract_audit.py": 128,
     "lines::foundation/control_plane/ledger.py": 166,
-    "lines::foundation/control_plane/mt5_kpi_recorder.py": 932,
+    "lines::foundation/control_plane/mt5_kpi_recorder.py": 942,
+    "lines::foundation/control_plane/mt5_kpi_records.py": 200,
     "lines::foundation/control_plane/mt5_missing_report_executor.py": 417,
     "lines::foundation/control_plane/mt5_tier_balance_completion.py": 1339,
-    "lines::foundation/control_plane/mt5_trade_attribution.py": 982,
+    "lines::foundation/control_plane/mt5_trade_attribution.py": 991,
     "lines::foundation/control_plane/preflight_clarifier.py": 294,
     "lines::foundation/control_plane/prompt_intake_classifier.py": 197,
     "lines::foundation/control_plane/required_gate_coverage_audit.py": 169,
     "lines::foundation/control_plane/risk_vector_scan.py": 127,
+    "lines::foundation/control_plane/routing_coverage.py": 130,
     "lines::foundation/control_plane/scope_completion_gate.py": 104,
     "lines::foundation/control_plane/skill_receipt_lint.py": 96,
     "lines::foundation/control_plane/skill_receipt_schema_lint.py": 140,
     "lines::foundation/control_plane/stage_work_archive.py": 159,
     "lines::foundation/control_plane/state_sync_audit.py": 235,
+    "lines::foundation/control_plane/tier_context.py": 125,
+    "lines::foundation/control_plane/validate_run_evidence.py": 328,
     "lines::foundation/control_plane/work_packet_gate.py": 74,
     "lines::foundation/control_plane/work_packet_schema_lint.py": 166,
     "lines::foundation/features/session_calendar.py": 326,
@@ -202,8 +206,9 @@
     "lines::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5": 1715,
     "lines::foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5": 1777,
     "lines::foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5": 467,
-    "lines::foundation/mt5/runtime_support.py": 44,
-    "lines::foundation/mt5/strategy_report.py": 202,
+    "lines::foundation/mt5/runtime_support.py": 47,
+    "lines::foundation/mt5/strategy_report.py": 260,
+    "lines::foundation/mt5/tester_files.py": 104,
     "lines::foundation/parity/stage06_runtime_parity.py": 760,
     "lines::foundation/pipelines/audit_stage05_feature_integrity.py": 977,
     "lines::foundation/pipelines/materialize_feature_frame_freeze.py": 429,
@@ -212,16 +217,16 @@
     "lines::foundation/pipelines/materialize_top3_price_proxy_weights.py": 227,
     "lines::foundation/pipelines/materialize_training_label_split_dataset.py": 522,
     "lines::foundation/pipelines/run_stage07_baseline_training_smoke.py": 437,
-    "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 3045,
+    "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 2570,
     "lines::foundation/pipelines/run_stage11_lgbm_divergent_scouts.py": 1202,
     "lines::foundation/pipelines/run_stage11_lgbm_fwd18_retrain_scout.py": 311,
     "lines::foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py": 888,
     "lines::foundation/pipelines/run_stage11_lgbm_training_method_scout.py": 1373,
     "lines::foundation/pipelines/run_stage11_priority_probes.py": 783,
     "lines::foundation/pipelines/run_stage12_batch20_top_mt5_probe.py": 862,
-    "lines::foundation/pipelines/run_stage12_extratrees_standalone_batch20.py": 1018,
+    "lines::foundation/pipelines/run_stage12_extratrees_standalone_batch20.py": 1021,
     "lines::foundation/pipelines/run_stage12_extratrees_standalone_mt5_probe.py": 1103,
-    "lines::foundation/pipelines/run_stage12_extratrees_standalone_scout.py": 732,
+    "lines::foundation/pipelines/run_stage12_extratrees_standalone_scout.py": 734,
     "lines::foundation/pipelines/run_stage12_extratrees_training_effect_scout.py": 1114,
     "lines::tests/test_agent_control_contracts.py": 96,
     "lines::tests/test_agent_control_gates.py": 414,
@@ -235,8 +240,9 @@
     "lines::tests/test_materialize_fpmarkets_v2_dataset.py": 230,
     "lines::tests/test_materialize_model_input_dataset.py": 118,
     "lines::tests/test_materialize_training_label_split_dataset.py": 120,
-    "lines::tests/test_mt5_kpi_recorder.py": 222,
+    "lines::tests/test_mt5_kpi_recorder.py": 263,
     "lines::tests/test_mt5_missing_report_executor.py": 92,
+    "lines::tests/test_mt5_strategy_report.py": 58,
     "lines::tests/test_mt5_trade_attribution.py": 153,
     "lines::tests/test_prompt_intake_classifier.py": 57,
     "lines::tests/test_raw_m5_inventory.py": 111,
@@ -247,10 +253,12 @@
     "lines::tests/test_stage06_runtime_parity.py": 99,
     "lines::tests/test_stage07_baseline_training_smoke.py": 112,
     "lines::tests/test_stage10_logreg_mt5_scout.py": 768,
+    "lines::tests/test_stage12_probability_guard.py": 30,
     "lines::tests/test_stage_work_archive.py": 57,
     "lines::tests/test_state_sync_audit.py": 83,
     "lines::tests/test_time_semantics_probe.py": 82,
     "lines::tests/test_top3_price_proxy_weights.py": 79,
+    "lines::tests/test_validate_run_evidence.py": 126,
     "lines::tests/test_work_packet_schema_lint.py": 92
   },
   "allowed_claims": [

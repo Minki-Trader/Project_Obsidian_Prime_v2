@@ -32,6 +32,11 @@ from foundation.models.baseline_training import (  # noqa: E402
     train_baseline_model,
 )
 from foundation.mt5.strategy_report import extract_mt5_strategy_report_metrics  # noqa: E402
+from foundation.mt5.tester_files import (  # noqa: E402
+    TesterMaterializationConfig,
+    materialize_tester_ini_file,
+    materialize_tester_set_file,
+)
 from foundation.pipelines.materialize_fpmarkets_v2_dataset import build_feature_frame  # noqa: E402
 from foundation.pipelines.materialize_training_label_split_dataset import (  # noqa: E402
     TrainingLabelSplitSpec,
@@ -41,6 +46,28 @@ from foundation.pipelines.materialize_training_label_split_dataset import (  # n
     load_us100_close_series,
 )
 from foundation.control_plane import alpha_run_ledgers  # noqa: E402
+from foundation.control_plane.mt5_kpi_records import (  # noqa: E402
+    build_mt5_kpi_records,
+    enrich_mt5_kpi_records_with_route_coverage,
+    mt5_metrics_with_runtime_counts,
+    routed_component_metrics,
+)
+from foundation.control_plane.routing_coverage import (  # noqa: E402
+    SESSION_SLICE_DEFINITIONS,
+    apply_session_slice,
+    build_eval_route_coverage_summary,
+    session_slice_payload,
+)
+from foundation.control_plane.tier_context import (  # noqa: E402
+    TIER_B_CONTEXT_GROUPS,
+    TIER_B_PARTIAL_CONTEXT_SUBTYPES,
+    apply_tier_b_fallback_subtype_filter,
+    classify_tier_b_partial_context,
+    finite_feature_mask,
+    normalize_tier_b_fallback_allowed_subtypes,
+    parse_tier_b_fallback_allowed_subtypes,
+    subtype_counts as _subtype_counts,
+)
 from foundation.control_plane.ledger import (  # noqa: E402
     ALPHA_LEDGER_COLUMNS,
     RUN_REGISTRY_COLUMNS,
@@ -107,29 +134,6 @@ ROUTING_MODE_A_B_FALLBACK = "tier_a_primary_tier_b_fallback"
 ROUTING_MODE_A_ONLY = "tier_a_primary_no_fallback"
 MT5_RECORD_TIER_A_ONLY_PREFIX = "mt5_tier_a_only"
 MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX = "mt5_tier_b_fallback_only"
-TIER_B_PARTIAL_CONTEXT_SUBTYPES = (
-    "B_full_context_outside_tier_a_scope",
-    "B_macro_missing",
-    "B_constituent_missing",
-    "B_basket_missing",
-    "B_core_only",
-    "B_mixed_partial_context",
-)
-SESSION_SLICE_DEFINITIONS: dict[str, tuple[float, float, str]] = {
-    "early": (0.0, 110.0, "cash_session_early_0_110_minutes"),
-    "mid": (110.0, 220.0, "cash_session_mid_110_220_minutes"),
-    "mid_first": (110.0, 165.0, "cash_session_mid_first_110_165_minutes"),
-    "mid_second": (165.0, 220.0, "cash_session_mid_second_165_220_minutes"),
-    "mid_second_first": (165.0, 195.0, "cash_session_mid_second_first_165_195_minutes"),
-    "mid_second_second": (195.0, 220.0, "cash_session_mid_second_second_195_220_minutes"),
-    "mid_second_second_first": (195.0, 210.0, "cash_session_mid_second_second_first_195_210_minutes"),
-    "mid_second_second_second": (210.0, 220.0, "cash_session_mid_second_second_second_210_220_minutes"),
-    "mid_second_overlap_190_210": (190.0, 210.0, "cash_session_mid_second_overlap_190_210_minutes"),
-    "mid_second_overlap_195_215": (195.0, 215.0, "cash_session_mid_second_overlap_195_215_minutes"),
-    "mid_second_overlap_200_220": (200.0, 220.0, "cash_session_mid_second_overlap_200_220_minutes"),
-    "mid_late_overlap_205_225": (205.0, 225.0, "cash_session_mid_late_overlap_205_225_minutes"),
-    "late": (220.0, 330.0, "cash_session_late_220_330_minutes"),
-}
 METAEDITOR_LOG_MAX_PATH_CHARS = 240
 TIER_B_CORE_FEATURE_ORDER = (
     "log_return_1",
@@ -175,18 +179,6 @@ TIER_B_CORE_FEATURE_ORDER = (
     "is_first_30m_after_open",
     "is_last_30m_before_cash_close",
 )
-TIER_B_CONTEXT_GROUPS = {
-    "macro": ("vix_change_1", "vix_zscore_20", "us10yr_change_1", "us10yr_zscore_20", "usdx_change_1", "usdx_zscore_20"),
-    "constituent": ("nvda_xnas_log_return_1", "aapl_xnas_log_return_1", "msft_xnas_log_return_1", "amzn_xnas_log_return_1"),
-    "basket": (
-        "mega8_equal_return_1",
-        "mega8_pos_breadth_1",
-        "mega8_dispersion_5",
-        "us100_minus_mega8_equal_return_1",
-        "top3_weighted_return_1",
-        "us100_minus_top3_weighted_return_1",
-    ),
-}
 REQUIRED_TIER_VIEWS = (
     ("tier_a_separate", TIER_A),
     ("tier_b_separate", TIER_B),
@@ -242,27 +234,6 @@ def threshold_rule_from_values(
         long_threshold=float(long_threshold),
         min_margin=float(min_margin),
     )
-
-
-@dataclass(frozen=True)
-class TesterMaterializationConfig:
-    expert: str = EA_EXPERT_PATH
-    symbol: str = "US100"
-    period: str = "M5"
-    model: int = 4
-    deposit: float = 500.0
-    leverage: str = "1:100"
-    optimization: int = 0
-    execution_mode: int = 0
-    forward_mode: int = 0
-    use_local: int = 1
-    use_remote: int = 0
-    use_cloud: int = 0
-    from_date: str | None = None
-    to_date: str | None = None
-    report: str | None = None
-    replace_report: int = 1
-    shutdown_terminal: int = 0
 
 
 def parse_args() -> argparse.Namespace:
@@ -398,200 +369,8 @@ def load_label_threshold(summary_path: Path) -> float:
     return threshold
 
 
-def finite_feature_mask(frame: pd.DataFrame, feature_order: Sequence[str]) -> pd.Series:
-    missing = [name for name in feature_order if name not in frame.columns]
-    if missing:
-        raise RuntimeError(f"Frame is missing required feature columns: {missing}")
-    matrix = frame.loc[:, list(feature_order)].to_numpy(dtype="float64", copy=False)
-    return pd.Series(np.isfinite(matrix).all(axis=1), index=frame.index)
-
-
-def classify_tier_b_partial_context(frame: pd.DataFrame) -> pd.DataFrame:
-    result = frame.copy()
-    group_ready = {
-        group_name: finite_feature_mask(result, feature_names)
-        for group_name, feature_names in TIER_B_CONTEXT_GROUPS.items()
-    }
-
-    subtypes: list[str] = []
-    missing_masks: list[str] = []
-    available_masks: list[str] = []
-    group_names = list(TIER_B_CONTEXT_GROUPS)
-    for row_index in result.index:
-        missing_groups = [name for name in group_names if not bool(group_ready[name].loc[row_index])]
-        available_groups = [name for name in group_names if name not in missing_groups]
-        missing_set = set(missing_groups)
-        if not missing_groups:
-            subtype = "B_full_context_outside_tier_a_scope"
-        elif missing_set == {"macro"}:
-            subtype = "B_macro_missing"
-        elif missing_set == {"constituent"}:
-            subtype = "B_constituent_missing"
-        elif missing_set == {"basket"}:
-            subtype = "B_basket_missing"
-        elif missing_set == set(group_names):
-            subtype = "B_core_only"
-        else:
-            subtype = "B_mixed_partial_context"
-        subtypes.append(subtype)
-        missing_masks.append("|".join(missing_groups) if missing_groups else "none")
-        available_masks.append("|".join(available_groups) if available_groups else "core_only")
-
-    result["partial_context_subtype"] = subtypes
-    result["missing_feature_group_mask"] = missing_masks
-    result["available_feature_group_mask"] = available_masks
-    return result
-
-
 def _timestamp_key(series: pd.Series) -> pd.Series:
     return pd.to_datetime(series, utc=True).astype("int64")
-
-
-def _split_counts(frame: pd.DataFrame) -> dict[str, int]:
-    split_values = frame["split"].astype(str) if "split" in frame.columns else pd.Series([], dtype="object")
-    return {split: int(split_values.eq(split).sum()) for split in ("train", "validation", "oos")}
-
-
-def _subtype_counts(frame: pd.DataFrame) -> dict[str, int]:
-    if frame.empty or "partial_context_subtype" not in frame.columns:
-        return {}
-    counts = frame["partial_context_subtype"].astype(str).value_counts().sort_index()
-    return {str(index): int(value) for index, value in counts.items()}
-
-
-def _subtype_counts_by_split(frame: pd.DataFrame) -> dict[str, dict[str, int]]:
-    payload: dict[str, dict[str, int]] = {}
-    for split in ("train", "validation", "oos"):
-        split_frame = frame.loc[frame["split"].astype(str).eq(split)] if "split" in frame.columns else frame.iloc[0:0]
-        payload[split] = _subtype_counts(split_frame)
-    return payload
-
-
-def session_slice_payload(session_slice_id: str | None) -> dict[str, Any] | None:
-    if not session_slice_id:
-        return None
-    start_minute, end_minute, policy_id = SESSION_SLICE_DEFINITIONS[session_slice_id]
-    return {
-        "slice_id": session_slice_id,
-        "policy_id": policy_id,
-        "minute_column": "minutes_from_cash_open",
-        "start_exclusive": start_minute,
-        "end_inclusive": end_minute,
-        "timezone_basis": "precomputed_session_feature",
-    }
-
-
-def apply_session_slice(frame: pd.DataFrame, session_slice: Mapping[str, Any] | None) -> pd.DataFrame:
-    if not session_slice:
-        return frame.copy().reset_index(drop=True)
-    minute_column = str(session_slice["minute_column"])
-    if minute_column not in frame.columns:
-        raise RuntimeError(f"Session slice requires missing column: {minute_column}")
-    minutes = pd.to_numeric(frame[minute_column], errors="coerce")
-    mask = minutes.gt(float(session_slice["start_exclusive"])) & minutes.le(float(session_slice["end_inclusive"]))
-    return frame.loc[mask].copy().reset_index(drop=True)
-
-
-def parse_tier_b_fallback_allowed_subtypes(raw_value: str | None) -> tuple[str, ...] | None:
-    if not raw_value:
-        return None
-    values = tuple(part.strip() for part in re.split(r"[,;]", raw_value) if part.strip())
-    unknown = sorted(set(values).difference(TIER_B_PARTIAL_CONTEXT_SUBTYPES))
-    if unknown:
-        raise RuntimeError(f"Unknown Tier B fallback subtypes: {unknown}")
-    return values
-
-
-def normalize_tier_b_fallback_allowed_subtypes(
-    allowed_subtypes: Sequence[str] | None,
-) -> tuple[str, ...] | None:
-    if not allowed_subtypes:
-        return None
-    values = tuple(str(value).strip() for value in allowed_subtypes if str(value).strip())
-    unknown = sorted(set(values).difference(TIER_B_PARTIAL_CONTEXT_SUBTYPES))
-    if unknown:
-        raise RuntimeError(f"Unknown Tier B fallback subtypes: {unknown}")
-    return values
-
-
-def apply_tier_b_fallback_subtype_filter(
-    frame: pd.DataFrame,
-    allowed_subtypes: Sequence[str] | None,
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    normalized = normalize_tier_b_fallback_allowed_subtypes(allowed_subtypes)
-    if not normalized:
-        return frame.copy().reset_index(drop=True), frame.iloc[0:0].copy().reset_index(drop=True)
-    if "partial_context_subtype" not in frame.columns:
-        raise RuntimeError("Tier B fallback subtype filter requires partial_context_subtype")
-    mask = frame["partial_context_subtype"].astype(str).isin(normalized)
-    filtered = frame.loc[mask].copy().reset_index(drop=True)
-    filtered_out = frame.loc[~mask].copy().reset_index(drop=True)
-    if not filtered_out.empty:
-        filtered_out["route_role"] = ROUTE_ROLE_NO_TIER
-        filtered_out["context_reject_reason"] = "tier_b_fallback_subtype_filtered_out"
-    return filtered, filtered_out
-
-
-def build_eval_route_coverage_summary(
-    *,
-    base_summary: Mapping[str, Any],
-    tier_a_eval_frame: pd.DataFrame,
-    tier_b_eval_frame: pd.DataFrame,
-    no_tier_eval_frame: pd.DataFrame,
-    session_slice: Mapping[str, Any] | None,
-    tier_b_filtered_out_frame: pd.DataFrame | None = None,
-    tier_b_allowed_subtypes: Sequence[str] | None = None,
-) -> dict[str, Any]:
-    filtered_out = (
-        tier_b_filtered_out_frame.reset_index(drop=True)
-        if tier_b_filtered_out_frame is not None
-        else tier_b_eval_frame.iloc[0:0].copy().reset_index(drop=True)
-    )
-    allowed_subtypes = normalize_tier_b_fallback_allowed_subtypes(tier_b_allowed_subtypes)
-    by_split: dict[str, dict[str, int]] = {}
-    for split in ("train", "validation", "oos"):
-        a_count = int(tier_a_eval_frame["split"].astype(str).eq(split).sum())
-        b_count = int(tier_b_eval_frame["split"].astype(str).eq(split).sum())
-        no_tier_count = int(no_tier_eval_frame["split"].astype(str).eq(split).sum())
-        filtered_out_count = int(filtered_out["split"].astype(str).eq(split).sum()) if "split" in filtered_out.columns else 0
-        by_split[split] = {
-            "tier_a_primary_rows": a_count,
-            "tier_b_fallback_rows": b_count,
-            "tier_b_fallback_filtered_out_rows": filtered_out_count,
-            "no_tier_labelable_rows": no_tier_count,
-            "routed_labelable_rows": a_count + b_count,
-        }
-    summary = {
-        "policy_id": base_summary.get("policy_id"),
-        "dataset_id": base_summary.get("dataset_id"),
-        "feature_set_id": base_summary.get("feature_set_id"),
-        "feature_count": base_summary.get("feature_count"),
-        "feature_order_hash": base_summary.get("feature_order_hash"),
-        "label_threshold_log_return": base_summary.get("label_threshold_log_return"),
-        "source_raw_rows": base_summary.get("source_raw_rows"),
-        "source_valid_rows": base_summary.get("source_valid_rows"),
-        "labelable_rows": int(len(tier_a_eval_frame) + len(tier_b_eval_frame) + len(no_tier_eval_frame)),
-        "tier_a_primary_rows": int(len(tier_a_eval_frame)),
-        "tier_b_training_rows": base_summary.get("tier_b_training_rows"),
-        "tier_b_fallback_rows": int(len(tier_b_eval_frame)),
-        "tier_b_fallback_allowed_subtypes": list(allowed_subtypes) if allowed_subtypes else None,
-        "tier_b_fallback_filter_policy": "allowed_subtypes" if allowed_subtypes else "none",
-        "tier_b_fallback_filtered_out_rows": int(len(filtered_out)),
-        "tier_b_fallback_filtered_out_by_subtype": _subtype_counts(filtered_out),
-        "tier_b_fallback_filtered_out_by_split_subtype": _subtype_counts_by_split(filtered_out),
-        "no_tier_labelable_rows": int(len(no_tier_eval_frame)),
-        "by_split": by_split,
-        "tier_b_fallback_by_subtype": _subtype_counts(tier_b_eval_frame),
-        "tier_b_fallback_by_split_subtype": _subtype_counts_by_split(tier_b_eval_frame),
-        "no_tier_by_split": _split_counts(no_tier_eval_frame),
-        "session_slice": dict(session_slice) if session_slice else None,
-        "note": (
-            "Session-sliced evaluation rows derived from the base Tier A/Tier B route coverage."
-            if session_slice
-            else base_summary.get("note")
-        ),
-    }
-    return summary
 
 
 def build_tier_b_partial_context_frames(
@@ -1216,72 +995,6 @@ def export_mt5_feature_matrix_csv(
     }
 
 
-def _format_mt5_value(value: Any) -> str:
-    if isinstance(value, bool):
-        return "true" if value else "false"
-    if isinstance(value, float):
-        return f"{value:.12g}"
-    return str(value)
-
-
-def materialize_tester_set_file(parameters: Mapping[str, Any], output_path: Path) -> dict[str, Any]:
-    _io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
-    lines = ["; generated_by=run_stage10_logreg_mt5_scout.py"]
-    for key, value in parameters.items():
-        lines.append(f"{key}={_format_mt5_value(value)}")
-    _io_path(output_path).write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return {
-        "path": output_path.as_posix(),
-        "sha256": sha256_file(output_path),
-        "format": "mt5_set",
-        "parameter_count": int(len(parameters)),
-    }
-
-
-def materialize_tester_ini_file(
-    config: TesterMaterializationConfig,
-    output_path: Path,
-    *,
-    set_file_path: Path | None = None,
-) -> dict[str, Any]:
-    tester_values: dict[str, Any] = {
-        "Expert": config.expert,
-        "Symbol": config.symbol,
-        "Period": config.period,
-        "Model": config.model,
-        "Deposit": config.deposit,
-        "Leverage": config.leverage,
-        "Optimization": config.optimization,
-        "ExecutionMode": config.execution_mode,
-        "ForwardMode": config.forward_mode,
-        "UseLocal": config.use_local,
-        "UseRemote": config.use_remote,
-        "UseCloud": config.use_cloud,
-        "ReplaceReport": config.replace_report,
-        "ShutdownTerminal": config.shutdown_terminal,
-    }
-    if config.from_date is not None:
-        tester_values["FromDate"] = config.from_date
-    if config.to_date is not None:
-        tester_values["ToDate"] = config.to_date
-    if config.report is not None:
-        tester_values["Report"] = config.report
-    if set_file_path is not None:
-        tester_values["ExpertParameters"] = set_file_path.as_posix()
-
-    lines = ["[Tester]"]
-    for key, value in tester_values.items():
-        lines.append(f"{key}={_format_mt5_value(value)}")
-    _io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
-    _io_path(output_path).write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return {
-        "path": output_path.as_posix(),
-        "sha256": sha256_file(output_path),
-        "format": "mt5_tester_ini",
-        "tester": tester_values,
-    }
-
-
 def common_ref(*parts: str) -> str:
     return "/".join([COMMON_RUN_ROOT, *parts])
 
@@ -1760,25 +1473,6 @@ def collect_mt5_strategy_report_artifacts(
     return records
 
 
-def _to_int(value: Any) -> int:
-    if value is None or (isinstance(value, float) and not np.isfinite(value)):
-        return 0
-    try:
-        return int(round(float(value)))
-    except (TypeError, ValueError):
-        return 0
-
-
-def _to_float(value: Any) -> float | None:
-    if value is None:
-        return None
-    try:
-        number = float(value)
-    except (TypeError, ValueError):
-        return None
-    return number if np.isfinite(number) else None
-
-
 def attach_mt5_report_metrics(
     execution_results: list[dict[str, Any]],
     report_records: Sequence[Mapping[str, Any]],
@@ -1788,175 +1482,6 @@ def attach_mt5_report_metrics(
         report_record = records_by_key.get((result.get("tier"), result.get("split")))
         if report_record is not None:
             result["strategy_tester_report"] = dict(report_record)
-
-
-def mt5_metrics_with_runtime_counts(result: Mapping[str, Any]) -> dict[str, Any]:
-    metrics = dict(result.get("strategy_tester_report", {}).get("metrics", {}))
-    last_summary = result.get("runtime_outputs", {}).get("last_summary", {})
-    order_attempt_count = _to_int(last_summary.get("order_attempt_count"))
-    order_fill_count = _to_int(last_summary.get("order_fill_count"))
-    feature_skip_count = _to_int(last_summary.get("feature_skip_count"))
-    reject_count = max(order_attempt_count - order_fill_count, 0)
-    metrics.update(
-        {
-            "order_attempt_count": order_attempt_count,
-            "fill_count": order_fill_count,
-            "reject_count": reject_count,
-            "skip_count": feature_skip_count,
-            "fill_rate": float(order_fill_count / order_attempt_count) if order_attempt_count else None,
-            "feature_ready_count": _to_int(last_summary.get("feature_ready_count")),
-            "model_ok_count": _to_int(last_summary.get("model_ok_count")),
-            "model_fail_count": _to_int(last_summary.get("model_fail_count")),
-            "tier_a_used_count": _to_int(last_summary.get("tier_a_used_count")),
-            "tier_b_fallback_used_count": _to_int(last_summary.get("tier_b_fallback_used_count")),
-            "no_tier_count": _to_int(last_summary.get("no_tier_count")),
-            "tier_a_long_count": _to_int(last_summary.get("tier_a_long_count")),
-            "tier_a_short_count": _to_int(last_summary.get("tier_a_short_count")),
-            "tier_a_flat_count": _to_int(last_summary.get("tier_a_flat_count")),
-            "tier_a_order_attempt_count": _to_int(last_summary.get("tier_a_order_attempt_count")),
-            "tier_a_order_fill_count": _to_int(last_summary.get("tier_a_order_fill_count")),
-            "tier_b_fallback_long_count": _to_int(last_summary.get("tier_b_fallback_long_count")),
-            "tier_b_fallback_short_count": _to_int(last_summary.get("tier_b_fallback_short_count")),
-            "tier_b_fallback_flat_count": _to_int(last_summary.get("tier_b_fallback_flat_count")),
-            "tier_b_fallback_order_attempt_count": _to_int(last_summary.get("tier_b_fallback_order_attempt_count")),
-            "tier_b_fallback_order_fill_count": _to_int(last_summary.get("tier_b_fallback_order_fill_count")),
-        }
-    )
-    return metrics
-
-
-def routed_component_metrics(total_metrics: Mapping[str, Any], route_role: str) -> dict[str, Any]:
-    if route_role == "primary_used":
-        prefix = "tier_a"
-        tier_scope = TIER_A
-        record_status = "completed"
-    elif route_role == "fallback_used":
-        prefix = "tier_b_fallback"
-        tier_scope = TIER_B
-        record_status = "completed"
-    else:
-        raise ValueError(f"Unsupported route_role: {route_role}")
-
-    used_count = _to_int(total_metrics.get(f"{prefix}_used_count"))
-    long_count = _to_int(total_metrics.get(f"{prefix}_long_count"))
-    short_count = _to_int(total_metrics.get(f"{prefix}_short_count"))
-    flat_count = _to_int(total_metrics.get(f"{prefix}_flat_count"))
-    order_attempt_count = _to_int(total_metrics.get(f"{prefix}_order_attempt_count"))
-    fill_count = _to_int(total_metrics.get(f"{prefix}_order_fill_count"))
-    route_denominator = _to_int(total_metrics.get("model_ok_count")) or (
-        _to_int(total_metrics.get("tier_a_used_count")) + _to_int(total_metrics.get("tier_b_fallback_used_count"))
-    )
-    return {
-        "status": record_status,
-        "tier_scope": tier_scope,
-        "route_role": route_role,
-        "aggregation": "actual_routed_component",
-        "profit_attribution": "not_separable_from_single_routed_account_path",
-        "net_profit": None,
-        "profit_factor": None,
-        "expectancy": None,
-        "trade_count": None,
-        "win_rate_percent": None,
-        "max_drawdown_amount": None,
-        "max_drawdown_percent": None,
-        "recovery_factor": None,
-        "route_bar_count": used_count,
-        "route_share": float(used_count / route_denominator) if route_denominator else None,
-        "signal_count": long_count + short_count,
-        "long_count": long_count,
-        "short_count": short_count,
-        "flat_count": flat_count,
-        "order_attempt_count": order_attempt_count,
-        "fill_count": fill_count,
-        "reject_count": max(order_attempt_count - fill_count, 0),
-        "skip_count": 0,
-        "fill_rate": float(fill_count / order_attempt_count) if order_attempt_count else None,
-    }
-
-
-def build_mt5_kpi_records(execution_results: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
-    records: list[dict[str, Any]] = []
-    for result in execution_results:
-        if result.get("status") != "completed":
-            continue
-        tier = str(result.get("tier"))
-        split = str(result.get("split"))
-        metrics = mt5_metrics_with_runtime_counts(result)
-        routing_mode = result.get("routing_mode")
-        if routing_mode in {ROUTING_MODE_A_B_FALLBACK, ROUTING_MODE_A_ONLY}:
-            component_specs = [("primary_used", f"mt5_routed_tier_a_used_{split}", TIER_A)]
-            if routing_mode == ROUTING_MODE_A_B_FALLBACK:
-                component_specs.append(("fallback_used", f"mt5_routed_tier_b_fallback_used_{split}", TIER_B))
-            for route_role, record_view, tier_scope in component_specs:
-                component = routed_component_metrics(metrics, route_role)
-                records.append(
-                    {
-                        "record_view": record_view,
-                        "tier_scope": tier_scope,
-                        "split": split,
-                        "status": component["status"],
-                        "route_role": route_role,
-                        "metrics": component,
-                        "report": {
-                            "aggregation": "actual_routed_component",
-                            "source_report": result.get("strategy_tester_report", {}),
-                            "profit_attribution": component["profit_attribution"],
-                        },
-                    }
-                )
-            metrics["aggregation"] = "actual_routed_tester_run"
-            metrics["route_role"] = "routed_total"
-            records.append(
-                {
-                    "record_view": f"mt5_routed_total_{split}",
-                    "tier_scope": TIER_AB,
-                    "split": split,
-                    "status": metrics.get("status", "partial"),
-                    "route_role": "routed_total",
-                    "metrics": metrics,
-                    "report": result.get("strategy_tester_report", {}),
-                }
-            )
-            continue
-        metrics["aggregation"] = "actual_tier_only_tester_run"
-        metrics["route_role"] = result.get("attempt_role", "tier_only_total")
-        record_view_prefix = str(
-            result.get("record_view_prefix") or f"mt5_{tier.lower().replace(' ', '_').replace('+', 'ab')}"
-        )
-        records.append(
-            {
-                "record_view": f"{record_view_prefix}_{split}",
-                "tier_scope": tier,
-                "split": split,
-                "status": metrics.get("status", "partial"),
-                "route_role": result.get("attempt_role", "tier_only_total"),
-                "metrics": metrics,
-                "report": result.get("strategy_tester_report", {}),
-            }
-        )
-    return records
-
-
-def enrich_mt5_kpi_records_with_route_coverage(
-    records: Sequence[dict[str, Any]],
-    route_coverage: Mapping[str, Any],
-) -> list[dict[str, Any]]:
-    split_aliases = {"validation_is": "validation", "validation": "validation", "oos": "oos", "train": "train"}
-    by_split = route_coverage.get("by_split", {})
-    subtype_by_split = route_coverage.get("tier_b_fallback_by_split_subtype", {})
-    no_tier_by_split = route_coverage.get("no_tier_by_split", {})
-    for record in records:
-        split = split_aliases.get(str(record.get("split")), str(record.get("split")))
-        metrics = record.setdefault("metrics", {})
-        split_summary = dict(by_split.get(split, {})) if isinstance(by_split, Mapping) else {}
-        metrics["route_coverage_split"] = split
-        metrics["tier_a_primary_labelable_rows"] = split_summary.get("tier_a_primary_rows")
-        metrics["tier_b_fallback_labelable_rows"] = split_summary.get("tier_b_fallback_rows")
-        metrics["no_tier_labelable_rows"] = no_tier_by_split.get(split)
-        metrics["routed_labelable_rows"] = split_summary.get("routed_labelable_rows")
-        if record.get("route_role") in {"fallback_used", "routed_total", "tier_b_fallback_only_total"}:
-            metrics["partial_context_subtype_counts"] = subtype_by_split.get(split, {})
-    return list(records)
 
 
 def build_alpha_ledger_rows(

@@ -7,12 +7,21 @@ allowed_reasons:
   split_not_applicable:
     category: identity
     use_when: "The record is not tied to train, validation, or OOS."
+  not_applicable_for_split:
+    category: identity
+    use_when: "The field does not apply to the row's split or split-level view."
   tier_not_applicable:
     category: identity
     use_when: "The run does not use Tier A, Tier B, or Tier A+B views."
   route_role_not_applicable:
     category: identity
     use_when: "The row is not an MT5 routed or tier-only record."
+  stage_inheritance_not_recorded:
+    category: identity
+    use_when: "The source artifact predates explicit Stage inheritance recording."
+  threshold_not_recorded:
+    category: identity
+    use_when: "The source run did not persist a threshold value or method in this KPI layer."
   python_structural_only_no_mt5_report:
     category: mt5
     use_when: "The work explicitly stopped at Python structural evidence."
@@ -34,15 +43,30 @@ allowed_reasons:
   runtime_telemetry_missing:
     category: source
     use_when: "Runtime summary needed for execution diagnostics is unavailable."
+  python_signal_metric_missing:
+    category: source
+    use_when: "The Python-side signal metric is not present in the source KPI payload."
   equity_curve_missing:
     category: risk
     use_when: "Equity curve data is not available for duration or ulcer calculations."
   trade_list_missing:
     category: trade_diagnostics
     use_when: "Trade-level list is unavailable."
+  mt5_deal_list_empty:
+    category: trade_diagnostics
+    use_when: "The MT5 deal list exists but contains no rows for the requested attribution view."
+  no_long_trades:
+    category: trade_diagnostics
+    use_when: "No long trades exist, so long-side expectancy or shape metrics cannot be computed."
+  no_short_trades:
+    category: trade_diagnostics
+    use_when: "No short trades exist, so short-side expectancy or shape metrics cannot be computed."
   gross_loss_is_zero:
     category: math
     use_when: "Profit factor denominator is zero."
+  profit_attribution_not_separable_from_single_routed_account_path:
+    category: math
+    use_when: "A routed component row comes from one MT5 account path, so per-tier PnL cannot be separated."
   insufficient_trade_count:
     category: judgment
     use_when: "The metric exists but sample size is too small for the requested interpretation."
