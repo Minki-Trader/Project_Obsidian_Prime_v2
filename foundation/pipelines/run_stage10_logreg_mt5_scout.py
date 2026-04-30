@@ -48,21 +48,11 @@ from foundation.alpha.decision_views import (  # noqa: E402
     validate_threshold_rule,
 )
 from foundation.alpha import scout_runner as alpha_scout_runner  # noqa: E402
-from foundation.control_plane import alpha_run_ledgers  # noqa: E402
 from foundation.control_plane import packet_writers  # noqa: E402
 from foundation.control_plane.ledger import (  # noqa: E402
-    ALPHA_LEDGER_COLUMNS,
-    RUN_REGISTRY_COLUMNS,
     io_path as _io_path,
     json_ready as _json_ready,
-    ledger_pairs as _ledger_pairs,
-    ledger_path as _ledger_path,
-    ledger_status as _ledger_status,
-    ledger_value as _ledger_value,
     path_exists as _path_exists,
-    read_csv_rows as _read_csv_rows,
-    upsert_csv_rows as _upsert_csv_rows,
-    write_csv_rows as _write_csv_rows,
 )
 from foundation.control_plane.mt5_kpi_records import (  # noqa: E402
     ROUTING_MODE_A_B_FALLBACK,
@@ -272,321 +262,6 @@ report_name_from_attempt = alpha_scout_runner.report_name_from_attempt
 remove_existing_mt5_report_artifacts = alpha_scout_runner.remove_existing_mt5_report_artifacts
 collect_mt5_strategy_report_artifacts = alpha_scout_runner.collect_mt5_strategy_report_artifacts
 attach_mt5_report_metrics = alpha_scout_runner.attach_mt5_report_metrics
-
-def build_alpha_ledger_rows(
-    *,
-    tier_records: Sequence[Mapping[str, Any]],
-    mt5_kpi_records: Sequence[Mapping[str, Any]],
-    selected_threshold_id: str,
-    run_output_root: Path,
-    external_verification_status: str,
-) -> list[dict[str, str]]:
-    rows: list[dict[str, str]] = []
-
-    for record in tier_records:
-        record_view = str(record.get("record_view"))
-        metrics = record.get("metrics", {})
-        row_view = f"python_{record_view}"
-        rows.append(
-            {
-                "ledger_row_id": f"{RUN_ID}__{row_view}",
-                "stage_id": STAGE_ID,
-                "run_id": RUN_ID,
-                "subrun_id": row_view,
-                "parent_run_id": RUN_ID,
-                "record_view": row_view,
-                "tier_scope": str(record.get("tier_scope")),
-                "kpi_scope": "signal_probability_threshold",
-                "scoreboard_lane": "structural_scout",
-                "status": _ledger_status(record.get("status")),
-                "judgment": "inconclusive_single_split_scout_payload",
-                "path": _ledger_path(record.get("path")),
-                "primary_kpi": _ledger_pairs(
-                    (
-                        ("rows", metrics.get("rows")),
-                        ("signal_coverage", metrics.get("signal_coverage")),
-                        ("signal_count", metrics.get("signal_count")),
-                        ("short", metrics.get("short_count")),
-                        ("long", metrics.get("long_count")),
-                    )
-                ),
-                "guardrail_kpi": _ledger_pairs(
-                    (
-                        ("prob_sum_err", metrics.get("probability_row_sum_max_abs_error")),
-                        ("selected_threshold", selected_threshold_id),
-                        ("threshold_ids", metrics.get("threshold_ids")),
-                        ("subtype_counts", metrics.get("partial_context_subtype_counts")),
-                    )
-                ),
-                "external_verification_status": "out_of_scope_by_claim",
-                "notes": (
-                    "Tier B partial-context fallback-only view"
-                    if record.get("tier_scope") == TIER_B
-                    else "Tier A primary plus Tier B fallback routed Python view"
-                    if record.get("tier_scope") == TIER_AB
-                    else "Tier A full-context primary view"
-                ),
-            }
-        )
-
-    rows.extend(
-        alpha_run_ledgers.build_mt5_alpha_ledger_rows(
-            run_id=RUN_ID,
-            stage_id=STAGE_ID,
-            mt5_kpi_records=mt5_kpi_records,
-            run_output_root=run_output_root,
-            external_verification_status=external_verification_status,
-            tier_b=TIER_B,
-        )
-    )
-    return rows
-
-def materialize_alpha_ledgers(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
-    return alpha_run_ledgers.materialize_alpha_ledgers(
-        stage_run_ledger_path=STAGE_RUN_LEDGER_PATH,
-        project_alpha_ledger_path=PROJECT_ALPHA_LEDGER_PATH,
-        rows=rows,
-    )
-
-
-def materialize_run_registry_row(
-    *,
-    route_coverage: Mapping[str, Any],
-    mt5_kpi_records: Sequence[Mapping[str, Any]],
-    run_output_root: Path,
-    external_verification_status: str,
-    routing_mode: str = ROUTING_MODE_A_B_FALLBACK,
-) -> dict[str, Any]:
-    by_view = {str(record.get("record_view")): record.get("metrics", {}) for record in mt5_kpi_records}
-    validation = by_view.get("mt5_routed_total_validation_is", {})
-    oos = by_view.get("mt5_routed_total_oos", {})
-    a_validation = by_view.get(f"{MT5_RECORD_TIER_A_ONLY_PREFIX}_validation_is", {})
-    a_oos = by_view.get(f"{MT5_RECORD_TIER_A_ONLY_PREFIX}_oos", {})
-    b_validation = by_view.get(f"{MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX}_validation_is", {})
-    b_oos = by_view.get(f"{MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX}_oos", {})
-    mt5_views = (
-        "tier_a_only;tier_b_fallback_only;tier_a_primary_no_fallback"
-        if routing_mode == ROUTING_MODE_A_ONLY
-        else "tier_a_only;tier_b_fallback_only;tier_a_primary_tier_b_fallback"
-    )
-    notes = _ledger_pairs(
-        (
-            ("mt5_views", mt5_views),
-            ("routing_mode", routing_mode),
-            ("tier_b_fallback_rows", route_coverage.get("tier_b_fallback_rows")),
-            ("tier_b_fallback_allowed_subtypes", route_coverage.get("tier_b_fallback_allowed_subtypes")),
-            ("tier_b_fallback_filtered_out_rows", route_coverage.get("tier_b_fallback_filtered_out_rows")),
-            ("no_tier_labelable_rows", route_coverage.get("no_tier_labelable_rows")),
-            ("validation_a_only_net_profit", a_validation.get("net_profit")),
-            ("validation_a_only_pf", a_validation.get("profit_factor")),
-            ("validation_b_only_net_profit", b_validation.get("net_profit")),
-            ("validation_b_only_pf", b_validation.get("profit_factor")),
-            ("validation_net_profit", validation.get("net_profit")),
-            ("validation_pf", validation.get("profit_factor")),
-            ("validation_b_fallback_used", validation.get("tier_b_fallback_used_count")),
-            ("oos_a_only_net_profit", a_oos.get("net_profit")),
-            ("oos_a_only_pf", a_oos.get("profit_factor")),
-            ("oos_b_only_net_profit", b_oos.get("net_profit")),
-            ("oos_b_only_pf", b_oos.get("profit_factor")),
-            ("oos_net_profit", oos.get("net_profit")),
-            ("oos_pf", oos.get("profit_factor")),
-            ("oos_b_fallback_used", oos.get("tier_b_fallback_used_count")),
-            ("external_verification", external_verification_status),
-            ("boundary", "runtime_probe_only"),
-        )
-    )
-    row = {
-        "run_id": RUN_ID,
-        "stage_id": STAGE_ID,
-        "lane": "alpha_runtime_probe",
-        "status": "reviewed" if external_verification_status == "completed" else "payload_only",
-        "judgment": "inconclusive_single_split_scout_mt5_routed_completed"
-        if external_verification_status == "completed"
-        else "inconclusive_single_split_scout_payload",
-        "path": run_output_root.as_posix(),
-        "notes": notes,
-    }
-    return _upsert_csv_rows(RUN_REGISTRY_PATH, RUN_REGISTRY_COLUMNS, [row], key="run_id")
-
-
-
-def build_run_manifest_payload(
-    *,
-    run_id: str,
-    run_number: str,
-    stage_id: str,
-    exploration_label: str,
-    input_refs: Mapping[str, Any],
-    artifacts: Sequence[Mapping[str, Any]],
-    threshold_selection: Mapping[str, Any],
-    tier_records: Sequence[Mapping[str, Any]],
-    onnx_parity: Mapping[str, Any],
-    external_verification_status: str = "out_of_scope_by_claim",
-) -> dict[str, Any]:
-    return {
-        "identity": {
-            "run_id": run_id,
-            "run_number": run_number,
-            "stage_id": stage_id,
-            "exploration_label": exploration_label,
-            "lane": "single_split_scout",
-            "scoreboard_lane": "structural_scout",
-            "model_family": "sklearn_logistic_regression_multiclass",
-        },
-        "inputs": dict(input_refs),
-        "artifacts": list(artifacts),
-        "threshold": dict(threshold_selection),
-        "tier_pair_records": list(tier_records),
-        "onnx_probability_parity": dict(onnx_parity),
-        "external_verification_status": external_verification_status,
-        "judgment_boundary": {
-            "status": "payload_generated_not_reviewed",
-            "claim": "single_split_scout_payload_only",
-            "not_claimed": [
-                "alpha_quality",
-                "live_readiness",
-                "runtime_authority_expansion",
-                "operating_promotion",
-            ],
-        },
-    }
-
-
-def build_kpi_record_payload(
-    *,
-    run_id: str,
-    stage_id: str,
-    threshold_sweep: pd.DataFrame,
-    threshold_sweeps: Mapping[str, pd.DataFrame] | None = None,
-    tier_records: Sequence[Mapping[str, Any]],
-    onnx_parity: Mapping[str, Any],
-    mt5_kpi_records: Sequence[Mapping[str, Any]] | None = None,
-) -> dict[str, Any]:
-    best = select_threshold_from_sweep(threshold_sweep) if not threshold_sweep.empty else {}
-    mt5_kpi_records = list(mt5_kpi_records or [])
-    return {
-        "run_id": run_id,
-        "stage_id": stage_id,
-        "scoreboard_lane": "runtime_probe",
-        "kpi_scope": "signal_probability_threshold_trading_risk_execution",
-        "signal": {
-            "tier_pair_records": [
-                {
-                    "record_view": record.get("record_view"),
-                    "tier_scope": record.get("tier_scope"),
-                    "signal_count": record.get("metrics", {}).get("signal_count"),
-                    "short_count": record.get("metrics", {}).get("short_count"),
-                    "long_count": record.get("metrics", {}).get("long_count"),
-                    "signal_coverage": record.get("metrics", {}).get("signal_coverage"),
-                }
-                for record in tier_records
-            ],
-        },
-        "probability": {
-            "onnx_probability_parity_passed": onnx_parity.get("passed"),
-            "onnx_probability_max_abs_diff": onnx_parity.get("max_abs_diff"),
-            "row_sum_guardrail": [
-                {
-                    "record_view": record.get("record_view"),
-                    "tier_scope": record.get("tier_scope"),
-                    "probability_row_sum_max_abs_error": record.get("metrics", {}).get("probability_row_sum_max_abs_error"),
-                }
-                for record in tier_records
-            ],
-        },
-        "threshold": {
-            "selection_scope": "validation_is_routed_tier_a_primary_tier_b_fallback_only",
-            "selected_threshold_id": best.get("threshold_id"),
-            "directional_hit_rate": best.get("directional_hit_rate"),
-            "coverage": best.get("coverage"),
-            "sweeps": {
-                view: {
-                    "rows": int(len(sweep)),
-                    "best": select_threshold_from_sweep(sweep) if not sweep.empty else {},
-                }
-                for view, sweep in (threshold_sweeps or {"tier_ab_combined": threshold_sweep}).items()
-            },
-        },
-        "routing": {
-            "routing_mode": "tier_a_primary_tier_b_fallback",
-            "primary_tier": TIER_A,
-            "fallback_tier": TIER_B,
-            "route_source_required": True,
-            "fallback_reason_required": True,
-            "records": [
-                {
-                    "record_view": record.get("record_view"),
-                    "tier_scope": record.get("tier_scope"),
-                    "split": record.get("split"),
-                    "route_role": record.get("route_role"),
-                    "aggregation": record.get("metrics", {}).get("aggregation"),
-                    "profit_attribution": record.get("metrics", {}).get("profit_attribution"),
-                    "route_bar_count": record.get("metrics", {}).get("route_bar_count"),
-                    "route_share": record.get("metrics", {}).get("route_share"),
-                    "partial_context_subtype_counts": record.get("metrics", {}).get("partial_context_subtype_counts"),
-                    "no_tier_labelable_rows": record.get("metrics", {}).get("no_tier_labelable_rows"),
-                    "routed_labelable_rows": record.get("metrics", {}).get("routed_labelable_rows"),
-                }
-                for record in mt5_kpi_records
-            ],
-        },
-        "trading": [
-            {
-                "record_view": record.get("record_view"),
-                "tier_scope": record.get("tier_scope"),
-                "split": record.get("split"),
-                "net_profit": record.get("metrics", {}).get("net_profit"),
-                "profit_factor": record.get("metrics", {}).get("profit_factor"),
-                "expectancy": record.get("metrics", {}).get("expectancy"),
-                "trade_count": record.get("metrics", {}).get("trade_count"),
-                "win_rate_percent": record.get("metrics", {}).get("win_rate_percent"),
-            }
-            for record in mt5_kpi_records
-        ],
-        "risk": [
-            {
-                "record_view": record.get("record_view"),
-                "tier_scope": record.get("tier_scope"),
-                "split": record.get("split"),
-                "max_drawdown_amount": record.get("metrics", {}).get("max_drawdown_amount"),
-                "max_drawdown_percent": record.get("metrics", {}).get("max_drawdown_percent"),
-                "recovery_factor": record.get("metrics", {}).get("recovery_factor"),
-            }
-            for record in mt5_kpi_records
-        ],
-        "execution": [
-            {
-                "record_view": record.get("record_view"),
-                "tier_scope": record.get("tier_scope"),
-                "split": record.get("split"),
-                "fill_count": record.get("metrics", {}).get("fill_count"),
-                "reject_count": record.get("metrics", {}).get("reject_count"),
-                "skip_count": record.get("metrics", {}).get("skip_count"),
-                "fill_rate": record.get("metrics", {}).get("fill_rate"),
-            }
-            for record in mt5_kpi_records
-        ],
-        "judgment_read": {
-            "judgment": "inconclusive_single_split_scout_mt5_routed_completed" if mt5_kpi_records else "inconclusive_payload_only",
-            "boundary": "runtime_probe only; not live readiness, runtime authority expansion, or operating promotion.",
-            "mt5_record_count": len(mt5_kpi_records),
-        },
-        "tier_pair_records": list(tier_records),
-    }
-
-
-def materialize_manifest_and_kpi(
-    output_root: Path,
-    *,
-    manifest_payload: Mapping[str, Any],
-    kpi_payload: Mapping[str, Any],
-) -> dict[str, Any]:
-    return packet_writers.materialize_manifest_and_kpi(
-        output_root,
-        manifest_payload=manifest_payload,
-        kpi_payload=kpi_payload,
-    )
-
 
 def run_stage10_logreg_mt5_scout(
     *,
@@ -822,405 +497,106 @@ def run_stage10_logreg_mt5_scout(
         "tier_b": tier_b_onnx_parity,
     }
 
-    split_specs = {
-        "validation_is": ("validation", "2025.01.01", "2025.10.01"),
-        "oos": ("oos", "2025.10.01", "2026.04.14"),
-    }
-    mt5_attempts: list[dict[str, Any]] = []
-    common_copies: list[dict[str, Any]] = []
-    _io_path(mt5_root).mkdir(parents=True, exist_ok=True)
-    common_copies.append(copy_to_common_files(common_files_root, tier_a_onnx_path, common_ref("models", tier_a_onnx_path.name)))
-    common_copies.append(copy_to_common_files(common_files_root, tier_b_onnx_path, common_ref("models", tier_b_onnx_path.name)))
-
-    mt5_feature_matrices: dict[tuple[str, str], dict[str, Any]] = {}
-    for split_label, (source_split, from_date, to_date) in split_specs.items():
-        tier_a_split = tier_a_eval_frame.loc[tier_a_eval_frame["split"].astype(str).eq(source_split)].copy()
-        tier_b_split = tier_b_eval_frame.loc[tier_b_eval_frame["split"].astype(str).eq(source_split)].copy()
-        tier_a_feature_matrix_path = mt5_root / f"tier_a_{split_label}_feature_matrix.csv"
-        tier_b_feature_matrix_path = mt5_root / f"tier_b_{split_label}_feature_matrix.csv"
-        tier_a_matrix_payload = export_mt5_feature_matrix_csv(
-            tier_a_split,
-            tier_a_feature_order,
-            tier_a_feature_matrix_path,
-            metadata_columns=("route_role", "partial_context_subtype", "missing_feature_group_mask", "available_feature_group_mask"),
-        )
-        tier_b_matrix_payload = export_mt5_feature_matrix_csv(
-            tier_b_split,
-            tier_b_feature_order,
-            tier_b_feature_matrix_path,
-            metadata_columns=("route_role", "partial_context_subtype", "missing_feature_group_mask", "available_feature_group_mask"),
-        )
-        common_copies.append(
-            copy_to_common_files(common_files_root, tier_a_feature_matrix_path, common_ref("features", tier_a_feature_matrix_path.name))
-        )
-        common_copies.append(
-            copy_to_common_files(common_files_root, tier_b_feature_matrix_path, common_ref("features", tier_b_feature_matrix_path.name))
-        )
-        mt5_feature_matrices[(TIER_A, split_label)] = tier_a_matrix_payload
-        mt5_feature_matrices[(TIER_B, split_label)] = tier_b_matrix_payload
-        tier_a_attempt = materialize_mt5_attempt_files(
-            run_output_root=run_output_root,
-            tier_name=TIER_A,
-            split_name=split_label,
-            local_onnx_path=tier_a_onnx_path,
-            local_feature_matrix_path=tier_a_feature_matrix_path,
-            feature_count=len(tier_a_feature_order),
-            feature_order_hash=tier_a_feature_hash,
-            rule=rule,
-            from_date=from_date,
-            to_date=to_date,
-            stem_prefix="tier_a_only",
-            record_view_prefix=MT5_RECORD_TIER_A_ONLY_PREFIX,
-            primary_active_tier="tier_a",
-            attempt_role="tier_only_total",
-            max_hold_bars=max_hold_bars,
-        )
-        tier_a_attempt["feature_matrix"] = tier_a_matrix_payload
-        mt5_attempts.append(tier_a_attempt)
-
-        tier_b_attempt = materialize_mt5_attempt_files(
-            run_output_root=run_output_root,
-            tier_name=TIER_B,
-            split_name=split_label,
-            local_onnx_path=tier_b_onnx_path,
-            local_feature_matrix_path=tier_b_feature_matrix_path,
-            feature_count=len(tier_b_feature_order),
-            feature_order_hash=tier_b_feature_hash,
-            rule=tier_b_rule,
-            from_date=from_date,
-            to_date=to_date,
-            stem_prefix="tier_b_fallback_only",
-            record_view_prefix=MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
-            primary_active_tier="tier_b_fallback",
-            attempt_role="tier_b_fallback_only_total",
-            max_hold_bars=max_hold_bars,
-        )
-        tier_b_attempt["feature_matrix"] = tier_b_matrix_payload
-        mt5_attempts.append(tier_b_attempt)
-
-        routed_attempt = materialize_mt5_routed_attempt_files(
-            run_output_root=run_output_root,
-            split_name=split_label,
-            primary_onnx_path=tier_a_onnx_path,
-            primary_feature_matrix_path=tier_a_feature_matrix_path,
-            primary_feature_count=len(tier_a_feature_order),
-            primary_feature_order_hash=tier_a_feature_hash,
-            fallback_onnx_path=tier_b_onnx_path,
-            fallback_feature_matrix_path=tier_b_feature_matrix_path,
-            fallback_feature_count=len(tier_b_feature_order),
-            fallback_feature_order_hash=tier_b_feature_hash,
-            rule=rule,
-            fallback_rule=tier_b_rule,
-            max_hold_bars=max_hold_bars,
-            fallback_enabled=routed_fallback_enabled,
-            from_date=from_date,
-            to_date=to_date,
-        )
-        routed_attempt["primary_feature_matrix"] = tier_a_matrix_payload
-        routed_attempt["fallback_feature_matrix"] = tier_b_matrix_payload
-        mt5_attempts.append(routed_attempt)
-
-    compile_payload = None
-    mt5_execution_results: list[dict[str, Any]] = []
-    if attempt_mt5:
-        for attempt in mt5_attempts:
-            for common_output_key in ("common_telemetry_path", "common_summary_path"):
-                output_path = common_files_root / Path(str(attempt[common_output_key]))
-                if _path_exists(output_path):
-                    _io_path(output_path).unlink()
-            remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
-        compile_payload = compile_mql5_ea(metaeditor_path, EA_SOURCE_PATH, run_output_root / "mt5" / "mt5_compile.log")
-        if compile_payload["status"] == "completed":
-            for attempt in mt5_attempts:
-                result = run_mt5_tester(
-                    terminal_path,
-                    Path(attempt["ini"]["path"]),
-                    set_path=Path(attempt["set"]["path"]),
-                    tester_profile_set_path=tester_profile_root / EA_TESTER_SET_NAME,
-                    tester_profile_ini_path=tester_profile_root / mt5_short_profile_ini_name(attempt["tier"], attempt["split"]),
-                )
-                result["tier"] = attempt["tier"]
-                result["split"] = attempt["split"]
-                if "routing_mode" in attempt:
-                    result["routing_mode"] = attempt["routing_mode"]
-                if "attempt_role" in attempt:
-                    result["attempt_role"] = attempt["attempt_role"]
-                if "record_view_prefix" in attempt:
-                    result["record_view_prefix"] = attempt["record_view_prefix"]
-                result["ini_path"] = attempt["ini"]["path"]
-                result["runtime_outputs"] = wait_for_mt5_runtime_outputs(common_files_root, attempt)
-                if result["runtime_outputs"]["status"] != "completed":
-                    result["status"] = "blocked"
-                mt5_execution_results.append(result)
-
-    mt5_report_records = collect_mt5_strategy_report_artifacts(
+    mt5_bundle = alpha_scout_runner.materialize_mt5_probe_bundle(
+        run_output_root=run_output_root,
+        common_files_root=common_files_root,
         terminal_data_root=terminal_data_root,
-        run_output_root=run_output_root,
-        attempts=mt5_attempts,
-    ) if attempt_mt5 else []
-    attach_mt5_report_metrics(mt5_execution_results, mt5_report_records)
-    mt5_kpi_records = build_mt5_kpi_records(mt5_execution_results)
-    mt5_kpi_records = enrich_mt5_kpi_records_with_route_coverage(mt5_kpi_records, route_coverage)
-    mt5_module_hashes = mt5_runtime_module_hashes()
-
-    artifacts = [
-        {"role": "tier_a_sklearn_model", "path": tier_a_model_path.as_posix(), "format": "joblib", "sha256": sha256_file(tier_a_model_path)},
-        {"role": "tier_b_sklearn_model", "path": tier_b_model_path.as_posix(), "format": "joblib", "sha256": sha256_file(tier_b_model_path)},
-        {"role": "tier_a_predictions", "path": tier_a_predictions_path.as_posix(), "format": "parquet", "sha256": sha256_file(tier_a_predictions_path)},
-        {"role": "tier_b_predictions", "path": tier_b_predictions_path.as_posix(), "format": "parquet", "sha256": sha256_file(tier_b_predictions_path)},
-        {"role": "no_tier_route_rows", "path": no_tier_route_path.as_posix(), "format": "parquet", "sha256": sha256_file(no_tier_route_path)},
-        {"role": "route_coverage_summary", "path": route_coverage_path.as_posix(), "format": "json", "sha256": sha256_file(route_coverage_path)},
-        {"role": "combined_predictions", "path": combined_predictions_path.as_posix(), "format": "parquet", "sha256": sha256_file(combined_predictions_path)},
-        {"role": "tier_b_core42_feature_order", "path": tier_b_feature_order_path_run.as_posix(), "format": "txt", "sha256": sha256_file(tier_b_feature_order_path_run)},
-        {"role": "threshold_sweep", "path": threshold_sweep_path.as_posix(), "format": "csv", "sha256": sha256_file(threshold_sweep_path)},
-        *[
-            {
-                "role": f"threshold_sweep_{view_name}",
-                "path": path.as_posix(),
-                "format": "csv",
-                "sha256": sha256_file(path),
-            }
-            for view_name, path in threshold_sweep_paths.items()
-        ],
-        {"role": "tier_a_onnx_model", **tier_a_onnx_export, "format": "onnx"},
-        {"role": "tier_b_onnx_model", **tier_b_onnx_export, "format": "onnx"},
-        {"role": "mt5_attempts", "attempts": mt5_attempts},
-        {"role": "mt5_common_file_copies", "copies": common_copies},
-        {"role": "mt5_runtime_module_hashes", "modules": mt5_module_hashes},
-        {"role": "mt5_strategy_tester_reports", "reports": mt5_report_records},
-        {"role": "tier_prediction_views", "views": tier_outputs},
-    ]
-    input_refs = {
-        "tier_a": {
-            "model_input_dataset_id": MODEL_INPUT_DATASET_ID,
-            "feature_set_id": FEATURE_SET_ID,
-            "model_input_path": model_input_path.as_posix(),
-            "model_input_sha256": sha256_file(model_input_path),
-            "feature_order_path": feature_order_path.as_posix(),
-            "feature_order_sha256": sha256_file(feature_order_path),
-            "feature_count": len(tier_a_feature_order),
-            "feature_order_hash": tier_a_feature_hash,
-            "source_model_path": stage07_model_path.as_posix(),
-            "source_model_sha256": sha256_file(stage07_model_path),
-        },
-        "tier_b": {
-            "model_input_dataset_id": TIER_B_PARTIAL_CONTEXT_DATASET_ID,
-            "feature_set_id": TIER_B_PARTIAL_CONTEXT_FEATURE_SET_ID,
-            "model_input_path": "materialized_in_run_from_raw_feature_frame_and_label_contract",
-            "model_input_sha256": None,
-            "feature_order_path": tier_b_feature_order_path_run.as_posix(),
-            "feature_order_sha256": sha256_file(tier_b_feature_order_path_run),
-            "feature_count": len(tier_b_feature_order),
-            "feature_order_hash": tier_b_feature_hash,
-            "policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID,
-            "boundary": "partial-context fallback surface; Stage04 56-feature quarantine artifact is a reference only",
-            "route_coverage": route_coverage,
-            "stage04_quarantine_reference": {
-                "model_input_dataset_id": TIER_B_MODEL_INPUT_DATASET_ID,
-                "feature_set_id": TIER_B_FEATURE_SET_ID,
-                "model_input_path": tier_b_model_input_path.as_posix(),
-                "model_input_sha256": sha256_file(tier_b_model_input_path),
-                "feature_order_path": tier_b_feature_order_path.as_posix(),
-                "feature_order_sha256": sha256_file(tier_b_feature_order_path),
-            },
-        },
-    }
-    expected_mt5_kpi_record_count = sum(
-        3 if attempt.get("routing_mode") == "tier_a_primary_tier_b_fallback" else 1 for attempt in mt5_attempts
-    )
-    mt5_runtime_completed = bool(mt5_execution_results) and all(item["status"] == "completed" for item in mt5_execution_results)
-    mt5_reports_completed = len(mt5_kpi_records) >= expected_mt5_kpi_record_count and all(
-        item.get("status") == "completed" for item in mt5_kpi_records
-    )
-    external_status = "completed" if mt5_runtime_completed and mt5_reports_completed else (
-        "blocked" if attempt_mt5 else "out_of_scope_by_claim"
-    )
-    ledger_rows = build_alpha_ledger_rows(
-        tier_records=tier_records,
-        mt5_kpi_records=mt5_kpi_records,
-        selected_threshold_id=str(threshold_selection["threshold_id"]),
-        run_output_root=run_output_root,
-        external_verification_status=external_status,
-    )
-    ledger_payload = materialize_alpha_ledgers(ledger_rows)
-    run_registry_payload = materialize_run_registry_row(
+        tester_profile_root=tester_profile_root,
+        mt5_root=mt5_root,
+        tier_a_onnx_path=tier_a_onnx_path,
+        tier_b_onnx_path=tier_b_onnx_path,
+        tier_a_eval_frame=tier_a_eval_frame,
+        tier_b_eval_frame=tier_b_eval_frame,
+        tier_a_feature_order=tier_a_feature_order,
+        tier_b_feature_order=tier_b_feature_order,
+        tier_a_feature_hash=tier_a_feature_hash,
+        tier_b_feature_hash=tier_b_feature_hash,
+        tier_a_rule=tier_a_rule,
+        tier_b_rule=tier_b_rule,
         route_coverage=route_coverage,
-        mt5_kpi_records=mt5_kpi_records,
-        run_output_root=run_output_root,
-        external_verification_status=external_status,
-        routing_mode=routing_mode,
+        routed_fallback_enabled=routed_fallback_enabled,
+        attempt_mt5=attempt_mt5,
+        terminal_path=terminal_path,
+        metaeditor_path=metaeditor_path,
+        max_hold_bars=max_hold_bars,
+        tier_a_only_prefix=MT5_RECORD_TIER_A_ONLY_PREFIX,
+        tier_b_fallback_only_prefix=MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
     )
-    artifacts.extend(
-        [
-            {"role": "stage_run_ledger", **ledger_payload["stage_run_ledger"]},
-            {"role": "project_alpha_run_ledger", **ledger_payload["project_alpha_run_ledger"]},
-            {"role": "project_run_registry", **run_registry_payload},
-        ]
-    )
-    manifest = build_run_manifest_payload(
+    mt5_attempts = mt5_bundle["mt5_attempts"]
+    common_copies = mt5_bundle["common_copies"]
+    compile_payload = mt5_bundle["compile_payload"]
+    mt5_execution_results = mt5_bundle["execution_results"]
+    mt5_report_records = mt5_bundle["report_records"]
+    mt5_kpi_records = mt5_bundle["kpi_records"]
+    mt5_module_hashes = mt5_bundle["module_hashes"]
+
+    return packet_writers.materialize_alpha_scout_run_outputs(
         run_id=RUN_ID,
         run_number=RUN_NUMBER,
         stage_id=STAGE_ID,
         exploration_label=EXPLORATION_LABEL,
-        input_refs=input_refs,
-        artifacts=artifacts,
+        run_output_root=run_output_root,
+        reports_root=reports_root,
+        model_input_path=model_input_path,
+        feature_order_path=feature_order_path,
+        stage07_model_path=stage07_model_path,
+        tier_b_model_input_path=tier_b_model_input_path,
+        tier_b_feature_order_path=tier_b_feature_order_path,
+        tier_a_model_path=tier_a_model_path,
+        tier_b_model_path=tier_b_model_path,
+        tier_a_predictions_path=tier_a_predictions_path,
+        tier_b_predictions_path=tier_b_predictions_path,
+        no_tier_route_path=no_tier_route_path,
+        route_coverage_path=route_coverage_path,
+        combined_predictions_path=combined_predictions_path,
+        tier_b_feature_order_path_run=tier_b_feature_order_path_run,
+        threshold_sweep_path=threshold_sweep_path,
+        threshold_sweep_paths=threshold_sweep_paths,
+        tier_a_onnx_export=tier_a_onnx_export,
+        tier_b_onnx_export=tier_b_onnx_export,
+        tier_outputs=tier_outputs,
+        model_input_dataset_id=MODEL_INPUT_DATASET_ID,
+        feature_set_id=FEATURE_SET_ID,
+        tier_b_model_input_dataset_id=TIER_B_MODEL_INPUT_DATASET_ID,
+        tier_b_feature_set_id=TIER_B_FEATURE_SET_ID,
+        tier_b_partial_context_dataset_id=TIER_B_PARTIAL_CONTEXT_DATASET_ID,
+        tier_b_partial_context_feature_set_id=TIER_B_PARTIAL_CONTEXT_FEATURE_SET_ID,
+        tier_b_partial_context_policy_id=TIER_B_PARTIAL_CONTEXT_POLICY_ID,
+        tier_a_feature_order=tier_a_feature_order,
+        tier_b_feature_order=tier_b_feature_order,
+        tier_a_feature_hash=tier_a_feature_hash,
+        tier_b_feature_hash=tier_b_feature_hash,
+        route_coverage=route_coverage,
         threshold_selection=threshold_selection,
-        tier_records=tier_records,
-        onnx_parity=onnx_parity,
-        external_verification_status=external_status,
-    )
-    manifest["routing_design"] = {
-        "routing_mode": routing_detail,
-        "primary_tier": TIER_A,
-        "fallback_enabled": bool(routed_fallback_enabled),
-        "fallback_tier": TIER_B if routed_fallback_enabled else None,
-        "fallback_policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID if routed_fallback_enabled else "out_of_scope_by_claim",
-        "fallback_allowed_subtypes": list(allowed_fallback_subtypes) if allowed_fallback_subtypes else None,
-        "route_coverage": route_coverage,
-    }
-    manifest["mt5"] = {
-        "attempted": bool(attempt_mt5),
-        "compile": compile_payload,
-        "execution_results": mt5_execution_results,
-        "strategy_tester_reports": mt5_report_records,
-        "kpi_records": mt5_kpi_records,
-        "module_hashes": mt5_module_hashes,
-        "tester_defaults": {
-            "symbol": "US100",
-            "period": "M5",
-            "model": 4,
-            "deposit": 500,
-            "leverage": "1:100",
-            "fixed_lot": 0.1,
-            "max_hold_bars": int(max_hold_bars),
-            "max_concurrent_positions": 1,
-        },
-    }
-    kpi = build_kpi_record_payload(
-        run_id=RUN_ID,
-        stage_id=STAGE_ID,
         threshold_sweep=threshold_sweep,
         threshold_sweeps=threshold_sweeps,
         tier_records=tier_records,
         onnx_parity=onnx_parity,
+        mt5_attempts=mt5_attempts,
+        common_copies=common_copies,
+        mt5_report_records=mt5_report_records,
         mt5_kpi_records=mt5_kpi_records,
+        mt5_module_hashes=mt5_module_hashes,
+        compile_payload=compile_payload,
+        mt5_execution_results=mt5_execution_results,
+        attempt_mt5=attempt_mt5,
+        max_hold_bars=max_hold_bars,
+        routed_fallback_enabled=routed_fallback_enabled,
+        routing_mode=routing_mode,
+        routing_detail=routing_detail,
+        allowed_fallback_subtypes=allowed_fallback_subtypes,
+        session_slice_id=session_slice_id,
+        tier_a_predictions_count=len(tier_a_predictions),
+        tier_b_predictions_count=len(tier_b_predictions),
+        no_tier_eval_count=len(no_tier_eval_frame),
+        tier_a_rule=tier_a_rule,
+        tier_b_rule=tier_b_rule,
+        stage_run_ledger_path=STAGE_RUN_LEDGER_PATH,
+        project_alpha_ledger_path=PROJECT_ALPHA_LEDGER_PATH,
+        run_registry_path=RUN_REGISTRY_PATH,
+        tier_a_only_prefix=MT5_RECORD_TIER_A_ONLY_PREFIX,
+        tier_b_fallback_only_prefix=MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
     )
-    kpi["threshold"]["selected_threshold_id"] = threshold_selection["threshold_id"]
-    kpi["threshold"]["actual_selection"] = threshold_selection
-    kpi["routing"]["routing_mode"] = routing_detail
-    kpi["routing"]["fallback_enabled"] = bool(routed_fallback_enabled)
-    kpi["routing"]["route_coverage_design"] = route_coverage
-    kpi["mt5"] = {
-        "scoreboard_lane": "runtime_probe",
-        "external_verification_status": external_status,
-        "compile": compile_payload,
-        "execution_results": mt5_execution_results,
-        "strategy_tester_reports": mt5_report_records,
-        "kpi_records": mt5_kpi_records,
-        "attempt_count": len(mt5_attempts),
-    }
-    payload_paths = materialize_manifest_and_kpi(run_output_root, manifest_payload=manifest, kpi_payload=kpi)
-    summary_path = run_output_root / "summary.json"
-    result_summary_path = reports_root / "result_summary.md"
-    summary = {
-        "run_id": RUN_ID,
-        "stage_id": STAGE_ID,
-        "status": "completed_payload" if onnx_parity["passed"] else "invalid_payload",
-        "judgment": "inconclusive_single_split_scout_payload" if external_status != "completed" else "inconclusive_single_split_scout_mt5_routed_completed",
-        "selected_threshold": threshold_selection,
-        "tier_records": tier_records,
-        "onnx_parity": onnx_parity,
-        "external_verification_status": external_status,
-        "mt5_attempted": bool(attempt_mt5),
-        "mt5_execution_results": mt5_execution_results,
-        "mt5_kpi_records": mt5_kpi_records,
-        "ledger_rows": ledger_rows,
-        "ledger_payload": ledger_payload,
-        "run_registry_payload": run_registry_payload,
-        "boundary": "single_split_scout only; not alpha quality, live readiness, runtime authority expansion, or operating promotion",
-    }
-    write_json(summary_path, summary)
-    _io_path(result_summary_path.parent).mkdir(parents=True, exist_ok=True)
-    mt5_records_by_view = {str(record.get("record_view")): record for record in mt5_kpi_records}
-
-    def result_metric(record_view: str, metric_name: str) -> Any:
-        record = mt5_records_by_view.get(record_view, {})
-        return record.get("metrics", {}).get(metric_name)
-
-    routed_view_label = (
-        "`Tier A+B routed total(Tier A+B 라우팅 전체)`"
-        if routed_fallback_enabled
-        else "`Tier A-only routed total(Tier A 단독 라우팅 전체)`"
-    )
-
-    result_summary_lines = [
-        f"# Stage 10 {RUN_NUMBER} LogReg Threshold MT5 Scout(로지스틱 임계값 MT5 탐색)",
-        "",
-        f"- run_id(실행 ID): `{RUN_ID}`",
-        f"- selected threshold(선택 임계값): `{threshold_selection['threshold_id']}`",
-        f"- Tier A rule(Tier A 규칙): `{tier_a_rule.threshold_id}`",
-        f"- Tier B fallback rule(Tier B 대체 규칙): `{tier_b_rule.threshold_id}`",
-        f"- routed fallback enabled(라우팅 대체 사용): `{bool(routed_fallback_enabled)}`",
-        f"- Tier B fallback allowed subtypes(Tier B 대체 허용 하위유형): "
-        f"`{list(allowed_fallback_subtypes) if allowed_fallback_subtypes else 'all'}`",
-        f"- session slice(시간대 조각): `{session_slice_id or 'full'}`",
-        f"- max hold bars(최대 보유 봉 수): `{int(max_hold_bars)}`",
-        f"- external verification status(외부 검증 상태): `{external_status}`",
-        f"- Tier A rows(Tier A 행): `{len(tier_a_predictions)}`",
-        f"- Tier B fallback rows(Tier B 대체 행): `{len(tier_b_predictions)}`",
-        f"- no_tier labelable rows(티어 없음 라벨 가능 행): `{len(no_tier_eval_frame)}`",
-        f"- MT5 KPI records(MT5 핵심 성과 지표 기록): `{len(mt5_kpi_records)}`",
-        "- MT5 comparison views(MT5 비교 보기): `Tier A only(Tier A 단독)`, "
-        "`Tier B fallback-only(Tier B 대체 구간 단독)`, "
-        f"{routed_view_label}",
-        f"- Tier B fallback subtype counts(Tier B 대체 하위유형 수): `{route_coverage.get('tier_b_fallback_by_subtype', {})}`",
-        "",
-        "## Validation IS(검증 표본내)",
-        "",
-        f"- Tier A only net profit(Tier A 단독 순수익): `{result_metric('mt5_tier_a_only_validation_is', 'net_profit')}`",
-        f"- Tier A only profit factor(Tier A 단독 수익 팩터): `{result_metric('mt5_tier_a_only_validation_is', 'profit_factor')}`",
-        f"- Tier B fallback-only net profit(Tier B 대체 구간 단독 순수익): `{result_metric('mt5_tier_b_fallback_only_validation_is', 'net_profit')}`",
-        f"- Tier B fallback-only profit factor(Tier B 대체 구간 단독 수익 팩터): `{result_metric('mt5_tier_b_fallback_only_validation_is', 'profit_factor')}`",
-        f"- Routed net profit(라우팅 순수익): `{result_metric('mt5_routed_total_validation_is', 'net_profit')}`",
-        f"- Routed profit factor(라우팅 수익 팩터): `{result_metric('mt5_routed_total_validation_is', 'profit_factor')}`",
-        f"- Routed Tier A used(라우팅 Tier A 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_a_used_count')}`",
-        f"- Routed Tier B fallback used(라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_validation_is', 'tier_b_fallback_used_count')}`",
-        "",
-        "## OOS(표본외)",
-        "",
-        f"- Tier A only net profit(Tier A 단독 순수익): `{result_metric('mt5_tier_a_only_oos', 'net_profit')}`",
-        f"- Tier A only profit factor(Tier A 단독 수익 팩터): `{result_metric('mt5_tier_a_only_oos', 'profit_factor')}`",
-        f"- Tier B fallback-only net profit(Tier B 대체 구간 단독 순수익): `{result_metric('mt5_tier_b_fallback_only_oos', 'net_profit')}`",
-        f"- Tier B fallback-only profit factor(Tier B 대체 구간 단독 수익 팩터): `{result_metric('mt5_tier_b_fallback_only_oos', 'profit_factor')}`",
-        f"- Routed net profit(라우팅 순수익): `{result_metric('mt5_routed_total_oos', 'net_profit')}`",
-        f"- Routed profit factor(라우팅 수익 팩터): `{result_metric('mt5_routed_total_oos', 'profit_factor')}`",
-        f"- Routed Tier A used(라우팅 Tier A 사용): `{result_metric('mt5_routed_total_oos', 'tier_a_used_count')}`",
-        f"- Routed Tier B fallback used(라우팅 Tier B 대체 사용): `{result_metric('mt5_routed_total_oos', 'tier_b_fallback_used_count')}`",
-        "",
-        "## Boundary(경계)",
-        "",
-        "`single_split_scout(단일 분할 탐색)`이며 alpha quality(알파 품질), "
-        "live readiness(실거래 준비), runtime authority expansion(런타임 권위 확장), "
-        "operating promotion(운영 승격)을 주장하지 않는다.",
-        "",
-    ]
-    _io_path(result_summary_path).write_text("\n".join(result_summary_lines), encoding="utf-8-sig")
-
-    return {
-        "status": "ok" if onnx_parity["passed"] else "failed",
-        "run_id": RUN_ID,
-        "run_output_root": run_output_root.as_posix(),
-        "threshold_id": str(threshold_selection["threshold_id"]),
-        "onnx_parity": onnx_parity,
-        "external_verification_status": external_status,
-        "mt5_attempted": attempt_mt5,
-        "payload_paths": payload_paths,
-        "summary_path": summary_path.as_posix(),
-        "result_summary_path": result_summary_path.as_posix(),
-        "ledger_payload": ledger_payload,
-        "run_registry_payload": run_registry_payload,
-    }
-
 
 def threshold_rule_from_cli(
     *,

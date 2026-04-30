@@ -465,6 +465,183 @@ def materialize_mt5_routed_attempt_files(
     }
 
 
+def materialize_mt5_probe_bundle(
+    *,
+    run_output_root: Path,
+    common_files_root: Path,
+    terminal_data_root: Path,
+    tester_profile_root: Path,
+    mt5_root: Path,
+    tier_a_onnx_path: Path,
+    tier_b_onnx_path: Path,
+    tier_a_eval_frame: pd.DataFrame,
+    tier_b_eval_frame: pd.DataFrame,
+    tier_a_feature_order: Sequence[str],
+    tier_b_feature_order: Sequence[str],
+    tier_a_feature_hash: str,
+    tier_b_feature_hash: str,
+    tier_a_rule: ThresholdRule,
+    tier_b_rule: ThresholdRule,
+    route_coverage: Mapping[str, Any],
+    routed_fallback_enabled: bool,
+    attempt_mt5: bool,
+    terminal_path: Path,
+    metaeditor_path: Path,
+    max_hold_bars: int = 12,
+    tier_a_only_prefix: str = MT5_RECORD_TIER_A_ONLY_PREFIX,
+    tier_b_fallback_only_prefix: str = MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
+) -> dict[str, Any]:
+    split_specs = {
+        "validation_is": ("validation", "2025.01.01", "2025.10.01"),
+        "oos": ("oos", "2025.10.01", "2026.04.14"),
+    }
+    mt5_attempts: list[dict[str, Any]] = []
+    common_copies: list[dict[str, Any]] = []
+    _io_path(mt5_root).mkdir(parents=True, exist_ok=True)
+    common_copies.append(copy_to_common_files(common_files_root, tier_a_onnx_path, common_ref("models", tier_a_onnx_path.name)))
+    common_copies.append(copy_to_common_files(common_files_root, tier_b_onnx_path, common_ref("models", tier_b_onnx_path.name)))
+
+    for split_label, (source_split, from_date, to_date) in split_specs.items():
+        tier_a_split = tier_a_eval_frame.loc[tier_a_eval_frame["split"].astype(str).eq(source_split)].copy()
+        tier_b_split = tier_b_eval_frame.loc[tier_b_eval_frame["split"].astype(str).eq(source_split)].copy()
+        tier_a_feature_matrix_path = mt5_root / f"tier_a_{split_label}_feature_matrix.csv"
+        tier_b_feature_matrix_path = mt5_root / f"tier_b_{split_label}_feature_matrix.csv"
+        tier_a_matrix_payload = export_mt5_feature_matrix_csv(
+            tier_a_split,
+            tier_a_feature_order,
+            tier_a_feature_matrix_path,
+            metadata_columns=("route_role", "partial_context_subtype", "missing_feature_group_mask", "available_feature_group_mask"),
+        )
+        tier_b_matrix_payload = export_mt5_feature_matrix_csv(
+            tier_b_split,
+            tier_b_feature_order,
+            tier_b_feature_matrix_path,
+            metadata_columns=("route_role", "partial_context_subtype", "missing_feature_group_mask", "available_feature_group_mask"),
+        )
+        common_copies.append(
+            copy_to_common_files(common_files_root, tier_a_feature_matrix_path, common_ref("features", tier_a_feature_matrix_path.name))
+        )
+        common_copies.append(
+            copy_to_common_files(common_files_root, tier_b_feature_matrix_path, common_ref("features", tier_b_feature_matrix_path.name))
+        )
+        tier_a_attempt = materialize_mt5_attempt_files(
+            run_output_root=run_output_root,
+            tier_name=TIER_A,
+            split_name=split_label,
+            local_onnx_path=tier_a_onnx_path,
+            local_feature_matrix_path=tier_a_feature_matrix_path,
+            feature_count=len(tier_a_feature_order),
+            feature_order_hash=tier_a_feature_hash,
+            rule=tier_a_rule,
+            from_date=from_date,
+            to_date=to_date,
+            stem_prefix="tier_a_only",
+            record_view_prefix=tier_a_only_prefix,
+            primary_active_tier="tier_a",
+            attempt_role="tier_only_total",
+            max_hold_bars=max_hold_bars,
+        )
+        tier_a_attempt["feature_matrix"] = tier_a_matrix_payload
+        mt5_attempts.append(tier_a_attempt)
+
+        tier_b_attempt = materialize_mt5_attempt_files(
+            run_output_root=run_output_root,
+            tier_name=TIER_B,
+            split_name=split_label,
+            local_onnx_path=tier_b_onnx_path,
+            local_feature_matrix_path=tier_b_feature_matrix_path,
+            feature_count=len(tier_b_feature_order),
+            feature_order_hash=tier_b_feature_hash,
+            rule=tier_b_rule,
+            from_date=from_date,
+            to_date=to_date,
+            stem_prefix="tier_b_fallback_only",
+            record_view_prefix=tier_b_fallback_only_prefix,
+            primary_active_tier="tier_b_fallback",
+            attempt_role="tier_b_fallback_only_total",
+            max_hold_bars=max_hold_bars,
+        )
+        tier_b_attempt["feature_matrix"] = tier_b_matrix_payload
+        mt5_attempts.append(tier_b_attempt)
+
+        routed_attempt = materialize_mt5_routed_attempt_files(
+            run_output_root=run_output_root,
+            split_name=split_label,
+            primary_onnx_path=tier_a_onnx_path,
+            primary_feature_matrix_path=tier_a_feature_matrix_path,
+            primary_feature_count=len(tier_a_feature_order),
+            primary_feature_order_hash=tier_a_feature_hash,
+            fallback_onnx_path=tier_b_onnx_path,
+            fallback_feature_matrix_path=tier_b_feature_matrix_path,
+            fallback_feature_count=len(tier_b_feature_order),
+            fallback_feature_order_hash=tier_b_feature_hash,
+            rule=tier_a_rule,
+            fallback_rule=tier_b_rule,
+            max_hold_bars=max_hold_bars,
+            fallback_enabled=routed_fallback_enabled,
+            from_date=from_date,
+            to_date=to_date,
+        )
+        routed_attempt["primary_feature_matrix"] = tier_a_matrix_payload
+        routed_attempt["fallback_feature_matrix"] = tier_b_matrix_payload
+        mt5_attempts.append(routed_attempt)
+
+    compile_payload = None
+    mt5_execution_results: list[dict[str, Any]] = []
+    if attempt_mt5:
+        for attempt in mt5_attempts:
+            for common_output_key in ("common_telemetry_path", "common_summary_path"):
+                output_path = common_files_root / Path(str(attempt[common_output_key]))
+                if _path_exists(output_path):
+                    _io_path(output_path).unlink()
+            remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
+        compile_payload = compile_mql5_ea(metaeditor_path, EA_SOURCE_PATH, run_output_root / "mt5" / "mt5_compile.log")
+        if compile_payload["status"] == "completed":
+            for attempt in mt5_attempts:
+                result = run_mt5_tester(
+                    terminal_path,
+                    Path(attempt["ini"]["path"]),
+                    set_path=Path(attempt["set"]["path"]),
+                    tester_profile_set_path=tester_profile_root / EA_TESTER_SET_NAME,
+                    tester_profile_ini_path=tester_profile_root / mt5_short_profile_ini_name(attempt["tier"], attempt["split"]),
+                )
+                result["tier"] = attempt["tier"]
+                result["split"] = attempt["split"]
+                if "routing_mode" in attempt:
+                    result["routing_mode"] = attempt["routing_mode"]
+                if "attempt_role" in attempt:
+                    result["attempt_role"] = attempt["attempt_role"]
+                if "record_view_prefix" in attempt:
+                    result["record_view_prefix"] = attempt["record_view_prefix"]
+                result["ini_path"] = attempt["ini"]["path"]
+                result["runtime_outputs"] = wait_for_mt5_runtime_outputs(common_files_root, attempt)
+                if result["runtime_outputs"]["status"] != "completed":
+                    result["status"] = "blocked"
+                mt5_execution_results.append(result)
+
+    mt5_report_records = (
+        collect_mt5_strategy_report_artifacts(
+            terminal_data_root=terminal_data_root,
+            run_output_root=run_output_root,
+            attempts=mt5_attempts,
+        )
+        if attempt_mt5
+        else []
+    )
+    attach_mt5_report_metrics(mt5_execution_results, mt5_report_records)
+    mt5_kpi_records = build_mt5_kpi_records(mt5_execution_results)
+    mt5_kpi_records = enrich_mt5_kpi_records_with_route_coverage(mt5_kpi_records, route_coverage)
+    return {
+        "mt5_attempts": mt5_attempts,
+        "common_copies": common_copies,
+        "compile_payload": compile_payload,
+        "execution_results": mt5_execution_results,
+        "report_records": mt5_report_records,
+        "kpi_records": mt5_kpi_records,
+        "module_hashes": mt5_runtime_module_hashes(),
+    }
+
+
 def report_name_from_attempt(attempt: Mapping[str, Any]) -> str:
     return mt5_artifacts.report_name_from_attempt(attempt, run_id=RUN_ID)
 
