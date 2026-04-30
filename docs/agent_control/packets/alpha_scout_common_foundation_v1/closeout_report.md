@@ -17,6 +17,7 @@
 - Replaced free-form `skills_not_used` text with structured not-selected reasons.
 - Synced `AGENTS.md`, `obsidian-session-intake`, `obsidian-work-packet-router`, and `codex_operating_format.yaml` to the same `primary_family -> primary_skill -> support_skills -> required_gates` routing model.
 - Added closeout support for extra audit JSON files so `agent_control_contracts` and saved `state_sync_audit` evidence can be machine-linked alongside `ops_instruction_audit`.
+- Added `self_correction_policy.yaml` and `foundation/control_plane/self_correction.py` in plan-only mode so failed audits can be classified into repair items before any completion claim is repeated.
 
 ## What Gates Passed
 
@@ -27,6 +28,7 @@
 - `state_sync_audit`
 - `code_surface_audit`
 - `ops_instruction_audit`
+- `self_correction_plan`
 - `closeout_report_check`
 - `required_gate_coverage_audit`
 - `final_claim_guard`
@@ -44,6 +46,7 @@
 - The import smoke test tolerates missing optional local dependencies such as `lightgbm`, `skl2onnx`, or `onnxruntime` so it can run on partial developer environments.
 - Semantic detection of reusable model/training/threshold logic inside a stage-local file is still future hardening, not fully automated here.
 - Legacy `configure_run_identity()` remains as a compatibility shim for direct imports and older tests; stage execution paths now pass explicit context and should keep moving toward context-only helpers.
+- Self-correction is currently plan-only. It records repair items and safe-autofix eligibility, but it does not mutate files or apply guarded code/policy patches automatically.
 
 ## Allowed Claims
 
@@ -63,4 +66,4 @@
 
 ## Next Hardening Step
 
-Add a semantic code-surface audit that flags reusable training, threshold, model, or runtime logic inside `stage_pipelines/stageXX/*_support.py` and recommends a concrete `foundation/*` owner module when the same pattern appears in more than one stage.
+Add safe-autofix execution for allowlisted packet/closeout wiring fixes, then add a semantic code-surface audit that flags reusable training, threshold, model, or runtime logic inside `stage_pipelines/stageXX/*_support.py` and recommends a concrete `foundation/*` owner module when the same pattern appears in more than one stage.

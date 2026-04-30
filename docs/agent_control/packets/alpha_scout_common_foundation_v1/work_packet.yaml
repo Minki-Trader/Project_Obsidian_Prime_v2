@@ -52,6 +52,7 @@ risk_vector_scan:
     - skill_receipt_lint
     - skill_receipt_schema_lint
     - closeout_report_check
+    - self_correction_plan
     - required_gate_coverage_audit
     - final_claim_guard
   forbidden_claims:
@@ -101,6 +102,7 @@ interpreted_scope:
   evidence_layers:
     - code_surface_audit_json
     - ops_instruction_audit_json
+    - self_correction_plan_json
     - import_smoke_test
     - closeout_gate_json
     - required_gate_coverage_json
@@ -147,6 +149,11 @@ acceptance_criteria:
     expected_artifact: AGENTS.md
     verification_method: ops_instruction_audit_and_agent_control_contracts
     required: true
+  - id: AC-007
+    text: "Self-correction harness exists in plan_only mode and can classify failed audits into repair items without mutating files."
+    expected_artifact: foundation/control_plane/self_correction.py
+    verification_method: python_unittest_and_self_correction_plan
+    required: true
 work_plan:
   phases:
     - id: harden_identity
@@ -171,12 +178,18 @@ work_plan:
         - align_session_intake_and_work_packet_router_skill_docs
         - clarify_kpi_gate_as_required_or_not_applicable
         - attach_agent_control_contracts_and_state_sync_audit_to_closeout
+    - id: self_correction_loop_harness
+      actions:
+        - add_plan_only_self_correction_policy
+        - add_audit_failure_classifier_and_repair_plan_cli
+        - connect_self_correction_plan_to_packet_closeout
   expected_outputs:
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/work_packet.yaml
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/skill_receipts.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/code_surface_audit.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/ops_instruction_audit.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/agent_control_contracts.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/self_correction_plan.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/state_sync_merge_target.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_gate.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/required_gate_coverage.json
@@ -227,6 +240,7 @@ skill_routing:
     - skill_receipt_lint
     - skill_receipt_schema_lint
     - closeout_report_check
+    - self_correction_plan
     - required_gate_coverage_audit
     - final_claim_guard
 evidence_contract:
@@ -238,6 +252,7 @@ evidence_contract:
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/code_surface_audit.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/ops_instruction_audit.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/agent_control_contracts.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/self_correction_plan.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_gate.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/required_gate_coverage.json
   human_readable:
@@ -252,6 +267,7 @@ gates:
     - skill_receipt_lint
     - skill_receipt_schema_lint
     - closeout_report_check
+    - self_correction_plan
     - required_gate_coverage_audit
     - final_claim_guard
   not_applicable_with_reason:

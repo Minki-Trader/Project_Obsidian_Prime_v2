@@ -67,6 +67,7 @@ lifecycle:
       - skill_receipts
       - gate_result.json
       - required_gate_coverage_audit
+      - self_correction_plan
       - final_claim_guard
       - closeout_report
     effect: "Forbid unsupported completed, verified, promotion, or runtime-authority claims."
@@ -100,6 +101,7 @@ completion_rule:
     - all_acceptance_criteria_passed
     - required_skill_receipts_executed
     - required_gates_executed_or_not_applicable_with_reason
+    - failed_gates_have_self_correction_plan_or_no_failures
     - kpi_contract_passed_or_not_applicable_with_reason
     - artifact_lineage_connected_or_bounded
     - final_claim_guard_passed

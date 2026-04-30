@@ -21,6 +21,7 @@ REQUIRED_AGENT_CONTROL_FILES = (
     "docs/agent_control/kpi_source_authority.yaml",
     "docs/agent_control/row_grain_contract.yaml",
     "docs/agent_control/work_family_registry.yaml",
+    "docs/agent_control/self_correction_policy.yaml",
     "docs/agent_control/surface_registry.yaml",
     "docs/agent_control/risk_flag_registry.yaml",
     "docs/agent_control/skill_receipt_schema.yaml",

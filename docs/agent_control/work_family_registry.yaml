@@ -11,6 +11,11 @@ routing_contract:
   common_final_filter:
     - obsidian-answer-clarity
     - obsidian-claim-discipline
+  self_correction:
+    policy: docs/agent_control/self_correction_policy.yaml
+    default_mode: plan_only
+    closeout_audit: self_correction_plan
+    rule: "Failed gates are classified into a repair plan before any completion claim is repeated; automatic mutation may not relax gates, thresholds, tests, or claim boundaries."
 families:
   information_only:
     description: "Read/explain only(읽기/설명 전용 작업)"
