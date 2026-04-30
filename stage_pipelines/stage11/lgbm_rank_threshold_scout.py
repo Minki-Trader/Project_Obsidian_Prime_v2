@@ -48,12 +48,17 @@ def run_stage11_lgbm_rank_threshold_scout(
         raise RuntimeError(f"Unknown session slice id: {session_slice_id}")
     routing_mode = scout.ROUTING_MODE_A_B_FALLBACK if routed_fallback_enabled else scout.ROUTING_MODE_A_ONLY
 
-    scout.configure_run_identity(
+    context = scout.build_run_context(
+        stage_id=STAGE_ID,
+        stage_number=11,
         run_number=run_number,
         run_id=run_id,
         exploration_label=exploration_label,
+        output_root=run_output_root,
         common_run_root=f"Project_Obsidian_Prime_v2/stage11/{run_id}",
-        stage_id=STAGE_ID,
+        common_files_root=common_files_root,
+        terminal_data_root=terminal_data_root,
+        tester_profile_root=tester_profile_root,
     )
     _io_path(run_output_root).mkdir(parents=True, exist_ok=True)
     predictions_root = run_output_root / "predictions"
@@ -197,8 +202,8 @@ def run_stage11_lgbm_rank_threshold_scout(
     mt5_attempts: list[dict[str, Any]] = []
     common_copies: list[dict[str, Any]] = []
     _io_path(mt5_root).mkdir(parents=True, exist_ok=True)
-    common_copies.append(scout.copy_to_common_files(common_files_root, tier_a_onnx_path, scout.common_ref("models", tier_a_onnx_path.name)))
-    common_copies.append(scout.copy_to_common_files(common_files_root, tier_b_onnx_path, scout.common_ref("models", tier_b_onnx_path.name)))
+    common_copies.append(scout.copy_to_common_files(common_files_root, tier_a_onnx_path, scout.common_ref("models", tier_a_onnx_path.name, context=context)))
+    common_copies.append(scout.copy_to_common_files(common_files_root, tier_b_onnx_path, scout.common_ref("models", tier_b_onnx_path.name, context=context)))
 
     copied_feature_matrices: list[dict[str, Any]] = []
     for split_name, (from_date, to_date) in split_specs.items():
@@ -212,8 +217,8 @@ def run_stage11_lgbm_rank_threshold_scout(
                 {"tier": scout.TIER_B, "split": split_name, **copy_or_filter_feature_matrix(source_tier_b_matrix, tier_b_matrix_path, context_gate)},
             ]
         )
-        common_copies.append(scout.copy_to_common_files(common_files_root, tier_a_matrix_path, scout.common_ref("features", tier_a_matrix_path.name)))
-        common_copies.append(scout.copy_to_common_files(common_files_root, tier_b_matrix_path, scout.common_ref("features", tier_b_matrix_path.name)))
+        common_copies.append(scout.copy_to_common_files(common_files_root, tier_a_matrix_path, scout.common_ref("features", tier_a_matrix_path.name, context=context)))
+        common_copies.append(scout.copy_to_common_files(common_files_root, tier_b_matrix_path, scout.common_ref("features", tier_b_matrix_path.name, context=context)))
         attempt = scout.materialize_mt5_routed_attempt_files(
             run_output_root=run_output_root,
             split_name=split_name,
@@ -233,6 +238,7 @@ def run_stage11_lgbm_rank_threshold_scout(
             fallback_enabled=bool(routed_fallback_enabled),
             from_date=from_date,
             to_date=to_date,
+            context=context,
         )
         mt5_attempts.append(attempt)
 
@@ -244,7 +250,7 @@ def run_stage11_lgbm_rank_threshold_scout(
                 output_path = common_files_root / Path(str(attempt[common_output_key]))
                 if scout._path_exists(output_path):
                     _io_path(output_path).unlink()
-            scout.remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
+            scout.remove_existing_mt5_report_artifacts(terminal_data_root, attempt, context=context)
         compile_payload = scout.compile_mql5_ea(metaeditor_path, scout.EA_SOURCE_PATH, mt5_root / "mt5_compile.log")
         if compile_payload["status"] == "completed":
             for attempt in mt5_attempts:
@@ -254,7 +260,7 @@ def run_stage11_lgbm_rank_threshold_scout(
                         Path(attempt["ini"]["path"]),
                         set_path=Path(attempt["set"]["path"]),
                         tester_profile_set_path=tester_profile_root / scout.EA_TESTER_SET_NAME,
-                        tester_profile_ini_path=tester_profile_root / scout.mt5_short_profile_ini_name(attempt["tier"], attempt["split"]),
+                        tester_profile_ini_path=tester_profile_root / scout.mt5_short_profile_ini_name(attempt["tier"], attempt["split"], context=context),
                         timeout_seconds=300,
                     )
                 except Exception as exc:  # pragma: no cover - external MT5 boundary
@@ -277,6 +283,7 @@ def run_stage11_lgbm_rank_threshold_scout(
             terminal_data_root=terminal_data_root,
             run_output_root=run_output_root,
             attempts=mt5_attempts,
+            context=context,
         )
         if attempt_mt5
         else []

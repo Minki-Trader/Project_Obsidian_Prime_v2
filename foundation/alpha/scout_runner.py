@@ -154,6 +154,25 @@ def build_run_context(
     )
 
 
+def build_run_identity(
+    *,
+    stage_id: str,
+    run_number: str,
+    run_id: str,
+    exploration_label: str,
+    common_run_root: str | None = None,
+) -> RunIdentity:
+    stage_number = stage_number_from_id(stage_id)
+    return RunIdentity(
+        stage_id=stage_id,
+        stage_number=stage_number,
+        run_number=run_number,
+        run_id=run_id,
+        exploration_label=exploration_label,
+        common_run_root=common_run_root or default_common_run_root(stage_number, run_id),
+    )
+
+
 def stage_paths(stage_id: str, run_id: str) -> dict[str, Path]:
     output_root = run_output_root(stage_id, run_id)
     return {
@@ -197,19 +216,42 @@ def configure_run_identity(
     exploration_label: str,
     common_run_root: str | None = None,
     stage_id: str,
-) -> None:
+) -> RunIdentity:
     global STAGE_ID, RUN_NUMBER, RUN_ID, EXPLORATION_LABEL, COMMON_RUN_ROOT
 
-    STAGE_ID = stage_id
-    RUN_NUMBER = run_number
-    RUN_ID = run_id
-    EXPLORATION_LABEL = exploration_label
-    COMMON_RUN_ROOT = common_run_root or default_common_run_root(stage_number_from_id(stage_id), run_id)
+    identity = build_run_identity(
+        stage_id=stage_id,
+        run_number=run_number,
+        run_id=run_id,
+        exploration_label=exploration_label,
+        common_run_root=common_run_root,
+    )
+    STAGE_ID = identity.stage_id
+    RUN_NUMBER = identity.run_number
+    RUN_ID = identity.run_id
+    EXPLORATION_LABEL = identity.exploration_label
+    COMMON_RUN_ROOT = identity.common_run_root
+    return identity
 
 
-def common_ref(*parts: str) -> str:
-    identity = _require_run_identity()
+def common_ref(*parts: str, context: ScoutRunContext | RunIdentity | None = None) -> str:
+    identity = _identity_from_context(context)
     return "/".join([identity.common_run_root, *parts])
+
+
+def _identity_from_context(context: ScoutRunContext | RunIdentity | None = None) -> RunIdentity:
+    if isinstance(context, RunIdentity):
+        return context
+    if isinstance(context, ScoutRunContext):
+        return RunIdentity(
+            stage_id=context.stage_id,
+            stage_number=context.stage_number,
+            run_number=context.run_number,
+            run_id=context.run_id,
+            exploration_label=context.exploration_label,
+            common_run_root=context.common_run_root,
+        )
+    return _require_run_identity()
 
 
 def _require_run_identity() -> RunIdentity:
@@ -227,7 +269,8 @@ def _require_run_identity() -> RunIdentity:
     if missing:
         raise RuntimeError(
             "Alpha scout run identity is not configured. "
-            "Stage adapters must call configure_run_identity(..., stage_id=...) before materializing run artifacts. "
+            "Stage adapters must pass an explicit ScoutRunContext, or call configure_run_identity(..., stage_id=...) "
+            "only for legacy compatibility, before materializing run artifacts. "
             f"Missing: {', '.join(missing)}"
         )
     return RunIdentity(
@@ -257,8 +300,9 @@ def build_paired_tier_records(
     kpi_scope: str = "signal_probability_threshold",
     scoreboard_lane: str = "structural_scout",
     external_verification_status: str = "out_of_scope_by_claim",
+    context: ScoutRunContext | RunIdentity | None = None,
 ) -> list[dict[str, Any]]:
-    identity = None if run_id and stage_id else _require_run_identity()
+    identity = None if run_id and stage_id else _identity_from_context(context)
     return _build_paired_tier_records(
         tier_views,
         run_id=run_id or identity.run_id,
@@ -270,8 +314,13 @@ def build_paired_tier_records(
     )
 
 
-def mt5_short_profile_ini_name(tier_name: str, split_name: str) -> str:
-    identity = _require_run_identity()
+def mt5_short_profile_ini_name(
+    tier_name: str,
+    split_name: str,
+    *,
+    context: ScoutRunContext | RunIdentity | None = None,
+) -> str:
+    identity = _identity_from_context(context)
     if tier_name == TIER_AB:
         tier_code = "rt"
     else:
@@ -298,14 +347,15 @@ def materialize_mt5_attempt_files(
     attempt_role: str = "tier_only_total",
     invert_signal: bool = False,
     max_hold_bars: int = 12,
+    context: ScoutRunContext | RunIdentity | None = None,
 ) -> dict[str, Any]:
-    identity = _require_run_identity()
+    identity = _identity_from_context(context)
     tier_slug = tier_name.lower().replace(" ", "_").replace("+", "ab")
     stem = f"{stem_prefix or tier_slug}_{split_name}"
-    common_model = common_ref("models", local_onnx_path.name)
-    common_matrix = common_ref("features", local_feature_matrix_path.name)
-    common_telemetry = common_ref("telemetry", f"{stem}_telemetry.csv")
-    common_summary = common_ref("telemetry", f"{stem}_summary.csv")
+    common_model = common_ref("models", local_onnx_path.name, context=identity)
+    common_matrix = common_ref("features", local_feature_matrix_path.name, context=identity)
+    common_telemetry = common_ref("telemetry", f"{stem}_telemetry.csv", context=identity)
+    common_summary = common_ref("telemetry", f"{stem}_summary.csv", context=identity)
     set_path = run_output_root / "mt5" / f"{stem}.set"
     ini_path = run_output_root / "mt5" / f"{stem}.ini"
     set_payload = materialize_tester_set_file(
@@ -392,8 +442,9 @@ def materialize_mt5_routed_attempt_files(
     fallback_invert_signal: bool = False,
     max_hold_bars: int = 12,
     fallback_enabled: bool = True,
+    context: ScoutRunContext | RunIdentity | None = None,
 ) -> dict[str, Any]:
-    identity = _require_run_identity()
+    identity = _identity_from_context(context)
     fallback_rule = fallback_rule or rule
     routing_mode = ROUTING_MODE_A_B_FALLBACK if fallback_enabled else ROUTING_MODE_A_ONLY
     routing_detail = (
@@ -402,12 +453,12 @@ def materialize_mt5_routed_attempt_files(
         else "tier_a_primary_no_fallback"
     )
     stem = f"routed_{split_name}"
-    common_primary_model = common_ref("models", primary_onnx_path.name)
-    common_primary_matrix = common_ref("features", primary_feature_matrix_path.name)
-    common_fallback_model = common_ref("models", fallback_onnx_path.name)
-    common_fallback_matrix = common_ref("features", fallback_feature_matrix_path.name)
-    common_telemetry = common_ref("telemetry", f"{stem}_telemetry.csv")
-    common_summary = common_ref("telemetry", f"{stem}_summary.csv")
+    common_primary_model = common_ref("models", primary_onnx_path.name, context=identity)
+    common_primary_matrix = common_ref("features", primary_feature_matrix_path.name, context=identity)
+    common_fallback_model = common_ref("models", fallback_onnx_path.name, context=identity)
+    common_fallback_matrix = common_ref("features", fallback_feature_matrix_path.name, context=identity)
+    common_telemetry = common_ref("telemetry", f"{stem}_telemetry.csv", context=identity)
+    common_summary = common_ref("telemetry", f"{stem}_summary.csv", context=identity)
     set_path = run_output_root / "mt5" / f"{stem}.set"
     ini_path = run_output_root / "mt5" / f"{stem}.ini"
     primary_model_id = f"{identity.run_id}_tier_a_primary"
@@ -509,6 +560,7 @@ def materialize_mt5_routed_attempt_files(
 
 def materialize_mt5_probe_bundle(
     *,
+    context: ScoutRunContext | RunIdentity | None = None,
     run_output_root: Path,
     common_files_root: Path,
     terminal_data_root: Path,
@@ -533,6 +585,7 @@ def materialize_mt5_probe_bundle(
     tier_a_only_prefix: str = MT5_RECORD_TIER_A_ONLY_PREFIX,
     tier_b_fallback_only_prefix: str = MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
 ) -> dict[str, Any]:
+    identity = _identity_from_context(context)
     split_specs = {
         "validation_is": ("validation", "2025.01.01", "2025.10.01"),
         "oos": ("oos", "2025.10.01", "2026.04.14"),
@@ -540,8 +593,8 @@ def materialize_mt5_probe_bundle(
     mt5_attempts: list[dict[str, Any]] = []
     common_copies: list[dict[str, Any]] = []
     _io_path(mt5_root).mkdir(parents=True, exist_ok=True)
-    common_copies.append(copy_to_common_files(common_files_root, tier_a_onnx_path, common_ref("models", tier_a_onnx_path.name)))
-    common_copies.append(copy_to_common_files(common_files_root, tier_b_onnx_path, common_ref("models", tier_b_onnx_path.name)))
+    common_copies.append(copy_to_common_files(common_files_root, tier_a_onnx_path, common_ref("models", tier_a_onnx_path.name, context=identity)))
+    common_copies.append(copy_to_common_files(common_files_root, tier_b_onnx_path, common_ref("models", tier_b_onnx_path.name, context=identity)))
 
     for split_label, (source_split, from_date, to_date) in split_specs.items():
         tier_a_split = tier_a_eval_frame.loc[tier_a_eval_frame["split"].astype(str).eq(source_split)].copy()
@@ -561,10 +614,10 @@ def materialize_mt5_probe_bundle(
             metadata_columns=("route_role", "partial_context_subtype", "missing_feature_group_mask", "available_feature_group_mask"),
         )
         common_copies.append(
-            copy_to_common_files(common_files_root, tier_a_feature_matrix_path, common_ref("features", tier_a_feature_matrix_path.name))
+            copy_to_common_files(common_files_root, tier_a_feature_matrix_path, common_ref("features", tier_a_feature_matrix_path.name, context=identity))
         )
         common_copies.append(
-            copy_to_common_files(common_files_root, tier_b_feature_matrix_path, common_ref("features", tier_b_feature_matrix_path.name))
+            copy_to_common_files(common_files_root, tier_b_feature_matrix_path, common_ref("features", tier_b_feature_matrix_path.name, context=identity))
         )
         tier_a_attempt = materialize_mt5_attempt_files(
             run_output_root=run_output_root,
@@ -582,6 +635,7 @@ def materialize_mt5_probe_bundle(
             primary_active_tier="tier_a",
             attempt_role="tier_only_total",
             max_hold_bars=max_hold_bars,
+            context=identity,
         )
         tier_a_attempt["feature_matrix"] = tier_a_matrix_payload
         mt5_attempts.append(tier_a_attempt)
@@ -602,6 +656,7 @@ def materialize_mt5_probe_bundle(
             primary_active_tier="tier_b_fallback",
             attempt_role="tier_b_fallback_only_total",
             max_hold_bars=max_hold_bars,
+            context=identity,
         )
         tier_b_attempt["feature_matrix"] = tier_b_matrix_payload
         mt5_attempts.append(tier_b_attempt)
@@ -623,6 +678,7 @@ def materialize_mt5_probe_bundle(
             fallback_enabled=routed_fallback_enabled,
             from_date=from_date,
             to_date=to_date,
+            context=identity,
         )
         routed_attempt["primary_feature_matrix"] = tier_a_matrix_payload
         routed_attempt["fallback_feature_matrix"] = tier_b_matrix_payload
@@ -636,7 +692,7 @@ def materialize_mt5_probe_bundle(
                 output_path = common_files_root / Path(str(attempt[common_output_key]))
                 if _path_exists(output_path):
                     _io_path(output_path).unlink()
-            remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
+            remove_existing_mt5_report_artifacts(terminal_data_root, attempt, context=identity)
         compile_payload = compile_mql5_ea(metaeditor_path, EA_SOURCE_PATH, run_output_root / "mt5" / "mt5_compile.log")
         if compile_payload["status"] == "completed":
             for attempt in mt5_attempts:
@@ -645,7 +701,7 @@ def materialize_mt5_probe_bundle(
                     Path(attempt["ini"]["path"]),
                     set_path=Path(attempt["set"]["path"]),
                     tester_profile_set_path=tester_profile_root / EA_TESTER_SET_NAME,
-                    tester_profile_ini_path=tester_profile_root / mt5_short_profile_ini_name(attempt["tier"], attempt["split"]),
+                    tester_profile_ini_path=tester_profile_root / mt5_short_profile_ini_name(attempt["tier"], attempt["split"], context=identity),
                 )
                 result["tier"] = attempt["tier"]
                 result["split"] = attempt["split"]
@@ -666,6 +722,7 @@ def materialize_mt5_probe_bundle(
             terminal_data_root=terminal_data_root,
             run_output_root=run_output_root,
             attempts=mt5_attempts,
+            context=identity,
         )
         if attempt_mt5
         else []
@@ -684,13 +741,22 @@ def materialize_mt5_probe_bundle(
     }
 
 
-def report_name_from_attempt(attempt: Mapping[str, Any]) -> str:
-    identity = _require_run_identity()
+def report_name_from_attempt(
+    attempt: Mapping[str, Any],
+    *,
+    context: ScoutRunContext | RunIdentity | None = None,
+) -> str:
+    identity = _identity_from_context(context)
     return mt5_artifacts.report_name_from_attempt(attempt, run_id=identity.run_id)
 
 
-def remove_existing_mt5_report_artifacts(terminal_data_root: Path, attempt: Mapping[str, Any]) -> None:
-    identity = _require_run_identity()
+def remove_existing_mt5_report_artifacts(
+    terminal_data_root: Path,
+    attempt: Mapping[str, Any],
+    *,
+    context: ScoutRunContext | RunIdentity | None = None,
+) -> None:
+    identity = _identity_from_context(context)
     mt5_artifacts.remove_existing_mt5_report_artifacts(terminal_data_root, attempt, run_id=identity.run_id)
 
 
@@ -699,8 +765,9 @@ def collect_mt5_strategy_report_artifacts(
     terminal_data_root: Path,
     run_output_root: Path,
     attempts: Sequence[Mapping[str, Any]],
+    context: ScoutRunContext | RunIdentity | None = None,
 ) -> list[dict[str, Any]]:
-    identity = _require_run_identity()
+    identity = _identity_from_context(context)
     return mt5_artifacts.collect_mt5_strategy_report_artifacts(
         terminal_data_root=terminal_data_root,
         run_output_root=run_output_root,

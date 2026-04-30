@@ -14,14 +14,22 @@ globals().update({name: getattr(_support, name) for name in dir(_support) if not
 
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
-    mt5.configure_run_identity(
+    run_output_root = Path(args.run_output_root)
+    common_files_root = Path(args.common_files_root)
+    terminal_data_root = Path(args.terminal_data_root)
+    tester_profile_root = Path(args.tester_profile_root)
+    context = mt5.build_run_context(
+        stage_id=STAGE_ID,
+        stage_number=12,
         run_number=RUN_NUMBER,
         run_id=RUN_ID,
         exploration_label=EXPLORATION_LABEL,
+        output_root=run_output_root,
         common_run_root=COMMON_RUN_ROOT,
-        stage_id=STAGE_ID,
+        common_files_root=common_files_root,
+        terminal_data_root=terminal_data_root,
+        tester_profile_root=tester_profile_root,
     )
-    run_output_root = Path(args.run_output_root)
     for path in (
         run_output_root / "models",
         run_output_root / "predictions",
@@ -85,9 +93,6 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     runtime_decision_path = run_output_root / "predictions/runtime_decisions.parquet"
     runtime_decisions.to_parquet(io(runtime_decision_path), index=False)
 
-    common_files_root = Path(args.common_files_root)
-    terminal_data_root = Path(args.terminal_data_root)
-    tester_profile_root = Path(args.tester_profile_root)
     common_copies = [
         mt5.copy_to_common_files(common_files_root, onnx_path, common_ref("models", onnx_path.name))
     ]
@@ -128,7 +133,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                 output_path = common_files_root / Path(str(attempt[common_output_key]))
                 if path_exists(output_path):
                     io(output_path).unlink()
-            mt5.remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
+            mt5.remove_existing_mt5_report_artifacts(terminal_data_root, attempt, context=context)
         compile_payload = mt5.compile_mql5_ea(
             Path(args.metaeditor_path),
             mt5.EA_SOURCE_PATH,
@@ -163,6 +168,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             terminal_data_root=terminal_data_root,
             run_output_root=run_output_root,
             attempts=attempts,
+            context=context,
         )
         if args.attempt_mt5
         else []

@@ -186,6 +186,27 @@ def configure_run_identity(
     )
 
 
+def build_scout_context(
+    *,
+    run_output_root: Path,
+    common_files_root: Path,
+    terminal_data_root: Path,
+    tester_profile_root: Path,
+) -> alpha_scout_runner.ScoutRunContext:
+    return alpha_scout_runner.build_run_context(
+        stage_id=STAGE_ID,
+        stage_number=10,
+        run_number=RUN_NUMBER,
+        run_id=RUN_ID,
+        exploration_label=EXPLORATION_LABEL,
+        output_root=run_output_root,
+        common_run_root=COMMON_RUN_ROOT,
+        common_files_root=common_files_root,
+        terminal_data_root=terminal_data_root,
+        tester_profile_root=tester_profile_root,
+    )
+
+
 configure_run_identity(
     run_number=RUN_NUMBER,
     run_id=RUN_ID,
@@ -298,6 +319,12 @@ def run_stage10_logreg_mt5_scout(
     terminal_path: Path = Path(r"C:\Program Files\MetaTrader 5\terminal64.exe"),
     metaeditor_path: Path = Path(r"C:\Program Files\MetaTrader 5\MetaEditor64.exe"),
 ) -> dict[str, Any]:
+    context = build_scout_context(
+        run_output_root=run_output_root,
+        common_files_root=common_files_root,
+        terminal_data_root=terminal_data_root,
+        tester_profile_root=tester_profile_root,
+    )
     routing_mode = ROUTING_MODE_A_B_FALLBACK if routed_fallback_enabled else ROUTING_MODE_A_ONLY
     routing_detail = (
         "tier_a_primary_tier_b_partial_context_fallback"
@@ -506,6 +533,7 @@ def run_stage10_logreg_mt5_scout(
     }
 
     mt5_bundle = alpha_scout_runner.materialize_mt5_probe_bundle(
+        context=context,
         run_output_root=run_output_root,
         common_files_root=common_files_root,
         terminal_data_root=terminal_data_root,

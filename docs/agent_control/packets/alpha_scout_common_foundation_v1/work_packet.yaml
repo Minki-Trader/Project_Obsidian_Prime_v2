@@ -191,8 +191,14 @@ skill_routing:
     - obsidian-architecture-guard
     - obsidian-reference-scout
   skills_not_used:
-    obsidian-artifact-lineage: "Covered through branch packet artifacts; not selected as support skill to keep routing narrow."
-    obsidian-claim-discipline: "Closeout gate and final_claim_guard are required gates, not a separate primary/support skill for this patch."
+    obsidian-artifact-lineage:
+      not_selected_reason: not_primary_family_required_skill
+      evidence_contract_present: true
+      artifact_lineage_gate: closeout_report_check_and_required_gate_coverage_audit
+    obsidian-claim-discipline:
+      not_selected_reason: enforced_as_required_gate_not_support_skill
+      final_claim_guard_required: true
+      claim_boundary_present: true
   required_skill_receipts:
     - obsidian-code-surface-guard
     - obsidian-code-quality

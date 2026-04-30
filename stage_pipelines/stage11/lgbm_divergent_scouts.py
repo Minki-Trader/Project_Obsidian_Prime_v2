@@ -25,14 +25,19 @@ def run_one_spec(
     terminal_path: Path,
     metaeditor_path: Path,
 ) -> dict[str, Any]:
-    scout.configure_run_identity(
+    run_output_root = run_root / spec.run_id
+    context = scout.build_run_context(
+        stage_id=STAGE_ID,
+        stage_number=11,
         run_number=spec.run_number,
         run_id=spec.run_id,
         exploration_label=spec.exploration_label,
+        output_root=run_output_root,
         common_run_root=f"Project_Obsidian_Prime_v2/stage11/{spec.run_id}",
-        stage_id=STAGE_ID,
+        common_files_root=common_files_root,
+        terminal_data_root=terminal_data_root,
+        tester_profile_root=tester_profile_root,
     )
-    run_output_root = run_root / spec.run_id
     predictions_root = run_output_root / "predictions"
     models_root = run_output_root / "models"
     mt5_root = run_output_root / "mt5"
@@ -69,8 +74,8 @@ def run_one_spec(
     tier_b_feature_hash = scout.ordered_hash(tier_b_feature_order)
 
     common_copies = [
-        scout.copy_to_common_files(common_files_root, tier_a_onnx_path, scout.common_ref("models", tier_a_onnx_path.name)),
-        scout.copy_to_common_files(common_files_root, tier_b_onnx_path, scout.common_ref("models", tier_b_onnx_path.name)),
+        scout.copy_to_common_files(common_files_root, tier_a_onnx_path, scout.common_ref("models", tier_a_onnx_path.name, context=context)),
+        scout.copy_to_common_files(common_files_root, tier_b_onnx_path, scout.common_ref("models", tier_b_onnx_path.name, context=context)),
     ]
     matrix_records: list[dict[str, Any]] = []
     allowed_by_tier_split: dict[str, dict[str, set[str]]] = {"tier_a": {}, "tier_b": {}}
@@ -98,8 +103,8 @@ def run_one_spec(
                 {"tier": scout.TIER_B, "split": split_name, **tier_b_matrix},
             ]
         )
-        common_copies.append(scout.copy_to_common_files(common_files_root, tier_a_matrix_path, scout.common_ref("features", tier_a_matrix_path.name)))
-        common_copies.append(scout.copy_to_common_files(common_files_root, tier_b_matrix_path, scout.common_ref("features", tier_b_matrix_path.name)))
+        common_copies.append(scout.copy_to_common_files(common_files_root, tier_a_matrix_path, scout.common_ref("features", tier_a_matrix_path.name, context=context)))
+        common_copies.append(scout.copy_to_common_files(common_files_root, tier_b_matrix_path, scout.common_ref("features", tier_b_matrix_path.name, context=context)))
         mt5_attempts.append(
             scout.materialize_mt5_routed_attempt_files(
                 run_output_root=run_output_root,
@@ -118,6 +123,7 @@ def run_one_spec(
                 fallback_enabled=True,
                 from_date=from_date,
                 to_date=to_date,
+                context=context,
             )
         )
 
@@ -169,7 +175,7 @@ def run_one_spec(
                 output_path = common_files_root / Path(str(attempt[output_key]))
                 if scout._path_exists(output_path):
                     _io_path(output_path).unlink()
-            scout.remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
+            scout.remove_existing_mt5_report_artifacts(terminal_data_root, attempt, context=context)
         compile_payload = scout.compile_mql5_ea(metaeditor_path, scout.EA_SOURCE_PATH, mt5_root / "mt5_compile.log")
         if compile_payload.get("status") == "completed":
             for attempt in mt5_attempts:
@@ -179,7 +185,7 @@ def run_one_spec(
                         Path(attempt["ini"]["path"]),
                         set_path=Path(attempt["set"]["path"]),
                         tester_profile_set_path=tester_profile_root / scout.EA_TESTER_SET_NAME,
-                        tester_profile_ini_path=tester_profile_root / scout.mt5_short_profile_ini_name(attempt["tier"], attempt["split"]),
+                        tester_profile_ini_path=tester_profile_root / scout.mt5_short_profile_ini_name(attempt["tier"], attempt["split"], context=context),
                         timeout_seconds=300,
                     )
                 except Exception as exc:  # pragma: no cover - external MT5 boundary
@@ -202,6 +208,7 @@ def run_one_spec(
             terminal_data_root=terminal_data_root,
             run_output_root=run_output_root,
             attempts=mt5_attempts,
+            context=context,
         )
         if attempt_mt5
         else []

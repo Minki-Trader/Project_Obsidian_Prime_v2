@@ -47,12 +47,17 @@ def run_stage11_lgbm_training_method_scout(
 ) -> dict[str, Any]:
     if max_hold_bars != RUN01Y_REFERENCE["max_hold_bars"]:
         raise RuntimeError("RUN02A keeps run01Y max_hold_bars fixed for method-only comparison.")
-    scout.configure_run_identity(
+    context = scout.build_run_context(
+        stage_id=STAGE_ID,
+        stage_number=11,
         run_number=run_number,
         run_id=run_id,
         exploration_label=exploration_label,
+        output_root=run_output_root,
         common_run_root=f"Project_Obsidian_Prime_v2/stage11/{run_id}",
-        stage_id=STAGE_ID,
+        common_files_root=common_files_root,
+        terminal_data_root=terminal_data_root,
+        tester_profile_root=tester_profile_root,
     )
 
     tier_a_feature_order = scout.load_feature_order(feature_order_path)
@@ -270,10 +275,10 @@ def run_stage11_lgbm_training_method_scout(
     common_copies: list[dict[str, Any]] = []
     _io_path(mt5_root).mkdir(parents=True, exist_ok=True)
     common_copies.append(
-        scout.copy_to_common_files(common_files_root, tier_a_onnx_path, scout.common_ref("models", tier_a_onnx_path.name))
+        scout.copy_to_common_files(common_files_root, tier_a_onnx_path, scout.common_ref("models", tier_a_onnx_path.name, context=context))
     )
     common_copies.append(
-        scout.copy_to_common_files(common_files_root, tier_b_onnx_path, scout.common_ref("models", tier_b_onnx_path.name))
+        scout.copy_to_common_files(common_files_root, tier_b_onnx_path, scout.common_ref("models", tier_b_onnx_path.name, context=context))
     )
     metadata_columns = (
         "route_role",
@@ -308,14 +313,14 @@ def run_stage11_lgbm_training_method_scout(
             scout.copy_to_common_files(
                 common_files_root,
                 tier_a_feature_matrix_path,
-                scout.common_ref("features", tier_a_feature_matrix_path.name),
+                scout.common_ref("features", tier_a_feature_matrix_path.name, context=context),
             )
         )
         common_copies.append(
             scout.copy_to_common_files(
                 common_files_root,
                 tier_b_feature_matrix_path,
-                scout.common_ref("features", tier_b_feature_matrix_path.name),
+                scout.common_ref("features", tier_b_feature_matrix_path.name, context=context),
             )
         )
         tier_a_attempt = scout.materialize_mt5_attempt_files(
@@ -334,6 +339,7 @@ def run_stage11_lgbm_training_method_scout(
             primary_active_tier="tier_a",
             attempt_role="tier_only_total",
             max_hold_bars=max_hold_bars,
+            context=context,
         )
         tier_a_attempt["feature_matrix"] = tier_a_matrix_payload
         mt5_attempts.append(tier_a_attempt)
@@ -354,6 +360,7 @@ def run_stage11_lgbm_training_method_scout(
             primary_active_tier="tier_b_fallback",
             attempt_role="tier_b_fallback_only_total",
             max_hold_bars=max_hold_bars,
+            context=context,
         )
         tier_b_attempt["feature_matrix"] = tier_b_matrix_payload
         mt5_attempts.append(tier_b_attempt)
@@ -375,6 +382,7 @@ def run_stage11_lgbm_training_method_scout(
             fallback_enabled=True,
             from_date=from_date,
             to_date=to_date,
+            context=context,
         )
         routed_attempt["primary_feature_matrix"] = tier_a_matrix_payload
         routed_attempt["fallback_feature_matrix"] = tier_b_matrix_payload
@@ -388,7 +396,7 @@ def run_stage11_lgbm_training_method_scout(
                 output_path = common_files_root / Path(str(attempt[common_output_key]))
                 if scout._path_exists(output_path):
                     scout._io_path(output_path).unlink()
-            scout.remove_existing_mt5_report_artifacts(terminal_data_root, attempt)
+            scout.remove_existing_mt5_report_artifacts(terminal_data_root, attempt, context=context)
         if not onnx_parity["passed"]:
             compile_payload = {
                 "status": "blocked",
@@ -411,7 +419,7 @@ def run_stage11_lgbm_training_method_scout(
                         set_path=Path(attempt["set"]["path"]),
                         tester_profile_set_path=tester_profile_root / scout.EA_TESTER_SET_NAME,
                         tester_profile_ini_path=tester_profile_root
-                        / scout.mt5_short_profile_ini_name(attempt["tier"], attempt["split"]),
+                        / scout.mt5_short_profile_ini_name(attempt["tier"], attempt["split"], context=context),
                         timeout_seconds=300,
                     )
                 except Exception as exc:  # pragma: no cover - defensive external tool boundary
@@ -443,6 +451,7 @@ def run_stage11_lgbm_training_method_scout(
             terminal_data_root=terminal_data_root,
             run_output_root=run_output_root,
             attempts=mt5_attempts,
+            context=context,
         )
         if attempt_mt5
         else []
