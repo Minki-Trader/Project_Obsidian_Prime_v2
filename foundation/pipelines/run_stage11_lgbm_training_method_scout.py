@@ -19,7 +19,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from foundation.models.baseline_training import LABEL_NAMES, LABEL_ORDER, validate_model_input_frame  # noqa: E402
-from foundation.pipelines import run_stage10_logreg_mt5_scout as scout  # noqa: E402
+from foundation.alpha import scout_runner as scout  # noqa: E402
 from foundation.control_plane import alpha_run_ledgers  # noqa: E402
 from foundation.control_plane.ledger import (  # noqa: E402
     ledger_pairs as _ledger_pairs,

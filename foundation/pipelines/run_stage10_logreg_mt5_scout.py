@@ -1,17 +1,10 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
-import itertools
 import json
-import os
 import re
-import shutil
 import subprocess
 import sys
-import tempfile
-import time
-from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
@@ -26,27 +19,54 @@ if str(REPO_ROOT) not in sys.path:
 
 from foundation.models.baseline_training import (  # noqa: E402
     BaselineTrainingConfig,
-    LABEL_NAMES,
-    LABEL_ORDER,
     load_feature_order,
     train_baseline_model,
 )
-from foundation.mt5.strategy_report import extract_mt5_strategy_report_metrics  # noqa: E402
-from foundation.mt5.tester_files import (  # noqa: E402
-    TesterMaterializationConfig,
-    materialize_tester_ini_file,
-    materialize_tester_set_file,
+from foundation.alpha.decision_views import (  # noqa: E402
+    DECISION_CLASS_NO_TRADE,
+    DECISION_LABEL_NO_TRADE,
+    PROBABILITY_COLUMNS,
+    REQUIRED_TIER_VIEWS,
+    TIER_A,
+    TIER_AB,
+    TIER_B,
+    TIER_COLUMN,
+    ThresholdRule,
+    apply_threshold_rule,
+    build_paired_tier_records as _build_paired_tier_records,
+    build_prediction_frame,
+    build_tier_prediction_views,
+    materialize_tier_prediction_views,
+    normalize_tier_label,
+    probability_matrix,
+    prediction_view_metrics,
+    select_threshold_from_sweep,
+    sweep_threshold_rules,
+    threshold_id as _threshold_id,
+    threshold_rule_from_values,
+    threshold_rule_payload,
+    validate_threshold_rule,
 )
-from foundation.pipelines.materialize_fpmarkets_v2_dataset import build_feature_frame  # noqa: E402
-from foundation.pipelines.materialize_training_label_split_dataset import (  # noqa: E402
-    TrainingLabelSplitSpec,
-    assign_label_classes,
-    assign_split,
-    build_label_candidates,
-    load_us100_close_series,
-)
+from foundation.alpha import scout_runner as alpha_scout_runner  # noqa: E402
 from foundation.control_plane import alpha_run_ledgers  # noqa: E402
+from foundation.control_plane import packet_writers  # noqa: E402
+from foundation.control_plane.ledger import (  # noqa: E402
+    ALPHA_LEDGER_COLUMNS,
+    RUN_REGISTRY_COLUMNS,
+    io_path as _io_path,
+    json_ready as _json_ready,
+    ledger_pairs as _ledger_pairs,
+    ledger_path as _ledger_path,
+    ledger_status as _ledger_status,
+    ledger_value as _ledger_value,
+    path_exists as _path_exists,
+    read_csv_rows as _read_csv_rows,
+    upsert_csv_rows as _upsert_csv_rows,
+    write_csv_rows as _write_csv_rows,
+)
 from foundation.control_plane.mt5_kpi_records import (  # noqa: E402
+    ROUTING_MODE_A_B_FALLBACK,
+    ROUTING_MODE_A_ONLY,
     build_mt5_kpi_records,
     enrich_mt5_kpi_records_with_route_coverage,
     mt5_metrics_with_runtime_counts,
@@ -63,21 +83,52 @@ from foundation.control_plane.tier_context import (  # noqa: E402
     TIER_B_PARTIAL_CONTEXT_SUBTYPES,
     apply_tier_b_fallback_subtype_filter,
     classify_tier_b_partial_context,
-    finite_feature_mask,
     normalize_tier_b_fallback_allowed_subtypes,
     parse_tier_b_fallback_allowed_subtypes,
-    subtype_counts as _subtype_counts,
 )
-from foundation.control_plane.ledger import (  # noqa: E402
-    ALPHA_LEDGER_COLUMNS,
-    RUN_REGISTRY_COLUMNS,
-    ledger_pairs as _ledger_pairs,
-    ledger_path as _ledger_path,
-    ledger_status as _ledger_status,
-    ledger_value as _ledger_value,
-    read_csv_rows as _read_csv_rows,
-    upsert_csv_rows as _upsert_csv_rows,
-    write_csv_rows as _write_csv_rows,
+from foundation.control_plane.tier_context_materialization import (  # noqa: E402
+    ROUTE_ROLE_A_PRIMARY,
+    ROUTE_ROLE_B_FALLBACK,
+    ROUTE_ROLE_NO_TIER,
+    TIER_B_CORE_FEATURE_ORDER,
+    TIER_B_PARTIAL_CONTEXT_DATASET_ID,
+    TIER_B_PARTIAL_CONTEXT_FEATURE_SET_ID,
+    TIER_B_PARTIAL_CONTEXT_POLICY_ID,
+    build_tier_b_partial_context_frames,
+)
+from foundation.models.onnx_bridge import (  # noqa: E402
+    _find_probability_output,
+    _onnx_output_shape,
+    check_onnxruntime_probability_parity,
+    classifier_classes,
+    export_sklearn_to_onnx_zipmap_disabled,
+    ordered_hash,
+    ordered_sklearn_probabilities,
+)
+from foundation.mt5 import runtime_artifacts as mt5_artifacts  # noqa: E402
+from foundation.mt5.strategy_report import extract_mt5_strategy_report_metrics  # noqa: E402
+from foundation.mt5.mql5_compile import compile_mql5_ea, metaeditor_command_log_path  # noqa: E402
+from foundation.mt5.runtime_artifacts import (  # noqa: E402
+    EA_EXPERT_PATH,
+    EA_SOURCE_PATH,
+    EA_TESTER_SET_NAME,
+    copy_to_common_files,
+    export_mt5_feature_matrix_csv,
+    mt5_runtime_module_hashes,
+    sha256_file,
+    sha256_file_lf_normalized,
+    validate_feature_matrix,
+    write_json,
+)
+from foundation.mt5.terminal_runner import (  # noqa: E402
+    run_mt5_tester,
+    validate_mt5_runtime_outputs,
+    wait_for_mt5_runtime_outputs,
+)
+from foundation.mt5.tester_files import (  # noqa: E402
+    TesterMaterializationConfig,
+    materialize_tester_ini_file,
+    materialize_tester_set_file,
 )
 
 
@@ -89,9 +140,6 @@ MODEL_INPUT_DATASET_ID = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split
 FEATURE_SET_ID = "feature_set_v2_mt5_price_proxy_top3_weights_58_features"
 TIER_B_MODEL_INPUT_DATASET_ID = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_feature_set_v1_no_placeholder_top3_weights"
 TIER_B_FEATURE_SET_ID = "feature_set_v1_no_placeholder_top3_weight_features"
-TIER_B_PARTIAL_CONTEXT_DATASET_ID = "stage10_tier_b_partial_context_core42_v1"
-TIER_B_PARTIAL_CONTEXT_FEATURE_SET_ID = "feature_set_stage10_tier_b_core42_us100_session_v1"
-TIER_B_PARTIAL_CONTEXT_POLICY_ID = "tier_b_partial_context_core42_fallback_v1"
 FEATURE_ORDER_HASH = "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
 DEFAULT_MODEL_INPUT_PATH = Path(
     "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet"
@@ -117,79 +165,8 @@ DEFAULT_COMMON_FILES_ROOT = Path.home() / "AppData/Roaming/MetaQuotes/Terminal/C
 DEFAULT_TERMINAL_DATA_ROOT = REPO_ROOT.parents[2]
 DEFAULT_TESTER_PROFILE_ROOT = REPO_ROOT.parents[1] / "Profiles" / "Tester"
 COMMON_RUN_ROOT = "Project_Obsidian_Prime_v2/stage10/run01A_logreg_threshold_mt5_scout_v1"
-EA_SOURCE_PATH = Path("foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5")
-EA_EXPERT_PATH = "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5"
-EA_TESTER_SET_NAME = "ObsidianPrimeV2_RuntimeProbeEA.set"
-PROBABILITY_COLUMNS = ["p_short", "p_flat", "p_long"]
-DECISION_CLASS_NO_TRADE = -1
-DECISION_LABEL_NO_TRADE = "no_trade"
-TIER_COLUMN = "tier_label"
-TIER_A = "Tier A"
-TIER_B = "Tier B"
-TIER_AB = "Tier A+B"
-ROUTE_ROLE_A_PRIMARY = "tier_a_primary"
-ROUTE_ROLE_B_FALLBACK = "tier_b_fallback"
-ROUTE_ROLE_NO_TIER = "no_tier"
-ROUTING_MODE_A_B_FALLBACK = "tier_a_primary_tier_b_fallback"
-ROUTING_MODE_A_ONLY = "tier_a_primary_no_fallback"
 MT5_RECORD_TIER_A_ONLY_PREFIX = "mt5_tier_a_only"
 MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX = "mt5_tier_b_fallback_only"
-METAEDITOR_LOG_MAX_PATH_CHARS = 240
-TIER_B_CORE_FEATURE_ORDER = (
-    "log_return_1",
-    "log_return_3",
-    "hl_range",
-    "close_open_ratio",
-    "gap_percent",
-    "close_prev_close_ratio",
-    "return_zscore_20",
-    "hl_zscore_50",
-    "overnight_return",
-    "return_1_over_atr_14",
-    "close_ema20_ratio",
-    "close_ema50_ratio",
-    "ema9_ema20_diff",
-    "ema20_ema50_diff",
-    "ema50_ema200_diff",
-    "ema20_ema50_spread_zscore_50",
-    "sma50_sma200_ratio",
-    "rsi_14",
-    "rsi_50",
-    "rsi_14_slope_3",
-    "rsi_14_minus_50",
-    "stoch_kd_diff",
-    "stochrsi_kd_diff",
-    "ppo_hist_12_26_9",
-    "roc_12",
-    "trix_15",
-    "atr_14",
-    "atr_50",
-    "atr_14_over_atr_50",
-    "bollinger_width_20",
-    "bb_position_20",
-    "bb_squeeze",
-    "historical_vol_20",
-    "historical_vol_5_over_20",
-    "adx_14",
-    "di_spread_14",
-    "supertrend_10_3",
-    "vortex_indicator",
-    "is_us_cash_open",
-    "minutes_from_cash_open",
-    "is_first_30m_after_open",
-    "is_last_30m_before_cash_close",
-)
-REQUIRED_TIER_VIEWS = (
-    ("tier_a_separate", TIER_A),
-    ("tier_b_separate", TIER_B),
-    ("tier_ab_combined", TIER_AB),
-)
-@dataclass(frozen=True)
-class ThresholdRule:
-    threshold_id: str = "short045_long045_margin005"
-    short_threshold: float = 0.45
-    long_threshold: float = 0.45
-    min_margin: float = 0.05
 
 
 def default_common_run_root(run_id: str) -> str:
@@ -210,29 +187,12 @@ def configure_run_identity(
     EXPLORATION_LABEL = exploration_label
     DEFAULT_RUN_OUTPUT_ROOT = Path("stages") / STAGE_ID / "02_runs" / RUN_ID
     COMMON_RUN_ROOT = common_run_root or default_common_run_root(run_id)
-
-
-def threshold_rule_payload(rule: ThresholdRule) -> dict[str, Any]:
-    return {
-        "threshold_id": rule.threshold_id,
-        "short_threshold": rule.short_threshold,
-        "long_threshold": rule.long_threshold,
-        "min_margin": rule.min_margin,
-    }
-
-
-def threshold_rule_from_values(
-    *,
-    short_threshold: float,
-    long_threshold: float,
-    min_margin: float,
-    threshold_id: str | None = None,
-) -> ThresholdRule:
-    return ThresholdRule(
-        threshold_id=threshold_id or _threshold_id(short_threshold, long_threshold, min_margin),
-        short_threshold=float(short_threshold),
-        long_threshold=float(long_threshold),
-        min_margin=float(min_margin),
+    alpha_scout_runner.configure_run_identity(
+        run_number=RUN_NUMBER,
+        run_id=RUN_ID,
+        exploration_label=EXPLORATION_LABEL,
+        common_run_root=COMMON_RUN_ROOT,
+        stage_id=STAGE_ID,
     )
 
 
@@ -275,493 +235,12 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def _io_path(path: Path) -> Path:
-    resolved = path.resolve()
-    if sys.platform == "win32":
-        text = str(resolved)
-        if not text.startswith("\\\\?\\"):
-            return Path("\\\\?\\" + text)
-    return resolved
-
-
-def _path_exists(path: Path) -> bool:
-    return _io_path(path).exists()
-
-
-def metaeditor_command_log_path(log_path: Path) -> Path:
-    resolved = log_path.resolve()
-    if len(str(resolved)) <= METAEDITOR_LOG_MAX_PATH_CHARS:
-        return log_path
-    digest = hashlib.sha256(str(resolved).encode("utf-8")).hexdigest()[:16]
-    return Path(tempfile.gettempdir()) / "obsidian_prime_mt5_compile" / f"compile_{digest}.log"
-
-
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with _io_path(path).open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
-
-
-def sha256_file_lf_normalized(path: Path) -> str:
-    raw = _io_path(path).read_bytes()
-    return hashlib.sha256(raw.replace(b"\r\n", b"\n")).hexdigest()
-
-
-def ordered_hash(names: Sequence[str]) -> str:
-    return hashlib.sha256("\n".join(names).encode("utf-8")).hexdigest()
-
-
-def mt5_runtime_module_hashes() -> list[dict[str, Any]]:
-    include_root = REPO_ROOT / "foundation" / "mt5" / "include" / "ObsidianPrime"
-    paths = [REPO_ROOT / EA_SOURCE_PATH]
-    if _path_exists(include_root):
-        paths.extend(sorted(include_root.glob("*.mqh")))
-    modules: list[dict[str, Any]] = []
-    for path in paths:
-        if not _path_exists(path):
-            modules.append({"path": path.relative_to(REPO_ROOT).as_posix(), "status": "missing", "sha256": None})
-            continue
-        modules.append(
-            {
-                "path": path.relative_to(REPO_ROOT).as_posix(),
-                "status": "present",
-                "sha256": sha256_file(path),
-            }
-        )
-    return modules
-
-
-def write_json(path: Path, payload: Mapping[str, Any]) -> None:
-    _io_path(path.parent).mkdir(parents=True, exist_ok=True)
-    _io_path(path).write_text(json.dumps(_json_ready(payload), indent=2), encoding="utf-8")
-
-
-def _json_ready(value: Any) -> Any:
-    if isinstance(value, Path):
-        return value.as_posix()
-    if isinstance(value, pd.Timestamp):
-        return value.isoformat()
-    if isinstance(value, Mapping):
-        return {str(key): _json_ready(item) for key, item in value.items()}
-    if isinstance(value, list):
-        return [_json_ready(item) for item in value]
-    if isinstance(value, tuple):
-        return [_json_ready(item) for item in value]
-    if isinstance(value, np.integer):
-        return int(value)
-    if isinstance(value, np.floating):
-        number = float(value)
-        return number if np.isfinite(number) else None
-    if isinstance(value, np.bool_):
-        return bool(value)
-    if isinstance(value, float) and not np.isfinite(value):
-        return None
-    return value
-
-
 def load_label_threshold(summary_path: Path) -> float:
     payload = json.loads(_io_path(summary_path).read_text(encoding="utf-8"))
     threshold = float(payload["threshold_log_return"])
     if not np.isfinite(threshold) or threshold <= 0:
         raise RuntimeError(f"Invalid label threshold in {summary_path}: {threshold}")
     return threshold
-
-
-def _timestamp_key(series: pd.Series) -> pd.Series:
-    return pd.to_datetime(series, utc=True).astype("int64")
-
-
-def build_tier_b_partial_context_frames(
-    *,
-    raw_root: Path,
-    tier_a_frame: pd.DataFrame,
-    tier_a_feature_order: Sequence[str],
-    tier_b_feature_order: Sequence[str],
-    label_threshold: float,
-    label_spec: TrainingLabelSplitSpec | None = None,
-) -> dict[str, Any]:
-    spec = label_spec or TrainingLabelSplitSpec()
-    feature_frame, source_counts = build_feature_frame(raw_root)
-    feature_frame = feature_frame.copy()
-    feature_frame["timestamp"] = pd.to_datetime(feature_frame["timestamp"], utc=True)
-    if "symbol" not in feature_frame.columns:
-        feature_frame["symbol"] = "US100"
-
-    cash_open = feature_frame["is_us_cash_open"].fillna(0).astype(bool)
-    practical = feature_frame["timestamp"] >= spec.train_start_utc
-    feature_frame = feature_frame.loc[practical & cash_open].sort_values("timestamp").reset_index(drop=True)
-
-    raw_close_frame = load_us100_close_series(raw_root)
-    labelable = build_label_candidates(feature_frame, raw_close_frame, spec)
-    labelable = assign_label_classes(labelable, label_threshold)
-    labelable["split"] = assign_split(labelable, spec)
-    labelable["label_id"] = spec.label_id
-    labelable["split_id"] = spec.split_id
-    labelable["horizon_bars"] = spec.horizon_bars
-    labelable["horizon_minutes"] = spec.horizon_minutes
-    labelable["symbol"] = "US100"
-    labelable = labelable.sort_values("timestamp").reset_index(drop=True)
-
-    tier_a_keys = set(_timestamp_key(tier_a_frame["timestamp"]).tolist())
-    labelable_keys = _timestamp_key(labelable["timestamp"])
-    tier_a_available = labelable_keys.isin(tier_a_keys)
-    tier_b_ready = finite_feature_mask(labelable, tier_b_feature_order)
-    tier_a_full_feature_ready = finite_feature_mask(labelable, tier_a_feature_order)
-
-    labelable["tier_a_primary_available"] = tier_a_available.to_numpy()
-    labelable["tier_a_full_feature_ready"] = tier_a_full_feature_ready.to_numpy()
-    labelable["tier_b_core_ready"] = tier_b_ready.to_numpy()
-    labelable["route_role"] = np.select(
-        [tier_a_available.to_numpy(), tier_b_ready.to_numpy()],
-        [ROUTE_ROLE_A_PRIMARY, ROUTE_ROLE_B_FALLBACK],
-        default=ROUTE_ROLE_NO_TIER,
-    )
-
-    labeled_with_context = classify_tier_b_partial_context(labelable)
-    b_training = labeled_with_context.loc[tier_b_ready].copy().reset_index(drop=True)
-    b_fallback = labeled_with_context.loc[~tier_a_available & tier_b_ready].copy().reset_index(drop=True)
-    no_tier = labeled_with_context.loc[~tier_a_available & ~tier_b_ready].copy().reset_index(drop=True)
-
-    b_training[TIER_COLUMN] = TIER_B
-    b_fallback[TIER_COLUMN] = TIER_B
-    no_tier["context_reject_reason"] = "core42_nonfinite_or_missing"
-    no_tier["partial_context_subtype"] = "no_tier_core42_missing"
-    no_tier["missing_feature_group_mask"] = "core42"
-    no_tier["available_feature_group_mask"] = "insufficient_for_tier_b"
-
-    by_split: dict[str, dict[str, int]] = {}
-    for split in ("train", "validation", "oos"):
-        by_split[split] = {
-            "tier_a_primary_rows": int(tier_a_frame["split"].astype(str).eq(split).sum()),
-            "tier_b_fallback_rows": int(b_fallback["split"].astype(str).eq(split).sum()),
-            "no_tier_labelable_rows": int(no_tier["split"].astype(str).eq(split).sum()),
-        }
-        by_split[split]["routed_labelable_rows"] = (
-            by_split[split]["tier_a_primary_rows"] + by_split[split]["tier_b_fallback_rows"]
-        )
-
-    summary = {
-        "policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID,
-        "dataset_id": TIER_B_PARTIAL_CONTEXT_DATASET_ID,
-        "feature_set_id": TIER_B_PARTIAL_CONTEXT_FEATURE_SET_ID,
-        "feature_count": int(len(tier_b_feature_order)),
-        "feature_order_hash": ordered_hash(tier_b_feature_order),
-        "label_threshold_log_return": float(label_threshold),
-        "source_raw_rows": int(source_counts.get("raw_rows", 0)),
-        "source_valid_rows": int(source_counts.get("valid_rows", 0)),
-        "labelable_rows": int(len(labelable)),
-        "tier_a_primary_rows": int(len(tier_a_frame)),
-        "tier_b_training_rows": int(len(b_training)),
-        "tier_b_fallback_rows": int(len(b_fallback)),
-        "no_tier_labelable_rows": int(len(no_tier)),
-        "by_split": by_split,
-        "tier_b_fallback_by_subtype": _subtype_counts(b_fallback),
-        "tier_b_fallback_by_split_subtype": _subtype_counts_by_split(b_fallback),
-        "no_tier_by_split": _split_counts(no_tier),
-        "note": (
-            "Tier B fallback is built from partial-context rows that are outside the strict Tier A clean sample "
-            "but still have finite US100/session core42 features."
-        ),
-    }
-    return {
-        "route_frame": labeled_with_context,
-        "tier_b_training_frame": b_training,
-        "tier_b_fallback_frame": b_fallback,
-        "no_tier_frame": no_tier,
-        "summary": summary,
-    }
-
-
-def validate_threshold_rule(rule: ThresholdRule) -> None:
-    values = {
-        "short_threshold": rule.short_threshold,
-        "long_threshold": rule.long_threshold,
-        "min_margin": rule.min_margin,
-    }
-    for name, value in values.items():
-        if not np.isfinite(value):
-            raise ValueError(f"{name} must be finite.")
-    if not 0.0 <= rule.short_threshold <= 1.0:
-        raise ValueError("short_threshold must be in [0, 1].")
-    if not 0.0 <= rule.long_threshold <= 1.0:
-        raise ValueError("long_threshold must be in [0, 1].")
-    if rule.min_margin < 0.0:
-        raise ValueError("min_margin must be non-negative.")
-
-
-def probability_matrix(probabilities: pd.DataFrame | np.ndarray) -> np.ndarray:
-    if isinstance(probabilities, pd.DataFrame):
-        missing = [name for name in PROBABILITY_COLUMNS if name not in probabilities.columns]
-        if missing:
-            raise ValueError(f"Probability frame is missing columns: {missing}")
-        matrix = probabilities.loc[:, PROBABILITY_COLUMNS].to_numpy(dtype="float64", copy=False)
-    else:
-        matrix = np.asarray(probabilities, dtype="float64")
-    if matrix.ndim != 2 or matrix.shape[1] != 3:
-        raise ValueError(f"Expected probability matrix shape [n, 3], got {matrix.shape}.")
-    if not np.isfinite(matrix).all():
-        raise ValueError("Probability matrix contains NaN or infinite values.")
-    return matrix
-
-
-def apply_threshold_rule(probabilities: pd.DataFrame | np.ndarray, rule: ThresholdRule) -> pd.DataFrame:
-    validate_threshold_rule(rule)
-    matrix = probability_matrix(probabilities)
-    rows: list[dict[str, Any]] = []
-    for p_short, p_flat, p_long in matrix:
-        short_margin = float(p_short - max(p_flat, p_long))
-        long_margin = float(p_long - max(p_flat, p_short))
-        short_pass = bool(p_short >= rule.short_threshold and short_margin >= rule.min_margin)
-        long_pass = bool(p_long >= rule.long_threshold and long_margin >= rule.min_margin)
-
-        if short_pass and not long_pass:
-            decision_class = 0
-            decision_label = LABEL_NAMES[0]
-            decision_probability = float(p_short)
-            decision_margin = short_margin
-        elif long_pass and not short_pass:
-            decision_class = 2
-            decision_label = LABEL_NAMES[2]
-            decision_probability = float(p_long)
-            decision_margin = long_margin
-        elif short_pass and long_pass and p_short != p_long:
-            decision_class = 0 if p_short > p_long else 2
-            decision_label = LABEL_NAMES[decision_class]
-            decision_probability = float(max(p_short, p_long))
-            decision_margin = float(abs(p_short - p_long))
-        else:
-            decision_class = DECISION_CLASS_NO_TRADE
-            decision_label = DECISION_LABEL_NO_TRADE
-            decision_probability = float(max(p_short, p_flat, p_long))
-            decision_margin = float(max(short_margin, long_margin))
-
-        rows.append(
-            {
-                "threshold_id": rule.threshold_id,
-                "p_short": float(p_short),
-                "p_flat": float(p_flat),
-                "p_long": float(p_long),
-                "decision_label_class": decision_class,
-                "decision_label": decision_label,
-                "decision_probability": decision_probability,
-                "decision_margin": decision_margin,
-                "short_margin": short_margin,
-                "long_margin": long_margin,
-            }
-        )
-    return pd.DataFrame(rows)
-
-
-def _threshold_id(short_threshold: float, long_threshold: float, min_margin: float) -> str:
-    return f"short{short_threshold:.3f}_long{long_threshold:.3f}_margin{min_margin:.3f}"
-
-
-def sweep_threshold_rules(
-    probabilities: pd.DataFrame | np.ndarray,
-    y_true: Sequence[int] | np.ndarray | pd.Series | None = None,
-    *,
-    short_thresholds: Sequence[float] = (0.40, 0.45, 0.50, 0.55, 0.60),
-    long_thresholds: Sequence[float] | None = None,
-    min_margins: Sequence[float] = (0.00, 0.025, 0.05, 0.075, 0.10),
-) -> pd.DataFrame:
-    if long_thresholds is None:
-        long_thresholds = short_thresholds
-    matrix = probability_matrix(probabilities)
-    true_values = None if y_true is None else np.asarray(y_true, dtype="int64")
-    if true_values is not None and true_values.shape[0] != matrix.shape[0]:
-        raise ValueError("y_true length must match probability row count.")
-
-    rows: list[dict[str, Any]] = []
-    for short_threshold, long_threshold, min_margin in itertools.product(
-        short_thresholds, long_thresholds, min_margins
-    ):
-        rule = ThresholdRule(
-            threshold_id=_threshold_id(short_threshold, long_threshold, min_margin),
-            short_threshold=float(short_threshold),
-            long_threshold=float(long_threshold),
-            min_margin=float(min_margin),
-        )
-        decisions = apply_threshold_rule(matrix, rule)
-        decision_classes = decisions["decision_label_class"].to_numpy(dtype="int64", copy=False)
-        signal_mask = decision_classes != DECISION_CLASS_NO_TRADE
-        signal_count = int(signal_mask.sum())
-        short_count = int((decision_classes == 0).sum())
-        long_count = int((decision_classes == 2).sum())
-        row: dict[str, Any] = {
-            "threshold_id": rule.threshold_id,
-            "short_threshold": rule.short_threshold,
-            "long_threshold": rule.long_threshold,
-            "min_margin": rule.min_margin,
-            "rows": int(len(decisions)),
-            "signal_count": signal_count,
-            "short_count": short_count,
-            "long_count": long_count,
-            "coverage": float(signal_count / len(decisions)) if len(decisions) else 0.0,
-            "no_trade_rate": float(1.0 - signal_count / len(decisions)) if len(decisions) else 1.0,
-            "long_share_of_signals": float(long_count / signal_count) if signal_count else np.nan,
-        }
-        if true_values is not None:
-            correct = decision_classes[signal_mask] == true_values[signal_mask]
-            row["directional_hit_rate"] = float(correct.mean()) if signal_count else np.nan
-            row["directional_correct_count"] = int(correct.sum()) if signal_count else 0
-        rows.append(row)
-    return pd.DataFrame(rows)
-
-
-def select_threshold_from_sweep(
-    sweep: pd.DataFrame,
-    *,
-    primary_metric: str = "directional_hit_rate",
-    min_coverage: float = 0.01,
-) -> dict[str, Any]:
-    if sweep.empty:
-        raise ValueError("Threshold sweep is empty.")
-    if primary_metric not in sweep.columns:
-        primary_metric = "coverage"
-    candidates = sweep.loc[sweep["coverage"].fillna(0.0) >= min_coverage].copy()
-    if candidates.empty:
-        candidates = sweep.copy()
-    candidates[primary_metric] = candidates[primary_metric].fillna(-np.inf)
-    candidates = candidates.sort_values(
-        [primary_metric, "coverage", "signal_count", "threshold_id"],
-        ascending=[False, False, False, True],
-    )
-    return candidates.iloc[0].to_dict()
-
-
-def classifier_classes(model: Any) -> list[int]:
-    if hasattr(model, "named_steps"):
-        for step in reversed(list(model.named_steps.values())):
-            if hasattr(step, "classes_"):
-                return [int(value) for value in step.classes_]
-    if hasattr(model, "classes_"):
-        return [int(value) for value in model.classes_]
-    raise ValueError("Model does not expose classes_.")
-
-
-def ordered_sklearn_probabilities(
-    model: Any,
-    values: np.ndarray,
-    class_order: Sequence[int] = LABEL_ORDER,
-) -> np.ndarray:
-    raw = np.asarray(model.predict_proba(values), dtype="float64")
-    classes = classifier_classes(model)
-    class_to_index = {int(label): index for index, label in enumerate(classes)}
-    ordered = np.zeros((raw.shape[0], len(class_order)), dtype="float64")
-    for output_index, label in enumerate(class_order):
-        if int(label) not in class_to_index:
-            raise ValueError(f"Model is missing class {label}; cannot build fixed probability order.")
-        ordered[:, output_index] = raw[:, class_to_index[int(label)]]
-    return ordered
-
-
-def build_prediction_frame(
-    model: Any,
-    frame: pd.DataFrame,
-    feature_order: Sequence[str],
-    rule: ThresholdRule,
-    *,
-    tier_column: str = TIER_COLUMN,
-) -> pd.DataFrame:
-    values = frame.loc[:, list(feature_order)].to_numpy(dtype="float64", copy=False)
-    probabilities = ordered_sklearn_probabilities(model, values)
-    decisions = apply_threshold_rule(probabilities, rule)
-    identity_columns = [
-        name
-        for name in (
-            "timestamp",
-            "symbol",
-            "split",
-            "label",
-            "label_class",
-            "route_role",
-            "partial_context_subtype",
-            "missing_feature_group_mask",
-            "available_feature_group_mask",
-            "tier_a_primary_available",
-            "tier_a_full_feature_ready",
-            "tier_b_core_ready",
-            "context_reject_reason",
-        )
-        if name in frame.columns
-    ]
-    result = frame.loc[:, identity_columns].reset_index(drop=True).copy()
-    if tier_column in frame.columns:
-        result[tier_column] = frame[tier_column].to_numpy()
-    return pd.concat([result, decisions], axis=1)
-
-
-def normalize_tier_label(value: Any) -> str | None:
-    if value is None or (isinstance(value, float) and np.isnan(value)):
-        return None
-    text = str(value).strip().lower().replace("_", " ")
-    if text in {"tier a", "a"}:
-        return TIER_A
-    if text in {"tier b", "b"}:
-        return TIER_B
-    if text in {"tier a+b", "tier ab", "a+b", "ab", "combined"}:
-        return TIER_AB
-    return None
-
-
-def build_tier_prediction_views(
-    predictions: pd.DataFrame,
-    *,
-    tier_column: str = TIER_COLUMN,
-) -> dict[str, pd.DataFrame]:
-    empty = predictions.iloc[0:0].copy()
-    if tier_column not in predictions.columns:
-        return {view: empty.copy() for view, _scope in REQUIRED_TIER_VIEWS}
-
-    normalized = predictions[tier_column].map(normalize_tier_label)
-    tier_a = predictions.loc[normalized.eq(TIER_A)].copy()
-    tier_b = predictions.loc[normalized.eq(TIER_B)].copy()
-    combined = pd.concat([tier_a, tier_b], ignore_index=True)
-    return {
-        "tier_a_separate": tier_a.reset_index(drop=True),
-        "tier_b_separate": tier_b.reset_index(drop=True),
-        "tier_ab_combined": combined.reset_index(drop=True),
-    }
-
-
-def prediction_view_metrics(view: pd.DataFrame) -> dict[str, Any]:
-    rows = int(len(view))
-    payload: dict[str, Any] = {
-        "rows": rows,
-        "signal_count": 0,
-        "short_count": 0,
-        "long_count": 0,
-        "no_trade_count": 0,
-        "signal_coverage": 0.0,
-        "probability_row_sum_max_abs_error": None,
-    }
-    if rows == 0:
-        return payload
-
-    if "decision_label" in view.columns:
-        decision_labels = view["decision_label"].astype(str)
-        payload["short_count"] = int(decision_labels.eq("short").sum())
-        payload["long_count"] = int(decision_labels.eq("long").sum())
-        payload["no_trade_count"] = int(decision_labels.eq(DECISION_LABEL_NO_TRADE).sum())
-        payload["signal_count"] = int(payload["short_count"] + payload["long_count"])
-        payload["signal_coverage"] = float(payload["signal_count"] / rows)
-    if "threshold_id" in view.columns:
-        payload["threshold_ids"] = sorted(str(value) for value in view["threshold_id"].dropna().unique())
-
-    if all(name in view.columns for name in PROBABILITY_COLUMNS):
-        matrix = probability_matrix(view.loc[:, PROBABILITY_COLUMNS])
-        payload["probability_row_sum_max_abs_error"] = float(np.abs(matrix.sum(axis=1) - 1.0).max())
-        payload["mean_probability"] = {
-            name: float(matrix[:, index].mean()) for index, name in enumerate(PROBABILITY_COLUMNS)
-        }
-    if "partial_context_subtype" in view.columns:
-        payload["partial_context_subtype_counts"] = _subtype_counts(view)
-        if "decision_label" in view.columns:
-            signal_view = view.loc[view["decision_label"].astype(str).ne(DECISION_LABEL_NO_TRADE)]
-            payload["partial_context_subtype_signal_counts"] = _subtype_counts(signal_view)
-    return payload
 
 
 def build_paired_tier_records(
@@ -774,715 +253,25 @@ def build_paired_tier_records(
     scoreboard_lane: str = "structural_scout",
     external_verification_status: str = "out_of_scope_by_claim",
 ) -> list[dict[str, Any]]:
-    run_id = run_id or RUN_ID
-    stage_id = stage_id or STAGE_ID
-    records: list[dict[str, Any]] = []
-    base = None if base_path is None else Path(base_path)
-    for record_view, tier_scope in REQUIRED_TIER_VIEWS:
-        view = tier_views.get(record_view)
-        metrics = prediction_view_metrics(view if view is not None else pd.DataFrame())
-        status = "completed_payload" if metrics["rows"] > 0 else "missing_required"
-        judgment = "inconclusive_payload_only" if metrics["rows"] > 0 else "inconclusive_tier_pair_incomplete"
-        record_path = "" if base is None else (base / f"{record_view}_predictions.parquet").as_posix()
-        records.append(
-            {
-                "ledger_row_id": f"{run_id}__{record_view}",
-                "stage_id": stage_id,
-                "run_id": run_id,
-                "subrun_id": record_view,
-                "parent_run_id": run_id,
-                "record_view": record_view,
-                "tier_scope": tier_scope,
-                "kpi_scope": kpi_scope,
-                "scoreboard_lane": scoreboard_lane,
-                "status": status,
-                "judgment": judgment,
-                "path": record_path,
-                "primary_kpi": {"signal_coverage": metrics["signal_coverage"]},
-                "guardrail_kpi": {
-                    "probability_row_sum_max_abs_error": metrics["probability_row_sum_max_abs_error"],
-                },
-                "external_verification_status": external_verification_status,
-                "notes": "Tier labels are sample labels, not exploration gates.",
-                "metrics": metrics,
-            }
-        )
-    return records
-
-
-def materialize_tier_prediction_views(
-    tier_views: Mapping[str, pd.DataFrame],
-    output_root: Path,
-) -> dict[str, dict[str, Any]]:
-    _io_path(output_root).mkdir(parents=True, exist_ok=True)
-    payload: dict[str, dict[str, Any]] = {}
-    for record_view, view in tier_views.items():
-        if view.empty:
-            payload[record_view] = {"status": "missing_required", "rows": 0, "path": None, "sha256": None}
-            continue
-        path = output_root / f"{record_view}_predictions.parquet"
-        view.to_parquet(_io_path(path), index=False)
-        payload[record_view] = {
-            "status": "completed_payload",
-            "rows": int(len(view)),
-            "path": path.as_posix(),
-            "sha256": sha256_file(path),
-        }
-    return payload
-
-
-def _onnx_options_for_model(model: Any) -> dict[int, dict[str, Any]]:
-    options = {id(model): {"zipmap": False}}
-    if hasattr(model, "named_steps"):
-        for step in model.named_steps.values():
-            if hasattr(step, "predict_proba"):
-                options[id(step)] = {"zipmap": False}
-    return options
-
-
-def _onnx_output_shape(output: Any) -> list[Any]:
-    tensor_type = output.type.tensor_type
-    dims: list[Any] = []
-    for dim in tensor_type.shape.dim:
-        if dim.dim_value:
-            dims.append(int(dim.dim_value))
-        elif dim.dim_param:
-            dims.append(str(dim.dim_param))
-        else:
-            dims.append(None)
-    return dims
-
-
-def export_sklearn_to_onnx_zipmap_disabled(
-    model: Any,
-    output_path: Path,
-    *,
-    feature_count: int,
-    input_name: str = "float_input",
-    target_opset: int = 12,
-) -> dict[str, Any]:
-    from skl2onnx import convert_sklearn
-    from skl2onnx.common.data_types import FloatTensorType
-
-    onnx_model = convert_sklearn(
-        model,
-        initial_types=[(input_name, FloatTensorType([None, int(feature_count)]))],
-        options=_onnx_options_for_model(model),
-        target_opset=target_opset,
+    return _build_paired_tier_records(
+        tier_views,
+        run_id=run_id or RUN_ID,
+        stage_id=stage_id or STAGE_ID,
+        base_path=base_path,
+        kpi_scope=kpi_scope,
+        scoreboard_lane=scoreboard_lane,
+        external_verification_status=external_verification_status,
     )
-    non_tensor_outputs = [
-        output.name for output in onnx_model.graph.output if output.type.WhichOneof("value") != "tensor_type"
-    ]
-    if non_tensor_outputs:
-        raise RuntimeError(f"ONNX export produced non-tensor outputs, zipmap may be enabled: {non_tensor_outputs}")
-
-    _io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
-    _io_path(output_path).write_bytes(onnx_model.SerializeToString())
-    outputs = [
-        {
-            "name": output.name,
-            "value_type": output.type.WhichOneof("value"),
-            "shape": _onnx_output_shape(output),
-        }
-        for output in onnx_model.graph.output
-    ]
-    probability_outputs = [
-        item["name"]
-        for item in outputs
-        if len(item["shape"]) == 2 and item["shape"][-1] in {len(LABEL_ORDER), "N"}
-    ]
-    return {
-        "path": output_path.as_posix(),
-        "sha256": sha256_file(output_path),
-        "input_name": input_name,
-        "target_opset": target_opset,
-        "zipmap_disabled": True,
-        "outputs": outputs,
-        "probability_output_name": probability_outputs[0] if probability_outputs else outputs[-1]["name"],
-    }
 
 
-def _find_probability_output(outputs: Sequence[np.ndarray], class_count: int) -> np.ndarray:
-    candidates = [
-        output
-        for output in outputs
-        if isinstance(output, np.ndarray) and output.ndim == 2 and output.shape[1] == class_count
-    ]
-    if len(candidates) != 1:
-        shapes = [getattr(output, "shape", None) for output in outputs]
-        raise RuntimeError(f"Expected one probability output with {class_count} columns; got shapes {shapes}.")
-    return np.asarray(candidates[0], dtype="float64")
-
-
-def check_onnxruntime_probability_parity(
-    model: Any,
-    onnx_path: Path,
-    values: np.ndarray,
-    *,
-    class_order: Sequence[int] = LABEL_ORDER,
-    tolerance: float = 1e-5,
-) -> dict[str, Any]:
-    import onnxruntime as ort
-
-    classes = classifier_classes(model)
-    if list(classes) != [int(label) for label in class_order]:
-        raise ValueError(f"Model class order {classes} does not match expected class order {list(class_order)}.")
-    X = np.asarray(values, dtype="float32")
-    expected = ordered_sklearn_probabilities(model, X.astype("float64"), class_order=class_order)
-    session = ort.InferenceSession(str(_io_path(onnx_path)), providers=["CPUExecutionProvider"])
-    input_name = session.get_inputs()[0].name
-    outputs = session.run(None, {input_name: X})
-    actual = _find_probability_output(outputs, len(class_order))
-    diff = np.abs(actual - expected)
-    row_sum_error = np.abs(actual.sum(axis=1) - 1.0)
-    return {
-        "passed": bool(float(diff.max()) <= tolerance),
-        "rows": int(X.shape[0]),
-        "class_order": [int(label) for label in class_order],
-        "tolerance": float(tolerance),
-        "max_abs_diff": float(diff.max()),
-        "mean_abs_diff": float(diff.mean()),
-        "onnx_row_sum_max_abs_error": float(row_sum_error.max()) if len(row_sum_error) else 0.0,
-        "input_name": input_name,
-        "output_names": [output.name for output in session.get_outputs()],
-    }
-
-
-def validate_feature_matrix(frame: pd.DataFrame, feature_order: Sequence[str]) -> np.ndarray:
-    missing = [name for name in feature_order if name not in frame.columns]
-    if missing:
-        raise ValueError(f"Feature frame is missing feature columns: {missing}")
-    matrix = frame.loc[:, list(feature_order)].to_numpy(dtype="float64", copy=False)
-    if matrix.ndim != 2 or matrix.shape[1] != len(feature_order):
-        raise ValueError("Feature matrix shape does not match feature order.")
-    if not np.isfinite(matrix).all():
-        raise ValueError("Feature matrix contains NaN or infinite values.")
-    return matrix
-
-
-def export_mt5_feature_matrix_csv(
-    frame: pd.DataFrame,
-    feature_order: Sequence[str],
-    output_path: Path,
-    *,
-    timestamp_column: str = "timestamp",
-    metadata_columns: Sequence[str] = (),
-) -> dict[str, Any]:
-    matrix = validate_feature_matrix(frame, feature_order)
-    payload = pd.DataFrame()
-    if timestamp_column in frame.columns:
-        timestamps = pd.to_datetime(frame[timestamp_column], utc=True)
-        payload["bar_time_server"] = timestamps.dt.strftime("%Y.%m.%d %H:%M:%S").to_numpy()
-        payload["timestamp_utc"] = timestamps.dt.strftime("%Y-%m-%dT%H:%M:%SZ").to_numpy()
-    if "split" in frame.columns:
-        payload["split"] = frame["split"].astype(str).to_numpy()
-    for name in metadata_columns:
-        if name in frame.columns and name not in payload.columns:
-            payload[name] = frame[name].astype(str).to_numpy()
-    payload["row_index"] = np.arange(len(frame), dtype="int64")
-    feature_frame = pd.DataFrame(matrix.astype("float32"), columns=list(feature_order))
-    payload = pd.concat([payload, feature_frame], axis=1)
-    _io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
-    payload.to_csv(_io_path(output_path), index=False, encoding="utf-8", float_format="%.10g")
-    return {
-        "path": output_path.as_posix(),
-        "sha256": sha256_file(output_path),
-        "rows": int(len(payload)),
-        "feature_count": int(len(feature_order)),
-        "feature_order_hash": ordered_hash(feature_order),
-        "format": "csv_float32_ordered_features",
-        "metadata_columns": [name for name in metadata_columns if name in frame.columns],
-    }
-
-
-def common_ref(*parts: str) -> str:
-    return "/".join([COMMON_RUN_ROOT, *parts])
-
-
-def mt5_short_profile_ini_name(tier_name: str, split_name: str) -> str:
-    if tier_name == TIER_AB:
-        tier_code = "rt"
-    else:
-        tier_code = "ta" if tier_name == TIER_A else "tb"
-    split_code = "v" if split_name == "validation_is" else "o"
-    return f"opv2_{RUN_NUMBER}_{tier_code}_{split_code}.ini"
-
-
-def materialize_mt5_attempt_files(
-    *,
-    run_output_root: Path,
-    tier_name: str,
-    split_name: str,
-    local_onnx_path: Path,
-    local_feature_matrix_path: Path,
-    rule: ThresholdRule,
-    feature_count: int,
-    feature_order_hash: str,
-    from_date: str,
-    to_date: str,
-    stem_prefix: str | None = None,
-    record_view_prefix: str | None = None,
-    primary_active_tier: str = "tier_a",
-    attempt_role: str = "tier_only_total",
-    invert_signal: bool = False,
-    max_hold_bars: int = 12,
-) -> dict[str, Any]:
-    tier_slug = tier_name.lower().replace(" ", "_").replace("+", "ab")
-    stem = f"{stem_prefix or tier_slug}_{split_name}"
-    common_model = common_ref("models", local_onnx_path.name)
-    common_matrix = common_ref("features", local_feature_matrix_path.name)
-    common_telemetry = common_ref("telemetry", f"{stem}_telemetry.csv")
-    common_summary = common_ref("telemetry", f"{stem}_summary.csv")
-    set_path = run_output_root / "mt5" / f"{stem}.set"
-    ini_path = run_output_root / "mt5" / f"{stem}.ini"
-    set_payload = materialize_tester_set_file(
-        {
-            "InpRunId": RUN_ID,
-            "InpExplorationLabel": EXPLORATION_LABEL,
-            "InpTierLabel": tier_name,
-            "InpPrimaryActiveTier": primary_active_tier,
-            "InpSplitLabel": split_name,
-            "InpMainSymbol": "US100",
-            "InpTimeframe": 5,
-            "InpModelPath": common_model,
-            "InpModelId": f"{RUN_ID}_{stem_prefix or tier_slug}",
-            "InpModelUseCommonFiles": "true",
-            "InpFeatureCsvPath": common_matrix,
-            "InpFeatureCount": feature_count,
-            "InpFeatureCsvUseCommonFiles": "true",
-            "InpFeatureRequireTimestampMatch": "true",
-            "InpFeatureAllowLatestFallback": "false",
-            "InpFeatureStrictHeader": "true",
-            "InpCsvTimestampIsBarClose": "true",
-            "InpFallbackEnabled": "false",
-            "InpTelemetryCsvPath": common_telemetry,
-            "InpSummaryCsvPath": common_summary,
-            "InpTelemetryUseCommonFiles": "true",
-            "InpShortThreshold": rule.short_threshold,
-            "InpLongThreshold": rule.long_threshold,
-            "InpMinMargin": rule.min_margin,
-            "InpInvertSignal": bool(invert_signal),
-            "InpFallbackShortThreshold": rule.short_threshold,
-            "InpFallbackLongThreshold": rule.long_threshold,
-            "InpFallbackMinMargin": rule.min_margin,
-            "InpFallbackInvertSignal": bool(invert_signal),
-            "InpAllowTrading": "true",
-            "InpFixedLot": 0.1,
-            "InpMaxHoldBars": int(max_hold_bars),
-            "InpMaxConcurrentPositions": 1,
-            "InpFeatureOrderHash": feature_order_hash,
-            "InpMagic": 1001001 if tier_name == TIER_A else 1001002,
-        },
-        set_path,
-    )
-    report_name = f"Project_Obsidian_Prime_v2_{RUN_ID}_{stem}"
-    ini_payload = materialize_tester_ini_file(
-        TesterMaterializationConfig(
-            from_date=from_date,
-            to_date=to_date,
-            report=report_name,
-            shutdown_terminal=1,
-        ),
-        ini_path,
-        set_file_path=Path(EA_TESTER_SET_NAME),
-    )
-    return {
-        "tier": tier_name,
-        "split": split_name,
-        "attempt_role": attempt_role,
-        "record_view_prefix": record_view_prefix or f"mt5_{stem_prefix or tier_slug}",
-        "set": set_payload,
-        "ini": ini_payload,
-        "common_model_path": common_model,
-        "common_feature_matrix_path": common_matrix,
-        "common_telemetry_path": common_telemetry,
-        "common_summary_path": common_summary,
-        "local_feature_matrix_path": local_feature_matrix_path.as_posix(),
-        "threshold_rule": threshold_rule_payload(rule),
-        "invert_signal": bool(invert_signal),
-        "max_hold_bars": int(max_hold_bars),
-    }
-
-
-def materialize_mt5_routed_attempt_files(
-    *,
-    run_output_root: Path,
-    split_name: str,
-    primary_onnx_path: Path,
-    primary_feature_matrix_path: Path,
-    primary_feature_count: int,
-    primary_feature_order_hash: str,
-    fallback_onnx_path: Path,
-    fallback_feature_matrix_path: Path,
-    fallback_feature_count: int,
-    fallback_feature_order_hash: str,
-    rule: ThresholdRule,
-    from_date: str,
-    to_date: str,
-    fallback_rule: ThresholdRule | None = None,
-    invert_signal: bool = False,
-    fallback_invert_signal: bool = False,
-    max_hold_bars: int = 12,
-    fallback_enabled: bool = True,
-) -> dict[str, Any]:
-    fallback_rule = fallback_rule or rule
-    routing_mode = ROUTING_MODE_A_B_FALLBACK if fallback_enabled else ROUTING_MODE_A_ONLY
-    routing_detail = (
-        "tier_a_primary_tier_b_partial_context_fallback"
-        if fallback_enabled
-        else "tier_a_primary_no_fallback"
-    )
-    stem = f"routed_{split_name}"
-    common_primary_model = common_ref("models", primary_onnx_path.name)
-    common_primary_matrix = common_ref("features", primary_feature_matrix_path.name)
-    common_fallback_model = common_ref("models", fallback_onnx_path.name)
-    common_fallback_matrix = common_ref("features", fallback_feature_matrix_path.name)
-    common_telemetry = common_ref("telemetry", f"{stem}_telemetry.csv")
-    common_summary = common_ref("telemetry", f"{stem}_summary.csv")
-    set_path = run_output_root / "mt5" / f"{stem}.set"
-    ini_path = run_output_root / "mt5" / f"{stem}.ini"
-    primary_model_id = f"{RUN_ID}_tier_a_primary"
-    fallback_model_id = f"{RUN_ID}_tier_b_fallback"
-    set_payload = materialize_tester_set_file(
-        {
-            "InpRunId": RUN_ID,
-            "InpExplorationLabel": EXPLORATION_LABEL,
-            "InpTierLabel": TIER_AB,
-            "InpPrimaryActiveTier": "tier_a",
-            "InpSplitLabel": split_name,
-            "InpMainSymbol": "US100",
-            "InpTimeframe": 5,
-            "InpModelPath": common_primary_model,
-            "InpModelId": primary_model_id,
-            "InpModelUseCommonFiles": "true",
-            "InpFeatureCsvPath": common_primary_matrix,
-            "InpFeatureCount": primary_feature_count,
-            "InpFeatureCsvUseCommonFiles": "true",
-            "InpFeatureRequireTimestampMatch": "true",
-            "InpFeatureAllowLatestFallback": "false",
-            "InpFeatureStrictHeader": "true",
-            "InpCsvTimestampIsBarClose": "true",
-            "InpFeatureOrderHash": primary_feature_order_hash,
-            "InpFallbackEnabled": "true" if fallback_enabled else "false",
-            "InpFallbackTierLabel": "Tier B partial-context fallback",
-            "InpFallbackFeatureCsvPath": common_fallback_matrix,
-            "InpFallbackFeatureCount": fallback_feature_count,
-            "InpFallbackModelPath": common_fallback_model,
-            "InpFallbackModelId": fallback_model_id,
-            "InpFallbackFeatureOrderHash": fallback_feature_order_hash,
-            "InpTelemetryCsvPath": common_telemetry,
-            "InpSummaryCsvPath": common_summary,
-            "InpTelemetryUseCommonFiles": "true",
-            "InpShortThreshold": rule.short_threshold,
-            "InpLongThreshold": rule.long_threshold,
-            "InpMinMargin": rule.min_margin,
-            "InpInvertSignal": bool(invert_signal),
-            "InpFallbackShortThreshold": fallback_rule.short_threshold,
-            "InpFallbackLongThreshold": fallback_rule.long_threshold,
-            "InpFallbackMinMargin": fallback_rule.min_margin,
-            "InpFallbackInvertSignal": bool(fallback_invert_signal),
-            "InpAllowTrading": "true",
-            "InpFixedLot": 0.1,
-            "InpMaxHoldBars": int(max_hold_bars),
-            "InpMaxConcurrentPositions": 1,
-            "InpMagic": 1001010,
-        },
-        set_path,
-    )
-    report_name = f"Project_Obsidian_Prime_v2_{RUN_ID}_{stem}"
-    ini_payload = materialize_tester_ini_file(
-        TesterMaterializationConfig(
-            from_date=from_date,
-            to_date=to_date,
-            report=report_name,
-            shutdown_terminal=1,
-        ),
-        ini_path,
-        set_file_path=Path(EA_TESTER_SET_NAME),
-    )
-    return {
-        "tier": TIER_AB,
-        "split": split_name,
-        "routing_mode": routing_mode,
-        "routing_detail": routing_detail,
-        "fallback_enabled": bool(fallback_enabled),
-        "set": set_payload,
-        "ini": ini_payload,
-        "common_model_path": common_primary_model,
-        "common_feature_matrix_path": common_primary_matrix,
-        "common_telemetry_path": common_telemetry,
-        "common_summary_path": common_summary,
-        "primary": {
-            "tier": TIER_A,
-            "model_id": primary_model_id,
-            "common_model_path": common_primary_model,
-            "common_feature_matrix_path": common_primary_matrix,
-            "feature_count": primary_feature_count,
-            "feature_order_hash": primary_feature_order_hash,
-            "local_feature_matrix_path": primary_feature_matrix_path.as_posix(),
-            "threshold_rule": threshold_rule_payload(rule),
-            "invert_signal": bool(invert_signal),
-        },
-        "fallback": {
-            "tier": TIER_B,
-            "model_id": fallback_model_id,
-            "common_model_path": common_fallback_model,
-            "common_feature_matrix_path": common_fallback_matrix,
-            "feature_count": fallback_feature_count,
-            "feature_order_hash": fallback_feature_order_hash,
-            "policy_id": TIER_B_PARTIAL_CONTEXT_POLICY_ID,
-            "local_feature_matrix_path": fallback_feature_matrix_path.as_posix(),
-            "threshold_rule": threshold_rule_payload(fallback_rule),
-            "invert_signal": bool(fallback_invert_signal),
-        },
-        "threshold_rule": threshold_rule_payload(rule),
-        "fallback_threshold_rule": threshold_rule_payload(fallback_rule),
-        "invert_signal": bool(invert_signal),
-        "fallback_invert_signal": bool(fallback_invert_signal),
-        "max_hold_bars": int(max_hold_bars),
-    }
-
-
-def copy_to_common_files(common_files_root: Path, local_path: Path, common_path: str) -> dict[str, Any]:
-    destination = common_files_root / Path(common_path)
-    _io_path(destination.parent).mkdir(parents=True, exist_ok=True)
-    shutil.copy2(_io_path(local_path), _io_path(destination))
-    return {
-        "source": local_path.as_posix(),
-        "common_path": common_path,
-        "absolute_path": destination.as_posix(),
-        "sha256": sha256_file(destination),
-    }
-
-
-def compile_mql5_ea(metaeditor_path: Path, source_path: Path, log_path: Path) -> dict[str, Any]:
-    command_log_path = metaeditor_command_log_path(log_path)
-    command = [str(metaeditor_path), f"/compile:{source_path.resolve()}", f"/log:{command_log_path.resolve()}"]
-    if not _path_exists(metaeditor_path):
-        return {
-            "status": "blocked",
-            "command": command,
-            "returncode": None,
-            "log_path": log_path.as_posix(),
-            "command_log_path": command_log_path.as_posix(),
-            "blocker": "metaeditor_missing",
-        }
-    _io_path(log_path.parent).mkdir(parents=True, exist_ok=True)
-    _io_path(command_log_path.parent).mkdir(parents=True, exist_ok=True)
-    for stale_log_path in {log_path, command_log_path}:
-        if _path_exists(stale_log_path):
-            _io_path(stale_log_path).unlink()
-    proc = subprocess.run(command, cwd=REPO_ROOT, text=True, capture_output=True, timeout=120)
-    actual_log_path = command_log_path
-    if not _path_exists(actual_log_path) and log_path.suffix:
-        extensionless_log = command_log_path.with_suffix("")
-        if _path_exists(extensionless_log):
-            actual_log_path = extensionless_log
-
-    log_text = ""
-    if _path_exists(actual_log_path):
-        raw_log = _io_path(actual_log_path).read_bytes()
-        for encoding in ("utf-16", "utf-8-sig", "cp949"):
-            try:
-                log_text = raw_log.decode(encoding)
-                break
-            except UnicodeDecodeError:
-                continue
-        if not log_text:
-            log_text = raw_log.decode("utf-8", errors="ignore")
-    else:
-        # MetaEditor can truncate the requested log filename when the full path is near MAX_PATH.
-        parent = actual_log_path.parent
-        if _path_exists(parent):
-            prefixes = {
-                actual_log_path.stem.lower(),
-                actual_log_path.stem.lower()[:8],
-                actual_log_path.stem.lower()[:6],
-                actual_log_path.stem.lower()[:5],
-            }
-            candidates: list[Path] = []
-            for name in os.listdir(_io_path(parent)):
-                lower_name = name.lower()
-                if not any(lower_name.startswith(prefix) for prefix in prefixes if prefix):
-                    continue
-                candidate = parent / name
-                if _io_path(candidate).is_file():
-                    candidates.append(candidate)
-            if not candidates:
-                for name in os.listdir(_io_path(parent)):
-                    candidate = parent / name
-                    if not _io_path(candidate).is_file():
-                        continue
-                    if _io_path(candidate).stat().st_size > 2 * 1024 * 1024:
-                        continue
-                    candidates.append(candidate)
-            for candidate in sorted(candidates, key=lambda item: _io_path(item).stat().st_mtime, reverse=True):
-                raw_log = _io_path(candidate).read_bytes()
-                candidate_text = ""
-                for encoding in ("utf-16", "utf-8-sig", "cp949"):
-                    try:
-                        candidate_text = raw_log.decode(encoding)
-                        break
-                    except UnicodeDecodeError:
-                        continue
-                if not candidate_text:
-                    candidate_text = raw_log.decode("utf-8", errors="ignore")
-                if "Result:" not in candidate_text and "error" not in candidate_text.lower():
-                    continue
-                actual_log_path = candidate
-                log_text = candidate_text
-                break
-
-    lowered = log_text.lower()
-    zero_errors = "0 errors" in lowered or "0 error" in lowered or "0 error(s)" in lowered
-    has_error = "error" in lowered and not zero_errors
-    completed = (proc.returncode == 0 or zero_errors) and not has_error
-    final_log_path = actual_log_path
-    if _path_exists(actual_log_path) and actual_log_path.resolve() != log_path.resolve():
-        shutil.copy2(_io_path(actual_log_path), _io_path(log_path))
-        final_log_path = log_path
-    return {
-        "status": "completed" if completed else "blocked",
-        "command": command,
-        "returncode": proc.returncode,
-        "stdout": proc.stdout[-2000:],
-        "stderr": proc.stderr[-2000:],
-        "log_path": final_log_path.as_posix(),
-        "command_log_path": command_log_path.as_posix(),
-        "actual_log_path": actual_log_path.as_posix(),
-        "log_sha256": sha256_file(final_log_path) if _path_exists(final_log_path) else None,
-    }
-
-
-def run_mt5_tester(
-    terminal_path: Path,
-    ini_path: Path,
-    *,
-    set_path: Path | None = None,
-    tester_profile_set_path: Path | None = None,
-    tester_profile_ini_path: Path | None = None,
-    timeout_seconds: int = 300,
-) -> dict[str, Any]:
-    execution_ini_path = ini_path
-    ini_copy_payload = None
-    if tester_profile_ini_path is not None:
-        _io_path(tester_profile_ini_path.parent).mkdir(parents=True, exist_ok=True)
-        shutil.copy2(_io_path(ini_path), _io_path(tester_profile_ini_path))
-        execution_ini_path = tester_profile_ini_path
-        ini_copy_payload = {
-            "source": ini_path.as_posix(),
-            "destination": tester_profile_ini_path.as_posix(),
-            "sha256": sha256_file(tester_profile_ini_path),
-        }
-
-    command = [str(terminal_path), f"/config:{execution_ini_path.resolve()}"]
-    if not _path_exists(terminal_path):
-        return {
-            "status": "blocked",
-            "command": command,
-            "returncode": None,
-            "blocker": "terminal_missing",
-        }
-    set_copy_payload = None
-    if set_path is not None and tester_profile_set_path is not None:
-        _io_path(tester_profile_set_path.parent).mkdir(parents=True, exist_ok=True)
-        shutil.copy2(_io_path(set_path), _io_path(tester_profile_set_path))
-        set_copy_payload = {
-            "source": set_path.as_posix(),
-            "destination": tester_profile_set_path.as_posix(),
-            "sha256": sha256_file(tester_profile_set_path),
-        }
-    proc = subprocess.run(command, cwd=REPO_ROOT, text=True, capture_output=True, timeout=timeout_seconds)
-    return {
-        "status": "completed" if proc.returncode == 0 else "blocked",
-        "command": command,
-        "returncode": proc.returncode,
-        "stdout": proc.stdout[-2000:],
-        "stderr": proc.stderr[-2000:],
-        "tester_profile_set_copy": set_copy_payload,
-        "tester_profile_ini_copy": ini_copy_payload,
-    }
-
-
-def report_name_from_attempt(attempt: Mapping[str, Any]) -> str:
-    tester = attempt.get("ini", {}).get("tester", {})
-    report_name = tester.get("Report")
-    if not report_name:
-        stem = f"{str(attempt['tier']).lower().replace(' ', '_').replace('+', 'ab')}_{attempt['split']}"
-        report_name = f"Project_Obsidian_Prime_v2_{RUN_ID}_{stem}"
-    return str(report_name)
-
-
-def remove_existing_mt5_report_artifacts(terminal_data_root: Path, attempt: Mapping[str, Any]) -> None:
-    report_name = report_name_from_attempt(attempt)
-    for suffix in (".htm", ".html", ".png"):
-        path = terminal_data_root / f"{report_name}{suffix}"
-        if _path_exists(path):
-            _io_path(path).unlink()
-
-
-def collect_mt5_strategy_report_artifacts(
-    *,
-    terminal_data_root: Path,
-    run_output_root: Path,
-    attempts: Sequence[Mapping[str, Any]],
-) -> list[dict[str, Any]]:
-    reports_root = run_output_root / "mt5" / "reports"
-    _io_path(reports_root).mkdir(parents=True, exist_ok=True)
-    for existing_name in os.listdir(_io_path(reports_root)):
-        if not existing_name.startswith("Project_Obsidian_Prime_v2_"):
-            continue
-        existing = reports_root / existing_name
-        existing_io = _io_path(existing)
-        if existing_io.is_file():
-            existing_io.unlink()
-    records: list[dict[str, Any]] = []
-    for attempt in attempts:
-        report_name = report_name_from_attempt(attempt)
-        record: dict[str, Any] = {
-            "tier": attempt["tier"],
-            "split": attempt["split"],
-            "report_name": report_name,
-            "status": "missing",
-        }
-        html_source = next(
-            (path for path in (terminal_data_root / f"{report_name}{suffix}" for suffix in (".htm", ".html")) if _path_exists(path)),
-            None,
-        )
-        if html_source is not None:
-            html_destination = reports_root / html_source.name
-            shutil.copy2(_io_path(html_source), _io_path(html_destination))
-            record["html_report"] = {
-                "source_path": html_source.as_posix(),
-                "path": html_destination.as_posix(),
-                "sha256": sha256_file(html_destination),
-            }
-            record["metrics"] = extract_mt5_strategy_report_metrics(html_destination)
-            record["status"] = record["metrics"]["status"]
-
-        chart_source = terminal_data_root / f"{report_name}.png"
-        if _path_exists(chart_source):
-            chart_destination = reports_root / chart_source.name
-            shutil.copy2(_io_path(chart_source), _io_path(chart_destination))
-            record["chart"] = {
-                "source_path": chart_source.as_posix(),
-                "path": chart_destination.as_posix(),
-                "sha256": sha256_file(chart_destination),
-            }
-        records.append(record)
-    return records
-
-
-def attach_mt5_report_metrics(
-    execution_results: list[dict[str, Any]],
-    report_records: Sequence[Mapping[str, Any]],
-) -> None:
-    records_by_key = {(record.get("tier"), record.get("split")): record for record in report_records}
-    for result in execution_results:
-        report_record = records_by_key.get((result.get("tier"), result.get("split")))
-        if report_record is not None:
-            result["strategy_tester_report"] = dict(report_record)
-
+common_ref = alpha_scout_runner.common_ref
+mt5_short_profile_ini_name = alpha_scout_runner.mt5_short_profile_ini_name
+materialize_mt5_attempt_files = alpha_scout_runner.materialize_mt5_attempt_files
+materialize_mt5_routed_attempt_files = alpha_scout_runner.materialize_mt5_routed_attempt_files
+report_name_from_attempt = alpha_scout_runner.report_name_from_attempt
+remove_existing_mt5_report_artifacts = alpha_scout_runner.remove_existing_mt5_report_artifacts
+collect_mt5_strategy_report_artifacts = alpha_scout_runner.collect_mt5_strategy_report_artifacts
+attach_mt5_report_metrics = alpha_scout_runner.attach_mt5_report_metrics
 
 def build_alpha_ledger_rows(
     *,
@@ -1619,56 +408,6 @@ def materialize_run_registry_row(
     }
     return _upsert_csv_rows(RUN_REGISTRY_PATH, RUN_REGISTRY_COLUMNS, [row], key="run_id")
 
-
-def validate_mt5_runtime_outputs(common_files_root: Path, attempt: Mapping[str, Any]) -> dict[str, Any]:
-    telemetry_path = common_files_root / Path(str(attempt["common_telemetry_path"]))
-    summary_path = common_files_root / Path(str(attempt["common_summary_path"]))
-    payload: dict[str, Any] = {
-        "telemetry_path": telemetry_path.as_posix(),
-        "summary_path": summary_path.as_posix(),
-        "telemetry_exists": _path_exists(telemetry_path),
-        "summary_exists": _path_exists(summary_path),
-        "status": "blocked",
-    }
-    if _path_exists(telemetry_path):
-        payload["telemetry_sha256"] = sha256_file(telemetry_path)
-    if _path_exists(summary_path):
-        payload["summary_sha256"] = sha256_file(summary_path)
-        try:
-            summary = pd.read_csv(_io_path(summary_path))
-            if not summary.empty:
-                last = summary.iloc[-1].to_dict()
-                payload["last_summary"] = _json_ready(last)
-                deinit_reason = str(last.get("deinit_reason", ""))
-                model_ok_count = int(last.get("model_ok_count", 0) or 0)
-                feature_ready_count = int(last.get("feature_ready_count", 0) or 0)
-                payload["status"] = (
-                    "completed" if deinit_reason != "init_failed" and model_ok_count > 0 and feature_ready_count > 0 else "blocked"
-                )
-        except Exception as exc:  # pragma: no cover - defensive MT5 handoff parsing
-            payload["parse_error"] = str(exc)
-    return payload
-
-
-def wait_for_mt5_runtime_outputs(
-    common_files_root: Path,
-    attempt: Mapping[str, Any],
-    *,
-    timeout_seconds: int = 600,
-    poll_seconds: float = 2.0,
-) -> dict[str, Any]:
-    deadline = time.monotonic() + timeout_seconds
-    latest = validate_mt5_runtime_outputs(common_files_root, attempt)
-    while time.monotonic() < deadline:
-        latest = validate_mt5_runtime_outputs(common_files_root, attempt)
-        if latest["status"] == "completed":
-            latest["wait_status"] = "completed"
-            return latest
-        time.sleep(poll_seconds)
-    latest = validate_mt5_runtime_outputs(common_files_root, attempt)
-    latest["wait_status"] = "timeout"
-    latest["wait_timeout_seconds"] = timeout_seconds
-    return latest
 
 
 def build_run_manifest_payload(
@@ -1842,14 +581,11 @@ def materialize_manifest_and_kpi(
     manifest_payload: Mapping[str, Any],
     kpi_payload: Mapping[str, Any],
 ) -> dict[str, Any]:
-    manifest_path = output_root / "run_manifest.json"
-    kpi_path = output_root / "kpi_record.json"
-    write_json(manifest_path, manifest_payload)
-    write_json(kpi_path, kpi_payload)
-    return {
-        "run_manifest": {"path": manifest_path.as_posix(), "sha256": sha256_file(manifest_path)},
-        "kpi_record": {"path": kpi_path.as_posix(), "sha256": sha256_file(kpi_path)},
-    }
+    return packet_writers.materialize_manifest_and_kpi(
+        output_root,
+        manifest_payload=manifest_payload,
+        kpi_payload=kpi_payload,
+    )
 
 
 def run_stage10_logreg_mt5_scout(

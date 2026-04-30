@@ -16,7 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from foundation.pipelines import run_stage10_logreg_mt5_scout as scout  # noqa: E402
+from foundation.alpha import scout_runner as scout  # noqa: E402
 from foundation.pipelines import run_stage11_lgbm_training_method_scout as run02a  # noqa: E402
 from foundation.pipelines import run_stage11_lgbm_divergent_scouts as divergent  # noqa: E402
 

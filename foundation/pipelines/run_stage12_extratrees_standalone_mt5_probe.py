@@ -26,7 +26,7 @@ from foundation.control_plane.ledger import (  # noqa: E402
     upsert_csv_rows,
 )
 from foundation.models.baseline_training import LABEL_ORDER, load_feature_order, validate_model_input_frame  # noqa: E402
-from foundation.pipelines import run_stage10_logreg_mt5_scout as mt5  # noqa: E402
+from foundation.alpha import scout_runner as mt5  # noqa: E402
 
 
 STAGE_ID = "12_model_family_challenge__extratrees_training_effect"

@@ -25,16 +25,6 @@
       }
     },
     {
-      "check_id": "large_file::foundation/control_plane/mt5_trade_attribution.py",
-      "message": "Large code file requires code-surface guard before future edits.",
-      "severity": "warning",
-      "details": {
-        "path": "foundation/control_plane/mt5_trade_attribution.py",
-        "lines": 991,
-        "attention_lines": 800
-      }
-    },
-    {
       "check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
@@ -70,7 +60,7 @@
       "severity": "warning",
       "details": {
         "path": "foundation/pipelines/run_stage10_logreg_mt5_scout.py",
-        "lines": 2570,
+        "lines": 1306,
         "attention_lines": 800
       }
     },
@@ -148,9 +138,13 @@
   "counts": {
     "attention_lines": 800,
     "blocking_lines": 1600,
-    "scanned_files": 108,
-    "files_over_attention": 14,
+    "scanned_files": 114,
+    "files_over_attention": 13,
     "lines::.agents/skills/obsidian-architecture-guard/scripts/validate_agent_settings.py": 391,
+    "lines::foundation/alpha/__init__.py": 4,
+    "lines::foundation/alpha/decision_views.py": 285,
+    "lines::foundation/alpha/scout_runner.py": 494,
+    "lines::foundation/alpha/specs.py": 89,
     "lines::foundation/collectors/export_fpmarkets_v2_mt5_bars.py": 283,
     "lines::foundation/collectors/feature_frame_target_probe.py": 346,
     "lines::foundation/collectors/raw_m5_inventory.py": 473,
@@ -170,7 +164,8 @@
     "lines::foundation/control_plane/mt5_kpi_records.py": 200,
     "lines::foundation/control_plane/mt5_missing_report_executor.py": 417,
     "lines::foundation/control_plane/mt5_tier_balance_completion.py": 1339,
-    "lines::foundation/control_plane/mt5_trade_attribution.py": 991,
+    "lines::foundation/control_plane/mt5_trade_attribution.py": 800,
+    "lines::foundation/control_plane/packet_writers.py": 23,
     "lines::foundation/control_plane/preflight_clarifier.py": 294,
     "lines::foundation/control_plane/prompt_intake_classifier.py": 197,
     "lines::foundation/control_plane/required_gate_coverage_audit.py": 169,
@@ -206,6 +201,7 @@
     "lines::foundation/mt5/strategy_report.py": 260,
     "lines::foundation/mt5/terminal_runner.py": 115,
     "lines::foundation/mt5/tester_files.py": 104,
+    "lines::foundation/mt5/trade_report.py": 204,
     "lines::foundation/parity/stage06_runtime_parity.py": 760,
     "lines::foundation/pipelines/audit_stage05_feature_integrity.py": 977,
     "lines::foundation/pipelines/materialize_feature_frame_freeze.py": 429,
@@ -214,7 +210,7 @@
     "lines::foundation/pipelines/materialize_top3_price_proxy_weights.py": 227,
     "lines::foundation/pipelines/materialize_training_label_split_dataset.py": 522,
     "lines::foundation/pipelines/run_stage07_baseline_training_smoke.py": 437,
-    "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 2570,
+    "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 1306,
     "lines::foundation/pipelines/run_stage11_lgbm_divergent_scouts.py": 1202,
     "lines::foundation/pipelines/run_stage11_lgbm_fwd18_retrain_scout.py": 311,
     "lines::foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py": 888,
@@ -240,7 +236,7 @@
     "lines::tests/test_mt5_kpi_recorder.py": 424,
     "lines::tests/test_mt5_missing_report_executor.py": 92,
     "lines::tests/test_mt5_strategy_report.py": 73,
-    "lines::tests/test_mt5_trade_attribution.py": 153,
+    "lines::tests/test_mt5_trade_attribution.py": 152,
     "lines::tests/test_prompt_intake_classifier.py": 57,
     "lines::tests/test_raw_m5_inventory.py": 111,
     "lines::tests/test_required_gate_coverage_audit.py": 48,

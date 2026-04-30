@@ -10,9 +10,8 @@ from foundation.control_plane.mt5_trade_attribution import (
     MarketData,
     compute_trade_attribution,
     enrich_records,
-    pair_deals_into_trades,
-    parse_mt5_trade_report,
 )
+from foundation.mt5.trade_report import pair_deals_into_trades, parse_mt5_trade_report
 
 
 class Mt5TradeAttributionTests(unittest.TestCase):
