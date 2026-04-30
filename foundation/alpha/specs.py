@@ -86,4 +86,3 @@ def run_output_root(stage_id: str, run_id: str) -> Path:
 
 def stage_review_ledger_path(stage_id: str) -> Path:
     return Path("stages") / stage_id / "03_reviews" / "stage_run_ledger.csv"
-

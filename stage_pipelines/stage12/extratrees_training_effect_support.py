@@ -685,5 +685,3 @@ def write_result_summary(
         ]
     )
     write_text_bom(path, "\n".join(lines) + "\n")
-
-

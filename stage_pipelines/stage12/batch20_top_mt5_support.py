@@ -592,5 +592,3 @@ def update_current_truth(source_variant: Mapping[str, Any], records: Sequence[Ma
     pattern = re.compile(rf"\n- 2026-04-28: `{RUN_ID}` completed\(완료\).*?(?=\n- |\Z)", re.S)
     changelog = pattern.sub(entry.rstrip(), changelog) if pattern.search(changelog) else changelog.rstrip() + entry
     write_text(changelog_path, changelog.rstrip() + "\n")
-
-

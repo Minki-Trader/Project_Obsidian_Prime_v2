@@ -399,5 +399,3 @@ def materialize_run_registry_row(
         "notes": notes,
     }
     return run02a._upsert_csv_rows(run02a.RUN_REGISTRY_PATH, scout.RUN_REGISTRY_COLUMNS, [row], key="run_id")
-
-

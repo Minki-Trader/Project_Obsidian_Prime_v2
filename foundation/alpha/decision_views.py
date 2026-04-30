@@ -217,8 +217,6 @@ def prediction_view_metrics(view: pd.DataFrame) -> dict[str, Any]:
             signal_view = view.loc[view["decision_label"].astype(str).ne(DECISION_LABEL_NO_TRADE)]
             payload["partial_context_subtype_signal_counts"] = _subtype_counts(signal_view)
     return payload
-
-
 def build_paired_tier_records(
     tier_views: Mapping[str, pd.DataFrame],
     *,
@@ -282,4 +280,3 @@ def materialize_tier_prediction_views(
             "sha256": sha256_file(path),
         }
     return payload
-

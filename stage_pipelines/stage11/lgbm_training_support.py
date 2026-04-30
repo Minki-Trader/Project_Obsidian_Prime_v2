@@ -544,8 +544,6 @@ def write_result_summary(
     ]
     _io_path(path.parent).mkdir(parents=True, exist_ok=True)
     _io_path(path).write_text("\n".join(lines), encoding="utf-8-sig")
-
-
 def write_result_summary(
     *,
     path: Path,
@@ -634,5 +632,3 @@ def write_result_summary(
     ]
     _io_path(path.parent).mkdir(parents=True, exist_ok=True)
     _io_path(path).write_text("\n".join(lines), encoding="utf-8-sig")
-
-

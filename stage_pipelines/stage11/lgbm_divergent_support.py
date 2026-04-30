@@ -795,5 +795,3 @@ def append_artifact_rows(rows: Sequence[Mapping[str, str]]) -> dict[str, Any]:
         for key in existing:
             writer.writerow(existing[key])
     return {"path": path.as_posix(), "rows": len(existing), "sha256": scout.sha256_file_lf_normalized(path)}
-
-
