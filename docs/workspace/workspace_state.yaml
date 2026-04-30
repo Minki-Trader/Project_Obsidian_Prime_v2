@@ -1,4 +1,4 @@
-﻿updated_on: "2026-04-29"
+﻿updated_on: "2026-04-30"
 project_mode: "clean_stage_restart"
 active_branch: "main"
 active_stage: "12_model_family_challenge__extratrees_training_effect"
@@ -28,6 +28,8 @@ current_focus:
   - "treat Stage 11 as reviewed_closed_no_next_stage_opened; run02A-run02S, run02W-run02Z, and run02AA-run02AK are completed LightGBM training, threshold, divergent, idea-burst, salvage-extension, fwd18-retrain, fwd18 inverse-rank context, and stress MT5 runtime_probe evidence, not alpha quality or operating promotion"
   - "treat Stage 12 as active standalone(단독) ExtraTrees(엑스트라 트리) lane(레인); RUN03A is invalid_for_standalone_scope(단독 범위 무효), RUN03B is source Python scout(원천 파이썬 탐침), RUN03D is latest standalone batch20 Python package(최신 단독 20개 묶음 파이썬 패키지), RUN03E is the prior Tier A-only MT5 runtime_probe(이전 Tier A 단독 MT5 런타임 탐침), and RUN03F is current Tier A/B/routed MT5 tier-balance supplement(현재 Tier A/B/라우팅 MT5 티어 균형 보강)"
   - "treat agent-control KPI rebuild packets(에이전트 제어 KPI 재구축 묶음) as cross-stage evidence management(교차 단계 근거 관리), not alpha quality(알파 품질), live readiness(실거래 준비), or operating promotion(운영 승격)"
+  - "treat alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) as code ownership(코드 소유권) and agent closeout hardening(에이전트 마감 강화), not alpha quality(알파 품질) or runtime authority(런타임 권위)"
+  - "treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added"
 pre_alpha_stage_queue:
   status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_active"
   plan_path: "docs/workspace/pre_alpha_stage_plan.md"
@@ -984,12 +986,14 @@ agent_control_code_surface:
   baseline_path: "docs/agent_control/code_surface_baseline.yaml"
   gate_command: "python -m foundation.control_plane.code_surface_audit --root ."
   latest_audit_status: "pass"
-  large_files_over_attention: 14
-  compatibility_warning: "foundation/mt5/runtime_support.py delegates(위임) to legacy Stage 10 orchestration(기존 10단계 조율 파일) until shared MT5 runtime helpers(공유 MT5 런타임 도구) are decomposed(분해됨)"
+  large_files_over_attention: 5
+  compatibility_warning: "foundation/mt5/runtime_support.py no longer delegates(위임) to legacy Stage 10 orchestration(기존 10단계 조율 파일); remaining debt(남은 부채) is large helper/module decomposition(큰 도구/모듈 분해) and semantic reusable-logic detection(재사용 로직 의미 감사)"
   refactor_completed:
     - "MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서) moved to foundation/mt5/strategy_report.py"
     - "foundation/control_plane(제어면) no longer imports Stage10 pipeline(10단계 파이프라인) directly for MT5 report parsing"
     - "direct control-plane to stage-pipeline imports(제어면에서 단계 파이프라인 직접 가져오기) are now blocked by code_surface_audit(코드 표면 감사)"
+    - "shared alpha helpers(공유 알파 도구) now require explicit ScoutRunContext(명시적 탐색 실행 문맥) for stage/run identity(단계/실행 정체성)"
+    - "MT5 runtime support(MT5 런타임 지원) now imports foundation-owned modules(기반 소유 모듈) for decision surface(의사결정 표면), ONNX bridge(ONNX 연결), terminal runner(터미널 실행기), runtime artifacts(런타임 산출물), and MQL5 compile(MQL5 컴파일)"
   boundary: "This reduces code-surface drift(코드 표면 드리프트) and records remaining debt(남은 부채); it does not claim full Stage10 pipeline decomposition(10단계 파이프라인 완전 분해)."
 
 agent_control_control_plane_v2:
@@ -1013,6 +1017,41 @@ agent_control_control_plane_v2:
     - "foundation/control_plane/required_gate_coverage_audit.py"
   boundary: "Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장), required gate coverage(필수 제한문 포함 여부), reachable agent-control registry validation(도달 가능한 에이전트 제어 등록부 검증), and evidence gates(근거 제한문); it does not change trading alpha judgment(거래 알파 판정), runtime authority(런타임 권위), or operating promotion(운영 승격)."
 
+agent_control_alpha_scout_common_foundation:
+  status: "completed_code_ownership_and_agent_closeout_hardening"
+  packet_id: "alpha_scout_common_foundation_v1"
+  packet_path: "docs/agent_control/packets/alpha_scout_common_foundation_v1"
+  state_sync_merge_target_status: "pass"
+  closeout_gate_status: "pass"
+  required_gate_coverage_status: "pass"
+  completed_effects:
+    - "stage_pipelines boundary(단계 파이프라인 경계) documented(문서화됨)"
+    - "shared alpha helpers(공유 알파 도구) require explicit context(명시 문맥 필요)"
+    - "cross-stage stage_pipelines imports(교차 단계 파이프라인 가져오기) blocked(차단됨)"
+    - "self_correction_policy(자기 수정 정책) added in plan_only(계획 전용) mode"
+  boundary: "This is code ownership(코드 소유권), agent routing(에이전트 라우팅), and closeout hardening(마감 강화); it does not claim alpha quality(알파 품질), MT5 runtime authority(MT5 런타임 권위), live readiness(실거래 준비), or operating promotion(운영 승격)."
+
+agent_control_p0p1_runtime_evidence_cleanup:
+  status: "merged_code_evidence_cleanup_routing_receipt_only"
+  receipt_path: "docs/agent_control/packets/p0p1_runtime_evidence_cleanup/routing_receipt.yaml"
+  git_commit: "6cc33b3"
+  materialized_code_surfaces:
+    - "foundation/control_plane/tier_context_materialization.py"
+    - "foundation/models/decision_surface.py"
+    - "foundation/models/onnx_bridge.py"
+    - "foundation/mt5/mql5_compile.py"
+    - "foundation/mt5/runtime_artifacts.py"
+    - "foundation/mt5/terminal_runner.py"
+  boundary: "This cleanup improves runtime evidence wiring(런타임 근거 배선) and helper ownership(도구 소유권); no new MT5 terminal run(새 MT5 터미널 실행), alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격), or completed packet claim(완료 묶음 주장) is made from the receipt alone."
+
+state_sync_current_truth_20260430:
+  status: "completed"
+  packet_id: "current_truth_sync_20260430_v1"
+  packet_path: "docs/agent_control/packets/current_truth_sync_20260430_v1"
+  decision_path: "docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md"
+  state_sync_audit_status: "pass"
+  boundary: "This sync aligns current-truth narration(현재 진실 설명), decision memo(결정 메모), changelog(변경기록), and architecture debt(구조 부채); it does not change trading results(거래 결과) or create promotion meaning(승격 의미)."
+
 open_items: []
 closed_memory:
   - "Stage 12 is active_standalone_tier_balance_mt5_supplement_completed with RUN03F ExtraTrees Tier A/B/routed MT5 tier-balance evidence"
@@ -1025,6 +1064,9 @@ closed_memory:
   - "Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, trade attribution, and tier-balance completion packets(목록, MT5 기록, MT5 실행, 거래 귀속, 티어 균형 보강 묶음) as cross-stage evidence records(교차 단계 근거 기록)"
   - "Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치), and control-plane direct stage imports(제어면의 단계 직접 가져오기)"
   - "Control Plane v2(제어면 v2) now routes Codex prompts(코덱스 프롬프트) through work family(작업군), surface(작업 표면), risk vector(위험축), decision lock(결정 고정), work packet schema(작업 묶음 스키마), skill receipt schema(스킬 영수증 스키마), and closeout gate(마감 제한문)"
+  - "alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) completed code ownership(코드 소유권), explicit ScoutRunContext(명시적 탐색 실행 문맥), stage_pipelines boundary(단계 파이프라인 경계), and plan-only self-correction(계획 전용 자기 수정) hardening"
+  - "p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) is merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt only(라우팅 영수증만 있음), not a completed packet claim(완료 묶음 주장)"
+  - "current_truth_sync_20260430_v1(현재 진실 동기화 묶음) backfilled durable Stage12/ops sync decision(지속 Stage12/운영 동기화 결정) without changing trading results(거래 결과)"
   - "Stage 11 is reviewed_closed_no_next_stage_opened"
   - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
   - "Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion"
@@ -1046,5 +1088,7 @@ forbidden_shortcuts:
   - "do not treat Stage 12 RUN03A as standalone evidence; it is invalid_for_standalone_scope"
   - "do not treat Stage 12 RUN03B ExtraTrees standalone Python structural scout as MT5 runtime evidence, alpha quality, live readiness, runtime authority expansion, or operating promotion"
   - "do not treat Stage 12 RUN03F tier-balance MT5 runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
+  - "do not treat alpha_scout_common_foundation_v1 code/agent hardening as alpha quality, live readiness, runtime authority expansion, or operating promotion"
+  - "do not treat p0p1_runtime_evidence_cleanup routing_receipt only as a completed packet closeout"
   - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
   - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"

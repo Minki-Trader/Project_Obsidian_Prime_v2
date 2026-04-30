@@ -1,5 +1,14 @@
 ﻿# Workspace Changelog
 
+## 2026-04-30
+
+- `current_truth_sync_20260430_v1(현재 진실 동기화 묶음)`을 추가했다. 효과(effect, 효과)는 Stage 12(12단계) 전환, RUN03F(실행 03F) 현재 실행, alpha scout common foundation(알파 탐색 공통 기반), p0p1 runtime evidence cleanup(P0/P1 런타임 근거 정리)을 같은 current truth(현재 진실) 경계로 맞추는 것이다.
+- `2026-04-30_current_truth_sync_stage12_alpha_scout_ops` 결정(decision, 결정)을 추가했다. 효과(effect, 효과)는 Stage 11(11단계) closeout decision(마감 결정)이 “다음 단계 미개방”으로 끝난 뒤, 이미 물질화된 Stage 12(12단계) active lane(활성 레인)을 durable decision layer(지속 결정 계층)에 맞추는 것이다.
+- `alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음)`을 current truth(현재 진실)에 반영했다. 효과(effect, 효과)는 shared alpha helpers(공유 알파 도구)가 explicit ScoutRunContext(명시적 탐색 실행 문맥)를 쓰고, stage_pipelines(단계 파이프라인) 경계와 closeout flow(마감 흐름)가 main(메인)에 맞았다는 점을 남기는 것이다.
+- `p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리)`은 routing receipt(라우팅 영수증)만 있는 병합된 코드/근거 정리로 표시했다. 효과(effect, 효과)는 runtime evidence wiring(런타임 근거 배선) 개선을 인정하되 completed packet(완료 묶음)이나 새 MT5 terminal run(새 MT5 터미널 실행)으로 과장하지 않는 것이다.
+- `foundation/mt5/runtime_support.py`의 Stage10 orchestration(10단계 조율 파일) 위임 문구를 제거하고, 현재 foundation-owned modules(기반 소유 모듈) 경계로 맞췄다. 효과(effect, 효과)는 이미 해결된 architecture debt(구조 부채)를 남은 부채처럼 반복하지 않게 하는 것이다.
+- `agent_trigger_policy.md(에이전트 작동 정책)`에 policy reference(정책 참조)와 structured skill routing list(구조화된 스킬 배치 목록)를 복구했다. 효과(effect, 효과)는 repo validator(저장소 검사기)가 스킬 존재와 라우팅 문서를 같은 구조로 확인하게 하는 것이다.
+
 ## 2026-04-29
 
 - `codex_control_plane_v2_incremental_v1(코덱스 제어면 v2 단계형 묶음)`을 구현했다. 효과(effect, 효과)는 Codex prompt(프롬프트)를 work family(작업군), surface(작업 표면), risk vector(위험축), decision lock(결정 고정), evidence gate(근거 제한문), final claim(최종 주장)으로 나눠 처리하게 하는 것이다.

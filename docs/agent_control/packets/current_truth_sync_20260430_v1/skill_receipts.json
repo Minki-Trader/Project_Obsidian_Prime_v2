@@ -1,0 +1,169 @@
+{
+  "receipts": [
+    {
+      "packet_id": "current_truth_sync_20260430_v1",
+      "skill": "obsidian-stage-transition",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md"
+      ],
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "docs/workspace/changelog.md",
+        "docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md",
+        "docs/registers/architecture_debt_register.md",
+        "docs/policies/agent_trigger_policy.md",
+        "README.md"
+      ],
+      "detected_conflicts": [
+        "latest durable Stage11 closeout decision said no next stage opened, while current truth had materialized Stage12; backfilled sync decision without changing trading evidence"
+      ],
+      "canonical_state_after": {
+        "active_stage": "12_model_family_challenge__extratrees_training_effect",
+        "current_run": "run03F_et_v11_tier_balance_mt5_v1",
+        "branch": "main"
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "runtime_authority",
+        "live_readiness",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "current_truth_sync_20260430_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/policies/reentry_order.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md"
+      ],
+      "active_stage": "12_model_family_challenge__extratrees_training_effect",
+      "current_run": "run03F_et_v11_tier_balance_mt5_v1",
+      "detected_conflicts": [
+        "state_sync_audit passed before edits; narrative/decision layer needed sync"
+      ],
+      "allowed_claims": [
+        "current_truth_synced"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion",
+        "alpha_quality"
+      ]
+    },
+    {
+      "packet_id": "current_truth_sync_20260430_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "docs/agent_control/packets/alpha_scout_common_foundation_v1",
+        "docs/agent_control/packets/p0p1_runtime_evidence_cleanup/routing_receipt.yaml",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03F_et_v11_tier_balance_mt5_v1/reports/result_summary.md"
+      ],
+      "produced_artifacts": [
+        "docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md",
+        "docs/agent_control/packets/current_truth_sync_20260430_v1"
+      ],
+      "raw_evidence": [
+        "state_sync_audit output",
+        "alpha_scout_common_foundation_v1 closeout report",
+        "p0p1 routing receipt"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/current_truth_sync_20260430_v1/work_packet.yaml",
+        "docs/agent_control/packets/current_truth_sync_20260430_v1/skill_receipts.json"
+      ],
+      "human_readable": [
+        "docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md",
+        "docs/agent_control/packets/current_truth_sync_20260430_v1/closeout_report.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "hashes": "not_required_no_new_binary_or_model_artifacts",
+        "reason": "docs-only sync"
+      },
+      "lineage_boundary": "connected_with_boundary"
+    },
+    {
+      "packet_id": "current_truth_sync_20260430_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "runtime_authority",
+        "live_readiness",
+        "operating_promotion",
+        "completed_p0p1_packet"
+      ],
+      "final_status": "state_sync_only"
+    },
+    {
+      "packet_id": "current_truth_sync_20260430_v1",
+      "skill": "obsidian-architecture-guard",
+      "status": "executed",
+      "touched_surfaces": [
+        "docs/registers/architecture_debt_register.md",
+        "docs/policies/agent_trigger_policy.md",
+        "README.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md"
+      ],
+      "invariant_checks": [
+        "runtime_support no longer delegates to Stage10 orchestration",
+        "stage_pipelines remains stage-local execution adapter boundary",
+        "Korean markdown BOM must be preserved"
+      ],
+      "placement_boundary": "docs-only sync; no code placement changed in this packet",
+      "architecture_debt_effect": "AD-008 closed; AD-009 records remaining semantic audit gap",
+      "allowed_claims": [
+        "architecture_debt_synced"
+      ],
+      "forbidden_claims": [
+        "monolith_risk_eliminated",
+        "full_stage_pipeline_decomposition"
+      ]
+    },
+    {
+      "packet_id": "current_truth_sync_20260430_v1",
+      "skill": "obsidian-answer-clarity",
+      "status": "executed",
+      "plain_conclusion": "Current truth is aligned around Stage 12 RUN03F and the latest ops packets, without changing trading judgment.",
+      "confirmed": [
+        "RUN03F remains the current run",
+        "alpha_scout_common_foundation_v1 is ops/code hardening",
+        "p0p1 receipt alone is not a completed packet"
+      ],
+      "not_yet_confirmed": [
+        "alpha quality",
+        "runtime authority",
+        "live readiness",
+        "operating promotion"
+      ],
+      "why_it_matters": "The project can resume from the right state without overstating ops hardening as trading evidence.",
+      "next_action": "Use the synced current truth before deciding the next Stage 12 probe or a p0p1 closeout packet.",
+      "forbidden_claims_avoided": [
+        "alpha_quality",
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    }
+  ]
+}

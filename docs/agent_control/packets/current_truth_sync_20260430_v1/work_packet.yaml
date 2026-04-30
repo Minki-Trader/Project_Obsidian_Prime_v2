@@ -1,0 +1,129 @@
+version: work_packet_schema_v2
+packet_id: current_truth_sync_20260430_v1
+created_at_utc: "2026-04-30T13:13:43Z"
+user_request:
+  raw: "뭐 일단 싱크 맞춰보고"
+  interpreted_raw: "뭐 일단 싱크 맞춰보고"
+  requested_action: "current truth sync(현재 진실 동기화), decision layer sync(결정 계층 동기화), narrative state sync(설명 상태 동기화)"
+current_truth:
+  active_stage: "12_model_family_challenge__extratrees_training_effect"
+  current_run: "run03F_et_v11_tier_balance_mt5_v1"
+  branch: "main"
+  state_sync_audit_before: "pass"
+work_classification:
+  primary_family: state_sync
+  work_surface: current_truth_docs_and_decision_layer
+  mutation: docs_only
+  execution: false
+risk_vector_scan:
+  risks:
+    - state_fragmentation
+    - claim_overstatement
+    - architecture_debt_drift
+    - korean_bom_encoding
+  required_gates:
+    - state_sync_audit
+    - final_claim_guard
+decision_lock:
+  mutation_allowed: true
+  locked_boundary: "state sync only; no trading result or runtime authority change"
+  forbidden_mutations:
+    - "do not change thresholds, model logic, MT5 tester outputs, or run ledgers"
+interpreted_scope:
+  work_families:
+    - state_sync
+  target_surfaces:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - docs/workspace/changelog.md
+    - docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md
+    - docs/registers/architecture_debt_register.md
+    - docs/policies/agent_trigger_policy.md
+    - README.md
+  scope_units:
+    - "backfill durable decision memo for already-materialized Stage 12 current truth"
+    - "sync alpha_scout_common_foundation_v1 and p0p1_runtime_evidence_cleanup narrative boundaries"
+    - "correct resolved runtime_support Stage10 delegation debt wording"
+    - "restore structured agent trigger skill routing list required by validator"
+  execution_layers:
+    - docs
+    - control_plane_audit
+  mutation_policy: "docs-only, no run or code behavior change"
+  evidence_layers:
+    - current_truth_docs
+    - packet_closeout
+    - state_sync_audit
+  reduction_policy: "do not reduce or reinterpret trading evidence"
+  claim_boundary: "current_truth_synced; no alpha quality, runtime authority, live readiness, or operating promotion"
+acceptance_criteria:
+  - "workspace_state, current_working_state, and active selection status keep RUN03F as current run"
+  - "durable decision memo records the Stage 12/ops sync boundary"
+  - "architecture debt no longer claims runtime_support delegates to Stage10"
+  - "state_sync_audit passes after edits"
+work_plan:
+  - "read current truth and routing policy"
+  - "patch docs and decision memo"
+  - "record skill receipts and closeout report"
+  - "run state sync and gate coverage audits"
+skill_routing:
+  primary_family: state_sync
+  primary_skill: obsidian-stage-transition
+  support_skills:
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-architecture-guard
+    - obsidian-answer-clarity
+  skills_considered:
+    - obsidian-stage-transition
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-architecture-guard
+    - obsidian-answer-clarity
+  skills_selected:
+    - obsidian-stage-transition
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-architecture-guard
+    - obsidian-answer-clarity
+  skills_not_used:
+    obsidian-runtime-parity: "not_required_no_new_MT5_or_runtime_execution"
+    obsidian-run-evidence-system: "not_required_no_new_KPI_or_ledger_rows"
+    obsidian-result-judgment: "not_required_no_new_trading_judgment"
+  required_skill_receipts:
+    - obsidian-stage-transition
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-architecture-guard
+    - obsidian-answer-clarity
+  required_gates:
+    - state_sync_audit
+    - final_claim_guard
+evidence_contract:
+  source_inputs:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_report.md
+    - docs/agent_control/packets/p0p1_runtime_evidence_cleanup/routing_receipt.yaml
+  produced_artifacts:
+    - docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md
+    - docs/agent_control/packets/current_truth_sync_20260430_v1/
+  no_new_trading_artifacts: true
+gates:
+  required:
+    - state_sync_audit
+    - final_claim_guard
+final_claim_policy:
+  allowed_claims:
+    - current_truth_synced
+    - state_sync_completed
+  forbidden_claims:
+    - alpha_quality
+    - runtime_authority
+    - live_readiness
+    - operating_promotion
+    - completed_p0p1_packet

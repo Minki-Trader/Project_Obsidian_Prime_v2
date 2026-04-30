@@ -4,6 +4,18 @@
 
 핵심 원칙은 단순하다. 작업이 커져도, Stage 5부터 미래 Stage 50+까지 같은 방식으로 시작하고, 같은 방식으로 닫는다.
 
+## 정책 참조(Policy References, 정책 참조)
+
+이 정책(policy, 정책)은 다음 문서와 함께 작동한다.
+
+- `docs/policies/architecture_invariants.md`
+- `docs/policies/exploration_mandate.md`
+- `docs/policies/kpi_measurement_standard.md`
+- `docs/policies/run_result_management.md`
+- `docs/policies/result_judgment_policy.md`
+
+효과(effect, 효과)는 skill routing(스킬 배치)이 architecture(구조), exploration(탐색), KPI(핵심 성과 지표), run management(실행 관리), result judgment(결과 판정) 규칙과 끊기지 않게 하는 것이다.
+
 ## 운영 커널
 
 모든 non-trivial work packet(비사소 작업 묶음)은 다음 순서를 따른다.
@@ -59,6 +71,32 @@ Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다
 - runtime이나 experiment처럼 진짜 복합 작업일 때만 family별 `support_skill_limit`을 쓴다.
 - support로 선택한 스킬도 `required_skills`에 들어가야 하며, 완료 전에 receipt가 있어야 한다.
 - 순수 내부 리팩터처럼 외부 API나 MT5 동작이 바뀌지 않는 경우 `obsidian-reference-scout`는 `not_required` 사유를 남길 수 있다.
+
+## 스킬
+
+- `obsidian-answer-clarity`: user-facing status(사용자 보고 상태), result report(결과 보고), completion report(완료 보고)를 쉽게 설명한다.
+- `obsidian-architecture-guard`: architecture debt(구조 부채), code placement(코드 배치), Korean encoding(한국어 인코딩)을 지킨다.
+- `obsidian-artifact-lineage`: artifact(산출물), manifest(목록), report(보고서), hash(해시), registry(등록부) 연결을 확인한다.
+- `obsidian-backtest-forensics`: MT5 Strategy Tester(전략 테스터) report/settings/trade list(보고서/설정/거래 목록)를 검사한다.
+- `obsidian-claim-discipline`: claim boundary(주장 경계)를 낮출 곳은 낮추고 promotion/runtime(승격/런타임) 과장을 막는다.
+- `obsidian-code-quality`: 코드 책임(code responsibility, 코드 책임), 흐름(flow, 흐름), 테스트 의도(test intent, 테스트 의도)를 확인한다.
+- `obsidian-code-surface-guard`: owner module(소유 모듈), caller(호출자), input/output contract(입출력 계약), monolith risk(일체형 위험)를 점검한다.
+- `obsidian-data-integrity`: data source(데이터 원천), time axis(시간축), split(분할), leakage(누수)를 점검한다.
+- `obsidian-environment-reproducibility`: dependency/runtime(의존성/런타임), clean checkout(깨끗한 체크아웃), local machine assumption(로컬 가정)을 확인한다.
+- `obsidian-experiment-design`: hypothesis(가설), baseline(기준선), variables(변수), invalid conditions(무효 조건)을 설계한다.
+- `obsidian-exploration-mandate`: exploration lane(탐색 레인), idea boundary(아이디어 경계), failure memory(실패 기억)를 지킨다.
+- `obsidian-lane-classifier`: exploration/runtime/promotion lane(탐색/런타임/승격 레인)을 구분한다.
+- `obsidian-model-validation`: model/threshold surface(모델/임계값 표면), split(분할), overfit(과적합), selection metric(선택 지표)을 점검한다.
+- `obsidian-performance-attribution`: KPI change(KPI 변화)를 time/sample/tier/model/trade shape(시간/표본/티어/모델/거래 형태)로 분해한다.
+- `obsidian-reentry-read`: current truth(현재 진실)와 active stage(활성 단계)를 재진입 순서대로 확인한다.
+- `obsidian-reference-scout`: version-sensitive external reference(버전 민감 외부 참고자료)가 필요한지 확인한다.
+- `obsidian-result-judgment`: positive/negative/inconclusive/invalid(긍정/부정/불충분/무효) 판정을 경계와 함께 정리한다.
+- `obsidian-run-evidence-system`: run identity(실행 정체성), KPI(핵심 성과 지표), ledger row(장부 행), missing evidence(빠진 근거)를 관리한다.
+- `obsidian-runtime-parity`: Python/MT5/runtime handoff(파이썬/MT5/런타임 인계) 동등성과 외부 검증을 다룬다.
+- `obsidian-session-intake`: 작업 시작 때 current truth(현재 진실), branch/worktree fit(브랜치/작업트리 적합성), work family candidate(작업군 후보)를 좁힌다.
+- `obsidian-stage-transition`: active stage(활성 단계), handoff(인계), closeout(마감), current run(현재 실행)을 같은 회차에 동기화한다.
+- `obsidian-work-packet-router`: work family(작업군), primary skill(주 스킬), support skills(보조 스킬), required gates(필수 제한문)를 고른다.
+- `obsidian-workflow-drift-guard`: blocker(차단 지점), missing material(빠진 재료), recovery action(복구 행동)을 정리한다.
 
 ## Receipt 규칙
 
