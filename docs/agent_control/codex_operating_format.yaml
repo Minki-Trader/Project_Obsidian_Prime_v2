@@ -22,10 +22,13 @@ lifecycle:
   - phase: work_packet
     required_outputs:
       - work_packet.yaml
+      - primary_family
+      - primary_skill
+      - support_skills
       - acceptance_criteria
       - scope_reduction_policy
       - forbidden_claims
-    effect: "Turn the request into a checkable contract."
+    effect: "Turn the request into a checkable contract derived from work_family_registry.yaml."
   - phase: run_plan
     required_outputs:
       - run_plan.yaml
@@ -56,6 +59,7 @@ lifecycle:
     required_outputs:
       - skill_receipts
       - gate_result.json
+      - required_gate_coverage_audit
       - final_claim_guard
       - closeout_report
     effect: "Forbid unsupported completed, verified, promotion, or runtime-authority claims."

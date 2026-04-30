@@ -24,6 +24,12 @@ risks:
     required_gates:
       - skill_receipt_lint
       - skill_receipt_schema_lint
+  ops_instruction_risk:
+    meaning: "Routing policy can grow without one primary skill and checkable gates(라우팅 정책이 주 스킬과 검증 가능한 게이트 없이 커질 수 있음)"
+    required_gates:
+      - ops_instruction_audit
+    forbidden_claims_if_missing:
+      - ops_instructions_stable
   evidence_gap_risk:
     meaning: "Raw evidence, machine record, or human report can be missing(원본 근거/기계 기록/사람 보고가 빠질 수 있음)"
     required_gates:

@@ -20,6 +20,10 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 
 효과(effect, 효과)는 강하게 트리거(trigger, 작동 조건)되는 코드 스킬만 쓰고 `answer-clarity(답변 명확성)`, `reference-scout(레퍼런스 탐색)`, `data-integrity(데이터 무결성)`, `environment-reproducibility(환경 재현성)` 같은 스킬이 방치되는 일을 막는 것이다.
 
+운영 라우팅(operating routing, 운영 라우팅)의 진실 원천(source of truth, 진실 원천)은 `docs/agent_control/work_family_registry.yaml`이다. 모든 non-trivial work packet(비사소 작업 묶음)은 `primary_family(주 작업군)` 하나와 `primary_skill(주 스킬)` 하나를 먼저 고른다. `support_skills(보조 스킬)`는 필요한 만큼만 붙이고, 완료 전에는 `required_gate_coverage_audit(필수 게이트 커버리지 감사)`로 work packet(작업 묶음)의 `required_gates(필수 게이트)`가 closeout(종료 기록)에 실제로 연결됐는지 확인한다.
+
+효과(effect, 효과)는 Stage 5부터 미래 Stage 50+까지 작업 내용은 달라져도, 스킬 선택(skill selection, 스킬 선택), receipt(영수증), gate(게이트), claim boundary(주장 경계)가 같은 방식으로 작동하게 하는 것이다.
+
 ## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)
 
 탐색(exploration, 탐색)에는 게이트(gate, 제한문)가 없다.

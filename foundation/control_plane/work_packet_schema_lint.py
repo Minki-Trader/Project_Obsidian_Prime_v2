@@ -53,6 +53,16 @@ V2_SCOPE_REQUIRED = (
     "reduction_policy",
     "claim_boundary",
 )
+V2_SKILL_ROUTING_REQUIRED = (
+    "primary_family",
+    "primary_skill",
+    "support_skills",
+    "skills_considered",
+    "skills_selected",
+    "skills_not_used",
+    "required_skill_receipts",
+    "required_gates",
+)
 RUN_ONLY_FIELDS = ("variants_requested", "verification_layers", "mt5_required", "top_k_reduction_allowed")
 RUN_FAMILIES = ("experiment_execution", "runtime_backtest")
 
@@ -67,6 +77,7 @@ def audit_work_packet_schema(packet: Mapping[str, Any]) -> AuditResult:
         _require_top_level(packet, V2_REQUIRED, findings, version="v2")
         interpreted = _mapping(packet.get("interpreted_scope"))
         _require_fields(interpreted, V2_SCOPE_REQUIRED, findings, prefix="interpreted_scope")
+        _require_fields(_mapping(packet.get("skill_routing")), V2_SKILL_ROUTING_REQUIRED, findings, prefix="skill_routing")
     else:
         _require_top_level(packet, V1_REQUIRED, findings, version="v1")
 

@@ -1,4 +1,4 @@
-version: skill_receipt_schema_v1
+version: skill_receipt_schema_v2
 description: "Required content for skill receipts before completed/reviewed/verified claims are allowed."
 schemas:
   default:
@@ -6,6 +6,40 @@ schemas:
       - packet_id
       - skill
       - status
+      - primary_output
+      - evidence_used
+  obsidian-session-intake:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - intake_context
+      - active_stage
+      - branch_worktree_fit
+      - selected_work_family
+      - routing_handoff
+  obsidian-work-packet-router:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - primary_family
+      - primary_skill
+      - support_skills
+      - required_gates
+      - skills_not_used
+      - routing_reason
+  obsidian-workflow-drift-guard:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - product
+      - material_state
+      - tool_state
+      - environment_state
+      - current_blocker
+      - recovery_attempt_or_reason
   obsidian-reentry-read:
     required_fields:
       - packet_id
@@ -28,6 +62,17 @@ schemas:
       - canonical_state_after
       - allowed_claims
       - forbidden_claims
+  obsidian-architecture-guard:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - touched_surfaces
+      - invariant_checks
+      - placement_boundary
+      - architecture_debt_effect
+      - allowed_claims
+      - forbidden_claims
   obsidian-code-surface-guard:
     required_fields:
       - packet_id
@@ -40,6 +85,55 @@ schemas:
       - artifact_or_report_effect
       - monolith_risk
       - placement_decision
+  obsidian-code-quality:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - responsibilities_checked
+      - flow_contract_checked
+      - test_intent
+      - residual_quality_risk
+  obsidian-reference-scout:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - reference_need
+      - sources_checked_or_not_required_reason
+      - version_sensitive_surface
+      - implementation_effect
+  obsidian-experiment-design:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - hypothesis
+      - baseline
+      - changed_variables
+      - invalid_conditions
+      - evidence_plan
+  obsidian-data-integrity:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - data_sources_checked
+      - time_axis_boundary
+      - split_boundary
+      - leakage_checks
+      - missing_data_boundary
+  obsidian-model-validation:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - model_or_threshold_surface
+      - validation_split
+      - overfit_checks
+      - selection_metric_boundary
+      - allowed_claims
+      - forbidden_claims
   obsidian-runtime-parity:
     required_fields:
       - packet_id
@@ -53,6 +147,16 @@ schemas:
       - missing_evidence
       - allowed_claims
       - forbidden_claims
+  obsidian-backtest-forensics:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - tester_report
+      - tester_settings
+      - spread_commission_slippage
+      - trade_list_identity
+      - forensic_gaps
   obsidian-run-evidence-system:
     required_fields:
       - packet_id
@@ -76,6 +180,15 @@ schemas:
       - human_readable
       - hashes_or_missing_reasons
       - lineage_boundary
+  obsidian-environment-reproducibility:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - environment_assumptions
+      - dependency_or_runtime_surface
+      - clean_checkout_boundary
+      - reproducibility_gaps
   obsidian-result-judgment:
     required_fields:
       - packet_id
@@ -94,6 +207,24 @@ schemas:
       - missing_layers
       - allowed_claims
       - forbidden_claims
+  obsidian-exploration-mandate:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - exploration_lane
+      - idea_boundary
+      - negative_memory_effect
+      - operating_claim_boundary
+  obsidian-lane-classifier:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - selected_lane
+      - rejected_lanes
+      - gate_boundary
+      - claim_boundary
   obsidian-claim-discipline:
     required_fields:
       - packet_id

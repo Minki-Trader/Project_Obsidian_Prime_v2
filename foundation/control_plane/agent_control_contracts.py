@@ -75,6 +75,7 @@ EXPECTED_RISK_FLAGS = (
     "state_sync_risk",
     "claim_boundary_risk",
     "skill_abandonment_risk",
+    "ops_instruction_risk",
     "evidence_gap_risk",
     "runtime_parity_risk",
     "kpi_source_risk",

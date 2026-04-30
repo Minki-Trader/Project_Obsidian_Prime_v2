@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -20,6 +21,8 @@ CURRENT_TRUTH_SYNC_CLAIMS = ("current_truth_synced", "state_sync_completed", "st
 @dataclass(frozen=True)
 class CurrentTruthSnapshot:
     active_stage: str
+    workspace_active_branch: str
+    actual_git_branch: str
     workspace_current_run: str
     current_working_run: str
     selection_status_run: str
@@ -42,6 +45,8 @@ class CurrentTruthSnapshot:
     def to_counts(self) -> dict[str, Any]:
         return {
             "active_stage": self.active_stage,
+            "workspace_active_branch": self.workspace_active_branch,
+            "actual_git_branch": self.actual_git_branch,
             "current_run_values": self.current_run_values(),
             "stage_brief_boundary": self.stage_brief_boundary,
             "registry_has_current_run": self.registry_has_current_run,
@@ -50,9 +55,14 @@ class CurrentTruthSnapshot:
         }
 
 
-def audit_state_sync(root: Path | str = Path("."), *, active_stage: str | None = None) -> AuditResult:
+def audit_state_sync(
+    root: Path | str = Path("."),
+    *,
+    active_stage: str | None = None,
+    current_branch: str | None = None,
+) -> AuditResult:
     root_path = Path(root)
-    snapshot = load_current_truth_snapshot(root_path, active_stage=active_stage)
+    snapshot = load_current_truth_snapshot(root_path, active_stage=active_stage, current_branch=current_branch)
     findings: list[AuditFinding] = []
 
     values = snapshot.current_run_values()
@@ -94,6 +104,17 @@ def audit_state_sync(root: Path | str = Path("."), *, active_stage: str | None =
                 details={"current_run": canonical_run, "boundary": snapshot.stage_brief_boundary},
             )
         )
+    if snapshot.workspace_active_branch and snapshot.actual_git_branch and snapshot.workspace_active_branch != snapshot.actual_git_branch:
+        findings.append(
+            AuditFinding(
+                check_id="active_branch_mismatch",
+                message="Workspace active_branch does not match the current git branch.",
+                details={
+                    "workspace_active_branch": snapshot.workspace_active_branch,
+                    "actual_git_branch": snapshot.actual_git_branch,
+                },
+            )
+        )
 
     status = "blocked" if any(finding.is_blocking for finding in findings) else "pass"
     return AuditResult(
@@ -106,7 +127,12 @@ def audit_state_sync(root: Path | str = Path("."), *, active_stage: str | None =
     )
 
 
-def load_current_truth_snapshot(root: Path, *, active_stage: str | None = None) -> CurrentTruthSnapshot:
+def load_current_truth_snapshot(
+    root: Path,
+    *,
+    active_stage: str | None = None,
+    current_branch: str | None = None,
+) -> CurrentTruthSnapshot:
     workspace_path = root / "docs/workspace/workspace_state.yaml"
     current_working_path = root / "docs/context/current_working_state.md"
     workspace = _load_yaml(workspace_path)
@@ -128,6 +154,8 @@ def load_current_truth_snapshot(root: Path, *, active_stage: str | None = None) 
 
     return CurrentTruthSnapshot(
         active_stage=stage_id,
+        workspace_active_branch=str(workspace.get("active_branch", "")),
+        actual_git_branch=current_branch if current_branch is not None else _current_git_branch(root),
         workspace_current_run=workspace_current_run,
         current_working_run=current_working_run,
         selection_status_run=selection_status_run,
@@ -165,6 +193,23 @@ def _current_run_from_workspace(workspace: Mapping[str, Any], active_stage: str)
             if run_id:
                 return str(run_id)
     return str(workspace.get("current_run_id", ""))
+
+
+def _current_git_branch(root: Path) -> str:
+    try:
+        completed = subprocess.run(
+            ["git", "branch", "--show-current"],
+            cwd=root,
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    if completed.returncode != 0:
+        return ""
+    return completed.stdout.strip()
 
 
 def _extract_current_run(text: str) -> str:
@@ -213,6 +258,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Audit current-truth state synchronization.")
     parser.add_argument("--root", default=".")
     parser.add_argument("--active-stage")
+    parser.add_argument("--current-branch")
     parser.add_argument("--output-json")
     parser.add_argument("--allow-blocked-exit-zero", action="store_true")
     return parser.parse_args(argv)
@@ -220,7 +266,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
-    result = audit_state_sync(Path(args.root), active_stage=args.active_stage)
+    result = audit_state_sync(Path(args.root), active_stage=args.active_stage, current_branch=args.current_branch)
     payload = result.to_dict()
     text = json.dumps(payload, ensure_ascii=False, indent=2)
     if args.output_json:

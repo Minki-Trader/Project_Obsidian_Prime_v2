@@ -20,9 +20,11 @@ surfaces:
     risks:
       - policy_drift_risk
       - skill_abandonment_risk
+      - ops_instruction_risk
       - encoding_risk
     gates:
       - agent_control_contracts
+      - ops_instruction_audit
       - architecture_guard
   foundation_code:
     paths:

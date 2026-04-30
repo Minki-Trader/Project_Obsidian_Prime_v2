@@ -29,6 +29,20 @@ class StateSyncAuditTests(unittest.TestCase):
             self.assertEqual(passed.findings, ())
             self.assertIn("current_truth_synced", passed.allowed_claims)
 
+    def test_detects_active_branch_mismatch(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_fixture(root, selection_run="run03F_et_v11_tier_balance_mt5_v1", stale_boundary=False)
+
+            blocked = audit_state_sync(root, current_branch="feature/unit")
+
+            self.assertEqual(blocked.status, "blocked")
+            self.assertIn("active_branch_mismatch", {finding.check_id for finding in blocked.findings})
+
+            passed = audit_state_sync(root, current_branch="main")
+
+            self.assertEqual(passed.status, "pass", [finding.to_dict() for finding in passed.findings])
+
     def _write_fixture(self, root: Path, *, selection_run: str, stale_boundary: bool) -> None:
         stage_id = "12_stage_unit"
         (root / "docs/workspace").mkdir(parents=True, exist_ok=True)
@@ -44,6 +58,7 @@ class StateSyncAuditTests(unittest.TestCase):
             "\n".join(
                 [
                     f'active_stage: "{stage_id}"',
+                    'active_branch: "main"',
                     "stage12:",
                     f'  stage_id: "{stage_id}"',
                     f'  current_run_id: "{current_run}"',

@@ -149,10 +149,15 @@ fields:
       - external_artifacts
   skill_routing:
     required_fields:
+      - primary_family
+      - primary_skill
+      - support_skills
       - skills_considered
       - skills_selected
       - skills_not_used
       - required_skill_receipts
+      - required_gates
+    rule: "Values must be derived from docs/agent_control/work_family_registry.yaml before implementation starts."
   gates:
     required_fields:
       - scope_completion_gate
