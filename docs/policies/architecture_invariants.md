@@ -11,7 +11,7 @@
 - `foundation/parity`: Python과 MT5 비교(comparison, 비교) 도구
 - `stages/*`: 단계 로컬 산출물(stage-local artifacts, 단계 로컬 산출물), 보고서(reports, 보고서), 결정(decisions, 결정)
 
-`foundation/pipelines`와 `stage_pipelines`가 피처 정의(feature definition, 피처 정의)나 모델 로직(model logic, 모델 로직)의 숨은 진실 원천(source of truth, 진실 원천)이 되면 안 된다.
+`foundation/pipelines`와 `stage_pipelines`가 피처 정의(feature definition, 피처 정의)나 모델 로직(model logic, 모델 로직)의 숨은 진실 원천(source of truth, 진실 원천)이 되면 안 된다. `stage_pipelines/stageXX`는 각 stage의 실행 지휘실(execution room, 실행 지휘실)이지 공통 도구 창고(shared toolbox, 공통 도구 창고)가 아니다. 다른 stage에서 재사용할 로직은 `foundation/*` owner module(소유 모듈)로 끌어올린 뒤 사용한다.
 
 ## EA 모듈 경계(EA Module Boundary, EA 모듈 경계)
 

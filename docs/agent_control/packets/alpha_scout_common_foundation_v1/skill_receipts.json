@@ -1,0 +1,81 @@
+{
+  "receipts": [
+    {
+      "packet_id": "alpha_scout_common_foundation_v1",
+      "skill": "obsidian-code-surface-guard",
+      "triggered": true,
+      "status": "executed",
+      "owner_module": "foundation/alpha, stage_pipelines, foundation/control_plane",
+      "caller": "Stage 10/11/12 wrappers, code_surface_audit, closeout_gate",
+      "input_contract": "Stage adapters must pass explicit stage_id/run_id/run_number before alpha MT5 materialization.",
+      "output_contract": "Shared alpha helpers expose no Stage10 default identity and fail closed when identity is missing.",
+      "artifact_or_report_effect": "Branch packet captures code surface and closeout evidence for merge readiness.",
+      "monolith_risk": "medium: stage_pipelines support files remain near the attention threshold but cross-stage reuse is now blocked by audit.",
+      "placement_decision": "Reusable identity and MT5 materialization helpers stay in foundation/alpha; stage-local orchestration stays in stage_pipelines/stageXX."
+    },
+    {
+      "packet_id": "alpha_scout_common_foundation_v1",
+      "skill": "obsidian-code-quality",
+      "triggered": true,
+      "status": "executed",
+      "responsibilities_checked": [
+        "alpha scout identity configuration",
+        "stage adapter wrapper importability",
+        "cross-stage import prevention",
+        "merge-target workspace state"
+      ],
+      "flow_contract_checked": "Stage wrappers import stage-local orchestration, stage-local orchestration configures identity, shared alpha helpers require configured identity before writing artifacts.",
+      "test_intent": "Run targeted unit tests for Stage10 identity/materialization, code surface audit, and stage pipeline import smoke coverage.",
+      "residual_quality_risk": "Default Python 3.7 full discovery still has pre-existing environment gaps such as missing skl2onnx and str.removeprefix in one test fixture."
+    },
+    {
+      "packet_id": "alpha_scout_common_foundation_v1",
+      "skill": "obsidian-architecture-guard",
+      "triggered": true,
+      "status": "executed",
+      "touched_surfaces": [
+        "AGENTS.md folder rules",
+        "docs/policies/architecture_invariants.md",
+        "foundation/control_plane/code_surface_audit.py",
+        "foundation/alpha/scout_runner.py",
+        "stage_pipelines/stage10",
+        "stage_pipelines/stage11",
+        "stage_pipelines/stage12"
+      ],
+      "invariant_checks": [
+        "stage_pipelines is stage-local execution orchestration, not a shared toolbox",
+        "foundation/alpha must not carry Stage10 default run identity",
+        "control_plane must not import stage pipelines directly",
+        "stage_pipelines/stageXX must not import another stage_pipelines/stageYY"
+      ],
+      "placement_boundary": "Common reusable code belongs under foundation/* owner modules; stage_pipelines owns only stage-specific execution adapters.",
+      "architecture_debt_effect": "Stage11 and Stage12 support files remain large but are now guarded by code-surface audit and cross-stage import blocking.",
+      "allowed_claims": [
+        "architecture_boundary_hardened",
+        "stage_pipeline_boundary_documented"
+      ],
+      "forbidden_claims": [
+        "monolith_risk_eliminated",
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "alpha_scout_common_foundation_v1",
+      "skill": "obsidian-reference-scout",
+      "triggered": true,
+      "status": "executed",
+      "reference_need": "Local repository reference only; no external API or time-sensitive third-party behavior was needed.",
+      "sources_checked_or_not_required_reason": [
+        "AGENTS.md",
+        "docs/policies/architecture_invariants.md",
+        "docs/agent_control/work_family_registry.yaml",
+        "foundation/alpha/scout_runner.py",
+        "foundation/control_plane/code_surface_audit.py",
+        "existing work packet and receipt schemas"
+      ],
+      "version_sensitive_surface": "No external version-sensitive dependency was changed.",
+      "implementation_effect": "Patch follows existing local control-plane audit and packet patterns instead of introducing a new policy system."
+    }
+  ]
+}

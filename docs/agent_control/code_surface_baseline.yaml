@@ -18,6 +18,9 @@ ownership_policy:
     - importer_owner: foundation/control_plane
       imported_owner: foundation/pipelines/run_stage* or stage_pipelines/*
       reason: "control plane(제어면) must not use stage pipeline(단계 파이프라인) as hidden shared owner(숨은 공유 소유자)"
+    - importer_owner: stage_pipelines/stageXX
+      imported_owner: stage_pipelines/stageYY
+      reason: "stage_pipelines is stage-local orchestration, not a cross-stage shared toolbox; move reusable logic to foundation/* before reuse"
   compatibility_shims:
     - path: foundation/mt5/runtime_support.py
       status: "resolved_no_stage_pipeline_import"

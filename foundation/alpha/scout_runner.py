@@ -29,7 +29,7 @@ from foundation.alpha.decision_views import (
     threshold_rule_payload,
     validate_threshold_rule,
 )
-from foundation.alpha.specs import default_common_run_root, run_output_root, stage_review_ledger_path
+from foundation.alpha.specs import default_common_run_root, run_output_root, stage_number_from_id, stage_review_ledger_path
 from foundation.control_plane.ledger import (
     RUN_REGISTRY_COLUMNS,
     io_path as _io_path,
@@ -88,16 +88,26 @@ from foundation.mt5.tester_files import materialize_tester_ini_file, materialize
 from foundation.pipelines.materialize_training_label_split_dataset import TrainingLabelSplitSpec
 
 
-STAGE_ID = "10_alpha_scout__default_split_model_threshold_scan"
-RUN_NUMBER = "run01A"
-RUN_ID = "run01A_logreg_threshold_mt5_scout_v1"
-EXPLORATION_LABEL = "stage10_Model__LogReg_MT5Scout"
-COMMON_RUN_ROOT = "Project_Obsidian_Prime_v2/stage10/run01A_logreg_threshold_mt5_scout_v1"
+STAGE_ID: str | None = None
+RUN_NUMBER: str | None = None
+RUN_ID: str | None = None
+EXPLORATION_LABEL: str | None = None
+COMMON_RUN_ROOT: str | None = None
 FEATURE_ORDER_HASH = "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
 TIER_B_MODEL_INPUT_DATASET_ID = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_feature_set_v1_no_placeholder_top3_weights"
 TIER_B_FEATURE_SET_ID = "feature_set_v1_no_placeholder_top3_weight_features"
 MT5_RECORD_TIER_A_ONLY_PREFIX = "mt5_tier_a_only"
 MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX = "mt5_tier_b_fallback_only"
+
+
+@dataclass(frozen=True)
+class RunIdentity:
+    stage_id: str
+    stage_number: int
+    run_number: str
+    run_id: str
+    exploration_label: str
+    common_run_root: str
 
 
 @dataclass(frozen=True)
@@ -186,20 +196,48 @@ def configure_run_identity(
     run_id: str,
     exploration_label: str,
     common_run_root: str | None = None,
-    stage_id: str | None = None,
+    stage_id: str,
 ) -> None:
     global STAGE_ID, RUN_NUMBER, RUN_ID, EXPLORATION_LABEL, COMMON_RUN_ROOT
 
-    if stage_id is not None:
-        STAGE_ID = stage_id
+    STAGE_ID = stage_id
     RUN_NUMBER = run_number
     RUN_ID = run_id
     EXPLORATION_LABEL = exploration_label
-    COMMON_RUN_ROOT = common_run_root or default_common_run_root(STAGE_ID.split("_", 1)[0], run_id)
+    COMMON_RUN_ROOT = common_run_root or default_common_run_root(stage_number_from_id(stage_id), run_id)
 
 
 def common_ref(*parts: str) -> str:
-    return "/".join([COMMON_RUN_ROOT, *parts])
+    identity = _require_run_identity()
+    return "/".join([identity.common_run_root, *parts])
+
+
+def _require_run_identity() -> RunIdentity:
+    missing = [
+        name
+        for name, value in (
+            ("STAGE_ID", STAGE_ID),
+            ("RUN_NUMBER", RUN_NUMBER),
+            ("RUN_ID", RUN_ID),
+            ("EXPLORATION_LABEL", EXPLORATION_LABEL),
+            ("COMMON_RUN_ROOT", COMMON_RUN_ROOT),
+        )
+        if not value
+    ]
+    if missing:
+        raise RuntimeError(
+            "Alpha scout run identity is not configured. "
+            "Stage adapters must call configure_run_identity(..., stage_id=...) before materializing run artifacts. "
+            f"Missing: {', '.join(missing)}"
+        )
+    return RunIdentity(
+        stage_id=str(STAGE_ID),
+        stage_number=stage_number_from_id(str(STAGE_ID)),
+        run_number=str(RUN_NUMBER),
+        run_id=str(RUN_ID),
+        exploration_label=str(EXPLORATION_LABEL),
+        common_run_root=str(COMMON_RUN_ROOT),
+    )
 
 
 def load_label_threshold(summary_path: Path) -> float:
@@ -220,10 +258,11 @@ def build_paired_tier_records(
     scoreboard_lane: str = "structural_scout",
     external_verification_status: str = "out_of_scope_by_claim",
 ) -> list[dict[str, Any]]:
+    identity = None if run_id and stage_id else _require_run_identity()
     return _build_paired_tier_records(
         tier_views,
-        run_id=run_id or RUN_ID,
-        stage_id=stage_id or STAGE_ID,
+        run_id=run_id or identity.run_id,
+        stage_id=stage_id or identity.stage_id,
         base_path=base_path,
         kpi_scope=kpi_scope,
         scoreboard_lane=scoreboard_lane,
@@ -232,12 +271,13 @@ def build_paired_tier_records(
 
 
 def mt5_short_profile_ini_name(tier_name: str, split_name: str) -> str:
+    identity = _require_run_identity()
     if tier_name == TIER_AB:
         tier_code = "rt"
     else:
         tier_code = "ta" if tier_name == TIER_A else "tb"
     split_code = "v" if split_name == "validation_is" else "o"
-    return f"opv2_{RUN_NUMBER}_{tier_code}_{split_code}.ini"
+    return f"opv2_{identity.run_number}_{tier_code}_{split_code}.ini"
 
 
 def materialize_mt5_attempt_files(
@@ -259,6 +299,7 @@ def materialize_mt5_attempt_files(
     invert_signal: bool = False,
     max_hold_bars: int = 12,
 ) -> dict[str, Any]:
+    identity = _require_run_identity()
     tier_slug = tier_name.lower().replace(" ", "_").replace("+", "ab")
     stem = f"{stem_prefix or tier_slug}_{split_name}"
     common_model = common_ref("models", local_onnx_path.name)
@@ -269,15 +310,15 @@ def materialize_mt5_attempt_files(
     ini_path = run_output_root / "mt5" / f"{stem}.ini"
     set_payload = materialize_tester_set_file(
         {
-            "InpRunId": RUN_ID,
-            "InpExplorationLabel": EXPLORATION_LABEL,
+            "InpRunId": identity.run_id,
+            "InpExplorationLabel": identity.exploration_label,
             "InpTierLabel": tier_name,
             "InpPrimaryActiveTier": primary_active_tier,
             "InpSplitLabel": split_name,
             "InpMainSymbol": "US100",
             "InpTimeframe": 5,
             "InpModelPath": common_model,
-            "InpModelId": f"{RUN_ID}_{stem_prefix or tier_slug}",
+            "InpModelId": f"{identity.run_id}_{stem_prefix or tier_slug}",
             "InpModelUseCommonFiles": "true",
             "InpFeatureCsvPath": common_matrix,
             "InpFeatureCount": feature_count,
@@ -307,7 +348,7 @@ def materialize_mt5_attempt_files(
         },
         set_path,
     )
-    report_name = f"Project_Obsidian_Prime_v2_{RUN_ID}_{stem}"
+    report_name = f"Project_Obsidian_Prime_v2_{identity.run_id}_{stem}"
     ini_payload = materialize_tester_ini_file(
         TesterMaterializationConfig(from_date=from_date, to_date=to_date, report=report_name, shutdown_terminal=1),
         ini_path,
@@ -352,6 +393,7 @@ def materialize_mt5_routed_attempt_files(
     max_hold_bars: int = 12,
     fallback_enabled: bool = True,
 ) -> dict[str, Any]:
+    identity = _require_run_identity()
     fallback_rule = fallback_rule or rule
     routing_mode = ROUTING_MODE_A_B_FALLBACK if fallback_enabled else ROUTING_MODE_A_ONLY
     routing_detail = (
@@ -368,12 +410,12 @@ def materialize_mt5_routed_attempt_files(
     common_summary = common_ref("telemetry", f"{stem}_summary.csv")
     set_path = run_output_root / "mt5" / f"{stem}.set"
     ini_path = run_output_root / "mt5" / f"{stem}.ini"
-    primary_model_id = f"{RUN_ID}_tier_a_primary"
-    fallback_model_id = f"{RUN_ID}_tier_b_fallback"
+    primary_model_id = f"{identity.run_id}_tier_a_primary"
+    fallback_model_id = f"{identity.run_id}_tier_b_fallback"
     set_payload = materialize_tester_set_file(
         {
-            "InpRunId": RUN_ID,
-            "InpExplorationLabel": EXPLORATION_LABEL,
+            "InpRunId": identity.run_id,
+            "InpExplorationLabel": identity.exploration_label,
             "InpTierLabel": TIER_AB,
             "InpPrimaryActiveTier": "tier_a",
             "InpSplitLabel": split_name,
@@ -416,7 +458,7 @@ def materialize_mt5_routed_attempt_files(
         },
         set_path,
     )
-    report_name = f"Project_Obsidian_Prime_v2_{RUN_ID}_{stem}"
+    report_name = f"Project_Obsidian_Prime_v2_{identity.run_id}_{stem}"
     ini_payload = materialize_tester_ini_file(
         TesterMaterializationConfig(from_date=from_date, to_date=to_date, report=report_name, shutdown_terminal=1),
         ini_path,
@@ -643,11 +685,13 @@ def materialize_mt5_probe_bundle(
 
 
 def report_name_from_attempt(attempt: Mapping[str, Any]) -> str:
-    return mt5_artifacts.report_name_from_attempt(attempt, run_id=RUN_ID)
+    identity = _require_run_identity()
+    return mt5_artifacts.report_name_from_attempt(attempt, run_id=identity.run_id)
 
 
 def remove_existing_mt5_report_artifacts(terminal_data_root: Path, attempt: Mapping[str, Any]) -> None:
-    mt5_artifacts.remove_existing_mt5_report_artifacts(terminal_data_root, attempt, run_id=RUN_ID)
+    identity = _require_run_identity()
+    mt5_artifacts.remove_existing_mt5_report_artifacts(terminal_data_root, attempt, run_id=identity.run_id)
 
 
 def collect_mt5_strategy_report_artifacts(
@@ -656,11 +700,12 @@ def collect_mt5_strategy_report_artifacts(
     run_output_root: Path,
     attempts: Sequence[Mapping[str, Any]],
 ) -> list[dict[str, Any]]:
+    identity = _require_run_identity()
     return mt5_artifacts.collect_mt5_strategy_report_artifacts(
         terminal_data_root=terminal_data_root,
         run_output_root=run_output_root,
         attempts=attempts,
-        run_id=RUN_ID,
+        run_id=identity.run_id,
     )
 
 

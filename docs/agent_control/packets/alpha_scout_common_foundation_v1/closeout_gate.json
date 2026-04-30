@@ -1,0 +1,368 @@
+{
+  "packet_id": "alpha_scout_common_foundation_v1",
+  "status": "pass",
+  "completed_forbidden": false,
+  "audits": [
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-code-surface-guard",
+          "obsidian-code-quality",
+          "obsidian-architecture-guard",
+          "obsidian-reference-scout"
+        ],
+        "receipt_count": 4
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2",
+        "has_v2_fields": true
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 4,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "code_surface_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [
+        {
+          "check_id": "large_file::foundation/control_plane/mt5_kpi_recorder.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/control_plane/mt5_kpi_recorder.py",
+            "lines": 1156,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/control_plane/mt5_tier_balance_completion.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/control_plane/mt5_tier_balance_completion.py",
+            "lines": 1339,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+            "lines": 1715,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+            "lines": 1777,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/pipelines/audit_stage05_feature_integrity.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/pipelines/audit_stage05_feature_integrity.py",
+            "lines": 977,
+            "attention_lines": 800
+          }
+        }
+      ],
+      "counts": {
+        "attention_lines": 800,
+        "blocking_lines": 1600,
+        "scanned_files": 139,
+        "files_over_attention": 5,
+        "lines::.agents/skills/obsidian-architecture-guard/scripts/validate_agent_settings.py": 391,
+        "lines::foundation/alpha/__init__.py": 4,
+        "lines::foundation/alpha/decision_views.py": 285,
+        "lines::foundation/alpha/scout_runner.py": 716,
+        "lines::foundation/alpha/specs.py": 89,
+        "lines::foundation/collectors/export_fpmarkets_v2_mt5_bars.py": 283,
+        "lines::foundation/collectors/feature_frame_target_probe.py": 346,
+        "lines::foundation/collectors/raw_m5_inventory.py": 473,
+        "lines::foundation/collectors/time_semantics_probe.py": 327,
+        "lines::foundation/control_plane/__init__.py": 1,
+        "lines::foundation/control_plane/agent_control_contracts.py": 347,
+        "lines::foundation/control_plane/alpha_run_ledgers.py": 315,
+        "lines::foundation/control_plane/audit_result.py": 74,
+        "lines::foundation/control_plane/closeout_gate.py": 303,
+        "lines::foundation/control_plane/code_surface_audit.py": 200,
+        "lines::foundation/control_plane/decision_lock.py": 151,
+        "lines::foundation/control_plane/experiment_inventory.py": 648,
+        "lines::foundation/control_plane/final_claim_guard.py": 42,
+        "lines::foundation/control_plane/kpi_contract_audit.py": 128,
+        "lines::foundation/control_plane/ledger.py": 166,
+        "lines::foundation/control_plane/mt5_kpi_recorder.py": 1156,
+        "lines::foundation/control_plane/mt5_kpi_records.py": 200,
+        "lines::foundation/control_plane/mt5_missing_report_executor.py": 417,
+        "lines::foundation/control_plane/mt5_tier_balance_completion.py": 1339,
+        "lines::foundation/control_plane/mt5_trade_attribution.py": 800,
+        "lines::foundation/control_plane/ops_instruction_audit.py": 348,
+        "lines::foundation/control_plane/packet_writers.py": 535,
+        "lines::foundation/control_plane/preflight_clarifier.py": 294,
+        "lines::foundation/control_plane/prompt_intake_classifier.py": 197,
+        "lines::foundation/control_plane/required_gate_coverage_audit.py": 169,
+        "lines::foundation/control_plane/risk_vector_scan.py": 127,
+        "lines::foundation/control_plane/routing_coverage.py": 130,
+        "lines::foundation/control_plane/scope_completion_gate.py": 104,
+        "lines::foundation/control_plane/skill_receipt_lint.py": 96,
+        "lines::foundation/control_plane/skill_receipt_schema_lint.py": 140,
+        "lines::foundation/control_plane/stage_work_archive.py": 159,
+        "lines::foundation/control_plane/state_sync_audit.py": 281,
+        "lines::foundation/control_plane/tier_context.py": 125,
+        "lines::foundation/control_plane/tier_context_materialization.py": 197,
+        "lines::foundation/control_plane/validate_run_evidence.py": 554,
+        "lines::foundation/control_plane/work_packet_gate.py": 74,
+        "lines::foundation/control_plane/work_packet_schema_lint.py": 177,
+        "lines::foundation/features/session_calendar.py": 326,
+        "lines::foundation/features/top3_price_proxy_weights.py": 166,
+        "lines::foundation/indexing_sentinel.py": 3,
+        "lines::foundation/models/baseline_training.py": 185,
+        "lines::foundation/models/decision_surface.py": 130,
+        "lines::foundation/models/onnx_bridge.py": 165,
+        "lines::foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh": 100,
+        "lines::foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh": 415,
+        "lines::foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh": 510,
+        "lines::foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh": 296,
+        "lines::foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh": 398,
+        "lines::foundation/mt5/mql5_compile.py": 112,
+        "lines::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5": 1715,
+        "lines::foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5": 1777,
+        "lines::foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5": 467,
+        "lines::foundation/mt5/runtime_artifacts.py": 212,
+        "lines::foundation/mt5/runtime_support.py": 62,
+        "lines::foundation/mt5/strategy_report.py": 260,
+        "lines::foundation/mt5/terminal_runner.py": 115,
+        "lines::foundation/mt5/tester_files.py": 104,
+        "lines::foundation/mt5/trade_report.py": 204,
+        "lines::foundation/parity/stage06_runtime_parity.py": 760,
+        "lines::foundation/pipelines/audit_stage05_feature_integrity.py": 977,
+        "lines::foundation/pipelines/materialize_feature_frame_freeze.py": 429,
+        "lines::foundation/pipelines/materialize_fpmarkets_v2_dataset.py": 786,
+        "lines::foundation/pipelines/materialize_model_input_dataset.py": 516,
+        "lines::foundation/pipelines/materialize_top3_price_proxy_weights.py": 227,
+        "lines::foundation/pipelines/materialize_training_label_split_dataset.py": 522,
+        "lines::foundation/pipelines/run_stage07_baseline_training_smoke.py": 437,
+        "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_divergent_scouts.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_fwd18_retrain_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_training_method_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_priority_probes.py": 7,
+        "lines::foundation/pipelines/run_stage12_batch20_top_mt5_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_standalone_batch20.py": 9,
+        "lines::foundation/pipelines/run_stage12_extratrees_standalone_mt5_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_standalone_scout.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_training_effect_scout.py": 7,
+        "lines::stage_pipelines/__init__.py": 2,
+        "lines::stage_pipelines/stage10/__init__.py": 2,
+        "lines::stage_pipelines/stage10/logreg_mt5_scout.py": 690,
+        "lines::stage_pipelines/stage11/__init__.py": 2,
+        "lines::stage_pipelines/stage11/lgbm_divergent_scouts.py": 420,
+        "lines::stage_pipelines/stage11/lgbm_divergent_support.py": 799,
+        "lines::stage_pipelines/stage11/lgbm_fwd18_retrain_scout.py": 311,
+        "lines::stage_pipelines/stage11/lgbm_rank_threshold_scout.py": 501,
+        "lines::stage_pipelines/stage11/lgbm_rank_threshold_support.py": 403,
+        "lines::stage_pipelines/stage11/lgbm_training_method_scout.py": 751,
+        "lines::stage_pipelines/stage11/lgbm_training_support.py": 638,
+        "lines::stage_pipelines/stage11/priority_probes.py": 783,
+        "lines::stage_pipelines/stage12/__init__.py": 2,
+        "lines::stage_pipelines/stage12/batch20_top_mt5_probe.py": 281,
+        "lines::stage_pipelines/stage12/batch20_top_mt5_support.py": 596,
+        "lines::stage_pipelines/stage12/extratrees_standalone_batch20.py": 257,
+        "lines::stage_pipelines/stage12/extratrees_standalone_batch20_support.py": 777,
+        "lines::stage_pipelines/stage12/extratrees_standalone_mt5_probe.py": 386,
+        "lines::stage_pipelines/stage12/extratrees_standalone_mt5_support.py": 733,
+        "lines::stage_pipelines/stage12/extratrees_standalone_scout.py": 694,
+        "lines::stage_pipelines/stage12/extratrees_training_effect_scout.py": 440,
+        "lines::stage_pipelines/stage12/extratrees_training_effect_support.py": 689,
+        "lines::tests/test_agent_control_contracts.py": 96,
+        "lines::tests/test_agent_control_gates.py": 430,
+        "lines::tests/test_audit_stage05_feature_integrity.py": 128,
+        "lines::tests/test_code_surface_audit.py": 79,
+        "lines::tests/test_control_plane_alpha_run_ledgers.py": 141,
+        "lines::tests/test_decision_lock.py": 39,
+        "lines::tests/test_experiment_inventory.py": 121,
+        "lines::tests/test_feature_frame_target_probe.py": 72,
+        "lines::tests/test_materialize_feature_frame_freeze.py": 74,
+        "lines::tests/test_materialize_fpmarkets_v2_dataset.py": 230,
+        "lines::tests/test_materialize_model_input_dataset.py": 118,
+        "lines::tests/test_materialize_training_label_split_dataset.py": 120,
+        "lines::tests/test_mt5_kpi_recorder.py": 424,
+        "lines::tests/test_mt5_missing_report_executor.py": 92,
+        "lines::tests/test_mt5_strategy_report.py": 73,
+        "lines::tests/test_mt5_trade_attribution.py": 152,
+        "lines::tests/test_ops_instruction_audit.py": 59,
+        "lines::tests/test_prompt_intake_classifier.py": 57,
+        "lines::tests/test_raw_m5_inventory.py": 111,
+        "lines::tests/test_required_gate_coverage_audit.py": 48,
+        "lines::tests/test_risk_vector_scan.py": 51,
+        "lines::tests/test_row_grain_contract.py": 40,
+        "lines::tests/test_session_calendar.py": 73,
+        "lines::tests/test_skill_receipt_schema_lint.py": 92,
+        "lines::tests/test_stage06_runtime_parity.py": 99,
+        "lines::tests/test_stage07_baseline_training_smoke.py": 112,
+        "lines::tests/test_stage10_logreg_mt5_scout.py": 768,
+        "lines::tests/test_stage12_probability_guard.py": 47,
+        "lines::tests/test_stage_pipeline_imports.py": 52,
+        "lines::tests/test_stage_work_archive.py": 57,
+        "lines::tests/test_state_sync_audit.py": 98,
+        "lines::tests/test_time_semantics_probe.py": 82,
+        "lines::tests/test_top3_price_proxy_weights.py": 79,
+        "lines::tests/test_validate_run_evidence.py": 270,
+        "lines::tests/test_work_packet_schema_lint.py": 110
+      },
+      "allowed_claims": [
+        "code_surface_guarded"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "ops_instruction_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "family_count": 12,
+        "explicit_skill_schema_count": 23,
+        "default_support_skill_limit": 3,
+        "max_required_skills_per_family": 5
+      },
+      "allowed_claims": [
+        "ops_instructions_stable"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "closeout_report_check",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "path": "docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_report.md",
+        "required_headings": [
+          "Conclusion",
+          "What changed",
+          "What gates passed",
+          "What gates were not applicable",
+          "What is still not enforced",
+          "Allowed claims",
+          "Forbidden claims",
+          "Next hardening step"
+        ]
+      },
+      "allowed_claims": [
+        "human_closeout_available"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "closeout_report_check",
+          "code_surface_audit",
+          "final_claim_guard",
+          "ops_instruction_audit",
+          "required_gate_coverage_audit",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "work_packet_schema_lint"
+        ],
+        "executed_audits": [
+          "closeout_report_check",
+          "code_surface_audit",
+          "final_claim_guard",
+          "ops_instruction_audit",
+          "required_gate_coverage_audit",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {
+          "kpi_contract_audit": "This is source layout and agent-control closeout work, not KPI row recording.",
+          "mt5_runtime_evidence_gate": "No MT5 terminal or Strategy Tester execution is part of this patch."
+        },
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "completed"
+      ],
+      "source_audits": [
+        "skill_receipt_lint",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "code_surface_audit",
+        "ops_instruction_audit",
+        "closeout_report_check",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "completed"
+    ],
+    "forbidden_claims": []
+  }
+}

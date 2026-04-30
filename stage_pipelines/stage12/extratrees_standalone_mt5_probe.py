@@ -19,6 +19,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         run_id=RUN_ID,
         exploration_label=EXPLORATION_LABEL,
         common_run_root=COMMON_RUN_ROOT,
+        stage_id=STAGE_ID,
     )
     run_output_root = Path(args.run_output_root)
     for path in (

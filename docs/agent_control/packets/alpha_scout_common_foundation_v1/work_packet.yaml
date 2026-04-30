@@ -1,0 +1,244 @@
+version: work_packet_schema_v2
+packet_id: alpha_scout_common_foundation_v1
+created_at_utc: "2026-04-30T00:00:00Z"
+user_request:
+  user_quote: "이번 브랜치용 작업 기록 packet 만들기, 검증 결과와 closeout report 남기기, AGENTS.md에 stage_pipelines 역할 추가, scout_runner.py의 Stage10 전역 기본값 위험 처리, wrapper/stage pipeline import smoke test 추가, merge 직전에 workspace_state.active_branch를 main 기준으로 정리"
+  requested_action: branch_closeout_and_stage_pipeline_guard_hardening
+  requested_count:
+    value: null
+    n_a_reason: not_counted_scope
+  ambiguous_terms:
+    - "작업 기록 packet"
+    - "merge 직전"
+current_truth:
+  active_branch: main
+  active_stage: "12_model_family_challenge__extratrees_training_effect"
+  current_run: "run03F_et_v11_tier_balance_mt5_v1"
+  source_documents:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+work_classification:
+  primary_family: code_refactor
+  detected_families:
+    - code_refactor
+    - policy_skill_governance
+    - state_sync
+    - artifact_lineage
+  touched_surfaces:
+    - foundation_alpha
+    - stage_pipelines
+    - foundation_control_plane
+    - agent_docs
+    - branch_packet
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    code_surface_risk: high
+    stage_pipeline_monolith_risk: medium
+    stage_identity_bleed_risk: high
+    evidence_gap_risk: high
+    state_sync_risk: medium
+    claim_boundary_risk: medium
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+    - code_surface_audit
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - closeout_report_check
+    - required_gate_coverage_audit
+    - final_claim_guard
+  forbidden_claims:
+    - runtime_authority
+    - operating_promotion
+    - alpha_quality
+decision_lock:
+  mode: user_explicit_instruction
+  assumptions:
+    file_edit_allowed: true
+    execution_allowed: true
+    ledger_write_allowed: false
+    destructive_change_allowed: false
+    merge_target_state_update_allowed: true
+  questions: []
+  required_user_decisions: []
+preflight:
+  needs_clarification: false
+  selected_option_id: user_explicit_branch_closeout_followup
+  selected_option_user_quote: "오케이 그럼"
+  blocked_until_answer: false
+interpreted_scope:
+  work_families:
+    - code_refactor
+    - policy_skill_governance
+    - state_sync
+    - artifact_lineage
+  target_surfaces:
+    - foundation_alpha
+    - stage_pipelines
+    - agent_docs
+    - tests
+    - branch_packet
+  scope_units:
+    - code_module
+    - document
+    - policy
+    - report
+    - artifact
+  execution_layers:
+    - code_edit
+    - document_edit
+    - python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: "해주고"
+  evidence_layers:
+    - code_surface_audit_json
+    - ops_instruction_audit_json
+    - import_smoke_test
+    - closeout_gate_json
+    - required_gate_coverage_json
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: true
+  claim_boundary:
+    allowed_claims:
+      - completed
+      - code_surface_guarded
+      - gate_coverage_complete
+    forbidden_claims:
+      - runtime_authority
+      - operating_promotion
+      - alpha_quality
+acceptance_criteria:
+  - id: AC-001
+    text: "Branch-specific work packet, skill receipts, audit outputs, required gate coverage, and closeout report exist."
+    expected_artifact: docs/agent_control/packets/alpha_scout_common_foundation_v1/
+    verification_method: closeout_gate_status_pass
+    required: true
+  - id: AC-002
+    text: "AGENTS.md and architecture policy define stage_pipelines as stage-local execution adapter, not shared toolbox."
+    expected_artifact: AGENTS.md
+    verification_method: code_review_and_code_surface_audit
+    required: true
+  - id: AC-003
+    text: "foundation.alpha.scout_runner no longer contains Stage10 default identity; stage adapters configure identity explicitly."
+    expected_artifact: foundation/alpha/scout_runner.py
+    verification_method: targeted_unit_tests
+    required: true
+  - id: AC-004
+    text: "Wrapper and stage pipeline import smoke test exists and passes in the local environment."
+    expected_artifact: tests/test_stage_pipeline_imports.py
+    verification_method: python_unittest
+    required: true
+  - id: AC-005
+    text: "Merge-target workspace_state.active_branch is main and state sync passes with current-branch override main."
+    expected_artifact: docs/workspace/workspace_state.yaml
+    verification_method: state_sync_audit_current_branch_main
+    required: true
+work_plan:
+  phases:
+    - id: harden_identity
+      actions:
+        - remove_stage10_defaults_from_shared_alpha_scout_runner
+        - require_stage_id_on_alpha_identity_configuration
+        - update_stage_adapters_to_pass_stage_id
+    - id: harden_stage_pipeline_boundary
+      actions:
+        - document_stage_pipelines_folder_rule
+        - add_cross_stage_pipeline_import_audit
+        - add_import_smoke_test
+    - id: closeout_packet
+      actions:
+        - create_branch_work_packet
+        - write_skill_receipts
+        - run_audits
+        - write_closeout_report
+  expected_outputs:
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/work_packet.yaml
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/skill_receipts.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/code_surface_audit.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/ops_instruction_audit.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/state_sync_merge_target.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_gate.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/required_gate_coverage.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_report.md
+  stop_conditions:
+    - code_surface_audit_blocked
+    - ops_instruction_audit_blocked
+    - closeout_gate_blocked
+skill_routing:
+  primary_family: code_refactor
+  primary_skill: obsidian-code-surface-guard
+  support_skills:
+    - obsidian-code-quality
+    - obsidian-architecture-guard
+    - obsidian-reference-scout
+  skills_considered:
+    - obsidian-code-surface-guard
+    - obsidian-code-quality
+    - obsidian-architecture-guard
+    - obsidian-reference-scout
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+  skills_selected:
+    - obsidian-code-surface-guard
+    - obsidian-code-quality
+    - obsidian-architecture-guard
+    - obsidian-reference-scout
+  skills_not_used:
+    obsidian-artifact-lineage: "Covered through branch packet artifacts; not selected as support skill to keep routing narrow."
+    obsidian-claim-discipline: "Closeout gate and final_claim_guard are required gates, not a separate primary/support skill for this patch."
+  required_skill_receipts:
+    - obsidian-code-surface-guard
+    - obsidian-code-quality
+    - obsidian-architecture-guard
+    - obsidian-reference-scout
+  required_gates:
+    - code_surface_audit
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - closeout_report_check
+    - required_gate_coverage_audit
+    - final_claim_guard
+evidence_contract:
+  raw_evidence:
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/state_sync_merge_target.json
+  machine_readable:
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/work_packet.yaml
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/skill_receipts.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/code_surface_audit.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/ops_instruction_audit.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_gate.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/required_gate_coverage.json
+  human_readable:
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_report.md
+gates:
+  required:
+    - code_surface_audit
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - closeout_report_check
+    - required_gate_coverage_audit
+    - final_claim_guard
+  not_applicable_with_reason:
+    kpi_contract_audit: "This is source layout and agent-control closeout work, not KPI row recording."
+    mt5_runtime_evidence_gate: "No MT5 terminal or Strategy Tester execution is part of this patch."
+final_claim_policy:
+  allowed_claims:
+    - completed
+    - code_surface_guarded
+    - gate_coverage_complete
+  forbidden_claims:
+    - runtime_authority
+    - operating_promotion
+    - alpha_quality
+  claim_vocabulary_reference: docs/agent_control/final_claim_policy.yaml

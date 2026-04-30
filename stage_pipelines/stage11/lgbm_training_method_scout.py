@@ -52,6 +52,7 @@ def run_stage11_lgbm_training_method_scout(
         run_id=run_id,
         exploration_label=exploration_label,
         common_run_root=f"Project_Obsidian_Prime_v2/stage11/{run_id}",
+        stage_id=STAGE_ID,
     )
 
     tier_a_feature_order = scout.load_feature_order(feature_order_path)

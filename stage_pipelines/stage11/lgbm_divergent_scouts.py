@@ -30,6 +30,7 @@ def run_one_spec(
         run_id=spec.run_id,
         exploration_label=spec.exploration_label,
         common_run_root=f"Project_Obsidian_Prime_v2/stage11/{spec.run_id}",
+        stage_id=STAGE_ID,
     )
     run_output_root = run_root / spec.run_id
     predictions_root = run_output_root / "predictions"

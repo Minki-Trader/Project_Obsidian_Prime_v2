@@ -53,6 +53,7 @@ def run_stage11_lgbm_rank_threshold_scout(
         run_id=run_id,
         exploration_label=exploration_label,
         common_run_root=f"Project_Obsidian_Prime_v2/stage11/{run_id}",
+        stage_id=STAGE_ID,
     )
     _io_path(run_output_root).mkdir(parents=True, exist_ok=True)
     predictions_root = run_output_root / "predictions"

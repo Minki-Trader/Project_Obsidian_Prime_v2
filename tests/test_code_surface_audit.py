@@ -39,6 +39,19 @@ class CodeSurfaceAuditTests(unittest.TestCase):
         self.assertTrue(result.completed_forbidden)
         self.assertIn("cross_owner_import::foundation/control_plane/bad.py", {finding.check_id for finding in result.findings})
 
+    def test_cross_stage_pipeline_import_blocks(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            bad_file = root / "stage_pipelines/stage11/bad.py"
+            bad_file.parent.mkdir(parents=True)
+            bad_file.write_text("from stage_pipelines.stage12 import extratrees_standalone_scout\n", encoding="utf-8")
+
+            result = audit_code_surface(root)
+
+        self.assertEqual(result.status, "blocked")
+        self.assertTrue(result.completed_forbidden)
+        self.assertIn("cross_stage_pipeline_import::stage_pipelines/stage11/bad.py", {finding.check_id for finding in result.findings})
+
     def test_mt5_strategy_report_parser_lives_under_mt5_owner(self) -> None:
         html = """
         <html><body><table>

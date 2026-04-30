@@ -186,6 +186,14 @@ def configure_run_identity(
     )
 
 
+configure_run_identity(
+    run_number=RUN_NUMBER,
+    run_id=RUN_ID,
+    exploration_label=EXPLORATION_LABEL,
+    common_run_root=COMMON_RUN_ROOT,
+)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Materialize a Stage 10 logistic MT5 scout payload.")
     parser.add_argument("--run-number", default=RUN_NUMBER)

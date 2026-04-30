@@ -23,6 +23,12 @@ CONTROL_PLANE_STAGE_IMPORT_RE = re.compile(
     re.MULTILINE,
 )
 STAGE_RUNTIME_COMPAT_IMPORT_RE = re.compile(r"foundation\.pipelines.*run_stage10_logreg_mt5_scout")
+STAGE_PIPELINE_IMPORT_RE = re.compile(
+    r"^\s*(?:from\s+stage_pipelines\.stage(?P<from_stage>\d+)(?:\.[\w_]+)*\s+import|"
+    r"import\s+stage_pipelines\.stage(?P<import_stage>\d+)(?:\.[\w_]+)+)",
+    re.MULTILINE,
+)
+STAGE_PIPELINE_PATH_RE = re.compile(r"^stage_pipelines/stage(?P<stage>\d+)/")
 
 
 def audit_code_surface(root: Path | str = Path("."), baseline_path: Path | str | None = None) -> AuditResult:
@@ -152,6 +158,24 @@ def _check_cross_owner_imports(rel: str, text: str, findings: list[AuditFinding]
                 details={"path": rel, "next_refactor": "move shared runtime helpers into foundation/mt5 modules"},
             )
         )
+    stage_match = STAGE_PIPELINE_PATH_RE.match(rel)
+    if stage_match:
+        owner_stage = stage_match.group("stage")
+        for import_match in STAGE_PIPELINE_IMPORT_RE.finditer(text):
+            imported_stage = import_match.group("from_stage") or import_match.group("import_stage")
+            if imported_stage != owner_stage:
+                findings.append(
+                    AuditFinding(
+                        check_id=f"cross_stage_pipeline_import::{rel}",
+                        message="Stage pipeline modules must not import another stage as a shared toolbox.",
+                        details={
+                            "path": rel,
+                            "owner_stage": f"stage{owner_stage}",
+                            "imported_stage": f"stage{imported_stage}",
+                            "next_refactor": "move reusable logic to foundation/* before cross-stage reuse",
+                        },
+                    )
+                )
 
 
 def main() -> int:

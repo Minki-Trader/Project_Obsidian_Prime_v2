@@ -1,0 +1,59 @@
+# Alpha Scout Common Foundation Branch Closeout
+
+## Conclusion
+
+`alpha_scout_common_foundation_v1` is completed for branch closeout and merge-prep evidence. It hardens code ownership and agent closeout flow; it does not claim alpha quality, MT5 runtime authority, live readiness, or operating promotion.
+
+## What Changed
+
+- Added this branch-specific work packet, skill receipts, audit outputs, required gate coverage, and closeout report.
+- Added `stage_pipelines/` to AGENTS folder rules and strengthened architecture invariants: stage pipelines are stage-local execution rooms, not shared toolboxes.
+- Removed Stage10 default identity from `foundation/alpha/scout_runner.py`; shared alpha helpers now require explicit stage/run identity before artifact materialization.
+- Updated Stage10/11/12 adapters to pass explicit stage identity into shared alpha helpers.
+- Added a code-surface audit rule blocking cross-stage imports such as `stage_pipelines.stage11` importing `stage_pipelines.stage12`.
+- Added wrapper and stage pipeline import smoke coverage.
+- Set `docs/workspace/workspace_state.yaml` `active_branch` to `main` for merge-target state.
+
+## What Gates Passed
+
+- `work_packet_schema_lint`
+- `skill_receipt_lint`
+- `skill_receipt_schema_lint`
+- `code_surface_audit`
+- `ops_instruction_audit`
+- `closeout_report_check`
+- `required_gate_coverage_audit`
+- `final_claim_guard`
+- Merge-target `state_sync_audit` passed with `--current-branch main`.
+
+## What Gates Were Not Applicable
+
+- `kpi_contract_audit`: no KPI rows or normalized KPI records were created.
+- `mt5_runtime_evidence_gate`: no MT5 terminal or Strategy Tester execution was part of this branch closeout.
+- `runtime_parity_gate`: this patch changes source layout and agent-control evidence, not Python/MT5 runtime parity.
+
+## What Is Still Not Enforced
+
+- Stage11 and Stage12 still have several large stage-local support files below the blocking threshold; the new guard prevents cross-stage reuse but does not yet split every large support module.
+- The import smoke test tolerates missing optional local dependencies such as `lightgbm`, `skl2onnx`, or `onnxruntime` so it can run on partial developer environments.
+- Semantic detection of reusable model/training/threshold logic inside a stage-local file is still future hardening, not fully automated here.
+
+## Allowed Claims
+
+- `completed`
+- `code_surface_guarded`
+- `gate_coverage_complete`
+- `stage_pipeline_boundary_documented`
+- `merge_target_state_prepared`
+
+## Forbidden Claims
+
+- `runtime_authority`
+- `operating_promotion`
+- `alpha_quality`
+- `live_readiness`
+- `monolith_risk_eliminated`
+
+## Next Hardening Step
+
+Add a semantic code-surface audit that flags reusable training, threshold, model, or runtime logic inside `stage_pipelines/stageXX/*_support.py` and recommends a concrete `foundation/*` owner module when the same pattern appears in more than one stage.
