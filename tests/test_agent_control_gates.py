@@ -385,6 +385,56 @@ class AgentControlGateTests(unittest.TestCase):
             self.assertIn('"audit_name": "required_gate_coverage_audit"', payload)
             self.assertIn('"status": "pass"', payload)
 
+    def test_closeout_gate_accepts_extra_audit_json_for_required_gate_coverage(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            work_packet = root / "work_packet.yaml"
+            extra_audit = root / "agent_control_contracts.json"
+            output_path = root / "gate.json"
+            work_packet.write_text(
+                "\n".join(
+                    [
+                        "risk_vector_scan:",
+                        "  required_gates: [agent_control_contracts, required_gate_coverage_audit, final_claim_guard]",
+                        "gates: {}",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            extra_audit.write_text(
+                '{"audit_name":"agent_control_contracts","status":"pass","findings":[],"allowed_claims":["contracts_ready"],"forbidden_claims":[]}',
+                encoding="utf-8",
+            )
+
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "foundation.control_plane.closeout_gate",
+                    "--packet-id",
+                    "unit_packet",
+                    "--requested-claim",
+                    "completed",
+                    "--work-packet",
+                    str(work_packet),
+                    "--extra-audit-json",
+                    str(extra_audit),
+                    "--required-gate-coverage",
+                    "--output-json",
+                    str(output_path),
+                ],
+                cwd=Path(__file__).resolve().parents[1],
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+
+            self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+            payload = output_path.read_text(encoding="utf-8")
+            self.assertIn('"audit_name": "agent_control_contracts"', payload)
+            self.assertIn('"audit_name": "required_gate_coverage_audit"', payload)
+
     def test_preflight_clarifier_blocks_ambiguous_batch_verification_prompt(self) -> None:
         result = analyze_prompt_for_clarification("20개 정도 가설 세워서 검증까지 돌려봐")
 

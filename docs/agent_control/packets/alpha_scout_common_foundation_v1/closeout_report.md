@@ -15,12 +15,16 @@
 - Added wrapper and stage pipeline import smoke coverage.
 - Set `docs/workspace/workspace_state.yaml` `active_branch` to `main` for merge-target state.
 - Replaced free-form `skills_not_used` text with structured not-selected reasons.
+- Synced `AGENTS.md`, `obsidian-session-intake`, `obsidian-work-packet-router`, and `codex_operating_format.yaml` to the same `primary_family -> primary_skill -> support_skills -> required_gates` routing model.
+- Added closeout support for extra audit JSON files so `agent_control_contracts` and saved `state_sync_audit` evidence can be machine-linked alongside `ops_instruction_audit`.
 
 ## What Gates Passed
 
 - `work_packet_schema_lint`
 - `skill_receipt_lint`
 - `skill_receipt_schema_lint`
+- `agent_control_contracts`
+- `state_sync_audit`
 - `code_surface_audit`
 - `ops_instruction_audit`
 - `closeout_report_check`

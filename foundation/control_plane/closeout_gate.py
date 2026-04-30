@@ -214,6 +214,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--skill-receipt-schema")
     parser.add_argument("--code-surface-audit-json")
     parser.add_argument("--agent-control-contracts-json")
+    parser.add_argument("--extra-audit-json", action="append", default=[])
     parser.add_argument("--required-gate-coverage", action="store_true")
     parser.add_argument("--closeout-report")
     parser.add_argument("--kpi-run-id")
@@ -266,6 +267,8 @@ def main(argv: list[str] | None = None) -> int:
         extra_audits.append(_audit_result_from_json(Path(args.code_surface_audit_json)))
     if args.agent_control_contracts_json:
         extra_audits.append(_audit_result_from_json(Path(args.agent_control_contracts_json)))
+    for extra_audit_json in args.extra_audit_json:
+        extra_audits.append(_audit_result_from_json(Path(extra_audit_json)))
     if args.closeout_report:
         extra_audits.append(_audit_closeout_report(Path(args.closeout_report)))
 

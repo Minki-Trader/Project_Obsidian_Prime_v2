@@ -25,11 +25,18 @@ lifecycle:
       - primary_family
       - primary_skill
       - support_skills
+      - required_skill_receipts
+      - required_gates
       - acceptance_criteria
       - scope_reduction_policy
       - forbidden_claims
     effect: "Turn the request into a checkable contract derived from work_family_registry.yaml."
   - phase: run_plan
+    required_when:
+      - experiment_execution
+      - runtime_backtest
+      - kpi_evidence
+      - artifact_lineage
     required_outputs:
       - run_plan.yaml
       - row_grain_contract
@@ -92,7 +99,8 @@ completion_rule:
   completed_requires:
     - all_acceptance_criteria_passed
     - required_skill_receipts_executed
-    - kpi_contract_passed
+    - required_gates_executed_or_not_applicable_with_reason
+    - kpi_contract_passed_or_not_applicable_with_reason
     - artifact_lineage_connected_or_bounded
     - final_claim_guard_passed
   blocked_requires_one_of:

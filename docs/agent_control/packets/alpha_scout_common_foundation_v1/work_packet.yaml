@@ -44,6 +44,8 @@ risk_vector_scan:
   hard_stop_risks: []
   required_decision_locks: []
   required_gates:
+    - agent_control_contracts
+    - state_sync_audit
     - code_surface_audit
     - ops_instruction_audit
     - work_packet_schema_lint
@@ -140,6 +142,11 @@ acceptance_criteria:
     expected_artifact: docs/workspace/workspace_state.yaml
     verification_method: state_sync_audit_current_branch_main
     required: true
+  - id: AC-006
+    text: "AGENTS.md, repo skills, and codex operating format describe the same primary_family/primary_skill/support_skills/required_gates routing model."
+    expected_artifact: AGENTS.md
+    verification_method: ops_instruction_audit_and_agent_control_contracts
+    required: true
 work_plan:
   phases:
     - id: harden_identity
@@ -158,11 +165,18 @@ work_plan:
         - write_skill_receipts
         - run_audits
         - write_closeout_report
+    - id: sync_operating_docs
+      actions:
+        - align_agents_lifecycle_with_primary_family_routing
+        - align_session_intake_and_work_packet_router_skill_docs
+        - clarify_kpi_gate_as_required_or_not_applicable
+        - attach_agent_control_contracts_and_state_sync_audit_to_closeout
   expected_outputs:
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/work_packet.yaml
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/skill_receipts.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/code_surface_audit.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/ops_instruction_audit.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/agent_control_contracts.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/state_sync_merge_target.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_gate.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/required_gate_coverage.json
@@ -205,6 +219,8 @@ skill_routing:
     - obsidian-architecture-guard
     - obsidian-reference-scout
   required_gates:
+    - agent_control_contracts
+    - state_sync_audit
     - code_surface_audit
     - ops_instruction_audit
     - work_packet_schema_lint
@@ -221,12 +237,15 @@ evidence_contract:
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/skill_receipts.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/code_surface_audit.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/ops_instruction_audit.json
+    - docs/agent_control/packets/alpha_scout_common_foundation_v1/agent_control_contracts.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_gate.json
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/required_gate_coverage.json
   human_readable:
     - docs/agent_control/packets/alpha_scout_common_foundation_v1/closeout_report.md
 gates:
   required:
+    - agent_control_contracts
+    - state_sync_audit
     - code_surface_audit
     - ops_instruction_audit
     - work_packet_schema_lint

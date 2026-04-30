@@ -128,7 +128,7 @@
         "lines::foundation/control_plane/agent_control_contracts.py": 347,
         "lines::foundation/control_plane/alpha_run_ledgers.py": 315,
         "lines::foundation/control_plane/audit_result.py": 74,
-        "lines::foundation/control_plane/closeout_gate.py": 303,
+        "lines::foundation/control_plane/closeout_gate.py": 306,
         "lines::foundation/control_plane/code_surface_audit.py": 200,
         "lines::foundation/control_plane/decision_lock.py": 151,
         "lines::foundation/control_plane/experiment_inventory.py": 648,
@@ -220,7 +220,7 @@
         "lines::stage_pipelines/stage12/extratrees_training_effect_scout.py": 440,
         "lines::stage_pipelines/stage12/extratrees_training_effect_support.py": 689,
         "lines::tests/test_agent_control_contracts.py": 96,
-        "lines::tests/test_agent_control_gates.py": 430,
+        "lines::tests/test_agent_control_gates.py": 480,
         "lines::tests/test_alpha_scout_runner_context.py": 87,
         "lines::tests/test_audit_stage05_feature_integrity.py": 128,
         "lines::tests/test_code_surface_audit.py": 79,
@@ -262,6 +262,87 @@
       "forbidden_claims": []
     },
     {
+      "audit_name": "agent_control_contracts",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "file::docs/agent_control/codex_operating_format.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/codex_operating_format.yaml"
+        },
+        "file::docs/agent_control/work_packet.schema.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/work_packet.schema.yaml"
+        },
+        "file::docs/agent_control/code_surface_baseline.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/code_surface_baseline.yaml"
+        },
+        "file::docs/agent_control/n_a_reason_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/n_a_reason_registry.yaml"
+        },
+        "file::docs/agent_control/claim_vocabulary.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/claim_vocabulary.yaml"
+        },
+        "file::docs/agent_control/kpi_source_authority.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/kpi_source_authority.yaml"
+        },
+        "file::docs/agent_control/row_grain_contract.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/row_grain_contract.yaml"
+        },
+        "file::docs/agent_control/work_family_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/work_family_registry.yaml"
+        },
+        "file::docs/agent_control/surface_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/surface_registry.yaml"
+        },
+        "file::docs/agent_control/risk_flag_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/risk_flag_registry.yaml"
+        },
+        "file::docs/agent_control/skill_receipt_schema.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/skill_receipt_schema.yaml"
+        },
+        "file::docs/templates/work_packet.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/work_packet.template.yaml"
+        },
+        "file::docs/templates/run_plan.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/run_plan.template.yaml"
+        },
+        "file::docs/templates/work_plan.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/work_plan.template.yaml"
+        },
+        "file::docs/templates/closeout_report.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/closeout_report.template.yaml"
+        },
+        "file::docs/templates/closeout_report.template.md": {
+          "exists": true,
+          "path": "docs/templates/closeout_report.template.md"
+        },
+        "file::docs/templates/kpi_record_normalized.template.json": {
+          "exists": true,
+          "path": "docs/templates/kpi_record_normalized.template.json"
+        }
+      },
+      "allowed_claims": [
+        "contracts_ready"
+      ],
+      "forbidden_claims": []
+    },
+    {
       "audit_name": "ops_instruction_audit",
       "status": "pass",
       "passed": true,
@@ -275,6 +356,39 @@
       },
       "allowed_claims": [
         "ops_instructions_stable"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "active_stage": "12_model_family_challenge__extratrees_training_effect",
+        "workspace_active_branch": "main",
+        "actual_git_branch": "main",
+        "current_run_values": {
+          "workspace_state": "run03F_et_v11_tier_balance_mt5_v1",
+          "current_working_state": "run03F_et_v11_tier_balance_mt5_v1",
+          "selection_status": "run03F_et_v11_tier_balance_mt5_v1"
+        },
+        "stage_brief_boundary": "## 경계(Boundary, 경계) Python structural scout(파이썬 구조 탐침)와 MT5 runtime_probe(MT5 런타임 탐침) 근거를 함께 기록할 수 있다. 다만 현재 근거는 single split runtime_probe(단일 분할 런타임 탐침)이므로 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격), runtime authority(런타임 권위)는 주장하지 않는다.",
+        "registry_has_current_run": true,
+        "stage_ledger_has_current_run": true,
+        "source_paths": {
+          "workspace_state": "docs/workspace/workspace_state.yaml",
+          "current_working_state": "docs/context/current_working_state.md",
+          "selection_status": "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md",
+          "stage_brief": "stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md",
+          "run_registry": "docs/registers/run_registry.csv",
+          "stage_ledger": "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv"
+        }
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
       ],
       "forbidden_claims": []
     },
@@ -310,6 +424,7 @@
       "findings": [],
       "counts": {
         "required_gates": [
+          "agent_control_contracts",
           "closeout_report_check",
           "code_surface_audit",
           "final_claim_guard",
@@ -317,9 +432,11 @@
           "required_gate_coverage_audit",
           "skill_receipt_lint",
           "skill_receipt_schema_lint",
+          "state_sync_audit",
           "work_packet_schema_lint"
         ],
         "executed_audits": [
+          "agent_control_contracts",
           "closeout_report_check",
           "code_surface_audit",
           "final_claim_guard",
@@ -327,6 +444,7 @@
           "required_gate_coverage_audit",
           "skill_receipt_lint",
           "skill_receipt_schema_lint",
+          "state_sync_audit",
           "work_packet_schema_lint"
         ],
         "not_applicable_with_reason": {
@@ -356,7 +474,9 @@
         "work_packet_schema_lint",
         "skill_receipt_schema_lint",
         "code_surface_audit",
+        "agent_control_contracts",
         "ops_instruction_audit",
+        "state_sync_audit",
         "closeout_report_check",
         "required_gate_coverage_audit"
       ]

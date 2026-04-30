@@ -19,12 +19,17 @@ Most Obsidian requests are not one mode. A normal request may start with an idea
 
 ## Required Output
 
-- Always emit(항상 남김) `routing_receipt(라우팅 기록)`: lifecycle(생명주기), selected skill bundles(선택된 스킬 묶음), omitted high-relevance skills(관련성이 높은데 빠진 스킬), one-line reasons(한 줄 이유)를 담은 compact record(압축 기록).
+- Always emit(항상 남김) `routing_receipt(라우팅 기록)`: lifecycle(생명주기), `primary_family(주 작업군)`, `primary_skill(주 스킬)`, selected `support_skills(보조 스킬)`, `required_gates(필수 게이트)`, and structured not-selected reasons(구조화된 미선택 사유)를 담은 compact record(압축 기록).
 - `work_packet_lifecycle`: one of `information_only`, `design_only`, `code_to_verify_to_report`, `experiment_to_evidence_to_report`, `code_to_experiment_to_evidence_to_report`, `policy_skill_governance`, `publish_or_handoff`, or a short custom lifecycle(짧은 사용자 정의 생명주기)
 - `phase_plan`: ordered phases(순서 있는 단계) for the current packet(현재 작업 묶음); low-risk `information_only`(낮은 위험 정보 작업)는 compact(압축), code/experiment/MT5/policy/publish/ambiguous work(코드/실험/MT5/정책/발행/애매한 작업)는 expanded(확장)
-- `skills_considered`: compact packets(압축 작업 묶음)는 bundle level(묶음 단위), high-risk packets(고위험 작업 묶음)는 individual skill level(개별 스킬 단위)로 고려한 repo-scoped skills(저장소 전용 스킬)
-- `skills_selected`: each phase(각 단계)에 붙인 skills(스킬)
-- `skills_not_used`: attached(선택)하지 않은 high-relevance skills(고관련 스킬)와 one-line reasons(한 줄 이유); trigger policy(작동 조건 정책)가 자연스럽게 요구하는 skill(스킬)을 조용히 버리지 않는다
+- `primary_family`: exactly one family(작업군) from `docs/agent_control/work_family_registry.yaml`
+- `primary_skill`: exactly one primary skill(주 스킬) from that family
+- `support_skills`: only the family-supported skills(보조 스킬) actually needed for this packet
+- `skills_considered`: high-relevance repo-scoped skills(저장소 전용 스킬) considered for this packet
+- `skills_selected`: normalized list(정규화 목록) equal to `primary_skill` followed by selected `support_skills`
+- `skills_not_used`: attached(선택)하지 않은 high-relevance skills(고관련 스킬) with structured reasons such as `not_primary_family_required_skill`, `not_required_for_read_only`, or `enforced_as_required_gate_not_support_skill`; do not use vague "implicitly satisfied" wording
+- `required_skill_receipts`: receipt-required skills(영수증 필수 스킬), matching `skills_selected` unless a gate explicitly enforces the responsibility
+- `required_gates`: gates(게이트) that must execute in closeout or be declared N/A with a reason
 - `branch_worktree_fit`: whether the current branch/worktree matches the requested packet
 - `branch_action`: stay, switch, create_new_branch, create_or_select_worktree, or stop_for_user
 - `phase_stop_conditions`: where to stop or downgrade claims
@@ -61,4 +66,5 @@ Most Obsidian requests are not one mode. A normal request may start with an idea
 - Create stage-specific routing skills when a project-wide lifecycle responsibility fits.
 - Skip answer clarity because a result is technically correct.
 - Skip reference scouting silently; record why it was not required.
+- Select broad automatic skill groups. The router chooses one primary family, one primary skill, and only the support skills that materially change execution or closeout evidence.
 - Replace(대체) the compact routing receipt(압축 라우팅 기록)를 unrecorded private decision(기록 없는 내부 판단)으로 바꾸지 않는다; receipt(기록)는 abandoned skills(유기되는 스킬)을 막는 guard(가드)다.

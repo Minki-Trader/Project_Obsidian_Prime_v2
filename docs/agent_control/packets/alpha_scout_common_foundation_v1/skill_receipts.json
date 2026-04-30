@@ -35,8 +35,11 @@
       "status": "executed",
       "touched_surfaces": [
         "AGENTS.md folder rules",
+        "repo-scoped intake and router skill docs",
+        "docs/agent_control/codex_operating_format.yaml",
         "docs/policies/architecture_invariants.md",
         "foundation/control_plane/code_surface_audit.py",
+        "foundation/control_plane/closeout_gate.py",
         "foundation/alpha/scout_runner.py",
         "stage_pipelines/stage10",
         "stage_pipelines/stage11",
@@ -46,7 +49,8 @@
         "stage_pipelines is stage-local execution orchestration, not a shared toolbox",
         "foundation/alpha must not carry Stage10 default run identity",
         "control_plane must not import stage pipelines directly",
-        "stage_pipelines/stageXX must not import another stage_pipelines/stageYY"
+        "stage_pipelines/stageXX must not import another stage_pipelines/stageYY",
+        "agent operating docs must route through one primary_family, one primary_skill, limited support_skills, and required_gates"
       ],
       "placement_boundary": "Common reusable code belongs under foundation/* owner modules; stage_pipelines owns only stage-specific execution adapters.",
       "architecture_debt_effect": "Stage11 and Stage12 support files remain large; legacy configure_run_identity remains only as compatibility fallback while stage execution paths move to explicit context.",
