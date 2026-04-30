@@ -16,7 +16,7 @@ line_count_policy:
 ownership_policy:
   blocked_direct_imports:
     - importer_owner: foundation/control_plane
-      imported_owner: foundation/pipelines/run_stage*
+      imported_owner: foundation/pipelines/run_stage* or stage_pipelines/*
       reason: "control plane(제어면) must not use stage pipeline(단계 파이프라인) as hidden shared owner(숨은 공유 소유자)"
   compatibility_shims:
     - path: foundation/mt5/runtime_support.py

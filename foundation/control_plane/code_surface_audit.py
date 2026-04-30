@@ -13,11 +13,13 @@ from foundation.control_plane.ledger import io_path, path_exists
 
 
 CODE_SUFFIXES = {".py", ".mq5", ".mqh"}
-DEFAULT_SCAN_ROOTS = ("foundation", "tests", "stages", ".agents/skills")
+DEFAULT_SCAN_ROOTS = ("foundation", "stage_pipelines", "tests", "stages", ".agents/skills")
 DEFAULT_BASELINE_PATH = Path("docs/agent_control/code_surface_baseline.yaml")
 CONTROL_PLANE_STAGE_IMPORT_RE = re.compile(
     r"^\s*(?:from\s+foundation\.pipelines(?:\.run_stage\d+[\w_]*)?\s+import|"
-    r"import\s+foundation\.pipelines\.run_stage\d+)",
+    r"import\s+foundation\.pipelines\.run_stage\d+|"
+    r"from\s+stage_pipelines(?:\.[\w_]+)*\s+import|"
+    r"import\s+stage_pipelines(?:\.[\w_]+)+)",
     re.MULTILINE,
 )
 STAGE_RUNTIME_COMPAT_IMPORT_RE = re.compile(r"foundation\.pipelines.*run_stage10_logreg_mt5_scout")

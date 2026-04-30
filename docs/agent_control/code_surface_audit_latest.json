@@ -55,71 +55,71 @@
       }
     },
     {
-      "check_id": "large_file::foundation/pipelines/run_stage11_lgbm_divergent_scouts.py",
+      "check_id": "large_file::stage_pipelines/stage11/lgbm_divergent_scouts.py",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
       "details": {
-        "path": "foundation/pipelines/run_stage11_lgbm_divergent_scouts.py",
+        "path": "stage_pipelines/stage11/lgbm_divergent_scouts.py",
         "lines": 1202,
         "attention_lines": 800
       }
     },
     {
-      "check_id": "large_file::foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py",
+      "check_id": "large_file::stage_pipelines/stage11/lgbm_rank_threshold_scout.py",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
       "details": {
-        "path": "foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py",
+        "path": "stage_pipelines/stage11/lgbm_rank_threshold_scout.py",
         "lines": 888,
         "attention_lines": 800
       }
     },
     {
-      "check_id": "large_file::foundation/pipelines/run_stage11_lgbm_training_method_scout.py",
+      "check_id": "large_file::stage_pipelines/stage11/lgbm_training_method_scout.py",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
       "details": {
-        "path": "foundation/pipelines/run_stage11_lgbm_training_method_scout.py",
+        "path": "stage_pipelines/stage11/lgbm_training_method_scout.py",
         "lines": 1373,
         "attention_lines": 800
       }
     },
     {
-      "check_id": "large_file::foundation/pipelines/run_stage12_batch20_top_mt5_probe.py",
+      "check_id": "large_file::stage_pipelines/stage12/batch20_top_mt5_probe.py",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
       "details": {
-        "path": "foundation/pipelines/run_stage12_batch20_top_mt5_probe.py",
+        "path": "stage_pipelines/stage12/batch20_top_mt5_probe.py",
         "lines": 862,
         "attention_lines": 800
       }
     },
     {
-      "check_id": "large_file::foundation/pipelines/run_stage12_extratrees_standalone_batch20.py",
+      "check_id": "large_file::stage_pipelines/stage12/extratrees_standalone_batch20.py",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
       "details": {
-        "path": "foundation/pipelines/run_stage12_extratrees_standalone_batch20.py",
+        "path": "stage_pipelines/stage12/extratrees_standalone_batch20.py",
         "lines": 1021,
         "attention_lines": 800
       }
     },
     {
-      "check_id": "large_file::foundation/pipelines/run_stage12_extratrees_standalone_mt5_probe.py",
+      "check_id": "large_file::stage_pipelines/stage12/extratrees_standalone_mt5_probe.py",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
       "details": {
-        "path": "foundation/pipelines/run_stage12_extratrees_standalone_mt5_probe.py",
+        "path": "stage_pipelines/stage12/extratrees_standalone_mt5_probe.py",
         "lines": 1103,
         "attention_lines": 800
       }
     },
     {
-      "check_id": "large_file::foundation/pipelines/run_stage12_extratrees_training_effect_scout.py",
+      "check_id": "large_file::stage_pipelines/stage12/extratrees_training_effect_scout.py",
       "message": "Large code file requires code-surface guard before future edits.",
       "severity": "warning",
       "details": {
-        "path": "foundation/pipelines/run_stage12_extratrees_training_effect_scout.py",
+        "path": "stage_pipelines/stage12/extratrees_training_effect_scout.py",
         "lines": 1114,
         "attention_lines": 800
       }
@@ -128,7 +128,7 @@
   "counts": {
     "attention_lines": 800,
     "blocking_lines": 1600,
-    "scanned_files": 114,
+    "scanned_files": 129,
     "files_over_attention": 12,
     "lines::.agents/skills/obsidian-architecture-guard/scripts/validate_agent_settings.py": 391,
     "lines::foundation/alpha/__init__.py": 4,
@@ -144,7 +144,7 @@
     "lines::foundation/control_plane/alpha_run_ledgers.py": 315,
     "lines::foundation/control_plane/audit_result.py": 74,
     "lines::foundation/control_plane/closeout_gate.py": 303,
-    "lines::foundation/control_plane/code_surface_audit.py": 174,
+    "lines::foundation/control_plane/code_surface_audit.py": 176,
     "lines::foundation/control_plane/decision_lock.py": 151,
     "lines::foundation/control_plane/experiment_inventory.py": 648,
     "lines::foundation/control_plane/final_claim_guard.py": 42,
@@ -200,17 +200,32 @@
     "lines::foundation/pipelines/materialize_top3_price_proxy_weights.py": 227,
     "lines::foundation/pipelines/materialize_training_label_split_dataset.py": 522,
     "lines::foundation/pipelines/run_stage07_baseline_training_smoke.py": 437,
-    "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 682,
-    "lines::foundation/pipelines/run_stage11_lgbm_divergent_scouts.py": 1202,
-    "lines::foundation/pipelines/run_stage11_lgbm_fwd18_retrain_scout.py": 311,
-    "lines::foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py": 888,
-    "lines::foundation/pipelines/run_stage11_lgbm_training_method_scout.py": 1373,
-    "lines::foundation/pipelines/run_stage11_priority_probes.py": 783,
-    "lines::foundation/pipelines/run_stage12_batch20_top_mt5_probe.py": 862,
-    "lines::foundation/pipelines/run_stage12_extratrees_standalone_batch20.py": 1021,
-    "lines::foundation/pipelines/run_stage12_extratrees_standalone_mt5_probe.py": 1103,
-    "lines::foundation/pipelines/run_stage12_extratrees_standalone_scout.py": 694,
-    "lines::foundation/pipelines/run_stage12_extratrees_training_effect_scout.py": 1114,
+    "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 7,
+    "lines::foundation/pipelines/run_stage11_lgbm_divergent_scouts.py": 7,
+    "lines::foundation/pipelines/run_stage11_lgbm_fwd18_retrain_scout.py": 7,
+    "lines::foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py": 7,
+    "lines::foundation/pipelines/run_stage11_lgbm_training_method_scout.py": 7,
+    "lines::foundation/pipelines/run_stage11_priority_probes.py": 7,
+    "lines::foundation/pipelines/run_stage12_batch20_top_mt5_probe.py": 7,
+    "lines::foundation/pipelines/run_stage12_extratrees_standalone_batch20.py": 9,
+    "lines::foundation/pipelines/run_stage12_extratrees_standalone_mt5_probe.py": 7,
+    "lines::foundation/pipelines/run_stage12_extratrees_standalone_scout.py": 7,
+    "lines::foundation/pipelines/run_stage12_extratrees_training_effect_scout.py": 7,
+    "lines::stage_pipelines/__init__.py": 2,
+    "lines::stage_pipelines/stage10/__init__.py": 2,
+    "lines::stage_pipelines/stage10/logreg_mt5_scout.py": 682,
+    "lines::stage_pipelines/stage11/__init__.py": 2,
+    "lines::stage_pipelines/stage11/lgbm_divergent_scouts.py": 1202,
+    "lines::stage_pipelines/stage11/lgbm_fwd18_retrain_scout.py": 311,
+    "lines::stage_pipelines/stage11/lgbm_rank_threshold_scout.py": 888,
+    "lines::stage_pipelines/stage11/lgbm_training_method_scout.py": 1373,
+    "lines::stage_pipelines/stage11/priority_probes.py": 783,
+    "lines::stage_pipelines/stage12/__init__.py": 2,
+    "lines::stage_pipelines/stage12/batch20_top_mt5_probe.py": 862,
+    "lines::stage_pipelines/stage12/extratrees_standalone_batch20.py": 1021,
+    "lines::stage_pipelines/stage12/extratrees_standalone_mt5_probe.py": 1103,
+    "lines::stage_pipelines/stage12/extratrees_standalone_scout.py": 694,
+    "lines::stage_pipelines/stage12/extratrees_training_effect_scout.py": 1114,
     "lines::tests/test_agent_control_contracts.py": 96,
     "lines::tests/test_agent_control_gates.py": 414,
     "lines::tests/test_audit_stage05_feature_integrity.py": 128,

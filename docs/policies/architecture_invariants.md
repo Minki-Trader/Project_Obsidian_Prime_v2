@@ -5,12 +5,13 @@
 ## 소유권(Ownership, 소유권)
 
 - `foundation/features`: 재사용 피처 로직(reusable feature logic, 재사용 피처 로직)
-- `foundation/pipelines`: 조율(orchestration, 조율)과 물질화(materialization, 물질화)
+- `foundation/pipelines`: 공통 데이터 물질화(materialization, 물질화)와 legacy 호환 shim(호환 진입점)
+- `stage_pipelines/stageXX`: 해당 Stage에만 고유한 실행 어댑터(stage-specific execution adapter, 단계 전용 실행 어댑터)
 - `foundation/mt5`: MT5 실행(execution, 실행) 또는 검증(verification, 검증) 도구
 - `foundation/parity`: Python과 MT5 비교(comparison, 비교) 도구
 - `stages/*`: 단계 로컬 산출물(stage-local artifacts, 단계 로컬 산출물), 보고서(reports, 보고서), 결정(decisions, 결정)
 
-`foundation/pipelines`가 피처 정의(feature definition, 피처 정의)나 모델 로직(model logic, 모델 로직)의 숨은 진실 원천(source of truth, 진실 원천)이 되면 안 된다.
+`foundation/pipelines`와 `stage_pipelines`가 피처 정의(feature definition, 피처 정의)나 모델 로직(model logic, 모델 로직)의 숨은 진실 원천(source of truth, 진실 원천)이 되면 안 된다.
 
 ## EA 모듈 경계(EA Module Boundary, EA 모듈 경계)
 
