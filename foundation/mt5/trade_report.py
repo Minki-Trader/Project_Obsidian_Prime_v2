@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
+import sys
 from typing import Any, Sequence
 
 import pandas as pd
@@ -171,10 +172,19 @@ def _is_deal_header(row: Sequence[str]) -> bool:
 
 
 def _read_report_text(path: Path) -> str:
-    raw = path.read_bytes()
+    raw = _io_path(path).read_bytes()
     if raw.startswith(b"\xff\xfe") or raw.startswith(b"\xfe\xff"):
         return raw.decode("utf-16", errors="replace")
     return raw.decode("utf-8-sig", errors="replace")
+
+
+def _io_path(path: Path) -> Path:
+    resolved = path.resolve()
+    if sys.platform == "win32":
+        text = str(resolved)
+        if not text.startswith("\\\\?\\"):
+            return Path("\\\\?\\" + text)
+    return resolved
 
 
 def _parse_time(value: str) -> pd.Timestamp:

@@ -1,0 +1,33 @@
+{
+  "blocking": false,
+  "created_at_utc": "2026-05-01T01:24:58Z",
+  "hashes_or_missing_reasons": "hashes recorded in run_manifest artifacts and summary artifacts",
+  "human_readable": [
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/reports/result_summary.md",
+    "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03G_variant_stability_probe_packet.md"
+  ],
+  "lineage_boundary": "connected_with_boundary; source predictions are reused without retraining",
+  "machine_readable": [
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/run_manifest.json",
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/kpi_record.json",
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/summary.json"
+  ],
+  "packet_id": "stage12_run03g_variant_stability_probe_v1",
+  "produced_artifacts": [
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/run_manifest.json",
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/kpi_record.json",
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/reports/result_summary.md"
+  ],
+  "raw_evidence": [
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/results/variant_stability.csv",
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/results/monthly_stability.csv"
+  ],
+  "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/artifact_lineage.json",
+  "skill": "obsidian-artifact-lineage",
+  "source_inputs": [
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/results/variant_results.csv",
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/predictions/scored_validation_oos.parquet"
+  ],
+  "status": "executed",
+  "triggered": true
+}

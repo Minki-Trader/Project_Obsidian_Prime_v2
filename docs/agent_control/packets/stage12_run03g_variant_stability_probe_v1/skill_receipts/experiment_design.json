@@ -1,0 +1,26 @@
+{
+  "baseline": "no operating baseline; v11 is a reference surface only",
+  "blocking": false,
+  "changed_variables": [
+    "read_axis=month_quarter_stability",
+    "candidate_surface=all_RUN03D_variants"
+  ],
+  "created_at_utc": "2026-05-01T01:24:58Z",
+  "evidence_plan": [
+    "variant_stability.csv",
+    "monthly_stability.csv",
+    "shortlist.csv",
+    "ledgers"
+  ],
+  "hypothesis": "RUN03D v11 narrowing should be reopened by variant period-stability comparison.",
+  "invalid_conditions": [
+    "source scope inheritance detected",
+    "scored predictions missing",
+    "split/timestamp invalid"
+  ],
+  "packet_id": "stage12_run03g_variant_stability_probe_v1",
+  "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/experiment_design.json",
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "triggered": true
+}

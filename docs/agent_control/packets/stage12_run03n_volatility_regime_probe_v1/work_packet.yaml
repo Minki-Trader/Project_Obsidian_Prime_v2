@@ -1,0 +1,235 @@
+version: work_packet_schema_v2
+packet_id: stage12_run03n_volatility_regime_probe_v1
+created_at_utc: '2026-05-01T09:32:24Z'
+user_request:
+  user_quote: 하나씩 run돌려서 mt5연동까지 가보자
+  requested_action: run volatility regime probe without fold07 and include MT5 verification
+  requested_count:
+    value: 1
+    n_a_reason: null
+  ambiguous_terms:
+  - one at a time means RUN03N first.
+current_truth:
+  active_stage: 12_model_family_challenge__extratrees_training_effect
+  current_run_before_packet: run03L_et_recency_weighted_single_v1
+  current_run_after_packet: run03N_et_volatility_regime_probe_v1
+  branch: codex/alpha-stage-transition-policy
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+work_classification:
+  primary_family: runtime_backtest
+  detected_families:
+  - runtime_backtest
+  - experiment_execution
+  - kpi_evidence
+  - state_sync
+  touched_surfaces:
+  - stage12_run_artifacts
+  - mt5_strategy_tester
+  - run_ledgers
+  - current_truth_docs
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    single_bucket_overread_risk: high
+    runtime_evidence_risk: high
+    fold07_leakage_risk: medium
+    claim_overstatement_risk: high
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - alpha_quality
+  - promotion_candidate
+  - operating_promotion
+  - runtime_authority
+decision_lock:
+  mode: user_explicit_one_run_no_variant
+  assumptions:
+    fold07_excluded: true
+    python_folds: fold01-fold06
+    mt5_fold: fold05
+    volatility_buckets:
+    - low_vol_zero_flags
+    - mid_vol_one_flag
+    - high_vol_two_plus_flags
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - runtime_backtest
+  target_surfaces:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03N_et_volatility_regime_probe_v1
+  - docs/agent_control/packets/stage12_run03n_volatility_regime_probe_v1
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv
+  - docs/registers/alpha_run_ledger.csv
+  scope_units:
+  - single_idea
+  - volatility_bucket
+  - fold
+  - tier_view
+  - mt5_attempt
+  - kpi_record
+  - ledger
+  execution_layers:
+  - python_wfo
+  - onnx_export
+  - mt5_strategy_tester
+  - kpi_recording
+  - ledger_update
+  - document_edit
+  mutation_policy:
+    allowed: true
+    boundary: new RUN03N artifacts and current truth only
+  evidence_layers:
+  - python_volatility_metrics
+  - mt5_reports
+  - normalized_kpi
+  - trade_attribution
+  - ledgers
+  - work_packet
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+  claim_boundary:
+    allowed_claims:
+    - runtime_probe_volatility_regime_completed
+    - no_fold07_volatility_probe_completed
+    forbidden_claims:
+    - alpha_quality
+    - promotion_candidate
+    - operating_promotion
+    - runtime_authority
+acceptance_criteria:
+- id: AC-001
+  text: fold07 is excluded.
+  expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03N_et_volatility_regime_probe_v1/results/fold_plan.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Three volatility buckets are recorded for Tier A, Tier B, and Tier A+B.
+  expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03N_et_volatility_regime_probe_v1/results/session_bucket_summary.csv
+  verification_method: kpi_contract_audit
+  required: true
+- id: AC-003
+  text: MT5 fold05 bucket attempts are recorded.
+  expected_artifact: docs/agent_control/packets/stage12_run03n_volatility_regime_probe_v1/attempt_summary.csv
+  verification_method: runtime_evidence_gate
+  required: true
+work_plan:
+  phases:
+  - id: python_wfo
+    actions:
+    - train_fold01_to_fold06
+    - score_volatility_buckets
+  - id: execute_mt5
+    actions:
+    - train_fold05_models
+    - export_bucket_feature_matrices
+    - run_18_strategy_tester_attempts
+  - id: closeout
+    actions:
+    - record_kpi
+    - record_trade_attribution
+    - update_ledgers
+    - sync_current_truth
+    - run_gates
+  expected_outputs:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03N_et_volatility_regime_probe_v1/reports/result_summary.md
+  - docs/agent_control/packets/stage12_run03n_volatility_regime_probe_v1/closeout_gate.json
+  stop_conditions:
+  - fold07_used
+  - missing_mt5_reports
+  - parser_errors
+  - ledger_rows_missing
+skill_routing:
+  primary_family: runtime_backtest
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+  - obsidian-experiment-design
+  - obsidian-model-validation
+  - obsidian-backtest-forensics
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  - obsidian-result-judgment
+  skills_considered:
+  - obsidian-runtime-parity
+  - obsidian-experiment-design
+  - obsidian-model-validation
+  - obsidian-backtest-forensics
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  - obsidian-result-judgment
+  skills_selected:
+  - obsidian-runtime-parity
+  - obsidian-experiment-design
+  - obsidian-model-validation
+  - obsidian-backtest-forensics
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  - obsidian-result-judgment
+  skills_not_used: {}
+  required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-experiment-design
+  - obsidian-model-validation
+  - obsidian-backtest-forensics
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  - obsidian-result-judgment
+  required_gates:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - docs/agent_control/packets/stage12_run03n_volatility_regime_probe_v1/execution_results.json
+  - docs/agent_control/packets/stage12_run03n_volatility_regime_probe_v1/trade_level_records.csv
+  machine_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03N_et_volatility_regime_probe_v1/summary.json
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03N_et_volatility_regime_probe_v1/kpi_record.json
+  - docs/agent_control/packets/stage12_run03n_volatility_regime_probe_v1/normalized_kpi_records.jsonl
+  human_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03N_et_volatility_regime_probe_v1/reports/result_summary.md
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03N_volatility_regime_probe_packet.md
+gates:
+  required:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  actual_status_source: docs/agent_control/packets/stage12_run03n_volatility_regime_probe_v1/closeout_gate.json
+  not_applicable_with_reason: {}
+final_claim_policy:
+  allowed_claims:
+  - runtime_probe_volatility_regime_completed
+  - no_fold07_volatility_probe_completed
+  forbidden_claims:
+  - alpha_quality
+  - promotion_candidate
+  - operating_promotion
+  - runtime_authority
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

@@ -1,0 +1,30 @@
+{
+  "allowed_claims": [
+    "completed",
+    "reviewed"
+  ],
+  "audit_name": "kpi_contract_audit",
+  "completed_forbidden": false,
+  "counts": {
+    "enriched_jsonl_rows": 200,
+    "expected_layers": [
+      "run_identity",
+      "signal_model",
+      "mt5_trading_headline",
+      "risk",
+      "trade_diagnostics",
+      "regime_slice_attribution",
+      "execution"
+    ],
+    "missing_layer_cells": 0,
+    "normalized_jsonl_rows": 200,
+    "normalized_kpi_summary_rows": 200,
+    "version_keys": [
+      "kpi_7layer_v1"
+    ]
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass"
+}

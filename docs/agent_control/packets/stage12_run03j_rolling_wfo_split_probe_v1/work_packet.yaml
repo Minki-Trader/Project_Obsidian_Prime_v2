@@ -1,0 +1,221 @@
+version: work_packet_schema_v2
+packet_id: stage12_run03j_rolling_wfo_split_probe_v1
+created_at_utc: '2026-05-01T05:34:04Z'
+user_request:
+  user_quote: 구르는 워크포워드 분할 탐침가보자
+  requested_action: run rolling WFO split probe for Stage 12 ExtraTrees variants
+  requested_count:
+    value: 20
+    n_a_reason: null
+  ambiguous_terms:
+  - 구르는 WFO means expanding-train rolling-forward split in this packet.
+current_truth:
+  active_stage: 12_model_family_challenge__extratrees_training_effect
+  current_run_before_packet: run03I_et_validation_oos_inversion_attribution_v1
+  current_run_after_packet: run03J_et_rolling_wfo_split_probe_v1
+  branch: codex/alpha-stage-transition-policy
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+work_classification:
+  primary_family: experiment_execution
+  detected_families:
+  - experiment_execution
+  - experiment_design
+  - kpi_evidence
+  - state_sync
+  touched_surfaces:
+  - stage12_run_artifacts
+  - stage12_reports
+  - run_ledgers
+  - current_truth_docs
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    claim_overstatement_risk: high
+    selection_bias_risk: medium
+    data_leakage_risk: medium
+    external_runtime_risk: medium_no_new_mt5
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - alpha_quality
+  - promotion_candidate
+  - operating_promotion
+  - runtime_authority
+decision_lock:
+  mode: user_explicit_go_ahead
+  assumptions:
+    fold_style: expanding_train_rolling_validation_test
+    variant_scope: all_20_run03d_variants
+    probe_n_estimators_cap: 96
+    new_mt5_execution_required: false
+    baseline_selection_allowed: false
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_execution
+  target_surfaces:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1
+  - docs/agent_control/packets/stage12_run03j_rolling_wfo_split_probe_v1
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv
+  - docs/registers/alpha_run_ledger.csv
+  scope_units:
+  - variant
+  - fold
+  - tier_view
+  - ledger
+  - report
+  execution_layers:
+  - python_execution
+  - kpi_recording
+  - ledger_update
+  - document_edit
+  mutation_policy:
+    allowed: true
+    boundary: new run artifacts and current truth only
+  evidence_layers:
+  - fold_metrics
+  - variant_summary
+  - summary
+  - ledgers
+  - work_packet
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+  claim_boundary:
+    allowed_claims:
+    - completed_python_wfo_structural_probe
+    - exploratory_wfo_read
+    forbidden_claims:
+    - alpha_quality
+    - promotion_candidate
+    - operating_promotion
+    - runtime_authority
+acceptance_criteria:
+- id: AC-001
+  text: All 20 RUN03D variants are included.
+  expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_variant_summary.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Tier A, Tier B, and Tier A+B views are recorded.
+  expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_variant_summary.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-003
+  text: Ledgers contain three paired tier records.
+  expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv
+  verification_method: kpi_contract_audit
+  required: true
+work_plan:
+  phases:
+  - id: load_inputs
+    actions:
+    - load_run03d_variants
+    - load_tier_a_model_input
+    - materialize_tier_b_partial_context
+  - id: execute_wfo
+    actions:
+    - train_all_variants_by_fold
+    - score_tier_a_tier_b_tier_ab
+  - id: closeout
+    actions:
+    - write_reports
+    - update_ledgers
+    - sync_current_truth
+    - run_gates
+  expected_outputs:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/reports/result_summary.md
+  - docs/agent_control/packets/stage12_run03j_rolling_wfo_split_probe_v1/closeout_gate.json
+  stop_conditions:
+  - missing_dataset
+  - missing_variant_rows
+  - tier_records_missing
+  - gate_failure
+skill_routing:
+  primary_family: experiment_execution
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  skills_considered:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  skills_selected:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  skills_not_used: {}
+  required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  required_gates:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json
+  machine_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/summary.json
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/kpi_record.json
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/run_manifest.json
+  human_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/reports/result_summary.md
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03J_rolling_wfo_split_probe_packet.md
+gates:
+  required:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  actual_status_source: docs/agent_control/packets/stage12_run03j_rolling_wfo_split_probe_v1/closeout_gate.json
+  not_applicable_with_reason:
+    runtime_evidence_gate: RUN03J is a Python structural WFO probe and does not claim new MT5 verification.
+final_claim_policy:
+  allowed_claims:
+  - completed_python_wfo_structural_probe
+  - exploratory_wfo_read
+  forbidden_claims:
+  - alpha_quality
+  - promotion_candidate
+  - operating_promotion
+  - runtime_authority
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml
+  judgment: inconclusive_rolling_wfo_no_stable_repeatability_not_promotion

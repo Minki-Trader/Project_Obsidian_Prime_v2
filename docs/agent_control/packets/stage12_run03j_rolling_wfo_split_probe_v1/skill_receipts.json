@@ -1,0 +1,153 @@
+{
+  "judgment": "inconclusive_rolling_wfo_no_stable_repeatability_not_promotion",
+  "receipts": [
+    {
+      "allowed_claims": [
+        "completed_python_wfo_structural_probe",
+        "exploratory_wfo_read"
+      ],
+      "blocking": false,
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "ledger_rows": 3,
+      "missing_evidence": "No new MT5 execution; RUN03J is Python WFO structural evidence only.",
+      "packet_id": "stage12_run03j_rolling_wfo_split_probe_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/reports/result_summary.md"
+      ],
+      "skill": "obsidian-run-evidence-system",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/variant_plan.csv"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "baseline": "RUN03H/RUN03I evidence as comparison reference only; no operating baseline.",
+      "blocking": false,
+      "changed_variables": [
+        "calendar fold",
+        "validation/test window"
+      ],
+      "evidence_plan": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_fold_summary.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_variant_summary.csv"
+      ],
+      "hypothesis": "RUN03H validation/OOS inversion may be single-split specific; rolling WFO tests repeatability.",
+      "invalid_conditions": [
+        "future leakage across fold",
+        "variant reduction",
+        "missing tier view"
+      ],
+      "packet_id": "stage12_run03j_rolling_wfo_split_probe_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "data_sources_checked": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_fold_window_plan.csv"
+      ],
+      "leakage_checks": "Thresholds are calibrated on each fold validation window; test windows are later than validation windows.",
+      "missing_data_boundary": "Tier B fallback rows are explicitly counted; no_tier rows are not claimed.",
+      "packet_id": "stage12_run03j_rolling_wfo_split_probe_v1",
+      "skill": "obsidian-data-integrity",
+      "split_boundary": "Expanding train, rolling validation, and rolling test windows are non-overlapping inside each fold.",
+      "status": "executed",
+      "time_axis_boundary": "All folds use timestamp UTC with train before validation before test.",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "exploratory_wfo_read"
+      ],
+      "blocking": false,
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "model_or_threshold_surface": "ExtraTrees 20 variants with fold-local threshold quantiles.",
+      "overfit_checks": "Fold-by-fold validation/test hit-rate gaps, collapse counts, and both-positive fold counts.",
+      "packet_id": "stage12_run03j_rolling_wfo_split_probe_v1",
+      "selection_metric_boundary": "WFO consistency score is exploratory and cannot select an operating baseline.",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "triggered": true,
+      "validation_split": "Seven rolling validation windows before their paired test windows."
+    },
+    {
+      "blocking": false,
+      "hashes_or_missing_reasons": {
+        "fold_summary": "333729d74bdde7b44a8c114e0dc87483aca15c39db220ad61089819ede6debc9",
+        "fold_window_plan": "d0c386e927a9fd5b2f24eb449a0d3ab9257c5e012c4f96078059ba26e3d7ca25",
+        "inversion_matrix": "402725988d9b4e489ed22f392ec5b10b8a262765698a324d89fa6d7a5e91d825",
+        "kpi_record": "1c144eb25ddaf7f18efe66c1a75b4f3209aa6c79759aaa7d7940c817284d1eb7",
+        "next_probe_recommendations": "1cfb339ff9262c990db5775918e8f9eb788219b867bed369b8c7f2747614725c",
+        "result_summary": "49feacb778f4e9cbacd5cc6bcaec0940eb1f96a4a4ff096362d0b4207fe3f3e1",
+        "run_manifest": "self_referential_written_last",
+        "scored_signals": "3fefe670715d7d8f100885d997551cf9ed1d465b1531a221a5d030803a9da96b",
+        "summary": "self_referential_written_last",
+        "variant_summary": "df995cd5de86579b24a62ddac9fec0934de3fc15ba452446811c2112f8e3ad1c"
+      },
+      "human_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03J_rolling_wfo_split_probe_packet.md"
+      ],
+      "lineage_boundary": "RUN03J derives from RUN03D variants and current model input; no new MT5 runtime evidence.",
+      "machine_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/run_manifest.json"
+      ],
+      "packet_id": "stage12_run03j_rolling_wfo_split_probe_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_fold_window_plan.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_fold_summary.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_variant_summary.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_inversion_matrix.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/results/wfo_next_probe_recommendations.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/predictions/wfo_scored_signals.parquet",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/run_manifest.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03J_et_rolling_wfo_split_probe_v1/summary.json"
+      ],
+      "raw_evidence": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json"
+      ],
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/variant_plan.csv"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "exploration_lane": "Stage 12 ExtraTrees rolling WFO split probe",
+      "idea_boundary": "broad exploration memory, not baseline or promotion",
+      "negative_memory_effect": "Weak fold behavior becomes failure memory; it does not kill the model family.",
+      "operating_claim_boundary": "No alpha quality, promotion candidate, operating promotion, or runtime authority.",
+      "packet_id": "stage12_run03j_rolling_wfo_split_probe_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "triggered": true
+    }
+  ]
+}

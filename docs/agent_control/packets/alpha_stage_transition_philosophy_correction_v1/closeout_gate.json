@@ -1,0 +1,280 @@
+{
+  "packet_id": "alpha_stage_transition_philosophy_correction_v1",
+  "status": "pass",
+  "completed_forbidden": false,
+  "audits": [
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-work-packet-router",
+          "obsidian-architecture-guard",
+          "obsidian-claim-discipline"
+        ],
+        "receipt_count": 3
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2",
+        "has_v2_fields": true
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "active_stage": "12_model_family_challenge__extratrees_training_effect",
+        "workspace_active_branch": "codex/alpha-stage-transition-policy",
+        "actual_git_branch": "codex/alpha-stage-transition-policy",
+        "current_run_values": {
+          "workspace_state": "run03F_et_v11_tier_balance_mt5_v1",
+          "current_working_state": "run03F_et_v11_tier_balance_mt5_v1",
+          "selection_status": "run03F_et_v11_tier_balance_mt5_v1"
+        },
+        "stage_brief_boundary": "## 경계(Boundary, 경계) Python structural scout(파이썬 구조 탐침)와 MT5 runtime_probe(MT5 런타임 탐침) 근거를 함께 기록할 수 있다. 다만 현재 근거는 single split runtime_probe(단일 분할 런타임 탐침)이므로 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격), runtime authority(런타임 권위)는 주장하지 않는다.",
+        "registry_has_current_run": true,
+        "stage_ledger_has_current_run": true,
+        "source_paths": {
+          "workspace_state": "docs/workspace/workspace_state.yaml",
+          "current_working_state": "docs/context/current_working_state.md",
+          "selection_status": "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md",
+          "stage_brief": "stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md",
+          "run_registry": "docs/registers/run_registry.csv",
+          "stage_ledger": "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv"
+        }
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 3,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "agent_control_contracts",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "file::docs/agent_control/codex_operating_format.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/codex_operating_format.yaml"
+        },
+        "file::docs/agent_control/work_packet.schema.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/work_packet.schema.yaml"
+        },
+        "file::docs/agent_control/code_surface_baseline.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/code_surface_baseline.yaml"
+        },
+        "file::docs/agent_control/n_a_reason_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/n_a_reason_registry.yaml"
+        },
+        "file::docs/agent_control/claim_vocabulary.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/claim_vocabulary.yaml"
+        },
+        "file::docs/agent_control/kpi_source_authority.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/kpi_source_authority.yaml"
+        },
+        "file::docs/agent_control/row_grain_contract.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/row_grain_contract.yaml"
+        },
+        "file::docs/agent_control/work_family_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/work_family_registry.yaml"
+        },
+        "file::docs/agent_control/self_correction_policy.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/self_correction_policy.yaml"
+        },
+        "file::docs/agent_control/surface_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/surface_registry.yaml"
+        },
+        "file::docs/agent_control/risk_flag_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/risk_flag_registry.yaml"
+        },
+        "file::docs/agent_control/skill_receipt_schema.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/skill_receipt_schema.yaml"
+        },
+        "file::docs/templates/work_packet.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/work_packet.template.yaml"
+        },
+        "file::docs/templates/run_plan.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/run_plan.template.yaml"
+        },
+        "file::docs/templates/work_plan.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/work_plan.template.yaml"
+        },
+        "file::docs/templates/closeout_report.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/closeout_report.template.yaml"
+        },
+        "file::docs/templates/closeout_report.template.md": {
+          "exists": true,
+          "path": "docs/templates/closeout_report.template.md"
+        },
+        "file::docs/templates/kpi_record_normalized.template.json": {
+          "exists": true,
+          "path": "docs/templates/kpi_record_normalized.template.json"
+        }
+      },
+      "allowed_claims": [
+        "contracts_ready"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "ops_instruction_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "family_count": 12,
+        "explicit_skill_schema_count": 23,
+        "default_support_skill_limit": 3,
+        "max_required_skills_per_family": 5
+      },
+      "allowed_claims": [
+        "ops_instructions_stable"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "closeout_report_check",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "path": "docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/closeout_report.md",
+        "required_headings": [
+          "Conclusion",
+          "What changed",
+          "What gates passed",
+          "What gates were not applicable",
+          "What is still not enforced",
+          "Allowed claims",
+          "Forbidden claims",
+          "Next hardening step"
+        ]
+      },
+      "allowed_claims": [
+        "human_closeout_available"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "agent_control_contracts",
+          "final_claim_guard",
+          "ops_instruction_audit",
+          "required_gate_coverage_audit",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "executed_audits": [
+          "agent_control_contracts",
+          "closeout_report_check",
+          "final_claim_guard",
+          "ops_instruction_audit",
+          "required_gate_coverage_audit",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {
+          "kpi_contract_audit": "No KPI row(KPI 행), trading ledger(거래 장부), or run result(실행 결과) changed.",
+          "runtime_evidence_gate": "No MT5 terminal(MT5 터미널), Strategy Tester(전략 테스터), EA, set file(설정 파일), or runtime handoff(런타임 인계) changed.",
+          "code_surface_audit": "No code file(코드 파일) changed; architecture validator and agent-control contracts cover policy/agent docs."
+        },
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "completed"
+      ],
+      "source_audits": [
+        "skill_receipt_lint",
+        "work_packet_schema_lint",
+        "state_sync_audit",
+        "skill_receipt_schema_lint",
+        "agent_control_contracts",
+        "ops_instruction_audit",
+        "closeout_report_check",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "completed"
+    ],
+    "forbidden_claims": []
+  }
+}

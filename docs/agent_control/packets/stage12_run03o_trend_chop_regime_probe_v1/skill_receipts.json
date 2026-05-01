@@ -1,0 +1,150 @@
+{
+  "receipts": [
+    {
+      "allowed_claims": [
+        "runtime_probe_trend_chop_regime_completed"
+      ],
+      "blocking": false,
+      "compared_surface": "Python trend/chop bucket WFO, ONNX exports, bucket feature matrices, and MT5 Strategy Tester reports",
+      "created_at_utc": "2026-05-01T09:56:58Z",
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "missing_evidence": "none",
+      "packet_id": "stage12_run03o_trend_chop_regime_probe_v1",
+      "parity_level": "runtime_probe",
+      "python_artifact": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03O_et_trend_chop_regime_probe_v1/results/session_bucket_summary.csv",
+      "runtime_artifact": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03O_et_trend_chop_regime_probe_v1/run_manifest.json",
+      "skill": "obsidian-runtime-parity",
+      "status": "executed",
+      "tester_identity": "US100 M5, deposit=500, leverage=1:100, mt5_fold=fold05, attempts=18",
+      "triggered": true
+    },
+    {
+      "baseline": "run03J_et_rolling_wfo_split_probe_v1",
+      "blocking": false,
+      "changed_variables": [
+        "post-score trend/chop bucket segmentation",
+        "fold07 exclusion"
+      ],
+      "created_at_utc": "2026-05-01T09:56:58Z",
+      "evidence_plan": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03O_et_trend_chop_regime_probe_v1/results/session_bucket_summary.csv",
+        "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/normalized_kpi_records.jsonl"
+      ],
+      "hypothesis": "ExtraTrees signal quality may depend on broad trend_chop regimes.",
+      "invalid_conditions": [
+        "fold07 included",
+        "missing tier view",
+        "missing MT5 reports"
+      ],
+      "packet_id": "stage12_run03o_trend_chop_regime_probe_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "runtime_probe_trend_chop_regime_completed"
+      ],
+      "blocking": false,
+      "created_at_utc": "2026-05-01T09:56:58Z",
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "model_or_threshold_surface": "ExtraTrees v01 base leaf20 q90 with trend-chop-regime post-score segmentation",
+      "overfit_checks": "bucket hit-rate gaps, both-positive folds, collapse folds, and MT5 validation/test bucket comparison",
+      "packet_id": "stage12_run03o_trend_chop_regime_probe_v1",
+      "selection_metric_boundary": "exploratory bucket read only; no operating selection metric",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "triggered": true,
+      "validation_split": "Python fold01-fold06 only and MT5 fold05 only; fold07 excluded"
+    },
+    {
+      "blocking": false,
+      "created_at_utc": "2026-05-01T09:56:58Z",
+      "forensic_gaps": "none",
+      "packet_id": "stage12_run03o_trend_chop_regime_probe_v1",
+      "skill": "obsidian-backtest-forensics",
+      "spread_commission_slippage": "broker terminal Strategy Tester report; no synthetic cost overlay",
+      "status": "executed",
+      "tester_report": "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/attempt_summary.csv",
+      "tester_settings": "US100 M5, tester model=4, deposit=500, leverage=1:100, mt5_fold=fold05",
+      "trade_list_identity": "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/trade_level_records.csv",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "created_at_utc": "2026-05-01T09:56:58Z",
+      "hashes_or_missing_reasons": "hashes are recorded in run manifest, packet summary, and normalized KPI where available",
+      "human_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03O_et_trend_chop_regime_probe_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03O_trend_chop_regime_probe_packet.md"
+      ],
+      "lineage_boundary": "connected_with_boundary; no alpha quality, promotion, or runtime authority claim",
+      "machine_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03O_et_trend_chop_regime_probe_v1/summary.json",
+        "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/normalized_kpi_records.jsonl"
+      ],
+      "packet_id": "stage12_run03o_trend_chop_regime_probe_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03O_et_trend_chop_regime_probe_v1/run_manifest.json",
+        "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/packet_summary.json"
+      ],
+      "raw_evidence": [
+        "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/execution_results.json",
+        "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/trade_level_records.csv"
+      ],
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+        "stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "created_at_utc": "2026-05-01T09:56:58Z",
+      "exploration_lane": "Stage 12 ExtraTrees trend-chop-regime probe without fold07",
+      "idea_boundary": "market trend/chop structure axis, not model variant or baseline",
+      "negative_memory_effect": "Weak bucket behavior is retained as failure memory and should not trigger micro tuning.",
+      "operating_claim_boundary": "No alpha quality, promotion candidate, operating promotion, or runtime authority.",
+      "packet_id": "stage12_run03o_trend_chop_regime_probe_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "runtime_probe_trend_chop_regime_completed",
+        "no_fold07_trend_chop_probe_completed"
+      ],
+      "blocking": false,
+      "created_at_utc": "2026-05-01T09:56:58Z",
+      "evidence_used": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03O_et_trend_chop_regime_probe_v1/results/session_bucket_summary.csv",
+        "docs/agent_control/packets/stage12_run03o_trend_chop_regime_probe_v1/normalized_kpi_records.jsonl"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "judgment_boundary": "runtime_probe_trend_chop_regime_not_alpha_quality_not_promotion_not_runtime_authority",
+      "packet_id": "stage12_run03o_trend_chop_regime_probe_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "triggered": true
+    }
+  ]
+}

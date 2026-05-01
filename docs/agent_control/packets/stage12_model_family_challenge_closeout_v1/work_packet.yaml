@@ -1,0 +1,211 @@
+version: work_packet_schema_v2
+packet_id: stage12_model_family_challenge_closeout_v1
+created_at_utc: '2026-05-02T00:00:00Z'
+user_request:
+  user_quote: stage12 닫는 작업만 해주고 깃에 반영해준다음 stage13 전용 폴더는 별도로 만들지말아줘 내가 새로운 대화창에서진행할게
+  requested_action: close Stage 12 only, sync to git, do not create a Stage 13 folder
+  requested_count:
+    value: 1
+    n_a_reason: null
+  ambiguous_terms: []
+current_truth:
+  active_stage: 12_model_family_challenge__extratrees_training_effect
+  current_run_before_packet: run03S_et_probability_shape_attribution_probe_v1
+  current_run_after_packet: run03S_et_probability_shape_attribution_probe_v1
+  current_closeout_packet_after_packet: stage12_model_family_challenge_closeout_v1
+  branch: codex/alpha-stage-transition-policy
+  source_documents:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+work_classification:
+  primary_family: stage_closeout
+  detected_families:
+    - stage_closeout
+    - kpi_evidence
+    - state_sync
+  touched_surfaces:
+    - stage12_closeout_docs
+    - current_truth_docs
+    - agent_control_packet
+  mutation_intent: true
+  execution_intent: false
+risk_vector_scan:
+  risks:
+    baseline_overstatement_risk: high
+    stage13_precreation_risk: high
+    claim_overstatement_risk: high
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+    - scope_completion_gate
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - work_packet_schema_lint
+    - state_sync_audit
+    - closeout_report_check
+    - required_gate_coverage_audit
+    - final_claim_guard
+  forbidden_claims:
+    - alpha_quality
+    - promotion_candidate
+    - operating_promotion
+    - runtime_authority
+    - selected_baseline
+decision_lock:
+  mode: user_explicit_stage12_closeout_only_no_stage13_folder
+  assumptions:
+    stage13_folder_created: false
+    new_mt5_run_created: false
+    closeout_boundary: topic_pivot_not_baseline_selection
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+    - stage_closeout
+  target_surfaces:
+    - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md
+    - docs/decisions/2026-05-02_stage12_model_family_challenge_closeout.md
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+  scope_units:
+    - stage_closeout_packet
+    - closeout_decision
+    - current_truth_sync
+  execution_layers:
+    - document_edit
+    - gate_check
+    - git_commit
+  mutation_policy:
+    allowed: true
+    boundary: Stage 12 closeout only; no Stage 13 folder or files
+  evidence_layers:
+    - stage_run_ledger
+    - project_alpha_ledger
+    - run_registry
+    - existing_stage12_packets
+    - closeout_packet
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+  claim_boundary:
+    allowed_claims:
+      - stage12_reviewed_closed
+      - runtime_probe_evidence_recorded
+      - no_stage13_folder_created
+    forbidden_claims:
+      - alpha_quality
+      - promotion_candidate
+      - operating_promotion
+      - runtime_authority
+      - selected_baseline
+acceptance_criteria:
+  - id: AC-001
+    text: Stage 12 closeout packet is present.
+    expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md
+    verification_method: closeout_report_check
+    required: true
+  - id: AC-002
+    text: Stage 13 folder is not created.
+    expected_artifact: docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json
+    verification_method: stage_closeout_evidence_gate
+    required: true
+  - id: AC-003
+    text: Current truth documents say Stage 12 is closed without promotion.
+    expected_artifact: docs/workspace/workspace_state.yaml
+    verification_method: state_sync_audit
+    required: true
+work_plan:
+  phases:
+    - id: close_stage12
+      actions:
+        - write_stage12_closeout_packet
+        - write_closeout_decision
+        - update_current_truth_docs
+    - id: verify
+      actions:
+        - run_closeout_gate
+        - run_tests
+    - id: git
+      actions:
+        - stage_changes
+        - commit_changes
+  expected_outputs:
+    - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md
+    - docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/closeout_gate.json
+  stop_conditions:
+    - Stage13 folder created
+    - closeout gate blocked
+    - alpha quality or promotion claim introduced
+skill_routing:
+  primary_family: stage_closeout
+  primary_skill: obsidian-result-judgment
+  support_skills:
+    - obsidian-reentry-read
+    - obsidian-exploration-mandate
+    - obsidian-artifact-lineage
+    - obsidian-experiment-design
+  skills_considered:
+    - obsidian-reentry-read
+    - obsidian-exploration-mandate
+    - obsidian-result-judgment
+    - obsidian-artifact-lineage
+    - obsidian-experiment-design
+  skills_selected:
+    - obsidian-reentry-read
+    - obsidian-exploration-mandate
+    - obsidian-result-judgment
+    - obsidian-artifact-lineage
+    - obsidian-experiment-design
+  skills_not_used: {}
+  required_skill_receipts:
+    - obsidian-reentry-read
+    - obsidian-exploration-mandate
+    - obsidian-result-judgment
+    - obsidian-artifact-lineage
+    - obsidian-experiment-design
+  required_gates:
+    - scope_completion_gate
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - work_packet_schema_lint
+    - state_sync_audit
+    - closeout_report_check
+    - required_gate_coverage_audit
+    - final_claim_guard
+evidence_contract:
+  raw_evidence:
+    - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv
+    - docs/registers/alpha_run_ledger.csv
+  machine_readable:
+    - docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json
+  human_readable:
+    - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md
+    - docs/decisions/2026-05-02_stage12_model_family_challenge_closeout.md
+gates:
+  required:
+    - scope_completion_gate
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - work_packet_schema_lint
+    - state_sync_audit
+    - closeout_report_check
+    - required_gate_coverage_audit
+    - final_claim_guard
+  actual_status_source: docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/closeout_gate.json
+  not_applicable_with_reason:
+    runtime_evidence_gate: no new MT5 run was created; existing runtime probe packets remain the runtime evidence source
+    kpi_contract_audit: no new run was created; existing stage and project ledger rows are counted by stage_closeout_evidence_gate
+final_claim_policy:
+  allowed_claims:
+    - stage12_reviewed_closed
+    - runtime_probe_evidence_recorded
+    - no_stage13_folder_created
+  forbidden_claims:
+    - alpha_quality
+    - promotion_candidate
+    - operating_promotion
+    - runtime_authority
+    - selected_baseline
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

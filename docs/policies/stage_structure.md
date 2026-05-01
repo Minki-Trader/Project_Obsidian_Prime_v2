@@ -49,6 +49,17 @@ Stage 10(10단계)부터 alpha exploration(알파 탐색)이 닫히는 단계(st
 
 효과(effect, 효과)는 label(라벨), feature(피처), model(모델), decision surface(의사결정 표면), entry(진입), exit(청산), sizing/overlay(사이징/오버레이), retrain/carry(재학습/유지)가 한 단계(stage, 단계) 안에서 충분히 압박 시험(stress test, 압박 시험)되게 하는 것이다.
 
+## 알파 단계 전환 규칙(Alpha Stage Transition Rule, 알파 단계 전환 규칙)
+
+알파 탐색 단계(alpha exploration stage, 알파 탐색 단계)의 전환(transition, 전환)은 baseline selection(기준선 선택)이 아니라 topic pivot(주제 전환)이다.
+
+- closeout(마감)은 남은 갈래(branches, 갈래)를 seed surface(씨앗 표면), preserved clue(보존 단서), negative memory(부정 기억), invalid setup(무효 설정), blocked retry condition(차단 재시도 조건)으로 분류한다.
+- baseline(기준선), operating reference(운영 기준), promotion_candidate(승격 후보)는 별도 promotion/operating packet(승격/운영 작업 묶음)이 열렸을 때만 선언한다.
+- 이전 단계(previous stage, 이전 단계)의 좋은 표면(surface, 표면)은 다음 단계(next stage, 다음 단계)의 reference surface(참고 표면)나 seed surface(씨앗 표면)가 될 수 있지만, 그것만으로 새 단계의 기준선(baseline, 기준선)이 되지 않는다.
+- 의미 없는 미세조정(meaningless micro-tuning, 의미 없는 미세조정)은 단계 종료 조건(stage close condition, 단계 종료 조건)이 아니다. broad sweep(넓은 탐색), extreme sweep(극단 탐색), stress test(압박 시험), failure boundary(실패 경계) 확인이 남아 있으면 같은 단계(stage, 단계) 안에서 계속 판다.
+
+효과(effect, 효과)는 Stage 10(10단계), Stage 11(11단계), Stage 12(12단계) 같은 알파 탐색(alpha exploration, 알파 탐색)을 winner selection(승자 선택) 흐름으로 오해하지 않고, 각 단계(stage, 단계)를 질문(question, 질문) 단위의 탐색으로 유지하는 것이다.
+
 ## 공회전 방지(No-Spin Rule, 공회전 방지)
 
 단계 질문(stage question, 단계 질문)을 답하려면 외부 검증(external verification, 외부 검증)이 필요한데 그 검증을 하지 않았다면, 단계(stage, 단계)를 닫지 않는다.

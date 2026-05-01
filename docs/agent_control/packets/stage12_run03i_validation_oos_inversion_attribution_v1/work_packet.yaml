@@ -1,0 +1,211 @@
+version: work_packet_schema_v2
+packet_id: stage12_run03i_validation_oos_inversion_attribution_v1
+created_at_utc: '2026-05-01T04:32:19Z'
+user_request:
+  user_quote: ㄱㄱ너가 말한태로 가자
+  requested_action: continue Stage 12 by analyzing validation/OOS inversion drivers from RUN03H evidence
+  requested_count:
+    value: 20
+    n_a_reason: null
+  ambiguous_terms: []
+current_truth:
+  active_stage: 12_model_family_challenge__extratrees_training_effect
+  current_run_before_packet: run03H_et_batch20_all_variant_tier_balance_mt5_v1
+  current_run_after_packet: run03I_et_validation_oos_inversion_attribution_v1
+  branch: codex/alpha-stage-transition-policy
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+work_classification:
+  primary_family: kpi_evidence
+  detected_families:
+  - kpi_evidence
+  - experiment_design
+  - state_sync
+  touched_surfaces:
+  - stage12_run_artifacts
+  - run_ledgers
+  - current_truth_docs
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    claim_overstatement_risk: high
+    selection_bias_risk: medium
+    state_sync_risk: medium
+    external_runtime_risk: low_no_new_mt5
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - alpha_quality
+  - promotion_candidate
+  - operating_promotion
+  - runtime_authority
+decision_lock:
+  mode: user_explicit_go_ahead
+  assumptions:
+    new_mt5_execution_required: false
+    use_existing_run03h_evidence: true
+    baseline_selection_allowed: false
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - kpi_evidence
+  target_surfaces:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1
+  - docs/agent_control/packets/stage12_run03i_validation_oos_inversion_attribution_v1
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv
+  - docs/registers/alpha_run_ledger.csv
+  scope_units:
+  - run
+  - variant
+  - kpi_row
+  - ledger
+  - report
+  execution_layers:
+  - python_execution
+  - kpi_recording
+  - ledger_update
+  - document_edit
+  mutation_policy:
+    allowed: true
+    boundary: derived analysis only; no MT5 or model mutation
+  evidence_layers:
+  - source_kpi_record
+  - trade_attribution
+  - summary
+  - ledgers
+  - work_packet
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+  claim_boundary:
+    allowed_claims:
+    - completed_existing_evidence_attribution
+    - exploratory_inversion_read
+    forbidden_claims:
+    - alpha_quality
+    - promotion_candidate
+    - operating_promotion
+    - runtime_authority
+acceptance_criteria:
+- id: AC-001
+  text: All 20 RUN03H variants are included in inversion analysis.
+  expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/inversion_variant_summary.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Tier A, Tier B, and Tier A+B split summaries are written.
+  expected_artifact: stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/tier_route_split_summary.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-003
+  text: Source 7-layer KPI rows remain connected to RUN03H evidence.
+  expected_artifact: docs/agent_control/packets/stage12_run03i_validation_oos_inversion_attribution_v1/source_kpi_contract_audit.json
+  verification_method: kpi_contract_audit
+  required: true
+work_plan:
+  phases:
+  - id: source_evidence_load
+    actions:
+    - read_RUN03H_7layer_kpi
+    - read_trade_attribution
+  - id: attribution
+    actions:
+    - split_by_tier_route_time_direction_regime
+  - id: closeout
+    actions:
+    - write_reports
+    - update_ledgers
+    - sync_current_truth
+    - run_gates
+  expected_outputs:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/reports/result_summary.md
+  - docs/agent_control/packets/stage12_run03i_validation_oos_inversion_attribution_v1/closeout_gate.json
+  stop_conditions:
+  - missing_source_kpi
+  - missing_trade_attribution
+  - source_7layer_contract_missing
+skill_routing:
+  primary_family: kpi_evidence
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  skills_considered:
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-exploration-mandate
+  skills_selected:
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-exploration-mandate
+  skills_not_used: {}
+  required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  required_gates:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_records.jsonl
+  - docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/enriched_kpi_records.jsonl
+  - docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_level_records.csv
+  machine_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/summary.json
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/kpi_record.json
+  human_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/reports/result_summary.md
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03I_validation_oos_inversion_attribution_packet.md
+gates:
+  required:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  actual_status_source: docs/agent_control/packets/stage12_run03i_validation_oos_inversion_attribution_v1/closeout_gate.json
+  not_applicable_with_reason:
+    runtime_evidence_gate: RUN03I reuses completed RUN03H MT5 evidence and does not execute MT5.
+final_claim_policy:
+  allowed_claims:
+  - completed_existing_evidence_attribution
+  - exploratory_inversion_read
+  forbidden_claims:
+  - alpha_quality
+  - promotion_candidate
+  - operating_promotion
+  - runtime_authority
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

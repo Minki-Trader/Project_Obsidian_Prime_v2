@@ -1,0 +1,288 @@
+{
+  "packet_id": "stage12_run03q_macro_proxy_regime_probe_v1",
+  "status": "pass",
+  "completed_forbidden": false,
+  "audits": [
+    {
+      "audit_name": "scope_completion_gate",
+      "status": "complete",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "session_summary_rows": {
+          "expected": 9,
+          "actual": 9,
+          "evidence_label": "three-macro_proxy_regime-buckets-three-tier-summary",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "session_metric_rows": {
+          "expected": 108,
+          "actual": 108,
+          "evidence_label": "fold01-fold06-macro_proxy_regime-bucket-metrics",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "mt5_attempt_rows": {
+          "expected": 18,
+          "actual": 18,
+          "evidence_label": "fold05-macro_proxy_regime-bucket-mt5-attempts",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "normalized_rows": {
+          "expected": 30,
+          "actual": 30,
+          "evidence_label": "normalized-mt5-kpi-summary",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "trade_level_rows": {
+          "expected": 362,
+          "actual": 362,
+          "evidence_label": "trade-level-record-count",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        }
+      },
+      "allowed_claims": [
+        "completed",
+        "verified"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-runtime-parity",
+          "obsidian-experiment-design",
+          "obsidian-model-validation",
+          "obsidian-backtest-forensics",
+          "obsidian-artifact-lineage",
+          "obsidian-exploration-mandate",
+          "obsidian-result-judgment"
+        ],
+        "receipt_count": 7
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "kpi_contract_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "run_id": "run03Q_et_macro_proxy_regime_probe_v1",
+        "stage_id": "12_model_family_challenge__extratrees_training_effect",
+        "file::run_manifest.json": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03Q_et_macro_proxy_regime_probe_v1/run_manifest.json",
+          "exists": true
+        },
+        "file::kpi_record.json": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03Q_et_macro_proxy_regime_probe_v1/kpi_record.json",
+          "exists": true
+        },
+        "file::summary.json": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03Q_et_macro_proxy_regime_probe_v1/summary.json",
+          "exists": true
+        },
+        "file::reports/result_summary.md": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03Q_et_macro_proxy_regime_probe_v1/reports/result_summary.md",
+          "exists": true
+        },
+        "stage_ledger_rows": 39,
+        "stage_ledger_exists": true,
+        "project_ledger_rows": 39,
+        "project_ledger_exists": true
+      },
+      "allowed_claims": [
+        "completed",
+        "reviewed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2",
+        "has_v2_fields": true
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "active_stage": "12_model_family_challenge__extratrees_training_effect",
+        "workspace_active_branch": "codex/alpha-stage-transition-policy",
+        "actual_git_branch": "codex/alpha-stage-transition-policy",
+        "current_run_values": {
+          "workspace_state": "run03Q_et_macro_proxy_regime_probe_v1",
+          "current_working_state": "run03Q_et_macro_proxy_regime_probe_v1",
+          "selection_status": "run03Q_et_macro_proxy_regime_probe_v1"
+        },
+        "stage_brief_boundary": "## 경계(Boundary, 경계) Python structural scout(파이썬 구조 탐침)와 MT5 runtime_probe(MT5 런타임 탐침) 근거를 함께 기록할 수 있다. 다만 현재 근거는 single split runtime_probe(단일 분할 런타임 탐침)이므로 alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격), runtime authority(런타임 권위)는 주장하지 않는다.",
+        "registry_has_current_run": true,
+        "stage_ledger_has_current_run": true,
+        "source_paths": {
+          "workspace_state": "docs/workspace/workspace_state.yaml",
+          "current_working_state": "docs/context/current_working_state.md",
+          "selection_status": "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md",
+          "stage_brief": "stages/12_model_family_challenge__extratrees_training_effect/00_spec/stage_brief.md",
+          "run_registry": "docs/registers/run_registry.csv",
+          "stage_ledger": "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv"
+        }
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 7,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "runtime_evidence_gate",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "bucket_count": 3,
+        "fold07_used": false,
+        "mt5_attempts_total": 18,
+        "mt5_kpi_records": 30,
+        "mt5_reports_total": 18,
+        "normalized_records": 30,
+        "trade_level_rows": 362,
+        "trade_parser_errors": 0
+      },
+      "allowed_claims": [
+        "runtime_probe_macro_proxy_regime_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "closeout_report_check",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/agent_control/packets/stage12_run03q_macro_proxy_regime_probe_v1/closeout_report.md",
+        "required_headings": [
+          "Conclusion",
+          "What changed",
+          "What gates passed",
+          "What gates were not applicable",
+          "What is still not enforced",
+          "Allowed claims",
+          "Forbidden claims",
+          "Next hardening step"
+        ]
+      },
+      "allowed_claims": [
+        "human_closeout_available"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "final_claim_guard",
+          "kpi_contract_audit",
+          "required_gate_coverage_audit",
+          "runtime_evidence_gate",
+          "scope_completion_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "executed_audits": [
+          "closeout_report_check",
+          "final_claim_guard",
+          "kpi_contract_audit",
+          "required_gate_coverage_audit",
+          "runtime_evidence_gate",
+          "scope_completion_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {},
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "completed"
+      ],
+      "source_audits": [
+        "scope_completion_gate",
+        "skill_receipt_lint",
+        "kpi_contract_audit",
+        "work_packet_schema_lint",
+        "state_sync_audit",
+        "skill_receipt_schema_lint",
+        "runtime_evidence_gate",
+        "closeout_report_check",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "completed"
+    ],
+    "forbidden_claims": []
+  }
+}

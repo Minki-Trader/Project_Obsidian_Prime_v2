@@ -1,0 +1,221 @@
+version: work_packet_schema_v2
+packet_id: stage12_run03h_all_variant_tier_balance_mt5_v1
+created_at_utc: '2026-05-01T01:55:12Z'
+user_request:
+  user_quote: 바로 mt5로 검증도해 뭐 선별하지말고 전부해 구조탐침한거
+  requested_action: run MT5 for all RUN03G structural-scout variants without shortlist reduction
+  requested_count:
+    value: 20
+    n_a_reason: null
+  ambiguous_terms: []
+current_truth:
+  active_stage: 12_model_family_challenge__extratrees_training_effect
+  current_run_before_packet: run03G_et_variant_stability_probe_v1
+  current_run_after_packet: run03H_et_batch20_all_variant_tier_balance_mt5_v1
+  branch: codex/alpha-stage-transition-policy
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+work_classification:
+  primary_family: runtime_backtest
+  detected_families:
+  - runtime_backtest
+  - kpi_evidence
+  - state_sync
+  touched_surfaces:
+  - stage12_run_artifacts
+  - mt5_tester_profiles
+  - ledgers
+  - current_truth_docs
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    external_runtime_risk: high
+    scope_reduction_risk: high
+    claim_overstatement_risk: high
+    state_sync_risk: medium
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - alpha_quality
+  - live_readiness
+  - operating_promotion
+  - runtime_authority
+decision_lock:
+  mode: user_explicit_instruction
+  assumptions:
+    all_variants_required: true
+    top_k_reduction_allowed: false
+    mt5_execution_allowed: true
+    ea_entrypoint_change_allowed: false
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - runtime_backtest
+  target_surfaces:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03H_et_batch20_all_variant_tier_balance_mt5_v1
+  - docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv
+  - docs/registers/alpha_run_ledger.csv
+  scope_units:
+  - variant
+  - run
+  - artifact
+  - ledger
+  - report
+  execution_layers:
+  - python_execution
+  - mt5_execution
+  - kpi_recording
+  - ledger_update
+  - document_edit
+  mutation_policy:
+    allowed: true
+    boundary: parameter/model artifact runs only; EA entrypoint unchanged
+  evidence_layers:
+  - run_manifest
+  - kpi_record
+  - summary
+  - strategy_tester_report
+  - ledgers
+  - work_packet
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: true
+  claim_boundary:
+    allowed_claims:
+    - runtime_probe_completed_with_boundary
+    - all_variant_scope_attempted
+    forbidden_claims:
+    - alpha_quality
+    - live_readiness
+    - operating_promotion
+    - runtime_authority
+acceptance_criteria:
+- id: AC-001
+  text: All 20 RUN03G structural-scout variants are included.
+  expected_artifact: docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/target_matrix.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Each variant has Tier A only, Tier B fallback-only, and routed total MT5 attempts for validation and OOS.
+  expected_artifact: docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/attempt_summary.csv
+  verification_method: runtime_evidence_gate
+  required: true
+- id: AC-003
+  text: Machine-readable KPI, normalized KPI, trade attribution, and ledgers are written.
+  expected_artifact: docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_summary.csv
+  verification_method: kpi_contract_audit
+  required: true
+work_plan:
+  phases:
+  - id: reentry_and_design
+    actions:
+    - read_current_truth
+    - select_runtime_backtest_family
+  - id: materialize_runtime_inputs
+    actions:
+    - train_tier_a_and_tier_b_models
+    - export_onnx
+    - write_set_ini
+  - id: execute_mt5
+    actions:
+    - run_120_strategy_tester_attempts
+    - collect_reports
+  - id: closeout
+    actions:
+    - write_packet
+    - sync_current_truth
+    - run_gates
+  expected_outputs:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03H_et_batch20_all_variant_tier_balance_mt5_v1/reports/result_summary.md
+  - docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/closeout_gate.json
+  stop_conditions:
+  - missing_source_variant_results
+  - onnx_parity_failure
+  - mt5_terminal_blocked
+skill_routing:
+  primary_family: runtime_backtest
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  skills_considered:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  skills_selected:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  skills_not_used: {}
+  required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  required_gates:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/results/variant_results.csv
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/variant_plan.csv
+  machine_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03H_et_batch20_all_variant_tier_balance_mt5_v1/run_manifest.json
+  - docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_records.jsonl
+  human_readable:
+  - stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03H_et_batch20_all_variant_tier_balance_mt5_v1/reports/result_summary.md
+  - stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03H_all_variant_mt5_probe_packet.md
+gates:
+  required:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  actual_status_source: docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/closeout_gate.json
+  not_applicable_with_reason: {}
+final_claim_policy:
+  allowed_claims:
+  - runtime_probe_completed_with_boundary
+  - scope_completed
+  forbidden_claims:
+  - alpha_quality
+  - live_readiness
+  - operating_promotion
+  - runtime_authority
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

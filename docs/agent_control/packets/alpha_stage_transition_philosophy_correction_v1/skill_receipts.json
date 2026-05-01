@@ -1,0 +1,87 @@
+{
+  "receipts": [
+    {
+      "packet_id": "alpha_stage_transition_philosophy_correction_v1",
+      "skill": "obsidian-work-packet-router",
+      "status": "executed",
+      "primary_family": "policy_skill_governance",
+      "primary_skill": "obsidian-work-packet-router",
+      "support_skills": [
+        "obsidian-architecture-guard",
+        "obsidian-claim-discipline"
+      ],
+      "required_gates": [
+        "agent_control_contracts",
+        "ops_instruction_audit",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "state_sync_audit",
+        "required_gate_coverage_audit",
+        "final_claim_guard"
+      ],
+      "skills_not_used": {
+        "obsidian-stage-transition": "not_primary_family; no active_stage handoff was performed",
+        "obsidian-runtime-parity": "not_required_no_MT5_or_runtime_execution",
+        "obsidian-run-evidence-system": "not_required_no_KPI_or_ledger_mutation"
+      },
+      "routing_reason": "The request mutates AGENTS.md, policy docs, current-truth docs, and stage closeout interpretation notes, so policy_skill_governance is the primary family."
+    },
+    {
+      "packet_id": "alpha_stage_transition_philosophy_correction_v1",
+      "skill": "obsidian-architecture-guard",
+      "status": "executed",
+      "touched_surfaces": [
+        "AGENTS.md",
+        "docs/policies/stage_structure.md",
+        "docs/policies/exploration_mandate.md",
+        "docs/policies/agent_trigger_policy.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage11_closeout_packet.md"
+      ],
+      "invariant_checks": [
+        "No feature/model/runtime/code ownership moved.",
+        "Korean markdown files must preserve UTF-8 with BOM.",
+        "Policy and AGENTS wording now keep alpha stage transition semantics stage-agnostic."
+      ],
+      "placement_boundary": "Docs-only policy/current-truth correction; no foundation, stage_pipelines, MT5, model, or data artifacts changed.",
+      "architecture_debt_effect": "Reduces AD-003 alpha framing and AD-005 exploration discipline risk; leaves code-surface debt unchanged.",
+      "allowed_claims": [
+        "policy_synced",
+        "current_truth_interpretation_synced"
+      ],
+      "forbidden_claims": [
+        "trading_result_change",
+        "alpha_quality",
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "alpha_stage_transition_philosophy_correction_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "completed",
+        "policy_synced",
+        "current_truth_interpretation_synced"
+      ],
+      "allowed_claims": [
+        "completed",
+        "policy_synced",
+        "current_truth_interpretation_synced",
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": [
+        "trading_result_change",
+        "alpha_quality",
+        "runtime_authority",
+        "live_readiness",
+        "operating_promotion"
+      ],
+      "final_status": "policy_and_current_truth_interpretation_sync_only"
+    }
+  ]
+}

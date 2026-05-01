@@ -1,0 +1,237 @@
+{
+  "receipts": [
+    {
+      "allowed_claims": [
+        "runtime_probe_recency_weight_completed"
+      ],
+      "blocking": false,
+      "compared_surface": "Python WFO, ONNX exports, MT5 feature matrices, and Strategy Tester reports",
+      "created_at_utc": "2026-05-01T08:11:05Z",
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "known_differences": "recent training rows receive sample_weight 3.0 in Python and exported model artifacts",
+      "missing_evidence": "none",
+      "packet_id": "stage12_run03l_recency_weighted_single_v1",
+      "parity_check": "ONNX probability parity and MT5 Strategy Tester output",
+      "parity_identity": "run_id=run03L_et_recency_weighted_single_v1; attempts=6",
+      "parity_level": "runtime_probe",
+      "python_artifact": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/results/wfo_summary.csv",
+      "research_path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/results/wfo_summary.csv",
+      "runtime_artifact": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/run_manifest.json",
+      "runtime_claim_boundary": "runtime_probe",
+      "runtime_path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/run_manifest.json",
+      "shared_contract": "same feature order, q90 threshold, fold07 windows, and Tier A primary plus Tier B fallback route",
+      "skill": "obsidian-runtime-parity",
+      "status": "executed",
+      "tester_identity": "US100 M5, deposit=500, leverage=1:100, attempts=6",
+      "triggered": true
+    },
+    {
+      "baseline": "run03J_et_rolling_wfo_split_probe_v1",
+      "blocking": false,
+      "changed_variables": [
+        "sample_weight"
+      ],
+      "comparison_baseline": "run03J_et_rolling_wfo_split_probe_v1",
+      "control_variables": [
+        "model family",
+        "source variant v01",
+        "features",
+        "label",
+        "threshold quantile",
+        "fold windows"
+      ],
+      "created_at_utc": "2026-05-01T08:11:05Z",
+      "decision_use": "decide whether recency weighting deserves a broader sweep or should become failure memory",
+      "evidence_plan": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/results/wfo_summary.csv",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/normalized_kpi_records.jsonl"
+      ],
+      "failure_criteria": "weak repeatability, MT5 loss, parser errors, or missing tier view",
+      "hypothesis": "ExtraTrees may improve fold recency behavior if recent 12 months receive stronger training weight.",
+      "invalid_conditions": [
+        "missing MT5 reports",
+        "future leakage",
+        "changed threshold policy",
+        "variant sweep"
+      ],
+      "packet_id": "stage12_run03l_recency_weighted_single_v1",
+      "sample_scope": "Tier A, Tier B, Tier A+B, seven Python WFO folds and fold07 MT5 validation/test",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "stop_conditions": [
+        "one run only",
+        "no micro tuning after result"
+      ],
+      "success_criteria": "Python WFO improves repeatability and MT5 fold07 does not contradict it",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "runtime_probe_recency_weight_completed",
+        "single_run_completed"
+      ],
+      "blocking": false,
+      "calibration_risk": "ExtraTrees scores are ranking scores, not calibrated probabilities",
+      "comparison_baseline": "run03J_et_rolling_wfo_split_probe_v1",
+      "created_at_utc": "2026-05-01T08:11:05Z",
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "model_family": "sklearn_extratreesclassifier_multiclass",
+      "model_or_threshold_surface": "ExtraTrees v01 base leaf20 q90 with recency sample_weight",
+      "overfit_checks": "validation/test hit-rate gaps, both-positive folds, MT5 validation/test comparison",
+      "overfit_risk": "recency weight can overfit the latest regime",
+      "packet_id": "stage12_run03l_recency_weighted_single_v1",
+      "secondary_metrics": [
+        "hit_rate",
+        "signal_count",
+        "MT5 net_profit",
+        "profit_factor",
+        "trade_count"
+      ],
+      "selection_metric": "none; single user-requested probe",
+      "selection_metric_boundary": "single probe only; no operating selection metric",
+      "skill": "obsidian-model-validation",
+      "split_method": "rolling_wfo_7fold_train_recent12m_weight3_fold07_mt5",
+      "status": "executed",
+      "target_and_label": "label_v1_fwd12_m5_logret_train_q33_3class",
+      "threshold_policy": "fold validation q90 nonflat threshold",
+      "triggered": true,
+      "validation_judgment": "inconclusive_recency_weighted_single_runtime_probe_completed",
+      "validation_split": "seven Python WFO folds plus fold07 MT5 validation/test"
+    },
+    {
+      "backtest_judgment": "usable_with_boundary",
+      "blocking": false,
+      "cost_assumptions": "broker terminal Strategy Tester report; no synthetic cost overlay",
+      "created_at_utc": "2026-05-01T08:11:05Z",
+      "ea_identity": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/run_manifest.json",
+      "forensic_checks": "attempt summary, normalized KPI records, trade parser errors, and report paths recorded",
+      "forensic_gaps": "none",
+      "packet_id": "stage12_run03l_recency_weighted_single_v1",
+      "report_identity": "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/attempt_summary.csv",
+      "skill": "obsidian-backtest-forensics",
+      "spread_commission_slippage": "broker terminal Strategy Tester report; no synthetic cost overlay",
+      "status": "executed",
+      "tester_identity": "US100 M5, deposit=500, leverage=1:100, fold07 validation/test windows",
+      "tester_report": "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/attempt_summary.csv",
+      "tester_settings": "US100 M5, tester model=4, deposit=500, leverage=1:100, fold07 validation/test date windows",
+      "trade_evidence": "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/trade_level_records.csv",
+      "trade_list_identity": "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/trade_level_records.csv",
+      "triggered": true
+    },
+    {
+      "artifact_hashes": "recorded in manifest and packet files where durable",
+      "artifact_paths": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/summary.json",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/packet_summary.json"
+      ],
+      "availability": "tracked metadata plus reproducible generated artifacts",
+      "blocking": false,
+      "consumer": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv",
+        "docs/registers/alpha_run_ledger.csv"
+      ],
+      "created_at_utc": "2026-05-01T08:11:05Z",
+      "hashes_or_missing_reasons": "hashes are recorded in run manifest, packet summary, and normalized KPI where available",
+      "human_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03L_recency_weighted_single_probe_packet.md"
+      ],
+      "lineage_boundary": "connected_with_boundary; no alpha quality, promotion, or runtime authority claim",
+      "lineage_judgment": "connected_with_boundary",
+      "machine_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/summary.json",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/normalized_kpi_records.jsonl"
+      ],
+      "packet_id": "stage12_run03l_recency_weighted_single_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/run_manifest.json",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/packet_summary.json"
+      ],
+      "producer": "stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py",
+      "raw_evidence": [
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/execution_results.json",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/trade_level_records.csv"
+      ],
+      "registry_links": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv"
+      ],
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+        "stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "broad_sweep": "one new structural axis only",
+      "created_at_utc": "2026-05-01T08:11:05Z",
+      "evidence_boundary": "runtime_probe",
+      "exploration_lane": "Stage 12 ExtraTrees recency-weighted single probe",
+      "extreme_sweep": "not used; user requested exactly one run",
+      "failure_memory": "record as negative/inconclusive memory if weak",
+      "hypothesis": "recency-weighted ExtraTrees may behave differently from unweighted Stage 12 base ExtraTrees",
+      "idea_boundary": "one unexplored structural axis, not baseline or promotion",
+      "idea_id": "IDEA-ST12-ET-RECENCY-WEIGHTED-SINGLE",
+      "legacy_relation": "none",
+      "micro_search_gate": "not allowed after one-run result",
+      "negative_memory_effect": "Weak result is retained as failure memory and should not be micro-tuned immediately.",
+      "operating_claim_boundary": "No alpha quality, promotion candidate, operating promotion, or runtime authority.",
+      "packet_id": "stage12_run03l_recency_weighted_single_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "tier_scope": "Tier A, Tier B, Tier A+B",
+      "triggered": true,
+      "wfo_plan": "seven Python WFO folds plus fold07 MT5"
+    },
+    {
+      "allowed_claims": [
+        "runtime_probe_recency_weight_completed",
+        "single_run_completed"
+      ],
+      "blocking": false,
+      "claim_boundary": "runtime_probe_recency_weight_single_run_not_alpha_quality_not_promotion_not_runtime_authority",
+      "created_at_utc": "2026-05-01T08:11:05Z",
+      "evidence_available": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/results/wfo_summary.csv",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/normalized_kpi_records.jsonl"
+      ],
+      "evidence_missing": "full seven-fold MT5 WFO",
+      "evidence_used": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03L_et_recency_weighted_single_v1/results/wfo_summary.csv",
+        "docs/agent_control/packets/stage12_run03l_recency_weighted_single_v1/normalized_kpi_records.jsonl"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "judgment_boundary": "runtime_probe_recency_weight_single_run_not_alpha_quality_not_promotion_not_runtime_authority",
+      "judgment_label": "inconclusive_recency_weighted_single_runtime_probe_completed",
+      "next_condition": "broader recency weighting sweep only if this single run shows repeatable value",
+      "packet_id": "stage12_run03l_recency_weighted_single_v1",
+      "result_subject": "run03L_et_recency_weighted_single_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "triggered": true,
+      "user_explanation_hook": "한 번만 본 탐침이라 좋고 나쁨보다 계속 팔 가치가 있는지 본다."
+    }
+  ]
+}

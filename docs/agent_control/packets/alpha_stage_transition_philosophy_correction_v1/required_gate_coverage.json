@@ -1,0 +1,39 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "required_gates": [
+      "agent_control_contracts",
+      "final_claim_guard",
+      "ops_instruction_audit",
+      "required_gate_coverage_audit",
+      "skill_receipt_schema_lint",
+      "state_sync_audit",
+      "work_packet_schema_lint"
+    ],
+    "executed_audits": [
+      "agent_control_contracts",
+      "closeout_report_check",
+      "final_claim_guard",
+      "ops_instruction_audit",
+      "required_gate_coverage_audit",
+      "skill_receipt_lint",
+      "skill_receipt_schema_lint",
+      "state_sync_audit",
+      "work_packet_schema_lint"
+    ],
+    "not_applicable_with_reason": {
+      "kpi_contract_audit": "No KPI row(KPI 행), trading ledger(거래 장부), or run result(실행 결과) changed.",
+      "runtime_evidence_gate": "No MT5 terminal(MT5 터미널), Strategy Tester(전략 테스터), EA, set file(설정 파일), or runtime handoff(런타임 인계) changed.",
+      "code_surface_audit": "No code file(코드 파일) changed; architecture validator and agent-control contracts cover policy/agent docs."
+    },
+    "declared_not_implemented": {}
+  },
+  "allowed_claims": [
+    "gate_coverage_complete"
+  ],
+  "forbidden_claims": []
+}

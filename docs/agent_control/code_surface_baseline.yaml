@@ -13,6 +13,12 @@ line_count_policy:
     foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5:
       max_lines: 1785
       reason: "legacy parity audit EA(기존 동등성 감사 EA); do not copy for run variants(실행 변형)"
+    stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py:
+      max_lines: 1800
+      reason: "RUN03K fold07 MT5 failure-data packet materializer(실행 03K 접힘 7 MT5 실패 데이터 묶음 생성기); one-shot stage-local recovery surface, extract shared postprocess helpers before reuse"
+    stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py:
+      max_lines: 2000
+      reason: "RUN03L one-run recency-weighted MT5 materializer(실행 03L 단일 최근성 가중 MT5 물질화 스크립트); stage-local evidence packet(단계 로컬 근거 묶음), extract shared closeout helpers(공유 마감 헬퍼 추출) before reuse"
 ownership_policy:
   blocked_direct_imports:
     - importer_owner: foundation/control_plane

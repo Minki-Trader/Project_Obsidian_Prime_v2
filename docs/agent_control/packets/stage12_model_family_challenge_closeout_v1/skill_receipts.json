@@ -1,0 +1,114 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage12_model_family_challenge_closeout_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md"
+      ],
+      "active_stage": "12_model_family_challenge__extratrees_training_effect",
+      "current_run": "run03S_et_probability_shape_attribution_probe_v1",
+      "detected_conflicts": [
+        "none_detected"
+      ],
+      "allowed_claims": [
+        "stage12_reviewed_closed",
+        "no_stage13_folder_created"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "selected_baseline"
+      ]
+    },
+    {
+      "packet_id": "stage12_model_family_challenge_closeout_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "exploration_lane": "Stage 12 standalone ExtraTrees model-family exploration closeout",
+      "idea_boundary": "topic pivot closeout; no baseline or operating selection",
+      "negative_memory_effect": "ExtraTrees standalone regime and attribution probes did not produce robust repeated WFO evidence; failed and inconclusive results are retained as evidence.",
+      "operating_claim_boundary": "No alpha quality, promotion candidate, operating promotion, runtime authority, or selected baseline."
+    },
+    {
+      "packet_id": "stage12_model_family_challenge_closeout_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "judgment_boundary": "closed_inconclusive_extratrees_standalone_runtime_probe_evidence",
+      "allowed_claims": [
+        "stage12_reviewed_closed",
+        "runtime_probe_evidence_recorded",
+        "no_stage13_folder_created"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "selected_baseline"
+      ],
+      "evidence_used": [
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/registers/run_registry.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md"
+      ]
+    },
+    {
+      "packet_id": "stage12_model_family_challenge_closeout_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv"
+      ],
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md",
+        "docs/decisions/2026-05-02_stage12_model_family_challenge_closeout.md",
+        "docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/closeout_report.md"
+      ],
+      "raw_evidence": [
+        "docs/agent_control/packets/stage12_run03s_probability_shape_attribution_probe_v1/closeout_gate.json"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json"
+      ],
+      "human_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md",
+        "docs/decisions/2026-05-02_stage12_model_family_challenge_closeout.md"
+      ],
+      "hashes_or_missing_reasons": "Closeout uses existing ledger and packet hashes; no new model or MT5 artifact was created.",
+      "lineage_boundary": "connected_with_boundary; no Stage13 folder, no alpha quality, no promotion, no runtime authority."
+    },
+    {
+      "packet_id": "stage12_model_family_challenge_closeout_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "hypothesis": "Stage 12 has sufficiently explored the standalone ExtraTrees model-family question.",
+      "baseline": "none; closeout is a topic pivot boundary, not baseline selection.",
+      "changed_variables": [
+        "stage status",
+        "current truth documentation",
+        "closeout decision"
+      ],
+      "invalid_conditions": [
+        "Stage13 folder created",
+        "baseline selected",
+        "promotion or runtime authority claimed"
+      ],
+      "evidence_plan": [
+        "stage closeout packet",
+        "closeout decision",
+        "stage/project ledger row counts",
+        "closeout gate"
+      ]
+    }
+  ]
+}

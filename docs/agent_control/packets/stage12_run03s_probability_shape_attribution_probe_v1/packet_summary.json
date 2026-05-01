@@ -1,0 +1,282 @@
+{
+  "allowed_claims": [
+    "runtime_probe_probability_shape_attribution_completed",
+    "no_fold07_probability_shape_attribution_probe_completed"
+  ],
+  "best_python_routed_bucket": {
+    "both_positive_fold_count": 0,
+    "fold_count": 6,
+    "inversion_fold_count": 3,
+    "mean_abs_fold_gap": 0.1364502041510683,
+    "route_role": "routed_total",
+    "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+    "session_bucket_id": "thin_edge",
+    "session_bucket_label": "thin_probability_edge",
+    "test_collapse_fold_count": 4,
+    "test_correct_total": 938,
+    "test_minus_validation_hit_rate": 0.03673582043050083,
+    "test_positive_fold_count": 1,
+    "test_signal_total": 2237,
+    "test_weighted_hit_rate": 0.4193115780062584,
+    "tier_scope": "Tier A+B",
+    "validation_correct_total": 404,
+    "validation_positive_fold_count": 1,
+    "validation_signal_total": 1056,
+    "validation_weighted_hit_rate": 0.38257575757575757,
+    "worst_test_hit_rate": 0.125
+  },
+  "boundary": "runtime_probe_probability_shape_attribution_not_alpha_quality_not_promotion_not_runtime_authority",
+  "bucket_count": 3,
+  "completed_forbidden": false,
+  "created_at_utc": "2026-05-01T13:04:33Z",
+  "external_verification_status": "completed",
+  "folds_excluded": [
+    "fold07"
+  ],
+  "folds_used": [
+    "fold01",
+    "fold02",
+    "fold03",
+    "fold04",
+    "fold05",
+    "fold06"
+  ],
+  "forbidden_claims": [
+    "alpha_quality",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "idea_id": "IDEA-ST12-ET-PROBABILITY-SHAPE-ATTRIBUTION",
+  "judgment": "inconclusive_probability_shape_attribution_runtime_probe_completed",
+  "ledger_outputs": {
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 1480,
+      "sha256": "c93e3a8da059125a60b05f201772bafe9115fca86045b093663bfff9c949a5d2",
+      "upserted_rows": 39
+    },
+    "rows_written": 39,
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+      "rows": 144,
+      "sha256": "11eceafa35c0f77583baeeb306ef2d2945325517626f4af217dbe0bf4b7205d0",
+      "upserted_rows": 1
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv",
+      "rows": 794,
+      "sha256": "db564af310f13abf79f333db845eab58452b1ab0127cb12e71ad1c645e0c668d",
+      "upserted_rows": 39
+    }
+  },
+  "metadata": {
+    "folds_excluded": [
+      "fold07"
+    ],
+    "folds_used": [
+      "fold01",
+      "fold02",
+      "fold03",
+      "fold04",
+      "fold05",
+      "fold06"
+    ],
+    "params": {
+      "bootstrap": false,
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "min_samples_leaf": 20,
+      "min_samples_split": 2,
+      "n_estimators": 96,
+      "n_jobs": -1,
+      "random_state": 20545
+    },
+    "source_metadata": {
+      "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "dataset_sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "feature_order_sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "tier_b_context_summary": {
+        "by_split": {
+          "oos": {
+            "no_tier_labelable_rows": 159,
+            "routed_labelable_rows": 8646,
+            "tier_a_primary_rows": 7584,
+            "tier_b_fallback_rows": 1062
+          },
+          "train": {
+            "no_tier_labelable_rows": 691,
+            "routed_labelable_rows": 38192,
+            "tier_a_primary_rows": 29222,
+            "tier_b_fallback_rows": 8970
+          },
+          "validation": {
+            "no_tier_labelable_rows": 203,
+            "routed_labelable_rows": 12210,
+            "tier_a_primary_rows": 9844,
+            "tier_b_fallback_rows": 2366
+          }
+        },
+        "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+        "feature_count": 42,
+        "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+        "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+        "label_threshold_log_return": 0.001277833051854688,
+        "labelable_rows": 60101,
+        "no_tier_by_split": {
+          "oos": 159,
+          "train": 691,
+          "validation": 203
+        },
+        "no_tier_labelable_rows": 1053,
+        "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features.",
+        "policy_id": "tier_b_partial_context_core42_fallback_v1",
+        "source_raw_rows": 261344,
+        "source_valid_rows": 56939,
+        "tier_a_primary_rows": 46650,
+        "tier_b_fallback_by_split_subtype": {
+          "oos": {
+            "B_core_only": 24,
+            "B_full_context_outside_tier_a_scope": 1,
+            "B_macro_missing": 809,
+            "B_mixed_partial_context": 228
+          },
+          "train": {
+            "B_constituent_missing": 1,
+            "B_core_only": 151,
+            "B_full_context_outside_tier_a_scope": 216,
+            "B_macro_missing": 7805,
+            "B_mixed_partial_context": 797
+          },
+          "validation": {
+            "B_core_only": 25,
+            "B_macro_missing": 2126,
+            "B_mixed_partial_context": 215
+          }
+        },
+        "tier_b_fallback_by_subtype": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "tier_b_fallback_rows": 12398,
+        "tier_b_training_rows": 59048
+      },
+      "training_summary_path": "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+      "training_summary_sha256": "946766a20e230c0567066d8330551408f6161e2beabacbb00d4deb5c257af75c"
+    },
+    "tier_a_feature_count": 58,
+    "tier_b_feature_count": 42
+  },
+  "mt5_attempts_total": 18,
+  "mt5_fold_id": "fold05",
+  "mt5_kpi_records": 30,
+  "mt5_reports_total": 18,
+  "mt5_routed_rows": [
+    {
+      "net_profit": -14.47,
+      "profit_factor": 0.96,
+      "record_view": "mt5_thin_edge_routed_total_validation_is",
+      "route_role": "routed_total",
+      "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+      "session_bucket_id": "thin_edge",
+      "session_bucket_label": "thin_probability_edge",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_scope": "Tier A+B",
+      "trade_count": 59,
+      "wfo_split_role": "validation"
+    },
+    {
+      "net_profit": -93.64,
+      "profit_factor": 0.87,
+      "record_view": "mt5_middle_edge_routed_total_validation_is",
+      "route_role": "routed_total",
+      "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+      "session_bucket_id": "middle_edge",
+      "session_bucket_label": "middle_probability_edge",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_scope": "Tier A+B",
+      "trade_count": 32,
+      "wfo_split_role": "validation"
+    },
+    {
+      "net_profit": 180.47,
+      "profit_factor": 1.41,
+      "record_view": "mt5_wide_edge_routed_total_validation_is",
+      "route_role": "routed_total",
+      "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+      "session_bucket_id": "wide_edge",
+      "session_bucket_label": "wide_probability_edge",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_scope": "Tier A+B",
+      "trade_count": 21,
+      "wfo_split_role": "validation"
+    },
+    {
+      "net_profit": -10.43,
+      "profit_factor": 0.66,
+      "record_view": "mt5_thin_edge_routed_total_oos",
+      "route_role": "routed_total",
+      "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+      "session_bucket_id": "thin_edge",
+      "session_bucket_label": "thin_probability_edge",
+      "split": "oos",
+      "status": "completed",
+      "tier_scope": "Tier A+B",
+      "trade_count": 8,
+      "wfo_split_role": "test"
+    },
+    {
+      "net_profit": 22.41,
+      "profit_factor": 1.23,
+      "record_view": "mt5_middle_edge_routed_total_oos",
+      "route_role": "routed_total",
+      "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+      "session_bucket_id": "middle_edge",
+      "session_bucket_label": "middle_probability_edge",
+      "split": "oos",
+      "status": "completed",
+      "tier_scope": "Tier A+B",
+      "trade_count": 7,
+      "wfo_split_role": "test"
+    },
+    {
+      "net_profit": -146.41,
+      "profit_factor": 0.28,
+      "record_view": "mt5_wide_edge_routed_total_oos",
+      "route_role": "routed_total",
+      "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+      "session_bucket_id": "wide_edge",
+      "session_bucket_label": "wide_probability_edge",
+      "split": "oos",
+      "status": "completed",
+      "tier_scope": "Tier A+B",
+      "trade_count": 7,
+      "wfo_split_role": "test"
+    }
+  ],
+  "normalized_records": 30,
+  "packet_id": "stage12_run03s_probability_shape_attribution_probe_v1",
+  "python_bucket_metric_rows": 108,
+  "python_bucket_summary_rows": 9,
+  "run_id": "run03S_et_probability_shape_attribution_probe_v1",
+  "source_recency_run_id": "run03L_et_recency_weighted_single_v1",
+  "source_variant_id": "v01_base_leaf20_q90",
+  "source_variant_run_id": "run03D_et_standalone_batch20_v1",
+  "source_wfo_run_id": "run03J_et_rolling_wfo_split_probe_v1",
+  "stage_id": "12_model_family_challenge__extratrees_training_effect",
+  "status": "completed",
+  "trade_level_rows": 272,
+  "trade_parser_errors": 0
+}

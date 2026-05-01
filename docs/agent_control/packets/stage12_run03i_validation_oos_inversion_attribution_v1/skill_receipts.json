@@ -1,0 +1,343 @@
+{
+  "receipts": [
+    {
+      "allowed_claims": [
+        "completed_existing_evidence_attribution"
+      ],
+      "blocking": false,
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "ledger_links": [
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv",
+        "docs/registers/run_registry.csv"
+      ],
+      "ledger_rows": 3,
+      "missing_evidence": "No new MT5 execution; attribution reuses RUN03H completed runtime evidence.",
+      "packet_id": "stage12_run03i_validation_oos_inversion_attribution_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/reports/result_summary.md"
+      ],
+      "skill": "obsidian-run-evidence-system",
+      "source_inputs": [
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_records.jsonl",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/enriched_kpi_records.jsonl",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_level_records.csv"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "artifact_hashes": {
+        "driver_findings": "a177800bf9c92e6a8305f2b2b97ca281b2bd5f50dab222cf0d887f61258201a4",
+        "inversion_variant_summary": "b5f4f36b73672e96002290aff02cfbdede1ff3debccf92a4316f0f06168d064d",
+        "kpi_record": "4f6a3f4a796b25fddd757fde6cb5b31e42767ca5c550a43a2677c8684a97f38f",
+        "month_period_summary": "615b8128620830ab627e41c988a14764367ab9ef3269acd3701cdd3bec697458",
+        "next_probe_matrix": "f7041718c118c56723f34deecc2d0a6d16c6b944fcec787b30379c7713da8662",
+        "result_summary": "f5b6644e262edb64c5dd3769458aa5ff72134e6315eaa2385905887cc2445d3d",
+        "run_manifest": "91878c924259103f48a1c654a7b88728516c32c3a84e0000884c2b7102f2ebf6",
+        "segment_gap_summary": "d1bec8f42f4f749ef15f63cadcafb0c190500bbfb39c9773af9a5daf26b8755b",
+        "summary": "9e240cd04a4a56ad30f38f5a071a9fdccfa1131281c8ba25d7f65fbd4bd46239",
+        "tier_route_split_summary": "4bf092b072f14e8aab900622bbfa6e2b05e92c9d2e8f9eadbb756c0e24eb9f6e"
+      },
+      "artifact_paths": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/inversion_variant_summary.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/tier_route_split_summary.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/segment_gap_summary.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/month_period_summary.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/driver_findings.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/next_probe_matrix.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/run_manifest.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/summary.json"
+      ],
+      "availability": "tracked",
+      "blocking": false,
+      "consumer": "Stage12 RUN03I reports, ledgers, current-truth docs, and next probe planning",
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion"
+      ],
+      "hashes_or_missing_reasons": {
+        "driver_findings": "a177800bf9c92e6a8305f2b2b97ca281b2bd5f50dab222cf0d887f61258201a4",
+        "inversion_variant_summary": "b5f4f36b73672e96002290aff02cfbdede1ff3debccf92a4316f0f06168d064d",
+        "kpi_record": "4f6a3f4a796b25fddd757fde6cb5b31e42767ca5c550a43a2677c8684a97f38f",
+        "month_period_summary": "615b8128620830ab627e41c988a14764367ab9ef3269acd3701cdd3bec697458",
+        "next_probe_matrix": "f7041718c118c56723f34deecc2d0a6d16c6b944fcec787b30379c7713da8662",
+        "result_summary": "f5b6644e262edb64c5dd3769458aa5ff72134e6315eaa2385905887cc2445d3d",
+        "run_manifest": "91878c924259103f48a1c654a7b88728516c32c3a84e0000884c2b7102f2ebf6",
+        "segment_gap_summary": "d1bec8f42f4f749ef15f63cadcafb0c190500bbfb39c9773af9a5daf26b8755b",
+        "summary": "9e240cd04a4a56ad30f38f5a071a9fdccfa1131281c8ba25d7f65fbd4bd46239",
+        "tier_route_split_summary": "4bf092b072f14e8aab900622bbfa6e2b05e92c9d2e8f9eadbb756c0e24eb9f6e"
+      },
+      "human_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03I_validation_oos_inversion_attribution_packet.md"
+      ],
+      "lineage_boundary": "connected_with_boundary; no new MT5 execution or model mutation",
+      "lineage_judgment": "connected_with_boundary",
+      "machine_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/run_manifest.json"
+      ],
+      "packet_id": "stage12_run03i_validation_oos_inversion_attribution_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/summary.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/reports/result_summary.md"
+      ],
+      "producer": "stage_pipelines/stage12/extratrees_inversion_attribution_probe.py",
+      "raw_evidence": [
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_records.jsonl",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/enriched_kpi_records.jsonl",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_level_records.csv"
+      ],
+      "registry_links": [
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage_run_ledger.csv",
+        "docs/registers/run_registry.csv"
+      ],
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_summary.csv",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_attribution_summary.csv",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_level_records.csv"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "completed_existing_evidence_attribution",
+        "exploratory_inversion_read"
+      ],
+      "blocking": false,
+      "claim_boundary": "existing_mt5_runtime_probe_attribution_only_not_alpha_quality_not_promotion",
+      "evidence_available": [
+        "RUN03H MT5 KPI",
+        "trade attribution",
+        "stage/project ledgers"
+      ],
+      "evidence_missing": [
+        "WFO repeatability",
+        "role-level routed fallback profit attribution"
+      ],
+      "evidence_used": [
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_summary.csv",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_attribution_summary.csv",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_level_records.csv"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "judgment_boundary": "existing_mt5_runtime_probe_attribution_only_not_alpha_quality_not_promotion",
+      "judgment_label": "inconclusive",
+      "next_condition": "Run rolling WFO or time-regime split probe before narrowing claims.",
+      "packet_id": "stage12_run03i_validation_oos_inversion_attribution_v1",
+      "result_subject": "run03I_et_validation_oos_inversion_attribution_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "triggered": true,
+      "user_explanation_hook": "계속 탐색할 가치는 있지만 승격 의미는 없다."
+    },
+    {
+      "allowed_claims": [
+        "completed_existing_evidence_attribution",
+        "exploratory_inversion_read"
+      ],
+      "alternative_explanations": [
+        "single split calendar regime",
+        "fallback attribution not separable",
+        "sample-specific trend/volatility clustering"
+      ],
+      "attribution_confidence": "medium",
+      "attribution_layers_checked": [
+        "tier",
+        "route role",
+        "direction",
+        "session",
+        "volatility",
+        "trend",
+        "ADX",
+        "month"
+      ],
+      "blocking": false,
+      "comparison_baseline": "RUN03H validation split vs OOS split; no operating baseline.",
+      "forbidden_claims": [
+        "alpha_quality",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "likely_drivers": [
+        "Tier A split behavior",
+        "early session",
+        "trend/volatility regime",
+        "time window"
+      ],
+      "missing_layers": [
+        "WFO repeatability",
+        "routed fallback profit attribution"
+      ],
+      "next_probe": "rolling_wfo_split_probe",
+      "observed_change": "RUN03H routed OOS is broadly positive while routed validation is negative across all variants.",
+      "packet_id": "stage12_run03i_validation_oos_inversion_attribution_v1",
+      "segment_checks": [
+        "tier",
+        "route role",
+        "direction",
+        "session",
+        "volatility",
+        "trend",
+        "ADX",
+        "month"
+      ],
+      "skill": "obsidian-performance-attribution",
+      "status": "executed",
+      "trade_shape": {
+        "routed_oos_net_profit": 5420.36,
+        "routed_oos_positive_variants": 19,
+        "routed_validation_net_profit": -3147.5,
+        "routed_validation_positive_variants": 0
+      },
+      "triggered": true
+    },
+    {
+      "baseline": "RUN03H all-variant MT5 runtime_probe; no operating baseline",
+      "blocking": false,
+      "changed_variables": [
+        "attribution axis only"
+      ],
+      "comparison_baseline": "RUN03H all-variant MT5 runtime_probe",
+      "control_variables": [
+        "source MT5 reports",
+        "model artifacts",
+        "thresholds",
+        "tier definitions"
+      ],
+      "decision_use": "Choose next Stage12 probe, not a baseline.",
+      "evidence_plan": [
+        "inversion_variant_summary.csv",
+        "segment_gap_summary.csv",
+        "driver_findings.csv"
+      ],
+      "failure_criteria": "No coherent driver or missing source evidence.",
+      "hypothesis": "The inversion is a structural regime/time split clue worth broad WFO probing.",
+      "invalid_conditions": "Source 7-layer KPI or trade attribution missing.",
+      "packet_id": "stage12_run03i_validation_oos_inversion_attribution_v1",
+      "sample_scope": "FPMarkets US100 M5 validation 2025-01..2025-09 and OOS 2025-10..2026-04 from RUN03H",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "stop_conditions": "Move to WFO if attribution supports time/regime explanation; otherwise record negative memory.",
+      "success_criteria": "A plausible broad driver is isolated with paired Tier A/B/A+B records.",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "data_hash_or_identity": {
+        "driver_findings": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/driver_findings.csv",
+          "sha256": "a177800bf9c92e6a8305f2b2b97ca281b2bd5f50dab222cf0d887f61258201a4"
+        },
+        "inversion_variant_summary": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/inversion_variant_summary.csv",
+          "sha256": "b5f4f36b73672e96002290aff02cfbdede1ff3debccf92a4316f0f06168d064d"
+        },
+        "kpi_record": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/kpi_record.json",
+          "sha256": "4f6a3f4a796b25fddd757fde6cb5b31e42767ca5c550a43a2677c8684a97f38f"
+        },
+        "month_period_summary": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/month_period_summary.csv",
+          "sha256": "615b8128620830ab627e41c988a14764367ab9ef3269acd3701cdd3bec697458"
+        },
+        "next_probe_matrix": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/next_probe_matrix.csv",
+          "sha256": "f7041718c118c56723f34deecc2d0a6d16c6b944fcec787b30379c7713da8662"
+        },
+        "result_summary": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/reports/result_summary.md",
+          "sha256": "f5b6644e262edb64c5dd3769458aa5ff72134e6315eaa2385905887cc2445d3d"
+        },
+        "run_manifest": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/run_manifest.json",
+          "sha256": "91878c924259103f48a1c654a7b88728516c32c3a84e0000884c2b7102f2ebf6"
+        },
+        "segment_gap_summary": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/segment_gap_summary.csv",
+          "sha256": "d1bec8f42f4f749ef15f63cadcafb0c190500bbfb39c9773af9a5daf26b8755b"
+        },
+        "summary": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/summary.json",
+          "sha256": "9e240cd04a4a56ad30f38f5a071a9fdccfa1131281c8ba25d7f65fbd4bd46239"
+        },
+        "tier_route_split_summary": {
+          "path": "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03I_et_validation_oos_inversion_attribution_v1/results/tier_route_split_summary.csv",
+          "sha256": "4bf092b072f14e8aab900622bbfa6e2b05e92c9d2e8f9eadbb756c0e24eb9f6e"
+        }
+      },
+      "data_source": [
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_level_records.csv",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_records.jsonl",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/enriched_kpi_records.jsonl"
+      ],
+      "data_sources_checked": [
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/trade_level_records.csv",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/normalized_kpi_records.jsonl",
+        "docs/agent_control/packets/stage12_run03h_all_variant_tier_balance_mt5_v1/enriched_kpi_records.jsonl"
+      ],
+      "feature_label_boundary": "No feature or label recomputation; RUN03H source boundary is preserved.",
+      "integrity_judgment": "usable_with_boundary",
+      "leakage_checks": "No feature or label recomputation; main residual risk is selection bias before WFO.",
+      "leakage_risk": "Selection bias if OOS-positive variants are narrowed before WFO.",
+      "missing_data_boundary": "Source row counts and 7-layer presence checked in source_kpi_contract_audit.",
+      "missing_or_duplicate_check": "Source row counts and 7-layer presence checked in source_kpi_contract_audit.",
+      "packet_id": "stage12_run03i_validation_oos_inversion_attribution_v1",
+      "sample_scope": "US100 M5 validation/OOS only; train is not reinterpreted.",
+      "skill": "obsidian-data-integrity",
+      "split_boundary": "validation and OOS are different calendar windows; same-month causality is not claimed.",
+      "status": "executed",
+      "time_axis": "MT5 report close_time timestamps from RUN03H trade extraction; month is derived from close_time.",
+      "time_axis_boundary": "MT5 report close_time timestamps from RUN03H trade extraction; month is derived from close_time.",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "broad_sweep": [
+        "rolling WFO split",
+        "session regime stress",
+        "direction asymmetry stress"
+      ],
+      "evidence_boundary": "exploratory",
+      "exploration_lane": "Stage 12 ExtraTrees validation/OOS inversion attribution",
+      "extreme_sweep": [
+        "full inverse remains negative boundary from v20"
+      ],
+      "failure_memory": "If WFO fails, preserve RUN03H OOS lift as single-window clue only.",
+      "hypothesis": "Validation/OOS inversion is a preserved clue for broad WFO/regime probing.",
+      "idea_boundary": "preserved clue, not baseline or promotion candidate",
+      "idea_id": "IDEA-ST12-ET-VALIDATION-OOS-INVERSION",
+      "legacy_relation": "none",
+      "micro_search_gate": "Only after WFO repeats inversion without validation collapse.",
+      "negative_memory_effect": "v20 full inverse remains negative boundary; RUN03I is not a death sentence for ExtraTrees.",
+      "operating_claim_boundary": "no alpha quality, promotion candidate, operating promotion, or runtime authority",
+      "packet_id": "stage12_run03i_validation_oos_inversion_attribution_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "tier_scope": "mixed Tier A/Tier B/Tier A+B",
+      "triggered": true,
+      "wfo_plan": "Next probe should rotate calendar windows before threshold micro-search."
+    }
+  ]
+}

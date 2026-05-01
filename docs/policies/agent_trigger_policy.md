@@ -9,6 +9,7 @@
 이 정책(policy, 정책)은 다음 문서와 함께 작동한다.
 
 - `docs/policies/architecture_invariants.md`
+- `docs/policies/stage_structure.md`
 - `docs/policies/exploration_mandate.md`
 - `docs/policies/kpi_measurement_standard.md`
 - `docs/policies/run_result_management.md`

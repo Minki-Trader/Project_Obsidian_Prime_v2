@@ -1,0 +1,17 @@
+{
+  "blocking": false,
+  "created_at_utc": "2026-05-01T01:24:58Z",
+  "data_sources_checked": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/predictions/scored_validation_oos.parquet"
+  ],
+  "leakage_checks": "No retraining or threshold fitting occurs in RUN03G; it aggregates existing RUN03D scored outputs.",
+  "missing_data_boundary": "No new join or resampling; missing source files would block the run.",
+  "packet_id": "stage12_run03g_variant_stability_probe_v1",
+  "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/data_integrity.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "validation and OOS only; train is not re-scored in RUN03G",
+  "status": "executed",
+  "time_axis_boundary": "timestamp is UTC bar-close-aligned model input timestamp inherited from Stage 03/04 contracts",
+  "triggered": true
+}

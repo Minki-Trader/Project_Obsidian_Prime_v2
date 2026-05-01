@@ -52,6 +52,34 @@
 | `IDEA-ST12-ET-BATCH20-V18` | `inconclusive_standalone_structural_scout` | 핵심 42개 피처만으로도 단독 Stage12 신호가 유지된다. | `run03D_et_standalone_batch20_v1` `v18_core42_features_q90` val_hit(검증 적중)=0.367513, oos_hit(표본외 적중)=0.467202 |
 | `IDEA-ST12-ET-BATCH20-V19` | `inconclusive_standalone_structural_scout` | 보조 문맥 16개 피처만으로 독립 신호가 있는지 본다. | `run03D_et_standalone_batch20_v1` `v19_context16_features_q90` val_hit(검증 적중)=0.393909, oos_hit(표본외 적중)=0.430622 |
 | `IDEA-ST12-ET-BATCH20-V20` | `mixed_unstable_standalone_structural_scout` | 확률 방향을 반대로 쓰면 구조적 역방향성이 드러난다. | `run03D_et_standalone_batch20_v1` `v20_base_inverse_q90` val_hit(검증 적중)=0.432487, oos_hit(표본외 적중)=0.309091 |
+### Stage 12(12단계) run03G variant stability(변형 안정성)
+
+| idea_id(아이디어 ID) | variant(변형) | status(상태) | evidence(근거) |
+|---|---|---|---|
+| `IDEA-ST12-ET-BATCH20-V09` | `v09_depth8_leaf10_q90` | `secondary_mt5_probe_candidate` | `run03G_et_variant_stability_probe_v1` val/OOS hit(검증/표본외 적중) `0.392893` / `0.482663`, role(역할) `priority_depth_limited_both_direction` |
+| `IDEA-ST12-ET-BATCH20-V16` | `v16_base_long_only_q90` | `mt5_probe_priority` | `run03G_et_variant_stability_probe_v1` val/OOS hit(검증/표본외 적중) `0.404990` / `0.485030`, role(역할) `priority_long_only_asymmetry` |
+| `IDEA-ST12-ET-BATCH20-V13` | `v13_base_margin002_q90` | `secondary_mt5_probe_candidate` | `run03G_et_variant_stability_probe_v1` val/OOS hit(검증/표본외 적중) `0.385875` / `0.472656`, role(역할) `priority_margin_filter` |
+| `IDEA-ST12-ET-BATCH20-V18` | `v18_core42_features_q90` | `secondary_mt5_probe_candidate` | `run03G_et_variant_stability_probe_v1` val/OOS hit(검증/표본외 적중) `0.367513` / `0.467202`, role(역할) `secondary_core42_tier_b_alignment` |
+| `IDEA-ST12-ET-BATCH20-V01` | `v01_base_leaf20_q90` | `secondary_mt5_probe_candidate` | `run03G_et_variant_stability_probe_v1` val/OOS hit(검증/표본외 적중) `0.384772` / `0.472727`, role(역할) `secondary_base_q90_reference` |
+| `IDEA-ST12-ET-BATCH20-V11` | `v11_base_leaf20_q85` | `reference_already_mt5_tier_balance` | `run03G_et_variant_stability_probe_v1` val/OOS hit(검증/표본외 적중) `0.392688` / `0.457317`, role(역할) `reference_already_mt5_tier_balance` |
+| `IDEA-ST12-ET-BATCH20-V20` | `v20_base_inverse_q90` | `negative_boundary_inverse_direction` | `run03G_et_variant_stability_probe_v1` val/OOS hit(검증/표본외 적중) `0.432487` / `0.309091`, role(역할) `negative_boundary_inverse_direction` |
+
+| `IDEA-ST12-ET-RECENCY-WEIGHTED-SINGLE` | `12_model_family_challenge__extratrees_training_effect` | recency-weighted ExtraTrees(최근성 가중 엑스트라 트리)가 최근 regime(국면)을 더 잘 볼 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03L(실행 03L); Python routed hit(파이썬 라우팅 적중) `0.401285` / `0.414419`, MT5 routed net(MT5 라우팅 순수익) `192.33` / `132.20` |
+
+| `IDEA-ST12-ET-SESSION-AGE-REGIME` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 session age(세션 경과 시간)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03M(실행 03M); fold07(접힘 7) 제외; best bucket(최상위 구간) `0-60` |
+
+| `IDEA-ST12-ET-VOLATILITY-REGIME` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 volatility regime(변동성 국면)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03N(실행 03N); fold07(접힘 7) 제외; best bucket(최상위 구간) `high_vol_two_plus_flags` |
+
+| `IDEA-ST12-ET-TREND-CHOP-REGIME` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 trend/chop regime(추세/횡보 국면)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03O(실행 03O); fold07(접힘 7) 제외; best bucket(최상위 구간) `chop_zero_trend_flags` |
+
+| `IDEA-ST12-ET-MEGA-CAP-DIVERGENCE` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 mega-cap divergence regime(대형주 괴리 국면)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03P(실행 03P); fold07(접힘 7) 제외; best bucket(최상위 구간) `wide_or_dispersed_mega_cap_divergence` |
+
+| `IDEA-ST12-ET-MACRO-PROXY-REGIME` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 macro proxy regime regime(거시 대리 국면 국면)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03Q(실행 03Q); fold07(접힘 7) 제외; best bucket(최상위 구간) `macro_risk_on_relief` |
+
+| `IDEA-ST12-ET-GAP-OVERNIGHT-CONTEXT` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 gap/overnight context regime(갭/야간 문맥 국면)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03R(실행 03R); fold07(접힘 7) 제외; best bucket(최상위 구간) `gap_or_overnight_down_context` |
+
+| `IDEA-ST12-ET-PROBABILITY-SHAPE-ATTRIBUTION` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 probability-shape attribution regime(확률 모양 귀속 국면)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03S(실행 03S); fold07(접힘 7) 제외; best bucket(최상위 구간) `thin_probability_edge` |
+
 ## Rule
 
 Register ideas when they become durable work, not for every passing thought.

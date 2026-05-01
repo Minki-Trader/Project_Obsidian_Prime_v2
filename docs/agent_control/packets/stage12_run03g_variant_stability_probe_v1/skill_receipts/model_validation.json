@@ -1,0 +1,21 @@
+{
+  "allowed_claims": [
+    "candidate_for_next_probe"
+  ],
+  "blocking": false,
+  "created_at_utc": "2026-05-01T01:24:58Z",
+  "forbidden_claims": [
+    "best_model",
+    "selected_model",
+    "operating_promotion"
+  ],
+  "model_or_threshold_surface": "RUN03D ExtraTrees variants and thresholds",
+  "overfit_checks": "validation/OOS gap, monthly hit dispersion, weak month ratio, signal density",
+  "packet_id": "stage12_run03g_variant_stability_probe_v1",
+  "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/model_validation.json",
+  "selection_metric_boundary": "stability_score is a scout ranking only, not promotion metric",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "triggered": true,
+  "validation_split": "single validation/OOS split with month/quarter stability aggregation"
+}

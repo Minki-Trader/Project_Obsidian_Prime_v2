@@ -5,13 +5,21 @@
 - status(상태): `reviewed_closed_handoff_to_stage11_ready`
 - judgment(판정): `inconclusive_single_split_scout_mt5_runtime_probe_completed`
 - external_verification_status(외부 검증 상태): `completed(완료)`
-- selected baseline(선택 기준선): `run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1`
+- historical selected baseline wording(역사적 선택 기준선 표현): `run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1`
+
+## 2026-05-01 해석 부록(Interpretation Addendum, 해석 부록)
+
+이 문서의 baseline(기준선) 표현은 현재 진실(current truth, 현재 진실)에서 superseded historical wording(대체된 역사적 표현)이다.
+
+현재 해석(current interpretation, 현재 해석)은 `run01Y(실행 01Y)`를 seed surface(씨앗 표면), preserved clue(보존 단서), reference surface(참고 표면)로 본다. Stage 10(10단계)에서 Stage 11(11단계)로 넘어간 것은 baseline selection(기준선 선택)이 아니라 topic pivot(주제 전환)이다.
+
+근거(decision, 결정): `docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md`
 
 ## 쉬운 판독(Plain Read, 쉬운 판독)
 
 Stage 10(10단계)은 default split(기본 분할) 위에서 첫 model-backed alpha scout(모델 근거 알파 탐색 판독)를 끝까지 흔들었다.
 
-효과(effect, 효과): `run01Y(실행 01Y)`가 Stage 10(10단계) 안의 best balanced baseline(최고 균형 기준선)으로 남고, 다음 단계(next stage, 다음 단계)는 WFO(`walk-forward optimization`, 워크포워드 최적화)와 label/horizon sensitivity(라벨/예측수평선 민감도)를 본다.
+효과(effect, 효과): `run01Y(실행 01Y)`가 Stage 10(10단계) 안의 best balanced seed surface(최고 균형 씨앗 표면)로 남고, 다음 단계(next stage, 다음 단계)는 WFO(`walk-forward optimization`, 워크포워드 최적화)와 label/horizon sensitivity(라벨/예측수평선 민감도)를 topic pivot(주제 전환)으로 본다.
 
 ## 닫힌 근거(Closed Evidence, 닫힌 근거)
 
@@ -27,9 +35,9 @@ Stage 10(10단계)은 default split(기본 분할) 위에서 첫 model-backed al
 
 ## 선택(Selection, 선택)
 
-`run01Y(실행 01Y)`를 Stage 11(11단계)의 baseline candidate(기준 후보)로 넘긴다.
+`run01Y(실행 01Y)`를 Stage 11(11단계)의 seed surface(씨앗 표면)와 reference surface(참고 표면)로 보존한다.
 
-효과(effect, 효과): Stage 11(11단계)은 새 아이디어를 무작정 여는 대신, Stage 10(10단계)에서 가장 균형 좋았던 시간 구간과 threshold(임계값)를 먼저 WFO(워크포워드 최적화)와 label/horizon(라벨/예측수평선)으로 압박한다.
+효과(effect, 효과): Stage 11(11단계)은 baseline(기준선)을 검증하는 단계가 아니라, Stage 10(10단계)에서 가장 균형 좋았던 시간 구간과 threshold(임계값)를 참고 표면(reference surface, 참고 표면)으로 삼아 WFO(워크포워드 최적화), label/horizon(라벨/예측수평선), model family(모델 계열) 질문으로 전환한다.
 
 ## 경계(Boundary, 경계)
 

@@ -1,0 +1,193 @@
+{
+  "created_at_utc": "2026-05-01T01:24:58Z",
+  "packet_id": "stage12_run03g_variant_stability_probe_v1",
+  "receipts": [
+    {
+      "allowed_claims": [
+        "reviewed_python_structural_scout",
+        "inconclusive_variant_stability_read"
+      ],
+      "blocking": false,
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "forbidden_claims": [
+        "alpha_quality",
+        "live_readiness",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "ledger_rows": 23,
+      "missing_evidence": "MT5 external verification is out_of_scope_by_claim for this Python structural scout.",
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/run_manifest.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/reports/result_summary.md"
+      ],
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/run_evidence_system.json",
+      "skill": "obsidian-run-evidence-system",
+      "source_inputs": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/results/variant_results.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/predictions/scored_validation_oos.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "baseline": "no operating baseline; v11 is a reference surface only",
+      "blocking": false,
+      "changed_variables": [
+        "read_axis=month_quarter_stability",
+        "candidate_surface=all_RUN03D_variants"
+      ],
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "evidence_plan": [
+        "variant_stability.csv",
+        "monthly_stability.csv",
+        "shortlist.csv",
+        "ledgers"
+      ],
+      "hypothesis": "RUN03D v11 narrowing should be reopened by variant period-stability comparison.",
+      "invalid_conditions": [
+        "source scope inheritance detected",
+        "scored predictions missing",
+        "split/timestamp invalid"
+      ],
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/experiment_design.json",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "data_sources_checked": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/predictions/scored_validation_oos.parquet"
+      ],
+      "leakage_checks": "No retraining or threshold fitting occurs in RUN03G; it aggregates existing RUN03D scored outputs.",
+      "missing_data_boundary": "No new join or resampling; missing source files would block the run.",
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/data_integrity.json",
+      "skill": "obsidian-data-integrity",
+      "split_boundary": "validation and OOS only; train is not re-scored in RUN03G",
+      "status": "executed",
+      "time_axis_boundary": "timestamp is UTC bar-close-aligned model input timestamp inherited from Stage 03/04 contracts",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "candidate_for_next_probe"
+      ],
+      "blocking": false,
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "forbidden_claims": [
+        "best_model",
+        "selected_model",
+        "operating_promotion"
+      ],
+      "model_or_threshold_surface": "RUN03D ExtraTrees variants and thresholds",
+      "overfit_checks": "validation/OOS gap, monthly hit dispersion, weak month ratio, signal density",
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/model_validation.json",
+      "selection_metric_boundary": "stability_score is a scout ranking only, not promotion metric",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "triggered": true,
+      "validation_split": "single validation/OOS split with month/quarter stability aggregation"
+    },
+    {
+      "blocking": false,
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "hashes_or_missing_reasons": "hashes recorded in run_manifest artifacts and summary artifacts",
+      "human_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03G_variant_stability_probe_packet.md"
+      ],
+      "lineage_boundary": "connected_with_boundary; source predictions are reused without retraining",
+      "machine_readable": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/run_manifest.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/summary.json"
+      ],
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "produced_artifacts": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/run_manifest.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/kpi_record.json",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/reports/result_summary.md"
+      ],
+      "raw_evidence": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/results/variant_stability.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/results/monthly_stability.csv"
+      ],
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/artifact_lineage.json",
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/results/variant_results.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03D_et_standalone_batch20_v1/predictions/scored_validation_oos.parquet"
+      ],
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "blocking": false,
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "exploration_lane": "Stage12 ExtraTrees standalone variant stability",
+      "idea_boundary": "v09/v16/v13 are next MT5 probe candidates; v20 is failure boundary memory",
+      "negative_memory_effect": "NR-017 records inverse-only failure boundary",
+      "operating_claim_boundary": "No alpha quality or promotion claim.",
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/exploration_mandate.json",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "reviewed_structural_scout"
+      ],
+      "blocking": false,
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "evidence_used": [
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/reports/result_summary.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03G_et_variant_stability_probe_v1/results/shortlist.csv"
+      ],
+      "forbidden_claims": [
+        "positive_runtime_result",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "judgment_boundary": "inconclusive_variant_stability_structural_scout",
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/result_judgment.json",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "triggered": true
+    },
+    {
+      "allowed_claims": [
+        "completed_python_structural_scout",
+        "reviewed_with_boundary"
+      ],
+      "blocking": false,
+      "created_at_utc": "2026-05-01T01:24:58Z",
+      "final_status": "reviewed_python_structural_scout",
+      "forbidden_claims": [
+        "alpha_quality",
+        "live_readiness",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "packet_id": "stage12_run03g_variant_stability_probe_v1",
+      "receipt_path": "docs/agent_control/packets/stage12_run03g_variant_stability_probe_v1/skill_receipts/claim_discipline.json",
+      "requested_claims": [
+        "completed",
+        "reviewed"
+      ],
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "triggered": true
+    }
+  ]
+}

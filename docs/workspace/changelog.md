@@ -1,5 +1,30 @@
 ﻿# Workspace Changelog
 
+## 2026-05-02
+
+- 2026-05-02: `stage12_model_family_challenge_closeout_v1` completed(완료). Stage12(12단계) ExtraTrees(엑스트라 트리) standalone exploration(단독 탐색)을 `reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방)`로 닫았다. Effect(효과): RUN03L/RUN03O/RUN03Q(실행 03L/03O/03Q)는 preserved clues(보존 단서)로 남기고, alpha quality(알파 품질), promotion candidate(승격 후보), baseline(기준선), runtime authority(런타임 권위)는 만들지 않는다.
+- 2026-05-02: Stage13 folder(Stage13 폴더)는 만들지 않았다. Effect(효과): 다음 주제 전환(topic pivot, 주제 전환)은 새 대화에서 시작하고, 이번 commit(커밋)은 Stage12(12단계) 마감 근거만 반영한다.
+
+## 2026-05-01
+
+- 2026-05-01: `run03S_et_probability_shape_attribution_probe_v1` completed(완료). fold07(접힘 7) 없이 probability-shape attribution-regime probe(확률 모양 귀속 국면 탐침)를 실행했다. attempts(시도) `18`, normalized KPI(정규화 KPI) `30`. Effect(효과): 모델 미세조정이 아니라 확률 모양 귀속 구조 축을 failure/salvage memory(실패/회수 기억)로 남겼다.
+- 2026-05-01: `run03R_et_gap_overnight_context_probe_v1` completed(완료). fold07(접힘 7) 없이 gap/overnight context-regime probe(갭/야간 문맥 국면 탐침)를 실행했다. attempts(시도) `18`, normalized KPI(정규화 KPI) `30`. Effect(효과): 모델 미세조정이 아니라 갭/야간 문맥 구조 축을 failure/salvage memory(실패/회수 기억)로 남겼다.
+- 2026-05-01: `run03Q_et_macro_proxy_regime_probe_v1` completed(완료). fold07(접힘 7) 없이 macro proxy regime-regime probe(거시 대리 국면 국면 탐침)를 실행했다. attempts(시도) `18`, normalized KPI(정규화 KPI) `30`. Effect(효과): 모델 미세조정이 아니라 거시 대리 국면 구조 축을 failure/salvage memory(실패/회수 기억)로 남겼다.
+- 2026-05-01: `run03P_et_mega_cap_divergence_probe_v1` completed(완료). fold07(접힘 7) 없이 mega-cap divergence-regime probe(대형주 괴리 국면 탐침)를 실행했다. attempts(시도) `18`, normalized KPI(정규화 KPI) `30`. Effect(효과): 모델 미세조정이 아니라 대형주 괴리 구조 축을 failure/salvage memory(실패/회수 기억)로 남겼다.
+- 2026-05-01: `run03O_et_trend_chop_regime_probe_v1` completed(완료). fold07(접힘 7) 없이 trend/chop-regime probe(추세/횡보 국면 탐침)를 실행했다. attempts(시도) `18`, normalized KPI(정규화 KPI) `30`. Effect(효과): 모델 미세조정이 아니라 추세/횡보 구조 축을 failure/salvage memory(실패/회수 기억)로 남겼다.
+- 2026-05-01: `run03N_et_volatility_regime_probe_v1` completed(완료). fold07(접힘 7) 없이 volatility-regime probe(변동성 국면 탐침)를 실행했다. attempts(시도) `18`, normalized KPI(정규화 KPI) `30`. Effect(효과): 모델 미세조정이 아니라 변동성 구조 축을 failure/salvage memory(실패/회수 기억)로 남겼다.
+- 2026-05-01: `run03M_et_session_age_regime_probe_v1` completed(완료). fold07(접힘 7) 없이 session-age regime probe(세션 경과 국면 탐침)를 실행했다. attempts(시도) `30`, normalized KPI(정규화 KPI) `50`. Effect(효과): 모델 미세조정이 아니라 시간 구조 축을 failure/salvage memory(실패/회수 기억)로 남겼다.
+- 2026-05-01: `run03L_et_recency_weighted_single_v1` completed(완료). recency-weighted ExtraTrees(최근성 가중 엑스트라 트리) single probe(단일 탐침)를 Python WFO(파이썬 워크포워드 최적화)와 MT5(메타트레이더5) fold07(접힘 7)로 실행했다. attempts(시도) `6`, normalized KPI(정규화 KPI) `10`. Effect(효과): sample_weight(표본 가중치) 축을 실패/회수 기억으로 보존했고 승격 주장은 만들지 않았다.
+- 2026-05-01: `run03K_et_wfo_fold07_all_variant_mt5_failure_probe_v1` completed(완료). RUN03J(실행 03J) WFO fold07(워크포워드 접힘 7)을 MT5(`MetaTrader 5`, 메타트레이더5) failure-data probe(실패 데이터 탐침)로 검증했다. attempts(시도) `120`, normalized KPI(정규화 KPI) `200`. Effect(효과): 약한 WFO(워크포워드 최적화) 결과를 실패 근거로 남겼고 승격 의미는 만들지 않았다.
+- 2026-05-01: `run03J_et_rolling_wfo_split_probe_v1` completed(완료). Stage 12(12단계) ExtraTrees(엑스트라트리) 20개 변형을 rolling WFO split probe(구르는 워크포워드 분할 탐침)로 실행했다. variants/folds(변형/접힘) `20/7`, judgment(판정) `inconclusive_rolling_wfo_no_stable_repeatability_not_promotion`. Effect(효과): RUN03H(실행 03H)의 validation/OOS inversion(검증/표본외 반전)을 단일 분할 주장으로 닫지 않고 반복성 탐색 기억으로 남긴다.
+- 2026-05-01: `run03I_et_validation_oos_inversion_attribution_v1` completed(완료). RUN03H(실행 03H) MT5 evidence(근거)에서 validation/OOS inversion attribution(검증/표본외 반전 귀속)을 수행했다. routed validation positive(라우팅 검증 양수) `0/20`, routed OOS positive(라우팅 표본외 양수) `19/20`. 효과(effect, 효과): 다음 Stage 12(12단계) 탐색을 WFO(워크포워드 최적화) 계열로 보낸다; 승격 의미는 없음.
+- 2026-05-01: `run03G_et_variant_stability_probe_v1` completed(완료). Stage12 ExtraTrees variant stability structural scout(12단계 엑스트라트리스 변형 안정성 구조 탐침), best(최상위) `v16_base_long_only_q90`, next MT5 candidates(다음 MT5 후보) `v09_depth8_leaf10_q90, v16_base_long_only_q90, v13_base_margin002_q90`, external verification(외부 검증) `out_of_scope_by_claim_python_structural_scout`.
+- `alpha_stage_transition_philosophy_correction_v1(알파 단계 전환 철학 정정 묶음)`을 추가했다. 효과(effect, 효과)는 alpha exploration stage transition(알파 탐색 단계 전환)을 baseline selection(기준선 선택)이 아니라 topic pivot(주제 전환)으로 고정하는 것이다.
+- `docs/policies/stage_structure.md`와 `docs/policies/exploration_mandate.md`에 no baseline closure during alpha exploration(알파 탐색 중 기준선 종료 금지)을 추가했다. 효과(effect, 효과)는 closeout(마감)이 seed surface(씨앗 표면), preserved clue(보존 단서), negative memory(부정 기억), invalid setup(무효 설정), blocked retry(차단 재시도)를 분류하게 하는 것이다.
+- `AGENTS.md`와 `docs/policies/agent_trigger_policy.md`에 같은 policy reference(정책 참조)를 연결했다. 효과(effect, 효과)는 future agent re-entry(미래 에이전트 재진입) 때 알파 단계 전환 규칙(alpha stage transition rule, 알파 단계 전환 규칙)이 먼저 보이게 하는 것이다.
+- Stage 10(10단계) `run01Y(실행 01Y)`는 current truth(현재 진실)에서 baseline(기준선)이 아니라 seed surface(씨앗 표면)와 reference surface(참고 표면)로 재해석했다. 효과(effect, 효과)는 Stage 11(11단계)을 Stage 10(10단계) 기준선 검증으로 오해하지 않고, LightGBM/label/context(라이트GBM/라벨/문맥) topic pivot(주제 전환)으로 읽게 하는 것이다.
+- 이 정정(correction, 정정)은 trading result(거래 결과), alpha quality(알파 품질), live readiness(실거래 준비), operating promotion(운영 승격), runtime authority(런타임 권위)를 만들지 않는다.
+
 ## 2026-04-30
 
 - `current_truth_sync_20260430_v1(현재 진실 동기화 묶음)`을 추가했다. 효과(effect, 효과)는 Stage 12(12단계) 전환, RUN03F(실행 03F) 현재 실행, alpha scout common foundation(알파 탐색 공통 기반), p0p1 runtime evidence cleanup(P0/P1 런타임 근거 정리)을 같은 current truth(현재 진실) 경계로 맞추는 것이다.
@@ -157,3 +182,4 @@
 - RUN03B(실행 03B)는 validation/OOS(검증/표본외) 신호 `604/463`, hit rate(적중률) `0.352649/0.427646`, macro F1(매크로 F1) `0.424607/0.446554`를 기록했다. 효과(effect, 효과)는 신호 밀도는 생겼지만 검증/표본외 품질이 약해서 `inconclusive_standalone_extratrees_training_effect(불충분 단독 엑스트라 트리 학습 효과)`로 남기는 것이다.
 - 2026-04-28: `run03D_et_standalone_batch20_v1` completed(완료). Stage12 standalone batch20(단독 20개 묶음) Python structural scout(파이썬 구조 탐색), best(최상위) `v11_base_leaf20_q85` validation/OOS hit(검증/표본외 적중) `0.392688` / `0.457317`, MT5 external verification(메타트레이더5 외부 검증) `out_of_scope_by_claim`.
 - 2026-04-28: `run03E_et_batch20_top_v11_mt5_probe_v1` completed(완료). RUN03D top variant(상위 변형) `v11_base_leaf20_q85` MT5 runtime_probe(MT5 런타임 탐침), validation/OOS net(검증/표본외 순손익) `-205.14` / `362.83`, external verification(외부 검증) `completed`.
+- 2026-05-01: RUN03H all-variant MT5 tier-balance runtime_probe completed status `completed` for 20 Stage12 ExtraTrees variants. Effect(효과): selection-free(무선별) MT5 evidence(근거)가 Tier A/B/routed views(티어 A/B/라우팅 보기)로 남았다.

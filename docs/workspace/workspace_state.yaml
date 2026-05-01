@@ -1,134 +1,149 @@
-﻿updated_on: "2026-04-30"
-project_mode: "clean_stage_restart"
-active_branch: "main"
-active_stage: "12_model_family_challenge__extratrees_training_effect"
+﻿updated_on: '2026-05-02'
+project_mode: clean_stage_restart
+active_branch: codex/alpha-stage-transition-policy
+active_stage: 12_model_family_challenge__extratrees_training_effect
 current_operating_reference: null
 current_shadow_challenger: null
-exploration_rule: "tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with component and total records"
+exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
+  component and total records
+alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 단계 전환) are topic pivots(주제 전환), not baseline selection(기준선
+  선택); closeout(마감)은 seed clues/failure memory/invalid/blocked branches(씨앗 단서/실패 기억/무효/차단 갈래)를 분류하고 explicit promotion/operating
+  packet(명시 승격/운영 작업 묶음) 없이는 baseline(기준선)을 만들지 않는다
 shared_window:
-  start: "2022-08-01"
-  end_inclusive: "2026-04-13"
-  status: "stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_active"
-practical_modeling_start: "2022-09-01"
+  start: '2022-08-01'
+  end_inclusive: '2026-04-13'
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_no_next_stage_opened
+practical_modeling_start: '2022-09-01'
 current_focus:
-  - "treat Tier A and Tier B as explorable sample labels, not exploration gates"
-  - "record Tier A, Tier B, and Tier A+B views together in stage and project alpha ledgers; routed MT5 runs read these as A-used, B-fallback-used, and actual routed total"
-  - "use the first default training label and split contract as the starting evidence surface"
-  - "treat the 56-feature model input as an interim quarantine artifact, not the final pre-alpha path"
-  - "treat the Stage 04 top3 weights as MT5 price-proxy weights, not actual NDX/QQQ weights"
-  - "treat the Stage 05 audit as feature-integrity evidence, not model quality or runtime authority"
-  - "treat the Stage 06 runtime parity packet as completed MT5 runtime-authority evidence for the minimum fixture set"
-  - "use the Stage 07 baseline training smoke as Python-side pipeline evidence, not alpha quality"
-  - "use the audited 58-feature MT5 price-proxy model input as the first model-backed alpha protocol input surface"
-  - "follow the Stage 04-09 pre-alpha stage queue before model-backed alpha exploration"
-  - "preserve the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority input behind the Stage 07 smoke"
-  - "treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result"
-  - "use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10"
-  - "treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01A-run01X remain comparison baselines, not live readiness or operating promotion"
-  - "treat Stage 11 as reviewed_closed_no_next_stage_opened; run02A-run02S, run02W-run02Z, and run02AA-run02AK are completed LightGBM training, threshold, divergent, idea-burst, salvage-extension, fwd18-retrain, fwd18 inverse-rank context, and stress MT5 runtime_probe evidence, not alpha quality or operating promotion"
-  - "treat Stage 12 as active standalone(단독) ExtraTrees(엑스트라 트리) lane(레인); RUN03A is invalid_for_standalone_scope(단독 범위 무효), RUN03B is source Python scout(원천 파이썬 탐침), RUN03D is latest standalone batch20 Python package(최신 단독 20개 묶음 파이썬 패키지), RUN03E is the prior Tier A-only MT5 runtime_probe(이전 Tier A 단독 MT5 런타임 탐침), and RUN03F is current Tier A/B/routed MT5 tier-balance supplement(현재 Tier A/B/라우팅 MT5 티어 균형 보강)"
-  - "treat agent-control KPI rebuild packets(에이전트 제어 KPI 재구축 묶음) as cross-stage evidence management(교차 단계 근거 관리), not alpha quality(알파 품질), live readiness(실거래 준비), or operating promotion(운영 승격)"
-  - "treat alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) as code ownership(코드 소유권) and agent closeout hardening(에이전트 마감 강화), not alpha quality(알파 품질) or runtime authority(런타임 권위)"
-  - "treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added"
+- treat Tier A and Tier B as explorable sample labels, not exploration gates
+- treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not baseline selection(기준선 선택), unless an
+  explicit promotion/operating packet(명시 승격/운영 작업 묶음) opens
+- record Tier A, Tier B, and Tier A+B views together in stage and project alpha ledgers; routed MT5 runs read these as A-used,
+  B-fallback-used, and actual routed total
+- use the first default training label and split contract as the starting evidence surface
+- treat the 56-feature model input as an interim quarantine artifact, not the final pre-alpha path
+- treat the Stage 04 top3 weights as MT5 price-proxy weights, not actual NDX/QQQ weights
+- treat the Stage 05 audit as feature-integrity evidence, not model quality or runtime authority
+- treat the Stage 06 runtime parity packet as completed MT5 runtime-authority evidence for the minimum fixture set
+- use the Stage 07 baseline training smoke as Python-side pipeline evidence, not alpha quality
+- use the audited 58-feature MT5 price-proxy model input as the first model-backed alpha protocol input surface
+- follow the Stage 04-09 pre-alpha stage queue before model-backed alpha exploration
+- preserve the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority input behind the Stage 07 smoke
+- treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result
+- use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10
+- treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01Y is a seed surface(씨앗
+  표면) and preserved clue(보존 단서), not alpha baseline(알파 기준선), live readiness, or operating promotion
+- treat Stage 11 as reviewed_closed_no_next_stage_opened; run02A-run02S, run02W-run02Z, and run02AA-run02AK are completed
+  LightGBM training, threshold, divergent, idea-burst, salvage-extension, fwd18-retrain, fwd18 inverse-rank context, and stress
+  MT5 runtime_probe evidence, not alpha quality or operating promotion
+- treat Stage 12 as reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방); preserve RUN03L recency-weighted(최근성 가중),
+  RUN03O trend/chop(추세/횡보), and RUN03Q risk-on OOS(위험선호 표본외) as clues(단서), but do not create alpha quality(알파 품질),
+  promotion candidate(승격 후보), runtime authority(런타임 권위), operating reference(운영 기준), or baseline(기준선)
+- treat agent-control KPI rebuild packets(에이전트 제어 KPI 재구축 묶음) as cross-stage evidence management(교차 단계 근거 관리), not alpha quality(알파
+  품질), live readiness(실거래 준비), or operating promotion(운영 승격)
+- treat alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) as code ownership(코드 소유권) and agent closeout hardening(에이전트 마감 강화),
+  not alpha quality(알파 품질) or runtime authority(런타임 권위)
+- treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
+  only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: "stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_active"
-  plan_path: "docs/workspace/pre_alpha_stage_plan.md"
-  decision_path: "docs/decisions/2026-04-25_pre_alpha_stage_queue.md"
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_no_next_stage_opened
+  plan_path: docs/workspace/pre_alpha_stage_plan.md
+  decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
   interim_quarantine_feature_count: 56
   stages:
     stage04:
-      stage_id: "04_model_input_readiness__weights_parity_feature_audit"
-      ownership: "mt5_price_proxy_top3_weights_and_58_feature_model_input_rematerialization"
-      status: "reviewed_closed_handoff_to_stage05_complete"
+      stage_id: 04_model_input_readiness__weights_parity_feature_audit
+      ownership: mt5_price_proxy_top3_weights_and_58_feature_model_input_rematerialization
+      status: reviewed_closed_handoff_to_stage05_complete
     stage05:
-      stage_id: "05_feature_integrity__formula_time_alignment_leakage_audit"
-      ownership: "feature_formula_time_external_alignment_and_label_leakage_audits"
-      status: "reviewed_closed_handoff_to_stage06_complete"
+      stage_id: 05_feature_integrity__formula_time_alignment_leakage_audit
+      ownership: feature_formula_time_external_alignment_and_label_leakage_audits
+      status: reviewed_closed_handoff_to_stage06_complete
     stage06:
-      stage_id: "06_runtime_parity__python_mt5_runtime_authority"
-      ownership: "python_mt5_parity_and_full_mt5_runtime_authority"
-      status: "reviewed_runtime_parity_closed_handoff_to_stage07_complete"
+      stage_id: 06_runtime_parity__python_mt5_runtime_authority
+      ownership: python_mt5_parity_and_full_mt5_runtime_authority
+      status: reviewed_runtime_parity_closed_handoff_to_stage07_complete
     stage07:
-      stage_id: "07_model_training_baseline__contract_preprocessing_smoke"
-      ownership: "preprocessing_policy_model_training_contract_and_baseline_smoke_run"
-      status: "reviewed_closed_handoff_to_stage08_complete"
+      stage_id: 07_model_training_baseline__contract_preprocessing_smoke
+      ownership: preprocessing_policy_model_training_contract_and_baseline_smoke_run
+      status: reviewed_closed_handoff_to_stage08_complete
     stage08:
-      stage_id: "08_alpha_entry_protocol__tier_reporting_search_rules"
-      ownership: "alpha_search_protocol_and_tier_a_b_reporting_rules"
-      status: "reviewed_closed_handoff_to_stage09_complete_with_alpha_entry_protocol"
+      stage_id: 08_alpha_entry_protocol__tier_reporting_search_rules
+      ownership: alpha_search_protocol_and_tier_a_b_reporting_rules
+      status: reviewed_closed_handoff_to_stage09_complete_with_alpha_entry_protocol
     stage09:
-      stage_id: "09_pre_alpha_handoff__registry_publish_packet"
-      ownership: "registry_current_truth_publish_boundary_and_alpha_entry_packet"
-      status: "reviewed_closed_handoff_to_stage10_complete_with_pre_alpha_handoff_packet"
+      stage_id: 09_pre_alpha_handoff__registry_publish_packet
+      ownership: registry_current_truth_publish_boundary_and_alpha_entry_packet
+      status: reviewed_closed_handoff_to_stage10_complete_with_pre_alpha_handoff_packet
     stage10:
-      stage_id: "10_alpha_scout__default_split_model_threshold_scan"
-      ownership: "default_split_model_threshold_single_split_scout"
-      status: "reviewed_closed_handoff_to_stage11_ready"
+      stage_id: 10_alpha_scout__default_split_model_threshold_scan
+      ownership: default_split_model_threshold_single_split_scout
+      status: reviewed_closed_handoff_to_stage11_ready
     stage11:
-      stage_id: "11_alpha_robustness__wfo_label_horizon_sensitivity"
-      ownership: "run01Y_robustness_and_training_method_scout"
-      status: "reviewed_closed_no_next_stage_opened"
+      stage_id: 11_alpha_robustness__wfo_label_horizon_sensitivity
+      ownership: LightGBM label-horizon and context topic pivot from the Stage 10 run01Y seed surface
+      status: reviewed_closed_no_next_stage_opened
     stage12:
-      stage_id: "12_model_family_challenge__extratrees_training_effect"
-      ownership: "standalone ExtraTrees model-family training effect without Stage 10/11 inheritance"
-      status: "active_standalone_tier_balance_mt5_supplement_completed"
+      stage_id: 12_model_family_challenge__extratrees_training_effect
+      ownership: standalone ExtraTrees model-family training effect without Stage 10/11 inheritance
+      status: reviewed_closed_no_next_stage_opened
 stage01_raw_m5_inventory:
-  run_id: "20260424_raw_m5_inventory"
-  status: "complete"
+  run_id: 20260424_raw_m5_inventory
+  status: complete
   usable_symbol_count: 12
   expected_symbol_count: 12
-  common_first_open_utc: "2022-08-01T16:35:00Z"
-  common_last_open_utc: "2026-04-13T22:55:00Z"
-  us100_first_open_utc: "2022-08-01T01:00:00Z"
-  us100_last_open_utc: "2026-04-13T23:55:00Z"
-  timezone_status: "UNRESOLVED_REQUIRES_MANUAL_BINDING"
-  report_path: "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_raw_m5_inventory/raw_m5_inventory.md"
+  common_first_open_utc: '2022-08-01T16:35:00Z'
+  common_last_open_utc: '2026-04-13T22:55:00Z'
+  us100_first_open_utc: '2022-08-01T01:00:00Z'
+  us100_last_open_utc: '2026-04-13T23:55:00Z'
+  timezone_status: UNRESOLVED_REQUIRES_MANUAL_BINDING
+  report_path: stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_raw_m5_inventory/raw_m5_inventory.md
 stage01_time_semantics_probe:
-  run_id: "20260424_time_semantics_probe"
-  status: "reviewed"
-  candidate_interpretation: "broker_server_wall_clock_candidate"
+  run_id: 20260424_time_semantics_probe
+  status: reviewed
+  candidate_interpretation: broker_server_wall_clock_candidate
   direct_utc_match_ratio: 0.0
   broker_wall_clock_like_ratio: 0.929082
-  report_path: "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_time_semantics_probe/time_semantics_probe.md"
+  report_path: stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_time_semantics_probe/time_semantics_probe.md
 stage01_timestamp_policy:
-  decision_id: "2026-04-24_stage01_timestamp_policy"
-  status: "decided"
-  policy: "dual_time_axis"
-  alignment_key: "raw_broker_clock_bar_close_key"
-  session_time_source_required: "timestamp_event_utc_or_broker_session_calendar"
-  contract_path: "docs/contracts/time_axis_policy_fpmarkets_v2.md"
+  decision_id: 2026-04-24_stage01_timestamp_policy
+  status: decided
+  policy: dual_time_axis
+  alignment_key: raw_broker_clock_bar_close_key
+  session_time_source_required: timestamp_event_utc_or_broker_session_calendar
+  contract_path: docs/contracts/time_axis_policy_fpmarkets_v2.md
 stage01_broker_session_calendar_mapper:
-  run_id: "20260424_broker_session_calendar_mapper"
-  status: "reviewed_mapper_ready"
-  broker_clock_timezone: "Europe/Athens"
-  session_timezone: "America/New_York"
+  run_id: 20260424_broker_session_calendar_mapper
+  status: reviewed_mapper_ready
+  broker_clock_timezone: Europe/Athens
+  session_timezone: America/New_York
   cash_session_days: 8370
   full_cash_session_days: 7149
   partial_cash_session_days: 1221
   full_cash_session_ratio: 0.854122
-  report_path: "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_broker_session_calendar_mapper/broker_session_calendar_audit.md"
+  report_path: stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_broker_session_calendar_mapper/broker_session_calendar_audit.md
 stage01_feature_frame_target:
-  run_id: "20260424_feature_frame_target_probe"
-  status: "reviewed_selected_handoff_complete"
-  target_id: "practical_start_full_cash_day_valid_rows_only"
-  start_utc: "2022-09-01T00:00:00Z"
-  row_scope: "valid_row_only"
-  session_scope: "cash_open_rows_only"
-  day_scope: "full_cash_session_days_only"
+  run_id: 20260424_feature_frame_target_probe
+  status: reviewed_selected_handoff_complete
+  target_id: practical_start_full_cash_day_valid_rows_only
+  start_utc: '2022-09-01T00:00:00Z'
+  row_scope: valid_row_only
+  session_scope: cash_open_rows_only
+  day_scope: full_cash_session_days_only
   valid_rows: 54439
   full_cash_day_count: 890
   valid_row_ny_day_count: 887
   excluded_partial_cash_days: 40
   excluded_partial_day_valid_rows: 252
-  report_path: "stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_feature_frame_target_probe/feature_frame_target_probe.md"
+  report_path: stages/01_data_foundation__raw_m5_inventory/02_runs/20260424_feature_frame_target_probe/feature_frame_target_probe.md
 stage02_first_shared_feature_frame_freeze:
-  run_id: "20260424_practical_full_cash_freeze_materialization"
-  status: "reviewed_closed_handoff_complete"
-  dataset_id: "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01"
-  row_scope: "valid_row_only"
-  session_scope: "cash_open_rows_only"
-  day_scope: "full_cash_session_days_only"
+  run_id: 20260424_practical_full_cash_freeze_materialization
+  status: reviewed_closed_handoff_complete
+  dataset_id: dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01
+  row_scope: valid_row_only
+  session_scope: cash_open_rows_only
+  day_scope: full_cash_session_days_only
   raw_rows: 255001
   valid_rows: 55408
   invalid_rows: 199593
@@ -138,16 +153,16 @@ stage02_first_shared_feature_frame_freeze:
   excluded_partial_cash_days: 40
   excluded_partial_day_valid_rows: 252
   feature_count: 58
-  feature_order_hash: "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
-  dataset_summary_path: "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json"
-  review_path: "stages/02_feature_frame__practical_full_cash_freeze/03_reviews/first_shared_feature_frame_freeze_review.md"
+  feature_order_hash: fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2
+  dataset_summary_path: data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json
+  review_path: stages/02_feature_frame__practical_full_cash_freeze/03_reviews/first_shared_feature_frame_freeze_review.md
 stage03_first_training_label_split_contract:
-  run_id: "20260425_label_v1_fwd12_split_v1_materialization"
-  status: "reviewed_materialized_handoff_to_stage04_complete"
-  label_id: "label_v1_fwd12_m5_logret_train_q33_3class"
-  split_id: "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413"
-  training_dataset_id: "training_fpmarkets_v2_us100_m5_label_v1_fwd12_m5_logret_train_q33_3class_split_v1"
-  source_dataset_id: "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01"
+  run_id: 20260425_label_v1_fwd12_split_v1_materialization
+  status: reviewed_materialized_handoff_to_stage04_complete
+  label_id: label_v1_fwd12_m5_logret_train_q33_3class
+  split_id: split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413
+  training_dataset_id: training_fpmarkets_v2_us100_m5_label_v1_fwd12_m5_logret_train_q33_3class_split_v1
+  source_dataset_id: dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01
   horizon_bars: 12
   horizon_minutes: 60
   threshold_log_return: 0.001277833051854688
@@ -155,150 +170,150 @@ stage03_first_training_label_split_contract:
   train_rows: 29222
   validation_rows: 9844
   oos_rows: 7584
-  training_dataset_summary_path: "data/processed/training_datasets/label_v1_fwd12_split_v1/training_dataset_summary.json"
-  training_dataset_path: "data/processed/training_datasets/label_v1_fwd12_split_v1/training_dataset.parquet"
-  review_path: "stages/03_training_dataset__label_split_contract/03_reviews/first_training_label_split_contract_review.md"
+  training_dataset_summary_path: data/processed/training_datasets/label_v1_fwd12_split_v1/training_dataset_summary.json
+  training_dataset_path: data/processed/training_datasets/label_v1_fwd12_split_v1/training_dataset.parquet
+  review_path: stages/03_training_dataset__label_split_contract/03_reviews/first_training_label_split_contract_review.md
 stage04_first_model_input_feature_set:
-  run_id: "20260425_model_input_feature_set_v1_no_placeholder_top3_weights"
-  status: "reviewed_interim_quarantine_artifact_not_final_pre_alpha_path"
-  model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_feature_set_v1_no_placeholder_top3_weights"
-  source_training_dataset_id: "training_fpmarkets_v2_us100_m5_label_v1_fwd12_m5_logret_train_q33_3class_split_v1"
-  feature_set_id: "feature_set_v1_no_placeholder_top3_weight_features"
-  model_input_policy_id: "model_input_v1_quarantine_placeholder_top3_weight_features"
+  run_id: 20260425_model_input_feature_set_v1_no_placeholder_top3_weights
+  status: reviewed_interim_quarantine_artifact_not_final_pre_alpha_path
+  model_input_dataset_id: model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_feature_set_v1_no_placeholder_top3_weights
+  source_training_dataset_id: training_fpmarkets_v2_us100_m5_label_v1_fwd12_m5_logret_train_q33_3class_split_v1
+  feature_set_id: feature_set_v1_no_placeholder_top3_weight_features
+  model_input_policy_id: model_input_v1_quarantine_placeholder_top3_weight_features
   formal_pre_alpha_required_feature_count: 58
-  formal_pre_alpha_next_action: "superseded_by_mt5_price_proxy_58_feature_path"
+  formal_pre_alpha_next_action: superseded_by_mt5_price_proxy_58_feature_path
   source_feature_count: 58
   included_feature_count: 56
   quarantined_features:
-    - "top3_weighted_return_1"
-    - "us100_minus_top3_weighted_return_1"
-  included_feature_order_hash: "84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89"
+  - top3_weighted_return_1
+  - us100_minus_top3_weighted_return_1
+  included_feature_order_hash: 84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89
   rows: 46650
   train_rows: 29222
   validation_rows: 9844
   oos_rows: 7584
-  model_input_dataset_summary_path: "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_summary.json"
-  model_input_dataset_path: "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_dataset.parquet"
-  review_path: "stages/04_model_input_readiness__weights_parity_feature_audit/03_reviews/first_model_input_feature_set_review.md"
+  model_input_dataset_summary_path: data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_summary.json
+  model_input_dataset_path: data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v1/model_input_dataset.parquet
+  review_path: stages/04_model_input_readiness__weights_parity_feature_audit/03_reviews/first_model_input_feature_set_review.md
 stage04_top3_price_proxy_weights:
-  run_id: "20260425_top3_price_proxy_weights_v1"
-  status: "reviewed_materialized_price_proxy_not_actual_index_weight"
-  weight_table_id: "top3_monthly_price_proxy_weights_fpmarkets_v2_v1"
-  weight_method_id: "mt5_price_proxy_close_share_v1"
-  weight_path: "foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv"
-  weights_sha256: "08531dbf5235a166e5b2e9dc675ec3d41a0cc84066d00592c37f500aa8f89981"
+  run_id: 20260425_top3_price_proxy_weights_v1
+  status: reviewed_materialized_price_proxy_not_actual_index_weight
+  weight_table_id: top3_monthly_price_proxy_weights_fpmarkets_v2_v1
+  weight_method_id: mt5_price_proxy_close_share_v1
+  weight_path: foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv
+  weights_sha256: 08531dbf5235a166e5b2e9dc675ec3d41a0cc84066d00592c37f500aa8f89981
   month_count: 45
   bootstrap_months:
-    - "2022-08"
-  boundary: "mt5_price_proxy_not_actual_ndx_or_qqq_weight"
-  run_path: "stages/04_model_input_readiness__weights_parity_feature_audit/02_runs/20260425_top3_price_proxy_weights_v1"
+  - 2022-08
+  boundary: mt5_price_proxy_not_actual_ndx_or_qqq_weight
+  run_path: stages/04_model_input_readiness__weights_parity_feature_audit/02_runs/20260425_top3_price_proxy_weights_v1
 stage04_proxy_feature_frame:
-  dataset_id: "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58"
-  status: "local_materialized_reviewed"
-  source_weight_table_id: "top3_monthly_price_proxy_weights_fpmarkets_v2_v1"
+  dataset_id: dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58
+  status: local_materialized_reviewed
+  source_weight_table_id: top3_monthly_price_proxy_weights_fpmarkets_v2_v1
   selected_rows: 54439
   feature_count: 58
-  feature_order_hash: "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
-  features_sha256: "4b2ddcf6e8ccd58f1838877e2bec8c19729d14afd997ee0ffa41b6be50b5d1e2"
-  dataset_summary_path: "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/dataset_summary.json"
+  feature_order_hash: fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2
+  features_sha256: 4b2ddcf6e8ccd58f1838877e2bec8c19729d14afd997ee0ffa41b6be50b5d1e2
+  dataset_summary_path: data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/dataset_summary.json
 stage04_proxy_training_label_split:
-  run_id: "20260425_label_v1_fwd12_split_v1_proxyw58"
-  status: "reviewed_materialized"
-  training_dataset_id: "training_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58"
-  source_dataset_id: "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58"
+  run_id: 20260425_label_v1_fwd12_split_v1_proxyw58
+  status: reviewed_materialized
+  training_dataset_id: training_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58
+  source_dataset_id: dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58
   rows: 46650
   train_rows: 29222
   validation_rows: 9844
   oos_rows: 7584
-  training_dataset_sha256: "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
-  training_dataset_path: "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset.parquet"
-  training_dataset_summary_path: "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json"
+  training_dataset_sha256: c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f
+  training_dataset_path: data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset.parquet
+  training_dataset_summary_path: data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json
 stage04_proxy_model_input_feature_set:
-  run_id: "20260425_model_input_feature_set_v2_mt5_price_proxy_58"
-  status: "reviewed_58_feature_price_proxy_model_input_materialized_handoff_to_stage05_complete"
-  model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
-  source_training_dataset_id: "training_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58"
-  feature_set_id: "feature_set_v2_mt5_price_proxy_top3_weights_58_features"
-  model_input_policy_id: "model_input_v2_include_mt5_price_proxy_top3_weight_features"
+  run_id: 20260425_model_input_feature_set_v2_mt5_price_proxy_58
+  status: reviewed_58_feature_price_proxy_model_input_materialized_handoff_to_stage05_complete
+  model_input_dataset_id: model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2
+  source_training_dataset_id: training_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58
+  feature_set_id: feature_set_v2_mt5_price_proxy_top3_weights_58_features
+  model_input_policy_id: model_input_v2_include_mt5_price_proxy_top3_weight_features
   included_feature_count: 58
-  included_feature_order_hash: "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+  included_feature_order_hash: fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2
   restored_features:
-    - "top3_weighted_return_1"
-    - "us100_minus_top3_weighted_return_1"
+  - top3_weighted_return_1
+  - us100_minus_top3_weighted_return_1
   rows: 46650
   train_rows: 29222
   validation_rows: 9844
   oos_rows: 7584
-  model_input_dataset_sha256: "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
-  model_input_dataset_path: "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet"
-  model_input_dataset_summary_path: "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
-  review_path: "stages/04_model_input_readiness__weights_parity_feature_audit/03_reviews/mt5_price_proxy_58_feature_model_input_review.md"
+  model_input_dataset_sha256: c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f
+  model_input_dataset_path: data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  model_input_dataset_summary_path: data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json
+  review_path: stages/04_model_input_readiness__weights_parity_feature_audit/03_reviews/mt5_price_proxy_58_feature_model_input_review.md
 stage05_feature_integrity_audit:
-  run_id: "20260425_stage05_feature_integrity_audit_v1"
-  status: "reviewed_closed_handoff_to_stage06_complete"
-  judgment: "positive_feature_integrity_audit_passed"
-  source_dataset_id: "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58"
-  model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
+  run_id: 20260425_stage05_feature_integrity_audit_v1
+  status: reviewed_closed_handoff_to_stage06_complete
+  judgment: positive_feature_integrity_audit_passed
+  source_dataset_id: dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58
+  model_input_dataset_id: model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2
   feature_frame_rows: 54439
   model_input_rows: 46650
-  feature_order_hash: "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+  feature_order_hash: fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2
   max_formula_abs_diff_after_float32_export: 0.0
   external_alignment_missing_total: 0
-  label_threshold_abs_diff: 0.000000000043664184247449445
-  max_future_log_return_abs_diff: 0.0000000030035123832483634
-  run_path: "stages/05_feature_integrity__formula_time_alignment_leakage_audit/02_runs/20260425_stage05_feature_integrity_audit_v1"
-  audit_summary_path: "stages/05_feature_integrity__formula_time_alignment_leakage_audit/02_runs/20260425_stage05_feature_integrity_audit_v1/audit_summary.json"
+  label_threshold_abs_diff: 4.3664184247449445e-11
+  max_future_log_return_abs_diff: 3.0035123832483634e-09
+  run_path: stages/05_feature_integrity__formula_time_alignment_leakage_audit/02_runs/20260425_stage05_feature_integrity_audit_v1
+  audit_summary_path: stages/05_feature_integrity__formula_time_alignment_leakage_audit/02_runs/20260425_stage05_feature_integrity_audit_v1/audit_summary.json
 stage06_runtime_parity_blocked:
-  run_id: "20260425_stage06_runtime_parity_blocked_v1"
-  status: "superseded_by_20260425_stage06_runtime_parity_closed_v1"
-  judgment: "blocked_runtime_authority_mt5_snapshot_missing_or_stale"
-  external_verification_status: "blocked"
-  runtime_state: "runtime_probe_blocked"
-  fixture_set_id: "fixture_fpmarkets_v2_stage06_runtime_minimum_v1"
-  bundle_id: "bundle_fpmarkets_v2_stage06_runtime_parity_v1"
-  report_id: "report_fpmarkets_v2_stage06_runtime_parity_blocked_v1"
+  run_id: 20260425_stage06_runtime_parity_blocked_v1
+  status: superseded_by_20260425_stage06_runtime_parity_closed_v1
+  judgment: blocked_runtime_authority_mt5_snapshot_missing_or_stale
+  external_verification_status: blocked
+  runtime_state: runtime_probe_blocked
+  fixture_set_id: fixture_fpmarkets_v2_stage06_runtime_minimum_v1
+  bundle_id: bundle_fpmarkets_v2_stage06_runtime_parity_v1
+  report_id: report_fpmarkets_v2_stage06_runtime_parity_blocked_v1
   python_snapshot_rows: 5
   ready_fixture_count: 4
   mt5_snapshot_rows: 0
-  metaeditor_compile_status: "pass_0_errors_0_warnings"
+  metaeditor_compile_status: pass_0_errors_0_warnings
   blocker:
-    - "mt5_snapshot_missing"
-    - "checked_in_mt5_audit_tools_are_stale_equal_weight_surface"
-  boundary: "blocked_runtime_probe_not_runtime_authority"
-  run_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1"
-  report_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1/runtime_parity_report.json"
+  - mt5_snapshot_missing
+  - checked_in_mt5_audit_tools_are_stale_equal_weight_surface
+  boundary: blocked_runtime_probe_not_runtime_authority
+  run_path: stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1
+  report_path: stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_blocked_v1/runtime_parity_report.json
 stage06_runtime_parity_closed:
-  run_id: "20260425_stage06_runtime_parity_closed_v1"
-  status: "reviewed_runtime_parity_closed_handoff_to_stage07_complete"
-  judgment: "positive_runtime_parity_passed"
-  external_verification_status: "completed"
-  runtime_state: "runtime_authority"
-  fixture_set_id: "fixture_fpmarkets_v2_stage06_runtime_minimum_v1"
-  bundle_id: "bundle_fpmarkets_v2_stage06_runtime_parity_v1"
-  report_id: "report_fpmarkets_v2_stage06_runtime_parity_closed_v1"
+  run_id: 20260425_stage06_runtime_parity_closed_v1
+  status: reviewed_runtime_parity_closed_handoff_to_stage07_complete
+  judgment: positive_runtime_parity_passed
+  external_verification_status: completed
+  runtime_state: runtime_authority
+  fixture_set_id: fixture_fpmarkets_v2_stage06_runtime_minimum_v1
+  bundle_id: bundle_fpmarkets_v2_stage06_runtime_parity_v1
+  report_id: report_fpmarkets_v2_stage06_runtime_parity_closed_v1
   python_snapshot_rows: 5
   mt5_snapshot_rows: 5
   compared_fixture_count: 5
   ready_fixture_count: 4
-  max_abs_diff: 0.0000017512503873717833
-  max_abs_diff_feature: "atr_50"
-  tolerance: 0.00001
-  metaeditor_compile_status: "pass_0_errors_0_warnings"
-  mt5_strategy_tester_status: "pass_snapshot_written"
-  boundary: "runtime_authority_for_stage06_minimum_fixture_set_not_model_quality_or_operating_promotion"
-  run_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1"
-  report_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/runtime_parity_report.json"
-  mt5_snapshot_path: "stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/mt5_feature_snapshot.jsonl"
+  max_abs_diff: 1.7512503873717833e-06
+  max_abs_diff_feature: atr_50
+  tolerance: 1.0e-05
+  metaeditor_compile_status: pass_0_errors_0_warnings
+  mt5_strategy_tester_status: pass_snapshot_written
+  boundary: runtime_authority_for_stage06_minimum_fixture_set_not_model_quality_or_operating_promotion
+  run_path: stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1
+  report_path: stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/runtime_parity_report.json
+  mt5_snapshot_path: stages/06_runtime_parity__python_mt5_runtime_authority/02_runs/20260425_stage06_runtime_parity_closed_v1/mt5_feature_snapshot.jsonl
 stage07_baseline_training_smoke:
-  run_id: "20260425_stage07_baseline_training_smoke_v1"
-  status: "reviewed_closed_handoff_to_stage08_complete"
-  judgment: "positive_baseline_training_smoke_passed"
-  external_verification_status: "not_applicable"
-  model_artifact_id: "model_fpmarkets_v2_stage07_logreg_smoke_v1"
-  model_family: "sklearn_logistic_regression_multiclass"
-  model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
+  run_id: 20260425_stage07_baseline_training_smoke_v1
+  status: reviewed_closed_handoff_to_stage08_complete
+  judgment: positive_baseline_training_smoke_passed
+  external_verification_status: not_applicable
+  model_artifact_id: model_fpmarkets_v2_stage07_logreg_smoke_v1
+  model_family: sklearn_logistic_regression_multiclass
+  model_input_dataset_id: model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2
   feature_count: 58
-  feature_order_hash: "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+  feature_order_hash: fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2
   model_input_rows: 46650
   train_rows: 29222
   validation_rows: 9844
@@ -307,46 +322,46 @@ stage07_baseline_training_smoke:
   validation_macro_f1: 0.42748246785066807
   oos_accuracy: 0.457542194092827
   oos_macro_f1: 0.43482032562470074
-  boundary: "python_side_training_pipeline_smoke_not_alpha_quality_or_operating_promotion"
-  run_path: "stages/07_model_training_baseline__contract_preprocessing_smoke/02_runs/20260425_stage07_baseline_training_smoke_v1"
-  model_manifest_path: "stages/07_model_training_baseline__contract_preprocessing_smoke/02_runs/20260425_stage07_baseline_training_smoke_v1/model_artifact_manifest.json"
-  review_path: "stages/07_model_training_baseline__contract_preprocessing_smoke/03_reviews/baseline_training_smoke_review.md"
+  boundary: python_side_training_pipeline_smoke_not_alpha_quality_or_operating_promotion
+  run_path: stages/07_model_training_baseline__contract_preprocessing_smoke/02_runs/20260425_stage07_baseline_training_smoke_v1
+  model_manifest_path: stages/07_model_training_baseline__contract_preprocessing_smoke/02_runs/20260425_stage07_baseline_training_smoke_v1/model_artifact_manifest.json
+  review_path: stages/07_model_training_baseline__contract_preprocessing_smoke/03_reviews/baseline_training_smoke_review.md
 stage08_alpha_entry_protocol:
-  packet_id: "stage08_alpha_entry_protocol_v1"
-  status: "reviewed_closed_handoff_to_stage09_complete_with_alpha_entry_protocol"
-  judgment: "positive_alpha_entry_protocol_defined"
-  external_verification_status: "not_applicable"
-  boundary: "alpha_entry_protocol_defined_not_alpha_quality_or_operating_promotion"
-  policy_path: "docs/policies/alpha_entry_protocol.md"
-  report_template_path: "docs/templates/alpha_exploration_report_template.md"
-  review_path: "stages/08_alpha_entry_protocol__tier_reporting_search_rules/03_reviews/alpha_entry_protocol_review.md"
-  decision_path: "docs/decisions/2026-04-25_stage08_alpha_entry_protocol.md"
+  packet_id: stage08_alpha_entry_protocol_v1
+  status: reviewed_closed_handoff_to_stage09_complete_with_alpha_entry_protocol
+  judgment: positive_alpha_entry_protocol_defined
+  external_verification_status: not_applicable
+  boundary: alpha_entry_protocol_defined_not_alpha_quality_or_operating_promotion
+  policy_path: docs/policies/alpha_entry_protocol.md
+  report_template_path: docs/templates/alpha_exploration_report_template.md
+  review_path: stages/08_alpha_entry_protocol__tier_reporting_search_rules/03_reviews/alpha_entry_protocol_review.md
+  decision_path: docs/decisions/2026-04-25_stage08_alpha_entry_protocol.md
 stage09_pre_alpha_handoff:
-  packet_id: "stage09_pre_alpha_handoff_packet_v1"
-  status: "reviewed_closed_handoff_to_stage10_complete_with_pre_alpha_handoff_packet"
-  judgment: "positive_pre_alpha_handoff_packet_complete"
-  external_verification_status: "not_applicable"
-  boundary: "registry_current_truth_publish_boundary_closed_not_alpha_result_or_operating_promotion"
-  packet_path: "stages/09_pre_alpha_handoff__registry_publish_packet/03_reviews/pre_alpha_handoff_packet.md"
-  decision_path: "docs/decisions/2026-04-25_stage09_pre_alpha_handoff.md"
+  packet_id: stage09_pre_alpha_handoff_packet_v1
+  status: reviewed_closed_handoff_to_stage10_complete_with_pre_alpha_handoff_packet
+  judgment: positive_pre_alpha_handoff_packet_complete
+  external_verification_status: not_applicable
+  boundary: registry_current_truth_publish_boundary_closed_not_alpha_result_or_operating_promotion
+  packet_path: stages/09_pre_alpha_handoff__registry_publish_packet/03_reviews/pre_alpha_handoff_packet.md
+  decision_path: docs/decisions/2026-04-25_stage09_pre_alpha_handoff.md
 stage10_alpha_scout:
-  stage_id: "10_alpha_scout__default_split_model_threshold_scan"
-  status: "reviewed_closed_handoff_to_stage11_ready"
-  lane: "exploration"
-  scout_boundary: "single_split_scout"
-  current_run_packet_id: "run01Y_run01AC_logreg_a_base_no_fallback_200_220_hold_threshold_closeout_v1"
-  current_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
-  current_run_label: "stage10_Model__LogReg_ABaseNoFallbackHold9SessionMidSecondOverlap200220"
-  current_run_judgment: "inconclusive_single_split_scout_mt5_closeout_completed"
-  current_run_external_verification_status: "completed"
-  current_run_routing_mode: "tier_a_primary_no_fallback"
+  stage_id: 10_alpha_scout__default_split_model_threshold_scan
+  status: reviewed_closed_handoff_to_stage11_ready
+  lane: exploration
+  scout_boundary: single_split_scout
+  current_run_packet_id: run01Y_run01AC_logreg_a_base_no_fallback_200_220_hold_threshold_closeout_v1
+  current_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
+  current_run_label: stage10_Model__LogReg_ABaseNoFallbackHold9SessionMidSecondOverlap200220
+  current_run_judgment: inconclusive_single_split_scout_mt5_closeout_completed
+  current_run_external_verification_status: completed
+  current_run_routing_mode: tier_a_primary_no_fallback
   current_run_routed_fallback_enabled: false
-  current_run_selected_threshold: "a_short0.600_long0.450_margin0.000__b_disabled__hold9__slice_mid_second_overlap_200_220"
-  current_run_tier_a_rule: "short0.600_long0.450_margin0.000"
-  current_run_tier_b_fallback_rule: "short0.600_long0.450_margin0.000"
-  current_run_tier_b_fallback_allowed_subtypes: "all"
+  current_run_selected_threshold: a_short0.600_long0.450_margin0.000__b_disabled__hold9__slice_mid_second_overlap_200_220
+  current_run_tier_a_rule: short0.600_long0.450_margin0.000
+  current_run_tier_b_fallback_rule: short0.600_long0.450_margin0.000
+  current_run_tier_b_fallback_allowed_subtypes: all
   current_run_max_hold_bars: 9
-  current_run_session_slice: "mid_second_overlap_200_220"
+  current_run_session_slice: mid_second_overlap_200_220
   current_run_validation_is_net_profit: 318.48
   current_run_validation_is_profit_factor: 3.88
   current_run_validation_is_max_drawdown: 182.07
@@ -355,12 +370,15 @@ stage10_alpha_scout:
   current_run_oos_profit_factor: 3.99
   current_run_oos_max_drawdown: 144.65
   current_run_oos_recovery_factor: 2.16
-  closeout_packet_id: "run01Y_run01AC_logreg_a_base_no_fallback_200_220_hold_threshold_closeout_v1"
-  closeout_baseline_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
-  closeout_slice: "200 < minutes_from_cash_open <= 220"
-  closeout_routing_mode: "tier_a_primary_no_fallback"
-  closeout_external_verification_status: "completed"
-  closeout_hold6_run_id: "run01Z_logreg_a_base_no_fallback_hold6_session_mid_second_overlap_200_220_v1"
+  closeout_packet_id: run01Y_run01AC_logreg_a_base_no_fallback_200_220_hold_threshold_closeout_v1
+  closeout_seed_surface_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
+  closeout_baseline_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
+  closeout_historical_baseline_wording_superseded_by: docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
+  closeout_current_interpretation: seed_surface(씨앗 표면) and preserved_clue(보존 단서), not baseline(기준선)
+  closeout_slice: 200 < minutes_from_cash_open <= 220
+  closeout_routing_mode: tier_a_primary_no_fallback
+  closeout_external_verification_status: completed
+  closeout_hold6_run_id: run01Z_logreg_a_base_no_fallback_hold6_session_mid_second_overlap_200_220_v1
   closeout_hold6_validation_net_profit: 264.14
   closeout_hold6_validation_profit_factor: 2.99
   closeout_hold6_validation_max_drawdown: 182.07
@@ -369,7 +387,7 @@ stage10_alpha_scout:
   closeout_hold6_oos_profit_factor: 1.66
   closeout_hold6_oos_max_drawdown: 161.79
   closeout_hold6_oos_recovery_factor: 0.68
-  closeout_hold12_run_id: "run01AA_logreg_a_base_no_fallback_hold12_session_mid_second_overlap_200_220_v1"
+  closeout_hold12_run_id: run01AA_logreg_a_base_no_fallback_hold12_session_mid_second_overlap_200_220_v1
   closeout_hold12_validation_net_profit: 447.76
   closeout_hold12_validation_profit_factor: 4.55
   closeout_hold12_validation_max_drawdown: 182.07
@@ -378,7 +396,7 @@ stage10_alpha_scout:
   closeout_hold12_oos_profit_factor: 2.57
   closeout_hold12_oos_max_drawdown: 170.11
   closeout_hold12_oos_recovery_factor: 1.33
-  closeout_margin025_run_id: "run01AB_logreg_a_strict_margin025_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  closeout_margin025_run_id: run01AB_logreg_a_strict_margin025_no_fallback_hold9_session_mid_second_overlap_200_220_v1
   closeout_margin025_validation_net_profit: 318.48
   closeout_margin025_validation_profit_factor: 3.88
   closeout_margin025_validation_max_drawdown: 182.07
@@ -387,9 +405,9 @@ stage10_alpha_scout:
   closeout_margin025_oos_profit_factor: 3.99
   closeout_margin025_oos_max_drawdown: 144.65
   closeout_margin025_oos_recovery_factor: 2.16
-  closeout_strict_prob_run_id: "run01AC_logreg_a_strict_prob_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
+  closeout_strict_prob_run_id: run01AC_logreg_a_strict_prob_no_fallback_hold9_session_mid_second_overlap_200_220_v1
   closeout_strict_prob_validation_net_profit: 143.91
-  closeout_strict_prob_validation_profit_factor: 2.30
+  closeout_strict_prob_validation_profit_factor: 2.3
   closeout_strict_prob_validation_max_drawdown: 182.07
   closeout_strict_prob_validation_recovery_factor: 0.79
   closeout_strict_prob_oos_net_profit: 219.09
@@ -398,31 +416,34 @@ stage10_alpha_scout:
   closeout_strict_prob_oos_recovery_factor: 1.49
   closeout_tier_b_fallback_only_validation_trades: 0
   closeout_tier_b_fallback_only_oos_trades: 0
-  closeout_interpretation: "run01Y remains the best net/recovery balance; hold6 is weaker, hold12 is validation-favored but OOS weaker, margin0.025 is not binding, and strict probability improves OOS PF but lowers net/recovery"
-  hold_stress_holds: "3,6,9,12,18,24"
-  hold_stress_routing_mode: "tier_a_primary_no_fallback"
+  closeout_interpretation: run01Y remains the best net/recovery balance; hold6 is weaker, hold12 is validation-favored but
+    OOS weaker, margin0.025 is not binding, and strict probability improves OOS PF but lowers net/recovery
+  hold_stress_holds: 3,6,9,12,18,24
+  hold_stress_routing_mode: tier_a_primary_no_fallback
   hold_stress_best_oos_hold_bars: 9
   hold_stress_best_oos_net_profit: 256.99
   hold_stress_best_oos_profit_factor: 1.34
   hold_stress_best_oos_recovery_factor: 2.05
   hold_stress_best_validation_hold_bars: 24
   hold_stress_best_validation_net_profit: 454.69
-  hold_stress_interpretation: "hold9 is best on OOS net profit, PF, and recovery; hold24 is validation-favored but weaker OOS, so no promotion claim"
-  session_slice_slices: "early,mid,late"
-  session_slice_routing_mode: "tier_a_primary_no_fallback"
+  hold_stress_interpretation: hold9 is best on OOS net profit, PF, and recovery; hold24 is validation-favored but weaker OOS,
+    so no promotion claim
+  session_slice_slices: early,mid,late
+  session_slice_routing_mode: tier_a_primary_no_fallback
   session_slice_hold_bars: 9
-  session_slice_best_oos_slice: "mid"
+  session_slice_best_oos_slice: mid
   session_slice_best_oos_net_profit: 203.97
   session_slice_best_oos_profit_factor: 1.71
   session_slice_best_oos_recovery_factor: 2.01
   session_slice_early_oos_net_profit: -76.39
   session_slice_late_oos_net_profit: -12.63
-  session_slice_interpretation: "hold9 OOS strength is concentrated in the mid-session slice; early is negative in validation and OOS, late is validation-strong but OOS-negative"
-  mid_session_half_slices: "mid_first,mid_second"
-  mid_session_half_routing_mode: "tier_a_primary_no_fallback"
+  session_slice_interpretation: hold9 OOS strength is concentrated in the mid-session slice; early is negative in validation
+    and OOS, late is validation-strong but OOS-negative
+  mid_session_half_slices: mid_first,mid_second
+  mid_session_half_routing_mode: tier_a_primary_no_fallback
   mid_session_half_hold_bars: 9
-  mid_session_half_best_consistency_slice: "mid_second"
-  mid_session_half_first_validation_net_profit: -146.00
+  mid_session_half_best_consistency_slice: mid_second
+  mid_session_half_first_validation_net_profit: -146.0
   mid_session_half_first_validation_profit_factor: 0.79
   mid_session_half_first_oos_net_profit: 115.23
   mid_session_half_first_oos_profit_factor: 1.37
@@ -430,14 +451,15 @@ stage10_alpha_scout:
   mid_session_half_second_validation_net_profit: 331.36
   mid_session_half_second_validation_profit_factor: 2.38
   mid_session_half_second_oos_net_profit: 136.54
-  mid_session_half_second_oos_profit_factor: 1.80
+  mid_session_half_second_oos_profit_factor: 1.8
   mid_session_half_second_oos_recovery_factor: 1.01
-  mid_session_half_interpretation: "mid_second is validation/OOS positive and more consistent; mid_first is OOS positive but validation-negative and riskier, so mid strength is not evenly distributed"
-  mid_second_narrow_slices: "mid_second_first,mid_second_second"
-  mid_second_narrow_routing_mode: "tier_a_primary_no_fallback"
+  mid_session_half_interpretation: mid_second is validation/OOS positive and more consistent; mid_first is OOS positive but
+    validation-negative and riskier, so mid strength is not evenly distributed
+  mid_second_narrow_slices: mid_second_first,mid_second_second
+  mid_second_narrow_routing_mode: tier_a_primary_no_fallback
   mid_second_narrow_hold_bars: 9
-  mid_second_narrow_first_run_id: "run01S_logreg_a_base_no_fallback_hold9_session_mid_second_first_v1"
-  mid_second_narrow_first_slice: "165 < minutes_from_cash_open <= 195"
+  mid_second_narrow_first_run_id: run01S_logreg_a_base_no_fallback_hold9_session_mid_second_first_v1
+  mid_second_narrow_first_slice: 165 < minutes_from_cash_open <= 195
   mid_second_narrow_first_validation_net_profit: -17.45
   mid_second_narrow_first_validation_profit_factor: 0.95
   mid_second_narrow_first_validation_max_drawdown: 244.72
@@ -445,11 +467,11 @@ stage10_alpha_scout:
   mid_second_narrow_first_oos_net_profit: 200.05
   mid_second_narrow_first_oos_profit_factor: 1.58
   mid_second_narrow_first_oos_max_drawdown: 221.78
-  mid_second_narrow_first_oos_recovery_factor: 0.90
+  mid_second_narrow_first_oos_recovery_factor: 0.9
   mid_second_narrow_first_validation_tier_a_used_count: 864
   mid_second_narrow_first_oos_tier_a_used_count: 696
-  mid_second_narrow_second_run_id: "run01T_logreg_a_base_no_fallback_hold9_session_mid_second_second_v1"
-  mid_second_narrow_second_slice: "195 < minutes_from_cash_open <= 220"
+  mid_second_narrow_second_run_id: run01T_logreg_a_base_no_fallback_hold9_session_mid_second_second_v1
+  mid_second_narrow_second_slice: 195 < minutes_from_cash_open <= 220
   mid_second_narrow_second_validation_net_profit: 262.33
   mid_second_narrow_second_validation_profit_factor: 2.37
   mid_second_narrow_second_validation_max_drawdown: 182.07
@@ -457,15 +479,16 @@ stage10_alpha_scout:
   mid_second_narrow_second_oos_net_profit: 277.88
   mid_second_narrow_second_oos_profit_factor: 2.67
   mid_second_narrow_second_oos_max_drawdown: 120.89
-  mid_second_narrow_second_oos_recovery_factor: 2.30
+  mid_second_narrow_second_oos_recovery_factor: 2.3
   mid_second_narrow_second_validation_tier_a_used_count: 729
   mid_second_narrow_second_oos_tier_a_used_count: 580
-  mid_second_narrow_interpretation: "mid_second_second is the clearer validation/OOS positive slice; mid_second_first is OOS positive but validation-negative, so do not treat the full mid_second strength as uniform"
-  mid_second_second_narrow_slices: "mid_second_second_first,mid_second_second_second"
-  mid_second_second_narrow_routing_mode: "tier_a_primary_no_fallback"
+  mid_second_narrow_interpretation: mid_second_second is the clearer validation/OOS positive slice; mid_second_first is OOS
+    positive but validation-negative, so do not treat the full mid_second strength as uniform
+  mid_second_second_narrow_slices: mid_second_second_first,mid_second_second_second
+  mid_second_second_narrow_routing_mode: tier_a_primary_no_fallback
   mid_second_second_narrow_hold_bars: 9
-  mid_second_second_narrow_first_run_id: "run01U_logreg_a_base_no_fallback_hold9_session_mid_second_second_first_v1"
-  mid_second_second_narrow_first_slice: "195 < minutes_from_cash_open <= 210"
+  mid_second_second_narrow_first_run_id: run01U_logreg_a_base_no_fallback_hold9_session_mid_second_second_first_v1
+  mid_second_second_narrow_first_slice: 195 < minutes_from_cash_open <= 210
   mid_second_second_narrow_first_validation_net_profit: 106.72
   mid_second_second_narrow_first_validation_profit_factor: 1.69
   mid_second_second_narrow_first_validation_max_drawdown: 231.58
@@ -476,8 +499,8 @@ stage10_alpha_scout:
   mid_second_second_narrow_first_oos_recovery_factor: 1.94
   mid_second_second_narrow_first_validation_tier_a_used_count: 434
   mid_second_second_narrow_first_oos_tier_a_used_count: 345
-  mid_second_second_narrow_second_run_id: "run01V_logreg_a_base_no_fallback_hold9_session_mid_second_second_second_v1"
-  mid_second_second_narrow_second_slice: "210 < minutes_from_cash_open <= 220"
+  mid_second_second_narrow_second_run_id: run01V_logreg_a_base_no_fallback_hold9_session_mid_second_second_second_v1
+  mid_second_second_narrow_second_slice: 210 < minutes_from_cash_open <= 220
   mid_second_second_narrow_second_validation_net_profit: 299.93
   mid_second_second_narrow_second_validation_profit_factor: 2.61
   mid_second_second_narrow_second_validation_max_drawdown: 206.68
@@ -488,12 +511,13 @@ stage10_alpha_scout:
   mid_second_second_narrow_second_oos_recovery_factor: 0.07
   mid_second_second_narrow_second_validation_tier_a_used_count: 295
   mid_second_second_narrow_second_oos_tier_a_used_count: 235
-  mid_second_second_narrow_interpretation: "run01U carries most of the OOS strength while run01V is validation-favored and OOS-weak; full run01T remains the more balanced wider slice"
-  late_mid_overlap_windows: "mid_second_overlap_190_210,mid_second_overlap_195_215,mid_second_overlap_200_220"
-  late_mid_overlap_routing_mode: "tier_a_primary_no_fallback"
+  mid_second_second_narrow_interpretation: run01U carries most of the OOS strength while run01V is validation-favored and
+    OOS-weak; full run01T remains the more balanced wider slice
+  late_mid_overlap_windows: mid_second_overlap_190_210,mid_second_overlap_195_215,mid_second_overlap_200_220
+  late_mid_overlap_routing_mode: tier_a_primary_no_fallback
   late_mid_overlap_hold_bars: 9
-  late_mid_overlap_first_run_id: "run01W_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_190_210_v1"
-  late_mid_overlap_first_slice: "190 < minutes_from_cash_open <= 210"
+  late_mid_overlap_first_run_id: run01W_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_190_210_v1
+  late_mid_overlap_first_slice: 190 < minutes_from_cash_open <= 210
   late_mid_overlap_first_validation_net_profit: 68.22
   late_mid_overlap_first_validation_profit_factor: 1.33
   late_mid_overlap_first_validation_max_drawdown: 219.94
@@ -502,8 +526,8 @@ stage10_alpha_scout:
   late_mid_overlap_first_oos_profit_factor: 2.11
   late_mid_overlap_first_oos_max_drawdown: 140.63
   late_mid_overlap_first_oos_recovery_factor: 1.69
-  late_mid_overlap_second_run_id: "run01X_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_195_215_v1"
-  late_mid_overlap_second_slice: "195 < minutes_from_cash_open <= 215"
+  late_mid_overlap_second_run_id: run01X_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_195_215_v1
+  late_mid_overlap_second_slice: 195 < minutes_from_cash_open <= 215
   late_mid_overlap_second_validation_net_profit: 366.02
   late_mid_overlap_second_validation_profit_factor: 3.84
   late_mid_overlap_second_validation_max_drawdown: 182.07
@@ -512,8 +536,8 @@ stage10_alpha_scout:
   late_mid_overlap_second_oos_profit_factor: 2.18
   late_mid_overlap_second_oos_max_drawdown: 149.39
   late_mid_overlap_second_oos_recovery_factor: 1.62
-  late_mid_overlap_third_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
-  late_mid_overlap_third_slice: "200 < minutes_from_cash_open <= 220"
+  late_mid_overlap_third_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
+  late_mid_overlap_third_slice: 200 < minutes_from_cash_open <= 220
   late_mid_overlap_third_validation_net_profit: 318.48
   late_mid_overlap_third_validation_profit_factor: 3.88
   late_mid_overlap_third_validation_max_drawdown: 182.07
@@ -522,16 +546,18 @@ stage10_alpha_scout:
   late_mid_overlap_third_oos_profit_factor: 3.99
   late_mid_overlap_third_oos_max_drawdown: 144.65
   late_mid_overlap_third_oos_recovery_factor: 2.16
-  late_mid_overlap_interpretation: "run01Y is the strongest balanced overlap window; shifting earlier to 190-210 weakens validation, while 195-215 is validation-strong but lower OOS than 200-220"
-  fallback_filter_run_id: "run01R_logreg_a_base_fallback_bmacro_hold9_session_mid_second_v1"
-  fallback_filter_allowed_subtypes: "B_macro_missing"
-  fallback_filter_a_only_baseline_run_id: "run01Q_logreg_a_base_no_fallback_hold9_session_mid_second_v1"
+  late_mid_overlap_interpretation: run01Y is the strongest balanced overlap window; shifting earlier to 190-210 weakens validation,
+    while 195-215 is validation-strong but lower OOS than 200-220
+  fallback_filter_run_id: run01R_logreg_a_base_fallback_bmacro_hold9_session_mid_second_v1
+  fallback_filter_allowed_subtypes: B_macro_missing
+  fallback_filter_a_only_baseline_run_id: run01Q_logreg_a_base_no_fallback_hold9_session_mid_second_v1
   fallback_filter_validation_routed_net_profit: 288.81
   fallback_filter_validation_routed_profit_factor: 2.21
   fallback_filter_oos_routed_net_profit: 128.25
   fallback_filter_oos_routed_profit_factor: 1.71
   fallback_filter_oos_b_fallback_used_count: 165
-  fallback_filter_interpretation: "B_macro_missing fallback did not improve actual routed total versus run01Q A-only; B-only OOS looked strong but single-account routed path was weaker"
+  fallback_filter_interpretation: B_macro_missing fallback did not improve actual routed total versus run01Q A-only; B-only
+    OOS looked strong but single-account routed path was weaker
   current_run_tier_b_fallback_rows: 696
   current_run_tier_b_fallback_filtered_out_rows: 0
   current_run_no_tier_labelable_rows: 0
@@ -545,46 +571,49 @@ stage10_alpha_scout:
     B_full_context_outside_tier_a_scope: 12
     B_macro_missing: 684
   current_run_tier_b_fallback_filtered_out_by_subtype: {}
-  source_model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2"
-  default_split_id: "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413"
-  boundary: "runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion"
-  selection_status_path: "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md"
-  closeout_packet_path: "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md"
-  closeout_decision_path: "docs/decisions/2026-04-27_stage10_alpha_scout_closeout.md"
+  source_model_input_dataset_id: model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2
+  default_split_id: split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413
+  boundary: runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion
+  selection_status_path: stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md
+  closeout_packet_path: stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md
+  closeout_decision_path: docs/decisions/2026-04-27_stage10_alpha_scout_closeout.md
 stage11_alpha_robustness:
-  stage_id: "11_alpha_robustness__wfo_label_horizon_sensitivity"
-  status: "reviewed_closed_no_next_stage_opened"
-  lane: "exploration"
-  scout_boundary: "fwd18_inverse_rank_context_stress_mt5_runtime_probe"
-  current_run_packet_id: "run02AA_run02AK_fwd18_rank_stress_packet_v1"
-  current_run_id: "run02Z_lgbm_fwd18_inverse_rank_context_v1"
-  current_run_judgment: "positive_tiny_sample_stress_survived_center_not_promotion"
-  current_run_external_verification_status: "completed"
-  current_run_model_family: "lightgbm_lgbmclassifier_multiclass"
-  current_run_source_model_run_id: "run02W_lgbm_fwd18_retrain_v1"
-  current_run_comparison_reference: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
-  current_run_decision_surface_id: "run02Z_lgbm_fwd18_inverse_rank_context_di_spread_adx_surface_hold9_slice200_220"
-  current_run_threshold_method: "fwd18_inverse_rank_target_quantile_with_di_spread_adx_context"
-  current_run_selected_threshold: "a_tier_a_rankq0.960_short0.571_long0.654_margin0.120__b_tier_b_rankq0.960_short0.413_long0.457_margin0.080__hold9__slice_mid_second_overlap_200_220__model_lgbm_rank_target_inverse__ctx_di_spread_abs_lte8_adx_lte25"
-  stress_packet_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02AA_run02AK_fwd18_rank_stress_packet.md"
-  stress_plan_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md"
-  stress_read: "ADX<=25, 200-220, Tier A primary plus Tier B fallback remains the best center; still tiny-sample runtime_probe only"
-  current_run_session_slice: "mid_second_overlap_200_220"
+  stage_id: 11_alpha_robustness__wfo_label_horizon_sensitivity
+  status: reviewed_closed_no_next_stage_opened
+  lane: exploration
+  scout_boundary: fwd18_inverse_rank_context_stress_mt5_runtime_probe
+  current_run_packet_id: run02AA_run02AK_fwd18_rank_stress_packet_v1
+  current_run_id: run02Z_lgbm_fwd18_inverse_rank_context_v1
+  current_run_judgment: positive_tiny_sample_stress_survived_center_not_promotion
+  current_run_external_verification_status: completed
+  current_run_model_family: lightgbm_lgbmclassifier_multiclass
+  current_run_source_model_run_id: run02W_lgbm_fwd18_retrain_v1
+  current_run_comparison_reference: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
+  current_run_reference_boundary: run01Y is a seed/reference surface(씨앗/참고 표면), not alpha baseline(알파 기준선) or operating reference(운영
+    기준)
+  current_run_decision_surface_id: run02Z_lgbm_fwd18_inverse_rank_context_di_spread_adx_surface_hold9_slice200_220
+  current_run_threshold_method: fwd18_inverse_rank_target_quantile_with_di_spread_adx_context
+  current_run_selected_threshold: a_tier_a_rankq0.960_short0.571_long0.654_margin0.120__b_tier_b_rankq0.960_short0.413_long0.457_margin0.080__hold9__slice_mid_second_overlap_200_220__model_lgbm_rank_target_inverse__ctx_di_spread_abs_lte8_adx_lte25
+  stress_packet_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02AA_run02AK_fwd18_rank_stress_packet.md
+  stress_plan_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md
+  stress_read: ADX<=25, 200-220, Tier A primary plus Tier B fallback remains the best center; still tiny-sample runtime_probe
+    only
+  current_run_session_slice: mid_second_overlap_200_220
   current_run_max_hold_bars: 9
   current_run_source_onnx_parity_passed: true
   current_run_source_onnx_tier_a_max_abs_diff: 0.007676966073236424
-  current_run_source_onnx_tier_b_max_abs_diff: 0.00000019053892824638652
+  current_run_source_onnx_tier_b_max_abs_diff: 1.9053892824638652e-07
   prior_lgbm_runs:
     run02A:
-      run_id: "run02A_lgbm_training_method_scout_v1"
-      method: "run01Y_absolute_threshold_reused_on_lgbm"
+      run_id: run02A_lgbm_training_method_scout_v1
+      method: run01Y_absolute_threshold_reused_on_lgbm
       validation_mt5_routed_net_profit: -496.88
       validation_mt5_routed_profit_factor: 0.25
       oos_mt5_routed_net_profit: -27.44
       oos_mt5_routed_profit_factor: 0.94
     run02B:
-      run_id: "run02B_lgbm_rank_threshold_scout_v1"
-      method: "lgbm_rank_target_quantile_threshold"
+      run_id: run02B_lgbm_rank_threshold_scout_v1
+      method: lgbm_rank_target_quantile_threshold
       tier_a_signal_count: 338
       tier_b_signal_count: 123
       tier_ab_signal_count: 461
@@ -594,9 +623,9 @@ stage11_alpha_robustness:
       oos_mt5_routed_profit_factor: 0.76
   divergent_runs:
     run02C:
-      run_id: "run02C_lgbm_long_only_direction_isolation_v1"
-      idea_id: "IDEA-ST11-LGBM-DIRECTION-LONG-ONLY"
-      signal_counts_tier_a_tier_b_combined: "294/89/383"
+      run_id: run02C_lgbm_long_only_direction_isolation_v1
+      idea_id: IDEA-ST11-LGBM-DIRECTION-LONG-ONLY
+      signal_counts_tier_a_tier_b_combined: 294/89/383
       validation_mt5_routed_net_profit: -154.01
       validation_mt5_routed_profit_factor: 0.68
       validation_mt5_routed_trades: 15
@@ -604,11 +633,11 @@ stage11_alpha_robustness:
       oos_mt5_routed_profit_factor: 1.35
       oos_mt5_routed_max_drawdown: 220.96
       oos_mt5_routed_recovery_factor: 0.37
-      read: "salvage_value_present_but_validation_weak"
+      read: salvage_value_present_but_validation_weak
     run02D:
-      run_id: "run02D_lgbm_short_only_direction_isolation_v1"
-      idea_id: "IDEA-ST11-LGBM-DIRECTION-SHORT-ONLY"
-      signal_counts_tier_a_tier_b_combined: "217/52/269"
+      run_id: run02D_lgbm_short_only_direction_isolation_v1
+      idea_id: IDEA-ST11-LGBM-DIRECTION-SHORT-ONLY
+      signal_counts_tier_a_tier_b_combined: 217/52/269
       validation_mt5_routed_net_profit: -18.33
       validation_mt5_routed_profit_factor: 0.89
       validation_mt5_routed_trades: 12
@@ -616,11 +645,11 @@ stage11_alpha_robustness:
       oos_mt5_routed_profit_factor: 0.31
       oos_mt5_routed_max_drawdown: 265.2
       oos_mt5_routed_recovery_factor: -0.8
-      read: "weak_negative_result"
+      read: weak_negative_result
     run02E:
-      run_id: "run02E_lgbm_extreme_confidence_rejection_v1"
-      idea_id: "IDEA-ST11-LGBM-EXTREME-CONFIDENCE"
-      signal_counts_tier_a_tier_b_combined: "58/86/144"
+      run_id: run02E_lgbm_extreme_confidence_rejection_v1
+      idea_id: IDEA-ST11-LGBM-EXTREME-CONFIDENCE
+      signal_counts_tier_a_tier_b_combined: 58/86/144
       validation_mt5_routed_net_profit: -115.17
       validation_mt5_routed_profit_factor: 0.31
       validation_mt5_routed_trades: 5
@@ -628,11 +657,11 @@ stage11_alpha_robustness:
       oos_mt5_routed_profit_factor: 0.96
       oos_mt5_routed_max_drawdown: 149.02
       oos_mt5_routed_recovery_factor: -0.04
-      read: "near_breakeven_oos_but_validation_weak"
+      read: near_breakeven_oos_but_validation_weak
     run02F:
-      run_id: "run02F_lgbm_calm_trend_context_gate_v1"
-      idea_id: "IDEA-ST11-LGBM-CALM-TREND-GATE"
-      signal_counts_tier_a_tier_b_combined: "56/6/62"
+      run_id: run02F_lgbm_calm_trend_context_gate_v1
+      idea_id: IDEA-ST11-LGBM-CALM-TREND-GATE
+      signal_counts_tier_a_tier_b_combined: 56/6/62
       validation_mt5_routed_net_profit: -234.03
       validation_mt5_routed_profit_factor: 0.46
       validation_mt5_routed_trades: 13
@@ -640,184 +669,184 @@ stage11_alpha_robustness:
       oos_mt5_routed_profit_factor: 0.41
       oos_mt5_routed_max_drawdown: 326.34
       oos_mt5_routed_recovery_factor: -0.5
-      read: "context_gate_failed"
+      read: context_gate_failed
   current_packet_salvage_reads:
-    - "run02G_oos_strong_validation_weak"
-    - "run02N_oos_positive_three_trades_validation_weak"
-    - "run02P_tiny_dual_positive_inconclusive"
-    - "run02Q_density_expanded_but_validation_oos_negative"
-    - "run02R_validation_repaired_oos_failed"
-    - "run02S_oos_positive_validation_near_breakeven_tiny_sample"
+  - run02G_oos_strong_validation_weak
+  - run02N_oos_positive_three_trades_validation_weak
+  - run02P_tiny_dual_positive_inconclusive
+  - run02Q_density_expanded_but_validation_oos_negative
+  - run02R_validation_repaired_oos_failed
+  - run02S_oos_positive_validation_near_breakeven_tiny_sample
   idea_burst_runs:
     run02G:
-      run_id: "run02G_lgbm_long_pullback_salvage_v1"
-      idea_id: "IDEA-ST11-LGBM-LONG-PULLBACK"
-      signal_counts_tier_a_tier_b_combined: "49/3/52"
+      run_id: run02G_lgbm_long_pullback_salvage_v1
+      idea_id: IDEA-ST11-LGBM-LONG-PULLBACK
+      signal_counts_tier_a_tier_b_combined: 49/3/52
       validation_mt5_routed_net_profit: -138.39
       validation_mt5_routed_profit_factor: 0.54
       validation_mt5_routed_trades: 9
       oos_mt5_routed_net_profit: 238.68
       oos_mt5_routed_profit_factor: 3.44
       oos_mt5_routed_trades: 7
-      read: "oos_salvage_value_validation_weak"
+      read: oos_salvage_value_validation_weak
     run02H:
-      run_id: "run02H_lgbm_bull_trend_long_v1"
-      idea_id: "IDEA-ST11-LGBM-BULL-TREND-LONG"
-      signal_counts_tier_a_tier_b_combined: "21/3/24"
+      run_id: run02H_lgbm_bull_trend_long_v1
+      idea_id: IDEA-ST11-LGBM-BULL-TREND-LONG
+      signal_counts_tier_a_tier_b_combined: 21/3/24
       validation_mt5_routed_net_profit: -210.68
       validation_mt5_routed_profit_factor: 0.19
       oos_mt5_routed_net_profit: 11.52
       oos_mt5_routed_profit_factor: 1.21
-      read: "small_oos_positive_validation_weak"
+      read: small_oos_positive_validation_weak
     run02I:
-      run_id: "run02I_lgbm_low_vol_extreme_confidence_v1"
-      idea_id: "IDEA-ST11-LGBM-LOW-VOL-EXTREME-CONFIDENCE"
-      signal_counts_tier_a_tier_b_combined: "14/4/18"
+      run_id: run02I_lgbm_low_vol_extreme_confidence_v1
+      idea_id: IDEA-ST11-LGBM-LOW-VOL-EXTREME-CONFIDENCE
+      signal_counts_tier_a_tier_b_combined: 14/4/18
       validation_mt5_routed_net_profit: -509.12
       validation_mt5_routed_profit_factor: 0.0
       oos_mt5_routed_net_profit: -231.42
       oos_mt5_routed_profit_factor: 0.0
-      read: "negative_result"
+      read: negative_result
     run02J:
-      run_id: "run02J_lgbm_balanced_midband_context_v1"
-      idea_id: "IDEA-ST11-LGBM-BALANCED-MIDBAND"
-      signal_counts_tier_a_tier_b_combined: "21/3/24"
+      run_id: run02J_lgbm_balanced_midband_context_v1
+      idea_id: IDEA-ST11-LGBM-BALANCED-MIDBAND
+      signal_counts_tier_a_tier_b_combined: 21/3/24
       validation_mt5_routed_net_profit: 70.1
       validation_mt5_routed_profit_factor: 1.29
       oos_mt5_routed_net_profit: -121.32
       oos_mt5_routed_profit_factor: 0.55
-      read: "validation_only_positive_oos_failed"
+      read: validation_only_positive_oos_failed
     run02K:
-      run_id: "run02K_lgbm_quiet_return_zscore_v1"
-      idea_id: "IDEA-ST11-LGBM-QUIET-RETURN-ZSCORE"
-      signal_counts_tier_a_tier_b_combined: "44/5/49"
+      run_id: run02K_lgbm_quiet_return_zscore_v1
+      idea_id: IDEA-ST11-LGBM-QUIET-RETURN-ZSCORE
+      signal_counts_tier_a_tier_b_combined: 44/5/49
       validation_mt5_routed_net_profit: -496.54
       validation_mt5_routed_profit_factor: 0.02
       oos_mt5_routed_net_profit: -494.23
       oos_mt5_routed_profit_factor: 0.19
-      read: "negative_result"
+      read: negative_result
     run02L:
-      run_id: "run02L_lgbm_range_compression_v1"
-      idea_id: "IDEA-ST11-LGBM-RANGE-COMPRESSION"
-      signal_counts_tier_a_tier_b_combined: "18/4/22"
+      run_id: run02L_lgbm_range_compression_v1
+      idea_id: IDEA-ST11-LGBM-RANGE-COMPRESSION
+      signal_counts_tier_a_tier_b_combined: 18/4/22
       validation_mt5_routed_net_profit: -352.49
       validation_mt5_routed_profit_factor: 0.34
       oos_mt5_routed_net_profit: -250.36
       oos_mt5_routed_profit_factor: 0.05
-      read: "negative_result"
+      read: negative_result
     run02M:
-      run_id: "run02M_lgbm_high_vol_momentum_alignment_v1"
-      idea_id: "IDEA-ST11-LGBM-HIGH-VOL-MOMENTUM-ALIGN"
-      signal_counts_tier_a_tier_b_combined: "67/3/70"
+      run_id: run02M_lgbm_high_vol_momentum_alignment_v1
+      idea_id: IDEA-ST11-LGBM-HIGH-VOL-MOMENTUM-ALIGN
+      signal_counts_tier_a_tier_b_combined: 67/3/70
       validation_mt5_routed_net_profit: -496.38
       validation_mt5_routed_profit_factor: 0.25
       oos_mt5_routed_net_profit: -305.93
       oos_mt5_routed_profit_factor: 0.31
-      read: "negative_result"
+      read: negative_result
     run02N:
-      run_id: "run02N_lgbm_squeeze_breakout_probe_v1"
-      idea_id: "IDEA-ST11-LGBM-SQUEEZE-BREAKOUT"
-      signal_counts_tier_a_tier_b_combined: "13/3/16"
+      run_id: run02N_lgbm_squeeze_breakout_probe_v1
+      idea_id: IDEA-ST11-LGBM-SQUEEZE-BREAKOUT
+      signal_counts_tier_a_tier_b_combined: 13/3/16
       validation_mt5_routed_net_profit: -125.51
       validation_mt5_routed_profit_factor: 0.62
       validation_mt5_routed_trades: 5
       oos_mt5_routed_net_profit: 107.14
       oos_mt5_routed_profit_factor: 55.11
       oos_mt5_routed_trades: 3
-      read: "oos_salvage_value_tiny_sample_validation_weak"
+      read: oos_salvage_value_tiny_sample_validation_weak
     run02O:
-      run_id: "run02O_lgbm_bull_vortex_long_v1"
-      idea_id: "IDEA-ST11-LGBM-BULL-VORTEX-LONG"
-      signal_counts_tier_a_tier_b_combined: "16/2/18"
+      run_id: run02O_lgbm_bull_vortex_long_v1
+      idea_id: IDEA-ST11-LGBM-BULL-VORTEX-LONG
+      signal_counts_tier_a_tier_b_combined: 16/2/18
       validation_mt5_routed_net_profit: -86.88
       validation_mt5_routed_profit_factor: 0.55
       oos_mt5_routed_net_profit: 6.04
       oos_mt5_routed_profit_factor: 1.2
-      read: "small_oos_positive_validation_weak"
+      read: small_oos_positive_validation_weak
     run02P:
-      run_id: "run02P_lgbm_bear_vortex_short_v1"
-      idea_id: "IDEA-ST11-LGBM-BEAR-VORTEX-SHORT"
-      signal_counts_tier_a_tier_b_combined: "34/1/35"
+      run_id: run02P_lgbm_bear_vortex_short_v1
+      idea_id: IDEA-ST11-LGBM-BEAR-VORTEX-SHORT
+      signal_counts_tier_a_tier_b_combined: 34/1/35
       validation_mt5_routed_net_profit: 1.78
       validation_mt5_routed_profit_factor: 1.02
       validation_mt5_routed_trades: 4
       oos_mt5_routed_net_profit: 24.33
       oos_mt5_routed_profit_factor: 1.37
       oos_mt5_routed_trades: 6
-      read: "tiny_dual_positive_inconclusive"
+      read: tiny_dual_positive_inconclusive
   salvage_extension_runs:
     run02Q:
-      run_id: "run02Q_lgbm_bear_vortex_short_density_v1"
-      idea_id: "IDEA-ST11-LGBM-BEAR-VORTEX-SHORT-DENSITY"
-      signal_counts_tier_a_tier_b_combined: "83/5/88"
+      run_id: run02Q_lgbm_bear_vortex_short_density_v1
+      idea_id: IDEA-ST11-LGBM-BEAR-VORTEX-SHORT-DENSITY
+      signal_counts_tier_a_tier_b_combined: 83/5/88
       validation_mt5_routed_net_profit: -139.28
       validation_mt5_routed_profit_factor: 0.62
       validation_mt5_routed_trades: 10
       oos_mt5_routed_net_profit: -140.58
       oos_mt5_routed_profit_factor: 0.54
       oos_mt5_routed_trades: 11
-      read: "density_expanded_but_validation_oos_negative"
+      read: density_expanded_but_validation_oos_negative
     run02R:
-      run_id: "run02R_lgbm_long_pullback_adx_repair_v1"
-      idea_id: "IDEA-ST11-LGBM-LONG-PULLBACK-ADX-REPAIR"
-      signal_counts_tier_a_tier_b_combined: "51/3/54"
+      run_id: run02R_lgbm_long_pullback_adx_repair_v1
+      idea_id: IDEA-ST11-LGBM-LONG-PULLBACK-ADX-REPAIR
+      signal_counts_tier_a_tier_b_combined: 51/3/54
       validation_mt5_routed_net_profit: 275.78
       validation_mt5_routed_profit_factor: 2.44
       validation_mt5_routed_trades: 9
       oos_mt5_routed_net_profit: -82.01
       oos_mt5_routed_profit_factor: 0.74
       oos_mt5_routed_trades: 8
-      read: "validation_repaired_oos_failed"
+      read: validation_repaired_oos_failed
     run02S:
-      run_id: "run02S_lgbm_squeeze_density_v1"
-      idea_id: "IDEA-ST11-LGBM-SQUEEZE-DENSITY"
-      signal_counts_tier_a_tier_b_combined: "19/7/26"
+      run_id: run02S_lgbm_squeeze_density_v1
+      idea_id: IDEA-ST11-LGBM-SQUEEZE-DENSITY
+      signal_counts_tier_a_tier_b_combined: 19/7/26
       validation_mt5_routed_net_profit: -2.5
       validation_mt5_routed_profit_factor: 0.99
       validation_mt5_routed_trades: 8
       oos_mt5_routed_net_profit: 32.56
       oos_mt5_routed_profit_factor: 1.69
       oos_mt5_routed_trades: 4
-      read: "near_breakeven_validation_oos_positive_tiny_sample"
+      read: near_breakeven_validation_oos_positive_tiny_sample
   priority_probe_runs:
     run02T:
-      run_id: "run02T_label_horizon_priority_probe_v1"
-      idea_id: "IDEA-ST11-LABEL-HORIZON-PRIORITY"
-      source_run_id: "run02S_lgbm_squeeze_density_v1"
-      probe_type: "label_horizon_structural_relabel"
+      run_id: run02T_label_horizon_priority_probe_v1
+      idea_id: IDEA-ST11-LABEL-HORIZON-PRIORITY
+      source_run_id: run02S_lgbm_squeeze_density_v1
+      probe_type: label_horizon_structural_relabel
       best_oos_horizon_bars: 18
       best_oos_signal_hit_rate: 0.714286
       fwd12_oos_signal_hit_rate: 0.285714
       comparable_oos_signal_count: 7
       combined_missing_label_rows: 102
-      read: "fwd18_worth_retraining_probe_but_tiny_comparable_sample"
+      read: fwd18_worth_retraining_probe_but_tiny_comparable_sample
     run02U:
-      run_id: "run02U_wfo_lite_priority_probe_v1"
-      idea_id: "IDEA-ST11-WFO-LITE-PRIORITY"
-      source_run_id: "run02S_lgbm_squeeze_density_v1"
-      probe_type: "wfo_lite_window_segmentation"
+      run_id: run02U_wfo_lite_priority_probe_v1
+      idea_id: IDEA-ST11-WFO-LITE-PRIORITY
+      source_run_id: run02S_lgbm_squeeze_density_v1
+      probe_type: wfo_lite_window_segmentation
       oos_window_count: 3
       nonzero_oos_windows: 3
       oos_signal_total: 10
       max_oos_window_signal_share: 0.5
-      read: "density_insufficient_for_full_wfo_now"
+      read: density_insufficient_for_full_wfo_now
     run02V:
-      run_id: "run02V_short_specific_priority_probe_v1"
-      idea_id: "IDEA-ST11-SHORT-SPECIFIC-PRIORITY"
-      source_run_ids: "run02P_lgbm_bear_vortex_short_v1;run02Q_lgbm_bear_vortex_short_density_v1"
-      probe_type: "short_specific_existing_surface_comparison"
+      run_id: run02V_short_specific_priority_probe_v1
+      idea_id: IDEA-ST11-SHORT-SPECIFIC-PRIORITY
+      source_run_ids: run02P_lgbm_bear_vortex_short_v1;run02Q_lgbm_bear_vortex_short_density_v1
+      probe_type: short_specific_existing_surface_comparison
       run02P_oos_short_hit_rate: 0.1
       run02Q_oos_short_hit_rate: 0.190476
       density_signal_multiplier: 2.1
-      read: "short_specific_need_inconclusive_density_not_enough_as_runtime_result"
+      read: short_specific_need_inconclusive_density_not_enough_as_runtime_result
   label_horizon_retrain_runs:
     run02W:
-      run_id: "run02W_lgbm_fwd18_retrain_v1"
-      idea_id: "IDEA-ST11-LABEL-HORIZON-FWD18-RETRAIN"
-      label_id: "label_v1_fwd18_m5_logret_train_q33_3class"
-      training_dataset_id: "training_fpmarkets_v2_us100_m5_label_v1_fwd18_split_v1_proxyw58"
-      model_input_dataset_id: "model_input_fpmarkets_v2_us100_m5_label_v1_fwd18_split_v1_proxyw58_feature_set_v2"
-      signal_counts_tier_a_tier_b_combined: "843/131/974"
+      run_id: run02W_lgbm_fwd18_retrain_v1
+      idea_id: IDEA-ST11-LABEL-HORIZON-FWD18-RETRAIN
+      label_id: label_v1_fwd18_m5_logret_train_q33_3class
+      training_dataset_id: training_fpmarkets_v2_us100_m5_label_v1_fwd18_split_v1_proxyw58
+      model_input_dataset_id: model_input_fpmarkets_v2_us100_m5_label_v1_fwd18_split_v1_proxyw58_feature_set_v2
+      signal_counts_tier_a_tier_b_combined: 843/131/974
       validation_mt5_routed_net_profit: -496.25
       validation_mt5_routed_profit_factor: 0.28
       validation_mt5_routed_trades: 21
@@ -829,39 +858,39 @@ stage11_alpha_robustness:
       oos_tier_b_fallback_only_net_profit: -105.73
       oos_tier_b_fallback_only_profit_factor: 0.7
       onnx_parity_passed: true
-      external_verification_status: "completed"
-      read: "fwd18_only_retrain_failed_mt5_routed_total"
+      external_verification_status: completed
+      read: fwd18_only_retrain_failed_mt5_routed_total
   fwd18_rank_context_runs:
     run02X:
-      run_id: "run02X_lgbm_fwd18_rank_threshold_v1"
-      idea_id: "IDEA-ST11-LABEL-HORIZON-FWD18-RANK-DIRECT"
-      source_run_id: "run02W_lgbm_fwd18_retrain_v1"
-      probe_type: "python_structural_rank_threshold"
-      decision_direction_mode: "direct"
-      signal_counts_tier_a_tier_b_combined: "327/164/491"
+      run_id: run02X_lgbm_fwd18_rank_threshold_v1
+      idea_id: IDEA-ST11-LABEL-HORIZON-FWD18-RANK-DIRECT
+      source_run_id: run02W_lgbm_fwd18_retrain_v1
+      probe_type: python_structural_rank_threshold
+      decision_direction_mode: direct
+      signal_counts_tier_a_tier_b_combined: 327/164/491
       tier_a_q96_validation_hit_rate: 0.25
       tier_a_q96_oos_hit_rate: 0.15625
-      external_verification_status: "out_of_scope_by_claim"
-      read: "direct_fwd18_rank_threshold_is_structurally_weak"
+      external_verification_status: out_of_scope_by_claim
+      read: direct_fwd18_rank_threshold_is_structurally_weak
     run02Y:
-      run_id: "run02Y_lgbm_fwd18_inverse_rank_threshold_v1"
-      idea_id: "IDEA-ST11-LABEL-HORIZON-FWD18-INVERSE-RANK"
-      source_run_id: "run02W_lgbm_fwd18_retrain_v1"
-      probe_type: "python_structural_inverse_rank_threshold"
-      decision_direction_mode: "inverse"
-      signal_counts_tier_a_tier_b_combined: "327/164/491"
+      run_id: run02Y_lgbm_fwd18_inverse_rank_threshold_v1
+      idea_id: IDEA-ST11-LABEL-HORIZON-FWD18-INVERSE-RANK
+      source_run_id: run02W_lgbm_fwd18_retrain_v1
+      probe_type: python_structural_inverse_rank_threshold
+      decision_direction_mode: inverse
+      signal_counts_tier_a_tier_b_combined: 327/164/491
       tier_a_q96_validation_hit_rate: 0.604167
       tier_a_q96_oos_hit_rate: 0.34375
-      external_verification_status: "out_of_scope_by_claim"
-      read: "inverse_rank_alone_improves_validation_but_not_oos_enough"
+      external_verification_status: out_of_scope_by_claim
+      read: inverse_rank_alone_improves_validation_but_not_oos_enough
     run02Z:
-      run_id: "run02Z_lgbm_fwd18_inverse_rank_context_v1"
-      idea_id: "IDEA-ST11-LABEL-HORIZON-FWD18-INVERSE-RANK-CONTEXT"
-      source_run_id: "run02W_lgbm_fwd18_retrain_v1"
-      label_id: "label_v1_fwd18_m5_logret_train_q33_3class"
-      decision_direction_mode: "inverse"
-      context_gate: "di_spread_abs_lte8_adx_lte25"
-      signal_counts_tier_a_tier_b_combined: "20/9/29"
+      run_id: run02Z_lgbm_fwd18_inverse_rank_context_v1
+      idea_id: IDEA-ST11-LABEL-HORIZON-FWD18-INVERSE-RANK-CONTEXT
+      source_run_id: run02W_lgbm_fwd18_retrain_v1
+      label_id: label_v1_fwd18_m5_logret_train_q33_3class
+      decision_direction_mode: inverse
+      context_gate: di_spread_abs_lte8_adx_lte25
+      signal_counts_tier_a_tier_b_combined: 20/9/29
       validation_mt5_routed_net_profit: 386.06
       validation_mt5_routed_profit_factor: 7.25
       validation_mt5_routed_trades: 9
@@ -876,100 +905,105 @@ stage11_alpha_robustness:
       validation_tier_b_fallback_used_signals: 4
       oos_tier_a_used_signals: 4
       oos_tier_b_fallback_used_signals: 5
-      external_verification_status: "completed"
-      read: "positive_tiny_sample_runtime_probe_worth_stress_testing_not_promotion"
-  inherited_baseline_run_id: "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1"
-  inherited_baseline_stage: "10_alpha_scout__default_split_model_threshold_scan"
-  inherited_baseline_slice: "200 < minutes_from_cash_open <= 220"
+      external_verification_status: completed
+      read: positive_tiny_sample_runtime_probe_worth_stress_testing_not_promotion
+  inherited_baseline_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
+  inherited_seed_surface_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
+  inherited_baseline_stage: 10_alpha_scout__default_split_model_threshold_scan
+  historical_baseline_wording_superseded_by: docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
+  inherited_surface_current_interpretation: topic_pivot_seed_surface_not_baseline
+  inherited_baseline_slice: 200 < minutes_from_cash_open <= 220
   inherited_baseline_hold_bars: 9
-  inherited_baseline_threshold: "short0.600_long0.450_margin0.000"
-  inherited_baseline_routing_mode: "tier_a_primary_no_fallback"
-  closeout_read: "run02Z family produced a positive tiny-sample fwd18 inverse-rank context MT5 runtime_probe; stage closed because OOS trade count is too small for alpha quality, live readiness, or promotion"
-  closeout_packet_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage11_closeout_packet.md"
-  closeout_decision_path: "docs/decisions/2026-04-27_stage11_alpha_robustness_closeout.md"
-  boundary: "reviewed_closed_runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion"
-  stage_brief_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/stage_brief.md"
-  input_references_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/01_inputs/input_references.md"
-  selection_status_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/04_selected/selection_status.md"
-  current_run_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Z_lgbm_fwd18_inverse_rank_context_v1"
-  current_run_manifest_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Z_lgbm_fwd18_inverse_rank_context_v1/run_manifest.json"
-  current_run_result_summary_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Z_lgbm_fwd18_inverse_rank_context_v1/reports/result_summary.md"
-  current_run_packet_plan_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md"
-  current_run_packet_review_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02X_run02Z_fwd18_rank_context_packet.md"
-  current_stage_run_ledger_path: "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage_run_ledger.csv"
+  inherited_baseline_threshold: short0.600_long0.450_margin0.000
+  inherited_baseline_routing_mode: tier_a_primary_no_fallback
+  closeout_read: run02Z family produced a positive tiny-sample fwd18 inverse-rank context MT5 runtime_probe; stage closed
+    because OOS trade count is too small for alpha quality, live readiness, or promotion
+  closeout_packet_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage11_closeout_packet.md
+  closeout_decision_path: docs/decisions/2026-04-27_stage11_alpha_robustness_closeout.md
+  boundary: reviewed_closed_runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion
+  stage_brief_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/stage_brief.md
+  input_references_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/01_inputs/input_references.md
+  selection_status_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/04_selected/selection_status.md
+  current_run_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Z_lgbm_fwd18_inverse_rank_context_v1
+  current_run_manifest_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Z_lgbm_fwd18_inverse_rank_context_v1/run_manifest.json
+  current_run_result_summary_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/02_runs/run02Z_lgbm_fwd18_inverse_rank_context_v1/reports/result_summary.md
+  current_run_packet_plan_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md
+  current_run_packet_review_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02X_run02Z_fwd18_rank_context_packet.md
+  current_stage_run_ledger_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage_run_ledger.csv
 stage12_model_family_challenge:
-  stage_id: "12_model_family_challenge__extratrees_training_effect"
-  status: "active_standalone_tier_balance_mt5_supplement_completed"
-  lane: "standalone_batch20_top_tier_balance_mt5_runtime_probe"
-  current_run_id: "run03F_et_v11_tier_balance_mt5_v1"
-  current_run_label: "stage12_Model__ExtraTreesV11TierBalanceMT5"
-  current_status: "reviewed"
+  stage_id: 12_model_family_challenge__extratrees_training_effect
+  status: reviewed_closed_no_next_stage_opened
+  lane: stage12_closeout_topic_pivot_no_promotion
+  current_run_id: run03S_et_probability_shape_attribution_probe_v1
+  current_run_label: stage12_Model__ExtraTreesProbabilityShapeAttribution
+  current_status: reviewed
   current_summary:
-    boundary: "Stage12 standalone(단독); no Stage10/11 inheritance(10/11단계 비계승) or baseline(기준선)"
-    latest_python_package: "run03D_et_standalone_batch20_v1"
-    previous_mt5_runtime_probe: "run03E_et_batch20_top_v11_mt5_probe_v1"
-    latest_mt5_runtime_probe: "run03F_et_v11_tier_balance_mt5_v1"
-    source_variant: "v11_base_leaf20_q85"
-    python_validation_hit_rate: 0.392687880840
-    python_oos_hit_rate: 0.457317073171
-    validation_routed_net_profit: -194.48
-    validation_routed_profit_factor: 0.90
-    validation_routed_trades: 444
-    validation_tier_a_only_net_profit: -189.47
-    validation_tier_b_only_net_profit: 0.48
-    oos_routed_net_profit: 546.79
-    oos_routed_profit_factor: 1.47
-    oos_routed_trades: 368
-    oos_tier_a_only_net_profit: 399.59
-    oos_tier_b_only_net_profit: 88.69
-    package_judgment: "inconclusive_runtime_probe_tier_balance_supplement_completed"
-    external_verification: "completed"
-    result_summary_path: "stages/12_model_family_challenge__extratrees_training_effect/02_runs/run03F_et_v11_tier_balance_mt5_v1/reports/result_summary.md"
-    summary_path: "docs/agent_control/packets/kpi_tier_balance_completion_v1/packet_summary.json"
-    next_action: "Review tier-balance supplement(티어 균형 보강) before deciding whether v16/v09/v13(변형 후보) deserve separate MT5 probes(MT5 탐침)"
+    closeout_packet_id: stage12_model_family_challenge_closeout_v1
+    boundary: reviewed_closed_runtime_probe_evidence_no_alpha_quality_no_promotion_no_runtime_authority
+    source_wfo_run_id: run03J_et_rolling_wfo_split_probe_v1
+    source_recency_run_id: run03L_et_recency_weighted_single_v1
+    fold07_used: false
+    python_folds_used: fold01,fold02,fold03,fold04,fold05,fold06
+    mt5_fold_id: fold05
+    stage12_run_registry_rows: 59
+    stage12_stage_ledger_rows: 794
+    stage12_project_ledger_rows: 794
+    stage12_run_packet_directories: 13
+    selected_operating_reference: none
+    selected_promotion_candidate: none
+    preserved_clues: RUN03L_recency_weighted,RUN03O_trend_bucket,RUN03Q_risk_on_oos
+    negative_memory: ExtraTrees standalone regime and attribution probes did not produce robust repeated WFO evidence
+    judgment: closed_inconclusive_extratrees_standalone_runtime_probe_evidence
+    external_verification_status: completed_for_recorded_mt5_runtime_probes
+    closeout_packet_path: stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md
+    closeout_decision_path: docs/decisions/2026-05-02_stage12_model_family_challenge_closeout.md
+    packet_summary_path: docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json
+    next_action: no_stage13_folder_created_user_will_continue_in_new_chat
+
 
 agent_control_kpi_rebuild:
-  status: "partial_trade_attribution_recorded"
-  git_sync_target: "origin/main"
-  previous_pushed_evidence_commit: "1b557a463f49005bcf5e8bac5b128037b653fa0e"
-  current_sync_rule: "after document sync(문서 동기화) commits, read latest pushed state(최신 푸시 상태) from git HEAD(깃 HEAD)"
-  operating_format_status: "work packet(작업 묶음), run plan(실행 계획), skill receipt(스킬 영수증), KPI source authority(KPI 원천 권위), and n/a reason(해당없음 사유) contracts(계약) are materialized(물질화됨)"
+  status: partial_trade_attribution_recorded
+  git_sync_target: origin/main
+  previous_pushed_evidence_commit: 1b557a463f49005bcf5e8bac5b128037b653fa0e
+  current_sync_rule: after document sync(문서 동기화) commits, read latest pushed state(최신 푸시 상태) from git HEAD(깃 HEAD)
+  operating_format_status: work packet(작업 묶음), run plan(실행 계획), skill receipt(스킬 영수증), KPI source authority(KPI 원천 권위), and
+    n/a reason(해당없음 사유) contracts(계약) are materialized(물질화됨)
   packets:
     inventory:
-      packet_id: "kpi_rebuild_inventory_v1"
-      status: "inventory_confirmed"
+      packet_id: kpi_rebuild_inventory_v1
+      status: inventory_confirmed
       target_runs: 70
-      path: "docs/agent_control/packets/kpi_rebuild_inventory_v1"
+      path: docs/agent_control/packets/kpi_rebuild_inventory_v1
     mt5_recording:
-      packet_id: "kpi_rebuild_mt5_recording_v1"
-      status: "partial_existing_report_recording"
+      packet_id: kpi_rebuild_mt5_recording_v1
+      status: partial_existing_report_recording
       target_runs: 70
       runs_with_mt5_reports: 65
       missing_runs: 5
       normalized_kpi_rows: 448
-      path: "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1"
+      path: docs/agent_control/packets/kpi_rebuild_mt5_recording_v1
     mt5_execution:
-      packet_id: "kpi_rebuild_mt5_execution_v1"
-      status: "partial_mt5_execution_complete"
+      packet_id: kpi_rebuild_mt5_execution_v1
+      status: partial_mt5_execution_complete
       mt5_attempts_completed: 22
       mt5_reports_created: 22
       blocked_runs: 5
-      blocked_reason: "mt5_inputs_not_materialized(MT5 입력 미물질화)"
-      path: "docs/agent_control/packets/kpi_rebuild_mt5_execution_v1"
+      blocked_reason: mt5_inputs_not_materialized(MT5 입력 미물질화)
+      path: docs/agent_control/packets/kpi_rebuild_mt5_execution_v1
     trade_attribution:
-      packet_id: "kpi_trade_attribution_v1"
-      status: "partial_trade_attribution"
+      packet_id: kpi_trade_attribution_v1
+      status: partial_trade_attribution
       actual_records_requiring_trade_attribution: 266
       records_with_trade_attribution: 241
       zero_trade_records_without_attribution: 25
       trade_level_rows: 15803
       parser_errors: 0
-      path: "docs/agent_control/packets/kpi_trade_attribution_v1"
+      path: docs/agent_control/packets/kpi_trade_attribution_v1
     tier_balance_completion:
-      packet_id: "kpi_tier_balance_completion_v1"
-      status: "completed"
+      packet_id: kpi_tier_balance_completion_v1
+      status: completed
       target_runs: 6
-      target_run_ids: "run02AL,run02AM,run02AN,run02AO,run02AP,run03F"
+      target_run_ids: run02AL,run02AM,run02AN,run02AO,run02AP,run03F
       mt5_attempts_completed: 36
       mt5_kpi_records: 60
       normalized_kpi_rows: 60
@@ -977,118 +1011,155 @@ agent_control_kpi_rebuild:
       trade_level_rows: 1837
       zero_trade_records_without_attribution: 1
       parser_errors: 0
-      path: "docs/agent_control/packets/kpi_tier_balance_completion_v1"
-  boundary: "KPI rebuild(핵심 성과 지표 재구축) is evidence management(근거 관리) only; it does not change Stage 12 alpha judgment(12단계 알파 판정) or create promotion meaning(승격 의미)."
-
+      path: docs/agent_control/packets/kpi_tier_balance_completion_v1
+  boundary: KPI rebuild(핵심 성과 지표 재구축) is evidence management(근거 관리) only; it does not change Stage 12 alpha judgment(12단계
+    알파 판정) or create promotion meaning(승격 의미).
 agent_control_code_surface:
-  status: "guarded_with_registered_debt"
-  audit_path: "docs/agent_control/code_surface_audit_latest.json"
-  baseline_path: "docs/agent_control/code_surface_baseline.yaml"
-  gate_command: "python -m foundation.control_plane.code_surface_audit --root ."
-  latest_audit_status: "pass"
+  status: guarded_with_registered_debt
+  audit_path: docs/agent_control/code_surface_audit_latest.json
+  baseline_path: docs/agent_control/code_surface_baseline.yaml
+  gate_command: python -m foundation.control_plane.code_surface_audit --root .
+  latest_audit_status: pass
   large_files_over_attention: 5
-  compatibility_warning: "foundation/mt5/runtime_support.py no longer delegates(위임) to legacy Stage 10 orchestration(기존 10단계 조율 파일); remaining debt(남은 부채) is large helper/module decomposition(큰 도구/모듈 분해) and semantic reusable-logic detection(재사용 로직 의미 감사)"
+  compatibility_warning: foundation/mt5/runtime_support.py no longer delegates(위임) to legacy Stage 10 orchestration(기존 10단계
+    조율 파일); remaining debt(남은 부채) is large helper/module decomposition(큰 도구/모듈 분해) and semantic reusable-logic detection(재사용
+    로직 의미 감사)
   refactor_completed:
-    - "MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서) moved to foundation/mt5/strategy_report.py"
-    - "foundation/control_plane(제어면) no longer imports Stage10 pipeline(10단계 파이프라인) directly for MT5 report parsing"
-    - "direct control-plane to stage-pipeline imports(제어면에서 단계 파이프라인 직접 가져오기) are now blocked by code_surface_audit(코드 표면 감사)"
-    - "shared alpha helpers(공유 알파 도구) now require explicit ScoutRunContext(명시적 탐색 실행 문맥) for stage/run identity(단계/실행 정체성)"
-    - "MT5 runtime support(MT5 런타임 지원) now imports foundation-owned modules(기반 소유 모듈) for decision surface(의사결정 표면), ONNX bridge(ONNX 연결), terminal runner(터미널 실행기), runtime artifacts(런타임 산출물), and MQL5 compile(MQL5 컴파일)"
-  boundary: "This reduces code-surface drift(코드 표면 드리프트) and records remaining debt(남은 부채); it does not claim full Stage10 pipeline decomposition(10단계 파이프라인 완전 분해)."
-
+  - MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서) moved to foundation/mt5/strategy_report.py
+  - foundation/control_plane(제어면) no longer imports Stage10 pipeline(10단계 파이프라인) directly for MT5 report parsing
+  - direct control-plane to stage-pipeline imports(제어면에서 단계 파이프라인 직접 가져오기) are now blocked by code_surface_audit(코드 표면 감사)
+  - shared alpha helpers(공유 알파 도구) now require explicit ScoutRunContext(명시적 탐색 실행 문맥) for stage/run identity(단계/실행 정체성)
+  - MT5 runtime support(MT5 런타임 지원) now imports foundation-owned modules(기반 소유 모듈) for decision surface(의사결정 표면), ONNX bridge(ONNX
+    연결), terminal runner(터미널 실행기), runtime artifacts(런타임 산출물), and MQL5 compile(MQL5 컴파일)
+  boundary: This reduces code-surface drift(코드 표면 드리프트) and records remaining debt(남은 부채); it does not claim full Stage10
+    pipeline decomposition(10단계 파이프라인 완전 분해).
 agent_control_control_plane_v2:
-  status: "completed"
-  packet_id: "codex_control_plane_v2_incremental_v1"
-  packet_path: "docs/agent_control/packets/codex_control_plane_v2_incremental_v1"
-  work_packet_schema: "work_packet_schema_v2_compatible"
-  state_sync_audit_status: "pass"
-  closeout_gate_status: "pass"
-  required_gate_coverage_status: "pass"
-  agent_control_contracts_registry_validation: "reachable_pass"
-  closeout_report_path: "docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_report.md"
+  status: completed
+  packet_id: codex_control_plane_v2_incremental_v1
+  packet_path: docs/agent_control/packets/codex_control_plane_v2_incremental_v1
+  work_packet_schema: work_packet_schema_v2_compatible
+  state_sync_audit_status: pass
+  closeout_gate_status: pass
+  required_gate_coverage_status: pass
+  agent_control_contracts_registry_validation: reachable_pass
+  closeout_report_path: docs/agent_control/packets/codex_control_plane_v2_incremental_v1/closeout_report.md
   completed_forbidden: false
   new_gate_modules:
-    - "foundation/control_plane/prompt_intake_classifier.py"
-    - "foundation/control_plane/risk_vector_scan.py"
-    - "foundation/control_plane/decision_lock.py"
-    - "foundation/control_plane/state_sync_audit.py"
-    - "foundation/control_plane/work_packet_schema_lint.py"
-    - "foundation/control_plane/skill_receipt_schema_lint.py"
-    - "foundation/control_plane/required_gate_coverage_audit.py"
-  boundary: "Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장), required gate coverage(필수 제한문 포함 여부), reachable agent-control registry validation(도달 가능한 에이전트 제어 등록부 검증), and evidence gates(근거 제한문); it does not change trading alpha judgment(거래 알파 판정), runtime authority(런타임 권위), or operating promotion(운영 승격)."
-
+  - foundation/control_plane/prompt_intake_classifier.py
+  - foundation/control_plane/risk_vector_scan.py
+  - foundation/control_plane/decision_lock.py
+  - foundation/control_plane/state_sync_audit.py
+  - foundation/control_plane/work_packet_schema_lint.py
+  - foundation/control_plane/skill_receipt_schema_lint.py
+  - foundation/control_plane/required_gate_coverage_audit.py
+  boundary: Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장), required gate coverage(필수 제한문 포함 여부), reachable
+    agent-control registry validation(도달 가능한 에이전트 제어 등록부 검증), and evidence gates(근거 제한문); it does not change trading alpha
+    judgment(거래 알파 판정), runtime authority(런타임 권위), or operating promotion(운영 승격).
 agent_control_alpha_scout_common_foundation:
-  status: "completed_code_ownership_and_agent_closeout_hardening"
-  packet_id: "alpha_scout_common_foundation_v1"
-  packet_path: "docs/agent_control/packets/alpha_scout_common_foundation_v1"
-  state_sync_merge_target_status: "pass"
-  closeout_gate_status: "pass"
-  required_gate_coverage_status: "pass"
+  status: completed_code_ownership_and_agent_closeout_hardening
+  packet_id: alpha_scout_common_foundation_v1
+  packet_path: docs/agent_control/packets/alpha_scout_common_foundation_v1
+  state_sync_merge_target_status: pass
+  closeout_gate_status: pass
+  required_gate_coverage_status: pass
   completed_effects:
-    - "stage_pipelines boundary(단계 파이프라인 경계) documented(문서화됨)"
-    - "shared alpha helpers(공유 알파 도구) require explicit context(명시 문맥 필요)"
-    - "cross-stage stage_pipelines imports(교차 단계 파이프라인 가져오기) blocked(차단됨)"
-    - "self_correction_policy(자기 수정 정책) added in plan_only(계획 전용) mode"
-  boundary: "This is code ownership(코드 소유권), agent routing(에이전트 라우팅), and closeout hardening(마감 강화); it does not claim alpha quality(알파 품질), MT5 runtime authority(MT5 런타임 권위), live readiness(실거래 준비), or operating promotion(운영 승격)."
-
+  - stage_pipelines boundary(단계 파이프라인 경계) documented(문서화됨)
+  - shared alpha helpers(공유 알파 도구) require explicit context(명시 문맥 필요)
+  - cross-stage stage_pipelines imports(교차 단계 파이프라인 가져오기) blocked(차단됨)
+  - self_correction_policy(자기 수정 정책) added in plan_only(계획 전용) mode
+  boundary: This is code ownership(코드 소유권), agent routing(에이전트 라우팅), and closeout hardening(마감 강화); it does not claim alpha
+    quality(알파 품질), MT5 runtime authority(MT5 런타임 권위), live readiness(실거래 준비), or operating promotion(운영 승격).
 agent_control_p0p1_runtime_evidence_cleanup:
-  status: "merged_code_evidence_cleanup_routing_receipt_only"
-  receipt_path: "docs/agent_control/packets/p0p1_runtime_evidence_cleanup/routing_receipt.yaml"
-  git_commit: "6cc33b3"
+  status: merged_code_evidence_cleanup_routing_receipt_only
+  receipt_path: docs/agent_control/packets/p0p1_runtime_evidence_cleanup/routing_receipt.yaml
+  git_commit: 6cc33b3
   materialized_code_surfaces:
-    - "foundation/control_plane/tier_context_materialization.py"
-    - "foundation/models/decision_surface.py"
-    - "foundation/models/onnx_bridge.py"
-    - "foundation/mt5/mql5_compile.py"
-    - "foundation/mt5/runtime_artifacts.py"
-    - "foundation/mt5/terminal_runner.py"
-  boundary: "This cleanup improves runtime evidence wiring(런타임 근거 배선) and helper ownership(도구 소유권); no new MT5 terminal run(새 MT5 터미널 실행), alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격), or completed packet claim(완료 묶음 주장) is made from the receipt alone."
-
+  - foundation/control_plane/tier_context_materialization.py
+  - foundation/models/decision_surface.py
+  - foundation/models/onnx_bridge.py
+  - foundation/mt5/mql5_compile.py
+  - foundation/mt5/runtime_artifacts.py
+  - foundation/mt5/terminal_runner.py
+  boundary: This cleanup improves runtime evidence wiring(런타임 근거 배선) and helper ownership(도구 소유권); no new MT5 terminal run(새
+    MT5 터미널 실행), alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격), or completed packet claim(완료
+    묶음 주장) is made from the receipt alone.
 state_sync_current_truth_20260430:
-  status: "completed"
-  packet_id: "current_truth_sync_20260430_v1"
-  packet_path: "docs/agent_control/packets/current_truth_sync_20260430_v1"
-  decision_path: "docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md"
-  state_sync_audit_status: "pass"
-  boundary: "This sync aligns current-truth narration(현재 진실 설명), decision memo(결정 메모), changelog(변경기록), and architecture debt(구조 부채); it does not change trading results(거래 결과) or create promotion meaning(승격 의미)."
-
+  status: completed
+  packet_id: current_truth_sync_20260430_v1
+  packet_path: docs/agent_control/packets/current_truth_sync_20260430_v1
+  decision_path: docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md
+  state_sync_audit_status: pass
+  boundary: This sync aligns current-truth narration(현재 진실 설명), decision memo(결정 메모), changelog(변경기록), and architecture debt(구조
+    부채); it does not change trading results(거래 결과) or create promotion meaning(승격 의미).
+alpha_stage_transition_philosophy_correction_20260501:
+  status: policy_synced
+  packet_id: alpha_stage_transition_philosophy_correction_v1
+  packet_path: docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1
+  decision_path: docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
+  policy_paths:
+  - docs/policies/stage_structure.md
+  - docs/policies/exploration_mandate.md
+  boundary: This correction(정정)은 alpha exploration stage transition(알파 탐색 단계 전환)을 topic pivot(주제 전환)으로 고정하고 Stage10 run01Y(10단계
+    실행 01Y)를 seed surface(씨앗 표면)로 재해석한다; it does not change trading results(거래 결과) or create promotion meaning(승격 의미).
 open_items: []
+
 closed_memory:
-  - "Stage 12 is active_standalone_tier_balance_mt5_supplement_completed with RUN03F ExtraTrees Tier A/B/routed MT5 tier-balance evidence"
-  - "Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison and Stage 11 context surface"
-  - "Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run"
-  - "Stage 12 RUN03C is a prior standalone(이전 단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행), not the current run(현재 실행)"
-  - "Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is inconclusive(불충분)"
-  - "Stage 12 RUN03E completed prior MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85"
-  - "Stage 12 RUN03F completed Tier A/B/routed MT5 tier-balance supplement(Tier A/B/라우팅 MT5 티어 균형 보강) for the v11 ExtraTrees(엑스트라 트리) surface"
-  - "Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, trade attribution, and tier-balance completion packets(목록, MT5 기록, MT5 실행, 거래 귀속, 티어 균형 보강 묶음) as cross-stage evidence records(교차 단계 근거 기록)"
-  - "Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치), and control-plane direct stage imports(제어면의 단계 직접 가져오기)"
-  - "Control Plane v2(제어면 v2) now routes Codex prompts(코덱스 프롬프트) through work family(작업군), surface(작업 표면), risk vector(위험축), decision lock(결정 고정), work packet schema(작업 묶음 스키마), skill receipt schema(스킬 영수증 스키마), and closeout gate(마감 제한문)"
-  - "alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) completed code ownership(코드 소유권), explicit ScoutRunContext(명시적 탐색 실행 문맥), stage_pipelines boundary(단계 파이프라인 경계), and plan-only self-correction(계획 전용 자기 수정) hardening"
-  - "p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) is merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt only(라우팅 영수증만 있음), not a completed packet claim(완료 묶음 주장)"
-  - "current_truth_sync_20260430_v1(현재 진실 동기화 묶음) backfilled durable Stage12/ops sync decision(지속 Stage12/운영 동기화 결정) without changing trading results(거래 결과)"
-  - "Stage 11 is reviewed_closed_no_next_stage_opened"
-  - "Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate"
-  - "Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion"
-  - "MT5 price-proxy top3 weights must not be read as actual NDX/QQQ weights"
+- Stage 12 closed with stage12_model_family_challenge_closeout_v1(12단계 ExtraTrees 마감 묶음); no Stage13 folder(13단계 폴더)을 만들지 않았고 alpha quality(알파 품질), promotion(승격), runtime authority(런타임 권위)는 없음
+- Stage 12 preserved RUN03L recency-weighted(최근성 가중), RUN03O trend/chop(추세/횡보), and RUN03Q risk-on OOS(위험선호 표본외) as clues(단서), not selected baseline(선택 기준선)
+- Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison and Stage 11 context surface
+- Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run
+- Stage 12 RUN03C is a prior standalone(이전 단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행), not the current run(현재 실행)
+- Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is
+  inconclusive(불충분)
+- Stage 12 RUN03E completed prior MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85
+- Stage 12 RUN03G completed variant stability structural scout(변형 안정성 구조 탐침); next MT5 candidates(다음 MT5 후보)는 v09/v16/v13
+- Stage 12 RUN03F completed Tier A/B/routed MT5 tier-balance supplement(Tier A/B/라우팅 MT5 티어 균형 보강) for the v11 ExtraTrees(엑스트라
+  트리) surface
+- Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, trade attribution, and
+  tier-balance completion packets(목록, MT5 기록, MT5 실행, 거래 귀속, 티어 균형 보강 묶음) as cross-stage evidence records(교차 단계 근거 기록)
+- Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치), and control-plane direct stage imports(제어면의
+  단계 직접 가져오기)
+- Control Plane v2(제어면 v2) now routes Codex prompts(코덱스 프롬프트) through work family(작업군), surface(작업 표면), risk vector(위험축),
+  decision lock(결정 고정), work packet schema(작업 묶음 스키마), skill receipt schema(스킬 영수증 스키마), and closeout gate(마감 제한문)
+- alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) completed code ownership(코드 소유권), explicit ScoutRunContext(명시적 탐색 실행 문맥),
+  stage_pipelines boundary(단계 파이프라인 경계), and plan-only self-correction(계획 전용 자기 수정) hardening
+- p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) is merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt only(라우팅
+  영수증만 있음), not a completed packet claim(완료 묶음 주장)
+- current_truth_sync_20260430_v1(현재 진실 동기화 묶음) backfilled durable Stage12/ops sync decision(지속 Stage12/운영 동기화 결정) without
+  changing trading results(거래 결과)
+- alpha_stage_transition_philosophy_correction_v1(알파 단계 전환 철학 정정 묶음) fixed Stage10 run01Y(10단계 실행 01Y) as seed surface(씨앗
+  표면), not baseline(기준선), and alpha stage transitions(알파 단계 전환) as topic pivots(주제 전환)
+- Stage 11 is reviewed_closed_no_next_stage_opened
+- Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate
+- Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion
+- MT5 price-proxy top3 weights must not be read as actual NDX/QQQ weights
 forbidden_shortcuts:
-  - "do not resurrect old Stage 06 or Stage 07 conclusions as current truth"
-  - "do not turn Tier labels into exploration permissions"
-  - "do not treat the 56-feature interim quarantine artifact as the final pre-alpha model input"
-  - "do not treat MT5 price-proxy weights as actual index, fund, market-cap, or float-adjusted weights"
-  - "do not treat the Stage 05 feature-integrity audit as runtime parity or model quality"
-  - "do not treat the superseded Stage 06 blocked runtime probe as current truth"
-  - "do not treat Stage 06 runtime authority as model quality or operating promotion"
-  - "do not treat the Stage 07 baseline training smoke as alpha quality, live readiness, or operating promotion"
-  - "do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality judgment"
-  - "do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality judgment"
-  - "do not treat Stage 10 run01A-run01AC runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
-  - "do not treat the Stage 11 scaffold as a Stage 11 run result or robustness proof"
-  - "do not treat Stage 11 run02A-run02S, run02W-run02Z, and run02AA-run02AK LightGBM MT5 runtime_probe or run02T-run02V/run02X-run02Y Python structural probes as alpha quality, live readiness, runtime authority expansion, or operating promotion"
-  - "do not treat Stage 12 RUN03A as standalone evidence; it is invalid_for_standalone_scope"
-  - "do not treat Stage 12 RUN03B ExtraTrees standalone Python structural scout as MT5 runtime evidence, alpha quality, live readiness, runtime authority expansion, or operating promotion"
-  - "do not treat Stage 12 RUN03F tier-balance MT5 runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating promotion"
-  - "do not treat alpha_scout_common_foundation_v1 code/agent hardening as alpha quality, live readiness, runtime authority expansion, or operating promotion"
-  - "do not treat p0p1_runtime_evidence_cleanup routing_receipt only as a completed packet closeout"
-  - "do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze"
-  - "do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence"
+- do not resurrect old Stage 06 or Stage 07 conclusions as current truth
+- do not turn Tier labels into exploration permissions
+- do not treat the 56-feature interim quarantine artifact as the final pre-alpha model input
+- do not treat MT5 price-proxy weights as actual index, fund, market-cap, or float-adjusted weights
+- do not treat the Stage 05 feature-integrity audit as runtime parity or model quality
+- do not treat the superseded Stage 06 blocked runtime probe as current truth
+- do not treat Stage 06 runtime authority as model quality or operating promotion
+- do not treat the Stage 07 baseline training smoke as alpha quality, live readiness, or operating promotion
+- do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality judgment
+- do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality judgment
+- do not treat Stage 10 run01A-run01AC runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating
+  promotion
+- do not treat Stage 10 run01Y as alpha baseline(알파 기준선), standard run(표준 실행), operating reference(운영 기준), or winner(승자);
+  it is seed surface(씨앗 표면) and preserved clue(보존 단서)
+- do not close alpha exploration stages(알파 탐색 단계) by selecting baseline(기준선) unless an explicit promotion/operating packet(명시
+  승격/운영 작업 묶음) opens
+- do not treat the Stage 11 scaffold as a Stage 11 run result or robustness proof
+- do not treat Stage 11 run02A-run02S, run02W-run02Z, and run02AA-run02AK LightGBM MT5 runtime_probe or run02T-run02V/run02X-run02Y
+  Python structural probes as alpha quality, live readiness, runtime authority expansion, or operating promotion
+- do not treat Stage 12 RUN03A as standalone evidence; it is invalid_for_standalone_scope
+- do not treat Stage 12 RUN03B ExtraTrees standalone Python structural scout as MT5 runtime evidence, alpha quality, live
+  readiness, runtime authority expansion, or operating promotion
+- do not treat Stage 12 RUN03F tier-balance MT5 runtime_probe as alpha quality, live readiness, runtime authority expansion,
+  or operating promotion
+- do not treat alpha_scout_common_foundation_v1 code/agent hardening as alpha quality, live readiness, runtime authority expansion,
+  or operating promotion
+- do not treat p0p1_runtime_evidence_cleanup routing_receipt only as a completed packet closeout
+- do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze
+- do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence

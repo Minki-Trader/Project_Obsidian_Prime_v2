@@ -16,6 +16,30 @@
 - `operating_promotion(운영 승격)`과 `runtime_authority(런타임 권위)`는 강한 증거가 필요하다.
 - `promotion-ineligible(승격 부적격)`은 아이디어 사망(idea-dead, 아이디어 사망)이 아니다.
 
+## 알파 탐색 중 기준선 종료 금지(No Baseline Closure During Alpha Exploration, 알파 탐색 중 기준선 종료 금지)
+
+알파 탐색(alpha exploration, 알파 탐색)의 closeout(마감)은 baseline(기준선)을 정하는 의식이 아니다.
+
+단계(stage, 단계)가 알파 탐색 성격(exploratory alpha nature, 탐색적 알파 성격)을 갖고 있다면 다음 stage(다음 단계)로의 이동은 topic pivot(주제 전환)이다. 마감 단계(closing stage, 마감 단계)에서 standard run(표준 실행), operating reference(운영 기준), baseline(기준선)을 만들지 않는다.
+
+허용되는 마감 표현(allowed closeout words, 허용 마감 표현)은 다음과 같다.
+
+- seed surface(씨앗 표면)
+- preserved clue(보존 단서)
+- reference surface(참고 표면)
+- negative memory(부정 기억)
+- invalid setup(무효 설정)
+- blocked retry condition(차단 재시도 조건)
+
+금지되는 마감 표현(forbidden closeout words, 금지 마감 표현)은 별도 promotion/operating packet(승격/운영 작업 묶음) 없이 쓰지 않는다.
+
+- selected baseline(선택 기준선)
+- operating reference(운영 기준)
+- promotion candidate(승격 후보)
+- runtime authority(런타임 권위)
+
+효과(effect, 효과): 탐색(exploration, 탐색)은 충분히 파되, 의미 없는 미세조정(meaningless micro-tuning, 의미 없는 미세조정)을 반복하지 않는다. 좋은 단서(clue, 단서)는 다음 주제(topic, 주제)의 씨앗(seed, 씨앗)이 될 수 있지만, 운영 의미(operating meaning, 운영 의미)는 만들지 않는다.
+
 ## WFO
 
 WFO(`walk-forward optimization`, 워크포워드 최적화)는 진지한 최적화(optimization, 최적화)의 기본 방식이다. 단일 구간 판독(single-window read, 단일 구간 판독)은 스카우트(scout, 탐색 판독)로 쓸 수 있지만 그렇게 표시해야 한다.

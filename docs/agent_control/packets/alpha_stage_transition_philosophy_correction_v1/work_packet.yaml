@@ -1,0 +1,240 @@
+version: work_packet_schema_v2
+packet_id: alpha_stage_transition_philosophy_correction_v1
+created_at_utc: "2026-04-30T15:23:18Z"
+user_request:
+  user_quote: "그렇게해줘.."
+  requested_action: "materialize alpha stage transition philosophy correction(알파 단계 전환 철학 정정 문서화)"
+  requested_count:
+    value: null
+    n_a_reason: not_counted_scope
+  ambiguous_terms:
+    - "그렇게"
+current_truth:
+  active_stage: "12_model_family_challenge__extratrees_training_effect"
+  current_run: "run03F_et_v11_tier_balance_mt5_v1"
+  branch: "codex/alpha-stage-transition-policy"
+  source_documents:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/12_model_family_challenge__extratrees_training_effect/04_selected/selection_status.md
+work_classification:
+  primary_family: policy_skill_governance
+  detected_families:
+    - policy_skill_governance
+    - state_sync
+    - artifact_lineage
+  touched_surfaces:
+    - AGENTS.md
+    - policy_docs
+    - current_truth_docs
+    - stage_closeout_docs
+    - decision_memo
+    - work_packet
+  mutation_intent: true
+  execution_intent: false
+risk_vector_scan:
+  risks:
+    policy_drift_risk: high
+    state_fragmentation_risk: medium
+    claim_overstatement_risk: high
+    korean_bom_encoding_risk: high
+    trading_result_mutation_risk: medium
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - state_sync_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+  forbidden_claims:
+    - trading_result_change
+    - alpha_quality
+    - runtime_authority
+    - live_readiness
+    - operating_promotion
+decision_lock:
+  mode: user_explicit_instruction
+  assumptions:
+    file_edit_allowed: true
+    execution_allowed: false
+    ledger_write_allowed: false
+    destructive_change_allowed: false
+    report_only: false
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+    - policy_skill_governance
+    - state_sync
+  target_surfaces:
+    - AGENTS.md
+    - docs/policies/stage_structure.md
+    - docs/policies/exploration_mandate.md
+    - docs/policies/agent_trigger_policy.md
+    - docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - docs/workspace/changelog.md
+    - stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md
+    - stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage11_closeout_packet.md
+  scope_units:
+    - document
+    - policy
+    - report
+  execution_layers:
+    - document_edit
+    - python_execution
+  mutation_policy:
+    allowed: true
+    boundary: "docs-only policy/current-truth correction; no model, threshold, MT5, KPI, or ledger mutation"
+  evidence_layers:
+    - policy_docs
+    - decision_memo
+    - current_truth_docs
+    - packet_closeout
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: true
+  claim_boundary:
+    allowed_claims:
+      - completed
+      - policy_synced
+      - current_truth_interpretation_synced
+    forbidden_claims:
+      - alpha_quality
+      - runtime_authority
+      - live_readiness
+      - operating_promotion
+      - trading_result_change
+acceptance_criteria:
+  - id: AC-001
+    text: "Long-lived policy docs define alpha stage transitions as topic pivots, not baseline selection."
+    expected_artifact: docs/policies/stage_structure.md
+    verification_method: text_audit
+    required: true
+  - id: AC-002
+    text: "Decision memo records the Stage 10 to Stage 11 interpretation correction."
+    expected_artifact: docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
+    verification_method: text_audit
+    required: true
+  - id: AC-003
+    text: "Current-truth docs mark Stage 10 run01Y as seed surface/reference surface, not baseline."
+    expected_artifact: docs/workspace/workspace_state.yaml
+    verification_method: state_sync_audit
+    required: true
+  - id: AC-004
+    text: "Policy governance gates pass for packet, receipts, agent-control contracts, and operations instructions."
+    expected_artifact: docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/closeout_gate.json
+    verification_method: closeout_gate_status_pass
+    required: true
+work_plan:
+  phases:
+    - id: reentry_and_routing
+      actions:
+        - read_current_truth
+        - select_policy_skill_governance_family
+        - create_codex_branch
+    - id: edit_docs
+      actions:
+        - patch_stage_structure_policy
+        - patch_exploration_mandate_policy
+        - add_decision_memo
+        - sync_current_truth_and_stage_closeout_addenda
+    - id: closeout
+      actions:
+        - record_skill_receipts
+        - run_agent_control_contracts
+        - run_ops_instruction_audit
+        - run_state_sync_audit
+        - run_schema_lints_and_closeout_gate
+  expected_outputs:
+    - docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
+    - docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/work_packet.yaml
+    - docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/skill_receipts.json
+    - docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/closeout_report.md
+    - docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/closeout_gate.json
+  stop_conditions:
+    - state_sync_audit_blocked
+    - agent_control_contracts_blocked
+    - ops_instruction_audit_blocked
+    - encoding_check_failed
+skill_routing:
+  primary_family: policy_skill_governance
+  primary_skill: obsidian-work-packet-router
+  support_skills:
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+  skills_considered:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+    - obsidian-reentry-read
+    - obsidian-stage-transition
+    - obsidian-exploration-mandate
+    - obsidian-result-judgment
+    - obsidian-artifact-lineage
+    - obsidian-answer-clarity
+  skills_selected:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+  skills_not_used:
+    obsidian-stage-transition: "not_primary_family; state sync is supporting evidence but no active_stage handoff is performed"
+    obsidian-exploration-mandate: "consulted for policy semantics but not selected because policy_skill_governance governs AGENTS/policy/control edits"
+    obsidian-result-judgment: "consulted for boundary vocabulary but not selected because no new trading result is judged"
+    obsidian-runtime-parity: "not_required_no_MT5_or_runtime_execution"
+    obsidian-run-evidence-system: "not_required_no_KPI_or_run_ledger_mutation"
+  required_skill_receipts:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+  required_gates:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - state_sync_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+evidence_contract:
+  raw_evidence:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md
+    - stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage11_closeout_packet.md
+  machine_readable:
+    - docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/work_packet.yaml
+    - docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/skill_receipts.json
+  human_readable:
+    - docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
+    - docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/closeout_report.md
+gates:
+  required:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - state_sync_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+  actual_status_source: docs/agent_control/packets/alpha_stage_transition_philosophy_correction_v1/closeout_gate.json
+  not_applicable_with_reason:
+    kpi_contract_audit: "No KPI row(KPI 행), trading ledger(거래 장부), or run result(실행 결과) changed."
+    runtime_evidence_gate: "No MT5 terminal(MT5 터미널), Strategy Tester(전략 테스터), EA, set file(설정 파일), or runtime handoff(런타임 인계) changed."
+    code_surface_audit: "No code file(코드 파일) changed; architecture validator and agent-control contracts cover policy/agent docs."
+final_claim_policy:
+  allowed_claims:
+    - completed
+    - policy_synced
+    - current_truth_interpretation_synced
+    - gate_coverage_complete
+  forbidden_claims:
+    - trading_result_change
+    - alpha_quality
+    - runtime_authority
+    - live_readiness
+    - operating_promotion
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

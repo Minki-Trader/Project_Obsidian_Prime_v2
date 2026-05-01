@@ -54,7 +54,12 @@ class ExperimentInventoryTests(unittest.TestCase):
             result.summary["counts"]["default_rework_targets"],
             sum(1 for record in result.records if record["default_rework_target"]),
         )
-        self.assertEqual(result.summary["counts"]["stage10_to_active_rows"], 77)
+        expected_stage10_to_active = sum(
+            1
+            for record in result.records
+            if isinstance(record.get("stage_number"), int) and int(record["stage_number"]) >= 10
+        )
+        self.assertEqual(result.summary["counts"]["stage10_to_active_rows"], expected_stage10_to_active)
 
     def test_long_path_safe_inventory_keeps_run01y_available(self) -> None:
         result = build_experiment_inventory(ROOT, created_at_utc="2026-04-29T00:00:00Z")

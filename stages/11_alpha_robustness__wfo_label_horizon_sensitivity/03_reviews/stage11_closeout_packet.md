@@ -7,9 +7,17 @@
 - external_verification_status(외부 검증 상태): `completed_for_recorded_mt5_runtime_probes`
 - operating reference(운영 기준): `none(없음)`
 
+## 2026-05-01 해석 부록(Interpretation Addendum, 해석 부록)
+
+Stage 11(11단계)은 Stage 10(10단계)의 baseline(기준선)을 검증한 단계가 아니다.
+
+현재 해석(current interpretation, 현재 해석)에서 Stage 11(11단계)은 `run01Y(실행 01Y)` seed surface(씨앗 표면)를 참고 표면(reference surface, 참고 표면)으로 삼아 LightGBM(`LightGBM`, 라이트GBM), label horizon(라벨 예측수평선), rank threshold(순위 임계값), context gate(문맥 제한), routed fallback(라우팅 대체)을 파본 topic pivot(주제 전환) 단계다.
+
+근거(decision, 결정): `docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md`
+
 ## 쉬운 판독(Plain Read, 쉬운 판독)
 
-Stage 11(11단계)은 Stage 10(10단계)의 `run01Y(실행 01Y)`를 LightGBM(`LightGBM`, 라이트GBM), label horizon(라벨 예측수평선), rank threshold(순위 임계값), context gate(문맥 제한), routed fallback(라우팅 대체)로 압박했다.
+Stage 11(11단계)은 Stage 10(10단계)의 `run01Y(실행 01Y)` seed surface(씨앗 표면)를 LightGBM(`LightGBM`, 라이트GBM), label horizon(라벨 예측수평선), rank threshold(순위 임계값), context gate(문맥 제한), routed fallback(라우팅 대체)로 압박했다.
 
 효과(effect, 효과): `RUN02Z(실행 02Z)` 계열에서 양수 단서는 찾았지만, OOS(표본외) 거래 표본이 작아서 alpha quality(알파 품질), live readiness(실거래 준비), promotion_candidate(승격 후보), operating promotion(운영 승격)은 만들지 않는다.
 
