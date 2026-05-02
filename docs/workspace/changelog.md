@@ -210,3 +210,5 @@
 - 2026-05-02: Added `run04M_mlp_learning_behavior_runtime_probe_v1` MLP learning behavior runtime probe(MLP 학습 행동 런타임 탐침); no edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), or runtime authority(런타임 권위) claim.
 
 - 2026-05-02: Added `run04N_mlp_feature_group_interaction_profit_probe_v1` feature group interaction profit probe(피처 그룹 상호작용 수익 탐침); profit(수익)은 diagnostic(진단값)이며 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위) claim(주장) 없음.
+
+- 2026-05-02: Stage14(14단계) `run05A_svm_margin_kernel_characteristic_runtime_probe_v1` completed(완료) and closeout(마감) recorded as `closed_inconclusive_svm_margin_kernel_runtime_probe_evidence`. Stage15(15단계)를 `15_model_family_challenge__untried_learning_methods_scout`로 opened(개방). Effect(효과): SVM(서포트 벡터 머신) margin/kernel(마진/커널) 주제는 runtime_probe(런타임 탐침) 경계로 닫고, 미탐색 model learning methods(모델 학습법)를 새 독립 주제로 시작한다.

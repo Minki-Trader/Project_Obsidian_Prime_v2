@@ -1,0 +1,22 @@
+{
+  "packet_id": "stage14_svm_margin_kernel_closeout_v1",
+  "created_at_utc": "2026-05-02T10:00:48Z",
+  "work_packet_lifecycle": "runtime_backtest_to_stage_closeout_to_stage15_handoff",
+  "primary_family": "runtime_backtest",
+  "primary_skill": "obsidian-runtime-parity",
+  "support_skills": [
+    "obsidian-backtest-forensics",
+    "obsidian-reference-scout",
+    "obsidian-run-evidence-system",
+    "obsidian-artifact-lineage"
+  ],
+  "required_gates": [
+    "runtime_evidence_gate",
+    "scope_completion_gate",
+    "kpi_contract_audit",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "branch_worktree_fit": "codex/stage14 matches Stage14 closeout and Stage15 handoff request",
+  "reference_scout_pairing": "local sklearn/skl2onnx/onnxruntime conversion smoke checks were executed before code edits"
+}

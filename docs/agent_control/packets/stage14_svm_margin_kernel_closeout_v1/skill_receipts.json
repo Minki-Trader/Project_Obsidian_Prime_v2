@@ -1,0 +1,59 @@
+{
+  "packet_id": "stage14_svm_margin_kernel_closeout_v1",
+  "created_at_utc": "2026-05-02T10:00:48Z",
+  "receipts": [
+    {
+      "skill": "obsidian-runtime-parity",
+      "status": "completed",
+      "research_path": "foundation/models/svm_margin_kernel.py and stage_pipelines/stage14/svm_margin_kernel_runtime_probe.py",
+      "runtime_path": "stages/14_model_family_challenge__margin_kernel_training_effect/02_runs/run05A_svm_margin_kernel_characteristic_runtime_probe_v1/mt5",
+      "shared_contract": "58-feature Tier A, 42-feature Tier B fallback, label_v1_fwd12, split_v1, fixed q90 threshold",
+      "parity_check": "ONNX parity and MT5 Strategy Tester runtime_probe",
+      "runtime_claim_boundary": "runtime_probe"
+    },
+    {
+      "skill": "obsidian-backtest-forensics",
+      "status": "completed",
+      "tester_identity": "US100 M5, deposit 500, leverage 1:100, tester model 4, generated .ini/.set files",
+      "report_identity": "Strategy Tester reports recorded in run manifest when completed",
+      "backtest_judgment": "usable_with_boundary"
+    },
+    {
+      "skill": "obsidian-run-evidence-system",
+      "status": "completed",
+      "measurement_scope": "Python structural_scout plus MT5 runtime_probe KPI rows",
+      "management_state": "manifest, kpi_record, summary, run_registry, alpha ledgers updated",
+      "judgment_class": "inconclusive",
+      "evidence_boundary": "probe"
+    },
+    {
+      "skill": "obsidian-artifact-lineage",
+      "status": "completed",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json"
+      ],
+      "artifact_paths": [
+        "stages/14_model_family_challenge__margin_kernel_training_effect/02_runs/run05A_svm_margin_kernel_characteristic_runtime_probe_v1",
+        "docs/agent_control/packets/stage14_svm_margin_kernel_closeout_v1"
+      ],
+      "lineage_judgment": "connected_with_boundary"
+    },
+    {
+      "skill": "obsidian-claim-discipline",
+      "status": "completed",
+      "allowed_claims": [
+        "closed_inconclusive_svm_margin_kernel_runtime_probe_evidence",
+        "stage14_closeout_after_runtime_probe"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "edge",
+        "baseline",
+        "promotion",
+        "runtime_authority"
+      ]
+    }
+  ]
+}
