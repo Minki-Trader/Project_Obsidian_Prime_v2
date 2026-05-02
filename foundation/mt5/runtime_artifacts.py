@@ -164,6 +164,7 @@ def collect_mt5_strategy_report_artifacts(
     for attempt in attempts:
         report_name = report_name_from_attempt(attempt, run_id=run_id)
         record: dict[str, Any] = {
+            "attempt_name": attempt.get("attempt_name"),
             "tier": attempt["tier"],
             "split": attempt["split"],
             "report_name": report_name,
@@ -205,8 +206,15 @@ def attach_mt5_report_metrics(
     execution_results: list[dict[str, Any]],
     report_records: Sequence[Mapping[str, Any]],
 ) -> None:
+    records_by_attempt = {
+        record.get("attempt_name"): record
+        for record in report_records
+        if record.get("attempt_name")
+    }
     records_by_key = {(record.get("tier"), record.get("split")): record for record in report_records}
     for result in execution_results:
-        report_record = records_by_key.get((result.get("tier"), result.get("split")))
+        report_record = records_by_attempt.get(result.get("attempt_name"))
+        if report_record is None:
+            report_record = records_by_key.get((result.get("tier"), result.get("split")))
         if report_record is not None:
             result["strategy_tester_report"] = dict(report_record)

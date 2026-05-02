@@ -274,6 +274,9 @@ def attempt_payload(
     fallback_long_threshold: float | None = None,
     fallback_min_margin: float | None = None,
     fallback_invert_signal: bool | None = None,
+    close_on_flat_signal: bool = False,
+    reverse_on_opposite_signal: bool = True,
+    close_only_on_opposite_signal: bool = False,
 ) -> dict[str, Any]:
     set_path = run_root / "mt5" / f"{attempt_name}.set"
     ini_path = run_root / "mt5" / f"{attempt_name}.ini"
@@ -318,6 +321,9 @@ def attempt_payload(
         "InpFallbackInvertSignal": bool(fallback_invert_signal if fallback_invert_signal is not None else invert_signal),
         "InpAllowTrading": "true",
         "InpFixedLot": 0.1,
+        "InpCloseOnFlatSignal": bool(close_on_flat_signal),
+        "InpReverseOnOppositeSignal": bool(reverse_on_opposite_signal),
+        "InpCloseOnlyOnOppositeSignal": bool(close_only_on_opposite_signal),
         "InpMaxHoldBars": int(max_hold_bars),
         "InpMaxConcurrentPositions": 1,
         "InpMagic": 1001001 if tier == mt5.TIER_A else 1001002 if tier == mt5.TIER_B else 1001010,
@@ -358,6 +364,11 @@ def attempt_payload(
         "common_telemetry_path": telemetry,
         "common_summary_path": summary,
         "max_hold_bars": int(max_hold_bars),
+        "execution_policy": {
+            "close_on_flat_signal": bool(close_on_flat_signal),
+            "reverse_on_opposite_signal": bool(reverse_on_opposite_signal),
+            "close_only_on_opposite_signal": bool(close_only_on_opposite_signal),
+        },
     }
     if fallback_enabled:
         payload["routing_mode"] = mt5.ROUTING_MODE_A_B_FALLBACK

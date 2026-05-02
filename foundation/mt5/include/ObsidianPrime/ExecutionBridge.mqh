@@ -41,6 +41,7 @@ private:
    int    m_deviation_points;
    bool   m_close_on_flat;
    bool   m_reverse_on_opposite;
+   bool   m_close_only_on_opposite;
    int    m_max_hold_bars;
    int    m_max_concurrent_positions;
    int    m_bars_in_position;
@@ -202,6 +203,7 @@ public:
       m_deviation_points = 20;
       m_close_on_flat = false;
       m_reverse_on_opposite = true;
+      m_close_only_on_opposite = false;
       m_max_hold_bars = 12;
       m_max_concurrent_positions = 1;
       m_bars_in_position = 0;
@@ -214,6 +216,7 @@ public:
                   const int deviation_points,
                   const bool close_on_flat,
                   const bool reverse_on_opposite,
+                  const bool close_only_on_opposite,
                   const int max_hold_bars,
                   const int max_concurrent_positions)
      {
@@ -224,6 +227,7 @@ public:
       m_deviation_points = deviation_points;
       m_close_on_flat = close_on_flat;
       m_reverse_on_opposite = reverse_on_opposite;
+      m_close_only_on_opposite = close_only_on_opposite;
       m_max_hold_bars = max_hold_bars;
       m_max_concurrent_positions = max_concurrent_positions > 0 ? max_concurrent_positions : 1;
       m_bars_in_position = 0;
@@ -367,6 +371,17 @@ public:
          result.action = "hold_same_direction";
          result.position_after = PositionStateText();
          return true;
+        }
+
+      if(m_close_only_on_opposite)
+        {
+         result.action = "close_on_opposite";
+         const int close_signal = OppositeSignalForPosition(state);
+         const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
+         result.position_after = PositionStateText();
+         if(closed)
+            m_bars_in_position = 0;
+         return closed;
         }
 
       if(!m_reverse_on_opposite)

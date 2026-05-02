@@ -1,0 +1,105 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage13_model_family_challenge_closeout_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/13_model_family_challenge__mlp_training_effect/04_selected/selection_status.md"
+      ],
+      "active_stage": "13_model_family_challenge__mlp_training_effect",
+      "current_run": "run04N_mlp_feature_group_interaction_profit_probe_v1",
+      "detected_conflicts": [
+        "none_detected"
+      ],
+      "allowed_claims": [
+        "stage13_reviewed_closed",
+        "runtime_probe_evidence_recorded",
+        "stage14_ready_to_open"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "edge",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "selected_baseline"
+      ]
+    },
+    {
+      "packet_id": "stage13_model_family_challenge_closeout_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "exploration_lane": "Stage13 independent MLP model-family exploration closeout",
+      "idea_boundary": "topic pivot closeout; no baseline or operating selection",
+      "negative_memory_effect": "MLP q90 surface did not produce edge-ready or baseline evidence; feature-group profit remains stress diagnostic only.",
+      "operating_claim_boundary": "No alpha quality, edge, promotion candidate, operating promotion, runtime authority, or selected baseline."
+    },
+    {
+      "packet_id": "stage13_model_family_challenge_closeout_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "judgment_boundary": "closed_inconclusive_mlp_training_effect_runtime_probe_evidence",
+      "allowed_claims": [
+        "stage13_reviewed_closed",
+        "runtime_probe_evidence_recorded",
+        "stage14_ready_to_open"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "edge",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "selected_baseline"
+      ],
+      "evidence_used": [
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage_run_ledger.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/registers/run_registry.csv",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage13_closeout_packet.md"
+      ]
+    },
+    {
+      "packet_id": "stage13_model_family_challenge_closeout_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage_run_ledger.csv",
+        "stages/13_model_family_challenge__mlp_training_effect/02_runs/run04N_mlp_feature_group_interaction_profit_probe_v1/summary.json"
+      ],
+      "produced_artifacts": [
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage13_closeout_packet.md",
+        "docs/decisions/2026-05-02_stage13_model_family_challenge_closeout.md",
+        "docs/agent_control/packets/stage13_model_family_challenge_closeout_v1/closeout_report.md"
+      ],
+      "raw_evidence": [
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04N_validate_run_evidence.json",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04N_state_sync_audit.json"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/stage13_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json"
+      ],
+      "human_readable": [
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage13_closeout_packet.md",
+        "docs/decisions/2026-05-02_stage13_model_family_challenge_closeout.md"
+      ],
+      "hashes_or_missing_reasons": "Closeout uses existing run summaries and ledger hashes; no new model or MT5 artifact was created.",
+      "lineage_boundary": "connected_with_boundary; no alpha quality, no edge, no promotion, no runtime authority."
+    },
+    {
+      "packet_id": "stage13_model_family_challenge_closeout_v1",
+      "skill": "obsidian-environment-reproducibility",
+      "status": "executed",
+      "environment_assumptions": "Windows PowerShell workspace with Python and MT5 terminal paths already configured for recorded Stage13 runs.",
+      "dependency_or_runtime_surface": "No new dependency or MT5 run was introduced by closeout; validation reuses local Python test and audit commands.",
+      "clean_checkout_boundary": "Stage13 closeout docs are reproducible from tracked reports and ledgers; ignored heavy artifacts remain represented by manifests and summaries.",
+      "reproducibility_gaps": "MT5 Strategy Tester reports are local runtime artifacts; closeout does not claim new runtime authority."
+    }
+  ]
+}

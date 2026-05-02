@@ -56,6 +56,7 @@ input long            InpMagic = 26041001;
 input int             InpDeviationPoints = 20;
 input bool            InpCloseOnFlatSignal = false;
 input bool            InpReverseOnOppositeSignal = true;
+input bool            InpCloseOnlyOnOppositeSignal = false;
 input int             InpMaxHoldBars = 12;
 input int             InpMaxConcurrentPositions = 1;
 
@@ -419,6 +420,7 @@ int OnInit()
                                 InpDeviationPoints,
                                 InpCloseOnFlatSignal,
                                 InpReverseOnOppositeSignal,
+                                InpCloseOnlyOnOppositeSignal,
                                 InpMaxHoldBars,
                                 InpMaxConcurrentPositions);
 

@@ -1,0 +1,30 @@
+{
+  "audit_name": "stage_closeout_evidence_gate",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "stage13_run_registry_rows": 14,
+    "stage13_stage_ledger_rows": 142,
+    "stage13_project_ledger_rows": 142,
+    "stage13_run_packet_directories": 14,
+    "stage14_folder_created": false
+  },
+  "allowed_claims": [
+    "stage13_reviewed_closed",
+    "runtime_probe_evidence_recorded",
+    "stage14_ready_to_open"
+  ],
+  "forbidden_claims": [],
+  "claim_boundary": {
+    "forbidden_claims": [
+      "alpha_quality",
+      "edge",
+      "promotion_candidate",
+      "operating_promotion",
+      "runtime_authority",
+      "selected_baseline"
+    ]
+  }
+}

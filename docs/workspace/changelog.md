@@ -2,6 +2,13 @@
 
 ## 2026-05-02
 
+- 2026-05-02: `stage13_model_family_challenge_closeout_v1` completed(완료). Stage13(13단계) MLP(다층 퍼셉트론) training-effect exploration(학습 효과 탐색)을 `reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방)`로 닫았다. Effect(효과): RUN04K/RUN04L/RUN04M/RUN04N(실행 04K/04L/04M/04N)은 preserved clues(보존 단서)로 남기고, edge(거래 우위), alpha quality(알파 품질), promotion candidate(승격 후보), baseline(기준선), runtime authority(런타임 권위)는 만들지 않는다.
+- 2026-05-02: `run04F_mlp_direction_asymmetry_runtime_probe_v1` completed(완료). Stage13(13단계) MLP direction asymmetry runtime_probe(방향 비대칭 런타임 탐침)를 실행했다. Effect(효과): RUN04E(실행 04E)의 q90 threshold(q90 임계값)를 Tier A(티어 A) long/short(롱/숏)로 분해한다.
+- 2026-05-02: `run04E_mlp_q90_threshold_trading_runtime_probe_v1` completed(완료). Stage13(13단계) MLP q90 threshold trading runtime_probe(q90 임계값 거래 런타임 탐침)를 실행했다. Effect(효과): RUN04D(실행 04D)의 임계값 가능성을 실제 거래 손익/거래 수로 관찰한다.
+- 2026-05-02: `run04D_mlp_convergence_threshold_feasibility_probe_v1` completed(완료). Stage13(13단계) MLP convergence(수렴)와 threshold feasibility(임계값 가능성)를 한 run(실행)으로 확인했다. Effect(효과): 다음 거래 런타임 인계 전에 확률 밀도와 MT5 no-trade handoff(MT5 무거래 인계)를 분리해서 확인한다.
+- 2026-05-02: `run04C_mlp_activation_runtime_probe_v1` completed. Stage13(13단계) MLP activation runtime probe(MLP 활성화 런타임 탐침)를 실행했다. Effect(효과): hidden activation(은닉 활성화)과 MT5 probability proxy(MT5 확률 대리값) 인계만 확인했다.
+- 2026-05-02: `run04B_mlp_input_geometry_runtime_handoff_probe_v1` completed. Stage13(13단계) MLP input geometry runtime handoff probe(입력 기하 런타임 인계 탐침)를 no-trade threshold(무거래 임계값)로 실행했다. Effect(효과): RUN04A(실행 04A) 모델 흔들기 없이 feature matrix(피처 행렬)와 MT5(메타트레이더5) 인계 의미를 확인한다.
+- 2026-05-02: `run04A_mlp_characteristic_runtime_probe_v1` completed. Stage13(13단계) MLPClassifier(다층 퍼셉트론 분류기) coarse characteristic scout(거친 특성 탐색)와 narrow MT5 runtime_probe(좁은 MT5 런타임 탐침)를 실행했다. Effect(효과): Stage10/11/12(10/11/12단계) run(실행)을 baseline(기준선), seed(씨앗), reference(참고)로 쓰지 않고 MLP(다층 퍼셉트론) 특성만 독립적으로 기록한다.
 - 2026-05-02: `stage12_model_family_challenge_closeout_v1` completed(완료). Stage12(12단계) ExtraTrees(엑스트라 트리) standalone exploration(단독 탐색)을 `reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방)`로 닫았다. Effect(효과): RUN03L/RUN03O/RUN03Q(실행 03L/03O/03Q)는 preserved clues(보존 단서)로 남기고, alpha quality(알파 품질), promotion candidate(승격 후보), baseline(기준선), runtime authority(런타임 권위)는 만들지 않는다.
 - 2026-05-02: Stage13 folder(Stage13 폴더)는 만들지 않았다. Effect(효과): 다음 주제 전환(topic pivot, 주제 전환)은 새 대화에서 시작하고, 이번 commit(커밋)은 Stage12(12단계) 마감 근거만 반영한다.
 
@@ -183,3 +190,22 @@
 - 2026-04-28: `run03D_et_standalone_batch20_v1` completed(완료). Stage12 standalone batch20(단독 20개 묶음) Python structural scout(파이썬 구조 탐색), best(최상위) `v11_base_leaf20_q85` validation/OOS hit(검증/표본외 적중) `0.392688` / `0.457317`, MT5 external verification(메타트레이더5 외부 검증) `out_of_scope_by_claim`.
 - 2026-04-28: `run03E_et_batch20_top_v11_mt5_probe_v1` completed(완료). RUN03D top variant(상위 변형) `v11_base_leaf20_q85` MT5 runtime_probe(MT5 런타임 탐침), validation/OOS net(검증/표본외 순손익) `-205.14` / `362.83`, external verification(외부 검증) `completed`.
 - 2026-05-01: RUN03H all-variant MT5 tier-balance runtime_probe completed status `completed` for 20 Stage12 ExtraTrees variants. Effect(효과): selection-free(무선별) MT5 evidence(근거)가 Tier A/B/routed views(티어 A/B/라우팅 보기)로 남았다.
+
+- 2026-05-02: Added `run04G_mlp_direction_trade_shape_attribution_v1` trade-shape attribution(거래 형태 기여도 분해) from RUN04F MT5 reports; no alpha quality(알파 품질) or promotion(승격) claim.
+
+- 2026-05-02: Added `run04G_mlp_direction_trade_shape_attribution_v1` trade-shape attribution(거래 형태 기여도 분해) from RUN04F MT5 reports; no alpha quality(알파 품질) or promotion(승격) claim.
+
+- 2026-05-02: Added `run04H_mlp_direction_collision_attribution_v1` collision attribution(충돌 기여도 분해) from RUN04F MT5 telemetry/report evidence; no alpha quality(알파 품질), baseline(기준선), or promotion(승격) claim.
+
+- 2026-05-02: Added `run04H_mlp_direction_collision_attribution_v1` collision attribution(충돌 기여도 분해) from RUN04F MT5 telemetry/report evidence; no alpha quality(알파 품질), baseline(기준선), or promotion(승격) claim.
+
+- 2026-05-02: Added `run04I_mlp_reversal_policy_runtime_probe_v1` reversal policy runtime probe(반전 정책 런타임 탐침); no alpha quality(알파 품질), baseline(기준선), or promotion(승격) claim.
+
+- 2026-05-02: Added `run04J_mlp_probability_geometry_probe_v1` probability geometry probe(확률 기하 탐침); recommendation(추천) `pivot_within_stage13_to_activation_or_feature_sensitivity`; no alpha quality(알파 품질), baseline(기준선), or promotion(승격) claim.
+
+- 2026-05-02: Added `run04K_mlp_activation_behavior_probe_v1` activation behavior(활성화 행동) probe; no alpha quality(알파 품질), baseline(기준선), promotion(승격), or runtime authority(런타임 권위) claim.
+- 2026-05-02: Added `run04L_mlp_feature_sensitivity_probe_v1` feature sensitivity(피처 민감도) probe; no alpha quality(알파 품질), baseline(기준선), promotion(승격), or runtime authority(런타임 권위) claim.
+
+- 2026-05-02: Added `run04M_mlp_learning_behavior_runtime_probe_v1` MLP learning behavior runtime probe(MLP 학습 행동 런타임 탐침); no edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), or runtime authority(런타임 권위) claim.
+
+- 2026-05-02: Added `run04N_mlp_feature_group_interaction_profit_probe_v1` feature group interaction profit probe(피처 그룹 상호작용 수익 탐침); profit(수익)은 diagnostic(진단값)이며 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위) claim(주장) 없음.

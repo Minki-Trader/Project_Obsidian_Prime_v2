@@ -1,7 +1,8 @@
-﻿updated_on: '2026-05-02'
+updated_on: '2026-05-02'
 project_mode: clean_stage_restart
-active_branch: codex/alpha-stage-transition-policy
-active_stage: 12_model_family_challenge__extratrees_training_effect
+active_branch: codex/stage13
+active_stage: 13_model_family_challenge__mlp_training_effect
+current_run_id: run04N_mlp_feature_group_interaction_profit_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -12,9 +13,10 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_no_next_stage_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_no_next_stage_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
+- treat Stage 13 as reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방); preserve MLPClassifier(다층 퍼셉트론 분류기) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
 - treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not baseline selection(기준선 선택), unless an
   explicit promotion/operating packet(명시 승격/운영 작업 묶음) opens
@@ -46,7 +48,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_no_next_stage_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_no_next_stage_opened
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -88,6 +90,124 @@ pre_alpha_stage_queue:
       stage_id: 12_model_family_challenge__extratrees_training_effect
       ownership: standalone ExtraTrees model-family training effect without Stage 10/11 inheritance
       status: reviewed_closed_no_next_stage_opened
+    stage13:
+      stage_id: 13_model_family_challenge__mlp_training_effect
+      ownership: independent MLPClassifier coarse characteristic scout plus narrow MT5 runtime_probe
+      status: reviewed_closed_no_next_stage_opened
+      current_run_id: run04N_mlp_feature_group_interaction_profit_probe_v1
+stage13_mlp_characteristic_runtime_probe:
+  run_id: run04A_mlp_characteristic_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_mlp_characteristic_runtime_probe_completed
+  selected_variant_id: v02_wide_relu_l2
+  boundary: runtime_probe_only_not_alpha_quality_not_promotion_not_runtime_authority
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04A_mlp_characteristic_runtime_probe_packet.md
+stage13_mlp_input_geometry_runtime_handoff_probe:
+  run_id: run04B_mlp_input_geometry_runtime_handoff_probe_v1
+  status: completed
+  judgment: inconclusive_input_geometry_runtime_handoff_probe_completed
+  boundary: runtime_handoff_probe_only_not_alpha_quality_not_promotion_not_runtime_authority
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04B_mlp_input_geometry_runtime_handoff_probe_packet.md
+stage13_mlp_activation_runtime_probe:
+  run_id: run04C_mlp_activation_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_activation_runtime_probe_completed
+  boundary: activation_runtime_probe_only_not_alpha_quality_not_promotion_not_runtime_authority
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04C_mlp_activation_runtime_probe_packet.md
+stage13_mlp_convergence_threshold_feasibility_probe:
+  run_id: run04D_mlp_convergence_threshold_feasibility_probe_v1
+  status: completed
+  judgment: inconclusive_convergence_threshold_feasibility_probe_completed
+  boundary: convergence_threshold_feasibility_probe_only_not_alpha_quality_not_promotion_not_runtime_authority
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04D_mlp_convergence_threshold_feasibility_probe_packet.md
+stage13_mlp_q90_threshold_trading_runtime_probe:
+  run_id: run04E_mlp_q90_threshold_trading_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_q90_threshold_trading_runtime_probe_completed
+  boundary: q90_threshold_trading_runtime_probe_only_not_alpha_quality_not_promotion_not_runtime_authority
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04E_mlp_q90_threshold_trading_runtime_probe_packet.md
+stage13_mlp_direction_asymmetry_runtime_probe:
+  run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_direction_asymmetry_runtime_probe_completed
+  boundary: direction_asymmetry_runtime_probe_only_not_alpha_quality_not_promotion_not_runtime_authority
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04F_mlp_direction_asymmetry_runtime_probe_packet.md
+stage13_mlp_direction_trade_shape_attribution:
+  run_id: run04G_mlp_direction_trade_shape_attribution_v1
+  status: completed
+  judgment: inconclusive_trade_shape_attribution_completed
+  boundary: trade_shape_attribution_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04G_mlp_direction_trade_shape_attribution_packet.md
+stage13_mlp_direction_collision_attribution:
+  run_id: run04H_mlp_direction_collision_attribution_v1
+  status: completed
+  judgment: inconclusive_collision_attribution_completed
+  boundary: collision_attribution_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  source_attribution_run_id: run04G_mlp_direction_trade_shape_attribution_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04H_mlp_direction_collision_attribution_packet.md
+stage13_mlp_reversal_policy_runtime_probe:
+  run_id: run04I_mlp_reversal_policy_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_reversal_policy_runtime_probe_completed
+  boundary: reversal_policy_runtime_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04I_mlp_reversal_policy_runtime_probe_packet.md
+stage13_mlp_probability_geometry_probe:
+  run_id: run04J_mlp_probability_geometry_probe_v1
+  status: completed
+  judgment: inconclusive_probability_shape_stable_but_low_confidence_tail
+  recommendation: pivot_within_stage13_to_activation_or_feature_sensitivity
+  boundary: probability_geometry_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04J_mlp_probability_geometry_probe_packet.md
+stage13_mlp_activation_behavior_probe:
+  run_id: run04K_mlp_activation_behavior_probe_v1
+  status: completed
+  judgment: inconclusive_activation_distributed_and_split_stable
+  recommendation: move_to_feature_sensitivity_or_new_stage13_topic
+  boundary: activation_behavior_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04K_mlp_activation_behavior_probe_packet.md
+stage13_mlp_feature_sensitivity_probe:
+  run_id: run04L_mlp_feature_sensitivity_probe_v1
+  status: completed
+  judgment: inconclusive_feature_sensitivity_stable_top_drivers
+  recommendation: one_shallow_followup_on_top_feature_groups_if_staying_in_stage13
+  boundary: feature_sensitivity_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04L_mlp_feature_sensitivity_probe_packet.md
+stage13_mlp_learning_behavior_runtime_probe:
+  run_id: run04M_mlp_learning_behavior_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_mlp_learning_behavior_runtime_shape_confirmed
+  recommendation: stage13_can_stop_or_do_one_final_feature_group_interaction_probe
+  boundary: mlp_learning_behavior_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04M_mlp_learning_behavior_runtime_probe_packet.md
+stage13_mlp_feature_group_interaction_profit_probe:
+  run_id: run04N_mlp_feature_group_interaction_profit_probe_v1
+  status: completed
+  judgment: inconclusive_feature_group_interaction_profit_completed_with_partial_trade_stopout
+  recommendation: treat_profit_as_stress_diagnostic_not_edge_and_consider_stage13_closeout
+  boundary: feature_group_interaction_profit_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  source_run_id: run04F_mlp_direction_asymmetry_runtime_probe_v1
+  report_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04N_mlp_feature_group_interaction_profit_probe_packet.md
+stage13_model_family_challenge_closeout:
+  packet_id: stage13_model_family_challenge_closeout_v1
+  status: reviewed_closed_no_next_stage_opened
+  judgment: closed_inconclusive_mlp_training_effect_runtime_probe_evidence
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  preserved_clues: RUN04K_activation_distributed_stability,RUN04L_feature_sensitivity_top_drivers,RUN04M_volatility_range_group_sensitivity,RUN04N_non_additive_feature_group_interaction
+  negative_memory: MLP q90 surface did not produce edge-ready(거래 우위 준비) or baseline(기준선) evidence(근거); profit diagnostics(수익 진단값) remain stress-only(압박 전용) and one validation(검증) path(경로) had partial trade stopout(부분 거래 중단)
+  external_verification_status: completed_for_recorded_mt5_runtime_probes
+  closeout_packet_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage13_closeout_packet.md
+  closeout_decision_path: docs/decisions/2026-05-02_stage13_model_family_challenge_closeout.md
+  packet_summary_path: docs/agent_control/packets/stage13_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json
+  next_action: open_stage14_as_independent_model_family_topic
 stage01_raw_m5_inventory:
   run_id: 20260424_raw_m5_inventory
   status: complete
