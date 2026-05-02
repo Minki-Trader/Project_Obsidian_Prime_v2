@@ -11,6 +11,11 @@
 Stage15(15단계)는 LDA(`Linear Discriminant Analysis`, 선형 판별 분석) covariance stability(공분산 안정성)를 `run07A`~`run07J`로 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 확인했고 LDA 소주제를 닫았다.
 
 효과(effect, 효과): `closed_inconclusive_lda_covariance_stability_runtime_probe_evidence`로 기록했지만 alpha quality(알파 품질), edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+Stage15(15단계)는 다음 미탐색 학습법으로 QDA(`Quadratic Discriminant Analysis`, 이차 판별 분석)를 open-only(개시만) 상태로 열었다. 새 run(실행), MT5(`MetaTrader 5`, 메타트레이더5) 검증, KPI(`Key Performance Indicator`, 핵심성과지표), 결과 판정은 아직 만들지 않았다.
+
+효과(effect, 효과): LDA(선형 판별 분석)에서 보존한 covariance shrinkage(공분산 수축) 단서를 QDA(이차 판별 분석)의 class-specific covariance(클래스별 공분산) 질문으로 이어갈 수 있지만, 아직 탐색 결과나 성과 주장은 없다.
+
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
 프로젝트는 clean stage restart(깨끗한 단계 재시작) 이후 Stage 02~09(2~9단계)를 닫았다.
