@@ -1,8 +1,8 @@
 updated_on: '2026-05-02'
 project_mode: clean_stage_restart
-active_branch: codex/stage13
-active_stage: 13_model_family_challenge__mlp_training_effect
-current_run_id: run04N_mlp_feature_group_interaction_profit_probe_v1
+active_branch: codex/stage14
+active_stage: 14_model_family_challenge__margin_kernel_training_effect
+current_run_id: ''
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,11 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_no_next_stage_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_opened_no_run_yet
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 13 as reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방); preserve MLPClassifier(다층 퍼셉트론 분류기) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
+- treat Stage 14 as open_no_run_yet; independent SVM margin/kernel training-effect topic, not a Stage 10/11/12/13 baseline continuation
+- treat Stage 13 as reviewed_closed; preserve MLPClassifier(다층 퍼셉트론 분류기) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
 - treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not baseline selection(기준선 선택), unless an
   explicit promotion/operating packet(명시 승격/운영 작업 묶음) opens
@@ -48,7 +49,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_no_next_stage_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_opened_no_run_yet
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -95,6 +96,10 @@ pre_alpha_stage_queue:
       ownership: independent MLPClassifier coarse characteristic scout plus narrow MT5 runtime_probe
       status: reviewed_closed_no_next_stage_opened
       current_run_id: run04N_mlp_feature_group_interaction_profit_probe_v1
+    stage14:
+      stage_id: 14_model_family_challenge__margin_kernel_training_effect
+      ownership: independent SVM margin and kernel training-effect scout without Stage 10/11/12/13 inheritance
+      status: open_no_run_yet
 stage13_mlp_characteristic_runtime_probe:
   run_id: run04A_mlp_characteristic_runtime_probe_v1
   status: completed
@@ -208,6 +213,20 @@ stage13_model_family_challenge_closeout:
   closeout_decision_path: docs/decisions/2026-05-02_stage13_model_family_challenge_closeout.md
   packet_summary_path: docs/agent_control/packets/stage13_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json
   next_action: open_stage14_as_independent_model_family_topic
+stage14_margin_kernel_training_effect:
+  stage_id: 14_model_family_challenge__margin_kernel_training_effect
+  status: open_no_run_yet
+  lane: independent_model_family_topic_pivot_no_promotion
+  model_family: sklearn_svm_margin_kernel_family
+  current_run_id: ''
+  current_status: no_run_yet
+  hypothesis: SVM margin and kernel geometry may expose different probability and decision-boundary behavior from LogReg, LightGBM, ExtraTrees, and MLP.
+  comparison_baseline: no trading baseline; compare only against fixed data contract and within-stage Stage14 variants after runs exist
+  boundary: design_open_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/14_model_family_challenge__margin_kernel_training_effect/00_spec/stage_brief.md
+  input_references_path: stages/14_model_family_challenge__margin_kernel_training_effect/01_inputs/input_references.md
+  selection_status_path: stages/14_model_family_challenge__margin_kernel_training_effect/04_selected/selection_status.md
+  next_action: design_run05A_svm_margin_kernel_coarse_characteristic_scout
 stage01_raw_m5_inventory:
   run_id: 20260424_raw_m5_inventory
   status: complete
@@ -1224,7 +1243,7 @@ alpha_stage_transition_philosophy_correction_20260501:
 open_items: []
 
 closed_memory:
-- Stage 12 closed with stage12_model_family_challenge_closeout_v1(12단계 ExtraTrees 마감 묶음); no Stage13 folder(13단계 폴더)을 만들지 않았고 alpha quality(알파 품질), promotion(승격), runtime authority(런타임 권위)는 없음
+- Stage 12 closed with stage12_model_family_challenge_closeout_v1(12단계 ExtraTrees 마감 묶음); Stage13(13단계)는 이후 독립 MLP(다층 퍼셉트론) 주제로 열고 닫았으며 alpha quality(알파 품질), promotion(승격), runtime authority(런타임 권위)는 없음
 - Stage 12 preserved RUN03L recency-weighted(최근성 가중), RUN03O trend/chop(추세/횡보), and RUN03Q risk-on OOS(위험선호 표본외) as clues(단서), not selected baseline(선택 기준선)
 - Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison and Stage 11 context surface
 - Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run

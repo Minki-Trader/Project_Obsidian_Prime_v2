@@ -1,0 +1,101 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage14_margin_kernel_open_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "hypothesis": "SVM margin and kernel geometry may expose probability shape, signal density, and validation/OOS preservation behavior that differs from LogReg, LightGBM, ExtraTrees, and MLP.",
+      "baseline": "No trading baseline. Stage14 starts from the closed data, label, split, and 58-feature input contract only.",
+      "changed_variables": [
+        "SVM margin geometry",
+        "kernel behavior",
+        "probability calibration shape"
+      ],
+      "invalid_conditions": [
+        "Importing Stage10/11/12/13 thresholds or context gates as a baseline",
+        "Claiming alpha quality, edge, promotion, runtime authority, or selected baseline before evidence exists"
+      ],
+      "evidence_plan": [
+        "Stage14 stage brief and input references",
+        "Stage14 stage run ledger when runs exist",
+        "Project alpha ledger and run registry rows when runs exist",
+        "State sync audit for open state"
+      ]
+    },
+    {
+      "packet_id": "stage14_margin_kernel_open_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/14_model_family_challenge__margin_kernel_training_effect/04_selected/selection_status.md"
+      ],
+      "active_stage": "14_model_family_challenge__margin_kernel_training_effect",
+      "current_run": "none_no_run_yet",
+      "detected_conflicts": [
+        "none_detected"
+      ],
+      "allowed_claims": [
+        "stage14_opened",
+        "experiment_design_recorded",
+        "current_truth_synced"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "edge",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "selected_baseline"
+      ]
+    },
+    {
+      "packet_id": "stage14_margin_kernel_open_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "exploration_lane": "Stage14 independent SVM margin/kernel model-family exploration design",
+      "idea_boundary": "topic pivot open; no baseline or operating selection",
+      "negative_memory_effect": "Stage13 MLP clues are preserved but not inherited as a baseline.",
+      "operating_claim_boundary": "No alpha quality, edge, promotion candidate, operating promotion, runtime authority, or selected baseline."
+    },
+    {
+      "packet_id": "stage14_margin_kernel_open_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage13_closeout_packet.md"
+      ],
+      "produced_artifacts": [
+        "stages/14_model_family_challenge__margin_kernel_training_effect/00_spec/stage_brief.md",
+        "stages/14_model_family_challenge__margin_kernel_training_effect/01_inputs/input_references.md",
+        "docs/decisions/2026-05-02_stage14_margin_kernel_training_effect_open.md"
+      ],
+      "raw_evidence": [
+        "stages/14_model_family_challenge__margin_kernel_training_effect/03_reviews/stage14_open_state_sync_audit.json"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/stage14_margin_kernel_open_v1/work_packet.yaml",
+        "docs/agent_control/packets/stage14_margin_kernel_open_v1/skill_receipts.json"
+      ],
+      "human_readable": [
+        "docs/agent_control/packets/stage14_margin_kernel_open_v1/open_report.md",
+        "docs/decisions/2026-05-02_stage14_margin_kernel_training_effect_open.md"
+      ],
+      "hashes_or_missing_reasons": "No model, ONNX, MT5, or run artifact exists yet because Stage14 was only opened.",
+      "lineage_boundary": "stage open lineage only; no runtime or trading-result claim."
+    },
+    {
+      "packet_id": "stage14_margin_kernel_open_v1",
+      "skill": "obsidian-environment-reproducibility",
+      "status": "executed",
+      "environment_assumptions": "Windows PowerShell workspace on branch codex/stage14, with existing Python and MT5 paths preserved.",
+      "dependency_or_runtime_surface": "No new dependency, model training, or MT5 runtime run was introduced by the stage open.",
+      "clean_checkout_boundary": "Stage14 scaffold is tracked text evidence and can be reproduced from git.",
+      "reproducibility_gaps": "First SVM run has not been executed, so model artifact reproducibility remains future work."
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 
 ## 2026-05-02
 
+- 2026-05-02: `14_model_family_challenge__margin_kernel_training_effect` opened(개방). Stage14(14단계)를 SVM(`Support Vector Machine`, 서포트 벡터 머신) margin/kernel training-effect(마진/커널 학습 효과) 독립 주제로 열었다. Effect(효과): Stage10/11/12/13(10/11/12/13단계) run(실행)을 baseline(기준선), seed(씨앗), reference(참고)로 쓰지 않고 첫 run(실행) 전 설계 경계만 만든다.
 - 2026-05-02: `stage13_model_family_challenge_closeout_v1` completed(완료). Stage13(13단계) MLP(다층 퍼셉트론) training-effect exploration(학습 효과 탐색)을 `reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방)`로 닫았다. Effect(효과): RUN04K/RUN04L/RUN04M/RUN04N(실행 04K/04L/04M/04N)은 preserved clues(보존 단서)로 남기고, edge(거래 우위), alpha quality(알파 품질), promotion candidate(승격 후보), baseline(기준선), runtime authority(런타임 권위)는 만들지 않는다.
 - 2026-05-02: `run04F_mlp_direction_asymmetry_runtime_probe_v1` completed(완료). Stage13(13단계) MLP direction asymmetry runtime_probe(방향 비대칭 런타임 탐침)를 실행했다. Effect(효과): RUN04E(실행 04E)의 q90 threshold(q90 임계값)를 Tier A(티어 A) long/short(롱/숏)로 분해한다.
 - 2026-05-02: `run04E_mlp_q90_threshold_trading_runtime_probe_v1` completed(완료). Stage13(13단계) MLP q90 threshold trading runtime_probe(q90 임계값 거래 런타임 탐침)를 실행했다. Effect(효과): RUN04D(실행 04D)의 임계값 가능성을 실제 거래 손익/거래 수로 관찰한다.
