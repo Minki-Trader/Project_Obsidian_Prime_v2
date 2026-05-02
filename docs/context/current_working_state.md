@@ -4,13 +4,13 @@
 - project_mode: `clean_stage_restart`
 - active_stage: `15_model_family_challenge__untried_learning_methods_scout(15단계 미탐색 학습법 탐색)`
 - active_branch: `codex/stage14(Stage14 브랜치)`
-- current run(현재 실행): 없음
+- current run(현재 실행): `run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1`
 
 ## Latest Stage 15 Update(최신 Stage 15 업데이트)
 
-Stage15(15단계)는 LDA(`Linear Discriminant Analysis`, 선형 판별 분석)로 `run06A`~`run06J`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 실행했다.
+Stage15(15단계)는 LDA(`Linear Discriminant Analysis`, 선형 판별 분석) covariance stability(공분산 안정성)를 `run07A`~`run07J`로 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 확인했고 LDA 소주제를 닫았다.
 
-효과(effect, 효과): `inconclusive_lda_run06A_run06J_runtime_probe_completed`로 기록했지만 alpha quality(알파 품질), edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+효과(effect, 효과): `closed_inconclusive_lda_covariance_stability_runtime_probe_evidence`로 기록했지만 alpha quality(알파 품질), edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
 프로젝트는 clean stage restart(깨끗한 단계 재시작) 이후 Stage 02~09(2~9단계)를 닫았다.

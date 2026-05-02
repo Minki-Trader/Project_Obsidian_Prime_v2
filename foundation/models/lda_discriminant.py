@@ -142,6 +142,113 @@ def default_stage15_lda_specs() -> list[LdaRunSpec]:
     ]
 
 
+def stage15_lda_covariance_stability_specs() -> list[LdaRunSpec]:
+    fixed_sample_seed = 1700
+    return [
+        LdaRunSpec(
+            run_number="run07A",
+            run_id="run07A_lda_eigen_shrinkage001_stability_probe_v1",
+            variant_id="v11_eigen_shrinkage001",
+            idea_id="eigen_shrinkage_curve_001",
+            description="Eigen LDA with very light covariance shrinkage.",
+            solver="eigen",
+            shrinkage=0.01,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07B",
+            run_id="run07B_lda_eigen_shrinkage003_stability_probe_v1",
+            variant_id="v12_eigen_shrinkage003",
+            idea_id="eigen_shrinkage_curve_003",
+            description="Eigen LDA with light covariance shrinkage below the run06H anchor.",
+            solver="eigen",
+            shrinkage=0.03,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07C",
+            run_id="run07C_lda_eigen_shrinkage005_stability_probe_v1",
+            variant_id="v13_eigen_shrinkage005",
+            idea_id="eigen_shrinkage_curve_005_anchor",
+            description="Eigen LDA with the run06H shrinkage value under a fixed comparison sample.",
+            solver="eigen",
+            shrinkage=0.05,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07D",
+            run_id="run07D_lda_eigen_shrinkage008_stability_probe_v1",
+            variant_id="v14_eigen_shrinkage008",
+            idea_id="eigen_shrinkage_curve_008",
+            description="Eigen LDA with slightly stronger covariance shrinkage.",
+            solver="eigen",
+            shrinkage=0.08,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07E",
+            run_id="run07E_lda_eigen_shrinkage012_stability_probe_v1",
+            variant_id="v15_eigen_shrinkage012",
+            idea_id="eigen_shrinkage_curve_012",
+            description="Eigen LDA with moderate covariance shrinkage.",
+            solver="eigen",
+            shrinkage=0.12,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07F",
+            run_id="run07F_lda_eigen_shrinkage020_stability_probe_v1",
+            variant_id="v16_eigen_shrinkage020",
+            idea_id="eigen_shrinkage_curve_020",
+            description="Eigen LDA with stronger covariance shrinkage.",
+            solver="eigen",
+            shrinkage=0.20,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07G",
+            run_id="run07G_lda_lsqr_shrinkage003_stability_probe_v1",
+            variant_id="v17_lsqr_shrinkage003",
+            idea_id="lsqr_solver_comparison_003",
+            description="LSQR LDA matched to the light eigen shrinkage point.",
+            solver="lsqr",
+            shrinkage=0.03,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07H",
+            run_id="run07H_lda_lsqr_shrinkage005_stability_probe_v1",
+            variant_id="v18_lsqr_shrinkage005",
+            idea_id="lsqr_solver_comparison_005",
+            description="LSQR LDA matched to the run06H shrinkage point.",
+            solver="lsqr",
+            shrinkage=0.05,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07I",
+            run_id="run07I_lda_lsqr_shrinkage008_stability_probe_v1",
+            variant_id="v19_lsqr_shrinkage008",
+            idea_id="lsqr_solver_comparison_008",
+            description="LSQR LDA matched to the stronger eigen shrinkage point.",
+            solver="lsqr",
+            shrinkage=0.08,
+            random_state=fixed_sample_seed,
+        ),
+        LdaRunSpec(
+            run_number="run07J",
+            run_id="run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1",
+            variant_id="v20_eigen_balanced_shrinkage005",
+            idea_id="prior_policy_at_stable_shrinkage",
+            description="Eigen LDA at the light shrinkage anchor with equal class priors.",
+            solver="eigen",
+            shrinkage=0.05,
+            priors=(1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0),
+            random_state=fixed_sample_seed,
+        ),
+    ]
+
+
 def build_lda_pipeline(spec: LdaRunSpec) -> Pipeline:
     kwargs: dict[str, Any] = {"solver": spec.solver, "tol": float(spec.tol)}
     if spec.solver in {"lsqr", "eigen"}:
