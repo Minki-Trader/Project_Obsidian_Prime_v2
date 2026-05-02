@@ -1,0 +1,256 @@
+{
+  "packet_id": "stage15_lda_run06A_run06J_runtime_probe_v1",
+  "run_number": "run06E",
+  "run_id": "run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1",
+  "stage_id": "15_model_family_challenge__untried_learning_methods_scout",
+  "variant_id": "v05_lsqr_auto_shrinkage",
+  "idea_id": "least_squares_auto_shrinkage",
+  "description": "LSQR LDA with automatic covariance shrinkage.",
+  "shape_score": 0.9538938705651772,
+  "tier_a_threshold": 0.5453956670509623,
+  "tier_b_threshold": 0.5668377370389208,
+  "threshold_policy": "fixed validation nonflat q0.90; not profit search",
+  "training_sample_policy": "deterministic stratified cap 600 rows per class",
+  "external_verification_status": "completed",
+  "judgment": "inconclusive_lda_discriminant_runtime_probe_completed",
+  "boundary": "lda_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "attempt_count": 6,
+  "mt5_kpi_record_count": 10,
+  "validation_routed": {
+    "status": "completed",
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1_routed_validation_is.htm",
+    "source_encoding": "utf-16",
+    "parsed_row_count": 1478,
+    "net_profit": -83.6,
+    "gross_profit": 1871.37,
+    "gross_loss": -1954.97,
+    "profit_factor": 0.96,
+    "expectancy": -0.24,
+    "recovery_factor": -0.3,
+    "sharpe_ratio": -0.72,
+    "balance_drawdown_maximal_amount": 233.9,
+    "balance_drawdown_maximal_percent": 46.78,
+    "equity_drawdown_maximal_amount": 274.84,
+    "equity_drawdown_maximal_percent": 54.97,
+    "trade_count": 348,
+    "short_trade_count": 197,
+    "short_win_rate_percent": 40.1,
+    "long_trade_count": 151,
+    "long_win_rate_percent": 52.32,
+    "deal_count": 696,
+    "winning_trade_count": 158,
+    "win_rate_percent": 45.4,
+    "losing_trade_count": 190,
+    "loss_rate_percent": 54.6,
+    "max_drawdown_amount": 274.84,
+    "max_drawdown_percent": 54.97,
+    "missing_required_metrics": [],
+    "order_attempt_count": 568,
+    "fill_count": 568,
+    "reject_count": 0,
+    "skip_count": 40598,
+    "fill_rate": 1.0,
+    "feature_ready_count": 12210,
+    "model_ok_count": 12210,
+    "model_fail_count": 40598,
+    "tier_a_used_count": 9844,
+    "tier_b_fallback_used_count": 2366,
+    "no_tier_count": 40598,
+    "tier_a_long_count": 474,
+    "tier_a_short_count": 511,
+    "tier_a_flat_count": 8859,
+    "tier_a_order_attempt_count": 532,
+    "tier_a_order_fill_count": 532,
+    "tier_b_fallback_long_count": 11,
+    "tier_b_fallback_short_count": 30,
+    "tier_b_fallback_flat_count": 2325,
+    "tier_b_fallback_order_attempt_count": 36,
+    "tier_b_fallback_order_fill_count": 36,
+    "aggregation": "actual_routed_tester_run",
+    "route_role": "routed_total",
+    "route_coverage_split": "validation",
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_b_fallback_labelable_rows": 2366,
+    "no_tier_labelable_rows": 203,
+    "routed_labelable_rows": 12210,
+    "partial_context_subtype_counts": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    }
+  },
+  "oos_routed": {
+    "status": "completed",
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1_routed_oos.htm",
+    "source_encoding": "utf-16",
+    "parsed_row_count": 1026,
+    "net_profit": 239.02,
+    "gross_profit": 1317.74,
+    "gross_loss": -1078.72,
+    "profit_factor": 1.22,
+    "expectancy": 1.02,
+    "recovery_factor": 1.32,
+    "sharpe_ratio": 3.29,
+    "balance_drawdown_maximal_amount": 163.55,
+    "balance_drawdown_maximal_percent": 30.49,
+    "equity_drawdown_maximal_amount": 180.53,
+    "equity_drawdown_maximal_percent": 32.68,
+    "trade_count": 235,
+    "short_trade_count": 131,
+    "short_win_rate_percent": 48.09,
+    "long_trade_count": 104,
+    "long_win_rate_percent": 51.92,
+    "deal_count": 470,
+    "winning_trade_count": 117,
+    "win_rate_percent": 49.79,
+    "losing_trade_count": 118,
+    "loss_rate_percent": 50.21,
+    "max_drawdown_amount": 180.53,
+    "max_drawdown_percent": 32.68,
+    "missing_required_metrics": [],
+    "order_attempt_count": 414,
+    "fill_count": 414,
+    "reject_count": 0,
+    "skip_count": 28691,
+    "fill_rate": 1.0,
+    "feature_ready_count": 8646,
+    "model_ok_count": 8646,
+    "model_fail_count": 28691,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_used_count": 1062,
+    "no_tier_count": 28691,
+    "tier_a_long_count": 297,
+    "tier_a_short_count": 309,
+    "tier_a_flat_count": 6978,
+    "tier_a_order_attempt_count": 388,
+    "tier_a_order_fill_count": 388,
+    "tier_b_fallback_long_count": 12,
+    "tier_b_fallback_short_count": 38,
+    "tier_b_fallback_flat_count": 1012,
+    "tier_b_fallback_order_attempt_count": 26,
+    "tier_b_fallback_order_fill_count": 26,
+    "aggregation": "actual_routed_tester_run",
+    "route_role": "routed_total",
+    "route_coverage_split": "oos",
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_b_fallback_labelable_rows": 1062,
+    "no_tier_labelable_rows": 159,
+    "routed_labelable_rows": 8646,
+    "partial_context_subtype_counts": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    }
+  },
+  "model_artifacts": {
+    "variant_id": "v05_lsqr_auto_shrinkage",
+    "tier_a_joblib": {
+      "path": "stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/models/v05_lsqr_auto_shrinkage_tier_a_lda_58.joblib",
+      "sha256": "0ac9dc46718a051298c01cc2e26506dc67fb6314b4faf88737aa3fd163a93661"
+    },
+    "tier_b_joblib": {
+      "path": "stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/models/v05_lsqr_auto_shrinkage_tier_b_lda_core42.joblib",
+      "sha256": "8c83dea0982c4be472cc7634b4996e05a508abbf9270b9589dc44d5e188ff785"
+    },
+    "tier_a_onnx": {
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/models/v05_lsqr_auto_shrinkage_tier_a_lda_58.onnx",
+      "sha256": "3429756f14935a7c97ac2e3d2ffa785b79c2184a9b536818483931a482b679cd",
+      "input_name": "float_input",
+      "target_opset": 12,
+      "zipmap_disabled": true,
+      "outputs": [
+        {
+          "name": "label",
+          "value_type": "tensor_type",
+          "shape": [
+            null
+          ]
+        },
+        {
+          "name": "probabilities",
+          "value_type": "tensor_type",
+          "shape": [
+            null,
+            3
+          ]
+        }
+      ],
+      "probability_output_name": "probabilities"
+    },
+    "tier_b_onnx": {
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/models/v05_lsqr_auto_shrinkage_tier_b_lda_core42.onnx",
+      "sha256": "b437fd6e8fa86c376bae8dd3ce41d566631ceda550f46d865cdb557cbddcfea8",
+      "input_name": "float_input",
+      "target_opset": 12,
+      "zipmap_disabled": true,
+      "outputs": [
+        {
+          "name": "label",
+          "value_type": "tensor_type",
+          "shape": [
+            null
+          ]
+        },
+        {
+          "name": "probabilities",
+          "value_type": "tensor_type",
+          "shape": [
+            null,
+            3
+          ]
+        }
+      ],
+      "probability_output_name": "probabilities"
+    },
+    "onnx_parity": {
+      "tier_a": {
+        "passed": true,
+        "rows": 128,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 0.005,
+        "max_abs_diff": 3.7700879584878777e-07,
+        "mean_abs_diff": 1.4752901581686732e-07,
+        "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+        "input_name": "float_input",
+        "output_names": [
+          "label",
+          "probabilities"
+        ]
+      },
+      "tier_b": {
+        "passed": true,
+        "rows": 128,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 0.005,
+        "max_abs_diff": 1.3938341982266955e-06,
+        "mean_abs_diff": 7.808258920645475e-07,
+        "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+        "input_name": "float_input",
+        "output_names": [
+          "label",
+          "probabilities"
+        ]
+      }
+    }
+  },
+  "characteristic_artifacts": {
+    "characteristic_json": {
+      "path": "stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/results/lda_characteristic_result.json",
+      "sha256": "0ff16672c37cd51843a48763b2fa61fe2dcafb088b47eae1f4061b0fb199e239"
+    },
+    "characteristic_csv": {
+      "path": "stages/15_model_family_challenge__untried_learning_methods_scout/02_runs/run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1/results/lda_characteristic_result.csv",
+      "sha256": "4de0a6149dee6129bacb9ee093b2a220ffd89322754d4785fe0049b2b6bfa908"
+    }
+  },
+  "failure": null
+}

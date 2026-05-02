@@ -8,10 +8,9 @@
 
 ## Latest Stage 15 Update(최신 Stage 15 업데이트)
 
-Stage14(14단계)는 `closed_inconclusive_svm_margin_kernel_runtime_probe_evidence`로 닫혔다. Stage15(15단계)는 `15_model_family_challenge__untried_learning_methods_scout`로 열렸고 첫 실행은 아직 없다.
+Stage15(15단계)는 LDA(`Linear Discriminant Analysis`, 선형 판별 분석)로 `run06A`~`run06J`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 실행했다.
 
-효과(effect, 효과): SVM(`Support Vector Machine`, 서포트 벡터 머신) margin/kernel(마진/커널) 탐색은 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침) 경계로 마감했고, 다음은 아직 독립적으로 보지 않은 model learning methods(모델 학습법)를 알아가는 독립 탐색이다.
-
+효과(effect, 효과): `inconclusive_lda_run06A_run06J_runtime_probe_completed`로 기록했지만 alpha quality(알파 품질), edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
 프로젝트는 clean stage restart(깨끗한 단계 재시작) 이후 Stage 02~09(2~9단계)를 닫았다.

@@ -2,7 +2,7 @@ updated_on: '2026-05-02'
 project_mode: clean_stage_restart
 active_branch: codex/stage14
 active_stage: 15_model_family_challenge__untried_learning_methods_scout
-current_run_id: ''
+current_run_id: run06J_lda_eigen_balanced_shrinkage050_runtime_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,10 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_opened_no_run_yet
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_lda_run06A_run06J_reviewed_runtime_probe
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 15 as open_no_run_yet; independent untried model learning methods topic, not a Stage 10/11/12/13/14 baseline continuation
+- treat Stage 15 as open_with_run06A_run06J_lda_runtime_probe_reviewed; independent untried model learning methods topic, not a Stage 10/11/12/13/14 baseline continuation
 - treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임 탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
 - treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not baseline selection(기준선 선택), unless an
@@ -49,7 +49,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_opened_no_run_yet
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_lda_run06A_run06J_reviewed_runtime_probe
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -240,16 +240,30 @@ stage15_untried_learning_methods:
   stage_id: 15_model_family_challenge__untried_learning_methods_scout
   status: open_no_run_yet
   lane: independent_model_family_topic_pivot_no_promotion
-  model_family: not_yet_selected_untried_learning_methods
-  current_run_id: ''
-  current_status: no_run_yet
+  model_family: sklearn_lda_discriminant_family
+  current_run_id: run06J_lda_eigen_balanced_shrinkage050_runtime_probe_v1
+  current_status: run06A_run06J_runtime_probe_reviewed
   hypothesis: Untried model learning methods may expose different training behavior, probability shape, and signal density from prior LogReg, LightGBM, ExtraTrees, MLP, and SVM probes.
   comparison_baseline: no trading baseline; compare only against fixed data contract and within-stage Stage15 variants after runs exist
   boundary: design_open_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/15_model_family_challenge__untried_learning_methods_scout/00_spec/stage_brief.md
   input_references_path: stages/15_model_family_challenge__untried_learning_methods_scout/01_inputs/input_references.md
   selection_status_path: stages/15_model_family_challenge__untried_learning_methods_scout/04_selected/selection_status.md
-  next_action: design_first_untried_learning_method_scout
+  next_action: continue_stage15_with_next_untried_learning_method_or_close_lda_topic
+stage15_lda_run06A_run06J_runtime_probe:
+  packet_id: stage15_lda_run06A_run06J_runtime_probe_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_lda_run06A_run06J_runtime_probe_completed
+  model_family: sklearn_lda_discriminant_family
+  run_range: run06A-run06J
+  completed_run_count: 10
+  mt5_kpi_record_count: 100
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: lda_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/15_model_family_challenge__untried_learning_methods_scout/03_reviews/run06A_run06J_lda_runtime_probe_packet.md
+  decision_path: docs/decisions/2026-05-02_stage15_lda_run06A_run06J_runtime_probe.md
 stage01_raw_m5_inventory:
   run_id: 20260424_raw_m5_inventory
   status: complete
