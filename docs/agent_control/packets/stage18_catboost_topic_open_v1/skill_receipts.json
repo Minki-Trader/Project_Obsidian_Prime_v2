@@ -1,0 +1,131 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage18_catboost_topic_open_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "hypothesis": "CatBoost ordered boosting and symmetric trees may expose calibration, coverage, and direction-balance behavior that differs from XGBoost DART and prior model-family probes.",
+      "baseline": "No trading baseline. Compare only against fixed v2 data/label/split/model-input contracts and preserved Stage17 clues.",
+      "decision_use": "Decide whether Stage18 proceeds to run12A characteristic scout, MT5 runtime_probe after narrowing, or early closeout if no CatBoost-specific axis appears.",
+      "comparison_baseline": "No trading baseline. Compare only against fixed v2 contracts and preserved Stage17 XGBoost clues.",
+      "control_variables": [
+        "FPMarkets US100 M5",
+        "58-feature model input contract",
+        "fwd12 label and split contract",
+        "Tier A/Tier B paired reporting"
+      ],
+      "changed_variables": [
+        "CatBoostClassifier model family",
+        "boosting_type",
+        "symmetric tree depth",
+        "learning rate",
+        "l2 leaf regularization",
+        "random strength",
+        "bootstrap setting"
+      ],
+      "sample_scope": "Stage04 audited 58-feature model input and Stage03 training label/split contract.",
+      "success_criteria": "Tier A, Tier B, and Tier A+B combined views show repeated CatBoost-specific probability or direction-balance behavior.",
+      "failure_criteria": "No CatBoost-specific axis, validation-only or OOS-only spikes, or direct repeat of Stage17 XGBoost failure structure.",
+      "invalid_conditions": [
+        "Treating Stage17 as a baseline",
+        "Claiming categorical-feature benefit not present in the 58-feature contract",
+        "Omitting Tier B or combined records"
+      ],
+      "stop_conditions": [
+        "Close Stage18 if no CatBoost-specific axis remains after coarse scout and necessary attribution follow-up",
+        "Do not claim alpha quality from topic open"
+      ],
+      "evidence_plan": [
+        "Stage18 stage brief and input references",
+        "run12A manifest and prediction tables when executed",
+        "Stage and project ledgers when runs exist",
+        "State sync audit for topic-open state"
+      ]
+    },
+    {
+      "packet_id": "stage18_catboost_topic_open_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/04_selected/selection_status.md"
+      ],
+      "active_stage": "18_model_family_challenge__catboost_ordered_boosting_scout",
+      "current_run": "none_no_run_yet",
+      "detected_conflicts": [
+        "none_after_state_sync_audit"
+      ],
+      "allowed_claims": [
+        "stage18_catboost_topic_opened",
+        "experiment_design_recorded",
+        "current_truth_synced"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "edge",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "selected_baseline"
+      ]
+    },
+    {
+      "packet_id": "stage18_catboost_topic_open_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "exploration_lane": "Stage18 independent CatBoost ordered boosting model-family exploration design.",
+      "idea_id": "IDEA-ST18-CATBOOST-ORDERED-BOOSTING",
+      "hypothesis": "CatBoost ordered boosting can reveal different probability and signal-density behavior from previously closed model-family topics.",
+      "legacy_relation": "none",
+      "tier_scope": "Tier A + Tier B combined",
+      "idea_boundary": "topic pivot open; no baseline, model artifact, run result, or operating selection.",
+      "broad_sweep": "Boosting type, depth, learning rate, l2 leaf regularization, random strength, and bootstrap settings before any micro-search.",
+      "extreme_sweep": "Include shallow/strong-regularized and deeper/weaker-regularized boundary variants if the first structural scout proceeds.",
+      "micro_search_gate": "Only micro-tune after multiple adjacent settings preserve validation/OOS behavior.",
+      "wfo_plan": "Use WFO as the default robustness frame after a coarse scout produces a candidate surface.",
+      "failure_memory": "Record no-distinct-axis, validation-only spikes, OOS-only spikes, thin signals, and Stage17-like failure as reusable negative memory.",
+      "negative_memory_effect": "Future failures are recorded as reusable evidence and should prevent repeating Stage17-like dead ends.",
+      "evidence_boundary": "topic_open_scout_only_not_selected_not_promotion",
+      "operating_claim_boundary": "No alpha quality, edge, promotion candidate, operating promotion, runtime authority, or selected baseline."
+    },
+    {
+      "packet_id": "stage18_catboost_topic_open_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "docs/decisions/2026-05-03_stage17_xgboost_dart_attribution_closeout.md"
+      ],
+      "produced_artifacts": [
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/00_spec/stage_brief.md",
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/01_inputs/input_references.md",
+        "docs/decisions/2026-05-03_stage18_catboost_ordered_boosting_open.md"
+      ],
+      "raw_evidence": [
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_topic_state_sync_audit.json"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/stage18_catboost_topic_open_v1/work_packet.yaml",
+        "docs/agent_control/packets/stage18_catboost_topic_open_v1/skill_receipts.json"
+      ],
+      "human_readable": [
+        "docs/agent_control/packets/stage18_catboost_topic_open_v1/open_report.md",
+        "docs/decisions/2026-05-03_stage18_catboost_ordered_boosting_open.md"
+      ],
+      "hashes_or_missing_reasons": "No model, ONNX, MT5, or run artifact exists yet because Stage18 was only opened as a topic.",
+      "lineage_boundary": "stage topic-open lineage only; no runtime or trading-result claim."
+    },
+    {
+      "packet_id": "stage18_catboost_topic_open_v1",
+      "skill": "obsidian-environment-reproducibility",
+      "status": "executed",
+      "environment_assumptions": "Windows PowerShell workspace on branch codex/stage18; catboost import is available in the current Python environment.",
+      "dependency_or_runtime_surface": "No new dependency, model training, or MT5 runtime run was introduced by the stage topic open.",
+      "clean_checkout_boundary": "Stage18 CatBoost scaffold is tracked text evidence and can be reproduced from git.",
+      "reproducibility_gaps": "First CatBoost run has not been executed, so model artifact reproducibility remains future work."
+    }
+  ]
+}

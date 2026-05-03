@@ -1,0 +1,18 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "packet_id": "stage18_catboost_topic_open_v1",
+  "required_gates": [
+    "work_packet_schema_lint",
+    "skill_receipt_schema_lint",
+    "state_sync_audit",
+    "final_claim_guard"
+  ],
+  "covered_by": {
+    "work_packet_schema_lint": "docs/agent_control/packets/stage18_catboost_topic_open_v1/work_packet_schema_lint.json",
+    "skill_receipt_schema_lint": "docs/agent_control/packets/stage18_catboost_topic_open_v1/skill_receipt_schema_lint.json",
+    "state_sync_audit": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_topic_state_sync_audit.json",
+    "final_claim_guard": "docs/agent_control/packets/stage18_catboost_topic_open_v1/final_claim_guard.json"
+  }
+}

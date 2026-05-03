@@ -1,8 +1,14 @@
-﻿## Latest Stage17 RUN11G Closeout(최신 17단계 실행11G 마감)
+﻿## Latest Stage18 Topic Open(최신 18단계 주제 개방)
+
+Stage18(18단계)는 `18_model_family_challenge__catboost_ordered_boosting_scout`로 열렸다. 주제는 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) ordered boosting(순서 부스팅)이다.
+
+효과(effect, 효과): 첫 후보는 `run12A_catboost_ordered_boosting_characteristic_scout_v1`이지만, 아직 run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침), edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage17 RUN11G Closeout(최신 17단계 실행11G 마감)
 
 Stage17(17단계)은 `run11G_xgb_dart_attribution_closeout_v1`에서 DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅) 귀속을 확인하고 닫혔다.
 
-효과(effect, 효과): Stage18(18단계)로 넘어갈 준비는 되었지만, 다음 모델 주제는 아직 선택하지 않았다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+효과(effect, 효과): Stage18(18단계)는 CatBoost(캣부스트) ordered boosting(순서 부스팅) 주제로 열렸다. Stage17(17단계)은 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않고 닫혔다.
 ## Latest Stage17 RUN11F Update(최신 17단계 실행11F 업데이트)
 
 Stage17(17단계)은 `run11F_xgb_dart_booster_probe_v1`로 DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅) 내부 부스터 축을 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 확인했다.
@@ -22,9 +28,9 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 
 - updated_on: `2026-05-03`
 - project_mode: `clean_stage_restart`
-- active_stage: `17_model_family_challenge__xgboost_regularized_boosting_scout(17단계 XGBoost 규제 부스팅 탐색)`
-- active_branch: `codex/stage17(Stage17 브랜치)`
-- current run(현재 실행): `run11G_xgb_dart_attribution_closeout_v1`
+- active_stage: `18_model_family_challenge__catboost_ordered_boosting_scout(18단계 캣부스트 순서 부스팅 탐색)`
+- active_branch: `codex/stage18(Stage18 브랜치)`
+- current run(현재 실행): 없음
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
@@ -118,11 +124,11 @@ Stage 09(9단계)는 pre-alpha handoff packet(알파 전 인계 묶음)을 닫�
 
 ## 현재 단계(Current Stage, 현재 단계)
 
-`17_model_family_challenge__xgboost_regularized_boosting_scout`
+`18_model_family_challenge__catboost_ordered_boosting_scout`
 
-Stage17(17단계)의 질문(question, 질문)은 XGBoost(익스지부스트) regularized boosting(규제 부스팅)이 기존 LightGBM(라이트GBM), ExtraTrees(엑스트라 트리), discriminant models(판별 모델)과 다른 probability shape(확률 모양)와 signal density(신호 밀도)를 만들 수 있는지다.
+Stage18(18단계)의 질문(question, 질문)은 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) ordered boosting(순서 부스팅)과 symmetric tree(대칭 트리)가 이전 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅)와 다른 probability shape(확률 모양), signal density(신호 밀도), direction balance(방향 균형)를 만들 수 있는지다.
 
-효과(effect, 효과): Stage17(17단계)는 `run11A` 특성 판독, `run11B` 거래빈도 압박, `run11C` 방향 비대칭, `run11D` 거래 모양 귀속, `run11E` feature driver(피처 동인) 포화, `run11F` DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅), `run11G` DART 귀속 마감까지 확인하고 닫았다. 다음 단계(next stage, 다음 단계)는 아직 열지 않았다.
+효과(effect, 효과): Stage18(18단계)는 주제만 열렸고 아직 실행(run, 실행)은 없다. 첫 후보는 `run12A_catboost_ordered_boosting_characteristic_scout_v1`이며, CatBoost-specific axis(캣부스트 고유 축)가 보이지 않으면 Stage18(18단계)을 조기에 닫는다.
 
 ## 탐색 원칙(Exploration Rule, 탐색 원칙)
 

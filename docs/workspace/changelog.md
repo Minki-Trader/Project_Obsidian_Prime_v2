@@ -3,6 +3,7 @@
 ## 2026-05-03
 
 - 2026-05-03: `stage17_model_family_challenge_closeout_v3` completed(완료). Stage17(17단계) XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) regularized boosting(규제 부스팅) 탐색을 run11G(실행11G) DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅) attribution closeout(귀속 마감)으로 닫았다. 효과(effect, 효과): run11A~run11G(실행11A~실행11G)의 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표) 근거는 보존 단서로 남기고, edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+- 2026-05-03: `stage18_catboost_topic_open_v1` completed(완료). Stage18(18단계)를 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) ordered boosting(순서 부스팅) 독립 주제로 열었다. 효과(effect, 효과): `run12A_catboost_ordered_boosting_characteristic_scout_v1` 설계 위치만 만들고, run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침), edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
 ## 2026-05-02
 
