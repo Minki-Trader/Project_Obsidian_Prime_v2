@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OPTIONAL_IMPORTS = {"lightgbm", "skl2onnx", "onnxruntime"}
+OPTIONAL_IMPORTS = {"interpret", "lightgbm", "skl2onnx", "onnxruntime"}
 
 
 def _module_name(path: Path) -> str:

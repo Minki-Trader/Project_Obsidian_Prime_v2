@@ -1,0 +1,97 @@
+[
+  {
+    "changed_variables": [
+      "model_family=EBM",
+      "binning and interaction budget"
+    ],
+    "comparison_baseline": "Stage18 CatBoost clues are comparison context only, not inherited baseline.",
+    "control_variables": [
+      "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+      "label_v1_fwd12_m5_logret_train_q33_3class",
+      "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+      "Tier A/B paired records"
+    ],
+    "created_at_utc": "2026-05-03T12:58:17Z",
+    "decision_use": "Decide whether Stage19 should continue with EBM shape follow-up or pivot to Stage20 GAM.",
+    "failure_criteria": [
+      "flat probability shape",
+      "unstable signal density"
+    ],
+    "hypothesis": "EBM can reveal additive feature shapes on the audited 58-feature US100 M5 surface.",
+    "invalid_conditions": [
+      "missing split",
+      "missing feature",
+      "duplicate timestamp",
+      "non-finite feature"
+    ],
+    "packet_id": "stage19_run13A_ebm_shape_scout_v1",
+    "skill": "obsidian-experiment-design",
+    "status": "executed",
+    "success_criteria": [
+      "stable validation/OOS shape",
+      "usable Tier A/B prediction records"
+    ]
+  },
+  {
+    "created_at_utc": "2026-05-03T12:58:17Z",
+    "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "feature_label_boundary": "label_v1_fwd12_m5_logret_train_q33_3class",
+    "integrity_judgment": "usable_with_boundary",
+    "packet_id": "stage19_run13A_ebm_shape_scout_v1",
+    "sample_scope": "Tier A rows=46650; Tier B fallback rows=12398",
+    "skill": "obsidian-data-integrity",
+    "split_boundary": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+    "status": "executed",
+    "time_axis": "timestamp is read as UTC-normalized project timestamp and validated monotonic."
+  },
+  {
+    "calibration_risk": "EBM scores are used as probability-like scout scores, not calibrated trading probability.",
+    "created_at_utc": "2026-05-03T12:58:17Z",
+    "model_family": "interpret_ebm_explainable_boosting_classifier_multiclass",
+    "overfit_risk": "single split and small variant sweep; no WFO or MT5 runtime evidence.",
+    "packet_id": "stage19_run13A_ebm_shape_scout_v1",
+    "selection_metric": "characteristic_score on Tier A structural scout metrics, not trading profit.",
+    "skill": "obsidian-model-validation",
+    "status": "executed",
+    "threshold_policy": "non-flat q0.90 threshold from validation split.",
+    "validation_judgment": "inconclusive_structural_scout"
+  },
+  {
+    "availability": "generated_02_runs_ignored_with_manifest_and_tracked_packet_summary",
+    "consumer": [
+      "stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13A_ebm_shape_scout_packet.md",
+      "stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/stage_run_ledger.csv",
+      "docs/registers/alpha_run_ledger.csv"
+    ],
+    "created_at_utc": "2026-05-03T12:58:17Z",
+    "lineage_judgment": "connected_with_boundary",
+    "packet_id": "stage19_run13A_ebm_shape_scout_v1",
+    "producer": "stage_pipelines.stage19.ebm_characteristic_scout",
+    "skill": "obsidian-artifact-lineage",
+    "source_inputs": [
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+    ],
+    "status": "executed"
+  },
+  {
+    "claim_boundary": "ebm_shape_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-03T12:58:17Z",
+    "evidence_available": [
+      "variant results",
+      "Tier A/B prediction records",
+      "stage and project ledgers"
+    ],
+    "evidence_missing": [
+      "MT5 runtime_probe",
+      "WFO",
+      "runtime authority"
+    ],
+    "judgment_label": "inconclusive_ebm_shape_structural_scout_completed",
+    "next_condition": "If Stage19 continues, add a runtime handoff path or run a second EBM shape follow-up only after this scout's top terms are reviewed.",
+    "packet_id": "stage19_run13A_ebm_shape_scout_v1",
+    "result_subject": "run13A_ebm_main_effect_shape_scout_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "executed"
+  }
+]

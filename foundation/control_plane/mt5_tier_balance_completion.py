@@ -223,6 +223,16 @@ def mt5_value(value: Any) -> str:
     return str(value)
 
 
+def model_backend_value(model_path: str, requested: str | None = "auto") -> str:
+    requested_text = str(requested or "auto").strip().lower()
+    if requested_text not in {"", "auto"}:
+        return requested_text
+    path_text = str(model_path).strip().lower()
+    if path_text.endswith(".csv") and "score_table" in path_text:
+        return "ebm_table"
+    return "onnx"
+
+
 def write_set(path: Path, values: Mapping[str, Any]) -> dict[str, Any]:
     io_path(path.parent).mkdir(parents=True, exist_ok=True)
     lines = ["; generated_by=foundation.control_plane.mt5_tier_balance_completion"]
@@ -250,6 +260,7 @@ def attempt_payload(
     split: str,
     model_path: str,
     model_id: str,
+    model_backend: str = "auto",
     feature_path: str,
     feature_count: int,
     feature_order_hash: str,
@@ -267,6 +278,7 @@ def attempt_payload(
     fallback_enabled: bool = False,
     fallback_model_path: str | None = None,
     fallback_model_id: str | None = None,
+    fallback_model_backend: str | None = None,
     fallback_feature_path: str | None = None,
     fallback_feature_count: int | None = None,
     fallback_feature_order_hash: str | None = None,
@@ -292,6 +304,7 @@ def attempt_payload(
         "InpTimeframe": 5,
         "InpModelPath": model_path,
         "InpModelId": model_id,
+        "InpModelBackend": model_backend_value(model_path, model_backend),
         "InpModelUseCommonFiles": "true",
         "InpFeatureCsvPath": feature_path,
         "InpFeatureCount": int(feature_count),
@@ -307,6 +320,7 @@ def attempt_payload(
         "InpFallbackFeatureCount": int(fallback_feature_count or feature_count),
         "InpFallbackModelPath": fallback_model_path or model_path,
         "InpFallbackModelId": fallback_model_id or model_id,
+        "InpFallbackModelBackend": model_backend_value(fallback_model_path or model_path, fallback_model_backend or model_backend),
         "InpFallbackFeatureOrderHash": fallback_feature_order_hash or feature_order_hash,
         "InpTelemetryCsvPath": telemetry,
         "InpSummaryCsvPath": summary,

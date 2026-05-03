@@ -3,6 +3,7 @@
 
 #include "include/ObsidianPrime/FeatureInputs.mqh"
 #include "include/ObsidianPrime/ModelRuntime.mqh"
+#include "include/ObsidianPrime/EbmTableRuntime.mqh"
 #include "include/ObsidianPrime/DecisionSurface.mqh"
 #include "include/ObsidianPrime/ExecutionBridge.mqh"
 #include "include/ObsidianPrime/RuntimeTelemetry.mqh"
@@ -27,6 +28,7 @@ input bool            InpCsvTimestampIsBarClose = true;
 
 input string          InpModelPath = "Project_Obsidian_Prime_v2/runtime_probe/default/model.onnx";
 input string          InpModelId = "runtime_probe_default_model";
+input string          InpModelBackend = "onnx";
 input bool            InpModelUseCommonFiles = true;
 input bool            InpModelUseCpuOnly = true;
 input bool            InpModelNoConversion = false;
@@ -39,6 +41,7 @@ input string          InpFallbackFeatureCsvPath = "Project_Obsidian_Prime_v2/run
 input int             InpFallbackFeatureCount = 56;
 input string          InpFallbackModelPath = "Project_Obsidian_Prime_v2/runtime_probe/default/fallback_model.onnx";
 input string          InpFallbackModelId = "runtime_probe_default_tier_b_fallback_model";
+input string          InpFallbackModelBackend = "onnx";
 input string          InpFallbackFeatureOrderHash = "";
 
 input double          InpShortThreshold = 0.55;
@@ -69,6 +72,8 @@ COpFeatureCsvInput   g_feature_input;
 COpFeatureCsvInput   g_fallback_feature_input;
 COpModelRuntime      g_model_runtime;
 COpModelRuntime      g_fallback_model_runtime;
+COpEbmTableRuntime   g_ebm_table_runtime;
+COpEbmTableRuntime   g_fallback_ebm_table_runtime;
 COpDecisionSurface   g_decision_surface;
 COpDecisionSurface   g_fallback_decision_surface;
 COpExecutionBridge   g_execution_bridge;
@@ -109,8 +114,78 @@ int FailInit(const string detail)
    PrintFormat("[ObsidianPrimeV2][RuntimeProbe][init_failed] %s", detail);
    g_model_runtime.Deinit();
    g_fallback_model_runtime.Deinit();
+   g_ebm_table_runtime.Deinit();
+   g_fallback_ebm_table_runtime.Deinit();
    g_runtime_ready = false;
    return INIT_FAILED;
+  }
+
+bool IsEbmTableBackend(const string backend)
+  {
+   const string normalized = OP_Lower(OP_Trim(backend));
+   return (normalized == "ebm_table" || normalized == "ebm_score_table" || normalized == "table");
+  }
+
+bool InitPrimaryModel(string &reason)
+  {
+   if(IsEbmTableBackend(InpModelBackend))
+     {
+      g_ebm_table_runtime.Configure(InpModelPath,
+                                    InpModelId,
+                                    InpModelUseCommonFiles,
+                                    InpFeatureCount);
+      return g_ebm_table_runtime.Init(reason);
+     }
+   g_model_runtime.Configure(InpModelPath,
+                             InpModelId,
+                             InpModelUseCommonFiles,
+                             InpModelUseCpuOnly,
+                             InpModelNoConversion,
+                             InpSetOutputShape,
+                             InpFeatureCount);
+   return g_model_runtime.Init(reason);
+  }
+
+bool InitFallbackModel(string &reason)
+  {
+   if(IsEbmTableBackend(InpFallbackModelBackend))
+     {
+      g_fallback_ebm_table_runtime.Configure(InpFallbackModelPath,
+                                             InpFallbackModelId,
+                                             InpModelUseCommonFiles,
+                                             InpFallbackFeatureCount);
+      return g_fallback_ebm_table_runtime.Init(reason);
+     }
+   g_fallback_model_runtime.Configure(InpFallbackModelPath,
+                                      InpFallbackModelId,
+                                      InpModelUseCommonFiles,
+                                      InpModelUseCpuOnly,
+                                      InpModelNoConversion,
+                                      InpSetOutputShape,
+                                      InpFallbackFeatureCount);
+   return g_fallback_model_runtime.Init(reason);
+  }
+
+bool RunPrimaryModel(const double &features[],
+                     double &p_short,
+                     double &p_flat,
+                     double &p_long,
+                     string &reason)
+  {
+   if(IsEbmTableBackend(InpModelBackend))
+      return g_ebm_table_runtime.Run(features, p_short, p_flat, p_long, reason);
+   return g_model_runtime.Run(features, p_short, p_flat, p_long, reason);
+  }
+
+bool RunFallbackModel(const double &features[],
+                      double &p_short,
+                      double &p_flat,
+                      double &p_long,
+                      string &reason)
+  {
+   if(IsEbmTableBackend(InpFallbackModelBackend))
+      return g_fallback_ebm_table_runtime.Run(features, p_short, p_flat, p_long, reason);
+   return g_fallback_model_runtime.Run(features, p_short, p_flat, p_long, reason);
   }
 
 datetime CurrentClosedBarTimestamp()
@@ -267,8 +342,8 @@ void ProcessClosedBar()
    double p_long = 0.0;
    string model_reason = "";
    const bool model_ok = use_fallback_model
-                         ? g_fallback_model_runtime.Run(features, p_short, p_flat, p_long, model_reason)
-                         : g_model_runtime.Run(features, p_short, p_flat, p_long, model_reason);
+                         ? RunFallbackModel(features, p_short, p_flat, p_long, model_reason)
+                         : RunPrimaryModel(features, p_short, p_flat, p_long, model_reason);
    if(!model_ok)
      {
       string telemetry_reason = "";
@@ -371,14 +446,6 @@ int OnInit()
                              InpFeatureCsvDelimiter,
                              InpFeatureCount);
 
-   g_model_runtime.Configure(InpModelPath,
-                             InpModelId,
-                             InpModelUseCommonFiles,
-                             InpModelUseCpuOnly,
-                             InpModelNoConversion,
-                             InpSetOutputShape,
-                             InpFeatureCount);
-
    if(InpFallbackEnabled)
      {
       g_fallback_feature_input.Configure(InpFallbackFeatureCsvPath,
@@ -388,20 +455,12 @@ int OnInit()
                                          InpFeatureStrictHeader,
                                          InpFeatureCsvDelimiter,
                                          InpFallbackFeatureCount);
-
-      g_fallback_model_runtime.Configure(InpFallbackModelPath,
-                                         InpFallbackModelId,
-                                         InpModelUseCommonFiles,
-                                         InpModelUseCpuOnly,
-                                         InpModelNoConversion,
-                                         InpSetOutputShape,
-                                         InpFallbackFeatureCount);
      }
 
    string reason = "";
-   if(!g_model_runtime.Init(reason))
+   if(!InitPrimaryModel(reason))
       return FailInit(reason);
-   if(InpFallbackEnabled && !g_fallback_model_runtime.Init(reason))
+   if(InpFallbackEnabled && !InitFallbackModel(reason))
       return FailInit("fallback_" + reason);
 
    g_decision_surface.Configure(InpShortThreshold,
@@ -457,6 +516,8 @@ void OnDeinit(const int reason)
    g_runtime_ready = false;
    g_model_runtime.Deinit();
    g_fallback_model_runtime.Deinit();
+   g_ebm_table_runtime.Deinit();
+   g_fallback_ebm_table_runtime.Deinit();
 
    string telemetry_reason = "";
    const string reason_text = DeinitReasonText(reason);

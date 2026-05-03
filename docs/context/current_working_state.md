@@ -1,4 +1,18 @@
-﻿## Latest Stage18 Closeout and Stage19-25 Work Order(최신 18단계 종료와 19-25단계 작업서)
+﻿## Latest Stage19 RUN13B-RUN13G MT5 Runtime Update(최신 19단계 실행13B-13G MT5 런타임 업데이트)
+
+Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) RUN13B-RUN13G(실행13B-13G)를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_ebm_mt5_runtime_batch_completed`. primary runtime failure(주 런타임 실패): `none(없음)`.
+
+효과(effect, 효과): q90 handoff(q90 인계), q80 density(q80 밀도), q95 sparse tail(q95 희소 꼬리), direction asymmetry(방향 비대칭), hold6/hold18(6봉/18봉 보유) 축을 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage19 RUN13A Update(최신 19단계 실행13A 업데이트)
+
+Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) `run13A_ebm_main_effect_shape_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 완료했다.
+
+효과(effect, 효과): selected variant(선택 변형) `v01_main_effects_broad_bins`와 top shape terms(상위 모양 항)를 보존하지만, MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침), edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage18 Closeout and Stage19-25 Work Order(최신 18단계 종료와 19-25단계 작업서)
 
 Stage18(18단계)은 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) run12A-run12P(실행12A-실행12P)를 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 확인한 뒤 `closed_inconclusive_catboost_model_characteristics_exhausted`로 닫았다.
 

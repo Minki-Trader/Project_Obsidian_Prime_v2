@@ -19,6 +19,9 @@ line_count_policy:
     stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py:
       max_lines: 2000
       reason: "RUN03L one-run recency-weighted MT5 materializer(실행 03L 단일 최근성 가중 MT5 물질화 스크립트); stage-local evidence packet(단계 로컬 근거 묶음), extract shared closeout helpers(공유 마감 헬퍼 추출) before reuse"
+    stage_pipelines/stage18/catboost_followup_batch.py:
+      max_lines: 1700
+      reason: "Stage18 CatBoost follow-up batch materializer(18단계 캣부스트 후속 묶음 물질화 스크립트); existing stage-local orchestration debt(기존 단계 로컬 조율 부채) registered before Stage19 work, extract shared follow-up and MT5 packet helpers(공유 후속 및 MT5 묶음 도구 추출) before reuse"
 ownership_policy:
   blocked_direct_imports:
     - importer_owner: foundation/control_plane

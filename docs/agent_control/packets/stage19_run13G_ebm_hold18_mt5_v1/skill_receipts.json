@@ -1,0 +1,97 @@
+{
+  "created_at_utc": "2026-05-03T22:15:15Z",
+  "packet_id": "stage19_run13G_ebm_hold18_mt5_v1",
+  "receipts": [
+    {
+      "changed_variables": [
+        "threshold=q0.90",
+        "mode=routed",
+        "max_hold_bars=18"
+      ],
+      "comparison_baseline": "RUN13A structural scout and same selected EBM variant; no operating baseline.",
+      "control_variables": [
+        "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+        "label_v1_fwd12_m5_logret_train_q33_3class",
+        "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+        "US100 M5",
+        "Tier A primary plus Tier B fallback"
+      ],
+      "decision_use": "Continue, narrow, or stop Stage19 EBM runtime exploration.",
+      "failure_criteria": "No MT5 output, malformed report, score-table runtime mismatch, or no usable trade/runtime evidence.",
+      "hypothesis": "EBM runtime topic q90_hold18_trade_shape_stress can reveal a model-characteristic axis.",
+      "invalid_conditions": "feature order mismatch, timestamp mismatch, missing report, or unsupported score-table handoff.",
+      "skill": "obsidian-experiment-design",
+      "status": "completed",
+      "success_criteria": "MT5 reports and runtime telemetry exist with EBM score-table parity pass."
+    },
+    {
+      "known_differences": "EBM is exported as a score table and calculated directly in MQL5; runtime claim remains runtime_probe only.",
+      "parity_check": {
+        "tier_a": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "passed": true,
+          "rows": 256,
+          "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13G_ebm_q90_hold18_probe_v1/models/v01_main_effects_broad_bins_tier_a_ebm_score_table.csv",
+          "tolerance": 1e-10
+        },
+        "tier_b": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "passed": true,
+          "rows": 256,
+          "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13G_ebm_q90_hold18_probe_v1/models/v01_main_effects_broad_bins_tier_b_ebm_core42_score_table.csv",
+          "tolerance": 1e-10
+        }
+      },
+      "research_path": "stage_pipelines/stage19/ebm_mt5_runtime_probe.py",
+      "runtime_claim_boundary": "runtime_probe",
+      "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "shared_contract": "same feature order hashes, EBM score-table probability order short/flat/long, q-thresholds, US100 M5 timestamp match.",
+      "skill": "obsidian-runtime-parity",
+      "status": "completed"
+    },
+    {
+      "backtest_judgment": "usable_with_boundary",
+      "ea_identity": "ObsidianPrimeV2_RuntimeProbeEA with generated .set and .ini files.",
+      "report_identity": "run_manifest records tester report and telemetry paths.",
+      "skill": "obsidian-backtest-forensics",
+      "status": "completed",
+      "tester_identity": "MT5 Strategy Tester US100 M5, deposit=500, leverage=1:100, model=4.",
+      "trade_evidence": "MT5 KPI records=10"
+    },
+    {
+      "artifact_paths": [
+        "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13G_ebm_q90_hold18_probe_v1/run_manifest.json",
+        "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13G_ebm_q90_hold18_probe_v1/kpi_record.json",
+        "stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13G_ebm_q90_hold18_packet.md"
+      ],
+      "availability": "generated_02_runs_ignored_with_tracked_packet_summary",
+      "lineage_judgment": "connected_with_boundary",
+      "producer": "stage_pipelines.stage19.ebm_mt5_runtime_probe",
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13A_ebm_main_effect_shape_scout_v1/run_manifest.json"
+      ],
+      "status": "completed"
+    },
+    {
+      "claim_boundary": "ebm_q90_hold18_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+      "evidence_available": [
+        "score-table parity",
+        "MT5 tester output",
+        "KPI records",
+        "stage/project ledgers"
+      ],
+      "evidence_missing": [
+        "WFO",
+        "promotion packet",
+        "runtime authority closure"
+      ],
+      "judgment_label": "inconclusive_ebm_q90_hold18_runtime_probe_completed",
+      "result_subject": "run13G_ebm_q90_hold18_probe_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "completed"
+    }
+  ]
+}
