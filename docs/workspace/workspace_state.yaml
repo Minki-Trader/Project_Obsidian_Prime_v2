@@ -1,7 +1,7 @@
 updated_on: '2026-05-03'
 project_mode: clean_stage_restart
 active_branch: codex/stage18
-active_stage: 18_model_family_challenge__catboost_ordered_boosting_scout
+active_stage: 19_model_family_challenge__ebm_explainable_boosting_shape
 current_run_id: ''
 current_operating_reference: null
 current_shadow_challenger: null
@@ -13,11 +13,12 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_opened_stage18_topic_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_planned
 practical_modeling_start: '2022-09-01'
 current_focus:
 - treat Stage 16 as reviewed_closed after QDA class-specific covariance run08-run10 exploration; preserve QDA clues, not a baseline or promotion
-- treat Stage 18 as topic_open_no_run for CatBoost ordered boosting scout; no run, KPI, MT5 runtime_probe, baseline, promotion, or runtime authority exists yet
+- treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
+- treat Stage 19 through Stage 25 as independent model-family and risk-lifecycle topics: EBM, GAM, ElasticNet Logistic, HMM, regime classifier, Survival model, and hazard model
 - treat Stage 17 as reviewed_closed after run11G DART attribution closeout; Stage18 is opened as a CatBoost topic, not as a baseline or promotion
 - treat Stage 15 as reviewed_closed after LDA covariance stability closeout; preserve LDA covariance shrinkage clues, not a baseline or promotion
 - treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임 탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
@@ -52,7 +53,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_opened_stage18_topic_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_planned
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -121,7 +122,36 @@ pre_alpha_stage_queue:
     stage18:
       stage_id: 18_model_family_challenge__catboost_ordered_boosting_scout
       ownership: independent CatBoost ordered boosting scout after Stage17 XGBoost closeout
-      status: topic_open_no_run
+      status: reviewed_closed_stage19_planned
+      current_run_id: run12P_catboost_plain_same_condition_rematch_probe_v1
+    stage19:
+      stage_id: 19_model_family_challenge__ebm_explainable_boosting_shape
+      ownership: independent EBM explainable boosting shape scout after Stage18 CatBoost closeout
+      status: planned_next
+    stage20:
+      stage_id: 20_model_family_challenge__gam_additive_smooth_shape
+      ownership: independent GAM additive smooth shape scout after Stage19
+      status: planned
+    stage21:
+      stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
+      ownership: independent ElasticNet Logistic sparse linear sanity scout after Stage20
+      status: planned
+    stage22:
+      stage_id: 22_regime_model__hmm_hidden_state_segmentation
+      ownership: independent HMM hidden-state segmentation scout after Stage21
+      status: planned
+    stage23:
+      stage_id: 23_regime_model__supervised_regime_classifier_filter
+      ownership: independent supervised regime classifier filter scout after Stage22
+      status: planned
+    stage24:
+      stage_id: 24_exit_model__survival_time_to_event_hold_shape
+      ownership: independent Survival time-to-event hold-shape scout after Stage23
+      status: planned
+    stage25:
+      stage_id: 25_exit_model__hazard_trade_lifecycle_risk
+      ownership: independent hazard trade-lifecycle risk scout after Stage24
+      status: planned
 stage13_mlp_characteristic_runtime_probe:
   run_id: run04A_mlp_characteristic_runtime_probe_v1
   status: completed
@@ -310,23 +340,36 @@ stage17_xgboost_regularized_boosting_scout:
   next_action: stage18_catboost_topic_opened
 stage18_catboost_ordered_boosting_scout:
   stage_id: 18_model_family_challenge__catboost_ordered_boosting_scout
-  status: topic_open_no_run
+  status: reviewed_closed_stage19_planned
   lane: independent_model_family_topic_pivot_no_promotion
   model_family: catboost_catboostclassifier_multiclass_ordered_boosting
-  current_run_id: ''
-  current_status: topic_open_no_run
-  hypothesis: CatBoost ordered boosting and symmetric trees may expose probability shape, signal density, and direction-balance behavior different from Stage17 XGBoost DART.
-  comparison_baseline: no trading baseline; compare only against fixed v2 data label split model input contracts and preserved Stage17 XGBoost clues
-  boundary: catboost_topic_open_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  current_run_id: run12P_catboost_plain_same_condition_rematch_probe_v1
+  current_status: reviewed_stage_closeout_completed
+  judgment: closed_inconclusive_catboost_model_characteristics_exhausted
+  recommendation: proceed_to_stage19_ebm_without_catboost_continuation
+  run_range: run12A-run12P
+  completed_run_count: 16
+  mt5_attempt_count: 78
+  mt5_kpi_record_count: 190
+  normalized_kpi_record_count: 190
+  trade_attribution_records: 69
+  selected_variant_id: v02_ordered_depth4_strong_l2
+  visible_topic_count: 16
+  risk_warning_runs: run12A,run12B,run12N
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
-  stage_brief_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/00_spec/stage_brief.md
-  input_references_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/01_inputs/input_references.md
-  selection_status_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/04_selected/selection_status.md
-  open_decision_path: docs/decisions/2026-05-03_stage18_catboost_ordered_boosting_open.md
-  packet_summary_path: docs/agent_control/packets/stage18_catboost_topic_open_v1/open_report.md
-  next_action: design_run12A_catboost_ordered_boosting_characteristic_scout_v1
+  preserved_clues: long_bias,q85_threshold,hold6,high_confidence_high_margin,low_vol_or_mid_session
+  negative_memory: compression_samples_small_and_drawdown_high_plain_control_does_not_justify_catboost_continuation
+  boundary: runtime_probe_and_model_characteristic_read_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  aggregate_packet_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_characteristic_mt5_kpi_packet.md
+  followup_packet_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_followup_batch_mt5_kpi_packet.md
+  compression_packet_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_compression_mt5_kpi_packet.md
+  closeout_packet_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_closeout_packet.md
+  closeout_decision_path: docs/decisions/2026-05-03_stage18_catboost_closeout.md
+  packet_summary_path: docs/agent_control/packets/stage18_catboost_characteristic_mt5_kpi_v1/aggregate_summary.json
+  closeout_packet_summary_path: docs/agent_control/packets/stage18_catboost_closeout_v1/aggregate_summary.json
+  next_action: stage19_ebm_explainable_boosting_shape_planned
 stage16_qda_characterization_run08A_run08J:
   packet_id: stage16_qda_run08A_run08J_characterization_v1
   status: reviewed_structural_scout_completed
@@ -1628,3 +1671,120 @@ stage17_xgboost_run11G_dart_attribution_closeout:
   boundary: xgboost_dart_attribution_closeout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   report_path: stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/run11G_xgb_dart_attribution_closeout_packet.md
   decision_path: docs/decisions/2026-05-03_stage17_xgboost_dart_attribution_closeout.md
+stage18_catboost_run12A_runtime_probe:
+  packet_id: stage18_run12A_catboost_characteristic_mt5_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_catboost_ordered_characteristic_mt5_runtime_probe_completed
+  current_run_id: run12A_catboost_ordered_boosting_characteristic_scout_v1
+  topic_read: ordered_boosting_probability_shape
+  selected_variant_id: v02_ordered_depth4_strong_l2
+  mt5_kpi_record_count: 10
+  normalized_kpi_record_count: 10
+  trade_attribution_records: 6
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: catboost_ordered_characteristic_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12A_catboost_characteristic_mt5_packet.md
+stage18_catboost_run12B_runtime_probe:
+  packet_id: stage18_run12B_catboost_signal_density_mt5_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_catboost_q80_signal_density_mt5_runtime_probe_completed
+  current_run_id: run12B_catboost_q80_signal_density_probe_v1
+  topic_read: q80_signal_density_pressure
+  selected_variant_id: v02_ordered_depth4_strong_l2
+  mt5_kpi_record_count: 10
+  normalized_kpi_record_count: 10
+  trade_attribution_records: 6
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: catboost_q80_signal_density_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12B_catboost_signal_density_packet.md
+stage18_catboost_run12C_runtime_probe:
+  packet_id: stage18_run12C_catboost_direction_balance_mt5_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_catboost_q80_direction_balance_mt5_runtime_probe_completed
+  current_run_id: run12C_catboost_q80_direction_balance_probe_v1
+  topic_read: direction_balance_long_short_split
+  selected_variant_id: v02_ordered_depth4_strong_l2
+  mt5_kpi_record_count: 20
+  normalized_kpi_record_count: 20
+  trade_attribution_records: 4
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: catboost_q80_direction_balance_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12C_catboost_direction_balance_packet.md
+stage18_catboost_followup_batch_mt5_kpi:
+  stage_id: 18_model_family_challenge__catboost_ordered_boosting_scout
+  status: reviewed_run12D_run12M_catboost_followup_mt5_kpi
+  lane: independent_model_family_topic_pivot_no_promotion
+  model_family: catboost_catboostclassifier_multiclass_ordered_boosting
+  current_run_id: run12M_catboost_threshold_surface_probe_v1
+  run_range: run12D-run12M
+  completed_run_count: 10
+  blocked_runs: none
+  mt5_attempt_count: 48
+  mt5_kpi_record_count: 132
+  normalized_kpi_record_count: 132
+  trade_attribution_records: 47
+  visible_topic_count: 10
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: runtime_probe_and_model_characteristic_read_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  aggregate_packet_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_followup_batch_mt5_kpi_packet.md
+  packet_summary_path: docs/agent_control/packets/stage18_catboost_followup_batch_mt5_kpi_v1/aggregate_summary.json
+  next_action: use_followup_segments_for_catboost_characteristic_attribution_only
+stage18_catboost_compression_mt5_kpi:
+  stage_id: 18_model_family_challenge__catboost_ordered_boosting_scout
+  status: reviewed_run12N_run12P_catboost_compression_mt5_kpi
+  lane: independent_model_family_topic_pivot_no_promotion
+  model_family: catboost_catboostclassifier_multiclass_ordered_boosting
+  current_run_id: run12P_catboost_plain_same_condition_rematch_probe_v1
+  run_range: run12N-run12P
+  completed_run_count: 3
+  blocked_runs: none
+  mt5_attempt_count: 6
+  mt5_kpi_record_count: 18
+  normalized_kpi_record_count: 18
+  trade_attribution_records: 6
+  ordered_vs_plain_oos_net_delta: 68.07
+  ordered_vs_plain_oos_dd_delta: -6.75
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: runtime_probe_and_model_characteristic_compression_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  aggregate_packet_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_compression_mt5_kpi_packet.md
+  packet_summary_path: docs/agent_control/packets/stage18_catboost_compression_mt5_kpi_v1/aggregate_summary.json
+  next_action: close_or_downgrade_stage18_after_compression_unless_user_requests_more_exploration
+stage18_catboost_closeout:
+  stage_id: 18_model_family_challenge__catboost_ordered_boosting_scout
+  status: reviewed_closed_stage19_planned
+  judgment: closed_inconclusive_catboost_model_characteristics_exhausted
+  run_range: run12A-run12P
+  completed_run_count: 16
+  completed_mt5_attempt_count: 78
+  mt5_kpi_record_count: 190
+  normalized_kpi_record_count: 190
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: runtime_probe_and_model_characteristic_read_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  closeout_packet_path: stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_closeout_packet.md
+  decision_path: docs/decisions/2026-05-03_stage18_catboost_closeout.md
+  work_order_path: docs/workspace/stage19_25_model_research_work_order.md
+  next_action: stage19_ebm_explainable_boosting_shape_planned
+stage19_25_model_research_queue:
+  status: planned_after_stage18_closeout
+  work_order_path: docs/workspace/stage19_25_model_research_work_order.md
+  stage19: EBM_explainable_boosting_shape
+  stage20: GAM_additive_smooth_shape
+  stage21: ElasticNet_Logistic_linear_sanity
+  stage22: HMM_hidden_state_segmentation
+  stage23: supervised_regime_classifier_filter
+  stage24: Survival_time_to_event_hold_shape
+  stage25: hazard_trade_lifecycle_risk
+  inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
+  claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only

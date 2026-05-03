@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import tempfile
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -254,6 +255,87 @@ def export_xgboost_classifier_to_onnx(
         "outputs_before_drop": outputs_before,
         "outputs": outputs,
         "probability_output_name": final_probability_outputs[0] if final_probability_outputs else outputs[-1]["name"],
+    }
+
+
+def export_catboost_classifier_to_onnx(
+    model: Any,
+    output_path: Path,
+    *,
+    feature_count: int,
+    target_opset: int = 13,
+    drop_label_output: bool = True,
+) -> dict[str, Any]:
+    """Export CatBoost and expose the probability tensor instead of ZipMap."""
+
+    import onnx
+    from onnx import TensorProto, helper
+
+    raw_path = output_path.with_suffix(".raw.onnx")
+    io_path(raw_path.parent).mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        temp_raw_path = Path(tmp_dir) / "catboost.raw.onnx"
+        temp_output_path = Path(tmp_dir) / "catboost.tensor.onnx"
+        model.save_model(
+            str(temp_raw_path),
+            format="onnx",
+            export_parameters={
+                "onnx_domain": "ai.catboost",
+                "onnx_model_version": 1,
+                "onnx_doc_string": "Project Obsidian Prime v2 CatBoost runtime probe",
+                "onnx_graph_name": "CatBoostModel",
+            },
+        )
+        io_path(raw_path).write_bytes(temp_raw_path.read_bytes())
+        onnx_model = onnx.load(str(temp_raw_path))
+        outputs_before = [
+            {
+                "name": output.name,
+                "value_type": output.type.WhichOneof("value"),
+                "shape": _onnx_output_shape(output) if output.type.WhichOneof("value") == "tensor_type" else [],
+            }
+            for output in onnx_model.graph.output
+        ]
+        zipmap_nodes = [node for node in onnx_model.graph.node if node.op_type == "ZipMap"]
+        if len(zipmap_nodes) != 1:
+            raise RuntimeError(f"Expected exactly one CatBoost ZipMap node, found {len(zipmap_nodes)}.")
+        probability_name = zipmap_nodes[0].input[0]
+
+        kept_nodes = [node for node in onnx_model.graph.node if node is not zipmap_nodes[0]]
+        del onnx_model.graph.node[:]
+        onnx_model.graph.node.extend(kept_nodes)
+
+        label_outputs = [output for output in onnx_model.graph.output if output.name == "label"]
+        del onnx_model.graph.output[:]
+        if not drop_label_output and label_outputs:
+            onnx_model.graph.output.extend(label_outputs[:1])
+        onnx_model.graph.output.extend(
+            [helper.make_tensor_value_info(probability_name, TensorProto.FLOAT, [None, len(LABEL_ORDER)])]
+        )
+        onnx.checker.check_model(onnx_model)
+        onnx.save(onnx_model, str(temp_output_path))
+        io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
+        io_path(output_path).write_bytes(temp_output_path.read_bytes())
+    outputs = [
+        {
+            "name": output.name,
+            "value_type": output.type.WhichOneof("value"),
+            "shape": _onnx_output_shape(output),
+        }
+        for output in onnx_model.graph.output
+    ]
+    return {
+        "path": output_path.as_posix(),
+        "sha256": sha256_file(output_path),
+        "raw_path": raw_path.as_posix(),
+        "raw_sha256": sha256_file(raw_path),
+        "input_name": "features",
+        "target_opset": target_opset,
+        "zipmap_removed": True,
+        "label_output_dropped": bool(drop_label_output),
+        "outputs_before_drop": outputs_before,
+        "outputs": outputs,
+        "probability_output_name": probability_name,
     }
 
 

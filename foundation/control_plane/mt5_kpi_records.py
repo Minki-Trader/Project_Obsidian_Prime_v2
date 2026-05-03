@@ -125,9 +125,17 @@ def build_mt5_kpi_records(execution_results: Sequence[Mapping[str, Any]]) -> lis
         metrics = mt5_metrics_with_runtime_counts(result)
         routing_mode = result.get("routing_mode")
         if routing_mode in {ROUTING_MODE_A_B_FALLBACK, ROUTING_MODE_A_ONLY}:
-            component_specs = [("primary_used", f"mt5_routed_tier_a_used_{split}", TIER_A)]
+            record_prefix = str(result.get("record_view_prefix") or "mt5_routed_total")
+            if record_prefix.startswith("mt5_routed_") and record_prefix != "mt5_routed_total":
+                route_suffix = record_prefix.removeprefix("mt5_routed_")
+                component_prefix = f"mt5_routed_{route_suffix}"
+                total_record_view = f"{record_prefix}_{split}"
+            else:
+                component_prefix = "mt5_routed"
+                total_record_view = f"mt5_routed_total_{split}"
+            component_specs = [("primary_used", f"{component_prefix}_tier_a_used_{split}", TIER_A)]
             if routing_mode == ROUTING_MODE_A_B_FALLBACK:
-                component_specs.append(("fallback_used", f"mt5_routed_tier_b_fallback_used_{split}", TIER_B))
+                component_specs.append(("fallback_used", f"{component_prefix}_tier_b_fallback_used_{split}", TIER_B))
             for route_role, record_view, tier_scope in component_specs:
                 component = routed_component_metrics(metrics, route_role)
                 records.append(
@@ -149,7 +157,7 @@ def build_mt5_kpi_records(execution_results: Sequence[Mapping[str, Any]]) -> lis
             metrics["route_role"] = "routed_total"
             records.append(
                 {
-                    "record_view": f"mt5_routed_total_{split}",
+                    "record_view": total_record_view,
                     "tier_scope": TIER_AB,
                     "split": split,
                     "status": metrics.get("status", "partial"),

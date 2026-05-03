@@ -459,6 +459,21 @@ def _report_identity_from_name(report_name: str) -> dict[str, str] | None:
             "split": split,
             "route_role": "tier_b_fallback_only_total",
         }
+    for side in ("long_only", "short_only"):
+        if f"_tier_b_{side}_" in stem:
+            return {
+                "record_view": f"mt5_tier_b_{side}_{split}",
+                "tier_scope": "Tier B",
+                "split": split,
+                "route_role": f"tier_b_{side}",
+            }
+        if f"_tier_a_{side}_" in stem:
+            return {
+                "record_view": f"mt5_tier_a_{side}_{split}",
+                "tier_scope": "Tier A",
+                "split": split,
+                "route_role": f"tier_a_{side}",
+            }
     if "_tier_a_only_" in stem:
         return {
             "record_view": f"mt5_tier_a_only_{split}",
@@ -466,6 +481,14 @@ def _report_identity_from_name(report_name: str) -> dict[str, str] | None:
             "split": split,
             "route_role": "tier_only_total",
         }
+    for side in ("long_only", "short_only"):
+        if f"_routed_{side}_" in stem:
+            return {
+                "record_view": f"mt5_routed_{side}_{split}",
+                "tier_scope": "Tier A+B",
+                "split": split,
+                "route_role": "routed_total",
+            }
     if "_routed_" in stem:
         return {
             "record_view": f"mt5_routed_total_{split}",

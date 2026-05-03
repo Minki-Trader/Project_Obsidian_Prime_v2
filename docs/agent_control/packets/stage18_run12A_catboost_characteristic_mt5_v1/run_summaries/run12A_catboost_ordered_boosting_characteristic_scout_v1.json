@@ -1,0 +1,754 @@
+{
+  "attempt_count": 6,
+  "boundary": "catboost_ordered_characteristic_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "characteristic_score": 0.8525122883259638,
+  "closure_judgment": "inconclusive_catboost_ordered_characteristic_mt5_runtime_probe_completed",
+  "external_verification_status": "completed",
+  "judgment": "inconclusive_catboost_ordered_characteristic_mt5_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 10,
+    "normalized_summary_rows": 10,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 495,
+    "trade_parser_errors": 0
+  },
+  "ledger_outputs": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 2516,
+      "sha256": "bbea614bccb8203c0c9728d6dfebaf963d71b302563861a623d133ec7eb60ef5",
+      "upserted_rows": 13
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 49,
+      "sha256": "60fe9685269c82d415eeea64a14a47569fcea560133433b83a9ae5285be7cc40",
+      "upserted_rows": 13
+    }
+  },
+  "model_artifacts": {
+    "onnx_parity": {
+      "tier_a": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 4.8804012608982816e-08,
+        "mean_abs_diff": 1.321247719724671e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      },
+      "tier_b": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 7.312838534723198e-08,
+        "mean_abs_diff": 1.3922087426475327e-08,
+        "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      }
+    },
+    "selected_variant_id": "v02_ordered_depth4_strong_l2",
+    "thresholds": {
+      "tier_a": 0.44092703568761765,
+      "tier_b": 0.43228421619348373
+    },
+    "tier_a_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost.joblib",
+      "sha256": "4e11b33f804293568459cad4ffb111f985b9d1b386eefd7e8898df9e8c9668ba"
+    },
+    "tier_a_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.raw.onnx",
+      "raw_sha256": "ed407f4a954e07b8c0faa7a56b4e64102f174bece202cc61d7f334720ea28346",
+      "sha256": "96780287c483d8731b7fb9b867de7e6d3a4af129dd801eb6978eca4f791c511d",
+      "target_opset": 13,
+      "zipmap_removed": true
+    },
+    "tier_b_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42.joblib",
+      "sha256": "f2e16dc345911f17915514a033fa5261f86a005ae1a387e641069308f2b8fee6"
+    },
+    "tier_b_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.raw.onnx",
+      "raw_sha256": "bbc6e4b26ea16288d390790878a1f89eec604afff2d1ea0ba0b52556ab872cbc",
+      "sha256": "75dda76db734f1f9d86bb5079d6031f043966c7ec8324f040701c15aad1e13fa",
+      "target_opset": 13,
+      "zipmap_removed": true
+    }
+  },
+  "model_characteristic_strength": "ordered_probability_shape_visible",
+  "model_family": "catboost_catboostclassifier_multiclass_ordered_boosting",
+  "mt5_kpi_record_count": 10,
+  "oos_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 74.69,
+    "balance_drawdown_maximal_percent": 10.79,
+    "deal_count": 198,
+    "equity_drawdown_maximal_amount": 79.6,
+    "equity_drawdown_maximal_percent": 11.44,
+    "expectancy": 2.06,
+    "feature_ready_count": 8646,
+    "fill_count": 197,
+    "fill_rate": 1.0,
+    "gross_loss": -411.69,
+    "gross_profit": 615.21,
+    "long_trade_count": 92,
+    "long_win_rate_percent": 56.52,
+    "losing_trade_count": 43,
+    "loss_rate_percent": 43.43,
+    "max_drawdown_amount": 79.6,
+    "max_drawdown_percent": 11.44,
+    "missing_required_metrics": [],
+    "model_fail_count": 28691,
+    "model_ok_count": 8646,
+    "net_profit": 203.52,
+    "no_tier_count": 28691,
+    "no_tier_labelable_rows": 159,
+    "order_attempt_count": 197,
+    "parsed_row_count": 482,
+    "partial_context_subtype_counts": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    },
+    "profit_factor": 1.49,
+    "recovery_factor": 2.56,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/mt5/reports/Project_Obsidian_Prime_v2_run12A_catboost_ordered_boosting_characteristic_scout_v1_routed_oos.htm",
+    "route_coverage_split": "oos",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 8646,
+    "sharpe_ratio": 11.3,
+    "short_trade_count": 7,
+    "short_win_rate_percent": 57.14,
+    "skip_count": 28691,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 6932,
+    "tier_a_long_count": 628,
+    "tier_a_order_attempt_count": 192,
+    "tier_a_order_fill_count": 192,
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_a_short_count": 24,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_flat_count": 1040,
+    "tier_b_fallback_labelable_rows": 1062,
+    "tier_b_fallback_long_count": 21,
+    "tier_b_fallback_order_attempt_count": 5,
+    "tier_b_fallback_order_fill_count": 5,
+    "tier_b_fallback_short_count": 1,
+    "tier_b_fallback_used_count": 1062,
+    "trade_count": 99,
+    "win_rate_percent": 56.57,
+    "winning_trade_count": 56
+  },
+  "packet_id": "stage18_run12A_catboost_characteristic_mt5_v1",
+  "prediction_artifacts": {
+    "tier_a": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "5772d04742527c93542ee3b479fff6420b40ee7e801397766d4a986dd6002eb0"
+    },
+    "tier_ab": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "825e7f2976888428ecc53bfec483fec649ef1a674f436373b077989b038db389"
+    },
+    "tier_b": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "3876307b7646a7b47d875f11d5207ccf1489bc0e65d2ee7318a4088d02fb5a9d"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 2908,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 159,
+        "signal_count": 3067,
+        "signal_coverage": 0.0657449088960343,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.45450949367088606,
+          "balanced_accuracy": 0.44186473419657557,
+          "directional_correct_count": 310,
+          "directional_hit_rate": 0.4754601226993865,
+          "log_loss": 1.0451035049997022,
+          "long_count": 628,
+          "macro_f1": 0.4118118645033184,
+          "mean_probability": {
+            "flat": 0.32616466707190683,
+            "long": 0.3651174983095494,
+            "short": 0.3087178346185438
+          },
+          "mean_probability_margin": 0.08994813597246956,
+          "rows": 7584,
+          "short_count": 24,
+          "signal_count": 652,
+          "signal_coverage": 0.0859704641350211
+        },
+        "train": {
+          "accuracy": 0.4400109506536171,
+          "balanced_accuracy": 0.43060327422343336,
+          "directional_correct_count": 897,
+          "directional_hit_rate": 0.6272727272727273,
+          "log_loss": 1.058951152250453,
+          "long_count": 1301,
+          "macro_f1": 0.41654256864688705,
+          "mean_probability": {
+            "flat": 0.33032493884394537,
+            "long": 0.3587500042744996,
+            "short": 0.31092505688155503
+          },
+          "mean_probability_margin": 0.07017585204005483,
+          "rows": 29222,
+          "short_count": 129,
+          "signal_count": 1430,
+          "signal_coverage": 0.04893573335158442
+        },
+        "validation": {
+          "accuracy": 0.4595692807801707,
+          "balanced_accuracy": 0.4418098124320764,
+          "directional_correct_count": 432,
+          "directional_hit_rate": 0.4385786802030457,
+          "log_loss": 1.046439265279888,
+          "long_count": 979,
+          "macro_f1": 0.4079367776967782,
+          "mean_probability": {
+            "flat": 0.33004152858356584,
+            "long": 0.3635062140688559,
+            "short": 0.30645225734757825
+          },
+          "mean_probability_margin": 0.09152125168661984,
+          "rows": 9844,
+          "short_count": 6,
+          "signal_count": 985,
+          "signal_coverage": 0.10006095083299472
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 146,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 35,
+        "signal_count": 181,
+        "signal_coverage": 0.014599128891756736,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5282485875706214,
+          "balanced_accuracy": 0.40372130206553347,
+          "directional_correct_count": 10,
+          "directional_hit_rate": 0.45454545454545453,
+          "log_loss": 1.0018295289633343,
+          "long_count": 21,
+          "macro_f1": 0.3871675565972867,
+          "mean_probability": {
+            "flat": 0.41518767771897597,
+            "long": 0.3157248544653202,
+            "short": 0.26908746781570375
+          },
+          "mean_probability_margin": 0.14344451485293036,
+          "rows": 1062,
+          "short_count": 1,
+          "signal_count": 22,
+          "signal_coverage": 0.02071563088512241
+        },
+        "train": {
+          "accuracy": 0.47324414715719065,
+          "balanced_accuracy": 0.399760428603851,
+          "directional_correct_count": 68,
+          "directional_hit_rate": 0.544,
+          "log_loss": 1.0325876519668438,
+          "long_count": 92,
+          "macro_f1": 0.3678390753314671,
+          "mean_probability": {
+            "flat": 0.42320986621755646,
+            "long": 0.3144539030233201,
+            "short": 0.26233623075912343
+          },
+          "mean_probability_margin": 0.13911471470348252,
+          "rows": 8970,
+          "short_count": 33,
+          "signal_count": 125,
+          "signal_coverage": 0.013935340022296544
+        },
+        "validation": {
+          "accuracy": 0.6039729501267963,
+          "balanced_accuracy": 0.38175813446867396,
+          "directional_correct_count": 15,
+          "directional_hit_rate": 0.4411764705882353,
+          "log_loss": 0.9444837422619384,
+          "long_count": 33,
+          "macro_f1": 0.35864738029712306,
+          "mean_probability": {
+            "flat": 0.46676367732297874,
+            "long": 0.29281134698379774,
+            "short": 0.24042497569322363
+          },
+          "mean_probability_margin": 0.19396840133496884,
+          "rows": 2366,
+          "short_count": 1,
+          "signal_count": 34,
+          "signal_coverage": 0.014370245139475908
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 3017,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 174,
+        "signal_count": 3191,
+        "signal_coverage": 0.05404078038206205,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4635669673837613,
+          "balanced_accuracy": 0.4445290449329187,
+          "directional_correct_count": 316,
+          "directional_hit_rate": 0.47305389221556887,
+          "log_loss": 1.0397881033630352,
+          "long_count": 644,
+          "macro_f1": 0.4152178289169706,
+          "mean_probability": {
+            "flat": 0.337099485173594,
+            "long": 0.35905053234117423,
+            "short": 0.3038499824852317
+          },
+          "mean_probability_margin": 0.09651916932558653,
+          "rows": 8646,
+          "short_count": 24,
+          "signal_count": 668,
+          "signal_coverage": 0.07726116123062687
+        },
+        "train": {
+          "accuracy": 0.4478162966066192,
+          "balanced_accuracy": 0.43436705814395554,
+          "directional_correct_count": 943,
+          "directional_hit_rate": 0.6232650363516193,
+          "log_loss": 1.0527592639611785,
+          "long_count": 1369,
+          "macro_f1": 0.4176255199860374,
+          "mean_probability": {
+            "flat": 0.3521404446708539,
+            "long": 0.34834635879316633,
+            "short": 0.29951319653597974
+          },
+          "mean_probability_margin": 0.08636724285726645,
+          "rows": 38192,
+          "short_count": 144,
+          "signal_count": 1513,
+          "signal_coverage": 0.039615626309174694
+        },
+        "validation": {
+          "accuracy": 0.48755118755118754,
+          "balanced_accuracy": 0.45193670518352097,
+          "directional_correct_count": 443,
+          "directional_hit_rate": 0.4386138613861386,
+          "log_loss": 1.0266827732683836,
+          "long_count": 1004,
+          "macro_f1": 0.4185586855279504,
+          "mean_probability": {
+            "flat": 0.35653494413782055,
+            "long": 0.349807274222562,
+            "short": 0.2936577816396173
+          },
+          "mean_probability_margin": 0.11137300894034576,
+          "rows": 12210,
+          "short_count": 6,
+          "signal_count": 1010,
+          "signal_coverage": 0.08271908271908272
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "registry_output": {
+    "hash_policy": "lf_normalized_text_register",
+    "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+    "rows": 228,
+    "sha256": "9ae2efb0a8c82e76b746d8ccf90f64f48bd8682fcc229532e143a8839916ea20",
+    "upserted_rows": 1
+  },
+  "run_id": "run12A_catboost_ordered_boosting_characteristic_scout_v1",
+  "run_number": "run12A",
+  "run_recommendation": "continue_to_kpi_attribution",
+  "runtime_read": {
+    "avg_routed_trades": 122.5,
+    "new_characteristic_visible": true,
+    "oos_net_profit": 203.52,
+    "risk_warning": true,
+    "validation_net_profit": 206.56
+  },
+  "selected_variant": {
+    "characteristic_score": 0.8525122883259638,
+    "description": "Ordered boosting with deeper symmetric trees and stronger L2.",
+    "feature_importance": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/results/variant_importance/v02_ordered_depth4_strong_l2_feature_importance.csv",
+      "sha256": "bd971da13b43eabb967b3b31f08854e7bb75518b46dc2f978eab02c7621a4068",
+      "top10_gain_share": 0.808858967065082,
+      "top_features": [
+        {
+          "feature": "historical_vol_20",
+          "gain": 22.798804085203596,
+          "gain_share": 0.22798804085203603
+        },
+        {
+          "feature": "hl_range",
+          "gain": 16.89232212905757,
+          "gain_share": 0.16892322129057574
+        },
+        {
+          "feature": "minutes_from_cash_open",
+          "gain": 8.238511220691812,
+          "gain_share": 0.08238511220691815
+        },
+        {
+          "feature": "sma50_sma200_ratio",
+          "gain": 7.197978049373953,
+          "gain_share": 0.07197978049373956
+        },
+        {
+          "feature": "atr_14",
+          "gain": 5.2678136784164895,
+          "gain_share": 0.05267813678416491
+        },
+        {
+          "feature": "ppo_hist_12_26_9",
+          "gain": 5.0439418903288695,
+          "gain_share": 0.05043941890328871
+        },
+        {
+          "feature": "overnight_return",
+          "gain": 4.1813830647226595,
+          "gain_share": 0.04181383064722661
+        },
+        {
+          "feature": "ema50_ema200_diff",
+          "gain": 4.044172120896433,
+          "gain_share": 0.04044172120896434
+        },
+        {
+          "feature": "mega8_dispersion_5",
+          "gain": 3.6353017977176685,
+          "gain_share": 0.036353017977176695
+        },
+        {
+          "feature": "bollinger_width_20",
+          "gain": 3.5856686700991296,
+          "gain_share": 0.035856686700991305
+        }
+      ]
+    },
+    "idea_id": "ordered_symmetric_depth4_strong_regularization",
+    "metrics": {
+      "oos": {
+        "accuracy": 0.45450949367088606,
+        "balanced_accuracy": 0.44186473419657557,
+        "directional_correct_count": 310,
+        "directional_hit_rate": 0.4754601226993865,
+        "log_loss": 1.0451035049997022,
+        "long_count": 628,
+        "macro_f1": 0.4118118645033184,
+        "mean_probability": {
+          "flat": 0.32616466707190683,
+          "long": 0.3651174983095494,
+          "short": 0.3087178346185438
+        },
+        "mean_probability_margin": 0.08994813597246956,
+        "rows": 7584,
+        "short_count": 24,
+        "signal_count": 652,
+        "signal_coverage": 0.0859704641350211
+      },
+      "probability_checks": {
+        "finite": true,
+        "row_sum_max_abs_error": 2.220446049250313e-16
+      },
+      "train": {
+        "accuracy": 0.4400109506536171,
+        "balanced_accuracy": 0.43060327422343336,
+        "directional_correct_count": 897,
+        "directional_hit_rate": 0.6272727272727273,
+        "log_loss": 1.058951152250453,
+        "long_count": 1301,
+        "macro_f1": 0.41654256864688705,
+        "mean_probability": {
+          "flat": 0.33032493884394537,
+          "long": 0.3587500042744996,
+          "short": 0.31092505688155503
+        },
+        "mean_probability_margin": 0.07017585204005483,
+        "rows": 29222,
+        "short_count": 129,
+        "signal_count": 1430,
+        "signal_coverage": 0.04893573335158442
+      },
+      "validation": {
+        "accuracy": 0.4595692807801707,
+        "balanced_accuracy": 0.4418098124320764,
+        "directional_correct_count": 432,
+        "directional_hit_rate": 0.4385786802030457,
+        "log_loss": 1.046439265279888,
+        "long_count": 979,
+        "macro_f1": 0.4079367776967782,
+        "mean_probability": {
+          "flat": 0.33004152858356584,
+          "long": 0.3635062140688559,
+          "short": 0.30645225734757825
+        },
+        "mean_probability_margin": 0.09152125168661984,
+        "rows": 9844,
+        "short_count": 6,
+        "signal_count": 985,
+        "signal_coverage": 0.10006095083299472
+      }
+    },
+    "probability_shape": {
+      "oos": {
+        "flat_mean": 0.32616466707190683,
+        "mean_entropy": 1.0680717428387223,
+        "mean_max_probability": 0.4215934879036662,
+        "nonflat_p50": 0.37810226086998355,
+        "nonflat_p90": 0.4364560553773702,
+        "probability_margin_mean": 0.08994813597246956,
+        "rows": 7584
+      },
+      "train": {
+        "flat_mean": 0.33032493884394537,
+        "mean_entropy": 1.07768851965398,
+        "mean_max_probability": 0.4037823440783456,
+        "nonflat_p50": 0.3661455558077419,
+        "nonflat_p90": 0.4200750407036251,
+        "probability_margin_mean": 0.07017585204005483,
+        "rows": 29222
+      },
+      "validation": {
+        "flat_mean": 0.33004152858356584,
+        "mean_entropy": 1.0677082999875935,
+        "mean_max_probability": 0.4221923206908221,
+        "nonflat_p50": 0.3707319478092563,
+        "nonflat_p90": 0.44092703568761765,
+        "probability_margin_mean": 0.09152125168661984,
+        "rows": 9844
+      }
+    },
+    "spec": {
+      "bagging_temperature": 0.8,
+      "boosting_type": "Ordered",
+      "bootstrap_type": "Bayesian",
+      "depth": 4,
+      "description": "Ordered boosting with deeper symmetric trees and stronger L2.",
+      "grow_policy": "SymmetricTree",
+      "idea_id": "ordered_symmetric_depth4_strong_regularization",
+      "iterations": 110,
+      "l2_leaf_reg": 10.0,
+      "learning_rate": 0.03,
+      "random_seed": 1813,
+      "random_strength": 0.8,
+      "sample_weight_policy": "none",
+      "subsample": null,
+      "variant_id": "v02_ordered_depth4_strong_l2"
+    },
+    "threshold": 0.44092703568761765,
+    "training_sample": {
+      "class_counts": {
+        "0": 9064,
+        "1": 9643,
+        "2": 10515
+      },
+      "feature_count": 58,
+      "sample_weight_policy": "none",
+      "train_rows": 29222
+    },
+    "variant_id": "v02_ordered_depth4_strong_l2"
+  },
+  "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+  "topic_read": "ordered_boosting_probability_shape",
+  "validation_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 183.88,
+    "balance_drawdown_maximal_percent": 35.56,
+    "deal_count": 292,
+    "equity_drawdown_maximal_amount": 255.79,
+    "equity_drawdown_maximal_percent": 48.15,
+    "expectancy": 1.41,
+    "feature_ready_count": 12210,
+    "fill_count": 292,
+    "fill_rate": 1.0,
+    "gross_loss": -774.25,
+    "gross_profit": 980.81,
+    "long_trade_count": 140,
+    "long_win_rate_percent": 52.14,
+    "losing_trade_count": 69,
+    "loss_rate_percent": 47.26,
+    "max_drawdown_amount": 255.79,
+    "max_drawdown_percent": 48.15,
+    "missing_required_metrics": [],
+    "model_fail_count": 40598,
+    "model_ok_count": 12210,
+    "net_profit": 206.56,
+    "no_tier_count": 40598,
+    "no_tier_labelable_rows": 203,
+    "order_attempt_count": 292,
+    "parsed_row_count": 670,
+    "partial_context_subtype_counts": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    },
+    "profit_factor": 1.27,
+    "recovery_factor": 0.81,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/mt5/reports/Project_Obsidian_Prime_v2_run12A_catboost_ordered_boosting_characteristic_scout_v1_routed_validation_is.htm",
+    "route_coverage_split": "validation",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 12210,
+    "sharpe_ratio": 2.48,
+    "short_trade_count": 6,
+    "short_win_rate_percent": 66.67,
+    "skip_count": 40598,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 8859,
+    "tier_a_long_count": 979,
+    "tier_a_order_attempt_count": 277,
+    "tier_a_order_fill_count": 277,
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_a_short_count": 6,
+    "tier_a_used_count": 9844,
+    "tier_b_fallback_flat_count": 2332,
+    "tier_b_fallback_labelable_rows": 2366,
+    "tier_b_fallback_long_count": 33,
+    "tier_b_fallback_order_attempt_count": 15,
+    "tier_b_fallback_order_fill_count": 15,
+    "tier_b_fallback_short_count": 1,
+    "tier_b_fallback_used_count": 2366,
+    "trade_count": 146,
+    "win_rate_percent": 52.74,
+    "winning_trade_count": 77
+  },
+  "variant_artifacts": {
+    "variant_csv": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/results/catboost_variant_results.csv",
+      "sha256": "83e44d9b826f8b87c0b4ca226301e0c553aab3dbbcd2c617f23b16848414c731"
+    },
+    "variant_json": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12A_catboost_ordered_boosting_characteristic_scout_v1/results/catboost_variant_results.json",
+      "sha256": "909ee906612bb8772c0ae19184b35f1bfe3b3c955dd91ce68c310ed51c284048"
+    }
+  }
+}

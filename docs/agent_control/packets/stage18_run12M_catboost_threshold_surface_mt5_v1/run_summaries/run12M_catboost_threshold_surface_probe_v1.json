@@ -1,0 +1,839 @@
+{
+  "attempt_count": 6,
+  "boundary": "catboost_stage18_followup_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_catboost_followup_mt5_runtime_probe_completed",
+  "expected_attempts": 6,
+  "expected_kpi_records": 18,
+  "external_verification_status": "completed",
+  "feature_matrix_count": 12,
+  "judgment": "inconclusive_catboost_followup_mt5_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 18,
+    "normalized_summary_rows": 18,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 1345,
+    "trade_parser_errors": 0
+  },
+  "ledger_outputs": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 2678,
+      "sha256": "d01b6326815e7b873f79a12e1ba4c5b03d6a1715703c67f50b43bb5acec0d737",
+      "upserted_rows": 21
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 211,
+      "sha256": "3500442f75c65f4be69913dd2d0521bfe9a8ee192087a79271019708216ec242",
+      "upserted_rows": 21
+    }
+  },
+  "model_artifacts": {
+    "onnx_parity": {
+      "tier_a": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 4.8804012608982816e-08,
+        "mean_abs_diff": 1.321247719724671e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      },
+      "tier_b": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 7.312838534723198e-08,
+        "mean_abs_diff": 1.3922087426475327e-08,
+        "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      }
+    },
+    "segment_thresholds": [
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "validation_is",
+        "segment_filter": "full split with nonflat quantile 0.70",
+        "segment_id": "q70",
+        "segment_label": "threshold q70(임계값 q70)",
+        "source_split": "validation",
+        "threshold_quantile": 0.7,
+        "tier_a_matrix_key": "q70_tier_a_validation_is",
+        "tier_a_rows": 9844,
+        "tier_a_threshold": 0.40161298182999217,
+        "tier_b_matrix_key": "q70_tier_b_validation_is",
+        "tier_b_rows": 2366,
+        "tier_b_threshold": 0.31438721285282845
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "validation_is",
+        "segment_filter": "full split with nonflat quantile 0.85",
+        "segment_id": "q85",
+        "segment_label": "threshold q85(임계값 q85)",
+        "source_split": "validation",
+        "threshold_quantile": 0.85,
+        "tier_a_matrix_key": "q85_tier_a_validation_is",
+        "tier_a_rows": 9844,
+        "tier_a_threshold": 0.42786286480806146,
+        "tier_b_matrix_key": "q85_tier_b_validation_is",
+        "tier_b_rows": 2366,
+        "tier_b_threshold": 0.3523616694125658
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "validation_is",
+        "segment_filter": "full split with nonflat quantile 0.95",
+        "segment_id": "q95",
+        "segment_label": "threshold q95(임계값 q95)",
+        "source_split": "validation",
+        "threshold_quantile": 0.95,
+        "tier_a_matrix_key": "q95_tier_a_validation_is",
+        "tier_a_rows": 9844,
+        "tier_a_threshold": 0.4644939971548063,
+        "tier_b_matrix_key": "q95_tier_b_validation_is",
+        "tier_b_rows": 2366,
+        "tier_b_threshold": 0.39132768562202824
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "oos",
+        "segment_filter": "full split with nonflat quantile 0.70",
+        "segment_id": "q70",
+        "segment_label": "threshold q70(임계값 q70)",
+        "source_split": "oos",
+        "threshold_quantile": 0.7,
+        "tier_a_matrix_key": "q70_tier_a_oos",
+        "tier_a_rows": 7584,
+        "tier_a_threshold": 0.40135014331971625,
+        "tier_b_matrix_key": "q70_tier_b_oos",
+        "tier_b_rows": 1062,
+        "tier_b_threshold": 0.352289987941498
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "oos",
+        "segment_filter": "full split with nonflat quantile 0.85",
+        "segment_id": "q85",
+        "segment_label": "threshold q85(임계값 q85)",
+        "source_split": "oos",
+        "threshold_quantile": 0.85,
+        "tier_a_matrix_key": "q85_tier_a_oos",
+        "tier_a_rows": 7584,
+        "tier_a_threshold": 0.42263662532256197,
+        "tier_b_matrix_key": "q85_tier_b_oos",
+        "tier_b_rows": 1062,
+        "tier_b_threshold": 0.38764988410114
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "oos",
+        "segment_filter": "full split with nonflat quantile 0.95",
+        "segment_id": "q95",
+        "segment_label": "threshold q95(임계값 q95)",
+        "source_split": "oos",
+        "threshold_quantile": 0.95,
+        "tier_a_matrix_key": "q95_tier_a_oos",
+        "tier_a_rows": 7584,
+        "tier_a_threshold": 0.46030317129913845,
+        "tier_b_matrix_key": "q95_tier_b_oos",
+        "tier_b_rows": 1062,
+        "tier_b_threshold": 0.41238039993299275
+      }
+    ],
+    "selected_variant_id": "v02_ordered_depth4_strong_l2",
+    "thresholds": {
+      "default_quantile": 0.8,
+      "tier_a": 0.4169454508943393,
+      "tier_b": 0.41077910594164996
+    },
+    "tier_a_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost.joblib",
+      "sha256": "3ca5b2802f8caabaf6a5f7c7b02cecd493767fb03a2b81baeb8fb51e2d46dddb"
+    },
+    "tier_a_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.raw.onnx",
+      "raw_sha256": "2f288704978050bd6100fb640d24738a39eb3f6788ce4ef789ce7e3ab4a532af",
+      "sha256": "52de6d9bc71044fb1da4ec019297435c29e84331d54089c1a7d04cfa043ce401",
+      "target_opset": 13,
+      "zipmap_removed": true
+    },
+    "tier_b_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42.joblib",
+      "sha256": "c0bf8510e47c944d0baf15684977a1748c087e5f1aea6105c684c3b276a7852a"
+    },
+    "tier_b_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.raw.onnx",
+      "raw_sha256": "ec552e1d51da894caba3329079968fe6e463a9c35154d70ebc2922cf2539c4bb",
+      "sha256": "17393f345c4facddfae4411482096b15c87b44b7d920e40a9b48a39628c3b46d",
+      "target_opset": 13,
+      "zipmap_removed": true
+    }
+  },
+  "model_characteristic_strength": "threshold_surface_q70_q85_q95_visible",
+  "model_family": "catboost_catboostclassifier_multiclass_ordered_boosting",
+  "mt5_kpi_record_count": 18,
+  "packet_id": "stage18_run12M_catboost_threshold_surface_mt5_v1",
+  "prediction_artifacts": {
+    "tier_a": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "5772d04742527c93542ee3b479fff6420b40ee7e801397766d4a986dd6002eb0"
+    },
+    "tier_ab": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "825e7f2976888428ecc53bfec483fec649ef1a674f436373b077989b038db389"
+    },
+    "tier_b": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "3876307b7646a7b47d875f11d5207ccf1489bc0e65d2ee7318a4088d02fb5a9d"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 5673,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 942,
+        "signal_count": 6615,
+        "signal_coverage": 0.14180064308681672,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.45450949367088606,
+          "balanced_accuracy": 0.44186473419657557,
+          "directional_correct_count": 594,
+          "directional_hit_rate": 0.43074691805656273,
+          "log_loss": 1.0451035049997022,
+          "long_count": 1221,
+          "macro_f1": 0.4118118645033184,
+          "mean_probability": {
+            "flat": 0.32616466707190683,
+            "long": 0.3651174983095494,
+            "short": 0.3087178346185438
+          },
+          "mean_probability_margin": 0.08994813597246956,
+          "rows": 7584,
+          "short_count": 158,
+          "signal_count": 1379,
+          "signal_coverage": 0.18183016877637131
+        },
+        "train": {
+          "accuracy": 0.4400109506536171,
+          "balanced_accuracy": 0.43060327422343336,
+          "directional_correct_count": 1846,
+          "directional_hit_rate": 0.5650443832262014,
+          "log_loss": 1.058951152250453,
+          "long_count": 2635,
+          "macro_f1": 0.41654256864688705,
+          "mean_probability": {
+            "flat": 0.33032493884394537,
+            "long": 0.3587500042744996,
+            "short": 0.31092505688155503
+          },
+          "mean_probability_margin": 0.07017585204005483,
+          "rows": 29222,
+          "short_count": 632,
+          "signal_count": 3267,
+          "signal_coverage": 0.11179932927246596
+        },
+        "validation": {
+          "accuracy": 0.4595692807801707,
+          "balanced_accuracy": 0.4418098124320764,
+          "directional_correct_count": 848,
+          "directional_hit_rate": 0.43067546978161503,
+          "log_loss": 1.046439265279888,
+          "long_count": 1817,
+          "macro_f1": 0.4079367776967782,
+          "mean_probability": {
+            "flat": 0.33004152858356584,
+            "long": 0.3635062140688559,
+            "short": 0.30645225734757825
+          },
+          "mean_probability_margin": 0.09152125168661984,
+          "rows": 9844,
+          "short_count": 152,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 343,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 122,
+        "signal_count": 465,
+        "signal_coverage": 0.03750604936280045,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5282485875706214,
+          "balanced_accuracy": 0.40372130206553347,
+          "directional_correct_count": 20,
+          "directional_hit_rate": 0.35714285714285715,
+          "log_loss": 1.0018295289633343,
+          "long_count": 47,
+          "macro_f1": 0.3871675565972867,
+          "mean_probability": {
+            "flat": 0.41518767771897597,
+            "long": 0.3157248544653202,
+            "short": 0.26908746781570375
+          },
+          "mean_probability_margin": 0.14344451485293036,
+          "rows": 1062,
+          "short_count": 9,
+          "signal_count": 56,
+          "signal_coverage": 0.05273069679849341
+        },
+        "train": {
+          "accuracy": 0.47324414715719065,
+          "balanced_accuracy": 0.399760428603851,
+          "directional_correct_count": 169,
+          "directional_hit_rate": 0.5075075075075075,
+          "log_loss": 1.0325876519668438,
+          "long_count": 223,
+          "macro_f1": 0.3678390753314671,
+          "mean_probability": {
+            "flat": 0.42320986621755646,
+            "long": 0.3144539030233201,
+            "short": 0.26233623075912343
+          },
+          "mean_probability_margin": 0.13911471470348252,
+          "rows": 8970,
+          "short_count": 110,
+          "signal_count": 333,
+          "signal_coverage": 0.037123745819397994
+        },
+        "validation": {
+          "accuracy": 0.6039729501267963,
+          "balanced_accuracy": 0.38175813446867396,
+          "directional_correct_count": 28,
+          "directional_hit_rate": 0.3684210526315789,
+          "log_loss": 0.9444837422619384,
+          "long_count": 73,
+          "macro_f1": 0.35864738029712306,
+          "mean_probability": {
+            "flat": 0.46676367732297874,
+            "long": 0.29281134698379774,
+            "short": 0.24042497569322363
+          },
+          "mean_probability_margin": 0.19396840133496884,
+          "rows": 2366,
+          "short_count": 3,
+          "signal_count": 76,
+          "signal_coverage": 0.032121724429416736
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 5937,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 1034,
+        "signal_count": 6971,
+        "signal_coverage": 0.11805649640970058,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4635669673837613,
+          "balanced_accuracy": 0.4445290449329187,
+          "directional_correct_count": 611,
+          "directional_hit_rate": 0.42907303370786515,
+          "log_loss": 1.0397881033630352,
+          "long_count": 1260,
+          "macro_f1": 0.4152178289169706,
+          "mean_probability": {
+            "flat": 0.337099485173594,
+            "long": 0.35905053234117423,
+            "short": 0.3038499824852317
+          },
+          "mean_probability_margin": 0.09651916932558653,
+          "rows": 8646,
+          "short_count": 164,
+          "signal_count": 1424,
+          "signal_coverage": 0.1647004395095998
+        },
+        "train": {
+          "accuracy": 0.4478162966066192,
+          "balanced_accuracy": 0.43436705814395554,
+          "directional_correct_count": 1981,
+          "directional_hit_rate": 0.5632641455786181,
+          "log_loss": 1.0527592639611785,
+          "long_count": 2802,
+          "macro_f1": 0.4176255199860374,
+          "mean_probability": {
+            "flat": 0.3521404446708539,
+            "long": 0.34834635879316633,
+            "short": 0.29951319653597974
+          },
+          "mean_probability_margin": 0.08636724285726645,
+          "rows": 38192,
+          "short_count": 715,
+          "signal_count": 3517,
+          "signal_coverage": 0.09208734813573523
+        },
+        "validation": {
+          "accuracy": 0.48755118755118754,
+          "balanced_accuracy": 0.45193670518352097,
+          "directional_correct_count": 873,
+          "directional_hit_rate": 0.43004926108374386,
+          "log_loss": 1.0266827732683836,
+          "long_count": 1875,
+          "macro_f1": 0.4185586855279504,
+          "mean_probability": {
+            "flat": 0.35653494413782055,
+            "long": 0.349807274222562,
+            "short": 0.2936577816396173
+          },
+          "mean_probability_margin": 0.11137300894034576,
+          "rows": 12210,
+          "short_count": 155,
+          "signal_count": 2030,
+          "signal_coverage": 0.16625716625716624
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "question": "How does the same model behave across q70, q85, and q95 non-flat thresholds?",
+  "registry_output": {
+    "hash_policy": "lf_normalized_text_register",
+    "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+    "rows": 238,
+    "sha256": "e7ef5101eff98a649c93cc326b9bca9e9284dc41f3f721ff390c96118dab18d6",
+    "upserted_rows": 1
+  },
+  "run_id": "run12M_catboost_threshold_surface_probe_v1",
+  "run_number": "run12M",
+  "runtime_read": {
+    "actual_trading_record_count": 6,
+    "best_oos_record": {
+      "max_drawdown_amount": 179.81,
+      "max_drawdown_percent": 26.98,
+      "max_hold_bars": 12,
+      "net_profit": 293.95,
+      "profit_factor": 1.31,
+      "record_view": "mt5_routed_q85_oos",
+      "recovery_factor": 1.63,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q85_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q85",
+      "segment_label": "threshold q85(임계값 q85)",
+      "split": "oos",
+      "threshold_quantile": 0.85,
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_a_used_count": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_b_fallback_used_count": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 224
+    },
+    "component_record_count": 12,
+    "diagnostic_note": "Segmented MT5 records are diagnostic runtime probes only, not synthetic combined performance.",
+    "max_trade_count": 398.0,
+    "new_characteristic_visible": true,
+    "oos_net_profit_range": 160.56,
+    "risk_warning": true,
+    "worst_oos_record": {
+      "max_drawdown_amount": 208.91,
+      "max_drawdown_percent": 27.75,
+      "max_hold_bars": 12,
+      "net_profit": 133.39,
+      "profit_factor": 1.08,
+      "record_view": "mt5_routed_q70_oos",
+      "recovery_factor": 0.64,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q70_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q70",
+      "segment_label": "threshold q70(임계값 q70)",
+      "split": "oos",
+      "threshold_quantile": 0.7,
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_a_used_count": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_b_fallback_used_count": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 398
+    }
+  },
+  "segment_plan": [
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "validation_is",
+      "segment_filter": "full split with nonflat quantile 0.70",
+      "segment_id": "q70",
+      "segment_label": "threshold q70(임계값 q70)",
+      "source_split": "validation",
+      "threshold_quantile": 0.7,
+      "tier_a_matrix_key": "q70_tier_a_validation_is",
+      "tier_a_rows": 9844,
+      "tier_a_threshold": 0.40161298182999217,
+      "tier_b_matrix_key": "q70_tier_b_validation_is",
+      "tier_b_rows": 2366,
+      "tier_b_threshold": 0.31438721285282845
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "validation_is",
+      "segment_filter": "full split with nonflat quantile 0.85",
+      "segment_id": "q85",
+      "segment_label": "threshold q85(임계값 q85)",
+      "source_split": "validation",
+      "threshold_quantile": 0.85,
+      "tier_a_matrix_key": "q85_tier_a_validation_is",
+      "tier_a_rows": 9844,
+      "tier_a_threshold": 0.42786286480806146,
+      "tier_b_matrix_key": "q85_tier_b_validation_is",
+      "tier_b_rows": 2366,
+      "tier_b_threshold": 0.3523616694125658
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "validation_is",
+      "segment_filter": "full split with nonflat quantile 0.95",
+      "segment_id": "q95",
+      "segment_label": "threshold q95(임계값 q95)",
+      "source_split": "validation",
+      "threshold_quantile": 0.95,
+      "tier_a_matrix_key": "q95_tier_a_validation_is",
+      "tier_a_rows": 9844,
+      "tier_a_threshold": 0.4644939971548063,
+      "tier_b_matrix_key": "q95_tier_b_validation_is",
+      "tier_b_rows": 2366,
+      "tier_b_threshold": 0.39132768562202824
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "oos",
+      "segment_filter": "full split with nonflat quantile 0.70",
+      "segment_id": "q70",
+      "segment_label": "threshold q70(임계값 q70)",
+      "source_split": "oos",
+      "threshold_quantile": 0.7,
+      "tier_a_matrix_key": "q70_tier_a_oos",
+      "tier_a_rows": 7584,
+      "tier_a_threshold": 0.40135014331971625,
+      "tier_b_matrix_key": "q70_tier_b_oos",
+      "tier_b_rows": 1062,
+      "tier_b_threshold": 0.352289987941498
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "oos",
+      "segment_filter": "full split with nonflat quantile 0.85",
+      "segment_id": "q85",
+      "segment_label": "threshold q85(임계값 q85)",
+      "source_split": "oos",
+      "threshold_quantile": 0.85,
+      "tier_a_matrix_key": "q85_tier_a_oos",
+      "tier_a_rows": 7584,
+      "tier_a_threshold": 0.42263662532256197,
+      "tier_b_matrix_key": "q85_tier_b_oos",
+      "tier_b_rows": 1062,
+      "tier_b_threshold": 0.38764988410114
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "oos",
+      "segment_filter": "full split with nonflat quantile 0.95",
+      "segment_id": "q95",
+      "segment_label": "threshold q95(임계값 q95)",
+      "source_split": "oos",
+      "threshold_quantile": 0.95,
+      "tier_a_matrix_key": "q95_tier_a_oos",
+      "tier_a_rows": 7584,
+      "tier_a_threshold": 0.46030317129913845,
+      "tier_b_matrix_key": "q95_tier_b_oos",
+      "tier_b_rows": 1062,
+      "tier_b_threshold": 0.41238039993299275
+    }
+  ],
+  "segment_records": [
+    {
+      "max_drawdown_amount": 521.85,
+      "max_drawdown_percent": 99.2,
+      "max_hold_bars": 12,
+      "net_profit": -495.79,
+      "profit_factor": 0.67,
+      "record_view": "mt5_routed_q70_validation_is",
+      "recovery_factor": -0.95,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q70_validation_is.htm",
+      "route_role": "routed_total",
+      "segment_id": "q70",
+      "segment_label": "threshold q70(임계값 q70)",
+      "split": "validation_is",
+      "threshold_quantile": 0.7,
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_a_used_count": 3599,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_b_fallback_used_count": 691,
+      "tier_scope": "Tier A+B",
+      "trade_count": 245
+    },
+    {
+      "max_drawdown_amount": 246.65,
+      "max_drawdown_percent": 42.34,
+      "max_hold_bars": 12,
+      "net_profit": 175.43,
+      "profit_factor": 1.13,
+      "record_view": "mt5_routed_q85_validation_is",
+      "recovery_factor": 0.71,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q85_validation_is.htm",
+      "route_role": "routed_total",
+      "segment_id": "q85",
+      "segment_label": "threshold q85(임계값 q85)",
+      "split": "validation_is",
+      "threshold_quantile": 0.85,
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_a_used_count": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_b_fallback_used_count": 2366,
+      "tier_scope": "Tier A+B",
+      "trade_count": 290
+    },
+    {
+      "max_drawdown_amount": 256.73,
+      "max_drawdown_percent": 50.01,
+      "max_hold_bars": 12,
+      "net_profit": -48.67,
+      "profit_factor": 0.93,
+      "record_view": "mt5_routed_q95_validation_is",
+      "recovery_factor": -0.19,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q95_validation_is.htm",
+      "route_role": "routed_total",
+      "segment_id": "q95",
+      "segment_label": "threshold q95(임계값 q95)",
+      "split": "validation_is",
+      "threshold_quantile": 0.95,
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_a_used_count": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_b_fallback_used_count": 2366,
+      "tier_scope": "Tier A+B",
+      "trade_count": 110
+    },
+    {
+      "max_drawdown_amount": 208.91,
+      "max_drawdown_percent": 27.75,
+      "max_hold_bars": 12,
+      "net_profit": 133.39,
+      "profit_factor": 1.08,
+      "record_view": "mt5_routed_q70_oos",
+      "recovery_factor": 0.64,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q70_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q70",
+      "segment_label": "threshold q70(임계값 q70)",
+      "split": "oos",
+      "threshold_quantile": 0.7,
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_a_used_count": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_b_fallback_used_count": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 398
+    },
+    {
+      "max_drawdown_amount": 179.81,
+      "max_drawdown_percent": 26.98,
+      "max_hold_bars": 12,
+      "net_profit": 293.95,
+      "profit_factor": 1.31,
+      "record_view": "mt5_routed_q85_oos",
+      "recovery_factor": 1.63,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q85_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q85",
+      "segment_label": "threshold q85(임계값 q85)",
+      "split": "oos",
+      "threshold_quantile": 0.85,
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_a_used_count": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_b_fallback_used_count": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 224
+    },
+    {
+      "max_drawdown_amount": 98.45,
+      "max_drawdown_percent": 17.32,
+      "max_hold_bars": 12,
+      "net_profit": 153.45,
+      "profit_factor": 1.51,
+      "record_view": "mt5_routed_q95_oos",
+      "recovery_factor": 1.56,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12M_catboost_threshold_surface_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12M_catboost_threshold_surface_probe_v1_routed_q95_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q95",
+      "segment_label": "threshold q95(임계값 q95)",
+      "split": "oos",
+      "threshold_quantile": 0.95,
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_a_used_count": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_b_fallback_used_count": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 78
+    }
+  ],
+  "selected_variant": {
+    "description": "Ordered boosting with deeper symmetric trees and stronger L2.",
+    "idea_id": "ordered_symmetric_depth4_strong_regularization",
+    "spec": {
+      "bagging_temperature": 0.8,
+      "boosting_type": "Ordered",
+      "bootstrap_type": "Bayesian",
+      "depth": 4,
+      "description": "Ordered boosting with deeper symmetric trees and stronger L2.",
+      "grow_policy": "SymmetricTree",
+      "idea_id": "ordered_symmetric_depth4_strong_regularization",
+      "iterations": 110,
+      "l2_leaf_reg": 10.0,
+      "learning_rate": 0.03,
+      "random_seed": 1813,
+      "random_strength": 0.8,
+      "sample_weight_policy": "none",
+      "subsample": null,
+      "variant_id": "v02_ordered_depth4_strong_l2"
+    },
+    "variant_id": "v02_ordered_depth4_strong_l2"
+  },
+  "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+  "topic_read": "threshold_surface_q70_q85_q95"
+}

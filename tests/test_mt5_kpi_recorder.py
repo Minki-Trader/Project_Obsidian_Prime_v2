@@ -6,6 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from foundation.control_plane.mt5_kpi_records import build_mt5_kpi_records
 from foundation.control_plane.mt5_kpi_recorder import write_mt5_kpi_recording_packet
 
 
@@ -226,6 +227,65 @@ class Mt5KpiRecorderTests(unittest.TestCase):
             self.assertEqual(record["row_grain"]["tier_scope"]["value"], "Tier A+B")
             self.assertEqual(record["mt5_trading_headline"]["net_profit"]["value"], 12.5)
             self.assertEqual(record["source_evidence"]["report_identity_source"], "filename_scan_fallback")
+
+    def test_scans_directional_routed_reports_without_collapsing_axis(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            _seed_template(root)
+            run_root = root / "stages/unit_stage/02_runs/unit_run"
+            report_path = run_root / "mt5/reports/Project_Obsidian_Prime_v2_unit_run_routed_long_only_oos.htm"
+            report_path.parent.mkdir(parents=True)
+            report_path.write_text(_report_html(gross_loss="-10.00", profit_factor="2.25"), encoding="utf-16")
+            (run_root / "kpi_record.json").write_text(json.dumps({"run_id": "unit_run"}), encoding="utf-8")
+            _seed_inventory(root, "unit_run", "unit_stage", "stages/unit_stage/02_runs/unit_run")
+
+            packet = write_mt5_kpi_recording_packet(root, created_at_utc="2026-04-29T00:00:00Z")
+
+            self.assertEqual(packet["summary"]["normalized_records_written"], 1)
+            record_path = root / "docs/agent_control/packets/kpi_rebuild_mt5_recording_v1/normalized_kpi_records.jsonl"
+            record = json.loads(record_path.read_text(encoding="utf-8").splitlines()[0])
+
+            self.assertEqual(record["row_grain"]["record_view"]["value"], "mt5_routed_long_only_oos")
+            self.assertEqual(record["row_grain"]["route_role"]["value"], "routed_total")
+            self.assertEqual(record["row_grain"]["tier_scope"]["value"], "Tier A+B")
+            self.assertEqual(record["source_evidence"]["report_identity_source"], "filename_scan_fallback")
+
+    def test_build_mt5_kpi_records_preserves_directional_routed_prefix(self) -> None:
+        records = build_mt5_kpi_records(
+            [
+                {
+                    "status": "completed",
+                    "tier": "Tier A+B",
+                    "split": "validation_is",
+                    "routing_mode": "tier_a_primary_tier_b_fallback",
+                    "attempt_role": "routed_long",
+                    "record_view_prefix": "mt5_routed_long_only",
+                    "strategy_tester_report": {
+                        "metrics": {
+                            "net_profit": 12.5,
+                            "profit_factor": 1.25,
+                            "trade_count": 10,
+                        }
+                    },
+                    "runtime_outputs": {
+                        "last_summary": {
+                            "model_ok_count": 100,
+                            "tier_a_used_count": 80,
+                            "tier_b_fallback_used_count": 20,
+                            "tier_a_order_attempt_count": 8,
+                            "tier_b_fallback_order_attempt_count": 2,
+                        }
+                    },
+                }
+            ]
+        )
+
+        views = {record["record_view"] for record in records}
+
+        self.assertIn("mt5_routed_long_only_tier_a_used_validation_is", views)
+        self.assertIn("mt5_routed_long_only_tier_b_fallback_used_validation_is", views)
+        self.assertIn("mt5_routed_long_only_validation_is", views)
+        self.assertNotIn("mt5_routed_total_validation_is", views)
 
     def test_target_confirmation_filters_excluded_run_and_count(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

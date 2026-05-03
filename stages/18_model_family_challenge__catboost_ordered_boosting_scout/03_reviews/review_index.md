@@ -1,12 +1,21 @@
 ﻿# Stage18 Review Index(18단계 검토 색인)
 
-## Current Packets(현재 묶음)
+- base packet(기본 묶음): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_characteristic_mt5_kpi_packet.md`
+- follow-up aggregate packet(후속 종합 묶음): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_followup_batch_mt5_kpi_packet.md`
+- `run12D_catboost_regime_split_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12D_catboost_regime_split_packet.md`
+- `run12E_catboost_session_timing_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12E_catboost_session_timing_packet.md`
+- `run12F_catboost_feature_driver_mask_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12F_catboost_feature_driver_mask_packet.md`
+- `run12G_catboost_probability_calibration_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12G_catboost_probability_calibration_packet.md`
+- `run12H_catboost_margin_geometry_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12H_catboost_margin_geometry_packet.md`
+- `run12I_catboost_long_bias_source_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12I_catboost_long_bias_source_packet.md`
+- `run12J_catboost_tier_b_fallback_anatomy_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12J_catboost_tier_b_fallback_anatomy_packet.md`
+- `run12K_catboost_hold_stress_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12K_catboost_hold_stress_packet.md`
+- `run12L_catboost_plain_variant_contrast_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12L_catboost_plain_variant_contrast_packet.md`
+- `run12M_catboost_threshold_surface_probe_v1`: `inconclusive_catboost_followup_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12M_catboost_threshold_surface_packet.md`
 
-- topic open packet(주제 개방 묶음): `docs/agent_control/packets/stage18_catboost_topic_open_v1/open_report.md`
-- state sync audit(상태 동기화 감사): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_topic_state_sync_audit.json`
-
-## Next Candidate(다음 후보)
-
-- first run candidate(첫 실행 후보): `run12A_catboost_ordered_boosting_characteristic_scout_v1`
-
-효과(effect, 효과): Stage18(18단계)는 주제만 열렸고, 아직 reviewed run(검토된 실행)은 없다.
+효과(effect, 효과): Stage18(18단계) CatBoost(캣부스트) 후속 10개 주제 기록을 한 곳에서 찾을 수 있다.
+- compression aggregate packet(압축 종합 묶음): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_catboost_compression_mt5_kpi_packet.md`
+- `run12N_catboost_q85_intersection_compression_probe_v1`: `inconclusive_catboost_compression_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12N_catboost_q85_intersection_packet.md`
+- `run12O_catboost_long_hold6_q85_compression_probe_v1`: `inconclusive_catboost_compression_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12O_catboost_long_hold6_q85_packet.md`
+- `run12P_catboost_plain_same_condition_rematch_probe_v1`: `inconclusive_catboost_compression_mt5_runtime_probe_completed`, report(보고서): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/run12P_catboost_plain_same_condition_packet.md`
+- closeout packet(종료 묶음): `stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage18_closeout_packet.md`

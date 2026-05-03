@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-05-03T11:37:11Z",
+  "packet_id": "stage18_run12O_catboost_long_hold6_q85_mt5_v1",
+  "receipts": [
+    {
+      "question": "Does long-only plus hold6 plus q85 make the CatBoost long bias cleaner or just more concentrated?",
+      "skill": "obsidian-experiment-design",
+      "status": "completed"
+    },
+    {
+      "runtime_claim_boundary": "runtime_probe",
+      "skill": "obsidian-runtime-parity",
+      "status": "completed"
+    },
+    {
+      "backtest_judgment": "usable_with_boundary",
+      "skill": "obsidian-backtest-forensics",
+      "status": "completed"
+    },
+    {
+      "artifact_paths": [
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12O_catboost_long_hold6_q85_compression_probe_v1/run_manifest.json",
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12O_catboost_long_hold6_q85_compression_probe_v1/kpi_record.json"
+      ],
+      "skill": "obsidian-artifact-lineage",
+      "status": "completed"
+    },
+    {
+      "attribution_confidence": "diagnostic_runtime_probe",
+      "skill": "obsidian-performance-attribution",
+      "status": "completed"
+    },
+    {
+      "claim_boundary": "catboost_stage18_compression_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+      "judgment_label": "inconclusive_catboost_compression_mt5_runtime_probe_completed",
+      "skill": "obsidian-result-judgment",
+      "status": "completed"
+    }
+  ]
+}

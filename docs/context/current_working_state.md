@@ -1,4 +1,23 @@
-﻿## Latest Stage18 Topic Open(최신 18단계 주제 개방)
+﻿## Latest Stage18 Closeout and Stage19-25 Work Order(최신 18단계 종료와 19-25단계 작업서)
+
+Stage18(18단계)은 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) run12A-run12P(실행12A-실행12P)를 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 확인한 뒤 `closed_inconclusive_catboost_model_characteristics_exhausted`로 닫았다.
+
+효과(effect, 효과): long bias(매수 편향), q85 threshold(q85 임계값), hold6(6봉 보유), high confidence/high margin(높은 확신/높은 여백), low-vol or mid-session(저변동성 또는 중반 세션) 단서는 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+Stage19-25(19-25단계) 작업서(work order, 작업서)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신), GAM(`Generalized Additive Model`, 일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(`Hidden Markov Model`, 은닉 마르코프 모델), regime classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델)을 각각 독립 단계로 잡았다.
+
+효과(effect, 효과): Stage19(19단계)는 CatBoost(캣부스트) continuation(연속 단계)이 아니라 EBM(설명가능 부스팅 머신) 새 model-family question(모델군 질문)으로 시작한다.
+## Latest Stage18 RUN12D-RUN12M Update(최신 18단계 실행12D-실행12M 업데이트)
+
+Stage18(18단계) CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) 후속 10개 주제를 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 연결했다.
+
+효과(effect, 효과): `inconclusive_catboost_followup_batch_mt5_kpi_completed`로 기록했다. 이 판독은 runtime_probe(런타임 탐침)와 model characteristic read(모델 특성 판독)만 허용하며 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+## Latest Stage18 RUN12A-RUN12C Update(최신 18단계 실행12A-실행12C 업데이트)
+
+Stage18(18단계)는 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) ordered boosting(순서 부스팅) 모델 특성을 세 주제로 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 확인했다.
+
+효과(effect, 효과): `inconclusive_catboost_model_characteristic_mt5_kpi_completed`로 기록했다. run12A(실행12A)는 ordered probability shape(순서 부스팅 확률 모양), run12B(실행12B)는 q80 signal density(q80 신호 밀도), run12C(실행12C)는 direction balance(방향 균형)를 본다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+## Historical Stage18 Topic Open(이전 18단계 주제 개방)
 
 Stage18(18단계)는 `18_model_family_challenge__catboost_ordered_boosting_scout`로 열렸다. 주제는 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) ordered boosting(순서 부스팅)이다.
 
@@ -28,9 +47,9 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 
 - updated_on: `2026-05-03`
 - project_mode: `clean_stage_restart`
-- active_stage: `18_model_family_challenge__catboost_ordered_boosting_scout(18단계 캣부스트 순서 부스팅 탐색)`
+- active_stage: `19_model_family_challenge__ebm_explainable_boosting_shape(19단계 설명가능 부스팅 머신 형태 탐색)`
 - active_branch: `codex/stage18(Stage18 브랜치)`
-- current run(현재 실행): 없음
+- current run(현재 실행): `none(없음; Stage19 계획 상태)`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
@@ -124,11 +143,11 @@ Stage 09(9단계)는 pre-alpha handoff packet(알파 전 인계 묶음)을 닫�
 
 ## 현재 단계(Current Stage, 현재 단계)
 
-`18_model_family_challenge__catboost_ordered_boosting_scout`
+`19_model_family_challenge__ebm_explainable_boosting_shape`
 
-Stage18(18단계)의 질문(question, 질문)은 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) ordered boosting(순서 부스팅)과 symmetric tree(대칭 트리)가 이전 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅)와 다른 probability shape(확률 모양), signal density(신호 밀도), direction balance(방향 균형)를 만들 수 있는지다.
+Stage19(19단계)의 질문(question, 질문)은 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신)이 feature shape(피처 모양)를 설명 가능한 additive boosting(가산 부스팅) 구조로 보여주고, Stage18(18단계) CatBoost(캣부스트) 단서를 상속하지 않고 새 모델 특성을 만들 수 있는지다.
 
-효과(effect, 효과): Stage18(18단계)는 주제만 열렸고 아직 실행(run, 실행)은 없다. 첫 후보는 `run12A_catboost_ordered_boosting_characteristic_scout_v1`이며, CatBoost-specific axis(캣부스트 고유 축)가 보이지 않으면 Stage18(18단계)을 조기에 닫는다.
+효과(effect, 효과): Stage19(19단계)는 planned(계획) 상태이며, 첫 실행(run, 실행)은 아직 만들지 않았다. 작업서(work order, 작업서)는 `docs/workspace/stage19_25_model_research_work_order.md`에 둔다.
 
 ## 탐색 원칙(Exploration Rule, 탐색 원칙)
 

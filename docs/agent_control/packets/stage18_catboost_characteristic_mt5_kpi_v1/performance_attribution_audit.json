@@ -1,0 +1,28 @@
+{
+  "aggregate_read": {
+    "claim_boundary": "runtime_probe_and_model_characteristic_read_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "judgment": "inconclusive_catboost_model_characteristic_mt5_kpi_completed",
+    "recommendation": "keep_stage18_open_for_catboost_attribution_or_regime_probe",
+    "risk_warning_runs": [
+      "run12A",
+      "run12B"
+    ],
+    "run12B_oos_trade_density_ratio_vs_run12A": 2.242424242424242,
+    "run12C_direction_read": {
+      "long_avg_profit_factor": 1.0899999999999999,
+      "long_avg_routed_trades": 205.5,
+      "new_characteristic_visible": true,
+      "profit_factor_contrast": 0.07999999999999985,
+      "short_avg_profit_factor": 1.01,
+      "short_avg_routed_trades": 43.0,
+      "trade_count_contrast": 0.6539235412474849
+    },
+    "visible_topic_count": 3
+  },
+  "attribution_confidence": "diagnostic_runtime_probe",
+  "audit_name": "performance_attribution_audit",
+  "comparison_baseline": "Stage17 XGBoost preserved clues only; no baseline inheritance.",
+  "observed_change": "CatBoost topic probes produced model-characteristic and MT5 KPI reads across q90, q80 density, and direction split.",
+  "passed": true,
+  "status": "pass"
+}

@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-05-03T09:57:23Z",
+  "packet_id": "stage18_run12B_catboost_signal_density_mt5_v1",
+  "receipts": [
+    {
+      "decision_use": "choose whether Stage18 continues, narrows, or closes.",
+      "hypothesis": "CatBoost ordered boosting exposes a distinct model-characteristic axis.",
+      "skill": "obsidian-experiment-design",
+      "status": "completed"
+    },
+    {
+      "research_path": "stage_pipelines/stage18/catboost_mt5_characteristic_probe.py",
+      "runtime_claim_boundary": "runtime_probe",
+      "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "skill": "obsidian-runtime-parity",
+      "status": "completed"
+    },
+    {
+      "backtest_judgment": "usable_with_boundary",
+      "skill": "obsidian-backtest-forensics",
+      "status": "completed",
+      "tester_identity": "US100 M5, tester model=4, deposit=500, leverage=1:100"
+    },
+    {
+      "artifact_paths": [
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12B_catboost_q80_signal_density_probe_v1/run_manifest.json",
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12B_catboost_q80_signal_density_probe_v1/kpi_record.json"
+      ],
+      "lineage_judgment": "connected_with_boundary",
+      "skill": "obsidian-artifact-lineage",
+      "status": "completed"
+    },
+    {
+      "attribution_confidence": "diagnostic_runtime_probe",
+      "skill": "obsidian-performance-attribution",
+      "status": "completed"
+    },
+    {
+      "claim_boundary": "catboost_q80_signal_density_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+      "judgment_label": "inconclusive_catboost_q80_signal_density_mt5_runtime_probe_completed",
+      "skill": "obsidian-result-judgment",
+      "status": "completed"
+    }
+  ]
+}

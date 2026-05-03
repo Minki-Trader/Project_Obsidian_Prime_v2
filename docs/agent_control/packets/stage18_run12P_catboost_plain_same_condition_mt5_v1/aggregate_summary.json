@@ -1,0 +1,619 @@
+{
+  "attempt_count": 2,
+  "boundary": "catboost_stage18_compression_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_catboost_compression_mt5_runtime_probe_completed",
+  "expected_attempts": 2,
+  "expected_kpi_records": 6,
+  "external_verification_status": "completed",
+  "feature_matrix_count": 4,
+  "judgment": "inconclusive_catboost_compression_mt5_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 6,
+    "normalized_summary_rows": 6,
+    "parser_errors": 0,
+    "trade_attribution_records": 2,
+    "trade_level_rows": 16,
+    "trade_parser_errors": 0
+  },
+  "ledger_outputs": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 2705,
+      "sha256": "b8bde0db3c4f264fcac55a99ba490b4b6be2a73a0065d046bb764530e2348b27",
+      "upserted_rows": 9
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 238,
+      "sha256": "2343fb0cd1d7f534519c5b1555fa41a594ec385c57e619f9f02759c20856a620",
+      "upserted_rows": 9
+    }
+  },
+  "model_artifacts": {
+    "onnx_parity": {
+      "tier_a": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 6.976207073128293e-08,
+        "mean_abs_diff": 1.3923569976235367e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      },
+      "tier_b": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 6.35854429109628e-08,
+        "mean_abs_diff": 1.4253236543066913e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      }
+    },
+    "segment_thresholds": [
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "validation_is",
+        "segment_filter": "nonflat>=q85 and margin>=pass_q70 and (historical_vol_20<split_median 0.2431848198 or 110<=minutes_from_cash_open<220)",
+        "segment_id": "q85_high_margin_low_vol_mid",
+        "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+        "source_split": "validation",
+        "threshold_quantile": 0.85,
+        "tier_a_matrix_key": "q85_high_margin_low_vol_mid_tier_a_validation_is",
+        "tier_a_rows": 115,
+        "tier_a_threshold": 0.42660479823686387,
+        "tier_b_matrix_key": "q85_high_margin_low_vol_mid_tier_b_validation_is",
+        "tier_b_rows": 44,
+        "tier_b_threshold": 0.35137804570792686
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "oos",
+        "segment_filter": "nonflat>=q85 and margin>=pass_q70 and (historical_vol_20<split_median 0.2514108717 or 110<=minutes_from_cash_open<220)",
+        "segment_id": "q85_high_margin_low_vol_mid",
+        "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+        "source_split": "oos",
+        "threshold_quantile": 0.85,
+        "tier_a_matrix_key": "q85_high_margin_low_vol_mid_tier_a_oos",
+        "tier_a_rows": 96,
+        "tier_a_threshold": 0.42092353789528447,
+        "tier_b_matrix_key": "q85_high_margin_low_vol_mid_tier_b_oos",
+        "tier_b_rows": 24,
+        "tier_b_threshold": 0.3837473535211051
+      }
+    ],
+    "selected_variant_id": "v05_plain_depth3_control",
+    "thresholds": {
+      "default_quantile": 0.85,
+      "tier_a": 0.42660479823686387,
+      "tier_b": 0.4196376909208768
+    },
+    "tier_a_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/models/v05_plain_depth3_control_tier_a_catboost.joblib",
+      "sha256": "81c3163500b304c9184efe168c9ed65d78f3c1ad5190161b087e6d22df73e9c2"
+    },
+    "tier_a_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/models/v05_plain_depth3_control_tier_a_catboost_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/models/v05_plain_depth3_control_tier_a_catboost_opset13.raw.onnx",
+      "raw_sha256": "5129b0cc63e975ad3bd8000e2b26442b2f4360060dae51d9747e26a127d02ba3",
+      "sha256": "6005cabb611ce8e35f0c638e45c4eecd552a1c00146f7630b122bc01bf03a9d7",
+      "target_opset": 13,
+      "zipmap_removed": true
+    },
+    "tier_b_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/models/v05_plain_depth3_control_tier_b_catboost_core42.joblib",
+      "sha256": "776910ff5d34adcfc21cb4ef5d5a7f1eff167ce2e0dcf755aaf8c949962b4fc2"
+    },
+    "tier_b_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/models/v05_plain_depth3_control_tier_b_catboost_core42_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/models/v05_plain_depth3_control_tier_b_catboost_core42_opset13.raw.onnx",
+      "raw_sha256": "afec1493389ad5f4d7001bd89abb969715d4cdbff48a7db46704951b259ef4d6",
+      "sha256": "4457b3c3d22c5b20ee4056f0eddcc6d8a2698a6fbc1af826cefc2feb060f6cc0",
+      "target_opset": 13,
+      "zipmap_removed": true
+    }
+  },
+  "model_characteristic_strength": "plain_control_same_condition_rematch_visible",
+  "model_family": "catboost_catboostclassifier_multiclass_ordered_boosting",
+  "mt5_kpi_record_count": 6,
+  "packet_id": "stage18_run12P_catboost_plain_same_condition_mt5_v1",
+  "prediction_artifacts": {
+    "tier_a": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "4a59e06f96159af6f4bf9808a9540ac42fc07eb0142458d747f8c065b8ec73f8"
+    },
+    "tier_ab": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "c7c8734db09d569768730abb58741e3efc349d1a41a695af788350cf89f8aa80"
+    },
+    "tier_b": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "bbccd75bbc970cc773948d3b281026662116999662c808cc7a67bb67112a090b"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 4138,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 450,
+        "signal_count": 4588,
+        "signal_coverage": 0.09834941050375134,
+        "threshold_ids": "q0.85"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.45688291139240506,
+          "balanced_accuracy": 0.443954889867934,
+          "directional_correct_count": 431,
+          "directional_hit_rate": 0.47310647639956094,
+          "log_loss": 1.0445690640969374,
+          "long_count": 801,
+          "macro_f1": 0.4052506607417554,
+          "mean_probability": {
+            "flat": 0.32756515246219664,
+            "long": 0.3654606879706454,
+            "short": 0.306974159567158
+          },
+          "mean_probability_margin": 0.08787991914858596,
+          "rows": 7584,
+          "short_count": 110,
+          "signal_count": 911,
+          "signal_coverage": 0.12012130801687763
+        },
+        "train": {
+          "accuracy": 0.43638354664294027,
+          "balanced_accuracy": 0.42632469317542565,
+          "directional_correct_count": 1262,
+          "directional_hit_rate": 0.5736363636363636,
+          "log_loss": 1.061149408971522,
+          "long_count": 1955,
+          "macro_f1": 0.40925164083461146,
+          "mean_probability": {
+            "flat": 0.330142424670715,
+            "long": 0.3592316071718916,
+            "short": 0.31062596815739346
+          },
+          "mean_probability_margin": 0.06967888678637055,
+          "rows": 29222,
+          "short_count": 245,
+          "signal_count": 2200,
+          "signal_coverage": 0.07528574361782218
+        },
+        "validation": {
+          "accuracy": 0.4621088988216172,
+          "balanced_accuracy": 0.44376867309904283,
+          "directional_correct_count": 630,
+          "directional_hit_rate": 0.4265402843601896,
+          "log_loss": 1.0465121304546856,
+          "long_count": 1382,
+          "macro_f1": 0.4071176324143999,
+          "mean_probability": {
+            "flat": 0.331245854180609,
+            "long": 0.3629116019931453,
+            "short": 0.3058425438262457
+          },
+          "mean_probability_margin": 0.09012239953645863,
+          "rows": 9844,
+          "short_count": 95,
+          "signal_count": 1477,
+          "signal_coverage": 0.15004063388866315
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 221,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 70,
+        "signal_count": 291,
+        "signal_coverage": 0.023471527665752542,
+        "threshold_ids": "q0.85"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5254237288135594,
+          "balanced_accuracy": 0.3993513176158678,
+          "directional_correct_count": 18,
+          "directional_hit_rate": 0.42857142857142855,
+          "log_loss": 1.0012968196460348,
+          "long_count": 36,
+          "macro_f1": 0.38348858707245964,
+          "mean_probability": {
+            "flat": 0.41686874575662225,
+            "long": 0.31620255756269916,
+            "short": 0.2669286966806787
+          },
+          "mean_probability_margin": 0.14392693568322504,
+          "rows": 1062,
+          "short_count": 6,
+          "signal_count": 42,
+          "signal_coverage": 0.03954802259887006
+        },
+        "train": {
+          "accuracy": 0.46878483835005574,
+          "balanced_accuracy": 0.3942939279857354,
+          "directional_correct_count": 106,
+          "directional_hit_rate": 0.5221674876847291,
+          "log_loss": 1.033395131842613,
+          "long_count": 140,
+          "macro_f1": 0.36046806065919706,
+          "mean_probability": {
+            "flat": 0.4226741498647735,
+            "long": 0.3153974874888827,
+            "short": 0.2619283626463438
+          },
+          "mean_probability_margin": 0.13736642078914257,
+          "rows": 8970,
+          "short_count": 63,
+          "signal_count": 203,
+          "signal_coverage": 0.022630992196209586
+        },
+        "validation": {
+          "accuracy": 0.6005917159763313,
+          "balanced_accuracy": 0.3759827743321483,
+          "directional_correct_count": 22,
+          "directional_hit_rate": 0.4782608695652174,
+          "log_loss": 0.9458957006876535,
+          "long_count": 45,
+          "macro_f1": 0.35078454315006286,
+          "mean_probability": {
+            "flat": 0.46625621504725306,
+            "long": 0.2949706829178834,
+            "short": 0.2387731020348635
+          },
+          "mean_probability_margin": 0.19058922970529643,
+          "rows": 2366,
+          "short_count": 1,
+          "signal_count": 46,
+          "signal_coverage": 0.01944209636517329
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 4301,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 495,
+        "signal_count": 4796,
+        "signal_coverage": 0.08122205663189269,
+        "threshold_ids": "q0.85"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.46530187369882026,
+          "balanced_accuracy": 0.44610998944116914,
+          "directional_correct_count": 444,
+          "directional_hit_rate": 0.4708377518557794,
+          "log_loss": 1.03925387515328,
+          "long_count": 830,
+          "macro_f1": 0.4093068669688423,
+          "mean_probability": {
+            "flat": 0.3385344349140449,
+            "long": 0.35941024447154307,
+            "short": 0.3020553206144121
+          },
+          "mean_probability_margin": 0.09476425081175816,
+          "rows": 8646,
+          "short_count": 113,
+          "signal_count": 943,
+          "signal_coverage": 0.1090677770067083
+        },
+        "train": {
+          "accuracy": 0.4439935064935065,
+          "balanced_accuracy": 0.4299470109573947,
+          "directional_correct_count": 1332,
+          "directional_hit_rate": 0.569474134245404,
+          "log_loss": 1.054630874570435,
+          "long_count": 2053,
+          "macro_f1": 0.4105518530994579,
+          "mean_probability": {
+            "flat": 0.35187497533553236,
+            "long": 0.34893646542606555,
+            "short": 0.2991885592384021
+          },
+          "mean_probability_margin": 0.08557638312080877,
+          "rows": 38192,
+          "short_count": 286,
+          "signal_count": 2339,
+          "signal_coverage": 0.06124319229157939
+        },
+        "validation": {
+          "accuracy": 0.48894348894348894,
+          "balanced_accuracy": 0.4525802761841522,
+          "directional_correct_count": 648,
+          "directional_hit_rate": 0.42800528401585203,
+          "log_loss": 1.0270151220329988,
+          "long_count": 1418,
+          "macro_f1": 0.41666637751001395,
+          "mean_probability": {
+            "flat": 0.3574075670234002,
+            "long": 0.3497463100576769,
+            "short": 0.292846122918923
+          },
+          "mean_probability_margin": 0.10959041920717691,
+          "rows": 12210,
+          "short_count": 96,
+          "signal_count": 1514,
+          "signal_coverage": 0.123996723996724
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "question": "Does Plain boosting preserve the same compressed q85 high-margin low-volatility or mid-session behavior seen in Ordered boosting?",
+  "registry_output": {
+    "hash_policy": "lf_normalized_text_register",
+    "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+    "rows": 241,
+    "sha256": "4691ce8169ca5aeb224adbfe8714b4d184c0890adf73997bfa2ed42c21d1a8db",
+    "upserted_rows": 1
+  },
+  "run_id": "run12P_catboost_plain_same_condition_rematch_probe_v1",
+  "run_number": "run12P",
+  "runtime_read": {
+    "actual_trading_record_count": 2,
+    "best_oos_record": {
+      "max_drawdown_amount": 329.46,
+      "max_drawdown_percent": 50.94,
+      "max_hold_bars": 12,
+      "net_profit": 31.93,
+      "profit_factor": 1.13,
+      "record_view": "mt5_routed_q85_high_margin_low_vol_mid_oos",
+      "recovery_factor": 0.1,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12P_catboost_plain_same_condition_rematch_probe_v1_routed_q85_high_margin_low_vol_mid_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q85_high_margin_low_vol_mid",
+      "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+      "split": "oos",
+      "threshold_quantile": 0.85,
+      "tier_a_primary_labelable_rows": 96,
+      "tier_a_used_count": 96,
+      "tier_b_fallback_labelable_rows": 24,
+      "tier_b_fallback_used_count": 24,
+      "tier_scope": "Tier A+B",
+      "trade_count": 10
+    },
+    "component_record_count": 4,
+    "diagnostic_note": "Segmented MT5 records are diagnostic runtime probes only, not synthetic combined performance.",
+    "max_trade_count": 10.0,
+    "new_characteristic_visible": true,
+    "oos_net_profit_range": 0.0,
+    "risk_warning": true,
+    "worst_oos_record": {
+      "max_drawdown_amount": 329.46,
+      "max_drawdown_percent": 50.94,
+      "max_hold_bars": 12,
+      "net_profit": 31.93,
+      "profit_factor": 1.13,
+      "record_view": "mt5_routed_q85_high_margin_low_vol_mid_oos",
+      "recovery_factor": 0.1,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12P_catboost_plain_same_condition_rematch_probe_v1_routed_q85_high_margin_low_vol_mid_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q85_high_margin_low_vol_mid",
+      "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+      "split": "oos",
+      "threshold_quantile": 0.85,
+      "tier_a_primary_labelable_rows": 96,
+      "tier_a_used_count": 96,
+      "tier_b_fallback_labelable_rows": 24,
+      "tier_b_fallback_used_count": 24,
+      "tier_scope": "Tier A+B",
+      "trade_count": 10
+    }
+  },
+  "segment_plan": [
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "validation_is",
+      "segment_filter": "nonflat>=q85 and margin>=pass_q70 and (historical_vol_20<split_median 0.2431848198 or 110<=minutes_from_cash_open<220)",
+      "segment_id": "q85_high_margin_low_vol_mid",
+      "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+      "source_split": "validation",
+      "threshold_quantile": 0.85,
+      "tier_a_matrix_key": "q85_high_margin_low_vol_mid_tier_a_validation_is",
+      "tier_a_rows": 115,
+      "tier_a_threshold": 0.42660479823686387,
+      "tier_b_matrix_key": "q85_high_margin_low_vol_mid_tier_b_validation_is",
+      "tier_b_rows": 44,
+      "tier_b_threshold": 0.35137804570792686
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "oos",
+      "segment_filter": "nonflat>=q85 and margin>=pass_q70 and (historical_vol_20<split_median 0.2514108717 or 110<=minutes_from_cash_open<220)",
+      "segment_id": "q85_high_margin_low_vol_mid",
+      "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+      "source_split": "oos",
+      "threshold_quantile": 0.85,
+      "tier_a_matrix_key": "q85_high_margin_low_vol_mid_tier_a_oos",
+      "tier_a_rows": 96,
+      "tier_a_threshold": 0.42092353789528447,
+      "tier_b_matrix_key": "q85_high_margin_low_vol_mid_tier_b_oos",
+      "tier_b_rows": 24,
+      "tier_b_threshold": 0.3837473535211051
+    }
+  ],
+  "segment_records": [
+    {
+      "max_drawdown_amount": 593.58,
+      "max_drawdown_percent": 104.42,
+      "max_hold_bars": 12,
+      "net_profit": -525.13,
+      "profit_factor": 0.05,
+      "record_view": "mt5_routed_q85_high_margin_low_vol_mid_validation_is",
+      "recovery_factor": -0.88,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12P_catboost_plain_same_condition_rematch_probe_v1_routed_q85_high_margin_low_vol_mid_validation_is.htm",
+      "route_role": "routed_total",
+      "segment_id": "q85_high_margin_low_vol_mid",
+      "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+      "split": "validation_is",
+      "threshold_quantile": 0.85,
+      "tier_a_primary_labelable_rows": 115,
+      "tier_a_used_count": 42,
+      "tier_b_fallback_labelable_rows": 44,
+      "tier_b_fallback_used_count": 20,
+      "tier_scope": "Tier A+B",
+      "trade_count": 6
+    },
+    {
+      "max_drawdown_amount": 329.46,
+      "max_drawdown_percent": 50.94,
+      "max_hold_bars": 12,
+      "net_profit": 31.93,
+      "profit_factor": 1.13,
+      "record_view": "mt5_routed_q85_high_margin_low_vol_mid_oos",
+      "recovery_factor": 0.1,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12P_catboost_plain_same_condition_rematch_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12P_catboost_plain_same_condition_rematch_probe_v1_routed_q85_high_margin_low_vol_mid_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "q85_high_margin_low_vol_mid",
+      "segment_label": "q85 high margin low-vol or mid-session(q85 높은 여백 저변동성 또는 중반 세션)",
+      "split": "oos",
+      "threshold_quantile": 0.85,
+      "tier_a_primary_labelable_rows": 96,
+      "tier_a_used_count": 96,
+      "tier_b_fallback_labelable_rows": 24,
+      "tier_b_fallback_used_count": 24,
+      "tier_scope": "Tier A+B",
+      "trade_count": 10
+    }
+  ],
+  "selected_variant": {
+    "description": "Plain boosting control with symmetric trees under the same feature contract.",
+    "idea_id": "plain_boosting_control",
+    "spec": {
+      "bagging_temperature": 1.0,
+      "boosting_type": "Plain",
+      "bootstrap_type": "Bayesian",
+      "depth": 3,
+      "description": "Plain boosting control with symmetric trees under the same feature contract.",
+      "grow_policy": "SymmetricTree",
+      "idea_id": "plain_boosting_control",
+      "iterations": 95,
+      "l2_leaf_reg": 7.0,
+      "learning_rate": 0.04,
+      "random_seed": 1816,
+      "random_strength": 0.6,
+      "sample_weight_policy": "none",
+      "subsample": null,
+      "variant_id": "v05_plain_depth3_control"
+    },
+    "variant_id": "v05_plain_depth3_control"
+  },
+  "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+  "topic_read": "plain_control_same_condition_rematch"
+}

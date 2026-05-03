@@ -1,0 +1,839 @@
+{
+  "attempt_count": 6,
+  "boundary": "catboost_stage18_followup_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_catboost_followup_mt5_runtime_probe_completed",
+  "expected_attempts": 6,
+  "expected_kpi_records": 18,
+  "external_verification_status": "completed",
+  "feature_matrix_count": 12,
+  "judgment": "inconclusive_catboost_followup_mt5_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 18,
+    "normalized_summary_rows": 18,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 620,
+    "trade_parser_errors": 0
+  },
+  "ledger_outputs": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 2576,
+      "sha256": "2c018f838e4857bb0922fcbe17532ad26d9c45977ea2bdb90f340fbf18705806",
+      "upserted_rows": 21
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 109,
+      "sha256": "cfd1a5bc323a0ab036218a46bcbbaf8480b644fc4909a3e0a0164dea45da2ca0",
+      "upserted_rows": 21
+    }
+  },
+  "model_artifacts": {
+    "onnx_parity": {
+      "tier_a": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 4.8804012608982816e-08,
+        "mean_abs_diff": 1.321247719724671e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      },
+      "tier_b": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "features",
+        "max_abs_diff": 7.312838534723198e-08,
+        "mean_abs_diff": 1.3922087426475327e-08,
+        "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+        "output_names": [
+          "probability_tensor"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 1e-05
+      }
+    },
+    "segment_thresholds": [
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "validation_is",
+        "segment_filter": "0 <= minutes_from_cash_open < 110",
+        "segment_id": "session_early",
+        "segment_label": "early cash session(초반 정규장)",
+        "source_split": "validation",
+        "threshold_quantile": 0.8,
+        "tier_a_matrix_key": "session_early_tier_a_validation_is",
+        "tier_a_rows": 3345,
+        "tier_a_threshold": 0.4169454508943393,
+        "tier_b_matrix_key": "session_early_tier_b_validation_is",
+        "tier_b_rows": 540,
+        "tier_b_threshold": 0.33774143202405504
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "validation_is",
+        "segment_filter": "110 <= minutes_from_cash_open < 220",
+        "segment_id": "session_mid",
+        "segment_label": "mid cash session(중반 정규장)",
+        "source_split": "validation",
+        "threshold_quantile": 0.8,
+        "tier_a_matrix_key": "session_mid_tier_a_validation_is",
+        "tier_a_rows": 3274,
+        "tier_a_threshold": 0.4169454508943393,
+        "tier_b_matrix_key": "session_mid_tier_b_validation_is",
+        "tier_b_rows": 796,
+        "tier_b_threshold": 0.33774143202405504
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "validation_is",
+        "segment_filter": "220 <= minutes_from_cash_open < 390",
+        "segment_id": "session_late",
+        "segment_label": "late cash session(후반 정규장)",
+        "source_split": "validation",
+        "threshold_quantile": 0.8,
+        "tier_a_matrix_key": "session_late_tier_a_validation_is",
+        "tier_a_rows": 3225,
+        "tier_a_threshold": 0.4169454508943393,
+        "tier_b_matrix_key": "session_late_tier_b_validation_is",
+        "tier_b_rows": 1030,
+        "tier_b_threshold": 0.33774143202405504
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "oos",
+        "segment_filter": "0 <= minutes_from_cash_open < 110",
+        "segment_id": "session_early",
+        "segment_label": "early cash session(초반 정규장)",
+        "source_split": "oos",
+        "threshold_quantile": 0.8,
+        "tier_a_matrix_key": "session_early_tier_a_oos",
+        "tier_a_rows": 2447,
+        "tier_a_threshold": 0.41412499131698965,
+        "tier_b_matrix_key": "session_early_tier_b_oos",
+        "tier_b_rows": 304,
+        "tier_b_threshold": 0.3762532576805156
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "oos",
+        "segment_filter": "110 <= minutes_from_cash_open < 220",
+        "segment_id": "session_mid",
+        "segment_label": "mid cash session(중반 정규장)",
+        "source_split": "oos",
+        "threshold_quantile": 0.8,
+        "tier_a_matrix_key": "session_mid_tier_a_oos",
+        "tier_a_rows": 2633,
+        "tier_a_threshold": 0.41412499131698965,
+        "tier_b_matrix_key": "session_mid_tier_b_oos",
+        "tier_b_rows": 249,
+        "tier_b_threshold": 0.3762532576805156
+      },
+      {
+        "direction": "both",
+        "max_hold_bars": 12,
+        "mode": "routed",
+        "runtime_split": "oos",
+        "segment_filter": "220 <= minutes_from_cash_open < 390",
+        "segment_id": "session_late",
+        "segment_label": "late cash session(후반 정규장)",
+        "source_split": "oos",
+        "threshold_quantile": 0.8,
+        "tier_a_matrix_key": "session_late_tier_a_oos",
+        "tier_a_rows": 2504,
+        "tier_a_threshold": 0.41412499131698965,
+        "tier_b_matrix_key": "session_late_tier_b_oos",
+        "tier_b_rows": 509,
+        "tier_b_threshold": 0.3762532576805156
+      }
+    ],
+    "selected_variant_id": "v02_ordered_depth4_strong_l2",
+    "thresholds": {
+      "default_quantile": 0.8,
+      "tier_a": 0.4169454508943393,
+      "tier_b": 0.41077910594164996
+    },
+    "tier_a_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost.joblib",
+      "sha256": "295a440fd57431b6317305b0165bd16f7af27e60c40ba12f583411dae176e521"
+    },
+    "tier_a_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.raw.onnx",
+      "raw_sha256": "65cb2ad01b42b45de8bb6f6a055c2828cc2510dce4aa0c64bf014e30c138f566",
+      "sha256": "cacb7cb9648001cc67f86be65fd648dc17965fa51fecde8f20e4732163883d64",
+      "target_opset": 13,
+      "zipmap_removed": true
+    },
+    "tier_b_joblib": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42.joblib",
+      "sha256": "7d9142b1541269b5ac6672480f2d5ed4a99e549975c45fff725e6103f26d101c"
+    },
+    "tier_b_onnx": {
+      "input_name": "features",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probability_tensor",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            "N"
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [],
+          "value_type": "sequence_type"
+        }
+      ],
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.onnx",
+      "probability_output_name": "probability_tensor",
+      "raw_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.raw.onnx",
+      "raw_sha256": "d60bf6e56c71c0d380b16f64de27ba36d0ff6d03f4dedb81f3551f5e1ec937be",
+      "sha256": "68528618c0a7241450812694cacf23725fc42333d639892faed8d9016e747b47",
+      "target_opset": 13,
+      "zipmap_removed": true
+    }
+  },
+  "model_characteristic_strength": "cash_session_timing_split_visible",
+  "model_family": "catboost_catboostclassifier_multiclass_ordered_boosting",
+  "mt5_kpi_record_count": 18,
+  "packet_id": "stage18_run12E_catboost_session_timing_mt5_v1",
+  "prediction_artifacts": {
+    "tier_a": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "5772d04742527c93542ee3b479fff6420b40ee7e801397766d4a986dd6002eb0"
+    },
+    "tier_ab": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "825e7f2976888428ecc53bfec483fec649ef1a674f436373b077989b038db389"
+    },
+    "tier_b": {
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "3876307b7646a7b47d875f11d5207ccf1489bc0e65d2ee7318a4088d02fb5a9d"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 5673,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 942,
+        "signal_count": 6615,
+        "signal_coverage": 0.14180064308681672,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.45450949367088606,
+          "balanced_accuracy": 0.44186473419657557,
+          "directional_correct_count": 594,
+          "directional_hit_rate": 0.43074691805656273,
+          "log_loss": 1.0451035049997022,
+          "long_count": 1221,
+          "macro_f1": 0.4118118645033184,
+          "mean_probability": {
+            "flat": 0.32616466707190683,
+            "long": 0.3651174983095494,
+            "short": 0.3087178346185438
+          },
+          "mean_probability_margin": 0.08994813597246956,
+          "rows": 7584,
+          "short_count": 158,
+          "signal_count": 1379,
+          "signal_coverage": 0.18183016877637131
+        },
+        "train": {
+          "accuracy": 0.4400109506536171,
+          "balanced_accuracy": 0.43060327422343336,
+          "directional_correct_count": 1846,
+          "directional_hit_rate": 0.5650443832262014,
+          "log_loss": 1.058951152250453,
+          "long_count": 2635,
+          "macro_f1": 0.41654256864688705,
+          "mean_probability": {
+            "flat": 0.33032493884394537,
+            "long": 0.3587500042744996,
+            "short": 0.31092505688155503
+          },
+          "mean_probability_margin": 0.07017585204005483,
+          "rows": 29222,
+          "short_count": 632,
+          "signal_count": 3267,
+          "signal_coverage": 0.11179932927246596
+        },
+        "validation": {
+          "accuracy": 0.4595692807801707,
+          "balanced_accuracy": 0.4418098124320764,
+          "directional_correct_count": 848,
+          "directional_hit_rate": 0.43067546978161503,
+          "log_loss": 1.046439265279888,
+          "long_count": 1817,
+          "macro_f1": 0.4079367776967782,
+          "mean_probability": {
+            "flat": 0.33004152858356584,
+            "long": 0.3635062140688559,
+            "short": 0.30645225734757825
+          },
+          "mean_probability_margin": 0.09152125168661984,
+          "rows": 9844,
+          "short_count": 152,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 343,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 122,
+        "signal_count": 465,
+        "signal_coverage": 0.03750604936280045,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5282485875706214,
+          "balanced_accuracy": 0.40372130206553347,
+          "directional_correct_count": 20,
+          "directional_hit_rate": 0.35714285714285715,
+          "log_loss": 1.0018295289633343,
+          "long_count": 47,
+          "macro_f1": 0.3871675565972867,
+          "mean_probability": {
+            "flat": 0.41518767771897597,
+            "long": 0.3157248544653202,
+            "short": 0.26908746781570375
+          },
+          "mean_probability_margin": 0.14344451485293036,
+          "rows": 1062,
+          "short_count": 9,
+          "signal_count": 56,
+          "signal_coverage": 0.05273069679849341
+        },
+        "train": {
+          "accuracy": 0.47324414715719065,
+          "balanced_accuracy": 0.399760428603851,
+          "directional_correct_count": 169,
+          "directional_hit_rate": 0.5075075075075075,
+          "log_loss": 1.0325876519668438,
+          "long_count": 223,
+          "macro_f1": 0.3678390753314671,
+          "mean_probability": {
+            "flat": 0.42320986621755646,
+            "long": 0.3144539030233201,
+            "short": 0.26233623075912343
+          },
+          "mean_probability_margin": 0.13911471470348252,
+          "rows": 8970,
+          "short_count": 110,
+          "signal_count": 333,
+          "signal_coverage": 0.037123745819397994
+        },
+        "validation": {
+          "accuracy": 0.6039729501267963,
+          "balanced_accuracy": 0.38175813446867396,
+          "directional_correct_count": 28,
+          "directional_hit_rate": 0.3684210526315789,
+          "log_loss": 0.9444837422619384,
+          "long_count": 73,
+          "macro_f1": 0.35864738029712306,
+          "mean_probability": {
+            "flat": 0.46676367732297874,
+            "long": 0.29281134698379774,
+            "short": 0.24042497569322363
+          },
+          "mean_probability_margin": 0.19396840133496884,
+          "rows": 2366,
+          "short_count": 3,
+          "signal_count": 76,
+          "signal_coverage": 0.032121724429416736
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 5937,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 1034,
+        "signal_count": 6971,
+        "signal_coverage": 0.11805649640970058,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4635669673837613,
+          "balanced_accuracy": 0.4445290449329187,
+          "directional_correct_count": 611,
+          "directional_hit_rate": 0.42907303370786515,
+          "log_loss": 1.0397881033630352,
+          "long_count": 1260,
+          "macro_f1": 0.4152178289169706,
+          "mean_probability": {
+            "flat": 0.337099485173594,
+            "long": 0.35905053234117423,
+            "short": 0.3038499824852317
+          },
+          "mean_probability_margin": 0.09651916932558653,
+          "rows": 8646,
+          "short_count": 164,
+          "signal_count": 1424,
+          "signal_coverage": 0.1647004395095998
+        },
+        "train": {
+          "accuracy": 0.4478162966066192,
+          "balanced_accuracy": 0.43436705814395554,
+          "directional_correct_count": 1981,
+          "directional_hit_rate": 0.5632641455786181,
+          "log_loss": 1.0527592639611785,
+          "long_count": 2802,
+          "macro_f1": 0.4176255199860374,
+          "mean_probability": {
+            "flat": 0.3521404446708539,
+            "long": 0.34834635879316633,
+            "short": 0.29951319653597974
+          },
+          "mean_probability_margin": 0.08636724285726645,
+          "rows": 38192,
+          "short_count": 715,
+          "signal_count": 3517,
+          "signal_coverage": 0.09208734813573523
+        },
+        "validation": {
+          "accuracy": 0.48755118755118754,
+          "balanced_accuracy": 0.45193670518352097,
+          "directional_correct_count": 873,
+          "directional_hit_rate": 0.43004926108374386,
+          "log_loss": 1.0266827732683836,
+          "long_count": 1875,
+          "macro_f1": 0.4185586855279504,
+          "mean_probability": {
+            "flat": 0.35653494413782055,
+            "long": 0.349807274222562,
+            "short": 0.2936577816396173
+          },
+          "mean_probability_margin": 0.11137300894034576,
+          "rows": 12210,
+          "short_count": 155,
+          "signal_count": 2030,
+          "signal_coverage": 0.16625716625716624
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "question": "Does the model concentrate its runtime behavior in early, mid, or late cash-session minutes?",
+  "registry_output": {
+    "hash_policy": "lf_normalized_text_register",
+    "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+    "rows": 238,
+    "sha256": "a65c9bf7cb4a5acc11720bdf5992d7428a7d9e72cfd84cc2b7df37d3d7a6fcc1",
+    "upserted_rows": 1
+  },
+  "run_id": "run12E_catboost_session_timing_probe_v1",
+  "run_number": "run12E",
+  "runtime_read": {
+    "actual_trading_record_count": 6,
+    "best_oos_record": {
+      "max_drawdown_amount": 139.1,
+      "max_drawdown_percent": 18.57,
+      "max_hold_bars": 12,
+      "net_profit": 279.66,
+      "profit_factor": 1.53,
+      "record_view": "mt5_routed_session_mid_oos",
+      "recovery_factor": 2.01,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_mid_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_mid",
+      "segment_label": "mid cash session(중반 정규장)",
+      "split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 2633,
+      "tier_a_used_count": 2633,
+      "tier_b_fallback_labelable_rows": 249,
+      "tier_b_fallback_used_count": 249,
+      "tier_scope": "Tier A+B",
+      "trade_count": 90
+    },
+    "component_record_count": 12,
+    "diagnostic_note": "Segmented MT5 records are diagnostic runtime probes only, not synthetic combined performance.",
+    "max_trade_count": 186.0,
+    "new_characteristic_visible": true,
+    "oos_net_profit_range": 271.19,
+    "risk_warning": true,
+    "worst_oos_record": {
+      "max_drawdown_amount": 361.55,
+      "max_drawdown_percent": 48.58,
+      "max_hold_bars": 12,
+      "net_profit": 8.47,
+      "profit_factor": 1.01,
+      "record_view": "mt5_routed_session_early_oos",
+      "recovery_factor": 0.02,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_early_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_early",
+      "segment_label": "early cash session(초반 정규장)",
+      "split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 2447,
+      "tier_a_used_count": 2447,
+      "tier_b_fallback_labelable_rows": 304,
+      "tier_b_fallback_used_count": 304,
+      "tier_scope": "Tier A+B",
+      "trade_count": 163
+    }
+  },
+  "segment_plan": [
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "validation_is",
+      "segment_filter": "0 <= minutes_from_cash_open < 110",
+      "segment_id": "session_early",
+      "segment_label": "early cash session(초반 정규장)",
+      "source_split": "validation",
+      "threshold_quantile": 0.8,
+      "tier_a_matrix_key": "session_early_tier_a_validation_is",
+      "tier_a_rows": 3345,
+      "tier_a_threshold": 0.4169454508943393,
+      "tier_b_matrix_key": "session_early_tier_b_validation_is",
+      "tier_b_rows": 540,
+      "tier_b_threshold": 0.33774143202405504
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "validation_is",
+      "segment_filter": "110 <= minutes_from_cash_open < 220",
+      "segment_id": "session_mid",
+      "segment_label": "mid cash session(중반 정규장)",
+      "source_split": "validation",
+      "threshold_quantile": 0.8,
+      "tier_a_matrix_key": "session_mid_tier_a_validation_is",
+      "tier_a_rows": 3274,
+      "tier_a_threshold": 0.4169454508943393,
+      "tier_b_matrix_key": "session_mid_tier_b_validation_is",
+      "tier_b_rows": 796,
+      "tier_b_threshold": 0.33774143202405504
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "validation_is",
+      "segment_filter": "220 <= minutes_from_cash_open < 390",
+      "segment_id": "session_late",
+      "segment_label": "late cash session(후반 정규장)",
+      "source_split": "validation",
+      "threshold_quantile": 0.8,
+      "tier_a_matrix_key": "session_late_tier_a_validation_is",
+      "tier_a_rows": 3225,
+      "tier_a_threshold": 0.4169454508943393,
+      "tier_b_matrix_key": "session_late_tier_b_validation_is",
+      "tier_b_rows": 1030,
+      "tier_b_threshold": 0.33774143202405504
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "oos",
+      "segment_filter": "0 <= minutes_from_cash_open < 110",
+      "segment_id": "session_early",
+      "segment_label": "early cash session(초반 정규장)",
+      "source_split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_matrix_key": "session_early_tier_a_oos",
+      "tier_a_rows": 2447,
+      "tier_a_threshold": 0.41412499131698965,
+      "tier_b_matrix_key": "session_early_tier_b_oos",
+      "tier_b_rows": 304,
+      "tier_b_threshold": 0.3762532576805156
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "oos",
+      "segment_filter": "110 <= minutes_from_cash_open < 220",
+      "segment_id": "session_mid",
+      "segment_label": "mid cash session(중반 정규장)",
+      "source_split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_matrix_key": "session_mid_tier_a_oos",
+      "tier_a_rows": 2633,
+      "tier_a_threshold": 0.41412499131698965,
+      "tier_b_matrix_key": "session_mid_tier_b_oos",
+      "tier_b_rows": 249,
+      "tier_b_threshold": 0.3762532576805156
+    },
+    {
+      "direction": "both",
+      "max_hold_bars": 12,
+      "mode": "routed",
+      "runtime_split": "oos",
+      "segment_filter": "220 <= minutes_from_cash_open < 390",
+      "segment_id": "session_late",
+      "segment_label": "late cash session(후반 정규장)",
+      "source_split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_matrix_key": "session_late_tier_a_oos",
+      "tier_a_rows": 2504,
+      "tier_a_threshold": 0.41412499131698965,
+      "tier_b_matrix_key": "session_late_tier_b_oos",
+      "tier_b_rows": 509,
+      "tier_b_threshold": 0.3762532576805156
+    }
+  ],
+  "segment_records": [
+    {
+      "max_drawdown_amount": 358.87,
+      "max_drawdown_percent": 48.73,
+      "max_hold_bars": 12,
+      "net_profit": 88.85,
+      "profit_factor": 1.07,
+      "record_view": "mt5_routed_session_early_validation_is",
+      "recovery_factor": 0.25,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_early_validation_is.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_early",
+      "segment_label": "early cash session(초반 정규장)",
+      "split": "validation_is",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 3345,
+      "tier_a_used_count": 3345,
+      "tier_b_fallback_labelable_rows": 540,
+      "tier_b_fallback_used_count": 540,
+      "tier_scope": "Tier A+B",
+      "trade_count": 186
+    },
+    {
+      "max_drawdown_amount": 506.5,
+      "max_drawdown_percent": 99.63,
+      "max_hold_bars": 12,
+      "net_profit": -498.11,
+      "profit_factor": 0.33,
+      "record_view": "mt5_routed_session_mid_validation_is",
+      "recovery_factor": -0.98,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_mid_validation_is.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_mid",
+      "segment_label": "mid cash session(중반 정규장)",
+      "split": "validation_is",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 3274,
+      "tier_a_used_count": 1265,
+      "tier_b_fallback_labelable_rows": 796,
+      "tier_b_fallback_used_count": 187,
+      "tier_scope": "Tier A+B",
+      "trade_count": 58
+    },
+    {
+      "max_drawdown_amount": 244.27,
+      "max_drawdown_percent": 48.36,
+      "max_hold_bars": 12,
+      "net_profit": 171.36,
+      "profit_factor": 1.3,
+      "record_view": "mt5_routed_session_late_validation_is",
+      "recovery_factor": 0.7,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_late_validation_is.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_late",
+      "segment_label": "late cash session(후반 정규장)",
+      "split": "validation_is",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 3225,
+      "tier_a_used_count": 3225,
+      "tier_b_fallback_labelable_rows": 1030,
+      "tier_b_fallback_used_count": 1030,
+      "tier_scope": "Tier A+B",
+      "trade_count": 77
+    },
+    {
+      "max_drawdown_amount": 361.55,
+      "max_drawdown_percent": 48.58,
+      "max_hold_bars": 12,
+      "net_profit": 8.47,
+      "profit_factor": 1.01,
+      "record_view": "mt5_routed_session_early_oos",
+      "recovery_factor": 0.02,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_early_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_early",
+      "segment_label": "early cash session(초반 정규장)",
+      "split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 2447,
+      "tier_a_used_count": 2447,
+      "tier_b_fallback_labelable_rows": 304,
+      "tier_b_fallback_used_count": 304,
+      "tier_scope": "Tier A+B",
+      "trade_count": 163
+    },
+    {
+      "max_drawdown_amount": 139.1,
+      "max_drawdown_percent": 18.57,
+      "max_hold_bars": 12,
+      "net_profit": 279.66,
+      "profit_factor": 1.53,
+      "record_view": "mt5_routed_session_mid_oos",
+      "recovery_factor": 2.01,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_mid_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_mid",
+      "segment_label": "mid cash session(중반 정규장)",
+      "split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 2633,
+      "tier_a_used_count": 2633,
+      "tier_b_fallback_labelable_rows": 249,
+      "tier_b_fallback_used_count": 249,
+      "tier_scope": "Tier A+B",
+      "trade_count": 90
+    },
+    {
+      "max_drawdown_amount": 128.59,
+      "max_drawdown_percent": 23.6,
+      "max_hold_bars": 12,
+      "net_profit": 121.74,
+      "profit_factor": 1.44,
+      "record_view": "mt5_routed_session_late_oos",
+      "recovery_factor": 0.95,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12E_catboost_session_timing_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run12E_catboost_session_timing_probe_v1_routed_session_late_oos.htm",
+      "route_role": "routed_total",
+      "segment_id": "session_late",
+      "segment_label": "late cash session(후반 정규장)",
+      "split": "oos",
+      "threshold_quantile": 0.8,
+      "tier_a_primary_labelable_rows": 2504,
+      "tier_a_used_count": 2504,
+      "tier_b_fallback_labelable_rows": 509,
+      "tier_b_fallback_used_count": 509,
+      "tier_scope": "Tier A+B",
+      "trade_count": 46
+    }
+  ],
+  "selected_variant": {
+    "description": "Ordered boosting with deeper symmetric trees and stronger L2.",
+    "idea_id": "ordered_symmetric_depth4_strong_regularization",
+    "spec": {
+      "bagging_temperature": 0.8,
+      "boosting_type": "Ordered",
+      "bootstrap_type": "Bayesian",
+      "depth": 4,
+      "description": "Ordered boosting with deeper symmetric trees and stronger L2.",
+      "grow_policy": "SymmetricTree",
+      "idea_id": "ordered_symmetric_depth4_strong_regularization",
+      "iterations": 110,
+      "l2_leaf_reg": 10.0,
+      "learning_rate": 0.03,
+      "random_seed": 1813,
+      "random_strength": 0.8,
+      "sample_weight_policy": "none",
+      "subsample": null,
+      "variant_id": "v02_ordered_depth4_strong_l2"
+    },
+    "variant_id": "v02_ordered_depth4_strong_l2"
+  },
+  "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+  "topic_read": "cash_session_timing_split"
+}
