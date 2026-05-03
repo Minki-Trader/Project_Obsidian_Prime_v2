@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-05-03T05:44:48Z",
+  "packet_id": "stage17_run11A_xgb_characteristic_mt5_kpi_v1",
+  "receipts": [
+    {
+      "research_path": "stage_pipelines/stage17/xgboost_characteristic_mt5_probe.py",
+      "runtime_claim_boundary": "runtime_probe",
+      "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "skill": "obsidian-runtime-parity",
+      "status": "completed"
+    },
+    {
+      "backtest_judgment": "usable_with_boundary",
+      "skill": "obsidian-backtest-forensics",
+      "status": "completed",
+      "tester_identity": "US100 M5, tester model=4, deposit=500, leverage=1:100"
+    },
+    {
+      "evidence_boundary": "probe",
+      "measurement_scope": "python tier views plus MT5 runtime_probe KPI",
+      "skill": "obsidian-run-evidence-system",
+      "status": "completed"
+    },
+    {
+      "artifact_paths": [
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11A_xgb_regularized_boosting_characteristic_scout_v1/run_manifest.json",
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11A_xgb_regularized_boosting_characteristic_scout_v1/kpi_record.json"
+      ],
+      "lineage_judgment": "connected_with_boundary",
+      "skill": "obsidian-artifact-lineage",
+      "status": "completed"
+    },
+    {
+      "claim_boundary": "xgboost_characteristic_mt5_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+      "judgment_label": "inconclusive_xgboost_characteristic_mt5_runtime_probe_completed",
+      "skill": "obsidian-result-judgment",
+      "status": "completed"
+    }
+  ]
+}

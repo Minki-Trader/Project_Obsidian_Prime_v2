@@ -1,0 +1,240 @@
+{
+  "attribution_read": {
+    "both_splits_positive": true,
+    "closeout_ready": true,
+    "long_skew_persisted": true,
+    "new_attribution_axis_visible": false,
+    "oos_long_trade_share": 0.7799227799227799,
+    "oos_max_drawdown_percent": 29.01,
+    "oos_profit_factor": 1.18,
+    "plain_read": "DART changed the third feature slot but preserved the Stage17 long-skew trade shape; drawdown blocks quality claims.",
+    "risk_blocks_quality_claim": true,
+    "top_regime_concentrations": [
+      {
+        "regime_type": "session_slice",
+        "split": "oos",
+        "top_net_profit": 240.48999999999995,
+        "top_trade_count": 158,
+        "top_trade_share": 0.61003861003861,
+        "top_value": "early"
+      },
+      {
+        "regime_type": "volatility_regime",
+        "split": "oos",
+        "top_net_profit": 68.87999999999998,
+        "top_trade_count": 174,
+        "top_trade_share": 0.6718146718146718,
+        "top_value": "vol_high"
+      },
+      {
+        "regime_type": "trend_regime",
+        "split": "oos",
+        "top_net_profit": 8.649999999999984,
+        "top_trade_count": 196,
+        "top_trade_share": 0.7567567567567568,
+        "top_value": "downtrend"
+      },
+      {
+        "regime_type": "adx_bucket",
+        "split": "oos",
+        "top_net_profit": 46.309999999999995,
+        "top_trade_count": 146,
+        "top_trade_share": 0.5637065637065637,
+        "top_value": "adx_gt25"
+      },
+      {
+        "regime_type": "session_slice",
+        "split": "validation",
+        "top_net_profit": -96.82999999999998,
+        "top_trade_count": 155,
+        "top_trade_share": 0.5326460481099656,
+        "top_value": "early"
+      },
+      {
+        "regime_type": "volatility_regime",
+        "split": "validation",
+        "top_net_profit": 71.91000000000008,
+        "top_trade_count": 215,
+        "top_trade_share": 0.738831615120275,
+        "top_value": "vol_high"
+      },
+      {
+        "regime_type": "trend_regime",
+        "split": "validation",
+        "top_net_profit": 275.80000000000007,
+        "top_trade_count": 229,
+        "top_trade_share": 0.7869415807560137,
+        "top_value": "downtrend"
+      },
+      {
+        "regime_type": "adx_bucket",
+        "split": "validation",
+        "top_net_profit": 32.81000000000006,
+        "top_trade_count": 167,
+        "top_trade_share": 0.5738831615120275,
+        "top_value": "adx_gt25"
+      }
+    ],
+    "validation_long_trade_share": 0.8247422680412371,
+    "validation_max_drawdown_percent": 77.65,
+    "validation_profit_factor": 1.08
+  },
+  "boundary": "xgboost_dart_attribution_closeout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closeout_packet_id": "stage17_model_family_challenge_closeout_v3",
+  "closure_judgment": "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+  "exploration_label": "stage17_Model__XGBoostDARTAttributionCloseout",
+  "external_verification_status": "completed_reused_run11F_mt5_and_kpi_evidence",
+  "feature_shift_read": {
+    "changed_slot": "is_first_30m_after_open=>close_ema20_ratio",
+    "dart_top3_features": [
+      "hl_range",
+      "historical_vol_20",
+      "close_ema20_ratio"
+    ],
+    "feature_shift_kind": "third_slot_ema_ratio_replaces_open_session_flag",
+    "prior_gbtree_top3_features": [
+      "hl_range",
+      "historical_vol_20",
+      "is_first_30m_after_open"
+    ],
+    "top2_same": true
+  },
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "judgment": "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+  "ledger_outputs": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 2467,
+      "sha256": "2fc89f5f8938403a3a13cb11d76075f7e0d489416befb988f1bcb45cc8460bac",
+      "upserted_rows": 1
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 65,
+      "sha256": "4103bf56330b5f91fec21536b0544a211aa6d01298f4182ffee9dd323c26e4b6",
+      "upserted_rows": 1
+    }
+  },
+  "model_family": "xgboost_xgbclassifier_multiclass_dart",
+  "packet_id": "stage17_run11G_xgb_dart_attribution_closeout_v1",
+  "regime_summary": [
+    {
+      "regime_type": "session_slice",
+      "split": "oos",
+      "top_net_profit": 240.48999999999995,
+      "top_trade_count": 158,
+      "top_trade_share": 0.61003861003861,
+      "top_value": "early"
+    },
+    {
+      "regime_type": "volatility_regime",
+      "split": "oos",
+      "top_net_profit": 68.87999999999998,
+      "top_trade_count": 174,
+      "top_trade_share": 0.6718146718146718,
+      "top_value": "vol_high"
+    },
+    {
+      "regime_type": "trend_regime",
+      "split": "oos",
+      "top_net_profit": 8.649999999999984,
+      "top_trade_count": 196,
+      "top_trade_share": 0.7567567567567568,
+      "top_value": "downtrend"
+    },
+    {
+      "regime_type": "adx_bucket",
+      "split": "oos",
+      "top_net_profit": 46.309999999999995,
+      "top_trade_count": 146,
+      "top_trade_share": 0.5637065637065637,
+      "top_value": "adx_gt25"
+    },
+    {
+      "regime_type": "session_slice",
+      "split": "validation",
+      "top_net_profit": -96.82999999999998,
+      "top_trade_count": 155,
+      "top_trade_share": 0.5326460481099656,
+      "top_value": "early"
+    },
+    {
+      "regime_type": "volatility_regime",
+      "split": "validation",
+      "top_net_profit": 71.91000000000008,
+      "top_trade_count": 215,
+      "top_trade_share": 0.738831615120275,
+      "top_value": "vol_high"
+    },
+    {
+      "regime_type": "trend_regime",
+      "split": "validation",
+      "top_net_profit": 275.80000000000007,
+      "top_trade_count": 229,
+      "top_trade_share": 0.7869415807560137,
+      "top_value": "downtrend"
+    },
+    {
+      "regime_type": "adx_bucket",
+      "split": "validation",
+      "top_net_profit": 32.81000000000006,
+      "top_trade_count": 167,
+      "top_trade_share": 0.5738831615120275,
+      "top_value": "adx_gt25"
+    }
+  ],
+  "registry_output": {
+    "hash_policy": "lf_normalized_text_register",
+    "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+    "rows": 225,
+    "sha256": "282115bcb442b03280305a6afd5881230927fcd67093b72db042852d064cc5c7",
+    "upserted_rows": 1
+  },
+  "routed_trade_rows": [
+    {
+      "avg_hold_bars": 43.4227,
+      "long_net_profit": 144.95,
+      "long_net_share": 1.1580250858831989,
+      "mae_mean": 10.5097,
+      "mfe_mean": 10.6632,
+      "positive_month_ratio": 0.444444,
+      "record_view": "mt5_routed_total_validation_is",
+      "short_net_profit": -19.78,
+      "split": "validation",
+      "trade_count": 291
+    },
+    {
+      "avg_hold_bars": 25.749,
+      "long_net_profit": 125.77,
+      "long_net_share": 0.6508823681622936,
+      "mae_mean": 8.9529,
+      "mfe_mean": 9.24323,
+      "positive_month_ratio": 0.714286,
+      "record_view": "mt5_routed_total_oos",
+      "short_net_profit": 67.46,
+      "split": "oos",
+      "trade_count": 259
+    }
+  ],
+  "run_id": "run11G_xgb_dart_attribution_closeout_v1",
+  "run_number": "run11G",
+  "selected_baseline": "none",
+  "selected_operating_reference": "none",
+  "selected_promotion_candidate": "none",
+  "source_mt5_kpi_record_count": 10,
+  "source_normalized_kpi_records": 10,
+  "source_packet_id": "stage17_run11F_xgb_dart_booster_probe_v1",
+  "source_run_id": "run11F_xgb_dart_booster_probe_v1",
+  "source_trade_attribution_records": 6,
+  "stage17_stop_recommendation": "close_stage17_after_dart_attribution_no_new_axis",
+  "stage_id": "17_model_family_challenge__xgboost_regularized_boosting_scout"
+}

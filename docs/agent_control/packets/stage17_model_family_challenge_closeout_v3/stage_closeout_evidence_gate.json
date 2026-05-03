@@ -1,0 +1,102 @@
+{
+  "attribution_read": {
+    "both_splits_positive": true,
+    "closeout_ready": true,
+    "long_skew_persisted": true,
+    "new_attribution_axis_visible": false,
+    "oos_long_trade_share": 0.7799227799227799,
+    "oos_max_drawdown_percent": 29.01,
+    "oos_profit_factor": 1.18,
+    "plain_read": "DART changed the third feature slot but preserved the Stage17 long-skew trade shape; drawdown blocks quality claims.",
+    "risk_blocks_quality_claim": true,
+    "top_regime_concentrations": [
+      {
+        "regime_type": "session_slice",
+        "split": "oos",
+        "top_net_profit": 240.48999999999995,
+        "top_trade_count": 158,
+        "top_trade_share": 0.61003861003861,
+        "top_value": "early"
+      },
+      {
+        "regime_type": "volatility_regime",
+        "split": "oos",
+        "top_net_profit": 68.87999999999998,
+        "top_trade_count": 174,
+        "top_trade_share": 0.6718146718146718,
+        "top_value": "vol_high"
+      },
+      {
+        "regime_type": "trend_regime",
+        "split": "oos",
+        "top_net_profit": 8.649999999999984,
+        "top_trade_count": 196,
+        "top_trade_share": 0.7567567567567568,
+        "top_value": "downtrend"
+      },
+      {
+        "regime_type": "adx_bucket",
+        "split": "oos",
+        "top_net_profit": 46.309999999999995,
+        "top_trade_count": 146,
+        "top_trade_share": 0.5637065637065637,
+        "top_value": "adx_gt25"
+      },
+      {
+        "regime_type": "session_slice",
+        "split": "validation",
+        "top_net_profit": -96.82999999999998,
+        "top_trade_count": 155,
+        "top_trade_share": 0.5326460481099656,
+        "top_value": "early"
+      },
+      {
+        "regime_type": "volatility_regime",
+        "split": "validation",
+        "top_net_profit": 71.91000000000008,
+        "top_trade_count": 215,
+        "top_trade_share": 0.738831615120275,
+        "top_value": "vol_high"
+      },
+      {
+        "regime_type": "trend_regime",
+        "split": "validation",
+        "top_net_profit": 275.80000000000007,
+        "top_trade_count": 229,
+        "top_trade_share": 0.7869415807560137,
+        "top_value": "downtrend"
+      },
+      {
+        "regime_type": "adx_bucket",
+        "split": "validation",
+        "top_net_profit": 32.81000000000006,
+        "top_trade_count": 167,
+        "top_trade_share": 0.5738831615120275,
+        "top_value": "adx_gt25"
+      }
+    ],
+    "validation_long_trade_share": 0.8247422680412371,
+    "validation_max_drawdown_percent": 77.65,
+    "validation_profit_factor": 1.08
+  },
+  "audit_name": "dart_attribution_closeout_audit",
+  "closeout_run_id": "run11G_xgb_dart_attribution_closeout_v1",
+  "feature_shift_read": {
+    "changed_slot": "is_first_30m_after_open=>close_ema20_ratio",
+    "dart_top3_features": [
+      "hl_range",
+      "historical_vol_20",
+      "close_ema20_ratio"
+    ],
+    "feature_shift_kind": "third_slot_ema_ratio_replaces_open_session_flag",
+    "prior_gbtree_top3_features": [
+      "hl_range",
+      "historical_vol_20",
+      "is_first_30m_after_open"
+    ],
+    "top2_same": true
+  },
+  "packet_id": "stage17_model_family_challenge_closeout_v3",
+  "passed": true,
+  "status": "pass"
+}

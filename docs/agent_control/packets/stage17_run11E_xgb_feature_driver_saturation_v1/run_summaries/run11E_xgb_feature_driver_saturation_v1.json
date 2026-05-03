@@ -1,0 +1,199 @@
+{
+  "boundary": "xgboost_feature_driver_saturation_closeout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closeout_packet_id": "stage17_model_family_challenge_closeout_v2",
+  "closure_judgment": "closed_inconclusive_xgboost_regularized_boosting_characteristics_exhausted",
+  "exploration_label": "stage17_Model__XGBoostFeatureDriverSaturation",
+  "external_verification_status": "completed_reused_run11A_run11B_run11C_mt5_and_kpi_evidence",
+  "feature_driver_rows": [
+    {
+      "characteristic_score": 0.9542046856635382,
+      "oos_signal_coverage": 0.0702795358649789,
+      "selected_variant_id": "v03_depth4_l1_l2_slow",
+      "source_run_id": "run11A_xgb_regularized_boosting_characteristic_scout_v1",
+      "threshold": 0.4672216027975082,
+      "top10_features": [
+        "hl_range",
+        "historical_vol_20",
+        "is_first_30m_after_open",
+        "minutes_from_cash_open",
+        "ppo_hist_12_26_9",
+        "close_ema50_ratio",
+        "bollinger_width_20",
+        "sma50_sma200_ratio",
+        "ema50_ema200_diff",
+        "hl_zscore_50"
+      ],
+      "top10_gain_share": 0.3446187256324587,
+      "top3_features": [
+        "hl_range",
+        "historical_vol_20",
+        "is_first_30m_after_open"
+      ],
+      "val_signal_coverage": 0.1000609508329947
+    },
+    {
+      "characteristic_score": 0.7329091620874055,
+      "oos_signal_coverage": 0.1907964135021097,
+      "selected_variant_id": "v03_depth4_l1_l2_slow",
+      "source_run_id": "run11B_xgb_threshold_q80_frequency_pressure_closeout_v1",
+      "threshold": 0.4302987039089203,
+      "top10_features": [
+        "hl_range",
+        "historical_vol_20",
+        "is_first_30m_after_open",
+        "minutes_from_cash_open",
+        "ppo_hist_12_26_9",
+        "close_ema50_ratio",
+        "bollinger_width_20",
+        "sma50_sma200_ratio",
+        "ema50_ema200_diff",
+        "hl_zscore_50"
+      ],
+      "top10_gain_share": 0.3446187256324587,
+      "top3_features": [
+        "hl_range",
+        "historical_vol_20",
+        "is_first_30m_after_open"
+      ],
+      "val_signal_coverage": 0.2000203169443315
+    },
+    {
+      "characteristic_score": 0.7329091620874055,
+      "oos_signal_coverage": 0.1907964135021097,
+      "selected_variant_id": "v03_depth4_l1_l2_slow",
+      "source_run_id": "run11C_xgb_q80_direction_asymmetry_probe_v1",
+      "threshold": 0.4302987039089203,
+      "top10_features": [
+        "hl_range",
+        "historical_vol_20",
+        "is_first_30m_after_open",
+        "minutes_from_cash_open",
+        "ppo_hist_12_26_9",
+        "close_ema50_ratio",
+        "bollinger_width_20",
+        "sma50_sma200_ratio",
+        "ema50_ema200_diff",
+        "hl_zscore_50"
+      ],
+      "top10_gain_share": 0.3446187256324587,
+      "top3_features": [
+        "hl_range",
+        "historical_vol_20",
+        "is_first_30m_after_open"
+      ],
+      "val_signal_coverage": 0.2000203169443315
+    }
+  ],
+  "feature_overlap_rows": [
+    {
+      "left_run_id": "run11A_xgb_regularized_boosting_characteristic_scout_v1",
+      "right_run_id": "run11B_xgb_threshold_q80_frequency_pressure_closeout_v1",
+      "top10_overlap_count": 10,
+      "top10_overlap_ratio": 1.0,
+      "top3_same": true
+    },
+    {
+      "left_run_id": "run11A_xgb_regularized_boosting_characteristic_scout_v1",
+      "right_run_id": "run11C_xgb_q80_direction_asymmetry_probe_v1",
+      "top10_overlap_count": 10,
+      "top10_overlap_ratio": 1.0,
+      "top3_same": true
+    },
+    {
+      "left_run_id": "run11B_xgb_threshold_q80_frequency_pressure_closeout_v1",
+      "right_run_id": "run11C_xgb_q80_direction_asymmetry_probe_v1",
+      "top10_overlap_count": 10,
+      "top10_overlap_ratio": 1.0,
+      "top3_same": true
+    }
+  ],
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "judgment": "closed_inconclusive_xgboost_regularized_boosting_characteristics_exhausted",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 20,
+    "normalized_summary_rows": 20,
+    "parser_errors": 0,
+    "trade_attribution_records": 4,
+    "trade_level_rows": 561,
+    "trade_parser_errors": 0
+  },
+  "ledger_outputs": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 2453,
+      "sha256": "5f9f8e9986e289d3f6a7e43d13336304513f185d901e9ede17c7cfb555853cbd",
+      "upserted_rows": 1
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 51,
+      "sha256": "6807defa53fce9541e51829b0ddd581f9b3d16d7d748397ce81faaa8d9bb8808",
+      "upserted_rows": 1
+    }
+  },
+  "model_characteristic_strength": "no_new_feature_driver_after_run11E",
+  "model_family": "xgboost_xgbclassifier_multiclass",
+  "packet_id": "stage17_run11E_xgb_feature_driver_saturation_v1",
+  "preserved_clues": [
+    "run11A_visible_regularized_boosting_characteristic_q90",
+    "run11B_frequency_density_increase_q80",
+    "run11C_direction_asymmetry_long_trade_density",
+    "run11D_stable_long_probability_skew",
+    "run11E_feature_driver_saturation_no_new_axis"
+  ],
+  "registry_output": {
+    "hash_policy": "lf_normalized_text_register",
+    "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+    "rows": 223,
+    "sha256": "7416bd42183bc314806da254c58a6bf5f5340499ddd064b1389edc59d2a1ac49",
+    "upserted_rows": 1
+  },
+  "run11d_trade_shape_attribution": {
+    "hold_contrast_bars": 5.168852513694148,
+    "long_avg_hold_bars": 39.337996801374345,
+    "long_positive_month_ratio": 0.38095238095238093,
+    "model_characteristic_strength": "xgboost_trade_shape_probability_skew_visible",
+    "new_characteristic_visible": true,
+    "oos_long_signal_share": 0.7446254071661238,
+    "positive_month_ratio_contrast": 0.08730158730158732,
+    "short_avg_hold_bars": 44.50684931506849,
+    "short_positive_month_ratio": 0.46825396825396826,
+    "source_direction_trade_count_contrast": 0.47950089126559714,
+    "source_run_id": "run11C_xgb_q80_direction_asymmetry_probe_v1",
+    "stable_long_signal_skew": true,
+    "stage17_stop_recommendation": "keep_stage17_open_for_probability_feature_driver_probe",
+    "trade_shape_shift_visible": false,
+    "validation_long_signal_share": 0.8439334637964775
+  },
+  "run_id": "run11E_xgb_feature_driver_saturation_v1",
+  "run_number": "run11E",
+  "saturation_read": {
+    "min_top10_overlap_ratio": 1.0,
+    "model_characteristic_strength": "no_new_feature_driver_after_run11E",
+    "new_feature_driver_visible": false,
+    "q80_characteristic_score_delta_run11B_vs_run11C": 0.0,
+    "q90_to_q80_characteristic_score_delta_run11A_vs_run11B": 0.2212955235761327,
+    "selected_variant_stable": true,
+    "stage17_stop_recommendation": "close_stage17_no_new_feature_driver_after_run11E",
+    "top3_features_stable": true
+  },
+  "selected_variant_id": "v03_depth4_l1_l2_slow",
+  "source_run_ids": [
+    "run11A_xgb_regularized_boosting_characteristic_scout_v1",
+    "run11B_xgb_threshold_q80_frequency_pressure_closeout_v1",
+    "run11C_xgb_q80_direction_asymmetry_probe_v1",
+    "run11D_xgb_trade_shape_attribution_v1"
+  ],
+  "stage17_stop_recommendation": "close_stage17_no_new_feature_driver_after_run11E",
+  "stage_id": "17_model_family_challenge__xgboost_regularized_boosting_scout"
+}

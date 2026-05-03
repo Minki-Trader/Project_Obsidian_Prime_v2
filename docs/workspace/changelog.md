@@ -1,5 +1,9 @@
 ﻿# Workspace Changelog
 
+## 2026-05-03
+
+- 2026-05-03: `stage17_model_family_challenge_closeout_v3` completed(완료). Stage17(17단계) XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) regularized boosting(규제 부스팅) 탐색을 run11G(실행11G) DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅) attribution closeout(귀속 마감)으로 닫았다. 효과(effect, 효과): run11A~run11G(실행11A~실행11G)의 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표) 근거는 보존 단서로 남기고, edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
 ## 2026-05-02
 
 - 2026-05-02: `14_model_family_challenge__margin_kernel_training_effect` opened(개방). Stage14(14단계)를 SVM(`Support Vector Machine`, 서포트 벡터 머신) margin/kernel training-effect(마진/커널 학습 효과) 독립 주제로 열었다. Effect(효과): Stage10/11/12/13(10/11/12/13단계) run(실행)을 baseline(기준선), seed(씨앗), reference(참고)로 쓰지 않고 첫 run(실행) 전 설계 경계만 만든다.
@@ -218,3 +222,14 @@
 - 2026-05-03: Stage16 QDA(이차판별분석) `run09A`~`run09Q` follow-up(후속 탐색)을 MT5 runtime_probe(MT5 런타임 탐침)와 KPI(핵심성과지표) 정규화까지 완료했다. 효과(effect, 효과): run08F 주변 조건을 좁혔지만 edge(거래 우위)는 주장하지 않는다.
 - 2026-05-03: Stage16 QDA(이차판별분석) `run10A`~`run10L` decision microprobe(결정 미세 탐침)를 MT5 runtime_probe(MT5 런타임 탐침)와 KPI(핵심성과지표) 정규화까지 완료했다. recommendation(권고): `close_stage16_preserve_qda_clues`. 효과(effect, 효과): Stage16(16단계)을 닫을지 진행할지 판단 근거를 남기되 edge(거래 우위)는 주장하지 않는다.
 - 2026-05-03: Stage16 QDA(이차판별분석)를 `closed_inconclusive_qda_class_covariance_runtime_probe_evidence`로 닫고 Stage17(17단계)을 `17_topic_pending__open_only`로 주제 없이 열었다. 효과(effect, 효과): QDA(이차판별분석) 단서는 보존하되 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않고 다음 topic(주제)을 기다린다.
+- 2026-05-03: Stage17(17단계)을 `17_model_family_challenge__xgboost_regularized_boosting_scout` XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) regularized boosting(규제 부스팅) 주제로 열었다. 효과(effect, 효과): model family(모델 계열)는 정했지만 run(실행), KPI(핵심성과지표), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 아직 만들지 않는다.
+- 2026-05-03: Stage17(17단계) `run11A_xgb_regularized_boosting_characteristic_scout_v1` 첫 MT5 KPI 탐침에서 ONNX(`Open Neural Network Exchange`, 오픈 신경망 교환) label output(라벨 출력) shape(모양) 차단을 확인했다. 효과(effect, 효과): XGBoost ONNX export(익스지부스트 ONNX 내보내기)를 MT5 probability-only(확률 전용) 출력으로 고칠 근거를 남겼다.
+- 2026-05-03: Stage17(17단계) `run11A_xgb_regularized_boosting_characteristic_scout_v1` XGBoost 특성 MT5 KPI 탐침을 완료했다. 효과(effect, 효과): MT5 KPI `10`, 정규화 KPI `10`, 거래 귀속 `6`을 기록하고 `keep_stage17_open_for_one_characteristic_followup_or_closeout_review`로 판독했다.
+- 2026-05-03: Stage17(17단계) `run11B_xgb_threshold_q80_frequency_pressure_closeout_v1` 거래빈도 압박 MT5 KPI 탐침을 완료하고 Stage17을 닫았다. 효과(effect, 효과): q0.80 임계값으로 MT5 KPI `10`, 정규화 KPI `10`, 거래 귀속 `6`을 기록하고 edge(거래 우위) 없이 `closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence`로 마감했다.
+- 2026-05-03: Stage17(17단계) `run11C_xgb_q80_direction_asymmetry_probe_v1` 방향 비대칭 MT5 KPI 탐침을 완료하고 run11B closeout(마감)을 성급한 판정으로 대체했다. 효과(effect, 효과): MT5 KPI `20`, 정규화 KPI `20`, 거래 귀속 `4`을 기록하고 `close_stage17_no_new_direction_characteristic_after_run11C`로 판독했다.
+- 2026-05-03: Stage17(17단계) `run11C_xgb_q80_direction_asymmetry_probe_v1` 방향 비대칭 MT5 KPI 탐침을 완료하고 run11B closeout(마감)을 성급한 판정으로 대체했다. 효과(effect, 효과): MT5 KPI `20`, 정규화 KPI `20`, 거래 귀속 `4`을 기록하고 `keep_stage17_open_for_trade_shape_or_regime_attribution`로 판독했다.
+- 2026-05-03: Stage17(17단계) `run11D_xgb_trade_shape_attribution_v1` 거래 모양 귀속을 완료했다. 효과(effect, 효과): run11C MT5 KPI 근거를 재사용해 `keep_stage17_open_for_probability_feature_driver_probe`로 판독했고 운영 주장은 만들지 않았다.
+- 2026-05-03: Stage17(17단계) `run11E_xgb_feature_driver_saturation_v1` 피처 동인 포화 탐침으로 closeout(마감)했다. 효과(effect, 효과): run11A-run11D 특성 단서를 보존하고 운영 주장은 만들지 않았다.
+- 2026-05-03: Stage17(17단계) `run11F_xgb_dart_booster_probe_v1` DART 부스터 탐침을 실행했다. 효과(effect, 효과): MT5 KPI `10`, 정규화 KPI `10`, 새 특성 `False`를 기록했다.
+- 2026-05-03: Stage17(17단계) `run11F_xgb_dart_booster_probe_v1` DART 부스터 탐침을 실행했다. 효과(effect, 효과): MT5 KPI `10`, 정규화 KPI `10`, 새 특성 `True`를 기록했다.
+- 2026-05-03: Stage17(17단계) `run11G_xgb_dart_attribution_closeout_v1` DART 귀속 마감으로 닫았다. 효과(effect, 효과): run11F의 MT5/KPI 근거를 재사용해 추가 축 없음과 Stage18 준비 상태를 기록했다.

@@ -1,0 +1,772 @@
+{
+  "attempt_count": 6,
+  "boundary": "xgboost_dart_booster_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "characteristic_score": 0.6965806141150721,
+  "closure_judgment": "inconclusive_xgboost_dart_booster_runtime_probe_completed",
+  "dart_booster_read": {
+    "avg_routed_trades": 275.0,
+    "direction_skew_changed": false,
+    "new_characteristic_visible": true,
+    "onnx_parity_passed": true,
+    "oos_long_signal_share": 0.8418404025880661,
+    "prior_gbtree_top3_features": [
+      "hl_range",
+      "historical_vol_20",
+      "is_first_30m_after_open"
+    ],
+    "run11b_avg_routed_trades": 229.5,
+    "run11d_oos_long_signal_share": 0.7446254071661238,
+    "run11d_validation_long_signal_share": 0.8439334637964775,
+    "score_changed": false,
+    "score_delta_vs_gbtree_q80": 0.036328547972333425,
+    "selected_variant_id": "dart_v01_depth3_lowdrop",
+    "threshold_quantile": 0.8,
+    "top3_changed": true,
+    "top3_features": [
+      "hl_range",
+      "historical_vol_20",
+      "close_ema20_ratio"
+    ],
+    "trade_frequency_changed": false,
+    "trade_ratio_vs_run11B": 1.198257080610022,
+    "validation_long_signal_share": 0.9019807008633824
+  },
+  "external_verification_status": "completed",
+  "judgment": "inconclusive_xgboost_dart_booster_runtime_probe_completed",
+  "ledger_outputs": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 2466,
+      "sha256": "574c52dd5b3da73405d13f4dd641f6c7af5fefbc12057442eca6ee5033258e31",
+      "upserted_rows": 13
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 64,
+      "sha256": "d1d4b3f89d49b408d3029d27109af1505c15d02982669333f1c7b319b3c3412a",
+      "upserted_rows": 13
+    }
+  },
+  "model_artifacts": {
+    "onnx_parity": {
+      "tier_a": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "float_input",
+        "max_abs_diff": 5.960464477539063e-08,
+        "mean_abs_diff": 1.2145998577276865e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probabilities"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 0.05
+      },
+      "tier_b": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "float_input",
+        "max_abs_diff": 8.940696716308594e-08,
+        "mean_abs_diff": 1.2184803684552511e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probabilities"
+        ],
+        "passed": true,
+        "rows": 128,
+        "tolerance": 0.05
+      }
+    },
+    "selected_variant_id": "dart_v01_depth3_lowdrop",
+    "thresholds": {
+      "tier_a": 0.4119892477989197,
+      "tier_b": 0.39827467799186705
+    },
+    "tier_a_joblib": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/models/dart_v01_depth3_lowdrop_tier_a_xgb.joblib",
+      "sha256": "373ff90de329220391ff6d1ff692599a21a7c79a3432de981914ca35dc26e0a2"
+    },
+    "tier_a_onnx": {
+      "input_name": "float_input",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            null
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/models/dart_v01_depth3_lowdrop_tier_a_xgb_opset13.onnx",
+      "probability_output_name": "probabilities",
+      "sha256": "97f5731d01d70ef3551b84a24da5495a4a112cb8540a3ef1809923e85aa3abd7",
+      "target_opset": 13,
+      "zipmap_disabled": true
+    },
+    "tier_b_joblib": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/models/dart_v01_depth3_lowdrop_tier_b_xgb_core42.joblib",
+      "sha256": "8e49b680b5912fa51a5fa077e70b324d071dbfd69c3e212b1a6f1c0695fc0607"
+    },
+    "tier_b_onnx": {
+      "input_name": "float_input",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            null
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/models/dart_v01_depth3_lowdrop_tier_b_xgb_core42_opset13.onnx",
+      "probability_output_name": "probabilities",
+      "sha256": "4115b4ec1d1a047de896ae19cf2db239126b32e67514e6458938f3cf661a1581",
+      "target_opset": 13,
+      "zipmap_disabled": true
+    }
+  },
+  "model_characteristic_strength": "dart_internal_booster_characteristic_visible",
+  "model_family": "xgboost_xgbclassifier_multiclass_dart",
+  "mt5_kpi_record_count": 10,
+  "oos_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 136.71,
+    "balance_drawdown_maximal_percent": 22.68,
+    "deal_count": 518,
+    "equity_drawdown_maximal_amount": 176.88,
+    "equity_drawdown_maximal_percent": 29.01,
+    "expectancy": 0.75,
+    "feature_ready_count": 8646,
+    "fill_count": 477,
+    "fill_rate": 1.0,
+    "gross_loss": -1099.4,
+    "gross_profit": 1292.63,
+    "long_trade_count": 202,
+    "long_win_rate_percent": 53.96,
+    "losing_trade_count": 125,
+    "loss_rate_percent": 48.26,
+    "max_drawdown_amount": 176.88,
+    "max_drawdown_percent": 29.01,
+    "missing_required_metrics": [],
+    "model_fail_count": 28691,
+    "model_ok_count": 8646,
+    "net_profit": 193.23,
+    "no_tier_count": 28691,
+    "no_tier_labelable_rows": 159,
+    "order_attempt_count": 477,
+    "parsed_row_count": 1122,
+    "partial_context_subtype_counts": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    },
+    "profit_factor": 1.18,
+    "recovery_factor": 1.09,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run11F_xgb_dart_booster_probe_v1_routed_oos.htm",
+    "route_coverage_split": "oos",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 8646,
+    "sharpe_ratio": 2.97,
+    "short_trade_count": 57,
+    "short_win_rate_percent": 43.86,
+    "skip_count": 28691,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 6193,
+    "tier_a_long_count": 1171,
+    "tier_a_order_attempt_count": 460,
+    "tier_a_order_fill_count": 460,
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_a_short_count": 220,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_flat_count": 1004,
+    "tier_b_fallback_labelable_rows": 1062,
+    "tier_b_fallback_long_count": 44,
+    "tier_b_fallback_order_attempt_count": 17,
+    "tier_b_fallback_order_fill_count": 17,
+    "tier_b_fallback_short_count": 14,
+    "tier_b_fallback_used_count": 1062,
+    "trade_count": 259,
+    "win_rate_percent": 51.74,
+    "winning_trade_count": 134
+  },
+  "packet_id": "stage17_run11F_xgb_dart_booster_probe_v1",
+  "prediction_artifacts": {
+    "tier_a": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "4d55d5cbaa12f53a2dab2d0ab08e184421574704c9b47ab35a799a316c10bd41"
+    },
+    "tier_ab": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "e1353c89b49181d43d3424fa139f9dbfa9c0d3d22328daaabd0dec6d56f5087e"
+    },
+    "tier_b": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "0c1d4644b3b8e650e78a3312787b2b9b573034b51190625e16ac7dc7b22c939c"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 5585,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 8.940696716308594e-08,
+        "rows": 46650,
+        "short_count": 1125,
+        "signal_count": 6710,
+        "signal_coverage": 0.14383708467309753,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.45042194092827004,
+          "balanced_accuracy": 0.43686756700695856,
+          "directional_correct_count": 595,
+          "directional_hit_rate": 0.42774982027318476,
+          "log_loss": 1.0496737970758083,
+          "long_count": 1171,
+          "macro_f1": 0.40551020024340323,
+          "mean_probability": {
+            "flat": 0.3307288686218298,
+            "long": 0.36496294939198887,
+            "short": 0.3043081814419274
+          },
+          "mean_probability_margin": 0.08283634388520685,
+          "rows": 7584,
+          "short_count": 220,
+          "signal_count": 1391,
+          "signal_coverage": 0.18341244725738395
+        },
+        "train": {
+          "accuracy": 0.4479843953185956,
+          "balanced_accuracy": 0.43848889392411206,
+          "directional_correct_count": 1959,
+          "directional_hit_rate": 0.5847761194029851,
+          "log_loss": 1.0558044507202469,
+          "long_count": 2638,
+          "macro_f1": 0.42663957715847234,
+          "mean_probability": {
+            "flat": 0.3308632196328836,
+            "long": 0.35928797541755675,
+            "short": 0.30984880466144943
+          },
+          "mean_probability_margin": 0.06504350813350086,
+          "rows": 29222,
+          "short_count": 712,
+          "signal_count": 3350,
+          "signal_coverage": 0.11463965505441107
+        },
+        "validation": {
+          "accuracy": 0.4586550182852499,
+          "balanced_accuracy": 0.4415972390682505,
+          "directional_correct_count": 824,
+          "directional_hit_rate": 0.4184865413915693,
+          "log_loss": 1.0510467460187567,
+          "long_count": 1776,
+          "macro_f1": 0.41234841002306144,
+          "mean_probability": {
+            "flat": 0.3314076292546892,
+            "long": 0.3646106875839513,
+            "short": 0.30398168320071645
+          },
+          "mean_probability_margin": 0.08582192369498697,
+          "rows": 9844,
+          "short_count": 193,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 362,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 8.940696716308594e-08,
+        "rows": 12398,
+        "short_count": 115,
+        "signal_count": 477,
+        "signal_coverage": 0.03847394741087272,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5301318267419962,
+          "balanced_accuracy": 0.4043943026867482,
+          "directional_correct_count": 23,
+          "directional_hit_rate": 0.39655172413793105,
+          "log_loss": 1.0019422274625929,
+          "long_count": 44,
+          "macro_f1": 0.39124417875855627,
+          "mean_probability": {
+            "flat": 0.41663606873171477,
+            "long": 0.3137526995521705,
+            "short": 0.26961123295086253
+          },
+          "mean_probability_margin": 0.134563537879291,
+          "rows": 1062,
+          "short_count": 14,
+          "signal_count": 58,
+          "signal_coverage": 0.054613935969868174
+        },
+        "train": {
+          "accuracy": 0.474247491638796,
+          "balanced_accuracy": 0.4006934011041426,
+          "directional_correct_count": 184,
+          "directional_hit_rate": 0.5125348189415042,
+          "log_loss": 1.0309554986292473,
+          "long_count": 262,
+          "macro_f1": 0.3692538515928625,
+          "mean_probability": {
+            "flat": 0.4156091790052428,
+            "long": 0.31801190471303636,
+            "short": 0.2663789155242036
+          },
+          "mean_probability_margin": 0.12212098741544662,
+          "rows": 8970,
+          "short_count": 97,
+          "signal_count": 359,
+          "signal_coverage": 0.040022296544035676
+        },
+        "validation": {
+          "accuracy": 0.6001690617075233,
+          "balanced_accuracy": 0.3738299655891248,
+          "directional_correct_count": 28,
+          "directional_hit_rate": 0.4666666666666667,
+          "log_loss": 0.9543421351040238,
+          "long_count": 56,
+          "macro_f1": 0.3492166808601744,
+          "mean_probability": {
+            "flat": 0.4559858757955284,
+            "long": 0.2951649113771579,
+            "short": 0.24884921169996463
+          },
+          "mean_probability_margin": 0.17430752362120686,
+          "rows": 2366,
+          "short_count": 4,
+          "signal_count": 60,
+          "signal_coverage": 0.0253592561284869
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 5768,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 8.940696716308594e-08,
+        "rows": 59048,
+        "short_count": 1175,
+        "signal_count": 6943,
+        "signal_coverage": 0.11758230592060696,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.46021281517464724,
+          "balanced_accuracy": 0.44009611645586905,
+          "directional_correct_count": 604,
+          "directional_hit_rate": 0.4247538677918425,
+          "log_loss": 1.0438108631260934,
+          "long_count": 1196,
+          "macro_f1": 0.4099700279046936,
+          "mean_probability": {
+            "flat": 0.34128096745559083,
+            "long": 0.35867272439431513,
+            "short": 0.3000463078243573
+          },
+          "mean_probability_margin": 0.0891900658400666,
+          "rows": 8646,
+          "short_count": 226,
+          "signal_count": 1422,
+          "signal_coverage": 0.16446911866759195
+        },
+        "train": {
+          "accuracy": 0.4541527021365731,
+          "balanced_accuracy": 0.44135039702477985,
+          "directional_correct_count": 2052,
+          "directional_hit_rate": 0.5822928490351873,
+          "log_loss": 1.049968278216679,
+          "long_count": 2768,
+          "macro_f1": 0.426992531056356,
+          "mean_probability": {
+            "flat": 0.35076715908538836,
+            "long": 0.34959363225093687,
+            "short": 0.29963920826531687
+          },
+          "mean_probability_margin": 0.07844906398705798,
+          "rows": 38192,
+          "short_count": 756,
+          "signal_count": 3524,
+          "signal_coverage": 0.09227063259321323
+        },
+        "validation": {
+          "accuracy": 0.4860769860769861,
+          "balanced_accuracy": 0.45098192543946,
+          "directional_correct_count": 841,
+          "directional_hit_rate": 0.42113169754631946,
+          "log_loss": 1.0323077526179165,
+          "long_count": 1804,
+          "macro_f1": 0.4217758307291863,
+          "mean_probability": {
+            "flat": 0.3555478529496626,
+            "long": 0.3511537910642729,
+            "short": 0.29329835579934227
+          },
+          "mean_probability_margin": 0.10296827336127987,
+          "rows": 12210,
+          "short_count": 193,
+          "signal_count": 1997,
+          "signal_coverage": 0.16355446355446354
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "registry_output": {
+    "hash_policy": "lf_normalized_text_register",
+    "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+    "rows": 224,
+    "sha256": "cc5ae682a2a6561334adaab8f44fa6ea33b8bfb3953ed1dce92531776670720b",
+    "upserted_rows": 1
+  },
+  "run_id": "run11F_xgb_dart_booster_probe_v1",
+  "run_number": "run11F",
+  "selected_variant": {
+    "characteristic_score": 0.6965806141150721,
+    "description": "DART booster with shallow depth, low dropout, and conservative regularization.",
+    "feature_importance": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/results/variant_importance/dart_v01_depth3_lowdrop_feature_importance.csv",
+      "sha256": "8006194e1ad4e95580dfd793d84244ee2fbfe0f9dc459c2a8f37df5e685a114e",
+      "top10_gain_share": 0.3968416994763023,
+      "top_features": [
+        {
+          "feature": "hl_range",
+          "gain": 48.746437072753906,
+          "gain_share": 0.08773990541964825
+        },
+        {
+          "feature": "historical_vol_20",
+          "gain": 31.361120223999023,
+          "gain_share": 0.056447648024020816
+        },
+        {
+          "feature": "close_ema20_ratio",
+          "gain": 20.37040138244629,
+          "gain_share": 0.03666518412388938
+        },
+        {
+          "feature": "roc_12",
+          "gain": 18.59871482849121,
+          "gain_share": 0.033476282123825744
+        },
+        {
+          "feature": "minutes_from_cash_open",
+          "gain": 18.328611373901367,
+          "gain_share": 0.03299011630366821
+        },
+        {
+          "feature": "is_first_30m_after_open",
+          "gain": 17.642276763916016,
+          "gain_share": 0.03175476583740809
+        },
+        {
+          "feature": "mega8_dispersion_5",
+          "gain": 16.927885055541992,
+          "gain_share": 0.030468914712909148
+        },
+        {
+          "feature": "close_ema50_ratio",
+          "gain": 16.862699508666992,
+          "gain_share": 0.03035158565132041
+        },
+        {
+          "feature": "ppo_hist_12_26_9",
+          "gain": 16.752843856811523,
+          "gain_share": 0.030153853774235184
+        },
+        {
+          "feature": "sma50_sma200_ratio",
+          "gain": 14.885870933532715,
+          "gain_share": 0.026793443505377094
+        }
+      ]
+    },
+    "idea_id": "dart_lowdrop_regularized_boosting",
+    "metrics": {
+      "oos": {
+        "accuracy": 0.45042194092827004,
+        "balanced_accuracy": 0.43686756700695856,
+        "directional_correct_count": 595,
+        "directional_hit_rate": 0.42774982027318476,
+        "log_loss": 1.0496737970758083,
+        "long_count": 1171,
+        "macro_f1": 0.40551020024340323,
+        "mean_probability": {
+          "flat": 0.3307288686218298,
+          "long": 0.36496294939198887,
+          "short": 0.3043081814419274
+        },
+        "mean_probability_margin": 0.08283634388520685,
+        "rows": 7584,
+        "short_count": 220,
+        "signal_count": 1391,
+        "signal_coverage": 0.18341244725738395
+      },
+      "probability_checks": {
+        "finite": true,
+        "row_sum_max_abs_error": 8.940696716308594e-08
+      },
+      "train": {
+        "accuracy": 0.4479843953185956,
+        "balanced_accuracy": 0.43848889392411206,
+        "directional_correct_count": 1959,
+        "directional_hit_rate": 0.5847761194029851,
+        "log_loss": 1.0558044507202469,
+        "long_count": 2638,
+        "macro_f1": 0.42663957715847234,
+        "mean_probability": {
+          "flat": 0.3308632196328836,
+          "long": 0.35928797541755675,
+          "short": 0.30984880466144943
+        },
+        "mean_probability_margin": 0.06504350813350086,
+        "rows": 29222,
+        "short_count": 712,
+        "signal_count": 3350,
+        "signal_coverage": 0.11463965505441107
+      },
+      "validation": {
+        "accuracy": 0.4586550182852499,
+        "balanced_accuracy": 0.4415972390682505,
+        "directional_correct_count": 824,
+        "directional_hit_rate": 0.4184865413915693,
+        "log_loss": 1.0510467460187567,
+        "long_count": 1776,
+        "macro_f1": 0.41234841002306144,
+        "mean_probability": {
+          "flat": 0.3314076292546892,
+          "long": 0.3646106875839513,
+          "short": 0.30398168320071645
+        },
+        "mean_probability_margin": 0.08582192369498697,
+        "rows": 9844,
+        "short_count": 193,
+        "signal_count": 1969,
+        "signal_coverage": 0.20002031694433156
+      }
+    },
+    "probability_shape": {
+      "oos": {
+        "flat_mean": 0.3307288686218298,
+        "mean_entropy": 1.0732023834467155,
+        "mean_max_probability": 0.4142271345638462,
+        "nonflat_p50": 0.3759656399488449,
+        "nonflat_p90": 0.4272240698337555,
+        "probability_margin_mean": 0.08283634388520685,
+        "rows": 7584
+      },
+      "train": {
+        "flat_mean": 0.3308632196328836,
+        "mean_entropy": 1.0813572577453412,
+        "mean_max_probability": 0.3979078868726434,
+        "nonflat_p50": 0.36771392822265625,
+        "nonflat_p90": 0.41561703681945805,
+        "probability_margin_mean": 0.06504350813350086,
+        "rows": 29222
+      },
+      "validation": {
+        "flat_mean": 0.3314076292546892,
+        "mean_entropy": 1.0719691391249544,
+        "mean_max_probability": 0.41554468673378026,
+        "nonflat_p50": 0.3686631917953491,
+        "nonflat_p90": 0.4409220218658447,
+        "probability_margin_mean": 0.08582192369498697,
+        "rows": 9844
+      }
+    },
+    "spec": {
+      "booster": "dart",
+      "colsample_bytree": 0.75,
+      "description": "DART booster with shallow depth, low dropout, and conservative regularization.",
+      "gamma": 0.02,
+      "idea_id": "dart_lowdrop_regularized_boosting",
+      "learning_rate": 0.04,
+      "max_depth": 3,
+      "min_child_weight": 3.0,
+      "n_estimators": 80,
+      "normalize_type": "tree",
+      "one_drop": null,
+      "random_state": 1911,
+      "rate_drop": 0.05,
+      "reg_alpha": 0.1,
+      "reg_lambda": 8.0,
+      "sample_type": "uniform",
+      "sample_weight_policy": "none",
+      "skip_drop": 0.6,
+      "subsample": 0.75,
+      "variant_id": "dart_v01_depth3_lowdrop"
+    },
+    "threshold": 0.4119892477989197,
+    "training_sample": {
+      "class_counts": {
+        "0": 9064,
+        "1": 9643,
+        "2": 10515
+      },
+      "feature_count": 58,
+      "sample_weight_policy": "none",
+      "train_rows": 29222
+    },
+    "variant_id": "dart_v01_depth3_lowdrop"
+  },
+  "stage17_stop_recommendation": "keep_stage17_open_for_dart_followup_attribution",
+  "stage_id": "17_model_family_challenge__xgboost_regularized_boosting_scout",
+  "validation_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 312.9,
+    "balance_drawdown_maximal_percent": 62.58,
+    "deal_count": 582,
+    "equity_drawdown_maximal_amount": 388.24,
+    "equity_drawdown_maximal_percent": 77.65,
+    "expectancy": 0.43,
+    "feature_ready_count": 12210,
+    "fill_count": 538,
+    "fill_rate": 1.0,
+    "gross_loss": -1478.24,
+    "gross_profit": 1603.41,
+    "long_trade_count": 240,
+    "long_win_rate_percent": 53.75,
+    "losing_trade_count": 137,
+    "loss_rate_percent": 47.08,
+    "max_drawdown_amount": 388.24,
+    "max_drawdown_percent": 77.65,
+    "missing_required_metrics": [],
+    "model_fail_count": 40598,
+    "model_ok_count": 12210,
+    "net_profit": 125.17,
+    "no_tier_count": 40598,
+    "no_tier_labelable_rows": 203,
+    "order_attempt_count": 538,
+    "parsed_row_count": 1250,
+    "partial_context_subtype_counts": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    },
+    "profit_factor": 1.08,
+    "recovery_factor": 0.32,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run11F_xgb_dart_booster_probe_v1_routed_validation_is.htm",
+    "route_coverage_split": "validation",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 12210,
+    "sharpe_ratio": 0.49,
+    "short_trade_count": 51,
+    "short_win_rate_percent": 49.02,
+    "skip_count": 40598,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 7875,
+    "tier_a_long_count": 1776,
+    "tier_a_order_attempt_count": 512,
+    "tier_a_order_fill_count": 512,
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_a_short_count": 193,
+    "tier_a_used_count": 9844,
+    "tier_b_fallback_flat_count": 2306,
+    "tier_b_fallback_labelable_rows": 2366,
+    "tier_b_fallback_long_count": 56,
+    "tier_b_fallback_order_attempt_count": 26,
+    "tier_b_fallback_order_fill_count": 26,
+    "tier_b_fallback_short_count": 4,
+    "tier_b_fallback_used_count": 2366,
+    "trade_count": 291,
+    "win_rate_percent": 52.92,
+    "winning_trade_count": 154
+  },
+  "variant_artifacts": {
+    "variant_csv": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/results/xgb_variant_results.csv",
+      "sha256": "b9f35164b7666f401ee8c32fab27aca95246d52bbdfcb8bde6b597889cf22873"
+    },
+    "variant_json": {
+      "path": "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/02_runs/run11F_xgb_dart_booster_probe_v1/results/xgb_variant_results.json",
+      "sha256": "1ba2ac1df381f54e8ff3697f3257635f82d38746b3ae0316ff9f5f40cc670ec5"
+    }
+  }
+}

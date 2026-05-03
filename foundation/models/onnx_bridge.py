@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -70,6 +71,78 @@ def _onnx_output_shape(output: Any) -> list[Any]:
     return dims
 
 
+def _patch_onnxmltools_xgboost_dart_config() -> None:
+    """Teach the local onnxmltools converter to read DART's nested gbtree config."""
+
+    import onnxmltools.convert.xgboost.common as xgb_common
+    import onnxmltools.convert.xgboost.operator_converters.XGBoost as xgb_converter
+    import onnxmltools.convert.xgboost.shape_calculators.Classifier as xgb_classifier_shape
+
+    def get_xgb_params(xgb_node: Any) -> dict[str, Any]:
+        if hasattr(xgb_node, "get_xgb_params"):
+            params = xgb_node.get_xgb_params()
+        else:
+            params = dict(getattr(xgb_node, "__dict__", {}))
+
+        if hasattr(xgb_node, "get_booster"):
+            config = json.loads(xgb_node.get_booster().save_config())
+        else:
+            config = json.loads(xgb_node.save_config())
+
+        params = {key: value for key, value in params.items() if value is not None}
+        learner = config["learner"]
+        model_params = learner["learner_model_param"]
+        num_class = int(model_params["num_class"])
+        if num_class > 0:
+            params["num_class"] = num_class
+        if "n_estimators" not in params and getattr(xgb_node, "n_estimators", None) is not None:
+            params["n_estimators"] = xgb_node.n_estimators
+
+        base_score_raw = model_params.get("base_score")
+        if base_score_raw:
+            if base_score_raw.startswith("[") and base_score_raw.endswith("]"):
+                params["base_score"] = [float(value) for value in json.loads(base_score_raw)]
+            else:
+                params["base_score"] = [float(base_score_raw)]
+
+        params["n_targets"] = int(model_params.get("num_target", 1))
+        booster_params = learner.get("gradient_booster", {})
+        gbtree_params = booster_params.get("gbtree_model_param") or booster_params.get("gbtree", {}).get("gbtree_model_param")
+        if gbtree_params and "num_trees" in gbtree_params:
+            params["best_ntree_limit"] = int(gbtree_params["num_trees"])
+        return params
+
+    def scale_leaf_values(node: dict[str, Any], scale: float) -> None:
+        if "leaf" in node:
+            node["leaf"] = float(node["leaf"]) * float(scale)
+        for child in node.get("children", []) or []:
+            scale_leaf_values(child, scale)
+
+    xgb_common.get_xgb_params = get_xgb_params
+    xgb_converter.get_xgb_params = get_xgb_params
+    xgb_classifier_shape.get_xgb_params = get_xgb_params
+    if not getattr(xgb_converter.XGBConverter, "_obsidian_dart_weight_patch", False):
+        original_common_members = xgb_converter.XGBConverter.common_members
+
+        def common_members(xgb_node: Any, inputs: Any) -> tuple[Any, Any, Any, Any]:
+            objective, base_score, js_trees, best_ntree_limit = original_common_members(xgb_node, inputs)
+            if not hasattr(xgb_node, "get_booster"):
+                return objective, base_score, js_trees, best_ntree_limit
+            try:
+                raw = xgb_node.get_booster().save_raw(raw_format="json")
+                model_json = json.loads(raw.decode("utf-8") if isinstance(raw, (bytes, bytearray)) else raw)
+            except Exception:
+                return objective, base_score, js_trees, best_ntree_limit
+            weights = model_json.get("learner", {}).get("gradient_booster", {}).get("weight_drop") or []
+            if weights and len(weights) == len(js_trees):
+                for tree, weight in zip(js_trees, weights):
+                    scale_leaf_values(tree, float(weight))
+            return objective, base_score, js_trees, best_ntree_limit
+
+        xgb_converter.XGBConverter.common_members = staticmethod(common_members)
+        xgb_converter.XGBConverter._obsidian_dart_weight_patch = True
+
+
 def export_sklearn_to_onnx_zipmap_disabled(
     model: Any,
     output_path: Path,
@@ -116,6 +189,71 @@ def export_sklearn_to_onnx_zipmap_disabled(
         "zipmap_disabled": True,
         "outputs": outputs,
         "probability_output_name": probability_outputs[0] if probability_outputs else outputs[-1]["name"],
+    }
+
+
+def export_xgboost_classifier_to_onnx(
+    model: Any,
+    output_path: Path,
+    *,
+    feature_count: int,
+    input_name: str = "float_input",
+    target_opset: int = 13,
+    drop_label_output: bool = True,
+) -> dict[str, Any]:
+    _patch_onnxmltools_xgboost_dart_config()
+    from onnxmltools.convert import convert_xgboost
+    from onnxmltools.convert.common.data_types import FloatTensorType
+
+    onnx_model = convert_xgboost(
+        model,
+        initial_types=[(input_name, FloatTensorType([None, int(feature_count)]))],
+        target_opset=target_opset,
+    )
+    outputs_before = [
+        {
+            "name": output.name,
+            "value_type": output.type.WhichOneof("value"),
+            "shape": _onnx_output_shape(output),
+        }
+        for output in onnx_model.graph.output
+    ]
+    probability_outputs = [
+        item["name"]
+        for item in outputs_before
+        if len(item["shape"]) == 2 and item["shape"][-1] in {len(LABEL_ORDER), "N"}
+    ]
+    if drop_label_output and probability_outputs:
+        keep_name = probability_outputs[0]
+        keep_outputs = [output for output in onnx_model.graph.output if output.name == keep_name]
+        del onnx_model.graph.output[:]
+        onnx_model.graph.output.extend(keep_outputs)
+
+    io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
+    io_path(output_path).write_bytes(onnx_model.SerializeToString())
+    outputs = [
+        {
+            "name": output.name,
+            "value_type": output.type.WhichOneof("value"),
+            "shape": _onnx_output_shape(output),
+        }
+        for output in onnx_model.graph.output
+    ]
+    final_probability_outputs = [
+        item["name"]
+        for item in outputs
+        if len(item["shape"]) == 2 and item["shape"][-1] in {len(LABEL_ORDER), "N"}
+    ]
+    return {
+        "path": output_path.as_posix(),
+        "sha256": sha256_file(output_path),
+        "input_name": input_name,
+        "target_opset": target_opset,
+        "zipmap_disabled": True,
+        "label_output_dropped": bool(drop_label_output and probability_outputs),
+        "outputs_before_drop": outputs_before,
+        "outputs": outputs,
+        "probability_output_name": final_probability_outputs[0] if final_probability_outputs else outputs[-1]["name"],
     }
 
 

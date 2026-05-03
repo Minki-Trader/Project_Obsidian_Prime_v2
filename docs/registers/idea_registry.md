@@ -81,6 +81,8 @@
 
 | `IDEA-ST12-ET-PROBABILITY-SHAPE-ATTRIBUTION` | `12_model_family_challenge__extratrees_training_effect` | ExtraTrees(엑스트라 트리) 신호는 특정 probability-shape attribution regime(확률 모양 귀속 국면)에 집중될 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `runtime_probe_completed_inconclusive` | RUN03S(실행 03S); fold07(접힘 7) 제외; best bucket(최상위 구간) `thin_probability_edge` |
 
+| `IDEA-ST17-XGBOOST-REGULARIZED-BOOSTING` | `17_model_family_challenge__xgboost_regularized_boosting_scout` | XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) regularized boosting(규제 부스팅)이 기존 LightGBM/ExtraTrees/discriminant models(라이트GBM/엑스트라 트리/판별 모델)와 다른 probability shape(확률 모양), signal density(신호 밀도), validation/OOS(검증/표본외) 보존성을 만들 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `reviewed_closed_inconclusive` | Stage17(17단계)은 run11A~run11G(실행11A~실행11G)까지 확인하고 `closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G`로 닫음; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없음 |
+
 ## Rule
 
 Register ideas when they become durable work, not for every passing thought.
@@ -88,3 +90,4 @@ Register ideas when they become durable work, not for every passing thought.
 - 2026-05-03 Stage16 QDA run10 decision microprobe(16단계 QDA 실행10 결정 미세 탐침): full58 reg0.18 neighborhood(full58 정규화 0.18 주변)와 drop_mega10(대형주 10개 제거) 계열을 MT5(메타트레이더5) KPI(핵심성과지표)까지 재검증했다. recommendation(권고): `close_stage16_preserve_qda_clues`. 효과(effect, 효과): 반복 생존 여부를 close(닫기)/continue(진행) 판정에 연결한다.
 - 2026-05-03 Stage16 closeout(16단계 종료): QDA(이차 판별 분석)는 `closed_inconclusive_qda_class_covariance_runtime_probe_evidence`로 닫았다. 효과(effect, 효과): `run10I` 보존 단서와 full58(전체 58개 피처) reg0.18(정규화 0.18) OOS(표본외) spike(튀는 성과)를 실패 기억과 함께 남기고, 같은 single split(단일 분할) QDA micro-tuning(미세 조정)은 멈춘다.
 - 2026-05-03 Stage17 open-only(17단계 개방만): `17_topic_pending__open_only`를 topic pending(주제 보류)으로 열었다. 효과(effect, 효과): 새 topic(주제), model family(모델 계열), run(실행), KPI(핵심성과지표)는 아직 만들지 않는다.
+- 2026-05-03 Stage17 topic selection(17단계 주제 선택): `17_model_family_challenge__xgboost_regularized_boosting_scout`를 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) regularized boosting(규제 부스팅) 주제로 열었다. 효과(effect, 효과): 첫 XGBoost(익스지부스트) run(실행)을 설계할 수 있게 하되 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.

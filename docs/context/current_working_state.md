@@ -1,10 +1,30 @@
-﻿# Current Working State
+﻿## Latest Stage17 RUN11G Closeout(최신 17단계 실행11G 마감)
+
+Stage17(17단계)은 `run11G_xgb_dart_attribution_closeout_v1`에서 DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅) 귀속을 확인하고 닫혔다.
+
+효과(effect, 효과): Stage18(18단계)로 넘어갈 준비는 되었지만, 다음 모델 주제는 아직 선택하지 않았다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+## Latest Stage17 RUN11F Update(최신 17단계 실행11F 업데이트)
+
+Stage17(17단계)은 `run11F_xgb_dart_booster_probe_v1`로 DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅) 내부 부스터 축을 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 확인했다.
+
+효과(effect, 효과): DART ONNX(`Open Neural Network Exchange`, 오픈 뉴럴 네트워크 교환) weight_drop(드롭 가중치) 동등성을 보정한 뒤 `keep_stage17_open_for_dart_followup_attribution`로 기록했다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+## Latest Stage17 RUN11E Closeout(최신 17단계 실행11E 마감)
+
+Stage17(17단계)은 `run11E_xgb_feature_driver_saturation_v1`에서 새 feature driver(피처 동인)가 더 보이지 않아 closeout(마감)했다.
+
+효과(effect, 효과): XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) 특성 단서는 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+## Latest Stage17 RUN11D Update(최신 17단계 실행11D 업데이트)
+
+Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) trade shape attribution(거래 모양 귀속)을 완료했다.
+
+효과(effect, 효과): run11C의 MT5(`MetaTrader 5`, 메타트레이더5) KPI(`Key Performance Indicator`, 핵심성과지표) 근거를 재사용했고 `keep_stage17_open_for_probability_feature_driver_probe`로 판독했다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+# Current Working State
 
 - updated_on: `2026-05-03`
 - project_mode: `clean_stage_restart`
-- active_stage: `17_topic_pending__open_only(17단계 주제 보류 개방만)`
-- active_branch: `codex/stage14(Stage14 브랜치)`
-- current run(현재 실행): none(없음)
+- active_stage: `17_model_family_challenge__xgboost_regularized_boosting_scout(17단계 XGBoost 규제 부스팅 탐색)`
+- active_branch: `codex/stage17(Stage17 브랜치)`
+- current run(현재 실행): `run11G_xgb_dart_attribution_closeout_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
@@ -12,9 +32,24 @@ Stage16(16단계)는 QDA(`Quadratic Discriminant Analysis`, 이차 판별 분석
 
 효과(effect, 효과): recommendation(권고)은 `close_stage16_preserve_qda_clues`로 확정했다. 이 closeout(종료 기록)은 QDA(이차 판별 분석) 단서를 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
-Stage17(17단계)는 `17_topic_pending__open_only`로 주제 없이 열었다.
+Stage17(17단계)는 `17_model_family_challenge__xgboost_regularized_boosting_scout`로 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) regularized boosting(규제 부스팅) 주제를 끝까지 탐색하고 `run11G_xgb_dart_attribution_closeout_v1`에서 닫았다.
 
-효과(effect, 효과): 다음 주제는 아직 고르지 않았고, 현재 Stage17(17단계)에는 model family(모델 계열), run(실행), threshold(임계값), KPI(핵심성과지표), baseline(기준선), promotion(승격)이 없다.
+효과(effect, 효과): run11A~run11G(실행11A~실행11G)의 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심성과지표) 근거를 Stage17(17단계) 보존 단서로 남기고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+## Latest Stage17 RUN11A Update(최신 17단계 실행11A 업데이트)
+
+Stage17(17단계)은 `run11A_xgb_regularized_boosting_characteristic_scout_v1`로 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) 특성을 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)와 KPI(`Key Performance Indicator`, 핵심성과지표)까지 연결했다.
+
+효과(effect, 효과): `inconclusive_xgboost_characteristic_mt5_runtime_probe_completed`로 기록했다. XGBoost 특성은 보였지만, edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+## Latest Stage17 Closeout Update(최신 17단계 마감 업데이트)
+
+Stage17(17단계)은 run11B(실행11B) closeout(마감)을 성급한 판정으로 낮추고 run11C(실행11C) 방향 비대칭 탐침을 완료했다.
+
+효과(effect, 효과): `closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence`로 기록했다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+## Latest Stage17 RUN11C Update(최신 17단계 실행11C 업데이트)
+
+Stage17(17단계)은 `run11C_xgb_q80_direction_asymmetry_probe_v1`로 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) direction asymmetry(방향 비대칭)를 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심성과지표)까지 확인했다.
+
+효과(effect, 효과): run11B(실행11B)의 성급한 closeout(마감)을 교정하고 `close_stage17_no_new_direction_characteristic_after_run11C`로 기록했다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
 프로젝트는 clean stage restart(깨끗한 단계 재시작) 이후 Stage 02~09(2~9단계)를 닫았다.
@@ -83,11 +118,11 @@ Stage 09(9단계)는 pre-alpha handoff packet(알파 전 인계 묶음)을 닫�
 
 ## 현재 단계(Current Stage, 현재 단계)
 
-`17_topic_pending__open_only`
+`17_model_family_challenge__xgboost_regularized_boosting_scout`
 
-Stage17(17단계)의 질문(question, 질문)은 아직 정하지 않았다.
+Stage17(17단계)의 질문(question, 질문)은 XGBoost(익스지부스트) regularized boosting(규제 부스팅)이 기존 LightGBM(라이트GBM), ExtraTrees(엑스트라 트리), discriminant models(판별 모델)과 다른 probability shape(확률 모양)와 signal density(신호 밀도)를 만들 수 있는지다.
 
-효과(effect, 효과): Stage17(17단계)는 빈 stage shell(단계 껍데기)만 열려 있어, 사용자가 다음 topic(주제)을 정하면 그때부터 design(설계), run(실행), KPI(핵심성과지표) 기록을 시작한다.
+효과(effect, 효과): Stage17(17단계)는 `run11A` 특성 판독, `run11B` 거래빈도 압박, `run11C` 방향 비대칭, `run11D` 거래 모양 귀속, `run11E` feature driver(피처 동인) 포화, `run11F` DART(`Dropouts meet Multiple Additive Regression Trees`, 드롭아웃 부스팅), `run11G` DART 귀속 마감까지 확인하고 닫았다. 다음 단계(next stage, 다음 단계)는 아직 열지 않았다.
 
 ## 탐색 원칙(Exploration Rule, 탐색 원칙)
 

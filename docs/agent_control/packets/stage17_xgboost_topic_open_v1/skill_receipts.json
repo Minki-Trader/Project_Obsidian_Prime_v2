@@ -1,0 +1,130 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage17_xgboost_topic_open_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "hypothesis": "XGBoost regularized boosting may expose probability shape, signal density, and validation/OOS preservation behavior that differs from prior LogReg, LightGBM, ExtraTrees, MLP, SVM, LDA, and QDA probes.",
+      "baseline": "No trading baseline. Compare only against the fixed v2 data/label/split/model-input contracts and preserved clues from closed stages.",
+      "decision_use": "Decide whether Stage17 should proceed to broad XGBoost structural scout, WFO, or MT5 runtime_probe after the first evidence packet.",
+      "comparison_baseline": "No trading baseline. Compare only against the fixed v2 data/label/split/model-input contracts and preserved clues from closed stages.",
+      "control_variables": [
+        "FPMarkets US100 M5",
+        "58-feature model input contract",
+        "fwd12 label and split contract",
+        "Tier A/Tier B paired reporting"
+      ],
+      "changed_variables": [
+        "XGBoost model family",
+        "regularization strength",
+        "tree depth and leaf shape",
+        "learning rate",
+        "subsampling"
+      ],
+      "sample_scope": "Stage04 audited 58-feature model input and Stage03 training label/split contract.",
+      "success_criteria": "Tier A, Tier B, and Tier A+B combined views show enough repeated validation/OOS signal behavior to justify a next run.",
+      "failure_criteria": "Validation-only or OOS-only spikes, too-thin signals, or direct repeats of LightGBM/ExtraTrees failure structure.",
+      "invalid_conditions": [
+        "Treating Stage10/11/12/16 thresholds or context gates as a baseline",
+        "Omitting Tier B or combined records",
+        "Claiming alpha quality, edge, promotion, runtime authority, or selected baseline before evidence exists"
+      ],
+      "stop_conditions": [
+        "Do not micro-tune before a broad sweep",
+        "Downgrade single-split spikes before WFO",
+        "Stop at topic open if state sync fails"
+      ],
+      "evidence_plan": [
+        "Stage17 stage brief and input references",
+        "run11A manifest and prediction tables when executed",
+        "Stage and project ledgers when runs exist",
+        "State sync audit for topic-open state"
+      ]
+    },
+    {
+      "packet_id": "stage17_xgboost_topic_open_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/04_selected/selection_status.md"
+      ],
+      "active_stage": "17_model_family_challenge__xgboost_regularized_boosting_scout",
+      "current_run": "none_no_run_yet",
+      "detected_conflicts": [
+        "none_after_state_sync_audit"
+      ],
+      "allowed_claims": [
+        "stage17_xgboost_topic_opened",
+        "experiment_design_recorded",
+        "current_truth_synced"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "edge",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "selected_baseline"
+      ]
+    },
+    {
+      "packet_id": "stage17_xgboost_topic_open_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "exploration_lane": "Stage17 independent XGBoost regularized boosting model-family exploration design.",
+      "idea_id": "IDEA-ST17-XGBOOST-REGULARIZED-BOOSTING",
+      "hypothesis": "XGBoost regularized boosting can reveal different probability and signal-density behavior from previously closed model-family topics.",
+      "legacy_relation": "none",
+      "tier_scope": "Tier A + Tier B combined",
+      "idea_boundary": "topic pivot open; no baseline, model artifact, run result, or operating selection.",
+      "broad_sweep": "Regularization, depth, learning rate, and subsampling ranges before any micro-search.",
+      "extreme_sweep": "Include shallow/regularized and deeper/less-regularized boundary variants if the first structural scout proceeds.",
+      "micro_search_gate": "Only micro-tune after multiple adjacent settings preserve validation/OOS behavior.",
+      "wfo_plan": "Use WFO as the default robustness frame after a coarse scout produces a candidate surface.",
+      "failure_memory": "Record validation-only spikes, OOS-only spikes, thin signals, and LightGBM/ExtraTrees-like failure as reusable negative memory.",
+      "negative_memory_effect": "Future failures are recorded as reusable evidence and should prevent repeating LightGBM/ExtraTrees-like dead ends.",
+      "evidence_boundary": "topic_open_scout_only_not_selected_not_promotion",
+      "operating_claim_boundary": "No alpha quality, edge, promotion candidate, operating promotion, runtime authority, or selected baseline."
+    },
+    {
+      "packet_id": "stage17_xgboost_topic_open_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "docs/decisions/2026-05-03_stage16_qda_closeout_stage17_open.md"
+      ],
+      "produced_artifacts": [
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/00_spec/stage_brief.md",
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/01_inputs/input_references.md",
+        "docs/decisions/2026-05-03_stage17_xgboost_regularized_boosting_open.md"
+      ],
+      "raw_evidence": [
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/stage17_xgboost_topic_state_sync_audit.json"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/stage17_xgboost_topic_open_v1/work_packet.yaml",
+        "docs/agent_control/packets/stage17_xgboost_topic_open_v1/skill_receipts.json"
+      ],
+      "human_readable": [
+        "docs/agent_control/packets/stage17_xgboost_topic_open_v1/open_report.md",
+        "docs/decisions/2026-05-03_stage17_xgboost_regularized_boosting_open.md"
+      ],
+      "hashes_or_missing_reasons": "No model, ONNX, MT5, or run artifact exists yet because Stage17 was only opened as a topic.",
+      "lineage_boundary": "stage topic-open lineage only; no runtime or trading-result claim."
+    },
+    {
+      "packet_id": "stage17_xgboost_topic_open_v1",
+      "skill": "obsidian-environment-reproducibility",
+      "status": "executed",
+      "environment_assumptions": "Windows PowerShell workspace on branch codex/stage17; xgboost, lightgbm, and sklearn imports are available in the current Python environment.",
+      "dependency_or_runtime_surface": "No new dependency, model training, or MT5 runtime run was introduced by the stage topic open.",
+      "clean_checkout_boundary": "Stage17 XGBoost scaffold is tracked text evidence and can be reproduced from git.",
+      "reproducibility_gaps": "First XGBoost run has not been executed, so model artifact reproducibility remains future work."
+    }
+  ]
+}
