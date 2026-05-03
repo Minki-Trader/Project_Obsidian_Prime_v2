@@ -1,0 +1,55 @@
+{
+  "run_number": "run08J",
+  "run_id": "run08J_qda_external16_feature_geometry_characterization_v1",
+  "variant_id": "v10_external16_feature_geometry_reg050",
+  "idea_id": "external_context_covariance_geometry",
+  "description": "QDA on macro and mega-cap proxy context features.",
+  "packet_id": "stage16_qda_run08A_run08J_characterization_v1",
+  "stage_id": "16_model_family_challenge__qda_class_covariance_scout",
+  "model_family": "sklearn_qda_discriminant_family",
+  "boundary": "qda_characterization_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "judgment": "inconclusive_qda_characterization_structural_scout_completed",
+  "external_verification_status": "out_of_scope_by_claim",
+  "shape_score": 0.9506362640451873,
+  "thresholds": {
+    "tier_a": 0.7605649378430333,
+    "tier_b": 0.9763239304712927
+  },
+  "feature_mode": "external16",
+  "feature_count": 16,
+  "rows_per_class": 600,
+  "reg_param": 0.05,
+  "validation": {
+    "signal_coverage": 0.10006095083299472,
+    "signal_count": 985,
+    "directional_hit_rate": 0.41116751269035534,
+    "log_loss": 1.7904990536503904
+  },
+  "oos": {
+    "signal_coverage": 0.07370780590717299,
+    "signal_count": 559,
+    "directional_hit_rate": 0.39177101967799643,
+    "log_loss": 1.6700828907527188
+  },
+  "model_artifacts": {
+    "variant_id": "v10_external16_feature_geometry_reg050",
+    "tier_a_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08J_qda_external16_feature_geometry_characterization_v1/models/v10_external16_feature_geometry_reg050_tier_a_qda.joblib",
+      "sha256": "67673b83e477dad0d0c21c022fbe1e6d8a7d1f1173caa4483c363ba401270ffd"
+    },
+    "tier_b_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08J_qda_external16_feature_geometry_characterization_v1/models/v10_external16_feature_geometry_reg050_tier_b_qda_core42.joblib",
+      "sha256": "8e956425e5b4eae1758b1b31e9b6f73098423ba6334f89cc78b7fe7d45e1db73"
+    }
+  },
+  "characteristic_artifacts": {
+    "characteristic_json": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08J_qda_external16_feature_geometry_characterization_v1/results/qda_characteristic_result.json",
+      "sha256": "93e77819d5f68a6a264e7de0762b04f98f28e83ba9dd9d181491538262a7db6f"
+    },
+    "characteristic_csv": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08J_qda_external16_feature_geometry_characterization_v1/results/qda_characteristic_result.csv",
+      "sha256": "8e7ae844dc3781b46ab4533c47bd98c9e427ff0de79c14c3ebfae22bb310650f"
+    }
+  }
+}

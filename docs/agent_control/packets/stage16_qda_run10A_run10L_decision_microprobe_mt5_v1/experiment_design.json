@@ -1,0 +1,34 @@
+{
+  "hypothesis": "QDA(이차판별분석) run09D full58 reg0.18 OOS(표본외) 급등과 run09G drop_mega10(대형주 10개 제거) 안정 단서 중 하나가 nearby setting(인접 설정)에서 반복되면 Stage16(16단계)을 한 번 더 진행할 가치가 있다.",
+  "decision_use": "Stage16(16단계)을 close(닫기)할지, continue(진행)할지 정한다.",
+  "comparison_baseline": "run09D_qda_reg018_full58_followup_v1",
+  "control_variables": {
+    "symbol": "FPMarkets US100",
+    "timeframe": "M5",
+    "label": "label_v1_fwd12_m5_logret_train_q33_3class",
+    "split": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+    "routing": "Tier A primary + Tier B fallback(Tier A 우선 + Tier B 대체)",
+    "max_hold_bars": 12,
+    "threshold_method": "validation nonflat coverage quantile(검증 비평탄 커버리지 분위수), not profit-searched(수익 최적화 아님)"
+  },
+  "changed_variables": [
+    "full58 reg0.16/0.18/0.20 and q88/q92",
+    "drop_mega10 reg0.12/0.15/0.18/0.20 and q85/q88/q93",
+    "new random_state(새 표본 난수) resample"
+  ],
+  "sample_scope": "Tier A full-context(전체 문맥) plus Tier B partial-context fallback(부분 문맥 대체), validation(검증) and OOS(표본외) MT5 Strategy Tester(전략 테스터).",
+  "success_criteria": "같은 family(계열)에서 strong survivor(강한 생존 변형)가 2개 이상 나오고 MT5/KPI parser(파서) 오류가 없다.",
+  "failure_criteria": "좋은 수치가 한 점에만 남거나 validation/OOS(검증/표본외)가 갈라진다.",
+  "invalid_conditions": "MT5(메타트레이더5) 출력 누락, ONNX(온닉스) parity(동등성) 실패, feature order(피처 순서) 불일치, KPI parser(파서) 오류, ledger(장부) 누락.",
+  "stop_conditions": "strong survivor(강한 생존 변형)가 반복되지 않으면 Stage16(16단계)은 close(닫기) 권고로 닫고 QDA(이차판별분석) 단서만 보존한다.",
+  "evidence_plan": [
+    "run_manifest.json",
+    "kpi_record.json",
+    "MT5 Strategy Tester reports",
+    "normalized_kpi_summary.csv",
+    "trade_attribution_summary.csv",
+    "decision_recommendation.json",
+    "stage/project alpha ledgers",
+    "gate JSON files"
+  ]
+}

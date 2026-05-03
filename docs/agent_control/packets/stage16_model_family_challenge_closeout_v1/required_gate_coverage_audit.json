@@ -1,0 +1,18 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "packet_id": "stage16_model_family_challenge_closeout_v1",
+  "required_gates": [
+    "stage_closeout_evidence_gate",
+    "state_sync_audit",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "covered_by": {
+    "stage_closeout_evidence_gate": "docs/agent_control/packets/stage16_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json",
+    "state_sync_audit": "stages/17_topic_pending__open_only/03_reviews/stage17_open_state_sync_audit.json",
+    "required_gate_coverage_audit": "docs/agent_control/packets/stage16_model_family_challenge_closeout_v1/required_gate_coverage_audit.json",
+    "final_claim_guard": "docs/agent_control/packets/stage16_model_family_challenge_closeout_v1/final_claim_guard.json"
+  }
+}

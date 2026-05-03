@@ -1050,11 +1050,13 @@ def _variant_id(payload: Mapping[str, Any]) -> str | None:
 
 
 def _idea_id(run_row: Mapping[str, str]) -> str:
-    return str(run_row.get("judgment") or run_row.get("run_id") or "")
+    return str(run_row.get("idea_id") or run_row.get("judgment") or run_row.get("run_id") or "")
 
 
 def _model_family(run_id: str) -> str | None:
     lowered = run_id.lower()
+    if "qda" in lowered:
+        return "sklearn_qda_discriminant_family"
     if "logreg" in lowered:
         return "sklearn_logistic_regression_multiclass"
     if "lgbm" in lowered:
@@ -1065,6 +1067,8 @@ def _model_family(run_id: str) -> str | None:
 
 
 def _stage_inheritance(kpi_payload: Mapping[str, Any], run_id: str) -> bool | None:
+    if "stage_inheritance" in kpi_payload:
+        return bool(kpi_payload["stage_inheritance"])
     if "stage10_11_inheritance" in kpi_payload:
         return bool(kpi_payload["stage10_11_inheritance"])
     boundary = kpi_payload.get("standalone_boundary")

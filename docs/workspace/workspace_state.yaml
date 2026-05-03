@@ -1,8 +1,8 @@
-updated_on: '2026-05-02'
+updated_on: '2026-05-03'
 project_mode: clean_stage_restart
 active_branch: codex/stage14
-active_stage: 15_model_family_challenge__untried_learning_methods_scout
-current_run_id: run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1
+active_stage: 17_topic_pending__open_only
+current_run_id: ''
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,12 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_qda_open_only_after_lda_closeout
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_open_topic_pending
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 15 as open_with_qda_design_open_only_after_lda_closeout; independent untried model learning methods topic, not a Stage 10/11/12/13/14 baseline continuation
+- treat Stage 16 as reviewed_closed after QDA class-specific covariance run08-run10 exploration; preserve QDA clues, not a baseline or promotion
+- treat Stage 17 as open_topic_pending_no_run; topic is intentionally not selected yet, with no model family, run, baseline, promotion, or runtime authority
+- treat Stage 15 as reviewed_closed after LDA covariance stability closeout; preserve LDA covariance shrinkage clues, not a baseline or promotion
 - treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임 탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
 - treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not baseline selection(기준선 선택), unless an
@@ -49,7 +51,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_qda_open_only_after_lda_closeout
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_open_topic_pending
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -104,7 +106,17 @@ pre_alpha_stage_queue:
     stage15:
       stage_id: 15_model_family_challenge__untried_learning_methods_scout
       ownership: independent untried model learning methods scout after Stage14 closeout
-      status: open_qda_design_only_no_run_yet_after_lda_closeout
+      status: reviewed_closed_stage16_opened
+      current_run_id: run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1
+    stage16:
+      stage_id: 16_model_family_challenge__qda_class_covariance_scout
+      ownership: independent QDA class-specific covariance scout after Stage15 LDA closeout
+      status: reviewed_closed_stage17_opened
+      current_run_id: run10B_qda_reg018_full58_resample_decision_microprobe_v1
+    stage17:
+      stage_id: 17_topic_pending__open_only
+      ownership: topic pending placeholder opened after Stage16 closeout
+      status: open_topic_pending_no_run
 stage13_mlp_characteristic_runtime_probe:
   run_id: run04A_mlp_characteristic_runtime_probe_v1
   status: completed
@@ -238,20 +250,119 @@ stage14_margin_kernel_training_effect:
   next_action: stage15_opened_as_independent_untried_learning_methods_topic
 stage15_untried_learning_methods:
   stage_id: 15_model_family_challenge__untried_learning_methods_scout
-  status: open_stage15_with_qda_design_open_only_after_lda_closeout
+  status: reviewed_closed_stage16_opened
   lane: independent_model_family_topic_pivot_no_promotion
   model_family: sklearn_lda_discriminant_family
-  next_model_family: sklearn_qda_discriminant_family
-  next_topic_status: qda_design_open_only_no_run_no_mt5_no_kpi
   current_run_id: run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1
-  current_status: run07A_run07J_lda_topic_closed_reviewed; qda_next_topic_open_only_no_run
+  current_status: run06A_run06J_and_run07A_run07J_lda_topic_closed_reviewed
   hypothesis: Untried model learning methods may expose different training behavior, probability shape, and signal density from prior LogReg, LightGBM, ExtraTrees, MLP, and SVM probes.
-  comparison_baseline: no trading baseline; compare only against fixed data contract and within-stage Stage15 variants after runs exist
-  boundary: design_open_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  comparison_baseline: no trading baseline; compare only against fixed data contract and within-stage Stage15 LDA variants
+  boundary: closed_inconclusive_lda_covariance_stability_runtime_probe_evidence_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/15_model_family_challenge__untried_learning_methods_scout/00_spec/stage_brief.md
   input_references_path: stages/15_model_family_challenge__untried_learning_methods_scout/01_inputs/input_references.md
   selection_status_path: stages/15_model_family_challenge__untried_learning_methods_scout/04_selected/selection_status.md
-  next_action: design_qda_probe_when_user_approves
+  closeout_packet_path: stages/15_model_family_challenge__untried_learning_methods_scout/03_reviews/stage15_closeout_packet.md
+  closeout_decision_path: docs/decisions/2026-05-02_stage15_untried_learning_methods_closeout.md
+  next_action: stage16_opened_as_qda_class_covariance_topic
+stage16_qda_class_covariance_scout:
+  stage_id: 16_model_family_challenge__qda_class_covariance_scout
+  status: reviewed_closed_stage17_opened
+  lane: stage16_closeout_topic_pivot_no_promotion
+  model_family: sklearn_qda_discriminant_family
+  current_run_id: run10B_qda_reg018_full58_resample_decision_microprobe_v1
+  current_status: run08A_run10L_qda_topic_closed_reviewed
+  judgment: closed_inconclusive_qda_class_covariance_runtime_probe_evidence
+  source_clue: Stage15 LDA light covariance shrinkage clue; QDA tests class-specific covariance behavior without edge search
+  hypothesis: QDA class-specific covariance may show probability shape and signal-density behavior different from LDA under the same label and split contract.
+  comparison_baseline: no trading baseline; compare run08, run09, and run10 only as within-stage QDA evidence
+  boundary: closed_inconclusive_qda_class_covariance_runtime_probe_evidence_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/16_model_family_challenge__qda_class_covariance_scout/00_spec/stage_brief.md
+  input_references_path: stages/16_model_family_challenge__qda_class_covariance_scout/01_inputs/input_references.md
+  selection_status_path: stages/16_model_family_challenge__qda_class_covariance_scout/04_selected/selection_status.md
+  closeout_packet_path: stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/stage16_closeout_packet.md
+  closeout_decision_path: docs/decisions/2026-05-03_stage16_qda_closeout_stage17_open.md
+  packet_summary_path: docs/agent_control/packets/stage16_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json
+  next_action: stage17_opened_topic_pending
+stage17_topic_pending_open_only:
+  stage_id: 17_topic_pending__open_only
+  status: open_topic_pending_no_run
+  lane: topic_pending_open_only_no_promotion
+  model_family: none
+  current_run_id: ''
+  current_status: no_run_yet
+  hypothesis: pending_user_topic_selection
+  comparison_baseline: none
+  boundary: stage17_open_only_topic_pending_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/17_topic_pending__open_only/00_spec/stage_brief.md
+  input_references_path: stages/17_topic_pending__open_only/01_inputs/input_references.md
+  selection_status_path: stages/17_topic_pending__open_only/04_selected/selection_status.md
+  next_action: wait_for_user_stage17_topic
+stage16_qda_characterization_run08A_run08J:
+  packet_id: stage16_qda_run08A_run08J_characterization_v1
+  status: reviewed_structural_scout_completed
+  judgment: inconclusive_qda_characterization_structural_scout_completed
+  run_range: run08A-run08J
+  completed_run_count: 10
+  python_ledger_row_count: 30
+  mt5_kpi_record_count: 0
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: qda_characterization_mt5_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/run08A_run08J_qda_characterization_packet.md
+  decision_path: docs/decisions/2026-05-02_stage16_qda_run08A_run08J_characterization.md
+  next_action: inspect_qda_mt5_kpi_before_any_followup_probe
+stage16_qda_run10_decision_microprobe:
+  packet_id: stage16_qda_run10A_run10L_decision_microprobe_mt5_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_qda_run10_decision_microprobe_mt5_completed
+  recommendation: close_stage16_preserve_qda_clues
+  run_range: run10A-run10L
+  current_run_id: run10B_qda_reg018_full58_resample_decision_microprobe_v1
+  completed_run_count: 12
+  mt5_kpi_record_count: 120
+  normalized_kpi_record_count: 120
+  trade_attribution_records: 72
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: qda_run10_decision_microprobe_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/run10A_run10L_qda_decision_microprobe_mt5_packet.md
+  decision_path: docs/decisions/2026-05-03_stage16_qda_run10A_run10L_decision_microprobe.md
+  next_action: close_stage16_preserve_qda_clues
+stage16_qda_run09_followup_mt5_runtime_probe:
+  packet_id: stage16_qda_run09A_run09Q_followup_mt5_runtime_probe_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_qda_run09_followup_mt5_runtime_probe_completed
+  run_range: run09A-run09Q
+  current_run_id: run09D_qda_reg018_full58_followup_v1
+  completed_run_count: 17
+  mt5_kpi_record_count: 170
+  normalized_kpi_record_count: 170
+  trade_attribution_records: 102
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: qda_run09_followup_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/run09A_run09Q_qda_followup_mt5_runtime_probe_packet.md
+  decision_path: docs/decisions/2026-05-03_stage16_qda_run09A_run09Q_followup.md
+  next_action: judge_qda_run09_followup_before_stage16_closeout_or_next_micro_probe
+stage16_qda_mt5_runtime_probe_run08A_run08J:
+  packet_id: stage16_qda_run08A_run08J_mt5_runtime_probe_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_qda_characterization_mt5_runtime_probe_completed
+  run_range: run08A-run08J
+  completed_run_count: 10
+  mt5_kpi_record_count: 100
+  normalized_kpi_record_count: 100
+  trade_attribution_records: 60
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: qda_characterization_mt5_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/run08A_run08J_qda_mt5_runtime_probe_packet.md
+  decision_path: docs/decisions/2026-05-02_stage16_qda_run08A_run08J_mt5_runtime_probe.md
+  next_action: inspect_qda_mt5_kpi_before_any_followup_probe
 stage15_lda_run06A_run06J_runtime_probe:
   packet_id: stage15_lda_run06A_run06J_runtime_probe_v1
   status: reviewed_runtime_probe_completed
@@ -281,7 +392,7 @@ stage15_lda_covariance_stability_probe:
   boundary: lda_covariance_stability_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   report_path: stages/15_model_family_challenge__untried_learning_methods_scout/03_reviews/run07A_run07J_lda_covariance_stability_packet.md
   decision_path: docs/decisions/2026-05-02_stage15_lda_covariance_stability_closeout.md
-  next_action: pivot_stage15_to_next_untried_learning_method
+  next_action: stage15_closeout_then_stage16_qda_topic_open
 stage01_raw_m5_inventory:
   run_id: 20260424_raw_m5_inventory
   status: complete

@@ -1,0 +1,17 @@
+{
+  "recommendation": "close_stage16_preserve_qda_clues",
+  "reason": "좋은 OOS(표본외) 숫자가 단일 지점에 치우쳤거나 validation(검증) 안정성이 충분히 반복되지 않았다.",
+  "selected_current_run_id": "run10B_qda_reg018_full58_resample_decision_microprobe_v1",
+  "selected_current_run_number": "run10B",
+  "survivors_by_family": {
+    "drop_mega10": [
+      "run10I_qda_reg020_drop_mega10_decision_microprobe_v1"
+    ]
+  },
+  "survivor_count": 1,
+  "decision_rule": "continue(진행)는 같은 family(계열)에서 2개 이상 strong survivor(강한 생존 변형)가 나올 때만 허용한다. 아니면 close(닫기)하고 단서를 보존한다.",
+  "strong_survivor_criteria": {
+    "validation": "net_profit > 0, profit_factor >= 1.0, trade_count >= 100",
+    "oos": "net_profit > 0, profit_factor >= 1.25, trade_count >= 100, max_drawdown_amount <= 220, recovery_factor >= 1.5"
+  }
+}

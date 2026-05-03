@@ -1,0 +1,55 @@
+{
+  "run_number": "run08H",
+  "run_id": "run08H_qda_large_sample1200_characterization_v1",
+  "variant_id": "v08_large_sample1200_reg050",
+  "idea_id": "larger_sample_covariance_stability",
+  "description": "QDA with more train rows per class under the anchor regularization.",
+  "packet_id": "stage16_qda_run08A_run08J_characterization_v1",
+  "stage_id": "16_model_family_challenge__qda_class_covariance_scout",
+  "model_family": "sklearn_qda_discriminant_family",
+  "boundary": "qda_characterization_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "judgment": "inconclusive_qda_characterization_structural_scout_completed",
+  "external_verification_status": "out_of_scope_by_claim",
+  "shape_score": 0.9039612218333195,
+  "thresholds": {
+    "tier_a": 0.9780608149089618,
+    "tier_b": 0.9752778737127448
+  },
+  "feature_mode": "full58",
+  "feature_count": 58,
+  "rows_per_class": 1200,
+  "reg_param": 0.05,
+  "validation": {
+    "signal_coverage": 0.10006095083299472,
+    "signal_count": 985,
+    "directional_hit_rate": 0.39695431472081216,
+    "log_loss": 2.639261647166325
+  },
+  "oos": {
+    "signal_coverage": 0.09335443037974683,
+    "signal_count": 708,
+    "directional_hit_rate": 0.3855932203389831,
+    "log_loss": 2.382922760697308
+  },
+  "model_artifacts": {
+    "variant_id": "v08_large_sample1200_reg050",
+    "tier_a_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08H_qda_large_sample1200_characterization_v1/models/v08_large_sample1200_reg050_tier_a_qda.joblib",
+      "sha256": "62e32dadd395a665f8655caf0a457f14471d6abac1cc021798193d5adf9ac982"
+    },
+    "tier_b_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08H_qda_large_sample1200_characterization_v1/models/v08_large_sample1200_reg050_tier_b_qda_core42.joblib",
+      "sha256": "8899b2956ca8baa4a6dd16f90311996f7017c70559f8c2eaaaaf1c7aacf2e866"
+    }
+  },
+  "characteristic_artifacts": {
+    "characteristic_json": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08H_qda_large_sample1200_characterization_v1/results/qda_characteristic_result.json",
+      "sha256": "bf5cc2dafd3b67e2d194fd9912c96f8a77eecabcc9e43c1c7127cc22861e0edb"
+    },
+    "characteristic_csv": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08H_qda_large_sample1200_characterization_v1/results/qda_characteristic_result.csv",
+      "sha256": "84dac4d42911c484cd8f188ef752ffe3b4db83394be205f117318dff5bfc9aa4"
+    }
+  }
+}

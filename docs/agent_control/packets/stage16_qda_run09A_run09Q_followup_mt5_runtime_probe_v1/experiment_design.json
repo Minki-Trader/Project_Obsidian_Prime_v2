@@ -1,0 +1,34 @@
+{
+  "hypothesis": "QDA run08F 주변에서 중간 정규화, full58 기반 피처 제거, 표본 크기, coverage 기반 임계값이 거래 가능한 KPI 모양을 바꾸는지 확인한다.",
+  "decision_use": "Stage16 QDA 후속 탐색을 계속 좁힐지, 또는 QDA를 부정/보존 단서로 닫을지 판단한다.",
+  "comparison_baseline": "run08F_qda_moderate_regularization150_characterization_v1",
+  "control_variables": {
+    "symbol": "FPMarkets US100",
+    "timeframe": "M5",
+    "label": "label_v1_fwd12_m5_logret_train_q33_3class",
+    "split": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+    "routing": "Tier A primary + Tier B fallback",
+    "max_hold_bars": 12,
+    "threshold_method": "validation nonflat coverage quantile, not profit-searched"
+  },
+  "changed_variables": [
+    "reg_param 0.08~0.25",
+    "full58 minus feature groups",
+    "rows_per_class 300/450/600/900",
+    "threshold_quantile q85/q93/q95"
+  ],
+  "sample_scope": "Tier A full-context model input plus Tier B partial-context fallback, validation and OOS tester windows.",
+  "success_criteria": "여러 축에서 validation/OOS routed KPI가 같이 나아지고 parser error 없이 KPI가 정규화된다.",
+  "failure_criteria": "개선이 한 축/한 split에만 머물거나, drawdown/trade shape가 나빠지거나, QDA가 피처/표본/임계값에 과민하게 흔들린다.",
+  "invalid_conditions": "MT5 출력 누락, ONNX parity 실패, feature order mismatch, parser error, missing run ledger.",
+  "stop_conditions": "run08F보다 좋은 단서가 없으면 QDA는 보존 단서로 낮추고 새 Stage 주제로 이동한다.",
+  "evidence_plan": [
+    "run_manifest.json",
+    "kpi_record.json",
+    "MT5 Strategy Tester reports",
+    "normalized_kpi_summary.csv",
+    "trade_attribution_summary.csv",
+    "stage/project alpha ledgers",
+    "gate JSON files"
+  ]
+}

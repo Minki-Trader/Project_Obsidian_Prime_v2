@@ -1,0 +1,55 @@
+{
+  "run_number": "run08A",
+  "run_id": "run08A_qda_near_raw_covariance_empirical_priors_characterization_v1",
+  "variant_id": "v01_near_raw_covariance_empirical_priors",
+  "idea_id": "near_raw_class_covariance_shape",
+  "description": "QDA with near-raw class covariance and empirical class priors.",
+  "packet_id": "stage16_qda_run08A_run08J_characterization_v1",
+  "stage_id": "16_model_family_challenge__qda_class_covariance_scout",
+  "model_family": "sklearn_qda_discriminant_family",
+  "boundary": "qda_characterization_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "judgment": "inconclusive_qda_characterization_structural_scout_completed",
+  "external_verification_status": "out_of_scope_by_claim",
+  "shape_score": 0.9228936214444416,
+  "thresholds": {
+    "tier_a": 0.9999941686680437,
+    "tier_b": 0.9992163907187297
+  },
+  "feature_mode": "full58",
+  "feature_count": 58,
+  "rows_per_class": 600,
+  "reg_param": 0.001,
+  "validation": {
+    "signal_coverage": 0.10006095083299472,
+    "signal_count": 985,
+    "directional_hit_rate": 0.40913705583756343,
+    "log_loss": 4.845609485754468
+  },
+  "oos": {
+    "signal_coverage": 0.14649261603375527,
+    "signal_count": 1111,
+    "directional_hit_rate": 0.37803780378037805,
+    "log_loss": 5.371187737939703
+  },
+  "model_artifacts": {
+    "variant_id": "v01_near_raw_covariance_empirical_priors",
+    "tier_a_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08A_qda_near_raw_covariance_empirical_priors_characterization_v1/models/v01_near_raw_covariance_empirical_priors_tier_a_qda.joblib",
+      "sha256": "ef4a1cb7f0511f354ff61a0b0f98b52b2bfd19e359e6cc9556b77dfb41237423"
+    },
+    "tier_b_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08A_qda_near_raw_covariance_empirical_priors_characterization_v1/models/v01_near_raw_covariance_empirical_priors_tier_b_qda_core42.joblib",
+      "sha256": "ff12d49d58763250badb32fb07c6687f20f8a16007a4fd678b5f8a05f18d821c"
+    }
+  },
+  "characteristic_artifacts": {
+    "characteristic_json": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08A_qda_near_raw_covariance_empirical_priors_characterization_v1/results/qda_characteristic_result.json",
+      "sha256": "41ff15ef46422aa6353f1d914fe34cbda329a8ab03f97cbd8a4f48f08d721dbf"
+    },
+    "characteristic_csv": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08A_qda_near_raw_covariance_empirical_priors_characterization_v1/results/qda_characteristic_result.csv",
+      "sha256": "ea1994489228347ab9bbf0fad216328cedb5dd4eabc9f9814d1083878934a254"
+    }
+  }
+}

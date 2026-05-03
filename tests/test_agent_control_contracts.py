@@ -87,9 +87,19 @@ class AgentControlContractTests(unittest.TestCase):
 
 
 def _copy_agent_control_fixture(root: Path) -> Path:
-    shutil.copytree(ROOT / "docs/agent_control", root / "docs/agent_control")
+    shutil.copytree(
+        ROOT / "docs/agent_control",
+        root / "docs/agent_control",
+        ignore=_ignore_generated_packet_artifacts,
+    )
     shutil.copytree(ROOT / "docs/templates", root / "docs/templates")
     return root
+
+
+def _ignore_generated_packet_artifacts(directory: str, names: list[str]) -> set[str]:
+    if Path(directory).name == "agent_control":
+        return {"packets"} & set(names)
+    return set()
 
 
 if __name__ == "__main__":

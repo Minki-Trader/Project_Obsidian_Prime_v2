@@ -2,6 +2,7 @@
 
 | idea_id | stage_id | hypothesis | tier_scope | status | notes |
 |---|---|---|---|---|---|
+| `IDEA-ST16-QDA-CLASS-COVARIANCE` | `16_model_family_challenge__qda_class_covariance_scout` | QDA(`Quadratic Discriminant Analysis`, 이차 판별 분석)의 class-specific covariance(클래스별 공분산)가 Stage15(15단계) LDA(`Linear Discriminant Analysis`, 선형 판별 분석) shrinkage clue(공분산 수축 단서)를 더 유연한 판별 경계(discriminant boundary, 판별 경계)로 이어갈 수 있다 | `Tier A + Tier B combined(Tier A + Tier B 합산)` | `reviewed_closed_inconclusive` | Stage16(16단계) run08-run10(실행08-실행10) completed(완료); `run10I` drop_mega10(대형주 10개 제거) reg0.20(정규화 0.20)은 보존 단서이나 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 아님 |
 | `IDEA-ST11-LGBM-DIRECTION-LONG-ONLY` | `11_alpha_robustness__wfo_label_horizon_sensitivity` | LGBM(`LightGBM`, 라이트GBM) 실패가 direction-asymmetric(방향 비대칭)일 수 있고, long-only(롱만) 라우팅이 short(숏) 손상을 제거할 수 있다 | `Tier A + Tier B mixed(Tier A + Tier B 혼합)` | `runtime_probe_completed_inconclusive` | RUN02C(실행 02C); validation/OOS(검증/표본외) `-154.01/82.69` net profit(순수익); salvage value(회수 가치) 있음 |
 | `IDEA-ST11-LGBM-DIRECTION-SHORT-ONLY` | `11_alpha_robustness__wfo_label_horizon_sensitivity` | LGBM(라이트GBM) 실패가 direction-asymmetric(방향 비대칭)일 수 있고, short-only(숏만) 라우팅이 long(롱) 손상을 제거할 수 있다 | `Tier A + Tier B mixed(Tier A + Tier B 혼합)` | `runtime_probe_completed_weak` | RUN02D(실행 02D); OOS(표본외) `-211.48 / 0.31`로 약함 |
 | `IDEA-ST11-LGBM-EXTREME-CONFIDENCE` | `11_alpha_robustness__wfo_label_horizon_sensitivity` | LGBM(라이트GBM)은 extreme probability and margin(극단 확률과 마진)에서만 쓸 수 있을 수 있다 | `Tier A + Tier B mixed(Tier A + Tier B 혼합)` | `runtime_probe_completed_inconclusive` | RUN02E(실행 02E); OOS(표본외)는 `-6.35 / 0.96`로 거의 본전이나 validation(검증)이 약함 |
@@ -83,3 +84,7 @@
 ## Rule
 
 Register ideas when they become durable work, not for every passing thought.
+- 2026-05-03 Stage16 QDA run09 follow-up(16단계 QDA 실행09 후속 탐색): regularization(정규화), feature removal(피처 제거), sample size(표본 크기), coverage threshold(커버리지 임계값)를 MT5(메타트레이더5) KPI(핵심성과지표)까지 비교했다. 효과(effect, 효과): 보존 단서와 실패 기억을 Stage16 안에 남긴다.
+- 2026-05-03 Stage16 QDA run10 decision microprobe(16단계 QDA 실행10 결정 미세 탐침): full58 reg0.18 neighborhood(full58 정규화 0.18 주변)와 drop_mega10(대형주 10개 제거) 계열을 MT5(메타트레이더5) KPI(핵심성과지표)까지 재검증했다. recommendation(권고): `close_stage16_preserve_qda_clues`. 효과(effect, 효과): 반복 생존 여부를 close(닫기)/continue(진행) 판정에 연결한다.
+- 2026-05-03 Stage16 closeout(16단계 종료): QDA(이차 판별 분석)는 `closed_inconclusive_qda_class_covariance_runtime_probe_evidence`로 닫았다. 효과(effect, 효과): `run10I` 보존 단서와 full58(전체 58개 피처) reg0.18(정규화 0.18) OOS(표본외) spike(튀는 성과)를 실패 기억과 함께 남기고, 같은 single split(단일 분할) QDA micro-tuning(미세 조정)은 멈춘다.
+- 2026-05-03 Stage17 open-only(17단계 개방만): `17_topic_pending__open_only`를 topic pending(주제 보류)으로 열었다. 효과(effect, 효과): 새 topic(주제), model family(모델 계열), run(실행), KPI(핵심성과지표)는 아직 만들지 않는다.

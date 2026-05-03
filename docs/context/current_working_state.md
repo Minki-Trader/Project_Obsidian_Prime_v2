@@ -1,21 +1,20 @@
 ﻿# Current Working State
 
-- updated_on: `2026-05-02`
+- updated_on: `2026-05-03`
 - project_mode: `clean_stage_restart`
-- active_stage: `15_model_family_challenge__untried_learning_methods_scout(15단계 미탐색 학습법 탐색)`
+- active_stage: `17_topic_pending__open_only(17단계 주제 보류 개방만)`
 - active_branch: `codex/stage14(Stage14 브랜치)`
-- current run(현재 실행): `run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1`
+- current run(현재 실행): none(없음)
 
-## Latest Stage 15 Update(최신 Stage 15 업데이트)
+## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
-Stage15(15단계)는 LDA(`Linear Discriminant Analysis`, 선형 판별 분석) covariance stability(공분산 안정성)를 `run07A`~`run07J`로 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)까지 확인했고 LDA 소주제를 닫았다.
+Stage16(16단계)는 QDA(`Quadratic Discriminant Analysis`, 이차 판별 분석) `run08A`~`run10L` exploration(탐색)을 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)와 KPI(`Key Performance Indicator`, 핵심성과지표) 정규화까지 검토하고 닫았다.
 
-효과(effect, 효과): `closed_inconclusive_lda_covariance_stability_runtime_probe_evidence`로 기록했지만 alpha quality(알파 품질), edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+효과(effect, 효과): recommendation(권고)은 `close_stage16_preserve_qda_clues`로 확정했다. 이 closeout(종료 기록)은 QDA(이차 판별 분석) 단서를 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
-Stage15(15단계)는 다음 미탐색 학습법으로 QDA(`Quadratic Discriminant Analysis`, 이차 판별 분석)를 open-only(개시만) 상태로 열었다. 새 run(실행), MT5(`MetaTrader 5`, 메타트레이더5) 검증, KPI(`Key Performance Indicator`, 핵심성과지표), 결과 판정은 아직 만들지 않았다.
+Stage17(17단계)는 `17_topic_pending__open_only`로 주제 없이 열었다.
 
-효과(effect, 효과): LDA(선형 판별 분석)에서 보존한 covariance shrinkage(공분산 수축) 단서를 QDA(이차 판별 분석)의 class-specific covariance(클래스별 공분산) 질문으로 이어갈 수 있지만, 아직 탐색 결과나 성과 주장은 없다.
-
+효과(effect, 효과): 다음 주제는 아직 고르지 않았고, 현재 Stage17(17단계)에는 model family(모델 계열), run(실행), threshold(임계값), KPI(핵심성과지표), baseline(기준선), promotion(승격)이 없다.
 ## 쉬운 설명(Plain Read, 쉬운 설명)
 
 프로젝트는 clean stage restart(깨끗한 단계 재시작) 이후 Stage 02~09(2~9단계)를 닫았다.
@@ -84,11 +83,11 @@ Stage 09(9단계)는 pre-alpha handoff packet(알파 전 인계 묶음)을 닫�
 
 ## 현재 단계(Current Stage, 현재 단계)
 
-`15_model_family_challenge__untried_learning_methods_scout`
+`17_topic_pending__open_only`
 
-Stage15(15단계)의 질문(question, 질문)은 아직 독립 탐색으로 다루지 않은 model learning methods(모델 학습법)가 같은 데이터 계약(data contract, 데이터 계약) 위에서 어떤 training behavior(학습 행동), probability shape(확률 모양), signal density(신호 밀도)를 보이는지 알아가는 것이다.
+Stage17(17단계)의 질문(question, 질문)은 아직 정하지 않았다.
 
-효과(effect, 효과): Stage15(15단계)는 design-open(설계 개방) 상태라 baseline(기준선), alpha quality(알파 품질), edge(거래 우위), promotion(승격), runtime authority(런타임 권위)를 만들지 않는다.
+효과(effect, 효과): Stage17(17단계)는 빈 stage shell(단계 껍데기)만 열려 있어, 사용자가 다음 topic(주제)을 정하면 그때부터 design(설계), run(실행), KPI(핵심성과지표) 기록을 시작한다.
 
 ## 탐색 원칙(Exploration Rule, 탐색 원칙)
 

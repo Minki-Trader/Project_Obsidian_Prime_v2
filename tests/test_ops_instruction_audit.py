@@ -48,11 +48,21 @@ class OpsInstructionAuditTests(unittest.TestCase):
 
 
 def _copy_ops_fixture(root: Path) -> Path:
-    shutil.copytree(ROOT / "docs/agent_control", root / "docs/agent_control")
+    shutil.copytree(
+        ROOT / "docs/agent_control",
+        root / "docs/agent_control",
+        ignore=_ignore_generated_packet_artifacts,
+    )
     shutil.copytree(ROOT / "docs/policies", root / "docs/policies")
     shutil.copytree(ROOT / ".agents", root / ".agents")
     shutil.copy2(ROOT / "AGENTS.md", root / "AGENTS.md")
     return root
+
+
+def _ignore_generated_packet_artifacts(directory: str, names: list[str]) -> set[str]:
+    if Path(directory).name == "agent_control":
+        return {"packets"} & set(names)
+    return set()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,55 @@
+{
+  "run_number": "run08D",
+  "run_id": "run08D_qda_light_regularization010_characterization_v1",
+  "variant_id": "v04_light_regularization010",
+  "idea_id": "light_regularization_shape",
+  "description": "QDA with light covariance regularization.",
+  "packet_id": "stage16_qda_run08A_run08J_characterization_v1",
+  "stage_id": "16_model_family_challenge__qda_class_covariance_scout",
+  "model_family": "sklearn_qda_discriminant_family",
+  "boundary": "qda_characterization_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "judgment": "inconclusive_qda_characterization_structural_scout_completed",
+  "external_verification_status": "out_of_scope_by_claim",
+  "shape_score": 0.8716302368703204,
+  "thresholds": {
+    "tier_a": 0.9999869760330286,
+    "tier_b": 0.9967589635056842
+  },
+  "feature_mode": "full58",
+  "feature_count": 58,
+  "rows_per_class": 600,
+  "reg_param": 0.01,
+  "validation": {
+    "signal_coverage": 0.10006095083299472,
+    "signal_count": 985,
+    "directional_hit_rate": 0.39898477157360407,
+    "log_loss": 4.170726406498041
+  },
+  "oos": {
+    "signal_coverage": 0.15545886075949367,
+    "signal_count": 1179,
+    "directional_hit_rate": 0.3808312128922816,
+    "log_loss": 4.936360781636995
+  },
+  "model_artifacts": {
+    "variant_id": "v04_light_regularization010",
+    "tier_a_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08D_qda_light_regularization010_characterization_v1/models/v04_light_regularization010_tier_a_qda.joblib",
+      "sha256": "5e000ff4d6400ae631f67cc2fdb6f62f0c5f3a73dd5f8a41308bbdba68f959af"
+    },
+    "tier_b_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08D_qda_light_regularization010_characterization_v1/models/v04_light_regularization010_tier_b_qda_core42.joblib",
+      "sha256": "36d0af81516b1951ea1644c272fad2ea713aadf3484a7ee752b3f548d66a94db"
+    }
+  },
+  "characteristic_artifacts": {
+    "characteristic_json": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08D_qda_light_regularization010_characterization_v1/results/qda_characteristic_result.json",
+      "sha256": "01c93cefcfef325ad53074effce7e597ea2920d162cd22d13a7d0d51094b0d2b"
+    },
+    "characteristic_csv": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08D_qda_light_regularization010_characterization_v1/results/qda_characteristic_result.csv",
+      "sha256": "3fd93ad6ab1d3086dd8205521ea8920bc7b9217903fdb8299bf87a52f9ce1428"
+    }
+  }
+}

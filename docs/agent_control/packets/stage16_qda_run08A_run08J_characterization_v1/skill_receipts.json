@@ -1,0 +1,38 @@
+{
+  "packet_id": "stage16_qda_run08A_run08J_characterization_v1",
+  "created_at_utc": "2026-05-02T14:03:10Z",
+  "receipts": [
+    {
+      "skill": "obsidian-experiment-design",
+      "status": "completed",
+      "hypothesis": "QDA class-specific covariance behavior can be characterized without profit or edge search.",
+      "decision_use": "Choose the next Stage16 question, not a baseline or promotion."
+    },
+    {
+      "skill": "obsidian-data-integrity",
+      "status": "completed",
+      "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "split_boundary": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+      "integrity_judgment": "usable_with_boundary"
+    },
+    {
+      "skill": "obsidian-model-validation",
+      "status": "completed",
+      "model_family": "sklearn_qda_discriminant_family",
+      "threshold_policy": "validation nonflat q0.90; not profit searched",
+      "validation_judgment": "exploratory"
+    },
+    {
+      "skill": "obsidian-artifact-lineage",
+      "status": "completed",
+      "availability": "generated_local_ignored_run_artifacts_with_manifest_and_hashes",
+      "lineage_judgment": "connected_with_boundary"
+    },
+    {
+      "skill": "obsidian-result-judgment",
+      "status": "completed",
+      "judgment_label": "inconclusive_qda_characterization_structural_scout_completed",
+      "claim_boundary": "qda_characterization_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
+    }
+  ]
+}

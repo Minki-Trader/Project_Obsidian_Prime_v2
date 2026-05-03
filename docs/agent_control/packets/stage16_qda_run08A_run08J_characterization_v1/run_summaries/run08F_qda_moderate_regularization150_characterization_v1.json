@@ -1,0 +1,55 @@
+{
+  "run_number": "run08F",
+  "run_id": "run08F_qda_moderate_regularization150_characterization_v1",
+  "variant_id": "v06_moderate_regularization150",
+  "idea_id": "moderate_regularization_shape",
+  "description": "QDA with stronger covariance regularization.",
+  "packet_id": "stage16_qda_run08A_run08J_characterization_v1",
+  "stage_id": "16_model_family_challenge__qda_class_covariance_scout",
+  "model_family": "sklearn_qda_discriminant_family",
+  "boundary": "qda_characterization_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "judgment": "inconclusive_qda_characterization_structural_scout_completed",
+  "external_verification_status": "out_of_scope_by_claim",
+  "shape_score": 0.8919280273864545,
+  "thresholds": {
+    "tier_a": 0.9749144094136479,
+    "tier_b": 0.9024330730965645
+  },
+  "feature_mode": "full58",
+  "feature_count": 58,
+  "rows_per_class": 600,
+  "reg_param": 0.15,
+  "validation": {
+    "signal_coverage": 0.10006095083299472,
+    "signal_count": 985,
+    "directional_hit_rate": 0.41116751269035534,
+    "log_loss": 2.566828441215175
+  },
+  "oos": {
+    "signal_coverage": 0.0792457805907173,
+    "signal_count": 601,
+    "directional_hit_rate": 0.4276206322795341,
+    "log_loss": 2.232284686567305
+  },
+  "model_artifacts": {
+    "variant_id": "v06_moderate_regularization150",
+    "tier_a_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08F_qda_moderate_regularization150_characterization_v1/models/v06_moderate_regularization150_tier_a_qda.joblib",
+      "sha256": "0c43b8edea02a3fdee3272eb84df2f7735c4bb7eec945209d035653660ebe22e"
+    },
+    "tier_b_joblib": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08F_qda_moderate_regularization150_characterization_v1/models/v06_moderate_regularization150_tier_b_qda_core42.joblib",
+      "sha256": "6a639be4b16a8bb9173c624bab30dfa2a68819e1e7df2360ebc0e200586b372c"
+    }
+  },
+  "characteristic_artifacts": {
+    "characteristic_json": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08F_qda_moderate_regularization150_characterization_v1/results/qda_characteristic_result.json",
+      "sha256": "eb05b20c6c5226bdf1aa8770d902ac2474cd6960d7adea9f5adace0e5ecd4cae"
+    },
+    "characteristic_csv": {
+      "path": "stages/16_model_family_challenge__qda_class_covariance_scout/02_runs/run08F_qda_moderate_regularization150_characterization_v1/results/qda_characteristic_result.csv",
+      "sha256": "2623a42bac81051f5f38629d4255ab830bd4aaef3b2e5f8a4a1d9913ac53ff4f"
+    }
+  }
+}
