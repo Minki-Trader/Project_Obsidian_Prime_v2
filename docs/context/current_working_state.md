@@ -1,4 +1,12 @@
-﻿## Latest Stage19 RUN13H Attribution Update(최신 19단계 실행13H 귀속 업데이트)
+﻿## Latest Stage19 RUN13M Deep Axis Update(최신 19단계 실행13M 심층 축 업데이트)
+
+Stage19(19단계)는 `run13M_ebm_deep_axis_followup_v1`에서 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) feature mask(피처 마스크), hold axis(보유 축), Tier B subtype(티어 B 하위유형), side axis(방향 축)을 추가로 확인했다.
+
+결과(result, 결과): `inconclusive_ebm_deep_axis_followup_completed`. best requested OOS hold(요청 축 표본외 최고 보유)는 `4`이고 net(순손익)은 `134.3`이다. q90 hold6(q90 6봉) long-minus-short(매수-매도 차이)는 `11.56`이다.
+
+효과(effect, 효과): MT5(`MetaTrader 5`, 메타트레이더5) runtime probe(런타임 탐침)는 더 늘렸지만 edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage19 RUN13H Attribution Update(최신 19단계 실행13H 귀속 업데이트)
 
 Stage19(19단계)는 `run13H_ebm_feature_hold6_routing_attribution_v1`에서 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) feature contribution(피처 기여도), hold6/q90(6봉/q90), Tier A/B routing(티어 A/B 라우팅)을 해부했다.
 
@@ -71,7 +79,7 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 - project_mode: `clean_stage_restart`
 - active_stage: `19_model_family_challenge__ebm_explainable_boosting_shape(19단계 설명가능 부스팅 머신 형태 탐색)`
 - active_branch: `codex/stage19-ebm-attribution`
-- current run(현재 실행): `run13H_ebm_feature_hold6_routing_attribution_v1`
+- current run(현재 실행): `run13M_ebm_deep_axis_followup_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 

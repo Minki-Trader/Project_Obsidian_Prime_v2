@@ -1,0 +1,102 @@
+{
+  "feature_mask_read": {
+    "claim": "score_table_feature_mask_attribution_not_retrained_ablation",
+    "mask_axis_visible": true,
+    "strongest_oos_lost_signal_rate": 0.7849462365591398,
+    "strongest_oos_mask_id": "mask_top5_repeated",
+    "strongest_oos_tier_scope": "Tier A",
+    "top5_repeated_oos": [
+      {
+        "base_long_count": 480,
+        "base_short_count": 264,
+        "base_signal_count": 744,
+        "chosen_probability_drop_mean": 0.12934067109183467,
+        "decision_flip_count": 711,
+        "features_masked": [
+          "atr_14",
+          "ema9_ema20_diff",
+          "ema50_ema200_diff",
+          "ema20_ema50_diff",
+          "hl_zscore_50"
+        ],
+        "gained_signal_count": 124,
+        "lost_signal_count": 584,
+        "lost_signal_rate": 0.7849462365591398,
+        "mask_feature_count": 5,
+        "mask_id": "mask_top5_repeated",
+        "masked_long_count": 220,
+        "masked_short_count": 64,
+        "masked_signal_count": 284,
+        "max_abs_base_probability_diff": 0.0003010608961644956,
+        "retained_same_side_signal_count": 157,
+        "retained_same_side_signal_rate": 0.2110215053763441,
+        "row_count": 7584,
+        "split": "oos",
+        "tier_scope": "Tier A"
+      },
+      {
+        "base_long_count": 25,
+        "base_short_count": 8,
+        "base_signal_count": 33,
+        "chosen_probability_drop_mean": 0.08767631175411471,
+        "decision_flip_count": 27,
+        "features_masked": [
+          "atr_14",
+          "ema9_ema20_diff",
+          "ema50_ema200_diff",
+          "ema20_ema50_diff",
+          "hl_zscore_50"
+        ],
+        "gained_signal_count": 9,
+        "lost_signal_count": 18,
+        "lost_signal_rate": 0.5454545454545454,
+        "mask_feature_count": 5,
+        "mask_id": "mask_top5_repeated",
+        "masked_long_count": 22,
+        "masked_short_count": 2,
+        "masked_signal_count": 24,
+        "max_abs_base_probability_diff": 0.0002138329438786113,
+        "retained_same_side_signal_count": 15,
+        "retained_same_side_signal_rate": 0.45454545454545453,
+        "row_count": 1062,
+        "split": "oos",
+        "tier_scope": "Tier B"
+      }
+    ]
+  },
+  "max_probability_diff_by_scope": [
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_validation_is_feature_matrix.csv",
+      "max_abs_base_probability_diff": 0.0003484099349296832,
+      "row_count": 9844,
+      "split": "validation",
+      "threshold": 0.5426685369074962,
+      "tier_scope": "Tier A"
+    },
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_oos_feature_matrix.csv",
+      "max_abs_base_probability_diff": 0.0003010608961644956,
+      "row_count": 7584,
+      "split": "oos",
+      "threshold": 0.5426685369074962,
+      "tier_scope": "Tier A"
+    },
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_validation_is_feature_matrix.csv",
+      "max_abs_base_probability_diff": 0.0009867381734351977,
+      "row_count": 2366,
+      "split": "validation",
+      "threshold": 0.5217261933075719,
+      "tier_scope": "Tier B"
+    },
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_oos_feature_matrix.csv",
+      "max_abs_base_probability_diff": 0.0002138329438786113,
+      "row_count": 1062,
+      "split": "oos",
+      "threshold": 0.5217261933075719,
+      "tier_scope": "Tier B"
+    }
+  ],
+  "status": "passed"
+}

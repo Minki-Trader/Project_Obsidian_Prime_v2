@@ -1,0 +1,45 @@
+{
+  "artifact_hashes": {
+    "feature_mask_ablation": "e2cb89507e477637424d8e3107d197c00b909caac579983620ffc88830b46baf",
+    "hold_axis_q90": "b32ad5bcec864b29d96af73af0649911c681c642d64d40b2886b3a3dfced1301",
+    "kpi_record": "55c51e67f1fbcd6f871396cb6a04f350fae256ab5d39af6cd5ce5675cecba394",
+    "run_manifest": "ae95cfa080eb97c1a84397678cab2bb0f74fc3845ce446c07ed7f527feb9f0b9",
+    "side_asymmetry_q90_hold6": "e7588548a17d4d17d2987316f1966d3af4d69cdaaac9607c92e36cf841a48bc0",
+    "summary": "532ec4b8ee35eb72b3599fd76e4a422ed448c74f7a80471dfe0b8b252c2198f5",
+    "tier_b_subtype_breakdown": "65e0ce3ad0815ad13bee2a122688759eea9b528a79c3f5d82a969c6a5df5e13f"
+  },
+  "artifact_paths": {
+    "decision": "docs/decisions/2026-05-04_stage19_run13M_ebm_deep_axis_followup.md",
+    "feature_mask_ablation": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13M_ebm_deep_axis_followup_v1/results/feature_mask_ablation.csv",
+    "hold_axis_q90": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13M_ebm_deep_axis_followup_v1/results/hold_axis_q90.csv",
+    "kpi_record": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13M_ebm_deep_axis_followup_v1/kpi_record.json",
+    "report": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13M_ebm_deep_axis_followup_packet.md",
+    "run_manifest": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13M_ebm_deep_axis_followup_v1/run_manifest.json",
+    "side_asymmetry_q90_hold6": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13M_ebm_deep_axis_followup_v1/results/side_asymmetry_q90_hold6.csv",
+    "summary": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13M_ebm_deep_axis_followup_v1/summary.json",
+    "tier_b_subtype_breakdown": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13M_ebm_deep_axis_followup_v1/results/tier_b_subtype_breakdown.csv"
+  },
+  "availability": "tracked_packet_summary_with_generated_02_runs_artifacts",
+  "created_at_utc": "2026-05-04T14:55:06Z",
+  "lineage_judgment": "connected_with_boundary",
+  "packet_id": "stage19_run13M_ebm_deep_axis_followup_v1",
+  "producer": "stage_pipelines.stage19.ebm_deep_axis_followup",
+  "registry_links": {
+    "project_alpha_ledger": "docs/registers/alpha_run_ledger.csv",
+    "run_registry": "docs/registers/run_registry.csv",
+    "stage_run_ledger": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/stage_run_ledger.csv"
+  },
+  "source_inputs": {
+    "focus_packet": "docs/agent_control/packets/stage19_run13F_ebm_hold6_mt5_v1",
+    "focus_run_summary": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/summary.json",
+    "focus_tier_a_model": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13A_ebm_main_effect_shape_scout_v1/models/v01_main_effects_broad_bins_tier_a_ebm.joblib",
+    "focus_tier_b_model": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13A_ebm_main_effect_shape_scout_v1/models/v01_main_effects_broad_bins_tier_b_ebm_core42.joblib",
+    "run13H_summary": "docs/agent_control/packets/stage19_run13H_ebm_feature_hold6_routing_attribution_v1/run_summaries/run13H_ebm_feature_hold6_routing_attribution_v1.json",
+    "runtime_followup_summaries": [
+      "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13I_ebm_q90_hold4_probe_v1/summary.json",
+      "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13J_ebm_q90_hold8_probe_v1/summary.json",
+      "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13K_ebm_q90_hold10_probe_v1/summary.json",
+      "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13L_ebm_q90_hold6_direction_probe_v1/summary.json"
+    ]
+  }
+}
