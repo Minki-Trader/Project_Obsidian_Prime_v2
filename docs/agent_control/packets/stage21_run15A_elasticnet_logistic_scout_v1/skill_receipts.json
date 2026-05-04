@@ -1,0 +1,105 @@
+[
+  {
+    "changed_variables": [
+      "model_family=ElasticNet Logistic",
+      "feature subset",
+      "l1_ratio",
+      "C"
+    ],
+    "comparison_baseline": "No baseline; compare only within Stage21 ElasticNet Logistic variants and fixed data contract.",
+    "control_variables": [
+      "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+      "label_v1_fwd12_m5_logret_train_q33_3class",
+      "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+      "Tier A/B paired records"
+    ],
+    "created_at_utc": "2026-05-04T21:38:00Z",
+    "decision_use": "Decide whether Stage21 should continue to a narrow MT5 ONNX runtime_probe.",
+    "failure_criteria": [
+      "flat probabilities",
+      "all-zero coefficients",
+      "unstable validation/OOS density",
+      "no Tier-B-compatible candidate"
+    ],
+    "hypothesis": "ElasticNet Logistic can reveal whether a sparse linear probability shape remains after nonlinear stages.",
+    "invalid_conditions": [
+      "missing split",
+      "missing feature",
+      "duplicate timestamp",
+      "non-finite feature"
+    ],
+    "packet_id": "stage21_run15A_elasticnet_logistic_scout_v1",
+    "skill": "obsidian-experiment-design",
+    "status": "executed",
+    "success_criteria": [
+      "non-flat sparse coefficients",
+      "usable Tier A/B prediction records",
+      "clear ONNX handoff candidate"
+    ]
+  },
+  {
+    "created_at_utc": "2026-05-04T21:38:00Z",
+    "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "feature_label_boundary": "label_v1_fwd12_m5_logret_train_q33_3class",
+    "integrity_judgment": "usable_with_boundary",
+    "packet_id": "stage21_run15A_elasticnet_logistic_scout_v1",
+    "sample_scope": "Tier A rows=46650; Tier B fallback rows=12398",
+    "skill": "obsidian-data-integrity",
+    "split_boundary": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+    "status": "executed",
+    "time_axis": "timestamp is UTC-normalized project timestamp and split contract is unchanged."
+  },
+  {
+    "calibration_risk": "multiclass logistic probabilities are scout probabilities only until runtime parity and MT5 probing.",
+    "created_at_utc": "2026-05-04T21:38:00Z",
+    "model_family": "sklearn_logistic_regression_elasticnet_multiclass_saga",
+    "overfit_risk": "single split and small hand-authored variant set; no WFO or MT5 evidence yet.",
+    "packet_id": "stage21_run15A_elasticnet_logistic_scout_v1",
+    "selection_metric": "characteristic_score on sparse coefficients, signal density, validation/OOS stability, and margin diagnostics; not trading profit.",
+    "skill": "obsidian-model-validation",
+    "status": "executed",
+    "threshold_policy": "non-flat q0.90 from validation split.",
+    "validation_judgment": "inconclusive_structural_scout"
+  },
+  {
+    "availability": "generated_02_runs_ignored_with_tracked_packet_summary",
+    "consumer": [
+      "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/03_reviews/run15A_elasticnet_logistic_scout_packet.md",
+      "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/03_reviews/stage_run_ledger.csv",
+      "docs/registers/alpha_run_ledger.csv"
+    ],
+    "created_at_utc": "2026-05-04T21:38:00Z",
+    "lineage_judgment": "connected_with_boundary",
+    "packet_id": "stage21_run15A_elasticnet_logistic_scout_v1",
+    "producer": "stage_pipelines.stage21.elasticnet_logistic_scout",
+    "skill": "obsidian-artifact-lineage",
+    "source_inputs": [
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json"
+    ],
+    "status": "executed"
+  },
+  {
+    "claim_boundary": "elasticnet_logistic_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-04T21:38:00Z",
+    "evidence_available": [
+      "variant results",
+      "Tier A/B prediction records",
+      "coefficient records",
+      "stage and project ledgers"
+    ],
+    "evidence_missing": [
+      "MT5 runtime_probe",
+      "ONNX/runtime parity",
+      "WFO",
+      "runtime authority"
+    ],
+    "judgment_label": "inconclusive_elasticnet_logistic_sparse_linear_scout_completed",
+    "next_condition": "Run run15B_elasticnet_logistic_onnx_runtime_probe_v1 as the narrow MT5 runtime_probe by exporting the selected ElasticNet Logistic model to ONNX and using a sentinel tester tranche before any larger batch.",
+    "packet_id": "stage21_run15A_elasticnet_logistic_scout_v1",
+    "result_subject": "run15A_elasticnet_logistic_linear_sanity_scout_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "executed"
+  }
+]

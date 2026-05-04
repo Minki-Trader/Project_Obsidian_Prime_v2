@@ -1,8 +1,8 @@
-updated_on: '2026-05-05'
+﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
-active_branch: codex/stage20-gam-additive-smooth-shape
+active_branch: codex/stage21-elasticnet-logistic
 active_stage: 21_model_family_challenge__elasticnet_logistic_linear_sanity
-current_run_id: not_started
+current_run_id: run15A_elasticnet_logistic_linear_sanity_scout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -16,7 +16,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 21 as active and opened_not_started after Stage 20 GAM runtime_probe and reviewed closeout; next action is run15A_elasticnet_logistic_linear_sanity_scout_v1, and no baseline, promotion, or runtime authority exists
+- treat Stage 21 as active after run15A_elasticnet_logistic_linear_sanity_scout_v1 ElasticNet Logistic Python structural scout; next action is run15B_elasticnet_logistic_onnx_runtime_probe_v1 MT5 runtime_probe, and no baseline, promotion, or runtime authority exists
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -140,8 +140,8 @@ pre_alpha_stage_queue:
     stage21:
       stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
       ownership: independent ElasticNet Logistic sparse linear sanity scout after Stage20
-      status: opened_not_started
-      current_run_id: not_started
+      status: active_run15A_python_structural_scout_completed
+      current_run_id: run15A_elasticnet_logistic_linear_sanity_scout_v1
     stage22:
       stage_id: 22_regime_model__hmm_hidden_state_segmentation
       ownership: independent HMM hidden-state segmentation scout after Stage21
@@ -2009,12 +2009,28 @@ stage20_gam_closeout:
   next_action: stage21_run15A_elasticnet_logistic_linear_sanity_scout
 stage21_elasticnet_logistic_linear_sanity:
   stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
-  status: opened_not_started
-  current_run_id: not_started
+  status: active_run15A_python_structural_scout_completed
+  current_run_id: run15A_elasticnet_logistic_linear_sanity_scout_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
-  boundary: topic_open_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  boundary: elasticnet_logistic_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/00_spec/stage_brief.md
   selection_status_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/04_selected/selection_status.md
-  next_action: run15A_elasticnet_logistic_linear_sanity_scout_v1
+  next_action: run15B_elasticnet_logistic_onnx_runtime_probe_v1
+
+stage21_elasticnet_run15A_structural_scout:
+  packet_id: stage21_run15A_elasticnet_logistic_scout_v1
+  status: reviewed_structural_scout_completed
+  judgment: inconclusive_elasticnet_logistic_sparse_linear_scout_completed
+  current_run_id: run15A_elasticnet_logistic_linear_sanity_scout_v1
+  selected_variant_id: v01_core42_balanced_enet025
+  best_overall_variant_id: v03_full58_context_enet035
+  mt5_runtime_probe_status: not_attempted_next_milestone_run15B_elasticnet_logistic_onnx_runtime_probe_v1
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: elasticnet_logistic_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/03_reviews/run15A_elasticnet_logistic_scout_packet.md
+  packet_summary_path: docs/agent_control/packets/stage21_run15A_elasticnet_logistic_scout_v1/aggregate_summary.json
+  next_action: run15B_elasticnet_logistic_onnx_runtime_probe_v1

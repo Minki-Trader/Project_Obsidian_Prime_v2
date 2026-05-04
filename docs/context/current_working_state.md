@@ -1,4 +1,12 @@
-﻿## Latest Stage20 Closeout Stage21 Open(최신 20단계 마감 21단계 개방)
+﻿## Latest Stage21 RUN15A ElasticNet Logistic Update(최신 21단계 실행15A 엘라스틱넷 로지스틱 업데이트)
+
+Stage21(21단계) `run15A_elasticnet_logistic_linear_sanity_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
+
+결과(result, 결과): `inconclusive_elasticnet_logistic_sparse_linear_scout_completed`. selected variant(선택 변형): `v01_core42_balanced_enet025`. next exact action(다음 정확한 행동): `run15B_elasticnet_logistic_onnx_runtime_probe_v1`.
+
+효과(effect, 효과): ElasticNet Logistic(엘라스틱넷 로지스틱)의 sparse linear probability shape(희소 선형 확률 모양), coefficient sign(계수 부호), Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B combined(Tier A+B 합산)를 남겼다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage20 Closeout Stage21 Open(최신 20단계 마감 21단계 개방)
 
 Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델)은 `closed_inconclusive_gam_model_characteristics_exhausted`로 닫혔고, Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱)은 `opened_not_started`로 열렸다.
 
@@ -143,9 +151,9 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 
 - updated_on: `2026-05-05`
 - project_mode: `clean_stage_restart`
-- active_stage: `20_model_family_challenge__gam_additive_smooth_shape(20단계 GAM 가산 부드러운 모양)`
-- active_branch: `codex/stage20-gam-additive-smooth-shape`
-- current run(현재 실행): `run14A_gam_additive_shape_scout_v1`
+- active_stage: `21_model_family_challenge__elasticnet_logistic_linear_sanity(21단계 엘라스틱넷 로지스틱 선형 건전성)`
+- active_branch: `codex/stage21-elasticnet-logistic`
+- current run(현재 실행): `run15A_elasticnet_logistic_linear_sanity_scout_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
