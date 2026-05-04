@@ -1,0 +1,460 @@
+{
+  "attempt_count": 6,
+  "boundary": "hmm_state_policy_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_hmm_state_policy_runtime_probe_completed",
+  "expected_attempts": 6,
+  "expected_kpi_records": 10,
+  "external_verification_status": "completed",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_hmm_state_policy_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 10,
+    "normalized_summary_rows": 10,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 2045,
+    "trade_parser_errors": 0
+  },
+  "max_hold_bars": 12,
+  "model_artifacts": {
+    "tier_a_policy": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_a_hmm_state_policy.csv",
+      "rows": 4,
+      "sha256": "da0b67c9d68a11e897dfa8518b03f540b9dbce4492e3fffdbedb803f8ca7f459"
+    },
+    "tier_a_table": {
+      "claim_boundary": "hmm_state_policy_runtime_probe_not_live_hmm_runtime_authority",
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 1,
+      "feature_names": [
+        "hmm_state_code"
+      ],
+      "format": "hmm_state_policy_ebm_score_table_csv_v1",
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_a_hmm_state_policy_score_table.csv",
+      "runtime_policy": "mql5_ebm_table_backend_state_code_lookup_softmax",
+      "sha256": "7ae765f7475543ff000a79a5ff94cad5b87b98c0357140483a8c6acf5687ee70",
+      "state_count": 4
+    },
+    "tier_a_table_parity": {
+      "claim_boundary": "state_table_lookup_parity_not_mt5_runtime_authority",
+      "max_abs_diff": 1.1102230246251565e-16,
+      "passed": true,
+      "rows": 46650,
+      "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_a_hmm_state_policy_score_table.csv",
+      "tolerance": 1e-10
+    },
+    "tier_b_policy": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_b_hmm_state_policy.csv",
+      "rows": 4,
+      "sha256": "ace6592b57b6b3f3937e7eae1ec3d5c6b054b860e4ae1882fecdc5b24a257af1"
+    },
+    "tier_b_table": {
+      "claim_boundary": "hmm_state_policy_runtime_probe_not_live_hmm_runtime_authority",
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 1,
+      "feature_names": [
+        "hmm_state_code"
+      ],
+      "format": "hmm_state_policy_ebm_score_table_csv_v1",
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_b_hmm_state_policy_score_table.csv",
+      "runtime_policy": "mql5_ebm_table_backend_state_code_lookup_softmax",
+      "sha256": "b34ad431351e660a7cf6bac966c711f6e3cdd117e5ef21a50fc4636e9ab94773",
+      "state_count": 4
+    },
+    "tier_b_table_parity": {
+      "claim_boundary": "state_table_lookup_parity_not_mt5_runtime_authority",
+      "max_abs_diff": 5.551115123125783e-17,
+      "passed": true,
+      "rows": 12398,
+      "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_b_hmm_state_policy_score_table.csv",
+      "tolerance": 1e-10
+    }
+  },
+  "model_characteristic_strength": "hmm_state_runtime_axis_visible",
+  "model_family": "hmm_hidden_state_policy_ebm_table_runtime_probe",
+  "mt5_kpi_record_count": 10,
+  "next_action": "stage22_closeout_and_stage23_open_only",
+  "oos_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 294.04,
+    "balance_drawdown_maximal_percent": 44.25,
+    "deal_count": 1124,
+    "equity_drawdown_maximal_amount": 315.22,
+    "equity_drawdown_maximal_percent": 47.16,
+    "expectancy": 0.22,
+    "feature_ready_count": 8646,
+    "fill_count": 1124,
+    "fill_rate": 1.0,
+    "gross_loss": -2416.48,
+    "gross_profit": 2538.44,
+    "long_trade_count": 562,
+    "long_win_rate_percent": 53.56,
+    "losing_trade_count": 261,
+    "loss_rate_percent": 46.44,
+    "max_drawdown_amount": 315.22,
+    "max_drawdown_percent": 47.16,
+    "missing_required_metrics": [],
+    "model_fail_count": 28691,
+    "model_ok_count": 8646,
+    "net_profit": 121.96,
+    "no_tier_count": 28691,
+    "no_tier_labelable_rows": 0,
+    "order_attempt_count": 1124,
+    "parsed_row_count": 2336,
+    "partial_context_subtype_counts": {
+      "s0": 390,
+      "s1": 46,
+      "s2": 470,
+      "s3": 156
+    },
+    "profit_factor": 1.05,
+    "recovery_factor": 0.39,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run16B_hmm_state_runtime_probe_v1_routed_oos.htm",
+    "route_coverage_split": "oos",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 8646,
+    "sharpe_ratio": 0.56,
+    "short_trade_count": 0,
+    "short_win_rate_percent": 0.0,
+    "skip_count": 28691,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 1247,
+    "tier_a_long_count": 6337,
+    "tier_a_order_attempt_count": 1055,
+    "tier_a_order_fill_count": 1055,
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_a_short_count": 0,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_flat_count": 906,
+    "tier_b_fallback_labelable_rows": 1062,
+    "tier_b_fallback_long_count": 156,
+    "tier_b_fallback_order_attempt_count": 69,
+    "tier_b_fallback_order_fill_count": 69,
+    "tier_b_fallback_short_count": 0,
+    "tier_b_fallback_used_count": 1062,
+    "trade_count": 562,
+    "win_rate_percent": 53.56,
+    "winning_trade_count": 301
+  },
+  "packet_id": "stage22_run16B_hmm_state_runtime_probe_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/predictions/tier_a_state_policy_predictions.parquet",
+      "rows": 46650,
+      "sha256": "bac45145c88554d771cd5482fe69ee0ec2f4d4537a51afdeb914ec90c91f84c3"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/predictions/tier_ab_state_policy_predictions.parquet",
+      "rows": 59048,
+      "sha256": "0d45641e9ee204a0988a9396459063b1adf3ddaeb1623b1b243c44bd0ee8acd4"
+    },
+    "tier_b_predictions": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/predictions/tier_b_state_policy_predictions.parquet",
+      "rows": 12398,
+      "sha256": "5916cb95f6a19a41def70c5b46a28588cf769a0bb912dc8622cbf22e504a92e0"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 34648,
+        "partial_context_subtype_counts": {
+          "s0": 13728,
+          "s1": 12002,
+          "s2": 9670,
+          "s3": 11250
+        },
+        "probability_row_sum_max_abs_error": 0.0,
+        "rows": 46650,
+        "short_count": 0,
+        "signal_count": 34648,
+        "signal_coverage": 0.7427224008574491,
+        "threshold_ids": "fixed_state_probability_0.35"
+      },
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/predictions/tier_a_state_policy_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "flat_count": 1247,
+          "long_count": 6337,
+          "rows": 7584,
+          "short_count": 0,
+          "signal_count": 6337,
+          "signal_coverage": 0.835574894514768
+        },
+        "train": {
+          "flat_count": 8554,
+          "long_count": 20668,
+          "rows": 29222,
+          "short_count": 0,
+          "signal_count": 20668,
+          "signal_coverage": 0.7072753404968859
+        },
+        "validation": {
+          "flat_count": 2201,
+          "long_count": 7643,
+          "rows": 9844,
+          "short_count": 0,
+          "signal_count": 7643,
+          "signal_coverage": 0.7764120276310443
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 529,
+        "partial_context_subtype_counts": {
+          "s0": 6846,
+          "s1": 2137,
+          "s2": 2886,
+          "s3": 529
+        },
+        "probability_row_sum_max_abs_error": 0.0,
+        "rows": 12398,
+        "short_count": 0,
+        "signal_count": 529,
+        "signal_coverage": 0.042668172285852554,
+        "threshold_ids": "fixed_state_probability_0.35"
+      },
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/predictions/tier_b_state_policy_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "flat_count": 906,
+          "long_count": 156,
+          "rows": 1062,
+          "short_count": 0,
+          "signal_count": 156,
+          "signal_coverage": 0.14689265536723164
+        },
+        "train": {
+          "flat_count": 8688,
+          "long_count": 282,
+          "rows": 8970,
+          "short_count": 0,
+          "signal_count": 282,
+          "signal_coverage": 0.031438127090301006
+        },
+        "validation": {
+          "flat_count": 2275,
+          "long_count": 91,
+          "rows": 2366,
+          "short_count": 0,
+          "signal_count": 91,
+          "signal_coverage": 0.038461538461538464
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 35177,
+        "partial_context_subtype_counts": {
+          "s0": 20574,
+          "s1": 14139,
+          "s2": 12556,
+          "s3": 11779
+        },
+        "probability_row_sum_max_abs_error": 0.0,
+        "rows": 59048,
+        "short_count": 0,
+        "signal_count": 35177,
+        "signal_coverage": 0.5957356726730795,
+        "threshold_ids": "fixed_state_probability_0.35"
+      },
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/predictions/tier_ab_state_policy_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "flat_count": 2153,
+          "long_count": 6493,
+          "rows": 8646,
+          "short_count": 0,
+          "signal_count": 6493,
+          "signal_coverage": 0.7509831135785334
+        },
+        "train": {
+          "flat_count": 17242,
+          "long_count": 20950,
+          "rows": 38192,
+          "short_count": 0,
+          "signal_count": 20950,
+          "signal_coverage": 0.5485441977377461
+        },
+        "validation": {
+          "flat_count": 4476,
+          "long_count": 7734,
+          "rows": 12210,
+          "short_count": 0,
+          "signal_count": 7734,
+          "signal_coverage": 0.6334152334152334
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "route_coverage": {
+    "by_split": {
+      "oos": {
+        "routed_labelable_rows": 8646,
+        "tier_a_primary_rows": 7584,
+        "tier_b_fallback_rows": 1062
+      },
+      "train": {
+        "routed_labelable_rows": 38192,
+        "tier_a_primary_rows": 29222,
+        "tier_b_fallback_rows": 8970
+      },
+      "validation": {
+        "routed_labelable_rows": 12210,
+        "tier_a_primary_rows": 9844,
+        "tier_b_fallback_rows": 2366
+      }
+    },
+    "no_tier_by_split": {
+      "oos": 0,
+      "train": 0,
+      "validation": 0
+    },
+    "tier_b_fallback_by_split_subtype": {
+      "oos": {
+        "s0": 390,
+        "s1": 46,
+        "s2": 470,
+        "s3": 156
+      },
+      "train": {
+        "s0": 4945,
+        "s1": 1858,
+        "s2": 1885,
+        "s3": 282
+      },
+      "validation": {
+        "s0": 1511,
+        "s1": 233,
+        "s2": 531,
+        "s3": 91
+      }
+    }
+  },
+  "run_id": "run16B_hmm_state_runtime_probe_v1",
+  "run_number": "run16B",
+  "runtime_failure_signature": {
+    "attempt_status_counts": {
+      "completed": 6
+    },
+    "compile_status": "completed",
+    "feature_ready_count_total": 33726,
+    "last_skip_reason_counts": {
+      "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+      "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+      "tier_a_missing:feature_csv_timestamp_not_found:2025.04.05 00:00:00|tier_b_missing:feature_csv_timestamp_not_found:2025.04.05 00:00:00": 1,
+      "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+    },
+    "model_fail_count_total": 202183,
+    "model_ok_count_total": 33726,
+    "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+  },
+  "selected_variant_id": "v02_core17_4state_diag",
+  "source_artifacts": {
+    "tier_a_sequence": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_a_hidden_state_sequence.parquet",
+      "sha256": "e163f73d36bb4479ad46625757617ef8eb09c5ad7cfa4432bd03153888bf43c6"
+    },
+    "tier_b_sequence": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_b_hidden_state_sequence.parquet",
+      "sha256": "9fb8569a67c999e0c31d996320ae6f1aa9fdc6c62e6d15fcbcfb87d05ec55129"
+    }
+  },
+  "source_packet_id": "stage22_run16A_hmm_state_scout_v1",
+  "source_run_id": "run16A_hmm_hidden_state_segmentation_scout_v1",
+  "stage_id": "22_regime_model__hmm_hidden_state_segmentation",
+  "state_threshold": 0.35,
+  "topic_read": "hmm_state_policy_runtime_handoff",
+  "validation_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 598.56,
+    "balance_drawdown_maximal_percent": 99.54,
+    "deal_count": 558,
+    "equity_drawdown_maximal_amount": 606.17,
+    "equity_drawdown_maximal_percent": 99.55,
+    "expectancy": -1.78,
+    "feature_ready_count": 4224,
+    "fill_count": 557,
+    "fill_rate": 1.0,
+    "gross_loss": -1584.57,
+    "gross_profit": 1087.32,
+    "long_trade_count": 279,
+    "long_win_rate_percent": 48.39,
+    "losing_trade_count": 144,
+    "loss_rate_percent": 51.61,
+    "max_drawdown_amount": 606.17,
+    "max_drawdown_percent": 99.55,
+    "missing_required_metrics": [],
+    "model_fail_count": 14058,
+    "model_ok_count": 4224,
+    "net_profit": -497.25,
+    "no_tier_count": 14058,
+    "no_tier_labelable_rows": 0,
+    "order_attempt_count": 557,
+    "parsed_row_count": 1204,
+    "partial_context_subtype_counts": {
+      "s0": 1511,
+      "s1": 233,
+      "s2": 531,
+      "s3": 91
+    },
+    "profit_factor": 0.69,
+    "recovery_factor": -0.82,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run16B_hmm_state_runtime_probe_v1_routed_validation_is.htm",
+    "route_coverage_split": "validation",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 12210,
+    "sharpe_ratio": -4.62,
+    "short_trade_count": 0,
+    "short_win_rate_percent": 0.0,
+    "skip_count": 14058,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 400,
+    "tier_a_long_count": 3133,
+    "tier_a_order_attempt_count": 513,
+    "tier_a_order_fill_count": 513,
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_a_short_count": 0,
+    "tier_a_used_count": 3533,
+    "tier_b_fallback_flat_count": 669,
+    "tier_b_fallback_labelable_rows": 2366,
+    "tier_b_fallback_long_count": 22,
+    "tier_b_fallback_order_attempt_count": 44,
+    "tier_b_fallback_order_fill_count": 44,
+    "tier_b_fallback_short_count": 0,
+    "tier_b_fallback_used_count": 691,
+    "trade_count": 279,
+    "win_rate_percent": 48.39,
+    "winning_trade_count": 135
+  }
+}

@@ -1,4 +1,20 @@
-﻿## Latest Stage22 RUN16A HMM Update(최신 22단계 실행16A HMM 업데이트)
+﻿## Latest Stage22 RUN16B HMM Runtime Update(최신 22단계 실행16B HMM 런타임 업데이트)
+
+Stage22(22단계) `run16B_hmm_state_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_hmm_state_policy_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage22_closeout_and_stage23_open_only`.
+
+효과(effect, 효과): HMM(은닉 마르코프 모델) hidden state(숨은 상태)가 table handoff(테이블 인계)로 runtime(런타임)에 전달되는지 검증했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage22 RUN16B HMM Runtime Update(최신 22단계 실행16B HMM 런타임 업데이트)
+
+Stage22(22단계) `run16B_hmm_state_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `blocked_hmm_state_policy_runtime_probe_after_attempt`. MT5 KPI records(MT5 핵심 성과 지표 기록): `0`. next exact action(다음 정확한 행동): `repair run16B HMM state runtime probe and rerun the same six MT5 attempts`.
+
+효과(effect, 효과): HMM(은닉 마르코프 모델) hidden state(숨은 상태)가 table handoff(테이블 인계)로 runtime(런타임)에 전달되는지 검증했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage22 RUN16A HMM Update(최신 22단계 실행16A HMM 업데이트)
 
 Stage22(22단계) `run16A_hmm_hidden_state_segmentation_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
 

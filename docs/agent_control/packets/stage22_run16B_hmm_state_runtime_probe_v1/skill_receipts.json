@@ -1,0 +1,128 @@
+[
+  {
+    "created_at_utc": "2026-05-04T23:30:18Z",
+    "known_differences": "MT5 receives precomputed HMM states; it does not recompute Gaussian HMM emissions live.",
+    "packet_id": "stage22_run16B_hmm_state_runtime_probe_v1",
+    "parity_check": {
+      "tier_a": {
+        "claim_boundary": "state_table_lookup_parity_not_mt5_runtime_authority",
+        "max_abs_diff": 1.1102230246251565e-16,
+        "passed": true,
+        "rows": 46650,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_a_hmm_state_policy_score_table.csv",
+        "tolerance": 1e-10
+      },
+      "tier_b": {
+        "claim_boundary": "state_table_lookup_parity_not_mt5_runtime_authority",
+        "max_abs_diff": 5.551115123125783e-17,
+        "passed": true,
+        "rows": 12398,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_b_hmm_state_policy_score_table.csv",
+        "tolerance": 1e-10
+      }
+    },
+    "parity_identity": {
+      "model_artifacts": {
+        "tier_a_policy": {
+          "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_a_hmm_state_policy.csv",
+          "rows": 4,
+          "sha256": "da0b67c9d68a11e897dfa8518b03f540b9dbce4492e3fffdbedb803f8ca7f459"
+        },
+        "tier_a_table": {
+          "claim_boundary": "hmm_state_policy_runtime_probe_not_live_hmm_runtime_authority",
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "feature_count": 1,
+          "feature_names": [
+            "hmm_state_code"
+          ],
+          "format": "hmm_state_policy_ebm_score_table_csv_v1",
+          "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_a_hmm_state_policy_score_table.csv",
+          "runtime_policy": "mql5_ebm_table_backend_state_code_lookup_softmax",
+          "sha256": "7ae765f7475543ff000a79a5ff94cad5b87b98c0357140483a8c6acf5687ee70",
+          "state_count": 4
+        },
+        "tier_a_table_parity": {
+          "claim_boundary": "state_table_lookup_parity_not_mt5_runtime_authority",
+          "max_abs_diff": 1.1102230246251565e-16,
+          "passed": true,
+          "rows": 46650,
+          "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_a_hmm_state_policy_score_table.csv",
+          "tolerance": 1e-10
+        },
+        "tier_b_policy": {
+          "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_b_hmm_state_policy.csv",
+          "rows": 4,
+          "sha256": "ace6592b57b6b3f3937e7eae1ec3d5c6b054b860e4ae1882fecdc5b24a257af1"
+        },
+        "tier_b_table": {
+          "claim_boundary": "hmm_state_policy_runtime_probe_not_live_hmm_runtime_authority",
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "feature_count": 1,
+          "feature_names": [
+            "hmm_state_code"
+          ],
+          "format": "hmm_state_policy_ebm_score_table_csv_v1",
+          "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_b_hmm_state_policy_score_table.csv",
+          "runtime_policy": "mql5_ebm_table_backend_state_code_lookup_softmax",
+          "sha256": "b34ad431351e660a7cf6bac966c711f6e3cdd117e5ef21a50fc4636e9ab94773",
+          "state_count": 4
+        },
+        "tier_b_table_parity": {
+          "claim_boundary": "state_table_lookup_parity_not_mt5_runtime_authority",
+          "max_abs_diff": 5.551115123125783e-17,
+          "passed": true,
+          "rows": 12398,
+          "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/models/v02_core17_4state_diag_tier_b_hmm_state_policy_score_table.csv",
+          "tolerance": 1e-10
+        }
+      },
+      "runtime_output_path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/mt5"
+    },
+    "research_path": "stage_pipelines/stage22/hmm_state_runtime_probe.py",
+    "runtime_claim_boundary": "runtime_probe",
+    "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "shared_contract": "one-feature hmm_state_code, EBM-table backend, fixed 0.35 state probability threshold, Tier A primary plus Tier B fallback routing, US100 M5 timestamp match",
+    "skill": "obsidian-runtime-parity",
+    "status": "completed"
+  },
+  {
+    "created_at_utc": "2026-05-04T23:30:18Z",
+    "packet_id": "stage22_run16B_hmm_state_runtime_probe_v1",
+    "runtime_failure_signature": {
+      "attempt_status_counts": {
+        "completed": 6
+      },
+      "compile_status": "completed",
+      "feature_ready_count_total": 33726,
+      "last_skip_reason_counts": {
+        "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+        "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+        "tier_a_missing:feature_csv_timestamp_not_found:2025.04.05 00:00:00|tier_b_missing:feature_csv_timestamp_not_found:2025.04.05 00:00:00": 1,
+        "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+      },
+      "model_fail_count_total": 202183,
+      "model_ok_count_total": 33726,
+      "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+    },
+    "skill": "obsidian-backtest-forensics",
+    "status": "completed",
+    "tester_report_count": 10
+  },
+  {
+    "claim_boundary": "hmm_state_policy_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-04T23:30:18Z",
+    "judgment_label": "inconclusive_hmm_state_policy_runtime_probe_completed",
+    "packet_id": "stage22_run16B_hmm_state_runtime_probe_v1",
+    "result_subject": "run16B_hmm_state_runtime_probe_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "completed"
+  }
+]
