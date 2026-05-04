@@ -152,6 +152,58 @@ class Stage19EbmExplainableTests(unittest.TestCase):
 
         self.assertTrue(parity["passed"], parity)
 
+    def test_ebm_score_table_export_supports_zeroed_feature_mask(self) -> None:
+        from foundation.models.ebm_explainable import EbmVariantSpec, fit_ebm_variant
+        from foundation.models.ebm_score_table import (
+            check_ebm_score_table_probability_parity,
+            export_ebm_main_effect_score_table,
+            load_ebm_score_table,
+        )
+
+        rows = 120
+        feature_order = ["feature_a", "feature_b", "feature_c"]
+        frame = pd.DataFrame(
+            {
+                "timestamp": pd.date_range("2024-01-01", periods=rows, freq="5min", tz="UTC"),
+                "symbol": "US100",
+                "split": ["train"] * 72 + ["validation"] * 24 + ["oos"] * 24,
+                "label": ["short", "flat", "long", "flat"] * 30,
+                "label_class": ([0, 1, 2, 1] * 30),
+                "feature_a": np.linspace(-1.0, 1.0, rows),
+                "feature_b": np.sin(np.linspace(0.0, 8.0, rows)),
+                "feature_c": np.cos(np.linspace(0.0, 5.0, rows)),
+            }
+        )
+        spec = EbmVariantSpec(
+            variant_id="unit_ebm_table_mask",
+            idea_id="unit",
+            description="Unit EBM masked score table",
+            max_bins=16,
+            interactions=0,
+            outer_bags=1,
+            learning_rate=0.05,
+            max_rounds=20,
+            early_stopping_rounds=5,
+            min_samples_leaf=2,
+            random_state=59,
+        )
+        model, _sample = fit_ebm_variant(frame, feature_order, spec)
+        output_path = ROOT / "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/unit_ebm_table_mask_test/model_score_table.csv"
+
+        export_info = export_ebm_main_effect_score_table(model, output_path, feature_count=len(feature_order), zero_feature_indices=[1])
+        table = load_ebm_score_table(output_path, feature_count=len(feature_order))
+        parity = check_ebm_score_table_probability_parity(
+            model,
+            output_path,
+            frame.loc[:, feature_order].to_numpy(dtype="float64"),
+            feature_count=len(feature_order),
+            zero_feature_indices=[1],
+        )
+
+        self.assertEqual(export_info["zeroed_feature_indices"], [1])
+        self.assertTrue(parity["passed"], parity)
+        self.assertLess(float(np.abs(table["scores"][1]).max()), 1e-12)
+
     def test_ebm_main_effect_contribution_tensor_rebuilds_logits(self) -> None:
         from foundation.models.ebm_explainable import EbmVariantSpec, fit_ebm_variant
         from foundation.models.ebm_score_table import ebm_main_effect_contribution_tensor

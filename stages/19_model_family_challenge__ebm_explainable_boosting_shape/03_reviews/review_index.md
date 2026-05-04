@@ -6,3 +6,4 @@
 - `stage19_ebm_mt5_runtime_batch_packet.md`: RUN13B-RUN13G(실행13B-13G) EBM MT5 runtime probe(런타임 탐침) batch(묶음)
 - `run13H_ebm_feature_hold6_routing_attribution_v1`: `stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13H_ebm_feature_hold6_routing_attribution_packet.md`
 - `run13M_ebm_deep_axis_followup_v1`: `stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13M_ebm_deep_axis_followup_packet.md`
+- `run13T_ebm_mt5_axis_extension_v1`: `stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13T_ebm_mt5_axis_extension_packet.md`

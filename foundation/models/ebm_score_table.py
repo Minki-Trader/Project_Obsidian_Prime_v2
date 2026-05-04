@@ -24,10 +24,15 @@ def export_ebm_main_effect_score_table(
     output_path: Path,
     *,
     feature_count: int,
+    zero_feature_indices: Sequence[int] | None = None,
 ) -> dict[str, Any]:
     """Export a main-effect EBM as a compact CSV score table for MQL5 scoring."""
 
     _validate_main_effects(model, feature_count)
+    zero_indices = {int(index) for index in (zero_feature_indices or [])}
+    invalid = [index for index in zero_indices if index < 0 or index >= int(feature_count)]
+    if invalid:
+        raise ValueError(f"zero_feature_indices outside width: {invalid}")
     io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
     with io_path(output_path).open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDNAMES, lineterminator="\n")
@@ -61,15 +66,16 @@ def export_ebm_main_effect_score_table(
                     }
                 )
             for bin_index, row in enumerate(scores):
+                score_row = np.zeros_like(row, dtype="float64") if feature_index in zero_indices else row
                 writer.writerow(
                     {
                         "record_type": "score",
                         "feature_index": feature_index,
                         "item_index": bin_index,
                         "value": "",
-                        "score_short": _format_float(row[0]),
-                        "score_flat": _format_float(row[1]),
-                        "score_long": _format_float(row[2]),
+                        "score_short": _format_float(score_row[0]),
+                        "score_flat": _format_float(score_row[1]),
+                        "score_long": _format_float(score_row[2]),
                     }
                 )
     return {
@@ -79,6 +85,7 @@ def export_ebm_main_effect_score_table(
         "class_order": list(LABEL_ORDER),
         "feature_count": int(feature_count),
         "runtime_policy": "mql5_direct_bin_lookup_additive_softmax",
+        "zeroed_feature_indices": sorted(zero_indices),
     }
 
 
@@ -158,15 +165,26 @@ def check_ebm_score_table_probability_parity(
     *,
     feature_count: int,
     tolerance: float = 1.0e-10,
+    zero_feature_indices: Sequence[int] | None = None,
 ) -> dict[str, Any]:
     table = load_ebm_score_table(table_path, feature_count=feature_count)
     table_prob = score_ebm_table_probabilities(table, values)
-    sklearn_prob = ordered_sklearn_probabilities(model, values)
-    max_abs_diff = float(np.max(np.abs(sklearn_prob - table_prob))) if len(values) else 0.0
+    zero_indices = {int(index) for index in (zero_feature_indices or [])}
+    if zero_indices:
+        contributions = ebm_main_effect_contribution_tensor(model, values, feature_count=feature_count)
+        contributions[:, sorted(zero_indices), :] = 0.0
+        logits = np.asarray(model.intercept_, dtype="float64").reshape(1, -1) + contributions.sum(axis=1)
+        logits -= logits.max(axis=1, keepdims=True)
+        exp_logits = np.exp(logits)
+        expected_prob = exp_logits / exp_logits.sum(axis=1, keepdims=True)
+    else:
+        expected_prob = ordered_sklearn_probabilities(model, values)
+    max_abs_diff = float(np.max(np.abs(expected_prob - table_prob))) if len(values) else 0.0
     return {
         "passed": bool(max_abs_diff <= float(tolerance)),
         "max_abs_diff": max_abs_diff,
         "tolerance": float(tolerance),
         "rows": int(len(values)),
         "table_path": table_path.as_posix(),
+        "zeroed_feature_indices": sorted(zero_indices),
     }

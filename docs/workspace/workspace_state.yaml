@@ -1,8 +1,8 @@
-updated_on: '2026-05-04'
+updated_on: '2026-05-05'
 project_mode: clean_stage_restart
 active_branch: codex/stage19-ebm-attribution
 active_stage: 19_model_family_challenge__ebm_explainable_boosting_shape
-current_run_id: run13M_ebm_deep_axis_followup_v1
+current_run_id: run13T_ebm_mt5_axis_extension_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,7 +13,7 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_active_run13M_ebm_deep_axis_followup_completed
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_active_run13T_ebm_mt5_axis_extension_completed
 practical_modeling_start: '2022-09-01'
 current_focus:
 - treat Stage 16 as reviewed_closed after QDA class-specific covariance run08-run10 exploration; preserve QDA clues, not a baseline or promotion
@@ -54,7 +54,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_active_run13M_ebm_deep_axis_followup_completed
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_active_run13T_ebm_mt5_axis_extension_completed
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -128,7 +128,7 @@ pre_alpha_stage_queue:
     stage19:
       stage_id: 19_model_family_challenge__ebm_explainable_boosting_shape
       ownership: independent EBM explainable boosting shape scout after Stage18 CatBoost closeout
-      status: active_run13M_ebm_deep_axis_followup_completed
+      status: active_run13T_ebm_mt5_axis_extension_completed
     stage20:
       stage_id: 20_model_family_challenge__gam_additive_smooth_shape
       ownership: independent GAM additive smooth shape scout after Stage19
@@ -1778,7 +1778,7 @@ stage18_catboost_closeout:
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
 stage19_25_model_research_queue:
-  status: stage19_active_run13M_ebm_deep_axis_followup_completed_after_stage18_closeout
+  status: stage19_active_run13T_ebm_mt5_axis_extension_completed_after_stage18_closeout
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   stage19: EBM_explainable_boosting_shape
   stage20: GAM_additive_smooth_shape
@@ -1856,3 +1856,21 @@ stage19_ebm_run13M_deep_axis_followup:
   decision_path: docs/decisions/2026-05-04_stage19_run13M_ebm_deep_axis_followup.md
   packet_summary_path: docs/agent_control/packets/stage19_run13M_ebm_deep_axis_followup_v1/run_summaries/run13M_ebm_deep_axis_followup_v1.json
   next_action: continue_stage19_only_if_next_question_targets_specific_mask_or_routing_axis
+stage19_ebm_run13T_mt5_axis_extension:
+  packet_id: stage19_run13T_ebm_mt5_axis_extension_v1
+  status: reviewed_mt5_axis_extension_completed
+  judgment: inconclusive_ebm_mt5_axis_extension_completed
+  current_run_id: run13T_ebm_mt5_axis_extension_v1
+  runtime_followup_run_ids: run13N_ebm_q90_hold4_top5_mask_probe_v1,run13O_ebm_q90_hold2_probe_v1,run13P_ebm_q90_hold3_probe_v1,run13Q_ebm_q90_hold5_probe_v1,run13R_ebm_q90_hold4_mixed_subtype_fallback_probe_v1,run13S_ebm_q90_hold4_direction_probe_v1
+  feature_mask_delta_oos_net_profit: -224.70000000000002
+  best_oos_hold: 4
+  best_oos_net_profit: 134.3
+  hold4_long_minus_short_oos: 95.8
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: ebm_mt5_axis_extension_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13T_ebm_mt5_axis_extension_packet.md
+  decision_path: docs/decisions/2026-05-05_stage19_run13T_ebm_mt5_axis_extension.md
+  packet_summary_path: docs/agent_control/packets/stage19_run13T_ebm_mt5_axis_extension_v1/run_summaries/run13T_ebm_mt5_axis_extension_v1.json
+  next_action: continue_stage19_only_for_hold4_long_feature_mask_or_stop_before_topic_pivot
