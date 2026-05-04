@@ -1,4 +1,36 @@
-﻿## Latest Stage21 RUN15A ElasticNet Logistic Update(최신 21단계 실행15A 엘라스틱넷 로지스틱 업데이트)
+﻿## Latest Stage21 RUN15B ElasticNet Logistic Runtime Update(최신 21단계 실행15B 엘라스틱넷 로지스틱 런타임 업데이트)
+
+Stage21(21단계) `run15B_elasticnet_logistic_onnx_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_elasticnet_logistic_onnx_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage21_closeout_and_stage22_open_only`.
+
+효과(effect, 효과): Stage21(21단계)은 Python structural scout(파이썬 구조 탐색)에서 ONNX runtime handoff(온닉스 런타임 인계) 확인으로 전진했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage21 RUN15B ElasticNet Logistic Runtime Update(최신 21단계 실행15B 엘라스틱넷 로지스틱 런타임 업데이트)
+
+Stage21(21단계) `run15B_elasticnet_logistic_onnx_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `blocked_elasticnet_logistic_onnx_runtime_probe_after_attempt`는 위 completed(완료) 재실행으로 superseded(대체됨)했다. 당시 MT5 KPI records(MT5 핵심 성과 지표 기록)는 `0`이고, repair action(수정 행동)은 ONNX label output(온닉스 라벨 출력)을 probability-only output(확률 전용 출력)으로 낮춘 것이다.
+
+효과(effect, 효과): Stage21(21단계)은 Python structural scout(파이썬 구조 탐색)에서 ONNX runtime handoff(온닉스 런타임 인계) 확인으로 전진했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage21 RUN15B ElasticNet Logistic Runtime Update(최신 21단계 실행15B 엘라스틱넷 로지스틱 런타임 업데이트)
+
+Stage21(21단계) `run15B_elasticnet_logistic_onnx_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `blocked_elasticnet_logistic_onnx_runtime_probe_after_attempt`는 위 completed(완료) 재실행으로 superseded(대체됨)했다. 당시 MT5 KPI records(MT5 핵심 성과 지표 기록)는 `0`이고, repair action(수정 행동)은 ONNX label output(온닉스 라벨 출력)을 probability-only output(확률 전용 출력)으로 낮춘 것이다.
+
+효과(effect, 효과): Stage21(21단계)은 Python structural scout(파이썬 구조 탐색)에서 ONNX runtime handoff(온닉스 런타임 인계) 확인으로 전진했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage21 RUN15B ElasticNet Logistic Runtime Update(최신 21단계 실행15B 엘라스틱넷 로지스틱 런타임 업데이트)
+
+Stage21(21단계) `run15B_elasticnet_logistic_onnx_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `blocked_elasticnet_logistic_onnx_runtime_probe_after_attempt`는 위 completed(완료) 재실행으로 superseded(대체됨)했다. 당시 MT5 KPI records(MT5 핵심 성과 지표 기록)는 `0`이고, repair action(수정 행동)은 ONNX label output(온닉스 라벨 출력)을 probability-only output(확률 전용 출력)으로 낮춘 것이다.
+
+효과(effect, 효과): Stage21(21단계)은 Python structural scout(파이썬 구조 탐색)에서 ONNX runtime handoff(온닉스 런타임 인계) 확인으로 전진했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage21 RUN15A ElasticNet Logistic Update(최신 21단계 실행15A 엘라스틱넷 로지스틱 업데이트)
 
 Stage21(21단계) `run15A_elasticnet_logistic_linear_sanity_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
 
@@ -153,7 +185,7 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 - project_mode: `clean_stage_restart`
 - active_stage: `21_model_family_challenge__elasticnet_logistic_linear_sanity(21단계 엘라스틱넷 로지스틱 선형 건전성)`
 - active_branch: `codex/stage21-elasticnet-logistic`
-- current run(현재 실행): `run15A_elasticnet_logistic_linear_sanity_scout_v1`
+- current run(현재 실행): `run15B_elasticnet_logistic_onnx_runtime_probe_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 

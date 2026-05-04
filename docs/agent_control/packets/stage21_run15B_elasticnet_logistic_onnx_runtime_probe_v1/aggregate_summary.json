@@ -1,0 +1,609 @@
+{
+  "attempt_count": 6,
+  "boundary": "elasticnet_logistic_onnx_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_elasticnet_logistic_onnx_runtime_probe_completed",
+  "expected_attempts": 6,
+  "expected_kpi_records": 10,
+  "external_verification_status": "completed",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_elasticnet_logistic_onnx_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 10,
+    "normalized_summary_rows": 10,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 609,
+    "trade_parser_errors": 0
+  },
+  "max_hold_bars": 12,
+  "model_artifacts": {
+    "model_backend": "onnx",
+    "onnx_parity": {
+      "tier_a": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "float_input",
+        "max_abs_diff": 5.999363719144668e-07,
+        "mean_abs_diff": 2.76960277486166e-07,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probabilities"
+        ],
+        "passed": true,
+        "rows": 2048,
+        "tolerance": 1e-05
+      },
+      "tier_b": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "float_input",
+        "max_abs_diff": 2.888406099299523e-07,
+        "mean_abs_diff": 7.153441274825928e-08,
+        "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+        "output_names": [
+          "probabilities"
+        ],
+        "passed": true,
+        "rows": 2048,
+        "tolerance": 1e-05
+      }
+    },
+    "runtime_feature_order": [
+      "log_return_1",
+      "log_return_3",
+      "hl_range",
+      "close_open_ratio",
+      "gap_percent",
+      "close_prev_close_ratio",
+      "return_zscore_20",
+      "hl_zscore_50",
+      "overnight_return",
+      "return_1_over_atr_14",
+      "close_ema20_ratio",
+      "close_ema50_ratio",
+      "ema9_ema20_diff",
+      "ema20_ema50_diff",
+      "ema50_ema200_diff",
+      "ema20_ema50_spread_zscore_50",
+      "sma50_sma200_ratio",
+      "rsi_14",
+      "rsi_50",
+      "rsi_14_slope_3",
+      "rsi_14_minus_50",
+      "stoch_kd_diff",
+      "stochrsi_kd_diff",
+      "ppo_hist_12_26_9",
+      "roc_12",
+      "trix_15",
+      "atr_14",
+      "atr_50",
+      "atr_14_over_atr_50",
+      "bollinger_width_20",
+      "bb_position_20",
+      "bb_squeeze",
+      "historical_vol_20",
+      "historical_vol_5_over_20",
+      "adx_14",
+      "di_spread_14",
+      "supertrend_10_3",
+      "vortex_indicator",
+      "is_us_cash_open",
+      "minutes_from_cash_open",
+      "is_first_30m_after_open",
+      "is_last_30m_before_cash_close"
+    ],
+    "runtime_feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+    "selected_variant_id": "v01_core42_balanced_enet025",
+    "thresholds": {
+      "quantile": 0.9,
+      "tier_a": 0.4965666399881596,
+      "tier_b": 0.48854953379078037
+    },
+    "tier_a_joblib": {
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15A_elasticnet_logistic_linear_sanity_scout_v1/models/v01_core42_balanced_enet025_tier_a_elasticnet_logistic.joblib",
+      "sha256": "baeb4ab329dcdcddc5e1fca23df445650c2899ada593fb47a2797aa15dd40d0f"
+    },
+    "tier_a_onnx": {
+      "input_name": "float_input",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            null
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/models/v01_core42_balanced_enet025_tier_a_elasticnet_logistic.onnx",
+      "probability_output_name": "probabilities",
+      "sha256": "e87b290ad8b9e3ffce0c218a3f31125e2a746754e34890ac5d07079807cdec5c",
+      "target_opset": 12,
+      "zipmap_disabled": true
+    },
+    "tier_b_joblib": {
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15A_elasticnet_logistic_linear_sanity_scout_v1/models/v01_core42_balanced_enet025_tier_b_elasticnet_logistic.joblib",
+      "sha256": "b97076970c2fd51eede2caf396e1e0122ba4a8136394568b79e6a9a302d0064b"
+    },
+    "tier_b_onnx": {
+      "input_name": "float_input",
+      "label_output_dropped": true,
+      "outputs": [
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "outputs_before_drop": [
+        {
+          "name": "label",
+          "shape": [
+            null
+          ],
+          "value_type": "tensor_type"
+        },
+        {
+          "name": "probabilities",
+          "shape": [
+            null,
+            3
+          ],
+          "value_type": "tensor_type"
+        }
+      ],
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/models/v01_core42_balanced_enet025_tier_b_elasticnet_logistic.onnx",
+      "probability_output_name": "probabilities",
+      "sha256": "81564a854f7ac0ac5c79dd77667cca75216b6d9141daf1f9587654fb540b740c",
+      "target_opset": 12,
+      "zipmap_disabled": true
+    }
+  },
+  "model_characteristic_strength": "elasticnet_runtime_axis_visible",
+  "model_family": "sklearn_logistic_regression_elasticnet_multiclass_onnx_runtime_probe",
+  "mt5_kpi_record_count": 10,
+  "oos_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 131.37,
+    "balance_drawdown_maximal_percent": 25.26,
+    "deal_count": 260,
+    "equity_drawdown_maximal_amount": 159.63,
+    "equity_drawdown_maximal_percent": 29.25,
+    "expectancy": -0.38,
+    "feature_ready_count": 8646,
+    "fill_count": 244,
+    "fill_rate": 1.0,
+    "gross_loss": -767.82,
+    "gross_profit": 718.05,
+    "long_trade_count": 52,
+    "long_win_rate_percent": 61.54,
+    "losing_trade_count": 61,
+    "loss_rate_percent": 46.92,
+    "max_drawdown_amount": 159.63,
+    "max_drawdown_percent": 29.25,
+    "missing_required_metrics": [],
+    "model_fail_count": 28691,
+    "model_ok_count": 8646,
+    "net_profit": -49.77,
+    "no_tier_count": 28691,
+    "no_tier_labelable_rows": 159,
+    "order_attempt_count": 244,
+    "parsed_row_count": 608,
+    "partial_context_subtype_counts": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    },
+    "profit_factor": 0.94,
+    "recovery_factor": -0.31,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run15B_elasticnet_logistic_onnx_runtime_probe_v1_routed_oos.htm",
+    "route_coverage_split": "oos",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 8646,
+    "sharpe_ratio": -1.08,
+    "short_trade_count": 78,
+    "short_win_rate_percent": 47.44,
+    "skip_count": 28691,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 7050,
+    "tier_a_long_count": 238,
+    "tier_a_order_attempt_count": 225,
+    "tier_a_order_fill_count": 225,
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_a_short_count": 296,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_flat_count": 1015,
+    "tier_b_fallback_labelable_rows": 1062,
+    "tier_b_fallback_long_count": 6,
+    "tier_b_fallback_order_attempt_count": 19,
+    "tier_b_fallback_order_fill_count": 19,
+    "tier_b_fallback_short_count": 41,
+    "tier_b_fallback_used_count": 1062,
+    "trade_count": 130,
+    "win_rate_percent": 53.08,
+    "winning_trade_count": 69
+  },
+  "packet_id": "stage21_run15B_elasticnet_logistic_onnx_runtime_probe_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "07c09924ed1ada6d57271725943f0b15e327e65659925bc81ba58a9819f7a849"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "114fe2a8506d64543ca088257a1abf525b97b6b8625a6f552d57c0a64a73f5fa"
+    },
+    "tier_b_predictions": {
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "833b935577ac0937bc8e8c828f5ba94cb283782d93aaa98e84f41c1ef51e3a38"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 1333,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 1308,
+        "signal_count": 2641,
+        "signal_coverage": 0.05661307609860664,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.46848628691983124,
+          "balanced_accuracy": 0.4548745569230994,
+          "directional_correct_count": 213,
+          "directional_hit_rate": 0.398876404494382,
+          "log_loss": 1.0466901099381312,
+          "long_count": 238,
+          "macro_f1": 0.453632550347586,
+          "mean_probability": {
+            "flat": 0.3285533535609295,
+            "long": 0.34199173520149245,
+            "short": 0.329454911237578
+          },
+          "mean_probability_margin": 0.11130506051711875,
+          "rows": 7584,
+          "short_count": 296,
+          "signal_count": 534,
+          "signal_coverage": 0.07041139240506329
+        },
+        "train": {
+          "accuracy": 0.41913626719594826,
+          "balanced_accuracy": 0.42213360231269575,
+          "directional_correct_count": 579,
+          "directional_hit_rate": 0.516042780748663,
+          "log_loss": 1.0678078128584836,
+          "long_count": 552,
+          "macro_f1": 0.40904192509550974,
+          "mean_probability": {
+            "flat": 0.3332873335405225,
+            "long": 0.3335716865080825,
+            "short": 0.3331409799513949
+          },
+          "mean_probability_margin": 0.08596921297666307,
+          "rows": 29222,
+          "short_count": 570,
+          "signal_count": 1122,
+          "signal_coverage": 0.03839572924508931
+        },
+        "validation": {
+          "accuracy": 0.4463632669646485,
+          "balanced_accuracy": 0.4339931137204942,
+          "directional_correct_count": 362,
+          "directional_hit_rate": 0.36751269035532996,
+          "log_loss": 1.0601970281293014,
+          "long_count": 543,
+          "macro_f1": 0.4263817132352303,
+          "mean_probability": {
+            "flat": 0.32543533795557694,
+            "long": 0.3432090111814746,
+            "short": 0.33135565086294844
+          },
+          "mean_probability_margin": 0.11560786905565533,
+          "rows": 9844,
+          "short_count": 442,
+          "signal_count": 985,
+          "signal_coverage": 0.10006095083299472
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 67,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 196,
+        "signal_count": 263,
+        "signal_coverage": 0.021213098886917244,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5357815442561206,
+          "balanced_accuracy": 0.44881717310546193,
+          "directional_correct_count": 19,
+          "directional_hit_rate": 0.40425531914893614,
+          "log_loss": 1.0262330492485738,
+          "long_count": 6,
+          "macro_f1": 0.44799961870634447,
+          "mean_probability": {
+            "flat": 0.3741501415889263,
+            "long": 0.31436211188506824,
+            "short": 0.31148774652600547
+          },
+          "mean_probability_margin": 0.13275989272821268,
+          "rows": 1062,
+          "short_count": 41,
+          "signal_count": 47,
+          "signal_coverage": 0.044256120527306965
+        },
+        "train": {
+          "accuracy": 0.47190635451505014,
+          "balanced_accuracy": 0.4003525386001077,
+          "directional_correct_count": 100,
+          "directional_hit_rate": 0.5319148936170213,
+          "log_loss": 1.038866975650948,
+          "long_count": 50,
+          "macro_f1": 0.3713236790939261,
+          "mean_probability": {
+            "flat": 0.39956295790177077,
+            "long": 0.3068375213882543,
+            "short": 0.2935995207099749
+          },
+          "mean_probability_margin": 0.12821088653126375,
+          "rows": 8970,
+          "short_count": 138,
+          "signal_count": 188,
+          "signal_coverage": 0.020958751393534
+        },
+        "validation": {
+          "accuracy": 0.6162299239222316,
+          "balanced_accuracy": 0.41230666737298716,
+          "directional_correct_count": 9,
+          "directional_hit_rate": 0.32142857142857145,
+          "log_loss": 0.9661731886633743,
+          "long_count": 11,
+          "macro_f1": 0.40929302747657753,
+          "mean_probability": {
+            "flat": 0.4291636113155481,
+            "long": 0.2945368465956277,
+            "short": 0.2762995420888242
+          },
+          "mean_probability_margin": 0.1633892805426954,
+          "rows": 2366,
+          "short_count": 17,
+          "signal_count": 28,
+          "signal_coverage": 0.011834319526627219
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 1391,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 1472,
+        "signal_count": 2863,
+        "signal_coverage": 0.04848597750982252,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4767522553782096,
+          "balanced_accuracy": 0.45705517376086585,
+          "directional_correct_count": 230,
+          "directional_hit_rate": 0.4020979020979021,
+          "log_loss": 1.0441773412066588,
+          "long_count": 242,
+          "macro_f1": 0.4560037287887817,
+          "mean_probability": {
+            "flat": 0.3341540693700589,
+            "long": 0.33859795079690735,
+            "short": 0.3272479798330337
+          },
+          "mean_probability_margin": 0.11394038688864105,
+          "rows": 8646,
+          "short_count": 330,
+          "signal_count": 572,
+          "signal_coverage": 0.06615776081424936
+        },
+        "train": {
+          "accuracy": 0.4315301633850021,
+          "balanced_accuracy": 0.42435707711875753,
+          "directional_correct_count": 665,
+          "directional_hit_rate": 0.5187207488299532,
+          "log_loss": 1.061010595908557,
+          "long_count": 595,
+          "macro_f1": 0.40826338395920186,
+          "mean_probability": {
+            "flat": 0.3488532203890876,
+            "long": 0.32729274167343503,
+            "short": 0.3238540379374774
+          },
+          "mean_probability_margin": 0.09589034336482727,
+          "rows": 38192,
+          "short_count": 687,
+          "signal_count": 1282,
+          "signal_coverage": 0.033567239212400506
+        },
+        "validation": {
+          "accuracy": 0.47927927927927927,
+          "balanced_accuracy": 0.4439783103566681,
+          "directional_correct_count": 371,
+          "directional_hit_rate": 0.3676907829534192,
+          "log_loss": 1.0419775028077303,
+          "long_count": 554,
+          "macro_f1": 0.436619026328882,
+          "mean_probability": {
+            "flat": 0.34553534571722244,
+            "long": 0.33377753358850876,
+            "short": 0.3206871206942688
+          },
+          "mean_probability_margin": 0.12486674043799252,
+          "rows": 12210,
+          "short_count": 455,
+          "signal_count": 1009,
+          "signal_coverage": 0.08263718263718264
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "run_id": "run15B_elasticnet_logistic_onnx_runtime_probe_v1",
+  "run_number": "run15B",
+  "runtime_failure_signature": {
+    "attempt_status_counts": {
+      "completed": 6
+    },
+    "compile_status": "completed",
+    "feature_ready_count_total": 41712,
+    "last_skip_reason_counts": {
+      "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+      "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+      "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+      "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+    },
+    "model_fail_count_total": 228723,
+    "model_ok_count_total": 41712,
+    "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+  },
+  "selected_variant_id": "v01_core42_balanced_enet025",
+  "source_packet_id": "stage21_run15A_elasticnet_logistic_scout_v1",
+  "source_run_id": "run15A_elasticnet_logistic_linear_sanity_scout_v1",
+  "stage_id": "21_model_family_challenge__elasticnet_logistic_linear_sanity",
+  "threshold_quantile": 0.9,
+  "topic_read": "elasticnet_logistic_onnx_runtime_handoff",
+  "validation_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 194.65,
+    "balance_drawdown_maximal_percent": 36.04,
+    "deal_count": 346,
+    "equity_drawdown_maximal_amount": 273.73,
+    "equity_drawdown_maximal_percent": 45.64,
+    "expectancy": -0.65,
+    "feature_ready_count": 12210,
+    "fill_count": 320,
+    "fill_rate": 1.0,
+    "gross_loss": -1157.69,
+    "gross_profit": 1044.58,
+    "long_trade_count": 83,
+    "long_win_rate_percent": 49.4,
+    "losing_trade_count": 90,
+    "loss_rate_percent": 52.02,
+    "max_drawdown_amount": 273.73,
+    "max_drawdown_percent": 45.64,
+    "missing_required_metrics": [],
+    "model_fail_count": 40598,
+    "model_ok_count": 12210,
+    "net_profit": -113.11,
+    "no_tier_count": 40598,
+    "no_tier_labelable_rows": 203,
+    "order_attempt_count": 320,
+    "parsed_row_count": 780,
+    "partial_context_subtype_counts": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    },
+    "profit_factor": 0.9,
+    "recovery_factor": -0.41,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run15B_elasticnet_logistic_onnx_runtime_probe_v1_routed_validation_is.htm",
+    "route_coverage_split": "validation",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 12210,
+    "sharpe_ratio": -1.39,
+    "short_trade_count": 90,
+    "short_win_rate_percent": 46.67,
+    "skip_count": 40598,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 8859,
+    "tier_a_long_count": 543,
+    "tier_a_order_attempt_count": 305,
+    "tier_a_order_fill_count": 305,
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_a_short_count": 442,
+    "tier_a_used_count": 9844,
+    "tier_b_fallback_flat_count": 2338,
+    "tier_b_fallback_labelable_rows": 2366,
+    "tier_b_fallback_long_count": 11,
+    "tier_b_fallback_order_attempt_count": 15,
+    "tier_b_fallback_order_fill_count": 15,
+    "tier_b_fallback_short_count": 17,
+    "tier_b_fallback_used_count": 2366,
+    "trade_count": 173,
+    "win_rate_percent": 47.98,
+    "winning_trade_count": 83
+  }
+}

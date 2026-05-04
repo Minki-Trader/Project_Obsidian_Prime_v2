@@ -88,3 +88,47 @@ def test_default_stage21_variants_include_tier_b_and_full_context() -> None:
     assert any(variant.tier_b_compatible for variant in variants)
     assert any(not variant.tier_b_compatible for variant in variants)
     assert all(0.0 < variant.l1_ratio < 1.0 for variant in variants)
+
+
+def test_sklearn_onnx_export_can_drop_label_output_for_mt5(tmp_path) -> None:
+    import onnx
+
+    from foundation.models.onnx_bridge import (
+        check_onnxruntime_probability_parity,
+        export_sklearn_to_onnx_zipmap_disabled,
+    )
+
+    frame = _toy_frame()
+    features = ["x1", "x2", "x3"]
+    spec = ElasticNetLogisticVariantSpec(
+        variant_id="unit",
+        idea_id="unit",
+        description="unit",
+        feature_names=tuple(features),
+        c_value=0.8,
+        l1_ratio=0.35,
+        max_iter=20000,
+        tol=1.0e-2,
+        random_state=212,
+    )
+    model, _ = fit_elasticnet_variant(frame, features, spec)
+    sample = frame.loc[:, features].head(12).to_numpy(dtype="float64", copy=False)
+    onnx_path = tmp_path / "elasticnet_probability_only.onnx"
+
+    export = export_sklearn_to_onnx_zipmap_disabled(
+        model,
+        onnx_path,
+        feature_count=len(features),
+        drop_label_output=True,
+    )
+    parity = check_onnxruntime_probability_parity(model, onnx_path, sample)
+    exported_model = onnx.load(str(onnx_path))
+
+    assert export["zipmap_disabled"] is True
+    assert export["label_output_dropped"] is True
+    assert len(export["outputs_before_drop"]) >= 2
+    assert len(export["outputs"]) == 1
+    assert len(exported_model.graph.output) == 1
+    assert export["outputs"][0]["shape"][-1] == 3
+    assert parity["passed"] is True
+    assert parity["output_names"] == [export["probability_output_name"]]

@@ -151,6 +151,7 @@ def export_sklearn_to_onnx_zipmap_disabled(
     feature_count: int,
     input_name: str = "float_input",
     target_opset: int = 12,
+    drop_label_output: bool = False,
 ) -> dict[str, Any]:
     from skl2onnx import convert_sklearn
     from skl2onnx.common.data_types import FloatTensorType
@@ -166,6 +167,24 @@ def export_sklearn_to_onnx_zipmap_disabled(
     ]
     if non_tensor_outputs:
         raise RuntimeError(f"ONNX export produced non-tensor outputs, zipmap may be enabled: {non_tensor_outputs}")
+    outputs_before = [
+        {
+            "name": output.name,
+            "value_type": output.type.WhichOneof("value"),
+            "shape": _onnx_output_shape(output),
+        }
+        for output in onnx_model.graph.output
+    ]
+    probability_outputs = [
+        item["name"]
+        for item in outputs_before
+        if len(item["shape"]) == 2 and item["shape"][-1] in {len(LABEL_ORDER), "N"}
+    ]
+    if drop_label_output and probability_outputs:
+        keep_name = probability_outputs[0]
+        keep_outputs = [output for output in onnx_model.graph.output if output.name == keep_name]
+        del onnx_model.graph.output[:]
+        onnx_model.graph.output.extend(keep_outputs)
 
     io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
     io_path(output_path).write_bytes(onnx_model.SerializeToString())
@@ -177,7 +196,7 @@ def export_sklearn_to_onnx_zipmap_disabled(
         }
         for output in onnx_model.graph.output
     ]
-    probability_outputs = [
+    final_probability_outputs = [
         item["name"]
         for item in outputs
         if len(item["shape"]) == 2 and item["shape"][-1] in {len(LABEL_ORDER), "N"}
@@ -188,8 +207,10 @@ def export_sklearn_to_onnx_zipmap_disabled(
         "input_name": input_name,
         "target_opset": target_opset,
         "zipmap_disabled": True,
+        "label_output_dropped": bool(drop_label_output and probability_outputs),
+        "outputs_before_drop": outputs_before,
         "outputs": outputs,
-        "probability_output_name": probability_outputs[0] if probability_outputs else outputs[-1]["name"],
+        "probability_output_name": final_probability_outputs[0] if final_probability_outputs else outputs[-1]["name"],
     }
 
 
