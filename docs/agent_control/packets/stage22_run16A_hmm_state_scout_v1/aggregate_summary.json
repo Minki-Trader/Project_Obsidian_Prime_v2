@@ -1,0 +1,343 @@
+{
+  "allowed_claims": [
+    "python_structural_scout_completed",
+    "hidden_state_segmentation_clues_recorded"
+  ],
+  "artifacts": {
+    "tier_a_model": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/models/v02_core17_4state_diag_tier_a_hmm.joblib",
+      "sha256": "7444bb94e1a4af855e8b66f8be5e409753a3ea1e35161df8eb3dd0cc8cb53147"
+    },
+    "tier_a_sequence": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_a_hidden_state_sequence.parquet",
+      "rows": 46650,
+      "sha256": "e163f73d36bb4479ad46625757617ef8eb09c5ad7cfa4432bd03153888bf43c6"
+    },
+    "tier_a_state_summary": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/results/selected_tier_a_state_summary.csv",
+      "rows": 12,
+      "sha256": "3a58537e4d57b0ddda306a2fd63446d26f9d52b296eb6ddbfb8e43b1f6fb1569"
+    },
+    "tier_ab_sequence": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_ab_combined_hidden_state_sequence.parquet",
+      "rows": 59048,
+      "sha256": "e9cafab578a2cfce3cc511ea720cdb5b81bd2b6c312b5d77a553fcd99ea966be"
+    },
+    "tier_ab_state_summary": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/results/selected_tier_ab_state_summary.csv",
+      "rows": 24,
+      "sha256": "08ea83bc8a5929c2e785390a6128f770867cd9f79f5a93d479eb7997da496216"
+    },
+    "tier_b_model": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/models/v02_core17_4state_diag_tier_b_hmm.joblib",
+      "sha256": "4e6f38c6a8ac18aab86c309bdc30e3f5d9ead32838be053e937530f49dec904e"
+    },
+    "tier_b_sequence": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_b_hidden_state_sequence.parquet",
+      "rows": 12398,
+      "sha256": "9fb8569a67c999e0c31d996320ae6f1aa9fdc6c62e6d15fcbcfb87d05ec55129"
+    },
+    "tier_b_state_summary": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/results/selected_tier_b_state_summary.csv",
+      "rows": 12,
+      "sha256": "8a895cd10cfce169516dbccc6f6440ad8c5eff395df7f28664b6484d50a4179d"
+    },
+    "variant_results_csv": {
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/results/hmm_variant_results.csv",
+      "sha256": "55f1fe4ff00fbe9544740f435f1a8b970623804461ff3b9b8e043672f2a62cca"
+    }
+  },
+  "boundary": "hmm_hidden_state_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "created_at_utc": "2026-05-04T23:15:22Z",
+  "exploration_label": "stage22_Regime__HMMHiddenStateSegmentation",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_count": 17,
+  "feature_set_id": "feature_set_v2_mt5_price_proxy_core17_hmm_regime",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_hmm_hidden_state_structural_scout_completed",
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "hmmlearn_gaussian_hmm_hidden_state_segmentation",
+  "next_action": "run16B_hmm_state_runtime_probe_v1",
+  "packet_id": "stage22_run16A_hmm_state_scout_v1",
+  "run_id": "run16A_hmm_hidden_state_segmentation_scout_v1",
+  "run_number": "run16A",
+  "selected_variant_id": "v02_core17_4state_diag",
+  "selected_variant_read": {
+    "tier_a_quality": {
+      "by_split": {
+        "oos": {
+          "best_state": 1,
+          "max_share": 0.45345464135021096,
+          "min_share": 0.10232067510548523,
+          "risk_separation": 0.0006902437380631454,
+          "state_count": 4,
+          "worst_state": 2
+        },
+        "train": {
+          "best_state": 1,
+          "max_share": 0.30247758538087743,
+          "min_share": 0.15775785367189105,
+          "risk_separation": 0.00020641340961446986,
+          "state_count": 4,
+          "worst_state": 2
+        },
+        "validation": {
+          "best_state": 3,
+          "max_share": 0.32517269402681837,
+          "min_share": 0.17015440877691995,
+          "risk_separation": 0.0002516537351766601,
+          "state_count": 4,
+          "worst_state": 0
+        }
+      },
+      "collapsed": false,
+      "quality_score": 0.0007074639056554588,
+      "validation_oos_mean_gap": 0.00023443356758434675
+    },
+    "tier_a_transition": {
+      "matrix": [
+        [
+          0.9135501563791645,
+          0.03751059834884555,
+          0.013999429517276432,
+          0.03493981575471361
+        ],
+        [
+          0.0028637627890778935,
+          0.9349603223591564,
+          0.04384681325350403,
+          0.018329101598261656
+        ],
+        [
+          0.03480959364152052,
+          0.023182303963978114,
+          0.9251711175614779,
+          0.01683698483302351
+        ],
+        [
+          0.10619595829109156,
+          0.012486691625001673,
+          0.008234986154745064,
+          0.8730823639291618
+        ]
+      ],
+      "self_transition_max": 0.9349603223591564,
+      "self_transition_mean": 0.9116909900572401,
+      "self_transition_min": 0.8730823639291618
+    },
+    "tier_b_quality": {
+      "by_split": {
+        "oos": {
+          "best_state": 3,
+          "max_share": 0.4425612052730697,
+          "min_share": 0.04331450094161959,
+          "risk_separation": 0.0013333327537898294,
+          "state_count": 4,
+          "worst_state": 1
+        },
+        "train": {
+          "best_state": 0,
+          "max_share": 0.5512820512820513,
+          "min_share": 0.031438127090301006,
+          "risk_separation": 0.000280268977260365,
+          "state_count": 4,
+          "worst_state": 1
+        },
+        "validation": {
+          "best_state": 3,
+          "max_share": 0.6386306001690617,
+          "min_share": 0.038461538461538464,
+          "risk_separation": 0.0016900601076528048,
+          "state_count": 4,
+          "worst_state": 1
+        }
+      },
+      "collapsed": false,
+      "quality_score": 0.002769377341181756,
+      "validation_oos_mean_gap": 0.00025401552026087807
+    },
+    "tier_b_transition": {
+      "matrix": [
+        [
+          0.9498627229658873,
+          0.031557784072783646,
+          0.004707776273144346,
+          0.013871716688184807
+        ],
+        [
+          0.0176588684504187,
+          0.9308647024343062,
+          0.0341497527752762,
+          0.01732667633999877
+        ],
+        [
+          0.032134241243993764,
+          0.012832526797066913,
+          0.9230807494392019,
+          0.03195248251973729
+        ],
+        [
+          0.008835491103871287,
+          0.007635995644852898,
+          0.10484225411895363,
+          0.8786862591323222
+        ]
+      ],
+      "self_transition_max": 0.9498627229658873,
+      "self_transition_mean": 0.9206236084929295,
+      "self_transition_min": 0.8786862591323222
+    }
+  },
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "22_regime_model__hmm_hidden_state_segmentation",
+  "tier_records": [
+    {
+      "metrics": {
+        "collapsed": false,
+        "long_count": 16165,
+        "min_state_share_train": 0.15775785367189105,
+        "oos_risk_separation": 0.0006902437380631454,
+        "rows": 46650,
+        "short_count": 14243,
+        "signal_count": 46650,
+        "signal_coverage": 1.0,
+        "state_count": 4,
+        "validation_oos_mean_gap": 0.00023443356758434675,
+        "validation_risk_separation": 0.0002516537351766601
+      },
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_a_hidden_state_sequence.parquet",
+      "record_view": "tier_a_separate",
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "collapsed": false,
+        "long_count": 3339,
+        "min_state_share_train": 0.031438127090301006,
+        "oos_risk_separation": 0.0013333327537898294,
+        "rows": 12398,
+        "short_count": 3070,
+        "signal_count": 12398,
+        "signal_coverage": 1.0,
+        "state_count": 4,
+        "validation_oos_mean_gap": 0.00025401552026087807,
+        "validation_risk_separation": 0.0016900601076528048
+      },
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_b_hidden_state_sequence.parquet",
+      "record_view": "tier_b_separate",
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 19504,
+        "rows": 59048,
+        "short_count": 17313,
+        "signal_count": 59048,
+        "signal_coverage": 1.0,
+        "state_count": 8,
+        "tier_a_rows": 46650,
+        "tier_b_rows": 12398
+      },
+      "path": "stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1/predictions/tier_ab_combined_hidden_state_sequence.parquet",
+      "record_view": "tier_ab_combined",
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "tier_rows": {
+    "tier_a": 46650,
+    "tier_b_fallback": 12398,
+    "tier_b_training": 59048
+  },
+  "variant_count": 4,
+  "variant_results": [
+    {
+      "covariance_type": "diag",
+      "feature_count": 17,
+      "idea_id": "hmm_state_count_3",
+      "n_components": 3,
+      "selection_score": 0.001951588486565513,
+      "tier_a_collapsed": false,
+      "tier_a_oos_risk_separation": 0.0004095187359780539,
+      "tier_a_quality_score": 0.00039051376370480284,
+      "tier_a_self_transition_mean": 0.9322614954273777,
+      "tier_a_validation_oos_mean_gap": 0.000228592714847764,
+      "tier_a_validation_risk_separation": 0.00020958774257451296,
+      "tier_b_collapsed": false,
+      "tier_b_oos_risk_separation": 0.0008518114197812088,
+      "tier_b_quality_score": 0.00156107472286071,
+      "tier_b_self_transition_mean": 0.9430337260106779,
+      "tier_b_validation_oos_mean_gap": 0.00024935366021136996,
+      "tier_b_validation_risk_separation": 0.0009586169632908714,
+      "variant_id": "v01_core17_3state_diag"
+    },
+    {
+      "covariance_type": "diag",
+      "feature_count": 17,
+      "idea_id": "hmm_state_count_4",
+      "n_components": 4,
+      "selection_score": 0.0034768412468372148,
+      "tier_a_collapsed": false,
+      "tier_a_oos_risk_separation": 0.0006902437380631454,
+      "tier_a_quality_score": 0.0007074639056554588,
+      "tier_a_self_transition_mean": 0.9116909900572401,
+      "tier_a_validation_oos_mean_gap": 0.00023443356758434675,
+      "tier_a_validation_risk_separation": 0.0002516537351766601,
+      "tier_b_collapsed": false,
+      "tier_b_oos_risk_separation": 0.0013333327537898294,
+      "tier_b_quality_score": 0.002769377341181756,
+      "tier_b_self_transition_mean": 0.9206236084929295,
+      "tier_b_validation_oos_mean_gap": 0.00025401552026087807,
+      "tier_b_validation_risk_separation": 0.0016900601076528048,
+      "variant_id": "v02_core17_4state_diag"
+    },
+    {
+      "covariance_type": "diag",
+      "feature_count": 17,
+      "idea_id": "hmm_state_count_5",
+      "n_components": 5,
+      "selection_score": -0.02512475161840505,
+      "tier_a_collapsed": false,
+      "tier_a_oos_risk_separation": 0.0010219473333563656,
+      "tier_a_quality_score": 0.001352617915654264,
+      "tier_a_self_transition_mean": 0.900222727239006,
+      "tier_a_validation_oos_mean_gap": 0.00032789517154014903,
+      "tier_a_validation_risk_separation": 0.0006585657538380474,
+      "tier_b_collapsed": true,
+      "tier_b_oos_risk_separation": 0.001511521229752945,
+      "tier_b_quality_score": -0.006477369534059313,
+      "tier_b_self_transition_mean": 0.9117408566626389,
+      "tier_b_validation_oos_mean_gap": 0.00037058453358650346,
+      "tier_b_validation_risk_separation": 0.002381693769774246,
+      "variant_id": "v03_core17_5state_diag"
+    },
+    {
+      "covariance_type": "diag",
+      "feature_count": 17,
+      "idea_id": "hmm_compact_macro_removed",
+      "n_components": 4,
+      "selection_score": 0.0034768412468372148,
+      "tier_a_collapsed": false,
+      "tier_a_oos_risk_separation": 0.0006902437380631454,
+      "tier_a_quality_score": 0.0007074639056554588,
+      "tier_a_self_transition_mean": 0.9116911689529728,
+      "tier_a_validation_oos_mean_gap": 0.00023443356758434675,
+      "tier_a_validation_risk_separation": 0.0002516537351766601,
+      "tier_b_collapsed": false,
+      "tier_b_oos_risk_separation": 0.0013333327537898294,
+      "tier_b_quality_score": 0.002769377341181756,
+      "tier_b_self_transition_mean": 0.9206247904868989,
+      "tier_b_validation_oos_mean_gap": 0.00025401552026087807,
+      "tier_b_validation_risk_separation": 0.0016900601076528048,
+      "variant_id": "v04_compact14_4state_diag"
+    }
+  ]
+}

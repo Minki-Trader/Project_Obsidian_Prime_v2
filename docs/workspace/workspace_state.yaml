@@ -2,7 +2,7 @@
 project_mode: clean_stage_restart
 active_branch: codex/stage22-hmm-hidden-state
 active_stage: 22_regime_model__hmm_hidden_state_segmentation
-current_run_id: not_started
+current_run_id: run16A_hmm_hidden_state_segmentation_scout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -16,7 +16,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 21 as reviewed_closed after run15A/run15B ElasticNet Logistic structural and ONNX MT5 runtime evidence; Stage22 is active opened_not_started, next action is run16A_hmm_hidden_state_segmentation_scout_v1, and no baseline, promotion, or runtime authority exists
+- treat Stage 22 as active after run16A_hmm_hidden_state_segmentation_scout_v1 HMM hidden-state Python structural scout; next action is run16B_hmm_state_runtime_probe_v1 MT5 runtime_probe, and no baseline, promotion, or runtime authority exists
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -145,8 +145,8 @@ pre_alpha_stage_queue:
     stage22:
       stage_id: 22_regime_model__hmm_hidden_state_segmentation
       ownership: independent HMM hidden-state segmentation scout after Stage21
-      status: opened_not_started
-      current_run_id: not_started
+      status: active_run16A_python_structural_scout_completed
+      current_run_id: run16A_hmm_hidden_state_segmentation_scout_v1
     stage23:
       stage_id: 23_regime_model__supervised_regime_classifier_filter
       ownership: independent supervised regime classifier filter scout after Stage22
@@ -1833,21 +1833,21 @@ stage19_32_model_research_queue:
   inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
   claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only
 stage20_32_goal_operating_plan:
-  status: stage20_closed_stage21_closed_stage22_opened
+  status: stage20_closed_stage21_closed_stage22_run16A_completed
   plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   decision_path: docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md
   active_stage_at_adoption: 20_model_family_challenge__gam_additive_smooth_shape
   current_run_at_adoption: not_started
-  latest_completed_run: stage21_closeout_stage22_open
-  next_exact_action: run16A_hmm_hidden_state_segmentation_scout_v1
+  latest_completed_run: run16A_hmm_hidden_state_segmentation_scout_v1
+  next_exact_action: run16B_hmm_state_runtime_probe_v1
   active_branch_at_adoption: codex/stage20-gam-additive-smooth-shape
-  active_stage_folder: stages/20_model_family_challenge__gam_additive_smooth_shape
+  active_stage_folder: stages/22_regime_model__hmm_hidden_state_segmentation
   scope: stage20_through_stage32_model_topic_exploration
   mt5_batch_safety_rule: small_tranche_or_sentinel_then_log_report_telemetry_kpi_parser_check
   recovery_rule: repair_and_continue_before_blocked_unless_repeated_failure_or_user_action_required
   reporting_rule: include_branch_folders_changed_files_stage_folder_run_id_mt5_paths_git_status_commit_plan_push_status
   git_checkpoint_rule: commit_and_push_at_stage_open_major_mt5_evidence_packet_and_stage_closeout_when_changes_are_clean
-  claim_boundary: stage21_closed_stage22_open_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  claim_boundary: hmm_hidden_state_structural_scout_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
 stage19_ebm_run13A_characteristic_scout:
   packet_id: stage19_run13A_ebm_shape_scout_v1
   status: reviewed_structural_scout_completed
@@ -2068,12 +2068,30 @@ stage21_elasticnet_closeout:
   next_action: stage22_run16A_hmm_hidden_state_segmentation_scout
 stage22_hmm_hidden_state_segmentation:
   stage_id: 22_regime_model__hmm_hidden_state_segmentation
-  status: opened_not_started
-  current_run_id: not_started
+  status: active_run16A_python_structural_scout_completed
+  current_run_id: run16A_hmm_hidden_state_segmentation_scout_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
-  boundary: topic_open_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  selected_variant_id: v02_core17_4state_diag
+  boundary: hmm_hidden_state_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/22_regime_model__hmm_hidden_state_segmentation/00_spec/stage_brief.md
   selection_status_path: stages/22_regime_model__hmm_hidden_state_segmentation/04_selected/selection_status.md
-  next_action: run16A_hmm_hidden_state_segmentation_scout_v1
+  report_path: stages/22_regime_model__hmm_hidden_state_segmentation/03_reviews/run16A_hmm_state_scout_packet.md
+  packet_summary_path: docs/agent_control/packets/stage22_run16A_hmm_state_scout_v1/aggregate_summary.json
+  next_action: run16B_hmm_state_runtime_probe_v1
+
+stage22_hmm_run16A_structural_scout:
+  packet_id: stage22_run16A_hmm_state_scout_v1
+  status: reviewed_structural_scout_completed
+  judgment: inconclusive_hmm_hidden_state_structural_scout_completed
+  current_run_id: run16A_hmm_hidden_state_segmentation_scout_v1
+  selected_variant_id: v02_core17_4state_diag
+  mt5_runtime_probe_status: not_attempted_next_milestone_run16B_hmm_state_runtime_probe_v1
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: hmm_hidden_state_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/22_regime_model__hmm_hidden_state_segmentation/03_reviews/run16A_hmm_state_scout_packet.md
+  packet_summary_path: docs/agent_control/packets/stage22_run16A_hmm_state_scout_v1/aggregate_summary.json
+  next_action: run16B_hmm_state_runtime_probe_v1

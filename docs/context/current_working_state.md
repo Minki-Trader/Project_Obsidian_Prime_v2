@@ -1,4 +1,12 @@
-﻿## Latest Stage21 Closeout Stage22 Open(최신 21단계 마감 22단계 개방)
+﻿## Latest Stage22 RUN16A HMM Update(최신 22단계 실행16A HMM 업데이트)
+
+Stage22(22단계) `run16A_hmm_hidden_state_segmentation_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
+
+결과(result, 결과): `inconclusive_hmm_hidden_state_structural_scout_completed`. selected variant(선택 변형): `v02_core17_4state_diag`. next exact action(다음 정확한 행동): `run16B_hmm_state_runtime_probe_v1`.
+
+효과(effect, 효과): HMM(`Hidden Markov Model`, 은닉 마르코프 모델) hidden state(은닉 상태)의 Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B combined(Tier A+B 합산)를 남겼지만, MT5 runtime_probe(MT5 런타임 탐침), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 아직 없다.
+
+## Latest Stage21 Closeout Stage22 Open(최신 21단계 마감 22단계 개방)
 
 Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱)은 `closed_inconclusive_elasticnet_logistic_model_characteristics_exhausted`로 닫혔고, Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델)은 `opened_not_started`로 열렸다.
 
@@ -191,7 +199,7 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 - project_mode: `clean_stage_restart`
 - active_stage: `22_regime_model__hmm_hidden_state_segmentation(22단계 HMM 은닉 상태 분할)`
 - active_branch: `codex/stage22-hmm-hidden-state`
-- current run(현재 실행): `not_started`
+- current run(현재 실행): `run16A_hmm_hidden_state_segmentation_scout_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 

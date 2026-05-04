@@ -3,12 +3,12 @@
 ## Current Truth(현재 진실)
 
 - active stage(활성 단계): `22_regime_model__hmm_hidden_state_segmentation`
-- current run(현재 실행): `not_started`
+- current run(현재 실행): `run16A_hmm_hidden_state_segmentation_scout_v1`
 - active branch(활성 브랜치): `codex/stage22-hmm-hidden-state`
 - active stage folder(활성 단계 폴더): `stages/22_regime_model__hmm_hidden_state_segmentation`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 HMM(`Hidden Markov Model`, 은닉 마르코프 모델) open-only(개방만) 상태다. 현재 첫 미완료 milestone(마일스톤)은 Stage22(22단계) `run16A_hmm_hidden_state_segmentation_scout_v1` broad scout(넓은 탐색)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 `run16A_hmm_hidden_state_segmentation_scout_v1` HMM(`Hidden Markov Model`, 은닉 마르코프 모델) Python structural scout(파이썬 구조 탐색)를 완료했다. 현재 첫 미완료 milestone(마일스톤)은 Stage22(22단계) `run16B_hmm_state_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
 ## Execution Contract(실행 계약)
 
@@ -64,22 +64,22 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
 - [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
 
-Current active milestone(현재 활성 마일스톤): Stage22(22단계) `run16A_hmm_hidden_state_segmentation_scout_v1` broad scout(넓은 탐색).
+Current active milestone(현재 활성 마일스톤): Stage22(22단계) `run16B_hmm_state_runtime_probe_v1` narrow MT5 runtime_probe(좁은 MT5 런타임 탐침).
 
 효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `stage21_closeout_stage22_open` completed(완료).
-- active stage/current run id(활성 단계/현재 실행 ID): Stage22(22단계), `not_started`.
-- created/updated folders(생성/수정 폴더): `stages/22_regime_model__hmm_hidden_state_segmentation/00_spec`, `01_inputs`, `03_reviews`, `04_selected`.
-- changed files(변경 파일): Stage21 closeout(21단계 마감), Stage22 open docs(22단계 개방 문서), current truth docs(현재 진실 문서), goal plan(목표 계획).
-- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): Stage21 `stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/02_runs/run15B_elasticnet_logistic_onnx_runtime_probe_v1/mt5`; closeout report(마감 보고서) `stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/03_reviews/stage21_closeout_packet.md`.
+- latest completed work(최근 완료 작업): `run16A_hmm_hidden_state_segmentation_scout_v1` completed(완료) as Python structural scout(파이썬 구조 탐색).
+- active stage/current run id(활성 단계/현재 실행 ID): Stage22(22단계), `run16A_hmm_hidden_state_segmentation_scout_v1`.
+- created/updated folders(생성/수정 폴더): `stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16A_hmm_hidden_state_segmentation_scout_v1`, `docs/agent_control/packets/stage22_run16A_hmm_state_scout_v1`.
+- changed files(변경 파일): HMM model helper(HMM 모델 도우미), Stage22 run16A scout pipeline(22단계 실행16A 탐색 파이프라인), run evidence(실행 근거), ledgers(장부), current truth docs(현재 진실 문서).
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `not_attempted_in_run16A(실행16A에서 미시도)`; review report(검토 보고서) `stages/22_regime_model__hmm_hidden_state_segmentation/03_reviews/run16A_hmm_state_scout_packet.md`.
 - blocker(차단 사유): `none(없음)`.
-- exact next action(정확한 다음 행동): create and run(생성 및 실행) `run16A_hmm_hidden_state_segmentation_scout_v1`.
-- git status(깃 상태): Stage21 closeout/Stage22 open checkpoint commit/push(21단계 마감/22단계 개방 중간 지점 커밋/푸시) pending(대기).
+- exact next action(정확한 다음 행동): create and run(생성 및 실행) `run16B_hmm_state_runtime_probe_v1` after materializing HMM state handoff(상태 인계) files.
+- git status(깃 상태): run16A checkpoint commit/push(실행16A 중간 지점 커밋/푸시) pending(대기).
 
-효과(effect, 효과): 다음 재개는 Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델) 실제 scout(탐색)에서 시작한다.
+효과(effect, 효과): 다음 재개는 Stage22(22단계) MT5 runtime_probe(런타임 탐침) 준비에서 시작한다.
 
 ## Per-Stage Milestone Loop(단계별 마일스톤 반복)
 
@@ -193,3 +193,4 @@ Stage32(32단계)까지 reviewed closeout(검토된 마감)을 완료한 뒤, fi
 - `2026-05-05`: Stage20(20단계) reviewed closeout(검토된 마감)을 완료하고 Stage21(21단계)을 open-only(개방만)로 열었다.
 - `2026-05-05`: Stage21(21단계) `run15B_elasticnet_logistic_onnx_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)를 완료했다. ONNX label output(온닉스 라벨 출력) shape(형상) 충돌은 probability-only output(확률 전용 출력)으로 repair-and-continue(수정 후 계속 진행)했다.
 - `2026-05-05`: Stage21(21단계) reviewed closeout(검토된 마감)을 완료하고 Stage22(22단계)를 HMM(`Hidden Markov Model`, 은닉 마르코프 모델) open-only(개방만)로 열었다.
+- `2026-05-05`: Stage22(22단계) `run16A_hmm_hidden_state_segmentation_scout_v1` HMM(`Hidden Markov Model`, 은닉 마르코프 모델) Python structural scout(파이썬 구조 탐색)를 완료했다.
