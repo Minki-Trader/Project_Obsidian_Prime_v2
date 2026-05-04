@@ -1,0 +1,2280 @@
+{
+  "allowed_claims": [
+    "python_structural_scout_completed",
+    "supervised_regime_filter_clues_recorded"
+  ],
+  "artifacts": {
+    "model_artifacts": {
+      "feature_reads": {
+        "tier_a": {
+          "feature_count": 24,
+          "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/selected_feature_reads/tier_a_selected_feature_read.csv",
+          "read_type": "coefficient_abs",
+          "sha256": "102eea15c7ab350aca1f4deb9eee3408d2a82114b3e9b2c456575e3982def6d1",
+          "top10_importance_share": 0.6869580698315082,
+          "top_features": [
+            {
+              "dominant_label": "short",
+              "feature": "rsi_14",
+              "importance": 0.20289028498392453,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "close_ema20_ratio",
+              "importance": 0.19121850566539986,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "hl_range",
+              "importance": 0.16709218650169788,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "historical_vol_20",
+              "importance": 0.1324022702514447,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "di_spread_14",
+              "importance": 0.12971501674723057,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "atr_14_over_atr_50",
+              "importance": 0.12457784239832322,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "minutes_from_cash_open",
+              "importance": 0.1242584837701931,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "ppo_hist_12_26_9",
+              "importance": 0.10246403975999087,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "short",
+              "feature": "bb_position_20",
+              "importance": 0.09214580680066224,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "ema20_ema50_diff",
+              "importance": 0.08266427035110349,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "is_first_30m_after_open",
+              "importance": 0.07589940281643703,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "long",
+              "feature": "rsi_14_slope_3",
+              "importance": 0.07269477775229305,
+              "read_type": "coefficient_abs"
+            }
+          ]
+        },
+        "tier_b": {
+          "feature_count": 24,
+          "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/selected_feature_reads/tier_b_selected_feature_read.csv",
+          "read_type": "coefficient_abs",
+          "sha256": "bd33a6f0e9121bb6a8490dce752308c7922618a3fd318e89ba9163d80cecec23",
+          "top10_importance_share": 0.7246425135396408,
+          "top_features": [
+            {
+              "dominant_label": "flat",
+              "feature": "close_ema20_ratio",
+              "importance": 0.23545884790752633,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "short",
+              "feature": "rsi_14",
+              "importance": 0.18485000839699953,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "hl_range",
+              "importance": 0.18208677931667522,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "atr_14_over_atr_50",
+              "importance": 0.17003352803733424,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "minutes_from_cash_open",
+              "importance": 0.16891381943731176,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "historical_vol_20",
+              "importance": 0.14455142640187169,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "di_spread_14",
+              "importance": 0.1255716956326704,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "ppo_hist_12_26_9",
+              "importance": 0.12408500491232893,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "ema20_ema50_diff",
+              "importance": 0.11843256393314545,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "short",
+              "feature": "ema20_ema50_spread_zscore_50",
+              "importance": 0.07077796577896679,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "is_first_30m_after_open",
+              "importance": 0.06861885354860428,
+              "read_type": "coefficient_abs"
+            },
+            {
+              "dominant_label": "flat",
+              "feature": "bollinger_width_20",
+              "importance": 0.06462678906773492,
+              "read_type": "coefficient_abs"
+            }
+          ]
+        }
+      },
+      "runtime_feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "hl_range",
+        "atr_14",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "adx_14",
+        "di_spread_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "bb_position_20",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "historical_vol_20",
+        "minutes_from_cash_open",
+        "is_us_cash_open",
+        "is_first_30m_after_open",
+        "close_ema20_ratio",
+        "close_open_ratio",
+        "vortex_indicator"
+      ],
+      "runtime_feature_order_hash": "882cf933cd5835707f717b0cf8617f648752729d60e46aa5edb706e91c88c6a7",
+      "thresholds": {
+        "quantile": 0.8,
+        "tier_a": 0.42627543677432106,
+        "tier_b": 0.42818029581963635
+      },
+      "tier_a_model": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/models/v05_logistic_core24_compact_filter_tier_a_supervised_regime_classifier.joblib",
+        "sha256": "adcb4fb8c4cb3292661920e29635a7180fec04f58a036fb45f865d5a4f627978",
+        "training_sample": {
+          "class_counts": {
+            "0": 9064,
+            "1": 9643,
+            "2": 10515
+          },
+          "feature_count": 24,
+          "model_type": "logistic",
+          "train_rows": 29222
+        }
+      },
+      "tier_b_model": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/models/v05_logistic_core24_compact_filter_tier_b_supervised_regime_classifier.joblib",
+        "sha256": "0c297fb11f27afd1411f8113d01e98e82f3403cd756d7e47bb613acdc68019c0",
+        "training_sample": {
+          "class_counts": {
+            "0": 11425,
+            "1": 13611,
+            "2": 13156
+          },
+          "feature_count": 24,
+          "model_type": "logistic",
+          "train_rows": 38192
+        }
+      }
+    },
+    "prediction_artifacts": {
+      "tier_a_predictions": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/predictions/tier_a_supervised_regime_predictions.parquet",
+        "rows": 46650,
+        "sha256": "f3403506206e5a5aee99c0382819919e7b1db990bf54138d7eafa94f6b2ae7d8"
+      },
+      "tier_ab_predictions": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/predictions/tier_ab_supervised_regime_predictions.parquet",
+        "rows": 59048,
+        "sha256": "0ecad3bda7a33d2f0dfe17ffc6559371dd3adcc036ec8f1e4717cc5cfc46bfc1"
+      },
+      "tier_b_predictions": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/predictions/tier_b_supervised_regime_predictions.parquet",
+        "rows": 12398,
+        "sha256": "c63c314c40e090e95d517bbf7ce63d388c442ded70d6f60c9cfd029ced7512c9"
+      }
+    },
+    "variant_results_csv": {
+      "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/supervised_regime_variant_results.csv",
+      "sha256": "ae117150b945d37eb56a52083e8afe31001840bd63a5d0a7d4ee73be27272568"
+    },
+    "variant_results_json": {
+      "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/supervised_regime_variant_results.json",
+      "sha256": "c2725bfd0e8a11fcec37642da64a19490e378ac8bc62c69ecb493ce214142742"
+    }
+  },
+  "boundary": "supervised_regime_classifier_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "created_at_utc": "2026-05-04T23:47:13Z",
+  "exploration_label": "stage23_Regime__SupervisedClassifierFilter",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_set_id": "feature_set_v2_mt5_price_proxy_classifier_filter",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_supervised_regime_classifier_filter_scout_completed",
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "sklearn_supervised_regime_classifier_filter",
+  "next_action": "run17B_supervised_regime_classifier_runtime_probe_v1",
+  "packet_id": "stage23_run17A_supervised_regime_classifier_scout_v1",
+  "run_id": "run17A_supervised_regime_classifier_filter_scout_v1",
+  "run_number": "run17A",
+  "selected_variant_id": "v05_logistic_core24_compact_filter",
+  "selected_variant_read": {
+    "characteristic_score": 1.4236168189593548,
+    "description": "Compact core24 logistic filter to test smaller handoff-friendly behavior.",
+    "feature_artifact": {
+      "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/variant_feature_reads/v05_logistic_core24_compact_filter_tier_a_feature_read.csv",
+      "sha256": "102eea15c7ab350aca1f4deb9eee3408d2a82114b3e9b2c456575e3982def6d1"
+    },
+    "feature_read": {
+      "feature_count": 24,
+      "read_type": "coefficient_abs",
+      "top10_importance_share": 0.6869580698315082,
+      "top_features": [
+        {
+          "dominant_label": "short",
+          "feature": "rsi_14",
+          "importance": 0.20289028498392453,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "close_ema20_ratio",
+          "importance": 0.19121850566539986,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "hl_range",
+          "importance": 0.16709218650169788,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "historical_vol_20",
+          "importance": 0.1324022702514447,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "di_spread_14",
+          "importance": 0.12971501674723057,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "atr_14_over_atr_50",
+          "importance": 0.12457784239832322,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "minutes_from_cash_open",
+          "importance": 0.1242584837701931,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "ppo_hist_12_26_9",
+          "importance": 0.10246403975999087,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "short",
+          "feature": "bb_position_20",
+          "importance": 0.09214580680066224,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "ema20_ema50_diff",
+          "importance": 0.08266427035110349,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "flat",
+          "feature": "is_first_30m_after_open",
+          "importance": 0.07589940281643703,
+          "read_type": "coefficient_abs"
+        },
+        {
+          "dominant_label": "long",
+          "feature": "rsi_14_slope_3",
+          "importance": 0.07269477775229305,
+          "read_type": "coefficient_abs"
+        }
+      ]
+    },
+    "idea_id": "compact_linear_supervised_regime_filter",
+    "metrics": {
+      "oos": {
+        "accuracy": 0.4757383966244726,
+        "balanced_accuracy": 0.4657215893592583,
+        "directional_correct_count": 661,
+        "directional_hit_rate": 0.4400798934753662,
+        "log_loss": 1.0485115387958468,
+        "long_count": 542,
+        "macro_f1": 0.46407159807521153,
+        "mean_probability": {
+          "flat": 0.3145537693698895,
+          "long": 0.34343337493246234,
+          "short": 0.34201285569764817
+        },
+        "mean_probability_margin": 0.08441342057860153,
+        "rows": 7584,
+        "short_count": 960,
+        "signal_count": 1502,
+        "signal_coverage": 0.19804852320675106
+      },
+      "probability_checks": {
+        "finite": true,
+        "row_sum_max_abs_error": 2.220446049250313e-16
+      },
+      "train": {
+        "accuracy": 0.40729587297241804,
+        "balanced_accuracy": 0.41050445382403516,
+        "directional_correct_count": 1781,
+        "directional_hit_rate": 0.4663524482848913,
+        "log_loss": 1.0707700293594529,
+        "long_count": 1529,
+        "macro_f1": 0.3950677432721082,
+        "mean_probability": {
+          "flat": 0.3333063958078522,
+          "long": 0.33347661123740846,
+          "short": 0.3332169929547393
+        },
+        "mean_probability_margin": 0.0790455625810452,
+        "rows": 29222,
+        "short_count": 2290,
+        "signal_count": 3819,
+        "signal_coverage": 0.1306892067620286
+      },
+      "validation": {
+        "accuracy": 0.44697277529459567,
+        "balanced_accuracy": 0.4363653298038846,
+        "directional_correct_count": 781,
+        "directional_hit_rate": 0.39664804469273746,
+        "log_loss": 1.0523042112548142,
+        "long_count": 813,
+        "macro_f1": 0.42889992672952365,
+        "mean_probability": {
+          "flat": 0.3164019150790094,
+          "long": 0.3424121871757916,
+          "short": 0.3411858977451991
+        },
+        "mean_probability_margin": 0.08625868998079551,
+        "rows": 9844,
+        "short_count": 1156,
+        "signal_count": 1969,
+        "signal_coverage": 0.20002031694433156
+      }
+    },
+    "permission_read": {
+      "oos": {
+        "block_count": 6082,
+        "blocked_flat_rate": 0.4376849720486682,
+        "mean_p_block": 0.3145537693698895,
+        "mean_p_permission": 0.3669794274563853,
+        "permit_count": 1502,
+        "permit_coverage": 0.19804852320675106,
+        "permitted_nonflat_rate": 0.796271637816245,
+        "rows": 7584
+      },
+      "train": {
+        "block_count": 25403,
+        "blocked_flat_rate": 0.35346218950517655,
+        "mean_p_block": 0.3333063958078522,
+        "mean_p_permission": 0.35500316694854583,
+        "permit_count": 3819,
+        "permit_coverage": 0.1306892067620286,
+        "permitted_nonflat_rate": 0.8261324954176485,
+        "rows": 29222
+      },
+      "validation": {
+        "block_count": 7875,
+        "blocked_flat_rate": 0.4146031746031746,
+        "mean_p_block": 0.3164019150790094,
+        "mean_p_permission": 0.364835962120186,
+        "permit_count": 1969,
+        "permit_coverage": 0.20002031694433156,
+        "permitted_nonflat_rate": 0.814118842051803,
+        "rows": 9844
+      }
+    },
+    "probability_shape": {
+      "oos": {
+        "flat_mean": 0.3145537693698895,
+        "mean_entropy": 1.061515467034985,
+        "mean_max_probability": 0.4196796075142837,
+        "nonflat_p50": 0.36514070986209046,
+        "nonflat_p90": 0.4571657322617724,
+        "probability_margin_mean": 0.08441342057860153,
+        "rows": 7584
+      },
+      "train": {
+        "flat_mean": 0.3333063958078522,
+        "mean_entropy": 1.0704120100197068,
+        "mean_max_probability": 0.4090696723554053,
+        "nonflat_p50": 0.34661523091265795,
+        "nonflat_p90": 0.43942980546240545,
+        "probability_margin_mean": 0.0790455625810452,
+        "rows": 29222
+      },
+      "validation": {
+        "flat_mean": 0.3164019150790094,
+        "mean_entropy": 1.0540248991254129,
+        "mean_max_probability": 0.42170205954647816,
+        "nonflat_p50": 0.3538155211725498,
+        "nonflat_p90": 0.4659153143532424,
+        "probability_margin_mean": 0.08625868998079551,
+        "rows": 9844
+      }
+    },
+    "spec": {
+      "description": "Compact core24 logistic filter to test smaller handoff-friendly behavior.",
+      "feature_names": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "hl_range",
+        "atr_14",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "adx_14",
+        "di_spread_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "bb_position_20",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "historical_vol_20",
+        "minutes_from_cash_open",
+        "is_us_cash_open",
+        "is_first_30m_after_open",
+        "close_ema20_ratio",
+        "close_open_ratio",
+        "vortex_indicator"
+      ],
+      "idea_id": "compact_linear_supervised_regime_filter",
+      "max_depth": null,
+      "min_samples_leaf": 80,
+      "model_type": "logistic",
+      "n_estimators": null,
+      "random_state": 2305,
+      "tier_b_compatible": true,
+      "variant_id": "v05_logistic_core24_compact_filter"
+    },
+    "threshold": 0.42627543677432106,
+    "training_sample": {
+      "class_counts": {
+        "0": 9064,
+        "1": 9643,
+        "2": 10515
+      },
+      "feature_count": 24,
+      "model_type": "logistic",
+      "train_rows": 29222
+    },
+    "variant_id": "v05_logistic_core24_compact_filter"
+  },
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "23_regime_model__supervised_regime_classifier_filter",
+  "threshold_quantile": 0.8,
+  "tier_records": [
+    {
+      "metrics": {
+        "long_count": 2884,
+        "partial_context_subtype_counts": null,
+        "permission_read": {
+          "oos": {
+            "block_count": 6082,
+            "blocked_flat_rate": 0.4376849720486682,
+            "mean_p_block": 0.3145537693698895,
+            "mean_p_permission": 0.3669794274563853,
+            "permit_count": 1502,
+            "permit_coverage": 0.19804852320675106,
+            "permitted_nonflat_rate": 0.796271637816245,
+            "rows": 7584
+          },
+          "train": {
+            "block_count": 25403,
+            "blocked_flat_rate": 0.35346218950517655,
+            "mean_p_block": 0.3333063958078522,
+            "mean_p_permission": 0.35500316694854583,
+            "permit_count": 3819,
+            "permit_coverage": 0.1306892067620286,
+            "permitted_nonflat_rate": 0.8261324954176485,
+            "rows": 29222
+          },
+          "validation": {
+            "block_count": 7875,
+            "blocked_flat_rate": 0.4146031746031746,
+            "mean_p_block": 0.3164019150790094,
+            "mean_p_permission": 0.364835962120186,
+            "permit_count": 1969,
+            "permit_coverage": 0.20002031694433156,
+            "permitted_nonflat_rate": 0.814118842051803,
+            "rows": 9844
+          }
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 4406,
+        "signal_count": 7290,
+        "signal_coverage": 0.1562700964630225,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/predictions/tier_a_supervised_regime_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4757383966244726,
+          "balanced_accuracy": 0.4657215893592583,
+          "directional_correct_count": 661,
+          "directional_hit_rate": 0.4400798934753662,
+          "log_loss": 1.0485115387958468,
+          "long_count": 542,
+          "macro_f1": 0.46407159807521153,
+          "mean_probability": {
+            "flat": 0.3145537693698895,
+            "long": 0.34343337493246234,
+            "short": 0.34201285569764817
+          },
+          "mean_probability_margin": 0.08441342057860153,
+          "rows": 7584,
+          "short_count": 960,
+          "signal_count": 1502,
+          "signal_coverage": 0.19804852320675106
+        },
+        "train": {
+          "accuracy": 0.40729587297241804,
+          "balanced_accuracy": 0.41050445382403516,
+          "directional_correct_count": 1781,
+          "directional_hit_rate": 0.4663524482848913,
+          "log_loss": 1.0707700293594529,
+          "long_count": 1529,
+          "macro_f1": 0.3950677432721082,
+          "mean_probability": {
+            "flat": 0.3333063958078522,
+            "long": 0.33347661123740846,
+            "short": 0.3332169929547393
+          },
+          "mean_probability_margin": 0.0790455625810452,
+          "rows": 29222,
+          "short_count": 2290,
+          "signal_count": 3819,
+          "signal_coverage": 0.1306892067620286
+        },
+        "validation": {
+          "accuracy": 0.44697277529459567,
+          "balanced_accuracy": 0.4363653298038846,
+          "directional_correct_count": 781,
+          "directional_hit_rate": 0.39664804469273746,
+          "log_loss": 1.0523042112548142,
+          "long_count": 813,
+          "macro_f1": 0.42889992672952365,
+          "mean_probability": {
+            "flat": 0.3164019150790094,
+            "long": 0.3424121871757916,
+            "short": 0.3411858977451991
+          },
+          "mean_probability_margin": 0.08625868998079551,
+          "rows": 9844,
+          "short_count": 1156,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 138,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "permission_read": {
+          "oos": {
+            "block_count": 931,
+            "blocked_flat_rate": 0.5725026852846402,
+            "mean_p_block": 0.3644494693716608,
+            "mean_p_permission": 0.3416196318729577,
+            "permit_count": 131,
+            "permit_coverage": 0.12335216572504708,
+            "permitted_nonflat_rate": 0.6641221374045801,
+            "rows": 1062
+          },
+          "train": {
+            "block_count": 8440,
+            "blocked_flat_rate": 0.45829383886255926,
+            "mean_p_block": 0.3980466159614997,
+            "mean_p_permission": 0.31960946097510423,
+            "permit_count": 530,
+            "permit_coverage": 0.059085841694537344,
+            "permitted_nonflat_rate": 0.8113207547169812,
+            "rows": 8970
+          },
+          "validation": {
+            "block_count": 2266,
+            "blocked_flat_rate": 0.6218005295675199,
+            "mean_p_block": 0.42150930156605243,
+            "mean_p_permission": 0.3058192141060959,
+            "permit_count": 100,
+            "permit_coverage": 0.042265426880811495,
+            "permitted_nonflat_rate": 0.65,
+            "rows": 2366
+          }
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 623,
+        "signal_count": 761,
+        "signal_coverage": 0.06138086788191644,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/predictions/tier_b_supervised_regime_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5546139359698682,
+          "balanced_accuracy": 0.4684532741559401,
+          "directional_correct_count": 48,
+          "directional_hit_rate": 0.366412213740458,
+          "log_loss": 1.0319026513902638,
+          "long_count": 22,
+          "macro_f1": 0.4690395548455921,
+          "mean_probability": {
+            "flat": 0.3644494693716608,
+            "long": 0.3187257328507979,
+            "short": 0.3168247977775413
+          },
+          "mean_probability_margin": 0.11653827527172629,
+          "rows": 1062,
+          "short_count": 109,
+          "signal_count": 131,
+          "signal_coverage": 0.12335216572504708
+        },
+        "train": {
+          "accuracy": 0.46800445930880713,
+          "balanced_accuracy": 0.3959769427739446,
+          "directional_correct_count": 250,
+          "directional_hit_rate": 0.4716981132075472,
+          "log_loss": 1.041251929193116,
+          "long_count": 94,
+          "macro_f1": 0.3628562173489094,
+          "mean_probability": {
+            "flat": 0.3980466159614997,
+            "long": 0.30584029300381776,
+            "short": 0.29611309103468253
+          },
+          "mean_probability_margin": 0.12661648489834826,
+          "rows": 8970,
+          "short_count": 436,
+          "signal_count": 530,
+          "signal_coverage": 0.059085841694537344
+        },
+        "validation": {
+          "accuracy": 0.6052409129332206,
+          "balanced_accuracy": 0.39608508165022593,
+          "directional_correct_count": 25,
+          "directional_hit_rate": 0.25,
+          "log_loss": 0.9699460435478976,
+          "long_count": 22,
+          "macro_f1": 0.3870435159143555,
+          "mean_probability": {
+            "flat": 0.42150930156605243,
+            "long": 0.2960052541447137,
+            "short": 0.28248544428923383
+          },
+          "mean_probability_margin": 0.1506067130476626,
+          "rows": 2366,
+          "short_count": 78,
+          "signal_count": 100,
+          "signal_coverage": 0.042265426880811495
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 3028,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "permission_read": {
+          "oos": {
+            "block_count": 7009,
+            "blocked_flat_rate": 0.45555714081894705,
+            "mean_p_block": 0.32068252641382666,
+            "mean_p_permission": 0.3638644490953397,
+            "permit_count": 1637,
+            "permit_coverage": 0.18933610918343743,
+            "permitted_nonflat_rate": 0.7849725106902871,
+            "rows": 8646
+          },
+          "train": {
+            "block_count": 33820,
+            "blocked_flat_rate": 0.3796865759905381,
+            "mean_p_block": 0.3485116685031344,
+            "mean_p_permission": 0.34669039090692005,
+            "permit_count": 4372,
+            "permit_coverage": 0.11447423544197738,
+            "permitted_nonflat_rate": 0.82387923147301,
+            "rows": 38192
+          },
+          "validation": {
+            "block_count": 10140,
+            "blocked_flat_rate": 0.46084812623274163,
+            "mean_p_block": 0.33676916130573703,
+            "mean_p_permission": 0.3533999567310511,
+            "permit_count": 2070,
+            "permit_coverage": 0.16953316953316952,
+            "permitted_nonflat_rate": 0.8057971014492754,
+            "rows": 12210
+          }
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 5051,
+        "signal_count": 8079,
+        "signal_coverage": 0.1368208914781195,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/predictions/tier_ab_supervised_regime_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4854267869535045,
+          "balanced_accuracy": 0.46943571985558474,
+          "directional_correct_count": 710,
+          "directional_hit_rate": 0.4337202199144777,
+          "log_loss": 1.0464714464497065,
+          "long_count": 565,
+          "macro_f1": 0.4677376381960958,
+          "mean_probability": {
+            "flat": 0.32068252641382666,
+            "long": 0.34039850147760137,
+            "short": 0.3389189721085719
+          },
+          "mean_probability_margin": 0.08835936039864531,
+          "rows": 8646,
+          "short_count": 1072,
+          "signal_count": 1637,
+          "signal_coverage": 0.18933610918343743
+        },
+        "train": {
+          "accuracy": 0.4215542521994135,
+          "balanced_accuracy": 0.41416065419646064,
+          "directional_correct_count": 2037,
+          "directional_hit_rate": 0.46591948764867336,
+          "log_loss": 1.0638372330017851,
+          "long_count": 1628,
+          "macro_f1": 0.3952835341921712,
+          "mean_probability": {
+            "flat": 0.3485116685031344,
+            "long": 0.32698578136321205,
+            "short": 0.32450255013365353
+          },
+          "mean_probability_margin": 0.09021835199207914,
+          "rows": 38192,
+          "short_count": 2744,
+          "signal_count": 4372,
+          "signal_coverage": 0.11447423544197738
+        },
+        "validation": {
+          "accuracy": 0.4776412776412776,
+          "balanced_accuracy": 0.444076545922216,
+          "directional_correct_count": 806,
+          "directional_hit_rate": 0.3893719806763285,
+          "log_loss": 1.0363452084051366,
+          "long_count": 835,
+          "macro_f1": 0.4365343285224319,
+          "mean_probability": {
+            "flat": 0.33676916130573703,
+            "long": 0.3334196561723902,
+            "short": 0.32981118252187275
+          },
+          "mean_probability_margin": 0.09872776635886328,
+          "rows": 12210,
+          "short_count": 1235,
+          "signal_count": 2070,
+          "signal_coverage": 0.16953316953316952
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "tier_rows": {
+    "tier_a": 46650,
+    "tier_b_fallback": 12398,
+    "tier_b_training": 59048
+  },
+  "variant_count": 5,
+  "variant_results": [
+    {
+      "characteristic_score": 1.415083958135764,
+      "description": "Balanced multinomial logistic classifier as a quiet supervised permission surface.",
+      "feature_artifact": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/variant_feature_reads/v01_logistic_core42_permission_tier_a_feature_read.csv",
+        "sha256": "8531cc1de2f84f8f8f67e98916005ae87d88ad3d6e6cdb3b6463fb38c48eed59"
+      },
+      "feature_read": {
+        "feature_count": 42,
+        "read_type": "coefficient_abs",
+        "top10_importance_share": 0.596498634298869,
+        "top_features": [
+          {
+            "dominant_label": "short",
+            "feature": "close_ema20_ratio",
+            "importance": 0.45074624111428424,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "short",
+            "feature": "close_ema50_ratio",
+            "importance": 0.3897318886534389,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "long",
+            "feature": "ema20_ema50_diff",
+            "importance": 0.3402414231255604,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "hl_range",
+            "importance": 0.2938866478484284,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "long",
+            "feature": "ema9_ema20_diff",
+            "importance": 0.23617406923660925,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "short",
+            "feature": "atr_50",
+            "importance": 0.20168623136251454,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "short",
+            "feature": "atr_14",
+            "importance": 0.20096955857432725,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "short",
+            "feature": "ema50_ema200_diff",
+            "importance": 0.17060483090834164,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "hl_zscore_50",
+            "importance": 0.15104104011514952,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "minutes_from_cash_open",
+            "importance": 0.14642720634442227,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "short",
+            "feature": "rsi_50",
+            "importance": 0.1439613792579369,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "short",
+            "feature": "rsi_14",
+            "importance": 0.12249388653581887,
+            "read_type": "coefficient_abs"
+          }
+        ]
+      },
+      "idea_id": "linear_supervised_regime_filter",
+      "metrics": {
+        "oos": {
+          "accuracy": 0.4666402953586498,
+          "balanced_accuracy": 0.45315666168950225,
+          "directional_correct_count": 645,
+          "directional_hit_rate": 0.424901185770751,
+          "log_loss": 1.0480724580901828,
+          "long_count": 768,
+          "macro_f1": 0.4520077879680889,
+          "mean_probability": {
+            "flat": 0.32850214891485746,
+            "long": 0.34220309384140446,
+            "short": 0.3292947572437381
+          },
+          "mean_probability_margin": 0.1159522886244578,
+          "rows": 7584,
+          "short_count": 750,
+          "signal_count": 1518,
+          "signal_coverage": 0.20015822784810128
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 2.220446049250313e-16
+        },
+        "train": {
+          "accuracy": 0.4188625008555198,
+          "balanced_accuracy": 0.4218910370183922,
+          "directional_correct_count": 1622,
+          "directional_hit_rate": 0.48679471788715484,
+          "log_loss": 1.0677321117584246,
+          "long_count": 1496,
+          "macro_f1": 0.4087602366809206,
+          "mean_probability": {
+            "flat": 0.33326616480040383,
+            "long": 0.33358107661207287,
+            "short": 0.3331527585875233
+          },
+          "mean_probability_margin": 0.08687207455057364,
+          "rows": 29222,
+          "short_count": 1836,
+          "signal_count": 3332,
+          "signal_coverage": 0.11402368078844706
+        },
+        "validation": {
+          "accuracy": 0.44656643640796423,
+          "balanced_accuracy": 0.4343472208457168,
+          "directional_correct_count": 744,
+          "directional_hit_rate": 0.377856780091417,
+          "log_loss": 1.061454150904746,
+          "long_count": 1028,
+          "macro_f1": 0.426761866489837,
+          "mean_probability": {
+            "flat": 0.32550603666169153,
+            "long": 0.3431547446074015,
+            "short": 0.33133921873090694
+          },
+          "mean_probability_margin": 0.11808062161717495,
+          "rows": 9844,
+          "short_count": 941,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "permission_read": {
+        "oos": {
+          "block_count": 6066,
+          "blocked_flat_rate": 0.43554236729310913,
+          "mean_p_block": 0.32850214891485746,
+          "mean_p_permission": 0.377083877716217,
+          "permit_count": 1518,
+          "permit_coverage": 0.20015822784810128,
+          "permitted_nonflat_rate": 0.7852437417654808,
+          "rows": 7584
+        },
+        "train": {
+          "block_count": 25890,
+          "blocked_flat_rate": 0.3504828118964851,
+          "mean_p_block": 0.33326616480040383,
+          "mean_p_permission": 0.36202948395911155,
+          "permit_count": 3332,
+          "permit_coverage": 0.11402368078844706,
+          "permitted_nonflat_rate": 0.8292316926770709,
+          "rows": 29222
+        },
+        "validation": {
+          "block_count": 7875,
+          "blocked_flat_rate": 0.4121904761904762,
+          "mean_p_block": 0.32550603666169153,
+          "mean_p_permission": 0.37777599581901633,
+          "permit_count": 1969,
+          "permit_coverage": 0.20002031694433156,
+          "permitted_nonflat_rate": 0.8044692737430168,
+          "rows": 9844
+        }
+      },
+      "probability_shape": {
+        "oos": {
+          "flat_mean": 0.32850214891485746,
+          "mean_entropy": 1.0560686086090938,
+          "mean_max_probability": 0.43757647702282654,
+          "nonflat_p50": 0.3730589395022189,
+          "nonflat_p90": 0.48880389603978225,
+          "probability_margin_mean": 0.1159522886244578,
+          "rows": 7584
+        },
+        "train": {
+          "flat_mean": 0.33326616480040383,
+          "mean_entropy": 1.067377365931627,
+          "mean_max_probability": 0.41498889139287864,
+          "nonflat_p50": 0.35162241887671963,
+          "nonflat_p90": 0.45512571340253566,
+          "probability_margin_mean": 0.08687207455057364,
+          "rows": 29222
+        },
+        "validation": {
+          "flat_mean": 0.32550603666169153,
+          "mean_entropy": 1.0458785177875658,
+          "mean_max_probability": 0.439765613732336,
+          "nonflat_p50": 0.35794116751763416,
+          "nonflat_p90": 0.5007278112837122,
+          "probability_margin_mean": 0.11808062161717495,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "Balanced multinomial logistic classifier as a quiet supervised permission surface.",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "hl_range",
+          "close_open_ratio",
+          "gap_percent",
+          "close_prev_close_ratio",
+          "return_zscore_20",
+          "hl_zscore_50",
+          "overnight_return",
+          "return_1_over_atr_14",
+          "close_ema20_ratio",
+          "close_ema50_ratio",
+          "ema9_ema20_diff",
+          "ema20_ema50_diff",
+          "ema50_ema200_diff",
+          "ema20_ema50_spread_zscore_50",
+          "sma50_sma200_ratio",
+          "rsi_14",
+          "rsi_50",
+          "rsi_14_slope_3",
+          "rsi_14_minus_50",
+          "stoch_kd_diff",
+          "stochrsi_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "trix_15",
+          "atr_14",
+          "atr_50",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "bb_position_20",
+          "bb_squeeze",
+          "historical_vol_20",
+          "historical_vol_5_over_20",
+          "adx_14",
+          "di_spread_14",
+          "supertrend_10_3",
+          "vortex_indicator",
+          "is_us_cash_open",
+          "minutes_from_cash_open",
+          "is_first_30m_after_open",
+          "is_last_30m_before_cash_close"
+        ],
+        "idea_id": "linear_supervised_regime_filter",
+        "max_depth": null,
+        "min_samples_leaf": 80,
+        "model_type": "logistic",
+        "n_estimators": null,
+        "random_state": 2301,
+        "tier_b_compatible": true,
+        "variant_id": "v01_logistic_core42_permission"
+      },
+      "threshold": 0.44794225058970183,
+      "training_sample": {
+        "class_counts": {
+          "0": 9064,
+          "1": 9643,
+          "2": 10515
+        },
+        "feature_count": 42,
+        "model_type": "logistic",
+        "train_rows": 29222
+      },
+      "variant_id": "v01_logistic_core42_permission"
+    },
+    {
+      "characteristic_score": 1.3892951541780452,
+      "description": "Shallow random forest to test nonlinear supervised regime permission shape.",
+      "feature_artifact": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/variant_feature_reads/v02_rf_core42_shallow_filter_tier_a_feature_read.csv",
+        "sha256": "86ba96bf075337bd5b86b2c2d04aa0821b3571857820d1a73b9d6d98a32e24ee"
+      },
+      "feature_read": {
+        "feature_count": 42,
+        "read_type": "feature_importance",
+        "top10_importance_share": 0.633809873009244,
+        "top_features": [
+          {
+            "dominant_label": "tree_importance",
+            "feature": "historical_vol_20",
+            "importance": 0.1395775729153551,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "hl_range",
+            "importance": 0.12805280277407147,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "bollinger_width_20",
+            "importance": 0.06885496036113267,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_14",
+            "importance": 0.06060742941632599,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "sma50_sma200_ratio",
+            "importance": 0.04371990894937071,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "minutes_from_cash_open",
+            "importance": 0.04369086777755474,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "overnight_return",
+            "importance": 0.03855870901866821,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "ema50_ema200_diff",
+            "importance": 0.037747242716104364,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_50",
+            "importance": 0.037734171671101685,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "ppo_hist_12_26_9",
+            "importance": 0.03526620740955899,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "close_ema50_ratio",
+            "importance": 0.027560551573158083,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_14_over_atr_50",
+            "importance": 0.027178779251248553,
+            "read_type": "feature_importance"
+          }
+        ]
+      },
+      "idea_id": "random_forest_supervised_regime_filter",
+      "metrics": {
+        "oos": {
+          "accuracy": 0.45688291139240506,
+          "balanced_accuracy": 0.4458533735267189,
+          "directional_correct_count": 632,
+          "directional_hit_rate": 0.45997088791848617,
+          "log_loss": 1.045018102910939,
+          "long_count": 759,
+          "macro_f1": 0.4451006937588013,
+          "mean_probability": {
+            "flat": 0.3240828387352393,
+            "long": 0.3453503204352317,
+            "short": 0.3305668408295297
+          },
+          "mean_probability_margin": 0.08698084570863138,
+          "rows": 7584,
+          "short_count": 615,
+          "signal_count": 1374,
+          "signal_coverage": 0.18117088607594936
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 3.9968028886505635e-15
+        },
+        "train": {
+          "accuracy": 0.49120525631373624,
+          "balanced_accuracy": 0.495359834284886,
+          "directional_correct_count": 2701,
+          "directional_hit_rate": 0.6392899408284024,
+          "log_loss": 1.0392392884735782,
+          "long_count": 1458,
+          "macro_f1": 0.4893668230179837,
+          "mean_probability": {
+            "flat": 0.33335963071539937,
+            "long": 0.33421023469688055,
+            "short": 0.33243013458772086
+          },
+          "mean_probability_margin": 0.07694213298418875,
+          "rows": 29222,
+          "short_count": 2767,
+          "signal_count": 4225,
+          "signal_coverage": 0.14458284853877215
+        },
+        "validation": {
+          "accuracy": 0.45418529053230394,
+          "balanced_accuracy": 0.4437513437002683,
+          "directional_correct_count": 804,
+          "directional_hit_rate": 0.40832910106653125,
+          "log_loss": 1.0497118592862975,
+          "long_count": 1115,
+          "macro_f1": 0.44058987422924467,
+          "mean_probability": {
+            "flat": 0.3281148248824321,
+            "long": 0.3426522499646323,
+            "short": 0.32923292515293634
+          },
+          "mean_probability_margin": 0.08903551499118845,
+          "rows": 9844,
+          "short_count": 854,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "permission_read": {
+        "oos": {
+          "block_count": 6210,
+          "blocked_flat_rate": 0.4302737520128824,
+          "mean_p_block": 0.3240828387352393,
+          "mean_p_permission": 0.36195383561899136,
+          "permit_count": 1374,
+          "permit_coverage": 0.18117088607594936,
+          "permitted_nonflat_rate": 0.784570596797671,
+          "rows": 7584
+        },
+        "train": {
+          "block_count": 24997,
+          "blocked_flat_rate": 0.3598031763811657,
+          "mean_p_block": 0.33335963071539937,
+          "mean_p_permission": 0.3573907524982979,
+          "permit_count": 4225,
+          "permit_coverage": 0.14458284853877215,
+          "permitted_nonflat_rate": 0.8463905325443787,
+          "rows": 29222
+        },
+        "validation": {
+          "block_count": 7875,
+          "blocked_flat_rate": 0.41193650793650793,
+          "mean_p_block": 0.3281148248824321,
+          "mean_p_permission": 0.35918468525762426,
+          "permit_count": 1969,
+          "permit_coverage": 0.20002031694433156,
+          "permitted_nonflat_rate": 0.803453529710513,
+          "rows": 9844
+        }
+      },
+      "probability_shape": {
+        "oos": {
+          "flat_mean": 0.3240828387352393,
+          "mean_entropy": 1.0693594878963575,
+          "mean_max_probability": 0.41658146932673257,
+          "nonflat_p50": 0.36746675895361836,
+          "nonflat_p90": 0.44001054868644707,
+          "probability_margin_mean": 0.08698084570863138,
+          "rows": 7584
+        },
+        "train": {
+          "flat_mean": 0.33335963071539937,
+          "mean_entropy": 1.0768197440582492,
+          "mean_max_probability": 0.40444226050494314,
+          "nonflat_p50": 0.35514574702540924,
+          "nonflat_p90": 0.4285522596103184,
+          "probability_margin_mean": 0.07694213298418875,
+          "rows": 29222
+        },
+        "validation": {
+          "flat_mean": 0.3281148248824321,
+          "mean_entropy": 1.0679258605818713,
+          "mean_max_probability": 0.4177605496255139,
+          "nonflat_p50": 0.3576432158881762,
+          "nonflat_p90": 0.4443566456976741,
+          "probability_margin_mean": 0.08903551499118845,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "Shallow random forest to test nonlinear supervised regime permission shape.",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "hl_range",
+          "close_open_ratio",
+          "gap_percent",
+          "close_prev_close_ratio",
+          "return_zscore_20",
+          "hl_zscore_50",
+          "overnight_return",
+          "return_1_over_atr_14",
+          "close_ema20_ratio",
+          "close_ema50_ratio",
+          "ema9_ema20_diff",
+          "ema20_ema50_diff",
+          "ema50_ema200_diff",
+          "ema20_ema50_spread_zscore_50",
+          "sma50_sma200_ratio",
+          "rsi_14",
+          "rsi_50",
+          "rsi_14_slope_3",
+          "rsi_14_minus_50",
+          "stoch_kd_diff",
+          "stochrsi_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "trix_15",
+          "atr_14",
+          "atr_50",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "bb_position_20",
+          "bb_squeeze",
+          "historical_vol_20",
+          "historical_vol_5_over_20",
+          "adx_14",
+          "di_spread_14",
+          "supertrend_10_3",
+          "vortex_indicator",
+          "is_us_cash_open",
+          "minutes_from_cash_open",
+          "is_first_30m_after_open",
+          "is_last_30m_before_cash_close"
+        ],
+        "idea_id": "random_forest_supervised_regime_filter",
+        "max_depth": 7,
+        "min_samples_leaf": 90,
+        "model_type": "random_forest",
+        "n_estimators": 140,
+        "random_state": 2302,
+        "tier_b_compatible": true,
+        "variant_id": "v02_rf_core42_shallow_filter"
+      },
+      "threshold": 0.41479747011910556,
+      "training_sample": {
+        "class_counts": {
+          "0": 9064,
+          "1": 9643,
+          "2": 10515
+        },
+        "feature_count": 42,
+        "model_type": "random_forest",
+        "train_rows": 29222
+      },
+      "variant_id": "v02_rf_core42_shallow_filter"
+    },
+    {
+      "characteristic_score": 1.387717760714457,
+      "description": "ExtraTrees classifier to test noisy threshold-style regime separation.",
+      "feature_artifact": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/variant_feature_reads/v03_extratrees_core42_filter_tier_a_feature_read.csv",
+        "sha256": "59dd82e6c16e658311970c77c02ec278baed91ea894d0fc7822a192a2eab6db9"
+      },
+      "feature_read": {
+        "feature_count": 42,
+        "read_type": "feature_importance",
+        "top10_importance_share": 0.6447937171221664,
+        "top_features": [
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_14",
+            "importance": 0.09112731363003893,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "minutes_from_cash_open",
+            "importance": 0.08905615678735,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "historical_vol_20",
+            "importance": 0.08506610293793665,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "is_first_30m_after_open",
+            "importance": 0.08390249927093923,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "bollinger_width_20",
+            "importance": 0.08127051467764893,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "hl_range",
+            "importance": 0.07258442381993069,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_50",
+            "importance": 0.04043915075119089,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "ppo_hist_12_26_9",
+            "importance": 0.037081856087630725,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_14_over_atr_50",
+            "importance": 0.034976735459310196,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "roc_12",
+            "importance": 0.02928896370019021,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "close_ema50_ratio",
+            "importance": 0.0273710676904495,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "close_ema20_ratio",
+            "importance": 0.026292811390068588,
+            "read_type": "feature_importance"
+          }
+        ]
+      },
+      "idea_id": "extra_trees_supervised_regime_filter",
+      "metrics": {
+        "oos": {
+          "accuracy": 0.466376582278481,
+          "balanced_accuracy": 0.45970439400881863,
+          "directional_correct_count": 658,
+          "directional_hit_rate": 0.45410628019323673,
+          "log_loss": 1.0633155494467093,
+          "long_count": 530,
+          "macro_f1": 0.4597062625033996,
+          "mean_probability": {
+            "flat": 0.31953426935022694,
+            "long": 0.34159356405199176,
+            "short": 0.33887216659780983
+          },
+          "mean_probability_margin": 0.04374515873683518,
+          "rows": 7584,
+          "short_count": 919,
+          "signal_count": 1449,
+          "signal_coverage": 0.19106012658227847
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 5.417888360170764e-14
+        },
+        "train": {
+          "accuracy": 0.4253302306481418,
+          "balanced_accuracy": 0.4311919303805609,
+          "directional_correct_count": 2127,
+          "directional_hit_rate": 0.5185275475377864,
+          "log_loss": 1.0710238433797028,
+          "long_count": 1145,
+          "macro_f1": 0.4132854851955212,
+          "mean_probability": {
+            "flat": 0.33334718055688206,
+            "long": 0.3335024940147633,
+            "short": 0.3331503254283863
+          },
+          "mean_probability_margin": 0.044465112783332615,
+          "rows": 29222,
+          "short_count": 2957,
+          "signal_count": 4102,
+          "signal_coverage": 0.14037369105468483
+        },
+        "validation": {
+          "accuracy": 0.4431125558715969,
+          "balanced_accuracy": 0.43647832649725443,
+          "directional_correct_count": 763,
+          "directional_hit_rate": 0.38750634840020315,
+          "log_loss": 1.066404644405207,
+          "long_count": 762,
+          "macro_f1": 0.4323276687212257,
+          "mean_probability": {
+            "flat": 0.32209426096614074,
+            "long": 0.3398282815914234,
+            "short": 0.3380774574424653
+          },
+          "mean_probability_margin": 0.04520915767122918,
+          "rows": 9844,
+          "short_count": 1207,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "permission_read": {
+        "oos": {
+          "block_count": 6135,
+          "blocked_flat_rate": 0.4337408312958435,
+          "mean_p_block": 0.31953426935022694,
+          "mean_p_permission": 0.35303420543663194,
+          "permit_count": 1449,
+          "permit_coverage": 0.19106012658227847,
+          "permitted_nonflat_rate": 0.7881297446514838,
+          "rows": 7584
+        },
+        "train": {
+          "block_count": 25120,
+          "blocked_flat_rate": 0.355812101910828,
+          "mean_p_block": 0.33334718055688206,
+          "mean_p_permission": 0.34581608452118934,
+          "permit_count": 4102,
+          "permit_coverage": 0.14037369105468483,
+          "permitted_nonflat_rate": 0.8281326182350073,
+          "rows": 29222
+        },
+        "validation": {
+          "block_count": 7875,
+          "blocked_flat_rate": 0.4073650793650794,
+          "mean_p_block": 0.32209426096614074,
+          "mean_p_permission": 0.3510469241545346,
+          "permit_count": 1969,
+          "permit_coverage": 0.20002031694433156,
+          "permitted_nonflat_rate": 0.7851701371254444,
+          "rows": 9844
+        }
+      },
+      "probability_shape": {
+        "oos": {
+          "flat_mean": 0.31953426935022694,
+          "mean_entropy": 1.0888317327311956,
+          "mean_max_probability": 0.3783993441262631,
+          "nonflat_p50": 0.35258334731888086,
+          "nonflat_p90": 0.3993363828892247,
+          "probability_margin_mean": 0.04374515873683518,
+          "rows": 7584
+        },
+        "train": {
+          "flat_mean": 0.33334718055688206,
+          "mean_entropy": 1.0906661609165298,
+          "mean_max_probability": 0.3753200552194697,
+          "nonflat_p50": 0.3403484384272668,
+          "nonflat_p90": 0.39253391739678273,
+          "probability_margin_mean": 0.044465112783332615,
+          "rows": 29222
+        },
+        "validation": {
+          "flat_mean": 0.32209426096614074,
+          "mean_entropy": 1.0882763553615078,
+          "mean_max_probability": 0.3793642846312553,
+          "nonflat_p50": 0.3482941601004783,
+          "nonflat_p90": 0.4021045820477774,
+          "probability_margin_mean": 0.04520915767122918,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "ExtraTrees classifier to test noisy threshold-style regime separation.",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "hl_range",
+          "close_open_ratio",
+          "gap_percent",
+          "close_prev_close_ratio",
+          "return_zscore_20",
+          "hl_zscore_50",
+          "overnight_return",
+          "return_1_over_atr_14",
+          "close_ema20_ratio",
+          "close_ema50_ratio",
+          "ema9_ema20_diff",
+          "ema20_ema50_diff",
+          "ema50_ema200_diff",
+          "ema20_ema50_spread_zscore_50",
+          "sma50_sma200_ratio",
+          "rsi_14",
+          "rsi_50",
+          "rsi_14_slope_3",
+          "rsi_14_minus_50",
+          "stoch_kd_diff",
+          "stochrsi_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "trix_15",
+          "atr_14",
+          "atr_50",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "bb_position_20",
+          "bb_squeeze",
+          "historical_vol_20",
+          "historical_vol_5_over_20",
+          "adx_14",
+          "di_spread_14",
+          "supertrend_10_3",
+          "vortex_indicator",
+          "is_us_cash_open",
+          "minutes_from_cash_open",
+          "is_first_30m_after_open",
+          "is_last_30m_before_cash_close"
+        ],
+        "idea_id": "extra_trees_supervised_regime_filter",
+        "max_depth": 7,
+        "min_samples_leaf": 100,
+        "model_type": "extra_trees",
+        "n_estimators": 160,
+        "random_state": 2303,
+        "tier_b_compatible": true,
+        "variant_id": "v03_extratrees_core42_filter"
+      },
+      "threshold": 0.383426017085719,
+      "training_sample": {
+        "class_counts": {
+          "0": 9064,
+          "1": 9643,
+          "2": 10515
+        },
+        "feature_count": 42,
+        "model_type": "extra_trees",
+        "train_rows": 29222
+      },
+      "variant_id": "v03_extratrees_core42_filter"
+    },
+    {
+      "characteristic_score": 1.394979172307152,
+      "description": "Tier-A-only full58 random forest context contrast, not a runtime handoff selection.",
+      "feature_artifact": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/variant_feature_reads/v04_rf_full58_context_filter_tier_a_feature_read.csv",
+        "sha256": "9f1c4c92d7172cbf4f44f47d3d115c087fa4199af9c3c1fa2e79c23381efda2e"
+      },
+      "feature_read": {
+        "feature_count": 58,
+        "read_type": "feature_importance",
+        "top10_importance_share": 0.5743567200997853,
+        "top_features": [
+          {
+            "dominant_label": "tree_importance",
+            "feature": "historical_vol_20",
+            "importance": 0.12097182395552034,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "hl_range",
+            "importance": 0.10940982917365966,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "bollinger_width_20",
+            "importance": 0.06234272056433171,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_14",
+            "importance": 0.0553315112479319,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "mega8_dispersion_5",
+            "importance": 0.04577587972459928,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "atr_50",
+            "importance": 0.03982029825759722,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "minutes_from_cash_open",
+            "importance": 0.035852553596620824,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "overnight_return",
+            "importance": 0.03581096208018772,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "sma50_sma200_ratio",
+            "importance": 0.03480578674338583,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "ppo_hist_12_26_9",
+            "importance": 0.03423535475595081,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "ema50_ema200_diff",
+            "importance": 0.031593518833816614,
+            "read_type": "feature_importance"
+          },
+          {
+            "dominant_label": "tree_importance",
+            "feature": "close_ema20_ratio",
+            "importance": 0.028109065258344182,
+            "read_type": "feature_importance"
+          }
+        ]
+      },
+      "idea_id": "full_context_supervised_regime_contrast",
+      "metrics": {
+        "oos": {
+          "accuracy": 0.4564873417721519,
+          "balanced_accuracy": 0.44607307316020894,
+          "directional_correct_count": 649,
+          "directional_hit_rate": 0.43703703703703706,
+          "log_loss": 1.0460307964318198,
+          "long_count": 810,
+          "macro_f1": 0.44639937628608145,
+          "mean_probability": {
+            "flat": 0.3236158520531959,
+            "long": 0.344468151451589,
+            "short": 0.3319159964952153
+          },
+          "mean_probability_margin": 0.08133554057887,
+          "rows": 7584,
+          "short_count": 675,
+          "signal_count": 1485,
+          "signal_coverage": 0.19580696202531644
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 3.774758283725532e-15
+        },
+        "train": {
+          "accuracy": 0.4948326603244131,
+          "balanced_accuracy": 0.49914964780680626,
+          "directional_correct_count": 2812,
+          "directional_hit_rate": 0.6427428571428572,
+          "log_loss": 1.0409083538047972,
+          "long_count": 1558,
+          "macro_f1": 0.49303840653726105,
+          "mean_probability": {
+            "flat": 0.3333703761054655,
+            "long": 0.33410478486305306,
+            "short": 0.33252483903148194
+          },
+          "mean_probability_margin": 0.07440474354428087,
+          "rows": 29222,
+          "short_count": 2817,
+          "signal_count": 4375,
+          "signal_coverage": 0.14971596742180548
+        },
+        "validation": {
+          "accuracy": 0.45083299471759447,
+          "balanced_accuracy": 0.4409954081464453,
+          "directional_correct_count": 776,
+          "directional_hit_rate": 0.3941086846114779,
+          "log_loss": 1.050253588430684,
+          "long_count": 1095,
+          "macro_f1": 0.438327806607506,
+          "mean_probability": {
+            "flat": 0.32719008667695076,
+            "long": 0.3421611615210042,
+            "short": 0.33064875180204534
+          },
+          "mean_probability_margin": 0.08283493329205006,
+          "rows": 9844,
+          "short_count": 874,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "permission_read": {
+        "oos": {
+          "block_count": 6099,
+          "blocked_flat_rate": 0.43269388424331856,
+          "mean_p_block": 0.3236158520531959,
+          "mean_p_permission": 0.35957361818669675,
+          "permit_count": 1485,
+          "permit_coverage": 0.19580696202531644,
+          "permitted_nonflat_rate": 0.7784511784511785,
+          "rows": 7584
+        },
+        "train": {
+          "block_count": 24847,
+          "blocked_flat_rate": 0.3619752887672556,
+          "mean_p_block": 0.3333703761054655,
+          "mean_p_permission": 0.3551717899813694,
+          "permit_count": 4375,
+          "permit_coverage": 0.14971596742180548,
+          "permitted_nonflat_rate": 0.8516571428571429,
+          "rows": 29222
+        },
+        "validation": {
+          "block_count": 7875,
+          "blocked_flat_rate": 0.4102857142857143,
+          "mean_p_block": 0.32719008667695076,
+          "mean_p_permission": 0.3562007914504445,
+          "permit_count": 1969,
+          "permit_coverage": 0.20002031694433156,
+          "permitted_nonflat_rate": 0.7968511934992382,
+          "rows": 9844
+        }
+      },
+      "probability_shape": {
+        "oos": {
+          "flat_mean": 0.3236158520531959,
+          "mean_entropy": 1.0727248754666132,
+          "mean_max_probability": 0.4113543820385101,
+          "nonflat_p50": 0.36480702311772795,
+          "nonflat_p90": 0.4333613149871117,
+          "probability_margin_mean": 0.08133554057887,
+          "rows": 7584
+        },
+        "train": {
+          "flat_mean": 0.3333703761054655,
+          "mean_entropy": 1.0783846503544237,
+          "mean_max_probability": 0.4018786553620357,
+          "nonflat_p50": 0.35362775762452914,
+          "nonflat_p90": 0.4242360288860678,
+          "probability_margin_mean": 0.07440474354428087,
+          "rows": 29222
+        },
+        "validation": {
+          "flat_mean": 0.32719008667695076,
+          "mean_entropy": 1.0711708930717896,
+          "mean_max_probability": 0.41235235460142916,
+          "nonflat_p50": 0.35808930033181907,
+          "nonflat_p90": 0.43371378899698115,
+          "probability_margin_mean": 0.08283493329205006,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "Tier-A-only full58 random forest context contrast, not a runtime handoff selection.",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "hl_range",
+          "close_open_ratio",
+          "gap_percent",
+          "close_prev_close_ratio",
+          "return_zscore_20",
+          "hl_zscore_50",
+          "overnight_return",
+          "return_1_over_atr_14",
+          "close_ema20_ratio",
+          "close_ema50_ratio",
+          "ema9_ema20_diff",
+          "ema20_ema50_diff",
+          "ema50_ema200_diff",
+          "ema20_ema50_spread_zscore_50",
+          "sma50_sma200_ratio",
+          "rsi_14",
+          "rsi_50",
+          "rsi_14_slope_3",
+          "rsi_14_minus_50",
+          "stoch_kd_diff",
+          "stochrsi_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "trix_15",
+          "atr_14",
+          "atr_50",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "bb_position_20",
+          "bb_squeeze",
+          "historical_vol_20",
+          "historical_vol_5_over_20",
+          "adx_14",
+          "di_spread_14",
+          "supertrend_10_3",
+          "vortex_indicator",
+          "is_us_cash_open",
+          "minutes_from_cash_open",
+          "is_first_30m_after_open",
+          "is_last_30m_before_cash_close",
+          "vix_change_1",
+          "vix_zscore_20",
+          "us10yr_change_1",
+          "us10yr_zscore_20",
+          "usdx_change_1",
+          "usdx_zscore_20",
+          "nvda_xnas_log_return_1",
+          "aapl_xnas_log_return_1",
+          "msft_xnas_log_return_1",
+          "amzn_xnas_log_return_1",
+          "mega8_equal_return_1",
+          "top3_weighted_return_1",
+          "mega8_pos_breadth_1",
+          "mega8_dispersion_5",
+          "us100_minus_mega8_equal_return_1",
+          "us100_minus_top3_weighted_return_1"
+        ],
+        "idea_id": "full_context_supervised_regime_contrast",
+        "max_depth": 7,
+        "min_samples_leaf": 90,
+        "model_type": "random_forest",
+        "n_estimators": 140,
+        "random_state": 2304,
+        "tier_b_compatible": false,
+        "variant_id": "v04_rf_full58_context_filter"
+      },
+      "threshold": 0.4089943109940879,
+      "training_sample": {
+        "class_counts": {
+          "0": 9064,
+          "1": 9643,
+          "2": 10515
+        },
+        "feature_count": 58,
+        "model_type": "random_forest",
+        "train_rows": 29222
+      },
+      "variant_id": "v04_rf_full58_context_filter"
+    },
+    {
+      "characteristic_score": 1.4236168189593548,
+      "description": "Compact core24 logistic filter to test smaller handoff-friendly behavior.",
+      "feature_artifact": {
+        "path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1/results/variant_feature_reads/v05_logistic_core24_compact_filter_tier_a_feature_read.csv",
+        "sha256": "102eea15c7ab350aca1f4deb9eee3408d2a82114b3e9b2c456575e3982def6d1"
+      },
+      "feature_read": {
+        "feature_count": 24,
+        "read_type": "coefficient_abs",
+        "top10_importance_share": 0.6869580698315082,
+        "top_features": [
+          {
+            "dominant_label": "short",
+            "feature": "rsi_14",
+            "importance": 0.20289028498392453,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "close_ema20_ratio",
+            "importance": 0.19121850566539986,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "hl_range",
+            "importance": 0.16709218650169788,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "historical_vol_20",
+            "importance": 0.1324022702514447,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "di_spread_14",
+            "importance": 0.12971501674723057,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "atr_14_over_atr_50",
+            "importance": 0.12457784239832322,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "minutes_from_cash_open",
+            "importance": 0.1242584837701931,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "ppo_hist_12_26_9",
+            "importance": 0.10246403975999087,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "short",
+            "feature": "bb_position_20",
+            "importance": 0.09214580680066224,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "ema20_ema50_diff",
+            "importance": 0.08266427035110349,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "flat",
+            "feature": "is_first_30m_after_open",
+            "importance": 0.07589940281643703,
+            "read_type": "coefficient_abs"
+          },
+          {
+            "dominant_label": "long",
+            "feature": "rsi_14_slope_3",
+            "importance": 0.07269477775229305,
+            "read_type": "coefficient_abs"
+          }
+        ]
+      },
+      "idea_id": "compact_linear_supervised_regime_filter",
+      "metrics": {
+        "oos": {
+          "accuracy": 0.4757383966244726,
+          "balanced_accuracy": 0.4657215893592583,
+          "directional_correct_count": 661,
+          "directional_hit_rate": 0.4400798934753662,
+          "log_loss": 1.0485115387958468,
+          "long_count": 542,
+          "macro_f1": 0.46407159807521153,
+          "mean_probability": {
+            "flat": 0.3145537693698895,
+            "long": 0.34343337493246234,
+            "short": 0.34201285569764817
+          },
+          "mean_probability_margin": 0.08441342057860153,
+          "rows": 7584,
+          "short_count": 960,
+          "signal_count": 1502,
+          "signal_coverage": 0.19804852320675106
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 2.220446049250313e-16
+        },
+        "train": {
+          "accuracy": 0.40729587297241804,
+          "balanced_accuracy": 0.41050445382403516,
+          "directional_correct_count": 1781,
+          "directional_hit_rate": 0.4663524482848913,
+          "log_loss": 1.0707700293594529,
+          "long_count": 1529,
+          "macro_f1": 0.3950677432721082,
+          "mean_probability": {
+            "flat": 0.3333063958078522,
+            "long": 0.33347661123740846,
+            "short": 0.3332169929547393
+          },
+          "mean_probability_margin": 0.0790455625810452,
+          "rows": 29222,
+          "short_count": 2290,
+          "signal_count": 3819,
+          "signal_coverage": 0.1306892067620286
+        },
+        "validation": {
+          "accuracy": 0.44697277529459567,
+          "balanced_accuracy": 0.4363653298038846,
+          "directional_correct_count": 781,
+          "directional_hit_rate": 0.39664804469273746,
+          "log_loss": 1.0523042112548142,
+          "long_count": 813,
+          "macro_f1": 0.42889992672952365,
+          "mean_probability": {
+            "flat": 0.3164019150790094,
+            "long": 0.3424121871757916,
+            "short": 0.3411858977451991
+          },
+          "mean_probability_margin": 0.08625868998079551,
+          "rows": 9844,
+          "short_count": 1156,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "permission_read": {
+        "oos": {
+          "block_count": 6082,
+          "blocked_flat_rate": 0.4376849720486682,
+          "mean_p_block": 0.3145537693698895,
+          "mean_p_permission": 0.3669794274563853,
+          "permit_count": 1502,
+          "permit_coverage": 0.19804852320675106,
+          "permitted_nonflat_rate": 0.796271637816245,
+          "rows": 7584
+        },
+        "train": {
+          "block_count": 25403,
+          "blocked_flat_rate": 0.35346218950517655,
+          "mean_p_block": 0.3333063958078522,
+          "mean_p_permission": 0.35500316694854583,
+          "permit_count": 3819,
+          "permit_coverage": 0.1306892067620286,
+          "permitted_nonflat_rate": 0.8261324954176485,
+          "rows": 29222
+        },
+        "validation": {
+          "block_count": 7875,
+          "blocked_flat_rate": 0.4146031746031746,
+          "mean_p_block": 0.3164019150790094,
+          "mean_p_permission": 0.364835962120186,
+          "permit_count": 1969,
+          "permit_coverage": 0.20002031694433156,
+          "permitted_nonflat_rate": 0.814118842051803,
+          "rows": 9844
+        }
+      },
+      "probability_shape": {
+        "oos": {
+          "flat_mean": 0.3145537693698895,
+          "mean_entropy": 1.061515467034985,
+          "mean_max_probability": 0.4196796075142837,
+          "nonflat_p50": 0.36514070986209046,
+          "nonflat_p90": 0.4571657322617724,
+          "probability_margin_mean": 0.08441342057860153,
+          "rows": 7584
+        },
+        "train": {
+          "flat_mean": 0.3333063958078522,
+          "mean_entropy": 1.0704120100197068,
+          "mean_max_probability": 0.4090696723554053,
+          "nonflat_p50": 0.34661523091265795,
+          "nonflat_p90": 0.43942980546240545,
+          "probability_margin_mean": 0.0790455625810452,
+          "rows": 29222
+        },
+        "validation": {
+          "flat_mean": 0.3164019150790094,
+          "mean_entropy": 1.0540248991254129,
+          "mean_max_probability": 0.42170205954647816,
+          "nonflat_p50": 0.3538155211725498,
+          "nonflat_p90": 0.4659153143532424,
+          "probability_margin_mean": 0.08625868998079551,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "Compact core24 logistic filter to test smaller handoff-friendly behavior.",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "idea_id": "compact_linear_supervised_regime_filter",
+        "max_depth": null,
+        "min_samples_leaf": 80,
+        "model_type": "logistic",
+        "n_estimators": null,
+        "random_state": 2305,
+        "tier_b_compatible": true,
+        "variant_id": "v05_logistic_core24_compact_filter"
+      },
+      "threshold": 0.42627543677432106,
+      "training_sample": {
+        "class_counts": {
+          "0": 9064,
+          "1": 9643,
+          "2": 10515
+        },
+        "feature_count": 24,
+        "model_type": "logistic",
+        "train_rows": 29222
+      },
+      "variant_id": "v05_logistic_core24_compact_filter"
+    }
+  ]
+}

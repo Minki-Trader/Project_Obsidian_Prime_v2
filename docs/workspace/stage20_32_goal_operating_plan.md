@@ -3,12 +3,12 @@
 ## Current Truth(현재 진실)
 
 - active stage(활성 단계): `23_regime_model__supervised_regime_classifier_filter`
-- current run(현재 실행): `not_started`
+- current run(현재 실행): `run17A_supervised_regime_classifier_filter_scout_v1` completed(완료); next run(다음 실행): `run17B_supervised_regime_classifier_runtime_probe_v1`
 - active branch(활성 브랜치): `codex/stage23-supervised-regime-classifier`
 - active stage folder(활성 단계 폴더): `stages/23_regime_model__supervised_regime_classifier_filter`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage23(23단계)는 supervised regime classifier(지도 국면 분류기) open-only(개방만) 상태다. 현재 첫 미완료 milestone(마일스톤)은 Stage23(23단계) `run17A_supervised_regime_classifier_filter_scout_v1` broad scout(넓은 탐색)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage23(23단계)는 supervised regime classifier(지도 국면 분류기) `run17A_supervised_regime_classifier_filter_scout_v1` Python structural scout(파이썬 구조 탐색)를 완료했다. 현재 첫 미완료 milestone(마일스톤)은 Stage23(23단계) `run17B_supervised_regime_classifier_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
 ## Execution Contract(실행 계약)
 
@@ -53,7 +53,7 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [x] Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델) scout/probe/closeout/open Stage21. Completed(완료): `run14A_gam_additive_shape_scout_v1`, `run14B_gam_runtime_handoff_probe_v1`, `stage20_closeout_packet.md`, Stage21 open-only(Stage21 개방만).
 - [x] Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱) scout/probe/closeout/open Stage22. Completed(완료): `run15A_elasticnet_logistic_linear_sanity_scout_v1`, `run15B_elasticnet_logistic_onnx_runtime_probe_v1`, `stage21_closeout_packet.md`, Stage22 open-only(Stage22 개방만).
 - [x] Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델) scout/probe/closeout/open Stage23. Completed(완료): `run16A_hmm_hidden_state_segmentation_scout_v1`, `run16B_hmm_state_runtime_probe_v1`, `stage22_closeout_packet.md`, Stage23 open-only(Stage23 개방만).
-- [ ] Stage23(23단계) supervised regime classifier(지도 국면 분류기) scout/probe/closeout/open Stage24
+- [ ] Stage23(23단계) supervised regime classifier(지도 국면 분류기) scout/probe/closeout/open Stage24. Completed(완료): `run17A_supervised_regime_classifier_filter_scout_v1`; remaining(남음): MT5 runtime_probe(MT5 런타임 탐침), closeout/open Stage24.
 - [ ] Stage24(24단계) Survival model(생존 모델) scout/probe/closeout/open Stage25
 - [ ] Stage25(25단계) hazard model(위험률 모델) scout/probe/closeout/open Stage26
 - [ ] Stage26(26단계) NGBoost(`Natural Gradient Boosting`, 자연 그래디언트 부스팅) scout/probe/closeout/open Stage27
@@ -64,25 +64,25 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
 - [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
 
-Current active milestone(현재 활성 마일스톤): Stage23(23단계) `run17A_supervised_regime_classifier_filter_scout_v1` broad scout(넓은 탐색).
+Current active milestone(현재 활성 마일스톤): Stage23(23단계) `run17B_supervised_regime_classifier_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침).
 
 효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `stage22_closeout_stage23_open` completed(완료).
+- latest completed work(최근 완료 작업): `run17A_supervised_regime_classifier_filter_scout_v1` completed(완료) as Python structural scout(파이썬 구조 탐색).
 - active branch(활성 브랜치): `codex/stage23-supervised-regime-classifier`.
-- active stage/current run id(활성 단계/현재 실행 ID): Stage23(23단계), `not_started`.
-- created/updated folders(생성/수정 폴더): `stages/23_regime_model__supervised_regime_classifier_filter/00_spec`, `01_inputs`, `03_reviews`, `04_selected`, `docs/agent_control/packets/stage22_hmm_closeout_v1`.
-- changed files(변경 파일): Stage22 closeout(22단계 마감), Stage23 open docs(23단계 개방 문서), current truth docs(현재 진실 문서), goal plan(목표 계획).
+- active stage/current run id(활성 단계/현재 실행 ID): Stage23(23단계), `run17A_supervised_regime_classifier_filter_scout_v1`.
+- created/updated folders(생성/수정 폴더): `stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17A_supervised_regime_classifier_filter_scout_v1`, `docs/agent_control/packets/stage23_run17A_supervised_regime_classifier_scout_v1`.
+- changed files(변경 파일): supervised regime classifier scout pipeline(지도 국면 분류기 탐색 파이프라인), run evidence(실행 근거), ledgers(장부), current truth docs(현재 진실 문서).
 - active stage folder(활성 단계 폴더): `stages/23_regime_model__supervised_regime_classifier_filter`.
-- current run id(현재 실행 ID): `not_started`.
-- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): Stage22 `stages/22_regime_model__hmm_hidden_state_segmentation/02_runs/run16B_hmm_state_runtime_probe_v1/mt5`; closeout report(마감 보고서) `stages/22_regime_model__hmm_hidden_state_segmentation/03_reviews/stage22_closeout_packet.md`.
+- current run id(현재 실행 ID): `run17A_supervised_regime_classifier_filter_scout_v1`.
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `not_attempted_in_run17A(실행17A에서 미시도)`; review report(검토 보고서) `stages/23_regime_model__supervised_regime_classifier_filter/03_reviews/run17A_supervised_regime_classifier_scout_packet.md`.
 - blocker(차단 사유): `none(없음)`.
-- exact next action(정확한 다음 행동): `run17A_supervised_regime_classifier_filter_scout_v1`.
+- exact next action(정확한 다음 행동): `run17B_supervised_regime_classifier_runtime_probe_v1`.
 - git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending(대기).
 
-효과(effect, 효과): 다음 재개는 Stage23(23단계) supervised regime classifier(지도 국면 분류기) scout(탐색)에서 시작한다.
+효과(effect, 효과): 다음 재개는 Stage23(23단계) MT5 runtime_probe(런타임 탐침) 준비에서 시작한다.
 
 ## Per-Stage Milestone Loop(단계별 마일스톤 반복)
 

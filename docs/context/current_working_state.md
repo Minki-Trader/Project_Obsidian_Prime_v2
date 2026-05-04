@@ -1,4 +1,12 @@
-﻿## Latest Stage22 Closeout / Stage23 Open(최신 22단계 마감 / 23단계 개방)
+﻿## Latest Stage23 RUN17A Supervised Regime Update(최신 23단계 실행17A 지도 국면 업데이트)
+
+Stage23(23단계) `run17A_supervised_regime_classifier_filter_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
+
+결과(result, 결과): `inconclusive_supervised_regime_classifier_filter_scout_completed`. selected variant(선택 변형): `v05_logistic_core24_compact_filter`. next exact action(다음 정확한 행동): `run17B_supervised_regime_classifier_runtime_probe_v1`.
+
+효과(effect, 효과): p_flat(평탄 확률)을 block/abstain(차단/기권) 후보로 읽는 supervised regime classifier(지도 국면 분류기) 특성을 기록했고, MT5 runtime_probe(MT5 런타임 탐침)는 다음 실행으로 남긴다.
+
+## Latest Stage22 Closeout / Stage23 Open(최신 22단계 마감 / 23단계 개방)
 
 Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델)을 reviewed closeout(검토된 마감)으로 닫고 Stage23(23단계) `23_regime_model__supervised_regime_classifier_filter`를 open-only(개방만) 상태로 열었다.
 
