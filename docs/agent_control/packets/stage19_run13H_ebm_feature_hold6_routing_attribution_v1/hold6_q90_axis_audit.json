@@ -1,0 +1,72 @@
+{
+  "audit_name": "hold6_q90_axis_audit",
+  "hold6_q90_axis_read": {
+    "boundary": "ebm_feature_hold6_routing_attribution_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "feature_axis_visible": true,
+    "forbidden_claims": [
+      "edge",
+      "alpha_quality",
+      "baseline",
+      "promotion_candidate",
+      "operating_promotion",
+      "runtime_authority"
+    ],
+    "hold6_oos_net_profit": 39.65,
+    "hold6_oos_positive": true,
+    "hold6_oos_profit_factor": 1.04,
+    "hold6_oos_rank_by_net": 1,
+    "hold6_validation_guardrail_failed": true,
+    "hold6_validation_net_profit": -188.66,
+    "hold6_validation_profit_factor": 0.85,
+    "hold6_validation_rank_by_net": 3,
+    "judgment": "inconclusive_ebm_feature_hold6_routing_attribution_completed",
+    "recommendation": "continue_stage19_only_for_narrow_ebm_feature_axis_or_routing_variants",
+    "tier_b_fallback_oos_route_share": 0.12283136710617627,
+    "tier_b_fallback_oos_standalone_net_profit": 70.92,
+    "tier_b_fallback_standalone_positive_not_additive": true,
+    "top_repeated_features": [
+      {
+        "feature": "atr_14",
+        "top5_appearance_count": 6
+      },
+      {
+        "feature": "ema9_ema20_diff",
+        "top5_appearance_count": 5
+      },
+      {
+        "feature": "ema50_ema200_diff",
+        "top5_appearance_count": 5
+      },
+      {
+        "feature": "ema20_ema50_diff",
+        "top5_appearance_count": 4
+      },
+      {
+        "feature": "hl_zscore_50",
+        "top5_appearance_count": 3
+      },
+      {
+        "feature": "atr_50",
+        "top5_appearance_count": 3
+      },
+      {
+        "feature": "bollinger_width_20",
+        "top5_appearance_count": 2
+      },
+      {
+        "feature": "close_ema50_ratio",
+        "top5_appearance_count": 2
+      },
+      {
+        "feature": "historical_vol_20",
+        "top5_appearance_count": 2
+      },
+      {
+        "feature": "atr_14_over_atr_50",
+        "top5_appearance_count": 2
+      }
+    ]
+  },
+  "passed": true,
+  "status": "pass"
+}

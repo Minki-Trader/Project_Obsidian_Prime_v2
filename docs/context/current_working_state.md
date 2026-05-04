@@ -1,4 +1,12 @@
-﻿## Latest Stage19 RUN13B-RUN13G MT5 Runtime Update(최신 19단계 실행13B-13G MT5 런타임 업데이트)
+﻿## Latest Stage19 RUN13H Attribution Update(최신 19단계 실행13H 귀속 업데이트)
+
+Stage19(19단계)는 `run13H_ebm_feature_hold6_routing_attribution_v1`에서 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) feature contribution(피처 기여도), hold6/q90(6봉/q90), Tier A/B routing(티어 A/B 라우팅)을 해부했다.
+
+결과(result, 결과): `inconclusive_ebm_feature_hold6_routing_attribution_completed`. hold6 OOS net(6봉 표본밖 순손익)은 `39.65`지만 validation net(검증 순손익)은 `-188.66`이다.
+
+효과(effect, 효과): EBM(설명가능 부스팅 머신)은 계속 볼 단서가 있지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage19 RUN13B-RUN13G MT5 Runtime Update(최신 19단계 실행13B-13G MT5 런타임 업데이트)
 
 Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) RUN13B-RUN13G(실행13B-13G)를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
 
@@ -59,11 +67,11 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 효과(effect, 효과): run11C의 MT5(`MetaTrader 5`, 메타트레이더5) KPI(`Key Performance Indicator`, 핵심성과지표) 근거를 재사용했고 `keep_stage17_open_for_probability_feature_driver_probe`로 판독했다. edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 # Current Working State
 
-- updated_on: `2026-05-03`
+- updated_on: `2026-05-04`
 - project_mode: `clean_stage_restart`
 - active_stage: `19_model_family_challenge__ebm_explainable_boosting_shape(19단계 설명가능 부스팅 머신 형태 탐색)`
-- active_branch: `codex/stage18(Stage18 브랜치)`
-- current run(현재 실행): `none(없음; Stage19 계획 상태)`
+- active_branch: `codex/stage19-ebm-attribution`
+- current run(현재 실행): `run13H_ebm_feature_hold6_routing_attribution_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 

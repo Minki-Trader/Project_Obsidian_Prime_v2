@@ -152,6 +152,48 @@ class Stage19EbmExplainableTests(unittest.TestCase):
 
         self.assertTrue(parity["passed"], parity)
 
+    def test_ebm_main_effect_contribution_tensor_rebuilds_logits(self) -> None:
+        from foundation.models.ebm_explainable import EbmVariantSpec, fit_ebm_variant
+        from foundation.models.ebm_score_table import ebm_main_effect_contribution_tensor
+
+        rows = 120
+        feature_order = ["feature_a", "feature_b", "feature_c"]
+        frame = pd.DataFrame(
+            {
+                "timestamp": pd.date_range("2024-01-01", periods=rows, freq="5min", tz="UTC"),
+                "symbol": "US100",
+                "split": ["train"] * 72 + ["validation"] * 24 + ["oos"] * 24,
+                "label": ["short", "flat", "long", "flat"] * 30,
+                "label_class": ([0, 1, 2, 1] * 30),
+                "feature_a": np.linspace(-1.0, 1.0, rows),
+                "feature_b": np.sin(np.linspace(0.0, 8.0, rows)),
+                "feature_c": np.cos(np.linspace(0.0, 5.0, rows)),
+            }
+        )
+        spec = EbmVariantSpec(
+            variant_id="unit_ebm_contrib",
+            idea_id="unit",
+            description="Unit EBM contribution",
+            max_bins=16,
+            interactions=0,
+            outer_bags=1,
+            learning_rate=0.05,
+            max_rounds=20,
+            early_stopping_rounds=5,
+            min_samples_leaf=2,
+            random_state=49,
+        )
+        model, _sample = fit_ebm_variant(frame, feature_order, spec)
+        values = frame.loc[:, feature_order].to_numpy(dtype="float64")
+
+        contributions = ebm_main_effect_contribution_tensor(model, values, feature_count=len(feature_order))
+        logits = np.asarray(model.intercept_, dtype="float64").reshape(1, -1) + contributions.sum(axis=1)
+        logits -= logits.max(axis=1, keepdims=True)
+        probabilities = np.exp(logits) / np.exp(logits).sum(axis=1, keepdims=True)
+
+        self.assertEqual(contributions.shape, (rows, len(feature_order), 3))
+        self.assertLess(float(np.abs(model.predict_proba(values) - probabilities).max()), 1e-12)
+
 
 if __name__ == "__main__":
     unittest.main()

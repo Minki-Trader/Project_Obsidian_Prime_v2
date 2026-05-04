@@ -1,0 +1,149 @@
+{
+  "audit_name": "feature_contribution_audit",
+  "feature_alignment_audit": [
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_validation_is_feature_matrix.csv",
+      "long_signal_count": 688,
+      "max_abs_probability_diff": 0.0003484099349296832,
+      "probability_diff_tolerance": 0.001,
+      "row_count": 9844,
+      "short_signal_count": 297,
+      "source_label": "tier_a",
+      "split": "validation",
+      "threshold": 0.5426685369074962,
+      "tier_scope": "Tier A",
+      "timestamp_alignment": "pass"
+    },
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_oos_feature_matrix.csv",
+      "long_signal_count": 480,
+      "max_abs_probability_diff": 0.0003010608961644956,
+      "probability_diff_tolerance": 0.001,
+      "row_count": 7584,
+      "short_signal_count": 264,
+      "source_label": "tier_a",
+      "split": "oos",
+      "threshold": 0.5426685369074962,
+      "tier_scope": "Tier A",
+      "timestamp_alignment": "pass"
+    },
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_validation_is_feature_matrix.csv",
+      "long_signal_count": 12,
+      "max_abs_probability_diff": 0.0009867381734351977,
+      "probability_diff_tolerance": 0.001,
+      "row_count": 2366,
+      "short_signal_count": 14,
+      "source_label": "tier_b_fallback",
+      "split": "validation",
+      "threshold": 0.5217261933075719,
+      "tier_scope": "Tier B",
+      "timestamp_alignment": "pass"
+    },
+    {
+      "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_oos_feature_matrix.csv",
+      "long_signal_count": 25,
+      "max_abs_probability_diff": 0.0002138329438786113,
+      "probability_diff_tolerance": 0.001,
+      "row_count": 1062,
+      "short_signal_count": 8,
+      "source_label": "tier_b_fallback",
+      "split": "oos",
+      "threshold": 0.5217261933075719,
+      "tier_scope": "Tier B",
+      "timestamp_alignment": "pass"
+    }
+  ],
+  "feature_contribution_read": {
+    "feature_axis_visible": true,
+    "top_repeated_features": [
+      {
+        "feature": "atr_14",
+        "top5_appearance_count": 6
+      },
+      {
+        "feature": "ema9_ema20_diff",
+        "top5_appearance_count": 5
+      },
+      {
+        "feature": "ema50_ema200_diff",
+        "top5_appearance_count": 5
+      },
+      {
+        "feature": "ema20_ema50_diff",
+        "top5_appearance_count": 4
+      },
+      {
+        "feature": "hl_zscore_50",
+        "top5_appearance_count": 3
+      },
+      {
+        "feature": "atr_50",
+        "top5_appearance_count": 3
+      },
+      {
+        "feature": "bollinger_width_20",
+        "top5_appearance_count": 2
+      },
+      {
+        "feature": "close_ema50_ratio",
+        "top5_appearance_count": 2
+      },
+      {
+        "feature": "historical_vol_20",
+        "top5_appearance_count": 2
+      },
+      {
+        "feature": "atr_14_over_atr_50",
+        "top5_appearance_count": 2
+      }
+    ],
+    "validation_oos_top5_overlap": [
+      {
+        "shared_features": [
+          "atr_14",
+          "ema9_ema20_diff",
+          "hl_zscore_50"
+        ],
+        "side": "long",
+        "tier_scope": "Tier A",
+        "top5_overlap_count": 3,
+        "top5_overlap_ratio": 0.42857142857142855
+      },
+      {
+        "shared_features": [
+          "atr_14",
+          "close_ema50_ratio",
+          "ema9_ema20_diff",
+          "historical_vol_20"
+        ],
+        "side": "short",
+        "tier_scope": "Tier A",
+        "top5_overlap_count": 4,
+        "top5_overlap_ratio": 0.6666666666666666
+      },
+      {
+        "shared_features": [
+          "ema20_ema50_diff",
+          "ema50_ema200_diff"
+        ],
+        "side": "long",
+        "tier_scope": "Tier B",
+        "top5_overlap_count": 2,
+        "top5_overlap_ratio": 0.25
+      },
+      {
+        "shared_features": [
+          "ema20_ema50_diff",
+          "ema50_ema200_diff"
+        ],
+        "side": "short",
+        "tier_scope": "Tier B",
+        "top5_overlap_count": 2,
+        "top5_overlap_ratio": 0.25
+      }
+    ]
+  },
+  "passed": true,
+  "status": "pass"
+}

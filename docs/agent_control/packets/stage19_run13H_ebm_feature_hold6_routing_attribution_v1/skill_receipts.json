@@ -1,0 +1,176 @@
+{
+  "created_at_utc": "2026-05-04T10:34:26Z",
+  "packet_id": "stage19_run13H_ebm_feature_hold6_routing_attribution_v1",
+  "receipts": [
+    {
+      "changed_variables": [
+        "attribution axis only",
+        "source runs run13B/run13F/run13G"
+      ],
+      "control_variables": [
+        "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+        "label_v1_fwd12_m5_logret_train_q33_3class",
+        "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+        "v01_main_effects_broad_bins",
+        "US100 M5"
+      ],
+      "failure_criteria": "missing source evidence, timestamp mismatch, probability mismatch, or absent routing rows.",
+      "hypothesis": "EBM feature contribution plus q90 hold6 and Tier A/B routing can reveal a model-characteristic axis.",
+      "skill": "obsidian-experiment-design",
+      "status": "completed",
+      "success_criteria": "source MT5/KPI/trade evidence exists and EBM contribution probabilities rebuild source predictions."
+    },
+    {
+      "effect": "feature contribution, hold6/q90, and Tier A/B routing effects were decomposed from reused MT5 evidence.",
+      "skill": "obsidian-performance-attribution",
+      "status": "completed"
+    },
+    {
+      "artifact_hashes": {
+        "aggregate_summary_sha256": "51262cb20ce41ef7902292c097e01017cba475074b93fa0459000aacefa31680",
+        "focus_model_sha256": {
+          "tier_a": "0465ac8b3a41bf80b4a352180e4b2e44257811855e41962de4fd65d339c60978",
+          "tier_b": "3949955f17be5571cead0890e1b466ea471e1550533bcec10ce211fc149052e9"
+        },
+        "normalized_kpi_sha256": {
+          "run13B": "d09ce367527b2dc436cdfc142f4d22cee82b399aeb30df38778dd09be0ed6ab5",
+          "run13F": "c6223acf06d8a45c45262328c1f6af3c03bccd7c79408ea09c3378f786dba99e",
+          "run13G": "4539ed62cd6b75eb5dd6214113612cf1c76a9ec2e1910184dbf30fb3d413134c"
+        },
+        "source_summary_sha256": {
+          "run13B": "4b790a54c280fd6811563a4b1136afa63b5f4f5b427b3f90b481a6b78ac47c38",
+          "run13F": "886e5b501c982276570115dd8acb6c5db1ae34a1364d796f4486082b0ff5e621",
+          "run13G": "cc8373eb567a41997782cabfd2140d1493b3b6f6bbc9d016c9a03e87c32be483"
+        },
+        "trade_level_sha256": {
+          "run13B": "0e03cbdde650c7199fba7197f981be271b9e43236210a260e3d261be99edb212",
+          "run13F": "812f21f3e0583cb4e54adf41a77a2de1286bc2919b5d2848af310db4612f3c11",
+          "run13G": "a5b0c18a31cd0ed90a302ede0985b2305c815b3a00684df84c0d93cf09123bff"
+        }
+      },
+      "artifact_paths": {
+        "decision": "docs/decisions/2026-05-04_stage19_run13H_ebm_feature_hold6_routing_attribution.md",
+        "feature_contribution_full": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/results/feature_contribution_full.csv",
+        "feature_contribution_group_summary": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/results/feature_contribution_group_summary.csv",
+        "feature_contribution_top": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/results/feature_contribution_top.csv",
+        "hold6_q90_axis_summary": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/results/hold6_q90_axis_summary.csv",
+        "kpi_record": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/kpi_record.json",
+        "report": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13H_ebm_feature_hold6_routing_attribution_packet.md",
+        "run_manifest": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/run_manifest.json",
+        "summary": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/summary.json",
+        "tier_routing_attribution": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/results/tier_routing_attribution.csv",
+        "trade_route_shape_summary": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13H_ebm_feature_hold6_routing_attribution_v1/results/trade_route_shape_summary.csv"
+      },
+      "availability": "generated_02_runs_ignored_with_tracked_packet_summary",
+      "consumer": "Stage19 run13H report and ledgers",
+      "lineage_judgment": "connected_with_boundary",
+      "producer": "stage_pipelines.stage19.ebm_feature_hold6_routing_attribution",
+      "registry_links": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/stage_run_ledger.csv"
+      ],
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": {
+        "aggregate_summary": "docs/agent_control/packets/stage19_ebm_run13B_run13G_mt5_runtime_batch_v1/aggregate_summary.json",
+        "focus_feature_matrices": [
+          "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_validation_is_feature_matrix.csv",
+          "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_oos_feature_matrix.csv",
+          "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_validation_is_feature_matrix.csv",
+          "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_oos_feature_matrix.csv"
+        ],
+        "focus_tier_a_model": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13A_ebm_main_effect_shape_scout_v1/models/v01_main_effects_broad_bins_tier_a_ebm.joblib",
+        "focus_tier_b_model": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13A_ebm_main_effect_shape_scout_v1/models/v01_main_effects_broad_bins_tier_b_ebm_core42.joblib",
+        "normalized_kpi_records": [
+          "docs/agent_control/packets/stage19_run13B_ebm_q90_mt5_runtime_v1/normalized_kpi_records.jsonl",
+          "docs/agent_control/packets/stage19_run13F_ebm_hold6_mt5_v1/normalized_kpi_records.jsonl",
+          "docs/agent_control/packets/stage19_run13G_ebm_hold18_mt5_v1/normalized_kpi_records.jsonl"
+        ],
+        "source_summaries": [
+          "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13B_ebm_q90_runtime_handoff_probe_v1/summary.json",
+          "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/summary.json",
+          "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13G_ebm_q90_hold18_probe_v1/summary.json"
+        ],
+        "trade_level_records": [
+          "docs/agent_control/packets/stage19_run13B_ebm_q90_mt5_runtime_v1/trade_level_records.json",
+          "docs/agent_control/packets/stage19_run13F_ebm_hold6_mt5_v1/trade_level_records.json",
+          "docs/agent_control/packets/stage19_run13G_ebm_hold18_mt5_v1/trade_level_records.json"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "alignment_audit": [
+        {
+          "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_validation_is_feature_matrix.csv",
+          "long_signal_count": 688,
+          "max_abs_probability_diff": 0.0003484099349296832,
+          "probability_diff_tolerance": 0.001,
+          "row_count": 9844,
+          "short_signal_count": 297,
+          "source_label": "tier_a",
+          "split": "validation",
+          "threshold": 0.5426685369074962,
+          "tier_scope": "Tier A",
+          "timestamp_alignment": "pass"
+        },
+        {
+          "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_a_oos_feature_matrix.csv",
+          "long_signal_count": 480,
+          "max_abs_probability_diff": 0.0003010608961644956,
+          "probability_diff_tolerance": 0.001,
+          "row_count": 7584,
+          "short_signal_count": 264,
+          "source_label": "tier_a",
+          "split": "oos",
+          "threshold": 0.5426685369074962,
+          "tier_scope": "Tier A",
+          "timestamp_alignment": "pass"
+        },
+        {
+          "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_validation_is_feature_matrix.csv",
+          "long_signal_count": 12,
+          "max_abs_probability_diff": 0.0009867381734351977,
+          "probability_diff_tolerance": 0.001,
+          "row_count": 2366,
+          "short_signal_count": 14,
+          "source_label": "tier_b_fallback",
+          "split": "validation",
+          "threshold": 0.5217261933075719,
+          "tier_scope": "Tier B",
+          "timestamp_alignment": "pass"
+        },
+        {
+          "feature_matrix_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13F_ebm_q90_hold6_probe_v1/features/tier_b_fallback_oos_feature_matrix.csv",
+          "long_signal_count": 25,
+          "max_abs_probability_diff": 0.0002138329438786113,
+          "probability_diff_tolerance": 0.001,
+          "row_count": 1062,
+          "short_signal_count": 8,
+          "source_label": "tier_b_fallback",
+          "split": "oos",
+          "threshold": 0.5217261933075719,
+          "tier_scope": "Tier B",
+          "timestamp_alignment": "pass"
+        }
+      ],
+      "effect": "feature matrices and prediction rows were timestamp-aligned before contribution scoring.",
+      "skill": "obsidian-data-integrity",
+      "status": "completed"
+    },
+    {
+      "claim_boundary": "ebm_feature_hold6_routing_attribution_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+      "forbidden_claims": [
+        "edge",
+        "alpha_quality",
+        "baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority"
+      ],
+      "judgment_label": "inconclusive_ebm_feature_hold6_routing_attribution_completed",
+      "skill": "obsidian-result-judgment",
+      "status": "completed"
+    }
+  ]
+}

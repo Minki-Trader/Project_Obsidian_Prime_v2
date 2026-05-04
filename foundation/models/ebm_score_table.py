@@ -126,6 +126,31 @@ def score_ebm_table_probabilities(table: dict[str, Any], values: np.ndarray) -> 
     return exp_logits / exp_logits.sum(axis=1, keepdims=True)
 
 
+def ebm_main_effect_contribution_tensor(
+    model: Any,
+    values: np.ndarray,
+    *,
+    feature_count: int,
+) -> np.ndarray:
+    """Return per-row, per-feature class logit contributions for a main-effect EBM."""
+
+    _validate_main_effects(model, feature_count)
+    matrix = np.asarray(values, dtype="float64")
+    if matrix.ndim != 2:
+        raise ValueError("EBM contribution values must be a 2D matrix.")
+    if matrix.shape[1] != int(feature_count):
+        raise ValueError(f"Feature count mismatch: {matrix.shape[1]} != {feature_count}")
+    class_count = int(len(np.asarray(model.intercept_, dtype="float64")))
+    contributions = np.zeros((matrix.shape[0], int(feature_count), class_count), dtype="float64")
+    for term_index, term_features in enumerate(model.term_features_):
+        feature_index = int(tuple(term_features)[0])
+        cuts = np.asarray(model.bins_[feature_index][0], dtype="float64")
+        scores = np.asarray(model.term_scores_[term_index], dtype="float64")
+        bin_index = (matrix[:, feature_index].reshape(-1, 1) > cuts.reshape(1, -1)).sum(axis=1) + 1
+        contributions[:, feature_index, :] = scores[bin_index]
+    return contributions
+
+
 def check_ebm_score_table_probability_parity(
     model: Any,
     table_path: Path,
