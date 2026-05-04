@@ -1,8 +1,8 @@
 ﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
-active_branch: codex/stage21-elasticnet-logistic
-active_stage: 21_model_family_challenge__elasticnet_logistic_linear_sanity
-current_run_id: run15B_elasticnet_logistic_onnx_runtime_probe_v1
+active_branch: codex/stage22-hmm-hidden-state
+active_stage: 22_regime_model__hmm_hidden_state_segmentation
+current_run_id: not_started
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,10 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 21 as active after run15B_elasticnet_logistic_onnx_runtime_probe_v1 ElasticNet Logistic ONNX MT5 runtime_probe completed; next action is stage21_closeout_and_stage22_open_only, and no baseline, promotion, or runtime authority exists
+- treat Stage 21 as reviewed_closed after run15A/run15B ElasticNet Logistic structural and ONNX MT5 runtime evidence; Stage22 is active opened_not_started, next action is run16A_hmm_hidden_state_segmentation_scout_v1, and no baseline, promotion, or runtime authority exists
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -56,7 +56,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_opened
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -140,12 +140,13 @@ pre_alpha_stage_queue:
     stage21:
       stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
       ownership: independent ElasticNet Logistic sparse linear sanity scout after Stage20
-      status: active_run15B_mt5_runtime_probe_completed
+      status: reviewed_closed_stage22_opened
       current_run_id: run15B_elasticnet_logistic_onnx_runtime_probe_v1
     stage22:
       stage_id: 22_regime_model__hmm_hidden_state_segmentation
       ownership: independent HMM hidden-state segmentation scout after Stage21
-      status: planned
+      status: opened_not_started
+      current_run_id: not_started
     stage23:
       stage_id: 23_regime_model__supervised_regime_classifier_filter
       ownership: independent supervised regime classifier filter scout after Stage22
@@ -1811,7 +1812,7 @@ stage18_catboost_closeout:
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
 stage19_32_model_research_queue:
-  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_run15B_completed
+  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_opened
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   goal_operating_plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   path_note: legacy_stage19_25_file_path_retained_for_current_truth_links
@@ -1832,13 +1833,13 @@ stage19_32_model_research_queue:
   inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
   claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only
 stage20_32_goal_operating_plan:
-  status: stage20_closed_stage21_run15B_completed
+  status: stage20_closed_stage21_closed_stage22_opened
   plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   decision_path: docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md
   active_stage_at_adoption: 20_model_family_challenge__gam_additive_smooth_shape
   current_run_at_adoption: not_started
-  latest_completed_run: run15B_elasticnet_logistic_onnx_runtime_probe_v1
-  next_exact_action: stage21_closeout_and_stage22_open_only
+  latest_completed_run: stage21_closeout_stage22_open
+  next_exact_action: run16A_hmm_hidden_state_segmentation_scout_v1
   active_branch_at_adoption: codex/stage20-gam-additive-smooth-shape
   active_stage_folder: stages/20_model_family_challenge__gam_additive_smooth_shape
   scope: stage20_through_stage32_model_topic_exploration
@@ -1846,7 +1847,7 @@ stage20_32_goal_operating_plan:
   recovery_rule: repair_and_continue_before_blocked_unless_repeated_failure_or_user_action_required
   reporting_rule: include_branch_folders_changed_files_stage_folder_run_id_mt5_paths_git_status_commit_plan_push_status
   git_checkpoint_rule: commit_and_push_at_stage_open_major_mt5_evidence_packet_and_stage_closeout_when_changes_are_clean
-  claim_boundary: stage21_runtime_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  claim_boundary: stage21_closed_stage22_open_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
 stage19_ebm_run13A_characteristic_scout:
   packet_id: stage19_run13A_ebm_shape_scout_v1
   status: reviewed_structural_scout_completed
@@ -2009,21 +2010,24 @@ stage20_gam_closeout:
   next_action: stage21_run15A_elasticnet_logistic_linear_sanity_scout
 stage21_elasticnet_logistic_linear_sanity:
   stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
-  status: active_run15B_mt5_runtime_probe_completed
+  status: reviewed_closed_stage22_opened
+  judgment: closed_inconclusive_elasticnet_logistic_model_characteristics_exhausted
   current_run_id: run15B_elasticnet_logistic_onnx_runtime_probe_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
-  boundary: elasticnet_logistic_onnx_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  boundary: runtime_probe_and_model_characteristic_read_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/00_spec/stage_brief.md
   selection_status_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/04_selected/selection_status.md
-  next_action: stage21_closeout_and_stage22_open_only
-
+  closeout_packet_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/03_reviews/stage21_closeout_packet.md
+  decision_path: docs/decisions/2026-05-05_stage21_elasticnet_closeout_stage22_open.md
+  packet_summary_path: docs/agent_control/packets/stage21_elasticnet_closeout_v1/aggregate_summary.json
+  next_action: stage22_run16A_hmm_hidden_state_segmentation_scout
 stage21_elasticnet_run15A_structural_scout:
   packet_id: stage21_run15A_elasticnet_logistic_scout_v1
   status: reviewed_structural_scout_completed
   judgment: inconclusive_elasticnet_logistic_sparse_linear_scout_completed
-  current_run_id: run15B_elasticnet_logistic_onnx_runtime_probe_v1
+  current_run_id: run15A_elasticnet_logistic_linear_sanity_scout_v1
   selected_variant_id: v01_core42_balanced_enet025
   best_overall_variant_id: v03_full58_context_enet035
   mt5_runtime_probe_status: not_attempted_next_milestone_run15B_elasticnet_logistic_onnx_runtime_probe_v1
@@ -2049,4 +2053,27 @@ stage21_elasticnet_run15B_runtime_probe:
   boundary: elasticnet_logistic_onnx_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   report_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/03_reviews/run15B_elasticnet_logistic_onnx_runtime_probe_packet.md
   packet_summary_path: docs/agent_control/packets/stage21_run15B_elasticnet_logistic_onnx_runtime_probe_v1/aggregate_summary.json
-  next_action: stage21_closeout_and_stage22_open_only
+  next_action: stage21_closeout_completed_stage22_opened
+stage21_elasticnet_closeout:
+  packet_id: stage21_elasticnet_closeout_v1
+  status: reviewed_closed_stage22_opened
+  judgment: closed_inconclusive_elasticnet_logistic_model_characteristics_exhausted
+  run_range: run15A-run15B
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: runtime_probe_and_model_characteristic_read_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  closeout_packet_path: stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/03_reviews/stage21_closeout_packet.md
+  decision_path: docs/decisions/2026-05-05_stage21_elasticnet_closeout_stage22_open.md
+  next_action: stage22_run16A_hmm_hidden_state_segmentation_scout
+stage22_hmm_hidden_state_segmentation:
+  stage_id: 22_regime_model__hmm_hidden_state_segmentation
+  status: opened_not_started
+  current_run_id: not_started
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: topic_open_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/22_regime_model__hmm_hidden_state_segmentation/00_spec/stage_brief.md
+  selection_status_path: stages/22_regime_model__hmm_hidden_state_segmentation/04_selected/selection_status.md
+  next_action: run16A_hmm_hidden_state_segmentation_scout_v1

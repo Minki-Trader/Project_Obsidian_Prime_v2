@@ -1,4 +1,10 @@
-﻿## Latest Stage21 RUN15B ElasticNet Logistic Runtime Update(최신 21단계 실행15B 엘라스틱넷 로지스틱 런타임 업데이트)
+﻿## Latest Stage21 Closeout Stage22 Open(최신 21단계 마감 22단계 개방)
+
+Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱)은 `closed_inconclusive_elasticnet_logistic_model_characteristics_exhausted`로 닫혔고, Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델)은 `opened_not_started`로 열렸다.
+
+효과(effect, 효과): 다음 작업은 Stage22(22단계) `run16A_hmm_hidden_state_segmentation_scout_v1` broad scout(넓은 탐색)이며, Stage21(21단계)의 model(모델), coefficient(계수), threshold(임계값), ONNX file(온닉스 파일)은 baseline(기준선)으로 상속하지 않는다.
+
+## Latest Stage21 RUN15B ElasticNet Logistic Runtime Update(최신 21단계 실행15B 엘라스틱넷 로지스틱 런타임 업데이트)
 
 Stage21(21단계) `run15B_elasticnet_logistic_onnx_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
 
@@ -183,9 +189,9 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 
 - updated_on: `2026-05-05`
 - project_mode: `clean_stage_restart`
-- active_stage: `21_model_family_challenge__elasticnet_logistic_linear_sanity(21단계 엘라스틱넷 로지스틱 선형 건전성)`
-- active_branch: `codex/stage21-elasticnet-logistic`
-- current run(현재 실행): `run15B_elasticnet_logistic_onnx_runtime_probe_v1`
+- active_stage: `22_regime_model__hmm_hidden_state_segmentation(22단계 HMM 은닉 상태 분할)`
+- active_branch: `codex/stage22-hmm-hidden-state`
+- current run(현재 실행): `not_started`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
