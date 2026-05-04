@@ -1,5 +1,11 @@
 ﻿# Stage19-25 Model Research Work Order(19-25단계 모델 연구 작업서)
 
+## Current Queue Read(현재 큐 판독)
+
+Stage19(19단계) EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신)은 `closed_inconclusive_ebm_model_characteristics_exhausted`로 닫혔고, Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델)은 `opened_not_started(개방됨, 미시작)` 상태다.
+
+효과(effect, 효과): Stage20(20단계)은 EBM(설명가능 부스팅 머신) continuation(연속)이 아니라 smooth additive effect(부드러운 가산 효과)를 보는 새 topic pivot(주제 전환)으로 시작한다.
+
 ## Purpose(목적)
 
 Stage18(18단계) CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트)는 닫고, Stage19-25(19-25단계)는 서로 다른 model family(모델군) 질문으로 연다.

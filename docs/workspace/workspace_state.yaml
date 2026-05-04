@@ -1,8 +1,8 @@
 updated_on: '2026-05-05'
 project_mode: clean_stage_restart
-active_branch: codex/stage19-ebm-attribution
-active_stage: 19_model_family_challenge__ebm_explainable_boosting_shape
-current_run_id: run13AD_ebm_axis_exhaustion_followthrough_v1
+active_branch: codex/stage20-gam-additive-smooth-shape
+active_stage: 20_model_family_challenge__gam_additive_smooth_shape
+current_run_id: null
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,11 +13,12 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_active_run13AD_ebm_axis_exhaustion_followthrough_completed
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_opened_not_started
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 16 as reviewed_closed after QDA class-specific covariance run08-run10 exploration; preserve QDA clues, not a baseline or promotion
-- treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not MT5 runtime_probe, baseline, promotion, or runtime authority
+- treat Stage 20 as opened_not_started for GAM additive smooth shape; no run, KPI, baseline, promotion, or runtime authority exists yet
+- treat Stage 19 as reviewed_closed after run13A-run13AD EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
+- treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
 - treat Stage 19 through Stage 25 as independent model-family and risk-lifecycle topics: EBM, GAM, ElasticNet Logistic, HMM, regime classifier, Survival model, and hazard model
 - treat Stage 17 as reviewed_closed after run11G DART attribution closeout; Stage18 is opened as a CatBoost topic, not as a baseline or promotion
@@ -54,7 +55,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_active_run13AD_ebm_axis_exhaustion_followthrough_completed
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_opened_not_started
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -128,11 +129,12 @@ pre_alpha_stage_queue:
     stage19:
       stage_id: 19_model_family_challenge__ebm_explainable_boosting_shape
       ownership: independent EBM explainable boosting shape scout after Stage18 CatBoost closeout
-      status: active_run13AD_ebm_axis_exhaustion_followthrough_completed
+      status: reviewed_closed_stage20_opened
+      current_run_id: run13AD_ebm_axis_exhaustion_followthrough_v1
     stage20:
       stage_id: 20_model_family_challenge__gam_additive_smooth_shape
       ownership: independent GAM additive smooth shape scout after Stage19
-      status: planned
+      status: opened_not_started
     stage21:
       stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
       ownership: independent ElasticNet Logistic sparse linear sanity scout after Stage20
@@ -1778,7 +1780,7 @@ stage18_catboost_closeout:
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
 stage19_25_model_research_queue:
-  status: stage19_active_run13AD_ebm_axis_exhaustion_followthrough_completed_after_stage18_closeout
+  status: stage19_reviewed_closed_stage20_opened_not_started
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   stage19: EBM_explainable_boosting_shape
   stage20: GAM_additive_smooth_shape
@@ -1889,3 +1891,30 @@ stage19_ebm_run13AD_axis_exhaustion_followthrough:
   report_path: stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13AD_ebm_axis_exhaustion_followthrough_packet.md
   decision_path: docs/decisions/2026-05-05_stage19_run13AD_ebm_axis_exhaustion_followthrough.md
   packet_summary_path: docs/agent_control/packets/stage19_run13AD_ebm_axis_exhaustion_followthrough_v1/run_summaries/run13AD_ebm_axis_exhaustion_followthrough_v1.json
+stage19_ebm_closeout:
+  packet_id: stage19_ebm_closeout_v1
+  status: reviewed_closed_stage20_opened
+  judgment: closed_inconclusive_ebm_model_characteristics_exhausted
+  run_range: run13A-run13AD
+  registered_run_count: 32
+  stage_ledger_rows: 430
+  mt5_or_trading_ledger_rows: 330
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: runtime_probe_and_model_characteristic_read_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  closeout_packet_path: stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/stage19_closeout_packet.md
+  decision_path: docs/decisions/2026-05-05_stage19_ebm_closeout_stage20_open.md
+  packet_summary_path: docs/agent_control/packets/stage19_ebm_closeout_v1/aggregate_summary.json
+  next_action: stage20_gam_additive_smooth_shape_opened_not_started
+stage20_gam_additive_smooth_shape:
+  stage_id: 20_model_family_challenge__gam_additive_smooth_shape
+  status: opened_not_started
+  judgment: not_applicable_stage_open_only
+  current_run_id: null
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: stage_open_only_not_run_not_kpi_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/20_model_family_challenge__gam_additive_smooth_shape/00_spec/stage_brief.md
+  selection_status_path: stages/20_model_family_challenge__gam_additive_smooth_shape/04_selected/selection_status.md

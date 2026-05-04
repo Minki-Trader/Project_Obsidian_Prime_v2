@@ -6,6 +6,16 @@ Stage19(19단계)는 `run13AD_ebm_axis_exhaustion_followthrough_v1`에서 EBM(`E
 
 효과(effect, 효과): feature(피처), hold(보유), Tier B routing(티어 B 라우팅), side compression(방향 압축)을 더 봤지만 edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 
+## Latest Stage19 Closeout and Stage20 Open(최신 19단계 마감과 20단계 개방)
+
+Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) `run13A-run13AD(실행13A-실행13AD)` 탐색을 `closed_inconclusive_ebm_model_characteristics_exhausted`로 닫았다.
+
+효과(effect, 효과): EBM(설명가능 부스팅 머신)은 MQL5(엠큐엘5) score table(점수표) runtime(런타임), feature contribution(피처 기여도), hold axis(보유 축), Tier A/B routing(티어 A/B 라우팅), subtype(하위유형), side compression(방향 압축), follow-up exhaustion(후속 소진) 단서를 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+Stage20(20단계)는 `20_model_family_challenge__gam_additive_smooth_shape`로 열렸다.
+
+효과(effect, 효과): Stage20(20단계)은 GAM(`Generalized Additive Model`, 일반화 가산 모델) smooth additive effect(부드러운 가산 효과)를 보는 새 topic pivot(주제 전환)이며, 아직 run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)는 없다.
+
 ## Latest Stage19 RUN13T MT5 Axis Extension Update(최신 19단계 실행13T MT5 축 확장 업데이트)
 
 Stage19(19단계)는 `run13T_ebm_mt5_axis_extension_v1`에서 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) feature mask(피처 마스크), hold micro-axis(보유 미세 축), Tier B subtype filter(티어 B 하위유형 필터), hold4 side axis(4봉 방향 축)을 MT5(`MetaTrader 5`, 메타트레이더5)로 더 확인했다.
@@ -93,9 +103,9 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 
 - updated_on: `2026-05-05`
 - project_mode: `clean_stage_restart`
-- active_stage: `19_model_family_challenge__ebm_explainable_boosting_shape(19단계 설명가능 부스팅 머신 형태 탐색)`
-- active_branch: `codex/stage19-ebm-attribution`
-- current run(현재 실행): `run13AD_ebm_axis_exhaustion_followthrough_v1`
+- active_stage: `20_model_family_challenge__gam_additive_smooth_shape(20단계 GAM 가산 부드러운 모양)`
+- active_branch: `codex/stage20-gam-additive-smooth-shape`
+- current run(현재 실행): `not_started`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
@@ -189,11 +199,11 @@ Stage 09(9단계)는 pre-alpha handoff packet(알파 전 인계 묶음)을 닫�
 
 ## 현재 단계(Current Stage, 현재 단계)
 
-`19_model_family_challenge__ebm_explainable_boosting_shape`
+`20_model_family_challenge__gam_additive_smooth_shape`
 
-Stage19(19단계)의 질문(question, 질문)은 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신)이 feature shape(피처 모양)를 설명 가능한 additive boosting(가산 부스팅) 구조로 보여주고, Stage18(18단계) CatBoost(캣부스트) 단서를 상속하지 않고 새 모델 특성을 만들 수 있는지다.
+Stage20(20단계)의 질문(question, 질문)은 GAM(`Generalized Additive Model`, 일반화 가산 모델)이 smooth additive effect(부드러운 가산 효과)를 만들고, Stage19(19단계) EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) 단서를 baseline(기준선)으로 상속하지 않고 새 모델 특성을 볼 수 있는지다.
 
-효과(effect, 효과): Stage19(19단계)는 planned(계획) 상태이며, 첫 실행(run, 실행)은 아직 만들지 않았다. 작업서(work order, 작업서)는 `docs/workspace/stage19_25_model_research_work_order.md`에 둔다.
+효과(effect, 효과): Stage20(20단계)는 opened_not_started(개방됨, 미시작) 상태이며, 첫 실행(run, 실행)은 아직 만들지 않았다. 작업서(work order, 작업서)는 `docs/workspace/stage19_25_model_research_work_order.md`에 둔다.
 
 ## 탐색 원칙(Exploration Rule, 탐색 원칙)
 

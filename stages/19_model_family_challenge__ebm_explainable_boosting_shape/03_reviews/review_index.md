@@ -8,3 +8,4 @@
 - `run13M_ebm_deep_axis_followup_v1`: `stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13M_ebm_deep_axis_followup_packet.md`
 - `run13T_ebm_mt5_axis_extension_v1`: `stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13T_ebm_mt5_axis_extension_packet.md`
 - `run13AD_ebm_axis_exhaustion_followthrough_v1`: `stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/run13AD_ebm_axis_exhaustion_followthrough_packet.md`
+- closeout packet(종료 묶음): `stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/stage19_closeout_packet.md`
