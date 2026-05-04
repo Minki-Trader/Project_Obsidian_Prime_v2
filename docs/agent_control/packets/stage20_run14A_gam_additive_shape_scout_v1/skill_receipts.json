@@ -1,0 +1,101 @@
+[
+  {
+    "changed_variables": [
+      "model_family=GAM",
+      "feature subset",
+      "spline smoothness"
+    ],
+    "comparison_baseline": "No baseline; compare only within Stage20 GAM variants and fixed data contract.",
+    "control_variables": [
+      "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+      "label_v1_fwd12_m5_logret_train_q33_3class",
+      "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+      "Tier A/B paired records"
+    ],
+    "created_at_utc": "2026-05-04T19:05:40Z",
+    "decision_use": "Decide whether Stage20 should continue to a narrow MT5 runtime_probe using a selected GAM handoff representation.",
+    "failure_criteria": [
+      "flat probability shape",
+      "unstable validation/OOS density",
+      "no Tier-B-compatible candidate"
+    ],
+    "hypothesis": "GAM can expose smooth additive short/long shape on the audited 58-feature US100 M5 surface.",
+    "invalid_conditions": [
+      "missing split",
+      "missing feature",
+      "duplicate timestamp",
+      "non-finite feature"
+    ],
+    "packet_id": "stage20_run14A_gam_additive_shape_scout_v1",
+    "skill": "obsidian-experiment-design",
+    "status": "executed",
+    "success_criteria": [
+      "non-flat smooth shape",
+      "usable Tier A/B prediction records",
+      "clear handoff candidate"
+    ]
+  },
+  {
+    "created_at_utc": "2026-05-04T19:05:40Z",
+    "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "feature_label_boundary": "label_v1_fwd12_m5_logret_train_q33_3class",
+    "integrity_judgment": "usable_with_boundary",
+    "packet_id": "stage20_run14A_gam_additive_shape_scout_v1",
+    "sample_scope": "Tier A rows=46650; Tier B fallback rows=12398",
+    "skill": "obsidian-data-integrity",
+    "split_boundary": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+    "status": "executed",
+    "time_axis": "timestamp is read as UTC-normalized project timestamp and split contract is unchanged."
+  },
+  {
+    "calibration_risk": "one-vs-rest GAM probabilities are fused with a flat reference logit; scout probability only.",
+    "created_at_utc": "2026-05-04T19:05:40Z",
+    "model_family": "pygam_logistic_gam_one_vs_rest_short_long_flat_reference",
+    "overfit_risk": "single split and small hand-authored variant set; no WFO or MT5 evidence yet.",
+    "packet_id": "stage20_run14A_gam_additive_shape_scout_v1",
+    "selection_metric": "characteristic_score on smooth shape, signal density, and hit-rate diagnostics; not trading profit.",
+    "skill": "obsidian-model-validation",
+    "status": "executed",
+    "threshold_policy": "non-flat q0.90 from validation split.",
+    "validation_judgment": "inconclusive_structural_scout"
+  },
+  {
+    "availability": "generated_02_runs_ignored_with_tracked_packet_summary",
+    "consumer": [
+      "stages/20_model_family_challenge__gam_additive_smooth_shape/03_reviews/run14A_gam_additive_shape_scout_packet.md",
+      "stages/20_model_family_challenge__gam_additive_smooth_shape/03_reviews/stage_run_ledger.csv",
+      "docs/registers/alpha_run_ledger.csv"
+    ],
+    "created_at_utc": "2026-05-04T19:05:40Z",
+    "lineage_judgment": "connected_with_boundary",
+    "packet_id": "stage20_run14A_gam_additive_shape_scout_v1",
+    "producer": "stage_pipelines.stage20.gam_characteristic_scout",
+    "skill": "obsidian-artifact-lineage",
+    "source_inputs": [
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json"
+    ],
+    "status": "executed"
+  },
+  {
+    "claim_boundary": "gam_additive_shape_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-04T19:05:40Z",
+    "evidence_available": [
+      "variant results",
+      "Tier A/B prediction records",
+      "stage and project ledgers"
+    ],
+    "evidence_missing": [
+      "MT5 runtime_probe",
+      "WFO",
+      "runtime authority"
+    ],
+    "judgment_label": "inconclusive_gam_additive_shape_structural_scout_completed",
+    "next_condition": "Run run14B as a narrow MT5 runtime_probe by adding a GAM score-table or handoff-compatible runtime representation for the selected v01/v02 Tier-B-compatible variant.",
+    "packet_id": "stage20_run14A_gam_additive_shape_scout_v1",
+    "result_subject": "run14A_gam_additive_shape_scout_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "executed"
+  }
+]

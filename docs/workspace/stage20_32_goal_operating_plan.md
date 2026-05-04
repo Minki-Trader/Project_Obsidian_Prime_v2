@@ -3,12 +3,20 @@
 ## Current Truth(현재 진실)
 
 - active stage(활성 단계): `20_model_family_challenge__gam_additive_smooth_shape`
-- current run(현재 실행): `not_started`
+- current run(현재 실행): `run14A_gam_additive_shape_scout_v1`
 - active branch(활성 브랜치): `codex/stage20-gam-additive-smooth-shape`
 - active stage folder(활성 단계 폴더): `stages/20_model_family_challenge__gam_additive_smooth_shape`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하지만, 새 run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않는다.
+효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, 현재 Stage20(20단계)은 Python structural scout(파이썬 구조 탐색) 근거만 가진다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+## Execution Contract(실행 계약)
+
+이 문서는 Stage20-32(20-32단계)의 living ExecPlan(살아있는 실행계획)이다. 사용자가 `Stage20-32 goal(목표) 계속`, `goal(목표) 진행`, 또는 이 문서 기준 진행을 요청하면, 먼저 이 문서와 `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, active stage ledger(활성 단계 장부)를 다시 읽고 Progress(진행)의 첫 미완료 milestone(마일스톤)을 실행한다.
+
+Default Mode(기본 실행 모드)에서는 plan explanation(계획 설명)만 쓰고 멈추지 않는다. 가능한 범위에서 code(코드), run(실행), evidence recording(근거 기록), judgment(판정), documentation(문서화), git checkpoint(깃 중간 지점)를 같은 work packet(작업 묶음) 안에서 진행한다.
+
+효과(effect, 효과): goal(목표)을 설명 문서가 아니라 재개 가능한 실행 루프(resumable execution loop, 재개 가능한 실행 반복)로 쓴다.
 
 ## Goal(목표)
 
@@ -37,6 +45,56 @@ Project Obsidian Prime v2에서 Stage20(20단계)부터 Stage32(32단계)까지 
 | Stage32(32단계) | TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) |
 
 효과(effect, 효과): 진행 순서를 미리 고정해도 각 stage(단계)는 이전 stage(단계)의 model/threshold/baseline(모델/임계값/기준선)을 상속하지 않는다.
+
+## Progress(진행)
+
+Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업), active run id(활성 실행 ID), blocker(차단 사유), exact next action(정확한 다음 행동), git/MT5 status(깃/MT5 상태)를 이 문서에 갱신한다.
+
+- [ ] Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델) scout/probe/closeout/open Stage21. Completed(완료): `run14A_gam_additive_shape_scout_v1` Python structural scout(파이썬 구조 탐색). Remaining(남음): `run14B_gam_runtime_handoff_probe_v1` MT5 runtime_probe(MT5 런타임 탐침), closeout(마감), Stage21 open-only(Stage21 개방만).
+- [ ] Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱) scout/probe/closeout/open Stage22
+- [ ] Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델) scout/probe/closeout/open Stage23
+- [ ] Stage23(23단계) supervised regime classifier(지도 국면 분류기) scout/probe/closeout/open Stage24
+- [ ] Stage24(24단계) Survival model(생존 모델) scout/probe/closeout/open Stage25
+- [ ] Stage25(25단계) hazard model(위험률 모델) scout/probe/closeout/open Stage26
+- [ ] Stage26(26단계) NGBoost(`Natural Gradient Boosting`, 자연 그래디언트 부스팅) scout/probe/closeout/open Stage27
+- [ ] Stage27(27단계) quantile boosting(분위수 부스팅) scout/probe/closeout/open Stage28
+- [ ] Stage28(28단계) Markov regression(마르코프 회귀) scout/probe/closeout/open Stage29
+- [ ] Stage29(29단계) River online ML(리버 온라인 머신러닝) scout/probe/closeout/open Stage30
+- [ ] Stage30(30단계) calibration/abstention(보정/기권) scout/probe/closeout/open Stage31
+- [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
+- [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
+
+Current active milestone(현재 활성 마일스톤): Stage20(20단계) `run14B_gam_runtime_handoff_probe_v1` MT5 runtime_probe(MT5 런타임 탐침) 준비.
+
+효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
+
+## Latest Stop Resume State(최신 중지 재개 상태)
+
+- latest completed work(최근 완료 작업): `run14A_gam_additive_shape_scout_v1` completed(완료) as Python structural scout(파이썬 구조 탐색).
+- active stage/current run id(활성 단계/현재 실행 ID): Stage20(20단계), `run14A_gam_additive_shape_scout_v1`.
+- changed files(변경 파일): GAM model module(모델 모듈), Stage20 pipeline(단계 실행 어댑터), run14A review packet(검토 묶음), decision(결정), ledgers(장부), tests(테스트), this goal plan(목표 계획).
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `not_created_in_run14A(실행14A에서 미생성)`.
+- blocker(차단 사유): `none_for_run14A(없음)`. MT5 runtime_probe(MT5 런타임 탐침)는 `run14B`에서 handoff-compatible GAM score representation(인계 가능 GAM 점수 표현)을 만든 뒤 시도한다.
+- exact next action(정확한 다음 행동): implement `run14B_gam_runtime_handoff_probe_v1` with a GAM score-table or equivalent runtime handoff(동등 런타임 인계), then run one sentinel MT5 tranche(감시 MT5 묶음) and inspect log/report/telemetry/KPI/parser(로그/보고서/기록/핵심 성과 지표/파서).
+- git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending before stop(중지 전 대기).
+
+효과(effect, 효과): 다음 재개는 Stage20(20단계) 새 계획 작성이 아니라 `run14B` 런타임 인계 탐침으로 시작한다.
+
+## Per-Stage Milestone Loop(단계별 마일스톤 반복)
+
+각 stage(단계)는 아래 loop(반복)를 따른다.
+
+1. current truth(현재 진실), active branch(활성 브랜치), working tree(작업트리), active stage folder(활성 단계 폴더)를 확인한다.
+2. stage-local experiment design(단계 내부 실험 설계)을 기록한다.
+3. broad scout(넓은 탐색) 또는 required extreme probe(필요 극단 탐침)를 실행한다.
+4. Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B combined/routed(Tier A+B 합산/라우팅)를 기록한다.
+5. 가능한 가장 좁은 MT5 runtime_probe(MT5 런타임 탐침)를 sentinel run(감시 실행) 또는 small tranche(작은 묶음)로 시도한다.
+6. normalized KPI(정규화 핵심 성과 지표), parser status(파서 상태), telemetry status(기록 상태), report path(보고서 경로)를 확인한다.
+7. model characteristic(모델 특성)이 충분하면 meaningless micro-tuning(의미 없는 미세탐색)을 반복하지 않고 closeout packet(마감 묶음)을 작성한다.
+8. closeout(마감) 뒤 다음 planned stage(계획된 단계)를 open-only(개방만) 상태로 연다.
+9. checkpoint(중간 지점)마다 commit(커밋)과 push(푸시)를 시도하고 결과를 기록한다.
+
+효과(effect, 효과): Stage20-32(20-32단계)를 같은 실행 모양으로 반복하면서도 각 stage(단계)의 고유 주제는 독립으로 유지한다.
 
 ## Stage Operating Loop(단계 운영 반복)
 
@@ -94,6 +152,23 @@ stage open(단계 개방), major MT5 evidence packet(주요 MT5 근거 묶음), 
 
 효과(effect, 효과): 긴 stage sequence(단계 순서) 진행 중에도 folder(폴더), branch(브랜치), run evidence(실행 근거), push state(푸시 상태)가 흐려지지 않는다.
 
+## Stop Resume Protocol(중지 재개 규칙)
+
+작업을 멈추기 전에는 아래 항목을 반드시 최신화한다.
+
+- latest completed work(최근 완료 작업)
+- active stage/current run id(활성 단계/현재 실행 ID)
+- created/updated folders(생성/수정 폴더)
+- changed files(변경 파일)
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로)
+- blocker(차단 사유), failure log(실패 로그), recovery attempt(복구 시도)
+- exact next action(정확한 다음 행동) 또는 exact rerun condition(정확한 재실행 조건)
+- git status(깃 상태), commit status(커밋 상태), push status(푸시 상태)
+
+작업이 정상 완료되면 다음 실행은 Progress(진행)의 다음 미완료 milestone(마일스톤)에서 시작한다. 작업이 blocked(차단) 상태로 끝나면 다음 실행은 blocker(차단 사유)의 recovery attempt(복구 시도)부터 시작한다.
+
+효과(effect, 효과): context(문맥)가 줄거나 session(세션)이 끊겨도 다음 작업자가 추측 없이 이어받는다.
+
 ## Acceptance and Stop Condition(수용 기준과 중지 조건)
 
 각 stage(단계)는 Python-side evidence(파이썬 근거), MT5 runtime_probe(런타임 탐침), normalized KPI(정규화 핵심 성과 지표), closeout packet(마감 묶음)을 남겨야 reviewed closeout(검토된 마감)으로 인정한다.
@@ -101,3 +176,15 @@ stage open(단계 개방), major MT5 evidence packet(주요 MT5 근거 묶음), 
 Stage32(32단계)까지 reviewed closeout(검토된 마감)을 완료한 뒤, final summary(최종 요약)에 모든 stage(단계)의 folder(폴더), branch(브랜치), run evidence(실행 근거), MT5 report(MT5 보고서), git push(깃 푸시) 상태를 남긴다.
 
 효과(effect, 효과): Stage32(32단계) 종료 후에도 어떤 stage(단계)도 alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)로 과장하지 않는다.
+
+## Decision Log(결정 로그)
+
+- Decision(결정): `2026-05-05`에 이 문서를 living ExecPlan(살아있는 실행계획)로 보강한다.
+  Rationale(근거): Stage20-32(20-32단계)는 한 번의 short plan(짧은 계획)이 아니라 장기 실행 루프(long-running execution loop, 장기 실행 반복)로 관리해야 하며, Progress(진행)와 Stop Resume Protocol(중지 재개 규칙)이 없으면 재시작 때 계획 작성으로 새기 쉽다.
+
+## Outcomes & Retrospective(결과 및 회고)
+
+- `2026-05-05`: Stage20-32(20-32단계) goal operating plan(목표 운영 계획)을 living ExecPlan(살아있는 실행계획) 구조로 보강했다. 효과(effect, 효과): 진행 재개는 Progress(진행)의 첫 미완료 milestone(마일스톤)을 따른다.
+- `2026-05-05`: Stage20(20단계) `run14A_gam_additive_shape_scout_v1` completed(완료). selected variant(선택 변형)는 `v02_core24_smoother`, best overall variant(전체 최고 변형)는 `v03_proxy_context20_tier_a`다. MT5 runtime_probe(MT5 런타임 탐침)는 아직 없고, 다음 milestone(마일스톤)은 `run14B_gam_runtime_handoff_probe_v1`이다.
+
+효과(effect, 효과): 이후 실제 실행 결과와 차단 사유를 같은 문서에 누적해 Stage32(32단계)까지 이어갈 수 있다.

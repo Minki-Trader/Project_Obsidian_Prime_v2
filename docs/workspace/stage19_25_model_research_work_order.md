@@ -8,7 +8,7 @@ goal operating plan(목표 운영 계획): `docs/workspace/stage20_32_goal_opera
 
 ## Current Queue Read(현재 큐 판독)
 
-Stage19(19단계) EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신)은 `closed_inconclusive_ebm_model_characteristics_exhausted`로 닫혔고, Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델)은 `opened_not_started(개방됨, 미시작)` 상태다.
+Stage19(19단계) EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신)은 `closed_inconclusive_ebm_model_characteristics_exhausted`로 닫혔고, Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델)은 `run14A_gam_additive_shape_scout_v1` Python structural scout(파이썬 구조 탐색)를 완료한 상태다.
 
 효과(effect, 효과): Stage20(20단계)은 EBM(설명가능 부스팅 머신) continuation(연속)이 아니라 smooth additive effect(부드러운 가산 효과)를 보는 새 topic pivot(주제 전환)으로 시작한다.
 

@@ -2,7 +2,7 @@ updated_on: '2026-05-05'
 project_mode: clean_stage_restart
 active_branch: codex/stage20-gam-additive-smooth-shape
 active_stage: 20_model_family_challenge__gam_additive_smooth_shape
-current_run_id: null
+current_run_id: run14A_gam_additive_shape_scout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,10 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_opened_not_started
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_run14A_structural_scout_completed
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 20 as opened_not_started for GAM additive smooth shape; no run, KPI, baseline, promotion, or runtime authority exists yet
+- treat Stage 20 as active after run14A_gam_additive_shape_scout_v1 GAM additive smooth shape Python structural scout; no MT5 runtime_probe, baseline, promotion, or runtime authority exists yet
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -56,7 +56,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_opened_not_started
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_run14A_structural_scout_completed
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -135,7 +135,8 @@ pre_alpha_stage_queue:
     stage20:
       stage_id: 20_model_family_challenge__gam_additive_smooth_shape
       ownership: independent GAM additive smooth shape scout after Stage19
-      status: opened_not_started
+      status: active_python_structural_scout_completed
+      current_run_id: run14A_gam_additive_shape_scout_v1
     stage21:
       stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
       ownership: independent ElasticNet Logistic sparse linear sanity scout after Stage20
@@ -1809,7 +1810,7 @@ stage18_catboost_closeout:
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
 stage19_32_model_research_queue:
-  status: stage19_reviewed_closed_stage20_opened_not_started
+  status: stage19_reviewed_closed_stage20_run14A_structural_scout_completed
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   goal_operating_plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   path_note: legacy_stage19_25_file_path_retained_for_current_truth_links
@@ -1830,11 +1831,13 @@ stage19_32_model_research_queue:
   inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
   claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only
 stage20_32_goal_operating_plan:
-  status: adopted
+  status: adopted_living_execplan_run14A_completed
   plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   decision_path: docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md
   active_stage_at_adoption: 20_model_family_challenge__gam_additive_smooth_shape
   current_run_at_adoption: not_started
+  latest_completed_run: run14A_gam_additive_shape_scout_v1
+  next_exact_action: run14B_gam_runtime_handoff_probe_v1_mt5_runtime_probe
   active_branch_at_adoption: codex/stage20-gam-additive-smooth-shape
   active_stage_folder: stages/20_model_family_challenge__gam_additive_smooth_shape
   scope: stage20_through_stage32_model_topic_exploration
@@ -1842,7 +1845,7 @@ stage20_32_goal_operating_plan:
   recovery_rule: repair_and_continue_before_blocked_unless_repeated_failure_or_user_action_required
   reporting_rule: include_branch_folders_changed_files_stage_folder_run_id_mt5_paths_git_status_commit_plan_push_status
   git_checkpoint_rule: commit_and_push_at_stage_open_major_mt5_evidence_packet_and_stage_closeout_when_changes_are_clean
-  claim_boundary: goal_plan_only_not_run_not_kpi_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  claim_boundary: goal_plan_and_run14A_python_structural_scout_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
 stage19_ebm_run13A_characteristic_scout:
   packet_id: stage19_run13A_ebm_shape_scout_v1
   status: reviewed_structural_scout_completed
@@ -1958,15 +1961,22 @@ stage19_ebm_closeout:
   closeout_packet_path: stages/19_model_family_challenge__ebm_explainable_boosting_shape/03_reviews/stage19_closeout_packet.md
   decision_path: docs/decisions/2026-05-05_stage19_ebm_closeout_stage20_open.md
   packet_summary_path: docs/agent_control/packets/stage19_ebm_closeout_v1/aggregate_summary.json
-  next_action: stage20_gam_additive_smooth_shape_opened_not_started
+  next_action: stage20_run14A_completed_next_run14B_gam_runtime_handoff_probe
 stage20_gam_additive_smooth_shape:
   stage_id: 20_model_family_challenge__gam_additive_smooth_shape
-  status: opened_not_started
-  judgment: not_applicable_stage_open_only
-  current_run_id: null
+  status: active_run14A_python_structural_scout_completed
+  judgment: inconclusive_gam_additive_shape_structural_scout_completed
+  current_run_id: run14A_gam_additive_shape_scout_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
-  boundary: stage_open_only_not_run_not_kpi_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  selected_variant_id: v02_core24_smoother
+  best_overall_variant_id: v03_proxy_context20_tier_a
+  boundary: gam_additive_shape_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/20_model_family_challenge__gam_additive_smooth_shape/00_spec/stage_brief.md
   selection_status_path: stages/20_model_family_challenge__gam_additive_smooth_shape/04_selected/selection_status.md
+  review_packet_path: stages/20_model_family_challenge__gam_additive_smooth_shape/03_reviews/run14A_gam_additive_shape_scout_packet.md
+  decision_path: docs/decisions/2026-05-05_stage20_run14A_gam_shape_scout.md
+  packet_summary_path: docs/agent_control/packets/stage20_run14A_gam_additive_shape_scout_v1/aggregate_summary.json
+  mt5_runtime_probe_status: not_attempted_next_run14B
+  next_action: run14B_gam_runtime_handoff_probe_v1_mt5_runtime_probe

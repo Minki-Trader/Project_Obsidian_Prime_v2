@@ -11,7 +11,7 @@ GAM(`Generalized Additive Model`, 일반화 가산 모델)이 audited 58-feature
 - allowed claim(허용 주장): explanatory model scout(설명형 모델 탐색) and future runtime_probe(향후 런타임 탐침) only(만 허용)
 - forbidden claim(금지 주장): edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)
 
-효과(effect, 효과): Stage20(20단계)은 아직 opened_not_started(개방됨, 미시작)이며 run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)는 만들지 않았다.
+효과(effect, 효과): Stage20(20단계)은 `run14A_gam_additive_shape_scout_v1` Python structural scout(파이썬 구조 탐색)를 완료했지만, MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침), closeout(마감), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
 
 ## Operating Goal Link(운영 목표 연결)
 

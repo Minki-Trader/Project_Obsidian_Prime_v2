@@ -1,4 +1,11 @@
-﻿## Latest Stage20-32 Goal Operating Plan(최신 20-32단계 목표 운영 계획)
+﻿## Latest Stage20 RUN14A GAM Update(최신 20단계 실행14A GAM 업데이트)
+
+
+Stage20(20단계)은 `run14A_gam_additive_shape_scout_v1`로 GAM(`Generalized Additive Model`, 일반화 가산 모델) additive smooth shape(가산 부드러운 모양)를 Python structural scout(파이썬 구조 탐색)로 실행했다.
+
+결과(result, 결과): `inconclusive_gam_additive_shape_structural_scout_completed`. selected variant(선택 변형)는 `v02_core24_smoother`, best overall variant(전체 최고 변형)는 `v03_proxy_context20_tier_a`다.
+
+효과(effect, 효과): Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B combined(Tier A+B 합산) Python records(파이썬 기록)를 남겼지만, MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침), closeout(마감), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 아직 없다. 다음 정확한 행동(next exact action, 다음 정확한 행동)은 `run14B_gam_runtime_handoff_probe_v1`에서 GAM score representation(GAM 점수 표현)을 MT5 handoff(메타트레이더5 인계) 가능하게 만들고 sentinel run(감시 실행)을 먼저 수행하는 것이다.
 
 Stage20-32(20-32단계) goal operating plan(목표 운영 계획)을 `docs/workspace/stage20_32_goal_operating_plan.md`로 채택했다. decision memo(결정 메모)는 `docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md`에 둔다.
 
@@ -6,7 +13,7 @@ Stage20-32(20-32단계) goal operating plan(목표 운영 계획)을 `docs/works
 
 MT5 batch safety/recovery(MT5 배치 안전/복구)는 blind batch(무검토 배치)를 금지하고, small tranche(작은 묶음) 또는 sentinel run(감시 실행) 뒤 log/report/telemetry/KPI/parser(로그/보고서/기록/핵심 성과 지표/파서)를 확인한다. 문제 발생 시 기본 목표는 stop(중지)이 아니라 repair-and-continue(수정 후 계속 진행)다.
 
-효과(effect, 효과): 이 계획은 run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않고, Stage20(20단계) active state(활성 상태)는 `opened_not_started(개방됨, 미시작)`로 유지한다.
+효과(effect, 효과): 이 계획은 baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않는다. 현재 Stage20(20단계)은 `run14A` Python structural scout(파이썬 구조 탐색)만 완료했다.
 
 ## Latest Stage19 RUN13AD Axis Exhaustion Update(최신 19단계 실행13AD 축 소진 업데이트)
 
@@ -24,7 +31,7 @@ Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 
 
 Stage20(20단계)는 `20_model_family_challenge__gam_additive_smooth_shape`로 열렸다.
 
-효과(effect, 효과): Stage20(20단계)은 GAM(`Generalized Additive Model`, 일반화 가산 모델) smooth additive effect(부드러운 가산 효과)를 보는 새 topic pivot(주제 전환)이며, 아직 run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)는 없다.
+효과(effect, 효과): Stage20(20단계)은 GAM(`Generalized Additive Model`, 일반화 가산 모델) smooth additive effect(부드러운 가산 효과)를 보는 새 topic pivot(주제 전환)이며, 현재 `run14A_gam_additive_shape_scout_v1` Python structural scout(파이썬 구조 탐색)만 완료했다. MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)는 아직 없다.
 
 ## Latest Stage19 RUN13T MT5 Axis Extension Update(최신 19단계 실행13T MT5 축 확장 업데이트)
 
@@ -116,7 +123,7 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 - project_mode: `clean_stage_restart`
 - active_stage: `20_model_family_challenge__gam_additive_smooth_shape(20단계 GAM 가산 부드러운 모양)`
 - active_branch: `codex/stage20-gam-additive-smooth-shape`
-- current run(현재 실행): `not_started`
+- current run(현재 실행): `run14A_gam_additive_shape_scout_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 
@@ -214,7 +221,7 @@ Stage 09(9단계)는 pre-alpha handoff packet(알파 전 인계 묶음)을 닫�
 
 Stage20(20단계)의 질문(question, 질문)은 GAM(`Generalized Additive Model`, 일반화 가산 모델)이 smooth additive effect(부드러운 가산 효과)를 만들고, Stage19(19단계) EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) 단서를 baseline(기준선)으로 상속하지 않고 새 모델 특성을 볼 수 있는지다.
 
-효과(effect, 효과): Stage20(20단계)는 opened_not_started(개방됨, 미시작) 상태이며, 첫 실행(run, 실행)은 아직 만들지 않았다. 작업서(work order, 작업서)는 기존 경로 `docs/workspace/stage19_25_model_research_work_order.md`에 두며, 내용은 Stage19-32(19-32단계)까지 확장됐다.
+효과(effect, 효과): Stage20(20단계)는 `run14A_gam_additive_shape_scout_v1` Python structural scout(파이썬 구조 탐색)를 완료했지만, MT5 runtime_probe(MT5 런타임 탐침)와 closeout(마감)은 아직 만들지 않았다. 작업서(work order, 작업서)는 기존 경로 `docs/workspace/stage19_25_model_research_work_order.md`에 두며, 내용은 Stage19-32(19-32단계)까지 확장됐다.
 
 ## 탐색 원칙(Exploration Rule, 탐색 원칙)
 
