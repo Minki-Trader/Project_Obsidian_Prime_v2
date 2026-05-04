@@ -17,10 +17,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - treat Stage 20 as opened_not_started for GAM additive smooth shape; no run, KPI, baseline, promotion, or runtime authority exists yet
-- treat Stage 19 as reviewed_closed after run13A-run13AD EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
+- treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
-- treat Stage 19 through Stage 25 as independent model-family and risk-lifecycle topics: EBM, GAM, ElasticNet Logistic, HMM, regime classifier, Survival model, and hazard model
+- treat Stage 19 through Stage 32(19-32단계) as independent model-family/risk/decision/sequence topics(모델군/위험/결정/순서 주제): EBM(설명가능 부스팅 머신), GAM(일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(은닉 마르코프 모델), regime classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델), NGBoost(자연 그래디언트 부스팅), quantile boosting(분위수 부스팅), Markov regression(마르코프 회귀), River online ML(리버 온라인 머신러닝), calibration(보정), TabNet(탭넷), and TCN(시간 합성곱 네트워크)
+- treat docs/workspace/stage20_32_goal_operating_plan.md as the top-level goal operating plan(최상위 목표 운영 계획) for Stage20-32(20-32단계); use MT5 batch safety/recovery(MT5 배치 안전/복구) and folder/branch/git reporting(폴더/브랜치/깃 보고) before claiming reviewed closeout(검토된 마감)
 - treat Stage 17 as reviewed_closed after run11G DART attribution closeout; Stage18 is opened as a CatBoost topic, not as a baseline or promotion
 - treat Stage 15 as reviewed_closed after LDA covariance stability closeout; preserve LDA covariance shrinkage clues, not a baseline or promotion
 - treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임 탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
@@ -154,6 +155,34 @@ pre_alpha_stage_queue:
     stage25:
       stage_id: 25_exit_model__hazard_trade_lifecycle_risk
       ownership: independent hazard trade-lifecycle risk scout after Stage24
+      status: planned
+    stage26:
+      stage_id: 26_model_family_challenge__ngboost_probabilistic_distribution_shape
+      ownership: independent NGBoost(자연 그래디언트 부스팅) probabilistic distribution-shape(확률분포 모양) scout(탐색) after Stage25(25단계)
+      status: planned
+    stage27:
+      stage_id: 27_tail_model__quantile_boosting_risk_surface
+      ownership: independent quantile boosting(분위수 부스팅) tail-risk surface(꼬리 위험 표면) scout(탐색) after Stage26(26단계)
+      status: planned
+    stage28:
+      stage_id: 28_regime_model__markov_switching_regression_state_link
+      ownership: independent Markov switching regression(마르코프 전환 회귀) state-link(상태 연결) scout(탐색) after Stage27(27단계)
+      status: planned
+    stage29:
+      stage_id: 29_adaptive_model__river_online_drift_learning
+      ownership: independent River online ML(리버 온라인 머신러닝) drift/adaptation(변화/적응) scout(탐색) after Stage28(28단계)
+      status: planned
+    stage30:
+      stage_id: 30_decision_layer__probability_calibration_abstention
+      ownership: independent probability calibration/abstention(확률 보정/기권) decision-layer(결정 계층) scout(탐색) after Stage29(29단계)
+      status: planned
+    stage31:
+      stage_id: 31_model_family_challenge__tabnet_attentive_tabular_scout
+      ownership: independent TabNet(탭넷) attentive tabular(주의 기반 표 형식) scout(탐색) after Stage30(30단계)
+      status: planned
+    stage32:
+      stage_id: 32_sequence_model__tcn_temporal_convolution_context
+      ownership: independent TCN(시간 합성곱 네트워크) temporal convolution sequence-context(시간 합성곱 순서 문맥) scout(탐색) after Stage31(31단계)
       status: planned
 stage13_mlp_characteristic_runtime_probe:
   run_id: run04A_mlp_characteristic_runtime_probe_v1
@@ -1779,9 +1808,11 @@ stage18_catboost_closeout:
   decision_path: docs/decisions/2026-05-03_stage18_catboost_closeout.md
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
-stage19_25_model_research_queue:
+stage19_32_model_research_queue:
   status: stage19_reviewed_closed_stage20_opened_not_started
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
+  goal_operating_plan_path: docs/workspace/stage20_32_goal_operating_plan.md
+  path_note: legacy_stage19_25_file_path_retained_for_current_truth_links
   stage19: EBM_explainable_boosting_shape
   stage20: GAM_additive_smooth_shape
   stage21: ElasticNet_Logistic_linear_sanity
@@ -1789,8 +1820,29 @@ stage19_25_model_research_queue:
   stage23: supervised_regime_classifier_filter
   stage24: Survival_time_to_event_hold_shape
   stage25: hazard_trade_lifecycle_risk
+  stage26: NGBoost_probabilistic_distribution_shape
+  stage27: quantile_boosting_tail_risk_surface
+  stage28: Markov_switching_regression_state_link
+  stage29: River_online_ML_drift_learning
+  stage30: probability_calibration_abstention_decision_layer
+  stage31: TabNet_attentive_tabular_scout
+  stage32: TCN_temporal_convolution_sequence_context
   inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
   claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only
+stage20_32_goal_operating_plan:
+  status: adopted
+  plan_path: docs/workspace/stage20_32_goal_operating_plan.md
+  decision_path: docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md
+  active_stage_at_adoption: 20_model_family_challenge__gam_additive_smooth_shape
+  current_run_at_adoption: not_started
+  active_branch_at_adoption: codex/stage20-gam-additive-smooth-shape
+  active_stage_folder: stages/20_model_family_challenge__gam_additive_smooth_shape
+  scope: stage20_through_stage32_model_topic_exploration
+  mt5_batch_safety_rule: small_tranche_or_sentinel_then_log_report_telemetry_kpi_parser_check
+  recovery_rule: repair_and_continue_before_blocked_unless_repeated_failure_or_user_action_required
+  reporting_rule: include_branch_folders_changed_files_stage_folder_run_id_mt5_paths_git_status_commit_plan_push_status
+  git_checkpoint_rule: commit_and_push_at_stage_open_major_mt5_evidence_packet_and_stage_closeout_when_changes_are_clean
+  claim_boundary: goal_plan_only_not_run_not_kpi_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
 stage19_ebm_run13A_characteristic_scout:
   packet_id: stage19_run13A_ebm_shape_scout_v1
   status: reviewed_structural_scout_completed
@@ -1895,7 +1947,7 @@ stage19_ebm_closeout:
   packet_id: stage19_ebm_closeout_v1
   status: reviewed_closed_stage20_opened
   judgment: closed_inconclusive_ebm_model_characteristics_exhausted
-  run_range: run13A-run13AD
+  run_range: run13A-run13AH
   registered_run_count: 32
   stage_ledger_rows: 430
   mt5_or_trading_ledger_rows: 330

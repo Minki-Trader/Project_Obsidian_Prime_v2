@@ -10,7 +10,7 @@ Stage19(19단계) `19_model_family_challenge__ebm_explainable_boosting_shape`는
 
 - `run13A`: EBM(설명가능 부스팅 머신) Python structural scout(파이썬 구조 탐색)를 완료했다.
 - `run13B-run13G`: MQL5(엠큐엘5) score table(점수표) direct runtime(직접 런타임)으로 ONNX(`Open Neural Network Exchange`, 오픈 뉴럴 네트워크 교환) 없이 MT5(`MetaTrader 5`, 메타트레이더5) 계산 가능성을 확인했다.
-- `run13H-run13AD`: feature contribution(피처 기여도), hold axis(보유 축), Tier A/B routing(티어 A/B 라우팅), Tier B subtype(티어 B 하위유형), side compression(방향 압축), follow-up exhaustion(후속 소진)을 확인했다.
+- `run13H-run13AH`: feature contribution(피처 기여도), hold axis(보유 축), Tier A/B routing(티어 A/B 라우팅), Tier B subtype(티어 B 하위유형), side compression(방향 압축), follow-up exhaustion(후속 소진)을 확인했다.
 
 효과(effect, 효과): Stage19(19단계) 질문은 충분히 답했지만, 운영 후보(promotion candidate, 승격 후보)나 기준선(baseline, 기준선)은 만들지 않는다.
 

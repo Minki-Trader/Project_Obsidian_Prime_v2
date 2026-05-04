@@ -1,4 +1,14 @@
-﻿## Latest Stage19 RUN13AD Axis Exhaustion Update(최신 19단계 실행13AD 축 소진 업데이트)
+﻿## Latest Stage20-32 Goal Operating Plan(최신 20-32단계 목표 운영 계획)
+
+Stage20-32(20-32단계) goal operating plan(목표 운영 계획)을 `docs/workspace/stage20_32_goal_operating_plan.md`로 채택했다. decision memo(결정 메모)는 `docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md`에 둔다.
+
+효과(effect, 효과): Stage20(20단계)부터 Stage32(32단계)까지 각 model/topic exploration(모델/주제 탐색)은 고유 특성 탐색, MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침), reviewed closeout(검토된 마감), 다음 stage(단계) open-only(개방만) 순서로 진행한다.
+
+MT5 batch safety/recovery(MT5 배치 안전/복구)는 blind batch(무검토 배치)를 금지하고, small tranche(작은 묶음) 또는 sentinel run(감시 실행) 뒤 log/report/telemetry/KPI/parser(로그/보고서/기록/핵심 성과 지표/파서)를 확인한다. 문제 발생 시 기본 목표는 stop(중지)이 아니라 repair-and-continue(수정 후 계속 진행)다.
+
+효과(effect, 효과): 이 계획은 run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않고, Stage20(20단계) active state(활성 상태)는 `opened_not_started(개방됨, 미시작)`로 유지한다.
+
+## Latest Stage19 RUN13AD Axis Exhaustion Update(최신 19단계 실행13AD 축 소진 업데이트)
 
 Stage19(19단계)는 `run13AD_ebm_axis_exhaustion_followthrough_v1`에서 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) 1/2/3/4 축을 추가로 파고 follow-up(후속 탐침) 여지를 판정했다.
 
@@ -8,7 +18,7 @@ Stage19(19단계)는 `run13AD_ebm_axis_exhaustion_followthrough_v1`에서 EBM(`E
 
 ## Latest Stage19 Closeout and Stage20 Open(최신 19단계 마감과 20단계 개방)
 
-Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) `run13A-run13AD(실행13A-실행13AD)` 탐색을 `closed_inconclusive_ebm_model_characteristics_exhausted`로 닫았다.
+Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) `run13A-run13AH(실행13A-실행13AH)` 탐색을 `closed_inconclusive_ebm_model_characteristics_exhausted`로 닫았다.
 
 효과(effect, 효과): EBM(설명가능 부스팅 머신)은 MQL5(엠큐엘5) score table(점수표) runtime(런타임), feature contribution(피처 기여도), hold axis(보유 축), Tier A/B routing(티어 A/B 라우팅), subtype(하위유형), side compression(방향 압축), follow-up exhaustion(후속 소진) 단서를 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 
@@ -54,15 +64,16 @@ Stage19(19단계)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 
 
 효과(effect, 효과): selected variant(선택 변형) `v01_main_effects_broad_bins`와 top shape terms(상위 모양 항)를 보존하지만, MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침), edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 
-## Latest Stage18 Closeout and Stage19-25 Work Order(최신 18단계 종료와 19-25단계 작업서)
+## Latest Stage18 Closeout and Stage19-32 Work Order(최신 18단계 종료와 19-32단계 작업서)
 
 Stage18(18단계)은 CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) run12A-run12P(실행12A-실행12P)를 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 확인한 뒤 `closed_inconclusive_catboost_model_characteristics_exhausted`로 닫았다.
 
 효과(effect, 효과): long bias(매수 편향), q85 threshold(q85 임계값), hold6(6봉 보유), high confidence/high margin(높은 확신/높은 여백), low-vol or mid-session(저변동성 또는 중반 세션) 단서는 보존하지만 edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
-Stage19-25(19-25단계) 작업서(work order, 작업서)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신), GAM(`Generalized Additive Model`, 일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(`Hidden Markov Model`, 은닉 마르코프 모델), regime classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델)을 각각 독립 단계로 잡았다.
+Stage19-32(19-32단계) 작업서(work order, 작업서)는 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신), GAM(`Generalized Additive Model`, 일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(`Hidden Markov Model`, 은닉 마르코프 모델), regime classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델), NGBoost(`Natural Gradient Boosting`, 자연 그래디언트 부스팅), quantile boosting(분위수 부스팅), Markov regression(마르코프 회귀), River online ML(리버 온라인 머신러닝), calibration/abstention(보정/기권), TabNet(탭넷), TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크)을 각각 독립 단계로 잡았다.
 
-효과(effect, 효과): Stage19(19단계)는 CatBoost(캣부스트) continuation(연속 단계)이 아니라 EBM(설명가능 부스팅 머신) 새 model-family question(모델군 질문)으로 시작한다.
+효과(effect, 효과): Stage19(19단계)는 CatBoost(캣부스트) continuation(연속 단계)이 아니라 EBM(설명가능 부스팅 머신) 새 model-family question(모델군 질문)으로 시작했고, Stage26-32(26-32단계)는 Stage25(25단계) 이후 future queue(미래 큐)일 뿐이다. 새 stage folder(단계 폴더), run(실행), KPI(`Key Performance Indicator`, 핵심 성과 지표), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
 ## Latest Stage18 RUN12D-RUN12M Update(최신 18단계 실행12D-실행12M 업데이트)
 
 Stage18(18단계) CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트) 후속 10개 주제를 MT5(`MetaTrader 5`, 메타트레이더5)와 KPI(`Key Performance Indicator`, 핵심 성과 지표)까지 연결했다.
@@ -203,7 +214,7 @@ Stage 09(9단계)는 pre-alpha handoff packet(알파 전 인계 묶음)을 닫�
 
 Stage20(20단계)의 질문(question, 질문)은 GAM(`Generalized Additive Model`, 일반화 가산 모델)이 smooth additive effect(부드러운 가산 효과)를 만들고, Stage19(19단계) EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) 단서를 baseline(기준선)으로 상속하지 않고 새 모델 특성을 볼 수 있는지다.
 
-효과(effect, 효과): Stage20(20단계)는 opened_not_started(개방됨, 미시작) 상태이며, 첫 실행(run, 실행)은 아직 만들지 않았다. 작업서(work order, 작업서)는 `docs/workspace/stage19_25_model_research_work_order.md`에 둔다.
+효과(effect, 효과): Stage20(20단계)는 opened_not_started(개방됨, 미시작) 상태이며, 첫 실행(run, 실행)은 아직 만들지 않았다. 작업서(work order, 작업서)는 기존 경로 `docs/workspace/stage19_25_model_research_work_order.md`에 두며, 내용은 Stage19-32(19-32단계)까지 확장됐다.
 
 ## 탐색 원칙(Exploration Rule, 탐색 원칙)
 
