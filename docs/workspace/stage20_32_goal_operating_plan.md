@@ -2,13 +2,13 @@
 
 ## Current Truth(현재 진실)
 
-- active stage(활성 단계): `20_model_family_challenge__gam_additive_smooth_shape`
-- current run(현재 실행): `run14A_gam_additive_shape_scout_v1`
+- active stage(활성 단계): `21_model_family_challenge__elasticnet_logistic_linear_sanity`
+- current run(현재 실행): `not_started`
 - active branch(활성 브랜치): `codex/stage20-gam-additive-smooth-shape`
-- active stage folder(활성 단계 폴더): `stages/20_model_family_challenge__gam_additive_smooth_shape`
+- active stage folder(활성 단계 폴더): `stages/21_model_family_challenge__elasticnet_logistic_linear_sanity`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, 현재 Stage20(20단계)은 Python structural scout(파이썬 구조 탐색) 근거만 가진다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 현재 첫 미완료 milestone(마일스톤)은 Stage21(21단계) `run15A_elasticnet_logistic_linear_sanity_scout_v1`이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
 ## Execution Contract(실행 계약)
 
@@ -50,7 +50,7 @@ Project Obsidian Prime v2에서 Stage20(20단계)부터 Stage32(32단계)까지 
 
 Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업), active run id(활성 실행 ID), blocker(차단 사유), exact next action(정확한 다음 행동), git/MT5 status(깃/MT5 상태)를 이 문서에 갱신한다.
 
-- [ ] Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델) scout/probe/closeout/open Stage21. Completed(완료): `run14A_gam_additive_shape_scout_v1` Python structural scout(파이썬 구조 탐색). Remaining(남음): `run14B_gam_runtime_handoff_probe_v1` MT5 runtime_probe(MT5 런타임 탐침), closeout(마감), Stage21 open-only(Stage21 개방만).
+- [x] Stage20(20단계) GAM(`Generalized Additive Model`, 일반화 가산 모델) scout/probe/closeout/open Stage21. Completed(완료): `run14A_gam_additive_shape_scout_v1`, `run14B_gam_runtime_handoff_probe_v1`, `stage20_closeout_packet.md`, Stage21 open-only(Stage21 개방만).
 - [ ] Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱) scout/probe/closeout/open Stage22
 - [ ] Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델) scout/probe/closeout/open Stage23
 - [ ] Stage23(23단계) supervised regime classifier(지도 국면 분류기) scout/probe/closeout/open Stage24
@@ -64,21 +64,22 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
 - [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
 
-Current active milestone(현재 활성 마일스톤): Stage20(20단계) `run14B_gam_runtime_handoff_probe_v1` MT5 runtime_probe(MT5 런타임 탐침) 준비.
+Current active milestone(현재 활성 마일스톤): Stage21(21단계) `run15A_elasticnet_logistic_linear_sanity_scout_v1` broad scout(넓은 탐색).
 
 효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `run14A_gam_additive_shape_scout_v1` completed(완료) as Python structural scout(파이썬 구조 탐색).
-- active stage/current run id(활성 단계/현재 실행 ID): Stage20(20단계), `run14A_gam_additive_shape_scout_v1`.
-- changed files(변경 파일): GAM model module(모델 모듈), Stage20 pipeline(단계 실행 어댑터), run14A review packet(검토 묶음), decision(결정), ledgers(장부), tests(테스트), this goal plan(목표 계획).
-- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `not_created_in_run14A(실행14A에서 미생성)`.
-- blocker(차단 사유): `none_for_run14A(없음)`. MT5 runtime_probe(MT5 런타임 탐침)는 `run14B`에서 handoff-compatible GAM score representation(인계 가능 GAM 점수 표현)을 만든 뒤 시도한다.
-- exact next action(정확한 다음 행동): implement `run14B_gam_runtime_handoff_probe_v1` with a GAM score-table or equivalent runtime handoff(동등 런타임 인계), then run one sentinel MT5 tranche(감시 MT5 묶음) and inspect log/report/telemetry/KPI/parser(로그/보고서/기록/핵심 성과 지표/파서).
+- latest completed work(최근 완료 작업): `stage20_closeout_stage21_open` completed(완료).
+- active stage/current run id(활성 단계/현재 실행 ID): Stage21(21단계), `not_started`.
+- created/updated folders(생성/수정 폴더): `stages/21_model_family_challenge__elasticnet_logistic_linear_sanity/00_spec`, `01_inputs`, `03_reviews`, `04_selected`.
+- changed files(변경 파일): Stage20 closeout(20단계 마감), Stage21 open docs(21단계 개방 문서), current truth docs(현재 진실 문서), goal plan(목표 계획).
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/mt5`; report(보고서) `stages/20_model_family_challenge__gam_additive_smooth_shape/03_reviews/stage20_closeout_packet.md`.
+- blocker(차단 사유): `none(없음)`.
+- exact next action(정확한 다음 행동): create and run(생성 및 실행) `run15A_elasticnet_logistic_linear_sanity_scout_v1`.
 - git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending before stop(중지 전 대기).
 
-효과(effect, 효과): 다음 재개는 Stage20(20단계) 새 계획 작성이 아니라 `run14B` 런타임 인계 탐침으로 시작한다.
+효과(effect, 효과): 다음 재개는 Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱) 실제 scout(탐색)에서 시작한다.
 
 ## Per-Stage Milestone Loop(단계별 마일스톤 반복)
 
@@ -185,6 +186,8 @@ Stage32(32단계)까지 reviewed closeout(검토된 마감)을 완료한 뒤, fi
 ## Outcomes & Retrospective(결과 및 회고)
 
 - `2026-05-05`: Stage20-32(20-32단계) goal operating plan(목표 운영 계획)을 living ExecPlan(살아있는 실행계획) 구조로 보강했다. 효과(effect, 효과): 진행 재개는 Progress(진행)의 첫 미완료 milestone(마일스톤)을 따른다.
-- `2026-05-05`: Stage20(20단계) `run14A_gam_additive_shape_scout_v1` completed(완료). selected variant(선택 변형)는 `v02_core24_smoother`, best overall variant(전체 최고 변형)는 `v03_proxy_context20_tier_a`다. MT5 runtime_probe(MT5 런타임 탐침)는 아직 없고, 다음 milestone(마일스톤)은 `run14B_gam_runtime_handoff_probe_v1`이다.
+- `2026-05-05`: Stage20(20단계) `run14A_gam_additive_shape_scout_v1` completed(완료). selected variant(선택 변형)는 `v02_core24_smoother`, best overall variant(전체 최고 변형)는 `v03_proxy_context20_tier_a`다.
+- `2026-05-05`: Stage20(20단계) `run14B_gam_runtime_handoff_probe_v1` MT5 runtime_probe(런타임 탐침)를 기록했다.
 
 효과(effect, 효과): 이후 실제 실행 결과와 차단 사유를 같은 문서에 누적해 Stage32(32단계)까지 이어갈 수 있다.
+- `2026-05-05`: Stage20(20단계) reviewed closeout(검토된 마감)을 완료하고 Stage21(21단계)을 open-only(개방만)로 열었다.

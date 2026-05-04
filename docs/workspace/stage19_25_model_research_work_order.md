@@ -207,3 +207,4 @@ Stage26-32(26-32단계) extension tooling(확장 도구) 상태는 아래처럼 
 각 단계는 model characteristic(모델 특성), runtime_probe(런타임 탐침), KPI(핵심 성과 지표) 근거를 만든 뒤 닫는다. positive(긍정), promotion_candidate(승격 후보), operating_promotion(운영 승격)은 별도 명시 packet(묶음)이 없으면 만들지 않는다.
 
 효과(effect, 효과): Stage19-32(19-32단계)가 모델 쇼핑(model shopping, 모델 쇼핑)으로 번지지 않고, 각 모델군과 decision layer(결정 계층)의 질문만 좁게 답한다.
+- 2026-05-05: Stage20(20단계) GAM(일반화 가산 모델) closeout(마감) 완료, Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱) open-only(개방만). 효과(effect, 효과): 다음 실제 실행은 `run15A_elasticnet_logistic_linear_sanity_scout_v1`이다.

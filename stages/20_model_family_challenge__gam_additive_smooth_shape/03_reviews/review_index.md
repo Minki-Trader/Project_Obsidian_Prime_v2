@@ -3,3 +3,5 @@
 - `run14A_gam_additive_shape_scout_v1`: `stages/20_model_family_challenge__gam_additive_smooth_shape/03_reviews/run14A_gam_additive_shape_scout_packet.md`
 
 효과(effect, 효과): Stage20(20단계)의 검토 근거 위치를 한 곳에서 찾게 한다.
+- `run14B_gam_runtime_handoff_probe_v1`: `stages/20_model_family_challenge__gam_additive_smooth_shape/03_reviews/run14B_gam_runtime_handoff_probe_packet.md`
+- `stage20_closeout_packet.md`: `stages/20_model_family_challenge__gam_additive_smooth_shape/03_reviews/stage20_closeout_packet.md`

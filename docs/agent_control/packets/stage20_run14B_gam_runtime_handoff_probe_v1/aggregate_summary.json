@@ -1,0 +1,593 @@
+{
+  "attempt_count": 6,
+  "boundary": "gam_piecewise_score_table_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_gam_piecewise_score_table_runtime_probe_completed",
+  "expected_attempts": 6,
+  "expected_kpi_records": 10,
+  "external_verification_status": "completed",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_gam_piecewise_score_table_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 10,
+    "normalized_summary_rows": 10,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 671,
+    "trade_parser_errors": 0
+  },
+  "max_hold_bars": 12,
+  "model_artifacts": {
+    "model_backend": "ebm_table",
+    "runtime_feature_order": [
+      "log_return_1",
+      "log_return_3",
+      "return_zscore_20",
+      "close_ema20_ratio",
+      "rsi_14",
+      "rsi_14_slope_3",
+      "atr_14_over_atr_50",
+      "bollinger_width_20",
+      "bb_position_20",
+      "adx_14",
+      "di_spread_14",
+      "minutes_from_cash_open",
+      "hl_range",
+      "close_open_ratio",
+      "ema20_ema50_diff",
+      "ema20_ema50_spread_zscore_50",
+      "stoch_kd_diff",
+      "ppo_hist_12_26_9",
+      "roc_12",
+      "atr_14",
+      "historical_vol_20",
+      "supertrend_10_3",
+      "vortex_indicator",
+      "is_first_30m_after_open"
+    ],
+    "runtime_feature_order_hash": "dccf54f6fb9dac5cfe679f1880502d6229a036a6c551f01d1bb66adc1227f914",
+    "score_table_parity": {
+      "tier_a": {
+        "approximation_policy": "piecewise_gam_score_table_probe",
+        "claim_boundary": "approximation_check_not_full_runtime_parity",
+        "max_abs_diff": 0.16040910742952552,
+        "max_tolerance": 0.3,
+        "mean_abs_diff": 0.005274663144775454,
+        "mean_tolerance": 0.02,
+        "p95_abs_diff": 0.030635266081190923,
+        "p95_tolerance": 0.04,
+        "passed": true,
+        "rows": 2048,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/models/v02_core24_smoother_tier_a_gam_piecewise_score_table.csv"
+      },
+      "tier_b": {
+        "approximation_policy": "piecewise_gam_score_table_probe",
+        "claim_boundary": "approximation_check_not_full_runtime_parity",
+        "max_abs_diff": 0.2513191050874792,
+        "max_tolerance": 0.3,
+        "mean_abs_diff": 0.003036585335793923,
+        "mean_tolerance": 0.02,
+        "p95_abs_diff": 0.010339225646583157,
+        "p95_tolerance": 0.04,
+        "passed": true,
+        "rows": 2048,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/models/v02_core24_smoother_tier_b_gam_piecewise_score_table.csv"
+      }
+    },
+    "selected_variant_id": "v02_core24_smoother",
+    "thresholds": {
+      "quantile": 0.9,
+      "tier_a": 0.3735352887238693,
+      "tier_b": 0.36094569571431695
+    },
+    "tier_a_joblib": {
+      "sha256": "375156c7f35c43ed5f90f9e1c6f11d781264a6f15cd96d736676e9b86c809467",
+      "source": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14A_gam_additive_shape_scout_v1/models/v02_core24_smoother_tier_a_gam_ovr.joblib"
+    },
+    "tier_a_model_source_policy": "loaded_run14A_joblib",
+    "tier_a_score_table": {
+      "bin_count_requested": 128,
+      "claim_boundary": "piecewise_runtime_probe_not_full_gam_runtime_authority",
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 24,
+      "feature_names": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "close_ema20_ratio",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "adx_14",
+        "di_spread_14",
+        "minutes_from_cash_open",
+        "hl_range",
+        "close_open_ratio",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "atr_14",
+        "historical_vol_20",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_first_30m_after_open"
+      ],
+      "format": "gam_piecewise_score_table_csv_v1",
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/models/v02_core24_smoother_tier_a_gam_piecewise_score_table.csv",
+      "runtime_policy": "mql5_direct_bin_lookup_additive_softmax_piecewise_gam_probe",
+      "sha256": "4fc063a99f255410c95bba6059ed6700e23bd75f270ca4997133442824e20781"
+    },
+    "tier_b_joblib": {
+      "sha256": "c6a2f3191ad817f3e0dad8e3b9b46cd53b36fa5a5f71c513132980b992b3b6a7",
+      "source": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14A_gam_additive_shape_scout_v1/models/v02_core24_smoother_tier_b_gam_ovr.joblib"
+    },
+    "tier_b_model_source_policy": "loaded_run14A_joblib",
+    "tier_b_score_table": {
+      "bin_count_requested": 128,
+      "claim_boundary": "piecewise_runtime_probe_not_full_gam_runtime_authority",
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 24,
+      "feature_names": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "close_ema20_ratio",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "adx_14",
+        "di_spread_14",
+        "minutes_from_cash_open",
+        "hl_range",
+        "close_open_ratio",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "atr_14",
+        "historical_vol_20",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_first_30m_after_open"
+      ],
+      "format": "gam_piecewise_score_table_csv_v1",
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/models/v02_core24_smoother_tier_b_gam_piecewise_score_table.csv",
+      "runtime_policy": "mql5_direct_bin_lookup_additive_softmax_piecewise_gam_probe",
+      "sha256": "a649bc406a1f6840928351e86b6834f61300eb67426be18fb5549c8f30f91575"
+    }
+  },
+  "model_characteristic_strength": "gam_runtime_axis_visible",
+  "model_family": "pygam_logistic_gam_piecewise_score_table_runtime_probe",
+  "mt5_kpi_record_count": 10,
+  "oos_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 75.76,
+    "balance_drawdown_maximal_percent": 14.16,
+    "deal_count": 250,
+    "equity_drawdown_maximal_amount": 98.5,
+    "equity_drawdown_maximal_percent": 17.98,
+    "expectancy": 2.37,
+    "feature_ready_count": 8646,
+    "fill_count": 240,
+    "fill_rate": 1.0,
+    "gross_loss": -583.95,
+    "gross_profit": 879.64,
+    "long_trade_count": 19,
+    "long_win_rate_percent": 57.89,
+    "losing_trade_count": 61,
+    "loss_rate_percent": 48.8,
+    "max_drawdown_amount": 98.5,
+    "max_drawdown_percent": 17.98,
+    "missing_required_metrics": [],
+    "model_fail_count": 28691,
+    "model_ok_count": 8646,
+    "net_profit": 295.69,
+    "no_tier_count": 28691,
+    "no_tier_labelable_rows": 159,
+    "order_attempt_count": 240,
+    "parsed_row_count": 588,
+    "partial_context_subtype_counts": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    },
+    "profit_factor": 1.51,
+    "recovery_factor": 3.0,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run14B_gam_runtime_handoff_probe_v1_routed_oos.htm",
+    "route_coverage_split": "oos",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 8646,
+    "sharpe_ratio": 9.53,
+    "short_trade_count": 106,
+    "short_win_rate_percent": 50.0,
+    "skip_count": 28691,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 7216,
+    "tier_a_long_count": 93,
+    "tier_a_order_attempt_count": 227,
+    "tier_a_order_fill_count": 227,
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_a_short_count": 275,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_flat_count": 1031,
+    "tier_b_fallback_labelable_rows": 1062,
+    "tier_b_fallback_long_count": 6,
+    "tier_b_fallback_order_attempt_count": 13,
+    "tier_b_fallback_order_fill_count": 13,
+    "tier_b_fallback_short_count": 25,
+    "tier_b_fallback_used_count": 1062,
+    "trade_count": 125,
+    "win_rate_percent": 51.2,
+    "winning_trade_count": 64
+  },
+  "packet_id": "stage20_run14B_gam_runtime_handoff_probe_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "fd5674aa9a65c444dce01c3aa5625c41288b45d502930767997bcbc7d71e25fd"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "75f2c5630eccd7f37f7aad1b0bf493f2b84dacaf00482ae8ee55050114fbd3c8"
+    },
+    "tier_b_predictions": {
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "b52c1623e35be3cb59cb996f56edbe9ad7c4a1549aabbb1b1bc7c560fe54b7cd"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 1627,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 1579,
+        "signal_count": 3206,
+        "signal_coverage": 0.06872454448017148,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.408623417721519,
+          "balanced_accuracy": 0.35410214473405915,
+          "directional_correct_count": 219,
+          "directional_hit_rate": 0.4591194968553459,
+          "log_loss": 1.0788065226558434,
+          "long_count": 186,
+          "macro_f1": 0.23999039649724274,
+          "mean_probability": {
+            "flat": 0.4907341235419634,
+            "long": 0.250128761895281,
+            "short": 0.2591371145627557
+          },
+          "mean_probability_margin": 0.211505234763138,
+          "rows": 7584,
+          "short_count": 291,
+          "signal_count": 477,
+          "signal_coverage": 0.06289556962025317
+        },
+        "train": {
+          "accuracy": 0.3450482513175005,
+          "balanced_accuracy": 0.34812744840563953,
+          "directional_correct_count": 870,
+          "directional_hit_rate": 0.4988532110091743,
+          "log_loss": 1.1403188191554077,
+          "long_count": 859,
+          "macro_f1": 0.206515619988638,
+          "mean_probability": {
+            "flat": 0.49860941220036126,
+            "long": 0.25058909551964825,
+            "short": 0.2508014922799905
+          },
+          "mean_probability_margin": 0.22360851578104715,
+          "rows": 29222,
+          "short_count": 885,
+          "signal_count": 1744,
+          "signal_coverage": 0.05968106221340086
+        },
+        "validation": {
+          "accuracy": 0.39191385615603413,
+          "balanced_accuracy": 0.3588019928749493,
+          "directional_correct_count": 394,
+          "directional_hit_rate": 0.4,
+          "log_loss": 1.1166188623162416,
+          "long_count": 582,
+          "macro_f1": 0.2481222078484697,
+          "mean_probability": {
+            "flat": 0.48663865365928854,
+            "long": 0.25880645111982675,
+            "short": 0.2545548952208848
+          },
+          "mean_probability_margin": 0.2212233854688938,
+          "rows": 9844,
+          "short_count": 403,
+          "signal_count": 985,
+          "signal_coverage": 0.10006095083299472
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 138,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 312,
+        "signal_count": 450,
+        "signal_coverage": 0.03629617680271011,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5404896421845574,
+          "balanced_accuracy": 0.33769927523509385,
+          "directional_correct_count": 18,
+          "directional_hit_rate": 0.3050847457627119,
+          "log_loss": 0.973557171911661,
+          "long_count": 11,
+          "macro_f1": 0.25422879884362837,
+          "mean_probability": {
+            "flat": 0.5178921471610498,
+            "long": 0.22713390756636703,
+            "short": 0.2549739452725831
+          },
+          "mean_probability_margin": 0.2507930847349934,
+          "rows": 1062,
+          "short_count": 48,
+          "signal_count": 59,
+          "signal_coverage": 0.05555555555555555
+        },
+        "train": {
+          "accuracy": 0.44905239687848386,
+          "balanced_accuracy": 0.3431304766290884,
+          "directional_correct_count": 144,
+          "directional_hit_rate": 0.4376899696048632,
+          "log_loss": 1.068541399972759,
+          "long_count": 107,
+          "macro_f1": 0.22949611580590415,
+          "mean_probability": {
+            "flat": 0.533858320368138,
+            "long": 0.23557100152521518,
+            "short": 0.23057067810664691
+          },
+          "mean_probability_margin": 0.2775887898820083,
+          "rows": 8970,
+          "short_count": 222,
+          "signal_count": 329,
+          "signal_coverage": 0.0366778149386845
+        },
+        "validation": {
+          "accuracy": 0.6090448013524936,
+          "balanced_accuracy": 0.33509738775448916,
+          "directional_correct_count": 15,
+          "directional_hit_rate": 0.24193548387096775,
+          "log_loss": 0.9316847795406624,
+          "long_count": 20,
+          "macro_f1": 0.25979932257474686,
+          "mean_probability": {
+            "flat": 0.5452972576913149,
+            "long": 0.22540145626401786,
+            "short": 0.22930128604466715
+          },
+          "mean_probability_margin": 0.2959669574219133,
+          "rows": 2366,
+          "short_count": 42,
+          "signal_count": 62,
+          "signal_coverage": 0.026204564666103127
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 1722,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 1815,
+        "signal_count": 3537,
+        "signal_coverage": 0.05990041999729034,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4248207263474439,
+          "balanced_accuracy": 0.3525187073262777,
+          "directional_correct_count": 232,
+          "directional_hit_rate": 0.44701348747591524,
+          "log_loss": 1.065878601016898,
+          "long_count": 196,
+          "macro_f1": 0.24320846471323368,
+          "mean_probability": {
+            "flat": 0.4940699807109976,
+            "long": 0.2473042725016531,
+            "short": 0.25862574678734934
+          },
+          "mean_probability_margin": 0.21633101508584335,
+          "rows": 8646,
+          "short_count": 323,
+          "signal_count": 519,
+          "signal_coverage": 0.060027758501040945
+        },
+        "train": {
+          "accuracy": 0.3694752827817344,
+          "balanced_accuracy": 0.34741629123718676,
+          "directional_correct_count": 979,
+          "directional_hit_rate": 0.49270256668344237,
+          "log_loss": 1.1234607480916154,
+          "long_count": 931,
+          "macro_f1": 0.21319729201275128,
+          "mean_probability": {
+            "flat": 0.5068881801691756,
+            "long": 0.2470618567489616,
+            "short": 0.2460499630818628
+          },
+          "mean_probability_margin": 0.23628664362681642,
+          "rows": 38192,
+          "short_count": 1056,
+          "signal_count": 1987,
+          "signal_coverage": 0.052026602429828234
+        },
+        "validation": {
+          "accuracy": 0.433988533988534,
+          "balanced_accuracy": 0.35709721799125577,
+          "directional_correct_count": 406,
+          "directional_hit_rate": 0.3937924345295829,
+          "log_loss": 1.0807831506170589,
+          "long_count": 595,
+          "macro_f1": 0.25715392290939276,
+          "mean_probability": {
+            "flat": 0.49800525948564184,
+            "long": 0.2523333784065717,
+            "short": 0.24966136210778644
+          },
+          "mean_probability_margin": 0.23570686550499897,
+          "rows": 12210,
+          "short_count": 436,
+          "signal_count": 1031,
+          "signal_coverage": 0.08443898443898444
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "run_id": "run14B_gam_runtime_handoff_probe_v1",
+  "run_number": "run14B",
+  "runtime_failure_signature": {
+    "attempt_status_counts": {
+      "completed": 6
+    },
+    "compile_status": "completed",
+    "feature_ready_count_total": 41712,
+    "last_skip_reason_counts": {
+      "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+      "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+      "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+      "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+    },
+    "model_fail_count_total": 228723,
+    "model_ok_count_total": 41712,
+    "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+  },
+  "selected_variant_id": "v02_core24_smoother",
+  "source_packet_id": "stage20_run14A_gam_additive_shape_scout_v1",
+  "source_run_id": "run14A_gam_additive_shape_scout_v1",
+  "stage_id": "20_model_family_challenge__gam_additive_smooth_shape",
+  "threshold_quantile": 0.9,
+  "topic_read": "gam_piecewise_score_table_runtime_handoff",
+  "validation_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 259.22,
+    "balance_drawdown_maximal_percent": 33.76,
+    "deal_count": 422,
+    "equity_drawdown_maximal_amount": 288.52,
+    "equity_drawdown_maximal_percent": 36.26,
+    "expectancy": 0.04,
+    "feature_ready_count": 12210,
+    "fill_count": 365,
+    "fill_rate": 1.0,
+    "gross_loss": -1186.37,
+    "gross_profit": 1195.02,
+    "long_trade_count": 71,
+    "long_win_rate_percent": 50.7,
+    "losing_trade_count": 108,
+    "loss_rate_percent": 51.18,
+    "max_drawdown_amount": 288.52,
+    "max_drawdown_percent": 36.26,
+    "missing_required_metrics": [],
+    "model_fail_count": 40598,
+    "model_ok_count": 12210,
+    "net_profit": 8.65,
+    "no_tier_count": 40598,
+    "no_tier_labelable_rows": 203,
+    "order_attempt_count": 365,
+    "parsed_row_count": 932,
+    "partial_context_subtype_counts": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    },
+    "profit_factor": 1.01,
+    "recovery_factor": 0.03,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run14B_gam_runtime_handoff_probe_v1_routed_validation_is.htm",
+    "route_coverage_split": "validation",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 12210,
+    "sharpe_ratio": 0.13,
+    "short_trade_count": 140,
+    "short_win_rate_percent": 47.86,
+    "skip_count": 40598,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 9116,
+    "tier_a_long_count": 369,
+    "tier_a_order_attempt_count": 348,
+    "tier_a_order_fill_count": 348,
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_a_short_count": 359,
+    "tier_a_used_count": 9844,
+    "tier_b_fallback_flat_count": 2341,
+    "tier_b_fallback_labelable_rows": 2366,
+    "tier_b_fallback_long_count": 3,
+    "tier_b_fallback_order_attempt_count": 17,
+    "tier_b_fallback_order_fill_count": 17,
+    "tier_b_fallback_short_count": 22,
+    "tier_b_fallback_used_count": 2366,
+    "trade_count": 211,
+    "win_rate_percent": 48.82,
+    "winning_trade_count": 103
+  }
+}

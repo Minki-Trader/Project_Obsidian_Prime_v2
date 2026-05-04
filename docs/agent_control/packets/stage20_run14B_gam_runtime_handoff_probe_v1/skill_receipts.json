@@ -1,0 +1,68 @@
+{
+  "created_at_utc": "2026-05-04T21:20:50Z",
+  "packet_id": "stage20_run14B_gam_runtime_handoff_probe_v1",
+  "receipts": [
+    {
+      "known_differences": "GAM smooth terms are exported as a piecewise score table; claim remains runtime_probe only.",
+      "parity_check": {
+        "tier_a": {
+          "approximation_policy": "piecewise_gam_score_table_probe",
+          "claim_boundary": "approximation_check_not_full_runtime_parity",
+          "max_abs_diff": 0.16040910742952552,
+          "max_tolerance": 0.3,
+          "mean_abs_diff": 0.005274663144775454,
+          "mean_tolerance": 0.02,
+          "p95_abs_diff": 0.030635266081190923,
+          "p95_tolerance": 0.04,
+          "passed": true,
+          "rows": 2048,
+          "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/models/v02_core24_smoother_tier_a_gam_piecewise_score_table.csv"
+        },
+        "tier_b": {
+          "approximation_policy": "piecewise_gam_score_table_probe",
+          "claim_boundary": "approximation_check_not_full_runtime_parity",
+          "max_abs_diff": 0.2513191050874792,
+          "max_tolerance": 0.3,
+          "mean_abs_diff": 0.003036585335793923,
+          "mean_tolerance": 0.02,
+          "p95_abs_diff": 0.010339225646583157,
+          "p95_tolerance": 0.04,
+          "passed": true,
+          "rows": 2048,
+          "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/20_model_family_challenge__gam_additive_smooth_shape/02_runs/run14B_gam_runtime_handoff_probe_v1/models/v02_core24_smoother_tier_b_gam_piecewise_score_table.csv"
+        }
+      },
+      "research_path": "stage_pipelines/stage20/gam_mt5_runtime_probe.py",
+      "runtime_claim_boundary": "runtime_probe",
+      "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "shared_contract": "selected GAM feature order, piecewise score-table probability order short/flat/long, q-thresholds, US100 M5 timestamp match.",
+      "skill": "obsidian-runtime-parity",
+      "status": "completed"
+    },
+    {
+      "backtest_judgment": "usable_with_boundary",
+      "ea_identity": "ObsidianPrimeV2_RuntimeProbeEA with generated .set and .ini files.",
+      "report_identity": "run_manifest records tester report and telemetry paths.",
+      "skill": "obsidian-backtest-forensics",
+      "status": "completed",
+      "tester_identity": "MT5 Strategy Tester US100 M5, deposit=500, leverage=1:100, model=4.",
+      "trade_evidence": "MT5 KPI records=10"
+    },
+    {
+      "evidence_boundary": "probe",
+      "judgment_class": "inconclusive",
+      "measurement_scope": "runtime_probe MT5 KPI plus normalized KPI parser outputs",
+      "parity_level": "P3_runtime_shadow_parity_sampled",
+      "scoreboard": "runtime_parity",
+      "skill": "obsidian-run-evidence-system",
+      "status": "completed"
+    },
+    {
+      "claim_boundary": "gam_piecewise_score_table_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+      "judgment_label": "inconclusive_gam_piecewise_score_table_runtime_probe_completed",
+      "result_subject": "run14B_gam_runtime_handoff_probe_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "completed"
+    }
+  ]
+}
