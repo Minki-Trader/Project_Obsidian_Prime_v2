@@ -1,0 +1,30 @@
+{
+  "active_branch": "codex/stage23-supervised-regime-classifier",
+  "closeout_packet_path": "stages/22_regime_model__hmm_hidden_state_segmentation/03_reviews/stage22_closeout_packet.md",
+  "created_at_utc": "2026-05-04T23:39:18Z",
+  "decision_path": "docs/decisions/2026-05-05_stage22_hmm_closeout_stage23_open.md",
+  "judgment": "closed_inconclusive_hmm_state_characteristics_exhausted",
+  "negative_memory": [
+    "Validation routed runtime was negative and high drawdown.",
+    "HMM state handoff is not live HMM runtime authority."
+  ],
+  "next_action": "run17A_supervised_regime_classifier_filter_scout_v1",
+  "next_stage_id": "23_regime_model__supervised_regime_classifier_filter",
+  "packet_id": "stage22_hmm_closeout_v1",
+  "preserved_clues": [
+    "HMM state segmentation can expose regime relation clues.",
+    "Precomputed hmm_state_code can be handed to MT5 through EBM-table backend."
+  ],
+  "run16B_external_verification_status": "completed",
+  "run16B_mt5_kpi_record_count": 10,
+  "run_range": "run16A-run16B",
+  "runtime_authority": null,
+  "selected_baseline": null,
+  "selected_promotion_candidate": null,
+  "source_packets": {
+    "run16A": "docs/agent_control/packets/stage22_run16A_hmm_state_scout_v1/aggregate_summary.json",
+    "run16B": "docs/agent_control/packets/stage22_run16B_hmm_state_runtime_probe_v1/aggregate_summary.json"
+  },
+  "stage_id": "22_regime_model__hmm_hidden_state_segmentation",
+  "status": "reviewed_closed_stage23_opened"
+}

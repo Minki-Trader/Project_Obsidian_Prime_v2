@@ -1,4 +1,12 @@
-﻿## Latest Stage22 RUN16B HMM Runtime Update(최신 22단계 실행16B HMM 런타임 업데이트)
+﻿## Latest Stage22 Closeout / Stage23 Open(최신 22단계 마감 / 23단계 개방)
+
+Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델)을 reviewed closeout(검토된 마감)으로 닫고 Stage23(23단계) `23_regime_model__supervised_regime_classifier_filter`를 open-only(개방만) 상태로 열었다.
+
+결과(result, 결과): `closed_inconclusive_hmm_state_characteristics_exhausted`. active branch(활성 브랜치): `codex/stage23-supervised-regime-classifier`. next exact action(다음 정확한 행동): `run17A_supervised_regime_classifier_filter_scout_v1`.
+
+효과(effect, 효과): HMM(은닉 마르코프 모델) 단서는 보존하지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않고 supervised regime classifier(지도 국면 분류기)로 topic pivot(주제 전환)한다.
+
+## Latest Stage22 RUN16B HMM Runtime Update(최신 22단계 실행16B HMM 런타임 업데이트)
 
 Stage22(22단계) `run16B_hmm_state_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
 
