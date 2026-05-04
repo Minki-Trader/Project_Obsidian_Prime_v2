@@ -1,4 +1,12 @@
-﻿## Latest Stage19 RUN13T MT5 Axis Extension Update(최신 19단계 실행13T MT5 축 확장 업데이트)
+﻿## Latest Stage19 RUN13AD Axis Exhaustion Update(최신 19단계 실행13AD 축 소진 업데이트)
+
+Stage19(19단계)는 `run13AD_ebm_axis_exhaustion_followthrough_v1`에서 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) 1/2/3/4 축을 추가로 파고 follow-up(후속 탐침) 여지를 판정했다.
+
+결과(result, 결과): `inconclusive_ebm_axis_exhaustion_followthrough_completed`. follow-up action(후속 행동)은 `followup_completed_no_new_runtime_followup_recommended`이다.
+
+효과(effect, 효과): feature(피처), hold(보유), Tier B routing(티어 B 라우팅), side compression(방향 압축)을 더 봤지만 edge(거래 우위), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage19 RUN13T MT5 Axis Extension Update(최신 19단계 실행13T MT5 축 확장 업데이트)
 
 Stage19(19단계)는 `run13T_ebm_mt5_axis_extension_v1`에서 EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신) feature mask(피처 마스크), hold micro-axis(보유 미세 축), Tier B subtype filter(티어 B 하위유형 필터), hold4 side axis(4봉 방향 축)을 MT5(`MetaTrader 5`, 메타트레이더5)로 더 확인했다.
 
@@ -87,7 +95,7 @@ Stage17(17단계)은 `run11D_xgb_trade_shape_attribution_v1`으로 XGBoost(`Extr
 - project_mode: `clean_stage_restart`
 - active_stage: `19_model_family_challenge__ebm_explainable_boosting_shape(19단계 설명가능 부스팅 머신 형태 탐색)`
 - active_branch: `codex/stage19-ebm-attribution`
-- current run(현재 실행): `run13T_ebm_mt5_axis_extension_v1`
+- current run(현재 실행): `run13AD_ebm_axis_exhaustion_followthrough_v1`
 
 ## Latest Stage Transition Update(최신 단계 전환 업데이트)
 

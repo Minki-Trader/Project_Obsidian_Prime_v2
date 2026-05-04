@@ -1,0 +1,555 @@
+{
+  "attempt_count": 6,
+  "boundary": "ebm_q90_hold4_keep_ema50_ema200_within_top5_followup_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_ebm_q90_hold4_keep_ema50_ema200_within_top5_followup_runtime_probe_completed",
+  "expected_attempts": 6,
+  "expected_kpi_records": 10,
+  "external_verification_status": "completed",
+  "judgment": "inconclusive_ebm_q90_hold4_keep_ema50_ema200_within_top5_followup_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 10,
+    "normalized_summary_rows": 10,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 978,
+    "trade_parser_errors": 0
+  },
+  "max_hold_bars": 4,
+  "model_artifacts": {
+    "feature_mask_policy": {
+      "mask_features": [
+        "atr_14",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "hl_zscore_50"
+      ],
+      "threshold_policy": "fixed_original_q90_thresholds_to_measure_contribution_removal_effect",
+      "tier_a_zero_feature_indices": [
+        26,
+        12,
+        13,
+        7
+      ],
+      "tier_b_zero_feature_indices": [
+        26,
+        12,
+        13,
+        7
+      ]
+    },
+    "model_backend": "ebm_table",
+    "runtime_axis_extension": {
+      "mask_features": [
+        "atr_14",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "hl_zscore_50"
+      ],
+      "subtype_filter": null
+    },
+    "score_table_parity": {
+      "tier_a": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "passed": true,
+        "rows": 256,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/models/v01_main_effects_broad_bins_tier_a_ebm_top5_mask.csv",
+        "tolerance": 1e-10,
+        "zeroed_feature_indices": [
+          7,
+          12,
+          13,
+          26
+        ]
+      },
+      "tier_b": {
+        "max_abs_diff": 2.220446049250313e-16,
+        "passed": true,
+        "rows": 256,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/models/v01_main_effects_broad_bins_tier_b_ebm_core42_top5_mask.csv",
+        "tolerance": 1e-10,
+        "zeroed_feature_indices": [
+          7,
+          12,
+          13,
+          26
+        ]
+      }
+    },
+    "selected_variant_id": "v01_main_effects_broad_bins",
+    "thresholds": {
+      "quantile": 0.9,
+      "tier_a": 0.5426685369074962,
+      "tier_b": 0.5217261933075719
+    },
+    "tier_a_joblib": {
+      "sha256": "0465ac8b3a41bf80b4a352180e4b2e44257811855e41962de4fd65d339c60978",
+      "source": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13A_ebm_main_effect_shape_scout_v1/models/v01_main_effects_broad_bins_tier_a_ebm.joblib"
+    },
+    "tier_a_model_source_policy": "loaded_run13A_joblib",
+    "tier_a_score_table": {
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 58,
+      "format": "ebm_main_effect_score_table_csv_v1",
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/models/v01_main_effects_broad_bins_tier_a_ebm_top5_mask.csv",
+      "runtime_policy": "mql5_direct_bin_lookup_additive_softmax",
+      "sha256": "6ab20ae652ccc8fc6365fbdd3ebe99bc9058204789f4f8d44565a05b206c6984",
+      "zeroed_feature_indices": [
+        7,
+        12,
+        13,
+        26
+      ]
+    },
+    "tier_b_joblib": {
+      "sha256": "3949955f17be5571cead0890e1b466ea471e1550533bcec10ce211fc149052e9",
+      "source": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13A_ebm_main_effect_shape_scout_v1/models/v01_main_effects_broad_bins_tier_b_ebm_core42.joblib"
+    },
+    "tier_b_model_source_policy": "loaded_run13A_joblib",
+    "tier_b_score_table": {
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 42,
+      "format": "ebm_main_effect_score_table_csv_v1",
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/models/v01_main_effects_broad_bins_tier_b_ebm_core42_top5_mask.csv",
+      "runtime_policy": "mql5_direct_bin_lookup_additive_softmax",
+      "sha256": "c9e58d95b3ca7da0df1c335115baa0812381db8c5a7634489a33d24feee86706",
+      "zeroed_feature_indices": [
+        7,
+        12,
+        13,
+        26
+      ]
+    }
+  },
+  "model_characteristic_strength": "ebm_runtime_axis_visible",
+  "model_family": "interpret_ebm_explainable_boosting_classifier_multiclass_main_effect_mql5_score_table",
+  "mt5_kpi_record_count": 10,
+  "oos_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 76.28,
+    "balance_drawdown_maximal_percent": 14.94,
+    "deal_count": 342,
+    "equity_drawdown_maximal_amount": 91.86,
+    "equity_drawdown_maximal_percent": 17.96,
+    "expectancy": 0.27,
+    "feature_ready_count": 8646,
+    "fill_count": 341,
+    "fill_rate": 1.0,
+    "gross_loss": -436.13,
+    "gross_profit": 482.69,
+    "long_trade_count": 129,
+    "long_win_rate_percent": 54.26,
+    "losing_trade_count": 81,
+    "loss_rate_percent": 47.37,
+    "max_drawdown_amount": 91.86,
+    "max_drawdown_percent": 17.96,
+    "missing_required_metrics": [],
+    "model_fail_count": 28691,
+    "model_ok_count": 8646,
+    "net_profit": 46.56,
+    "no_tier_count": 28691,
+    "no_tier_labelable_rows": 159,
+    "order_attempt_count": 341,
+    "parsed_row_count": 772,
+    "partial_context_subtype_counts": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    },
+    "profit_factor": 1.11,
+    "recovery_factor": 0.51,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1_routed_oos.htm",
+    "route_coverage_split": "oos",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 8646,
+    "sharpe_ratio": 3.95,
+    "short_trade_count": 42,
+    "short_win_rate_percent": 47.62,
+    "skip_count": 28691,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 7185,
+    "tier_a_long_count": 317,
+    "tier_a_order_attempt_count": 324,
+    "tier_a_order_fill_count": 324,
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_a_short_count": 82,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_flat_count": 1036,
+    "tier_b_fallback_labelable_rows": 1062,
+    "tier_b_fallback_long_count": 20,
+    "tier_b_fallback_order_attempt_count": 17,
+    "tier_b_fallback_order_fill_count": 17,
+    "tier_b_fallback_short_count": 6,
+    "tier_b_fallback_used_count": 1062,
+    "trade_count": 171,
+    "win_rate_percent": 52.63,
+    "winning_trade_count": 90
+  },
+  "packet_id": "stage19_run13AH_ebm_keep_ema50_ema200_top5_mt5_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "rows": 46650,
+      "sha256": "6053a137713bf34c3f5c2c5bb7d62dcdd74ac53d4341b874664f23d570cb33f7"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "rows": 59048,
+      "sha256": "8927ec5b52c5af0c407d259308c9c2a43fe5bab19a0ba8fd24bc27460a15af97"
+    },
+    "tier_b_predictions": {
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "rows": 12398,
+      "sha256": "1814e6f2b017cd0efb2fb296a1b1bad92f1d72eef7c0f2e020ee3485febdd12c"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 2784,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 773,
+        "signal_count": 3557,
+        "signal_coverage": 0.0762486602357985,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/predictions/tier_a_separate_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4339398734177215,
+          "balanced_accuracy": 0.41733095177447704,
+          "directional_correct_count": 149,
+          "directional_hit_rate": 0.37343358395989973,
+          "log_loss": 1.054999566055312,
+          "long_count": 317,
+          "macro_f1": 0.40980817806927394,
+          "mean_probability": {
+            "flat": 0.36401513619671133,
+            "long": 0.34310775929524995,
+            "short": 0.2928771045080387
+          },
+          "mean_probability_margin": 0.11872590408735949,
+          "rows": 7584,
+          "short_count": 82,
+          "signal_count": 399,
+          "signal_coverage": 0.05261075949367089
+        },
+        "train": {
+          "accuracy": 0.4708781055369242,
+          "balanced_accuracy": 0.46568965063657863,
+          "directional_correct_count": 1483,
+          "directional_hit_rate": 0.627326565143824,
+          "log_loss": 1.029058664015312,
+          "long_count": 1832,
+          "macro_f1": 0.4635452944456886,
+          "mean_probability": {
+            "flat": 0.32995616764651575,
+            "long": 0.3621016742620344,
+            "short": 0.3079421580914499
+          },
+          "mean_probability_margin": 0.1286328189614672,
+          "rows": 29222,
+          "short_count": 532,
+          "signal_count": 2364,
+          "signal_coverage": 0.0808979535966053
+        },
+        "validation": {
+          "accuracy": 0.442299878098334,
+          "balanced_accuracy": 0.42882200146267785,
+          "directional_correct_count": 345,
+          "directional_hit_rate": 0.4345088161209068,
+          "log_loss": 1.058976900046218,
+          "long_count": 635,
+          "macro_f1": 0.4203381843104104,
+          "mean_probability": {
+            "flat": 0.35232460658869996,
+            "long": 0.351903083229607,
+            "short": 0.2957723101816931
+          },
+          "mean_probability_margin": 0.12274707871029501,
+          "rows": 9844,
+          "short_count": 159,
+          "signal_count": 794,
+          "signal_coverage": 0.08065826899634294
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 338,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 76,
+        "signal_count": 414,
+        "signal_coverage": 0.0333924826584933,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5480225988700564,
+          "balanced_accuracy": 0.43826615258047247,
+          "directional_correct_count": 9,
+          "directional_hit_rate": 0.34615384615384615,
+          "log_loss": 0.9772471193193463,
+          "long_count": 20,
+          "macro_f1": 0.4371054292929293,
+          "mean_probability": {
+            "flat": 0.4466312206970904,
+            "long": 0.29583760195105396,
+            "short": 0.25753117735185566
+          },
+          "mean_probability_margin": 0.08842939338931384,
+          "rows": 1062,
+          "short_count": 6,
+          "signal_count": 26,
+          "signal_coverage": 0.02448210922787194
+        },
+        "train": {
+          "accuracy": 0.4911928651059086,
+          "balanced_accuracy": 0.4295006593901223,
+          "directional_correct_count": 166,
+          "directional_hit_rate": 0.503030303030303,
+          "log_loss": 1.0118378779914083,
+          "long_count": 274,
+          "macro_f1": 0.41301525348414336,
+          "mean_probability": {
+            "flat": 0.4418532451426103,
+            "long": 0.30883433311560227,
+            "short": 0.24931242174178747
+          },
+          "mean_probability_margin": 0.09969484126127444,
+          "rows": 8970,
+          "short_count": 56,
+          "signal_count": 330,
+          "signal_coverage": 0.03678929765886288
+        },
+        "validation": {
+          "accuracy": 0.5836855452240067,
+          "balanced_accuracy": 0.3780192939492948,
+          "directional_correct_count": 16,
+          "directional_hit_rate": 0.27586206896551724,
+          "log_loss": 0.924042287682582,
+          "long_count": 44,
+          "macro_f1": 0.3598493538836354,
+          "mean_probability": {
+            "flat": 0.5058880067214924,
+            "long": 0.2684232530792045,
+            "short": 0.22568874019930307
+          },
+          "mean_probability_margin": 0.08709118803248224,
+          "rows": 2366,
+          "short_count": 14,
+          "signal_count": 58,
+          "signal_coverage": 0.024513947590870666
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 3009,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 811,
+        "signal_count": 3820,
+        "signal_coverage": 0.06469313101205798,
+        "threshold_ids": "q0.90"
+      },
+      "path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/predictions/tier_ab_combined_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4479528105482304,
+          "balanced_accuracy": 0.42398921373935866,
+          "directional_correct_count": 152,
+          "directional_hit_rate": 0.36893203883495146,
+          "log_loss": 1.045449126726883,
+          "long_count": 329,
+          "macro_f1": 0.41652435249346703,
+          "mean_probability": {
+            "flat": 0.37416298280085225,
+            "long": 0.3373015012453383,
+            "short": 0.2885355159538094
+          },
+          "mean_probability_margin": 0.11500454225977164,
+          "rows": 8646,
+          "short_count": 83,
+          "signal_count": 412,
+          "signal_coverage": 0.04765209345362017
+        },
+        "train": {
+          "accuracy": 0.47564935064935066,
+          "balanced_accuracy": 0.4666930755139697,
+          "directional_correct_count": 1596,
+          "directional_hit_rate": 0.6195652173913043,
+          "log_loss": 1.0250140879094676,
+          "long_count": 2018,
+          "macro_f1": 0.46257569456234254,
+          "mean_probability": {
+            "flat": 0.3562369799930796,
+            "long": 0.3495909900851519,
+            "short": 0.29417202992176855
+          },
+          "mean_probability_margin": 0.12183627361242215,
+          "rows": 38192,
+          "short_count": 558,
+          "signal_count": 2576,
+          "signal_coverage": 0.06744868035190615
+        },
+        "validation": {
+          "accuracy": 0.4696969696969697,
+          "balanced_accuracy": 0.4366625109566547,
+          "directional_correct_count": 357,
+          "directional_hit_rate": 0.42908653846153844,
+          "log_loss": 1.0328298654145749,
+          "long_count": 662,
+          "macro_f1": 0.4268040255119491,
+          "mean_probability": {
+            "flat": 0.38208144563163093,
+            "long": 0.3357267295739271,
+            "short": 0.28219182479444205
+          },
+          "mean_probability_margin": 0.11583783732260418,
+          "rows": 12210,
+          "short_count": 170,
+          "signal_count": 832,
+          "signal_coverage": 0.06814086814086814
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "run_id": "run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1",
+  "run_number": "run13AH",
+  "runtime_failure_signature": {
+    "attempt_status_counts": {
+      "completed": 6
+    },
+    "compile_status": "completed",
+    "feature_ready_count_total": 41712,
+    "last_skip_reason_counts": {
+      "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+      "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+      "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+      "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+    },
+    "model_fail_count_total": 228723,
+    "model_failure_sample_count": 0,
+    "model_ok_count_total": 41712,
+    "primary_runtime_failure": null,
+    "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+    "sampled_failure_reason_counts": {},
+    "telemetry_files_sampled": 0
+  },
+  "runtime_read": {
+    "avg_routed_trades": 241.5,
+    "new_characteristic_visible": true,
+    "oos_net_profit": 46.56,
+    "risk_warning": false,
+    "validation_net_profit": -5.08
+  },
+  "selected_variant_id": "v01_main_effects_broad_bins",
+  "source_packet_id": "stage19_run13A_ebm_shape_scout_v1",
+  "source_run_id": "run13A_ebm_main_effect_shape_scout_v1",
+  "stage_id": "19_model_family_challenge__ebm_explainable_boosting_shape",
+  "threshold_quantile": 0.9,
+  "topic_read": "q90_hold4_keep_ema50_ema200_within_top5_followup",
+  "validation_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 119.7,
+    "balance_drawdown_maximal_percent": 23.94,
+    "deal_count": 624,
+    "equity_drawdown_maximal_amount": 135.43,
+    "equity_drawdown_maximal_percent": 21.97,
+    "expectancy": -0.02,
+    "feature_ready_count": 12210,
+    "fill_count": 619,
+    "fill_rate": 1.0,
+    "gross_loss": -968.47,
+    "gross_profit": 963.39,
+    "long_trade_count": 234,
+    "long_win_rate_percent": 50.85,
+    "losing_trade_count": 164,
+    "loss_rate_percent": 52.56,
+    "max_drawdown_amount": 135.43,
+    "max_drawdown_percent": 21.97,
+    "missing_required_metrics": [],
+    "model_fail_count": 40598,
+    "model_ok_count": 12210,
+    "net_profit": -5.08,
+    "no_tier_count": 40598,
+    "no_tier_labelable_rows": 203,
+    "order_attempt_count": 619,
+    "parsed_row_count": 1336,
+    "partial_context_subtype_counts": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    },
+    "profit_factor": 0.99,
+    "recovery_factor": -0.04,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1_routed_validation_is.htm",
+    "route_coverage_split": "validation",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 12210,
+    "sharpe_ratio": -0.16,
+    "short_trade_count": 78,
+    "short_win_rate_percent": 37.18,
+    "skip_count": 40598,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 9050,
+    "tier_a_long_count": 635,
+    "tier_a_order_attempt_count": 585,
+    "tier_a_order_fill_count": 585,
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_a_short_count": 159,
+    "tier_a_used_count": 9844,
+    "tier_b_fallback_flat_count": 2308,
+    "tier_b_fallback_labelable_rows": 2366,
+    "tier_b_fallback_long_count": 44,
+    "tier_b_fallback_order_attempt_count": 34,
+    "tier_b_fallback_order_fill_count": 34,
+    "tier_b_fallback_short_count": 14,
+    "tier_b_fallback_used_count": 2366,
+    "trade_count": 312,
+    "win_rate_percent": 47.44,
+    "winning_trade_count": 148
+  }
+}
