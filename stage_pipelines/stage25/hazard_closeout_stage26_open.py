@@ -326,8 +326,11 @@ def update_workspace_state(active_branch: str, run19a: Mapping[str, Any], run19b
     state = state.replace("active_branch: codex/stage25-hazard-model", f"active_branch: {active_branch}", 1)
     state = state.replace(f"active_stage: {STAGE25_ID}", f"active_stage: {STAGE26_ID}", 1)
     state = state.replace(f"current_run_id: {RUN19B_ID}", "current_run_id: not_started", 1)
-    state = state.replace("stage24_reviewed_closed_stage25_opened", "stage24_reviewed_closed_stage25_reviewed_closed_stage26_opened")
     state = state.replace("stage25_opened", "stage25_reviewed_closed_stage26_opened")
+    state = state.replace(
+        "status: reviewed_closed_stage25_reviewed_closed_stage26_opened",
+        "status: reviewed_closed_stage25_opened",
+    )
     state = state.replace(
         f"active_stage_folder: stages/{STAGE25_ID}",
         f"active_stage_folder: stages/{STAGE26_ID}",
@@ -372,6 +375,11 @@ def update_workspace_state(active_branch: str, run19a: Mapping[str, Any], run19b
   next_action: {NEXT_RUN_ID}
 """
     state = replace_top_level_yaml_block(state, "stage25_hazard_model:", stage25_block)
+    state = state.replace(
+        f"stage25_hazard_run19A_structural_scout:\n  packet_id: stage25_run19A_hazard_trade_lifecycle_scout_v1\n  status: reviewed_structural_scout_completed\n  judgment: inconclusive_hazard_trade_lifecycle_risk_scout_completed\n  current_run_id: {RUN19B_ID}",
+        f"stage25_hazard_run19A_structural_scout:\n  packet_id: stage25_run19A_hazard_trade_lifecycle_scout_v1\n  status: reviewed_structural_scout_completed\n  judgment: inconclusive_hazard_trade_lifecycle_risk_scout_completed\n  current_run_id: {RUN19A_ID}",
+        1,
+    )
     closeout_block = f"""stage25_hazard_closeout:
   packet_id: stage25_hazard_closeout_v1
   status: reviewed_closed_stage26_opened
