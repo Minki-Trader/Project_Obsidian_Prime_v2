@@ -1,0 +1,3276 @@
+[
+  {
+    "execution": {
+      "avg_slippage": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_spread": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "data_readiness_failures": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "external_mismatch_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "feature_ready_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "fill_rate": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "model_fail_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_attempt_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_fill_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "reject_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "skip_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      }
+    },
+    "kpi_standard_version": "kpi_7layer_v1",
+    "mt5_trading_headline": {
+      "avg_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_win": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "expectancy": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -0.13
+      },
+      "gross_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -1576.58
+      },
+      "gross_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1471.48
+      },
+      "net_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -105.1
+      },
+      "payoff_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "profit_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.93
+      },
+      "recovery_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -0.34
+      },
+      "sharpe_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -1.36
+      },
+      "trade_count": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 787
+      },
+      "win_rate": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 50.57
+      }
+    },
+    "regime_slice_attribution": {
+      "adx_bucket": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "adx_20_25": {
+            "net_profit": 125.3,
+            "trade_count": 170
+          },
+          "adx_gt25": {
+            "net_profit": -81.59,
+            "trade_count": 382
+          },
+          "adx_lt20": {
+            "net_profit": -148.82,
+            "trade_count": 234
+          },
+          "feature_missing": {
+            "net_profit": 0.01,
+            "trade_count": 1
+          }
+        }
+      },
+      "month_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-01": 13.02,
+          "2025-02": -44.91,
+          "2025-03": -128.05,
+          "2025-04": 13.74,
+          "2025-05": 83.81,
+          "2025-06": -44.74,
+          "2025-07": -6.86,
+          "2025-08": -34.39,
+          "2025-09": 43.28
+        }
+      },
+      "quarter_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-Q1": -159.94,
+          "2025-Q2": 52.81,
+          "2025-Q3": 2.03
+        }
+      },
+      "session_slice": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "early": {
+            "net_profit": 14.8,
+            "trade_count": 335
+          },
+          "late": {
+            "net_profit": -23.71,
+            "trade_count": 199
+          },
+          "mid": {
+            "net_profit": -96.19,
+            "trade_count": 253
+          }
+        }
+      },
+      "spread_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": 0.01,
+            "trade_count": 1
+          },
+          "spread_low": {
+            "net_profit": -105.11,
+            "trade_count": 786
+          }
+        }
+      },
+      "subperiod_consistency": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "best_month_pnl": 83.81,
+          "months": 9,
+          "negative_months": 5,
+          "positive_month_ratio": 0.444444,
+          "positive_months": 4,
+          "worst_month_pnl": -128.05
+        }
+      },
+      "trend_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "downtrend": {
+            "net_profit": 43.71,
+            "trade_count": 552
+          },
+          "feature_missing": {
+            "net_profit": 0.01,
+            "trade_count": 1
+          },
+          "range_or_weak_trend": {
+            "net_profit": -148.82,
+            "trade_count": 234
+          }
+        }
+      },
+      "validation_oos_gap": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "oos_minus_validation_net_profit": 403.07000000000005,
+          "oos_net_profit": 297.97,
+          "validation_net_profit": -105.1
+        }
+      },
+      "volatility_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": 0.01,
+            "trade_count": 1
+          },
+          "vol_high": {
+            "net_profit": -228.09,
+            "trade_count": 358
+          },
+          "vol_low": {
+            "net_profit": 169.64,
+            "trade_count": 219
+          },
+          "vol_mid": {
+            "net_profit": -46.66,
+            "trade_count": 209
+          }
+        }
+      }
+    },
+    "risk": {
+      "consecutive_losses": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 12
+      },
+      "equity_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 310.19
+      },
+      "equity_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 54.04
+      },
+      "longest_recovery_duration": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "max_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 310.19
+      },
+      "max_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 54.04
+      },
+      "time_under_water": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "ulcer_index": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "worst_day": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -52.52
+      },
+      "worst_week": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -85.88
+      }
+    },
+    "row_grain": {
+      "record_view": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "mt5_tier_a_only_validation_is"
+      },
+      "route_role": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "tier_only_total"
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "validation"
+      },
+      "tier_scope": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "Tier A"
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "run_identity": {
+      "artifact_hashes": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": {
+          "kpi_record_sha256": "fa2b783a01cbd4b166a5cba06ed39648f7f5a129dc8590980001f546b9d3907d",
+          "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_a_only_validation_is.htm",
+          "mt5_report_sha256": "eb8e90b25f285d94a1252d9b1716be1b5765cfdf4086a711bb82021ea2249731"
+        }
+      },
+      "feature_set_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "feature_set_v2_stage29_runtime_topic_features"
+      },
+      "idea_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "run23B"
+      },
+      "label_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "label_v1_fwd12_m5_logret_train_q33_3class"
+      },
+      "model_family": {
+        "authority": "run_registry",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split_contract": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "stage_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "29_adaptive_model__river_online_drift_learning"
+      },
+      "stage_inheritance": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "stage_inheritance_not_recorded",
+        "value": null
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "signal_model": {
+      "directional_hit_rate": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "log_loss": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "long_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "macro_f1": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "oos_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "not_applicable_for_split",
+        "value": null
+      },
+      "short_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_coverage": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "threshold": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "threshold_method": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "train_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "validation_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      }
+    },
+    "source_evidence": {
+      "kpi_record_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/kpi_record.json",
+      "mt5_report_missing_required_metrics": [],
+      "mt5_report_parse_status": "completed",
+      "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_a_only_validation_is.htm",
+      "mt5_report_sha256": "eb8e90b25f285d94a1252d9b1716be1b5765cfdf4086a711bb82021ea2249731",
+      "mt5_report_source_encoding": "utf-16",
+      "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
+      "report_identity_source": "run_manifest_report_identity",
+      "trade_attribution": {
+        "feature_source": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/features.parquet",
+        "mfe_mae_convention": "money_units_positive_favorable_and_positive_adverse",
+        "parser": "foundation.mt5.trade_report.parse_mt5_trade_report",
+        "price_source": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+      }
+    },
+    "trade_diagnostics": {
+      "avg_hold_bars": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 15.019928
+      },
+      "hold_distribution": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "max": 1663.0,
+          "median": 2.0,
+          "min": 0.683333
+        }
+      },
+      "long_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 0.122895
+      },
+      "long_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 55.18
+      },
+      "long_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 449
+      },
+      "loss_trade_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "loss_trades": 389,
+          "loss_with_positive_mfe": 364,
+          "mfe_mean": 1.942987,
+          "ratio": 0.935733
+        }
+      },
+      "mae_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 3.971643
+      },
+      "mfe_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 3.785785
+      },
+      "realized_over_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -9.841984
+      },
+      "short_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -0.474201
+      },
+      "short_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -160.28
+      },
+      "short_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 338
+      },
+      "win_trade_mae": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "mae_mean": 1.864766,
+          "ratio": 0.987437,
+          "win_trades": 398,
+          "win_with_positive_mae": 393
+        }
+      }
+    }
+  },
+  {
+    "execution": {
+      "avg_slippage": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_spread": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "data_readiness_failures": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "external_mismatch_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "feature_ready_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "fill_rate": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "model_fail_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_attempt_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_fill_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "reject_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "skip_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      }
+    },
+    "kpi_standard_version": "kpi_7layer_v1",
+    "mt5_trading_headline": {
+      "avg_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_win": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "expectancy": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -0.98
+      },
+      "gross_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -593.66
+      },
+      "gross_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 402.81
+      },
+      "net_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -190.85
+      },
+      "payoff_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "profit_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.68
+      },
+      "recovery_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -0.57
+      },
+      "sharpe_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -1.31
+      },
+      "trade_count": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 194
+      },
+      "win_rate": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 50.0
+      }
+    },
+    "regime_slice_attribution": {
+      "adx_bucket": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": -190.85,
+            "trade_count": 194
+          }
+        }
+      },
+      "month_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-01": -24.69,
+          "2025-02": -24.33,
+          "2025-03": -112.92,
+          "2025-04": 15.31,
+          "2025-05": 47.88,
+          "2025-06": -21.36,
+          "2025-07": -26.19,
+          "2025-08": -43.16,
+          "2025-09": -1.39
+        }
+      },
+      "quarter_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-Q1": -161.94,
+          "2025-Q2": 41.83,
+          "2025-Q3": -70.74
+        }
+      },
+      "session_slice": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "early": {
+            "net_profit": -16.16,
+            "trade_count": 64
+          },
+          "late": {
+            "net_profit": -38.96,
+            "trade_count": 72
+          },
+          "mid": {
+            "net_profit": -135.73,
+            "trade_count": 58
+          }
+        }
+      },
+      "spread_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "spread_low": {
+            "net_profit": -190.85,
+            "trade_count": 194
+          }
+        }
+      },
+      "subperiod_consistency": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "best_month_pnl": 47.88,
+          "months": 9,
+          "negative_months": 7,
+          "positive_month_ratio": 0.222222,
+          "positive_months": 2,
+          "worst_month_pnl": -112.92
+        }
+      },
+      "trend_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": -190.85,
+            "trade_count": 194
+          }
+        }
+      },
+      "validation_oos_gap": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "oos_minus_validation_net_profit": 253.72,
+          "oos_net_profit": 62.87,
+          "validation_net_profit": -190.85
+        }
+      },
+      "volatility_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": -190.85,
+            "trade_count": 194
+          }
+        }
+      }
+    },
+    "risk": {
+      "consecutive_losses": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 6
+      },
+      "equity_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 335.64
+      },
+      "equity_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 53.69
+      },
+      "longest_recovery_duration": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "max_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 335.64
+      },
+      "max_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 53.69
+      },
+      "time_under_water": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "ulcer_index": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "worst_day": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -112.24
+      },
+      "worst_week": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -135.01
+      }
+    },
+    "row_grain": {
+      "record_view": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "mt5_tier_b_fallback_only_validation_is"
+      },
+      "route_role": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "tier_b_fallback_only_total"
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "validation"
+      },
+      "tier_scope": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "Tier B"
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "run_identity": {
+      "artifact_hashes": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": {
+          "kpi_record_sha256": "fa2b783a01cbd4b166a5cba06ed39648f7f5a129dc8590980001f546b9d3907d",
+          "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_b_fallback_only_validation_is.htm",
+          "mt5_report_sha256": "81d58943f55ab7293ad15b19ccfa6deaeb61e95fbb16ee76e8e96ad4c029e09f"
+        }
+      },
+      "feature_set_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "feature_set_v2_stage29_runtime_topic_features"
+      },
+      "idea_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "run23B"
+      },
+      "label_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "label_v1_fwd12_m5_logret_train_q33_3class"
+      },
+      "model_family": {
+        "authority": "run_registry",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split_contract": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "stage_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "29_adaptive_model__river_online_drift_learning"
+      },
+      "stage_inheritance": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "stage_inheritance_not_recorded",
+        "value": null
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "signal_model": {
+      "directional_hit_rate": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "log_loss": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "long_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "macro_f1": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "oos_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "not_applicable_for_split",
+        "value": null
+      },
+      "short_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_coverage": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "threshold": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "threshold_method": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "train_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "validation_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      }
+    },
+    "source_evidence": {
+      "kpi_record_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/kpi_record.json",
+      "mt5_report_missing_required_metrics": [],
+      "mt5_report_parse_status": "completed",
+      "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_b_fallback_only_validation_is.htm",
+      "mt5_report_sha256": "81d58943f55ab7293ad15b19ccfa6deaeb61e95fbb16ee76e8e96ad4c029e09f",
+      "mt5_report_source_encoding": "utf-16",
+      "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
+      "report_identity_source": "run_manifest_report_identity",
+      "trade_attribution": {
+        "feature_source": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/features.parquet",
+        "mfe_mae_convention": "money_units_positive_favorable_and_positive_adverse",
+        "parser": "foundation.mt5.trade_report.parse_mt5_trade_report",
+        "price_source": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+      }
+    },
+    "trade_diagnostics": {
+      "avg_hold_bars": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 123.912371
+      },
+      "hold_distribution": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "max": 6585.0,
+          "median": 4.0,
+          "min": 1.0
+        }
+      },
+      "long_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -2.76169
+      },
+      "long_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -196.08
+      },
+      "long_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 71
+      },
+      "loss_trade_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "loss_trades": 97,
+          "loss_with_positive_mfe": 95,
+          "mfe_mean": 2.038062,
+          "ratio": 0.979381
+        }
+      },
+      "mae_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 6.701402
+      },
+      "mfe_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 5.950876
+      },
+      "realized_over_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -10.809009
+      },
+      "short_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 0.04252
+      },
+      "short_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 5.23
+      },
+      "short_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 123
+      },
+      "win_trade_mae": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "mae_mean": 3.527072,
+          "ratio": 0.989691,
+          "win_trades": 97,
+          "win_with_positive_mae": 96
+        }
+      }
+    }
+  },
+  {
+    "execution": {
+      "avg_slippage": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_spread": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "data_readiness_failures": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "external_mismatch_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "feature_ready_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "fill_rate": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "model_fail_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_attempt_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_fill_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "reject_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "skip_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      }
+    },
+    "kpi_standard_version": "kpi_7layer_v1",
+    "mt5_trading_headline": {
+      "avg_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_win": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "expectancy": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -0.09
+      },
+      "gross_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -1761.58
+      },
+      "gross_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1665.03
+      },
+      "net_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -96.55
+      },
+      "payoff_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "profit_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.95
+      },
+      "recovery_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -0.29
+      },
+      "sharpe_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -1.2
+      },
+      "trade_count": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1081
+      },
+      "win_rate": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 50.14
+      }
+    },
+    "regime_slice_attribution": {
+      "adx_bucket": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "adx_20_25": {
+            "net_profit": 132.34,
+            "trade_count": 173
+          },
+          "adx_gt25": {
+            "net_profit": -46.05,
+            "trade_count": 394
+          },
+          "adx_lt20": {
+            "net_profit": -162.76,
+            "trade_count": 247
+          },
+          "feature_missing": {
+            "net_profit": -20.08,
+            "trade_count": 267
+          }
+        }
+      },
+      "month_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-01": 26.25,
+          "2025-02": -45.79,
+          "2025-03": -163.76,
+          "2025-04": 12.1,
+          "2025-05": 145.42,
+          "2025-06": -58.8,
+          "2025-07": -8.45,
+          "2025-08": -46.14,
+          "2025-09": 42.62
+        }
+      },
+      "quarter_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-Q1": -183.3,
+          "2025-Q2": 98.72,
+          "2025-Q3": -11.97
+        }
+      },
+      "session_slice": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "early": {
+            "net_profit": -12.04,
+            "trade_count": 411
+          },
+          "late": {
+            "net_profit": 20.8,
+            "trade_count": 307
+          },
+          "mid": {
+            "net_profit": -105.31,
+            "trade_count": 363
+          }
+        }
+      },
+      "spread_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": 0.01,
+            "trade_count": 1
+          },
+          "spread_low": {
+            "net_profit": -96.56,
+            "trade_count": 1080
+          }
+        }
+      },
+      "subperiod_consistency": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "best_month_pnl": 145.42,
+          "months": 9,
+          "negative_months": 5,
+          "positive_month_ratio": 0.444444,
+          "positive_months": 4,
+          "worst_month_pnl": -163.76
+        }
+      },
+      "trend_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "downtrend": {
+            "net_profit": 86.29,
+            "trade_count": 567
+          },
+          "feature_missing": {
+            "net_profit": -20.08,
+            "trade_count": 267
+          },
+          "range_or_weak_trend": {
+            "net_profit": -162.76,
+            "trade_count": 247
+          }
+        }
+      },
+      "validation_oos_gap": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "oos_minus_validation_net_profit": 415.75,
+          "oos_net_profit": 319.2,
+          "validation_net_profit": -96.55
+        }
+      },
+      "volatility_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": -20.08,
+            "trade_count": 267
+          },
+          "vol_high": {
+            "net_profit": -217.25,
+            "trade_count": 361
+          },
+          "vol_low": {
+            "net_profit": 168.8,
+            "trade_count": 244
+          },
+          "vol_mid": {
+            "net_profit": -28.02,
+            "trade_count": 209
+          }
+        }
+      }
+    },
+    "risk": {
+      "consecutive_losses": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 9
+      },
+      "equity_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 334.47
+      },
+      "equity_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 58.17
+      },
+      "longest_recovery_duration": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "max_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 334.47
+      },
+      "max_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 58.17
+      },
+      "time_under_water": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "ulcer_index": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "worst_day": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -52.52
+      },
+      "worst_week": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -106.41
+      }
+    },
+    "row_grain": {
+      "record_view": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "mt5_routed_total_validation_is"
+      },
+      "route_role": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "routed_total"
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "validation"
+      },
+      "tier_scope": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "Tier A+B"
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "run_identity": {
+      "artifact_hashes": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": {
+          "kpi_record_sha256": "fa2b783a01cbd4b166a5cba06ed39648f7f5a129dc8590980001f546b9d3907d",
+          "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_routed_validation_is.htm",
+          "mt5_report_sha256": "ec294388bab8999f66ba751e7b5649044b048d6d206e9bc00ce147567d76480e"
+        }
+      },
+      "feature_set_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "feature_set_v2_stage29_runtime_topic_features"
+      },
+      "idea_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "run23B"
+      },
+      "label_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "label_v1_fwd12_m5_logret_train_q33_3class"
+      },
+      "model_family": {
+        "authority": "run_registry",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split_contract": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "stage_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "29_adaptive_model__river_online_drift_learning"
+      },
+      "stage_inheritance": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "stage_inheritance_not_recorded",
+        "value": null
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "signal_model": {
+      "directional_hit_rate": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "log_loss": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "long_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "macro_f1": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "oos_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "not_applicable_for_split",
+        "value": null
+      },
+      "short_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_coverage": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "threshold": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "threshold_method": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "train_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "validation_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      }
+    },
+    "source_evidence": {
+      "kpi_record_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/kpi_record.json",
+      "mt5_report_missing_required_metrics": [],
+      "mt5_report_parse_status": "completed",
+      "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_routed_validation_is.htm",
+      "mt5_report_sha256": "ec294388bab8999f66ba751e7b5649044b048d6d206e9bc00ce147567d76480e",
+      "mt5_report_source_encoding": "utf-16",
+      "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
+      "report_identity_source": "run_manifest_report_identity",
+      "trade_attribution": {
+        "feature_source": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/features.parquet",
+        "mfe_mae_convention": "money_units_positive_favorable_and_positive_adverse",
+        "parser": "foundation.mt5.trade_report.parse_mt5_trade_report",
+        "price_source": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+      }
+    },
+    "trade_diagnostics": {
+      "avg_hold_bars": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 10.218023
+      },
+      "hold_distribution": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "max": 1089.0,
+          "median": 1.0,
+          "min": 0.683333
+        }
+      },
+      "long_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 0.042801
+      },
+      "long_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 25.98
+      },
+      "long_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 607
+      },
+      "loss_trade_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "loss_trades": 539,
+          "loss_with_positive_mfe": 507,
+          "mfe_mean": 1.480323,
+          "ratio": 0.940631
+        }
+      },
+      "mae_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 3.248308
+      },
+      "mfe_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 3.096978
+      },
+      "realized_over_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -8.198672
+      },
+      "short_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -0.258502
+      },
+      "short_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -122.53
+      },
+      "short_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 474
+      },
+      "win_trade_mae": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "mae_mean": 1.588908,
+          "ratio": 0.990775,
+          "win_trades": 542,
+          "win_with_positive_mae": 537
+        }
+      }
+    }
+  },
+  {
+    "execution": {
+      "avg_slippage": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_spread": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "data_readiness_failures": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "external_mismatch_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "feature_ready_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "fill_rate": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "model_fail_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_attempt_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_fill_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "reject_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "skip_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      }
+    },
+    "kpi_standard_version": "kpi_7layer_v1",
+    "mt5_trading_headline": {
+      "avg_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_win": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "expectancy": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.44
+      },
+      "gross_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -1248.25
+      },
+      "gross_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1546.22
+      },
+      "net_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 297.97
+      },
+      "payoff_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "profit_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1.24
+      },
+      "recovery_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 2.22
+      },
+      "sharpe_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 5.19
+      },
+      "trade_count": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 675
+      },
+      "win_rate": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 56.15
+      }
+    },
+    "regime_slice_attribution": {
+      "adx_bucket": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "adx_20_25": {
+            "net_profit": -8.05,
+            "trade_count": 129
+          },
+          "adx_gt25": {
+            "net_profit": 306.62,
+            "trade_count": 300
+          },
+          "adx_lt20": {
+            "net_profit": -0.6,
+            "trade_count": 246
+          }
+        }
+      },
+      "month_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-10": -7.58,
+          "2025-11": 48.68,
+          "2025-12": -5.2,
+          "2026-01": 44.19,
+          "2026-02": 43.22,
+          "2026-03": 65.54,
+          "2026-04": 109.12
+        }
+      },
+      "quarter_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-Q4": 35.9,
+          "2026-Q1": 152.95,
+          "2026-Q2": 109.12
+        }
+      },
+      "session_slice": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "early": {
+            "net_profit": 207.25,
+            "trade_count": 281
+          },
+          "late": {
+            "net_profit": 113.14,
+            "trade_count": 195
+          },
+          "mid": {
+            "net_profit": -22.42,
+            "trade_count": 199
+          }
+        }
+      },
+      "spread_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "spread_low": {
+            "net_profit": 297.97,
+            "trade_count": 675
+          }
+        }
+      },
+      "subperiod_consistency": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "best_month_pnl": 109.12,
+          "months": 7,
+          "negative_months": 2,
+          "positive_month_ratio": 0.714286,
+          "positive_months": 5,
+          "worst_month_pnl": -7.58
+        }
+      },
+      "trend_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "downtrend": {
+            "net_profit": 298.57,
+            "trade_count": 429
+          },
+          "range_or_weak_trend": {
+            "net_profit": -0.6,
+            "trade_count": 246
+          }
+        }
+      },
+      "validation_oos_gap": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "oos_minus_validation_net_profit": 403.07000000000005,
+          "oos_net_profit": 297.97,
+          "validation_net_profit": -105.1
+        }
+      },
+      "volatility_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "vol_high": {
+            "net_profit": 246.15,
+            "trade_count": 268
+          },
+          "vol_low": {
+            "net_profit": 67.98,
+            "trade_count": 211
+          },
+          "vol_mid": {
+            "net_profit": -16.16,
+            "trade_count": 196
+          }
+        }
+      }
+    },
+    "risk": {
+      "consecutive_losses": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 7
+      },
+      "equity_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 134.37
+      },
+      "equity_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 24.49
+      },
+      "longest_recovery_duration": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "max_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 134.37
+      },
+      "max_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 24.49
+      },
+      "time_under_water": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "ulcer_index": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "worst_day": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -44.95
+      },
+      "worst_week": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -57.15
+      }
+    },
+    "row_grain": {
+      "record_view": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "mt5_tier_a_only_oos"
+      },
+      "route_role": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "tier_only_total"
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "oos"
+      },
+      "tier_scope": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "Tier A"
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "run_identity": {
+      "artifact_hashes": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": {
+          "kpi_record_sha256": "fa2b783a01cbd4b166a5cba06ed39648f7f5a129dc8590980001f546b9d3907d",
+          "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_a_only_oos.htm",
+          "mt5_report_sha256": "67e6311339b7519bc835e1561459a086c698894db72ecbdc6bb9a423a07b4b31"
+        }
+      },
+      "feature_set_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "feature_set_v2_stage29_runtime_topic_features"
+      },
+      "idea_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "run23B"
+      },
+      "label_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "label_v1_fwd12_m5_logret_train_q33_3class"
+      },
+      "model_family": {
+        "authority": "run_registry",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split_contract": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "stage_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "29_adaptive_model__river_online_drift_learning"
+      },
+      "stage_inheritance": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "stage_inheritance_not_recorded",
+        "value": null
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "signal_model": {
+      "directional_hit_rate": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "log_loss": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "long_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "macro_f1": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "oos_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "short_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_coverage": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "threshold": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "threshold_method": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "train_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "validation_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "not_applicable_for_split",
+        "value": null
+      }
+    },
+    "source_evidence": {
+      "kpi_record_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/kpi_record.json",
+      "mt5_report_missing_required_metrics": [],
+      "mt5_report_parse_status": "completed",
+      "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_a_only_oos.htm",
+      "mt5_report_sha256": "67e6311339b7519bc835e1561459a086c698894db72ecbdc6bb9a423a07b4b31",
+      "mt5_report_source_encoding": "utf-16",
+      "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
+      "report_identity_source": "run_manifest_report_identity",
+      "trade_attribution": {
+        "feature_source": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/features.parquet",
+        "mfe_mae_convention": "money_units_positive_favorable_and_positive_adverse",
+        "parser": "foundation.mt5.trade_report.parse_mt5_trade_report",
+        "price_source": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+      }
+    },
+    "trade_diagnostics": {
+      "avg_hold_bars": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 13.859259
+      },
+      "hold_distribution": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "max": 1095.0,
+          "median": 2.0,
+          "min": 1.0
+        }
+      },
+      "long_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 0.401996
+      },
+      "long_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 197.38
+      },
+      "long_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 491
+      },
+      "loss_trade_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "loss_trades": 296,
+          "loss_with_positive_mfe": 270,
+          "mfe_mean": 1.629632,
+          "ratio": 0.912162
+        }
+      },
+      "mae_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 4.063779
+      },
+      "mfe_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 3.899681
+      },
+      "realized_over_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -4.411913
+      },
+      "short_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 0.546685
+      },
+      "short_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 100.59
+      },
+      "short_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 184
+      },
+      "win_trade_mae": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "mae_mean": 2.282617,
+          "ratio": 0.992084,
+          "win_trades": 379,
+          "win_with_positive_mae": 376
+        }
+      }
+    }
+  },
+  {
+    "execution": {
+      "avg_slippage": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_spread": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "data_readiness_failures": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "external_mismatch_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "feature_ready_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "fill_rate": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "model_fail_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_attempt_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_fill_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "reject_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "skip_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      }
+    },
+    "kpi_standard_version": "kpi_7layer_v1",
+    "mt5_trading_headline": {
+      "avg_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_win": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "expectancy": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.42
+      },
+      "gross_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -591.47
+      },
+      "gross_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 654.34
+      },
+      "net_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 62.87
+      },
+      "payoff_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "profit_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1.11
+      },
+      "recovery_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.2
+      },
+      "sharpe_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.68
+      },
+      "trade_count": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 148
+      },
+      "win_rate": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 59.46
+      }
+    },
+    "regime_slice_attribution": {
+      "adx_bucket": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": 62.87,
+            "trade_count": 148
+          }
+        }
+      },
+      "month_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-10": 30.55,
+          "2025-11": -2.87,
+          "2025-12": 45.79,
+          "2026-01": 75.69,
+          "2026-02": 88.51,
+          "2026-03": -210.46,
+          "2026-04": 35.66
+        }
+      },
+      "quarter_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-Q4": 73.47,
+          "2026-Q1": -46.26,
+          "2026-Q2": 35.66
+        }
+      },
+      "session_slice": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "early": {
+            "net_profit": -116.18,
+            "trade_count": 57
+          },
+          "late": {
+            "net_profit": 144.91,
+            "trade_count": 64
+          },
+          "mid": {
+            "net_profit": 34.14,
+            "trade_count": 27
+          }
+        }
+      },
+      "spread_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "spread_low": {
+            "net_profit": 62.87,
+            "trade_count": 148
+          }
+        }
+      },
+      "subperiod_consistency": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "best_month_pnl": 88.51,
+          "months": 7,
+          "negative_months": 2,
+          "positive_month_ratio": 0.714286,
+          "positive_months": 5,
+          "worst_month_pnl": -210.46
+        }
+      },
+      "trend_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": 62.87,
+            "trade_count": 148
+          }
+        }
+      },
+      "validation_oos_gap": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "oos_minus_validation_net_profit": 253.72,
+          "oos_net_profit": 62.87,
+          "validation_net_profit": -190.85
+        }
+      },
+      "volatility_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": 62.87,
+            "trade_count": 148
+          }
+        }
+      }
+    },
+    "risk": {
+      "consecutive_losses": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 4
+      },
+      "equity_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 307.09
+      },
+      "equity_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 39.83
+      },
+      "longest_recovery_duration": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "max_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 307.09
+      },
+      "max_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 39.83
+      },
+      "time_under_water": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "ulcer_index": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "worst_day": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -54.34
+      },
+      "worst_week": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -102.93
+      }
+    },
+    "row_grain": {
+      "record_view": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "mt5_tier_b_fallback_only_oos"
+      },
+      "route_role": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "tier_b_fallback_only_total"
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "oos"
+      },
+      "tier_scope": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "Tier B"
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "run_identity": {
+      "artifact_hashes": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": {
+          "kpi_record_sha256": "fa2b783a01cbd4b166a5cba06ed39648f7f5a129dc8590980001f546b9d3907d",
+          "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_b_fallback_only_oos.htm",
+          "mt5_report_sha256": "775d3a5b9c3b0ed6b1abdfb8253da47b3f590d37bbcc5f1dbfcd210c2f18f116"
+        }
+      },
+      "feature_set_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "feature_set_v2_stage29_runtime_topic_features"
+      },
+      "idea_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "run23B"
+      },
+      "label_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "label_v1_fwd12_m5_logret_train_q33_3class"
+      },
+      "model_family": {
+        "authority": "run_registry",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split_contract": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "stage_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "29_adaptive_model__river_online_drift_learning"
+      },
+      "stage_inheritance": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "stage_inheritance_not_recorded",
+        "value": null
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "signal_model": {
+      "directional_hit_rate": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "log_loss": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "long_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "macro_f1": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "oos_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "short_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_coverage": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "threshold": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "threshold_method": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "train_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "validation_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "not_applicable_for_split",
+        "value": null
+      }
+    },
+    "source_evidence": {
+      "kpi_record_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/kpi_record.json",
+      "mt5_report_missing_required_metrics": [],
+      "mt5_report_parse_status": "completed",
+      "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_tier_b_fallback_only_oos.htm",
+      "mt5_report_sha256": "775d3a5b9c3b0ed6b1abdfb8253da47b3f590d37bbcc5f1dbfcd210c2f18f116",
+      "mt5_report_source_encoding": "utf-16",
+      "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
+      "report_identity_source": "run_manifest_report_identity",
+      "trade_attribution": {
+        "feature_source": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/features.parquet",
+        "mfe_mae_convention": "money_units_positive_favorable_and_positive_adverse",
+        "parser": "foundation.mt5.trade_report.parse_mt5_trade_report",
+        "price_source": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+      }
+    },
+    "trade_diagnostics": {
+      "avg_hold_bars": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 140.898604
+      },
+      "hold_distribution": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "max": 1484.0,
+          "median": 8.0,
+          "min": 1.0
+        }
+      },
+      "long_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 1.039375
+      },
+      "long_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 83.15
+      },
+      "long_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 80
+      },
+      "loss_trade_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "loss_trades": 60,
+          "loss_with_positive_mfe": 59,
+          "mfe_mean": 6.114233,
+          "ratio": 0.983333
+        }
+      },
+      "mae_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 10.730493
+      },
+      "mfe_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 8.307243
+      },
+      "realized_over_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -7.620611
+      },
+      "short_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -0.298235
+      },
+      "short_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -20.28
+      },
+      "short_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 68
+      },
+      "win_trade_mae": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "mae_mean": 6.125659,
+          "ratio": 0.988636,
+          "win_trades": 88,
+          "win_with_positive_mae": 87
+        }
+      }
+    }
+  },
+  {
+    "execution": {
+      "avg_slippage": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_spread": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "data_readiness_failures": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "external_mismatch_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "feature_ready_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "fill_rate": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "model_fail_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_attempt_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "order_fill_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "reject_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      },
+      "skip_count": {
+        "authority": "mt5_runtime_telemetry_summary",
+        "n/a_reason": "runtime_telemetry_missing",
+        "value": null
+      }
+    },
+    "kpi_standard_version": "kpi_7layer_v1",
+    "mt5_trading_headline": {
+      "avg_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "avg_win": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "expectancy": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 0.35
+      },
+      "gross_loss": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": -1425.63
+      },
+      "gross_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1744.83
+      },
+      "net_profit": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 319.2
+      },
+      "payoff_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "profit_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 1.22
+      },
+      "recovery_factor": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 2.07
+      },
+      "sharpe_ratio": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 5.26
+      },
+      "trade_count": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 916
+      },
+      "win_rate": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 55.24
+      }
+    },
+    "regime_slice_attribution": {
+      "adx_bucket": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "adx_20_25": {
+            "net_profit": -25.54,
+            "trade_count": 134
+          },
+          "adx_gt25": {
+            "net_profit": 343.73,
+            "trade_count": 313
+          },
+          "adx_lt20": {
+            "net_profit": -8.51,
+            "trade_count": 264
+          },
+          "feature_missing": {
+            "net_profit": 9.52,
+            "trade_count": 205
+          }
+        }
+      },
+      "month_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-10": -22.71,
+          "2025-11": 51.95,
+          "2025-12": -1.62,
+          "2026-01": 76.93,
+          "2026-02": 49.15,
+          "2026-03": 65.65,
+          "2026-04": 99.85
+        }
+      },
+      "quarter_pnl": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "2025-Q4": 27.62,
+          "2026-Q1": 191.73,
+          "2026-Q2": 99.85
+        }
+      },
+      "session_slice": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "early": {
+            "net_profit": 213.91,
+            "trade_count": 338
+          },
+          "late": {
+            "net_profit": 126.73,
+            "trade_count": 314
+          },
+          "mid": {
+            "net_profit": -21.44,
+            "trade_count": 264
+          }
+        }
+      },
+      "spread_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "spread_low": {
+            "net_profit": 319.2,
+            "trade_count": 916
+          }
+        }
+      },
+      "subperiod_consistency": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "best_month_pnl": 99.85,
+          "months": 7,
+          "negative_months": 2,
+          "positive_month_ratio": 0.714286,
+          "positive_months": 5,
+          "worst_month_pnl": -22.71
+        }
+      },
+      "trend_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "downtrend": {
+            "net_profit": 318.19,
+            "trade_count": 447
+          },
+          "feature_missing": {
+            "net_profit": 9.52,
+            "trade_count": 205
+          },
+          "range_or_weak_trend": {
+            "net_profit": -8.51,
+            "trade_count": 264
+          }
+        }
+      },
+      "validation_oos_gap": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "oos_minus_validation_net_profit": 415.75,
+          "oos_net_profit": 319.2,
+          "validation_net_profit": -96.55
+        }
+      },
+      "volatility_regime": {
+        "authority": "python_attribution_from_signal_and_trade_join",
+        "n/a_reason": null,
+        "value": {
+          "feature_missing": {
+            "net_profit": 9.52,
+            "trade_count": 205
+          },
+          "vol_high": {
+            "net_profit": 237.17,
+            "trade_count": 272
+          },
+          "vol_low": {
+            "net_profit": 89.78,
+            "trade_count": 238
+          },
+          "vol_mid": {
+            "net_profit": -17.27,
+            "trade_count": 201
+          }
+        }
+      }
+    },
+    "risk": {
+      "consecutive_losses": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 8
+      },
+      "equity_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 154.56
+      },
+      "equity_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 28.17
+      },
+      "longest_recovery_duration": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "max_drawdown_amount": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 154.56
+      },
+      "max_drawdown_percent": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": 28.17
+      },
+      "time_under_water": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "ulcer_index": {
+        "authority": "equity_curve_reconstruction",
+        "n/a_reason": "equity_curve_missing",
+        "value": null
+      },
+      "worst_day": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -48.53
+      },
+      "worst_week": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -56.43
+      }
+    },
+    "row_grain": {
+      "record_view": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "mt5_routed_total_oos"
+      },
+      "route_role": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "routed_total"
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "oos"
+      },
+      "tier_scope": {
+        "authority": "mt5_strategy_tester_report",
+        "n/a_reason": null,
+        "value": "Tier A+B"
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "run_identity": {
+      "artifact_hashes": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": {
+          "kpi_record_sha256": "fa2b783a01cbd4b166a5cba06ed39648f7f5a129dc8590980001f546b9d3907d",
+          "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_routed_oos.htm",
+          "mt5_report_sha256": "7016739f48a302de331c201d7796ed7ea1c16fdceb4c63598502c08577dfb239"
+        }
+      },
+      "feature_set_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "feature_set_v2_stage29_runtime_topic_features"
+      },
+      "idea_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "run23B"
+      },
+      "label_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "label_v1_fwd12_m5_logret_train_q33_3class"
+      },
+      "model_family": {
+        "authority": "run_registry",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "run_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": null,
+        "value": "run23B_river_online_drift_runtime_probe_v1"
+      },
+      "split_contract": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "source_artifact_missing",
+        "value": null
+      },
+      "stage_id": {
+        "authority": "run_registry",
+        "n/a_reason": null,
+        "value": "29_adaptive_model__river_online_drift_learning"
+      },
+      "stage_inheritance": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "stage_inheritance_not_recorded",
+        "value": null
+      },
+      "variant_id": {
+        "authority": "work_packet_and_run_manifest",
+        "n/a_reason": "run_has_no_variant_layer",
+        "value": null
+      }
+    },
+    "signal_model": {
+      "directional_hit_rate": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "log_loss": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "long_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "macro_f1": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "oos_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "short_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_count": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "signal_coverage": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "python_signal_metric_missing",
+        "value": null
+      },
+      "threshold": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "threshold_method": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "threshold_not_recorded",
+        "value": null
+      },
+      "train_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "metric_not_emitted_by_mt5",
+        "value": null
+      },
+      "validation_accuracy": {
+        "authority": "python_training_or_signal_output",
+        "n/a_reason": "not_applicable_for_split",
+        "value": null
+      }
+    },
+    "source_evidence": {
+      "kpi_record_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/kpi_record.json",
+      "mt5_report_missing_required_metrics": [],
+      "mt5_report_parse_status": "completed",
+      "mt5_report_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23B_river_online_drift_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run23B_river_online_drift_runtime_probe_v1_routed_oos.htm",
+      "mt5_report_sha256": "7016739f48a302de331c201d7796ed7ea1c16fdceb4c63598502c08577dfb239",
+      "mt5_report_source_encoding": "utf-16",
+      "parser": "foundation.mt5.strategy_report.extract_mt5_strategy_report_metrics",
+      "report_identity_source": "run_manifest_report_identity",
+      "trade_attribution": {
+        "feature_source": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/features.parquet",
+        "mfe_mae_convention": "money_units_positive_favorable_and_positive_adverse",
+        "parser": "foundation.mt5.trade_report.parse_mt5_trade_report",
+        "price_source": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+      }
+    },
+    "trade_diagnostics": {
+      "avg_hold_bars": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 10.638646
+      },
+      "hold_distribution": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "max": 1095.0,
+          "median": 1.0,
+          "min": 1.0
+        }
+      },
+      "long_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 0.311799
+      },
+      "long_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 204.54
+      },
+      "long_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 656
+      },
+      "loss_trade_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "loss_trades": 410,
+          "loss_with_positive_mfe": 367,
+          "mfe_mean": 1.356024,
+          "ratio": 0.895122
+        }
+      },
+      "mae_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 3.388568
+      },
+      "mfe_mean": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 3.278366
+      },
+      "realized_over_mfe": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": -3.746424
+      },
+      "short_expectancy": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 0.441
+      },
+      "short_net_profit": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 114.66
+      },
+      "short_trade_count": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": 260
+      },
+      "win_trade_mae": {
+        "authority": "python_recomputed_from_mt5_deals",
+        "n/a_reason": null,
+        "value": {
+          "mae_mean": 1.962324,
+          "ratio": 0.990119,
+          "win_trades": 506,
+          "win_with_positive_mae": 501
+        }
+      }
+    }
+  }
+]

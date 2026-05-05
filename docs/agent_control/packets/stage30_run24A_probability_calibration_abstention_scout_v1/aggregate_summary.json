@@ -1,0 +1,311 @@
+{
+  "boundary": "stage30_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_stage30_structural_scout_completed",
+  "dependency_note": "native calibration package(원본 보정 패키지) not required; sklearn isotonic(사이킷런 등위 회귀) used.",
+  "exploration_label": "stage30_DecisionLayer__CalibrationAbstention",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_set_id": "feature_set_v2_stage30_topic_probe",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "isotonic_margin_calibration_abstention_layer",
+  "next_action": "run24B_probability_calibration_abstention_runtime_probe_v1",
+  "packet_id": "stage30_run24A_probability_calibration_abstention_scout_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24A_probability_calibration_abstention_scout_v1/predictions/tier_a_stage30_structural_predictions.parquet",
+      "rows": 46650,
+      "sha256": "2744304141b9d958abf1072f8e97cc2e1602f0a4bc666da0726e512fcc041efb"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24A_probability_calibration_abstention_scout_v1/predictions/tier_ab_stage30_structural_predictions.parquet",
+      "rows": 59048,
+      "sha256": "35c7b5048201bf4e03c117b4d96308b5ad44a4ca9e997b8d1970bc73c7a3fdfa"
+    },
+    "tier_b_predictions": {
+      "path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24A_probability_calibration_abstention_scout_v1/predictions/tier_b_stage30_structural_predictions.parquet",
+      "rows": 12398,
+      "sha256": "cc5c7d7522d18c7e45f0bc58f15ba859903e29304ee2ebd09380e6da49a8dc36"
+    }
+  },
+  "python_dependency_status": {
+    "pytorch_tabnet": false,
+    "river": false,
+    "sklearn": true,
+    "sklearn_version": "1.8.0",
+    "torch": false
+  },
+  "run_id": "run24A_probability_calibration_abstention_scout_v1",
+  "run_number": "run24A",
+  "selected_details": {
+    "source_run_id": "run23B_river_online_drift_runtime_probe_v1",
+    "tier_a": {
+      "method": "isotonic_margin",
+      "train_rows": 29222
+    },
+    "tier_b": {
+      "method": "isotonic_margin",
+      "train_rows": 8970
+    }
+  },
+  "selected_variant_id": "v02_isotonic_margin_abstention",
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "30_decision_layer__probability_calibration_abstention",
+  "stage_number": 30,
+  "status": "reviewed_structural_scout_completed",
+  "thresholds": {
+    "quantile": 0.8,
+    "tier_a": 0.33515958421133907,
+    "tier_b": 0.23200609072684092
+  },
+  "tier_records": [
+    {
+      "metrics": {
+        "long_count": 5007,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 5929,
+        "signal_count": 10936,
+        "signal_coverage": 0.23442658092175778,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24A_probability_calibration_abstention_scout_v1/predictions/tier_a_stage30_structural_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.39135021097046413,
+          "balanced_accuracy": 0.3333333333333333,
+          "directional_correct_count": 687,
+          "directional_hit_rate": 0.3760262725779967,
+          "log_loss": 1.638781555682146,
+          "long_count": 1408,
+          "macro_f1": 0.18751579479403588,
+          "mean_probability": {
+            "flat": 0.6647231836511781,
+            "long": 0.22391509938128873,
+            "short": 0.11136171696753319
+          },
+          "mean_probability_margin": 0.37347426731021605,
+          "rows": 7584,
+          "short_count": 419,
+          "signal_count": 1827,
+          "signal_coverage": 0.24090189873417722
+        },
+        "train": {
+          "accuracy": 0.3299911025939361,
+          "balanced_accuracy": 0.3333333333333333,
+          "directional_correct_count": 2715,
+          "directional_hit_rate": 0.38298772746508675,
+          "log_loss": 1.8073464266089658,
+          "long_count": 2365,
+          "macro_f1": 0.16541018053947423,
+          "mean_probability": {
+            "flat": 0.6646704537677093,
+            "long": 0.1325859609028671,
+            "short": 0.20274358532942363
+          },
+          "mean_probability_margin": 0.37409471864225435,
+          "rows": 29222,
+          "short_count": 4724,
+          "signal_count": 7089,
+          "signal_coverage": 0.24259119841215523
+        },
+        "validation": {
+          "accuracy": 0.36885412433969933,
+          "balanced_accuracy": 0.3333333333333333,
+          "directional_correct_count": 782,
+          "directional_hit_rate": 0.38712871287128714,
+          "log_loss": 1.6968815082968622,
+          "long_count": 1234,
+          "macro_f1": 0.1796413110698825,
+          "mean_probability": {
+            "flat": 0.6683062797266212,
+            "long": 0.18593490640644536,
+            "short": 0.14575881386693357
+          },
+          "mean_probability_margin": 0.3869410281832209,
+          "rows": 9844,
+          "short_count": 786,
+          "signal_count": 2020,
+          "signal_coverage": 0.20520113774888257
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 1252,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 1948,
+        "signal_count": 3200,
+        "signal_coverage": 0.25810614615260524,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24A_probability_calibration_abstention_scout_v1/predictions/tier_b_stage30_structural_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5433145009416196,
+          "balanced_accuracy": 0.3333333333333333,
+          "directional_correct_count": 114,
+          "directional_hit_rate": 0.2992125984251969,
+          "log_loss": 1.3890744726764792,
+          "long_count": 256,
+          "macro_f1": 0.23469595281675817,
+          "mean_probability": {
+            "flat": 0.7283176410760187,
+            "long": 0.1350972045694877,
+            "short": 0.1365851543544936
+          },
+          "mean_probability_margin": 0.4888511658029421,
+          "rows": 1062,
+          "short_count": 125,
+          "signal_count": 381,
+          "signal_coverage": 0.3587570621468927
+        },
+        "train": {
+          "accuracy": 0.4424749163879599,
+          "balanced_accuracy": 0.33345954815095297,
+          "directional_correct_count": 743,
+          "directional_hit_rate": 0.31738573259290903,
+          "log_loss": 1.6367800370778132,
+          "long_count": 756,
+          "macro_f1": 0.2047304459658348,
+          "mean_probability": {
+            "flat": 0.742247491638796,
+            "long": 0.07559137231654513,
+            "short": 0.18216113604465886
+          },
+          "mean_probability_margin": 0.5197416508967009,
+          "rows": 8970,
+          "short_count": 1585,
+          "signal_count": 2341,
+          "signal_coverage": 0.26098104793756965
+        },
+        "validation": {
+          "accuracy": 0.610312764158918,
+          "balanced_accuracy": 0.3333333333333333,
+          "directional_correct_count": 111,
+          "directional_hit_rate": 0.23221757322175732,
+          "log_loss": 1.179039478976164,
+          "long_count": 240,
+          "macro_f1": 0.252668416447944,
+          "mean_probability": {
+            "flat": 0.7475387873950716,
+            "long": 0.08697158575999385,
+            "short": 0.16548962684493446
+          },
+          "mean_probability_margin": 0.5330691548101124,
+          "rows": 2366,
+          "short_count": 238,
+          "signal_count": 478,
+          "signal_coverage": 0.20202874049027894
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 5370,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 6066,
+        "signal_count": 11436,
+        "signal_coverage": 0.1936729440455223,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24A_probability_calibration_abstention_scout_v1/predictions/tier_ab_stage30_structural_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.41001619245894055,
+          "balanced_accuracy": 0.3333333333333333,
+          "directional_correct_count": 722,
+          "directional_hit_rate": 0.3746756616502335,
+          "log_loss": 1.6081096933004646,
+          "long_count": 1507,
+          "macro_f1": 0.19385885762721133,
+          "mean_probability": {
+            "flat": 0.6725345777970467,
+            "long": 0.21300547593806266,
+            "short": 0.11445994626489056
+          },
+          "mean_probability_margin": 0.38764616948454805,
+          "rows": 8646,
+          "short_count": 420,
+          "signal_count": 1927,
+          "signal_coverage": 0.22287763127457785
+        },
+        "train": {
+          "accuracy": 0.35640971931294513,
+          "balanced_accuracy": 0.33335867031519206,
+          "directional_correct_count": 2857,
+          "directional_hit_rate": 0.3849885460180569,
+          "log_loss": 1.7672861911121485,
+          "long_count": 2566,
+          "macro_f1": 0.1752176520820424,
+          "mean_probability": {
+            "flat": 0.6828906577293675,
+            "long": 0.11919987325049727,
+            "short": 0.19790946902013534
+          },
+          "mean_probability_margin": 0.4083022223687517,
+          "rows": 38192,
+          "short_count": 4855,
+          "signal_count": 7421,
+          "signal_coverage": 0.19430770842061165
+        },
+        "validation": {
+          "accuracy": 0.41564291564291567,
+          "balanced_accuracy": 0.3333333333333333,
+          "directional_correct_count": 809,
+          "directional_hit_rate": 0.3874521072796935,
+          "log_loss": 1.5965363615832855,
+          "long_count": 1297,
+          "macro_f1": 0.19573811590010606,
+          "mean_probability": {
+            "flat": 0.6836596059464044,
+            "long": 0.16675823018617475,
+            "short": 0.14958216386742088
+          },
+          "mean_probability_margin": 0.4152570926876619,
+          "rows": 12210,
+          "short_count": 791,
+          "signal_count": 2088,
+          "signal_coverage": 0.171007371007371
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "variant_results": {
+    "path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24A_probability_calibration_abstention_scout_v1/results/variant_results.csv",
+    "rows": 2,
+    "sha256": "914bf954445b7d757ef6d8f1ea1160997ffb7da96572a9bfcba217ca150ebf2d"
+  }
+}

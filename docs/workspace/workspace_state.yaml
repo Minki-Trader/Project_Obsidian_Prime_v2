@@ -1,63 +1,62 @@
 ﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
-active_branch: codex/stage28-markov-regression
-active_stage: 29_adaptive_model__river_online_drift_learning
-current_run_id: not_started
+active_branch: codex/stage29-32-goal-completion
+active_stage: 32_sequence_model__tcn_temporal_convolution_context
+current_run_id: stage20_32_goal_complete
 current_operating_reference: null
 current_shadow_challenger: null
-exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
-  component and total records
-alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 단계 전환) are topic pivots(주제 전환), not baseline selection(기준선
-  선택); closeout(마감)은 seed clues/failure memory/invalid/blocked branches(씨앗 단서/실패 기억/무효/차단 갈래)를 분류하고 explicit promotion/operating
+exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
+  Tier A primary plus Tier B fallback with component and total records
+alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 단계 전환) are
+  topic pivots(주제 전환), not baseline selection(기준선 선택); closeout(마감)은 seed clues/failure
+  memory/invalid/blocked branches(씨앗 단서/실패 기억/무효/차단 갈래)를 분류하고 explicit promotion/operating
   packet(명시 승격/운영 작업 묶음) 없이는 baseline(기준선)을 만들지 않는다
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 29 as opened_not_started after Stage28 Markov regression(마르코프 회귀) reviewed closeout(검토된 마감); next action is run23A_river_online_drift_learning_scout_v1, and no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
-- treat stage20_27_characteristic_synthesis_v1(20-27단계 특징 및 실제 MT5 재실행 종합 묶음) and stage20_27_actual_mt5_rerun_verification_v1(실제 MT5 재실행 묶음) as cross-stage evidence management(교차 단계 근거 관리); they preserve model-family/topic clues(모델군/주제 단서) and MT5 trade shape(MT5 거래 모양) through Stage27(27단계까지) with 16/16 actual routed validation/OOS MT5 reports(실제 검증/표본외 라우팅 MT5 보고서), but create no alpha quality(알파 품질), baseline(기준선), promotion(승격), or runtime authority(런타임 권위)
-- treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
-- treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
-- treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
-- treat Stage 19 through Stage 32(19-32단계) as independent model-family/risk/decision/sequence topics(모델군/위험/결정/순서 주제): EBM(설명가능 부스팅 머신), GAM(일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(은닉 마르코프 모델), regime classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델), NGBoost(자연 그래디언트 부스팅), quantile boosting(분위수 부스팅), Markov regression(마르코프 회귀), River online ML(리버 온라인 머신러닝), calibration(보정), TabNet(탭넷), and TCN(시간 합성곱 네트워크)
-- treat docs/workspace/stage20_32_goal_operating_plan.md as the top-level goal operating plan(최상위 목표 운영 계획) for Stage20-32(20-32단계); use MT5 batch safety/recovery(MT5 배치 안전/복구) and folder/branch/git reporting(폴더/브랜치/깃 보고) before claiming reviewed closeout(검토된 마감)
-- treat Stage 17 as reviewed_closed after run11G DART attribution closeout; Stage18 is opened as a CatBoost topic, not as a baseline or promotion
-- treat Stage 15 as reviewed_closed after LDA covariance stability closeout; preserve LDA covariance shrinkage clues, not a baseline or promotion
-- treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임 탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
+- treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
+  탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
+  no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
+- 'next action(다음 행동): open a new stage/topic(새 단계/주제) only when requested; Stage20-32
+  goal(20-32단계 목표)은 complete(완료)'
+- treat stage20_27_characteristic_synthesis_v1(20-27단계 특징 및 실제 MT5 재실행 종합 묶음) and
+  stage20_27_actual_mt5_rerun_verification_v1(실제 MT5 재실행 묶음) as cross-stage evidence
+  management(교차 단계 근거 관리); they preserve model-family/topic clues(모델군/주제 단서) and MT5
+  trade shape(MT5 거래 모양) through Stage27(27단계까지) with 16/16 actual routed validation/OOS
+  MT5 reports(실제 검증/표본외 라우팅 MT5 보고서), but create no alpha quality(알파 품질), baseline(기준선),
+  promotion(승격), or runtime authority(런타임 권위)
+- treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime,
+  feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve
+  EBM clues, not a baseline or promotion
+- treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape
+  clues, not baseline, promotion, or runtime authority
+- treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up,
+  and compression probes; preserve CatBoost clues and failure memory only, not baseline,
+  promotion, or runtime authority
+- treat Stage 19 through Stage 32(19-32단계) as independent model-family/risk/decision/sequence topics(모델군/위험/결정/순서 주제): EBM(설명가능
+    부스팅 머신), GAM(일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(은닉 마르코프 모델), regime
+    classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델), NGBoost(자연 그래디언트
+    부스팅), quantile boosting(분위수 부스팅), Markov regression(마르코프 회귀), River online ML(리버
+    온라인 머신러닝), calibration(보정), TabNet(탭넷), and TCN(시간 합성곱 네트워크)
+- treat Stage 17 as reviewed_closed after run11G DART attribution closeout; Stage18
+  is opened as a CatBoost topic, not as a baseline or promotion
+- treat Stage 15 as reviewed_closed after LDA covariance stability closeout; preserve
+  LDA covariance shrinkage clues, not a baseline or promotion
+- treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임
+  탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
-- treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not baseline selection(기준선 선택), unless an
-  explicit promotion/operating packet(명시 승격/운영 작업 묶음) opens
-- record Tier A, Tier B, and Tier A+B views together in stage and project alpha ledgers; routed MT5 runs read these as A-used,
-  B-fallback-used, and actual routed total
-- use the first default training label and split contract as the starting evidence surface
-- treat the 56-feature model input as an interim quarantine artifact, not the final pre-alpha path
-- treat the Stage 04 top3 weights as MT5 price-proxy weights, not actual NDX/QQQ weights
-- treat the Stage 05 audit as feature-integrity evidence, not model quality or runtime authority
-- treat the Stage 06 runtime parity packet as completed MT5 runtime-authority evidence for the minimum fixture set
-- use the Stage 07 baseline training smoke as Python-side pipeline evidence, not alpha quality
-- use the audited 58-feature MT5 price-proxy model input as the first model-backed alpha protocol input surface
-- follow the Stage 04-09 pre-alpha stage queue before model-backed alpha exploration
-- preserve the Stage 06 MT5 runtime snapshot parity pass as the runtime-authority input behind the Stage 07 smoke
-- treat the Stage 08 alpha entry protocol as reporting and search discipline, not an alpha result
-- use the Stage 09 pre-alpha handoff packet as the publish boundary into Stage 10
-- treat Stage 10 run01Y-run01AC as closed Tier A-only 200-220 closeout MT5 runtime_probe evidence; run01Y is a seed surface(씨앗
-  표면) and preserved clue(보존 단서), not alpha baseline(알파 기준선), live readiness, or operating promotion
-- treat Stage 11 as reviewed_closed_no_next_stage_opened; run02A-run02S, run02W-run02Z, and run02AA-run02AK are completed
-  LightGBM training, threshold, divergent, idea-burst, salvage-extension, fwd18-retrain, fwd18 inverse-rank context, and stress
-  MT5 runtime_probe evidence, not alpha quality or operating promotion
-- treat Stage 12 as reviewed_closed_no_next_stage_opened(검토 후 닫힘, 다음 단계 미개방); preserve RUN03L recency-weighted(최근성 가중),
-  RUN03O trend/chop(추세/횡보), and RUN03Q risk-on OOS(위험선호 표본외) as clues(단서), but do not create alpha quality(알파 품질),
-  promotion candidate(승격 후보), runtime authority(런타임 권위), operating reference(운영 기준), or baseline(기준선)
-- treat agent-control KPI rebuild packets(에이전트 제어 KPI 재구축 묶음) as cross-stage evidence management(교차 단계 근거 관리), not alpha quality(알파
-  품질), live readiness(실거래 준비), or operating promotion(운영 승격)
-- treat alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) as code ownership(코드 소유권) and agent closeout hardening(에이전트 마감 강화),
-  not alpha quality(알파 품질) or runtime authority(런타임 권위)
-- treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
-  only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
+- treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not
+  baseline selection(기준선 선택), unless an explicit promotion/operating packet(명시 승격/운영
+  작업 묶음) opens
+- record Tier A, Tier B, and Tier A+B views together in stage and project alpha ledgers;
+  routed MT5 runs read these as A-used, B-fallback-used, and actual routed total
+- use the first default training label and split contract as the starting evidence
+  surface
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -93,20 +92,24 @@ pre_alpha_stage_queue:
       status: reviewed_closed_handoff_to_stage11_ready
     stage11:
       stage_id: 11_alpha_robustness__wfo_label_horizon_sensitivity
-      ownership: LightGBM label-horizon and context topic pivot from the Stage 10 run01Y seed surface
+      ownership: LightGBM label-horizon and context topic pivot from the Stage 10
+        run01Y seed surface
       status: reviewed_closed_no_next_stage_opened
     stage12:
       stage_id: 12_model_family_challenge__extratrees_training_effect
-      ownership: standalone ExtraTrees model-family training effect without Stage 10/11 inheritance
+      ownership: standalone ExtraTrees model-family training effect without Stage
+        10/11 inheritance
       status: reviewed_closed_no_next_stage_opened
     stage13:
       stage_id: 13_model_family_challenge__mlp_training_effect
-      ownership: independent MLPClassifier coarse characteristic scout plus narrow MT5 runtime_probe
+      ownership: independent MLPClassifier coarse characteristic scout plus narrow
+        MT5 runtime_probe
       status: reviewed_closed_no_next_stage_opened
       current_run_id: run04N_mlp_feature_group_interaction_profit_probe_v1
     stage14:
       stage_id: 14_model_family_challenge__margin_kernel_training_effect
-      ownership: independent SVM margin and kernel training-effect scout without Stage 10/11/12/13 inheritance
+      ownership: independent SVM margin and kernel training-effect scout without Stage
+        10/11/12/13 inheritance
       status: reviewed_closed_stage15_opened
       current_run_id: run05A_svm_margin_kernel_characteristic_runtime_probe_v1
     stage15:
@@ -116,21 +119,25 @@ pre_alpha_stage_queue:
       current_run_id: run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1
     stage16:
       stage_id: 16_model_family_challenge__qda_class_covariance_scout
-      ownership: independent QDA class-specific covariance scout after Stage15 LDA closeout
+      ownership: independent QDA class-specific covariance scout after Stage15 LDA
+        closeout
       status: reviewed_closed_stage17_opened
       current_run_id: run10B_qda_reg018_full58_resample_decision_microprobe_v1
     stage17:
       stage_id: 17_model_family_challenge__xgboost_regularized_boosting_scout
-      ownership: independent XGBoost regularized boosting scout after Stage16 QDA closeout
+      ownership: independent XGBoost regularized boosting scout after Stage16 QDA
+        closeout
       status: reviewed_closed_stage18_opened
     stage18:
       stage_id: 18_model_family_challenge__catboost_ordered_boosting_scout
-      ownership: independent CatBoost ordered boosting scout after Stage17 XGBoost closeout
+      ownership: independent CatBoost ordered boosting scout after Stage17 XGBoost
+        closeout
       status: reviewed_closed_stage19_planned
       current_run_id: run12P_catboost_plain_same_condition_rematch_probe_v1
     stage19:
       stage_id: 19_model_family_challenge__ebm_explainable_boosting_shape
-      ownership: independent EBM explainable boosting shape scout after Stage18 CatBoost closeout
+      ownership: independent EBM explainable boosting shape scout after Stage18 CatBoost
+        closeout
       status: reviewed_closed_stage20_opened
       current_run_id: run13AD_ebm_axis_exhaustion_followthrough_v1
     stage20:
@@ -140,7 +147,8 @@ pre_alpha_stage_queue:
       current_run_id: run14B_gam_runtime_handoff_probe_v1
     stage21:
       stage_id: 21_model_family_challenge__elasticnet_logistic_linear_sanity
-      ownership: independent ElasticNet Logistic sparse linear sanity scout after Stage20
+      ownership: independent ElasticNet Logistic sparse linear sanity scout after
+        Stage20
       status: reviewed_closed_stage22_opened
       current_run_id: run15B_elasticnet_logistic_onnx_runtime_probe_v1
     stage22:
@@ -165,36 +173,46 @@ pre_alpha_stage_queue:
       current_run_id: run19B_hazard_trade_lifecycle_runtime_probe_v1
     stage26:
       stage_id: 26_model_family_challenge__ngboost_probabilistic_distribution_shape
-      ownership: independent NGBoost(자연 그래디언트 부스팅) probabilistic distribution-shape(확률분포 모양) scout(탐색) after Stage25(25단계)
+      ownership: independent NGBoost(자연 그래디언트 부스팅) probabilistic distribution-shape(확률분포
+        모양) scout(탐색) after Stage25(25단계)
       status: reviewed_closed_stage27_opened
       current_run_id: run20B_ngboost_distribution_runtime_probe_v1
     stage27:
       stage_id: 27_tail_model__quantile_boosting_risk_surface
-      ownership: independent quantile boosting(분위수 부스팅) tail-risk surface(꼬리 위험 표면) scout(탐색) after Stage26(26단계)
+      ownership: independent quantile boosting(분위수 부스팅) tail-risk surface(꼬리 위험 표면)
+        scout(탐색) after Stage26(26단계)
       status: reviewed_closed_stage28_reviewed_closed_stage29_opened
       current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
     stage28:
       stage_id: 28_regime_model__markov_switching_regression_state_link
-      ownership: independent Markov switching regression(마르코프 전환 회귀) state-link(상태 연결) scout(탐색) after Stage27(27단계)
+      ownership: independent Markov switching regression(마르코프 전환 회귀) state-link(상태
+        연결) scout(탐색) after Stage27(27단계)
       status: reviewed_closed_stage29_opened
       current_run_id: run22B_markov_regression_state_runtime_probe_v1
     stage29:
       stage_id: 29_adaptive_model__river_online_drift_learning
-      ownership: independent River online ML(리버 온라인 머신러닝) drift/adaptation(변화/적응) scout(탐색) after Stage28(28단계)
-      status: opened_not_started
-      current_run_id: not_started
+      ownership: independent River online ML(리버 온라인 머신러닝) drift/adaptation(변화/적응)
+        scout(탐색) after Stage28(28단계)
+      status: reviewed_closed_stage30_opened
+      current_run_id: run23B_river_online_drift_runtime_probe_v1
     stage30:
       stage_id: 30_decision_layer__probability_calibration_abstention
-      ownership: independent probability calibration/abstention(확률 보정/기권) decision-layer(결정 계층) scout(탐색) after Stage29(29단계)
-      status: planned
+      ownership: independent probability calibration/abstention(확률 보정/기권) decision-layer(결정
+        계층) scout(탐색) after Stage29(29단계)
+      status: reviewed_closed_stage31_opened
+      current_run_id: run24B_probability_calibration_abstention_runtime_probe_v1
     stage31:
       stage_id: 31_model_family_challenge__tabnet_attentive_tabular_scout
-      ownership: independent TabNet(탭넷) attentive tabular(주의 기반 표 형식) scout(탐색) after Stage30(30단계)
-      status: planned
+      ownership: independent TabNet(탭넷) attentive tabular(주의 기반 표 형식) scout(탐색) after
+        Stage30(30단계)
+      status: reviewed_closed_stage32_opened
+      current_run_id: run25B_tabnet_attentive_tabular_runtime_probe_v1
     stage32:
       stage_id: 32_sequence_model__tcn_temporal_convolution_context
-      ownership: independent TCN(시간 합성곱 네트워크) temporal convolution sequence-context(시간 합성곱 순서 문맥) scout(탐색) after Stage31(31단계)
-      status: planned
+      ownership: independent TCN(시간 합성곱 네트워크) temporal convolution sequence-context(시간
+        합성곱 순서 문맥) scout(탐색) after Stage31(31단계)
+      status: reviewed_closed_goal_complete
+      current_run_id: run26B_tcn_temporal_convolution_runtime_probe_v1
 stage13_mlp_characteristic_runtime_probe:
   run_id: run04A_mlp_characteristic_runtime_probe_v1
   status: completed
@@ -302,7 +320,9 @@ stage13_model_family_challenge_closeout:
   selected_promotion_candidate: none
   selected_baseline: none
   preserved_clues: RUN04K_activation_distributed_stability,RUN04L_feature_sensitivity_top_drivers,RUN04M_volatility_range_group_sensitivity,RUN04N_non_additive_feature_group_interaction
-  negative_memory: MLP q90 surface did not produce edge-ready(거래 우위 준비) or baseline(기준선) evidence(근거); profit diagnostics(수익 진단값) remain stress-only(압박 전용) and one validation(검증) path(경로) had partial trade stopout(부분 거래 중단)
+  negative_memory: MLP q90 surface did not produce edge-ready(거래 우위 준비) or baseline(기준선)
+    evidence(근거); profit diagnostics(수익 진단값) remain stress-only(압박 전용) and one validation(검증)
+    path(경로) had partial trade stopout(부분 거래 중단)
   external_verification_status: completed_for_recorded_mt5_runtime_probes
   closeout_packet_path: stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage13_closeout_packet.md
   closeout_decision_path: docs/decisions/2026-05-02_stage13_model_family_challenge_closeout.md
@@ -319,8 +339,10 @@ stage14_margin_kernel_training_effect:
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
-  preserved_clues: SVM margin/kernel probability shape, threshold visibility, and routed MT5 runtime-probe trade-shape evidence
-  negative_memory: SVM margin/kernel closeout remains inconclusive and does not create edge, alpha quality, baseline, promotion, or runtime authority
+  preserved_clues: SVM margin/kernel probability shape, threshold visibility, and
+    routed MT5 runtime-probe trade-shape evidence
+  negative_memory: SVM margin/kernel closeout remains inconclusive and does not create
+    edge, alpha quality, baseline, promotion, or runtime authority
   external_verification_status: completed_for_recorded_mt5_runtime_probes
   closeout_packet_path: stages/14_model_family_challenge__margin_kernel_training_effect/03_reviews/stage14_closeout_packet.md
   closeout_decision_path: docs/decisions/2026-05-02_stage14_svm_margin_kernel_closeout.md
@@ -333,8 +355,11 @@ stage15_untried_learning_methods:
   model_family: sklearn_lda_discriminant_family
   current_run_id: run07J_lda_eigen_balanced_shrinkage005_stability_probe_v1
   current_status: run06A_run06J_and_run07A_run07J_lda_topic_closed_reviewed
-  hypothesis: Untried model learning methods may expose different training behavior, probability shape, and signal density from prior LogReg, LightGBM, ExtraTrees, MLP, and SVM probes.
-  comparison_baseline: no trading baseline; compare only against fixed data contract and within-stage Stage15 LDA variants
+  hypothesis: Untried model learning methods may expose different training behavior,
+    probability shape, and signal density from prior LogReg, LightGBM, ExtraTrees,
+    MLP, and SVM probes.
+  comparison_baseline: no trading baseline; compare only against fixed data contract
+    and within-stage Stage15 LDA variants
   boundary: closed_inconclusive_lda_covariance_stability_runtime_probe_evidence_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/15_model_family_challenge__untried_learning_methods_scout/00_spec/stage_brief.md
   input_references_path: stages/15_model_family_challenge__untried_learning_methods_scout/01_inputs/input_references.md
@@ -350,9 +375,12 @@ stage16_qda_class_covariance_scout:
   current_run_id: run10B_qda_reg018_full58_resample_decision_microprobe_v1
   current_status: run08A_run10L_qda_topic_closed_reviewed
   judgment: closed_inconclusive_qda_class_covariance_runtime_probe_evidence
-  source_clue: Stage15 LDA light covariance shrinkage clue; QDA tests class-specific covariance behavior without edge search
-  hypothesis: QDA class-specific covariance may show probability shape and signal-density behavior different from LDA under the same label and split contract.
-  comparison_baseline: no trading baseline; compare run08, run09, and run10 only as within-stage QDA evidence
+  source_clue: Stage15 LDA light covariance shrinkage clue; QDA tests class-specific
+    covariance behavior without edge search
+  hypothesis: QDA class-specific covariance may show probability shape and signal-density
+    behavior different from LDA under the same label and split contract.
+  comparison_baseline: no trading baseline; compare run08, run09, and run10 only as
+    within-stage QDA evidence
   boundary: closed_inconclusive_qda_class_covariance_runtime_probe_evidence_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   stage_brief_path: stages/16_model_family_challenge__qda_class_covariance_scout/00_spec/stage_brief.md
   input_references_path: stages/16_model_family_challenge__qda_class_covariance_scout/01_inputs/input_references.md
@@ -368,14 +396,17 @@ stage17_xgboost_regularized_boosting_scout:
   model_family: xgboost_xgbclassifier_multiclass_dart
   current_run_id: run11G_xgb_dart_attribution_closeout_v1
   current_status: reviewed_closed
-  hypothesis: XGBoost gbtree and DART characteristics were explored until no second-order DART attribution axis remained.
+  hypothesis: XGBoost gbtree and DART characteristics were explored until no second-order
+    DART attribution axis remained.
   boundary: xgboost_dart_attribution_closeout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   judgment: closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
   preserved_clues: run11A_visible_regularized_boosting_characteristic_q90,run11B_frequency_density_increase_q80,run11C_direction_asymmetry_long_trade_density,run11D_stable_long_probability_skew,run11E_feature_driver_saturation_no_new_axis,run11F_dart_top3_feature_shift,run11G_dart_no_second_order_axis
-  negative_memory: DART changed one top3 feature slot but preserved long-skew trade shape and did not create edge, alpha quality, baseline, promotion, or runtime authority
+  negative_memory: DART changed one top3 feature slot but preserved long-skew trade
+    shape and did not create edge, alpha quality, baseline, promotion, or runtime
+    authority
   external_verification_status: completed_for_recorded_stage17_mt5_runtime_probes
   closeout_packet_path: stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/stage17_closeout_packet.md
   closeout_decision_path: docs/decisions/2026-05-03_stage17_xgboost_dart_attribution_closeout.md
@@ -795,7 +826,8 @@ stage10_alpha_scout:
   closeout_seed_surface_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
   closeout_baseline_run_id: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
   closeout_historical_baseline_wording_superseded_by: docs/decisions/2026-05-01_alpha_stage_transition_philosophy_correction.md
-  closeout_current_interpretation: seed_surface(씨앗 표면) and preserved_clue(보존 단서), not baseline(기준선)
+  closeout_current_interpretation: seed_surface(씨앗 표면) and preserved_clue(보존 단서),
+    not baseline(기준선)
   closeout_slice: 200 < minutes_from_cash_open <= 220
   closeout_routing_mode: tier_a_primary_no_fallback
   closeout_external_verification_status: completed
@@ -837,8 +869,9 @@ stage10_alpha_scout:
   closeout_strict_prob_oos_recovery_factor: 1.49
   closeout_tier_b_fallback_only_validation_trades: 0
   closeout_tier_b_fallback_only_oos_trades: 0
-  closeout_interpretation: run01Y remains the best net/recovery balance; hold6 is weaker, hold12 is validation-favored but
-    OOS weaker, margin0.025 is not binding, and strict probability improves OOS PF but lowers net/recovery
+  closeout_interpretation: run01Y remains the best net/recovery balance; hold6 is
+    weaker, hold12 is validation-favored but OOS weaker, margin0.025 is not binding,
+    and strict probability improves OOS PF but lowers net/recovery
   hold_stress_holds: 3,6,9,12,18,24
   hold_stress_routing_mode: tier_a_primary_no_fallback
   hold_stress_best_oos_hold_bars: 9
@@ -847,8 +880,8 @@ stage10_alpha_scout:
   hold_stress_best_oos_recovery_factor: 2.05
   hold_stress_best_validation_hold_bars: 24
   hold_stress_best_validation_net_profit: 454.69
-  hold_stress_interpretation: hold9 is best on OOS net profit, PF, and recovery; hold24 is validation-favored but weaker OOS,
-    so no promotion claim
+  hold_stress_interpretation: hold9 is best on OOS net profit, PF, and recovery; hold24
+    is validation-favored but weaker OOS, so no promotion claim
   session_slice_slices: early,mid,late
   session_slice_routing_mode: tier_a_primary_no_fallback
   session_slice_hold_bars: 9
@@ -858,8 +891,9 @@ stage10_alpha_scout:
   session_slice_best_oos_recovery_factor: 2.01
   session_slice_early_oos_net_profit: -76.39
   session_slice_late_oos_net_profit: -12.63
-  session_slice_interpretation: hold9 OOS strength is concentrated in the mid-session slice; early is negative in validation
-    and OOS, late is validation-strong but OOS-negative
+  session_slice_interpretation: hold9 OOS strength is concentrated in the mid-session
+    slice; early is negative in validation and OOS, late is validation-strong but
+    OOS-negative
   mid_session_half_slices: mid_first,mid_second
   mid_session_half_routing_mode: tier_a_primary_no_fallback
   mid_session_half_hold_bars: 9
@@ -874,8 +908,9 @@ stage10_alpha_scout:
   mid_session_half_second_oos_net_profit: 136.54
   mid_session_half_second_oos_profit_factor: 1.8
   mid_session_half_second_oos_recovery_factor: 1.01
-  mid_session_half_interpretation: mid_second is validation/OOS positive and more consistent; mid_first is OOS positive but
-    validation-negative and riskier, so mid strength is not evenly distributed
+  mid_session_half_interpretation: mid_second is validation/OOS positive and more
+    consistent; mid_first is OOS positive but validation-negative and riskier, so
+    mid strength is not evenly distributed
   mid_second_narrow_slices: mid_second_first,mid_second_second
   mid_second_narrow_routing_mode: tier_a_primary_no_fallback
   mid_second_narrow_hold_bars: 9
@@ -903,8 +938,9 @@ stage10_alpha_scout:
   mid_second_narrow_second_oos_recovery_factor: 2.3
   mid_second_narrow_second_validation_tier_a_used_count: 729
   mid_second_narrow_second_oos_tier_a_used_count: 580
-  mid_second_narrow_interpretation: mid_second_second is the clearer validation/OOS positive slice; mid_second_first is OOS
-    positive but validation-negative, so do not treat the full mid_second strength as uniform
+  mid_second_narrow_interpretation: mid_second_second is the clearer validation/OOS
+    positive slice; mid_second_first is OOS positive but validation-negative, so do
+    not treat the full mid_second strength as uniform
   mid_second_second_narrow_slices: mid_second_second_first,mid_second_second_second
   mid_second_second_narrow_routing_mode: tier_a_primary_no_fallback
   mid_second_second_narrow_hold_bars: 9
@@ -932,8 +968,9 @@ stage10_alpha_scout:
   mid_second_second_narrow_second_oos_recovery_factor: 0.07
   mid_second_second_narrow_second_validation_tier_a_used_count: 295
   mid_second_second_narrow_second_oos_tier_a_used_count: 235
-  mid_second_second_narrow_interpretation: run01U carries most of the OOS strength while run01V is validation-favored and
-    OOS-weak; full run01T remains the more balanced wider slice
+  mid_second_second_narrow_interpretation: run01U carries most of the OOS strength
+    while run01V is validation-favored and OOS-weak; full run01T remains the more
+    balanced wider slice
   late_mid_overlap_windows: mid_second_overlap_190_210,mid_second_overlap_195_215,mid_second_overlap_200_220
   late_mid_overlap_routing_mode: tier_a_primary_no_fallback
   late_mid_overlap_hold_bars: 9
@@ -967,8 +1004,9 @@ stage10_alpha_scout:
   late_mid_overlap_third_oos_profit_factor: 3.99
   late_mid_overlap_third_oos_max_drawdown: 144.65
   late_mid_overlap_third_oos_recovery_factor: 2.16
-  late_mid_overlap_interpretation: run01Y is the strongest balanced overlap window; shifting earlier to 190-210 weakens validation,
-    while 195-215 is validation-strong but lower OOS than 200-220
+  late_mid_overlap_interpretation: run01Y is the strongest balanced overlap window;
+    shifting earlier to 190-210 weakens validation, while 195-215 is validation-strong
+    but lower OOS than 200-220
   fallback_filter_run_id: run01R_logreg_a_base_fallback_bmacro_hold9_session_mid_second_v1
   fallback_filter_allowed_subtypes: B_macro_missing
   fallback_filter_a_only_baseline_run_id: run01Q_logreg_a_base_no_fallback_hold9_session_mid_second_v1
@@ -977,8 +1015,9 @@ stage10_alpha_scout:
   fallback_filter_oos_routed_net_profit: 128.25
   fallback_filter_oos_routed_profit_factor: 1.71
   fallback_filter_oos_b_fallback_used_count: 165
-  fallback_filter_interpretation: B_macro_missing fallback did not improve actual routed total versus run01Q A-only; B-only
-    OOS looked strong but single-account routed path was weaker
+  fallback_filter_interpretation: B_macro_missing fallback did not improve actual
+    routed total versus run01Q A-only; B-only OOS looked strong but single-account
+    routed path was weaker
   current_run_tier_b_fallback_rows: 696
   current_run_tier_b_fallback_filtered_out_rows: 0
   current_run_no_tier_labelable_rows: 0
@@ -1010,15 +1049,15 @@ stage11_alpha_robustness:
   current_run_model_family: lightgbm_lgbmclassifier_multiclass
   current_run_source_model_run_id: run02W_lgbm_fwd18_retrain_v1
   current_run_comparison_reference: run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1
-  current_run_reference_boundary: run01Y is a seed/reference surface(씨앗/참고 표면), not alpha baseline(알파 기준선) or operating reference(운영
-    기준)
+  current_run_reference_boundary: run01Y is a seed/reference surface(씨앗/참고 표면), not
+    alpha baseline(알파 기준선) or operating reference(운영 기준)
   current_run_decision_surface_id: run02Z_lgbm_fwd18_inverse_rank_context_di_spread_adx_surface_hold9_slice200_220
   current_run_threshold_method: fwd18_inverse_rank_target_quantile_with_di_spread_adx_context
   current_run_selected_threshold: a_tier_a_rankq0.960_short0.571_long0.654_margin0.120__b_tier_b_rankq0.960_short0.413_long0.457_margin0.080__hold9__slice_mid_second_overlap_200_220__model_lgbm_rank_target_inverse__ctx_di_spread_abs_lte8_adx_lte25
   stress_packet_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02AA_run02AK_fwd18_rank_stress_packet.md
   stress_plan_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md
-  stress_read: ADX<=25, 200-220, Tier A primary plus Tier B fallback remains the best center; still tiny-sample runtime_probe
-    only
+  stress_read: ADX<=25, 200-220, Tier A primary plus Tier B fallback remains the best
+    center; still tiny-sample runtime_probe only
   current_run_session_slice: mid_second_overlap_200_220
   current_run_max_hold_bars: 9
   current_run_source_onnx_parity_passed: true
@@ -1337,8 +1376,9 @@ stage11_alpha_robustness:
   inherited_baseline_hold_bars: 9
   inherited_baseline_threshold: short0.600_long0.450_margin0.000
   inherited_baseline_routing_mode: tier_a_primary_no_fallback
-  closeout_read: run02Z family produced a positive tiny-sample fwd18 inverse-rank context MT5 runtime_probe; stage closed
-    because OOS trade count is too small for alpha quality, live readiness, or promotion
+  closeout_read: run02Z family produced a positive tiny-sample fwd18 inverse-rank
+    context MT5 runtime_probe; stage closed because OOS trade count is too small for
+    alpha quality, live readiness, or promotion
   closeout_packet_path: stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/stage11_closeout_packet.md
   closeout_decision_path: docs/decisions/2026-04-27_stage11_alpha_robustness_closeout.md
   boundary: reviewed_closed_runtime_probe_completed_no_alpha_quality_no_live_readiness_no_operating_promotion
@@ -1373,22 +1413,22 @@ stage12_model_family_challenge:
     selected_operating_reference: none
     selected_promotion_candidate: none
     preserved_clues: RUN03L_recency_weighted,RUN03O_trend_bucket,RUN03Q_risk_on_oos
-    negative_memory: ExtraTrees standalone regime and attribution probes did not produce robust repeated WFO evidence
+    negative_memory: ExtraTrees standalone regime and attribution probes did not produce
+      robust repeated WFO evidence
     judgment: closed_inconclusive_extratrees_standalone_runtime_probe_evidence
     external_verification_status: completed_for_recorded_mt5_runtime_probes
     closeout_packet_path: stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md
     closeout_decision_path: docs/decisions/2026-05-02_stage12_model_family_challenge_closeout.md
     packet_summary_path: docs/agent_control/packets/stage12_model_family_challenge_closeout_v1/stage_closeout_evidence_gate.json
     next_action: no_stage13_folder_created_user_will_continue_in_new_chat
-
-
 agent_control_kpi_rebuild:
   status: partial_trade_attribution_recorded
   git_sync_target: origin/main
   previous_pushed_evidence_commit: 1b557a463f49005bcf5e8bac5b128037b653fa0e
-  current_sync_rule: after document sync(문서 동기화) commits, read latest pushed state(최신 푸시 상태) from git HEAD(깃 HEAD)
-  operating_format_status: work packet(작업 묶음), run plan(실행 계획), skill receipt(스킬 영수증), KPI source authority(KPI 원천 권위), and
-    n/a reason(해당없음 사유) contracts(계약) are materialized(물질화됨)
+  current_sync_rule: after document sync(문서 동기화) commits, read latest pushed state(최신
+    푸시 상태) from git HEAD(깃 HEAD)
+  operating_format_status: work packet(작업 묶음), run plan(실행 계획), skill receipt(스킬 영수증),
+    KPI source authority(KPI 원천 권위), and n/a reason(해당없음 사유) contracts(계약) are materialized(물질화됨)
   packets:
     inventory:
       packet_id: kpi_rebuild_inventory_v1
@@ -1433,8 +1473,9 @@ agent_control_kpi_rebuild:
       zero_trade_records_without_attribution: 1
       parser_errors: 0
       path: docs/agent_control/packets/kpi_tier_balance_completion_v1
-  boundary: KPI rebuild(핵심 성과 지표 재구축) is evidence management(근거 관리) only; it does not change Stage 12 alpha judgment(12단계
-    알파 판정) or create promotion meaning(승격 의미).
+  boundary: KPI rebuild(핵심 성과 지표 재구축) is evidence management(근거 관리) only; it does
+    not change Stage 12 alpha judgment(12단계 알파 판정) or create promotion meaning(승격
+    의미).
 agent_control_code_surface:
   status: guarded_with_registered_debt
   audit_path: docs/agent_control/code_surface_audit_latest.json
@@ -1442,18 +1483,23 @@ agent_control_code_surface:
   gate_command: python -m foundation.control_plane.code_surface_audit --root .
   latest_audit_status: pass
   large_files_over_attention: 5
-  compatibility_warning: foundation/mt5/runtime_support.py no longer delegates(위임) to legacy Stage 10 orchestration(기존 10단계
-    조율 파일); remaining debt(남은 부채) is large helper/module decomposition(큰 도구/모듈 분해) and semantic reusable-logic detection(재사용
+  compatibility_warning: foundation/mt5/runtime_support.py no longer delegates(위임)
+    to legacy Stage 10 orchestration(기존 10단계 조율 파일); remaining debt(남은 부채) is large
+    helper/module decomposition(큰 도구/모듈 분해) and semantic reusable-logic detection(재사용
     로직 의미 감사)
   refactor_completed:
   - MT5 Strategy Tester report parser(MT5 전략 테스터 보고서 파서) moved to foundation/mt5/strategy_report.py
-  - foundation/control_plane(제어면) no longer imports Stage10 pipeline(10단계 파이프라인) directly for MT5 report parsing
-  - direct control-plane to stage-pipeline imports(제어면에서 단계 파이프라인 직접 가져오기) are now blocked by code_surface_audit(코드 표면 감사)
-  - shared alpha helpers(공유 알파 도구) now require explicit ScoutRunContext(명시적 탐색 실행 문맥) for stage/run identity(단계/실행 정체성)
-  - MT5 runtime support(MT5 런타임 지원) now imports foundation-owned modules(기반 소유 모듈) for decision surface(의사결정 표면), ONNX bridge(ONNX
-    연결), terminal runner(터미널 실행기), runtime artifacts(런타임 산출물), and MQL5 compile(MQL5 컴파일)
-  boundary: This reduces code-surface drift(코드 표면 드리프트) and records remaining debt(남은 부채); it does not claim full Stage10
-    pipeline decomposition(10단계 파이프라인 완전 분해).
+  - foundation/control_plane(제어면) no longer imports Stage10 pipeline(10단계 파이프라인) directly
+    for MT5 report parsing
+  - direct control-plane to stage-pipeline imports(제어면에서 단계 파이프라인 직접 가져오기) are now
+    blocked by code_surface_audit(코드 표면 감사)
+  - shared alpha helpers(공유 알파 도구) now require explicit ScoutRunContext(명시적 탐색 실행
+    문맥) for stage/run identity(단계/실행 정체성)
+  - MT5 runtime support(MT5 런타임 지원) now imports foundation-owned modules(기반 소유 모듈)
+    for decision surface(의사결정 표면), ONNX bridge(ONNX 연결), terminal runner(터미널 실행기),
+    runtime artifacts(런타임 산출물), and MQL5 compile(MQL5 컴파일)
+  boundary: This reduces code-surface drift(코드 표면 드리프트) and records remaining debt(남은
+    부채); it does not claim full Stage10 pipeline decomposition(10단계 파이프라인 완전 분해).
 agent_control_control_plane_v2:
   status: completed
   packet_id: codex_control_plane_v2_incremental_v1
@@ -1473,8 +1519,9 @@ agent_control_control_plane_v2:
   - foundation/control_plane/work_packet_schema_lint.py
   - foundation/control_plane/skill_receipt_schema_lint.py
   - foundation/control_plane/required_gate_coverage_audit.py
-  boundary: Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장), required gate coverage(필수 제한문 포함 여부), reachable
-    agent-control registry validation(도달 가능한 에이전트 제어 등록부 검증), and evidence gates(근거 제한문); it does not change trading alpha
+  boundary: Control Plane v2(제어면 v2) governs Codex work claims(코덱스 작업 주장), required
+    gate coverage(필수 제한문 포함 여부), reachable agent-control registry validation(도달 가능한
+    에이전트 제어 등록부 검증), and evidence gates(근거 제한문); it does not change trading alpha
     judgment(거래 알파 판정), runtime authority(런타임 권위), or operating promotion(운영 승격).
 agent_control_alpha_scout_common_foundation:
   status: completed_code_ownership_and_agent_closeout_hardening
@@ -1488,8 +1535,9 @@ agent_control_alpha_scout_common_foundation:
   - shared alpha helpers(공유 알파 도구) require explicit context(명시 문맥 필요)
   - cross-stage stage_pipelines imports(교차 단계 파이프라인 가져오기) blocked(차단됨)
   - self_correction_policy(자기 수정 정책) added in plan_only(계획 전용) mode
-  boundary: This is code ownership(코드 소유권), agent routing(에이전트 라우팅), and closeout hardening(마감 강화); it does not claim alpha
-    quality(알파 품질), MT5 runtime authority(MT5 런타임 권위), live readiness(실거래 준비), or operating promotion(운영 승격).
+  boundary: This is code ownership(코드 소유권), agent routing(에이전트 라우팅), and closeout
+    hardening(마감 강화); it does not claim alpha quality(알파 품질), MT5 runtime authority(MT5
+    런타임 권위), live readiness(실거래 준비), or operating promotion(운영 승격).
 agent_control_p0p1_runtime_evidence_cleanup:
   status: merged_code_evidence_cleanup_routing_receipt_only
   receipt_path: docs/agent_control/packets/p0p1_runtime_evidence_cleanup/routing_receipt.yaml
@@ -1501,17 +1549,19 @@ agent_control_p0p1_runtime_evidence_cleanup:
   - foundation/mt5/mql5_compile.py
   - foundation/mt5/runtime_artifacts.py
   - foundation/mt5/terminal_runner.py
-  boundary: This cleanup improves runtime evidence wiring(런타임 근거 배선) and helper ownership(도구 소유권); no new MT5 terminal run(새
-    MT5 터미널 실행), alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격), or completed packet claim(완료
-    묶음 주장) is made from the receipt alone.
+  boundary: This cleanup improves runtime evidence wiring(런타임 근거 배선) and helper ownership(도구
+    소유권); no new MT5 terminal run(새 MT5 터미널 실행), alpha quality(알파 품질), runtime authority(런타임
+    권위), operating promotion(운영 승격), or completed packet claim(완료 묶음 주장) is made from
+    the receipt alone.
 state_sync_current_truth_20260430:
   status: completed
   packet_id: current_truth_sync_20260430_v1
   packet_path: docs/agent_control/packets/current_truth_sync_20260430_v1
   decision_path: docs/decisions/2026-04-30_current_truth_sync_stage12_alpha_scout_ops.md
   state_sync_audit_status: pass
-  boundary: This sync aligns current-truth narration(현재 진실 설명), decision memo(결정 메모), changelog(변경기록), and architecture debt(구조
-    부채); it does not change trading results(거래 결과) or create promotion meaning(승격 의미).
+  boundary: This sync aligns current-truth narration(현재 진실 설명), decision memo(결정 메모),
+    changelog(변경기록), and architecture debt(구조 부채); it does not change trading results(거래
+    결과) or create promotion meaning(승격 의미).
 alpha_stage_transition_philosophy_correction_20260501:
   status: policy_synced
   packet_id: alpha_stage_transition_philosophy_correction_v1
@@ -1520,70 +1570,96 @@ alpha_stage_transition_philosophy_correction_20260501:
   policy_paths:
   - docs/policies/stage_structure.md
   - docs/policies/exploration_mandate.md
-  boundary: This correction(정정)은 alpha exploration stage transition(알파 탐색 단계 전환)을 topic pivot(주제 전환)으로 고정하고 Stage10 run01Y(10단계
-    실행 01Y)를 seed surface(씨앗 표면)로 재해석한다; it does not change trading results(거래 결과) or create promotion meaning(승격 의미).
+  boundary: This correction(정정)은 alpha exploration stage transition(알파 탐색 단계 전환)을
+    topic pivot(주제 전환)으로 고정하고 Stage10 run01Y(10단계 실행 01Y)를 seed surface(씨앗 표면)로 재해석한다;
+    it does not change trading results(거래 결과) or create promotion meaning(승격 의미).
 open_items: []
-
 closed_memory:
-- Stage 12 closed with stage12_model_family_challenge_closeout_v1(12단계 ExtraTrees 마감 묶음); Stage13(13단계)는 이후 독립 MLP(다층 퍼셉트론) 주제로 열고 닫았으며 alpha quality(알파 품질), promotion(승격), runtime authority(런타임 권위)는 없음
-- Stage 12 preserved RUN03L recency-weighted(최근성 가중), RUN03O trend/chop(추세/횡보), and RUN03Q risk-on OOS(위험선호 표본외) as clues(단서), not selected baseline(선택 기준선)
-- Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison and Stage 11 context surface
-- Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python run
-- Stage 12 RUN03C is a prior standalone(이전 단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행), not the current run(현재 실행)
-- Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬 구조 탐색); package judgment(패키지 판정) is
-  inconclusive(불충분)
-- Stage 12 RUN03E completed prior MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위 변형) v11_base_leaf20_q85
-- Stage 12 RUN03G completed variant stability structural scout(변형 안정성 구조 탐침); next MT5 candidates(다음 MT5 후보)는 v09/v16/v13
-- Stage 12 RUN03F completed Tier A/B/routed MT5 tier-balance supplement(Tier A/B/라우팅 MT5 티어 균형 보강) for the v11 ExtraTrees(엑스트라
-  트리) surface
-- Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording, MT5 execution, trade attribution, and
-  tier-balance completion packets(목록, MT5 기록, MT5 실행, 거래 귀속, 티어 균형 보강 묶음) as cross-stage evidence records(교차 단계 근거 기록)
-- Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치), and control-plane direct stage imports(제어면의
-  단계 직접 가져오기)
-- Control Plane v2(제어면 v2) now routes Codex prompts(코덱스 프롬프트) through work family(작업군), surface(작업 표면), risk vector(위험축),
-  decision lock(결정 고정), work packet schema(작업 묶음 스키마), skill receipt schema(스킬 영수증 스키마), and closeout gate(마감 제한문)
-- alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) completed code ownership(코드 소유권), explicit ScoutRunContext(명시적 탐색 실행 문맥),
-  stage_pipelines boundary(단계 파이프라인 경계), and plan-only self-correction(계획 전용 자기 수정) hardening
-- p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) is merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt only(라우팅
-  영수증만 있음), not a completed packet claim(완료 묶음 주장)
-- current_truth_sync_20260430_v1(현재 진실 동기화 묶음) backfilled durable Stage12/ops sync decision(지속 Stage12/운영 동기화 결정) without
-  changing trading results(거래 결과)
-- alpha_stage_transition_philosophy_correction_v1(알파 단계 전환 철학 정정 묶음) fixed Stage10 run01Y(10단계 실행 01Y) as seed surface(씨앗
-  표면), not baseline(기준선), and alpha stage transitions(알파 단계 전환) as topic pivots(주제 전환)
+- Stage 12 closed with stage12_model_family_challenge_closeout_v1(12단계 ExtraTrees
+  마감 묶음); Stage13(13단계)는 이후 독립 MLP(다층 퍼셉트론) 주제로 열고 닫았으며 alpha quality(알파 품질), promotion(승격),
+  runtime authority(런타임 권위)는 없음
+- Stage 12 preserved RUN03L recency-weighted(최근성 가중), RUN03O trend/chop(추세/횡보), and
+  RUN03Q risk-on OOS(위험선호 표본외) as clues(단서), not selected baseline(선택 기준선)
+- Stage 12 RUN03A is invalid_for_standalone_scope because it pulled Stage 10/11 comparison
+  and Stage 11 context surface
+- Stage 12 RUN03B has stage10_11_inheritance=false and is the source standalone Python
+  run
+- Stage 12 RUN03C is a prior standalone(이전 단독) MT5 runtime_probe(메타트레이더5 런타임 탐침) run(실행),
+  not the current run(현재 실행)
+- Stage 12 RUN03D completed standalone(단독) batch20(20개 묶음) Python structural scout(파이썬
+  구조 탐색); package judgment(패키지 판정) is inconclusive(불충분)
+- Stage 12 RUN03E completed prior MT5 runtime_probe(MT5 런타임 탐침) for RUN03D top variant(상위
+  변형) v11_base_leaf20_q85
+- Stage 12 RUN03G completed variant stability structural scout(변형 안정성 구조 탐침); next
+  MT5 candidates(다음 MT5 후보)는 v09/v16/v13
+- Stage 12 RUN03F completed Tier A/B/routed MT5 tier-balance supplement(Tier A/B/라우팅
+  MT5 티어 균형 보강) for the v11 ExtraTrees(엑스트라 트리) surface
+- Agent-control KPI rebuild(에이전트 제어 KPI 재구축) materialized inventory, MT5 recording,
+  MT5 execution, trade attribution, and tier-balance completion packets(목록, MT5 기록,
+  MT5 실행, 거래 귀속, 티어 균형 보강 묶음) as cross-stage evidence records(교차 단계 근거 기록)
+- Code-surface audit(코드 표면 감사) now guards large files(큰 파일), folder placement(폴더 배치),
+  and control-plane direct stage imports(제어면의 단계 직접 가져오기)
+- Control Plane v2(제어면 v2) now routes Codex prompts(코덱스 프롬프트) through work family(작업군),
+  surface(작업 표면), risk vector(위험축), decision lock(결정 고정), work packet schema(작업 묶음
+  스키마), skill receipt schema(스킬 영수증 스키마), and closeout gate(마감 제한문)
+- alpha_scout_common_foundation_v1(알파 탐색 공통 기반 묶음) completed code ownership(코드 소유권),
+  explicit ScoutRunContext(명시적 탐색 실행 문맥), stage_pipelines boundary(단계 파이프라인 경계), and
+  plan-only self-correction(계획 전용 자기 수정) hardening
+- p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) is merged code/evidence cleanup(병합된
+  코드/근거 정리) with routing_receipt only(라우팅 영수증만 있음), not a completed packet claim(완료
+  묶음 주장)
+- current_truth_sync_20260430_v1(현재 진실 동기화 묶음) backfilled durable Stage12/ops sync
+  decision(지속 Stage12/운영 동기화 결정) without changing trading results(거래 결과)
+- alpha_stage_transition_philosophy_correction_v1(알파 단계 전환 철학 정정 묶음) fixed Stage10
+  run01Y(10단계 실행 01Y) as seed surface(씨앗 표면), not baseline(기준선), and alpha stage transitions(알파
+  단계 전환) as topic pivots(주제 전환)
 - Stage 11 is reviewed_closed_no_next_stage_opened
-- Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion candidate
-- Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a promotion
+- Stage 11 run02Z family remains tiny-sample runtime_probe evidence, not a promotion
+  candidate
+- Stage 10 run01Y-run01AC remain closed inconclusive runtime_probe evidence, not a
+  promotion
 - MT5 price-proxy top3 weights must not be read as actual NDX/QQQ weights
 forbidden_shortcuts:
 - do not resurrect old Stage 06 or Stage 07 conclusions as current truth
 - do not turn Tier labels into exploration permissions
-- do not treat the 56-feature interim quarantine artifact as the final pre-alpha model input
-- do not treat MT5 price-proxy weights as actual index, fund, market-cap, or float-adjusted weights
+- do not treat the 56-feature interim quarantine artifact as the final pre-alpha model
+  input
+- do not treat MT5 price-proxy weights as actual index, fund, market-cap, or float-adjusted
+  weights
 - do not treat the Stage 05 feature-integrity audit as runtime parity or model quality
 - do not treat the superseded Stage 06 blocked runtime probe as current truth
 - do not treat Stage 06 runtime authority as model quality or operating promotion
-- do not treat the Stage 07 baseline training smoke as alpha quality, live readiness, or operating promotion
-- do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality judgment
-- do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality judgment
-- do not treat Stage 10 run01A-run01AC runtime_probe as alpha quality, live readiness, runtime authority expansion, or operating
-  promotion
-- do not treat Stage 10 run01Y as alpha baseline(알파 기준선), standard run(표준 실행), operating reference(운영 기준), or winner(승자);
-  it is seed surface(씨앗 표면) and preserved clue(보존 단서)
-- do not close alpha exploration stages(알파 탐색 단계) by selecting baseline(기준선) unless an explicit promotion/operating packet(명시
-  승격/운영 작업 묶음) opens
+- do not treat the Stage 07 baseline training smoke as alpha quality, live readiness,
+  or operating promotion
+- do not treat the Stage 08 alpha entry protocol as an alpha result or alpha quality
+  judgment
+- do not treat the Stage 09 pre-alpha handoff packet as an alpha result or alpha quality
+  judgment
+- do not treat Stage 10 run01A-run01AC runtime_probe as alpha quality, live readiness,
+  runtime authority expansion, or operating promotion
+- do not treat Stage 10 run01Y as alpha baseline(알파 기준선), standard run(표준 실행), operating
+  reference(운영 기준), or winner(승자); it is seed surface(씨앗 표면) and preserved clue(보존
+  단서)
+- do not close alpha exploration stages(알파 탐색 단계) by selecting baseline(기준선) unless
+  an explicit promotion/operating packet(명시 승격/운영 작업 묶음) opens
 - do not treat the Stage 11 scaffold as a Stage 11 run result or robustness proof
-- do not treat Stage 11 run02A-run02S, run02W-run02Z, and run02AA-run02AK LightGBM MT5 runtime_probe or run02T-run02V/run02X-run02Y
-  Python structural probes as alpha quality, live readiness, runtime authority expansion, or operating promotion
+- do not treat Stage 11 run02A-run02S, run02W-run02Z, and run02AA-run02AK LightGBM
+  MT5 runtime_probe or run02T-run02V/run02X-run02Y Python structural probes as alpha
+  quality, live readiness, runtime authority expansion, or operating promotion
 - do not treat Stage 12 RUN03A as standalone evidence; it is invalid_for_standalone_scope
-- do not treat Stage 12 RUN03B ExtraTrees standalone Python structural scout as MT5 runtime evidence, alpha quality, live
+- do not treat Stage 12 RUN03B ExtraTrees standalone Python structural scout as MT5
+  runtime evidence, alpha quality, live readiness, runtime authority expansion, or
+  operating promotion
+- do not treat Stage 12 RUN03F tier-balance MT5 runtime_probe as alpha quality, live
   readiness, runtime authority expansion, or operating promotion
-- do not treat Stage 12 RUN03F tier-balance MT5 runtime_probe as alpha quality, live readiness, runtime authority expansion,
-  or operating promotion
-- do not treat alpha_scout_common_foundation_v1 code/agent hardening as alpha quality, live readiness, runtime authority expansion,
-  or operating promotion
-- do not treat p0p1_runtime_evidence_cleanup routing_receipt only as a completed packet closeout
-- do not claim model readiness, runtime authority, or operating promotion from the Stage 02 freeze
-- do not silently widen the first freeze back to all valid rows or partial cash-session days without new evidence
+- do not treat alpha_scout_common_foundation_v1 code/agent hardening as alpha quality,
+  live readiness, runtime authority expansion, or operating promotion
+- do not treat p0p1_runtime_evidence_cleanup routing_receipt only as a completed packet
+  closeout
+- do not claim model readiness, runtime authority, or operating promotion from the
+  Stage 02 freeze
+- do not silently widen the first freeze back to all valid rows or partial cash-session
+  days without new evidence
 stage17_xgboost_run11A_characteristic_mt5_kpi:
   packet_id: stage17_run11A_xgb_characteristic_mt5_kpi_v1
   status: reviewed_runtime_probe_completed
@@ -1625,7 +1701,8 @@ stage17_model_family_challenge_closeout:
   selected_promotion_candidate: none
   selected_baseline: none
   preserved_clues: run11A_visible_regularized_boosting_characteristic_q90,run11B_frequency_density_increase_q80,run11C_direction_asymmetry_long_trade_density,run11D_stable_long_probability_skew,run11E_feature_driver_saturation_no_new_axis,run11F_dart_top3_feature_shift,run11G_dart_no_second_order_axis
-  negative_memory: XGBoost DART follow-up did not reveal a second-order attribution axis
+  negative_memory: XGBoost DART follow-up did not reveal a second-order attribution
+    axis
   external_verification_status: completed_for_recorded_stage17_mt5_runtime_probes
   closeout_packet_path: stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/stage17_closeout_packet.md
   closeout_decision_path: docs/decisions/2026-05-03_stage17_xgboost_dart_attribution_closeout.md
@@ -2529,3 +2606,35 @@ stage28_markov_run22C_supplement:
   report_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/run22C_markov_regression_supplement_packet.md
   packet_summary_path: docs/agent_control/packets/stage28_run22C_markov_regression_supplement_state_variance_attribution_v1/aggregate_summary.json
   next_action: run23A_river_online_drift_learning_scout_v1
+stage29_river_online_drift_runtime_probe:
+  run_id: run23B_river_online_drift_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_stage29_runtime_probe_completed
+  external_verification_status: completed
+  mt5_kpi_records: 10
+  normalized_records: 6
+  report_path: stages/29_adaptive_model__river_online_drift_learning/03_reviews/stage29_closeout_packet.md
+stage30_calibration_abstention_runtime_probe:
+  run_id: run24B_probability_calibration_abstention_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_stage30_runtime_probe_completed
+  external_verification_status: completed
+  mt5_kpi_records: 10
+  normalized_records: 6
+  report_path: stages/30_decision_layer__probability_calibration_abstention/03_reviews/stage30_closeout_packet.md
+stage31_tabnet_proxy_runtime_probe:
+  run_id: run25B_tabnet_attentive_tabular_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_stage31_runtime_probe_completed
+  external_verification_status: completed
+  mt5_kpi_records: 10
+  normalized_records: 6
+  report_path: stages/31_model_family_challenge__tabnet_attentive_tabular_scout/03_reviews/stage31_closeout_packet.md
+stage32_tcn_proxy_runtime_probe:
+  run_id: run26B_tcn_temporal_convolution_runtime_probe_v1
+  status: completed
+  judgment: inconclusive_stage32_runtime_probe_completed
+  external_verification_status: completed
+  mt5_kpi_records: 10
+  normalized_records: 6
+  report_path: stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/stage32_closeout_packet.md

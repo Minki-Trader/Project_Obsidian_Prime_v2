@@ -2,13 +2,13 @@
 
 ## Current Truth(현재 진실)
 
-- active stage(활성 단계): `29_adaptive_model__river_online_drift_learning`
-- current run(현재 실행): `not_started`
-- active branch(활성 브랜치): `codex/stage28-markov-regression`
-- active stage folder(활성 단계 폴더): `stages/29_adaptive_model__river_online_drift_learning`
+- active stage(활성 단계): `32_sequence_model__tcn_temporal_convolution_context`
+- current run(현재 실행): `stage20_32_goal_complete`
+- active branch(활성 브랜치): `codex/stage29-32-goal-completion`
+- active stage folder(활성 단계 폴더): `stages/32_sequence_model__tcn_temporal_convolution_context`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): Stage28(28단계)는 `run22A_markov_regression_state_link_scout_v1`, `run22B_markov_regression_state_runtime_probe_v1`, `stage28_closeout_packet.md`, Stage29 open-only(Stage29 개방만)를 완료했다. 현재 첫 미완료 milestone(마일스톤)은 Stage29(29단계) `run23A_river_online_drift_learning_scout_v1` broad scout(넓은 탐색)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): Stage29~32(29~32단계)는 structural scout(구조 탐색), MT5 runtime_probe(MT5 런타임 탐침), closeout(마감)을 완료했다. 현재 Stage20-32 goal(20-32단계 목표)은 complete(완료) 상태이며 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
 
 ## Execution Contract(실행 계약)
 
@@ -60,30 +60,30 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [x] Stage27(27단계) quantile boosting(분위수 부스팅) scout/probe/closeout/open Stage28. Completed(완료): `run21A_quantile_boosting_tail_risk_surface_scout_v1`, `run21B_quantile_boosting_tail_risk_runtime_probe_v1`, `stage27_closeout_packet.md`, Stage28 open-only(Stage28 개방만).
 - [x] Stage20~27(20~27단계) characteristic and actual MT5 routed rerun synthesis(특징 및 실제 MT5 라우팅 재실행 종합) supplement(보강). Completed(완료): `docs/workspace/stage20_27_characteristic_synthesis.md`, `docs/agent_control/packets/stage20_27_characteristic_synthesis_v1`, `docs/agent_control/packets/stage20_27_actual_mt5_rerun_verification_v1`. Effect(효과): 각 model family/topic(모델군/주제)의 preserved clue(보존 단서), MT5 trade shape(MT5 거래 모양), negative memory(부정 기억), reopen condition(재개 조건)을 실제 routed validation/OOS(검증/표본외 라우팅) 16개 재실행으로 확인했지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 - [x] Stage28(28단계) Markov regression(마르코프 회귀) scout/probe/closeout/open Stage29. Completed(완료): `run22A_markov_regression_state_link_scout_v1`, `run22B_markov_regression_state_runtime_probe_v1`, `stage28_closeout_packet.md`, Stage29 open-only(Stage29 개방만).
-- [ ] Stage29(29단계) River online ML(리버 온라인 머신러닝) scout/probe/closeout/open Stage30. In progress(진행 중): opened_not_started(개방 후 미시작); next(다음) `run23A_river_online_drift_learning_scout_v1`.
-- [ ] Stage30(30단계) calibration/abstention(보정/기권) scout/probe/closeout/open Stage31
-- [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
-- [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
+- [x] Stage29(29단계) River online ML(리버 온라인 머신러닝) scout/probe/closeout/open Stage30. Completed(완료): `run23A_river_online_drift_learning_scout_v1`, `run23B_river_online_drift_runtime_probe_v1`, `stage29_closeout_packet.md`, Stage30 open-only(Stage30 개방만).
+- [x] Stage30(30단계) calibration/abstention(보정/기권) scout/probe/closeout/open Stage31. Completed(완료): `run24A_probability_calibration_abstention_scout_v1`, `run24B_probability_calibration_abstention_runtime_probe_v1`, `stage30_closeout_packet.md`, Stage31 open-only(Stage31 개방만).
+- [x] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32. Completed(완료): `run25A_tabnet_attentive_tabular_scout_v1`, `run25B_tabnet_attentive_tabular_runtime_probe_v1`, `stage31_closeout_packet.md`, Stage32 open-only(Stage32 개방만).
+- [x] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary. Completed(완료): `run26A_tcn_temporal_convolution_context_scout_v1`, `run26B_tcn_temporal_convolution_runtime_probe_v1`, `stage32_closeout_packet.md`, final summary(최종 요약).
 
-Current active milestone(현재 활성 마일스톤): Stage29(29단계) `run23A_river_online_drift_learning_scout_v1` broad scout(넓은 탐색).
+Current active milestone(현재 활성 마일스톤): Stage20-32 goal(20-32단계 목표) complete(완료). 다음 작업은 새 stage/topic(단계/주제)를 별도로 열 때 정한다.
 
 효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `stage28_closeout_stage29_open` completed(완료).
-- active branch(활성 브랜치): `codex/stage28-markov-regression`.
-- active stage/current run id(활성 단계/현재 실행 ID): Stage29(29단계), `not_started`.
-- created/updated folders(생성/수정 폴더): `stages/28_regime_model__markov_switching_regression_state_link/03_reviews`, `stages/29_adaptive_model__river_online_drift_learning/00_spec`, `stages/29_adaptive_model__river_online_drift_learning/01_inputs`, `stages/29_adaptive_model__river_online_drift_learning/03_reviews`, `stages/29_adaptive_model__river_online_drift_learning/04_selected`, `docs/agent_control/packets/stage28_markov_regression_closeout_v1`.
-- changed files(변경 파일): Stage28 closeout(28단계 마감), Stage29 open docs(29단계 개방 문서), current truth docs(현재 진실 문서), goal plan(목표 계획).
-- active stage folder(활성 단계 폴더): `stages/29_adaptive_model__river_online_drift_learning`.
-- current run id(현재 실행 ID): `not_started`.
-- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): previous Stage28 report(이전 28단계 보고서) `stages/28_regime_model__markov_switching_regression_state_link/02_runs/run22B_markov_regression_state_runtime_probe_v1/mt5/reports`; closeout report(마감 보고서) `stages/28_regime_model__markov_switching_regression_state_link/03_reviews/stage28_closeout_packet.md`.
+- latest completed work(최근 완료 작업): `stage29_32_goal_completion` completed(완료).
+- active branch(활성 브랜치): `codex/stage29-32-goal-completion`.
+- active stage/current run id(활성 단계/현재 실행 ID): Stage32(32단계), `stage20_32_goal_complete`.
+- created/updated folders(생성/수정 폴더): `stages/29_adaptive_model__river_online_drift_learning`, `stages/30_decision_layer__probability_calibration_abstention`, `stages/31_model_family_challenge__tabnet_attentive_tabular_scout`, `stages/32_sequence_model__tcn_temporal_convolution_context`, `docs/agent_control/packets/stage29_*`, `docs/agent_control/packets/stage30_*`, `docs/agent_control/packets/stage31_*`, `docs/agent_control/packets/stage32_*`.
+- changed files(변경 파일): Stage29~32 run packets(실행 묶음), closeout packets(마감 묶음), current truth docs(현재 진실 문서), ledgers(장부), goal summary(목표 요약), runner code(실행 코드).
+- active stage folder(활성 단계 폴더): `stages/32_sequence_model__tcn_temporal_convolution_context`.
+- current run id(현재 실행 ID): `stage20_32_goal_complete`.
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): Stage29~32 runtime reports(런타임 보고서)는 각 `stages/<stage_id>/02_runs/<runB>/mt5/reports` 아래에 있다. Final summary(최종 요약): `docs/workspace/stage29_32_goal_completion_summary.md`.
 - blocker(차단 사유): `none(없음)`.
-- exact next action(정확한 다음 행동): `run23A_river_online_drift_learning_scout_v1`.
+- exact next action(정확한 다음 행동): `open_next_stage_or_new_goal_when_requested`.
 - git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending(대기).
 
-효과(effect, 효과): 다음 재개는 Stage29(29단계) River online ML(리버 온라인 머신러닝) broad scout(넓은 탐색)에서 시작한다.
+효과(effect, 효과): 다음 재개는 Stage20-32(20-32단계)가 닫혔다는 전제에서 새 stage/topic(단계/주제)을 열 수 있다.
 
 ## Per-Stage Milestone Loop(단계별 마일스톤 반복)
 

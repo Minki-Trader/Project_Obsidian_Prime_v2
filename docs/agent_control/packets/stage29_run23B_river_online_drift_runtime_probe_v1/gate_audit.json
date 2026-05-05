@@ -1,0 +1,57 @@
+{
+  "final_claim_guard": {
+    "allowed_claims": [
+      "runtime_probe",
+      "inconclusive",
+      "blocked",
+      "negative_memory",
+      "preserved_clue"
+    ],
+    "claim_boundary": "stage29_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "forbidden_claims": [
+      "edge",
+      "alpha_quality",
+      "baseline",
+      "promotion_candidate",
+      "operating_promotion",
+      "runtime_authority"
+    ],
+    "status": "passed"
+  },
+  "kpi_contract_audit": {
+    "normalized_records": 6,
+    "parser_errors": 0,
+    "status": "passed",
+    "trade_parser_errors": 0
+  },
+  "required_gate_coverage_audit": {
+    "covered_gates": [
+      "runtime_evidence_gate",
+      "scope_completion_gate",
+      "kpi_contract_audit",
+      "required_gate_coverage_audit",
+      "final_claim_guard"
+    ],
+    "packet_id": "stage29_run23B_river_online_drift_runtime_probe_v1",
+    "required_gates": [
+      "runtime_evidence_gate",
+      "scope_completion_gate",
+      "kpi_contract_audit",
+      "required_gate_coverage_audit",
+      "final_claim_guard"
+    ],
+    "status": "passed"
+  },
+  "runtime_evidence_gate": {
+    "external_verification_status": "completed",
+    "mt5_kpi_record_count": 10,
+    "score_table_parity_passed": true,
+    "status": "passed"
+  },
+  "scope_completion_gate": {
+    "attempt_count": 6,
+    "claim_boundary": "stage29_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "expected_attempts": 6,
+    "status": "passed"
+  }
+}

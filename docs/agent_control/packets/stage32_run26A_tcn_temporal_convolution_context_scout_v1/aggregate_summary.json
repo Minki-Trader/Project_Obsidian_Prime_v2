@@ -1,0 +1,318 @@
+{
+  "boundary": "stage32_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_stage32_structural_scout_completed",
+  "dependency_note": "torch(파이토치) missing; lagged convolution proxy(지연 합성곱 대체) used and native TCN retry condition recorded.",
+  "exploration_label": "stage32_SequenceModel__TCNTemporalConvolutionContext",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_set_id": "feature_set_v2_stage32_topic_probe",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "sklearn_lag_convolution_proxy_torch_dependency_blocked",
+  "next_action": "run26B_tcn_temporal_convolution_runtime_probe_v1",
+  "packet_id": "stage32_run26A_tcn_temporal_convolution_context_scout_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26A_tcn_temporal_convolution_context_scout_v1/predictions/tier_a_stage32_structural_predictions.parquet",
+      "rows": 46650,
+      "sha256": "e454b2c72cf1c1ee2889028789b733a577504797b11a78f5d539441c36118e50"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26A_tcn_temporal_convolution_context_scout_v1/predictions/tier_ab_stage32_structural_predictions.parquet",
+      "rows": 59048,
+      "sha256": "0c7e6395e75dee938389ae0a7999bf12f34e155ac91c8cda8a7298f6f163acd1"
+    },
+    "tier_b_predictions": {
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26A_tcn_temporal_convolution_context_scout_v1/predictions/tier_b_stage32_structural_predictions.parquet",
+      "rows": 12398,
+      "sha256": "c61b34be0a302028b5fc2ce2b29e786c49a837a64c49d7ccddca05b5b53b45ce"
+    }
+  },
+  "python_dependency_status": {
+    "pytorch_tabnet": false,
+    "river": false,
+    "sklearn": true,
+    "sklearn_version": "1.8.0",
+    "torch": false
+  },
+  "run_id": "run26A_tcn_temporal_convolution_context_scout_v1",
+  "run_number": "run26A",
+  "selected_details": {
+    "features": [
+      "tcn_fast_return_kernel",
+      "tcn_slow_return_kernel",
+      "tcn_range_pressure",
+      "tcn_trend_context"
+    ],
+    "tier_a": {
+      "C": 0.42,
+      "feature_count": 4,
+      "train_rows": 29222
+    },
+    "tier_b": {
+      "C": 0.42,
+      "feature_count": 4,
+      "train_rows": 38192
+    }
+  },
+  "selected_variant_id": "v01_dilated_return_range_logistic_proxy",
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "32_sequence_model__tcn_temporal_convolution_context",
+  "stage_number": 32,
+  "status": "reviewed_structural_scout_completed",
+  "thresholds": {
+    "quantile": 0.8,
+    "tier_a": 0.3755494419310125,
+    "tier_b": 0.34272479115847204
+  },
+  "tier_records": [
+    {
+      "metrics": {
+        "long_count": 356,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 7421,
+        "signal_count": 7777,
+        "signal_coverage": 0.1667095391211147,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26A_tcn_temporal_convolution_context_scout_v1/predictions/tier_a_stage32_structural_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.42457805907172996,
+          "balanced_accuracy": 0.4083107838599915,
+          "directional_correct_count": 650,
+          "directional_hit_rate": 0.3864447086801427,
+          "log_loss": 1.080539402698286,
+          "long_count": 75,
+          "macro_f1": 0.3838770371595895,
+          "mean_probability": {
+            "flat": 0.3337651146433946,
+            "long": 0.3331629699681057,
+            "short": 0.33307191538849973
+          },
+          "mean_probability_margin": 0.043526546318048906,
+          "rows": 7584,
+          "short_count": 1607,
+          "signal_count": 1682,
+          "signal_coverage": 0.22178270042194093
+        },
+        "train": {
+          "accuracy": 0.3657518308124016,
+          "balanced_accuracy": 0.3736044911905454,
+          "directional_correct_count": 1596,
+          "directional_hit_rate": 0.38681531749878817,
+          "log_loss": 1.0934501629141016,
+          "long_count": 177,
+          "macro_f1": 0.3463795945201409,
+          "mean_probability": {
+            "flat": 0.3333921708318261,
+            "long": 0.3333695062938495,
+            "short": 0.3332383228743245
+          },
+          "mean_probability_margin": 0.03208205313461694,
+          "rows": 29222,
+          "short_count": 3949,
+          "signal_count": 4126,
+          "signal_coverage": 0.14119499007597017
+        },
+        "validation": {
+          "accuracy": 0.3855140186915888,
+          "balanced_accuracy": 0.3818043390347295,
+          "directional_correct_count": 703,
+          "directional_hit_rate": 0.3570340274250889,
+          "log_loss": 1.0944081651842166,
+          "long_count": 104,
+          "macro_f1": 0.3616604671097805,
+          "mean_probability": {
+            "flat": 0.33052308823936466,
+            "long": 0.33370055665403653,
+            "short": 0.3357763551065988
+          },
+          "mean_probability_margin": 0.03742533644527926,
+          "rows": 9844,
+          "short_count": 1865,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 1547,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 2288,
+        "signal_count": 3835,
+        "signal_coverage": 0.30932408452976284,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26A_tcn_temporal_convolution_context_scout_v1/predictions/tier_b_stage32_structural_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.504708097928437,
+          "balanced_accuracy": 0.40962279251065176,
+          "directional_correct_count": 120,
+          "directional_hit_rate": 0.3498542274052478,
+          "log_loss": 1.0717876301211275,
+          "long_count": 79,
+          "macro_f1": 0.4012577934679384,
+          "mean_probability": {
+            "flat": 0.35294857124533824,
+            "long": 0.3290555227430288,
+            "short": 0.317995906011633
+          },
+          "mean_probability_margin": 0.04357558617631506,
+          "rows": 1062,
+          "short_count": 264,
+          "signal_count": 343,
+          "signal_coverage": 0.3229755178907721
+        },
+        "train": {
+          "accuracy": 0.42073578595317723,
+          "balanced_accuracy": 0.370136629730135,
+          "directional_correct_count": 973,
+          "directional_hit_rate": 0.32239893969516237,
+          "log_loss": 1.0834698108112948,
+          "long_count": 1262,
+          "macro_f1": 0.3535455156703256,
+          "mean_probability": {
+            "flat": 0.3469002847152374,
+            "long": 0.33373625103614746,
+            "short": 0.3193634642486152
+          },
+          "mean_probability_margin": 0.037379225870734646,
+          "rows": 8970,
+          "short_count": 1756,
+          "signal_count": 3018,
+          "signal_coverage": 0.33645484949832777
+        },
+        "validation": {
+          "accuracy": 0.5494505494505495,
+          "balanced_accuracy": 0.3643115068498484,
+          "directional_correct_count": 121,
+          "directional_hit_rate": 0.2552742616033755,
+          "log_loss": 1.0622637322633075,
+          "long_count": 206,
+          "macro_f1": 0.3548208243467383,
+          "mean_probability": {
+            "flat": 0.36050133702985443,
+            "long": 0.3306960778707082,
+            "short": 0.30880258509943753
+          },
+          "mean_probability_margin": 0.041731428562022825,
+          "rows": 2366,
+          "short_count": 268,
+          "signal_count": 474,
+          "signal_coverage": 0.2003381234150465
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 421,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 8275,
+        "signal_count": 8696,
+        "signal_coverage": 0.1472700176127896,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26A_tcn_temporal_convolution_context_scout_v1/predictions/tier_ab_stage32_structural_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4344205412907703,
+          "balanced_accuracy": 0.4101983507755915,
+          "directional_correct_count": 682,
+          "directional_hit_rate": 0.3831460674157303,
+          "log_loss": 1.0794644105080313,
+          "long_count": 75,
+          "macro_f1": 0.38762243610911207,
+          "mean_probability": {
+            "flat": 0.3361214448436334,
+            "long": 0.33265844661013305,
+            "short": 0.3312201085462336
+          },
+          "mean_probability_margin": 0.04353256995088243,
+          "rows": 8646,
+          "short_count": 1705,
+          "signal_count": 1780,
+          "signal_coverage": 0.20587554938699976
+        },
+        "train": {
+          "accuracy": 0.3786656891495601,
+          "balanced_accuracy": 0.37690024137079875,
+          "directional_correct_count": 1861,
+          "directional_hit_rate": 0.38347413970739747,
+          "log_loss": 1.091106118130844,
+          "long_count": 227,
+          "macro_f1": 0.3520576108045806,
+          "mean_probability": {
+            "flat": 0.33656476670358454,
+            "long": 0.3334556421426768,
+            "short": 0.3299795911537387
+          },
+          "mean_probability_margin": 0.03332617859133499,
+          "rows": 38192,
+          "short_count": 4626,
+          "signal_count": 4853,
+          "signal_coverage": 0.12706849602010892
+        },
+        "validation": {
+          "accuracy": 0.41728091728091726,
+          "balanced_accuracy": 0.3926395154460369,
+          "directional_correct_count": 734,
+          "directional_hit_rate": 0.35579253514299564,
+          "log_loss": 1.0881793586083877,
+          "long_count": 119,
+          "macro_f1": 0.3739360836772189,
+          "mean_probability": {
+            "flat": 0.33633214119909427,
+            "long": 0.3331183619938109,
+            "short": 0.3305494968070948
+          },
+          "mean_probability_margin": 0.03825975200205365,
+          "rows": 12210,
+          "short_count": 1944,
+          "signal_count": 2063,
+          "signal_coverage": 0.16895986895986895
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "variant_results": {
+    "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26A_tcn_temporal_convolution_context_scout_v1/results/variant_results.csv",
+    "rows": 3,
+    "sha256": "c04634552cd6de01fe4dcaecfd39c83d5c73ddb90ab6080ce3314eaf63ad9321"
+  }
+}

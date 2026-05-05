@@ -1,8 +1,8 @@
 ﻿# Stage29 Input References(29단계 입력 참조)
 
-- source data surface(원천 데이터 표면): audited 58-feature MT5 price-proxy model input(감사된 58개 피처 MT5 가격 대리 모델 입력)
-- tier rule(티어 규칙): Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B combined/routed(Tier A+B 합산/라우팅)
-- first planned run(첫 계획 실행): `run23A_river_online_drift_learning_scout_v1`
-- prior stage relation(이전 단계 관계): Stage28(28단계) clues(단서)는 참고만 하며 model/threshold/baseline(모델/임계값/기준선)은 상속하지 않는다.
+- model input dataset(모델 입력 데이터셋): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet`
+- Tier B fallback(티어 B 대체): `foundation.mt5.runtime_support.build_tier_b_partial_context_frames`
+- split contract(분할 계약): `split_v1_calendar_train_20220901_20241231_val_20250101_20260413`
+- label(라벨): `label_v1_fwd12_m5_logret_train_q33_3class`
 
-효과(effect, 효과): Stage29(29단계)는 같은 데이터 계약(contract, 계약)을 쓰되, online learning(온라인 학습) 질문으로 새로 해석한다.
+효과(effect, 효과): Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B routed(Tier A+B 라우팅)를 같은 입력 경계(input boundary, 입력 경계)에서 남긴다.

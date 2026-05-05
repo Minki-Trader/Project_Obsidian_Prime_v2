@@ -1,0 +1,362 @@
+{
+  "boundary": "stage31_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_stage31_structural_scout_completed",
+  "dependency_note": "torch/pytorch_tabnet(파이토치/파이토치 탭넷) missing; sparse feature-mask proxy(희소 피처 마스크 대체) used and native TabNet retry condition recorded.",
+  "exploration_label": "stage31_Model__TabNetAttentiveTabularScout",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_set_id": "feature_set_v2_stage31_topic_probe",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "sklearn_sparse_feature_mask_tabnet_dependency_blocked",
+  "next_action": "run25B_tabnet_attentive_tabular_runtime_probe_v1",
+  "packet_id": "stage31_run25A_tabnet_attentive_tabular_scout_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25A_tabnet_attentive_tabular_scout_v1/predictions/tier_a_stage31_structural_predictions.parquet",
+      "rows": 46650,
+      "sha256": "f027c26e7f18eca6018682ed3fe043213a35e9c93f1aac3a46343ea44b302fff"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25A_tabnet_attentive_tabular_scout_v1/predictions/tier_ab_stage31_structural_predictions.parquet",
+      "rows": 59048,
+      "sha256": "5350a1485962ed03a431b7dbefd66fd524cc6090254024b050ad66fa364d59dd"
+    },
+    "tier_b_predictions": {
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25A_tabnet_attentive_tabular_scout_v1/predictions/tier_b_stage31_structural_predictions.parquet",
+      "rows": 12398,
+      "sha256": "f019c4d7d0585f6d2120875decb0e6b6e67e2eff3da293f116808cb10b5027dd"
+    }
+  },
+  "python_dependency_status": {
+    "pytorch_tabnet": false,
+    "river": false,
+    "sklearn": true,
+    "sklearn_version": "1.8.0",
+    "torch": false
+  },
+  "run_id": "run25A_tabnet_attentive_tabular_scout_v1",
+  "run_number": "run25A",
+  "selected_details": {
+    "tier_a": {
+      "C": 0.55,
+      "feature_count": 20,
+      "masker": "ExtraTreesClassifier",
+      "selected_features": [
+        "is_first_30m_after_open",
+        "historical_vol_20",
+        "bollinger_width_20",
+        "minutes_from_cash_open",
+        "atr_14",
+        "hl_range",
+        "atr_14_over_atr_50",
+        "atr_50",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "ema50_ema200_diff",
+        "sma50_sma200_ratio",
+        "hl_zscore_50",
+        "ema9_ema20_diff",
+        "rsi_50",
+        "rsi_14_minus_50",
+        "vortex_indicator",
+        "rsi_14"
+      ],
+      "top_importance_share": 0.8468910472763315,
+      "top_k": 20,
+      "train_rows": 29222
+    },
+    "tier_b": {
+      "C": 0.55,
+      "feature_count": 20,
+      "masker": "ExtraTreesClassifier",
+      "selected_features": [
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "historical_vol_20",
+        "atr_14",
+        "hl_range",
+        "bollinger_width_20",
+        "atr_50",
+        "close_ema50_ratio",
+        "close_ema20_ratio",
+        "atr_14_over_atr_50",
+        "ppo_hist_12_26_9",
+        "hl_zscore_50",
+        "rsi_50",
+        "roc_12",
+        "vortex_indicator",
+        "log_return_3",
+        "rsi_14_minus_50",
+        "ema50_ema200_diff",
+        "sma50_sma200_ratio",
+        "rsi_14"
+      ],
+      "top_importance_share": 0.8442851791567386,
+      "top_k": 20,
+      "train_rows": 38192
+    }
+  },
+  "selected_variant_id": "v02_sparse_mask_top20_logistic_proxy",
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "31_model_family_challenge__tabnet_attentive_tabular_scout",
+  "stage_number": 31,
+  "status": "reviewed_structural_scout_completed",
+  "thresholds": {
+    "quantile": 0.8,
+    "tier_a": 0.43730216515193054,
+    "tier_b": 0.3433843076923035
+  },
+  "tier_records": [
+    {
+      "metrics": {
+        "long_count": 2941,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 3978,
+        "signal_count": 6919,
+        "signal_coverage": 0.14831725616291533,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25A_tabnet_attentive_tabular_scout_v1/predictions/tier_a_stage31_structural_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.46795886075949367,
+          "balanced_accuracy": 0.4545698980535184,
+          "directional_correct_count": 658,
+          "directional_hit_rate": 0.4395457581830327,
+          "log_loss": 1.04630994061603,
+          "long_count": 626,
+          "macro_f1": 0.4522043921581298,
+          "mean_probability": {
+            "flat": 0.3280446210049771,
+            "long": 0.3383854439477084,
+            "short": 0.33356993504731464
+          },
+          "mean_probability_margin": 0.10451533017648658,
+          "rows": 7584,
+          "short_count": 871,
+          "signal_count": 1497,
+          "signal_coverage": 0.1973892405063291
+        },
+        "train": {
+          "accuracy": 0.4114365888713983,
+          "balanced_accuracy": 0.41556651854791865,
+          "directional_correct_count": 1645,
+          "directional_hit_rate": 0.4763973356501593,
+          "log_loss": 1.0699046004205552,
+          "long_count": 1477,
+          "macro_f1": 0.39865115663757594,
+          "mean_probability": {
+            "flat": 0.3333970367841174,
+            "long": 0.3334457675759768,
+            "short": 0.3331571956399057
+          },
+          "mean_probability_margin": 0.08029452249072062,
+          "rows": 29222,
+          "short_count": 1976,
+          "signal_count": 3453,
+          "signal_coverage": 0.11816439668742729
+        },
+        "validation": {
+          "accuracy": 0.4447379114181227,
+          "balanced_accuracy": 0.4331620661199665,
+          "directional_correct_count": 748,
+          "directional_hit_rate": 0.37988826815642457,
+          "log_loss": 1.056986175815706,
+          "long_count": 838,
+          "macro_f1": 0.4248171533380065,
+          "mean_probability": {
+            "flat": 0.32448389163760644,
+            "long": 0.34016426180852644,
+            "short": 0.3353518465538672
+          },
+          "mean_probability_margin": 0.10730764301454862,
+          "rows": 9844,
+          "short_count": 1131,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 1399,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 1893,
+        "signal_count": 3292,
+        "signal_coverage": 0.2655266978544927,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25A_tabnet_attentive_tabular_scout_v1/predictions/tier_b_stage31_structural_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5546139359698682,
+          "balanced_accuracy": 0.46673815189699663,
+          "directional_correct_count": 166,
+          "directional_hit_rate": 0.38073394495412843,
+          "log_loss": 1.0265187774394846,
+          "long_count": 152,
+          "macro_f1": 0.46431152251986146,
+          "mean_probability": {
+            "flat": 0.37405715716519994,
+            "long": 0.31313014341148904,
+            "short": 0.312812699423311
+          },
+          "mean_probability_margin": 0.12955420481162988,
+          "rows": 1062,
+          "short_count": 284,
+          "signal_count": 436,
+          "signal_coverage": 0.4105461393596987
+        },
+        "train": {
+          "accuracy": 0.46833890746934226,
+          "balanced_accuracy": 0.3953440516862499,
+          "directional_correct_count": 895,
+          "directional_hit_rate": 0.37573467674223343,
+          "log_loss": 1.0396789303828449,
+          "long_count": 1024,
+          "macro_f1": 0.3609847273171538,
+          "mean_probability": {
+            "flat": 0.3981337753857293,
+            "long": 0.30780686625530923,
+            "short": 0.2940593583589615
+          },
+          "mean_probability_margin": 0.12372785956918865,
+          "rows": 8970,
+          "short_count": 1358,
+          "signal_count": 2382,
+          "signal_coverage": 0.2655518394648829
+        },
+        "validation": {
+          "accuracy": 0.610312764158918,
+          "balanced_accuracy": 0.40274615788792395,
+          "directional_correct_count": 155,
+          "directional_hit_rate": 0.3270042194092827,
+          "log_loss": 0.9690285729167551,
+          "long_count": 223,
+          "macro_f1": 0.3962295942219805,
+          "mean_probability": {
+            "flat": 0.42644320717369555,
+            "long": 0.2975531994472527,
+            "short": 0.2760035933790518
+          },
+          "mean_probability_margin": 0.15633891171321845,
+          "rows": 2366,
+          "short_count": 251,
+          "signal_count": 474,
+          "signal_coverage": 0.2003381234150465
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 3084,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 4566,
+        "signal_count": 7650,
+        "signal_coverage": 0.12955561577022084,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25A_tabnet_attentive_tabular_scout_v1/predictions/tier_ab_stage31_structural_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4786028221142725,
+          "balanced_accuracy": 0.45881415542394266,
+          "directional_correct_count": 707,
+          "directional_hit_rate": 0.43374233128834355,
+          "log_loss": 1.0438789649864335,
+          "long_count": 643,
+          "macro_f1": 0.45649004387848374,
+          "mean_probability": {
+            "flat": 0.3336964037255596,
+            "long": 0.3352833008561672,
+            "short": 0.33102029541827327
+          },
+          "mean_probability_margin": 0.1075908893787214,
+          "rows": 8646,
+          "short_count": 987,
+          "signal_count": 1630,
+          "signal_coverage": 0.1885264862364099
+        },
+        "train": {
+          "accuracy": 0.4248010054461667,
+          "balanced_accuracy": 0.41806070634205655,
+          "directional_correct_count": 1880,
+          "directional_hit_rate": 0.476431829700963,
+          "log_loss": 1.0628056199995701,
+          "long_count": 1582,
+          "macro_f1": 0.39784462898718614,
+          "mean_probability": {
+            "flat": 0.34860149178140637,
+            "long": 0.32742406290362686,
+            "short": 0.3239744453149668
+          },
+          "mean_probability_margin": 0.09049553405319073,
+          "rows": 38192,
+          "short_count": 2364,
+          "signal_count": 3946,
+          "signal_coverage": 0.10332006702974444
+        },
+        "validation": {
+          "accuracy": 0.47682227682227685,
+          "balanced_accuracy": 0.441783005173996,
+          "directional_correct_count": 773,
+          "directional_hit_rate": 0.37270973963355836,
+          "log_loss": 1.0399421390868837,
+          "long_count": 859,
+          "macro_f1": 0.4335899477168334,
+          "mean_probability": {
+            "flat": 0.3442411185465652,
+            "long": 0.33190727789806174,
+            "short": 0.323851603555373
+          },
+          "mean_probability_margin": 0.11680870622020405,
+          "rows": 12210,
+          "short_count": 1215,
+          "signal_count": 2074,
+          "signal_coverage": 0.16986076986076987
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "variant_results": {
+    "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25A_tabnet_attentive_tabular_scout_v1/results/variant_results.csv",
+    "rows": 3,
+    "sha256": "1fc3b940e2c080409a5f09bd15963c5ecb843a33faba156539f6fdf6d2a30304"
+  }
+}

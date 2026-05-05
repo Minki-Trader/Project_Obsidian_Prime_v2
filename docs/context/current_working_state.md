@@ -1,4 +1,12 @@
-﻿## Latest Stage28 RUN22C Supplement(최신 28단계 22C 실행 보강)
+﻿## Latest Stage29-32 Goal Completion(최신 29-32단계 목표 완료)
+
+Stage29~32(29~32단계)를 reviewed closeout(검토된 마감)으로 닫았다.
+
+결과(result, 결과): Stage29(29단계) `run23B_river_online_drift_runtime_probe_v1`, Stage30(30단계) `run24B_probability_calibration_abstention_runtime_probe_v1`, Stage31(31단계) `run25B_tabnet_attentive_tabular_runtime_probe_v1`, Stage32(32단계) `run26B_tcn_temporal_convolution_runtime_probe_v1` 모두 MT5 runtime_probe(MT5 런타임 탐침) external verification(외부 검증) `completed(완료)`다. 각 runtime run(런타임 실행)은 MT5 KPI records(MT5 핵심 성과 지표 기록) `10`, normalized records(정규화 기록) `6`, parser errors(파서 오류) `0`이다.
+
+효과(effect, 효과): River online ML(리버 온라인 머신러닝), calibration/abstention(보정/기권), TabNet proxy(탭넷 대체), TCN proxy(TCN 대체)의 특징 단서(characteristic clue, 특징 단서)와 MT5 handoff behavior(MT5 인계 행동)를 보존했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다. 원본 River/TabNet/TCN package(원본 리버/탭넷/TCN 패키지) 부재는 native retry condition(원본 재시도 조건)으로 남긴다.
+
+## Latest Stage28 RUN22C Supplement(최신 28단계 22C 실행 보강)
 
 Stage28(28단계) `run22C_markov_regression_supplement_state_variance_attribution_v1`를 보강 묶음(supplement packet, 보강 묶음)으로 완료했다.
 
