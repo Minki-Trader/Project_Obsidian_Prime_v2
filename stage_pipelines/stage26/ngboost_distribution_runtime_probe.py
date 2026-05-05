@@ -892,7 +892,12 @@ def update_workspace_state(summary: Mapping[str, Any]) -> None:
     status = "active_run20B_mt5_runtime_probe_completed" if completed else "active_run20B_mt5_runtime_probe_blocked_after_attempt"
     next_action = NEXT_ACTION_COMPLETED if completed else NEXT_ACTION_BLOCKED
     state = io_path(WORKSPACE_STATE_PATH).read_text(encoding="utf-8-sig")
-    state = state.replace(f"current_run_id: {SOURCE_RUN_ID}", f"current_run_id: {RUN_ID}", 1)
+    lines = state.splitlines()
+    for index, line in enumerate(lines):
+        if line.startswith("current_run_id: "):
+            lines[index] = f"current_run_id: {RUN_ID}"
+            break
+    state = "\n".join(lines) + "\n"
     state = state.replace(
         f"- treat Stage 26 as active_run20A_structural_scout_completed after NGBoost(자연 그래디언트 부스팅) probabilistic distribution scout(확률분포 탐색); next action is {RUN_ID}, and no baseline, promotion, or runtime authority exists",
         f"- treat Stage 26 as {status} after NGBoost(자연 그래디언트 부스팅) distribution MT5 runtime_probe(MT5 런타임 탐침); next action is {next_action}, and no baseline, promotion, or runtime authority exists",
@@ -935,6 +940,11 @@ def update_workspace_state(summary: Mapping[str, Any]) -> None:
   next_action: {next_action}
 """
     state = replace_top_level_yaml_block(state, "stage26_ngboost_run20B_runtime_probe:", run_block)
+    state = state.replace(
+        f"stage26_ngboost_run20A_structural_scout:\n  packet_id: {SOURCE_PACKET_ID}\n  status: reviewed_structural_scout_completed\n  judgment: inconclusive_ngboost_probabilistic_distribution_scout_completed\n  current_run_id: {RUN_ID}",
+        f"stage26_ngboost_run20A_structural_scout:\n  packet_id: {SOURCE_PACKET_ID}\n  status: reviewed_structural_scout_completed\n  judgment: inconclusive_ngboost_probabilistic_distribution_scout_completed\n  current_run_id: {SOURCE_RUN_ID}",
+        1,
+    )
     io_path(WORKSPACE_STATE_PATH).write_text(state, encoding="utf-8-sig")
 
 

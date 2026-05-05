@@ -2,13 +2,13 @@
 
 ## Current Truth(현재 진실)
 
-- active stage(활성 단계): `26_model_family_challenge__ngboost_probabilistic_distribution_shape`
-- current run(현재 실행): `run20B_ngboost_distribution_runtime_probe_v1`
-- active branch(활성 브랜치): `codex/stage26-ngboost-probabilistic`
-- active stage folder(활성 단계 폴더): `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape`
+- active stage(활성 단계): `27_tail_model__quantile_boosting_risk_surface`
+- current run(현재 실행): `not_started`
+- active branch(활성 브랜치): `codex/stage27-quantile-boosting`
+- active stage folder(활성 단계 폴더): `stages/27_tail_model__quantile_boosting_risk_surface`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage23(23단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage24(24단계)와 Stage25(25단계)는 Python-side evidence(파이썬 근거), MT5 runtime_probe(MT5 런타임 탐침), closeout packet(마감 묶음), 다음 stage open-only(다음 단계 개방만)를 완료했다. Stage26(26단계)는 `run20A_ngboost_probabilistic_distribution_scout_v1` broad scout(넓은 탐색)를 완료했고, 현재 첫 미완료 milestone(마일스톤)은 `run20B_ngboost_distribution_runtime_probe_v1` narrow MT5 runtime_probe(좁은 MT5 런타임 탐침)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage23(23단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage24(24단계)와 Stage25(25단계)는 Python-side evidence(파이썬 근거), MT5 runtime_probe(MT5 런타임 탐침), closeout packet(마감 묶음), 다음 stage open-only(다음 단계 개방만)를 완료했다. Stage26(26단계)는 `run20A_ngboost_probabilistic_distribution_scout_v1` broad scout(넓은 탐색), `run20B_ngboost_distribution_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침), reviewed closeout(검토된 마감), Stage27 open-only(Stage27 개방만)를 완료했다. 현재 첫 미완료 milestone(마일스톤)은 Stage27(27단계) `run21A_quantile_boosting_tail_risk_surface_scout_v1` broad scout(넓은 탐색)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
 ## Execution Contract(실행 계약)
 
@@ -56,7 +56,7 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [x] Stage23(23단계) supervised regime classifier(지도 국면 분류기) scout/probe/closeout/open Stage24. Completed(완료): `run17A_supervised_regime_classifier_filter_scout_v1`, `run17B_supervised_regime_classifier_runtime_probe_v1`, `stage23_closeout_packet.md`, Stage24 open-only(Stage24 개방만).
 - [x] Stage24(24단계) Survival model(생존 모델) scout/probe/closeout/open Stage25. Completed(완료): `run18A_survival_time_to_event_hold_shape_scout_v1`, `run18B_survival_time_to_event_runtime_probe_v1`, `stage24_closeout_packet.md`, Stage25 open-only(Stage25 개방만).
 - [x] Stage25(25단계) hazard model(위험률 모델) scout/probe/closeout/open Stage26. Completed(완료): `run19A_hazard_trade_lifecycle_risk_scout_v1`, `run19B_hazard_trade_lifecycle_runtime_probe_v1`, `stage25_closeout_packet.md`, Stage26 open-only(Stage26 개방만).
-- [ ] Stage26(26단계) NGBoost(`Natural Gradient Boosting`, 자연 그래디언트 부스팅) scout/probe/closeout/open Stage27
+- [x] Stage26(26단계) NGBoost(`Natural Gradient Boosting`, 자연 그래디언트 부스팅) scout/probe/closeout/open Stage27. Completed(완료): `run20A_ngboost_probabilistic_distribution_scout_v1`, `run20B_ngboost_distribution_runtime_probe_v1`, `stage26_closeout_packet.md`, Stage27 open-only(Stage27 개방만).
 - [ ] Stage27(27단계) quantile boosting(분위수 부스팅) scout/probe/closeout/open Stage28
 - [ ] Stage28(28단계) Markov regression(마르코프 회귀) scout/probe/closeout/open Stage29
 - [ ] Stage29(29단계) River online ML(리버 온라인 머신러닝) scout/probe/closeout/open Stage30
@@ -64,25 +64,25 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
 - [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
 
-Current active milestone(현재 활성 마일스톤): Stage26(26단계) `repair_run20B_ngboost_runtime_probe_then_rerun_exact_attempts`.
+Current active milestone(현재 활성 마일스톤): Stage27(27단계) `run21A_quantile_boosting_tail_risk_surface_scout_v1` broad scout(넓은 탐색).
 
 효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `run20B_ngboost_distribution_runtime_probe_v1` completed(완료) as MT5 runtime_probe(MT5 런타임 탐침).
-- active branch(활성 브랜치): `codex/stage26-ngboost-probabilistic`.
-- active stage/current run id(활성 단계/현재 실행 ID): Stage26(26단계), `run20B_ngboost_distribution_runtime_probe_v1`.
-- created/updated folders(생성/수정 폴더): `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20B_ngboost_distribution_runtime_probe_v1`, `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews`, `docs/agent_control/packets/stage26_run20B_ngboost_distribution_runtime_probe_v1`.
-- changed files(변경 파일): NGBoost runtime probe pipeline(NGBoost 런타임 탐침 파이프라인), MT5 run evidence(MT5 실행 근거), normalized KPI(정규화 핵심 성과 지표), current truth docs(현재 진실 문서).
-- active stage folder(활성 단계 폴더): `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape`.
-- current run id(현재 실행 ID): `run20B_ngboost_distribution_runtime_probe_v1`.
-- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20B_ngboost_distribution_runtime_probe_v1/mt5/reports`; review report(검토 보고서) `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/run20B_ngboost_distribution_runtime_probe_packet.md`.
+- latest completed work(최근 완료 작업): `stage26_closeout_stage27_open` completed(완료).
+- active branch(활성 브랜치): `codex/stage27-quantile-boosting`.
+- active stage/current run id(활성 단계/현재 실행 ID): Stage27(27단계), `not_started`.
+- created/updated folders(생성/수정 폴더): `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews`, `stages/27_tail_model__quantile_boosting_risk_surface/00_spec`, `stages/27_tail_model__quantile_boosting_risk_surface/01_inputs`, `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews`, `stages/27_tail_model__quantile_boosting_risk_surface/04_selected`, `docs/agent_control/packets/stage26_ngboost_closeout_v1`.
+- changed files(변경 파일): Stage26 closeout(26단계 마감), Stage27 open docs(27단계 개방 문서), current truth docs(현재 진실 문서), goal plan(목표 계획).
+- active stage folder(활성 단계 폴더): `stages/27_tail_model__quantile_boosting_risk_surface`.
+- current run id(현재 실행 ID): `not_started`.
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): previous Stage26 report(이전 26단계 보고서) `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20B_ngboost_distribution_runtime_probe_v1/mt5/reports`; closeout report(마감 보고서) `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/stage26_closeout_packet.md`.
 - blocker(차단 사유): `none(없음)`.
-- exact next action(정확한 다음 행동): `stage26_closeout_and_stage27_open_only`.
+- exact next action(정확한 다음 행동): `run21A_quantile_boosting_tail_risk_surface_scout_v1`.
 - git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending(대기).
 
-효과(effect, 효과): 다음 재개는 Stage26(26단계) closeout/open Stage27(마감/27단계 개방) 또는 run20B(20B 실행) 복구 조건에서 시작한다.
+효과(effect, 효과): 다음 재개는 Stage27(27단계) quantile boosting(분위수 부스팅) broad scout(넓은 탐색)에서 시작한다.
 
 ## Per-Stage Milestone Loop(단계별 마일스톤 반복)
 
@@ -209,3 +209,4 @@ Stage32(32단계)까지 reviewed closeout(검토된 마감)을 완료한 뒤, fi
 - `2026-05-05`: Stage26(26단계) `run20A_ngboost_probabilistic_distribution_scout_v1` NGBoost(자연 그래디언트 부스팅) Python structural scout(파이썬 구조 탐색)를 완료했다. judgment(판정): `inconclusive_ngboost_probabilistic_distribution_scout_completed`.
 - `2026-05-05`: Stage26(26단계) `run20B_ngboost_distribution_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)를 기록했다. judgment(판정): `blocked_ngboost_distribution_runtime_probe_after_attempt`.
 - `2026-05-05`: Stage26(26단계) `run20B_ngboost_distribution_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)를 기록했다. judgment(판정): `inconclusive_ngboost_distribution_runtime_probe_completed`.
+- `2026-05-05`: Stage26(26단계) reviewed closeout(검토된 마감)을 완료하고 Stage27(27단계)를 open-only(개방만)로 열었다.

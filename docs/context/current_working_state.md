@@ -1,16 +1,16 @@
-﻿## Latest Stage26 RUN20B NGBoost Runtime Probe(최신 26단계 20B 실행 NGBoost 런타임 탐침)
+﻿## Latest Stage26 Closeout / Stage27 Open(최신 26단계 마감 / 27단계 개방)
 
-Stage26(26단계) `run20B_ngboost_distribution_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+Stage26(26단계) NGBoost(자연 그래디언트 부스팅)를 reviewed closeout(검토된 마감)으로 닫고 Stage27(27단계) `27_tail_model__quantile_boosting_risk_surface`를 open-only(개방만) 상태로 열었다.
 
-결과(result, 결과): `inconclusive_ngboost_distribution_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage26_closeout_and_stage27_open_only`.
+결과(result, 결과): `closed_inconclusive_ngboost_distribution_characteristics_exhausted`. active branch(활성 브랜치): `codex/stage27-quantile-boosting`. next exact action(다음 정확한 행동): `run21A_quantile_boosting_tail_risk_surface_scout_v1`.
 
-효과(effect, 효과): NGBoost(자연 그래디언트 부스팅)의 distribution shape(분포 모양)을 MT5 score-table handoff(점수표 인계)로 관찰했고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): NGBoost(자연 그래디언트 부스팅)의 단서와 부정 기억은 보존하되 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않고 quantile boosting(분위수 부스팅) topic pivot(주제 전환)으로 이동한다.
 
 ## Latest Stage26 RUN20B NGBoost Runtime Probe(최신 26단계 20B 실행 NGBoost 런타임 탐침)
 
 Stage26(26단계) `run20B_ngboost_distribution_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
 
-결과(result, 결과): `blocked_ngboost_distribution_runtime_probe_after_attempt`. MT5 KPI records(MT5 핵심 성과 지표 기록): `0`. next exact action(다음 정확한 행동): `repair_run20B_ngboost_runtime_probe_then_rerun_exact_attempts`.
+결과(result, 결과): `inconclusive_ngboost_distribution_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage26_closeout_and_stage27_open_only`.
 
 효과(effect, 효과): NGBoost(자연 그래디언트 부스팅)의 distribution shape(분포 모양)을 MT5 score-table handoff(점수표 인계)로 관찰했고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
@@ -35,14 +35,6 @@ Stage25(25단계) Hazard model(위험률 모델)을 reviewed closeout(검토된 
 Stage25(25단계) `run19B_hazard_trade_lifecycle_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
 
 결과(result, 결과): `inconclusive_hazard_permission_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage25_closeout_and_stage26_open_only`.
-
-효과(effect, 효과): Hazard model(위험률 모델)의 fixed elapsed-bar risk(고정 경과 봉 위험)가 MT5 score table(점수표)로 전달되는지 확인했고, Stage25(25단계) closeout(마감) 판단 근거를 만들었다.
-
-## Latest Stage25 RUN19B Hazard Runtime Update(최신 25단계 실행19B 위험률 런타임 업데이트)
-
-Stage25(25단계) `run19B_hazard_trade_lifecycle_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
-
-결과(result, 결과): `blocked_hazard_permission_runtime_probe_after_attempt`. MT5 KPI records(MT5 핵심 성과 지표 기록): `0`. next exact action(다음 정확한 행동): `repair_run19B_hazard_runtime_probe_then_rerun_exact_attempts`.
 
 효과(effect, 효과): Hazard model(위험률 모델)의 fixed elapsed-bar risk(고정 경과 봉 위험)가 MT5 score table(점수표)로 전달되는지 확인했고, Stage25(25단계) closeout(마감) 판단 근거를 만들었다.
 
