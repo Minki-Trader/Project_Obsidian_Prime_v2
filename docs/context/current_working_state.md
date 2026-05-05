@@ -1,4 +1,20 @@
-﻿## Latest Stage26 RUN20A NGBoost Scout(최신 26단계 20A 실행 NGBoost 탐색)
+﻿## Latest Stage26 RUN20B NGBoost Runtime Probe(최신 26단계 20B 실행 NGBoost 런타임 탐침)
+
+Stage26(26단계) `run20B_ngboost_distribution_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_ngboost_distribution_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage26_closeout_and_stage27_open_only`.
+
+효과(effect, 효과): NGBoost(자연 그래디언트 부스팅)의 distribution shape(분포 모양)을 MT5 score-table handoff(점수표 인계)로 관찰했고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+## Latest Stage26 RUN20B NGBoost Runtime Probe(최신 26단계 20B 실행 NGBoost 런타임 탐침)
+
+Stage26(26단계) `run20B_ngboost_distribution_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+
+결과(result, 결과): `blocked_ngboost_distribution_runtime_probe_after_attempt`. MT5 KPI records(MT5 핵심 성과 지표 기록): `0`. next exact action(다음 정확한 행동): `repair_run20B_ngboost_runtime_probe_then_rerun_exact_attempts`.
+
+효과(effect, 효과): NGBoost(자연 그래디언트 부스팅)의 distribution shape(분포 모양)을 MT5 score-table handoff(점수표 인계)로 관찰했고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+## Latest Stage26 RUN20A NGBoost Scout(최신 26단계 20A 실행 NGBoost 탐색)
 
 Stage26(26단계) `run20A_ngboost_probabilistic_distribution_scout_v1`를 reviewed structural scout(검토된 구조 탐색)로 완료했다.
 

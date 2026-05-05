@@ -2,3 +2,4 @@
 
 Reviewed runs(검토된 실행):
 - `run20A_ngboost_probabilistic_distribution_scout_v1`: `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/run20A_ngboost_probabilistic_distribution_scout_packet.md`
+- `run20B_ngboost_distribution_runtime_probe_v1`: `stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/run20B_ngboost_distribution_runtime_probe_packet.md`

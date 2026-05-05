@@ -2,7 +2,7 @@
 project_mode: clean_stage_restart
 active_branch: codex/stage26-ngboost-probabilistic
 active_stage: 26_model_family_challenge__ngboost_probabilistic_distribution_shape
-current_run_id: run20A_ngboost_probabilistic_distribution_scout_v1
+current_run_id: run20B_ngboost_distribution_runtime_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -16,7 +16,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 26 as active_run20A_structural_scout_completed after NGBoost(자연 그래디언트 부스팅) probabilistic distribution scout(확률분포 탐색); next action is run20B_ngboost_distribution_runtime_probe_v1, and no baseline, promotion, or runtime authority exists
+- treat Stage 26 as active_run20B_mt5_runtime_probe_blocked_after_attempt after NGBoost(자연 그래디언트 부스팅) distribution MT5 runtime_probe(MT5 런타임 탐침); next action is repair_run20B_ngboost_runtime_probe_then_rerun_exact_attempts, and no baseline, promotion, or runtime authority exists
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -165,8 +165,8 @@ pre_alpha_stage_queue:
     stage26:
       stage_id: 26_model_family_challenge__ngboost_probabilistic_distribution_shape
       ownership: independent NGBoost(자연 그래디언트 부스팅) probabilistic distribution-shape(확률분포 모양) scout(탐색) after Stage25(25단계)
-      status: active_run20A_structural_scout_completed
-      current_run_id: run20A_ngboost_probabilistic_distribution_scout_v1
+      status: active_run20B_mt5_runtime_probe_blocked_after_attempt
+      current_run_id: run20B_ngboost_distribution_runtime_probe_v1
     stage27:
       stage_id: 27_tail_model__quantile_boosting_risk_surface
       ownership: independent quantile boosting(분위수 부스팅) tail-risk surface(꼬리 위험 표면) scout(탐색) after Stage26(26단계)
@@ -2307,24 +2307,25 @@ stage25_hazard_closeout:
   next_action: run20A_ngboost_probabilistic_distribution_scout_v1
 stage26_ngboost_model:
   stage_id: 26_model_family_challenge__ngboost_probabilistic_distribution_shape
-  status: active_run20A_structural_scout_completed
-  current_run_id: run20A_ngboost_probabilistic_distribution_scout_v1
+  status: active_run20B_mt5_runtime_probe_completed
+  current_run_id: run20B_ngboost_distribution_runtime_probe_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
   selected_variant_id: v02_core42_distribution_surface
-  boundary: ngboost_probabilistic_distribution_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
-  judgment: inconclusive_ngboost_probabilistic_distribution_scout_completed
-  mt5_runtime_probe_status: not_attempted_next_milestone_run20B_ngboost_distribution_runtime_probe_v1
+  boundary: ngboost_distribution_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  judgment: inconclusive_ngboost_distribution_runtime_probe_completed
+  mt5_runtime_probe_status: completed_by_next_milestone_run20B_ngboost_distribution_runtime_probe_v1
+  mt5_kpi_record_count: 10
   stage_brief_path: stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/00_spec/stage_brief.md
-  report_path: stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/run20A_ngboost_probabilistic_distribution_scout_packet.md
-  packet_summary_path: docs/agent_control/packets/stage26_run20A_ngboost_probabilistic_distribution_scout_v1/aggregate_summary.json
-  next_action: run20B_ngboost_distribution_runtime_probe_v1
+  report_path: stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/run20B_ngboost_distribution_runtime_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage26_run20B_ngboost_distribution_runtime_probe_v1/aggregate_summary.json
+  next_action: stage26_closeout_and_stage27_open_only
 stage26_ngboost_run20A_structural_scout:
   packet_id: stage26_run20A_ngboost_probabilistic_distribution_scout_v1
   status: reviewed_structural_scout_completed
   judgment: inconclusive_ngboost_probabilistic_distribution_scout_completed
-  current_run_id: run20A_ngboost_probabilistic_distribution_scout_v1
+  current_run_id: run20B_ngboost_distribution_runtime_probe_v1
   selected_variant_id: v02_core42_distribution_surface
   mt5_runtime_probe_status: not_attempted_next_milestone_run20B_ngboost_distribution_runtime_probe_v1
   selected_operating_reference: none
@@ -2334,3 +2335,19 @@ stage26_ngboost_run20A_structural_scout:
   report_path: stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/run20A_ngboost_probabilistic_distribution_scout_packet.md
   packet_summary_path: docs/agent_control/packets/stage26_run20A_ngboost_probabilistic_distribution_scout_v1/aggregate_summary.json
   next_action: run20B_ngboost_distribution_runtime_probe_v1
+stage26_ngboost_run20B_runtime_probe:
+  packet_id: stage26_run20B_ngboost_distribution_runtime_probe_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_ngboost_distribution_runtime_probe_completed
+  current_run_id: run20B_ngboost_distribution_runtime_probe_v1
+  source_run_id: run20A_ngboost_probabilistic_distribution_scout_v1
+  selected_variant_id: v02_core42_distribution_surface
+  mt5_runtime_probe_status: completed
+  mt5_kpi_record_count: 10
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: ngboost_distribution_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/run20B_ngboost_distribution_runtime_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage26_run20B_ngboost_distribution_runtime_probe_v1/aggregate_summary.json
+  next_action: stage26_closeout_and_stage27_open_only
