@@ -209,3 +209,4 @@ Stage26-32(26-32단계) extension tooling(확장 도구) 상태는 아래처럼 
 효과(effect, 효과): Stage19-32(19-32단계)가 모델 쇼핑(model shopping, 모델 쇼핑)으로 번지지 않고, 각 모델군과 decision layer(결정 계층)의 질문만 좁게 답한다.
 - 2026-05-05: Stage20(20단계) GAM(일반화 가산 모델) closeout(마감) 완료, Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱) open-only(개방만). 효과(effect, 효과): 다음 실제 실행은 `run15A_elasticnet_logistic_linear_sanity_scout_v1`이다.
 - 2026-05-05: Stage21(21단계) ElasticNet Logistic(엘라스틱넷 로지스틱) closeout(마감) 완료, Stage22(22단계) HMM(`Hidden Markov Model`, 은닉 마르코프 모델) open-only(개방만). 효과(effect, 효과): 다음 실제 실행은 `run16A_hmm_hidden_state_segmentation_scout_v1`이다.
+- 2026-05-05: Stage24(24단계) Survival model(생존 모델) closeout(마감) 완료, Stage25(25단계) hazard model(위험률 모델) open-only(개방만). 효과(effect, 효과): 다음 실제 실행은 `run19A_hazard_trade_lifecycle_risk_scout_v1`이다.

@@ -1,0 +1,48 @@
+{
+  "active_branch": "codex/stage25-hazard-model",
+  "blocked_retry_condition": "none; rerun only under an explicit exit-only survival packet or after split-boundary timestamp repair.",
+  "closeout_packet_path": "stages/24_exit_model__survival_time_to_event_hold_shape/03_reviews/stage24_closeout_packet.md",
+  "created_at_utc": "2026-05-05T00:47:17Z",
+  "decision_path": "docs/decisions/2026-05-05_stage24_survival_closeout_stage25_open.md",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "invalid_setup": [
+    "Do not read the survival model as a long/short entry selector.",
+    "Do not treat the two-feature score table as survival runtime authority."
+  ],
+  "judgment": "closed_inconclusive_survival_model_characteristics_exhausted",
+  "mt5_kpi_record_count": 10,
+  "mt5_runtime_probe_status": "completed",
+  "negative_memory": [
+    "Runtime probe was negative as a trading path on validation and OOS.",
+    "Direct survival output is not directional and required direction_proxy."
+  ],
+  "next_action": "run19A_hazard_trade_lifecycle_risk_scout_v1",
+  "next_stage_id": "25_exit_model__hazard_trade_lifecycle_risk",
+  "oos_c_index": 0.6856377470736932,
+  "oos_net_profit": -98.54,
+  "oos_profit_factor": 0.88,
+  "packet_id": "stage24_survival_closeout_v1",
+  "preserved_clues": [
+    "Weibull AFT duration shape was visible for abs_move_3x event timing.",
+    "Volatility/range/session-open features repeatedly drove survival duration reads.",
+    "MT5 handoff is viable only as flat/close permission pressure."
+  ],
+  "run_range": "run18A-run18B",
+  "runtime_authority": null,
+  "selected_baseline": null,
+  "selected_operating_reference": null,
+  "selected_promotion_candidate": null,
+  "selected_variant_id": "v04_weibull_aft_core24_abs_move_3x",
+  "stage_id": "24_exit_model__survival_time_to_event_hold_shape",
+  "status": "reviewed_closed_stage25_opened",
+  "validation_c_index": 0.73631244882561,
+  "validation_net_profit": -157.74,
+  "validation_profit_factor": 0.9
+}
