@@ -1,8 +1,8 @@
-﻿updated_on: '2026-05-05'
+﻿updated_on: '2026-05-06'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 32_sequence_model__tcn_temporal_convolution_context
-current_run_id: run26D_torch_tcn_native_temporal_runtime_probe_v1
+active_stage: 33_adapter_runtime__mechanism_role_map_signal_contract
+current_run_id: run27M_quantile_tail_score_table_mt5_handoff_identity_audit_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -14,15 +14,30 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete_stage33_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage33 adapter runtime mechanism role map(33단계 어댑터 런타임 메커니즘 역할 지도)은
+  run27A role map(27A 실행 역할 지도), run27B repeatability shortlist(27B 실행 반복성 후보 목록),
+  run27C SignalCard/ONNX parity probe(27C 실행 신호 카드/온닉스 동등성 탐침), run27D Stage12 MT5 handoff identity audit(27D 실행 12단계 MT5 인계 정체성 감사),
+  run27E adapter feasibility matrix(27E 실행 어댑터 실현성 행렬), run27F score-table SignalCard adapter probe(27F 실행 점수표 신호 카드 어댑터 탐침),
+  run27G Stage32 score-table MT5 handoff identity audit(27G 실행 32단계 점수표 MT5 인계 정체성 감사), run27H segmented CatBoost ONNX SignalCard probe(27H 실행 분할 캣부스트 온닉스 신호 카드 탐침),
+  run27I Stage18 segmented CatBoost MT5 handoff identity audit(27I 실행 18단계 분할 캣부스트 MT5 인계 정체성 감사), run27J segmented CatBoost regime ONNX SignalCard probe(27J 실행 분할 캣부스트 국면 온닉스 신호 카드 탐침),
+  run27K Stage18 segmented CatBoost regime MT5 handoff identity audit(27K 실행 18단계 분할 캣부스트 국면 MT5 인계 정체성 감사), run27L quantile tail score-table SignalCard adapter probe(27L 실행 분위수 꼬리 점수표 신호 카드 어댑터 탐침),
+  run27M Stage27 quantile tail score-table MT5 handoff identity audit(27M 실행 27단계 분위수 꼬리 점수표 MT5 인계 정체성 감사)를 완료했다.
+  run27C(27C 실행)는 `stage12_run03H_et_v13_tier_balance_mt5_v1` existing ONNX artifacts(기존 온닉스 산출물)를 manifest-only model pack(목록 전용 모델 팩)으로 포장했고 `20,856` validation/OOS rows(검증/표본외 행)에서 Python source model vs ONNX runtime parity(파이썬 원천 모델 대 온닉스 런타임 동등성)를 통과했다.
+  run27F(27F 실행)는 `stage32_run26D_torch_tcn_native_temporal_runtime_probe_v1` score-table adapter pack(점수표 어댑터 팩)을 만들고 `20,856` validation/OOS rows(검증/표본외 행)에서 stored runtime prediction(저장 런타임 예측) 대비 max abs diff(최대 절대 차이) `0.0016267616508146565`, SignalCard direction mismatch(신호 카드 방향 불일치) `0`을 기록했다.
+  run27H(27H 실행)는 `stage18_run12G_catboost_probability_calibration_probe_v1` segmented CatBoost ONNX model pack(분할 캣부스트 온닉스 모델 팩)을 만들고 `4,173` segmented validation/OOS rows(분할 검증/표본외 행)에서 max abs diff(최대 절대 차이) `9.201430195560079e-08`, SignalCard direction mismatch(신호 카드 방향 불일치) `0`을 기록했다.
+  run27J(27J 실행)는 `stage18_run12D_catboost_regime_split_probe_v1` high/low volatility segmented CatBoost ONNX model pack(고/저 변동성 분할 캣부스트 온닉스 모델 팩)을 만들고 `20,856` validation/OOS rows(검증/표본외 행)에서 max abs diff(최대 절대 차이) `1.0304774167302355e-07`, SignalCard direction mismatch(신호 카드 방향 불일치) `0`을 기록했다.
+  run27L(27L 실행)는 `stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1` quantile tail score-table(분위수 꼬리 점수표)을 SignalCard adapter(신호 카드 어댑터)로 포장했고 `20,856` validation/OOS rows(검증/표본외 행)에서 max abs diff(최대 절대 차이) `0.0022587861039878865`, exact SignalCard direction mismatch(정확 신호 카드 방향 불일치) `1`, trading action mismatch(거래 행동 불일치) `0`을 기록했다. adapter readiness(어댑터 준비)는 `defer_exact_signalcard_direction_gap(정확 신호 방향 차이로 보류)`다.
+  run27M(27M 실행)는 기존 Stage27 run21B MT5 runtime probe(27단계 실행21B MT5 런타임 탐침)의 6개 attempt(시도) identity(정체성)를 run27L adapter pack(27L 실행 어댑터 팩)에 연결했다.
+  Stage33 closeout(33단계 마감)은 `stage33_completion_audit_closeout_v1`에서 prompt-to-artifact checklist(요청-산출물 점검표), completion audit(완료 감사), closeout report(마감 보고)로 정리했다.
+  새 ONNX export(새 온닉스 내보내기), 새 MT5 terminal run(새 MT5 터미널 실행), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
   river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
   with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
-- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 최신 장부 실행인
-  run26D_torch_tcn_native_temporal_runtime_probe_v1을 가리킨다; stage29_32_native_revalidation_supplement_v1은
-  cross-stage packet(교차 단계 묶음)으로만 읽는다.
+- Stage29_32 native revalidation supplement(29_32 원본 재검증 보강)은
+  cross-stage packet(교차 단계 묶음)으로만 읽고, Stage33(33단계)의 active run(활성 실행)으로 보지 않는다.
 - treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
   탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
   no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
@@ -55,7 +70,7 @@ current_focus:
   탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete_stage33_reviewed_closed_goal_complete
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58

@@ -1,0 +1,195 @@
+{
+  "packet_id": "stage33_run27A_mechanism_role_map_evidence_scan_v1",
+  "stage_id": "33_adapter_runtime__mechanism_role_map_signal_contract",
+  "run_id": "run27A_mechanism_role_map_evidence_scan_v1",
+  "status": "reviewed_scan_completed",
+  "judgment": "inconclusive_mechanism_role_map_evidence_scan_completed",
+  "boundary": "evidence_scan_and_adapter_contract_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "generated_at_utc": "2026-05-05T17:29:32Z",
+  "role_map_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27A_mechanism_role_map_evidence_scan_v1/role_map.json",
+  "candidate_matrix_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27A_mechanism_role_map_evidence_scan_v1/adapter_candidate_matrix.csv",
+  "signal_contracts_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27A_mechanism_role_map_evidence_scan_v1/signal_contracts.json",
+  "run_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27A_mechanism_role_map_evidence_scan_v1/run_manifest.json",
+  "result_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27A_mechanism_role_map_evidence_scan_v1/reports/result_summary.md",
+  "counts": {
+    "candidate_count": 294,
+    "adapter_partial_or_ready": 71,
+    "onnx_export_ready": 0,
+    "roles": {
+      "Deferred": 293,
+      "Entry": 284,
+      "Exit / Hold": 70,
+      "Negative Memory": 26,
+      "Permission / Filter / Abstention": 14,
+      "Position Management": 4,
+      "Regime / Context": 79,
+      "Risk / Tail-risk": 56,
+      "Runtime / Packaging": 288
+    },
+    "mechanism_classes": {
+      "calibration_decision_layer": 5,
+      "model_probability_surface": 206,
+      "onnx_model_runtime": 6,
+      "regime_context_gate": 13,
+      "risk_lifecycle_surface": 53,
+      "rule_context_gate": 2,
+      "sequence_context_surface": 4,
+      "unclassified_mechanism_surface": 5
+    }
+  },
+  "top_adapter_candidates": [
+    {
+      "candidate_id": "stage32_run26B_tcn_temporal_convolution_runtime_probe_v1",
+      "stage_id": "32_sequence_model__tcn_temporal_convolution_context",
+      "run_id": "run26B_tcn_temporal_convolution_runtime_probe_v1",
+      "mechanism_class": "sequence_context_surface",
+      "roles": [
+        "Entry",
+        "Regime / Context",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage31_run25B_tabnet_attentive_tabular_runtime_probe_v1",
+      "stage_id": "31_model_family_challenge__tabnet_attentive_tabular_scout",
+      "run_id": "run25B_tabnet_attentive_tabular_runtime_probe_v1",
+      "mechanism_class": "model_probability_surface",
+      "roles": [
+        "Entry",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+      "stage_id": "27_tail_model__quantile_boosting_risk_surface",
+      "run_id": "run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+      "mechanism_class": "risk_lifecycle_surface",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage18_run12D_catboost_regime_split_probe_v1",
+      "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+      "run_id": "run12D_catboost_regime_split_probe_v1",
+      "mechanism_class": "regime_context_gate",
+      "roles": [
+        "Entry",
+        "Regime / Context",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage18_run12G_catboost_probability_calibration_probe_v1",
+      "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+      "run_id": "run12G_catboost_probability_calibration_probe_v1",
+      "mechanism_class": "calibration_decision_layer",
+      "roles": [
+        "Entry",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage26_run20A_ngboost_probabilistic_distribution_scout_v1",
+      "stage_id": "26_model_family_challenge__ngboost_probabilistic_distribution_shape",
+      "run_id": "run20A_ngboost_probabilistic_distribution_scout_v1",
+      "mechanism_class": "model_probability_surface",
+      "roles": [
+        "Risk / Tail-risk",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage25_run19A_hazard_trade_lifecycle_risk_scout_v1",
+      "stage_id": "25_exit_model__hazard_trade_lifecycle_risk",
+      "run_id": "run19A_hazard_trade_lifecycle_risk_scout_v1",
+      "mechanism_class": "risk_lifecycle_surface",
+      "roles": [
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage24_run18A_survival_time_to_event_hold_shape_scout_v1",
+      "stage_id": "24_exit_model__survival_time_to_event_hold_shape",
+      "run_id": "run18A_survival_time_to_event_hold_shape_scout_v1",
+      "mechanism_class": "risk_lifecycle_surface",
+      "roles": [
+        "Exit / Hold",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage11_run02V_short_specific_priority_probe_v1",
+      "stage_id": "11_alpha_robustness__wfo_label_horizon_sensitivity",
+      "run_id": "run02V_short_specific_priority_probe_v1",
+      "mechanism_class": "model_probability_surface",
+      "roles": [
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    },
+    {
+      "candidate_id": "stage28_run22C_markov_regression_supplement_state_variance_attribution_v1",
+      "stage_id": "28_regime_model__markov_switching_regression_state_link",
+      "run_id": "run22C_markov_regression_supplement_state_variance_attribution_v1",
+      "mechanism_class": "onnx_model_runtime",
+      "roles": [
+        "Entry",
+        "Regime / Context",
+        "Runtime / Packaging",
+        "Deferred"
+      ],
+      "adapter_state": "partial_adapter_candidate",
+      "onnx_decision": "defer_no_onnx_export"
+    }
+  ],
+  "onnx_decision": {
+    "ready_count": 0,
+    "decision": "defer_new_onnx_export_until_adapter_probe_survives_repeatability",
+    "existing_onnx_rows": 4
+  },
+  "required_gates": {
+    "evidence_gate": "completed_stage10_32_register_scan",
+    "repeatability_check": {
+      "status": "scan_only",
+      "rule": "validation/OOS or WFO/rolling evidence is required before adapter probe readiness.",
+      "single_split_blocker": "candidate is partial/deferred when comparable validation/OOS or WFO evidence is absent."
+    },
+    "runtime_parity_check": {
+      "status": "scan_only",
+      "rule": "ONNX export remains deferred unless parity and MT5 handoff plan are explicit."
+    },
+    "claim_boundary": "evidence_scan_and_adapter_contract_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
+  }
+}

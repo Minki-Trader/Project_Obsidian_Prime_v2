@@ -1,0 +1,42 @@
+{
+  "audit_name": "completion_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "objective_restatement": {
+    "deliverables": [
+      "evidence-driven Stage10~32 mechanism role map",
+      "repeatability shortlist and adapter readiness decisions",
+      "SignalCard/adapter contracts",
+      "validation/OOS parity reports",
+      "MT5 handoff identity audits or explicit runtime boundary",
+      "ONNX readiness decision and manifest-only packaging when justified",
+      "closeout packet with claim boundary"
+    ],
+    "success_criteria": [
+      "no preselected mechanism",
+      "no forced ONNX export",
+      "no operating baseline/promotion/runtime authority/live readiness claim",
+      "all explicit artifacts map to concrete files",
+      "tests and gates pass"
+    ]
+  },
+  "findings": [],
+  "counts": {
+    "checklist_items": 9,
+    "covered": 7,
+    "covered_with_warning": 1,
+    "covered_with_defer": 1,
+    "covered_pending_closeout_gate": 0,
+    "stage33_runs": 13,
+    "candidate_scan_count": 294,
+    "shortlist_count": 7,
+    "new_onnx_export_ready": 0
+  },
+  "checklist_path": "docs/agent_control/packets/stage33_completion_audit_closeout_v1/prompt_to_artifact_checklist.csv",
+  "allowed_claims": [
+    "completion_audit_passed",
+    "stage33_reviewed_closeout_gate_passed"
+  ],
+  "forbidden_claims": []
+}

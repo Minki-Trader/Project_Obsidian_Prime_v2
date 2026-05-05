@@ -1,0 +1,55 @@
+{
+  "packet_id": "stage33_run27E_adapter_feasibility_matrix_v1",
+  "stage_id": "33_adapter_runtime__mechanism_role_map_signal_contract",
+  "run_id": "run27E_adapter_feasibility_matrix_v1",
+  "source_run_id": "run27B_adapter_candidate_repeatability_shortlist_v1",
+  "status": "reviewed_adapter_feasibility_matrix_completed",
+  "judgment": "inconclusive_adapter_feasibility_matrix_completed_next_score_table_probe_selected",
+  "boundary": "adapter_feasibility_matrix_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "generated_at_utc": "2026-05-05T18:03:38Z",
+  "report_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27E_adapter_feasibility_matrix_v1/adapter_feasibility_report.json",
+  "matrix_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27E_adapter_feasibility_matrix_v1/adapter_feasibility_matrix.csv",
+  "run_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27E_adapter_feasibility_matrix_v1/run_manifest.json",
+  "result_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27E_adapter_feasibility_matrix_v1/reports/result_summary.md",
+  "counts": {
+    "shortlist_count": 7,
+    "consumed_count": 1,
+    "score_table_probe_ready": 3,
+    "existing_onnx_probe_ready": 3,
+    "new_onnx_export_ready": 0,
+    "blocked_or_deferred": 0
+  },
+  "selected_next_probe": {
+    "candidate_id": "stage32_run26D_torch_tcn_native_temporal_runtime_probe_v1",
+    "stage_id": "32_sequence_model__tcn_temporal_convolution_context",
+    "run_id": "run26D_torch_tcn_native_temporal_runtime_probe_v1",
+    "mechanism_class": "sequence_context_surface",
+    "roles": [
+      "Entry",
+      "Regime / Context",
+      "Runtime / Packaging",
+      "Deferred"
+    ],
+    "adapter_probe_route": "score_table_signalcard_adapter",
+    "feasibility_state": "score_table_signalcard_probe_ready",
+    "next_action": "implement_score_table_signalcard_adapter_probe",
+    "source_path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26D_torch_tcn_native_temporal_runtime_probe_v1",
+    "decision": "selected_next_non_onnx_score_table_signalcard_adapter_probe"
+  },
+  "onnx_readiness_decision": {
+    "decision": "no_new_onnx_export_ready;_existing_onnx_probe_possible_for_segmented_candidates;_next_probe_prefers_score_table_adapter_diversity",
+    "new_onnx_export_ready": 0,
+    "existing_onnx_probe_ready": 3,
+    "reason": "ONNX remains optional packaging; a score-table mechanism has reusable runtime evidence and no ONNX runtime advantage is established."
+  },
+  "required_gates": {
+    "why_this_work": "completed",
+    "evidence_gap": "completed",
+    "input_data_features_split_run_id": "completed",
+    "artifact_paths": "completed",
+    "validation_oos_wfo_mt5_results": "consumes_existing_run27B_metrics_and_source_runtime_evidence",
+    "failure_or_defer_reason": "completed_per_candidate",
+    "claim_boundary": "adapter_feasibility_matrix_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "next_action_or_stop_rule": "selected_next_score_table_signalcard_probe_or_defer_if_artifacts_move"
+  }
+}

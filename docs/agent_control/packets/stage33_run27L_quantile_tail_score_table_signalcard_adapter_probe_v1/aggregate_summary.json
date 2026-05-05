@@ -1,0 +1,48 @@
+{
+  "packet_id": "stage33_run27L_quantile_tail_score_table_signalcard_adapter_probe_v1",
+  "stage_id": "33_adapter_runtime__mechanism_role_map_signal_contract",
+  "run_id": "run27L_quantile_tail_score_table_signalcard_adapter_probe_v1",
+  "source_run_id": "run27E_adapter_feasibility_matrix_v1",
+  "status": "reviewed_score_table_signalcard_adapter_probe_completed",
+  "judgment": "inconclusive_score_table_signalcard_adapter_probe_completed_with_exact_signalcard_direction_gap",
+  "boundary": "quantile_tail_score_table_signalcard_adapter_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "generated_at_utc": "2026-05-05T19:03:51Z",
+  "adapter_contract_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27L_quantile_tail_score_table_signalcard_adapter_probe_v1/adapter_contract.json",
+  "parity_report_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27L_quantile_tail_score_table_signalcard_adapter_probe_v1/score_table_parity_report.json",
+  "signalcard_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27L_quantile_tail_score_table_signalcard_adapter_probe_v1/signalcard_summary.json",
+  "adapter_pack_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27L_quantile_tail_score_table_signalcard_adapter_probe_v1/adapter_pack/adapter_pack_manifest.json",
+  "run_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27L_quantile_tail_score_table_signalcard_adapter_probe_v1/run_manifest.json",
+  "result_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27L_quantile_tail_score_table_signalcard_adapter_probe_v1/reports/result_summary.md",
+  "selected_candidate": {
+    "candidate_id": "stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+    "stage_id": "27_tail_model__quantile_boosting_risk_surface",
+    "run_id": "run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+    "mechanism_class": "risk_lifecycle_surface",
+    "roles": [
+      "Entry",
+      "Risk / Tail-risk",
+      "Runtime / Packaging",
+      "Deferred"
+    ],
+    "adapter_probe_route": "score_table_signalcard_adapter",
+    "feasibility_state": "score_table_signalcard_probe_ready",
+    "next_action": "implement_score_table_signalcard_adapter_probe",
+    "source_path": "stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+    "decision": false
+  },
+  "parity_passed": true,
+  "signal_direction_mismatches": 1,
+  "trading_action_mismatches": 0,
+  "adapter_readiness_decision": "defer_exact_signalcard_direction_gap",
+  "onnx_readiness_decision": "defer_onnx_export_score_table_runtime_advantage_not_established",
+  "required_gates": {
+    "why_this_work": "completed",
+    "evidence_gap": "completed",
+    "input_data_features_split_run_id": "completed",
+    "artifact_paths": "completed",
+    "validation_oos_wfo_mt5_results": "completed_by_existing_run21B_quantile_boosting_tail_risk_runtime_probe_v1_evidence_reference",
+    "failure_or_defer_reason": "exact_signalcard_direction_gap_and_onnx_deferred_runtime_advantage_absent",
+    "claim_boundary": "quantile_tail_score_table_signalcard_adapter_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "next_action_or_stop_rule": "score_table_mt5_handoff_identity_audit_or_segmented_catboost_adapter_probe"
+  }
+}

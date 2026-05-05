@@ -22,6 +22,9 @@ line_count_policy:
     stage_pipelines/stage18/catboost_followup_batch.py:
       max_lines: 1700
       reason: "Stage18 CatBoost follow-up batch materializer(18단계 캣부스트 후속 묶음 물질화 스크립트); existing stage-local orchestration debt(기존 단계 로컬 조율 부채) registered before Stage19 work, extract shared follow-up and MT5 packet helpers(공유 후속 및 MT5 묶음 도구 추출) before reuse"
+    stage_pipelines/stage29_32_goal_completion.py:
+      max_lines: 2000
+      reason: "Stage29-32 cross-stage goal completion materializer; existing one-shot orchestration debt, do not copy into Stage33 adapter work"
 ownership_policy:
   blocked_direct_imports:
     - importer_owner: foundation/control_plane
@@ -34,6 +37,28 @@ ownership_policy:
     - path: foundation/mt5/runtime_support.py
       status: "resolved_no_stage_pipeline_import"
       reason: "runtime_support imports owner modules directly; stage orchestration delegation was removed(런타임 지원이 소유 모듈을 직접 가져오며 단계 조율 파일 위임은 제거됨)"
+  registered_cross_stage_import_debt:
+    - path: stage_pipelines/stage24/survival_time_to_event_scout.py
+      imported_stage: stage23
+      reason: "Existing Stage24 reuse debt from Stage23 supervised regime scout; warning only, do not copy."
+    - path: stage_pipelines/stage25/hazard_trade_lifecycle_scout.py
+      imported_stage: stage23
+      reason: "Existing Stage25 reuse debt from Stage23 supervised regime scout; warning only, do not copy."
+    - path: stage_pipelines/stage25/hazard_trade_lifecycle_scout.py
+      imported_stage: stage24
+      reason: "Existing Stage25 reuse debt from Stage24 survival scout; warning only, do not copy."
+    - path: stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py
+      imported_stage: stage23
+      reason: "Existing Stage26 reuse debt from Stage23 supervised regime scout; warning only, do not copy."
+    - path: stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py
+      imported_stage: stage24
+      reason: "Existing Stage26 reuse debt from Stage24 survival scout; warning only, do not copy."
+    - path: stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py
+      imported_stage: stage26
+      reason: "Existing Stage27 reuse debt from Stage26 NGBoost scout; warning only, do not copy."
+    - path: stage_pipelines/stage28/markov_regression_state_link_scout.py
+      imported_stage: stage27
+      reason: "Existing Stage28 reuse debt from Stage27 quantile scout; warning only, do not copy."
 required_gate:
   command: "python -m foundation.control_plane.code_surface_audit --root ."
   run_before:

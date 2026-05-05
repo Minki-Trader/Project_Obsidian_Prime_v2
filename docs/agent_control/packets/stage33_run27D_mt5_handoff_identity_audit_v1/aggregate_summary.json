@@ -1,0 +1,30 @@
+{
+  "packet_id": "stage33_run27D_mt5_handoff_identity_audit_v1",
+  "stage_id": "33_adapter_runtime__mechanism_role_map_signal_contract",
+  "run_id": "run27D_mt5_handoff_identity_audit_v1",
+  "source_run_id": "run27C_signalcard_adapter_contract_probe_v1",
+  "status": "reviewed_mt5_handoff_identity_audit_completed",
+  "judgment": "inconclusive_mt5_handoff_identity_audit_completed_existing_probe_identity_passed",
+  "boundary": "mt5_handoff_identity_audit_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "generated_at_utc": "2026-05-05T17:53:26Z",
+  "report_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27D_mt5_handoff_identity_audit_v1/mt5_handoff_identity_report.json",
+  "matrix_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27D_mt5_handoff_identity_audit_v1/handoff_identity_matrix.csv",
+  "run_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27D_mt5_handoff_identity_audit_v1/run_manifest.json",
+  "result_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27D_mt5_handoff_identity_audit_v1/reports/result_summary.md",
+  "counts": {
+    "attempt_count": 6,
+    "attempts_passed": 6,
+    "model_pack_tiers_passed": 2,
+    "blocking_findings": 0
+  },
+  "runtime_handoff_decision": "existing_stage12_mt5_probe_identity_linked_to_run27c_model_pack",
+  "blocking_findings": [],
+  "required_gates": {
+    "evidence_gate": "completed_run27C_signalcard_adapter_probe_consumed",
+    "model_pack_hash_gate": "passed",
+    "mt5_report_hash_gate": "passed",
+    "set_contract_gate": "passed",
+    "runtime_output_gate": "passed",
+    "claim_boundary": "mt5_handoff_identity_audit_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
+  }
+}

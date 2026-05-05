@@ -1,0 +1,38 @@
+{
+  "packet_id": "stage33_run27K_segmented_catboost_regime_mt5_handoff_identity_audit_v1",
+  "stage_id": "33_adapter_runtime__mechanism_role_map_signal_contract",
+  "run_id": "run27K_segmented_catboost_regime_mt5_handoff_identity_audit_v1",
+  "source_run_id": "run27J_segmented_catboost_regime_onnx_signalcard_probe_v1",
+  "status": "reviewed_segmented_catboost_mt5_handoff_identity_audit_completed",
+  "judgment": "inconclusive_segmented_catboost_mt5_handoff_identity_audit_completed",
+  "boundary": "segmented_catboost_regime_mt5_handoff_identity_audit_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "generated_at_utc": "2026-05-05T18:46:06Z",
+  "report_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27K_segmented_catboost_regime_mt5_handoff_identity_audit_v1/mt5_handoff_identity_report.json",
+  "matrix_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27K_segmented_catboost_regime_mt5_handoff_identity_audit_v1/handoff_identity_matrix.csv",
+  "run_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27K_segmented_catboost_regime_mt5_handoff_identity_audit_v1/run_manifest.json",
+  "result_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27K_segmented_catboost_regime_mt5_handoff_identity_audit_v1/reports/result_summary.md",
+  "counts": {
+    "segment_count": 4,
+    "attempt_count": 4,
+    "attempts_passed": 4,
+    "blocking_findings": 0,
+    "warning_findings": 4
+  },
+  "runtime_handoff_decision": "existing_stage18_mt5_probe_identity_linked_to_run27j_segmented_catboost_regime_onnx_signalcard_probe_v1_segmented_catboost_model_pack",
+  "blocking_findings": [],
+  "warning_findings": [
+    "high_vol_validation_is:tier_a:onnx_model:source_common_copy_manifest_hash_drift",
+    "low_vol_validation_is:tier_a:onnx_model:source_common_copy_manifest_hash_drift",
+    "high_vol_oos:tier_a:onnx_model:source_common_copy_manifest_hash_drift",
+    "low_vol_oos:tier_a:onnx_model:source_common_copy_manifest_hash_drift"
+  ],
+  "required_gates": {
+    "research_path": "foundation.adapters.onnx_signal_adapter; foundation.control_plane.segmented_catboost_onnx_signalcard_probe",
+    "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.ex5 and Stage18 run12D_catboost_regime_split_probe_v1 tester ini/set/reports/runtime telemetry",
+    "shared_contract": "segment thresholds, feature order hashes, ONNX paths, SignalCard output",
+    "known_differences": "existing MT5 runtime probe references current common files; source common-copy manifest may contain historical hash drift warnings",
+    "parity_check": "model pack hash identity plus existing MT5 runtime output identity",
+    "parity_identity": "model pack, source/ONNX models, segment feature matrices, common files, tester files, telemetry summaries",
+    "runtime_claim_boundary": "runtime_probe_identity_reference_not_runtime_authority"
+  }
+}

@@ -1,0 +1,158 @@
+version: work_packet_schema_v2
+packet_id: stage33_completion_audit_closeout_v1
+created_at_utc: '2026-05-05T19:25:00Z'
+user_request:
+  raw: Active goal autonomous exploration-to-ONNX completion audit and Stage33 closeout.
+  interpreted_raw: Close Stage33 only if prompt-to-artifact audit proves objective
+    coverage without operating claims.
+  requested_action: completion_audit_closeout_and_main_push_after_gates
+current_truth:
+  active_stage: 33_adapter_runtime__mechanism_role_map_signal_contract
+  current_run: run27M_quantile_tail_score_table_mt5_handoff_identity_audit_v1
+  branch: main
+  latest_packet: stage33_completion_audit_closeout_v1
+work_classification:
+  primary_family: publish_handoff
+  work_surface: stage33_completion_audit_closeout
+  mutation: docs_and_packet_artifacts
+  execution: true
+risk_vector_scan:
+  risks:
+  - claim_overstatement
+  - uncovered_prompt_requirement
+  - runtime_authority_overclaim
+  - artifact_lineage_gap
+  - korean_bom_encoding
+  required_gates:
+  - completion_audit
+  - test_gate
+  - code_surface_audit
+  - state_sync_audit
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+decision_lock:
+  mutation_allowed: true
+  locked_boundary: Stage33 closeout artifacts and current truth only; no threshold/model/runtime
+    logic changes
+  forbidden_mutations:
+  - do not relax gates or thresholds
+  - do not claim baseline/promotion/runtime authority
+  - do not create new ONNX export without readiness
+interpreted_scope:
+  work_families:
+  - publish_handoff
+  - artifact_lineage
+  - runtime_backtest
+  target_surfaces:
+  - docs/agent_control/packets/stage33_completion_audit_closeout_v1/
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/33_adapter_runtime__mechanism_role_map_signal_contract/00_spec/stage_brief.md
+  - stages/33_adapter_runtime__mechanism_role_map_signal_contract/04_selected/selection_status.md
+  scope_units:
+  - prompt_to_artifact_completion_audit
+  - stage33_closeout_report
+  - required_gate_coverage
+  - main_push_after_commit
+  execution_layers:
+  - docs
+  - control_plane_audit
+  - git_publish
+  mutation_policy: closeout_docs_and_packet_only
+  evidence_layers:
+  - aggregate_summaries
+  - stage_ledger
+  - run_registry
+  - pytest
+  - state_sync_audit
+  - code_surface_audit
+  - closeout_gate
+  reduction_policy: do not reinterpret trading results; preserve inconclusive/deferred
+    boundaries
+  claim_boundary: stage33_reviewed_closeout_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness
+acceptance_criteria:
+- prompt-to-artifact checklist covers every explicit objective requirement
+- run27A-run27M evidence files exist and are inspected
+- tests and audits pass
+- closeout report states allowed and forbidden claims
+- required gate coverage passes
+- no operating claims are made
+work_plan:
+- generate completion audit
+- write closeout report
+- run closeout gate
+- sync current truth
+- commit and push main only after gates pass
+skill_routing:
+  primary_family: publish_handoff
+  primary_skill: obsidian-artifact-lineage
+  support_skills:
+  - obsidian-reentry-read
+  - obsidian-result-judgment
+  - obsidian-runtime-parity
+  skills_considered:
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-runtime-parity
+  skills_selected:
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-runtime-parity
+  skills_not_used: {}
+  required_skill_receipts:
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-runtime-parity
+  required_gates:
+  - completion_audit
+  - test_gate
+  - code_surface_audit
+  - state_sync_audit
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  source_inputs:
+  - docs/agent_control/packets/stage33_run27A_mechanism_role_map_evidence_scan_v1/aggregate_summary.json
+  - docs/agent_control/packets/stage33_run27M_quantile_tail_score_table_mt5_handoff_identity_audit_v1/aggregate_summary.json
+  - docs/registers/run_registry.csv
+  - docs/registers/alpha_run_ledger.csv
+  produced_artifacts:
+  - docs/agent_control/packets/stage33_completion_audit_closeout_v1/completion_audit.json
+  - docs/agent_control/packets/stage33_completion_audit_closeout_v1/prompt_to_artifact_checklist.csv
+  - docs/agent_control/packets/stage33_completion_audit_closeout_v1/closeout_report.md
+  - docs/agent_control/packets/stage33_completion_audit_closeout_v1/closeout_gate.json
+  no_new_trading_artifacts: true
+gates:
+  required:
+  - completion_audit
+  - test_gate
+  - code_surface_audit
+  - state_sync_audit
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    closeout_gate: closeout_gate is the enclosing generated gate report, not a nested
+      audit
+final_claim_policy:
+  allowed_claims:
+  - stage33_reviewed_closeout
+  - completion_audit_passed
+  - current_truth_synced
+  forbidden_claims:
+  - alpha_quality
+  - operating_baseline
+  - promotion_candidate
+  - runtime_authority
+  - live_readiness

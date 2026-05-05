@@ -1,4 +1,18 @@
-﻿## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
+﻿## Latest Stage33 Completion Audit Closeout(최신 33단계 완료 감사 마감)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `33_adapter_runtime__mechanism_role_map_signal_contract`
+- current run(현재 실행): `run27M_quantile_tail_score_table_mt5_handoff_identity_audit_v1`
+- latest packet(최신 묶음): `stage33_completion_audit_closeout_v1`
+- next action(다음 행동): `push_main_after_closeout_gate_then_goal_completion_report`
+
+효과(effect, 효과): Stage33(33단계)는 Stage10~32 evidence(10~32단계 근거)를 읽어 run27A~run27M(27A~27M 실행)를 완료했다. run27C/run27D(27C/27D 실행)는 Stage12(12단계) ExtraTrees ONNX(엑스트라트리스 온닉스) adapter(어댑터)와 기존 MT5 handoff identity(기존 MT5 인계 정체성) `6/6`을 연결했다. run27F/run27G(27F/27G 실행)는 Stage32(32단계) score-table adapter(점수표 어댑터)를 `20,856` rows(행), direction mismatch(방향 불일치) `0`, 기존 MT5 identity(기존 MT5 정체성) `6/6`로 연결했다. run27H/run27I(27H/27I 실행)는 Stage18 run12G(18단계 실행12G) segmented CatBoost ONNX(분할 캣부스트 온닉스) adapter(어댑터)를 `4,173` rows(행), max abs diff(최대 절대 차이) `9.201430195560079e-08`, direction mismatch(방향 불일치) `0`, 기존 MT5 routed attempt identity(기존 MT5 라우팅 시도 정체성) `4/4`로 연결했다. run27J/run27K(27J/27K 실행)는 Stage18 run12D(18단계 실행12D) high/low volatility regime segmented CatBoost ONNX(고/저 변동성 국면 분할 캣부스트 온닉스) adapter(어댑터)를 `20,856` rows(행), max abs diff(최대 절대 차이) `1.0304774167302355e-07`, direction mismatch(방향 불일치) `0`, 기존 MT5 routed attempt identity(기존 MT5 라우팅 시도 정체성) `4/4`로 연결했다. run27L/run27M(27L/27M 실행)는 Stage27 run21B(27단계 실행21B) quantile tail score-table(분위수 꼬리 점수표) adapter(어댑터)를 `20,856` rows(행), max abs diff(최대 절대 차이) `0.0022587861039878865`, exact direction mismatch(정확 방향 불일치) `1`, trading action mismatch(거래 행동 불일치) `0`, 기존 MT5 attempt identity(기존 MT5 시도 정체성) `6/6`로 연결했다. run27L(27L 실행)의 adapter readiness(어댑터 준비)는 exact SignalCard direction gap(정확 신호 카드 방향 차이) 때문에 보류다. 새 MT5 terminal run(새 MT5 터미널 실행), 새 ONNX export(새 온닉스 내보내기), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+마감(closeout, 마감): `stage33_completion_audit_closeout_v1`은 prompt-to-artifact checklist(요청-산출물 점검표), completion audit(완료 감사), closeout report(마감 보고)를 남겨 Stage33(33단계)를 reviewed exploratory closeout(검토된 탐색 마감)으로 정리한다.
+
+## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 

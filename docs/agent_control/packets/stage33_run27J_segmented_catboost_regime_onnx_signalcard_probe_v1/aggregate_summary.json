@@ -1,0 +1,122 @@
+{
+  "packet_id": "stage33_run27J_segmented_catboost_regime_onnx_signalcard_probe_v1",
+  "stage_id": "33_adapter_runtime__mechanism_role_map_signal_contract",
+  "run_id": "run27J_segmented_catboost_regime_onnx_signalcard_probe_v1",
+  "source_run_id": "run27E_adapter_feasibility_matrix_v1",
+  "status": "reviewed_segmented_catboost_onnx_signalcard_probe_completed",
+  "judgment": "inconclusive_segmented_catboost_onnx_signalcard_probe_completed",
+  "boundary": "segmented_catboost_regime_onnx_signalcard_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "generated_at_utc": "2026-05-05T18:45:46Z",
+  "adapter_contract_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27J_segmented_catboost_regime_onnx_signalcard_probe_v1/adapter_contract.json",
+  "parity_report_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27J_segmented_catboost_regime_onnx_signalcard_probe_v1/segmented_onnx_parity_report.json",
+  "signalcard_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27J_segmented_catboost_regime_onnx_signalcard_probe_v1/signalcard_summary.json",
+  "model_pack_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27J_segmented_catboost_regime_onnx_signalcard_probe_v1/model_pack/model_pack_manifest.json",
+  "run_manifest_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27J_segmented_catboost_regime_onnx_signalcard_probe_v1/run_manifest.json",
+  "result_summary_path": "stages/33_adapter_runtime__mechanism_role_map_signal_contract/02_runs/run27J_segmented_catboost_regime_onnx_signalcard_probe_v1/reports/result_summary.md",
+  "selected_candidate": {
+    "selected_rank": 6,
+    "candidate_id": "stage18_run12D_catboost_regime_split_probe_v1",
+    "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+    "run_id": "run12D_catboost_regime_split_probe_v1",
+    "mechanism_class": "regime_context_gate",
+    "roles": [
+      "Entry",
+      "Regime / Context",
+      "Runtime / Packaging",
+      "Deferred"
+    ],
+    "source_path": "stages/18_model_family_challenge__catboost_ordered_boosting_scout/02_runs/run12D_catboost_regime_split_probe_v1",
+    "artifact_state": "source_run_root_found",
+    "adapter_probe_route": "existing_onnx_segmented_signalcard_adapter",
+    "feasibility_state": "onnx_segmented_signalcard_probe_ready",
+    "next_action": "implement_segmented_signalcard_onnx_adapter_probe",
+    "blockers": [],
+    "runtime_advantage_read": "existing_onnx_artifacts_can_be_wrapped;_new_export_not_needed",
+    "onnx_readiness": "existing_onnx_probe_possible_not_new_export_ready",
+    "feature_contract_state": "feature_csv_present_segment_contract_required",
+    "has_run_manifest": true,
+    "has_kpi_record": true,
+    "has_summary": true,
+    "has_source_model": true,
+    "has_onnx": true,
+    "has_score_table": false,
+    "has_feature_csv": true,
+    "has_predictions": true,
+    "has_mt5_files": true,
+    "external_verification_completed": true,
+    "validation_net_profit_best": 76.22,
+    "oos_net_profit_best": 398.8,
+    "asset_counts": {
+      "run_manifest": 1,
+      "kpi_record": 1,
+      "summary": 1,
+      "source_model": 2,
+      "onnx": 4,
+      "score_table": 0,
+      "feature_csv": 8,
+      "predictions": 3,
+      "mt5_files": 12
+    },
+    "sample_assets": {
+      "run_manifest": [
+        "run_manifest.json"
+      ],
+      "kpi_record": [
+        "kpi_record.json"
+      ],
+      "summary": [
+        "summary.json"
+      ],
+      "source_model": [
+        "models/v02_ordered_depth4_strong_l2_tier_a_catboost.joblib",
+        "models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42.joblib"
+      ],
+      "onnx": [
+        "models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.onnx",
+        "models/v02_ordered_depth4_strong_l2_tier_a_catboost_opset13.raw.onnx",
+        "models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.onnx",
+        "models/v02_ordered_depth4_strong_l2_tier_b_catboost_core42_opset13.raw.onnx"
+      ],
+      "feature_csv": [
+        "features/high_vol/tier_a_high_vol_oos_feature_matrix.csv",
+        "features/high_vol/tier_a_high_vol_validation_is_feature_matrix.csv",
+        "features/high_vol/tier_b_high_vol_oos_feature_matrix.csv",
+        "features/high_vol/tier_b_high_vol_validation_is_feature_matrix.csv",
+        "features/low_vol/tier_a_low_vol_oos_feature_matrix.csv",
+        "features/low_vol/tier_a_low_vol_validation_is_feature_matrix.csv",
+        "features/low_vol/tier_b_low_vol_oos_feature_matrix.csv",
+        "features/low_vol/tier_b_low_vol_validation_is_feature_matrix.csv"
+      ],
+      "predictions": [
+        "predictions/tier_a_separate_predictions.parquet",
+        "predictions/tier_ab_combined_predictions.parquet",
+        "predictions/tier_b_separate_predictions.parquet"
+      ],
+      "mt5_files": [
+        "mt5/reports/Project_Obsidian_Prime_v2_run12D_catboost_regime_split_probe_v1_routed_high_vol_oos.htm",
+        "mt5/reports/Project_Obsidian_Prime_v2_run12D_catboost_regime_split_probe_v1_routed_high_vol_validation_is.htm",
+        "mt5/reports/Project_Obsidian_Prime_v2_run12D_catboost_regime_split_probe_v1_routed_low_vol_oos.htm",
+        "mt5/reports/Project_Obsidian_Prime_v2_run12D_catboost_regime_split_probe_v1_routed_low_vol_validation_is.htm",
+        "mt5/routed_high_vol_oos.ini",
+        "mt5/routed_high_vol_oos.set",
+        "mt5/routed_high_vol_validation_is.ini",
+        "mt5/routed_high_vol_validation_is.set"
+      ]
+    },
+    "claim_boundary": "adapter_feasibility_matrix_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "selected_next_probe": false
+  },
+  "parity_passed": true,
+  "signal_direction_mismatches": 0,
+  "onnx_readiness_decision": "existing_segmented_catboost_onnx_packaged_manifest_only_no_new_export",
+  "required_gates": {
+    "why_this_work": "completed",
+    "evidence_gap": "completed",
+    "input_data_features_split_run_id": "completed",
+    "artifact_paths": "completed",
+    "validation_oos_wfo_mt5_results": "completed_by_existing_stage18_run12D_catboost_regime_split_probe_v1_evidence_reference",
+    "failure_or_defer_reason": "new_onnx_export_deferred_existing_onnx_sufficient_for_probe",
+    "claim_boundary": "segmented_catboost_regime_onnx_signalcard_probe_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "next_action_or_stop_rule": "stage18_segmented_mt5_handoff_identity_audit_or_stage33_closeout"
+  }
+}
