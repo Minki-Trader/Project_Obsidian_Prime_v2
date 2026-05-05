@@ -1,4 +1,12 @@
-﻿## Latest Stage25 Closeout / Stage26 Open(최신 25단계 마감 / 26단계 개방)
+﻿## Latest Stage26 RUN20A NGBoost Scout(최신 26단계 20A 실행 NGBoost 탐색)
+
+Stage26(26단계) `run20A_ngboost_probabilistic_distribution_scout_v1`를 reviewed structural scout(검토된 구조 탐색)로 완료했다.
+
+결과(result, 결과): `inconclusive_ngboost_probabilistic_distribution_scout_completed`. selected variant(선택 변형): `v02_core42_distribution_surface`. next exact action(다음 정확한 행동): `run20B_ngboost_distribution_runtime_probe_v1`.
+
+효과(effect, 효과): NGBoost(자연 그래디언트 부스팅)의 uncertainty/probability shape(불확실성/확률 모양)는 보존 단서로 남기고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+## Latest Stage25 Closeout / Stage26 Open(최신 25단계 마감 / 26단계 개방)
 
 Stage25(25단계) Hazard model(위험률 모델)을 reviewed closeout(검토된 마감)으로 닫고 Stage26(26단계) `26_model_family_challenge__ngboost_probabilistic_distribution_shape`를 open-only(개방만) 상태로 열었다.
 

@@ -48,7 +48,7 @@ Stage18(18단계) CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스
 
 Stage26-32(26-32단계) extension tooling(확장 도구) 상태는 아래처럼 둔다.
 
-- Stage26(26단계) NGBoost(자연 그래디언트 부스팅): `ngboost`는 아직 설치하지 않았다. stage open(단계 개방) 전 Python 3.13(파이썬 3.13) compatibility(호환성)를 확인한다.
+- Stage26(26단계) NGBoost(자연 그래디언트 부스팅): `ngboost==0.5.10` 설치와 Python 3.13(파이썬 3.13) import/smoke compatibility(가져오기/연기 호환성)를 확인했고, `run20A_ngboost_probabilistic_distribution_scout_v1`에서 사용했다.
 - Stage27(27단계) quantile boosting(분위수 부스팅): scikit-learn(`scikit-learn`, 사이킷런) quantile loss(분위수 손실)를 우선 후보로 쓴다.
 - Stage28(28단계) Markov regression(마르코프 회귀): `statsmodels==0.14.6`로 시작할 수 있다.
 - Stage29(29단계) River online ML(리버 온라인 머신러닝): `river`는 아직 설치하지 않았다. stage open(단계 개방) 전 drift metric(드리프트 지표)와 dependency(의존성)를 같이 확인한다.

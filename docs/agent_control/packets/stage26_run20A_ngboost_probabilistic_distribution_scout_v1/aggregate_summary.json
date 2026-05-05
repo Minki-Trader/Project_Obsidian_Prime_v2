@@ -1,0 +1,876 @@
+{
+  "artifacts": {
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "model_artifacts": {
+      "feature_reads": {
+        "tier_a": {
+          "distribution_param_count": 2,
+          "feature_count": 42,
+          "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/results/selected_feature_reads/tier_a_ngboost_feature_read.csv",
+          "read_type": "ngboost_feature_importance",
+          "sha256": "9d400401bff05a92e215c575f87897d8e5a94ac5c3605c7a5bdbb86eb5a3b10a",
+          "top10_importance_share": 0.7902343961036958,
+          "top_features": [
+            {
+              "feature": "hl_range",
+              "importance": 0.1548813871294878,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "historical_vol_20",
+              "importance": 0.14704038880929646,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "ema50_ema200_diff",
+              "importance": 0.09395707573193603,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "overnight_return",
+              "importance": 0.08755108200545651,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "sma50_sma200_ratio",
+              "importance": 0.07512526676484756,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "ppo_hist_12_26_9",
+              "importance": 0.06729693457756286,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "minutes_from_cash_open",
+              "importance": 0.05288938715804532,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "atr_50",
+              "importance": 0.04600450773871645,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "ema9_ema20_diff",
+              "importance": 0.03362805237111656,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "ema20_ema50_diff",
+              "importance": 0.03186031381723015,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "bollinger_width_20",
+              "importance": 0.031177178893593897,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "rsi_50",
+              "importance": 0.024750828932418735,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            }
+          ]
+        },
+        "tier_b": {
+          "distribution_param_count": 2,
+          "feature_count": 42,
+          "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/results/selected_feature_reads/tier_b_ngboost_feature_read.csv",
+          "read_type": "ngboost_feature_importance",
+          "sha256": "1d6cb8dd8310332a0fa067319f2188bb3a5d358940d788d1f4597b467ada26bd",
+          "top10_importance_share": 0.8185957524231436,
+          "top_features": [
+            {
+              "feature": "hl_range",
+              "importance": 0.14907438155081207,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "historical_vol_20",
+              "importance": 0.1419431175347358,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "ema50_ema200_diff",
+              "importance": 0.13462815240921694,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "overnight_return",
+              "importance": 0.0941277900171918,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "minutes_from_cash_open",
+              "importance": 0.06840613517356163,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "sma50_sma200_ratio",
+              "importance": 0.06222866180868733,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "atr_50",
+              "importance": 0.05319300543832344,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "ppo_hist_12_26_9",
+              "importance": 0.05177484523550696,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "bollinger_width_20",
+              "importance": 0.033626187085434966,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "rsi_50",
+              "importance": 0.02959347616967261,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "ema9_ema20_diff",
+              "importance": 0.028757964816094057,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            },
+            {
+              "feature": "atr_14",
+              "importance": 0.028596051158329763,
+              "read_type": "ngboost_feature_importance_mean_abs_across_distribution_params"
+            }
+          ]
+        }
+      },
+      "ngboost_version": "0.5.10",
+      "runtime_feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "runtime_feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "selected_thresholds": {
+        "tier_a": 0.4082072431247887,
+        "tier_b": 0.40540754767045534
+      },
+      "selected_variant_id": "v02_core42_distribution_surface",
+      "tier_a_model": {
+        "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/models/v02_core42_distribution_surface_tier_a_ngboost.joblib",
+        "sha256": "dbc5d5365904abf02bdb7e53dd4e49a4d8c1a95fd4f7da5207c55e59f302e772"
+      },
+      "tier_a_training_sample": {
+        "class_counts": {
+          "0": 9064,
+          "1": 9643,
+          "2": 10515
+        },
+        "feature_count": 42,
+        "max_train_rows": 36000,
+        "sample_weight_policy": "balanced_classes",
+        "train_rows": 29222
+      },
+      "tier_b_model": {
+        "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/models/v02_core42_distribution_surface_tier_b_ngboost.joblib",
+        "sha256": "53a86f97730ccd58b0f5d7160cc0d814f3b0126471544b39fa9f8eaac20df3af"
+      },
+      "tier_b_training_sample": {
+        "class_counts": {
+          "0": 10769,
+          "1": 12830,
+          "2": 12401
+        },
+        "feature_count": 42,
+        "max_train_rows": 36000,
+        "sample_weight_policy": "balanced_classes",
+        "train_rows": 36000
+      }
+    },
+    "model_input_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "prediction_artifacts": {
+      "tier_a_predictions": {
+        "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/predictions/tier_a_ngboost_predictions.parquet",
+        "rows": 46650,
+        "sha256": "236c78b2b440ebfa3aab1f91df4cf434ec145ebabf7c6818a305a930e981df6f"
+      },
+      "tier_ab_predictions": {
+        "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/predictions/tier_ab_ngboost_predictions.parquet",
+        "rows": 59048,
+        "sha256": "2eb7a7bbac3315ce9ba4d3a505b1e4b906de3320e721c7c14ee0d94f03c103fc"
+      },
+      "tier_b_predictions": {
+        "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/predictions/tier_b_ngboost_predictions.parquet",
+        "rows": 12398,
+        "sha256": "f2fe19215d13c9fe52b04dce11948c483aa4a5c98807675711e709fb33149f7f"
+      }
+    },
+    "variant_results": {
+      "variant_results_csv": {
+        "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/results/ngboost_variant_results.csv",
+        "sha256": "3a5674ece2c4d260e9b39246ad600a3eb08c851a0746738018b1c63e08e426aa"
+      },
+      "variant_results_json": {
+        "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/results/ngboost_variant_results.json",
+        "sha256": "c336817e755edfab9af6d17912792daf66e747b973dd876af22a124917c36b27"
+      }
+    }
+  },
+  "best_overall_variant_id": "v02_core42_distribution_surface",
+  "boundary": "ngboost_probabilistic_distribution_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "created_at_utc": "2026-05-05T01:35:59Z",
+  "exploration_label": "stage26_Model__NGBoostProbabilisticDistributionShape",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_set_id": "feature_set_v2_mt5_price_proxy_ngboost_distribution_shape",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_ngboost_probabilistic_distribution_scout_completed",
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "ledger_updates": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 3234,
+      "sha256": "691099d42ff8cae032beeb3bd2d70d51bd67e8900f22278d4e1c2a95ef365097",
+      "upserted_rows": 3
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+      "rows": 286,
+      "sha256": "10f970d3ab57e97cb66bfa148edf68b6f6e5e23a751cdb4a72028f7099d9365f",
+      "upserted_rows": 1
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/03_reviews/stage_run_ledger.csv",
+      "rows": 3,
+      "sha256": "b015d47e47ec3bb3b3ef3134d02e198b123efa870c637f5348175af205202b11",
+      "upserted_rows": 3
+    }
+  },
+  "model_characteristic_strength": "ngboost_uncertainty_shape_visible_enough_for_runtime_probe",
+  "model_family": "ngboost_categorical_distribution",
+  "mt5_runtime_probe_status": "not_attempted_in_run20A_next_milestone_run20B_ngboost_distribution_runtime_probe_v1",
+  "next_condition": "Run run20B_ngboost_distribution_runtime_probe_v1 as a narrow MT5 runtime_probe using small tranche/sentinel output before any larger batch.",
+  "ngboost_version": "0.5.10",
+  "packet_id": "stage26_run20A_ngboost_probabilistic_distribution_scout_v1",
+  "run_id": "run20A_ngboost_probabilistic_distribution_scout_v1",
+  "run_number": "run20A",
+  "selected_baseline": null,
+  "selected_distribution_read": {
+    "tier_a": {
+      "oos": {
+        "entropy_mean": 0.9754424721932006,
+        "entropy_p10": 0.9459697350809573,
+        "entropy_p90": 0.9984276574516405,
+        "flat_dominance_rate": 0.42550105485232065,
+        "high_entropy_rate_ge_0p92": 0.9922204641350211,
+        "long_short_skew_mean": 0.018958507765968337,
+        "nonflat_confidence_mean": 0.35680907191332273,
+        "probability_margin_mean": 0.08110997313792344,
+        "rows": 7584
+      },
+      "probability_checks": {
+        "finite": true,
+        "row_sum_max_abs_error": 2.220446049250313e-16
+      },
+      "train": {
+        "entropy_mean": 0.9822081848968621,
+        "entropy_p10": 0.9536096701892715,
+        "entropy_p90": 0.9990442998117807,
+        "flat_dominance_rate": 0.42663062076517694,
+        "high_entropy_rate_ge_0p92": 0.9945931147765382,
+        "long_short_skew_mean": 0.00673227042748829,
+        "nonflat_confidence_mean": 0.3527991900726568,
+        "probability_margin_mean": 0.06810022991639234,
+        "rows": 29222
+      },
+      "validation": {
+        "entropy_mean": 0.9745848382741663,
+        "entropy_p10": 0.944077874805163,
+        "entropy_p90": 0.9983902768971836,
+        "flat_dominance_rate": 0.44351889475822837,
+        "high_entropy_rate_ge_0p92": 0.9791751320601382,
+        "long_short_skew_mean": 0.01726632283458017,
+        "nonflat_confidence_mean": 0.3548527263550103,
+        "probability_margin_mean": 0.08361311267656342,
+        "rows": 9844
+      }
+    },
+    "tier_ab": {
+      "oos": {
+        "entropy_mean": 0.9752268227009793,
+        "entropy_p10": 0.9459226706078858,
+        "entropy_p90": 0.998409311644276,
+        "flat_dominance_rate": 0.45708998380754107,
+        "high_entropy_rate_ge_0p92": 0.9923664122137404,
+        "long_short_skew_mean": 0.020067334689489905,
+        "nonflat_confidence_mean": 0.35302619995991397,
+        "probability_margin_mean": 0.08482968825278225,
+        "rows": 8646
+      },
+      "probability_checks": {
+        "finite": true,
+        "row_sum_max_abs_error": 2.220446049250313e-16
+      },
+      "train": {
+        "entropy_mean": 0.9803284713956856,
+        "entropy_p10": 0.9483994810891425,
+        "entropy_p90": 0.9989542653420774,
+        "flat_dominance_rate": 0.49505131964809385,
+        "high_entropy_rate_ge_0p92": 0.9955226225387516,
+        "long_short_skew_mean": 0.010013904419169824,
+        "nonflat_confidence_mean": 0.3450536652830727,
+        "probability_margin_mean": 0.07890701252185903,
+        "rows": 38192
+      },
+      "validation": {
+        "entropy_mean": 0.9729144180081853,
+        "entropy_p10": 0.9431192840372571,
+        "entropy_p90": 0.9981715804196644,
+        "flat_dominance_rate": 0.5191646191646192,
+        "high_entropy_rate_ge_0p92": 0.9832104832104832,
+        "long_short_skew_mean": 0.0200639082424763,
+        "nonflat_confidence_mean": 0.3449733747038046,
+        "probability_margin_mean": 0.09630746644824953,
+        "rows": 12210
+      }
+    },
+    "tier_b": {
+      "oos": {
+        "entropy_mean": 0.9736868172876018,
+        "entropy_p10": 0.9454011764599192,
+        "entropy_p90": 0.9982600066256997,
+        "flat_dominance_rate": 0.6826741996233522,
+        "high_entropy_rate_ge_0p92": 0.9934086629001884,
+        "long_short_skew_mean": 0.027985737126389704,
+        "nonflat_confidence_mean": 0.3260117923378313,
+        "probability_margin_mean": 0.1113930775475933,
+        "rows": 1062
+      },
+      "probability_checks": {
+        "finite": true,
+        "row_sum_max_abs_error": 2.220446049250313e-16
+      },
+      "train": {
+        "entropy_mean": 0.9742048384044502,
+        "entropy_p10": 0.9413547810555762,
+        "entropy_p90": 0.9985223607752397,
+        "flat_dominance_rate": 0.717948717948718,
+        "high_entropy_rate_ge_0p92": 0.9985507246376811,
+        "long_short_skew_mean": 0.020704641153274368,
+        "nonflat_confidence_mean": 0.3198206970109183,
+        "probability_margin_mean": 0.11411278747135153,
+        "rows": 8970
+      },
+      "validation": {
+        "entropy_mean": 0.9659644530469352,
+        "entropy_p10": 0.941445766251813,
+        "entropy_p90": 0.9965932452514727,
+        "flat_dominance_rate": 0.8338968723584108,
+        "high_entropy_rate_ge_0p92": 1.0,
+        "long_short_skew_mean": 0.03170356621176183,
+        "nonflat_confidence_mean": 0.30386925904257533,
+        "probability_margin_mean": 0.14912370420331195,
+        "rows": 2366
+      }
+    }
+  },
+  "selected_operating_reference": null,
+  "selected_promotion_candidate": null,
+  "selected_threshold_id": "q0.80",
+  "selected_tier_a_oos_balanced_accuracy": 0.4521957020157636,
+  "selected_tier_a_oos_log_loss": 1.049595190530285,
+  "selected_tier_a_validation_balanced_accuracy": 0.42906559409142936,
+  "selected_tier_a_validation_log_loss": 1.0490011746718895,
+  "selected_variant_id": "v02_core42_distribution_surface",
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "26_model_family_challenge__ngboost_probabilistic_distribution_shape",
+  "status": "reviewed_structural_scout_completed",
+  "tier_a_rows": 46650,
+  "tier_b_context_summary": {
+    "by_split": {
+      "oos": {
+        "no_tier_labelable_rows": 159,
+        "routed_labelable_rows": 8646,
+        "tier_a_primary_rows": 7584,
+        "tier_b_fallback_rows": 1062
+      },
+      "train": {
+        "no_tier_labelable_rows": 691,
+        "routed_labelable_rows": 38192,
+        "tier_a_primary_rows": 29222,
+        "tier_b_fallback_rows": 8970
+      },
+      "validation": {
+        "no_tier_labelable_rows": 203,
+        "routed_labelable_rows": 12210,
+        "tier_a_primary_rows": 9844,
+        "tier_b_fallback_rows": 2366
+      }
+    },
+    "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+    "feature_count": 42,
+    "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+    "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+    "label_threshold_log_return": 0.001277833051854688,
+    "labelable_rows": 60101,
+    "no_tier_by_split": {
+      "oos": 159,
+      "train": 691,
+      "validation": 203
+    },
+    "no_tier_labelable_rows": 1053,
+    "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features.",
+    "policy_id": "tier_b_partial_context_core42_fallback_v1",
+    "source_raw_rows": 261344,
+    "source_valid_rows": 56939,
+    "tier_a_primary_rows": 46650,
+    "tier_b_fallback_by_split_subtype": {
+      "oos": {
+        "B_core_only": 24,
+        "B_full_context_outside_tier_a_scope": 1,
+        "B_macro_missing": 809,
+        "B_mixed_partial_context": 228
+      },
+      "train": {
+        "B_constituent_missing": 1,
+        "B_core_only": 151,
+        "B_full_context_outside_tier_a_scope": 216,
+        "B_macro_missing": 7805,
+        "B_mixed_partial_context": 797
+      },
+      "validation": {
+        "B_core_only": 25,
+        "B_macro_missing": 2126,
+        "B_mixed_partial_context": 215
+      }
+    },
+    "tier_b_fallback_by_subtype": {
+      "B_constituent_missing": 1,
+      "B_core_only": 200,
+      "B_full_context_outside_tier_a_scope": 217,
+      "B_macro_missing": 10740,
+      "B_mixed_partial_context": 1240
+    },
+    "tier_b_fallback_rows": 12398,
+    "tier_b_training_rows": 59048
+  },
+  "tier_b_fallback_rows": 12398,
+  "tier_records": [
+    {
+      "distribution_shape": {
+        "oos": {
+          "entropy_mean": 0.9754424721932006,
+          "entropy_p10": 0.9459697350809573,
+          "entropy_p90": 0.9984276574516405,
+          "flat_dominance_rate": 0.42550105485232065,
+          "high_entropy_rate_ge_0p92": 0.9922204641350211,
+          "long_short_skew_mean": 0.018958507765968337,
+          "nonflat_confidence_mean": 0.35680907191332273,
+          "probability_margin_mean": 0.08110997313792344,
+          "rows": 7584
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 2.220446049250313e-16
+        },
+        "train": {
+          "entropy_mean": 0.9822081848968621,
+          "entropy_p10": 0.9536096701892715,
+          "entropy_p90": 0.9990442998117807,
+          "flat_dominance_rate": 0.42663062076517694,
+          "high_entropy_rate_ge_0p92": 0.9945931147765382,
+          "long_short_skew_mean": 0.00673227042748829,
+          "nonflat_confidence_mean": 0.3527991900726568,
+          "probability_margin_mean": 0.06810022991639234,
+          "rows": 29222
+        },
+        "validation": {
+          "entropy_mean": 0.9745848382741663,
+          "entropy_p10": 0.944077874805163,
+          "entropy_p90": 0.9983902768971836,
+          "flat_dominance_rate": 0.44351889475822837,
+          "high_entropy_rate_ge_0p92": 0.9791751320601382,
+          "long_short_skew_mean": 0.01726632283458017,
+          "nonflat_confidence_mean": 0.3548527263550103,
+          "probability_margin_mean": 0.08361311267656342,
+          "rows": 9844
+        }
+      },
+      "metrics": {
+        "long_count": 3496,
+        "oos_entropy_mean": 0.9754424721932006,
+        "oos_high_entropy_rate": 0.9922204641350211,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 3670,
+        "signal_count": 7166,
+        "signal_coverage": 0.15361200428724545,
+        "threshold_ids": "q0.80",
+        "validation_entropy_mean": 0.9745848382741663,
+        "validation_high_entropy_rate": 0.9791751320601382
+      },
+      "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/predictions/tier_a_ngboost_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4657172995780591,
+          "balanced_accuracy": 0.4521957020157636,
+          "directional_correct_count": 631,
+          "directional_hit_rate": 0.43248800548320765,
+          "log_loss": 1.049595190530285,
+          "long_count": 685,
+          "macro_f1": 0.45111224480179263,
+          "mean_probability": {
+            "flat": 0.33012482394543474,
+            "long": 0.3444168419102669,
+            "short": 0.32545833414429853
+          },
+          "mean_probability_margin": 0.08110997313792344,
+          "rows": 7584,
+          "short_count": 774,
+          "signal_count": 1459,
+          "signal_coverage": 0.19237869198312235
+        },
+        "train": {
+          "accuracy": 0.4253302306481418,
+          "balanced_accuracy": 0.4254534935533069,
+          "directional_correct_count": 1955,
+          "directional_hit_rate": 0.5230069555912252,
+          "log_loss": 1.0627742349076184,
+          "long_count": 1663,
+          "macro_f1": 0.4203464689674208,
+          "mean_probability": {
+            "flat": 0.332703446852661,
+            "long": 0.33701441178741365,
+            "short": 0.3302821413599254
+          },
+          "mean_probability_margin": 0.06810022991639234,
+          "rows": 29222,
+          "short_count": 2075,
+          "signal_count": 3738,
+          "signal_coverage": 0.12791732256519062
+        },
+        "validation": {
+          "accuracy": 0.4424014628199919,
+          "balanced_accuracy": 0.42906559409142936,
+          "directional_correct_count": 797,
+          "directional_hit_rate": 0.4047739969527679,
+          "log_loss": 1.0490011746718895,
+          "long_count": 1148,
+          "macro_f1": 0.4222552846052145,
+          "mean_probability": {
+            "flat": 0.3312880719585283,
+            "long": 0.34298912543802595,
+            "short": 0.32572280260344577
+          },
+          "mean_probability_margin": 0.08361311267656342,
+          "rows": 9844,
+          "short_count": 821,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "distribution_shape": {
+        "oos": {
+          "entropy_mean": 0.9736868172876018,
+          "entropy_p10": 0.9454011764599192,
+          "entropy_p90": 0.9982600066256997,
+          "flat_dominance_rate": 0.6826741996233522,
+          "high_entropy_rate_ge_0p92": 0.9934086629001884,
+          "long_short_skew_mean": 0.027985737126389704,
+          "nonflat_confidence_mean": 0.3260117923378313,
+          "probability_margin_mean": 0.1113930775475933,
+          "rows": 1062
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 2.220446049250313e-16
+        },
+        "train": {
+          "entropy_mean": 0.9742048384044502,
+          "entropy_p10": 0.9413547810555762,
+          "entropy_p90": 0.9985223607752397,
+          "flat_dominance_rate": 0.717948717948718,
+          "high_entropy_rate_ge_0p92": 0.9985507246376811,
+          "long_short_skew_mean": 0.020704641153274368,
+          "nonflat_confidence_mean": 0.3198206970109183,
+          "probability_margin_mean": 0.11411278747135153,
+          "rows": 8970
+        },
+        "validation": {
+          "entropy_mean": 0.9659644530469352,
+          "entropy_p10": 0.941445766251813,
+          "entropy_p90": 0.9965932452514727,
+          "flat_dominance_rate": 0.8338968723584108,
+          "high_entropy_rate_ge_0p92": 1.0,
+          "long_short_skew_mean": 0.03170356621176183,
+          "nonflat_confidence_mean": 0.30386925904257533,
+          "probability_margin_mean": 0.14912370420331195,
+          "rows": 2366
+        }
+      },
+      "metrics": {
+        "long_count": 365,
+        "oos_entropy_mean": 0.9736868172876018,
+        "oos_high_entropy_rate": 0.9934086629001884,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 321,
+        "signal_count": 686,
+        "signal_coverage": 0.055331505081464755,
+        "threshold_ids": "q0.80",
+        "validation_entropy_mean": 0.9659644530469352,
+        "validation_high_entropy_rate": 1.0
+      },
+      "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/predictions/tier_b_ngboost_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5291902071563088,
+          "balanced_accuracy": 0.40665684101300387,
+          "directional_correct_count": 27,
+          "directional_hit_rate": 0.39705882352941174,
+          "log_loss": 1.0160608705224217,
+          "long_count": 34,
+          "macro_f1": 0.40191331846567085,
+          "mean_probability": {
+            "flat": 0.39274976939615935,
+            "long": 0.3176179838651152,
+            "short": 0.2896322467387255
+          },
+          "mean_probability_margin": 0.1113930775475933,
+          "rows": 1062,
+          "short_count": 34,
+          "signal_count": 68,
+          "signal_coverage": 0.064030131826742
+        },
+        "train": {
+          "accuracy": 0.4713489409141583,
+          "balanced_accuracy": 0.4041022423080168,
+          "directional_correct_count": 257,
+          "directional_hit_rate": 0.4812734082397004,
+          "log_loss": 1.0388485652373123,
+          "long_count": 277,
+          "macro_f1": 0.3836760405669748,
+          "mean_probability": {
+            "flat": 0.39643488017960243,
+            "long": 0.312134880486836,
+            "short": 0.2914302393335616
+          },
+          "mean_probability_margin": 0.11411278747135153,
+          "rows": 8970,
+          "short_count": 257,
+          "signal_count": 534,
+          "signal_coverage": 0.05953177257525084
+        },
+        "validation": {
+          "accuracy": 0.599323753169907,
+          "balanced_accuracy": 0.38337339929087094,
+          "directional_correct_count": 23,
+          "directional_hit_rate": 0.27380952380952384,
+          "log_loss": 0.9730726595717161,
+          "long_count": 54,
+          "macro_f1": 0.36953670776323255,
+          "mean_probability": {
+            "flat": 0.43122451870868816,
+            "long": 0.3002395237515369,
+            "short": 0.268535957539775
+          },
+          "mean_probability_margin": 0.14912370420331195,
+          "rows": 2366,
+          "short_count": 30,
+          "signal_count": 84,
+          "signal_coverage": 0.03550295857988166
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "distribution_shape": {
+        "oos": {
+          "entropy_mean": 0.9752268227009793,
+          "entropy_p10": 0.9459226706078858,
+          "entropy_p90": 0.998409311644276,
+          "flat_dominance_rate": 0.45708998380754107,
+          "high_entropy_rate_ge_0p92": 0.9923664122137404,
+          "long_short_skew_mean": 0.020067334689489905,
+          "nonflat_confidence_mean": 0.35302619995991397,
+          "probability_margin_mean": 0.08482968825278225,
+          "rows": 8646
+        },
+        "probability_checks": {
+          "finite": true,
+          "row_sum_max_abs_error": 2.220446049250313e-16
+        },
+        "train": {
+          "entropy_mean": 0.9803284713956856,
+          "entropy_p10": 0.9483994810891425,
+          "entropy_p90": 0.9989542653420774,
+          "flat_dominance_rate": 0.49505131964809385,
+          "high_entropy_rate_ge_0p92": 0.9955226225387516,
+          "long_short_skew_mean": 0.010013904419169824,
+          "nonflat_confidence_mean": 0.3450536652830727,
+          "probability_margin_mean": 0.07890701252185903,
+          "rows": 38192
+        },
+        "validation": {
+          "entropy_mean": 0.9729144180081853,
+          "entropy_p10": 0.9431192840372571,
+          "entropy_p90": 0.9981715804196644,
+          "flat_dominance_rate": 0.5191646191646192,
+          "high_entropy_rate_ge_0p92": 0.9832104832104832,
+          "long_short_skew_mean": 0.0200639082424763,
+          "nonflat_confidence_mean": 0.3449733747038046,
+          "probability_margin_mean": 0.09630746644824953,
+          "rows": 12210
+        }
+      },
+      "metrics": {
+        "long_count": 3813,
+        "oos_entropy_mean": 0.9752268227009793,
+        "oos_high_entropy_rate": 0.9923664122137404,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 3956,
+        "signal_count": 7769,
+        "signal_coverage": 0.13157092534886872,
+        "threshold_ids": "q0.80",
+        "validation_entropy_mean": 0.9729144180081853,
+        "validation_high_entropy_rate": 0.9832104832104832
+      },
+      "path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20A_ngboost_probabilistic_distribution_scout_v1/predictions/tier_ab_ngboost_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.47351376359009945,
+          "balanced_accuracy": 0.45225937427942536,
+          "directional_correct_count": 653,
+          "directional_hit_rate": 0.431023102310231,
+          "log_loss": 1.0454761241587431,
+          "long_count": 712,
+          "macro_f1": 0.4508500125761523,
+          "mean_probability": {
+            "flat": 0.3378171316100969,
+            "long": 0.3411251015396965,
+            "short": 0.3210577668502066
+          },
+          "mean_probability_margin": 0.08482968825278225,
+          "rows": 8646,
+          "short_count": 803,
+          "signal_count": 1515,
+          "signal_coverage": 0.17522553782095768
+        },
+        "train": {
+          "accuracy": 0.43613845831587766,
+          "balanced_accuracy": 0.4285682370530554,
+          "directional_correct_count": 2195,
+          "directional_hit_rate": 0.5217494651770858,
+          "log_loss": 1.057154909998144,
+          "long_count": 1901,
+          "macro_f1": 0.42063717353616575,
+          "mean_probability": {
+            "flat": 0.34767178988111364,
+            "long": 0.33117105726902807,
+            "short": 0.32115715284985824
+          },
+          "mean_probability_margin": 0.07890701252185903,
+          "rows": 38192,
+          "short_count": 2306,
+          "signal_count": 4207,
+          "signal_coverage": 0.11015395894428152
+        },
+        "validation": {
+          "accuracy": 0.4728091728091728,
+          "balanced_accuracy": 0.4375057073244359,
+          "directional_correct_count": 819,
+          "directional_hit_rate": 0.4000977039570103,
+          "log_loss": 1.0342880815738542,
+          "long_count": 1200,
+          "macro_f1": 0.42968519641254505,
+          "mean_probability": {
+            "flat": 0.35065331626736346,
+            "long": 0.33470529598755644,
+            "short": 0.3146413877450801
+          },
+          "mean_probability_margin": 0.09630746644824953,
+          "rows": 12210,
+          "short_count": 847,
+          "signal_count": 2047,
+          "signal_coverage": 0.16764946764946764
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "variant_count": 5
+}
