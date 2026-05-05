@@ -1,0 +1,132 @@
+{
+  "receipts": [
+    {
+      "packet_id": "current_truth_sync_20260505_main_v1",
+      "skill": "obsidian-stage-transition",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/32_sequence_model__tcn_temporal_convolution_context/04_selected/selection_status.md"
+      ],
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/32_sequence_model__tcn_temporal_convolution_context/04_selected/selection_status.md",
+        "docs/workspace/stage20_32_goal_operating_plan.md",
+        "docs/workspace/changelog.md",
+        "docs/decisions/2026-05-05_current_truth_sync_stage29_32_main.md",
+        "stages/29_adaptive_model__river_online_drift_learning/03_reviews/run23A_structural_scout_packet.md",
+        "stages/29_adaptive_model__river_online_drift_learning/03_reviews/run23B_runtime_probe_packet.md",
+        "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/03_reviews/run25A_structural_scout_packet.md",
+        "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/03_reviews/run25B_runtime_probe_packet.md",
+        "stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/run26A_structural_scout_packet.md",
+        "stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/run26B_runtime_probe_packet.md"
+      ],
+      "detected_conflicts": [
+        "workspace_state.active_branch differed from actual git branch main",
+        "workspace_state.current_run_id used cross-stage packet id instead of active-stage run id",
+        "current_working_state first extracted current run pointed to older HMM run",
+        "Stage29/31/32 closeout notes still described native package gaps as unresolved"
+      ],
+      "canonical_state_after": {
+        "active_branch": "main",
+        "active_stage": "32_sequence_model__tcn_temporal_convolution_context",
+        "current_run": "run26D_torch_tcn_native_temporal_runtime_probe_v1",
+        "latest_packet": "stage29_32_native_revalidation_supplement_v1",
+        "next_action": "open_new_stage_topic_if_requested"
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "runtime_authority",
+        "live_readiness",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "current_truth_sync_20260505_main_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/policies/reentry_order.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/32_sequence_model__tcn_temporal_convolution_context/04_selected/selection_status.md"
+      ],
+      "active_stage": "32_sequence_model__tcn_temporal_convolution_context",
+      "current_run": "run26D_torch_tcn_native_temporal_runtime_probe_v1",
+      "detected_conflicts": [
+        "branch mismatch",
+        "current_run packet/run mismatch",
+        "stale next action in active selection status"
+      ],
+      "allowed_claims": [
+        "current_truth_synced_after_audit"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "current_truth_sync_20260505_main_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "docs/registers/run_registry.csv",
+        "stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/stage_run_ledger.csv",
+        "docs/workspace/stage29_32_native_revalidation_supplement.md"
+      ],
+      "produced_artifacts": [
+        "docs/decisions/2026-05-05_current_truth_sync_stage29_32_main.md",
+        "docs/agent_control/packets/current_truth_sync_20260505_main_v1/work_packet.yaml",
+        "docs/agent_control/packets/current_truth_sync_20260505_main_v1/closeout_report.md"
+      ],
+      "raw_evidence": [
+        "run26D exists in run_registry and active stage ledger",
+        "stage29_32_native_revalidation_supplement_v1 exists as cross-stage packet row"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/current_truth_sync_20260505_main_v1/state_sync_audit_pre.json",
+        "docs/agent_control/packets/current_truth_sync_20260505_main_v1/state_sync_audit.json",
+        "docs/agent_control/packets/current_truth_sync_20260505_main_v1/closeout_gate.json"
+      ],
+      "human_readable": [
+        "docs/decisions/2026-05-05_current_truth_sync_stage29_32_main.md",
+        "docs/agent_control/packets/current_truth_sync_20260505_main_v1/closeout_report.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "hashes": "not_required_docs_only_state_sync",
+        "reason": "no model, data bundle, EA, tester output, or runtime artifact was produced"
+      },
+      "lineage_boundary": "connected_with_boundary_docs_only_no_new_trading_artifacts"
+    },
+    {
+      "packet_id": "current_truth_sync_20260505_main_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "current_truth_synced",
+        "state_sync_completed",
+        "main_checkpoint"
+      ],
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "runtime_authority",
+        "live_readiness",
+        "operating_promotion",
+        "new_trading_result"
+      ],
+      "final_status": "docs_only_state_sync_after_gates"
+    }
+  ]
+}

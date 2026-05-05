@@ -1,8 +1,8 @@
 ﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
-active_branch: codex/stage29-32-goal-completion
+active_branch: main
 active_stage: 32_sequence_model__tcn_temporal_convolution_context
-current_run_id: stage29_32_native_revalidation_supplement_v1
+current_run_id: run26D_torch_tcn_native_temporal_runtime_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -20,6 +20,9 @@ current_focus:
 - Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
   river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
   with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
+- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 최신 장부 실행인
+  run26D_torch_tcn_native_temporal_runtime_probe_v1을 가리킨다; stage29_32_native_revalidation_supplement_v1은
+  cross-stage packet(교차 단계 묶음)으로만 읽는다.
 - treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
   탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
   no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists

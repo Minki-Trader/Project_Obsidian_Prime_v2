@@ -1,0 +1,143 @@
+version: work_packet_schema_v2
+packet_id: current_truth_sync_20260505_main_v1
+created_at_utc: "2026-05-05T12:55:00Z"
+user_request:
+  raw: "현재 진행사항 파악해주고 문서간 불일치 있으면 맞춰주고 맞춘걸로 깃 메인까지같ㅇ"
+  interpreted_raw: "현재 진행사항 파악, 문서 간 불일치 동기화, Git main(깃 메인) 반영"
+  requested_action: "current truth sync(현재 진실 동기화), document consistency sync(문서 정합성 동기화), main branch checkpoint(main 브랜치 중간 지점)"
+current_truth:
+  active_stage: "32_sequence_model__tcn_temporal_convolution_context"
+  current_run: "run26D_torch_tcn_native_temporal_runtime_probe_v1"
+  latest_packet: "stage29_32_native_revalidation_supplement_v1"
+  branch: "main"
+  state_sync_audit_before: "blocked_active_branch_and_current_run_fragmentation"
+work_classification:
+  primary_family: state_sync
+  work_surface: current_truth_docs_and_stage_closeout_notes
+  mutation: docs_only
+  execution: false
+risk_vector_scan:
+  risks:
+    - state_fragmentation
+    - claim_overstatement
+    - run_id_packet_id_confusion
+    - korean_bom_encoding
+  required_gates:
+    - state_sync_audit
+    - final_claim_guard
+decision_lock:
+  mutation_allowed: true
+  locked_boundary: "state sync only; no trading result or runtime authority change"
+  forbidden_mutations:
+    - "do not change thresholds, model logic, MT5 tester outputs, or run ledgers"
+interpreted_scope:
+  work_families:
+    - state_sync
+  target_surfaces:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/32_sequence_model__tcn_temporal_convolution_context/04_selected/selection_status.md
+    - docs/workspace/stage20_32_goal_operating_plan.md
+    - stages/29_adaptive_model__river_online_drift_learning/03_reviews/stage29_closeout_packet.md
+    - stages/29_adaptive_model__river_online_drift_learning/03_reviews/run23A_structural_scout_packet.md
+    - stages/29_adaptive_model__river_online_drift_learning/03_reviews/run23B_runtime_probe_packet.md
+    - stages/31_model_family_challenge__tabnet_attentive_tabular_scout/03_reviews/stage31_closeout_packet.md
+    - stages/31_model_family_challenge__tabnet_attentive_tabular_scout/03_reviews/run25A_structural_scout_packet.md
+    - stages/31_model_family_challenge__tabnet_attentive_tabular_scout/03_reviews/run25B_runtime_probe_packet.md
+    - stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/stage32_closeout_packet.md
+    - stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/run26A_structural_scout_packet.md
+    - stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/run26B_runtime_probe_packet.md
+    - docs/agent_control/packets/stage29_closeout_stage30_open_v1/packet.md
+    - docs/agent_control/packets/stage29_run23A_river_online_drift_learning_scout_v1/packet.md
+    - docs/agent_control/packets/stage29_run23B_river_online_drift_runtime_probe_v1/packet.md
+    - docs/agent_control/packets/stage31_closeout_stage32_open_v1/packet.md
+    - docs/agent_control/packets/stage31_run25A_tabnet_attentive_tabular_scout_v1/packet.md
+    - docs/agent_control/packets/stage31_run25B_tabnet_attentive_tabular_runtime_probe_v1/packet.md
+    - docs/agent_control/packets/stage32_closeout_goal_summary_v1/packet.md
+    - docs/agent_control/packets/stage32_run26A_tcn_temporal_convolution_context_scout_v1/packet.md
+    - docs/agent_control/packets/stage32_run26B_tcn_temporal_convolution_runtime_probe_v1/packet.md
+    - docs/workspace/changelog.md
+    - docs/decisions/2026-05-05_current_truth_sync_stage29_32_main.md
+  scope_units:
+    - "sync active_branch to main"
+    - "restore current_run_id to latest active-stage run instead of cross-stage packet id"
+    - "mark native package gaps as supplemented without changing trading claims"
+  execution_layers:
+    - docs
+    - control_plane_audit
+  mutation_policy: "docs-only, no run or code behavior change"
+  evidence_layers:
+    - current_truth_docs
+    - run_registry
+    - stage_ledger
+    - state_sync_audit
+  reduction_policy: "do not reduce or reinterpret trading evidence"
+  claim_boundary: "current_truth_synced; no alpha quality, runtime authority, live readiness, or operating promotion"
+acceptance_criteria:
+  - "workspace_state.active_branch matches actual git branch main"
+  - "workspace_state, current_working_state, and active selection status point to run26D as current run"
+  - "stage29_32_native_revalidation_supplement_v1 is recorded as packet, not current run"
+  - "state_sync_audit passes after edits"
+work_plan:
+  - "read current truth and stage32 selection status"
+  - "identify branch/current_run/native-gap document conflicts"
+  - "patch docs and decision memo"
+  - "record skill receipts and closeout report"
+  - "run state sync, schema, receipt, and gate coverage audits"
+skill_routing:
+  primary_family: state_sync
+  primary_skill: obsidian-stage-transition
+  support_skills:
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+  skills_considered:
+    - obsidian-stage-transition
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+    - obsidian-run-evidence-system
+    - obsidian-runtime-parity
+  skills_selected:
+    - obsidian-stage-transition
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+  skills_not_used:
+    obsidian-run-evidence-system: "not_required_no_new_kpi_or_ledger_rows"
+    obsidian-runtime-parity: "not_required_no_new_mt5_or_runtime_execution"
+    obsidian-result-judgment: "not_required_no_new_trading_judgment"
+  required_skill_receipts:
+    - obsidian-stage-transition
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+  required_gates:
+    - state_sync_audit
+    - final_claim_guard
+evidence_contract:
+  source_inputs:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/32_sequence_model__tcn_temporal_convolution_context/04_selected/selection_status.md
+    - docs/registers/run_registry.csv
+    - stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/stage_run_ledger.csv
+    - docs/workspace/stage29_32_native_revalidation_supplement.md
+  produced_artifacts:
+    - docs/decisions/2026-05-05_current_truth_sync_stage29_32_main.md
+    - docs/agent_control/packets/current_truth_sync_20260505_main_v1/
+  no_new_trading_artifacts: true
+gates:
+  required:
+    - state_sync_audit
+    - final_claim_guard
+final_claim_policy:
+  allowed_claims:
+    - current_truth_synced
+    - state_sync_completed
+  forbidden_claims:
+    - alpha_quality
+    - runtime_authority
+    - live_readiness
+    - operating_promotion
+    - new_trading_result

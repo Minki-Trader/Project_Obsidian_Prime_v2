@@ -7,7 +7,7 @@
 - status(상태): `reviewed_structural_scout_completed`
 - judgment(판정): `inconclusive_stage32_structural_scout_completed`
 - selected variant(선택 변형): `v01_dilated_return_range_logistic_proxy`
-- dependency note(의존성 기록): `torch(파이토치) missing; lagged convolution proxy(지연 합성곱 대체) used and native TCN retry condition recorded.`
+- dependency note(의존성 기록): original run note(원래 실행 기록) `torch(파이토치) missing; lagged convolution proxy(지연 합성곱 대체) used and native TCN retry condition recorded.` Later supplement(이후 보강): `run26C/run26D` native Torch TCN(원본 파이토치 TCN) 재검증 완료.
 - boundary(경계): `stage32_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority`
 
 효과(effect, 효과): Stage32(32단계)의 topic characteristic(주제 특성)을 Python-side evidence(파이썬 근거)로 남기고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.

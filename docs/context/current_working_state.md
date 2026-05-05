@@ -1,5 +1,15 @@
 ﻿## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
 
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `32_sequence_model__tcn_temporal_convolution_context`
+- current run(현재 실행): `run26D_torch_tcn_native_temporal_runtime_probe_v1`
+- latest packet(최신 묶음): `stage29_32_native_revalidation_supplement_v1`
+- next action(다음 행동): `open_new_stage_topic_if_requested`
+
+효과(effect, 효과): Stage29-32(29-32단계)는 goal complete(목표 완료) 상태이고, 보강 묶음(packet, 묶음)을 active run(활성 실행)으로 오해하지 않는다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
 Stage29~32(29~32단계) native revalidation(원본 재검증)을 `stage29_32_native_revalidation_supplement_v1`로 완료했다.
 
 결과(result, 결과): river(리버), torch(파이토치), pytorch-tabnet(파이토치 탭넷) 설치 후 Stage29(29단계) River native(리버 원본), Stage30(30단계) native-source calibration(원본 기반 보정), Stage31(31단계) TabNet native(탭넷 원본), Stage32(32단계) Torch TCN native(파이토치 TCN 원본)를 MT5 score-table runtime_probe(MT5 점수표 런타임 탐침)로 재검증했다.
@@ -12,13 +22,13 @@ Stage29~32(29~32단계)를 reviewed closeout(검토된 마감)으로 닫았다.
 
 결과(result, 결과): Stage29(29단계) `run23B_river_online_drift_runtime_probe_v1`, Stage30(30단계) `run24B_probability_calibration_abstention_runtime_probe_v1`, Stage31(31단계) `run25B_tabnet_attentive_tabular_runtime_probe_v1`, Stage32(32단계) `run26B_tcn_temporal_convolution_runtime_probe_v1` 모두 MT5 runtime_probe(MT5 런타임 탐침) external verification(외부 검증) `completed(완료)`다. 각 runtime run(런타임 실행)은 MT5 KPI records(MT5 핵심 성과 지표 기록) `10`, normalized records(정규화 기록) `6`, parser errors(파서 오류) `0`이다.
 
-효과(effect, 효과): River online ML(리버 온라인 머신러닝), calibration/abstention(보정/기권), TabNet proxy(탭넷 대체), TCN proxy(TCN 대체)의 특징 단서(characteristic clue, 특징 단서)와 MT5 handoff behavior(MT5 인계 행동)를 보존했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다. 원본 River/TabNet/TCN package(원본 리버/탭넷/TCN 패키지) 부재는 native retry condition(원본 재시도 조건)으로 남긴다.
+효과(effect, 효과): River online ML(리버 온라인 머신러닝), calibration/abstention(보정/기권), TabNet proxy(탭넷 대체), TCN proxy(TCN 대체)의 원래 특징 단서(characteristic clue, 특징 단서)를 보존했고, 이후 native revalidation supplement(원본 재검증 보강)로 River/TabNet/TCN package gap(패키지 격차)을 보강했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
 
 ## Latest Stage28 RUN22C Supplement(최신 28단계 22C 실행 보강)
 
 Stage28(28단계) `run22C_markov_regression_supplement_state_variance_attribution_v1`를 보강 묶음(supplement packet, 보강 묶음)으로 완료했다.
 
-결과(result, 결과): `inconclusive_markov_regression_supplement_completed`. Stage29(29단계)는 계속 opened_not_started(열림, 미시작) 상태이며 다음 행동(next action, 다음 행동)은 `run23A_river_online_drift_learning_scout_v1`이다.
+결과(result, 결과): `inconclusive_markov_regression_supplement_completed`. 당시 Stage29(29단계)는 opened_not_started(열림, 미시작) 상태였고 다음 행동(next action, 다음 행동)은 `run23A_river_online_drift_learning_scout_v1`였다.
 
 효과(effect, 효과): Markov state count(마르코프 상태 수) 2/3개, switching variance(전환 분산), Tier A/B attribution(티어 A/B 귀속), native statsmodels runtime(원본 스탯스모델 런타임)과 MT5 score-table handoff(MT5 점수표 인계) 차이를 보강했고, baseline(기준선)이나 promotion(승격)은 만들지 않았다.
 
@@ -42,7 +52,7 @@ Stage28(28단계) `run22B_markov_regression_state_runtime_probe_v1`를 MT5 runti
 
 Stage20~27(20~27단계)의 model family/topic exploration(모델군/주제 탐색)과 actual MT5 rerun(실제 MT5 재실행)을 `stage20_27_characteristic_synthesis_v1` 및 `stage20_27_actual_mt5_rerun_verification_v1`로 보강 정리했다.
 
-결과(result, 결과): `completed_characteristic_and_actual_mt5_routed_rerun_synthesis_not_new_alpha_quality`. actual MT5 rerun(실제 MT5 재실행): `16/16` tester/runtime/report completed(테스터/런타임/보고서 완료). report(보고서): `docs/workspace/stage20_27_characteristic_synthesis.md`. 이후 Stage28 closeout(28단계 마감)이 완료되어 현재 next exact action(다음 정확한 행동)은 `run23A_river_online_drift_learning_scout_v1`다.
+결과(result, 결과): `completed_characteristic_and_actual_mt5_routed_rerun_synthesis_not_new_alpha_quality`. actual MT5 rerun(실제 MT5 재실행): `16/16` tester/runtime/report completed(테스터/런타임/보고서 완료). report(보고서): `docs/workspace/stage20_27_characteristic_synthesis.md`. 당시 Stage28 closeout(28단계 마감) 뒤 다음 정확한 행동(next exact action, 다음 정확한 행동)은 `run23A_river_online_drift_learning_scout_v1`였다.
 
 효과(effect, 효과): GAM(일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(은닉 마르코프 모델), supervised regime classifier(지도 국면 분류기), Survival model(생존 모델), hazard model(위험률 모델), NGBoost(자연 그래디언트 부스팅), quantile boosting(분위수 부스팅)의 특징 단서(characteristic clues, 특징 단서)와 MT5 trade shape(MT5 거래 모양)는 실제 routed validation/OOS(검증/표본외 라우팅) 재실행으로 보존하지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. full tier-view rerun(전체 티어 보기 재실행)은 아니다.
 

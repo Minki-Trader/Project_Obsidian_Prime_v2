@@ -3,8 +3,9 @@
 ## Current Truth(현재 진실)
 
 - active stage(활성 단계): `32_sequence_model__tcn_temporal_convolution_context`
-- current run(현재 실행): `stage20_32_goal_complete`
-- active branch(활성 브랜치): `codex/stage29-32-goal-completion`
+- current run(현재 실행): `run26D_torch_tcn_native_temporal_runtime_probe_v1`
+- latest packet(최신 묶음): `stage29_32_native_revalidation_supplement_v1`
+- active branch(활성 브랜치): `main(메인)`
 - active stage folder(활성 단계 폴더): `stages/32_sequence_model__tcn_temporal_convolution_context`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
@@ -71,17 +72,17 @@ Current active milestone(현재 활성 마일스톤): Stage20-32 goal(20-32단�
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `stage29_32_goal_completion` completed(완료).
-- active branch(활성 브랜치): `codex/stage29-32-goal-completion`.
-- active stage/current run id(활성 단계/현재 실행 ID): Stage32(32단계), `stage20_32_goal_complete`.
+- latest completed work(최근 완료 작업): `stage29_32_native_revalidation_supplement_v1` completed(완료).
+- active branch(활성 브랜치): `main(메인)`.
+- active stage/current run id(활성 단계/현재 실행 ID): Stage32(32단계), `run26D_torch_tcn_native_temporal_runtime_probe_v1`.
 - created/updated folders(생성/수정 폴더): `stages/29_adaptive_model__river_online_drift_learning`, `stages/30_decision_layer__probability_calibration_abstention`, `stages/31_model_family_challenge__tabnet_attentive_tabular_scout`, `stages/32_sequence_model__tcn_temporal_convolution_context`, `docs/agent_control/packets/stage29_*`, `docs/agent_control/packets/stage30_*`, `docs/agent_control/packets/stage31_*`, `docs/agent_control/packets/stage32_*`.
 - changed files(변경 파일): Stage29~32 run packets(실행 묶음), closeout packets(마감 묶음), current truth docs(현재 진실 문서), ledgers(장부), goal summary(목표 요약), runner code(실행 코드).
 - active stage folder(활성 단계 폴더): `stages/32_sequence_model__tcn_temporal_convolution_context`.
-- current run id(현재 실행 ID): `stage20_32_goal_complete`.
+- current run id(현재 실행 ID): `run26D_torch_tcn_native_temporal_runtime_probe_v1`.
 - MT5 output folder/report path(MT5 출력 폴더/보고서 경로): Stage29~32 runtime reports(런타임 보고서)는 각 `stages/<stage_id>/02_runs/<runB>/mt5/reports` 아래에 있다. Final summary(최종 요약): `docs/workspace/stage29_32_goal_completion_summary.md`.
 - blocker(차단 사유): `none(없음)`.
-- exact next action(정확한 다음 행동): `open_next_stage_or_new_goal_when_requested`.
-- git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending(대기).
+- exact next action(정확한 다음 행동): `open_new_stage_topic_if_requested`.
+- git status(깃 상태): current-truth sync(현재 진실 동기화) recorded by `current_truth_sync_20260505_main_v1`.
 
 효과(effect, 효과): 다음 재개는 Stage20-32(20-32단계)가 닫혔다는 전제에서 새 stage/topic(단계/주제)을 열 수 있다.
 

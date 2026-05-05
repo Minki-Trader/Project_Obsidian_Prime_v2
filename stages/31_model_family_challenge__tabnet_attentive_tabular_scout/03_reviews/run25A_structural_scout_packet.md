@@ -7,7 +7,7 @@
 - status(상태): `reviewed_structural_scout_completed`
 - judgment(판정): `inconclusive_stage31_structural_scout_completed`
 - selected variant(선택 변형): `v02_sparse_mask_top20_logistic_proxy`
-- dependency note(의존성 기록): `torch/pytorch_tabnet(파이토치/파이토치 탭넷) missing; sparse feature-mask proxy(희소 피처 마스크 대체) used and native TabNet retry condition recorded.`
+- dependency note(의존성 기록): original run note(원래 실행 기록) `torch/pytorch_tabnet(파이토치/파이토치 탭넷) missing; sparse feature-mask proxy(희소 피처 마스크 대체) used and native TabNet retry condition recorded.` Later supplement(이후 보강): `run25C/run25D` native TabNet(원본 탭넷) 재검증 완료.
 - boundary(경계): `stage31_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority`
 
 효과(effect, 효과): Stage31(31단계)의 topic characteristic(주제 특성)을 Python-side evidence(파이썬 근거)로 남기고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.

@@ -28,6 +28,6 @@
 
 - Tier A score table parity(Tier A 점수표 동등성): `True`
 - Tier B score table parity(Tier B 점수표 동등성): `True`
-- known runtime difference(알려진 런타임 차이): `MT5 runtime_probe(MT5 런타임 탐침)는 native package runtime(원본 패키지 런타임)이 아니라 distilled score-table handoff(증류 점수표 인계)다. river package(리버 패키지) missing; sklearn SGD partial_fit(사이킷런 부분 학습) proxy used and native River retry condition recorded.`
+- known runtime difference(알려진 런타임 차이): original run note(원래 실행 기록) `MT5 runtime_probe(MT5 런타임 탐침)는 native package runtime(원본 패키지 런타임)이 아니라 distilled score-table handoff(증류 점수표 인계)다. river package(리버 패키지) missing; sklearn SGD partial_fit(사이킷런 부분 학습) proxy used and native River retry condition recorded.` Later supplement(이후 보강): `run23C/run23D` native River(원본 리버) 재검증 완료.
 
 Forbidden claims(금지 주장): edge(거래 우위), alpha quality(알파 품질), baseline(기준선), promotion(승격), runtime authority(런타임 권위).
