@@ -1,3 +1,4 @@
 ﻿Reviewed runs(검토된 실행):
 - `run21A_quantile_boosting_tail_risk_surface_scout_v1`: `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/run21A_quantile_boosting_tail_risk_scout_packet.md`
 - `run21B_quantile_boosting_tail_risk_runtime_probe_v1`: `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/run21B_quantile_boosting_tail_risk_runtime_probe_packet.md`
+- `stage27_closeout`: `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/stage27_closeout_packet.md`

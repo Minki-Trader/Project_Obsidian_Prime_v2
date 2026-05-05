@@ -1,8 +1,8 @@
 ﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
 active_branch: codex/stage27-quantile-boosting
-active_stage: 27_tail_model__quantile_boosting_risk_surface
-current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
+active_stage: 28_regime_model__markov_switching_regression_state_link
+current_run_id: not_started
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,10 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 27 as active_run21B_mt5_runtime_probe_completed after quantile boosting(분위수 부스팅) tail-risk MT5 runtime_probe(MT5 런타임 탐침); next action is stage27_closeout_and_stage28_open_only, and no baseline, promotion, or runtime authority exists
+- treat Stage 28 as opened_not_started after Stage27 quantile boosting(분위수 부스팅) reviewed closeout(검토된 마감); next action is run22A_markov_regression_state_link_scout_v1, and no baseline, promotion, or runtime authority exists
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -56,7 +56,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -170,12 +170,13 @@ pre_alpha_stage_queue:
     stage27:
       stage_id: 27_tail_model__quantile_boosting_risk_surface
       ownership: independent quantile boosting(분위수 부스팅) tail-risk surface(꼬리 위험 표면) scout(탐색) after Stage26(26단계)
-      status: active_run21B_mt5_runtime_probe_completed
+      status: reviewed_closed_stage28_opened
       current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
     stage28:
       stage_id: 28_regime_model__markov_switching_regression_state_link
       ownership: independent Markov switching regression(마르코프 전환 회귀) state-link(상태 연결) scout(탐색) after Stage27(27단계)
-      status: planned
+      status: opened_not_started
+      current_run_id: not_started
     stage29:
       stage_id: 29_adaptive_model__river_online_drift_learning
       ownership: independent River online ML(리버 온라인 머신러닝) drift/adaptation(변화/적응) scout(탐색) after Stage28(28단계)
@@ -1817,7 +1818,7 @@ stage18_catboost_closeout:
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
 stage19_32_model_research_queue:
-  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_opened
+  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   goal_operating_plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   path_note: legacy_stage19_25_file_path_retained_for_current_truth_links
@@ -1838,7 +1839,7 @@ stage19_32_model_research_queue:
   inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
   claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only
 stage20_32_goal_operating_plan:
-  status: stage20_closed_stage21_closed_stage22_closed_stage23_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_opened
+  status: stage20_closed_stage21_closed_stage22_closed_stage23_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
   plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   decision_path: docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md
   active_stage_at_adoption: 20_model_family_challenge__gam_additive_smooth_shape
@@ -2368,19 +2369,20 @@ stage26_ngboost_closeout:
   next_action: run21A_quantile_boosting_tail_risk_surface_scout_v1
 stage27_quantile_boosting_model:
   stage_id: 27_tail_model__quantile_boosting_risk_surface
-  status: active_run21B_mt5_runtime_probe_completed
+  status: reviewed_closed_stage28_opened
   current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
   selected_variant_id: v02_core42_tail_risk_surface
-  boundary: quantile_boosting_tail_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
-  judgment: inconclusive_quantile_boosting_tail_runtime_probe_completed
+  boundary: quantile_boosting_tail_characteristic_and_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  judgment: closed_inconclusive_quantile_boosting_tail_characteristics_exhausted
   mt5_runtime_probe_status: completed_by_next_milestone_run21B_quantile_boosting_tail_risk_runtime_probe_v1
   mt5_kpi_record_count: 10
+  closeout_packet_path: stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/stage27_closeout_packet.md
   report_path: stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/run21B_quantile_boosting_tail_risk_runtime_probe_packet.md
-  packet_summary_path: docs/agent_control/packets/stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1/aggregate_summary.json
-  next_action: stage27_closeout_and_stage28_open_only
+  packet_summary_path: docs/agent_control/packets/stage27_quantile_closeout_v1/aggregate_summary.json
+  next_action: run22A_markov_regression_state_link_scout_v1
 stage27_quantile_run21A_structural_scout:
   packet_id: stage27_run21A_quantile_boosting_tail_risk_scout_v1
   status: reviewed_structural_scout_completed
@@ -2411,3 +2413,28 @@ stage27_quantile_run21B_runtime_probe:
   report_path: stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/run21B_quantile_boosting_tail_risk_runtime_probe_packet.md
   packet_summary_path: docs/agent_control/packets/stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1/aggregate_summary.json
   next_action: stage27_closeout_and_stage28_open_only
+stage27_quantile_closeout:
+  packet_id: stage27_quantile_closeout_v1
+  status: reviewed_closed_stage28_opened
+  judgment: closed_inconclusive_quantile_boosting_tail_characteristics_exhausted
+  current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
+  run_range: run21A-run21B
+  selected_variant_id: v02_core42_tail_risk_surface
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  closeout_packet_path: stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/stage27_closeout_packet.md
+  decision_path: docs/decisions/2026-05-05_stage27_quantile_closeout_stage28_open.md
+  packet_summary_path: docs/agent_control/packets/stage27_quantile_closeout_v1/aggregate_summary.json
+  next_action: run22A_markov_regression_state_link_scout_v1
+stage28_markov_regression_model:
+  stage_id: 28_regime_model__markov_switching_regression_state_link
+  status: opened_not_started
+  current_run_id: not_started
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: topic_open_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/28_regime_model__markov_switching_regression_state_link/00_spec/stage_brief.md
+  selection_status_path: stages/28_regime_model__markov_switching_regression_state_link/04_selected/selection_status.md
+  next_action: run22A_markov_regression_state_link_scout_v1

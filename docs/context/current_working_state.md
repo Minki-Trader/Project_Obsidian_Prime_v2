@@ -1,4 +1,12 @@
-﻿## Latest Stage27 RUN21B Quantile Runtime Probe(최신 27단계 21B 실행 분위수 런타임 탐침)
+﻿## Latest Stage27 Closeout / Stage28 Open(최신 27단계 마감 / 28단계 개방)
+
+Stage27(27단계) quantile boosting(분위수 부스팅)을 reviewed closeout(검토된 마감)으로 닫고 Stage28(28단계) `28_regime_model__markov_switching_regression_state_link`를 open-only(개방만) 상태로 열었다.
+
+결과(result, 결과): `closed_inconclusive_quantile_boosting_tail_characteristics_exhausted`. active branch(활성 브랜치): `codex/stage27-quantile-boosting`. next exact action(다음 정확한 행동): `run22A_markov_regression_state_link_scout_v1`.
+
+효과(effect, 효과): Stage27(27단계)의 tail-risk surface(꼬리 위험 표면) 단서와 MT5 runtime_probe(MT5 런타임 탐침) 근거는 보존하고, baseline(기준선), promotion(승격), runtime authority(런타임 권위) 없이 Markov regression(마르코프 회귀) topic pivot(주제 전환)으로 이동한다.
+
+## Latest Stage27 RUN21B Quantile Runtime Probe(최신 27단계 21B 실행 분위수 런타임 탐침)
 
 Stage27(27단계) `run21B_quantile_boosting_tail_risk_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
 
