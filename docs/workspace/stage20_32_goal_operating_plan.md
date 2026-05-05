@@ -3,12 +3,12 @@
 ## Current Truth(현재 진실)
 
 - active stage(활성 단계): `28_regime_model__markov_switching_regression_state_link`
-- current run(현재 실행): `not_started`
-- active branch(활성 브랜치): `codex/stage27-quantile-boosting`
+- current run(현재 실행): `run22A_markov_regression_state_link_scout_v1`
+- active branch(활성 브랜치): `codex/stage28-markov-regression`
 - active stage folder(활성 단계 폴더): `stages/28_regime_model__markov_switching_regression_state_link`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)부터 Stage27(27단계)까지 Python-side evidence(파이썬 근거), MT5 runtime_probe(MT5 런타임 탐침), reviewed closeout(검토된 마감), 다음 stage open-only(다음 단계 개방만)를 완료했다. Stage27(27단계)는 `run21A_quantile_boosting_tail_risk_surface_scout_v1`, `run21B_quantile_boosting_tail_risk_runtime_probe_v1`, `stage27_closeout_packet.md`, Stage28 open-only(Stage28 개방만)를 완료했다. 현재 첫 미완료 milestone(마일스톤)은 Stage28(28단계) `run22A_markov_regression_state_link_scout_v1` broad scout(넓은 탐색)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): Stage20(20단계)부터 Stage27(27단계)까지 reviewed closeout(검토된 마감)을 완료했고, Stage28(28단계)는 `run22A_markov_regression_state_link_scout_v1` Markov regression(마르코프 회귀) Python structural scout(파이썬 구조 탐색)를 완료했다. 현재 첫 미완료 milestone(마일스톤)은 `run22B_markov_regression_state_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
 ## Execution Contract(실행 계약)
 
@@ -58,31 +58,31 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [x] Stage25(25단계) hazard model(위험률 모델) scout/probe/closeout/open Stage26. Completed(완료): `run19A_hazard_trade_lifecycle_risk_scout_v1`, `run19B_hazard_trade_lifecycle_runtime_probe_v1`, `stage25_closeout_packet.md`, Stage26 open-only(Stage26 개방만).
 - [x] Stage26(26단계) NGBoost(`Natural Gradient Boosting`, 자연 그래디언트 부스팅) scout/probe/closeout/open Stage27. Completed(완료): `run20A_ngboost_probabilistic_distribution_scout_v1`, `run20B_ngboost_distribution_runtime_probe_v1`, `stage26_closeout_packet.md`, Stage27 open-only(Stage27 개방만).
 - [x] Stage27(27단계) quantile boosting(분위수 부스팅) scout/probe/closeout/open Stage28. Completed(완료): `run21A_quantile_boosting_tail_risk_surface_scout_v1`, `run21B_quantile_boosting_tail_risk_runtime_probe_v1`, `stage27_closeout_packet.md`, Stage28 open-only(Stage28 개방만).
-- [ ] Stage28(28단계) Markov regression(마르코프 회귀) scout/probe/closeout/open Stage29
+- [ ] Stage28(28단계) Markov regression(마르코프 회귀) scout/probe/closeout/open Stage29. In progress(진행 중): `run22A_markov_regression_state_link_scout_v1` completed(완료); next(다음) `run22B_markov_regression_state_runtime_probe_v1`.
 - [ ] Stage29(29단계) River online ML(리버 온라인 머신러닝) scout/probe/closeout/open Stage30
 - [ ] Stage30(30단계) calibration/abstention(보정/기권) scout/probe/closeout/open Stage31
 - [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
 - [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
 
-Current active milestone(현재 활성 마일스톤): Stage28(28단계) `run22A_markov_regression_state_link_scout_v1` broad scout(넓은 탐색).
+Current active milestone(현재 활성 마일스톤): Stage28(28단계) `run22B_markov_regression_state_runtime_probe_v1` narrow MT5 runtime_probe(좁은 MT5 런타임 탐침).
 
 효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `stage27_closeout_stage28_open` completed(완료).
-- active branch(활성 브랜치): `codex/stage27-quantile-boosting`.
-- active stage/current run id(활성 단계/현재 실행 ID): Stage28(28단계), `not_started`.
-- created/updated folders(생성/수정 폴더): `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews`, `stages/28_regime_model__markov_switching_regression_state_link/00_spec`, `stages/28_regime_model__markov_switching_regression_state_link/01_inputs`, `stages/28_regime_model__markov_switching_regression_state_link/03_reviews`, `stages/28_regime_model__markov_switching_regression_state_link/04_selected`, `docs/agent_control/packets/stage27_quantile_closeout_v1`.
-- changed files(변경 파일): Stage27 closeout(27단계 마감), Stage28 open docs(28단계 개방 문서), current truth docs(현재 진실 문서), goal plan(목표 계획).
+- latest completed work(최근 완료 작업): `run22A_markov_regression_state_link_scout_v1` completed(완료) as Python structural scout(파이썬 구조 탐색).
+- active branch(활성 브랜치): `codex/stage28-markov-regression`.
+- active stage/current run id(활성 단계/현재 실행 ID): Stage28(28단계), `run22A_markov_regression_state_link_scout_v1`.
+- created/updated folders(생성/수정 폴더): `stages/28_regime_model__markov_switching_regression_state_link/02_runs/run22A_markov_regression_state_link_scout_v1`, `stages/28_regime_model__markov_switching_regression_state_link/03_reviews`, `docs/agent_control/packets/stage28_run22A_markov_regression_state_link_scout_v1`.
+- changed files(변경 파일): Markov regression scout pipeline(마르코프 회귀 탐색 파이프라인), run evidence(실행 근거), ledgers(장부), current truth docs(현재 진실 문서).
 - active stage folder(활성 단계 폴더): `stages/28_regime_model__markov_switching_regression_state_link`.
-- current run id(현재 실행 ID): `not_started`.
-- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): previous Stage27 report(이전 27단계 보고서) `stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21B_quantile_boosting_tail_risk_runtime_probe_v1/mt5/reports`; closeout report(마감 보고서) `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/stage27_closeout_packet.md`.
+- current run id(현재 실행 ID): `run22A_markov_regression_state_link_scout_v1`.
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `not_attempted_in_run22A(실행22A에서 미시도)`; review report(검토 보고서) `stages/28_regime_model__markov_switching_regression_state_link/03_reviews/run22A_markov_regression_state_link_scout_packet.md`.
 - blocker(차단 사유): `none(없음)`.
-- exact next action(정확한 다음 행동): `run22A_markov_regression_state_link_scout_v1`.
-- git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending(대기).
+- exact next action(정확한 다음 행동): `run22B_markov_regression_state_runtime_probe_v1`.
+- git status(깃 상태): run22A checkpoint commit/push(실행22A 중간 지점 커밋/푸시) pending(대기).
 
-효과(effect, 효과): 다음 재개는 Stage28(28단계) Markov regression(마르코프 회귀) broad scout(넓은 탐색)에서 시작한다.
+효과(effect, 효과): 다음 재개는 Stage28(28단계) MT5 runtime_probe(런타임 탐침) 준비에서 시작한다.
 
 ## Per-Stage Milestone Loop(단계별 마일스톤 반복)
 
@@ -213,3 +213,4 @@ Stage32(32단계)까지 reviewed closeout(검토된 마감)을 완료한 뒤, fi
 - `2026-05-05`: Stage27(27단계) `run21A_quantile_boosting_tail_risk_surface_scout_v1` quantile boosting(분위수 부스팅) Python structural scout(파이썬 구조 탐색)를 완료했다. judgment(판정): `inconclusive_quantile_boosting_tail_risk_surface_scout_completed`.
 - `2026-05-05`: Stage27(27단계) `run21B_quantile_boosting_tail_risk_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)를 기록했다. judgment(판정): `inconclusive_quantile_boosting_tail_runtime_probe_completed`.
 - `2026-05-05`: Stage27(27단계) reviewed closeout(검토된 마감)을 완료하고 Stage28(28단계)를 open-only(개방만)로 열었다.
+- `2026-05-05`: Stage28(28단계) `run22A_markov_regression_state_link_scout_v1` Markov regression(마르코프 회귀) Python structural scout(파이썬 구조 탐색)를 완료했다.

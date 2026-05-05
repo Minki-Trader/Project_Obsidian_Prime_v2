@@ -1,4 +1,12 @@
-﻿## Latest Stage27 Closeout / Stage28 Open(최신 27단계 마감 / 28단계 개방)
+﻿## Latest Stage28 RUN22A Markov Regression Scout(최신 28단계 22A 실행 마르코프 회귀 탐색)
+
+Stage28(28단계) `run22A_markov_regression_state_link_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
+
+결과(result, 결과): `inconclusive_markov_regression_state_link_scout_completed`. selected variant(선택 변형): `v02_return_3state_switchvar`. next exact action(다음 정확한 행동): `run22B_markov_regression_state_runtime_probe_v1`.
+
+효과(effect, 효과): Markov regression(마르코프 회귀)의 state-link(상태 연결) 단서는 보존하고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+## Latest Stage27 Closeout / Stage28 Open(최신 27단계 마감 / 28단계 개방)
 
 Stage27(27단계) quantile boosting(분위수 부스팅)을 reviewed closeout(검토된 마감)으로 닫고 Stage28(28단계) `28_regime_model__markov_switching_regression_state_link`를 open-only(개방만) 상태로 열었다.
 
