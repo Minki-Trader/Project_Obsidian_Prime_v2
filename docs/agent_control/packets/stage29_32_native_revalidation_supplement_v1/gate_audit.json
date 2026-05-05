@@ -1,0 +1,54 @@
+{
+  "dependency_recovery_gate": {
+    "dependency_versions": {
+      "numpy": {
+        "installed": true,
+        "version": "2.3.4"
+      },
+      "pandas": {
+        "installed": true,
+        "version": "2.3.3"
+      },
+      "pytorch-tabnet": {
+        "installed": true,
+        "version": "4.1.0"
+      },
+      "river": {
+        "installed": true,
+        "version": "0.24.2"
+      },
+      "scikit-learn": {
+        "installed": true,
+        "version": "1.8.0"
+      },
+      "torch": {
+        "cuda_available": false,
+        "installed": true,
+        "version": "2.11.0"
+      }
+    },
+    "status": "passed"
+  },
+  "final_claim_guard": {
+    "forbidden_claims": [
+      "baseline",
+      "promotion",
+      "runtime_authority",
+      "alpha_quality"
+    ],
+    "status": "passed"
+  },
+  "residual_stage_scan_gate": {
+    "stage_scope": "Stage20-32",
+    "status": "passed"
+  },
+  "runtime_evidence_gate": {
+    "stages": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "status": "passed"
+  }
+}

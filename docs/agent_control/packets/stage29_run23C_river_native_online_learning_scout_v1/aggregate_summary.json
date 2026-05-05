@@ -1,0 +1,392 @@
+{
+  "boundary": "stage29_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_stage29_native_structural_scout_completed",
+  "dependency_note": "river 0.24.2 installed; native River one-vs-rest online logistic learning used for revalidation, then distilled to MT5 score-table handoff.",
+  "exploration_label": "stage29_AdaptiveModel__RiverOnlineDriftLearning",
+  "external_verification_status": "out_of_scope_by_claim_python_native_structural_scout",
+  "feature_set_id": "feature_set_v2_stage29_native_revalidation_probe",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "river_native_one_vs_rest_logistic_online_learning",
+  "next_action": "run23D_river_native_online_runtime_probe_v1",
+  "packet_id": "stage29_run23C_river_native_online_learning_scout_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23C_river_native_online_learning_scout_v1/predictions/tier_a_stage29_native_structural_predictions.parquet",
+      "rows": 46650,
+      "sha256": "9370c0e2a7febf1738d61f3e1378f9dd0f86dd3f02f4b1223e14eb4981223608"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23C_river_native_online_learning_scout_v1/predictions/tier_ab_stage29_native_structural_predictions.parquet",
+      "rows": 59048,
+      "sha256": "507a7ce8279730bf0cc6d610e783a75626923af3fdce180371d43b4a5c34b525"
+    },
+    "tier_b_predictions": {
+      "path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23C_river_native_online_learning_scout_v1/predictions/tier_b_stage29_native_structural_predictions.parquet",
+      "rows": 12398,
+      "sha256": "c4e167a32fbee94f0012735e9f9d2a0ff2215172c8e8c0c55fd4eac16faeb370"
+    }
+  },
+  "python_dependency_status": {
+    "numpy": {
+      "installed": true,
+      "version": "2.3.4"
+    },
+    "pandas": {
+      "installed": true,
+      "version": "2.3.3"
+    },
+    "pytorch-tabnet": {
+      "installed": true,
+      "version": "4.1.0"
+    },
+    "river": {
+      "installed": true,
+      "version": "0.24.2"
+    },
+    "scikit-learn": {
+      "installed": true,
+      "version": "1.8.0"
+    },
+    "torch": {
+      "cuda_available": false,
+      "installed": true,
+      "version": "2.11.0"
+    }
+  },
+  "run_id": "run23C_river_native_online_learning_scout_v1",
+  "run_number": "run23C",
+  "selected_details": {
+    "features": [
+      "log_return_1",
+      "log_return_3",
+      "hl_range",
+      "close_open_ratio",
+      "gap_percent",
+      "close_prev_close_ratio",
+      "return_zscore_20",
+      "hl_zscore_50",
+      "overnight_return",
+      "return_1_over_atr_14",
+      "close_ema20_ratio",
+      "close_ema50_ratio",
+      "ema9_ema20_diff",
+      "ema20_ema50_diff",
+      "ema50_ema200_diff",
+      "ema20_ema50_spread_zscore_50",
+      "sma50_sma200_ratio",
+      "rsi_14",
+      "rsi_50",
+      "rsi_14_slope_3",
+      "rsi_14_minus_50",
+      "stoch_kd_diff",
+      "stochrsi_kd_diff",
+      "ppo_hist_12_26_9",
+      "roc_12",
+      "trix_15",
+      "atr_14",
+      "atr_50",
+      "atr_14_over_atr_50",
+      "bollinger_width_20",
+      "bb_position_20",
+      "bb_squeeze",
+      "historical_vol_20",
+      "historical_vol_5_over_20",
+      "adx_14",
+      "di_spread_14",
+      "supertrend_10_3",
+      "vortex_indicator",
+      "is_us_cash_open",
+      "minutes_from_cash_open",
+      "is_first_30m_after_open",
+      "is_last_30m_before_cash_close"
+    ],
+    "tier_a": {
+      "backend": "river",
+      "class_seen": {
+        "0": 9064,
+        "1": 9643,
+        "2": 10515
+      },
+      "feature_count": 42,
+      "l2": 0.0008,
+      "learning_rate": 0.025,
+      "river_version": "0.24.2",
+      "train_rows": 29222
+    },
+    "tier_b": {
+      "backend": "river",
+      "class_seen": {
+        "0": 11425,
+        "1": 13611,
+        "2": 13156
+      },
+      "feature_count": 42,
+      "l2": 0.0008,
+      "learning_rate": 0.025,
+      "river_version": "0.24.2",
+      "train_rows": 38192
+    }
+  },
+  "selected_variant_id": "v01_river_logreg_core42_slow_adapt",
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "29_adaptive_model__river_online_drift_learning",
+  "stage_number": 29,
+  "status": "reviewed_native_structural_scout_completed",
+  "thresholds": {
+    "quantile": 0.8,
+    "tier_a": 0.7124831933900322,
+    "tier_b": 0.5862314562573467
+  },
+  "tier_records": [
+    {
+      "metrics": {
+        "long_count": 4586,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 3529,
+        "signal_count": 8115,
+        "signal_coverage": 0.17395498392282957,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23C_river_native_online_learning_scout_v1/predictions/tier_a_stage29_native_structural_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.32304852320675104,
+          "balanced_accuracy": 0.3222078821616016,
+          "directional_correct_count": 405,
+          "directional_hit_rate": 0.2633289986996099,
+          "log_loss": 1.6165962065022403,
+          "long_count": 854,
+          "macro_f1": 0.3224662781446091,
+          "mean_probability": {
+            "flat": 0.3330060141773811,
+            "long": 0.34805698874000257,
+            "short": 0.3189369970826163
+          },
+          "mean_probability_margin": 0.3593041733547967,
+          "rows": 7584,
+          "short_count": 684,
+          "signal_count": 1538,
+          "signal_coverage": 0.20279535864978904
+        },
+        "train": {
+          "accuracy": 0.3539798781739785,
+          "balanced_accuracy": 0.35269679587244407,
+          "directional_correct_count": 1798,
+          "directional_hit_rate": 0.3901909722222222,
+          "log_loss": 1.5339002807113382,
+          "long_count": 2798,
+          "macro_f1": 0.34767751786380385,
+          "mean_probability": {
+            "flat": 0.4011703012873032,
+            "long": 0.32407721385396104,
+            "short": 0.2747524848587358
+          },
+          "mean_probability_margin": 0.3621543567700455,
+          "rows": 29222,
+          "short_count": 1810,
+          "signal_count": 4608,
+          "signal_coverage": 0.15768941208678394
+        },
+        "validation": {
+          "accuracy": 0.3583908980089395,
+          "balanced_accuracy": 0.35604726287996863,
+          "directional_correct_count": 670,
+          "directional_hit_rate": 0.34027425088877605,
+          "log_loss": 1.5935469356846785,
+          "long_count": 934,
+          "macro_f1": 0.3557351086025699,
+          "mean_probability": {
+            "flat": 0.35711982549829574,
+            "long": 0.3232592889046253,
+            "short": 0.31962088559707896
+          },
+          "mean_probability_margin": 0.3725833871937697,
+          "rows": 9844,
+          "short_count": 1035,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 1701,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 521,
+        "signal_count": 2222,
+        "signal_coverage": 0.17922245523471528,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23C_river_native_online_learning_scout_v1/predictions/tier_b_stage29_native_structural_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.3926553672316384,
+          "balanced_accuracy": 0.3804192395615266,
+          "directional_correct_count": 100,
+          "directional_hit_rate": 0.3067484662576687,
+          "log_loss": 1.3425715598304757,
+          "long_count": 268,
+          "macro_f1": 0.35557679359786,
+          "mean_probability": {
+            "flat": 0.3843796397211909,
+            "long": 0.42391828034327433,
+            "short": 0.19170207993553476
+          },
+          "mean_probability_margin": 0.297895722872308,
+          "rows": 1062,
+          "short_count": 58,
+          "signal_count": 326,
+          "signal_coverage": 0.3069679849340866
+        },
+        "train": {
+          "accuracy": 0.41304347826086957,
+          "balanced_accuracy": 0.36588302435145054,
+          "directional_correct_count": 491,
+          "directional_hit_rate": 0.34528832630098455,
+          "log_loss": 1.3618159756177772,
+          "long_count": 1029,
+          "macro_f1": 0.3542528963299451,
+          "mean_probability": {
+            "flat": 0.4909890608713058,
+            "long": 0.3118888383223735,
+            "short": 0.19712210080632078
+          },
+          "mean_probability_margin": 0.30457033879220424,
+          "rows": 8970,
+          "short_count": 393,
+          "signal_count": 1422,
+          "signal_coverage": 0.15852842809364548
+        },
+        "validation": {
+          "accuracy": 0.4691462383770076,
+          "balanced_accuracy": 0.38933581963690406,
+          "directional_correct_count": 127,
+          "directional_hit_rate": 0.2679324894514768,
+          "log_loss": 1.1739260661587094,
+          "long_count": 404,
+          "macro_f1": 0.3663506534836101,
+          "mean_probability": {
+            "flat": 0.46886432828078134,
+            "long": 0.3813193136540058,
+            "short": 0.14981635806521293
+          },
+          "mean_probability_margin": 0.29010474314034296,
+          "rows": 2366,
+          "short_count": 70,
+          "signal_count": 474,
+          "signal_coverage": 0.2003381234150465
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 5059,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 3706,
+        "signal_count": 8765,
+        "signal_coverage": 0.14843855846091317,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23C_river_native_online_learning_scout_v1/predictions/tier_ab_stage29_native_structural_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.33159842701827436,
+          "balanced_accuracy": 0.3292359240386556,
+          "directional_correct_count": 445,
+          "directional_hit_rate": 0.26839565741857657,
+          "log_loss": 1.5829373845307606,
+          "long_count": 956,
+          "macro_f1": 0.32937988681860286,
+          "mean_probability": {
+            "flat": 0.33931630683612807,
+            "long": 0.35737513489807277,
+            "short": 0.3033085582657993
+          },
+          "mean_probability_margin": 0.3517612894301606,
+          "rows": 8646,
+          "short_count": 702,
+          "signal_count": 1658,
+          "signal_coverage": 0.19176497802452
+        },
+        "train": {
+          "accuracy": 0.3678519061583578,
+          "balanced_accuracy": 0.3601665295803242,
+          "directional_correct_count": 1951,
+          "directional_hit_rate": 0.3895766773162939,
+          "log_loss": 1.4934835385483396,
+          "long_count": 3056,
+          "macro_f1": 0.35394770673368864,
+          "mean_probability": {
+            "flat": 0.42226566873254046,
+            "long": 0.32121457957143223,
+            "short": 0.2565197516960273
+          },
+          "mean_probability_margin": 0.34862983222927163,
+          "rows": 38192,
+          "short_count": 1952,
+          "signal_count": 5008,
+          "signal_coverage": 0.13112693757855048
+        },
+        "validation": {
+          "accuracy": 0.37985257985257986,
+          "balanced_accuracy": 0.36761458884163906,
+          "directional_correct_count": 707,
+          "directional_hit_rate": 0.3368270605050024,
+          "log_loss": 1.512234652531653,
+          "long_count": 1047,
+          "macro_f1": 0.36874221194601847,
+          "mean_probability": {
+            "flat": 0.3787731828761304,
+            "long": 0.33450990467506225,
+            "short": 0.2867169124488075
+          },
+          "mean_probability_margin": 0.3566010389685111,
+          "rows": 12210,
+          "short_count": 1052,
+          "signal_count": 2099,
+          "signal_coverage": 0.1719082719082719
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "variant_results": {
+    "path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23C_river_native_online_learning_scout_v1/results/native_variant_results.csv",
+    "rows": 3,
+    "sha256": "c91e62c7e20863b44d5ea6e13098aa653d52cf7b181b093e78adc49d7b79f494"
+  }
+}

@@ -2,7 +2,7 @@
 project_mode: clean_stage_restart
 active_branch: codex/stage29-32-goal-completion
 active_stage: 32_sequence_model__tcn_temporal_convolution_context
-current_run_id: stage20_32_goal_complete
+current_run_id: stage29_32_native_revalidation_supplement_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,6 +17,9 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
+  river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
+  with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
 - treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
   탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
   no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
@@ -48,13 +51,6 @@ current_focus:
 - treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임
   탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
-- treat alpha exploration stage transitions(알파 탐색 단계 전환) as topic pivots(주제 전환), not
-  baseline selection(기준선 선택), unless an explicit promotion/operating packet(명시 승격/운영
-  작업 묶음) opens
-- record Tier A, Tier B, and Tier A+B views together in stage and project alpha ledgers;
-  routed MT5 runs read these as A-used, B-fallback-used, and actual routed total
-- use the first default training label and split contract as the starting evidence
-  surface
 pre_alpha_stage_queue:
   status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
   plan_path: docs/workspace/pre_alpha_stage_plan.md
@@ -2638,3 +2634,9 @@ stage32_tcn_proxy_runtime_probe:
   mt5_kpi_records: 10
   normalized_records: 6
   report_path: stages/32_sequence_model__tcn_temporal_convolution_context/03_reviews/stage32_closeout_packet.md
+stage29_32_native_revalidation_supplement:
+  packet_id: stage29_32_native_revalidation_supplement_v1
+  status: completed
+  summary_path: docs/workspace/stage29_32_native_revalidation_supplement.md
+  boundary: native_revalidation_supplement_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  next_action: open_new_stage_topic_if_requested

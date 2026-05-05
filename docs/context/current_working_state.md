@@ -1,4 +1,12 @@
-﻿## Latest Stage29-32 Goal Completion(최신 29-32단계 목표 완료)
+﻿## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
+
+Stage29~32(29~32단계) native revalidation(원본 재검증)을 `stage29_32_native_revalidation_supplement_v1`로 완료했다.
+
+결과(result, 결과): river(리버), torch(파이토치), pytorch-tabnet(파이토치 탭넷) 설치 후 Stage29(29단계) River native(리버 원본), Stage30(30단계) native-source calibration(원본 기반 보정), Stage31(31단계) TabNet native(탭넷 원본), Stage32(32단계) Torch TCN native(파이토치 TCN 원본)를 MT5 score-table runtime_probe(MT5 점수표 런타임 탐침)로 재검증했다.
+
+효과(effect, 효과): proxy gap(대리 구현 격차)을 보강했지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다. summary(요약): `docs/workspace/stage29_32_native_revalidation_supplement.md`.
+
+## Latest Stage29-32 Goal Completion(최신 29-32단계 목표 완료)
 
 Stage29~32(29~32단계)를 reviewed closeout(검토된 마감)으로 닫았다.
 

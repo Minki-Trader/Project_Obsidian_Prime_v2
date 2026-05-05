@@ -1,0 +1,349 @@
+{
+  "boundary": "stage32_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_stage32_native_structural_scout_completed",
+  "dependency_note": "torch 2.11.0+cpu installed; native compact TCN used for revalidation, then distilled to MT5 score-table handoff.",
+  "exploration_label": "stage32_SequenceModel__TCNTemporalConvolutionContext",
+  "external_verification_status": "out_of_scope_by_claim_python_native_structural_scout",
+  "feature_set_id": "feature_set_v2_stage32_native_revalidation_probe",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "torch_native_tcn_temporal_convolution",
+  "next_action": "run26D_torch_tcn_native_temporal_runtime_probe_v1",
+  "packet_id": "stage32_run26C_torch_tcn_native_temporal_scout_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26C_torch_tcn_native_temporal_scout_v1/predictions/tier_a_stage32_native_structural_predictions.parquet",
+      "rows": 46650,
+      "sha256": "9c7909eed73a065edf1bd87b9109df0830c2deeca374bce92469b1c266167679"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26C_torch_tcn_native_temporal_scout_v1/predictions/tier_ab_stage32_native_structural_predictions.parquet",
+      "rows": 59048,
+      "sha256": "51480ffdfd0c543f06dd209cb96d8f24625c828b41a18977086ddf69ddd7e66d"
+    },
+    "tier_b_predictions": {
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26C_torch_tcn_native_temporal_scout_v1/predictions/tier_b_stage32_native_structural_predictions.parquet",
+      "rows": 12398,
+      "sha256": "1791e2a04d2b8ac833697e2fdff23545e19c60f515a556d7a11112199adc47e8"
+    }
+  },
+  "python_dependency_status": {
+    "numpy": {
+      "installed": true,
+      "version": "2.3.4"
+    },
+    "pandas": {
+      "installed": true,
+      "version": "2.3.3"
+    },
+    "pytorch-tabnet": {
+      "installed": true,
+      "version": "4.1.0"
+    },
+    "river": {
+      "installed": true,
+      "version": "0.24.2"
+    },
+    "scikit-learn": {
+      "installed": true,
+      "version": "1.8.0"
+    },
+    "torch": {
+      "cuda_available": false,
+      "installed": true,
+      "version": "2.11.0"
+    }
+  },
+  "run_id": "run26C_torch_tcn_native_temporal_scout_v1",
+  "run_number": "run26C",
+  "selected_details": {
+    "sequence_features": [
+      "log_return_1",
+      "log_return_3",
+      "hl_range",
+      "ema20_ema50_diff",
+      "historical_vol_20"
+    ],
+    "tier_a": {
+      "backend": "torch_compact_tcn",
+      "epochs": 7,
+      "feature_count": 5,
+      "final_train_loss": 1.0771487394968668,
+      "learning_rate": 0.0018,
+      "lookback": 16,
+      "torch_version": "2.11.0+cpu",
+      "train_rows": 29222
+    },
+    "tier_b": {
+      "backend": "torch_compact_tcn",
+      "epochs": 7,
+      "feature_count": 5,
+      "final_train_loss": 1.0685865314383256,
+      "learning_rate": 0.0018,
+      "lookback": 16,
+      "torch_version": "2.11.0+cpu",
+      "train_rows": 38192
+    }
+  },
+  "selected_variant_id": "v01_torch_tcn_dilated_context_native",
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "32_sequence_model__tcn_temporal_convolution_context",
+  "stage_number": 32,
+  "status": "reviewed_native_structural_scout_completed",
+  "thresholds": {
+    "quantile": 0.8,
+    "tier_a": 0.4074107585129294,
+    "tier_b": 0.2945828560243335
+  },
+  "tier_records": [
+    {
+      "metrics": {
+        "long_count": 2625,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 1.1102230246251565e-16,
+        "rows": 46650,
+        "short_count": 4477,
+        "signal_count": 7102,
+        "signal_coverage": 0.1522400857449089,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26C_torch_tcn_native_temporal_scout_v1/predictions/tier_a_stage32_native_structural_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4433016877637131,
+          "balanced_accuracy": 0.4277966653276016,
+          "directional_correct_count": 578,
+          "directional_hit_rate": 0.40963855421686746,
+          "log_loss": 1.0558610300601068,
+          "long_count": 462,
+          "macro_f1": 0.42481698212089025,
+          "mean_probability": {
+            "flat": 0.33437386153497106,
+            "long": 0.3272062882241366,
+            "short": 0.3384198502408922
+          },
+          "mean_probability_margin": 0.09138394454722615,
+          "rows": 7584,
+          "short_count": 949,
+          "signal_count": 1411,
+          "signal_coverage": 0.18604957805907174
+        },
+        "train": {
+          "accuracy": 0.40445554719047294,
+          "balanced_accuracy": 0.4058272357569637,
+          "directional_correct_count": 1640,
+          "directional_hit_rate": 0.44062332079527133,
+          "log_loss": 1.0771702845772106,
+          "long_count": 1505,
+          "macro_f1": 0.3958611341875729,
+          "mean_probability": {
+            "flat": 0.3328057747480134,
+            "long": 0.3326496443559908,
+            "short": 0.33454458089599576
+          },
+          "mean_probability_margin": 0.06982865654119479,
+          "rows": 29222,
+          "short_count": 2217,
+          "signal_count": 3722,
+          "signal_coverage": 0.12736978988433373
+        },
+        "validation": {
+          "accuracy": 0.4352905323039415,
+          "balanced_accuracy": 0.42401990363184616,
+          "directional_correct_count": 814,
+          "directional_hit_rate": 0.4134078212290503,
+          "log_loss": 1.0557668449085087,
+          "long_count": 658,
+          "macro_f1": 0.4138769032004191,
+          "mean_probability": {
+            "flat": 0.33163159848670853,
+            "long": 0.3291391771751876,
+            "short": 0.3392292243381039
+          },
+          "mean_probability_margin": 0.0935984204889577,
+          "rows": 9844,
+          "short_count": 1311,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 3557,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 1.1102230246251565e-16,
+        "rows": 12398,
+        "short_count": 2026,
+        "signal_count": 5583,
+        "signal_coverage": 0.4503145668656235,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26C_torch_tcn_native_temporal_scout_v1/predictions/tier_b_stage32_native_structural_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.5461393596986818,
+          "balanced_accuracy": 0.3896149540987865,
+          "directional_correct_count": 156,
+          "directional_hit_rate": 0.325678496868476,
+          "log_loss": 0.9934549392127213,
+          "long_count": 176,
+          "macro_f1": 0.3681319380709665,
+          "mean_probability": {
+            "flat": 0.4379390142306019,
+            "long": 0.2808494138801233,
+            "short": 0.28121157188927487
+          },
+          "mean_probability_margin": 0.16682462989345326,
+          "rows": 1062,
+          "short_count": 303,
+          "signal_count": 479,
+          "signal_coverage": 0.4510357815442561
+        },
+        "train": {
+          "accuracy": 0.46187290969899664,
+          "balanced_accuracy": 0.38578821178123074,
+          "directional_correct_count": 1604,
+          "directional_hit_rate": 0.3464362850971922,
+          "log_loss": 1.0477312388734978,
+          "long_count": 3056,
+          "macro_f1": 0.3522729810436478,
+          "mean_probability": {
+            "flat": 0.41444460331420857,
+            "long": 0.2980326408357668,
+            "short": 0.2875227558500246
+          },
+          "mean_probability_margin": 0.1412864181860971,
+          "rows": 8970,
+          "short_count": 1574,
+          "signal_count": 4630,
+          "signal_coverage": 0.5161649944258639
+        },
+        "validation": {
+          "accuracy": 0.6166525781910397,
+          "balanced_accuracy": 0.3810142907534729,
+          "directional_correct_count": 170,
+          "directional_hit_rate": 0.35864978902953587,
+          "log_loss": 0.9367898983729074,
+          "long_count": 325,
+          "macro_f1": 0.3584795738721794,
+          "mean_probability": {
+            "flat": 0.4863460999956485,
+            "long": 0.2619827540356813,
+            "short": 0.25167114596867024
+          },
+          "mean_probability_margin": 0.23205652565913454,
+          "rows": 2366,
+          "short_count": 149,
+          "signal_count": 474,
+          "signal_coverage": 0.2003381234150465
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 2800,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 1.1102230246251565e-16,
+        "rows": 59048,
+        "short_count": 4708,
+        "signal_count": 7508,
+        "signal_coverage": 0.12715079257553177,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26C_torch_tcn_native_temporal_scout_v1/predictions/tier_ab_stage32_native_structural_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.45593337959750174,
+          "balanced_accuracy": 0.4304999326500665,
+          "directional_correct_count": 586,
+          "directional_hit_rate": 0.4089323098394976,
+          "log_loss": 1.04819560460557,
+          "long_count": 474,
+          "macro_f1": 0.42630080207240423,
+          "mean_probability": {
+            "flat": 0.3470949108251354,
+            "long": 0.32151220997369223,
+            "short": 0.3313928792011724
+          },
+          "mean_probability_margin": 0.1006504270637301,
+          "rows": 8646,
+          "short_count": 959,
+          "signal_count": 1433,
+          "signal_coverage": 0.16574138329863522
+        },
+        "train": {
+          "accuracy": 0.4179409300377042,
+          "balanced_accuracy": 0.40944421419239313,
+          "directional_correct_count": 1809,
+          "directional_hit_rate": 0.44490900147565177,
+          "log_loss": 1.070256055420259,
+          "long_count": 1648,
+          "macro_f1": 0.39546165663069277,
+          "mean_probability": {
+            "flat": 0.3519799550014374,
+            "long": 0.3245192892665373,
+            "short": 0.3235007557320253
+          },
+          "mean_probability_margin": 0.0866116509367429,
+          "rows": 38192,
+          "short_count": 2418,
+          "signal_count": 4066,
+          "signal_coverage": 0.10646208630079598
+        },
+        "validation": {
+          "accuracy": 0.47043407043407043,
+          "balanced_accuracy": 0.43337629163529456,
+          "directional_correct_count": 821,
+          "directional_hit_rate": 0.40866102538576404,
+          "log_loss": 1.0327120164479653,
+          "long_count": 678,
+          "macro_f1": 0.42247560353048136,
+          "mean_probability": {
+            "flat": 0.3616114928822984,
+            "long": 0.31612590140548474,
+            "short": 0.32226260571221693
+          },
+          "mean_probability_margin": 0.12042822203135231,
+          "rows": 12210,
+          "short_count": 1331,
+          "signal_count": 2009,
+          "signal_coverage": 0.16453726453726453
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "variant_results": {
+    "path": "stages/32_sequence_model__tcn_temporal_convolution_context/02_runs/run26C_torch_tcn_native_temporal_scout_v1/results/native_variant_results.csv",
+    "rows": 2,
+    "sha256": "7d3a6492b406cea8f05968da117fc3b5b22170b9d48693d999a49cb590825893"
+  }
+}

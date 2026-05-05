@@ -1,0 +1,400 @@
+{
+  "boundary": "stage31_exploration_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_stage31_native_structural_scout_completed",
+  "dependency_note": "torch 2.11.0+cpu and pytorch-tabnet 4.1.0 installed; native TabNetClassifier used for revalidation, then distilled to MT5 score-table handoff.",
+  "exploration_label": "stage31_Model__TabNetAttentiveTabularScout",
+  "external_verification_status": "out_of_scope_by_claim_python_native_structural_scout",
+  "feature_set_id": "feature_set_v2_stage31_native_revalidation_probe",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "model_family": "pytorch_tabnet_native_attentive_tabular",
+  "next_action": "run25D_tabnet_native_attentive_runtime_probe_v1",
+  "packet_id": "stage31_run25C_tabnet_native_attentive_tabular_scout_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25C_tabnet_native_attentive_tabular_scout_v1/predictions/tier_a_stage31_native_structural_predictions.parquet",
+      "rows": 46650,
+      "sha256": "a56630cf389a719e64cdd0504984116f22cf6f1c29533de6fbe3957d45cbb21c"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25C_tabnet_native_attentive_tabular_scout_v1/predictions/tier_ab_stage31_native_structural_predictions.parquet",
+      "rows": 59048,
+      "sha256": "8a71937748feb14e5549e4489dea791239c323c55a6562cff6a00a85e463f31c"
+    },
+    "tier_b_predictions": {
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25C_tabnet_native_attentive_tabular_scout_v1/predictions/tier_b_stage31_native_structural_predictions.parquet",
+      "rows": 12398,
+      "sha256": "cd52e7289e95b101c18e1f300ac9efd3266e14f9206461990b3af7ec0b084bde"
+    }
+  },
+  "python_dependency_status": {
+    "numpy": {
+      "installed": true,
+      "version": "2.3.4"
+    },
+    "pandas": {
+      "installed": true,
+      "version": "2.3.3"
+    },
+    "pytorch-tabnet": {
+      "installed": true,
+      "version": "4.1.0"
+    },
+    "river": {
+      "installed": true,
+      "version": "0.24.2"
+    },
+    "scikit-learn": {
+      "installed": true,
+      "version": "1.8.0"
+    },
+    "torch": {
+      "cuda_available": false,
+      "installed": true,
+      "version": "2.11.0"
+    }
+  },
+  "run_id": "run25C_tabnet_native_attentive_tabular_scout_v1",
+  "run_number": "run25C",
+  "selected_details": {
+    "features": [
+      "log_return_1",
+      "log_return_3",
+      "hl_range",
+      "close_open_ratio",
+      "gap_percent",
+      "close_prev_close_ratio",
+      "return_zscore_20",
+      "hl_zscore_50",
+      "overnight_return",
+      "return_1_over_atr_14",
+      "close_ema20_ratio",
+      "close_ema50_ratio",
+      "ema9_ema20_diff",
+      "ema20_ema50_diff",
+      "ema50_ema200_diff",
+      "ema20_ema50_spread_zscore_50",
+      "sma50_sma200_ratio",
+      "rsi_14",
+      "rsi_50",
+      "rsi_14_slope_3",
+      "rsi_14_minus_50",
+      "stoch_kd_diff",
+      "stochrsi_kd_diff",
+      "ppo_hist_12_26_9",
+      "roc_12",
+      "trix_15",
+      "atr_14",
+      "atr_50",
+      "atr_14_over_atr_50",
+      "bollinger_width_20",
+      "bb_position_20",
+      "bb_squeeze",
+      "historical_vol_20",
+      "historical_vol_5_over_20",
+      "adx_14",
+      "di_spread_14",
+      "supertrend_10_3",
+      "vortex_indicator",
+      "is_us_cash_open",
+      "minutes_from_cash_open",
+      "is_first_30m_after_open",
+      "is_last_30m_before_cash_close"
+    ],
+    "tier_a": {
+      "backend": "pytorch_tabnet",
+      "classes": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 42,
+      "lambda_sparse": 0.0012,
+      "max_epochs": 10,
+      "n_d": 10,
+      "n_steps": 3,
+      "pytorch_tabnet_version": "4.1.0",
+      "torch_version": "2.11.0+cpu",
+      "train_rows": 29222,
+      "validation_rows": 9844
+    },
+    "tier_b": {
+      "backend": "pytorch_tabnet",
+      "classes": [
+        0,
+        1,
+        2
+      ],
+      "feature_count": 42,
+      "lambda_sparse": 0.0012,
+      "max_epochs": 10,
+      "n_d": 10,
+      "n_steps": 3,
+      "pytorch_tabnet_version": "4.1.0",
+      "torch_version": "2.11.0+cpu",
+      "train_rows": 38192,
+      "validation_rows": 12210
+    }
+  },
+  "selected_variant_id": "v02_tabnet_native_steps3_sparse",
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "31_model_family_challenge__tabnet_attentive_tabular_scout",
+  "stage_number": 31,
+  "status": "reviewed_native_structural_scout_completed",
+  "thresholds": {
+    "quantile": 0.8,
+    "tier_a": 0.41316690321803484,
+    "tier_b": 0.3411654829978943
+  },
+  "tier_records": [
+    {
+      "metrics": {
+        "long_count": 5810,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 1.1102230246251565e-16,
+        "rows": 46650,
+        "short_count": 1019,
+        "signal_count": 6829,
+        "signal_coverage": 0.14638799571275454,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25C_tabnet_native_attentive_tabular_scout_v1/predictions/tier_a_stage31_native_structural_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.4451476793248945,
+          "balanced_accuracy": 0.4307246436583014,
+          "directional_correct_count": 704,
+          "directional_hit_rate": 0.43031784841075793,
+          "log_loss": 1.0547551768099375,
+          "long_count": 1452,
+          "macro_f1": 0.3930675102586674,
+          "mean_probability": {
+            "flat": 0.3336283992779748,
+            "long": 0.3673689706354577,
+            "short": 0.2990026300865675
+          },
+          "mean_probability_margin": 0.10993055165431576,
+          "rows": 7584,
+          "short_count": 184,
+          "signal_count": 1636,
+          "signal_coverage": 0.21571729957805907
+        },
+        "train": {
+          "accuracy": 0.4098624324139347,
+          "balanced_accuracy": 0.3985282387010604,
+          "directional_correct_count": 1507,
+          "directional_hit_rate": 0.4674317617866005,
+          "log_loss": 1.069500919926236,
+          "long_count": 2643,
+          "macro_f1": 0.3656060204874651,
+          "mean_probability": {
+            "flat": 0.33796859458148815,
+            "long": 0.3588871370117256,
+            "short": 0.3031442684067863
+          },
+          "mean_probability_margin": 0.07597746900854699,
+          "rows": 29222,
+          "short_count": 581,
+          "signal_count": 3224,
+          "signal_coverage": 0.11032783519266307
+        },
+        "validation": {
+          "accuracy": 0.44087769199512394,
+          "balanced_accuracy": 0.42306669801492003,
+          "directional_correct_count": 804,
+          "directional_hit_rate": 0.40832910106653125,
+          "log_loss": 1.066452031231619,
+          "long_count": 1715,
+          "macro_f1": 0.38730238612758217,
+          "mean_probability": {
+            "flat": 0.334339101480356,
+            "long": 0.36918663674957175,
+            "short": 0.2964742617700722
+          },
+          "mean_probability_margin": 0.11535855575778005,
+          "rows": 9844,
+          "short_count": 254,
+          "signal_count": 1969,
+          "signal_coverage": 0.20002031694433156
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 1866,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 1.1102230246251565e-16,
+        "rows": 12398,
+        "short_count": 1153,
+        "signal_count": 3019,
+        "signal_coverage": 0.24350701726084853,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25C_tabnet_native_attentive_tabular_scout_v1/predictions/tier_b_stage31_native_structural_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.507532956685499,
+          "balanced_accuracy": 0.4111525378830509,
+          "directional_correct_count": 130,
+          "directional_hit_rate": 0.3044496487119438,
+          "log_loss": 1.0458160870206268,
+          "long_count": 248,
+          "macro_f1": 0.4111471505258768,
+          "mean_probability": {
+            "flat": 0.383637809004095,
+            "long": 0.32283758709763477,
+            "short": 0.2935246038982702
+          },
+          "mean_probability_margin": 0.11674741888598218,
+          "rows": 1062,
+          "short_count": 179,
+          "signal_count": 427,
+          "signal_coverage": 0.4020715630885122
+        },
+        "train": {
+          "accuracy": 0.4668896321070234,
+          "balanced_accuracy": 0.3881195688157732,
+          "directional_correct_count": 802,
+          "directional_hit_rate": 0.37865911237016053,
+          "log_loss": 1.0409767022076994,
+          "long_count": 1293,
+          "macro_f1": 0.35090169721531755,
+          "mean_probability": {
+            "flat": 0.437559232872789,
+            "long": 0.30186798452927943,
+            "short": 0.26057278259793165
+          },
+          "mean_probability_margin": 0.15883841267712503,
+          "rows": 8970,
+          "short_count": 825,
+          "signal_count": 2118,
+          "signal_coverage": 0.23612040133779263
+        },
+        "validation": {
+          "accuracy": 0.6043956043956044,
+          "balanced_accuracy": 0.401257549321119,
+          "directional_correct_count": 164,
+          "directional_hit_rate": 0.3459915611814346,
+          "log_loss": 0.9552373804970234,
+          "long_count": 325,
+          "macro_f1": 0.3935519292953356,
+          "mean_probability": {
+            "flat": 0.4472994693961377,
+            "long": 0.29810112381814485,
+            "short": 0.2545994067857174
+          },
+          "mean_probability_margin": 0.16767130609144568,
+          "rows": 2366,
+          "short_count": 149,
+          "signal_count": 474,
+          "signal_coverage": 0.2003381234150465
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 5925,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 1.1102230246251565e-16,
+        "rows": 59048,
+        "short_count": 1240,
+        "signal_count": 7165,
+        "signal_coverage": 0.12134195908413493,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25C_tabnet_native_attentive_tabular_scout_v1/predictions/tier_ab_stage31_native_structural_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.45281054823039557,
+          "balanced_accuracy": 0.4333623227180184,
+          "directional_correct_count": 738,
+          "directional_hit_rate": 0.42857142857142855,
+          "log_loss": 1.0536571761904319,
+          "long_count": 1491,
+          "macro_f1": 0.4014227593594855,
+          "mean_probability": {
+            "flat": 0.339771123442807,
+            "long": 0.36189911991637747,
+            "short": 0.2983297566408155
+          },
+          "mean_probability_margin": 0.11076787677576265,
+          "rows": 8646,
+          "short_count": 231,
+          "signal_count": 1722,
+          "signal_coverage": 0.1991672449687717
+        },
+        "train": {
+          "accuracy": 0.4232561793045664,
+          "balanced_accuracy": 0.40711538110723683,
+          "directional_correct_count": 1620,
+          "directional_hit_rate": 0.4707933740191805,
+          "log_loss": 1.0628015527044283,
+          "long_count": 2705,
+          "macro_f1": 0.37690860245353686,
+          "mean_probability": {
+            "flat": 0.3613590435098754,
+            "long": 0.34549528013678993,
+            "short": 0.2931456763533346
+          },
+          "mean_probability_margin": 0.095438682474905,
+          "rows": 38192,
+          "short_count": 736,
+          "signal_count": 3441,
+          "signal_coverage": 0.09009740259740259
+        },
+        "validation": {
+          "accuracy": 0.4725634725634726,
+          "balanced_accuracy": 0.43757502189849484,
+          "directional_correct_count": 812,
+          "directional_hit_rate": 0.40559440559440557,
+          "log_loss": 1.0449013462489776,
+          "long_count": 1729,
+          "macro_f1": 0.40455899668707146,
+          "mean_probability": {
+            "flat": 0.3562280638463461,
+            "long": 0.3554119992724419,
+            "short": 0.288359936881212
+          },
+          "mean_probability_margin": 0.12549549001572047,
+          "rows": 12210,
+          "short_count": 273,
+          "signal_count": 2002,
+          "signal_coverage": 0.16396396396396395
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "variant_results": {
+    "path": "stages/31_model_family_challenge__tabnet_attentive_tabular_scout/02_runs/run25C_tabnet_native_attentive_tabular_scout_v1/results/native_variant_results.csv",
+    "rows": 2,
+    "sha256": "ea3162cd33c7ab1fac8822d475eaaf88609523425dcd24496dec464655905777"
+  }
+}

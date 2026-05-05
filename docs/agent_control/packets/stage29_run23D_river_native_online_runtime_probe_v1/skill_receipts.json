@@ -1,0 +1,113 @@
+[
+  {
+    "created_at_utc": "2026-05-05T12:13:12Z",
+    "packet_id": "stage29_run23D_river_native_online_runtime_probe_v1",
+    "parity_check": {
+      "tier_a": {
+        "max_abs_diff": 0.007984764373732967,
+        "mean_abs_diff": 0.0004152678898623181,
+        "p95_abs_diff": 0.0010947324982763349,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23D_river_native_online_runtime_probe_v1/models/tier_a_stage29_score_table.csv"
+      },
+      "tier_b": {
+        "max_abs_diff": 0.010529131257173363,
+        "mean_abs_diff": 0.0003533123361246268,
+        "p95_abs_diff": 0.0009760872644384656,
+        "passed": true,
+        "rows": 2366,
+        "table_path": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23D_river_native_online_runtime_probe_v1/models/tier_b_stage29_score_table.csv"
+      }
+    },
+    "runtime_claim_boundary": "runtime_probe",
+    "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "shared_contract": "4-feature score table, q0.80 non-flat thresholds, Tier A primary plus Tier B fallback routing",
+    "skill": "obsidian-runtime-parity",
+    "status": "completed"
+  },
+  {
+    "account": "Deposit 500, Leverage 1:100(예치금 500, 레버리지 1:100)",
+    "created_at_utc": "2026-05-05T12:13:12Z",
+    "packet_id": "stage29_run23D_river_native_online_runtime_probe_v1",
+    "runtime_failure_signature": {
+      "attempt_status_counts": {
+        "completed": 6
+      },
+      "compile_status": "completed",
+      "feature_ready_count_total": 41712,
+      "last_skip_reason_counts": {
+        "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+        "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+        "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+        "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+      },
+      "model_fail_count_total": 228723,
+      "model_ok_count_total": 41712,
+      "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+    },
+    "skill": "obsidian-backtest-forensics",
+    "status": "completed",
+    "tester_model": "Every tick based on real ticks(실제 틱 기반 모든 틱)",
+    "tester_report_count": 10
+  },
+  {
+    "created_at_utc": "2026-05-05T12:13:12Z",
+    "forbidden_claims": [
+      "edge",
+      "alpha_quality",
+      "baseline",
+      "promotion_candidate",
+      "operating_promotion",
+      "runtime_authority"
+    ],
+    "judgment": "inconclusive_stage29_native_runtime_probe_completed",
+    "packet_id": "stage29_run23D_river_native_online_runtime_probe_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "completed"
+  },
+  {
+    "created_at_utc": "2026-05-05T12:13:12Z",
+    "packet_id": "stage29_run23D_river_native_online_runtime_probe_v1",
+    "packet_root": "docs/agent_control/packets/stage29_run23D_river_native_online_runtime_probe_v1",
+    "run_root": "stages/29_adaptive_model__river_online_drift_learning/02_runs/run23D_river_native_online_runtime_probe_v1",
+    "skill": "obsidian-artifact-lineage",
+    "status": "completed"
+  },
+  {
+    "created_at_utc": "2026-05-05T12:13:12Z",
+    "dependency_surface": {
+      "numpy": {
+        "installed": true,
+        "version": "2.3.4"
+      },
+      "pandas": {
+        "installed": true,
+        "version": "2.3.3"
+      },
+      "pytorch-tabnet": {
+        "installed": true,
+        "version": "4.1.0"
+      },
+      "river": {
+        "installed": true,
+        "version": "0.24.2"
+      },
+      "scikit-learn": {
+        "installed": true,
+        "version": "1.8.0"
+      },
+      "torch": {
+        "cuda_available": false,
+        "installed": true,
+        "version": "2.11.0"
+      }
+    },
+    "entry_command": "python foundation/pipelines/run_stage29_32_native_revalidation_supplement.py --from-stage 29 --to-stage 32",
+    "execution_environment": "Windows local Python 3.13.9, MT5 Strategy Tester via existing project runner",
+    "packet_id": "stage29_run23D_river_native_online_runtime_probe_v1",
+    "reproducibility_judgment": "reproducible_with_setup",
+    "skill": "obsidian-environment-reproducibility",
+    "status": "completed"
+  }
+]
