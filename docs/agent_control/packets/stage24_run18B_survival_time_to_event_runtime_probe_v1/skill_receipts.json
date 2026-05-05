@@ -1,0 +1,63 @@
+[
+  {
+    "created_at_utc": "2026-05-05T00:34:41Z",
+    "packet_id": "stage24_run18B_survival_time_to_event_runtime_probe_v1",
+    "parity_check": {
+      "tier_a": {
+        "claim_boundary": "piecewise_permission_table_check_not_runtime_authority",
+        "max_abs_diff": 0.10748847807900863,
+        "mean_abs_diff": 0.005844524701958182,
+        "p95_abs_diff": 0.025403033610083715,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18B_survival_time_to_event_runtime_probe_v1/models/tier_a_survival_permission_score_table.csv"
+      },
+      "tier_b": {
+        "claim_boundary": "piecewise_permission_table_check_not_runtime_authority",
+        "max_abs_diff": 0.06256716760342185,
+        "mean_abs_diff": 0.0028703587308767137,
+        "p95_abs_diff": 0.009404709275101546,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18B_survival_time_to_event_runtime_probe_v1/models/tier_b_survival_permission_score_table.csv"
+      }
+    },
+    "runtime_claim_boundary": "runtime_probe",
+    "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "shared_contract": "two-feature survival permission score table, q0.80 non-flat thresholds, close-on-flat enabled, Tier A primary plus Tier B fallback routing",
+    "skill": "obsidian-runtime-parity",
+    "status": "completed"
+  },
+  {
+    "created_at_utc": "2026-05-05T00:34:41Z",
+    "packet_id": "stage24_run18B_survival_time_to_event_runtime_probe_v1",
+    "runtime_failure_signature": {
+      "attempt_status_counts": {
+        "completed": 6
+      },
+      "compile_status": "completed",
+      "feature_ready_count_total": 41712,
+      "last_skip_reason_counts": {
+        "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+        "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+        "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+        "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+      },
+      "model_fail_count_total": 228723,
+      "model_ok_count_total": 41712,
+      "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+    },
+    "skill": "obsidian-backtest-forensics",
+    "status": "completed",
+    "tester_report_count": 10
+  },
+  {
+    "claim_boundary": "survival_permission_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-05T00:34:41Z",
+    "judgment_label": "inconclusive_survival_permission_runtime_probe_completed",
+    "packet_id": "stage24_run18B_survival_time_to_event_runtime_probe_v1",
+    "result_subject": "run18B_survival_time_to_event_runtime_probe_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "completed"
+  }
+]

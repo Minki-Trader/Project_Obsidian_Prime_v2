@@ -1,4 +1,12 @@
-﻿## Latest Stage24 RUN18A Survival Update(최신 24단계 실행18A 생존 업데이트)
+﻿## Latest Stage24 RUN18B Survival Runtime Update(최신 24단계 실행18B 생존 런타임 업데이트)
+
+Stage24(24단계) `run18B_survival_time_to_event_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_survival_permission_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage24_closeout_and_stage25_open_only`.
+
+효과(effect, 효과): Survival model(생존 모델)의 risk score(위험 점수)를 close-on-flat(평탄 시 청산) runtime behavior(런타임 행동)로 넘겨 확인했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage24 RUN18A Survival Update(최신 24단계 실행18A 생존 업데이트)
 
 Stage24(24단계) `run18A_survival_time_to_event_hold_shape_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
 
