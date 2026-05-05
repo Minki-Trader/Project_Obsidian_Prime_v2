@@ -1,0 +1,133 @@
+{
+  "packet_id": "stage20_27_characteristic_synthesis_v1",
+  "status": "completed_characteristic_and_actual_mt5_routed_rerun_synthesis",
+  "judgment": "completed_characteristic_and_actual_mt5_routed_rerun_synthesis_not_new_alpha_quality",
+  "claim_boundary": "cross_stage_characteristic_and_actual_mt5_routed_rerun_synthesis_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "active_stage_unchanged": "28_regime_model__markov_switching_regression_state_link",
+  "current_run_unchanged": "run22B_markov_regression_state_runtime_probe_v1",
+  "next_exact_action_unchanged": "repair_run22B_markov_regression_runtime_probe_then_rerun_exact_attempts",
+  "stage_scope": [
+    "20_model_family_challenge__gam_additive_smooth_shape",
+    "21_model_family_challenge__elasticnet_logistic_linear_sanity",
+    "22_regime_model__hmm_hidden_state_segmentation",
+    "23_regime_model__supervised_regime_classifier_filter",
+    "24_exit_model__survival_time_to_event_hold_shape",
+    "25_exit_model__hazard_trade_lifecycle_risk",
+    "26_model_family_challenge__ngboost_probabilistic_distribution_shape",
+    "27_tail_model__quantile_boosting_risk_surface"
+  ],
+  "source_report": "docs/workspace/stage20_27_characteristic_synthesis.md",
+  "decision_path": "docs/decisions/2026-05-05_stage20_27_characteristic_synthesis.md",
+  "sufficiency_checkpoints": [
+    "structural_lens",
+    "tier_records",
+    "runtime_handoff",
+    "validation_oos_behavior",
+    "repeated_feature_axes",
+    "negative_memory",
+    "claim_boundary",
+    "mt5_forensic_boundary"
+  ],
+  "cross_stage_patterns": [
+    "repeated_hl_range_historical_vol_bollinger_rsi_close_ema20_minutes_from_cash_open_axes",
+    "permission_abstention_lane_from_stage23_stage26_stage27",
+    "exit_risk_lane_from_stage24_stage25",
+    "score_table_runtime_probe_boundary",
+    "tier_b_fallback_as_coverage_not_permission",
+    "mt5_trade_shape_stage23_strongest_stage20_oos_only_stage24_stage25_dense_negative"
+  ],
+  "actual_mt5_rerun_packet": "docs/agent_control/packets/stage20_27_actual_mt5_rerun_verification_v1/execution_summary.json",
+  "mt5_forensic_boundary": "completed_actual_mt5_routed_validation_oos_rerun_usable_with_boundary_not_full_tier_view_rerun",
+  "mt5_forensic_summary": {
+    "source_basis": "stage20_stage27_runtime_probe_aggregate_summaries_normalized_kpi_closeout_packets_and_actual_routed_mt5_rerun_packet",
+    "new_mt5_tester_run_created": true,
+    "actual_routed_strategy_tester_runs": 16,
+    "actual_routed_reports_completed": 16,
+    "raw_strategy_tester_report_reparse": true,
+    "raw_report_availability": "routed_validation_and_oos_reports_regenerated_for_stage20_through_stage27",
+    "parser_error_total": 0,
+    "trade_parser_error_total": 0,
+    "oos_fill_rate_read": "all_checked_oos_routed_summaries_report_fill_rate_1_0_and_reject_count_0",
+    "stage_rows": [
+      {
+        "stage": "Stage20",
+        "mt5_kpi_records": 10,
+        "normalized_records": 10,
+        "validation": "8.65/1.01/211/DD36.26%",
+        "oos": "295.69/1.51/125/DD17.98%",
+        "tier_b_oos_orders": 13,
+        "mt5_read": "oos_strong_validation_flat_high_drawdown_runtime_probe_only"
+      },
+      {
+        "stage": "Stage21",
+        "mt5_kpi_records": 10,
+        "normalized_records": 10,
+        "validation": "-113.11/0.90/173/DD45.64%",
+        "oos": "-49.77/0.94/130/DD29.25%",
+        "tier_b_oos_orders": 19,
+        "mt5_read": "weak_sparse_linear_signal_not_order_rejection"
+      },
+      {
+        "stage": "Stage22",
+        "mt5_kpi_records": 10,
+        "normalized_records": 10,
+        "validation": "-497.25/0.69/279/DD99.55%",
+        "oos": "121.96/1.05/562/DD47.16%",
+        "tier_b_oos_orders": 69,
+        "mt5_read": "oos_positive_but_validation_collapse_long_only_shape_no_edge"
+      },
+      {
+        "stage": "Stage23",
+        "mt5_kpi_records": 10,
+        "normalized_records": 10,
+        "validation": "324.75/1.16/476/DD50.90%",
+        "oos": "254.63/1.19/345/DD18.08%",
+        "tier_b_oos_orders": 34,
+        "mt5_read": "strongest_balanced_positive_but_drawdown_keeps_calibration_abstention_clue_only"
+      },
+      {
+        "stage": "Stage24",
+        "mt5_kpi_records": 10,
+        "normalized_records": 10,
+        "validation": "-157.74/0.90/2195/DD49.60%",
+        "oos": "-98.54/0.88/1100/DD26.58%",
+        "tier_b_oos_orders": 318,
+        "mt5_read": "dense_negative_trade_path_exit_risk_lens_only"
+      },
+      {
+        "stage": "Stage25",
+        "mt5_kpi_records": 10,
+        "normalized_records": 10,
+        "validation": "-89.59/0.94/2145/DD32.63%",
+        "oos": "-174.49/0.83/1210/DD39.20%",
+        "tier_b_oos_orders": 329,
+        "mt5_read": "dense_negative_trade_path_position_age_risk_lens_only"
+      },
+      {
+        "stage": "Stage26",
+        "mt5_kpi_records": 10,
+        "normalized_records": 6,
+        "validation": "-17.21/0.05/6/DD4.26%",
+        "oos": "39.49/2.37/10/DD4.33%",
+        "tier_b_oos_orders": 0,
+        "mt5_read": "tiny_sample_oos_positive_uncertainty_clue_only"
+      },
+      {
+        "stage": "Stage27",
+        "mt5_kpi_records": 10,
+        "normalized_records": 6,
+        "validation": "-38.20/0.97/665/DD53.95%",
+        "oos": "79.17/1.07/576/DD30.01%",
+        "tier_b_oos_orders": 167,
+        "mt5_read": "tier_b_fallback_orders_visible_but_validation_negative_high_drawdown_tail_risk_clue_only"
+      }
+    ]
+  },
+  "reopen_conditions": [
+    "stage30_calibration_abstention_broad_packet",
+    "exit_only_survival_hazard_packet",
+    "wfo_or_rolling_window_repetition_check",
+    "runtime_handoff_repair_packet",
+    "full_tier_view_rerun_or_tester_identity_cost_audit"
+  ]
+}

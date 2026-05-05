@@ -1,0 +1,45 @@
+{
+  "packet_id": "stage20_27_characteristic_synthesis_v1",
+  "work_packet_lifecycle": "evidence_synthesis_to_judgment_to_report",
+  "primary_family": "kpi_evidence",
+  "primary_skill": "obsidian-run-evidence-system",
+  "support_skills": [
+    "obsidian-artifact-lineage",
+    "obsidian-result-judgment",
+    "obsidian-performance-attribution"
+  ],
+  "supplemental_checks": [
+    "obsidian-runtime-parity",
+    "obsidian-backtest-forensics"
+  ],
+  "required_skill_receipts": [
+    "obsidian-run-evidence-system",
+    "obsidian-artifact-lineage",
+    "obsidian-result-judgment",
+    "obsidian-performance-attribution",
+    "obsidian-runtime-parity",
+    "obsidian-backtest-forensics",
+    "obsidian-claim-discipline",
+    "obsidian-answer-clarity"
+  ],
+  "required_gates": [
+    "kpi_contract_audit",
+    "row_grain_audit",
+    "source_authority_audit",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "branch_worktree_fit": "accepted_with_boundary_current_branch_has_stage28_run22B_uncommitted_work",
+  "branch_action": "stay",
+  "handoff_surface": [
+    "docs/workspace/stage20_27_characteristic_synthesis.md",
+    "docs/decisions/2026-05-05_stage20_27_characteristic_synthesis.md",
+    "docs/workspace/stage20_32_goal_operating_plan.md",
+    "docs/context/current_working_state.md",
+    "docs/workspace/workspace_state.yaml"
+  ],
+  "final_answer_filter": [
+    "obsidian-answer-clarity",
+    "obsidian-claim-discipline"
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "created_at_utc": "2026-05-05T09:47:57Z",
+    "packet_id": "stage28_run22B_markov_regression_state_runtime_probe_v1",
+    "parity_check": {
+      "tier_a": {
+        "max_abs_diff": 0.03109280309596338,
+        "mean_abs_diff": 0.00018653311406858464,
+        "p95_abs_diff": 0.0005104422708346593,
+        "passed": true,
+        "rows": 966,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/28_regime_model__markov_switching_regression_state_link/02_runs/run22B_markov_regression_state_runtime_probe_v1/models/tier_a_markov_state_score_table.csv"
+      },
+      "tier_b": {
+        "max_abs_diff": 0.002626342515205167,
+        "mean_abs_diff": 7.402825599301925e-05,
+        "p95_abs_diff": 0.00036441773834854454,
+        "passed": true,
+        "rows": 598,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/28_regime_model__markov_switching_regression_state_link/02_runs/run22B_markov_regression_state_runtime_probe_v1/models/tier_b_markov_state_score_table.csv"
+      }
+    },
+    "research_path": "stage_pipelines/stage28/markov_regression_state_link_scout.py",
+    "runtime_claim_boundary": "runtime_probe",
+    "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "shared_contract": "4-feature markov state score table, q0.80 non-flat thresholds, Tier A primary plus Tier B fallback routing",
+    "skill": "obsidian-runtime-parity",
+    "status": "completed"
+  },
+  {
+    "created_at_utc": "2026-05-05T09:47:57Z",
+    "packet_id": "stage28_run22B_markov_regression_state_runtime_probe_v1",
+    "runtime_failure_signature": {
+      "attempt_status_counts": {
+        "completed": 6
+      },
+      "compile_status": "completed",
+      "feature_ready_count_total": 5168,
+      "last_skip_reason_counts": {
+        "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+        "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+        "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+        "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+      },
+      "model_fail_count_total": 265267,
+      "model_ok_count_total": 5168,
+      "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+    },
+    "skill": "obsidian-backtest-forensics",
+    "status": "completed",
+    "tester_report_count": 10
+  },
+  {
+    "claim_boundary": "markov_regression_state_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-05T09:47:57Z",
+    "judgment_label": "inconclusive_markov_regression_state_runtime_probe_completed",
+    "packet_id": "stage28_run22B_markov_regression_state_runtime_probe_v1",
+    "result_subject": "run22B_markov_regression_state_runtime_probe_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "completed"
+  }
+]

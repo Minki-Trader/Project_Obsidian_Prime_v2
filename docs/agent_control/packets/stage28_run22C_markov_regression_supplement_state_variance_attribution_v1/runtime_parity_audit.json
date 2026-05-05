@@ -1,0 +1,13 @@
+{
+  "mt5_runtime_claim": "score-table handoff parity only; native statsmodels runtime remains out of scope.",
+  "packet_id": "stage28_run22C_markov_regression_supplement_state_variance_attribution_v1",
+  "runtime_gap_read": {
+    "interpretation": "MT5 score-table handoff(MT5 점수표 인계)는 Python score-table surface(파이썬 점수표 표면)와 거의 floating-point precision(부동소수점 정밀도) 수준으로 맞는다. 남은 gap(차이)은 MT5(메타트레이더5)가 native statsmodels MarkovRegression inference(원본 스탯스모델 마르코프 회귀 추론)를 직접 실행하지 않는 conceptual gap(개념 차이)이다.",
+    "known_runtime_difference": "MT5 runtime_probe uses sampled Markov state-table handoff, not native statsmodels MarkovRegression inference. 즉, MT5 runtime_probe(MT5 런타임 탐침)는 sampled Markov state-table handoff(표본 마르코프 상태표 인계)를 쓰며 native statsmodels MarkovRegression inference(원본 스탯스모델 마르코프 회귀 추론)를 MT5(메타트레이더5) 안에서 직접 실행하지 않는다.",
+    "runtime_gap_path": "stages/28_regime_model__markov_switching_regression_state_link/02_runs/run22C_markov_regression_supplement_state_variance_attribution_v1/results/runtime_gap_comparison.csv",
+    "score_table_handoff_max_abs_diff": 4.999464037203083e-11,
+    "score_table_handoff_passed": true,
+    "score_table_handoff_rows_matched": 2584
+  },
+  "status": "passed"
+}

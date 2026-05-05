@@ -1,0 +1,39 @@
+{
+  "packet_id": "stage20_27_actual_mt5_rerun_verification_v1",
+  "receipts": [
+    {
+      "known_differences": [
+        "only routed validation/OOS rerun, not full tier_a_only/tier_b_fallback_only rerun"
+      ],
+      "parity_check": "MetaEditor compile completed, terminal64 Strategy Tester executed 16 routed attempts, runtime telemetry completed, reports collected",
+      "research_path": "docs/workspace/stage20_27_characteristic_synthesis.md and stage20_stage27 runtime probe artifacts",
+      "runtime_claim_boundary": "runtime_probe_rerun_verification_only",
+      "runtime_path": "MT5 Strategy Tester routed_validation_is and routed_oos reports regenerated for Stage20 through Stage27",
+      "shared_contract": "existing .ini/.set routed Tier A primary plus Tier B fallback contracts; Stage26 materialized before execution",
+      "skill": "obsidian-runtime-parity",
+      "status": "executed"
+    },
+    {
+      "backtest_judgment": "usable_with_boundary",
+      "cost_assumptions": "inherited from existing .ini/.set tester profiles; no cost model changes made",
+      "forensic_checks": [
+        "tester_status",
+        "runtime_status",
+        "report_status",
+        "report_sha256"
+      ],
+      "report_identity": "16 raw Strategy Tester HTML reports regenerated and hashed where present",
+      "skill": "obsidian-backtest-forensics",
+      "status": "executed",
+      "tester_identity": "US100 M5 Strategy Tester from regenerated .ini files, deposit 500, leverage 1:100, model 4 from existing tester profiles",
+      "trade_evidence": "net_profit, profit_factor, trade_count, max_drawdown_percent parsed from regenerated reports"
+    },
+    {
+      "evidence_boundary": "actual_mt5_routed_validation_oos_rerun_only_not_full_tier_rebuild_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+      "measurement_scope": "actual routed MT5 validation/OOS rerun for Stage20-27",
+      "registry_update_required": "no_new_run_ids_created; supplemental verification packet only",
+      "skill": "obsidian-run-evidence-system",
+      "status": "executed"
+    }
+  ]
+}

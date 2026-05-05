@@ -1,8 +1,8 @@
 ﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
 active_branch: codex/stage28-markov-regression
-active_stage: 28_regime_model__markov_switching_regression_state_link
-current_run_id: run22A_markov_regression_state_link_scout_v1
+active_stage: 29_adaptive_model__river_online_drift_learning
+current_run_id: not_started
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,11 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 28 as active_run22A_python_structural_scout_completed after Markov regression(마르코프 회귀) state-link scout(상태 연결 탐색); next action is run22B_markov_regression_state_runtime_probe_v1, and no baseline, promotion, or runtime authority exists
+- treat Stage 29 as opened_not_started after Stage28 Markov regression(마르코프 회귀) reviewed closeout(검토된 마감); next action is run23A_river_online_drift_learning_scout_v1, and no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
+- treat stage20_27_characteristic_synthesis_v1(20-27단계 특징 및 실제 MT5 재실행 종합 묶음) and stage20_27_actual_mt5_rerun_verification_v1(실제 MT5 재실행 묶음) as cross-stage evidence management(교차 단계 근거 관리); they preserve model-family/topic clues(모델군/주제 단서) and MT5 trade shape(MT5 거래 모양) through Stage27(27단계까지) with 16/16 actual routed validation/OOS MT5 reports(실제 검증/표본외 라우팅 MT5 보고서), but create no alpha quality(알파 품질), baseline(기준선), promotion(승격), or runtime authority(런타임 권위)
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -56,7 +57,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_opened
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -170,17 +171,18 @@ pre_alpha_stage_queue:
     stage27:
       stage_id: 27_tail_model__quantile_boosting_risk_surface
       ownership: independent quantile boosting(분위수 부스팅) tail-risk surface(꼬리 위험 표면) scout(탐색) after Stage26(26단계)
-      status: reviewed_closed_stage28_opened
+      status: reviewed_closed_stage28_reviewed_closed_stage29_opened
       current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
     stage28:
       stage_id: 28_regime_model__markov_switching_regression_state_link
       ownership: independent Markov switching regression(마르코프 전환 회귀) state-link(상태 연결) scout(탐색) after Stage27(27단계)
-      status: active_run22A_python_structural_scout_completed
-      current_run_id: run22A_markov_regression_state_link_scout_v1
+      status: reviewed_closed_stage29_opened
+      current_run_id: run22B_markov_regression_state_runtime_probe_v1
     stage29:
       stage_id: 29_adaptive_model__river_online_drift_learning
       ownership: independent River online ML(리버 온라인 머신러닝) drift/adaptation(변화/적응) scout(탐색) after Stage28(28단계)
-      status: planned
+      status: opened_not_started
+      current_run_id: not_started
     stage30:
       stage_id: 30_decision_layer__probability_calibration_abstention
       ownership: independent probability calibration/abstention(확률 보정/기권) decision-layer(결정 계층) scout(탐색) after Stage29(29단계)
@@ -1818,7 +1820,7 @@ stage18_catboost_closeout:
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
 stage19_32_model_research_queue:
-  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
+  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_opened
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   goal_operating_plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   path_note: legacy_stage19_25_file_path_retained_for_current_truth_links
@@ -1839,7 +1841,7 @@ stage19_32_model_research_queue:
   inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
   claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only
 stage20_32_goal_operating_plan:
-  status: stage20_closed_stage21_closed_stage22_closed_stage23_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_opened
+  status: stage20_closed_stage21_closed_stage22_closed_stage23_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_opened
   plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   decision_path: docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md
   active_stage_at_adoption: 20_model_family_challenge__gam_additive_smooth_shape
@@ -2369,7 +2371,7 @@ stage26_ngboost_closeout:
   next_action: run21A_quantile_boosting_tail_risk_surface_scout_v1
 stage27_quantile_boosting_model:
   stage_id: 27_tail_model__quantile_boosting_risk_surface
-  status: reviewed_closed_stage28_opened
+  status: reviewed_closed_stage28_reviewed_closed_stage29_opened
   current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
@@ -2415,7 +2417,7 @@ stage27_quantile_run21B_runtime_probe:
   next_action: stage27_closeout_and_stage28_open_only
 stage27_quantile_closeout:
   packet_id: stage27_quantile_closeout_v1
-  status: reviewed_closed_stage28_opened
+  status: reviewed_closed_stage28_reviewed_closed_stage29_opened
   judgment: closed_inconclusive_quantile_boosting_tail_characteristics_exhausted
   current_run_id: run21B_quantile_boosting_tail_risk_runtime_probe_v1
   run_range: run21A-run21B
@@ -2429,23 +2431,27 @@ stage27_quantile_closeout:
   next_action: run22A_markov_regression_state_link_scout_v1
 stage28_markov_regression_model:
   stage_id: 28_regime_model__markov_switching_regression_state_link
-  status: active_run22A_python_structural_scout_completed
-  current_run_id: run22A_markov_regression_state_link_scout_v1
+  status: reviewed_closed_stage29_opened_with_run22C_supplement
+  current_run_id: run22B_markov_regression_state_runtime_probe_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
   selected_variant_id: v01_return_2state_switchvar
-  boundary: markov_regression_state_link_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
-  judgment: inconclusive_markov_regression_state_link_scout_completed
-  mt5_runtime_probe_status: not_attempted_next_milestone_run22B_markov_regression_state_runtime_probe_v1
-  report_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/run22A_markov_regression_state_link_scout_packet.md
-  packet_summary_path: docs/agent_control/packets/stage28_run22A_markov_regression_state_link_scout_v1/aggregate_summary.json
-  next_action: run22B_markov_regression_state_runtime_probe_v1
+  boundary: markov_regression_state_characteristic_and_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  judgment: closed_inconclusive_markov_regression_state_characteristics_exhausted
+  mt5_runtime_probe_status: completed_by_next_milestone_run22B_markov_regression_state_runtime_probe_v1
+  mt5_kpi_record_count: 10
+  supplement_run_id: run22C_markov_regression_supplement_state_variance_attribution_v1
+  supplement_packet_path: docs/agent_control/packets/stage28_run22C_markov_regression_supplement_state_variance_attribution_v1/aggregate_summary.json
+  closeout_packet_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/stage28_closeout_packet.md
+  report_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/run22B_markov_regression_state_runtime_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage28_markov_regression_closeout_v1/aggregate_summary.json
+  next_action: run23A_river_online_drift_learning_scout_v1
 stage28_markov_run22A_structural_scout:
   packet_id: stage28_run22A_markov_regression_state_link_scout_v1
   status: reviewed_structural_scout_completed
   judgment: inconclusive_markov_regression_state_link_scout_completed
-  current_run_id: run22A_markov_regression_state_link_scout_v1
+  current_run_id: run22B_markov_regression_state_runtime_probe_v1
   selected_variant_id: v01_return_2state_switchvar
   mt5_runtime_probe_status: not_attempted_next_milestone_run22B_markov_regression_state_runtime_probe_v1
   selected_operating_reference: none
@@ -2455,3 +2461,71 @@ stage28_markov_run22A_structural_scout:
   report_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/run22A_markov_regression_state_link_scout_packet.md
   packet_summary_path: docs/agent_control/packets/stage28_run22A_markov_regression_state_link_scout_v1/aggregate_summary.json
   next_action: run22B_markov_regression_state_runtime_probe_v1
+stage28_markov_run22B_runtime_probe:
+  packet_id: stage28_run22B_markov_regression_state_runtime_probe_v1
+  status: reviewed_runtime_probe_completed
+  judgment: inconclusive_markov_regression_state_runtime_probe_completed
+  current_run_id: run22B_markov_regression_state_runtime_probe_v1
+  source_run_id: run22A_markov_regression_state_link_scout_v1
+  selected_variant_id: v01_return_2state_switchvar
+  mt5_runtime_probe_status: completed
+  mt5_kpi_record_count: 10
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: markov_regression_state_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/run22B_markov_regression_state_runtime_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage28_run22B_markov_regression_state_runtime_probe_v1/aggregate_summary.json
+  next_action: stage28_closeout_and_stage29_open_only
+stage20_27_characteristic_synthesis:
+  packet_id: stage20_27_characteristic_synthesis_v1
+  status: completed_characteristic_and_actual_mt5_routed_rerun_synthesis
+  judgment: completed_characteristic_and_actual_mt5_routed_rerun_synthesis_not_new_alpha_quality
+  stage_scope: Stage20_through_Stage27
+  report_path: docs/workspace/stage20_27_characteristic_synthesis.md
+  decision_path: docs/decisions/2026-05-05_stage20_27_characteristic_synthesis.md
+  packet_summary_path: docs/agent_control/packets/stage20_27_characteristic_synthesis_v1/aggregate_summary.json
+  actual_mt5_rerun_packet_path: docs/agent_control/packets/stage20_27_actual_mt5_rerun_verification_v1/execution_summary.json
+  mt5_forensic_boundary: completed_actual_mt5_routed_validation_oos_rerun_16_of_16_full_tier_views_not_rerun
+  boundary: cross_stage_characteristic_and_actual_mt5_routed_rerun_synthesis_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  active_stage_unchanged: 28_regime_model__markov_switching_regression_state_link
+  next_action_after_stage28_run22B: stage28_closeout_and_stage29_open_only
+stage28_markov_regression_closeout:
+  packet_id: stage28_markov_regression_closeout_v1
+  status: reviewed_closed_stage29_opened
+  judgment: closed_inconclusive_markov_regression_state_characteristics_exhausted
+  current_run_id: run22B_markov_regression_state_runtime_probe_v1
+  run_range: run22A-run22B
+  selected_variant_id: v01_return_2state_switchvar
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  closeout_packet_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/stage28_closeout_packet.md
+  decision_path: docs/decisions/2026-05-05_stage28_markov_regression_closeout_stage29_open.md
+  packet_summary_path: docs/agent_control/packets/stage28_markov_regression_closeout_v1/aggregate_summary.json
+  next_action: run23A_river_online_drift_learning_scout_v1
+stage29_river_online_model:
+  stage_id: 29_adaptive_model__river_online_drift_learning
+  status: opened_not_started
+  current_run_id: not_started
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: topic_open_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/29_adaptive_model__river_online_drift_learning/00_spec/stage_brief.md
+  selection_status_path: stages/29_adaptive_model__river_online_drift_learning/04_selected/selection_status.md
+  next_action: run23A_river_online_drift_learning_scout_v1
+stage28_markov_run22C_supplement:
+  packet_id: stage28_run22C_markov_regression_supplement_state_variance_attribution_v1
+  status: reviewed_supplement_completed_stage29_still_open
+  judgment: inconclusive_markov_regression_supplement_completed
+  current_run_id: run22C_markov_regression_supplement_state_variance_attribution_v1
+  source_runs: run22A_markov_regression_state_link_scout_v1,run22B_markov_regression_state_runtime_probe_v1
+  requested_items_completed: 4
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: markov_regression_supplement_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  report_path: stages/28_regime_model__markov_switching_regression_state_link/03_reviews/run22C_markov_regression_supplement_packet.md
+  packet_summary_path: docs/agent_control/packets/stage28_run22C_markov_regression_supplement_state_variance_attribution_v1/aggregate_summary.json
+  next_action: run23A_river_online_drift_learning_scout_v1

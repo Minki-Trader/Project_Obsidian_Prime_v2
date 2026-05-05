@@ -91,12 +91,13 @@ def export_mt5_feature_matrix_csv(
         payload["timestamp_utc"] = timestamps.dt.strftime("%Y-%m-%dT%H:%M:%SZ").to_numpy()
     if "split" in frame.columns:
         payload["split"] = frame["split"].astype(str).to_numpy()
-    for name in metadata_columns:
-        if name in frame.columns and name not in payload.columns:
-            payload[name] = frame[name].astype(str).to_numpy()
     payload["row_index"] = np.arange(len(frame), dtype="int64")
     feature_frame = pd.DataFrame(matrix.astype("float32"), columns=list(feature_order))
     payload = pd.concat([payload, feature_frame], axis=1)
+    # Keep feature columns before optional metadata so the MQL5 header scanner binds the intended feature order.
+    for name in metadata_columns:
+        if name in frame.columns and name not in payload.columns and name not in feature_order:
+            payload[name] = frame[name].astype(str).to_numpy()
     io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
     payload.to_csv(io_path(output_path), index=False, encoding="utf-8", float_format="%.10g")
     return {

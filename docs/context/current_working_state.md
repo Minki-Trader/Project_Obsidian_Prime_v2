@@ -1,8 +1,40 @@
-﻿## Latest Stage28 RUN22A Markov Regression Scout(최신 28단계 22A 실행 마르코프 회귀 탐색)
+﻿## Latest Stage28 RUN22C Supplement(최신 28단계 22C 실행 보강)
+
+Stage28(28단계) `run22C_markov_regression_supplement_state_variance_attribution_v1`를 보강 묶음(supplement packet, 보강 묶음)으로 완료했다.
+
+결과(result, 결과): `inconclusive_markov_regression_supplement_completed`. Stage29(29단계)는 계속 opened_not_started(열림, 미시작) 상태이며 다음 행동(next action, 다음 행동)은 `run23A_river_online_drift_learning_scout_v1`이다.
+
+효과(effect, 효과): Markov state count(마르코프 상태 수) 2/3개, switching variance(전환 분산), Tier A/B attribution(티어 A/B 귀속), native statsmodels runtime(원본 스탯스모델 런타임)과 MT5 score-table handoff(MT5 점수표 인계) 차이를 보강했고, baseline(기준선)이나 promotion(승격)은 만들지 않았다.
+
+## Latest Stage28 Closeout / Stage29 Open(최신 28단계 마감 / 29단계 개방)
+
+Stage28(28단계) Markov regression(마르코프 회귀)을 reviewed closeout(검토된 마감)으로 닫고 Stage29(29단계) `29_adaptive_model__river_online_drift_learning`를 open-only(개방만) 상태로 열었다.
+
+결과(result, 결과): `closed_inconclusive_markov_regression_state_characteristics_exhausted`. active branch(활성 브랜치): `codex/stage28-markov-regression`. next exact action(다음 정확한 행동): `run23A_river_online_drift_learning_scout_v1`.
+
+효과(effect, 효과): Stage28(28단계)의 state-link(상태 연결) 단서와 MT5 runtime_probe(MT5 런타임 탐침) 근거는 보존하고, baseline(기준선), promotion(승격), runtime authority(런타임 권위) 없이 River online ML(리버 온라인 머신러닝) topic pivot(주제 전환)으로 이동한다.
+
+## Latest Stage28 RUN22B Markov Runtime Probe(최신 28단계 22B 실행 마르코프 런타임 탐침)
+
+Stage28(28단계) `run22B_markov_regression_state_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_markov_regression_state_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage28_closeout_and_stage29_open_only`.
+
+효과(effect, 효과): Markov regression(마르코프 회귀)의 sampled state handoff(표본 상태 인계)를 MT5 score-table runtime(MT5 점수표 런타임)으로 관찰했고 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+## Latest Stage20-27 Characteristic and Actual MT5 Rerun Synthesis(최신 20-27단계 특징 및 실제 MT5 재실행 종합)
+
+Stage20~27(20~27단계)의 model family/topic exploration(모델군/주제 탐색)과 actual MT5 rerun(실제 MT5 재실행)을 `stage20_27_characteristic_synthesis_v1` 및 `stage20_27_actual_mt5_rerun_verification_v1`로 보강 정리했다.
+
+결과(result, 결과): `completed_characteristic_and_actual_mt5_routed_rerun_synthesis_not_new_alpha_quality`. actual MT5 rerun(실제 MT5 재실행): `16/16` tester/runtime/report completed(테스터/런타임/보고서 완료). report(보고서): `docs/workspace/stage20_27_characteristic_synthesis.md`. 이후 Stage28 closeout(28단계 마감)이 완료되어 현재 next exact action(다음 정확한 행동)은 `run23A_river_online_drift_learning_scout_v1`다.
+
+효과(effect, 효과): GAM(일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(은닉 마르코프 모델), supervised regime classifier(지도 국면 분류기), Survival model(생존 모델), hazard model(위험률 모델), NGBoost(자연 그래디언트 부스팅), quantile boosting(분위수 부스팅)의 특징 단서(characteristic clues, 특징 단서)와 MT5 trade shape(MT5 거래 모양)는 실제 routed validation/OOS(검증/표본외 라우팅) 재실행으로 보존하지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. full tier-view rerun(전체 티어 보기 재실행)은 아니다.
+
+## Latest Stage28 RUN22A Markov Regression Scout(최신 28단계 22A 실행 마르코프 회귀 탐색)
 
 Stage28(28단계) `run22A_markov_regression_state_link_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
 
-결과(result, 결과): `inconclusive_markov_regression_state_link_scout_completed`. selected variant(선택 변형): `v02_return_3state_switchvar`. next exact action(다음 정확한 행동): `run22B_markov_regression_state_runtime_probe_v1`.
+결과(result, 결과): `inconclusive_markov_regression_state_link_scout_completed`. selected variant(선택 변형): `v01_return_2state_switchvar`. next exact action(다음 정확한 행동): `run22B_markov_regression_state_runtime_probe_v1`.
 
 효과(effect, 효과): Markov regression(마르코프 회귀)의 state-link(상태 연결) 단서는 보존하고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 

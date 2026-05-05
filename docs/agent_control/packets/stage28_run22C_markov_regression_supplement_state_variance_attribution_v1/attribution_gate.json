@@ -1,0 +1,11 @@
+{
+  "attribution_read": {
+    "attribution_path": "stages/28_regime_model__markov_switching_regression_state_link/02_runs/run22C_markov_regression_supplement_state_variance_attribution_v1/results/tier_attribution.csv",
+    "routed_read": "Actual routed total(실제 라우팅 전체)은 validation(검증)과 OOS(표본외)에서 양수였지만, tier-only tester runs(티어 단독 테스터 실행)의 단순 additive sum(가산 합계)은 아니다.",
+    "tier_a_read": "Tier A(티어 A)는 separate-run contribution(분리 실행 기여도)이 양수였고 MT5 tier-only tests(MT5 티어 단독 테스트)에서 long-only(롱 전용)였다.",
+    "tier_b_read": "Tier B fallback(티어 B 대체)은 partial-context coverage(부분 문맥 커버리지)와 short/long mix(숏/롱 혼합)를 더했지만, separate-run PnL(분리 실행 손익)은 약하거나 음수였다."
+  },
+  "guardrail": "synthetic tier-only sum is not actual routed total.",
+  "packet_id": "stage28_run22C_markov_regression_supplement_state_variance_attribution_v1",
+  "status": "passed"
+}
