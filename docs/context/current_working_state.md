@@ -1,4 +1,12 @@
-﻿## Latest Stage23 Closeout / Stage24 Open(최신 23단계 마감 / 24단계 개방)
+﻿## Latest Stage24 RUN18A Survival Update(최신 24단계 실행18A 생존 업데이트)
+
+Stage24(24단계) `run18A_survival_time_to_event_hold_shape_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
+
+결과(result, 결과): `inconclusive_survival_time_to_event_hold_shape_scout_completed`. selected variant(선택 변형): `v04_weibull_aft_core24_abs_move_3x`. next exact action(다음 정확한 행동): `run18B_survival_time_to_event_runtime_probe_v1`.
+
+효과(effect, 효과): Survival model(생존 모델)을 entry score(진입 점수)가 아니라 time-to-event(사건까지 시간), censoring(검열), hold/exit clock(보유/청산 시계)으로 읽었다. MT5 runtime_probe(MT5 런타임 탐침)는 다음 실행이다.
+
+## Latest Stage23 Closeout / Stage24 Open(최신 23단계 마감 / 24단계 개방)
 
 Stage23(23단계) supervised regime classifier(지도 국면 분류기)를 reviewed closeout(검토된 마감)으로 닫고 Stage24(24단계) `24_exit_model__survival_time_to_event_hold_shape`를 open-only(개방만) 상태로 열었다.
 

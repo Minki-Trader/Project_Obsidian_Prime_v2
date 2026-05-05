@@ -1,0 +1,1316 @@
+{
+  "allowed_claims": [
+    "python_structural_scout_completed",
+    "survival_hold_exit_shape_clues_recorded"
+  ],
+  "artifacts": {
+    "ledger_artifacts": {
+      "project_alpha_run_ledger": {
+        "hash_policy": "lf_normalized_text_register",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+        "rows": 3202,
+        "sha256": "1386433ff4365c6347165127ec4044cedda8b87f978f56420c786b60df47f07a",
+        "upserted_rows": 3
+      },
+      "run_registry": {
+        "hash_policy": "lf_normalized_text_register",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+        "rows": 282,
+        "sha256": "f8ffef76875b60fcfe11799680b9ff75c6fcf40fe4f0c62928de57774923b047",
+        "upserted_rows": 1
+      },
+      "stage_run_ledger": {
+        "hash_policy": "lf_normalized_text_register",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/24_exit_model__survival_time_to_event_hold_shape/03_reviews/stage_run_ledger.csv",
+        "rows": 3,
+        "sha256": "9b99a6a0ea16845157364131abc33bebc00d47ceaa1c9f87a0f0b9978dd6374a",
+        "upserted_rows": 3
+      }
+    },
+    "model_artifacts": {
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "abs_move_3x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 3.0
+      },
+      "feature_reads": {
+        "tier_a": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 23,
+          "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/selected_feature_reads/tier_a_survival_feature_read.csv",
+          "sha256": "dca28168bb4dec921bb781b6396aa12fc2bb3dc0613b5991178d3586fc660b4e",
+          "top_features": [
+            {
+              "abs_coefficient": 0.10388832380470449,
+              "coefficient": -0.10388832380470449,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "hl_range"
+            },
+            {
+              "abs_coefficient": 0.08820111885041255,
+              "coefficient": -0.08820111885041255,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "historical_vol_20"
+            },
+            {
+              "abs_coefficient": 0.06874734058601052,
+              "coefficient": -0.06874734058601052,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "is_first_30m_after_open"
+            },
+            {
+              "abs_coefficient": 0.06688371089678773,
+              "coefficient": -0.06688371089678773,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "bollinger_width_20"
+            },
+            {
+              "abs_coefficient": 0.06305526500527779,
+              "coefficient": -0.06305526500527779,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "atr_14"
+            },
+            {
+              "abs_coefficient": 0.018924930642074855,
+              "coefficient": -0.018924930642074855,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "minutes_from_cash_open"
+            },
+            {
+              "abs_coefficient": 0.017695179116604634,
+              "coefficient": 0.017695179116604634,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "atr_14_over_atr_50"
+            },
+            {
+              "abs_coefficient": 0.014402215469595928,
+              "coefficient": 0.014402215469595928,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "adx_14"
+            },
+            {
+              "abs_coefficient": 0.010459150154027855,
+              "coefficient": 0.010459150154027855,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "vortex_indicator"
+            },
+            {
+              "abs_coefficient": 0.0099090002283503,
+              "coefficient": 0.0099090002283503,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "ppo_hist_12_26_9"
+            }
+          ]
+        },
+        "tier_b": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 23,
+          "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/selected_feature_reads/tier_b_survival_feature_read.csv",
+          "sha256": "28bf8ef2bacf9dcea44f0f89cf608574c56ec8223f6737785f56c0a8337b1837",
+          "top_features": [
+            {
+              "abs_coefficient": 0.11648974428267726,
+              "coefficient": -0.11648974428267726,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "hl_range"
+            },
+            {
+              "abs_coefficient": 0.09354436005283988,
+              "coefficient": -0.09354436005283988,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "historical_vol_20"
+            },
+            {
+              "abs_coefficient": 0.07215234502358463,
+              "coefficient": -0.07215234502358463,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "bollinger_width_20"
+            },
+            {
+              "abs_coefficient": 0.07124655437480168,
+              "coefficient": -0.07124655437480168,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "is_first_30m_after_open"
+            },
+            {
+              "abs_coefficient": 0.06811626937726901,
+              "coefficient": -0.06811626937726901,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "atr_14"
+            },
+            {
+              "abs_coefficient": 0.014768743462169423,
+              "coefficient": 0.014768743462169423,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "vortex_indicator"
+            },
+            {
+              "abs_coefficient": 0.012761650309366919,
+              "coefficient": 0.012761650309366919,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "rsi_14"
+            },
+            {
+              "abs_coefficient": 0.010993220105172447,
+              "coefficient": 0.010993220105172447,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "atr_14_over_atr_50"
+            },
+            {
+              "abs_coefficient": 0.009978335319094374,
+              "coefficient": 0.009978335319094374,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "adx_14"
+            },
+            {
+              "abs_coefficient": 0.009075685429584505,
+              "coefficient": 0.009075685429584505,
+              "component": "lambda_",
+              "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+              "feature": "roc_12"
+            }
+          ]
+        }
+      },
+      "runtime_feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "hl_range",
+        "atr_14",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "adx_14",
+        "di_spread_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "bb_position_20",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "historical_vol_20",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "close_ema20_ratio",
+        "close_open_ratio",
+        "vortex_indicator"
+      ],
+      "runtime_feature_order_hash": "bd6f5838ba1e9a7514a6f116a850954b4e6f5f812826f4e9432ac3ddee70e9ce",
+      "tier_a_model": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/models/v04_weibull_aft_core24_abs_move_3x_tier_a_survival_model.joblib",
+        "sha256": "c270ffccb6942d492b8458d88c0afb6716317e1cdb351feb42b3b7d6946e73e5",
+        "training_sample": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 23,
+          "feature_count_before_filter": 24,
+          "train_event_rate": 0.4465813428238998,
+          "train_rows": 29222
+        }
+      },
+      "tier_b_model": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/models/v04_weibull_aft_core24_abs_move_3x_tier_b_survival_model.joblib",
+        "sha256": "041a4a54b8dd7125afd47b5ea44658a817ea21ad96d5c5a84c0f4a01b6773824",
+        "training_sample": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 23,
+          "feature_count_before_filter": 24,
+          "train_event_rate": 0.38335253456221197,
+          "train_rows": 38192
+        }
+      }
+    },
+    "prediction_artifacts": {
+      "tier_a_predictions": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/predictions/tier_a_survival_predictions.parquet",
+        "rows": 46649,
+        "sha256": "9e8c14a7e51079ff9f94992acd503aa442b15a6abd2db26d563cb130cc167973"
+      },
+      "tier_ab_predictions": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/predictions/tier_ab_survival_predictions.parquet",
+        "rows": 59046,
+        "sha256": "12c6ed8db115121e52eabf364933680b3e0503447a447f75e10d50323c319337"
+      },
+      "tier_b_predictions": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/predictions/tier_b_survival_predictions.parquet",
+        "rows": 12397,
+        "sha256": "c290973d8d046a5b995d69f4454d4d992809f5269fa430053178a9183ec0e4d6"
+      }
+    },
+    "variant_results_csv": {
+      "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/survival_variant_results.csv",
+      "sha256": "02c8340d1f1ce6df3785bce1f2aba62275f02a7254ddc44a54d9d2daebf32a7b"
+    },
+    "variant_results_json": {
+      "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/survival_variant_results.json",
+      "sha256": "93b584797bdef3d2f66f4b573934fde562d12be20e673a6092aaa22e229bef96"
+    }
+  },
+  "boundary": "survival_time_to_event_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "completed_variant_count": 3,
+  "created_at_utc": "2026-05-05T00:21:06Z",
+  "exploration_label": "stage24_Exit__SurvivalTimeToEventHoldShape",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_set_id": "feature_set_v2_mt5_price_proxy_survival_hold_shape",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_survival_time_to_event_hold_shape_scout_completed",
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "max_horizon_bars": 12,
+  "model_family": "lifelines_survival_time_to_event_models",
+  "next_action": "run18B_survival_time_to_event_runtime_probe_v1",
+  "packet_id": "stage24_run18A_survival_time_to_event_scout_v1",
+  "run_id": "run18A_survival_time_to_event_hold_shape_scout_v1",
+  "run_number": "run18A",
+  "selected_variant_id": "v04_weibull_aft_core24_abs_move_3x",
+  "selected_variant_read": {
+    "characteristic_score": 0.3910807961772026,
+    "description": "Weibull AFT model for absolute movement event to compare parametric duration shape.",
+    "event_definition": {
+      "base_threshold_log_return": 0.001277833051854688,
+      "event_name": "abs_move_3x",
+      "max_horizon_bars": 12,
+      "threshold_multiplier": 3.0
+    },
+    "feature_artifact": {
+      "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/variant_feature_reads/v04_weibull_aft_core24_abs_move_3x_feature_read.csv",
+      "sha256": "dca28168bb4dec921bb781b6396aa12fc2bb3dc0613b5991178d3586fc660b4e"
+    },
+    "feature_read": {
+      "dropped_features": [
+        "is_us_cash_open"
+      ],
+      "feature_count_after_filter": 23,
+      "top_features": [
+        {
+          "abs_coefficient": 0.10388832380470449,
+          "coefficient": -0.10388832380470449,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "hl_range"
+        },
+        {
+          "abs_coefficient": 0.08820111885041255,
+          "coefficient": -0.08820111885041255,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "historical_vol_20"
+        },
+        {
+          "abs_coefficient": 0.06874734058601052,
+          "coefficient": -0.06874734058601052,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "is_first_30m_after_open"
+        },
+        {
+          "abs_coefficient": 0.06688371089678773,
+          "coefficient": -0.06688371089678773,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "bollinger_width_20"
+        },
+        {
+          "abs_coefficient": 0.06305526500527779,
+          "coefficient": -0.06305526500527779,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "atr_14"
+        },
+        {
+          "abs_coefficient": 0.018924930642074855,
+          "coefficient": -0.018924930642074855,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "minutes_from_cash_open"
+        },
+        {
+          "abs_coefficient": 0.017695179116604634,
+          "coefficient": 0.017695179116604634,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "atr_14_over_atr_50"
+        },
+        {
+          "abs_coefficient": 0.014402215469595928,
+          "coefficient": 0.014402215469595928,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "adx_14"
+        },
+        {
+          "abs_coefficient": 0.010459150154027855,
+          "coefficient": 0.010459150154027855,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "vortex_indicator"
+        },
+        {
+          "abs_coefficient": 0.0099090002283503,
+          "coefficient": 0.0099090002283503,
+          "component": "lambda_",
+          "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+          "feature": "ppo_hist_12_26_9"
+        }
+      ]
+    },
+    "idea_id": "parametric_survival_duration_shape",
+    "metrics": {
+      "oos": {
+        "censored_count": 4696,
+        "concordance_index": 0.6856377470736932,
+        "event_rate": 0.38072003164974283,
+        "high_minus_low_event_rate": 0.39247524752475244,
+        "high_risk_event_rate": 0.5798019801980198,
+        "high_risk_median_duration_bars": 10.0,
+        "low_minus_high_median_duration_bars": 2.0,
+        "low_risk_event_rate": 0.18732673267326733,
+        "low_risk_median_duration_bars": 12.0,
+        "median_duration_bars": 12.0,
+        "observed_event_count": 2887,
+        "risk_score_q10": -18.840358872839065,
+        "risk_score_q50": -13.448200695626062,
+        "risk_score_q90": -8.86250607843431,
+        "rows": 7583
+      },
+      "train": {
+        "censored_count": 16172,
+        "concordance_index": 0.6632562556562992,
+        "event_rate": 0.4465813428238998,
+        "high_minus_low_event_rate": 0.3547425752748946,
+        "high_risk_event_rate": 0.6436131949439934,
+        "high_risk_median_duration_bars": 9.0,
+        "low_minus_high_median_duration_bars": 3.0,
+        "low_risk_event_rate": 0.28887061966909877,
+        "low_risk_median_duration_bars": 12.0,
+        "median_duration_bars": 12.0,
+        "observed_event_count": 13050,
+        "risk_score_q10": -18.29595003200574,
+        "risk_score_q50": -14.87051645594088,
+        "risk_score_q90": -10.077709123873989,
+        "rows": 29222
+      },
+      "validation": {
+        "censored_count": 5619,
+        "concordance_index": 0.73631244882561,
+        "event_rate": 0.4291954490044697,
+        "high_minus_low_event_rate": 0.5143380109823062,
+        "high_risk_event_rate": 0.7053081147040878,
+        "high_risk_median_duration_bars": 7.0,
+        "low_minus_high_median_duration_bars": 5.0,
+        "low_risk_event_rate": 0.19097010372178158,
+        "low_risk_median_duration_bars": 12.0,
+        "median_duration_bars": 12.0,
+        "observed_event_count": 4225,
+        "risk_score_q10": -18.816389958856462,
+        "risk_score_q50": -14.20135021605638,
+        "risk_score_q90": -8.034990797065575,
+        "rows": 9844
+      }
+    },
+    "spec": {
+      "description": "Weibull AFT model for absolute movement event to compare parametric duration shape.",
+      "event_name": "abs_move_3x",
+      "feature_names": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "hl_range",
+        "atr_14",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "adx_14",
+        "di_spread_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "bb_position_20",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "historical_vol_20",
+        "minutes_from_cash_open",
+        "is_us_cash_open",
+        "is_first_30m_after_open",
+        "close_ema20_ratio",
+        "close_open_ratio",
+        "vortex_indicator"
+      ],
+      "idea_id": "parametric_survival_duration_shape",
+      "model_type": "weibull_aft",
+      "peak_multiplier": null,
+      "penalizer": 1.0,
+      "threshold_multiplier": 3.0,
+      "tier_b_compatible": true,
+      "variant_id": "v04_weibull_aft_core24_abs_move_3x"
+    },
+    "status": "completed",
+    "training_sample": {
+      "dropped_features": [
+        "is_us_cash_open"
+      ],
+      "feature_count_after_filter": 23,
+      "feature_count_before_filter": 24,
+      "train_event_rate": 0.4465813428238998,
+      "train_rows": 29222
+    },
+    "variant_id": "v04_weibull_aft_core24_abs_move_3x"
+  },
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "24_exit_model__survival_time_to_event_hold_shape",
+  "tier_records": [
+    {
+      "metrics": {
+        "event_count": 20162,
+        "event_rate": 0.4322064781667346,
+        "median_duration_bars": 12.0,
+        "oos_c_index": 0.6856377470736932,
+        "partial_context_subtype_counts": null,
+        "rows": 46649,
+        "validation_c_index": 0.73631244882561
+      },
+      "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/predictions/tier_a_survival_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "censored_count": 4696,
+          "concordance_index": 0.6856377470736932,
+          "event_rate": 0.38072003164974283,
+          "high_minus_low_event_rate": 0.39247524752475244,
+          "high_risk_event_rate": 0.5798019801980198,
+          "high_risk_median_duration_bars": 10.0,
+          "low_minus_high_median_duration_bars": 2.0,
+          "low_risk_event_rate": 0.18732673267326733,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 2887,
+          "risk_score_q10": -18.840358872839065,
+          "risk_score_q50": -13.448200695626062,
+          "risk_score_q90": -8.86250607843431,
+          "rows": 7583
+        },
+        "train": {
+          "censored_count": 16172,
+          "concordance_index": 0.6632562556562992,
+          "event_rate": 0.4465813428238998,
+          "high_minus_low_event_rate": 0.3547425752748946,
+          "high_risk_event_rate": 0.6436131949439934,
+          "high_risk_median_duration_bars": 9.0,
+          "low_minus_high_median_duration_bars": 3.0,
+          "low_risk_event_rate": 0.28887061966909877,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 13050,
+          "risk_score_q10": -18.29595003200574,
+          "risk_score_q50": -14.87051645594088,
+          "risk_score_q90": -10.077709123873989,
+          "rows": 29222
+        },
+        "validation": {
+          "censored_count": 5619,
+          "concordance_index": 0.73631244882561,
+          "event_rate": 0.4291954490044697,
+          "high_minus_low_event_rate": 0.5143380109823062,
+          "high_risk_event_rate": 0.7053081147040878,
+          "high_risk_median_duration_bars": 7.0,
+          "low_minus_high_median_duration_bars": 5.0,
+          "low_risk_event_rate": 0.19097010372178158,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 4225,
+          "risk_score_q10": -18.816389958856462,
+          "risk_score_q50": -14.20135021605638,
+          "risk_score_q90": -8.034990797065575,
+          "rows": 9844
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "event_count": 2065,
+        "event_rate": 0.1665725578769057,
+        "median_duration_bars": 12.0,
+        "oos_c_index": 0.6482995948075955,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10739,
+          "B_mixed_partial_context": 1240
+        },
+        "rows": 12397,
+        "validation_c_index": 0.7524424194013414
+      },
+      "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/predictions/tier_b_survival_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "censored_count": 938,
+          "concordance_index": 0.6482995948075955,
+          "event_rate": 0.11592836946277098,
+          "high_minus_low_event_rate": 0.11331444759206799,
+          "high_risk_event_rate": 0.17563739376770537,
+          "high_risk_median_duration_bars": 12.0,
+          "low_minus_high_median_duration_bars": 0.0,
+          "low_risk_event_rate": 0.06232294617563739,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 123,
+          "risk_score_q10": -25.13418264681479,
+          "risk_score_q50": -19.540229901975827,
+          "risk_score_q90": -13.27233725697893,
+          "rows": 1061
+        },
+        "train": {
+          "censored_count": 7215,
+          "concordance_index": 0.6264568302939637,
+          "event_rate": 0.1956521739130435,
+          "high_minus_low_event_rate": 0.1519919651824573,
+          "high_risk_event_rate": 0.2855708068295949,
+          "high_risk_median_duration_bars": 12.0,
+          "low_minus_high_median_duration_bars": 0.0,
+          "low_risk_event_rate": 0.1335788416471376,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 1755,
+          "risk_score_q10": -24.530369415954716,
+          "risk_score_q50": -20.802472615494867,
+          "risk_score_q90": -15.179982809276893,
+          "rows": 8970
+        },
+        "validation": {
+          "censored_count": 2179,
+          "concordance_index": 0.7524424194013414,
+          "event_rate": 0.0790363482671175,
+          "high_minus_low_event_rate": 0.15228426395939088,
+          "high_risk_event_rate": 0.1751269035532995,
+          "high_risk_median_duration_bars": 12.0,
+          "low_minus_high_median_duration_bars": 0.0,
+          "low_risk_event_rate": 0.02284263959390863,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 187,
+          "risk_score_q10": -25.479804813176955,
+          "risk_score_q50": -22.171741338548195,
+          "risk_score_q90": -16.457716211851533,
+          "rows": 2366
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "event_count": 22227,
+        "event_rate": 0.37643532161365717,
+        "median_duration_bars": 12.0,
+        "oos_c_index": 0.7041572878279616,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10739,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46649
+        },
+        "rows": 59046,
+        "validation_c_index": 0.7739341522924781
+      },
+      "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/predictions/tier_ab_survival_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "censored_count": 5634,
+          "concordance_index": 0.7041572878279616,
+          "event_rate": 0.34821841739935216,
+          "high_minus_low_event_rate": 0.41160125043417856,
+          "high_risk_event_rate": 0.5675581799235846,
+          "high_risk_median_duration_bars": 10.0,
+          "low_minus_high_median_duration_bars": 2.0,
+          "low_risk_event_rate": 0.15595692948940604,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 3010,
+          "risk_score_q10": -19.90712881337917,
+          "risk_score_q50": -13.988714098578109,
+          "risk_score_q90": -9.066802916488705,
+          "rows": 8644
+        },
+        "train": {
+          "censored_count": 23387,
+          "concordance_index": 0.690366836202558,
+          "event_rate": 0.3876466275659824,
+          "high_minus_low_event_rate": 0.3961314672118258,
+          "high_risk_event_rate": 0.6022959584840384,
+          "high_risk_median_duration_bars": 10.0,
+          "low_minus_high_median_duration_bars": 2.0,
+          "low_risk_event_rate": 0.20616449127221262,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 14805,
+          "risk_score_q10": -21.49334419528077,
+          "risk_score_q50": -15.76697261073586,
+          "risk_score_q90": -10.63301048395314,
+          "rows": 38192
+        },
+        "validation": {
+          "censored_count": 7798,
+          "concordance_index": 0.7739341522924781,
+          "event_rate": 0.36134316134316136,
+          "high_minus_low_event_rate": 0.5457452041318249,
+          "high_risk_event_rate": 0.6588785046728972,
+          "high_risk_median_duration_bars": 8.0,
+          "low_minus_high_median_duration_bars": 4.0,
+          "low_risk_event_rate": 0.1131333005410723,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 4412,
+          "risk_score_q10": -22.020430893021302,
+          "risk_score_q50": -15.399351370533932,
+          "risk_score_q90": -8.656600289900954,
+          "rows": 12210
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "tier_rows": {
+    "tier_a": 46650,
+    "tier_b_fallback": 12398,
+    "tier_b_training": 59048
+  },
+  "variant_count": 4,
+  "variant_results": [
+    {
+      "characteristic_score": 0.38262001326041395,
+      "description": "Cox proportional hazard model for time until either-side price movement reaches 3x the label threshold.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "abs_move_3x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 3.0
+      },
+      "feature_artifact": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/variant_feature_reads/v01_cox_core24_abs_move_3x_feature_read.csv",
+        "sha256": "6f1f1de90244676cd14263586d5eb522c1d534c5611808a1a49a8ff620968694"
+      },
+      "feature_read": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 23,
+        "top_features": [
+          {
+            "abs_coefficient": 0.11237795847717708,
+            "coefficient": 0.11237795847717708,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "hl_range"
+          },
+          {
+            "abs_coefficient": 0.0984122450073072,
+            "coefficient": 0.0984122450073072,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "historical_vol_20"
+          },
+          {
+            "abs_coefficient": 0.07560693045099597,
+            "coefficient": 0.07560693045099597,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "bollinger_width_20"
+          },
+          {
+            "abs_coefficient": 0.07258893555461444,
+            "coefficient": 0.07258893555461444,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "atr_14"
+          },
+          {
+            "abs_coefficient": 0.06768591412387572,
+            "coefficient": 0.06768591412387572,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "is_first_30m_after_open"
+          },
+          {
+            "abs_coefficient": 0.014216418568961152,
+            "coefficient": 0.014216418568961152,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "minutes_from_cash_open"
+          },
+          {
+            "abs_coefficient": 0.012472581449914427,
+            "coefficient": -0.012472581449914427,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "adx_14"
+          },
+          {
+            "abs_coefficient": 0.011777388720067455,
+            "coefficient": -0.011777388720067455,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "atr_14_over_atr_50"
+          },
+          {
+            "abs_coefficient": 0.011270310202102809,
+            "coefficient": -0.011270310202102809,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "vortex_indicator"
+          },
+          {
+            "abs_coefficient": 0.01066157418382429,
+            "coefficient": -0.01066157418382429,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "ppo_hist_12_26_9"
+          }
+        ]
+      },
+      "idea_id": "absolute_move_time_to_event",
+      "metrics": {
+        "oos": {
+          "censored_count": 4696,
+          "concordance_index": 0.6818413121704646,
+          "event_rate": 0.38072003164974283,
+          "high_minus_low_event_rate": 0.3841584158415841,
+          "high_risk_event_rate": 0.5801980198019802,
+          "high_risk_median_duration_bars": 10.0,
+          "low_minus_high_median_duration_bars": 2.0,
+          "low_risk_event_rate": 0.19603960396039605,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 2887,
+          "risk_score_q10": 0.7154673316958156,
+          "risk_score_q50": 1.0488151405593011,
+          "risk_score_q90": 1.6874547791695893,
+          "rows": 7583
+        },
+        "train": {
+          "censored_count": 16172,
+          "concordance_index": 0.6592407439554919,
+          "event_rate": 0.4465813428238998,
+          "high_minus_low_event_rate": 0.34487719658822324,
+          "high_risk_event_rate": 0.6387832699619772,
+          "high_risk_median_duration_bars": 9.0,
+          "low_minus_high_median_duration_bars": 3.0,
+          "low_risk_event_rate": 0.29390607337375396,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 13050,
+          "risk_score_q10": 0.739147390469595,
+          "risk_score_q50": 0.9389752910792044,
+          "risk_score_q90": 1.4544889297199555,
+          "rows": 29222
+        },
+        "validation": {
+          "censored_count": 5619,
+          "concordance_index": 0.7325799029122286,
+          "event_rate": 0.4291954490044697,
+          "high_minus_low_event_rate": 0.5067114093959731,
+          "high_risk_event_rate": 0.7019524100061013,
+          "high_risk_median_duration_bars": 7.0,
+          "low_minus_high_median_duration_bars": 5.0,
+          "low_risk_event_rate": 0.19524100061012814,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 4225,
+          "risk_score_q10": 0.7183824792889419,
+          "risk_score_q50": 0.9892768685932603,
+          "risk_score_q90": 1.875220799287514,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "Cox proportional hazard model for time until either-side price movement reaches 3x the label threshold.",
+        "event_name": "abs_move_3x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "idea_id": "absolute_move_time_to_event",
+        "model_type": "cox",
+        "peak_multiplier": null,
+        "penalizer": 1.0,
+        "threshold_multiplier": 3.0,
+        "tier_b_compatible": true,
+        "variant_id": "v01_cox_core24_abs_move_3x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 23,
+        "feature_count_before_filter": 24,
+        "train_event_rate": 0.4465813428238998,
+        "train_rows": 29222
+      },
+      "variant_id": "v01_cox_core24_abs_move_3x"
+    },
+    {
+      "characteristic_score": -999.0,
+      "description": "Cox model for time until label-direction adverse movement reaches 1.5x threshold; structural hindsight only.",
+      "idea_id": "adverse_direction_time_to_event",
+      "invalid_reason": "Training sample too small for survival scout: 0",
+      "spec": {
+        "description": "Cox model for time until label-direction adverse movement reaches 1.5x threshold; structural hindsight only.",
+        "event_name": "adverse_direction_1p5x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "idea_id": "adverse_direction_time_to_event",
+        "model_type": "cox",
+        "peak_multiplier": null,
+        "penalizer": 1.0,
+        "threshold_multiplier": 1.5,
+        "tier_b_compatible": true,
+        "variant_id": "v02_cox_core24_adverse_direction_1p5x"
+      },
+      "status": "invalid_setup",
+      "variant_id": "v02_cox_core24_adverse_direction_1p5x"
+    },
+    {
+      "characteristic_score": 0.37825822868829495,
+      "description": "Cox model using volatility/session features for the same absolute movement event.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "abs_move_3x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 3.0
+      },
+      "feature_artifact": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/variant_feature_reads/v03_cox_vol_session_abs_move_3x_feature_read.csv",
+        "sha256": "e1e5398baf359f47fa33736238ec412e1cc67b6762719bb5adcbd472f0b11229"
+      },
+      "feature_read": {
+        "dropped_features": [],
+        "feature_count_after_filter": 14,
+        "top_features": [
+          {
+            "abs_coefficient": 0.11278373080369557,
+            "coefficient": 0.11278373080369557,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "hl_range"
+          },
+          {
+            "abs_coefficient": 0.09821894818462233,
+            "coefficient": 0.09821894818462233,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "historical_vol_20"
+          },
+          {
+            "abs_coefficient": 0.07597848687081094,
+            "coefficient": 0.07597848687081094,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "bollinger_width_20"
+          },
+          {
+            "abs_coefficient": 0.0726018734376188,
+            "coefficient": 0.0726018734376188,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "atr_14"
+          },
+          {
+            "abs_coefficient": 0.06759236113771044,
+            "coefficient": 0.06759236113771044,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "is_first_30m_after_open"
+          },
+          {
+            "abs_coefficient": 0.014283583184533797,
+            "coefficient": 0.014283583184533797,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "minutes_from_cash_open"
+          },
+          {
+            "abs_coefficient": 0.014073015992867411,
+            "coefficient": -0.014073015992867411,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "rsi_14"
+          },
+          {
+            "abs_coefficient": 0.011649954960149748,
+            "coefficient": -0.011649954960149748,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "adx_14"
+          },
+          {
+            "abs_coefficient": 0.011116893513330669,
+            "coefficient": -0.011116893513330669,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "atr_14_over_atr_50"
+          },
+          {
+            "abs_coefficient": 0.008104250015698844,
+            "coefficient": -0.008104250015698844,
+            "effect_read": "positive_coefficient_means_higher_hazard_shorter_survival",
+            "feature": "di_spread_14"
+          }
+        ]
+      },
+      "idea_id": "volatility_session_exit_clock",
+      "metrics": {
+        "oos": {
+          "censored_count": 4696,
+          "concordance_index": 0.6798093020701723,
+          "event_rate": 0.38072003164974283,
+          "high_minus_low_event_rate": 0.3762376237623762,
+          "high_risk_event_rate": 0.5738613861386138,
+          "high_risk_median_duration_bars": 10.0,
+          "low_minus_high_median_duration_bars": 2.0,
+          "low_risk_event_rate": 0.19762376237623763,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 2887,
+          "risk_score_q10": 0.7163734409941742,
+          "risk_score_q50": 1.051313858070293,
+          "risk_score_q90": 1.6763155114103931,
+          "rows": 7583
+        },
+        "train": {
+          "censored_count": 16172,
+          "concordance_index": 0.6594904241154668,
+          "event_rate": 0.4465813428238998,
+          "high_minus_low_event_rate": 0.34354125989106976,
+          "high_risk_event_rate": 0.6375500976261432,
+          "high_risk_median_duration_bars": 9.0,
+          "low_minus_high_median_duration_bars": 3.0,
+          "low_risk_event_rate": 0.29400883773507347,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 13050,
+          "risk_score_q10": 0.7420410100401249,
+          "risk_score_q50": 0.9394587614111894,
+          "risk_score_q90": 1.446070320187901,
+          "rows": 29222
+        },
+        "validation": {
+          "censored_count": 5619,
+          "concordance_index": 0.7324364821424993,
+          "event_rate": 0.4291954490044697,
+          "high_minus_low_event_rate": 0.5067114093959731,
+          "high_risk_event_rate": 0.7031726662599146,
+          "high_risk_median_duration_bars": 7.0,
+          "low_minus_high_median_duration_bars": 5.0,
+          "low_risk_event_rate": 0.19646125686394142,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 4225,
+          "risk_score_q10": 0.7195522381420268,
+          "risk_score_q50": 0.9915494058791037,
+          "risk_score_q90": 1.8686269065808612,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "Cox model using volatility/session features for the same absolute movement event.",
+        "event_name": "abs_move_3x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "historical_vol_20",
+          "adx_14",
+          "di_spread_14",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "minutes_from_cash_open",
+          "is_first_30m_after_open"
+        ],
+        "idea_id": "volatility_session_exit_clock",
+        "model_type": "cox",
+        "peak_multiplier": null,
+        "penalizer": 1.0,
+        "threshold_multiplier": 3.0,
+        "tier_b_compatible": true,
+        "variant_id": "v03_cox_vol_session_abs_move_3x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [],
+        "feature_count_after_filter": 14,
+        "feature_count_before_filter": 14,
+        "train_event_rate": 0.4465813428238998,
+        "train_rows": 29222
+      },
+      "variant_id": "v03_cox_vol_session_abs_move_3x"
+    },
+    {
+      "characteristic_score": 0.3910807961772026,
+      "description": "Weibull AFT model for absolute movement event to compare parametric duration shape.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "abs_move_3x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 3.0
+      },
+      "feature_artifact": {
+        "path": "stages/24_exit_model__survival_time_to_event_hold_shape/02_runs/run18A_survival_time_to_event_hold_shape_scout_v1/results/variant_feature_reads/v04_weibull_aft_core24_abs_move_3x_feature_read.csv",
+        "sha256": "dca28168bb4dec921bb781b6396aa12fc2bb3dc0613b5991178d3586fc660b4e"
+      },
+      "feature_read": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 23,
+        "top_features": [
+          {
+            "abs_coefficient": 0.10388832380470449,
+            "coefficient": -0.10388832380470449,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "hl_range"
+          },
+          {
+            "abs_coefficient": 0.08820111885041255,
+            "coefficient": -0.08820111885041255,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "historical_vol_20"
+          },
+          {
+            "abs_coefficient": 0.06874734058601052,
+            "coefficient": -0.06874734058601052,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "is_first_30m_after_open"
+          },
+          {
+            "abs_coefficient": 0.06688371089678773,
+            "coefficient": -0.06688371089678773,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "bollinger_width_20"
+          },
+          {
+            "abs_coefficient": 0.06305526500527779,
+            "coefficient": -0.06305526500527779,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "atr_14"
+          },
+          {
+            "abs_coefficient": 0.018924930642074855,
+            "coefficient": -0.018924930642074855,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "minutes_from_cash_open"
+          },
+          {
+            "abs_coefficient": 0.017695179116604634,
+            "coefficient": 0.017695179116604634,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "atr_14_over_atr_50"
+          },
+          {
+            "abs_coefficient": 0.014402215469595928,
+            "coefficient": 0.014402215469595928,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "adx_14"
+          },
+          {
+            "abs_coefficient": 0.010459150154027855,
+            "coefficient": 0.010459150154027855,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "vortex_indicator"
+          },
+          {
+            "abs_coefficient": 0.0099090002283503,
+            "coefficient": 0.0099090002283503,
+            "component": "lambda_",
+            "effect_read": "lambda_positive_coefficient_means_longer_predicted_duration",
+            "feature": "ppo_hist_12_26_9"
+          }
+        ]
+      },
+      "idea_id": "parametric_survival_duration_shape",
+      "metrics": {
+        "oos": {
+          "censored_count": 4696,
+          "concordance_index": 0.6856377470736932,
+          "event_rate": 0.38072003164974283,
+          "high_minus_low_event_rate": 0.39247524752475244,
+          "high_risk_event_rate": 0.5798019801980198,
+          "high_risk_median_duration_bars": 10.0,
+          "low_minus_high_median_duration_bars": 2.0,
+          "low_risk_event_rate": 0.18732673267326733,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 2887,
+          "risk_score_q10": -18.840358872839065,
+          "risk_score_q50": -13.448200695626062,
+          "risk_score_q90": -8.86250607843431,
+          "rows": 7583
+        },
+        "train": {
+          "censored_count": 16172,
+          "concordance_index": 0.6632562556562992,
+          "event_rate": 0.4465813428238998,
+          "high_minus_low_event_rate": 0.3547425752748946,
+          "high_risk_event_rate": 0.6436131949439934,
+          "high_risk_median_duration_bars": 9.0,
+          "low_minus_high_median_duration_bars": 3.0,
+          "low_risk_event_rate": 0.28887061966909877,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 13050,
+          "risk_score_q10": -18.29595003200574,
+          "risk_score_q50": -14.87051645594088,
+          "risk_score_q90": -10.077709123873989,
+          "rows": 29222
+        },
+        "validation": {
+          "censored_count": 5619,
+          "concordance_index": 0.73631244882561,
+          "event_rate": 0.4291954490044697,
+          "high_minus_low_event_rate": 0.5143380109823062,
+          "high_risk_event_rate": 0.7053081147040878,
+          "high_risk_median_duration_bars": 7.0,
+          "low_minus_high_median_duration_bars": 5.0,
+          "low_risk_event_rate": 0.19097010372178158,
+          "low_risk_median_duration_bars": 12.0,
+          "median_duration_bars": 12.0,
+          "observed_event_count": 4225,
+          "risk_score_q10": -18.816389958856462,
+          "risk_score_q50": -14.20135021605638,
+          "risk_score_q90": -8.034990797065575,
+          "rows": 9844
+        }
+      },
+      "spec": {
+        "description": "Weibull AFT model for absolute movement event to compare parametric duration shape.",
+        "event_name": "abs_move_3x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "idea_id": "parametric_survival_duration_shape",
+        "model_type": "weibull_aft",
+        "peak_multiplier": null,
+        "penalizer": 1.0,
+        "threshold_multiplier": 3.0,
+        "tier_b_compatible": true,
+        "variant_id": "v04_weibull_aft_core24_abs_move_3x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 23,
+        "feature_count_before_filter": 24,
+        "train_event_rate": 0.4465813428238998,
+        "train_rows": 29222
+      },
+      "variant_id": "v04_weibull_aft_core24_abs_move_3x"
+    }
+  ]
+}
