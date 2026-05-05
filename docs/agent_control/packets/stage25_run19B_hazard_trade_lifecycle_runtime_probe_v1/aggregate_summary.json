@@ -1,0 +1,521 @@
+{
+  "attempt_count": 6,
+  "boundary": "hazard_permission_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "closure_judgment": "inconclusive_hazard_permission_runtime_probe_completed",
+  "expected_attempts": 6,
+  "expected_kpi_records": 10,
+  "external_verification_status": "completed",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority"
+  ],
+  "hazard_sentinel_elapsed_bar": 6,
+  "judgment": "inconclusive_hazard_permission_runtime_probe_completed",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 10,
+    "normalized_summary_rows": 10,
+    "parser_errors": 0,
+    "trade_attribution_records": 6,
+    "trade_level_rows": 6707,
+    "trade_parser_errors": 0
+  },
+  "max_hold_bars": 12,
+  "model_artifacts": {
+    "hazard_sentinel_elapsed_bar": 6,
+    "hazard_sentinel_elapsed_frac": 0.5,
+    "known_runtime_difference": "MT5 runtime_probe uses a fixed elapsed-bar hazard snapshot, not a dynamic position-age hazard clock.",
+    "model_backend": "ebm_table",
+    "risk_scalers": {
+      "tier_a": {
+        "iqr": 0.12143738132133836,
+        "median": 0.4264577666745307
+      },
+      "tier_b": {
+        "iqr": 0.16103378248063693,
+        "median": 0.40512982676651427
+      }
+    },
+    "runtime_feature_order": [
+      "direction_proxy",
+      "hazard_risk_z"
+    ],
+    "runtime_feature_order_hash": "f7aceefc32853902f27cacbf659aae8a480fb1acbe57eec3702efd24a0aec913",
+    "runtime_policy": "direction_proxy supplies side; fixed elapsed hazard_risk_z supplies flat/close pressure; close_on_flat_signal enabled.",
+    "score_table_parity": {
+      "tier_a": {
+        "claim_boundary": "piecewise_hazard_permission_table_check_not_runtime_authority",
+        "max_abs_diff": 0.03188428583454417,
+        "mean_abs_diff": 0.003726112656109609,
+        "p95_abs_diff": 0.015272420774727371,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/models/tier_a_hazard_permission_score_table.csv"
+      },
+      "tier_b": {
+        "claim_boundary": "piecewise_hazard_permission_table_check_not_runtime_authority",
+        "max_abs_diff": 0.03593360493368214,
+        "mean_abs_diff": 0.0029474049904219344,
+        "p95_abs_diff": 0.010292231923162492,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/models/tier_b_hazard_permission_score_table.csv"
+      }
+    },
+    "selected_variant_id": "v04_logit_core24_reversal_after_favorable_1x",
+    "source_tier_a_model": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/models/v04_logit_core24_reversal_after_favorable_1x_tier_a_hazard_model.joblib",
+      "sha256": "36b2c972091f3a029bb78d8861616a4779f220547218307580acfa9b71a6fb08"
+    },
+    "source_tier_b_model": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/models/v04_logit_core24_reversal_after_favorable_1x_tier_b_hazard_model.joblib",
+      "sha256": "641f8cc98b4be811cd2ea3f693090865581dce84c77a1b34d668d83e45e37099"
+    },
+    "thresholds": {
+      "quantile": 0.8,
+      "tier_a": 0.5705975078194689,
+      "tier_b": 0.552029007762084
+    },
+    "tier_a_score_table": {
+      "claim_boundary": "runtime_probe_not_hazard_runtime_authority",
+      "feature_count": 2,
+      "feature_names": [
+        "direction_proxy",
+        "hazard_risk_z"
+      ],
+      "format": "hazard_permission_ebm_score_table_csv_v1",
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/models/tier_a_hazard_permission_score_table.csv",
+      "runtime_policy": "direction_proxy_plus_fixed_elapsed_hazard_risk_flat_close_permission_probe",
+      "sha256": "603d90b95fc01c7e79174626ce24544f8a2ae5fa49b892c5ecc6250bbcf869f5"
+    },
+    "tier_b_score_table": {
+      "claim_boundary": "runtime_probe_not_hazard_runtime_authority",
+      "feature_count": 2,
+      "feature_names": [
+        "direction_proxy",
+        "hazard_risk_z"
+      ],
+      "format": "hazard_permission_ebm_score_table_csv_v1",
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/models/tier_b_hazard_permission_score_table.csv",
+      "runtime_policy": "direction_proxy_plus_fixed_elapsed_hazard_risk_flat_close_permission_probe",
+      "sha256": "1b2a00a01987e83d16a915852c96bca099e2cf8c2815aaabea1a17fc1c0edafb"
+    }
+  },
+  "model_characteristic_strength": "hazard_permission_runtime_axis_visible",
+  "model_family": "sklearn_discrete_time_logistic_hazard_permission_table_runtime_probe",
+  "mt5_kpi_record_count": 10,
+  "oos_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 203.23,
+    "balance_drawdown_maximal_percent": 38.83,
+    "deal_count": 2420,
+    "equity_drawdown_maximal_amount": 206.31,
+    "equity_drawdown_maximal_percent": 39.2,
+    "expectancy": -0.14,
+    "feature_ready_count": 8646,
+    "fill_count": 2167,
+    "fill_rate": 1.0,
+    "gross_loss": -1000.04,
+    "gross_profit": 825.55,
+    "long_trade_count": 660,
+    "long_win_rate_percent": 46.67,
+    "losing_trade_count": 646,
+    "loss_rate_percent": 53.39,
+    "max_drawdown_amount": 206.31,
+    "max_drawdown_percent": 39.2,
+    "missing_required_metrics": [],
+    "model_fail_count": 28691,
+    "model_ok_count": 8646,
+    "net_profit": -174.49,
+    "no_tier_count": 28691,
+    "no_tier_labelable_rows": 159,
+    "order_attempt_count": 2167,
+    "parsed_row_count": 4928,
+    "partial_context_subtype_counts": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    },
+    "profit_factor": 0.83,
+    "recovery_factor": -0.85,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run19B_hazard_trade_lifecycle_runtime_probe_v1_routed_oos.htm",
+    "route_coverage_split": "oos",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 8646,
+    "sharpe_ratio": -5.0,
+    "short_trade_count": 550,
+    "short_win_rate_percent": 46.55,
+    "skip_count": 28691,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 6398,
+    "tier_a_long_count": 648,
+    "tier_a_order_attempt_count": 1838,
+    "tier_a_order_fill_count": 1838,
+    "tier_a_primary_labelable_rows": 7584,
+    "tier_a_short_count": 538,
+    "tier_a_used_count": 7584,
+    "tier_b_fallback_flat_count": 844,
+    "tier_b_fallback_labelable_rows": 1062,
+    "tier_b_fallback_long_count": 133,
+    "tier_b_fallback_order_attempt_count": 329,
+    "tier_b_fallback_order_fill_count": 329,
+    "tier_b_fallback_short_count": 85,
+    "tier_b_fallback_used_count": 1062,
+    "trade_count": 1210,
+    "win_rate_percent": 46.61,
+    "winning_trade_count": 564
+  },
+  "packet_id": "stage25_run19B_hazard_trade_lifecycle_runtime_probe_v1",
+  "prediction_artifacts": {
+    "tier_a_predictions": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/predictions/tier_a_hazard_permission_predictions.parquet",
+      "rows": 46650,
+      "sha256": "b983fca2a033a2459f174782624f50981c3c850a2c706b843eac1fc8b652c48e"
+    },
+    "tier_ab_predictions": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/predictions/tier_ab_hazard_permission_predictions.parquet",
+      "rows": 59048,
+      "sha256": "8769581f8ab8f48b7780a485429e86c251e4d77fbd85e34b7d6be95b8fd40eba"
+    },
+    "tier_b_predictions": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/predictions/tier_b_hazard_permission_predictions.parquet",
+      "rows": 12398,
+      "sha256": "86245756c47953aa2aa77520913f6fdbbb96aaf6673ece457a4c503746c1719b"
+    }
+  },
+  "python_tier_records": [
+    {
+      "metrics": {
+        "long_count": 5692,
+        "partial_context_subtype_counts": null,
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 46650,
+        "short_count": 4621,
+        "signal_count": 10313,
+        "signal_coverage": 0.22107181136120044,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/predictions/tier_a_hazard_permission_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.25606540084388185,
+          "balanced_accuracy": 0.26113383683361935,
+          "directional_correct_count": 309,
+          "directional_hit_rate": 0.260539629005059,
+          "log_loss": 1.4406478281837978,
+          "long_count": 648,
+          "macro_f1": 0.2581516273556079,
+          "mean_probability": {
+            "flat": 0.3685401809617788,
+            "long": 0.31752914858225,
+            "short": 0.3139306704559712
+          },
+          "mean_probability_margin": 0.07268775576902921,
+          "rows": 7584,
+          "short_count": 538,
+          "signal_count": 1186,
+          "signal_coverage": 0.15638185654008438
+        },
+        "train": {
+          "accuracy": 0.29073985353500786,
+          "balanced_accuracy": 0.28911731961471704,
+          "directional_correct_count": 2282,
+          "directional_hit_rate": 0.31889323644494133,
+          "log_loss": 1.410733639423912,
+          "long_count": 3961,
+          "macro_f1": 0.2866843755162407,
+          "mean_probability": {
+            "flat": 0.35649851030449886,
+            "long": 0.3270702621098131,
+            "short": 0.31643122758568804
+          },
+          "mean_probability_margin": 0.1052570280386997,
+          "rows": 29222,
+          "short_count": 3195,
+          "signal_count": 7156,
+          "signal_coverage": 0.24488399151324344
+        },
+        "validation": {
+          "accuracy": 0.2562982527427875,
+          "balanced_accuracy": 0.2600159198459297,
+          "directional_correct_count": 559,
+          "directional_hit_rate": 0.28361237950279045,
+          "log_loss": 1.5607133979868175,
+          "long_count": 1083,
+          "macro_f1": 0.25793791626494106,
+          "mean_probability": {
+            "flat": 0.3817801327711376,
+            "long": 0.3139496374081089,
+            "short": 0.3042702298207535
+          },
+          "mean_probability_margin": 0.05309332249468667,
+          "rows": 9844,
+          "short_count": 888,
+          "signal_count": 1971,
+          "signal_coverage": 0.2002234863876473
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "long_count": 2152,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 12398,
+        "short_count": 1349,
+        "signal_count": 3501,
+        "signal_coverage": 0.28238425552508467,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/predictions/tier_b_hazard_permission_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.23163841807909605,
+          "balanced_accuracy": 0.2852764090654816,
+          "directional_correct_count": 47,
+          "directional_hit_rate": 0.21559633027522937,
+          "log_loss": 1.3957493959009082,
+          "long_count": 133,
+          "macro_f1": 0.2344496532565289,
+          "mean_probability": {
+            "flat": 0.280125830035688,
+            "long": 0.362808680146411,
+            "short": 0.357065489817901
+          },
+          "mean_probability_margin": 0.18691278531216088,
+          "rows": 1062,
+          "short_count": 85,
+          "signal_count": 218,
+          "signal_coverage": 0.20527306967984935
+        },
+        "train": {
+          "accuracy": 0.2682274247491639,
+          "balanced_accuracy": 0.30657280326947717,
+          "directional_correct_count": 741,
+          "directional_hit_rate": 0.2776320719370551,
+          "log_loss": 1.3533426440788972,
+          "long_count": 1652,
+          "macro_f1": 0.2541478431921283,
+          "mean_probability": {
+            "flat": 0.2565251341287477,
+            "long": 0.3889503932896607,
+            "short": 0.35452447258159164
+          },
+          "mean_probability_margin": 0.23865512545910683,
+          "rows": 8970,
+          "short_count": 1017,
+          "signal_count": 2669,
+          "signal_coverage": 0.2975473801560758
+        },
+        "validation": {
+          "accuracy": 0.18808114961961117,
+          "balanced_accuracy": 0.300019818336607,
+          "directional_correct_count": 111,
+          "directional_hit_rate": 0.18078175895765472,
+          "log_loss": 1.4764530249060341,
+          "long_count": 367,
+          "macro_f1": 0.18762895056653828,
+          "mean_probability": {
+            "flat": 0.2114335103588384,
+            "long": 0.4055315808436658,
+            "short": 0.3830349087974958
+          },
+          "mean_probability_margin": 0.2885921904580184,
+          "rows": 2366,
+          "short_count": 247,
+          "signal_count": 614,
+          "signal_coverage": 0.2595097210481826
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "long_count": 7429,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 1,
+          "B_core_only": 200,
+          "B_full_context_outside_tier_a_scope": 217,
+          "B_macro_missing": 10740,
+          "B_mixed_partial_context": 1240,
+          "Tier_A_full_context": 46650
+        },
+        "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+        "rows": 59048,
+        "short_count": 5658,
+        "signal_count": 13087,
+        "signal_coverage": 0.2216332475274353,
+        "threshold_ids": "q0.80"
+      },
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/predictions/tier_ab_hazard_permission_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "accuracy": 0.2530650011566042,
+          "balanced_accuracy": 0.26131312087392017,
+          "directional_correct_count": 345,
+          "directional_hit_rate": 0.2559347181008902,
+          "log_loss": 1.4351328923655662,
+          "long_count": 751,
+          "macro_f1": 0.2552194982577343,
+          "mean_probability": {
+            "flat": 0.35768012536572186,
+            "long": 0.32309089534620317,
+            "short": 0.319228979288075
+          },
+          "mean_probability_margin": 0.08671817230555545,
+          "rows": 8646,
+          "short_count": 597,
+          "signal_count": 1348,
+          "signal_coverage": 0.15591024751330096
+        },
+        "train": {
+          "accuracy": 0.2854524507750314,
+          "balanced_accuracy": 0.2888586196069147,
+          "directional_correct_count": 2877,
+          "directional_hit_rate": 0.3098546042003231,
+          "log_loss": 1.397254449325337,
+          "long_count": 5302,
+          "macro_f1": 0.27969988391550343,
+          "mean_probability": {
+            "flat": 0.33301816928291084,
+            "long": 0.34160379731831836,
+            "short": 0.32537803339877075
+          },
+          "mean_probability_margin": 0.1365876976517352,
+          "rows": 38192,
+          "short_count": 3983,
+          "signal_count": 9285,
+          "signal_coverage": 0.24311374109761205
+        },
+        "validation": {
+          "accuracy": 0.24307944307944307,
+          "balanced_accuracy": 0.25701778907234113,
+          "directional_correct_count": 645,
+          "directional_hit_rate": 0.2628361858190709,
+          "log_loss": 1.5443857941613357,
+          "long_count": 1376,
+          "macro_f1": 0.244645404063645,
+          "mean_probability": {
+            "flat": 0.3487711148655274,
+            "long": 0.33169598287645674,
+            "short": 0.31953290225801584
+          },
+          "mean_probability_margin": 0.09872725546776144,
+          "rows": 12210,
+          "short_count": 1078,
+          "signal_count": 2454,
+          "signal_coverage": 0.200982800982801
+        }
+      },
+      "status": "completed",
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "run_id": "run19B_hazard_trade_lifecycle_runtime_probe_v1",
+  "run_number": "run19B",
+  "runtime_failure_signature": {
+    "attempt_status_counts": {
+      "completed": 6
+    },
+    "compile_status": "completed",
+    "feature_ready_count_total": 41712,
+    "last_skip_reason_counts": {
+      "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+      "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+      "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+      "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+    },
+    "model_fail_count_total": 228723,
+    "model_ok_count_total": 41712,
+    "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+  },
+  "selected_variant_id": "v04_logit_core24_reversal_after_favorable_1x",
+  "source_packet_id": "stage25_run19A_hazard_trade_lifecycle_scout_v1",
+  "source_python_scout_judgment": "inconclusive_hazard_trade_lifecycle_risk_scout_completed",
+  "source_run_id": "run19A_hazard_trade_lifecycle_risk_scout_v1",
+  "stage_id": "25_exit_model__hazard_trade_lifecycle_risk",
+  "threshold_quantile": 0.8,
+  "topic_read": "hazard_permission_fixed_elapsed_flat_close_runtime_handoff",
+  "validation_routed": {
+    "aggregation": "actual_routed_tester_run",
+    "balance_drawdown_maximal_amount": 170.89,
+    "balance_drawdown_maximal_percent": 30.61,
+    "deal_count": 4290,
+    "equity_drawdown_maximal_amount": 187.51,
+    "equity_drawdown_maximal_percent": 32.63,
+    "expectancy": -0.04,
+    "feature_ready_count": 12210,
+    "fill_count": 3801,
+    "fill_rate": 1.0,
+    "gross_loss": -1546.64,
+    "gross_profit": 1457.05,
+    "long_trade_count": 1166,
+    "long_win_rate_percent": 45.11,
+    "losing_trade_count": 1208,
+    "loss_rate_percent": 56.32,
+    "max_drawdown_amount": 187.51,
+    "max_drawdown_percent": 32.63,
+    "missing_required_metrics": [],
+    "model_fail_count": 40598,
+    "model_ok_count": 12210,
+    "net_profit": -89.59,
+    "no_tier_count": 40598,
+    "no_tier_labelable_rows": 203,
+    "order_attempt_count": 3801,
+    "parsed_row_count": 8668,
+    "partial_context_subtype_counts": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    },
+    "profit_factor": 0.94,
+    "recovery_factor": -0.48,
+    "reject_count": 0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run19B_hazard_trade_lifecycle_runtime_probe_v1_routed_validation_is.htm",
+    "route_coverage_split": "validation",
+    "route_role": "routed_total",
+    "routed_labelable_rows": 12210,
+    "sharpe_ratio": -2.53,
+    "short_trade_count": 979,
+    "short_win_rate_percent": 41.98,
+    "skip_count": 40598,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "tier_a_flat_count": 7873,
+    "tier_a_long_count": 1083,
+    "tier_a_order_attempt_count": 2838,
+    "tier_a_order_fill_count": 2838,
+    "tier_a_primary_labelable_rows": 9844,
+    "tier_a_short_count": 888,
+    "tier_a_used_count": 9844,
+    "tier_b_fallback_flat_count": 1752,
+    "tier_b_fallback_labelable_rows": 2366,
+    "tier_b_fallback_long_count": 367,
+    "tier_b_fallback_order_attempt_count": 963,
+    "tier_b_fallback_order_fill_count": 963,
+    "tier_b_fallback_short_count": 247,
+    "tier_b_fallback_used_count": 2366,
+    "trade_count": 2145,
+    "win_rate_percent": 43.68,
+    "winning_trade_count": 937
+  }
+}

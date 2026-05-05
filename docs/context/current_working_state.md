@@ -1,4 +1,20 @@
-﻿## Latest Stage25 RUN19A Hazard Update(최신 25단계 실행19A 위험률 업데이트)
+﻿## Latest Stage25 RUN19B Hazard Runtime Update(최신 25단계 실행19B 위험률 런타임 업데이트)
+
+Stage25(25단계) `run19B_hazard_trade_lifecycle_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_hazard_permission_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage25_closeout_and_stage26_open_only`.
+
+효과(effect, 효과): Hazard model(위험률 모델)의 fixed elapsed-bar risk(고정 경과 봉 위험)가 MT5 score table(점수표)로 전달되는지 확인했고, Stage25(25단계) closeout(마감) 판단 근거를 만들었다.
+
+## Latest Stage25 RUN19B Hazard Runtime Update(최신 25단계 실행19B 위험률 런타임 업데이트)
+
+Stage25(25단계) `run19B_hazard_trade_lifecycle_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+
+결과(result, 결과): `blocked_hazard_permission_runtime_probe_after_attempt`. MT5 KPI records(MT5 핵심 성과 지표 기록): `0`. next exact action(다음 정확한 행동): `repair_run19B_hazard_runtime_probe_then_rerun_exact_attempts`.
+
+효과(effect, 효과): Hazard model(위험률 모델)의 fixed elapsed-bar risk(고정 경과 봉 위험)가 MT5 score table(점수표)로 전달되는지 확인했고, Stage25(25단계) closeout(마감) 판단 근거를 만들었다.
+
+## Latest Stage25 RUN19A Hazard Update(최신 25단계 실행19A 위험률 업데이트)
 
 Stage25(25단계) `run19A_hazard_trade_lifecycle_risk_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
 

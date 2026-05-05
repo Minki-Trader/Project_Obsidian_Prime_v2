@@ -1,0 +1,67 @@
+[
+  {
+    "created_at_utc": "2026-05-05T01:14:22Z",
+    "known_differences": "MT5 runtime_probe uses a fixed elapsed-bar hazard snapshot, not a dynamic position-age hazard clock.",
+    "packet_id": "stage25_run19B_hazard_trade_lifecycle_runtime_probe_v1",
+    "parity_check": {
+      "tier_a": {
+        "claim_boundary": "piecewise_hazard_permission_table_check_not_runtime_authority",
+        "max_abs_diff": 0.03188428583454417,
+        "mean_abs_diff": 0.003726112656109609,
+        "p95_abs_diff": 0.015272420774727371,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/models/tier_a_hazard_permission_score_table.csv"
+      },
+      "tier_b": {
+        "claim_boundary": "piecewise_hazard_permission_table_check_not_runtime_authority",
+        "max_abs_diff": 0.03593360493368214,
+        "mean_abs_diff": 0.0029474049904219344,
+        "p95_abs_diff": 0.010292231923162492,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19B_hazard_trade_lifecycle_runtime_probe_v1/models/tier_b_hazard_permission_score_table.csv"
+      }
+    },
+    "research_path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/summary.json",
+    "runtime_claim_boundary": "runtime_probe",
+    "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "shared_contract": "two-feature hazard permission score table, q0.80 non-flat thresholds, close-on-flat enabled, Tier A primary plus Tier B fallback routing",
+    "skill": "obsidian-runtime-parity",
+    "status": "completed"
+  },
+  {
+    "backtest_judgment": "usable_with_boundary",
+    "created_at_utc": "2026-05-05T01:14:22Z",
+    "packet_id": "stage25_run19B_hazard_trade_lifecycle_runtime_probe_v1",
+    "runtime_failure_signature": {
+      "attempt_status_counts": {
+        "completed": 6
+      },
+      "compile_status": "completed",
+      "feature_ready_count_total": 41712,
+      "last_skip_reason_counts": {
+        "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+        "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+        "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+        "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+      },
+      "model_fail_count_total": 228723,
+      "model_ok_count_total": 41712,
+      "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+    },
+    "skill": "obsidian-backtest-forensics",
+    "status": "completed",
+    "tester_report_count": 10
+  },
+  {
+    "claim_boundary": "hazard_permission_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-05T01:14:22Z",
+    "judgment_label": "inconclusive_hazard_permission_runtime_probe_completed",
+    "next_condition": "Stage25 closeout/open Stage26 if runtime_probe evidence remains sufficient and no repair is required.",
+    "packet_id": "stage25_run19B_hazard_trade_lifecycle_runtime_probe_v1",
+    "result_subject": "run19B_hazard_trade_lifecycle_runtime_probe_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "completed"
+  }
+]
