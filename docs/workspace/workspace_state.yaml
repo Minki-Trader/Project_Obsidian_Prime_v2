@@ -1,8 +1,8 @@
 ﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
-active_branch: codex/stage23-supervised-regime-classifier
-active_stage: 23_regime_model__supervised_regime_classifier_filter
-current_run_id: run17B_supervised_regime_classifier_runtime_probe_v1
+active_branch: codex/stage24-survival-model
+active_stage: 24_exit_model__survival_time_to_event_hold_shape
+current_run_id: not_started
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use Tier A primary plus Tier B fallback with
@@ -13,10 +13,10 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_opened
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_opened
 practical_modeling_start: '2022-09-01'
 current_focus:
-- treat Stage 23 as active_run17B_mt5_runtime_probe_completed after Stage23 supervised regime classifier MT5 runtime_probe; next action is stage23_closeout_and_stage24_open_only, and no baseline, promotion, or runtime authority exists
+- treat Stage 24 as opened_not_started after Stage23 reviewed closeout; next action is run18A_survival_time_to_event_hold_shape_scout_v1, and no baseline, promotion, or runtime authority exists
 - treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime, feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve EBM clues, not a baseline or promotion
 - treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape clues, not baseline, promotion, or runtime authority
 - treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up, and compression probes; preserve CatBoost clues and failure memory only, not baseline, promotion, or runtime authority
@@ -56,7 +56,7 @@ current_focus:
 - treat p0p1_runtime_evidence_cleanup(P0/P1 런타임 근거 정리) as merged code/evidence cleanup(병합된 코드/근거 정리) with routing_receipt
   only(라우팅 영수증만 있음), not a completed packet(완료 묶음) unless a full closeout is added
 pre_alpha_stage_queue:
-  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_opened
+  status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_opened
   plan_path: docs/workspace/pre_alpha_stage_plan.md
   decision_path: docs/decisions/2026-04-25_pre_alpha_stage_queue.md
   formal_pre_alpha_feature_count: 58
@@ -150,12 +150,13 @@ pre_alpha_stage_queue:
     stage23:
       stage_id: 23_regime_model__supervised_regime_classifier_filter
       ownership: independent supervised regime classifier filter scout after Stage22
-      status: active_run17B_mt5_runtime_probe_completed
+      status: reviewed_closed_stage24_opened
       current_run_id: run17B_supervised_regime_classifier_runtime_probe_v1
     stage24:
       stage_id: 24_exit_model__survival_time_to_event_hold_shape
       ownership: independent Survival time-to-event hold-shape scout after Stage23
-      status: planned
+      status: opened_not_started
+      current_run_id: not_started
     stage25:
       stage_id: 25_exit_model__hazard_trade_lifecycle_risk
       ownership: independent hazard trade-lifecycle risk scout after Stage24
@@ -1813,7 +1814,7 @@ stage18_catboost_closeout:
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   next_action: stage19_ebm_explainable_boosting_shape_planned
 stage19_32_model_research_queue:
-  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_opened
+  status: stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_opened
   work_order_path: docs/workspace/stage19_25_model_research_work_order.md
   goal_operating_plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   path_note: legacy_stage19_25_file_path_retained_for_current_truth_links
@@ -1834,15 +1835,15 @@ stage19_32_model_research_queue:
   inheritance_rule: no_stage18_catboost_model_threshold_variant_or_runtime_file_inheritance
   claim_boundary: each_stage_starts_as_model_characteristic_or_runtime_probe_only
 stage20_32_goal_operating_plan:
-  status: stage20_closed_stage21_closed_stage22_closed_stage23_opened
+  status: stage20_closed_stage21_closed_stage22_closed_stage23_closed_stage24_opened
   plan_path: docs/workspace/stage20_32_goal_operating_plan.md
   decision_path: docs/decisions/2026-05-05_stage20_32_goal_operating_plan.md
   active_stage_at_adoption: 20_model_family_challenge__gam_additive_smooth_shape
   current_run_at_adoption: not_started
-  latest_completed_run: run17B_supervised_regime_classifier_runtime_probe_v1
-  next_exact_action: stage23_closeout_and_stage24_open_only
+  latest_completed_run: stage23_closeout_stage24_open
+  next_exact_action: run18A_survival_time_to_event_hold_shape_scout_v1
   active_branch_at_adoption: codex/stage20-gam-additive-smooth-shape
-  active_stage_folder: stages/23_regime_model__supervised_regime_classifier_filter
+  active_stage_folder: stages/24_exit_model__survival_time_to_event_hold_shape
   scope: stage20_through_stage32_model_topic_exploration
   mt5_batch_safety_rule: small_tranche_or_sentinel_then_log_report_telemetry_kpi_parser_check
   recovery_rule: repair_and_continue_before_blocked_unless_repeated_failure_or_user_action_required
@@ -2127,19 +2128,20 @@ stage22_hmm_closeout:
   next_action: run17A_supervised_regime_classifier_filter_scout_v1
 stage23_supervised_regime_classifier_filter:
   stage_id: 23_regime_model__supervised_regime_classifier_filter
-  status: active_run17B_mt5_runtime_probe_completed
+  status: reviewed_closed_stage24_opened
   current_run_id: run17B_supervised_regime_classifier_runtime_probe_v1
   selected_operating_reference: none
   selected_promotion_candidate: none
   selected_baseline: none
   selected_variant_id: v05_logistic_core24_compact_filter
-  boundary: supervised_regime_classifier_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
-  judgment: inconclusive_supervised_regime_classifier_runtime_probe_completed
+  boundary: supervised_regime_classifier_characteristic_and_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  judgment: closed_inconclusive_supervised_regime_classifier_characteristics_exhausted
   mt5_runtime_probe_status: completed_by_next_milestone_run17B_supervised_regime_classifier_runtime_probe_v1
   mt5_kpi_record_count: 10
+  closeout_packet_path: stages/23_regime_model__supervised_regime_classifier_filter/03_reviews/stage23_closeout_packet.md
   report_path: stages/23_regime_model__supervised_regime_classifier_filter/03_reviews/run17B_supervised_regime_classifier_runtime_probe_packet.md
-  packet_summary_path: docs/agent_control/packets/stage23_run17B_supervised_regime_classifier_runtime_probe_v1/aggregate_summary.json
-  next_action: stage23_closeout_and_stage24_open_only
+  packet_summary_path: docs/agent_control/packets/stage23_supervised_regime_closeout_v1/aggregate_summary.json
+  next_action: run18A_survival_time_to_event_hold_shape_scout_v1
 stage23_regime_run17A_structural_scout:
   packet_id: stage23_run17A_supervised_regime_classifier_scout_v1
   status: reviewed_structural_scout_completed
@@ -2170,3 +2172,28 @@ stage23_supervised_regime_run17B_runtime_probe:
   report_path: stages/23_regime_model__supervised_regime_classifier_filter/03_reviews/run17B_supervised_regime_classifier_runtime_probe_packet.md
   packet_summary_path: docs/agent_control/packets/stage23_run17B_supervised_regime_classifier_runtime_probe_v1/aggregate_summary.json
   next_action: stage23_closeout_and_stage24_open_only
+stage23_supervised_regime_closeout:
+  packet_id: stage23_supervised_regime_closeout_v1
+  status: reviewed_closed_stage24_opened
+  judgment: closed_inconclusive_supervised_regime_classifier_characteristics_exhausted
+  current_run_id: run17B_supervised_regime_classifier_runtime_probe_v1
+  run_range: run17A-run17B
+  selected_variant_id: v05_logistic_core24_compact_filter
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  closeout_packet_path: stages/23_regime_model__supervised_regime_classifier_filter/03_reviews/stage23_closeout_packet.md
+  decision_path: docs/decisions/2026-05-05_stage23_supervised_regime_closeout_stage24_open.md
+  packet_summary_path: docs/agent_control/packets/stage23_supervised_regime_closeout_v1/aggregate_summary.json
+  next_action: run18A_survival_time_to_event_hold_shape_scout_v1
+stage24_survival_model:
+  stage_id: 24_exit_model__survival_time_to_event_hold_shape
+  status: opened_not_started
+  current_run_id: not_started
+  selected_operating_reference: none
+  selected_promotion_candidate: none
+  selected_baseline: none
+  boundary: topic_open_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
+  stage_brief_path: stages/24_exit_model__survival_time_to_event_hold_shape/00_spec/stage_brief.md
+  selection_status_path: stages/24_exit_model__survival_time_to_event_hold_shape/04_selected/selection_status.md
+  next_action: run18A_survival_time_to_event_hold_shape_scout_v1
