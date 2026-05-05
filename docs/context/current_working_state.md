@@ -1,4 +1,12 @@
-﻿## Latest Stage27 RUN21A Quantile Boosting Scout(최신 27단계 21A 실행 분위수 부스팅 탐색)
+﻿## Latest Stage27 RUN21B Quantile Runtime Probe(최신 27단계 21B 실행 분위수 런타임 탐침)
+
+Stage27(27단계) `run21B_quantile_boosting_tail_risk_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_quantile_boosting_tail_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage27_closeout_and_stage28_open_only`.
+
+효과(effect, 효과): quantile boosting(분위수 부스팅)의 tail-risk surface(꼬리 위험 표면)를 MT5 score-table handoff(점수표 인계)로 관찰했고 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+## Latest Stage27 RUN21A Quantile Boosting Scout(최신 27단계 21A 실행 분위수 부스팅 탐색)
 
 Stage27(27단계) `run21A_quantile_boosting_tail_risk_surface_scout_v1`를 reviewed structural scout(검토된 구조 탐색)로 완료했다.
 

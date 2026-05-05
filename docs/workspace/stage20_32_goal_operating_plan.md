@@ -3,12 +3,12 @@
 ## Current Truth(현재 진실)
 
 - active stage(활성 단계): `27_tail_model__quantile_boosting_risk_surface`
-- current run(현재 실행): `run21A_quantile_boosting_tail_risk_surface_scout_v1`
+- current run(현재 실행): `run21B_quantile_boosting_tail_risk_runtime_probe_v1`
 - active branch(활성 브랜치): `codex/stage27-quantile-boosting`
 - active stage folder(활성 단계 폴더): `stages/27_tail_model__quantile_boosting_risk_surface`
 - work order(작업지시서): `docs/workspace/stage19_25_model_research_work_order.md`
 
-효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage23(23단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage24(24단계)와 Stage25(25단계)는 Python-side evidence(파이썬 근거), MT5 runtime_probe(MT5 런타임 탐침), closeout packet(마감 묶음), 다음 stage open-only(다음 단계 개방만)를 완료했다. Stage26(26단계)는 `run20A_ngboost_probabilistic_distribution_scout_v1` broad scout(넓은 탐색), `run20B_ngboost_distribution_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침), reviewed closeout(검토된 마감), Stage27 open-only(Stage27 개방만)를 완료했다. Stage27(27단계)는 `run21A_quantile_boosting_tail_risk_surface_scout_v1` broad scout(넓은 탐색)를 완료했고, 현재 첫 미완료 milestone(마일스톤)은 `run21B_quantile_boosting_tail_risk_runtime_probe_v1` narrow MT5 runtime_probe(좁은 MT5 런타임 탐침)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+효과(effect, 효과): 이 문서는 Stage20-32(20-32단계)의 운영 목표(goal, 목표)를 고정하며, Stage20(20단계)은 MT5 runtime_probe(런타임 탐침)와 reviewed closeout(검토된 마감)을 끝냈고 Stage21(21단계)은 reviewed closeout(검토된 마감)을 완료했고 Stage22(22단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage23(23단계)는 reviewed closeout(검토된 마감)을 완료했고 Stage24(24단계)와 Stage25(25단계)는 Python-side evidence(파이썬 근거), MT5 runtime_probe(MT5 런타임 탐침), closeout packet(마감 묶음), 다음 stage open-only(다음 단계 개방만)를 완료했다. Stage26(26단계)는 `run20A_ngboost_probabilistic_distribution_scout_v1` broad scout(넓은 탐색), `run20B_ngboost_distribution_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침), reviewed closeout(검토된 마감), Stage27 open-only(Stage27 개방만)를 완료했다. Stage27(27단계)는 `run21A_quantile_boosting_tail_risk_surface_scout_v1` broad scout(넓은 탐색)와 `run21B_quantile_boosting_tail_risk_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)를 완료했고, 현재 첫 미완료 milestone(마일스톤)은 `stage27_closeout_and_stage28_open_only`이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
 
 ## Execution Contract(실행 계약)
 
@@ -64,25 +64,25 @@ Every stop(모든 중지 지점)는 latest completed work(최근 완료 작업),
 - [ ] Stage31(31단계) TabNet(탭넷) scout/probe/closeout/open Stage32
 - [ ] Stage32(32단계) TCN(`Temporal Convolutional Network`, 시간 합성곱 네트워크) scout/probe/closeout/final summary
 
-Current active milestone(현재 활성 마일스톤): Stage27(27단계) `run21B_quantile_boosting_tail_risk_runtime_probe_v1` narrow MT5 runtime_probe(좁은 MT5 런타임 탐침).
+Current active milestone(현재 활성 마일스톤): Stage27(27단계) `stage27_closeout_and_stage28_open_only`.
 
 효과(effect, 효과): 중간에 끊겨도 다음 실행이 다시 planning(계획 작성)으로 새지 않고 첫 미완료 stage(단계)로 진입한다.
 
 ## Latest Stop Resume State(최신 중지 재개 상태)
 
-- latest completed work(최근 완료 작업): `run21A_quantile_boosting_tail_risk_surface_scout_v1` completed(완료) as Python structural scout(파이썬 구조 탐색).
+- latest completed work(최근 완료 작업): `run21B_quantile_boosting_tail_risk_runtime_probe_v1` completed(완료) as MT5 runtime_probe(MT5 런타임 탐침).
 - active branch(활성 브랜치): `codex/stage27-quantile-boosting`.
-- active stage/current run id(활성 단계/현재 실행 ID): Stage27(27단계), `run21A_quantile_boosting_tail_risk_surface_scout_v1`.
-- created/updated folders(생성/수정 폴더): `stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21A_quantile_boosting_tail_risk_surface_scout_v1`, `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews`, `docs/agent_control/packets/stage27_run21A_quantile_boosting_tail_risk_scout_v1`.
-- changed files(변경 파일): quantile boosting scout pipeline(분위수 부스팅 탐색 파이프라인), run evidence(실행 근거), tier prediction artifacts(티어 예측 산출물), current truth docs(현재 진실 문서).
+- active stage/current run id(활성 단계/현재 실행 ID): Stage27(27단계), `run21B_quantile_boosting_tail_risk_runtime_probe_v1`.
+- created/updated folders(생성/수정 폴더): `stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21B_quantile_boosting_tail_risk_runtime_probe_v1`, `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews`, `docs/agent_control/packets/stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1`.
+- changed files(변경 파일): quantile runtime probe pipeline(분위수 런타임 탐침 파이프라인), MT5 run evidence(MT5 실행 근거), normalized KPI(정규화 핵심 성과 지표), current truth docs(현재 진실 문서).
 - active stage folder(활성 단계 폴더): `stages/27_tail_model__quantile_boosting_risk_surface`.
-- current run id(현재 실행 ID): `run21A_quantile_boosting_tail_risk_surface_scout_v1`.
-- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): MT5 not attempted in run21A(21A 실행에서 MT5 미시도); review report(검토 보고서) `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/run21A_quantile_boosting_tail_risk_scout_packet.md`.
+- current run id(현재 실행 ID): `run21B_quantile_boosting_tail_risk_runtime_probe_v1`.
+- MT5 output folder/report path(MT5 출력 폴더/보고서 경로): `stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21B_quantile_boosting_tail_risk_runtime_probe_v1/mt5/reports`; review report(검토 보고서) `stages/27_tail_model__quantile_boosting_risk_surface/03_reviews/run21B_quantile_boosting_tail_risk_runtime_probe_packet.md`.
 - blocker(차단 사유): `none(없음)`.
-- exact next action(정확한 다음 행동): `run21B_quantile_boosting_tail_risk_runtime_probe_v1`.
+- exact next action(정확한 다음 행동): `stage27_closeout_and_stage28_open_only`.
 - git status(깃 상태): checkpoint commit/push(중간 지점 커밋/푸시) pending(대기).
 
-효과(effect, 효과): 다음 재개는 Stage27(27단계) quantile boosting(분위수 부스팅) MT5 runtime_probe(MT5 런타임 탐침)에서 시작한다.
+효과(effect, 효과): 다음 재개는 Stage27(27단계) closeout/open Stage28(마감/28단계 개방) 또는 run21B(21B 실행) 복구 조건에서 시작한다.
 
 ## Per-Stage Milestone Loop(단계별 마일스톤 반복)
 
@@ -211,3 +211,4 @@ Stage32(32단계)까지 reviewed closeout(검토된 마감)을 완료한 뒤, fi
 - `2026-05-05`: Stage26(26단계) `run20B_ngboost_distribution_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)를 기록했다. judgment(판정): `inconclusive_ngboost_distribution_runtime_probe_completed`.
 - `2026-05-05`: Stage26(26단계) reviewed closeout(검토된 마감)을 완료하고 Stage27(27단계)를 open-only(개방만)로 열었다.
 - `2026-05-05`: Stage27(27단계) `run21A_quantile_boosting_tail_risk_surface_scout_v1` quantile boosting(분위수 부스팅) Python structural scout(파이썬 구조 탐색)를 완료했다. judgment(판정): `inconclusive_quantile_boosting_tail_risk_surface_scout_completed`.
+- `2026-05-05`: Stage27(27단계) `run21B_quantile_boosting_tail_risk_runtime_probe_v1` MT5 runtime_probe(MT5 런타임 탐침)를 기록했다. judgment(판정): `inconclusive_quantile_boosting_tail_runtime_probe_completed`.

@@ -1,0 +1,62 @@
+[
+  {
+    "created_at_utc": "2026-05-05T02:29:28Z",
+    "packet_id": "stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+    "parity_check": {
+      "tier_a": {
+        "max_abs_diff": 0.07874551038318195,
+        "mean_abs_diff": 0.0025501092156658485,
+        "p95_abs_diff": 0.010726014867916018,
+        "passed": true,
+        "rows": 4096,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21B_quantile_boosting_tail_risk_runtime_probe_v1/models/tier_a_quantile_tail_score_table.csv"
+      },
+      "tier_b": {
+        "max_abs_diff": 0.042452043935379824,
+        "mean_abs_diff": 0.0010370981656433152,
+        "p95_abs_diff": 0.0033201908156568825,
+        "passed": true,
+        "rows": 2366,
+        "table_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21B_quantile_boosting_tail_risk_runtime_probe_v1/models/tier_b_quantile_tail_score_table.csv"
+      }
+    },
+    "research_path": "stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+    "runtime_claim_boundary": "runtime_probe",
+    "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "shared_contract": "4-feature quantile tail score table, q0.80 non-flat thresholds, Tier A primary plus Tier B fallback routing",
+    "skill": "obsidian-runtime-parity",
+    "status": "completed"
+  },
+  {
+    "created_at_utc": "2026-05-05T02:29:28Z",
+    "packet_id": "stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+    "runtime_failure_signature": {
+      "attempt_status_counts": {
+        "completed": 6
+      },
+      "compile_status": "completed",
+      "feature_ready_count_total": 41712,
+      "last_skip_reason_counts": {
+        "feature_csv_timestamp_not_found:2025.09.30 23:55:00": 2,
+        "feature_csv_timestamp_not_found:2026.04.13 23:55:00": 2,
+        "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00": 1,
+        "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00": 1
+      },
+      "model_fail_count_total": 228723,
+      "model_ok_count_total": 41712,
+      "primary_runtime_skip": "feature_csv_timestamp_not_found:2025.09.30 23:55:00"
+    },
+    "skill": "obsidian-backtest-forensics",
+    "status": "completed",
+    "tester_report_count": 10
+  },
+  {
+    "claim_boundary": "quantile_boosting_tail_runtime_probe_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-05T02:29:28Z",
+    "judgment_label": "inconclusive_quantile_boosting_tail_runtime_probe_completed",
+    "packet_id": "stage27_run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+    "result_subject": "run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "completed"
+  }
+]
