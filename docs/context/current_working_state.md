@@ -1,4 +1,12 @@
-﻿## Latest Stage24 Closeout / Stage25 Open(최신 24단계 마감 / 25단계 개방)
+﻿## Latest Stage25 RUN19A Hazard Update(최신 25단계 실행19A 위험률 업데이트)
+
+Stage25(25단계) `run19A_hazard_trade_lifecycle_risk_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
+
+결과(result, 결과): `inconclusive_hazard_trade_lifecycle_risk_scout_completed`. selected variant(선택 변형): `v04_logit_core24_reversal_after_favorable_1x`. next exact action(다음 정확한 행동): `run19B_hazard_trade_lifecycle_runtime_probe_v1`.
+
+효과(effect, 효과): Hazard model(위험률 모델)을 entry score(진입 점수)가 아니라 bar-by-bar loss/reversal risk(봉별 손실/반전 위험)로 읽었다. MT5 runtime_probe(MT5 런타임 탐침)는 다음 실행이다.
+
+## Latest Stage24 Closeout / Stage25 Open(최신 24단계 마감 / 25단계 개방)
 
 Stage24(24단계) Survival model(생존 모델)을 reviewed closeout(검토된 마감)으로 닫고 Stage25(25단계) `25_exit_model__hazard_trade_lifecycle_risk`를 open-only(개방만) 상태로 열었다.
 

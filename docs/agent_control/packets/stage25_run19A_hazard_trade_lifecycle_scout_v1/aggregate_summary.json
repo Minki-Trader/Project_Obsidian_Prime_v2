@@ -1,0 +1,3617 @@
+{
+  "allowed_claims": [
+    "python_structural_scout_completed",
+    "hazard_trade_lifecycle_clues_recorded"
+  ],
+  "artifacts": {
+    "ledger_artifacts": {
+      "project_alpha_run_ledger": {
+        "hash_policy": "lf_normalized_text_register",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+        "rows": 3218,
+        "sha256": "ccde64b29837bfa236081a8f26de520a747bbaa90bd4679b45feb4dbe2904eac",
+        "upserted_rows": 3
+      },
+      "run_registry": {
+        "hash_policy": "lf_normalized_text_register",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+        "rows": 284,
+        "sha256": "c7ef364f8e78aec102314e049aa07584f72d56469ef871e3131ca34c26eb8247",
+        "upserted_rows": 1
+      },
+      "stage_run_ledger": {
+        "hash_policy": "lf_normalized_text_register",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/25_exit_model__hazard_trade_lifecycle_risk/03_reviews/stage_run_ledger.csv",
+        "rows": 3,
+        "sha256": "2aecd1b726cc799dded84266790957eb6cb28b87f4eaae92a24de0b6c594f3b3",
+        "upserted_rows": 3
+      }
+    },
+    "model_artifacts": {
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "reversal_after_favorable_1x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 1.0
+      },
+      "feature_reads": {
+        "tier_a": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 25,
+          "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/selected_feature_reads/tier_a_hazard_feature_read.csv",
+          "sha256": "de2fe8b8efc8fc707d68d591247b2d24e98e6612fccfacaf430f2a0a373f4d26",
+          "top_features": [
+            {
+              "abs_coefficient": 0.359532376442687,
+              "coefficient": 0.359532376442687,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "hazard_elapsed_bar"
+            },
+            {
+              "abs_coefficient": 0.35953237644268504,
+              "coefficient": 0.35953237644268504,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "hazard_elapsed_frac"
+            },
+            {
+              "abs_coefficient": 0.22511481290747248,
+              "coefficient": -0.22511481290747248,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "close_ema20_ratio"
+            },
+            {
+              "abs_coefficient": 0.21501222045449694,
+              "coefficient": 0.21501222045449694,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "historical_vol_20"
+            },
+            {
+              "abs_coefficient": 0.17098734271776622,
+              "coefficient": 0.17098734271776622,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "hl_range"
+            },
+            {
+              "abs_coefficient": 0.15249991771622495,
+              "coefficient": 0.15249991771622495,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "is_first_30m_after_open"
+            },
+            {
+              "abs_coefficient": 0.12208840009702629,
+              "coefficient": 0.12208840009702629,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "ppo_hist_12_26_9"
+            },
+            {
+              "abs_coefficient": 0.11489482939717628,
+              "coefficient": 0.11489482939717628,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "ema20_ema50_diff"
+            },
+            {
+              "abs_coefficient": 0.07958650390596506,
+              "coefficient": 0.07958650390596506,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "log_return_3"
+            },
+            {
+              "abs_coefficient": 0.0787095681271668,
+              "coefficient": 0.0787095681271668,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "di_spread_14"
+            }
+          ]
+        },
+        "tier_b": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 25,
+          "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/selected_feature_reads/tier_b_hazard_feature_read.csv",
+          "sha256": "ee3d1cfdd101612e011a7788b05332066406f8a79cfc6f2ea914269f2ad08f5f",
+          "top_features": [
+            {
+              "abs_coefficient": 0.34117111308008036,
+              "coefficient": 0.34117111308008036,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "hazard_elapsed_bar"
+            },
+            {
+              "abs_coefficient": 0.3411711130800774,
+              "coefficient": 0.3411711130800774,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "hazard_elapsed_frac"
+            },
+            {
+              "abs_coefficient": 0.233466040925609,
+              "coefficient": 0.233466040925609,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "historical_vol_20"
+            },
+            {
+              "abs_coefficient": 0.23199029452227374,
+              "coefficient": 0.23199029452227374,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "hl_range"
+            },
+            {
+              "abs_coefficient": 0.2137555587807539,
+              "coefficient": -0.2137555587807539,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "rsi_14"
+            },
+            {
+              "abs_coefficient": 0.18580920996914962,
+              "coefficient": 0.18580920996914962,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "is_first_30m_after_open"
+            },
+            {
+              "abs_coefficient": 0.16036126456519464,
+              "coefficient": 0.16036126456519464,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "di_spread_14"
+            },
+            {
+              "abs_coefficient": 0.10841651635803842,
+              "coefficient": 0.10841651635803842,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "ppo_hist_12_26_9"
+            },
+            {
+              "abs_coefficient": 0.10507388121935521,
+              "coefficient": 0.10507388121935521,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "bollinger_width_20"
+            },
+            {
+              "abs_coefficient": 0.10294861217179882,
+              "coefficient": 0.10294861217179882,
+              "effect_read": "positive_coefficient_means_higher_bar_hazard",
+              "feature": "minutes_from_cash_open"
+            }
+          ]
+        }
+      },
+      "runtime_feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "hl_range",
+        "atr_14",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "adx_14",
+        "di_spread_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "bb_position_20",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "historical_vol_20",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "close_ema20_ratio",
+        "close_open_ratio",
+        "vortex_indicator",
+        "hazard_elapsed_bar",
+        "hazard_elapsed_frac"
+      ],
+      "runtime_feature_order_hash": "1f581b661055687849f66a9c47a9993693c5c5988bed6302c11a9ba0f1621893",
+      "tier_a_model": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/models/v04_logit_core24_reversal_after_favorable_1x_tier_a_hazard_model.joblib",
+        "sha256": "36b2c972091f3a029bb78d8861616a4779f220547218307580acfa9b71a6fb08",
+        "training_sample": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 25,
+          "feature_count_before_filter": 26,
+          "fit_rows": 184757,
+          "train_event_count": 11240,
+          "train_event_rate": 0.06083666654037465,
+          "train_rows": 184757
+        }
+      },
+      "tier_b_model": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/models/v04_logit_core24_reversal_after_favorable_1x_tier_b_hazard_model.joblib",
+        "sha256": "641f8cc98b4be811cd2ea3f693090865581dce84c77a1b34d668d83e45e37099",
+        "training_sample": {
+          "dropped_features": [
+            "is_us_cash_open"
+          ],
+          "feature_count_after_filter": 25,
+          "feature_count_before_filter": 26,
+          "fit_rows": 220000,
+          "train_event_count": 11960,
+          "train_event_rate": 0.04960103515203795,
+          "train_rows": 241124
+        }
+      }
+    },
+    "prediction_artifacts": {
+      "tier_a_predictions": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/predictions/tier_a_hazard_predictions.parquet",
+        "rows": 285864,
+        "sha256": "0d06e61471aaca6053b26d0c40d37e003e466b450fd88f083b9356b792e6934b"
+      },
+      "tier_ab_predictions": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/predictions/tier_ab_hazard_predictions.parquet",
+        "rows": 355587,
+        "sha256": "e019c0d690ad8d22d87267ff23285c95726cfd6c572aedcf4e41bc693749724d"
+      },
+      "tier_b_predictions": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/predictions/tier_b_hazard_predictions.parquet",
+        "rows": 69723,
+        "sha256": "de2a9e8fdaec9ee8e8a6d78f2091f34597d1154f5733d3951aa640ef515af64c"
+      }
+    },
+    "variant_results_csv": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/hazard_variant_results.csv",
+      "sha256": "8c76e171aa7ae7818ac14ecc57fa25cb8b718ad11df2c5051fa76a22ff3e8fd6"
+    },
+    "variant_results_json": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/hazard_variant_results.json",
+      "sha256": "bf68fe659859df6435843139feff1fe3e9f6093563403feb1dd27adde0ad5eda"
+    }
+  },
+  "boundary": "hazard_trade_lifecycle_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+  "completed_variant_count": 5,
+  "created_at_utc": "2026-05-05T00:57:45Z",
+  "exploration_label": "stage25_Exit__HazardTradeLifecycleRisk",
+  "external_verification_status": "out_of_scope_by_claim_python_structural_scout",
+  "feature_set_id": "feature_set_v2_mt5_price_proxy_hazard_trade_lifecycle",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion",
+    "runtime_authority"
+  ],
+  "judgment": "inconclusive_hazard_trade_lifecycle_risk_scout_completed",
+  "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+  "max_horizon_bars": 12,
+  "model_family": "sklearn_discrete_time_logistic_hazard",
+  "next_action": "run19B_hazard_trade_lifecycle_runtime_probe_v1",
+  "packet_id": "stage25_run19A_hazard_trade_lifecycle_scout_v1",
+  "run_id": "run19A_hazard_trade_lifecycle_risk_scout_v1",
+  "run_number": "run19A",
+  "selected_variant_id": "v04_logit_core24_reversal_after_favorable_1x",
+  "selected_variant_read": {
+    "characteristic_score": 1.2167682451186823,
+    "description": "Discrete-time logistic hazard for reversal after an initially favorable move.",
+    "event_definition": {
+      "base_threshold_log_return": 0.001277833051854688,
+      "event_name": "reversal_after_favorable_1x",
+      "max_horizon_bars": 12,
+      "threshold_multiplier": 1.0
+    },
+    "feature_artifact": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_feature_reads/v04_logit_core24_reversal_after_favorable_1x_hazard_feature_read.csv",
+      "sha256": "de2fe8b8efc8fc707d68d591247b2d24e98e6612fccfacaf430f2a0a373f4d26"
+    },
+    "feature_read": {
+      "dropped_features": [
+        "is_us_cash_open"
+      ],
+      "feature_count_after_filter": 25,
+      "top_features": [
+        {
+          "abs_coefficient": 0.359532376442687,
+          "coefficient": 0.359532376442687,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "hazard_elapsed_bar"
+        },
+        {
+          "abs_coefficient": 0.35953237644268504,
+          "coefficient": 0.35953237644268504,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "hazard_elapsed_frac"
+        },
+        {
+          "abs_coefficient": 0.22511481290747248,
+          "coefficient": -0.22511481290747248,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "close_ema20_ratio"
+        },
+        {
+          "abs_coefficient": 0.21501222045449694,
+          "coefficient": 0.21501222045449694,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "historical_vol_20"
+        },
+        {
+          "abs_coefficient": 0.17098734271776622,
+          "coefficient": 0.17098734271776622,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "hl_range"
+        },
+        {
+          "abs_coefficient": 0.15249991771622495,
+          "coefficient": 0.15249991771622495,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "is_first_30m_after_open"
+        },
+        {
+          "abs_coefficient": 0.12208840009702629,
+          "coefficient": 0.12208840009702629,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "ppo_hist_12_26_9"
+        },
+        {
+          "abs_coefficient": 0.11489482939717628,
+          "coefficient": 0.11489482939717628,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "ema20_ema50_diff"
+        },
+        {
+          "abs_coefficient": 0.07958650390596506,
+          "coefficient": 0.07958650390596506,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "log_return_3"
+        },
+        {
+          "abs_coefficient": 0.0787095681271668,
+          "coefficient": 0.0787095681271668,
+          "effect_read": "positive_coefficient_means_higher_bar_hazard",
+          "feature": "di_spread_14"
+        }
+      ]
+    },
+    "hazard_curve_artifact": {
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_hazard_curves/v04_logit_core24_reversal_after_favorable_1x_hazard_curve.csv",
+      "sha256": "ad0abcdb501211d203e0e85282e3e9a9b81e43cfb3b7ca832665b01cff555a92"
+    },
+    "idea_id": "reversal_after_favorable_move_hazard",
+    "metrics": {
+      "oos": {
+        "average_precision": 0.1033525717470856,
+        "brier_score": 0.23042669306656494,
+        "by_elapsed_bar": [
+          {
+            "event_rate": 0.0,
+            "hazard_elapsed_bar": 1.0,
+            "mean_hazard_risk": 0.2422435998219809,
+            "rows": 4615
+          },
+          {
+            "event_rate": 0.02037277850021673,
+            "hazard_elapsed_bar": 2.0,
+            "mean_hazard_risk": 0.28274518347706623,
+            "rows": 4614
+          },
+          {
+            "event_rate": 0.042044700154901526,
+            "hazard_elapsed_bar": 3.0,
+            "mean_hazard_risk": 0.32521775797831953,
+            "rows": 4519
+          },
+          {
+            "event_rate": 0.05406654343807763,
+            "hazard_elapsed_bar": 4.0,
+            "mean_hazard_risk": 0.3699923703104388,
+            "rows": 4328
+          },
+          {
+            "event_rate": 0.06425604690935743,
+            "hazard_elapsed_bar": 5.0,
+            "mean_hazard_risk": 0.41606973108949014,
+            "rows": 4093
+          },
+          {
+            "event_rate": 0.07495429616087751,
+            "hazard_elapsed_bar": 6.0,
+            "mean_hazard_risk": 0.4645400595008312,
+            "rows": 3829
+          },
+          {
+            "event_rate": 0.08246258119175374,
+            "hazard_elapsed_bar": 7.0,
+            "mean_hazard_risk": 0.513489005069179,
+            "rows": 3541
+          },
+          {
+            "event_rate": 0.08341028008618036,
+            "hazard_elapsed_bar": 8.0,
+            "mean_hazard_risk": 0.5625373311566125,
+            "rows": 3249
+          },
+          {
+            "event_rate": 0.08428475486903962,
+            "hazard_elapsed_bar": 9.0,
+            "mean_hazard_risk": 0.6112045817285088,
+            "rows": 2978
+          },
+          {
+            "event_rate": 0.08730741012472487,
+            "hazard_elapsed_bar": 10.0,
+            "mean_hazard_risk": 0.6574713250938408,
+            "rows": 2726
+          },
+          {
+            "event_rate": 0.08805790108564536,
+            "hazard_elapsed_bar": 11.0,
+            "mean_hazard_risk": 0.7008490924036803,
+            "rows": 2487
+          },
+          {
+            "event_rate": 0.09656084656084656,
+            "hazard_elapsed_bar": 12.0,
+            "mean_hazard_risk": 0.7411154908139166,
+            "rows": 2268
+          }
+        ],
+        "event_count": 2558,
+        "event_rate": 0.05914861146437903,
+        "hazard_risk_q10": 0.22839997204870327,
+        "hazard_risk_q50": 0.43859125152878164,
+        "hazard_risk_q90": 0.705832383596633,
+        "high_minus_low_event_rate": 0.09907514450867053,
+        "high_risk_event_rate": 0.10601156069364162,
+        "low_risk_event_rate": 0.006936416184971098,
+        "roc_auc": 0.6908297000122845,
+        "rows": 43247
+      },
+      "train": {
+        "average_precision": 0.11785570497444109,
+        "brier_score": 0.22105665972278665,
+        "by_elapsed_bar": [
+          {
+            "event_rate": 0.0,
+            "hazard_elapsed_bar": 1.0,
+            "mean_hazard_risk": 0.23504866718567785,
+            "rows": 19579
+          },
+          {
+            "event_rate": 0.02022575208131161,
+            "hazard_elapsed_bar": 2.0,
+            "mean_hazard_risk": 0.2741840804760611,
+            "rows": 19579
+          },
+          {
+            "event_rate": 0.038158786425480894,
+            "hazard_elapsed_bar": 3.0,
+            "mean_hazard_risk": 0.31514439722254933,
+            "rows": 19183
+          },
+          {
+            "event_rate": 0.0514335266381226,
+            "hazard_elapsed_bar": 4.0,
+            "mean_hazard_risk": 0.35848686514579403,
+            "rows": 18451
+          },
+          {
+            "event_rate": 0.06062164324077248,
+            "hazard_elapsed_bar": 5.0,
+            "mean_hazard_risk": 0.40422302489112283,
+            "rows": 17502
+          },
+          {
+            "event_rate": 0.06824402408612615,
+            "hazard_elapsed_bar": 6.0,
+            "mean_hazard_risk": 0.45186195525288475,
+            "rows": 16441
+          },
+          {
+            "event_rate": 0.07598407206736732,
+            "hazard_elapsed_bar": 7.0,
+            "mean_hazard_risk": 0.5007279510431583,
+            "rows": 15319
+          },
+          {
+            "event_rate": 0.08682444365948429,
+            "hazard_elapsed_bar": 8.0,
+            "mean_hazard_risk": 0.549755063971261,
+            "rows": 14155
+          },
+          {
+            "event_rate": 0.09407395946155037,
+            "hazard_elapsed_bar": 9.0,
+            "mean_hazard_risk": 0.5980661883291983,
+            "rows": 12926
+          },
+          {
+            "event_rate": 0.1013663535439795,
+            "hazard_elapsed_bar": 10.0,
+            "mean_hazard_risk": 0.6451486426227795,
+            "rows": 11710
+          },
+          {
+            "event_rate": 0.1077639456428775,
+            "hazard_elapsed_bar": 11.0,
+            "mean_hazard_risk": 0.6895896093409934,
+            "rows": 10523
+          },
+          {
+            "event_rate": 0.11183299605921823,
+            "hazard_elapsed_bar": 12.0,
+            "mean_hazard_risk": 0.7310986658229638,
+            "rows": 9389
+          }
+        ],
+        "event_count": 11240,
+        "event_rate": 0.06083666654037465,
+        "hazard_risk_q10": 0.21771266136604037,
+        "hazard_risk_q50": 0.4257374172059523,
+        "hazard_risk_q90": 0.694958563734463,
+        "high_minus_low_event_rate": 0.11257848019051743,
+        "high_risk_event_rate": 0.11931695172115177,
+        "low_risk_event_rate": 0.006738471530634336,
+        "roc_auc": 0.7042772901921863,
+        "rows": 184757
+      },
+      "validation": {
+        "average_precision": 0.12124918591949058,
+        "brier_score": 0.24004995451709313,
+        "by_elapsed_bar": [
+          {
+            "event_rate": 0.0,
+            "hazard_elapsed_bar": 1.0,
+            "mean_hazard_risk": 0.26716142975505497,
+            "rows": 6213
+          },
+          {
+            "event_rate": 0.028327699983904716,
+            "hazard_elapsed_bar": 2.0,
+            "mean_hazard_risk": 0.3070231084111974,
+            "rows": 6213
+          },
+          {
+            "event_rate": 0.04969355640218651,
+            "hazard_elapsed_bar": 3.0,
+            "mean_hazard_risk": 0.344765125777795,
+            "rows": 6037
+          },
+          {
+            "event_rate": 0.05856719539829179,
+            "hazard_elapsed_bar": 4.0,
+            "mean_hazard_risk": 0.38413247806721135,
+            "rows": 5737
+          },
+          {
+            "event_rate": 0.06758007776337716,
+            "hazard_elapsed_bar": 5.0,
+            "mean_hazard_risk": 0.4255504056034617,
+            "rows": 5401
+          },
+          {
+            "event_rate": 0.07069102462271644,
+            "hazard_elapsed_bar": 6.0,
+            "mean_hazard_risk": 0.4692498250263677,
+            "rows": 5036
+          },
+          {
+            "event_rate": 0.07222222222222222,
+            "hazard_elapsed_bar": 7.0,
+            "mean_hazard_risk": 0.5147429707946101,
+            "rows": 4680
+          },
+          {
+            "event_rate": 0.07461999078765545,
+            "hazard_elapsed_bar": 8.0,
+            "mean_hazard_risk": 0.5608819276903407,
+            "rows": 4342
+          },
+          {
+            "event_rate": 0.07964161274265803,
+            "hazard_elapsed_bar": 9.0,
+            "mean_hazard_risk": 0.6075436166230689,
+            "rows": 4018
+          },
+          {
+            "event_rate": 0.08328826392644673,
+            "hazard_elapsed_bar": 10.0,
+            "mean_hazard_risk": 0.6525932173664671,
+            "rows": 3698
+          },
+          {
+            "event_rate": 0.08702064896755163,
+            "hazard_elapsed_bar": 11.0,
+            "mean_hazard_risk": 0.695916303925384,
+            "rows": 3390
+          },
+          {
+            "event_rate": 0.0962843295638126,
+            "hazard_elapsed_bar": 12.0,
+            "mean_hazard_risk": 0.7360438215710522,
+            "rows": 3095
+          }
+        ],
+        "event_count": 3416,
+        "event_rate": 0.059039059799516076,
+        "hazard_risk_q10": 0.22215103004423517,
+        "hazard_risk_q50": 0.4475129453366287,
+        "hazard_risk_q90": 0.72535405530957,
+        "high_minus_low_event_rate": 0.11199446940891808,
+        "high_risk_event_rate": 0.11959903214656066,
+        "low_risk_event_rate": 0.0076045627376425855,
+        "roc_auc": 0.704654661378204,
+        "rows": 57860
+      }
+    },
+    "spec": {
+      "base_feature_names": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "hl_range",
+        "atr_14",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "adx_14",
+        "di_spread_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "bb_position_20",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "historical_vol_20",
+        "minutes_from_cash_open",
+        "is_us_cash_open",
+        "is_first_30m_after_open",
+        "close_ema20_ratio",
+        "close_open_ratio",
+        "vortex_indicator"
+      ],
+      "c_value": 0.5,
+      "description": "Discrete-time logistic hazard for reversal after an initially favorable move.",
+      "event_name": "reversal_after_favorable_1x",
+      "feature_names": [
+        "log_return_1",
+        "log_return_3",
+        "return_zscore_20",
+        "hl_range",
+        "atr_14",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "adx_14",
+        "di_spread_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "rsi_14",
+        "rsi_14_slope_3",
+        "bb_position_20",
+        "stoch_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "historical_vol_20",
+        "minutes_from_cash_open",
+        "is_us_cash_open",
+        "is_first_30m_after_open",
+        "close_ema20_ratio",
+        "close_open_ratio",
+        "vortex_indicator",
+        "hazard_elapsed_bar",
+        "hazard_elapsed_frac"
+      ],
+      "idea_id": "reversal_after_favorable_move_hazard",
+      "model_type": "logistic_hazard",
+      "random_state": 2501,
+      "threshold_multiplier": 1.0,
+      "tier_b_compatible": true,
+      "variant_id": "v04_logit_core24_reversal_after_favorable_1x"
+    },
+    "status": "completed",
+    "training_sample": {
+      "dropped_features": [
+        "is_us_cash_open"
+      ],
+      "feature_count_after_filter": 25,
+      "feature_count_before_filter": 26,
+      "fit_rows": 184757,
+      "train_event_count": 11240,
+      "train_event_rate": 0.06083666654037465,
+      "train_rows": 184757
+    },
+    "variant_id": "v04_logit_core24_reversal_after_favorable_1x"
+  },
+  "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+  "stage_id": "25_exit_model__hazard_trade_lifecycle_risk",
+  "tier_records": [
+    {
+      "metrics": {
+        "event_count": 17214,
+        "event_rate": 0.06021744605826547,
+        "oos_lift": 0.09907514450867053,
+        "oos_roc_auc": 0.6908297000122845,
+        "partial_context_subtype_counts": {},
+        "rows": 285864,
+        "validation_lift": 0.11199446940891808,
+        "validation_roc_auc": 0.704654661378204
+      },
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/predictions/tier_a_hazard_predictions.parquet",
+      "record_view": "tier_a_separate",
+      "split_metrics": {
+        "oos": {
+          "average_precision": 0.1033525717470856,
+          "brier_score": 0.23042669306656494,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.2422435998219809,
+              "rows": 4615
+            },
+            {
+              "event_rate": 0.02037277850021673,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.28274518347706623,
+              "rows": 4614
+            },
+            {
+              "event_rate": 0.042044700154901526,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.32521775797831953,
+              "rows": 4519
+            },
+            {
+              "event_rate": 0.05406654343807763,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.3699923703104388,
+              "rows": 4328
+            },
+            {
+              "event_rate": 0.06425604690935743,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.41606973108949014,
+              "rows": 4093
+            },
+            {
+              "event_rate": 0.07495429616087751,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4645400595008312,
+              "rows": 3829
+            },
+            {
+              "event_rate": 0.08246258119175374,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.513489005069179,
+              "rows": 3541
+            },
+            {
+              "event_rate": 0.08341028008618036,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.5625373311566125,
+              "rows": 3249
+            },
+            {
+              "event_rate": 0.08428475486903962,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.6112045817285088,
+              "rows": 2978
+            },
+            {
+              "event_rate": 0.08730741012472487,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6574713250938408,
+              "rows": 2726
+            },
+            {
+              "event_rate": 0.08805790108564536,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.7008490924036803,
+              "rows": 2487
+            },
+            {
+              "event_rate": 0.09656084656084656,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7411154908139166,
+              "rows": 2268
+            }
+          ],
+          "event_count": 2558,
+          "event_rate": 0.05914861146437903,
+          "hazard_risk_q10": 0.22839997204870327,
+          "hazard_risk_q50": 0.43859125152878164,
+          "hazard_risk_q90": 0.705832383596633,
+          "high_minus_low_event_rate": 0.09907514450867053,
+          "high_risk_event_rate": 0.10601156069364162,
+          "low_risk_event_rate": 0.006936416184971098,
+          "roc_auc": 0.6908297000122845,
+          "rows": 43247
+        },
+        "train": {
+          "average_precision": 0.11785570497444109,
+          "brier_score": 0.22105665972278665,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.23504866718567785,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.02022575208131161,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.2741840804760611,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.038158786425480894,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.31514439722254933,
+              "rows": 19183
+            },
+            {
+              "event_rate": 0.0514335266381226,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.35848686514579403,
+              "rows": 18451
+            },
+            {
+              "event_rate": 0.06062164324077248,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.40422302489112283,
+              "rows": 17502
+            },
+            {
+              "event_rate": 0.06824402408612615,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.45186195525288475,
+              "rows": 16441
+            },
+            {
+              "event_rate": 0.07598407206736732,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.5007279510431583,
+              "rows": 15319
+            },
+            {
+              "event_rate": 0.08682444365948429,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.549755063971261,
+              "rows": 14155
+            },
+            {
+              "event_rate": 0.09407395946155037,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.5980661883291983,
+              "rows": 12926
+            },
+            {
+              "event_rate": 0.1013663535439795,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6451486426227795,
+              "rows": 11710
+            },
+            {
+              "event_rate": 0.1077639456428775,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.6895896093409934,
+              "rows": 10523
+            },
+            {
+              "event_rate": 0.11183299605921823,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7310986658229638,
+              "rows": 9389
+            }
+          ],
+          "event_count": 11240,
+          "event_rate": 0.06083666654037465,
+          "hazard_risk_q10": 0.21771266136604037,
+          "hazard_risk_q50": 0.4257374172059523,
+          "hazard_risk_q90": 0.694958563734463,
+          "high_minus_low_event_rate": 0.11257848019051743,
+          "high_risk_event_rate": 0.11931695172115177,
+          "low_risk_event_rate": 0.006738471530634336,
+          "roc_auc": 0.7042772901921863,
+          "rows": 184757
+        },
+        "validation": {
+          "average_precision": 0.12124918591949058,
+          "brier_score": 0.24004995451709313,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.26716142975505497,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.028327699983904716,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.3070231084111974,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.04969355640218651,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.344765125777795,
+              "rows": 6037
+            },
+            {
+              "event_rate": 0.05856719539829179,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.38413247806721135,
+              "rows": 5737
+            },
+            {
+              "event_rate": 0.06758007776337716,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.4255504056034617,
+              "rows": 5401
+            },
+            {
+              "event_rate": 0.07069102462271644,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4692498250263677,
+              "rows": 5036
+            },
+            {
+              "event_rate": 0.07222222222222222,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.5147429707946101,
+              "rows": 4680
+            },
+            {
+              "event_rate": 0.07461999078765545,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.5608819276903407,
+              "rows": 4342
+            },
+            {
+              "event_rate": 0.07964161274265803,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.6075436166230689,
+              "rows": 4018
+            },
+            {
+              "event_rate": 0.08328826392644673,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6525932173664671,
+              "rows": 3698
+            },
+            {
+              "event_rate": 0.08702064896755163,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.695916303925384,
+              "rows": 3390
+            },
+            {
+              "event_rate": 0.0962843295638126,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7360438215710522,
+              "rows": 3095
+            }
+          ],
+          "event_count": 3416,
+          "event_rate": 0.059039059799516076,
+          "hazard_risk_q10": 0.22215103004423517,
+          "hazard_risk_q50": 0.4475129453366287,
+          "hazard_risk_q90": 0.72535405530957,
+          "high_minus_low_event_rate": 0.11199446940891808,
+          "high_risk_event_rate": 0.11959903214656066,
+          "low_risk_event_rate": 0.0076045627376425855,
+          "roc_auc": 0.704654661378204,
+          "rows": 57860
+        }
+      },
+      "tier_scope": "Tier A"
+    },
+    {
+      "metrics": {
+        "event_count": 1859,
+        "event_rate": 0.026662650775210475,
+        "oos_lift": 0.05690298507462686,
+        "oos_roc_auc": 0.7307198305485765,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 12,
+          "B_core_only": 1369,
+          "B_full_context_outside_tier_a_scope": 1507,
+          "B_macro_missing": 57209,
+          "B_mixed_partial_context": 9626
+        },
+        "rows": 69723,
+        "validation_lift": 0.040154813739719394,
+        "validation_roc_auc": 0.7173911464386519
+      },
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/predictions/tier_b_hazard_predictions.parquet",
+      "record_view": "tier_b_separate",
+      "split_metrics": {
+        "oos": {
+          "average_precision": 0.059630850026990055,
+          "brier_score": 0.20582378337250495,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.20492890620247434,
+              "rows": 484
+            },
+            {
+              "event_rate": 0.002070393374741201,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.23851508011645353,
+              "rows": 483
+            },
+            {
+              "event_rate": 0.004149377593360996,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.27555568936950375,
+              "rows": 482
+            },
+            {
+              "event_rate": 0.014583333333333334,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.31565389626739404,
+              "rows": 480
+            },
+            {
+              "event_rate": 0.014799154334038054,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.3584219711010307,
+              "rows": 473
+            },
+            {
+              "event_rate": 0.017167381974248927,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.40296591280740013,
+              "rows": 466
+            },
+            {
+              "event_rate": 0.03056768558951965,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.4499859431141683,
+              "rows": 458
+            },
+            {
+              "event_rate": 0.038288288288288286,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.49711692956931264,
+              "rows": 444
+            },
+            {
+              "event_rate": 0.03755868544600939,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.544806464998001,
+              "rows": 426
+            },
+            {
+              "event_rate": 0.05365853658536585,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.592742400029717,
+              "rows": 410
+            },
+            {
+              "event_rate": 0.056847545219638244,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.6384195529414451,
+              "rows": 387
+            },
+            {
+              "event_rate": 0.054945054945054944,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.6807937293984824,
+              "rows": 364
+            }
+          ],
+          "event_count": 136,
+          "event_rate": 0.025387343662497668,
+          "hazard_risk_q10": 0.19184012313636611,
+          "hazard_risk_q50": 0.4047576668948106,
+          "hazard_risk_q90": 0.670053339933011,
+          "high_minus_low_event_rate": 0.05690298507462686,
+          "high_risk_event_rate": 0.05783582089552239,
+          "low_risk_event_rate": 0.0009328358208955224,
+          "roc_auc": 0.7307198305485765,
+          "rows": 5357
+        },
+        "train": {
+          "average_precision": 0.05435435012901772,
+          "brier_score": 0.18402846950752832,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.1898025681028085,
+              "rows": 5002
+            },
+            {
+              "event_rate": 0.0069972011195521796,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.22109500865569456,
+              "rows": 5002
+            },
+            {
+              "event_rate": 0.010066438494060801,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.2547971131872652,
+              "rows": 4967
+            },
+            {
+              "event_rate": 0.018913971934106162,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.29219018410364395,
+              "rows": 4917
+            },
+            {
+              "event_rate": 0.02570480928689884,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.3322445787649017,
+              "rows": 4824
+            },
+            {
+              "event_rate": 0.03127659574468085,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.3745808884166176,
+              "rows": 4700
+            },
+            {
+              "event_rate": 0.03733801888864485,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.41955906154176287,
+              "rows": 4553
+            },
+            {
+              "event_rate": 0.043349304129591607,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.4658053218843051,
+              "rows": 4383
+            },
+            {
+              "event_rate": 0.04316718340090627,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.5133746068759855,
+              "rows": 4193
+            },
+            {
+              "event_rate": 0.047108673978065806,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.5607720886991066,
+              "rows": 4012
+            },
+            {
+              "event_rate": 0.04368297148835993,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.6073809981172121,
+              "rows": 3823
+            },
+            {
+              "event_rate": 0.051148796498905906,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.6524243005770555,
+              "rows": 3656
+            }
+          ],
+          "event_count": 1533,
+          "event_rate": 0.02837207580692923,
+          "hazard_risk_q10": 0.17529291026966007,
+          "hazard_risk_q50": 0.3710000166151679,
+          "hazard_risk_q90": 0.6338445820741405,
+          "high_minus_low_event_rate": 0.05311372258721199,
+          "high_risk_event_rate": 0.056074766355140186,
+          "low_risk_event_rate": 0.0029610437679281946,
+          "roc_auc": 0.7025677263544807,
+          "rows": 54032
+        },
+        "validation": {
+          "average_precision": 0.04740678927241954,
+          "brier_score": 0.16579673703447179,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.16753055111184667,
+              "rows": 922
+            },
+            {
+              "event_rate": 0.004338394793926247,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.1970179026323706,
+              "rows": 922
+            },
+            {
+              "event_rate": 0.00980392156862745,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.2300298799199811,
+              "rows": 918
+            },
+            {
+              "event_rate": 0.009900990099009901,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.26669473171405594,
+              "rows": 909
+            },
+            {
+              "event_rate": 0.017777777777777778,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.3065143313283377,
+              "rows": 900
+            },
+            {
+              "event_rate": 0.01809954751131222,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.34872726031108037,
+              "rows": 884
+            },
+            {
+              "event_rate": 0.02534562211981567,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.3930620986311704,
+              "rows": 868
+            },
+            {
+              "event_rate": 0.028368794326241134,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.4389939969572363,
+              "rows": 846
+            },
+            {
+              "event_rate": 0.024330900243309004,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.486616867069219,
+              "rows": 822
+            },
+            {
+              "event_rate": 0.026184538653366583,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.5348775573031859,
+              "rows": 802
+            },
+            {
+              "event_rate": 0.026888604353393086,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.5828135314968584,
+              "rows": 781
+            },
+            {
+              "event_rate": 0.03684210526315789,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.6291053067350478,
+              "rows": 760
+            }
+          ],
+          "event_count": 190,
+          "event_rate": 0.01838591058641378,
+          "hazard_risk_q10": 0.16649314553741495,
+          "hazard_risk_q50": 0.35464857843983194,
+          "hazard_risk_q90": 0.6036942880443954,
+          "high_minus_low_event_rate": 0.040154813739719394,
+          "high_risk_event_rate": 0.042573778422835024,
+          "low_risk_event_rate": 0.0024189646831156266,
+          "roc_auc": 0.7173911464386519,
+          "rows": 10334
+        }
+      },
+      "tier_scope": "Tier B"
+    },
+    {
+      "metrics": {
+        "event_count": 19073,
+        "event_rate": 0.05363806888328313,
+        "oos_lift": 0.09649213043925522,
+        "oos_roc_auc": 0.6955203339156354,
+        "partial_context_subtype_counts": {
+          "B_constituent_missing": 12,
+          "B_core_only": 1369,
+          "B_full_context_outside_tier_a_scope": 1507,
+          "B_macro_missing": 57209,
+          "B_mixed_partial_context": 9626,
+          "Tier_A_full_context": 285864
+        },
+        "rows": 355587,
+        "validation_lift": 0.10638609868758707,
+        "validation_roc_auc": 0.7164466905054679
+      },
+      "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/predictions/tier_ab_hazard_predictions.parquet",
+      "record_view": "tier_ab_combined",
+      "split_metrics": {
+        "oos": {
+          "average_precision": 0.09887190872140322,
+          "brier_score": 0.22771502762275214,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.23870166773493615,
+              "rows": 5099
+            },
+            {
+              "event_rate": 0.01863841475377673,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.2785538670314755,
+              "rows": 5097
+            },
+            {
+              "event_rate": 0.03839232153569286,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.32043129185765384,
+              "rows": 5001
+            },
+            {
+              "event_rate": 0.050124792013311145,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.3645675642495691,
+              "rows": 4808
+            },
+            {
+              "event_rate": 0.05913272010512484,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.41009789787123757,
+              "rows": 4566
+            },
+            {
+              "event_rate": 0.06868451688009314,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4578593721063868,
+              "rows": 4295
+            },
+            {
+              "event_rate": 0.07651912978244561,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.5062160862456244,
+              "rows": 3999
+            },
+            {
+              "event_rate": 0.07798537774167344,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.5546720026148413,
+              "rows": 3693
+            },
+            {
+              "event_rate": 0.07843713278495887,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.6028950641823289,
+              "rows": 3404
+            },
+            {
+              "event_rate": 0.08290816326530612,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6490086786409419,
+              "rows": 3136
+            },
+            {
+              "event_rate": 0.0838552540013918,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.6924426095324607,
+              "rows": 2874
+            },
+            {
+              "event_rate": 0.09080547112462006,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7327731195543353,
+              "rows": 2632
+            }
+          ],
+          "event_count": 2694,
+          "event_rate": 0.05542753682824459,
+          "hazard_risk_q10": 0.2242251135942258,
+          "hazard_risk_q50": 0.43488535969824366,
+          "hazard_risk_q90": 0.7027368189097455,
+          "high_minus_low_event_rate": 0.09649213043925522,
+          "high_risk_event_rate": 0.10287007509515482,
+          "low_risk_event_rate": 0.0063779446558995985,
+          "roc_auc": 0.6955203339156354,
+          "rows": 48604
+        },
+        "train": {
+          "average_precision": 0.10633431640323986,
+          "brier_score": 0.21267810303168766,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.22584151582436168,
+              "rows": 24581
+            },
+            {
+              "event_rate": 0.01753386762133355,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.2633809586646835,
+              "rows": 24581
+            },
+            {
+              "event_rate": 0.03238095238095238,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.3027325976447748,
+              "rows": 24150
+            },
+            {
+              "event_rate": 0.044590893529613145,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.3445369857943625,
+              "rows": 23368
+            },
+            {
+              "event_rate": 0.05307712980381618,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.3886705737528584,
+              "rows": 22326
+            },
+            {
+              "event_rate": 0.06002554278416347,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.43468107383145455,
+              "rows": 21141
+            },
+            {
+              "event_rate": 0.06712962962962964,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.4821308317849128,
+              "rows": 19872
+            },
+            {
+              "event_rate": 0.07654547416118243,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.5299065517494934,
+              "rows": 18538
+            },
+            {
+              "event_rate": 0.08160523395058122,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.5773224649205109,
+              "rows": 17119
+            },
+            {
+              "event_rate": 0.08752067167027096,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6236171113709174,
+              "rows": 15722
+            },
+            {
+              "event_rate": 0.09068729959570612,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.6676822121077217,
+              "rows": 14346
+            },
+            {
+              "event_rate": 0.09482560367957071,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7090493381618644,
+              "rows": 13045
+            }
+          ],
+          "event_count": 12773,
+          "event_rate": 0.05349073868561785,
+          "hazard_risk_q10": 0.20666920748263098,
+          "hazard_risk_q50": 0.41345057175511196,
+          "hazard_risk_q90": 0.6843156297395881,
+          "high_minus_low_event_rate": 0.1024749780141547,
+          "high_risk_event_rate": 0.10810754219188408,
+          "low_risk_event_rate": 0.0056325641777293855,
+          "roc_auc": 0.7106227268853728,
+          "rows": 238789
+        },
+        "validation": {
+          "average_precision": 0.11643636805534305,
+          "brier_score": 0.22879775125191718,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.25428691397242875,
+              "rows": 7135
+            },
+            {
+              "event_rate": 0.025227750525578137,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.2928079998298269,
+              "rows": 7135
+            },
+            {
+              "event_rate": 0.04442846872753415,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.32962106313257955,
+              "rows": 6955
+            },
+            {
+              "event_rate": 0.05191092386397833,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.36807004781818664,
+              "rows": 6646
+            },
+            {
+              "event_rate": 0.060466592604348515,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.4085479509379147,
+              "rows": 6301
+            },
+            {
+              "event_rate": 0.06283783783783783,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4512528744844228,
+              "rows": 5920
+            },
+            {
+              "event_rate": 0.06488824801730353,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.49570566058591053,
+              "rows": 5548
+            },
+            {
+              "event_rate": 0.06707787201233616,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.5410058310441945,
+              "rows": 5188
+            },
+            {
+              "event_rate": 0.07024793388429752,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.5870060570914027,
+              "rows": 4840
+            },
+            {
+              "event_rate": 0.07311111111111111,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6316136708396335,
+              "rows": 4500
+            },
+            {
+              "event_rate": 0.07576120834332295,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.6747383453383117,
+              "rows": 4171
+            },
+            {
+              "event_rate": 0.08456549935149157,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7149612609289346,
+              "rows": 3855
+            }
+          ],
+          "event_count": 3606,
+          "event_rate": 0.05287855236531073,
+          "hazard_risk_q10": 0.2103636785860391,
+          "hazard_risk_q50": 0.43350777179501,
+          "hazard_risk_q90": 0.7110188419308249,
+          "high_minus_low_event_rate": 0.10638609868758707,
+          "high_risk_event_rate": 0.1114451206100154,
+          "low_risk_event_rate": 0.00505902192242833,
+          "roc_auc": 0.7164466905054679,
+          "rows": 68194
+        }
+      },
+      "tier_scope": "Tier A+B"
+    }
+  ],
+  "tier_rows": {
+    "tier_a_hazard_rows": 285864,
+    "tier_a_input_rows": 46650,
+    "tier_b_fallback_hazard_rows": 69723,
+    "tier_b_fallback_input_rows": 12398,
+    "tier_b_training_input_rows": 59048
+  },
+  "variant_count": 5,
+  "variant_results": [
+    {
+      "characteristic_score": 1.190936343916083,
+      "description": "Discrete-time logistic hazard for 1x label-threshold adverse excursion using core24 features.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "adverse_1x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 1.0
+      },
+      "feature_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_feature_reads/v01_logit_core24_adverse_1x_hazard_feature_read.csv",
+        "sha256": "f9e2b2df06521491beb49be68f1a812ec4aa94815c95b211fffc6fb43d680cff"
+      },
+      "feature_read": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 25,
+        "top_features": [
+          {
+            "abs_coefficient": 0.49363349377402677,
+            "coefficient": 0.49363349377402677,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "minutes_from_cash_open"
+          },
+          {
+            "abs_coefficient": 0.3621346683388383,
+            "coefficient": -0.3621346683388383,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_bar"
+          },
+          {
+            "abs_coefficient": 0.3621346683388159,
+            "coefficient": -0.3621346683388159,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_frac"
+          },
+          {
+            "abs_coefficient": 0.2539428797030641,
+            "coefficient": 0.2539428797030641,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "di_spread_14"
+          },
+          {
+            "abs_coefficient": 0.19811533466410147,
+            "coefficient": 0.19811533466410147,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "is_first_30m_after_open"
+          },
+          {
+            "abs_coefficient": 0.1674901215312987,
+            "coefficient": -0.1674901215312987,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "rsi_14"
+          },
+          {
+            "abs_coefficient": 0.15732681028422188,
+            "coefficient": 0.15732681028422188,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hl_range"
+          },
+          {
+            "abs_coefficient": 0.11376363815845936,
+            "coefficient": 0.11376363815845936,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "rsi_14_slope_3"
+          },
+          {
+            "abs_coefficient": 0.10142506249010311,
+            "coefficient": 0.10142506249010311,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "atr_14_over_atr_50"
+          },
+          {
+            "abs_coefficient": 0.09831260785711478,
+            "coefficient": -0.09831260785711478,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "log_return_3"
+          }
+        ]
+      },
+      "hazard_curve_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_hazard_curves/v01_logit_core24_adverse_1x_hazard_curve.csv",
+        "sha256": "dc6244ba562addf184ebdee484f9c7d6a93205ce3c4091d2f77c3f4b52cb90cb"
+      },
+      "idea_id": "core_feature_adverse_hazard",
+      "metrics": {
+        "oos": {
+          "average_precision": 0.07055298369449896,
+          "brier_score": 0.21841287785097147,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0647887323943662,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6856955265673728,
+              "rows": 4615
+            },
+            {
+              "event_rate": 0.05701042873696408,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.63858099641541,
+              "rows": 4315
+            },
+            {
+              "event_rate": 0.03416912487708948,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5889150080030187,
+              "rows": 4068
+            },
+            {
+              "event_rate": 0.02774949083503055,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5384727101332065,
+              "rows": 3928
+            },
+            {
+              "event_rate": 0.01859612362493452,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.4873868170441191,
+              "rows": 3818
+            },
+            {
+              "event_rate": 0.015483182060864922,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.43655974294082667,
+              "rows": 3746
+            },
+            {
+              "event_rate": 0.010848928668294006,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.3872535523349237,
+              "rows": 3687
+            },
+            {
+              "event_rate": 0.011242116808335619,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.3402049841485128,
+              "rows": 3647
+            },
+            {
+              "event_rate": 0.008596783139212423,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.2958813720346483,
+              "rows": 3606
+            },
+            {
+              "event_rate": 0.009513150531617236,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2553803482255151,
+              "rows": 3574
+            },
+            {
+              "event_rate": 0.009889799378355468,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.21840107651720195,
+              "rows": 3539
+            },
+            {
+              "event_rate": 0.009988584474885844,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.18545701298622944,
+              "rows": 3504
+            }
+          ],
+          "event_count": 1138,
+          "event_rate": 0.024713879297239776,
+          "hazard_risk_q10": 0.190296563912771,
+          "hazard_risk_q50": 0.427396194264997,
+          "hazard_risk_q90": 0.689652855086454,
+          "high_minus_low_event_rate": 0.058740499457111836,
+          "high_risk_event_rate": 0.06406080347448426,
+          "low_risk_event_rate": 0.005320304017372421,
+          "roc_auc": 0.741978555267064,
+          "rows": 46047
+        },
+        "train": {
+          "average_precision": 0.06260440451814396,
+          "brier_score": 0.21634010947416604,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.06440574084478268,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.680789816359701,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.053335516977836006,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6337120091834183,
+              "rows": 18318
+            },
+            {
+              "event_rate": 0.037829421601983736,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5849107311097512,
+              "rows": 17341
+            },
+            {
+              "event_rate": 0.028588552592148635,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5345484618793576,
+              "rows": 16685
+            },
+            {
+              "event_rate": 0.022211253701875617,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.4833332480335741,
+              "rows": 16208
+            },
+            {
+              "event_rate": 0.017730943967693084,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.43269157804713926,
+              "rows": 15848
+            },
+            {
+              "event_rate": 0.015481467206269674,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.38349759923330584,
+              "rows": 15567
+            },
+            {
+              "event_rate": 0.012462482056635782,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.3366236797115443,
+              "rows": 15326
+            },
+            {
+              "event_rate": 0.010571522960026428,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.29272951793566737,
+              "rows": 15135
+            },
+            {
+              "event_rate": 0.009015025041736227,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.25236036628844244,
+              "rows": 14975
+            },
+            {
+              "event_rate": 0.009838274932614556,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.21577901139250752,
+              "rows": 14840
+            },
+            {
+              "event_rate": 0.010140193276167143,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.18322698230432585,
+              "rows": 14694
+            }
+          ],
+          "event_count": 5034,
+          "event_rate": 0.025879619157292973,
+          "hazard_risk_q10": 0.18973955890443142,
+          "hazard_risk_q50": 0.4241580727012465,
+          "hazard_risk_q90": 0.682735572727055,
+          "high_minus_low_event_rate": 0.05377339091096031,
+          "high_risk_event_rate": 0.05955685790664199,
+          "low_risk_event_rate": 0.005783466995681678,
+          "roc_auc": 0.7192825867308097,
+          "rows": 194516
+        },
+        "validation": {
+          "average_precision": 0.09120727461141795,
+          "brier_score": 0.22838182995363165,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.07854498631900853,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6946451611712186,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.059563318777292575,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.645729975329196,
+              "rows": 5725
+            },
+            {
+              "event_rate": 0.03807578008915304,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5961707011094404,
+              "rows": 5384
+            },
+            {
+              "event_rate": 0.027225333075883377,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5455588891437598,
+              "rows": 5179
+            },
+            {
+              "event_rate": 0.022429535529972212,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.49489023407835064,
+              "rows": 5038
+            },
+            {
+              "event_rate": 0.018883248730964468,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4442323285042649,
+              "rows": 4925
+            },
+            {
+              "event_rate": 0.016556291390728478,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.3947550386096482,
+              "rows": 4832
+            },
+            {
+              "event_rate": 0.011994949494949494,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.3477837060468484,
+              "rows": 4752
+            },
+            {
+              "event_rate": 0.010862619808306708,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.3035490551291458,
+              "rows": 4695
+            },
+            {
+              "event_rate": 0.009905254091300603,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2627425854703292,
+              "rows": 4644
+            },
+            {
+              "event_rate": 0.00891692040017399,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.22557372074406515,
+              "rows": 4598
+            },
+            {
+              "event_rate": 0.009436032477507132,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.19268970096695476,
+              "rows": 4557
+            }
+          ],
+          "event_count": 1699,
+          "event_rate": 0.028063162763040533,
+          "hazard_risk_q10": 0.18788722683942885,
+          "hazard_risk_q50": 0.43353563319181876,
+          "hazard_risk_q90": 0.7121241543959081,
+          "high_minus_low_event_rate": 0.07019572219010653,
+          "high_risk_event_rate": 0.07589396316789165,
+          "low_risk_event_rate": 0.005698240977785119,
+          "roc_auc": 0.7556777841319692,
+          "rows": 60542
+        }
+      },
+      "spec": {
+        "base_feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "c_value": 0.5,
+        "description": "Discrete-time logistic hazard for 1x label-threshold adverse excursion using core24 features.",
+        "event_name": "adverse_1x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator",
+          "hazard_elapsed_bar",
+          "hazard_elapsed_frac"
+        ],
+        "idea_id": "core_feature_adverse_hazard",
+        "model_type": "logistic_hazard",
+        "random_state": 2501,
+        "threshold_multiplier": 1.0,
+        "tier_b_compatible": true,
+        "variant_id": "v01_logit_core24_adverse_1x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 25,
+        "feature_count_before_filter": 26,
+        "fit_rows": 194516,
+        "train_event_count": 5034,
+        "train_event_rate": 0.025879619157292973,
+        "train_rows": 194516
+      },
+      "variant_id": "v01_logit_core24_adverse_1x"
+    },
+    {
+      "characteristic_score": 1.05821008460911,
+      "description": "Discrete-time logistic hazard for deeper 1.5x adverse excursion using core24 features.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "adverse_1p5x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 1.5
+      },
+      "feature_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_feature_reads/v02_logit_core24_adverse_1p5x_hazard_feature_read.csv",
+        "sha256": "da6f63c0127f413b7bb01c775817100f073bf88a5f8cb34f540981b16e7d3880"
+      },
+      "feature_read": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 25,
+        "top_features": [
+          {
+            "abs_coefficient": 0.6256414768904542,
+            "coefficient": 0.6256414768904542,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "minutes_from_cash_open"
+          },
+          {
+            "abs_coefficient": 0.32524321335123924,
+            "coefficient": 0.32524321335123924,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "di_spread_14"
+          },
+          {
+            "abs_coefficient": 0.2858344450549018,
+            "coefficient": 0.2858344450549018,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "is_first_30m_after_open"
+          },
+          {
+            "abs_coefficient": 0.2543884253356469,
+            "coefficient": -0.2543884253356469,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_frac"
+          },
+          {
+            "abs_coefficient": 0.2543884253356457,
+            "coefficient": -0.2543884253356457,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_bar"
+          },
+          {
+            "abs_coefficient": 0.23132843428241626,
+            "coefficient": 0.23132843428241626,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hl_range"
+          },
+          {
+            "abs_coefficient": 0.15392595977579843,
+            "coefficient": -0.15392595977579843,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "log_return_3"
+          },
+          {
+            "abs_coefficient": 0.14420639071338903,
+            "coefficient": -0.14420639071338903,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "rsi_14"
+          },
+          {
+            "abs_coefficient": 0.11026136193801908,
+            "coefficient": 0.11026136193801908,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "close_ema20_ratio"
+          },
+          {
+            "abs_coefficient": 0.1096215951527638,
+            "coefficient": -0.1096215951527638,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "ppo_hist_12_26_9"
+          }
+        ]
+      },
+      "hazard_curve_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_hazard_curves/v02_logit_core24_adverse_1p5x_hazard_curve.csv",
+        "sha256": "01f38c18b5b181de1151ee844a05ef79bc56d7496653be9b203b0b7067f0ca20"
+      },
+      "idea_id": "core_feature_deeper_adverse_hazard",
+      "metrics": {
+        "oos": {
+          "average_precision": 0.03677852301290565,
+          "brier_score": 0.23467346219422344,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.02535211267605634,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6391631291482849,
+              "rows": 4615
+            },
+            {
+              "event_rate": 0.03024238381142984,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6055366463515466,
+              "rows": 4497
+            },
+            {
+              "event_rate": 0.0231651376146789,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5705963504478158,
+              "rows": 4360
+            },
+            {
+              "event_rate": 0.018083607327383747,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5353720616018987,
+              "rows": 4258
+            },
+            {
+              "event_rate": 0.015311004784688996,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.49963838902485086,
+              "rows": 4180
+            },
+            {
+              "event_rate": 0.01117861482381531,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.46414491839098176,
+              "rows": 4115
+            },
+            {
+              "event_rate": 0.007620452310717798,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.4294325318957426,
+              "rows": 4068
+            },
+            {
+              "event_rate": 0.007431260837255388,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.39538995983379854,
+              "rows": 4037
+            },
+            {
+              "event_rate": 0.007736461192912403,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.36223586594682855,
+              "rows": 4007
+            },
+            {
+              "event_rate": 0.00729559748427673,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.33030525344576794,
+              "rows": 3975
+            },
+            {
+              "event_rate": 0.006590621039290241,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.29993052768370876,
+              "rows": 3945
+            },
+            {
+              "event_rate": 0.008165348303138555,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.2713868231551338,
+              "rows": 3919
+            }
+          ],
+          "event_count": 720,
+          "event_rate": 0.01440691531935329,
+          "hazard_risk_q10": 0.23138800459435166,
+          "hazard_risk_q50": 0.44796687829135595,
+          "hazard_risk_q90": 0.691551398570194,
+          "high_minus_low_event_rate": 0.03041216486594638,
+          "high_risk_event_rate": 0.032913165266106444,
+          "low_risk_event_rate": 0.002501000400160064,
+          "roc_auc": 0.7220193704545865,
+          "rows": 49976
+        },
+        "train": {
+          "average_precision": 0.03759986357151263,
+          "brier_score": 0.21871975853061673,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.027018744573267275,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6224634695843839,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.029186351706036746,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.5877650429922583,
+              "rows": 19050
+            },
+            {
+              "event_rate": 0.02373742835514221,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5526296816765839,
+              "rows": 18494
+            },
+            {
+              "event_rate": 0.020548324563832734,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5170871080263273,
+              "rows": 18055
+            },
+            {
+              "event_rate": 0.015607328658674507,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.4813765340000978,
+              "rows": 17684
+            },
+            {
+              "event_rate": 0.013786764705882353,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4458436887397464,
+              "rows": 17408
+            },
+            {
+              "event_rate": 0.010018639328984157,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.4109650610157388,
+              "rows": 17168
+            },
+            {
+              "event_rate": 0.010178865615438926,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.37728556333478397,
+              "rows": 16996
+            },
+            {
+              "event_rate": 0.008203055340902337,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.34462869991589296,
+              "rows": 16823
+            },
+            {
+              "event_rate": 0.008031165717710518,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.3134418501668266,
+              "rows": 16685
+            },
+            {
+              "event_rate": 0.0070690592713431215,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.2839599537862728,
+              "rows": 16551
+            },
+            {
+              "event_rate": 0.008153827430935864,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.2559961135705348,
+              "rows": 16434
+            }
+          ],
+          "event_count": 3279,
+          "event_rate": 0.015545662717433045,
+          "hazard_risk_q10": 0.22464544453515062,
+          "hazard_risk_q50": 0.42825316842019556,
+          "hazard_risk_q90": 0.6688716224845118,
+          "high_minus_low_event_rate": 0.031005546863888494,
+          "high_risk_event_rate": 0.03456122884369222,
+          "low_risk_event_rate": 0.003555681979803726,
+          "roc_auc": 0.7054752800631805,
+          "rows": 210927
+        },
+        "validation": {
+          "average_precision": 0.06955521113087196,
+          "brier_score": 0.24315411687173022,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.04184773861258651,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6477334548500789,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.034100453552830506,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6108769077732251,
+              "rows": 5953
+            },
+            {
+              "event_rate": 0.031130434782608695,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5748272639211284,
+              "rows": 5750
+            },
+            {
+              "event_rate": 0.01884760366182014,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5385848677113295,
+              "rows": 5571
+            },
+            {
+              "event_rate": 0.01609952433223564,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.5032737792499327,
+              "rows": 5466
+            },
+            {
+              "event_rate": 0.013201933804388248,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4682048869632626,
+              "rows": 5378
+            },
+            {
+              "event_rate": 0.011871113623516111,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.43277636701465494,
+              "rows": 5307
+            },
+            {
+              "event_rate": 0.010106788710907704,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.39864670501447175,
+              "rows": 5244
+            },
+            {
+              "event_rate": 0.010209978809477943,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.3657437261437755,
+              "rows": 5191
+            },
+            {
+              "event_rate": 0.008369015181004281,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.333877617056027,
+              "rows": 5138
+            },
+            {
+              "event_rate": 0.005888125613346418,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.30369908594996026,
+              "rows": 5095
+            },
+            {
+              "event_rate": 0.007502467917077986,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.27571220673964225,
+              "rows": 5065
+            }
+          ],
+          "event_count": 1186,
+          "event_rate": 0.018142601459362716,
+          "hazard_risk_q10": 0.22322857426992251,
+          "hazard_risk_q50": 0.44556286037705967,
+          "hazard_risk_q90": 0.7238077602712579,
+          "high_minus_low_event_rate": 0.048489483747609946,
+          "high_risk_event_rate": 0.050630975143403444,
+          "low_risk_event_rate": 0.0021414913957934992,
+          "roc_auc": 0.7684827834170856,
+          "rows": 65371
+        }
+      },
+      "spec": {
+        "base_feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "c_value": 0.5,
+        "description": "Discrete-time logistic hazard for deeper 1.5x adverse excursion using core24 features.",
+        "event_name": "adverse_1p5x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator",
+          "hazard_elapsed_bar",
+          "hazard_elapsed_frac"
+        ],
+        "idea_id": "core_feature_deeper_adverse_hazard",
+        "model_type": "logistic_hazard",
+        "random_state": 2501,
+        "threshold_multiplier": 1.5,
+        "tier_b_compatible": true,
+        "variant_id": "v02_logit_core24_adverse_1p5x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 25,
+        "feature_count_before_filter": 26,
+        "fit_rows": 210927,
+        "train_event_count": 3279,
+        "train_event_rate": 0.015545662717433045,
+        "train_rows": 210927
+      },
+      "variant_id": "v02_logit_core24_adverse_1p5x"
+    },
+    {
+      "characteristic_score": 1.185401085205805,
+      "description": "Discrete-time logistic hazard using volatility/session features to test lifecycle risk concentration.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "adverse_1x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 1.0
+      },
+      "feature_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_feature_reads/v03_logit_vol_session_adverse_1x_hazard_feature_read.csv",
+        "sha256": "846d4825fa7539368fe126ee4dde6fd5dcee21959bc27e406576ddab50c250b8"
+      },
+      "feature_read": {
+        "dropped_features": [],
+        "feature_count_after_filter": 16,
+        "top_features": [
+          {
+            "abs_coefficient": 0.49548100681274454,
+            "coefficient": 0.49548100681274454,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "minutes_from_cash_open"
+          },
+          {
+            "abs_coefficient": 0.3620204140711449,
+            "coefficient": -0.3620204140711449,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_frac"
+          },
+          {
+            "abs_coefficient": 0.3620204140711448,
+            "coefficient": -0.3620204140711448,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_bar"
+          },
+          {
+            "abs_coefficient": 0.26111240683773435,
+            "coefficient": 0.26111240683773435,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "di_spread_14"
+          },
+          {
+            "abs_coefficient": 0.19823349491790832,
+            "coefficient": 0.19823349491790832,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "is_first_30m_after_open"
+          },
+          {
+            "abs_coefficient": 0.17728912312690517,
+            "coefficient": -0.17728912312690517,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "rsi_14"
+          },
+          {
+            "abs_coefficient": 0.15828218538996022,
+            "coefficient": 0.15828218538996022,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hl_range"
+          },
+          {
+            "abs_coefficient": 0.10717627102360201,
+            "coefficient": -0.10717627102360201,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "log_return_3"
+          },
+          {
+            "abs_coefficient": 0.10240375383451641,
+            "coefficient": 0.10240375383451641,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "atr_14_over_atr_50"
+          },
+          {
+            "abs_coefficient": 0.06532036071784698,
+            "coefficient": 0.06532036071784698,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "historical_vol_20"
+          }
+        ]
+      },
+      "hazard_curve_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_hazard_curves/v03_logit_vol_session_adverse_1x_hazard_curve.csv",
+        "sha256": "2ae804aca152d4993050af3b21978a3b3cc7bebfefcc7c2f63f9fbf3e04ac195"
+      },
+      "idea_id": "volatility_session_adverse_hazard",
+      "metrics": {
+        "oos": {
+          "average_precision": 0.07060115362391331,
+          "brier_score": 0.21892648931060377,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0647887323943662,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6864370755088991,
+              "rows": 4615
+            },
+            {
+              "event_rate": 0.05701042873696408,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6393829232330422,
+              "rows": 4315
+            },
+            {
+              "event_rate": 0.03416912487708948,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.58982825991194,
+              "rows": 4068
+            },
+            {
+              "event_rate": 0.02774949083503055,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5394199914798836,
+              "rows": 3928
+            },
+            {
+              "event_rate": 0.01859612362493452,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.48830796333603704,
+              "rows": 3818
+            },
+            {
+              "event_rate": 0.015483182060864922,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.43744170377602315,
+              "rows": 3746
+            },
+            {
+              "event_rate": 0.010848928668294006,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.3880604218320791,
+              "rows": 3687
+            },
+            {
+              "event_rate": 0.011242116808335619,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.340945273153705,
+              "rows": 3647
+            },
+            {
+              "event_rate": 0.008596783139212423,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.2965497394115317,
+              "rows": 3606
+            },
+            {
+              "event_rate": 0.009513150531617236,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2559577244721165,
+              "rows": 3574
+            },
+            {
+              "event_rate": 0.009889799378355468,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.21892250775616506,
+              "rows": 3539
+            },
+            {
+              "event_rate": 0.009988584474885844,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.18590729022404634,
+              "rows": 3504
+            }
+          ],
+          "event_count": 1138,
+          "event_rate": 0.024713879297239776,
+          "hazard_risk_q10": 0.19141362938261186,
+          "hazard_risk_q50": 0.4279536169222084,
+          "hazard_risk_q90": 0.6894426017132799,
+          "high_minus_low_event_rate": 0.057220412595005425,
+          "high_risk_event_rate": 0.06275787187839305,
+          "low_risk_event_rate": 0.005537459283387622,
+          "roc_auc": 0.741721483956954,
+          "rows": 46047
+        },
+        "train": {
+          "average_precision": 0.06272135512985555,
+          "brier_score": 0.21636815803026677,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.06440574084478268,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6808834366946162,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.053335516977836006,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6337997019736393,
+              "rows": 18318
+            },
+            {
+              "event_rate": 0.037829421601983736,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5850059310477342,
+              "rows": 17341
+            },
+            {
+              "event_rate": 0.028588552592148635,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5346556182914636,
+              "rows": 16685
+            },
+            {
+              "event_rate": 0.022211253701875617,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.48345146381249743,
+              "rows": 16208
+            },
+            {
+              "event_rate": 0.017730943967693084,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4328156767198451,
+              "rows": 15848
+            },
+            {
+              "event_rate": 0.015481467206269674,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.38361782149461987,
+              "rows": 15567
+            },
+            {
+              "event_rate": 0.012462482056635782,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.3367375817201253,
+              "rows": 15326
+            },
+            {
+              "event_rate": 0.010571522960026428,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.2928353974795016,
+              "rows": 15135
+            },
+            {
+              "event_rate": 0.009015025041736227,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2524712233024462,
+              "rows": 14975
+            },
+            {
+              "event_rate": 0.009838274932614556,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.21589593075774124,
+              "rows": 14840
+            },
+            {
+              "event_rate": 0.010140193276167143,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.1833297022792707,
+              "rows": 14694
+            }
+          ],
+          "event_count": 5034,
+          "event_rate": 0.025879619157292973,
+          "hazard_risk_q10": 0.18977349673632754,
+          "hazard_risk_q50": 0.42437328476583247,
+          "hazard_risk_q90": 0.6823944494127134,
+          "high_minus_low_event_rate": 0.05351634793337446,
+          "high_risk_event_rate": 0.059402632120090476,
+          "low_risk_event_rate": 0.005886284186716019,
+          "roc_auc": 0.7190640938039985,
+          "rows": 194516
+        },
+        "validation": {
+          "average_precision": 0.09094077222680735,
+          "brier_score": 0.22867214797234628,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.07854498631900853,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6950141456975754,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.059563318777292575,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6461353094538804,
+              "rows": 5725
+            },
+            {
+              "event_rate": 0.03807578008915304,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.5966256878467436,
+              "rows": 5384
+            },
+            {
+              "event_rate": 0.027225333075883377,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5460209072471718,
+              "rows": 5179
+            },
+            {
+              "event_rate": 0.022429535529972212,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.4953420039279992,
+              "rows": 5038
+            },
+            {
+              "event_rate": 0.018883248730964468,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4446705611800184,
+              "rows": 4925
+            },
+            {
+              "event_rate": 0.016556291390728478,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.3951852304029851,
+              "rows": 4832
+            },
+            {
+              "event_rate": 0.011994949494949494,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.34820165238545325,
+              "rows": 4752
+            },
+            {
+              "event_rate": 0.010862619808306708,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.30394023216649113,
+              "rows": 4695
+            },
+            {
+              "event_rate": 0.009905254091300603,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2631099829973523,
+              "rows": 4644
+            },
+            {
+              "event_rate": 0.00891692040017399,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.22590815840547152,
+              "rows": 4598
+            },
+            {
+              "event_rate": 0.009436032477507132,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.1929802680444037,
+              "rows": 4557
+            }
+          ],
+          "event_count": 1699,
+          "event_rate": 0.028063162763040533,
+          "hazard_risk_q10": 0.18827995081830629,
+          "hazard_risk_q50": 0.4342645346505162,
+          "hazard_risk_q90": 0.7123888659276848,
+          "high_minus_low_event_rate": 0.06978280617722356,
+          "high_risk_event_rate": 0.07564621356016187,
+          "low_risk_event_rate": 0.005863407382938311,
+          "roc_auc": 0.7557960045654553,
+          "rows": 60542
+        }
+      },
+      "spec": {
+        "base_feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "historical_vol_20",
+          "adx_14",
+          "di_spread_14",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "minutes_from_cash_open",
+          "is_first_30m_after_open"
+        ],
+        "c_value": 0.35,
+        "description": "Discrete-time logistic hazard using volatility/session features to test lifecycle risk concentration.",
+        "event_name": "adverse_1x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "historical_vol_20",
+          "adx_14",
+          "di_spread_14",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "minutes_from_cash_open",
+          "is_first_30m_after_open",
+          "hazard_elapsed_bar",
+          "hazard_elapsed_frac"
+        ],
+        "idea_id": "volatility_session_adverse_hazard",
+        "model_type": "logistic_hazard",
+        "random_state": 2501,
+        "threshold_multiplier": 1.0,
+        "tier_b_compatible": true,
+        "variant_id": "v03_logit_vol_session_adverse_1x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [],
+        "feature_count_after_filter": 16,
+        "feature_count_before_filter": 16,
+        "fit_rows": 194516,
+        "train_event_count": 5034,
+        "train_event_rate": 0.025879619157292973,
+        "train_rows": 194516
+      },
+      "variant_id": "v03_logit_vol_session_adverse_1x"
+    },
+    {
+      "characteristic_score": 1.2167682451186823,
+      "description": "Discrete-time logistic hazard for reversal after an initially favorable move.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "reversal_after_favorable_1x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 1.0
+      },
+      "feature_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_feature_reads/v04_logit_core24_reversal_after_favorable_1x_hazard_feature_read.csv",
+        "sha256": "de2fe8b8efc8fc707d68d591247b2d24e98e6612fccfacaf430f2a0a373f4d26"
+      },
+      "feature_read": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 25,
+        "top_features": [
+          {
+            "abs_coefficient": 0.359532376442687,
+            "coefficient": 0.359532376442687,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_bar"
+          },
+          {
+            "abs_coefficient": 0.35953237644268504,
+            "coefficient": 0.35953237644268504,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_frac"
+          },
+          {
+            "abs_coefficient": 0.22511481290747248,
+            "coefficient": -0.22511481290747248,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "close_ema20_ratio"
+          },
+          {
+            "abs_coefficient": 0.21501222045449694,
+            "coefficient": 0.21501222045449694,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "historical_vol_20"
+          },
+          {
+            "abs_coefficient": 0.17098734271776622,
+            "coefficient": 0.17098734271776622,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hl_range"
+          },
+          {
+            "abs_coefficient": 0.15249991771622495,
+            "coefficient": 0.15249991771622495,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "is_first_30m_after_open"
+          },
+          {
+            "abs_coefficient": 0.12208840009702629,
+            "coefficient": 0.12208840009702629,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "ppo_hist_12_26_9"
+          },
+          {
+            "abs_coefficient": 0.11489482939717628,
+            "coefficient": 0.11489482939717628,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "ema20_ema50_diff"
+          },
+          {
+            "abs_coefficient": 0.07958650390596506,
+            "coefficient": 0.07958650390596506,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "log_return_3"
+          },
+          {
+            "abs_coefficient": 0.0787095681271668,
+            "coefficient": 0.0787095681271668,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "di_spread_14"
+          }
+        ]
+      },
+      "hazard_curve_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_hazard_curves/v04_logit_core24_reversal_after_favorable_1x_hazard_curve.csv",
+        "sha256": "ad0abcdb501211d203e0e85282e3e9a9b81e43cfb3b7ca832665b01cff555a92"
+      },
+      "idea_id": "reversal_after_favorable_move_hazard",
+      "metrics": {
+        "oos": {
+          "average_precision": 0.1033525717470856,
+          "brier_score": 0.23042669306656494,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.2422435998219809,
+              "rows": 4615
+            },
+            {
+              "event_rate": 0.02037277850021673,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.28274518347706623,
+              "rows": 4614
+            },
+            {
+              "event_rate": 0.042044700154901526,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.32521775797831953,
+              "rows": 4519
+            },
+            {
+              "event_rate": 0.05406654343807763,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.3699923703104388,
+              "rows": 4328
+            },
+            {
+              "event_rate": 0.06425604690935743,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.41606973108949014,
+              "rows": 4093
+            },
+            {
+              "event_rate": 0.07495429616087751,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4645400595008312,
+              "rows": 3829
+            },
+            {
+              "event_rate": 0.08246258119175374,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.513489005069179,
+              "rows": 3541
+            },
+            {
+              "event_rate": 0.08341028008618036,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.5625373311566125,
+              "rows": 3249
+            },
+            {
+              "event_rate": 0.08428475486903962,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.6112045817285088,
+              "rows": 2978
+            },
+            {
+              "event_rate": 0.08730741012472487,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6574713250938408,
+              "rows": 2726
+            },
+            {
+              "event_rate": 0.08805790108564536,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.7008490924036803,
+              "rows": 2487
+            },
+            {
+              "event_rate": 0.09656084656084656,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7411154908139166,
+              "rows": 2268
+            }
+          ],
+          "event_count": 2558,
+          "event_rate": 0.05914861146437903,
+          "hazard_risk_q10": 0.22839997204870327,
+          "hazard_risk_q50": 0.43859125152878164,
+          "hazard_risk_q90": 0.705832383596633,
+          "high_minus_low_event_rate": 0.09907514450867053,
+          "high_risk_event_rate": 0.10601156069364162,
+          "low_risk_event_rate": 0.006936416184971098,
+          "roc_auc": 0.6908297000122845,
+          "rows": 43247
+        },
+        "train": {
+          "average_precision": 0.11785570497444109,
+          "brier_score": 0.22105665972278665,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.23504866718567785,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.02022575208131161,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.2741840804760611,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.038158786425480894,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.31514439722254933,
+              "rows": 19183
+            },
+            {
+              "event_rate": 0.0514335266381226,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.35848686514579403,
+              "rows": 18451
+            },
+            {
+              "event_rate": 0.06062164324077248,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.40422302489112283,
+              "rows": 17502
+            },
+            {
+              "event_rate": 0.06824402408612615,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.45186195525288475,
+              "rows": 16441
+            },
+            {
+              "event_rate": 0.07598407206736732,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.5007279510431583,
+              "rows": 15319
+            },
+            {
+              "event_rate": 0.08682444365948429,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.549755063971261,
+              "rows": 14155
+            },
+            {
+              "event_rate": 0.09407395946155037,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.5980661883291983,
+              "rows": 12926
+            },
+            {
+              "event_rate": 0.1013663535439795,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6451486426227795,
+              "rows": 11710
+            },
+            {
+              "event_rate": 0.1077639456428775,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.6895896093409934,
+              "rows": 10523
+            },
+            {
+              "event_rate": 0.11183299605921823,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7310986658229638,
+              "rows": 9389
+            }
+          ],
+          "event_count": 11240,
+          "event_rate": 0.06083666654037465,
+          "hazard_risk_q10": 0.21771266136604037,
+          "hazard_risk_q50": 0.4257374172059523,
+          "hazard_risk_q90": 0.694958563734463,
+          "high_minus_low_event_rate": 0.11257848019051743,
+          "high_risk_event_rate": 0.11931695172115177,
+          "low_risk_event_rate": 0.006738471530634336,
+          "roc_auc": 0.7042772901921863,
+          "rows": 184757
+        },
+        "validation": {
+          "average_precision": 0.12124918591949058,
+          "brier_score": 0.24004995451709313,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.26716142975505497,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.028327699983904716,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.3070231084111974,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.04969355640218651,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.344765125777795,
+              "rows": 6037
+            },
+            {
+              "event_rate": 0.05856719539829179,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.38413247806721135,
+              "rows": 5737
+            },
+            {
+              "event_rate": 0.06758007776337716,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.4255504056034617,
+              "rows": 5401
+            },
+            {
+              "event_rate": 0.07069102462271644,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.4692498250263677,
+              "rows": 5036
+            },
+            {
+              "event_rate": 0.07222222222222222,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.5147429707946101,
+              "rows": 4680
+            },
+            {
+              "event_rate": 0.07461999078765545,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.5608819276903407,
+              "rows": 4342
+            },
+            {
+              "event_rate": 0.07964161274265803,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.6075436166230689,
+              "rows": 4018
+            },
+            {
+              "event_rate": 0.08328826392644673,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.6525932173664671,
+              "rows": 3698
+            },
+            {
+              "event_rate": 0.08702064896755163,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.695916303925384,
+              "rows": 3390
+            },
+            {
+              "event_rate": 0.0962843295638126,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.7360438215710522,
+              "rows": 3095
+            }
+          ],
+          "event_count": 3416,
+          "event_rate": 0.059039059799516076,
+          "hazard_risk_q10": 0.22215103004423517,
+          "hazard_risk_q50": 0.4475129453366287,
+          "hazard_risk_q90": 0.72535405530957,
+          "high_minus_low_event_rate": 0.11199446940891808,
+          "high_risk_event_rate": 0.11959903214656066,
+          "low_risk_event_rate": 0.0076045627376425855,
+          "roc_auc": 0.704654661378204,
+          "rows": 57860
+        }
+      },
+      "spec": {
+        "base_feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "c_value": 0.5,
+        "description": "Discrete-time logistic hazard for reversal after an initially favorable move.",
+        "event_name": "reversal_after_favorable_1x",
+        "feature_names": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator",
+          "hazard_elapsed_bar",
+          "hazard_elapsed_frac"
+        ],
+        "idea_id": "reversal_after_favorable_move_hazard",
+        "model_type": "logistic_hazard",
+        "random_state": 2501,
+        "threshold_multiplier": 1.0,
+        "tier_b_compatible": true,
+        "variant_id": "v04_logit_core24_reversal_after_favorable_1x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [
+          "is_us_cash_open"
+        ],
+        "feature_count_after_filter": 25,
+        "feature_count_before_filter": 26,
+        "fit_rows": 184757,
+        "train_event_count": 11240,
+        "train_event_rate": 0.06083666654037465,
+        "train_rows": 184757
+      },
+      "variant_id": "v04_logit_core24_reversal_after_favorable_1x"
+    },
+    {
+      "characteristic_score": 0.9588289177110417,
+      "description": "Time-only hazard control to check whether elapsed bar alone explains the event surface.",
+      "event_definition": {
+        "base_threshold_log_return": 0.001277833051854688,
+        "event_name": "adverse_1x",
+        "max_horizon_bars": 12,
+        "threshold_multiplier": 1.0
+      },
+      "feature_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_feature_reads/v05_logit_time_only_adverse_1x_hazard_feature_read.csv",
+        "sha256": "6a496789ee60ea1d49ff9bf01382c4f786bc5ded94b846694296b01f8e99809b"
+      },
+      "feature_read": {
+        "dropped_features": [],
+        "feature_count_after_filter": 2,
+        "top_features": [
+          {
+            "abs_coefficient": 0.35749514475678246,
+            "coefficient": -0.35749514475678246,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_bar"
+          },
+          {
+            "abs_coefficient": 0.3574951447567819,
+            "coefficient": -0.3574951447567819,
+            "effect_read": "positive_coefficient_means_higher_bar_hazard",
+            "feature": "hazard_elapsed_frac"
+          }
+        ]
+      },
+      "hazard_curve_artifact": {
+        "path": "stages/25_exit_model__hazard_trade_lifecycle_risk/02_runs/run19A_hazard_trade_lifecycle_risk_scout_v1/results/variant_hazard_curves/v05_logit_time_only_adverse_1x_hazard_curve.csv",
+        "sha256": "f80d73cdbf0570782405ba6e70effbff62968e2679dba585f3c8b1e2960d043f"
+      },
+      "idea_id": "elapsed_time_control_hazard",
+      "metrics": {
+        "oos": {
+          "average_precision": 0.051154163705111784,
+          "brier_score": 0.223758620062094,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.0647887323943662,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6964274603732281,
+              "rows": 4615
+            },
+            {
+              "event_rate": 0.05701042873696408,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6514267515923261,
+              "rows": 4315
+            },
+            {
+              "event_rate": 0.03416912487708948,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.603552664437571,
+              "rows": 4068
+            },
+            {
+              "event_rate": 0.02774949083503055,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5536090504085289,
+              "rows": 3928
+            },
+            {
+              "event_rate": 0.01859612362493452,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.5025592623525679,
+              "rows": 3818
+            },
+            {
+              "event_rate": 0.015483182060864922,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.45145605991148396,
+              "rows": 3746
+            },
+            {
+              "event_rate": 0.010848928668294006,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.40135659307739646,
+              "rows": 3687
+            },
+            {
+              "event_rate": 0.011242116808335619,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.35323663662346927,
+              "rows": 3647
+            },
+            {
+              "event_rate": 0.008596783139212423,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.30791846090299435,
+              "rows": 3606
+            },
+            {
+              "event_rate": 0.009513150531617236,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2660229366653235,
+              "rows": 3574
+            },
+            {
+              "event_rate": 0.009889799378355468,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.2279502261428731,
+              "rows": 3539
+            },
+            {
+              "event_rate": 0.009988584474885844,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.1938870337511875,
+              "rows": 3504
+            }
+          ],
+          "event_count": 1138,
+          "event_rate": 0.024713879297239776,
+          "hazard_risk_q10": 0.22795022614287314,
+          "hazard_risk_q50": 0.45145605991148396,
+          "hazard_risk_q90": 0.6964274603732281,
+          "high_minus_low_event_rate": 0.04282786972261968,
+          "high_risk_event_rate": 0.052623480535467,
+          "low_risk_event_rate": 0.00979561081284732,
+          "roc_auc": 0.704910909274412,
+          "rows": 46047
+        },
+        "train": {
+          "average_precision": 0.0502976976787121,
+          "brier_score": 0.22470059433562373,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.06440574084478268,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6964274603732281,
+              "rows": 19579
+            },
+            {
+              "event_rate": 0.053335516977836006,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6514267515923261,
+              "rows": 18318
+            },
+            {
+              "event_rate": 0.037829421601983736,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.603552664437571,
+              "rows": 17341
+            },
+            {
+              "event_rate": 0.028588552592148635,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5536090504085289,
+              "rows": 16685
+            },
+            {
+              "event_rate": 0.022211253701875617,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.5025592623525679,
+              "rows": 16208
+            },
+            {
+              "event_rate": 0.017730943967693084,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.45145605991148396,
+              "rows": 15848
+            },
+            {
+              "event_rate": 0.015481467206269674,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.40135659307739646,
+              "rows": 15567
+            },
+            {
+              "event_rate": 0.012462482056635782,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.35323663662346927,
+              "rows": 15326
+            },
+            {
+              "event_rate": 0.010571522960026428,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.30791846090299435,
+              "rows": 15135
+            },
+            {
+              "event_rate": 0.009015025041736227,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2660229366653235,
+              "rows": 14975
+            },
+            {
+              "event_rate": 0.009838274932614556,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.22795022614287314,
+              "rows": 14840
+            },
+            {
+              "event_rate": 0.010140193276167143,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.1938870337511875,
+              "rows": 14694
+            }
+          ],
+          "event_count": 5034,
+          "event_rate": 0.025879619157292973,
+          "hazard_risk_q10": 0.22795022614287314,
+          "hazard_risk_q50": 0.45145605991148396,
+          "hazard_risk_q90": 0.6964274603732281,
+          "high_minus_low_event_rate": 0.04273050219567845,
+          "high_risk_event_rate": 0.0523914696404649,
+          "low_risk_event_rate": 0.009660967444786448,
+          "roc_auc": 0.6930646746989115,
+          "rows": 194516
+        },
+        "validation": {
+          "average_precision": 0.059811441817099714,
+          "brier_score": 0.22465472478994353,
+          "by_elapsed_bar": [
+            {
+              "event_rate": 0.07854498631900853,
+              "hazard_elapsed_bar": 1.0,
+              "mean_hazard_risk": 0.6964274603732281,
+              "rows": 6213
+            },
+            {
+              "event_rate": 0.059563318777292575,
+              "hazard_elapsed_bar": 2.0,
+              "mean_hazard_risk": 0.6514267515923261,
+              "rows": 5725
+            },
+            {
+              "event_rate": 0.03807578008915304,
+              "hazard_elapsed_bar": 3.0,
+              "mean_hazard_risk": 0.603552664437571,
+              "rows": 5384
+            },
+            {
+              "event_rate": 0.027225333075883377,
+              "hazard_elapsed_bar": 4.0,
+              "mean_hazard_risk": 0.5536090504085289,
+              "rows": 5179
+            },
+            {
+              "event_rate": 0.022429535529972212,
+              "hazard_elapsed_bar": 5.0,
+              "mean_hazard_risk": 0.5025592623525679,
+              "rows": 5038
+            },
+            {
+              "event_rate": 0.018883248730964468,
+              "hazard_elapsed_bar": 6.0,
+              "mean_hazard_risk": 0.45145605991148396,
+              "rows": 4925
+            },
+            {
+              "event_rate": 0.016556291390728478,
+              "hazard_elapsed_bar": 7.0,
+              "mean_hazard_risk": 0.40135659307739646,
+              "rows": 4832
+            },
+            {
+              "event_rate": 0.011994949494949494,
+              "hazard_elapsed_bar": 8.0,
+              "mean_hazard_risk": 0.35323663662346927,
+              "rows": 4752
+            },
+            {
+              "event_rate": 0.010862619808306708,
+              "hazard_elapsed_bar": 9.0,
+              "mean_hazard_risk": 0.30791846090299435,
+              "rows": 4695
+            },
+            {
+              "event_rate": 0.009905254091300603,
+              "hazard_elapsed_bar": 10.0,
+              "mean_hazard_risk": 0.2660229366653235,
+              "rows": 4644
+            },
+            {
+              "event_rate": 0.00891692040017399,
+              "hazard_elapsed_bar": 11.0,
+              "mean_hazard_risk": 0.22795022614287316,
+              "rows": 4598
+            },
+            {
+              "event_rate": 0.009436032477507132,
+              "hazard_elapsed_bar": 12.0,
+              "mean_hazard_risk": 0.1938870337511875,
+              "rows": 4557
+            }
+          ],
+          "event_count": 1699,
+          "event_rate": 0.028063162763040533,
+          "hazard_risk_q10": 0.22795022614287314,
+          "hazard_risk_q50": 0.45145605991148396,
+          "hazard_risk_q90": 0.6964274603732281,
+          "high_minus_low_event_rate": 0.05027190357706193,
+          "high_risk_event_rate": 0.05969287611130354,
+          "low_risk_event_rate": 0.009420972534241612,
+          "roc_auc": 0.7112175687387204,
+          "rows": 60542
+        }
+      },
+      "spec": {
+        "base_feature_names": [],
+        "c_value": 0.5,
+        "description": "Time-only hazard control to check whether elapsed bar alone explains the event surface.",
+        "event_name": "adverse_1x",
+        "feature_names": [
+          "hazard_elapsed_bar",
+          "hazard_elapsed_frac"
+        ],
+        "idea_id": "elapsed_time_control_hazard",
+        "model_type": "logistic_hazard",
+        "random_state": 2501,
+        "threshold_multiplier": 1.0,
+        "tier_b_compatible": true,
+        "variant_id": "v05_logit_time_only_adverse_1x"
+      },
+      "status": "completed",
+      "training_sample": {
+        "dropped_features": [],
+        "feature_count_after_filter": 2,
+        "feature_count_before_filter": 2,
+        "fit_rows": 194516,
+        "train_event_count": 5034,
+        "train_event_rate": 0.025879619157292973,
+        "train_rows": 194516
+      },
+      "variant_id": "v05_logit_time_only_adverse_1x"
+    }
+  ]
+}
