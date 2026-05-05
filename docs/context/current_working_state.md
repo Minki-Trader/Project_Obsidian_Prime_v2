@@ -1,4 +1,12 @@
-﻿## Latest Stage23 RUN17A Supervised Regime Update(최신 23단계 실행17A 지도 국면 업데이트)
+﻿## Latest Stage23 RUN17B Supervised Regime Runtime Update(최신 23단계 실행17B 지도 국면 런타임 업데이트)
+
+Stage23(23단계) `run17B_supervised_regime_classifier_runtime_probe_v1`를 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
+
+결과(result, 결과): `inconclusive_supervised_regime_classifier_runtime_probe_completed`. MT5 KPI records(MT5 핵심 성과 지표 기록): `10`. next exact action(다음 정확한 행동): `stage23_closeout_and_stage24_open_only`.
+
+효과(effect, 효과): run17A Python structural scout(파이썬 구조 탐색)를 ONNX runtime handoff(온닉스 런타임 인계) 확인으로 전진시켰다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage23 RUN17A Supervised Regime Update(최신 23단계 실행17A 지도 국면 업데이트)
 
 Stage23(23단계) `run17A_supervised_regime_classifier_filter_scout_v1`를 Python structural scout(파이썬 구조 탐색)로 실행했다.
 
