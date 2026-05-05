@@ -1,4 +1,12 @@
-﻿## Latest Stage25 RUN19B Hazard Runtime Update(최신 25단계 실행19B 위험률 런타임 업데이트)
+﻿## Latest Stage25 Closeout / Stage26 Open(최신 25단계 마감 / 26단계 개방)
+
+Stage25(25단계) Hazard model(위험률 모델)을 reviewed closeout(검토된 마감)으로 닫고 Stage26(26단계) `26_model_family_challenge__ngboost_probabilistic_distribution_shape`를 open-only(개방만) 상태로 열었다.
+
+결과(result, 결과): `closed_inconclusive_hazard_model_characteristics_exhausted`. active branch(활성 브랜치): `codex/stage26-ngboost-probabilistic`. next exact action(다음 정확한 행동): `run20A_ngboost_probabilistic_distribution_scout_v1`.
+
+효과(effect, 효과): Hazard model(위험률 모델)의 단서와 부정 기억은 보존하되 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않고 NGBoost(자연 그래디언트 부스팅) topic pivot(주제 전환)으로 이동한다.
+
+## Latest Stage25 RUN19B Hazard Runtime Update(최신 25단계 실행19B 위험률 런타임 업데이트)
 
 Stage25(25단계) `run19B_hazard_trade_lifecycle_runtime_probe_v1`를 MT5 runtime_probe(MT5 런타임 탐침)로 실행했다.
 
