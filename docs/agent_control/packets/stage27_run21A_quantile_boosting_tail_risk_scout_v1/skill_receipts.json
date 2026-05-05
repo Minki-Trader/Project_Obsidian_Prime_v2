@@ -1,0 +1,46 @@
+[
+  {
+    "changed_variables": [
+      "feature subset",
+      "learning rate",
+      "tree depth",
+      "tail surface read"
+    ],
+    "control_variables": [
+      "feature_set_v2_mt5_price_proxy_quantile_tail_risk_surface",
+      "label_v1_fwd12_m5_logret_train_q33_3class",
+      "split_v1_calendar_train_20220901_20241231_val_20250101_20260413",
+      "Tier A/B paired records"
+    ],
+    "created_at_utc": "2026-05-05T02:15:39Z",
+    "decision_use": "Decide whether Stage27 should proceed to a narrow MT5 runtime_probe.",
+    "hypothesis": "Quantile boosting can expose downside/upside tail spread and abstention clues from q10/q50/q90 return surfaces.",
+    "packet_id": "stage27_run21A_quantile_boosting_tail_risk_scout_v1",
+    "skill": "obsidian-experiment-design",
+    "status": "executed",
+    "stop_condition": "Move to runtime probe once tail-risk characteristic is visible enough; avoid meaningless micro-tuning."
+  },
+  {
+    "created_at_utc": "2026-05-05T02:15:39Z",
+    "packet_id": "stage27_run21A_quantile_boosting_tail_risk_scout_v1",
+    "selection_metric": "pinball loss, interval coverage, quantile crossing, decision balance, Tier-B compatibility",
+    "skill": "obsidian-model-validation",
+    "status": "executed",
+    "validation_judgment": "exploratory_inconclusive"
+  },
+  {
+    "claim_boundary": "quantile_boosting_tail_risk_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority",
+    "created_at_utc": "2026-05-05T02:15:39Z",
+    "forbidden_claims": [
+      "edge",
+      "alpha_quality",
+      "baseline",
+      "promotion_candidate",
+      "operating_promotion",
+      "runtime_authority"
+    ],
+    "packet_id": "stage27_run21A_quantile_boosting_tail_risk_scout_v1",
+    "skill": "obsidian-result-judgment",
+    "status": "executed"
+  }
+]
