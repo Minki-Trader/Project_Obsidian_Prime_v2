@@ -38,7 +38,6 @@ def audit_code_surface(root: Path | str = Path("."), baseline_path: Path | str |
     attention_lines = int(line_policy.get("attention_lines", 800))
     blocking_lines = int(line_policy.get("blocking_lines", 1600))
     max_lines_by_path = _max_lines_by_path(line_policy)
-    registered_cross_stage_imports = _registered_cross_stage_imports(baseline)
 
     findings: list[AuditFinding] = []
     counts: dict[str, Any] = {
@@ -83,7 +82,7 @@ def audit_code_surface(root: Path | str = Path("."), baseline_path: Path | str |
                 )
             )
 
-        _check_cross_owner_imports(rel, text, findings, registered_cross_stage_imports)
+        _check_cross_owner_imports(rel, text, findings)
 
     status = "blocked" if any(finding.is_blocking for finding in findings) else "pass"
     return AuditResult(
@@ -119,24 +118,6 @@ def _max_lines_by_path(line_policy: Mapping[str, Any]) -> dict[str, int]:
     return budgets
 
 
-def _registered_cross_stage_imports(baseline: Mapping[str, Any]) -> set[tuple[str, str]]:
-    ownership_policy = baseline.get("ownership_policy", {})
-    if not isinstance(ownership_policy, Mapping):
-        return set()
-    raw = ownership_policy.get("registered_cross_stage_import_debt", ())
-    if not isinstance(raw, list):
-        return set()
-    registered: set[tuple[str, str]] = set()
-    for item in raw:
-        if not isinstance(item, Mapping):
-            continue
-        path = str(item.get("path", "")).strip()
-        imported_stage = str(item.get("imported_stage", "")).strip()
-        if path and imported_stage:
-            registered.add((path, imported_stage))
-    return registered
-
-
 def _iter_code_files(root: Path) -> list[Path]:
     paths: list[Path] = []
     for relative in DEFAULT_SCAN_ROOTS:
@@ -159,12 +140,7 @@ def _line_count(text: str) -> int:
     return text.count("\n") + (0 if text.endswith("\n") else 1)
 
 
-def _check_cross_owner_imports(
-    rel: str,
-    text: str,
-    findings: list[AuditFinding],
-    registered_cross_stage_imports: set[tuple[str, str]],
-) -> None:
+def _check_cross_owner_imports(rel: str, text: str, findings: list[AuditFinding]) -> None:
     if rel.startswith("foundation/control_plane/") and CONTROL_PLANE_STAGE_IMPORT_RE.search(text):
         findings.append(
             AuditFinding(
@@ -188,21 +164,6 @@ def _check_cross_owner_imports(
         for import_match in STAGE_PIPELINE_IMPORT_RE.finditer(text):
             imported_stage = import_match.group("from_stage") or import_match.group("import_stage")
             if imported_stage != owner_stage:
-                if (rel, f"stage{imported_stage}") in registered_cross_stage_imports:
-                    findings.append(
-                        AuditFinding(
-                            check_id=f"registered_cross_stage_import_debt::{rel}::stage{imported_stage}",
-                            message="Existing cross-stage pipeline import is registered architecture debt.",
-                            severity="warning",
-                            details={
-                                "path": rel,
-                                "owner_stage": f"stage{owner_stage}",
-                                "imported_stage": f"stage{imported_stage}",
-                                "next_refactor": "move reusable logic to foundation/* before copying this pattern",
-                            },
-                        )
-                    )
-                    continue
                 findings.append(
                     AuditFinding(
                         check_id=f"cross_stage_pipeline_import::{rel}",
