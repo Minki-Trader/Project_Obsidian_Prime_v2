@@ -1,4 +1,18 @@
-﻿## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
+﻿## Latest Stage33 Adapter Readiness Map(최신 33단계 어댑터 준비도 지도)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `33_mechanism_discovery__stage10_32_adapter_readiness_map`
+- current run(현재 실행): `run27A_stage10_32_adapter_readiness_map_v1`
+- latest packet(최신 묶음): `stage33_run27A_stage10_32_adapter_readiness_map_v1`
+- next action(다음 행동): `adapter_contract_probe_for_top_candidate_or_onnx_contrast_if_readiness_gap_closes`
+
+결과(result, 결과): Stage10~32(10~32단계) evidence(근거)에서 `12` adapter candidate clues(어댑터 후보 단서)를 남겼다. ONNX readiness(ONNX 준비도)는 `not_ready_for_new_onnx_artifact`다.
+
+효과(effect, 효과): mechanism role map(메커니즘 역할 지도)을 만들었지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)는 만들지 않았다.
+
+## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 

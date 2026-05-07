@@ -1,0 +1,29 @@
+{
+  "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+  "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+  "packet_id": "stage33_run27A_stage10_32_adapter_readiness_map_v1",
+  "created_at_utc": "2026-05-07T15:22:28Z",
+  "rows_scanned": 294,
+  "adapter_candidate_count": 12,
+  "adapter_candidate_run_ids": [
+    "run12A_catboost_ordered_boosting_characteristic_scout_v1",
+    "run13L_ebm_q90_hold6_direction_probe_v1",
+    "run13O_ebm_q90_hold2_probe_v1",
+    "run13S_ebm_q90_hold4_direction_probe_v1",
+    "run13V_ebm_q90_hold4_mask_ema9_ema20_probe_v1",
+    "run13AB_ebm_q92_hold4_direction_probe_v1",
+    "run13AE_ebm_q90_hold4_mixed_subtype_direction_probe_v1",
+    "run14B_gam_runtime_handoff_probe_v1",
+    "run17B_supervised_regime_classifier_runtime_probe_v1",
+    "run22B_markov_regression_state_runtime_probe_v1",
+    "run26B_tcn_temporal_convolution_runtime_probe_v1",
+    "run26D_torch_tcn_native_temporal_runtime_probe_v1"
+  ],
+  "deferred_count": 241,
+  "negative_memory_count": 41,
+  "onnx_readiness": "not_ready_for_new_onnx_artifact",
+  "onnx_artifacts_generated": false,
+  "judgment": "inconclusive_adapter_readiness_map_completed",
+  "boundary": "adapter_readiness_map_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness",
+  "next_action": "adapter_contract_probe_for_top_candidate_or_onnx_contrast_if_readiness_gap_closes"
+}

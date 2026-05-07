@@ -1,0 +1,1399 @@
+{
+  "audit_name": "closeout_gate",
+  "status": "pass",
+  "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+  "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+  "packet_id": "stage33_run27A_stage10_32_adapter_readiness_map_v1",
+  "audits": [
+    {
+      "audit_name": "scope_completion_gate",
+      "status": "pass",
+      "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+      "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+      "required_outputs": [
+        "run_evidence_index.csv",
+        "mechanism_role_map.json",
+        "adapter_candidate_table.csv",
+        "adapter_contract_cards.json",
+        "repeatability_check.json",
+        "runtime_parity_check.json",
+        "onnx_readiness_decision.json"
+      ],
+      "rows_scanned": 294,
+      "candidate_count": 12,
+      "claim_boundary": "adapter_readiness_map_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness"
+    },
+    {
+      "audit_name": "kpi_contract_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+        "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+        "file::run_manifest.json": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/33_mechanism_discovery__stage10_32_adapter_readiness_map/02_runs/run27A_stage10_32_adapter_readiness_map_v1/run_manifest.json",
+          "exists": true
+        },
+        "file::kpi_record.json": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/33_mechanism_discovery__stage10_32_adapter_readiness_map/02_runs/run27A_stage10_32_adapter_readiness_map_v1/kpi_record.json",
+          "exists": true
+        },
+        "file::summary.json": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/33_mechanism_discovery__stage10_32_adapter_readiness_map/02_runs/run27A_stage10_32_adapter_readiness_map_v1/summary.json",
+          "exists": true
+        },
+        "file::reports/result_summary.md": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/33_mechanism_discovery__stage10_32_adapter_readiness_map/02_runs/run27A_stage10_32_adapter_readiness_map_v1/reports/result_summary.md",
+          "exists": true
+        },
+        "stage_ledger_rows": 3,
+        "stage_ledger_exists": true,
+        "project_ledger_rows": 3,
+        "project_ledger_exists": true
+      },
+      "allowed_claims": [
+        "completed",
+        "reviewed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-run-evidence-system",
+          "obsidian-experiment-design",
+          "obsidian-data-integrity",
+          "obsidian-model-validation",
+          "obsidian-artifact-lineage"
+        ],
+        "receipt_count": 7
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 7,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2",
+        "has_v2_fields": true
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "row_grain_audit",
+      "status": "pass",
+      "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+      "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+      "row_grain": "one evidence row per source run_id; candidate cards are one row per adapter probe candidate",
+      "source_rows": 294,
+      "tier_pairing_policy": "Stage33 scans existing Tier A, Tier B, and Tier A+B evidence flags without creating synthetic trading totals"
+    },
+    {
+      "audit_name": "source_authority_audit",
+      "status": "pass",
+      "rows_scanned": 294,
+      "missing_summary_count": 213,
+      "missing_summary_run_ids_sample": [
+        "run01A_logreg_threshold_mt5_scout_v1",
+        "run01B_logreg_tier_threshold_risk_probe_v1",
+        "run01C_logreg_b_strict_fallback_ablation_v1",
+        "run01D_logreg_tier_a_strict_hold12_ablation_v1",
+        "run01E_logreg_a_base_b_strict_hold9_v1",
+        "run01F_logreg_a_base_b_base_hold9_v1",
+        "run01G_logreg_a_base_no_fallback_hold9_v1",
+        "run01H_logreg_a_base_no_fallback_hold3_v1",
+        "run01I_logreg_a_base_no_fallback_hold6_v1",
+        "run01J_logreg_a_base_no_fallback_hold12_v1",
+        "run01K_logreg_a_base_no_fallback_hold18_v1",
+        "run01L_logreg_a_base_no_fallback_hold24_v1",
+        "run01N_logreg_a_base_no_fallback_hold9_session_mid_v1",
+        "run01O_logreg_a_base_no_fallback_hold9_session_late_v1",
+        "run01M_logreg_a_base_no_fallback_hold9_session_early_v1",
+        "run01P_logreg_a_base_no_fallback_hold9_session_mid_first_v1",
+        "run01Q_logreg_a_base_no_fallback_hold9_session_mid_second_v1",
+        "run01R_logreg_a_base_fallback_bmacro_hold9_session_mid_second_v1",
+        "run01S_logreg_a_base_no_fallback_hold9_session_mid_second_first_v1",
+        "run01T_logreg_a_base_no_fallback_hold9_session_mid_second_second_v1",
+        "run01U_logreg_a_base_no_fallback_hold9_session_mid_second_second_first_v1",
+        "run01V_logreg_a_base_no_fallback_hold9_session_mid_second_second_second_v1",
+        "run01W_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_190_210_v1",
+        "run01X_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_195_215_v1",
+        "run01Y_logreg_a_base_no_fallback_hold9_session_mid_second_overlap_200_220_v1",
+        "run01Z_logreg_a_base_no_fallback_hold6_session_mid_second_overlap_200_220_v1",
+        "run01AA_logreg_a_base_no_fallback_hold12_session_mid_second_overlap_200_220_v1",
+        "run01AB_logreg_a_strict_margin025_no_fallback_hold9_session_mid_second_overlap_200_220_v1",
+        "run01AC_logreg_a_strict_prob_no_fallback_hold9_session_mid_second_overlap_200_220_v1",
+        "run02A_lgbm_training_method_scout_v1"
+      ],
+      "missing_artifact_availability_count": 0,
+      "missing_artifact_availability_sample": [],
+      "boundary": "summary absence downgrades candidate readiness; it does not erase registry evidence"
+    },
+    {
+      "audit_name": "repeatability_check",
+      "status": "pass",
+      "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+      "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+      "candidate_count": 12,
+      "candidate_run_ids": [
+        "run12A_catboost_ordered_boosting_characteristic_scout_v1",
+        "run13L_ebm_q90_hold6_direction_probe_v1",
+        "run13O_ebm_q90_hold2_probe_v1",
+        "run13S_ebm_q90_hold4_direction_probe_v1",
+        "run13V_ebm_q90_hold4_mask_ema9_ema20_probe_v1",
+        "run13AB_ebm_q92_hold4_direction_probe_v1",
+        "run13AE_ebm_q90_hold4_mixed_subtype_direction_probe_v1",
+        "run14B_gam_runtime_handoff_probe_v1",
+        "run17B_supervised_regime_classifier_runtime_probe_v1",
+        "run22B_markov_regression_state_runtime_probe_v1",
+        "run26B_tcn_temporal_convolution_runtime_probe_v1",
+        "run26D_torch_tcn_native_temporal_runtime_probe_v1"
+      ],
+      "blocked_patterns": {
+        "oos_only_positive": [
+          "run01B_logreg_tier_threshold_risk_probe_v1",
+          "run01P_logreg_a_base_no_fallback_hold9_session_mid_first_v1",
+          "run01S_logreg_a_base_no_fallback_hold9_session_mid_second_first_v1",
+          "run02C_lgbm_long_only_direction_isolation_v1",
+          "run02G_lgbm_long_pullback_salvage_v1",
+          "run02H_lgbm_bull_trend_long_v1",
+          "run02N_lgbm_squeeze_breakout_probe_v1",
+          "run02O_lgbm_bull_vortex_long_v1",
+          "run02S_lgbm_squeeze_density_v1",
+          "run03C_et_standalone_mt5_runtime_probe_v1",
+          "run03E_et_batch20_top_v11_mt5_probe_v1",
+          "run04A_mlp_characteristic_runtime_probe_v1",
+          "run05A_svm_margin_kernel_characteristic_runtime_probe_v1",
+          "run06D_lda_lsqr_no_shrinkage_runtime_probe_v1",
+          "run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1",
+          "run06F_lda_lsqr_shrinkage020_runtime_probe_v1",
+          "run06G_lda_lsqr_shrinkage080_runtime_probe_v1",
+          "run08H_qda_large_sample1200_characterization_v1",
+          "run09A_qda_reg008_full58_followup_v1",
+          "run09B_qda_reg010_full58_followup_v1",
+          "run09E_qda_reg025_full58_followup_v1",
+          "run09I_qda_reg015_drop_momentum12_followup_v1",
+          "run09L_qda_reg015_sample450_followup_v1",
+          "run10B_qda_reg018_full58_resample_decision_microprobe_v1",
+          "run10E_qda_reg018_full58_q92_decision_microprobe_v1",
+          "run10F_qda_reg012_drop_mega10_decision_microprobe_v1",
+          "run10J_qda_reg015_drop_mega10_q85_decision_microprobe_v1",
+          "run10L_qda_reg018_drop_mega10_q88_decision_microprobe_v1",
+          "run11A_xgb_regularized_boosting_characteristic_scout_v1",
+          "run11B_xgb_threshold_q80_frequency_pressure_closeout_v1",
+          "run12B_catboost_q80_signal_density_probe_v1",
+          "run12C_catboost_q80_direction_balance_probe_v1",
+          "run13F_ebm_q90_hold6_probe_v1",
+          "run13I_ebm_q90_hold4_probe_v1",
+          "run13J_ebm_q90_hold8_probe_v1",
+          "run13R_ebm_q90_hold4_mixed_subtype_fallback_probe_v1",
+          "run13X_ebm_q90_hold4_mask_ema20_ema50_probe_v1",
+          "run13Y_ebm_q90_hold4_mask_hl_zscore_probe_v1",
+          "run13Z_ebm_q90_hold4_macro_missing_fallback_probe_v1",
+          "run13AA_ebm_q90_hold4_core_only_fallback_probe_v1",
+          "run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1",
+          "run16B_hmm_state_runtime_probe_v1",
+          "run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+          "run23B_river_online_drift_runtime_probe_v1",
+          "run24B_probability_calibration_abstention_runtime_probe_v1"
+        ],
+        "validation_only_positive": [
+          "run01O_logreg_a_base_no_fallback_hold9_session_late_v1",
+          "run02J_lgbm_balanced_midband_context_v1",
+          "run02R_lgbm_long_pullback_adx_repair_v1",
+          "run02AC_lgbm_fwd18_inverse_rank_context_adx20_tier_a_only_v1",
+          "run02AD_lgbm_fwd18_inverse_rank_context_adx25_tier_a_only_v1",
+          "run02AE_lgbm_fwd18_inverse_rank_context_adx30_tier_a_only_v1",
+          "run06I_lda_eigen_auto_shrinkage_runtime_probe_v1",
+          "run07B_lda_eigen_shrinkage003_stability_probe_v1",
+          "run07E_lda_eigen_shrinkage012_stability_probe_v1",
+          "run07G_lda_lsqr_shrinkage003_stability_probe_v1",
+          "run08C_qda_micro_regularization003_characterization_v1",
+          "run09F_qda_reg015_drop_macro6_followup_v1",
+          "run09M_qda_reg015_sample600_resample_followup_v1",
+          "run13C_ebm_q80_signal_density_probe_v1",
+          "run13D_ebm_q95_sparse_tail_probe_v1",
+          "run13E_ebm_q80_direction_asymmetry_probe_v1",
+          "run13N_ebm_q90_hold4_top5_mask_probe_v1",
+          "run13W_ebm_q90_hold4_mask_ema50_ema200_probe_v1",
+          "run13AC_ebm_q95_hold4_direction_probe_v1",
+          "run25B_tabnet_attentive_tabular_runtime_probe_v1"
+        ],
+        "tiny_trade_count": [],
+        "validation_oos_inversion": [
+          "run01B_logreg_tier_threshold_risk_probe_v1",
+          "run01O_logreg_a_base_no_fallback_hold9_session_late_v1",
+          "run01P_logreg_a_base_no_fallback_hold9_session_mid_first_v1",
+          "run01S_logreg_a_base_no_fallback_hold9_session_mid_second_first_v1",
+          "run02C_lgbm_long_only_direction_isolation_v1",
+          "run02G_lgbm_long_pullback_salvage_v1",
+          "run02H_lgbm_bull_trend_long_v1",
+          "run02J_lgbm_balanced_midband_context_v1",
+          "run02N_lgbm_squeeze_breakout_probe_v1",
+          "run02O_lgbm_bull_vortex_long_v1",
+          "run02R_lgbm_long_pullback_adx_repair_v1",
+          "run02S_lgbm_squeeze_density_v1",
+          "run02AC_lgbm_fwd18_inverse_rank_context_adx20_tier_a_only_v1",
+          "run03C_et_standalone_mt5_runtime_probe_v1",
+          "run03E_et_batch20_top_v11_mt5_probe_v1",
+          "run04A_mlp_characteristic_runtime_probe_v1",
+          "run05A_svm_margin_kernel_characteristic_runtime_probe_v1",
+          "run06D_lda_lsqr_no_shrinkage_runtime_probe_v1",
+          "run06E_lda_lsqr_auto_shrinkage_runtime_probe_v1",
+          "run06F_lda_lsqr_shrinkage020_runtime_probe_v1",
+          "run06G_lda_lsqr_shrinkage080_runtime_probe_v1",
+          "run06I_lda_eigen_auto_shrinkage_runtime_probe_v1",
+          "run07B_lda_eigen_shrinkage003_stability_probe_v1",
+          "run07E_lda_eigen_shrinkage012_stability_probe_v1",
+          "run07G_lda_lsqr_shrinkage003_stability_probe_v1",
+          "run08C_qda_micro_regularization003_characterization_v1",
+          "run08H_qda_large_sample1200_characterization_v1",
+          "run09A_qda_reg008_full58_followup_v1",
+          "run09B_qda_reg010_full58_followup_v1",
+          "run09E_qda_reg025_full58_followup_v1",
+          "run09F_qda_reg015_drop_macro6_followup_v1",
+          "run09I_qda_reg015_drop_momentum12_followup_v1",
+          "run09L_qda_reg015_sample450_followup_v1",
+          "run09M_qda_reg015_sample600_resample_followup_v1",
+          "run10B_qda_reg018_full58_resample_decision_microprobe_v1",
+          "run10E_qda_reg018_full58_q92_decision_microprobe_v1",
+          "run10F_qda_reg012_drop_mega10_decision_microprobe_v1",
+          "run10J_qda_reg015_drop_mega10_q85_decision_microprobe_v1",
+          "run10L_qda_reg018_drop_mega10_q88_decision_microprobe_v1",
+          "run11A_xgb_regularized_boosting_characteristic_scout_v1",
+          "run11B_xgb_threshold_q80_frequency_pressure_closeout_v1",
+          "run12B_catboost_q80_signal_density_probe_v1",
+          "run13C_ebm_q80_signal_density_probe_v1",
+          "run13D_ebm_q95_sparse_tail_probe_v1",
+          "run13E_ebm_q80_direction_asymmetry_probe_v1",
+          "run13F_ebm_q90_hold6_probe_v1",
+          "run13I_ebm_q90_hold4_probe_v1",
+          "run13J_ebm_q90_hold8_probe_v1",
+          "run13Q_ebm_q90_hold5_probe_v1",
+          "run13R_ebm_q90_hold4_mixed_subtype_fallback_probe_v1",
+          "run13N_ebm_q90_hold4_top5_mask_probe_v1",
+          "run13W_ebm_q90_hold4_mask_ema50_ema200_probe_v1",
+          "run13X_ebm_q90_hold4_mask_ema20_ema50_probe_v1",
+          "run13Y_ebm_q90_hold4_mask_hl_zscore_probe_v1",
+          "run13Z_ebm_q90_hold4_macro_missing_fallback_probe_v1",
+          "run13AA_ebm_q90_hold4_core_only_fallback_probe_v1",
+          "run13AC_ebm_q95_hold4_direction_probe_v1",
+          "run13AH_ebm_q90_hold4_keep_ema50_ema200_top5_probe_v1",
+          "run16B_hmm_state_runtime_probe_v1",
+          "run20B_ngboost_distribution_runtime_probe_v1",
+          "run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+          "run23B_river_online_drift_runtime_probe_v1",
+          "run24B_probability_calibration_abstention_runtime_probe_v1",
+          "run25B_tabnet_attentive_tabular_runtime_probe_v1",
+          "run24D_native_source_calibration_runtime_probe_v1"
+        ]
+      },
+      "claim_boundary": "adapter_readiness_map_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness"
+    },
+    {
+      "audit_name": "runtime_parity_check",
+      "status": "pass",
+      "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+      "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+      "parity_level": "existing_runtime_and_parity_evidence_indexed_only",
+      "new_mt5_probe_executed": false,
+      "candidate_runtime_sources": [
+        {
+          "run_id": "run12A_catboost_ordered_boosting_characteristic_scout_v1",
+          "has_onnx": true,
+          "onnx_parity_status": "pass",
+          "has_score_table": false,
+          "score_table_parity_status": "missing",
+          "mt5_kpi_record_count": 10
+        },
+        {
+          "run_id": "run13L_ebm_q90_hold6_direction_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 20
+        },
+        {
+          "run_id": "run13O_ebm_q90_hold2_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 10
+        },
+        {
+          "run_id": "run13S_ebm_q90_hold4_direction_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 20
+        },
+        {
+          "run_id": "run13V_ebm_q90_hold4_mask_ema9_ema20_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 10
+        },
+        {
+          "run_id": "run13AB_ebm_q92_hold4_direction_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 20
+        },
+        {
+          "run_id": "run13AE_ebm_q90_hold4_mixed_subtype_direction_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 20
+        },
+        {
+          "run_id": "run14B_gam_runtime_handoff_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 10
+        },
+        {
+          "run_id": "run17B_supervised_regime_classifier_runtime_probe_v1",
+          "has_onnx": true,
+          "onnx_parity_status": "pass",
+          "has_score_table": false,
+          "score_table_parity_status": "missing",
+          "mt5_kpi_record_count": 10
+        },
+        {
+          "run_id": "run22B_markov_regression_state_runtime_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 10
+        },
+        {
+          "run_id": "run26B_tcn_temporal_convolution_runtime_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 10
+        },
+        {
+          "run_id": "run26D_torch_tcn_native_temporal_runtime_probe_v1",
+          "has_onnx": false,
+          "onnx_parity_status": "missing",
+          "has_score_table": true,
+          "score_table_parity_status": "pass",
+          "mt5_kpi_record_count": 10
+        }
+      ],
+      "missing_evidence": [
+        "new adapter row-level runtime parity",
+        "new MT5 handoff probe"
+      ],
+      "allowed_claims": [
+        "existing_runtime_probe_evidence_scanned"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "live_readiness"
+      ]
+    },
+    {
+      "audit_name": "onnx_readiness_decision",
+      "status": "pass",
+      "stage_id": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+      "run_id": "run27A_stage10_32_adapter_readiness_map_v1",
+      "decision": "not_ready_for_new_onnx_artifact",
+      "onnx_artifacts_generated": false,
+      "existing_onnx_candidate_run_ids": [
+        "run12A_catboost_ordered_boosting_characteristic_scout_v1",
+        "run17B_supervised_regime_classifier_runtime_probe_v1"
+      ],
+      "readiness_gate": {
+        "candidate_role_clear": true,
+        "input_feature_contract_fixed": "candidate_specific_only",
+        "output_contract_fixed": false,
+        "source_behavior_stable_beyond_single_split": false,
+        "python_onnx_parity_plan": "required only for a later selected ONNX adapter",
+        "mt5_handoff_plan": "required only after adapter contract is fixed",
+        "runtime_advantage_over_score_table_or_mql": false
+      },
+      "stop_rule": "do not export a new ONNX artifact until one candidate has fixed SignalCard/runtime contract plus parity and runtime advantage",
+      "claim_boundary": "adapter_readiness_map_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness"
+    },
+    {
+      "audit_name": "test_gate",
+      "status": "pass",
+      "command": "python -m py_compile foundation\\models\\alpha_scout_support.py stage_pipelines\\stage24\\survival_time_to_event_scout.py stage_pipelines\\stage24\\survival_time_to_event_runtime_probe.py stage_pipelines\\stage25\\hazard_trade_lifecycle_scout.py stage_pipelines\\stage25\\hazard_trade_lifecycle_runtime_probe.py stage_pipelines\\stage26\\ngboost_probabilistic_distribution_scout.py stage_pipelines\\stage26\\ngboost_distribution_runtime_probe.py stage_pipelines\\stage27\\quantile_boosting_tail_risk_scout.py stage_pipelines\\stage27\\quantile_boosting_tail_risk_runtime_probe.py stage_pipelines\\stage28\\markov_regression_state_link_scout.py stage_pipelines\\stage33\\adapter_readiness_map.py foundation\\pipelines\\run_stage33_adapter_readiness_map.py tests\\test_stage33_adapter_readiness_map.py; python -m pytest tests\\test_stage33_adapter_readiness_map.py tests\\test_stage_pipeline_imports.py tests\\test_code_surface_audit.py tests\\test_work_packet_schema_lint.py tests\\test_skill_receipt_schema_lint.py tests\\test_state_sync_audit.py tests\\test_required_gate_coverage_audit.py -q",
+      "summary": "py_compile pass; selected pytest suite pass: 21 passed, 182 subtests passed",
+      "claim_boundary": "adapter_readiness_map_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness"
+    },
+    {
+      "audit_name": "code_surface_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [
+        {
+          "check_id": "large_file::foundation/control_plane/mt5_kpi_recorder.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/control_plane/mt5_kpi_recorder.py",
+            "lines": 1183,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/control_plane/mt5_tier_balance_completion.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/control_plane/mt5_tier_balance_completion.py",
+            "lines": 1364,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+            "lines": 1715,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+            "lines": 1777,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::foundation/pipelines/audit_stage05_feature_integrity.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "foundation/pipelines/audit_stage05_feature_integrity.py",
+            "lines": 977,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_all_variant_mt5_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_all_variant_mt5_probe.py",
+            "lines": 1553,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_gap_overnight_context_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_gap_overnight_context_probe.py",
+            "lines": 1471,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_inversion_attribution_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_inversion_attribution_probe.py",
+            "lines": 1459,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_macro_proxy_regime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_macro_proxy_regime_probe.py",
+            "lines": 1483,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_mega_cap_divergence_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_mega_cap_divergence_probe.py",
+            "lines": 1474,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_probability_shape_attribution_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_probability_shape_attribution_probe.py",
+            "lines": 1501,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py",
+            "lines": 1934,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py",
+            "lines": 1591,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_session_age_regime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_session_age_regime_probe.py",
+            "lines": 1453,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_trend_chop_regime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_trend_chop_regime_probe.py",
+            "lines": 1471,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_variant_stability_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_variant_stability_probe.py",
+            "lines": 1285,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_volatility_regime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_volatility_regime_probe.py",
+            "lines": 1465,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py",
+            "lines": 1730,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage18/catboost_followup_batch.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage18/catboost_followup_batch.py",
+            "lines": 1674,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage18/catboost_mt5_characteristic_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage18/catboost_mt5_characteristic_probe.py",
+            "lines": 1261,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage19/ebm_axis_exhaustion_followthrough.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage19/ebm_axis_exhaustion_followthrough.py",
+            "lines": 1332,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage19/ebm_characteristic_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage19/ebm_characteristic_scout.py",
+            "lines": 809,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage19/ebm_deep_axis_followup.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage19/ebm_deep_axis_followup.py",
+            "lines": 1478,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage19/ebm_feature_hold6_routing_attribution.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage19/ebm_feature_hold6_routing_attribution.py",
+            "lines": 1316,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage19/ebm_mt5_axis_extension.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage19/ebm_mt5_axis_extension.py",
+            "lines": 1176,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage19/ebm_mt5_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage19/ebm_mt5_runtime_probe.py",
+            "lines": 1308,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage20/gam_mt5_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage20/gam_mt5_runtime_probe.py",
+            "lines": 1047,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage21/elasticnet_logistic_mt5_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage21/elasticnet_logistic_mt5_runtime_probe.py",
+            "lines": 969,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage21/elasticnet_logistic_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage21/elasticnet_logistic_scout.py",
+            "lines": 865,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage22/hmm_state_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage22/hmm_state_runtime_probe.py",
+            "lines": 1014,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage23/supervised_regime_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage23/supervised_regime_runtime_probe.py",
+            "lines": 1002,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage23/supervised_regime_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage23/supervised_regime_scout.py",
+            "lines": 993,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage24/survival_time_to_event_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage24/survival_time_to_event_runtime_probe.py",
+            "lines": 1118,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage24/survival_time_to_event_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage24/survival_time_to_event_scout.py",
+            "lines": 1129,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage25/hazard_trade_lifecycle_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage25/hazard_trade_lifecycle_runtime_probe.py",
+            "lines": 1151,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+            "lines": 1050,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage26/ngboost_distribution_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage26/ngboost_distribution_runtime_probe.py",
+            "lines": 1108,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+            "lines": 1038,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage27/quantile_boosting_tail_risk_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_runtime_probe.py",
+            "lines": 1149,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+            "lines": 1110,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage28/markov_regression_state_link_scout.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage28/markov_regression_state_link_scout.py",
+            "lines": 1077,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage28/markov_regression_state_runtime_probe.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage28/markov_regression_state_runtime_probe.py",
+            "lines": 1342,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage28/markov_regression_supplement_state_variance_attribution.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage28/markov_regression_supplement_state_variance_attribution.py",
+            "lines": 831,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage29_32_goal_completion.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage29_32_goal_completion.py",
+            "lines": 1966,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage29_32_native_revalidation_supplement.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage29_32_native_revalidation_supplement.py",
+            "lines": 837,
+            "attention_lines": 800
+          }
+        },
+        {
+          "check_id": "large_file::stage_pipelines/stage33/adapter_readiness_map.py",
+          "message": "Large code file requires code-surface guard before future edits.",
+          "severity": "warning",
+          "details": {
+            "path": "stage_pipelines/stage33/adapter_readiness_map.py",
+            "lines": 1238,
+            "attention_lines": 800
+          }
+        }
+      ],
+      "counts": {
+        "attention_lines": 800,
+        "blocking_lines": 1600,
+        "scanned_files": 332,
+        "files_over_attention": 46,
+        "lines::.agents/skills/obsidian-architecture-guard/scripts/validate_agent_settings.py": 391,
+        "lines::foundation/alpha/__init__.py": 3,
+        "lines::foundation/alpha/decision_views.py": 282,
+        "lines::foundation/alpha/scout_runner.py": 783,
+        "lines::foundation/alpha/specs.py": 88,
+        "lines::foundation/collectors/export_fpmarkets_v2_mt5_bars.py": 283,
+        "lines::foundation/collectors/feature_frame_target_probe.py": 346,
+        "lines::foundation/collectors/raw_m5_inventory.py": 473,
+        "lines::foundation/collectors/time_semantics_probe.py": 327,
+        "lines::foundation/control_plane/__init__.py": 1,
+        "lines::foundation/control_plane/agent_control_contracts.py": 348,
+        "lines::foundation/control_plane/alpha_run_ledgers.py": 315,
+        "lines::foundation/control_plane/audit_result.py": 74,
+        "lines::foundation/control_plane/closeout_gate.py": 306,
+        "lines::foundation/control_plane/code_surface_audit.py": 200,
+        "lines::foundation/control_plane/decision_lock.py": 151,
+        "lines::foundation/control_plane/experiment_inventory.py": 648,
+        "lines::foundation/control_plane/final_claim_guard.py": 42,
+        "lines::foundation/control_plane/kpi_contract_audit.py": 128,
+        "lines::foundation/control_plane/ledger.py": 166,
+        "lines::foundation/control_plane/mt5_kpi_recorder.py": 1183,
+        "lines::foundation/control_plane/mt5_kpi_records.py": 208,
+        "lines::foundation/control_plane/mt5_missing_report_executor.py": 417,
+        "lines::foundation/control_plane/mt5_tier_balance_completion.py": 1364,
+        "lines::foundation/control_plane/mt5_trade_attribution.py": 800,
+        "lines::foundation/control_plane/ops_instruction_audit.py": 348,
+        "lines::foundation/control_plane/packet_writers.py": 535,
+        "lines::foundation/control_plane/preflight_clarifier.py": 294,
+        "lines::foundation/control_plane/prompt_intake_classifier.py": 197,
+        "lines::foundation/control_plane/required_gate_coverage_audit.py": 169,
+        "lines::foundation/control_plane/risk_vector_scan.py": 127,
+        "lines::foundation/control_plane/routing_coverage.py": 130,
+        "lines::foundation/control_plane/scope_completion_gate.py": 104,
+        "lines::foundation/control_plane/self_correction.py": 245,
+        "lines::foundation/control_plane/skill_receipt_lint.py": 96,
+        "lines::foundation/control_plane/skill_receipt_schema_lint.py": 140,
+        "lines::foundation/control_plane/stage_work_archive.py": 159,
+        "lines::foundation/control_plane/state_sync_audit.py": 281,
+        "lines::foundation/control_plane/tier_context.py": 125,
+        "lines::foundation/control_plane/tier_context_materialization.py": 197,
+        "lines::foundation/control_plane/validate_run_evidence.py": 554,
+        "lines::foundation/control_plane/work_packet_gate.py": 74,
+        "lines::foundation/control_plane/work_packet_schema_lint.py": 177,
+        "lines::foundation/features/session_calendar.py": 326,
+        "lines::foundation/features/top3_price_proxy_weights.py": 166,
+        "lines::foundation/indexing_sentinel.py": 3,
+        "lines::foundation/models/alpha_scout_support.py": 308,
+        "lines::foundation/models/baseline_training.py": 185,
+        "lines::foundation/models/catboost_ordered.py": 201,
+        "lines::foundation/models/decision_surface.py": 130,
+        "lines::foundation/models/ebm_explainable.py": 220,
+        "lines::foundation/models/ebm_onnx.py": 151,
+        "lines::foundation/models/ebm_score_table.py": 190,
+        "lines::foundation/models/elasticnet_logistic.py": 323,
+        "lines::foundation/models/gam_additive.py": 312,
+        "lines::foundation/models/gam_score_table.py": 185,
+        "lines::foundation/models/hmm_segmentation.py": 191,
+        "lines::foundation/models/hmm_state_policy.py": 171,
+        "lines::foundation/models/input_geometry.py": 231,
+        "lines::foundation/models/lda_discriminant.py": 452,
+        "lines::foundation/models/mlp_activation.py": 226,
+        "lines::foundation/models/mlp_characteristics.py": 225,
+        "lines::foundation/models/mlp_convergence_thresholds.py": 324,
+        "lines::foundation/models/onnx_bridge.py": 406,
+        "lines::foundation/models/qda_discriminant.py": 359,
+        "lines::foundation/models/svm_margin_kernel.py": 288,
+        "lines::foundation/models/xgboost_boosting.py": 301,
+        "lines::foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh": 100,
+        "lines::foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh": 366,
+        "lines::foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh": 430,
+        "lines::foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh": 510,
+        "lines::foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh": 297,
+        "lines::foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh": 398,
+        "lines::foundation/mt5/mql5_compile.py": 112,
+        "lines::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5": 1715,
+        "lines::foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5": 1777,
+        "lines::foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5": 530,
+        "lines::foundation/mt5/runtime_artifacts.py": 221,
+        "lines::foundation/mt5/runtime_support.py": 62,
+        "lines::foundation/mt5/strategy_report.py": 260,
+        "lines::foundation/mt5/terminal_runner.py": 115,
+        "lines::foundation/mt5/tester_files.py": 104,
+        "lines::foundation/mt5/trade_report.py": 214,
+        "lines::foundation/parity/stage06_runtime_parity.py": 760,
+        "lines::foundation/pipelines/audit_stage05_feature_integrity.py": 977,
+        "lines::foundation/pipelines/materialize_feature_frame_freeze.py": 429,
+        "lines::foundation/pipelines/materialize_fpmarkets_v2_dataset.py": 786,
+        "lines::foundation/pipelines/materialize_model_input_dataset.py": 516,
+        "lines::foundation/pipelines/materialize_top3_price_proxy_weights.py": 227,
+        "lines::foundation/pipelines/materialize_training_label_split_dataset.py": 522,
+        "lines::foundation/pipelines/run_stage07_baseline_training_smoke.py": 437,
+        "lines::foundation/pipelines/run_stage10_logreg_mt5_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_divergent_scouts.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_fwd18_retrain_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_rank_threshold_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_lgbm_training_method_scout.py": 7,
+        "lines::foundation/pipelines/run_stage11_priority_probes.py": 7,
+        "lines::foundation/pipelines/run_stage12_batch20_top_mt5_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_all_variant_mt5_probe.py": 15,
+        "lines::foundation/pipelines/run_stage12_extratrees_gap_overnight_context_probe.py": 9,
+        "lines::foundation/pipelines/run_stage12_extratrees_inversion_attribution_probe.py": 15,
+        "lines::foundation/pipelines/run_stage12_extratrees_macro_proxy_regime_probe.py": 9,
+        "lines::foundation/pipelines/run_stage12_extratrees_mega_cap_divergence_probe.py": 9,
+        "lines::foundation/pipelines/run_stage12_extratrees_probability_shape_attribution_probe.py": 9,
+        "lines::foundation/pipelines/run_stage12_extratrees_recency_weighted_single_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_rolling_wfo_split_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_session_age_regime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_standalone_batch20.py": 9,
+        "lines::foundation/pipelines/run_stage12_extratrees_standalone_mt5_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_standalone_scout.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_training_effect_scout.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_trend_chop_regime_probe.py": 8,
+        "lines::foundation/pipelines/run_stage12_extratrees_variant_stability_probe.py": 15,
+        "lines::foundation/pipelines/run_stage12_extratrees_volatility_regime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage12_extratrees_wfo_fold07_mt5_probe.py": 7,
+        "lines::foundation/pipelines/run_stage14_svm_margin_kernel_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage15_lda_covariance_stability_probe.py": 7,
+        "lines::foundation/pipelines/run_stage15_lda_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage16_qda_characterization_probe.py": 7,
+        "lines::foundation/pipelines/run_stage16_qda_mt5_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage16_qda_run09_followup_probe.py": 7,
+        "lines::foundation/pipelines/run_stage16_qda_run10_decision_microprobe.py": 7,
+        "lines::foundation/pipelines/run_stage17_xgboost_characteristic_mt5_probe.py": 7,
+        "lines::foundation/pipelines/run_stage17_xgboost_dart_attribution_closeout.py": 5,
+        "lines::foundation/pipelines/run_stage17_xgboost_dart_booster_probe.py": 5,
+        "lines::foundation/pipelines/run_stage17_xgboost_direction_asymmetry_probe.py": 5,
+        "lines::foundation/pipelines/run_stage17_xgboost_feature_driver_saturation_probe.py": 5,
+        "lines::foundation/pipelines/run_stage17_xgboost_frequency_closeout_probe.py": 5,
+        "lines::foundation/pipelines/run_stage17_xgboost_trade_shape_attribution_probe.py": 5,
+        "lines::foundation/pipelines/run_stage18_catboost_compression_batch.py": 7,
+        "lines::foundation/pipelines/run_stage18_catboost_followup_batch.py": 7,
+        "lines::foundation/pipelines/run_stage18_catboost_mt5_characteristic_probe.py": 7,
+        "lines::foundation/pipelines/run_stage19_ebm_axis_exhaustion_followthrough.py": 7,
+        "lines::foundation/pipelines/run_stage19_ebm_characteristic_scout.py": 8,
+        "lines::foundation/pipelines/run_stage19_ebm_deep_axis_followup.py": 7,
+        "lines::foundation/pipelines/run_stage19_ebm_feature_hold6_routing_attribution.py": 15,
+        "lines::foundation/pipelines/run_stage19_ebm_mt5_axis_extension.py": 7,
+        "lines::foundation/pipelines/run_stage19_ebm_mt5_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage20_closeout_stage21_open.py": 5,
+        "lines::foundation/pipelines/run_stage20_gam_characteristic_scout.py": 10,
+        "lines::foundation/pipelines/run_stage20_gam_mt5_runtime_probe.py": 5,
+        "lines::foundation/pipelines/run_stage21_closeout_stage22_open.py": 5,
+        "lines::foundation/pipelines/run_stage21_elasticnet_logistic_mt5_runtime_probe.py": 8,
+        "lines::foundation/pipelines/run_stage21_elasticnet_logistic_scout.py": 8,
+        "lines::foundation/pipelines/run_stage22_closeout_stage23_open.py": 7,
+        "lines::foundation/pipelines/run_stage22_hmm_state_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage22_hmm_state_scout.py": 5,
+        "lines::foundation/pipelines/run_stage23_closeout_stage24_open.py": 7,
+        "lines::foundation/pipelines/run_stage23_supervised_regime_runtime_probe.py": 5,
+        "lines::foundation/pipelines/run_stage23_supervised_regime_scout.py": 7,
+        "lines::foundation/pipelines/run_stage24_closeout_stage25_open.py": 7,
+        "lines::foundation/pipelines/run_stage24_survival_time_to_event_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage24_survival_time_to_event_scout.py": 7,
+        "lines::foundation/pipelines/run_stage25_closeout_stage26_open.py": 7,
+        "lines::foundation/pipelines/run_stage25_hazard_trade_lifecycle_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage25_hazard_trade_lifecycle_scout.py": 7,
+        "lines::foundation/pipelines/run_stage26_closeout_stage27_open.py": 7,
+        "lines::foundation/pipelines/run_stage26_ngboost_distribution_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage26_ngboost_probabilistic_distribution_scout.py": 7,
+        "lines::foundation/pipelines/run_stage27_closeout_stage28_open.py": 7,
+        "lines::foundation/pipelines/run_stage27_quantile_boosting_tail_risk_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage27_quantile_boosting_tail_risk_scout.py": 7,
+        "lines::foundation/pipelines/run_stage28_markov_regression_closeout_stage29_open.py": 7,
+        "lines::foundation/pipelines/run_stage28_markov_regression_state_link_scout.py": 7,
+        "lines::foundation/pipelines/run_stage28_markov_regression_state_runtime_probe.py": 7,
+        "lines::foundation/pipelines/run_stage28_markov_regression_supplement_state_variance_attribution.py": 14,
+        "lines::foundation/pipelines/run_stage29_32_goal_completion.py": 14,
+        "lines::foundation/pipelines/run_stage29_32_native_revalidation_supplement.py": 14,
+        "lines::foundation/pipelines/run_stage33_adapter_readiness_map.py": 8,
+        "lines::stage_pipelines/__init__.py": 1,
+        "lines::stage_pipelines/stage10/__init__.py": 1,
+        "lines::stage_pipelines/stage10/logreg_mt5_scout.py": 718,
+        "lines::stage_pipelines/stage11/__init__.py": 1,
+        "lines::stage_pipelines/stage11/lgbm_divergent_scouts.py": 427,
+        "lines::stage_pipelines/stage11/lgbm_divergent_support.py": 797,
+        "lines::stage_pipelines/stage11/lgbm_fwd18_retrain_scout.py": 311,
+        "lines::stage_pipelines/stage11/lgbm_rank_threshold_scout.py": 508,
+        "lines::stage_pipelines/stage11/lgbm_rank_threshold_support.py": 401,
+        "lines::stage_pipelines/stage11/lgbm_training_method_scout.py": 760,
+        "lines::stage_pipelines/stage11/lgbm_training_support.py": 634,
+        "lines::stage_pipelines/stage11/priority_probes.py": 783,
+        "lines::stage_pipelines/stage12/__init__.py": 1,
+        "lines::stage_pipelines/stage12/batch20_top_mt5_probe.py": 281,
+        "lines::stage_pipelines/stage12/batch20_top_mt5_support.py": 594,
+        "lines::stage_pipelines/stage12/extratrees_all_variant_mt5_probe.py": 1553,
+        "lines::stage_pipelines/stage12/extratrees_gap_overnight_context_probe.py": 1471,
+        "lines::stage_pipelines/stage12/extratrees_inversion_attribution_probe.py": 1459,
+        "lines::stage_pipelines/stage12/extratrees_macro_proxy_regime_probe.py": 1483,
+        "lines::stage_pipelines/stage12/extratrees_mega_cap_divergence_probe.py": 1474,
+        "lines::stage_pipelines/stage12/extratrees_probability_shape_attribution_probe.py": 1501,
+        "lines::stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py": 1934,
+        "lines::stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py": 1591,
+        "lines::stage_pipelines/stage12/extratrees_session_age_regime_probe.py": 1453,
+        "lines::stage_pipelines/stage12/extratrees_standalone_batch20.py": 257,
+        "lines::stage_pipelines/stage12/extratrees_standalone_batch20_support.py": 777,
+        "lines::stage_pipelines/stage12/extratrees_standalone_mt5_probe.py": 392,
+        "lines::stage_pipelines/stage12/extratrees_standalone_mt5_support.py": 731,
+        "lines::stage_pipelines/stage12/extratrees_standalone_scout.py": 694,
+        "lines::stage_pipelines/stage12/extratrees_training_effect_scout.py": 440,
+        "lines::stage_pipelines/stage12/extratrees_training_effect_support.py": 687,
+        "lines::stage_pipelines/stage12/extratrees_trend_chop_regime_probe.py": 1471,
+        "lines::stage_pipelines/stage12/extratrees_variant_stability_probe.py": 1285,
+        "lines::stage_pipelines/stage12/extratrees_volatility_regime_probe.py": 1465,
+        "lines::stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py": 1730,
+        "lines::stage_pipelines/stage13/__init__.py": 1,
+        "lines::stage_pipelines/stage13/mlp_activation_runtime_probe.py": 800,
+        "lines::stage_pipelines/stage13/mlp_characteristic_runtime_probe.py": 780,
+        "lines::stage_pipelines/stage13/mlp_convergence_threshold_docs.py": 300,
+        "lines::stage_pipelines/stage13/mlp_convergence_threshold_feasibility_probe.py": 691,
+        "lines::stage_pipelines/stage13/mlp_direction_asymmetry_runtime_probe.py": 595,
+        "lines::stage_pipelines/stage13/mlp_direction_collision_attribution.py": 721,
+        "lines::stage_pipelines/stage13/mlp_direction_trade_shape_attribution.py": 787,
+        "lines::stage_pipelines/stage13/mlp_feature_group_interaction_docs.py": 223,
+        "lines::stage_pipelines/stage13/mlp_feature_group_interaction_profit_probe.py": 799,
+        "lines::stage_pipelines/stage13/mlp_handoff_support.py": 373,
+        "lines::stage_pipelines/stage13/mlp_input_geometry_runtime_handoff_probe.py": 791,
+        "lines::stage_pipelines/stage13/mlp_internal_behavior_probes.py": 712,
+        "lines::stage_pipelines/stage13/mlp_learning_behavior_runtime_probe.py": 588,
+        "lines::stage_pipelines/stage13/mlp_probability_geometry_probe.py": 540,
+        "lines::stage_pipelines/stage13/mlp_reversal_policy_runtime_probe.py": 702,
+        "lines::stage_pipelines/stage13/mlp_runtime_docs.py": 343,
+        "lines::stage_pipelines/stage13/mlp_threshold_trading_runtime_probe.py": 510,
+        "lines::stage_pipelines/stage14/__init__.py": 1,
+        "lines::stage_pipelines/stage14/svm_margin_kernel_closeout.py": 620,
+        "lines::stage_pipelines/stage14/svm_margin_kernel_runtime_probe.py": 793,
+        "lines::stage_pipelines/stage15/__init__.py": 1,
+        "lines::stage_pipelines/stage15/lda_covariance_stability_probe.py": 588,
+        "lines::stage_pipelines/stage15/lda_runtime_probe.py": 744,
+        "lines::stage_pipelines/stage16/__init__.py": 1,
+        "lines::stage_pipelines/stage16/qda_characterization_probe.py": 771,
+        "lines::stage_pipelines/stage16/qda_mt5_runtime_probe.py": 551,
+        "lines::stage_pipelines/stage16/qda_run09_followup_probe.py": 664,
+        "lines::stage_pipelines/stage16/qda_run10_decision_microprobe.py": 426,
+        "lines::stage_pipelines/stage17/__init__.py": 2,
+        "lines::stage_pipelines/stage17/xgboost_characteristic_mt5_probe.py": 798,
+        "lines::stage_pipelines/stage17/xgboost_dart_attribution_closeout.py": 534,
+        "lines::stage_pipelines/stage17/xgboost_dart_booster_probe.py": 588,
+        "lines::stage_pipelines/stage17/xgboost_direction_asymmetry_probe.py": 470,
+        "lines::stage_pipelines/stage17/xgboost_feature_driver_saturation_probe.py": 608,
+        "lines::stage_pipelines/stage17/xgboost_frequency_closeout_probe.py": 418,
+        "lines::stage_pipelines/stage17/xgboost_trade_shape_attribution_probe.py": 788,
+        "lines::stage_pipelines/stage18/__init__.py": 2,
+        "lines::stage_pipelines/stage18/catboost_compression_batch.py": 429,
+        "lines::stage_pipelines/stage18/catboost_followup_batch.py": 1674,
+        "lines::stage_pipelines/stage18/catboost_mt5_characteristic_probe.py": 1261,
+        "lines::stage_pipelines/stage19/__init__.py": 1,
+        "lines::stage_pipelines/stage19/ebm_axis_exhaustion_followthrough.py": 1332,
+        "lines::stage_pipelines/stage19/ebm_characteristic_scout.py": 809,
+        "lines::stage_pipelines/stage19/ebm_deep_axis_followup.py": 1478,
+        "lines::stage_pipelines/stage19/ebm_feature_hold6_routing_attribution.py": 1316,
+        "lines::stage_pipelines/stage19/ebm_mt5_axis_extension.py": 1176,
+        "lines::stage_pipelines/stage19/ebm_mt5_runtime_probe.py": 1308,
+        "lines::stage_pipelines/stage20/__init__.py": 2,
+        "lines::stage_pipelines/stage20/gam_characteristic_scout.py": 680,
+        "lines::stage_pipelines/stage20/gam_closeout_stage21_open.py": 440,
+        "lines::stage_pipelines/stage20/gam_mt5_runtime_probe.py": 1047,
+        "lines::stage_pipelines/stage21/__init__.py": 2,
+        "lines::stage_pipelines/stage21/elasticnet_logistic_closeout_stage22_open.py": 449,
+        "lines::stage_pipelines/stage21/elasticnet_logistic_mt5_runtime_probe.py": 969,
+        "lines::stage_pipelines/stage21/elasticnet_logistic_scout.py": 865,
+        "lines::stage_pipelines/stage22/hmm_closeout_stage23_open.py": 488,
+        "lines::stage_pipelines/stage22/hmm_state_runtime_probe.py": 1014,
+        "lines::stage_pipelines/stage22/hmm_state_scout.py": 731,
+        "lines::stage_pipelines/stage23/supervised_regime_closeout_stage24_open.py": 471,
+        "lines::stage_pipelines/stage23/supervised_regime_runtime_probe.py": 1002,
+        "lines::stage_pipelines/stage23/supervised_regime_scout.py": 993,
+        "lines::stage_pipelines/stage24/survival_closeout_stage25_open.py": 600,
+        "lines::stage_pipelines/stage24/survival_time_to_event_runtime_probe.py": 1118,
+        "lines::stage_pipelines/stage24/survival_time_to_event_scout.py": 1129,
+        "lines::stage_pipelines/stage25/hazard_closeout_stage26_open.py": 595,
+        "lines::stage_pipelines/stage25/hazard_trade_lifecycle_runtime_probe.py": 1151,
+        "lines::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py": 1050,
+        "lines::stage_pipelines/stage26/ngboost_closeout_stage27_open.py": 463,
+        "lines::stage_pipelines/stage26/ngboost_distribution_runtime_probe.py": 1108,
+        "lines::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py": 1038,
+        "lines::stage_pipelines/stage27/__init__.py": 1,
+        "lines::stage_pipelines/stage27/quantile_boosting_tail_risk_runtime_probe.py": 1149,
+        "lines::stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py": 1110,
+        "lines::stage_pipelines/stage27/quantile_closeout_stage28_open.py": 652,
+        "lines::stage_pipelines/stage28/__init__.py": 1,
+        "lines::stage_pipelines/stage28/markov_regression_closeout_stage29_open.py": 576,
+        "lines::stage_pipelines/stage28/markov_regression_state_link_scout.py": 1077,
+        "lines::stage_pipelines/stage28/markov_regression_state_runtime_probe.py": 1342,
+        "lines::stage_pipelines/stage28/markov_regression_supplement_state_variance_attribution.py": 831,
+        "lines::stage_pipelines/stage29_32_goal_completion.py": 1966,
+        "lines::stage_pipelines/stage29_32_native_revalidation_supplement.py": 837,
+        "lines::stage_pipelines/stage33/__init__.py": 2,
+        "lines::stage_pipelines/stage33/adapter_readiness_map.py": 1238,
+        "lines::tests/test_agent_control_contracts.py": 106,
+        "lines::tests/test_agent_control_gates.py": 480,
+        "lines::tests/test_alpha_scout_runner_context.py": 87,
+        "lines::tests/test_audit_stage05_feature_integrity.py": 128,
+        "lines::tests/test_code_surface_audit.py": 79,
+        "lines::tests/test_control_plane_alpha_run_ledgers.py": 141,
+        "lines::tests/test_decision_lock.py": 39,
+        "lines::tests/test_experiment_inventory.py": 126,
+        "lines::tests/test_feature_frame_target_probe.py": 72,
+        "lines::tests/test_hmm_segmentation.py": 57,
+        "lines::tests/test_hmm_state_policy.py": 37,
+        "lines::tests/test_materialize_feature_frame_freeze.py": 74,
+        "lines::tests/test_materialize_fpmarkets_v2_dataset.py": 230,
+        "lines::tests/test_materialize_model_input_dataset.py": 118,
+        "lines::tests/test_materialize_training_label_split_dataset.py": 120,
+        "lines::tests/test_mt5_kpi_recorder.py": 484,
+        "lines::tests/test_mt5_missing_report_executor.py": 92,
+        "lines::tests/test_mt5_runtime_artifacts.py": 65,
+        "lines::tests/test_mt5_strategy_report.py": 73,
+        "lines::tests/test_mt5_trade_attribution.py": 152,
+        "lines::tests/test_ops_instruction_audit.py": 69,
+        "lines::tests/test_prompt_intake_classifier.py": 57,
+        "lines::tests/test_raw_m5_inventory.py": 111,
+        "lines::tests/test_required_gate_coverage_audit.py": 48,
+        "lines::tests/test_risk_vector_scan.py": 51,
+        "lines::tests/test_row_grain_contract.py": 40,
+        "lines::tests/test_self_correction.py": 116,
+        "lines::tests/test_session_calendar.py": 73,
+        "lines::tests/test_skill_receipt_schema_lint.py": 92,
+        "lines::tests/test_stage06_runtime_parity.py": 99,
+        "lines::tests/test_stage07_baseline_training_smoke.py": 112,
+        "lines::tests/test_stage10_logreg_mt5_scout.py": 768,
+        "lines::tests/test_stage12_probability_guard.py": 47,
+        "lines::tests/test_stage19_ebm_explainable.py": 251,
+        "lines::tests/test_stage20_gam_additive.py": 124,
+        "lines::tests/test_stage21_elasticnet_logistic.py": 134,
+        "lines::tests/test_stage33_adapter_readiness_map.py": 72,
+        "lines::tests/test_stage_pipeline_imports.py": 52,
+        "lines::tests/test_stage_work_archive.py": 57,
+        "lines::tests/test_state_sync_audit.py": 98,
+        "lines::tests/test_time_semantics_probe.py": 82,
+        "lines::tests/test_top3_price_proxy_weights.py": 79,
+        "lines::tests/test_validate_run_evidence.py": 270,
+        "lines::tests/test_work_packet_schema_lint.py": 110
+      },
+      "allowed_claims": [
+        "code_surface_guarded"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "active_stage": "33_mechanism_discovery__stage10_32_adapter_readiness_map",
+        "workspace_active_branch": "main",
+        "actual_git_branch": "main",
+        "current_run_values": {
+          "workspace_state": "run27A_stage10_32_adapter_readiness_map_v1",
+          "current_working_state": "run27A_stage10_32_adapter_readiness_map_v1",
+          "selection_status": "run27A_stage10_32_adapter_readiness_map_v1"
+        },
+        "stage_brief_boundary": "",
+        "registry_has_current_run": true,
+        "stage_ledger_has_current_run": true,
+        "source_paths": {
+          "workspace_state": "docs/workspace/workspace_state.yaml",
+          "current_working_state": "docs/context/current_working_state.md",
+          "selection_status": "stages/33_mechanism_discovery__stage10_32_adapter_readiness_map/04_selected/selection_status.md",
+          "stage_brief": "stages/33_mechanism_discovery__stage10_32_adapter_readiness_map/00_spec/stage_brief.md",
+          "run_registry": "docs/registers/run_registry.csv",
+          "stage_ledger": "stages/33_mechanism_discovery__stage10_32_adapter_readiness_map/03_reviews/stage_run_ledger.csv"
+        }
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "code_surface_audit",
+          "final_claim_guard",
+          "kpi_contract_audit",
+          "onnx_readiness_decision",
+          "repeatability_check",
+          "required_gate_coverage_audit",
+          "row_grain_audit",
+          "runtime_parity_check",
+          "scope_completion_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "source_authority_audit",
+          "state_sync_audit",
+          "test_gate",
+          "work_packet_schema_lint"
+        ],
+        "executed_audits": [
+          "code_surface_audit",
+          "final_claim_guard",
+          "kpi_contract_audit",
+          "onnx_readiness_decision",
+          "repeatability_check",
+          "required_gate_coverage_audit",
+          "row_grain_audit",
+          "runtime_parity_check",
+          "scope_completion_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "source_authority_audit",
+          "state_sync_audit",
+          "test_gate",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {},
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "adapter_evidence_scan_completed",
+        "candidate_clues_identified"
+      ],
+      "source_audits": [
+        "scope_completion_gate",
+        "kpi_contract_audit",
+        "skill_receipt_lint",
+        "skill_receipt_schema_lint",
+        "work_packet_schema_lint",
+        "row_grain_audit",
+        "source_authority_audit",
+        "repeatability_check",
+        "runtime_parity_check",
+        "onnx_readiness_decision",
+        "test_gate",
+        "code_surface_audit",
+        "state_sync_audit",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "adapter_evidence_scan_completed",
+      "candidate_clues_identified"
+    ],
+    "forbidden_claims": []
+  },
+  "claim_boundary": "adapter_readiness_map_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness"
+}

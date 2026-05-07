@@ -1,0 +1,701 @@
+{
+  "cards": [
+    {
+      "adapter_candidate_id": "adapter_candidate_run12A_catboost_ordered_boosting_characteristic_scout_v1",
+      "source_run_id": "run12A_catboost_ordered_boosting_characteristic_scout_v1",
+      "stage_id": "18_model_family_challenge__catboost_ordered_boosting_scout",
+      "mechanism_class": "onnx_model_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Regime / Context",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": "not_fixed_in_summary",
+        "runtime_feature_order_hash": "missing",
+        "thresholds": {
+          "tier_a": 0.44092703568761765,
+          "tier_b": 0.43228421619348373
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 206.56,
+        "validation_profit_factor": 1.27,
+        "oos_net_profit": 203.52,
+        "oos_profit_factor": 1.49,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": false,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run13L_ebm_q90_hold6_direction_probe_v1",
+      "source_run_id": "run13L_ebm_q90_hold6_direction_probe_v1",
+      "stage_id": "19_model_family_challenge__ebm_explainable_boosting_shape",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": "not_fixed_in_summary",
+        "runtime_feature_order_hash": "missing",
+        "thresholds": {
+          "quantile": 0.9,
+          "tier_a": 0.5426685369074962,
+          "tier_b": 0.5217261933075719
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 73.58,
+        "validation_profit_factor": 1.1,
+        "oos_net_profit": 18.7,
+        "oos_profit_factor": 1.03,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": false,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run13O_ebm_q90_hold2_probe_v1",
+      "source_run_id": "run13O_ebm_q90_hold2_probe_v1",
+      "stage_id": "19_model_family_challenge__ebm_explainable_boosting_shape",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": "not_fixed_in_summary",
+        "runtime_feature_order_hash": "missing",
+        "thresholds": {
+          "quantile": 0.9,
+          "tier_a": 0.5426685369074962,
+          "tier_b": 0.5217261933075719
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 69.53,
+        "validation_profit_factor": 1.06,
+        "oos_net_profit": 25.69,
+        "oos_profit_factor": 1.03,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": false,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run13S_ebm_q90_hold4_direction_probe_v1",
+      "source_run_id": "run13S_ebm_q90_hold4_direction_probe_v1",
+      "stage_id": "19_model_family_challenge__ebm_explainable_boosting_shape",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": "not_fixed_in_summary",
+        "runtime_feature_order_hash": "missing",
+        "thresholds": {
+          "quantile": 0.9,
+          "tier_a": 0.5426685369074962,
+          "tier_b": 0.5217261933075719
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 195.2,
+        "validation_profit_factor": 1.23,
+        "oos_net_profit": 68.64,
+        "oos_profit_factor": 1.13,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": false,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run13V_ebm_q90_hold4_mask_ema9_ema20_probe_v1",
+      "source_run_id": "run13V_ebm_q90_hold4_mask_ema9_ema20_probe_v1",
+      "stage_id": "19_model_family_challenge__ebm_explainable_boosting_shape",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Permission / Filter / Abstention",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": "not_fixed_in_summary",
+        "runtime_feature_order_hash": "missing",
+        "thresholds": {
+          "quantile": 0.9,
+          "tier_a": 0.5426685369074962,
+          "tier_b": 0.5217261933075719
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 178.41,
+        "validation_profit_factor": 1.15,
+        "oos_net_profit": 32.63,
+        "oos_profit_factor": 1.04,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": false,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run13AB_ebm_q92_hold4_direction_probe_v1",
+      "source_run_id": "run13AB_ebm_q92_hold4_direction_probe_v1",
+      "stage_id": "19_model_family_challenge__ebm_explainable_boosting_shape",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": "not_fixed_in_summary",
+        "runtime_feature_order_hash": "missing",
+        "thresholds": {
+          "quantile": 0.92,
+          "tier_a": 0.5578776042532843,
+          "tier_b": 0.5399896986049445
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 320.28,
+        "validation_profit_factor": 1.5,
+        "oos_net_profit": 37.12,
+        "oos_profit_factor": 1.09,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": false,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run13AE_ebm_q90_hold4_mixed_subtype_direction_probe_v1",
+      "source_run_id": "run13AE_ebm_q90_hold4_mixed_subtype_direction_probe_v1",
+      "stage_id": "19_model_family_challenge__ebm_explainable_boosting_shape",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Permission / Filter / Abstention",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Regime / Context",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": "not_fixed_in_summary",
+        "runtime_feature_order_hash": "missing",
+        "thresholds": {
+          "quantile": 0.9,
+          "tier_a": 0.5426685369074962,
+          "tier_b": 0.5217261933075719
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 188.31,
+        "validation_profit_factor": 1.22,
+        "oos_net_profit": 80.89,
+        "oos_profit_factor": 1.16,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": false,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run14B_gam_runtime_handoff_probe_v1",
+      "source_run_id": "run14B_gam_runtime_handoff_probe_v1",
+      "stage_id": "20_model_family_challenge__gam_additive_smooth_shape",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "close_ema20_ratio",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "bb_position_20",
+          "adx_14",
+          "di_spread_14",
+          "minutes_from_cash_open",
+          "hl_range",
+          "close_open_ratio",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "atr_14",
+          "historical_vol_20",
+          "supertrend_10_3",
+          "vortex_indicator",
+          "is_first_30m_after_open"
+        ],
+        "runtime_feature_order_hash": "dccf54f6fb9dac5cfe679f1880502d6229a036a6c551f01d1bb66adc1227f914",
+        "thresholds": {
+          "quantile": 0.9,
+          "tier_a": 0.3735352887238693,
+          "tier_b": 0.36094569571431695
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 8.65,
+        "validation_profit_factor": 1.01,
+        "oos_net_profit": 295.69,
+        "oos_profit_factor": 1.51,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": true,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run17B_supervised_regime_classifier_runtime_probe_v1",
+      "source_run_id": "run17B_supervised_regime_classifier_runtime_probe_v1",
+      "stage_id": "23_regime_model__supervised_regime_classifier_filter",
+      "mechanism_class": "onnx_model_adapter",
+      "roles": [
+        "Entry",
+        "Permission / Filter / Abstention",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Regime / Context",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": [
+          "log_return_1",
+          "log_return_3",
+          "return_zscore_20",
+          "hl_range",
+          "atr_14",
+          "atr_14_over_atr_50",
+          "bollinger_width_20",
+          "adx_14",
+          "di_spread_14",
+          "ema20_ema50_diff",
+          "ema20_ema50_spread_zscore_50",
+          "rsi_14",
+          "rsi_14_slope_3",
+          "bb_position_20",
+          "stoch_kd_diff",
+          "ppo_hist_12_26_9",
+          "roc_12",
+          "historical_vol_20",
+          "minutes_from_cash_open",
+          "is_us_cash_open",
+          "is_first_30m_after_open",
+          "close_ema20_ratio",
+          "close_open_ratio",
+          "vortex_indicator"
+        ],
+        "runtime_feature_order_hash": "882cf933cd5835707f717b0cf8617f648752729d60e46aa5edb706e91c88c6a7",
+        "thresholds": {
+          "quantile": 0.8,
+          "tier_a": 0.42627543677432106,
+          "tier_b": 0.42818029581963635
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 324.75,
+        "validation_profit_factor": 1.16,
+        "oos_net_profit": 254.63,
+        "oos_profit_factor": 1.19,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": true,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run22B_markov_regression_state_runtime_probe_v1",
+      "source_run_id": "run22B_markov_regression_state_runtime_probe_v1",
+      "stage_id": "28_regime_model__markov_switching_regression_state_link",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Regime / Context",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": [
+          "mk_state_score",
+          "mk_state_confidence",
+          "mk_state_entropy_inv",
+          "mk_return_abs"
+        ],
+        "runtime_feature_order_hash": "72d11387ebc7fdf4d73493d92e88ea4445739aed5385e305da2ea3a710ac9fd9",
+        "thresholds": {
+          "quantile": 0.8,
+          "tier_a": 0.9411238241607245,
+          "tier_b": 0.4822236008367659
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 244.08,
+        "validation_profit_factor": 1.77,
+        "oos_net_profit": 111.27,
+        "oos_profit_factor": 1.31,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": true,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run26B_tcn_temporal_convolution_runtime_probe_v1",
+      "source_run_id": "run26B_tcn_temporal_convolution_runtime_probe_v1",
+      "stage_id": "32_sequence_model__tcn_temporal_convolution_context",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Regime / Context",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": [
+          "tcn_fast_return_kernel",
+          "tcn_slow_return_kernel",
+          "tcn_range_pressure",
+          "tcn_trend_context"
+        ],
+        "runtime_feature_order_hash": "dc76e36735cdd88681c781d947a613dc7ab8522b43ce64915208d6cc99b36dff",
+        "thresholds": {
+          "quantile": 0.8,
+          "tier_a": 0.5458454175888704,
+          "tier_b": 0.447047721377846
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 75.26,
+        "validation_profit_factor": 1.04,
+        "oos_net_profit": 111.77,
+        "oos_profit_factor": 1.07,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": true,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    },
+    {
+      "adapter_candidate_id": "adapter_candidate_run26D_torch_tcn_native_temporal_runtime_probe_v1",
+      "source_run_id": "run26D_torch_tcn_native_temporal_runtime_probe_v1",
+      "stage_id": "32_sequence_model__tcn_temporal_convolution_context",
+      "mechanism_class": "score_table_adapter",
+      "roles": [
+        "Entry",
+        "Risk / Tail-risk",
+        "Position Management",
+        "Exit / Hold",
+        "Regime / Context",
+        "Runtime / Packaging"
+      ],
+      "input_contract": {
+        "runtime_feature_order": [
+          "tcn_fast_return_kernel",
+          "tcn_slow_return_kernel",
+          "tcn_range_pressure",
+          "tcn_trend_context"
+        ],
+        "runtime_feature_order_hash": "dc76e36735cdd88681c781d947a613dc7ab8522b43ce64915208d6cc99b36dff",
+        "thresholds": {
+          "quantile": 0.8,
+          "tier_a": 0.5458454175888704,
+          "tier_b": 0.447047721377846
+        }
+      },
+      "output_contract": {
+        "draft": "SignalCard probability/permission/direction surface or runtime package handoff",
+        "required_fields": [
+          "timestamp",
+          "tier",
+          "direction",
+          "permission",
+          "score",
+          "confidence",
+          "risk_score",
+          "reason"
+        ],
+        "safe_fallback": "missing or non-finite inputs must abstain/flat before any runtime reuse"
+      },
+      "comparable_kpi": {
+        "validation_net_profit": 75.26,
+        "validation_profit_factor": 1.04,
+        "oos_net_profit": 111.77,
+        "oos_profit_factor": 1.07,
+        "repeatability_label": "validation_and_oos_positive_non_tiny"
+      },
+      "readiness_gate": {
+        "role_clear": true,
+        "input_features_defined": true,
+        "output_contract_fixed": false,
+        "single_split_illusion_blocked": true,
+        "safe_fallback_required_next": true,
+        "reusable_next_experiment": true,
+        "decision": "adapter_probe_candidate_not_promotion"
+      }
+    }
+  ]
+}

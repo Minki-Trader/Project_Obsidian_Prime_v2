@@ -34,6 +34,7 @@ from foundation.control_plane.mt5_tier_balance_completion import (
     split_dates_from_frame,
 )
 from foundation.models.ebm_score_table import FIELDNAMES, load_ebm_score_table, score_ebm_table_probabilities
+import foundation.models.alpha_scout_support as scout_support
 from foundation.models.onnx_bridge import ordered_hash, sha256_file
 from foundation.models.xgboost_boosting import nonflat_threshold, split_decision_metrics
 from foundation.mt5 import runtime_support as mt5
@@ -100,7 +101,7 @@ def write_md(path: Path, text: str) -> None:
 
 
 def read_json(path: Path) -> dict[str, Any]:
-    return scout.stage23_scout.read_json(path)
+    return scout_support.read_json(path)
 
 
 def save_frame(path: Path, frame: pd.DataFrame) -> dict[str, Any]:

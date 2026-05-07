@@ -25,9 +25,9 @@ from foundation.control_plane.ledger import (
     sha256_file_lf_normalized,
     upsert_csv_rows,
 )
+import foundation.models.alpha_scout_support as scout_support
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.mt5 import runtime_support as mt5
-from stage_pipelines.stage27 import quantile_boosting_tail_risk_scout as stage27_scout
 
 
 STAGE_ID = "28_regime_model__markov_switching_regression_state_link"
@@ -38,15 +38,15 @@ NEXT_RUN_ID = "run22B_markov_regression_state_runtime_probe_v1"
 EXPLORATION_LABEL = "stage28_Regime__MarkovSwitchingRegressionStateLink"
 MODEL_FAMILY = "statsmodels_markov_switching_regression"
 FEATURE_SET_ID = "feature_set_v2_mt5_price_proxy_markov_regression_state_link"
-LABEL_ID = stage27_scout.LABEL_ID
-SPLIT_CONTRACT = stage27_scout.SPLIT_CONTRACT
+LABEL_ID = scout_support.LABEL_ID
+SPLIT_CONTRACT = scout_support.SPLIT_CONTRACT
 ENDOG_COLUMN = "log_return_1"
 TARGET_COLUMN = "future_log_return_12"
 BOUNDARY = "markov_regression_state_link_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
 JUDGMENT = "inconclusive_markov_regression_state_link_scout_completed"
 
-ROOT = stage27_scout.ROOT
-MODEL_INPUT_PATH = stage27_scout.stage26_scout.stage23_scout.MODEL_INPUT_PATH
+ROOT = scout_support.ROOT
+MODEL_INPUT_PATH = scout_support.MODEL_INPUT_PATH
 STAGE_ROOT = ROOT / "stages" / STAGE_ID
 RUN_ROOT = STAGE_ROOT / "02_runs" / RUN_ID
 PACKET_ROOT = ROOT / "docs/agent_control/packets" / PACKET_ID
@@ -57,9 +57,9 @@ REPORT_PATH = STAGE_ROOT / "03_reviews/run22A_markov_regression_state_link_scout
 DECISION_PATH = ROOT / "docs/decisions/2026-05-05_stage28_run22A_markov_regression_state_link_scout.md"
 SELECTION_STATUS_PATH = STAGE_ROOT / "04_selected/selection_status.md"
 REVIEW_INDEX_PATH = STAGE_ROOT / "03_reviews/review_index.md"
-WORKSPACE_STATE_PATH = stage27_scout.WORKSPACE_STATE_PATH
-CURRENT_WORKING_STATE_PATH = stage27_scout.CURRENT_WORKING_STATE_PATH
-GOAL_PLAN_PATH = stage27_scout.GOAL_PLAN_PATH
+WORKSPACE_STATE_PATH = scout_support.WORKSPACE_STATE_PATH
+CURRENT_WORKING_STATE_PATH = scout_support.CURRENT_WORKING_STATE_PATH
+GOAL_PLAN_PATH = scout_support.GOAL_PLAN_PATH
 
 
 @dataclass(frozen=True)
@@ -89,7 +89,7 @@ def utc_now() -> str:
 
 
 def rel(path: Path) -> str:
-    return stage27_scout.rel(path)
+    return scout_support.rel(path)
 
 
 def active_branch() -> str:
@@ -97,11 +97,11 @@ def active_branch() -> str:
 
 
 def write_json(path: Path, payload: Any) -> None:
-    stage27_scout.write_json(path, payload)
+    scout_support.write_json(path, payload)
 
 
 def write_md(path: Path, text: str) -> None:
-    stage27_scout.write_md(path, text)
+    scout_support.write_md(path, text)
 
 
 def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, Any]]) -> None:
@@ -114,11 +114,11 @@ def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, An
 
 
 def save_frame(path: Path, frame: pd.DataFrame) -> dict[str, Any]:
-    return stage27_scout.save_frame(path, frame)
+    return scout_support.save_frame(path, frame)
 
 
 def safe_float(value: Any, default: float = 0.0) -> float:
-    return stage27_scout.safe_float(value, default)
+    return scout_support.safe_float(value, default)
 
 
 def statsmodels_version() -> str:
@@ -177,7 +177,7 @@ def default_variants(tier_b_feature_order: Sequence[str]) -> list[MarkovRegressi
 
 
 def load_context() -> dict[str, Any]:
-    context = stage27_scout.load_context()
+    context = scout_support.load_context()
     return {
         "tier_a_frame": context["tier_a_frame"],
         "tier_b_fallback_frame": context["tier_b_fallback_frame"],

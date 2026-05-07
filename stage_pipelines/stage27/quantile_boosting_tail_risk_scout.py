@@ -25,9 +25,9 @@ from foundation.control_plane.ledger import (
     upsert_csv_rows,
 )
 from foundation.models.baseline_training import validate_model_input_frame
+import foundation.models.alpha_scout_support as scout_support
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.mt5 import runtime_support as mt5
-from stage_pipelines.stage26 import ngboost_probabilistic_distribution_scout as stage26_scout
 
 
 STAGE_ID = "27_tail_model__quantile_boosting_risk_surface"
@@ -38,8 +38,8 @@ NEXT_RUN_ID = "run21B_quantile_boosting_tail_risk_runtime_probe_v1"
 EXPLORATION_LABEL = "stage27_TailModel__QuantileBoostingRiskSurface"
 MODEL_FAMILY = "sklearn_gradient_boosting_quantile_regression"
 FEATURE_SET_ID = "feature_set_v2_mt5_price_proxy_quantile_tail_risk_surface"
-LABEL_ID = stage26_scout.LABEL_ID
-SPLIT_CONTRACT = stage26_scout.SPLIT_CONTRACT
+LABEL_ID = scout_support.LABEL_ID
+SPLIT_CONTRACT = scout_support.SPLIT_CONTRACT
 TARGET_COLUMN = "future_log_return_12"
 QUANTILES = (0.10, 0.50, 0.90)
 STRENGTH_QUANTILE = 0.80
@@ -47,7 +47,7 @@ TAIL_PRESSURE_QUANTILE = 0.70
 BOUNDARY = "quantile_boosting_tail_risk_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
 JUDGMENT = "inconclusive_quantile_boosting_tail_risk_surface_scout_completed"
 
-ROOT = stage26_scout.ROOT
+ROOT = scout_support.ROOT
 STAGE_ROOT = ROOT / "stages" / STAGE_ID
 RUN_ROOT = STAGE_ROOT / "02_runs" / RUN_ID
 PACKET_ROOT = ROOT / "docs/agent_control/packets" / PACKET_ID
@@ -58,9 +58,9 @@ REPORT_PATH = STAGE_ROOT / "03_reviews/run21A_quantile_boosting_tail_risk_scout_
 DECISION_PATH = ROOT / "docs/decisions/2026-05-05_stage27_run21A_quantile_boosting_tail_risk_scout.md"
 SELECTION_STATUS_PATH = STAGE_ROOT / "04_selected/selection_status.md"
 REVIEW_INDEX_PATH = STAGE_ROOT / "03_reviews/review_index.md"
-WORKSPACE_STATE_PATH = stage26_scout.WORKSPACE_STATE_PATH
-CURRENT_WORKING_STATE_PATH = stage26_scout.CURRENT_WORKING_STATE_PATH
-GOAL_PLAN_PATH = stage26_scout.GOAL_PLAN_PATH
+WORKSPACE_STATE_PATH = scout_support.WORKSPACE_STATE_PATH
+CURRENT_WORKING_STATE_PATH = scout_support.CURRENT_WORKING_STATE_PATH
+GOAL_PLAN_PATH = scout_support.GOAL_PLAN_PATH
 
 
 @dataclass(frozen=True)
@@ -91,15 +91,15 @@ def utc_now() -> str:
 
 
 def rel(path: Path) -> str:
-    return stage26_scout.rel(path)
+    return scout_support.rel(path)
 
 
 def write_json(path: Path, payload: Any) -> None:
-    stage26_scout.write_json(path, payload)
+    scout_support.write_json(path, payload)
 
 
 def write_md(path: Path, text: str) -> None:
-    stage26_scout.write_md(path, text)
+    scout_support.write_md(path, text)
 
 
 def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, Any]]) -> None:
@@ -112,11 +112,11 @@ def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, An
 
 
 def save_frame(path: Path, frame: pd.DataFrame) -> dict[str, Any]:
-    return stage26_scout.save_frame(path, frame)
+    return scout_support.save_frame(path, frame)
 
 
 def safe_float(value: Any, default: float = 0.0) -> float:
-    return stage26_scout.safe_float(value, default)
+    return scout_support.safe_float(value, default)
 
 
 def sklearn_version() -> str:
@@ -124,14 +124,14 @@ def sklearn_version() -> str:
 
 
 def load_context() -> dict[str, Any]:
-    return stage26_scout.load_context()
+    return scout_support.load_context()
 
 
 def default_variants(full_feature_order: Sequence[str], tier_b_feature_order: Sequence[str]) -> list[QuantileBoostingVariantSpec]:
     tier_b_set = set(tier_b_feature_order)
-    core24 = tuple(name for name in stage26_scout.core24_features() if name in tier_b_set)
+    core24 = tuple(name for name in scout_support.core24_features() if name in tier_b_set)
     core42 = tuple(tier_b_feature_order)
-    vol_session = tuple(name for name in stage26_scout.volatility_session_features() if name in tier_b_set)
+    vol_session = tuple(name for name in scout_support.volatility_session_features() if name in tier_b_set)
     tail_axis = tuple(
         name
         for name in (
@@ -687,8 +687,8 @@ def build_summary(
         "selected_tail_read": selected_tail_read,
         "model_characteristic_strength": "quantile_tail_surface_visible_enough_for_runtime_probe",
         "artifacts": {
-            "model_input_path": rel(stage26_scout.stage23_scout.MODEL_INPUT_PATH),
-            "feature_order_path": rel(stage26_scout.stage23_scout.FEATURE_ORDER_PATH),
+            "model_input_path": rel(scout_support.MODEL_INPUT_PATH),
+            "feature_order_path": rel(scout_support.FEATURE_ORDER_PATH),
             "variant_results": dict(variant_artifacts),
             "model_artifacts": dict(model_artifacts),
             "prediction_artifacts": dict(prediction_artifacts),
