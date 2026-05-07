@@ -27,7 +27,7 @@ from foundation.control_plane.ledger import (
 from foundation.models.baseline_training import validate_model_input_frame
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.mt5 import runtime_support as mt5
-from foundation.models import alpha_scout_support as stage26_scout
+from stage_pipelines.stage26 import ngboost_probabilistic_distribution_scout as stage26_scout
 
 
 STAGE_ID = "27_tail_model__quantile_boosting_risk_surface"
@@ -687,8 +687,8 @@ def build_summary(
         "selected_tail_read": selected_tail_read,
         "model_characteristic_strength": "quantile_tail_surface_visible_enough_for_runtime_probe",
         "artifacts": {
-            "model_input_path": rel(stage26_scout.MODEL_INPUT_PATH),
-            "feature_order_path": rel(stage26_scout.FEATURE_ORDER_PATH),
+            "model_input_path": rel(stage26_scout.stage23_scout.MODEL_INPUT_PATH),
+            "feature_order_path": rel(stage26_scout.stage23_scout.FEATURE_ORDER_PATH),
             "variant_results": dict(variant_artifacts),
             "model_artifacts": dict(model_artifacts),
             "prediction_artifacts": dict(prediction_artifacts),

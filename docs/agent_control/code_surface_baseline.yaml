@@ -22,9 +22,6 @@ line_count_policy:
     stage_pipelines/stage18/catboost_followup_batch.py:
       max_lines: 1700
       reason: "Stage18 CatBoost follow-up batch materializer(18단계 캣부스트 후속 묶음 물질화 스크립트); existing stage-local orchestration debt(기존 단계 로컬 조율 부채) registered before Stage19 work, extract shared follow-up and MT5 packet helpers(공유 후속 및 MT5 묶음 도구 추출) before reuse"
-    stage_pipelines/stage29_32_goal_completion.py:
-      max_lines: 2000
-      reason: "existing cross-stage native/proxy goal-completion materializer(기존 교차 단계 목표 완료 산출 스크립트); registered before Stage33 evidence scan(33단계 근거 스캔 전 등록), do not grow without extraction(추출 없이 확장 금지)"
 ownership_policy:
   blocked_direct_imports:
     - importer_owner: foundation/control_plane

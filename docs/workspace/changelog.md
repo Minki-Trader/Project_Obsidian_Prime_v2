@@ -1,9 +1,5 @@
 ﻿# Workspace Changelog
 
-## 2026-05-07
-
-- 2026-05-07: `run27A_time_segment_survivor_clue_audit_v1` reviewed(검토됨). 효과(effect, 효과): Stage20~32(20~32단계) MT5 report(보고서) `70`개와 trade(거래) `33484`개를 month/quarter/rolling3(월/분기/구르는 3개월) KPI(핵심 성과 지표) `1278`행으로 다시 읽고, split survivor candidate(분할 생존 후보) `5`개와 unique fingerprint(고유 지표 지문) `4`개를 남겼다. actual full-period single report(실제 전체 기간 단일 보고서)는 `source_artifact_missing(원천 산출물 누락)`이며 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
-
 ## 2026-05-05
 
 - 2026-05-05: `current_truth_sync_20260505_main_v1` recorded(기록). 효과(effect, 효과): `workspace_state.active_branch(작업공간 상태 활성 브랜치)`를 actual git branch(실제 깃 브랜치) `main(메인)`에 맞추고, `current_run_id(현재 실행 ID)`를 장부에 있는 Stage32(32단계) 최신 실행 `run26D_torch_tcn_native_temporal_runtime_probe_v1`로 되돌렸다. `stage29_32_native_revalidation_supplement_v1`은 cross-stage packet(교차 단계 묶음)으로만 유지하며 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
@@ -252,4 +248,3 @@
 - 2026-05-03: Stage18(18단계) `run12N-run12P` CatBoost(캣부스트) 압축 MT5 KPI 배치를 완료했다. 효과(effect, 효과): q85/high-margin/low-vol-or-mid-session 압축, long-only hold6 q85, Plain control(Plain 대조군) 재대결을 `blocked_catboost_compression_mt5_kpi_after_attempt`로 판정했다.
 - 2026-05-03: Stage18(18단계) `run12N-run12P` CatBoost(캣부스트) 압축 MT5 KPI 배치를 완료했다. 효과(effect, 효과): q85/high-margin/low-vol-or-mid-session 압축, long-only hold6 q85, Plain control(Plain 대조군) 재대결을 `inconclusive_catboost_compression_mt5_kpi_completed`로 판정했다.
 - 2026-05-03: Stage18(18단계) CatBoost(`Categorical Boosting`, 범주형 부스팅/캣부스트)를 `closed_inconclusive_catboost_model_characteristics_exhausted`로 닫고 Stage19-25(19-25단계) model research work order(모델 연구 작업서)를 만들었다. 효과(effect, 효과): EBM(`Explainable Boosting Machine`, 설명가능 부스팅 머신), GAM(`Generalized Additive Model`, 일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(`Hidden Markov Model`, 은닉 마르코프 모델), regime classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델)을 CatBoost(캣부스트) 상속 없이 독립 단계로 시작한다.
-- 2026-05-07: Stage34 adapter evidence scan(34단계 어댑터 근거 스캔) completed with 5 exploratory candidates and no ONNX artifact(온닉스 산출물 없음).

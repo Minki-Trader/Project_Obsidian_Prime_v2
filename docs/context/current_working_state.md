@@ -1,33 +1,4 @@
-﻿## Latest Stage34 Adapter Evidence Scan(최신 34단계 어댑터 근거 스캔)
-
-- active stage(활성 단계): `34_mechanism_discovery__stage10_32_adapter_evidence_scan`
-- current run(현재 실행): `run28A_stage10_32_adapter_evidence_scan_v1`
-- adapter candidates(어댑터 후보): `5`
-- ONNX artifact(온닉스 산출물): not generated(생성 안 됨)
-- boundary(경계): existing evidence only(기존 근거만), no alpha quality(알파 품질 없음), no baseline(기준선 없음), no promotion(승격 없음), no runtime authority(런타임 권위 없음), no live readiness(실거래 준비 없음)
-
-효과(effect, 효과): Stage10~32(10~32단계) 단서를 adapter role map(어댑터 역할 지도)으로 묶었지만, 새 런타임 권위(runtime authority, 런타임 권위)는 만들지 않았다.
-
-
-# Latest Stage33 RUN27A Time-Segment Survivor KPI Audit(최신 33단계 실행27A 시간 구간 생존 KPI 감사)
-
-## Current Re-entry Snapshot(현재 재진입 스냅샷)
-
-- active branch(활성 브랜치): `main(메인)`
-- active stage(활성 단계): `33_pattern_stability__time_segment_survivor_clue_audit`
-- current run(현재 실행): `run27A_time_segment_survivor_clue_audit_v1`
-- latest packet(최신 묶음): `stage33_run27A_time_segment_survivor_clue_audit_v1`
-- next action(다음 행동): `use_stage33_clues_only_as_next_probe_seed_if_requested`
-
-효과(effect, 효과): Stage33(33단계)는 Stage20~32(20~32단계) MT5 report(보고서)를 time segment(시간 구간)로 다시 읽은 evidence audit(근거 감사)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-
-결과(result, 결과): parsed MT5 reports(해석된 MT5 보고서) `70`, parsed trades(해석된 거래) `33484`, time segment KPI rows(시간 구간 KPI 행) `1278`, split survivor candidates(분할 생존 후보) `5`, unique fingerprints(고유 지표 지문) `4`.
-
-판정(judgment, 판정): `inconclusive_time_segment_survivor_clue_audit_completed_no_operating_claim`. actual full-period single report(실제 전체 기간 단일 보고서)는 `source_artifact_missing(원천 산출물 누락)`으로 기록했다.
-
-효과(effect, 효과): validation/OOS union(검증/표본외 합침)을 full-period tester report(전체 기간 테스터 보고서)처럼 말하지 않고, Stage28(28단계) Markov regression(마르코프 회귀)만 next probe seed clue(다음 탐침 씨앗 단서)로 보존한다.
-
-## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
+﻿## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 

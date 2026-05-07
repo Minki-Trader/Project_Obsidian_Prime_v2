@@ -1,8 +1,8 @@
-updated_on: '2026-05-07'
+﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 34_mechanism_discovery__stage10_32_adapter_evidence_scan
-current_run_id: run28A_stage10_32_adapter_evidence_scan_v1
+active_stage: 32_sequence_model__tcn_temporal_convolution_context
+current_run_id: run26D_torch_tcn_native_temporal_runtime_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -14,25 +14,15 @@ alpha_stage_transition_rule: alpha exploration stage transitions(알파 탐색 �
 shared_window:
   start: '2022-08-01'
   end_inclusive: '2026-04-13'
-  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete_stage33_run27A_reviewed_time_segment_audit_actual_full_period_report_missing
+  status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
-- 'Stage34(34단계) run28A_stage10_32_adapter_evidence_scan_v1 reviewed(검토됨): Stage10~32(10~32단계)
-  evidence(근거)를 adapter role map(어댑터 역할 지도), candidate table(후보 표), negative memory(부정
-  기억), ONNX readiness decision(온닉스 준비 판정)으로 정리했다; new ONNX artifact(새 온닉스 산출물)는 생성하지
-  않았고 baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래
-  준비)는 주장하지 않는다.'
-- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 최신 장부 실행인 run28A_stage10_32_adapter_evidence_scan_v1을
-  가리킨다; Stage34(34단계)는 existing evidence scan(기존 근거 스캔)이며 새 MT5 runtime authority(런타임
-  권위)를 만들지 않는다.
-- Stage33(33단계) run27A_time_segment_survivor_clue_audit_v1 reviewed(검토됨): parsed MT5
-    reports(해석된 MT5 보고서) 70, parsed trades(해석된 거래) 33484, time segment KPI rows(시간
-    구간 KPI 행) 1278, split survivor candidates(분할 생존 후보) 5; actual full-period single
-    report(실제 전체 기간 단일 보고서)=source_artifact_missing(원천 산출물 누락); no baseline(기준선 없음),
-    no promotion(승격 없음), no runtime authority(런타임 권위 없음).
 - Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
   river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
   with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
+- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 최신 장부 실행인
+  run26D_torch_tcn_native_temporal_runtime_probe_v1을 가리킨다; stage29_32_native_revalidation_supplement_v1은
+  cross-stage packet(교차 단계 묶음)으로만 읽는다.
 - treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
   탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
   no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
@@ -2653,13 +2643,3 @@ stage29_32_native_revalidation_supplement:
   summary_path: docs/workspace/stage29_32_native_revalidation_supplement.md
   boundary: native_revalidation_supplement_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   next_action: open_new_stage_topic_if_requested
-stage34_adapter_evidence_scan:
-  stage_id: 34_mechanism_discovery__stage10_32_adapter_evidence_scan
-  status: reviewed_evidence_scan_completed
-  current_run_id: run28A_stage10_32_adapter_evidence_scan_v1
-  adapter_candidate_count: 5
-  onnx_artifacts_generated: false
-  boundary: existing_evidence_adapter_scan_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness
-  report_path: stages/34_mechanism_discovery__stage10_32_adapter_evidence_scan/03_reviews/run28A_adapter_evidence_scan_packet.md
-  packet_summary_path: docs/agent_control/packets/stage34_run28A_stage10_32_adapter_evidence_scan_v1/run_summary.json
-  next_action: adapter_interface_probe_or_candidate_repeatability_review
