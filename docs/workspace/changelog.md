@@ -1,5 +1,9 @@
 ﻿# Workspace Changelog
 
+## 2026-05-07
+
+- 2026-05-07: `run27A_time_segment_survivor_clue_audit_v1` reviewed(검토됨). 효과(effect, 효과): Stage20~32(20~32단계) MT5 report(보고서) `70`개와 trade(거래) `33484`개를 month/quarter/rolling3(월/분기/구르는 3개월) KPI(핵심 성과 지표) `1278`행으로 다시 읽고, split survivor candidate(분할 생존 후보) `5`개와 unique fingerprint(고유 지표 지문) `4`개를 남겼다. actual full-period single report(실제 전체 기간 단일 보고서)는 `source_artifact_missing(원천 산출물 누락)`이며 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
 ## 2026-05-05
 
 - 2026-05-05: `current_truth_sync_20260505_main_v1` recorded(기록). 효과(effect, 효과): `workspace_state.active_branch(작업공간 상태 활성 브랜치)`를 actual git branch(실제 깃 브랜치) `main(메인)`에 맞추고, `current_run_id(현재 실행 ID)`를 장부에 있는 Stage32(32단계) 최신 실행 `run26D_torch_tcn_native_temporal_runtime_probe_v1`로 되돌렸다. `stage29_32_native_revalidation_supplement_v1`은 cross-stage packet(교차 단계 묶음)으로만 유지하며 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
