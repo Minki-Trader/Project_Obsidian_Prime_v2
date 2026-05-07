@@ -1,0 +1,42 @@
+{
+  "packet_id": "stage34_run28B_tier_a_markov_long_permission_segment_stress_probe_v1",
+  "status": "passed",
+  "stress_read": {
+    "candidate_boundary": "no_direct_rule_candidate_until_entry_time_hold_proxy_exists",
+    "failed_direct_filters": [
+      {
+        "classification": "split_inconsistent_removed_positive_validation_negative_oos",
+        "read": "OOS improves but validation loses its strongest session(표본외는 좋아지지만 검증의 가장 강한 세션을 잃음)",
+        "rule_id": "exclude_mid_session"
+      },
+      {
+        "classification": "split_inconsistent_removed_positive_validation_negative_oos",
+        "read": "removed segment is negative in OOS but positive in validation(제거 구간이 표본외에서는 음수지만 검증에서는 양수)",
+        "rule_id": "exclude_vol_high"
+      },
+      {
+        "classification": "split_conflict_validation_help_oos_cost",
+        "read": "validation improves but OOS gets worse(검증은 좋아지지만 표본외는 나빠짐)",
+        "rule_id": "exclude_adx_20_25"
+      }
+    ],
+    "headline": "hold_shape_is_the_strongest_mechanism_clue_but_not_an_entry_time_rule",
+    "next_probe": "run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1",
+    "strongest_mechanism_clues": [
+      {
+        "entry_time_available": false,
+        "oos_pf": 1.491944,
+        "read": "removing ex-post short holds improves both validation and OOS(사후 짧은 보유 제거는 검증과 표본외를 같이 개선)",
+        "rule_id": "exclude_short_hold_0_12",
+        "validation_pf": 1.844226
+      },
+      {
+        "entry_time_available": false,
+        "oos_pf": 1.496619,
+        "read": "long holds carry most profit but are ex-post exposure concentration(긴 보유가 수익 대부분을 들지만 사후 노출 집중)",
+        "rule_id": "keep_hold_gt_96_only",
+        "validation_pf": 2.779691
+      }
+    ]
+  }
+}

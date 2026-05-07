@@ -1,4 +1,11 @@
-﻿## 2026-05-08 Stage34 RUN28A Attribution(34단계 28A 실행 귀속)
+﻿## 2026-05-08 Stage34 RUN28B Segment Stress(34단계 28B 실행 구간 압박)
+
+- completed(완료): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1` segment stress probe(구간 압박 탐침)
+- source(원천): `run28A_tier_a_markov_long_permission_attribution_scout_v1` and `run22B_markov_regression_state_runtime_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_segment_stress_probe_completed`
+- effect(효과): hold shape(보유 형태)이 가장 강한 profit factor(수익 팩터) 단서지만 ex-post(사후)라 직접 규칙은 아니다. next action(다음 행동)은 `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`다.
+
+## 2026-05-08 Stage34 RUN28A Attribution(34단계 28A 실행 귀속)
 
 - completed(완료): `run28A_tier_a_markov_long_permission_attribution_scout_v1` attribution scout(귀속 탐침)
 - source(원천): `run22B_markov_regression_state_runtime_probe_v1` reused MT5/runtime artifacts(재사용 MT5/런타임 산출물)

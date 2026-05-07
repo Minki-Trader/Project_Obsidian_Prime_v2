@@ -1,4 +1,34 @@
-﻿## Latest Stage34 RUN28A Attribution(최신 34단계 28A 실행 귀속)
+﻿## Latest Stage34 RUN28B Segment Stress(최신 34단계 28B 실행 구간 압박)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- latest packet(최신 묶음): `stage34_run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- next action(다음 행동): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+
+Stage34(34단계) `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`를 reviewed segment stress probe(검토된 구간 압박 탐침)로 완료했다.
+
+결과(result, 결과): 가장 강한 단서는 hold shape(보유 형태)였다. `exclude_short_hold_0_12`는 validation/OOS PF(검증/표본외 수익 팩터)를 같이 올렸고, `keep_hold_gt_96_only`는 긴 보유가 수익 대부분을 들고 있음을 보였다. 다만 hold bucket(보유 버킷)은 ex-post information(사후 정보)이라 직접 runtime rule(런타임 규칙)이 아니다.
+
+효과(effect, 효과): Tier A Markov long permission(티어 A 마르코프 롱 허용)은 보존하지만, 다음 행동(next action, 다음 행동)은 entry-time hold proxy(진입 시점 보유 대리 신호)를 찾는 `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- latest packet(최신 묶음): `stage34_run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- next action(다음 행동): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+
+Stage34(34단계) `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`를 reviewed segment stress probe(검토된 구간 압박 탐침)로 완료했다.
+
+결과(result, 결과): 가장 강한 단서는 hold shape(보유 형태)였다. `exclude_short_hold_0_12`는 validation/OOS PF(검증/표본외 수익 팩터)를 같이 올렸고, `keep_hold_gt_96_only`는 긴 보유가 수익 대부분을 들고 있음을 보였다. 다만 hold bucket(보유 버킷)은 ex-post information(사후 정보)이라 직접 runtime rule(런타임 규칙)이 아니다.
+
+효과(effect, 효과): Tier A Markov long permission(티어 A 마르코프 롱 허용)은 보존하지만, 다음 행동(next action, 다음 행동)은 entry-time hold proxy(진입 시점 보유 대리 신호)를 찾는 `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage34 RUN28A Attribution(최신 34단계 28A 실행 귀속)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 
