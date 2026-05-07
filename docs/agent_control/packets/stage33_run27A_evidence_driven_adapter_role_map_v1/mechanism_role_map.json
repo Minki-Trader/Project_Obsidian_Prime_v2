@@ -1,0 +1,548 @@
+{
+  "roles": {
+    "Entry": {
+      "role": "Entry",
+      "evidence_count": 2783,
+      "stage_count": 23,
+      "unique_runs": 413,
+      "runtime_evidence_count": 2264,
+      "split_evidence_count": 2483,
+      "mechanism_class_counts": {
+        "model_score_surface": 2556,
+        "runtime_score_table_handoff": 2044,
+        "regime_context_state": 1594,
+        "exit_hold_lifecycle": 1418,
+        "rule_or_threshold_surface": 1277,
+        "tail_risk_surface": 517,
+        "calibration_abstention": 83,
+        "adaptive_online_learning": 66,
+        "onnx_packaging": 55,
+        "negative_memory": 37,
+        "unclassified_evidence": 4
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/00_spec/stage_brief.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+        "closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence",
+        "closed_inconclusive_xgboost_regularized_boosting_characteristics_exhausted",
+        "horizon_shift_worth_retraining_probe",
+        "inconclusive",
+        "inconclusive_activation_distributed_and_split_stable",
+        "inconclusive_activation_runtime_probe_completed"
+      ]
+    },
+    "Permission / Filter / Abstention": {
+      "role": "Permission / Filter / Abstention",
+      "evidence_count": 2191,
+      "stage_count": 23,
+      "unique_runs": 357,
+      "runtime_evidence_count": 1846,
+      "split_evidence_count": 1958,
+      "mechanism_class_counts": {
+        "model_score_surface": 2040,
+        "runtime_score_table_handoff": 1743,
+        "regime_context_state": 1441,
+        "exit_hold_lifecycle": 1075,
+        "rule_or_threshold_surface": 954,
+        "tail_risk_surface": 914,
+        "adaptive_online_learning": 48,
+        "calibration_abstention": 47,
+        "onnx_packaging": 46,
+        "negative_memory": 29
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+        "closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence",
+        "inconclusive",
+        "inconclusive_activation_runtime_probe_completed",
+        "inconclusive_all_variant_tier_balance_runtime_probe_completed",
+        "inconclusive_balanced_midband_mt5_runtime_probe_completed",
+        "inconclusive_balanced_midband_payload"
+      ]
+    },
+    "Risk / Tail-risk": {
+      "role": "Risk / Tail-risk",
+      "evidence_count": 1317,
+      "stage_count": 23,
+      "unique_runs": 289,
+      "runtime_evidence_count": 1307,
+      "split_evidence_count": 1301,
+      "mechanism_class_counts": {
+        "runtime_score_table_handoff": 1272,
+        "tail_risk_surface": 1260,
+        "model_score_surface": 1209,
+        "exit_hold_lifecycle": 547,
+        "regime_context_state": 528,
+        "rule_or_threshold_surface": 382,
+        "onnx_packaging": 37,
+        "adaptive_online_learning": 28,
+        "calibration_abstention": 23,
+        "negative_memory": 19
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02AA_run02AK_fwd18_rank_stress_packet.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+        "inconclusive",
+        "inconclusive_catboost_ordered_characteristic_mt5_runtime_probe_completed",
+        "inconclusive_catboost_q80_direction_balance_mt5_runtime_probe_completed",
+        "inconclusive_catboost_q80_signal_density_mt5_runtime_probe_completed",
+        "inconclusive_convergence_diagnostic",
+        "inconclusive_direction_damage_attribution_completed"
+      ]
+    },
+    "Sizing": {
+      "role": "Sizing",
+      "evidence_count": 7,
+      "stage_count": 1,
+      "unique_runs": 7,
+      "runtime_evidence_count": 7,
+      "split_evidence_count": 7,
+      "mechanism_class_counts": {
+        "runtime_score_table_handoff": 7,
+        "model_score_surface": 6,
+        "rule_or_threshold_surface": 6,
+        "exit_hold_lifecycle": 6,
+        "regime_context_state": 3,
+        "tail_risk_surface": 1,
+        "negative_memory": 1
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/run08A_run08J_qda_characterization_packet.md",
+        "stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/run09A_run09Q_qda_followup_mt5_runtime_probe_packet.md",
+        "stages/16_model_family_challenge__qda_class_covariance_scout/03_reviews/stage16_closeout_packet.md"
+      ],
+      "example_judgments": [
+        "inconclusive_qda_run09_followup_mt5_runtime_probe_completed",
+        "runtime_probe",
+        "structural_scout"
+      ]
+    },
+    "Position Management": {
+      "role": "Position Management",
+      "evidence_count": 2958,
+      "stage_count": 23,
+      "unique_runs": 351,
+      "runtime_evidence_count": 2812,
+      "split_evidence_count": 2841,
+      "mechanism_class_counts": {
+        "runtime_score_table_handoff": 2752,
+        "model_score_surface": 2723,
+        "regime_context_state": 1400,
+        "tail_risk_surface": 1190,
+        "exit_hold_lifecycle": 1035,
+        "rule_or_threshold_surface": 818,
+        "adaptive_online_learning": 67,
+        "onnx_packaging": 63,
+        "calibration_abstention": 54,
+        "negative_memory": 27
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02Q_run02S_salvage_extension_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02W_fwd18_retrain_mt5_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence",
+        "inconclusive",
+        "inconclusive_activation_runtime_probe_completed",
+        "inconclusive_all_variant_tier_balance_runtime_probe_completed",
+        "inconclusive_balanced_midband_mt5_runtime_probe_completed",
+        "inconclusive_balanced_midband_payload",
+        "inconclusive_bear_vortex_short_density_mt5_runtime_probe_completed"
+      ]
+    },
+    "Exit / Hold": {
+      "role": "Exit / Hold",
+      "evidence_count": 1650,
+      "stage_count": 23,
+      "unique_runs": 360,
+      "runtime_evidence_count": 1160,
+      "split_evidence_count": 1358,
+      "mechanism_class_counts": {
+        "model_score_surface": 1582,
+        "exit_hold_lifecycle": 1565,
+        "rule_or_threshold_surface": 1230,
+        "regime_context_state": 1064,
+        "runtime_score_table_handoff": 1020,
+        "tail_risk_surface": 535,
+        "onnx_packaging": 53,
+        "adaptive_online_learning": 39,
+        "negative_memory": 37,
+        "calibration_abstention": 35
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/00_spec/stage_brief.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+        "closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence",
+        "closed_inconclusive_xgboost_regularized_boosting_characteristics_exhausted",
+        "inconclusive",
+        "inconclusive_activation_distributed_and_split_stable",
+        "inconclusive_activation_runtime_probe_completed",
+        "inconclusive_balanced_midband_mt5_runtime_probe_completed"
+      ]
+    },
+    "Regime / Context": {
+      "role": "Regime / Context",
+      "evidence_count": 1995,
+      "stage_count": 23,
+      "unique_runs": 316,
+      "runtime_evidence_count": 1484,
+      "split_evidence_count": 1704,
+      "mechanism_class_counts": {
+        "regime_context_state": 1975,
+        "model_score_surface": 1829,
+        "runtime_score_table_handoff": 1295,
+        "rule_or_threshold_surface": 1027,
+        "exit_hold_lifecycle": 1021,
+        "tail_risk_surface": 517,
+        "onnx_packaging": 47,
+        "adaptive_online_learning": 44,
+        "calibration_abstention": 38,
+        "negative_memory": 30
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "inconclusive",
+        "inconclusive_all_variant_tier_balance_runtime_probe_completed",
+        "inconclusive_balanced_midband_mt5_runtime_probe_completed",
+        "inconclusive_balanced_midband_payload",
+        "inconclusive_bear_vortex_short_density_mt5_runtime_probe_completed",
+        "inconclusive_bear_vortex_short_density_payload",
+        "inconclusive_bear_vortex_short_mt5_runtime_probe_completed"
+      ]
+    },
+    "Runtime / Packaging": {
+      "role": "Runtime / Packaging",
+      "evidence_count": 3284,
+      "stage_count": 23,
+      "unique_runs": 467,
+      "runtime_evidence_count": 3283,
+      "split_evidence_count": 3055,
+      "mechanism_class_counts": {
+        "model_score_surface": 3010,
+        "runtime_score_table_handoff": 2999,
+        "regime_context_state": 1464,
+        "tail_risk_surface": 1250,
+        "exit_hold_lifecycle": 1078,
+        "rule_or_threshold_surface": 850,
+        "adaptive_online_learning": 91,
+        "onnx_packaging": 82,
+        "calibration_abstention": 74,
+        "negative_memory": 43,
+        "unclassified_evidence": 1
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/00_spec/stage_brief.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+        "closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence",
+        "closed_inconclusive_xgboost_regularized_boosting_characteristics_exhausted",
+        "deprioritized_or_negative_memory",
+        "horizon_shift_worth_retraining_probe",
+        "inconclusive",
+        "inconclusive_activation_distributed_and_split_stable"
+      ]
+    },
+    "Negative Memory": {
+      "role": "Negative Memory",
+      "evidence_count": 44,
+      "stage_count": 21,
+      "unique_runs": 33,
+      "runtime_evidence_count": 43,
+      "split_evidence_count": 43,
+      "mechanism_class_counts": {
+        "negative_memory": 44,
+        "model_score_surface": 42,
+        "runtime_score_table_handoff": 41,
+        "rule_or_threshold_surface": 33,
+        "exit_hold_lifecycle": 30,
+        "regime_context_state": 29,
+        "tail_risk_surface": 17,
+        "onnx_packaging": 17,
+        "calibration_abstention": 9,
+        "adaptive_online_learning": 3
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02Q_run02S_salvage_extension_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02Q_run02S_salvage_extension_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02W_fwd18_retrain_mt5_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02X_run02Z_fwd18_rank_context_packet.md"
+      ],
+      "example_judgments": [
+        "deprioritized_or_negative_memory",
+        "inconclusive_bear_vortex_short_density_mt5_runtime_probe_completed",
+        "inconclusive_bear_vortex_short_mt5_runtime_probe_completed",
+        "inconclusive_ebm_feature_hold6_routing_attribution_completed",
+        "inconclusive_variant_stability_structural_scout",
+        "negative_boundary_inverse_direction",
+        "runtime_probe"
+      ]
+    },
+    "Deferred": {
+      "role": "Deferred",
+      "evidence_count": 3716,
+      "stage_count": 23,
+      "unique_runs": 447,
+      "runtime_evidence_count": 3187,
+      "split_evidence_count": 3361,
+      "mechanism_class_counts": {
+        "model_score_surface": 3455,
+        "runtime_score_table_handoff": 2934,
+        "regime_context_state": 1894,
+        "exit_hold_lifecycle": 1530,
+        "rule_or_threshold_surface": 1273,
+        "tail_risk_surface": 1235,
+        "adaptive_online_learning": 95,
+        "calibration_abstention": 75,
+        "onnx_packaging": 66,
+        "negative_memory": 40,
+        "unclassified_evidence": 4
+      },
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02Q_run02S_salvage_extension_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02T_run02V_priority_probe_packet.md"
+      ],
+      "example_judgments": [
+        "blocked",
+        "closed_inconclusive_xgboost_dart_attribution_no_new_axis_after_run11G",
+        "closed_inconclusive_xgboost_frequency_pressure_runtime_probe_evidence",
+        "closed_inconclusive_xgboost_regularized_boosting_characteristics_exhausted",
+        "deprioritized_or_negative_memory",
+        "inconclusive",
+        "inconclusive_activation_distributed_and_split_stable",
+        "inconclusive_activation_runtime_probe_completed"
+      ]
+    }
+  },
+  "mechanism_classes": {
+    "adaptive_online_learning": {
+      "evidence_count": 103,
+      "stage_count": 8,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/review_index.md",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04G_mlp_direction_trade_shape_attribution_packet.md",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04L_mlp_feature_sensitivity_probe_packet.md",
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/review_index.md",
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/run11D_xgb_trade_shape_attribution_packet.md",
+        "stages/17_model_family_challenge__xgboost_regularized_boosting_scout/03_reviews/run11E_xgb_feature_driver_saturation_packet.md"
+      ]
+    },
+    "calibration_abstention": {
+      "evidence_count": 85,
+      "stage_count": 11,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02C_run02F_divergent_packet.md",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04M_mlp_learning_behavior_runtime_probe_packet.md",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/stage13_closeout_packet.md",
+        "stages/14_model_family_challenge__margin_kernel_training_effect/00_spec/stage_brief.md",
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/00_spec/stage_brief.md",
+        "stages/18_model_family_challenge__catboost_ordered_boosting_scout/03_reviews/review_index.md"
+      ]
+    },
+    "exit_hold_lifecycle": {
+      "evidence_count": 1565,
+      "stage_count": 23,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/00_spec/stage_brief.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md"
+      ]
+    },
+    "model_score_surface": {
+      "evidence_count": 3547,
+      "stage_count": 23,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/00_spec/stage_brief.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md"
+      ]
+    },
+    "negative_memory": {
+      "evidence_count": 44,
+      "stage_count": 21,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02Q_run02S_salvage_extension_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02Q_run02S_salvage_extension_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02W_fwd18_retrain_mt5_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02X_run02Z_fwd18_rank_context_packet.md"
+      ]
+    },
+    "onnx_packaging": {
+      "evidence_count": 82,
+      "stage_count": 18,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02W_fwd18_retrain_mt5_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02W_fwd18_retrain_mt5_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02X_run02Z_fwd18_rank_context_packet.md"
+      ]
+    },
+    "regime_context_state": {
+      "evidence_count": 1975,
+      "stage_count": 23,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md"
+      ]
+    },
+    "rule_or_threshold_surface": {
+      "evidence_count": 1341,
+      "stage_count": 23,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/00_spec/stage_brief.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02C_run02F_divergent_plan.md"
+      ]
+    },
+    "runtime_score_table_handoff": {
+      "evidence_count": 2999,
+      "stage_count": 23,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/review_index.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/03_reviews/stage10_closeout_packet.md",
+        "stages/10_alpha_scout__default_split_model_threshold_scan/04_selected/selection_status.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02Q_run02S_salvage_extension_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02T_run02V_priority_probe_plan.md"
+      ]
+    },
+    "tail_risk_surface": {
+      "evidence_count": 1260,
+      "stage_count": 23,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02AA_run02AK_fwd18_rank_stress_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02G_run02P_idea_burst_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/00_spec/run02X_run02Z_fwd18_rank_context_plan.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/03_reviews/run02X_run02Z_fwd18_rank_context_packet.md",
+        "stages/11_alpha_robustness__wfo_label_horizon_sensitivity/04_selected/selection_status.md",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/stage12_closeout_packet.md"
+      ]
+    },
+    "unclassified_evidence": {
+      "evidence_count": 7,
+      "stage_count": 3,
+      "example_paths": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/12_model_family_challenge__extratrees_training_effect/03_reviews/run03P_mega_cap_divergence_probe_packet.md",
+        "stages/13_model_family_challenge__mlp_training_effect/03_reviews/run04K_mlp_activation_behavior_probe_packet.md",
+        "docs/registers/negative_result_register.md"
+      ]
+    }
+  },
+  "candidate_count": 10
+}

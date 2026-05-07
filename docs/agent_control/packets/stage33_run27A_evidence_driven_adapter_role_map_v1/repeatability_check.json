@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "command": "python -m foundation.pipelines.run_stage33_evidence_driven_role_map --no-write",
+  "repeatability_check": "Deterministic source scan from tracked ledgers, stage docs, and packet docs.",
+  "source_files": [
+    {
+      "path": "docs/registers/run_registry.csv",
+      "sha256": "6723c0318ebf7cb15e3c35a98dca3b35884924cca459548234e50a55915155ab",
+      "bytes": 216290
+    },
+    {
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "sha256": "39a2083e3e8328c4fbc36763ad8925ea59bed4c368b86a9945c80f6844a770f7",
+      "bytes": 3183962
+    },
+    {
+      "path": "docs/registers/negative_result_register.md",
+      "sha256": "47314fece168d0a4787d8d80f14c2549badcee41d6969c1dedc9208f15edbe50",
+      "bytes": 13457
+    },
+    {
+      "path": "docs/workspace/workspace_state.yaml",
+      "sha256": "6799c965c57a9321138ab84e8a44657f982ed577141aedad151c6f662807b53d",
+      "bytes": 167247
+    },
+    {
+      "path": "docs/context/current_working_state.md",
+      "sha256": "8f63325ab7764bdd9e9c47c5a26b4bc92a32bbe14899210174e51c3210c0db77",
+      "bytes": 100631
+    }
+  ]
+}

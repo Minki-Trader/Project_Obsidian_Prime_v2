@@ -1,0 +1,106 @@
+{
+  "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+  "status": "blocked_by_audit_or_runtime_readiness",
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "path": "docs/agent_control/packets/stage33_run27A_evidence_driven_adapter_role_map_v1/work_packet_schema_lint.json"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "path": "docs/agent_control/packets/stage33_run27A_evidence_driven_adapter_role_map_v1/skill_receipt_schema_lint.json"
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "path": "docs/agent_control/packets/stage33_run27A_evidence_driven_adapter_role_map_v1/state_sync_audit.json"
+    },
+    {
+      "audit_name": "code_surface_audit",
+      "status": "blocked",
+      "path": "docs/agent_control/packets/stage33_run27A_evidence_driven_adapter_role_map_v1/code_surface_audit.json"
+    },
+    {
+      "audit_name": "self_correction_plan",
+      "status": "blocked",
+      "path": "docs/agent_control/packets/stage33_run27A_evidence_driven_adapter_role_map_v1/code_surface_self_correction_plan.json"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "path": "docs/agent_control/packets/stage33_run27A_evidence_driven_adapter_role_map_v1/required_gate_coverage_audit.json"
+    }
+  ],
+  "gate_summaries": {
+    "evidence_gate": "pass",
+    "repeatability_check": "pass",
+    "runtime_parity_check": "not_applicable_by_claim",
+    "adapter_readiness": "no_runtime_ready_adapter",
+    "onnx_readiness": "not_ready_for_new_onnx_artifact",
+    "claim_boundary": "bounded_claims_only"
+  },
+  "ledger_updates": {
+    "stage_ledger": {
+      "path": "stages/33_adapter_mechanism__evidence_driven_role_map/03_reviews/stage_run_ledger.csv",
+      "sha256": "b8be43a70f9ca48876a4d03c1560e1c8a15bdd47d94011efb2eaa5c24c99bc5a",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 3,
+      "upserted_rows": 3
+    },
+    "alpha_ledger": {
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "sha256": "39a2083e3e8328c4fbc36763ad8925ea59bed4c368b86a9945c80f6844a770f7",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 3413,
+      "upserted_rows": 3
+    },
+    "run_registry": {
+      "path": "docs/registers/run_registry.csv",
+      "sha256": "6723c0318ebf7cb15e3c35a98dca3b35884924cca459548234e50a55915155ab",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 310,
+      "upserted_rows": 1
+    }
+  },
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "blocked",
+    "requested_claims": [
+      "evidence_map_materialized",
+      "reviewed",
+      "completed"
+    ],
+    "allowed_claims": [
+      "partial",
+      "blocked"
+    ],
+    "forbidden_claims": [
+      "reviewed",
+      "completed",
+      "alpha_quality",
+      "operating_baseline",
+      "promotion_candidate",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness"
+    ]
+  },
+  "claim_boundary": {
+    "status": "bounded_claims_only",
+    "allowed_claims": [
+      "Stage10-32 evidence was scanned",
+      "adapter contract candidates were identified"
+    ],
+    "forbidden_claims": [
+      "alpha_quality",
+      "operating_baseline",
+      "promotion_candidate",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness"
+    ]
+  },
+  "next_action": "Pick one role candidate and run a bounded adapter probe after code-surface blocker is repaired or scoped."
+}

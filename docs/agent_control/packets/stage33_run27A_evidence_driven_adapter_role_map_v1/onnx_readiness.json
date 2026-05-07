@@ -1,0 +1,11 @@
+{
+  "status": "not_ready_for_new_onnx_artifact",
+  "candidate_count": 10,
+  "reasons": [
+    "No candidate has a fixed runtime input feature contract.",
+    "No new source model or adapter behavior is stable enough for packaging.",
+    "No Python-vs-ONNX parity target exists for this packet.",
+    "No runtime advantage over MQL rule, score-table, or Python bridge has been established."
+  ],
+  "next_required_evidence": "bounded adapter probe with fixed inputs, source outputs, parity plan, and MT5 handoff plan"
+}

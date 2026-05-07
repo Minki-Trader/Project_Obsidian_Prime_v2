@@ -1,4 +1,15 @@
-﻿## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
+﻿## Latest Stage33 Evidence-Driven Adapter Role Map(최신 33단계 근거 기반 어댑터 역할 지도)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `33_adapter_mechanism__evidence_driven_role_map`
+- current run(현재 실행): `run27A_evidence_driven_adapter_role_map_v1`
+- status(상태): `blocked(차단)`
+- adapter candidates(어댑터 후보): `10`
+- evidence rows(근거 행): `3847`
+
+효과(effect, 효과): Stage10-32(10-32단계) 근거에서 역할(role, 역할)과 mechanism class(메커니즘 분류)를 도출했지만, fixed runtime input contract(고정 런타임 입력 계약)이 없어 ONNX(온닉스)나 MT5(`MetaTrader 5`, 메타트레이더5) 권위 주장은 하지 않는다.
+
+## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 

@@ -1,0 +1,196 @@
+{
+  "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+  "candidate_count": 10,
+  "receipts": [
+    {
+      "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+      "status": "executed",
+      "skill": "obsidian-run-evidence-system",
+      "source_inputs": [
+        "run_registry",
+        "alpha_run_ledger",
+        "stage_docs"
+      ],
+      "produced_artifacts": [
+        "mechanism_role_map.json",
+        "adapter_candidates.json"
+      ],
+      "ledger_rows": 4,
+      "missing_evidence": [
+        "no fixed runtime adapter"
+      ],
+      "allowed_claims": [
+        "evidence_scan"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "operating_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness"
+      ]
+    },
+    {
+      "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+      "status": "executed",
+      "skill": "obsidian-experiment-design",
+      "hypothesis": "Stage10-32 evidence can identify adapter roles before implementation.",
+      "baseline": "no operating baseline",
+      "changed_variables": [
+        "classification surface only"
+      ],
+      "invalid_conditions": [
+        "source ledgers missing"
+      ],
+      "evidence_plan": [
+        "evidence_gate",
+        "repeatability_check",
+        "adapter_readiness"
+      ]
+    },
+    {
+      "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+      "status": "executed",
+      "skill": "obsidian-data-integrity",
+      "data_sources_checked": {
+        "agent_control_packet": 58,
+        "alpha_run_ledger": 3210,
+        "negative_result_register": 24,
+        "run_registry": 295,
+        "stage_doc": 260
+      },
+      "time_axis_boundary": "registry/doc evidence only; raw bar time axis not reinterpreted",
+      "split_boundary": "split tokens read from prior evidence, no new split made",
+      "leakage_checks": [
+        "no new feature-label join"
+      ],
+      "missing_data_boundary": "source docs can be incomplete; candidate claims stay bounded"
+    },
+    {
+      "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+      "status": "executed",
+      "skill": "obsidian-model-validation",
+      "model_or_threshold_surface": "no new model or threshold selected",
+      "validation_split": "not_applicable",
+      "overfit_checks": [
+        "no single split promotion"
+      ],
+      "selection_metric_boundary": "evidence counts only",
+      "allowed_claims": [
+        "contract_candidate"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "operating_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness"
+      ]
+    },
+    {
+      "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+      "status": "executed",
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/registers/negative_result_register.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md"
+      ],
+      "produced_artifacts": [
+        "packet json",
+        "stage docs",
+        "ledger rows"
+      ],
+      "raw_evidence": [
+        "registry rows",
+        "stage markdown"
+      ],
+      "machine_readable": [
+        "json",
+        "csv",
+        "yaml"
+      ],
+      "human_readable": [
+        "md"
+      ],
+      "hashes_or_missing_reasons": [
+        {
+          "path": "docs/registers/run_registry.csv",
+          "sha256": "6723c0318ebf7cb15e3c35a98dca3b35884924cca459548234e50a55915155ab",
+          "bytes": 216290
+        },
+        {
+          "path": "docs/registers/alpha_run_ledger.csv",
+          "sha256": "39a2083e3e8328c4fbc36763ad8925ea59bed4c368b86a9945c80f6844a770f7",
+          "bytes": 3183962
+        },
+        {
+          "path": "docs/registers/negative_result_register.md",
+          "sha256": "47314fece168d0a4787d8d80f14c2549badcee41d6969c1dedc9208f15edbe50",
+          "bytes": 13457
+        },
+        {
+          "path": "docs/workspace/workspace_state.yaml",
+          "sha256": "6799c965c57a9321138ab84e8a44657f982ed577141aedad151c6f662807b53d",
+          "bytes": 167247
+        },
+        {
+          "path": "docs/context/current_working_state.md",
+          "sha256": "8f63325ab7764bdd9e9c47c5a26b4bc92a32bbe14899210174e51c3210c0db77",
+          "bytes": 100631
+        }
+      ],
+      "lineage_boundary": "connected_with_boundary"
+    },
+    {
+      "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+      "status": "executed",
+      "skill": "obsidian-runtime-parity",
+      "python_artifact": "stage_pipelines/stage33/evidence_driven_role_map.py",
+      "runtime_artifact": "not_created",
+      "compared_surface": "not_applicable_no_runtime_artifact",
+      "parity_level": "P0_unverified",
+      "tester_identity": "not_applicable",
+      "missing_evidence": [
+        "MT5 handoff",
+        "Python-vs-ONNX parity"
+      ],
+      "allowed_claims": [
+        "research_only"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "operating_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness"
+      ]
+    },
+    {
+      "packet_id": "stage33_run27A_evidence_driven_adapter_role_map_v1",
+      "status": "executed",
+      "skill": "obsidian-result-judgment",
+      "judgment_boundary": "exploratory_adapter_contract_candidates_identified_runtime_inputs_not_fixed",
+      "allowed_claims": [
+        "evidence_map_materialized"
+      ],
+      "forbidden_claims": [
+        "alpha_quality",
+        "operating_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness"
+      ],
+      "evidence_used": [
+        "gates",
+        "candidate_count"
+      ]
+    }
+  ]
+}

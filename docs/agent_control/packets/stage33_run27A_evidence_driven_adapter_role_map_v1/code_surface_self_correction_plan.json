@@ -1,0 +1,1975 @@
+{
+  "audit_name": "self_correction_plan",
+  "status": "blocked",
+  "passed": false,
+  "completed_forbidden": true,
+  "findings": [
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/control_plane/mt5_kpi_recorder.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/control_plane/mt5_kpi_recorder.py",
+          "lines": 1183,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/control_plane/mt5_tier_balance_completion.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/control_plane/mt5_tier_balance_completion.py",
+          "lines": 1364,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+          "lines": 1715,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+          "lines": 1777,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/pipelines/audit_stage05_feature_integrity.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/pipelines/audit_stage05_feature_integrity.py",
+          "lines": 977,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_all_variant_mt5_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_all_variant_mt5_probe.py",
+          "lines": 1553,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_gap_overnight_context_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_gap_overnight_context_probe.py",
+          "lines": 1471,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_inversion_attribution_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_inversion_attribution_probe.py",
+          "lines": 1459,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_macro_proxy_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_macro_proxy_regime_probe.py",
+          "lines": 1483,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_mega_cap_divergence_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_mega_cap_divergence_probe.py",
+          "lines": 1474,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_probability_shape_attribution_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_probability_shape_attribution_probe.py",
+          "lines": 1501,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py",
+          "lines": 1934,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py",
+          "lines": 1591,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_session_age_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_session_age_regime_probe.py",
+          "lines": 1453,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_trend_chop_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_trend_chop_regime_probe.py",
+          "lines": 1471,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_variant_stability_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_variant_stability_probe.py",
+          "lines": 1285,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_volatility_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_volatility_regime_probe.py",
+          "lines": 1465,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py",
+          "lines": 1730,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage18/catboost_followup_batch.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage18/catboost_followup_batch.py",
+          "lines": 1674,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage18/catboost_mt5_characteristic_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage18/catboost_mt5_characteristic_probe.py",
+          "lines": 1261,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_axis_exhaustion_followthrough.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_axis_exhaustion_followthrough.py",
+          "lines": 1332,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_characteristic_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_characteristic_scout.py",
+          "lines": 809,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_deep_axis_followup.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_deep_axis_followup.py",
+          "lines": 1478,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_feature_hold6_routing_attribution.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_feature_hold6_routing_attribution.py",
+          "lines": 1316,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_mt5_axis_extension.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_mt5_axis_extension.py",
+          "lines": 1176,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_mt5_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_mt5_runtime_probe.py",
+          "lines": 1308,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage20/gam_mt5_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage20/gam_mt5_runtime_probe.py",
+          "lines": 1047,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage21/elasticnet_logistic_mt5_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage21/elasticnet_logistic_mt5_runtime_probe.py",
+          "lines": 969,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage21/elasticnet_logistic_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage21/elasticnet_logistic_scout.py",
+          "lines": 865,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage22/hmm_state_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage22/hmm_state_runtime_probe.py",
+          "lines": 1014,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage23/supervised_regime_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage23/supervised_regime_runtime_probe.py",
+          "lines": 1002,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage23/supervised_regime_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage23/supervised_regime_scout.py",
+          "lines": 993,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage24/survival_time_to_event_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage24/survival_time_to_event_runtime_probe.py",
+          "lines": 1117,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage24/survival_time_to_event_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage24/survival_time_to_event_scout.py",
+          "lines": 1129,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage24/survival_time_to_event_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage24/survival_time_to_event_scout.py",
+          "owner_stage": "stage24",
+          "imported_stage": "stage23",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage25/hazard_trade_lifecycle_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_runtime_probe.py",
+          "lines": 1150,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+          "lines": 1051,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+          "owner_stage": "stage25",
+          "imported_stage": "stage23",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+          "owner_stage": "stage25",
+          "imported_stage": "stage24",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage26/ngboost_distribution_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_distribution_runtime_probe.py",
+          "lines": 1108,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+          "lines": 1039,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+          "owner_stage": "stage26",
+          "imported_stage": "stage23",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+          "owner_stage": "stage26",
+          "imported_stage": "stage24",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage27/quantile_boosting_tail_risk_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_runtime_probe.py",
+          "lines": 1149,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+          "lines": 1110,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+          "owner_stage": "stage27",
+          "imported_stage": "stage26",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage28/markov_regression_state_link_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_state_link_scout.py",
+          "lines": 1077,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage28/markov_regression_state_link_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_state_link_scout.py",
+          "owner_stage": "stage28",
+          "imported_stage": "stage27",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage28/markov_regression_state_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_state_runtime_probe.py",
+          "lines": 1342,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage28/markov_regression_supplement_state_variance_attribution.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_supplement_state_variance_attribution.py",
+          "lines": 831,
+          "attention_lines": 800
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "line_budget::stage_pipelines/stage29_32_goal_completion.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file has no registered code-surface baseline.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage29_32_goal_completion.py",
+          "lines": 1966,
+          "blocking_lines": 1600
+        }
+      }
+    },
+    {
+      "check_id": "self_correction::code_surface_violation",
+      "message": "A source audit failure needs a repair plan before completion can be claimed.",
+      "severity": "blocking",
+      "details": {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage29_32_native_revalidation_supplement.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage29_32_native_revalidation_supplement.py",
+          "lines": 837,
+          "attention_lines": 800
+        }
+      }
+    }
+  ],
+  "counts": {
+    "mode": "plan_only",
+    "mode_mutates_files": false,
+    "mutation_performed": false,
+    "source_audits": [
+      "code_surface_audit"
+    ],
+    "repair_item_count": 52,
+    "safe_autofix_eligible_count": 0,
+    "guarded_autofix_count": 52,
+    "repair_items": [
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/control_plane/mt5_kpi_recorder.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/control_plane/mt5_kpi_recorder.py",
+          "lines": 1183,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/control_plane/mt5_tier_balance_completion.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/control_plane/mt5_tier_balance_completion.py",
+          "lines": 1364,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAudit.mq5",
+          "lines": 1715,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/mt5/ObsidianPrimeV2_RuntimeParityAuditEA.mq5",
+          "lines": 1777,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::foundation/pipelines/audit_stage05_feature_integrity.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "foundation/pipelines/audit_stage05_feature_integrity.py",
+          "lines": 977,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_all_variant_mt5_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_all_variant_mt5_probe.py",
+          "lines": 1553,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_gap_overnight_context_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_gap_overnight_context_probe.py",
+          "lines": 1471,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_inversion_attribution_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_inversion_attribution_probe.py",
+          "lines": 1459,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_macro_proxy_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_macro_proxy_regime_probe.py",
+          "lines": 1483,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_mega_cap_divergence_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_mega_cap_divergence_probe.py",
+          "lines": 1474,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_probability_shape_attribution_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_probability_shape_attribution_probe.py",
+          "lines": 1501,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_recency_weighted_single_probe.py",
+          "lines": 1934,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_rolling_wfo_split_probe.py",
+          "lines": 1591,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_session_age_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_session_age_regime_probe.py",
+          "lines": 1453,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_trend_chop_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_trend_chop_regime_probe.py",
+          "lines": 1471,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_variant_stability_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_variant_stability_probe.py",
+          "lines": 1285,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_volatility_regime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_volatility_regime_probe.py",
+          "lines": 1465,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage12/extratrees_wfo_fold07_mt5_probe.py",
+          "lines": 1730,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage18/catboost_followup_batch.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage18/catboost_followup_batch.py",
+          "lines": 1674,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage18/catboost_mt5_characteristic_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage18/catboost_mt5_characteristic_probe.py",
+          "lines": 1261,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_axis_exhaustion_followthrough.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_axis_exhaustion_followthrough.py",
+          "lines": 1332,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_characteristic_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_characteristic_scout.py",
+          "lines": 809,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_deep_axis_followup.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_deep_axis_followup.py",
+          "lines": 1478,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_feature_hold6_routing_attribution.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_feature_hold6_routing_attribution.py",
+          "lines": 1316,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_mt5_axis_extension.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_mt5_axis_extension.py",
+          "lines": 1176,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage19/ebm_mt5_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage19/ebm_mt5_runtime_probe.py",
+          "lines": 1308,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage20/gam_mt5_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage20/gam_mt5_runtime_probe.py",
+          "lines": 1047,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage21/elasticnet_logistic_mt5_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage21/elasticnet_logistic_mt5_runtime_probe.py",
+          "lines": 969,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage21/elasticnet_logistic_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage21/elasticnet_logistic_scout.py",
+          "lines": 865,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage22/hmm_state_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage22/hmm_state_runtime_probe.py",
+          "lines": 1014,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage23/supervised_regime_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage23/supervised_regime_runtime_probe.py",
+          "lines": 1002,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage23/supervised_regime_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage23/supervised_regime_scout.py",
+          "lines": 993,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage24/survival_time_to_event_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage24/survival_time_to_event_runtime_probe.py",
+          "lines": 1117,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage24/survival_time_to_event_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage24/survival_time_to_event_scout.py",
+          "lines": 1129,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage24/survival_time_to_event_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage24/survival_time_to_event_scout.py",
+          "owner_stage": "stage24",
+          "imported_stage": "stage23",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage25/hazard_trade_lifecycle_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_runtime_probe.py",
+          "lines": 1150,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+          "lines": 1051,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+          "owner_stage": "stage25",
+          "imported_stage": "stage23",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage25/hazard_trade_lifecycle_scout.py",
+          "owner_stage": "stage25",
+          "imported_stage": "stage24",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage26/ngboost_distribution_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_distribution_runtime_probe.py",
+          "lines": 1108,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+          "lines": 1039,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+          "owner_stage": "stage26",
+          "imported_stage": "stage23",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage26/ngboost_probabilistic_distribution_scout.py",
+          "owner_stage": "stage26",
+          "imported_stage": "stage24",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage27/quantile_boosting_tail_risk_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_runtime_probe.py",
+          "lines": 1149,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+          "lines": 1110,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage27/quantile_boosting_tail_risk_scout.py",
+          "owner_stage": "stage27",
+          "imported_stage": "stage26",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage28/markov_regression_state_link_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_state_link_scout.py",
+          "lines": 1077,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "cross_stage_pipeline_import::stage_pipelines/stage28/markov_regression_state_link_scout.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Stage pipeline modules must not import another stage as a shared toolbox.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_state_link_scout.py",
+          "owner_stage": "stage28",
+          "imported_stage": "stage27",
+          "next_refactor": "move reusable logic to foundation/* before cross-stage reuse"
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage28/markov_regression_state_runtime_probe.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_state_runtime_probe.py",
+          "lines": 1342,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage28/markov_regression_supplement_state_variance_attribution.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage28/markov_regression_supplement_state_variance_attribution.py",
+          "lines": 831,
+          "attention_lines": 800
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "line_budget::stage_pipelines/stage29_32_goal_completion.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file has no registered code-surface baseline.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage29_32_goal_completion.py",
+          "lines": 1966,
+          "blocking_lines": 1600
+        }
+      },
+      {
+        "source_audit": "code_surface_audit",
+        "source_check_id": "large_file::stage_pipelines/stage29_32_native_revalidation_supplement.py",
+        "failure_kind": "code_surface_violation",
+        "message": "Large code file requires code-surface guard before future edits.",
+        "recommended_action": "split_large_module_or_move_owner_logic",
+        "default_repair_mode": "guarded_autofix",
+        "safe_autofix_eligible": false,
+        "action_forbidden": false,
+        "target_gates": [],
+        "details": {
+          "path": "stage_pipelines/stage29_32_native_revalidation_supplement.py",
+          "lines": 837,
+          "attention_lines": 800
+        }
+      }
+    ]
+  },
+  "allowed_claims": [
+    "repair_plan_ready",
+    "blocked"
+  ],
+  "forbidden_claims": [
+    "complete",
+    "completed",
+    "full_verification_complete",
+    "mt5_verification_complete",
+    "operating_promotion",
+    "reviewed",
+    "runtime_authority",
+    "runtime_probe_completed",
+    "verification_complete",
+    "verified"
+  ]
+}

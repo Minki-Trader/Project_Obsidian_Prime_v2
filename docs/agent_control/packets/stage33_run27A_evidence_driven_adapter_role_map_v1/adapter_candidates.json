@@ -1,0 +1,972 @@
+[
+  {
+    "candidate_id": "stage33_deferred_adapter_contract_candidate",
+    "role": "Deferred",
+    "mechanism_class": "model_score_surface",
+    "supporting_mechanism_classes": [
+      "model_score_surface",
+      "runtime_score_table_handoff",
+      "regime_context_state",
+      "exit_hold_lifecycle",
+      "rule_or_threshold_surface",
+      "tail_risk_surface",
+      "adaptive_online_learning",
+      "calibration_abstention",
+      "onnx_packaging",
+      "negative_memory",
+      "unclassified_evidence"
+    ],
+    "evidence_count": 3716,
+    "stage_count": 23,
+    "runtime_evidence_count": 3187,
+    "split_evidence_count": 3361,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_deferred_adapter_contract_candidate",
+      "role": "Deferred",
+      "mechanism_class": "model_score_surface",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_runtime_packaging_adapter_contract_candidate",
+    "role": "Runtime / Packaging",
+    "mechanism_class": "model_score_surface",
+    "supporting_mechanism_classes": [
+      "model_score_surface",
+      "runtime_score_table_handoff",
+      "regime_context_state",
+      "tail_risk_surface",
+      "exit_hold_lifecycle",
+      "rule_or_threshold_surface",
+      "adaptive_online_learning",
+      "onnx_packaging",
+      "calibration_abstention",
+      "negative_memory",
+      "unclassified_evidence"
+    ],
+    "evidence_count": 3284,
+    "stage_count": 23,
+    "runtime_evidence_count": 3283,
+    "split_evidence_count": 3055,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_runtime_packaging_adapter_contract_candidate",
+      "role": "Runtime / Packaging",
+      "mechanism_class": "model_score_surface",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_position_management_adapter_contract_candidate",
+    "role": "Position Management",
+    "mechanism_class": "runtime_score_table_handoff",
+    "supporting_mechanism_classes": [
+      "runtime_score_table_handoff",
+      "model_score_surface",
+      "regime_context_state",
+      "tail_risk_surface",
+      "exit_hold_lifecycle",
+      "rule_or_threshold_surface",
+      "adaptive_online_learning",
+      "onnx_packaging",
+      "calibration_abstention",
+      "negative_memory"
+    ],
+    "evidence_count": 2958,
+    "stage_count": 23,
+    "runtime_evidence_count": 2812,
+    "split_evidence_count": 2841,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_position_management_adapter_contract_candidate",
+      "role": "Position Management",
+      "mechanism_class": "runtime_score_table_handoff",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_entry_adapter_contract_candidate",
+    "role": "Entry",
+    "mechanism_class": "model_score_surface",
+    "supporting_mechanism_classes": [
+      "model_score_surface",
+      "runtime_score_table_handoff",
+      "regime_context_state",
+      "exit_hold_lifecycle",
+      "rule_or_threshold_surface",
+      "tail_risk_surface",
+      "calibration_abstention",
+      "adaptive_online_learning",
+      "onnx_packaging",
+      "negative_memory",
+      "unclassified_evidence"
+    ],
+    "evidence_count": 2783,
+    "stage_count": 23,
+    "runtime_evidence_count": 2264,
+    "split_evidence_count": 2483,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_entry_adapter_contract_candidate",
+      "role": "Entry",
+      "mechanism_class": "model_score_surface",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_permission_filter_abstention_adapter_contract_candidate",
+    "role": "Permission / Filter / Abstention",
+    "mechanism_class": "model_score_surface",
+    "supporting_mechanism_classes": [
+      "model_score_surface",
+      "runtime_score_table_handoff",
+      "regime_context_state",
+      "exit_hold_lifecycle",
+      "rule_or_threshold_surface",
+      "tail_risk_surface",
+      "adaptive_online_learning",
+      "calibration_abstention",
+      "onnx_packaging",
+      "negative_memory"
+    ],
+    "evidence_count": 2191,
+    "stage_count": 23,
+    "runtime_evidence_count": 1846,
+    "split_evidence_count": 1958,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_permission_filter_abstention_adapter_contract_candidate",
+      "role": "Permission / Filter / Abstention",
+      "mechanism_class": "model_score_surface",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_regime_context_adapter_contract_candidate",
+    "role": "Regime / Context",
+    "mechanism_class": "regime_context_state",
+    "supporting_mechanism_classes": [
+      "regime_context_state",
+      "model_score_surface",
+      "runtime_score_table_handoff",
+      "rule_or_threshold_surface",
+      "exit_hold_lifecycle",
+      "tail_risk_surface",
+      "onnx_packaging",
+      "adaptive_online_learning",
+      "calibration_abstention",
+      "negative_memory"
+    ],
+    "evidence_count": 1995,
+    "stage_count": 23,
+    "runtime_evidence_count": 1484,
+    "split_evidence_count": 1704,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_regime_context_adapter_contract_candidate",
+      "role": "Regime / Context",
+      "mechanism_class": "regime_context_state",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_exit_hold_adapter_contract_candidate",
+    "role": "Exit / Hold",
+    "mechanism_class": "model_score_surface",
+    "supporting_mechanism_classes": [
+      "model_score_surface",
+      "exit_hold_lifecycle",
+      "rule_or_threshold_surface",
+      "regime_context_state",
+      "runtime_score_table_handoff",
+      "tail_risk_surface",
+      "onnx_packaging",
+      "adaptive_online_learning",
+      "negative_memory",
+      "calibration_abstention"
+    ],
+    "evidence_count": 1650,
+    "stage_count": 23,
+    "runtime_evidence_count": 1160,
+    "split_evidence_count": 1358,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_exit_hold_adapter_contract_candidate",
+      "role": "Exit / Hold",
+      "mechanism_class": "model_score_surface",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_risk_tail_risk_adapter_contract_candidate",
+    "role": "Risk / Tail-risk",
+    "mechanism_class": "runtime_score_table_handoff",
+    "supporting_mechanism_classes": [
+      "runtime_score_table_handoff",
+      "tail_risk_surface",
+      "model_score_surface",
+      "exit_hold_lifecycle",
+      "regime_context_state",
+      "rule_or_threshold_surface",
+      "onnx_packaging",
+      "adaptive_online_learning",
+      "calibration_abstention",
+      "negative_memory"
+    ],
+    "evidence_count": 1317,
+    "stage_count": 23,
+    "runtime_evidence_count": 1307,
+    "split_evidence_count": 1301,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_risk_tail_risk_adapter_contract_candidate",
+      "role": "Risk / Tail-risk",
+      "mechanism_class": "runtime_score_table_handoff",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_negative_memory_adapter_contract_candidate",
+    "role": "Negative Memory",
+    "mechanism_class": "negative_memory",
+    "supporting_mechanism_classes": [
+      "negative_memory",
+      "model_score_surface",
+      "runtime_score_table_handoff",
+      "rule_or_threshold_surface",
+      "exit_hold_lifecycle",
+      "regime_context_state",
+      "tail_risk_surface",
+      "onnx_packaging",
+      "calibration_abstention",
+      "adaptive_online_learning"
+    ],
+    "evidence_count": 44,
+    "stage_count": 21,
+    "runtime_evidence_count": 43,
+    "split_evidence_count": 43,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": true,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_negative_memory_adapter_contract_candidate",
+      "role": "Negative Memory",
+      "mechanism_class": "negative_memory",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  },
+  {
+    "candidate_id": "stage33_sizing_adapter_contract_candidate",
+    "role": "Sizing",
+    "mechanism_class": "runtime_score_table_handoff",
+    "supporting_mechanism_classes": [
+      "runtime_score_table_handoff",
+      "model_score_surface",
+      "rule_or_threshold_surface",
+      "exit_hold_lifecycle",
+      "regime_context_state",
+      "tail_risk_surface",
+      "negative_memory"
+    ],
+    "evidence_count": 7,
+    "stage_count": 1,
+    "runtime_evidence_count": 7,
+    "split_evidence_count": 7,
+    "readiness": {
+      "role_clear": true,
+      "input_state_defined": false,
+      "output_contract_defined": true,
+      "comparison_kpi_available": true,
+      "not_single_split_only": false,
+      "safe_fallback_defined": true,
+      "reusable_next_experiment": true,
+      "status": "contract_candidate_not_runtime_ready"
+    },
+    "contract": {
+      "adapter_id": "stage33_sizing_adapter_contract_candidate",
+      "role": "Sizing",
+      "mechanism_class": "runtime_score_table_handoff",
+      "input_contract": {
+        "status": "not_fixed_for_runtime",
+        "source": "Stage10-32 evidence-derived role map",
+        "required_next_step": "Choose one role and freeze feature/state inputs before runtime implementation."
+      },
+      "output_contract": {
+        "type": "SignalCard",
+        "required_fields": [
+          "role",
+          "action",
+          "direction",
+          "safe_fallback"
+        ],
+        "optional_fields": [
+          "score",
+          "confidence",
+          "reason_codes",
+          "metadata"
+        ],
+        "valid_roles": [
+          "Entry",
+          "Permission / Filter / Abstention",
+          "Risk / Tail-risk",
+          "Sizing",
+          "Position Management",
+          "Exit / Hold",
+          "Regime / Context",
+          "Runtime / Packaging",
+          "Negative Memory",
+          "Deferred"
+        ],
+        "valid_actions": [
+          "emit_signal",
+          "allow",
+          "block",
+          "abstain",
+          "resize",
+          "hold",
+          "exit",
+          "package",
+          "record_only"
+        ],
+        "valid_directions": [
+          "long",
+          "short",
+          "flat",
+          "both",
+          "none"
+        ]
+      },
+      "safe_fallback": "abstain",
+      "comparison_kpi": [
+        "evidence_count",
+        "stage_count",
+        "runtime_evidence_count",
+        "split_evidence_count"
+      ],
+      "readiness_status": "contract_candidate_not_runtime_ready",
+      "claim_boundary": "adapter contract candidate only; not a deployed adapter.",
+      "version": "adapter_contract_v1"
+    },
+    "next_action": "run bounded adapter probe only after fixed input contract and comparison KPI are selected"
+  }
+]
