@@ -1,4 +1,9 @@
-﻿# Workspace Changelog
+﻿## 2026-05-08 Stage34 RUN28A Attribution(34단계 28A 실행 귀속)
+
+- completed(완료): `run28A_tier_a_markov_long_permission_attribution_scout_v1` attribution scout(귀속 탐침)
+- source(원천): `run22B_markov_regression_state_runtime_probe_v1` reused MT5/runtime artifacts(재사용 MT5/런타임 산출물)
+- judgment(판정): `inconclusive_tier_a_markov_long_permission_attribution_scout_completed`
+- effect(효과): Tier A Markov long permission(티어 A 마르코프 롱 허용)은 high-confidence state gate(고신뢰 상태 게이트) 안에서 time/hold concentration(시간/보유 집중)으로 읽고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
 
 ## 2026-05-08
 

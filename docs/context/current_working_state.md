@@ -1,4 +1,20 @@
-﻿## Latest Stage33 Tier A Markov Long Permission Source(최신 33단계 티어 A 마르코프 롱 허용 원천)
+﻿## Latest Stage34 RUN28A Attribution(최신 34단계 28A 실행 귀속)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28A_tier_a_markov_long_permission_attribution_scout_v1`
+- latest packet(최신 묶음): `stage34_run28A_tier_a_markov_long_permission_attribution_scout_v1`
+- next action(다음 행동): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+
+Stage34(34단계) `run28A_tier_a_markov_long_permission_attribution_scout_v1`를 reviewed attribution scout(검토된 귀속 탐침)로 완료했다.
+
+결과(result, 결과): Tier A(티어 A) validation/OOS(검증/표본외) long-only(롱 전용) PF(수익 팩터)는 각각 `1.771465` / `1.224214`다. state/confidence/entropy(상태/신뢰/엔트로피)는 모든 Tier A 체결 거래에서 이미 high gate(높은 게이트)였고, profit(수익)은 time segment(시간 구간)와 hold shape(보유 형태)에서 갈렸다.
+
+효과(effect, 효과): Stage34(34단계)는 Markov long permission(마르코프 롱 허용)을 보존 단서로 남기되, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. 다음 행동(next action, 다음 행동)은 `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`다.
+
+## Latest Stage33 Tier A Markov Long Permission Source(최신 33단계 티어 A 마르코프 롱 허용 원천)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 

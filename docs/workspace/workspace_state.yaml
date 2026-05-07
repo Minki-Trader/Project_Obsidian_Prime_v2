@@ -1,8 +1,8 @@
 ﻿updated_on: '2026-05-08'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 33_regime_mechanism__tier_a_markov_long_permission_source
-current_run_id: run27A_tier_a_markov_long_permission_source_scout_v1
+active_stage: 34_regime_mechanism__tier_a_markov_long_permission_attribution
+current_run_id: run28A_tier_a_markov_long_permission_attribution_scout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,13 +17,13 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
-- Stage33(33단계) 33_regime_mechanism__tier_a_markov_long_permission_source opened_planned_no_result(열림, 결과 없음): Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)의 source(원천)를 state/confidence/time/trade-shape(상태/신뢰/시간/거래 형태)로 해부한다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage34(34단계) 34_regime_mechanism__tier_a_markov_long_permission_attribution reviewed_attribution_scout_completed(검토된 귀속 탐침 완료): Tier A Markov long permission(티어 A 마르코프 롱 허용)의 profit factor source(수익 팩터 원천)는 high state gate(높은 상태 게이트) 안의 time/hold concentration(시간/보유 집중)으로 판독한다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage33(33단계) 33_regime_mechanism__tier_a_markov_long_permission_source closed_user_requested_stage34_pivot_no_result(사용자 요청 34단계 전환, 결과 없음): 실행 결과(run result, 실행 결과) 없이 Stage34(34단계)로 넘겼다.
 - Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
   river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
   with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
-- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 최신 장부 실행인
-  run26D_torch_tcn_native_temporal_runtime_probe_v1을 가리킨다; stage29_32_native_revalidation_supplement_v1은
-  cross-stage packet(교차 단계 묶음)으로만 읽는다.
+- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 검토된 실행인
+  run28A_tier_a_markov_long_permission_attribution_scout_v1을 가리킨다; next action(다음 행동)은 run28B_tier_a_markov_long_permission_segment_stress_probe_v1다.
 - treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
   탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
   no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
@@ -59,13 +59,25 @@ current_focus:
 stage33_tier_a_markov_long_permission_source:
   packet_id: stage33_tier_a_markov_long_permission_open_v1
   stage_id: 33_regime_mechanism__tier_a_markov_long_permission_source
-  status: opened_planned_no_result
+  status: closed_user_requested_stage34_pivot_no_result
   current_run_id: run27A_tier_a_markov_long_permission_source_scout_v1
   preserved_seed: Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)
   decision_path: docs/decisions/2026-05-08_stage33_tier_a_markov_long_permission_open.md
   stage_path: stages/33_regime_mechanism__tier_a_markov_long_permission_source
   next_action: run27A_tier_a_markov_long_permission_source_scout_v1
   boundary: stage_open_only_no_baseline_no_promotion_no_runtime_authority
+
+stage34_tier_a_markov_long_permission_attribution:
+  packet_id: stage34_run28A_tier_a_markov_long_permission_attribution_scout_v1
+  stage_id: 34_regime_mechanism__tier_a_markov_long_permission_attribution
+  status: reviewed_attribution_scout_completed
+  current_run_id: run28A_tier_a_markov_long_permission_attribution_scout_v1
+  preserved_seed: Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)
+  decision_path: docs/decisions/2026-05-08_stage34_run28A_tier_a_markov_long_permission_attribution.md
+  stage_path: stages/34_regime_mechanism__tier_a_markov_long_permission_attribution
+  previous_stage_id: 33_regime_mechanism__tier_a_markov_long_permission_source
+  next_action: run28B_tier_a_markov_long_permission_segment_stress_probe_v1
+  boundary: stage34_structural_attribution_only_no_baseline_no_promotion_no_runtime_authority
 
 pre_alpha_stage_queue:
   status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
