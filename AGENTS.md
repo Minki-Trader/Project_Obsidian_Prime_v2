@@ -122,6 +122,16 @@ Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫�
 
 효과(effect, 효과)는 run/subrun/view(실행/하위 실행/보기)를 한 줄씩 모아, Tier A 분리(Tier A separate, Tier A 분리), Tier B 분리(Tier B separate, Tier B 분리), Tier A+B 합산(Tier A+B combined, Tier A+B 합산), Tier A 우선 + Tier B 대체 라우팅(Tier A primary + Tier B fallback routing, Tier A 우선 + Tier B 대체 라우팅), MT5 런타임 탐침(MT5 runtime probe, MT5 런타임 탐침)을 같이 추적하게 하는 것이다.
 
+## 주제-단계 질문 규칙(Topic Stage Opening Rule, 주제-단계 질문 규칙)
+
+`docs/policies/topic_stage_opening.md`가 사용자 topic(주제)을 stage question(단계 질문)으로 바꾸는 규칙을 담당한다.
+
+사용자가 stage open(단계 개방) 전에 던진 topic(주제)은 fixed layer(고정 계층), axis(축), handle(손잡이), adapter taxonomy(어댑터 분류표), mandatory checklist(필수 체크리스트)가 아니다. Codex(코덱스)는 그 topic(주제)을 하나의 구체적인 stage question(단계 질문)으로 바꾸고, 그 질문을 파면서 named pattern(이름 붙은 패턴)을 찾는다.
+
+사용자가 새 stage topic(단계 주제)을 던지면 Codex(코덱스)는 먼저 `docs/templates/stage_open_draft.md` 형식의 stage_open_draft(단계 개방 초안)를 만든다. 사용자가 명시적으로 실행을 요청하기 전에는 stage folder(단계 폴더), current truth(현재 진실), run registry(실행 등록부), code(코드)를 먼저 바꾸지 않는다.
+
+효과(effect, 효과)는 이후 새 stage(단계)에서 Codex(코덱스)가 분류표를 먼저 만들지 않고, 사용자가 던진 주제를 이번 stage(단계)의 질문으로 바꾼 뒤 고유 패턴(unique pattern, 고유 패턴)을 찾게 하는 것이다.
+
 ## 외부 검증 지연 방지(External Verification Anti-Deferral, 외부 검증 지연 방지)
 
 외부 검증(external verification, 외부 검증)이 필요한 주장(claim, 주장)은 다음 작업(next work, 다음 작업)으로 반복해서 밀 수 없다.
