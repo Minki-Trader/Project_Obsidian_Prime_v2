@@ -1,9 +1,5 @@
 ﻿# Workspace Changelog
 
-## 2026-05-08
-
-- 2026-05-08: Stage28(28단계) `run22B_markov_regression_state_runtime_probe_v1` Tier A(티어 A) seed preservation(씨앗 보존)을 기록했다. 효과(effect, 효과): 보존 씨앗(preserved seed, 보존 씨앗)을 Markov regression(마르코프 회귀) 전체가 아니라 `Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)`로 좁히고, Tier B fallback(티어 B 대체), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 올리지 않는다.
-
 ## 2026-05-05
 
 - 2026-05-05: `current_truth_sync_20260505_main_v1` recorded(기록). 효과(effect, 효과): `workspace_state.active_branch(작업공간 상태 활성 브랜치)`를 actual git branch(실제 깃 브랜치) `main(메인)`에 맞추고, `current_run_id(현재 실행 ID)`를 장부에 있는 Stage32(32단계) 최신 실행 `run26D_torch_tcn_native_temporal_runtime_probe_v1`로 되돌렸다. `stage29_32_native_revalidation_supplement_v1`은 cross-stage packet(교차 단계 묶음)으로만 유지하며 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.

@@ -30,7 +30,7 @@ Stage28(28단계) `run22C_markov_regression_supplement_state_variance_attributio
 
 결과(result, 결과): `inconclusive_markov_regression_supplement_completed`. 당시 Stage29(29단계)는 opened_not_started(열림, 미시작) 상태였고 다음 행동(next action, 다음 행동)은 `run23A_river_online_drift_learning_scout_v1`였다.
 
-효과(effect, 효과): Markov state count(마르코프 상태 수) 2/3개, switching variance(전환 분산), Tier A/B attribution(티어 A/B 귀속), native statsmodels runtime(원본 스탯스모델 런타임)과 MT5 score-table handoff(MT5 점수표 인계) 차이를 보강했고, baseline(기준선)이나 promotion(승격)은 만들지 않았다. user-accepted preserved seed(사용자 수락 보존 씨앗)는 Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)로 좁힌다.
+효과(effect, 효과): Markov state count(마르코프 상태 수) 2/3개, switching variance(전환 분산), Tier A/B attribution(티어 A/B 귀속), native statsmodels runtime(원본 스탯스모델 런타임)과 MT5 score-table handoff(MT5 점수표 인계) 차이를 보강했고, baseline(기준선)이나 promotion(승격)은 만들지 않았다.
 
 ## Latest Stage28 Closeout / Stage29 Open(최신 28단계 마감 / 29단계 개방)
 
