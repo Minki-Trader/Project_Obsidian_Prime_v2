@@ -35,6 +35,7 @@
 
 ## Preserved Clues(보존 단서)
 
+- user-accepted preserved seed(사용자 수락 보존 씨앗)는 Markov regression(마르코프 회귀) 전체가 아니라 Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)다.
 - Markov regression(마르코프 회귀) state direction(상태 방향)은 Tier A(티어 A)에서 long-biased(롱 편향)로 강하게 나타났다.
 - Tier B fallback(티어 B 대체)은 partial-context(부분 문맥) 구간을 실제로 메웠고, routed total(실제 라우팅 전체)에 포함됐다.
 - MT5 runtime_probe(MT5 런타임 탐침)는 feature-order repair(피처 순서 수정) 뒤 Python score table(파이썬 점수표)과 같은 확률/임계값 의미로 실행됐다.
