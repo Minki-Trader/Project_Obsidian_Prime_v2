@@ -1,0 +1,4 @@
+﻿- `docs/agent_control/packets/`
+- `docs/registers/run_registry.csv`
+- `docs/registers/alpha_run_ledger.csv`
+- `stages/*/03_reviews/stage_run_ledger.csv`

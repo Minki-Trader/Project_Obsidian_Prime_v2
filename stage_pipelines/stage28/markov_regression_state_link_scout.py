@@ -27,7 +27,7 @@ from foundation.control_plane.ledger import (
 )
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.mt5 import runtime_support as mt5
-from stage_pipelines.stage27 import quantile_boosting_tail_risk_scout as stage27_scout
+from foundation.models import alpha_scout_support as stage27_scout
 
 
 STAGE_ID = "28_regime_model__markov_switching_regression_state_link"
@@ -46,7 +46,7 @@ BOUNDARY = "markov_regression_state_link_structural_scout_only_not_edge_not_alph
 JUDGMENT = "inconclusive_markov_regression_state_link_scout_completed"
 
 ROOT = stage27_scout.ROOT
-MODEL_INPUT_PATH = stage27_scout.stage26_scout.stage23_scout.MODEL_INPUT_PATH
+MODEL_INPUT_PATH = stage27_scout.MODEL_INPUT_PATH
 STAGE_ROOT = ROOT / "stages" / STAGE_ID
 RUN_ROOT = STAGE_ROOT / "02_runs" / RUN_ID
 PACKET_ROOT = ROOT / "docs/agent_control/packets" / PACKET_ID

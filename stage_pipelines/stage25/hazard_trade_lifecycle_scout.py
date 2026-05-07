@@ -25,8 +25,8 @@ from foundation.control_plane.ledger import (
 )
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.mt5 import runtime_support as mt5
-from stage_pipelines.stage23 import supervised_regime_scout as stage23_scout
-from stage_pipelines.stage24 import survival_time_to_event_scout as stage24_scout
+from foundation.models import alpha_scout_support as stage23_scout
+from foundation.models import alpha_scout_support as stage24_scout
 
 
 STAGE_ID = "25_exit_model__hazard_trade_lifecycle_risk"
