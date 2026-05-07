@@ -11,12 +11,11 @@
 - `docs/policies/architecture_invariants.md`
 - `docs/policies/stage_structure.md`
 - `docs/policies/exploration_mandate.md`
-- `docs/policies/topic_stage_opening.md`
 - `docs/policies/kpi_measurement_standard.md`
 - `docs/policies/run_result_management.md`
 - `docs/policies/result_judgment_policy.md`
 
-효과(effect, 효과)는 skill routing(스킬 배치)이 architecture(구조), exploration(탐색), topic-to-stage question(주제-단계 질문), KPI(핵심 성과 지표), run management(실행 관리), result judgment(결과 판정) 규칙과 끊기지 않게 하는 것이다.
+효과(effect, 효과)는 skill routing(스킬 배치)이 architecture(구조), exploration(탐색), KPI(핵심 성과 지표), run management(실행 관리), result judgment(결과 판정) 규칙과 끊기지 않게 하는 것이다.
 
 ## 운영 커널
 

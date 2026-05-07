@@ -22,5 +22,4 @@ Use this skill when work creates, consumes, moves, ignores, packages, releases, 
 
 - Do not let a ledger point to missing evidence without a manifest, external URI, or regeneration command.
 - Do not commit heavy artifacts just to close an evidence gap; prefer manifest, hash, release, or regeneration path when appropriate.
-- Separate model artifacts, policy artifacts, runtime bundles, score tables, reports, and diagnostic notes in lineage records.
 - Do not treat a report as the same thing as a model or runtime bundle.

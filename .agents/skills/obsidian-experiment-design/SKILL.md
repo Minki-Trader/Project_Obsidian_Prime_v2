@@ -21,14 +21,6 @@ Use this skill when a request creates, changes, compares, packages, or closes an
 - `stop_conditions`: when to stop, narrow, rerun, or downgrade claims
 - `evidence_plan`: KPI, files, manifests, registry rows, and checks needed
 
-For new stage topic intake, also include:
-
-- `user_topic`: the user's proposed topic before conversion
-- `stage_question`: the concrete question the stage should answer
-- `non_scope`: what this stage must not claim or mutate
-- `named_pattern_policy`: how repeatable patterns may be named without freezing taxonomy
-- `candidate_role_boundary`: how surviving patterns may be classified without promotion or runtime claims
-
 ## Guardrails
 
 - Do not treat a run that merely completed as a meaningful experiment.
