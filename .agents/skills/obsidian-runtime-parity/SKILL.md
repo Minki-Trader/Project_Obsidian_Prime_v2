@@ -21,5 +21,6 @@ Use this skill when work touches MT5, EA modules, runtime packages, model bundle
 
 - Do not treat Python success as runtime authority.
 - Do not treat MetaEditor compile as a substitute for tester or runtime output.
+- When model outputs drive trading decisions, parity must include decision-surface parity, not only numeric output parity.
 - Do not change EA entrypoints for parameter-only experiments.
 - Do not hide runtime differences in file names; record identities and hashes.
