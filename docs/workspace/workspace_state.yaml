@@ -1,8 +1,8 @@
-﻿updated_on: '2026-05-08'
+﻿updated_on: '2026-05-05'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 33_mechanism_discovery__stage10_32_adapter_readiness_map
-current_run_id: run27A_stage10_32_adapter_readiness_map_v1
+active_stage: 32_sequence_model__tcn_temporal_convolution_context
+current_run_id: run26D_torch_tcn_native_temporal_runtime_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,7 +17,6 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
-- Stage33 adapter readiness map(33단계 어댑터 준비도 지도) completed; 12 candidate clues(후보 단서), ONNX readiness(ONNX 준비도) false; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), or live readiness(실거래 준비) claimed
 - Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
   river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
   with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
@@ -2644,14 +2643,3 @@ stage29_32_native_revalidation_supplement:
   summary_path: docs/workspace/stage29_32_native_revalidation_supplement.md
   boundary: native_revalidation_supplement_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   next_action: open_new_stage_topic_if_requested
-stage33_adapter_readiness_map:
-  stage_id: 33_mechanism_discovery__stage10_32_adapter_readiness_map
-  status: reviewed_adapter_readiness_map_completed
-  current_run_id: run27A_stage10_32_adapter_readiness_map_v1
-  packet_id: stage33_run27A_stage10_32_adapter_readiness_map_v1
-  judgment: inconclusive_adapter_readiness_map_completed
-  adapter_candidate_count: 12
-  onnx_readiness: not_ready_for_new_onnx_artifact
-  onnx_artifacts_generated: false
-  boundary: adapter_readiness_map_only_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority_not_live_readiness
-  next_action: adapter_contract_probe_for_top_candidate_or_onnx_contrast_if_readiness_gap_closes

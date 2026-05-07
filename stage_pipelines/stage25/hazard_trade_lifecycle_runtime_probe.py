@@ -34,7 +34,6 @@ from foundation.control_plane.mt5_tier_balance_completion import (
     split_dates_from_frame,
 )
 from foundation.models.ebm_score_table import FIELDNAMES, load_ebm_score_table, score_ebm_table_probabilities
-import foundation.models.alpha_scout_support as scout_support
 from foundation.models.onnx_bridge import ordered_hash, sha256_file
 from foundation.models.xgboost_boosting import nonflat_threshold, split_decision_metrics
 from foundation.mt5 import runtime_support as mt5
@@ -134,7 +133,7 @@ def raw_hazard_risk(model_payload: Mapping[str, Any], frame: pd.DataFrame) -> np
     work = frame.sort_values("timestamp").reset_index(drop=True).copy()
     work["hazard_elapsed_bar"] = float(HAZARD_SENTINEL_ELAPSED_BAR)
     work["hazard_elapsed_frac"] = float(HAZARD_SENTINEL_ELAPSED_BAR) / float(MAX_HOLD_BARS)
-    x = scout_support.transform_features(work, model_payload["preprocess"])
+    x = scout.stage24_scout.transform_features(work, model_payload["preprocess"])
     return model_payload["model"].predict_proba(x)[:, 1].astype("float64", copy=False)
 
 

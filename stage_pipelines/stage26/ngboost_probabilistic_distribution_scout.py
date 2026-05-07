@@ -28,10 +28,11 @@ from foundation.control_plane.ledger import (
     upsert_csv_rows,
 )
 from foundation.models.baseline_training import LABEL_NAMES, LABEL_ORDER, validate_model_input_frame
-import foundation.models.alpha_scout_support as scout_support
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.models.xgboost_boosting import nonflat_threshold, probability_shape_metrics, split_decision_metrics
 from foundation.mt5 import runtime_support as mt5
+from stage_pipelines.stage23 import supervised_regime_scout as stage23_scout
+from stage_pipelines.stage24 import survival_time_to_event_scout as stage24_scout
 
 
 STAGE_ID = "26_model_family_challenge__ngboost_probabilistic_distribution_shape"
@@ -42,14 +43,14 @@ NEXT_RUN_ID = "run20B_ngboost_distribution_runtime_probe_v1"
 EXPLORATION_LABEL = "stage26_Model__NGBoostProbabilisticDistributionShape"
 MODEL_FAMILY = "ngboost_categorical_distribution"
 FEATURE_SET_ID = "feature_set_v2_mt5_price_proxy_ngboost_distribution_shape"
-LABEL_ID = scout_support.LABEL_ID
-SPLIT_CONTRACT = scout_support.SPLIT_CONTRACT
+LABEL_ID = stage23_scout.LABEL_ID
+SPLIT_CONTRACT = stage23_scout.SPLIT_CONTRACT
 THRESHOLD_QUANTILE = 0.80
 MAX_TRAIN_ROWS = 36000
 BOUNDARY = "ngboost_probabilistic_distribution_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
 JUDGMENT = "inconclusive_ngboost_probabilistic_distribution_scout_completed"
 
-ROOT = scout_support.ROOT
+ROOT = stage23_scout.ROOT
 STAGE_ROOT = ROOT / "stages" / STAGE_ID
 RUN_ROOT = STAGE_ROOT / "02_runs" / RUN_ID
 PACKET_ROOT = ROOT / "docs/agent_control/packets" / PACKET_ID
@@ -93,19 +94,19 @@ def utc_now() -> str:
 
 
 def rel(path: Path) -> str:
-    return scout_support.rel(path)
+    return stage23_scout.rel(path)
 
 
 def safe_float(value: Any, default: float = 0.0) -> float:
-    return scout_support.safe_float(value, default)
+    return stage23_scout.safe_float(value, default)
 
 
 def write_json(path: Path, payload: Any) -> None:
-    scout_support.write_json(path, payload)
+    stage23_scout.write_json(path, payload)
 
 
 def write_md(path: Path, text: str) -> None:
-    scout_support.write_md(path, text)
+    stage23_scout.write_md(path, text)
 
 
 def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, Any]]) -> None:
@@ -131,15 +132,15 @@ def ngboost_version() -> str:
 
 
 def load_context() -> dict[str, Any]:
-    return scout_support.load_context()
+    return stage23_scout.load_context()
 
 
 def core24_features() -> tuple[str, ...]:
-    return scout_support.core24_features()
+    return stage23_scout.core24_features()
 
 
 def volatility_session_features() -> tuple[str, ...]:
-    return scout_support.volatility_session_features()
+    return stage24_scout.volatility_session_features()
 
 
 def default_variants(full_feature_order: Sequence[str], tier_b_feature_order: Sequence[str]) -> list[NgboostVariantSpec]:
@@ -638,8 +639,8 @@ def build_summary(
         "selected_distribution_read": selected_distribution_read,
         "model_characteristic_strength": "ngboost_uncertainty_shape_visible_enough_for_runtime_probe",
         "artifacts": {
-            "model_input_path": rel(scout_support.MODEL_INPUT_PATH),
-            "feature_order_path": rel(scout_support.FEATURE_ORDER_PATH),
+            "model_input_path": rel(stage23_scout.MODEL_INPUT_PATH),
+            "feature_order_path": rel(stage23_scout.FEATURE_ORDER_PATH),
             "variant_results": dict(variant_artifacts),
             "model_artifacts": dict(model_artifacts),
             "prediction_artifacts": dict(prediction_artifacts),

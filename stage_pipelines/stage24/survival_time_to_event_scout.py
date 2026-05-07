@@ -24,9 +24,9 @@ from foundation.control_plane.ledger import (
     sha256_file_lf_normalized,
     upsert_csv_rows,
 )
-import foundation.models.alpha_scout_support as scout_support
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.mt5 import runtime_support as mt5
+from stage_pipelines.stage23 import supervised_regime_scout as stage23_scout
 
 
 STAGE_ID = "24_exit_model__survival_time_to_event_hold_shape"
@@ -37,13 +37,13 @@ NEXT_RUN_ID = "run18B_survival_time_to_event_runtime_probe_v1"
 EXPLORATION_LABEL = "stage24_Exit__SurvivalTimeToEventHoldShape"
 MODEL_FAMILY = "lifelines_survival_time_to_event_models"
 FEATURE_SET_ID = "feature_set_v2_mt5_price_proxy_survival_hold_shape"
-LABEL_ID = scout_support.LABEL_ID
-SPLIT_CONTRACT = scout_support.SPLIT_CONTRACT
+LABEL_ID = stage23_scout.LABEL_ID
+SPLIT_CONTRACT = stage23_scout.SPLIT_CONTRACT
 MAX_HORIZON_BARS = 12
 BOUNDARY = "survival_time_to_event_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
 JUDGMENT = "inconclusive_survival_time_to_event_hold_shape_scout_completed"
 
-ROOT = scout_support.ROOT
+ROOT = stage23_scout.ROOT
 STAGE_ROOT = ROOT / "stages" / STAGE_ID
 RUN_ROOT = STAGE_ROOT / "02_runs" / RUN_ID
 PACKET_ROOT = ROOT / "docs/agent_control/packets" / PACKET_ID
@@ -83,19 +83,19 @@ def utc_now() -> str:
 
 
 def rel(path: Path) -> str:
-    return scout_support.rel(path)
+    return stage23_scout.rel(path)
 
 
 def safe_float(value: Any, default: float = 0.0) -> float:
-    return scout_support.safe_float(value, default)
+    return stage23_scout.safe_float(value, default)
 
 
 def write_json(path: Path, payload: Any) -> None:
-    scout_support.write_json(path, payload)
+    stage23_scout.write_json(path, payload)
 
 
 def write_md(path: Path, text: str) -> None:
-    scout_support.write_md(path, text)
+    stage23_scout.write_md(path, text)
 
 
 def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, Any]]) -> None:
@@ -108,15 +108,15 @@ def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, An
 
 
 def save_frame(path: Path, frame: pd.DataFrame) -> dict[str, Any]:
-    return scout_support.save_frame(path, frame)
+    return stage23_scout.save_frame(path, frame)
 
 
 def load_context() -> dict[str, Any]:
-    return scout_support.load_context()
+    return stage23_scout.load_context()
 
 
 def core24_features() -> tuple[str, ...]:
-    return scout_support.core24_features()
+    return stage23_scout.core24_features()
 
 
 def volatility_session_features() -> tuple[str, ...]:

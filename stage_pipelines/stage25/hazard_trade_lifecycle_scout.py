@@ -23,9 +23,10 @@ from foundation.control_plane.ledger import (
     sha256_file_lf_normalized,
     upsert_csv_rows,
 )
-import foundation.models.alpha_scout_support as scout_support
 from foundation.models.onnx_bridge import ordered_hash
 from foundation.mt5 import runtime_support as mt5
+from stage_pipelines.stage23 import supervised_regime_scout as stage23_scout
+from stage_pipelines.stage24 import survival_time_to_event_scout as stage24_scout
 
 
 STAGE_ID = "25_exit_model__hazard_trade_lifecycle_risk"
@@ -36,13 +37,13 @@ NEXT_RUN_ID = "run19B_hazard_trade_lifecycle_runtime_probe_v1"
 EXPLORATION_LABEL = "stage25_Exit__HazardTradeLifecycleRisk"
 MODEL_FAMILY = "sklearn_discrete_time_logistic_hazard"
 FEATURE_SET_ID = "feature_set_v2_mt5_price_proxy_hazard_trade_lifecycle"
-LABEL_ID = scout_support.LABEL_ID
-SPLIT_CONTRACT = scout_support.SPLIT_CONTRACT
+LABEL_ID = stage23_scout.LABEL_ID
+SPLIT_CONTRACT = stage23_scout.SPLIT_CONTRACT
 MAX_HORIZON_BARS = 12
 BOUNDARY = "hazard_trade_lifecycle_structural_scout_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority"
 JUDGMENT = "inconclusive_hazard_trade_lifecycle_risk_scout_completed"
 
-ROOT = scout_support.ROOT
+ROOT = stage23_scout.ROOT
 STAGE_ROOT = ROOT / "stages" / STAGE_ID
 RUN_ROOT = STAGE_ROOT / "02_runs" / RUN_ID
 PACKET_ROOT = ROOT / "docs/agent_control/packets" / PACKET_ID
@@ -86,19 +87,19 @@ def utc_now() -> str:
 
 
 def rel(path: Path) -> str:
-    return scout_support.rel(path)
+    return stage23_scout.rel(path)
 
 
 def safe_float(value: Any, default: float = 0.0) -> float:
-    return scout_support.safe_float(value, default)
+    return stage23_scout.safe_float(value, default)
 
 
 def write_json(path: Path, payload: Any) -> None:
-    scout_support.write_json(path, payload)
+    stage23_scout.write_json(path, payload)
 
 
 def write_md(path: Path, text: str) -> None:
-    scout_support.write_md(path, text)
+    stage23_scout.write_md(path, text)
 
 
 def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, Any]]) -> None:
@@ -111,19 +112,19 @@ def write_csv(path: Path, columns: Sequence[str], rows: Sequence[Mapping[str, An
 
 
 def save_frame(path: Path, frame: pd.DataFrame) -> dict[str, Any]:
-    return scout_support.save_frame(path, frame)
+    return stage23_scout.save_frame(path, frame)
 
 
 def load_context() -> dict[str, Any]:
-    return scout_support.load_context()
+    return stage23_scout.load_context()
 
 
 def core24_features() -> tuple[str, ...]:
-    return scout_support.core24_features()
+    return stage23_scout.core24_features()
 
 
 def volatility_session_features() -> tuple[str, ...]:
-    return scout_support.volatility_session_features()
+    return stage24_scout.volatility_session_features()
 
 
 def default_variants(tier_b_feature_order: Sequence[str]) -> list[HazardVariantSpec]:
@@ -227,7 +228,7 @@ def event_duration_arrays(frame: pd.DataFrame, spec: HazardVariantSpec, base_thr
 
 
 def build_hazard_frame(frame: pd.DataFrame, spec: HazardVariantSpec, base_threshold: float) -> pd.DataFrame:
-    work = scout_support.add_future_return_path(frame, MAX_HORIZON_BARS)
+    work = stage24_scout.add_future_return_path(frame, MAX_HORIZON_BARS)
     durations, events, usable = event_duration_arrays(work, spec, base_threshold)
     row_mask = usable & (durations >= 1)
     base = work.loc[row_mask].copy().reset_index(drop=True)
@@ -268,7 +269,7 @@ def fit_hazard_model(frame: pd.DataFrame, spec: HazardVariantSpec) -> tuple[Logi
     event_rate = float(train["hazard_event"].mean())
     if event_rate <= 0.001 or event_rate >= 0.90:
         raise ValueError(f"Training hazard event rate outside useful scout range: {event_rate}")
-    preprocess = scout_support.fit_preprocessor(train, spec.feature_names())
+    preprocess = stage24_scout.fit_preprocessor(train, spec.feature_names())
     train_fit = train
     if len(train_fit) > 220_000:
         positives = train_fit.loc[train_fit["hazard_event"].eq(1)]
@@ -276,7 +277,7 @@ def fit_hazard_model(frame: pd.DataFrame, spec: HazardVariantSpec) -> tuple[Logi
         neg_n = max(1, 220_000 - len(positives))
         negatives = negatives.sample(n=min(len(negatives), neg_n), random_state=int(spec.random_state))
         train_fit = pd.concat([positives, negatives], ignore_index=True).sample(frac=1.0, random_state=int(spec.random_state))
-    x = scout_support.transform_features(train_fit, preprocess)
+    x = stage24_scout.transform_features(train_fit, preprocess)
     y = train_fit["hazard_event"].astype("int8").to_numpy()
     model = LogisticRegression(
         C=float(spec.c_value),
@@ -299,7 +300,7 @@ def fit_hazard_model(frame: pd.DataFrame, spec: HazardVariantSpec) -> tuple[Logi
 
 
 def prediction_frame(model: LogisticRegression, preprocess: Mapping[str, Any], frame: pd.DataFrame, spec: HazardVariantSpec) -> pd.DataFrame:
-    x = scout_support.transform_features(frame, preprocess)
+    x = stage24_scout.transform_features(frame, preprocess)
     risk = model.predict_proba(x)[:, 1]
     columns = [
         "timestamp",
@@ -946,7 +947,7 @@ Stage25(25단계) `{RUN_ID}`를 Python structural scout(파이썬 구조 탐색)
 
 효과(effect, 효과): 다음 재개는 Stage25(25단계) hazard runtime handoff(위험률 런타임 인계) 준비에서 시작한다.
 """
-    plan = scout_support.replace_markdown_section(plan, "## Latest Stop Resume State", resume)
+    plan = stage24_scout.replace_markdown_section(plan, "## Latest Stop Resume State", resume) if hasattr(stage24_scout, "replace_markdown_section") else plan
     if "## Latest Stop Resume State" in plan and resume not in plan:
         start = plan.index("## Latest Stop Resume State")
         next_section = plan.find("\n## ", start + 1)
