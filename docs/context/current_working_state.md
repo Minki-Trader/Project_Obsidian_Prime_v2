@@ -1,4 +1,16 @@
-﻿## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
+﻿## Latest Stage33 Tier A Markov Long Permission Source(최신 33단계 티어 A 마르코프 롱 허용 원천)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `33_regime_mechanism__tier_a_markov_long_permission_source`
+- current run(현재 실행): `run27A_tier_a_markov_long_permission_source_scout_v1`
+- latest packet(최신 묶음): `stage33_tier_a_markov_long_permission_open_v1`
+- next action(다음 행동): `run27A_tier_a_markov_long_permission_source_scout_v1` structural attribution scout(구조 귀속 탐침)
+
+효과(effect, 효과): Stage33(33단계)는 Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)의 source(원천)를 확인하기 위해 열린다. 아직 run result(실행 결과), KPI(핵심 성과 지표), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 
