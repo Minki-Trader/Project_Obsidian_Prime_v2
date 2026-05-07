@@ -12,6 +12,8 @@
 - `current_truth_anchor`:
 - `legacy_reference_if_relevant`:
 - `non_scope`:
+- `named_pattern_policy`:
+- `candidate_role_boundary`:
 - `first_probe`:
 - `required_evidence`:
 - `invalid_conditions`:

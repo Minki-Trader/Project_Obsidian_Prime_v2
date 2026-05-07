@@ -62,6 +62,6 @@ stage topic(단계 주제), baseline candidate(기준선 후보), promotion cand
 
 효과(effect, 효과)는 2024.01~2024.12 같은 backtest period(백테스트 기간)를 3개월 단위로 끊어, localized gain(국소 이익), localized failure(국소 실패), tiny sample(작은 표본), split instability(분할 불안정)를 놓치지 않게 하는 것이다.
 
-time-segment read(시간 구간 판독)를 만들 수 없으면 생략하지 않는다. `missing_required(필수 누락)`, `out_of_scope_by_claim(주장 범위 밖)`, `blocked(차단)`, `trade_list_missing(거래 목록 누락)` 같은 n/a reason(해당 없음 사유)을 적는다.
+time-segment read(시간 구간 판독)를 만들 수 없으면 생략하지 않는다. KPI field(KPI 항목)의 `n/a_reason(해당 없음 사유)`은 `docs/agent_control/n_a_reason_registry.yaml`에 등록된 값만 쓴다. 예: `trade_list_missing(거래 목록 누락)`, `source_artifact_missing(원천 산출물 누락)`, `telemetry_missing(텔레메트리 누락)`, `blocked_missing_required_input(필수 입력 누락 차단)`. `missing_required(필수 누락)`, `out_of_scope_by_claim(주장 범위 밖)`, `blocked(차단)`는 n/a reason(해당 없음 사유)이 아니라 row/view status(행/보기 상태)나 judgment(판정)로 적는다.
 
 이 규칙은 기존 KPI system(기존 KPI 체계)을 대체하지 않는다. `docs/agent_control/kpi_source_authority.yaml`의 source authority(원천 권위)와 `obsidian-performance-attribution(성과 귀속 스킬)`의 segment check(구간 확인)를 같은 근거 체계로 사용한다.

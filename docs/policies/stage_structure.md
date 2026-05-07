@@ -30,7 +30,7 @@
 
 사용자가 새 stage topic(단계 주제)을 던지면, stage folder(단계 폴더)를 만들기 전에 `docs/templates/stage_open_draft.md` 형식의 stage_open_draft(단계 개방 초안)를 먼저 작성한다.
 
-stage_open_draft(단계 개방 초안)는 최소한 user_topic(사용자 주제), stage_question(단계 질문), non_scope(범위 밖), first_probe(첫 탐침), required_evidence(필수 근거), invalid_conditions(무효 조건), claim_boundary(주장 경계)를 포함한다.
+stage_open_draft(단계 개방 초안)는 최소한 user_topic(사용자 주제), stage_question(단계 질문), non_scope(범위 밖), named_pattern_policy(이름 붙은 패턴 규칙), candidate_role_boundary(후보 역할 경계), first_probe(첫 탐침), required_evidence(필수 근거), invalid_conditions(무효 조건), claim_boundary(주장 경계)를 포함한다.
 
 효과(effect, 효과)는 topic(주제)을 받자마자 current truth(현재 진실), run registry(실행 등록부), code(코드), stage folder(단계 폴더)를 전진시키지 않고, 먼저 이번 stage(단계)가 답할 질문을 고정하게 하는 것이다.
 
