@@ -1,4 +1,20 @@
-﻿## Latest Stage34 RUN28B Segment Stress(최신 34단계 28B 실행 구간 압박)
+﻿## Latest Stage34 RUN28C Entry-Time Hold Proxy(최신 34단계 28C 실행 진입 시점 보유 대리 신호)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+- latest packet(최신 묶음): `stage34_run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+- next action(다음 행동): `run28D_tier_a_markov_entry_proxy_runtime_probe_v1`
+
+Stage34(34단계) `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`를 reviewed entry-time proxy probe(검토된 진입 시점 대리 신호 탐침)로 완료했다.
+
+결과(result, 결과): `keep_late_or_vol_mid`가 primary candidate(1차 후보)다. validation PF(검증 수익 팩터) `2.224467`, OOS PF(표본외 수익 팩터) `2.132004`지만 sample margin(표본 여유)이 얇다.
+
+효과(effect, 효과): 이 후보는 run28D(28D 실행) MT5 runtime probe(MT5 런타임 탐침)로 넘길 수 있는 단서다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage34 RUN28B Segment Stress(최신 34단계 28B 실행 구간 압박)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 
