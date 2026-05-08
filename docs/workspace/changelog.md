@@ -1,4 +1,11 @@
-﻿## 2026-05-08 Stage34 RUN28C Entry-Time Hold Proxy(34단계 28C 실행 진입 시점 보유 대리 신호)
+﻿## 2026-05-08 Stage34 RUN28D Frequency Floor(34단계 28D 거래 수 하한)
+
+- completed(완료): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1` frequency floor probe(거래 수 하한 탐침)
+- source(원천): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_entry_proxy_frequency_floor_probe_completed`
+- effect(효과): `keep_late_or_vol_mid`는 thin modifier clue(얇은 수정 단서)로 낮추고, `exclude_vol_high_or_adx_20_25`는 broader secondary probe candidate(더 넓은 보조 탐침 후보)로 보존했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28C Entry-Time Hold Proxy(34단계 28C 실행 진입 시점 보유 대리 신호)
 
 - completed(완료): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1` entry-time hold proxy probe(진입 시점 보유 대리 신호 탐침)
 - source(원천): `run28A_tier_a_markov_long_permission_attribution_scout_v1` and `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`

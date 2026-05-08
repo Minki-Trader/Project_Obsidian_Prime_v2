@@ -1,4 +1,20 @@
-﻿## Latest Stage34 RUN28C Entry-Time Hold Proxy(최신 34단계 28C 실행 진입 시점 보유 대리 신호)
+﻿## Latest Stage34 RUN28D Frequency Floor(최신 34단계 28D 실행 거래 수 하한)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `codex/run28c-local`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`
+- latest packet(최신 묶음): `stage34_run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`
+- next action(다음 행동): `run28E_tier_a_markov_broader_entry_proxy_probe_v1`
+
+Stage34(34단계) `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`를 reviewed frequency floor probe(검토된 거래 수 하한 탐침)로 완료했다.
+
+결과(result, 결과): `keep_late_or_vol_mid`는 validation/OOS trades(검증/표본외 거래 수) `40` / `26`라 얇다. `exclude_vol_high_or_adx_20_25`는 validation/OOS trades(검증/표본외 거래 수) `59` / `32`로 더 넓지만 PF(수익 팩터)는 낮다.
+
+효과(effect, 효과): main seed(메인 씨앗)는 교체하지 않는다. run28C(28C 실행)의 1차 후보는 thin modifier clue(얇은 수정 단서)로 보존하고, 다음은 더 넓은 보조 후보를 찔러본다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage34 RUN28C Entry-Time Hold Proxy(최신 34단계 28C 실행 진입 시점 보유 대리 신호)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 

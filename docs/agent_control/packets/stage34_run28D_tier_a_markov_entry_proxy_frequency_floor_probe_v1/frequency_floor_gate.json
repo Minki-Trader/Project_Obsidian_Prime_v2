@@ -1,0 +1,61 @@
+{
+  "contract": {
+    "max_top_month_trade_share": 0.35,
+    "min_months_with_trades": {
+      "oos": 4,
+      "validation": 6
+    },
+    "min_trade_count": {
+      "oos": 30,
+      "validation": 50
+    },
+    "min_trades_per_calendar_month": {
+      "oos": 4.0,
+      "validation": 5.0
+    }
+  },
+  "frequency_floor_read": {
+    "aggressive_diagnostic": {
+      "classification": "frequency_floor_fail_thin_sample",
+      "decision": "diagnostic_only_sample_too_thin",
+      "oos_trades": 16,
+      "reason": "profit factor is strongest, but both splits fail the trade-count floor",
+      "rule_id": "keep_vol_mid_or_late_not_adx_20_25",
+      "validation_trades": 31
+    },
+    "attribution_confidence": "medium_low",
+    "baseline_reference": {
+      "decision": "preserve_reference_seed",
+      "oos_pf": 1.224214,
+      "oos_trades": 51,
+      "rule_id": "baseline_all_trades",
+      "validation_pf": 1.771465,
+      "validation_trades": 77
+    },
+    "broader_secondary_candidate": {
+      "classification": "frequency_ok_candidate",
+      "decision": "broader_secondary_probe_candidate",
+      "oos_pf": 1.541089,
+      "oos_trades": 32,
+      "rule_id": "exclude_vol_high_or_adx_20_25",
+      "validation_pf": 2.081755,
+      "validation_trades": 59
+    },
+    "headline": "primary_entry_proxy_pf_is_good_but_frequency_floor_fails",
+    "main_seed_decision": "keep_preserved_tier_a_markov_seed_not_run28c_primary",
+    "next_probe": "run28E_tier_a_markov_broader_entry_proxy_probe_v1",
+    "primary_run28c_candidate": {
+      "classification": "frequency_floor_fail_thin_sample",
+      "decision": "downgrade_to_thin_modifier_clue",
+      "oos_frequency_flags": "trade_count_below_floor;calendar_frequency_below_floor",
+      "oos_pf": 2.132004,
+      "oos_trades": 26,
+      "rule_id": "keep_late_or_vol_mid",
+      "validation_frequency_flags": "trade_count_below_floor;calendar_frequency_below_floor",
+      "validation_pf": 2.224467,
+      "validation_trades": 40
+    }
+  },
+  "packet_id": "stage34_run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1",
+  "status": "passed"
+}
