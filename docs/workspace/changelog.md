@@ -1,4 +1,11 @@
-﻿## 2026-05-08 Stage34 RUN28D Frequency Floor(34단계 28D 거래 수 하한)
+﻿## 2026-05-08 Stage34 RUN28E Broader Entry Proxy(34단계 28E 넓은 진입 대리)
+
+- completed(완료): `run28E_tier_a_markov_broader_entry_proxy_probe_v1` monthly robustness plus MT5 runtime probe(월별 버팀 + MT5 런타임 탐침)
+- source(원천): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`, `run22B_markov_regression_state_runtime_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_broader_entry_proxy_probe_completed`
+- effect(효과): `exclude_vol_high_or_adx_20_25`는 dependency clue(의존성 단서)로 보존한다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28D Frequency Floor(34단계 28D 거래 수 하한)
 
 - completed(완료): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1` frequency floor probe(거래 수 하한 탐침)
 - source(원천): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
