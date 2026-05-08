@@ -1,4 +1,20 @@
-﻿## Latest Stage34 RUN28E Broader Entry Proxy(최신 34단계 28E 넓은 진입 대리)
+﻿## Latest Stage34 RUN28F Vol/ADX Dependency(최신 34단계 28F 변동성/ADX 의존성)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `codex/run28c-local`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`
+- latest packet(최신 묶음): `stage34_run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`
+- next action(다음 행동): `run28G_tier_a_markov_hold_management_runtime_probe_v1`
+
+Stage34(34단계) `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`를 vol/adx component plus hold diagnostics(변동성/ADX 구성요소 + 보유 진단)로 완료했다.
+
+결과(result, 결과): Python(파이썬) OOS(표본외) best net(최고 순손익)은 `exclude_vol_high`이고, 긴 hold duration(보유 기간)은 validation/OOS(검증/표본외) 평균 `377.271186` / `391.057143` bars(봉)다.
+
+효과(effect, 효과): 후보는 보존하지만 main seed(메인 씨앗), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. 다음은 hold management runtime probe(보유 관리 런타임 탐침)다.
+
+## Latest Stage34 RUN28E Broader Entry Proxy(최신 34단계 28E 넓은 진입 대리)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 

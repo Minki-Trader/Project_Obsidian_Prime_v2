@@ -1,4 +1,11 @@
-﻿## 2026-05-08 Stage34 RUN28E Broader Entry Proxy(34단계 28E 넓은 진입 대리)
+﻿## 2026-05-08 Stage34 RUN28F Vol/ADX Dependency(34단계 28F 변동성/ADX 의존성)
+
+- completed(완료): `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1` vol/adx component plus hold diagnostics(변동성/ADX 구성요소 + 보유 진단)
+- source(원천): `run28E_tier_a_markov_broader_entry_proxy_probe_v1`, `run22B_markov_regression_state_runtime_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_vol_adx_dependency_probe_completed`
+- effect(효과): `exclude_vol_high_or_adx_20_25`는 보존하지만, hold management(보유 관리) 문제가 섞여 있어 다음 탐침으로 넘긴다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28E Broader Entry Proxy(34단계 28E 넓은 진입 대리)
 
 - completed(완료): `run28E_tier_a_markov_broader_entry_proxy_probe_v1` monthly robustness plus MT5 runtime probe(월별 버팀 + MT5 런타임 탐침)
 - source(원천): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`, `run22B_markov_regression_state_runtime_probe_v1`
