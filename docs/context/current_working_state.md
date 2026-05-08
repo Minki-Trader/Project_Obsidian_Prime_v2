@@ -1,13 +1,132 @@
-﻿## Latest Stage33 Evidence-Driven Adapter Role Map(최신 33단계 근거 기반 어댑터 역할 지도)
+﻿## Latest Stage34 Closeout(최신 34단계 마감)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
 
 - active branch(활성 브랜치): `main(메인)`
-- active stage(활성 단계): `33_adapter_mechanism__evidence_driven_role_map`
-- current run(현재 실행): `run27A_evidence_driven_adapter_role_map_v1`
-- status(상태): `blocked(차단)`
-- adapter candidates(어댑터 후보): `10`
-- evidence rows(근거 행): `3847`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `stage34_tier_a_markov_long_permission_attribution_closeout_v1`
+- latest packet(최신 묶음): `stage34_tier_a_markov_long_permission_attribution_closeout_v1`
+- next action(다음 행동): `none_stage35_not_opened(없음, 35단계 미개방)`
 
-효과(effect, 효과): Stage10-32(10-32단계) 근거에서 역할(role, 역할)과 mechanism class(메커니즘 분류)를 도출했지만, fixed runtime input contract(고정 런타임 입력 계약)이 없어 ONNX(온닉스)나 MT5(`MetaTrader 5`, 메타트레이더5) 권위 주장은 하지 않는다.
+Stage34(34단계) `34_regime_mechanism__tier_a_markov_long_permission_attribution`를 reviewed closed(검토 후 닫힘)로 마감했다.
+
+결과(result, 결과): `vol_high/adx_20_25` interaction(고변동/ADX 20-25 상호작용), 2025-10(2025년 10월) 의존, 낮은 OOS(표본외) 거래 수, 긴 hold duration(보유 기간)을 보존 단서로 남겼다.
+
+효과(effect, 효과): main seed(메인 씨앗), baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않고 Stage34(34단계)를 닫는다. Stage35(35단계)는 열지 않는다.
+
+## Latest Stage34 RUN28F Vol/ADX Dependency(최신 34단계 28F 변동성/ADX 의존성)
+
+Stage34(34단계) `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`를 vol/adx component plus hold diagnostics(변동성/ADX 구성요소 + 보유 진단)로 완료했다.
+
+결과(result, 결과): Python(파이썬) OOS(표본외) best net(최고 순손익)은 `exclude_vol_high`이고, 긴 hold duration(보유 기간)은 validation/OOS(검증/표본외) 평균 `377.271186` / `391.057143` bars(봉)다.
+
+효과(effect, 효과): 후보는 보존하지만 main seed(메인 씨앗), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. 이 단서는 Stage34(34단계) closeout(마감)에 흡수됐다.
+
+## Latest Stage34 RUN28E Broader Entry Proxy(최신 34단계 28E 넓은 진입 대리)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `codex/run28c-local`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28E_tier_a_markov_broader_entry_proxy_probe_v1`
+- latest packet(최신 묶음): `stage34_run28E_tier_a_markov_broader_entry_proxy_probe_v1`
+- next action(다음 행동): `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`
+
+Stage34(34단계) `run28E_tier_a_markov_broader_entry_proxy_probe_v1`를 monthly robustness plus MT5 runtime probe(월별 버팀 + MT5 런타임 탐침)로 완료했다.
+
+결과(result, 결과): `exclude_vol_high_or_adx_20_25`는 월 하나를 빼도 OOS(표본외) PF(수익 팩터)가 1 아래로 깨지지는 않았다. 다만 2025-10(2025년 10월)을 빼면 OOS(표본외) net(순손익)이 `4.91`까지 얇다. MT5(메타트레이더5) probe(탐침)는 validation/OOS(검증/표본외) trades(거래 수) `59` / `35`를 기록했다.
+
+효과(effect, 효과): 후보는 보존하지만 main seed(메인 씨앗), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. 다음은 `vol_high`와 `adx_20_25`를 분리해 의존성 원인을 본다.
+
+## Latest Stage34 RUN28D Frequency Floor(최신 34단계 28D 실행 거래 수 하한)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `codex/run28c-local`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`
+- latest packet(최신 묶음): `stage34_run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`
+- next action(다음 행동): `run28E_tier_a_markov_broader_entry_proxy_probe_v1`
+
+Stage34(34단계) `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`를 reviewed frequency floor probe(검토된 거래 수 하한 탐침)로 완료했다.
+
+결과(result, 결과): `keep_late_or_vol_mid`는 validation/OOS trades(검증/표본외 거래 수) `40` / `26`라 얇다. `exclude_vol_high_or_adx_20_25`는 validation/OOS trades(검증/표본외 거래 수) `59` / `32`로 더 넓지만 PF(수익 팩터)는 낮다.
+
+효과(effect, 효과): main seed(메인 씨앗)는 교체하지 않는다. run28C(28C 실행)의 1차 후보는 thin modifier clue(얇은 수정 단서)로 보존하고, 다음은 더 넓은 보조 후보를 찔러본다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage34 RUN28C Entry-Time Hold Proxy(최신 34단계 28C 실행 진입 시점 보유 대리 신호)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+- latest packet(최신 묶음): `stage34_run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+- next action(다음 행동): `run28D_tier_a_markov_entry_proxy_runtime_probe_v1`
+
+Stage34(34단계) `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`를 reviewed entry-time proxy probe(검토된 진입 시점 대리 신호 탐침)로 완료했다.
+
+결과(result, 결과): `keep_late_or_vol_mid`가 primary candidate(1차 후보)다. validation PF(검증 수익 팩터) `2.224467`, OOS PF(표본외 수익 팩터) `2.132004`지만 sample margin(표본 여유)이 얇다.
+
+효과(effect, 효과): 이 후보는 run28D(28D 실행) MT5 runtime probe(MT5 런타임 탐침)로 넘길 수 있는 단서다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage34 RUN28B Segment Stress(최신 34단계 28B 실행 구간 압박)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- latest packet(최신 묶음): `stage34_run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- next action(다음 행동): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+
+Stage34(34단계) `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`를 reviewed segment stress probe(검토된 구간 압박 탐침)로 완료했다.
+
+결과(result, 결과): 가장 강한 단서는 hold shape(보유 형태)였다. `exclude_short_hold_0_12`는 validation/OOS PF(검증/표본외 수익 팩터)를 같이 올렸고, `keep_hold_gt_96_only`는 긴 보유가 수익 대부분을 들고 있음을 보였다. 다만 hold bucket(보유 버킷)은 ex-post information(사후 정보)이라 직접 runtime rule(런타임 규칙)이 아니다.
+
+효과(effect, 효과): Tier A Markov long permission(티어 A 마르코프 롱 허용)은 보존하지만, 다음 행동(next action, 다음 행동)은 entry-time hold proxy(진입 시점 보유 대리 신호)를 찾는 `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- latest packet(최신 묶음): `stage34_run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- next action(다음 행동): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+
+Stage34(34단계) `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`를 reviewed segment stress probe(검토된 구간 압박 탐침)로 완료했다.
+
+결과(result, 결과): 가장 강한 단서는 hold shape(보유 형태)였다. `exclude_short_hold_0_12`는 validation/OOS PF(검증/표본외 수익 팩터)를 같이 올렸고, `keep_hold_gt_96_only`는 긴 보유가 수익 대부분을 들고 있음을 보였다. 다만 hold bucket(보유 버킷)은 ex-post information(사후 정보)이라 직접 runtime rule(런타임 규칙)이 아니다.
+
+효과(effect, 효과): Tier A Markov long permission(티어 A 마르코프 롱 허용)은 보존하지만, 다음 행동(next action, 다음 행동)은 entry-time hold proxy(진입 시점 보유 대리 신호)를 찾는 `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage34 RUN28A Attribution(최신 34단계 28A 실행 귀속)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
+- current run(현재 실행): `run28A_tier_a_markov_long_permission_attribution_scout_v1`
+- latest packet(최신 묶음): `stage34_run28A_tier_a_markov_long_permission_attribution_scout_v1`
+- next action(다음 행동): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+
+Stage34(34단계) `run28A_tier_a_markov_long_permission_attribution_scout_v1`를 reviewed attribution scout(검토된 귀속 탐침)로 완료했다.
+
+결과(result, 결과): Tier A(티어 A) validation/OOS(검증/표본외) long-only(롱 전용) PF(수익 팩터)는 각각 `1.771465` / `1.224214`다. state/confidence/entropy(상태/신뢰/엔트로피)는 모든 Tier A 체결 거래에서 이미 high gate(높은 게이트)였고, profit(수익)은 time segment(시간 구간)와 hold shape(보유 형태)에서 갈렸다.
+
+효과(effect, 효과): Stage34(34단계)는 Markov long permission(마르코프 롱 허용)을 보존 단서로 남기되, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. 다음 행동(next action, 다음 행동)은 `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`다.
+
+## Latest Stage33 Tier A Markov Long Permission Source(최신 33단계 티어 A 마르코프 롱 허용 원천)
+
+## Current Re-entry Snapshot(현재 재진입 스냅샷)
+
+- active branch(활성 브랜치): `main(메인)`
+- active stage(활성 단계): `33_regime_mechanism__tier_a_markov_long_permission_source`
+- current run(현재 실행): `run27A_tier_a_markov_long_permission_source_scout_v1`
+- latest packet(최신 묶음): `stage33_tier_a_markov_long_permission_open_v1`
+- next action(다음 행동): `run27A_tier_a_markov_long_permission_source_scout_v1` structural attribution scout(구조 귀속 탐침)
+
+효과(effect, 효과): Stage33(33단계)는 Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)의 source(원천)를 확인하기 위해 열린다. 아직 run result(실행 결과), KPI(핵심 성과 지표), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 
 ## Latest Stage29-32 Native Revalidation Supplement(최신 29-32단계 원본 재검증 보강)
 

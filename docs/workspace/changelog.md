@@ -1,4 +1,55 @@
-﻿# Workspace Changelog
+﻿## 2026-05-08 Stage34 Closeout(34단계 마감)
+
+- completed(완료): `stage34_tier_a_markov_long_permission_attribution_closeout_v1`
+- source(원천): `run28A`-`run28F` Stage34(34단계) packets(묶음)
+- judgment(판정): `closed_inconclusive_tier_a_markov_long_permission_attribution_exhausted`
+- effect(효과): Stage34(34단계)는 보존 단서만 남기고 닫았다. Stage35(35단계)는 열지 않았고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28F Vol/ADX Dependency(34단계 28F 변동성/ADX 의존성)
+
+- completed(완료): `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1` vol/adx component plus hold diagnostics(변동성/ADX 구성요소 + 보유 진단)
+- source(원천): `run28E_tier_a_markov_broader_entry_proxy_probe_v1`, `run22B_markov_regression_state_runtime_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_vol_adx_dependency_probe_completed`
+- effect(효과): `exclude_vol_high_or_adx_20_25`는 보존하지만, hold management(보유 관리) 문제가 섞여 있어 다음 탐침으로 넘긴다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28E Broader Entry Proxy(34단계 28E 넓은 진입 대리)
+
+- completed(완료): `run28E_tier_a_markov_broader_entry_proxy_probe_v1` monthly robustness plus MT5 runtime probe(월별 버팀 + MT5 런타임 탐침)
+- source(원천): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1`, `run22B_markov_regression_state_runtime_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_broader_entry_proxy_probe_completed`
+- effect(효과): `exclude_vol_high_or_adx_20_25`는 dependency clue(의존성 단서)로 보존한다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28D Frequency Floor(34단계 28D 거래 수 하한)
+
+- completed(완료): `run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1` frequency floor probe(거래 수 하한 탐침)
+- source(원천): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_entry_proxy_frequency_floor_probe_completed`
+- effect(효과): `keep_late_or_vol_mid`는 thin modifier clue(얇은 수정 단서)로 낮추고, `exclude_vol_high_or_adx_20_25`는 broader secondary probe candidate(더 넓은 보조 탐침 후보)로 보존했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28C Entry-Time Hold Proxy(34단계 28C 실행 진입 시점 보유 대리 신호)
+
+- completed(완료): `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1` entry-time hold proxy probe(진입 시점 보유 대리 신호 탐침)
+- source(원천): `run28A_tier_a_markov_long_permission_attribution_scout_v1` and `run28B_tier_a_markov_long_permission_segment_stress_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_entry_time_proxy_probe_completed`
+- effect(효과): `keep_late_or_vol_mid`를 MT5 runtime probe(MT5 런타임 탐침) 후보로 남겼지만, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28B Segment Stress(34단계 28B 실행 구간 압박)
+
+- completed(완료): `run28B_tier_a_markov_long_permission_segment_stress_probe_v1` segment stress probe(구간 압박 탐침)
+- source(원천): `run28A_tier_a_markov_long_permission_attribution_scout_v1` and `run22B_markov_regression_state_runtime_probe_v1`
+- judgment(판정): `inconclusive_tier_a_markov_segment_stress_probe_completed`
+- effect(효과): hold shape(보유 형태)이 가장 강한 profit factor(수익 팩터) 단서지만 ex-post(사후)라 직접 규칙은 아니다. next action(다음 행동)은 `run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1`다.
+
+## 2026-05-08 Stage34 RUN28A Attribution(34단계 28A 실행 귀속)
+
+- completed(완료): `run28A_tier_a_markov_long_permission_attribution_scout_v1` attribution scout(귀속 탐침)
+- source(원천): `run22B_markov_regression_state_runtime_probe_v1` reused MT5/runtime artifacts(재사용 MT5/런타임 산출물)
+- judgment(판정): `inconclusive_tier_a_markov_long_permission_attribution_scout_completed`
+- effect(효과): Tier A Markov long permission(티어 A 마르코프 롱 허용)은 high-confidence state gate(고신뢰 상태 게이트) 안에서 time/hold concentration(시간/보유 집중)으로 읽고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08
+
+- 2026-05-08: Stage33(33단계) `33_regime_mechanism__tier_a_markov_long_permission_source` opened(개방). 효과(effect, 효과): `Tier A Markov state long permission filter(티어 A 마르코프 상태 롱 허용 필터)`의 source(원천)를 structural attribution scout(구조 귀속 탐침)로 확인하는 단계만 열고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
 
 ## 2026-05-05
 

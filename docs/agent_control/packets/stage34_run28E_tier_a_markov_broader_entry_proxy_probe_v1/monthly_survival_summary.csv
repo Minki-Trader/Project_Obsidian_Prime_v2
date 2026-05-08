@@ -1,0 +1,13 @@
+rule_id,split,full_trade_count,full_net_profit,full_profit_factor,active_month_count,negative_month_count,worst_month,worst_month_net_profit,top_trade_month,top_trade_month_share,top_positive_month,top_positive_month_net_share,min_leave_one_out_trade_count,min_leave_one_out_net_profit,min_leave_one_out_net_profit_month_omitted,min_leave_one_out_profit_factor,min_leave_one_out_profit_factor_month_omitted,monthly_survival_status,monthly_survival_flags
+baseline_all_trades,oos,51,62.65,1.224214,7,3,2026-03,-52.18,2025-10,0.235294,2025-10,0.5,39.0,-12.7,2025-10,0.944933,2025-10,fail,leave_one_month_breaks_profitability;oos_leave_one_net_margin_thin
+baseline_all_trades,validation,77,208.01,1.771465,9,3,2025-08,-18.47,2025-07,0.194805,2025-09,0.320336,62.0,129.14,2025-09,1.542195,2025-09,pass,none
+exclude_adx_20_25,oos,37,49.16,1.280866,7,4,2025-12,-19.44,2025-10,0.297297,2025-10,0.66555,26.0,-24.35,2025-10,0.807113,2025-10,fail,leave_one_month_breaks_profitability;oos_leave_one_net_margin_thin;top_positive_month_dependency
+exclude_adx_20_25,validation,64,245.95,2.259087,9,1,2025-02,-5.07,2025-07,0.21875,2025-09,0.313083,50.0,167.36,2025-09,1.920015,2025-09,pass,none
+exclude_vol_high,oos,44,96.34,1.403637,7,3,2026-03,-35.02,2025-10,0.272727,2025-10,0.5,32.0,20.99,2025-10,1.110538,2025-10,pass,none
+exclude_vol_high,validation,72,173.37,1.642992,8,3,2025-08,-18.47,2025-06,0.194444,2025-09,0.372784,58.0,94.5,2025-09,1.396759,2025-09,pass,none
+exclude_vol_high_or_adx_20_25,oos,32,78.42,1.541089,7,4,2026-03,-11.68,2025-10,0.34375,2025-10,0.66555,21.0,4.91,2025-10,1.051071,2025-10,warn,oos_leave_one_net_margin_thin;top_positive_month_dependency
+exclude_vol_high_or_adx_20_25,validation,59,211.31,2.081755,8,1,2025-02,-5.07,2025-06,0.220339,2025-09,0.363204,46.0,132.72,2025-09,1.729592,2025-09,pass,none
+keep_late_or_vol_mid,oos,26,152.73,2.132004,7,2,2026-03,-35.02,2025-10,0.192308,2025-10,0.573165,21.0,41.45,2025-10,1.307219,2025-10,pass,none
+keep_late_or_vol_mid,validation,40,178.76,2.224467,8,3,2025-06,-22.32,2025-06,0.2,2025-01,0.296042,32.0,113.53,2025-01,1.868814,2025-05,pass,none
+keep_vol_mid_or_late_not_adx_20_25,oos,16,128.54,3.534806,6,2,2026-03,-11.68,2025-10,0.25,2025-10,0.736771,12.0,19.1,2025-10,1.376652,2025-10,warn,top_positive_month_dependency
+keep_vol_mid_or_late_not_adx_20_25,validation,31,224.68,3.828298,8,2,2025-06,-17.57,2025-06,0.225806,2025-09,0.283268,24.0,155.52,2025-09,2.992058,2025-09,pass,none

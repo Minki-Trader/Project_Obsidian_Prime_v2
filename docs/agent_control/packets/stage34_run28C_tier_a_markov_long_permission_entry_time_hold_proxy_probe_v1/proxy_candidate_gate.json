@@ -1,0 +1,34 @@
+{
+  "packet_id": "stage34_run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1",
+  "proxy_read": {
+    "aggressive_diagnostic": {
+      "classification": "sample_thin_diagnostic_only",
+      "oos_trades": 16,
+      "reason": "PF is strongest but sample is too thin for direct next step(수익 팩터는 가장 강하지만 표본이 너무 얇음)",
+      "rule_id": "keep_vol_mid_or_late_not_adx_20_25",
+      "validation_trades": 31
+    },
+    "candidate_boundary": "candidate_for_run28D_runtime_probe_not_runtime_authority",
+    "headline": "entry_time_proxy_exists_but_needs_mt5_runtime_probe",
+    "next_probe": "run28D_tier_a_markov_entry_proxy_runtime_probe_v1",
+    "primary_candidate": {
+      "classification": "entry_proxy_candidate_thin_sample",
+      "oos_pf": 2.132004,
+      "oos_trades": 26,
+      "reason": "best balanced PF lift using only session and volatility known at entry(진입 시점 세션과 변동성만으로 균형 잡힌 수익 팩터 상승)",
+      "rule_id": "keep_late_or_vol_mid",
+      "validation_pf": 2.224467,
+      "validation_trades": 40
+    },
+    "stable_secondary_candidate": {
+      "classification": "entry_proxy_candidate_modest",
+      "oos_pf": 1.541089,
+      "oos_trades": 32,
+      "reason": "more sample headroom but weaker PF lift(표본 여유는 더 크지만 수익 팩터 상승은 약함)",
+      "rule_id": "exclude_vol_high_or_adx_20_25",
+      "validation_pf": 2.081755,
+      "validation_trades": 59
+    }
+  },
+  "status": "passed"
+}

@@ -1,0 +1,53 @@
+{
+  "monthly_candidate_read": {
+    "interpretation": "후보는 월 하나를 빼도 validation/OOS(검증/표본외) 전체 순손익과 PF(수익 팩터)가 무너지지는 않지만, OOS(표본외)는 2025-10(2025년 10월) 의존도가 커서 곧바로 main seed(메인 씨앗)로 올리기보다 다음 분해가 필요하다.",
+    "oos": {
+      "active_month_count": 7,
+      "full_net_profit": 78.42,
+      "full_profit_factor": 1.541089,
+      "full_trade_count": 32,
+      "min_leave_one_out_net_profit": 4.91,
+      "min_leave_one_out_net_profit_month_omitted": "2025-10",
+      "min_leave_one_out_profit_factor": 1.051071,
+      "min_leave_one_out_profit_factor_month_omitted": "2025-10",
+      "min_leave_one_out_trade_count": 21.0,
+      "monthly_survival_flags": "oos_leave_one_net_margin_thin;top_positive_month_dependency",
+      "monthly_survival_status": "warn",
+      "negative_month_count": 4,
+      "rule_id": "exclude_vol_high_or_adx_20_25",
+      "split": "oos",
+      "top_positive_month": "2025-10",
+      "top_positive_month_net_share": 0.66555,
+      "top_trade_month": "2025-10",
+      "top_trade_month_share": 0.34375,
+      "worst_month": "2026-03",
+      "worst_month_net_profit": -11.68
+    },
+    "rule_id": "exclude_vol_high_or_adx_20_25",
+    "status": "monthly_survivor_with_dependency",
+    "validation": {
+      "active_month_count": 8,
+      "full_net_profit": 211.31,
+      "full_profit_factor": 2.081755,
+      "full_trade_count": 59,
+      "min_leave_one_out_net_profit": 132.72,
+      "min_leave_one_out_net_profit_month_omitted": "2025-09",
+      "min_leave_one_out_profit_factor": 1.729592,
+      "min_leave_one_out_profit_factor_month_omitted": "2025-09",
+      "min_leave_one_out_trade_count": 46.0,
+      "monthly_survival_flags": "none",
+      "monthly_survival_status": "pass",
+      "negative_month_count": 1,
+      "rule_id": "exclude_vol_high_or_adx_20_25",
+      "split": "validation",
+      "top_positive_month": "2025-09",
+      "top_positive_month_net_share": 0.363204,
+      "top_trade_month": "2025-06",
+      "top_trade_month_share": 0.220339,
+      "worst_month": "2025-02",
+      "worst_month_net_profit": -5.07
+    }
+  },
+  "packet_id": "stage34_run28E_tier_a_markov_broader_entry_proxy_probe_v1",
+  "status": "passed"
+}

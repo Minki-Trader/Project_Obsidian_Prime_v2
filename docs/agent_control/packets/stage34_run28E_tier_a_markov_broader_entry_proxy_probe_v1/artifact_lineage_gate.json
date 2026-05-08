@@ -1,0 +1,51 @@
+{
+  "packet_id": "stage34_run28E_tier_a_markov_broader_entry_proxy_probe_v1",
+  "runtime_input_features": {
+    "oos": {
+      "filter_summary": {
+        "adx_20_25_removed_rows": 123,
+        "both_removed_rows": 45,
+        "filtered_rows": 308,
+        "kept_rows": 322,
+        "missing_context_rows_kept": 0,
+        "source_rows": 630,
+        "vol_high_removed_rows": 230
+      },
+      "path": "stages/34_regime_mechanism__tier_a_markov_long_permission_attribution/02_runs/run28E_tier_a_markov_broader_entry_proxy_probe_v1/features/tier_a_oos_exclude_vol_high_or_adx_20_25_features.csv",
+      "rows": 322,
+      "sha256": "524303bea0d38d4398383dc92310e543c5d476918077edff85db98d0d497ce8d",
+      "source_common_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage28/run22B_markov_regression_state_runtime_probe_v1/features/tier_a_oos_markov_state_features.csv",
+      "tester_window_from_date": "2025.10.01",
+      "tester_window_to_date": "2026.04.14"
+    },
+    "validation_is": {
+      "filter_summary": {
+        "adx_20_25_removed_rows": 216,
+        "both_removed_rows": 79,
+        "filtered_rows": 494,
+        "kept_rows": 472,
+        "missing_context_rows_kept": 0,
+        "source_rows": 966,
+        "vol_high_removed_rows": 357
+      },
+      "path": "stages/34_regime_mechanism__tier_a_markov_long_permission_attribution/02_runs/run28E_tier_a_markov_broader_entry_proxy_probe_v1/features/tier_a_validation_is_exclude_vol_high_or_adx_20_25_features.csv",
+      "rows": 472,
+      "sha256": "d81391198b0bea78420bcc3a63f0835aebb4e64ddf50595bf51105849bbd3795",
+      "source_common_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage28/run22B_markov_regression_state_runtime_probe_v1/features/tier_a_validation_is_markov_state_features.csv",
+      "tester_window_from_date": "2025.01.02",
+      "tester_window_to_date": "2025.10.01"
+    }
+  },
+  "runtime_input_model": {
+    "path": "stages/34_regime_mechanism__tier_a_markov_long_permission_attribution/02_runs/run28E_tier_a_markov_broader_entry_proxy_probe_v1/models/tier_a_markov_state_score_table.csv",
+    "sha256": "537c24926edaa41734657603fd7d8ff9ac9042d59a0f1b6db3e3bd4f84635ef9",
+    "source_common_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage28/run22B_markov_regression_state_runtime_probe_v1/models/tier_a_markov_state_score_table.csv"
+  },
+  "source_packets": [
+    "stage28_run22B_markov_regression_state_runtime_probe_v1",
+    "stage34_run28A_tier_a_markov_long_permission_attribution_scout_v1",
+    "stage34_run28C_tier_a_markov_long_permission_entry_time_hold_proxy_probe_v1",
+    "stage34_run28D_tier_a_markov_entry_proxy_frequency_floor_probe_v1"
+  ],
+  "status": "passed"
+}
