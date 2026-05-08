@@ -1,4 +1,11 @@
-﻿## 2026-05-08 Stage34 RUN28F Vol/ADX Dependency(34단계 28F 변동성/ADX 의존성)
+﻿## 2026-05-08 Stage34 Closeout(34단계 마감)
+
+- completed(완료): `stage34_tier_a_markov_long_permission_attribution_closeout_v1`
+- source(원천): `run28A`-`run28F` Stage34(34단계) packets(묶음)
+- judgment(판정): `closed_inconclusive_tier_a_markov_long_permission_attribution_exhausted`
+- effect(효과): Stage34(34단계)는 보존 단서만 남기고 닫았다. Stage35(35단계)는 열지 않았고, baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-08 Stage34 RUN28F Vol/ADX Dependency(34단계 28F 변동성/ADX 의존성)
 
 - completed(완료): `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1` vol/adx component plus hold diagnostics(변동성/ADX 구성요소 + 보유 진단)
 - source(원천): `run28E_tier_a_markov_broader_entry_proxy_probe_v1`, `run22B_markov_regression_state_runtime_probe_v1`

@@ -1,0 +1,26 @@
+{
+  "packet_id": "stage34_tier_a_markov_long_permission_attribution_closeout_v1",
+  "source_inputs": [
+    "docs/agent_control/packets/stage34_run28F_tier_a_markov_vol_adx_component_dependency_probe_v1/aggregate_summary.json",
+    "stages/34_regime_mechanism__tier_a_markov_long_permission_attribution/03_reviews/run28F_tier_a_markov_vol_adx_dependency_packet.md",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/34_regime_mechanism__tier_a_markov_long_permission_attribution/03_reviews/stage_run_ledger.csv"
+  ],
+  "producer": "manual_stage_closeout_review",
+  "consumer": [
+    "docs/workspace/workspace_state.yaml",
+    "docs/context/current_working_state.md",
+    "docs/registers/run_registry.csv"
+  ],
+  "artifact_paths": [
+    "stages/34_regime_mechanism__tier_a_markov_long_permission_attribution/03_reviews/stage34_closeout_packet.md",
+    "docs/decisions/2026-05-08_stage34_tier_a_markov_long_permission_closeout.md"
+  ],
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/34_regime_mechanism__tier_a_markov_long_permission_attribution/03_reviews/stage_run_ledger.csv"
+  ],
+  "availability": "tracked",
+  "lineage_judgment": "connected_with_boundary"
+}

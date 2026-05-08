@@ -1,18 +1,26 @@
-﻿## Latest Stage34 RUN28F Vol/ADX Dependency(최신 34단계 28F 변동성/ADX 의존성)
+﻿## Latest Stage34 Closeout(최신 34단계 마감)
 
 ## Current Re-entry Snapshot(현재 재진입 스냅샷)
 
-- active branch(활성 브랜치): `codex/run28c-local`
+- active branch(활성 브랜치): `main(메인)`
 - active stage(활성 단계): `34_regime_mechanism__tier_a_markov_long_permission_attribution`
-- current run(현재 실행): `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`
-- latest packet(최신 묶음): `stage34_run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`
-- next action(다음 행동): `run28G_tier_a_markov_hold_management_runtime_probe_v1`
+- current run(현재 실행): `stage34_tier_a_markov_long_permission_attribution_closeout_v1`
+- latest packet(최신 묶음): `stage34_tier_a_markov_long_permission_attribution_closeout_v1`
+- next action(다음 행동): `none_stage35_not_opened(없음, 35단계 미개방)`
+
+Stage34(34단계) `34_regime_mechanism__tier_a_markov_long_permission_attribution`를 reviewed closed(검토 후 닫힘)로 마감했다.
+
+결과(result, 결과): `vol_high/adx_20_25` interaction(고변동/ADX 20-25 상호작용), 2025-10(2025년 10월) 의존, 낮은 OOS(표본외) 거래 수, 긴 hold duration(보유 기간)을 보존 단서로 남겼다.
+
+효과(effect, 효과): main seed(메인 씨앗), baseline(기준선), promotion(승격), runtime authority(런타임 권위)를 만들지 않고 Stage34(34단계)를 닫는다. Stage35(35단계)는 열지 않는다.
+
+## Latest Stage34 RUN28F Vol/ADX Dependency(최신 34단계 28F 변동성/ADX 의존성)
 
 Stage34(34단계) `run28F_tier_a_markov_vol_adx_component_dependency_probe_v1`를 vol/adx component plus hold diagnostics(변동성/ADX 구성요소 + 보유 진단)로 완료했다.
 
 결과(result, 결과): Python(파이썬) OOS(표본외) best net(최고 순손익)은 `exclude_vol_high`이고, 긴 hold duration(보유 기간)은 validation/OOS(검증/표본외) 평균 `377.271186` / `391.057143` bars(봉)다.
 
-효과(effect, 효과): 후보는 보존하지만 main seed(메인 씨앗), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. 다음은 hold management runtime probe(보유 관리 런타임 탐침)다.
+효과(effect, 효과): 후보는 보존하지만 main seed(메인 씨앗), baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다. 이 단서는 Stage34(34단계) closeout(마감)에 흡수됐다.
 
 ## Latest Stage34 RUN28E Broader Entry Proxy(최신 34단계 28E 넓은 진입 대리)
 
