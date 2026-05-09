@@ -1,4 +1,19 @@
-﻿## Latest AUTO-CAMPAIGN-01 Stage40 Volatility Squeeze Expansion(최신 AUTO-CAMPAIGN-01 40단계 변동성 수축/확장)
+﻿## Latest Stage40 Candle Morphology Signal Quality(최신 40단계 캔들 형태 신호 품질)
+
+Stage40(40단계) `40_feature_structure__candle_morphology_signal_quality_scout`는 legacy Stage32(레거시 32단계) candle morphology(캔들 형태)를 idea-only(아이디어 전용) seed(씨앗)로만 가져와 run34A(실행34A) MT5 runtime probe(런타임 탐침)를 수행했다. legacy 34D/29N(레거시 34D/29N), baseline(기준선), promotion(승격), operating reference(운영 기준)는 상속하지 않는다.
+
+- run_id(실행 ID): `run34A_candle_morphology_signal_quality_broad_mt5_probe_v1`
+- judgment(판정): `reviewed_completed_negative_memory_runtime_probe_only`
+- MT5 evidence(MT5 근거): `present`
+- MT5 attempts(MT5 시도): `34`
+- MT5 KPI rows(MT5 KPI 행): `102`
+- micro_search_gate(미세 탐색 게이트): `failed`
+- promotion_candidate_gate(승격 후보 게이트): `failed`
+- boundary(경계): `runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference`
+
+효과(effect, 효과): 현재 진실(current truth, 현재 진실)은 Stage40(40단계)을 candle morphology(캔들 형태) runtime_probe_only(런타임 탐침 전용)로만 기록한다.
+
+## Latest AUTO-CAMPAIGN-01 Stage40 Volatility Squeeze Expansion(최신 AUTO-CAMPAIGN-01 40단계 변동성 수축/확장)
 
 Campaign(캠페인) `AUTO-CAMPAIGN-01-INDEPENDENT-ALPHA-TOPIC-SCOUT`는 independent_topic_scout(독립 주제 탐색)로 Stage40(40단계) `40_feature_interaction__volatility_squeeze_expansion_scout`를 선택했다. 선택 이유는 volatility squeeze/expansion(변동성 수축/확장) interaction(상호작용)이 Stage38 permission/abstention(허용/기권) 또는 Stage39 exit overlay(청산 덮개)의 직접 후속이 아니기 때문이다.
 

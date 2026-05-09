@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "mt5_command_count": 34,
+  "commands": [
+    {
+      "command": "python -m foundation.pipelines.run_stage40_candle_morphology_signal_quality_scout --timeout-seconds 900",
+      "result": "passed; MT5 Strategy Tester produced 34 HTML reports and 102 imported KPI rows",
+      "failures_or_blockers": ""
+    },
+    {
+      "command": "python -m py_compile foundation\\features\\candle_morphology.py stage_pipelines\\stage40\\candle_morphology_signal_quality_scout.py foundation\\pipelines\\run_stage40_candle_morphology_signal_quality_scout.py tests\\test_stage40_candle_morphology.py",
+      "result": "passed",
+      "failures_or_blockers": ""
+    },
+    {
+      "command": "python -m pytest -q tests\\test_stage40_candle_morphology.py",
+      "result": "passed; 5 tests passed",
+      "failures_or_blockers": ""
+    },
+    {
+      "command": "python -m pytest -q tests\\test_stage40_volatility_squeeze_expansion.py tests\\test_stage38_permission_abstention_overlap.py tests\\test_stage39_exit_risk_overlay.py tests\\test_mt5_runtime_artifacts.py tests\\test_mt5_kpi_recorder.py tests\\test_mt5_strategy_report.py tests\\test_mt5_missing_report_executor.py tests\\test_control_plane_alpha_run_ledgers.py tests\\test_agent_control_gates.py tests\\test_agent_control_contracts.py tests\\test_stage_pipeline_imports.py tests\\test_stage06_runtime_parity.py",
+      "result": "passed; 74 tests passed and 227 subtests passed",
+      "failures_or_blockers": ""
+    }
+  ]
+}

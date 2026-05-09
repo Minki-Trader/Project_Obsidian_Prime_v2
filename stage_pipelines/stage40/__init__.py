@@ -1,1 +1,1 @@
-"""Stage40 volatility squeeze/expansion scout adapter."""
+"""Stage40 scout adapters."""
