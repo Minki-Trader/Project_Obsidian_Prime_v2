@@ -1,4 +1,19 @@
-﻿## Latest Stage40 Candle Morphology Signal Quality(최신 40단계 캔들 형태 신호 품질)
+﻿## Latest Stage41 Directional Asymmetric Label Horizon(최신 41단계 방향 비대칭 라벨 수평선)
+
+Stage41(41단계) `41_label_horizon__directional_asymmetric_return_target_rebuild`는 label/horizon redesign(라벨/수평선 재설계) runtime probe(런타임 탐침)로 열렸다. Stage38/39/40(38/39/40단계)은 negative memory(부정 기억)로만 사용했고, permission/abstention(허용/기권), exit overlay(청산 오버레이), candle morphology(캔들 형태) 재시도는 하지 않았다.
+
+- run_id(실행 ID): `run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1`
+- judgment(판정): `reviewed_completed_negative_memory_runtime_probe_only`
+- MT5 evidence(MT5 근거): `present`
+- MT5 attempts(MT5 시도): `34`
+- MT5 KPI rows(MT5 KPI 행): `102`
+- micro_search_gate(미세 탐색 게이트): `failed`
+- promotion_candidate_gate(승격 후보 게이트): `failed`
+- boundary(경계): `runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference`
+
+Effect(효과): current truth(현재 진실)는 Stage41(41단계)을 runtime_probe_only(런타임 탐침 전용) label/horizon(라벨/수평선) 연구로만 기록한다.
+
+## Latest Stage40 Candle Morphology Signal Quality(최신 40단계 캔들 형태 신호 품질)
 
 Stage40(40단계) `40_feature_structure__candle_morphology_signal_quality_scout`는 legacy Stage32(레거시 32단계) candle morphology(캔들 형태)를 idea-only(아이디어 전용) seed(씨앗)로만 가져와 run34A(실행34A) MT5 runtime probe(런타임 탐침)를 수행했다. legacy 34D/29N(레거시 34D/29N), baseline(기준선), promotion(승격), operating reference(운영 기준)는 상속하지 않는다.
 

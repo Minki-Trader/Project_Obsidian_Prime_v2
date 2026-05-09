@@ -1,0 +1,2599 @@
+[
+  {
+    "candidate_id": "c01_current_label_reference",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2968,
+          "long": 2357,
+          "short": 2259
+        },
+        "class_shares": {
+          "flat": 0.39135021097046413,
+          "long": 0.3107858649789029,
+          "short": 0.2978639240506329
+        },
+        "max_class_share": 0.39135021097046413,
+        "min_nonzero_class_count": 2259,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 9643,
+          "long": 10515,
+          "short": 9064
+        },
+        "class_shares": {
+          "flat": 0.3299911025939361,
+          "long": 0.35983163370063653,
+          "short": 0.3101772637054274
+        },
+        "max_class_share": 0.35983163370063653,
+        "min_nonzero_class_count": 9064,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3631,
+          "long": 3293,
+          "short": 2920
+        },
+        "class_shares": {
+          "flat": 0.36885412433969933,
+          "long": 0.33451848841934173,
+          "short": 0.29662738724095894
+        },
+        "max_class_share": 0.36885412433969933,
+        "min_nonzero_class_count": 2920,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c01_current_label_reference",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c01_current_label_reference",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c01_current_label_reference",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c01_current_label_reference_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.3968292729426129,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "ce825e94f1342dcd6889e8523116b7260a778cf12340cf8feed30dbaee94af99",
+      "train_class_counts": {
+        "flat": 9643,
+        "long": 10515,
+        "short": 9064
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c01_current_label_reference",
+      "decision_threshold": 0.44,
+      "description": "current v2 label/reference behavior using fwd12 symmetric threshold",
+      "expected_trade_count_effect": "reference",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "current_label_reference",
+      "label_id": "stage41_c01_current_label_reference",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "low",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c02_long_horizon_longer_short_same",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2560,
+          "long": 2342,
+          "short": 2038
+        },
+        "class_shares": {
+          "flat": 0.3688760806916426,
+          "long": 0.33746397694524494,
+          "short": 0.2936599423631124
+        },
+        "max_class_share": 0.3688760806916426,
+        "min_nonzero_class_count": 2038,
+        "rows": 6940
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 8109,
+          "long": 10285,
+          "short": 8219
+        },
+        "class_shares": {
+          "flat": 0.3047007101792357,
+          "long": 0.3864652613384436,
+          "short": 0.30883402848232067
+        },
+        "max_class_share": 0.3864652613384436,
+        "min_nonzero_class_count": 8109,
+        "rows": 26613
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3197,
+          "long": 3225,
+          "short": 2592
+        },
+        "class_shares": {
+          "flat": 0.354670512536055,
+          "long": 0.35777679165742177,
+          "short": 0.2875526958065232
+        },
+        "max_class_share": 0.35777679165742177,
+        "min_nonzero_class_count": 2592,
+        "rows": 9014
+      }
+    },
+    "label_id": "stage41_c02_long18_short12",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 18,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c02_long_horizon_longer_short_same",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c02_long18_short12",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c02_long_horizon_longer_short_same_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.3878168206739079,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "37cb06173d505404f5c606c3ceef0364e9e881718e66b638a46d0573dbfbf889",
+      "train_class_counts": {
+        "flat": 8109,
+        "long": 10285,
+        "short": 8219
+      },
+      "train_rows": 26613
+    },
+    "spec": {
+      "candidate_id": "c02_long_horizon_longer_short_same",
+      "decision_threshold": 0.44,
+      "description": "long horizon longer while short horizon stays at current horizon",
+      "expected_trade_count_effect": "slightly lower",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "long_horizon_longer",
+      "label_id": "stage41_c02_long18_short12",
+      "long_horizon_bars": 18,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c03_short_horizon_shorter_long_same",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3261,
+          "long": 2323,
+          "short": 2000
+        },
+        "class_shares": {
+          "flat": 0.4299841772151899,
+          "long": 0.30630274261603374,
+          "short": 0.26371308016877637
+        },
+        "max_class_share": 0.4299841772151899,
+        "min_nonzero_class_count": 2000,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 10565,
+          "long": 10411,
+          "short": 8246
+        },
+        "class_shares": {
+          "flat": 0.3615426733283143,
+          "long": 0.35627267127506673,
+          "short": 0.28218465539661897
+        },
+        "max_class_share": 0.3615426733283143,
+        "min_nonzero_class_count": 8246,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 4028,
+          "long": 3235,
+          "short": 2581
+        },
+        "class_shares": {
+          "flat": 0.40918325883787077,
+          "long": 0.32862657456318567,
+          "short": 0.2621901665989435
+        },
+        "max_class_share": 0.40918325883787077,
+        "min_nonzero_class_count": 2581,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c03_long12_short8",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c03_short_horizon_shorter_long_same",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c03_long12_short8",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c03_short_horizon_shorter_long_same_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.3937919012848122,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "6d72e227935d0b403de6860a10ee93a54bbcc93bc7c347f66e7715fb94d90655",
+      "train_class_counts": {
+        "flat": 10565,
+        "long": 10411,
+        "short": 8246
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c03_short_horizon_shorter_long_same",
+      "decision_threshold": 0.44,
+      "description": "short horizon shorter while long horizon stays at current horizon",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "short_horizon_shorter",
+      "label_id": "stage41_c03_long12_short8",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 8,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c04_asymmetric_long_slow_short_fast",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2836,
+          "long": 2321,
+          "short": 1783
+        },
+        "class_shares": {
+          "flat": 0.4086455331412104,
+          "long": 0.3344380403458213,
+          "short": 0.2569164265129683
+        },
+        "max_class_share": 0.4086455331412104,
+        "min_nonzero_class_count": 1783,
+        "rows": 6940
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 9058,
+          "long": 10182,
+          "short": 7373
+        },
+        "class_shares": {
+          "flat": 0.34035997444857774,
+          "long": 0.3825949723819186,
+          "short": 0.2770450531695036
+        },
+        "max_class_share": 0.3825949723819186,
+        "min_nonzero_class_count": 7373,
+        "rows": 26613
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3563,
+          "long": 3200,
+          "short": 2251
+        },
+        "class_shares": {
+          "flat": 0.39527401819392055,
+          "long": 0.35500332815620145,
+          "short": 0.24972265364987797
+        },
+        "max_class_share": 0.39527401819392055,
+        "min_nonzero_class_count": 2251,
+        "rows": 9014
+      }
+    },
+    "label_id": "stage41_c04_long18_short8",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 18,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c04_asymmetric_long_slow_short_fast",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c04_long18_short8",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c04_asymmetric_long_slow_short_fast_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.38580329871258073,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "49b3c826d02e6c0e54711421b4da9d7b023cd28917ff60fdeac437a942837726",
+      "train_class_counts": {
+        "flat": 9058,
+        "long": 10182,
+        "short": 7373
+      },
+      "train_rows": 26613
+    },
+    "spec": {
+      "candidate_id": "c04_asymmetric_long_slow_short_fast",
+      "decision_threshold": 0.44,
+      "description": "long opportunities get slower horizon and short opportunities get faster horizon",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "asymmetric_long_slow_short_fast",
+      "label_id": "stage41_c04_long18_short8",
+      "long_horizon_bars": 18,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 8,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c05_asymmetric_long_fast_short_slow",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2988,
+          "long": 1812,
+          "short": 2140
+        },
+        "class_shares": {
+          "flat": 0.43054755043227666,
+          "long": 0.2610951008645533,
+          "short": 0.30835734870317005
+        },
+        "max_class_share": 0.43054755043227666,
+        "min_nonzero_class_count": 1812,
+        "rows": 6940
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 9737,
+          "long": 8350,
+          "short": 8526
+        },
+        "class_shares": {
+          "flat": 0.3658738210648931,
+          "long": 0.3137564348250855,
+          "short": 0.3203697441100214
+        },
+        "max_class_share": 0.3658738210648931,
+        "min_nonzero_class_count": 8350,
+        "rows": 26613
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3587,
+          "long": 2609,
+          "short": 2818
+        },
+        "class_shares": {
+          "flat": 0.3979365431550921,
+          "long": 0.289438650987353,
+          "short": 0.3126248058575549
+        },
+        "max_class_share": 0.3979365431550921,
+        "min_nonzero_class_count": 2609,
+        "rows": 9014
+      }
+    },
+    "label_id": "stage41_c05_long8_short18",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 18,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c05_asymmetric_long_fast_short_slow",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c05_long8_short18",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c05_asymmetric_long_fast_short_slow_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.3909417515467585,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "11c3a592b86e1f99cf34c50b4a372d24519ff3a66b1238eb78dfa8dc7889f4e3",
+      "train_class_counts": {
+        "flat": 9737,
+        "long": 8350,
+        "short": 8526
+      },
+      "train_rows": 26613
+    },
+    "spec": {
+      "candidate_id": "c05_asymmetric_long_fast_short_slow",
+      "decision_threshold": 0.44,
+      "description": "long opportunities get faster horizon and short opportunities get slower horizon",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "asymmetric_long_fast_short_slow",
+      "label_id": "stage41_c05_long8_short18",
+      "long_horizon_bars": 8,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 18,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c06_wider_flat_band",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3767,
+          "long": 1897,
+          "short": 1920
+        },
+        "class_shares": {
+          "flat": 0.4967035864978903,
+          "long": 0.2501318565400844,
+          "short": 0.25316455696202533
+        },
+        "max_class_share": 0.4967035864978903,
+        "min_nonzero_class_count": 1897,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 12545,
+          "long": 8902,
+          "short": 7775
+        },
+        "class_shares": {
+          "flat": 0.4292998425843543,
+          "long": 0.30463349531175143,
+          "short": 0.26606666210389435
+        },
+        "max_class_share": 0.4292998425843543,
+        "min_nonzero_class_count": 7775,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 4687,
+          "long": 2691,
+          "short": 2466
+        },
+        "class_shares": {
+          "flat": 0.47612759041040226,
+          "long": 0.2733644859813084,
+          "short": 0.25050792360828933
+        },
+        "max_class_share": 0.47612759041040226,
+        "min_nonzero_class_count": 2466,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c06_wider_flat_band",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c06_wider_flat_band",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c06_wider_flat_band",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c06_wider_flat_band_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.40534580776444296,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "1ba38483a9ed603e57583c35ca383774fe2e4414027898a255cdc432400e7a77",
+      "train_class_counts": {
+        "flat": 12545,
+        "long": 8902,
+        "short": 7775
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c06_wider_flat_band",
+      "decision_threshold": 0.44,
+      "description": "wider flat band with current horizon",
+      "expected_trade_count_effect": "lower",
+      "flat_band_rule": "wider_flat_band_1_35x",
+      "label_family": "flat_band_width",
+      "label_id": "stage41_c06_wider_flat_band",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.35,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "low",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.35,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c07_narrower_flat_band",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2319,
+          "long": 2719,
+          "short": 2546
+        },
+        "class_shares": {
+          "flat": 0.3057753164556962,
+          "long": 0.35851793248945146,
+          "short": 0.3357067510548523
+        },
+        "max_class_share": 0.35851793248945146,
+        "min_nonzero_class_count": 2319,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 7265,
+          "long": 11814,
+          "short": 10143
+        },
+        "class_shares": {
+          "flat": 0.248614057901581,
+          "long": 0.4042844432277052,
+          "short": 0.34710149887071384
+        },
+        "max_class_share": 0.4042844432277052,
+        "min_nonzero_class_count": 7265,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2816,
+          "long": 3732,
+          "short": 3296
+        },
+        "class_shares": {
+          "flat": 0.28606257618854125,
+          "long": 0.37911418122714347,
+          "short": 0.33482324258431534
+        },
+        "max_class_share": 0.37911418122714347,
+        "min_nonzero_class_count": 2816,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c07_narrower_flat_band",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c07_narrower_flat_band",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c07_narrower_flat_band",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c07_narrower_flat_band_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.38972890597162335,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "01f1655301e5080b180fbea3d47894ae718d7e75d4237a3a147656cad528b1e6",
+      "train_class_counts": {
+        "flat": 7265,
+        "long": 11814,
+        "short": 10143
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c07_narrower_flat_band",
+      "decision_threshold": 0.44,
+      "description": "narrower flat band with current horizon",
+      "expected_trade_count_effect": "higher",
+      "flat_band_rule": "narrower_flat_band_0_75x",
+      "label_family": "flat_band_width",
+      "label_id": "stage41_c07_narrower_flat_band",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 0.75,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 0.75,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c08_asymmetric_flat_band",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2986,
+          "long": 2159,
+          "short": 2439
+        },
+        "class_shares": {
+          "flat": 0.39372362869198313,
+          "long": 0.2846782700421941,
+          "short": 0.3215981012658228
+        },
+        "max_class_share": 0.39372362869198313,
+        "min_nonzero_class_count": 2159,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 9737,
+          "long": 9809,
+          "short": 9676
+        },
+        "class_shares": {
+          "flat": 0.33320785709397027,
+          "long": 0.3356717541578263,
+          "short": 0.33112038874820343
+        },
+        "max_class_share": 0.3356717541578263,
+        "min_nonzero_class_count": 9676,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3681,
+          "long": 3032,
+          "short": 3131
+        },
+        "class_shares": {
+          "flat": 0.37393336042259245,
+          "long": 0.30800487606663957,
+          "short": 0.318061763510768
+        },
+        "max_class_share": 0.37393336042259245,
+        "min_nonzero_class_count": 3032,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c08_asymmetric_flat_band",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c08_asymmetric_flat_band",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c08_asymmetric_flat_band",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c08_asymmetric_flat_band_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.3971548379870769,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "cb590fe51ba60abe17d2befcd8ee7962c0c89f1d2628b214b52c5cccc1df3c2f",
+      "train_class_counts": {
+        "flat": 9737,
+        "long": 9809,
+        "short": 9676
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c08_asymmetric_flat_band",
+      "decision_threshold": 0.44,
+      "description": "directional thresholds create an asymmetric flat definition",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "long_wider_short_narrower",
+      "label_family": "asymmetric_flat_band",
+      "label_id": "stage41_c08_asymmetric_flat_band",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.15,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 0.85,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c09_volatility_normalized_return_label",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2950,
+          "long": 2371,
+          "short": 2263
+        },
+        "class_shares": {
+          "flat": 0.38897679324894513,
+          "long": 0.3126318565400844,
+          "short": 0.29839135021097046
+        },
+        "max_class_share": 0.38897679324894513,
+        "min_nonzero_class_count": 2263,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 10172,
+          "long": 10298,
+          "short": 8752
+        },
+        "class_shares": {
+          "flat": 0.34809390185476696,
+          "long": 0.35240572171651496,
+          "short": 0.2995003764287181
+        },
+        "max_class_share": 0.35240572171651496,
+        "min_nonzero_class_count": 8752,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3624,
+          "long": 3298,
+          "short": 2922
+        },
+        "class_shares": {
+          "flat": 0.3681430312880943,
+          "long": 0.33502641202763106,
+          "short": 0.29683055668427466
+        },
+        "max_class_share": 0.3681430312880943,
+        "min_nonzero_class_count": 2922,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c09_vol_normalized",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c09_volatility_normalized_return_label",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c09_vol_normalized",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c09_volatility_normalized_return_label_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.37493476982616347,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "06f6ce40d5ce5a63362b95146a0101c81de08782abcd77e4f09b307afca814d7",
+      "train_class_counts": {
+        "flat": 10172,
+        "long": 10298,
+        "short": 8752
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c09_volatility_normalized_return_label",
+      "decision_threshold": 0.44,
+      "description": "return thresholds scaled by trailing realized volatility",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "volatility_normalized_return",
+      "label_id": "stage41_c09_vol_normalized",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "volatility_scaled_base_threshold",
+      "volatility_normalization": true
+    }
+  },
+  {
+    "candidate_id": "c10_session_adjusted_label",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3081,
+          "long": 2292,
+          "short": 2211
+        },
+        "class_shares": {
+          "flat": 0.40625,
+          "long": 0.3022151898734177,
+          "short": 0.2915348101265823
+        },
+        "max_class_share": 0.40625,
+        "min_nonzero_class_count": 2211,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 10040,
+          "long": 10309,
+          "short": 8873
+        },
+        "class_shares": {
+          "flat": 0.34357675723769765,
+          "long": 0.3527821504346041,
+          "short": 0.3036410923276983
+        },
+        "max_class_share": 0.3527821504346041,
+        "min_nonzero_class_count": 8873,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3746,
+          "long": 3238,
+          "short": 2860
+        },
+        "class_shares": {
+          "flat": 0.3805363673303535,
+          "long": 0.3289313287281593,
+          "short": 0.2905323039414872
+        },
+        "max_class_share": 0.3805363673303535,
+        "min_nonzero_class_count": 2860,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c10_session_adjusted",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c10_session_adjusted_label",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c10_session_adjusted",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c10_session_adjusted_label_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.40005878839696374,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "77e8e1b426a53ee22849d7a0874f2ea32f09d497fbed16c7d47a2c8d994032b5",
+      "train_class_counts": {
+        "flat": 10040,
+        "long": 10309,
+        "short": 8873
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c10_session_adjusted_label",
+      "decision_threshold": 0.44,
+      "description": "thresholds adjusted by cash-session location",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "session_adjusted_label",
+      "label_id": "stage41_c10_session_adjusted",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": true,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "session_adjusted_base_threshold",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c11_direction_specific_threshold_label",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 4749,
+          "long": 1371,
+          "short": 1464
+        },
+        "class_shares": {
+          "flat": 0.6261867088607594,
+          "long": 0.1807753164556962,
+          "short": 0.1930379746835443
+        },
+        "max_class_share": 0.6261867088607594,
+        "min_nonzero_class_count": 1371,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 16677,
+          "long": 6719,
+          "short": 5826
+        },
+        "class_shares": {
+          "flat": 0.5707001574156457,
+          "long": 0.22992950516733968,
+          "short": 0.19937033741701457
+        },
+        "max_class_share": 0.5707001574156457,
+        "min_nonzero_class_count": 5826,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 5960,
+          "long": 2004,
+          "short": 1880
+        },
+        "class_shares": {
+          "flat": 0.6054449410808614,
+          "long": 0.20357578220235675,
+          "short": 0.1909792767167818
+        },
+        "max_class_share": 0.6054449410808614,
+        "min_nonzero_class_count": 1880,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c11_direction_quantile_threshold",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c11_direction_specific_threshold_label",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c11_direction_quantile_threshold",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c11_direction_specific_threshold_label_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.41921104795713865,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "9264877e0305f00331bafb4284c2aa83dea4d9eec753dd94cbc24754d166ea03",
+      "train_class_counts": {
+        "flat": 16677,
+        "long": 6719,
+        "short": 5826
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c11_direction_specific_threshold_label",
+      "decision_threshold": 0.44,
+      "description": "long and short thresholds derived from train-side directional quantiles",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "direction_specific_threshold",
+      "label_id": "stage41_c11_direction_quantile_threshold",
+      "long_horizon_bars": 12,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "directional_train_q60",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c12_long_only_label_pressure_test",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 5227,
+          "long": 2357,
+          "short": 0
+        },
+        "class_shares": {
+          "flat": 0.6892141350210971,
+          "long": 0.3107858649789029,
+          "short": 0.0
+        },
+        "max_class_share": 0.6892141350210971,
+        "min_nonzero_class_count": 2357,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 18707,
+          "long": 10515,
+          "short": 0
+        },
+        "class_shares": {
+          "flat": 0.6401683662993635,
+          "long": 0.35983163370063653,
+          "short": 0.0
+        },
+        "max_class_share": 0.6401683662993635,
+        "min_nonzero_class_count": 10515,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 6551,
+          "long": 3293,
+          "short": 0
+        },
+        "class_shares": {
+          "flat": 0.6654815115806583,
+          "long": 0.33451848841934173,
+          "short": 0.0
+        },
+        "max_class_share": 0.6654815115806583,
+        "min_nonzero_class_count": 3293,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c12_long_only_pressure",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c12_long_only_label_pressure_test",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c12_long_only_pressure",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c12_long_only_label_pressure_test_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.551247219415157,
+        "probability_classes": [
+          1,
+          2
+        ]
+      },
+      "sha256": "893044a9c4e221483a821b8d74a535a2f5ac8409fc25caf4b49d1d23994aced3",
+      "train_class_counts": {
+        "flat": 18707,
+        "long": 10515
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c12_long_only_label_pressure_test",
+      "decision_threshold": 0.44,
+      "description": "long-side label quality pressure test",
+      "expected_trade_count_effect": "lower",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "direction_side_pressure",
+      "label_id": "stage41_c12_long_only_pressure",
+      "long_horizon_bars": 12,
+      "long_short_scope": "long_only",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c13_short_only_label_pressure_test",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 5325,
+          "long": 0,
+          "short": 2259
+        },
+        "class_shares": {
+          "flat": 0.7021360759493671,
+          "long": 0.0,
+          "short": 0.2978639240506329
+        },
+        "max_class_share": 0.7021360759493671,
+        "min_nonzero_class_count": 2259,
+        "rows": 7584
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 20158,
+          "long": 0,
+          "short": 9064
+        },
+        "class_shares": {
+          "flat": 0.6898227362945726,
+          "long": 0.0,
+          "short": 0.3101772637054274
+        },
+        "max_class_share": 0.6898227362945726,
+        "min_nonzero_class_count": 9064,
+        "rows": 29222
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 6924,
+          "long": 0,
+          "short": 2920
+        },
+        "class_shares": {
+          "flat": 0.7033726127590411,
+          "long": 0.0,
+          "short": 0.29662738724095894
+        },
+        "max_class_share": 0.7033726127590411,
+        "min_nonzero_class_count": 2920,
+        "rows": 9844
+      }
+    },
+    "label_id": "stage41_c13_short_only_pressure",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 12,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c13_short_only_label_pressure_test",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c13_short_only_pressure",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c13_short_only_label_pressure_test_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.5655534553577014,
+        "probability_classes": [
+          0,
+          1
+        ]
+      },
+      "sha256": "35e9774c3cf0b15d0cf9a9f9921b679357bd3a375bb27411d7cca0ecf4068151",
+      "train_class_counts": {
+        "flat": 20158,
+        "short": 9064
+      },
+      "train_rows": 29222
+    },
+    "spec": {
+      "candidate_id": "c13_short_only_label_pressure_test",
+      "decision_threshold": 0.44,
+      "description": "short-side label quality pressure test",
+      "expected_trade_count_effect": "lower",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "direction_side_pressure",
+      "label_id": "stage41_c13_short_only_pressure",
+      "long_horizon_bars": 12,
+      "long_short_scope": "short_only",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 12,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c14_low_complexity_model_rebuilt_label",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2836,
+          "long": 2321,
+          "short": 1783
+        },
+        "class_shares": {
+          "flat": 0.4086455331412104,
+          "long": 0.3344380403458213,
+          "short": 0.2569164265129683
+        },
+        "max_class_share": 0.4086455331412104,
+        "min_nonzero_class_count": 1783,
+        "rows": 6940
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 9058,
+          "long": 10182,
+          "short": 7373
+        },
+        "class_shares": {
+          "flat": 0.34035997444857774,
+          "long": 0.3825949723819186,
+          "short": 0.2770450531695036
+        },
+        "max_class_share": 0.3825949723819186,
+        "min_nonzero_class_count": 7373,
+        "rows": 26613
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3563,
+          "long": 3200,
+          "short": 2251
+        },
+        "class_shares": {
+          "flat": 0.39527401819392055,
+          "long": 0.35500332815620145,
+          "short": 0.24972265364987797
+        },
+        "max_class_share": 0.39527401819392055,
+        "min_nonzero_class_count": 2251,
+        "rows": 9014
+      }
+    },
+    "label_id": "stage41_c14_low_complexity_long18_short8",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 18,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c14_low_complexity_model_rebuilt_label",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c14_low_complexity_long18_short8",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "regularized_low_complexity_c04_label",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c14_low_complexity_model_rebuilt_label_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.38580329871258073,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "cb23c68dcb2861b139864d1640b3cb2d5115af882ebec9b28004f2eb4573de33",
+      "train_class_counts": {
+        "flat": 9058,
+        "long": 10182,
+        "short": 7373
+      },
+      "train_rows": 26613
+    },
+    "spec": {
+      "candidate_id": "c14_low_complexity_model_rebuilt_label",
+      "decision_threshold": 0.44,
+      "description": "simple regularized model trained on rebuilt asymmetric label",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "rebuilt_label_model_read",
+      "label_id": "stage41_c14_low_complexity_long18_short8",
+      "long_horizon_bars": 18,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "regularized_low_complexity_c04_label",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 8,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c15_tree_model_rebuilt_label",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2836,
+          "long": 2321,
+          "short": 1783
+        },
+        "class_shares": {
+          "flat": 0.4086455331412104,
+          "long": 0.3344380403458213,
+          "short": 0.2569164265129683
+        },
+        "max_class_share": 0.4086455331412104,
+        "min_nonzero_class_count": 1783,
+        "rows": 6940
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 9058,
+          "long": 10182,
+          "short": 7373
+        },
+        "class_shares": {
+          "flat": 0.34035997444857774,
+          "long": 0.3825949723819186,
+          "short": 0.2770450531695036
+        },
+        "max_class_share": 0.3825949723819186,
+        "min_nonzero_class_count": 7373,
+        "rows": 26613
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3563,
+          "long": 3200,
+          "short": 2251
+        },
+        "class_shares": {
+          "flat": 0.39527401819392055,
+          "long": 0.35500332815620145,
+          "short": 0.24972265364987797
+        },
+        "max_class_share": 0.39527401819392055,
+        "min_nonzero_class_count": 2251,
+        "rows": 9014
+      }
+    },
+    "label_id": "stage41_c15_tree_long18_short8",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 18,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c15_tree_model_rebuilt_label",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c15_tree_long18_short8",
+      "model_family": "extra_trees_depth4",
+      "model_status": "trained",
+      "model_variant": "constrained_tree_c04_label",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c15_tree_model_rebuilt_label_extra_trees_depth4.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.359582502126356,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "b2973974f42119ae6c929eb44ed152bac41f972129ee940c618c806b299eca46",
+      "train_class_counts": {
+        "flat": 9058,
+        "long": 10182,
+        "short": 7373
+      },
+      "train_rows": 26613
+    },
+    "spec": {
+      "candidate_id": "c15_tree_model_rebuilt_label",
+      "decision_threshold": 0.44,
+      "description": "constrained tree model trained on rebuilt asymmetric label",
+      "expected_trade_count_effect": "moderate",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "rebuilt_label_model_read",
+      "label_id": "stage41_c15_tree_long18_short8",
+      "long_horizon_bars": 18,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "extra_trees_depth4",
+      "model_variant": "constrained_tree_c04_label",
+      "notes": "",
+      "overfit_risk": "medium_high",
+      "session_adjustment": false,
+      "short_horizon_bars": 8,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c16_calibrated_rebuilt_label",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2836,
+          "long": 2321,
+          "short": 1783
+        },
+        "class_shares": {
+          "flat": 0.4086455331412104,
+          "long": 0.3344380403458213,
+          "short": 0.2569164265129683
+        },
+        "max_class_share": 0.4086455331412104,
+        "min_nonzero_class_count": 1783,
+        "rows": 6940
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 9058,
+          "long": 10182,
+          "short": 7373
+        },
+        "class_shares": {
+          "flat": 0.34035997444857774,
+          "long": 0.3825949723819186,
+          "short": 0.2770450531695036
+        },
+        "max_class_share": 0.3825949723819186,
+        "min_nonzero_class_count": 7373,
+        "rows": 26613
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3563,
+          "long": 3200,
+          "short": 2251
+        },
+        "class_shares": {
+          "flat": 0.39527401819392055,
+          "long": 0.35500332815620145,
+          "short": 0.24972265364987797
+        },
+        "max_class_share": 0.39527401819392055,
+        "min_nonzero_class_count": 2251,
+        "rows": 9014
+      }
+    },
+    "label_id": "stage41_c16_calibrated_long18_short8",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 18,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c16_calibrated_rebuilt_label",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c16_calibrated_long18_short8",
+      "model_family": "calibrated_logistic",
+      "model_status": "trained",
+      "model_variant": "train_probability_gate_c04_label",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c16_calibrated_rebuilt_label_calibrated_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.5,
+        "mean_confidence": 0.38580329871258073,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "aee9e49f4f1af704dba1876b6483b7cd8d3966d4948f3ada155bab18a2199cd2",
+      "train_class_counts": {
+        "flat": 9058,
+        "long": 10182,
+        "short": 7373
+      },
+      "train_rows": 26613
+    },
+    "spec": {
+      "candidate_id": "c16_calibrated_rebuilt_label",
+      "decision_threshold": 0.5,
+      "description": "calibration layer on rebuilt-label probabilities",
+      "expected_trade_count_effect": "lower",
+      "flat_band_rule": "symmetric_current_band",
+      "label_family": "rebuilt_label_calibration_read",
+      "label_id": "stage41_c16_calibrated_long18_short8",
+      "long_horizon_bars": 18,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.0,
+      "model_family": "calibrated_logistic",
+      "model_variant": "train_probability_gate_c04_label",
+      "notes": "",
+      "overfit_risk": "medium",
+      "session_adjustment": false,
+      "short_horizon_bars": 8,
+      "short_threshold_multiplier": 1.0,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  },
+  {
+    "candidate_id": "c17_extreme_horizon_stress",
+    "distribution": {
+      "oos": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 2709,
+          "long": 2043,
+          "short": 1540
+        },
+        "class_shares": {
+          "flat": 0.4305467260012715,
+          "long": 0.3246980292434838,
+          "short": 0.24475524475524477
+        },
+        "max_class_share": 0.4305467260012715,
+        "min_nonzero_class_count": 1540,
+        "rows": 6292
+      },
+      "train": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 8804,
+          "long": 8908,
+          "short": 6380
+        },
+        "class_shares": {
+          "flat": 0.36543250871658645,
+          "long": 0.3697492943715756,
+          "short": 0.26481819691183794
+        },
+        "max_class_share": 0.3697492943715756,
+        "min_nonzero_class_count": 6380,
+        "rows": 24092
+      },
+      "validation": {
+        "class_balance_status": "usable",
+        "class_counts": {
+          "flat": 3419,
+          "long": 2769,
+          "short": 1981
+        },
+        "class_shares": {
+          "flat": 0.4185334802301383,
+          "long": 0.33896437752478886,
+          "short": 0.24250214224507283
+        },
+        "max_class_share": 0.4185334802301383,
+        "min_nonzero_class_count": 1981,
+        "rows": 8169
+      }
+    },
+    "label_id": "stage41_c17_extreme_long24_short6",
+    "leakage_audit": {
+      "future_timestamps_after_current": true,
+      "horizon_alignment_exact": true,
+      "max_horizon_bars": 24,
+      "model_feature_reads_future_columns": false,
+      "partial_current_bar_used": false,
+      "status": "passed",
+      "timestamp_rule": "features at closed M5 bar timestamp; labels use exact future closed-bar timestamps"
+    },
+    "model_artifact": {
+      "candidate_id": "c17_extreme_horizon_stress",
+      "feature_order": [
+        "log_return_1",
+        "log_return_3",
+        "hl_range",
+        "close_open_ratio",
+        "gap_percent",
+        "close_prev_close_ratio",
+        "return_zscore_20",
+        "hl_zscore_50",
+        "overnight_return",
+        "return_1_over_atr_14",
+        "close_ema20_ratio",
+        "close_ema50_ratio",
+        "ema9_ema20_diff",
+        "ema20_ema50_diff",
+        "ema50_ema200_diff",
+        "ema20_ema50_spread_zscore_50",
+        "sma50_sma200_ratio",
+        "rsi_14",
+        "rsi_50",
+        "rsi_14_slope_3",
+        "rsi_14_minus_50",
+        "stoch_kd_diff",
+        "stochrsi_kd_diff",
+        "ppo_hist_12_26_9",
+        "roc_12",
+        "trix_15",
+        "atr_14",
+        "atr_50",
+        "atr_14_over_atr_50",
+        "bollinger_width_20",
+        "bb_position_20",
+        "bb_squeeze",
+        "historical_vol_20",
+        "historical_vol_5_over_20",
+        "adx_14",
+        "di_spread_14",
+        "supertrend_10_3",
+        "vortex_indicator",
+        "is_us_cash_open",
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close"
+      ],
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_id": "stage41_c17_extreme_long24_short6",
+      "model_family": "elastic_net_logistic",
+      "model_status": "trained",
+      "model_variant": "balanced_multiclass_v1",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/02_runs/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1/models/c17_extreme_horizon_stress_elastic_net_logistic.joblib",
+      "score_detail": {
+        "decision_threshold": 0.44,
+        "mean_confidence": 0.3868432460318204,
+        "probability_classes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "sha256": "9866700ecaf2ba55aea10a41a04c1c10847dee6e70d436751fbbd3ca1eeedd53",
+      "train_class_counts": {
+        "flat": 8804,
+        "long": 8908,
+        "short": 6380
+      },
+      "train_rows": 24092
+    },
+    "spec": {
+      "candidate_id": "c17_extreme_horizon_stress",
+      "decision_threshold": 0.44,
+      "description": "extreme horizon contrast to expose failure boundary",
+      "expected_trade_count_effect": "lower",
+      "flat_band_rule": "extreme_horizon_contrast",
+      "label_family": "extreme_horizon_stress",
+      "label_id": "stage41_c17_extreme_long24_short6",
+      "long_horizon_bars": 24,
+      "long_short_scope": "both",
+      "long_threshold_multiplier": 1.2,
+      "model_family": "elastic_net_logistic",
+      "model_variant": "balanced_multiclass_v1",
+      "notes": "",
+      "overfit_risk": "high",
+      "session_adjustment": false,
+      "short_horizon_bars": 6,
+      "short_threshold_multiplier": 0.9,
+      "threshold_source": "base_threshold_multiplier",
+      "volatility_normalization": false
+    }
+  }
+]

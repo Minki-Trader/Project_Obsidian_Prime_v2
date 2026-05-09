@@ -1,0 +1,21 @@
+{
+  "commands": [
+    {
+      "command": "python -m foundation.pipelines.run_stage41_directional_asymmetric_label_horizon_probe --timeout-seconds 900",
+      "failures_or_blockers": "",
+      "result": "passed_exit_0_mt5_reports_34_kpi_rows_102"
+    },
+    {
+      "command": "python -m py_compile foundation\\labels\\__init__.py foundation\\labels\\directional_asymmetric.py stage_pipelines\\stage41\\__init__.py stage_pipelines\\stage41\\directional_asymmetric_label_horizon_probe.py foundation\\pipelines\\run_stage41_directional_asymmetric_label_horizon_probe.py tests\\test_stage41_directional_asymmetric_labels.py",
+      "failures_or_blockers": "",
+      "result": "passed_exit_0"
+    },
+    {
+      "command": "python -m pytest -q tests\\test_stage41_directional_asymmetric_labels.py tests\\test_materialize_training_label_split_dataset.py tests\\test_mt5_runtime_artifacts.py tests\\test_mt5_strategy_report.py tests\\test_mt5_missing_report_executor.py tests\\test_control_plane_alpha_run_ledgers.py tests\\test_agent_control_gates.py tests\\test_agent_control_contracts.py tests\\test_stage_pipeline_imports.py tests\\test_stage06_runtime_parity.py",
+      "failures_or_blockers": "",
+      "result": "passed_51_tests_229_subtests"
+    }
+  ],
+  "mt5_command_count": 34,
+  "status": "recorded"
+}

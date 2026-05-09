@@ -1,0 +1,29 @@
+packet_id: stage41_run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1
+stage_id: 41_label_horizon__directional_asymmetric_return_target_rebuild
+run_id: run35A_directional_asymmetric_label_horizon_broad_mt5_probe_v1
+idea_id: IDEA-ST41-DIRECTIONAL-ASYMMETRIC-LABEL-HORIZON
+evidence_boundary: runtime_probe_only
+status: reviewed_runtime_probe_completed
+primary_family: label_horizon_redesign
+primary_skill: obsidian-experiment-design
+support_skills:
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-performance-attribution
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+required_gates:
+  - experiment_design
+  - data_integrity
+  - label_engineering
+  - model_validation
+  - runtime_parity_mt5_execution
+  - backtest_forensics
+  - performance_attribution
+  - artifact_lineage
+  - run_evidence
+  - result_judgment
+  - claim_discipline
+claim_boundary: runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

@@ -1,0 +1,39 @@
+{
+  "columns": [
+    {
+      "column": "stage41_long_forward_log_return",
+      "formula": "log(close[t+long_horizon] / close[t])",
+      "lookahead": "long_horizon_bars future closed bars",
+      "missingness": "NaN when exact future closed bar is unavailable",
+      "warmup": 0
+    },
+    {
+      "column": "stage41_short_forward_log_return",
+      "formula": "log(close[t] / close[t+short_horizon])",
+      "lookahead": "short_horizon_bars future closed bars",
+      "missingness": "NaN when exact future closed bar is unavailable",
+      "warmup": 0
+    },
+    {
+      "column": "stage41_long_effective_threshold",
+      "formula": "base_threshold * long_multiplier, optionally volatility/session adjusted",
+      "lookahead": "none",
+      "missingness": "falls back to base threshold when historical volatility is unavailable",
+      "warmup": "historical_vol_20 when volatility-normalized"
+    },
+    {
+      "column": "stage41_short_effective_threshold",
+      "formula": "base_threshold * short_multiplier, optionally volatility/session adjusted",
+      "lookahead": "none",
+      "missingness": "falls back to base threshold when historical volatility is unavailable",
+      "warmup": "historical_vol_20 when volatility-normalized"
+    },
+    {
+      "column": "stage41_label_class",
+      "formula": "short=0, flat=1, long=2 using direction-specific future returns and thresholds",
+      "lookahead": "label-only target; not exported as model feature",
+      "missingness": "row is excluded when current or future close is unavailable",
+      "warmup": "max(long_horizon_bars, short_horizon_bars)"
+    }
+  ]
+}
