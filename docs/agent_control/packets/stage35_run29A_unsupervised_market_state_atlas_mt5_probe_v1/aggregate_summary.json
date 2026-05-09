@@ -1,0 +1,663 @@
+{
+  "active_branch": "main",
+  "boundary": "stage35_unsupervised_atlas_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority",
+  "created_at_utc": "2026-05-08T15:29:18Z",
+  "data_identity": {
+    "columns": 69,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "rows": 46650,
+    "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "split_counts": {
+      "oos": 7584,
+      "train": 29222,
+      "validation": 9844
+    },
+    "timestamp_max": "2026-04-13T22:00:00+00:00",
+    "timestamp_min": "2022-09-01T16:40:00+00:00"
+  },
+  "external_verification_status": "completed",
+  "forbidden_claims": [
+    "edge",
+    "alpha_quality",
+    "baseline",
+    "promotion",
+    "runtime_authority",
+    "live_readiness"
+  ],
+  "idea_id": "IDEA-ST35-UNSUPERVISED-MARKET-STATE-ATLAS",
+  "judgment": "inconclusive_unsupervised_atlas_mt5_runtime_probe_completed",
+  "known_runtime_difference": "atlas state assignment is precomputed in Python and handed to MT5 by feature-row omission; this is runtime_probe, not native runtime authority.",
+  "kpi_management": {
+    "missing_runs": 0,
+    "normalized_records": 10,
+    "normalized_summary_rows": 10,
+    "parser_errors": 0,
+    "trade_attribution_records": 10,
+    "trade_level_rows": 1054,
+    "trade_parser_errors": 0
+  },
+  "ledger_materialization": {
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 3441,
+      "sha256": "1c734c18c187fb0d99bebea694f6b72e2faaee83c97edfe22c8bc04889338114",
+      "upserted_rows": 10
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+      "rows": 318,
+      "sha256": "b7db34ba4b901e9fc2947d6071008ca3178e2bedb90051287811accbdb70f277",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/03_reviews/stage_run_ledger.csv",
+      "rows": 10,
+      "sha256": "8a0d92b84acb7911a6f10e52cd211f4e7e4b1bef9efc2c670430015bb042fe84",
+      "upserted_rows": 10
+    }
+  },
+  "mt5_attempt_count": 10,
+  "mt5_kpi_record_count": 10,
+  "mt5_read": {
+    "by_topic": {
+      "macro_risk_proxy_map": {
+        "oos": {
+          "net_profit": -46.29,
+          "profit_factor": 0.97,
+          "status": "completed",
+          "trade_count": 166
+        },
+        "validation_is": {
+          "net_profit": -357.78,
+          "profit_factor": 0.84,
+          "status": "completed",
+          "trade_count": 222
+        }
+      },
+      "mega_cap_breadth_divergence": {
+        "oos": {
+          "net_profit": -187.69,
+          "profit_factor": 0.76,
+          "status": "completed",
+          "trade_count": 40
+        },
+        "validation_is": {
+          "net_profit": 416.77,
+          "profit_factor": 1.39,
+          "status": "completed",
+          "trade_count": 69
+        }
+      },
+      "return_volatility_shape": {
+        "oos": {
+          "net_profit": 162.82,
+          "profit_factor": 1.25,
+          "status": "completed",
+          "trade_count": 58
+        },
+        "validation_is": {
+          "net_profit": -508.89,
+          "profit_factor": 0.44,
+          "status": "completed",
+          "trade_count": 33
+        }
+      },
+      "session_timing_map": {
+        "oos": {
+          "net_profit": 0.41,
+          "profit_factor": 1.0,
+          "status": "completed",
+          "trade_count": 140
+        },
+        "validation_is": {
+          "net_profit": 175.04,
+          "profit_factor": 1.11,
+          "status": "completed",
+          "trade_count": 173
+        }
+      },
+      "trend_momentum_pressure": {
+        "oos": {
+          "net_profit": 134.68,
+          "profit_factor": 1.15,
+          "status": "completed",
+          "trade_count": 112
+        },
+        "validation_is": {
+          "net_profit": -515.31,
+          "profit_factor": 0.39,
+          "status": "completed",
+          "trade_count": 41
+        }
+      }
+    }
+  },
+  "mt5_rows": [
+    {
+      "feature_ready_count": 426,
+      "max_drawdown_amount": 597.18,
+      "model_ok_count": 426,
+      "net_profit": -508.89,
+      "order_fill_count": null,
+      "profit_factor": 0.44,
+      "record_view": "mt5_tier_a_atlas_return_volatility_shape_validation_is",
+      "split": "validation_is",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "return_volatility_shape",
+      "trade_count": 33
+    },
+    {
+      "feature_ready_count": 750,
+      "max_drawdown_amount": 249.55,
+      "model_ok_count": 750,
+      "net_profit": 162.82,
+      "order_fill_count": null,
+      "profit_factor": 1.25,
+      "record_view": "mt5_tier_a_atlas_return_volatility_shape_oos",
+      "split": "oos",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "return_volatility_shape",
+      "trade_count": 58
+    },
+    {
+      "feature_ready_count": 523,
+      "max_drawdown_amount": 623.49,
+      "model_ok_count": 523,
+      "net_profit": -515.31,
+      "order_fill_count": null,
+      "profit_factor": 0.39,
+      "record_view": "mt5_tier_a_atlas_trend_momentum_pressure_validation_is",
+      "split": "validation_is",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "trend_momentum_pressure",
+      "trade_count": 41
+    },
+    {
+      "feature_ready_count": 1451,
+      "max_drawdown_amount": 320.51,
+      "model_ok_count": 1451,
+      "net_profit": 134.68,
+      "order_fill_count": null,
+      "profit_factor": 1.15,
+      "record_view": "mt5_tier_a_atlas_trend_momentum_pressure_oos",
+      "split": "oos",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "trend_momentum_pressure",
+      "trade_count": 112
+    },
+    {
+      "feature_ready_count": 2249,
+      "max_drawdown_amount": 601.34,
+      "model_ok_count": 2249,
+      "net_profit": 175.04,
+      "order_fill_count": null,
+      "profit_factor": 1.11,
+      "record_view": "mt5_tier_a_atlas_session_timing_map_validation_is",
+      "split": "validation_is",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "session_timing_map",
+      "trade_count": 173
+    },
+    {
+      "feature_ready_count": 1816,
+      "max_drawdown_amount": 421.24,
+      "model_ok_count": 1816,
+      "net_profit": 0.41,
+      "order_fill_count": null,
+      "profit_factor": 1.0,
+      "record_view": "mt5_tier_a_atlas_session_timing_map_oos",
+      "split": "oos",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "session_timing_map",
+      "trade_count": 140
+    },
+    {
+      "feature_ready_count": 2877,
+      "max_drawdown_amount": 783.28,
+      "model_ok_count": 2877,
+      "net_profit": -357.78,
+      "order_fill_count": null,
+      "profit_factor": 0.84,
+      "record_view": "mt5_tier_a_atlas_macro_risk_proxy_map_validation_is",
+      "split": "validation_is",
+      "state_direction": "short",
+      "status": "completed",
+      "topic_id": "macro_risk_proxy_map",
+      "trade_count": 222
+    },
+    {
+      "feature_ready_count": 2146,
+      "max_drawdown_amount": 258.72,
+      "model_ok_count": 2146,
+      "net_profit": -46.29,
+      "order_fill_count": null,
+      "profit_factor": 0.97,
+      "record_view": "mt5_tier_a_atlas_macro_risk_proxy_map_oos",
+      "split": "oos",
+      "state_direction": "short",
+      "status": "completed",
+      "topic_id": "macro_risk_proxy_map",
+      "trade_count": 166
+    },
+    {
+      "feature_ready_count": 893,
+      "max_drawdown_amount": 508.04,
+      "model_ok_count": 893,
+      "net_profit": 416.77,
+      "order_fill_count": null,
+      "profit_factor": 1.39,
+      "record_view": "mt5_tier_a_atlas_mega_cap_breadth_divergence_validation_is",
+      "split": "validation_is",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "mega_cap_breadth_divergence",
+      "trade_count": 69
+    },
+    {
+      "feature_ready_count": 513,
+      "max_drawdown_amount": 607.16,
+      "model_ok_count": 513,
+      "net_profit": -187.69,
+      "order_fill_count": null,
+      "profit_factor": 0.76,
+      "record_view": "mt5_tier_a_atlas_mega_cap_breadth_divergence_oos",
+      "split": "oos",
+      "state_direction": "long",
+      "status": "completed",
+      "topic_id": "mega_cap_breadth_divergence",
+      "trade_count": 40
+    }
+  ],
+  "next_action": "continue_stage35_with_extreme_sweep_or_close_if_user_requests",
+  "output_paths": {
+    "aggregate_summary": "docs/agent_control/packets/stage35_run29A_unsupervised_market_state_atlas_mt5_probe_v1/aggregate_summary.json",
+    "kpi_record": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/kpi_record.json",
+    "mt5_summary": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/results/mt5_runtime_summary.csv",
+    "report": "stages/35_context_map__unsupervised_market_state_atlas/03_reviews/run29A_unsupervised_market_state_atlas_packet.md",
+    "run_manifest": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/run_manifest.json",
+    "selected_states": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/results/atlas_selected_states.csv",
+    "state_summary": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/results/atlas_state_summary.csv"
+  },
+  "packet_id": "stage35_run29A_unsupervised_market_state_atlas_mt5_probe_v1",
+  "run_id": "run29A_unsupervised_market_state_atlas_mt5_probe_v1",
+  "run_number": "run29A",
+  "runtime_authority": null,
+  "runtime_inputs": {
+    "common_copies": [
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/return_volatility_shape_long_constant_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/return_volatility_shape_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/return_volatility_shape_long_constant_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_validation_is_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_validation_is_state_features.csv",
+        "sha256": "329da6a98053bb82ef5ef58514fcd42c3b5712a4925a6b461bb4d3e989c3bf25",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_validation_is_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_oos_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_oos_state_features.csv",
+        "sha256": "06033da48623dbcce66a224bfd8799fed3920f312510666b8e0e3c5cf1faf387",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_oos_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/trend_momentum_pressure_long_constant_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/trend_momentum_pressure_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/trend_momentum_pressure_long_constant_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_validation_is_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_validation_is_state_features.csv",
+        "sha256": "bb69baab5bbfdfa1b641b6502aefda177bf0b221828772bef74e9e492be7f039",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_validation_is_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_oos_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_oos_state_features.csv",
+        "sha256": "153676896a2c240853de5b412b3680888548d85c93f650897787c8ff81be32d2",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_oos_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/session_timing_map_long_constant_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/session_timing_map_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/session_timing_map_long_constant_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_validation_is_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_validation_is_state_features.csv",
+        "sha256": "5a58790ec1ad1c876e0b45fa82691236959868ff5ffff9ea6aabb2730b60b2ec",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_validation_is_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_oos_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_oos_state_features.csv",
+        "sha256": "41b8622dc3835e7eb9067929342bd28fbfd7e920dbb916ac1186b6c4f8d40042",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_oos_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/macro_risk_proxy_map_short_constant_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/macro_risk_proxy_map_short_constant_score_table.csv",
+        "sha256": "77af273b9d691351e928b963e42afa6477b13b3d8632960c2f71434851d45be7",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/macro_risk_proxy_map_short_constant_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_validation_is_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_validation_is_state_features.csv",
+        "sha256": "3c085d436df878d08f930e1b2599ecb86c8afe5a3d171282cde3c0c894045478",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_validation_is_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_oos_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_oos_state_features.csv",
+        "sha256": "d2f397346a21697b60b9f6efba0c8c0c3970a1231c97fab5c852490388524b8e",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_oos_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/mega_cap_breadth_divergence_long_constant_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/mega_cap_breadth_divergence_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/mega_cap_breadth_divergence_long_constant_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_validation_is_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_validation_is_state_features.csv",
+        "sha256": "c262dac017e2bcc03299cbfec6c0fc6f0ef880006f022b9c2719bcd199df1a6e",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_validation_is_state_features.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_oos_state_features.csv",
+        "common_path": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_oos_state_features.csv",
+        "sha256": "260a281231663883e7062c855651b2b80e2290b872771a3d7b8dcb02f921a23c",
+        "source": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_oos_state_features.csv"
+      }
+    ],
+    "common_root": "Project_Obsidian_Prime_v2/stage35/run29A_unsupervised_market_state_atlas_mt5_probe_v1",
+    "feature_outputs": {
+      "macro_risk_proxy_map": {
+        "oos": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_macro_risk_proxy_map"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_oos_state_features.csv",
+          "rows": 2146,
+          "selected_state_id": 1,
+          "sha256": "903cc8bb3c070231458afe361a06f0d484c42f6fd4ae8a5a3ae7c88b93634297",
+          "source_row_count": 2146,
+          "state_direction": "short",
+          "tester_window_from_date": "2025.10.01",
+          "tester_window_to_date": "2026.04.14"
+        },
+        "validation_is": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_macro_risk_proxy_map"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/macro_risk_proxy_map_validation_is_state_features.csv",
+          "rows": 2877,
+          "selected_state_id": 1,
+          "sha256": "a7f9f89b7ae8c671cc1b9521a63ccc01ad4d32e1a53dc66c0c8fce7933bc04fd",
+          "source_row_count": 2877,
+          "state_direction": "short",
+          "tester_window_from_date": "2025.01.02",
+          "tester_window_to_date": "2025.10.01"
+        }
+      },
+      "mega_cap_breadth_divergence": {
+        "oos": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_mega_cap_breadth_divergence"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_oos_state_features.csv",
+          "rows": 513,
+          "selected_state_id": 4,
+          "sha256": "8c96e49f56dedb13910b3b22d9f6502219068cf8b57014383685dab9b7b38f91",
+          "source_row_count": 513,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.10.01",
+          "tester_window_to_date": "2026.04.14"
+        },
+        "validation_is": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_mega_cap_breadth_divergence"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/mega_cap_breadth_divergence_validation_is_state_features.csv",
+          "rows": 893,
+          "selected_state_id": 4,
+          "sha256": "002ced588086ec2e3d77d4aaae9bc909d3df6507a7750a88ebeaee4654d6dd03",
+          "source_row_count": 893,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.01.02",
+          "tester_window_to_date": "2025.10.01"
+        }
+      },
+      "return_volatility_shape": {
+        "oos": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_return_volatility_shape"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_oos_state_features.csv",
+          "rows": 750,
+          "selected_state_id": 0,
+          "sha256": "14d20e7d620208458dfd5b4ee74913c15a15c5c5581b3e0bbeb52066621727bb",
+          "source_row_count": 750,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.10.01",
+          "tester_window_to_date": "2026.04.14"
+        },
+        "validation_is": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_return_volatility_shape"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/return_volatility_shape_validation_is_state_features.csv",
+          "rows": 1194,
+          "selected_state_id": 0,
+          "sha256": "0f6e1ae796c48215c6d70c816222e83c3f93078fa80267c1f29a874eaf954fbd",
+          "source_row_count": 1194,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.01.02",
+          "tester_window_to_date": "2025.10.01"
+        }
+      },
+      "session_timing_map": {
+        "oos": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_session_timing_map"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_oos_state_features.csv",
+          "rows": 1816,
+          "selected_state_id": 4,
+          "sha256": "9feabd9a6e3efff6f6fd4b0fd9e1e200d67197d4075916c50042fa5aec0cd7d5",
+          "source_row_count": 1816,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.10.01",
+          "tester_window_to_date": "2026.04.14"
+        },
+        "validation_is": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_session_timing_map"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/session_timing_map_validation_is_state_features.csv",
+          "rows": 2249,
+          "selected_state_id": 4,
+          "sha256": "62b33c83ebd8ad68283b45fcaaea0e44a8c31ef921d9047d89c4052b7743b8fc",
+          "source_row_count": 2249,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.01.02",
+          "tester_window_to_date": "2025.10.01"
+        }
+      },
+      "trend_momentum_pressure": {
+        "oos": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_trend_momentum_pressure"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_oos_state_features.csv",
+          "rows": 1451,
+          "selected_state_id": 4,
+          "sha256": "212b903aeca6f87109a9e52dace24e03a7008435d80918812fa570d7bf89851f",
+          "source_row_count": 1451,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.10.01",
+          "tester_window_to_date": "2026.04.14"
+        },
+        "validation_is": {
+          "feature_count": 58,
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "format": "csv_float32_ordered_features",
+          "metadata_columns": [
+            "state_trend_momentum_pressure"
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/features/trend_momentum_pressure_validation_is_state_features.csv",
+          "rows": 1481,
+          "selected_state_id": 4,
+          "sha256": "d1f09c8f8e676115f6447bf491ee8432bd33dfba3ec1b28dbae148d981cf1cc6",
+          "source_row_count": 1481,
+          "state_direction": "long",
+          "tester_window_from_date": "2025.01.02",
+          "tester_window_to_date": "2025.10.01"
+        }
+      }
+    },
+    "known_runtime_difference": "atlas state assignment is precomputed in Python and handed to MT5 by feature-row omission; this is runtime_probe, not native runtime authority.",
+    "model_outputs": {
+      "macro_risk_proxy_map": {
+        "backend": "ebm_table_constant",
+        "direction": "short",
+        "feature_count": 58,
+        "path": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/macro_risk_proxy_map_short_constant_score_table.csv",
+        "sha256": "77af273b9d691351e928b963e42afa6477b13b3d8632960c2f71434851d45be7"
+      },
+      "mega_cap_breadth_divergence": {
+        "backend": "ebm_table_constant",
+        "direction": "long",
+        "feature_count": 58,
+        "path": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/mega_cap_breadth_divergence_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e"
+      },
+      "return_volatility_shape": {
+        "backend": "ebm_table_constant",
+        "direction": "long",
+        "feature_count": 58,
+        "path": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/return_volatility_shape_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e"
+      },
+      "session_timing_map": {
+        "backend": "ebm_table_constant",
+        "direction": "long",
+        "feature_count": 58,
+        "path": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/session_timing_map_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e"
+      },
+      "trend_momentum_pressure": {
+        "backend": "ebm_table_constant",
+        "direction": "long",
+        "feature_count": 58,
+        "path": "stages/35_context_map__unsupervised_market_state_atlas/02_runs/run29A_unsupervised_market_state_atlas_mt5_probe_v1/models/trend_momentum_pressure_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e"
+      }
+    }
+  },
+  "selected_baseline": null,
+  "selected_operating_reference": null,
+  "selected_promotion_candidate": null,
+  "selected_topics": [
+    {
+      "idea_id": "IDEA-ST35-ATLAS-RETURN-VOLATILITY",
+      "selected_state_id": 0,
+      "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+      "state_direction": "long",
+      "tier_b_scope": "available",
+      "topic_id": "return_volatility_shape",
+      "validation_net_return_proxy": 0.5339585031,
+      "validation_profit_factor_proxy": 1.3319286504494905,
+      "validation_row_count": 1194
+    },
+    {
+      "idea_id": "IDEA-ST35-ATLAS-TREND-MOMENTUM",
+      "selected_state_id": 4,
+      "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+      "state_direction": "long",
+      "tier_b_scope": "available",
+      "topic_id": "trend_momentum_pressure",
+      "validation_net_return_proxy": 0.5235284145,
+      "validation_profit_factor_proxy": 1.2316892226875935,
+      "validation_row_count": 1481
+    },
+    {
+      "idea_id": "IDEA-ST35-ATLAS-SESSION-TIMING",
+      "selected_state_id": 4,
+      "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+      "state_direction": "long",
+      "tier_b_scope": "available",
+      "topic_id": "session_timing_map",
+      "validation_net_return_proxy": -0.1104368275,
+      "validation_profit_factor_proxy": 0.9664991003891037,
+      "validation_row_count": 2249
+    },
+    {
+      "idea_id": "IDEA-ST35-ATLAS-MACRO-RISK",
+      "selected_state_id": 1,
+      "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+      "state_direction": "short",
+      "tier_b_scope": "out_of_scope_by_partial_context",
+      "topic_id": "macro_risk_proxy_map",
+      "validation_net_return_proxy": 0.3307955124,
+      "validation_profit_factor_proxy": 1.080001038222288,
+      "validation_row_count": 2877
+    },
+    {
+      "idea_id": "IDEA-ST35-ATLAS-MEGA-BREADTH",
+      "selected_state_id": 4,
+      "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+      "state_direction": "long",
+      "tier_b_scope": "out_of_scope_by_partial_context",
+      "topic_id": "mega_cap_breadth_divergence",
+      "validation_net_return_proxy": 0.2416944819,
+      "validation_profit_factor_proxy": 1.122680768776564,
+      "validation_row_count": 893
+    }
+  ],
+  "stage_id": "35_context_map__unsupervised_market_state_atlas",
+  "state_summary_row_count": 73,
+  "status": "reviewed_unsupervised_atlas_mt5_probe_completed"
+}
