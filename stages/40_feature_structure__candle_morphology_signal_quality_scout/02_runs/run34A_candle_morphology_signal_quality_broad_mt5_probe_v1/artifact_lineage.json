@@ -1,0 +1,1204 @@
+{
+  "source_lineage": [
+    {
+      "role": "tier_a_model_input",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "artifact_kind": "input",
+      "required_for_reproducibility": true,
+      "affects": "model label feature diagnostics"
+    },
+    {
+      "role": "tier_a_feature_order",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "artifact_kind": "input",
+      "required_for_reproducibility": true,
+      "affects": "feature order"
+    },
+    {
+      "role": "model_input_summary",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "artifact_kind": "input",
+      "required_for_reproducibility": true,
+      "affects": "data contract diagnostics"
+    },
+    {
+      "role": "training_summary",
+      "path": "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "946766a20e230c0567066d8330551408f6161e2beabacbb00d4deb5c257af75c",
+      "artifact_kind": "input",
+      "required_for_reproducibility": true,
+      "affects": "label threshold"
+    },
+    {
+      "role": "raw_mt5_bars",
+      "path": "data/raw/mt5_bars/m5",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "directory_or_not_feasible",
+      "artifact_kind": "input",
+      "required_for_reproducibility": true,
+      "affects": "Tier B fallback materialization"
+    },
+    {
+      "role": "raw_us100_closed_m5_ohlc",
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "2ee5e97d06d914b9fdeb826708c4613860a2458138dd51de39f3e60819d2995f",
+      "artifact_kind": "input",
+      "required_for_reproducibility": true,
+      "affects": "closed-bar candle morphology"
+    },
+    {
+      "role": "legacy_stage32_candle_pattern_status",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime/stages/32_candle_pattern_exit_diagnostic/04_selected/selection_status.md",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "a033c5569560ce62c2f651c3aa2f3883f9193eb1ab111b9980005dca78fd6592",
+      "artifact_kind": "idea_seed_only",
+      "required_for_reproducibility": true,
+      "affects": "legacy clue only; no result inheritance"
+    },
+    {
+      "role": "mt5_runtime_ea",
+      "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "source_stage": "foundation_or_current_data",
+      "source_run": "current_truth_reentry",
+      "created_by_script": "existing_repository_artifact",
+      "sha256": "5ff42e4de1c3ecd7b1e108fb431abf814415127cbe3048d345d7df84bb9ace85",
+      "artifact_kind": "MT5 handoff",
+      "required_for_reproducibility": true,
+      "affects": "entry runtime"
+    }
+  ],
+  "generated_artifacts": [
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/artifact_lineage.json",
+      "sha256": "self_hash_not_feasible",
+      "bytes": "self_referential_after_write"
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c01_reference_no_candle_morphology_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "bf881be95d097796d1ec85238a74b9178c02b2998464c4c2d6a49395987b73b5",
+      "bytes": 1653711
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c01_reference_no_candle_morphology_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "d2ba4cb2d1c20322f128732ef58165cef640dbc6a387991b9addf965917441f3",
+      "bytes": 2215703
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c01_reference_no_candle_morphology_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "a2e71270d00397e92d77759d2f2f16f360fd3866e04cfd715b2f2e4a37aa224f",
+      "bytes": 229285
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c01_reference_no_candle_morphology_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "dd623212a72fc9348a027b1d430b8d0c1b2e592a74834b02d4c5f86ab31d9c99",
+      "bytes": 526229
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c02_outside_bar_context_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "7b6399f07011bdef0af9cb881026ce6a263ee3518243125f71efac612f4ecaec",
+      "bytes": 1425075
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c02_outside_bar_context_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "6c21c0dd9a1aa15754ed0b40d731009d8907e81402a56389cc23a7c65333ba3b",
+      "bytes": 1918925
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c02_outside_bar_context_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "462cf780130c6913dc9c1ddcc047846f5ee4a2b874d5e6f5d4ef2534bf0c798a",
+      "bytes": 197319
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c02_outside_bar_context_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "33f86281c6e01a1a9b4daa3baa1247ec0a9270c2798dff16aa59050af4f0c730",
+      "bytes": 455021
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c03_adverse_outside_bar_filter_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "9a76029fe7ef9094dbfdfbb77a4542eedc63be8d46989996c916340171f13c32",
+      "bytes": 1547535
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c03_adverse_outside_bar_filter_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "911528e1f21b6fa3b1e83ea21f8d376cbb8c9da55201f498cb3f536c79d05613",
+      "bytes": 2077887
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c03_adverse_outside_bar_filter_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "0614a0d618fbab391c6ef0bba11bd2b1cf71c9dedf0b8d34b7c10ea10db91b99",
+      "bytes": 214417
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c03_adverse_outside_bar_filter_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "135cd930618a42f5048a70ede8779c69aa48319bd24063a03064baf375a29ae4",
+      "bytes": 493105
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c04_adverse_outside_bar_directional_long_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "b755a4e736613d446df83ee2c2c1190f6ccc8c5d8c1ff8578625426c4a6d7c44",
+      "bytes": 1744719
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c04_adverse_outside_bar_directional_long_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "74b0b052633f4503846678d801d2a95faa7505d1c6c22edb53007bb913c5c086",
+      "bytes": 2333831
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c04_adverse_outside_bar_directional_long_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "e30cb31454d9448cb632ca0b7ea6a44bd34e3b3ab286c9f7f59d41c56220b1ea",
+      "bytes": 242029
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c04_adverse_outside_bar_directional_long_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "aa4ecf705dceb4bed52d319503a8d122c4fafdd7ba2b1fdda568809efa42e71d",
+      "bytes": 554621
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c05_adverse_outside_bar_directional_short_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "dcfc4b6e3b2ff0cb4a100ce616dfbbbe8835b46f885181609405abb0cd3fd3fa",
+      "bytes": 1767471
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c05_adverse_outside_bar_directional_short_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "6dea91906ba5054b53ecab09cdba9463d9378529e1d2beeda4c609afac6b439a",
+      "bytes": 2363363
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c05_adverse_outside_bar_directional_short_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "323addc86630967ae9ff978f4e75cad93ec6be4510bbabae544b36562e68e868",
+      "bytes": 245215
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c05_adverse_outside_bar_directional_short_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "969efed04a50b54e1db6ad8fa1cc3f4e2d1217c2f6b9e9b5b3daba2c7bb10d29",
+      "bytes": 561719
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c06_rejection_tail_context_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "1e858e80db55e495183f23b6185c36a230cf267b53371bff292c9a1e9e9b3364",
+      "bytes": 1546355
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c06_rejection_tail_context_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "04971f0cb8197b505d6770d3d2ac140fc8de946ea969ab905171d559a9ecea29",
+      "bytes": 2076355
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c06_rejection_tail_context_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "bdefdbfb657143bb4da8c40d2e137c55790be5dc209712a653dc82b5da6b8425",
+      "bytes": 214311
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c06_rejection_tail_context_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "ecc877477d1f858d067a2154a99e45d286c00aed52fae0976c02de8f7064f565",
+      "bytes": 492871
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c07_rejection_tail_directional_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "4a98e26a813a440a510c03d48906339c5bb2bc7fa7a3b93814f27d18667b27c7",
+      "bytes": 1637297
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c07_rejection_tail_directional_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "baf518fd986549d8ab704eaad8dffbd38707621a6b81ed68332cdb2e2415d92a",
+      "bytes": 2194389
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c07_rejection_tail_directional_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "57cdbf1e2055d55a314646d696757343d8978ccfd328d1c9648cc466ab117c51",
+      "bytes": 227047
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c07_rejection_tail_directional_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "7627e1990c95a935e10e0f08e7d87566a2ca76b9af9348643fbd7060e12dc556",
+      "bytes": 521243
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c08_wide_range_doji_negative_control_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "7f9281a91b8f710690ade764abc1f484bcb88347217e9ccd56c97a37e6dd7f97",
+      "bytes": 1705505
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c08_wide_range_doji_negative_control_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "f82b87aaab0ae3524f4b6670ae580cd08cf7acf054b3c34ad49a7e6910bdfa6d",
+      "bytes": 2282913
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c08_wide_range_doji_negative_control_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "93ef4bdf3b790c48cc15c4a70dce7da1b8053aee8f59b434e9e609bcab699e79",
+      "bytes": 236605
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c08_wide_range_doji_negative_control_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "6208e7fcf26248d211732a2c48baa7f7361820c8963dc3aa1e85e35e4b3eae56",
+      "bytes": 542527
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c09_impulse_body_context_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "8c1e1c73cb82f497d118bcfdedcbaeefa07cca8f76a088f02c58bd1122d5c3d1",
+      "bytes": 1425613
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c09_impulse_body_context_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "4309f6e639fa2a31b29a0086cf47eac78431d29ea2d519fe78056d9b1465fe3e",
+      "bytes": 1919601
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c09_impulse_body_context_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "c47b6bec8e70c7bebde4fb5588ce6732ccf433fef68c904dfe885d0d9b51acfd",
+      "bytes": 197373
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c09_impulse_body_context_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "9792d1fa5a51f9b418db12f9feca1fb50d761d4475bda90549b3748cd60145a2",
+      "bytes": 455077
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c10_impulse_body_directional_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "1be5d2beab214dcab4bad144d9b4ea5eb78804567ec9adf09f2918b366a6c747",
+      "bytes": 1577293
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c10_impulse_body_directional_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "f381e53d5b03ea2e48aaa36ce1911bf7c108198196264359d59ee9591a89da9a",
+      "bytes": 2116481
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c10_impulse_body_directional_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "e94b8bf58baf1b7a070edba2c6412237139bf33f5c4b92c549d8e62092072af3",
+      "bytes": 218613
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c10_impulse_body_directional_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "972770850ad048f782674b12dd935eadb78c202a13c5283bd05049a2eda9ac1b",
+      "bytes": 502397
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c11_narrow_range_compression_context_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "ef0520c4156f7e943875312be752c1c1d3e314b4d281cc58350e3c27e019953f",
+      "bytes": 1644887
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c11_narrow_range_compression_context_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "86ce362646aaf97f9cfc2044570f1d06f9cf4561bdf095a41368373a4cd9da68",
+      "bytes": 2204217
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c11_narrow_range_compression_context_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "48d2836d16b4f4d80095139500cf5cfff3d56508bb4a21df82415ff49663942f",
+      "bytes": 228111
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c11_narrow_range_compression_context_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "eab9a55560df68c474cd7a5eec20660967b7e97fe1e6f9394f88821b97dde557",
+      "bytes": 523623
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c12_expansion_after_compression_context_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "389c3419c790db698a029a19428989f7daef5ef7bffed2e78063baf2e315d8ac",
+      "bytes": 1758801
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c12_expansion_after_compression_context_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "241a9a34c32109b13cdb3468202c2dca440fdc5dbcff6ef634270b859d8bf8e2",
+      "bytes": 2352093
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c12_expansion_after_compression_context_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "54c2173df21735f3c79685daa78d119d20b7405cd96276d1a5adf364dcbb87c0",
+      "bytes": 244067
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c12_expansion_after_compression_context_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "ecd169754b50c87f99c14961c791bcf004c78040048dde69f0785ccf884c1218",
+      "bytes": 559125
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c13_outside_bar_plus_rejection_tail_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "f0689aa4619e249fcba7d9ac961085465b8a067a203b92d0f6a19f59c4ec3508",
+      "bytes": 1652425
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c13_outside_bar_plus_rejection_tail_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "b90500aac854ed031d81131bae0bc1289d97adf2cc89c184d298491173a7b3df",
+      "bytes": 2214019
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c13_outside_bar_plus_rejection_tail_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "9f88544a0fe8fc5da25dc82e5c37955f97dbd40bd36b02dfe14a4dbc23c9dfea",
+      "bytes": 229171
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c13_outside_bar_plus_rejection_tail_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "17bab1b41427bc137a464a3331306c789c12b320978d2b504b23a275a7734011",
+      "bytes": 525967
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c14_outside_bar_plus_impulse_body_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "ccf167ce84f4175d604551a86b2d64859ed993376287a499f79ca778af7e1e63",
+      "bytes": 1591809
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c14_outside_bar_plus_impulse_body_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "6d565bbfb8fbf5400f880b926a71b31cc06062844b43369f6171a38109e6a927",
+      "bytes": 2135357
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c14_outside_bar_plus_impulse_body_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "a916a2c509c1eec5bdfd0a590faaca9fdb628f5d4bbc2ca907cbb17de53c26c0",
+      "bytes": 220679
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c14_outside_bar_plus_impulse_body_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "d9606abb65bddd5c1a474283b53d972ee2a1e604b87a2b21b52f0b8b447c3d10",
+      "bytes": 507047
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c15_morphology_score_low_complexity_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "e2825693f43f06165161f50da318be8ab9913409bc47f361ae3046256c08694a",
+      "bytes": 1676285
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c15_morphology_score_low_complexity_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "b847ac416306e5f9a0aaa6ea5a0796f899b80a3099c613cf5a0295d0880cc36e",
+      "bytes": 2244949
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c15_morphology_score_low_complexity_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "9fc5fc47e37c0a98738026dad8f0e6f3b27e80f0a77d3c589ad3d79617a44494",
+      "bytes": 232445
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c15_morphology_score_low_complexity_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "0576344ad22150bdb5f0c282828130ad982b2ac3b6dda791f7f7ade3c593a399",
+      "bytes": 533277
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c16_directional_morphology_score_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "fa28cce9bbea36360a19bf1fb6f683fac2c80ac35669675e48c99a5645113191",
+      "bytes": 1651123
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c16_directional_morphology_score_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "513526aed570514fec36f656f2dd3cd036fa2ffa2e5be1aaa1b8e9ca174df532",
+      "bytes": 2211895
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c16_directional_morphology_score_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "85de6340a79f0ec44e0787ca0ab61932979e23725770b281760b28753975e29a",
+      "bytes": 229045
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c16_directional_morphology_score_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "68829b6ddfef4adf4ea149c99f379a445726eaf73da67768bbf00d1e4e70cc3f",
+      "bytes": 525459
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c17_morphology_contrast_extreme_sweep_tier_a_oos_stage40_signal_features.csv",
+      "sha256": "3ef57d780caf99fad42b15f5b3ade63e20af19ffd528b41b7a0d042ac5c618e0",
+      "bytes": 1625625
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c17_morphology_contrast_extreme_sweep_tier_a_validation_is_stage40_signal_features.csv",
+      "sha256": "24e747cd3575fbc8426c0915e5fc320b80f77662cee410df9abf12d793440980",
+      "bytes": 2179225
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c17_morphology_contrast_extreme_sweep_tier_b_fallback_oos_stage40_signal_features.csv",
+      "sha256": "285a611e5305548b58cb0a9c1b5d8a022e3c3ad55aeba9a29efa54bd2d800459",
+      "bytes": 225403
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/features/c17_morphology_contrast_extreme_sweep_tier_b_fallback_validation_is_stage40_signal_features.csv",
+      "sha256": "f2bc36ca67781edd849cc4be4567440d259a3b3f15767b4f47bcf2f0e2d332ed",
+      "bytes": 517397
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/final_execution_summary.json",
+      "sha256": "412c82e43e662f6f7334effb2169f883afec0d119d419b2d723198e581616940",
+      "bytes": 18671
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/kpi_record.json",
+      "sha256": "00a27570fa514914423e6c45172cdd3489d3e5054605cba78181b4aab6798fa5",
+      "bytes": 1139558
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/models/stage40_candle_morphology_signal_score_table.csv",
+      "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+      "bytes": 207
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/handoff_manifest.json",
+      "sha256": "30fbdab7d0acf25bf4642a12404fcfbb35d63c1f007b32997f843fcc888be4cb",
+      "bytes": 155455
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/mt5_compile.log",
+      "sha256": "2b6ad769ab982dd46bf1036078717d58bae2be87b9f7ce7d9ed6c7459f99ddfc",
+      "bytes": 7994
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/mt5_result_import_summary.json",
+      "sha256": "a1a27ad47f3dc77b43af01db65b1fa6812f48d98cf9a3a9863c394c060bf10f2",
+      "bytes": 221
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c01_reference_no_candle_morphology_oos.htm",
+      "sha256": "17ebd6e5c7d3d264f5f028b0714d33a23fffa49aea767c7009ace95cc97c47ed",
+      "bytes": 1655748
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c01_reference_no_candle_morphology_oos.png",
+      "sha256": "08a761621efcfd5b68d62891d2734fa0383f19e0ab7744468eddfc576b13b706",
+      "bytes": 19756
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c01_reference_no_candle_morphology_validation_is.htm",
+      "sha256": "e7c432654e53e9dcc47d7ed76a93857a6323f7b1066999f9b218d2534acd30f3",
+      "bytes": 1060110
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c01_reference_no_candle_morphology_validation_is.png",
+      "sha256": "d1fbcfe493c8ea499b17c6e66db75c5c93c935f67f0502a7c847d381af4c3d5b",
+      "bytes": 14646
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c02_outside_bar_context_oos.htm",
+      "sha256": "852f41712996802cf66b2c0245f7d1480ccb62d7324074d02c4da4609802d0f0",
+      "bytes": 403126
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c02_outside_bar_context_oos.png",
+      "sha256": "787763d7f6dfd9bb07c930daf4e47247284cf34ea6c53f3722a047517bf7b721",
+      "bytes": 15872
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c02_outside_bar_context_validation_is.htm",
+      "sha256": "c17840c7246832498726c3b2226350db63adeab5a80e56230ffd97c8b4eca2c6",
+      "bytes": 548350
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c02_outside_bar_context_validation_is.png",
+      "sha256": "b48bb2632d9e0e331fb85d6d4dac14134b32922d7d668fce604e747e203f666c",
+      "bytes": 15480
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c03_adverse_outside_bar_filter_oos.htm",
+      "sha256": "416e1da36cf4bda6979942fa86d566d1bb9677b15e8ee42d2cb352e936e80f4b",
+      "bytes": 1655668
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c03_adverse_outside_bar_filter_oos.png",
+      "sha256": "08a761621efcfd5b68d62891d2734fa0383f19e0ab7744468eddfc576b13b706",
+      "bytes": 19756
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c03_adverse_outside_bar_filter_validation_is.htm",
+      "sha256": "2af3bb7134339fe3ac3d7828b64330d26f7a6038a32d09b3ec60887197232527",
+      "bytes": 1060030
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c03_adverse_outside_bar_filter_validation_is.png",
+      "sha256": "d1fbcfe493c8ea499b17c6e66db75c5c93c935f67f0502a7c847d381af4c3d5b",
+      "bytes": 14646
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c04_adverse_outside_bar_directional_long_oos.htm",
+      "sha256": "99fa9320f493658ec602e074bfe494c5f9c21a472146f9104213e05aa3652aeb",
+      "bytes": 1655868
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c04_adverse_outside_bar_directional_long_oos.png",
+      "sha256": "08a761621efcfd5b68d62891d2734fa0383f19e0ab7744468eddfc576b13b706",
+      "bytes": 19756
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c04_adverse_outside_bar_directional_long_validation_is.htm",
+      "sha256": "cc5a689f688e411ed55a67390df4e64a5a4c63f86102079468ba852ab7b258e2",
+      "bytes": 2131140
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c04_adverse_outside_bar_directional_long_validation_is.png",
+      "sha256": "3121c21c3653e90383a748e2d2f5dd3a85a6d2fd47065c8b86e0b716c8e79638",
+      "bytes": 17264
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c05_adverse_outside_bar_directional_short_oos.htm",
+      "sha256": "bae4e3afbe07158378a65df9ee2b35a5511907318ec4b368a97576cf0fe114a1",
+      "bytes": 1655888
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c05_adverse_outside_bar_directional_short_oos.png",
+      "sha256": "08a761621efcfd5b68d62891d2734fa0383f19e0ab7744468eddfc576b13b706",
+      "bytes": 19756
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c05_adverse_outside_bar_directional_short_validation_is.htm",
+      "sha256": "68fc9643edcb944daa1a2b47bb3801efdfd04ea440e43f954f0636d4895e9fa2",
+      "bytes": 2131160
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c05_adverse_outside_bar_directional_short_validation_is.png",
+      "sha256": "3121c21c3653e90383a748e2d2f5dd3a85a6d2fd47065c8b86e0b716c8e79638",
+      "bytes": 17264
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c06_rejection_tail_context_oos.htm",
+      "sha256": "b522d794e922c2aeb6e6b663f2b25d550f80be653354e1fd71d4320fed35c0d8",
+      "bytes": 258206
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c06_rejection_tail_context_oos.png",
+      "sha256": "08ec079bad4481ecb4abddfcc9004aa50f4ebca8c4092b883ffd4baaa04f8d1a",
+      "bytes": 14550
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c06_rejection_tail_context_validation_is.htm",
+      "sha256": "501453f0b75fcb1c70b96c9afe228fec51d52971091e7af468efd2528382e981",
+      "bytes": 407522
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c06_rejection_tail_context_validation_is.png",
+      "sha256": "95a67ee7ef832a0e9d35cc750151bdc49bbf0537b02fe82df36292e106170d18",
+      "bytes": 16085
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c07_rejection_tail_directional_oos.htm",
+      "sha256": "98db11f0c466d3b46a5d336252d7ad9fc301aa7034f91f68c58f8e1bee53a885",
+      "bytes": 154702
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c07_rejection_tail_directional_oos.png",
+      "sha256": "e93cc4321145826c8b305156ff1b4878dc8d9ebc1832527d73e7ddfdb10c4533",
+      "bytes": 14962
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c07_rejection_tail_directional_validation_is.htm",
+      "sha256": "7a3bed7ebfcc21cdabb86a11d7bcf579628bb5bce943c2b2e54b6eb60cf5a189",
+      "bytes": 283296
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c07_rejection_tail_directional_validation_is.png",
+      "sha256": "996da9b6635b18bdb6d77a9383279b9f2f471aa42f77bbd977cc8ce8c0a39e13",
+      "bytes": 15994
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c08_wide_range_doji_negative_control_oos.htm",
+      "sha256": "a1cbf4f75e15d0ced54626fc9b7c5f88a3edd52429796b1cbe11726f00b782fb",
+      "bytes": 72320
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c08_wide_range_doji_negative_control_oos.png",
+      "sha256": "007f4cd517a75a008875986ada8b1d2261e1f39b836c1870a1ae5e2723b1f37b",
+      "bytes": 14747
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c08_wide_range_doji_negative_control_validation_is.htm",
+      "sha256": "202533ae7ec2f248704702a9d216a8886fc832b3763b2d75c405dcb26bb72bf6",
+      "bytes": 80728
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c08_wide_range_doji_negative_control_validation_is.png",
+      "sha256": "bba832a3b0e822c68a05355bde5c47ca6948261f442a88af00e426f50e067f4f",
+      "bytes": 14989
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c09_impulse_body_context_oos.htm",
+      "sha256": "215e06f72fab73dcc074bd8080c5b315c81ca226208b9016f268319671cfa490",
+      "bytes": 1012120
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c09_impulse_body_context_oos.png",
+      "sha256": "595ad86287f9e4230e7d99e53cc0fbfcb66589f11b72d96158e2e7e48f2f6e46",
+      "bytes": 17562
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c09_impulse_body_context_validation_is.htm",
+      "sha256": "136372da539afbfb211827a5e3c2d49f976f52b3cd90578bb05f23bf1ecad61a",
+      "bytes": 1401646
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c09_impulse_body_context_validation_is.png",
+      "sha256": "5df7eab831af1d9372baf332efea9353b8e1909b9e0cc7a55121a837eff33bff",
+      "bytes": 18352
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c10_impulse_body_directional_oos.htm",
+      "sha256": "a448fbf9b13f52a800f3b67b33bdfdea042e8c976cdeca0a13473eaa342e7a78",
+      "bytes": 1012200
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c10_impulse_body_directional_oos.png",
+      "sha256": "595ad86287f9e4230e7d99e53cc0fbfcb66589f11b72d96158e2e7e48f2f6e46",
+      "bytes": 17562
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c10_impulse_body_directional_validation_is.htm",
+      "sha256": "5683c76bfaea7b4e43c4f2c10955d43d48d45c8331beb07a9a08437cb27a68c7",
+      "bytes": 1401726
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c10_impulse_body_directional_validation_is.png",
+      "sha256": "5df7eab831af1d9372baf332efea9353b8e1909b9e0cc7a55121a837eff33bff",
+      "bytes": 18352
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c11_narrow_range_compression_context_oos.htm",
+      "sha256": "f7092f67c22b722a4b01aadc60ecfcfda374542e48ed464d90215e29afc266ea",
+      "bytes": 138230
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c11_narrow_range_compression_context_oos.png",
+      "sha256": "9c7b4636a8420f14b0b6d783b3e252ed3c41d5750d4f3ee546c4f582bbdab25a",
+      "bytes": 13446
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c11_narrow_range_compression_context_validation_is.htm",
+      "sha256": "95c36b6726b5d1edb11323d21bfa2e45b24fb289de4abf73bd5aaf63b6a8faa9",
+      "bytes": 154972
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c11_narrow_range_compression_context_validation_is.png",
+      "sha256": "45fedbeb25b04d5b82baa673024ec8fc5ef658d8d308d690f13c1a522f9c3f6b",
+      "bytes": 14758
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c12_expansion_after_compression_context_oos.htm",
+      "sha256": "90c6c3582bc00cbc81379b299537d2ebfc2b849a314dbd8d8f83885c0cbccde5",
+      "bytes": 451122
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c12_expansion_after_compression_context_oos.png",
+      "sha256": "5f6151a2763751ba6e62b697d7fb8a449c4c831c9a77c6af410e8e692db8212e",
+      "bytes": 14749
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c12_expansion_after_compression_context_validation_is.htm",
+      "sha256": "239cdc149beb0c91c9d15a2b2234ae50de34db8407c4a32e61376a2af157a924",
+      "bytes": 453388
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c12_expansion_after_compression_context_validation_is.png",
+      "sha256": "0a9cc1d80efd748269274797f0f764d7add24bae84c185564c7f574564ebc192",
+      "bytes": 17260
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c13_outside_bar_plus_rejection_tail_oos.htm",
+      "sha256": "f3aa4b23e8c069dc02a689c48d8836087becd5a1208cdac76280e85d844e0591",
+      "bytes": 76422
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c13_outside_bar_plus_rejection_tail_oos.png",
+      "sha256": "90578eefcb0d6f267f08ca5886571fdd78a88efc36fd12240156774cf26f9908",
+      "bytes": 15976
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c13_outside_bar_plus_rejection_tail_validation_is.htm",
+      "sha256": "1feeb51de37a4d00b15b0f03cb6c3ebcc7722b82f8b5d967e8fbaaa9a392103e",
+      "bytes": 123974
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c13_outside_bar_plus_rejection_tail_validation_is.png",
+      "sha256": "21db11c0160a7f5a4d9efae900b7a1224b888736b546ced7ea8c3ec0bc6829dc",
+      "bytes": 14989
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c14_outside_bar_plus_impulse_body_oos.htm",
+      "sha256": "79dd847b1a0af7af13c4de6d4dc6f8f295b6f86e2aed74e8dbc0f5fde52630a5",
+      "bytes": 216870
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c14_outside_bar_plus_impulse_body_oos.png",
+      "sha256": "2a60e7563a4b5407365cdbe0b0f5aa273c4846a8cba090fe67ee6b122f901ef3",
+      "bytes": 15613
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c14_outside_bar_plus_impulse_body_validation_is.htm",
+      "sha256": "ddcc779c0dfcb9ad801b2ef6f5c34510118dbbb019000cbee1f7f1bebbe2de45",
+      "bytes": 264734
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c14_outside_bar_plus_impulse_body_validation_is.png",
+      "sha256": "72171d6edcc7fe106ff7b4c6dab7dc2cb6997a60214b2feec2248085e30b6568",
+      "bytes": 13483
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c15_morphology_score_low_complexity_oos.htm",
+      "sha256": "0401f08c2def30fb7b79e450ac413172c0f150580d9959847ea0803f52c5451d",
+      "bytes": 1459922
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c15_morphology_score_low_complexity_oos.png",
+      "sha256": "c688062d4f75053e02a299af40b2607d4f77c210f329c0a1d1a3bacb2442739d",
+      "bytes": 17217
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c15_morphology_score_low_complexity_validation_is.htm",
+      "sha256": "10b3f44916657530437a917217c92c1a0e1078dffe73ae3fa9037e0e221ac25b",
+      "bytes": 2129022
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c15_morphology_score_low_complexity_validation_is.png",
+      "sha256": "494db86be5cf84933fa7243dd624f6bc37e040097c8aaf23b30c9add60f87335",
+      "bytes": 18710
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c16_directional_morphology_score_oos.htm",
+      "sha256": "2bf1fba0a61f6c4e9b0a2575f20a6b58db319d95c580e24fa5d8b68dd602264a",
+      "bytes": 7504510
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c16_directional_morphology_score_oos.png",
+      "sha256": "f4e5ed097fc59f193ab686c1c999b20a51da1502788a66a2a175b045894668f3",
+      "bytes": 19005
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c16_directional_morphology_score_validation_is.htm",
+      "sha256": "4480f80d6b78e586d660562e6fafa774527ebc98c9931a334fc4a959872180a6",
+      "bytes": 9966040
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c16_directional_morphology_score_validation_is.png",
+      "sha256": "6897c5f3b9254ebf9c7e0555c7d4c39872e6ae712eb624a3cce9582744d1bd4d",
+      "bytes": 17247
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c17_morphology_contrast_extreme_sweep_oos.htm",
+      "sha256": "a7ad5737f2c435940186c3e53e767138cf3e4842ea67a2405ed6f176ff0d3c87",
+      "bytes": 4487254
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c17_morphology_contrast_extreme_sweep_oos.png",
+      "sha256": "24dfdd3ff5cc0b70c0cf988a6089728a38f3096035d0e9822fa328c17bd0bcfd",
+      "bytes": 18666
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c17_morphology_contrast_extreme_sweep_validation_is.htm",
+      "sha256": "b2f042438a15ae9297e9b95e75e882cd8e673280086c8f556abbdb1128a46df4",
+      "bytes": 5193780
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1_routed_c17_morphology_contrast_extreme_sweep_validation_is.png",
+      "sha256": "0d6b2dd1754bf660fe9b154b32f23f1b84aebc3d242a5ad50dd6090f0dbf6491",
+      "bytes": 20344
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c01_reference_no_candle_morphology_oos.ini",
+      "sha256": "3bad9172e500e8dbcb6b840488ab8aee89cf385ecec97eddf0d9c4ed36d53205",
+      "bytes": 511
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c01_reference_no_candle_morphology_oos.set",
+      "sha256": "773529f238c7737a824068609f5394d76592cd02dba70be64fc2a63051f4421c",
+      "bytes": 2688
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c01_reference_no_candle_morphology_validation_is.ini",
+      "sha256": "2e6dde2cd2381f7af41ca57eab2e978cfa6cd45b3185b5ab3eba9e9618abfb11",
+      "bytes": 521
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c01_reference_no_candle_morphology_validation_is.set",
+      "sha256": "8033776e71ad945d18eb5d85242571d2b2f2d06d7cd94b85470adc62b49eeb08",
+      "bytes": 2738
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c02_outside_bar_context_oos.ini",
+      "sha256": "697fa10b68f370d5e67f892b8a36066309c83e9473de7770abe231ec43e96d64",
+      "bytes": 500
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c02_outside_bar_context_oos.set",
+      "sha256": "cb7b48c3c8fe5781e02b4833df37fc423b9b94f382e4b7623772ed1bc26b8bdf",
+      "bytes": 2622
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c02_outside_bar_context_validation_is.ini",
+      "sha256": "847af9128663003a5aff77a6b4a5b2b841351c90771fce8190bfdb197d7e6ea5",
+      "bytes": 510
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c02_outside_bar_context_validation_is.set",
+      "sha256": "9627c044c7ae1648295b0a7fda0f38fddbd5b0277c97fc647d03a4a15123c3d3",
+      "bytes": 2672
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c03_adverse_outside_bar_filter_oos.ini",
+      "sha256": "68e6b64dbfef441a5151733327e641e394767faac4f837e9d142dde59b4a9ca1",
+      "bytes": 507
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c03_adverse_outside_bar_filter_oos.set",
+      "sha256": "db533af1e1c748efc8d73d1a1e0273610b15d0105906839501adff69e5c868d0",
+      "bytes": 2664
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c03_adverse_outside_bar_filter_validation_is.ini",
+      "sha256": "82e24a7059ec6ad409c010f54974f98120555ac3650ca2590f3dc2862c9eacb0",
+      "bytes": 517
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c03_adverse_outside_bar_filter_validation_is.set",
+      "sha256": "95818ae09ac640cbc6862ebc16c0b23a14e7b0806ebc41fd5c1f78d39fded6f1",
+      "bytes": 2714
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c04_adverse_outside_bar_directional_long_oos.ini",
+      "sha256": "e48e0dc0282bb5c3091aa0e525d0b048c41bac5e55a7ff01748c2c1bd89d0407",
+      "bytes": 517
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c04_adverse_outside_bar_directional_long_oos.set",
+      "sha256": "0d9d295d73bf0bfea75ae4bba17969f1f4479ffa315d4365b3028bbc0e47dbc4",
+      "bytes": 2724
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c04_adverse_outside_bar_directional_long_validation_is.ini",
+      "sha256": "9851a6525e2c60527cc59a4355a09fce34bdc1aa27fcb888837e2d34588e2534",
+      "bytes": 527
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c04_adverse_outside_bar_directional_long_validation_is.set",
+      "sha256": "c860b7e5ba18233cba08eb7dea10c210d395c04853bbb31a1fbea90485e40449",
+      "bytes": 2774
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c05_adverse_outside_bar_directional_short_oos.ini",
+      "sha256": "765d899d4bc011eda7fcb9e20c68ce3afdc03dbfd8f995c0a5a880671de2b811",
+      "bytes": 518
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c05_adverse_outside_bar_directional_short_oos.set",
+      "sha256": "c8d78a9e160855e23b6a94894d05a50568f215419be1e6d0e6df3da040369162",
+      "bytes": 2730
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c05_adverse_outside_bar_directional_short_validation_is.ini",
+      "sha256": "4fc5973cab9f654dcce07691bdd6319ec08bcb4733581e45e64a37e54ae25d39",
+      "bytes": 528
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c05_adverse_outside_bar_directional_short_validation_is.set",
+      "sha256": "8fa92720a0b7b3c1077b3a15ccae4e4d0fb06c62cf9a8a2c459e35234dcde7e4",
+      "bytes": 2780
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c06_rejection_tail_context_oos.ini",
+      "sha256": "650d8f2dca4bd438c69cbb9d3b7600f46ac94a59a6c933096c8ccfd1e48f34cd",
+      "bytes": 503
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c06_rejection_tail_context_oos.set",
+      "sha256": "91421ef734d50d11c5b18293b4f5378a55f16bc7f3696e648f5ad482227f1e52",
+      "bytes": 2640
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c06_rejection_tail_context_validation_is.ini",
+      "sha256": "08f17ee581c1f10f181bb6fd4dd942649691680811bbab3f1f1384fd0aa26981",
+      "bytes": 513
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c06_rejection_tail_context_validation_is.set",
+      "sha256": "5f7aeaf6a98f5f3abe307bdb2daf8e3ed071896d47b0eebcc8f02db86511dd7d",
+      "bytes": 2690
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c07_rejection_tail_directional_oos.ini",
+      "sha256": "c8a17503e34670cbf0d373ef617bc9741eabefb47908d6d679eeacdbc99f5043",
+      "bytes": 507
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c07_rejection_tail_directional_oos.set",
+      "sha256": "94ddd7f280b43c51b20df42bd263c50eebbe9451cd531bfdce96a3017dde4e3c",
+      "bytes": 2664
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c07_rejection_tail_directional_validation_is.ini",
+      "sha256": "7c666ee0e3b8edc91b2d8dc5b994dcad83c0952664ed7e6b70955c3923365079",
+      "bytes": 517
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c07_rejection_tail_directional_validation_is.set",
+      "sha256": "2a557f5dcc9d400f511a336a6e7510090a67ae1afb3be5848f6701450db73178",
+      "bytes": 2714
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c08_wide_range_doji_negative_control_oos.ini",
+      "sha256": "d325afc833f49265c509c2a5d34cd4f18855f83821a5a9417a2099b5e7a9083d",
+      "bytes": 513
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c08_wide_range_doji_negative_control_oos.set",
+      "sha256": "013bde502fe8befe150767cc49f05fcef837d8b4cbb2cebfd37a131701eecdc4",
+      "bytes": 2700
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c08_wide_range_doji_negative_control_validation_is.ini",
+      "sha256": "fdae8dcd56a5dc492f7c3547ff4c8f91273abc8e12b20addae338c67aa0030bf",
+      "bytes": 523
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c08_wide_range_doji_negative_control_validation_is.set",
+      "sha256": "1ec9403011830363b0cc6bf8b5390efbd51c8754d339491adea24456790deff7",
+      "bytes": 2750
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c09_impulse_body_context_oos.ini",
+      "sha256": "3b4e616c5c9b0017c88294f804348026cb7eace498eca7bcd04a5d21ac8cfccb",
+      "bytes": 501
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c09_impulse_body_context_oos.set",
+      "sha256": "83eabf449a8c598c20d15054bb9e5e325dd5cb8b5418d77edad90cb2d1b92db7",
+      "bytes": 2628
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c09_impulse_body_context_validation_is.ini",
+      "sha256": "0ab82f3e0433c345215b6c6ed5842089c49bf74f06ad974899e88da93189fbb0",
+      "bytes": 511
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c09_impulse_body_context_validation_is.set",
+      "sha256": "062f4955e2f0a80b4be5d8da2c8d45f97c04945ae1ea6862367881bc226882fd",
+      "bytes": 2678
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c10_impulse_body_directional_oos.ini",
+      "sha256": "cd38a58dd8218db5adfc03d66169c607ebe6eadb07164ad3a4d579813398eccb",
+      "bytes": 505
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c10_impulse_body_directional_oos.set",
+      "sha256": "f5ae31b252c7c1469a5a0ab12e334f263113ac08a30de3f93356b20724d6af3d",
+      "bytes": 2652
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c10_impulse_body_directional_validation_is.ini",
+      "sha256": "35e271f7168792c5a8b0c28cafa4a136b7a5359a45030d54499fff69178346d1",
+      "bytes": 515
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c10_impulse_body_directional_validation_is.set",
+      "sha256": "170a0c6a64a38118538e35a39c9ecc1a0e168baa80b9d0de6d642e023032dad4",
+      "bytes": 2702
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c11_narrow_range_compression_context_oos.ini",
+      "sha256": "ac43d4bbfb5e6b0a85b2b777304df142f09c93246f975592ea7e097f69882ef4",
+      "bytes": 513
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c11_narrow_range_compression_context_oos.set",
+      "sha256": "6a14038a6ec346678062e4ece18dfa75b99bf56cc3d317079c4265f991b536bb",
+      "bytes": 2700
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c11_narrow_range_compression_context_validation_is.ini",
+      "sha256": "06f42473624ef09b4e5845f2a8db1d105f83f554f98338f82b02b7f1349116ef",
+      "bytes": 523
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c11_narrow_range_compression_context_validation_is.set",
+      "sha256": "47ea66b43873fcfb34f249fad5f2977e18f2a276ed25297927b2ea830e769a1b",
+      "bytes": 2750
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c12_expansion_after_compression_context_oos.ini",
+      "sha256": "67e3916b0794b8e24396791d08f29c213f902c33fb6f4d83acba35c9b09f0fdd",
+      "bytes": 516
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c12_expansion_after_compression_context_oos.set",
+      "sha256": "26d19fdf6ef6d1a8919ab449a989787a5e9c9d388cbc55521fba6de857928e83",
+      "bytes": 2718
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c12_expansion_after_compression_context_validation_is.ini",
+      "sha256": "f63c840e13910b5a49e14bfc30aff4e2bcd1c2eb3ab058796978fa016ef279bf",
+      "bytes": 526
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c12_expansion_after_compression_context_validation_is.set",
+      "sha256": "d458ad438598a3f077c3bc83797827b09477d0bf5ccfc81e6550b440941192b5",
+      "bytes": 2768
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c13_outside_bar_plus_rejection_tail_oos.ini",
+      "sha256": "055ed9e2de8020063494dd2403c2ff2c33d1f45f482eae1cc02bc9f5fb01bc4f",
+      "bytes": 512
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c13_outside_bar_plus_rejection_tail_oos.set",
+      "sha256": "9ef82d5aef00bc79ffe0109c0130d19c9fc7cb6279321e1ce00912d2159c600f",
+      "bytes": 2694
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c13_outside_bar_plus_rejection_tail_validation_is.ini",
+      "sha256": "8412cb297e823ef13a7e8d18323e6ba716e538f7b130861b4bd3d4ba0f399c37",
+      "bytes": 522
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c13_outside_bar_plus_rejection_tail_validation_is.set",
+      "sha256": "a01be91f92df6803e08302f352a979d66b1143a5adf8a67e25279ea327a7f528",
+      "bytes": 2744
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c14_outside_bar_plus_impulse_body_oos.ini",
+      "sha256": "3260e81d125a258bd779e19048f79a2407044dee7a03c199774ae52af329ba1b",
+      "bytes": 510
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c14_outside_bar_plus_impulse_body_oos.set",
+      "sha256": "a44bc6af4408e8357bb50ec37d2e7b986489ce0cd188a83246befad9c73c903a",
+      "bytes": 2682
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c14_outside_bar_plus_impulse_body_validation_is.ini",
+      "sha256": "847c56fd2b3b42cf2195b87657f7251f5975d5ab9e8e3eb63209046b37750e95",
+      "bytes": 520
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c14_outside_bar_plus_impulse_body_validation_is.set",
+      "sha256": "1df937606dc761a05da3d7fee596d575155f4a12b473903830995c641a24c104",
+      "bytes": 2732
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c15_morphology_score_low_complexity_oos.ini",
+      "sha256": "e9b446afab1aacef8b9221f819fac766d809661c59ffe30acfc9978cabd77011",
+      "bytes": 512
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c15_morphology_score_low_complexity_oos.set",
+      "sha256": "fd10aba6452c2f48962705c97adc241ef50f872e8c3dfda2c505fed45644e723",
+      "bytes": 2694
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c15_morphology_score_low_complexity_validation_is.ini",
+      "sha256": "6abd14c387a46c61a34766597782ce6afd3f0bf7371ae2b581e81eb1e4089ec7",
+      "bytes": 522
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c15_morphology_score_low_complexity_validation_is.set",
+      "sha256": "0481f5574eb27356d59bcebb0ac9adc5bacd535d996fcdaeac7d2a0c396c6475",
+      "bytes": 2744
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c16_directional_morphology_score_oos.ini",
+      "sha256": "112364358387943d74162ab25e0ac21ff6f5e7481f142ac7c9b056ca90ab8be6",
+      "bytes": 509
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c16_directional_morphology_score_oos.set",
+      "sha256": "3234ed6fb379b292c7974e0e4c6e4c19f3e92a290448698318c78e496befecfa",
+      "bytes": 2676
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c16_directional_morphology_score_validation_is.ini",
+      "sha256": "136d1bbcd4e62fb33f6b94e8cc33b8043788f2cef4b83fe1bb28406e7d23544d",
+      "bytes": 519
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c16_directional_morphology_score_validation_is.set",
+      "sha256": "14138f0b0aaea24991ee9fd2e444d0f4e956a900e5d639407b3ad8b618c822d9",
+      "bytes": 2726
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c17_morphology_contrast_extreme_sweep_oos.ini",
+      "sha256": "c84185da5e7723c1f2941a4811fcbdf1ac3e3fd3a89f864c891e690c48f12e0f",
+      "bytes": 514
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c17_morphology_contrast_extreme_sweep_oos.set",
+      "sha256": "38793acd8714dec00875283616ee11a5ddca0bb33f92faec9a5dd29590d7cc63",
+      "bytes": 2706
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c17_morphology_contrast_extreme_sweep_validation_is.ini",
+      "sha256": "ee12797d6a711c63b4147cf483b3239c7a4ae9b25472e9ba0609394e4eabc250",
+      "bytes": 524
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/routed_c17_morphology_contrast_extreme_sweep_validation_is.set",
+      "sha256": "5cb4ecc3fb62c4498a83ef71eeab8be023968b714f25e2b7880e45f168c2a08b",
+      "bytes": 2756
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/mt5/tester_request.json",
+      "sha256": "2528ba967221faccfff7e8b9fa9a3e3c5846db6098be610de16e01c8ea398cb0",
+      "bytes": 22192
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/run_manifest.json",
+      "sha256": "cc3c753ba462074344290bc2ca562c74d14696502fe8de3334cbb1d7acc28ea9",
+      "bytes": 155169
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/candle_morphology_lineage.csv",
+      "sha256": "a4d1dc3caab48666b9b3b05c1e7000b13857f8894ec727625ad0c2301a88190a",
+      "bytes": 5488
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/candle_morphology_schema.json",
+      "sha256": "a70ff55a4317eda5c495022be54f971faf87ac4b36c0a8c7750844f432080951",
+      "bytes": 11273
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/stage40_candidate_grid.csv",
+      "sha256": "9a50b550d33c22c408d71fab192dac8acc3066bf3eeab7bba7221c38ffce2547",
+      "bytes": 3242
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/stage40_candidate_signal_table.parquet",
+      "sha256": "21ad8a9448732457ba62000666b9569231b4a466535f3d25ad035aa36a863ba3",
+      "bytes": 33016329
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/stage40_candle_morphology_closed_bar_table.parquet",
+      "sha256": "b915d4a1abfd89cbbba9dd615577926192009ce889fae20d9a07b9f0631037c9",
+      "bytes": 14755838
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/stage40_common_decision_surface_table.parquet",
+      "sha256": "a63e349fc82214ff145f9fe9b238b219202a548db269ce15cf911ec3f280e38e",
+      "bytes": 29446103
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/stage40_mt5_candidate_summary.csv",
+      "sha256": "3c934a56fc2f620f051c34bd42a2b32783ad9975f25413d71c2761aedaaa7727",
+      "bytes": 48501
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/stage40_python_candidate_summary.csv",
+      "sha256": "a32590731b1dc4824f777affe3174a74b79c8a740b43059fa38a6c3c636a043e",
+      "bytes": 18286
+    },
+    {
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/02_runs/run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/tables/stage40_route_coverage.json",
+      "sha256": "dbbddf3d5c773326154406813d36aff6ac4307ea7988205d7fe307c8be30ef1d",
+      "bytes": 892
+    }
+  ]
+}

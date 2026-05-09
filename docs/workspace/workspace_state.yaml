@@ -1,8 +1,8 @@
 updated_on: '2026-05-09'
 project_mode: clean_stage_restart
-active_branch: codex/auto-campaign-01-independent-alpha-topic-scout
-active_stage: 40_feature_interaction__volatility_squeeze_expansion_scout
-current_run_id: run34A_volatility_squeeze_expansion_broad_mt5_probe_v1
+active_branch: codex/stage40-candle-morphology-signal-quality
+active_stage: 40_feature_structure__candle_morphology_signal_quality_scout
+current_run_id: run34A_candle_morphology_signal_quality_broad_mt5_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -2774,3 +2774,19 @@ stage40_feature_interaction_volatility_squeeze_expansion_scout:
   report_path: stages/40_feature_interaction__volatility_squeeze_expansion_scout/03_reviews/run34A_volatility_squeeze_expansion_broad_mt5_probe_packet.md
   packet_summary_path: docs/agent_control/packets/stage40_run34A_volatility_squeeze_expansion_broad_mt5_probe_v1/aggregate_summary.json
   boundary: exploration_only_until_explicit_promotion_packet_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage40_feature_structure_candle_morphology_signal_quality_scout:
+  packet_id: stage40_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1
+  stage_id: 40_feature_structure__candle_morphology_signal_quality_scout
+  idea_id: IDEA-ST40-CANDLE-MORPHOLOGY-SIGNAL-QUALITY
+  status: reviewed_runtime_probe_completed
+  current_run_id: run34A_candle_morphology_signal_quality_broad_mt5_probe_v1
+  mt5_attempt_count: 34
+  mt5_kpi_record_count: 102
+  judgment: reviewed_completed_negative_memory_runtime_probe_only
+  micro_search_gate: failed
+  promotion_candidate_gate: failed
+  legacy_source: Stage32 candle morphology idea only, no legacy result inherited
+  report_path: stages/40_feature_structure__candle_morphology_signal_quality_scout/03_reviews/run34A_candle_morphology_signal_quality_broad_mt5_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage40_run34A_candle_morphology_signal_quality_broad_mt5_probe_v1/aggregate_summary.json
+  boundary: runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
