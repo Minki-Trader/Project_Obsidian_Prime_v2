@@ -1,0 +1,181 @@
+{
+  "generated_artifacts": [],
+  "source_lineage": [
+    {
+      "affects": "feature/model input",
+      "artifact_kind": "input",
+      "created_by_script": "existing_repository_artifact",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "required_for_reproducibility": true,
+      "role": "tier_a_model_input",
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "feature order",
+      "artifact_kind": "input",
+      "created_by_script": "existing_repository_artifact",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "required_for_reproducibility": true,
+      "role": "tier_a_feature_order",
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "input diagnostics",
+      "artifact_kind": "input",
+      "created_by_script": "existing_repository_artifact",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "required_for_reproducibility": true,
+      "role": "model_input_summary",
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "current reference label threshold",
+      "artifact_kind": "input",
+      "created_by_script": "existing_repository_artifact",
+      "path": "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+      "required_for_reproducibility": true,
+      "role": "training_summary",
+      "sha256": "946766a20e230c0567066d8330551408f6161e2beabacbb00d4deb5c257af75c",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "spread proxy and timestamp source",
+      "artifact_kind": "input",
+      "created_by_script": "existing_repository_artifact",
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "required_for_reproducibility": true,
+      "role": "raw_us100_closed_m5_bars",
+      "sha256": "2ee5e97d06d914b9fdeb826708c4613860a2458138dd51de39f3e60819d2995f",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "Tier B fallback materialization",
+      "artifact_kind": "input",
+      "created_by_script": "existing_repository_artifact",
+      "path": "data/raw/mt5_bars/m5",
+      "required_for_reproducibility": true,
+      "role": "raw_mt5_bars",
+      "sha256": "directory_or_not_feasible",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "permission/abstention warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/38_decision_layer__permission_abstention_overlap/04_selected/selection_status.md",
+      "required_for_reproducibility": false,
+      "role": "stage38_negative_memory_status",
+      "sha256": "4ef8f70900a4c4a5081118e853f6dc4a9cc2034cf427296dbe1ed97762dd8ec2",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "permission/abstention warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/38_decision_layer__permission_abstention_overlap/03_reviews/run32A_permission_abstention_overlap_broad_mt5_probe_packet.md",
+      "required_for_reproducibility": false,
+      "role": "stage38_negative_memory_packet",
+      "sha256": "c635ec68b765c85032bc98e29b35306f87ddff78b57dbdf31012eb5cd4d6a57f",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "exit overlay warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/39_exit_risk__non_entry_lifecycle_tail_overlay/04_selected/selection_status.md",
+      "required_for_reproducibility": false,
+      "role": "stage39_negative_memory_status",
+      "sha256": "dc3bdc4410f16a2826c46b4ae12924cbb5a9eec0d2162eeedc6c952d87567c9c",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "exit overlay warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/39_exit_risk__non_entry_lifecycle_tail_overlay/03_reviews/run33A_exit_risk_non_entry_overlay_broad_mt5_probe_packet.md",
+      "required_for_reproducibility": false,
+      "role": "stage39_negative_memory_packet",
+      "sha256": "c387a26d1064d522c68cf465dd21daa25dc16d030ffa3d651e0704d8fee94515",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "candle morphology warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/04_selected/selection_status.md",
+      "required_for_reproducibility": false,
+      "role": "stage40_negative_memory_status",
+      "sha256": "a672942dc0f3b0dfea63d894f0317addfffe9a501067f676af5ac4f977d18ba7",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "candle morphology warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/40_feature_structure__candle_morphology_signal_quality_scout/03_reviews/run34A_candle_morphology_signal_quality_broad_mt5_probe_packet.md",
+      "required_for_reproducibility": false,
+      "role": "stage40_negative_memory_packet",
+      "sha256": "directory_or_not_feasible",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "label/horizon warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/04_selected/selection_status.md",
+      "required_for_reproducibility": false,
+      "role": "stage41_negative_memory_status",
+      "sha256": "4dc19bd95decf071b2d15ad336baa2ebbc0767ebeddfba3186ba20a2a1890743",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "label/horizon warning only",
+      "artifact_kind": "negative_memory",
+      "created_by_script": "existing_repository_artifact",
+      "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/03_reviews/run35A_directional_asymmetric_label_horizon_broad_mt5_probe_packet.md",
+      "required_for_reproducibility": false,
+      "role": "stage41_negative_memory_packet",
+      "sha256": "directory_or_not_feasible",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "entry runtime",
+      "artifact_kind": "MT5 handoff",
+      "created_by_script": "existing_repository_artifact",
+      "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "required_for_reproducibility": true,
+      "role": "mt5_runtime_ea",
+      "sha256": "5ff42e4de1c3ecd7b1e108fb431abf814415127cbe3048d345d7df84bb9ace85",
+      "source_run": "reentry_before_stage42",
+      "source_stage": "current_repo_state"
+    },
+    {
+      "affects": "session feature candidate signal entry diagnostics",
+      "artifact_kind": "intermediate",
+      "created_by_script": "stage_pipelines.stage42.session_structure_signal_reliability_probe.build_common_table",
+      "path": "stages/42_session_structure__cash_open_close_signal_reliability_scout/02_runs/run36A_session_structure_signal_reliability_broad_mt5_probe_v1/tables/stage42_common_session_decision_surface_table.parquet",
+      "required_for_reproducibility": true,
+      "role": "stage42_common_session_decision_surface_table",
+      "sha256": "a4f7cccdd8cf31af15b4af25b65b60c800b4c797111259b52e412df7684cc0f4",
+      "source_run": "run36A_session_structure_signal_reliability_broad_mt5_probe_v1",
+      "source_stage": "42_session_structure__cash_open_close_signal_reliability_scout"
+    }
+  ]
+}

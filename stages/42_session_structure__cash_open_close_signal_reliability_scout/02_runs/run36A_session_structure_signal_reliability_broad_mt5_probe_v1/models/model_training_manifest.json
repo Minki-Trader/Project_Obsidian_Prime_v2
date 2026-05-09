@@ -1,0 +1,99 @@
+{
+  "artifact": {
+    "global_hit_rate": 0.3450363196125908,
+    "long_score_by_bucket": {
+      "cash_open_0_30": -0.10939794419970633,
+      "early_cash_30_60": -0.14351005484460694,
+      "late_cash_240_330": -0.13429752066115702,
+      "midday_lull_120_240": -0.15049342105263158,
+      "morning_60_120": -0.14397905759162305
+    },
+    "model_family": "session_reliability_score_table",
+    "rows": [
+      {
+        "bucket": "cash_open_0_30",
+        "hit_rate": 0.40364188163884673,
+        "long_hit_rate": 0.39060205580029367,
+        "long_score": -0.10939794419970633,
+        "long_signal_count": 681,
+        "score": -0.09635811836115327,
+        "short_hit_rate": 0.4175824175824176,
+        "short_score": -0.0824175824175824,
+        "short_signal_count": 637,
+        "train_signal_count": 1318
+      },
+      {
+        "bucket": "early_cash_30_60",
+        "hit_rate": 0.37224264705882354,
+        "long_hit_rate": 0.35648994515539306,
+        "long_score": -0.14351005484460694,
+        "long_signal_count": 547,
+        "score": -0.12775735294117646,
+        "short_hit_rate": 0.38817005545286504,
+        "short_score": -0.11182994454713496,
+        "short_signal_count": 541,
+        "train_signal_count": 1088
+      },
+      {
+        "bucket": "late_cash_240_330",
+        "hit_rate": 0.3279033105622701,
+        "long_hit_rate": 0.365702479338843,
+        "long_score": -0.13429752066115702,
+        "long_signal_count": 968,
+        "score": -0.17209668943772988,
+        "short_hit_rate": 0.2887700534759358,
+        "short_score": -0.21122994652406418,
+        "short_signal_count": 935,
+        "train_signal_count": 1903
+      },
+      {
+        "bucket": "midday_lull_120_240",
+        "hit_rate": 0.3237619642114024,
+        "long_hit_rate": 0.3495065789473684,
+        "long_score": -0.15049342105263158,
+        "long_signal_count": 1216,
+        "score": -0.1762380357885976,
+        "short_hit_rate": 0.2973883740522325,
+        "short_score": -0.2026116259477675,
+        "short_signal_count": 1187,
+        "train_signal_count": 2403
+      },
+      {
+        "bucket": "morning_60_120",
+        "hit_rate": 0.3301033591731266,
+        "long_hit_rate": 0.35602094240837695,
+        "long_score": -0.14397905759162305,
+        "long_signal_count": 764,
+        "score": -0.1698966408268734,
+        "short_hit_rate": 0.3048469387755102,
+        "short_score": -0.19515306122448978,
+        "short_signal_count": 784,
+        "train_signal_count": 1548
+      }
+    ],
+    "score_by_bucket": {
+      "cash_open_0_30": -0.09635811836115327,
+      "early_cash_30_60": -0.12775735294117646,
+      "late_cash_240_330": -0.17209668943772988,
+      "midday_lull_120_240": -0.1762380357885976,
+      "morning_60_120": -0.1698966408268734
+    },
+    "short_score_by_bucket": {
+      "cash_open_0_30": -0.0824175824175824,
+      "early_cash_30_60": -0.11182994454713496,
+      "late_cash_240_330": -0.21122994652406418,
+      "midday_lull_120_240": -0.2026116259477675,
+      "morning_60_120": -0.19515306122448978
+    },
+    "strongest_bucket": "cash_open_0_30",
+    "weakest_bucket": "midday_lull_120_240"
+  },
+  "features": [
+    "stage42_session_bucket_label",
+    "reference_signal_direction"
+  ],
+  "fit_split": "train",
+  "model_artifact_type": "json_score_table",
+  "model_family": "session_reliability_score_table",
+  "target": "train label_class direction for reliability diagnostics"
+}
