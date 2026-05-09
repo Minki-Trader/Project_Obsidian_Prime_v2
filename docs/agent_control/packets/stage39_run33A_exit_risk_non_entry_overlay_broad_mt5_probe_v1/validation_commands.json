@@ -1,0 +1,41 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile foundation/control_plane/mt5_tier_balance_completion.py foundation/risk/exit_overlay.py stage_pipelines/stage39/exit_risk_non_entry_overlay.py foundation/pipelines/run_stage39_exit_risk_non_entry_overlay.py tests/test_stage39_exit_risk_overlay.py",
+      "failures_or_blockers": "",
+      "result": "passed"
+    },
+    {
+      "command": "python -m pytest tests/test_stage39_exit_risk_overlay.py -q",
+      "failures_or_blockers": "",
+      "result": "passed: 7 passed"
+    },
+    {
+      "command": "python -m foundation.pipelines.run_stage39_exit_risk_non_entry_overlay --timeout-seconds 900",
+      "failures_or_blockers": "",
+      "result": "passed: external_verification_status=completed; mt5_attempts=34; kpi_records=102"
+    },
+    {
+      "command": "python -m pytest tests/test_stage39_exit_risk_overlay.py tests/test_stage38_permission_abstention_overlap.py tests/test_mt5_strategy_report.py -q",
+      "failures_or_blockers": "",
+      "result": "passed: 15 passed"
+    },
+    {
+      "command": "python -m pytest tests/test_agent_control_contracts.py tests/test_required_gate_coverage_audit.py tests/test_validate_run_evidence.py -q",
+      "failures_or_blockers": "",
+      "result": "passed: 19 passed"
+    },
+    {
+      "command": "python -m pytest tests/test_stage39_exit_risk_overlay.py tests/test_stage38_permission_abstention_overlap.py tests/test_mt5_strategy_report.py tests/test_code_surface_audit.py -q",
+      "failures_or_blockers": "blocked by existing global code-surface debt outside Stage39: stage24/stage25/stage26/stage27/stage28/stage36/stage37 cross-stage imports and stage29_32/stage36/stage37/stage38 line-budget debt; Stage39-specific tests in the same run passed",
+      "result": "blocked: 18 passed, 1 failed in tests/test_code_surface_audit.py::CodeSurfaceAuditTests::test_current_repo_code_surface_audit_passes_with_registered_debt"
+    },
+    {
+      "command": "python -m foundation.control_plane.code_surface_audit --root . --output-json docs/agent_control/packets/stage39_run33A_exit_risk_non_entry_overlay_broad_mt5_probe_v1/code_surface_audit.json",
+      "failures_or_blockers": "blocked by existing global code-surface debt recorded in code_surface_audit.json",
+      "result": "blocked: audit artifact written"
+    }
+  ],
+  "mt5_command_count": 34,
+  "status": "recorded"
+}

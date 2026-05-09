@@ -289,6 +289,7 @@ def attempt_payload(
     close_on_flat_signal: bool = False,
     reverse_on_opposite_signal: bool = True,
     close_only_on_opposite_signal: bool = False,
+    extra_set_values: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     set_path = run_root / "mt5" / f"{attempt_name}.set"
     ini_path = run_root / "mt5" / f"{attempt_name}.ini"
@@ -342,6 +343,8 @@ def attempt_payload(
         "InpMaxConcurrentPositions": 1,
         "InpMagic": 1001001 if tier == mt5.TIER_A else 1001002 if tier == mt5.TIER_B else 1001010,
     }
+    if extra_set_values:
+        values.update(dict(extra_set_values))
     set_payload = write_set(set_path, values)
     report_name = f"Project_Obsidian_Prime_v2_{run_id}_{attempt_name}"
     ini_payload = write_ini(
@@ -383,6 +386,7 @@ def attempt_payload(
             "reverse_on_opposite_signal": bool(reverse_on_opposite_signal),
             "close_only_on_opposite_signal": bool(close_only_on_opposite_signal),
         },
+        "extra_set_values": dict(extra_set_values or {}),
     }
     if fallback_enabled:
         payload["routing_mode"] = mt5.ROUTING_MODE_A_B_FALLBACK

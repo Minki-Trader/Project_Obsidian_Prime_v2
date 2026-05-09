@@ -62,6 +62,12 @@ input bool            InpReverseOnOppositeSignal = true;
 input bool            InpCloseOnlyOnOppositeSignal = false;
 input int             InpMaxHoldBars = 12;
 input int             InpMaxConcurrentPositions = 1;
+input bool            InpExitRiskOverlayEnabled = false;
+input int             InpExitRiskCloseLongFeatureIndex = -1;
+input int             InpExitRiskCloseShortFeatureIndex = -1;
+input double          InpExitRiskCloseThreshold = 0.5;
+input int             InpExitRiskMinHoldBars = 0;
+input int             InpExitRiskMaxHoldFeatureIndex = -1;
 
 input bool            InpTelemetryEnabled = true;
 input bool            InpTelemetryUseCommonFiles = true;
@@ -81,6 +87,27 @@ COpRuntimeTelemetry  g_telemetry;
 
 bool     g_runtime_ready = false;
 datetime g_last_bar_open = 0;
+
+double FeatureValueOrDefault(const double &features[], const int feature_index, const double fallback)
+  {
+   if(feature_index < 0 || feature_index >= ArraySize(features))
+      return fallback;
+   const double value = features[feature_index];
+   if(!MathIsValidNumber(value) || MathAbs(value) >= (EMPTY_VALUE / 2.0))
+      return fallback;
+   return value;
+  }
+
+bool FeatureFlagAtOrAbove(const double &features[], const int feature_index, const double threshold)
+  {
+   return FeatureValueOrDefault(features, feature_index, 0.0) >= threshold;
+  }
+
+int FeatureIntOrDefault(const double &features[], const int feature_index, const int fallback)
+  {
+   const double value = FeatureValueOrDefault(features, feature_index, (double)fallback);
+   return (int)MathRound(value);
+  }
 
 string DeinitReasonText(const int reason)
   {
@@ -381,8 +408,23 @@ void ProcessClosedBar()
    else
       g_decision_surface.Evaluate(p_short, p_flat, p_long, decision);
 
+   bool overlay_close_long = false;
+   bool overlay_close_short = false;
+   int overlay_max_hold_bars = 0;
+   if(InpExitRiskOverlayEnabled)
+     {
+      overlay_close_long = FeatureFlagAtOrAbove(features, InpExitRiskCloseLongFeatureIndex, InpExitRiskCloseThreshold);
+      overlay_close_short = FeatureFlagAtOrAbove(features, InpExitRiskCloseShortFeatureIndex, InpExitRiskCloseThreshold);
+      overlay_max_hold_bars = FeatureIntOrDefault(features, InpExitRiskMaxHoldFeatureIndex, 0);
+     }
+
    SOpExecutionResult execution;
-   const bool execution_ok = g_execution_bridge.Execute(decision.signal, execution);
+   const bool execution_ok = g_execution_bridge.Execute(decision.signal,
+                                                        execution,
+                                                        overlay_close_long,
+                                                        overlay_close_short,
+                                                        InpExitRiskMinHoldBars,
+                                                        overlay_max_hold_bars);
    string skip_reason = "";
    if(!execution_ok)
       skip_reason = "execution_failed:" + execution.comment;

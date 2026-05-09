@@ -292,7 +292,12 @@ public:
       return state.label;
      }
 
-   bool Execute(const int signal, SOpExecutionResult &result)
+   bool Execute(const int signal,
+                SOpExecutionResult &result,
+                const bool close_long_overlay = false,
+                const bool close_short_overlay = false,
+                const int overlay_min_hold_bars = 0,
+                const int overlay_max_hold_bars = 0)
      {
       result.attempted = false;
       result.sent = false;
@@ -319,9 +324,29 @@ public:
          return true;
         }
 
-      if(state.has_position && m_max_hold_bars > 0 && m_bars_in_position >= m_max_hold_bars)
+      int effective_max_hold_bars = m_max_hold_bars;
+      if(overlay_max_hold_bars > 0 && (effective_max_hold_bars <= 0 || overlay_max_hold_bars < effective_max_hold_bars))
+         effective_max_hold_bars = overlay_max_hold_bars;
+
+      if(state.has_position && effective_max_hold_bars > 0 && m_bars_in_position >= effective_max_hold_bars)
         {
-         result.action = "close_max_hold";
+         result.action = (overlay_max_hold_bars > 0 && effective_max_hold_bars == overlay_max_hold_bars) ? "close_exit_overlay_max_hold" : "close_max_hold";
+         const int close_signal = OppositeSignalForPosition(state);
+         const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
+         result.position_after = PositionStateText();
+         if(closed)
+            m_bars_in_position = 0;
+         return closed;
+        }
+
+      const int overlay_min_bars = overlay_min_hold_bars > 0 ? overlay_min_hold_bars : 0;
+      const bool overlay_close_position = state.has_position &&
+                                          m_bars_in_position >= overlay_min_bars &&
+                                          ((state.type == POSITION_TYPE_BUY && close_long_overlay) ||
+                                           (state.type == POSITION_TYPE_SELL && close_short_overlay));
+      if(overlay_close_position)
+        {
+         result.action = "close_exit_overlay";
          const int close_signal = OppositeSignalForPosition(state);
          const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
          result.position_after = PositionStateText();

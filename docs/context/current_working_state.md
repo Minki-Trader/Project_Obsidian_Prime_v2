@@ -1,4 +1,12 @@
-﻿## Latest Stage38 RUN32A Permission/Abstention Runtime Probe(최신 38단계 32A 실행 허용/기권 런타임 탐침)
+﻿## Latest Stage39 RUN33A Exit Risk Non-Entry Overlay(최신 39단계 33A 청산 위험 비진입 덧씌움)
+
+Stage39(39단계) `run33A_exit_risk_non_entry_overlay_broad_mt5_probe_v1`는 Stage38 c01 base entry(38단계 c01 기준 진입)를 고정하고 Stage24 survival(생존), Stage25 hazard(위험률), Stage27 tail pressure(꼬리 압력)를 post-entry overlay(진입 후 덧씌움)로 MT5 Strategy Tester(전략 테스터)에 실행했다.
+
+결과(result, 결과): `reviewed_completed_negative_memory_runtime_probe_only`. MT5 KPI records(MT5 핵심 성과 지표 기록): `102`. Micro-search gate(미세 탐색 게이트): `failed`.
+
+효과(effect, 효과): actual Stage39 MT5 artifacts(실제 39단계 MT5 산출물)를 가져왔지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 기준)는 만들지 않았다.
+
+## Latest Stage38 RUN32A Permission/Abstention Runtime Probe(최신 38단계 32A 실행 허용/기권 런타임 탐침)
 
 Stage38(38단계) `run32A_permission_abstention_overlap_broad_mt5_probe_v1`는 Stage23 permission(허용), Stage30 calibration/abstention(보정/기권), Stage26 entropy(엔트로피), Stage27 tail pressure(꼬리 압력), Stage19 EBM direction(EBM 방향)을 같은 timestamp table(시각 테이블)에 겹쳐 MT5(`MetaTrader 5`, 메타트레이더5) runtime_probe(런타임 탐침)로 실행했다.
 
