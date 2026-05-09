@@ -1,0 +1,76 @@
+{
+  "columns": [
+    {
+      "column": "stage42_timestamp_utc",
+      "formula": "broker-clock timestamp key converted through Europe/Athens broker clock to UTC event time",
+      "missingness": "NaT if timestamp missing or timezone conversion fails",
+      "timestamp_rule": "closed M5 bar close; no partial current bar",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_broker_server_timestamp",
+      "formula": "source timestamp retained as broker/server timestamp key used by MT5 feature CSV matching",
+      "missingness": "NaT if source timestamp missing",
+      "timestamp_rule": "closed M5 bar close key",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_day_of_week",
+      "formula": "UTC event timestamp dayofweek",
+      "missingness": "NaN if UTC timestamp missing",
+      "timestamp_rule": "derived from stage42_timestamp_utc",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_hour_of_day",
+      "formula": "UTC event timestamp hour",
+      "missingness": "NaN if UTC timestamp missing",
+      "timestamp_rule": "derived from stage42_timestamp_utc",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_minute_bucket",
+      "formula": "floor(minutes_from_cash_open / 30) * 30",
+      "missingness": "NA when minutes_from_cash_open missing",
+      "timestamp_rule": "closed-bar cash-session minute",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_cash_open_proximity_minutes",
+      "formula": "abs(minutes_from_cash_open)",
+      "missingness": "NaN when minutes_from_cash_open missing",
+      "timestamp_rule": "closed-bar cash-session minute",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_cash_close_proximity_minutes",
+      "formula": "abs(390 - minutes_from_cash_open)",
+      "missingness": "NaN when minutes_from_cash_open missing",
+      "timestamp_rule": "closed-bar cash-session minute",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_session_bucket_label",
+      "formula": "cash_open_0_30, early_cash_30_60, morning_60_120, midday_lull_120_240, late_cash_240_330, cash_close_330_390, overnight_or_unmapped",
+      "missingness": "overnight_or_unmapped when minute is missing or outside cash bounds",
+      "timestamp_rule": "bucket from closed-bar minutes_from_cash_open",
+      "used_directly_in_mt5": false,
+      "warmup": 0
+    },
+    {
+      "column": "stage42_session_reliability_signal",
+      "formula": "candidate-specific -1/0/+1 discrete signal exported to MT5 score-table runtime",
+      "missingness": "0 when required session/reference feature is missing",
+      "timestamp_rule": "same closed-bar timestamp as feature CSV",
+      "used_directly_in_mt5": true,
+      "warmup": 0
+    }
+  ]
+}

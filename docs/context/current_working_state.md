@@ -1,4 +1,19 @@
-﻿## Latest Stage41 Directional Asymmetric Label Horizon(최신 41단계 방향 비대칭 라벨 수평선)
+﻿## Latest Stage42 Session Structure Signal Reliability(최신 42단계 세션 구조 신호 신뢰도)
+
+Stage42(42단계) `42_session_structure__cash_open_close_signal_reliability_scout`는 session/time-structure(세션/시간 구조) runtime probe(런타임 탐침)로 열렸다. Stage38/39/40/41(38/39/40/41단계)은 negative memory(부정 기억)로만 사용했고, permission/abstention(허용/기권), exit overlay(청산 오버레이), candle morphology(캔들 형태), label/horizon micro-tuning(라벨/수평선 미세조정)은 주 메커니즘으로 쓰지 않았다.
+
+- run_id(실행 ID): `run36A_session_structure_signal_reliability_broad_mt5_probe_v1`
+- judgment(판정): `reviewed_completed_negative_memory_runtime_probe_only`
+- MT5 evidence(MT5 근거): `present`
+- MT5 attempts(MT5 시도): `34`
+- MT5 KPI rows(MT5 KPI 행): `102`
+- micro_search_gate(미세 탐색 게이트): `failed`
+- promotion_candidate_gate(승격 후보 게이트): `failed`
+- boundary(경계): `runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference`
+
+Effect(효과): current truth(현재 진실)는 Stage42(42단계)를 runtime_probe_only(런타임 탐침 전용) session/time-structure(세션/시간 구조) 연구로만 기록한다.
+
+## Latest Stage41 Directional Asymmetric Label Horizon(최신 41단계 방향 비대칭 라벨 수평선)
 
 Stage41(41단계) `41_label_horizon__directional_asymmetric_return_target_rebuild`는 label/horizon redesign(라벨/수평선 재설계) runtime probe(런타임 탐침)로 열렸다. Stage38/39/40(38/39/40단계)은 negative memory(부정 기억)로만 사용했고, permission/abstention(허용/기권), exit overlay(청산 오버레이), candle morphology(캔들 형태) 재시도는 하지 않았다.
 

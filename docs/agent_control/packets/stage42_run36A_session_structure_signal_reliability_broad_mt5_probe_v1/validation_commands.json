@@ -1,0 +1,36 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile foundation/features/session_structure.py stage_pipelines/stage42/session_structure_signal_reliability_probe.py foundation/pipelines/run_stage42_session_structure_signal_reliability_probe.py tests/test_stage42_session_structure.py",
+      "failures_or_blockers": "",
+      "result": "passed"
+    },
+    {
+      "command": "pytest tests/test_stage42_session_structure.py",
+      "failures_or_blockers": "initial direct pytest could not import foundation; rerun with PYTHONPATH set to workspace passed 7 tests",
+      "result": "failed_then_retried_with_PYTHONPATH_passed"
+    },
+    {
+      "command": "$env:PYTHONPATH=(Get-Location).Path; pytest tests/test_stage42_session_structure.py",
+      "failures_or_blockers": "",
+      "result": "passed_7_tests"
+    },
+    {
+      "command": "$env:PYTHONPATH=(Get-Location).Path; python -m foundation.pipelines.run_stage42_session_structure_signal_reliability_probe --materialize-only",
+      "failures_or_blockers": "",
+      "result": "passed_materialized_34_mt5_attempts"
+    },
+    {
+      "command": "$env:PYTHONPATH=(Get-Location).Path; python -m foundation.pipelines.run_stage42_session_structure_signal_reliability_probe --timeout-seconds 900",
+      "failures_or_blockers": "first MT5 pass produced c10 validation feature_csv_open_failed_5003; shortened Common Files feature paths and reran successfully",
+      "result": "passed_after_retry_34_reports_102_kpi_rows"
+    },
+    {
+      "command": "$env:PYTHONPATH=(Get-Location).Path; pytest tests/test_stage42_session_structure.py tests/test_materialize_training_label_split_dataset.py tests/test_mt5_runtime_artifacts.py tests/test_mt5_strategy_report.py tests/test_mt5_missing_report_executor.py tests/test_control_plane_alpha_run_ledgers.py tests/test_agent_control_gates.py tests/test_agent_control_contracts.py tests/test_stage_pipeline_imports.py tests/test_stage06_runtime_parity.py",
+      "failures_or_blockers": "",
+      "result": "passed_50_tests"
+    }
+  ],
+  "mt5_command_count": 34,
+  "status": "recorded_actual_results"
+}
