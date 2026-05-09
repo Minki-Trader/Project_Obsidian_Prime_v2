@@ -1,4 +1,16 @@
-﻿## Latest Stage36 Closeout(최신 36단계 마감)
+﻿## Latest Stage37 State Context Router(최신 37단계 상태 문맥 라우터)
+
+- active stage(활성 단계): `37_state_context__single_base_filter_or_state_router`
+- current run(현재 실행): `run31A_state_context_router_broad_mt5_probe_v1`
+- latest packet(최신 묶음): `stage37_run31A_state_context_router_broad_mt5_probe_v1`
+- result judgment(결과 판정): `state_context_not_useful_or_inconclusive`
+- external verification(외부 검증): `completed`
+
+Stage37(37단계)는 HMM state(은닉 상태), Markov state(마르코프 상태), KMeans state(K-평균 상태), 단순 context(문맥), 모델 반응(model response, 모델 반응)을 같은 timestamp(시각)에 붙이고 broad MT5 routed probe(넓은 MT5 라우팅 탐침)를 실행했다.
+
+효과(effect, 효과): 다음 작업(next work, 다음 작업)은 구조 단서(structure clue, 구조 단서)를 참고할 수 있지만 baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)는 아직 없다.
+
+## Latest Stage36 Closeout(최신 36단계 마감)
 
 - active stage(활성 단계): `36_model_selection__cross_model_characteristic_synthesis`
 - current run(현재 실행): `stage36_cross_model_characteristic_synthesis_closeout_v1`

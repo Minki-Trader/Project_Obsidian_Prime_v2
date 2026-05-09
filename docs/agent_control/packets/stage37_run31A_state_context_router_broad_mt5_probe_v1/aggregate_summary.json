@@ -1,0 +1,2592 @@
+{
+  "active_branch": "main",
+  "atlas_rebuild": {
+    "data_identity": {
+      "columns": 69,
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "rows": 46650,
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "split_counts": {
+        "oos": 7584,
+        "train": 29222,
+        "validation": 9844
+      },
+      "timestamp_max": "2026-04-13T22:00:00+00:00",
+      "timestamp_min": "2022-09-01T16:40:00+00:00"
+    },
+    "selections": [
+      {
+        "idea_id": "IDEA-ST35-ATLAS-RETURN-VOLATILITY",
+        "selected_state_id": 0,
+        "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+        "state_direction": "long",
+        "tier_b_scope": "available",
+        "topic_id": "return_volatility_shape",
+        "validation_net_return_proxy": 0.5339585031,
+        "validation_profit_factor_proxy": 1.3319286504494905,
+        "validation_row_count": 1194
+      },
+      {
+        "idea_id": "IDEA-ST35-ATLAS-TREND-MOMENTUM",
+        "selected_state_id": 4,
+        "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+        "state_direction": "long",
+        "tier_b_scope": "available",
+        "topic_id": "trend_momentum_pressure",
+        "validation_net_return_proxy": 0.5235284145,
+        "validation_profit_factor_proxy": 1.2316892226875935,
+        "validation_row_count": 1481
+      },
+      {
+        "idea_id": "IDEA-ST35-ATLAS-SESSION-TIMING",
+        "selected_state_id": 4,
+        "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+        "state_direction": "long",
+        "tier_b_scope": "available",
+        "topic_id": "session_timing_map",
+        "validation_net_return_proxy": -0.1104368275,
+        "validation_profit_factor_proxy": 0.9664991003891037,
+        "validation_row_count": 2249
+      },
+      {
+        "idea_id": "IDEA-ST35-ATLAS-MACRO-RISK",
+        "selected_state_id": 1,
+        "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+        "state_direction": "short",
+        "tier_b_scope": "out_of_scope_by_partial_context",
+        "topic_id": "macro_risk_proxy_map",
+        "validation_net_return_proxy": 0.3307955124,
+        "validation_profit_factor_proxy": 1.080001038222288,
+        "validation_row_count": 2877
+      },
+      {
+        "idea_id": "IDEA-ST35-ATLAS-MEGA-BREADTH",
+        "selected_state_id": 4,
+        "selection_rule": "highest_validation_proxy_pf_with_train_direction_and_min_rows",
+        "state_direction": "long",
+        "tier_b_scope": "out_of_scope_by_partial_context",
+        "topic_id": "mega_cap_breadth_divergence",
+        "validation_net_return_proxy": 0.2416944819,
+        "validation_profit_factor_proxy": 1.122680768776564,
+        "validation_row_count": 893
+      }
+    ]
+  },
+  "boundary": "stage37_structure_judgment_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness",
+  "common_table_rows": 59048,
+  "compile": {
+    "actual_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_70e4860c984adef9.log",
+    "command": [
+      "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+      "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "/log:C:\\Users\\awdse\\AppData\\Local\\Temp\\obsidian_prime_mt5_compile\\compile_70e4860c984adef9.log"
+    ],
+    "command_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_70e4860c984adef9.log",
+    "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/mt5_compile.log",
+    "log_sha256": "7f68907dd18ea51d077de9d0302787e0247efe2a656bdbb0845b74d60737848a",
+    "returncode": 1,
+    "status": "completed",
+    "stderr": "",
+    "stdout": ""
+  },
+  "created_at_utc": "2026-05-09T04:07:01Z",
+  "data_integrity": {
+    "duplicate_tier_timestamp_rows": 0,
+    "feature_label_boundary": "All model responses are trained on train split and decomposed on validation/OOS without promotion claims.",
+    "missing_state_notes": "Markov state is sampled by the Stage28 contract, so unsampled rows carry null Markov columns; HMM/KMeans/context remain complete where their source scope applies.",
+    "tier_b_kmeans_scope": "out_of_scope_by_partial_context"
+  },
+  "execution_results": [
+    {
+      "attempt_name": "routed_simple_context_control_validation_is",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_simple_context_control_validation_is.ini",
+      "record_view_prefix": "mt5_routed_simple_context_control",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 52808,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 2816,
+          "feature_skip_count": 49992,
+          "flat_count": 49992,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+          "long_count": 2816,
+          "model_fail_count": 49992,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_simple_context_control_tier_a_long_constant",
+          "model_ok_count": 2816,
+          "no_tier_count": 49992,
+          "order_attempt_count": 433,
+          "order_fill_count": 433,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 67473626,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 1970,
+          "tier_a_order_attempt_count": 303,
+          "tier_a_order_fill_count": 303,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 1970,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 846,
+          "tier_b_fallback_order_attempt_count": 130,
+          "tier_b_fallback_order_fill_count": 130,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 846,
+          "written_at": "2025.09.30 23:59:58"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_simple_context_control_validation_is_summary.csv",
+        "summary_sha256": "32df8e87859ffb299f6378185c3a93f51e164def7bb5f3bd658f46d1b44ee72a",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_simple_context_control_validation_is_telemetry.csv",
+        "telemetry_sha256": "1762d1ce2178f3a721abf391e3a60057e4127ec1f06a8ecf5938916a75ea1c5e",
+        "wait_status": "completed"
+      },
+      "split": "validation_is",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_simple_context_control_validation_is",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.png",
+          "sha256": "f86831535e7c332e060de9fcdbe3d71703ae05e330d9782c4e5dbd72647378d2",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.htm",
+          "sha256": "50e732844ef4e61788deef99096ff87e327446d540ead71e70dec0eec101238d",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 380.59,
+          "balance_drawdown_maximal_percent": 68.03,
+          "deal_count": 434,
+          "equity_drawdown_maximal_amount": 510.34,
+          "equity_drawdown_maximal_percent": 90.3,
+          "expectancy": 1.39,
+          "gross_loss": -1169.06,
+          "gross_profit": 1470.87,
+          "long_trade_count": 217,
+          "long_win_rate_percent": 65.44,
+          "losing_trade_count": 75,
+          "loss_rate_percent": 34.56,
+          "max_drawdown_amount": 510.34,
+          "max_drawdown_percent": 90.3,
+          "missing_required_metrics": [],
+          "net_profit": 301.81,
+          "parsed_row_count": 956,
+          "profit_factor": 1.26,
+          "recovery_factor": 0.59,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.htm",
+          "sharpe_ratio": 0.32,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 217,
+          "win_rate_percent": 65.44,
+          "winning_trade_count": 142
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.ini",
+        "sha256": "336d3a822c5c1612cc246de5ac7463f563b05d3397aafeeec864e9c7f14c90ad",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_simple_context_control_validation_is.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "1c867ae791ecfd4fa13c435338c732d36bcd8f3c33ef76d194bc4a5fd249c801",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_simple_context_control_validation_is.set"
+      },
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_simple_context_control_oos",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_simple_context_control_oos.ini",
+      "record_view_prefix": "mt5_routed_simple_context_control",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 37337,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 1960,
+          "feature_skip_count": 35377,
+          "flat_count": 35377,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+          "long_count": 1960,
+          "model_fail_count": 35377,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_simple_context_control_tier_a_long_constant",
+          "model_ok_count": 1960,
+          "no_tier_count": 35377,
+          "order_attempt_count": 301,
+          "order_fill_count": 301,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 69271646,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 1660,
+          "tier_a_order_attempt_count": 256,
+          "tier_a_order_fill_count": 256,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 1660,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 300,
+          "tier_b_fallback_order_attempt_count": 45,
+          "tier_b_fallback_order_fill_count": 45,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 300,
+          "written_at": "2026.04.13 23:59:58"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_simple_context_control_oos_summary.csv",
+        "summary_sha256": "1ffa100d350170cf8cb840049c161ec5649c6ba19470318f498d7d25b57d6e63",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_simple_context_control_oos_telemetry.csv",
+        "telemetry_sha256": "b865a6394641e8d47fc16e51688ae5a9f6199ed6e5f98fc6fc3b50f2b86a860c",
+        "wait_status": "completed"
+      },
+      "split": "oos",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_simple_context_control_oos",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.png",
+          "sha256": "8faad98b4fa833f6bd1ce9643f9b88c5acd7cebb839047efc8c2d62cf248bac9",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.htm",
+          "sha256": "c20ecb3787c5ea9add0cbccafb132bd1c5e6140b2e5273b7e7d01080a9b8ccde",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 316.29,
+          "balance_drawdown_maximal_percent": 50.48,
+          "deal_count": 302,
+          "equity_drawdown_maximal_amount": 438.11,
+          "equity_drawdown_maximal_percent": 68.94,
+          "expectancy": -0.34,
+          "gross_loss": -1091.11,
+          "gross_profit": 1039.27,
+          "long_trade_count": 151,
+          "long_win_rate_percent": 59.6,
+          "losing_trade_count": 61,
+          "loss_rate_percent": 40.4,
+          "max_drawdown_amount": 438.11,
+          "max_drawdown_percent": 68.94,
+          "missing_required_metrics": [],
+          "net_profit": -51.84,
+          "parsed_row_count": 692,
+          "profit_factor": 0.95,
+          "recovery_factor": -0.12,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.htm",
+          "sharpe_ratio": -0.18,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 151,
+          "win_rate_percent": 59.6,
+          "winning_trade_count": 90
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.ini",
+        "sha256": "757944446c2f77d9856616d8329481f50591419d2b712189d4b91be344716a43",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_simple_context_control_oos.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "dc65a7f0f6eb4adc341b5ffa165d03b1a041100956a830b27ec5176e8cb1b272",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_simple_context_control_oos.set"
+      },
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_filter_validation_is",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_filter_validation_is.ini",
+      "record_view_prefix": "mt5_routed_single_base_state_filter",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 52808,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 209,
+          "feature_skip_count": 52599,
+          "flat_count": 52599,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2025.09.30 23:55:00",
+          "long_count": 209,
+          "model_fail_count": 52599,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_single_base_state_filter_tier_a_long_constant",
+          "model_ok_count": 209,
+          "no_tier_count": 52599,
+          "order_attempt_count": 33,
+          "order_fill_count": 33,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 67473626,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 179,
+          "tier_a_order_attempt_count": 28,
+          "tier_a_order_fill_count": 28,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 179,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 30,
+          "tier_b_fallback_order_attempt_count": 5,
+          "tier_b_fallback_order_fill_count": 5,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 30,
+          "written_at": "2025.09.30 23:59:58"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_filter_validation_is_summary.csv",
+        "summary_sha256": "d4ac87b906a52b66afc7f9aa5ad5a071dbe93c2130a2fe7e5a8a9915ef452ad0",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_filter_validation_is_telemetry.csv",
+        "telemetry_sha256": "d688a629a0639fd69b61f793fff5f01f61c7809586d1461f3675e4e3e4488fb9",
+        "wait_status": "completed"
+      },
+      "split": "validation_is",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_single_base_state_filter_validation_is",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.png",
+          "sha256": "04b94fde2a546433d2bd624dff563cd7f9da75ebcd26e27cbf005b35c405fd4a",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.htm",
+          "sha256": "cff7cfaab2bac2aa496d14610c8e1041a4efbb9cc10daefe95d312b1f68ceb8a",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 341.96,
+          "balance_drawdown_maximal_percent": 53.99,
+          "deal_count": 34,
+          "equity_drawdown_maximal_amount": 558.35,
+          "equity_drawdown_maximal_percent": 81.41,
+          "expectancy": 17.84,
+          "gross_loss": -426.63,
+          "gross_profit": 729.85,
+          "long_trade_count": 17,
+          "long_win_rate_percent": 82.35,
+          "losing_trade_count": 3,
+          "loss_rate_percent": 17.65,
+          "max_drawdown_amount": 558.35,
+          "max_drawdown_percent": 81.41,
+          "missing_required_metrics": [],
+          "net_profit": 303.22,
+          "parsed_row_count": 156,
+          "profit_factor": 1.71,
+          "recovery_factor": 0.54,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.htm",
+          "sharpe_ratio": 0.28,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 17,
+          "win_rate_percent": 82.35,
+          "winning_trade_count": 14
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.ini",
+        "sha256": "c208c79b753236c62e3659092862812cc60ba998c8bdfaa9e3c414472e273820",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_filter_validation_is.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "f0b4c8f9b66188993a177d0a910545fa699a2263352fb22ce7b67c1417616242",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_filter_validation_is.set"
+      },
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_filter_oos",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_filter_oos.ini",
+      "record_view_prefix": "mt5_routed_single_base_state_filter",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 37337,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 295,
+          "feature_skip_count": 37042,
+          "flat_count": 37042,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+          "long_count": 295,
+          "model_fail_count": 37042,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_single_base_state_filter_tier_a_long_constant",
+          "model_ok_count": 295,
+          "no_tier_count": 37042,
+          "order_attempt_count": 45,
+          "order_fill_count": 45,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 69271646,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 167,
+          "tier_a_order_attempt_count": 21,
+          "tier_a_order_fill_count": 21,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 167,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 128,
+          "tier_b_fallback_order_attempt_count": 24,
+          "tier_b_fallback_order_fill_count": 24,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 128,
+          "written_at": "2026.04.13 23:59:58"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_filter_oos_summary.csv",
+        "summary_sha256": "834c4051b47f26456809238c52a7b9e1e33a55f65623a2ed0258d8b730ada60d",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_filter_oos_telemetry.csv",
+        "telemetry_sha256": "bdcaaaaeb4b50ac3bcb48a88079413873f9f0feb89a334e9686aa338e6ffa404",
+        "wait_status": "completed"
+      },
+      "split": "oos",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_single_base_state_filter_oos",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.png",
+          "sha256": "16ed875301a17a242537111f72af0e82f1eaac61f7ff99deee5a6fc8acbed0fb",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.htm",
+          "sha256": "b4bd4d8ab1716b8e6b877a56c92172dd6d9925f6b61da8ab0c3b80a933b9c0f8",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 271.91,
+          "balance_drawdown_maximal_percent": 51.78,
+          "deal_count": 46,
+          "equity_drawdown_maximal_amount": 385.29,
+          "equity_drawdown_maximal_percent": 71.39,
+          "expectancy": -3.87,
+          "gross_loss": -555.53,
+          "gross_profit": 466.63,
+          "long_trade_count": 23,
+          "long_win_rate_percent": 47.83,
+          "losing_trade_count": 12,
+          "loss_rate_percent": 52.17,
+          "max_drawdown_amount": 385.29,
+          "max_drawdown_percent": 71.39,
+          "missing_required_metrics": [],
+          "net_profit": -88.9,
+          "parsed_row_count": 180,
+          "profit_factor": 0.84,
+          "recovery_factor": -0.23,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.htm",
+          "sharpe_ratio": -0.25,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 23,
+          "win_rate_percent": 47.83,
+          "winning_trade_count": 11
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.ini",
+        "sha256": "69fab3428753ddd1dc13fa3a7bedb4e26dd09e1e0cc0b3cb20d1d730a2c08eeb",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_filter_oos.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "43482e4495f488bf3d3b4e2b1a398756d6063e7487e0f4816a4a406c507d83e0",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_filter_oos.set"
+      },
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_adapter_validation_is",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_adapter_validation_is.ini",
+      "record_view_prefix": "mt5_routed_single_base_state_adapter",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 18306,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 473,
+          "feature_skip_count": 17833,
+          "flat_count": 17833,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.04.07 03:00:00|tier_b_missing:feature_csv_timestamp_not_found:2025.04.07 03:00:00",
+          "long_count": 473,
+          "model_fail_count": 17833,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_single_base_state_adapter_tier_a_long_constant",
+          "model_ok_count": 473,
+          "no_tier_count": 17833,
+          "order_attempt_count": 73,
+          "order_fill_count": 73,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 26279142,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 446,
+          "tier_a_order_attempt_count": 70,
+          "tier_a_order_fill_count": 70,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 446,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 27,
+          "tier_b_fallback_order_attempt_count": 3,
+          "tier_b_fallback_order_fill_count": 3,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 27,
+          "written_at": "2025.04.07 03:05:00"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_adapter_validation_is_summary.csv",
+        "summary_sha256": "8ffebc87dbcb4d57b525e9512d0fcd587060917a64e6dd77b5f0ffa883d43fc0",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_adapter_validation_is_telemetry.csv",
+        "telemetry_sha256": "614d6bcd94547e453e07328c7a5b160c227c4ffa3cc1ac491289395b8c589995",
+        "wait_status": "completed"
+      },
+      "split": "validation_is",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_single_base_state_adapter_validation_is",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.png",
+          "sha256": "7091df7ee2d5e437e073721f32d0c5f7f3c95c883c4ddec9afc6bed9c5d967ff",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.htm",
+          "sha256": "d065059134af71e2db666a21753b4041e31f4740c74a559b038e606daae0a2c1",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 560.92,
+          "balance_drawdown_maximal_percent": 99.2,
+          "deal_count": 74,
+          "equity_drawdown_maximal_amount": 586.92,
+          "equity_drawdown_maximal_percent": 99.23,
+          "expectancy": -13.39,
+          "gross_loss": -937.01,
+          "gross_profit": 441.56,
+          "long_trade_count": 37,
+          "long_win_rate_percent": 54.05,
+          "losing_trade_count": 17,
+          "loss_rate_percent": 45.95,
+          "max_drawdown_amount": 586.92,
+          "max_drawdown_percent": 99.23,
+          "missing_required_metrics": [],
+          "net_profit": -495.45,
+          "parsed_row_count": 236,
+          "profit_factor": 0.47,
+          "recovery_factor": -0.84,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.htm",
+          "sharpe_ratio": -3.05,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 37,
+          "win_rate_percent": 54.05,
+          "winning_trade_count": 20
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.ini",
+        "sha256": "6f306329d4933f3cbcdfe795f82f4db41b4ca15d87a38c25235681a2f1f32efe",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_adapter_validation_is.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "d03231cd14a2616f37647837bedfd112f68170b93bbf2992528fc1786e8475e1",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_adapter_validation_is.set"
+      },
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_adapter_oos",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_adapter_oos.ini",
+      "record_view_prefix": "mt5_routed_single_base_state_adapter",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 37337,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 970,
+          "feature_skip_count": 36367,
+          "flat_count": 36367,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+          "long_count": 970,
+          "model_fail_count": 36367,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_single_base_state_adapter_tier_a_long_constant",
+          "model_ok_count": 970,
+          "no_tier_count": 36367,
+          "order_attempt_count": 149,
+          "order_fill_count": 149,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 69271646,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 842,
+          "tier_a_order_attempt_count": 135,
+          "tier_a_order_fill_count": 135,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 842,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 128,
+          "tier_b_fallback_order_attempt_count": 14,
+          "tier_b_fallback_order_fill_count": 14,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 128,
+          "written_at": "2026.04.13 23:59:58"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_adapter_oos_summary.csv",
+        "summary_sha256": "74e56a1a1bf8e0af8c43bc74c529b324f2869a943fbb78db6ba151d0e53b6bdd",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_single_base_state_adapter_oos_telemetry.csv",
+        "telemetry_sha256": "82279b535fa2989324f19c747ef4644b0ab4923e1c47d802278591c60139d922",
+        "wait_status": "completed"
+      },
+      "split": "oos",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_single_base_state_adapter_oos",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.png",
+          "sha256": "6704b605a406845f7408c12267b27bbb94a18f459a7bc67201e77fa6af8fcb5d",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.htm",
+          "sha256": "a5b36ebeae95aca1c3f5a93c8d1dc4b2b51fd011fa0972e7696c1e0592646941",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 347.98,
+          "balance_drawdown_maximal_percent": 54.53,
+          "deal_count": 150,
+          "equity_drawdown_maximal_amount": 429.32,
+          "equity_drawdown_maximal_percent": 64.61,
+          "expectancy": -1.23,
+          "gross_loss": -957.25,
+          "gross_profit": 864.88,
+          "long_trade_count": 75,
+          "long_win_rate_percent": 60.0,
+          "losing_trade_count": 30,
+          "loss_rate_percent": 40.0,
+          "max_drawdown_amount": 429.32,
+          "max_drawdown_percent": 64.61,
+          "missing_required_metrics": [],
+          "net_profit": -92.37,
+          "parsed_row_count": 388,
+          "profit_factor": 0.9,
+          "recovery_factor": -0.22,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.htm",
+          "sharpe_ratio": -0.38,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 75,
+          "win_rate_percent": 60.0,
+          "winning_trade_count": 45
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.ini",
+        "sha256": "02235e96e678a80e3dad4b1fa245b82d6b0c43f8aaf8daa93eac59cde947b837",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_adapter_oos.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "f0c6967fdbe4959d57ece50df425a7eae953dd1e9336c292816e3c44cf61faac",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_single_base_state_adapter_oos.set"
+      },
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_limited_state_specialist_router_validation_is",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_limited_state_specialist_router_validation_is.ini",
+      "record_view_prefix": "mt5_routed_limited_state_specialist_router",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 18282,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 1101,
+          "feature_skip_count": 17181,
+          "flat_count": 17181,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2025.04.05 00:00:00|tier_b_missing:feature_csv_timestamp_not_found:2025.04.05 00:00:00",
+          "long_count": 1101,
+          "model_fail_count": 17181,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_limited_state_specialist_router_tier_a_long_constant",
+          "model_ok_count": 1101,
+          "no_tier_count": 17181,
+          "order_attempt_count": 169,
+          "order_fill_count": 169,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 26253339,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 901,
+          "tier_a_order_attempt_count": 134,
+          "tier_a_order_fill_count": 134,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 901,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 200,
+          "tier_b_fallback_order_attempt_count": 35,
+          "tier_b_fallback_order_fill_count": 35,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 200,
+          "written_at": "2025.04.07 01:01:05"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_limited_state_specialist_router_validation_is_summary.csv",
+        "summary_sha256": "bf8743bc7a7c18296b25f8de4ccc27bf8e638cda3ea8d2f8331626a8f400c79b",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_limited_state_specialist_router_validation_is_telemetry.csv",
+        "telemetry_sha256": "e533c006c7893ce98f2708419bf4b7f2ee8cab18aea445f9348766967443c060",
+        "wait_status": "completed"
+      },
+      "split": "validation_is",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_limited_state_specialist_router_validation_is",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.png",
+          "sha256": "05500692739a4609c837ece0e77d4f9d3fd4cf1fd063e6e99fb5a55f80bcf615",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.htm",
+          "sha256": "8ba64d1510c670cf9433baa502707f49d9f7966f880ddf8247fdac1fe12cbb0b",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 563.61,
+          "balance_drawdown_maximal_percent": 99.81,
+          "deal_count": 170,
+          "equity_drawdown_maximal_amount": 569.31,
+          "equity_drawdown_maximal_percent": 99.81,
+          "expectancy": -5.87,
+          "gross_loss": -1110.64,
+          "gross_profit": 611.72,
+          "long_trade_count": 85,
+          "long_win_rate_percent": 60.0,
+          "losing_trade_count": 34,
+          "loss_rate_percent": 40.0,
+          "max_drawdown_amount": 569.31,
+          "max_drawdown_percent": 99.81,
+          "missing_required_metrics": [],
+          "net_profit": -498.92,
+          "parsed_row_count": 428,
+          "profit_factor": 0.55,
+          "recovery_factor": -0.88,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.htm",
+          "sharpe_ratio": -3.54,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 85,
+          "win_rate_percent": 60.0,
+          "winning_trade_count": 51
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is",
+        "split": "validation_is",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.ini",
+        "sha256": "626522435ef0368bdff7db8ca7134a074585aa9df9ff94e4b8eb575e1ad4c757",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_limited_state_specialist_router_validation_is.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "0af46d067f6208c397f0d589eaed1df41e921dd4153fcca1abe0e63049696f8d",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_limited_state_specialist_router_validation_is.set"
+      },
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_limited_state_specialist_router_oos",
+      "attempt_role": "routed_total",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.ini"
+      ],
+      "ini_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_limited_state_specialist_router_oos.ini",
+      "record_view_prefix": "mt5_routed_limited_state_specialist_router",
+      "returncode": 0,
+      "routing_mode": "tier_a_primary_tier_b_fallback",
+      "runtime_outputs": {
+        "last_summary": {
+          "bars_seen": 37337,
+          "deinit_reason": "remove",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_ready_count": 2507,
+          "feature_skip_count": 34830,
+          "flat_count": 34830,
+          "last_skip_reason": "tier_a_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00|tier_b_missing:feature_csv_timestamp_not_found:2026.04.13 23:55:00",
+          "long_count": 2507,
+          "model_fail_count": 34830,
+          "model_id": "run31A_state_context_router_broad_mt5_probe_v1_limited_state_specialist_router_tier_a_long_constant",
+          "model_ok_count": 2507,
+          "no_tier_count": 34830,
+          "order_attempt_count": 385,
+          "order_fill_count": 385,
+          "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+          "short_count": 0,
+          "ticks_seen": 69271646,
+          "tier_a_flat_count": 0,
+          "tier_a_long_count": 2244,
+          "tier_a_order_attempt_count": 338,
+          "tier_a_order_fill_count": 338,
+          "tier_a_short_count": 0,
+          "tier_a_used_count": 2244,
+          "tier_b_fallback_flat_count": 0,
+          "tier_b_fallback_long_count": 263,
+          "tier_b_fallback_order_attempt_count": 47,
+          "tier_b_fallback_order_fill_count": 47,
+          "tier_b_fallback_short_count": 0,
+          "tier_b_fallback_used_count": 263,
+          "written_at": "2026.04.13 23:59:58"
+        },
+        "status": "completed",
+        "summary_exists": true,
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_limited_state_specialist_router_oos_summary.csv",
+        "summary_sha256": "a7dc7795ba743b94c144c6e96e09d1cac61f1d8c1ce4658b1aa78befd6dbd1bf",
+        "telemetry_exists": true,
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1/telemetry/routed_limited_state_specialist_router_oos_telemetry.csv",
+        "telemetry_sha256": "e508bf782dce58d97c493161e1735f94ce191772e3484b46283acaa0777da499",
+        "wait_status": "completed"
+      },
+      "split": "oos",
+      "status": "completed",
+      "stderr": "",
+      "stdout": "",
+      "strategy_tester_report": {
+        "attempt_name": "routed_limited_state_specialist_router_oos",
+        "chart": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.png",
+          "sha256": "c290ba637c92c9ea195b9cec1d2f5cbaea08b61677b00c8328c8524f77cea7a3",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.png"
+        },
+        "html_report": {
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.htm",
+          "sha256": "e3d792f5776dd50aa2ea4104e3e2fe3f6a9b6e1abaa07fb571e43d424ce1b99d",
+          "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.htm"
+        },
+        "metrics": {
+          "balance_drawdown_maximal_amount": 285.63,
+          "balance_drawdown_maximal_percent": 42.13,
+          "deal_count": 386,
+          "equity_drawdown_maximal_amount": 342.96,
+          "equity_drawdown_maximal_percent": 49.45,
+          "expectancy": 0.62,
+          "gross_loss": -1181.13,
+          "gross_profit": 1299.93,
+          "long_trade_count": 193,
+          "long_win_rate_percent": 64.25,
+          "losing_trade_count": 69,
+          "loss_rate_percent": 35.75,
+          "max_drawdown_amount": 342.96,
+          "max_drawdown_percent": 49.45,
+          "missing_required_metrics": [],
+          "net_profit": 118.8,
+          "parsed_row_count": 860,
+          "profit_factor": 1.1,
+          "recovery_factor": 0.35,
+          "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.htm",
+          "sharpe_ratio": 0.46,
+          "short_trade_count": 0,
+          "short_win_rate_percent": 0.0,
+          "source_encoding": "utf-16",
+          "status": "completed",
+          "trade_count": 193,
+          "win_rate_percent": 64.25,
+          "winning_trade_count": 124
+        },
+        "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos",
+        "split": "oos",
+        "status": "completed",
+        "tier": "Tier A+B"
+      },
+      "tester_profile_ini_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/opv2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.ini",
+        "sha256": "d0ab27ed022333fe9dce666c2ad9eb75dab330cebce7aeffd016945e47b2eb5c",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_limited_state_specialist_router_oos.ini"
+      },
+      "tester_profile_set_copy": {
+        "destination": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "e32473014aa584296baea39aa9b7f1c47be0b63dd77311215653959747e2659e",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/routed_limited_state_specialist_router_oos.set"
+      },
+      "tier": "Tier A+B"
+    }
+  ],
+  "external_verification_status": "completed",
+  "forbidden_claims": [
+    "baseline",
+    "promotion",
+    "runtime_authority",
+    "live_readiness"
+  ],
+  "hmm_rebuild": {
+    "artifacts": {
+      "tier_a_sequence": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/states/tier_a_rebuilt_hmm_state_sequence.parquet",
+        "rows": 46650,
+        "sha256": "b9d28dd14cfc691923638795ec3570bc9e7a0c44500eff5346ef59b4d9d74252"
+      },
+      "tier_a_summary": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/tier_a_rebuilt_hmm_state_summary.csv",
+        "rows": 12,
+        "sha256": "3a58537e4d57b0ddda306a2fd63446d26f9d52b296eb6ddbfb8e43b1f6fb1569"
+      },
+      "tier_ab_sequence": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/states/tier_ab_rebuilt_hmm_state_sequence.parquet",
+        "rows": 59048,
+        "sha256": "4ace6c3e7868568e45a78132b4c139f7a64a5b49619ac044a547b02b5d81d395"
+      },
+      "tier_b_sequence": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/states/tier_b_rebuilt_hmm_state_sequence.parquet",
+        "rows": 12398,
+        "sha256": "577e8b2cbf270a4cb382817906a11c8adcb7f28f3ba17b852a9fcbf7af6afbb9"
+      },
+      "tier_b_summary": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/tier_b_rebuilt_hmm_state_summary.csv",
+        "rows": 12,
+        "sha256": "8a895cd10cfce169516dbccc6f6440ad8c5eff395df7f28664b6484d50a4179d"
+      }
+    },
+    "tier_a_best_long_state": 1,
+    "tier_a_quality": {
+      "by_split": {
+        "oos": {
+          "best_state": 1,
+          "max_share": 0.45345464135021096,
+          "min_share": 0.10232067510548523,
+          "risk_separation": 0.0006902437380631454,
+          "state_count": 4,
+          "worst_state": 2
+        },
+        "train": {
+          "best_state": 1,
+          "max_share": 0.30247758538087743,
+          "min_share": 0.15775785367189105,
+          "risk_separation": 0.00020641340961446986,
+          "state_count": 4,
+          "worst_state": 2
+        },
+        "validation": {
+          "best_state": 3,
+          "max_share": 0.32517269402681837,
+          "min_share": 0.17015440877691995,
+          "risk_separation": 0.0002516537351766601,
+          "state_count": 4,
+          "worst_state": 0
+        }
+      },
+      "collapsed": false,
+      "quality_score": 0.0007074639056554588,
+      "validation_oos_mean_gap": 0.00023443356758434675
+    },
+    "tier_b_best_long_state": 0,
+    "tier_b_quality": {
+      "by_split": {
+        "oos": {
+          "best_state": 3,
+          "max_share": 0.4425612052730697,
+          "min_share": 0.04331450094161959,
+          "risk_separation": 0.0013333327537898294,
+          "state_count": 4,
+          "worst_state": 1
+        },
+        "train": {
+          "best_state": 0,
+          "max_share": 0.5512820512820513,
+          "min_share": 0.031438127090301006,
+          "risk_separation": 0.000280268977260365,
+          "state_count": 4,
+          "worst_state": 1
+        },
+        "validation": {
+          "best_state": 3,
+          "max_share": 0.6386306001690617,
+          "min_share": 0.038461538461538464,
+          "risk_separation": 0.0016900601076528048,
+          "state_count": 4,
+          "worst_state": 1
+        }
+      },
+      "collapsed": false,
+      "quality_score": 0.002769377341181756,
+      "validation_oos_mean_gap": 0.00025401552026087807
+    },
+    "variant_id": "v02_core17_4state_diag"
+  },
+  "ledger_materialization": {
+    "project_alpha_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 3540,
+      "sha256": "9e5d05d2bf82d8f4750eac38b91f9b7f3981a5ae64eb33d1ba7b0b2c7b9bbeb9",
+      "upserted_rows": 26
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+      "rows": 324,
+      "sha256": "b50b386643ea0a34f3ae1b69e7e6d9f95860e9f6c92e458417293c13cc25ae60",
+      "upserted_rows": 1
+    },
+    "stage_run_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/03_reviews/stage_run_ledger.csv",
+      "rows": 26,
+      "sha256": "9c97d79eed8b6f7af450b0ef047cf07e0b73c1ba55536f7ac26da6514338078f",
+      "upserted_rows": 26
+    }
+  },
+  "markov_rebuild": {
+    "artifacts": {
+      "tier_a_sequence": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/states/tier_a_rebuilt_markov_state_sequence.parquet",
+        "rows": 4200,
+        "sha256": "63a7943f02657910417a1d3812253acb196747553392f02127541effd48b803e"
+      },
+      "tier_a_summary": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/tier_a_rebuilt_markov_state_summary.csv",
+        "rows": 6,
+        "sha256": "1a1c06bff889006c239e6e1a0e56ba3c5ba2e6553b3b8b8e92df0d68faeeae4e"
+      },
+      "tier_ab_sequence": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/states/tier_ab_rebuilt_markov_state_sequence.parquet",
+        "rows": 6800,
+        "sha256": "185e067494c0b2d5c7ff71dfa12eda9668f6dd6301cedfe126b0904074ed093e"
+      },
+      "tier_b_sequence": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/states/tier_b_rebuilt_markov_state_sequence.parquet",
+        "rows": 2600,
+        "sha256": "8ebd8b7522556c1552823a75723b05ae93a3eb092780da1980d4a6893a0c8daf"
+      },
+      "tier_b_summary": {
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/tier_b_rebuilt_markov_state_summary.csv",
+        "rows": 6,
+        "sha256": "2d26016e197fbeb8e2d12c2236e7d2f39033feecee30c7109f5bb4c3849c7e15"
+      }
+    },
+    "tier_a_best_long_state": 0,
+    "tier_a_quality": {
+      "by_split": {
+        "oos": {
+          "confidence_mean": 0.8813611414727257,
+          "entropy_mean": 0.425416895624337,
+          "max_share": 0.846031746031746,
+          "min_share": 0.15396825396825398,
+          "risk_separation": 0.0005274139792845745,
+          "rows": 630,
+          "state_count": 2
+        },
+        "train": {
+          "confidence_mean": 0.8759661340629744,
+          "entropy_mean": 0.4423517145964537,
+          "max_share": 0.8629032258064516,
+          "min_share": 0.13709677419354838,
+          "risk_separation": 0.0001146750946645625,
+          "rows": 2604,
+          "state_count": 2
+        },
+        "validation": {
+          "confidence_mean": 0.8954128073360713,
+          "entropy_mean": 0.38701397626405304,
+          "max_share": 0.8178053830227743,
+          "min_share": 0.18219461697722567,
+          "risk_separation": 0.0005349897837731987,
+          "rows": 966,
+          "state_count": 2
+        }
+      },
+      "collapsed": false,
+      "entropy_mean": 0.41826086216161457,
+      "quality_score": 1.174963688381138,
+      "validation_oos_separation_gap": 7.5758044886242715e-06
+    },
+    "tier_b_best_long_state": 0,
+    "tier_b_quality": {
+      "by_split": {
+        "oos": {
+          "confidence_mean": 0.9161686172823663,
+          "entropy_mean": 0.3359850283542807,
+          "max_share": 0.9333333333333333,
+          "min_share": 0.06666666666666667,
+          "risk_separation": 0.0007315459454112589,
+          "rows": 390,
+          "state_count": 2
+        },
+        "train": {
+          "confidence_mean": 0.8988136610065837,
+          "entropy_mean": 0.37405298608822785,
+          "max_share": 0.8560794044665012,
+          "min_share": 0.14392059553349876,
+          "risk_separation": 0.000326325399176921,
+          "rows": 1612,
+          "state_count": 2
+        },
+        "validation": {
+          "confidence_mean": 0.941936441829903,
+          "entropy_mean": 0.24609047324754874,
+          "max_share": 0.9297658862876255,
+          "min_share": 0.07023411371237458,
+          "risk_separation": 4.08868364492345e-06,
+          "rows": 598,
+          "state_count": 2
+        }
+      },
+      "collapsed": false,
+      "entropy_mean": 0.3187094958966858,
+      "quality_score": 0.5081640989936774,
+      "validation_oos_separation_gap": 0.0007274572617663355
+    },
+    "variant_id": "v01_return_2state_switchvar"
+  },
+  "model_response_training_summary": [
+    {
+      "detail": "stage37_recomputed_logistic_response_surface",
+      "model_response": "logreg",
+      "rows": 46650,
+      "status": "completed"
+    },
+    {
+      "detail": "calibration_and_abstention_surface",
+      "model_response": "calibrated_logreg",
+      "rows": 46650,
+      "status": "completed"
+    },
+    {
+      "detail": "stage37_recomputed_ebm_main_effect_response_surface",
+      "model_response": "ebm",
+      "rows": 46650,
+      "status": "completed"
+    },
+    {
+      "detail": "stage37_recomputed_catboost_response_surface",
+      "model_response": "catboost",
+      "rows": 46650,
+      "status": "completed"
+    },
+    {
+      "detail": "hist_gradient_boosting_supervised_regime_response",
+      "model_response": "supervised_regime",
+      "rows": 46650,
+      "status": "completed"
+    },
+    {
+      "detail": "compact_torch_tcn_temporal_response_surface",
+      "model_response": "tcn",
+      "rows": 46650,
+      "status": "completed"
+    }
+  ],
+  "mt5_attempt_count": 8,
+  "next_action": "open_next_topic_from_stage37_structure_judgment",
+  "normalized_kpi": {
+    "missing_runs": 0,
+    "normalized_records": 24,
+    "normalized_summary_rows": 24,
+    "parser_errors": 0,
+    "trade_attribution_records": 8,
+    "trade_level_rows": 798,
+    "trade_parser_errors": 0
+  },
+  "output_paths": {
+    "common_state_context_response_preview": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/common_state_context_response_preview.csv",
+    "common_state_context_response_table": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/common_state_context_response_table.parquet",
+    "kpi_record": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/kpi_record.json",
+    "mt5_runtime_comparison": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/mt5_runtime_comparison.csv",
+    "report": "stages/37_state_context__single_base_filter_or_state_router/03_reviews/run31A_state_context_router_broad_mt5_probe_packet.md",
+    "run_manifest": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/run_manifest.json",
+    "runtime_variant_selection_summary": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/runtime_variant_selection_summary.csv",
+    "state_alignment_summary": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/state_alignment_summary.csv",
+    "state_response_decomposition": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/results/state_response_decomposition.csv"
+  },
+  "packet_id": "stage37_run31A_state_context_router_broad_mt5_probe_v1",
+  "result_judgment": {
+    "comparison": [
+      {
+        "both_splits_positive": false,
+        "oos_net_profit": -51.84,
+        "oos_profit_factor": 0.95,
+        "oos_trade_count": 151,
+        "stability_score": 10.6525,
+        "trade_count_floor_pass": true,
+        "validation_net_profit": 301.81,
+        "validation_profit_factor": 1.26,
+        "validation_trade_count": 217,
+        "variant_id": "simple_context_control"
+      },
+      {
+        "both_splits_positive": false,
+        "oos_net_profit": -88.9,
+        "oos_profit_factor": 0.84,
+        "oos_trade_count": 23,
+        "stability_score": -35.32,
+        "trade_count_floor_pass": true,
+        "validation_net_profit": 303.22,
+        "validation_profit_factor": 1.71,
+        "validation_trade_count": 17,
+        "variant_id": "single_base_state_filter"
+      },
+      {
+        "both_splits_positive": false,
+        "oos_net_profit": 118.8,
+        "oos_profit_factor": 1.1,
+        "oos_trade_count": 193,
+        "stability_score": -593.95,
+        "trade_count_floor_pass": true,
+        "validation_net_profit": -498.92,
+        "validation_profit_factor": 0.55,
+        "validation_trade_count": 85,
+        "variant_id": "limited_state_specialist_router"
+      },
+      {
+        "both_splits_positive": false,
+        "oos_net_profit": -92.37,
+        "oos_profit_factor": 0.9,
+        "oos_trade_count": 75,
+        "stability_score": -642.405,
+        "trade_count_floor_pass": true,
+        "validation_net_profit": -495.45,
+        "validation_profit_factor": 0.47,
+        "validation_trade_count": 37,
+        "variant_id": "single_base_state_adapter"
+      }
+    ],
+    "judgment_label": "state_context_not_useful_or_inconclusive",
+    "reason": "No state structure had positive validation and OOS routed totals with a minimal trade-count floor.",
+    "selected_structure": null
+  },
+  "run_id": "run31A_state_context_router_broad_mt5_probe_v1",
+  "run_number": "run31A",
+  "runtime_comparison_rows": [
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 303,
+      "profit_factor": null,
+      "record_view": "mt5_routed_simple_context_control_tier_a_used_validation_is",
+      "route_role": "primary_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "simple_context_control"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 130,
+      "profit_factor": null,
+      "record_view": "mt5_routed_simple_context_control_tier_b_fallback_used_validation_is",
+      "route_role": "fallback_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "simple_context_control"
+    },
+    {
+      "feature_ready_count": 2816,
+      "net_profit": 301.81,
+      "order_attempt_count": 433,
+      "profit_factor": 1.26,
+      "record_view": "mt5_routed_simple_context_control_validation_is",
+      "route_role": "routed_total",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A+B",
+      "trade_count": 217,
+      "variant_id": "simple_context_control"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 256,
+      "profit_factor": null,
+      "record_view": "mt5_routed_simple_context_control_tier_a_used_oos",
+      "route_role": "primary_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "simple_context_control"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 45,
+      "profit_factor": null,
+      "record_view": "mt5_routed_simple_context_control_tier_b_fallback_used_oos",
+      "route_role": "fallback_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "simple_context_control"
+    },
+    {
+      "feature_ready_count": 1960,
+      "net_profit": -51.84,
+      "order_attempt_count": 301,
+      "profit_factor": 0.95,
+      "record_view": "mt5_routed_simple_context_control_oos",
+      "route_role": "routed_total",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 151,
+      "variant_id": "simple_context_control"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 28,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_filter_tier_a_used_validation_is",
+      "route_role": "primary_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 5,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_filter_tier_b_fallback_used_validation_is",
+      "route_role": "fallback_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "feature_ready_count": 209,
+      "net_profit": 303.22,
+      "order_attempt_count": 33,
+      "profit_factor": 1.71,
+      "record_view": "mt5_routed_single_base_state_filter_validation_is",
+      "route_role": "routed_total",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A+B",
+      "trade_count": 17,
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 21,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_filter_tier_a_used_oos",
+      "route_role": "primary_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 24,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_filter_tier_b_fallback_used_oos",
+      "route_role": "fallback_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "feature_ready_count": 295,
+      "net_profit": -88.9,
+      "order_attempt_count": 45,
+      "profit_factor": 0.84,
+      "record_view": "mt5_routed_single_base_state_filter_oos",
+      "route_role": "routed_total",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 23,
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 70,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_adapter_tier_a_used_validation_is",
+      "route_role": "primary_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 3,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_adapter_tier_b_fallback_used_validation_is",
+      "route_role": "fallback_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "feature_ready_count": 473,
+      "net_profit": -495.45,
+      "order_attempt_count": 73,
+      "profit_factor": 0.47,
+      "record_view": "mt5_routed_single_base_state_adapter_validation_is",
+      "route_role": "routed_total",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A+B",
+      "trade_count": 37,
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 135,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_adapter_tier_a_used_oos",
+      "route_role": "primary_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 14,
+      "profit_factor": null,
+      "record_view": "mt5_routed_single_base_state_adapter_tier_b_fallback_used_oos",
+      "route_role": "fallback_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "feature_ready_count": 970,
+      "net_profit": -92.37,
+      "order_attempt_count": 149,
+      "profit_factor": 0.9,
+      "record_view": "mt5_routed_single_base_state_adapter_oos",
+      "route_role": "routed_total",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 75,
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 134,
+      "profit_factor": null,
+      "record_view": "mt5_routed_limited_state_specialist_router_tier_a_used_validation_is",
+      "route_role": "primary_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 35,
+      "profit_factor": null,
+      "record_view": "mt5_routed_limited_state_specialist_router_tier_b_fallback_used_validation_is",
+      "route_role": "fallback_used",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "feature_ready_count": 1101,
+      "net_profit": -498.92,
+      "order_attempt_count": 169,
+      "profit_factor": 0.55,
+      "record_view": "mt5_routed_limited_state_specialist_router_validation_is",
+      "route_role": "routed_total",
+      "split": "validation_is",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 9844,
+      "tier_b_fallback_labelable_rows": 2366,
+      "tier_scope": "Tier A+B",
+      "trade_count": 85,
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 338,
+      "profit_factor": null,
+      "record_view": "mt5_routed_limited_state_specialist_router_tier_a_used_oos",
+      "route_role": "primary_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A",
+      "trade_count": null,
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "feature_ready_count": null,
+      "net_profit": null,
+      "order_attempt_count": 47,
+      "profit_factor": null,
+      "record_view": "mt5_routed_limited_state_specialist_router_tier_b_fallback_used_oos",
+      "route_role": "fallback_used",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier B",
+      "trade_count": null,
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "feature_ready_count": 2507,
+      "net_profit": 118.8,
+      "order_attempt_count": 385,
+      "profit_factor": 1.1,
+      "record_view": "mt5_routed_limited_state_specialist_router_oos",
+      "route_role": "routed_total",
+      "split": "oos",
+      "status": "completed",
+      "tier_a_primary_labelable_rows": 7584,
+      "tier_b_fallback_labelable_rows": 1062,
+      "tier_scope": "Tier A+B",
+      "trade_count": 193,
+      "variant_id": "limited_state_specialist_router"
+    }
+  ],
+  "runtime_inputs": {
+    "common_root": "Project_Obsidian_Prime_v2/stage37/run31A_state_context_router_broad_mt5_probe_v1",
+    "feature_outputs": {
+      "limited_state_specialist_router": {
+        "oos": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_limited_state_specialist_router_oos_features.csv",
+            "rows": 2244,
+            "sha256": "3a60485b3309cbf333906d4fb137b9b280c9449caf3b0cfd8e91b2d72e38b55b",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_limited_state_specialist_router_oos_features.csv",
+            "rows": 263,
+            "sha256": "6433f1fd04463448877af4242db531d2670cef5b55f927eeb3a5b382ac61e2a9",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          }
+        },
+        "validation_is": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_limited_state_specialist_router_validation_is_features.csv",
+            "rows": 2879,
+            "sha256": "640152b6a210a0d9c34db671c9fa65a1cf5473bc99fa30f30602d2653db8f5e7",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_limited_state_specialist_router_validation_is_features.csv",
+            "rows": 850,
+            "sha256": "b1b726d4e934acd2e06323626dfd4b0cd2eb11aed1c1f751b6a3b2de068f2265",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          }
+        }
+      },
+      "simple_context_control": {
+        "oos": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_simple_context_control_oos_features.csv",
+            "rows": 1660,
+            "sha256": "cf9a7b995adfc9979b62915e604fc5a865085d418ea00caf4e957bcb46926734",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_simple_context_control_oos_features.csv",
+            "rows": 300,
+            "sha256": "e4d80a7dcb3227d7aa007d70646839630900ac732a46cbe1693f363b99c8e787",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          }
+        },
+        "validation_is": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_simple_context_control_validation_is_features.csv",
+            "rows": 1970,
+            "sha256": "78a22d732dd191b99114e1062ff323b8cca7bd758e90b07ce8fc49e295b112f0",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_simple_context_control_validation_is_features.csv",
+            "rows": 846,
+            "sha256": "3ffa094a7f0263e9c944cde6b7dccf34cf7f4bebb0c740cfc1fdeabf1233d730",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          }
+        }
+      },
+      "single_base_state_adapter": {
+        "oos": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_single_base_state_adapter_oos_features.csv",
+            "rows": 842,
+            "sha256": "bbef7613f9cd6fa90509e811b3d0139fdeb6dd1e46ce02f626ae6016f0b7ad99",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_single_base_state_adapter_oos_features.csv",
+            "rows": 128,
+            "sha256": "4d4c6a6a4fd31f881fcb4a41d701e609d299bcfa07ee8fc08359923498242a06",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          }
+        },
+        "validation_is": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_single_base_state_adapter_validation_is_features.csv",
+            "rows": 1179,
+            "sha256": "e3c5b73a8e305c8ea59741d073adc27099087113386f27d11ba1f528bc62c8c5",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_single_base_state_adapter_validation_is_features.csv",
+            "rows": 32,
+            "sha256": "3b73517e761e6102bb17a49011879a1d0332eaa5a1c38483581787b5d967aaa7",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          }
+        }
+      },
+      "single_base_state_filter": {
+        "oos": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_single_base_state_filter_oos_features.csv",
+            "rows": 167,
+            "sha256": "bb218d3d93ed60e57e1ce6e1ef57477166416c560e4b4adb9b1f6eea1e0fc1f2",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_single_base_state_filter_oos_features.csv",
+            "rows": 128,
+            "sha256": "4d4c6a6a4fd31f881fcb4a41d701e609d299bcfa07ee8fc08359923498242a06",
+            "tester_window_from_date": "2025.10.01",
+            "tester_window_to_date": "2026.04.14"
+          }
+        },
+        "validation_is": {
+          "tier_a": {
+            "feature_count": 58,
+            "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_a_single_base_state_filter_validation_is_features.csv",
+            "rows": 179,
+            "sha256": "60a893db7a03a970558eb89d7dc8bce2e91aad4ccb8671828769d53ce23688b6",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          },
+          "tier_b": {
+            "feature_count": 42,
+            "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "hmm_hidden_state",
+              "markov_state",
+              "session_bucket",
+              "volatility_regime",
+              "single_base_long_score"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/features/tier_b_single_base_state_filter_validation_is_features.csv",
+            "rows": 30,
+            "sha256": "ac6bf864148d32eef4e33d53d54c671ceecb4d370d8c189c4e2079261aa7a444",
+            "tester_window_from_date": "2025.01.02",
+            "tester_window_to_date": "2025.10.01"
+          }
+        }
+      }
+    },
+    "known_runtime_difference": "State/context routing is precomputed in Python and handed to MT5 by feature-row omission plus Tier A primary/Tier B fallback feature files; this is runtime_probe, not runtime authority.",
+    "model_outputs": {
+      "tier_a_long": {
+        "backend": "ebm_table_constant",
+        "direction": "long",
+        "feature_count": 58,
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/models/tier_a_long_constant_score_table.csv",
+        "sha256": "816ed89e52a8dc548d0b8bcd3b5deefdf93129d8d0bc185f6d3b8a791aea670e"
+      },
+      "tier_b_long": {
+        "backend": "ebm_table_constant",
+        "direction": "long",
+        "feature_count": 42,
+        "path": "stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/models/tier_b_long_constant_score_table.csv",
+        "sha256": "b557e23d8c4fbb1ab5326211ecb549e245b9b881aa4b90dc1381d731a159bc2d"
+      }
+    }
+  },
+  "runtime_variant_selection_summary": [
+    {
+      "floor_applied": false,
+      "selected_rows": 1970,
+      "selection_rate": 0.200122,
+      "source_rows": 9844,
+      "split": "validation",
+      "tier_scope": "Tier A",
+      "variant_id": "simple_context_control"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 846,
+      "selection_rate": 0.357566,
+      "source_rows": 2366,
+      "split": "validation",
+      "tier_scope": "Tier B",
+      "variant_id": "simple_context_control"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 1660,
+      "selection_rate": 0.218882,
+      "source_rows": 7584,
+      "split": "oos",
+      "tier_scope": "Tier A",
+      "variant_id": "simple_context_control"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 300,
+      "selection_rate": 0.282486,
+      "source_rows": 1062,
+      "split": "oos",
+      "tier_scope": "Tier B",
+      "variant_id": "simple_context_control"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 179,
+      "selection_rate": 0.018184,
+      "source_rows": 9844,
+      "split": "validation",
+      "tier_scope": "Tier A",
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 30,
+      "selection_rate": 0.01268,
+      "source_rows": 2366,
+      "split": "validation",
+      "tier_scope": "Tier B",
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 167,
+      "selection_rate": 0.02202,
+      "source_rows": 7584,
+      "split": "oos",
+      "tier_scope": "Tier A",
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "floor_applied": true,
+      "selected_rows": 128,
+      "selection_rate": 0.120527,
+      "source_rows": 1062,
+      "split": "oos",
+      "tier_scope": "Tier B",
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 1179,
+      "selection_rate": 0.119768,
+      "source_rows": 9844,
+      "split": "validation",
+      "tier_scope": "Tier A",
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 32,
+      "selection_rate": 0.013525,
+      "source_rows": 2366,
+      "split": "validation",
+      "tier_scope": "Tier B",
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 842,
+      "selection_rate": 0.111023,
+      "source_rows": 7584,
+      "split": "oos",
+      "tier_scope": "Tier A",
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "floor_applied": true,
+      "selected_rows": 128,
+      "selection_rate": 0.120527,
+      "source_rows": 1062,
+      "split": "oos",
+      "tier_scope": "Tier B",
+      "variant_id": "single_base_state_adapter"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 2879,
+      "selection_rate": 0.292462,
+      "source_rows": 9844,
+      "split": "validation",
+      "tier_scope": "Tier A",
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 850,
+      "selection_rate": 0.359256,
+      "source_rows": 2366,
+      "split": "validation",
+      "tier_scope": "Tier B",
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 2244,
+      "selection_rate": 0.295886,
+      "source_rows": 7584,
+      "split": "oos",
+      "tier_scope": "Tier A",
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "floor_applied": false,
+      "selected_rows": 263,
+      "selection_rate": 0.247646,
+      "source_rows": 1062,
+      "split": "oos",
+      "tier_scope": "Tier B",
+      "variant_id": "limited_state_specialist_router"
+    }
+  ],
+  "source_artifacts": {
+    "stage22_hmm_variant_rebuilt": "v02_core17_4state_diag",
+    "stage28_markov_variant_rebuilt": "v01_return_2state_switchvar",
+    "stage35_kmeans_atlas_rebuilt": "stage_pipelines.stage35.atlas_model.build_atlas",
+    "stage35_model_input": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "stage36_selection_reference": "stages/36_model_selection__cross_model_characteristic_synthesis/02_runs/run30A/results/selection_reference_matrix.csv"
+  },
+  "source_hashes": {
+    "model_input": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43"
+  },
+  "stage_id": "37_state_context__single_base_filter_or_state_router",
+  "status": "reviewed_structure_judgment",
+  "strategy_tester_reports": [
+    {
+      "attempt_name": "routed_simple_context_control_validation_is",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.png",
+        "sha256": "f86831535e7c332e060de9fcdbe3d71703ae05e330d9782c4e5dbd72647378d2",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.htm",
+        "sha256": "50e732844ef4e61788deef99096ff87e327446d540ead71e70dec0eec101238d",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 380.59,
+        "balance_drawdown_maximal_percent": 68.03,
+        "deal_count": 434,
+        "equity_drawdown_maximal_amount": 510.34,
+        "equity_drawdown_maximal_percent": 90.3,
+        "expectancy": 1.39,
+        "gross_loss": -1169.06,
+        "gross_profit": 1470.87,
+        "long_trade_count": 217,
+        "long_win_rate_percent": 65.44,
+        "losing_trade_count": 75,
+        "loss_rate_percent": 34.56,
+        "max_drawdown_amount": 510.34,
+        "max_drawdown_percent": 90.3,
+        "missing_required_metrics": [],
+        "net_profit": 301.81,
+        "parsed_row_count": 956,
+        "profit_factor": 1.26,
+        "recovery_factor": 0.59,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is.htm",
+        "sharpe_ratio": 0.32,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 217,
+        "win_rate_percent": 65.44,
+        "winning_trade_count": 142
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_simple_context_control_oos",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.png",
+        "sha256": "8faad98b4fa833f6bd1ce9643f9b88c5acd7cebb839047efc8c2d62cf248bac9",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.htm",
+        "sha256": "c20ecb3787c5ea9add0cbccafb132bd1c5e6140b2e5273b7e7d01080a9b8ccde",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 316.29,
+        "balance_drawdown_maximal_percent": 50.48,
+        "deal_count": 302,
+        "equity_drawdown_maximal_amount": 438.11,
+        "equity_drawdown_maximal_percent": 68.94,
+        "expectancy": -0.34,
+        "gross_loss": -1091.11,
+        "gross_profit": 1039.27,
+        "long_trade_count": 151,
+        "long_win_rate_percent": 59.6,
+        "losing_trade_count": 61,
+        "loss_rate_percent": 40.4,
+        "max_drawdown_amount": 438.11,
+        "max_drawdown_percent": 68.94,
+        "missing_required_metrics": [],
+        "net_profit": -51.84,
+        "parsed_row_count": 692,
+        "profit_factor": 0.95,
+        "recovery_factor": -0.12,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos.htm",
+        "sharpe_ratio": -0.18,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 151,
+        "win_rate_percent": 59.6,
+        "winning_trade_count": 90
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_simple_context_control_oos",
+      "split": "oos",
+      "status": "completed",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_filter_validation_is",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.png",
+        "sha256": "04b94fde2a546433d2bd624dff563cd7f9da75ebcd26e27cbf005b35c405fd4a",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.htm",
+        "sha256": "cff7cfaab2bac2aa496d14610c8e1041a4efbb9cc10daefe95d312b1f68ceb8a",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 341.96,
+        "balance_drawdown_maximal_percent": 53.99,
+        "deal_count": 34,
+        "equity_drawdown_maximal_amount": 558.35,
+        "equity_drawdown_maximal_percent": 81.41,
+        "expectancy": 17.84,
+        "gross_loss": -426.63,
+        "gross_profit": 729.85,
+        "long_trade_count": 17,
+        "long_win_rate_percent": 82.35,
+        "losing_trade_count": 3,
+        "loss_rate_percent": 17.65,
+        "max_drawdown_amount": 558.35,
+        "max_drawdown_percent": 81.41,
+        "missing_required_metrics": [],
+        "net_profit": 303.22,
+        "parsed_row_count": 156,
+        "profit_factor": 1.71,
+        "recovery_factor": 0.54,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is.htm",
+        "sharpe_ratio": 0.28,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 17,
+        "win_rate_percent": 82.35,
+        "winning_trade_count": 14
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_filter_oos",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.png",
+        "sha256": "16ed875301a17a242537111f72af0e82f1eaac61f7ff99deee5a6fc8acbed0fb",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.htm",
+        "sha256": "b4bd4d8ab1716b8e6b877a56c92172dd6d9925f6b61da8ab0c3b80a933b9c0f8",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 271.91,
+        "balance_drawdown_maximal_percent": 51.78,
+        "deal_count": 46,
+        "equity_drawdown_maximal_amount": 385.29,
+        "equity_drawdown_maximal_percent": 71.39,
+        "expectancy": -3.87,
+        "gross_loss": -555.53,
+        "gross_profit": 466.63,
+        "long_trade_count": 23,
+        "long_win_rate_percent": 47.83,
+        "losing_trade_count": 12,
+        "loss_rate_percent": 52.17,
+        "max_drawdown_amount": 385.29,
+        "max_drawdown_percent": 71.39,
+        "missing_required_metrics": [],
+        "net_profit": -88.9,
+        "parsed_row_count": 180,
+        "profit_factor": 0.84,
+        "recovery_factor": -0.23,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos.htm",
+        "sharpe_ratio": -0.25,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 23,
+        "win_rate_percent": 47.83,
+        "winning_trade_count": 11
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_filter_oos",
+      "split": "oos",
+      "status": "completed",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_adapter_validation_is",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.png",
+        "sha256": "7091df7ee2d5e437e073721f32d0c5f7f3c95c883c4ddec9afc6bed9c5d967ff",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.htm",
+        "sha256": "d065059134af71e2db666a21753b4041e31f4740c74a559b038e606daae0a2c1",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 560.92,
+        "balance_drawdown_maximal_percent": 99.2,
+        "deal_count": 74,
+        "equity_drawdown_maximal_amount": 586.92,
+        "equity_drawdown_maximal_percent": 99.23,
+        "expectancy": -13.39,
+        "gross_loss": -937.01,
+        "gross_profit": 441.56,
+        "long_trade_count": 37,
+        "long_win_rate_percent": 54.05,
+        "losing_trade_count": 17,
+        "loss_rate_percent": 45.95,
+        "max_drawdown_amount": 586.92,
+        "max_drawdown_percent": 99.23,
+        "missing_required_metrics": [],
+        "net_profit": -495.45,
+        "parsed_row_count": 236,
+        "profit_factor": 0.47,
+        "recovery_factor": -0.84,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is.htm",
+        "sharpe_ratio": -3.05,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 37,
+        "win_rate_percent": 54.05,
+        "winning_trade_count": 20
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_single_base_state_adapter_oos",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.png",
+        "sha256": "6704b605a406845f7408c12267b27bbb94a18f459a7bc67201e77fa6af8fcb5d",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.htm",
+        "sha256": "a5b36ebeae95aca1c3f5a93c8d1dc4b2b51fd011fa0972e7696c1e0592646941",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 347.98,
+        "balance_drawdown_maximal_percent": 54.53,
+        "deal_count": 150,
+        "equity_drawdown_maximal_amount": 429.32,
+        "equity_drawdown_maximal_percent": 64.61,
+        "expectancy": -1.23,
+        "gross_loss": -957.25,
+        "gross_profit": 864.88,
+        "long_trade_count": 75,
+        "long_win_rate_percent": 60.0,
+        "losing_trade_count": 30,
+        "loss_rate_percent": 40.0,
+        "max_drawdown_amount": 429.32,
+        "max_drawdown_percent": 64.61,
+        "missing_required_metrics": [],
+        "net_profit": -92.37,
+        "parsed_row_count": 388,
+        "profit_factor": 0.9,
+        "recovery_factor": -0.22,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos.htm",
+        "sharpe_ratio": -0.38,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 75,
+        "win_rate_percent": 60.0,
+        "winning_trade_count": 45
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_single_base_state_adapter_oos",
+      "split": "oos",
+      "status": "completed",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_limited_state_specialist_router_validation_is",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.png",
+        "sha256": "05500692739a4609c837ece0e77d4f9d3fd4cf1fd063e6e99fb5a55f80bcf615",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.htm",
+        "sha256": "8ba64d1510c670cf9433baa502707f49d9f7966f880ddf8247fdac1fe12cbb0b",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 563.61,
+        "balance_drawdown_maximal_percent": 99.81,
+        "deal_count": 170,
+        "equity_drawdown_maximal_amount": 569.31,
+        "equity_drawdown_maximal_percent": 99.81,
+        "expectancy": -5.87,
+        "gross_loss": -1110.64,
+        "gross_profit": 611.72,
+        "long_trade_count": 85,
+        "long_win_rate_percent": 60.0,
+        "losing_trade_count": 34,
+        "loss_rate_percent": 40.0,
+        "max_drawdown_amount": 569.31,
+        "max_drawdown_percent": 99.81,
+        "missing_required_metrics": [],
+        "net_profit": -498.92,
+        "parsed_row_count": 428,
+        "profit_factor": 0.55,
+        "recovery_factor": -0.88,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is.htm",
+        "sharpe_ratio": -3.54,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 85,
+        "win_rate_percent": 60.0,
+        "winning_trade_count": 51
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "routed_limited_state_specialist_router_oos",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.png",
+        "sha256": "c290ba637c92c9ea195b9cec1d2f5cbaea08b61677b00c8328c8524f77cea7a3",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.htm",
+        "sha256": "e3d792f5776dd50aa2ea4104e3e2fe3f6a9b6e1abaa07fb571e43d424ce1b99d",
+        "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 285.63,
+        "balance_drawdown_maximal_percent": 42.13,
+        "deal_count": 386,
+        "equity_drawdown_maximal_amount": 342.96,
+        "equity_drawdown_maximal_percent": 49.45,
+        "expectancy": 0.62,
+        "gross_loss": -1181.13,
+        "gross_profit": 1299.93,
+        "long_trade_count": 193,
+        "long_win_rate_percent": 64.25,
+        "losing_trade_count": 69,
+        "loss_rate_percent": 35.75,
+        "max_drawdown_amount": 342.96,
+        "max_drawdown_percent": 49.45,
+        "missing_required_metrics": [],
+        "net_profit": 118.8,
+        "parsed_row_count": 860,
+        "profit_factor": 1.1,
+        "recovery_factor": 0.35,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/37_state_context__single_base_filter_or_state_router/02_runs/run31A_state_context_router_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos.htm",
+        "sharpe_ratio": 0.46,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 193,
+        "win_rate_percent": 64.25,
+        "winning_trade_count": 124
+      },
+      "report_name": "Project_Obsidian_Prime_v2_run31A_state_context_router_broad_mt5_probe_v1_routed_limited_state_specialist_router_oos",
+      "split": "oos",
+      "status": "completed",
+      "tier": "Tier A+B"
+    }
+  ],
+  "tier_a_rows": 46650,
+  "tier_b_rows": 12398
+}

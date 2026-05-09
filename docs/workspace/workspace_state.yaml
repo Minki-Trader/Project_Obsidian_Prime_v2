@@ -1,8 +1,8 @@
-﻿updated_on: '2026-05-09'
+updated_on: '2026-05-09'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 36_model_selection__cross_model_characteristic_synthesis
-current_run_id: stage36_cross_model_characteristic_synthesis_closeout_v1
+active_stage: 37_state_context__single_base_filter_or_state_router
+current_run_id: run31A_state_context_router_broad_mt5_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,6 +17,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage37(37단계) 37_state_context__single_base_filter_or_state_router reviewed_structure_judgment(구조 판정 검토됨): run31A_state_context_router_broad_mt5_probe_v1(31A 실행)는 state context(상태 문맥), model response(모델 반응), broad MT5 routed probe(넓은 MT5 라우팅 탐침)를 묶어 `state_context_not_useful_or_inconclusive`로 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)는 없다.
 - Stage36(36단계) 36_model_selection__cross_model_characteristic_synthesis reviewed_closed_reference_only(검토 후 마감, 참고 전용): stage36_cross_model_characteristic_synthesis_closeout_v1(마감)는 run30A_cross_model_characteristic_synthesis_v1(30A 실행)의 모델 특성, MT5(메타트레이더5) 근거, selection reference(선택 참고), micro-probe frontier(미세탐침 전선)를 Stage36 closeout(36단계 마감)으로 고정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage35(35단계) 35_context_map__unsupervised_market_state_atlas reviewed_closed_no_stage36_opened(검토 후 닫힘, 36단계 미개방): RUN29A-RUN29C(29A-29C 실행) MT5 runtime probe(MT5 런타임 탐침)를 마감했고, 더 파볼 Stage35 후보는 없다고 판정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage34(34단계) 34_regime_mechanism__tier_a_markov_long_permission_attribution reviewed_closed(검토 후 닫힘): run28A-run28F(28A-28F 실행)는 Tier A Markov long permission(티어 A 마르코프 롱 허용)의 귀속/구간/월별/MT5(메타트레이더5) 근거를 남겼고, Stage35(35단계)는 별도 topic pivot(주제 전환)으로 열렸다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
@@ -113,6 +114,22 @@ stage34_tier_a_markov_long_permission_attribution:
   external_verification_status: completed_for_run28E_run28F_mt5_runtime_probes
   next_action: none_stage35_not_opened
   boundary: stage34_closeout_only_no_stage35_no_baseline_no_promotion_no_runtime_authority
+
+
+
+stage37_state_context_router:
+  packet_id: stage37_run31A_state_context_router_broad_mt5_probe_v1
+  stage_id: 37_state_context__single_base_filter_or_state_router
+  status: reviewed_structure_judgment
+  current_run_id: run31A_state_context_router_broad_mt5_probe_v1
+  idea_id: IDEA-ST37-STATE-CONTEXT-ROUTER
+  source_frontier: frontier02_state_context_stack
+  report_path: stages/37_state_context__single_base_filter_or_state_router/03_reviews/run31A_state_context_router_broad_mt5_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage37_run31A_state_context_router_broad_mt5_probe_v1/aggregate_summary.json
+  external_verification_status: completed
+  result_judgment: state_context_not_useful_or_inconclusive
+  next_action: open_next_topic_from_stage37_structure_judgment
+  boundary: stage37_structure_judgment_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness
 
 pre_alpha_stage_queue:
   status: stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete

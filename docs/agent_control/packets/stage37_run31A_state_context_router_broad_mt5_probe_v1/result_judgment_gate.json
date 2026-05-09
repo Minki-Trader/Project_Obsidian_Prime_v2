@@ -1,0 +1,55 @@
+{
+  "comparison": [
+    {
+      "both_splits_positive": false,
+      "oos_net_profit": -51.84,
+      "oos_profit_factor": 0.95,
+      "oos_trade_count": 151,
+      "stability_score": 10.6525,
+      "trade_count_floor_pass": true,
+      "validation_net_profit": 301.81,
+      "validation_profit_factor": 1.26,
+      "validation_trade_count": 217,
+      "variant_id": "simple_context_control"
+    },
+    {
+      "both_splits_positive": false,
+      "oos_net_profit": -88.9,
+      "oos_profit_factor": 0.84,
+      "oos_trade_count": 23,
+      "stability_score": -35.32,
+      "trade_count_floor_pass": true,
+      "validation_net_profit": 303.22,
+      "validation_profit_factor": 1.71,
+      "validation_trade_count": 17,
+      "variant_id": "single_base_state_filter"
+    },
+    {
+      "both_splits_positive": false,
+      "oos_net_profit": 118.8,
+      "oos_profit_factor": 1.1,
+      "oos_trade_count": 193,
+      "stability_score": -593.95,
+      "trade_count_floor_pass": true,
+      "validation_net_profit": -498.92,
+      "validation_profit_factor": 0.55,
+      "validation_trade_count": 85,
+      "variant_id": "limited_state_specialist_router"
+    },
+    {
+      "both_splits_positive": false,
+      "oos_net_profit": -92.37,
+      "oos_profit_factor": 0.9,
+      "oos_trade_count": 75,
+      "stability_score": -642.405,
+      "trade_count_floor_pass": true,
+      "validation_net_profit": -495.45,
+      "validation_profit_factor": 0.47,
+      "validation_trade_count": 37,
+      "variant_id": "single_base_state_adapter"
+    }
+  ],
+  "judgment_label": "state_context_not_useful_or_inconclusive",
+  "reason": "No state structure had positive validation and OOS routed totals with a minimal trade-count floor.",
+  "selected_structure": null
+}
