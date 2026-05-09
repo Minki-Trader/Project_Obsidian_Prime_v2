@@ -1,0 +1,172 @@
+{
+  "alignment_grain": "feature-ready timestamp x tier route source",
+  "columns": [
+    {
+      "column": "p_flat",
+      "description": "Stage30 calibrated flat probability",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "1ac73e7e1ef2871348baefc52e157644fc48f9086073bdc2997ba02b1f204abe",
+      "source_artifact_path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24D_native_source_calibration_runtime_probe_v1/predictions/tier_b_stage30_runtime_predictions.parquet",
+      "source_run_id": "run24D_native_source_calibration_runtime_probe_v1",
+      "source_stage": "30_decision_layer__probability_calibration_abstention",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "calibrated_margin",
+      "description": "max(nonflat calibrated probability) - p_flat",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "1ac73e7e1ef2871348baefc52e157644fc48f9086073bdc2997ba02b1f204abe",
+      "source_artifact_path": "stages/30_decision_layer__probability_calibration_abstention/02_runs/run24D_native_source_calibration_runtime_probe_v1/predictions/tier_b_stage30_runtime_predictions.parquet",
+      "source_run_id": "run24D_native_source_calibration_runtime_probe_v1",
+      "source_stage": "30_decision_layer__probability_calibration_abstention",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "entropy",
+      "description": "Stage26 NGBoost distribution entropy",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "6e80966149cb6c01d2e7c2e6234ec9d17e0b0007ffb70360da0c521b1049e14c",
+      "source_artifact_path": "stages/26_model_family_challenge__ngboost_probabilistic_distribution_shape/02_runs/run20B_ngboost_distribution_runtime_probe_v1/predictions/tier_b_ngboost_runtime_predictions.parquet",
+      "source_run_id": "run20B_ngboost_distribution_runtime_probe_v1",
+      "source_stage": "26_model_family_challenge__ngboost_probabilistic_distribution_shape",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "tail_pressure",
+      "description": "Stage27 quantile tail pressure",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "1d76e73e6fbd351c9c81790b927ee5c04f8d31da1a97de537ba0042574f71236",
+      "source_artifact_path": "stages/27_tail_model__quantile_boosting_risk_surface/02_runs/run21B_quantile_boosting_tail_risk_runtime_probe_v1/predictions/tier_b_quantile_runtime_predictions.parquet",
+      "source_run_id": "run21B_quantile_boosting_tail_risk_runtime_probe_v1",
+      "source_stage": "27_tail_model__quantile_boosting_risk_surface",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "ebm_direction",
+      "description": "Stage19 EBM p_long - p_short",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "5763837abd31f8919aeb002829eee410471c50a4ffbf9de6879cd15fc902463b",
+      "source_artifact_path": "stages/19_model_family_challenge__ebm_explainable_boosting_shape/02_runs/run13E_ebm_q80_direction_asymmetry_probe_v1/predictions/tier_b_separate_predictions.parquet",
+      "source_run_id": "run13E_ebm_q80_direction_asymmetry_probe_v1",
+      "source_stage": "19_model_family_challenge__ebm_explainable_boosting_shape",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "permission_filter_signal",
+      "description": "Stage38 loose permission boolean from Stage23 score",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "c63c314c40e090e95d517bbf7ce63d388c442ded70d6f60c9cfd029ced7512c9",
+      "source_artifact_path": "stages/23_regime_model__supervised_regime_classifier_filter/02_runs/run17B_supervised_regime_classifier_runtime_probe_v1/predictions/tier_b_runtime_probe_predictions.parquet",
+      "source_run_id": "run17B_supervised_regime_classifier_runtime_probe_v1",
+      "source_stage": "23_regime_model__supervised_regime_classifier_filter",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "tier_label",
+      "description": "Tier A or Tier B",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "generated_in_stage38",
+      "source_artifact_path": "stage38_materialized",
+      "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+      "source_stage": "38_decision_layer__permission_abstention_overlap",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": true
+    },
+    {
+      "column": "tier_a_available",
+      "description": "Tier A route availability flag",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "generated_in_stage38",
+      "source_artifact_path": "stage38_materialized",
+      "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+      "source_stage": "38_decision_layer__permission_abstention_overlap",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "tier_b_fallback_available",
+      "description": "Tier B fallback route availability flag",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "generated_in_stage38",
+      "source_artifact_path": "stage38_materialized",
+      "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+      "source_stage": "38_decision_layer__permission_abstention_overlap",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "routing_source",
+      "description": "Tier A primary or Tier B fallback source",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "generated_in_stage38",
+      "source_artifact_path": "stage38_materialized",
+      "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+      "source_stage": "38_decision_layer__permission_abstention_overlap",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": true
+    },
+    {
+      "column": "target_direction",
+      "description": "direction used before candidate-specific gating",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "generated_in_stage38",
+      "source_artifact_path": "stage38_materialized",
+      "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+      "source_stage": "38_decision_layer__permission_abstention_overlap",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "validation_oos_split_label",
+      "description": "runtime split label",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "generated_in_stage38",
+      "source_artifact_path": "stage38_materialized",
+      "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+      "source_stage": "38_decision_layer__permission_abstention_overlap",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": false
+    },
+    {
+      "column": "timestamp_utc",
+      "description": "UTC timestamp string",
+      "missingness_rule": "surface_missing blocks candidate signal; tier availability is explicit boolean",
+      "source_artifact_hash": "generated_in_stage38",
+      "source_artifact_path": "stage38_materialized",
+      "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+      "source_stage": "38_decision_layer__permission_abstention_overlap",
+      "timestamp_alignment_rule": "exact UTC timestamp; Tier A and Tier B retain separate route rows",
+      "used_by_python_preparation": true,
+      "used_directly_by_mt5": true
+    }
+  ],
+  "mt5_direct_feature": {
+    "column": "stage38_decision_signal",
+    "missingness_rule": "flat signal 0 when candidate rule fails or surface_missing is true",
+    "source_artifact_path": "candidate-specific feature CSV files",
+    "source_run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+    "source_stage": "38_decision_layer__permission_abstention_overlap",
+    "timestamp_alignment_rule": "exported with bar_time_server and timestamp_utc using MT5 runtime artifact helper",
+    "used_directly_by_mt5": true
+  },
+  "run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1",
+  "stage_id": "38_decision_layer__permission_abstention_overlap"
+}

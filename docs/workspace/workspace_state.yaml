@@ -1,8 +1,8 @@
-updated_on: '2026-05-09'
+﻿updated_on: '2026-05-09'
 project_mode: clean_stage_restart
-active_branch: main
-active_stage: 37_state_context__single_base_filter_or_state_router
-current_run_id: run31A_state_context_router_broad_mt5_probe_v1
+active_branch: codex/stage38-permission-abstention-overlap
+active_stage: 38_decision_layer__permission_abstention_overlap
+current_run_id: run32A_permission_abstention_overlap_broad_mt5_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -2720,3 +2720,17 @@ stage29_32_native_revalidation_supplement:
   summary_path: docs/workspace/stage29_32_native_revalidation_supplement.md
   boundary: native_revalidation_supplement_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
   next_action: open_new_stage_topic_if_requested
+
+stage38_permission_abstention_overlap:
+  packet_id: stage38_run32A_permission_abstention_overlap_broad_mt5_probe_v1
+  stage_id: 38_decision_layer__permission_abstention_overlap
+  idea_id: IDEA-ST38-PERMISSION-ABSTENTION-OVERLAP
+  status: reviewed_runtime_probe_completed
+  current_run_id: run32A_permission_abstention_overlap_broad_mt5_probe_v1
+  source_frontier: Stage36 frontier01_permission_abstention_overlap
+  mt5_attempt_count: 34
+  mt5_kpi_record_count: 102
+  judgment: reviewed_completed_inconclusive_runtime_probe_only
+  report_path: stages/38_decision_layer__permission_abstention_overlap/03_reviews/run32A_permission_abstention_overlap_broad_mt5_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage38_run32A_permission_abstention_overlap_broad_mt5_probe_v1/aggregate_summary.json
+  boundary: runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

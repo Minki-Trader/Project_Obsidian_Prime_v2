@@ -1,0 +1,25 @@
+﻿{
+  "commands": [
+    {
+      "command": "python -m py_compile stage_pipelines\\stage38\\permission_abstention_overlap.py foundation\\pipelines\\run_stage38_permission_abstention_overlap.py tests\\test_stage38_permission_abstention_overlap.py",
+      "failures_or_blockers": "none",
+      "result": "passed"
+    },
+    {
+      "command": "$env:PYTHONPATH=(Get-Location).Path; pytest tests\\test_stage38_permission_abstention_overlap.py tests\\test_mt5_runtime_artifacts.py tests\\test_mt5_kpi_recorder.py tests\\test_control_plane_alpha_run_ledgers.py -q",
+      "failures_or_blockers": "none",
+      "result": "25 passed in 2.14s"
+    },
+    {
+      "command": "$env:PYTHONPATH=(Get-Location).Path; python -m foundation.pipelines.run_stage38_permission_abstention_overlap --materialize-only",
+      "failures_or_blockers": "not a completion claim; followed by actual MT5 run",
+      "result": "preflight generated common table, candidate grid, handoff files, and intentionally returned blocked_runtime_probe_missing_mt5_execution because MT5 execution was skipped"
+    },
+    {
+      "command": "$env:PYTHONPATH=(Get-Location).Path; python -m foundation.pipelines.run_stage38_permission_abstention_overlap --timeout-seconds 900",
+      "failures_or_blockers": "none",
+      "result": "exit 0; 34 MT5 Strategy Tester reports imported; 102 MT5 KPI records written; judgment reviewed_completed_inconclusive_runtime_probe_only"
+    }
+  ],
+  "run_id": "run32A_permission_abstention_overlap_broad_mt5_probe_v1"
+}

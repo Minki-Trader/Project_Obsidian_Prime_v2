@@ -1,0 +1,18 @@
+candidate_id,label,enabled_surfaces,entry_permission_rule,abstention_rule,fallback_rule,threshold_family
+c01_no_overlap_reference,carry/reference no-overlap,reference_no_overlap,reference surface only,not enabled,Tier A primary + Tier B fallback,loose_v1
+c02_permission_only,permission only,permission,stage23 permission_score loose threshold,not enabled,Tier A primary + Tier B fallback,loose_v1
+c03_abstention_only,abstention only,abstention,reference surface only,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c04_permission_abstention,permission + abstention overlap,permission+abstention,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c05_permission_entropy,permission + entropy,permission+entropy,stage23 permission_score loose threshold,not enabled,Tier A primary + Tier B fallback,loose_v1
+c06_permission_tail,permission + tail pressure,permission+tail,stage23 permission_score loose threshold,not enabled,Tier A primary + Tier B fallback,loose_v1
+c07_permission_ebm,permission + EBM direction,permission+ebm,stage23 permission_score loose threshold,not enabled,Tier A primary + Tier B fallback,loose_v1
+c08_permission_abstention_entropy,permission + abstention + entropy,permission+abstention+entropy,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c09_permission_abstention_tail,permission + abstention + tail pressure,permission+abstention+tail,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c10_permission_abstention_ebm,permission + abstention + EBM direction,permission+abstention+ebm,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c11_permission_entropy_tail,permission + entropy + tail pressure,permission+entropy+tail,stage23 permission_score loose threshold,not enabled,Tier A primary + Tier B fallback,loose_v1
+c12_permission_entropy_ebm,permission + entropy + EBM direction,permission+entropy+ebm,stage23 permission_score loose threshold,not enabled,Tier A primary + Tier B fallback,loose_v1
+c13_permission_tail_ebm,permission + tail pressure + EBM direction,permission+tail+ebm,stage23 permission_score loose threshold,not enabled,Tier A primary + Tier B fallback,loose_v1
+c14_permission_abstention_entropy_tail,permission + abstention + entropy + tail pressure,permission+abstention+entropy+tail,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c15_permission_abstention_entropy_ebm,permission + abstention + entropy + EBM direction,permission+abstention+entropy+ebm,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c16_permission_abstention_tail_ebm,permission + abstention + tail pressure + EBM direction,permission+abstention+tail+ebm,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
+c17_permission_abstention_entropy_tail_ebm,permission + abstention + entropy + tail pressure + EBM direction,permission+abstention+entropy+tail+ebm,stage23 permission_score loose threshold,stage30 p_flat max plus calibrated margin min,Tier A primary + Tier B fallback,loose_v1
