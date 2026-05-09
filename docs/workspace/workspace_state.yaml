@@ -1,8 +1,8 @@
 updated_on: '2026-05-09'
 project_mode: clean_stage_restart
-active_branch: codex/stage39-exit-risk-non-entry-overlay
-active_stage: 39_exit_risk__non_entry_lifecycle_tail_overlay
-current_run_id: run33A_exit_risk_non_entry_overlay_broad_mt5_probe_v1
+active_branch: codex/auto-campaign-01-independent-alpha-topic-scout
+active_stage: 40_feature_interaction__volatility_squeeze_expansion_scout
+current_run_id: run34A_volatility_squeeze_expansion_broad_mt5_probe_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -2748,3 +2748,29 @@ stage39_exit_risk_non_entry_overlay:
   report_path: stages/39_exit_risk__non_entry_lifecycle_tail_overlay/03_reviews/run33A_exit_risk_non_entry_overlay_broad_mt5_probe_packet.md
   packet_summary_path: docs/agent_control/packets/stage39_run33A_exit_risk_non_entry_overlay_broad_mt5_probe_v1/aggregate_summary.json
   boundary: runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+auto_campaign_01_independent_alpha_topic_scout:
+  campaign_id: AUTO-CAMPAIGN-01-INDEPENDENT-ALPHA-TOPIC-SCOUT
+  branch: codex/auto-campaign-01-independent-alpha-topic-scout
+  selected_stage_id: 40_feature_interaction__volatility_squeeze_expansion_scout
+  selected_run_id: run34A_volatility_squeeze_expansion_broad_mt5_probe_v1
+  selected_packet_id: stage40_run34A_volatility_squeeze_expansion_broad_mt5_probe_v1
+  status: campaign_completed_negative_memory
+  claim_boundary: exploration_only_until_explicit_promotion_packet
+
+stage40_feature_interaction_volatility_squeeze_expansion_scout:
+  packet_id: stage40_run34A_volatility_squeeze_expansion_broad_mt5_probe_v1
+  stage_id: 40_feature_interaction__volatility_squeeze_expansion_scout
+  idea_id: IDEA-ST40-VOLATILITY-SQUEEZE-EXPANSION
+  status: reviewed_runtime_probe_completed
+  current_run_id: run34A_volatility_squeeze_expansion_broad_mt5_probe_v1
+  mt5_attempt_count: 36
+  mt5_kpi_record_count: 105
+  partial_runtime_blockers: 1
+  partial_runtime_blocker_summary: m01 validation micro attempt feature_csv_open_failed_5003
+  judgment: reviewed_completed_negative_memory_runtime_probe_only
+  micro_search_gate: passed
+  promotion_candidate_gate: failed
+  report_path: stages/40_feature_interaction__volatility_squeeze_expansion_scout/03_reviews/run34A_volatility_squeeze_expansion_broad_mt5_probe_packet.md
+  packet_summary_path: docs/agent_control/packets/stage40_run34A_volatility_squeeze_expansion_broad_mt5_probe_v1/aggregate_summary.json
+  boundary: exploration_only_until_explicit_promotion_packet_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

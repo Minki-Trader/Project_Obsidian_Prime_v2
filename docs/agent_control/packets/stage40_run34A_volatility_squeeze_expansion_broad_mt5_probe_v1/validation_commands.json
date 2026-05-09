@@ -1,0 +1,53 @@
+﻿{
+    "status":  "recorded",
+    "commands":  [
+                     {
+                         "failures_or_blockers":  "",
+                         "command":  "python -m py_compile foundation\\alpha\\discrete_signal_table.py foundation\\features\\volatility_squeeze_expansion.py stage_pipelines\\stage40\\volatility_squeeze_expansion_scout.py foundation\\pipelines\\run_stage40_volatility_squeeze_expansion_scout.py tests\\test_stage40_volatility_squeeze_expansion.py",
+                         "result":  "passed"
+                     },
+                     {
+                         "failures_or_blockers":  "",
+                         "command":  "python -m pytest -q tests\\test_stage40_volatility_squeeze_expansion.py tests\\test_stage38_permission_abstention_overlap.py tests\\test_stage39_exit_risk_overlay.py",
+                         "result":  "21 passed"
+                     },
+                     {
+                         "failures_or_blockers":  "",
+                         "command":  "python -m pytest -q tests\\test_mt5_runtime_artifacts.py tests\\test_mt5_kpi_recorder.py tests\\test_control_plane_alpha_run_ledgers.py tests\\test_agent_control_gates.py tests\\test_agent_control_contracts.py tests\\test_stage_pipeline_imports.py",
+                         "result":  "42 passed, 225 subtests passed"
+                     },
+                     {
+                         "failures_or_blockers":  "",
+                         "command":  "python -m pytest -q tests\\test_mt5_strategy_report.py tests\\test_mt5_missing_report_executor.py tests\\test_stage10_logreg_mt5_scout.py tests\\test_stage06_runtime_parity.py",
+                         "result":  "35 passed"
+                     },
+                     {
+                         "failures_or_blockers":  "materialize-only writes blocked status before actual execution; overwritten by actual MT5 run",
+                         "command":  "python -m foundation.pipelines.run_stage40_volatility_squeeze_expansion_scout --materialize-only --timeout-seconds 900",
+                         "result":  "passed; generated handoff files without MT5 invocation"
+                     },
+                     {
+                         "failures_or_blockers":  "micro attempt routed_m01_relaxed_return_c07_high_vol_breakout_return_z_validation_is had feature_csv_open_failed_5003 and no KPI row; recorded as blocked micro attempt",
+                         "command":  "python -m foundation.pipelines.run_stage40_volatility_squeeze_expansion_scout --timeout-seconds 900",
+                         "result":  "completed actual MT5 Strategy Tester execution; 36 reports; 105 KPI rows; final judgment reviewed_completed_negative_memory_runtime_probe_only"
+                     },
+                     {
+                         "failures_or_blockers":  "ModuleNotFoundError for foundation when pytest executable did not include repo root on sys.path; rerun with python -m pytest passed",
+                         "command":  "pytest -q tests\\test_stage40_volatility_squeeze_expansion.py",
+                         "result":  "failed before code execution"
+                     },
+                     {
+                         "failures_or_blockers":  "PowerShell could not resolve long \\\\?\\ redirect file path; rerun with short temp log path started actual MT5 execution",
+                         "command":  "Start-Process python ... -RedirectStandardOutput \u003clong repo path\u003e",
+                         "result":  "failed before execution"
+                     }
+                 ],
+    "mt5_command_count":  36,
+    "actual_mt5_strategy_tester_output_exists":  true,
+    "blocked_micro_attempts":  [
+                                   {
+                                       "attempt_name":  "routed_m01_relaxed_return_c07_high_vol_breakout_return_z_validation_is",
+                                       "reason":  "feature_csv_open_failed_5003_for_tier_a_and_tier_b; runtime_outputs.wait_status_timeout"
+                                   }
+                               ]
+}

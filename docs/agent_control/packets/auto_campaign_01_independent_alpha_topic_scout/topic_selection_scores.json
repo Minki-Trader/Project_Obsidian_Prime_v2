@@ -1,0 +1,85 @@
+{
+  "campaign_id": "AUTO-CAMPAIGN-01-INDEPENDENT-ALPHA-TOPIC-SCOUT",
+  "score_rubric": {
+    "novelty_and_independence_from_stage38_39_failure_modes": 20,
+    "clear_alpha_mechanism": 20,
+    "mt5_feasibility_with_existing_infrastructure": 15,
+    "chance_of_validation_oos_signal": 15,
+    "resistance_to_overfitting": 10,
+    "interpretable_negative_memory_if_failed": 10,
+    "implementation_complexity_within_campaign_budget": 10
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "selected": true,
+      "proposed_stage_number": 40,
+      "proposed_stage_id": "40_feature_interaction__volatility_squeeze_expansion_scout",
+      "proposed_idea_id": "IDEA-ST40-VOLATILITY-SQUEEZE-EXPANSION",
+      "proposed_first_run_id": "run34A_volatility_squeeze_expansion_broad_mt5_probe_v1",
+      "topic_family": "volatility/squeeze/expansion mechanism + feature subset or feature interaction structure",
+      "independent_research_question": "Can a low-complexity volatility squeeze and expansion interaction surface create a validation and OOS US100 M5 entry stream under Tier A primary plus Tier B fallback routing?",
+      "scores": {
+        "novelty_and_independence_from_stage38_39_failure_modes": 18,
+        "clear_alpha_mechanism": 18,
+        "mt5_feasibility_with_existing_infrastructure": 14,
+        "chance_of_validation_oos_signal": 11,
+        "resistance_to_overfitting": 8,
+        "interpretable_negative_memory_if_failed": 9,
+        "implementation_complexity_within_campaign_budget": 8
+      },
+      "total_score": 86,
+      "selection_reason": "Selected because it is independent from permission/abstention, exit overlay, and state-context retries while still fitting the existing MT5 routed runtime probe infrastructure."
+    },
+    {
+      "rank": 2,
+      "selected": false,
+      "proposed_stage_number": 40,
+      "proposed_stage_id": "40_session_structure__cash_open_close_behavior_scout",
+      "proposed_idea_id": "IDEA-ST40-CASH-OPEN-CLOSE-BEHAVIOR",
+      "proposed_first_run_id": "run34A_cash_open_close_behavior_broad_mt5_probe_v1",
+      "topic_family": "session/time-of-day structure",
+      "independent_research_question": "Does US cash open and close timing create a robust validation and OOS entry stream after Tier A/B routing is accounted for?",
+      "scores": {
+        "novelty_and_independence_from_stage38_39_failure_modes": 14,
+        "clear_alpha_mechanism": 15,
+        "mt5_feasibility_with_existing_infrastructure": 15,
+        "chance_of_validation_oos_signal": 8,
+        "resistance_to_overfitting": 8,
+        "interpretable_negative_memory_if_failed": 9,
+        "implementation_complexity_within_campaign_budget": 9
+      },
+      "total_score": 78,
+      "rejection_reason": "Rejected for this campaign because prior session-age and timing probes make it useful but less novel than the selected squeeze/expansion mechanism."
+    },
+    {
+      "rank": 3,
+      "selected": false,
+      "proposed_stage_number": 40,
+      "proposed_stage_id": "40_direction_asymmetry__long_short_specialist_rebuild",
+      "proposed_idea_id": "IDEA-ST40-LONG-SHORT-SPECIALIST-REBUILD",
+      "proposed_first_run_id": "run34A_long_short_specialist_rebuild_broad_mt5_probe_v1",
+      "topic_family": "direction asymmetry or long/short specialization + robust low-complexity baseline rebuild",
+      "independent_research_question": "Do separate long and short specialist surfaces behave more stably than a symmetric entry rule across validation and OOS?",
+      "scores": {
+        "novelty_and_independence_from_stage38_39_failure_modes": 15,
+        "clear_alpha_mechanism": 16,
+        "mt5_feasibility_with_existing_infrastructure": 13,
+        "chance_of_validation_oos_signal": 10,
+        "resistance_to_overfitting": 7,
+        "interpretable_negative_memory_if_failed": 8,
+        "implementation_complexity_within_campaign_budget": 7
+      },
+      "total_score": 76,
+      "rejection_reason": "Rejected for this campaign because it is independent but more exposed to entry-count instability, which the campaign explicitly avoids using as the main topic."
+    }
+  ],
+  "selected_candidate": "40_feature_interaction__volatility_squeeze_expansion_scout",
+  "selection_rule_observed": true,
+  "selection_not_based_only_on_expected_profit": true,
+  "budget_observed": {
+    "topic_selection_passes": 1,
+    "stage_candidates_proposed": 3,
+    "new_stages_selected": 1
+  }
+}

@@ -1,4 +1,20 @@
-﻿## Latest Stage39 RUN33A Exit Risk Non-Entry Overlay(최신 39단계 33A 청산 위험 비진입 덧씌움)
+﻿## Latest AUTO-CAMPAIGN-01 Stage40 Volatility Squeeze Expansion(최신 AUTO-CAMPAIGN-01 40단계 변동성 수축/확장)
+
+Campaign(캠페인) `AUTO-CAMPAIGN-01-INDEPENDENT-ALPHA-TOPIC-SCOUT`는 independent_topic_scout(독립 주제 탐색)로 Stage40(40단계) `40_feature_interaction__volatility_squeeze_expansion_scout`를 선택했다. 선택 이유는 volatility squeeze/expansion(변동성 수축/확장) interaction(상호작용)이 Stage38 permission/abstention(허용/기권) 또는 Stage39 exit overlay(청산 덮개)의 직접 후속이 아니기 때문이다.
+
+- run_id(실행 ID): `run34A_volatility_squeeze_expansion_broad_mt5_probe_v1`
+- judgment(판정): `reviewed_completed_negative_memory_runtime_probe_only`
+- MT5 evidence(MT5 근거): `present`
+- MT5 attempts(MT5 시도): `36`
+- MT5 KPI rows(MT5 KPI 행): `105`
+- micro_search_gate(미세 탐색 게이트): `passed`
+- promotion_candidate_gate(승격 후보 게이트): `failed`
+- partial runtime blocker(부분 런타임 차단): `m01` validation(검증) micro attempt(미세 시도) 1개가 feature_csv_open_failed_5003(피처 CSV 열기 실패 5003)로 KPI 행 없이 차단됐다.
+- boundary(경계): no baseline(기준선 없음), no promotion(승격 없음), no runtime authority(런타임 권위 없음), no live readiness(실거래 준비 없음), no operating reference(운영 기준 없음)
+
+효과(effect, 효과): 현재 진실(current truth, 현재 진실)은 Stage40(40단계)을 exploration-only runtime probe(탐색 전용 런타임 탐침)로만 기록한다.
+
+## Latest Stage39 RUN33A Exit Risk Non-Entry Overlay(최신 39단계 33A 청산 위험 비진입 덧씌움)
 
 Stage39(39단계) `run33A_exit_risk_non_entry_overlay_broad_mt5_probe_v1`는 Stage38 c01 base entry(38단계 c01 기준 진입)를 고정하고 Stage24 survival(생존), Stage25 hazard(위험률), Stage27 tail pressure(꼬리 압력)를 post-entry overlay(진입 후 덧씌움)로 MT5 Strategy Tester(전략 테스터)에 실행했다.
 
