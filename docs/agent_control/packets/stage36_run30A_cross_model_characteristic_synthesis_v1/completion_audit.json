@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "effect": "Stage10-35(10-35단계) 모델군을 한 표로 비교한다.",
+      "evidence": "stages/36_model_selection__cross_model_characteristic_synthesis/02_runs/run30A/results/model_characteristic_matrix.csv",
+      "requirement": "모델간 특성 총정리",
+      "status": "passed(통과)"
+    },
+    {
+      "effect": "다음 stage(단계)의 모델 후보와 쓰임새를 고른다.",
+      "evidence": "stages/36_model_selection__cross_model_characteristic_synthesis/02_runs/run30A/results/selection_reference_matrix.csv",
+      "requirement": "추후 stage 모델 선택 참고",
+      "status": "passed(통과)"
+    },
+    {
+      "effect": "기존 MT5(메타트레이더5) 근거와 런타임 경계를 한 표에 묶는다.",
+      "evidence": "stages/36_model_selection__cross_model_characteristic_synthesis/02_runs/run30A/results/mt5_evidence_matrix.csv",
+      "requirement": "MT5 연계 주저 금지",
+      "status": "passed_existing_mt5_integrated(기존 MT5 통합 통과)"
+    },
+    {
+      "effect": "소수 단서 요약으로 축소하지 않는다.",
+      "evidence": "model_topics=25",
+      "requirement": "몇 가지만 파지 말 것",
+      "status": "passed(통과)"
+    },
+    {
+      "effect": "다음 실제 미세탐침 질문을 바로 고를 수 있게 한다.",
+      "evidence": "stages/36_model_selection__cross_model_characteristic_synthesis/02_runs/run30A/results/micro_probe_frontier.csv",
+      "requirement": "미세탐침 직전까지",
+      "status": "passed(통과)"
+    },
+    {
+      "effect": "참고서 완료와 운영 주장 금지를 분리한다.",
+      "evidence": "docs/agent_control/packets/stage36_run30A_cross_model_characteristic_synthesis_v1/final_claim_guard.json",
+      "requirement": "약한 주장으로 stage 마감 금지",
+      "status": "passed(통과)"
+    },
+    {
+      "effect": "Stage36(36단계)을 reviewed closed(검토 후 마감)로 닫고 Stage37(37단계)은 열지 않는다.",
+      "evidence": "stages/36_model_selection__cross_model_characteristic_synthesis/03_reviews/stage36_closeout_packet.md",
+      "requirement": "Stage36 closeout(36단계 마감)",
+      "status": "passed(통과)"
+    }
+  ],
+  "goal_coverage_judgment": "goal_satisfied_reference_only_no_operating_claim(목표 충족, 참고 전용, 운영 주장 없음)",
+  "missing_outputs": [],
+  "packet_id": "stage36_run30A_cross_model_characteristic_synthesis_v1",
+  "status": "passed(통과)"
+}

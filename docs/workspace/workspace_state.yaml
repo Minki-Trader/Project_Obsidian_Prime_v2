@@ -1,8 +1,8 @@
 ﻿updated_on: '2026-05-09'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 35_context_map__unsupervised_market_state_atlas
-current_run_id: stage35_context_map_closeout_v1
+active_stage: 36_model_selection__cross_model_characteristic_synthesis
+current_run_id: stage36_cross_model_characteristic_synthesis_closeout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,18 +17,18 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage36(36단계) 36_model_selection__cross_model_characteristic_synthesis reviewed_closed_reference_only(검토 후 마감, 참고 전용): stage36_cross_model_characteristic_synthesis_closeout_v1(마감)는 run30A_cross_model_characteristic_synthesis_v1(30A 실행)의 모델 특성, MT5(메타트레이더5) 근거, selection reference(선택 참고), micro-probe frontier(미세탐침 전선)를 Stage36 closeout(36단계 마감)으로 고정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage35(35단계) 35_context_map__unsupervised_market_state_atlas reviewed_closed_no_stage36_opened(검토 후 닫힘, 36단계 미개방): RUN29A-RUN29C(29A-29C 실행) MT5 runtime probe(MT5 런타임 탐침)를 마감했고, 더 파볼 Stage35 후보는 없다고 판정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage34(34단계) 34_regime_mechanism__tier_a_markov_long_permission_attribution reviewed_closed(검토 후 닫힘): run28A-run28F(28A-28F 실행)는 Tier A Markov long permission(티어 A 마르코프 롱 허용)의 귀속/구간/월별/MT5(메타트레이더5) 근거를 남겼고, Stage35(35단계)는 별도 topic pivot(주제 전환)으로 열렸다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage33(33단계) 33_regime_mechanism__tier_a_markov_long_permission_source closed_user_requested_stage34_pivot_no_result(사용자 요청 34단계 전환, 결과 없음): 실행 결과(run result, 실행 결과) 없이 Stage34(34단계)로 넘겼다.
 - Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
   river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
   with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
-- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 마감인 `stage35_context_map_closeout_v1`를 가리킨다. next action(다음 행동)은 `none_stage35_closed_stage36_not_opened`이다.
+- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 Stage36 closeout(36단계 마감) `stage36_cross_model_characteristic_synthesis_closeout_v1`를 가리킨다. next action(다음 행동)은 `choose_one_micro_probe_frontier_or_open_next_topic`이다.
 - treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
   탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
   no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
-- 'next action(다음 행동): continue Stage35(35단계) only by explicit user request(명시 사용자 요청); Stage20-32
-  goal(20-32단계 목표)은 complete(완료)'
+- 'next action(다음 행동): choose one Stage36(36단계) micro-probe frontier(미세탐침 전선) or open the next topic pivot(다음 주제 전환) by explicit user request(명시 사용자 요청)'
 - treat stage20_27_characteristic_synthesis_v1(20-27단계 특징 및 실제 MT5 재실행 종합 묶음) and
   stage20_27_actual_mt5_rerun_verification_v1(실제 MT5 재실행 묶음) as cross-stage evidence
   management(교차 단계 근거 관리); they preserve model-family/topic clues(모델군/주제 단서) and MT5
@@ -55,6 +55,20 @@ current_focus:
 - treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임
   탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
 - treat Tier A and Tier B as explorable sample labels, not exploration gates
+
+
+stage36_cross_model_characteristic_synthesis:
+  packet_id: stage36_run30A_cross_model_characteristic_synthesis_v1
+  stage_id: 36_model_selection__cross_model_characteristic_synthesis
+  status: reviewed_closed_reference_only_no_stage37_opened
+  current_run_id: stage36_cross_model_characteristic_synthesis_closeout_v1
+  idea_id: IDEA-ST36-CROSS-MODEL-CHARACTERISTIC-SYNTHESIS
+  source_scope: Stage10-35 reviewed model/topic evidence except Stage33 open-only no-result
+  report_path: stages/36_model_selection__cross_model_characteristic_synthesis/03_reviews/stage36_closeout_packet.md
+  packet_summary_path: docs/agent_control/packets/stage36_run30A_cross_model_characteristic_synthesis_v1/aggregate_summary.json
+  external_verification_status: completed_existing_mt5_evidence_integrated
+  next_action: choose_one_micro_probe_frontier_or_open_next_topic
+  boundary: stage36_model_selection_reference_only_not_edge_not_alpha_quality_not_baseline_not_promotion_not_runtime_authority
 
 stage33_tier_a_markov_long_permission_source:
   packet_id: stage33_tier_a_markov_long_permission_open_v1

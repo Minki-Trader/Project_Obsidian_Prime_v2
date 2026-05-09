@@ -1,4 +1,17 @@
-﻿## Latest Stage35 Closeout(최신 35단계 마감)
+﻿## Latest Stage36 Closeout(최신 36단계 마감)
+
+- active stage(활성 단계): `36_model_selection__cross_model_characteristic_synthesis`
+- current run(현재 실행): `stage36_cross_model_characteristic_synthesis_closeout_v1`
+- source run(원천 실행): `run30A_cross_model_characteristic_synthesis_v1`
+- latest packet(최신 묶음): `stage36_run30A_cross_model_characteristic_synthesis_v1`
+- status(상태): `reviewed_closed_reference_only(검토 후 마감, 참고 전용)`
+- next action(다음 행동): `choose_one_micro_probe_frontier_or_open_next_topic`
+
+Stage36(36단계)은 Stage10-35(10-35단계) 모델군(model family, 모델군)을 특성 축(characteristic axis, 특성 축), MT5 linkage(MT5 연결), selection reference(선택 참고), micro-probe frontier(미세탐침 전선)로 정리하고 마감했다.
+
+효과(effect, 효과): 다음 stage(단계)는 이 stage(단계)만 보고 모델 선택 방향을 고를 수 있다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+
+## Latest Stage35 Closeout(최신 35단계 마감)
 
 - active stage(활성 단계): `35_context_map__unsupervised_market_state_atlas`
 - current run(현재 실행): `stage35_context_map_closeout_v1`

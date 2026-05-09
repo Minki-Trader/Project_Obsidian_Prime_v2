@@ -1,4 +1,13 @@
-﻿## 2026-05-09 Stage35 Closeout(35단계 마감)
+﻿## 2026-05-09 Stage36 Closeout(36단계 마감)
+
+- run(실행): `stage36_cross_model_characteristic_synthesis_closeout_v1`
+- source run(원천 실행): `run30A_cross_model_characteristic_synthesis_v1`
+- models/topics(모델/주제): `25`
+- MT5 runtime evidence rows(MT5 런타임 근거 행): `24`
+- judgment(판정): `reviewed_closed_stage36_cross_model_characteristic_synthesis_reference_only`
+- effect(효과): 모델 간 개별 특성, MT5(메타트레이더5) 경계, 선택 참고, 미세탐침 전선을 Stage36(36단계) 마감 상태로 고정했다. baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않았다.
+
+## 2026-05-09 Stage35 Closeout(35단계 마감)
 
 - run(실행): `stage35_context_map_closeout_v1`
 - status(상태): `reviewed_closed_no_stage36_opened`
