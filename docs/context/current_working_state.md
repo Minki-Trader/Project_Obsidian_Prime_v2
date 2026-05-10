@@ -1,4 +1,13 @@
-﻿## Latest Stage55 Tier-B Fallback Side-Filter Routing Filter(理쒖떊 53?④퀎 諛⑺뼢 ?덉슜 ?꾪꽣)
+﻿## Latest Overnight Campaign Budget Stop(최신 야간 캠페인 예산 중지)
+
+- campaign_id(캠페인 ID): `OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01`
+- judgment(판정): `campaign_budget_exhausted_candidates_preserved_for_user_review`
+- stop_reason(중지 이유): `runtime_budget_exhausted_after_stage55_main_sync`
+- preserved candidates(보존 후보): `spf03_block_early_or_trend_buy`, `csp03_midlate_longs_strong_shorts`, `rfp02_csp03_primary_csp05_fallback`
+
+Codex self-completion(코덱스 자체 완료)은 금지된다. Candidate discovery(후보 발견)는 user review(사용자 검토) 입력일 뿐이며 baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 참조)를 만들지 않는다.
+
+## Latest Stage55 Tier-B Fallback Side-Filter Routing Filter(理쒖떊 53?④퀎 諛⑺뼢 ?덉슜 ?꾪꽣)
 
 - current run(?꾩옱 ?ㅽ뻾): `run49A_tier_b_fallback_side_filter_router_v1`
 
@@ -1387,4 +1396,5 @@ Codex 제어면 v2(Control Plane v2, 제어면 v2)는 코덱스 작업 운영 �
 - judgment(판정): `inconclusive_probability_shape_attribution_runtime_probe_completed`
 - boundary(경계): `runtime_probe_probability_shape_attribution_not_alpha_quality_not_promotion_not_runtime_authority`
 - effect(효과): 모델 변형이 아니라 probability-shape attribution regime(확률 모양 귀속 국면) 축을 확인했고, alpha quality(알파 품질)나 promotion candidate(승격 후보)는 만들지 않는다.
+
 

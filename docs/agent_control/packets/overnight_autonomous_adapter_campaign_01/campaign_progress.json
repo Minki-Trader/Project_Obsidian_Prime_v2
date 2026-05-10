@@ -43,7 +43,7 @@
                        },
     "boundary":  "candidate_discovery_only_until_explicit_user_approval",
     "campaign_id":  "OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01",
-    "campaign_judgment":  "campaign_in_progress_user_review_required_candidate_observed",
+    "campaign_judgment":  "campaign_budget_exhausted_candidates_preserved_for_user_review",
     "campaign_mode":  "autonomous_candidate_discovery_until_budget_or_blocker",
     "latest_stage":  {
                          "judgment":  "reviewed_completed_adapter_candidate_runtime_probe_only",
@@ -78,5 +78,31 @@
                              "55_adapter_routing__tier_b_fallback_side_filter_router"
                          ],
     "last_synced_main_commit_sha":  "9f8f7416209ac69436a203138f0811fc5cda76cf",
-    "last_synced_at_utc":  "2026-05-10T18:50:29Z"
+    "last_synced_at_utc":  "2026-05-10T18:50:29Z",
+    "stop_reason":  "runtime_budget_exhausted_after_stage55_main_sync",
+    "stopped_at_utc":  "2026-05-10T18:52:29Z",
+    "candidates_preserved_for_user_review":  [
+                                                 {
+                                                     "stage_id":  "53_adapter_signal__side_specific_short_permission_filter",
+                                                     "run_id":  "run47A_side_specific_short_permission_filter_v1",
+                                                     "candidate_id":  "spf03_block_early_or_trend_buy",
+                                                     "status":  "adapter_candidate_observed_user_review_required",
+                                                     "packet_path":  "docs/agent_control/packets/adapter_candidate_review_stage53_spf03_block_early_or_trend_buy_v1"
+                                                 },
+                                                 {
+                                                     "stage_id":  "54_adapter_signal__cost_aware_side_permission_filter",
+                                                     "run_id":  "run48A_cost_aware_side_permission_filter_v1",
+                                                     "candidate_id":  "csp03_midlate_longs_strong_shorts",
+                                                     "status":  "adapter_candidate_observed_user_review_required",
+                                                     "packet_path":  "docs/agent_control/packets/adapter_candidate_review_stage54_csp03_midlate_longs_strong_shorts_v1"
+                                                 },
+                                                 {
+                                                     "stage_id":  "55_adapter_routing__tier_b_fallback_side_filter_router",
+                                                     "run_id":  "run49A_tier_b_fallback_side_filter_router_v1",
+                                                     "candidate_id":  "rfp02_csp03_primary_csp05_fallback",
+                                                     "status":  "adapter_candidate_observed_user_review_required",
+                                                     "packet_path":  "docs/agent_control/packets/adapter_candidate_review_stage55_rfp02_csp03_primary_csp05_fallback_v1"
+                                                 }
+                                             ],
+    "no_self_completion_status":  "passed_codex_did_not_self_complete_campaign"
 }
