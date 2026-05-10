@@ -1,0 +1,30 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile stage_pipelines\\stage49\\deep_followup_suite.py foundation\\pipelines\\run_stage49_deep_followup_suite.py tests\\test_stage49_deep_followup_suite.py",
+      "failures_or_blockers": "",
+      "result": "passed"
+    },
+    {
+      "command": "python -m pytest tests\\test_stage49_deep_followup_suite.py -q",
+      "failures_or_blockers": "",
+      "result": "2 passed in 2.87s"
+    },
+    {
+      "command": "python -m foundation.pipelines.run_stage49_deep_followup_suite --timeout-seconds 900",
+      "failures_or_blockers": "",
+      "result": "completed; judgment reviewed_completed_positive_deep_followup_runtime_probe_only; selected_variant adx_20_25"
+    },
+    {
+      "command": "python -m pytest tests\\test_stage49_deep_followup_suite.py tests\\test_stage49_followup_suite.py tests\\test_stage49_reversal_selection_rule_mt5.py tests\\test_stage49_mfe_capture_exit_timing.py tests\\test_required_gate_coverage_audit.py tests\\test_state_sync_audit.py tests\\test_stage_pipeline_imports.py -q",
+      "failures_or_blockers": "",
+      "result": "17 passed, 255 subtests passed in 5.54s"
+    },
+    {
+      "command": "python -m pytest tests\\test_required_gate_coverage_audit.py tests\\test_state_sync_audit.py tests\\test_stage_pipeline_imports.py -q",
+      "failures_or_blockers": "",
+      "result": "6 passed, 255 subtests passed in 8.42s"
+    }
+  ],
+  "status": "passed"
+}

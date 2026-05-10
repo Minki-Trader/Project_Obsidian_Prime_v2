@@ -1,4 +1,24 @@
-﻿## Latest Stage48 Trade-Level Supplement(최신 48단계 거래 단위 보강)
+﻿## Latest Stage49 Closeout(최신 49단계 마감)
+
+Stage49(49단계) closed(마감) as `reviewed_closed_positive_reference_surface_runtime_probe_only` after run43K/run43L/run43M/run43N. The preserved reference surface(보존 참고 표면)는 `Tier A only adx_20_25`이며, baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 기준)는 만들지 않았다.
+
+## Latest Stage49 Deep Follow-up Suite(최신 49단계 심화 후속 묶음)
+
+Stage49(49단계) completed(완료) run43G/run43H/run43I/run43J as `reviewed_completed_positive_deep_followup_runtime_probe_only`. Selected variant(선택 변형)는 `adx_20_25`이고, 이 묶음은 deep followup runtime probe only(심화 후속 런타임 탐침 전용)라서 baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 기준)를 만들지 않았다.
+
+## Latest Stage49 Follow-up Suite(최신 49단계 후속 실험 묶음)
+
+Stage49(49단계) completed(완료) run43C/run43D/run43E/run43F as `reviewed_completed_positive_followup_runtime_probe_only`. ADX band robustness(ADX 구간 강건성)는 `passed`이고, 이 묶음은 followup runtime probe only(후속 런타임 탐침 전용)라서 baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 기준)를 만들지 않았다.
+
+## Latest Stage49 Reversal Selection MT5 Linkage(최신 49단계 반전 선별 MT5 수익 연동)
+
+Stage49(49단계) `49_trade_lifecycle__compression_stress_mfe_capture_exit_timing` added(추가) `run43B_reversal_selection_rule_mt5_linkage_v1` as `reviewed_completed_positive_runtime_linkage_probe_only`. The rule(규칙) `skip_short_adx_20_25` changes short ADX 20-25 entries(숏 ADX 20-25 진입)를 flat(무진입)으로 바꿔 actual MT5 Strategy Tester(실제 MT5 전략 테스터) profit linkage(수익 연동)를 확인했다. No baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 기준) was created.
+
+## Latest Stage49 MFE Capture Exit Timing(최신 49단계 MFE 포착 청산 타이밍)
+
+Stage49(49단계) `49_trade_lifecycle__compression_stress_mfe_capture_exit_timing` finished(완료) `run43A_compression_stress_mfe_capture_exit_timing_scout_v1` as `reviewed_completed_inconclusive_counterfactual_exit_timing_scout_only`. Stage48(48단계) run42B trade-level records(거래 단위 기록)를 사용해 fixed take-profit(고정 익절) counterfactual(반사실)을 봤고, common target(공통 목표)은 both splits(양쪽 분할)를 동시에 개선하지 못했다. No baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 기준) was created.
+
+## Latest Stage48 Trade-Level Supplement(최신 48단계 거래 단위 보강)
 
 Stage48(48단계) `48_robustness_attribution__survivor_cluster_concentration_scout` added(추가) `run42B_trade_level_cluster_telemetry_supplement_v1` for Stage45(45단계) `c08_extreme_compression_stress`. It copied and parsed(복사 및 파싱) existing MT5 terminal reports(기존 MT5 터미널 보고서) into `735` closed trade rows(닫힌 거래 행). Judgment(판정)은 `reviewed_completed_inconclusive_trade_level_runtime_supplement_only`이며, baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 기준)는 없다.
 

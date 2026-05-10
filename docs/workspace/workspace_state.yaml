@@ -1,8 +1,8 @@
 updated_on: '2026-05-10'
 project_mode: clean_stage_restart
-active_branch: codex/auto-campaign-02-run-all-five-independent-topics
-active_stage: 48_robustness_attribution__survivor_cluster_concentration_scout
-current_run_id: run42B_trade_level_cluster_telemetry_supplement_v1
+active_branch: codex/stage49-mfe-capture-exit-timing
+active_stage: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+current_run_id: stage49_closeout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,6 +17,11 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing closeout(마감): run43K/run43L/run43M/run43N(43K-43N 실행)과 stage49_closeout_v1(마감)을 완료했고 Tier A only adx_20_25(티어 A만 adx_20_25)를 reference surface(참고 표면)로 보존했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing deep_followup_suite(심화 후속 실험 묶음): run43G/run43H/run43I/run43J(43G-43J 실행)를 완료했고 Tier A only ADX band sweep(Tier A만 ADX 구간 훑기)은 7개 중 7개 통과, selected variant(선택 변형)는 `adx_20_25`, Tier B fallback conditioning(Tier B 대체 조건화)은 tested_not_promotion(시험됨, 승격 아님)으로 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing followup_suite(후속 실험 묶음): run43C/run43D/run43E/run43F(43C-43F 실행)를 완료했고 ADX band robustness(ADX 구간 강건성)는 7개 중 6개 통과, Tier A only(Tier A만)가 가장 강한 ownership(소유권) 단서였다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing run43B_reversal_selection_rule_mt5_linkage(43B 반전 선별 MT5 수익 연동): `c08_extreme_compression_stress` short ADX 20-25 skip(숏 ADX 20-25 제외) rule(규칙)을 actual MT5 Strategy Tester(실제 MT5 전략 테스터)에 연결했고 validation/OOS(검증/외표본) 수익 delta(차이)는 `53.83`/`95.42`였다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing counterfactual_exit_timing_scout(반사실 청산 타이밍 탐색): `c08_extreme_compression_stress` MFE capture(최대 유리 변동 포착)를 평가했고 fixed take-profit(고정 익절)은 both splits(양쪽 분할)를 동시에 개선하지 못했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage48(48단계) 48_robustness_attribution__survivor_cluster_concentration_scout run42B_trade_level_supplement(42B 거래 단위 보강): `c08_extreme_compression_stress` existing MT5 terminal reports(기존 MT5 터미널 보고서)를 parse(파싱)해 `735` closed trades(닫힌 거래)를 기록했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage48(48단계) 48_robustness_attribution__survivor_cluster_concentration_scout reviewed_attribution_scout_completed(검토 완료 귀속 탐색): run42A_survivor_cluster_concentration_scout_v1(42A 실행)은 Stage43-47(43-47단계) survivor(생존 후보)의 month/week/day/session/regime/tier concentration(월/주/일/세션/국면/티어 집중)을 평가했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage37(37단계) 37_state_context__single_base_filter_or_state_router reviewed_structure_judgment(구조 판정 검토됨): run31A_state_context_router_broad_mt5_probe_v1(31A 실행)는 state context(상태 문맥), model response(모델 반응), broad MT5 routed probe(넓은 MT5 라우팅 탐침)를 묶어 `state_context_not_useful_or_inconclusive`로 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)는 없다.
@@ -2930,3 +2935,70 @@ stage48_trade_level_cluster_telemetry_supplement:
   external_verification_status: completed_existing_mt5_terminal_reports_parsed_no_new_tester_run_claimed
   next_action: choose_new_stage49_topic_or_open_explicit_promotion_packet
   boundary: runtime_supplement_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage49_mfe_capture_exit_timing:
+  packet_id: stage49_run43A_compression_stress_mfe_capture_exit_timing_scout_v1
+  stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+  status: reviewed_counterfactual_exit_timing_scout_completed
+  current_run_id: run43A_compression_stress_mfe_capture_exit_timing_scout_v1
+  source_stage_id: 48_robustness_attribution__survivor_cluster_concentration_scout
+  source_run_id: run42B_trade_level_cluster_telemetry_supplement_v1
+  source_candidate_id: c08_extreme_compression_stress
+  diagnostic_rows: 735
+  best_common_fixed_target: 16.0
+  common_validation_delta: 38.84
+  common_oos_delta: -2.06
+  report_path: stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/03_reviews/run43A_packet.md
+  packet_summary_path: docs/agent_control/packets/stage49_run43A_compression_stress_mfe_capture_exit_timing_scout_v1/aggregate_summary.json
+  next_action: design_runtime_probe_only_if_exit_overlay_logic_is_explicit
+  boundary: counterfactual_exit_timing_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage49_reversal_selection_rule_mt5_linkage:
+  packet_id: stage49_run43B_reversal_selection_rule_mt5_linkage_v1
+  stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+  idea_id: IDEA-ST49-COMPRESSION-STRESS-MFE-CAPTURE
+  status: reviewed_runtime_linkage_probe_recorded
+  current_run_id: run43B_reversal_selection_rule_mt5_linkage_v1
+  judgment: reviewed_completed_positive_runtime_linkage_probe_only
+  source_candidate_id: c08_extreme_compression_stress
+  rule_id: skip_short_adx_20_25
+  validation_delta: 53.83
+  oos_delta: 95.42
+  report_path: stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/03_reviews/run43B_packet.md
+  packet_summary_path: docs/agent_control/packets/stage49_run43B_reversal_selection_rule_mt5_linkage_v1/aggregate_summary.json
+  boundary: runtime_linkage_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage49_followup_suite:
+  packet_id: stage49_run43CDEF_followup_suite_v1
+  stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+  status: reviewed_followup_suite_completed
+  current_run_id: run43F_filtered_exit_counterfactual_retest_v1
+  judgment: reviewed_completed_positive_followup_runtime_probe_only
+  run43c_robustness_status: passed
+  run43c_passed_variant_count: 6
+  report_path: stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/03_reviews/stage49_followup_suite_packet.md
+  packet_summary_path: docs/agent_control/packets/stage49_run43CDEF_followup_suite_v1/aggregate_summary.json
+  boundary: followup_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage49_deep_followup_suite:
+  packet_id: stage49_run43GHIJ_deep_followup_suite_v1
+  stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+  status: reviewed_deep_followup_suite_completed
+  current_run_id: run43J_tier_b_fallback_conditioning_v1
+  judgment: reviewed_completed_positive_deep_followup_runtime_probe_only
+  selected_variant: adx_20_25
+  run43g_robustness_status: passed
+  report_path: stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/03_reviews/stage49_deep_followup_suite_packet.md
+  packet_summary_path: docs/agent_control/packets/stage49_run43GHIJ_deep_followup_suite_v1/aggregate_summary.json
+  boundary: deep_followup_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage49_closeout:
+  packet_id: stage49_run43KLMN_closeout_suite_v1
+  stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+  status: reviewed_closed
+  current_run_id: stage49_closeout_v1
+  judgment: reviewed_closed_positive_reference_surface_runtime_probe_only
+  selected_reference_surface: Tier A only adx_20_25
+  report_path: stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/03_reviews/stage49_closeout_packet.md
+  packet_summary_path: docs/agent_control/packets/stage49_run43KLMN_closeout_suite_v1/aggregate_summary.json
+  boundary: stage49_closeout_reference_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

@@ -1,0 +1,20 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile stage_pipelines/stage49/reversal_selection_rule_mt5.py foundation/pipelines/run_stage49_reversal_selection_rule_mt5.py tests/test_stage49_reversal_selection_rule_mt5.py",
+      "failures_or_blockers": "",
+      "result": "passed"
+    },
+    {
+      "command": "python -m pytest tests/test_stage49_reversal_selection_rule_mt5.py tests/test_stage49_mfe_capture_exit_timing.py tests/test_required_gate_coverage_audit.py tests/test_state_sync_audit.py tests/test_stage_pipeline_imports.py -q",
+      "failures_or_blockers": "",
+      "result": "passed_13_passed_251_subtests_passed"
+    },
+    {
+      "command": "python -m foundation.pipelines.run_stage49_reversal_selection_rule_mt5 --timeout-seconds 900",
+      "failures_or_blockers": "",
+      "result": "recorded_by_pipeline"
+    }
+  ],
+  "status": "recorded"
+}

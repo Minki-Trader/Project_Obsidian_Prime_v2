@@ -1,0 +1,24 @@
+packet_id: stage49_run43KLMN_closeout_suite_v1
+stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+run_ids:
+  - run43K_tier_b_subtype_conditional_fallback_v1
+  - run43L_december_oos_loss_forensics_v1
+  - run43M_hold_time_late_session_exit_probe_v1
+  - run43N_adx_leave_one_month_stability_v1
+  - stage49_closeout_v1
+primary_family: stage_closeout_runtime_backtest
+primary_skill: obsidian-result-judgment
+support_skills:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-exploration-mandate
+  - obsidian-artifact-lineage
+required_gates:
+  - runtime_evidence_gate
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_gate
+  - required_gate_coverage_audit
+  - final_claim_guard
+status: reviewed_stage49_closed
+claim_boundary: stage49_closeout_reference_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

@@ -1,0 +1,85 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "stage49_run43B_source_stage45_handoff",
+      "availability": "tracked_source",
+      "notes": "Stage45 c08 MT5 handoff reused with filtered signal CSV files.",
+      "path": "stages/45_volatility_mechanism__compression_expansion_signal_rebuild/02_runs/run39A_volatility_compression_expansion_broad_mt5_probe_v1/mt5/handoff_manifest.json",
+      "sha256": "8b6dc8399b8391c25d5721f8d3a38b1007b043d634010be7d69829276165f1cd",
+      "type": "source_handoff"
+    },
+    {
+      "artifact_id": "stage49_run43B_source_candidate_signal_table",
+      "availability": "tracked_source",
+      "notes": "ADX rule source for pre-entry selection.",
+      "path": "stages/45_volatility_mechanism__compression_expansion_signal_rebuild/02_runs/run39A_volatility_compression_expansion_broad_mt5_probe_v1/tables/candidate_signal_table.parquet",
+      "sha256": "e9d1bcbb514ff2e5fa9570c60a796832ca27b196c81ad4072799d9fe36abcb57",
+      "type": "source_table"
+    },
+    {
+      "artifact_id": "stage49_run43B_source_trade_level_records",
+      "availability": "tracked_source",
+      "notes": "Post-hoc clue source for skip_short_adx_20_25.",
+      "path": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/02_runs/run42B/results/trade_level_records.csv",
+      "sha256": "e775d24838f4221a9a44524eda4f4b67175a85d3746eef87016d54b4616e0b03",
+      "type": "source_table"
+    },
+    {
+      "artifact_id": "stage49_run43B_model_score_table",
+      "availability": "copied_to_run_and_common_files",
+      "notes": "Discrete signal score table unchanged from Stage45.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43B/models/stage45_discrete_signal_score_table.csv",
+      "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+      "type": "model_table"
+    },
+    {
+      "artifact_id": "stage49_run43B_run43B_c08_a_val_s49",
+      "availability": "copied_to_common_files",
+      "notes": "skip_short_adx_20_25 applied before MT5 tester handoff.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43B/features/run43B_c08_a_val_s49.csv",
+      "sha256": "f2eb1b6d638d6ecdcaf2c2fd6a60234b34a6d20930a56a5616e0b615a4508903",
+      "type": "filtered_feature_csv"
+    },
+    {
+      "artifact_id": "stage49_run43B_run43B_c08_b_val_s49",
+      "availability": "copied_to_common_files",
+      "notes": "skip_short_adx_20_25 applied before MT5 tester handoff.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43B/features/run43B_c08_b_val_s49.csv",
+      "sha256": "95e3a23790865011717359213b579e4d18bab395f1c37a22f83004839a206d8e",
+      "type": "filtered_feature_csv"
+    },
+    {
+      "artifact_id": "stage49_run43B_run43B_c08_a_oos_s49",
+      "availability": "copied_to_common_files",
+      "notes": "skip_short_adx_20_25 applied before MT5 tester handoff.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43B/features/run43B_c08_a_oos_s49.csv",
+      "sha256": "437c095f3d729d60ee7261446c0b6a03e63a3608ff9c2159b3e570a9fa2a858f",
+      "type": "filtered_feature_csv"
+    },
+    {
+      "artifact_id": "stage49_run43B_run43B_c08_b_oos_s49",
+      "availability": "copied_to_common_files",
+      "notes": "skip_short_adx_20_25 applied before MT5 tester handoff.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43B/features/run43B_c08_b_oos_s49.csv",
+      "sha256": "ab6238b80bd91786754576681fd04abe8cb8300546c5f2b5eb54e854c8476783",
+      "type": "filtered_feature_csv"
+    },
+    {
+      "artifact_id": "stage49_run43B_routed_c08_s49b_validation_is_html_report",
+      "availability": "copied_from_terminal_output",
+      "notes": "Actual MT5 Strategy Tester report for profit linkage.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43B/mt5/reports/Project_Obsidian_Prime_v2_run43B_reversal_selection_rule_mt5_linkage_v1_routed_c08_s49b_validation_is.htm",
+      "sha256": "4a9990f0c5db6d50bf70dffed9080f4dbec5b12cecd528b8dcfd01cda19d1db8",
+      "type": "mt5_strategy_tester_report"
+    },
+    {
+      "artifact_id": "stage49_run43B_routed_c08_s49b_oos_html_report",
+      "availability": "copied_from_terminal_output",
+      "notes": "Actual MT5 Strategy Tester report for profit linkage.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43B/mt5/reports/Project_Obsidian_Prime_v2_run43B_reversal_selection_rule_mt5_linkage_v1_routed_c08_s49b_oos.htm",
+      "sha256": "7db616d1cf3607d584b44843f63662474a52b8788416c4315560cf3d72ce028d",
+      "type": "mt5_strategy_tester_report"
+    }
+  ],
+  "status": "passed"
+}

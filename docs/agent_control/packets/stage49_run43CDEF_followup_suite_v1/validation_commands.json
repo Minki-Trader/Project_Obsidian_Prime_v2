@@ -1,0 +1,15 @@
+{
+  "commands": [
+    {
+      "command": "python -m foundation.pipelines.run_stage49_followup_suite --timeout-seconds 900",
+      "failures_or_blockers": "",
+      "result": "recorded_by_pipeline"
+    },
+    {
+      "command": "python -m pytest tests/test_stage49_followup_suite.py tests/test_stage49_reversal_selection_rule_mt5.py tests/test_stage49_mfe_capture_exit_timing.py tests/test_required_gate_coverage_audit.py tests/test_state_sync_audit.py tests/test_stage_pipeline_imports.py -q",
+      "failures_or_blockers": "",
+      "result": "passed_15_passed_253_subtests_passed"
+    }
+  ],
+  "status": "recorded"
+}

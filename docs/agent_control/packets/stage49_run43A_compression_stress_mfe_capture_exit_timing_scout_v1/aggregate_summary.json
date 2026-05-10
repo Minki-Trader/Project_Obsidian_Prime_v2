@@ -1,0 +1,95 @@
+{
+  "boundary": "counterfactual_exit_timing_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+  "by_split": {
+    "oos": {
+      "avg_mfe_capture_gap": 5.690018,
+      "loss_trade_count": 178,
+      "loss_with_positive_mfe_count": 169,
+      "loss_with_positive_mfe_share": 0.949438,
+      "original_net_profit": 146.86,
+      "trade_count": 280
+    },
+    "validation_is": {
+      "avg_mfe_capture_gap": 4.521165,
+      "loss_trade_count": 271,
+      "loss_with_positive_mfe_count": 257,
+      "loss_with_positive_mfe_share": 0.948339,
+      "original_net_profit": 57.7,
+      "trade_count": 455
+    }
+  },
+  "created_at_utc": "2026-05-10T07:18:10Z",
+  "decision": {
+    "best_common_target": 16.0,
+    "best_oos_target": 16.0,
+    "best_validation_target": 14.0,
+    "claim_boundary": "counterfactual_exit_timing_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+    "common_oos_delta": -2.06,
+    "common_validation_delta": 38.84,
+    "decision_reasons": "no_common_fixed_take_profit_target_improves_both_splits;validation_improvement_not_oos_confirmed;loss_rescue_diagnostic_large_but_not_executable_without_selection_rule",
+    "judgment": "reviewed_completed_inconclusive_counterfactual_exit_timing_scout_only",
+    "oos_best_delta": -2.06,
+    "source_candidate_id": "c08_extreme_compression_stress",
+    "status": "exit_timing_scout_recorded_not_promotion",
+    "validation_best_delta": 55.34
+  },
+  "diagnostic_rows": 735,
+  "idea_id": "IDEA-ST49-COMPRESSION-STRESS-MFE-CAPTURE",
+  "judgment": "reviewed_completed_inconclusive_counterfactual_exit_timing_scout_only",
+  "ledger_sync": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/artifact_registry.csv",
+      "rows": 349,
+      "sha256": "cfaa950b6c70ae0b70ff695146076c53d7461160d801ceb5808c5eb6553ea1c8",
+      "upserted_rows": 9
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 4504,
+      "sha256": "e02ed699b4e6b60c2625b5d7d69bfa300474c7c3574786f95b0cb551109bfada",
+      "upserted_rows": 2
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+      "rows": 338,
+      "sha256": "ccf459185d86d8c3c3a9ec0cf00082080398d0b91b22278b43e932bfbb57ff5d",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/03_reviews/stage_run_ledger.csv",
+      "rows": 2,
+      "sha256": "19571693eb694232ac13b909701f44e384853c4ef3cdb3680939a2bb05c74050",
+      "upserted_rows": 2
+    }
+  },
+  "loss_rescue_rows": 26,
+  "packet_id": "stage49_run43A_compression_stress_mfe_capture_exit_timing_scout_v1",
+  "question": "Does Stage45 c08 lose money because favorable excursion is not captured before reversal?",
+  "result_judgment": {
+    "claim_boundary": "counterfactual_exit_timing_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+    "evidence_available": [
+      "Stage48 trade-level rows",
+      "raw MT5 M5 bars",
+      "path-aware target-touch diagnostics"
+    ],
+    "evidence_missing": [
+      "actual MT5 EA exit overlay rerun",
+      "intrabar tick ordering within M5 bars"
+    ],
+    "judgment_label": "reviewed_completed_inconclusive_counterfactual_exit_timing_scout_only",
+    "next_condition": "Only a runtime probe with explicit EA exit overlay can upgrade this from counterfactual scout.",
+    "result_subject": "Stage45 c08 MFE capture exit timing counterfactual scout",
+    "status": "passed"
+  },
+  "run_id": "run43A_compression_stress_mfe_capture_exit_timing_scout_v1",
+  "source_candidate_id": "c08_extreme_compression_stress",
+  "source_packet_id": "stage48_run42B_trade_level_cluster_telemetry_supplement_v1",
+  "source_run_id": "run42B_trade_level_cluster_telemetry_supplement_v1",
+  "source_stage_id": "48_robustness_attribution__survivor_cluster_concentration_scout",
+  "stage_id": "49_trade_lifecycle__compression_stress_mfe_capture_exit_timing",
+  "threshold_rows": 26
+}

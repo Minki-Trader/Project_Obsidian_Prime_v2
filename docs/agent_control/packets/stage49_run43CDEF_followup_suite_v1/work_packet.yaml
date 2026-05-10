@@ -1,0 +1,23 @@
+packet_id: stage49_run43CDEF_followup_suite_v1
+stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+run_ids:
+  - run43C_adx_band_robustness_mt5_sweep_v1
+  - run43D_tier_ownership_mt5_decomposition_v1
+  - run43E_filtered_trade_level_attribution_v1
+  - run43F_filtered_exit_counterfactual_retest_v1
+primary_family: runtime_backtest
+primary_skill: obsidian-runtime-parity
+support_skills:
+  - obsidian-backtest-forensics
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+required_gates:
+  - runtime_evidence_gate
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_gate
+  - required_gate_coverage_audit
+  - final_claim_guard
+status: reviewed_followup_suite_completed
+claim_boundary: followup_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

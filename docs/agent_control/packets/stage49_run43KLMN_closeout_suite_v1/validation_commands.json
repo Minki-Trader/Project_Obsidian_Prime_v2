@@ -1,0 +1,35 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile stage_pipelines\\stage49\\closeout_suite.py foundation\\pipelines\\run_stage49_closeout_suite.py tests\\test_stage49_closeout_suite.py",
+      "failures_or_blockers": "",
+      "result": "passed"
+    },
+    {
+      "command": "python -m pytest tests\\test_stage49_closeout_suite.py -q",
+      "failures_or_blockers": "",
+      "result": "3 passed in 3.08s"
+    },
+    {
+      "command": "python -m foundation.pipelines.run_stage49_closeout_suite --timeout-seconds 900",
+      "failures_or_blockers": "first attempt stopped during run43M feature materialization: timezone-aware timestamp_utc vs timezone-naive market timestamp_key merge mismatch; fixed add_session_slice timestamp normalization and resumed from completed run43K",
+      "result": "repaired_and_rerun"
+    },
+    {
+      "command": "python -m foundation.pipelines.run_stage49_closeout_suite --timeout-seconds 900",
+      "failures_or_blockers": "",
+      "result": "completed; judgment reviewed_closed_positive_reference_surface_runtime_probe_only; selected_variant adx_20_25"
+    },
+    {
+      "command": "python -m pytest tests\\test_stage49_closeout_suite.py tests\\test_stage49_deep_followup_suite.py tests\\test_stage49_followup_suite.py tests\\test_stage49_reversal_selection_rule_mt5.py tests\\test_stage49_mfe_capture_exit_timing.py tests\\test_required_gate_coverage_audit.py tests\\test_state_sync_audit.py tests\\test_stage_pipeline_imports.py -q",
+      "failures_or_blockers": "",
+      "result": "20 passed, 257 subtests passed in 10.49s"
+    },
+    {
+      "command": "python -m pytest tests\\test_required_gate_coverage_audit.py tests\\test_state_sync_audit.py tests\\test_stage_pipeline_imports.py -q",
+      "failures_or_blockers": "",
+      "result": "6 passed, 257 subtests passed in 9.86s"
+    }
+  ],
+  "status": "passed"
+}

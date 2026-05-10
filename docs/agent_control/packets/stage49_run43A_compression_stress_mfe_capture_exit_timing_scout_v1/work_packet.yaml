@@ -1,0 +1,18 @@
+packet_id: stage49_run43A_compression_stress_mfe_capture_exit_timing_scout_v1
+stage_id: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
+run_id: run43A_compression_stress_mfe_capture_exit_timing_scout_v1
+idea_id: IDEA-ST49-COMPRESSION-STRESS-MFE-CAPTURE
+primary_family: experiment_execution
+primary_skill: obsidian-experiment-design
+support_skills:
+  - obsidian-data-integrity
+  - obsidian-performance-attribution
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+required_gates:
+  - data_integrity_gate
+  - performance_attribution_gate
+  - artifact_lineage_gate
+  - result_judgment_gate
+  - final_claim_guard
+claim_boundary: counterfactual_exit_timing_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
