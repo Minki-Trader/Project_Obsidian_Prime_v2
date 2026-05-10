@@ -1,8 +1,8 @@
 updated_on: '2026-05-10'
 project_mode: clean_stage_restart
-active_branch: codex/stage50-adx-reference-wfo-stress
-active_stage: 50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress
-current_run_id: run44E_trade_overlap_concentration_v1
+active_branch: codex/stage51-q2-loss-firewall
+active_stage: 51_risk_filter__q2_short_late_di_loss_firewall
+current_run_id: run45E_stage51_closeout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,56 +17,13 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
-- Stage50(50단계) follow-up suite(후속 묶음): run44B/run44C/run44D/run44E(44B-44E 실행)로 Q2 부검, Tier B routed WFO(Tier B 라우팅 WFO), cost sensitivity(비용 민감도), trade overlap(거래 중복)을 완료했다; routed_total_status(라우팅 전체 상태)=passed, routed_total_net(라우팅 전체 순수익)=359.12; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage50(50단계) 50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress: run44A_tier_a_adx_reference_surface_wfo_stress_v1(실행)에서 Tier A ADX reference surface(기준 표면)를 rolling window(롤링 윈도우) MT5 stress(압박)로 검증했다; judgment(판정)=reviewed_completed_positive_robustness_runtime_probe_only, reference_status(기준 상태)=passed, best_variant(최선 변형)=adx_20_25; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing closeout(마감): run43K/run43L/run43M/run43N(43K-43N 실행)과 stage49_closeout_v1(마감)을 완료했고 Tier A only adx_20_25(티어 A만 adx_20_25)를 reference surface(참고 표면)로 보존했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing deep_followup_suite(심화 후속 실험 묶음): run43G/run43H/run43I/run43J(43G-43J 실행)를 완료했고 Tier A only ADX band sweep(Tier A만 ADX 구간 훑기)은 7개 중 7개 통과, selected variant(선택 변형)는 `adx_20_25`, Tier B fallback conditioning(Tier B 대체 조건화)은 tested_not_promotion(시험됨, 승격 아님)으로 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing followup_suite(후속 실험 묶음): run43C/run43D/run43E/run43F(43C-43F 실행)를 완료했고 ADX band robustness(ADX 구간 강건성)는 7개 중 6개 통과, Tier A only(Tier A만)가 가장 강한 ownership(소유권) 단서였다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing run43B_reversal_selection_rule_mt5_linkage(43B 반전 선별 MT5 수익 연동): `c08_extreme_compression_stress` short ADX 20-25 skip(숏 ADX 20-25 제외) rule(규칙)을 actual MT5 Strategy Tester(실제 MT5 전략 테스터)에 연결했고 validation/OOS(검증/외표본) 수익 delta(차이)는 `53.83`/`95.42`였다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing counterfactual_exit_timing_scout(반사실 청산 타이밍 탐색): `c08_extreme_compression_stress` MFE capture(최대 유리 변동 포착)를 평가했고 fixed take-profit(고정 익절)은 both splits(양쪽 분할)를 동시에 개선하지 못했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage48(48단계) 48_robustness_attribution__survivor_cluster_concentration_scout run42B_trade_level_supplement(42B 거래 단위 보강): `c08_extreme_compression_stress` existing MT5 terminal reports(기존 MT5 터미널 보고서)를 parse(파싱)해 `735` closed trades(닫힌 거래)를 기록했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage48(48단계) 48_robustness_attribution__survivor_cluster_concentration_scout reviewed_attribution_scout_completed(검토 완료 귀속 탐색): run42A_survivor_cluster_concentration_scout_v1(42A 실행)은 Stage43-47(43-47단계) survivor(생존 후보)의 month/week/day/session/regime/tier concentration(월/주/일/세션/국면/티어 집중)을 평가했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage37(37단계) 37_state_context__single_base_filter_or_state_router reviewed_structure_judgment(구조 판정 검토됨): run31A_state_context_router_broad_mt5_probe_v1(31A 실행)는 state context(상태 문맥), model response(모델 반응), broad MT5 routed probe(넓은 MT5 라우팅 탐침)를 묶어 `state_context_not_useful_or_inconclusive`로 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)는 없다.
-- Stage36(36단계) 36_model_selection__cross_model_characteristic_synthesis reviewed_closed_reference_only(검토 후 마감, 참고 전용): stage36_cross_model_characteristic_synthesis_closeout_v1(마감)는 run30A_cross_model_characteristic_synthesis_v1(30A 실행)의 모델 특성, MT5(메타트레이더5) 근거, selection reference(선택 참고), micro-probe frontier(미세탐침 전선)를 Stage36 closeout(36단계 마감)으로 고정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage35(35단계) 35_context_map__unsupervised_market_state_atlas reviewed_closed_no_stage36_opened(검토 후 닫힘, 36단계 미개방): RUN29A-RUN29C(29A-29C 실행) MT5 runtime probe(MT5 런타임 탐침)를 마감했고, 더 파볼 Stage35 후보는 없다고 판정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage34(34단계) 34_regime_mechanism__tier_a_markov_long_permission_attribution reviewed_closed(검토 후 닫힘): run28A-run28F(28A-28F 실행)는 Tier A Markov long permission(티어 A 마르코프 롱 허용)의 귀속/구간/월별/MT5(메타트레이더5) 근거를 남겼고, Stage35(35단계)는 별도 topic pivot(주제 전환)으로 열렸다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
-- Stage33(33단계) 33_regime_mechanism__tier_a_markov_long_permission_source closed_user_requested_stage34_pivot_no_result(사용자 요청 34단계 전환, 결과 없음): 실행 결과(run result, 실행 결과) 없이 Stage34(34단계)로 넘겼다.
-- Stage29-32 native revalidation supplement(29-32단계 원본 재검증 보강) completed after installing
-  river/torch/pytorch-tabnet; MT5 score-table runtime probes(MT5 점수표 런타임 탐침) completed
-  with no baseline(기준선), promotion(승격), or runtime authority(런타임 권위).
-- current_run_id(현재 실행 ID)는 active stage(활성 단계)의 Stage36 closeout(36단계 마감) `stage36_cross_model_characteristic_synthesis_closeout_v1`를 가리킨다. next action(다음 행동)은 `choose_one_micro_probe_frontier_or_open_next_topic`이다.
-- treat Stage29-32(29-32단계) as reviewed_closed_goal_complete after structural scout(구조
-  탐색), MT5 runtime_probe(MT5 런타임 탐침), normalized KPI(정규화 핵심 성과 지표), and closeout(마감);
-  no baseline(기준선), promotion(승격), or runtime authority(런타임 권위) exists
-- 'next action(다음 행동): choose one Stage36(36단계) micro-probe frontier(미세탐침 전선) or open the next topic pivot(다음 주제 전환) by explicit user request(명시 사용자 요청)'
-- treat stage20_27_characteristic_synthesis_v1(20-27단계 특징 및 실제 MT5 재실행 종합 묶음) and
-  stage20_27_actual_mt5_rerun_verification_v1(실제 MT5 재실행 묶음) as cross-stage evidence
-  management(교차 단계 근거 관리); they preserve model-family/topic clues(모델군/주제 단서) and MT5
-  trade shape(MT5 거래 모양) through Stage27(27단계까지) with 16/16 actual routed validation/OOS
-  MT5 reports(실제 검증/표본외 라우팅 MT5 보고서), but create no alpha quality(알파 품질), baseline(기준선),
-  promotion(승격), or runtime authority(런타임 권위)
-- treat Stage 19 as reviewed_closed after run13A-run13AH EBM structural, MT5 runtime,
-  feature, hold, routing, subtype, direction, and follow-up exhaustion probes; preserve
-  EBM clues, not a baseline or promotion
-- treat Stage 19 run13A as completed EBM Python structural scout; preserve EBM shape
-  clues, not baseline, promotion, or runtime authority
-- treat Stage 18 as reviewed_closed after run12A-run12P CatBoost characteristic, follow-up,
-  and compression probes; preserve CatBoost clues and failure memory only, not baseline,
-  promotion, or runtime authority
-- treat Stage 19 through Stage 32(19-32단계) as independent model-family/risk/decision/sequence topics(모델군/위험/결정/순서 주제): EBM(설명가능
-    부스팅 머신), GAM(일반화 가산 모델), ElasticNet Logistic(엘라스틱넷 로지스틱), HMM(은닉 마르코프 모델), regime
-    classifier(국면 분류기), Survival model(생존 모델), hazard model(위험률 모델), NGBoost(자연 그래디언트
-    부스팅), quantile boosting(분위수 부스팅), Markov regression(마르코프 회귀), River online ML(리버
-    온라인 머신러닝), calibration(보정), TabNet(탭넷), and TCN(시간 합성곱 네트워크)
-- treat Stage 17 as reviewed_closed after run11G DART attribution closeout; Stage18
-  is opened as a CatBoost topic, not as a baseline or promotion
-- treat Stage 15 as reviewed_closed after LDA covariance stability closeout; preserve
-  LDA covariance shrinkage clues, not a baseline or promotion
-- treat Stage 14 as reviewed_closed; preserve SVM margin/kernel runtime_probe(런타임
-  탐침) behavior clues(행동 단서), not a baseline(기준선) or promotion(승격)
-- treat Tier A and Tier B as explorable sample labels, not exploration gates
-
-
+- Stage51(51단계) 51_risk_filter__q2_short_late_di_loss_firewall: run45A-run45E(실행45A-45E)로 Q2 loss firewall(Q2 손실 방화벽)을 MT5 WFO(MT5 워크포워드)까지 검증했다; judgment(판정)=reviewed_completed_positive_q2_loss_firewall_runtime_probe_only, best_variant(최상 변형)=fw02_block_di_short_mild; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- >-
+  Stage51(51단계) 51_risk_filter__q2_short_late_di_loss_firewall: run45A-run45E(실행45A-45E)로 Q2 loss firewall(Q2 손실 방화벽)을 실제 MT5 WFO(실제 MT5 워크포워드)까지 검증했다; judgment(판정)=reviewed_completed_positive_q2_loss_firewall_runtime_probe_only, best_variant(최상 변형)=fw02_block_di_short_mild; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- >-
+  Stage50(50단계) 50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress: ADX reference surface(ADX 참고 표면)와 follow-up suite(후속 묶음)를 완료했다; routed_total_status(라우팅 전체 상태)=passed, routed_total_net(라우팅 전체 순수익)=359.12; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- >-
+  Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing: Tier A only adx_20_25(Tier A 단독 ADX 20-25)를 reference surface(참고 표면)로 보존하고 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 stage36_cross_model_characteristic_synthesis:
   packet_id: stage36_run30A_cross_model_characteristic_synthesis_v1
   stage_id: 36_model_selection__cross_model_characteristic_synthesis
@@ -3032,3 +2989,17 @@ stage50_followup_suite:
   report_path: stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/03_reviews/stage50_followup_suite_packet.md
   packet_summary_path: docs/agent_control/packets/stage50_run44BCDE_followup_suite_v1/aggregate_summary.json
   boundary: stage50_followup_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage51_q2_loss_firewall:
+  packet_id: stage51_run45ABCDE_q2_loss_firewall_v1
+  stage_id: 51_risk_filter__q2_short_late_di_loss_firewall
+  idea_id: IDEA-ST51-Q2-SHORT-LATE-DI-LOSS-FIREWALL
+  status: reviewed_runtime_probe_completed
+  current_run_id: run45E_stage51_closeout_v1
+  judgment: reviewed_completed_positive_q2_loss_firewall_runtime_probe_only
+  best_firewall_variant: fw02_block_di_short_mild
+  best_q2_net_profit: 56.07
+  best_total_net_profit: 364.18
+  report_path: stages/51_risk_filter__q2_short_late_di_loss_firewall/03_reviews/stage51_synthesis_packet.md
+  packet_summary_path: docs/agent_control/packets/stage51_run45ABCDE_q2_loss_firewall_v1/aggregate_summary.json
+  boundary: stage51_q2_loss_firewall_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

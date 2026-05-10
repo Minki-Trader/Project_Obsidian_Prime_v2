@@ -404,3 +404,5 @@
 - 2026-05-10T12:47:36Z `49_trade_lifecycle__compression_stress_mfe_capture_exit_timing` closed with `stage49_run43KLMN_closeout_suite_v1` as `reviewed_closed_positive_reference_surface_runtime_probe_only`.
 - 2026-05-10T14:30:51Z `50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress` `run44A_tier_a_adx_reference_surface_wfo_stress_v1` recorded ADX WFO stress as `reviewed_completed_positive_robustness_runtime_probe_only`.
 - 2026-05-10T14:54:40Z `50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress` completed `stage50_run44BCDE_followup_suite_v1` as `reviewed_completed_inconclusive_followup_runtime_probe_only`.
+- 2026-05-10T15:42:26Z `51_risk_filter__q2_short_late_di_loss_firewall` `stage51_run45ABCDE_q2_loss_firewall_v1` recorded Q2 loss firewall as `reviewed_completed_positive_q2_loss_firewall_runtime_probe_only`.
+- 2026-05-10T15:46:21Z `51_risk_filter__q2_short_late_di_loss_firewall` `stage51_run45ABCDE_q2_loss_firewall_v1` recorded Q2 loss firewall as `reviewed_completed_positive_q2_loss_firewall_runtime_probe_only`.

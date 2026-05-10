@@ -1,0 +1,78 @@
+{
+  "audit_name": "artifact_lineage_audit",
+  "lineage_rows": [
+    {
+      "artifact_id": "stage51_source_stage50_run44a_manifest",
+      "availability": "tracked_source",
+      "notes": "Stage50 Tier A ADX WFO source.",
+      "path": "stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/02_runs/run44A/run_manifest.json",
+      "sha256": "2071cc25cb463baba53174c8a90df40e2c5f05fd946b504e6dcc0e4e9afd3e4b",
+      "type": "source_manifest"
+    },
+    {
+      "artifact_id": "stage51_source_stage50_followup_packet",
+      "availability": "tracked_source",
+      "notes": "Stage50 follow-up suite source.",
+      "path": "docs/agent_control/packets/stage50_run44BCDE_followup_suite_v1/aggregate_summary.json",
+      "sha256": "f58689cd799824a9a44042224abc1cfaa2fd77973e8dcc3150cf4fe36ba51944",
+      "type": "source_packet"
+    },
+    {
+      "artifact_id": "stage51_run45A_manifest",
+      "availability": "generated",
+      "notes": "Broad Tier A firewall WFO.",
+      "path": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45A/run_manifest.json",
+      "sha256": "50357800240fa69a9e815c315c6ac828e6fd90e4815b4812de969a07f1939cf6",
+      "type": "manifest"
+    },
+    {
+      "artifact_id": "stage51_run45B_manifest",
+      "availability": "generated",
+      "notes": "Routed Tier B firewall eligibility WFO.",
+      "path": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45B/run_manifest.json",
+      "sha256": "82ff096a0ae2f96bd407a0cf919430e0bd5f21b3403ca328668f5e541938d847",
+      "type": "manifest"
+    },
+    {
+      "artifact_id": "stage51_run45C_manifest",
+      "availability": "generated",
+      "notes": "Cost and overlap attribution.",
+      "path": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45C/run_manifest.json",
+      "sha256": "e082ec937bb7e554a5da835250ec8b33f7cd02e29f8a0299354b8f520e63f2c6",
+      "type": "manifest"
+    },
+    {
+      "artifact_id": "stage51_run45A_summary",
+      "availability": "generated",
+      "notes": "Tier A firewall robustness.",
+      "path": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45A/results/firewall_robustness_summary.csv",
+      "sha256": "654cab5be568f96a636358d1745a18ebfa5b78cc79e449148988de9f304b65fe",
+      "type": "result_table"
+    },
+    {
+      "artifact_id": "stage51_run45B_summary",
+      "availability": "generated",
+      "notes": "Routed firewall robustness.",
+      "path": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45B/results/routed_firewall_robustness_summary.csv",
+      "sha256": "df43ad051e8c1a8558ea2901626724ef7726e8a0f0f8e461e82c18454bbd2b1f",
+      "type": "result_table"
+    },
+    {
+      "artifact_id": "stage51_run45C_cost_summary",
+      "availability": "generated",
+      "notes": "Cost sensitivity summary.",
+      "path": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45C/results/cost_sensitivity_summary.csv",
+      "sha256": "07ba34ade1d93a43604c976f8a3219a30cc4c48834a1244a8ee17c75cc05ce63",
+      "type": "result_table"
+    },
+    {
+      "artifact_id": "stage51_run45C_overlap_summary",
+      "availability": "generated",
+      "notes": "Overlap concentration summary.",
+      "path": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45C/results/overlap_summary.csv",
+      "sha256": "eabc04ed3ecf9126f1bcd4926b9947e4a1b7b6e49ee3c1291293adf0093466e8",
+      "type": "result_table"
+    }
+  ],
+  "status": "passed"
+}

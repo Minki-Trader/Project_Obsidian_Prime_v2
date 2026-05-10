@@ -1,0 +1,13 @@
+{
+  "commands": [
+    {
+      "command": "python -m foundation.pipelines.run_stage51_q2_loss_firewall --timeout-seconds 900",
+      "result": "recorded_by_pipeline"
+    },
+    {
+      "command": "python -m pytest tests/test_stage51_q2_loss_firewall.py tests/test_stage50_followup_suite.py tests/test_stage50_adx_reference_wfo_stress.py tests/test_required_gate_coverage_audit.py tests/test_state_sync_audit.py -q",
+      "result": "pending_user_validation"
+    }
+  ],
+  "status": "recorded"
+}

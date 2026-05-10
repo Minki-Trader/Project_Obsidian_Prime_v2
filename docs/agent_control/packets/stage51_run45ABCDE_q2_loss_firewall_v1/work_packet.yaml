@@ -1,0 +1,16 @@
+packet_id: stage51_run45ABCDE_q2_loss_firewall_v1
+stage_id: 51_risk_filter__q2_short_late_di_loss_firewall
+primary_family: runtime_backtest
+primary_skill: obsidian-runtime-parity
+support_skills:
+  - obsidian-experiment-design
+  - obsidian-backtest-forensics
+  - obsidian-performance-attribution
+  - obsidian-artifact-lineage
+required_gates:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+claim_boundary: stage51_q2_loss_firewall_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

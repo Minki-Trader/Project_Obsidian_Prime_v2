@@ -1,0 +1,100 @@
+{
+  "best_tier_a": {
+    "median_profit_factor": 1.395,
+    "negative_windows": 0,
+    "positive_windows": 4,
+    "q2_net_profit": 56.07,
+    "robustness_status": "passed",
+    "route_view": "tier_a_firewall_separate",
+    "run_id": "run45A_q2_loss_firewall_broad_mt5_wfo_v1",
+    "tested_windows": 4,
+    "total_net_profit": 364.18,
+    "total_trades": 407,
+    "variant_id": "fw02_block_di_short_mild",
+    "worst_window": "w01_2025q2",
+    "worst_window_net_profit": 56.07
+  },
+  "boundary": "stage51_q2_loss_firewall_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+  "decision": {
+    "best_tier_a": {
+      "median_profit_factor": 1.395,
+      "negative_windows": 0,
+      "positive_windows": 4,
+      "q2_net_profit": 56.07,
+      "robustness_status": "passed",
+      "route_view": "tier_a_firewall_separate",
+      "run_id": "run45A_q2_loss_firewall_broad_mt5_wfo_v1",
+      "tested_windows": 4,
+      "total_net_profit": 364.18,
+      "total_trades": 407,
+      "variant_id": "fw02_block_di_short_mild",
+      "worst_window": "w01_2025q2",
+      "worst_window_net_profit": 56.07
+    },
+    "control": {
+      "median_profit_factor": 1.465,
+      "negative_windows": 1,
+      "positive_windows": 3,
+      "q2_net_profit": -28.05,
+      "robustness_status": "passed",
+      "route_view": "tier_a_firewall_separate",
+      "run_id": "run45A_q2_loss_firewall_broad_mt5_wfo_v1",
+      "tested_windows": 4,
+      "total_net_profit": 414.75,
+      "total_trades": 469,
+      "variant_id": "fw00_adx_reference",
+      "worst_window": "w01_2025q2",
+      "worst_window_net_profit": -28.05
+    },
+    "cost_05_for_best": {
+      "cost_status": "passed",
+      "extra_cost_per_trade": 0.5,
+      "positive_windows": 4,
+      "route_view": "tier_a_firewall_separate",
+      "run_id": "run45C_firewall_cost_overlap_attribution_v1",
+      "source_label": "run45A_tier_a_firewall",
+      "tested_windows": 4,
+      "total_adjusted_net_profit": 160.68,
+      "variant_id": "fw02_block_di_short_mild",
+      "worst_window": "w03_2025q4",
+      "worst_window_adjusted_net_profit": 10.43
+    },
+    "cost_05_passed": true,
+    "q2_improved_vs_control": true,
+    "routed_for_best": {
+      "median_profit_factor": 1.56,
+      "negative_windows": 1,
+      "positive_windows": 3,
+      "q2_net_profit": 84.63,
+      "robustness_status": "passed",
+      "route_view": "tier_a_primary_tier_b_firewall_fallback_routed_total",
+      "run_id": "run45B_firewall_routed_tier_b_eligibility_mt5_v1",
+      "tested_windows": 4,
+      "total_net_profit": 375.92,
+      "total_trades": 508,
+      "variant_id": "fw02_block_di_short_mild",
+      "worst_window": "w03_2025q4",
+      "worst_window_net_profit": -18.09
+    },
+    "routed_passed": true
+  },
+  "idea_id": "IDEA-ST51-Q2-SHORT-LATE-DI-LOSS-FIREWALL",
+  "judgment": "reviewed_completed_positive_q2_loss_firewall_runtime_probe_only",
+  "packet_id": "stage51_run45ABCDE_q2_loss_firewall_v1",
+  "reason": "firewall_improved_q2_kept_wfo_and_routed_cost_survival",
+  "reports": {
+    "run45a_summary": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45A/results/firewall_robustness_summary.csv",
+    "run45b_summary": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45B/results/routed_firewall_robustness_summary.csv",
+    "run45c_cost": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45C/results/cost_sensitivity_summary.csv",
+    "run45c_overlap": "stages/51_risk_filter__q2_short_late_di_loss_firewall/02_runs/run45C/results/overlap_summary.csv"
+  },
+  "run45a_attempts": 32,
+  "run45b_attempts": 32,
+  "selected_variants": [
+    "fw00_adx_reference",
+    "fw03_block_late_or_di_short_mild",
+    "fw02_block_di_short_mild",
+    "fw04_block_late_and_di_short_mild"
+  ],
+  "stage_id": "51_risk_filter__q2_short_late_di_loss_firewall"
+}
