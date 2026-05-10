@@ -20,6 +20,6 @@ Codex는 candidate(후보)를 발견, 보존, 순위화, 검토 묶음 작성까
 
 ## Repair Commit Recording(수정 커밋 기록)
 
-- repair_commit_sha(수정 커밋 SHA): `pending_repair_commit`
-- pushed_main_sha(푸시된 메인 SHA): `pending_repair_push`
+- repair_commit_sha(수정 커밋 SHA): `bf207381db329dcc4f5d07d53477ff7f41655279`
+- pushed_main_sha(푸시된 메인 SHA): `bf207381db329dcc4f5d07d53477ff7f41655279`
 - next_stage_after_repair(수정 후 다음 단계): `54`
