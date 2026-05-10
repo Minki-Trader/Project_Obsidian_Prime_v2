@@ -1,86 +1,73 @@
-﻿{
-    "campaign_id":  "OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01",
-    "campaign_mode":  "autonomous_candidate_discovery_until_budget_or_blocker",
-    "campaign_judgment":  "campaign_in_progress_user_review_required_candidate_observed",
-    "boundary":  "candidate_discovery_only_until_explicit_user_approval",
-    "observed_candidate_id":  "spf03_block_early_or_trend_buy",
-    "observed_candidate_status":  "adapter_candidate_observed_user_review_required",
-    "adapter_candidate_review_packet_path":  "docs/agent_control/packets/adapter_candidate_review_stage53_spf03_block_early_or_trend_buy_v1",
-    "active_claim_boundary":  "candidate_discovery_only_until_explicit_user_approval",
-    "latest_stage":  {
-                         "stage_id":  "53_adapter_signal__side_specific_short_permission_filter",
-                         "run_id":  "run47A_side_specific_short_permission_filter_v1",
-                         "judgment":  "reviewed_completed_adapter_candidate_runtime_probe_only",
-                         "candidate_status":  "adapter_candidate_observed_user_review_required",
-                         "pushed_to_main":  true,
-                         "pushed_at_utc":  "2026-05-10T17:18:17Z",
-                         "pushed_main_commit_sha":  "1b17dad0c4f2a7a61774b6acf4c7d5ae2c7b0b02"
-                     },
-    "mandatory_atr_sltp_stage":  {
-                                     "stage_id":  "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter",
-                                     "run_id":  "run46A_atr_based_adaptive_stop_takeprofit_adapter_v1",
-                                     "judgment":  "reviewed_completed_negative_memory_runtime_probe_only",
-                                     "status":  "negative_memory_only",
-                                     "executed":  true,
-                                     "reviewed":  true,
-                                     "pushed_to_main":  true,
-                                     "pushed_at_utc":  "2026-05-10T16:49:12Z",
-                                     "pushed_main_commit_sha":  "26863e33712de5d1483e75e808c6c4437ee723da",
-                                     "satisfies_completion_condition":  false
-                                 },
-    "stages_attempted":  [
-                             "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter",
-                             "53_adapter_signal__side_specific_short_permission_filter"
-                         ],
-    "stages_completed":  [
-                             "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter",
-                             "53_adapter_signal__side_specific_short_permission_filter"
-                         ],
-    "stages_reclassified":  [
-                                "53_adapter_signal__side_specific_short_permission_filter"
-                            ],
-    "best_candidate":  {
-                           "adapter_id":  "spf03_block_early_or_trend_buy",
-                           "oos":  {
-                                       "adapter_id":  "spf03_block_early_or_trend_buy",
-                                       "closed_trades":  104,
-                                       "max_drawdown_amount":  61.53,
-                                       "net_profit":  302.4,
-                                       "partition":  "oos",
-                                       "period_days":  195.0,
-                                       "positive_windows":  2,
-                                       "profit_factor":  2.353262,
-                                       "route_view":  "tier_a_side_filter_separate",
-                                       "trades_per_month":  16.233333,
-                                       "window_count":  2
-                                   },
-                           "route_view":  "tier_a_side_filter_separate",
-                           "score":  398.34499999999997,
-                           "validation":  {
-                                              "adapter_id":  "spf03_block_early_or_trend_buy",
-                                              "closed_trades":  119,
-                                              "max_drawdown_amount":  91.6,
-                                              "net_profit":  80.26,
-                                              "partition":  "validation",
-                                              "period_days":  183.0,
-                                              "positive_windows":  2,
-                                              "profit_factor":  1.24225,
-                                              "route_view":  "tier_a_side_filter_separate",
-                                              "trades_per_month":  19.792691,
-                                              "window_count":  2
-                                          }
-                       },
-    "adapter_candidate_review_gate":  {
-                                          "status":  "adapter_candidate_observed_user_review_required",
-                                          "mechanical_evidence_status":  "passed",
-                                          "judgment_if_observed":  "reviewed_completed_adapter_candidate_runtime_probe_only",
-                                          "failed_reasons":  [
-
-                                                             ],
-                                          "mandatory_atr_stage_pushed_to_main":  true,
-                                          "user_approval_required":  true,
-                                          "self_completion_forbidden":  true
-                                      },
-    "user_approval_required":  true,
-    "self_completion_forbidden":  true
+{
+  "adapter_candidate_review_gate": {
+    "failed_reasons": [],
+    "judgment_if_observed": "reviewed_completed_adapter_candidate_runtime_probe_only",
+    "mandatory_atr_stage_pushed_to_main": true,
+    "mechanical_evidence_status": "passed",
+    "status": "adapter_candidate_observed_user_review_required",
+    "user_approval_required": true
+  },
+  "best_candidate": {
+    "adapter_id": "csp03_midlate_longs_strong_shorts",
+    "oos": {
+      "adapter_id": "csp03_midlate_longs_strong_shorts",
+      "closed_trades": 92,
+      "max_drawdown_amount": 61.08,
+      "net_profit": 286.74,
+      "partition": "oos",
+      "period_days": 195.0,
+      "positive_windows": 2,
+      "profit_factor": 2.374,
+      "route_view": "tier_a_side_filter_separate",
+      "trades_per_month": 14.360256,
+      "window_count": 2
+    },
+    "route_view": "tier_a_side_filter_separate",
+    "score": 420.37174,
+    "validation": {
+      "adapter_id": "csp03_midlate_longs_strong_shorts",
+      "closed_trades": 108,
+      "max_drawdown_amount": 84.5,
+      "net_profit": 114.28,
+      "partition": "validation",
+      "period_days": 183.0,
+      "positive_windows": 2,
+      "profit_factor": 1.390087,
+      "route_view": "tier_a_side_filter_separate",
+      "trades_per_month": 17.963115,
+      "window_count": 2
+    }
+  },
+  "boundary": "candidate_discovery_only_until_explicit_user_approval",
+  "campaign_id": "OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01",
+  "campaign_judgment": "campaign_in_progress_user_review_required_candidate_observed",
+  "campaign_mode": "autonomous_candidate_discovery_until_budget_or_blocker",
+  "latest_stage": {
+    "judgment": "reviewed_completed_adapter_candidate_runtime_probe_only",
+    "pushed_to_main": false,
+    "run_id": "run48A_cost_aware_side_permission_filter_v1",
+    "stage_id": "54_adapter_signal__cost_aware_side_permission_filter"
+  },
+  "mandatory_atr_sltp_stage": {
+    "executed": true,
+    "judgment": "reviewed_completed_negative_memory_runtime_probe_only",
+    "pushed_at_utc": "2026-05-10T16:49:12Z",
+    "pushed_main_commit_sha": "26863e33712de5d1483e75e808c6c4437ee723da",
+    "pushed_to_main": true,
+    "reviewed": true,
+    "run_id": "run46A_atr_based_adaptive_stop_takeprofit_adapter_v1",
+    "satisfies_completion_condition": false,
+    "stage_id": "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter",
+    "status": "negative_memory_only"
+  },
+  "stages_attempted": [
+    "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter",
+    "53_adapter_signal__side_specific_short_permission_filter",
+    "54_adapter_signal__cost_aware_side_permission_filter"
+  ],
+  "stages_completed": [
+    "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter",
+    "53_adapter_signal__side_specific_short_permission_filter",
+    "54_adapter_signal__cost_aware_side_permission_filter"
+  ]
 }

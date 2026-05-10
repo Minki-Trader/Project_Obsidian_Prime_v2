@@ -1,0 +1,17 @@
+{
+  "adapter_id": "csp03_midlate_longs_strong_shorts",
+  "decision_time_only": true,
+  "deterministic_mapping": "adapter_id maps to stage54 feature CSV signal permission rules and MT5 .set files",
+  "explicit_trading_behavior": "block early/trend long entries and allow shorts only in late, trend, or DI-short-strong context",
+  "failed_reasons": [],
+  "risk_parameters": {
+    "exit_lifecycle_rule": "inherits existing reverse/flat/max_hold behavior from source rule values",
+    "position_sizing": "fixed lot from MT5 .set file",
+    "side_permission_rule": "block early/trend long entries and allow shorts only in late, trend, or DI-short-strong context",
+    "stop_loss_rule": "unchanged by this signal adapter",
+    "take_profit_rule": "unchanged by this signal adapter"
+  },
+  "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+  "side_specific": true,
+  "status": "passed"
+}

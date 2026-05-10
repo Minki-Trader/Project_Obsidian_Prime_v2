@@ -1,4 +1,10 @@
-﻿## Latest Campaign Repair(최신 캠페인 수정)
+﻿## Latest Stage54 Cost-Aware Side Permission Filter(理쒖떊 53?④퀎 諛⑺뼢 ?덉슜 ?꾪꽣)
+
+- current run(?꾩옱 ?ㅽ뻾): `run48A_cost_aware_side_permission_filter_v1`
+
+Stage54(53?④퀎) `54_adapter_signal__cost_aware_side_permission_filter`??side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎. selected candidate(?좏깮 ?꾨낫)??`csp03_midlate_longs_strong_shorts`?닿퀬, boundary(寃쎄퀎)??runtime_probe_only(?고????먯묠 ?꾩슜)?대떎. baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)???녿떎.
+
+## Latest Campaign Repair(최신 캠페인 수정)
 
 - current repair(현재 수정): `repair_stage53_premature_self_completion_v1`
 

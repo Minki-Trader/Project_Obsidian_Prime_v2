@@ -931,7 +931,7 @@ def write_campaign_packets(judgment: str, evaluation: Mapping[str, Any]) -> None
     existing = {}
     progress_path = CAMPAIGN_PACKET_ROOT / "campaign_progress.json"
     if path_exists(progress_path):
-        existing = json.loads(io_path(progress_path).read_text(encoding="utf-8"))
+        existing = json.loads(io_path(progress_path).read_text(encoding="utf-8-sig"))
     attempted = list(dict.fromkeys(list(existing.get("stages_attempted", [])) + [STAGE_ID]))
     completed = list(dict.fromkeys(list(existing.get("stages_completed", [])) + ([] if judgment == BLOCKED_JUDGMENT else [STAGE_ID])))
     mandatory = existing.get("mandatory_atr_sltp_stage", {"stage_id": stage52.STAGE_ID, "run_id": stage52.RUN_ID, "pushed_to_main": True})

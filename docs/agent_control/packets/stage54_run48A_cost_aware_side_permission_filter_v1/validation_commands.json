@@ -1,0 +1,17 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile stage_pipelines/stage54/cost_aware_side_permission.py foundation/pipelines/run_stage54_cost_aware_side_permission.py",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "command": "python -m pytest tests/test_stage54_cost_aware_side_permission.py tests/test_stage52_atr_sltp_adapter.py -q",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "......                                                                   [100%]\n6 passed in 1.83s\n"
+    }
+  ],
+  "status": "passed"
+}
