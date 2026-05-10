@@ -1,0 +1,20 @@
+{
+  "commands": [
+    {
+      "command": "python -m foundation.pipelines.run_stage48_trade_level_cluster_telemetry",
+      "result": "completed"
+    },
+    {
+      "command": "pytest tests/test_stage48_trade_level_cluster_telemetry.py",
+      "result": "completed"
+    },
+    {
+      "command": "pytest tests/test_stage48_trade_level_cluster_telemetry.py tests/test_stage48_survivor_cluster_concentration.py -q",
+      "result": "completed"
+    },
+    {
+      "command": "pytest tests/test_mt5_trade_attribution.py tests/test_mt5_strategy_report.py tests/test_mt5_runtime_artifacts.py -q",
+      "result": "completed"
+    }
+  ]
+}

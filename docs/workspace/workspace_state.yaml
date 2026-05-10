@@ -1,8 +1,8 @@
-updated_on: '2026-05-09'
+updated_on: '2026-05-10'
 project_mode: clean_stage_restart
 active_branch: codex/auto-campaign-02-run-all-five-independent-topics
-active_stage: 47_meta_signal__cross_model_agreement_disagreement_scout
-current_run_id: run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1
+active_stage: 48_robustness_attribution__survivor_cluster_concentration_scout
+current_run_id: run42B_trade_level_cluster_telemetry_supplement_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,6 +17,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage48(48단계) 48_robustness_attribution__survivor_cluster_concentration_scout run42B_trade_level_supplement(42B 거래 단위 보강): `c08_extreme_compression_stress` existing MT5 terminal reports(기존 MT5 터미널 보고서)를 parse(파싱)해 `735` closed trades(닫힌 거래)를 기록했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage48(48단계) 48_robustness_attribution__survivor_cluster_concentration_scout reviewed_attribution_scout_completed(검토 완료 귀속 탐색): run42A_survivor_cluster_concentration_scout_v1(42A 실행)은 Stage43-47(43-47단계) survivor(생존 후보)의 month/week/day/session/regime/tier concentration(월/주/일/세션/국면/티어 집중)을 평가했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage37(37단계) 37_state_context__single_base_filter_or_state_router reviewed_structure_judgment(구조 판정 검토됨): run31A_state_context_router_broad_mt5_probe_v1(31A 실행)는 state context(상태 문맥), model response(모델 반응), broad MT5 routed probe(넓은 MT5 라우팅 탐침)를 묶어 `state_context_not_useful_or_inconclusive`로 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)는 없다.
 - Stage36(36단계) 36_model_selection__cross_model_characteristic_synthesis reviewed_closed_reference_only(검토 후 마감, 참고 전용): stage36_cross_model_characteristic_synthesis_closeout_v1(마감)는 run30A_cross_model_characteristic_synthesis_v1(30A 실행)의 모델 특성, MT5(메타트레이더5) 근거, selection reference(선택 참고), micro-probe frontier(미세탐침 전선)를 Stage36 closeout(36단계 마감)으로 고정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage35(35단계) 35_context_map__unsupervised_market_state_atlas reviewed_closed_no_stage36_opened(검토 후 닫힘, 36단계 미개방): RUN29A-RUN29C(29A-29C 실행) MT5 runtime probe(MT5 런타임 탐침)를 마감했고, 더 파볼 Stage35 후보는 없다고 판정했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
@@ -2895,3 +2897,36 @@ stage47_auto_campaign_02:
   report_path: stages/47_meta_signal__cross_model_agreement_disagreement_scout/03_reviews/run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1_packet.md
   packet_summary_path: docs/agent_control/packets/stage47_run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1/aggregate_summary.json
   boundary: runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage48_survivor_cluster_concentration:
+  packet_id: stage48_run42A_survivor_cluster_concentration_scout_v1
+  stage_id: 48_robustness_attribution__survivor_cluster_concentration_scout
+  status: reviewed_attribution_scout_completed
+  current_run_id: run42A_survivor_cluster_concentration_scout_v1
+  idea_id: IDEA-ST48-SURVIVOR-CLUSTER-CONCENTRATION-SCOUT
+  source_scope: Stage43-47 reviewed survivor candidates
+  source_candidate_count: 42
+  supported_candidate_count: 1
+  concentration_risk_candidate_count: 39
+  report_path: stages/48_robustness_attribution__survivor_cluster_concentration_scout/03_reviews/run42A_packet.md
+  packet_summary_path: docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/aggregate_summary.json
+  external_verification_status: completed_existing_mt5_evidence_integrated_and_signal_level_attribution_only
+  next_action: choose_new_independent_topic_or_open_explicit_promotion_packet_with_trade_level_cluster_telemetry
+  boundary: attribution_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage48_trade_level_cluster_telemetry_supplement:
+  packet_id: stage48_run42B_trade_level_cluster_telemetry_supplement_v1
+  stage_id: 48_robustness_attribution__survivor_cluster_concentration_scout
+  status: reviewed_trade_level_runtime_supplement_completed
+  current_run_id: run42B_trade_level_cluster_telemetry_supplement_v1
+  source_stage_id: 45_volatility_mechanism__compression_expansion_signal_rebuild
+  source_run_id: run39A_volatility_compression_expansion_broad_mt5_probe_v1
+  source_candidate_id: c08_extreme_compression_stress
+  trade_level_rows: 735
+  validation_closed_trades: 455
+  oos_closed_trades: 280
+  report_path: stages/48_robustness_attribution__survivor_cluster_concentration_scout/03_reviews/run42B_packet.md
+  packet_summary_path: docs/agent_control/packets/stage48_run42B_trade_level_cluster_telemetry_supplement_v1/aggregate_summary.json
+  external_verification_status: completed_existing_mt5_terminal_reports_parsed_no_new_tester_run_claimed
+  next_action: choose_new_stage49_topic_or_open_explicit_promotion_packet
+  boundary: runtime_supplement_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

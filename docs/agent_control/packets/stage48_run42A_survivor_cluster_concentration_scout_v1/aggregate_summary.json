@@ -1,0 +1,139 @@
+{
+  "best_combined_net_candidate": {
+    "claim_boundary": "attribution_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+    "decision_reasons": "validation:top_vol_bucket_share_gt_80pct;top_adx_bucket_share_gt_80pct;oos:top_vol_bucket_share_gt_80pct;top_adx_bucket_share_gt_80pct",
+    "decision_status": "concentration_risk_or_thin_signal_level",
+    "oos_net": 308.75,
+    "oos_pf": 1.14,
+    "oos_tier_b_signal_share": 0.0896427769040665,
+    "oos_top_month_share": 0.1826555830150528,
+    "oos_top_week_share": 0.06066052572455628,
+    "oos_trade_count": 1035.0,
+    "source_candidate_id": "m03_low_trade_guard_c02_top8_stability_ranked_elasticnet",
+    "source_reason": "micro_search_gate_best+promotion_gate_cluster_gap",
+    "source_run_id": "run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1",
+    "stage_id": "43_model_rebuild__low_complexity_feature_subset_regularized_signal",
+    "stage_number": 43,
+    "validation_net": 563.28,
+    "validation_pf": 1.23,
+    "validation_tier_b_signal_share": 0.049990041824337784,
+    "validation_top_month_share": 0.16749651463851822,
+    "validation_top_week_share": 0.048396733718382795,
+    "validation_trade_count": 1393.0
+  },
+  "boundary": "attribution_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+  "changed_variables": [
+    "cluster attribution lens added",
+    "candidate activation concentration measured by month/week/day/session/regime/tier"
+  ],
+  "comparison_baseline": "Stage43-47 reviewed runtime probe ledgers and regenerated candidate signal rows.",
+  "control_variables": [
+    "US100 M5",
+    "same Tier A primary + Tier B fallback route meaning",
+    "no new MT5 execution",
+    "no baseline or promotion claim"
+  ],
+  "decision_use": "Choose whether Stage43-47 survivor surfaces deserve a future explicit promotion-review packet or should remain exploration memory.",
+  "evidence_counts": {
+    "concentration_risk_candidate_count": 39,
+    "concentration_rows": 84,
+    "decision_rows": 42,
+    "lineage_rows": 44,
+    "source_candidate_count": 42,
+    "source_mt5_rows": 84,
+    "supported_candidate_count": 1
+  },
+  "evidence_missing": [
+    "trade-level PnL clustering from Stage43-47 reports is not available in tracked repo artifacts",
+    "no new MT5 Strategy Tester execution was run for Stage48",
+    "no promotion candidate packet is created"
+  ],
+  "failure_criteria": [
+    "single split only",
+    "synthetic sum treated as routed total",
+    "missing trade-level reports misread as promotion proof"
+  ],
+  "gate_paths": {
+    "artifact_lineage_gate": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/artifact_lineage_gate.json",
+    "data_integrity_gate": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/data_integrity_gate.json",
+    "final_claim_guard": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/final_claim_guard.json",
+    "kpi_contract_audit": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/kpi_contract_audit.json",
+    "performance_attribution_gate": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/performance_attribution_gate.json",
+    "required_gate_coverage_audit": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/required_gate_coverage_audit.json",
+    "result_judgment_gate": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/result_judgment_gate.json",
+    "row_grain_audit": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/row_grain_audit.json",
+    "source_authority_audit": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/source_authority_audit.json"
+  },
+  "hypothesis": "Recent micro-search survivors may be unusable if their apparent MT5 strength is concentrated in one narrow time, session, regime, or tier cluster.",
+  "idea_id": "IDEA-ST48-SURVIVOR-CLUSTER-CONCENTRATION-SCOUT",
+  "judgment": "reviewed_completed_inconclusive_concentration_attribution_scout_only",
+  "ledger_sync": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/artifact_registry.csv",
+      "rows": 328,
+      "sha256": "eac223264d7bb82467592df5c1c6f3a6915b0b1f3881d79929a8cd162698c240",
+      "upserted_rows": 7
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/alpha_run_ledger.csv",
+      "rows": 4499,
+      "sha256": "5be1011efb1998f20d2a54d79d3f3c3512e7ad9050194b5d51ef38bada93034f",
+      "upserted_rows": 3
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv",
+      "rows": 336,
+      "sha256": "f55a1587c60f336f1379cdbb4ecc4c8ccbb411f7514e27a4fc0ad110283aef44",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/48_robustness_attribution__survivor_cluster_concentration_scout/03_reviews/stage_run_ledger.csv",
+      "rows": 3,
+      "sha256": "85bc20bc62260ddd3a19bbdc57cac2420178e35f47adaab1932cf05af99fbde5",
+      "upserted_rows": 3
+    }
+  },
+  "output_paths": {
+    "decision": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/02_runs/run42A/results/decision.csv",
+    "lineage": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/02_runs/run42A/results/lineage.csv",
+    "manifest": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/02_runs/run42A/run_manifest.json",
+    "packet_summary": "docs/agent_control/packets/stage48_run42A_survivor_cluster_concentration_scout_v1/aggregate_summary.json",
+    "report": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/03_reviews/run42A_packet.md",
+    "roster": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/02_runs/run42A/results/roster.csv",
+    "selection_status": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/04_selected/selection_status.md",
+    "source_kpi": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/02_runs/run42A/results/source_mt5_kpi.csv",
+    "split_concentration": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/02_runs/run42A/results/signal_concentration.csv",
+    "stage_ledger": "stages/48_robustness_attribution__survivor_cluster_concentration_scout/03_reviews/stage_run_ledger.csv"
+  },
+  "packet_id": "stage48_run42A_survivor_cluster_concentration_scout_v1",
+  "result_judgment": {
+    "claim_boundary": "attribution_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+    "evidence_available": "Stage43-47 aggregate summaries, stage ledgers, regenerated candidate signal rows, concentration tables.",
+    "evidence_missing": "trade-level PnL clustering and a new MT5 run.",
+    "judgment_label": "reviewed_completed_inconclusive_concentration_attribution_scout_only",
+    "next_condition": "A future promotion packet would need tracked trade-level clustering or a fresh MT5 run with cluster telemetry.",
+    "result_subject": "48_robustness_attribution__survivor_cluster_concentration_scout",
+    "user_explanation_hook": "Stage48 tells whether good-looking survivor surfaces are broad enough to keep studying, not whether they are ready to run."
+  },
+  "run_id": "run42A_survivor_cluster_concentration_scout_v1",
+  "sample_scope": "Stage43-47 validation_is and OOS survivor candidates, Tier A primary + Tier B fallback labels.",
+  "source_stage_scope": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "stage_id": "48_robustness_attribution__survivor_cluster_concentration_scout",
+  "status": "reviewed_attribution_scout_completed",
+  "success_criteria": [
+    "source candidates selected from Stage43-47 reviewed packets",
+    "validation/OOS signal concentration measured separately",
+    "Tier A/Tier B routed meaning preserved",
+    "decision rows separate concentration from promotion"
+  ]
+}

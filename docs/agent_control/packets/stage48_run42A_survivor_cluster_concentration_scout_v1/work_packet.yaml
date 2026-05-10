@@ -1,0 +1,24 @@
+packet_id: stage48_run42A_survivor_cluster_concentration_scout_v1
+stage_id: 48_robustness_attribution__survivor_cluster_concentration_scout
+run_id: run42A_survivor_cluster_concentration_scout_v1
+idea_id: IDEA-ST48-SURVIVOR-CLUSTER-CONCENTRATION-SCOUT
+evidence_boundary: attribution_scout_only
+status: reviewed_attribution_scout_completed
+primary_family: kpi_evidence
+primary_skill: obsidian-run-evidence-system
+support_skills:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-performance-attribution
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+required_gates:
+  - kpi_contract_audit
+  - row_grain_audit
+  - source_authority_audit
+  - artifact_lineage
+  - data_integrity
+  - performance_attribution
+  - result_judgment
+  - final_claim_guard
+claim_boundary: attribution_scout_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

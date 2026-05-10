@@ -1,4 +1,12 @@
-﻿## Latest Stage47 AUTO-CAMPAIGN-02 Runtime Probe
+﻿## Latest Stage48 Trade-Level Supplement(최신 48단계 거래 단위 보강)
+
+Stage48(48단계) `48_robustness_attribution__survivor_cluster_concentration_scout` added(추가) `run42B_trade_level_cluster_telemetry_supplement_v1` for Stage45(45단계) `c08_extreme_compression_stress`. It copied and parsed(복사 및 파싱) existing MT5 terminal reports(기존 MT5 터미널 보고서) into `735` closed trade rows(닫힌 거래 행). Judgment(판정)은 `reviewed_completed_inconclusive_trade_level_runtime_supplement_only`이며, baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 기준)는 없다.
+
+## Latest Stage48 Survivor Cluster Concentration(최신 48단계 생존 후보 군집 집중)
+
+Stage48(48단계) `48_robustness_attribution__survivor_cluster_concentration_scout` finished(완료) as `reviewed_completed_inconclusive_concentration_attribution_scout_only` with `42` source candidates(원천 후보), `84` source MT5 KPI(MT5 핵심 성과 지표) rows, and `84` concentration(집중) rows. It is attribution_scout_only(귀속 탐색 전용); no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 기준) was created.
+
+## Latest Stage47 AUTO-CAMPAIGN-02 Runtime Probe
 
 Stage47 `47_meta_signal__cross_model_agreement_disagreement_scout` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
 
