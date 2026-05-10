@@ -1,4 +1,10 @@
-﻿## Latest Stage52 ATR SL/TP Adapter(최신 52단계 ATR 손절/익절 어댑터)
+﻿## Latest Stage53 Side Permission Filter(최신 53단계 방향 허용 필터)
+
+- current run(현재 실행): `run47A_side_specific_short_permission_filter_v1`
+
+Stage53(53단계) `53_adapter_signal__side_specific_short_permission_filter`는 side-specific permission filter(방향별 허용 필터)를 `reviewed_completed_adapter_review_ready_runtime_probe_only`로 기록했다. selected candidate(선택 후보)는 `spf03_block_early_or_trend_buy`이고, boundary(경계)는 runtime_probe_only(런타임 탐침 전용)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 참조)는 없다.
+
+## Latest Stage52 ATR SL/TP Adapter(최신 52단계 ATR 손절/익절 어댑터)
 
 - current run(현재 실행): `run46A_atr_based_adaptive_stop_takeprofit_adapter_v1`
 

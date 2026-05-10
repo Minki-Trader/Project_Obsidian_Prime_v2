@@ -1,0 +1,13 @@
+adapter_id,route_view,validation_closed_trades,oos_closed_trades,combined_closed_trades,validation_trades_per_month,oos_trades_per_month,weakest_wfo_window_trade_count,single_trade_share,day_share,week_share,month_share,status,failed_reasons
+spf00_stage51_control,tier_a_side_filter_separate,217,190,407,36.092555,29.657051,69,0.117167,0.097809,0.166676,0.289253,passed,[]
+spf00_stage51_control,tier_b_side_filter_separate,62,36,98,10.312158,5.619231,15,0.31446,0.31446,0.341796,0.429163,failed,"['oos_closed_trades_lt_40', 'combined_closed_trades_lt_100', 'single_trade_share_gt_25pct']"
+spf01_short_only,tier_a_side_filter_separate,77,61,138,12.807036,9.521474,23,0.242661,0.242661,0.381514,0.52975,passed,[]
+spf01_short_only,tier_b_side_filter_separate,26,17,43,4.324454,2.653526,7,0.873942,0.873942,0.873942,1.090355,failed,"['validation_closed_trades_lt_40', 'oos_closed_trades_lt_40', 'combined_closed_trades_lt_100', 'oos_density_lt_3_per_month', 'weakest_wfo_window_lt_12', 'single_trade_share_gt_25pct', 'day_share_gt_35pct', 'week_share_gt_50pct', 'month_share_gt_65pct']"
+spf02_validation_weak_strata_block,tier_a_side_filter_separate,130,111,241,21.622268,17.325962,43,0.124505,0.124505,0.158217,0.398327,passed,[]
+spf02_validation_weak_strata_block,tier_b_side_filter_separate,62,36,98,10.312158,5.619231,15,0.31446,0.31446,0.341796,0.429163,failed,"['oos_closed_trades_lt_40', 'combined_closed_trades_lt_100', 'single_trade_share_gt_25pct']"
+spf03_block_early_or_trend_buy,tier_a_side_filter_separate,119,104,223,19.792691,16.233333,36,0.111509,0.10691,0.162181,0.22848,passed,[]
+spf03_block_early_or_trend_buy,tier_b_side_filter_separate,62,36,98,10.312158,5.619231,15,0.31446,0.31446,0.341796,0.429163,failed,"['oos_closed_trades_lt_40', 'combined_closed_trades_lt_100', 'single_trade_share_gt_25pct']"
+spf04_late_buy_plus_short,tier_a_side_filter_separate,119,98,217,19.792691,15.296795,37,0.13141,0.125989,0.199747,0.327708,passed,[]
+spf04_late_buy_plus_short,tier_b_side_filter_separate,26,17,43,4.324454,2.653526,7,0.873942,0.873942,0.873942,1.090355,failed,"['validation_closed_trades_lt_40', 'oos_closed_trades_lt_40', 'combined_closed_trades_lt_100', 'oos_density_lt_3_per_month', 'weakest_wfo_window_lt_12', 'single_trade_share_gt_25pct', 'day_share_gt_35pct', 'week_share_gt_50pct', 'month_share_gt_65pct']"
+spf05_short_strength_only,tier_a_side_filter_separate,66,52,118,10.977459,8.116667,20,0.185998,0.185998,0.292428,0.393894,passed,[]
+spf05_short_strength_only,tier_b_side_filter_separate,0,0,0,0.0,0.0,0,0.0,0.0,0.0,0.0,failed,"['validation_closed_trades_lt_40', 'oos_closed_trades_lt_40', 'combined_closed_trades_lt_100', 'validation_density_lt_3_per_month', 'oos_density_lt_3_per_month', 'weakest_wfo_window_lt_12']"

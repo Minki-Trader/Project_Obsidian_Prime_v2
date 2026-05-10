@@ -1,0 +1,17 @@
+{
+  "adapter_id": "spf03_block_early_or_trend_buy",
+  "decision_time_only": true,
+  "deterministic_mapping": "adapter_id maps to stage53 feature CSV signal permission rules and MT5 .set files",
+  "explicit_trading_behavior": "block long entries during early session or ADX greater than 25",
+  "failed_reasons": [],
+  "risk_parameters": {
+    "exit_lifecycle_rule": "inherits existing reverse/flat/max_hold behavior from source rule values",
+    "position_sizing": "fixed lot from MT5 .set file",
+    "side_permission_rule": "block long entries during early session or ADX greater than 25",
+    "stop_loss_rule": "unchanged by this signal adapter",
+    "take_profit_rule": "unchanged by this signal adapter"
+  },
+  "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+  "side_specific": true,
+  "status": "passed"
+}

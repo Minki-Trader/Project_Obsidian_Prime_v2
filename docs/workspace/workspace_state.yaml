@@ -1,8 +1,8 @@
 updated_on: '2026-05-11'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter
-current_run_id: run46A_atr_based_adaptive_stop_takeprofit_adapter_v1
+active_stage: 53_adapter_signal__side_specific_short_permission_filter
+current_run_id: run47A_side_specific_short_permission_filter_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,6 +17,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage53(53단계) `53_adapter_signal__side_specific_short_permission_filter`: side-specific permission filter(방향별 허용 필터)를 `reviewed_completed_adapter_review_ready_runtime_probe_only`로 기록했다; selected_adapter(선택 어댑터)=`spf03_block_early_or_trend_buy`; baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 참조)는 만들지 않았다.
 - Stage52(52단계) `52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter`: mandatory ATR SL/TP(필수 ATR 손절/익절) adapter(어댑터) stage(단계)를 `reviewed_completed_negative_memory_runtime_probe_only`로 기록했다; selected_adapter(선택 어댑터)=`atr01_sl1p0_tp1p5`; baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 참조)는 만들지 않았다.
 - Stage51(51단계) 51_risk_filter__q2_short_late_di_loss_firewall: stage closeout(단계 마감) 완료; judgment(판정)=reviewed_closed_positive_q2_loss_firewall_runtime_probe_only, preserved_clue(보존 단서)=fw02_block_di_short_mild; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage51(51단계) 51_risk_filter__q2_short_late_di_loss_firewall: run45A-run45E(실행45A-45E)로 Q2 loss firewall(Q2 손실 방화벽)을 MT5 WFO(MT5 워크포워드)까지 검증했다; judgment(판정)=reviewed_completed_positive_q2_loss_firewall_runtime_probe_only, best_variant(최상 변형)=fw02_block_di_short_mild; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
@@ -3021,3 +3022,16 @@ stage52_atr_sltp_adapter:
   report_path: stages/52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter/03_reviews/run46A_atr_based_adaptive_stop_takeprofit_adapter_v1_packet.md
   packet_summary_path: docs/agent_control/packets/stage52_run46A_atr_based_adaptive_stop_takeprofit_adapter_v1/aggregate_summary.json
   boundary: stage52_atr_sltp_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+
+stage53_side_permission_filter:
+  packet_id: stage53_run47A_side_specific_short_permission_filter_v1
+  stage_id: 53_adapter_signal__side_specific_short_permission_filter
+  idea_id: IDEA-ST53-SIDE-SPECIFIC-SHORT-PERMISSION-FILTER
+  status: reviewed_runtime_probe_completed
+  current_run_id: run47A_side_specific_short_permission_filter_v1
+  judgment: reviewed_completed_adapter_review_ready_runtime_probe_only
+  selected_adapter_candidate: spf03_block_early_or_trend_buy
+  report_path: stages/53_adapter_signal__side_specific_short_permission_filter/03_reviews/run47A_side_specific_short_permission_filter_v1_packet.md
+  packet_summary_path: docs/agent_control/packets/stage53_run47A_side_specific_short_permission_filter_v1/aggregate_summary.json
+  boundary: stage53_side_permission_filter_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

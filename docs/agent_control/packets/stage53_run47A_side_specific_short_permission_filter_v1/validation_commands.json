@@ -1,0 +1,17 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile stage_pipelines/stage53/side_permission_filter.py foundation/pipelines/run_stage53_side_permission_filter.py",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "command": "python -m pytest tests/test_stage53_side_permission_filter.py tests/test_stage52_atr_sltp_adapter.py -q",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ".......                                                                  [100%]\n7 passed in 2.09s\n"
+    }
+  ],
+  "status": "passed"
+}
