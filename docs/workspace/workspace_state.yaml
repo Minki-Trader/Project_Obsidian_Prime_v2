@@ -1,6 +1,6 @@
-updated_on: '2026-05-10'
+updated_on: '2026-05-11'
 project_mode: clean_stage_restart
-active_branch: codex/stage51-q2-loss-firewall
+active_branch: main
 active_stage: 51_risk_filter__q2_short_late_di_loss_firewall
 current_run_id: run45E_stage51_closeout_v1
 current_operating_reference: null
@@ -17,6 +17,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage51(51단계) 51_risk_filter__q2_short_late_di_loss_firewall: stage closeout(단계 마감) 완료; judgment(판정)=reviewed_closed_positive_q2_loss_firewall_runtime_probe_only, preserved_clue(보존 단서)=fw02_block_di_short_mild; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage51(51단계) 51_risk_filter__q2_short_late_di_loss_firewall: run45A-run45E(실행45A-45E)로 Q2 loss firewall(Q2 손실 방화벽)을 MT5 WFO(MT5 워크포워드)까지 검증했다; judgment(판정)=reviewed_completed_positive_q2_loss_firewall_runtime_probe_only, best_variant(최상 변형)=fw02_block_di_short_mild; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - >-
   Stage51(51단계) 51_risk_filter__q2_short_late_di_loss_firewall: run45A-run45E(실행45A-45E)로 Q2 loss firewall(Q2 손실 방화벽)을 실제 MT5 WFO(실제 MT5 워크포워드)까지 검증했다; judgment(판정)=reviewed_completed_positive_q2_loss_firewall_runtime_probe_only, best_variant(최상 변형)=fw02_block_di_short_mild; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
@@ -2994,12 +2995,14 @@ stage51_q2_loss_firewall:
   packet_id: stage51_run45ABCDE_q2_loss_firewall_v1
   stage_id: 51_risk_filter__q2_short_late_di_loss_firewall
   idea_id: IDEA-ST51-Q2-SHORT-LATE-DI-LOSS-FIREWALL
-  status: reviewed_runtime_probe_completed
+  status: reviewed_closed
   current_run_id: run45E_stage51_closeout_v1
-  judgment: reviewed_completed_positive_q2_loss_firewall_runtime_probe_only
+  judgment: reviewed_closed_positive_q2_loss_firewall_runtime_probe_only
   best_firewall_variant: fw02_block_di_short_mild
   best_q2_net_profit: 56.07
   best_total_net_profit: 364.18
-  report_path: stages/51_risk_filter__q2_short_late_di_loss_firewall/03_reviews/stage51_synthesis_packet.md
+  report_path: stages/51_risk_filter__q2_short_late_di_loss_firewall/03_reviews/stage51_closeout_packet.md
+  source_report_path: stages/51_risk_filter__q2_short_late_di_loss_firewall/03_reviews/stage51_synthesis_packet.md
   packet_summary_path: docs/agent_control/packets/stage51_run45ABCDE_q2_loss_firewall_v1/aggregate_summary.json
-  boundary: stage51_q2_loss_firewall_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+  next_action: choose_stage52_topic_or_open_explicit_promotion_packet
+  boundary: stage51_closeout_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference

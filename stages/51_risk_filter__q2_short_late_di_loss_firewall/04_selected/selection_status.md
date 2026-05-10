@@ -1,6 +1,8 @@
 ﻿# Stage51 Selection Status(51단계 선택 상태)
 
-- final_judgment(최종 판정): `reviewed_completed_positive_q2_loss_firewall_runtime_probe_only`
+- stage_status(단계 상태): `reviewed_closed`
+- current run(현재 실행): `run45E_stage51_closeout_v1`
+- final_judgment(최종 판정): `reviewed_closed_positive_q2_loss_firewall_runtime_probe_only`
 - selected_baseline(선택 기준선): `none`
 - selected_promotion(선택 승격): `none`
 - runtime_authority(런타임 권위): `none`
@@ -10,4 +12,4 @@
 - best_firewall_variant(최상 방화벽 변형): `fw02_block_di_short_mild`
 - best_q2_net_profit(최상 Q2 순수익): `56.07`
 - best_total_net_profit(최상 전체 순수익): `364.18`
-- boundary(주장 경계): `stage51_q2_loss_firewall_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference`
+- boundary(주장 경계): `stage51_closeout_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference`
