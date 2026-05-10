@@ -1,14 +1,17 @@
-{
-  "allowed_claims": [
-    "adapter_completed_review_ready"
-  ],
-  "boundary": "adapter_completed_review_ready",
-  "forbidden_claims": [
-    "baseline",
-    "promotion",
-    "runtime_authority",
-    "live_readiness",
-    "operating_reference"
-  ],
-  "status": "passed"
+﻿{
+    "status":  "passed",
+    "allowed_claims":  [
+                           "runtime_probe_only",
+                           "adapter_candidate_user_review_required"
+                       ],
+    "boundary":  "candidate_discovery_only_until_explicit_user_approval",
+    "forbidden_claims":  [
+                             "baseline",
+                             "promotion",
+                             "runtime_authority",
+                             "live_readiness",
+                             "operating_reference"
+                         ],
+    "user_approval_required":  true,
+    "self_completion_forbidden":  true
 }

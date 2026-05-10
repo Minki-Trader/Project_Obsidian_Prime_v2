@@ -42,7 +42,7 @@ from stage_pipelines.stage51 import q2_loss_firewall as stage51
 
 CAMPAIGN_ID = "OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01"
 CAMPAIGN_PACKET_ID = "overnight_autonomous_adapter_campaign_01"
-CAMPAIGN_BOUNDARY = "adapter_discovery_until_explicit_operating_promotion"
+CAMPAIGN_BOUNDARY = "candidate_discovery_only_until_explicit_user_approval"
 
 STAGE_NUMBER = 52
 STAGE_ID = "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter"
@@ -55,12 +55,12 @@ BOUNDARY = (
     "stage52_atr_sltp_runtime_probe_only_no_baseline_no_promotion_"
     "no_runtime_authority_no_live_readiness_no_operating_reference"
 )
-COMPLETION_BOUNDARY = "adapter_completed_review_ready"
+USER_REVIEW_BOUNDARY = "candidate_discovery_only_until_explicit_user_approval"
 
 POSITIVE_JUDGMENT = "reviewed_completed_positive_runtime_probe_only"
 INCONCLUSIVE_JUDGMENT = "reviewed_completed_inconclusive_runtime_probe_only"
 NEGATIVE_JUDGMENT = "reviewed_completed_negative_memory_runtime_probe_only"
-ADAPTER_READY_JUDGMENT = "reviewed_completed_adapter_review_ready_runtime_probe_only"
+ADAPTER_CANDIDATE_JUDGMENT = "reviewed_completed_adapter_candidate_runtime_probe_only"
 BLOCKED_JUDGMENT = "blocked_runtime_probe_missing_mt5_execution"
 
 SOURCE_CANDIDATE_ID = stage50.SOURCE_CANDIDATE_ID
@@ -832,21 +832,31 @@ def evaluate_candidates(summary_rows: Sequence[Mapping[str, Any]], trade_rows: S
     if not tier_b:
         adapter_failures.append("tier_b_accounting_missing")
 
-    adapter_gate = {"status": "passed" if not adapter_failures else "failed", "adapter_id": best_adapter, "route_view": best_route, "failed_reasons": adapter_failures}
+    adapter_mechanical_status = "passed" if not adapter_failures else "failed"
+    adapter_gate = {
+        "status": "adapter_candidate_observed_user_review_required" if adapter_mechanical_status == "passed" else "adapter_candidate_needs_followup",
+        "mechanical_evidence_status": adapter_mechanical_status,
+        "adapter_id": best_adapter,
+        "route_view": best_route,
+        "failed_reasons": adapter_failures,
+        "user_approval_required": True,
+    }
     practical_gate = {
-        "status": "passed" if adapter_gate["status"] == "passed" else "failed",
+        "status": "passed" if adapter_mechanical_status == "passed" else "failed",
         "adapter_id": best_adapter,
         "explicit_trading_behavior": "sets ATR-based SL and TP on new market entries",
         "deterministic_mapping": "adapter_id maps to .set InpAtrSltp* parameters",
         "decision_time_only": True,
         "runtime_path": rel(mt5.EA_SOURCE_PATH),
-        "failed_reasons": [] if adapter_gate["status"] == "passed" else adapter_failures,
+        "failed_reasons": [] if adapter_mechanical_status == "passed" else adapter_failures,
     }
-    completion_gate = {
-        "status": "passed" if adapter_gate["status"] == "passed" and practical_gate["status"] == "passed" else "failed",
-        "judgment_if_passed": ADAPTER_READY_JUDGMENT,
-        "failed_reasons": [] if adapter_gate["status"] == "passed" else adapter_failures,
+    candidate_review_gate = {
+        "status": "adapter_candidate_observed_user_review_required" if adapter_mechanical_status == "passed" and practical_gate["status"] == "passed" else "adapter_candidate_needs_followup",
+        "mechanical_evidence_status": "passed" if adapter_mechanical_status == "passed" and practical_gate["status"] == "passed" else "failed",
+        "judgment_if_observed": ADAPTER_CANDIDATE_JUDGMENT,
+        "failed_reasons": [] if adapter_mechanical_status == "passed" else adapter_failures,
         "mandatory_atr_stage_executed": mt5_completed,
+        "user_approval_required": True,
     }
     return {
         "best_candidate": best,
@@ -856,15 +866,15 @@ def evaluate_candidates(summary_rows: Sequence[Mapping[str, Any]], trade_rows: S
         "trade_count_coverage": coverage,
         "adapter_candidate_gate": adapter_gate,
         "practical_tradability_gate": practical_gate,
-        "adapter_completion_gate": completion_gate,
+        "adapter_candidate_review_gate": candidate_review_gate,
     }
 
 
 def decide_judgment(evaluation: Mapping[str, Any], mt5_result: Mapping[str, Any]) -> str:
     if mt5_result.get("external_verification_status") != "completed":
         return BLOCKED_JUDGMENT
-    if evaluation["adapter_completion_gate"]["status"] == "passed":
-        return ADAPTER_READY_JUDGMENT
+    if evaluation["adapter_candidate_review_gate"]["mechanical_evidence_status"] == "passed":
+        return ADAPTER_CANDIDATE_JUDGMENT
     best = evaluation.get("best_candidate", {})
     validation = best.get("validation", {})
     oos = best.get("oos", {})
@@ -932,7 +942,7 @@ def write_stage_docs(results: Mapping[str, Any], judgment: str) -> None:
 - MT5 status(MT5 상태): `{results['mt5'].get('external_verification_status')}`
 - boundary(주장 경계): `{BOUNDARY}`
 
-Stage52(52단계)는 mandatory ATR SL/TP(필수 ATR 손절/익절) stage requirement(단계 요구)를 실행했다. Adapter-complete(어댑터 완료) 여부는 모든 gate(게이트)가 passed(통과)일 때만 열린다.
+Stage52(52단계)는 mandatory ATR SL/TP(필수 ATR 손절/익절) stage requirement(단계 요구)를 실행했다. Candidate(후보)는 user review(사용자 검토) 대상으로만 남기며 Codex self-completion(코덱스 자체 완료)은 금지된다.
 """,
     )
     write_md(
@@ -954,7 +964,7 @@ Stage52(52단계)는 mandatory ATR SL/TP(필수 ATR 손절/익절) stage require
 
 - final_judgment(최종 판정): `{judgment}`
 - selected_adapter_candidate(선택 어댑터 후보): `{best_adapter}`
-- adapter_completion(어댑터 완료): `{results['evaluation']['adapter_completion_gate']['status']}`
+- adapter_candidate_status(어댑터 후보 상태): `{results['evaluation']['adapter_candidate_review_gate']['status']}`
 - selected_baseline(선택 기준선): `none`
 - selected_promotion(선택 승격): `none`
 - runtime_authority(런타임 권위): `none`
@@ -1140,14 +1150,14 @@ def write_packet_files(results: Mapping[str, Any], judgment: str, ledger_sync: M
     write_json(PACKET_ROOT / "kpi_contract_audit.json", {"status": "passed", "kpi_paths": [rel(MT5_SUMMARY_PATH), rel(PARTITION_SUMMARY_PATH), rel(TRADE_COVERAGE_PATH), rel(CONCENTRATION_PATH)]})
     write_json(PACKET_ROOT / "artifact_lineage_audit.json", {"status": "passed", "source_inputs": [rel(SOURCE_MODEL_PATH), rel(ATR_LINEAGE_PATH)], "producer": rel(Path("stage_pipelines/stage52/atr_sltp_adapter.py")), "runtime_path": rel(mt5.EA_SOURCE_PATH), "lineage_judgment": "connected_with_boundary"})
     write_json(PACKET_ROOT / "required_gate_coverage_audit.json", {"status": "passed", "required_gates": ["runtime_evidence_gate", "adapter_candidate_gate", "practical_tradability_gate", "trade_count_coverage_gate", "concentration_audit", "artifact_lineage_audit"]})
-    write_json(PACKET_ROOT / "final_claim_guard.json", {"status": "passed", "allowed_claims": ["runtime_probe_only"] if judgment != ADAPTER_READY_JUDGMENT else ["adapter_completed_review_ready"], "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"], "boundary": BOUNDARY if judgment != ADAPTER_READY_JUDGMENT else COMPLETION_BOUNDARY})
+    write_json(PACKET_ROOT / "final_claim_guard.json", {"status": "passed", "allowed_claims": ["runtime_probe_only", "adapter_candidate_user_review_required"], "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"], "boundary": USER_REVIEW_BOUNDARY, "user_approval_required": True})
     write_json(PACKET_ROOT / "validation_commands.json", {"commands": validation_commands, "status": "passed" if all(item["returncode"] == 0 for item in validation_commands) else "failed"})
     write_json(PACKET_ROOT / "git_sync_record.json", {"status": "pending_main_push", "branch": "codex/overnight-autonomous-adapter-campaign", "stage_id": STAGE_ID})
 
 
 def write_campaign_packets(judgment: str, evaluation: Mapping[str, Any]) -> None:
     best = evaluation.get("best_candidate", {})
-    write_json(CAMPAIGN_PACKET_ROOT / "work_packet.yaml", {"campaign_id": CAMPAIGN_ID, "campaign_mode": "autonomous_until_genuinely_practical_adapter_completed", "starting_stage": 52, "campaign_boundary": CAMPAIGN_BOUNDARY})
+    write_json(CAMPAIGN_PACKET_ROOT / "work_packet.yaml", {"campaign_id": CAMPAIGN_ID, "campaign_mode": "autonomous_candidate_discovery_until_budget_or_blocker", "starting_stage": 52, "campaign_boundary": CAMPAIGN_BOUNDARY, "self_completion_forbidden": True})
     write_md(CAMPAIGN_PACKET_ROOT / "campaign_plan.md", f"""# Overnight Autonomous Adapter Campaign 01(야간 자율 어댑터 캠페인 01)
 
 - campaign_id(캠페인 ID): `{CAMPAIGN_ID}`
@@ -1160,8 +1170,9 @@ def write_campaign_packets(judgment: str, evaluation: Mapping[str, Any]) -> None
         "stages_attempted": [STAGE_ID],
         "mandatory_atr_sltp_stage": {"stage_id": STAGE_ID, "run_id": RUN_ID, "judgment": judgment, "pushed_to_main": False},
         "best_candidate": best,
-        "adapter_completion_gate": evaluation["adapter_completion_gate"],
-        "campaign_judgment": "campaign_in_progress" if evaluation["adapter_completion_gate"]["status"] != "passed" else "campaign_completed_adapter_review_ready",
+        "adapter_candidate_review_gate": evaluation["adapter_candidate_review_gate"],
+        "campaign_judgment": "campaign_in_progress_user_review_required_candidate_observed",
+        "campaign_mode": "autonomous_candidate_discovery_until_budget_or_blocker",
         "boundary": CAMPAIGN_BOUNDARY,
     }
     write_json(CAMPAIGN_PACKET_ROOT / "campaign_progress.json", progress)
@@ -1169,7 +1180,7 @@ def write_campaign_packets(judgment: str, evaluation: Mapping[str, Any]) -> None
     write_json(CAMPAIGN_PACKET_ROOT / "final_claim_guard.json", {"status": "passed", "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"], "boundary": CAMPAIGN_BOUNDARY})
     write_json(CAMPAIGN_PACKET_ROOT / "git_sync_ledger.json", {"records": [], "status": "pending_stage52_main_push"})
     write_json(CAMPAIGN_PACKET_ROOT / "atr_sltp_prerequisite_gate.json", {"status": "passed", "stage_id": STAGE_ID, "run_id": RUN_ID, "judgment": judgment, "pushed_to_main": False})
-    write_json(CAMPAIGN_PACKET_ROOT / "no_premature_completion_gate.json", {"status": "passed", "adapter_completion_gate": evaluation["adapter_completion_gate"], "atr_stage_executed": True})
+    write_json(CAMPAIGN_PACKET_ROOT / "no_premature_completion_gate.json", {"status": "passed", "adapter_candidate_review_gate": evaluation["adapter_candidate_review_gate"], "atr_stage_executed": True, "self_completion_forbidden": True})
 
 
 def write_stage_docs_clean(results: Mapping[str, Any], judgment: str) -> None:
@@ -1230,7 +1241,7 @@ def write_stage_docs_clean(results: Mapping[str, Any], judgment: str) -> None:
 - MT5 status(MT5 상태): `{results['mt5'].get('external_verification_status')}`
 - boundary(주장 경계): `{BOUNDARY}`
 
-Stage52(52단계)는 mandatory ATR SL/TP(필수 ATR 손절/익절) stage requirement(단계 요구)를 실행 대상으로 삼았다. Adapter-complete(어댑터 완료) 여부는 모든 gate(게이트)가 passed(통과)일 때만 열린다.
+Stage52(52단계)는 mandatory ATR SL/TP(필수 ATR 손절/익절) stage requirement(단계 요구)를 실행 대상으로 삼았다. Candidate(후보)는 user review(사용자 검토) 대상으로만 남기며 Codex self-completion(코덱스 자체 완료)은 금지된다.
 """,
     )
     write_md(
@@ -1252,7 +1263,7 @@ Stage52(52단계)는 mandatory ATR SL/TP(필수 ATR 손절/익절) stage require
 
 - final_judgment(최종 판정): `{judgment}`
 - selected_adapter_candidate(선택 어댑터 후보): `{best_adapter}`
-- adapter_completion(어댑터 완료): `{results['evaluation']['adapter_completion_gate']['status']}`
+- adapter_candidate_status(어댑터 후보 상태): `{results['evaluation']['adapter_candidate_review_gate']['status']}`
 - selected_baseline(선택 기준선): `none`
 - selected_promotion(선택 승격): `none`
 - runtime_authority(런타임 권위): `none`
@@ -1320,12 +1331,10 @@ Stage52(52단계) `{STAGE_ID}`는 mandatory ATR SL/TP(필수 ATR 손절/익절) 
 
 def write_campaign_packets_clean(judgment: str, evaluation: Mapping[str, Any]) -> None:
     best = evaluation.get("best_candidate", {})
-    adapter_passed = evaluation["adapter_completion_gate"]["status"] == "passed"
+    adapter_observed = evaluation["adapter_candidate_review_gate"]["mechanical_evidence_status"] == "passed"
     blocked = judgment == BLOCKED_JUDGMENT
     campaign_judgment = (
-        "campaign_completed_adapter_review_ready"
-        if adapter_passed
-        else "campaign_blocked_mt5_execution"
+        "campaign_blocked_mt5_execution"
         if blocked
         else "campaign_in_progress"
     )
@@ -1343,7 +1352,7 @@ def write_campaign_packets_clean(judgment: str, evaluation: Mapping[str, Any]) -
             "pushed_to_main": False,
         },
         "best_candidate": best,
-        "adapter_completion_gate": evaluation["adapter_completion_gate"],
+        "adapter_candidate_review_gate": evaluation["adapter_candidate_review_gate"],
         "campaign_judgment": campaign_judgment,
         "boundary": CAMPAIGN_BOUNDARY,
     }
@@ -1351,7 +1360,7 @@ def write_campaign_packets_clean(judgment: str, evaluation: Mapping[str, Any]) -
         CAMPAIGN_PACKET_ROOT / "work_packet.yaml",
         {
             "campaign_id": CAMPAIGN_ID,
-            "campaign_mode": "autonomous_until_genuinely_practical_adapter_completed",
+            "campaign_mode": "autonomous_candidate_discovery_until_budget_or_blocker",
             "starting_stage": 52,
             "campaign_boundary": CAMPAIGN_BOUNDARY,
             "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"],
@@ -1394,32 +1403,35 @@ def write_campaign_packets_clean(judgment: str, evaluation: Mapping[str, Any]) -
     write_json(
         CAMPAIGN_PACKET_ROOT / "no_premature_completion_gate.json",
         {
-            "status": "passed" if not adapter_passed or not blocked else "failed",
-            "adapter_completion_gate": evaluation["adapter_completion_gate"],
+            "status": "passed",
+            "adapter_candidate_review_gate": evaluation["adapter_candidate_review_gate"],
             "atr_stage_executed": not blocked,
             "campaign_judgment": campaign_judgment,
+            "candidate_observed": adapter_observed,
+            "self_completion_forbidden": True,
         },
     )
 
 
-def write_adapter_completion_review_packet(results: Mapping[str, Any], judgment: str) -> str | None:
+def write_adapter_candidate_review_packet(results: Mapping[str, Any], judgment: str) -> str | None:
     evaluation = results["evaluation"]
-    if judgment != ADAPTER_READY_JUDGMENT or evaluation["adapter_completion_gate"]["status"] != "passed":
+    if judgment != ADAPTER_CANDIDATE_JUDGMENT or evaluation["adapter_candidate_review_gate"]["mechanical_evidence_status"] != "passed":
         return None
     adapter_id = str(evaluation["adapter_candidate_gate"].get("adapter_id", "unknown_adapter"))
-    packet_path = common.ROOT / "docs" / "agent_control" / "packets" / f"adapter_completion_review_stage52_{adapter_id}_v1"
+    packet_path = common.ROOT / "docs" / "agent_control" / "packets" / f"adapter_candidate_review_stage52_{adapter_id}_v1"
     write_json(
         packet_path / "work_packet.yaml",
         {
             "packet_id": packet_path.name,
             "stage_id": STAGE_ID,
             "adapter_id": adapter_id,
-            "judgment": ADAPTER_READY_JUDGMENT,
-            "claim_boundary": COMPLETION_BOUNDARY,
+            "judgment": ADAPTER_CANDIDATE_JUDGMENT,
+            "claim_boundary": USER_REVIEW_BOUNDARY,
+            "candidate_status": "adapter_candidate_observed_user_review_required",
         },
     )
     write_json(
-        packet_path / "completion_review.json",
+        packet_path / "candidate_review.json",
         {
             "adapter_id": adapter_id,
             "stage_id": STAGE_ID,
@@ -1428,15 +1440,17 @@ def write_adapter_completion_review_packet(results: Mapping[str, Any], judgment:
             "mt5_summary_path": rel(MT5_SUMMARY_PATH),
             "trade_count_coverage_path": rel(TRADE_COVERAGE_PATH),
             "concentration_path": rel(CONCENTRATION_PATH),
-            "claim_boundary": COMPLETION_BOUNDARY,
+            "claim_boundary": USER_REVIEW_BOUNDARY,
+            "candidate_status": "adapter_candidate_observed_user_review_required",
         },
     )
     write_json(
         packet_path / "final_claim_guard.json",
         {
             "status": "passed",
-            "allowed_claim": "adapter_completed_review_ready",
+            "allowed_claim": "adapter_candidate_user_review_required",
             "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"],
+            "self_completion_forbidden": True,
         },
     )
     return rel(packet_path)
@@ -1462,7 +1476,7 @@ def run_pipeline(args: argparse.Namespace) -> dict[str, Any]:
     update_workspace_state_clean(judgment, evaluation)
     write_campaign_packets_clean(judgment, evaluation)
     write_packet_files(results, judgment, ledger_sync)
-    results["adapter_completion_packet_path"] = write_adapter_completion_review_packet(results, judgment)
+    results["adapter_candidate_review_packet_path"] = write_adapter_candidate_review_packet(results, judgment)
     return results
 
 

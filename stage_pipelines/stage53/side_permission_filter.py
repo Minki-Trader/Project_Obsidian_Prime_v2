@@ -54,12 +54,12 @@ BOUNDARY = (
     "stage53_side_permission_filter_runtime_probe_only_no_baseline_no_promotion_"
     "no_runtime_authority_no_live_readiness_no_operating_reference"
 )
-COMPLETION_BOUNDARY = stage52.COMPLETION_BOUNDARY
+USER_REVIEW_BOUNDARY = "candidate_discovery_only_until_explicit_user_approval"
 
 POSITIVE_JUDGMENT = "reviewed_completed_positive_runtime_probe_only"
 INCONCLUSIVE_JUDGMENT = "reviewed_completed_inconclusive_runtime_probe_only"
 NEGATIVE_JUDGMENT = "reviewed_completed_negative_memory_runtime_probe_only"
-ADAPTER_READY_JUDGMENT = "reviewed_completed_adapter_review_ready_runtime_probe_only"
+ADAPTER_CANDIDATE_JUDGMENT = "reviewed_completed_adapter_candidate_runtime_probe_only"
 BLOCKED_JUDGMENT = "blocked_runtime_probe_missing_mt5_execution"
 
 SOURCE_CANDIDATE_ID = stage50.SOURCE_CANDIDATE_ID
@@ -631,9 +631,17 @@ def evaluate_candidates(summary_rows: Sequence[Mapping[str, Any]], trade_rows: S
     if not tier_b:
         adapter_failures.append("tier_b_accounting_missing")
 
-    adapter_gate = {"status": "passed" if not adapter_failures else "failed", "adapter_id": best_adapter, "route_view": best_route, "failed_reasons": adapter_failures}
+    adapter_mechanical_status = "passed" if not adapter_failures else "failed"
+    adapter_gate = {
+        "status": "adapter_candidate_observed_user_review_required" if adapter_mechanical_status == "passed" else "adapter_candidate_needs_followup",
+        "mechanical_evidence_status": adapter_mechanical_status,
+        "adapter_id": best_adapter,
+        "route_view": best_route,
+        "failed_reasons": adapter_failures,
+        "user_approval_required": True,
+    }
     practical_gate = {
-        "status": "passed" if adapter_gate["status"] == "passed" else "failed",
+        "status": "passed" if adapter_mechanical_status == "passed" else "failed",
         "adapter_id": best_adapter,
         "explicit_trading_behavior": candidate_by_id(best_adapter).get("description", "") if best_adapter else "",
         "deterministic_mapping": "adapter_id maps to stage53 feature CSV signal permission rules and MT5 .set files",
@@ -647,13 +655,15 @@ def evaluate_candidates(summary_rows: Sequence[Mapping[str, Any]], trade_rows: S
             "side_permission_rule": candidate_by_id(best_adapter).get("description", "") if best_adapter else "",
         },
         "side_specific": True,
-        "failed_reasons": [] if adapter_gate["status"] == "passed" else adapter_failures,
+        "failed_reasons": [] if adapter_mechanical_status == "passed" else adapter_failures,
     }
-    completion_gate = {
-        "status": "passed" if adapter_gate["status"] == "passed" and practical_gate["status"] == "passed" else "failed",
-        "judgment_if_passed": ADAPTER_READY_JUDGMENT,
-        "failed_reasons": [] if adapter_gate["status"] == "passed" else adapter_failures,
+    candidate_review_gate = {
+        "status": "adapter_candidate_observed_user_review_required" if adapter_mechanical_status == "passed" and practical_gate["status"] == "passed" else "adapter_candidate_needs_followup",
+        "mechanical_evidence_status": "passed" if adapter_mechanical_status == "passed" and practical_gate["status"] == "passed" else "failed",
+        "judgment_if_observed": ADAPTER_CANDIDATE_JUDGMENT,
+        "failed_reasons": [] if adapter_mechanical_status == "passed" else adapter_failures,
         "mandatory_atr_stage_pushed_to_main": True,
+        "user_approval_required": True,
     }
     return {
         "best_candidate": best,
@@ -663,15 +673,15 @@ def evaluate_candidates(summary_rows: Sequence[Mapping[str, Any]], trade_rows: S
         "trade_count_coverage": coverage,
         "adapter_candidate_gate": adapter_gate,
         "practical_tradability_gate": practical_gate,
-        "adapter_completion_gate": completion_gate,
+        "adapter_candidate_review_gate": candidate_review_gate,
     }
 
 
 def decide_judgment(evaluation: Mapping[str, Any], mt5_result: Mapping[str, Any]) -> str:
     if mt5_result.get("external_verification_status") != "completed":
         return BLOCKED_JUDGMENT
-    if evaluation["adapter_completion_gate"]["status"] == "passed":
-        return ADAPTER_READY_JUDGMENT
+    if evaluation["adapter_candidate_review_gate"]["mechanical_evidence_status"] == "passed":
+        return ADAPTER_CANDIDATE_JUDGMENT
     best = evaluation.get("best_candidate", {})
     validation = best.get("validation", {})
     oos = best.get("oos", {})
@@ -755,7 +765,7 @@ def write_stage_docs(results: Mapping[str, Any], judgment: str) -> None:
 
 - final_judgment(최종 판정): `{judgment}`
 - selected_adapter_candidate(선택 어댑터 후보): `{best_adapter}`
-- adapter_completion(어댑터 완료): `{results['evaluation']['adapter_completion_gate']['status']}`
+- adapter_candidate_status(어댑터 후보 상태): `{results['evaluation']['adapter_candidate_review_gate']['status']}`
 - selected_baseline(선택 기준선): `none`
 - selected_promotion(선택 승격): `none`
 - runtime_authority(런타임 권위): `none`
@@ -912,7 +922,7 @@ def write_packet_files(results: Mapping[str, Any], judgment: str, ledger_sync: M
     write_json(PACKET_ROOT / "kpi_contract_audit.json", {"status": "passed", "kpi_paths": [rel(MT5_SUMMARY_PATH), rel(PARTITION_SUMMARY_PATH), rel(TRADE_COVERAGE_PATH), rel(CONCENTRATION_PATH)]})
     write_json(PACKET_ROOT / "artifact_lineage_audit.json", {"status": "passed", "source_inputs": [rel(SOURCE_MODEL_PATH), rel(FEATURE_AUDIT_PATH)], "producer": rel(Path("stage_pipelines/stage53/side_permission_filter.py")), "runtime_path": rel(mt5.EA_SOURCE_PATH), "lineage_judgment": "connected_with_boundary"})
     write_json(PACKET_ROOT / "required_gate_coverage_audit.json", {"status": "passed", "required_gates": ["runtime_evidence_gate", "adapter_candidate_gate", "practical_tradability_gate", "trade_count_coverage_gate", "concentration_audit", "artifact_lineage_audit"]})
-    write_json(PACKET_ROOT / "final_claim_guard.json", {"status": "passed", "allowed_claims": ["runtime_probe_only"] if judgment != ADAPTER_READY_JUDGMENT else ["adapter_completed_review_ready"], "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"], "boundary": BOUNDARY if judgment != ADAPTER_READY_JUDGMENT else COMPLETION_BOUNDARY})
+    write_json(PACKET_ROOT / "final_claim_guard.json", {"status": "passed", "allowed_claims": ["runtime_probe_only", "adapter_candidate_user_review_required"], "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"], "boundary": USER_REVIEW_BOUNDARY, "user_approval_required": True})
     write_json(PACKET_ROOT / "validation_commands.json", {"commands": validation_commands, "status": "passed" if all(item["returncode"] == 0 for item in validation_commands) else "failed"})
     write_json(PACKET_ROOT / "git_sync_record.json", {"status": "pending_main_push", "branch": "codex/overnight-autonomous-adapter-campaign", "stage_id": STAGE_ID})
 
@@ -932,24 +942,25 @@ def write_campaign_packets(judgment: str, evaluation: Mapping[str, Any]) -> None
         "mandatory_atr_sltp_stage": mandatory,
         "latest_stage": {"stage_id": STAGE_ID, "run_id": RUN_ID, "judgment": judgment, "pushed_to_main": False},
         "best_candidate": evaluation["best_candidate"],
-        "adapter_completion_gate": evaluation["adapter_completion_gate"],
-        "campaign_judgment": "campaign_in_progress",
-        "boundary": CAMPAIGN_BOUNDARY,
+        "adapter_candidate_review_gate": evaluation["adapter_candidate_review_gate"],
+        "campaign_judgment": "campaign_in_progress_user_review_required_candidate_observed",
+        "campaign_mode": "autonomous_candidate_discovery_until_budget_or_blocker",
+        "boundary": USER_REVIEW_BOUNDARY,
     }
     write_json(CAMPAIGN_PACKET_ROOT / "campaign_progress.json", progress)
     write_json(CAMPAIGN_PACKET_ROOT / "campaign_summary.json", progress)
-    write_json(CAMPAIGN_PACKET_ROOT / "no_premature_completion_gate.json", {"status": "passed", "adapter_completion_gate": evaluation["adapter_completion_gate"], "atr_stage_executed_and_pushed": bool(mandatory.get("pushed_to_main"))})
+    write_json(CAMPAIGN_PACKET_ROOT / "no_premature_completion_gate.json", {"status": "passed", "adapter_candidate_review_gate": evaluation["adapter_candidate_review_gate"], "atr_stage_executed_and_pushed": bool(mandatory.get("pushed_to_main")), "self_completion_forbidden": True})
 
 
-def write_adapter_completion_review_packet(results: Mapping[str, Any], judgment: str) -> str | None:
+def write_adapter_candidate_review_packet(results: Mapping[str, Any], judgment: str) -> str | None:
     evaluation = results["evaluation"]
-    if judgment != ADAPTER_READY_JUDGMENT or evaluation["adapter_completion_gate"]["status"] != "passed":
+    if judgment != ADAPTER_CANDIDATE_JUDGMENT or evaluation["adapter_candidate_review_gate"]["mechanical_evidence_status"] != "passed":
         return None
     adapter_id = str(evaluation["adapter_candidate_gate"].get("adapter_id", "unknown_adapter"))
-    packet_path = common.ROOT / "docs" / "agent_control" / "packets" / f"adapter_completion_review_stage53_{adapter_id}_v1"
-    write_json(packet_path / "work_packet.yaml", {"packet_id": packet_path.name, "stage_id": STAGE_ID, "adapter_id": adapter_id, "judgment": ADAPTER_READY_JUDGMENT, "claim_boundary": COMPLETION_BOUNDARY})
-    write_json(packet_path / "completion_review.json", {"adapter_id": adapter_id, "stage_id": STAGE_ID, "run_id": RUN_ID, "measured_reasons": evaluation, "mt5_summary_path": rel(MT5_SUMMARY_PATH), "trade_count_coverage_path": rel(TRADE_COVERAGE_PATH), "concentration_path": rel(CONCENTRATION_PATH), "claim_boundary": COMPLETION_BOUNDARY})
-    write_json(packet_path / "final_claim_guard.json", {"status": "passed", "allowed_claim": "adapter_completed_review_ready", "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"]})
+    packet_path = common.ROOT / "docs" / "agent_control" / "packets" / f"adapter_candidate_review_stage53_{adapter_id}_v1"
+    write_json(packet_path / "work_packet.yaml", {"packet_id": packet_path.name, "stage_id": STAGE_ID, "adapter_id": adapter_id, "judgment": ADAPTER_CANDIDATE_JUDGMENT, "claim_boundary": USER_REVIEW_BOUNDARY, "candidate_status": "adapter_candidate_observed_user_review_required"})
+    write_json(packet_path / "candidate_review.json", {"adapter_id": adapter_id, "stage_id": STAGE_ID, "run_id": RUN_ID, "measured_reasons": evaluation, "mt5_summary_path": rel(MT5_SUMMARY_PATH), "trade_count_coverage_path": rel(TRADE_COVERAGE_PATH), "concentration_path": rel(CONCENTRATION_PATH), "claim_boundary": USER_REVIEW_BOUNDARY, "candidate_status": "adapter_candidate_observed_user_review_required"})
+    write_json(packet_path / "final_claim_guard.json", {"status": "passed", "allowed_claim": "adapter_candidate_user_review_required", "forbidden_claims": ["baseline", "promotion", "runtime_authority", "live_readiness", "operating_reference"], "self_completion_forbidden": True})
     return rel(packet_path)
 
 
@@ -973,7 +984,7 @@ def run_pipeline(args: argparse.Namespace) -> dict[str, Any]:
     update_workspace_state(judgment, evaluation)
     write_campaign_packets(judgment, evaluation)
     write_packet_files(results, judgment, ledger_sync)
-    results["adapter_completion_packet_path"] = write_adapter_completion_review_packet(results, judgment)
+    results["adapter_candidate_review_packet_path"] = write_adapter_candidate_review_packet(results, judgment)
     return results
 
 
@@ -991,5 +1002,5 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     results = run_pipeline(args)
-    print(json.dumps(json_ready({"judgment": results["judgment"], "best_candidate": results["evaluation"]["best_candidate"], "mt5_status": results["mt5"].get("external_verification_status"), "adapter_completion_packet_path": results.get("adapter_completion_packet_path")}), ensure_ascii=False, indent=2))
+    print(json.dumps(json_ready({"judgment": results["judgment"], "best_candidate": results["evaluation"]["best_candidate"], "mt5_status": results["mt5"].get("external_verification_status"), "adapter_candidate_review_packet_path": results.get("adapter_candidate_review_packet_path")}), ensure_ascii=False, indent=2))
     return 0 if results["judgment"] != BLOCKED_JUDGMENT else 2

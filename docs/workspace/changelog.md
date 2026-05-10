@@ -1,4 +1,4 @@
-﻿## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
+﻿﻿## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
 
 - completed(완료): `run31A_state_context_router_broad_mt5_probe_v1`
 - judgment(판정): `state_context_not_useful_or_inconclusive`
@@ -408,4 +408,5 @@
 - 2026-05-10T15:46:21Z `51_risk_filter__q2_short_late_di_loss_firewall` `stage51_run45ABCDE_q2_loss_firewall_v1` recorded Q2 loss firewall as `reviewed_completed_positive_q2_loss_firewall_runtime_probe_only`.
 - 2026-05-11T00:00:00Z `51_risk_filter__q2_short_late_di_loss_firewall` closed with `run45E_stage51_closeout_v1` as `reviewed_closed_positive_q2_loss_firewall_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 기준) created(생성).
 - 2026-05-11T00:00:00Z `52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter` recorded(기록) mandatory ATR SL/TP(필수 ATR 손절/익절) stage(단계) as `reviewed_completed_negative_memory_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
-- 2026-05-11T00:00:00Z `53_adapter_signal__side_specific_short_permission_filter` recorded(기록) side permission filter(방향 허용 필터) as `reviewed_completed_adapter_review_ready_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
+- 2026-05-11T00:00:00Z `53_adapter_signal__side_specific_short_permission_filter` recorded(기록) side permission filter(방향 허용 필터) as `reviewed_completed_adapter_candidate_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
+- 2026-05-11T00:00:00Z `repair_stage53_premature_self_completion_v1` reopened(재개) `OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01`; Stage53(53단계) `spf03_block_early_or_trend_buy` is `adapter_candidate_observed_user_review_required`; Codex self-completion(코덱스 자체 완료)은 금지된다.

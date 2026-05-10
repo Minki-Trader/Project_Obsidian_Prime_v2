@@ -1,8 +1,13 @@
+﻿## Latest Campaign Repair(최신 캠페인 수정)
+
+- current repair(현재 수정): `repair_stage53_premature_self_completion_v1`
+
+Stage53(53단계) `spf03_block_early_or_trend_buy`는 `adapter_candidate_observed_user_review_required` 후보 근거로 재분류됐다. Campaign(캠페인)은 `campaign_in_progress_user_review_required_candidate_observed`로 다시 열렸고, next stage(다음 단계)는 Stage54(54단계)다. 효과(effect, 효과)는 후보 근거를 보존하면서 Codex self-completion(코덱스 자체 완료)을 막는 것이다.
 ﻿## Latest Stage53 Side Permission Filter(최신 53단계 방향 허용 필터)
 
 - current run(현재 실행): `run47A_side_specific_short_permission_filter_v1`
 
-Stage53(53단계) `53_adapter_signal__side_specific_short_permission_filter`는 side-specific permission filter(방향별 허용 필터)를 `reviewed_completed_adapter_review_ready_runtime_probe_only`로 기록했다. selected candidate(선택 후보)는 `spf03_block_early_or_trend_buy`이고, boundary(경계)는 runtime_probe_only(런타임 탐침 전용)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 참조)는 없다.
+Stage53(53단계) `53_adapter_signal__side_specific_short_permission_filter`는 side-specific permission filter(방향별 허용 필터)를 `reviewed_completed_adapter_candidate_runtime_probe_only`로 기록했다. selected candidate(선택 후보)는 `spf03_block_early_or_trend_buy`이고, boundary(경계)는 runtime_probe_only(런타임 탐침 전용)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 참조)는 없다.
 
 ## Latest Stage52 ATR SL/TP Adapter(최신 52단계 ATR 손절/익절 어댑터)
 
@@ -1370,3 +1375,4 @@ Codex 제어면 v2(Control Plane v2, 제어면 v2)는 코덱스 작업 운영 �
 - judgment(판정): `inconclusive_probability_shape_attribution_runtime_probe_completed`
 - boundary(경계): `runtime_probe_probability_shape_attribution_not_alpha_quality_not_promotion_not_runtime_authority`
 - effect(효과): 모델 변형이 아니라 probability-shape attribution regime(확률 모양 귀속 국면) 축을 확인했고, alpha quality(알파 품질)나 promotion candidate(승격 후보)는 만들지 않는다.
+

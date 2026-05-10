@@ -1,14 +1,19 @@
-{
-  "allowed_claim": "adapter_completed_review_ready",
-  "adapter_id": "spf03_block_early_or_trend_buy",
-  "boundary": "adapter_discovery_until_explicit_operating_promotion",
-  "forbidden_claims": [
-    "baseline",
-    "promotion",
-    "runtime_authority",
-    "live_readiness",
-    "operating_reference"
-  ],
-  "packet_path": "docs/agent_control/packets/adapter_completion_review_stage53_spf03_block_early_or_trend_buy_v1",
-  "status": "passed"
+﻿{
+    "status":  "passed",
+    "allowed_claims":  [
+                           "runtime_probe_only",
+                           "adapter_candidate_user_review_required"
+                       ],
+    "boundary":  "candidate_discovery_only_until_explicit_user_approval",
+    "observed_candidate_id":  "spf03_block_early_or_trend_buy",
+    "packet_path":  "docs/agent_control/packets/adapter_candidate_review_stage53_spf03_block_early_or_trend_buy_v1",
+    "forbidden_claims":  [
+                             "baseline",
+                             "promotion",
+                             "runtime_authority",
+                             "live_readiness",
+                             "operating_reference"
+                         ],
+    "user_approval_required":  true,
+    "self_completion_forbidden":  true
 }

@@ -1,14 +1,21 @@
-{
-  "adapter_completion_packet_path": "docs/agent_control/packets/adapter_completion_review_stage53_spf03_block_early_or_trend_buy_v1",
-  "adapter_completion_gate": {
-    "failed_reasons": [],
-    "judgment_if_passed": "reviewed_completed_adapter_review_ready_runtime_probe_only",
-    "mandatory_atr_stage_pushed_to_main": true,
-    "status": "passed"
-  },
-  "atr_stage_executed_and_pushed": true,
-  "completed_adapter_id": "spf03_block_early_or_trend_buy",
-  "main_pushed": true,
-  "pushed_main_commit_sha": "1b17dad0c4f2a7a61774b6acf4c7d5ae2c7b0b02",
-  "status": "passed"
+﻿{
+    "status":  "passed",
+    "adapter_candidate_review_gate":  {
+                                          "status":  "adapter_candidate_observed_user_review_required",
+                                          "mechanical_evidence_status":  "passed",
+                                          "judgment_if_observed":  "reviewed_completed_adapter_candidate_runtime_probe_only",
+                                          "failed_reasons":  [
+
+                                                             ],
+                                          "mandatory_atr_stage_pushed_to_main":  true,
+                                          "user_approval_required":  true,
+                                          "self_completion_forbidden":  true
+                                      },
+    "atr_stage_executed_and_pushed":  true,
+    "observed_candidate_id":  "spf03_block_early_or_trend_buy",
+    "observed_candidate_status":  "adapter_candidate_observed_user_review_required",
+    "main_pushed":  true,
+    "pushed_main_commit_sha":  "1b17dad0c4f2a7a61774b6acf4c7d5ae2c7b0b02",
+    "candidate_discovery_not_stop_condition":  true,
+    "self_completion_forbidden":  true
 }
