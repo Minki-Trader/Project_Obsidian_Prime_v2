@@ -1,4 +1,10 @@
-﻿## Latest Stage54 Cost-Aware Side Permission Filter(理쒖떊 53?④퀎 諛⑺뼢 ?덉슜 ?꾪꽣)
+﻿## Latest Stage55 Tier-B Fallback Side-Filter Routing Filter(理쒖떊 53?④퀎 諛⑺뼢 ?덉슜 ?꾪꽣)
+
+- current run(?꾩옱 ?ㅽ뻾): `run49A_tier_b_fallback_side_filter_router_v1`
+
+Stage55(53?④퀎) `55_adapter_routing__tier_b_fallback_side_filter_router`??side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_positive_runtime_probe_only`濡?湲곕줉?덈떎. selected candidate(?좏깮 ?꾨낫)??`rfp00_csp03_primary_control_fallback`?닿퀬, boundary(寃쎄퀎)??runtime_probe_only(?고????먯묠 ?꾩슜)?대떎. baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)???녿떎.
+
+## Latest Stage54 Cost-Aware Side Permission Filter(理쒖떊 53?④퀎 諛⑺뼢 ?덉슜 ?꾪꽣)
 
 - current run(?꾩옱 ?ㅽ뻾): `run48A_cost_aware_side_permission_filter_v1`
 

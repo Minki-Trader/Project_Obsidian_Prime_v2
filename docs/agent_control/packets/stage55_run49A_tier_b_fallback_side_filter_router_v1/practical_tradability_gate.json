@@ -1,0 +1,72 @@
+{
+  "adapter_id": "rfp02_csp03_primary_csp05_fallback",
+  "decision_time_only": true,
+  "deterministic_mapping": "adapter_id maps to a Tier A primary filter, Tier B fallback filter, routed MT5 .set files, and a candidate grid row",
+  "explicit_trading_behavior": "use the Stage54 user-review primary filter and allow Tier B fallback only in strong short contexts",
+  "failed_reasons": [],
+  "risk_parameters": {
+    "exit_lifecycle_rule": "inherits existing reverse/flat/max_hold behavior from source rule values",
+    "position_sizing": "fixed lot from MT5 .set file",
+    "routing_rule": "use the Stage54 user-review primary filter and allow Tier B fallback only in strong short contexts",
+    "stop_loss_rule": "unchanged by this signal adapter",
+    "take_profit_rule": "unchanged by this signal adapter"
+  },
+  "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+  "side_specific": true,
+  "status": "passed",
+  "tier_a_b_accounting": {
+    "tier_a_oos": {
+      "adapter_id": "rfp02_csp03_primary_csp05_fallback",
+      "closed_trades": 92,
+      "max_drawdown_amount": 61.08,
+      "net_profit": 286.74,
+      "partition": "oos",
+      "period_days": 195.0,
+      "positive_windows": 2,
+      "profit_factor": 2.374,
+      "route_view": "tier_a_primary_side_filter_separate",
+      "trades_per_month": 14.360256,
+      "window_count": 2
+    },
+    "tier_a_validation": {
+      "adapter_id": "rfp02_csp03_primary_csp05_fallback",
+      "closed_trades": 108,
+      "max_drawdown_amount": 84.5,
+      "net_profit": 114.28,
+      "partition": "validation",
+      "period_days": 183.0,
+      "positive_windows": 2,
+      "profit_factor": 1.390087,
+      "route_view": "tier_a_primary_side_filter_separate",
+      "trades_per_month": 17.963115,
+      "window_count": 2
+    },
+    "tier_b_accounting_status": "tier_b_not_carrying_result",
+    "tier_b_oos": {
+      "adapter_id": "rfp02_csp03_primary_csp05_fallback",
+      "closed_trades": 0,
+      "max_drawdown_amount": 0.0,
+      "net_profit": 0.0,
+      "partition": "oos",
+      "period_days": 195.0,
+      "positive_windows": 0,
+      "profit_factor": null,
+      "route_view": "tier_b_fallback_side_filter_separate",
+      "trades_per_month": 0.0,
+      "window_count": 2
+    },
+    "tier_b_validation": {
+      "adapter_id": "rfp02_csp03_primary_csp05_fallback",
+      "closed_trades": 0,
+      "max_drawdown_amount": 0.0,
+      "net_profit": 0.0,
+      "partition": "validation",
+      "period_days": 183.0,
+      "positive_windows": 0,
+      "profit_factor": null,
+      "route_view": "tier_b_fallback_side_filter_separate",
+      "trades_per_month": 0.0,
+      "window_count": 2
+    }
+  }
+}
