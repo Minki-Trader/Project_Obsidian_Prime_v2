@@ -402,3 +402,5 @@
 - 2026-05-10T11:36:52Z `49_trade_lifecycle__compression_stress_mfe_capture_exit_timing` completed `stage49_run43CDEF_followup_suite_v1` with `reviewed_completed_positive_followup_runtime_probe_only`.
 - 2026-05-10T12:12:05Z `49_trade_lifecycle__compression_stress_mfe_capture_exit_timing` completed `stage49_run43GHIJ_deep_followup_suite_v1` with `reviewed_completed_positive_deep_followup_runtime_probe_only`.
 - 2026-05-10T12:47:36Z `49_trade_lifecycle__compression_stress_mfe_capture_exit_timing` closed with `stage49_run43KLMN_closeout_suite_v1` as `reviewed_closed_positive_reference_surface_runtime_probe_only`.
+- 2026-05-10T14:30:51Z `50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress` `run44A_tier_a_adx_reference_surface_wfo_stress_v1` recorded ADX WFO stress as `reviewed_completed_positive_robustness_runtime_probe_only`.
+- 2026-05-10T14:54:40Z `50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress` completed `stage50_run44BCDE_followup_suite_v1` as `reviewed_completed_inconclusive_followup_runtime_probe_only`.

@@ -1,0 +1,77 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "stage50_source_stage49_closeout_packet",
+      "availability": "tracked_source",
+      "notes": "Stage49 closeout reference surface.",
+      "path": "docs/agent_control/packets/stage49_run43KLMN_closeout_suite_v1/aggregate_summary.json",
+      "sha256": "2b0d9e07d416bb89c59d86aa55dde86bef7af9c1c250d8b5e43ffc7bc3f39291",
+      "type": "source_packet"
+    },
+    {
+      "artifact_id": "stage50_source_run43G_manifest",
+      "availability": "tracked_source",
+      "notes": "Stage49 Tier A ADX sweep source.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43G/run_manifest.json",
+      "sha256": "957a0876762038fe998a83e82f493279c11dd80356540e3f642c08385d6612de",
+      "type": "manifest"
+    },
+    {
+      "artifact_id": "stage50_source_run43N_stability",
+      "availability": "tracked_source",
+      "notes": "Stage49 leave-one-month stability.",
+      "path": "stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/02_runs/run43N/results/adx_leave_one_month_stability.csv",
+      "sha256": "a4694b342248f60463c2e4bf48f56e71d3a24bc0ed314db13cf18bd7be1b496d",
+      "type": "source_table"
+    },
+    {
+      "artifact_id": "stage50_source_stage45_score_table",
+      "availability": "tracked_source",
+      "notes": "Unchanged Stage45 score table.",
+      "path": "stages/45_volatility_mechanism__compression_expansion_signal_rebuild/02_runs/run39A_volatility_compression_expansion_broad_mt5_probe_v1/models/stage45_discrete_signal_score_table.csv",
+      "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+      "type": "model_table"
+    },
+    {
+      "artifact_id": "stage50_run44A_model_copy",
+      "availability": "generated",
+      "notes": "Stage50 copied score table.",
+      "path": "stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/02_runs/run44A/models/stage45_discrete_signal_score_table.csv",
+      "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+      "type": "model_table"
+    },
+    {
+      "artifact_id": "stage50_run44A_feature_audit",
+      "availability": "generated",
+      "notes": "Rolling window feature audit.",
+      "path": "stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/02_runs/run44A/results/rolling_window_feature_audit.csv",
+      "sha256": "2ee956d346e34d1bcd777d60a1556db6f3a6d1a44e7224f0a255bfbbe74b1f8d",
+      "type": "audit_table"
+    },
+    {
+      "artifact_id": "stage50_run44A_rolling_summary",
+      "availability": "generated",
+      "notes": "Rolling MT5 summary.",
+      "path": "stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/02_runs/run44A/results/rolling_window_mt5_summary.csv",
+      "sha256": "e5cb4d20c04c797a1dd47ef275847f9709e8e7cc8603c9623826e2a00ab98fd8",
+      "type": "result_table"
+    },
+    {
+      "artifact_id": "stage50_run44A_robustness_summary",
+      "availability": "generated",
+      "notes": "Variant robustness summary.",
+      "path": "stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/02_runs/run44A/results/variant_robustness_summary.csv",
+      "sha256": "9079cd708b91c4249e9d8e73c9025b232890caefdd98ab1053e4c56c42f81456",
+      "type": "result_table"
+    },
+    {
+      "artifact_id": "stage50_run44A_manifest",
+      "availability": "generated_self_reference_hash_not_recorded",
+      "notes": "Run manifest; hash is not recorded because the manifest embeds the lineage list.",
+      "path": "stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/02_runs/run44A/run_manifest.json",
+      "sha256": "self_referential_not_recorded",
+      "type": "manifest"
+    }
+  ],
+  "status": "passed"
+}

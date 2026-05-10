@@ -1,8 +1,8 @@
 updated_on: '2026-05-10'
 project_mode: clean_stage_restart
-active_branch: codex/stage49-mfe-capture-exit-timing
-active_stage: 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing
-current_run_id: stage49_closeout_v1
+active_branch: codex/stage50-adx-reference-wfo-stress
+active_stage: 50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress
+current_run_id: run44E_trade_overlap_concentration_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,6 +17,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage50(50단계) follow-up suite(후속 묶음): run44B/run44C/run44D/run44E(44B-44E 실행)로 Q2 부검, Tier B routed WFO(Tier B 라우팅 WFO), cost sensitivity(비용 민감도), trade overlap(거래 중복)을 완료했다; routed_total_status(라우팅 전체 상태)=passed, routed_total_net(라우팅 전체 순수익)=359.12; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
+- Stage50(50단계) 50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress: run44A_tier_a_adx_reference_surface_wfo_stress_v1(실행)에서 Tier A ADX reference surface(기준 표면)를 rolling window(롤링 윈도우) MT5 stress(압박)로 검증했다; judgment(판정)=reviewed_completed_positive_robustness_runtime_probe_only, reference_status(기준 상태)=passed, best_variant(최선 변형)=adx_20_25; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing closeout(마감): run43K/run43L/run43M/run43N(43K-43N 실행)과 stage49_closeout_v1(마감)을 완료했고 Tier A only adx_20_25(티어 A만 adx_20_25)를 reference surface(참고 표면)로 보존했다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing deep_followup_suite(심화 후속 실험 묶음): run43G/run43H/run43I/run43J(43G-43J 실행)를 완료했고 Tier A only ADX band sweep(Tier A만 ADX 구간 훑기)은 7개 중 7개 통과, selected variant(선택 변형)는 `adx_20_25`, Tier B fallback conditioning(Tier B 대체 조건화)은 tested_not_promotion(시험됨, 승격 아님)으로 닫았다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
 - Stage49(49단계) 49_trade_lifecycle__compression_stress_mfe_capture_exit_timing followup_suite(후속 실험 묶음): run43C/run43D/run43E/run43F(43C-43F 실행)를 완료했고 ADX band robustness(ADX 구간 강건성)는 7개 중 6개 통과, Tier A only(Tier A만)가 가장 강한 ownership(소유권) 단서였다; baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 없다.
@@ -3002,3 +3004,31 @@ stage49_closeout:
   report_path: stages/49_trade_lifecycle__compression_stress_mfe_capture_exit_timing/03_reviews/stage49_closeout_packet.md
   packet_summary_path: docs/agent_control/packets/stage49_run43KLMN_closeout_suite_v1/aggregate_summary.json
   boundary: stage49_closeout_reference_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage50_tier_a_adx_reference_surface_wfo_stress:
+  packet_id: stage50_run44A_tier_a_adx_reference_surface_wfo_stress_v1
+  stage_id: 50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress
+  idea_id: IDEA-ST50-TIER-A-ADX-REFERENCE-WFO-STRESS
+  status: reviewed_runtime_probe_completed
+  current_run_id: run44A_tier_a_adx_reference_surface_wfo_stress_v1
+  judgment: reviewed_completed_positive_robustness_runtime_probe_only
+  reference_variant: adx_20_25
+  reference_status: passed
+  best_variant: adx_20_25
+  best_positive_windows: 3
+  best_total_net_profit: 414.75
+  report_path: stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/03_reviews/run44A_packet.md
+  packet_summary_path: docs/agent_control/packets/stage50_run44A_tier_a_adx_reference_surface_wfo_stress_v1/aggregate_summary.json
+  boundary: stage50_robustness_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
+
+stage50_followup_suite:
+  packet_id: stage50_run44BCDE_followup_suite_v1
+  stage_id: 50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress
+  status: reviewed_followup_suite_completed
+  current_run_id: run44E_trade_overlap_concentration_v1
+  judgment: reviewed_completed_inconclusive_followup_runtime_probe_only
+  routed_total_status: passed
+  routed_total_net_profit: 359.12
+  report_path: stages/50_robustness_protocol__tier_a_adx_reference_surface_wfo_stress/03_reviews/stage50_followup_suite_packet.md
+  packet_summary_path: docs/agent_control/packets/stage50_run44BCDE_followup_suite_v1/aggregate_summary.json
+  boundary: stage50_followup_runtime_probe_only_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference
