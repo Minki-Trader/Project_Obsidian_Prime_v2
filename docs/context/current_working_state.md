@@ -1,4 +1,84 @@
-﻿## Latest Stage42 Session Structure Signal Reliability(최신 42단계 세션 구조 신호 신뢰도)
+﻿## Latest Stage47 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage47 `47_meta_signal__cross_model_agreement_disagreement_scout` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage46 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage46 `46_feature_interaction__nonlinear_pairwise_structure_scout` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage45 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage45 `45_volatility_mechanism__compression_expansion_signal_rebuild` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage44 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage44 `44_robustness_protocol__rolling_walkforward_split_stability` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage43 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage43 `43_model_rebuild__low_complexity_feature_subset_regularized_signal` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage47 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage47 `47_meta_signal__cross_model_agreement_disagreement_scout` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage46 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage46 `46_feature_interaction__nonlinear_pairwise_structure_scout` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage45 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage45 `45_volatility_mechanism__compression_expansion_signal_rebuild` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `32` MT5 attempts and `96` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage44 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage44 `44_robustness_protocol__rolling_walkforward_split_stability` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage43 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage43 `43_model_rebuild__low_complexity_feature_subset_regularized_signal` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage47 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage47 `47_meta_signal__cross_model_agreement_disagreement_scout` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage46 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage46 `46_feature_interaction__nonlinear_pairwise_structure_scout` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage45 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage45 `45_volatility_mechanism__compression_expansion_signal_rebuild` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage44 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage44 `44_robustness_protocol__rolling_walkforward_split_stability` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage43 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage43 `43_model_rebuild__low_complexity_feature_subset_regularized_signal` finished as `reviewed_completed_inconclusive_runtime_probe_only` with `24` MT5 attempts and `72` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage47 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage47 `47_meta_signal__cross_model_agreement_disagreement_scout` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage46 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage46 `46_feature_interaction__nonlinear_pairwise_structure_scout` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage45 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage45 `45_volatility_mechanism__compression_expansion_signal_rebuild` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage44 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage44 `44_robustness_protocol__rolling_walkforward_split_stability` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage43 AUTO-CAMPAIGN-02 Runtime Probe
+
+Stage43 `43_model_rebuild__low_complexity_feature_subset_regularized_signal` finished as `reviewed_completed_negative_memory_runtime_probe_only` with `16` MT5 attempts and `48` MT5 KPI rows. It is independent from Stage38-42 and prior campaign stages; no baseline, promotion, runtime authority, live readiness, or operating reference was created.
+
+## Latest Stage42 Session Structure Signal Reliability(최신 42단계 세션 구조 신호 신뢰도)
 
 Stage42(42단계) `42_session_structure__cash_open_close_signal_reliability_scout`는 session/time-structure(세션/시간 구조) runtime probe(런타임 탐침)로 열렸다. Stage38/39/40/41(38/39/40/41단계)은 negative memory(부정 기억)로만 사용했고, permission/abstention(허용/기권), exit overlay(청산 오버레이), candle morphology(캔들 형태), label/horizon micro-tuning(라벨/수평선 미세조정)은 주 메커니즘으로 쓰지 않았다.
 

@@ -1,0 +1,729 @@
+{
+  "blocked_stage": null,
+  "campaign_id": "AUTO-CAMPAIGN-02-RUN-ALL-FIVE-INDEPENDENT-TOPICS",
+  "claim_boundary": "exploration_only_until_explicit_promotion_packet_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_operating_reference",
+  "completed_stages": [
+    {
+      "actual_mt5_artifact_exists": true,
+      "best_oos": {
+        "actual_routed_total_count_mt5": 8646,
+        "attempt_name": "",
+        "candidate_id": "c08_constrained_tree_stump_combo",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.93,
+        "max_drawdown": 167.72,
+        "net_profit": 365.84,
+        "profit_factor": 1.27,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/43_model_rebuild__low_complexity_feature_subset_regularized_signal/02_runs/run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1_routed_c08_oos.htm",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_number": 43,
+        "tier_a_used_count_mt5": 7584,
+        "tier_b_fallback_used_count_mt5": 1062,
+        "trade_count": 392.0,
+        "win_rate": 51.28
+      },
+      "best_validation": {
+        "actual_routed_total_count_mt5": 12210,
+        "attempt_name": "",
+        "candidate_id": "c02_top8_stability_ranked_elasticnet",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.8,
+        "max_drawdown": 284.47,
+        "net_profit": 564.49,
+        "profit_factor": 1.23,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/43_model_rebuild__low_complexity_feature_subset_regularized_signal/02_runs/run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1_routed_c02_validation_is.htm",
+        "runtime_status": "completed",
+        "split": "validation_is",
+        "stage_number": 43,
+        "tier_a_used_count_mt5": 9844,
+        "tier_b_fallback_used_count_mt5": 2366,
+        "trade_count": 706.0,
+        "win_rate": 50.85
+      },
+      "judgment": "reviewed_completed_inconclusive_runtime_probe_only",
+      "micro_search_gate": {
+        "best_candidate": "m03_low_trade_guard_c02_top8_stability_ranked_elasticnet",
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_current_broad_surface_reference",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c03_top12_regularized_core",
+            "reason": "oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c04_top4_extreme_sparse",
+            "reason": "validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c05_technical_only_subset",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c06_macro_proxy_subset",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c07_mega_cap_subset",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c08_constrained_tree_stump_combo",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m04_extreme_stress_c02_top8_stability_ranked_elasticnet",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05"
+          }
+        ],
+        "score": 931.28,
+        "status": "passed"
+      },
+      "mt5_attempt_count": 24,
+      "mt5_kpi_record_count": 72,
+      "packet_id": "stage43_run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1",
+      "packet_root": "docs/agent_control/packets/stage43_run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1",
+      "promotion_candidate_gate": {
+        "candidate_id": null,
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_current_broad_surface_reference",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c02_top8_stability_ranked_elasticnet",
+            "reason": "cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c03_top12_regularized_core",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c04_top4_extreme_sparse",
+            "reason": "validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c05_technical_only_subset",
+            "reason": "oos_net_not_positive;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c06_macro_proxy_subset",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c07_mega_cap_subset",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c08_constrained_tree_stump_combo",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m01_relaxed_c02_top8_stability_ranked_elasticnet",
+            "reason": "cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m02_firm_c02_top8_stability_ranked_elasticnet",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m03_low_trade_guard_c02_top8_stability_ranked_elasticnet",
+            "reason": "cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m04_extreme_stress_c02_top8_stability_ranked_elasticnet",
+            "reason": "oos_net_not_positive;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          }
+        ],
+        "status": "failed"
+      },
+      "promotion_candidate_packet": null,
+      "run_id": "run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1",
+      "run_root": "stages/43_model_rebuild__low_complexity_feature_subset_regularized_signal/02_runs/run37A_low_complexity_feature_subset_rebuild_broad_mt5_probe_v1",
+      "stage_id": "43_model_rebuild__low_complexity_feature_subset_regularized_signal",
+      "stage_number": 43
+    },
+    {
+      "actual_mt5_artifact_exists": true,
+      "best_oos": {
+        "actual_routed_total_count_mt5": 8646,
+        "attempt_name": "",
+        "candidate_id": "m03_low_trade_guard_c06_fold_dispersion_avoid",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.32,
+        "max_drawdown": 231.09,
+        "net_profit": 186.31,
+        "profit_factor": 1.08,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/44_robustness_protocol__rolling_walkforward_split_stability/02_runs/run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1_routed_m03_oos.htm",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_number": 44,
+        "tier_a_used_count_mt5": 7584,
+        "tier_b_fallback_used_count_mt5": 1062,
+        "trade_count": 576.0,
+        "win_rate": 53.12
+      },
+      "best_validation": {
+        "actual_routed_total_count_mt5": 12210,
+        "attempt_name": "",
+        "candidate_id": "c02_fold_vote_top5",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.51,
+        "max_drawdown": 238.04,
+        "net_profit": 374.77,
+        "profit_factor": 1.15,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/44_robustness_protocol__rolling_walkforward_split_stability/02_runs/run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1_routed_c02_validation_is.htm",
+        "runtime_status": "completed",
+        "split": "validation_is",
+        "stage_number": 44,
+        "tier_a_used_count_mt5": 9844,
+        "tier_b_fallback_used_count_mt5": 2366,
+        "trade_count": 728.0,
+        "win_rate": 48.21
+      },
+      "judgment": "reviewed_completed_inconclusive_runtime_probe_only",
+      "micro_search_gate": {
+        "best_candidate": "m03_low_trade_guard_c06_fold_dispersion_avoid",
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_single_split_reference",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c02_fold_vote_top5",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c03_survives_4of6_folds",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c04_recent_fold_weighted",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c05_all_fold_consensus",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c07_directional_fold_stability",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c08_one_lucky_fold_negative_control",
+            "reason": "validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m04_extreme_stress_c06_fold_dispersion_avoid",
+            "reason": "validation_pf_below_1_05"
+          }
+        ],
+        "score": 520.1700000000001,
+        "status": "passed"
+      },
+      "mt5_attempt_count": 24,
+      "mt5_kpi_record_count": 72,
+      "packet_id": "stage44_run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1",
+      "packet_root": "docs/agent_control/packets/stage44_run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1",
+      "promotion_candidate_gate": {
+        "candidate_id": null,
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_single_split_reference",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c02_fold_vote_top5",
+            "reason": "oos_net_not_positive;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c03_survives_4of6_folds",
+            "reason": "oos_net_not_positive;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c04_recent_fold_weighted",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c05_all_fold_consensus",
+            "reason": "oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c06_fold_dispersion_avoid",
+            "reason": "validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c07_directional_fold_stability",
+            "reason": "oos_net_not_positive;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c08_one_lucky_fold_negative_control",
+            "reason": "validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m01_relaxed_c06_fold_dispersion_avoid",
+            "reason": "validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m02_firm_c06_fold_dispersion_avoid",
+            "reason": "validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m03_low_trade_guard_c06_fold_dispersion_avoid",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m04_extreme_stress_c06_fold_dispersion_avoid",
+            "reason": "validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          }
+        ],
+        "status": "failed"
+      },
+      "promotion_candidate_packet": null,
+      "run_id": "run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1",
+      "run_root": "stages/44_robustness_protocol__rolling_walkforward_split_stability/02_runs/run38A_rolling_walkforward_split_stability_broad_mt5_probe_v1",
+      "stage_id": "44_robustness_protocol__rolling_walkforward_split_stability",
+      "stage_number": 44
+    },
+    {
+      "actual_mt5_artifact_exists": true,
+      "best_oos": {
+        "actual_routed_total_count_mt5": 8646,
+        "attempt_name": "",
+        "candidate_id": "c06_direction_specific_expansion_breakout",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 1.43,
+        "max_drawdown": 107.8,
+        "net_profit": 249.49,
+        "profit_factor": 1.47,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/45_volatility_mechanism__compression_expansion_signal_rebuild/02_runs/run39A_volatility_compression_expansion_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run39A_volatility_compression_expansion_broad_mt5_probe_v1_routed_c06_oos.htm",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_number": 45,
+        "tier_a_used_count_mt5": 7584,
+        "tier_b_fallback_used_count_mt5": 1062,
+        "trade_count": 175.0,
+        "win_rate": 44.0
+      },
+      "best_validation": {
+        "actual_routed_total_count_mt5": 12210,
+        "attempt_name": "",
+        "candidate_id": "m04_extreme_stress_c08_extreme_compression_stress",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.26,
+        "max_drawdown": 336.5,
+        "net_profit": 188.32,
+        "profit_factor": 1.07,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/45_volatility_mechanism__compression_expansion_signal_rebuild/02_runs/run39A_volatility_compression_expansion_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run39A_volatility_compression_expansion_broad_mt5_probe_v1_routed_m04_validation_is.htm",
+        "runtime_status": "completed",
+        "split": "validation_is",
+        "stage_number": 45,
+        "tier_a_used_count_mt5": 9844,
+        "tier_b_fallback_used_count_mt5": 2366,
+        "trade_count": 736.0,
+        "win_rate": 49.86
+      },
+      "judgment": "reviewed_completed_inconclusive_runtime_probe_only",
+      "micro_search_gate": {
+        "best_candidate": "c08_extreme_compression_stress",
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_reference_return_vol_momentum",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c02_atr_compression_release",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c03_bollinger_width_compression_breakout",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c04_histvol_ratio_expansion",
+            "reason": "validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c05_range_contraction_expansion",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c06_direction_specific_expansion_breakout",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c07_expansion_after_low_adx",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m01_relaxed_c08_extreme_compression_stress",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m02_firm_c08_extreme_compression_stress",
+            "reason": "oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m03_low_trade_guard_c08_extreme_compression_stress",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m04_extreme_stress_c08_extreme_compression_stress",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05;validation_oos_gap_extreme"
+          }
+        ],
+        "score": 261.56,
+        "status": "passed"
+      },
+      "mt5_attempt_count": 24,
+      "mt5_kpi_record_count": 72,
+      "packet_id": "stage45_run39A_volatility_compression_expansion_broad_mt5_probe_v1",
+      "packet_root": "docs/agent_control/packets/stage45_run39A_volatility_compression_expansion_broad_mt5_probe_v1",
+      "promotion_candidate_gate": {
+        "candidate_id": null,
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_reference_return_vol_momentum",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c02_atr_compression_release",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c03_bollinger_width_compression_breakout",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c04_histvol_ratio_expansion",
+            "reason": "validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c05_range_contraction_expansion",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c06_direction_specific_expansion_breakout",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c07_expansion_after_low_adx",
+            "reason": "oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c08_extreme_compression_stress",
+            "reason": "validation_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m01_relaxed_c08_extreme_compression_stress",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m02_firm_c08_extreme_compression_stress",
+            "reason": "oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m03_low_trade_guard_c08_extreme_compression_stress",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m04_extreme_stress_c08_extreme_compression_stress",
+            "reason": "oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          }
+        ],
+        "status": "failed"
+      },
+      "promotion_candidate_packet": null,
+      "run_id": "run39A_volatility_compression_expansion_broad_mt5_probe_v1",
+      "run_root": "stages/45_volatility_mechanism__compression_expansion_signal_rebuild/02_runs/run39A_volatility_compression_expansion_broad_mt5_probe_v1",
+      "stage_id": "45_volatility_mechanism__compression_expansion_signal_rebuild",
+      "stage_number": 45
+    },
+    {
+      "actual_mt5_artifact_exists": true,
+      "best_oos": {
+        "actual_routed_total_count_mt5": 8646,
+        "attempt_name": "",
+        "candidate_id": "c07_macro_risk_x_usd",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.63,
+        "max_drawdown": 160.69,
+        "net_profit": 551.94,
+        "profit_factor": 1.21,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/46_feature_interaction__nonlinear_pairwise_structure_scout/02_runs/run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1_routed_c07_oos.htm",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_number": 46,
+        "tier_a_used_count_mt5": 7584,
+        "tier_b_fallback_used_count_mt5": 1062,
+        "trade_count": 883.0,
+        "win_rate": 57.19
+      },
+      "best_validation": {
+        "actual_routed_total_count_mt5": 12210,
+        "attempt_name": "",
+        "candidate_id": "c05_rsi_x_trend",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.61,
+        "max_drawdown": 343.51,
+        "net_profit": 381.22,
+        "profit_factor": 1.17,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/46_feature_interaction__nonlinear_pairwise_structure_scout/02_runs/run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1_routed_c05_validation_is.htm",
+        "runtime_status": "completed",
+        "split": "validation_is",
+        "stage_number": 46,
+        "tier_a_used_count_mt5": 9844,
+        "tier_b_fallback_used_count_mt5": 2366,
+        "trade_count": 622.0,
+        "win_rate": 48.07
+      },
+      "judgment": "reviewed_completed_negative_memory_runtime_probe_only",
+      "micro_search_gate": {
+        "best_candidate": null,
+        "reason": "no_broad_candidate_met_micro_search_gate",
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_additive_reference",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c02_return_x_adx",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c03_bb_position_x_squeeze",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c04_di_x_vol_expansion",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c05_rsi_x_trend",
+            "reason": "oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c06_divergence_x_breadth",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c07_macro_risk_x_usd",
+            "reason": "validation_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c08_interaction_extreme_stress",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          }
+        ],
+        "status": "failed"
+      },
+      "mt5_attempt_count": 16,
+      "mt5_kpi_record_count": 48,
+      "packet_id": "stage46_run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1",
+      "packet_root": "docs/agent_control/packets/stage46_run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1",
+      "promotion_candidate_gate": {
+        "candidate_id": null,
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_additive_reference",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c02_return_x_adx",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c03_bb_position_x_squeeze",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c04_di_x_vol_expansion",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c05_rsi_x_trend",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c06_divergence_x_breadth",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c07_macro_risk_x_usd",
+            "reason": "validation_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c08_interaction_extreme_stress",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          }
+        ],
+        "status": "failed"
+      },
+      "promotion_candidate_packet": null,
+      "run_id": "run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1",
+      "run_root": "stages/46_feature_interaction__nonlinear_pairwise_structure_scout/02_runs/run40A_nonlinear_pairwise_feature_interaction_broad_mt5_probe_v1",
+      "stage_id": "46_feature_interaction__nonlinear_pairwise_structure_scout",
+      "stage_number": 46
+    },
+    {
+      "actual_mt5_artifact_exists": true,
+      "best_oos": {
+        "actual_routed_total_count_mt5": 8646,
+        "attempt_name": "",
+        "candidate_id": "c07_flat_consensus_no_trade",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.31,
+        "max_drawdown": 188.58,
+        "net_profit": 241.36,
+        "profit_factor": 1.12,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/47_meta_signal__cross_model_agreement_disagreement_scout/02_runs/run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1_routed_c07_oos.htm",
+        "runtime_status": "completed",
+        "split": "oos",
+        "stage_number": 47,
+        "tier_a_used_count_mt5": 7584,
+        "tier_b_fallback_used_count_mt5": 1062,
+        "trade_count": 791.0,
+        "win_rate": 40.58
+      },
+      "best_validation": {
+        "actual_routed_total_count_mt5": 12210,
+        "attempt_name": "",
+        "candidate_id": "c03_majority_agreement",
+        "candidate_rejection_reason": "pending_gate_review",
+        "expectancy": 0.5,
+        "max_drawdown": 263.39,
+        "net_profit": 463.45,
+        "profit_factor": 1.17,
+        "python_candidate_rejection_reason": "mt5_pending",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/47_meta_signal__cross_model_agreement_disagreement_scout/02_runs/run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1_routed_c03_validation_is.htm",
+        "runtime_status": "completed",
+        "split": "validation_is",
+        "stage_number": 47,
+        "tier_a_used_count_mt5": 9844,
+        "tier_b_fallback_used_count_mt5": 2366,
+        "trade_count": 928.0,
+        "win_rate": 45.15
+      },
+      "judgment": "reviewed_completed_inconclusive_runtime_probe_only",
+      "micro_search_gate": {
+        "best_candidate": "c03_majority_agreement",
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_single_reference_signal",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c02_all_family_agreement",
+            "reason": "oos_net_not_positive;oos_pf_below_1_05;validation_oos_gap_extreme"
+          },
+          {
+            "candidate_id": "c04_disagreement_avoidance",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c05_low_dispersion_consensus",
+            "reason": "oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c06_direction_consensus_long_short",
+            "reason": "oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c07_flat_consensus_no_trade",
+            "reason": "validation_net_not_positive;validation_pf_below_1_05"
+          },
+          {
+            "candidate_id": "c08_disagreement_contrarian_control",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m01_relaxed_c03_majority_agreement",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          },
+          {
+            "candidate_id": "m03_low_trade_guard_c03_majority_agreement",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_05;oos_pf_below_1_05"
+          }
+        ],
+        "score": 697.01,
+        "status": "passed"
+      },
+      "mt5_attempt_count": 24,
+      "mt5_kpi_record_count": 72,
+      "packet_id": "stage47_run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1",
+      "packet_root": "docs/agent_control/packets/stage47_run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1",
+      "promotion_candidate_gate": {
+        "candidate_id": null,
+        "rejected_candidates": [
+          {
+            "candidate_id": "c01_single_reference_signal",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c02_all_family_agreement",
+            "reason": "oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c03_majority_agreement",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c04_disagreement_avoidance",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c05_low_dispersion_consensus",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c06_direction_consensus_long_short",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c07_flat_consensus_no_trade",
+            "reason": "validation_net_not_positive;validation_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "c08_disagreement_contrarian_control",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m01_relaxed_c03_majority_agreement",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m02_firm_c03_majority_agreement",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m03_low_trade_guard_c03_majority_agreement",
+            "reason": "validation_net_not_positive;oos_net_not_positive;validation_pf_below_1_10;oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          },
+          {
+            "candidate_id": "m04_extreme_stress_c03_majority_agreement",
+            "reason": "oos_pf_below_1_10;cluster_concentration_check_not_available_for_positive_gate"
+          }
+        ],
+        "status": "failed"
+      },
+      "promotion_candidate_packet": null,
+      "run_id": "run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1",
+      "run_root": "stages/47_meta_signal__cross_model_agreement_disagreement_scout/02_runs/run41A_cross_model_agreement_disagreement_broad_mt5_probe_v1",
+      "stage_id": "47_meta_signal__cross_model_agreement_disagreement_scout",
+      "stage_number": 47
+    }
+  ],
+  "status": "campaign_completed_all_five_topics_no_promotion_candidate",
+  "validation_status": "passed"
+}

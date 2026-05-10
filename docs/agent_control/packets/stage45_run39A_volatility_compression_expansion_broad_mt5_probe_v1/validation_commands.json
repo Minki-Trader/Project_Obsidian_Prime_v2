@@ -1,0 +1,30 @@
+{
+  "commands": [
+    {
+      "command": "python -m py_compile foundation/features/independent_alpha_campaign.py stage_pipelines/auto_campaign_02/independent_runtime_probe.py stage_pipelines/auto_campaign_02/micro_search_completion.py stage_pipelines/auto_campaign_02/__init__.py stage_pipelines/stage43/feature_subset_rebuild.py stage_pipelines/stage44/rolling_walkforward_stability.py stage_pipelines/stage45/volatility_compression_expansion.py stage_pipelines/stage46/pairwise_interaction_scout.py stage_pipelines/stage47/cross_model_agreement.py foundation/pipelines/run_auto_campaign_02_independent_topics.py foundation/pipelines/run_auto_campaign_02_micro_search_completion.py foundation/pipelines/run_stage43_feature_subset_rebuild.py foundation/pipelines/run_stage44_rolling_walkforward_stability.py foundation/pipelines/run_stage45_volatility_compression_expansion.py foundation/pipelines/run_stage46_pairwise_interaction_scout.py foundation/pipelines/run_stage47_cross_model_agreement.py tests/test_auto_campaign_02_independent_topics.py",
+      "result": "passed",
+      "failures_or_blockers": ""
+    },
+    {
+      "command": "$env:PYTHONPATH='.'; pytest tests/test_auto_campaign_02_independent_topics.py -q",
+      "result": "passed: 8 passed",
+      "failures_or_blockers": ""
+    },
+    {
+      "command": "$env:PYTHONPATH='.'; pytest tests/test_control_plane_alpha_run_ledgers.py tests/test_agent_control_gates.py tests/test_agent_control_contracts.py tests/test_mt5_runtime_artifacts.py tests/test_mt5_strategy_report.py tests/test_mt5_missing_report_executor.py tests/test_mt5_kpi_recorder.py tests/test_stage_pipeline_imports.py tests/test_stage06_runtime_parity.py -q",
+      "result": "passed: 53 passed, 243 subtests passed",
+      "failures_or_blockers": ""
+    },
+    {
+      "command": "python -m foundation.pipelines.run_auto_campaign_02_independent_topics --timeout-seconds 900",
+      "result": "passed: Stage43-47 broad MT5 probes executed",
+      "failures_or_blockers": "initial parser summary was corrected by follow-up micro completion"
+    },
+    {
+      "command": "python -m foundation.pipelines.run_auto_campaign_02_micro_search_completion --timeout-seconds 900",
+      "result": "passed: corrected candidate summaries, ran required micro-search MT5 probes, deduped manifests",
+      "failures_or_blockers": "one transient OSError during earlier resume was repaired and rerun"
+    }
+  ],
+  "status": "passed"
+}
