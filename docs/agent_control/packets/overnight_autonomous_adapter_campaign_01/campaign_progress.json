@@ -1,0 +1,64 @@
+{
+  "adapter_completion_gate": {
+    "failed_reasons": [
+      "validation_net_profit_not_positive",
+      "oos_net_profit_not_positive",
+      "validation_pf_lt_1p10",
+      "oos_pf_lt_1p10",
+      "trade_count_or_concentration_gate_failed",
+      "concentration_gate_failed",
+      "cost_0p5_sensitivity_failed"
+    ],
+    "judgment_if_passed": "reviewed_completed_adapter_review_ready_runtime_probe_only",
+    "mandatory_atr_stage_executed": true,
+    "status": "failed"
+  },
+  "best_candidate": {
+    "adapter_id": "atr01_sl1p0_tp1p5",
+    "oos": {
+      "adapter_id": "atr01_sl1p0_tp1p5",
+      "closed_trades": 269,
+      "max_drawdown_amount": 13.96,
+      "net_profit": -12.73,
+      "partition": "oos",
+      "period_days": 195.0,
+      "positive_windows": 1,
+      "profit_factor": 0.796483,
+      "route_view": "tier_a_atr_sltp_separate",
+      "trades_per_month": 41.988141,
+      "window_count": 2
+    },
+    "route_view": "tier_a_atr_sltp_separate",
+    "score": -43.36517,
+    "validation": {
+      "adapter_id": "atr01_sl1p0_tp1p5",
+      "closed_trades": 318,
+      "max_drawdown_amount": 22.14,
+      "net_profit": -38.6,
+      "partition": "validation",
+      "period_days": 183.0,
+      "positive_windows": 0,
+      "profit_factor": 0.530071,
+      "route_view": "tier_a_atr_sltp_separate",
+      "trades_per_month": 52.891393,
+      "window_count": 2
+    }
+  },
+  "boundary": "adapter_discovery_until_explicit_operating_promotion",
+  "campaign_id": "OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01",
+  "campaign_judgment": "campaign_in_progress",
+  "mandatory_atr_sltp_stage": {
+    "executed": true,
+    "judgment": "reviewed_completed_negative_memory_runtime_probe_only",
+    "pushed_to_main": false,
+    "reviewed": true,
+    "run_id": "run46A_atr_based_adaptive_stop_takeprofit_adapter_v1",
+    "stage_id": "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter"
+  },
+  "stages_attempted": [
+    "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter"
+  ],
+  "stages_completed": [
+    "52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter"
+  ]
+}

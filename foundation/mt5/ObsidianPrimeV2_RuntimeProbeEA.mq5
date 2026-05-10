@@ -68,6 +68,14 @@ input int             InpExitRiskCloseShortFeatureIndex = -1;
 input double          InpExitRiskCloseThreshold = 0.5;
 input int             InpExitRiskMinHoldBars = 0;
 input int             InpExitRiskMaxHoldFeatureIndex = -1;
+input bool            InpAtrSltpEnabled = false;
+input int             InpAtrPeriod = 14;
+input double          InpAtrStopMultiplier = 0.0;
+input double          InpAtrTakeProfitMultiplier = 0.0;
+input double          InpAtrMinStopPoints = 0.0;
+input double          InpAtrMaxStopPoints = 0.0;
+input double          InpAtrMinTakeProfitPoints = 0.0;
+input double          InpAtrMaxTakeProfitPoints = 0.0;
 
 input bool            InpTelemetryEnabled = true;
 input bool            InpTelemetryUseCommonFiles = true;
@@ -87,6 +95,7 @@ COpRuntimeTelemetry  g_telemetry;
 
 bool     g_runtime_ready = false;
 datetime g_last_bar_open = 0;
+int      g_atr_handle = INVALID_HANDLE;
 
 double FeatureValueOrDefault(const double &features[], const int feature_index, const double fallback)
   {
@@ -107,6 +116,36 @@ int FeatureIntOrDefault(const double &features[], const int feature_index, const
   {
    const double value = FeatureValueOrDefault(features, feature_index, (double)fallback);
    return (int)MathRound(value);
+  }
+
+double ClampAdapterPoints(const double value, const double min_points, const double max_points)
+  {
+   if(value <= 0.0 || !MathIsValidNumber(value))
+      return 0.0;
+   double output = value;
+   if(min_points > 0.0 && output < min_points)
+      output = min_points;
+   if(max_points > 0.0 && output > max_points)
+      output = max_points;
+   return output;
+  }
+
+double CurrentAtrPoints()
+  {
+   if(!InpAtrSltpEnabled || g_atr_handle == INVALID_HANDLE)
+      return 0.0;
+
+   double values[];
+   ArraySetAsSeries(values, true);
+   ResetLastError();
+   if(CopyBuffer(g_atr_handle, 0, 1, 1, values) != 1)
+      return 0.0;
+
+   const double point = SymbolInfoDouble(InpMainSymbol, SYMBOL_POINT);
+   if(point <= 0.0 || !MathIsValidNumber(values[0]) || values[0] <= 0.0)
+      return 0.0;
+
+   return values[0] / point;
   }
 
 string DeinitReasonText(const int reason)
@@ -418,13 +457,23 @@ void ProcessClosedBar()
       overlay_max_hold_bars = FeatureIntOrDefault(features, InpExitRiskMaxHoldFeatureIndex, 0);
      }
 
+   const double atr_points = CurrentAtrPoints();
+   const double open_sl_points = ClampAdapterPoints(atr_points * InpAtrStopMultiplier,
+                                                    InpAtrMinStopPoints,
+                                                    InpAtrMaxStopPoints);
+   const double open_tp_points = ClampAdapterPoints(atr_points * InpAtrTakeProfitMultiplier,
+                                                    InpAtrMinTakeProfitPoints,
+                                                    InpAtrMaxTakeProfitPoints);
+
    SOpExecutionResult execution;
    const bool execution_ok = g_execution_bridge.Execute(decision.signal,
                                                         execution,
                                                         overlay_close_long,
                                                         overlay_close_short,
                                                         InpExitRiskMinHoldBars,
-                                                        overlay_max_hold_bars);
+                                                        overlay_max_hold_bars,
+                                                        open_sl_points,
+                                                        open_tp_points);
    string skip_reason = "";
    if(!execution_ok)
       skip_reason = "execution_failed:" + execution.comment;
@@ -479,6 +528,15 @@ int OnInit()
 
    if(!SymbolSelect(InpMainSymbol, true))
       return FailInit("main_symbol_select_failed:" + InpMainSymbol);
+
+   if(InpAtrSltpEnabled)
+     {
+      if(InpAtrPeriod <= 0)
+         return FailInit("atr_sltp_invalid_period");
+      g_atr_handle = iATR(InpMainSymbol, InpTimeframe, InpAtrPeriod);
+      if(g_atr_handle == INVALID_HANDLE)
+         return FailInit("atr_sltp_handle_failed:" + (string)GetLastError());
+     }
 
    g_feature_input.Configure(InpFeatureCsvPath,
                              InpFeatureCsvUseCommonFiles,
@@ -560,6 +618,11 @@ void OnDeinit(const int reason)
    g_fallback_model_runtime.Deinit();
    g_ebm_table_runtime.Deinit();
    g_fallback_ebm_table_runtime.Deinit();
+   if(g_atr_handle != INVALID_HANDLE)
+     {
+      IndicatorRelease(g_atr_handle);
+      g_atr_handle = INVALID_HANDLE;
+     }
 
    string telemetry_reason = "";
    const string reason_text = DeinitReasonText(reason);

@@ -1,4 +1,10 @@
-﻿## Latest Stage51 Closeout(최신 51단계 마감)
+﻿## Latest Stage52 ATR SL/TP Adapter(최신 52단계 ATR 손절/익절 어댑터)
+
+- current run(현재 실행): `run46A_atr_based_adaptive_stop_takeprofit_adapter_v1`
+
+Stage52(52단계) `52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter`는 mandatory ATR SL/TP(필수 ATR 손절/익절) adapter stage(어댑터 단계)를 `reviewed_completed_negative_memory_runtime_probe_only`로 기록했다. selected candidate(선택 후보)는 `atr01_sl1p0_tp1p5`이고, boundary(경계)는 runtime_probe_only(런타임 탐침 전용)이다. baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), operating reference(운영 참조)는 없다.
+
+## Latest Stage51 Closeout(최신 51단계 마감)
 
 - current run(현재 실행): `run45E_stage51_closeout_v1`
 

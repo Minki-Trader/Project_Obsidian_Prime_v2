@@ -100,7 +100,9 @@ private:
    bool SendMarketOrder(const int signal,
                         const double volume,
                         const ulong close_ticket,
-                        SOpExecutionResult &result)
+                        SOpExecutionResult &result,
+                        const double open_sl_points = 0.0,
+                        const double open_tp_points = 0.0)
      {
       MqlTick tick;
       if(!SymbolInfoTick(m_symbol, tick))
@@ -142,6 +144,31 @@ private:
 
       if(close_ticket > 0)
          request.position = close_ticket;
+      else
+        {
+         const double point = SymbolInfoDouble(m_symbol, SYMBOL_POINT);
+         const int digits = (int)SymbolInfoInteger(m_symbol, SYMBOL_DIGITS);
+         const double min_stop_points = (double)SymbolInfoInteger(m_symbol, SYMBOL_TRADE_STOPS_LEVEL) + 1.0;
+         const double safe_sl_points = (open_sl_points > 0.0 ? MathMax(open_sl_points, min_stop_points) : 0.0);
+         const double safe_tp_points = (open_tp_points > 0.0 ? MathMax(open_tp_points, min_stop_points) : 0.0);
+         if(point > 0.0)
+           {
+            if(signal == OP_DECISION_LONG)
+              {
+               if(safe_sl_points > 0.0)
+                  request.sl = NormalizeDouble(request.price - safe_sl_points * point, digits);
+               if(safe_tp_points > 0.0)
+                  request.tp = NormalizeDouble(request.price + safe_tp_points * point, digits);
+              }
+            else if(signal == OP_DECISION_SHORT)
+              {
+               if(safe_sl_points > 0.0)
+                  request.sl = NormalizeDouble(request.price + safe_sl_points * point, digits);
+               if(safe_tp_points > 0.0)
+                  request.tp = NormalizeDouble(request.price - safe_tp_points * point, digits);
+              }
+           }
+        }
 
       ResetLastError();
       result.attempted = true;
@@ -297,7 +324,9 @@ public:
                 const bool close_long_overlay = false,
                 const bool close_short_overlay = false,
                 const int overlay_min_hold_bars = 0,
-                const int overlay_max_hold_bars = 0)
+                const int overlay_max_hold_bars = 0,
+                const double open_sl_points = 0.0,
+                const double open_tp_points = 0.0)
      {
       result.attempted = false;
       result.sent = false;
@@ -381,10 +410,10 @@ public:
             result.comment = "max_concurrent_positions_reached";
             result.position_after = PositionStateText();
             return true;
-           }
+         }
 
          result.action = (signal == OP_DECISION_LONG) ? "open_long" : "open_short";
-         const bool opened = SendMarketOrder(signal, m_fixed_lot, 0, result);
+         const bool opened = SendMarketOrder(signal, m_fixed_lot, 0, result, open_sl_points, open_tp_points);
          result.position_after = PositionStateText();
          if(opened)
             m_bars_in_position = 0;
@@ -435,7 +464,7 @@ public:
         }
 
       SOpExecutionResult open_result;
-      const bool opened = SendMarketOrder(signal, m_fixed_lot, 0, open_result);
+      const bool opened = SendMarketOrder(signal, m_fixed_lot, 0, open_result, open_sl_points, open_tp_points);
       result.action = (signal == OP_DECISION_LONG) ? "reverse_open_long" : "reverse_open_short";
       result.attempted = (result.attempted || open_result.attempted);
       result.sent = open_result.sent;

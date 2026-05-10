@@ -1,0 +1,17 @@
+{
+  "adapter_id": "atr01_sl1p0_tp1p5",
+  "decision_time_only": true,
+  "deterministic_mapping": "adapter_id maps to .set InpAtrSltp* parameters",
+  "explicit_trading_behavior": "sets ATR-based SL and TP on new market entries",
+  "failed_reasons": [
+    "validation_net_profit_not_positive",
+    "oos_net_profit_not_positive",
+    "validation_pf_lt_1p10",
+    "oos_pf_lt_1p10",
+    "trade_count_or_concentration_gate_failed",
+    "concentration_gate_failed",
+    "cost_0p5_sensitivity_failed"
+  ],
+  "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+  "status": "failed"
+}
