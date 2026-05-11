@@ -1417,4 +1417,15 @@ Codex 제어면 v2(Control Plane v2, 제어면 v2)는 코덱스 작업 운영 �
 - live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 참조): `none`
 - effect(효과): Stage56(56단계)은 후보를 보존하고 닫지만, 운영 기준선이나 런타임 권위는 만들지 않는다.
 
+## 2026-05-12 Stage56 reopened closeout(56단계 재개 종료)
+
+- active_stage(현재 단계): `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`
+- closeout(종료): `stage56_reopened_closeout_v2`
+- final_judgment(최종 판정): `stronger_baseline_candidate_only(강화 기준선 후보 전용)`
+- candidate(후보): `d390h10` LogReg(로지스틱 회귀) deep repair suite(조밀 보정 묶음)
+- evidence(근거): run50D(실행50D) 18개 variant(변형) actual MT5 closed trades(실제 MT5 청산 거래), stage ledger(단계 장부), project ledger(프로젝트 장부), run registry(실행 등록부), d390h10 market-weather attribution(시장 상태 귀속)
+- selected_research_baseline(선택 연구 기준선): `none`
+- live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 참조): `none`
+- effect(효과): Stage56(56단계)은 d38h10보다 강한 연구 후보를 찾았지만, preferred density(선호 밀도) 5~10 trades/day(거래/일)에 못 미쳐 선택 기준선으로 고정하지 않는다.
+
 
