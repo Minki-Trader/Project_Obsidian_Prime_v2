@@ -47,9 +47,8 @@ private:
       m_input_shape[0] = 1;
       m_input_shape[1] = (ulong)feature_count;
 
-      ArrayResize(m_label_shape, 2);
+      ArrayResize(m_label_shape, 1);
       m_label_shape[0] = 1;
-      m_label_shape[1] = 1;
 
       ArrayResize(m_probability_shape, 2);
       m_probability_shape[0] = 1;

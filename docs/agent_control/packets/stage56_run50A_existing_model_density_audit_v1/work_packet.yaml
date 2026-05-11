@@ -1,0 +1,284 @@
+version: work_packet_schema_v2
+packet_id: stage56_run50A_existing_model_density_audit_v1
+created_at_utc: "2026-05-11T00:00:00Z"
+stage_id: 56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
+run_id: run50A_existing_model_density_audit_v1
+user_request:
+  user_quote: "dㅗ케이 제안서대로 작업진행해볼까?"
+  requested_action: existing_evidence_density_audit
+  requested_count: 1
+  ambiguous_terms: []
+current_truth:
+  active_branch: codex/stage56-dense-base-engine-selection
+  active_stage: 56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
+  current_run_id: run50A_existing_model_density_audit_v1
+  operating_reference: none
+  shadow_challenger: none
+  stage56_selected_research_baseline: none
+preflight:
+  needs_clarification: false
+  selected_option_id: proposal_as_given
+  selected_option_user_quote: "제안서대로 작업진행"
+  blocked_until_answer: false
+work_classification:
+  primary_family: kpi_evidence
+  detected_families:
+    - kpi_evidence
+    - artifact_lineage
+    - experiment_design
+  touched_surfaces:
+    - stage_run_evidence
+    - stage_review
+    - stage_ledger
+    - project_ledger
+    - packet_records
+  mutation_intent: document_edit
+  execution_intent: existing_evidence_screen_only
+risk_vector_scan:
+  risks:
+    density_estimate_uses_screening_day_counts: medium
+    existing_candidate_misread_as_stage56_baseline: high
+    no_new_mt5_dense_run_yet: high
+  hard_stop_risks:
+    - research_baseline_selected_claim
+    - live_readiness_claim
+    - runtime_authority_claim
+    - operating_promotion_claim
+    - operating_reference_claim
+  required_decision_locks:
+    - existing_evidence_audit_only_boundary
+    - no_research_baseline_selected_boundary
+  required_gates:
+    - scope_completion_gate
+    - work_packet_schema_lint
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - kpi_contract_audit
+    - row_grain_audit
+    - source_authority_audit
+    - artifact_lineage_audit
+    - result_judgment_gate
+    - required_gate_coverage_audit
+    - final_claim_guard
+  forbidden_claims:
+    - research_baseline_selected
+    - live_readiness
+    - runtime_authority
+    - operating_promotion
+    - operating_reference
+decision_lock:
+  mode: user_accepted_proposal
+  assumptions:
+    existing_model_density_screen_is_phase1: true
+    no_candidate_meeting_density_target_means_next_run_required: true
+    screening_day_counts_are_not_final_mt5_split_manifests: true
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+    - kpi_evidence
+  target_surfaces:
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50A
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews
+    - docs/registers/run_registry.csv
+    - docs/registers/alpha_run_ledger.csv
+    - docs/registers/artifact_registry.csv
+  scope_units:
+    - run
+    - kpi_row
+    - ledger
+    - artifact
+    - report
+  execution_layers:
+    - document_edit
+    - kpi_recording
+    - ledger_update
+  mutation_policy:
+    allowed: true
+    allowed_surfaces:
+      - run50A_results
+      - stage56_review_docs
+      - project_register_rows
+      - packet_records
+    forbidden_surfaces:
+      - model_training_logic
+      - mt5_runtime_logic
+      - strategy_tester_settings
+  evidence_layers:
+    - reviewed_stage10_stage16_stage18_stage55_artifacts
+    - run50A_density_audit_csv
+    - run50A_review_doc
+    - stage_run_ledger
+  reduction_policy:
+    reduction_allowed: false
+    scope_reduction_requires_user_quote: true
+  claim_boundary:
+    allowed_claims:
+      - existing_evidence_density_audit_reviewed
+      - no_existing_model_meets_stage56_density_target
+      - run50B_required_for_actual_dense_engine_probe
+    forbidden_claims:
+      - research_baseline_selected
+      - live_readiness
+      - runtime_authority
+      - operating_promotion
+      - operating_reference
+  variants_requested:
+    value: 0
+    reason: existing_evidence_screen_only
+  verification_layers:
+    - csv_row_grain_check
+    - work_packet_schema_lint
+    - required_gate_coverage_audit
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+  - id: density_audit_table_materialized
+    text: Existing reviewed candidates are compared on validation and OOS trade-density estimates.
+    expected_artifact: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50A/results/existing_model_density_audit.csv
+    verification_method: scope_completion_gate
+    required: true
+  - id: density_audit_review_materialized
+    text: Human-readable review states that no existing candidate meets the Stage56 density target.
+    expected_artifact: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/existing_model_density_audit.md
+    verification_method: result_judgment_gate
+    required: true
+  - id: ledgers_updated
+    text: Stage and project ledgers include run50A as an existing-evidence audit.
+    expected_artifact: docs/registers/alpha_run_ledger.csv
+    verification_method: ledger_row_review
+    required: true
+work_plan:
+  phases:
+    - id: phase1_existing_evidence_density_screen
+      action: Compare existing reviewed candidates against the Stage56 density target.
+      effect: The next run starts from evidence instead of assuming Stage55 candidates already satisfy the new target.
+    - id: phase2_next_run_handoff
+      action: Mark run50B as the next dense Tier A engine probe.
+      effect: Dense MT5 execution is not deferred into vague future work.
+  expected_outputs:
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50A/results/existing_model_density_audit.csv
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/existing_model_density_audit.md
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv
+  stop_conditions:
+    - any_claim_that_existing_model_is_selected_research_baseline
+    - any_live_readiness_or_runtime_authority_claim
+row_grain:
+  grain_id: existing_model_density_candidate
+  unit: one_existing_model_or_route_view_per_row
+  required_fields:
+    - model_label
+    - source_stage
+    - source_run
+    - route_view
+    - validation_trades_per_day_est
+    - oos_trades_per_day_est
+    - boundary_note
+kpi_contract:
+  kpi_standard_version: docs/policies/kpi_measurement_standard.md
+  normalized_record_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50A/results/existing_model_density_audit.csv
+  source_authority_reference: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/01_inputs/stage56_input_manifest.md
+  n_a_reason_reference: existing_evidence_density_screen_no_new_mt5_run
+artifact_contract:
+  raw_evidence:
+    - reviewed Stage10 artifacts
+    - reviewed Stage16 artifacts
+    - reviewed Stage18 artifacts
+    - reviewed Stage55 artifacts
+  machine_readable:
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50A/results/existing_model_density_audit.csv
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv
+    - docs/registers/run_registry.csv
+    - docs/registers/alpha_run_ledger.csv
+  human_readable:
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/existing_model_density_audit.md
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/review_index.md
+  external_artifacts:
+    - none
+evidence_contract:
+  raw_evidence:
+    - reviewed Stage10 artifacts
+    - reviewed Stage16 artifacts
+    - reviewed Stage18 artifacts
+    - reviewed Stage55 artifacts
+  machine_readable:
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50A/results/existing_model_density_audit.csv
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv
+    - docs/registers/run_registry.csv
+    - docs/registers/alpha_run_ledger.csv
+  human_readable:
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/existing_model_density_audit.md
+    - stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/review_index.md
+skill_routing:
+  primary_family: kpi_evidence
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+    - obsidian-artifact-lineage
+    - obsidian-result-judgment
+    - obsidian-performance-attribution
+  skills_considered:
+    - obsidian-run-evidence-system
+    - obsidian-artifact-lineage
+    - obsidian-result-judgment
+    - obsidian-performance-attribution
+    - obsidian-runtime-parity
+    - obsidian-backtest-forensics
+  skills_selected:
+    - obsidian-run-evidence-system
+    - obsidian-artifact-lineage
+    - obsidian-result-judgment
+    - obsidian-performance-attribution
+  skills_not_used:
+    - skill: obsidian-runtime-parity
+      reason: no_runtime_artifact_created_in_existing_evidence_screen
+    - skill: obsidian-backtest-forensics
+      reason: no_strategy_tester_output_created_in_existing_evidence_screen
+  required_skill_receipts:
+    - obsidian-run-evidence-system
+    - obsidian-artifact-lineage
+    - obsidian-result-judgment
+    - obsidian-performance-attribution
+  required_gates:
+    - scope_completion_gate
+    - work_packet_schema_lint
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - kpi_contract_audit
+    - row_grain_audit
+    - source_authority_audit
+    - artifact_lineage_audit
+    - result_judgment_gate
+    - required_gate_coverage_audit
+    - final_claim_guard
+gates:
+  required:
+    - scope_completion_gate
+    - work_packet_schema_lint
+    - skill_receipt_lint
+    - skill_receipt_schema_lint
+    - kpi_contract_audit
+    - row_grain_audit
+    - source_authority_audit
+    - artifact_lineage_audit
+    - result_judgment_gate
+    - required_gate_coverage_audit
+    - final_claim_guard
+  scope_completion_gate: pending_closeout
+  skill_receipt_lint: pending_closeout
+  skill_receipt_schema_lint: pending_closeout
+  kpi_contract_audit: docs/agent_control/packets/stage56_run50A_existing_model_density_audit_v1/kpi_contract_audit.json
+  artifact_lineage_audit: docs/agent_control/packets/stage56_run50A_existing_model_density_audit_v1/artifact_lineage_audit.json
+  final_claim_guard: pending_closeout
+final_claim_policy:
+  allowed_claims:
+    - existing_evidence_density_audit_reviewed
+    - no_existing_model_meets_stage56_density_target
+    - run50B_required_for_actual_dense_engine_probe
+  forbidden_claims:
+    - research_baseline_selected
+    - live_readiness
+    - runtime_authority
+    - operating_promotion
+    - operating_reference
+  claim_vocabulary_reference: docs/policies/result_judgment_policy.md

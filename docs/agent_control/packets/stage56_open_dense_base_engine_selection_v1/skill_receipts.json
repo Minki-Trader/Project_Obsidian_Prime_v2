@@ -1,0 +1,113 @@
+{
+  "packet_id": "stage56_open_dense_base_engine_selection_v1",
+  "receipts": [
+    {
+      "packet_id": "stage56_open_dense_base_engine_selection_v1",
+      "skill": "obsidian-experiment-design",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_open_dense_base_engine_selection_v1/skill_receipts.json",
+      "hypothesis": "A dense research baseline should be selected from explicit Tier A engine, Tier B fallback, and routed integration lanes.",
+      "baseline": "Stage55 candidates are preserved for review only and are not an operating baseline.",
+      "changed_variables": [
+        "Stage56 target contract",
+        "dense trade-density target",
+        "Tier B fallback-only boundary"
+      ],
+      "invalid_conditions": [
+        "live-readiness claim",
+        "runtime-authority claim",
+        "operating-promotion claim",
+        "production-baseline claim"
+      ],
+      "evidence_plan": [
+        "stage brief",
+        "target contract",
+        "input manifest",
+        "run50A existing evidence density audit"
+      ]
+    },
+    {
+      "packet_id": "stage56_open_dense_base_engine_selection_v1",
+      "skill": "obsidian-data-integrity",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_open_dense_base_engine_selection_v1/skill_receipts.json",
+      "data_sources_checked": [
+        "local user Stage56 design summaries",
+        "docs/workspace/workspace_state.yaml",
+        "Stage55 selected-candidate record"
+      ],
+      "time_axis_boundary": "No new bars were generated in the stage-open packet.",
+      "split_boundary": "Existing validation and OOS evidence is reused only as a screening reference.",
+      "leakage_checks": [
+        "No new model training",
+        "No threshold selection from future bars"
+      ],
+      "missing_data_boundary": "Future dense MT5 runs must restate exact split-day manifests."
+    },
+    {
+      "packet_id": "stage56_open_dense_base_engine_selection_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_open_dense_base_engine_selection_v1/skill_receipts.json",
+      "source_inputs": [
+        "local user design summary",
+        "local user concern summary",
+        "current truth documents",
+        "Stage55 selection status"
+      ],
+      "produced_artifacts": [
+        "docs/decisions/2026-05-11_stage56_dense_base_engine_open.md",
+        "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/00_spec/stage_brief.md",
+        "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/00_spec/stage56_target_contract.md",
+        "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/01_inputs/stage56_input_manifest.md"
+      ],
+      "raw_evidence": [
+        "local user summaries"
+      ],
+      "machine_readable": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/registers/artifact_registry.csv"
+      ],
+      "human_readable": [
+        "stage brief",
+        "target contract",
+        "input manifest",
+        "decision memo"
+      ],
+      "hashes_or_missing_reasons": [
+        "hashes not materialized in this design-only packet"
+      ],
+      "lineage_boundary": "Connected to Stage56 opening artifacts; no external MT5 artifact created."
+    },
+    {
+      "packet_id": "stage56_open_dense_base_engine_selection_v1",
+      "skill": "obsidian-result-judgment",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_open_dense_base_engine_selection_v1/skill_receipts.json",
+      "judgment_boundary": "Stage56 design opened for research baseline selection only.",
+      "allowed_claims": [
+        "stage56_opened",
+        "research_baseline_selection_design_materialized",
+        "existing_evidence_density_audit_prepared"
+      ],
+      "forbidden_claims": [
+        "live_readiness",
+        "runtime_authority",
+        "operating_promotion",
+        "production_baseline",
+        "operating_reference"
+      ],
+      "evidence_used": [
+        "stage brief",
+        "target contract",
+        "selection status"
+      ]
+    }
+  ]
+}

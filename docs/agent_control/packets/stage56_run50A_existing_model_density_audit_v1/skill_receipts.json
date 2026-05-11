@@ -1,0 +1,127 @@
+{
+  "packet_id": "stage56_run50A_existing_model_density_audit_v1",
+  "receipts": [
+    {
+      "packet_id": "stage56_run50A_existing_model_density_audit_v1",
+      "skill": "obsidian-run-evidence-system",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_run50A_existing_model_density_audit_v1/skill_receipts.json",
+      "source_inputs": [
+        "reviewed Stage10 evidence",
+        "reviewed Stage16 evidence",
+        "reviewed Stage18 evidence",
+        "reviewed Stage55 evidence"
+      ],
+      "produced_artifacts": [
+        "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50A/results/existing_model_density_audit.csv",
+        "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/existing_model_density_audit.md",
+        "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv"
+      ],
+      "ledger_rows": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stage56 stage_run_ledger.csv"
+      ],
+      "missing_evidence": [
+        "new dense MT5 runs",
+        "exact future split-day manifests"
+      ],
+      "allowed_claims": [
+        "existing_evidence_density_audit_reviewed",
+        "no_existing_model_meets_stage56_density_target",
+        "run50B_required_for_actual_dense_engine_probe"
+      ],
+      "forbidden_claims": [
+        "research_baseline_selected",
+        "live_readiness",
+        "runtime_authority",
+        "operating_promotion"
+      ]
+    },
+    {
+      "packet_id": "stage56_run50A_existing_model_density_audit_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_run50A_existing_model_density_audit_v1/skill_receipts.json",
+      "source_inputs": [
+        "Stage10 reviewed artifacts",
+        "Stage16 reviewed artifacts",
+        "Stage18 reviewed artifacts",
+        "Stage55 reviewed artifacts"
+      ],
+      "produced_artifacts": [
+        "existing_model_density_audit.csv",
+        "existing_model_density_audit.md",
+        "stage_run_ledger.csv"
+      ],
+      "raw_evidence": [
+        "reviewed repository evidence only"
+      ],
+      "machine_readable": [
+        "existing_model_density_audit.csv",
+        "stage_run_ledger.csv",
+        "project run and alpha ledgers"
+      ],
+      "human_readable": [
+        "existing_model_density_audit.md",
+        "review_index.md"
+      ],
+      "hashes_or_missing_reasons": [
+        "hashes not materialized for existing-evidence screening table"
+      ],
+      "lineage_boundary": "Connected to reviewed evidence references; no new external tester output."
+    },
+    {
+      "packet_id": "stage56_run50A_existing_model_density_audit_v1",
+      "skill": "obsidian-result-judgment",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_run50A_existing_model_density_audit_v1/skill_receipts.json",
+      "judgment_boundary": "Existing evidence density audit only; no Stage56 research baseline selected.",
+      "allowed_claims": [
+        "existing_evidence_density_audit_reviewed",
+        "no_existing_model_meets_stage56_density_target",
+        "run50B_required_for_actual_dense_engine_probe"
+      ],
+      "forbidden_claims": [
+        "research_baseline_selected",
+        "live_readiness",
+        "runtime_authority",
+        "operating_promotion"
+      ],
+      "evidence_used": [
+        "existing_model_density_audit.csv",
+        "existing_model_density_audit.md",
+        "aggregate_summary.json"
+      ]
+    },
+    {
+      "packet_id": "stage56_run50A_existing_model_density_audit_v1",
+      "skill": "obsidian-performance-attribution",
+      "triggered": true,
+      "status": "executed",
+      "receipt_path": "docs/agent_control/packets/stage56_run50A_existing_model_density_audit_v1/skill_receipts.json",
+      "attribution_layers_checked": [
+        "validation trade density",
+        "OOS trade density",
+        "PF versus density contrast",
+        "source-run boundary"
+      ],
+      "missing_layers": [
+        "new dense MT5 trade shape",
+        "future Tier A versus Tier B routed attribution"
+      ],
+      "allowed_claims": [
+        "highest_existing_density_identified",
+        "existing_candidates_below_stage56_density_target"
+      ],
+      "forbidden_claims": [
+        "research_baseline_selected",
+        "operating_reference",
+        "live_readiness"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage56_run50B_tier_a_dense_engine_grid_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "hypothesis": "Lower Stage07 LogReg Tier A thresholds can create a dense MT5 closed-trade engine candidate.",
+      "baseline": "run50A existing-evidence density audit and Stage56 target contract.",
+      "changed_variables": ["short_threshold", "long_threshold", "max_hold_bars"],
+      "invalid_conditions": ["no MT5 closed trades", "missing ledger linkage", "synthetic combined total", "baseline selection without density and quality pass"],
+      "evidence_plan": ["four variant MT5 validation/OOS runs", "stage ledger rows", "project alpha ledger rows", "human-readable run50B report"]
+    },
+    {
+      "packet_id": "stage56_run50B_tier_a_dense_engine_grid_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "exploration_lane": "Stage56 dense Tier A base-engine exploration.",
+      "idea_boundary": "Exploration is open; operating meaning is forbidden until explicit promotion/runtime-authority work.",
+      "negative_memory_effect": "No variant passed both Stage56 density and quality; d34h06 and d40h12 are preserved as frontiers for run50C.",
+      "operating_claim_boundary": "No selected research baseline, live readiness, runtime authority, operating promotion, or operating reference."
+    },
+    {
+      "packet_id": "stage56_run50B_tier_a_dense_engine_grid_v1",
+      "skill": "obsidian-runtime-parity",
+      "status": "executed",
+      "python_artifact": "stage_pipelines/stage56/dense_tier_a_engine_grid.py and run50B ONNX bundles.",
+      "runtime_artifact": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh and MT5 telemetry/report outputs.",
+      "compared_surface": "sklearn ONNX label/probability output shape and MT5 runtime initialization.",
+      "parity_level": "runtime initialization repaired and verified by completed MT5 telemetry after rank-1 label shape patch.",
+      "tester_identity": "FPMarkets US100 M5 Strategy Tester, validation 2025-01-01..2025-10-01 and OOS 2025-10-01..2026-04-14.",
+      "missing_evidence": ["No WFO or trade-list forensics claimed in run50B."],
+      "allowed_claims": ["runtime_probe_completed", "runtime_shape_repair_verified_for_run50B"],
+      "forbidden_claims": ["runtime_authority", "live_readiness", "operating_reference"]
+    },
+    {
+      "packet_id": "stage56_run50B_tier_a_dense_engine_grid_v1",
+      "skill": "obsidian-run-evidence-system",
+      "status": "executed",
+      "source_inputs": ["Stage07 LogReg Tier A model", "Stage10 scout materialization path", "Stage56 target contract"],
+      "produced_artifacts": ["run50B_tier_a_dense_engine_grid_summary.csv", "run50B_tier_a_dense_engine_grid.md", "aggregate_summary.json", "stage_run_ledger.csv", "alpha_run_ledger.csv"],
+      "ledger_rows": "Four variant run IDs with Python tier records and MT5 tier/routed records were upserted.",
+      "missing_evidence": ["No candidate-level WFO robustness pass."],
+      "allowed_claims": ["run50B_runtime_probe_completed"],
+      "forbidden_claims": ["selected_research_baseline", "operating_promotion"]
+    },
+    {
+      "packet_id": "stage56_run50B_tier_a_dense_engine_grid_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "judgment_boundary": "density_or_quality_inconclusive_runtime_probe_only.",
+      "allowed_claims": ["d34h06_density_frontier_preserved", "d40h12_quality_frontier_preserved", "no_selected_research_baseline_yet"],
+      "forbidden_claims": ["selected_research_baseline", "live_readiness", "runtime_authority", "operating_reference"],
+      "evidence_used": ["run50B summary CSV", "aggregate summary JSON", "variant summary.json files", "MT5 KPI records"]
+    }
+  ]
+}

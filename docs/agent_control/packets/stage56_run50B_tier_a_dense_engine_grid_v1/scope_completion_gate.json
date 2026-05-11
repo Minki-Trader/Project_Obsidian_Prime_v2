@@ -1,0 +1,28 @@
+{
+  "audit_name": "scope_completion_gate",
+  "status": "complete",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "four_variant_rows": {
+      "expected": 4,
+      "actual": 4,
+      "evidence_label": "run50B_summary_rows",
+      "required": true,
+      "has_user_scope_reduction_quote": false
+    },
+    "parent_stage_ledger_row": {
+      "expected": 1,
+      "actual": 1,
+      "evidence_label": "parent_run50B_stage_ledger_row",
+      "required": true,
+      "has_user_scope_reduction_quote": false
+    }
+  },
+  "allowed_claims": [
+    "completed",
+    "verified"
+  ],
+  "forbidden_claims": []
+}

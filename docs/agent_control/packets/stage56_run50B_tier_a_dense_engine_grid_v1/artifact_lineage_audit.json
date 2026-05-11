@@ -1,0 +1,16 @@
+{
+  "audit_name": "artifact_lineage_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "source_model": "Stage07 LogReg Tier A model",
+    "stage56_wrapper": "stage_pipelines/stage56/dense_tier_a_engine_grid.py",
+    "runtime_patch": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+    "summary_csv": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50B_tier_a_dense_engine_grid_summary.csv",
+    "aggregate_summary": "docs/agent_control/packets/stage56_run50B_tier_a_dense_engine_grid_v1/aggregate_summary.json"
+  },
+  "allowed_claims": ["artifact_lineage_recorded"],
+  "forbidden_claims": ["unlinked_runtime_result"]
+}
