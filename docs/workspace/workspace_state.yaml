@@ -1,6 +1,6 @@
 ﻿updated_on: '2026-05-11'
 project_mode: clean_stage_restart
-active_branch: codex/stage56-dense-base-engine-selection
+active_branch: main
 active_stage: 56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
 current_run_id: run50B_tier_a_dense_engine_grid_v1
 current_operating_reference: null
@@ -3091,9 +3091,11 @@ overnight_autonomous_adapter_campaign_01_budget_stop:
 stage56_dense_base_engine_selection:
   packet_id: stage56_run50B_tier_a_dense_engine_grid_v1
   stage_id: 56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
-  status: reviewed_runtime_probe_completed
+  stage_status: opened_active
+  current_run_status: reviewed_runtime_probe_completed
   current_run_id: run50B_tier_a_dense_engine_grid_v1
   judgment: reviewed_completed_tier_a_dense_engine_grid_runtime_probe_only
+  stage_closed: false
   decision_path: docs/decisions/2026-05-11_stage56_dense_base_engine_open.md
   stage_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
   target_contract_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/00_spec/stage56_target_contract.md
