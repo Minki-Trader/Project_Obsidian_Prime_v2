@@ -1,0 +1,125 @@
+{
+  "packet_id": "stage56_closeout_v1",
+  "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection",
+  "run_id": "stage56_closeout_v1",
+  "parent_run_id": "run50C_logreg_bracket_micro_grid_v1",
+  "created_at_utc": "2026-05-11T16:27:51Z",
+  "status": "reviewed_closed",
+  "judgment": "baseline_candidate_only",
+  "selected_research_baseline": null,
+  "baseline_candidate_only": "d38h10_logreg_bracket_micro_grid",
+  "candidate": {
+    "variant_id": "d38h10",
+    "run_id": "run50C_d38h10_logreg_dense_v1",
+    "model_family": "sklearn_logistic_regression_multiclass",
+    "threshold_id": "a_stage56_d38h10_s0.38_l0.38_m000__b_stage56_d38h10_s0.38_l0.38_m000__hold10",
+    "max_hold_bars": 10,
+    "tier_a_validation": {
+      "trades": 751,
+      "trades_per_day": 4.103825,
+      "net_profit": 298.21,
+      "profit_factor": 1.11
+    },
+    "tier_a_oos": {
+      "trades": 604,
+      "trades_per_day": 3.097436,
+      "net_profit": 252.87,
+      "profit_factor": 1.11
+    },
+    "tier_b_validation": {
+      "trades": 73,
+      "net_profit": -1.55,
+      "profit_factor": 1.0
+    },
+    "tier_b_oos": {
+      "trades": 80,
+      "net_profit": -397.38,
+      "profit_factor": 0.55
+    },
+    "routed_validation": {
+      "trades": 817,
+      "trades_per_day": 4.464481,
+      "net_profit": 190.38,
+      "profit_factor": 1.07,
+      "tier_b_fallback_bars": 2366
+    },
+    "routed_oos": {
+      "trades": 672,
+      "trades_per_day": 3.446154,
+      "net_profit": 302.1,
+      "profit_factor": 1.13,
+      "tier_b_fallback_bars": 1062,
+      "max_drawdown": 179.28
+    }
+  },
+  "stage56_target_contract": {
+    "preferred_density_trades_per_day": "5_to_10",
+    "minimum_review_trades_per_day": 3,
+    "weak_pass_rule": "validation_and_oos_positive_pf_gte_1_05",
+    "selected_baseline_result": "not_met_due_to_preferred_density_and_tier_b_standalone_weakness"
+  },
+  "artifacts": {
+    "closeout_packet": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_closeout_packet.md",
+    "closeout_packet_sha256": "cddd0808728856c81217d301853d4a34a9ad05804e3377fd81af5d1e3a349dff",
+    "run50c_report": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50C_logreg_bracket_micro_grid.md",
+    "run50c_report_sha256": "d5bb65cf5d892b9e17b14c5a2a6fe3e5aabb10b7a457a0e0ff5d453577be0ef2",
+    "run50c_summary": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50C_logreg_bracket_micro_grid_summary.csv",
+    "run50c_summary_sha256": "1f4f3391a35ca73693dd36bf9887af92635e8eeddca48019ac31eae2ce07bcb5",
+    "market_weather_report": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_market_weather_attribution.md",
+    "market_weather_report_sha256": "67fb82d6e95b6a7818750ef13c49324f0ca9599d58dc99c9550f5cd92ac92940",
+    "market_weather_summary": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_market_weather_attribution_summary.json",
+    "market_weather_summary_sha256": "254f4c2f2d1fd01c135bb4e2e77a075f4df7431af72d04e203ee4876239214b0",
+    "aggregate_summary": "docs/agent_control/packets/stage56_closeout_v1/aggregate_summary.json"
+  },
+  "result_judgment": {
+    "result_subject": "Stage56 research baseline selection",
+    "evidence_available": [
+      "actual_mt5_strategy_tester_reports",
+      "run_manifest",
+      "kpi_records",
+      "stage_run_ledger",
+      "project_alpha_run_ledger",
+      "run_registry",
+      "market_weather_attribution"
+    ],
+    "evidence_missing": [
+      "preferred_density_5_to_10_trades_per_day",
+      "tier_b_fallback_only_oos_positive_quality",
+      "wfo_revalidation"
+    ],
+    "judgment_label": "baseline_candidate_only",
+    "claim_boundary": "research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference",
+    "next_condition": "open_next_stage_for_d38h10_revalidation_or_density_quality_repair"
+  },
+  "external_verification_status": "completed",
+  "forbidden_claims": {
+    "live_readiness": false,
+    "runtime_authority": false,
+    "operating_promotion": false,
+    "operating_reference": false
+  },
+  "boundary": "research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference",
+  "ledger_payload": {
+    "stage_run_ledger": {
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+      "sha256": "5f50d518847630ed1ad8f70b69f52d1e75e0417636bbdae109f54d3ac14bb29e",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 113,
+      "upserted_rows": 1
+    },
+    "project_alpha_run_ledger": {
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "sha256": "1526591d807618afe91132e838a0e346441016df36dec75acc383eaa400b94bc",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 4986,
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "path": "docs/registers/run_registry.csv",
+      "sha256": "b2ebf697420e0226d78759abba0edbe42f828241dccb7131b5673ce104602b86",
+      "hash_policy": "lf_normalized_text_register",
+      "rows": 379,
+      "upserted_rows": 1
+    }
+  }
+}

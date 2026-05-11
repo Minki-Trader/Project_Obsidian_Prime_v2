@@ -1,8 +1,8 @@
-﻿updated_on: '2026-05-11'
+﻿updated_on: '2026-05-12'
 project_mode: clean_stage_restart
 active_branch: main
 active_stage: 56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
-current_run_id: run50B_tier_a_dense_engine_grid_v1
+current_run_id: stage56_closeout_v1
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -17,7 +17,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
-- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50B(실행50B) dense Tier A grid(두꺼운 Tier A 격자)를 MT5 closed trades(닫힌 거래) 기준으로 완료했다; current_run(현재 실행)=`run50B_tier_a_dense_engine_grid_v1`; selected research baseline(선택 연구 기준선), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 참조)는 없다.
+- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50C(실행50C) LogReg(로지스틱 회귀) bracket micro-grid(구간 미세 격자)를 실제 MT5 closed trades(메타트레이더5 청산 거래) 기준으로 완료했고 judgment(판정)=`baseline_candidate_only`; candidate(후보)=`d38h10`; selected research baseline(선택 연구 기준선), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 참조)는 없다.
 - Stage55(53?④퀎) `55_adapter_routing__tier_b_fallback_side_filter_router`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`rfp02_csp03_primary_csp05_fallback`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Stage54(53?④퀎) `54_adapter_signal__cost_aware_side_permission_filter`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`csp03_midlate_longs_strong_shorts`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Repair(수정) `repair_stage53_premature_self_completion_v1`: Stage53(53단계) `spf03_block_early_or_trend_buy`를 `adapter_candidate_observed_user_review_required` 후보 근거로 재분류했고, campaign(캠페인)은 `campaign_in_progress_user_review_required_candidate_observed`로 다시 열었다; Codex self-completion(코덱스 자체 완료)은 금지된다.
@@ -3089,24 +3089,31 @@ overnight_autonomous_adapter_campaign_01_budget_stop:
   - rfp02_csp03_primary_csp05_fallback
   boundary: candidate_discovery_only_until_explicit_user_approval
 stage56_dense_base_engine_selection:
-  packet_id: stage56_run50B_tier_a_dense_engine_grid_v1
+  packet_id: stage56_closeout_v1
   stage_id: 56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
-  stage_status: opened_active
+  stage_status: reviewed_closed
   current_run_status: reviewed_runtime_probe_completed
-  current_run_id: run50B_tier_a_dense_engine_grid_v1
-  judgment: reviewed_completed_tier_a_dense_engine_grid_runtime_probe_only
-  stage_closed: false
+  current_run_id: stage56_closeout_v1
+  judgment: baseline_candidate_only
+  stage_closed: true
   decision_path: docs/decisions/2026-05-11_stage56_dense_base_engine_open.md
   stage_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
   target_contract_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/00_spec/stage56_target_contract.md
   existing_density_audit_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/existing_model_density_audit.md
   dense_grid_report_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50B_tier_a_dense_engine_grid.md
   dense_grid_summary_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50B_tier_a_dense_engine_grid_summary.csv
+  bracket_micro_grid_report_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50C_logreg_bracket_micro_grid.md
+  bracket_micro_grid_summary_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50C_logreg_bracket_micro_grid_summary.csv
+  market_weather_attribution_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_market_weather_attribution.md
+  closeout_packet_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_closeout_packet.md
+  packet_summary_path: docs/agent_control/packets/stage56_closeout_v1/aggregate_summary.json
   selected_research_baseline: none
+  baseline_candidate_only: d38h10_logreg_bracket_micro_grid
+  dense_engine_candidate: d38h10
   selected_shadow_candidate: none
-  preserved_density_frontier: d34h06
-  preserved_quality_frontier: d40h12
+  preserved_density_frontier: d35h07_routed_density_failed_quality
+  preserved_quality_frontier: d38h10_weak_routed_dense_engine_candidate
   current_operating_reference: none
   boundary: research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference
-  next_action: run50C_bracket_micro_grid_v1
+  next_action: open_next_stage_for_d38h10_revalidation_or_density_quality_repair
 
