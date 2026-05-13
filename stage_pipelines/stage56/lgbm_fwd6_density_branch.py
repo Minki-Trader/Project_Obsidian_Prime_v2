@@ -627,10 +627,10 @@ def _row_from_summary(variant: LgbmFwd6Variant, summary_path: Path) -> dict[str,
 def _write_artifact_registry(final_read: Mapping[str, Any]) -> dict[str, Any]:
     rows: list[dict[str, str]] = []
     artifacts = (
-        ("run50AM_aggregate_summary", AGGREGATE_SUMMARY_PATH),
-        ("run50AM_summary_csv", RESULTS_CSV_PATH),
-        ("run50AM_audit_csv", AUDIT_CSV_PATH),
-        ("run50AM_review_packet", REPORT_PATH),
+        (f"{RUN_NUMBER}_aggregate_summary", AGGREGATE_SUMMARY_PATH),
+        (f"{RUN_NUMBER}_summary_csv", RESULTS_CSV_PATH),
+        (f"{RUN_NUMBER}_audit_csv", AUDIT_CSV_PATH),
+        (f"{RUN_NUMBER}_review_packet", REPORT_PATH),
         ("stage56_progress_log", reopen.PROGRESS_LOG_PATH),
     )
     for role, path in artifacts:

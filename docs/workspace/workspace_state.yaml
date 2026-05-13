@@ -1,4 +1,4 @@
-﻿current_run_id: run50AN_stage56_lgbm_fwd6_inverse_signal_probe_v1
+﻿current_run_id: run50AO_stage56_lgbm_fwd6_inverse_side_threshold_repair_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -17,6 +17,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AO(실행50AO) inverse fwd6 LGBM side-threshold repair(반전 6봉 LightGBM 방향별 문턱값 보정) 완료; best_variant(현재 최선 변형)는 `inv6_s050l043_h3_b060`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `318.69` / `179.25`, PF(수익 팩터) `1.14` / `1.1004`, trades/day(일 거래 수) `5.278689` / `3.676923`이다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): side-threshold repair(방향별 문턱값 보정)는 품질을 올렸지만 OOS density/cost/same-move/Tier B(표본외 밀도/비용/동일 이동/Tier B)가 부족해 새 source(원천) 또는 lifecycle(생명주기) 분기가 필요함을 보존한다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AN(실행50AN) LGBM fwd6 inverse signal probe(6봉 LightGBM 반전 신호 탐침) 완료; best_variant(현재 최선 변형)는 `inv6_s045l045_h3_b060`이며 validation/OOS(검증/표본외) routed net(라우팅 순손익) `265.28` / `84.42`, PF(수익 팩터) `1.11` / `1.05`, trades/day(일 거래 수) `5.371585` / `3.625641`이다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): inverse signal(반전 신호)은 raw fwd6 LGBM(원방향 6봉 LightGBM)보다 강하지만 OOS density/PF/cost/same-move(표본외 밀도/수익 팩터/비용/동일 이동)가 부족해 다음 분기는 density-quality tradeoff(밀도-품질 절충)와 same-move survival(동일 이동 생존)을 겨냥한다.
 - >-
