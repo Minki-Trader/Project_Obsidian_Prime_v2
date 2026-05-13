@@ -239,6 +239,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-hold-bars", type=int, default=12)
     parser.add_argument("--reentry-cooldown-bars", type=int, default=0)
     parser.add_argument("--entry-transition-only", action="store_true")
+    parser.add_argument("--entry-transition-rearm-min-confidence-delta", type=float, default=0.0)
     parser.add_argument("--side-filter-id", default=None)
     parser.add_argument("--side-filter-enabled", action="store_true")
     parser.add_argument("--tier-a-side-filter-feature-index", type=int, default=-1)
@@ -324,6 +325,7 @@ def run_stage10_logreg_mt5_scout(
     max_hold_bars: int = 12,
     reentry_cooldown_bars: int = 0,
     entry_transition_only: bool = False,
+    entry_transition_rearm_min_confidence_delta: float = 0.0,
     side_filter_id: str | None = None,
     side_filter_enabled: bool = False,
     tier_a_side_filter_feature_index: int = -1,
@@ -480,6 +482,8 @@ def run_stage10_logreg_mt5_scout(
         else ""
     )
     entry_transition_suffix = "__entry_transition" if entry_transition_only else ""
+    if entry_transition_only and entry_transition_rearm_min_confidence_delta > 0.0:
+        entry_transition_suffix += f"_rearm{int(round(entry_transition_rearm_min_confidence_delta * 1000.0)):03d}"
     threshold_selection = dict(selected)
     threshold_selection.update(
         {
@@ -507,6 +511,7 @@ def run_stage10_logreg_mt5_scout(
             "tier_b_fallback_allowed_subtypes": list(allowed_fallback_subtypes) if allowed_fallback_subtypes else None,
             "side_filter": side_filter_payload,
             "entry_transition_only": bool(entry_transition_only),
+            "entry_transition_rearm_min_confidence_delta": float(entry_transition_rearm_min_confidence_delta),
             "max_hold_bars": int(max_hold_bars),
             "reentry_cooldown_bars": int(reentry_cooldown_bars),
             "short_threshold": tier_a_rule.short_threshold,
@@ -604,6 +609,7 @@ def run_stage10_logreg_mt5_scout(
         max_hold_bars=max_hold_bars,
         reentry_cooldown_bars=reentry_cooldown_bars,
         entry_transition_only=entry_transition_only,
+        entry_transition_rearm_min_confidence_delta=entry_transition_rearm_min_confidence_delta,
         side_filter_enabled=side_filter_enabled,
         tier_a_side_filter_feature_index=tier_a_side_filter_feature_index,
         tier_b_side_filter_feature_index=tier_b_side_filter_feature_index,
@@ -760,6 +766,7 @@ def main() -> int:
         max_hold_bars=args.max_hold_bars,
         reentry_cooldown_bars=args.reentry_cooldown_bars,
         entry_transition_only=args.entry_transition_only,
+        entry_transition_rearm_min_confidence_delta=args.entry_transition_rearm_min_confidence_delta,
         side_filter_id=args.side_filter_id,
         side_filter_enabled=args.side_filter_enabled,
         tier_a_side_filter_feature_index=args.tier_a_side_filter_feature_index,
