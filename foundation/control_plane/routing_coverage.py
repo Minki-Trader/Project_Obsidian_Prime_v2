@@ -9,6 +9,7 @@ from foundation.control_plane.tier_context import normalize_tier_b_fallback_allo
 
 SESSION_SLICE_DEFINITIONS: dict[str, tuple[float, float, str]] = {
     "early": (0.0, 110.0, "cash_session_early_0_110_minutes"),
+    "early_mid": (0.0, 220.0, "cash_session_early_mid_0_220_minutes"),
     "mid": (110.0, 220.0, "cash_session_mid_110_220_minutes"),
     "mid_first": (110.0, 165.0, "cash_session_mid_first_110_165_minutes"),
     "mid_second": (165.0, 220.0, "cash_session_mid_second_165_220_minutes"),

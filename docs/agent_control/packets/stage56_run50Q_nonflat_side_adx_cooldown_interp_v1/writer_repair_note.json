@@ -1,0 +1,24 @@
+{
+  "packet_id": "stage56_run50Q_nonflat_side_adx_cooldown_interp_v1",
+  "run_id": "run50Q_stage56_nonflat_side_adx_cooldown_interp_v1",
+  "failed_command": "python -m stage_pipelines.stage56.nonflat_side_adx_cooldown_interp_batch --attempt-mt5 --force",
+  "failure": {
+    "type": "writer_failure_after_mt5_reports",
+    "error": "FileNotFoundError while writing reports/result_summary.md",
+    "affected_variants": [
+      "nf_h10c1_s410l330_a_sadx",
+      "nf_h10c1_s410l330_b_sadx",
+      "nf_h10c1_s400l300_a_sadx",
+      "nf_h10c1_s400l300_b_sadx",
+      "nf_h10c1_s390l280_a_sadx",
+      "nf_h10c1_s390l280_b_sadx"
+    ],
+    "mt5_reports_present": true
+  },
+  "repair": {
+    "code_change": "foundation/control_plane/packet_writers.py now creates result_summary_path.parent before writing result_summary.md.",
+    "repair_command": "python -m stage_pipelines.stage56.nonflat_side_adx_cooldown_interp_batch",
+    "effect": "Existing summary.json and MT5 tester reports were reused without rerunning MT5, and run50Q CSV/JSON/progress/ledger artifacts were regenerated as completed intermediate evidence."
+  },
+  "boundary": "research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference"
+}

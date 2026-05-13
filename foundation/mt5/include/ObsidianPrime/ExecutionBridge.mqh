@@ -45,6 +45,8 @@ private:
    int    m_max_hold_bars;
    int    m_max_concurrent_positions;
    int    m_bars_in_position;
+   int    m_reentry_cooldown_bars;
+   int    m_reentry_cooldown_remaining;
 
    bool IsRetcodeFilled(const uint retcode)
      {
@@ -234,6 +236,8 @@ public:
       m_max_hold_bars = 12;
       m_max_concurrent_positions = 1;
       m_bars_in_position = 0;
+      m_reentry_cooldown_bars = 0;
+      m_reentry_cooldown_remaining = 0;
      }
 
    void Configure(const string symbol,
@@ -245,7 +249,8 @@ public:
                   const bool reverse_on_opposite,
                   const bool close_only_on_opposite,
                   const int max_hold_bars,
-                  const int max_concurrent_positions)
+                  const int max_concurrent_positions,
+                  const int reentry_cooldown_bars = 0)
      {
       m_symbol = symbol;
       m_magic = magic;
@@ -258,6 +263,8 @@ public:
       m_max_hold_bars = max_hold_bars;
       m_max_concurrent_positions = max_concurrent_positions > 0 ? max_concurrent_positions : 1;
       m_bars_in_position = 0;
+      m_reentry_cooldown_bars = reentry_cooldown_bars > 0 ? reentry_cooldown_bars : 0;
+      m_reentry_cooldown_remaining = 0;
      }
 
    bool Init(string &reason)
@@ -342,7 +349,10 @@ public:
 
       SOpPositionState state = GetPositionState();
       if(state.has_position)
+        {
          m_bars_in_position++;
+         m_reentry_cooldown_remaining = 0;
+        }
       else
          m_bars_in_position = 0;
 
@@ -364,7 +374,10 @@ public:
          const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
          result.position_after = PositionStateText();
          if(closed)
+           {
             m_bars_in_position = 0;
+            m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+           }
          return closed;
         }
 
@@ -380,7 +393,10 @@ public:
          const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
          result.position_after = PositionStateText();
          if(closed)
+           {
             m_bars_in_position = 0;
+            m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+           }
          return closed;
         }
 
@@ -393,17 +409,31 @@ public:
             const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
             result.position_after = PositionStateText();
             if(closed)
+              {
                m_bars_in_position = 0;
+               m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+              }
             return closed;
            }
 
          result.action = state.has_position ? "hold_existing" : "flat_no_position";
+         if(!state.has_position && m_reentry_cooldown_remaining > 0)
+            m_reentry_cooldown_remaining--;
          result.position_after = PositionStateText();
          return true;
         }
 
       if(!state.has_position)
         {
+         if(m_reentry_cooldown_remaining > 0)
+           {
+            result.action = "reentry_cooldown_skip";
+            result.comment = "reentry_cooldown_remaining=" + IntegerToString(m_reentry_cooldown_remaining);
+            m_reentry_cooldown_remaining--;
+            result.position_after = PositionStateText();
+            return true;
+           }
+
          if(ManagedPositionCount() >= m_max_concurrent_positions)
            {
             result.action = "max_concurrent_position_skip";
@@ -416,7 +446,10 @@ public:
          const bool opened = SendMarketOrder(signal, m_fixed_lot, 0, result, open_sl_points, open_tp_points);
          result.position_after = PositionStateText();
          if(opened)
+           {
             m_bars_in_position = 0;
+            m_reentry_cooldown_remaining = 0;
+           }
          return opened;
         }
 
@@ -434,7 +467,10 @@ public:
          const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
          result.position_after = PositionStateText();
          if(closed)
+           {
             m_bars_in_position = 0;
+            m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+           }
          return closed;
         }
 
@@ -476,7 +512,10 @@ public:
       result.comment = open_result.comment;
       result.position_after = PositionStateText();
       if(opened)
+        {
          m_bars_in_position = 0;
+         m_reentry_cooldown_remaining = 0;
+        }
       return opened;
      }
   };

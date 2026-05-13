@@ -1,5 +1,9 @@
 ﻿# Stage56 Closeout Packet(56단계 종료 묶음)
 
+- superseded_status(대체 상태): `non_final_intermediate_evidence_after_stage56_reopen_goal_v1`
+- superseded_reason(대체 이유): Stage56(56단계)의 terminal condition(종료 조건)은 selected_research_baseline(선택 연구 기준선) 발견뿐이다.
+- current_read(현재 판독): this packet(이 묶음)은 prior evidence(이전 근거)를 보존하지만 final closeout(최종 종료)으로 쓰지 않는다.
+- effect(효과): d390h10은 stronger candidate(강화 후보)로 남고, Stage56(56단계)은 active_in_progress(활성 진행 중)로 계속된다.
 - stage_id(단계 ID): `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`
 - closeout_id(종료 ID): `stage56_reopened_closeout_v2`
 - final_judgment(최종 판정): `stronger_baseline_candidate_only(강화 기준선 후보 전용)`
@@ -10,13 +14,13 @@
 
 ## Decision(결정)
 
-Stage56(56단계)은 `stronger_baseline_candidate_only(강화 기준선 후보 전용)`로 닫는다.
+Historical packet text(과거 묶음 문장)는 Stage56(56단계)을 `stronger_baseline_candidate_only(강화 기준선 후보 전용)`로 닫는다고 적었지만, `stage56_reopen_goal_v1` 이후 이 문장은 final terminal decision(최종 종료 결정)이 아니다.
 
 `d390h10`은 실제 MT5(메타트레이더5) strategy tester(전략 테스터) closed trades(청산 거래)에서 validation(검증)과 OOS(표본외) 모두 양수 손익, PF(수익 팩터) 1.10 이상, 최소 검토 밀도 3 trades/day(거래/일) 이상을 충족했다. 또한 prior candidate(이전 후보) `d38h10`보다 total net(총 순손익)과 validation PF(검증 수익 팩터)가 강하다.
 
 하지만 selected_research_baseline(선택 연구 기준선)으로 올리지는 않는다. 이유(reason, 이유)는 A+B actual routed density(A+B 실제 라우팅 밀도)가 preferred target(선호 목표) 5~10 trades/day(거래/일)에 못 미치고, Tier B fallback-only(Tier B 대체 전용) OOS(표본외)는 여전히 음수이기 때문이다.
 
-효과(effect, 효과): Stage56(56단계)은 “이전보다 강한 연구 후보 발견”까지 닫고, 운영 의미(operating meaning, 운영 의미)는 만들지 않는다.
+Superseded effect(대체된 효과): 과거 문장은 Stage56(56단계)을 “이전보다 강한 연구 후보 발견”까지 닫는다고 적었지만, 현재 판독에서는 non-final intermediate evidence(비최종 중간 근거)로만 남긴다.
 
 ## Evidence(근거)
 
@@ -117,4 +121,4 @@ run50D(실행50D)는 18개 variant(변형)를 실행했다. selected_research_ba
 
 ## Closeout Result(종료 결과)
 
-Stage56(56단계)은 `d390h10`을 `stronger_baseline_candidate_only(강화 기준선 후보 전용)`로 보존하고 종료한다. `selected_research_baseline(선택 연구 기준선)`은 없다.
+Superseded read(대체 판독): Stage56(56단계)은 `d390h10`을 stronger candidate intermediate evidence(강화 후보 중간 근거)로 보존하고 계속 진행한다. `selected_research_baseline(선택 연구 기준선)`은 없다.

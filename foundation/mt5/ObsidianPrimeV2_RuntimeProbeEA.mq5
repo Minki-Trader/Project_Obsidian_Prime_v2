@@ -52,6 +52,15 @@ input double          InpFallbackShortThreshold = 0.55;
 input double          InpFallbackLongThreshold = 0.55;
 input double          InpFallbackMinMargin = 0.05;
 input bool            InpFallbackInvertSignal = false;
+input bool            InpSideFilterEnabled = false;
+input int             InpSideFilterFeatureIndex = -1;
+input int             InpFallbackSideFilterFeatureIndex = -1;
+input bool            InpBlockShortFeatureRange = false;
+input double          InpBlockShortFeatureMin = 0.0;
+input double          InpBlockShortFeatureMax = 0.0;
+input bool            InpBlockLongFeatureRange = false;
+input double          InpBlockLongFeatureMin = 0.0;
+input double          InpBlockLongFeatureMax = 0.0;
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -62,6 +71,7 @@ input bool            InpReverseOnOppositeSignal = true;
 input bool            InpCloseOnlyOnOppositeSignal = false;
 input int             InpMaxHoldBars = 12;
 input int             InpMaxConcurrentPositions = 1;
+input int             InpReentryCooldownBars = 0;
 input bool            InpExitRiskOverlayEnabled = false;
 input int             InpExitRiskCloseLongFeatureIndex = -1;
 input int             InpExitRiskCloseShortFeatureIndex = -1;
@@ -116,6 +126,73 @@ int FeatureIntOrDefault(const double &features[], const int feature_index, const
   {
    const double value = FeatureValueOrDefault(features, feature_index, (double)fallback);
    return (int)MathRound(value);
+  }
+
+bool FeatureInInclusiveRange(const double &features[],
+                             const int feature_index,
+                             const double range_min,
+                             const double range_max,
+                             double &value)
+  {
+   if(feature_index < 0 || range_min > range_max)
+      return false;
+   value = FeatureValueOrDefault(features, feature_index, EMPTY_VALUE);
+   if(!MathIsValidNumber(value) || MathAbs(value) >= (EMPTY_VALUE / 2.0))
+      return false;
+   return value >= range_min && value <= range_max;
+  }
+
+void ApplySideFeatureFilter(const double &features[],
+                            const string active_tier,
+                            SOpDecisionResult &decision)
+  {
+   if(!InpSideFilterEnabled || decision.signal == OP_DECISION_FLAT)
+      return;
+
+   const int feature_index = (active_tier == "tier_b_fallback")
+                             ? InpFallbackSideFilterFeatureIndex
+                             : InpSideFilterFeatureIndex;
+   double feature_value = 0.0;
+   if(decision.signal == OP_DECISION_SHORT
+      && InpBlockShortFeatureRange
+      && FeatureInInclusiveRange(features,
+                                 feature_index,
+                                 InpBlockShortFeatureMin,
+                                 InpBlockShortFeatureMax,
+                                 feature_value))
+     {
+      decision.signal = OP_DECISION_FLAT;
+      decision.label = "flat";
+      decision.confidence = 0.0;
+      decision.margin = 0.0;
+      decision.reason = "side_filter_block_short_feature_range:index="
+                        + (string)feature_index
+                        + ",value="
+                        + DoubleToString(feature_value, 6)
+                        + "|"
+                        + decision.reason;
+      return;
+     }
+
+   if(decision.signal == OP_DECISION_LONG
+      && InpBlockLongFeatureRange
+      && FeatureInInclusiveRange(features,
+                                 feature_index,
+                                 InpBlockLongFeatureMin,
+                                 InpBlockLongFeatureMax,
+                                 feature_value))
+     {
+      decision.signal = OP_DECISION_FLAT;
+      decision.label = "flat";
+      decision.confidence = 0.0;
+      decision.margin = 0.0;
+      decision.reason = "side_filter_block_long_feature_range:index="
+                        + (string)feature_index
+                        + ",value="
+                        + DoubleToString(feature_value, 6)
+                        + "|"
+                        + decision.reason;
+     }
   }
 
 double ClampAdapterPoints(const double value, const double min_points, const double max_points)
@@ -446,6 +523,7 @@ void ProcessClosedBar()
       g_fallback_decision_surface.Evaluate(p_short, p_flat, p_long, decision);
    else
       g_decision_surface.Evaluate(p_short, p_flat, p_long, decision);
+   ApplySideFeatureFilter(features, active_tier, decision);
 
    bool overlay_close_long = false;
    bool overlay_close_short = false;
@@ -581,7 +659,8 @@ int OnInit()
                                 InpReverseOnOppositeSignal,
                                 InpCloseOnlyOnOppositeSignal,
                                 InpMaxHoldBars,
-                                InpMaxConcurrentPositions);
+                                InpMaxConcurrentPositions,
+                                InpReentryCooldownBars);
 
    if(!g_execution_bridge.Init(reason))
       return FailInit(reason);

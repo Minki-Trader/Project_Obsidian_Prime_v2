@@ -1,0 +1,14 @@
+{
+  "packet_id": "stage56_run50P_nonflat_side_adx_density_v1",
+  "run_id": "run50P_stage56_nonflat_side_adx_density_v1",
+  "failed_attempt": {
+    "command": "python -m stage_pipelines.stage56.nonflat_side_adx_density_batch --attempt-mt5 --force",
+    "status": "writer_failed_after_mt5_outputs",
+    "failure": "Each variant produced summary.json and MT5 reports, but the variant-local reports/result_summary.md writer raised FileNotFoundError after tester output collection, causing the first parent CSV aggregation to contain empty KPI fields."
+  },
+  "repair": {
+    "command": "python -m stage_pipelines.stage56.nonflat_side_adx_density_batch",
+    "status": "completed",
+    "effect": "Existing run50P summary.json files were reused; MT5 was not rerun during repair, and parent CSV/progress/ledger artifacts were regenerated from preserved tester outputs."
+  }
+}

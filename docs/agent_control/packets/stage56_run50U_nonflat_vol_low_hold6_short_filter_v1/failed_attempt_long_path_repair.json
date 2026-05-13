@@ -1,0 +1,16 @@
+{
+  "packet_id": "stage56_run50U_nonflat_vol_low_hold6_short_filter_v1",
+  "failed_variant_id": "nf_vollow_h06_s390l230_bcoremixed",
+  "failure_type": "windows_long_path",
+  "failed_attempt_error": "[WinError 206] file name or extension too long while creating reports path",
+  "failed_attempt_recorded_in": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50U_summary.csv",
+    "docs/agent_control/packets/stage56_run50U_nonflat_vol_low_hold6_short_filter_v1/aggregate_summary.json",
+    "docs/agent_control/packets/stage56_reopen_goal_v1/progress_log.md"
+  ],
+  "repair_action": "rerun the gated Tier B hypothesis with shortened variant ids",
+  "repair_packet_id": "stage56_run50V_nonflat_vol_low_hold6_tierb_gate_repair_v1",
+  "repair_run_id": "run50V_stage56_nonflat_vol_low_hold6_tierb_gate_repair_v1",
+  "repair_status": "completed_actual_mt5",
+  "boundary": "stage56_intermediate_repair_note_no_selected_research_baseline_no_closeout"
+}

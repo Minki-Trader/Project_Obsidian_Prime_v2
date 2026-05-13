@@ -1,0 +1,1798 @@
+{
+  "packet_id": "stage56_run50H_long_density_short_filter_v1",
+  "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection",
+  "run_id": "run50H_stage56_long_density_short_filter_v1",
+  "created_at_utc": "2026-05-12T15:13:30Z",
+  "status": "completed",
+  "selected_research_baseline": "none",
+  "final_read": {
+    "stage56_judgment": "in_progress_no_selected_research_baseline",
+    "selected_research_baseline": null,
+    "best_variant": {
+      "variant_id": "s410l315h06_b045",
+      "group": "long_density_short_filter_comparison",
+      "run_id": "run50H_s410l315h06_b045_logreg_deep_v1",
+      "external_verification_status": "completed",
+      "threshold_id": "a_stage56_s410l315h06_b045_a_s410_l315_m000__b_stage56_s410l315h06_b045_b_s450_l450_m000__hold6__cool0",
+      "tier_a_short_threshold": 0.41,
+      "tier_a_long_threshold": 0.315,
+      "tier_a_min_margin": 0.0,
+      "tier_b_short_threshold": 0.45,
+      "tier_b_long_threshold": 0.45,
+      "tier_b_min_margin": 0.0,
+      "max_hold_bars": 6,
+      "session_slice_id": "",
+      "tier_b_allowed_subtypes": "",
+      "tier_a_validation_closed_trades": 1005,
+      "tier_a_validation_net_profit": 242.77,
+      "tier_a_validation_profit_factor": 1.08,
+      "tier_a_oos_closed_trades": 794,
+      "tier_a_oos_net_profit": 36.26,
+      "tier_a_oos_profit_factor": 1.01,
+      "tier_b_validation_closed_trades": 18,
+      "tier_b_validation_net_profit": 66.21,
+      "tier_b_validation_profit_factor": 1.56,
+      "tier_b_oos_closed_trades": 33,
+      "tier_b_oos_net_profit": -49.7,
+      "tier_b_oos_profit_factor": 0.8,
+      "routed_validation_closed_trades": 1033,
+      "routed_validation_trades_per_day": "5.644809",
+      "routed_validation_net_profit": 240.62,
+      "routed_validation_profit_factor": 1.08,
+      "routed_validation_drawdown": 259.16,
+      "routed_validation_short_trades": 262,
+      "routed_validation_long_trades": 771,
+      "routed_oos_closed_trades": 834,
+      "routed_oos_trades_per_day": "4.276923",
+      "routed_oos_net_profit": 145.24,
+      "routed_oos_profit_factor": 1.06,
+      "routed_oos_drawdown": 235.07,
+      "routed_oos_short_trades": 207,
+      "routed_oos_long_trades": 627,
+      "routed_validation_b_fallback_bars": null,
+      "routed_oos_b_fallback_bars": null,
+      "route_coverage_by_split": "{}",
+      "error": "",
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/summary.json",
+      "notes": "quality-heavy short filter with stronger long-density pressure plus strict Tier B",
+      "judgment": "weak_dense_engine_candidate_actual_routed_mt5",
+      "base_id": "s410l315h06",
+      "routed_fallback_enabled": "true",
+      "routed_validation_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_b045_logreg_deep_v1_routed_validation_is.htm",
+      "routed_validation_aggregation": "actual_routed_tester_run",
+      "routed_oos_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_b045_logreg_deep_v1_routed_oos.htm",
+      "routed_oos_aggregation": "actual_routed_tester_run",
+      "reentry_cooldown_bars": 0
+    },
+    "reason": "no variant passed every selected_research_baseline gate",
+    "best_variant_failed_checks": [
+      {
+        "check": "oos_density",
+        "passed": false,
+        "reason": "OOS trades/day >= 5.0"
+      },
+      {
+        "check": "validation_pf",
+        "passed": false,
+        "reason": "validation PF >= 1.10"
+      },
+      {
+        "check": "oos_pf",
+        "passed": false,
+        "reason": "OOS PF >= 1.10"
+      },
+      {
+        "check": "cost_stressed_expectancy",
+        "passed": false,
+        "reason": "cost-stressed expectancy positive"
+      },
+      {
+        "check": "same_move_density",
+        "passed": false,
+        "reason": "density survives cooldown and is not mainly same-move re-entry"
+      },
+      {
+        "check": "tier_b_rule",
+        "passed": false,
+        "reason": "Tier B enabled but fallback-only OOS is negative"
+      }
+    ],
+    "gate_checks": [
+      {
+        "variant_id": "s390l320h06_aonly",
+        "passed": false,
+        "failed_checks": [
+          {
+            "check": "oos_density",
+            "passed": false,
+            "reason": "OOS trades/day >= 5.0"
+          },
+          {
+            "check": "validation_pf",
+            "passed": false,
+            "reason": "validation PF >= 1.10"
+          },
+          {
+            "check": "oos_pf",
+            "passed": false,
+            "reason": "OOS PF >= 1.10"
+          },
+          {
+            "check": "cost_stressed_expectancy",
+            "passed": false,
+            "reason": "cost-stressed expectancy positive"
+          },
+          {
+            "check": "same_move_density",
+            "passed": false,
+            "reason": "density survives cooldown and is not mainly same-move re-entry"
+          },
+          {
+            "check": "tier_b_rule",
+            "passed": false,
+            "reason": "Tier B disablement evidence incomplete or A+B still improves enough"
+          }
+        ]
+      },
+      {
+        "variant_id": "s390l320h06_b045",
+        "passed": false,
+        "failed_checks": [
+          {
+            "check": "oos_density",
+            "passed": false,
+            "reason": "OOS trades/day >= 5.0"
+          },
+          {
+            "check": "validation_pf",
+            "passed": false,
+            "reason": "validation PF >= 1.10"
+          },
+          {
+            "check": "oos_pf",
+            "passed": false,
+            "reason": "OOS PF >= 1.10"
+          },
+          {
+            "check": "cost_stressed_expectancy",
+            "passed": false,
+            "reason": "cost-stressed expectancy positive"
+          },
+          {
+            "check": "same_move_density",
+            "passed": false,
+            "reason": "density survives cooldown and is not mainly same-move re-entry"
+          },
+          {
+            "check": "tier_b_rule",
+            "passed": false,
+            "reason": "Tier B enabled but fallback-only OOS is negative"
+          }
+        ]
+      },
+      {
+        "variant_id": "s400l320h06_aonly",
+        "passed": false,
+        "failed_checks": [
+          {
+            "check": "oos_density",
+            "passed": false,
+            "reason": "OOS trades/day >= 5.0"
+          },
+          {
+            "check": "oos_net_positive",
+            "passed": false,
+            "reason": "OOS net > 0"
+          },
+          {
+            "check": "validation_pf",
+            "passed": false,
+            "reason": "validation PF >= 1.10"
+          },
+          {
+            "check": "oos_pf",
+            "passed": false,
+            "reason": "OOS PF >= 1.10"
+          },
+          {
+            "check": "cost_stressed_expectancy",
+            "passed": false,
+            "reason": "cost-stressed expectancy positive"
+          },
+          {
+            "check": "same_move_density",
+            "passed": false,
+            "reason": "density survives cooldown and is not mainly same-move re-entry"
+          },
+          {
+            "check": "tier_b_rule",
+            "passed": false,
+            "reason": "Tier B disablement evidence incomplete or A+B still improves enough"
+          }
+        ]
+      },
+      {
+        "variant_id": "s400l320h06_b045",
+        "passed": false,
+        "failed_checks": [
+          {
+            "check": "oos_density",
+            "passed": false,
+            "reason": "OOS trades/day >= 5.0"
+          },
+          {
+            "check": "validation_pf",
+            "passed": false,
+            "reason": "validation PF >= 1.10"
+          },
+          {
+            "check": "oos_pf",
+            "passed": false,
+            "reason": "OOS PF >= 1.10"
+          },
+          {
+            "check": "cost_stressed_expectancy",
+            "passed": false,
+            "reason": "cost-stressed expectancy positive"
+          },
+          {
+            "check": "same_move_density",
+            "passed": false,
+            "reason": "density survives cooldown and is not mainly same-move re-entry"
+          },
+          {
+            "check": "tier_b_rule",
+            "passed": false,
+            "reason": "Tier B enabled but fallback-only OOS is negative"
+          }
+        ]
+      },
+      {
+        "variant_id": "s410l315h06_aonly",
+        "passed": false,
+        "failed_checks": [
+          {
+            "check": "oos_density",
+            "passed": false,
+            "reason": "OOS trades/day >= 5.0"
+          },
+          {
+            "check": "validation_pf",
+            "passed": false,
+            "reason": "validation PF >= 1.10"
+          },
+          {
+            "check": "oos_pf",
+            "passed": false,
+            "reason": "OOS PF >= 1.10"
+          },
+          {
+            "check": "cost_stressed_expectancy",
+            "passed": false,
+            "reason": "cost-stressed expectancy positive"
+          },
+          {
+            "check": "same_move_density",
+            "passed": false,
+            "reason": "density survives cooldown and is not mainly same-move re-entry"
+          },
+          {
+            "check": "tier_b_rule",
+            "passed": false,
+            "reason": "Tier B disablement evidence incomplete or A+B still improves enough"
+          }
+        ]
+      },
+      {
+        "variant_id": "s410l315h06_b045",
+        "passed": false,
+        "failed_checks": [
+          {
+            "check": "oos_density",
+            "passed": false,
+            "reason": "OOS trades/day >= 5.0"
+          },
+          {
+            "check": "validation_pf",
+            "passed": false,
+            "reason": "validation PF >= 1.10"
+          },
+          {
+            "check": "oos_pf",
+            "passed": false,
+            "reason": "OOS PF >= 1.10"
+          },
+          {
+            "check": "cost_stressed_expectancy",
+            "passed": false,
+            "reason": "cost-stressed expectancy positive"
+          },
+          {
+            "check": "same_move_density",
+            "passed": false,
+            "reason": "density survives cooldown and is not mainly same-move re-entry"
+          },
+          {
+            "check": "tier_b_rule",
+            "passed": false,
+            "reason": "Tier B enabled but fallback-only OOS is negative"
+          }
+        ]
+      }
+    ],
+    "stage56_remains_open": true,
+    "next_hypothesis_branch": "continue_density_repair_without_same_move_splitting_and_tier_b_damage_control"
+  },
+  "variant_rows": [
+    {
+      "variant_id": "s390l320h06_aonly",
+      "group": "long_density_short_filter_disablement",
+      "run_id": "run50H_s390l320h06_aonly_logreg_deep_v1",
+      "external_verification_status": "completed",
+      "threshold_id": "a_stage56_s390l320h06_aonly_a_s390_l320_m000__b_disabled__hold6__cool0",
+      "tier_a_short_threshold": 0.39,
+      "tier_a_long_threshold": 0.32,
+      "tier_a_min_margin": 0.0,
+      "tier_b_short_threshold": 0.45,
+      "tier_b_long_threshold": 0.45,
+      "tier_b_min_margin": 0.0,
+      "max_hold_bars": 6,
+      "session_slice_id": "",
+      "tier_b_allowed_subtypes": "",
+      "tier_a_validation_closed_trades": 1071,
+      "tier_a_validation_net_profit": 287.07,
+      "tier_a_validation_profit_factor": 1.09,
+      "tier_a_oos_closed_trades": 855,
+      "tier_a_oos_net_profit": 58.6,
+      "tier_a_oos_profit_factor": 1.02,
+      "tier_b_validation_closed_trades": 18,
+      "tier_b_validation_net_profit": 66.21,
+      "tier_b_validation_profit_factor": 1.56,
+      "tier_b_oos_closed_trades": 33,
+      "tier_b_oos_net_profit": -49.7,
+      "tier_b_oos_profit_factor": 0.8,
+      "routed_validation_closed_trades": 1071,
+      "routed_validation_trades_per_day": "5.852459",
+      "routed_validation_net_profit": 287.07,
+      "routed_validation_profit_factor": 1.09,
+      "routed_validation_drawdown": 257.48,
+      "routed_validation_short_trades": 309,
+      "routed_validation_long_trades": 762,
+      "routed_oos_closed_trades": 855,
+      "routed_oos_trades_per_day": "4.384615",
+      "routed_oos_net_profit": 58.6,
+      "routed_oos_profit_factor": 1.02,
+      "routed_oos_drawdown": 303.24,
+      "routed_oos_short_trades": 244,
+      "routed_oos_long_trades": 611,
+      "routed_validation_b_fallback_bars": null,
+      "routed_oos_b_fallback_bars": null,
+      "route_coverage_by_split": "{}",
+      "error": "",
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/summary.json",
+      "notes": "d390h10-quality short filter with lower long threshold; A-only matched comparison",
+      "judgment": "quality_or_density_inconclusive_actual_routed_mt5",
+      "base_id": "s390l320h06",
+      "routed_fallback_enabled": "false",
+      "routed_validation_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_aonly_logreg_deep_v1_routed_validation_is.htm",
+      "routed_validation_aggregation": "actual_routed_tester_run",
+      "routed_oos_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_aonly_logreg_deep_v1_routed_oos.htm",
+      "routed_oos_aggregation": "actual_routed_tester_run",
+      "reentry_cooldown_bars": 0
+    },
+    {
+      "variant_id": "s390l320h06_b045",
+      "group": "long_density_short_filter_comparison",
+      "run_id": "run50H_s390l320h06_b045_logreg_deep_v1",
+      "external_verification_status": "completed",
+      "threshold_id": "a_stage56_s390l320h06_b045_a_s390_l320_m000__b_stage56_s390l320h06_b045_b_s450_l450_m000__hold6__cool0",
+      "tier_a_short_threshold": 0.39,
+      "tier_a_long_threshold": 0.32,
+      "tier_a_min_margin": 0.0,
+      "tier_b_short_threshold": 0.45,
+      "tier_b_long_threshold": 0.45,
+      "tier_b_min_margin": 0.0,
+      "max_hold_bars": 6,
+      "session_slice_id": "",
+      "tier_b_allowed_subtypes": "",
+      "tier_a_validation_closed_trades": 1071,
+      "tier_a_validation_net_profit": 287.07,
+      "tier_a_validation_profit_factor": 1.09,
+      "tier_a_oos_closed_trades": 855,
+      "tier_a_oos_net_profit": 58.6,
+      "tier_a_oos_profit_factor": 1.02,
+      "tier_b_validation_closed_trades": 18,
+      "tier_b_validation_net_profit": 66.21,
+      "tier_b_validation_profit_factor": 1.56,
+      "tier_b_oos_closed_trades": 33,
+      "tier_b_oos_net_profit": -49.7,
+      "tier_b_oos_profit_factor": 0.8,
+      "routed_validation_closed_trades": 1099,
+      "routed_validation_trades_per_day": "6.005464",
+      "routed_validation_net_profit": 274.44,
+      "routed_validation_profit_factor": 1.08,
+      "routed_validation_drawdown": 257.48,
+      "routed_validation_short_trades": 313,
+      "routed_validation_long_trades": 786,
+      "routed_oos_closed_trades": 896,
+      "routed_oos_trades_per_day": "4.594872",
+      "routed_oos_net_profit": 109.52,
+      "routed_oos_profit_factor": 1.04,
+      "routed_oos_drawdown": 312.34,
+      "routed_oos_short_trades": 259,
+      "routed_oos_long_trades": 637,
+      "routed_validation_b_fallback_bars": null,
+      "routed_oos_b_fallback_bars": null,
+      "route_coverage_by_split": "{}",
+      "error": "",
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/summary.json",
+      "notes": "d390h10-quality short filter with lower long threshold plus strict Tier B",
+      "judgment": "quality_or_density_inconclusive_actual_routed_mt5",
+      "base_id": "s390l320h06",
+      "routed_fallback_enabled": "true",
+      "routed_validation_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_b045_logreg_deep_v1_routed_validation_is.htm",
+      "routed_validation_aggregation": "actual_routed_tester_run",
+      "routed_oos_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_b045_logreg_deep_v1_routed_oos.htm",
+      "routed_oos_aggregation": "actual_routed_tester_run",
+      "reentry_cooldown_bars": 0
+    },
+    {
+      "variant_id": "s400l320h06_aonly",
+      "group": "long_density_short_filter_disablement",
+      "run_id": "run50H_s400l320h06_aonly_logreg_deep_v1",
+      "external_verification_status": "completed",
+      "threshold_id": "a_stage56_s400l320h06_aonly_a_s400_l320_m000__b_disabled__hold6__cool0",
+      "tier_a_short_threshold": 0.4,
+      "tier_a_long_threshold": 0.32,
+      "tier_a_min_margin": 0.0,
+      "tier_b_short_threshold": 0.45,
+      "tier_b_long_threshold": 0.45,
+      "tier_b_min_margin": 0.0,
+      "max_hold_bars": 6,
+      "session_slice_id": "",
+      "tier_b_allowed_subtypes": "",
+      "tier_a_validation_closed_trades": 1046,
+      "tier_a_validation_net_profit": 297.21,
+      "tier_a_validation_profit_factor": 1.09,
+      "tier_a_oos_closed_trades": 825,
+      "tier_a_oos_net_profit": -0.04,
+      "tier_a_oos_profit_factor": 1.0,
+      "tier_b_validation_closed_trades": 18,
+      "tier_b_validation_net_profit": 66.21,
+      "tier_b_validation_profit_factor": 1.56,
+      "tier_b_oos_closed_trades": 33,
+      "tier_b_oos_net_profit": -49.7,
+      "tier_b_oos_profit_factor": 0.8,
+      "routed_validation_closed_trades": 1046,
+      "routed_validation_trades_per_day": "5.715847",
+      "routed_validation_net_profit": 297.21,
+      "routed_validation_profit_factor": 1.09,
+      "routed_validation_drawdown": 255.3,
+      "routed_validation_short_trades": 289,
+      "routed_validation_long_trades": 757,
+      "routed_oos_closed_trades": 825,
+      "routed_oos_trades_per_day": "4.230769",
+      "routed_oos_net_profit": -0.04,
+      "routed_oos_profit_factor": 1.0,
+      "routed_oos_drawdown": 290.21,
+      "routed_oos_short_trades": 221,
+      "routed_oos_long_trades": 604,
+      "routed_validation_b_fallback_bars": null,
+      "routed_oos_b_fallback_bars": null,
+      "route_coverage_by_split": "{}",
+      "error": "",
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/summary.json",
+      "notes": "stronger short filter with lower long threshold; A-only matched comparison",
+      "judgment": "quality_failed_actual_routed_mt5",
+      "base_id": "s400l320h06",
+      "routed_fallback_enabled": "false",
+      "routed_validation_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_aonly_logreg_deep_v1_routed_validation_is.htm",
+      "routed_validation_aggregation": "actual_routed_tester_run",
+      "routed_oos_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_aonly_logreg_deep_v1_routed_oos.htm",
+      "routed_oos_aggregation": "actual_routed_tester_run",
+      "reentry_cooldown_bars": 0
+    },
+    {
+      "variant_id": "s400l320h06_b045",
+      "group": "long_density_short_filter_comparison",
+      "run_id": "run50H_s400l320h06_b045_logreg_deep_v1",
+      "external_verification_status": "completed",
+      "threshold_id": "a_stage56_s400l320h06_b045_a_s400_l320_m000__b_stage56_s400l320h06_b045_b_s450_l450_m000__hold6__cool0",
+      "tier_a_short_threshold": 0.4,
+      "tier_a_long_threshold": 0.32,
+      "tier_a_min_margin": 0.0,
+      "tier_b_short_threshold": 0.45,
+      "tier_b_long_threshold": 0.45,
+      "tier_b_min_margin": 0.0,
+      "max_hold_bars": 6,
+      "session_slice_id": "",
+      "tier_b_allowed_subtypes": "",
+      "tier_a_validation_closed_trades": 1046,
+      "tier_a_validation_net_profit": 297.21,
+      "tier_a_validation_profit_factor": 1.09,
+      "tier_a_oos_closed_trades": 825,
+      "tier_a_oos_net_profit": -0.04,
+      "tier_a_oos_profit_factor": 1.0,
+      "tier_b_validation_closed_trades": 18,
+      "tier_b_validation_net_profit": 66.21,
+      "tier_b_validation_profit_factor": 1.56,
+      "tier_b_oos_closed_trades": 33,
+      "tier_b_oos_net_profit": -49.7,
+      "tier_b_oos_profit_factor": 0.8,
+      "routed_validation_closed_trades": 1075,
+      "routed_validation_trades_per_day": "5.874317",
+      "routed_validation_net_profit": 292.46,
+      "routed_validation_profit_factor": 1.09,
+      "routed_validation_drawdown": 255.3,
+      "routed_validation_short_trades": 293,
+      "routed_validation_long_trades": 782,
+      "routed_oos_closed_trades": 862,
+      "routed_oos_trades_per_day": "4.420513",
+      "routed_oos_net_profit": 81.62,
+      "routed_oos_profit_factor": 1.03,
+      "routed_oos_drawdown": 280.24,
+      "routed_oos_short_trades": 232,
+      "routed_oos_long_trades": 630,
+      "routed_validation_b_fallback_bars": null,
+      "routed_oos_b_fallback_bars": null,
+      "route_coverage_by_split": "{}",
+      "error": "",
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/summary.json",
+      "notes": "stronger short filter with lower long threshold plus strict Tier B",
+      "judgment": "quality_or_density_inconclusive_actual_routed_mt5",
+      "base_id": "s400l320h06",
+      "routed_fallback_enabled": "true",
+      "routed_validation_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_b045_logreg_deep_v1_routed_validation_is.htm",
+      "routed_validation_aggregation": "actual_routed_tester_run",
+      "routed_oos_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_b045_logreg_deep_v1_routed_oos.htm",
+      "routed_oos_aggregation": "actual_routed_tester_run",
+      "reentry_cooldown_bars": 0
+    },
+    {
+      "variant_id": "s410l315h06_aonly",
+      "group": "long_density_short_filter_disablement",
+      "run_id": "run50H_s410l315h06_aonly_logreg_deep_v1",
+      "external_verification_status": "completed",
+      "threshold_id": "a_stage56_s410l315h06_aonly_a_s410_l315_m000__b_disabled__hold6__cool0",
+      "tier_a_short_threshold": 0.41,
+      "tier_a_long_threshold": 0.315,
+      "tier_a_min_margin": 0.0,
+      "tier_b_short_threshold": 0.45,
+      "tier_b_long_threshold": 0.45,
+      "tier_b_min_margin": 0.0,
+      "max_hold_bars": 6,
+      "session_slice_id": "",
+      "tier_b_allowed_subtypes": "",
+      "tier_a_validation_closed_trades": 1005,
+      "tier_a_validation_net_profit": 242.77,
+      "tier_a_validation_profit_factor": 1.08,
+      "tier_a_oos_closed_trades": 794,
+      "tier_a_oos_net_profit": 36.26,
+      "tier_a_oos_profit_factor": 1.01,
+      "tier_b_validation_closed_trades": 18,
+      "tier_b_validation_net_profit": 66.21,
+      "tier_b_validation_profit_factor": 1.56,
+      "tier_b_oos_closed_trades": 33,
+      "tier_b_oos_net_profit": -49.7,
+      "tier_b_oos_profit_factor": 0.8,
+      "routed_validation_closed_trades": 1005,
+      "routed_validation_trades_per_day": "5.491803",
+      "routed_validation_net_profit": 242.77,
+      "routed_validation_profit_factor": 1.08,
+      "routed_validation_drawdown": 259.16,
+      "routed_validation_short_trades": 259,
+      "routed_validation_long_trades": 746,
+      "routed_oos_closed_trades": 794,
+      "routed_oos_trades_per_day": "4.071795",
+      "routed_oos_net_profit": 36.26,
+      "routed_oos_profit_factor": 1.01,
+      "routed_oos_drawdown": 262.44,
+      "routed_oos_short_trades": 194,
+      "routed_oos_long_trades": 600,
+      "routed_validation_b_fallback_bars": null,
+      "routed_oos_b_fallback_bars": null,
+      "route_coverage_by_split": "{}",
+      "error": "",
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/summary.json",
+      "notes": "quality-heavy short filter with stronger long-density pressure; A-only matched comparison",
+      "judgment": "quality_or_density_inconclusive_actual_routed_mt5",
+      "base_id": "s410l315h06",
+      "routed_fallback_enabled": "false",
+      "routed_validation_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_aonly_logreg_deep_v1_routed_validation_is.htm",
+      "routed_validation_aggregation": "actual_routed_tester_run",
+      "routed_oos_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_aonly_logreg_deep_v1_routed_oos.htm",
+      "routed_oos_aggregation": "actual_routed_tester_run",
+      "reentry_cooldown_bars": 0
+    },
+    {
+      "variant_id": "s410l315h06_b045",
+      "group": "long_density_short_filter_comparison",
+      "run_id": "run50H_s410l315h06_b045_logreg_deep_v1",
+      "external_verification_status": "completed",
+      "threshold_id": "a_stage56_s410l315h06_b045_a_s410_l315_m000__b_stage56_s410l315h06_b045_b_s450_l450_m000__hold6__cool0",
+      "tier_a_short_threshold": 0.41,
+      "tier_a_long_threshold": 0.315,
+      "tier_a_min_margin": 0.0,
+      "tier_b_short_threshold": 0.45,
+      "tier_b_long_threshold": 0.45,
+      "tier_b_min_margin": 0.0,
+      "max_hold_bars": 6,
+      "session_slice_id": "",
+      "tier_b_allowed_subtypes": "",
+      "tier_a_validation_closed_trades": 1005,
+      "tier_a_validation_net_profit": 242.77,
+      "tier_a_validation_profit_factor": 1.08,
+      "tier_a_oos_closed_trades": 794,
+      "tier_a_oos_net_profit": 36.26,
+      "tier_a_oos_profit_factor": 1.01,
+      "tier_b_validation_closed_trades": 18,
+      "tier_b_validation_net_profit": 66.21,
+      "tier_b_validation_profit_factor": 1.56,
+      "tier_b_oos_closed_trades": 33,
+      "tier_b_oos_net_profit": -49.7,
+      "tier_b_oos_profit_factor": 0.8,
+      "routed_validation_closed_trades": 1033,
+      "routed_validation_trades_per_day": "5.644809",
+      "routed_validation_net_profit": 240.62,
+      "routed_validation_profit_factor": 1.08,
+      "routed_validation_drawdown": 259.16,
+      "routed_validation_short_trades": 262,
+      "routed_validation_long_trades": 771,
+      "routed_oos_closed_trades": 834,
+      "routed_oos_trades_per_day": "4.276923",
+      "routed_oos_net_profit": 145.24,
+      "routed_oos_profit_factor": 1.06,
+      "routed_oos_drawdown": 235.07,
+      "routed_oos_short_trades": 207,
+      "routed_oos_long_trades": 627,
+      "routed_validation_b_fallback_bars": null,
+      "routed_oos_b_fallback_bars": null,
+      "route_coverage_by_split": "{}",
+      "error": "",
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/summary.json",
+      "notes": "quality-heavy short filter with stronger long-density pressure plus strict Tier B",
+      "judgment": "weak_dense_engine_candidate_actual_routed_mt5",
+      "base_id": "s410l315h06",
+      "routed_fallback_enabled": "true",
+      "routed_validation_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_b045_logreg_deep_v1_routed_validation_is.htm",
+      "routed_validation_aggregation": "actual_routed_tester_run",
+      "routed_oos_report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_b045_logreg_deep_v1_routed_oos.htm",
+      "routed_oos_aggregation": "actual_routed_tester_run",
+      "reentry_cooldown_bars": 0
+    }
+  ],
+  "audit_rows": [
+    {
+      "variant_id": "d390h10_reference",
+      "run_id": "run50D_d390h10_logreg_deep_v1",
+      "record_view": "mt5_routed_total_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50D/d390h10/mt5/reports/Project_Obsidian_Prime_v2_run50D_d390h10_logreg_deep_v1_routed_validation_is.htm",
+      "trade_count": 748,
+      "trades_per_day": 4.087431693989071,
+      "net_profit": 341.54,
+      "profit_factor_recomputed": 1.129371212121212,
+      "expectancy": 0.4566042780748663,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.04339572192513369,
+      "mfe_capture_ratio": 0.6400747268409855,
+      "mfe_capture_ratio_all_trades": -4.6793342664473165,
+      "reference_mfe_capture_ratio": null,
+      "mfe_capture_delta_vs_d390h10": null,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 380,
+      "winner_truncation_rate": 0.29210526315789476,
+      "loser_count": 368,
+      "loser_escape_rate": 0.3179347826086957,
+      "same_direction_reentry_3_bars": 394,
+      "same_direction_reentry_6_bars": 419,
+      "same_direction_reentry_12_bars": 456,
+      "same_move_reentry_ratio": 0.6096256684491979,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 22.68,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 456,
+      "trade_count_after_cooldown": 292,
+      "trades_per_day_after_cooldown": 1.5956284153005464,
+      "net_after_cooldown": 141.07000000000002,
+      "profit_factor_after_cooldown": 1.1491131640699324,
+      "error": ""
+    },
+    {
+      "variant_id": "d390h10_reference",
+      "run_id": "run50D_d390h10_logreg_deep_v1",
+      "record_view": "mt5_routed_total_oos",
+      "split": "oos",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50D/d390h10/mt5/reports/Project_Obsidian_Prime_v2_run50D_d390h10_logreg_deep_v1_routed_oos.htm",
+      "trade_count": 594,
+      "trades_per_day": 3.046153846153846,
+      "net_profit": 273.2,
+      "profit_factor_recomputed": 1.1212659239202805,
+      "expectancy": 0.4599326599326599,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.040067340067340085,
+      "mfe_capture_ratio": 0.6282646615086092,
+      "mfe_capture_ratio_all_trades": -2.9547866025737006,
+      "reference_mfe_capture_ratio": null,
+      "mfe_capture_delta_vs_d390h10": null,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 308,
+      "winner_truncation_rate": 0.32142857142857145,
+      "loser_count": 286,
+      "loser_escape_rate": 0.26573426573426573,
+      "same_direction_reentry_3_bars": 302,
+      "same_direction_reentry_6_bars": 332,
+      "same_direction_reentry_12_bars": 354,
+      "same_move_reentry_ratio": 0.5959595959595959,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 22.613333333333333,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 354,
+      "trade_count_after_cooldown": 240,
+      "trades_per_day_after_cooldown": 1.2307692307692308,
+      "net_after_cooldown": 373.66,
+      "profit_factor_after_cooldown": 1.462273137781297,
+      "error": ""
+    },
+    {
+      "variant_id": "s390l320h06_aonly",
+      "run_id": "run50H_s390l320h06_aonly_logreg_deep_v1",
+      "record_view": "mt5_routed_total_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_aonly_logreg_deep_v1_routed_validation_is.htm",
+      "trade_count": 1071,
+      "trades_per_day": 5.852459016393443,
+      "net_profit": 287.07,
+      "profit_factor_recomputed": 1.0892961014803364,
+      "expectancy": 0.2680392156862745,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.23196078431372552,
+      "mfe_capture_ratio": 0.6276042546569526,
+      "mfe_capture_ratio_all_trades": -7.459581536393931,
+      "reference_mfe_capture_ratio": 0.6400747268409855,
+      "mfe_capture_delta_vs_d390h10": -0.012470472184032966,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 549,
+      "winner_truncation_rate": 0.30601092896174864,
+      "loser_count": 522,
+      "loser_escape_rate": 0.31992337164750956,
+      "same_direction_reentry_3_bars": 681,
+      "same_direction_reentry_6_bars": 721,
+      "same_direction_reentry_12_bars": 767,
+      "same_move_reentry_ratio": 0.7161531279178338,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 14.84,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 767,
+      "trade_count_after_cooldown": 304,
+      "trades_per_day_after_cooldown": 1.6612021857923498,
+      "net_after_cooldown": 84.64999999999999,
+      "profit_factor_after_cooldown": 1.0998466619485727,
+      "error": ""
+    },
+    {
+      "variant_id": "s390l320h06_aonly",
+      "run_id": "run50H_s390l320h06_aonly_logreg_deep_v1",
+      "record_view": "mt5_routed_total_oos",
+      "split": "oos",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_aonly_logreg_deep_v1_routed_oos.htm",
+      "trade_count": 855,
+      "trades_per_day": 4.384615384615385,
+      "net_profit": 58.599999999999994,
+      "profit_factor_recomputed": 1.0213322849206958,
+      "expectancy": 0.06853801169590643,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.43146198830409355,
+      "mfe_capture_ratio": 0.6217790854288705,
+      "mfe_capture_ratio_all_trades": -6.209428704468469,
+      "reference_mfe_capture_ratio": 0.6282646615086092,
+      "mfe_capture_delta_vs_d390h10": -0.006485576079738653,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 421,
+      "winner_truncation_rate": 0.32304038004750596,
+      "loser_count": 434,
+      "loser_escape_rate": 0.31336405529953915,
+      "same_direction_reentry_3_bars": 556,
+      "same_direction_reentry_6_bars": 586,
+      "same_direction_reentry_12_bars": 630,
+      "same_move_reentry_ratio": 0.7368421052631579,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 17.34,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 630,
+      "trade_count_after_cooldown": 225,
+      "trades_per_day_after_cooldown": 1.1538461538461537,
+      "net_after_cooldown": 74.36999999999999,
+      "profit_factor_after_cooldown": 1.1007901120793635,
+      "error": ""
+    },
+    {
+      "variant_id": "s390l320h06_b045",
+      "run_id": "run50H_s390l320h06_b045_logreg_deep_v1",
+      "record_view": "mt5_routed_total_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_b045_logreg_deep_v1_routed_validation_is.htm",
+      "trade_count": 1099,
+      "trades_per_day": 6.005464480874317,
+      "net_profit": 274.44,
+      "profit_factor_recomputed": 1.0847832534229647,
+      "expectancy": 0.2497179253867152,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.2502820746132848,
+      "mfe_capture_ratio": 0.6328785541388604,
+      "mfe_capture_ratio_all_trades": -8.23929446798684,
+      "reference_mfe_capture_ratio": 0.6400747268409855,
+      "mfe_capture_delta_vs_d390h10": -0.0071961727021251365,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 564,
+      "winner_truncation_rate": 0.299645390070922,
+      "loser_count": 535,
+      "loser_escape_rate": 0.33271028037383177,
+      "same_direction_reentry_3_bars": 698,
+      "same_direction_reentry_6_bars": 737,
+      "same_direction_reentry_12_bars": 790,
+      "same_move_reentry_ratio": 0.718835304822566,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 14.690000000000001,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 790,
+      "trade_count_after_cooldown": 309,
+      "trades_per_day_after_cooldown": 1.6885245901639345,
+      "net_after_cooldown": 90.07999999999998,
+      "profit_factor_after_cooldown": 1.1073761502884663,
+      "error": ""
+    },
+    {
+      "variant_id": "s390l320h06_b045",
+      "run_id": "run50H_s390l320h06_b045_logreg_deep_v1",
+      "record_view": "mt5_routed_total_oos",
+      "split": "oos",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s390l320h06_b045_logreg_deep_v1_routed_oos.htm",
+      "trade_count": 896,
+      "trades_per_day": 4.5948717948717945,
+      "net_profit": 109.52,
+      "profit_factor_recomputed": 1.0394233365130217,
+      "expectancy": 0.12223214285714286,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.37776785714285716,
+      "mfe_capture_ratio": 0.6210777161785532,
+      "mfe_capture_ratio_all_trades": -7.456592111458068,
+      "reference_mfe_capture_ratio": 0.6282646615086092,
+      "mfe_capture_delta_vs_d390h10": -0.007186945330055927,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 455,
+      "winner_truncation_rate": 0.3362637362637363,
+      "loser_count": 441,
+      "loser_escape_rate": 0.29931972789115646,
+      "same_direction_reentry_3_bars": 582,
+      "same_direction_reentry_6_bars": 617,
+      "same_direction_reentry_12_bars": 665,
+      "same_move_reentry_ratio": 0.7421875,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 15.59,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 665,
+      "trade_count_after_cooldown": 231,
+      "trades_per_day_after_cooldown": 1.1846153846153846,
+      "net_after_cooldown": 122.27,
+      "profit_factor_after_cooldown": 1.1680872123395014,
+      "error": ""
+    },
+    {
+      "variant_id": "s400l320h06_aonly",
+      "run_id": "run50H_s400l320h06_aonly_logreg_deep_v1",
+      "record_view": "mt5_routed_total_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_aonly_logreg_deep_v1_routed_validation_is.htm",
+      "trade_count": 1046,
+      "trades_per_day": 5.715846994535519,
+      "net_profit": 297.21,
+      "profit_factor_recomputed": 1.0937260528846913,
+      "expectancy": 0.28413957934990436,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.21586042065009564,
+      "mfe_capture_ratio": 0.6346746722830782,
+      "mfe_capture_ratio_all_trades": -7.609975649928084,
+      "reference_mfe_capture_ratio": 0.6400747268409855,
+      "mfe_capture_delta_vs_d390h10": -0.005400054557907374,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 534,
+      "winner_truncation_rate": 0.299625468164794,
+      "loser_count": 512,
+      "loser_escape_rate": 0.3125,
+      "same_direction_reentry_3_bars": 667,
+      "same_direction_reentry_6_bars": 703,
+      "same_direction_reentry_12_bars": 748,
+      "same_move_reentry_ratio": 0.7151051625239006,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 14.276666666666667,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 748,
+      "trade_count_after_cooldown": 298,
+      "trades_per_day_after_cooldown": 1.6284153005464481,
+      "net_after_cooldown": 86.67999999999998,
+      "profit_factor_after_cooldown": 1.1015333075634584,
+      "error": ""
+    },
+    {
+      "variant_id": "s400l320h06_aonly",
+      "run_id": "run50H_s400l320h06_aonly_logreg_deep_v1",
+      "record_view": "mt5_routed_total_oos",
+      "split": "oos",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_aonly_logreg_deep_v1_routed_oos.htm",
+      "trade_count": 825,
+      "trades_per_day": 4.230769230769231,
+      "net_profit": -0.04000000000000027,
+      "profit_factor_recomputed": 0.9999853305754816,
+      "expectancy": -4.848484848484881e-05,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.5000484848484849,
+      "mfe_capture_ratio": 0.6254766102752501,
+      "mfe_capture_ratio_all_trades": -6.721583892311513,
+      "reference_mfe_capture_ratio": 0.6282646615086092,
+      "mfe_capture_delta_vs_d390h10": -0.0027880512333590124,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 408,
+      "winner_truncation_rate": 0.3088235294117647,
+      "loser_count": 417,
+      "loser_escape_rate": 0.3069544364508393,
+      "same_direction_reentry_3_bars": 533,
+      "same_direction_reentry_6_bars": 562,
+      "same_direction_reentry_12_bars": 607,
+      "same_move_reentry_ratio": 0.7357575757575757,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 17.563333333333333,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 607,
+      "trade_count_after_cooldown": 218,
+      "trades_per_day_after_cooldown": 1.117948717948718,
+      "net_after_cooldown": 126.67,
+      "profit_factor_after_cooldown": 1.1834839793730807,
+      "error": ""
+    },
+    {
+      "variant_id": "s400l320h06_b045",
+      "run_id": "run50H_s400l320h06_b045_logreg_deep_v1",
+      "record_view": "mt5_routed_total_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_b045_logreg_deep_v1_routed_validation_is.htm",
+      "trade_count": 1075,
+      "trades_per_day": 5.8743169398907105,
+      "net_profit": 292.46,
+      "profit_factor_recomputed": 1.091434038123048,
+      "expectancy": 0.2720558139534884,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.22794418604651162,
+      "mfe_capture_ratio": 0.6425156689559177,
+      "mfe_capture_ratio_all_trades": -8.501082493135987,
+      "reference_mfe_capture_ratio": 0.6400747268409855,
+      "mfe_capture_delta_vs_d390h10": 0.0024409421149321764,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 549,
+      "winner_truncation_rate": 0.2877959927140255,
+      "loser_count": 526,
+      "loser_escape_rate": 0.3231939163498099,
+      "same_direction_reentry_3_bars": 686,
+      "same_direction_reentry_6_bars": 721,
+      "same_direction_reentry_12_bars": 774,
+      "same_move_reentry_ratio": 0.72,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 14.143333333333334,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 774,
+      "trade_count_after_cooldown": 301,
+      "trades_per_day_after_cooldown": 1.644808743169399,
+      "net_after_cooldown": 111.32,
+      "profit_factor_after_cooldown": 1.1344720534409238,
+      "error": ""
+    },
+    {
+      "variant_id": "s400l320h06_b045",
+      "run_id": "run50H_s400l320h06_b045_logreg_deep_v1",
+      "record_view": "mt5_routed_total_oos",
+      "split": "oos",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s400l320h06_b045_logreg_deep_v1_routed_oos.htm",
+      "trade_count": 862,
+      "trades_per_day": 4.420512820512821,
+      "net_profit": 81.62,
+      "profit_factor_recomputed": 1.0301179700443912,
+      "expectancy": 0.09468677494199536,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.40531322505800466,
+      "mfe_capture_ratio": 0.6224255128966627,
+      "mfe_capture_ratio_all_trades": -5.588138540847228,
+      "reference_mfe_capture_ratio": 0.6282646615086092,
+      "mfe_capture_delta_vs_d390h10": -0.005839148611946454,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 445,
+      "winner_truncation_rate": 0.3258426966292135,
+      "loser_count": 417,
+      "loser_escape_rate": 0.3069544364508393,
+      "same_direction_reentry_3_bars": 557,
+      "same_direction_reentry_6_bars": 588,
+      "same_direction_reentry_12_bars": 637,
+      "same_move_reentry_ratio": 0.7389791183294664,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 15.906666666666666,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 637,
+      "trade_count_after_cooldown": 225,
+      "trades_per_day_after_cooldown": 1.1538461538461537,
+      "net_after_cooldown": 191.88,
+      "profit_factor_after_cooldown": 1.2824381412190706,
+      "error": ""
+    },
+    {
+      "variant_id": "s410l315h06_aonly",
+      "run_id": "run50H_s410l315h06_aonly_logreg_deep_v1",
+      "record_view": "mt5_routed_total_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_aonly_logreg_deep_v1_routed_validation_is.htm",
+      "trade_count": 1005,
+      "trades_per_day": 5.491803278688525,
+      "net_profit": 242.76999999999998,
+      "profit_factor_recomputed": 1.0781508033337304,
+      "expectancy": 0.24156218905472635,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.2584378109452736,
+      "mfe_capture_ratio": 0.6352473301376469,
+      "mfe_capture_ratio_all_trades": -6.8253677779795145,
+      "reference_mfe_capture_ratio": 0.6400747268409855,
+      "mfe_capture_delta_vs_d390h10": -0.004827396703338649,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 520,
+      "winner_truncation_rate": 0.3038461538461538,
+      "loser_count": 485,
+      "loser_escape_rate": 0.3134020618556701,
+      "same_direction_reentry_3_bars": 643,
+      "same_direction_reentry_6_bars": 674,
+      "same_direction_reentry_12_bars": 719,
+      "same_move_reentry_ratio": 0.7154228855721393,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 14.566666666666666,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 719,
+      "trade_count_after_cooldown": 286,
+      "trades_per_day_after_cooldown": 1.5628415300546448,
+      "net_after_cooldown": 136.98,
+      "profit_factor_after_cooldown": 1.169257382923514,
+      "error": ""
+    },
+    {
+      "variant_id": "s410l315h06_aonly",
+      "run_id": "run50H_s410l315h06_aonly_logreg_deep_v1",
+      "record_view": "mt5_routed_total_oos",
+      "split": "oos",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_aonly_logreg_deep_v1_routed_oos.htm",
+      "trade_count": 794,
+      "trades_per_day": 4.0717948717948715,
+      "net_profit": 36.25999999999999,
+      "profit_factor_recomputed": 1.0137975121860265,
+      "expectancy": 0.04566750629722921,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.4543324937027708,
+      "mfe_capture_ratio": 0.6363772979514988,
+      "mfe_capture_ratio_all_trades": -6.649784436271533,
+      "reference_mfe_capture_ratio": 0.6282646615086092,
+      "mfe_capture_delta_vs_d390h10": 0.00811263644288962,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 394,
+      "winner_truncation_rate": 0.2969543147208122,
+      "loser_count": 400,
+      "loser_escape_rate": 0.315,
+      "same_direction_reentry_3_bars": 517,
+      "same_direction_reentry_6_bars": 544,
+      "same_direction_reentry_12_bars": 587,
+      "same_move_reentry_ratio": 0.739294710327456,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 17.303333333333335,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 587,
+      "trade_count_after_cooldown": 207,
+      "trades_per_day_after_cooldown": 1.0615384615384615,
+      "net_after_cooldown": 33.7,
+      "profit_factor_after_cooldown": 1.0449201567540187,
+      "error": ""
+    },
+    {
+      "variant_id": "s410l315h06_b045",
+      "run_id": "run50H_s410l315h06_b045_logreg_deep_v1",
+      "record_view": "mt5_routed_total_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_b045_logreg_deep_v1_routed_validation_is.htm",
+      "trade_count": 1033,
+      "trades_per_day": 5.644808743169399,
+      "net_profit": 240.62,
+      "profit_factor_recomputed": 1.0769304550221244,
+      "expectancy": 0.23293320425943853,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.26706679574056147,
+      "mfe_capture_ratio": 0.6422248058184755,
+      "mfe_capture_ratio_all_trades": -7.655211588417687,
+      "reference_mfe_capture_ratio": 0.6400747268409855,
+      "mfe_capture_delta_vs_d390h10": 0.0021500789774899776,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 535,
+      "winner_truncation_rate": 0.29345794392523367,
+      "loser_count": 498,
+      "loser_escape_rate": 0.3253012048192771,
+      "same_direction_reentry_3_bars": 661,
+      "same_direction_reentry_6_bars": 691,
+      "same_direction_reentry_12_bars": 743,
+      "same_move_reentry_ratio": 0.7192642787996127,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 14.426666666666668,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 743,
+      "trade_count_after_cooldown": 290,
+      "trades_per_day_after_cooldown": 1.5846994535519126,
+      "net_after_cooldown": 166.60999999999999,
+      "profit_factor_after_cooldown": 1.2131871225304536,
+      "error": ""
+    },
+    {
+      "variant_id": "s410l315h06_b045",
+      "run_id": "run50H_s410l315h06_b045_logreg_deep_v1",
+      "record_view": "mt5_routed_total_oos",
+      "split": "oos",
+      "status": "completed",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/mt5/reports/Project_Obsidian_Prime_v2_run50H_s410l315h06_b045_logreg_deep_v1_routed_oos.htm",
+      "trade_count": 834,
+      "trades_per_day": 4.276923076923077,
+      "net_profit": 145.24,
+      "profit_factor_recomputed": 1.0560668293134863,
+      "expectancy": 0.17414868105515588,
+      "cost_stress_per_trade": 0.5,
+      "cost_stressed_expectancy": -0.3258513189448441,
+      "mfe_capture_ratio": 0.628699760417852,
+      "mfe_capture_ratio_all_trades": -5.645436087084391,
+      "reference_mfe_capture_ratio": 0.6282646615086092,
+      "mfe_capture_delta_vs_d390h10": 0.0004350989092428703,
+      "mfe_capture_materially_worse_than_d390h10": false,
+      "winner_count": 433,
+      "winner_truncation_rate": 0.3163972286374134,
+      "loser_count": 401,
+      "loser_escape_rate": 0.3192019950124688,
+      "same_direction_reentry_3_bars": 540,
+      "same_direction_reentry_6_bars": 569,
+      "same_direction_reentry_12_bars": 616,
+      "same_move_reentry_ratio": 0.7386091127098321,
+      "density_gain_survives_12bar_cooldown": false,
+      "mt5_average_position_holding_bars": 15.303333333333333,
+      "cooldown_window_bars": 12,
+      "cooldown_removed_trades": 616,
+      "trade_count_after_cooldown": 218,
+      "trades_per_day_after_cooldown": 1.117948717948718,
+      "net_after_cooldown": 111.86,
+      "profit_factor_after_cooldown": 1.1511744195475306,
+      "error": ""
+    }
+  ],
+  "variant_payloads": [
+    {
+      "status": "ok",
+      "run_id": "run50H_s390l320h06_aonly_logreg_deep_v1",
+      "run_output_root": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly",
+      "threshold_id": "a_stage56_s390l320h06_aonly_a_s390_l320_m000__b_disabled__hold6__cool0",
+      "onnx_parity": {
+        "passed": true,
+        "tier_a": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4221721929552622e-06,
+          "mean_abs_diff": 7.576877351991139e-07,
+          "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        },
+        "tier_b": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 8.729441310917352e-07,
+          "mean_abs_diff": 4.386177208016955e-07,
+          "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        }
+      },
+      "external_verification_status": "completed",
+      "mt5_attempted": true,
+      "payload_paths": {
+        "run_manifest": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/run_manifest.json",
+          "sha256": "87487320991085ae7a9dcde2e84bf4c681d7adb70e9787f3cd9b3a57df1a0843"
+        },
+        "kpi_record": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/kpi_record.json",
+          "sha256": "945fd5652362e421429bad5ec39912ab961662bf736b2864fd9ed98a0318b0ed"
+        }
+      },
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/summary.json",
+      "result_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_aonly/reports/result_summary.md",
+      "ledger_payload": {
+        "stage_run_ledger": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+          "sha256": "aaa50d2eb23da53b1fb6bdf9f3b8a6d98371a10d3774c46e8d4ffba27de7f97d",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 615,
+          "upserted_rows": 11
+        },
+        "project_alpha_run_ledger": {
+          "path": "docs/registers/alpha_run_ledger.csv",
+          "sha256": "27ca9274581bed53740bcac54f91727da05b5a60b9679e0c4b3d46b93e79a741",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 5488,
+          "upserted_rows": 11
+        }
+      },
+      "run_registry_payload": {
+        "path": "docs/registers/run_registry.csv",
+        "sha256": "4f1f97a63c66d1a75c8b6b859de93c038f3a8785f3d932164cda6e97bb49f297",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 423,
+        "upserted_rows": 1
+      },
+      "variant_id": "s390l320h06_aonly",
+      "variant_spec": {
+        "group": "long_density_short_filter_disablement",
+        "base_id": "s390l320h06",
+        "routed_fallback_enabled": false,
+        "reentry_cooldown_bars": 0,
+        "tier_a_short_threshold": 0.39,
+        "tier_a_long_threshold": 0.32,
+        "tier_a_min_margin": 0.0,
+        "tier_b_short_threshold": 0.45,
+        "tier_b_long_threshold": 0.45,
+        "tier_b_min_margin": 0.0,
+        "max_hold_bars": 6
+      }
+    },
+    {
+      "status": "ok",
+      "run_id": "run50H_s390l320h06_b045_logreg_deep_v1",
+      "run_output_root": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045",
+      "threshold_id": "a_stage56_s390l320h06_b045_a_s390_l320_m000__b_stage56_s390l320h06_b045_b_s450_l450_m000__hold6__cool0",
+      "onnx_parity": {
+        "passed": true,
+        "tier_a": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4221721929552622e-06,
+          "mean_abs_diff": 7.576877351991139e-07,
+          "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        },
+        "tier_b": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 8.729441310917352e-07,
+          "mean_abs_diff": 4.386177208016955e-07,
+          "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        }
+      },
+      "external_verification_status": "completed",
+      "mt5_attempted": true,
+      "payload_paths": {
+        "run_manifest": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/run_manifest.json",
+          "sha256": "601d64684ab60a02f8873001e2fe51b746f1df17ac401cb3a38730a932043749"
+        },
+        "kpi_record": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/kpi_record.json",
+          "sha256": "9cff56ebc81b6c0f0147134a80661f4e0fbf5d0bbdc5dc5ad243376d10831781"
+        }
+      },
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/summary.json",
+      "result_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s390l320h06_b045/reports/result_summary.md",
+      "ledger_payload": {
+        "stage_run_ledger": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+          "sha256": "fbf9b15caf9658fa6f02dea770513c520fb07d48f1ac469ee6db4c9d88b31ea6",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 628,
+          "upserted_rows": 13
+        },
+        "project_alpha_run_ledger": {
+          "path": "docs/registers/alpha_run_ledger.csv",
+          "sha256": "eff25d473eb6755c9357803f944bd360950350f4a8a703907471fb0a19e60cf6",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 5501,
+          "upserted_rows": 13
+        }
+      },
+      "run_registry_payload": {
+        "path": "docs/registers/run_registry.csv",
+        "sha256": "4cd19879abe371d30e1faa6e95bfb9b0991d24167abdcd4c029b84b15675b885",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 424,
+        "upserted_rows": 1
+      },
+      "variant_id": "s390l320h06_b045",
+      "variant_spec": {
+        "group": "long_density_short_filter_comparison",
+        "base_id": "s390l320h06",
+        "routed_fallback_enabled": true,
+        "reentry_cooldown_bars": 0,
+        "tier_a_short_threshold": 0.39,
+        "tier_a_long_threshold": 0.32,
+        "tier_a_min_margin": 0.0,
+        "tier_b_short_threshold": 0.45,
+        "tier_b_long_threshold": 0.45,
+        "tier_b_min_margin": 0.0,
+        "max_hold_bars": 6
+      }
+    },
+    {
+      "status": "ok",
+      "run_id": "run50H_s400l320h06_aonly_logreg_deep_v1",
+      "run_output_root": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly",
+      "threshold_id": "a_stage56_s400l320h06_aonly_a_s400_l320_m000__b_disabled__hold6__cool0",
+      "onnx_parity": {
+        "passed": true,
+        "tier_a": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4221721929552622e-06,
+          "mean_abs_diff": 7.576877351991139e-07,
+          "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        },
+        "tier_b": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 8.729441310917352e-07,
+          "mean_abs_diff": 4.386177208016955e-07,
+          "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        }
+      },
+      "external_verification_status": "completed",
+      "mt5_attempted": true,
+      "payload_paths": {
+        "run_manifest": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/run_manifest.json",
+          "sha256": "cdc250de6cea4fb915a08a5c4348b34e1c8510ff4962df1414a648d258314d01"
+        },
+        "kpi_record": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/kpi_record.json",
+          "sha256": "7b4212861219de1a9876b2caaf079cd0bb5b2b1c6ac8e232a00cfead0d20272c"
+        }
+      },
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/summary.json",
+      "result_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_aonly/reports/result_summary.md",
+      "ledger_payload": {
+        "stage_run_ledger": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+          "sha256": "8e7f0882b8b1869f2e12da13fc9eadb4a90eeccce580f800b6a0af3b48df7ef0",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 639,
+          "upserted_rows": 11
+        },
+        "project_alpha_run_ledger": {
+          "path": "docs/registers/alpha_run_ledger.csv",
+          "sha256": "8484aab6cd80cefda2047e3f96a2552acdae3a2869e6a628079a965d6d989e24",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 5512,
+          "upserted_rows": 11
+        }
+      },
+      "run_registry_payload": {
+        "path": "docs/registers/run_registry.csv",
+        "sha256": "f1f502dabc758f89d59940da9a94e3eeb15fdfc69cc8eedf278ba43ee94f926d",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 425,
+        "upserted_rows": 1
+      },
+      "variant_id": "s400l320h06_aonly",
+      "variant_spec": {
+        "group": "long_density_short_filter_disablement",
+        "base_id": "s400l320h06",
+        "routed_fallback_enabled": false,
+        "reentry_cooldown_bars": 0,
+        "tier_a_short_threshold": 0.4,
+        "tier_a_long_threshold": 0.32,
+        "tier_a_min_margin": 0.0,
+        "tier_b_short_threshold": 0.45,
+        "tier_b_long_threshold": 0.45,
+        "tier_b_min_margin": 0.0,
+        "max_hold_bars": 6
+      }
+    },
+    {
+      "status": "ok",
+      "run_id": "run50H_s400l320h06_b045_logreg_deep_v1",
+      "run_output_root": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045",
+      "threshold_id": "a_stage56_s400l320h06_b045_a_s400_l320_m000__b_stage56_s400l320h06_b045_b_s450_l450_m000__hold6__cool0",
+      "onnx_parity": {
+        "passed": true,
+        "tier_a": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4221721929552622e-06,
+          "mean_abs_diff": 7.576877351991139e-07,
+          "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        },
+        "tier_b": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 8.729441310917352e-07,
+          "mean_abs_diff": 4.386177208016955e-07,
+          "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        }
+      },
+      "external_verification_status": "completed",
+      "mt5_attempted": true,
+      "payload_paths": {
+        "run_manifest": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/run_manifest.json",
+          "sha256": "f9112ce82bb2c85ecccbdcf7092217b316e5523b50e60d5ead696705222fe095"
+        },
+        "kpi_record": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/kpi_record.json",
+          "sha256": "4256c7c0cea6a7caab962b6d8862584d3ebbc4ec589a6cccb1b5e8b465302013"
+        }
+      },
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/summary.json",
+      "result_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s400l320h06_b045/reports/result_summary.md",
+      "ledger_payload": {
+        "stage_run_ledger": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+          "sha256": "d4e7c76b6c8e1ad71f4ad9b470dbd9cfc0bd8c515bb02403ffd53cd6937bdb45",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 652,
+          "upserted_rows": 13
+        },
+        "project_alpha_run_ledger": {
+          "path": "docs/registers/alpha_run_ledger.csv",
+          "sha256": "b8be64cf5ebc9396fc28d2386fc1b7a2b4a9aa39ac496f1904482820e57c6ad1",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 5525,
+          "upserted_rows": 13
+        }
+      },
+      "run_registry_payload": {
+        "path": "docs/registers/run_registry.csv",
+        "sha256": "70f420b7d9cd89e9908b5e3c7adb1ee29a52efdd41ed864b7e3d74affaf4db4c",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 426,
+        "upserted_rows": 1
+      },
+      "variant_id": "s400l320h06_b045",
+      "variant_spec": {
+        "group": "long_density_short_filter_comparison",
+        "base_id": "s400l320h06",
+        "routed_fallback_enabled": true,
+        "reentry_cooldown_bars": 0,
+        "tier_a_short_threshold": 0.4,
+        "tier_a_long_threshold": 0.32,
+        "tier_a_min_margin": 0.0,
+        "tier_b_short_threshold": 0.45,
+        "tier_b_long_threshold": 0.45,
+        "tier_b_min_margin": 0.0,
+        "max_hold_bars": 6
+      }
+    },
+    {
+      "status": "ok",
+      "run_id": "run50H_s410l315h06_aonly_logreg_deep_v1",
+      "run_output_root": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly",
+      "threshold_id": "a_stage56_s410l315h06_aonly_a_s410_l315_m000__b_disabled__hold6__cool0",
+      "onnx_parity": {
+        "passed": true,
+        "tier_a": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4221721929552622e-06,
+          "mean_abs_diff": 7.576877351991139e-07,
+          "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        },
+        "tier_b": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 8.729441310917352e-07,
+          "mean_abs_diff": 4.386177208016955e-07,
+          "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        }
+      },
+      "external_verification_status": "completed",
+      "mt5_attempted": true,
+      "payload_paths": {
+        "run_manifest": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/run_manifest.json",
+          "sha256": "bef176b6febe41a0b1a58d8eadf2c7b0a9d2be490dda9e04dd3678024284738e"
+        },
+        "kpi_record": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/kpi_record.json",
+          "sha256": "ba54a06dde65d042b12ec43382ef27ebed6fd80b2ecf47520892e29e16cdad28"
+        }
+      },
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/summary.json",
+      "result_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_aonly/reports/result_summary.md",
+      "ledger_payload": {
+        "stage_run_ledger": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+          "sha256": "6581ae65dc4ef4c3fe3964334fa27a04d1c0d5bf77a84b124de7a5ab29e7b059",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 663,
+          "upserted_rows": 11
+        },
+        "project_alpha_run_ledger": {
+          "path": "docs/registers/alpha_run_ledger.csv",
+          "sha256": "c977523da1acfe11cf8b6ddcee1e1bf7f62e62256b2b85a3711b5e3cbd35d16b",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 5536,
+          "upserted_rows": 11
+        }
+      },
+      "run_registry_payload": {
+        "path": "docs/registers/run_registry.csv",
+        "sha256": "323e40364ae031f4e00c0ea220dfc42a26fd0be4fcb4c57d15cd83246bc32478",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 427,
+        "upserted_rows": 1
+      },
+      "variant_id": "s410l315h06_aonly",
+      "variant_spec": {
+        "group": "long_density_short_filter_disablement",
+        "base_id": "s410l315h06",
+        "routed_fallback_enabled": false,
+        "reentry_cooldown_bars": 0,
+        "tier_a_short_threshold": 0.41,
+        "tier_a_long_threshold": 0.315,
+        "tier_a_min_margin": 0.0,
+        "tier_b_short_threshold": 0.45,
+        "tier_b_long_threshold": 0.45,
+        "tier_b_min_margin": 0.0,
+        "max_hold_bars": 6
+      }
+    },
+    {
+      "status": "ok",
+      "run_id": "run50H_s410l315h06_b045_logreg_deep_v1",
+      "run_output_root": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045",
+      "threshold_id": "a_stage56_s410l315h06_b045_a_s410_l315_m000__b_stage56_s410l315h06_b045_b_s450_l450_m000__hold6__cool0",
+      "onnx_parity": {
+        "passed": true,
+        "tier_a": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4221721929552622e-06,
+          "mean_abs_diff": 7.576877351991139e-07,
+          "onnx_row_sum_max_abs_error": 8.940696716308594e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        },
+        "tier_b": {
+          "passed": true,
+          "rows": 128,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 8.729441310917352e-07,
+          "mean_abs_diff": 4.386177208016955e-07,
+          "onnx_row_sum_max_abs_error": 7.450580596923828e-08,
+          "input_name": "float_input",
+          "output_names": [
+            "label",
+            "probabilities"
+          ]
+        }
+      },
+      "external_verification_status": "completed",
+      "mt5_attempted": true,
+      "payload_paths": {
+        "run_manifest": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/run_manifest.json",
+          "sha256": "b740d1c208426b17161dd630f5bbcf1d2c7e4cfbdfb8978dd67bc47c0f911b93"
+        },
+        "kpi_record": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/kpi_record.json",
+          "sha256": "d58c2085d012615cc53dc1ea7ee403c9ddab5ff75fd4711bd377fa3985da8950"
+        }
+      },
+      "summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/summary.json",
+      "result_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50H/s410l315h06_b045/reports/result_summary.md",
+      "ledger_payload": {
+        "stage_run_ledger": {
+          "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+          "sha256": "6f38af452d73348b8b770dc658977709562c5f0f2da87a7d0625e2bfa82ad573",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 676,
+          "upserted_rows": 13
+        },
+        "project_alpha_run_ledger": {
+          "path": "docs/registers/alpha_run_ledger.csv",
+          "sha256": "01d8364fdb0b8f194b6a90c9986a195da7e9fe0d714c9ee59a1c137772d2b435",
+          "hash_policy": "lf_normalized_text_register",
+          "rows": 5549,
+          "upserted_rows": 13
+        }
+      },
+      "run_registry_payload": {
+        "path": "docs/registers/run_registry.csv",
+        "sha256": "725b4abb21dc2dc476feba0df6aa0ab989a58b358b17e1c8a966c9fd87866fa9",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 428,
+        "upserted_rows": 1
+      },
+      "variant_id": "s410l315h06_b045",
+      "variant_spec": {
+        "group": "long_density_short_filter_comparison",
+        "base_id": "s410l315h06",
+        "routed_fallback_enabled": true,
+        "reentry_cooldown_bars": 0,
+        "tier_a_short_threshold": 0.41,
+        "tier_a_long_threshold": 0.315,
+        "tier_a_min_margin": 0.0,
+        "tier_b_short_threshold": 0.45,
+        "tier_b_long_threshold": 0.45,
+        "tier_b_min_margin": 0.0,
+        "max_hold_bars": 6
+      }
+    }
+  ],
+  "artifacts": {
+    "report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50H_reopen_batch.md",
+    "results_csv_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50H_summary.csv",
+    "audit_csv_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50H_audit.csv",
+    "progress_log_path": "docs/agent_control/packets/stage56_reopen_goal_v1/progress_log.md",
+    "ledger_payload": {
+      "stage_run_ledger": {
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+        "sha256": "1245f022a4d5e9e24c4812ec5a87f78f6e91ab774a0a75938cb5b2394db3a14f",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 677,
+        "upserted_rows": 1
+      },
+      "project_alpha_run_ledger": {
+        "path": "docs/registers/alpha_run_ledger.csv",
+        "sha256": "8baf36919d38f066c81b681c75b16ef2455ddcd3dad4827798e7df861da1cd9a",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 5550,
+        "upserted_rows": 1
+      },
+      "run_registry": {
+        "path": "docs/registers/run_registry.csv",
+        "sha256": "2d681a7299b351a3fc32c5cc81756e97558afb9f646e184d5a1a8572a74c4a8a",
+        "hash_policy": "lf_normalized_text_register",
+        "rows": 429,
+        "upserted_rows": 1
+      }
+    }
+  },
+  "artifact_hashes": {
+    "report_sha256": "73c3b6912bea049d1e7d807f3538323607948210195500b3fddd55d0d9739a10",
+    "results_csv_sha256": "5c91c31f72e3a8cbee05e5b9611f9511320efc1d78af39e33859d6839b044236",
+    "audit_csv_sha256": "c351861b80c9387c06e9f4d394d3f9eb19581f3a6444a6b11b24569426c868c3",
+    "progress_log_sha256": "4c8f13e20b16c0abd8cbcc27298053c5a2448d8c2438fbfbaeebe0ce204d358f"
+  },
+  "boundary": "research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference"
+}

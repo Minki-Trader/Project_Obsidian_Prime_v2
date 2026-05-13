@@ -70,6 +70,16 @@ class RepairVariant:
     session_slice_id: str | None = None
     tier_b_allowed_subtypes: tuple[str, ...] = ()
     notes: str = ""
+    side_filter_id: str | None = None
+    side_filter_enabled: bool = False
+    tier_a_side_filter_feature_index: int = -1
+    tier_b_side_filter_feature_index: int = -1
+    block_short_feature_range: bool = False
+    block_short_feature_min: float = 0.0
+    block_short_feature_max: float = 0.0
+    block_long_feature_range: bool = False
+    block_long_feature_min: float = 0.0
+    block_long_feature_max: float = 0.0
 
     @property
     def run_id(self) -> str:
@@ -223,6 +233,7 @@ def _run_variant(
     terminal_path: Path,
     metaeditor_path: Path,
     force: bool,
+    reentry_cooldown_bars: int = 0,
 ) -> dict[str, Any]:
     run_output_root = RUN_ROOT / variant.variant_id
     summary_path = run_output_root / "summary.json"
@@ -269,6 +280,17 @@ def _run_variant(
         attempt_mt5=attempt_mt5,
         terminal_path=terminal_path,
         metaeditor_path=metaeditor_path,
+        reentry_cooldown_bars=reentry_cooldown_bars,
+        side_filter_id=variant.side_filter_id,
+        side_filter_enabled=variant.side_filter_enabled,
+        tier_a_side_filter_feature_index=variant.tier_a_side_filter_feature_index,
+        tier_b_side_filter_feature_index=variant.tier_b_side_filter_feature_index,
+        block_short_feature_range=variant.block_short_feature_range,
+        block_short_feature_min=variant.block_short_feature_min,
+        block_short_feature_max=variant.block_short_feature_max,
+        block_long_feature_range=variant.block_long_feature_range,
+        block_long_feature_min=variant.block_long_feature_min,
+        block_long_feature_max=variant.block_long_feature_max,
     )
 
 

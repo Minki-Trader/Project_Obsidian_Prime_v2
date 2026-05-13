@@ -237,6 +237,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-iter", type=int, default=2000)
     parser.add_argument("--parity-rows", type=int, default=128)
     parser.add_argument("--max-hold-bars", type=int, default=12)
+    parser.add_argument("--reentry-cooldown-bars", type=int, default=0)
+    parser.add_argument("--side-filter-id", default=None)
+    parser.add_argument("--side-filter-enabled", action="store_true")
+    parser.add_argument("--tier-a-side-filter-feature-index", type=int, default=-1)
+    parser.add_argument("--tier-b-side-filter-feature-index", type=int, default=-1)
+    parser.add_argument("--block-short-feature-range", action="store_true")
+    parser.add_argument("--block-short-feature-min", type=float, default=0.0)
+    parser.add_argument("--block-short-feature-max", type=float, default=0.0)
+    parser.add_argument("--block-long-feature-range", action="store_true")
+    parser.add_argument("--block-long-feature-min", type=float, default=0.0)
+    parser.add_argument("--block-long-feature-max", type=float, default=0.0)
     parser.add_argument("--tier-a-threshold-id", default=None)
     parser.add_argument("--tier-a-short-threshold", type=float, default=None)
     parser.add_argument("--tier-a-long-threshold", type=float, default=None)
@@ -310,6 +321,17 @@ def run_stage10_logreg_mt5_scout(
     max_iter: int = 2000,
     parity_rows: int = 128,
     max_hold_bars: int = 12,
+    reentry_cooldown_bars: int = 0,
+    side_filter_id: str | None = None,
+    side_filter_enabled: bool = False,
+    tier_a_side_filter_feature_index: int = -1,
+    tier_b_side_filter_feature_index: int = -1,
+    block_short_feature_range: bool = False,
+    block_short_feature_min: float = 0.0,
+    block_short_feature_max: float = 0.0,
+    block_long_feature_range: bool = False,
+    block_long_feature_min: float = 0.0,
+    block_long_feature_max: float = 0.0,
     tier_a_threshold_rule: ThresholdRule | None = None,
     tier_b_threshold_rule: ThresholdRule | None = None,
     routed_fallback_enabled: bool = True,
@@ -438,15 +460,32 @@ def run_stage10_logreg_mt5_scout(
     tier_a_rule = tier_a_threshold_rule or selected_sweep_rule
     tier_b_rule = tier_b_threshold_rule or tier_a_rule
     rule = tier_a_rule
+    side_filter_payload = {
+        "id": side_filter_id,
+        "enabled": bool(side_filter_enabled),
+        "tier_a_feature_index": int(tier_a_side_filter_feature_index),
+        "tier_b_feature_index": int(tier_b_side_filter_feature_index),
+        "block_short_feature_range": bool(block_short_feature_range),
+        "block_short_feature_min": float(block_short_feature_min),
+        "block_short_feature_max": float(block_short_feature_max),
+        "block_long_feature_range": bool(block_long_feature_range),
+        "block_long_feature_min": float(block_long_feature_min),
+        "block_long_feature_max": float(block_long_feature_max),
+    }
+    side_filter_suffix = (
+        "__side_" + re.sub(r"[^A-Za-z0-9]+", "", str(side_filter_id or "feature_filter"))
+        if side_filter_enabled
+        else ""
+    )
     threshold_selection = dict(selected)
     threshold_selection.update(
         {
             "selection_source": "explicit_override" if tier_a_threshold_rule or tier_b_threshold_rule else "validation_combined_sweep",
             "threshold_id": (
                 (
-                    f"a_{tier_a_rule.threshold_id}__b_{tier_b_rule.threshold_id}__hold{int(max_hold_bars)}"
+                    f"a_{tier_a_rule.threshold_id}__b_{tier_b_rule.threshold_id}__hold{int(max_hold_bars)}__cool{int(reentry_cooldown_bars)}"
                     if routed_fallback_enabled
-                    else f"a_{tier_a_rule.threshold_id}__b_disabled__hold{int(max_hold_bars)}"
+                    else f"a_{tier_a_rule.threshold_id}__b_disabled__hold{int(max_hold_bars)}__cool{int(reentry_cooldown_bars)}"
                 )
                 + (f"__slice_{session_slice_id}" if session_slice_id else "")
                 + (
@@ -454,6 +493,7 @@ def run_stage10_logreg_mt5_scout(
                     if allowed_fallback_subtypes
                     else ""
                 )
+                + side_filter_suffix
             ),
             "selected_combined_sweep_rule": threshold_rule_payload(selected_sweep_rule),
             "tier_a_rule": threshold_rule_payload(tier_a_rule),
@@ -461,7 +501,9 @@ def run_stage10_logreg_mt5_scout(
             "routed_fallback_enabled": bool(routed_fallback_enabled),
             "session_slice": session_slice,
             "tier_b_fallback_allowed_subtypes": list(allowed_fallback_subtypes) if allowed_fallback_subtypes else None,
+            "side_filter": side_filter_payload,
             "max_hold_bars": int(max_hold_bars),
+            "reentry_cooldown_bars": int(reentry_cooldown_bars),
             "short_threshold": tier_a_rule.short_threshold,
             "long_threshold": tier_a_rule.long_threshold,
             "min_margin": tier_a_rule.min_margin,
@@ -555,6 +597,16 @@ def run_stage10_logreg_mt5_scout(
         terminal_path=terminal_path,
         metaeditor_path=metaeditor_path,
         max_hold_bars=max_hold_bars,
+        reentry_cooldown_bars=reentry_cooldown_bars,
+        side_filter_enabled=side_filter_enabled,
+        tier_a_side_filter_feature_index=tier_a_side_filter_feature_index,
+        tier_b_side_filter_feature_index=tier_b_side_filter_feature_index,
+        block_short_feature_range=block_short_feature_range,
+        block_short_feature_min=block_short_feature_min,
+        block_short_feature_max=block_short_feature_max,
+        block_long_feature_range=block_long_feature_range,
+        block_long_feature_min=block_long_feature_min,
+        block_long_feature_max=block_long_feature_max,
         tier_a_only_prefix=MT5_RECORD_TIER_A_ONLY_PREFIX,
         tier_b_fallback_only_prefix=MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
     )
@@ -617,6 +669,7 @@ def run_stage10_logreg_mt5_scout(
         mt5_execution_results=mt5_execution_results,
         attempt_mt5=attempt_mt5,
         max_hold_bars=max_hold_bars,
+        reentry_cooldown_bars=reentry_cooldown_bars,
         routed_fallback_enabled=routed_fallback_enabled,
         routing_mode=routing_mode,
         routing_detail=routing_detail,
@@ -699,6 +752,17 @@ def main() -> int:
         max_iter=args.max_iter,
         parity_rows=args.parity_rows,
         max_hold_bars=args.max_hold_bars,
+        reentry_cooldown_bars=args.reentry_cooldown_bars,
+        side_filter_id=args.side_filter_id,
+        side_filter_enabled=args.side_filter_enabled,
+        tier_a_side_filter_feature_index=args.tier_a_side_filter_feature_index,
+        tier_b_side_filter_feature_index=args.tier_b_side_filter_feature_index,
+        block_short_feature_range=args.block_short_feature_range,
+        block_short_feature_min=args.block_short_feature_min,
+        block_short_feature_max=args.block_short_feature_max,
+        block_long_feature_range=args.block_long_feature_range,
+        block_long_feature_min=args.block_long_feature_min,
+        block_long_feature_max=args.block_long_feature_max,
         tier_a_threshold_rule=tier_a_rule,
         tier_b_threshold_rule=tier_b_rule,
         routed_fallback_enabled=not args.disable_routed_fallback,

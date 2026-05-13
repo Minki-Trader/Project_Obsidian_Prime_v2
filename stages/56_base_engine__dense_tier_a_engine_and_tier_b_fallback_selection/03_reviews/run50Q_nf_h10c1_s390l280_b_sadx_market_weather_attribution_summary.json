@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-05-12T21:09:39Z",
+  "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection",
+  "run_id": "run50Q_nf_h10c1_s390l280_b_sadx_logreg_deep_v1",
+  "variant_id": "nf_h10c1_s390l280_b_sadx",
+  "status": "completed",
+  "parser_errors": [],
+  "split_trade_counts": {
+    "validation": 1378,
+    "oos": 995
+  },
+  "artifacts": {
+    "attribution_csv": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Q_nf_h10c1_s390l280_b_sadx_market_weather_attribution.csv",
+    "trade_records_csv": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Q_nf_h10c1_s390l280_b_sadx_trade_weather_records.csv",
+    "report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Q_nf_h10c1_s390l280_b_sadx_market_weather_attribution.md"
+  },
+  "hashes": {
+    "attribution_csv_sha256": "74e26d21ada1d7092d32a7c9d8a851c82b8ada88dc9069bba801e68d87fbe1a6",
+    "trade_records_csv_sha256": "e8816360a68769627a9af42b9e330ea2b10bf7ef5b13eb0ee8163b5e846cd373",
+    "report_sha256": "246c713824a7c62c65958f9ba28c92689eda972c751c4a19c6dfa392f6e930e9"
+  },
+  "boundary": "research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference",
+  "notes": "source=mt5_strategy_tester_deal_list;market_weather_role=attribution_only;hard_filter_created=0"
+}

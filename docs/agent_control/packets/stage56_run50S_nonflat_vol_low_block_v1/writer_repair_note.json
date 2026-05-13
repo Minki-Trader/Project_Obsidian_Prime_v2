@@ -1,0 +1,17 @@
+{
+  "packet_id": "stage56_run50S_nonflat_vol_low_block_v1",
+  "run_id": "run50S_stage56_nonflat_vol_low_block_v1",
+  "status": "repaired",
+  "failed_attempt": {
+    "type": "result_summary_long_path_write_failure",
+    "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/<run>/<variant>/reports/result_summary.md",
+    "effect": "MT5 reports and summary.json were produced, but the first batch aggregate used blocked rows before reaggregation."
+  },
+  "repair_action": {
+    "action": "changed packet_writers to use io_path for result_summary.md and reaggregated existing summary_json_without_rerunning_mt5",
+    "effect": "summary.csv, audit.csv, aggregate_summary.json, ledgers, and progress_log now use actual MT5 evidence."
+  },
+  "selected_research_baseline": null,
+  "stage56_remains_open": true,
+  "updated_at_utc": "2026-05-12T22:20:31Z"
+}

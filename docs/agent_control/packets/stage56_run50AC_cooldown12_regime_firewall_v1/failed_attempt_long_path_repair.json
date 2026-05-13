@@ -1,0 +1,15 @@
+{
+  "packet_id": "stage56_run50AC_cooldown12_regime_firewall_v1",
+  "run_id": "run50AC_stage56_cooldown12_regime_firewall_v1",
+  "status": "blocked_configuration_repair_required",
+  "failure_type": "windows_path_length",
+  "failed_command": "python -m stage_pipelines.stage56.cooldown12_regime_firewall_batch --attempt-mt5 --force",
+  "observed_error": "[WinError 206] filename_or_extension_too_long while resolving variant report directories",
+  "evidence_paths": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AC_summary.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AC_audit.csv",
+    "docs/agent_control/packets/stage56_run50AC_cooldown12_regime_firewall_v1/aggregate_summary.json"
+  ],
+  "repair_action": "create run50AD with shortened variant_id and run_id strings, preserving the same hypothesis family and control settings",
+  "claim_boundary": "blocked evidence only; no KPI interpretation and no selected_research_baseline claim"
+}

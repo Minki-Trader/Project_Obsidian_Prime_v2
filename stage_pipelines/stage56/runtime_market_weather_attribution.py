@@ -214,7 +214,8 @@ def _write_report(
             "",
         ]
     )
-    config.report_path.write_text("\n".join(lines), encoding="utf-8-sig")
+    io_path(config.report_path.parent).mkdir(parents=True, exist_ok=True)
+    io_path(config.report_path).write_text("\n".join(lines), encoding="utf-8-sig")
 
 
 def build_attribution(config: AttributionConfig) -> dict[str, Any]:

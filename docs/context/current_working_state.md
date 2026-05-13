@@ -1,4 +1,519 @@
-﻿## Latest Stage56 Run50B Dense Engine Grid(최신 56단계 50B 두꺼운 엔진 격자)
+﻿## Latest Stage56 Reopen Goal(최신 56단계 재개 목표)
+
+- current stage(현재 단계): `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`
+
+- active_stage(현재 단계): `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`
+- current_packet(현재 작업 묶음): `stage56_run50AH_s25_model_axis_oos_density_v1`
+- current run(현재 실행): `run50AH_stage56_s25_model_axis_oos_density_v1`
+- stage_status(단계 상태): `active_in_progress(활성 진행 중)`
+- selected_research_baseline(선택 연구 기준선): `none`
+- terminal_condition(종료 조건): selected_research_baseline(선택 연구 기준선) found(발견)
+- progress_log(진행 기록): `docs/agent_control/packets/stage56_reopen_goal_v1/progress_log.md`
+
+Stage56(56단계)은 unfinished optimization campaign(미완 최적화 캠페인)으로 재개됐다. 효과(effect, 효과)는 run50B/run50C/run50D(실행50B/50C/50D)와 prior closeout packets(이전 종료 묶음)을 intermediate evidence(중간 근거)로 보존하되, reviewed_closed(검토 후 종료)나 final closeout(최종 종료)으로 읽지 않게 하는 것이다.
+
+Only terminal condition(유일 종료 조건)은 selected_research_baseline(선택 연구 기준선)이다. exhaustion(소진), no_dense_engine_found(두꺼운 엔진 없음), stronger_baseline_candidate_only(강화 기준선 후보 전용), baseline_candidate_only(기준선 후보 전용), density_frontier_only(밀도 경계 전용), quality_frontier_only(품질 경계 전용)는 Stage56(56단계)을 닫지 않는다.
+
+Current bottleneck(현재 병목)은 run50AH(실행50AH)에서 model-axis perturbation(모델 축 교란)도 OOS density(표본외 밀도)를 5+ trades/day(일 거래 수)까지 열지 못한 점이다. closest intermediate variant(가장 가까운 중간 변형) `nf200s25b`는 validation/OOS(검증/표본외) 5.513661/3.789744 trades/day(일 거래 수), PF(수익 팩터) 1.18/1.24, net(순손익) 459.98/428.88이었다. 효과(effect, 효과): stronger non-flat weighting(더 강한 비평탄 가중)은 품질을 보존했지만 OOS density(표본외 밀도), same-move density survival(동일 이동 밀도 생존), Tier B rule(Tier B 규칙)을 해결하지 못해 다음 가지는 독립 신호 원천(independent signal source, 독립 신호 원천)이나 route coverage axis(라우팅 커버리지 축)이어야 한다.
+
+Run50E(실행50E)는 actual MT5 validation/OOS(실제 MT5 검증/표본외) 9개 변형을 완료했다. d350h06_ab_b040/d340h06_ab_b040(변형)은 validation/OOS(검증/표본외) 모두 5+ trades/day(일 거래 수)를 넘겼지만 PF(수익 팩터)는 1.06/1.03으로 1.10에 못 미쳤고, cost-stressed expectancy(비용 압박 기대값)는 음수였으며, same-move re-entry ratio(동일 이동 재진입 비율)는 약 0.72/0.75로 높았다. 효과(effect, 효과): density gain(밀도 증가)은 real baseline evidence(실제 기준선 근거)가 아니라 same-move split trading(동일 이동 분할 거래) 위험으로 읽는다.
+
+Tier B(티어 B)는 stricter B040 fallback(더 엄격한 B040 대체)에서도 fallback-only OOS(대체 전용 표본외)가 net(순손익) -171.98, PF(수익 팩터) 0.70으로 damaging(손상)했다. A+B routed total(A+B 실제 라우팅 전체)은 OOS density(표본외 밀도)를 5+로 올렸지만 PF/net(수익 팩터/순손익)을 selected_research_baseline(선택 연구 기준선) 기준까지 끌어올리지 못했다.
+
+Run50F(실행50F)는 cooldown-aware actual MT5 validation/OOS(쿨다운 인식 실제 MT5 검증/표본외) 6개 변형을 완료했다. cooldown(쿨다운) 1~2봉과 stricter Tier B(더 엄격한 Tier B) 0.42~0.45를 시험했지만, best intermediate variant(최선 중간 변형) d330h06_b045_c1은 validation/OOS(검증/표본외) 6.333333/4.728205 trades/day(일 거래 수), PF(수익 팩터) 1.02/1.04, net(순손익) 53.40/114.76이었다. 효과(effect, 효과): basic cooldown(기본 쿨다운)은 same-move split(동일 이동 분할)을 줄였지만 OOS density(표본외 밀도)와 PF(수익 팩터)를 동시에 기준까지 올리지 못했다.
+
+Run50G(실행50G)는 direction-threshold actual MT5 validation/OOS(방향 임계값 실제 MT5 검증/표본외) 6개 변형을 완료했다. 첫 시도는 MetaEditor path(메타에디터 경로) 오류로 blocked(차단)됐고 `docs/agent_control/packets/stage56_run50G_direction_threshold_tier_b_disablement_v1/failed_attempt_metaeditor_path.json`에 기록한 뒤 경로를 고쳐 force rerun(강제 재실행)했다. best intermediate variant(최선 중간 변형) `s390l330h06_b045`는 validation/OOS(검증/표본외) 6.005464/4.594872 trades/day(일 거래 수), PF(수익 팩터) 1.08/1.04, net(순손익) 274.44/109.52였다. 효과(effect, 효과): short threshold(숏 임계값)을 올리고 long threshold(롱 임계값)을 낮추면 validation quality(검증 품질)는 일부 회복되지만, OOS density(표본외 밀도), PF(수익 팩터), cost-stressed expectancy(비용 압박 기대값), same-move audit(동일 이동 감사)는 기준선 조건을 넘지 못한다.
+
+Run50H(실행50H)는 long-density/short-filter actual MT5 validation/OOS(롱 밀도/숏 필터 실제 MT5 검증/표본외) 6개 변형을 완료했다. best intermediate variant(최선 중간 변형) `s410l315h06_b045`는 validation/OOS(검증/표본외) 5.644809/4.276923 trades/day(일 거래 수), PF(수익 팩터) 1.08/1.06, net(순손익) 240.62/145.24, max DD(최대 손실) 259.16/235.07이었다. MFE capture(MFE 포착)는 d390h10(참조)보다 materially worse(중대 악화)는 아니지만, OOS density(표본외 밀도) 5.0 미만, PF(수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move re-entry ratio(동일 이동 재진입 비율) 약 0.738609, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수로 selected_research_baseline(선택 연구 기준선)이 아니다. 효과(effect, 효과): 단순 long threshold(롱 임계값) 완화와 short filter(숏 필터) 강화도 같은 이동을 쪼개는 밀도 문제를 해결하지 못한다.
+
+Run50I(실행50I)는 run50H attribution(run50H 귀속)에서 late session(후반 세션)이 OOS(표본외)를 깎는 판독을 바탕으로 early+mid session(초반+중반 세션) `early_mid` slice(절편)를 추가하고 6개 변형을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. best intermediate variant(최선 중간 변형) `em_s390l300h06_aonly`는 validation/OOS(검증/표본외) 4.502732/3.512821 trades/day(일 거래 수), PF(수익 팩터) 1.01/1.22, net(순손익) 21.61/471.91, max DD(최대 손실) 358.41/167.58이었다. 효과(effect, 효과): early+mid session(초반+중반 세션)은 OOS quality(표본외 품질)를 크게 살렸지만 validation(검증)과 density(밀도)를 손상해 selected_research_baseline(선택 연구 기준선)이 아니다.
+
+Run50J(실행50J)는 hold extension(보유 연장) 10봉과 long-density/short-filter(롱 밀도/숏 필터)를 실제 MT5 validation/OOS(검증/표본외)로 시험했다. best intermediate variant(최선 중간 변형) `h10_s400l295_aonly`는 validation/OOS(검증/표본외) 4.360656/3.071795 trades/day(일 거래 수), PF(수익 팩터) 1.14/1.07, net(순손익) 397.72/157.34, max DD(최대 손실) 243.44/176.68이었다. same-move re-entry ratio(동일 이동 재진입 비율)는 validation/OOS(검증/표본외) 약 0.639098/0.636060까지 내려갔지만 12-bar cooldown read(12봉 쿨다운 판독)는 1.606557/1.138462 trades/day(일 거래 수)에 그쳤다. 효과(effect, 효과): 보유를 늘리면 분할 거래는 줄지만, 현재 threshold-only axis(임계값 전용 축)는 density(밀도)를 동시에 살리지 못한다.
+
+Next action(다음 행동)은 `s25c8a/s24l15a/nf200s25b` quality branch(품질 가지)를 기준으로 independent signal source(독립 신호 원천), route coverage axis(라우팅 커버리지 축), 또는 explicitly labeled composite filter(명시 라벨 복합 필터)를 시험하는 것이다. 효과(effect, 효과): 같은 거래 집합이나 같은 이동 분할을 반복하지 않고 OOS density(표본외 밀도)를 회복할 새 통로를 찾는다.
+
+## Latest Run50AH Intermediate Evidence(최신 50AH 중간 근거)
+
+- packet(묶음): `stage56_run50AH_s25_model_axis_oos_density_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AH_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AH_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AH_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50AH_s25_model_axis_oos_density_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AH_nf200s25b_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50AH(실행50AH)는 run50AG(실행50AG)의 threshold saturation(임계값 포화) 뒤 C value(C 값), non-flat sample weight(비평탄 표본 가중), recent-2023 balanced training(2023 이후 균형 학습)을 actual MT5 validation/OOS(실제 메타트레이더5 검증/표본외)로 시험했다. 효과(effect, 효과): 같은 threshold axis(임계값 축) 반복이 아니라 model probability ranking(모델 확률 순위)이 OOS density(표본외 밀도)를 열 수 있는지 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `nf200s25b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 5.513661 trades/day(일 거래 수), net(순손익) 459.98, PF(수익 팩터) 1.18, max DD(최대 손실) 기록됨
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 3.789744 trades/day(일 거래 수), net(순손익) 428.88, PF(수익 팩터) 1.24, max DD(최대 손실) 기록됨
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 310.59, PF(수익 팩터) 1.17
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -10.43, PF(수익 팩터) 0.69로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.581881이고 materially worse(중대 악화) 플래그는 false(거짓)다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.608931이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.482051 trades/day(일 거래 수)라 density gain(밀도 증가)이 기준까지 생존하지 못했다.
+- attribution read(귀속 판독): validation/OOS(검증/표본외)는 모든 주요 session/volatility/trend/ADX bucket(세션/변동성/추세/평균 방향 지수 구간)이 양수였지만 mid session(중반 세션)과 ADX20-25(평균 방향 지수 20-25)가 약했다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation cost-stressed expectancy(검증 비용 압박 기대값) 음수, same-move density survival(동일 이동 밀도 생존) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+- next_hypothesis_branch(다음 가설 가지): `independent_signal_source_or_route_coverage_axis_after_s25_model_axis_density_stall`
+
+## Latest Run50AG Intermediate Evidence(최신 50AG 중간 근거)
+
+- packet(묶음): `stage56_run50AG_s25_quality_oos_density_repair_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AG_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AG_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AG_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50AG_s25_quality_oos_density_repair_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AG_s24l15a_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50AG(실행50AG)는 run50AF(실행50AF)의 `s25c8a` quality branch(품질 가지)에서 short/long threshold(매도/매수 임계값)를 0.240/0.150, 0.220/0.140, 0.200/0.130까지 낮추고 cooldown(쿨다운) 6/8봉을 실제 MT5 validation/OOS(메타트레이더5 검증/표본외)로 시험했다. 효과(effect, 효과): OOS density(표본외 밀도)가 단순 임계값 완화로 더 열리는지 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `s24l15a`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 5.349727 trades/day(일 거래 수), net(순손익) 466.64, PF(수익 팩터) 1.19, max DD(최대 손실) 255.14
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 3.646154 trades/day(일 거래 수), net(순손익) 417.57, PF(수익 팩터) 1.23, max DD(최대 손실) 159.26
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 417.57, PF(수익 팩터) 1.23
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -10.43, PF(수익 팩터) 0.69로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.588858로 d390h10 reference(d390h10 참조)보다 낮다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.594937이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.476923 trades/day(일 거래 수)라 density gain(밀도 증가)이 기준까지 생존하지 못했다.
+- attribution read(귀속 판독): run50AG(실행50AG)는 run50AF(실행50AF)의 s25c8a와 같은 거래 판독을 반복했다. validation(검증)은 전 세션/ADX 구간(세션/평균 방향 지수 구간)이 양수지만 OOS(표본외)는 buy vol_low(매수 저변동성) -42.92와 mid session(중반 세션) 약세가 남았다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation cost-stressed expectancy(검증 비용 압박 기대값) 음수, same-move density survival(동일 이동 밀도 생존) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+- next_hypothesis_branch(다음 가설 가지): `change_axis_after_s25_threshold_saturation_to_recover_oos_density_without_same_move_split`
+
+## Latest Run50AF Intermediate Evidence(최신 50AF 중간 근거)
+
+- packet(묶음): `stage56_run50AF_short_adx_repair_after_c08b_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AF_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AF_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AF_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50AF_short_adx_repair_after_c08b_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AF_s25c8a_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50AF(실행50AF)는 `c08b` 이후 validation(검증)을 깎던 sell ADX20-25(매도 평균 방향 지수 20-25)를 차단하고 cooldown(쿨다운) 6/8봉, wider short ADX20-30(더 넓은 매도 평균 방향 지수 20-30), Tier A only/A+B routed comparison(Tier A 단독/A+B 실제 라우팅 비교)을 실제 MT5 validation/OOS(메타트레이더5 검증/표본외)로 시험했다. 효과(effect, 효과): ADX repair(평균 방향 지수 수리)가 품질과 밀도를 같이 회복하는지 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `s25c8a`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 5.349727 trades/day(일 거래 수), net(순손익) 466.64, PF(수익 팩터) 1.19, max DD(최대 손실) 255.14
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 3.646154 trades/day(일 거래 수), net(순손익) 417.57, PF(수익 팩터) 1.23, max DD(최대 손실) 159.26
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 417.57, PF(수익 팩터) 1.23
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -10.43, PF(수익 팩터) 0.69로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.588858로 d390h10 reference(d390h10 참조)보다 낮다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.594937이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.476923 trades/day(일 거래 수)라 density gain(밀도 증가)이 기준까지 생존하지 못했다.
+- attribution read(귀속 판독): validation(검증)은 모든 session(세션)과 ADX bucket(평균 방향 지수 구간)이 양수로 바뀌었지만 OOS(표본외)는 buy vol_low(매수 저변동성) -42.92와 mid session(중반 세션) 약세가 남았다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation cost-stressed expectancy(검증 비용 압박 기대값) 음수, same-move density survival(동일 이동 밀도 생존) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+- next_hypothesis_branch(다음 가설 가지): `recover_oos_density_from_s25c8a_quality_branch_without_same_move_split_and_with_tier_b_disablement`
+
+## Latest Run50AE Intermediate Evidence(최신 50AE 중간 근거)
+
+- packet(묶음): `stage56_run50AE_vl_cooldown_density_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AE_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AE_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AE_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50AE_vl_cooldown_density_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AE_c08b_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50AE(실행50AE)는 buy vol_low firewall(매수 저변동성 방화벽)을 유지하고 cooldown(쿨다운) 6/8/10봉 및 early_mid session(초반+중반 세션)을 실제 MT5 validation/OOS(메타트레이더5 검증/표본외)로 시험했다. 효과(effect, 효과): run50AD(실행50AD)의 희소성을 풀어도 same-move split(동일 이동 분할) 없이 밀도가 살아나는지 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `c08b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 4.322404 trades/day(일 거래 수), net(순손익) 118.68, PF(수익 팩터) 1.05, max DD(최대 손실) 217.41
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 3.153846 trades/day(일 거래 수), net(순손익) 330.59, PF(수익 팩터) 1.19, max DD(최대 손실) 133.17
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 288.55, PF(수익 팩터) 1.17
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 4.41, PF(수익 팩터) 1.24지만 validation(검증)은 net(순손익) -495.18, PF(수익 팩터) 0.01로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.598210으로 d390h10 reference(d390h10 참조)보다 낮지만 OOS PF/net(표본외 수익 팩터/순손익)은 살아 있다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.539837이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.451282 trades/day(일 거래 수)라 density gain(밀도 증가)이 생존하지 못했다.
+- attribution read(귀속 판독): validation(검증)은 late session(후반 세션) -30.59, vol_low(저변동성) -73.66, ADX 20-25(평균 방향 지수 20-25) -87.83이 약했고 OOS(표본외)는 late/early session(후반/초반 세션), vol_low(저변동성), range_or_weak_trend(횡보/약한 추세), ADX below 20(평균 방향 지수 20 미만)이 강했다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation/OOS density(검증/표본외 밀도) 5.0 미만, validation PF(검증 수익 팩터) 1.10 미만, validation cost-stressed expectancy(검증 비용 압박 기대값) 음수, same-move density survival(동일 이동 밀도 생존) 실패다.
+- next_hypothesis_branch(다음 가설 가지): `validation_adx20_25_or_late_session_damage_repair_after_c08b_without_same_move_split`
+
+## Latest Run50AD Intermediate Evidence(최신 50AD 중간 근거)
+
+- packet(묶음): `stage56_run50AD_c12_rf_path_repair_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AD_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AD_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AD_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50AD_c12_rf_path_repair_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AD_lv26b_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50AC(실행50AC)는 Windows path length(윈도우 경로 길이) 문제로 blocked(차단)됐고, run50AD(실행50AD)는 같은 hypothesis family(가설군)를 짧은 run id(실행 ID)로 수리해 실제 MT5 validation/OOS(메타트레이더5 검증/표본외)를 완료했다. 효과(effect, 효과): 실패 시도를 환경 중단으로 쓰지 않고, 수리 실행으로 근거를 만들었다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `lv26b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 3.836066 trades/day(일 거래 수), net(순손익) 23.40, PF(수익 팩터) 1.01, max DD(최대 손실) 381.69
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 2.533333 trades/day(일 거래 수), net(순손익) 312.41, PF(수익 팩터) 1.23, max DD(최대 손실) 118.77
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 414.56, PF(수익 팩터) 1.31
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 4.41, PF(수익 팩터) 1.24지만 validation(검증)은 net(순손익) -495.38, PF(수익 팩터) 0.01로 매우 약하다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.613230으로 d390h10 reference(d390h10 참조) 0.628265보다 -0.015034 낮아 materially worse(중대 악화)는 아니다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.242915로 낮지만 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.917949 trades/day(일 거래 수)라 density(밀도)가 기준까지 생존하지 못했다.
+- attribution read(귀속 판독): buy vol_low firewall(매수 저변동성 방화벽)은 OOS buy damage(표본외 매수 손상)를 고쳤지만 validation early/buy ADX 20-25(검증 초반/매수 평균 방향 지수 20-25)가 약했고 threshold relaxation(임계값 완화)은 같은 결과로 포화됐다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation/OOS density(검증/표본외 밀도) 5.0 미만, validation PF(검증 수익 팩터) 1.10 미만, validation cost-stressed expectancy(검증 비용 압박 기대값) 음수, same-move density survival(동일 이동 밀도 생존) 실패다.
+- next_hypothesis_branch(다음 가설 가지): `recover_density_after_buy_vol_low_firewall_with_session_or_side_axis_without_same_move_split`
+
+## Latest Run50AB Intermediate Evidence(최신 50AB 중간 근거)
+
+- packet(묶음): `stage56_run50AB_cooldown12_density_repair_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AB_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AB_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AB_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50AB_cooldown12_density_repair_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AB_nfab_c12_h08_s300l210_b_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50AB(실행50AB)는 actual 12-bar cooldown(실제 12봉 쿨다운), hold10/hold8/hold6(10봉/8봉/6봉 보유), lower threshold(낮은 임계값), matched Tier B comparison(대응 Tier B 비교)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): hold compression(보유 압축)이 profitable move split(수익 이동 분할)인지 직접 감사했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `nfab_c12_h08_s300l210_b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 5.054645 trades/day(일 거래 수), net(순손익) 71.06, PF(수익 팩터) 1.03, max DD(최대 손실) 479.71
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 3.430769 trades/day(일 거래 수), net(순손익) 139.42, PF(수익 팩터) 1.08, max DD(최대 손실) 182.98
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 50.74, PF(수익 팩터) 1.03
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -11.43, PF(수익 팩터) 0.67로 negative(음수)다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.581873이고 d390h10 reference(d390h10 참조)보다 -0.046392 낮다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.325859이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 2.312821 trades/day(일 거래 수)다.
+- attribution read(귀속 판독): validation early session(검증 초반 세션) -76.69, validation vol_low(검증 저변동성) -50.35, validation ADX 20-25(검증 평균 방향 지수 20-25) -40.64가 약했다. OOS(표본외)는 mid session(중반 세션) -30.73, downtrend(하락 추세) -55.33, ADX 20-25(평균 방향 지수 20-25) -22.81, ADX >25(평균 방향 지수 25 초과) -32.52가 약했다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move density audit(동일 이동 밀도 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+- next_hypothesis_branch(다음 가설 가지): `cooldown12_regime_firewall_or_side_specific_adx_trend_repair_without_same_move_split`
+
+## Latest Run50AA Intermediate Evidence(최신 50AA 중간 근거)
+
+- packet(묶음): `stage56_run50AA_same_move_cost_repair_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AA_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AA_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AA_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50AA_same_move_cost_repair_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AA_nfaa_s23l13_c6_l30_b_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50AA(실행50AA)는 cooldown6(6봉 쿨다운), buy ADX below 30/35(매수 평균 방향 지수 30/35 미만 허용), 낮은 threshold(임계값), matched Tier B comparison(대응 Tier B 비교)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): run50Z(실행50Z)의 cost-positive branch(비용 양수 가지)에서 밀도 회복이 가능한지 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `nfaa_s23l13_c6_l30_b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 4.464481 trades/day(일 거래 수), net(순손익) 288.34, PF(수익 팩터) 1.14, max DD(최대 손실) 171.39
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 3.020513 trades/day(일 거래 수), net(순손익) 308.82, PF(수익 팩터) 1.21, max DD(최대 손실) 168.45
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 305.18, PF(수익 팩터) 1.20
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -10.26, PF(수익 팩터) 0.66으로 negative(음수)다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.504244이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.497436 trades/day(일 거래 수)다.
+- attribution read(귀속 판독): validation early session(검증 초반 세션), validation vol_mid(검증 중간 변동성), validation ADX 20-25(검증 평균 방향 지수 20-25)가 약했고, OOS(표본외)는 mid session(중반 세션), vol_low(저변동성), ADX 20-25(평균 방향 지수 20-25)만 작게 약했다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation/OOS density(검증/표본외 밀도) 5.0 미만, same-move density audit(동일 이동 밀도 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50Z Intermediate Evidence(최신 50Z 중간 근거)
+
+- packet(묶음): `stage56_run50Z_partial_buy_adx_reintro_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Z_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Z_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Z_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50Z_partial_buy_adx_reintro_v1/aggregate_summary.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50Z(실행50Z)는 partial buy ADX reintroduction(부분 매수 평균 방향 지수 재도입)과 matched Tier B comparison(대응 Tier B 비교)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): run50Y(실행50Y)의 품질 회복과 run50X(실행50X)의 밀도 회복 사이의 tradeoff(상충)를 더 좁게 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `nfz_s31l18_c3_s2030_b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.196721 trades/day(일 거래 수), net(순손익) 451.99, PF(수익 팩터) 1.15, max DD(최대 손실) 249.56
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.056410 trades/day(일 거래 수), net(순손익) 251.32, PF(수익 팩터) 1.10, max DD(최대 손실) 142.59
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 201.81, PF(수익 팩터) 1.08
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -2.52, PF(수익 팩터) 0.91로 negative(음수)다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.748479이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.271795 trades/day(일 거래 수)다.
+- branch read(가지 판독): partial buy ADX block(부분 매수 평균 방향 지수 차단)은 same-move ratio(동일 이동 비율)를 줄였지만 OOS density(표본외 밀도)가 5 미만이었다. cooldown6(6봉 쿨다운) 변형은 OOS cost-stressed expectancy(표본외 비용 압박 기대값)를 양수로 만들었지만 밀도는 2.979487에 그쳤다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: cost-stressed expectancy(비용 압박 기대값) 음수 또는 density(밀도) 부족, same-move density audit(동일 이동 밀도 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50Y Intermediate Evidence(최신 50Y 중간 근거)
+
+- packet(묶음): `stage56_run50Y_buy_side_firewall_tierb_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Y_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Y_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Y_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50Y_buy_side_firewall_tierb_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Y_nfy_s31l18_c3_adx_b_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50Y(실행50Y)는 buy ADX 20+(매수 평균 방향 지수 20 이상) firewall(방화벽), buy vol_low(매수 저변동성) firewall(방화벽), Tier B disabled/A+B routed comparison(Tier B 비활성화/A+B 실제 라우팅 비교)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): run50X(실행50X)의 손상 원인을 buy-side(매수 방향), Tier B(티어 B), same-move split(동일 이동 분할)로 분리했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `nfy_s31l18_c3_adx_b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 3.868852 trades/day(일 거래 수), net(순손익) 166.36, PF(수익 팩터) 1.09, max DD(최대 손실) 159.92
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 2.625641 trades/day(일 거래 수), net(순손익) 378.86, PF(수익 팩터) 1.29, max DD(최대 손실) 137.04
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 420.75, PF(수익 팩터) 1.33
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -6.61, PF(수익 팩터) 0.59로 negative(음수)다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.628193으로 run50X(실행50X)보다 높다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.474609로 낮아졌지만 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.379487 trades/day(일 거래 수)다.
+- attribution read(귀속 판독): strict buy ADX 20+ block(강한 매수 평균 방향 지수 20 이상 차단) 뒤 OOS(표본외)는 모든 session(세션)이 양수였지만 validation early session(검증 초반 세션)은 -133.52로 약했다. 효과(effect, 효과): 다음 가지는 일부 buy ADX(매수 평균 방향 지수) 기회를 되살려 밀도를 회복해야 한다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation/OOS density(검증/표본외 밀도) 5.0 미만, validation PF(검증 수익 팩터) 1.10 미만, same-move density audit(동일 이동 밀도 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50X Intermediate Evidence(최신 50X 중간 근거)
+
+- packet(묶음): `stage56_run50X_nonflat_adx_soft_firewall_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50X_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50X_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50X_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50X_nonflat_adx_soft_firewall_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50X_nfx_s33l20_c3_s2030_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50X(실행50X)는 wider short ADX 20-30 firewall(더 넓은 숏 평균 방향 지수 20-30 방화벽), soft long ADX block(완만한 롱 평균 방향 지수 차단), 2~3 bar cooldown(2~3봉 쿨다운)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): run50W(실행50W)보다 OOS PF(표본외 수익 팩터)를 기준에 더 가깝게 끌어올렸는지 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `nfx_s33l20_c3_s2030`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.196721 trades/day(일 거래 수), net(순손익) 451.99, PF(수익 팩터) 1.15, max DD(최대 손실) 249.56
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.056410 trades/day(일 거래 수), net(순손익) 251.32, PF(수익 팩터) 1.10, max DD(최대 손실) 142.59
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 201.81, PF(수익 팩터) 1.08
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -2.52, PF(수익 팩터) 0.91로 negative(음수)다.
+- MFE capture read(MFE 포착 판독): OOS MFE capture ratio(표본외 MFE 포착 비율)는 0.605995다.
+- same-move read(동일 이동 판독): OOS same-move re-entry ratio(표본외 동일 이동 재진입 비율)는 0.748479이고, 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.271795 trades/day(일 거래 수)다. 효과(effect, 효과): 5+ trades/day(일 거래 수) 밀도는 아직 cooldown(쿨다운) 뒤 생존하지 않는다.
+- attribution read(귀속 판독): OOS buy vol_low(표본외 매수 저변동성) -285.35, buy ADX 20-25(매수 평균 방향 지수 20-25) -111.11, buy ADX >25(매수 평균 방향 지수 25 초과) -116.97이 약했고, sell ADX >25(매도 평균 방향 지수 25 초과)는 +281.21로 강했다. 효과(effect, 효과): 다음 후보는 buy-side(매수 방향) 저변동성/ADX 손상을 막되 sell-side(매도 방향) 고ADX 이익은 보존해야 한다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50W Intermediate Evidence(최신 50W 중간 근거)
+
+- packet(묶음): `stage56_run50W_nonflat_regime_firewall_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50W_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50W_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50W_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50W_nonflat_regime_firewall_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50W_nfw_s35l22_c2_sadx_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50W(실행50W)는 run50V(실행50V)의 core/mixed Tier B gate(핵심/혼합 Tier B 선별)를 유지하고, short ADX 20-25 firewall(숏 평균 방향 지수 20-25 방화벽), 일부 long ADX >25 firewall(롱 평균 방향 지수 25 초과 방화벽), 1~3 bar reentry cooldown(1~3봉 재진입 쿨다운)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): validation PF(검증 수익 팩터)를 살리면서 density(밀도)가 유지되는지, 그리고 same-move split(동일 이동 분할)이 줄어드는지 확인했다.
+
+- closest intermediate variant(가장 가까운 중간 변형): `nfw_s35l22_c2_sadx`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 8.185792 trades/day(일 거래 수), net(순손익) 600.73, PF(수익 팩터) 1.18, max DD(최대 손실) 214.55
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.830769 trades/day(일 거래 수), net(순손익) 139.96, PF(수익 팩터) 1.05, max DD(최대 손실) 267.00
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 167.59, PF(수익 팩터) 1.06
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 1.21, PF(수익 팩터) 1.05로 non-negative(비음수)다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.594122로 d390h10 reference(d390h10 참조)보다 낮다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.780123이고 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.282051 trades/day(일 거래 수)로 떨어진다. 효과(effect, 효과): density gain(밀도 증가)은 아직 same-move split trading(동일 이동 분할 거래)에 크게 기대고 있다.
+- attribution read(귀속 판독): validation(검증)은 long/buy ADX >25(롱/매수 평균 방향 지수 25 초과)가 강했지만 OOS(표본외)는 buy downtrend(매수 하락 추세), buy ADX >25(매수 평균 방향 지수 25 초과), buy vol_low(매수 저변동성)가 약했다. 효과(effect, 효과): 다음 가지는 hard long ADX >25 block(강한 롱 평균 방향 지수 25 초과 차단)보다 softer long-high-ADX firewall(완만한 롱 고ADX 방화벽)이나 buy-side OOS damage filter(매수 방향 표본외 손상 필터)를 시험한다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS PF(표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패다.
+
+## Latest Run50V Intermediate Evidence(최신 50V 중간 근거)
+
+- packet(묶음): `stage56_run50V_nonflat_vol_low_hold6_tierb_gate_repair_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50V_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50V_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50V_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50V_nonflat_vol_low_hold6_tierb_gate_repair_v1/aggregate_summary.json`
+- attribution_report(귀속 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50V_nfv_h6_s37l24_bcm_market_weather_attribution.md`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50V(실행50V)는 run50U(실행50U)의 gated Tier B(Tier B 선별) long-path failure(긴 경로 실패)를 짧은 variant_id(변형 ID)로 수리하고, core/mixed/macro Tier B subtype gate(핵심/혼합/거시 Tier B 하위 유형 선별)를 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): Tier B fallback-only OOS(Tier B 대체 전용 표본외)가 양수로 바뀌는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `nfv_h6_s37l24_bcm`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.054645 trades/day(일 거래 수), net(순손익) 153.96, PF(수익 팩터) 1.04, max DD(최대 손실) 256.52
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.297436 trades/day(일 거래 수), net(순손익) 107.69, PF(수익 팩터) 1.04, max DD(최대 손실) 267.28
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 92.04, PF(수익 팩터) 1.03
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 10.05, PF(수익 팩터) 1.74로 non-negative(비음수)다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.589626으로 낮아졌고, 품질 개선 없이 density(밀도)만 유지한 상태다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.769603이고 12-bar re-entry count(12봉 재진입 수)는 795이다. 효과(effect, 효과): density gain(밀도 증가)은 여전히 same-move split trading(동일 이동 분할 거래)에 주로 기대며, 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.220513 trades/day(일 거래 수)로 떨어진다.
+- attribution read(귀속 판독): validation(검증)은 ADX 20-25(평균 방향 지수 20-25), mid session(중반 세션), vol_mid(중간 변동성)가 약했고 OOS(표본외)는 downtrend(하락 추세), adx_gt25(평균 방향 지수 25 초과), mid session(중반 세션)이 약했다. 효과(effect, 효과): 다음 가지는 단일 필터보다 regime-inversion repair(국면 반전 수리)와 same-move firewall(동일 이동 방화벽) 조합으로 잡는다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패다.
+
+## Latest Run50U Intermediate Evidence(최신 50U 중간 근거)
+
+- packet(묶음): `stage56_run50U_nonflat_vol_low_hold6_short_filter_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50U_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50U_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50U_audit.csv`
+- failed_attempt_repair_note(실패 시도 수리 기록): `docs/agent_control/packets/stage56_run50U_nonflat_vol_low_hold6_short_filter_v1/failed_attempt_long_path_repair.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50U(실행50U)는 hold6(6봉 보유), vol_low block(저변동성 차단), short threshold filter(숏 임계값 필터)를 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): sell-side damage(매도 방향 손상)를 줄이면 PF(수익 팩터)가 기준까지 살아나는지 확인했다. best intermediate variant(최선 중간 변형) `nf_vollow_h06_s370l240_b`는 validation/OOS(검증/표본외) 7.278689/5.456410 trades/day(일 거래 수), PF(수익 팩터) 1.04/1.05, net(순손익) 155.07/151.12였지만, cost stress(비용 압박), same-move audit(동일 이동 감사), Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수로 selected_research_baseline(선택 연구 기준선)이 아니다. 마지막 gated Tier B(Tier B 선별) 변형은 long-path failure(긴 경로 실패)로 차단됐고 run50V(실행50V)에서 수리 재실행했다.
+
+## Latest Run50T Intermediate Evidence(최신 50T 중간 근거)
+
+- packet(묶음): `stage56_run50T_nonflat_vol_low_hold_compression_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50T_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50T_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50T_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50T_nonflat_vol_low_hold_compression_v1/aggregate_summary.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50T(실행50T)는 run50S(실행50S)의 vol_low block(저변동성 차단)에 hold8/hold6 compression(8봉/6봉 보유 압축)을 붙여 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): shorter hold(짧은 보유)가 density(밀도)를 회복하는지, 아니면 same-move split trading(동일 이동 분할 거래)을 늘리는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `nf_vollow_h06_s350l240_b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.311475 trades/day(일 거래 수), net(순손익) 116.61, PF(수익 팩터) 1.03, max DD(최대 손실) 256.52
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.471795 trades/day(일 거래 수), net(순손익) 146.50, PF(수익 팩터) 1.05, max DD(최대 손실) 260.72
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 87.01, PF(수익 팩터) 1.03
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -49.91, PF(수익 팩터) 0.79로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.599617로 d390h10 reference(d390h10 참조)보다 낮지만, current gate(현재 게이트)의 주요 실패 원인은 density(밀도)가 아니라 PF(수익 팩터), cost stress(비용 압박), same-move split(동일 이동 분할), Tier B rule(Tier B 규칙)이다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.778819이고 12-bar re-entry count(12봉 재진입 수)는 831이다. 효과(effect, 효과): hold6(6봉 보유)의 density gain(밀도 증가)은 same-move split trading(동일 이동 분할 거래)에 주로 기대며, 12-bar cooldown(12봉 쿨다운) 뒤 density(밀도)가 생존하지 않는다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50S Intermediate Evidence(최신 50S 중간 근거)
+
+- packet(묶음): `stage56_run50S_nonflat_vol_low_block_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50S_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50S_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50S_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50S_nonflat_vol_low_block_v1/aggregate_summary.json`
+- writer_repair_note(쓰기 복구 기록): `docs/agent_control/packets/stage56_run50S_nonflat_vol_low_block_v1/writer_repair_note.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50S(실행50S)는 run50R(실행50R) market/weather attribution(시장 상태 귀속)에서 vol_low(저변동성)가 OOS(표본외)를 크게 깎는 단서를 바탕으로, historical_vol_20(20봉 역사 변동성) feature index(피처 인덱스) 32의 vol_low(저변동성) 구간을 차단하고 threshold relaxation(임계값 완화)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): 낮은 변동성 손상을 제거해 Tier B(티어 B) 손상과 PF(수익 팩터)가 회복되는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `nf_vollow_c0_s350l240_b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 5.748634 trades/day(일 거래 수), net(순손익) 24.39, PF(수익 팩터) 1.01, max DD(최대 손실) 314.45
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 4.200000 trades/day(일 거래 수), net(순손익) 187.83, PF(수익 팩터) 1.07, max DD(최대 손실) 223.35
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 51.22, PF(수익 팩터) 1.02
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 43.40, PF(수익 팩터) 1.20으로 non-negative(비음수)다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.619438로 d390h10 reference(d390h10 참조)보다 materially worse(중대 악화)는 아니다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.715507이고 12-bar re-entry count(12봉 재진입 수)는 586이다. 효과(effect, 효과): vol_low block(저변동성 차단)은 Tier B(티어 B)를 안정화했지만 density gain(밀도 증가)은 여전히 same-move split trading(동일 이동 분할 거래)에 기대고, 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.194872 trades/day(일 거래 수)로 떨어진다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패다.
+
+## Latest Run50R Intermediate Evidence(최신 50R 중간 근거)
+
+- packet(묶음): `stage56_run50R_nonflat_adx_band_block_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50R_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50R_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50R_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50R_nonflat_adx_band_block_v1/aggregate_summary.json`
+- writer_repair_note(쓰기 복구 기록): `docs/agent_control/packets/stage56_run50R_nonflat_adx_band_block_v1/writer_repair_note.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50R(실행50R)은 run50Q(실행50Q) attribution(귀속)에서 ADX 20~25(ADX 20~25 구간)가 validation/OOS(검증/표본외)를 흔드는 단서를 바탕으로, both-side ADX band block(양방향 ADX 구간 차단)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): 밀도(density, 밀도)가 5+ trades/day(일 거래 수)에 닿는지 확인하면서 ADX band(ADX 구간) 차단이 PF(수익 팩터)와 same-move split(동일 이동 분할)을 개선하는지 봤다.
+
+- best intermediate variant(최선 중간 변형): `nf_adxblk_c0_s380l270_b`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.655738 trades/day(일 거래 수), net(순손익) 1.24, PF(수익 팩터) 1.00, max DD(최대 손실) 281.89
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.164103 trades/day(일 거래 수), net(순손익) 67.89, PF(수익 팩터) 1.02, max DD(최대 손실) 319.83
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 38.74, PF(수익 팩터) 1.01
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -28.31, PF(수익 팩터) 0.90으로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.606297로 d390h10 reference(d390h10 참조)보다 낮지만 materially worse(중대 악화)로만 볼 정도는 아니다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.756703이고 12-bar re-entry count(12봉 재진입 수)는 762다. 효과(effect, 효과): density gain(밀도 증가)은 여전히 same-move split trading(동일 이동 분할 거래)에 크게 기대고, 12-bar cooldown(12봉 쿨다운) 뒤 OOS density(표본외 밀도)는 1.256410 trades/day(일 거래 수)로 떨어진다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50Q Intermediate Evidence(최신 50Q 중간 근거)
+
+- packet(묶음): `stage56_run50Q_nonflat_side_adx_cooldown_interp_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Q_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Q_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50Q_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50Q_nonflat_side_adx_cooldown_interp_v1/aggregate_summary.json`
+- writer_repair_note(쓰기 복구 기록): `docs/agent_control/packets/stage56_run50Q_nonflat_side_adx_cooldown_interp_v1/writer_repair_note.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50Q(실행50Q)는 run50P(실행50P)의 0봉/2봉 cooldown(쿨다운) 사이를 1봉 cooldown(쿨다운)으로 보간했다. 효과(effect, 효과): density(밀도)를 유지하면서 same-move split(동일 이동 분할)과 품질 손상을 줄일 수 있는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `nf_h10c1_s390l280_b_sadx`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.530055 trades/day(일 거래 수), net(순손익) -8.43, PF(수익 팩터) 1.00, max DD(최대 손실) 288.32
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.102564 trades/day(일 거래 수), net(순손익) 99.37, PF(수익 팩터) 1.03, max DD(최대 손실) 278.00
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) -4.22, PF(수익 팩터) 1.00
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -36.33, PF(수익 팩터) 0.88로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.607672로 d390h10 reference(d390h10 참조)보다 낮지만 materially worse(중대 악화)로만 볼 정도는 아니다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.767839이고 12-bar re-entry count(12봉 재진입 수)는 764다. 효과(effect, 효과): density gain(밀도 증가)은 아직 same-move split trading(동일 이동 분할 거래)에 크게 기대고 있다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: validation net(검증 순손익) 음수, validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50P Intermediate Evidence(최신 50P 중간 근거)
+
+- packet(묶음): `stage56_run50P_nonflat_side_adx_density_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50P_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50P_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50P_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50P_nonflat_side_adx_density_v1/aggregate_summary.json`
+- writer_repair_note(쓰기 복구 기록): `docs/agent_control/packets/stage56_run50P_nonflat_side_adx_density_v1/writer_repair_note.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50P(실행50P)은 run50K(실행50K)의 dense non-flat model axis(조밀 비무포지션 가중 모델 축)에 run50N(실행50N)의 short ADX filter(숏 ADX 필터)를 붙였다. 효과(effect, 효과): density(밀도)를 모델 축으로 확보하고 품질은 방향 필터로 회복할 수 있는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `nf_h10c2_s390l280_b_sadx`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.136612 trades/day(일 거래 수), net(순손익) 116.66, PF(수익 팩터) 1.03, max DD(최대 손실) 270.68
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 4.758974 trades/day(일 거래 수), net(순손익) 140.04, PF(수익 팩터) 1.05, max DD(최대 손실) 250.38
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 5.00, PF(수익 팩터) 1.02로 non-negative(비음수)이지만 기준선 품질을 만들지 못했다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.614114로 d390h10 reference(d390h10 참조)보다 낮지만 materially worse(중대 악화)로만 볼 정도는 아니다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.724138이고 12-bar re-entry count(12봉 재진입 수)는 672다. 효과(effect, 효과): density gain(밀도 증가)은 여전히 same-move split trading(동일 이동 분할 거래)에 많이 기대고 있다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패다.
+
+## Latest Run50O Intermediate Evidence(최신 50O 중간 근거)
+
+- packet(묶음): `stage56_run50O_hold6_side_adx_density_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50O_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50O_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50O_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50O_hold6_side_adx_density_v1/aggregate_summary.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50O(실행50O)은 default Stage07 LogReg(기본 Stage07 로지스틱 회귀) hold6(6봉 보유) 계열에 run50N(실행50N)의 short ADX filter(숏 ADX 필터)를 붙였다. 효과(effect, 효과): OOS density(표본외 밀도)를 5에 가깝게 되돌릴 때 품질과 same-move audit(동일 이동 감사)이 같이 살아나는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `d320h06_sadx_c0_b045`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 6.398907 trades/day(일 거래 수), net(순손익) 143.47, PF(수익 팩터) 1.04, max DD(최대 손실) 285.05
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 4.882051 trades/day(일 거래 수), net(순손익) 60.50, PF(수익 팩터) 1.02, max DD(최대 손실) 240.54
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -44.61, PF(수익 팩터) 0.82로 damaging(손상)했다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.605966이고 d390h10 reference(d390h10 참조)보다 낮다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.742647이고 12-bar re-entry count(12봉 재진입 수)는 707이다. 효과(effect, 효과): density gain(밀도 증가)은 주로 same-move split trading(동일 이동 분할 거래)로 읽는다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Latest Run50N Intermediate Evidence(최신 50N 중간 근거)
+
+- packet(묶음): `stage56_run50N_side_adx_filter_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50N_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50N_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50N_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50N_side_adx_filter_v1/aggregate_summary.json`
+- writer_repair_note(쓰기 복구 기록): `docs/agent_control/packets/stage56_run50N_side_adx_filter_v1/writer_repair_note.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50N(실행50N)은 run50M(실행50M)의 direction/ADX attribution(방향/ADX 귀속)에서 나온 `skip_short_adx_20_25` 단서를 실제 EA side filter(방향 필터) 입력으로 검증했다. 효과(effect, 효과): post-hoc aggregation(사후 합산)이 아니라 single MT5 tester account path(단일 MT5 테스터 계정 경로)의 actual routed total(실제 라우팅 전체)을 남겼다.
+
+- best intermediate variant(최선 중간 변형): `c6s330l235_b_sadx`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 6.196721 trades/day(일 거래 수), net(순손익) 256.42, PF(수익 팩터) 1.09, max DD(최대 손실) 237.16
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 4.005128 trades/day(일 거래 수), net(순손익) 508.97, PF(수익 팩터) 1.25, max DD(최대 손실) 171.29
+- Tier A only(Tier A 단독) OOS(표본외): net(순손익) 536.95, PF(수익 팩터) 1.27
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 18.42, PF(수익 팩터) 1.08로 non-negative(비음수)였지만 A+B actual routed total(A+B 실제 라우팅 전체)은 A-only(A 단독)보다 OOS net(표본외 순손익)이 낮았다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.619893이고 d390h10 reference(d390h10 참조)보다 materially worse(중대 악화)는 아니다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.661972이고 12-bar re-entry count(12봉 재진입 수)는 517이다. 효과(effect, 효과): short ADX filter(숏 ADX 필터)는 품질은 개선했지만 density gain(밀도 증가)이 cooldown(쿨다운) 뒤 생존한다는 근거는 아직 없다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation PF(검증 수익 팩터) 1.10 미만, validation cost-stressed expectancy(검증 비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패다.
+
+## Latest Run50M Intermediate Evidence(최신 50M 중간 근거)
+
+- packet(묶음): `stage56_run50M_cooldown_threshold_interpolation_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50M_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50M_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50M_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50M_cooldown_threshold_interpolation_v1/aggregate_summary.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50M(실행50M)은 run50L(실행50L)의 6봉/12봉 cooldown(쿨다운) 간격을 threshold(임계값) 보간으로 다시 압박했다. 효과(effect, 효과): OOS density(표본외 밀도)를 5+로 회복할 때 품질과 same-move audit(동일 이동 감사)이 같이 살아나는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `nf150_c8_h10_s340l240_b045`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 6.415301 trades/day(일 거래 수), net(순손익) 91.64, PF(수익 팩터) 1.03, max DD(최대 손실) 254.78
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 4.066667 trades/day(일 거래 수), net(순손익) 233.06, PF(수익 팩터) 1.11, max DD(최대 손실) 188.43
+- closest quality variant(품질 근접 변형): `nf150_c6_h10_s350l250_b045`는 OOS(표본외) net(순손익) 590.30, PF(수익 팩터) 1.28, cost-stressed expectancy(비용 압박 기대값) 0.183218였지만 OOS density(표본외 밀도)는 4.430769였다.
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) 15.82~16.67, PF(수익 팩터) 1.07로 non-negative(비음수)이지만, validation PF(검증 수익 팩터)와 density(밀도) 문제를 해결하지 못했다.
+- MFE capture read(MFE 포착 판독): best OOS MFE capture ratio(최선 표본외 MFE 포착 비율)는 0.588035이고 d390h10 reference(d390h10 참조) 대비 -0.040230이라 materially worse(중대 악화)는 아니다.
+- same-move read(동일 이동 판독): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.683480이고 12-bar cooldown read(12봉 쿨다운 판독)는 1.287179 trades/day(일 거래 수)라 density gain(밀도 증가)이 생존하지 못했다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS density(표본외 밀도) 5.0 미만, validation PF(검증 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 실패, same-move audit(동일 이동 감사) 실패다.
+
+## Latest Run50K Intermediate Evidence(최신 50K 중간 근거)
+
+- packet(묶음): `stage56_run50K_model_axis_density_repair_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50K_reopen_batch.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50K_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50K_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50K_model_axis_density_repair_v1/aggregate_summary.json`
+- selected_research_baseline(선택 연구 기준선): `none`
+- current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
+
+Run50K(실행50K)는 non-flat weighted model(비무포지션 가중 모델), recent-train model(최근 학습 모델), A-only/A+B comparison(A 단독/A+B 비교)을 실제 MT5 validation/OOS(검증/표본외)로 시험했다. 효과(effect, 효과): threshold-only axis(임계값 전용 축)를 넘어 model axis(모델 축)가 밀도와 품질을 동시에 살릴 수 있는지 확인했다.
+
+- best intermediate variant(최선 중간 변형): `nf150_h10_s420l360_b045`
+- A+B actual routed total(A+B 실제 라우팅 전체) validation(검증): 7.704918 trades/day(일 거래 수), net(순손익) 120.56, PF(수익 팩터) 1.03, max DD(최대 손실) 284.39
+- A+B actual routed total(A+B 실제 라우팅 전체) OOS(표본외): 5.323077 trades/day(일 거래 수), net(순손익) -53.42, PF(수익 팩터) 0.98, max DD(최대 손실) 365.34
+- Tier B fallback-only OOS(Tier B 대체 전용 표본외): net(순손익) -38.17, PF(수익 팩터) 0.87로 negative(음수)다.
+- hold/re-entry audit(보유/재진입 감사): best OOS same-move re-entry ratio(최선 표본외 동일 이동 재진입 비율)는 0.786127이고 12-bar cooldown read(12봉 쿨다운 판독)는 1.138462 trades/day(일 거래 수)라 density gain(밀도 증가)이 생존하지 못했다.
+- selected_research_baseline(선택 연구 기준선)으로 올리지 않는 이유: OOS net(표본외 순손익) 음수, validation/OOS PF(검증/표본외 수익 팩터) 1.10 미만, cost-stressed expectancy(비용 압박 기대값) 음수, same-move audit(동일 이동 감사) 실패, Tier B fallback-only OOS(Tier B 대체 전용 표본외) 음수다.
+
+## Prior Stage56 Run50B Dense Engine Grid(이전 56단계 50B 두꺼운 엔진 격자)
 
 - current stage(현재 단계): `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`
 - current run(현재 실행): `run50B_tier_a_dense_engine_grid_v1`
@@ -1406,7 +1921,7 @@ Codex 제어면 v2(Control Plane v2, 제어면 v2)는 코덱스 작업 운영 �
 - boundary(경계): `runtime_probe_probability_shape_attribution_not_alpha_quality_not_promotion_not_runtime_authority`
 - effect(효과): 모델 변형이 아니라 probability-shape attribution regime(확률 모양 귀속 국면) 축을 확인했고, alpha quality(알파 품질)나 promotion candidate(승격 후보)는 만들지 않는다.
 
-## 2026-05-12 Stage56 closeout(56단계 종료)
+## 2026-05-12 Stage56 closeout(56단계 종료, 비최종 중간 근거)
 
 - active_stage(현재 단계): `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`
 - closeout(종료): `stage56_closeout_v1`
@@ -1415,9 +1930,9 @@ Codex 제어면 v2(Control Plane v2, 제어면 v2)는 코덱스 작업 운영 �
 - evidence(근거): actual MT5 closed trades(실제 MT5 청산 거래), run50C(실행50C) stage ledger(단계 장부), project ledger(프로젝트 장부), run_manifest(실행 목록), market-weather attribution(시장 상태 귀속)
 - selected_research_baseline(선택 연구 기준선): `none`
 - live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 참조): `none`
-- effect(효과): Stage56(56단계)은 후보를 보존하고 닫지만, 운영 기준선이나 런타임 권위는 만들지 않는다.
+- effect(효과): 이 묶음은 후보를 보존하는 prior intermediate evidence(이전 중간 근거)이며, `stage56_reopen_goal_v1` 이후 Stage56(56단계)을 닫지 않는다.
 
-## 2026-05-12 Stage56 reopened closeout(56단계 재개 종료)
+## 2026-05-12 Stage56 reopened closeout(56단계 재개 종료, 비최종 중간 근거)
 
 - active_stage(현재 단계): `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`
 - closeout(종료): `stage56_reopened_closeout_v2`
@@ -1426,6 +1941,6 @@ Codex 제어면 v2(Control Plane v2, 제어면 v2)는 코덱스 작업 운영 �
 - evidence(근거): run50D(실행50D) 18개 variant(변형) actual MT5 closed trades(실제 MT5 청산 거래), stage ledger(단계 장부), project ledger(프로젝트 장부), run registry(실행 등록부), d390h10 market-weather attribution(시장 상태 귀속)
 - selected_research_baseline(선택 연구 기준선): `none`
 - live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 참조): `none`
-- effect(효과): Stage56(56단계)은 d38h10보다 강한 연구 후보를 찾았지만, preferred density(선호 밀도) 5~10 trades/day(거래/일)에 못 미쳐 선택 기준선으로 고정하지 않는다.
+- effect(효과): Stage56(56단계)은 d38h10보다 강한 연구 후보를 찾았지만, selected_research_baseline(선택 연구 기준선)을 찾지 못했으므로 `stage56_reopen_goal_v1` 이후 active_in_progress(활성 진행 중)로 계속된다.
 
 

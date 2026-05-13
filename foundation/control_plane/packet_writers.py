@@ -8,7 +8,7 @@ import pandas as pd
 from foundation.alpha.decision_views import TIER_A, TIER_AB, TIER_B, select_threshold_from_sweep
 from foundation.control_plane import alpha_run_ledgers
 
-from foundation.mt5.runtime_artifacts import sha256_file, write_json
+from foundation.mt5.runtime_artifacts import io_path, sha256_file, write_json
 
 
 def build_alpha_run_manifest_payload(
@@ -262,6 +262,7 @@ def materialize_alpha_scout_run_outputs(
     stage_run_ledger_path: Path,
     project_alpha_ledger_path: Path,
     run_registry_path: Path,
+    reentry_cooldown_bars: int = 0,
     tier_a_only_prefix: str = "mt5_tier_a_only",
     tier_b_fallback_only_prefix: str = "mt5_tier_b_fallback_only",
     tier_a: str = TIER_A,
@@ -412,6 +413,7 @@ def materialize_alpha_scout_run_outputs(
             "leverage": "1:100",
             "fixed_lot": 0.1,
             "max_hold_bars": int(max_hold_bars),
+            "reentry_cooldown_bars": int(reentry_cooldown_bars),
             "max_concurrent_positions": 1,
         },
     }
@@ -482,6 +484,7 @@ def materialize_alpha_scout_run_outputs(
         f"- Tier B fallback allowed subtypes: `{list(allowed_fallback_subtypes) if allowed_fallback_subtypes else 'all'}`",
         f"- session slice: `{session_slice_id or 'full'}`",
         f"- max hold bars: `{int(max_hold_bars)}`",
+        f"- reentry cooldown bars: `{int(reentry_cooldown_bars)}`",
         f"- external verification status: `{external_status}`",
         f"- Tier A rows: `{tier_a_predictions_count}`",
         f"- Tier B fallback rows: `{tier_b_predictions_count}`",
@@ -517,7 +520,8 @@ def materialize_alpha_scout_run_outputs(
         "single_split_scout only; not alpha quality, live readiness, runtime authority expansion, or operating promotion.",
         "",
     ]
-    result_summary_path.write_text("\n".join(result_summary_lines), encoding="utf-8-sig")
+    io_path(result_summary_path.parent).mkdir(parents=True, exist_ok=True)
+    io_path(result_summary_path).write_text("\n".join(result_summary_lines), encoding="utf-8-sig")
 
     return {
         "status": "ok" if onnx_parity["passed"] else "failed",

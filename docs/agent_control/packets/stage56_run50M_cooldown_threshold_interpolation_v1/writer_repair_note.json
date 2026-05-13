@@ -1,0 +1,21 @@
+{
+  "packet_id": "stage56_run50M_cooldown_threshold_interpolation_v1",
+  "run_id": "run50M_stage56_cooldown_threshold_interpolation_v1",
+  "status": "writer_reaggregation_repaired",
+  "selected_research_baseline": "none",
+  "stage56_remains_open": true,
+  "forced_attempt": {
+    "command": "python -m stage_pipelines.stage56.cooldown_threshold_interpolation_batch --attempt-mt5 --force",
+    "mt5_reports_created": true,
+    "variant_summary_json_created": true,
+    "initial_aggregate_status": "blocked",
+    "blocker_type": "post_mt5_writer_result_summary_md_missing"
+  },
+  "repair_attempt": {
+    "command": "python -m stage_pipelines.stage56.cooldown_threshold_interpolation_batch",
+    "effect": "reused existing per-variant summary.json files and rewrote aggregate_summary.json, run50M_summary.csv, run50M_audit.csv, run50M_reopen_batch.md, and progress_log.md",
+    "mt5_rerun_required": false,
+    "repair_status": "completed"
+  },
+  "claim_boundary": "writer repair note only; not a closeout, not selected_research_baseline, not live_readiness, not runtime_authority, not operating_promotion"
+}
