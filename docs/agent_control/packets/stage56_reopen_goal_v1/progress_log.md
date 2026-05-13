@@ -2,7 +2,7 @@
 
 - packet_id(묶음 ID): `stage56_reopen_goal_v1`
 - stage_status(단계 상태): `active_in_progress(활성 진행 중)`
-- latest_batch(최신 후보 묶음): `run50AS_stage56_extratrees_rearm_real_density_guard_v1`
+- latest_batch(최신 후보 묶음): `run50AT_stage56_extratrees_leaf_granularity_transition_density_source_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - terminal_condition(종료 조건): useful BaselineAdapter(유용한 기준선 어댑터) hard condition(강한 완료 조건) satisfied(충족)
 - non_final_prior_packets(비최종 이전 묶음): `stage56_closeout_v1`, `stage56_reopened_closeout_v2`
@@ -30,56 +30,55 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 
 | variant(변형) | hypothesis family(가설군) | fallback(대체) | report paths(보고서 경로) | val/day(검증/일) | OOS/day(표본외/일) | val PF(검증 PF) | OOS PF(표본외 PF) | val net(검증 순손익) | OOS net(표본외 순손익) | reason(이유) |
 |---|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| et40h6_tr_a | strict_transition_gate_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_tr_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_tr_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_tr_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_tr_a_logreg_deep_v1_routed_oos.htm | 5.338798 | 3.615385 | 1.08 | 1.44 | 196.93 | 663.37 | oos_density; validation_pf; cost_stressed_expectancy; same_move_density |
-| et40h6_r015_a | confidence_rearm_guard_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r015_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r015_a_logreg_deep_v1_routed_oos.htm | 5.978142 | 4.271795 | 1.12 | 1.34 | 317.78 | 632.5 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
-| et40h6_r030_a | confidence_rearm_guard_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r030_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r030_a_logreg_deep_v1_routed_oos.htm | 5.535519 | 3.800000 | 1.14 | 1.39 | 357.69 | 633.65 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
-| et40h6_r050_a | confidence_rearm_guard_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r050_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r050_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r050_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r050_a_logreg_deep_v1_routed_oos.htm | 5.382514 | 3.641026 | 1.09 | 1.43 | 216.76 | 650.43 | oos_density; validation_pf; cost_stressed_expectancy; same_move_density |
-| et40h6_r030_s24l15_a | transition_guard_density_recovery_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r030_s24l15_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r030_s24l15_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r030_s24l15_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r030_s24l15_a_logreg_deep_v1_routed_oos.htm | 5.535519 | 3.800000 | 1.14 | 1.39 | 357.69 | 633.65 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
-| et40h8_r030_a | hold8_transition_guard_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h8_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h8_r030_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h8_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h8_r030_a_logreg_deep_v1_routed_oos.htm | 5.398907 | 3.641026 | 1.04 | 1.34 | 109.06 | 592.96 | oos_density; validation_pf; cost_stressed_expectancy; same_move_density |
-| et40h6_r030_b | tier_b_damage_control_comparison | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r030_b/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r030_b_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AS/et40h6_r030_b/mt5/reports/Project_Obsidian_Prime_v2_run50AS_et40h6_r030_b_logreg_deep_v1_routed_oos.htm | 5.584699 | 3.892308 | 1.16 | 1.39 | 385.93 | 639.18 | oos_density; cost_stressed_expectancy; same_move_density |
+| et20h6_r015_a | leaf20_transition_density_source_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r015_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r015_a_logreg_deep_v1_routed_oos.htm | 6.551913 | 4.666667 | 1.07 | 1.12 | 226.28 | 277.78 | oos_density; validation_pf; cost_stressed_expectancy; same_move_density |
+| et20h6_r015_b | leaf20_transition_density_source_tier_b_comparison | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r015_b/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r015_b_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r015_b/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r015_b_logreg_deep_v1_routed_oos.htm | 6.584699 | 4.748718 | 1.07 | 1.14 | 220.66 | 312.02 | oos_density; validation_pf; cost_stressed_expectancy; same_move_density |
+| et20h6_r030_a | leaf20_quality_guard_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r030_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r030_a_logreg_deep_v1_routed_oos.htm | 5.945355 | 4.189744 | 1.13 | 1.11 | 351.16 | 215.59 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
+| et20h6_r030_b | leaf20_quality_guard_tier_b_comparison | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r030_b/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r030_b_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r030_b/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r030_b_logreg_deep_v1_routed_oos.htm | 5.983607 | 4.271795 | 1.13 | 1.13 | 346.02 | 249.83 | oos_density; cost_stressed_expectancy; same_move_density |
+| et20h6_r030_s24l15_a | leaf20_threshold_recovery_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r030_s24l15_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r030_s24l15_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et20h6_r030_s24l15_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et20h6_r030_s24l15_a_logreg_deep_v1_routed_oos.htm | 5.945355 | 4.189744 | 1.13 | 1.11 | 351.16 | 215.59 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
+| et30h6_r015_a | leaf30_transition_density_source_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et30h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et30h6_r015_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et30h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et30h6_r015_a_logreg_deep_v1_routed_oos.htm | 6.125683 | 4.379487 | 1.06 | 1.29 | 157.82 | 604.46 | oos_density; validation_pf; cost_stressed_expectancy; same_move_density |
+| et30h6_r030_a | leaf30_quality_guard_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et30h6_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et30h6_r030_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et30h6_r030_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et30h6_r030_a_logreg_deep_v1_routed_oos.htm | 5.524590 | 3.902564 | 1.13 | 1.32 | 324.6 | 576.56 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
+| et60h6_r015_a | leaf60_smooth_transition_source_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et60h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et60h6_r015_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AT/et60h6_r015_a/mt5/reports/Project_Obsidian_Prime_v2_run50AT_et60h6_r015_a_logreg_deep_v1_routed_oos.htm | 5.699454 | 4.056410 | 1.06 | 1.27 | 164.77 | 510.11 | oos_density; validation_pf; cost_stressed_expectancy; same_move_density |
 
 ## Tier Views(티어 보기)
 
 | variant(변형) | Tier A val/OOS(Tier A 검증/표본외) | Tier B fallback-only val/OOS(Tier B 대체 전용 검증/표본외) | A+B actual routed val/OOS(A+B 실제 라우팅 검증/표본외) | Tier B contribution(Tier B 기여) |
 |---|---|---|---|---|
-| et40h6_tr_a | net 196.93/663.37, PF 1.08/1.44 | net -80.99/13.5, PF 0.11/1.71 | net 196.93/663.37, PF 1.08/1.44 | fallback bars None/None |
-| et40h6_r015_a | net 317.78/632.5, PF 1.12/1.34 | net -80.99/13.5, PF 0.11/1.71 | net 317.78/632.5, PF 1.12/1.34 | fallback bars None/None |
-| et40h6_r030_a | net 357.69/633.65, PF 1.14/1.39 | net -80.99/13.5, PF 0.11/1.71 | net 357.69/633.65, PF 1.14/1.39 | fallback bars None/None |
-| et40h6_r050_a | net 216.76/650.43, PF 1.09/1.43 | net -80.99/13.5, PF 0.11/1.71 | net 216.76/650.43, PF 1.09/1.43 | fallback bars None/None |
-| et40h6_r030_s24l15_a | net 357.69/633.65, PF 1.14/1.39 | net -80.99/13.5, PF 0.11/1.71 | net 357.69/633.65, PF 1.14/1.39 | fallback bars None/None |
-| et40h8_r030_a | net 109.06/592.96, PF 1.04/1.34 | net -18.86/-5.44, PF 0.36/0.86 | net 109.06/592.96, PF 1.04/1.34 | fallback bars None/None |
-| et40h6_r030_b | net 357.69/633.65, PF 1.14/1.39 | net -80.99/13.5, PF 0.11/1.71 | net 385.93/639.18, PF 1.16/1.39 | fallback bars None/None |
+| et20h6_r015_a | net 226.28/277.78, PF 1.07/1.12 | net -80.99/13.5, PF 0.11/1.71 | net 226.28/277.78, PF 1.07/1.12 | fallback bars None/None |
+| et20h6_r015_b | net 226.28/277.78, PF 1.07/1.12 | net -80.99/13.5, PF 0.11/1.71 | net 220.66/312.02, PF 1.07/1.14 | fallback bars None/None |
+| et20h6_r030_a | net 351.16/215.59, PF 1.13/1.11 | net -80.99/13.5, PF 0.11/1.71 | net 351.16/215.59, PF 1.13/1.11 | fallback bars None/None |
+| et20h6_r030_b | net 351.16/215.59, PF 1.13/1.11 | net -80.99/13.5, PF 0.11/1.71 | net 346.02/249.83, PF 1.13/1.13 | fallback bars None/None |
+| et20h6_r030_s24l15_a | net 351.16/215.59, PF 1.13/1.11 | net -80.99/13.5, PF 0.11/1.71 | net 351.16/215.59, PF 1.13/1.11 | fallback bars None/None |
+| et30h6_r015_a | net 157.82/604.46, PF 1.06/1.29 | net -80.99/13.5, PF 0.11/1.71 | net 157.82/604.46, PF 1.06/1.29 | fallback bars None/None |
+| et30h6_r030_a | net 324.6/576.56, PF 1.13/1.32 | net -80.99/13.5, PF 0.11/1.71 | net 324.6/576.56, PF 1.13/1.32 | fallback bars None/None |
+| et60h6_r015_a | net 164.77/510.11, PF 1.06/1.27 | net -80.99/13.5, PF 0.11/1.71 | net 164.77/510.11, PF 1.06/1.27 | fallback bars None/None |
 
 ## Hold/Re-entry Audit(보유/재진입 감사)
 
 | variant(변형) | split(분할) | MFE capture ratio(MFE 포착 비율) | winner truncation(승자 절단) | loser escape(패자 탈출) | re-entry 3/6/12(재진입 3/6/12봉) | same-move ratio(동일 이동 비율) | cost-stressed exp(비용 압박 기대값) | cooldown survives(쿨다운 생존) |
 |---|---|---:|---:|---:|---|---:|---:|---:|
-| et40h6_tr_a | validation_is | 0.598507 | 0.353881 | 0.259740 | 312/424/536 | 0.548618 | -0.298434 | False |
-| et40h6_tr_a | oos | 0.618090 | 0.310651 | 0.291553 | 241/304/367 | 0.520567 | 0.440950 | False |
-| et40h6_r015_a | validation_is | 0.600701 | 0.348606 | 0.251689 | 391/547/673 | 0.615174 | -0.209525 | False |
-| et40h6_r015_a | oos | 0.606260 | 0.325758 | 0.313501 | 312/418/517 | 0.620648 | 0.259304 | False |
-| et40h6_r030_a | validation_is | 0.600148 | 0.349558 | 0.262032 | 335/457/581 | 0.573544 | -0.146900 | False |
-| et40h6_r030_a | oos | 0.615901 | 0.314448 | 0.291237 | 264/337/405 | 0.546559 | 0.355128 | False |
-| et40h6_r050_a | validation_is | 0.599015 | 0.352941 | 0.259669 | 315/431/545 | 0.553299 | -0.279939 | False |
-| et40h6_r050_a | oos | 0.617139 | 0.311765 | 0.289189 | 243/306/371 | 0.522535 | 0.416099 | False |
-| et40h6_r030_s24l15_a | validation_is | 0.600148 | 0.349558 | 0.262032 | 335/457/581 | 0.573544 | -0.146900 | False |
-| et40h6_r030_s24l15_a | oos | 0.615901 | 0.314448 | 0.291237 | 264/337/405 | 0.546559 | 0.355128 | False |
-| et40h8_r030_a | validation_is | 0.603753 | 0.351852 | 0.262590 | 342/458/557 | 0.563765 | -0.389615 | False |
-| et40h8_r030_a | oos | 0.588181 | 0.368263 | 0.289894 | 258/330/385 | 0.542254 | 0.335155 | False |
-| et40h6_r030_b | validation_is | 0.600498 | 0.347921 | 0.265487 | 336/460/586 | 0.573386 | -0.122378 | False |
-| et40h6_r030_b | oos | 0.615861 | 0.315068 | 0.286802 | 266/344/419 | 0.552042 | 0.342134 | False |
+| et20h6_r015_a | validation_is | 0.615666 | 0.337545 | 0.257364 | 494/651/778 | 0.648874 | -0.311276 | False |
+| et20h6_r015_a | oos | 0.597806 | 0.358811 | 0.273349 | 355/485/601 | 0.660440 | -0.194747 | False |
+| et20h6_r015_b | validation_is | 0.617206 | 0.332734 | 0.260401 | 491/652/779 | 0.646473 | -0.316880 | False |
+| et20h6_r015_b | oos | 0.596445 | 0.358178 | 0.268623 | 356/495/613 | 0.661987 | -0.163045 | False |
+| et20h6_r030_a | validation_is | 0.610043 | 0.344423 | 0.259965 | 394/520/635 | 0.583640 | -0.177243 | False |
+| et20h6_r030_a | oos | 0.591648 | 0.360775 | 0.277228 | 282/386/484 | 0.592411 | -0.236120 | False |
+| et20h6_r030_b | validation_is | 0.611638 | 0.339181 | 0.264605 | 392/522/637 | 0.581735 | -0.184000 | False |
+| et20h6_r030_b | oos | 0.590275 | 0.360000 | 0.272059 | 283/395/497 | 0.596639 | -0.200084 | False |
+| et20h6_r030_s24l15_a | validation_is | 0.610043 | 0.344423 | 0.259965 | 394/520/635 | 0.583640 | -0.177243 | False |
+| et20h6_r030_s24l15_a | oos | 0.591648 | 0.360775 | 0.277228 | 282/386/484 | 0.592411 | -0.236120 | False |
+| et30h6_r015_a | validation_is | 0.588299 | 0.382239 | 0.285240 | 411/574/683 | 0.609277 | -0.359215 | False |
+| et30h6_r015_a | oos | 0.624243 | 0.303738 | 0.267606 | 324/430/545 | 0.638173 | 0.207799 | False |
+| et30h6_r030_a | validation_is | 0.596116 | 0.372591 | 0.283088 | 330/450/547 | 0.541048 | -0.178932 | False |
+| et30h6_r030_a | oos | 0.629239 | 0.295515 | 0.261780 | 268/337/430 | 0.565046 | 0.257635 | False |
+| et60h6_r015_a | validation_is | 0.606725 | 0.341991 | 0.254733 | 368/497/623 | 0.597315 | -0.342023 | False |
+| et60h6_r015_a | oos | 0.595485 | 0.350254 | 0.277078 | 293/393/486 | 0.614412 | 0.144893 | False |
 
 ## Current Read(현재 판독)
 
-- best_variant(최선 변형): `et40h6_r030_b`
+- best_variant(최선 변형): `et20h6_r030_b`
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
-- judgment(판정): rearm/transition guard(재허용/전환 가드)는 validation/OOS PF(검증/표본외 수익 팩터)를 `1.16` / `1.39`까지 개선했지만 OOS density(표본외 밀도) `3.892308`, same-move ratio(동일 이동 비율) `0.573386` / `0.552042`, 12-bar cooldown after density(12봉 쿨다운 후 밀도) `2.382514` / `1.743590`로 실패했다. Effect(효과): leaf40(잎 40) ExtraTrees(엑스트라트리스)의 원래 밀도는 독립 기회 원천보다 split re-entry(분할 재진입)에 더 가까웠다.
-- attribution_read(기여도 판독): `et40h6_r030_b`와 closest density(밀도 최접근) `et40h6_r015_a`는 OOS(표본외) major buckets(주요 구간)가 양수이고 mid session(중간 세션)도 양수지만 약하다. Effect(효과): 다음 분기는 단순 market-state filter(시장 상태 필터)가 아니라 model granularity/source(모델 세분도/원천) 변경이다.
-- next_hypothesis_branch(다음 가설 가지): `run50AT_extratrees_leaf_granularity_transition_density_source`
-
-## Run50AT Scaffold(실행50AT 뼈대)
-
-- action(행동): `stage_pipelines/stage56/extratrees_leaf_granularity_transition_density_source_branch.py`를 추가했다.
-- effect(효과): run50AS(실행50AS)에서 품질은 좋아졌지만 OOS density(표본외 밀도)가 줄어든 leaf40(잎 40) 경로를 leaf20/leaf30/leaf60(잎 20/30/60) 모델 원천(source, 원천)으로 흔들어, same-move guard(동일 이동 가드)를 유지한 채 실제 전환 밀도(real transition density, 실제 전환 밀도)가 회복되는지 확인한다.
-- boundary(경계): scaffold only(뼈대만), no selected_research_baseline(선택 연구 기준선 없음), no reviewed_closed(검토 종료 아님).
+- judgment(판정): leaf20/leaf30/leaf60(잎 20/30/60) ExtraTrees(엑스트라트리스)는 run50AS(실행50AS)보다 OOS density(표본외 밀도)를 일부 회복했지만 최선 `et20h6_r030_b`도 OOS density(표본외 밀도) `4.271795`, cost-stressed expectancy(비용 압박 기대값) `-0.184000` / `-0.200084`, same-move ratio(동일 이동 비율) `0.581735` / `0.596639`로 실패했다. Effect(효과): ExtraTrees(엑스트라트리스) 계열의 transition-gated density(전환 게이트 밀도)는 아직 충분한 실제 기회 원천이 아니다.
+- closest_density_variant(밀도 최접근 변형): `et20h6_r015_b`는 validation/OOS(검증/표본외) trades/day(일 거래 수) `6.584699` / `4.748718`까지 갔지만 OOS density(표본외 밀도), cost stress(비용 압박), same-move/cooldown survival(동일 이동/쿨다운 생존)이 모두 부족하다.
+- attribution_read(기여도 판독): `et20h6_r030_b`는 OOS(표본외) adx_gt25(ADX 25 초과) `-95.21`과 vol_high(고변동) `-15.91`이 약하고, `et20h6_r015_b`는 OOS late session(후반 세션) `-79.22`와 vol_high(고변동) `-14.53`이 약하다. Effect(효과): 단순 필터는 밀도를 더 깎을 위험이 있어 QDA composite route(QDA 합성 라우트) 쪽으로 새 source(원천)를 연다.
+- next_hypothesis_branch(다음 가설 가지): `run50AU_composite_qda_route_density_repair`

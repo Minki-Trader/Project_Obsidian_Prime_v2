@@ -1,4 +1,4 @@
-﻿current_run_id: run50AS_stage56_extratrees_rearm_real_density_guard_v1
+﻿current_run_id: run50AT_stage56_extratrees_leaf_granularity_transition_density_source_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -18,7 +18,7 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AS(실행50AS) ExtraTrees rearm real-density guard(엑스트라트리스 재허용 실제 밀도 가드) 완료; best_variant(현재 최선 변형)는 `et40h6_r030_b`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `385.93` / `639.18`, PF(수익 팩터) `1.16` / `1.39`, trades/day(일 거래 수) `5.584699` / `3.892308`다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): rearm/transition guard(재허용/전환 가드)는 품질을 개선했지만 OOS density(표본외 밀도)와 cooldown survival(쿨다운 생존)이 실패해 leaf40(잎 40) ExtraTrees(엑스트라트리스) 밀도는 split re-entry(분할 재진입) 의존으로 판정하고 run50AT(실행50AT) leaf granularity/source(잎 세분도/원천) 분기로 간다.
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AT(실행50AT) ExtraTrees leaf granularity/source(엑스트라트리스 잎 세분도/원천) 완료; best_variant(현재 최선 변형)는 `et20h6_r030_b`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `346.02` / `249.83`, PF(수익 팩터) `1.13` / `1.13`, trades/day(일 거래 수) `5.983607` / `4.271795`다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): leaf20(잎 20)이 OOS density(표본외 밀도)를 일부 회복했지만 5/day(일 5회), cost stress(비용 압박), same-move/cooldown survival(동일 이동/쿨다운 생존)을 통과하지 못해 ExtraTrees(엑스트라트리스)는 reference/failure memory(참조/실패 기억)로 낮추고 run50AU(실행50AU) QDA composite route(QDA 합성 라우트) 밀도 수정을 연다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AO(실행50AO) inverse fwd6 LGBM side-threshold repair(반전 6봉 LightGBM 방향별 문턱값 보정) 완료; best_variant(현재 최선 변형)는 `inv6_s050l043_h3_b060`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `318.69` / `179.25`, PF(수익 팩터) `1.14` / `1.1004`, trades/day(일 거래 수) `5.278689` / `3.676923`이다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): side-threshold repair(방향별 문턱값 보정)는 품질을 올렸지만 OOS density/cost/same-move/Tier B(표본외 밀도/비용/동일 이동/Tier B)가 부족해 새 source(원천) 또는 lifecycle(생명주기) 분기가 필요함을 보존한다.
 - >-
@@ -3366,8 +3366,32 @@ stage56_dense_base_engine_selection:
   run50as_stage_run_ledger_sha256: 75de625b5ef151cf30962663740311612967c53f75afa0c881a8c65ca8b910cd
   run50as_project_alpha_run_ledger_sha256: 10de6097e20b3bc475a6c866907b540c05b296d7db7fe9acf3ce6369541523f3
   run50as_run_registry_sha256: 474beb59a8884b4ff6ceb4c034a70e7b80076e66b4daee8e8f2f492460a1c500
+  run50at_packet_summary_path: docs/agent_control/packets/stage56_run50AT_extratrees_leaf_granularity_transition_density_source_v1/aggregate_summary.json
+  run50at_report_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AT_reopen_batch.md
+  run50at_summary_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AT_summary.csv
+  run50at_audit_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AT_audit.csv
+  run50at_best_attribution_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_run50AT_et20h6_r030_b_market_weather_attribution.md
+  run50at_closest_density_attribution_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_run50AT_et20h6_r015_b_market_weather_attribution.md
+  run50at_packet_summary_sha256: fa9a91f1bc8b4821158a93d4222e96b1e1bf323ecbab15725ed98bc312058979
+  run50at_report_sha256: 7c97802e36038fec8a4d75f10afd566abf4a075a3a2688bdd9cb3ba75643fe21
+  run50at_results_csv_sha256: 3df4f31c060225ecaa9b05c4c2e7a568cf10efed96574740f27acd24338fb25c
+  run50at_audit_csv_sha256: adc0796b964dcd50b2be355b3dac08f0ff9b3c178e86bc96ccf930f75ab0dd01
+  run50at_best_attribution_csv_sha256: a21baa80c5276393dc5f1e307d389f8a0b7c7ca631f39ad2178bac1f99d25c31
+  run50at_best_trade_weather_records_sha256: d802ee7e80b601dcc62b4e71df703eb7aeacdad445b03cdc059d24402a215018
+  run50at_best_attribution_report_sha256: 7761728054bd9004b860d5f5452687c4ef9dafc7175d4fc039050227682ba0b2
+  run50at_best_attribution_summary_sha256: 271f15f5b0197d809a44c5ed9c8b69e51d602023c7ccddb17c031861c8d067d6
+  run50at_closest_density_attribution_csv_sha256: e342e88d844103f0c2f689714971275807d17184715695b51958a389846b2516
+  run50at_closest_density_trade_weather_records_sha256: 8534536cd4ef8a005922e42bdd7de947f1b16898bac341fe445a13258172e19c
+  run50at_closest_density_attribution_report_sha256: 5bc86d58ec516023364b48591dab150ae2ecc7c98e748120df4c2170edf096ca
+  run50at_closest_density_attribution_summary_sha256: 22ace694c2cf71c02b0a44f404015ddb565b81efc6dd3c1d6efd028231a9b547
+  run50at_progress_log_sha256: 840b065405c288a25ba568bf79a060d22ef40f5522a0ba78cb714a4126414bb5
+  run50at_current_working_state_sha256: 3814df8112a5cba32d2c4e9b7b2a12ccb6a5ecd6f4f6ccb74af9671872048971
+  run50at_selection_status_sha256: d3197c4b852017f1f595ba61b837f6dfc9099f63480bf9eee3c67c21a9225289
+  run50at_stage_run_ledger_sha256: 31fbe76279d5a43c0add8cc1721390e49f23a582a4cffab7c5a8f8ea1361ef0c
+  run50at_project_alpha_run_ledger_sha256: 10ca7145c8e368936a32180fd52f31b3080420890be71debffcfcffbac69fb33
+  run50at_run_registry_sha256: ebc50a780966b70f301d3e2356fc5de7bed667686db65be5ffd2c1b37f7db35e
   closeout_packet_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_closeout_packet.md
-  packet_summary_path: docs/agent_control/packets/stage56_run50AS_extratrees_rearm_real_density_guard_v1/aggregate_summary.json
+  packet_summary_path: docs/agent_control/packets/stage56_run50AT_extratrees_leaf_granularity_transition_density_source_v1/aggregate_summary.json
   progress_log_path: docs/agent_control/packets/stage56_reopen_goal_v1/progress_log.md
   selected_research_baseline: none
   terminal_condition: useful_baselineadapter_hard_condition_satisfied
@@ -3380,7 +3404,7 @@ stage56_dense_base_engine_selection:
   - quality_frontier_only
   prior_stronger_candidate_intermediate: d390h10_logreg_deep_repair_suite
   prior_candidate_reference_intermediate: d38h10_logreg_bracket_micro_grid_preserved_prior
-  latest_batch_best_variant_intermediate: et40h6_r030_b
+  latest_batch_best_variant_intermediate: et20h6_r030_b
   latest_density_pass_quality_fail_variants: run50AH_nf200s25b_validation_quality_density_positive_but_oos_density_below_5_model_axis_nonflat200_same_move_density_not_survived
   latest_run50ac_result: blocked_windows_path_length_no_kpi_interpretation_repaired_by_run50AD
   latest_cooldown_result: cooldown_1_to_2_bars_reduced_oos_density_below_5_and_pf_remained_below_1_10
@@ -3428,6 +3452,8 @@ stage56_dense_base_engine_selection:
   latest_run50ar_attribution_result: et40s25_c0_h6_a_major_buckets_mostly_positive_mid_session_only_small_negative_validation_oos_neg12_60_neg4_40_next_rearm_transition_guard_to_separate_real_new_signal_from_split_reentry
   latest_extratrees_rearm_real_density_guard_result: et40h6_r030_b_reached_validation_oos_pf_1_16_1_39_net_385_93_639_18_but_oos_density_3_892308_cost_validation_negative_same_move_0_573386_0_552042_and_12bar_cooldown_density_2_382514_1_743590_failed_selected_research_baseline_none
   latest_run50as_attribution_result: et40h6_r030_b_and_et40h6_r015_a_oos_major_buckets_positive_mid_session_positive_but_weak_threshold_relaxation_saturated_next_model_granularity_or_signal_source_change_for_transition_gated_density
+  latest_extratrees_leaf_granularity_transition_density_result: et20h6_r030_b_reached_validation_oos_pf_1_13_1_13_net_346_02_249_83_density_5_983607_4_271795_but_oos_density_below_5_cost_stress_negative_same_move_0_581735_0_596639_and_12bar_cooldown_density_2_502732_1_723077_failed
+  latest_run50at_attribution_result: et20h6_r030_b_oos_adx_gt25_neg95_21_vol_high_neg15_91_and_et20h6_r015_b_oos_late_neg79_22_vol_high_neg14_53_filter_would_reduce_density_next_qda_composite_route_density_repair
   dense_engine_candidate: d390h10_aonly_intermediate_quality_reference
   selected_shadow_candidate: none
   preserved_density_frontier: d35h07_routed_density_failed_quality
@@ -3435,4 +3461,4 @@ stage56_dense_base_engine_selection:
   current_operating_reference: none
   boundary: research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference
   prior_closeout_artifacts_are_non_final_intermediate_evidence: true
-  next_action: run50AT_extratrees_leaf_granularity_transition_density_source
+  next_action: run50AU_composite_qda_route_density_repair
