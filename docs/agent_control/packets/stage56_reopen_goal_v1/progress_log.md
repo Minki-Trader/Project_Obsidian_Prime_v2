@@ -77,3 +77,9 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - judgment(판정): rearm/transition guard(재허용/전환 가드)는 validation/OOS PF(검증/표본외 수익 팩터)를 `1.16` / `1.39`까지 개선했지만 OOS density(표본외 밀도) `3.892308`, same-move ratio(동일 이동 비율) `0.573386` / `0.552042`, 12-bar cooldown after density(12봉 쿨다운 후 밀도) `2.382514` / `1.743590`로 실패했다. Effect(효과): leaf40(잎 40) ExtraTrees(엑스트라트리스)의 원래 밀도는 독립 기회 원천보다 split re-entry(분할 재진입)에 더 가까웠다.
 - attribution_read(기여도 판독): `et40h6_r030_b`와 closest density(밀도 최접근) `et40h6_r015_a`는 OOS(표본외) major buckets(주요 구간)가 양수이고 mid session(중간 세션)도 양수지만 약하다. Effect(효과): 다음 분기는 단순 market-state filter(시장 상태 필터)가 아니라 model granularity/source(모델 세분도/원천) 변경이다.
 - next_hypothesis_branch(다음 가설 가지): `run50AT_extratrees_leaf_granularity_transition_density_source`
+
+## Run50AT Scaffold(실행50AT 뼈대)
+
+- action(행동): `stage_pipelines/stage56/extratrees_leaf_granularity_transition_density_source_branch.py`를 추가했다.
+- effect(효과): run50AS(실행50AS)에서 품질은 좋아졌지만 OOS density(표본외 밀도)가 줄어든 leaf40(잎 40) 경로를 leaf20/leaf30/leaf60(잎 20/30/60) 모델 원천(source, 원천)으로 흔들어, same-move guard(동일 이동 가드)를 유지한 채 실제 전환 밀도(real transition density, 실제 전환 밀도)가 회복되는지 확인한다.
+- boundary(경계): scaffold only(뼈대만), no selected_research_baseline(선택 연구 기준선 없음), no reviewed_closed(검토 종료 아님).
