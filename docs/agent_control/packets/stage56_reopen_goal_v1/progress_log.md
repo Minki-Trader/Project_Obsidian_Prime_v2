@@ -76,3 +76,9 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - stage56_remains_open(56단계 열림 유지): `True`
 - judgment(판정): `et40s25_c0_h6_a`는 validation/OOS density(검증/표본외 밀도) `7.404372` / `5.502564`와 OOS PF(표본외 수익 팩터) `1.25`를 만들었지만 validation PF(검증 수익 팩터) `1.04`, validation cost-stressed expectancy(검증 비용 압박 기대값) `-0.390878`, same-move ratio(동일 이동 비율) `0.712915` / `0.747437`, 12-bar cooldown after density(12봉 쿨다운 후 밀도) `2.125683` / `1.389744`로 실패했다. Effect(효과): density gain(밀도 증가)은 실제 새 기회보다 split re-entry(분할 재진입)에 더 가깝다.
 - next_hypothesis_branch(다음 가설 가지): `run50AS_extratrees_rearm_real_density_guard`
+
+## Run50AS Scaffold(실행50AS 뼈대)
+
+- action(행동): `stage_pipelines/stage56/extratrees_rearm_real_density_guard_branch.py`를 추가했다.
+- effect(효과): run50AR(실행50AR) 최선 중간 후보 `et40s25_c0_h6_a`에 entry transition gate(진입 전환 게이트)와 confidence rearm delta(신뢰도 재허용 증가폭)를 적용해 same-move split re-entry(동일 이동 분할 재진입)를 줄였을 때 validation/OOS density(검증/표본외 밀도)가 실제로 살아남는지 MT5(메타트레이더5)로 확인할 수 있다.
+- boundary(경계): scaffold only(뼈대만), no selected_research_baseline(선택 연구 기준선 없음), no reviewed_closed(검토 종료 아님).
