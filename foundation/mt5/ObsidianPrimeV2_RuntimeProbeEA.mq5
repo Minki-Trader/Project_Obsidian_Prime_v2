@@ -77,6 +77,7 @@ input bool            InpCloseOnlyOnOppositeSignal = false;
 input int             InpMaxHoldBars = 12;
 input int             InpMaxConcurrentPositions = 1;
 input int             InpReentryCooldownBars = 0;
+input bool            InpEntryTransitionOnly = false;
 input bool            InpExitRiskOverlayEnabled = false;
 input int             InpExitRiskCloseLongFeatureIndex = -1;
 input int             InpExitRiskCloseShortFeatureIndex = -1;
@@ -111,6 +112,8 @@ COpRuntimeTelemetry  g_telemetry;
 bool     g_runtime_ready = false;
 datetime g_last_bar_open = 0;
 int      g_atr_handle = INVALID_HANDLE;
+bool     g_last_routed_signal_seen = false;
+int      g_last_routed_signal = OP_DECISION_FLAT;
 
 double FeatureValueOrDefault(const double &features[], const int feature_index, const double fallback)
   {
@@ -228,6 +231,38 @@ double CurrentAtrPoints()
       return 0.0;
 
    return values[0] / point;
+  }
+
+string DecisionSignalText(const int signal)
+  {
+   if(signal == OP_DECISION_LONG)
+      return "long";
+   if(signal == OP_DECISION_SHORT)
+      return "short";
+   return "flat";
+  }
+
+bool ShouldBlockEntryTransition(const int routed_signal,
+                                const string position_before,
+                                string &reason)
+  {
+   reason = "";
+   if(!InpEntryTransitionOnly)
+      return false;
+   if(routed_signal == OP_DECISION_FLAT)
+      return false;
+   if(position_before != "none")
+      return false;
+   if(!g_last_routed_signal_seen)
+      return false;
+   if(g_last_routed_signal != routed_signal)
+      return false;
+
+   reason = "entry_transition_same_signal_block:previous_signal="
+            + DecisionSignalText(g_last_routed_signal)
+            + ",current_signal="
+            + DecisionSignalText(routed_signal);
+   return true;
   }
 
 string DeinitReasonText(const int reason)
@@ -661,6 +696,17 @@ void ProcessClosedBar()
                                  secondary_trigger);
      }
 
+   const int routed_signal_before_entry_gate = decision.signal;
+   string entry_transition_reason = "";
+   if(ShouldBlockEntryTransition(routed_signal_before_entry_gate, position_before, entry_transition_reason))
+     {
+      decision.signal = OP_DECISION_FLAT;
+      decision.label = "flat";
+      decision.confidence = 0.0;
+      decision.margin = 0.0;
+      decision.reason = entry_transition_reason + "|" + decision.reason;
+     }
+
    bool overlay_close_long = false;
    bool overlay_close_short = false;
    int overlay_max_hold_bars = 0;
@@ -718,12 +764,16 @@ void ProcessClosedBar()
                            execution.comment,
                            telemetry_reason);
    PrintTelemetryFailure("cycle", telemetry_reason);
+   g_last_routed_signal = routed_signal_before_entry_gate;
+   g_last_routed_signal_seen = true;
   }
 
 int OnInit()
   {
    g_runtime_ready = false;
    g_last_bar_open = 0;
+   g_last_routed_signal_seen = false;
+   g_last_routed_signal = OP_DECISION_FLAT;
 
    g_telemetry.Configure(InpTelemetryEnabled,
                          InpTelemetryUseCommonFiles,

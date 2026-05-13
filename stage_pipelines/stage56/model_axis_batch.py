@@ -66,6 +66,7 @@ class ModelAxisVariant:
     max_hold_bars: int
     routed_fallback_enabled: bool
     reentry_cooldown_bars: int = 0
+    entry_transition_only: bool = False
     side_filter_id: str | None = None
     side_filter_enabled: bool = False
     tier_a_side_filter_feature_index: int = -1
@@ -370,6 +371,7 @@ def _run_variant(
         terminal_path=terminal_path,
         metaeditor_path=metaeditor_path,
         reentry_cooldown_bars=variant.reentry_cooldown_bars,
+        entry_transition_only=variant.entry_transition_only,
         side_filter_id=variant.side_filter_id,
         side_filter_enabled=variant.side_filter_enabled,
         tier_a_side_filter_feature_index=variant.tier_a_side_filter_feature_index,
@@ -389,6 +391,7 @@ def _run_variant(
         "source_model_path": source_model_path.as_posix(),
         "routed_fallback_enabled": variant.routed_fallback_enabled,
         "reentry_cooldown_bars": variant.reentry_cooldown_bars,
+        "entry_transition_only": variant.entry_transition_only,
         "tier_a_short_threshold": variant.tier_a_short_threshold,
         "tier_a_long_threshold": variant.tier_a_long_threshold,
         "tier_a_min_margin": variant.tier_a_min_margin,
@@ -422,6 +425,7 @@ def _augment_rows(rows: list[dict[str, Any]], variants: Sequence[ModelAxisVarian
         row["nonflat_sample_weight"] = "" if variant is None or variant.nonflat_sample_weight is None else variant.nonflat_sample_weight
         row["c_value"] = "" if variant is None else variant.c_value
         row["reentry_cooldown_bars"] = "" if variant is None else variant.reentry_cooldown_bars
+        row["entry_transition_only"] = "" if variant is None else variant.entry_transition_only
         row["side_filter_id"] = "" if variant is None or variant.side_filter_id is None else variant.side_filter_id
         row["side_filter_enabled"] = "" if variant is None else variant.side_filter_enabled
         row["tier_a_side_filter_feature_index"] = "" if variant is None else variant.tier_a_side_filter_feature_index
@@ -547,6 +551,7 @@ SUMMARY_COLUMNS = tuple(
         "nonflat_sample_weight",
         "c_value",
         "reentry_cooldown_bars",
+        "entry_transition_only",
         "side_filter_id",
         "side_filter_enabled",
         "tier_a_side_filter_feature_index",
