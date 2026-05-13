@@ -1,4 +1,4 @@
-﻿current_run_id: run50AM_stage56_lgbm_fwd6_density_branch_v1
+﻿current_run_id: run50AN_stage56_lgbm_fwd6_inverse_signal_probe_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -17,6 +17,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AN(실행50AN) LGBM fwd6 inverse signal probe(6봉 LightGBM 반전 신호 탐침) 완료; best_variant(현재 최선 변형)는 `inv6_s045l045_h3_b060`이며 validation/OOS(검증/표본외) routed net(라우팅 순손익) `265.28` / `84.42`, PF(수익 팩터) `1.11` / `1.05`, trades/day(일 거래 수) `5.371585` / `3.625641`이다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): inverse signal(반전 신호)은 raw fwd6 LGBM(원방향 6봉 LightGBM)보다 강하지만 OOS density/PF/cost/same-move(표본외 밀도/수익 팩터/비용/동일 이동)가 부족해 다음 분기는 density-quality tradeoff(밀도-품질 절충)와 same-move survival(동일 이동 생존)을 겨냥한다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AM(실행50AM) LGBM fwd6 density branch(6봉 LGBM 밀도 분기) 완료; best_variant(현재 최선 변형)는 `lgbm6_s048l045_h6_b060`이나 validation/OOS(검증/표본외) routed net(라우팅 순손익) `-411.56` / `-394.85`, PF(수익 팩터) `0.83` / `0.79`, trades/day(일 거래 수) `3.387978` / `2.379487`로 실패했다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): fwd6 LGBM raw direction(6봉 LGBM 원방향)은 failure_memory(실패 기억)로 두고 run50AN inverse signal probe(실행50AN 반전 신호 탐침)를 다음 가설로 연다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AL(실행50AL) confidence rearm(신뢰도 재허용) batch(묶음) 완료; selected_research_baseline(선택 연구 기준선)은 `none`이고 Stage56(56단계)은 active_in_progress(활성 진행 중) open(열림) 상태다. Effect(효과): rearm 0.020(재허용 0.020)은 OOS density(표본외 밀도)를 4.789744/day까지 회복했지만 PF(수익 팩터)와 same-move(동일 이동)가 실패했고, rearm 0.060(재허용 0.060)은 품질은 개선했지만 OOS density가 3.292308/day로 부족해 별도 모델/피처 원천이 필요함을 남긴다.

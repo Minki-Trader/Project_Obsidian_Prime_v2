@@ -2,7 +2,7 @@
 
 - packet_id(묶음 ID): `stage56_reopen_goal_v1`
 - stage_status(단계 상태): `active_in_progress(활성 진행 중)`
-- latest_batch(최신 후보 묶음): `run50AM_stage56_lgbm_fwd6_density_branch_v1`
+- latest_batch(최신 후보 묶음): `run50AN_stage56_lgbm_fwd6_inverse_signal_probe_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - terminal_condition(종료 조건): selected_research_baseline(선택 연구 기준선) found(발견)
 - non_final_prior_packets(비최종 이전 묶음): `stage56_closeout_v1`, `stage56_reopened_closeout_v2`
@@ -30,36 +30,36 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 
 | variant(변형) | hypothesis family(가설군) | fallback(대체) | report paths(보고서 경로) | val/day(검증/일) | OOS/day(표본외/일) | val PF(검증 PF) | OOS PF(표본외 PF) | val net(검증 순손익) | OOS net(표본외 순손익) | reason(이유) |
 |---|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| lgbm6_s048l045_h4_b060 | short_horizon_density_asym | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s048l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s048l045_h4_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s048l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s048l045_h4_b060_lgbm_fwd6_v1_routed_oos.htm | 2.2185792349726774 | 2.8205128205128207 | 0.69 | 0.77 | -496.02 | -448.65 | validation_density; oos_density; validation_net_positive; oos_net_positive |
-| lgbm6_s045l045_h4_b060 | short_horizon_density_symmetric | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s045l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s045l045_h4_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s045l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s045l045_h4_b060_lgbm_fwd6_v1_routed_oos.htm | 2.5737704918032787 | 3.348717948717949 | 0.7 | 0.81 | -496.35 | -412.52 | validation_density; oos_density; validation_net_positive; oos_net_positive |
-| lgbm6_s050l045_h4_b060 | short_horizon_short_firewall | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s050l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s050l045_h4_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s050l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s050l045_h4_b060_lgbm_fwd6_v1_routed_oos.htm | 2.442622950819672 | 2.5743589743589745 | 0.73 | 0.83 | -495.84 | -288.19 | validation_density; oos_density; validation_net_positive; oos_net_positive |
-| lgbm6_s048l045_h6_b060 | short_horizon_hold6_quality | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s048l045_h6_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s048l045_h6_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AM/lgbm6_s048l045_h6_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AM_lgbm6_s048l045_h6_b060_lgbm_fwd6_v1_routed_oos.htm | 3.387978142076503 | 2.3794871794871795 | 0.83 | 0.79 | -411.56 | -394.85 | validation_density; oos_density; validation_net_positive; oos_net_positive |
+| inv6_s040l040_h3_b060 | inverse_high_density_symmetric | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s040l040_h3_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s040l040_h3_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s040l040_h3_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s040l040_h3_b060_lgbm_fwd6_v1_routed_oos.htm | 9.327868852459016 | 6.887179487179488 | 0.89 | 0.94 | -465.22 | -185.52 | validation_net_positive; oos_net_positive; validation_pf; oos_pf |
+| inv6_s042l040_h3_b060 | inverse_short_firewall_density | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s042l040_h3_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s042l040_h3_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s042l040_h3_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s042l040_h3_b060_lgbm_fwd6_v1_routed_oos.htm | 8.721311475409836 | 6.4051282051282055 | 0.98 | 0.97 | -75.85 | -89.44 | validation_net_positive; oos_net_positive; validation_pf; oos_pf |
+| inv6_s045l045_h3_b060 | inverse_mid_density_symmetric | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s045l045_h3_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s045l045_h3_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s045l045_h3_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s045l045_h3_b060_lgbm_fwd6_v1_routed_oos.htm | 5.371584699453552 | 3.6256410256410256 | 1.11 | 1.05 | 265.28 | 84.42 | oos_density; oos_pf; cost_stressed_expectancy; same_move_density |
+| inv6_s048l045_h4_b060 | inverse_run50am_direct_comparison | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s048l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s048l045_h4_b060_lgbm_fwd6_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AN/inv6_s048l045_h4_b060/mt5/reports/Project_Obsidian_Prime_v2_run50AN_inv6_s048l045_h4_b060_lgbm_fwd6_v1_routed_oos.htm | 4.163934426229508 | 2.8153846153846156 | 1.11 | 1.17 | 223.57 | 258.0 | validation_density; oos_density; cost_stressed_expectancy; same_move_density |
 
 ## Tier Views(티어 보기)
 
 | variant(변형) | Tier A val/OOS(Tier A 검증/표본외) | Tier B fallback-only val/OOS(Tier B 대체 전용 검증/표본외) | A+B actual routed val/OOS(A+B 실제 라우팅 검증/표본외) | Tier B contribution(Tier B 기여) |
 |---|---|---|---|---|
-| lgbm6_s048l045_h4_b060 | net -510.95/-510.34, PF 0.71/0.74 | net 0.0/14.76, PF 0.0/0.0 | net -496.02/-448.65, PF 0.69/0.77 | fallback bars 747/1250 |
-| lgbm6_s045l045_h4_b060 | net -496.63/-429.19, PF 0.7/0.81 | net -4.0/-7.25, PF 0.0/0.67 | net -496.35/-412.52, PF 0.7/0.81 | fallback bars 747/1250 |
-| lgbm6_s050l045_h4_b060 | net -496.13/-350.41, PF 0.73/0.8 | net 5.27/14.76, PF 2.32/0.0 | net -495.84/-288.19, PF 0.73/0.83 | fallback bars 747/1250 |
-| lgbm6_s048l045_h6_b060 | net -431.63/-447.0, PF 0.83/0.77 | net 0.0/3.51, PF 0.0/1.08 | net -411.56/-394.85, PF 0.83/0.79 | fallback bars 2647/1250 |
+| inv6_s040l040_h3_b060 | net -432.68/-144.84, PF 0.9/0.95 | net 0.0/11.6, PF 0.0/2.15 | net -465.22/-185.52, PF 0.89/0.94 | fallback bars 2647/1250 |
+| inv6_s042l040_h3_b060 | net -86.0/46.07, PF 0.98/1.02 | net -26.41/-6.36, PF 0.0/0.8 | net -75.85/-89.44, PF 0.98/0.97 | fallback bars 2647/1250 |
+| inv6_s045l045_h3_b060 | net 243.16/128.22, PF 1.1/1.07 | net -5.18/6.86, PF 0.0/1.46 | net 265.28/84.42, PF 1.11/1.05 | fallback bars 2647/1250 |
+| inv6_s048l045_h4_b060 | net 218.7/352.49, PF 1.1/1.23 | net 3.76/-15.0, PF 0.0/0.0 | net 223.57/258.0, PF 1.11/1.17 | fallback bars 2647/1250 |
 
 ## Hold/Re-entry Audit(보유/재진입 감사)
 
 | variant(변형) | split(분할) | MFE capture ratio(MFE 포착 비율) | winner truncation(승자 절단) | loser escape(패자 탈출) | re-entry 3/6/12(재진입 3/6/12봉) | same-move ratio(동일 이동 비율) | cost-stressed exp(비용 압박 기대값) | cooldown survives(쿨다운 생존) |
 |---|---|---:|---:|---:|---|---:|---:|---:|
-| lgbm6_s048l045_h4_b060 | validation_is | 0.641810 | 0.277457 | 0.347639 | 213/251/280 | 0.689655 | -1.721724 | False |
-| lgbm6_s048l045_h4_b060 | oos | 0.618021 | 0.328185 | 0.302405 | 242/287/324 | 0.589091 | -1.315727 | False |
-| lgbm6_s045l045_h4_b060 | validation_is | 0.611140 | 0.311927 | 0.320158 | 261/303/330 | 0.700637 | -1.553822 | False |
-| lgbm6_s045l045_h4_b060 | oos | 0.606861 | 0.332258 | 0.317784 | 308/355/403 | 0.617152 | -1.131730 | False |
-| lgbm6_s050l045_h4_b060 | validation_is | 0.604442 | 0.320197 | 0.356557 | 241/273/304 | 0.680089 | -1.609262 | False |
-| lgbm6_s050l045_h4_b060 | oos | 0.589624 | 0.356000 | 0.337302 | 210/256/287 | 0.571713 | -1.074084 | False |
-| lgbm6_s048l045_h6_b060 | validation_is | 0.631646 | 0.303754 | 0.311927 | 239/291/340 | 0.548387 | -1.163806 | False |
-| lgbm6_s048l045_h6_b060 | oos | 0.637338 | 0.299107 | 0.283333 | 153/189/230 | 0.495690 | -1.350970 | False |
+| inv6_s040l040_h3_b060 | validation_is | 0.624182 | 0.310479 | 0.290150 | 1037/1199/1299 | 0.760984 | -0.772537 | False |
+| inv6_s040l040_h3_b060 | oos | 0.610422 | 0.332822 | 0.316932 | 814/926/1023 | 0.761727 | -0.638138 | False |
+| inv6_s042l040_h3_b060 | validation_is | 0.612737 | 0.315589 | 0.301115 | 963/1098/1180 | 0.739348 | -0.547525 | False |
+| inv6_s042l040_h3_b060 | oos | 0.603185 | 0.319422 | 0.327476 | 743/860/946 | 0.757406 | -0.571609 | False |
+| inv6_s045l045_h3_b060 | validation_is | 0.622104 | 0.303030 | 0.311475 | 512/593/643 | 0.654120 | -0.230132 | False |
+| inv6_s045l045_h3_b060 | oos | 0.596407 | 0.356742 | 0.350427 | 357/402/461 | 0.652051 | -0.380594 | False |
+| inv6_s048l045_h4_b060 | validation_is | 0.596348 | 0.349462 | 0.317949 | 354/406/464 | 0.608924 | -0.206601 | False |
+| inv6_s048l045_h4_b060 | oos | 0.631508 | 0.335689 | 0.349624 | 236/283/329 | 0.599271 | -0.030055 | False |
 
 ## Current Read(현재 판독)
 
-- best_variant(최선 변형): `lgbm6_s048l045_h6_b060`
+- best_variant(최선 변형): `inv6_s045l045_h3_b060`
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
 - next_hypothesis_branch(다음 가설 가지): `continue_density_repair_without_same_move_splitting_and_tier_b_damage_control`

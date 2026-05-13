@@ -35,6 +35,8 @@ def run_stage11_lgbm_training_method_scout(
     max_hold_bars: int,
     tier_a_rule: scout.ThresholdRule,
     tier_b_rule: scout.ThresholdRule,
+    invert_signal: bool = False,
+    fallback_invert_signal: bool = False,
     attempt_mt5: bool = False,
     label_spec: Any | None = None,
     tier_a_model_input_dataset_id: str = MODEL_INPUT_DATASET_ID,
@@ -194,6 +196,7 @@ def run_stage11_lgbm_training_method_scout(
     selected_threshold_id = (
         f"a_{tier_a_rule.threshold_id}__b_{tier_b_rule.threshold_id}"
         f"__hold{max_hold_bars}__slice_{session_slice_id}__model_lgbm"
+        f"__invert{int(bool(invert_signal))}_fb{int(bool(fallback_invert_signal))}"
     )
     tier_records = scout.build_paired_tier_records(
         tier_views,
@@ -339,6 +342,7 @@ def run_stage11_lgbm_training_method_scout(
             primary_active_tier="tier_a",
             attempt_role="tier_only_total",
             max_hold_bars=max_hold_bars,
+            invert_signal=invert_signal,
             context=context,
         )
         tier_a_attempt["feature_matrix"] = tier_a_matrix_payload
@@ -360,6 +364,7 @@ def run_stage11_lgbm_training_method_scout(
             primary_active_tier="tier_b_fallback",
             attempt_role="tier_b_fallback_only_total",
             max_hold_bars=max_hold_bars,
+            invert_signal=fallback_invert_signal,
             context=context,
         )
         tier_b_attempt["feature_matrix"] = tier_b_matrix_payload
@@ -379,6 +384,8 @@ def run_stage11_lgbm_training_method_scout(
             rule=tier_a_rule,
             fallback_rule=tier_b_rule,
             max_hold_bars=max_hold_bars,
+            invert_signal=invert_signal,
+            fallback_invert_signal=fallback_invert_signal,
             fallback_enabled=True,
             from_date=from_date,
             to_date=to_date,

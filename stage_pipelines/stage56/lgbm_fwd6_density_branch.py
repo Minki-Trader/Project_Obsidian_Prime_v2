@@ -94,6 +94,8 @@ class LgbmFwd6Variant:
     min_child_samples: int = 80
     reg_lambda: float = 1.0
     class_weight: str | None = None
+    invert_signal: bool = False
+    fallback_invert_signal: bool = False
     tier_a_min_margin: float = 0.0
     tier_b_min_margin: float = 0.0
     session_slice_id: str | None = None
@@ -186,6 +188,8 @@ SUMMARY_COLUMNS = tuple(
         "lgbm_min_child_samples",
         "lgbm_reg_lambda",
         "lgbm_class_weight",
+        "invert_signal",
+        "fallback_invert_signal",
     ]
     + list(reopen.SUMMARY_COLUMNS[-4:])
 )
@@ -536,6 +540,8 @@ def _run_variant(
         max_hold_bars=variant.max_hold_bars,
         tier_a_rule=variant.tier_a_rule,
         tier_b_rule=variant.tier_b_rule,
+        invert_signal=variant.invert_signal,
+        fallback_invert_signal=variant.fallback_invert_signal,
         attempt_mt5=attempt_mt5,
         label_spec=input_payload["label_spec"],
         tier_a_model_input_dataset_id=MODEL_INPUT_DATASET_ID,
@@ -583,6 +589,8 @@ def _row_from_summary(variant: LgbmFwd6Variant, summary_path: Path) -> dict[str,
         "lgbm_min_child_samples": variant.min_child_samples,
         "lgbm_reg_lambda": variant.reg_lambda,
         "lgbm_class_weight": variant.class_weight or "",
+        "invert_signal": str(bool(variant.invert_signal)).lower(),
+        "fallback_invert_signal": str(bool(variant.fallback_invert_signal)).lower(),
         "judgment": summary.get("judgment", ""),
         "error": "",
         "summary_path": summary_path.as_posix(),
@@ -692,13 +700,18 @@ def _update_current_truth(rows: Sequence[Mapping[str, Any]], final_read: Mapping
     else:
         lines.insert(0, replacement)
     note = (
-        f"- Stage56(56단계) `{STAGE_ID}`: run50AM(실행50AM) LGBM fwd6 density branch"
-        f"(6봉 LGBM 밀도 분기) 완료; best_variant(현재 최선 변형)는 `{best_id}`, "
-        "selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): logreg re-entry"
-        "(로지스틱 회귀 재진입) 보정에서 별도 label/model source(라벨/모델 원천)로 피벗한 근거를 보존한다."
+        f"Stage56(56단계) `{STAGE_ID}`: {PARENT_RUN_ID}(현재 실행 묶음) 완료; "
+        f"best_variant(현재 최선 변형)는 `{best_id}`, selected_research_baseline(선택 연구 기준선)은 `none`이다. "
+        "Effect(효과): latest BaselineAdapter research evidence(최신 기준선 어댑터 연구 근거)를 current_focus"
+        "(현재 초점)에 보존한다."
     )
-    insert_at = 1
-    lines.insert(insert_at, note)
+    try:
+        focus_index = lines.index("current_focus:")
+    except ValueError:
+        lines.extend(["current_focus:"])
+        focus_index = len(lines) - 1
+    lines.insert(focus_index + 1, f"  {note}")
+    lines.insert(focus_index + 1, "- >-")
     _write_bom_text(CURRENT_STATE_PATH, "\n".join(lines))
 
 
