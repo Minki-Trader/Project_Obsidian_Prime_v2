@@ -67,6 +67,10 @@ CURRENT_CONTEXT_PATH = Path("docs/context/current_working_state.md")
 SOURCE_DATASET_ID = "dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58"
 TRAINING_DATASET_ID = "training_fpmarkets_v2_us100_m5_label_v1_fwd6_split_v1_proxyw58_stage56_run50AM"
 MODEL_INPUT_DATASET_ID = "model_input_fpmarkets_v2_us100_m5_label_v1_fwd6_split_v1_proxyw58_feature_set_v2_stage56_run50AM"
+LABEL_ID = "label_v1_fwd6_m5_logret_train_q33_3class"
+LABEL_HORIZON_BARS = 6
+MODEL_SOURCE_TAG = "lgbm_fwd6"
+INPUT_MANIFEST_NAME = "fwd6_input_manifest.json"
 DEFAULT_FEATURES_PATH = Path("data/processed/datasets") / SOURCE_DATASET_ID / "features.parquet"
 DEFAULT_SOURCE_SUMMARY_PATH = Path("data/processed/datasets") / SOURCE_DATASET_ID / "dataset_summary.json"
 DEFAULT_RAW_ROOT = Path("data/raw/mt5_bars/m5")
@@ -103,7 +107,7 @@ class LgbmFwd6Variant:
 
     @property
     def run_id(self) -> str:
-        return f"{RUN_NUMBER}_{self.variant_id}_lgbm_fwd6_v1"
+        return f"{RUN_NUMBER}_{self.variant_id}_{MODEL_SOURCE_TAG}_v1"
 
     @property
     def base_id(self) -> str:
@@ -304,7 +308,7 @@ def _materialize_fwd6_inputs(
     model_input_path = MODEL_INPUT_OUTPUT_ROOT / "model_input_dataset.parquet"
     model_input_summary_path = MODEL_INPUT_OUTPUT_ROOT / "model_input_summary.json"
     model_input_feature_order_path = MODEL_INPUT_OUTPUT_ROOT / "model_input_feature_order.txt"
-    input_manifest_path = INPUT_ROOT / "fwd6_input_manifest.json"
+    input_manifest_path = INPUT_ROOT / INPUT_MANIFEST_NAME
     if (
         not force
         and _project_path(training_path).exists()
@@ -320,14 +324,14 @@ def _materialize_fwd6_inputs(
             "model_input_summary_path": model_input_summary_path,
             "model_input_feature_order_path": model_input_feature_order_path,
             "input_manifest_path": input_manifest_path,
-            "label_spec": TrainingLabelSplitSpec(label_id="label_v1_fwd6_m5_logret_train_q33_3class", horizon_bars=6),
+            "label_spec": TrainingLabelSplitSpec(label_id=LABEL_ID, horizon_bars=LABEL_HORIZON_BARS),
             "model_input_feature_set_id": model_input_mode_config(MODE_MT5_PRICE_PROXY_58).feature_set_id,
             "status": "reused_existing",
         }
 
     spec = TrainingLabelSplitSpec(
-        label_id="label_v1_fwd6_m5_logret_train_q33_3class",
-        horizon_bars=6,
+        label_id=LABEL_ID,
+        horizon_bars=LABEL_HORIZON_BARS,
     )
     current_feature_hash = feature_order_hash()
     if current_feature_hash != EXPECTED_FEATURE_ORDER_HASH:
@@ -581,7 +585,7 @@ def _row_from_summary(variant: LgbmFwd6Variant, summary_path: Path) -> dict[str,
         "base_id": variant.base_id,
         "routed_fallback_enabled": "true",
         "model_family": summary.get("model_family", lgbm_support.MODEL_FAMILY),
-        "label_horizon_bars": 6,
+        "label_horizon_bars": LABEL_HORIZON_BARS,
         "lgbm_random_seed": variant.random_seed,
         "lgbm_n_estimators": variant.n_estimators,
         "lgbm_learning_rate": variant.learning_rate,
