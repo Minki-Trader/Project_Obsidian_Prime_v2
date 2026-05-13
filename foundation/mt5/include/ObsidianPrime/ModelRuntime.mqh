@@ -96,8 +96,19 @@ private:
         {
          if(!OnnxSetOutputShape(m_handle, 0, m_label_shape))
            {
-            reason = StringFormat("onnx_set_label_output_shape_failed:%d", GetLastError());
-            return false;
+            const int one_dim_error = GetLastError();
+            ulong label_shape_2d[];
+            ArrayResize(label_shape_2d, 2);
+            label_shape_2d[0] = 1;
+            label_shape_2d[1] = 1;
+            ResetLastError();
+            if(!OnnxSetOutputShape(m_handle, 0, label_shape_2d))
+              {
+               reason = StringFormat("onnx_set_label_output_shape_failed:%d|retry_2d:%d",
+                                     one_dim_error,
+                                     GetLastError());
+               return false;
+              }
            }
 
          ResetLastError();

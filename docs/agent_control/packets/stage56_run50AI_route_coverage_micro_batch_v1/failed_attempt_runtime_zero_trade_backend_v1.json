@@ -1,0 +1,28 @@
+{
+  "attempt_id": "run50AI_runtime_zero_trade_backend_shape_attempt_v1",
+  "created_at_utc": "2026-05-13T12:20:00Z",
+  "status": "recorded_failed_attempt_non_final",
+  "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection",
+  "run_id": "run50AI_stage56_route_coverage_micro_batch_v1",
+  "affected_variants": [
+    "qda_q85_aonly_bdisabled",
+    "qda_q93_quality_bdisabled",
+    "qda_q85_guard12_bdisabled"
+  ],
+  "symptom": "MT5 reports were produced but runtime telemetry ended at init_failed, so parsed tester reports contained zero trades and were not valid performance evidence.",
+  "root_cause_read": "Current RuntimeProbeEA attempted to force ONNX label output shape on QDA ONNX artifacts and failed with onnx_set_label_output_shape_failed:5808 before any bar processing.",
+  "evidence_paths": [
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage56/run50AI_stage56_route_coverage_micro_batch_v1/qda_q85_aonly_bdisabled/telemetry/routed_validation_is_telemetry.csv",
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/Tester/logs/20260513.log"
+  ],
+  "subsequent_attempts": [
+    {
+      "attempt_id": "run50AI_no_output_shape_retry_v1",
+      "status": "recorded_failed_attempt_non_final",
+      "symptom": "InpSetOutputShape=false allowed init_ok but every feature-ready bar failed with onnx_run_failed:5808, producing no valid performance evidence.",
+      "evidence_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage56/run50AI_stage56_route_coverage_micro_batch_v1/qda_q85_aonly_bdisabled/telemetry/tier_a_only_validation_is_telemetry.csv"
+    }
+  ],
+  "repair_action": "Add a narrow ModelRuntime label output shape fallback from [1] to [1,1] for two-output QDA ONNX artifacts and rerun the same three bounded variants. This is a tester/runtime compatibility repair, not a new hypothesis batch.",
+  "stage56_boundary": "intermediate_evidence_only_no_closeout_no_selected_research_baseline"
+}
