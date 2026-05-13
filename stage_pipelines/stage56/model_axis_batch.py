@@ -13,6 +13,7 @@ from typing import Any, Iterable, Mapping, Sequence
 import joblib
 import numpy as np
 import pandas as pd
+from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -81,6 +82,14 @@ class ModelAxisVariant:
     session_slice_id: str | None = None
     tier_b_allowed_subtypes: tuple[str, ...] = ()
     notes: str = ""
+    estimator_family: str = "logreg"
+    n_estimators: int = 360
+    criterion: str = "gini"
+    max_depth: int | None = None
+    min_samples_leaf: int = 20
+    max_features: str | float | None = "sqrt"
+    bootstrap: bool = False
+    max_samples: float | None = None
 
     def to_deep_variant(self) -> deep.RepairVariant:
         return deep.RepairVariant(
@@ -265,21 +274,45 @@ def _train_source_model(variant: ModelAxisVariant, *, force: bool) -> Path:
 
     values = train_frame.loc[:, feature_order].to_numpy(dtype="float64", copy=False)
     labels = train_frame["label_class"].astype("int64").to_numpy()
-    classifier = LogisticRegression(
-        max_iter=3000,
-        random_state=5601,
-        solver="lbfgs",
-        class_weight=variant.class_weight,
-        C=float(variant.c_value),
-    )
-    model = Pipeline(steps=[("scaler", StandardScaler()), ("classifier", classifier)])
-    fit_kwargs: dict[str, Any] = {}
+    sample_weight = None
     if variant.flat_sample_weight is not None and variant.nonflat_sample_weight is not None:
-        fit_kwargs["classifier__sample_weight"] = np.where(
+        sample_weight = np.where(
             labels == 1,
             float(variant.flat_sample_weight),
             float(variant.nonflat_sample_weight),
         )
+    fit_kwargs: dict[str, Any] = {}
+    estimator_family = str(variant.estimator_family or "logreg").lower()
+    if estimator_family == "extratrees":
+        model = ExtraTreesClassifier(
+            n_estimators=int(variant.n_estimators),
+            criterion=variant.criterion,
+            max_depth=variant.max_depth,
+            min_samples_leaf=int(variant.min_samples_leaf),
+            max_features=variant.max_features,
+            bootstrap=bool(variant.bootstrap),
+            max_samples=variant.max_samples if bool(variant.bootstrap) else None,
+            class_weight=variant.class_weight,
+            random_state=5601,
+            n_jobs=-1,
+        )
+        if sample_weight is not None:
+            fit_kwargs["sample_weight"] = sample_weight
+        model_family = "sklearn_extratrees_classifier_model_axis"
+    elif estimator_family == "logreg":
+        classifier = LogisticRegression(
+            max_iter=3000,
+            random_state=5601,
+            solver="lbfgs",
+            class_weight=variant.class_weight,
+            C=float(variant.c_value),
+        )
+        model = Pipeline(steps=[("scaler", StandardScaler()), ("classifier", classifier)])
+        if sample_weight is not None:
+            fit_kwargs["classifier__sample_weight"] = sample_weight
+        model_family = "sklearn_logistic_regression_multiclass_model_axis"
+    else:
+        raise ValueError(f"Unsupported estimator_family: {variant.estimator_family}")
     model.fit(values, labels, **fit_kwargs)
 
     target_root = reopen._project_path(model_root)
@@ -288,16 +321,24 @@ def _train_source_model(variant: ModelAxisVariant, *, force: bool) -> Path:
     manifest = {
         "variant_id": variant.variant_id,
         "model_spec_id": variant.model_spec_id,
-        "model_family": "sklearn_logistic_regression_multiclass_model_axis",
+        "model_family": model_family,
         "source": "Stage56 run50K model-axis Tier A source model",
         "feature_order_path": deep.logreg_scout.DEFAULT_FEATURE_ORDER_PATH.as_posix(),
         "feature_count": len(feature_order),
         "training_rows": int(len(train_frame)),
         "train_start_utc": variant.train_start_utc,
+        "estimator_family": estimator_family,
         "c_value": float(variant.c_value),
         "class_weight": variant.class_weight,
         "flat_sample_weight": variant.flat_sample_weight,
         "nonflat_sample_weight": variant.nonflat_sample_weight,
+        "n_estimators": int(variant.n_estimators),
+        "criterion": variant.criterion,
+        "max_depth": variant.max_depth,
+        "min_samples_leaf": int(variant.min_samples_leaf),
+        "max_features": variant.max_features,
+        "bootstrap": bool(variant.bootstrap),
+        "max_samples": variant.max_samples,
         "class_counts": {
             str(key): int(value)
             for key, value in train_frame["label_class"].astype("int64").value_counts().sort_index().items()
@@ -412,6 +453,14 @@ def _run_variant(
         "block_long_feature_range": variant.block_long_feature_range,
         "block_long_feature_min": variant.block_long_feature_min,
         "block_long_feature_max": variant.block_long_feature_max,
+        "estimator_family": variant.estimator_family,
+        "n_estimators": variant.n_estimators,
+        "criterion": variant.criterion,
+        "max_depth": variant.max_depth,
+        "min_samples_leaf": variant.min_samples_leaf,
+        "max_features": variant.max_features,
+        "bootstrap": variant.bootstrap,
+        "max_samples": variant.max_samples,
     }
     return result
 
@@ -440,6 +489,14 @@ def _augment_rows(rows: list[dict[str, Any]], variants: Sequence[ModelAxisVarian
         row["block_long_feature_range"] = "" if variant is None else variant.block_long_feature_range
         row["block_long_feature_min"] = "" if variant is None else variant.block_long_feature_min
         row["block_long_feature_max"] = "" if variant is None else variant.block_long_feature_max
+        row["estimator_family"] = "" if variant is None else variant.estimator_family
+        row["n_estimators"] = "" if variant is None else variant.n_estimators
+        row["criterion"] = "" if variant is None else variant.criterion
+        row["max_depth"] = "" if variant is None or variant.max_depth is None else variant.max_depth
+        row["min_samples_leaf"] = "" if variant is None else variant.min_samples_leaf
+        row["max_features"] = "" if variant is None or variant.max_features is None else variant.max_features
+        row["bootstrap"] = "" if variant is None else variant.bootstrap
+        row["max_samples"] = "" if variant is None or variant.max_samples is None else variant.max_samples
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
