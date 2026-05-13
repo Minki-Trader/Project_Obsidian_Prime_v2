@@ -1,4 +1,4 @@
-﻿current_run_id: run50AQ_stage56_extratrees_model_axis_density_v1
+﻿current_run_id: run50AR_stage56_extratrees_validation_density_repair_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -18,7 +18,7 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AQ(실행50AQ) ExtraTrees model-axis branch(엑스트라트리스 모델 축 분기) 완료; best_variant(현재 최선 변형)는 `et40s25b`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `0.05` / `540.59`, PF(수익 팩터) `1.00` / `1.34`, trades/day(일 거래 수) `4.568306` / `3.389744`다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): ExtraTrees leaf40(엑스트라트리스 잎 40)은 OOS quality source(표본외 품질 원천) 단서지만 validation density/PF(검증 밀도/수익 팩터), OOS density(표본외 밀도), validation cost(검증 비용), same-move survival(동일 이동 생존), Tier B damage(Tier B 손상)가 남아 run50AR(실행50AR) validation-density repair(검증-밀도 수정)로 이어간다.
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AR(실행50AR) ExtraTrees validation-density repair(엑스트라트리스 검증-밀도 수정) 완료; best_variant(현재 최선 변형)는 `et40s25_c0_h6_a`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `147.86` / `655.40`, PF(수익 팩터) `1.04` / `1.25`, trades/day(일 거래 수) `7.404372` / `5.502564`다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): density(밀도)는 통과했지만 validation PF/cost(검증 수익 팩터/비용), same-move ratio(동일 이동 비율) `0.712915` / `0.747437`, cooldown survival(쿨다운 생존)이 실패해 run50AS(실행50AS) rearm/transition guard(재허용/전환 가드)로 실제 새 기회 여부를 가른다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AO(실행50AO) inverse fwd6 LGBM side-threshold repair(반전 6봉 LightGBM 방향별 문턱값 보정) 완료; best_variant(현재 최선 변형)는 `inv6_s050l043_h3_b060`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `318.69` / `179.25`, PF(수익 팩터) `1.14` / `1.1004`, trades/day(일 거래 수) `5.278689` / `3.676923`이다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): side-threshold repair(방향별 문턱값 보정)는 품질을 올렸지만 OOS density/cost/same-move/Tier B(표본외 밀도/비용/동일 이동/Tier B)가 부족해 새 source(원천) 또는 lifecycle(생명주기) 분기가 필요함을 보존한다.
 - >-
@@ -3322,8 +3322,28 @@ stage56_dense_base_engine_selection:
   run50aq_stage_run_ledger_sha256: 2e26f22e24acf9c022bc42baab4b07752fa5df87f19933d0cb8cfb04448a8521
   run50aq_project_alpha_run_ledger_sha256: 30f332c1faac5f4186a0d12cb4c5627d921abd9d3ab2e78cec72d246c955285b
   run50aq_run_registry_sha256: 3a6f6daa3acffaee25aef2f1e3dca6d1f81c6b2b6b120f4a529ad41ec4dae35f
+  run50ar_packet_summary_path: docs/agent_control/packets/stage56_run50AR_extratrees_validation_density_repair_v1/aggregate_summary.json
+  run50ar_report_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AR_reopen_batch.md
+  run50ar_summary_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AR_summary.csv
+  run50ar_audit_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50AR_audit.csv
+  run50ar_market_weather_attribution_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_run50AR_et40s25_c0_h6_a_market_weather_attribution.md
+  run50ar_market_weather_attribution_summary_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_run50AR_et40s25_c0_h6_a_market_weather_attribution_summary.json
+  run50ar_packet_summary_sha256: 16f67edc0eb250ca72f7a973f7e67fae504e3bea81c5ba67ce26bb474e6d56ea
+  run50ar_report_sha256: f449514124618240c71523718d6759baa42ad6293082331c151977f2ea950438
+  run50ar_results_csv_sha256: 456e2cf9202fd731b95749d54f809ca782c5ef9ee1b426ce11e740417849c1f9
+  run50ar_audit_csv_sha256: 20c95ea9ba6d7ecd9088700b366f6cf81f11aaca863e1a58918bf486e8a9cdb7
+  run50ar_market_weather_attribution_csv_sha256: 6bbca8b18cf7fa23ae79877a98a33bae34ec25b05b8ce581f949073cbe8ab559
+  run50ar_trade_weather_records_csv_sha256: e02af7957845c0156e0aeb022897342b4587ace5daafd5e32c3934961313cea6
+  run50ar_market_weather_attribution_report_sha256: 9d6dcac1d454f026071979463976edf88cae1cd1c66e3eee622a76c64fd4c804
+  run50ar_market_weather_attribution_summary_sha256: f351b8a885fb6783b66217c6b7e5bc7c3f7d6da04dfbe97cd57d6148f31ec4d2
+  run50ar_progress_log_sha256: f74100fe5b1b672d63742fc87d3c5c1b6b4778ae37337aa1a9c746ccfd3f6e8d
+  run50ar_current_working_state_sha256: da43b7fa713af853e54dacbea0817ee43d875cd50cbffd618bada44614371159
+  run50ar_selection_status_sha256: 14c26bf5c105aeef5ced0f36df9d9b007cce8ca59092872b8ff497bac6cb3128
+  run50ar_stage_run_ledger_sha256: 602b470b00253ff0d07ccb0938f3ea14ff63e1efc1b9c57b3dc6ce4da7039f1e
+  run50ar_project_alpha_run_ledger_sha256: f3241a9c33c8d0762eeab24f9087f8d29902fd22ae82452e25374d09e7ac2e4c
+  run50ar_run_registry_sha256: 86a99e926391da66318920456fbd5e706e4dfbf6da7025e1f47f70760ada8599
   closeout_packet_path: stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_closeout_packet.md
-  packet_summary_path: docs/agent_control/packets/stage56_run50AQ_extratrees_model_axis_density_v1/aggregate_summary.json
+  packet_summary_path: docs/agent_control/packets/stage56_run50AR_extratrees_validation_density_repair_v1/aggregate_summary.json
   progress_log_path: docs/agent_control/packets/stage56_reopen_goal_v1/progress_log.md
   selected_research_baseline: none
   terminal_condition: useful_baselineadapter_hard_condition_satisfied
@@ -3336,7 +3356,7 @@ stage56_dense_base_engine_selection:
   - quality_frontier_only
   prior_stronger_candidate_intermediate: d390h10_logreg_deep_repair_suite
   prior_candidate_reference_intermediate: d38h10_logreg_bracket_micro_grid_preserved_prior
-  latest_batch_best_variant_intermediate: et40s25b
+  latest_batch_best_variant_intermediate: et40s25_c0_h6_a
   latest_density_pass_quality_fail_variants: run50AH_nf200s25b_validation_quality_density_positive_but_oos_density_below_5_model_axis_nonflat200_same_move_density_not_survived
   latest_run50ac_result: blocked_windows_path_length_no_kpi_interpretation_repaired_by_run50AD
   latest_cooldown_result: cooldown_1_to_2_bars_reduced_oos_density_below_5_and_pf_remained_below_1_10
@@ -3380,6 +3400,8 @@ stage56_dense_base_engine_selection:
   latest_run50ah_attribution_result: nf200s25b_validation_oos_all_major_session_vol_trend_adx_buckets_positive_but_mid_session_and_adx20_25_are_weak_oos_density_still_below_5_next_signal_source_or_route_coverage_axis_needed
   latest_extratrees_model_axis_result: et40s25b_reached_validation_oos_4_568306_3_389744_pf_1_00_1_34_net_0_05_540_59_oos_quality_positive_but_validation_density_validation_pf_oos_density_validation_cost_same_move_survival_and_tier_b_damage_failed
   latest_run50aq_attribution_result: et40s25b_validation_mid_neg76_27_adx_lt20_neg121_75_vol_low_neg95_63_oos_mid_neg18_07_other_major_oos_buckets_positive_next_cooldown_density_and_adx_weak_trend_firewall_actual_mt5_test
+  latest_extratrees_validation_density_repair_result: et40s25_c0_h6_a_reached_validation_oos_density_7_404372_5_502564_net_147_86_655_40_pf_1_04_1_25_but_validation_pf_below_1_10_validation_cost_negative_same_move_0_712915_0_747437_and_12bar_cooldown_density_2_125683_1_389744_failed
+  latest_run50ar_attribution_result: et40s25_c0_h6_a_major_buckets_mostly_positive_mid_session_only_small_negative_validation_oos_neg12_60_neg4_40_next_rearm_transition_guard_to_separate_real_new_signal_from_split_reentry
   dense_engine_candidate: d390h10_aonly_intermediate_quality_reference
   selected_shadow_candidate: none
   preserved_density_frontier: d35h07_routed_density_failed_quality
@@ -3387,4 +3409,4 @@ stage56_dense_base_engine_selection:
   current_operating_reference: none
   boundary: research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference
   prior_closeout_artifacts_are_non_final_intermediate_evidence: true
-  next_action: run50AR_extratrees_validation_density_repair_with_tier_b_damage_control_and_same_move_survival_until_useful_baselineadapter_hard_condition
+  next_action: run50AS_extratrees_rearm_transition_guard_to_test_real_density_after_split_reentry_failure
