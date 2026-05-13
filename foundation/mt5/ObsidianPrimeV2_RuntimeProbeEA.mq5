@@ -43,6 +43,11 @@ input string          InpFallbackModelPath = "Project_Obsidian_Prime_v2/runtime_
 input string          InpFallbackModelId = "runtime_probe_default_tier_b_fallback_model";
 input string          InpFallbackModelBackend = "onnx";
 input string          InpFallbackFeatureOrderHash = "";
+input bool            InpFallbackUseOnPrimaryFlat = false;
+input bool            InpFallbackPrimaryFlatRequiresNoPosition = true;
+input bool            InpFallbackUseOnPrimaryLowConfidence = false;
+input double          InpFallbackPrimaryMaxConfidence = 0.0;
+input bool            InpFallbackLowConfidenceRequiresNoPosition = true;
 
 input double          InpShortThreshold = 0.55;
 input double          InpLongThreshold = 0.55;
@@ -331,6 +336,33 @@ bool RunFallbackModel(const double &features[],
    return g_fallback_model_runtime.Run(features, p_short, p_flat, p_long, reason);
   }
 
+bool ReadFallbackFeatures(const datetime target_time,
+                          double &features[],
+                          string &source_time,
+                          string &input_hash,
+                          string &reason)
+  {
+   string fallback_reason = "";
+   double fallback_features[];
+   if(!g_fallback_feature_input.ReadForTime(target_time,
+                                            fallback_features,
+                                            source_time,
+                                            input_hash,
+                                            fallback_reason))
+     {
+      reason = fallback_reason;
+      return false;
+     }
+
+   const int fallback_count = ArraySize(fallback_features);
+   ArrayResize(features, fallback_count);
+   for(int i = 0; i < fallback_count; i++)
+      features[i] = fallback_features[i];
+
+   reason = "";
+   return true;
+  }
+
 datetime CurrentClosedBarTimestamp()
   {
    const datetime closed_open = iTime(InpMainSymbol, InpTimeframe, 1);
@@ -409,22 +441,13 @@ bool ResolveRoutedFeatures(const datetime target_time,
       return false;
      }
 
-   string fallback_source_time = "";
-   string fallback_input_hash = "";
    string fallback_reason = "";
-   double fallback_features[];
-   if(g_fallback_feature_input.ReadForTime(target_time,
-                                           fallback_features,
-                                           fallback_source_time,
-                                           fallback_input_hash,
-                                           fallback_reason))
+   if(ReadFallbackFeatures(target_time,
+                           features,
+                           source_time,
+                           input_hash,
+                           fallback_reason))
      {
-      const int fallback_count = ArraySize(fallback_features);
-      ArrayResize(features, fallback_count);
-      for(int i = 0; i < fallback_count; i++)
-         features[i] = fallback_features[i];
-      source_time = fallback_source_time;
-      input_hash = fallback_input_hash;
       active_tier = "tier_b_fallback";
       active_model_id = InpFallbackModelId;
       active_feature_order_hash = InpFallbackFeatureOrderHash;
@@ -438,6 +461,101 @@ bool ResolveRoutedFeatures(const datetime target_time,
    active_feature_order_hash = "";
    skip_reason = "tier_a_missing:" + primary_reason + "|tier_b_missing:" + fallback_reason;
    return false;
+  }
+
+bool ShouldTryFallbackAfterPrimaryDecision(const SOpDecisionResult &decision,
+                                           const string position_before,
+                                           string &trigger_reason)
+  {
+   trigger_reason = "";
+   if(!InpFallbackEnabled)
+      return false;
+
+   const bool no_position = (position_before == "none");
+   if(InpFallbackUseOnPrimaryFlat
+      && decision.signal == OP_DECISION_FLAT
+      && (!InpFallbackPrimaryFlatRequiresNoPosition || no_position))
+     {
+      trigger_reason = "primary_flat_secondary_coverage";
+      return true;
+     }
+
+   if(InpFallbackUseOnPrimaryLowConfidence
+      && decision.signal != OP_DECISION_FLAT
+      && decision.confidence <= InpFallbackPrimaryMaxConfidence
+      && (!InpFallbackLowConfidenceRequiresNoPosition || no_position))
+     {
+      trigger_reason = "primary_low_confidence_secondary_coverage";
+      return true;
+     }
+
+   return false;
+  }
+
+bool PromoteFallbackDecision(const datetime target_time,
+                             double &features[],
+                             string &source_time,
+                             string &input_hash,
+                             string &active_tier,
+                             string &active_model_id,
+                             string &active_feature_order_hash,
+                             double &p_short,
+                             double &p_flat,
+                             double &p_long,
+                             SOpDecisionResult &decision,
+                             const string trigger_reason)
+  {
+   double fallback_features[];
+   string fallback_source_time = "";
+   string fallback_input_hash = "";
+   string fallback_feature_reason = "";
+   if(!ReadFallbackFeatures(target_time,
+                            fallback_features,
+                            fallback_source_time,
+                            fallback_input_hash,
+                            fallback_feature_reason))
+     {
+      decision.reason = "secondary_coverage_features_missing:" + fallback_feature_reason + "|" + decision.reason;
+      return false;
+     }
+
+   double fallback_p_short = 0.0;
+   double fallback_p_flat = 0.0;
+   double fallback_p_long = 0.0;
+   string fallback_model_reason = "";
+   if(!RunFallbackModel(fallback_features,
+                        fallback_p_short,
+                        fallback_p_flat,
+                        fallback_p_long,
+                        fallback_model_reason))
+     {
+      decision.reason = "secondary_coverage_model_failed:" + fallback_model_reason + "|" + decision.reason;
+      return false;
+     }
+
+   SOpDecisionResult fallback_decision;
+   g_fallback_decision_surface.Evaluate(fallback_p_short,
+                                        fallback_p_flat,
+                                        fallback_p_long,
+                                        fallback_decision);
+   ApplySideFeatureFilter(fallback_features, "tier_b_fallback", fallback_decision);
+
+   const int fallback_count = ArraySize(fallback_features);
+   ArrayResize(features, fallback_count);
+   for(int i = 0; i < fallback_count; i++)
+      features[i] = fallback_features[i];
+
+   source_time = fallback_source_time;
+   input_hash = fallback_input_hash;
+   active_tier = "tier_b_fallback";
+   active_model_id = InpFallbackModelId;
+   active_feature_order_hash = InpFallbackFeatureOrderHash;
+   p_short = fallback_p_short;
+   p_flat = fallback_p_flat;
+   p_long = fallback_p_long;
+   decision = fallback_decision;
+   decision.reason = trigger_reason + "|" + decision.reason;
+   return true;
   }
 
 void ProcessClosedBar()
@@ -524,6 +642,24 @@ void ProcessClosedBar()
    else
       g_decision_surface.Evaluate(p_short, p_flat, p_long, decision);
    ApplySideFeatureFilter(features, active_tier, decision);
+
+   if(active_tier != "tier_b_fallback")
+     {
+      string secondary_trigger = "";
+      if(ShouldTryFallbackAfterPrimaryDecision(decision, position_before, secondary_trigger))
+         PromoteFallbackDecision(target_time,
+                                 features,
+                                 source_time,
+                                 input_hash,
+                                 active_tier,
+                                 active_model_id,
+                                 active_feature_order_hash,
+                                 p_short,
+                                 p_flat,
+                                 p_long,
+                                 decision,
+                                 secondary_trigger);
+     }
 
    bool overlay_close_long = false;
    bool overlay_close_short = false;
