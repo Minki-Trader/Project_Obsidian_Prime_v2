@@ -21,4 +21,5 @@ Stage56(56단계)은 unfinished optimization campaign(미완 최적화 캠페인
 
 - OOS density(표본외 밀도), cost-stressed expectancy(비용 압박 기대값), same-move split re-entry(동일 이동 분할 재진입), and route coverage(라우팅 커버리지).
 - run50AN judgment(실행50AN 판정): stronger_candidate(강화 후보)이지만 selected_research_baseline(선택 연구 기준선)은 아니다. Effect(효과): validation(검증)은 net/PF(순손익/수익 팩터) `265.28` / `1.11`로 통과했지만 OOS(표본외)는 trades/day(일 거래 수) `3.625641`, PF(수익 팩터) `1.05`, cost-stressed expectancy(비용 압박 기대값) `-0.3806`, same-move ratio(동일 이동 비율) `0.6521`로 hard condition(강한 완료 조건)에 부족하다.
-- next_hypothesis_branch(다음 가설 분기): `run50AO_inverse_lgbm_density_quality_same_move_repair`
+- attribution_read(귀인 판독): 0.48/0.45 hold4(0.48/0.45 보유4)는 OOS PF(표본외 수익 팩터)를 `1.17`까지 올렸지만 trades/day(일 거래 수)가 `2.815385`로 부족하고, 0.45 hold3(0.45 보유3)은 validation density(검증 밀도)를 맞추지만 OOS sell(표본외 매도)이 음수다. Effect(효과): run50AO(실행50AO)는 short threshold(매도 문턱값) 상승과 hold3(보유3) 유지로 density-quality tradeoff(밀도-품질 절충)를 직접 시험한다.
+- next_hypothesis_branch(다음 가설 분기): `run50AO_inverse_lgbm_side_threshold_hold3_repair`

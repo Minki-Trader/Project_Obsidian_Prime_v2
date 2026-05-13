@@ -4,7 +4,7 @@
 - stage_status(단계 상태): `active_in_progress(활성 진행 중)`
 - latest_batch(최신 후보 묶음): `run50AN_stage56_lgbm_fwd6_inverse_signal_probe_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
-- terminal_condition(종료 조건): selected_research_baseline(선택 연구 기준선) found(발견)
+- terminal_condition(종료 조건): useful BaselineAdapter(유용한 기준선 어댑터) hard condition(강한 완료 조건) satisfied(충족)
 - non_final_prior_packets(비최종 이전 묶음): `stage56_closeout_v1`, `stage56_reopened_closeout_v2`
 
 Stage56(56단계)은 unfinished optimization campaign(미완 최적화 캠페인)으로 open(열림) 상태다.
@@ -63,3 +63,11 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
 - next_hypothesis_branch(다음 가설 가지): `continue_density_repair_without_same_move_splitting_and_tier_b_damage_control`
+
+## run50AN Attribution Checkpoint(run50AN 귀인 점검)
+
+- action(행동): `inv6_s042l040_h3_b060`, `inv6_s045l045_h3_b060`, `inv6_s048l045_h4_b060`의 routed MT5(라우팅 MT5) trade list(거래 목록)를 market-weather attribution(시장 상태 귀인)으로 분해했다.
+- effect(효과): 0.45 hold3(0.45 보유3)은 validation density(검증 밀도)는 맞지만 OOS sell(표본외 매도)이 손상되고, 0.48/0.45 hold4(0.48/0.45 보유4)는 OOS PF(표본외 수익 팩터)는 좋아지지만 density(밀도)가 부족하다는 병목을 분리했다.
+- read(판독): OOS(표본외)에서 buy(매수)는 0.45와 0.48 모두 양수지만 sell(매도)은 threshold/hold(문턱값/보유 기간)에 민감하다; 0.48 hold4(0.48 보유4)는 sell downtrend(매도 하락 추세) 손상을 크게 줄였지만 trade/day(일 거래 수)가 5.0에 못 미친다.
+- next branch(다음 분기): `run50AO_inverse_lgbm_side_threshold_hold3_repair`는 short threshold(매도 문턱값)를 0.48~0.52로 올리고 long threshold(매수 문턱값)를 0.43~0.45 범위에서 유지하며 hold3(보유3)을 시험한다.
+- boundary(주장 경계): attribution_only(귀인 전용)이며 selected_research_baseline(선택 연구 기준선), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격)을 주장하지 않는다.
