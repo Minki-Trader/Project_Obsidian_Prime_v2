@@ -67,4 +67,5 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
 - judgment(판정): `et40s25b`는 OOS quality source(표본외 품질 원천) 단서지만 validation density/PF(검증 밀도/수익 팩터), OOS density(표본외 밀도), validation cost(검증 비용), same-move survival(동일 이동 생존), Tier B damage(Tier B 손상)를 통과하지 못했다. Effect(효과): selected_research_baseline(선택 연구 기준선)을 만들지 않고 다음 repair branch(수정 분기)를 연다.
+- attribution_read(기여도 판독): `et40s25b` validation(검증)은 mid session(중간 세션) `-76.27`, ADX<20(ADX 20 미만) `-121.75`, vol_low(낮은 변동성) `-95.63`이 약했고, OOS(표본외)는 mid session(중간 세션) `-18.07`만 음수였다. Effect(효과): run50AR(실행50AR)는 ExtraTrees leaf40(엑스트라트리스 잎 40)에서 cooldown(쿨다운) 완화와 ADX weak-trend firewall(ADX 약추세 방화벽)을 실제 MT5(메타트레이더5)로 시험한다.
 - next_hypothesis_branch(다음 가설 가지): `run50AR_extratrees_validation_density_repair`

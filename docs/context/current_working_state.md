@@ -21,4 +21,5 @@ Stage56(56단계)은 unfinished optimization campaign(미완 최적화 캠페인
 
 - validation density/PF(검증 밀도/수익 팩터), OOS density(표본외 밀도), validation cost-stressed expectancy(검증 비용 압박 기대값), same-move split re-entry(동일 이동 분할 재진입), and Tier B damage(Tier B 손상).
 - run50AQ judgment(실행50AQ 판정): best_variant(현재 최선 변형) `et40s25b`는 validation/OOS(검증/표본외) trades/day(일 거래 수) `4.568306` / `3.389744`, net(순손익) `0.05` / `540.59`, PF(수익 팩터) `1.00` / `1.34`이다. Tier B fallback-only(Tier B 대체 전용)는 validation/OOS(검증/표본외) net(순손익) `-83.77` / `-10.59`로 hidden damage(숨은 손상)를 만들었다. Effect(효과): ExtraTrees(엑스트라트리스) leaf40(잎 40)은 OOS quality source(표본외 품질 원천) 단서지만 density(밀도), validation quality(검증 품질), cost(비용), same-move survival(동일 이동 생존)이 부족해 selected_research_baseline(선택 연구 기준선)이 아니다.
+- run50AQ attribution(실행50AQ 기여도): `et40s25b` validation(검증)은 mid session(중간 세션) `-76.27`, ADX<20(ADX 20 미만) `-121.75`, vol_low(낮은 변동성) `-95.63`이 약했고, OOS(표본외)는 mid session(중간 세션) `-18.07`만 음수였다. Effect(효과): run50AR(실행50AR)는 cooldown(쿨다운) 완화와 ADX weak-trend firewall(ADX 약추세 방화벽)을 실제 MT5(메타트레이더5)로 시험한다.
 - next_hypothesis_branch(다음 가설 분기): `run50AR_extratrees_validation_density_repair`

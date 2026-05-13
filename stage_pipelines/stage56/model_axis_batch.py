@@ -322,7 +322,7 @@ def _train_source_model(variant: ModelAxisVariant, *, force: bool) -> Path:
         "variant_id": variant.variant_id,
         "model_spec_id": variant.model_spec_id,
         "model_family": model_family,
-        "source": "Stage56 run50K model-axis Tier A source model",
+        "source": f"Stage56 {RUN_NUMBER} model-axis Tier A source model",
         "feature_order_path": deep.logreg_scout.DEFAULT_FEATURE_ORDER_PATH.as_posix(),
         "feature_count": len(feature_order),
         "training_rows": int(len(train_frame)),
