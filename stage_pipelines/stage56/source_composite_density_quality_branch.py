@@ -393,9 +393,11 @@ def build_attempts(
         "InpAtrStopMultiplier": 0.0,
         "InpAtrTakeProfitMultiplier": 0.0,
     }
-    for variant in variants:
+    for variant_index, variant in enumerate(variants, 1):
+        variant_short = f"x{variant_index:02d}"
         variant_extra = {**extra_set_values, "InpReentryCooldownBars": int(variant.reentry_cooldown_bars)}
         for source_split, runtime_split in (("validation", "validation_is"), ("oos", "oos")):
+            split_token = "val" if runtime_split == "validation_is" else "oos"
             split_frame = common.loc[
                 common["split"].astype(str).eq(source_split)
                 & common["tier_label"].astype(str).eq(mt5.TIER_A)
@@ -405,7 +407,7 @@ def build_attempts(
             tier_b_matrix = Path(str(feature_exports[f"{variant.variant_id}_tier_b_fallback_{runtime_split}"]["path"])).name
             base_kwargs = {
                 "run_root": RUN_ROOT / variant.variant_id,
-                "run_id": f"{PARENT_RUN_ID}_{variant.variant_id}",
+                "run_id": f"{PARENT_RUN_ID}_{variant_short}",
                 "stage_number": 56,
                 "exploration_label": EXPLORATION_LABEL,
                 "split": runtime_split,
@@ -426,14 +428,14 @@ def build_attempts(
                 "reverse_on_opposite_signal": True,
                 "extra_set_values": variant_extra,
             }
-            for role, tier, feature_path, primary_tier, record_prefix, fallback in (
-                ("tier_a_only", mt5.TIER_A, f"{COMMON_ROOT}/features/{tier_a_matrix}", "tier_a", f"mt5_tier_a_only_{variant.variant_id}", False),
-                ("tier_b_fallback_only", mt5.TIER_B, f"{COMMON_ROOT}/features/{tier_b_matrix}", "tier_b_fallback", f"mt5_tier_b_fallback_only_{variant.variant_id}", False),
-                ("routed", mt5.TIER_AB, f"{COMMON_ROOT}/features/{tier_a_matrix}", "tier_a", f"mt5_routed_{variant.variant_id}", True),
+            for role, role_token, tier, feature_path, primary_tier, record_prefix, fallback in (
+                ("tier_a_only", "ta", mt5.TIER_A, f"{COMMON_ROOT}/features/{tier_a_matrix}", "tier_a", f"mt5_tier_a_only_{variant.variant_id}", False),
+                ("tier_b_fallback_only", "tb", mt5.TIER_B, f"{COMMON_ROOT}/features/{tier_b_matrix}", "tier_b_fallback", f"mt5_tier_b_fallback_only_{variant.variant_id}", False),
+                ("routed", "rt", mt5.TIER_AB, f"{COMMON_ROOT}/features/{tier_a_matrix}", "tier_a", f"mt5_routed_{variant.variant_id}", True),
             ):
                 payload = attempt_payload(
                     **base_kwargs,
-                    attempt_name=f"{variant.variant_id}_{role}_{runtime_split}",
+                    attempt_name=f"{variant_short}_{role_token}_{split_token}",
                     tier=tier,
                     feature_path=feature_path,
                     primary_active_tier=primary_tier,
