@@ -73,3 +73,13 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.170000` / `1.180000`
 - validation/OOS net(검증/표본외 순손익): `446.11` / `380.77`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T13:23:09Z run50BO Context ExtraTrees Same-Direction Cooldown(문맥 ExtraTrees 동일 방향 쿨다운)
+
+- action(행동): run50BN slot-fill(슬롯 보강) source(원천)에 same-direction cooldown(동일 방향 쿨다운)을 적용해 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): headline density(겉보기 밀도)가 같은 방향 재진입인지, cooldown(쿨다운) 뒤에도 진짜 기회가 남는지 확인했다.
+- best_variant(현재 최선 변형): `v50_topup_slotfill_sd2_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `8.857923` / `6.420513`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.170000` / `1.190000`
+- validation/OOS net(검증/표본외 순손익): `380.19` / `342.92`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
