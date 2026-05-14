@@ -107,3 +107,13 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - partial_quality_clue(부분 품질 단서): `s43c02_h4c0_with_b_blvl` A+B actual routed OOS(A+B 실제 라우팅 표본외)는 PF(수익 팩터) `1.100000`, net(순손익) `233.41`지만 Tier B fallback-only OOS(Tier B 대체 전용 표본외) PF(수익 팩터) `0.850000`와 same-move ratio(동일 이동 비율) `0.762146`가 실패한다.
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; current_frontier_candidate(현재 최전선 후보)=`run50BH/et40h6_r001_a`; failure_reasons(실패 사유)=`oos_pf;cost_stressed_expectancy;same_move_density`.
 - next(다음): `run50BL_real_density_source_pivot_branch`.
+
+## 2026-05-14T10:24:50Z run50BH Account Cost Forensics(계좌 비용 포렌식)
+
+- action(행동): 현재 MT5 account(계좌)와 US100 symbol(심볼), 2026년 US100 deal history(체결 이력), run50BH(실행50BH) MT5 reports(보고서), raw M5 spread_points(원천 5분봉 스프레드 포인트)를 확인했다.
+- effect(효과): run50BH(실행50BH)의 cost-stressed expectancy(비용 압박 기대값) 실패가 commission(거래수수료) 때문인지, spread/slippage(스프레드/미끄러짐) 때문인지 분리했다.
+- commission read(수수료 판독): live account history(실계좌 이력) US100 185 deals(체결)와 run50BH reports(보고서) 6개 모두 commission(수수료) 합계 `0.0`, nonzero commission(비영 수수료) `0`이다.
+- swap read(스왑 판독): live account history(실계좌 이력) swap(스왑) 합계 `-0.75`, run50BH routed validation/OOS(라우팅 검증/표본외) swap(스왑) `+3.08` / `+2.82`로 작지만 존재한다.
+- spread read(스프레드 판독): current live recent M5(현재 실계좌 최근 5분봉) 5000 rows(행)는 median/max `60/60` points(포인트); run50BH raw validation/OOS(원천 검증/표본외)는 median `140/60`, max `150/140` points(포인트)다.
+- slippage boundary(미끄러짐 경계): live history order request price(실계좌 주문 요청가)가 market order(시장가 주문)에서 `0.0`으로 저장되어 request-vs-fill slippage(요청가 대비 체결가 미끄러짐)는 inconclusive(불충분)이다. MT5 tester(테스터)는 fill rate(체결률) `1.0`, reject(거절) `0`이고 deal price residual(체결가 잔차)은 대부분 bid/ask quote(매수/매도 호가) 수준이다.
+- decision(결정): commission issue(수수료 문제)는 이 계좌 기준 largely resolved(대체로 해소)지만 selected_research_baseline(선택 연구 기준선)은 `none` 유지다. Effect(효과): same-move density(동일 이동 밀도)와 Tier B rule(Tier B 규칙)은 여전히 별도 병목이다.

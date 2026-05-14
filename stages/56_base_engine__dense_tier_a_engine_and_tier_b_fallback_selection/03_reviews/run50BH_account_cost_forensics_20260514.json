@@ -1,0 +1,172 @@
+{
+  "artifact_id": "stage56_run50BH_account_cost_forensics_20260514",
+  "created_at_utc": "2026-05-14T10:24:50Z",
+  "scope": {
+    "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection",
+    "frontier_reference": "run50BH/et40h6_r001_a",
+    "purpose": "Check whether the user account and run50BH tester evidence support a zero-commission account-cost assumption, and quantify spread/slippage boundaries before any baseline reinterpretation."
+  },
+  "current_mt5_account_probe": {
+    "terminal_path": "C:/Program Files/MetaTrader 5/terminal64.exe",
+    "server": "FPMarketsSC-Live",
+    "company": "First Prudential Markets Limited",
+    "currency": "USD",
+    "leverage": 100,
+    "trade_allowed": true,
+    "trade_expert": true,
+    "commission_blocked": 0.0,
+    "identity_privacy_note": "Account login and account holder name were observed locally but intentionally not recorded in this artifact."
+  },
+  "current_us100_symbol_probe": {
+    "symbol": "US100",
+    "description": "US Tech 100 Index Cash",
+    "path": "Indices/US100",
+    "digits": 2,
+    "point": 0.01,
+    "trade_contract_size": 1.0,
+    "trade_tick_size": 0.01,
+    "trade_tick_value": 0.01,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "spread_points_now": 60,
+    "spread_float": true,
+    "swap_mode": 2,
+    "swap_long": -4.27,
+    "swap_short": 1.79,
+    "swap_rollover3days": 5,
+    "tick_bid": 29490.4,
+    "tick_ask": 29491.0,
+    "tick_spread_price": 0.6
+  },
+  "live_account_history_probe_2026_us100": {
+    "history_deals_count_all_symbols": 196,
+    "history_deals_count_us100": 185,
+    "commission_sum": 0.0,
+    "commission_nonzero_count": 0,
+    "fee_sum": 0.0,
+    "swap_sum": -0.75,
+    "swap_nonzero_count": 2,
+    "judgment": "supports_zero_commission_account; swap_exists_but_was_sparse_in_2026_history"
+  },
+  "run50bh_tester_commission_swap_probe": {
+    "reports_checked": 6,
+    "routed_validation": {
+      "trades": 1253,
+      "commission_sum": 0.0,
+      "commission_nonzero_count": 0,
+      "swap_sum": 3.08,
+      "swap_nonzero_count": 48,
+      "gross_profit_from_out_deals": 310.41,
+      "net_profit_after_swap_and_commission": 313.49,
+      "average_holding_bars": 14.603333333333333
+    },
+    "routed_oos": {
+      "trades": 995,
+      "commission_sum": 0.0,
+      "commission_nonzero_count": 0,
+      "swap_sum": 2.82,
+      "swap_nonzero_count": 40,
+      "gross_profit_from_out_deals": 610.76,
+      "net_profit_after_swap_and_commission": 613.58,
+      "average_holding_bars": 14.02
+    },
+    "tier_b_fallback_only_validation": {
+      "trades": 9,
+      "commission_sum": 0.0,
+      "commission_nonzero_count": 0,
+      "swap_sum": 0.11,
+      "swap_nonzero_count": 2,
+      "net_profit_after_swap_and_commission": -82.3
+    },
+    "tier_b_fallback_only_oos": {
+      "trades": 17,
+      "commission_sum": 0.0,
+      "commission_nonzero_count": 0,
+      "swap_sum": -0.43,
+      "swap_nonzero_count": 1,
+      "net_profit_after_swap_and_commission": 8.19
+    }
+  },
+  "spread_probe": {
+    "fixed_lot_used_by_run50bh": 0.1,
+    "spread_value_formula_usd_at_0p1_lot": "spread_points * 0.001",
+    "recent_live_m5_rates": {
+      "rows": 5000,
+      "from": "2026-04-20T19:45:00",
+      "to": "2026-05-14T22:20:00",
+      "mean_spread_points": 60.0,
+      "median_spread_points": 60.0,
+      "p90_spread_points": 60.0,
+      "p95_spread_points": 60.0,
+      "p99_spread_points": 60.0,
+      "max_spread_points": 60.0,
+      "gt100_points_pct": 0.0,
+      "gt300_points_pct": 0.0
+    },
+    "raw_m5_validation_2025_01_01_to_2025_10_01": {
+      "rows": 52808,
+      "mean_spread_points": 134.164,
+      "median_spread_points": 140.0,
+      "p95_spread_points": 140.0,
+      "max_spread_points": 150.0,
+      "median_spread_usd_at_0p1_lot": 0.14,
+      "spread_ge300_count": 0,
+      "open_gap_abs_ge100_count": 11,
+      "open_gap_abs_ge250_count": 6
+    },
+    "raw_m5_oos_2025_10_01_to_2026_04_14": {
+      "rows": 37337,
+      "mean_spread_points": 82.886,
+      "median_spread_points": 60.0,
+      "p95_spread_points": 140.0,
+      "max_spread_points": 140.0,
+      "median_spread_usd_at_0p1_lot": 0.06,
+      "spread_ge300_count": 0,
+      "open_gap_abs_ge100_count": 13,
+      "open_gap_abs_ge250_count": 4
+    },
+    "cost_stress_0p5_usd_interpretation_at_0p1_lot": {
+      "equivalent_spread_points": 500,
+      "times_validation_median_spread_cost": 3.57,
+      "times_oos_median_spread_cost": 8.33
+    }
+  },
+  "slippage_probe": {
+    "live_history_order_request_price_status": "inconclusive",
+    "reason": "For observed US100 market orders, MT5 history_orders_get stored price_open as 0.0, so request_price minus deal_price slippage is not recoverable from local history records.",
+    "tester_execution_status": {
+      "routed_validation_fill_rate": 1.0,
+      "routed_validation_reject_count": 0,
+      "routed_oos_fill_rate": 1.0,
+      "routed_oos_reject_count": 0
+    },
+    "tester_deal_price_residual_vs_bar_open_quote": {
+      "definition": "abs(deal_price - expected_bid_or_ask_at_bar_open), where expected ask is bid_open plus spread_points*0.01 for ask-side events.",
+      "routed_validation": {
+        "events": 2506,
+        "mean_abs_residual": 0.00829,
+        "median_abs_residual": 0.0,
+        "p99_abs_residual": 0.12,
+        "max_abs_residual": 10.5,
+        "abs_residual_ge1_count": 2,
+        "abs_residual_ge5_count": 1
+      },
+      "routed_oos": {
+        "events": 1990,
+        "mean_abs_residual": 0.01651,
+        "median_abs_residual": 0.0,
+        "p99_abs_residual": 0.5,
+        "max_abs_residual": 5.3,
+        "abs_residual_ge1_count": 8,
+        "abs_residual_ge5_count": 2
+      }
+    },
+    "judgment": "tester_slippage_not_independently_measured; no tester fill/reject damage observed; live request-vs-fill slippage requires telemetry that records requested price at order_send time"
+  },
+  "research_judgment": {
+    "commission_issue": "largely_resolved_for_this_account_and_run50BH_reports",
+    "spread_gap_issue": "no spread spikes above 150 points inside run50BH validation/OOS raw M5 windows, but session/weekend open price gaps exist and must remain in stress tests",
+    "cost_stress_0p5": "likely conservative for current zero-commission 60-point spread account, but validation expectancy 0.25 per trade still cannot tolerate large hidden slippage or spread-regime drift",
+    "baseline_implication": "This lowers the cost-stress concern for run50BH, but does not solve same-move density or Tier B rule evidence; selected_research_baseline remains none."
+  }
+}
