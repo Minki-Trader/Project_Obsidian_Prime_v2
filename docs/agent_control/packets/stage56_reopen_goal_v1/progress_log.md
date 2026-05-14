@@ -91,3 +91,14 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `0.980000` / `1.180000`
 - validation/OOS net(검증/표본외 순손익): `-32.280000` / `246.33`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_density;validation_net_positive;validation_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T02:53:05Z run50AX Source Composite Density Quality(원천 합성 밀도 품질)
+
+- action(행동): run50AW(실행50AW)의 Stage47/Stage45 source(원천)를 composite signal(합성 신호)로 묶어 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): OOS density(표본외 밀도), PF(수익 팩터), same-move density(동일 이동 밀도)가 source union/filter(원천 합산/필터)에서 살아나는지 기록했다.
+- correction(정정): MT5 report name(보고서 이름)을 short token(짧은 토큰)으로 줄이고 artifact hash(산출물 해시)를 실제 파일 기준으로 다시 기록했다. Effect(효과): tester report(테스터 보고서) 수집과 hash check(해시 검사)가 같은 경로를 가리킨다.
+- best_variant(현재 최선 변형): `v02_s45_primary_s47_flatfill_h4c6`
+- validation/OOS trades/day(검증/표본외 일 거래): `7.770492` / `5.046154`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.010000` / `1.020000`
+- validation/OOS net(검증/표본외 순손익): `34.380000` / `34.010000`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.

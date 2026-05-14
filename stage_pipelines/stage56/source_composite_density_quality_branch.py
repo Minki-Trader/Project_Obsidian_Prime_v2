@@ -654,7 +654,8 @@ def artifact_rows(result: Mapping[str, Any], variants: Sequence[CompositeVariant
     def add(artifact_id: str, artifact_type: str, path: Path | str, notes: str) -> None:
         p = Path(str(path))
         resolved = p if p.is_absolute() else REPO_ROOT / p
-        sha = sha256_file_lf_normalized(resolved) if resolved.is_file() else "directory_or_not_feasible"
+        is_file = path_exists(resolved) and io_path(resolved).is_file()
+        sha = sha256_file_lf_normalized(resolved) if is_file else "directory_or_not_feasible"
         rows.append(
             {
                 "artifact_id": artifact_id,
@@ -817,12 +818,19 @@ Failure(실패): `{failures}`. Effect(효과): selected_research_baseline(선택
 
 def append_progress(best: Mapping[str, Any]) -> None:
     existing = io_path(PROGRESS_LOG_PATH).read_text(encoding="utf-8-sig") if path_exists(PROGRESS_LOG_PATH) else ""
+    existing = re.sub(
+        r"\n## [^\n]* run50AX Source Composite Density Quality\(원천 합성 밀도 품질\)\n.*?(?=\n## |\Z)",
+        "",
+        existing.rstrip(),
+        flags=re.S,
+    )
     entry = f"""
 
 ## {utc_now()} run50AX Source Composite Density Quality(원천 합성 밀도 품질)
 
 - action(행동): run50AW(실행50AW)의 Stage47/Stage45 source(원천)를 composite signal(합성 신호)로 묶어 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
 - effect(효과): OOS density(표본외 밀도), PF(수익 팩터), same-move density(동일 이동 밀도)가 source union/filter(원천 합산/필터)에서 살아나는지 기록했다.
+- correction(정정): MT5 report name(보고서 이름)을 short token(짧은 토큰)으로 줄이고 artifact hash(산출물 해시)를 실제 파일 기준으로 다시 기록했다. Effect(효과): tester report(테스터 보고서) 수집과 hash check(해시 검사)가 같은 경로를 가리킨다.
 - best_variant(현재 최선 변형): `{best.get('variant_id', 'none')}`
 - validation/OOS trades/day(검증/표본외 일 거래): `{fmt(best.get('routed_validation_trades_per_day'))}` / `{fmt(best.get('routed_oos_trades_per_day'))}`
 - validation/OOS PF(검증/표본외 수익 팩터): `{fmt(best.get('routed_validation_pf'))}` / `{fmt(best.get('routed_oos_pf'))}`
@@ -844,6 +852,12 @@ def update_workspace_state(best: Mapping[str, Any]) -> None:
         f"net(순손익) `{fmt(best.get('routed_validation_net'))}` / `{fmt(best.get('routed_oos_net'))}`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. "
         f"Effect(효과): `{best.get('failure_reasons', '')}` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다."
     )
+    run50ax_focus_pattern = (
+        r"(?m)^- Stage56\(56단계\) `"
+        + re.escape(STAGE_ID)
+        + r"`: run50AX\(실행50AX\) source composite density/quality\(원천 합성 밀도/품질\) 완료; .*\n"
+    )
+    text = re.sub(run50ax_focus_pattern, "", text)
     text = re.sub(r"current_focus:\n", f"current_focus:\n{focus}\n", text, count=1)
     block = (
         "\nstage56_run50ax_source_composite_density_quality:\n"
@@ -888,6 +902,7 @@ def write_run_files(
             "selected_research_baseline": "none",
             "stage56_remains_open": True,
             "terminal_condition": "not_satisfied",
+            "external_verification_status": result.get("external_verification_status"),
             "best_variant": best_row(summary_rows),
             "summary_csv_path": RESULTS_CSV_PATH.as_posix(),
             "audit_csv_path": AUDIT_CSV_PATH.as_posix(),
