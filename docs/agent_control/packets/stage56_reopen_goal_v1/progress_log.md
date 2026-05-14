@@ -2,7 +2,7 @@
 
 - packet_id(묶음 ID): `stage56_reopen_goal_v1`
 - stage_status(단계 상태): `active_in_progress(활성 진행 중)`
-- latest_batch(최신 후보 묶음): `run50AZ_stage56_cooldown12_broad_model_source_v1`
+- latest_batch(최신 후보 묶음): `run50BH_stage56_extratrees_light_rearm_density_recovery_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - terminal_condition(종료 조건): selected_research_baseline(선택 연구 기준선) found(발견)
 - non_final_prior_packets(비최종 이전 묶음): `stage56_closeout_v1`, `stage56_reopened_closeout_v2`
@@ -30,176 +30,44 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 
 | variant(변형) | hypothesis family(가설군) | fallback(대체) | report paths(보고서 경로) | val/day(검증/일) | OOS/day(표본외/일) | val PF(검증 PF) | OOS PF(표본외 PF) | val net(검증 순손익) | OOS net(표본외 순손익) | reason(이유) |
 |---|---|---:|---|---:|---:|---:|---:|---:|---:|---|
-| et10c12_h4_s160l090_a | extratrees_leaf10_cooldown12_no_side_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/et10c12_h4_s160l090_a/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_et10c12_h4_s160l090_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/et10c12_h4_s160l090_a/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_et10c12_h4_s160l090_a_logreg_deep_v1_routed_oos.htm | 4.071038 | 3.092308 | 0.78 | 1.11 | -395.56 | 135.34 | validation_density; oos_density; validation_net_positive; validation_pf |
-| et10c12_h4_s160l090_b | extratrees_leaf10_cooldown12_tier_b_damage_audit | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/et10c12_h4_s160l090_b/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_et10c12_h4_s160l090_b_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/et10c12_h4_s160l090_b/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_et10c12_h4_s160l090_b_logreg_deep_v1_routed_oos.htm | 4.163934 | 3.184615 | 0.8 | 1.11 | -379.85 | 133.66 | validation_density; oos_density; validation_net_positive; validation_pf |
-| nf250c12_h4_s160l090_a | logreg_nonflat250_cooldown12_no_side_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/nf250c12_h4_s160l090_a/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_nf250c12_h4_s160l090_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/nf250c12_h4_s160l090_a/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_nf250c12_h4_s160l090_a_logreg_deep_v1_routed_oos.htm | 4.513661 | 3.035897 | 1.03 | 0.91 | 45.74 | -118.83 | validation_density; oos_density; oos_net_positive; validation_pf |
-| r24balc12_h4_s140l080_a | recent2024_balanced_cooldown12_no_side_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/r24balc12_h4_s140l080_a/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_r24balc12_h4_s140l080_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50AZ/r24balc12_h4_s140l080_a/mt5/reports/Project_Obsidian_Prime_v2_run50AZ_r24balc12_h4_s140l080_a_logreg_deep_v1_routed_oos.htm | 3.901639 | 2.958974 | 0.77 | 0.85 | -405.47 | -223.22 | validation_density; oos_density; validation_net_positive; oos_net_positive |
+| et40h6_r001_a | light_rearm_density_recovery_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et40h6_r001_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et40h6_r001_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et40h6_r001_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et40h6_r001_a_logreg_deep_v1_routed_oos.htm | 6.846995 | 5.102564 | 1.1 | 1.26 | 313.49 | 613.58 | cost_stressed_expectancy; same_move_density; tier_b_rule |
+| et40h6_r005_a | light_rearm_density_recovery_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et40h6_r005_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et40h6_r005_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et40h6_r005_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et40h6_r005_a_logreg_deep_v1_routed_oos.htm | 6.677596 | 4.902564 | 1.1 | 1.43 | 314.45 | 911.32 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
+| et40h6_r010_a | light_rearm_density_recovery_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et40h6_r010_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et40h6_r010_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et40h6_r010_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et40h6_r010_a_logreg_deep_v1_routed_oos.htm | 6.344262 | 4.620513 | 1.18 | 1.38 | 505.33 | 743.61 | oos_density; cost_stressed_expectancy; same_move_density; tier_b_rule |
+| et30h6_r001_a | leaf30_light_rearm_density_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et30h6_r001_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et30h6_r001_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et30h6_r001_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et30h6_r001_a_logreg_deep_v1_routed_oos.htm | 7.142077 | 5.200000 | 1.04 | 1.35 | 140.74 | 818.43 | validation_pf; cost_stressed_expectancy; same_move_density; tier_b_rule |
+| et30h6_r005_a | leaf30_light_rearm_density_aonly | false | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et30h6_r005_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et30h6_r005_a_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et30h6_r005_a/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et30h6_r005_a_logreg_deep_v1_routed_oos.htm | 6.901639 | 5.035897 | 1.0 | 1.4 | -13.81 | 886.15 | validation_net_positive; validation_pf; cost_stressed_expectancy; same_move_density |
+| et30h6_r005_b | leaf30_light_rearm_tier_b_damage_check | true | stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et30h6_r005_b/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et30h6_r005_b_logreg_deep_v1_routed_validation_is.htm ; stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BH/et30h6_r005_b/mt5/reports/Project_Obsidian_Prime_v2_run50BH_et30h6_r005_b_logreg_deep_v1_routed_oos.htm | 6.939891 | 5.128205 | 1.0 | 1.4 | 13.11 | 890.13 | validation_pf; cost_stressed_expectancy; same_move_density |
 
 ## Tier Views(티어 보기)
 
 | variant(변형) | Tier A val/OOS(Tier A 검증/표본외) | Tier B fallback-only val/OOS(Tier B 대체 전용 검증/표본외) | A+B actual routed val/OOS(A+B 실제 라우팅 검증/표본외) | Tier B contribution(Tier B 기여) |
 |---|---|---|---|---|
-| et10c12_h4_s160l090_a | net -395.56/135.34, PF 0.78/1.11 | net -16.31/4.92, PF 0.07/1.44 | net -395.56/135.34, PF 0.78/1.11 | fallback bars None/None |
-| et10c12_h4_s160l090_b | net -395.56/135.34, PF 0.78/1.11 | net -16.31/4.92, PF 0.07/1.44 | net -379.85/133.66, PF 0.8/1.11 | fallback bars None/None |
-| nf250c12_h4_s160l090_a | net 45.74/-118.83, PF 1.03/0.91 | net -16.31/4.92, PF 0.07/1.44 | net 45.74/-118.83, PF 1.03/0.91 | fallback bars None/None |
-| r24balc12_h4_s140l080_a | net -405.47/-223.22, PF 0.77/0.85 | net -16.31/4.92, PF 0.07/1.44 | net -405.47/-223.22, PF 0.77/0.85 | fallback bars None/None |
+| et40h6_r001_a | net 313.49/613.58, PF 1.1/1.26 | net -82.3/8.19, PF 0.11/1.34 | net 313.49/613.58, PF 1.1/1.26 | fallback bars None/None |
+| et40h6_r005_a | net 314.45/911.32, PF 1.1/1.43 | net -80.99/8.19, PF 0.11/1.34 | net 314.45/911.32, PF 1.1/1.43 | fallback bars None/None |
+| et40h6_r010_a | net 505.33/743.61, PF 1.18/1.38 | net -80.99/8.19, PF 0.11/1.34 | net 505.33/743.61, PF 1.18/1.38 | fallback bars None/None |
+| et30h6_r001_a | net 140.74/818.43, PF 1.04/1.35 | net -82.3/8.19, PF 0.11/1.34 | net 140.74/818.43, PF 1.04/1.35 | fallback bars None/None |
+| et30h6_r005_a | net -13.81/886.15, PF 1.0/1.4 | net -80.99/8.19, PF 0.11/1.34 | net -13.81/886.15, PF 1.0/1.4 | fallback bars None/None |
+| et30h6_r005_b | net -13.81/886.15, PF 1.0/1.4 | net -80.99/8.19, PF 0.11/1.34 | net 13.11/890.13, PF 1.0/1.4 | fallback bars None/None |
 
 ## Hold/Re-entry Audit(보유/재진입 감사)
 
 | variant(변형) | split(분할) | MFE capture ratio(MFE 포착 비율) | winner truncation(승자 절단) | loser escape(패자 탈출) | re-entry 3/6/12(재진입 3/6/12봉) | same-move ratio(동일 이동 비율) | cost-stressed exp(비용 압박 기대값) | cooldown survives(쿨다운 생존) |
 |---|---|---:|---:|---:|---|---:|---:|---:|
-| et10c12_h4_s160l090_a | validation_is | 0.600934 | 0.363905 | 0.275184 | 156/157/157 | 0.210738 | -1.030953 | False |
-| et10c12_h4_s160l090_a | oos | 0.591983 | 0.365385 | 0.323024 | 136/139/139 | 0.230514 | -0.275556 | False |
-| et10c12_h4_s160l090_b | validation_is | 0.605638 | 0.354467 | 0.267470 | 164/165/165 | 0.216535 | -0.998491 | False |
-| et10c12_h4_s160l090_b | oos | 0.595894 | 0.356250 | 0.318937 | 143/146/146 | 0.235105 | -0.284767 | False |
-| nf250c12_h4_s160l090_a | validation_is | 0.595652 | 0.345499 | 0.327711 | 140/147/148 | 0.179177 | -0.444625 | False |
-| nf250c12_h4_s160l090_a | oos | 0.603662 | 0.340206 | 0.352159 | 69/70/70 | 0.118243 | -0.700726 | False |
-| r24balc12_h4_s140l080_a | validation_is | 0.624638 | 0.308605 | 0.275862 | 155/155/155 | 0.217087 | -1.067885 | False |
-| r24balc12_h4_s140l080_a | oos | 0.595075 | 0.345070 | 0.365188 | 140/141/141 | 0.244367 | -0.886863 | False |
+| et40h6_r001_a | validation_is | 0.597153 | 0.355172 | 0.258544 | 625/761/857 | 0.683958 | -0.249808 | False |
+| et40h6_r001_a | oos | 0.622472 | 0.310782 | 0.300766 | 552/650/715 | 0.718593 | 0.116663 | False |
+| et40h6_r005_a | validation_is | 0.599127 | 0.352415 | 0.266968 | 562/721/822 | 0.672668 | -0.242676 | False |
+| et40h6_r005_a | oos | 0.624715 | 0.306554 | 0.298137 | 474/594/673 | 0.703975 | 0.453264 | False |
+| et40h6_r010_a | validation_is | 0.598202 | 0.355019 | 0.260032 | 471/633/755 | 0.650301 | -0.064746 | False |
+| et40h6_r010_a | oos | 0.606429 | 0.324263 | 0.310870 | 387/513/609 | 0.675916 | 0.325316 | False |
+| et30h6_r001_a | validation_is | 0.609525 | 0.352445 | 0.287115 | 681/815/898 | 0.687070 | -0.392318 | False |
+| et30h6_r001_a | oos | 0.632943 | 0.298625 | 0.310891 | 531/649/735 | 0.724852 | 0.307130 | False |
+| et30h6_r005_a | validation_is | 0.598487 | 0.367418 | 0.274052 | 600/758/851 | 0.673793 | -0.510934 | False |
+| et30h6_r005_a | oos | 0.635997 | 0.295775 | 0.309278 | 471/609/700 | 0.712831 | 0.402393 | False |
+| et30h6_r005_b | validation_is | 0.598681 | 0.368330 | 0.275762 | 597/759/854 | 0.672441 | -0.489677 | False |
+| et30h6_r005_b | oos | 0.635023 | 0.299213 | 0.308943 | 471/618/714 | 0.714000 | 0.390130 | False |
 
 ## Current Read(현재 판독)
 
-- best_variant(최선 변형): `nf250c12_h4_s160l090_a`
+- best_variant(최선 변형): `et40h6_r001_a`
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
 - next_hypothesis_branch(다음 가설 가지): `continue_density_repair_without_same_move_splitting_and_tier_b_damage_control`
-
-## 2026-05-14T04:07:44Z run50BA Context-Timed Opportunity Source(문맥/시간 기회 원천)
-
-- action(행동): slot/context rule(시간 구간/문맥 규칙)로 하루 여러 독립 신호를 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
-- effect(효과): threshold relaxation(문턱값 완화)이 아니라 opportunity source(기회 원천) 자체가 density/PF/net(밀도/수익 팩터/순손익)을 만들 수 있는지 확인했다.
-- best_variant(현재 최선 변형): `v09_slot30_cycle_dense_h2c12_no_b`
-- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
-- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
-- validation/OOS net(검증/표본외 순손익): `` / ``
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T04:20:40Z run50BA Context-Timed Opportunity Source(문맥/시간 기회 원천)
-
-- action(행동): slot/context rule(시간 구간/문맥 규칙)로 하루 여러 독립 신호를 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
-- effect(효과): threshold relaxation(문턱값 완화)이 아니라 opportunity source(기회 원천) 자체가 density/PF/net(밀도/수익 팩터/순손익)을 만들 수 있는지 확인했다.
-- best_variant(현재 최선 변형): `v11_slot30_dense_control_h2c12_with_b`
-- validation/OOS trades/day(검증/표본외 일 거래): `3.295082` / `2.200000`
-- validation/OOS PF(검증/표본외 수익 팩터): `1.170000` / `1.320000`
-- validation/OOS net(검증/표본외 순손익): `188.87` / `265.10`
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T04:25:46Z run50BB Context-Timed No Runtime Cooldown(문맥/시간 런타임 쿨다운 없음)
-
-- action(행동): runtime re-entry cooldown(런타임 재진입 쿨다운)을 0으로 낮추고 audit cooldown(감사 쿨다운)을 별도 기록했다.
-- effect(효과): actual density(실제 밀도)가 execution setting(실행 설정) 때문에 눌렸는지 확인했다.
-- best_variant(현재 최선 변형): `v13_slot30_dense_control_h2c0_with_b`
-- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
-- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
-- validation/OOS net(검증/표본외 순손익): `` / ``
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T04:40:52Z run50BB Context-Timed No Runtime Cooldown(문맥/시간 런타임 쿨다운 없음)
-
-- action(행동): runtime re-entry cooldown(런타임 재진입 쿨다운)을 0으로 낮추고 audit cooldown(감사 쿨다운)을 별도 기록했다.
-- effect(효과): actual density(실제 밀도)가 execution setting(실행 설정) 때문에 눌렸는지 확인했다.
-- best_variant(현재 최선 변형): `v13_slot30_dense_control_h2c0_with_b`
-- validation/OOS trades/day(검증/표본외 일 거래): `7.704918` / `5.194872`
-- validation/OOS PF(검증/표본외 수익 팩터): `1.080000` / `1.040000`
-- validation/OOS net(검증/표본외 순손익): `211.37` / `82.250000`
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T04:49:36Z run50BC Context-Timed Alternating Slot(문맥/시간 교대 슬롯)
-
-- action(행동): 40/45-minute alternating slot(40/45분 교대 슬롯) 원천을 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행했다.
-- effect(효과): raw density(원 거래 밀도)와 same-move density(동일 이동 밀도)를 동시에 볼 수 있게 했다.
-- best_variant(현재 최선 변형): `v17_slot40_even_short_odd_long_context_h2c0_no_b`
-- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
-- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
-- validation/OOS net(검증/표본외 순손익): `` / ``
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T05:07:53Z run50BC Context-Timed Alternating Slot(문맥/시간 교대 슬롯)
-
-- action(행동): 40/45-minute alternating slot(40/45분 교대 슬롯) 원천을 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행했다.
-- effect(효과): raw density(원 거래 밀도)와 same-move density(동일 이동 밀도)를 동시에 볼 수 있게 했다.
-- best_variant(현재 최선 변형): `v19_slot40_even_short_odd_long_always_h2c0_no_b`
-- validation/OOS trades/day(검증/표본외 일 거래): `8.240437` / `5.656410`
-- validation/OOS PF(검증/표본외 수익 팩터): `0.960000` / `0.920000`
-- validation/OOS net(검증/표본외 순손익): `-92.750000` / `-142.02`
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy`.
-
-## 2026-05-14T05:28:22Z run50BD Context-Timed Quality-Gated Slot(문맥/시간 품질 필터 슬롯)
-
-- action(행동): train/validation(학습/검증) 2-bar proxy(2봉 대리 지표)로 quality-gated alternating slot(품질 필터 교대 슬롯)을 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
-- effect(효과): run50BC(실행50BC)의 density(밀도) 성과가 단순 분할이 아니라 품질 있는 opportunity source(기회 원천)로 변하는지 확인했다.
-- best_variant(현재 최선 변형): `v21_w40_esol_highcov_lr2_h2c0_no_b`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
-- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
-- validation/OOS net(검증/표본외 순손익): `` / ``
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T05:51:14Z run50BD Context-Timed Quality-Gated Slot(문맥/시간 품질 필터 슬롯)
-
-- action(행동): train/validation(학습/검증) 2-bar proxy(2봉 대리 지표)로 quality-gated alternating slot(품질 필터 교대 슬롯)을 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
-- effect(효과): run50BC(실행50BC)의 density(밀도) 성과가 단순 분할이 아니라 품질 있는 opportunity source(기회 원천)로 변하는지 확인했다.
-- best_variant(현재 최선 변형): `v25_w40_esol_highcov_lr2_h2c0_with_b`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `8.923497` / `5.784615`
-- validation/OOS PF(검증/표본외 수익 팩터): `1.140000` / `0.970000`
-- validation/OOS net(검증/표본외 순손익): `276.21` / `-43.280000`
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T05:59:19Z run50BE V22 Density Top-Up(밀도 보강)
-
-- action(행동): run50BD(실행50BD) v22를 기준으로 slot relaxation(슬롯 완화)과 Tier B fallback(Tier B 대체)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
-- effect(효과): OOS-positive under-dense(표본외 양수이나 밀도 부족) 후보가 5/day(일 5회) 밀도까지 확장 가능한지 확인했다.
-- best_variant(현재 최선 변형): `v26_v22_slot8_relax_h2c0_no_b`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
-- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
-- validation/OOS net(검증/표본외 순손익): `` / ``
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T06:17:27Z run50BE V22 Density Top-Up(밀도 보강)
-
-- action(행동): run50BD(실행50BD) v22를 기준으로 slot relaxation(슬롯 완화)과 Tier B fallback(Tier B 대체)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
-- effect(효과): OOS-positive under-dense(표본외 양수이나 밀도 부족) 후보가 5/day(일 5회) 밀도까지 확장 가능한지 확인했다.
-- best_variant(현재 최선 변형): `v30_v22_midcov_h2c0_with_b`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `8.349727` / `5.323077`
-- validation/OOS PF(검증/표본외 수익 팩터): `1.140000` / `1.050000`
-- validation/OOS net(검증/표본외 순손익): `271.43` / `78.850000`
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T06:23:44Z run50BF Context-Timed Lifecycle Probe(생명주기 탐침)
-
-- action(행동): run50BE(실행50BE) v30의 source/routing(원천/라우팅)을 유지하고 max hold/re-entry cooldown(최대 보유/재진입 쿨다운)을 바꿔 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
-- effect(효과): same-move/cost stress(동일 이동/비용 압박)가 lifecycle(생명주기) 문제인지 확인했다.
-- best_variant(현재 최선 변형): `v31_v22_midcov_h1c0_with_b`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
-- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
-- validation/OOS net(검증/표본외 순손익): `` / ``
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T06:41:00Z run50BF Context-Timed Lifecycle Probe(생명주기 탐침)
-
-- action(행동): run50BE(실행50BE) v30의 source/routing(원천/라우팅)을 유지하고 max hold/re-entry cooldown(최대 보유/재진입 쿨다운)을 바꿔 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
-- effect(효과): same-move/cost stress(동일 이동/비용 압박)가 lifecycle(생명주기) 문제인지 확인했다.
-- best_variant(현재 최선 변형): `v31_v22_midcov_h1c0_with_b`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `8.628415` / `5.538462`
-- validation/OOS PF(검증/표본외 수익 팩터): `1.050000` / `0.960000`
-- validation/OOS net(검증/표본외 순손익): `67.720000` / `-38.620000`
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T06:52:04Z run50BG Context-Timed Hold3 Top-Up(문맥/시간 3봉 보유 보강)
-
-- action(행동): hold3(3봉 보유) control(대조군)과 slot top-up(슬롯 보강)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
-- effect(효과): Tier B(티어B)를 끈 상태에서 실제 밀도(real density, 실제 밀도)와 품질(quality, 품질)이 동시에 회복되는지 확인했다.
-- best_variant(현재 최선 변형): `v36_v22_midcov_h3c0_no_b_control`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
-- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
-- validation/OOS net(검증/표본외 순손익): `` / ``
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
-
-## 2026-05-14T07:08:36Z run50BG Context-Timed Hold3 Top-Up(문맥/시간 3봉 보유 보강)
-
-- action(행동): hold3(3봉 보유) control(대조군)과 slot top-up(슬롯 보강)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
-- effect(효과): Tier B(티어B)를 끈 상태에서 실제 밀도(real density, 실제 밀도)와 품질(quality, 품질)이 동시에 회복되는지 확인했다.
-- best_variant(현재 최선 변형): `v40_v22_slot3_5_8_relax_h3c0_no_b`
-- validation/OOS trades/day(검증/표본외 일 거래 수): `6.688525` / `4.666667`
-- validation/OOS PF(검증/표본외 수익 팩터): `1.150000` / `0.950000`
-- validation/OOS net(검증/표본외 순손익): `409.35` / `-108.13`
-- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_density;oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density`.
