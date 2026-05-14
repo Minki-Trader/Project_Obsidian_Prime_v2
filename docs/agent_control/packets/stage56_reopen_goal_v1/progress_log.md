@@ -117,3 +117,12 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - spread read(스프레드 판독): current live recent M5(현재 실계좌 최근 5분봉) 5000 rows(행)는 median/max `60/60` points(포인트); run50BH raw validation/OOS(원천 검증/표본외)는 median `140/60`, max `150/140` points(포인트)다.
 - slippage boundary(미끄러짐 경계): live history order request price(실계좌 주문 요청가)가 market order(시장가 주문)에서 `0.0`으로 저장되어 request-vs-fill slippage(요청가 대비 체결가 미끄러짐)는 inconclusive(불충분)이다. MT5 tester(테스터)는 fill rate(체결률) `1.0`, reject(거절) `0`이고 deal price residual(체결가 잔차)은 대부분 bid/ask quote(매수/매도 호가) 수준이다.
 - decision(결정): commission issue(수수료 문제)는 이 계좌 기준 largely resolved(대체로 해소)지만 selected_research_baseline(선택 연구 기준선)은 `none` 유지다. Effect(효과): same-move density(동일 이동 밀도)와 Tier B rule(Tier B 규칙)은 여전히 별도 병목이다.
+
+## 2026-05-14T10:45:00Z Stage56 Account-Cost + Tier B Disabled Reevaluation(계좌 비용 + Tier B 비활성 재평가)
+
+- action(행동): commission-free(거래수수료 없음) 사실정보와 Tier B disabled(티어 B 비활성) 설계 결정을 반영해 Stage56(56단계) 기존 후보를 재판독했다.
+- effect(효과): run50BH(실행50BH) `et40h6_r001_a`는 cost failure(비용 실패)로 버릴 후보가 아니라 account-cost-adjusted development anchor(계좌 비용 반영 개발 기준점)로 재분류된다.
+- best_reweighted_candidate(재가중 최선 후보): `run50BH/et40h6_r001_a`; validation/OOS(검증/표본외) trades/day(일 거래) `6.846995/5.102564`, PF(수익 팩터) `1.10/1.26`, net(순손익) `313.49/613.58`.
+- resolved_or_lowered_blockers(해소 또는 하향 병목): commission(거래수수료) and Tier B rule(Tier B 규칙). Tier B(티어 B)는 current anchor(현재 기준점)에서 explicitly disabled(명시 비활성)로 판독한다.
+- remaining_primary_blocker(남은 1차 병목): real density(실제 밀도). run50BH same-move ratio(동일 이동 비율) `0.683958/0.718593`, cooldown12 trades/day(12봉 쿨다운 후 일 거래) `2.163934/1.435897`, validation drawdown(검증 손실) `286.67` remain(남음).
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; current_frontier_candidate(현재 최전선 후보)=`run50BH/et40h6_r001_a`; next_hypothesis_branch(다음 가설 분기)=`run50BL_run50BH_real_density_repair_anchor`.
