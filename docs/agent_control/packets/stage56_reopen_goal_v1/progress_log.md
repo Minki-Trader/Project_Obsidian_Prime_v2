@@ -183,3 +183,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.050000` / `0.960000`
 - validation/OOS net(검증/표본외 순손익): `67.720000` / `-38.620000`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T06:52:04Z run50BG Context-Timed Hold3 Top-Up(문맥/시간 3봉 보유 보강)
+
+- action(행동): hold3(3봉 보유) control(대조군)과 slot top-up(슬롯 보강)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
+- effect(효과): Tier B(티어B)를 끈 상태에서 실제 밀도(real density, 실제 밀도)와 품질(quality, 품질)이 동시에 회복되는지 확인했다.
+- best_variant(현재 최선 변형): `v36_v22_midcov_h3c0_no_b_control`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T07:08:36Z run50BG Context-Timed Hold3 Top-Up(문맥/시간 3봉 보유 보강)
+
+- action(행동): hold3(3봉 보유) control(대조군)과 slot top-up(슬롯 보강)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
+- effect(효과): Tier B(티어B)를 끈 상태에서 실제 밀도(real density, 실제 밀도)와 품질(quality, 품질)이 동시에 회복되는지 확인했다.
+- best_variant(현재 최선 변형): `v40_v22_slot3_5_8_relax_h3c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `6.688525` / `4.666667`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.150000` / `0.950000`
+- validation/OOS net(검증/표본외 순손익): `409.35` / `-108.13`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_density;oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density`.

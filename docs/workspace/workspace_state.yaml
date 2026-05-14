@@ -1,4 +1,4 @@
-﻿current_run_id: run50BF_stage56_context_timed_lifecycle_probe_v1
+﻿current_run_id: run50BG_stage56_context_timed_hold3_topup_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -17,6 +17,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BG(실행50BG) context-timed hold3 top-up(문맥/시간 3봉 보유 보강) 완료; best_variant(현재 최선 변형)은 `v40_v22_slot3_5_8_relax_h3c0_no_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `6.688525` / `4.666667`, PF(수익 팩터) `1.150000` / `0.950000`, net(순손익) `409.35` / `-108.13`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_density;oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BF(실행50BF) context-timed lifecycle probe(문맥/시간 생명주기 탐침) 완료; best_variant(현재 최선 변형)은 `v31_v22_midcov_h1c0_with_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `8.628415` / `5.538462`, PF(수익 팩터) `1.050000` / `0.960000`, net(순손익) `67.720000` / `-38.620000`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BE(실행50BE) v22 density top-up(밀도 보강) 완료; best_variant(현재 최선 변형)은 `v30_v22_midcov_h2c0_with_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `8.349727` / `5.323077`, PF(수익 팩터) `1.140000` / `1.050000`, net(순손익) `271.43` / `78.850000`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BD(실행50BD) context-timed quality-gated slot(문맥/시간 품질 필터 슬롯) 완료; best_variant(현재 최선 변형)은 `v25_w40_esol_highcov_lr2_h2c0_with_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `8.923497` / `5.784615`, PF(수익 팩터) `1.140000` / `0.970000`, net(순손익) `276.21` / `-43.280000`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
@@ -3566,3 +3567,12 @@ stage56_run50bf_context_timed_lifecycle_probe:
   failure_reasons: oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density
   boundary: research_baseline_selection_only_no_operating_claim
   next_action: decide_lifecycle_repair_or_open_new_model_branch
+
+stage56_run50bg_context_timed_hold3_topup:
+  packet_id: stage56_run50BG_context_timed_hold3_topup_v1
+  current_run_id: run50BG_stage56_context_timed_hold3_topup_v1
+  best_variant: v40_v22_slot3_5_8_relax_h3c0_no_b
+  selected_research_baseline: none
+  failure_reasons: oos_density;oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density
+  boundary: research_baseline_selection_only_no_operating_claim
+  next_action: decide_hold3_topup_or_open_new_model_branch
