@@ -113,3 +113,33 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.180000` / `1.220000`
 - validation/OOS net(검증/표본외 순손익): `462.21` / `436.33`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T14:19:32Z run50BR Context Gap Refill(문맥 간격 재채움)
+
+- action(행동): context primary(문맥 1차)의 same-direction repeat(동일 방향 반복)에 source gap(원천 간격)을 적용하고 ET slot-fill(ExtraTrees 슬롯 채움)로 재채움했다.
+- effect(효과): density(밀도)를 global cooldown(전체 쿨다운)으로 죽이지 않고 same-move split(동일 이동 분할)을 줄일 수 있는지 확인했다.
+- best_variant(현재 최선 변형): `v64_v47_ctxgap6_refill_etfw_h2_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T14:20:57Z run50BR Context Gap Refill(문맥 간격 재채움)
+
+- action(행동): context primary(문맥 1차)의 same-direction repeat(동일 방향 반복)에 source gap(원천 간격)을 적용하고 ET slot-fill(ExtraTrees 슬롯 채움)로 재채움했다.
+- effect(효과): density(밀도)를 global cooldown(전체 쿨다운)으로 죽이지 않고 same-move split(동일 이동 분할)을 줄일 수 있는지 확인했다.
+- best_variant(현재 최선 변형): `v64_v47_ctxgap14_refill_etfw_h2_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T14:33:17Z run50BR Context Gap Refill(문맥 간격 재채움)
+
+- action(행동): context primary(문맥 1차)의 same-direction repeat(동일 방향 반복)에 source gap(원천 간격)을 적용하고 ET slot-fill(ExtraTrees 슬롯 채움)로 재채움했다.
+- effect(효과): density(밀도)를 global cooldown(전체 쿨다운)으로 죽이지 않고 same-move split(동일 이동 분할)을 줄일 수 있는지 확인했다.
+- best_variant(현재 최선 변형): `v64_v47_ctxgap14_refill_etfw_h2_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `8.918033` / `6.358974`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.210000` / `1.220000`
+- validation/OOS net(검증/표본외 순손익): `478.85` / `397.64`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
