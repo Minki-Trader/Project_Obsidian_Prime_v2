@@ -1,0 +1,63 @@
+{
+  "obsidian-artifact-lineage": {
+    "artifact_paths": [
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_baseline_adapter_transition.md",
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_candidate_selection.csv",
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_contract.json",
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_first_run_handoff.json"
+    ],
+    "lineage_judgment": "connected_with_boundary",
+    "source_inputs": [
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BR_summary.csv",
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BQ_summary.csv"
+    ],
+    "status": "used"
+  },
+  "obsidian-backtest-forensics": {
+    "backtest_judgment": "usable_with_boundary_for_anchor_selection_not_adapter_reproduction",
+    "status": "used_with_boundary",
+    "tester_identity": "existing Stage56 MT5 reports use actual routed tester paths",
+    "trade_evidence": "validation/OOS routed metrics copied into candidate selection CSV"
+  },
+  "obsidian-experiment-design": {
+    "comparison_baseline": "run50BQ backup plus d390h10/d38h10 references",
+    "decision_use": "start BaselineAdapter development",
+    "evidence_plan": [
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_baseline_adapter_transition.md",
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_candidate_selection.csv",
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_contract.json",
+      "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_first_run_handoff.json"
+    ],
+    "failure_criteria": "no MT5-backed candidate strong enough for development",
+    "hypothesis": "run50BR v64 can serve as a development anchor even without strict selected_research_baseline",
+    "status": "used",
+    "success_criteria": "development_anchor selected and adapter contract scaffolded"
+  },
+  "obsidian-performance-attribution": {
+    "attribution_confidence": "medium",
+    "comparison_baseline": "run50BQ/BN higher density candidates and run50BH/d390/d38 references",
+    "likely_drivers": "lower same-move ratio and clearer repair path outweighed raw density rank",
+    "next_probe": "BaselineAdapter MT5 validation/OOS with risk floor and ATR telemetry",
+    "observed_change": "candidate selection moved from broad density search to adapter development anchor",
+    "status": "used"
+  },
+  "obsidian-reentry-read": {
+    "effect": "current truth and Stage56 status verified",
+    "status": "used"
+  },
+  "obsidian-result-judgment": {
+    "claim_boundary": "development_anchor_only_no_operating_claim",
+    "judgment_label": "development_anchor_selected_and_adapter_development_started",
+    "next_condition": "first BaselineAdapter MT5 validation/OOS run",
+    "result_subject": "run50BS_stage56_baseline_adapter_transition_v1",
+    "status": "used"
+  },
+  "obsidian-runtime-parity": {
+    "parity_check": "existing anchor MT5 reports completed; adapter MT5 reproduction pending first-run handoff",
+    "research_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BR_summary.csv",
+    "runtime_claim_boundary": "runtime_probe_pending_no_runtime_authority",
+    "runtime_path": "existing run50BR MT5 reports; BaselineAdapter first run pending",
+    "shared_contract": "closed-bar M5 anchor signal plus explicit risk/ATR/telemetry output contract",
+    "status": "used_with_boundary"
+  }
+}

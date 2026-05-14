@@ -143,3 +143,6 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.210000` / `1.220000`
 - validation/OOS net(검증/표본외 순손익): `478.85` / `397.64`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
+## 2026-05-15 run50BS BaselineAdapter Transition(BaselineAdapter 전환)
+- decision(결정): development_anchor(개발 기준점)=`v64_v47_ctxgap14_refill_etfw_h2_no_b`, backup_anchor(예비 기준점)=`v60_v47_et_stable_damage_firewall_h2c0_no_b`.
+- effect(효과): broad Stage56 candidate hunting(넓은 Stage56 후보 사냥)을 멈추고 adapter scaffold(어댑터 뼈대)와 first MT5 handoff(첫 MT5 인계)를 만들었다.

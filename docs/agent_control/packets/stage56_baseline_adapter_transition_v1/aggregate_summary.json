@@ -1,0 +1,209 @@
+{
+  "artifact_hashes": {
+    "candidate_csv_sha256": "2e8ad46ea6dff5dc2220e3fcdb6c34a1a958966a25b88efcd20e05bf8c9ef734",
+    "contract_json_sha256": "470b0a2db985c8388f6a86bf31a2a22f5774a91b980272dffe72111f908be513",
+    "handoff_json_sha256": "f5e237e43db11e3ff06e04718d5d9331f6a0dd763e2bbb75a2f6c612e6fd4246",
+    "report_sha256": "993e031643055fb2756f5f13baf44571bdef4f767bf25276cb1095efcb28b82e"
+  },
+  "backup_anchor": {
+    "development_score": 55.30643911622423,
+    "failure_reasons": "cost_stressed_expectancy;same_move_density",
+    "group": "v47_et_stable_damage_firewall",
+    "max_hold_bars": 2.0,
+    "notes": "Run50BN v47 plus ET slot-fill stable damage firewall; blocks ET slot6 short and slot5 long.",
+    "oos_cooldown12_trades_per_day": 2.928205128205128,
+    "oos_cost_stressed_expectancy": -0.17798523985239856,
+    "oos_drawdown": 162.2,
+    "oos_mfe_capture": 0.6158038554364587,
+    "oos_net": 436.33,
+    "oos_pf": 1.22,
+    "oos_same_move_ratio": 0.5785977859778598,
+    "oos_trades_per_day": 6.948717948717949,
+    "passed_stage56_research_baseline_gate": "False",
+    "rank": 1,
+    "run_number": "run50BQ",
+    "selection_label": "backup_anchor",
+    "source_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BQ_summary.csv",
+    "tier_a_oos_net": 436.33,
+    "tier_a_validation_net": 462.21,
+    "tier_b_oos_net": -204.54,
+    "tier_b_validation_net": -235.46,
+    "validation_cooldown12_trades_per_day": 4.557377049180328,
+    "validation_cost_stressed_expectancy": -0.23738068181818184,
+    "validation_drawdown": 129.69,
+    "validation_mfe_capture": 0.6062612579914076,
+    "validation_net": 462.21,
+    "validation_pf": 1.18,
+    "validation_same_move_ratio": 0.5261363636363636,
+    "validation_trades_per_day": 9.617486338797814,
+    "variant_id": "v60_v47_et_stable_damage_firewall_h2c0_no_b"
+  },
+  "candidate_csv_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_candidate_selection.csv",
+  "contract_json_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_contract.json",
+  "development_anchor": {
+    "development_score": 53.41419330092612,
+    "failure_reasons": "cost_stressed_expectancy;same_move_density",
+    "group": "context_gap14_refill_et_firewall",
+    "max_hold_bars": 2.0,
+    "notes": "Context primary same-direction source gap 14 bars, ET slot refill, and stable ET damage firewall.",
+    "oos_cooldown12_trades_per_day": 3.066666666666667,
+    "oos_cost_stressed_expectancy": -0.17932258064516132,
+    "oos_drawdown": 150.63,
+    "oos_mfe_capture": 0.6207209028643678,
+    "oos_net": 397.64,
+    "oos_pf": 1.22,
+    "oos_same_move_ratio": 0.5177419354838709,
+    "oos_trades_per_day": 6.358974358974359,
+    "passed_stage56_research_baseline_gate": "False",
+    "rank": 3,
+    "run_number": "run50BR",
+    "selection_label": "development_anchor",
+    "source_summary_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BR_summary.csv",
+    "tier_a_oos_net": 397.64,
+    "tier_a_validation_net": 478.85,
+    "tier_b_oos_net": -254.32,
+    "tier_b_validation_net": -94.14,
+    "validation_cooldown12_trades_per_day": 4.770491803278689,
+    "validation_cost_stressed_expectancy": -0.20658700980392158,
+    "validation_drawdown": 144.22,
+    "validation_mfe_capture": 0.606945499615604,
+    "validation_net": 478.85,
+    "validation_pf": 1.21,
+    "validation_same_move_ratio": 0.4650735294117647,
+    "validation_trades_per_day": 8.918032786885245,
+    "variant_id": "v64_v47_ctxgap14_refill_etfw_h2_no_b"
+  },
+  "first_run_handoff_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_first_run_handoff.json",
+  "forbidden_claims": {
+    "live_readiness": false,
+    "operating_promotion": false,
+    "operating_reference": false,
+    "production_baseline": false,
+    "reviewed_closed": false,
+    "runtime_authority": false
+  },
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2200,
+      "sha256": "7f9d25194596a4220788eba636df7057898b66e0e2614c0ce63b2abee2088893",
+      "upserted_rows": 9
+    },
+    "gate_payloads": {
+      "final_claim_guard": {
+        "allowed_terminal_label": "development_anchor_selected_and_adapter_development_started",
+        "forbidden_claims": {
+          "live_ready": false,
+          "operating_promotion": false,
+          "operating_reference": false,
+          "production_ready": false,
+          "reviewed_closed": false,
+          "runtime_authority": false
+        },
+        "status": "passed"
+      },
+      "gate_coverage": {
+        "mt5_adapter_reproduction": "pending_first_run_handoff",
+        "required_gates": [
+          "candidate_selection_audit",
+          "adapter_contract_scaffold",
+          "artifact_lineage_audit",
+          "runtime_parity_boundary",
+          "final_claim_guard"
+        ],
+        "status": "passed_with_boundary"
+      },
+      "skill_receipts": {
+        "obsidian-artifact-lineage": {
+          "artifact_paths": [
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_baseline_adapter_transition.md",
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_candidate_selection.csv",
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_contract.json",
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_first_run_handoff.json"
+          ],
+          "lineage_judgment": "connected_with_boundary",
+          "source_inputs": [
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BR_summary.csv",
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BQ_summary.csv"
+          ],
+          "status": "used"
+        },
+        "obsidian-backtest-forensics": {
+          "backtest_judgment": "usable_with_boundary_for_anchor_selection_not_adapter_reproduction",
+          "status": "used_with_boundary",
+          "tester_identity": "existing Stage56 MT5 reports use actual routed tester paths",
+          "trade_evidence": "validation/OOS routed metrics copied into candidate selection CSV"
+        },
+        "obsidian-experiment-design": {
+          "comparison_baseline": "run50BQ backup plus d390h10/d38h10 references",
+          "decision_use": "start BaselineAdapter development",
+          "evidence_plan": [
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_baseline_adapter_transition.md",
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_candidate_selection.csv",
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_contract.json",
+            "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_first_run_handoff.json"
+          ],
+          "failure_criteria": "no MT5-backed candidate strong enough for development",
+          "hypothesis": "run50BR v64 can serve as a development anchor even without strict selected_research_baseline",
+          "status": "used",
+          "success_criteria": "development_anchor selected and adapter contract scaffolded"
+        },
+        "obsidian-performance-attribution": {
+          "attribution_confidence": "medium",
+          "comparison_baseline": "run50BQ/BN higher density candidates and run50BH/d390/d38 references",
+          "likely_drivers": "lower same-move ratio and clearer repair path outweighed raw density rank",
+          "next_probe": "BaselineAdapter MT5 validation/OOS with risk floor and ATR telemetry",
+          "observed_change": "candidate selection moved from broad density search to adapter development anchor",
+          "status": "used"
+        },
+        "obsidian-reentry-read": {
+          "effect": "current truth and Stage56 status verified",
+          "status": "used"
+        },
+        "obsidian-result-judgment": {
+          "claim_boundary": "development_anchor_only_no_operating_claim",
+          "judgment_label": "development_anchor_selected_and_adapter_development_started",
+          "next_condition": "first BaselineAdapter MT5 validation/OOS run",
+          "result_subject": "run50BS_stage56_baseline_adapter_transition_v1",
+          "status": "used"
+        },
+        "obsidian-runtime-parity": {
+          "parity_check": "existing anchor MT5 reports completed; adapter MT5 reproduction pending first-run handoff",
+          "research_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BR_summary.csv",
+          "runtime_claim_boundary": "runtime_probe_pending_no_runtime_authority",
+          "runtime_path": "existing run50BR MT5 reports; BaselineAdapter first run pending",
+          "shared_contract": "closed-bar M5 anchor signal plus explicit risk/ATR/telemetry output contract",
+          "status": "used_with_boundary"
+        }
+      }
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9204,
+      "sha256": "ab6726b8cdaef3c50a4b74faa9909010887d582455902376641ea992847b7766",
+      "upserted_rows": 3
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 827,
+      "sha256": "643a50f7d9da7fbae184371c0254448871cd64a53b6905e541c231d1200be92d",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+      "rows": 4331,
+      "sha256": "b0e65686b426641e2dbbe782ce976f6dbf88eccc08aab48aa1a2294cfd0e7806",
+      "upserted_rows": 3
+    }
+  },
+  "mt5_adapter_evidence_status": "first_run_handoff_plan_created_adapter_run_pending",
+  "packet_id": "stage56_baseline_adapter_transition_v1",
+  "report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_baseline_adapter_transition.md",
+  "run_id": "run50BS_stage56_baseline_adapter_transition_v1",
+  "selected_research_baseline": "none",
+  "terminal_label": "development_anchor_selected_and_adapter_development_started"
+}
