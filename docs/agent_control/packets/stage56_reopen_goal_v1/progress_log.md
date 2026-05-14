@@ -103,3 +103,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.080000` / `1.040000`
 - validation/OOS net(검증/표본외 순손익): `211.37` / `82.250000`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T04:49:36Z run50BC Context-Timed Alternating Slot(문맥/시간 교대 슬롯)
+
+- action(행동): 40/45-minute alternating slot(40/45분 교대 슬롯) 원천을 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행했다.
+- effect(효과): raw density(원 거래 밀도)와 same-move density(동일 이동 밀도)를 동시에 볼 수 있게 했다.
+- best_variant(현재 최선 변형): `v17_slot40_even_short_odd_long_context_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T05:07:53Z run50BC Context-Timed Alternating Slot(문맥/시간 교대 슬롯)
+
+- action(행동): 40/45-minute alternating slot(40/45분 교대 슬롯) 원천을 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행했다.
+- effect(효과): raw density(원 거래 밀도)와 same-move density(동일 이동 밀도)를 동시에 볼 수 있게 했다.
+- best_variant(현재 최선 변형): `v19_slot40_even_short_odd_long_always_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `8.240437` / `5.656410`
+- validation/OOS PF(검증/표본외 수익 팩터): `0.960000` / `0.920000`
+- validation/OOS net(검증/표본외 순손익): `-92.750000` / `-142.02`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy`.
