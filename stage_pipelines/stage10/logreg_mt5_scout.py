@@ -238,6 +238,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--parity-rows", type=int, default=128)
     parser.add_argument("--max-hold-bars", type=int, default=12)
     parser.add_argument("--reentry-cooldown-bars", type=int, default=0)
+    parser.add_argument("--same-direction-reentry-cooldown-bars", type=int, default=0)
     parser.add_argument("--entry-transition-only", action="store_true")
     parser.add_argument("--entry-transition-rearm-min-confidence-delta", type=float, default=0.0)
     parser.add_argument("--side-filter-id", default=None)
@@ -324,6 +325,7 @@ def run_stage10_logreg_mt5_scout(
     parity_rows: int = 128,
     max_hold_bars: int = 12,
     reentry_cooldown_bars: int = 0,
+    same_direction_reentry_cooldown_bars: int = 0,
     entry_transition_only: bool = False,
     entry_transition_rearm_min_confidence_delta: float = 0.0,
     side_filter_id: str | None = None,
@@ -490,9 +492,9 @@ def run_stage10_logreg_mt5_scout(
             "selection_source": "explicit_override" if tier_a_threshold_rule or tier_b_threshold_rule else "validation_combined_sweep",
             "threshold_id": (
                 (
-                    f"a_{tier_a_rule.threshold_id}__b_{tier_b_rule.threshold_id}__hold{int(max_hold_bars)}__cool{int(reentry_cooldown_bars)}"
+                    f"a_{tier_a_rule.threshold_id}__b_{tier_b_rule.threshold_id}__hold{int(max_hold_bars)}__cool{int(reentry_cooldown_bars)}__sdcool{int(same_direction_reentry_cooldown_bars)}"
                     if routed_fallback_enabled
-                    else f"a_{tier_a_rule.threshold_id}__b_disabled__hold{int(max_hold_bars)}__cool{int(reentry_cooldown_bars)}"
+                    else f"a_{tier_a_rule.threshold_id}__b_disabled__hold{int(max_hold_bars)}__cool{int(reentry_cooldown_bars)}__sdcool{int(same_direction_reentry_cooldown_bars)}"
                 )
                 + (f"__slice_{session_slice_id}" if session_slice_id else "")
                 + (
@@ -514,6 +516,7 @@ def run_stage10_logreg_mt5_scout(
             "entry_transition_rearm_min_confidence_delta": float(entry_transition_rearm_min_confidence_delta),
             "max_hold_bars": int(max_hold_bars),
             "reentry_cooldown_bars": int(reentry_cooldown_bars),
+            "same_direction_reentry_cooldown_bars": int(same_direction_reentry_cooldown_bars),
             "short_threshold": tier_a_rule.short_threshold,
             "long_threshold": tier_a_rule.long_threshold,
             "min_margin": tier_a_rule.min_margin,
@@ -608,6 +611,7 @@ def run_stage10_logreg_mt5_scout(
         metaeditor_path=metaeditor_path,
         max_hold_bars=max_hold_bars,
         reentry_cooldown_bars=reentry_cooldown_bars,
+        same_direction_reentry_cooldown_bars=same_direction_reentry_cooldown_bars,
         entry_transition_only=entry_transition_only,
         entry_transition_rearm_min_confidence_delta=entry_transition_rearm_min_confidence_delta,
         side_filter_enabled=side_filter_enabled,
@@ -682,6 +686,7 @@ def run_stage10_logreg_mt5_scout(
         attempt_mt5=attempt_mt5,
         max_hold_bars=max_hold_bars,
         reentry_cooldown_bars=reentry_cooldown_bars,
+        same_direction_reentry_cooldown_bars=same_direction_reentry_cooldown_bars,
         routed_fallback_enabled=routed_fallback_enabled,
         routing_mode=routing_mode,
         routing_detail=routing_detail,
@@ -765,6 +770,7 @@ def main() -> int:
         parity_rows=args.parity_rows,
         max_hold_bars=args.max_hold_bars,
         reentry_cooldown_bars=args.reentry_cooldown_bars,
+        same_direction_reentry_cooldown_bars=args.same_direction_reentry_cooldown_bars,
         entry_transition_only=args.entry_transition_only,
         entry_transition_rearm_min_confidence_delta=args.entry_transition_rearm_min_confidence_delta,
         side_filter_id=args.side_filter_id,

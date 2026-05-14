@@ -263,6 +263,7 @@ def materialize_alpha_scout_run_outputs(
     project_alpha_ledger_path: Path,
     run_registry_path: Path,
     reentry_cooldown_bars: int = 0,
+    same_direction_reentry_cooldown_bars: int = 0,
     tier_a_only_prefix: str = "mt5_tier_a_only",
     tier_b_fallback_only_prefix: str = "mt5_tier_b_fallback_only",
     tier_a: str = TIER_A,
@@ -414,6 +415,7 @@ def materialize_alpha_scout_run_outputs(
             "fixed_lot": 0.1,
             "max_hold_bars": int(max_hold_bars),
             "reentry_cooldown_bars": int(reentry_cooldown_bars),
+            "same_direction_reentry_cooldown_bars": int(same_direction_reentry_cooldown_bars),
             "max_concurrent_positions": 1,
         },
     }
@@ -485,6 +487,7 @@ def materialize_alpha_scout_run_outputs(
         f"- session slice: `{session_slice_id or 'full'}`",
         f"- max hold bars: `{int(max_hold_bars)}`",
         f"- reentry cooldown bars: `{int(reentry_cooldown_bars)}`",
+        f"- same-direction reentry cooldown bars: `{int(same_direction_reentry_cooldown_bars)}`",
         f"- external verification status: `{external_status}`",
         f"- Tier A rows: `{tier_a_predictions_count}`",
         f"- Tier B fallback rows: `{tier_b_predictions_count}`",

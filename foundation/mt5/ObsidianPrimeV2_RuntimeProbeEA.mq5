@@ -77,6 +77,7 @@ input bool            InpCloseOnlyOnOppositeSignal = false;
 input int             InpMaxHoldBars = 12;
 input int             InpMaxConcurrentPositions = 1;
 input int             InpReentryCooldownBars = 0;
+input int             InpSameDirectionReentryCooldownBars = 0;
 input bool            InpEntryTransitionOnly = false;
 input double          InpEntryTransitionRearmMinConfidenceDelta = 0.0;
 input bool            InpExitRiskOverlayEnabled = false;
@@ -863,7 +864,8 @@ int OnInit()
                                 InpCloseOnlyOnOppositeSignal,
                                 InpMaxHoldBars,
                                 InpMaxConcurrentPositions,
-                                InpReentryCooldownBars);
+                                InpReentryCooldownBars,
+                                InpSameDirectionReentryCooldownBars);
 
    if(!g_execution_bridge.Init(reason))
       return FailInit(reason);

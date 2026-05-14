@@ -1,12 +1,29 @@
 ﻿# Stage56 Selection Status(56단계 선택 상태)
 
 - stage_status(단계 상태): `active_in_progress`
-- latest_run_id(최신 실행 ID): `run50BH_account_cost_tierb_disabled_reanalysis`
-- current run(현재 실행): `run50BH_account_cost_tierb_disabled_reanalysis`
+- latest_run_id(최신 실행 ID): `run50BL_stage56_same_direction_cooldown_real_density_repair_v1`
+- current run(현재 실행): `run50BL_stage56_same_direction_cooldown_real_density_repair_v1`
 - current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
 - selected_research_baseline(선택 연구 기준선): `none`
-- latest_batch_best_variant_intermediate(최신 묶음 최선 변형 중간 근거): `run50BH/et40h6_r001_a`
+- latest_batch_best_variant_intermediate(최신 묶음 최선 변형 중간 근거): `run50BL/et40h6sd3_s260l170_r001_a`
 - current_frontier_candidate_preserved(현재 최전선 후보 보존): `run50BH/et40h6_r001_a`
+
+## Run50BL Same-Direction Cooldown Real-Density Repair(동일 방향 쿨다운 실제 밀도 수리)
+
+- packet(묶음): `stage56_run50BL_same_direction_cooldown_real_density_repair_v1`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BL_sd_cooldown_repair.md`
+- summary_csv(요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BL_summary.csv`
+- audit_csv(감사 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BL_audit.csv`
+- aggregate_summary(합산 요약): `docs/agent_control/packets/stage56_run50BL_same_direction_cooldown_real_density_repair_v1/aggregate_summary.json`
+- best_variant(최선 변형): `et40h6sd3_s260l170_r001_a`
+- validation/OOS(검증/표본외) trades/day(일 거래 수): `5.994536` / `4.405128`
+- validation/OOS(검증/표본외) PF(수익 팩터): `1.020000` / `1.240000`
+- validation/OOS(검증/표본외) net(순손익): `65.68` / `503.79`
+- same-move ratio(동일 이동 비율): `0.630811` / `0.667055`
+- cooldown12 trades/day(12봉 쿨다운 후 일 거래 수): `2.213115` / `1.466667`
+- Tier B fallback-only(Tier B 대체 전용) validation/OOS(검증/표본외): net(순손익) `-16.21` / `8.19`, PF(수익 팩터) `0.39` / `1.34`
+
+Judgment(판정): failure_memory/lifecycle_clue(실패 기억/생명주기 단서)다. Effect(효과): same-direction cooldown(동일 방향 쿨다운)은 OOS PF(표본외 수익 팩터)를 보존했지만 OOS density(표본외 밀도), validation PF(검증 수익 팩터), cost-stressed expectancy(비용 압박 기대값), same-move density(동일 이동 밀도)를 통과하지 못해 selected_research_baseline(선택 연구 기준선)을 만들지 않는다. run50BH(실행50BH) `et40h6_r001_a`는 account-cost-adjusted development anchor(계좌 비용 반영 개발 기준점)로 유지한다.
 
 ## Account-Cost + Tier B Disabled Reanalysis(계좌 비용 + Tier B 비활성 재분석)
 
@@ -17,7 +34,7 @@
 - frontier_read(최전선 판독): `run50BH/et40h6_r001_a` validation/OOS(검증/표본외) trades/day(일 거래 수) `6.846995` / `5.102564`, PF(수익 팩터) `1.100000` / `1.260000`, net(순손익) `313.49` / `613.58`.
 - remaining_blocker(남은 병목): same-move density(동일 이동 밀도) `0.683958` / `0.718593`, cooldown12 trades/day(12봉 쿨다운 후 일 거래 수) `2.163934` / `1.435897`, validation drawdown(검증 손실) high flag(높음 표시).
 
-Judgment(판정): account-cost-adjusted development anchor(계좌 비용 반영 개발 기준점) only(한정)이다. Effect(효과): selected_research_baseline(선택 연구 기준선)은 여전히 `none`이고 next(다음)는 `run50BL_run50BH_real_density_repair_anchor`다.
+Judgment(판정): account-cost-adjusted development anchor(계좌 비용 반영 개발 기준점) only(한정)이다. Effect(효과): selected_research_baseline(선택 연구 기준선)은 여전히 `none`이고 run50BL(실행50BL)은 failure_memory/lifecycle_clue(실패 기억/생명주기 단서)로 남겼으며 next(다음)는 `run50BM_real_density_source_or_state_filter_pivot`이다.
 
 ## Latest Run50BK Intermediate Evidence(최신 50BK 중간 근거)
 

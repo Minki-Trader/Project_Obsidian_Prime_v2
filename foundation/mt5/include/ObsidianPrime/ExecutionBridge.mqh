@@ -47,6 +47,9 @@ private:
    int    m_bars_in_position;
    int    m_reentry_cooldown_bars;
    int    m_reentry_cooldown_remaining;
+   int    m_same_direction_reentry_cooldown_bars;
+   int    m_same_direction_reentry_cooldown_remaining;
+   int    m_last_closed_position_signal;
 
    bool IsRetcodeFilled(const uint retcode)
      {
@@ -195,6 +198,30 @@ private:
       return OP_DECISION_FLAT;
      }
 
+   int SignalForPosition(const SOpPositionState &state)
+     {
+      if(!state.has_position)
+         return OP_DECISION_FLAT;
+      if(state.type == POSITION_TYPE_BUY)
+         return OP_DECISION_LONG;
+      if(state.type == POSITION_TYPE_SELL)
+         return OP_DECISION_SHORT;
+      return OP_DECISION_FLAT;
+     }
+
+   void ArmSameDirectionReentryCooldown(const int closed_position_signal)
+     {
+      if(m_same_direction_reentry_cooldown_bars <= 0 || closed_position_signal == OP_DECISION_FLAT)
+        {
+         m_same_direction_reentry_cooldown_remaining = 0;
+         m_last_closed_position_signal = OP_DECISION_FLAT;
+         return;
+        }
+
+      m_same_direction_reentry_cooldown_remaining = m_same_direction_reentry_cooldown_bars;
+      m_last_closed_position_signal = closed_position_signal;
+     }
+
    bool SignalMatchesPosition(const int signal, const SOpPositionState &state)
      {
       if(!state.has_position)
@@ -238,6 +265,9 @@ public:
       m_bars_in_position = 0;
       m_reentry_cooldown_bars = 0;
       m_reentry_cooldown_remaining = 0;
+      m_same_direction_reentry_cooldown_bars = 0;
+      m_same_direction_reentry_cooldown_remaining = 0;
+      m_last_closed_position_signal = OP_DECISION_FLAT;
      }
 
    void Configure(const string symbol,
@@ -250,7 +280,8 @@ public:
                   const bool close_only_on_opposite,
                   const int max_hold_bars,
                   const int max_concurrent_positions,
-                  const int reentry_cooldown_bars = 0)
+                  const int reentry_cooldown_bars = 0,
+                  const int same_direction_reentry_cooldown_bars = 0)
      {
       m_symbol = symbol;
       m_magic = magic;
@@ -265,6 +296,9 @@ public:
       m_bars_in_position = 0;
       m_reentry_cooldown_bars = reentry_cooldown_bars > 0 ? reentry_cooldown_bars : 0;
       m_reentry_cooldown_remaining = 0;
+      m_same_direction_reentry_cooldown_bars = same_direction_reentry_cooldown_bars > 0 ? same_direction_reentry_cooldown_bars : 0;
+      m_same_direction_reentry_cooldown_remaining = 0;
+      m_last_closed_position_signal = OP_DECISION_FLAT;
      }
 
    bool Init(string &reason)
@@ -370,6 +404,7 @@ public:
       if(state.has_position && effective_max_hold_bars > 0 && m_bars_in_position >= effective_max_hold_bars)
         {
          result.action = (overlay_max_hold_bars > 0 && effective_max_hold_bars == overlay_max_hold_bars) ? "close_exit_overlay_max_hold" : "close_max_hold";
+         const int closed_position_signal = SignalForPosition(state);
          const int close_signal = OppositeSignalForPosition(state);
          const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
          result.position_after = PositionStateText();
@@ -377,6 +412,7 @@ public:
            {
             m_bars_in_position = 0;
             m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+            ArmSameDirectionReentryCooldown(closed_position_signal);
            }
          return closed;
         }
@@ -389,6 +425,7 @@ public:
       if(overlay_close_position)
         {
          result.action = "close_exit_overlay";
+         const int closed_position_signal = SignalForPosition(state);
          const int close_signal = OppositeSignalForPosition(state);
          const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
          result.position_after = PositionStateText();
@@ -396,6 +433,7 @@ public:
            {
             m_bars_in_position = 0;
             m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+            ArmSameDirectionReentryCooldown(closed_position_signal);
            }
          return closed;
         }
@@ -405,6 +443,7 @@ public:
          if(state.has_position && m_close_on_flat)
            {
             result.action = "close_on_flat";
+            const int closed_position_signal = SignalForPosition(state);
             const int close_signal = OppositeSignalForPosition(state);
             const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
             result.position_after = PositionStateText();
@@ -412,6 +451,7 @@ public:
               {
                m_bars_in_position = 0;
                m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+               ArmSameDirectionReentryCooldown(closed_position_signal);
               }
             return closed;
            }
@@ -419,6 +459,8 @@ public:
          result.action = state.has_position ? "hold_existing" : "flat_no_position";
          if(!state.has_position && m_reentry_cooldown_remaining > 0)
             m_reentry_cooldown_remaining--;
+         if(!state.has_position && m_same_direction_reentry_cooldown_remaining > 0)
+            m_same_direction_reentry_cooldown_remaining--;
          result.position_after = PositionStateText();
          return true;
         }
@@ -430,8 +472,24 @@ public:
             result.action = "reentry_cooldown_skip";
             result.comment = "reentry_cooldown_remaining=" + IntegerToString(m_reentry_cooldown_remaining);
             m_reentry_cooldown_remaining--;
+            if(m_same_direction_reentry_cooldown_remaining > 0)
+               m_same_direction_reentry_cooldown_remaining--;
             result.position_after = PositionStateText();
             return true;
+           }
+
+         if(m_same_direction_reentry_cooldown_remaining > 0)
+           {
+            if(signal == m_last_closed_position_signal)
+              {
+               result.action = "same_direction_reentry_cooldown_skip";
+               result.comment = "same_direction_reentry_cooldown_remaining="
+                                + IntegerToString(m_same_direction_reentry_cooldown_remaining);
+               m_same_direction_reentry_cooldown_remaining--;
+               result.position_after = PositionStateText();
+               return true;
+              }
+            m_same_direction_reentry_cooldown_remaining--;
            }
 
          if(ManagedPositionCount() >= m_max_concurrent_positions)
@@ -463,6 +521,7 @@ public:
       if(m_close_only_on_opposite)
         {
          result.action = "close_on_opposite";
+         const int closed_position_signal = SignalForPosition(state);
          const int close_signal = OppositeSignalForPosition(state);
          const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
          result.position_after = PositionStateText();
@@ -470,6 +529,7 @@ public:
            {
             m_bars_in_position = 0;
             m_reentry_cooldown_remaining = m_reentry_cooldown_bars;
+            ArmSameDirectionReentryCooldown(closed_position_signal);
            }
          return closed;
         }
@@ -483,6 +543,7 @@ public:
         }
 
       result.action = "reverse_close";
+      const int closed_position_signal = SignalForPosition(state);
       const int close_signal = OppositeSignalForPosition(state);
       const bool closed = SendMarketOrder(close_signal, state.volume, state.ticket, result);
       if(!closed)
@@ -490,6 +551,7 @@ public:
          result.position_after = PositionStateText();
          return false;
         }
+      ArmSameDirectionReentryCooldown(closed_position_signal);
 
       state = GetPositionState();
       if(state.has_position)
