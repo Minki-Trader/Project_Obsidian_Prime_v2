@@ -63,3 +63,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
 - next_hypothesis_branch(다음 가설 가지): `continue_density_repair_without_same_move_splitting_and_tier_b_damage_control`
+
+## 2026-05-14T04:07:44Z run50BA Context-Timed Opportunity Source(문맥/시간 기회 원천)
+
+- action(행동): slot/context rule(시간 구간/문맥 규칙)로 하루 여러 독립 신호를 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): threshold relaxation(문턱값 완화)이 아니라 opportunity source(기회 원천) 자체가 density/PF/net(밀도/수익 팩터/순손익)을 만들 수 있는지 확인했다.
+- best_variant(현재 최선 변형): `v09_slot30_cycle_dense_h2c12_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T04:20:40Z run50BA Context-Timed Opportunity Source(문맥/시간 기회 원천)
+
+- action(행동): slot/context rule(시간 구간/문맥 규칙)로 하루 여러 독립 신호를 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): threshold relaxation(문턱값 완화)이 아니라 opportunity source(기회 원천) 자체가 density/PF/net(밀도/수익 팩터/순손익)을 만들 수 있는지 확인했다.
+- best_variant(현재 최선 변형): `v11_slot30_dense_control_h2c12_with_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `3.295082` / `2.200000`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.170000` / `1.320000`
+- validation/OOS net(검증/표본외 순손익): `188.87` / `265.10`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;cost_stressed_expectancy;same_move_density`.
