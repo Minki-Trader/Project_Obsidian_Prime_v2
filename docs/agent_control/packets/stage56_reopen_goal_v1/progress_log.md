@@ -83,3 +83,13 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.170000` / `1.190000`
 - validation/OOS net(검증/표본외 순손익): `380.19` / `342.92`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T13:46:06Z run50BP ExtraTrees Slot Lifecycle(ExtraTrees 슬롯 생명주기)
+
+- action(행동): run50BH ExtraTrees(엑스트라트리스)를 20/25/30-minute slot lifecycle(분 슬롯 생명주기)로 재구성해 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): same-move density(동일 이동 밀도)를 cooldown(쿨다운)이 아니라 source spacing(원천 간격)으로 줄일 수 있는지 확인했다.
+- best_variant(현재 최선 변형): `v54_et40_slot20_first_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `9.306011` / `7.205128`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.000000` / `1.000000`
+- validation/OOS net(검증/표본외 순손익): `2.740000` / `-9.720000`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.

@@ -1,4 +1,4 @@
-﻿current_run_id: run50BO_stage56_context_extratrees_same_direction_cooldown_v1
+﻿current_run_id: run50BP_stage56_extratrees_slot_lifecycle_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -15,6 +15,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BP(실행50BP) ExtraTrees slot lifecycle(ExtraTrees 슬롯 생명주기) 완료; best_variant(현재 최선 변형)는 `v54_et40_slot20_first_h2c0_no_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `9.306011` / `7.205128`, PF(수익 팩터) `1.000000` / `1.000000`, net(순손익) `2.740000` / `-9.720000`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BO(실행50BO) context ExtraTrees same-direction cooldown(문맥 ExtraTrees 동일 방향 쿨다운) 완료; best_variant(현재 최선 변형)는 `v50_topup_slotfill_sd2_h2c0_no_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `8.857923` / `6.420513`, PF(수익 팩터) `1.170000` / `1.190000`, net(순손익) `380.19` / `342.92`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - >-
@@ -3760,3 +3762,12 @@ stage56_run50bo_context_extratrees_same_direction_cooldown:
   failure_reasons: cost_stressed_expectancy;same_move_density
   boundary: research_baseline_selection_only_no_operating_claim
   next_action: evaluate_same_direction_cooldown_failure_or_open_next_model_branch
+
+stage56_run50bp_extratrees_slot_lifecycle:
+  packet_id: stage56_run50BP_extratrees_slot_lifecycle_v1
+  current_run_id: run50BP_stage56_extratrees_slot_lifecycle_v1
+  best_variant: v54_et40_slot20_first_h2c0_no_b
+  selected_research_baseline: none
+  failure_reasons: oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density
+  boundary: research_baseline_selection_only_no_operating_claim
+  next_action: evaluate_slot_lifecycle_failure_or_open_new_model_branch
