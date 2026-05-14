@@ -63,3 +63,13 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
 - next_hypothesis_branch(다음 가설 가지): `new_source_or_model_branch_beyond_extratrees_cooldown_polishing`
+
+## 2026-05-14T13:01:01Z run50BN Context ExtraTrees Agreement(문맥 ExtraTrees 합의)
+
+- action(행동): context-timed(문맥/시간) source(원천)와 run50BH ExtraTrees(엑스트라트리스)를 합의/충돌 veto(거부) 방식으로 결합해 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): low same-move(낮은 동일 이동) 구조에 OOS quality(표본외 품질)를 붙일 수 있는지 확인했다.
+- best_variant(현재 최선 변형): `v47_v22_topup_plus_et40_slotfill_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `9.748634` / `7.071795`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.170000` / `1.180000`
+- validation/OOS net(검증/표본외 순손익): `446.11` / `380.77`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
