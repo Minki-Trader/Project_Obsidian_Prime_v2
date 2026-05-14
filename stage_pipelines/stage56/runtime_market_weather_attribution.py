@@ -82,9 +82,29 @@ class AttributionConfig:
         return REVIEWS_ROOT / f"{self.output_stem}_market_weather_attribution_summary.json"
 
     def split_reports(self) -> dict[str, Path]:
+        run_root_report_dir = STAGE_ROOT / "02_runs" / self.run_number / "mt5" / "reports"
+
+        def resolve(split_token: str) -> Path:
+            expected = self.report_root / f"Project_Obsidian_Prime_v2_{self.run_id}_routed_{split_token}.htm"
+            if expected.exists():
+                return expected
+            flat_expected = run_root_report_dir / (
+                f"Project_Obsidian_Prime_v2_{self.run_id}_{self.variant_id}_routed_{split_token}.htm"
+            )
+            if flat_expected.exists():
+                return flat_expected
+            for root in (self.report_root, run_root_report_dir):
+                matches = sorted(root.glob(f"*{self.run_id}*{self.variant_id}*routed_{split_token}.htm"))
+                if matches:
+                    return matches[0]
+                matches = sorted(root.glob(f"*{self.variant_id}*routed_{split_token}.htm"))
+                if matches:
+                    return matches[0]
+            return expected
+
         return {
-            "validation": self.report_root / f"Project_Obsidian_Prime_v2_{self.run_id}_routed_validation_is.htm",
-            "oos": self.report_root / f"Project_Obsidian_Prime_v2_{self.run_id}_routed_oos.htm",
+            "validation": resolve("validation_is"),
+            "oos": resolve("oos"),
         }
 
 

@@ -2,7 +2,7 @@
 
 - packet_id(묶음 ID): `stage56_reopen_goal_v1`
 - stage_status(단계 상태): `active_in_progress(활성 진행 중)`
-- latest_batch(최신 후보 묶음): `run50BJ_stage56_independent_event_source_cooldown_sweep_v1`
+- latest_batch(최신 후보 묶음): `run50BK_stage56_s43c02_tierb_quality_firewall_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - terminal_condition(종료 조건): useful BaselineAdapter(유용한 기준선 어댑터) hard condition(강한 완료 조건) not_satisfied(미충족)
 - non_final_prior_packets(비최종 이전 묶음): `stage56_closeout_v1`, `stage56_reopened_closeout_v2`
@@ -75,11 +75,12 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 
 ## Current Read(현재 판독)
 
-- latest_best_variant(최신 최선 변형): `s43c02_h4c0`
+- latest_best_variant(최신 최선 변형): `s43c02_h4c0_no_b`
+- partial_quality_clue(부분 품질 단서): `s43c02_h4c0_with_b_blvl`
 - current_frontier_candidate(현재 최전선 후보): `run50BH/et40h6_r001_a`
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
-- next_hypothesis_branch(다음 가설 가지): `run50BK_s43c02_tier_b_disable_and_cooldown_quality_firewall_branch`
+- next_hypothesis_branch(다음 가설 가지): `run50BL_real_density_source_pivot_branch`
 
 ## 2026-05-14T09:01:33Z run50BJ Independent Event Source Cooldown Sweep(독립 이벤트 원천 쿨다운 탐색)
 
@@ -93,3 +94,16 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - Tier B read(Tier B 판독): `s43c02_h4c0` Tier B fallback-only OOS(Tier B 대체 전용 표본외)는 net(순손익) `-20.27`, PF(수익 팩터) `0.97`로 hidden OOS damage(숨은 표본외 손상)를 만들었다.
 - same-move clue(동일 이동 단서): `s45c04_h4c4` OOS same-move ratio(표본외 동일 이동 비율)는 `0.347651`까지 내려갔지만 OOS density/PF(표본외 밀도/수익 팩터)와 validation quality(검증 품질)가 실패했다.
 - next(다음): `run50BK_s43c02_tier_b_disable_and_cooldown_quality_firewall_branch`.
+
+## 2026-05-14T09:47:01Z run50BK S43 Tier B Quality Firewall(S43 티어 B 품질 방화벽)
+
+- action(행동): run50BJ(실행50BJ) attribution(귀속 분석)의 buy low-vol late(매수 저변동성 후반) OOS damage(표본외 손상)를 막고 Tier B(티어 B) disablement(비활성화)를 실제 MT5 validation/OOS(검증/표본외)로 시험했다.
+- effect(효과): s43c02(43단계 c02) source(원천)를 계속 polish(다듬기)할 가치가 있는지, 또는 real density source pivot(실제 밀도 원천 전환)이 더 높은 가치인지 판정했다.
+- best_variant(현재 최선 변형): `s43c02_h4c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `6.693989` / `5.082051`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.110000` / `1.070000`
+- validation/OOS net(검증/표본외 순손익): `317.36` / `156.81`
+- Tier B disablement read(Tier B 비활성화 판독): best route(최선 라우트)는 Tier B disabled(티어 B 비활성)이고, Tier B fallback-only OOS(Tier B 대체 전용 표본외)는 net(순손익) `-20.270000`, PF(수익 팩터) `0.970000`다.
+- partial_quality_clue(부분 품질 단서): `s43c02_h4c0_with_b_blvl` A+B actual routed OOS(A+B 실제 라우팅 표본외)는 PF(수익 팩터) `1.100000`, net(순손익) `233.41`지만 Tier B fallback-only OOS(Tier B 대체 전용 표본외) PF(수익 팩터) `0.850000`와 same-move ratio(동일 이동 비율) `0.762146`가 실패한다.
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; current_frontier_candidate(현재 최전선 후보)=`run50BH/et40h6_r001_a`; failure_reasons(실패 사유)=`oos_pf;cost_stressed_expectancy;same_move_density`.
+- next(다음): `run50BL_real_density_source_pivot_branch`.
