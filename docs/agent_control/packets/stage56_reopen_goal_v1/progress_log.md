@@ -93,3 +93,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.000000` / `1.000000`
 - validation/OOS net(검증/표본외 순손익): `2.740000` / `-9.720000`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T13:59:42Z run50BQ Context ExtraTrees Firewall Transition(문맥 ExtraTrees 방화벽 전환)
+
+- action(행동): run50BN v47(실행50BN v47)의 stable ET damage slots(안정 ET 손상 슬롯)를 막고 transition-only entry(전환 진입)를 실제 MT5 validation/OOS(검증/표본외)로 시험했다.
+- effect(효과): quality lift(품질 상승)가 same-move split re-entry(동일 이동 분할 재진입)와 cost-stressed expectancy(비용 압박 기대값)를 동시에 고치는지 확인했다.
+- best_variant(현재 최선 변형): `v60_v47_et_stable_damage_firewall_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T14:12:46Z run50BQ Context ExtraTrees Firewall Transition(문맥 ExtraTrees 방화벽 전환)
+
+- action(행동): run50BN v47(실행50BN v47)의 stable ET damage slots(안정 ET 손상 슬롯)를 막고 transition-only entry(전환 진입)를 실제 MT5 validation/OOS(검증/표본외)로 시험했다.
+- effect(효과): quality lift(품질 상승)가 same-move split re-entry(동일 이동 분할 재진입)와 cost-stressed expectancy(비용 압박 기대값)를 동시에 고치는지 확인했다.
+- best_variant(현재 최선 변형): `v60_v47_et_stable_damage_firewall_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `9.617486` / `6.948718`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.180000` / `1.220000`
+- validation/OOS net(검증/표본외 순손익): `462.21` / `436.33`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 이유)=`cost_stressed_expectancy;same_move_density`.
