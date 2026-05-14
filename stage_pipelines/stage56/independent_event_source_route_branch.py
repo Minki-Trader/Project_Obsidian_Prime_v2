@@ -93,7 +93,7 @@ MODEL_INPUT_SUMMARY_PATH = MODEL_INPUT_ROOT / "model_input_summary.json"
 TRAINING_SUMMARY_PATH = Path("data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json")
 RAW_MT5_ROOT = Path("data/raw/mt5_bars/m5")
 
-VALIDATION_DAYS = 273.0
+VALIDATION_DAYS = 183.0
 OOS_DAYS = 195.0
 SHORT_THRESHOLD = 0.55
 LONG_THRESHOLD = 0.55
@@ -719,16 +719,7 @@ def build_summary_rows(
         row["passed_stage56_research_baseline_gate"] = not failed
         row["failure_reasons"] = ";".join(failed)
         rows.append(row)
-    rows.sort(
-        key=lambda item: (
-            bool(item.get("passed_stage56_research_baseline_gate")),
-            as_float(item.get("routed_validation_pf"), 0.0) or 0.0,
-            as_float(item.get("routed_oos_pf"), 0.0) or 0.0,
-            as_float(item.get("routed_validation_net"), -999999.0) or -999999.0,
-            as_float(item.get("routed_oos_net"), -999999.0) or -999999.0,
-        ),
-        reverse=True,
-    )
+    rows.sort(key=best_row_sort_key, reverse=True)
     return rows
 
 
@@ -930,14 +921,15 @@ def write_ledgers(result: Mapping[str, Any], variants: Sequence[SourceVariant], 
 def best_row(rows: Sequence[Mapping[str, Any]]) -> Mapping[str, Any] | None:
     if not rows:
         return None
-    return max(
-        rows,
-        key=lambda row: (
-            bool(row.get("passed_stage56_research_baseline_gate")),
-            min(as_float(row.get("routed_validation_trades_per_day"), 0.0) or 0.0, as_float(row.get("routed_oos_trades_per_day"), 0.0) or 0.0),
-            min(as_float(row.get("routed_validation_pf"), 0.0) or 0.0, as_float(row.get("routed_oos_pf"), 0.0) or 0.0),
-            (as_float(row.get("routed_validation_net"), 0.0) or 0.0) + (as_float(row.get("routed_oos_net"), 0.0) or 0.0),
-        ),
+    return max(rows, key=best_row_sort_key)
+
+
+def best_row_sort_key(row: Mapping[str, Any]) -> tuple[bool, float, float, float]:
+    return (
+        bool(row.get("passed_stage56_research_baseline_gate")),
+        min(as_float(row.get("routed_validation_trades_per_day"), 0.0) or 0.0, as_float(row.get("routed_oos_trades_per_day"), 0.0) or 0.0),
+        min(as_float(row.get("routed_validation_pf"), 0.0) or 0.0, as_float(row.get("routed_oos_pf"), 0.0) or 0.0),
+        (as_float(row.get("routed_validation_net"), 0.0) or 0.0) + (as_float(row.get("routed_oos_net"), 0.0) or 0.0),
     )
 
 
@@ -1111,7 +1103,7 @@ def update_workspace_state(best: Mapping[str, Any]) -> None:
     )
     text = re.sub(r"current_focus:\n", f"current_focus:\n{focus}\n", text, count=1)
     text = re.sub(r"latest_run50av_attribution_result:.*", r"latest_run50av_attribution_result: preserved_before_run50aw", text)
-    if "run50aw_independent_event_source_result" not in text:
+    if "stage56_run50aw_independent_event_source_route:" not in text:
         text += (
             "\nstage56_run50aw_independent_event_source_route:\n"
             f"  packet_id: {PACKET_ID}\n"

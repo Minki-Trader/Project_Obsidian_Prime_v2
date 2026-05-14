@@ -1,4 +1,4 @@
-﻿current_run_id: run50AV_stage56_cooldown12_new_source_density_survival_v1
+﻿current_run_id: run50AW_stage56_independent_event_source_route_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -17,6 +17,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AW(실행50AW) independent event source route(독립 이벤트 원천 라우트) 완료; best_variant(현재 최선 변형)은 `s45c04_h4c6`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `5.535519` / `3.553846`, PF(수익 팩터) `0.980000` / `1.180000`, net(순손익) `-32.280000` / `246.33`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_density;validation_net_positive;validation_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AV(실행50AV) actual cooldown12 new source density survival(실제 12봉 쿨다운 새 원천 밀도 생존) 완료; best_variant(현재 최선 변형)는 `nf200c12_h4_s240l150_a`로 validation/OOS(검증/표본외) trades/day(일 거래 수) `4.295082` / `3.041026`, PF(수익 팩터) `1.29` / `1.01`, net(순손익) `435.08` / `7.66`이고 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): actual cooldown12(실제 12봉 쿨다운)는 same-move ratio(동일 이동 비율)를 낮췄지만 real density(실제 밀도)가 부족해 `run50AW_independent_event_source_route_branch`로 넘어간다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50AT(실행50AT) ExtraTrees leaf granularity/source(엑스트라트리스 잎 세분도/원천) 완료; best_variant(현재 최선 변형)는 `et20h6_r030_b`이고 validation/OOS(검증/표본외) routed net(라우팅 순손익) `346.02` / `249.83`, PF(수익 팩터) `1.13` / `1.13`, trades/day(일 거래 수) `5.983607` / `4.271795`다; selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): leaf20(잎 20)이 OOS density(표본외 밀도)를 일부 회복했지만 5/day(일 5회), cost stress(비용 압박), same-move/cooldown survival(동일 이동/쿨다운 생존)을 통과하지 못해 ExtraTrees(엑스트라트리스)는 reference/failure memory(참조/실패 기억)로 낮추고 run50AU(실행50AU) QDA composite route(QDA 합성 라우트) 밀도 수정을 연다.
@@ -3465,4 +3466,13 @@ stage56_dense_base_engine_selection:
   current_operating_reference: none
   boundary: research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference
   prior_closeout_artifacts_are_non_final_intermediate_evidence: true
-  next_action: run50AW_independent_event_source_route_branch
+  next_action: run50AX_source_composite_density_quality_branch
+
+stage56_run50aw_independent_event_source_route:
+  packet_id: stage56_run50AW_independent_event_source_route_v1
+  current_run_id: run50AW_stage56_independent_event_source_route_v1
+  best_variant: s45c04_h4c6
+  selected_research_baseline: none
+  failure_reasons: oos_density;validation_net_positive;validation_pf;cost_stressed_expectancy;same_move_density
+  boundary: research_baseline_selection_only_no_operating_claim
+  next_action: run50AX_source_composite_density_quality_branch

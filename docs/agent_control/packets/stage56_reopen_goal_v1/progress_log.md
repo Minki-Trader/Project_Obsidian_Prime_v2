@@ -80,3 +80,14 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
 - next_hypothesis_branch(다음 가설 가지): `continue_density_repair_without_same_move_splitting_and_tier_b_damage_control`
+
+## 2026-05-14T01:48:19Z run50AW Independent Event Source Route(독립 이벤트 원천 라우트)
+
+- action(행동): Stage43/45/47 independent event source(독립 이벤트 원천)를 Stage56(56단계) actual MT5 validation/OOS(실제 MT5 검증/표본외)로 다시 실행했다.
+- effect(효과): run50AV(실행50AV)에서 드러난 independent opportunity density(독립 기회 밀도) 병목을 새 source branch(원천 분기)로 압박했다.
+- correction(정정): validation day denominator(검증 일수 분모)를 Stage56 audit(감사) 기준과 같은 183일로 맞췄다. Effect(효과): summary(요약)와 audit(감사)의 trades/day(일 거래 수)가 같은 기준으로 읽힌다.
+- best_variant(현재 최선 변형): `s45c04_h4c6`
+- validation/OOS trades/day(검증/표본외 일 거래): `5.535519` / `3.553846`
+- validation/OOS PF(검증/표본외 수익 팩터): `0.980000` / `1.180000`
+- validation/OOS net(검증/표본외 순손익): `-32.280000` / `246.33`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_density;validation_net_positive;validation_pf;cost_stressed_expectancy;same_move_density`.
