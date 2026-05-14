@@ -143,3 +143,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.140000` / `0.970000`
 - validation/OOS net(검증/표본외 순손익): `276.21` / `-43.280000`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T05:59:19Z run50BE V22 Density Top-Up(밀도 보강)
+
+- action(행동): run50BD(실행50BD) v22를 기준으로 slot relaxation(슬롯 완화)과 Tier B fallback(Tier B 대체)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
+- effect(효과): OOS-positive under-dense(표본외 양수이나 밀도 부족) 후보가 5/day(일 5회) 밀도까지 확장 가능한지 확인했다.
+- best_variant(현재 최선 변형): `v26_v22_slot8_relax_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T06:17:27Z run50BE V22 Density Top-Up(밀도 보강)
+
+- action(행동): run50BD(실행50BD) v22를 기준으로 slot relaxation(슬롯 완화)과 Tier B fallback(Tier B 대체)을 actual MT5 validation/OOS(실제 MT5 검증/표본외)에서 비교했다.
+- effect(효과): OOS-positive under-dense(표본외 양수이나 밀도 부족) 후보가 5/day(일 5회) 밀도까지 확장 가능한지 확인했다.
+- best_variant(현재 최선 변형): `v30_v22_midcov_h2c0_with_b`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `8.349727` / `5.323077`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.140000` / `1.050000`
+- validation/OOS net(검증/표본외 순손익): `271.43` / `78.850000`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_pf;cost_stressed_expectancy;same_move_density`.
