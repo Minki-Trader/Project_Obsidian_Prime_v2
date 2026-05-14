@@ -2,7 +2,7 @@
 
 - packet_id(묶음 ID): `stage56_reopen_goal_v1`
 - stage_status(단계 상태): `active_in_progress(활성 진행 중)`
-- latest_batch(최신 후보 묶음): `run50BI_stage56_extratrees_raw_density_microcooldown_v1`
+- latest_batch(최신 후보 묶음): `run50BJ_stage56_independent_event_source_cooldown_sweep_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - terminal_condition(종료 조건): useful BaselineAdapter(유용한 기준선 어댑터) hard condition(강한 완료 조건) not_satisfied(미충족)
 - non_final_prior_packets(비최종 이전 묶음): `stage56_closeout_v1`, `stage56_reopened_closeout_v2`
@@ -75,8 +75,21 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 
 ## Current Read(현재 판독)
 
-- latest_best_variant(최신 최선 변형): `et40h4c6_s240l150_r001_a`
+- latest_best_variant(최신 최선 변형): `s43c02_h4c0`
 - current_frontier_candidate(현재 최전선 후보): `run50BH/et40h6_r001_a`
 - selected_research_baseline(선택 연구 기준선): `none`
 - stage56_remains_open(56단계 열림 유지): `True`
-- next_hypothesis_branch(다음 가설 가지): `run50BJ_cooldown_aware_independent_source_branch`
+- next_hypothesis_branch(다음 가설 가지): `run50BK_s43c02_tier_b_disable_and_cooldown_quality_firewall_branch`
+
+## 2026-05-14T09:01:33Z run50BJ Independent Event Source Cooldown Sweep(독립 이벤트 원천 쿨다운 탐색)
+
+- action(행동): Stage43/45/47 independent event source(독립 이벤트 원천)를 Stage56(56단계) actual MT5 validation/OOS(실제 MT5 검증/표본외)로 cooldown sweep(쿨다운 탐색)까지 다시 실행했다.
+- effect(효과): independent opportunity density(독립 기회 밀도)가 실제 routed account path(라우팅 계정 경로)에서 살아남는지 확인하고, Tier B fallback-only(Tier B 대체 전용) 손상을 분리했다.
+- best_variant(현재 최선 변형): `s43c02_h4c0`
+- validation/OOS trades/day(검증/표본외 일 거래): `7.393443` / `5.600000`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.120000` / `1.060000`
+- validation/OOS net(검증/표본외 순손익): `363.02` / `156.49`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_pf;cost_stressed_expectancy;same_move_density`.
+- Tier B read(Tier B 판독): `s43c02_h4c0` Tier B fallback-only OOS(Tier B 대체 전용 표본외)는 net(순손익) `-20.27`, PF(수익 팩터) `0.97`로 hidden OOS damage(숨은 표본외 손상)를 만들었다.
+- same-move clue(동일 이동 단서): `s45c04_h4c4` OOS same-move ratio(표본외 동일 이동 비율)는 `0.347651`까지 내려갔지만 OOS density/PF(표본외 밀도/수익 팩터)와 validation quality(검증 품질)가 실패했다.
+- next(다음): `run50BK_s43c02_tier_b_disable_and_cooldown_quality_firewall_branch`.

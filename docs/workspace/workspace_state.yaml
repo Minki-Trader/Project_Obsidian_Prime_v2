@@ -1,4 +1,4 @@
-﻿current_run_id: run50BI_stage56_extratrees_raw_density_microcooldown_v1
+﻿current_run_id: run50BJ_stage56_independent_event_source_cooldown_sweep_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -17,7 +17,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
-- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BI(실행50BI) ExtraTrees raw-density microcooldown(엑스트라트리스 원시 밀도 짧은 쿨다운) 완료; latest_best_variant(최신 최선 변형)은 `et40h4c6_s240l150_r001_a`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `4.579235` / `3.435897`, PF(수익 팩터) `1.060000` / `1.270000`, net(순손익) `119.63` / `367.74`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): raw threshold expansion(원시 문턱값 확장)은 validation edge(검증 우위)를 무너뜨리고 cooldown(쿨다운)은 density(밀도)를 죽여 hard condition(강한 완료 조건)을 통과하지 못했으므로, run50BH(실행50BH) `et40h6_r001_a`를 current_frontier_candidate(현재 최전선 후보)로 보존하고 `run50BJ_cooldown_aware_independent_source_branch`로 넘어간다.
+- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BJ(실행50BJ) independent event source cooldown sweep(독립 이벤트 원천 쿨다운 탐색) 완료; best_variant(현재 최선 변형)는 `s43c02_h4c0`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `7.393443` / `5.600000`, PF(수익 팩터) `1.120000` / `1.060000`, net(순손익) `363.02` / `156.49`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): independent source(독립 원천)는 `oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못했고 Stage56(56단계)은 계속 열린다.
+- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BI(실행50BI) ExtraTrees raw-density microcooldown(엑스트라트리스 원시 밀도 짧은 쿨다운) 완료; latest_best_variant(최신 최선 변형)은 `et40h4c6_s240l150_r001_a`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `4.579235` / `3.435897`, PF(수익 팩터) `1.060000` / `1.270000`, net(순손익) `119.63` / `367.74`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): raw threshold expansion(원시 문턱값 확장)은 validation edge(검증 우위)를 무너뜨리고 cooldown(쿨다운)은 density(밀도)를 죽여 hard condition(강한 완료 조건)을 통과하지 못했으므로, run50BH(실행50BH) `et40h6_r001_a`를 current_frontier_candidate(현재 최전선 후보)로 보존했고 run50BJ(실행50BJ)로 독립 원천을 검증했다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BH(실행50BH) ExtraTrees light rearm density recovery(엑스트라트리스 약한 재무장 밀도 회복) 완료; best_variant(현재 최선 변형)은 `et40h6_r001_a`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `6.846995` / `5.102564`, PF(수익 팩터) `1.100000` / `1.260000`, net(순손익) `313.49` / `613.58`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): OOS density/PF/net(표본외 밀도/수익 팩터/순손익)은 강하게 회복했지만 `cost_stressed_expectancy;same_move_density;tier_b_rule` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BG(실행50BG) context-timed hold3 top-up(문맥/시간 3봉 보유 보강) 완료; best_variant(현재 최선 변형)은 `v40_v22_slot3_5_8_relax_h3c0_no_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `6.688525` / `4.666667`, PF(수익 팩터) `1.150000` / `0.950000`, net(순손익) `409.35` / `-108.13`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_density;oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BF(실행50BF) context-timed lifecycle probe(문맥/시간 생명주기 탐침) 완료; best_variant(현재 최선 변형)은 `v31_v22_midcov_h1c0_with_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `8.628415` / `5.538462`, PF(수익 팩터) `1.050000` / `0.960000`, net(순손익) `67.720000` / `-38.620000`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
@@ -3470,7 +3471,7 @@ stage56_dense_base_engine_selection:
   latest_composite_qda_route_density_repair_result: qda85_s800_flat_trans_r060_h8_best_quality_validation_oos_density_5_262295_3_389744_pf_1_11_1_12_net_277_91_213_64_failed_oos_density_cost_stress_and_same_move_density; closest_density_qda85_s800_flat_trans_r030_h6_reached_6_726776_4_405128_but_pf_1_06_1_07_and_cost_negative_failed
   latest_run50au_attribution_result: quality_branch_oos_range_adxlt20_plus233_75_early_plus199_72_mid_neg50_26_adx20_25_neg40_03_density_branch_oos_early_plus332_74_adx20_25_plus100_58_late_mid_neg124_88_neg65_85_adxgt25_neg94_45_next_new_source_density_survival_branch
   latest_cooldown12_new_source_density_survival_result: nf200c12_h4_s240l150_a_best_overall_validation_oos_density_4_295082_3_041026_pf_1_29_1_01_net_435_08_7_66_failed_validation_oos_density_oos_pf_oos_cost_stress_and_cooldown_survival; actual_cooldown12_same_move_ratio_0_133221_to_0_209738_but_cooldown_density_max_validation_oos_3_655738_2_635897
-  latest_run50av_attribution_result: nf200c12_oos_early_plus96_47_vol_high_plus89_91_late_neg135_04_vol_low_neg99_12_adx20_25_neg21_96; et40c12_b_oos_early_plus170_94_downtrend_plus155_81_adxgt25_plus104_35_but_validation_mid_range_adx20_25_damaged_next_independent_event_source_route_branch
+  latest_run50av_attribution_result: preserved_before_run50aw
   dense_engine_candidate: d390h10_aonly_intermediate_quality_reference
   selected_shadow_candidate: none
   preserved_density_frontier: d35h07_routed_density_failed_quality
@@ -3599,3 +3600,43 @@ stage56_run50bh_extratrees_light_rearm_density_recovery:
   failure_reasons: cost_stressed_expectancy;same_move_density;tier_b_rule
   boundary: research_baseline_selection_only_no_operating_claim
   next_action: run50BI_et40h6_r001_validation_cost_same_move_repair
+
+stage56_run50bi_extratrees_raw_density_microcooldown:
+  packet_id: stage56_run50BI_extratrees_raw_density_microcooldown_v1
+  current_run_id: run50BI_stage56_extratrees_raw_density_microcooldown_v1
+  best_variant: et40h4c6_s240l150_r001_a
+  selected_research_baseline: none
+  validation_trades_per_day: 4.579235
+  oos_trades_per_day: 3.435897
+  validation_pf: 1.060000
+  oos_pf: 1.270000
+  validation_net: 119.63
+  oos_net: 367.74
+  failure_reasons: validation_density;oos_density;validation_pf;cost_stressed_expectancy;same_move_density;tier_b_rule
+  boundary: research_baseline_selection_only_no_operating_claim
+  current_frontier_candidate_preserved: run50BH_et40h6_r001_a
+  next_action: run50BJ_independent_event_source_cooldown_sweep
+
+stage56_run50bj_independent_event_source_cooldown_sweep:
+  packet_id: stage56_run50BJ_independent_event_source_cooldown_sweep_v1
+  current_run_id: run50BJ_stage56_independent_event_source_cooldown_sweep_v1
+  best_variant: s43c02_h4c0
+  selected_research_baseline: none
+  validation_trades_per_day: 7.393443
+  oos_trades_per_day: 5.600000
+  validation_pf: 1.120000
+  oos_pf: 1.060000
+  validation_net: 363.02
+  oos_net: 156.49
+  validation_cost_stressed_expectancy: -0.231693
+  oos_cost_stressed_expectancy: -0.356694
+  validation_same_move_ratio: 0.740576
+  oos_same_move_ratio: 0.780220
+  validation_cooldown12_trades_per_day: 1.918033
+  oos_cooldown12_trades_per_day: 1.230769
+  tier_b_fallback_only_oos_net: -20.27
+  tier_b_fallback_only_oos_pf: 0.97
+  failure_reasons: oos_pf;cost_stressed_expectancy;same_move_density
+  boundary: research_baseline_selection_only_no_operating_claim
+  current_frontier_candidate_preserved: run50BH_et40h6_r001_a
+  next_action: run50BK_s43c02_tier_b_disable_and_cooldown_quality_firewall_branch
