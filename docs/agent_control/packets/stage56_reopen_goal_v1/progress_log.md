@@ -102,3 +102,14 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.010000` / `1.020000`
 - validation/OOS net(검증/표본외 순손익): `34.380000` / `34.010000`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T03:16:09Z run50AY Agreement Firewall Density Recovery(합의 방화벽 밀도 회복)
+
+- action(행동): run50AX(실행50AX) trade attribution(거래 귀속)에서 드러난 agreement core(합의 핵심)를 유지하고, single-source gap(단일 원천 빈칸)을 context firewall(문맥 방화벽)로 제한해 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): density recovery(밀도 회복)가 same-move split(동일 이동 분할)과 Tier B damage(티어 B 손상) 없이 살아나는지 기록했다.
+- correction(정정): Tier B fallback(티어 B 대체)은 일부 변형에서 disabled(비활성화)하고, 별도 Tier B fallback-only(대체 단독) 실행으로 손상 여부를 기록했다. Effect(효과): fallback(대체)이 hidden OOS damage(숨은 표본외 손상)를 만들었는지 분리해서 볼 수 있다.
+- best_variant(현재 최선 변형): `v07_s47_s45_context_h2c2_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `5.245902` / `3.912821`
+- validation/OOS PF(검증/표본외 수익 팩터): `0.940000` / `1.130000`
+- validation/OOS net(검증/표본외 순손익): `-90.110000` / `148.07`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_density;validation_net_positive;validation_pf;cost_stressed_expectancy;same_move_density`.
