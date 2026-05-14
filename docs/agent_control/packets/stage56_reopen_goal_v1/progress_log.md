@@ -163,3 +163,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.140000` / `1.050000`
 - validation/OOS net(검증/표본외 순손익): `271.43` / `78.850000`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T06:23:44Z run50BF Context-Timed Lifecycle Probe(생명주기 탐침)
+
+- action(행동): run50BE(실행50BE) v30의 source/routing(원천/라우팅)을 유지하고 max hold/re-entry cooldown(최대 보유/재진입 쿨다운)을 바꿔 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): same-move/cost stress(동일 이동/비용 압박)가 lifecycle(생명주기) 문제인지 확인했다.
+- best_variant(현재 최선 변형): `v31_v22_midcov_h1c0_with_b`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T06:41:00Z run50BF Context-Timed Lifecycle Probe(생명주기 탐침)
+
+- action(행동): run50BE(실행50BE) v30의 source/routing(원천/라우팅)을 유지하고 max hold/re-entry cooldown(최대 보유/재진입 쿨다운)을 바꿔 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): same-move/cost stress(동일 이동/비용 압박)가 lifecycle(생명주기) 문제인지 확인했다.
+- best_variant(현재 최선 변형): `v31_v22_midcov_h1c0_with_b`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `8.628415` / `5.538462`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.050000` / `0.960000`
+- validation/OOS net(검증/표본외 순손익): `67.720000` / `-38.620000`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
