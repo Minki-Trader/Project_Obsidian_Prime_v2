@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-05-14T00:31:42Z",
+  "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection",
+  "run_id": "run50AU_qda85_s800_flat_trans_r060_h8_composite_route_density_repair_v1",
+  "variant_id": "qda85_s800_flat_trans_r060_h8",
+  "status": "completed",
+  "parser_errors": [],
+  "split_trade_counts": {
+    "validation": 963,
+    "oos": 661
+  },
+  "artifacts": {
+    "attribution_csv": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_run50AU_qda85_s800_flat_trans_r060_h8_market_weather_attribution.csv",
+    "trade_records_csv": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_run50AU_qda85_s800_flat_trans_r060_h8_trade_weather_records.csv",
+    "report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_run50AU_qda85_s800_flat_trans_r060_h8_market_weather_attribution.md"
+  },
+  "hashes": {
+    "attribution_csv_sha256": "c0083a7014795f484704d73e72678b90ec5e47c6f1c64fe1d892ddce7d6c5c78",
+    "trade_records_csv_sha256": "b8f506fc600d72b2c91e4d3232d67aef229d35570d1b970b16fa0635530e9c1a",
+    "report_sha256": "54c819a6ad4b044da90eca1f7a2013a9eedff1df75d3f4dbe42c830e427833ed"
+  },
+  "boundary": "research_baseline_selection_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference",
+  "notes": "source=mt5_strategy_tester_deal_list;market_weather_role=attribution_only;hard_filter_created=0"
+}
