@@ -1,12 +1,23 @@
 ﻿# Stage56 Selection Status(56단계 선택 상태)
 
 - stage_status(단계 상태): `active_in_progress`
-- latest_run_id(최신 실행 ID): `run50BK_stage56_s43c02_tierb_quality_firewall_v1`
-- current run(현재 실행): `run50BK_stage56_s43c02_tierb_quality_firewall_v1`
+- latest_run_id(최신 실행 ID): `run50BH_account_cost_tierb_disabled_reanalysis`
+- current run(현재 실행): `run50BH_account_cost_tierb_disabled_reanalysis`
 - current_judgment(현재 판정): `in_progress_no_selected_research_baseline`
 - selected_research_baseline(선택 연구 기준선): `none`
-- latest_batch_best_variant_intermediate(최신 묶음 최선 변형 중간 근거): `s43c02_h4c0_no_b`
+- latest_batch_best_variant_intermediate(최신 묶음 최선 변형 중간 근거): `run50BH/et40h6_r001_a`
 - current_frontier_candidate_preserved(현재 최전선 후보 보존): `run50BH/et40h6_r001_a`
+
+## Account-Cost + Tier B Disabled Reanalysis(계좌 비용 + Tier B 비활성 재분석)
+
+- packet(묶음): `stage56_account_cost_tierb_disabled_reevaluation_20260514`
+- report(보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage56_account_cost_tierb_disabled_reevaluation_20260514.md`
+- account_cost_read(계좌 비용 판독): commission(거래수수료) `0.0` confirmed(확인), swap(스왑) small but present(작지만 존재).
+- Tier B decision(Tier B 결정): current anchor(현재 기준점)는 Tier B disabled(티어 B 비활성)로 판독한다.
+- frontier_read(최전선 판독): `run50BH/et40h6_r001_a` validation/OOS(검증/표본외) trades/day(일 거래 수) `6.846995` / `5.102564`, PF(수익 팩터) `1.100000` / `1.260000`, net(순손익) `313.49` / `613.58`.
+- remaining_blocker(남은 병목): same-move density(동일 이동 밀도) `0.683958` / `0.718593`, cooldown12 trades/day(12봉 쿨다운 후 일 거래 수) `2.163934` / `1.435897`, validation drawdown(검증 손실) high flag(높음 표시).
+
+Judgment(판정): account-cost-adjusted development anchor(계좌 비용 반영 개발 기준점) only(한정)이다. Effect(효과): selected_research_baseline(선택 연구 기준선)은 여전히 `none`이고 next(다음)는 `run50BL_run50BH_real_density_repair_anchor`다.
 
 ## Latest Run50BK Intermediate Evidence(최신 50BK 중간 근거)
 
