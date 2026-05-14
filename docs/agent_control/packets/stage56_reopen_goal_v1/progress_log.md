@@ -83,3 +83,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `1.170000` / `1.320000`
 - validation/OOS net(검증/표본외 순손익): `188.87` / `265.10`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T04:25:46Z run50BB Context-Timed No Runtime Cooldown(문맥/시간 런타임 쿨다운 없음)
+
+- action(행동): runtime re-entry cooldown(런타임 재진입 쿨다운)을 0으로 낮추고 audit cooldown(감사 쿨다운)을 별도 기록했다.
+- effect(효과): actual density(실제 밀도)가 execution setting(실행 설정) 때문에 눌렸는지 확인했다.
+- best_variant(현재 최선 변형): `v13_slot30_dense_control_h2c0_with_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T04:40:52Z run50BB Context-Timed No Runtime Cooldown(문맥/시간 런타임 쿨다운 없음)
+
+- action(행동): runtime re-entry cooldown(런타임 재진입 쿨다운)을 0으로 낮추고 audit cooldown(감사 쿨다운)을 별도 기록했다.
+- effect(효과): actual density(실제 밀도)가 execution setting(실행 설정) 때문에 눌렸는지 확인했다.
+- best_variant(현재 최선 변형): `v13_slot30_dense_control_h2c0_with_b`
+- validation/OOS trades/day(검증/표본외 일 거래): `7.704918` / `5.194872`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.080000` / `1.040000`
+- validation/OOS net(검증/표본외 순손익): `211.37` / `82.250000`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
