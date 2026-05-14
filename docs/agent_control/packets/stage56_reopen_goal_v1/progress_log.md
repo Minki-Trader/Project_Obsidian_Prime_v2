@@ -123,3 +123,23 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 수익 팩터): `0.960000` / `0.920000`
 - validation/OOS net(검증/표본외 순손익): `-92.750000` / `-142.02`
 - decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy`.
+
+## 2026-05-14T05:28:22Z run50BD Context-Timed Quality-Gated Slot(문맥/시간 품질 필터 슬롯)
+
+- action(행동): train/validation(학습/검증) 2-bar proxy(2봉 대리 지표)로 quality-gated alternating slot(품질 필터 교대 슬롯)을 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): run50BC(실행50BC)의 density(밀도) 성과가 단순 분할이 아니라 품질 있는 opportunity source(기회 원천)로 변하는지 확인했다.
+- best_variant(현재 최선 변형): `v21_w40_esol_highcov_lr2_h2c0_no_b`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `0.000000` / `0.000000`
+- validation/OOS PF(검증/표본외 수익 팩터): `` / ``
+- validation/OOS net(검증/표본외 순손익): `` / ``
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`validation_density;oos_density;validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy;same_move_density`.
+
+## 2026-05-14T05:51:14Z run50BD Context-Timed Quality-Gated Slot(문맥/시간 품질 필터 슬롯)
+
+- action(행동): train/validation(학습/검증) 2-bar proxy(2봉 대리 지표)로 quality-gated alternating slot(품질 필터 교대 슬롯)을 만들고 actual MT5 validation/OOS(실제 MT5 검증/표본외)를 실행했다.
+- effect(효과): run50BC(실행50BC)의 density(밀도) 성과가 단순 분할이 아니라 품질 있는 opportunity source(기회 원천)로 변하는지 확인했다.
+- best_variant(현재 최선 변형): `v25_w40_esol_highcov_lr2_h2c0_with_b`
+- validation/OOS trades/day(검증/표본외 일 거래 수): `8.923497` / `5.784615`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.140000` / `0.970000`
+- validation/OOS net(검증/표본외 순손익): `276.21` / `-43.280000`
+- decision(결정): selected_research_baseline(선택 연구 기준선)=`none`; failure_reasons(실패 사유)=`oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density`.

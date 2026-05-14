@@ -1,4 +1,4 @@
-﻿current_run_id: run50BC_stage56_context_timed_alternating_slot_v1
+﻿current_run_id: run50BD_stage56_context_timed_quality_gated_slot_v1
 updated_on: '2026-05-14'
 project_mode: clean_stage_restart
 active_branch: main
@@ -17,6 +17,7 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BD(실행50BD) context-timed quality-gated slot(문맥/시간 품질 필터 슬롯) 완료; best_variant(현재 최선 변형)은 `v25_w40_esol_highcov_lr2_h2c0_with_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `8.923497` / `5.784615`, PF(수익 팩터) `1.140000` / `0.970000`, net(순손익) `276.21` / `-43.280000`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BC(실행50BC) context-timed alternating slot(문맥/시간 교대 슬롯) 완료; best_variant(현재 최선 변형)은 `v19_slot40_even_short_odd_long_always_h2c0_no_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `8.240437` / `5.656410`, PF(수익 팩터) `0.960000` / `0.920000`, net(순손익) `-92.750000` / `-142.02`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BB(실행50BB) context-timed no-runtime-cooldown(문맥/시간 런타임 쿨다운 없음) 완료; best_variant(현재 최선 변형)은 `v13_slot30_dense_control_h2c0_with_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `7.704918` / `5.194872`, PF(수익 팩터) `1.080000` / `1.040000`, net(순손익) `211.37` / `82.250000`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `validation_pf;oos_pf;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
 - Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BA(실행50BA) context-timed opportunity source(문맥/시간 기회 원천) 완료; best_variant(현재 최선 변형)은 `v11_slot30_dense_control_h2c12_with_b`이고 validation/OOS(검증/표본외) trades/day(일 거래 수) `3.295082` / `2.200000`, PF(수익 팩터) `1.170000` / `1.320000`, net(순손익) `188.87` / `265.10`이며 selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): `validation_density;oos_density;cost_stressed_expectancy;same_move_density` 때문에 hard condition(강한 완료 조건)을 통과하지 못해 Stage56(56단계)을 계속 open(열림)으로 둔다.
@@ -3536,3 +3537,12 @@ stage56_run50bc_context_timed_alternating_slot:
   failure_reasons: validation_net_positive;oos_net_positive;validation_pf;oos_pf;cost_stressed_expectancy
   boundary: research_baseline_selection_only_no_operating_claim
   next_action: assess_alternating_slot_or_open_separate_model_branch
+
+stage56_run50bd_context_timed_quality_gated_slot:
+  packet_id: stage56_run50BD_context_timed_quality_gated_slot_v1
+  current_run_id: run50BD_stage56_context_timed_quality_gated_slot_v1
+  best_variant: v25_w40_esol_highcov_lr2_h2c0_with_b
+  selected_research_baseline: none
+  failure_reasons: oos_net_positive;oos_pf;cost_stressed_expectancy;same_move_density
+  boundary: research_baseline_selection_only_no_operating_claim
+  next_action: compare_quality_gated_slots_or_open_new_model_branch
