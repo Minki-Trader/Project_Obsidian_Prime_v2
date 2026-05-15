@@ -558,3 +558,8 @@
 - run(실행): `run59P_stage59u_bounded_followup_from_stage59t_v1`
 - decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage59T(59T단계) evidence(근거)를 max-hold variants(최대 보유 변형) 세 개로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
+## 2026-05-16 - Stage59V bounded risk-cap compression follow-up from Stage59U closeout(59V단계 59U단계 기반 경계 위험 상한 압축 후속 종료)
+
+- run(실행): `run59Q_stage59v_bounded_followup_from_stage59u_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
+- effect(효과): Stage59U(59U단계) evidence(근거)와 Stage59S(59S단계) source anchor(원천 기준점)를 model-risk-cap variants(모델 위험 상한 변형) 세 개로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
