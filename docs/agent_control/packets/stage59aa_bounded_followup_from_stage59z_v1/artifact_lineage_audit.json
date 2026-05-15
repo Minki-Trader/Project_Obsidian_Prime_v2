@@ -1,0 +1,48 @@
+{
+  "consumers": [
+    "stages/59AA_adapter_repair__bounded_followup_from_stage59z/03_reviews/bounded_followup_from_stage59z_report.md",
+    "stages/59AA_adapter_repair__bounded_followup_from_stage59z/03_reviews/stage59aa_decision.md",
+    "stages/59AA_adapter_repair__bounded_followup_from_stage59z/03_reviews/bounded_followup_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3153,
+      "sha256": "f156156afba90a30c1157e5330a21872bae69444a2ee2db5594ff833e7bd92f0",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9641,
+      "sha256": "ef335f6ed30fe8cbd946cc110d1a7532102702ab23aaef4030e9e7cc04d6a362",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 865,
+      "sha256": "ff291e8500cf791578c24c9c4ce3fcd473961621a23ae25303b0dc93a004d1ed",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59AA_adapter_repair__bounded_followup_from_stage59z/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "80542cfe0fb090bb9aa2a914b4b176234784b0cd34dd941379e88cb5a964ac78",
+      "upserted_rows": 13
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage59aa/bounded_followup_from_stage59z.py",
+  "source_inputs": [
+    "stages/59Z_adapter_repair__bounded_followup_from_stage59y/03_reviews/stage59z_decision.md",
+    "stages/59Z_adapter_repair__bounded_followup_from_stage59y/03_reviews/bounded_followup_from_stage59y_report.md",
+    "stages/59Z_adapter_repair__bounded_followup_from_stage59y/03_reviews/bounded_followup_summary.csv",
+    "stages/59Z_adapter_repair__bounded_followup_from_stage59y/03_reviews/bounded_followup_summary.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b"
+  ],
+  "status": "completed"
+}
