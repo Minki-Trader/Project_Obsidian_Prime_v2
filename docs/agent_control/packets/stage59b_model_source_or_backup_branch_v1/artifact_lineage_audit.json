@@ -1,0 +1,43 @@
+{
+  "consumers": [
+    "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/model_source_or_backup_branch_report.md",
+    "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/stage59b_decision.md",
+    "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/model_source_or_backup_branch_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2603,
+      "sha256": "a7ebf283d82f24070f59a606d91536b89b07bfe856bbae03364b9d116219c2bd",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9352,
+      "sha256": "ef10444927c28a596bcee5ff83a7aceaa6536e4a14dd6d9b82c99cb47549c373",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 840,
+      "sha256": "a95c6c584573ae179a7ac12646ec1fbdc6ee6fd402fd7b6471b01a8103d7f929",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "f964d5a230b4522952ba53e38b119eb812dc276fe6874102368eab135179fd63",
+      "upserted_rows": 13
+    }
+  },
+  "source_inputs": [
+    "stages/59A_adapter_repair__risk_sizing_quality_recalibration/03_reviews/stage59a_decision.md",
+    "stages/59A_adapter_repair__risk_sizing_quality_recalibration/03_reviews/risk_sizing_quality_recalibration_report.md",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BQ/models/stage56_context_timed_event_signal_discrete_score_table.csv"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "changed_variables": [
+    "feature source anchor",
+    "signal column",
+    "backup threshold"
+  ],
+  "comparison_baseline": "Stage59A best adapter s59a_thr57_mr03_wideatr_sd5",
+  "control_variables": [
+    "US100",
+    "M5",
+    "split_v1",
+    "Tier B disabled",
+    "wide ATR bracket",
+    "3% model-controlled risk cap",
+    "ONNX deferred"
+  ],
+  "decision_use": "route the full BaselineAdapter repair toward Stage60 only if source quality is strong, otherwise continue bounded repair or open a new model branch",
+  "failure_criteria": [
+    "negative validation/OOS net",
+    "PF < 1.10",
+    "cost-stressed expectancy <= 0",
+    "missing risk or ATR telemetry",
+    "segment flags remain"
+  ],
+  "hypothesis": "Changing to the v60 backup source may repair the remaining Stage59A validation cost-stressed weakness while preserving ATR bracket and model-controlled risk behavior",
+  "status": "completed",
+  "stop_condition": "three bounded Stage59B variants only",
+  "success_criteria": [
+    "validation and OOS net positive",
+    "validation and OOS PF >= 1.10",
+    "validation and OOS cost-stressed expectancy positive",
+    "ATR and model risk telemetry present",
+    "no severe segment flags"
+  ]
+}
