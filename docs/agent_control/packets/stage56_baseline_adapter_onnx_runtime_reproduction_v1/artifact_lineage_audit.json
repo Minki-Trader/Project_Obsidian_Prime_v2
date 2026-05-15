@@ -1,0 +1,47 @@
+{
+  "consumers": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction.md",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_summary.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_summary.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_risk_telemetry.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/handoff/baseline_adapter_ba14_onnx_runtime_handoff.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2501,
+      "sha256": "cf5710140a028580f32d61d30f1f47579a7790ba9e3d7d47ac959320d7941f7a",
+      "upserted_rows": 29
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9297,
+      "sha256": "5f783ac18f976b1cdeab50d722d8a8bb2af11e6008068806232967c186ed48d7",
+      "upserted_rows": 7
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 835,
+      "sha256": "84aa156f74a4408efe3f31fa09426e9c917e9b8a09787029d037f0f0a37ad54f",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+      "rows": 4424,
+      "sha256": "2ce96cfe3eea75892968f6d828f56ab19f1caf9f5f766b0b3161c45750e2fb23",
+      "upserted_rows": 7
+    }
+  },
+  "producer": "stage_pipelines/stage56/baseline_adapter_onnx_runtime_reproduction.py",
+  "source_inputs": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BZ/models/ba14_stage56_context_gap_refill_entry.onnx",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_ba14_spec.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_a_val.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_a_oos.csv"
+  ],
+  "status": "passed"
+}

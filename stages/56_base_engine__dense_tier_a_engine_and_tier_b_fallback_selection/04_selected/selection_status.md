@@ -1,36 +1,21 @@
 ﻿# Stage56 Selection Status(56단계 선택 상태)
 
 - stage_status(단계 상태): `active_baseline_adapter_development`
-- latest_run_id(최신 실행 ID): `run50BY_stage56_baseline_adapter_same_move_lot_repair_v1`
-- current run(현재 실행): `run50BY_stage56_baseline_adapter_same_move_lot_repair_v1`
-- current_judgment(현재 판정): `adapter_mt5_repair_completed`
+- latest_run_id(최신 실행 ID): `run50CA_stage56_baseline_adapter_onnx_runtime_reproduction_v1`
+- current_judgment(현재 판정): `mt5_runtime_reproduction_attempted`
 - selected_research_baseline(선택 연구 기준선): `none`
 - development_anchor(개발 기준점): `v64_v47_ctxgap14_refill_etfw_h2_no_b`
 - backup_anchor(예비 기준점): `v60_v47_et_stable_damage_firewall_h2c0_no_b`
 
-## BaselineAdapter Evidence(기준선 어댑터 근거)
+## BaselineAdapter ONNX Runtime Evidence(기준선 어댑터 ONNX 런타임 근거)
 
-- selection_report(선택 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BS_baseline_adapter_transition.md`
-- first_adapter_report(첫 어댑터 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BT_baseline_adapter_mt5_development.md`
-- first_adapter_summary(첫 어댑터 요약): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BT_baseline_adapter_mt5_summary.csv`
-- first_adapter_risk_telemetry(첫 어댑터 위험 텔레메트리): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BT_baseline_adapter_risk_telemetry.csv`
-- repair_report(수리 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BY_baseline_adapter_same_move_lot_repair_report.md`
-- repair_summary_json(수리 요약 JSON): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BY_baseline_adapter_same_move_lot_repair_summary.json`
-- repair_summary_csv(수리 요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BY_baseline_adapter_same_move_lot_repair_summary.csv`
-- repair_risk_telemetry(수리 위험 텔레메트리): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BY_baseline_adapter_same_move_lot_repair_risk_telemetry.csv`
+- selected_adapter(선택 어댑터): `ba14_no_atr_sd5_lot025`
+- adapter_spec(어댑터 명세): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_ba14_spec.json`
+- onnx_parity_report(ONNX 동등성 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BZ_baseline_adapter_onnx_parity.json`
+- runtime_reproduction_report(런타임 재현 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction.md`
+- runtime_summary_json(런타임 요약 JSON): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_summary.json`
+- runtime_summary_csv(런타임 요약 CSV): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_summary.csv`
+- runtime_risk_telemetry(런타임 위험 텔레메트리): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_risk_telemetry.csv`
+- runtime_gate_passed(런타임 게이트 통과): `True`
 
-Effect(효과): selection(선택)은 baseline lock-in(기준점 고정)을 뜻하지 않는다. adapter repair(어댑터 수리)가 실패하면 anchor demotion(기준점 강등) 또는 branch switch(갈래 전환)가 가능하다.
-
-## ONNX Handoff Readiness(ONNX 인계 준비)
-
-- selected_adapter_for_hardening(경화 대상 어댑터): `ba14_no_atr_sd5_lot025`
-- Phase A result(Phase A 결과): validation/OOS(검증/표본외) density/PF/net/cost/same-move(밀도/PF/손익/비용/동일 이동) 조건을 통과했다.
-- next_action(다음 행동): freeze adapter spec(어댑터 명세 고정) and run ONNX parity(ONNX 동등성 실행)
-
-## ONNX Hardening Evidence(ONNX 경화 근거)
-
-- onnx_run_id(ONNX 실행 ID): `run50BZ_stage56_baseline_adapter_onnx_hardening_v1`
-- onnx_artifact(ONNX 산출물): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BZ/models/ba14_stage56_context_gap_refill_entry.onnx`
-- onnx_sha256(ONNX 해시): `bc7981a7bda403c02b50ae08014d681f39212db0564f64be9f9f9688864b5e33`
-- parity_passed(동등성 통과): `True`
-- next_action(다음 행동): MT5 ONNX/runtime reproduction(MT5 ONNX/런타임 재현)
+Effect(효과): BaselineAdapter(기준선 어댑터)는 아직 deployment(배포), live readiness(실거래 준비), operating reference(운영 기준)를 주장하지 않는다.

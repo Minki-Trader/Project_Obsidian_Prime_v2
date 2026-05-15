@@ -428,3 +428,6 @@
 - completed(완료): adapter repair batch(어댑터 수리 배치)를 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행하고 summary/ledger/current truth(요약/장부/현재 진실)를 갱신했다.
 ## 2026-05-15 Stage56 {RUN_NUMBER} BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
 - completed(완료): adapter repair batch(어댑터 수리 배치)를 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행하고 summary/ledger/current truth(요약/장부/현재 진실)를 갱신했다.
+## 2026-05-15 Stage56 run50CA BaselineAdapter ONNX Runtime Reproduction(기준선 어댑터 ONNX 런타임 재현)
+- completed(완료): actual MT5 ONNX runtime validation/OOS(실제 MT5 ONNX 런타임 검증/표본외)를 실행하고 summary/ledger/current truth(요약/장부/현재 진실)를 갱신했다.
+- effect(효과): adapter hardening(어댑터 경화)이 ONNX parity(ONNX 동등성)에서 MT5 runtime reproduction(MT5 런타임 재현)으로 이어졌는지 확인했다.

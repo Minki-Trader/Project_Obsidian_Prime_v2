@@ -220,3 +220,11 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - terminal_label(종료 라벨): `onnx_parity_passed`
 - max_abs_diff(최대 절대 차이): `4.237248085736667e-08`
 - onnx_sha256(ONNX 해시): `bc7981a7bda403c02b50ae08014d681f39212db0564f64be9f9f9688864b5e33`
+## 2026-05-15 run50CA BaselineAdapter ONNX Runtime Reproduction(기준선 어댑터 ONNX 런타임 재현)
+- action(행동): `ba14_no_atr_sd5_lot025`를 ONNX backend(ONNX 백엔드)로 실제 MT5 validation/OOS(검증/표본외)에 실행했다.
+- effect(효과): Python adapter(Python 어댑터)와 ONNX runtime(ONNX 런타임)의 MT5 재현 차이를 확인했다.
+- terminal_label(종료 라벨): `mt5_runtime_reproduction_attempted`
+- runtime_gate_passed(런타임 게이트 통과): `True`
+- validation/OOS PF(검증/표본외 수익 팩터): `1.200000` / `1.300000`
+- validation/OOS net(검증/표본외 순손익): `1009.93` / `1048.98`
+- next_action(다음 행동): `commit_push_progress_then_report_hard_completion_only_if_git_sync_succeeds`

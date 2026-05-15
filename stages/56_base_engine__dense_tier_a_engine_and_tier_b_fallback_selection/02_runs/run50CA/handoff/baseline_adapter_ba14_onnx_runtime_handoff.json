@@ -1,0 +1,103 @@
+{
+  "adapter_id": "ba14_no_atr_sd5_lot025",
+  "atr_bracket_contract": {
+    "atr_period": 14,
+    "atr_sltp_enabled": false,
+    "model_controlled": false,
+    "sl_multiplier": 0.0,
+    "tp_multiplier": 0.0
+  },
+  "attempt_set_files": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/ba14_no_atr_sd5_lot025/mt5/ba14_no_atr_sd5_lot025_onnx_ta_val.set",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/ba14_no_atr_sd5_lot025/mt5/ba14_no_atr_sd5_lot025_onnx_rt_val.set",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/ba14_no_atr_sd5_lot025/mt5/ba14_no_atr_sd5_lot025_onnx_ta_oos.set",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/ba14_no_atr_sd5_lot025/mt5/ba14_no_atr_sd5_lot025_onnx_rt_oos.set"
+  ],
+  "boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion",
+  "development_anchor": "v64_v47_ctxgap14_refill_etfw_h2_no_b",
+  "entry_contract": {
+    "class_order": [
+      "short",
+      "flat",
+      "long"
+    ],
+    "feature_order": [
+      "stage56_context_gap_refill_signal"
+    ],
+    "feature_order_hash": "12961356381137e71ebc95729041c747d91104f02a31163523e298273d8c96de",
+    "input_name": "float_input",
+    "long_threshold": 0.55,
+    "min_margin": 0.0,
+    "probability_output_name": "probabilities",
+    "short_threshold": 0.55
+  },
+  "feature_input_contract": {
+    "feature_count": 1,
+    "feature_order": [
+      "stage56_context_gap_refill_signal"
+    ],
+    "feature_order_hash": "12961356381137e71ebc95729041c747d91104f02a31163523e298273d8c96de",
+    "oos_feature": {
+      "common_path": "Project_Obsidian_Prime_v2/stage56/run50CA_baseline_adapter_onnx_runtime/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_onnx_adapter_a_oos.csv",
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_onnx_adapter_a_oos.csv",
+      "sha256": "a67c428937912e926a92de0f332a96e0652edc5835f5cb32bf3c07835883ca11"
+    },
+    "validation_feature": {
+      "common_path": "Project_Obsidian_Prime_v2/stage56/run50CA_baseline_adapter_onnx_runtime/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_onnx_adapter_a_val.csv",
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_onnx_adapter_a_val.csv",
+      "sha256": "b5afd6771f10b92a63c875bf6a40a52d8ba4ac849ae8972f1f3d481a94eb36e4"
+    }
+  },
+  "lifecycle_contract": {
+    "close_only_on_opposite_signal": false,
+    "max_hold_bars": 2,
+    "model_controlled": false,
+    "reentry_cooldown_bars": 0,
+    "reverse_on_opposite_signal": true,
+    "same_direction_reentry_cooldown_bars": 5
+  },
+  "model_runtime": {
+    "backend": "onnx",
+    "class_order": [
+      "short",
+      "flat",
+      "long"
+    ],
+    "common_path": "Project_Obsidian_Prime_v2/stage56/run50CA_baseline_adapter_onnx_runtime/models/ba14_stage56_context_gap_refill_entry.onnx",
+    "input_name": "float_input",
+    "local_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/models/ba14_stage56_context_gap_refill_entry.onnx",
+    "output_name": "probabilities",
+    "sha256": "bc7981a7bda403c02b50ae08014d681f39212db0564f64be9f9f9688864b5e33"
+  },
+  "mt5_execution_translation": {
+    "broker_stop_distance": "MT5-side order validation.",
+    "lot_rounding": "MT5 ExecutionBridge owns broker min/max/step normalization.",
+    "min_lot_floor": "0.01 lot floor remains MT5-side execution safety, not ONNX.",
+    "order_send": "MT5-side only."
+  },
+  "risk_contract": {
+    "broker_min_lot_floor_rule": "MT5 execution translation owns min/max/step normalization",
+    "fixed_lot": 0.25,
+    "model_controlled": false,
+    "model_risk_pct_output": "not_in_onnx_fixed_lot_adapter"
+  },
+  "route_tier_contract": {
+    "actual_routed_total": "one MT5 tester account path; no synthetic aggregation",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "tier_b_policy": "disabled_due_run50BR_fallback_only_damage"
+  },
+  "run_id": "run50CA_stage56_baseline_adapter_onnx_runtime_reproduction_v1",
+  "telemetry_contract": {
+    "required": [
+      "model_risk_pct",
+      "clipped_risk_pct",
+      "computed_lot",
+      "executed_lot",
+      "min_lot_floor_applied",
+      "actual_risk_pct_after_floor",
+      "atr_points",
+      "open_sl_points",
+      "open_tp_points"
+    ]
+  }
+}
