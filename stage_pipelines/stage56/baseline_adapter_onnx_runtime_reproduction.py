@@ -395,6 +395,92 @@ def build_attempts(inputs: Mapping[str, Any]) -> list[dict[str, Any]]:
     return attempts
 
 
+def telemetry_number(value: Any) -> float | None:
+    try:
+        if value is None or str(value).strip() == "":
+            return None
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    return number
+
+
+def mean(values: Sequence[float]) -> float | None:
+    return sum(values) / len(values) if values else None
+
+
+def enrich_risk_rows(risk_rows: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    enriched: list[dict[str, Any]] = []
+    numeric_columns = (
+        "model_risk_pct",
+        "clipped_risk_pct",
+        "computed_lot",
+        "executed_lot",
+        "actual_risk_pct_after_floor",
+        "atr_points",
+        "open_sl_points",
+        "open_tp_points",
+    )
+    for row in risk_rows:
+        item = dict(row)
+        telemetry_path = Path(str(item.get("telemetry_path") or ""))
+        if not path_exists(telemetry_path):
+            enriched.append(item)
+            continue
+        buckets: dict[str, list[float]] = {column: [] for column in numeric_columns}
+        with io_path(telemetry_path).open("r", encoding="utf-8-sig", newline="") as handle:
+            for raw in csv.DictReader(handle):
+                if str(raw.get("record_type") or "") != "cycle":
+                    continue
+                for column in numeric_columns:
+                    number = telemetry_number(raw.get(column))
+                    if number is not None:
+                        buckets[column].append(number)
+        item.update(
+            {
+                "avg_model_risk_pct": mean(buckets["model_risk_pct"]),
+                "avg_clipped_risk_pct": mean(buckets["clipped_risk_pct"]),
+                "max_clipped_risk_pct": max(buckets["clipped_risk_pct"]) if buckets["clipped_risk_pct"] else None,
+                "avg_computed_lot": mean(buckets["computed_lot"]),
+                "max_computed_lot": max(buckets["computed_lot"]) if buckets["computed_lot"] else None,
+                "max_executed_lot": max(buckets["executed_lot"]) if buckets["executed_lot"] else None,
+                "avg_actual_risk_pct_after_floor": mean(buckets["actual_risk_pct_after_floor"]),
+                "avg_atr_points_from_raw": mean(buckets["atr_points"]),
+                "avg_open_sl_points_from_raw": mean(buckets["open_sl_points"]),
+                "avg_open_tp_points_from_raw": mean(buckets["open_tp_points"]),
+            }
+        )
+        enriched.append(item)
+    return enriched
+
+
+def enrich_summary_rows(
+    summary_rows: Sequence[Mapping[str, Any]],
+    risk_rows: Sequence[Mapping[str, Any]],
+) -> list[dict[str, Any]]:
+    risk_by_attempt = {str(row.get("attempt_name")): row for row in risk_rows}
+    enriched: list[dict[str, Any]] = []
+    for row in summary_rows:
+        item = dict(row)
+        if item.get("view") != "tier_b_fallback_only":
+            attempt_token = "ta" if item.get("view") == "tier_a_only" else "rt"
+            split_token = "val" if item.get("split") == "validation_is" else "oos"
+            attempt_name = f"{SELECTED_ADAPTER_ID}_onnx_{attempt_token}_{split_token}"
+            risk = risk_by_attempt.get(attempt_name, {})
+            for key in (
+                "avg_model_risk_pct",
+                "avg_clipped_risk_pct",
+                "max_clipped_risk_pct",
+                "avg_computed_lot",
+                "max_computed_lot",
+                "max_executed_lot",
+                "avg_actual_risk_pct_after_floor",
+            ):
+                item[key] = risk.get(key)
+        enriched.append(item)
+    return enriched
+
+
 def route_coverage() -> dict[str, Any]:
     coverage: dict[str, Any] = {
         "by_split": {},
@@ -783,14 +869,14 @@ def write_report(summary_rows: Sequence[Mapping[str, Any]], gate: Mapping[str, A
         "",
         "## MT5 Runtime Metrics(MT5 런타임 지표)",
         "",
-        "| split(구간) | view(보기) | trades/day(일 거래 수) | PF(수익 팩터) | net(순손익) | DD(손실폭) | cost exp(비용 기대값) | same move(동일 이동) | MFE | lot(랏) | floor(바닥) | SL | TP |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| split(구간) | view(보기) | trades/day(일 거래 수) | PF(수익 팩터) | net(순손익) | DD(손실폭) | cost exp(비용 기대값) | same move(동일 이동) | MFE | computed lot(계산 랏) | executed lot(실행 랏) | floor(바닥) | SL | TP |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in summary_rows:
         if row.get("view") == "tier_b_fallback_only":
             continue
         lines.append(
-            "| {split} | {view} | {day} | {pf} | {net} | {dd} | {cost} | {same} | {mfe} | {lot} | {floor} | {sl} | {tp} |".format(
+            "| {split} | {view} | {day} | {pf} | {net} | {dd} | {cost} | {same} | {mfe} | {computed} | {lot} | {floor} | {sl} | {tp} |".format(
                 split=row.get("split", ""),
                 view=row.get("view", ""),
                 day=fmt(row.get("trades_per_day")),
@@ -800,6 +886,7 @@ def write_report(summary_rows: Sequence[Mapping[str, Any]], gate: Mapping[str, A
                 cost=fmt(row.get("cost_stressed_expectancy")),
                 same=fmt(row.get("same_move_reentry_ratio")),
                 mfe=fmt(row.get("mfe_capture_ratio")),
+                computed=fmt(row.get("avg_computed_lot")),
                 lot=fmt(row.get("avg_executed_lot")),
                 floor=fmt(row.get("risk_floor_applied_count")),
                 sl=fmt(row.get("avg_open_sl_points")),
@@ -918,6 +1005,11 @@ Effect(효과): BaselineAdapter(기준선 어댑터)는 아직 deployment(배포
         f"  Stage56(56단계) `{STAGE_ID}`: {RUN_NUMBER}(실행 {RUN_NUMBER}) BaselineAdapter ONNX runtime reproduction(기준선 어댑터 ONNX 런타임 재현)을 실행했다. "
         f"adapter(어댑터)는 `{SELECTED_ADAPTER_ID}`, runtime_gate_passed(런타임 게이트 통과)는 `{gate.get('passed')}`이다. "
         "Effect(효과): Python/ONNX/MT5(Python/ONNX/MT5) 재현 차이를 실제 tester account path(테스터 계좌 경로)에서 확인한다.\n"
+    )
+    text = re.sub(
+        rf"- >-\n  Stage56\(56단계\) `{re.escape(STAGE_ID)}`: {RUN_NUMBER}\(실행 {RUN_NUMBER}\) BaselineAdapter ONNX runtime reproduction[^\n]*\n",
+        "",
+        text,
     )
     text = re.sub(r"current_focus:\n", f"current_focus:\n{focus}", text, count=1)
     text = remove_workspace_block(text, "stage56_baseline_adapter_onnx_runtime_reproduction:")
@@ -1200,8 +1292,8 @@ def main(argv: list[str] | None = None) -> int:
         if result.get("mt5_kpi_records")
         else []
     )
-    risk_rows = base.risk_rows_from_result(result)
-    summary_rows = repair.build_summary_rows(result, REPRO_VARIANTS, audit_rows, risk_rows)
+    risk_rows = enrich_risk_rows(base.risk_rows_from_result(result))
+    summary_rows = enrich_summary_rows(repair.build_summary_rows(result, REPRO_VARIANTS, audit_rows, risk_rows), risk_rows)
     gate = runtime_gate(summary_rows)
     write_csv(SUMMARY_CSV_PATH, summary_rows)
     write_csv(AUDIT_CSV_PATH, audit_rows)
