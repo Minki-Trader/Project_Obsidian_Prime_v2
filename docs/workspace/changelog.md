@@ -448,3 +448,8 @@
 - run(실행): `run53A_stage59_post_risk_atr_repair_v1`
 - decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage58(58단계) risk/ATR damage(위험/ATR 손상)를 bounded risk dampening repair(경계 위험 완화 수리)로 측정하고 다음 단계/분기 조건을 남겼다.
+## 2026-05-15 - Stage59A risk sizing quality recalibration closeout(59A단계 위험 크기 품질 재보정 종료)
+
+- run(실행): `run54A_stage59a_risk_sizing_quality_recalibration_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
+- effect(효과): Stage59(59단계) cost-stressed weakness(비용 압박 약점)를 threshold quality filter(문턱값 품질 필터)와 3% risk calibration(3% 위험 보정)으로 측정하고 다음 단계/분기 조건을 남겼다.
