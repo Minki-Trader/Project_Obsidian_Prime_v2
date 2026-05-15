@@ -1,0 +1,43 @@
+{
+  "consumers": [
+    "stages/59C_adapter_repair__new_model_source_branch/03_reviews/new_model_source_branch_report.md",
+    "stages/59C_adapter_repair__new_model_source_branch/03_reviews/stage59c_decision.md",
+    "stages/59C_adapter_repair__new_model_source_branch/03_reviews/new_model_source_branch_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2626,
+      "sha256": "15c5a03a50529577b57d606e909fc49e52e4820aa1fd436137517cb135781a3c",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9361,
+      "sha256": "5f5e86f1a45c21215f8ed08374e43fa96e717582fb815dc5f441d16449b503b3",
+      "upserted_rows": 9
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 841,
+      "sha256": "0c80e6a4f8fcd120afdf7ab22997977d5a6b5379e0a5f5e2885b80d4c86dffcc",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59C_adapter_repair__new_model_source_branch/03_reviews/stage_run_ledger.csv",
+      "rows": 9,
+      "sha256": "12e397dbe5c2c22a9df6c9dbb99a3f05206fea59c2fddcbb0a9ba2518f5fd36d",
+      "upserted_rows": 9
+    }
+  },
+  "source_inputs": [
+    "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/stage59b_decision.md",
+    "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/model_source_or_backup_branch_report.md",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BK/models/stage43_stage43_low_complexity_signal_discrete_signal_score_table.csv"
+  ]
+}
