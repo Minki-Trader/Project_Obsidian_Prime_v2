@@ -1,3 +1,8 @@
 ﻿# Stage59F Review Index(59F단계 검토 색인)
 
-Stage59F(59F단계)는 active_planned(활성 계획) 상태다. Effect(효과): 새 모델 분기(new model branch, 새 모델 분기)의 산출물은 이 색인에 추가된다.
+- new_model_branch_report(새 모델 분기 보고서): `stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/new_model_branch_from_failure_memory_report.md`
+- new_model_branch_summary(새 모델 분기 요약): `stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/new_model_branch_summary.csv`
+- new_model_branch_segment_kpi(새 모델 분기 구간 KPI): `stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/new_model_branch_segment_kpi_summary.csv`
+- new_model_branch_equity_curve_audit(새 모델 분기 자금 곡선 감사): `stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/new_model_branch_equity_curve_audit.md`
+- new_model_branch_risk_atr_telemetry(새 모델 분기 위험/ATR 텔레메트리): `stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/new_model_branch_risk_atr_telemetry.csv`
+- stage59f_decision(59F단계 판정): `stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/stage59f_decision.md`

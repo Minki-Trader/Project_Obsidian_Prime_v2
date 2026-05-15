@@ -1,0 +1,43 @@
+{
+  "consumers": [
+    "stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/new_model_branch_from_failure_memory_report.md",
+    "stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/stage59f_decision.md",
+    "stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/new_model_branch_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2704,
+      "sha256": "8c70f94f851c88d28487f4071d178bd1dd3f12fc343083816a1fb18ac467b920",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9392,
+      "sha256": "d90ac75b1a220edf87fc00bf182e190e5e91565e3574a41655f3394479985b92",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 844,
+      "sha256": "31f92a4f689ab7de7c1fb3b9140721d4b2b2b841838d802eb783b4e5b8f35353",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59F_adapter_repair__new_model_branch_from_failure_memory/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "8fc4a1bd2883f4511b4fe6d365aeae76b9aebbb340ae840fac0c5cff11b478e6",
+      "upserted_rows": 13
+    }
+  },
+  "source_inputs": [
+    "stages/59E_adapter_repair__demotion_or_new_branch/03_reviews/stage59e_decision.md",
+    "stages/59E_adapter_repair__demotion_or_new_branch/03_reviews/demotion_or_new_branch_report.md",
+    "stages/59E_adapter_repair__demotion_or_new_branch/03_reviews/demotion_or_new_branch_summary.csv",
+    "stages/59E_adapter_repair__demotion_or_new_branch/03_reviews/demotion_or_new_branch_summary.json"
+  ]
+}
