@@ -160,3 +160,30 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS routed trades/day(검증/표본외 라우팅 일 거래): `9.644809` / `6.794872`
 - validation/OOS PF(검증/표본외 수익 팩터): `0.920000` / `1.210000`
 - validation/OOS net(검증/표본외 순손익): `-465.96` / `2239.00`
+## 2026-05-15 run50BU BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- action(행동): no-ATR control(ATR 없는 대조군), ATR fixed-lot(ATR 고정 랏), wide-ATR fixed-lot(넓은 ATR 고정 랏)을 실제 MT5 validation/OOS(검증/표본외)로 실행했다.
+- effect(효과): validation damage(검증 손상)가 entry/route(진입/라우팅)보다 risk/ATR/execution(위험/ATR/실행) 쪽인지 좁힌다.
+- terminal_label(종료 라벨): `blocked_adapter_repair_mt5_execution_missing_evidence`
+- best_adapter(최선 어댑터): `ba02_control_no_atr_fixed_lot`
+- Phase A eligible(Phase A 적격): `False`
+- validation/OOS PF(검증/표본외 PF): `` / ``
+- validation/OOS net(검증/표본외 손익): `` / ``
+- next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`
+## 2026-05-15 run50BU BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- action(행동): no-ATR control(ATR 없는 대조군), ATR fixed-lot(ATR 고정 랏), wide-ATR fixed-lot(넓은 ATR 고정 랏)을 실제 MT5 validation/OOS(검증/표본외)로 실행했다.
+- effect(효과): validation damage(검증 손상)가 entry/route(진입/라우팅)보다 risk/ATR/execution(위험/ATR/실행) 쪽인지 좁힌다.
+- terminal_label(종료 라벨): `adapter_mt5_repair_completed`
+- best_adapter(최선 어댑터): `ba02_control_no_atr_fixed_lot`
+- Phase A eligible(Phase A 적격): `False`
+- validation/OOS PF(검증/표본외 PF): `1.190000` / `1.200000`
+- validation/OOS net(검증/표본외 손익): `448.13` / `370.74`
+- next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`
+## 2026-05-15 run50BV BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- action(행동): `no_atr_reentry_cooldown3, no_atr_reentry_cooldown6, no_atr_same_direction_cooldown6` repair variants(수리 변형)를 실제 MT5 validation/OOS(검증/표본외)로 실행했다.
+- effect(효과): validation damage(검증 손상)가 entry/route(진입/라우팅)보다 risk/ATR/execution(위험/ATR/실행) 쪽인지 좁힌다.
+- terminal_label(종료 라벨): `adapter_mt5_repair_completed`
+- best_adapter(최선 어댑터): `ba07_no_atr_same_direction_cooldown6`
+- Phase A eligible(Phase A 적격): `False`
+- validation/OOS PF(검증/표본외 PF): `1.140000` / `1.280000`
+- validation/OOS net(검증/표본외 손익): `263.34` / `361.57`
+- next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`

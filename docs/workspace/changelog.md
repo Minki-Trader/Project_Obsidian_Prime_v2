@@ -424,3 +424,7 @@
 - effect(효과): selected_research_baseline(선택 연구 기준선) 없이도 strong MT5-backed anchor(강한 MT5 근거 기준점)를 골라 BaselineAdapter development(기준선 어댑터 개발)를 시작했다.
 ## 2026-05-15 Stage56 run50BT BaselineAdapter MT5 Development(56단계 run50BT 기준선 어댑터 MT5 개발)
 - completed(완료): actual BaselineAdapter MT5 validation/OOS(실제 기준선 어댑터 MT5 검증/표본외)를 실행하고 summary/ledger/current truth(요약/장부/현재 진실)를 갱신했다.
+## 2026-05-15 Stage56 run50BU BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- completed(완료): adapter repair batch(어댑터 수리 배치)를 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행하고 summary/ledger/current truth(요약/장부/현재 진실)를 갱신했다.
+## 2026-05-15 Stage56 {RUN_NUMBER} BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- completed(완료): adapter repair batch(어댑터 수리 배치)를 actual MT5 validation/OOS(실제 MT5 검증/표본외)로 실행하고 summary/ledger/current truth(요약/장부/현재 진실)를 갱신했다.
