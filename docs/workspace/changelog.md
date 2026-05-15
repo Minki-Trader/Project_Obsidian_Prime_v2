@@ -463,3 +463,8 @@
 - run(실행): `run56A_stage59c_new_model_source_branch_v1`
 - decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage59B(59B단계) 이후 남은 cost-stressed weakness(비용 압박 약점)를 v64 control(v64 대조군)과 Stage43 new source(Stage43 새 원천)로 측정하고 다음 단계/분기 조건을 남겼다.
+## 2026-05-15 - Stage59D source lifecycle or demote closeout(59D단계 원천 생명주기 또는 강등 종료)
+
+- run(실행): `run57A_stage59d_source_lifecycle_or_demote_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
+- effect(효과): Stage59C(59C단계) 이후 남은 validation weakness(검증 약점)를 v64 lifecycle controls(v64 생명주기 제어)로 측정하고 다음 단계/분기 조건을 남겼다.
