@@ -1,0 +1,43 @@
+{
+  "consumers": [
+    "stages/59R_adapter_repair__bounded_followup_from_stage59q/03_reviews/bounded_followup_from_stage59q_report.md",
+    "stages/59R_adapter_repair__bounded_followup_from_stage59q/03_reviews/stage59r_decision.md",
+    "stages/59R_adapter_repair__bounded_followup_from_stage59q/03_reviews/bounded_followup_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2963,
+      "sha256": "eff8f5974e103803d61e3587eca14ae815a096034faab2c03a28dad4315cc7eb",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9536,
+      "sha256": "e320a0f9ddb8b126642658d1aa0705a1385ddfd5b9f35021e65d157f3a02837c",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 856,
+      "sha256": "0a7e7973a1a3371d4cccfab56c69c0b2a4ae9af163623865efb1aa650177a96b",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59R_adapter_repair__bounded_followup_from_stage59q/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "d8286b56603c5279237a07c616da4e5e2d4b49df0764c7cc2a613ff1681e09da",
+      "upserted_rows": 13
+    }
+  },
+  "source_inputs": [
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/stage59q_decision.md",
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/bounded_followup_from_stage59p_report.md",
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/bounded_followup_summary.csv",
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/bounded_followup_summary.json"
+  ]
+}
