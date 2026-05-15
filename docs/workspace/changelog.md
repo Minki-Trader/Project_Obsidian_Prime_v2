@@ -443,3 +443,8 @@
 - completed(완료): `run52A_stage58_adapter_repair_before_risk_atr_v1` actual MT5 validation/OOS(실제 MT5 검증/표본외) risk/ATR integration measurement(위험/ATR 통합 측정)을 기록했다.
 - decision(판정): `demote_adapter_due_to_risk_atr_damage`.
 - effect(효과): ATR SL/TP(ATR 손절/익절)와 model-controlled risk%(모델 제어 위험률)를 필수 기능으로 측정했지만, final adapter(최종 어댑터), deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위)는 주장하지 않는다.
+## 2026-05-15 - Stage59 bounded post-risk/ATR repair closeout(59단계 경계 위험/ATR 이후 수리 종료)
+
+- run(실행): `run53A_stage59_post_risk_atr_repair_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
+- effect(효과): Stage58(58단계) risk/ATR damage(위험/ATR 손상)를 bounded risk dampening repair(경계 위험 완화 수리)로 측정하고 다음 단계/분기 조건을 남겼다.

@@ -1,0 +1,42 @@
+{
+  "consumers": [
+    "stages/59_adapter_repair__post_risk_atr_revalidation/03_reviews/adapter_repair_report.md",
+    "stages/59_adapter_repair__post_risk_atr_revalidation/03_reviews/stage59_decision.md",
+    "stages/59_adapter_repair__post_risk_atr_revalidation/03_reviews/repaired_adapter_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2557,
+      "sha256": "139d4a42559c1c68ac30f05b650fa539b6f581a220aae68dc79196f81e3bc9ea",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9326,
+      "sha256": "c11687ed2dd9dc0e48f9dbd1297da8f328a0405d7ef65d1a6f97635c9c385384",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 838,
+      "sha256": "c096e3d8120847a070c30c60e4cd3e28f05ff430c7e7e1343d3192b3267e3e71",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59_adapter_repair__post_risk_atr_revalidation/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "fe1753458de097f2d0691c9e67707099ae33ad1ec738e264bf19f726801a3bfa",
+      "upserted_rows": 13
+    }
+  },
+  "source_inputs": [
+    "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/stage58_decision.md",
+    "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/risk_atr_integration_report.md",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv"
+  ]
+}
