@@ -110,6 +110,10 @@ class RepairVariant:
     entry_transition_rearm_min_confidence_delta: float = 0.0
     short_threshold: float = SHORT_THRESHOLD
     long_threshold: float = LONG_THRESHOLD
+    close_on_flat_signal: bool = False
+    reverse_on_opposite_signal: bool = True
+    close_only_on_opposite_signal: bool = False
+    max_hold_bars: int = 2
 
 
 @dataclass(frozen=True)
@@ -324,12 +328,12 @@ def build_attempts(inputs: Mapping[str, Any], variants: Sequence[RepairVariant])
                         primary_active_tier="tier_a",
                         attempt_role=attempt_role,
                         record_view_prefix=prefix,
-                        max_hold_bars=2,
+                        max_hold_bars=variant.max_hold_bars,
                         common_root=f"{COMMON_ROOT}/{variant.adapter_id}",
                         fallback_enabled=False,
-                        close_on_flat_signal=False,
-                        reverse_on_opposite_signal=True,
-                        close_only_on_opposite_signal=False,
+                        close_on_flat_signal=variant.close_on_flat_signal,
+                        reverse_on_opposite_signal=variant.reverse_on_opposite_signal,
+                        close_only_on_opposite_signal=variant.close_only_on_opposite_signal,
                         extra_set_values=extra_set_values(variant, magic),
                     )
                 )
@@ -455,6 +459,10 @@ def build_summary_rows(
                         "entry_transition_rearm_min_confidence_delta": variant.entry_transition_rearm_min_confidence_delta,
                         "short_threshold": variant.short_threshold,
                         "long_threshold": variant.long_threshold,
+                        "close_on_flat_signal": variant.close_on_flat_signal,
+                        "reverse_on_opposite_signal": variant.reverse_on_opposite_signal,
+                        "close_only_on_opposite_signal": variant.close_only_on_opposite_signal,
+                        "max_hold_bars": variant.max_hold_bars,
                         "status": record.get("status", "missing"),
                         "trades_per_day": trade_count / split_days(split) if trade_count else 0.0,
                         "profit_factor": metric(record, "profit_factor"),
@@ -1150,6 +1158,7 @@ def update_logs(summary_rows: Sequence[Mapping[str, Any]], result: Mapping[str, 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run Stage56 BaselineAdapter repair MT5 batch.")
     parser.add_argument("--materialize-only", action="store_true")
+    parser.add_argument("--finalize-existing", action="store_true")
     parser.add_argument("--cost-stress-per-trade", type=float, default=0.50)
     parser.add_argument("--common-files-root", default=str(COMMON_FILES_ROOT_DEFAULT))
     parser.add_argument("--terminal-data-root", default=str(TERMINAL_DATA_ROOT_DEFAULT))
@@ -1160,29 +1169,51 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-def main(argv: list[str] | None = None) -> int:
-    args = parse_args(argv)
-    inputs = prepare_inputs(Path(args.common_files_root))
-    attempts = build_attempts(inputs, REPAIR_VARIANTS)
-    prepared = {
-        "run_id": RUN_ID,
-        "stage_id": STAGE_ID,
-        "stage_number": 56,
-        "run_number": RUN_NUMBER,
+def load_existing_result() -> dict[str, Any]:
+    manifest = json.loads(io_path(RUN_ROOT / "run_manifest.json").read_text(encoding="utf-8-sig"))
+    kpi = json.loads(io_path(RUN_ROOT / "kpi_record.json").read_text(encoding="utf-8-sig"))
+    return {
+        **manifest,
         "run_root": RUN_ROOT,
         "packet_id": PACKET_ID,
-        "attempts": attempts,
-        "common_copies": inputs["common_copies"],
-        "feature_exports": inputs["feature_exports"],
-        "model_artifacts": {"adapter_entry_model": {"path": rel(inputs["model_local"]), "common_path": inputs["model_common"]}},
+        "attempts": manifest.get("attempts", []),
+        "common_copies": manifest.get("common_copies", []),
+        "compile": manifest.get("compile", {}),
+        "external_verification_status": kpi.get("external_verification_status", manifest.get("external_verification_status")),
+        "judgment": kpi.get("judgment", manifest.get("judgment")),
+        "mt5_kpi_records": kpi.get("mt5_kpi_records", []),
+        "strategy_tester_reports": kpi.get("strategy_tester_reports", []),
+        "execution_results": kpi.get("execution_results", []),
         "route_coverage": route_coverage(),
-        "model_family": "baseline_adapter_v64_repair_ebm_table",
-        "feature_set_id": "stage56_context_gap_refill_signal_repair_batch",
-        "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
-        "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413",
-        "claim_boundary": BOUNDARY,
     }
-    result = execute_or_materialize(prepared, args)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    if args.finalize_existing:
+        result = load_existing_result()
+    else:
+        inputs = prepare_inputs(Path(args.common_files_root))
+        attempts = build_attempts(inputs, REPAIR_VARIANTS)
+        prepared = {
+            "run_id": RUN_ID,
+            "stage_id": STAGE_ID,
+            "stage_number": 56,
+            "run_number": RUN_NUMBER,
+            "run_root": RUN_ROOT,
+            "packet_id": PACKET_ID,
+            "attempts": attempts,
+            "common_copies": inputs["common_copies"],
+            "feature_exports": inputs["feature_exports"],
+            "model_artifacts": {"adapter_entry_model": {"path": rel(inputs["model_local"]), "common_path": inputs["model_common"]}},
+            "route_coverage": route_coverage(),
+            "model_family": "baseline_adapter_v64_repair_ebm_table",
+            "feature_set_id": "stage56_context_gap_refill_signal_repair_batch",
+            "label_id": "label_v1_fwd12_m5_logret_train_q33_3class",
+            "split_contract": "split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413",
+            "claim_boundary": BOUNDARY,
+        }
+        result = execute_or_materialize(prepared, args)
     audit_rows = (
         audit_rows_for_result(result, REPAIR_VARIANTS, float(args.cost_stress_per_trade))
         if result.get("mt5_kpi_records")
@@ -1208,8 +1239,7 @@ def main(argv: list[str] | None = None) -> int:
         Path("foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh"),
     ]
     artifacts = artifact_rows(result, extra_paths)
-    ledger_payload = write_ledgers(result, summary_rows, artifacts)
-    write_run_files(result, summary_rows, audit_rows, risk_rows, ledger_payload)
+    write_run_files(result, summary_rows, audit_rows, risk_rows, {})
     artifacts = artifact_rows(result, extra_paths)
     ledger_payload = write_ledgers(result, summary_rows, artifacts)
     summary_payload = json.loads(io_path(SUMMARY_JSON_PATH).read_text(encoding="utf-8-sig"))

@@ -1,0 +1,45 @@
+{
+  "consumers": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BX_baseline_adapter_lot_scale_repair_report.md",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BX_baseline_adapter_lot_scale_repair_summary.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BX_baseline_adapter_lot_scale_repair_summary.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BX_baseline_adapter_lot_scale_repair_risk_telemetry.csv"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2413,
+      "sha256": "c0c5c544a805b9636b5a1a8d63162df55d94474fb58551ddda8689d03cd14bbc",
+      "upserted_rows": 47
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9273,
+      "sha256": "4fff3209cf3285e1ff49098dbad40a09748d2e38b03a147f825df20b55d58223",
+      "upserted_rows": 16
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 832,
+      "sha256": "0084d64a8c3b0198414b8f8f3b3e2cb70f742bd2e4a097f052e058fe09e0cf73",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+      "rows": 4400,
+      "sha256": "7de39957bc0ec751a21d1432aa0f738627c225403ab3462f05d2cb06dd96f1bb",
+      "upserted_rows": 16
+    }
+  },
+  "producer": "stage_pipelines/stage56/baseline_adapter_repair_batch.py",
+  "source_inputs": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_a_val.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_a_oos.csv"
+  ],
+  "status": "passed"
+}

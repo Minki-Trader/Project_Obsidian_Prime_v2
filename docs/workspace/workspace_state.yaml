@@ -1,4 +1,4 @@
-﻿current_run_id: run50BV_stage56_baseline_adapter_cooldown_repair_v1
+﻿current_run_id: run50BY_stage56_baseline_adapter_same_move_lot_repair_v1
 updated_on: '2026-05-15'
 project_mode: clean_stage_restart
 active_branch: main
@@ -15,6 +15,12 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BY(실행 run50BY) BaselineAdapter repair batch(기준선 어댑터 수리 배치)를 실행했다. best_adapter(최선 어댑터)는 `ba14_no_atr_sd5_lot025`이고 Phase A eligible(Phase A 적격)은 `True`이다. Effect(효과): ONNX hardening(ONNX 경화) 전 validation damage(검증 손상)의 원인을 risk/ATR/execution(위험/ATR/실행) 축으로 좁힌다.
+- >-
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BX(실행 run50BX) BaselineAdapter repair batch(기준선 어댑터 수리 배치)를 실행했다. best_adapter(최선 어댑터)는 `ba13_no_atr_control_lot025`이고 Phase A eligible(Phase A 적격)은 `True`이다. Effect(효과): ONNX hardening(ONNX 경화) 전 validation damage(검증 손상)의 원인을 risk/ATR/execution(위험/ATR/실행) 축으로 좁힌다.
+- >-
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BW(실행 run50BW) BaselineAdapter repair batch(기준선 어댑터 수리 배치)를 실행했다. best_adapter(최선 어댑터)는 `ba08_no_atr_same_direction_cooldown4`이고 Phase A eligible(Phase A 적격)은 `False`이다. Effect(효과): ONNX hardening(ONNX 경화) 전 validation damage(검증 손상)의 원인을 risk/ATR/execution(위험/ATR/실행) 축으로 좁힌다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BV(실행 run50BV) BaselineAdapter repair batch(기준선 어댑터 수리 배치)를 실행했다. best_adapter(최선 어댑터)는 `ba07_no_atr_same_direction_cooldown6`이고 Phase A eligible(Phase A 적격)은 `False`이다. Effect(효과): ONNX hardening(ONNX 경화) 전 validation damage(검증 손상)의 원인을 risk/ATR/execution(위험/ATR/실행) 축으로 좁힌다.
 - >-
@@ -3824,12 +3830,12 @@ stage56_baseline_adapter_mt5:
   next_action: repair_adapter_cost_same_move_risk_atr_bottleneck
 
 stage56_baseline_adapter_repair:
-  packet_id: stage56_baseline_adapter_cooldown_repair_v1
-  current_run_id: run50BV_stage56_baseline_adapter_cooldown_repair_v1
+  packet_id: stage56_baseline_adapter_same_move_lot_repair_v1
+  current_run_id: run50BY_stage56_baseline_adapter_same_move_lot_repair_v1
   development_anchor: v64_v47_ctxgap14_refill_etfw_h2_no_b
   backup_anchor: v60_v47_et_stable_damage_firewall_h2c0_no_b
-  terminal_label: adapter_repair_in_progress
-  phase_a_eligible_for_onnx: false
-  best_adapter: ba07_no_atr_same_direction_cooldown6
+  terminal_label: adapter_mt5_repair_completed
+  phase_a_eligible_for_onnx: true
+  best_adapter: ba14_no_atr_sd5_lot025
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion
-  next_action: continue_adapter_repair_or_demote_anchor_before_onnx
+  next_action: freeze_ba14_adapter_spec_and_start_onnx_hardening

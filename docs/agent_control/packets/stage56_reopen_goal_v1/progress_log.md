@@ -187,3 +187,30 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 PF): `1.140000` / `1.280000`
 - validation/OOS net(검증/표본외 손익): `263.34` / `361.57`
 - next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`
+## 2026-05-15 run50BW BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- action(행동): `no_atr_same_direction_cooldown4, no_atr_close_only_opposite, no_atr_close_only_same_dir_cd4` repair variants(수리 변형)를 실제 MT5 validation/OOS(검증/표본외)로 실행했다.
+- effect(효과): validation damage(검증 손상)가 entry/route(진입/라우팅)보다 risk/ATR/execution(위험/ATR/실행) 쪽인지 좁힌다.
+- terminal_label(종료 라벨): `adapter_mt5_repair_completed`
+- best_adapter(최선 어댑터): `ba08_no_atr_same_direction_cooldown4`
+- Phase A eligible(Phase A 적격): `False`
+- validation/OOS PF(검증/표본외 PF): `1.170000` / `1.250000`
+- validation/OOS net(검증/표본외 손익): `351.92` / `396.89`
+- next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`
+## 2026-05-15 run50BX BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- action(행동): `no_atr_same_direction_cooldown4_lot025, no_atr_close_only_opposite_lot025, no_atr_control_lot025` repair variants(수리 변형)를 실제 MT5 validation/OOS(검증/표본외)로 실행했다.
+- effect(효과): validation damage(검증 손상)가 entry/route(진입/라우팅)보다 risk/ATR/execution(위험/ATR/실행) 쪽인지 좁힌다.
+- terminal_label(종료 라벨): `adapter_mt5_repair_completed`
+- best_adapter(최선 어댑터): `ba13_no_atr_control_lot025`
+- Phase A eligible(Phase A 적격): `True`
+- validation/OOS PF(검증/표본외 PF): `1.190000` / `1.200000`
+- validation/OOS net(검증/표본외 손익): `1120.81` / `926.62`
+- next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`
+## 2026-05-15 run50BY BaselineAdapter Repair Batch(기준선 어댑터 수리 배치)
+- action(행동): `no_atr_same_direction_cooldown5_lot025, no_atr_close_only_same_direction_cooldown3_lot025, no_atr_close_only_same_direction_cooldown2_lot025` repair variants(수리 변형)를 실제 MT5 validation/OOS(검증/표본외)로 실행했다.
+- effect(효과): validation damage(검증 손상)가 entry/route(진입/라우팅)보다 risk/ATR/execution(위험/ATR/실행) 쪽인지 좁힌다.
+- terminal_label(종료 라벨): `adapter_mt5_repair_completed`
+- best_adapter(최선 어댑터): `ba14_no_atr_sd5_lot025`
+- Phase A eligible(Phase A 적격): `True`
+- validation/OOS PF(검증/표본외 PF): `1.200000` / `1.300000`
+- validation/OOS net(검증/표본외 손익): `1009.93` / `1048.98`
+- next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`
