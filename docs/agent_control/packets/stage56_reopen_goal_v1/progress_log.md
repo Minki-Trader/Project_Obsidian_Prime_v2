@@ -214,3 +214,9 @@ Effect(효과): progress log(진행 기록)는 Stage56(56단계)을 닫지 않�
 - validation/OOS PF(검증/표본외 PF): `1.200000` / `1.300000`
 - validation/OOS net(검증/표본외 손익): `1009.93` / `1048.98`
 - next_action(다음 행동): `continue_adapter_repair_or_demote_anchor_before_onnx`
+## 2026-05-15 run50BZ BaselineAdapter ONNX Hardening(기준선 어댑터 ONNX 경화)
+- action(행동): ba14 entry model(ba14 진입 모델)을 ONNX(온닉스)로 내보내고 Python/ONNX parity(파이썬/ONNX 동등성)를 실행했다.
+- effect(효과): MT5 ONNX/runtime reproduction(MT5 ONNX/런타임 재현) 전 probability contract(확률 계약)를 고정했다.
+- terminal_label(종료 라벨): `onnx_parity_passed`
+- max_abs_diff(최대 절대 차이): `4.237248085736667e-08`
+- onnx_sha256(ONNX 해시): `bc7981a7bda403c02b50ae08014d681f39212db0564f64be9f9f9688864b5e33`

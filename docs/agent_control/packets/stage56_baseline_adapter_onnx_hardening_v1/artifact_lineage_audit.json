@@ -1,0 +1,43 @@
+{
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2472,
+      "sha256": "6063f6e6bb870b0ed886cb532793fa496901b2bde6b916f1c76ca1e978c87db0",
+      "upserted_rows": 12
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9290,
+      "sha256": "b2d32e5a83accb1536d421ec9cc7ec980743bd261eba4d2ff78d9dbac1257471",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 834,
+      "sha256": "f1e49424faf1f36b9ca5cfefd807f00bf945e8b4539f0a7434f4c5e3cf0bfba8",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+      "rows": 4417,
+      "sha256": "220fdbc87ecb7c7e026caaa1ccac6542c335d26a43497cc89f628cf41b44e3ed",
+      "upserted_rows": 1
+    }
+  },
+  "outputs": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BZ/models/ba14_stage56_context_gap_refill_entry.onnx",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/04_selected/baseline_adapter_ba14_spec.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BZ_baseline_adapter_onnx_parity.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BZ_baseline_adapter_onnx_hardening.md"
+  ],
+  "source_inputs": [
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BY_baseline_adapter_same_move_lot_repair_summary.json"
+  ],
+  "status": "passed"
+}

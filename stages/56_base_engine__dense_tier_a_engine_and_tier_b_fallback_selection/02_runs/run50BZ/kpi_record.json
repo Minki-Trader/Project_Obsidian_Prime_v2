@@ -1,0 +1,26 @@
+{
+  "adapter_id": "ba14_no_atr_sd5_lot025",
+  "boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion",
+  "external_verification_status": "out_of_scope_by_claim",
+  "judgment": "onnx_parity_passed",
+  "onnx_parity": {
+    "decision_counts": {
+      "flat": 13769,
+      "long": 1682,
+      "short": 1977
+    },
+    "input_name": "float_input",
+    "max_abs_diff": 4.237248085736667e-08,
+    "mean_abs_diff": 1.4125058991983414e-08,
+    "onnx_row_sum_max_abs_error": 4.237517714500427e-08,
+    "output_names": [
+      "probabilities"
+    ],
+    "passed": true,
+    "rows": 17428,
+    "tolerance": 1e-06
+  },
+  "packet_id": "stage56_baseline_adapter_onnx_hardening_v1",
+  "run_id": "run50BZ_stage56_baseline_adapter_onnx_hardening_v1",
+  "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection"
+}

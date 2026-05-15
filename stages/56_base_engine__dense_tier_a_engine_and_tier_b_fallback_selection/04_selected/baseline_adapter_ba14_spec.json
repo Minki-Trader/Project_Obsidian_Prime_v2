@@ -1,0 +1,236 @@
+{
+  "adapter_id": "ba14_no_atr_sd5_lot025",
+  "atr_bracket_contract": {
+    "atr_period": 14,
+    "atr_sltp_enabled": false,
+    "model_controlled": false,
+    "sl_multiplier": 0.0,
+    "tp_multiplier": 0.0
+  },
+  "boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion",
+  "development_anchor": "v64_v47_ctxgap14_refill_etfw_h2_no_b",
+  "entry_contract": {
+    "class_order": [
+      "short",
+      "flat",
+      "long"
+    ],
+    "feature_order": [
+      "stage56_context_gap_refill_signal"
+    ],
+    "feature_order_hash": "12961356381137e71ebc95729041c747d91104f02a31163523e298273d8c96de",
+    "input_name": "float_input",
+    "long_threshold": 0.55,
+    "min_margin": 0.0,
+    "probability_output_name": "probabilities",
+    "short_threshold": 0.55
+  },
+  "forbidden_claims": [
+    "live_readiness",
+    "runtime_authority",
+    "operating_promotion",
+    "operating_reference",
+    "production_baseline",
+    "reviewed_closed"
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2472,
+      "sha256": "6063f6e6bb870b0ed886cb532793fa496901b2bde6b916f1c76ca1e978c87db0",
+      "upserted_rows": 12
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9290,
+      "sha256": "b2d32e5a83accb1536d421ec9cc7ec980743bd261eba4d2ff78d9dbac1257471",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 834,
+      "sha256": "f1e49424faf1f36b9ca5cfefd807f00bf945e8b4539f0a7434f4c5e3cf0bfba8",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/stage_run_ledger.csv",
+      "rows": 4417,
+      "sha256": "220fdbc87ecb7c7e026caaa1ccac6542c335d26a43497cc89f628cf41b44e3ed",
+      "upserted_rows": 1
+    }
+  },
+  "lifecycle_contract": {
+    "close_only_on_opposite_signal": false,
+    "max_hold_bars": 2,
+    "model_controlled": false,
+    "reentry_cooldown_bars": 0,
+    "reverse_on_opposite_signal": true,
+    "same_direction_reentry_cooldown_bars": 5
+  },
+  "onnx_export": {
+    "input_name": "float_input",
+    "output_name": "probabilities",
+    "outputs": [
+      {
+        "name": "probabilities",
+        "shape": [
+          null,
+          3
+        ],
+        "value_type": "tensor_type"
+      }
+    ],
+    "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BZ/models/ba14_stage56_context_gap_refill_entry.onnx",
+    "sha256": "bc7981a7bda403c02b50ae08014d681f39212db0564f64be9f9f9688864b5e33",
+    "target_opset": 13
+  },
+  "onnx_parity": {
+    "decision_counts": {
+      "flat": 13769,
+      "long": 1682,
+      "short": 1977
+    },
+    "input_name": "float_input",
+    "max_abs_diff": 4.237248085736667e-08,
+    "mean_abs_diff": 1.4125058991983414e-08,
+    "onnx_row_sum_max_abs_error": 4.237517714500427e-08,
+    "output_names": [
+      "probabilities"
+    ],
+    "passed": true,
+    "rows": 17428,
+    "tolerance": 1e-06
+  },
+  "phase_a_best_variant": {
+    "adapter_id": "ba14_no_atr_sd5_lot025",
+    "failure_reasons": [],
+    "oos": {
+      "adapter_id": "ba14_no_atr_sd5_lot025",
+      "atr_enabled": false,
+      "atr_stop_multiplier": 0.0,
+      "atr_take_profit_multiplier": 0.0,
+      "avg_atr_points": 0.0,
+      "avg_executed_lot": 0.05185258438818566,
+      "avg_open_sl_points": 0.0,
+      "avg_open_tp_points": 0.0,
+      "close_on_flat_signal": false,
+      "close_only_on_opposite_signal": false,
+      "cooldown12_trades_per_day": 3.3846153846153846,
+      "cost_stressed_expectancy": 0.5344970414201184,
+      "density_gain_survives_12bar_cooldown": false,
+      "entry_transition_only": false,
+      "entry_transition_rearm_min_confidence_delta": 0.0,
+      "expectancy": 1.03,
+      "fixed_lot": 0.25,
+      "long_threshold": 0.55,
+      "max_actual_risk_pct_after_floor": 0.0,
+      "max_drawdown_amount": 319.23,
+      "max_drawdown_percent": 53.87,
+      "max_hold_bars": 2,
+      "max_model_risk_pct": 0.0,
+      "mfe_capture_ratio": 0.6167315875140998,
+      "model_risk_enabled": false,
+      "model_risk_max_pct": 0.0,
+      "net_profit": 1048.98,
+      "notes": "Interpolate same-direction cooldown5 at 0.25 lot to reduce same-move while trying to keep OOS density above 5.",
+      "profit_factor": 1.3,
+      "reentry_cooldown_bars": 0,
+      "repair_label": "no_atr_same_direction_cooldown5_lot025",
+      "report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BY/mt5/reports/Project_Obsidian_Prime_v2_run50BY_stage56_baseline_adapter_same_move_lot_repair_v1_ba14_no_atr_sd5_lot025_rt_oos.htm",
+      "reverse_on_opposite_signal": true,
+      "risk_floor_applied_count": 0,
+      "route_role": "routed_total",
+      "run_id": "run50BY_stage56_baseline_adapter_same_move_lot_repair_v1",
+      "same_direction_reentry_cooldown_bars": 5,
+      "same_move_reentry_ratio": 0.34911242603550297,
+      "short_threshold": 0.55,
+      "split": "oos",
+      "status": "completed",
+      "tier_b_policy": "disabled_due_run50BR_fallback_only_damage",
+      "trade_count": 1014,
+      "trades_per_day": 5.2,
+      "view": "actual_routed_total"
+    },
+    "phase_a_eligible_for_onnx": true,
+    "repair_label": "no_atr_same_direction_cooldown5_lot025",
+    "score": 4658.91,
+    "validation": {
+      "adapter_id": "ba14_no_atr_sd5_lot025",
+      "atr_enabled": false,
+      "atr_stop_multiplier": 0.0,
+      "atr_take_profit_multiplier": 0.0,
+      "avg_atr_points": 0.0,
+      "avg_executed_lot": 0.05297643234457538,
+      "avg_open_sl_points": 0.0,
+      "avg_open_tp_points": 0.0,
+      "close_on_flat_signal": false,
+      "close_only_on_opposite_signal": false,
+      "cooldown12_trades_per_day": 5.0,
+      "cost_stressed_expectancy": 0.24368924889543453,
+      "density_gain_survives_12bar_cooldown": true,
+      "entry_transition_only": false,
+      "entry_transition_rearm_min_confidence_delta": 0.0,
+      "expectancy": 0.74,
+      "fixed_lot": 0.25,
+      "long_threshold": 0.55,
+      "max_actual_risk_pct_after_floor": 0.0,
+      "max_drawdown_amount": 362.47,
+      "max_drawdown_percent": 21.0,
+      "max_hold_bars": 2,
+      "max_model_risk_pct": 0.0,
+      "mfe_capture_ratio": 0.6117451653872574,
+      "model_risk_enabled": false,
+      "model_risk_max_pct": 0.0,
+      "net_profit": 1009.93,
+      "notes": "Interpolate same-direction cooldown5 at 0.25 lot to reduce same-move while trying to keep OOS density above 5.",
+      "profit_factor": 1.2,
+      "reentry_cooldown_bars": 0,
+      "repair_label": "no_atr_same_direction_cooldown5_lot025",
+      "report_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BY/mt5/reports/Project_Obsidian_Prime_v2_run50BY_stage56_baseline_adapter_same_move_lot_repair_v1_ba14_no_atr_sd5_lot025_rt_val.htm",
+      "reverse_on_opposite_signal": true,
+      "risk_floor_applied_count": 0,
+      "route_role": "routed_total",
+      "run_id": "run50BY_stage56_baseline_adapter_same_move_lot_repair_v1",
+      "same_direction_reentry_cooldown_bars": 5,
+      "same_move_reentry_ratio": 0.32621502209131076,
+      "short_threshold": 0.55,
+      "split": "validation_is",
+      "status": "completed",
+      "tier_b_policy": "disabled_due_run50BR_fallback_only_damage",
+      "trade_count": 1358,
+      "trades_per_day": 7.420765027322404,
+      "view": "actual_routed_total"
+    }
+  },
+  "phase_a_source_run": "run50BY_stage56_baseline_adapter_same_move_lot_repair_v1",
+  "risk_contract": {
+    "broker_min_lot_floor_rule": "MT5 execution translation owns min/max/step normalization",
+    "fixed_lot": 0.25,
+    "model_controlled": false,
+    "model_risk_pct_output": "not_in_onnx_fixed_lot_adapter"
+  },
+  "route_tier_contract": {
+    "actual_routed_total": "one MT5 tester account path; no synthetic aggregation",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "tier_b_policy": "disabled_due_run50BR_fallback_only_damage"
+  },
+  "selected_research_baseline": "none",
+  "source_run_id": "run50BZ_stage56_baseline_adapter_onnx_hardening_v1",
+  "telemetry_contract": {
+    "required": [
+      "model_risk_pct",
+      "clipped_risk_pct",
+      "computed_lot",
+      "executed_lot",
+      "min_lot_floor_applied",
+      "actual_risk_pct_after_floor",
+      "atr_points",
+      "open_sl_points",
+      "open_tp_points"
+    ]
+  }
+}
