@@ -1,0 +1,56 @@
+{
+  "changed_variables": [
+    "same_direction_reentry_cooldown_bars",
+    "short_threshold",
+    "long_threshold",
+    "entry_transition_only",
+    "entry_transition_rearm_min_confidence_delta"
+  ],
+  "comparison_baseline": "Stage59F best_repaired_adapter s59f_v54_coo.",
+  "control_variables": [
+    "US100",
+    "M5",
+    "split_v1",
+    "run50BP v54 source",
+    "Tier B disabled",
+    "close_only_on_opposite",
+    "wide ATR bracket 2.5/3.5",
+    "3% model-controlled risk cap",
+    "ONNX deferred"
+  ],
+  "decision_use": "Route to Stage60 only if validation/OOS, segment KPI, risk telemetry, ATR bracket behavior, and equity shape are strong; otherwise continue repair, demote, or open a new branch.",
+  "evidence_plan": [
+    "stages/59G_adapter_repair__bounded_followup_from_stage59f/03_reviews/bounded_followup_summary.csv",
+    "stages/59G_adapter_repair__bounded_followup_from_stage59f/03_reviews/bounded_followup_segment_kpi_summary.csv",
+    "stages/59G_adapter_repair__bounded_followup_from_stage59f/03_reviews/bounded_followup_equity_curve_audit.md",
+    "stages/59G_adapter_repair__bounded_followup_from_stage59f/03_reviews/bounded_followup_risk_atr_telemetry.csv",
+    "stages/59G_adapter_repair__bounded_followup_from_stage59f/03_reviews/stage59g_decision.md"
+  ],
+  "failure_criteria": [
+    "negative validation/OOS net",
+    "PF < 1.10",
+    "cost-stressed expectancy <= 0",
+    "same-move concentration remains harmful",
+    "missing risk or ATR telemetry",
+    "segment flags remain"
+  ],
+  "hypothesis": "A narrow same-direction re-entry and threshold follow-up around Stage59F s59f_v54_coo may repair validation weakness while preserving OOS behavior after ATR and model-controlled risk.",
+  "invalid_conditions": [
+    "missing source Stage59F evidence",
+    "missing model table",
+    "missing feature files",
+    "missing MT5 report",
+    "telemetry parse failure"
+  ],
+  "sample_scope": "FPMarkets US100 M5 validation 2025-01-01 to 2025-09-30 and OOS 2025-10-01 to 2026-04-13.",
+  "status": "completed",
+  "stop_conditions": "three bounded Stage59G variants only; do not broaden into open-ended hunting.",
+  "success_criteria": [
+    "validation and OOS net positive",
+    "validation and OOS PF >= 1.10",
+    "validation and OOS cost-stressed expectancy positive",
+    "same-move concentration reduced or justified",
+    "ATR and model risk telemetry present",
+    "no severe segment flags"
+  ]
+}
