@@ -3,7 +3,7 @@
 - stage_id(단계 ID): `59J_adapter_repair__new_model_branch_from_stage59i`
 - source_stage(원천 단계): `59I_adapter_repair__bounded_followup_from_stage59h`
 - source_decision(원천 판정): `open_new_model_branch`
-- bounded_question(경계 질문): `Can a new bounded model branch produce a post-ATR/risk adapter candidate after the Stage59F-H v54 repair line was demoted?`
+- bounded_question(경계 질문): `Can a new bounded model branch, informed by Stage59I demotion evidence, produce a post-ATR/risk adapter candidate without starting ONNX?`
 - boundary(경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
-Stage59J(59J단계)는 demoted v54 repair line(강등된 v54 수리 계열) 대신 새 model branch(모델 분기)를 작게 연다. Effect(효과): 같은 local threshold/cooldown repair(로컬 문턱값/쿨다운 수리)를 반복하지 않는다.
+Stage59J(59J단계)는 run50BQ transition source family(run50BQ 전환 원천 계열) 세 변형만 측정한다. Effect(효과): Stage59I(59I단계) 이후 새 분기를 작게 열되 Stage60 ONNX(60단계 ONNX)나 deployment(배포)로 이어가지 않는다.
