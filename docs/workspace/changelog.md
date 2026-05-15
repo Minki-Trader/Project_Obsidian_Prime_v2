@@ -553,3 +553,8 @@
 - run(실행): `run59O_stage59t_bounded_followup_from_stage59s_v1`
 - decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage59S(59S단계) evidence(근거)를 exit-policy variants(청산 정책 변형) 세 개로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
+## 2026-05-16 - Stage59U bounded max-hold retune follow-up from Stage59T closeout(59U단계 59T단계 기반 경계 최대 보유 재조정 후속 종료)
+
+- run(실행): `run59P_stage59u_bounded_followup_from_stage59t_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
+- effect(효과): Stage59T(59T단계) evidence(근거)를 max-hold variants(최대 보유 변형) 세 개로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
