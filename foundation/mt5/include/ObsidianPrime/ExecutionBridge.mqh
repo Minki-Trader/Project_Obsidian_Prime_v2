@@ -26,6 +26,8 @@ struct SOpExecutionResult
    int    last_error;
    ulong  order;
    ulong  deal;
+   double requested_volume;
+   double normalized_volume;
    string comment;
    string position_before;
    string position_after;
@@ -130,6 +132,8 @@ private:
       request.type_time = ORDER_TIME_GTC;
       request.type_filling = ResolveFillingType();
       request.comment = "ObsidianPrimeV2 RuntimeProbe";
+      result.requested_volume = volume;
+      result.normalized_volume = request.volume;
 
       if(signal == OP_DECISION_LONG)
         {
@@ -367,7 +371,8 @@ public:
                 const int overlay_min_hold_bars = 0,
                 const int overlay_max_hold_bars = 0,
                 const double open_sl_points = 0.0,
-                const double open_tp_points = 0.0)
+                const double open_tp_points = 0.0,
+                const double open_volume = 0.0)
      {
       result.attempted = false;
       result.sent = false;
@@ -377,6 +382,8 @@ public:
       result.last_error = 0;
       result.order = 0;
       result.deal = 0;
+      result.requested_volume = 0.0;
+      result.normalized_volume = 0.0;
       result.comment = "";
       result.position_before = PositionStateText();
       result.position_after = result.position_before;
@@ -501,7 +508,8 @@ public:
          }
 
          result.action = (signal == OP_DECISION_LONG) ? "open_long" : "open_short";
-         const bool opened = SendMarketOrder(signal, m_fixed_lot, 0, result, open_sl_points, open_tp_points);
+         const double order_volume = open_volume > 0.0 ? open_volume : m_fixed_lot;
+         const bool opened = SendMarketOrder(signal, order_volume, 0, result, open_sl_points, open_tp_points);
          result.position_after = PositionStateText();
          if(opened)
            {
@@ -562,7 +570,8 @@ public:
         }
 
       SOpExecutionResult open_result;
-      const bool opened = SendMarketOrder(signal, m_fixed_lot, 0, open_result, open_sl_points, open_tp_points);
+      const double order_volume = open_volume > 0.0 ? open_volume : m_fixed_lot;
+      const bool opened = SendMarketOrder(signal, order_volume, 0, open_result, open_sl_points, open_tp_points);
       result.action = (signal == OP_DECISION_LONG) ? "reverse_open_long" : "reverse_open_short";
       result.attempted = (result.attempted || open_result.attempted);
       result.sent = open_result.sent;
@@ -571,6 +580,8 @@ public:
       result.last_error = open_result.last_error;
       result.order = open_result.order;
       result.deal = open_result.deal;
+      result.requested_volume = open_result.requested_volume;
+      result.normalized_volume = open_result.normalized_volume;
       result.comment = open_result.comment;
       result.position_after = PositionStateText();
       if(opened)

@@ -94,6 +94,12 @@ input double          InpAtrMinStopPoints = 0.0;
 input double          InpAtrMaxStopPoints = 0.0;
 input double          InpAtrMinTakeProfitPoints = 0.0;
 input double          InpAtrMaxTakeProfitPoints = 0.0;
+input bool            InpModelRiskSizingEnabled = false;
+input double          InpModelRiskMinPct = 0.005;
+input double          InpModelRiskMaxPct = 0.05;
+input double          InpModelRiskConfidenceFloor = 0.55;
+input double          InpModelRiskConfidenceCeiling = 0.85;
+input double          InpModelRiskFallbackLot = 0.10;
 
 input bool            InpTelemetryEnabled = true;
 input bool            InpTelemetryUseCommonFiles = true;
@@ -234,6 +240,109 @@ double CurrentAtrPoints()
       return 0.0;
 
    return values[0] / point;
+  }
+
+struct SOpRiskSizingDecision
+  {
+   double model_risk_pct;
+   double clipped_risk_pct;
+   double computed_lot;
+   double executed_lot;
+   bool   min_lot_floor_applied;
+   double actual_risk_pct_after_floor;
+  };
+
+double NormalizeAdapterLot(const double requested)
+  {
+   const double min_volume = SymbolInfoDouble(InpMainSymbol, SYMBOL_VOLUME_MIN);
+   const double max_volume = SymbolInfoDouble(InpMainSymbol, SYMBOL_VOLUME_MAX);
+   const double step = SymbolInfoDouble(InpMainSymbol, SYMBOL_VOLUME_STEP);
+   const double floor_lot = MathMax(0.01, min_volume);
+
+   double volume = requested;
+   if(volume < floor_lot)
+      volume = floor_lot;
+   if(max_volume > 0.0 && volume > max_volume)
+      volume = max_volume;
+   if(step > 0.0)
+      volume = MathFloor((volume / step) + 0.0000001) * step;
+   if(volume < floor_lot)
+      volume = floor_lot;
+   return NormalizeDouble(volume, 8);
+  }
+
+double RiskMoneyPerLot(const double stop_points)
+  {
+   if(stop_points <= 0.0 || !MathIsValidNumber(stop_points))
+      return 0.0;
+
+   const double point = SymbolInfoDouble(InpMainSymbol, SYMBOL_POINT);
+   const double tick_size = SymbolInfoDouble(InpMainSymbol, SYMBOL_TRADE_TICK_SIZE);
+   const double tick_value = SymbolInfoDouble(InpMainSymbol, SYMBOL_TRADE_TICK_VALUE);
+   if(point <= 0.0 || tick_size <= 0.0 || tick_value <= 0.0)
+      return 0.0;
+
+   const double ticks = (stop_points * point) / tick_size;
+   if(ticks <= 0.0 || !MathIsValidNumber(ticks))
+      return 0.0;
+   return ticks * tick_value;
+  }
+
+double ModelRiskPctFromDecision(const SOpDecisionResult &decision)
+  {
+   if(!InpModelRiskSizingEnabled || decision.signal == OP_DECISION_FLAT)
+      return 0.0;
+
+   const double max_pct = MathMin(MathMax(InpModelRiskMaxPct, 0.0), 0.05);
+   const double min_pct = MathMin(MathMax(InpModelRiskMinPct, 0.0), max_pct);
+   if(max_pct <= 0.0)
+      return 0.0;
+
+   const double floor_conf = InpModelRiskConfidenceFloor;
+   const double ceiling_conf = InpModelRiskConfidenceCeiling;
+   if(ceiling_conf <= floor_conf)
+      return max_pct;
+
+   double weight = (decision.confidence - floor_conf) / (ceiling_conf - floor_conf);
+   if(weight < 0.0)
+      weight = 0.0;
+   if(weight > 1.0)
+      weight = 1.0;
+   return min_pct + (max_pct - min_pct) * weight;
+  }
+
+SOpRiskSizingDecision BuildRiskSizingDecision(const SOpDecisionResult &decision,
+                                              const double open_sl_points)
+  {
+   SOpRiskSizingDecision sizing;
+   sizing.model_risk_pct = ModelRiskPctFromDecision(decision);
+   sizing.clipped_risk_pct = MathMin(MathMax(sizing.model_risk_pct, 0.0), 0.05);
+   sizing.computed_lot = 0.0;
+   sizing.executed_lot = 0.0;
+   sizing.min_lot_floor_applied = false;
+   sizing.actual_risk_pct_after_floor = 0.0;
+
+   if(decision.signal == OP_DECISION_FLAT)
+      return sizing;
+
+   const double risk_money_per_lot = RiskMoneyPerLot(open_sl_points);
+   const double balance = AccountInfoDouble(ACCOUNT_BALANCE);
+   if(!InpModelRiskSizingEnabled || risk_money_per_lot <= 0.0 || balance <= 0.0)
+     {
+      sizing.model_risk_pct = 0.0;
+      sizing.clipped_risk_pct = 0.0;
+      sizing.computed_lot = InpModelRiskFallbackLot > 0.0 ? InpModelRiskFallbackLot : InpFixedLot;
+      sizing.executed_lot = NormalizeAdapterLot(sizing.computed_lot);
+      sizing.min_lot_floor_applied = sizing.computed_lot < 0.01;
+      return sizing;
+     }
+
+   const double risk_money = balance * sizing.clipped_risk_pct;
+   sizing.computed_lot = risk_money / risk_money_per_lot;
+   sizing.min_lot_floor_applied = sizing.computed_lot < 0.01;
+   sizing.executed_lot = NormalizeAdapterLot(sizing.computed_lot);
+   sizing.actual_risk_pct_after_floor = (sizing.executed_lot * risk_money_per_lot) / balance;
+   return sizing;
   }
 
 string DecisionSignalText(const int signal)
@@ -454,6 +563,17 @@ void RecordSkippedBar(const datetime bar_time,
                            false,
                            0,
                            "",
+                           0.0,
+                           0.0,
+                           0.0,
+                           0.0,
+                           false,
+                           0.0,
+                           0.0,
+                           0.0,
+                           0.0,
+                           "skip",
+                           InpFallbackEnabled,
                            telemetry_reason);
    PrintTelemetryFailure("cycle_skip", telemetry_reason);
   }
@@ -678,6 +798,17 @@ void ProcessClosedBar()
                               false,
                               0,
                               "",
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              false,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              "model_skip",
+                              InpFallbackEnabled,
                               telemetry_reason);
       PrintTelemetryFailure("model_skip", telemetry_reason);
       return;
@@ -740,6 +871,7 @@ void ProcessClosedBar()
    const double open_tp_points = ClampAdapterPoints(atr_points * InpAtrTakeProfitMultiplier,
                                                     InpAtrMinTakeProfitPoints,
                                                     InpAtrMaxTakeProfitPoints);
+   const SOpRiskSizingDecision risk_sizing = BuildRiskSizingDecision(decision, open_sl_points);
 
    SOpExecutionResult execution;
    const bool execution_ok = g_execution_bridge.Execute(decision.signal,
@@ -749,7 +881,8 @@ void ProcessClosedBar()
                                                         InpExitRiskMinHoldBars,
                                                         overlay_max_hold_bars,
                                                         open_sl_points,
-                                                        open_tp_points);
+                                                        open_tp_points,
+                                                        risk_sizing.executed_lot);
    string skip_reason = "";
    if(!execution_ok)
       skip_reason = "execution_failed:" + execution.comment;
@@ -778,6 +911,17 @@ void ProcessClosedBar()
                            execution.filled,
                            execution.retcode,
                            execution.comment,
+                           risk_sizing.model_risk_pct,
+                           risk_sizing.clipped_risk_pct,
+                           risk_sizing.computed_lot,
+                           risk_sizing.executed_lot,
+                           risk_sizing.min_lot_floor_applied,
+                           risk_sizing.actual_risk_pct_after_floor,
+                           atr_points,
+                           open_sl_points,
+                           open_tp_points,
+                           execution.action,
+                           InpFallbackEnabled,
                            telemetry_reason);
    PrintTelemetryFailure("cycle", telemetry_reason);
    g_last_routed_signal = routed_signal_before_entry_gate;

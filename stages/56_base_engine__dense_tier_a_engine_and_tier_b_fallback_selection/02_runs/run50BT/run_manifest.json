@@ -1,0 +1,322 @@
+{
+  "attempts": [
+    {
+      "attempt_name": "ba01_ta_val",
+      "attempt_role": "tier_only_total",
+      "common_summary_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_ta_val_summary.csv",
+      "common_telemetry_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_ta_val_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 1.5,
+        "InpAtrTakeProfitMultiplier": 2.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpMagic": 5605001,
+        "InpModelRiskConfidenceCeiling": 0.85,
+        "InpModelRiskConfidenceFloor": 0.55,
+        "InpModelRiskFallbackLot": 0.1,
+        "InpModelRiskMaxPct": 0.05,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_ta_val.ini",
+        "sha256": "7a536a897569805785f83b8175aa9fe37e2144a9c98f530cf57162c19f59f0e1",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2025.01.02",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run50BT_stage56_baseline_adapter_v64_mt5_v1_ba01_ta_val",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2025.10.01",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 2,
+      "record_view_prefix": "mt5_tier_a_only_v64_v47_ctxgap14_refill_etfw_h2_no_b",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_ta_val.set",
+        "sha256": "0e1af744a79c566059ea13d99982beb0a82eec6c594cf035946fffd66c297b90"
+      },
+      "split": "validation_is",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "ba01_rt_val",
+      "attempt_role": "routed_total",
+      "common_summary_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_rt_val_summary.csv",
+      "common_telemetry_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_rt_val_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 1.5,
+        "InpAtrTakeProfitMultiplier": 2.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpMagic": 5605010,
+        "InpModelRiskConfidenceCeiling": 0.85,
+        "InpModelRiskConfidenceFloor": 0.55,
+        "InpModelRiskFallbackLot": 0.1,
+        "InpModelRiskMaxPct": 0.05,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_rt_val.ini",
+        "sha256": "32340ac35c67400f953ad50be3d2cd213364ced7a9a809775517694628cd0e8d",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2025.01.02",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run50BT_stage56_baseline_adapter_v64_mt5_v1_ba01_rt_val",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2025.10.01",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 2,
+      "record_view_prefix": "mt5_routed_v64_v47_ctxgap14_refill_etfw_h2_no_b",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_rt_val.set",
+        "sha256": "918e3f2e25ecd29f465f4aed05420bbd135d37720f3b22893d0783fb9d041bc6"
+      },
+      "split": "validation_is",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "ba01_ta_oos",
+      "attempt_role": "tier_only_total",
+      "common_summary_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_ta_oos_summary.csv",
+      "common_telemetry_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_ta_oos_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 1.5,
+        "InpAtrTakeProfitMultiplier": 2.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpMagic": 5605001,
+        "InpModelRiskConfidenceCeiling": 0.85,
+        "InpModelRiskConfidenceFloor": 0.55,
+        "InpModelRiskFallbackLot": 0.1,
+        "InpModelRiskMaxPct": 0.05,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_ta_oos.ini",
+        "sha256": "d08a1de28c608f191c1d9f5cd2a5b582990061a06430f182ca1c686151653da3",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2025.10.01",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run50BT_stage56_baseline_adapter_v64_mt5_v1_ba01_ta_oos",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2026.04.14",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 2,
+      "record_view_prefix": "mt5_tier_a_only_v64_v47_ctxgap14_refill_etfw_h2_no_b",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_ta_oos.set",
+        "sha256": "42a820c04dddb12f07bdf0c8fead5fd8e4126a08833b6afba4409a5086f060f2"
+      },
+      "split": "oos",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "ba01_rt_oos",
+      "attempt_role": "routed_total",
+      "common_summary_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_rt_oos_summary.csv",
+      "common_telemetry_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/telemetry/ba01_rt_oos_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 1.5,
+        "InpAtrTakeProfitMultiplier": 2.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpMagic": 5605010,
+        "InpModelRiskConfidenceCeiling": 0.85,
+        "InpModelRiskConfidenceFloor": 0.55,
+        "InpModelRiskFallbackLot": 0.1,
+        "InpModelRiskMaxPct": 0.05,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_rt_oos.ini",
+        "sha256": "c7a2ab2991513926645aa87f2ebeab0b030f622161014157e1cc655056f5d579",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2025.10.01",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run50BT_stage56_baseline_adapter_v64_mt5_v1_ba01_rt_oos",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2026.04.14",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 2,
+      "record_view_prefix": "mt5_routed_v64_v47_ctxgap14_refill_etfw_h2_no_b",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/mt5/ba01_rt_oos.set",
+        "sha256": "a7f638eff17bbe7cc2f4128188406bac8fd44ceee2d8923ab9634c8d97ddcaca"
+      },
+      "split": "oos",
+      "tier": "Tier A+B"
+    }
+  ],
+  "boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion",
+  "common_copies": [
+    {
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+      "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+      "source": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv"
+    },
+    {
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+      "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+      "source": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/models/stage56_context_timed_event_signal_discrete_score_table.csv"
+    },
+    {
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_val.csv",
+      "sha256": "b5afd6771f10b92a63c875bf6a40a52d8ba4ac849ae8972f1f3d481a94eb36e4",
+      "source": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_a_val.csv"
+    },
+    {
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_val.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_val.csv",
+      "sha256": "b5afd6771f10b92a63c875bf6a40a52d8ba4ac849ae8972f1f3d481a94eb36e4",
+      "source": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_val.csv"
+    },
+    {
+      "path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_oos.csv",
+      "sha256": "a67c428937912e926a92de0f332a96e0652edc5835f5cb32bf3c07835883ca11",
+      "source": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_a_oos.csv"
+    },
+    {
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_oos.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage56/run50BT_baseline_adapter_v64/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_oos.csv",
+      "sha256": "a67c428937912e926a92de0f332a96e0652edc5835f5cb32bf3c07835883ca11",
+      "source": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/v64_v47_ctxgap14_refill_etfw_h2_no_b/features/v64_v47_ctxgap14_refill_etfw_h2_no_b_adapter_a_oos.csv"
+    }
+  ],
+  "compile": {
+    "actual_log_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/mt5/mt5_compile.log",
+    "command": [
+      "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+      "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "/log:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection\\02_runs\\run50BT\\mt5\\mt5_compile.log"
+    ],
+    "command_log_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/mt5/mt5_compile.log",
+    "log_path": "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BT/mt5/mt5_compile.log",
+    "log_sha256": "71fe083a0dfd5bafb0b864c627cf6cbf3e59f2b0a604d316a473adc5e6807f29",
+    "returncode": 1,
+    "status": "completed",
+    "stderr": "",
+    "stdout": ""
+  },
+  "development_anchor": "v64_v47_ctxgap14_refill_etfw_h2_no_b",
+  "external_verification_status": "completed",
+  "judgment": "inconclusive_tier_balance_runtime_probe_completed",
+  "packet_id": "stage56_baseline_adapter_mt5_v1",
+  "run_id": "run50BT_stage56_baseline_adapter_v64_mt5_v1",
+  "run_number": "run50BT",
+  "stage_id": "56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection"
+}

@@ -35,6 +35,9 @@ private:
    long   m_flat_count;
    long   m_order_attempt_count;
    long   m_order_fill_count;
+   long   m_min_lot_floor_applied_count;
+   double m_max_model_risk_pct;
+   double m_max_actual_risk_pct_after_floor;
    string m_last_skip_reason;
 
    string CleanPath(const string path)
@@ -197,6 +200,9 @@ public:
       m_flat_count = 0;
       m_order_attempt_count = 0;
       m_order_fill_count = 0;
+      m_min_lot_floor_applied_count = 0;
+      m_max_model_risk_pct = 0.0;
+      m_max_actual_risk_pct_after_floor = 0.0;
       m_last_skip_reason = "";
      }
 
@@ -227,14 +233,14 @@ public:
                         const string detail,
                         string &reason)
      {
-      const string header = "record_type,written_at,run_id,active_tier,model_id,feature_order_hash,bar_time,source_time,symbol,timeframe,feature_ready,model_ok,skip_reason,input_hash,p_short,p_flat,p_long,decision,decision_reason,position_before,position_after,exec_action,order_attempted,order_filled,trade_retcode,trade_comment,event,detail";
+      const string header = "record_type,written_at,run_id,active_tier,model_id,feature_order_hash,bar_time,source_time,symbol,timeframe,feature_ready,model_ok,skip_reason,input_hash,p_short,p_flat,p_long,decision,decision_reason,position_before,position_after,exec_action,order_attempted,order_filled,trade_retcode,trade_comment,model_risk_pct,clipped_risk_pct,computed_lot,executed_lot,min_lot_floor_applied,actual_risk_pct_after_floor,atr_points,open_sl_points,open_tp_points,lifecycle_decision,tier_b_enabled,event,detail";
       const string line = Csv("lifecycle") + "," +
                           Csv(TimeToString(TimeCurrent(), TIME_DATE | TIME_SECONDS)) + "," +
                           Csv(m_run_id) + "," +
                           "," +
                           Csv(m_model_id) + "," +
                           Csv(m_feature_order_hash) + "," +
-                          ",,,,,,,,,,,,,,,,,,,,," +
+                          ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," +
                           Csv(event_name) + "," +
                           Csv(detail);
       return AppendLine(m_telemetry_path, header, line, reason);
@@ -263,6 +269,17 @@ public:
                     const bool order_filled,
                     const uint trade_retcode,
                     const string trade_comment,
+                    const double model_risk_pct,
+                    const double clipped_risk_pct,
+                    const double computed_lot,
+                    const double executed_lot,
+                    const bool min_lot_floor_applied,
+                    const double actual_risk_pct_after_floor,
+                    const double atr_points,
+                    const double open_sl_points,
+                    const double open_tp_points,
+                    const string lifecycle_decision,
+                    const bool tier_b_enabled,
                     string &reason)
      {
       m_bars_seen++;
@@ -321,13 +338,19 @@ public:
          m_order_attempt_count++;
       if(order_filled)
          m_order_fill_count++;
+      if(min_lot_floor_applied)
+         m_min_lot_floor_applied_count++;
+      if(model_risk_pct > m_max_model_risk_pct)
+         m_max_model_risk_pct = model_risk_pct;
+      if(actual_risk_pct_after_floor > m_max_actual_risk_pct_after_floor)
+         m_max_actual_risk_pct_after_floor = actual_risk_pct_after_floor;
       if(skip_reason != "")
          m_last_skip_reason = skip_reason;
 
       if(IsRoutineTimestampSkip(feature_ready, skip_reason))
          return true;
 
-      const string header = "record_type,written_at,run_id,active_tier,model_id,feature_order_hash,bar_time,source_time,symbol,timeframe,feature_ready,model_ok,skip_reason,input_hash,p_short,p_flat,p_long,decision,decision_reason,position_before,position_after,exec_action,order_attempted,order_filled,trade_retcode,trade_comment,event,detail";
+      const string header = "record_type,written_at,run_id,active_tier,model_id,feature_order_hash,bar_time,source_time,symbol,timeframe,feature_ready,model_ok,skip_reason,input_hash,p_short,p_flat,p_long,decision,decision_reason,position_before,position_after,exec_action,order_attempted,order_filled,trade_retcode,trade_comment,model_risk_pct,clipped_risk_pct,computed_lot,executed_lot,min_lot_floor_applied,actual_risk_pct_after_floor,atr_points,open_sl_points,open_tp_points,lifecycle_decision,tier_b_enabled,event,detail";
       const string line = Csv("cycle") + "," +
                           Csv(TimeToString(TimeCurrent(), TIME_DATE | TIME_SECONDS)) + "," +
                           Csv(m_run_id) + "," +
@@ -353,14 +376,25 @@ public:
                           Csv(BoolText(order_attempted)) + "," +
                           Csv(BoolText(order_filled)) + "," +
                           Csv((string)trade_retcode) + "," +
-                          Csv(trade_comment) + ",,";
+                          Csv(trade_comment) + "," +
+                          Csv(Dbl(model_risk_pct)) + "," +
+                          Csv(Dbl(clipped_risk_pct)) + "," +
+                          Csv(Dbl(computed_lot)) + "," +
+                          Csv(Dbl(executed_lot)) + "," +
+                          Csv(BoolText(min_lot_floor_applied)) + "," +
+                          Csv(Dbl(actual_risk_pct_after_floor)) + "," +
+                          Csv(Dbl(atr_points)) + "," +
+                          Csv(Dbl(open_sl_points)) + "," +
+                          Csv(Dbl(open_tp_points)) + "," +
+                          Csv(lifecycle_decision) + "," +
+                          Csv(BoolText(tier_b_enabled)) + ",,";
 
       return AppendLine(m_telemetry_path, header, line, reason);
      }
 
    bool WriteSummary(const string deinit_reason, string &reason)
      {
-      const string header = "written_at,run_id,model_id,feature_order_hash,ticks_seen,bars_seen,feature_ready_count,feature_skip_count,model_ok_count,model_fail_count,tier_a_used_count,tier_b_fallback_used_count,no_tier_count,tier_a_long_count,tier_a_short_count,tier_a_flat_count,tier_a_order_attempt_count,tier_a_order_fill_count,tier_b_fallback_long_count,tier_b_fallback_short_count,tier_b_fallback_flat_count,tier_b_fallback_order_attempt_count,tier_b_fallback_order_fill_count,long_count,short_count,flat_count,order_attempt_count,order_fill_count,last_skip_reason,deinit_reason";
+      const string header = "written_at,run_id,model_id,feature_order_hash,ticks_seen,bars_seen,feature_ready_count,feature_skip_count,model_ok_count,model_fail_count,tier_a_used_count,tier_b_fallback_used_count,no_tier_count,tier_a_long_count,tier_a_short_count,tier_a_flat_count,tier_a_order_attempt_count,tier_a_order_fill_count,tier_b_fallback_long_count,tier_b_fallback_short_count,tier_b_fallback_flat_count,tier_b_fallback_order_attempt_count,tier_b_fallback_order_fill_count,long_count,short_count,flat_count,order_attempt_count,order_fill_count,min_lot_floor_applied_count,max_model_risk_pct,max_actual_risk_pct_after_floor,last_skip_reason,deinit_reason";
       const string line = Csv(TimeToString(TimeCurrent(), TIME_DATE | TIME_SECONDS)) + "," +
                           Csv(m_run_id) + "," +
                           Csv(m_model_id) + "," +
@@ -389,6 +423,9 @@ public:
                           Csv((string)m_flat_count) + "," +
                           Csv((string)m_order_attempt_count) + "," +
                           Csv((string)m_order_fill_count) + "," +
+                          Csv((string)m_min_lot_floor_applied_count) + "," +
+                          Csv(Dbl(m_max_model_risk_pct)) + "," +
+                          Csv(Dbl(m_max_actual_risk_pct_after_floor)) + "," +
                           Csv(m_last_skip_reason) + "," +
                           Csv(deinit_reason);
       return AppendLine(m_summary_path, header, line, reason);

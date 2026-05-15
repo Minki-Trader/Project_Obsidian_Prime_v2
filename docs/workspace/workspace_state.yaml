@@ -1,4 +1,4 @@
-﻿current_run_id: run50BS_stage56_baseline_adapter_transition_v1
+﻿current_run_id: run50BT_stage56_baseline_adapter_v64_mt5_v1
 updated_on: '2026-05-15'
 project_mode: clean_stage_restart
 active_branch: main
@@ -15,6 +15,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BT(실행50BT) BaselineAdapter MT5 validation/OOS(기준선 어댑터 MT5 검증/표본외) 실행; development_anchor(개발 기준점)는 `v64_v47_ctxgap14_refill_etfw_h2_no_b`이고 terminal_label(종료 라벨)은 `adapter_first_mt5_validation_oos_completed`이다. Effect(효과): 후보 사냥을 멈춘 상태에서 adapter risk/ATR/telemetry(어댑터 위험/ATR/텔레메트리)가 실제 tester result(테스터 결과)를 만들었다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50BS(실행50BS) BaselineAdapter transition(BaselineAdapter 전환) 완료; development_anchor(개발 기준점)는 `v64_v47_ctxgap14_refill_etfw_h2_no_b`, backup_anchor(예비 기준점)는 `v60_v47_et_stable_damage_firewall_h2c0_no_b`이다. selected_research_baseline(선택 연구 기준선)은 `none`이다. Effect(효과): run50 후보 사냥을 멈추고 risk/ATR/telemetry(위험/ATR/텔레메트리)를 포함한 BaselineAdapter 개발로 전환한다.
 - >-
@@ -3811,3 +3813,12 @@ stage56_baseline_adapter_transition:
   terminal_label: development_anchor_selected_and_adapter_development_started
   boundary: development_anchor_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference
   next_action: run_first_baseline_adapter_mt5_validation_oos
+
+stage56_baseline_adapter_mt5:
+  packet_id: stage56_baseline_adapter_mt5_v1
+  current_run_id: run50BT_stage56_baseline_adapter_v64_mt5_v1
+  development_anchor: v64_v47_ctxgap14_refill_etfw_h2_no_b
+  backup_anchor: v60_v47_et_stable_damage_firewall_h2c0_no_b
+  terminal_label: adapter_first_mt5_validation_oos_completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion
+  next_action: repair_adapter_cost_same_move_risk_atr_bottleneck
