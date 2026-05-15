@@ -1,0 +1,50 @@
+{
+  "consumers": [
+    "stages/59Y_adapter_repair__new_model_branch_from_stage59x/03_reviews/new_model_branch_from_stage59x_report.md",
+    "stages/59Y_adapter_repair__new_model_branch_from_stage59x/03_reviews/stage59y_decision.md",
+    "stages/59Y_adapter_repair__new_model_branch_from_stage59x/03_reviews/new_model_branch_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3107,
+      "sha256": "a4d723f35c8a752cb689a3f602eb5c55e0d69b21c05f16ecf7d0b73ba020023f",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9615,
+      "sha256": "30858d03d6777efc44ae0029f1511b19c84571cf4fd2e6d092198865bc3a296f",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 863,
+      "sha256": "42525b373400baad2d98330961c465cf19c22f61f1bac1a3317409c6056be1c3",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59Y_adapter_repair__new_model_branch_from_stage59x/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "783e705a3261ccd65d4ea21a04c1fe980726215c2bd0bdfb6c5615d9b464e70d",
+      "upserted_rows": 13
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage59y/new_model_branch_from_stage59x.py",
+  "source_inputs": [
+    "stages/59X_adapter_repair__bounded_followup_from_stage59w/03_reviews/stage59x_decision.md",
+    "stages/59X_adapter_repair__bounded_followup_from_stage59w/03_reviews/demotion_or_branch_from_stage59w_report.md",
+    "stages/59X_adapter_repair__bounded_followup_from_stage59w/03_reviews/demotion_or_branch_summary.csv",
+    "stages/59X_adapter_repair__bounded_followup_from_stage59w/03_reviews/demotion_or_branch_summary.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v65_v47_ctxgap24_refill_etfw_h2_no_b",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v67_v47_ctxgap24_refill_etfw_h4_no_b"
+  ],
+  "status": "completed"
+}
