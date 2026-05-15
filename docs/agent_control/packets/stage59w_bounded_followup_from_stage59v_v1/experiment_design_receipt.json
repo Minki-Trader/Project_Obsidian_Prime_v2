@@ -1,0 +1,54 @@
+{
+  "changed_variables": [
+    "short_threshold"
+  ],
+  "comparison_baseline": "Stage59V best candidate s59v_s59s_mr025_sl20_tp30_sd12_h5_rearm002.",
+  "control_variables": [
+    "US100",
+    "M5",
+    "split_v1",
+    "Tier B disabled",
+    "run50BQ v61 source anchor",
+    "long threshold 0.54",
+    "same-direction cooldown 12",
+    "ATR SL 2.0",
+    "ATR TP 3.0",
+    "2.5% model-controlled risk cap",
+    "max hold 5",
+    "close-only-on-opposite lifecycle",
+    "entry transition rearm 0.02",
+    "ONNX deferred"
+  ],
+  "decision_use": "Route to Stage60 only if the full post-ATR/risk adapter evidence is strong; otherwise continue bounded repair, demote, or open another branch.",
+  "evidence_plan": [
+    "stages/59W_adapter_repair__bounded_followup_from_stage59v/03_reviews/bounded_followup_summary.csv",
+    "stages/59W_adapter_repair__bounded_followup_from_stage59v/03_reviews/bounded_followup_segment_kpi_summary.csv",
+    "stages/59W_adapter_repair__bounded_followup_from_stage59v/03_reviews/bounded_followup_equity_curve_audit.md",
+    "stages/59W_adapter_repair__bounded_followup_from_stage59v/03_reviews/bounded_followup_risk_atr_telemetry.csv",
+    "stages/59W_adapter_repair__bounded_followup_from_stage59v/03_reviews/stage59w_decision.md"
+  ],
+  "failure_criteria": [
+    "negative validation/OOS net",
+    "PF < 1.10",
+    "cost-stressed expectancy <= 0",
+    "missing risk or ATR telemetry",
+    "segment flags remain"
+  ],
+  "hypothesis": "A bounded short-threshold tightening on the Stage59V best adapter may reduce validation early negative and OOS mid weak segment behavior while preserving validation/OOS PF, net, drawdown, cost-stressed expectancy, ATR/bracket telemetry, and model-controlled risk behavior.",
+  "invalid_conditions": [
+    "missing model table",
+    "missing feature files",
+    "missing MT5 report",
+    "telemetry parse failure"
+  ],
+  "sample_scope": "FPMarkets US100 M5 validation 2025-01-01 to 2025-09-30 and OOS 2025-10-01 to 2026-04-13.",
+  "status": "completed",
+  "stop_conditions": "three bounded Stage59W short-threshold variants only",
+  "success_criteria": [
+    "validation and OOS net positive",
+    "validation and OOS PF >= 1.10",
+    "validation and OOS cost-stressed expectancy positive",
+    "ATR and model risk telemetry present",
+    "no severe segment flags"
+  ]
+}
