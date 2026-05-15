@@ -439,3 +439,7 @@
 ## 2026-05-15 Stage58 Opened(58단계 개방)
 - opened(개방): `58_adapter_risk__bounded_repair_before_atr_risk_integration` with planned run(계획 실행) `run52A_stage58_adapter_repair_before_risk_atr_v1`.
 - effect(효과): adapter repair need(어댑터 수리 필요)를 먼저 다루고, ATR SL/TP(ATR 손절/익절)와 model-controlled risk%(모델 제어 위험률)를 full adapter(전체 어댑터) 기준으로 통합/측정한다.
+## 2026-05-15 Stage58 Risk/ATR Integration(58단계 위험/ATR 통합)
+- completed(완료): `run52A_stage58_adapter_repair_before_risk_atr_v1` actual MT5 validation/OOS(실제 MT5 검증/표본외) risk/ATR integration measurement(위험/ATR 통합 측정)을 기록했다.
+- decision(판정): `demote_adapter_due_to_risk_atr_damage`.
+- effect(효과): ATR SL/TP(ATR 손절/익절)와 model-controlled risk%(모델 제어 위험률)를 필수 기능으로 측정했지만, final adapter(최종 어댑터), deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위)는 주장하지 않는다.

@@ -1,8 +1,8 @@
-﻿current_run_id: run52A_stage58_adapter_repair_before_risk_atr_v1
+﻿current_run_id: run53A_stage59_post_risk_atr_repair_v1
 updated_on: '2026-05-15'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 58_adapter_risk__bounded_repair_before_atr_risk_integration
+active_stage: 59_adapter_repair__post_risk_atr_revalidation
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -15,6 +15,10 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage58(58단계) `58_adapter_risk__bounded_repair_before_atr_risk_integration` closed(종료) as bounded ATR/risk integration measurement(경계 ATR/위험 통합 측정); decision(판정)=`demote_adapter_due_to_risk_atr_damage`. Effect(효과): ATR SL/TP(ATR 손절/익절)와 model-controlled risk%(모델 제어 위험률)는 측정됐지만 final(최종) 또는 operating(운영) 주장은 없다.
+- >-
+  Next stage(다음 단계) `59_adapter_repair__post_risk_atr_revalidation` is active/planned(활성/계획). Effect(효과): Stage58(58단계) 약점을 full adapter repair/revalidation(전체 어댑터 수리/재검증)으로 이어 간다.
 - >-
   Stage57(57단계) `57_adapter_quality__equity_segment_kpi_audit_gate` closed(종료) as bounded equity/segment KPI audit(경계 자금/구간 KPI 감사); decision(판정)=`proceed_to_stage58_adapter_repair_before_risk_atr`. Effect(효과): Stage56(56단계)은 더 이상 BaselineAdapter(기준선 어댑터) future work(향후 작업)를 흡수하지 않고 Stage58(58단계) `58_adapter_risk__bounded_repair_before_atr_risk_integration`로 handoff(인계)한다.
 - >-
@@ -3892,4 +3896,21 @@ stage58_bounded_repair_before_atr_risk:
   planned_run_id: run52A_stage58_adapter_repair_before_risk_atr_v1
   source_decision: proceed_to_stage58_adapter_repair_before_risk_atr
   next_action: bounded adapter repair before mandatory ATR SL/TP and model-controlled risk percent integration
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+
+
+stage58_risk_atr_integration:
+  packet_id: stage58_risk_atr_integration_v1
+  stage_id: 58_adapter_risk__bounded_repair_before_atr_risk_integration
+  status: closed_bounded_risk_atr_integration
+  current_run_id: run52A_stage58_adapter_repair_before_risk_atr_v1
+  source_adapter: ba14_no_atr_sd5_lot025
+  best_combined_adapter: s58_atr_modelrisk5_sd5
+  decision: demote_adapter_due_to_risk_atr_damage
+  next_stage: 59_adapter_repair__post_risk_atr_revalidation
+  report_path: stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/stage58_decision.md
+  packet_summary_path: docs/agent_control/packets/stage58_risk_atr_integration_v1/aggregate_summary.json
+  external_verification_status: completed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
