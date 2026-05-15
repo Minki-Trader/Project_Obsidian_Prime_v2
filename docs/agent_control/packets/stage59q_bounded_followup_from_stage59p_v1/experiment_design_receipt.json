@@ -1,0 +1,51 @@
+{
+  "changed_variables": [
+    "entry_transition_rearm_min_confidence_delta"
+  ],
+  "comparison_baseline": "Stage59P best candidate s59p_v62_sl20_tp30_sd12_h5.",
+  "control_variables": [
+    "US100",
+    "M5",
+    "split_v1",
+    "Tier B disabled",
+    "close_only_on_opposite",
+    "same-direction cooldown 12",
+    "confidence thresholds 0.52/0.52",
+    "ATR SL 2.0",
+    "ATR TP 3.0",
+    "3% model-controlled risk cap",
+    "ONNX deferred"
+  ],
+  "decision_use": "Route to Stage60 only if the full post-ATR/risk adapter evidence is strong; otherwise continue bounded repair, demote, or open another branch.",
+  "evidence_plan": [
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/bounded_followup_summary.csv",
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/bounded_followup_segment_kpi_summary.csv",
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/bounded_followup_equity_curve_audit.md",
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/bounded_followup_risk_atr_telemetry.csv",
+    "stages/59Q_adapter_repair__bounded_followup_from_stage59p/03_reviews/stage59q_decision.md"
+  ],
+  "failure_criteria": [
+    "negative validation/OOS net",
+    "PF < 1.10",
+    "cost-stressed expectancy <= 0",
+    "missing risk or ATR telemetry",
+    "segment flags remain"
+  ],
+  "hypothesis": "A bounded entry-transition confidence rearm follow-up on the Stage59P h5 candidate may recover OOS density and early/mid segment weakness while preserving validation/OOS PF, cost stress, drawdown, same-move concentration, and ATR/risk telemetry.",
+  "invalid_conditions": [
+    "missing model table",
+    "missing feature files",
+    "missing MT5 report",
+    "telemetry parse failure"
+  ],
+  "sample_scope": "FPMarkets US100 M5 validation 2025-01-01 to 2025-09-30 and OOS 2025-10-01 to 2026-04-13.",
+  "status": "completed",
+  "stop_conditions": "three bounded Stage59Q confidence-rearm variants only",
+  "success_criteria": [
+    "validation and OOS net positive",
+    "validation and OOS PF >= 1.10",
+    "validation and OOS cost-stressed expectancy positive",
+    "ATR and model risk telemetry present",
+    "no severe segment flags"
+  ]
+}
