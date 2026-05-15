@@ -488,3 +488,8 @@
 - run(실행): `run59C_stage59h_bounded_followup_from_stage59g_v1`
 - decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage59G(59G단계)의 threshold/cooldown clues(문턱값/쿨다운 단서)를 세 개의 bounded follow-up variants(경계 후속 변형)로 측정하고 다음 경계 조건을 남겼다.
+## 2026-05-15 - Stage59I demotion or branch decision closeout(59I단계 강등 또는 분기 판정 종료)
+
+- run(실행): `run59D_stage59i_bounded_followup_from_stage59h_v1`
+- decision(판정): `open_new_model_branch`
+- effect(효과): Stage59F-H(59F-H단계)의 v54 repair line(v54 수리 계열)을 final(최종)로 보지 않고 Stage59J(59J단계) 새 bounded model branch(경계 모델 분기)로 넘겼다.

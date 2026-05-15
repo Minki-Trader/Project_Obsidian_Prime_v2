@@ -1,0 +1,45 @@
+{
+  "consumers": [
+    "stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/demotion_or_branch_from_stage59h_report.md",
+    "stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/demotion_or_branch_summary.json",
+    "stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/stage59i_decision.md"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2756,
+      "sha256": "38a2d97a77fa856a6b346baf9a350bcce898f76b9e6c6b9fa5196f6529f44342",
+      "upserted_rows": 6
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9419,
+      "sha256": "e2338b6a422de336c2478224edb841e7858ddfb41d6c7da15b563bc53094a479",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 847,
+      "sha256": "1e750cd5da3e845181079d01752abe334f587c9e697931915854b22e424c02e2",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "ed5efd2a52b702d7bcfe63001f3659227760581b525ef2c4a4ac05563cb02b93",
+      "upserted_rows": 1
+    }
+  },
+  "source_inputs": [
+    "stages/59G_adapter_repair__bounded_followup_from_stage59f/03_reviews/bounded_followup_summary.csv",
+    "stages/59G_adapter_repair__bounded_followup_from_stage59f/03_reviews/stage59g_decision.md",
+    "stages/59H_adapter_repair__bounded_followup_from_stage59g/03_reviews/bounded_followup_summary.csv",
+    "stages/59H_adapter_repair__bounded_followup_from_stage59g/03_reviews/stage59h_decision.md",
+    "stages/59H_adapter_repair__bounded_followup_from_stage59g/03_reviews/bounded_followup_segment_kpi_summary.csv",
+    "stages/59H_adapter_repair__bounded_followup_from_stage59g/03_reviews/bounded_followup_risk_atr_telemetry.csv"
+  ]
+}

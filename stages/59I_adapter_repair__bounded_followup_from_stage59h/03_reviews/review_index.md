@@ -1,3 +1,7 @@
 ﻿# Stage59I Review Index(59I단계 검토 색인)
 
-Stage59I(59I단계)는 planned(계획) 상태다. Effect(효과): Stage59H(59H단계) 약점을 다음 bounded repair(경계 수리) 근거로 넘긴다.
+- demotion_or_branch_report(강등 또는 분기 보고서): `stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/demotion_or_branch_from_stage59h_report.md`
+- demotion_or_branch_summary(강등 또는 분기 요약): `stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/demotion_or_branch_summary.csv`
+- demotion_or_branch_summary_json(강등 또는 분기 JSON 요약): `stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/demotion_or_branch_summary.json`
+- stage59i_decision(59I단계 판정): `stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/stage59i_decision.md`
+- stage_run_ledger(단계 실행 장부): `stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/stage_run_ledger.csv`

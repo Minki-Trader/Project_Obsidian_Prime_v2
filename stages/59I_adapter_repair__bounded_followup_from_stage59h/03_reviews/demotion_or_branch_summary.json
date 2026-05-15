@@ -1,0 +1,202 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "created_at_utc": "2026-05-15T13:35:52Z",
+  "decision": "open_new_model_branch",
+  "external_verification_status": "not_applicable",
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 2756,
+      "sha256": "38a2d97a77fa856a6b346baf9a350bcce898f76b9e6c6b9fa5196f6529f44342",
+      "upserted_rows": 6
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9419,
+      "sha256": "e2338b6a422de336c2478224edb841e7858ddfb41d6c7da15b563bc53094a479",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 847,
+      "sha256": "1e750cd5da3e845181079d01752abe334f587c9e697931915854b22e424c02e2",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59I_adapter_repair__bounded_followup_from_stage59h/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "ed5efd2a52b702d7bcfe63001f3659227760581b525ef2c4a4ac05563cb02b93",
+      "upserted_rows": 1
+    }
+  },
+  "next_stage_or_branch": "59J_adapter_repair__new_model_branch_from_stage59i",
+  "overall_goal_complete": false,
+  "packet_id": "stage59i_bounded_followup_from_stage59h_v1",
+  "parent_run_id": "run59C_stage59h_bounded_followup_from_stage59g_v1",
+  "run_id": "run59D_stage59i_bounded_followup_from_stage59h_v1",
+  "source_adapter": "s59h_v54_th60_sd10",
+  "source_external_verification_status": "completed",
+  "stage_id": "59I_adapter_repair__bounded_followup_from_stage59h",
+  "summary_rows": [
+    {
+      "adapter_id": "s59g_v54_sd10",
+      "cost_stressed_expectancy": "-0.3831505102",
+      "max_drawdown_amount": "246.2800000000",
+      "net_profit": "-65.1900000000",
+      "profit_factor": "0.9600000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.2028061224",
+      "source_stage": "59G_adapter_repair__bounded_followup_from_stage59f",
+      "split": "validation_is",
+      "status": "completed",
+      "trade_count": "784"
+    },
+    {
+      "adapter_id": "s59g_v54_sd10",
+      "cost_stressed_expectancy": "0.3691467577",
+      "max_drawdown_amount": "133.8200000000",
+      "net_profit": "392.1200000000",
+      "profit_factor": "1.1800000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.1894197952",
+      "source_stage": "59G_adapter_repair__bounded_followup_from_stage59f",
+      "split": "oos",
+      "status": "completed",
+      "trade_count": "586"
+    },
+    {
+      "adapter_id": "s59g_v54_th60_sd8",
+      "cost_stressed_expectancy": "-0.3325000000",
+      "max_drawdown_amount": "220.5400000000",
+      "net_profit": "-27.8200000000",
+      "profit_factor": "0.9900000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.4427570093",
+      "source_stage": "59G_adapter_repair__bounded_followup_from_stage59f",
+      "split": "validation_is",
+      "status": "completed",
+      "trade_count": "856"
+    },
+    {
+      "adapter_id": "s59g_v54_th60_sd8",
+      "cost_stressed_expectancy": "0.1031921331",
+      "max_drawdown_amount": "242.4400000000",
+      "net_profit": "266.5100000000",
+      "profit_factor": "1.1200000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.4780635401",
+      "source_stage": "59G_adapter_repair__bounded_followup_from_stage59f",
+      "split": "oos",
+      "status": "completed",
+      "trade_count": "661"
+    },
+    {
+      "adapter_id": "s59g_v54_trn02_sd8",
+      "cost_stressed_expectancy": "-0.3782573099",
+      "max_drawdown_amount": "237.3100000000",
+      "net_profit": "-66.9100000000",
+      "profit_factor": "0.9700000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.4432748538",
+      "source_stage": "59G_adapter_repair__bounded_followup_from_stage59f",
+      "split": "validation_is",
+      "status": "completed",
+      "trade_count": "855"
+    },
+    {
+      "adapter_id": "s59g_v54_trn02_sd8",
+      "cost_stressed_expectancy": "0.0130441400",
+      "max_drawdown_amount": "224.6100000000",
+      "net_profit": "205.6700000000",
+      "profit_factor": "1.0900000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.4764079148",
+      "source_stage": "59G_adapter_repair__bounded_followup_from_stage59f",
+      "split": "oos",
+      "status": "completed",
+      "trade_count": "657"
+    },
+    {
+      "adapter_id": "s59h_v54_th60_sd10",
+      "cost_stressed_expectancy": "-0.3831505102",
+      "max_drawdown_amount": "246.2800000000",
+      "net_profit": "-65.1900000000",
+      "profit_factor": "0.9600000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.2028061224",
+      "source_stage": "59H_adapter_repair__bounded_followup_from_stage59g",
+      "split": "validation_is",
+      "status": "completed",
+      "trade_count": "784"
+    },
+    {
+      "adapter_id": "s59h_v54_th60_sd10",
+      "cost_stressed_expectancy": "0.3691467577",
+      "max_drawdown_amount": "133.8200000000",
+      "net_profit": "392.1200000000",
+      "profit_factor": "1.1800000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.1894197952",
+      "source_stage": "59H_adapter_repair__bounded_followup_from_stage59g",
+      "split": "oos",
+      "status": "completed",
+      "trade_count": "586"
+    },
+    {
+      "adapter_id": "s59h_v54_th62_sd10",
+      "cost_stressed_expectancy": "-0.3831505102",
+      "max_drawdown_amount": "246.2800000000",
+      "net_profit": "-65.1900000000",
+      "profit_factor": "0.9600000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.2028061224",
+      "source_stage": "59H_adapter_repair__bounded_followup_from_stage59g",
+      "split": "validation_is",
+      "status": "completed",
+      "trade_count": "784"
+    },
+    {
+      "adapter_id": "s59h_v54_th62_sd10",
+      "cost_stressed_expectancy": "0.3691467577",
+      "max_drawdown_amount": "133.8200000000",
+      "net_profit": "392.1200000000",
+      "profit_factor": "1.1800000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.1894197952",
+      "source_stage": "59H_adapter_repair__bounded_followup_from_stage59g",
+      "split": "oos",
+      "status": "completed",
+      "trade_count": "586"
+    },
+    {
+      "adapter_id": "s59h_v54_th60_sd12",
+      "cost_stressed_expectancy": "-0.3436173001",
+      "max_drawdown_amount": "212.1300000000",
+      "net_profit": "-33.2800000000",
+      "profit_factor": "0.9800000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.1952817824",
+      "source_stage": "59H_adapter_repair__bounded_followup_from_stage59g",
+      "split": "validation_is",
+      "status": "completed",
+      "trade_count": "763"
+    },
+    {
+      "adapter_id": "s59h_v54_th60_sd12",
+      "cost_stressed_expectancy": "0.0216987741",
+      "max_drawdown_amount": "116.6900000000",
+      "net_profit": "183.6900000000",
+      "profit_factor": "1.1000000000",
+      "risk_floor_applied_count": "0",
+      "same_move_reentry_ratio": "0.1803852890",
+      "source_stage": "59H_adapter_repair__bounded_followup_from_stage59g",
+      "split": "oos",
+      "status": "completed",
+      "trade_count": "571"
+    }
+  ]
+}
