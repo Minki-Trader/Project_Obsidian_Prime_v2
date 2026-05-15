@@ -1,0 +1,29 @@
+split,metric,value,threshold,status,notes
+validation_is,top_single_trade_share,0.1756953452,0.25,passed_measurement_only,single largest winning trade share of total net
+validation_is,top5_trade_share,0.6275880507,0.4,risk_flag,top five winning trades share of total net
+validation_is,best_month_net_share,0.6580456071,0.5,risk_flag,largest month share of total net
+validation_is,largest_third_net_share,0.7309615518,0.65,risk_flag,largest chronological third share of total net
+validation_is,late_third_net_share,-0.004594377828,0.2,risk_flag,"late third should contribute positive continuation, not flatline"
+validation_is,negative_month_count,3,0,risk_flag,negative monthly buckets count
+validation_is,same_direction_reentry_ratio_local,0,0.35,passed_measurement_only,same-direction entries within five M5 bars
+validation_is,same_move_reentry_ratio_source,0.3262150221,0.35,passed_measurement_only,source Stage56 same-move ratio
+validation_is,cost_stressed_expectancy,0.2436892489,0.25,risk_flag,Stage56 source cost-stressed expectancy
+validation_is,mfe_capture_ratio,0.6117451654,0.6,passed_measurement_only,Stage56 source MFE capture ratio
+validation_is,balance_drawdown_maximal_amount,285.91,300,passed_measurement_only,MT5 reported balance drawdown amount
+validation_is,equity_drawdown_maximal_amount,362.47,350,risk_flag,MT5 reported equity drawdown amount
+oos,top_single_trade_share,0.08187954012,0.25,passed_measurement_only,single largest winning trade share of total net
+oos,top5_trade_share,0.3496730157,0.4,passed_measurement_only,top five winning trades share of total net
+oos,best_month_net_share,0.4963107018,0.5,passed_measurement_only,largest month share of total net
+oos,largest_third_net_share,0.7533890065,0.65,risk_flag,largest chronological third share of total net
+oos,late_third_net_share,0.7533890065,0.2,passed_measurement_only,"late third should contribute positive continuation, not flatline"
+oos,negative_month_count,1,0,risk_flag,negative monthly buckets count
+oos,same_direction_reentry_ratio_local,0,0.35,passed_measurement_only,same-direction entries within five M5 bars
+oos,same_move_reentry_ratio_source,0.349112426,0.35,passed_measurement_only,source Stage56 same-move ratio
+oos,cost_stressed_expectancy,0.5344970414,0.25,passed_measurement_only,Stage56 source cost-stressed expectancy
+oos,mfe_capture_ratio,0.6167315875,0.6,passed_measurement_only,Stage56 source MFE capture ratio
+oos,balance_drawdown_maximal_amount,232.42,300,passed_measurement_only,MT5 reported balance drawdown amount
+oos,equity_drawdown_maximal_amount,319.23,350,passed_measurement_only,MT5 reported equity drawdown amount
+validation_is,tier_b_contribution,disabled,required_record,recorded_disabled_not_omitted,Tier B fallback-only remained disabled due prior fallback damage evidence.
+oos,tier_b_contribution,disabled,required_record,recorded_disabled_not_omitted,Tier B fallback-only remained disabled due prior fallback damage evidence.
+all,mandatory_atr_sltp,missing,must_exist_before_final,mandatory_capability_missing_not_final,Stage57 is audit only; ATR SL/TP is not developed in this stage.
+all,mandatory_model_controlled_risk_pct,missing,must_exist_before_final,mandatory_capability_missing_not_final,Stage57 is audit only; model-controlled risk percent is not developed in this stage.

@@ -1,8 +1,8 @@
-﻿current_run_id: run50CA_stage56_baseline_adapter_onnx_runtime_reproduction_v1
+﻿current_run_id: run52A_stage58_adapter_repair_before_risk_atr_v1
 updated_on: '2026-05-15'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection
+active_stage: 58_adapter_risk__bounded_repair_before_atr_risk_integration
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -15,6 +15,10 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage57(57단계) `57_adapter_quality__equity_segment_kpi_audit_gate` closed(종료) as bounded equity/segment KPI audit(경계 자금/구간 KPI 감사); decision(판정)=`proceed_to_stage58_adapter_repair_before_risk_atr`. Effect(효과): Stage56(56단계)은 더 이상 BaselineAdapter(기준선 어댑터) future work(향후 작업)를 흡수하지 않고 Stage58(58단계) `58_adapter_risk__bounded_repair_before_atr_risk_integration`로 handoff(인계)한다.
+- >-
+  Stage58(58단계) `58_adapter_risk__bounded_repair_before_atr_risk_integration` opened(개방) as repair-before-risk/ATR(위험/ATR 전 수리) bounded stage(경계 단계). Effect(효과): ATR SL/TP(ATR 손절/익절)와 model-controlled risk%(모델 제어 위험률)는 mandatory(필수)이지만 completion(완료) 조건으로 충분하지 않다.
 - >-
   Stage56(56단계) `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection`: run50CA(실행 run50CA) BaselineAdapter ONNX runtime reproduction(기준선 어댑터 ONNX 런타임 재현)을 실행했다. adapter(어댑터)는 `ba14_no_atr_sd5_lot025`, runtime_gate_passed(런타임 게이트 통과)는 `True`이다. Effect(효과): Python/ONNX/MT5(Python/ONNX/MT5) 재현 차이를 실제 tester account path(테스터 계좌 경로)에서 확인한다.
 - >-
@@ -3866,3 +3870,26 @@ stage56_baseline_adapter_onnx_runtime_reproduction:
   selected_research_baseline: none
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion
   next_action: commit_push_progress_then_close_goal_only_if_hard_completion_evidence_is_reported
+
+
+stage57_equity_segment_kpi_audit_gate:
+  packet_id: stage57_equity_segment_kpi_audit_gate_v1
+  stage_id: 57_adapter_quality__equity_segment_kpi_audit_gate
+  status: closed_bounded_audit_gate
+  current_run_id: run51A_stage57_equity_segment_kpi_audit_v1
+  source_run_id: run50CA_stage56_baseline_adapter_onnx_runtime_reproduction_v1
+  adapter_id: ba14_no_atr_sd5_lot025
+  decision: proceed_to_stage58_adapter_repair_before_risk_atr
+  next_stage: 58_adapter_risk__bounded_repair_before_atr_risk_integration
+  report_path: stages/57_adapter_quality__equity_segment_kpi_audit_gate/03_reviews/stage57_decision.md
+  packet_summary_path: docs/agent_control/packets/stage57_equity_segment_kpi_audit_gate_v1/aggregate_summary.json
+  external_verification_status: completed_existing_mt5_onnx_runtime_reports
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage58_bounded_repair_before_atr_risk:
+  stage_id: 58_adapter_risk__bounded_repair_before_atr_risk_integration
+  status: active_planned_from_stage57
+  planned_run_id: run52A_stage58_adapter_repair_before_risk_atr_v1
+  source_decision: proceed_to_stage58_adapter_repair_before_risk_atr
+  next_action: bounded adapter repair before mandatory ATR SL/TP and model-controlled risk percent integration
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

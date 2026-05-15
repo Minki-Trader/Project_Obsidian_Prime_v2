@@ -431,3 +431,11 @@
 ## 2026-05-15 Stage56 run50CA BaselineAdapter ONNX Runtime Reproduction(기준선 어댑터 ONNX 런타임 재현)
 - completed(완료): actual MT5 ONNX runtime validation/OOS(실제 MT5 ONNX 런타임 검증/표본외)를 실행하고 summary/ledger/current truth(요약/장부/현재 진실)를 갱신했다.
 - effect(효과): adapter hardening(어댑터 경화)이 ONNX parity(ONNX 동등성)에서 MT5 runtime reproduction(MT5 런타임 재현)으로 이어졌는지 확인했다.
+## 2026-05-15 Stage57 Equity Segment KPI Audit(57단계 자금/구간 KPI 감사)
+- completed(완료): `run51A_stage57_equity_segment_kpi_audit_v1` bounded audit gate(경계 감사 관문)를 existing run50CA MT5 ONNX runtime evidence(기존 run50CA MT5 ONNX 런타임 근거)로 닫았다.
+- decision(판정): `proceed_to_stage58_adapter_repair_before_risk_atr`.
+- effect(효과): Stage56(56단계)이 더 이상 BaselineAdapter(기준선 어댑터) future work(향후 작업)를 흡수하지 않고 Stage58(58단계) `58_adapter_risk__bounded_repair_before_atr_risk_integration`로 handoff(인계)한다.
+
+## 2026-05-15 Stage58 Opened(58단계 개방)
+- opened(개방): `58_adapter_risk__bounded_repair_before_atr_risk_integration` with planned run(계획 실행) `run52A_stage58_adapter_repair_before_risk_atr_v1`.
+- effect(효과): adapter repair need(어댑터 수리 필요)를 먼저 다루고, ATR SL/TP(ATR 손절/익절)와 model-controlled risk%(모델 제어 위험률)를 full adapter(전체 어댑터) 기준으로 통합/측정한다.

@@ -1,0 +1,8 @@
+﻿# Stage57 Input References(57단계 입력 참조)
+
+- source_summary(원천 요약): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_summary.csv`
+- source_risk_telemetry(원천 위험 텔레메트리): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50CA_baseline_adapter_onnx_runtime_reproduction_risk_telemetry.csv`
+- validation_report(검증 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/mt5/reports/Project_Obsidian_Prime_v2_run50CA_stage56_baseline_adapter_onnx_runtime_reproduction_v1_ba14_no_atr_sd5_lot025_onnx_rt_val.htm`
+- oos_report(표본외 보고서): `stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50CA/mt5/reports/Project_Obsidian_Prime_v2_run50CA_stage56_baseline_adapter_onnx_runtime_reproduction_v1_ba14_no_atr_sd5_lot025_onnx_rt_oos.htm`
+
+No new optimization(새 최적화 없음). Effect(효과): Stage57(57단계)는 run50CA(실행 run50CA)의 existing MT5 ONNX runtime evidence(기존 MT5 ONNX 런타임 근거)만 감사한다.
