@@ -1,0 +1,35 @@
+{
+  "best_balanced_failure_memory": "s59d_v64_closeonlyopp_thr57_mr03_wideatr_sd5",
+  "current_adapter_disposition": "demoted_adapter",
+  "decision": "open_new_model_branch",
+  "effect": "The current adapter is demoted and a new bounded model branch is opened.",
+  "external_verification_status": "completed_existing_stage59d_mt5_evidence_integrated",
+  "forbidden_claims": {
+    "deployment": false,
+    "live_readiness": false,
+    "operating_promotion": false,
+    "operating_reference": false,
+    "overall_goal_complete": false,
+    "production_baseline": false,
+    "runtime_authority": false
+  },
+  "judgment_boundary": "research_development_only",
+  "next_packet_id": "stage59f_new_model_branch_from_failure_memory_v1",
+  "next_run_id": "run59A_stage59f_new_model_branch_from_failure_memory_v1",
+  "next_stage_or_branch": "59F_adapter_repair__new_model_branch_from_failure_memory",
+  "oos_spike_risk_failure_memory": "s59d_v64_hold3_thr57_mr03_wideatr_sd5",
+  "overall_goal_complete": false,
+  "packet_id": "stage59e_demotion_or_new_branch_v1",
+  "reason": [
+    "Stage59D lifecycle variants did not produce a validation-strong full adapter.",
+    "ATR SL/TP and model-controlled risk% are present in evidence, but validation cost-stressed behavior remains weak.",
+    "Stage60 ONNX hardening is blocked until a post-risk/ATR adapter is genuinely strong."
+  ],
+  "route_action": "demote_current_adapter_and_open_stage59f_new_model_branch",
+  "run_id": "run58A_stage59e_demotion_or_new_branch_v1",
+  "source_adapter": "ba14_no_atr_sd5_lot025",
+  "source_stage59d_pushed_commit": "d508f35bc5910eb9ff594bc49b2b25432fd6df58",
+  "source_stage_id": "59D_adapter_repair__source_lifecycle_or_demote",
+  "stage60_onnx_allowed": false,
+  "stage_id": "59E_adapter_repair__demotion_or_new_branch"
+}

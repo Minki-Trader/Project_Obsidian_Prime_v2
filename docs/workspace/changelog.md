@@ -468,3 +468,8 @@
 - run(실행): `run57A_stage59d_source_lifecycle_or_demote_v1`
 - decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage59C(59C단계) 이후 남은 validation weakness(검증 약점)를 v64 lifecycle controls(v64 생명주기 제어)로 측정하고 다음 단계/분기 조건을 남겼다.
+## 2026-05-15 - Stage59E demotion or new branch closeout(59E단계 강등 또는 새 분기 종료)
+
+- run(실행): `run58A_stage59e_demotion_or_new_branch_v1`
+- decision(판정): `open_new_model_branch`
+- effect(효과): Stage59D(59D단계)의 validation weakness(검증 약점)를 숨기지 않고 current adapter(현재 어댑터)를 demoted_adapter(강등 어댑터)로 기록한 뒤 Stage59F(59F단계) new model branch(새 모델 분기)를 연다.
