@@ -1,7 +1,8 @@
-﻿# 59AH Input References(59AH단계 입력 참조)
+﻿# Stage59AH Input References(59AH단계 입력 참조)
 
-- stage59ag_decision(59AG단계 판정): `stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/stage59ag_decision.md`
-- stage59ag_report(59AG단계 보고서): `stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/bounded_followup_from_stage59af_report.md`
-- stage59ag_summary(59AG단계 요약): `stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/bounded_followup_summary.csv`
-- stage59ag_segment_kpi(59AG단계 구간 KPI): `stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/bounded_followup_segment_kpi_summary.csv`
-- stage59ag_risk_atr_telemetry(59AG단계 위험/ATR 기록): `stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/bounded_followup_risk_atr_telemetry.csv`
+- 59AB decision(판정): `stages/59AB_adapter_repair__bounded_followup_from_stage59aa/03_reviews/stage59ab_decision.md`
+- 59AC decision(판정): `stages/59AC_adapter_repair__bounded_followup_from_stage59ab/03_reviews/stage59ac_decision.md`
+- 59AD decision(판정): `stages/59AD_adapter_repair__bounded_followup_from_stage59ac/03_reviews/stage59ad_decision.md`
+- 59AE decision(판정): `stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/stage59ae_decision.md`
+- 59AF decision(판정): `stages/59AF_adapter_repair__bounded_followup_from_stage59ae/03_reviews/stage59af_decision.md`
+- 59AG decision(판정): `stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/stage59ag_decision.md`

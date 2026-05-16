@@ -1,0 +1,54 @@
+{
+  "consumers": [
+    "stages/59AH_adapter_repair__bounded_followup_from_stage59ag/03_reviews/adapter_demotion_review.md",
+    "stages/59AH_adapter_repair__bounded_followup_from_stage59ag/03_reviews/demotion_evidence_summary.csv",
+    "stages/59AH_adapter_repair__bounded_followup_from_stage59ag/03_reviews/stage59ah_decision.md"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3300,
+      "sha256": "b88d55eeefee45b598eff3eb36d89349bf17bd70a4d3e5e4f67e941b15ae31c1",
+      "upserted_rows": 9
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9720,
+      "sha256": "5f2c52fa3ba9712d28a34f8a131e4ae5553a553d358f936b632f4fd50bcca1bc",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 872,
+      "sha256": "5f3820f3f5f9af760196b587bb58ca9d2626017d42274a18a8cbe81cd7a89f1c",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59AH_adapter_repair__bounded_followup_from_stage59ag/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "02df751301d5edbe538399891f1e7d4799a36cb71cf48d541a42d7de3c565ee7",
+      "upserted_rows": 1
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage59ah/demotion_review_from_stage59ag.py",
+  "source_inputs": [
+    "stages/59AB_adapter_repair__bounded_followup_from_stage59aa/03_reviews/stage59ab_decision.md",
+    "stages/59AC_adapter_repair__bounded_followup_from_stage59ab/03_reviews/stage59ac_decision.md",
+    "stages/59AD_adapter_repair__bounded_followup_from_stage59ac/03_reviews/stage59ad_decision.md",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/stage59ae_decision.md",
+    "stages/59AF_adapter_repair__bounded_followup_from_stage59ae/03_reviews/stage59af_decision.md",
+    "stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/stage59ag_decision.md",
+    "stages/59AB_adapter_repair__bounded_followup_from_stage59aa/03_reviews/bounded_followup_summary.json",
+    "stages/59AC_adapter_repair__bounded_followup_from_stage59ab/03_reviews/bounded_followup_summary.json",
+    "stages/59AD_adapter_repair__bounded_followup_from_stage59ac/03_reviews/bounded_followup_summary.json",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_summary.json",
+    "stages/59AF_adapter_repair__bounded_followup_from_stage59ae/03_reviews/bounded_followup_summary.json",
+    "stages/59AG_adapter_repair__bounded_followup_from_stage59af/03_reviews/bounded_followup_summary.json"
+  ],
+  "status": "completed"
+}
