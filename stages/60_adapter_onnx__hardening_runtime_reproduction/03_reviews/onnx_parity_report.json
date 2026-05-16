@@ -1,0 +1,53 @@
+{
+  "adapter_id": "s59ar_v41_sd8_h3",
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision_parity": {
+    "actual_counts": {
+      "flat": 16612,
+      "long": 299,
+      "short": 517
+    },
+    "expected_counts": {
+      "flat": 16612,
+      "long": 299,
+      "short": 517
+    },
+    "mismatch_count": 0,
+    "passed": true,
+    "rows": 17428
+  },
+  "probability_parity": {
+    "decision_parity": {
+      "actual_counts": {
+        "flat": 16612,
+        "long": 299,
+        "short": 517
+      },
+      "expected_counts": {
+        "flat": 16612,
+        "long": 299,
+        "short": 517
+      },
+      "mismatch_count": 0,
+      "passed": true,
+      "rows": 17428
+    },
+    "feature_order": [
+      "stage56_context_et_event_signal"
+    ],
+    "feature_order_hash": "73b3b0e772d554c4e3c708a367af08b29e45913bd4cead657cd5f07004ea9fcb",
+    "input_name": "float_input",
+    "max_abs_diff": 4.237248085736667e-08,
+    "mean_abs_diff": 1.4125058986107091e-08,
+    "onnx_model": "stages/60_adapter_onnx__hardening_runtime_reproduction/02_runs/run60A/s59ar_v41_sd8_h3/models/s59ar_v41_sd8_h3_entry_probability.onnx",
+    "onnx_row_sum_max_abs_error": 4.237517714500427e-08,
+    "output_names": [
+      "probabilities"
+    ],
+    "passed": true,
+    "rows": 17428,
+    "source_table": "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/02_runs/run59AM/s59ar_v41_sd8_h3/models/v41_v22_midcov_et40_agree_h2c0_no_b_stage56_context_timed_event_signal_discrete_score_table.csv",
+    "tolerance": 1e-06
+  },
+  "run_id": "run60A_stage60_onnx_hardening_v1"
+}

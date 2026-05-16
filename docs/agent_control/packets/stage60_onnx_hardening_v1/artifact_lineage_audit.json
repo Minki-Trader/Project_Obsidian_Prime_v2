@@ -1,0 +1,49 @@
+{
+  "consumers": [
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/onnx_export_report.json",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/onnx_parity_report.json",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_runtime_reproduction.md",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/stage60_decision.md"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3622,
+      "sha256": "c09ee9fb3ca2d1583f0dda83db2a38b6e29050fcc472046a4dd8c7108d06d2c9",
+      "upserted_rows": 29
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9843,
+      "sha256": "675ec61feaf89bb9a418908dbd01c73c798b0d594d04a915939c090b1acfa021",
+      "upserted_rows": 5
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 883,
+      "sha256": "380f709b5d6ffb7bd08aab065562f1f8e89884296a73cf945fe621a5e6030a42",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/stage_run_ledger.csv",
+      "rows": 5,
+      "sha256": "ea043e633fc522782d2ddac45caf7b0f93ec836d15557adac3089d6ad01b654d",
+      "upserted_rows": 5
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage60/onnx_hardening_runtime_reproduction.py",
+  "source_inputs": [
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/stage59ar_decision.md",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/bounded_followup_summary.csv",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/bounded_followup_risk_atr_telemetry.csv",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/02_runs/run59AM/s59ar_v41_sd8_h3/models/v41_v22_midcov_et40_agree_h2c0_no_b_stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/02_runs/run59AM/s59ar_v41_sd8_h3/features/s59ar_v41_sd8_h3_stage59d_adapter_a_val.csv",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/02_runs/run59AM/s59ar_v41_sd8_h3/features/s59ar_v41_sd8_h3_stage59d_adapter_a_oos.csv"
+  ],
+  "status": "completed"
+}
