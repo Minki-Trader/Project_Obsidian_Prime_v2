@@ -1,0 +1,55 @@
+{
+  "criteria": [
+    {
+      "criterion": "stage57_equity_segment_audit_exists",
+      "evidence": "stages/57_adapter_quality__equity_segment_kpi_audit_gate/03_reviews/stage57_decision.md",
+      "notes": "Stage57 preserved the original anchor as development reference and forced repair before risk/ATR.",
+      "status": true
+    },
+    {
+      "criterion": "stage58_mandatory_risk_atr_measured",
+      "evidence": "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/stage58_decision.md",
+      "notes": "Stage58 showed capability integration alone was not sufficient and routed to repair.",
+      "status": true
+    },
+    {
+      "criterion": "stage59ar_repaired_adapter_selected",
+      "evidence": "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/stage59ar_decision.md",
+      "notes": "Stage59AR selected s59ar_v41_sd8_h3 with positive validation/OOS KPI after ATR/risk.",
+      "status": true
+    },
+    {
+      "criterion": "segment_kpi_acceptable",
+      "evidence": "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_segment_kpi_summary.csv",
+      "notes": "Validation and OOS early/mid/late chronological thirds are positive with PF >= 1.10.",
+      "status": true
+    },
+    {
+      "criterion": "mandatory_model_risk_and_atr_brackets_present",
+      "evidence": "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_risk_atr_telemetry.csv",
+      "notes": "Model risk is capped below 5%, ATR SL/TP points are telemetered, and min-lot floor did not fire.",
+      "status": true
+    },
+    {
+      "criterion": "onnx_and_mt5_runtime_reproduction",
+      "evidence": "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/stage60_decision.md",
+      "notes": "Python/ONNX parity and MT5 ONNX validation/OOS reproduction passed within tolerance.",
+      "status": true
+    },
+    {
+      "criterion": "artifact_hashes_and_registry_connected",
+      "evidence": "docs/registers/artifact_registry.csv",
+      "notes": "Stage60 registered artifacts have no missing or mismatched local hash rows.",
+      "status": true
+    },
+    {
+      "criterion": "current_truth_and_no_operating_claims",
+      "evidence": "docs/context/current_working_state.md",
+      "notes": "Current truth and Stage60 decision keep deployment/live/runtime/operating/production claims forbidden.",
+      "status": true
+    }
+  ],
+  "decision": "research_package_ready",
+  "missing_source_paths": [],
+  "status": "completed"
+}

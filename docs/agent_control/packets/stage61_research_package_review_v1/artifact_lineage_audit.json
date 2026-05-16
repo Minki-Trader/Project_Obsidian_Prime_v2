@@ -1,0 +1,66 @@
+{
+  "artifact_hash_summary": "stages/61_research_package__baseline_adapter_review_only/03_reviews/artifact_hash_summary.csv",
+  "consumers": [
+    "stages/61_research_package__baseline_adapter_review_only/03_reviews/research_package_review.md",
+    "stages/61_research_package__baseline_adapter_review_only/03_reviews/stage61_decision.md",
+    "stages/61_research_package__baseline_adapter_review_only/03_reviews/research_package_summary.json"
+  ],
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage61/research_package_review.py",
+  "registry_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3633,
+      "sha256": "9abeb82201d6f87a00d9bf1f3e7a2f30c182f100982945139e300c59bc859043",
+      "upserted_rows": 11
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9844,
+      "sha256": "d291a9e19348eace0205c879d07ff94d1b04ecbe8fedd38b4e81487b6dcb6c5c",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 884,
+      "sha256": "8bbfa23e2317d46aaf548b60cbde271dc84fbdc4a504dc8d8b945a461f604d8a",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/61_research_package__baseline_adapter_review_only/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "97eba73c83c34f5bd5bc87709ab49fb6ad3683d40d59ce79c490fe38dba389ba",
+      "upserted_rows": 1
+    }
+  },
+  "source_inputs": [
+    "stages/57_adapter_quality__equity_segment_kpi_audit_gate/03_reviews/stage57_decision.md",
+    "stages/57_adapter_quality__equity_segment_kpi_audit_gate/03_reviews/equity_curve_audit.md",
+    "stages/57_adapter_quality__equity_segment_kpi_audit_gate/03_reviews/segment_kpi_summary.csv",
+    "stages/57_adapter_quality__equity_segment_kpi_audit_gate/03_reviews/monthly_kpi_summary.csv",
+    "stages/57_adapter_quality__equity_segment_kpi_audit_gate/03_reviews/concentration_risk_report.md",
+    "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/stage58_decision.md",
+    "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/risk_atr_integration_report.md",
+    "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/risk_telemetry_summary.csv",
+    "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/atr_bracket_telemetry_summary.csv",
+    "stages/58_adapter_risk__bounded_repair_before_atr_risk_integration/03_reviews/risk_floor_segment_impact.csv",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/stage59ar_decision.md",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/bounded_followup_summary.csv",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/bounded_followup_segment_kpi_summary.csv",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/bounded_followup_equity_curve_audit.md",
+    "stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/bounded_followup_risk_atr_telemetry.csv",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/stage60_decision.md",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/onnx_export_report.json",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/onnx_parity_report.json",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_runtime_reproduction.md",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_runtime_summary.json",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_runtime_summary.csv",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_segment_kpi_summary.csv",
+    "stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_risk_atr_telemetry.csv"
+  ],
+  "status": "completed"
+}
