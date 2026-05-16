@@ -646,3 +646,8 @@
 - run(실행): `run59AG_stage59al_bounded_followup_from_stage59ak_v1`
 - decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage59AK v48 source(Stage59AK v48 원천)를 ATR bracket repair(ATR 브래킷 수리)로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
+## 2026-05-16 - Stage59AM new model branch from Stage59AL closeout(59AM단계 Stage59AL 기반 새 모델 분기 종료)
+
+- run(실행): `run59AH_stage59am_new_model_branch_from_stage59al_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
+- effect(효과): run50BO same-direction cooldown source(run50BO 동일 방향 쿨다운 원천)를 ATR/risk(ATR/위험) 조건으로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
