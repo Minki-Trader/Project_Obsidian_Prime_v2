@@ -1,8 +1,8 @@
-﻿current_run_id: run59AG_stage59al_bounded_followup_from_stage59ak_v1
+﻿current_run_id: run59AH_stage59am_new_model_branch_from_stage59al_v1
 updated_on: '2026-05-16'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 59AL_adapter_repair__bounded_followup_from_stage59ak
+active_stage: 59AM_adapter_repair__new_model_branch_from_stage59al
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage59AK(59AK단계) `59AK_adapter_repair__bounded_followup_from_stage59aj` closed(종료) as threshold/cooldown repair(문턱값/쿨다운 수리); decision(판정)=`continue_repair_in_new_bounded_stage`. Effect(효과): best adapter(최선 어댑터) `s59ak_v48_thr58_sd2_h2_mr03_wideatr` evidence(근거)를 보존하고 전체 목표 완료로 올리지 않는다.
+  Stage59AL(59AL단계) `59AL_adapter_repair__bounded_followup_from_stage59ak` closed(종료) as ATR bracket repair(ATR 브래킷 수리); decision(판정)=`open_new_model_branch`. Effect(효과): best adapter(최선 어댑터) `s59al_v48_sl20_tp40_sd2_mr03` evidence(근거)를 보존하고 전체 목표 완료로 올리지 않는다.
 - >-
-  Next stage_or_branch(다음 단계/분기) `59AL_adapter_repair__bounded_followup_from_stage59ak` is active/planned(활성/계획). Effect(효과): Stage60 ONNX(60단계 ONNX)는 품질 근거가 강할 때만 열린다.
+  Next stage_or_branch(다음 단계/분기) `59AM_adapter_repair__new_model_branch_from_stage59al` is active/planned(활성/계획). Effect(효과): Stage60 ONNX(60단계 ONNX)는 품질 근거가 강할 때만 열린다.
 - Stage55(53?④퀎) `55_adapter_routing__tier_b_fallback_side_filter_router`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`rfp02_csp03_primary_csp05_fallback`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Stage54(53?④퀎) `54_adapter_signal__cost_aware_side_permission_filter`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`csp03_midlate_longs_strong_shorts`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Repair(수정) `repair_stage53_premature_self_completion_v1`: Stage53(53단계) `spf03_block_early_or_trend_buy`를 `adapter_candidate_observed_user_review_required` 후보 근거로 재분류했고, campaign(캠페인)은 `campaign_in_progress_user_review_required_candidate_observed`로 다시 열었다; Codex self-completion(코덱스 자체 완료)은 금지된다.
@@ -4572,5 +4572,21 @@ stage59ak_bounded_followup_from_stage59aj:
   next_stage_or_branch: 59AL_adapter_repair__bounded_followup_from_stage59ak
   report_path: stages/59AK_adapter_repair__bounded_followup_from_stage59aj/03_reviews/stage59ak_decision.md
   packet_summary_path: docs/agent_control/packets/stage59ak_bounded_followup_from_stage59aj_v1/aggregate_summary.json
+  external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+
+stage59al_bounded_followup_from_stage59ak:
+  packet_id: stage59al_bounded_followup_from_stage59ak_v1
+  stage_id: 59AL_adapter_repair__bounded_followup_from_stage59ak
+  status: closed_bounded_followup_from_stage59ak
+  current_run_id: run59AG_stage59al_bounded_followup_from_stage59ak_v1
+  best_repaired_adapter: s59al_v48_sl20_tp40_sd2_mr03
+  source_stage59ak_pushed_commit: 0d034fa525a71911ecb538a24af106a2c9bdf209
+  decision: open_new_model_branch
+  next_stage_or_branch: 59AM_adapter_repair__new_model_branch_from_stage59al
+  report_path: stages/59AL_adapter_repair__bounded_followup_from_stage59ak/03_reviews/stage59al_decision.md
+  packet_summary_path: docs/agent_control/packets/stage59al_bounded_followup_from_stage59ak_v1/aggregate_summary.json
   external_verification_status: completed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
