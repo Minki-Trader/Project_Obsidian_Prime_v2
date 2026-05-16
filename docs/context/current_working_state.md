@@ -18,5 +18,6 @@ Stage61(61단계) closed(종료) as research package review(연구 패키지 검
 - report(보고서): `stages/61_research_package__baseline_adapter_review_only/03_reviews/research_package_review.md`
 - stage61_decision(61단계 판정): `stages/61_research_package__baseline_adapter_review_only/03_reviews/stage61_decision.md`
 - artifact_hash_summary(산출물 해시 요약): `stages/61_research_package__baseline_adapter_review_only/03_reviews/artifact_hash_summary.csv`
+- stage61_closeout_pushed_commit(61단계 종료 푸시 커밋): `854c77a72af1436151d1410f73241e6a7c24482d`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선).
