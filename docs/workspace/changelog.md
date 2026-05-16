@@ -631,3 +631,8 @@
 - backup_anchor(예비 기준점): `v60_v47_et_stable_damage_firewall_h2c0_no_b`
 - next_stage_or_branch(다음 단계/분기): `59AJ_adapter_repair__new_model_branch_from_stage59ai`
 - effect(효과): v60 backup anchor(v60 예비 기준점)를 post ATR/risk evidence(ATR/위험 이후 근거)로 약한 경로로 보존하고, 새 모델 분기(new model branch, 새 모델 분기)를 다음 단계로 연다.
+## 2026-05-16 - Stage59AJ new model branch from Stage59AI closeout(59AJ단계 Stage59AI 기반 새 모델 분기 종료)
+
+- run(실행): `run59AE_stage59aj_new_model_branch_from_stage59ai_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
+- effect(효과): run50BO same-direction cooldown source(run50BO 동일 방향 쿨다운 원천)를 ATR/risk(ATR/위험) 조건으로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.

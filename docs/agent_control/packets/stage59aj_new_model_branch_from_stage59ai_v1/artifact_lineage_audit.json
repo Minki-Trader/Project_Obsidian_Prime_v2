@@ -1,0 +1,49 @@
+{
+  "consumers": [
+    "stages/59AJ_adapter_repair__new_model_branch_from_stage59ai/03_reviews/new_model_branch_from_stage59ai_report.md",
+    "stages/59AJ_adapter_repair__new_model_branch_from_stage59ai/03_reviews/stage59aj_decision.md",
+    "stages/59AJ_adapter_repair__new_model_branch_from_stage59ai/03_reviews/new_model_branch_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3337,
+      "sha256": "bef77c4dc9912d4ffbd29a9bef64a50bddfb6a9c7004228283e7a4f751571733",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9734,
+      "sha256": "c6e005bb3770aebc48e2d20fb4a55927ce8d9c080b0cbe6e8a8d568c457a20f6",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 874,
+      "sha256": "98c6f568b4e8cb111debabf21e10778b9c130b0febfe13a5f6a2ba8f93415859",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59AJ_adapter_repair__new_model_branch_from_stage59ai/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "34c9fccb88645002838e2651f6855d1c125bd25217e57668d6ebe1a45ba08787",
+      "upserted_rows": 13
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage59aj/new_model_branch_from_stage59ai.py",
+  "source_inputs": [
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/stage59ai_decision.md",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_probe_report.md",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_probe_summary.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BO_summary.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BO_audit.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BO_source_summary.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BO/models/stage56_context_timed_event_signal_discrete_score_table.csv"
+  ],
+  "status": "completed"
+}
