@@ -1,0 +1,26 @@
+{
+  "changed_variables": [
+    "source branch selected for next bounded stage"
+  ],
+  "comparison_baseline": "Stage56 raw v60 backup anchor and Stage59B post ATR/risk backup adapter evidence",
+  "control_variables": [
+    "US100 M5",
+    "validation/OOS scope",
+    "research/development claim boundary",
+    "no deployment claim"
+  ],
+  "decision_use": "Open Stage60 only if backup anchor quality is strong after ATR/risk; otherwise open a new model branch.",
+  "evidence_plan": [
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_probe_report.md",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_probe_summary.csv",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_segment_kpi_summary.csv",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_risk_atr_telemetry.csv",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/stage59ai_decision.md"
+  ],
+  "failure_criteria": "Validation PF below 1.10, non-positive cost-stressed expectancy, or flagged segment instability.",
+  "hypothesis": "The v60 backup anchor may still be usable as a bounded replacement path after v64 repair failure.",
+  "invalid_conditions": "Missing Stage56 or Stage59B source summaries, missing decision evidence, or artifact lineage mismatch.",
+  "sample_scope": "Existing Stage56 run50BQ MT5 evidence and Stage59B ATR/risk MT5 evidence",
+  "stop_conditions": "Stop at existing evidence decision; do not start open-ended backup repairs in Stage59AI.",
+  "success_criteria": "Validation/OOS PF and cost-stressed expectancy remain acceptable with no weak segment concentration."
+}

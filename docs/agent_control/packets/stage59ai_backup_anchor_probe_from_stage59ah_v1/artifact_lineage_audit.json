@@ -1,0 +1,49 @@
+{
+  "consumers": [
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_probe_report.md",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_probe_summary.csv",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_segment_kpi_summary.csv",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/backup_anchor_risk_atr_telemetry.csv",
+    "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/stage59ai_decision.md"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3314,
+      "sha256": "e3db63d0c384d966bda813c9442f7bcc4b781ed619b8d13ffe0665e0dddd1574",
+      "upserted_rows": 14
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9721,
+      "sha256": "29293fa2ac98e8561627c59664e6cae0ae8107ea4c6dfd235a9693c5a42ffa58",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 873,
+      "sha256": "431af4d89386edab8d7ef7d86ae82de1f92cd40a542d4b2c12b37f7dd4a7f301",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "61b3fa2234a22c696c8a79d965021c2f59f325a1d65528c4f1530ca6eb537801",
+      "upserted_rows": 1
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage59ai/backup_anchor_probe_from_stage59ah.py",
+  "source_inputs": [
+    "stages/59AH_adapter_repair__bounded_followup_from_stage59ag/03_reviews/stage59ah_decision.md",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BQ_summary.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/03_reviews/run50BQ_audit.csv",
+    "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/model_source_or_backup_branch_summary.csv",
+    "stages/59B_adapter_repair__model_source_or_backup_branch/03_reviews/model_source_or_backup_segment_kpi_summary.csv"
+  ],
+  "status": "completed"
+}

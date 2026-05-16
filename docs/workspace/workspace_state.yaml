@@ -1,8 +1,8 @@
-﻿current_run_id: run59AD_stage59ai_backup_anchor_probe_from_stage59ah_v1
+﻿current_run_id: run59AE_stage59aj_new_model_branch_from_stage59ai_v1
 updated_on: '2026-05-16'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 59AI_adapter_repair__backup_anchor_probe_from_stage59ah
+active_stage: 59AJ_adapter_repair__new_model_branch_from_stage59ai
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage59AH(59AH단계) `59AH_adapter_repair__bounded_followup_from_stage59ag` closed(종료) as demotion review(강등 검토); decision(판정)=`demote_current_adapter_and_select_backup`. Effect(효과): current v64 adapter(현재 v64 어댑터)는 demoted(강등)되며 final(최종) 또는 operating(운영) 주장은 없다.
+  Stage59AI(59AI단계) `59AI_adapter_repair__backup_anchor_probe_from_stage59ah` closed(종료) as backup anchor probe(예비 기준점 탐침); decision(판정)=`open_new_model_branch`. Effect(효과): v60 backup anchor(v60 예비 기준점)는 post ATR/risk quality(ATR/위험 이후 품질)가 약해 Stage60 ONNX(60단계 ONNX)로 가지 않는다.
 - >-
-  Next stage_or_branch(다음 단계/분기) `59AI_adapter_repair__backup_anchor_probe_from_stage59ah` is active/planned(활성/계획). Effect(효과): backup anchor(예비 기준점)를 다음 bounded step(경계 다음 단계)으로 넘긴다.
+  Next stage_or_branch(다음 단계/분기) `59AJ_adapter_repair__new_model_branch_from_stage59ai` is active/planned(활성/계획). Effect(효과): new model branch(새 모델 분기)를 다음 bounded step(경계 다음 단계)으로 연다.
 - Stage55(53?④퀎) `55_adapter_routing__tier_b_fallback_side_filter_router`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`rfp02_csp03_primary_csp05_fallback`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Stage54(53?④퀎) `54_adapter_signal__cost_aware_side_permission_filter`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`csp03_midlate_longs_strong_shorts`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Repair(수정) `repair_stage53_premature_self_completion_v1`: Stage53(53단계) `spf03_block_early_or_trend_buy`를 `adapter_candidate_observed_user_review_required` 후보 근거로 재분류했고, campaign(캠페인)은 `campaign_in_progress_user_review_required_candidate_observed`로 다시 열었다; Codex self-completion(코덱스 자체 완료)은 금지된다.
@@ -4525,5 +4525,21 @@ stage59ah_demotion_review_from_stage59ag:
   next_stage_or_branch: 59AI_adapter_repair__backup_anchor_probe_from_stage59ah
   report_path: stages/59AH_adapter_repair__bounded_followup_from_stage59ag/03_reviews/stage59ah_decision.md
   packet_summary_path: docs/agent_control/packets/stage59ah_bounded_followup_from_stage59ag_v1/aggregate_summary.json
+  external_verification_status: completed_existing_mt5_evidence
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+stage59ai_backup_anchor_probe_from_stage59ah:
+  packet_id: stage59ai_backup_anchor_probe_from_stage59ah_v1
+  stage_id: 59AI_adapter_repair__backup_anchor_probe_from_stage59ah
+  status: closed_backup_anchor_probe_review
+  current_run_id: run59AD_stage59ai_backup_anchor_probe_from_stage59ah_v1
+  backup_anchor: v60_v47_et_stable_damage_firewall_h2c0_no_b
+  post_atr_risk_adapter: s59b_v60_backup_thr55_mr03_wideatr_sd5
+  source_stage59ah_pushed_commit: 5c7faff752a162731f8f2362cbe70f1008db2fcb
+  decision: open_new_model_branch
+  next_stage_or_branch: 59AJ_adapter_repair__new_model_branch_from_stage59ai
+  report_path: stages/59AI_adapter_repair__backup_anchor_probe_from_stage59ah/03_reviews/stage59ai_decision.md
+  packet_summary_path: docs/agent_control/packets/stage59ai_backup_anchor_probe_from_stage59ah_v1/aggregate_summary.json
   external_verification_status: completed_existing_mt5_evidence
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
