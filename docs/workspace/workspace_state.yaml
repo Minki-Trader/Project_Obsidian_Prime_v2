@@ -1,8 +1,8 @@
-﻿current_run_id: run59AM_stage59ar_new_model_branch_from_stage59aq_v1
+﻿current_run_id: run60A_stage60_onnx_hardening_v1
 updated_on: '2026-05-16'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 59AR_adapter_repair__new_model_branch_from_stage59aq
+active_stage: 60_adapter_onnx__hardening_runtime_reproduction
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage59AQ(59AQ단계) `59AQ_adapter_repair__bounded_followup_from_stage59ap` closed(종료) as bounded hold-time follow-up(경계 보유 시간 후속); decision(판정)=`open_new_model_branch`. Effect(효과): best adapter(최선 어댑터) `s59aq_v46_sd8_h6` evidence(근거)를 보존하고 전체 목표 완료로 올리지 않는다.
+  Stage59AR(59AR단계) `59AR_adapter_repair__new_model_branch_from_stage59aq` closed(종료) as bounded run50BN v41 source branch(경계 run50BN v41 원천 분기); decision(판정)=`proceed_to_stage60_onnx_hardening`. Effect(효과): best adapter(최선 어댑터) `s59ar_v41_sd8_h3` evidence(근거)를 보존하고 전체 목표 완료로 올리지 않는다.
 - >-
-  Next stage_or_branch(다음 단계/분기) `59AR_adapter_repair__new_model_branch_from_stage59aq` is active/planned(활성/계획). Effect(효과): Stage60 ONNX(60단계 ONNX)는 품질 근거가 강할 때만 열린다.
+  Next stage_or_branch(다음 단계/분기) `60_adapter_onnx__hardening_runtime_reproduction` is active/planned(활성/계획). Effect(효과): Stage60 ONNX(60단계 ONNX)는 품질 근거가 강할 때만 열린다.
 - Stage55(53?④퀎) `55_adapter_routing__tier_b_fallback_side_filter_router`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`rfp02_csp03_primary_csp05_fallback`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Stage54(53?④퀎) `54_adapter_signal__cost_aware_side_permission_filter`: side-specific permission filter(諛⑺뼢蹂??덉슜 ?꾪꽣)瑜?`reviewed_completed_adapter_candidate_runtime_probe_only`濡?湲곕줉?덈떎; selected_adapter(?좏깮 ?대뙌??=`csp03_midlate_longs_strong_shorts`; baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, operating reference(?댁쁺 李몄“)??留뚮뱾吏 ?딆븯??
 - Repair(수정) `repair_stage53_premature_self_completion_v1`: Stage53(53단계) `spf03_block_early_or_trend_buy`를 `adapter_candidate_observed_user_review_required` 후보 근거로 재분류했고, campaign(캠페인)은 `campaign_in_progress_user_review_required_candidate_observed`로 다시 열었다; Codex self-completion(코덱스 자체 완료)은 금지된다.
@@ -4670,5 +4670,21 @@ stage59aq_bounded_followup_from_stage59ap:
   next_stage_or_branch: 59AR_adapter_repair__new_model_branch_from_stage59aq
   report_path: stages/59AQ_adapter_repair__bounded_followup_from_stage59ap/03_reviews/stage59aq_decision.md
   packet_summary_path: docs/agent_control/packets/stage59aq_bounded_followup_from_stage59ap_v1/aggregate_summary.json
+  external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+
+stage59ar_new_model_branch_from_stage59aq:
+  packet_id: stage59ar_new_model_branch_from_stage59aq_v1
+  stage_id: 59AR_adapter_repair__new_model_branch_from_stage59aq
+  status: closed_new_model_branch_from_stage59aq
+  current_run_id: run59AM_stage59ar_new_model_branch_from_stage59aq_v1
+  best_repaired_adapter: s59ar_v41_sd8_h3
+  source_stage59aq_pushed_commit: 381f0ac7aa2b68def5f1973f9825c5925e5afbc0
+  decision: proceed_to_stage60_onnx_hardening
+  next_stage_or_branch: 60_adapter_onnx__hardening_runtime_reproduction
+  report_path: stages/59AR_adapter_repair__new_model_branch_from_stage59aq/03_reviews/stage59ar_decision.md
+  packet_summary_path: docs/agent_control/packets/stage59ar_new_model_branch_from_stage59aq_v1/aggregate_summary.json
   external_verification_status: completed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
