@@ -1,0 +1,46 @@
+{
+  "changed_variables": [
+    "run50BN source anchor",
+    "context/ET40 composition",
+    "same-direction cooldown overlay"
+  ],
+  "comparison_baseline": "Stage59AM run50BO branch evidence, Stage59AJ v48/v52/v53 branch evidence, and prior Stage59Y v64 branch evidence",
+  "control_variables": [
+    "US100 M5",
+    "split_v1",
+    "Tier B disabled",
+    "wide ATR bracket",
+    "3% model risk cap",
+    "ONNX deferred"
+  ],
+  "decision_use": "Proceed to ONNX only if full adapter quality is strong; otherwise continue bounded repair or open another source branch.",
+  "evidence_plan": [
+    "stages/59AN_adapter_repair__new_model_branch_from_stage59am/03_reviews/new_model_branch_from_stage59am_report.md",
+    "stages/59AN_adapter_repair__new_model_branch_from_stage59am/03_reviews/new_model_branch_summary.csv",
+    "stages/59AN_adapter_repair__new_model_branch_from_stage59am/03_reviews/new_model_branch_segment_kpi_summary.csv",
+    "stages/59AN_adapter_repair__new_model_branch_from_stage59am/03_reviews/new_model_branch_risk_atr_telemetry.csv",
+    "stages/59AN_adapter_repair__new_model_branch_from_stage59am/03_reviews/stage59an_decision.md"
+  ],
+  "failure_criteria": [
+    "PF < 1.10",
+    "cost-stressed expectancy <= 0",
+    "missing risk or ATR telemetry",
+    "weak segment flags"
+  ],
+  "hypothesis": "A bounded run50BN context/ET40 agreement and slot-fill source branch may produce better post-ATR/risk BaselineAdapter behavior after the run50BO branch left validation cost weakness.",
+  "invalid_conditions": [
+    "missing MT5 reports",
+    "missing source feature files",
+    "runtime output mismatch"
+  ],
+  "sample_scope": "MT5 validation 2025-01-02..2025-10-01 and OOS 2025-10-01..2026-04-13",
+  "status": "completed",
+  "stop_conditions": "three bounded run50BN source variants only",
+  "success_criteria": [
+    "validation/OOS net positive",
+    "validation/OOS PF >= 1.10",
+    "cost-stressed expectancy positive",
+    "ATR/risk telemetry present",
+    "no severe segment flags"
+  ]
+}
