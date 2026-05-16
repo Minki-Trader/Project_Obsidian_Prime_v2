@@ -1,0 +1,48 @@
+{
+  "consumers": [
+    "stages/59AF_adapter_repair__bounded_followup_from_stage59ae/03_reviews/bounded_followup_from_stage59ae_report.md",
+    "stages/59AF_adapter_repair__bounded_followup_from_stage59ae/03_reviews/stage59af_decision.md",
+    "stages/59AF_adapter_repair__bounded_followup_from_stage59ae/03_reviews/bounded_followup_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 3268,
+      "sha256": "e6afa5ebd40914e991ff7dc6dbcdccbc7856d58e48484d5542ac01eace4f8d08",
+      "upserted_rows": 23
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 9706,
+      "sha256": "4ae394982edabb37f086df9a4c48f255e0a8f7cc2915ede317d0a2b65b8a0740",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 870,
+      "sha256": "7c69dd7db942f8d531a3b3fdf999aa23a7504f16221c2876e5d9f4bec7f71799",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/59AF_adapter_repair__bounded_followup_from_stage59ae/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "7c7c3b9806e44a8333876b84f6c8a9749d95c58700f96fe0d7fc4b0bb301b544",
+      "upserted_rows": 13
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage59af/bounded_followup_from_stage59ae.py",
+  "source_inputs": [
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/stage59ae_decision.md",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_from_stage59ad_report.md",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_summary.csv",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_summary.json",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/models/stage56_context_timed_event_signal_discrete_score_table.csv",
+    "stages/56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection/02_runs/run50BR/v64_v47_ctxgap14_refill_etfw_h2_no_b"
+  ],
+  "status": "completed"
+}
