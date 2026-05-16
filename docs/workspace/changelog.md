@@ -649,5 +649,5 @@
 ## 2026-05-16 - Stage59AM new model branch from Stage59AL closeout(59AM단계 Stage59AL 기반 새 모델 분기 종료)
 
 - run(실행): `run59AH_stage59am_new_model_branch_from_stage59al_v1`
-- decision(판정): `continue_repair_in_new_bounded_stage`
-- effect(효과): run50BO same-direction cooldown source(run50BO 동일 방향 쿨다운 원천)를 ATR/risk(ATR/위험) 조건으로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
+- decision(판정): `open_new_model_branch`
+- effect(효과): run50BO same-direction cooldown source(run50BO 동일 방향 쿨다운 원천)를 ATR/risk(ATR/위험) 조건으로 측정했지만 검증 약점이 남아 Stage59AN(59AN단계) 새 bounded model branch(경계 모델 분기)를 열었다.
