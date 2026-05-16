@@ -21,5 +21,6 @@ Stage60(60단계) closed(종료) as ONNX hardening/runtime reproduction(ONNX 경
 - next_stage_or_branch(다음 단계/분기): `61_research_package__baseline_adapter_review_only`
 - report(보고서): `stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/mt5_onnx_runtime_reproduction.md`
 - stage60_decision(60단계 판정): `stages/60_adapter_onnx__hardening_runtime_reproduction/03_reviews/stage60_decision.md`
+- stage60_closeout_pushed_commit(60단계 종료 푸시 커밋): `d56464bcb48b9fd503c1453249697588b252a8b7`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), overall_goal_complete(전체 목표 완료).
