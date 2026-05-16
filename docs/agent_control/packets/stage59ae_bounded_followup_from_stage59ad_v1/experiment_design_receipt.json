@@ -1,0 +1,56 @@
+{
+  "changed_variables": [
+    "close_on_flat_signal",
+    "narrow_max_hold_sensitivity"
+  ],
+  "comparison_baseline": "Stage59AD best adapter s59ad_v64_gap14_t60_h4_entrytrans_sd5 with validation PF 1.02, validation cost-stressed expectancy below zero, and strong but concentrated OOS behavior.",
+  "control_variables": [
+    "US100",
+    "M5",
+    "split_v1",
+    "run50BR v64 source",
+    "Tier B disabled",
+    "entry_transition_only",
+    "entry_transition_rearm_min_confidence_delta=0.002",
+    "short_threshold=0.60",
+    "long_threshold=0.60",
+    "same_direction_reentry_cooldown_bars=5",
+    "close_only_on_opposite",
+    "wide ATR bracket",
+    "3% model-controlled risk cap",
+    "ONNX deferred"
+  ],
+  "decision_use": "Route to Stage60 only if the full post-ATR/risk adapter evidence is strong; otherwise continue bounded repair, demote, or open another branch.",
+  "evidence_plan": [
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_summary.csv",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_segment_kpi_summary.csv",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_equity_curve_audit.md",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/bounded_followup_risk_atr_telemetry.csv",
+    "stages/59AE_adapter_repair__bounded_followup_from_stage59ad/03_reviews/stage59ae_decision.md"
+  ],
+  "failure_criteria": [
+    "negative validation/OOS net",
+    "PF < 1.10",
+    "cost-stressed expectancy <= 0",
+    "missing risk or ATR telemetry",
+    "segment flags remain",
+    "OOS density collapses"
+  ],
+  "hypothesis": "Bounded flat-signal exits on the Stage59AD best adapter may repair validation PF and cost-stressed expectancy weakness while preserving OOS net, PF, ATR/bracket telemetry, and model-risk telemetry.",
+  "invalid_conditions": [
+    "missing model table",
+    "missing feature files",
+    "missing MT5 report",
+    "telemetry parse failure"
+  ],
+  "sample_scope": "FPMarkets US100 M5 validation 2025-01-01 to 2025-09-30 and OOS 2025-10-01 to 2026-04-13.",
+  "status": "completed",
+  "stop_conditions": "three bounded Stage59AE flat-signal exit variants only",
+  "success_criteria": [
+    "validation and OOS net positive",
+    "validation and OOS PF >= 1.10",
+    "validation and OOS cost-stressed expectancy positive",
+    "ATR and model risk telemetry present",
+    "no severe segment flags"
+  ]
+}
