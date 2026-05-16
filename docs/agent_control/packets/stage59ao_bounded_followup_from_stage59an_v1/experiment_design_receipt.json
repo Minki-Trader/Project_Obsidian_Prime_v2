@@ -1,0 +1,46 @@
+{
+  "changed_variables": [
+    "threshold 0.57/0.60",
+    "same-direction cooldown 2/5",
+    "Stage59AN v46 density tightening"
+  ],
+  "comparison_baseline": "Stage59AN s59an_v46_sd2 evidence",
+  "control_variables": [
+    "US100 M5",
+    "split_v1",
+    "Tier B disabled",
+    "wide ATR bracket",
+    "3% model risk cap",
+    "ONNX deferred"
+  ],
+  "decision_use": "Proceed to ONNX only if full post-risk/ATR adapter quality is strong; otherwise continue bounded repair, demote, or open a new model branch.",
+  "evidence_plan": [
+    "stages/59AO_adapter_repair__bounded_followup_from_stage59an/03_reviews/bounded_followup_from_stage59an_report.md",
+    "stages/59AO_adapter_repair__bounded_followup_from_stage59an/03_reviews/bounded_followup_summary.csv",
+    "stages/59AO_adapter_repair__bounded_followup_from_stage59an/03_reviews/bounded_followup_segment_kpi_summary.csv",
+    "stages/59AO_adapter_repair__bounded_followup_from_stage59an/03_reviews/bounded_followup_risk_atr_telemetry.csv",
+    "stages/59AO_adapter_repair__bounded_followup_from_stage59an/03_reviews/stage59ao_decision.md"
+  ],
+  "failure_criteria": [
+    "PF < 1.10",
+    "cost-stressed expectancy <= 0",
+    "missing risk or ATR telemetry",
+    "weak segment flags"
+  ],
+  "hypothesis": "A bounded Stage59AN v46 threshold/density tightening pass may repair validation cost/PF weakness without damaging OOS, ATR SL/TP, model-controlled risk, or segment KPI.",
+  "invalid_conditions": [
+    "missing MT5 reports",
+    "missing source feature files",
+    "runtime output mismatch"
+  ],
+  "sample_scope": "MT5 validation 2025-01-02..2025-10-01 and OOS 2025-10-01..2026-04-13",
+  "status": "completed",
+  "stop_conditions": "three bounded Stage59AN v46 threshold/density variants only",
+  "success_criteria": [
+    "validation/OOS net positive",
+    "validation/OOS PF >= 1.10",
+    "cost-stressed expectancy positive",
+    "ATR/risk telemetry present",
+    "no severe segment flags"
+  ]
+}
