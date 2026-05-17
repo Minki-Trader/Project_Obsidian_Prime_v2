@@ -2,6 +2,8 @@
 
 decision(판정): `continue_entry_quality_dd_guard_in_stage78`
 
+pushed_commit_hash(푸시된 커밋 해시): `9e73e3c2b5e38ec3b3644458f8c36aaab53039b2`
+
 Stage77(77단계)는 Stage73(73단계) v41(브이41) risk5 TP3.5/TP4.0(위험 5%, 익절폭 3.5/4.0) 표면에서 short gate(숏 게이트)를 0.10/0.12 threshold(임계값)로 강화해 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
 
 Effect(효과): 이번 단계 결과는 operating claim(운영 주장)이 아니라, 다음 bounded research(경계 연구) 근거만 만든다.

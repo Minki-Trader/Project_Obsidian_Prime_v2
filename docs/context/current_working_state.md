@@ -15,6 +15,7 @@ Stage77(77단계) closed(종료) as v2-native v41 entry quality/DD guard batch(�
 
 - run(실행): `run77A_stage77_v41_entry_quality_dd_guard_v1`
 - decision(판정): `continue_entry_quality_dd_guard_in_stage78`
+- pushed_commit_hash(푸시된 커밋 해시): `9e73e3c2b5e38ec3b3644458f8c36aaab53039b2`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/77_adapter_research__v41_entry_quality_dd_guard/03_reviews/stage77_v41_entry_quality_dd_guard_report.md`
 - stage77_decision(77단계 판정): `stages/77_adapter_research__v41_entry_quality_dd_guard/03_reviews/stage77_decision.md`

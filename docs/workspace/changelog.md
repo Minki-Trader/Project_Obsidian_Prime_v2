@@ -818,5 +818,6 @@
 
 - run(실행): `run77A_stage77_v41_entry_quality_dd_guard_v1`
 - decision(판정): `continue_entry_quality_dd_guard_in_stage78`
+- pushed_commit_hash(푸시된 커밋 해시): `9e73e3c2b5e38ec3b3644458f8c36aaab53039b2`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 risk5 TP3.5/TP4.0(위험 5%, 익절폭 3.5/4.0) 표면에서 short gate(숏 게이트)를 0.10/0.12 임계값으로 강화해 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
