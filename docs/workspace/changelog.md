@@ -803,5 +803,6 @@
 
 - run(실행): `run75A_stage75_v41_dd_balance_repair_v1`
 - decision(판정): `continue_v41_dd_balance_repair_in_stage76`
+- pushed_commit_hash(푸시된 커밋 해시): `34f4c3069616acb7bb98ffbb317a4547ae21e1e3`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 0.08 short gate(숏 게이트)와 TP3.5(익절 폭 3.5)를 중심으로 risk cap(위험 상한)과 re-entry cooldown(재진입 냉각)을 좁게 바꿔 DD/net balance(손실률/순손익 균형)를 측정했다.

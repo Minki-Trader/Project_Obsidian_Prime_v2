@@ -15,6 +15,7 @@ Stage75(75단계) closed(종료) as v2-native v41 DD/net balance repair batch(v2
 
 - run(실행): `run75A_stage75_v41_dd_balance_repair_v1`
 - decision(판정): `continue_v41_dd_balance_repair_in_stage76`
+- pushed_commit_hash(푸시된 커밋 해시): `34f4c3069616acb7bb98ffbb317a4547ae21e1e3`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_v41_dd_balance_report.md`
 - stage75_decision(75단계 판정): `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_decision.md`

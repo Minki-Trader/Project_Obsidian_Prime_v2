@@ -8,6 +8,7 @@
 - adapter_under_review(검토 중 어댑터): `stage73_v41_tp_risk_followup_surface`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage75_decision(75단계 판정): `continue_v41_dd_balance_repair_in_stage76`
+- pushed_commit_hash(푸시된 커밋 해시): `34f4c3069616acb7bb98ffbb317a4547ae21e1e3`
 - next_stage_or_branch(다음 단계/분기): `76_adapter_research__v41_dd_balance_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
