@@ -15,7 +15,7 @@ Effect(효과): threshold/session gate(임계값/세션 제한문) 완화가 34D
 - gate_feature_summary(제한문 피처 요약): `stages/110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair/03_reviews/stage110_gate_feature_summary.csv`
 - source_stage109_closeout_commit(원천 109단계 종료 커밋): `1c4035bceb96830d1d0f69bd5e44402522c77d27`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `acbdc3236a7b26696eba3a6a9b87c808789e8a24`
 
 ## Next(다음)
 

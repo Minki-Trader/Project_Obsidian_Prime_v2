@@ -1060,6 +1060,6 @@
 
 - run(실행): `run110A_stage110_v41_trade_density_net_scale_after_dd_tradeoff_repair_v1`
 - decision(판정): `continue_trade_density_repair_review_in_stage111`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `acbdc3236a7b26696eba3a6a9b87c808789e8a24`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): threshold/session gate(임계값/세션 제한문) 완화가 거래 수와 순손익 규모를 여는지 실제 MT5 runtime(실행환경)으로 측정하고 Stage111(111단계) 후속 검토로 넘겼다.
