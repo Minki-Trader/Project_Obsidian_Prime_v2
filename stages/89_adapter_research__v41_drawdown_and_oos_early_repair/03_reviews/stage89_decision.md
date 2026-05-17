@@ -15,7 +15,7 @@ Effect(효과): 이번 단계 결과는 operating claim(운영 주장)이 아니
 - gate_feature_summary(게이트 피처 요약): `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_gate_feature_summary.csv`
 - tier_b_diagnostic(Tier B 진단): `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_tier_b_diagnostic_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `50f767c3ae9c18f36a53e4ec95588299e61f5dc0`
 
 ## Next(다음)
 

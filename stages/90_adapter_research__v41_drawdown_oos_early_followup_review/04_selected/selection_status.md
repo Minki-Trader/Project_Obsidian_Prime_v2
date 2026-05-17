@@ -5,6 +5,7 @@
 - current_run(현재 실행): `run90A_stage90_v41_drawdown_oos_early_followup_review_v1`
 - source_stage(원천 단계): `89_adapter_research__v41_drawdown_and_oos_early_repair`
 - source_decision(원천 판정): `continue_drawdown_oos_early_followup_review_in_stage90`
+- source_stage89_pushed_commit(원천 89단계 푸시 커밋): `50f767c3ae9c18f36a53e4ec95588299e61f5dc0`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

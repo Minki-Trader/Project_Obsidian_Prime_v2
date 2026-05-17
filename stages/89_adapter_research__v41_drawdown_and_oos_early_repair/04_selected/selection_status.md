@@ -12,7 +12,7 @@
 - adapter_under_review(검토 중 어댑터): `s87_v41_h3_risk475_gate08_sl215_tp38_cd10`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage89_decision(89단계 판정): `continue_drawdown_oos_early_followup_review_in_stage90`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `50f767c3ae9c18f36a53e4ec95588299e61f5dc0`
 - next_stage_or_branch(다음 단계/분기): `90_adapter_research__v41_drawdown_oos_early_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

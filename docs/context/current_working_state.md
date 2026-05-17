@@ -16,7 +16,7 @@ Stage89(89단계) closed(종료) as v2-native v41 drawdown/OOS early repair batc
 - run(실행): `run89A_stage89_v41_drawdown_oos_early_repair_v1`
 - decision(판정): `continue_drawdown_oos_early_followup_review_in_stage90`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `50f767c3ae9c18f36a53e4ec95588299e61f5dc0`
 - report(보고서): `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_v41_drawdown_oos_early_repair_report.md`
 - stage89_decision(89단계 판정): `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_risk_atr_telemetry.csv`
