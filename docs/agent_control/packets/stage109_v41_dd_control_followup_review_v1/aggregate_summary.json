@@ -1,0 +1,79 @@
+{
+  "comparison_path": "stages/109_adapter_research__v41_dd_control_followup_review/03_reviews/stage109_stage106_stage108_34d_comparison.csv",
+  "dd_best": {
+    "adapter_id": "s108_v41_h4_cd10_lng_early_adx19",
+    "dd_gap_to_34d_latest": "3.110864",
+    "dd_gap_to_stage106_dd_best": "-0.040000",
+    "early_mfe_capture_ratio": "0.064019",
+    "early_net_profit": "36.24",
+    "early_profit_factor": "1.127002",
+    "expectancy": "3.995556",
+    "max_drawdown_percent": "16.020000",
+    "net_gap_to_34d_latest": "-412.24",
+    "net_gap_to_stage106_net_pf_best": "-69.40",
+    "net_profit": "575.36",
+    "pf_gap_to_34d_latest": "-0.023746",
+    "profit_factor": "1.559411",
+    "run_id": "run109A_stage109_v41_dd_control_followup_review_v1",
+    "source_run_id": "run108A_stage108_v41_dd_control_after_net_early_recovery_repair_v1",
+    "source_stage": "stage108_candidate",
+    "split": "oos",
+    "stage109_read": "dd_slightly_better_but_net_and_early_pf_damaged",
+    "trade_count": "144",
+    "trade_count_gap_to_34d_latest": "-260"
+  },
+  "decision": "continue_trade_density_net_scale_after_dd_tradeoff_repair_in_stage110",
+  "ledger_payload": {
+    "project_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10210,
+      "sha256": "b1cf35ed955049a51b5bce5be2a7627d67441ac9f191df0190e6bd66a13eb8ff",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 932,
+      "sha256": "0cc52583f79082f5b4b3b1d4dfaa49b1d288ba76569ee12154333150e42f1684",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/109_adapter_research__v41_dd_control_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "f66b09636df14841f27d8c1455eaaa2988b4c787a03b5f96a1885c68ac0a1b3a",
+      "upserted_rows": 1
+    }
+  },
+  "net_pf_best": {
+    "adapter_id": "s106_v41_h3_cd9_lng_early_adx19",
+    "dd_gap_to_34d_latest": "5.780864",
+    "dd_gap_to_stage106_dd_best": "2.630000",
+    "early_mfe_capture_ratio": "0.072764",
+    "early_net_profit": "38.84",
+    "early_profit_factor": "1.157012",
+    "expectancy": "4.386122",
+    "max_drawdown_percent": "18.690000",
+    "net_gap_to_34d_latest": "-342.84",
+    "net_gap_to_stage106_net_pf_best": "0.00",
+    "net_profit": "644.76",
+    "pf_gap_to_34d_latest": "0.053920",
+    "profit_factor": "1.637077",
+    "run_id": "run109A_stage109_v41_dd_control_followup_review_v1",
+    "source_run_id": "run106A_stage106_v41_oos_net_density_dd_after_early_recovery_repair_v1",
+    "source_stage": "stage106_net_pf_best",
+    "split": "oos",
+    "stage109_read": "net_pf_reference_but_dd_gap_remains",
+    "trade_count": "147",
+    "trade_count_gap_to_34d_latest": "-257"
+  },
+  "overall_goal_complete": false,
+  "packet_id": "stage109_v41_dd_control_followup_review_v1",
+  "pushed_commit_hash": "pending_until_push",
+  "run_id": "run109A_stage109_v41_dd_control_followup_review_v1",
+  "source_stage108_closeout_commit": "d5f13807d196abd557faceb007b666950c1bb197",
+  "source_stage108_latest_commit": "e94b562ad2c8a3a7fbcf5ca198f7f5799fae3219",
+  "stage_id": "109_adapter_research__v41_dd_control_followup_review",
+  "tradeoff_path": "stages/109_adapter_research__v41_dd_control_followup_review/03_reviews/stage109_dd_net_tradeoff_summary.csv"
+}

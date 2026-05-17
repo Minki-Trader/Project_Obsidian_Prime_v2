@@ -1049,3 +1049,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `d5f13807d196abd557faceb007b666950c1bb197`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage106(106단계)의 cd9 순손익 단서와 hold4 손실률 단서를 실제 MT5 runtime(실행환경)에서 좁게 조합하고 Stage109(109단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage109 v41 DD control follow-up review closeout(109단계 v41 손실률 제어 후속 검토 종료)
+
+- run(실행): `run109A_stage109_v41_dd_control_followup_review_v1`
+- decision(판정): `continue_trade_density_net_scale_after_dd_tradeoff_repair_in_stage110`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage108(108단계)은 손실률 개선과 순손익/수익 팩터 보존이 갈라졌고, 거래 밀도와 순손익 규모 격차가 남아 Stage110(110단계)로 넘겼다.
