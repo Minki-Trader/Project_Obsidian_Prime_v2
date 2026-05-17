@@ -8,6 +8,7 @@
 - selected_research_baseline(선택 연구 기준선): `research_package_only_reference_surface`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage62_decision(62단계 판정): `continue_adapter_trade_shape_repair`
+- pushed_commit_hash(푸시된 커밋 해시): `faaad81bce3c90a250d76cae0919c30a5c3c1cf6`
 - next_stage_or_branch(다음 단계/분기): `63_adapter_research__v2_native_34d_target_followup`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
