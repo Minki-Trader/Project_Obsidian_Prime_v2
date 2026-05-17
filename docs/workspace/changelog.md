@@ -872,3 +872,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `d5e039c01fe5df8402948667eda73c7adbabb032`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage83(83단계) CD10 hybrid(CD10 혼합)는 OOS early(표본외 초반)를 양수화했지만 validation DD(검증 손실률)가 높아 Stage85(85단계)로 넘겼다.
+## 2026-05-17 - Stage85 v41 validation DD compression repair closeout(85단계 v41 검증 손실률 압축 수리 종료)
+
+- run(실행): `run85A_stage85_v41_validation_dd_compression_repair_v1`
+- decision(판정): `continue_validation_dd_followup_review_in_stage86`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage84(84단계)의 판정대로 Stage83 CD10 hybrid(83단계 CD10 혼합)의 OOS(표본외) 강점을 지키면서 validation DD(검증 손실률) 압축 가능성을 좁게 측정했다.
