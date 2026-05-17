@@ -770,3 +770,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `c5545f2fa61575f42bbdb441e35d03355a7555ba`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage69(69단계)의 short-gate branch limit(숏 게이트 분기 한계) 뒤에 run50BN v46/v47 source(실행50BN 브이46/브이47 원천)를 새 모델 분기로 측정했다.
+## 2026-05-17 - Stage71 v41 source branch closeout(71단계 v41 원천 분기 종료)
+
+- run(실행): `run71A_stage71_new_model_branch_review_v1`
+- decision(판정): `continue_v41_source_repair_in_stage72`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage70(70단계)의 v46/v47(브이46/브이47) 실패 뒤 v41(브이41) 원천을 risk cap(위험 상한)과 short gate(숏 게이트)로 좁게 측정했다.
