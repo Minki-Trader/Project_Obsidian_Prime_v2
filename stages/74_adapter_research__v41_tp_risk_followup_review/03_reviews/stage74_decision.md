@@ -14,6 +14,7 @@ Effect(효과): Stage75(75단계)는 `risk4.5~5.0`, `TP3.5~4.0`, 그리고 valid
 - source_report(원천 보고서): `stages/73_adapter_research__v41_gate_repair_followup/03_reviews/stage73_v41_tp_risk_report.md`
 - source_risk_atr(원천 위험/ATR): `stages/73_adapter_research__v41_gate_repair_followup/03_reviews/stage73_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage73_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `e141afddb807fd1edc3bc73ef1d1c5d64a11101e`
 
 ## Next(다음)
 

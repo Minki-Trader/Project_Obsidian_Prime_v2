@@ -796,5 +796,6 @@
 - run(실행): `run74A_stage74_v41_tp_risk_followup_review_v1`
 - decision(판정): `continue_v41_dd_balance_repair_in_stage75`
 - source_stage73_latest_commit(원천 73단계 최신 커밋): `76db6f199ff917da2f8311544f68dc6f24612e0e`
+- pushed_commit_hash(푸시된 커밋 해시): `e141afddb807fd1edc3bc73ef1d1c5d64a11101e`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 TP/risk(익절 폭/위험) KPI(핵심 성과 지표)를 검토해 Stage75(75단계) DD/net balance(손실률/순손익 균형) 수리로 넘겼다.

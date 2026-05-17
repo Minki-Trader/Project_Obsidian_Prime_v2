@@ -15,6 +15,7 @@ Stage74(74단계) closed(종료) as v2-native TP/risk review gate(v2 고유 익�
 
 - run(실행): `run74A_stage74_v41_tp_risk_followup_review_v1`
 - decision(판정): `continue_v41_dd_balance_repair_in_stage75`
+- pushed_commit_hash(푸시된 커밋 해시): `e141afddb807fd1edc3bc73ef1d1c5d64a11101e`
 - source_stage73_latest_commit(원천 73단계 최신 커밋): `76db6f199ff917da2f8311544f68dc6f24612e0e`
 - external_verification_status(외부 검증 상태): `completed_existing_stage73_evidence_reviewed`
 - report(보고서): `stages/74_adapter_research__v41_tp_risk_followup_review/03_reviews/stage74_tp_risk_followup_review.md`
