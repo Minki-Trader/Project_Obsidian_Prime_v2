@@ -16,7 +16,7 @@ Effect(효과): Stage114는 품질 회복 단서를 만들었지만 34D trade de
 - source_stage114_closeout_commit(원천 114단계 종료 커밋): `0d85a7466233f2c6f7f035cc597e191d5820608e`
 - source_stage114_latest_commit(원천 114단계 최신 커밋): `19778c1e66346dcef4ce8e455c5b5960cfa1e1e7`
 - external_verification_status(외부 검증 상태): `completed_existing_stage114_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `1e3f9f6f245c1c6ebaac6a34003b7d928ed0ca19`
 
 ## Next(다음)
 

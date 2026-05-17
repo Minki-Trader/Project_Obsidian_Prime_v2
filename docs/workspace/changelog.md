@@ -1095,6 +1095,6 @@
 
 - run(실행): `run115A_stage115_v41_supply_quality_followup_review_v1`
 - decision(판정): `continue_density_quality_balance_repair_in_stage116`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `1e3f9f6f245c1c6ebaac6a34003b7d928ed0ca19`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage114(114단계)의 공급 품질 필터 결과를 34D KPI(핵심 성과 지표) 대비 판독하고, 밀도-품질 균형 수리를 Stage116(116단계)로 넘겼다.
