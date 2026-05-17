@@ -1046,6 +1046,6 @@
 
 - run(실행): `run108A_stage108_v41_dd_control_after_net_early_recovery_repair_v1`
 - decision(판정): `continue_dd_control_repair_review_in_stage109`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d5f13807d196abd557faceb007b666950c1bb197`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage106(106단계)의 cd9 순손익 단서와 hold4 손실률 단서를 실제 MT5 runtime(실행환경)에서 좁게 조합하고 Stage109(109단계) 후속 검토로 넘겼다.

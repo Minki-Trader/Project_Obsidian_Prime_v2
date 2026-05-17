@@ -15,7 +15,7 @@ Effect(효과): 34D KPI(34D 핵심 성과 지표)는 lesson-only target surface(
 - gate_feature_summary(제한문 피처 요약): `stages/108_adapter_research__v41_dd_control_after_net_early_recovery_repair/03_reviews/stage108_gate_feature_summary.csv`
 - source_stage107_closeout_commit(원천 107단계 종료 커밋): `6af2f17a497baacff8f1ad4089c97a36bad95398`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d5f13807d196abd557faceb007b666950c1bb197`
 
 ## Next(다음)
 
