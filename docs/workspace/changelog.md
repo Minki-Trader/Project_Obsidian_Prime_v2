@@ -799,3 +799,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `e141afddb807fd1edc3bc73ef1d1c5d64a11101e`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 TP/risk(익절 폭/위험) KPI(핵심 성과 지표)를 검토해 Stage75(75단계) DD/net balance(손실률/순손익 균형) 수리로 넘겼다.
+## 2026-05-17 - Stage75 v41 DD/net balance repair closeout(75단계 v41 손실률/순손익 균형 수리 종료)
+
+- run(실행): `run75A_stage75_v41_dd_balance_repair_v1`
+- decision(판정): `continue_v41_dd_balance_repair_in_stage76`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage73(73단계)의 0.08 short gate(숏 게이트)와 TP3.5(익절 폭 3.5)를 중심으로 risk cap(위험 상한)과 re-entry cooldown(재진입 냉각)을 좁게 바꿔 DD/net balance(손실률/순손익 균형)를 측정했다.

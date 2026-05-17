@@ -1,8 +1,8 @@
-﻿current_run_id: run75A_stage75_v41_dd_balance_repair_v1
+﻿current_run_id: run76A_stage76_v41_dd_balance_followup_review_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 75_adapter_research__v41_dd_balance_repair
+active_stage: 76_adapter_research__v41_dd_balance_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage74(74단계) closed(종료) as `continue_v41_dd_balance_repair_in_stage75` and Stage75(75단계) `75_adapter_research__v41_dd_balance_repair` is open_planned(열림 계획). Effect(효과): Stage73(73단계) KPI(핵심 성과 지표)를 검토해 DD/net balance(손실률/순손익 균형) 수리 질문으로 넘긴다.
+  Stage75(75단계) closed(종료) as `continue_v41_dd_balance_repair_in_stage76` and Stage76(76단계) `76_adapter_research__v41_dd_balance_followup_review` is open_planned(열림 계획). Effect(효과): v41 DD/net balance(V41 손실률/순손익 균형) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
 - >-
-  Stage74 result(74단계 결과): Stage73(73단계)는 Stage72(72단계)보다 회복됐지만 validation DD(검증 손실률)와 34D gap(34D 격차)이 남았다. Effect(효과): Stage75(75단계)는 새 모델 탐색이 아니라 v41(브이41) TP/risk(익절 폭/위험) 주변만 좁게 재측정한다.
+  Stage75 result(75단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_v41_dd_balance_summary.csv`와 `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(v2 고유 연구)만 계속한다.
 stage36_cross_model_characteristic_synthesis:
@@ -4937,4 +4937,20 @@ stage74_tp_risk_followup_review:
   report_path: stages/74_adapter_research__v41_tp_risk_followup_review/03_reviews/stage74_decision.md
   packet_summary_path: docs/agent_control/packets/stage74_v41_tp_risk_followup_review_v1/aggregate_summary.json
   external_verification_status: completed_existing_stage73_evidence_reviewed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage75_v41_dd_balance_repair:
+  packet_id: stage75_v41_dd_balance_repair_v1
+  stage_id: 75_adapter_research__v41_dd_balance_repair
+  status: closed_continue_v41_dd_balance_repair_in_stage76
+  current_run_id: run75A_stage75_v41_dd_balance_repair_v1
+  adapter_under_review: stage73_v41_tp_risk_followup_surface
+  source_stage74_pushed_commit: 70735d9f461d916b4c7d340039a5bbf8bd23b4a2
+  source_stage73_latest_commit: 76db6f199ff917da2f8311544f68dc6f24612e0e
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_v41_dd_balance_repair_in_stage76
+  next_stage_or_branch: 76_adapter_research__v41_dd_balance_followup_review
+  report_path: stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_decision.md
+  packet_summary_path: docs/agent_control/packets/stage75_v41_dd_balance_repair_v1/aggregate_summary.json
+  external_verification_status: completed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
