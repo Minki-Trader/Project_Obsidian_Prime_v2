@@ -844,3 +844,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `0006a61af9ce3a343f5a6be318310f09a85440a6`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage79(79단계)의 순손익 개선을 보존하되 OOS early(표본외 초반) 음수 구간을 Stage81(81단계) 수리 질문으로 넘겼다.
+## 2026-05-17 - Stage81 v41 early OOS segment repair closeout(81단계 v41 표본외 초반 구간 수리 종료)
+
+- run(실행): `run81A_stage81_v41_early_oos_segment_repair_v1`
+- decision(판정): `continue_early_oos_segment_review_in_stage82`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage79(79단계)의 TP4/SL2(익절 4, 손절 2) 표면에서 cooldown/max-hold/SL sensitivity(재진입 냉각/최대 보유/손절 민감도)를 좁게 바꿔 OOS early(표본외 초반) 약점 수리 가능성을 측정했다.
