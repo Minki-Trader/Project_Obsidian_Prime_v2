@@ -1074,6 +1074,6 @@
 
 - run(실행): `run112A_stage112_v41_route_supply_density_repair_v1`
 - decision(판정): `continue_route_supply_repair_review_in_stage113`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `3adab2ed445509bc58b365ab59c0ccbf14c141a1`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): long early ADX block(롱 초반 ADX 차단)과 side filter(방향 필터)를 좁게 풀어 거래 공급이 열리는지 실제 MT5 runtime(실행환경)으로 측정하고 Stage113(113단계) 후속 검토로 넘겼다.

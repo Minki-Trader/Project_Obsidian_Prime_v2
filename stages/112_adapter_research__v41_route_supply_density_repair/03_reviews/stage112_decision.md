@@ -15,7 +15,7 @@ Effect(효과): threshold-only easing(임계값 전용 완화) 이후 막힌 거
 - gate_feature_summary(제한문 피처 요약): `stages/112_adapter_research__v41_route_supply_density_repair/03_reviews/stage112_gate_feature_summary.csv`
 - source_stage111_closeout_commit(원천 111단계 종료 커밋): `078f149a99a9817579533e83c2c2e56f155df5f7`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `3adab2ed445509bc58b365ab59c0ccbf14c141a1`
 
 ## Next(다음)
 
