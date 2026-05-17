@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `76_adapter_research__v41_dd_balance_followup_review`
 - source_run(원천 실행): `run76A_stage76_v41_dd_balance_followup_review_v1`
 - source_decision(원천 판정): `continue_entry_quality_dd_guard_in_stage77`
+- source_stage76_pushed_commit(원천 76단계 푸시 커밋): `d3c526ae7a435c4e2ae30cb2cbddb736026f486d`
 - source_stage75_latest_commit(원천 75단계 최신 커밋): `09dde2a992bb129ae05016a41d2c1a40ac0e8059`
 - stage76_report(76단계 보고서): `stages/76_adapter_research__v41_dd_balance_followup_review/03_reviews/stage76_dd_balance_followup_review.md`
 - stage76_decision(76단계 판정): `stages/76_adapter_research__v41_dd_balance_followup_review/03_reviews/stage76_decision.md`

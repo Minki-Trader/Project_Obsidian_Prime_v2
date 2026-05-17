@@ -811,5 +811,6 @@
 - run(실행): `run76A_stage76_v41_dd_balance_followup_review_v1`
 - decision(판정): `continue_entry_quality_dd_guard_in_stage77`
 - source_stage75_latest_commit(원천 75단계 최신 커밋): `09dde2a992bb129ae05016a41d2c1a40ac0e8059`
+- pushed_commit_hash(푸시된 커밋 해시): `d3c526ae7a435c4e2ae30cb2cbddb736026f486d`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage75(75단계)의 risk scale(위험 배율) tradeoff(맞교환)를 검토해 Stage77(77단계) entry quality/DD guard(진입 품질/손실률 보호) 수리로 넘겼다.

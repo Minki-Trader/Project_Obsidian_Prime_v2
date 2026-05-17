@@ -15,6 +15,7 @@ Stage76(76단계) closed(종료) as v2-native DD/net follow-up review gate(v2 �
 
 - run(실행): `run76A_stage76_v41_dd_balance_followup_review_v1`
 - decision(판정): `continue_entry_quality_dd_guard_in_stage77`
+- pushed_commit_hash(푸시된 커밋 해시): `d3c526ae7a435c4e2ae30cb2cbddb736026f486d`
 - source_stage75_latest_commit(원천 75단계 최신 커밋): `09dde2a992bb129ae05016a41d2c1a40ac0e8059`
 - external_verification_status(외부 검증 상태): `completed_existing_stage75_evidence_reviewed`
 - report(보고서): `stages/76_adapter_research__v41_dd_balance_followup_review/03_reviews/stage76_dd_balance_followup_review.md`

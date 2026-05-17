@@ -14,6 +14,7 @@ Effect(효과): Stage77(77단계)는 `risk5_tp35`와 `risk5_tp40`의 net(순손�
 - stage75_report(75단계 보고서): `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_v41_dd_balance_report.md`
 - stage75_risk_atr(75단계 위험/ATR): `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage75_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `d3c526ae7a435c4e2ae30cb2cbddb736026f486d`
 
 ## Next(다음)
 
