@@ -1,8 +1,8 @@
-﻿current_run_id: run86A_stage86_v41_validation_dd_followup_review_v1
+﻿current_run_id: run87A_stage87_v41_tp_risk_balance_repair_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 86_adapter_research__v41_validation_dd_followup_review
+active_stage: 87_adapter_research__v41_tp_risk_balance_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage85(85단계) closed(종료) as `continue_validation_dd_followup_review_in_stage86` and Stage86(86단계) `86_adapter_research__v41_validation_dd_followup_review` is open_planned(열림 계획). Effect(효과): v41 validation DD compression repair(V41 검증 손실률 압축 수리) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
+  Stage86(86단계) closed(종료) as `continue_tp_risk_balance_repair_in_stage87` and Stage87(87단계) `87_adapter_research__v41_tp_risk_balance_repair` is open_planned(열림 계획). Effect(효과): validation DD(검증 손실률)와 net/PF(순손익/수익 팩터)의 상충을 보존하고 다음 risk/TP balance repair(위험/익절 균형 수리)로 넘긴다.
 - >-
-  Stage85 result(85단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/85_adapter_research__v41_validation_dd_compression_repair/03_reviews/stage85_v41_validation_dd_compression_summary.csv`와 `stages/85_adapter_research__v41_validation_dd_compression_repair/03_reviews/stage85_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage86 read(86단계 판독): risk cap reduction(위험 상한 축소)은 DD(손실률)를 낮추지만 net(순손익)을 깎고, TP trim(익절 축소)은 validation net/PF(검증 순손익/수익 팩터)를 올리지만 DD(손실률)를 낮추지 못했다. Effect(효과): Stage87(87단계)은 결합 변형만 좁게 시험한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5124,11 +5124,26 @@ stage85_v41_validation_dd_compression_repair:
 stage86_v41_validation_dd_followup_review:
   packet_id: stage86_v41_validation_dd_followup_review_v1
   stage_id: 86_adapter_research__v41_validation_dd_followup_review
-  status: open_planned
+  status: closed_continue_tp_risk_balance_repair_in_stage87
   current_run_id: run86A_stage86_v41_validation_dd_followup_review_v1
   source_stage85_decision: continue_validation_dd_followup_review_in_stage86
   source_stage85_pushed_commit: 886e07afe1421a38b53c4c8ca5c629d574b3bbac
+  source_stage85_latest_commit: 55efc21f7f9f100a78f078049fcf10f7949f1ea3
   target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
-  bounded_question: decide whether Stage85 DD compression tradeoff is useful or needs another bounded repair
-  external_verification_status: planned_existing_stage85_evidence_review
+  decision: continue_tp_risk_balance_repair_in_stage87
+  next_stage_or_branch: 87_adapter_research__v41_tp_risk_balance_repair
+  report_path: stages/86_adapter_research__v41_validation_dd_followup_review/03_reviews/stage86_decision.md
+  packet_summary_path: docs/agent_control/packets/stage86_v41_validation_dd_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage85_evidence_reviewed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage87_v41_tp_risk_balance_repair:
+  packet_id: stage87_v41_tp_risk_balance_repair_v1
+  stage_id: 87_adapter_research__v41_tp_risk_balance_repair
+  status: open_planned
+  current_run_id: run87A_stage87_v41_tp_risk_balance_repair_v1
+  source_stage86_decision: continue_tp_risk_balance_repair_in_stage87
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  bounded_question: combine risk cap and TP trim to lower validation DD without damaging OOS strength
+  external_verification_status: planned
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
