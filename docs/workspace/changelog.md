@@ -1014,3 +1014,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `d769c8b22ce389d4261edaf30e0c2c729971874e`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage102(102단계)는 full OOS(전체 표본외)를 개선했지만 OOS early(표본외 초반)가 약해져 Stage104(104단계) 초반 구간 수리로 넘겼다.
+## 2026-05-18 - Stage104 v41 OOS early segment repair closeout(104단계 v41 표본외 초반 구간 수리 종료)
+
+- run(실행): `run104A_stage104_v41_oos_early_segment_repair_v1`
+- decision(판정): `continue_oos_early_segment_repair_review_in_stage105`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage103(103단계)의 판정대로 OOS early(표본외 초반) 회복과 full OOS(전체 표본외) 보존 사이의 균형을 실제 MT5 runtime(실행환경)으로 측정하고 Stage105(105단계) 후속 검토로 넘겼다.

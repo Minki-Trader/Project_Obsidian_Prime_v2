@@ -1,8 +1,8 @@
-﻿current_run_id: run104A_stage104_v41_oos_early_segment_repair_v1
+﻿current_run_id: run105A_stage105_v41_oos_early_segment_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 104_adapter_research__v41_oos_early_segment_repair
+active_stage: 105_adapter_research__v41_oos_early_segment_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage103(103단계) closed(종료) as `continue_oos_early_segment_repair_in_stage104` and Stage104(104단계) `104_adapter_research__v41_oos_early_segment_repair` is open_planned(열림 계획). Effect(효과): Stage102(102단계)의 full OOS(전체 표본외) 개선은 보존하고 OOS early segment(표본외 초반 구간) 수리로 넘긴다.
+  Stage104(104단계) closed(종료) as `continue_oos_early_segment_repair_review_in_stage105` and Stage105(105단계) `105_adapter_research__v41_oos_early_segment_followup_review` is open_planned(열림 계획). Effect(효과): OOS early segment repair(표본외 초반 구간 수리) 결과를 후속 검토로 넘긴다.
 - >-
-  Stage103 result(103단계 결과)는 `stages/103_adapter_research__v41_oos_net_density_followup_review/03_reviews/stage103_stage100_stage102_34d_comparison.csv`와 `stages/103_adapter_research__v41_oos_net_density_followup_review/03_reviews/stage103_segment_warning_summary.csv`에 기록된다. Effect(효과): Stage102 best(102단계 최선)의 장점과 약점을 다음 단계 입력으로 보존한다.
+  Stage104 result(104단계 결과)는 `stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_oos_early_segment_repair_summary.csv`와 `stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_segment_kpi_summary.csv`에 기록된다. Effect(효과): Stage100/102 best(100/102단계 최선) 대비 초반 구간 균형을 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5448,4 +5448,23 @@ stage103_v41_oos_net_density_followup_review:
   packet_summary_path: docs/agent_control/packets/stage103_v41_oos_net_density_followup_review_v1/aggregate_summary.json
   external_verification_status: completed_existing_stage102_mt5_runtime_evidence_reviewed
   pushed_commit_hash: d769c8b22ce389d4261edaf30e0c2c729971874e
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage104_v41_oos_early_segment_repair:
+  packet_id: stage104_v41_oos_early_segment_repair_v1
+  stage_id: 104_adapter_research__v41_oos_early_segment_repair
+  status: closed_continue_oos_early_segment_repair_review_in_stage105
+  current_run_id: run104A_stage104_v41_oos_early_segment_repair_v1
+  adapter_under_review: s102_v41_h3_cd8_lng_early_adx18
+  source_stage103_closeout_commit: d769c8b22ce389d4261edaf30e0c2c729971874e
+  source_stage103_latest_commit: 1f456de5dddadea119c5cb78c2b5d020f403c78d
+  source_stage102_closeout_commit: c2b1bfbfef06ab887adcd20554fbf9b99f8475f2
+  source_stage102_latest_commit: 5ca329c468db459a8f68b9c28dd0897dfbf79623
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_oos_early_segment_repair_review_in_stage105
+  next_stage_or_branch: 105_adapter_research__v41_oos_early_segment_followup_review
+  report_path: stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_decision.md
+  packet_summary_path: docs/agent_control/packets/stage104_v41_oos_early_segment_repair_v1/aggregate_summary.json
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
