@@ -1,6 +1,7 @@
 ﻿# Stage68 Decision(68단계 판정)
 
 decision(판정): `continue_dd_net_balance_repair_in_stage69`
+pushed_commit_hash(푸시된 커밋 해시): `7ebe1fcfb05fbcd9df60007ca5b8050230a4d0f3`
 
 Stage68(68단계)는 legacy 34D(레거시 34D)를 복사하지 않고, Stage67(67단계) balanced candidate(균형 후보)인 `s67_risk45_h5_cd8` 흐름을 control(대조군), 4.2% risk cap(4.2% 위험 상한), 10-bar cooldown(10봉 냉각)으로 좁게 비교했다.
 

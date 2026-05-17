@@ -15,6 +15,7 @@ Stage68(68단계) closed(종료) as v2-native DD/net balance batch(브이투 고
 
 - run(실행): `run68A_stage68_dd_net_balance_repair_v1`
 - decision(판정): `continue_dd_net_balance_repair_in_stage69`
+- pushed_commit_hash(푸시된 커밋 해시): `7ebe1fcfb05fbcd9df60007ca5b8050230a4d0f3`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/68_adapter_research__dd_net_balance_repair/03_reviews/stage68_dd_net_balance_report.md`
 - stage68_decision(68단계 판정): `stages/68_adapter_research__dd_net_balance_repair/03_reviews/stage68_decision.md`

@@ -753,5 +753,6 @@
 
 - run(실행): `run68A_stage68_dd_net_balance_repair_v1`
 - decision(판정): `continue_dd_net_balance_repair_in_stage69`
+- pushed_commit_hash(푸시된 커밋 해시): `7ebe1fcfb05fbcd9df60007ca5b8050230a4d0f3`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage67(67단계)의 balanced candidate(균형 후보)를 유지하고 risk cap(위험 상한)과 cooldown(냉각)을 좁게 비교해, 검증 손실률을 낮추면서 표본외 순손익을 유지할 수 있는지 측정했다.
