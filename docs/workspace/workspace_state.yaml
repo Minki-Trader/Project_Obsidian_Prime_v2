@@ -1,8 +1,8 @@
-﻿current_run_id: run61A_stage61_research_package_review_v1
-updated_on: '2026-05-16'
+current_run_id: run62A_stage62_kpi_margin_research_design_v1
+updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 61_research_package__baseline_adapter_review_only
+active_stage: 62_adapter_research__kpi_margin_and_tier_b_reactivation
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -4726,3 +4726,16 @@ stage61_research_package_review:
   packet_summary_path: docs/agent_control/packets/stage61_research_package_review_v1/aggregate_summary.json
   stage61_closeout_pushed_commit: 854c77a72af1436151d1410f73241e6a7c24482d
   boundary: research_package_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+stage62_kpi_margin_research:
+  packet_id: stage62_kpi_margin_research_v1
+  stage_id: 62_adapter_research__kpi_margin_and_tier_b_reactivation
+  status: active_planned
+  current_run_id: run62A_stage62_kpi_margin_research_design_v1
+  adapter_under_review: s59ar_v41_sd8_h3
+  source_stage61_pushed_commit: 854c77a72af1436151d1410f73241e6a7c24482d
+  bounded_question: improve KPI margin around validation mid PF, drawdown, and Tier B fallback without operating claims
+  plan_path: stages/62_adapter_research__kpi_margin_and_tier_b_reactivation/03_reviews/kpi_margin_research_plan.md
+  variant_queue_path: stages/62_adapter_research__kpi_margin_and_tier_b_reactivation/03_reviews/stage62_variant_queue.csv
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

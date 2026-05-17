@@ -1,0 +1,4 @@
+variant_id,variant_group,changed_variable,comparison_baseline,required_view,stop_condition,notes
+s62_plan_sd_lifecycle_neighborhood,same_direction_lifecycle,"same_direction_cooldown_bars around 8; max_hold_bars around 3",s59ar_v41_sd8_h3,"validation_is,oos,chronological_thirds","stop after one bounded neighborhood batch","Effect(효과): validation mid PF(검증 중간 PF) 여유를 보되 open-ended tuning(무한 조정)을 막는다."
+s62_plan_tier_b_diagnostic,tier_b_diagnostic,"Tier B disabled vs narrow diagnostic fallback",s59ar_v41_sd8_h3,"tier_a_used,tier_b_fallback_used,actual_routed_total","stop if Tier B repeats damage or improves missing windows","Effect(효과): Tier B(Tier B)를 생략하지 않고 손익 기여를 직접 본다."
+s62_plan_risk_atr_margin,risk_atr_margin,"risk bucket smoothing and ATR bracket neighborhood",s59ar_v41_sd8_h3,"validation_is,oos,risk_atr_telemetry","stop if risk cap or drawdown worsens","Effect(효과): 위험/브래킷 개선이 KPI 여유를 실제로 키우는지 본다."

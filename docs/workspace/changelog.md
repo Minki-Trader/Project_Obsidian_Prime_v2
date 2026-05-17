@@ -693,3 +693,12 @@
 - overall_goal_complete(전체 목표 완료): `true`
 - stage61_closeout_pushed_commit(61단계 종료 푸시 커밋): `854c77a72af1436151d1410f73241e6a7c24482d`
 - effect(효과): Stage57-60(57-60단계) 증거를 research package(연구 패키지)로 검토하고 운영 주장을 만들지 않는 경계로 닫았다.
+
+## 2026-05-17 - Stage62 KPI margin research opened(62단계 KPI 여유 폭 연구 개방)
+
+- run(실행): `run62A_stage62_kpi_margin_research_design_v1`
+- source_stage(원천 단계): `61_research_package__baseline_adapter_review_only`
+- source_decision(원천 판정): `research_package_ready`
+- adapter_under_review(검토 중 어댑터): `s59ar_v41_sd8_h3`
+- status(상태): `active_planned`
+- effect(효과): validation mid PF(검증 중간 PF), drawdown(손실폭), Tier B fallback(Tier B 대체) 가능성을 새 bounded research stage(경계 연구 단계)로 분리해 추가 연구개발을 계속한다.
