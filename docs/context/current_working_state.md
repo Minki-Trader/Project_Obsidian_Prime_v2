@@ -16,7 +16,7 @@ Stage90(90단계) closed(종료) as drawdown/OOS early follow-up review(손실�
 - run(실행): `run90A_stage90_v41_drawdown_oos_early_followup_review_v1`
 - decision(판정): `continue_sl205_net_recovery_and_oos_early_repair_in_stage91`
 - external_verification_status(외부 검증 상태): `completed_existing_stage89_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `7a3f7a77ef1b96908c52547af3247a0c899f0be5`
 - review_report(검토 보고서): `stages/90_adapter_research__v41_drawdown_oos_early_followup_review/03_reviews/stage90_drawdown_oos_early_followup_review.md`
 - stage90_decision(90단계 판정): `stages/90_adapter_research__v41_drawdown_oos_early_followup_review/03_reviews/stage90_decision.md`
 

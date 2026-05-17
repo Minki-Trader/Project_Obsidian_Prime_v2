@@ -9,7 +9,7 @@
 - source_stage89_latest_commit(원천 89단계 최신 커밋): `f0b6a5eb755b750cb5bc805c5d74bebbba23b1c3`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - decision(판정): `continue_sl205_net_recovery_and_oos_early_repair_in_stage91`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `7a3f7a77ef1b96908c52547af3247a0c899f0be5`
 - next_stage_or_branch(다음 단계/분기): `91_adapter_research__v41_sl205_net_recovery_oos_early_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

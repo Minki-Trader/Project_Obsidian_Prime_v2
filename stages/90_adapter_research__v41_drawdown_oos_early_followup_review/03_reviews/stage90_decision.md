@@ -14,7 +14,7 @@ Effect(효과): SL2.05(손절 2.05)는 DD(손실률)와 OOS net(표본외 순손
 - source_stage89_summary(원천 89단계 요약): `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_v41_drawdown_oos_early_repair_summary.csv`
 - source_stage89_segment(원천 89단계 구간): `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_segment_kpi_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage89_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `7a3f7a77ef1b96908c52547af3247a0c899f0be5`
 
 ## Next(다음)
 

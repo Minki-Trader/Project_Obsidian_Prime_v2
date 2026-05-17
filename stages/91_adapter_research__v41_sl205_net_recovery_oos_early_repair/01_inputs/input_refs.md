@@ -3,7 +3,7 @@
 - source_stage(원천 단계): `90_adapter_research__v41_drawdown_oos_early_followup_review`
 - source_run(원천 실행): `run90A_stage90_v41_drawdown_oos_early_followup_review_v1`
 - source_decision(원천 판정): `continue_sl205_net_recovery_and_oos_early_repair_in_stage91`
-- source_stage90_pushed_commit(원천 90단계 푸시 커밋): `pending_push_hash`
+- source_stage90_pushed_commit(원천 90단계 푸시 커밋): `7a3f7a77ef1b96908c52547af3247a0c899f0be5`
 - stage90_review(90단계 검토): `stages/90_adapter_research__v41_drawdown_oos_early_followup_review/03_reviews/stage90_drawdown_oos_early_followup_review.md`
 - stage90_decision(90단계 판정): `stages/90_adapter_research__v41_drawdown_oos_early_followup_review/03_reviews/stage90_decision.md`
 - stage89_sl205_candidate(89단계 손절 2.05 후보): `s89_v41_h3_risk475_gate08_sl205_tp38_cd10`
