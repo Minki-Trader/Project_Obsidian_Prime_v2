@@ -774,5 +774,6 @@
 
 - run(실행): `run71A_stage71_new_model_branch_review_v1`
 - decision(판정): `continue_v41_source_repair_in_stage72`
+- pushed_commit_hash(푸시된 커밋 해시): `2e6668ad46d91b13288b8d9555d5e54d0a64b911`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage70(70단계)의 v46/v47(브이46/브이47) 실패 뒤 v41(브이41) 원천을 risk cap(위험 상한)과 short gate(숏 게이트)로 좁게 측정했다.

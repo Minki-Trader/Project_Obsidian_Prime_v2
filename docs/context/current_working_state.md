@@ -15,6 +15,7 @@ Stage71(71단계) closed(종료) as v2-native v41 source branch batch(브이투 
 
 - run(실행): `run71A_stage71_new_model_branch_review_v1`
 - decision(판정): `continue_v41_source_repair_in_stage72`
+- stage71_pushed_commit(71단계 푸시 커밋): `2e6668ad46d91b13288b8d9555d5e54d0a64b911`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/71_adapter_research__new_model_branch_review/03_reviews/stage71_v41_source_branch_report.md`
 - stage71_decision(71단계 판정): `stages/71_adapter_research__new_model_branch_review/03_reviews/stage71_decision.md`
