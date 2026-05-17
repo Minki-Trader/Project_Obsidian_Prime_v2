@@ -15,6 +15,7 @@ Effect(효과): Stage81(81단계)는 강한 net(순손익)을 보존하면서 OO
 - stage79_segment(79단계 구간): `stages/79_adapter_research__v41_atr_stop_lifecycle_repair/03_reviews/stage79_segment_kpi_summary.csv`
 - stage79_risk_atr(79단계 위험/ATR): `stages/79_adapter_research__v41_atr_stop_lifecycle_repair/03_reviews/stage79_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage79_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `0006a61af9ce3a343f5a6be318310f09a85440a6`
 
 ## Next(다음)
 

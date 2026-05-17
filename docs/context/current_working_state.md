@@ -16,6 +16,7 @@ Stage80(80단계) closed(종료) as v2-native ATR stop follow-up review(v2 고�
 - run(실행): `run80A_stage80_v41_atr_stop_followup_review_v1`
 - decision(판정): `continue_early_oos_segment_repair_in_stage81`
 - external_verification_status(외부 검증 상태): `completed_existing_stage79_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `0006a61af9ce3a343f5a6be318310f09a85440a6`
 - report(보고서): `stages/80_adapter_research__v41_atr_stop_followup_review/03_reviews/stage80_atr_stop_followup_review.md`
 - stage80_decision(80단계 판정): `stages/80_adapter_research__v41_atr_stop_followup_review/03_reviews/stage80_decision.md`
 - comparison_csv(비교 CSV): `stages/80_adapter_research__v41_atr_stop_followup_review/03_reviews/stage80_stage73_stage79_comparison.csv`
