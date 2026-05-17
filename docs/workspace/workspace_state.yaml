@@ -1,8 +1,8 @@
-﻿current_run_id: run105A_stage105_v41_oos_early_segment_followup_review_v1
+﻿current_run_id: run106A_stage106_v41_oos_net_density_dd_after_early_recovery_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 105_adapter_research__v41_oos_early_segment_followup_review
+active_stage: 106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage104(104단계) closed(종료) as `continue_oos_early_segment_repair_review_in_stage105` and Stage105(105단계) `105_adapter_research__v41_oos_early_segment_followup_review` is open_planned(열림 계획). Effect(효과): OOS early segment repair(표본외 초반 구간 수리) 결과를 후속 검토로 넘긴다.
+  Stage105(105단계) closed(종료) as `continue_oos_net_density_dd_after_early_recovery_repair_in_stage106` and Stage106(106단계) `106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair` is open_planned(열림 계획). Effect(효과): OOS early(표본외 초반) 회복은 보존 조건으로 남기고 OOS net density/DD(표본외 순손익 밀도/손실률) 수리로 넘긴다.
 - >-
-  Stage104 result(104단계 결과)는 `stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_oos_early_segment_repair_summary.csv`와 `stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_segment_kpi_summary.csv`에 기록된다. Effect(효과): Stage100/102 best(100/102단계 최선) 대비 초반 구간 균형을 다음 단계 입력으로 보존한다.
+  Stage105 result(105단계 결과)는 `stages/105_adapter_research__v41_oos_early_segment_followup_review/03_reviews/stage105_stage100_stage102_stage104_34d_comparison.csv`와 `stages/105_adapter_research__v41_oos_early_segment_followup_review/03_reviews/stage105_segment_tradeoff_summary.csv`에 기록된다. Effect(효과): Stage104(104단계)의 균형 후보가 34D KPI(34D 핵심 성과 지표)에 아직 부족한 이유를 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5467,4 +5467,24 @@ stage104_v41_oos_early_segment_repair:
   packet_summary_path: docs/agent_control/packets/stage104_v41_oos_early_segment_repair_v1/aggregate_summary.json
   external_verification_status: completed
   pushed_commit_hash: 45400b9be01e87d5497aa3a96d1e229494e32444
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage105_v41_oos_early_segment_followup_review:
+  packet_id: stage105_v41_oos_early_segment_followup_review_v1
+  stage_id: 105_adapter_research__v41_oos_early_segment_followup_review
+  status: closed_continue_oos_net_density_dd_after_early_recovery_repair_in_stage106
+  current_run_id: run105A_stage105_v41_oos_early_segment_followup_review_v1
+  source_stage104_closeout_commit: 45400b9be01e87d5497aa3a96d1e229494e32444
+  source_stage104_latest_commit: 61778183dc73e327b612f58b70491a2f14408de2
+  source_stage103_latest_commit: 1f456de5dddadea119c5cb78c2b5d020f403c78d
+  source_stage102_latest_commit: 5ca329c468db459a8f68b9c28dd0897dfbf79623
+  source_stage100_latest_commit: ef4b4ab1fbcb63a985512af5a6c49d199533e1fd
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_oos_net_density_dd_after_early_recovery_repair_in_stage106
+  next_stage_or_branch: 106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair
+  report_path: stages/105_adapter_research__v41_oos_early_segment_followup_review/03_reviews/stage105_oos_early_segment_followup_review.md
+  decision_path: stages/105_adapter_research__v41_oos_early_segment_followup_review/03_reviews/stage105_decision.md
+  packet_summary_path: docs/agent_control/packets/stage105_v41_oos_early_segment_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage104_mt5_runtime_evidence_reviewed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

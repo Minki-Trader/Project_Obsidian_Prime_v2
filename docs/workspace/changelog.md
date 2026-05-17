@@ -1021,3 +1021,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `45400b9be01e87d5497aa3a96d1e229494e32444`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage103(103단계)의 판정대로 OOS early(표본외 초반) 회복과 full OOS(전체 표본외) 보존 사이의 균형을 실제 MT5 runtime(실행환경)으로 측정하고 Stage105(105단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage105 v41 OOS early segment follow-up review closeout(105단계 v41 표본외 초반 구간 후속 검토 종료)
+
+- run(실행): `run105A_stage105_v41_oos_early_segment_followup_review_v1`
+- decision(판정): `continue_oos_net_density_dd_after_early_recovery_repair_in_stage106`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage104(104단계)는 OOS early(표본외 초반)를 회복했지만 34D KPI(34D 핵심 성과 지표) 대비 net/DD/trade density(순손익/손실률/거래 밀도)가 부족해 Stage106(106단계) 좁은 수리로 넘겼다.
