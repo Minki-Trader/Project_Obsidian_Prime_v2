@@ -15,6 +15,7 @@ Stage69(69단계) closed(종료) as review-only branch decision(검토 전용 �
 
 - run(실행): `run69A_stage69_branch_or_candidate_review_v1`
 - decision(판정): `open_new_model_branch_in_stage70`
+- pushed_commit_hash(푸시된 커밋 해시): `63cee32b5b19e26ff5f7913a774df19ee943fa1f`
 - external_verification_status(외부 검증 상태): `not_applicable`
 - report(보고서): `stages/69_adapter_research__branch_or_candidate_review/03_reviews/stage69_branch_candidate_report.md`
 - stage69_decision(69단계 판정): `stages/69_adapter_research__branch_or_candidate_review/03_reviews/stage69_decision.md`

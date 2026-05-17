@@ -1,6 +1,7 @@
 ﻿# Stage69 Decision(69단계 판정)
 
 decision(판정): `open_new_model_branch_in_stage70`
+pushed_commit_hash(푸시된 커밋 해시): `63cee32b5b19e26ff5f7913a774df19ee943fa1f`
 
 Stage69(69단계)는 Stage66-68(66-68단계)의 short-gate branch(숏 게이트 분기)를 candidate review(후보 검토)로 올릴 수 있는지 확인했다. Best reviewed candidate(검토 최선 후보)는 `Stage66::s66_short_risk5_h5`였지만, 34D latest target(34D 최신 목표)의 PF(수익 팩터), net(순손익), DD(손실률)를 동시에 만족하지 못했다.
 

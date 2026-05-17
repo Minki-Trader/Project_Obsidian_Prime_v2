@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `69_adapter_research__branch_or_candidate_review`
 - source_run(원천 실행): `run69A_stage69_branch_or_candidate_review_v1`
 - source_decision(원천 판정): `open_new_model_branch_in_stage70`
+- source_stage69_pushed_commit(원천 69단계 푸시 커밋): `63cee32b5b19e26ff5f7913a774df19ee943fa1f`
 - source_external_verification_status(원천 외부 검증 상태): `not_applicable`
 - stage69_report(69단계 보고서): `stages/69_adapter_research__branch_or_candidate_review/03_reviews/stage69_branch_candidate_report.md`
 - stage69_decision(69단계 판정): `stages/69_adapter_research__branch_or_candidate_review/03_reviews/stage69_decision.md`

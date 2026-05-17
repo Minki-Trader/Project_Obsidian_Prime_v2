@@ -760,5 +760,6 @@
 
 - run(실행): `run69A_stage69_branch_or_candidate_review_v1`
 - decision(판정): `open_new_model_branch_in_stage70`
+- pushed_commit_hash(푸시된 커밋 해시): `63cee32b5b19e26ff5f7913a774df19ee943fa1f`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage66-68(66-68단계) short-gate branch(숏 게이트 분기)의 KPI(핵심 성과 지표) 한계를 검토하고, 새 model branch(모델 분기)로 넘겼다.
