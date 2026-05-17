@@ -903,3 +903,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `65ef18b96c7d643339129104df722bbc6bc66c12`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage87 best(87단계 최선안)는 Stage83 CD10(83단계 CD10)보다 좋아졌지만 DD(손실률)와 OOS early(표본외 초반)가 아직 부족해 Stage89(89단계) 수리로 넘겼다.
+## 2026-05-17 - Stage89 v41 drawdown/OOS early repair closeout(89단계 v41 손실률/표본외 초반 수리 종료)
+
+- run(실행): `run89A_stage89_v41_drawdown_oos_early_repair_v1`
+- decision(판정): `continue_drawdown_oos_early_followup_review_in_stage90`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage88(88단계)의 판정대로 Stage87 best(87단계 최선안)의 validation DD(검증 손실률)와 OOS early(표본외 초반) 약점을 좁게 측정했다.
