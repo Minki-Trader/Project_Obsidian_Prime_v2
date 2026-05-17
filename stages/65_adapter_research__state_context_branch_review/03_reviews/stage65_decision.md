@@ -1,6 +1,7 @@
 ﻿# Stage65 Decision(65단계 판정)
 
 decision(판정): `continue_soft_gate_repair_in_stage66`
+pushed_commit_hash(푸시된 커밋 해시): `b0aca3100ed26edfdcb89ed9adcc967ac0d40640`
 
 Stage65(65단계)는 legacy 34D(레거시 34D)를 복사하지 않고, Stage64(64단계) 후보의 OOS DD(표본외 손실률) 힌트를 soft/side-specific gate(소프트/방향별 게이트)로 회복 가능한지 측정했다.
 
