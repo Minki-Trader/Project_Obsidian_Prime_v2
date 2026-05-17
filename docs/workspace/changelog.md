@@ -1098,3 +1098,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `1e3f9f6f245c1c6ebaac6a34003b7d928ed0ca19`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage114(114단계)의 공급 품질 필터 결과를 34D KPI(핵심 성과 지표) 대비 판독하고, 밀도-품질 균형 수리를 Stage116(116단계)로 넘겼다.
+## 2026-05-18 - Stage116 v41 density-quality balance repair closeout(116단계 v41 밀도-품질 균형 수리 종료)
+
+- run(실행): `run116A_stage116_v41_density_quality_balance_repair_v1`
+- decision(판정): `continue_density_quality_followup_review_in_stage117`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage114/115(114/115단계)의 품질 회복 단서에서 거래 수와 PF/DD(수익 팩터/손실률) 균형을 실제 MT5 runtime(실행환경)으로 측정하고 Stage117(117단계) 후속 검토로 넘겼다.
