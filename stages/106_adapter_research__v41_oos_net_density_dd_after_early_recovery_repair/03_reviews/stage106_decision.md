@@ -14,7 +14,7 @@ Effect(효과): Stage104(104단계)의 초반 회복과 Stage102(102단계)의 �
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair/03_reviews/stage106_risk_atr_telemetry.csv`
 - gate_feature_summary(제한문 피처 요약): `stages/106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair/03_reviews/stage106_gate_feature_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `5123f0df630b214a225194202717c3b6bcf7df00`
 
 ## Next(다음)
 
