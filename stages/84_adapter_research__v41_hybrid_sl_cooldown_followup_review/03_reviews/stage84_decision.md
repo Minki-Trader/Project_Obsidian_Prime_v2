@@ -14,7 +14,7 @@ Effect(효과): OOS early(표본외 초반) 양수화와 OOS DD(표본외 손실
 - source_summary(원천 요약): `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_v41_hybrid_sl_cooldown_summary.csv`
 - source_segment_kpi(원천 구간 KPI): `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_segment_kpi_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage83_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `d5e039c01fe5df8402948667eda73c7adbabb032`
 
 ## Next(다음)
 

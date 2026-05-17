@@ -16,7 +16,7 @@ Stage84(84단계) closed(종료) as review gate(검토 게이트). Effect(효과
 - run(실행): `run84A_stage84_v41_hybrid_sl_cooldown_followup_review_v1`
 - decision(판정): `continue_validation_dd_compression_repair_in_stage85`
 - external_verification_status(외부 검증 상태): `completed_existing_stage83_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `d5e039c01fe5df8402948667eda73c7adbabb032`
 - report(보고서): `stages/84_adapter_research__v41_hybrid_sl_cooldown_followup_review/03_reviews/stage84_hybrid_sl_cooldown_followup_review.md`
 - stage84_decision(84단계 판정): `stages/84_adapter_research__v41_hybrid_sl_cooldown_followup_review/03_reviews/stage84_decision.md`
 - next_stage(다음 단계): `85_adapter_research__v41_validation_dd_compression_repair`

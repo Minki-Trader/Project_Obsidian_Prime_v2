@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `84_adapter_research__v41_hybrid_sl_cooldown_followup_review`
 - source_run(원천 실행): `run84A_stage84_v41_hybrid_sl_cooldown_followup_review_v1`
 - source_decision(원천 판정): `continue_validation_dd_compression_repair_in_stage85`
+- source_stage84_pushed_commit(원천 84단계 푸시 커밋): `d5e039c01fe5df8402948667eda73c7adbabb032`
 - source_stage84_review(원천 84단계 검토): `stages/84_adapter_research__v41_hybrid_sl_cooldown_followup_review/03_reviews/stage84_hybrid_sl_cooldown_followup_review.md`
 - source_stage83_summary(원천 83단계 요약): `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_v41_hybrid_sl_cooldown_summary.csv`
 - source_stage83_segment(원천 83단계 구간): `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_segment_kpi_summary.csv`
