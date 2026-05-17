@@ -887,3 +887,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `b487be5cc16858e44d57ce50e4b213d602a29fc1`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage85(85단계)는 risk cap(위험 상한)과 TP trim(익절 축소)의 분리 단서를 줬지만 34D KPI(34D 핵심 성과 지표)에는 아직 부족해 Stage87(87단계) 결합 수리로 넘겼다.
+## 2026-05-17 - Stage87 v41 TP/risk balance repair closeout(87단계 v41 익절/위험 균형 수리 종료)
+
+- run(실행): `run87A_stage87_v41_tp_risk_balance_repair_v1`
+- decision(판정): `continue_tp_risk_balance_followup_review_in_stage88`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage86(86단계)의 판정대로 risk cap(위험 상한)과 TP trim(익절 축소)을 결합해 validation DD(검증 손실률)와 OOS(표본외) 강점의 균형을 좁게 측정했다.
