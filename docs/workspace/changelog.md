@@ -990,6 +990,6 @@
 
 - run(실행): `run100A_stage100_v41_oos_early_context_gate_runtime_repair_v1`
 - decision(판정): `continue_context_gate_repair_or_branch_review_in_stage101`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `85d881d1b0df85768f8fb38dfe0afe6a7877a7fd`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage99(99단계)의 projection(투영)을 실제 MT5 runtime(실행환경) 수리로 측정하고 Stage101(101단계) 후속 검토로 넘겼다.

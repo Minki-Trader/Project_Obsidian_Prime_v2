@@ -14,7 +14,7 @@ Effect(효과): 투영과 실제 런타임 결과의 차이를 보존하고, 다
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/100_adapter_research__v41_oos_early_context_gate_runtime_repair/03_reviews/stage100_risk_atr_telemetry.csv`
 - gate_feature_summary(제한문 피처 요약): `stages/100_adapter_research__v41_oos_early_context_gate_runtime_repair/03_reviews/stage100_gate_feature_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `85d881d1b0df85768f8fb38dfe0afe6a7877a7fd`
 
 ## Next(다음)
 
