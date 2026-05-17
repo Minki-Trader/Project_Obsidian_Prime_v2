@@ -1025,6 +1025,6 @@
 
 - run(실행): `run105A_stage105_v41_oos_early_segment_followup_review_v1`
 - decision(판정): `continue_oos_net_density_dd_after_early_recovery_repair_in_stage106`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `10ea0d39ab4063ab9b192b99539183c6bb8ce385`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage104(104단계)는 OOS early(표본외 초반)를 회복했지만 34D KPI(34D 핵심 성과 지표) 대비 net/DD/trade density(순손익/손실률/거래 밀도)가 부족해 Stage106(106단계) 좁은 수리로 넘겼다.

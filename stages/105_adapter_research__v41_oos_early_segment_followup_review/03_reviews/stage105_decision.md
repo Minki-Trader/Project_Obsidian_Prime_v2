@@ -15,7 +15,7 @@ Effect(효과): OOS early segment(표본외 초반 구간)은 회복됐지만, 3
 - source_stage104_segment_kpi(원천 104단계 구간 KPI): `stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_segment_kpi_summary.csv`
 - best_balanced_candidate(균형 최선 후보): `s104_v41_h3_cd8_lng_early_adx19`
 - external_verification_status(외부 검증 상태): `completed_existing_stage104_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `10ea0d39ab4063ab9b192b99539183c6bb8ce385`
 
 ## Next(다음)
 
