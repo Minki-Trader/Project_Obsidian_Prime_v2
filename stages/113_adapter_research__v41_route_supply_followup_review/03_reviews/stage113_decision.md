@@ -15,7 +15,7 @@ Effect(효과): no-gate(제한문 제거)는 거래 수를 크게 열었지만 P
 - source_stage112_decision(원천 112단계 판정): `stages/112_adapter_research__v41_route_supply_density_repair/03_reviews/stage112_decision.md`
 - source_stage112_closeout_commit(원천 112단계 종료 커밋): `3adab2ed445509bc58b365ab59c0ccbf14c141a1`
 - external_verification_status(외부 검증 상태): `completed_existing_stage112_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `903b5fc4ae2abef7bcff6f61b67b59edb38d9bbf`
 
 ## Next(다음)
 
