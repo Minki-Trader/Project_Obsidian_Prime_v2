@@ -15,7 +15,7 @@ Effect(효과): 공급 증가와 PF/DD(수익 팩터/손실률) 회복 사이의
 - gate_feature_summary(게이트 피처 요약): `stages/114_adapter_research__v41_supply_quality_filter_repair/03_reviews/stage114_gate_feature_summary.csv`
 - source_stage113_closeout_commit(원천 113단계 종료 커밋): `903b5fc4ae2abef7bcff6f61b67b59edb38d9bbf`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `0d85a7466233f2c6f7f035cc597e191d5820608e`
 
 ## Next(다음)
 

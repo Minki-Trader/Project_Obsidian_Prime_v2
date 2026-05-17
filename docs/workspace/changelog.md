@@ -1088,6 +1088,6 @@
 
 - run(실행): `run114A_stage114_v41_supply_quality_filter_repair_v1`
 - decision(판정): `continue_supply_quality_filter_repair_review_in_stage115`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `0d85a7466233f2c6f7f035cc597e191d5820608e`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage112 no-gate route supply(112단계 무제한 경로 공급)에 품질 필터를 붙여 PF/DD(수익 팩터/손실률) 회복 가능성을 실제 MT5 runtime(실행환경)으로 측정하고 Stage115(115단계) 후속 검토로 넘겼다.
