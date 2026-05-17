@@ -16,6 +16,7 @@ Stage91(91단계) closed(종료) as v2-native v41 SL2.05 net recovery/OOS early 
 - run(실행): `run91A_stage91_v41_sl205_net_recovery_oos_early_repair_v1`
 - decision(판정): `continue_sl205_net_recovery_followup_review_in_stage92`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `8eacc51919b7cd1bfb675eaefcdfc6efadf65f38`
 - report(보고서): `stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_v41_sl205_net_recovery_oos_early_repair_report.md`
 - stage91_decision(91단계 판정): `stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_risk_atr_telemetry.csv`

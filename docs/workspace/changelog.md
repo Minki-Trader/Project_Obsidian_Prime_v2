@@ -923,5 +923,6 @@
 
 - run(실행): `run91A_stage91_v41_sl205_net_recovery_oos_early_repair_v1`
 - decision(판정): `continue_sl205_net_recovery_followup_review_in_stage92`
+- pushed_commit_hash(푸시된 커밋 해시): `8eacc51919b7cd1bfb675eaefcdfc6efadf65f38`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage90(90단계)의 판정대로 SL2.05(손절 2.05)의 DD(손실률) 압축을 보존하면서 validation net/PF(검증 순손익/수익 팩터)와 OOS early(표본외 초반)를 좁게 측정했다.

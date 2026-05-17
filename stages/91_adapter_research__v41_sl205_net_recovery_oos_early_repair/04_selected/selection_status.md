@@ -11,6 +11,7 @@
 - adapter_under_review(검토 중 어댑터): `s89_v41_h3_risk475_gate08_sl205_tp38_cd10`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage91_decision(91단계 판정): `continue_sl205_net_recovery_followup_review_in_stage92`
+- pushed_commit_hash(푸시된 커밋 해시): `8eacc51919b7cd1bfb675eaefcdfc6efadf65f38`
 - next_stage_or_branch(다음 단계/분기): `92_adapter_research__v41_sl205_net_recovery_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
