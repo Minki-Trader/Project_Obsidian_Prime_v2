@@ -15,7 +15,7 @@ Effect(효과): Stage100(100단계)의 개선은 보존하되, 전체 목표 완
 - source_stage100_summary(원천 100단계 요약): `stages/100_adapter_research__v41_oos_early_context_gate_runtime_repair/03_reviews/stage100_context_gate_runtime_repair_summary.csv`
 - source_stage100_segment_kpi(원천 100단계 구간 KPI): `stages/100_adapter_research__v41_oos_early_context_gate_runtime_repair/03_reviews/stage100_segment_kpi_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage100_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `30470ff25b02787f2aabfe8d78d1bf729c36bc72`
 
 ## Read(판독)
 

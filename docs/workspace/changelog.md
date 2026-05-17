@@ -997,6 +997,6 @@
 
 - run(실행): `run101A_stage101_v41_context_gate_followup_review_v1`
 - decision(판정): `continue_oos_net_density_dd_repair_in_stage102`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `30470ff25b02787f2aabfe8d78d1bf729c36bc72`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage100(100단계)의 PF(수익 팩터) 개선은 확인했지만 OOS net/DD/trade density(표본외 순손익/손실률/거래 밀도)가 34D KPI(34D 핵심 성과 지표) 목표에 부족해 Stage102(102단계) 수리로 넘겼다.
