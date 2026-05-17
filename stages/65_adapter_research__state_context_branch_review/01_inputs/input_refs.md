@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `64_adapter_research__state_context_drawdown_smoothing`
 - source_run(원천 실행): `run64A_stage64_state_context_drawdown_smoothing_v1`
 - source_decision(원천 판정): `continue_state_context_branch_repair`
+- source_stage64_pushed_commit(원천 64단계 푸시 커밋): `44384f886c89f321673f152e95ca71060e6ce936`
 - source_external_verification_status(원천 외부 검증 상태): `completed`
 - stage64_report(64단계 보고서): `stages/64_adapter_research__state_context_drawdown_smoothing/03_reviews/stage64_state_context_report.md`
 - stage64_decision(64단계 판정): `stages/64_adapter_research__state_context_drawdown_smoothing/03_reviews/stage64_decision.md`

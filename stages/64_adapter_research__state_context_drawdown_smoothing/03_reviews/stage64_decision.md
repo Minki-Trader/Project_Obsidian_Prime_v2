@@ -1,6 +1,7 @@
 ﻿# Stage64 Decision(64단계 판정)
 
 decision(판정): `continue_state_context_branch_repair`
+pushed_commit_hash(푸시된 커밋 해시): `44384f886c89f321673f152e95ca71060e6ce936`
 
 Stage64(64단계)는 legacy 34D(레거시 34D)를 복사하지 않고, Stage63(63단계) 후보의 OOS DD(표본외 손실률)를 state/context gate(상태/문맥 게이트)로 낮출 수 있는지 측정했다.
 
