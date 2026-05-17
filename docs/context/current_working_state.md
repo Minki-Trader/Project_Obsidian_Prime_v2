@@ -16,6 +16,7 @@ Stage95(95단계) closed(종료) as v2-native v41 OOS early entry gate repair ba
 - run(실행): `run95A_stage95_v41_oos_early_entry_gate_repair_v1`
 - decision(판정): `continue_oos_early_entry_gate_followup_review_in_stage96`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `27461266f831aae497c540ccf50f0d264e31fdbd`
 - report(보고서): `stages/95_adapter_research__v41_oos_early_entry_gate_repair/03_reviews/stage95_v41_oos_early_entry_gate_repair_report.md`
 - stage95_decision(95단계 판정): `stages/95_adapter_research__v41_oos_early_entry_gate_repair/03_reviews/stage95_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/95_adapter_research__v41_oos_early_entry_gate_repair/03_reviews/stage95_risk_atr_telemetry.csv`

@@ -953,5 +953,6 @@
 
 - run(실행): `run95A_stage95_v41_oos_early_entry_gate_repair_v1`
 - decision(판정): `continue_oos_early_entry_gate_followup_review_in_stage96`
+- pushed_commit_hash(푸시된 커밋 해시): `27461266f831aae497c540ccf50f0d264e31fdbd`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage94(94단계)의 판정대로 entry gate/confidence threshold(진입 게이트/신뢰도 문턱)를 좁게 바꿔 OOS early flatline risk(표본외 초반 평탄화 위험)를 측정했다.

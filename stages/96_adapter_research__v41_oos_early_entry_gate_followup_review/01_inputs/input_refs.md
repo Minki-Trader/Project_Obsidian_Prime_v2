@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `95_adapter_research__v41_oos_early_entry_gate_repair`
 - source_run(원천 실행): `run95A_stage95_v41_oos_early_entry_gate_repair_v1`
 - source_decision(원천 판정): `continue_oos_early_entry_gate_followup_review_in_stage96`
+- source_stage95_pushed_commit(원천 95단계 푸시 커밋): `27461266f831aae497c540ccf50f0d264e31fdbd`
 - source_external_verification_status(원천 외부 검증 상태): `completed`
 - stage95_report(95단계 보고서): `stages/95_adapter_research__v41_oos_early_entry_gate_repair/03_reviews/stage95_v41_oos_early_entry_gate_repair_report.md`
 - stage95_decision(95단계 판정): `stages/95_adapter_research__v41_oos_early_entry_gate_repair/03_reviews/stage95_decision.md`
