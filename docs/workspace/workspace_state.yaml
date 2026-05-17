@@ -1,8 +1,8 @@
-﻿current_run_id: run113A_stage113_v41_route_supply_followup_review_v1
+﻿current_run_id: run114A_stage114_v41_supply_quality_filter_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 113_adapter_research__v41_route_supply_followup_review
+active_stage: 114_adapter_research__v41_supply_quality_filter_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage112(112단계) closed(종료) as `continue_route_supply_repair_review_in_stage113` and Stage113(113단계) `113_adapter_research__v41_route_supply_followup_review` is open_planned(열림 계획). Effect(효과): route supply/session-side coverage(경로 공급/세션-방향 커버리지) 수리 결과를 후속 검토로 넘긴다.
+  Stage113(113단계) closed(종료) as `continue_supply_quality_filter_repair_in_stage114` and Stage114(114단계) `114_adapter_research__v41_supply_quality_filter_repair` is open_planned(열림 계획). Effect(효과): raw supply(원시 공급)는 열렸지만 품질 손상이 커서 supply quality filter(공급 품질 필터) 수리로 넘긴다.
 - >-
-  Stage112 result(112단계 결과)는 `stages/112_adapter_research__v41_route_supply_density_repair/03_reviews/stage112_route_supply_density_summary.csv`와 `stages/112_adapter_research__v41_route_supply_density_repair/03_reviews/stage112_segment_kpi_summary.csv`에 기록했다. Effect(효과): 34D KPI(34D 핵심 성과 지표) 대비 거래 수·순손익·손실률 격차를 다음 단계 입력으로 보존한다.
+  Stage113 result(113단계 결과)는 `stages/113_adapter_research__v41_route_supply_followup_review/03_reviews/stage113_stage110_stage112_34d_comparison.csv`와 `stages/113_adapter_research__v41_route_supply_followup_review/03_reviews/stage113_route_supply_tradeoff_summary.csv`에 기록했다. Effect(효과): 공급 증가와 PF/DD(수익 팩터/손실률) 손상 사이의 상충을 다음 단계 입력으로 고정한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5624,4 +5624,23 @@ stage112_v41_route_supply_density_repair:
   packet_summary_path: docs/agent_control/packets/stage112_v41_route_supply_density_repair_v1/aggregate_summary.json
   external_verification_status: completed
   pushed_commit_hash: 3adab2ed445509bc58b365ab59c0ccbf14c141a1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage113_v41_route_supply_followup_review:
+  packet_id: stage113_v41_route_supply_followup_review_v1
+  stage_id: 113_adapter_research__v41_route_supply_followup_review
+  status: closed_continue_supply_quality_filter_repair_in_stage114
+  current_run_id: run113A_stage113_v41_route_supply_followup_review_v1
+  source_stage112_closeout_commit: 3adab2ed445509bc58b365ab59c0ccbf14c141a1
+  source_stage112_latest_commit: defeb9257037327717105cac64b509ccf690e073
+  source_stage111_latest_commit: 04d5712ca953ef5799d1ed6d6914adc0dc5c5bf7
+  source_stage110_latest_commit: c702502f01e2ef0e9a17d2ac9ec86b6108a82d04
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_supply_quality_filter_repair_in_stage114
+  next_stage_or_branch: 114_adapter_research__v41_supply_quality_filter_repair
+  report_path: stages/113_adapter_research__v41_route_supply_followup_review/03_reviews/stage113_route_supply_followup_review.md
+  decision_path: stages/113_adapter_research__v41_route_supply_followup_review/03_reviews/stage113_decision.md
+  packet_summary_path: docs/agent_control/packets/stage113_v41_route_supply_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage112_mt5_runtime_evidence_reviewed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

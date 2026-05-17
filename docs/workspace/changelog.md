@@ -1077,3 +1077,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `3adab2ed445509bc58b365ab59c0ccbf14c141a1`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): long early ADX block(롱 초반 ADX 차단)과 side filter(방향 필터)를 좁게 풀어 거래 공급이 열리는지 실제 MT5 runtime(실행환경)으로 측정하고 Stage113(113단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage113 v41 route supply follow-up review closeout(113단계 v41 경로 공급 후속 검토 종료)
+
+- run(실행): `run113A_stage113_v41_route_supply_followup_review_v1`
+- decision(판정): `continue_supply_quality_filter_repair_in_stage114`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage112(112단계)는 거래 공급을 열었지만 PF/DD(수익 팩터/손실률)를 손상했으므로 Stage114(114단계) supply quality filter repair(공급 품질 필터 수리)로 넘겼다.
