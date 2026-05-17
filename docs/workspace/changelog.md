@@ -989,7 +989,14 @@
 ## 2026-05-18 - Stage100 v41 OOS early context gate runtime repair closeout(100단계 v41 표본외 초반 문맥 제한문 실행환경 수리 종료)
 
 - run(실행): `run100A_stage100_v41_oos_early_context_gate_runtime_repair_v1`
-- decision(판정): `continue_context_gate_repair_or_branch_review_in_stage101`
+- decision(판정): `continue_context_gate_followup_review_in_stage101`
 - pushed_commit_hash(푸시된 커밋 해시): `85d881d1b0df85768f8fb38dfe0afe6a7877a7fd`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage99(99단계)의 projection(투영)을 실제 MT5 runtime(실행환경) 수리로 측정하고 Stage101(101단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage101 v41 context gate follow-up review closeout(101단계 v41 문맥 제한문 후속 검토 종료)
+
+- run(실행): `run101A_stage101_v41_context_gate_followup_review_v1`
+- decision(판정): `continue_oos_net_density_dd_repair_in_stage102`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage100(100단계)의 PF(수익 팩터) 개선은 확인했지만 OOS net/DD/trade density(표본외 순손익/손실률/거래 밀도)가 34D KPI(34D 핵심 성과 지표) 목표에 부족해 Stage102(102단계) 수리로 넘겼다.
