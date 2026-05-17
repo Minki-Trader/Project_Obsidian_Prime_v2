@@ -15,6 +15,7 @@ Effect(효과): 이번 단계 결과는 operating claim(운영 주장)이 아니
 - gate_feature_summary(게이트 피처 요약): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_gate_feature_summary.csv`
 - tier_b_diagnostic(Tier B 진단): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_tier_b_diagnostic_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `025fbbdb0f1cc03bd0afb5705ca4e6f4db720a57`
 
 ## Next(다음)
 

@@ -16,6 +16,7 @@ Stage87(87단계) closed(종료) as v2-native v41 TP/risk balance repair batch(�
 - run(실행): `run87A_stage87_v41_tp_risk_balance_repair_v1`
 - decision(판정): `continue_tp_risk_balance_followup_review_in_stage88`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `025fbbdb0f1cc03bd0afb5705ca4e6f4db720a57`
 - report(보고서): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_v41_tp_risk_balance_report.md`
 - stage87_decision(87단계 판정): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_risk_atr_telemetry.csv`

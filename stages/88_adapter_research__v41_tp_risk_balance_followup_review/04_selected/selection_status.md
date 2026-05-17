@@ -5,6 +5,7 @@
 - current_run(현재 실행): `run88A_stage88_v41_tp_risk_balance_followup_review_v1`
 - source_stage(원천 단계): `87_adapter_research__v41_tp_risk_balance_repair`
 - source_decision(원천 판정): `continue_tp_risk_balance_followup_review_in_stage88`
+- source_stage87_pushed_commit(원천 87단계 푸시 커밋): `025fbbdb0f1cc03bd0afb5705ca4e6f4db720a57`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

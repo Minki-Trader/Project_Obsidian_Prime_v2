@@ -891,5 +891,6 @@
 
 - run(실행): `run87A_stage87_v41_tp_risk_balance_repair_v1`
 - decision(판정): `continue_tp_risk_balance_followup_review_in_stage88`
+- pushed_commit_hash(푸시된 커밋 해시): `025fbbdb0f1cc03bd0afb5705ca4e6f4db720a57`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage86(86단계)의 판정대로 risk cap(위험 상한)과 TP trim(익절 축소)을 결합해 validation DD(검증 손실률)와 OOS(표본외) 강점의 균형을 좁게 측정했다.

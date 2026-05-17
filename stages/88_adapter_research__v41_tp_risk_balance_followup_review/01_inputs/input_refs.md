@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `87_adapter_research__v41_tp_risk_balance_repair`
 - source_run(원천 실행): `run87A_stage87_v41_tp_risk_balance_repair_v1`
 - source_decision(원천 판정): `continue_tp_risk_balance_followup_review_in_stage88`
+- source_stage87_pushed_commit(원천 87단계 푸시 커밋): `025fbbdb0f1cc03bd0afb5705ca4e6f4db720a57`
 - source_external_verification_status(원천 외부 검증 상태): `completed`
 - stage87_report(87단계 보고서): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_v41_tp_risk_balance_report.md`
 - stage87_decision(87단계 판정): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_decision.md`
