@@ -1123,6 +1123,6 @@
 
 - run(실행): `run119A_stage119_v41_dd_compression_followup_review_v1`
 - decision(판정): `continue_post_dd_density_expansion_repair_in_stage120`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `83fb1a83b27a60a7953c88259a2655ceec772c42`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage118(118단계)의 위험 상한 축소 결과를 판독해 0.035 risk cap(위험 상한 3.5%)을 DD guardrail(손실률 가드레일)로 보존하고 Stage120(120단계) density expansion repair(밀도 확장 수리)로 넘겼다.

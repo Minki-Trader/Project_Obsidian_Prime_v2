@@ -16,7 +16,7 @@ Effect(효과): risk cap 0.035(위험 상한 3.5%)는 PF/net(수익 팩터/순�
 - source_stage118_closeout_commit(원천 118단계 종료 커밋): `1edf5a69757ae2e58bfcf0e4126b325d291170af`
 - source_stage118_latest_commit(원천 118단계 최신 커밋): `d643def47022c81f86847fc802973370ccdeb2db`
 - external_verification_status(외부 검증 상태): `completed_existing_stage118_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `83fb1a83b27a60a7953c88259a2655ceec772c42`
 
 ## Next(다음)
 
