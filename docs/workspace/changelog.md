@@ -858,3 +858,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `1bb8a999aa8aeb0409e68c6672ea4985b47444e5`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage81(81단계)의 `cd12` OOS PF/net(표본외 수익 팩터/순손익) 강점과 `SL2.25` OOS early(표본외 초반) 개선 단서를 결합하는 Stage83(83단계)로 넘겼다.
+## 2026-05-17 - Stage83 v41 hybrid SL/cooldown repair closeout(83단계 v41 손절/재진입 냉각 혼합 수리 종료)
+
+- run(실행): `run83A_stage83_v41_hybrid_sl_cooldown_repair_v1`
+- decision(판정): `continue_hybrid_sl_cooldown_review_in_stage84`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage82(82단계)의 판정대로 SL2.25/cooldown hybrid(손절 2.25/재진입 냉각 혼합)를 좁게 측정해 OOS early(표본외 초반)와 DD(손실률) 수리 가능성을 확인했다.
