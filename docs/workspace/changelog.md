@@ -739,5 +739,6 @@
 
 - run(실행): `run66A_stage66_soft_gate_kpi_repair_v1`
 - decision(판정): `continue_net_scale_repair_in_stage67`
+- pushed_commit_hash(푸시된 커밋 해시): `3ef3643433a0d3fb4dae6368a44643abb73be20f`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage65(65단계)의 short-only margin gate(숏 전용 마진 게이트)를 위험/보유 경계 안에서 압박해, 순손익 확대 가능성과 손실률 훼손 여부를 측정했다.

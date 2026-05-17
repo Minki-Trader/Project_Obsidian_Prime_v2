@@ -15,6 +15,7 @@ Stage66(66단계) closed(종료) as v2-native short-gate net scaling batch(브�
 
 - run(실행): `run66A_stage66_soft_gate_kpi_repair_v1`
 - decision(판정): `continue_net_scale_repair_in_stage67`
+- pushed_commit_hash(푸시된 커밋 해시): `3ef3643433a0d3fb4dae6368a44643abb73be20f`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/66_adapter_research__soft_gate_kpi_repair/03_reviews/stage66_soft_gate_kpi_report.md`
 - stage66_decision(66단계 판정): `stages/66_adapter_research__soft_gate_kpi_repair/03_reviews/stage66_decision.md`

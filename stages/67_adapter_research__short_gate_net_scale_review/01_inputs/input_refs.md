@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `66_adapter_research__soft_gate_kpi_repair`
 - source_run(원천 실행): `run66A_stage66_soft_gate_kpi_repair_v1`
 - source_decision(원천 판정): `continue_net_scale_repair_in_stage67`
+- source_stage66_pushed_commit(원천 66단계 푸시 커밋): `3ef3643433a0d3fb4dae6368a44643abb73be20f`
 - source_external_verification_status(원천 외부 검증 상태): `completed`
 - stage66_report(66단계 보고서): `stages/66_adapter_research__soft_gate_kpi_repair/03_reviews/stage66_soft_gate_kpi_report.md`
 - stage66_decision(66단계 판정): `stages/66_adapter_research__soft_gate_kpi_repair/03_reviews/stage66_decision.md`
