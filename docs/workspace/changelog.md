@@ -756,3 +756,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `7ebe1fcfb05fbcd9df60007ca5b8050230a4d0f3`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage67(67단계)의 balanced candidate(균형 후보)를 유지하고 risk cap(위험 상한)과 cooldown(냉각)을 좁게 비교해, 검증 손실률을 낮추면서 표본외 순손익을 유지할 수 있는지 측정했다.
+## 2026-05-17 - Stage69 branch/candidate review closeout(69단계 분기/후보 검토 종료)
+
+- run(실행): `run69A_stage69_branch_or_candidate_review_v1`
+- decision(판정): `open_new_model_branch_in_stage70`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage66-68(66-68단계) short-gate branch(숏 게이트 분기)의 KPI(핵심 성과 지표) 한계를 검토하고, 새 model branch(모델 분기)로 넘겼다.
