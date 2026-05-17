@@ -3,7 +3,7 @@
 - source_stage(원천 단계): `72_adapter_research__v41_source_repair_review`
 - source_run(원천 실행): `run72A_stage72_v41_source_repair_review_v1`
 - source_decision(원천 판정): `continue_v41_gate_repair_in_stage73`
-- source_stage72_pushed_commit(원천 72단계 푸시 커밋): `efe929c8118d147bbfae6b977bf0845231303df7`
+- source_stage72_pushed_commit(원천 72단계 푸시 커밋): `51bdf7f69e92f596610fff6c626ac48e33f22e9f`
 - source_external_verification_status(원천 외부 검증 상태): `completed`
 - stage72_report(72단계 보고서): `stages/72_adapter_research__v41_source_repair_review/03_reviews/stage72_v41_gate_repair_report.md`
 - stage72_decision(72단계 판정): `stages/72_adapter_research__v41_source_repair_review/03_reviews/stage72_decision.md`

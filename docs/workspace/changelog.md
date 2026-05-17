@@ -784,3 +784,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `efe929c8118d147bbfae6b977bf0845231303df7`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage71(71단계)의 v41 short gate(브이41 숏 게이트)를 0.04/0.06 임계값으로 완화해 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
+## 2026-05-17 - Stage73 v41 TP/risk follow-up closeout(73단계 v41 익절 폭/위험 후속 종료)
+
+- run(실행): `run73A_stage73_v41_gate_repair_followup_v1`
+- decision(판정): `continue_v41_tp_risk_repair_in_stage74`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage71(71단계)의 0.08 short gate(숏 게이트)를 복원하고 risk cap(위험 상한)과 TP(take profit, 익절 폭)를 좁게 바꿔 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
