@@ -931,5 +931,6 @@
 
 - run(실행): `run92A_stage92_v41_sl205_net_recovery_followup_review_v1`
 - decision(판정): `continue_sl210_tp40_oos_early_recovery_repair_in_stage93`
+- pushed_commit_hash(푸시된 커밋 해시): `82efcbd8ec102d31401f186b400de6c956e4aeda`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage91(91단계)의 validation recovery(검증 회복)와 OOS early(표본외 초반) 단서를 분리해 Stage93(93단계)의 `sl210_tp40/sl210_tp39/sl2075_tp40` 조합 수리로 넘겼다.

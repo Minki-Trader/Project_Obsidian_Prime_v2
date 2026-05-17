@@ -16,6 +16,7 @@ Stage92(92단계) closed(종료) as SL2.05 net recovery follow-up review(손절 
 - run(실행): `run92A_stage92_v41_sl205_net_recovery_followup_review_v1`
 - decision(판정): `continue_sl210_tp40_oos_early_recovery_repair_in_stage93`
 - external_verification_status(외부 검증 상태): `completed_existing_stage91_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `82efcbd8ec102d31401f186b400de6c956e4aeda`
 - review_report(검토 보고서): `stages/92_adapter_research__v41_sl205_net_recovery_followup_review/03_reviews/stage92_sl205_net_recovery_followup_review.md`
 - stage92_decision(92단계 판정): `stages/92_adapter_research__v41_sl205_net_recovery_followup_review/03_reviews/stage92_decision.md`
 - comparison_csv(비교 CSV): `stages/92_adapter_research__v41_sl205_net_recovery_followup_review/03_reviews/stage92_stage89_stage91_comparison.csv`

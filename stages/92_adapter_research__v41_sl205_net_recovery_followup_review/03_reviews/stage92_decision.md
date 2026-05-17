@@ -14,6 +14,7 @@ Effect(효과): SL2.10(손절 2.10)의 validation recovery(검증 회복) 단서
 - source_stage91_summary(원천 91단계 요약): `stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_v41_sl205_net_recovery_oos_early_repair_summary.csv`
 - source_stage91_segment(원천 91단계 구간): `stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_segment_kpi_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage91_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `82efcbd8ec102d31401f186b400de6c956e4aeda`
 
 ## Next(다음)
 

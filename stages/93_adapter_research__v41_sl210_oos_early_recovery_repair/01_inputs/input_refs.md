@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `92_adapter_research__v41_sl205_net_recovery_followup_review`
 - source_run(원천 실행): `run92A_stage92_v41_sl205_net_recovery_followup_review_v1`
 - source_decision(원천 판정): `continue_sl210_tp40_oos_early_recovery_repair_in_stage93`
+- source_stage92_pushed_commit(원천 92단계 푸시 커밋): `82efcbd8ec102d31401f186b400de6c956e4aeda`
 - source_stage91_closeout_commit(원천 91단계 종료 커밋): `8eacc51919b7cd1bfb675eaefcdfc6efadf65f38`
 - source_stage91_latest_commit(원천 91단계 최신 커밋): `fe792bfadabc91b41c23a7e54a95f4026053cc2d`
 - stage92_review(92단계 검토): `stages/92_adapter_research__v41_sl205_net_recovery_followup_review/03_reviews/stage92_sl205_net_recovery_followup_review.md`
