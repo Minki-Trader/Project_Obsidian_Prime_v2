@@ -1,0 +1,62 @@
+{
+  "alternative_explanations": [
+    "feature/runtime gate may differ from post-trade projection",
+    "blocked trades may alter later same-direction cooldown availability",
+    "OOS full net remains below 34D latest target surface"
+  ],
+  "attribution_confidence": "medium_projection_only",
+  "attribution_path": "stages/99_adapter_research__v41_oos_early_side_session_context_repair/03_reviews/stage99_side_session_context_attribution.csv",
+  "best_projection": {
+    "oos": {
+      "adapter_id": "s97_v41_h3_risk475_gate08_sl2075_tp40_cd8",
+      "adapter_short": "CD8",
+      "baseline_drawdown_amount": "172.47",
+      "baseline_early_net": "-1.95",
+      "baseline_early_profit_factor": "0.993590",
+      "baseline_net": "495.51",
+      "baseline_profit_factor": "1.440790",
+      "baseline_trade_count": 166,
+      "candidate_gate": "long_early_mid_range_adxlt20",
+      "projected_drawdown_amount": "184.04",
+      "projected_early_delta": "50.70",
+      "projected_early_net": "48.75",
+      "projected_early_profit_factor": "1.216273",
+      "projected_net": "522.94",
+      "projected_net_delta": "27.43",
+      "projected_profit_factor": "1.571732",
+      "projected_trade_count": 136,
+      "removed_count": 30,
+      "removed_net": "-27.43",
+      "split": "oos",
+      "stage99_read": "best_oos_early_repair_projection_runtime_required"
+    },
+    "validation_is": {
+      "adapter_id": "s97_v41_h3_risk475_gate08_sl2075_tp40_cd8",
+      "adapter_short": "CD8",
+      "baseline_drawdown_amount": "303.01",
+      "baseline_early_net": "265.00",
+      "baseline_early_profit_factor": "1.606213",
+      "baseline_net": "1000.47",
+      "baseline_profit_factor": "1.526123",
+      "baseline_trade_count": 209,
+      "candidate_gate": "long_early_mid_range_adxlt20",
+      "projected_drawdown_amount": "213.94",
+      "projected_early_delta": "25.52",
+      "projected_early_net": "290.52",
+      "projected_early_profit_factor": "1.940986",
+      "projected_net": "1149.28",
+      "projected_net_delta": "148.81",
+      "projected_profit_factor": "1.784459",
+      "projected_trade_count": 175,
+      "removed_count": 34,
+      "removed_net": "-148.81",
+      "split": "validation_is",
+      "stage99_read": "improves_early_without_full_net_damage_projection"
+    }
+  },
+  "packet_id": "stage99_v41_oos_early_side_session_context_repair_v1",
+  "projection_path": "stages/99_adapter_research__v41_oos_early_side_session_context_repair/03_reviews/stage99_context_gate_projection.csv",
+  "run_id": "run99A_stage99_v41_oos_early_side_session_context_repair_v1",
+  "selected_adapter": "s97_v41_h3_risk475_gate08_sl2075_tp40_cd8",
+  "selected_projection": "long_early_mid_range_adxlt20"
+}

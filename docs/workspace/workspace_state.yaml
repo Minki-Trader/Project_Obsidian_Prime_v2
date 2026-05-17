@@ -1,8 +1,8 @@
-﻿current_run_id: run99A_stage99_v41_oos_early_side_session_context_repair_v1
+﻿current_run_id: run100A_stage100_v41_oos_early_context_gate_runtime_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 99_adapter_research__v41_oos_early_side_session_context_repair
+active_stage: 100_adapter_research__v41_oos_early_context_gate_runtime_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage98(98단계) closed(종료) as `continue_oos_early_side_session_context_repair_in_stage99` and Stage99(99단계) `99_adapter_research__v41_oos_early_side_session_context_repair` is open_planned(열림 계획). Effect(효과): lifecycle-only repair(생명주기 단독 수리) 실패와 단서를 보존하고 side/session/context(방향/세션/문맥) 경계 수리로 넘긴다.
+  Stage99(99단계) closed(종료) as `continue_context_gate_runtime_repair_in_stage100` and Stage100(100단계) `100_adapter_research__v41_oos_early_context_gate_runtime_repair` is open_planned(열림 계획). Effect(효과): side/session/context projection(방향/세션/문맥 투영)을 실제 context gate runtime repair(문맥 제한문 실행환경 수리)로 넘긴다.
 - >-
-  Stage98 result(98단계 결과): Stage97(97단계) H2(2봉 보유)는 OOS early(표본외 초반)를 조금 개선했지만 validation(검증)을 훼손했고, H4/CD8(4봉 보유/8봉 쿨다운)은 OOS early(표본외 초반)를 고치지 못했다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage99 result(99단계 결과): `long_early_mid_range_adxlt20` projection(투영)이 CD8(8봉 쿨다운)의 OOS early(표본외 초반)를 개선할 가능성을 보였다. Effect(효과): 다음 단계는 새 최적화가 아니라 이 조건의 실제 MT5 검증/표본외 측정이다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -3801,7 +3801,6 @@ stage57_equity_segment_kpi_audit_gate:
   packet_summary_path: docs/agent_control/packets/stage57_equity_segment_kpi_audit_gate_v1/aggregate_summary.json
   external_verification_status: completed_existing_mt5_onnx_runtime_reports
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
-
 stage58_bounded_repair_before_atr_risk:
   stage_id: 58_adapter_risk__bounded_repair_before_atr_risk_integration
   status: active_planned_from_stage57
@@ -5354,4 +5353,25 @@ stage98_v41_oos_early_lifecycle_followup_review:
   packet_summary_path: docs/agent_control/packets/stage98_v41_oos_early_lifecycle_followup_review_v1/aggregate_summary.json
   external_verification_status: completed_existing_stage97_evidence_reviewed
   pushed_commit_hash: 53522bfca9f6f989bba21ba19c5b67cc24cffc6e
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage99_v41_oos_early_side_session_context_repair:
+  packet_id: stage99_v41_oos_early_side_session_context_repair_v1
+  stage_id: 99_adapter_research__v41_oos_early_side_session_context_repair
+  status: closed_continue_context_gate_runtime_repair_in_stage100
+  current_run_id: run99A_stage99_v41_oos_early_side_session_context_repair_v1
+  source_stage98_closeout_commit: 53522bfca9f6f989bba21ba19c5b67cc24cffc6e
+  source_stage98_latest_commit: bb6057cd47273fcd5ec4b2a86bce4258949e8da5
+  source_stage97_closeout_commit: beeb81ebc58ea4492a0fbe015dab3b1ba9f5cbd6
+  source_stage97_latest_commit: 5154e76f306a4621b7bb11ee0cd1bfc4014d170a
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  selected_projection: long_early_mid_range_adxlt20
+  selected_adapter: s97_v41_h3_risk475_gate08_sl2075_tp40_cd8
+  decision: continue_context_gate_runtime_repair_in_stage100
+  next_stage_or_branch: 100_adapter_research__v41_oos_early_context_gate_runtime_repair
+  report_path: stages/99_adapter_research__v41_oos_early_side_session_context_repair/03_reviews/stage99_oos_early_side_session_context_report.md
+  decision_path: stages/99_adapter_research__v41_oos_early_side_session_context_repair/03_reviews/stage99_decision.md
+  packet_summary_path: docs/agent_control/packets/stage99_v41_oos_early_side_session_context_repair_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage97_mt5_trade_attribution
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

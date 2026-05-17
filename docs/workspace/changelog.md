@@ -978,3 +978,11 @@
 - pushed_commit_hash(푸시된 커밋 해시): `53522bfca9f6f989bba21ba19c5b67cc24cffc6e`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage97(97단계)의 lifecycle/hold/re-entry(생명주기/보유/재진입) 수리가 34D KPI(34D 핵심 성과 지표) 목표에 아직 부족하다고 판정하고 Stage99(99단계) side/session/context repair(방향/세션/문맥 수리)로 넘겼다.
+## 2026-05-18 - Stage99 v41 OOS early side/session/context projection closeout(99단계 v41 표본외 초반 방향/세션/문맥 투영 종료)
+
+- run(실행): `run99A_stage99_v41_oos_early_side_session_context_repair_v1`
+- decision(판정): `continue_context_gate_runtime_repair_in_stage100`
+- selected_gate(선택 제한문): `long_early_mid_range_adxlt20`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage99(99단계)는 CD8(8봉 쿨다운)의 OOS early(표본외 초반) 약점을 문맥 조건으로 좁혔고, Stage100(100단계) 실제 실행환경 수리로 넘겼다.
