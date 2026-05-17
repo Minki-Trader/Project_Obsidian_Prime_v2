@@ -16,7 +16,7 @@ Effect(효과): Stage106(106단계)은 OOS net/PF/early(표본외 순손익/수�
 - net_pf_best(순손익/수익 팩터 최선): `s106_v41_h3_cd9_lng_early_adx19`
 - dd_best(손실률 최선): `s106_v41_h4_cd8_lng_early_adx19`
 - external_verification_status(외부 검증 상태): `completed_existing_stage106_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `6af2f17a497baacff8f1ad4089c97a36bad95398`
 
 ## Next(다음)
 

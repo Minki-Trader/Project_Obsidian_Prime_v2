@@ -1039,6 +1039,6 @@
 
 - run(실행): `run107A_stage107_v41_oos_net_density_dd_followup_review_v1`
 - decision(판정): `continue_dd_control_after_net_early_recovery_repair_in_stage108`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `6af2f17a497baacff8f1ad4089c97a36bad95398`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage106(106단계)은 OOS net/PF/early(표본외 순손익/수익 팩터/초반)를 개선했지만 DD/trade density/net scale(손실률/거래 밀도/순손익 규모)이 34D KPI(34D 핵심 성과 지표)에 부족해 Stage108(108단계) DD 제어 수리로 넘겼다.
