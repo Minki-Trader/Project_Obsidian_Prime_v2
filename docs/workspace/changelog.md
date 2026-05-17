@@ -1067,6 +1067,6 @@
 
 - run(실행): `run111A_stage111_v41_trade_density_followup_review_v1`
 - decision(판정): `continue_route_supply_density_repair_in_stage112`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `078f149a99a9817579533e83c2c2e56f155df5f7`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage110(110단계) threshold/session gate easing(임계값/세션 제한문 완화)이 거래 수를 최대 +5개만 늘려 34D KPI(34D 핵심 성과 지표) 격차를 충분히 줄이지 못했으므로 Stage112(112단계) route supply density repair(경로 공급 거래 밀도 수리)로 넘겼다.

@@ -15,7 +15,7 @@ Effect(효과): threshold/session gate easing(임계값/세션 제한문 완화)
 - source_stage110_decision(원천 110단계 판정): `stages/110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair/03_reviews/stage110_decision.md`
 - source_stage110_closeout_commit(원천 110단계 종료 커밋): `acbdc3236a7b26696eba3a6a9b87c808789e8a24`
 - external_verification_status(외부 검증 상태): `completed_existing_stage110_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `078f149a99a9817579533e83c2c2e56f155df5f7`
 
 ## Next(다음)
 
