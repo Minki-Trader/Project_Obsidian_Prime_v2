@@ -894,3 +894,11 @@
 - pushed_commit_hash(푸시된 커밋 해시): `025fbbdb0f1cc03bd0afb5705ca4e6f4db720a57`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage86(86단계)의 판정대로 risk cap(위험 상한)과 TP trim(익절 축소)을 결합해 validation DD(검증 손실률)와 OOS(표본외) 강점의 균형을 좁게 측정했다.
+## 2026-05-17 - Stage88 TP/risk balance follow-up review closeout(88단계 익절/위험 균형 후속 검토 종료)
+
+- run(실행): `run88A_stage88_v41_tp_risk_balance_followup_review_v1`
+- decision(판정): `continue_drawdown_and_oos_early_repair_in_stage89`
+- source_stage87_latest_commit(원천 87단계 최신 커밋): `8d4ae045c08abdbfa6742d945a22f706dc9890a6`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage87 best(87단계 최선안)는 Stage83 CD10(83단계 CD10)보다 좋아졌지만 DD(손실률)와 OOS early(표본외 초반)가 아직 부족해 Stage89(89단계) 수리로 넘겼다.

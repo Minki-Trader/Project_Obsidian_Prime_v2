@@ -1,25 +1,29 @@
-﻿# Current Working State(현재 작업 상태)
+﻿# Current Working State(?꾩옱 ?묒뾽 ?곹깭)
 
-- current_packet(현재 작업 묶음): `stage88_v41_tp_risk_balance_followup_review_v1`
-- current_run(현재 실행): `run88A_stage88_v41_tp_risk_balance_followup_review_v1`
-- active_stage(활성 단계): `88_adapter_research__v41_tp_risk_balance_followup_review`
-- selected_research_baseline(선택 연구 기준): `research_package_only_reference_surface`
-- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
-- adapter_under_review(검토 중 어댑터): `stage79_v41_atr_stop_lifecycle_surface`
-- status(상태): `stage87_closed_continue_tp_risk_balance_followup_review_in_stage88`
-- claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
+- current_packet(?꾩옱 ?묒뾽 臾띠쓬): `stage89_v41_drawdown_oos_early_repair_v1`
+- current_run(?꾩옱 ?ㅽ뻾): `run89A_stage89_v41_drawdown_oos_early_repair_v1`
+- active_stage(?쒖꽦 ?④퀎): `89_adapter_research__v41_drawdown_and_oos_early_repair`
+- selected_research_baseline(?좏깮 ?곌뎄 湲곗?): `research_package_only_reference_surface`
+- target_surface(紐⑺몴 ?쒕㈃): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- adapter_under_review(寃??以??대뙌??: `s87_v41_h3_risk475_gate08_sl215_tp38_cd10`
+- status(?곹깭): `stage88_closed_continue_drawdown_and_oos_early_repair_in_stage89`
+- claim_boundary(二쇱옣 寃쎄퀎): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
-Stage87(87단계) closed(종료) as v2-native v41 TP/risk balance repair batch(브이투 고유 브이41 익절/위험 균형 수리 묶음). Effect(효과): legacy 34D(레거시 34D)는 target surface(목표 표면)로만 쓰였고, 다음 연구는 Stage88(88단계)로 이어진다.
+Stage88(88?④퀎) closed(醫낅즺) as a TP/risk balance follow-up review(?듭젅/?꾪뿕 洹좏삎 ?꾩냽 寃??. Effect(?④낵): Stage87 best(87?④퀎 理쒖꽑????Stage83 CD10(83?④퀎 CD10)蹂대떎 媛뺥븯吏留?34D target surface(34D 紐⑺몴 ?쒕㈃)??DD(?먯떎瑜?? OOS early(?쒕낯??珥덈컲) ?덉젙?깆뿉??遺議깊빐 Stage89(89?④퀎)濡??댁뼱吏꾨떎.
 
-## Latest Stage87 Evidence(최신 87단계 근거)
+## Latest Stage88 Evidence(理쒖떊 88?④퀎 洹쇨굅)
 
-- run(실행): `run87A_stage87_v41_tp_risk_balance_repair_v1`
-- decision(판정): `continue_tp_risk_balance_followup_review_in_stage88`
-- external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `025fbbdb0f1cc03bd0afb5705ca4e6f4db720a57`
-- report(보고서): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_v41_tp_risk_balance_report.md`
-- stage87_decision(87단계 판정): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_decision.md`
-- risk_atr_telemetry(위험/ATR 텔레메트리): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_risk_atr_telemetry.csv`
-- gate_feature_summary(게이트 피처 요약): `stages/87_adapter_research__v41_tp_risk_balance_repair/03_reviews/stage87_gate_feature_summary.csv`
+- run(?ㅽ뻾): `run88A_stage88_v41_tp_risk_balance_followup_review_v1`
+- decision(?먯젙): `continue_drawdown_and_oos_early_repair_in_stage89`
+- external_verification_status(?몃? 寃利??곹깭): `completed_existing_stage87_evidence_reviewed`
+- pushed_commit_hash(?몄떆??而ㅻ컠 ?댁떆): `pending_push_hash`
+- review_report(寃??蹂닿퀬??: `stages/88_adapter_research__v41_tp_risk_balance_followup_review/03_reviews/stage88_tp_risk_balance_followup_review.md`
+- stage88_decision(88?④퀎 ?먯젙): `stages/88_adapter_research__v41_tp_risk_balance_followup_review/03_reviews/stage88_decision.md`
+- comparison_csv(鍮꾧탳 CSV): `stages/88_adapter_research__v41_tp_risk_balance_followup_review/03_reviews/stage88_stage83_stage87_comparison.csv`
+- segment_flags_csv(援ш컙 ?뚮옒洹?CSV): `stages/88_adapter_research__v41_tp_risk_balance_followup_review/03_reviews/stage88_stage87_segment_flags.csv`
 
-Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속).
+## Next Stage89 Focus(?ㅼ쓬 89?④퀎 珥덉젏)
+
+Stage89(89?④퀎)??Stage87 best(87?④퀎 理쒖꽑????validation DD(寃利??먯떎瑜?瑜???텛怨?OOS early(?쒕낯??珥덈컲)瑜??먭퍖寃??섎릺 PF/net(?섏씡 ?⑺꽣/?쒖넀????蹂댁〈?섎뒗吏 醫곴쾶 痢≪젙?쒕떎.
+
+Forbidden claims(湲덉? 二쇱옣): deployment(諛고룷), live_readiness(?ㅺ굅??以鍮?, runtime_authority(?고???沅뚯쐞), operating_promotion(?댁쁺 ?밴꺽), operating_reference(?댁쁺 湲곗?), production_baseline(?앹궛 湲곗???, legacy_inheritance(?덇굅???곸냽).
