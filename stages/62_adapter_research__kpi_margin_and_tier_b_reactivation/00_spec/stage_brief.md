@@ -11,10 +11,10 @@
 
 ## Bounded Question(경계 질문)
 
-Can the Stage61 research package(61단계 연구 패키지) adapter(어댑터) `s59ar_v41_sd8_h3` gain more KPI margin(KPI 여유 폭) by improving validation mid-segment PF(검증 중간 구간 수익 팩터), drawdown(손실폭), and Tier B fallback(Tier B 대체) usefulness without damaging OOS(표본외), model-controlled risk%(모델 제어 위험률), ATR bracket(ATR 브래킷), or ONNX/MT5 runtime reproducibility(ONNX/MT5 런타임 재현성)?
+Can the Stage61 research package(61단계 연구 패키지) adapter(어댑터) `s59ar_v41_sd8_h3` begin closing the KPI gap(KPI 차이) toward or beyond legacy 34D(레거시 34D) target performance(목표 성능) through v2-native(브이투 고유) trade-shape(거래 형태), lifecycle(생명주기), state/context(상태/문맥), and risk/bracket(위험/브래킷) research without copying legacy 34D(레거시 34D) implementation(구현) or claiming deployment(배포)?
 
 Action(행동): Stage62(62단계)는 Stage61(61단계)을 다시 열지 않고 새 bounded research stage(경계 연구 단계)를 연다.
-Effect(효과): research package ready(연구 패키지 준비) 판정은 보존하면서, 더 강한 KPI(핵심 성과 지표) 여유 폭 연구개발을 별도 단계로 추적한다.
+Effect(효과): research package ready(연구 패키지 준비) 판정은 보존하면서, 34D급 KPI(34D급 핵심 성과 지표)를 v2 방식으로 넘기기 위한 연구개발을 별도 단계로 추적한다.
 
 ## Scope(범위)
 
@@ -23,9 +23,13 @@ Effect(효과): research package ready(연구 패키지 준비) 판정은 보존
 - Tier B fallback(Tier B 대체) 재활성 가능성 조사
 - same-move reentry(동일 움직임 재진입) density(밀도) 확인
 - mandatory model risk%(필수 모델 위험률)와 ATR SL/TP(ATR 손절/익절) 유지
+- legacy 34D(레거시 34D)는 target surface(목표 표면)와 lesson-only reference(교훈 전용 참조)로만 사용
+- v2-native(브이투 고유) state/context and trade-shape lift(상태/문맥 및 거래 형태 개선) 탐색
 
 ## Out Of Scope(범위 밖)
 
+- legacy 34D implementation copying(레거시 34D 구현 복사)
+- legacy promotion inheritance(레거시 승격 이력 상속)
 - deployment(배포)
 - live readiness(실거래 준비)
 - production baseline(생산 기준선)

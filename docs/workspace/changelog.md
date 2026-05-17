@@ -702,3 +702,16 @@
 - adapter_under_review(검토 중 어댑터): `s59ar_v41_sd8_h3`
 - status(상태): `active_planned`
 - effect(효과): validation mid PF(검증 중간 PF), drawdown(손실폭), Tier B fallback(Tier B 대체) 가능성을 새 bounded research stage(경계 연구 단계)로 분리해 추가 연구개발을 계속한다.
+
+## 2026-05-17 - Stage62 redirected to 34D KPI target research(62단계 34D KPI 목표 연구 재정렬)
+
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- current_v2_adapter(현재 브이투 어댑터): `s59ar_v41_sd8_h3`
+- legacy_34d_latest_target(레거시 34D 최신 목표): PF(수익 팩터) `1.583157`, net(순손익) `987.60`, max_dd_pct(최대 손실률) `12.909136`, trade_count(거래 수) `404`
+- effect(효과): 34D(34D)를 복사하지 않고, v2-native(브이투 고유) KPI gap(핵심 성과 지표 차이) 축소 연구로 Stage62(62단계)를 재정렬했다.
+## 2026-05-17 - Stage62 34D target trade-shape batch closeout(62단계 34D 목표 거래 형태 묶음 종료)
+
+- run(실행): `run62B_stage62_34d_target_trade_shape_batch_v1`
+- decision(판정): `continue_adapter_trade_shape_repair`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): legacy 34D(레거시 34D)를 복사하지 않고 v2-native(브이투 고유) hold5 trade-shape(보유 5봉 거래 형태) 후보를 측정했다.
