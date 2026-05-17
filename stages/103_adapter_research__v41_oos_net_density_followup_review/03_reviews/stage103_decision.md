@@ -14,7 +14,7 @@ Effect(효과): Stage102(102단계)의 full OOS(전체 표본외) 개선은 보�
 - source_stage102_summary(원천 102단계 요약): `stages/102_adapter_research__v41_oos_net_density_dd_repair/03_reviews/stage102_oos_net_density_dd_repair_summary.csv`
 - source_stage102_segment_kpi(원천 102단계 구간 KPI): `stages/102_adapter_research__v41_oos_net_density_dd_repair/03_reviews/stage102_segment_kpi_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage102_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d769c8b22ce389d4261edaf30e0c2c729971874e`
 
 ## Next(다음)
 

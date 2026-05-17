@@ -1011,6 +1011,6 @@
 
 - run(실행): `run103A_stage103_v41_oos_net_density_followup_review_v1`
 - decision(판정): `continue_oos_early_segment_repair_in_stage104`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d769c8b22ce389d4261edaf30e0c2c729971874e`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage102(102단계)는 full OOS(전체 표본외)를 개선했지만 OOS early(표본외 초반)가 약해져 Stage104(104단계) 초반 구간 수리로 넘겼다.
