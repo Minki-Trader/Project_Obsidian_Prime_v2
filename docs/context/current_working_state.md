@@ -16,6 +16,7 @@ Stage85(85단계) closed(종료) as v2-native v41 validation DD compression repa
 - run(실행): `run85A_stage85_v41_validation_dd_compression_repair_v1`
 - decision(판정): `continue_validation_dd_followup_review_in_stage86`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `886e07afe1421a38b53c4c8ca5c629d574b3bbac`
 - report(보고서): `stages/85_adapter_research__v41_validation_dd_compression_repair/03_reviews/stage85_v41_validation_dd_compression_report.md`
 - stage85_decision(85단계 판정): `stages/85_adapter_research__v41_validation_dd_compression_repair/03_reviews/stage85_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/85_adapter_research__v41_validation_dd_compression_repair/03_reviews/stage85_risk_atr_telemetry.csv`

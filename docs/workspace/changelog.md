@@ -876,5 +876,6 @@
 
 - run(실행): `run85A_stage85_v41_validation_dd_compression_repair_v1`
 - decision(판정): `continue_validation_dd_followup_review_in_stage86`
+- pushed_commit_hash(푸시된 커밋 해시): `886e07afe1421a38b53c4c8ca5c629d574b3bbac`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage84(84단계)의 판정대로 Stage83 CD10 hybrid(83단계 CD10 혼합)의 OOS(표본외) 강점을 지키면서 validation DD(검증 손실률) 압축 가능성을 좁게 측정했다.
