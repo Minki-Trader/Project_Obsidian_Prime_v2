@@ -16,6 +16,7 @@ Stage78(78단계) closed(종료) as v2-native entry quality follow-up review(v2 
 - run(실행): `run78A_stage78_v41_entry_quality_followup_review_v1`
 - decision(판정): `continue_atr_stop_lifecycle_repair_in_stage79`
 - external_verification_status(외부 검증 상태): `completed_existing_stage77_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `91eb1e26ce16013fc555166a76a27685f859b5dc`
 - report(보고서): `stages/78_adapter_research__v41_entry_quality_followup_review/03_reviews/stage78_entry_quality_followup_review.md`
 - stage78_decision(78단계 판정): `stages/78_adapter_research__v41_entry_quality_followup_review/03_reviews/stage78_decision.md`
 - comparison_csv(비교 CSV): `stages/78_adapter_research__v41_entry_quality_followup_review/03_reviews/stage78_stage73_stage77_comparison.csv`

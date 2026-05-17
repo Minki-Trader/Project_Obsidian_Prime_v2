@@ -7,6 +7,7 @@
 - current_run(현재 실행): `run78A_stage78_v41_entry_quality_followup_review_v1`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage78_decision(78단계 판정): `continue_atr_stop_lifecycle_repair_in_stage79`
+- pushed_commit_hash(푸시된 커밋 해시): `91eb1e26ce16013fc555166a76a27685f859b5dc`
 - next_stage_or_branch(다음 단계/분기): `79_adapter_research__v41_atr_stop_lifecycle_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

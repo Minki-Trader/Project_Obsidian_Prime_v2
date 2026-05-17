@@ -14,6 +14,7 @@ Effect(효과): Stage79(79단계)는 Stage73(73단계)의 net(순손익) 강도�
 - stage77_report(77단계 보고서): `stages/77_adapter_research__v41_entry_quality_dd_guard/03_reviews/stage77_v41_entry_quality_dd_guard_report.md`
 - stage77_risk_atr(77단계 위험/ATR): `stages/77_adapter_research__v41_entry_quality_dd_guard/03_reviews/stage77_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage77_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `91eb1e26ce16013fc555166a76a27685f859b5dc`
 
 ## Next(다음)
 
