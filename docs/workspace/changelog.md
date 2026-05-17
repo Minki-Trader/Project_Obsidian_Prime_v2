@@ -855,6 +855,6 @@
 
 - run(실행): `run82A_stage82_v41_early_oos_followup_review_v1`
 - decision(판정): `continue_hybrid_sl_cooldown_repair_in_stage83`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `1bb8a999aa8aeb0409e68c6672ea4985b47444e5`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage81(81단계)의 `cd12` OOS PF/net(표본외 수익 팩터/순손익) 강점과 `SL2.25` OOS early(표본외 초반) 개선 단서를 결합하는 Stage83(83단계)로 넘겼다.

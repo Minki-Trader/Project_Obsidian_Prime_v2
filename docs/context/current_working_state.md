@@ -16,7 +16,7 @@ Stage82(82단계) closed(종료) as review gate(검토 게이트). Effect(효과
 - run(실행): `run82A_stage82_v41_early_oos_followup_review_v1`
 - decision(판정): `continue_hybrid_sl_cooldown_repair_in_stage83`
 - external_verification_status(외부 검증 상태): `completed_existing_stage81_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `1bb8a999aa8aeb0409e68c6672ea4985b47444e5`
 - report(보고서): `stages/82_adapter_research__v41_early_oos_followup_review/03_reviews/stage82_early_oos_followup_review.md`
 - stage82_decision(82단계 판정): `stages/82_adapter_research__v41_early_oos_followup_review/03_reviews/stage82_decision.md`
 - comparison_csv(비교 CSV): `stages/82_adapter_research__v41_early_oos_followup_review/03_reviews/stage82_stage79_stage81_comparison.csv`

@@ -15,7 +15,7 @@ Effect(효과): Stage81(81단계)의 좋은 OOS PF/net(표본외 수익 팩터/�
 - source_segment_kpi(원천 구간 KPI): `stages/81_adapter_research__v41_early_oos_segment_repair/03_reviews/stage81_segment_kpi_summary.csv`
 - source_risk_atr(원천 위험/ATR): `stages/81_adapter_research__v41_early_oos_segment_repair/03_reviews/stage81_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage81_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- pushed_commit_hash(푸시된 커밋 해시): `1bb8a999aa8aeb0409e68c6672ea4985b47444e5`
 
 ## KPI Judgment(KPI 핵심 성과 지표 판정)
 
