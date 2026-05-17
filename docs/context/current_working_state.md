@@ -16,7 +16,7 @@ Stage97(97단계) closed(종료) as v2-native v41 OOS early lifecycle repair bat
 - run(실행): `run97A_stage97_v41_oos_early_lifecycle_repair_v1`
 - decision(판정): `continue_oos_early_lifecycle_followup_review_in_stage98`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `beeb81ebc58ea4492a0fbe015dab3b1ba9f5cbd6`
 - report(보고서): `stages/97_adapter_research__v41_oos_early_lifecycle_repair/03_reviews/stage97_v41_oos_early_lifecycle_repair_report.md`
 - stage97_decision(97단계 판정): `stages/97_adapter_research__v41_oos_early_lifecycle_repair/03_reviews/stage97_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/97_adapter_research__v41_oos_early_lifecycle_repair/03_reviews/stage97_risk_atr_telemetry.csv`

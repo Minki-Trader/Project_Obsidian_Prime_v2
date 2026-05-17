@@ -12,7 +12,7 @@
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage97_decision(97단계 판정): `continue_oos_early_lifecycle_followup_review_in_stage98`
 - next_stage_or_branch(다음 단계/분기): `98_adapter_research__v41_oos_early_lifecycle_followup_review`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `beeb81ebc58ea4492a0fbe015dab3b1ba9f5cbd6`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Effect(효과): Stage97(97단계)는 v41 OOS early lifecycle repair(V41 표본외 초반 생명주기 수리)를 측정하고, 운영 의미 없이 Stage98(98단계)로 넘긴다.

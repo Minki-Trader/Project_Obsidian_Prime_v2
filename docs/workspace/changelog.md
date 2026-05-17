@@ -968,6 +968,6 @@
 
 - run(실행): `run97A_stage97_v41_oos_early_lifecycle_repair_v1`
 - decision(판정): `continue_oos_early_lifecycle_followup_review_in_stage98`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `beeb81ebc58ea4492a0fbe015dab3b1ba9f5cbd6`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage96(96단계)의 판정대로 lifecycle/hold/re-entry(생명주기/보유/재진입)를 좁게 바꿔 OOS early flatline risk(표본외 초반 평탄화 위험)를 측정했다.
