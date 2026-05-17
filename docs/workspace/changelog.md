@@ -721,3 +721,9 @@
 - decision(판정): `continue_stage63_due_to_incomplete_runtime`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage62(62단계) hold5(5봉 보유) 후보를 복사 개발이 아니라 v2-native(브이투 고유) 위험/ATR 압축 후보로 압박했다.
+## 2026-05-17 - Stage64 state/context drawdown smoothing closeout(64단계 상태/문맥 손실률 완화 종료)
+
+- run(실행): `run64A_stage64_state_context_drawdown_smoothing_v1`
+- decision(판정): `continue_state_context_branch_repair`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage63(63단계) risk/ATR(위험/ATR) 후보를 복사 개발이 아니라 v2-native(브이투 고유) state/context gate(상태/문맥 게이트) 후보로 압박했다.
