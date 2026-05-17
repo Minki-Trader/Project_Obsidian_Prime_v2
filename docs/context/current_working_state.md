@@ -16,6 +16,7 @@ Stage79(79단계) closed(종료) as v2-native v41 ATR stop/lifecycle repair batc
 - run(실행): `run79A_stage79_v41_atr_stop_lifecycle_repair_v1`
 - decision(판정): `continue_atr_stop_lifecycle_review_in_stage80`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `e1407b405f5633546367290044f918caafc3f2db`
 - report(보고서): `stages/79_adapter_research__v41_atr_stop_lifecycle_repair/03_reviews/stage79_v41_atr_stop_lifecycle_report.md`
 - stage79_decision(79단계 판정): `stages/79_adapter_research__v41_atr_stop_lifecycle_repair/03_reviews/stage79_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/79_adapter_research__v41_atr_stop_lifecycle_repair/03_reviews/stage79_risk_atr_telemetry.csv`

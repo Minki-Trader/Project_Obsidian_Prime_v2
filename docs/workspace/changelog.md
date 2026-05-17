@@ -833,5 +833,6 @@
 
 - run(실행): `run79A_stage79_v41_atr_stop_lifecycle_repair_v1`
 - decision(판정): `continue_atr_stop_lifecycle_review_in_stage80`
+- pushed_commit_hash(푸시된 커밋 해시): `e1407b405f5633546367290044f918caafc3f2db`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 risk5 gate08(위험 5%, 게이트 0.08) 표면에서 ATR stop(ATR 손절)을 2.0/2.25로 좁혀 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
