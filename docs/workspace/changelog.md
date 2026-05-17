@@ -1109,6 +1109,6 @@
 
 - run(실행): `run117A_stage117_v41_density_quality_followup_review_v1`
 - decision(판정): `continue_dd_compression_density_repair_in_stage118`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `df51abd7602801dc78cf3e23172bf03b13688557`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage116(116단계) 결과를 34D KPI(핵심 성과 지표)와 Stage114/110 참조점에 대고 판정하고, DD compression density repair(손실률 압축 밀도 수리)를 Stage118(118단계)로 넘겼다.

@@ -16,7 +16,7 @@ Effect(효과): Stage116은 PF/net(수익 팩터/순손익)은 강하지만, 거
 - source_stage116_closeout_commit(원천 116단계 종료 커밋): `e2ef0707cdaaefc77df92e5dac641db4199c3cb7`
 - source_stage116_latest_commit(원천 116단계 최신 커밋): `c115268a398da4c8334b2c21530016f110b8e927`
 - external_verification_status(외부 검증 상태): `completed_existing_stage116_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `df51abd7602801dc78cf3e23172bf03b13688557`
 
 ## Next(다음)
 
