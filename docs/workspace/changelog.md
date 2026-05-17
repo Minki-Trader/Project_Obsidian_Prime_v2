@@ -941,3 +941,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `a3c2a42e378ffce41e07e947f0e68ed9e76606a6`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage92(92단계)의 판정대로 SL2.10 validation recovery(손절 2.10 검증 회복)와 TP4.0 OOS early clue(익절 4.0 표본외 초반 단서)를 좁게 결합해 측정했다.
+
+## 2026-05-18 - Stage94 SL2.10 OOS early follow-up review closeout(94단계 손절 2.10 표본외 초반 후속 검토 종료)
+
+- run(실행): `run94A_stage94_v41_sl210_oos_early_followup_review_v1`
+- decision(판정): `continue_oos_early_entry_gate_repair_in_stage95`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage93 best(93단계 최선안)의 full split(전체 분할) 균형은 보존하고, OOS early flatline risk(표본외 초반 평탄화 위험)를 Stage95(95단계) entry gate/confidence threshold(진입 게이트/신뢰도 문턱) 수리로 넘겼다.
