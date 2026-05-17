@@ -836,3 +836,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `e1407b405f5633546367290044f918caafc3f2db`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 risk5 gate08(위험 5%, 게이트 0.08) 표면에서 ATR stop(ATR 손절)을 2.0/2.25로 좁혀 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
+## 2026-05-17 - Stage80 ATR stop follow-up review closeout(80단계 ATR 손절 후속 검토 종료)
+
+- run(실행): `run80A_stage80_v41_atr_stop_followup_review_v1`
+- decision(판정): `continue_early_oos_segment_repair_in_stage81`
+- source_stage79_latest_commit(원천 79단계 최신 커밋): `9d386afbef0a073973bf5d922a3388c851d26319`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage79(79단계)의 순손익 개선을 보존하되 OOS early(표본외 초반) 음수 구간을 Stage81(81단계) 수리 질문으로 넘겼다.
