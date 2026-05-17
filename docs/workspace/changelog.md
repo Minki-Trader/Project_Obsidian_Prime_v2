@@ -986,3 +986,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `aec4267b71425533e796dd4a6deb2e6b14265418`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage99(99단계)는 CD8(8봉 쿨다운)의 OOS early(표본외 초반) 약점을 문맥 조건으로 좁혔고, Stage100(100단계) 실제 실행환경 수리로 넘겼다.
+## 2026-05-18 - Stage100 v41 OOS early context gate runtime repair closeout(100단계 v41 표본외 초반 문맥 제한문 실행환경 수리 종료)
+
+- run(실행): `run100A_stage100_v41_oos_early_context_gate_runtime_repair_v1`
+- decision(판정): `continue_context_gate_repair_or_branch_review_in_stage101`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage99(99단계)의 projection(투영)을 실제 MT5 runtime(실행환경) 수리로 측정하고 Stage101(101단계) 후속 검토로 넘겼다.
