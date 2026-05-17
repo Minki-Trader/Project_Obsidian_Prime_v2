@@ -1,18 +1,19 @@
 ﻿# 89_adapter_research__v41_drawdown_and_oos_early_repair
 
-Stage89(89?④퀎)??Stage88(88?④퀎) ?먯젙???곕씪 Stage87 best(87?④퀎 理쒖꽑????DD(?먯떎瑜?? OOS early(?쒕낯??珥덈컲) ?쎌젏??醫곴쾶 ?섎━?섎뒗 ?④퀎??
+Stage89(89단계)는 Stage88(88단계) 판정에 따라 Stage87 best(87단계 최선안)의 DD(손실률)와 OOS early(표본외 초반) 약점을 좁게 수리하는 단계다.
 
-## Bounded Question(寃쎄퀎 吏덈Ц)
+## Bounded Question(경계 질문)
 
-Can the Stage87 best adapter(87?④퀎 理쒖꽑 ?대뙌?? lower validation DD(寃利??먯떎瑜? and strengthen OOS early(?쒕낯??珥덈컲) while preserving PF/net(?섏씡 ?⑺꽣/?쒖넀???
+Can the Stage87 best adapter(87단계 최선 어댑터) lower validation DD(검증 손실률) and strengthen OOS early(표본외 초반) while preserving PF/net(수익 팩터/순손익)?
 
-Effect(?④낵): Stage89(89?④퀎)???볦? model search(紐⑤뜽 ?먯깋)媛 ?꾨땲?? Stage87 best(87?④퀎 理쒖꽑?????쎌젏 ??媛쒕쭔 寃⑤깷?쒕떎.
+Effect(효과): Stage89(89단계)는 넓은 model search(모델 탐색)가 아니라, Stage87 best(87단계 최선안)의 약점 두 개만 겨냥한다.
 
-## Candidate Knobs(?꾨낫 議곗젅??
+## Candidate Knobs(후보 조절점)
 
-- SL compression(?먯젅 ?뺤텞): `sl205` ?먮뒗 `sl210`
-- cooldown guard(?ъ쭊???됯컖 蹂댄샇): `cd12` ?ы솗??- risk cap balance(?꾪뿕 ?곹븳 洹좏삎): `risk45` ?먮뒗 `risk475`
+- SL compression(손절 압축): `sl205` 또는 `sl210`
+- cooldown guard(재진입 냉각 보호): `cd12` 재확인
+- risk cap balance(위험 상한 균형): `risk45` 또는 `risk475`
 
-## Boundary(寃쎄퀎)
+## Boundary(경계)
 
 `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
