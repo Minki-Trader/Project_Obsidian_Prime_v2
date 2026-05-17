@@ -1,8 +1,8 @@
-﻿current_run_id: run103A_stage103_v41_oos_net_density_followup_review_v1
+﻿current_run_id: run104A_stage104_v41_oos_early_segment_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 103_adapter_research__v41_oos_net_density_followup_review
+active_stage: 104_adapter_research__v41_oos_early_segment_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage102(102단계) closed(종료) as `continue_oos_net_density_followup_review_in_stage103` and Stage103(103단계) `103_adapter_research__v41_oos_net_density_followup_review` is open_planned(열림 계획). Effect(효과): OOS net density/DD repair(표본외 순손익 밀도/손실률 수리) 결과를 후속 검토로 넘긴다.
+  Stage103(103단계) closed(종료) as `continue_oos_early_segment_repair_in_stage104` and Stage104(104단계) `104_adapter_research__v41_oos_early_segment_repair` is open_planned(열림 계획). Effect(효과): Stage102(102단계)의 full OOS(전체 표본외) 개선은 보존하고 OOS early segment(표본외 초반 구간) 수리로 넘긴다.
 - >-
-  Stage102 result(102단계 결과)는 `stages/102_adapter_research__v41_oos_net_density_dd_repair/03_reviews/stage102_oos_net_density_dd_repair_summary.csv`와 `stages/102_adapter_research__v41_oos_net_density_dd_repair/03_reviews/stage102_segment_kpi_summary.csv`에 기록된다. Effect(효과): Stage100 best(100단계 최선) 및 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage103 result(103단계 결과)는 `stages/103_adapter_research__v41_oos_net_density_followup_review/03_reviews/stage103_stage100_stage102_34d_comparison.csv`와 `stages/103_adapter_research__v41_oos_net_density_followup_review/03_reviews/stage103_segment_warning_summary.csv`에 기록된다. Effect(효과): Stage102 best(102단계 최선)의 장점과 약점을 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5430,4 +5430,22 @@ stage102_v41_oos_net_density_dd_repair:
   packet_summary_path: docs/agent_control/packets/stage102_v41_oos_net_density_dd_repair_v1/aggregate_summary.json
   external_verification_status: completed
   pushed_commit_hash: c2b1bfbfef06ab887adcd20554fbf9b99f8475f2
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage103_v41_oos_net_density_followup_review:
+  packet_id: stage103_v41_oos_net_density_followup_review_v1
+  stage_id: 103_adapter_research__v41_oos_net_density_followup_review
+  status: closed_continue_oos_early_segment_repair_in_stage104
+  current_run_id: run103A_stage103_v41_oos_net_density_followup_review_v1
+  source_stage102_closeout_commit: c2b1bfbfef06ab887adcd20554fbf9b99f8475f2
+  source_stage102_latest_commit: 5ca329c468db459a8f68b9c28dd0897dfbf79623
+  source_stage101_latest_commit: 172104e12a1f8dda9352d5f84c668d2467a7adb3
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_oos_early_segment_repair_in_stage104
+  next_stage_or_branch: 104_adapter_research__v41_oos_early_segment_repair
+  report_path: stages/103_adapter_research__v41_oos_net_density_followup_review/03_reviews/stage103_oos_net_density_followup_review.md
+  decision_path: stages/103_adapter_research__v41_oos_net_density_followup_review/03_reviews/stage103_decision.md
+  packet_summary_path: docs/agent_control/packets/stage103_v41_oos_net_density_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage102_mt5_runtime_evidence_reviewed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
