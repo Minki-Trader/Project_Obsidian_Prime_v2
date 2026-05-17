@@ -1,8 +1,8 @@
-﻿current_run_id: run84A_stage84_v41_hybrid_sl_cooldown_followup_review_v1
+﻿current_run_id: run85A_stage85_v41_validation_dd_compression_repair_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 84_adapter_research__v41_hybrid_sl_cooldown_followup_review
+active_stage: 85_adapter_research__v41_validation_dd_compression_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,12 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage83(83단계) closed(종료) as `continue_hybrid_sl_cooldown_review_in_stage84` and Stage84(84단계) `84_adapter_research__v41_hybrid_sl_cooldown_followup_review` is open_planned(열림 계획). Effect(효과): v41 hybrid SL/cooldown repair(V41 손절/재진입 냉각 혼합 수리) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
+  Stage84(84단계) closed(종료) as `continue_validation_dd_compression_repair_in_stage85` and Stage85(85단계) `85_adapter_research__v41_validation_dd_compression_repair` is open_planned(열림 계획). Effect(효과): Stage83(83단계) CD10 hybrid(CD10 혼합)의 OOS(표본외) 강점을 보존하면서 validation DD(검증 손실률) 압축만 좁게 측정한다.
 - >-
-  Stage83 result(83단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_v41_hybrid_sl_cooldown_summary.csv`와 `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage84 review(84단계 검토): best Stage83(83단계 최선)는 `s83_v41_h3_risk5_gate08_sl225_tp40_cd10`, OOS PF(표본외 수익 팩터) `1.53`, OOS net(표본외 순손익) `541.61`, OOS early net(표본외 초반 순손익) `14.53`, OOS DD(표본외 손실률) `19.22`, but validation DD(검증 손실률) `27.50`. Effect(효과): 후보 완료가 아니라 DD 수리로 이어진다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
-stage36_cross_model_characteristic_synthesis:
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.stage36_cross_model_characteristic_synthesis:
   packet_id: stage36_run30A_cross_model_characteristic_synthesis_v1
   stage_id: 36_model_selection__cross_model_characteristic_synthesis
   status: reviewed_closed_reference_only_no_stage37_opened
@@ -5094,4 +5093,32 @@ stage83_v41_hybrid_sl_cooldown_repair:
   report_path: stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_decision.md
   packet_summary_path: docs/agent_control/packets/stage83_v41_hybrid_sl_cooldown_repair_v1/aggregate_summary.json
   external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+stage84_hybrid_sl_cooldown_followup_review:
+  packet_id: stage84_v41_hybrid_sl_cooldown_followup_review_v1
+  stage_id: 84_adapter_research__v41_hybrid_sl_cooldown_followup_review
+  status: closed_continue_validation_dd_compression_repair_in_stage85
+  current_run_id: run84A_stage84_v41_hybrid_sl_cooldown_followup_review_v1
+  source_run_id: run83A_stage83_v41_hybrid_sl_cooldown_repair_v1
+  source_stage83_pushed_commit: d4271ebd649dcb51283603d8f59de6370ba2e989
+  source_latest_boundary_commit: 87b79b8f1b41d2d3b8b18864c963075380ba1bb8
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_validation_dd_compression_repair_in_stage85
+  pushed_commit_hash: pending_push_hash
+  next_stage_or_branch: 85_adapter_research__v41_validation_dd_compression_repair
+  report_path: stages/84_adapter_research__v41_hybrid_sl_cooldown_followup_review/03_reviews/stage84_decision.md
+  packet_summary_path: docs/agent_control/packets/stage84_v41_hybrid_sl_cooldown_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage83_evidence_reviewed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage85_v41_validation_dd_compression_repair:
+  packet_id: stage85_v41_validation_dd_compression_repair_v1
+  stage_id: 85_adapter_research__v41_validation_dd_compression_repair
+  status: open_planned
+  current_run_id: run85A_stage85_v41_validation_dd_compression_repair_v1
+  source_stage84_decision: continue_validation_dd_compression_repair_in_stage85
+  source_stage83_pushed_commit: d4271ebd649dcb51283603d8f59de6370ba2e989
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  bounded_question: preserve Stage83 CD10 OOS early positive and OOS PF/net while compressing validation DD
+  external_verification_status: planned
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

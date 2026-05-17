@@ -865,3 +865,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `d4271ebd649dcb51283603d8f59de6370ba2e989`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage82(82단계)의 판정대로 SL2.25/cooldown hybrid(손절 2.25/재진입 냉각 혼합)를 좁게 측정해 OOS early(표본외 초반)와 DD(손실률) 수리 가능성을 확인했다.
+## 2026-05-17 - Stage84 hybrid SL/cooldown follow-up review closeout(84단계 손절/재진입 냉각 혼합 후속 검토 종료)
+
+- run(실행): `run84A_stage84_v41_hybrid_sl_cooldown_followup_review_v1`
+- decision(판정): `continue_validation_dd_compression_repair_in_stage85`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_push_hash`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage83(83단계) CD10 hybrid(CD10 혼합)는 OOS early(표본외 초반)를 양수화했지만 validation DD(검증 손실률)가 높아 Stage85(85단계)로 넘겼다.
