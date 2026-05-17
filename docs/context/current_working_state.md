@@ -16,6 +16,7 @@ Stage83(83단계) closed(종료) as v2-native v41 hybrid SL/cooldown repair batc
 - run(실행): `run83A_stage83_v41_hybrid_sl_cooldown_repair_v1`
 - decision(판정): `continue_hybrid_sl_cooldown_review_in_stage84`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `d4271ebd649dcb51283603d8f59de6370ba2e989`
 - report(보고서): `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_v41_hybrid_sl_cooldown_report.md`
 - stage83_decision(83단계 판정): `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/83_adapter_research__v41_hybrid_sl_cooldown_repair/03_reviews/stage83_risk_atr_telemetry.csv`

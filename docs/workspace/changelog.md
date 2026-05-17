@@ -862,5 +862,6 @@
 
 - run(실행): `run83A_stage83_v41_hybrid_sl_cooldown_repair_v1`
 - decision(판정): `continue_hybrid_sl_cooldown_review_in_stage84`
+- pushed_commit_hash(푸시된 커밋 해시): `d4271ebd649dcb51283603d8f59de6370ba2e989`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage82(82단계)의 판정대로 SL2.25/cooldown hybrid(손절 2.25/재진입 냉각 혼합)를 좁게 측정해 OOS early(표본외 초반)와 DD(손실률) 수리 가능성을 확인했다.

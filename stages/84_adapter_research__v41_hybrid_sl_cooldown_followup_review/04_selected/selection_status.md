@@ -5,6 +5,7 @@
 - current_run(현재 실행): `run84A_stage84_v41_hybrid_sl_cooldown_followup_review_v1`
 - source_stage(원천 단계): `83_adapter_research__v41_hybrid_sl_cooldown_repair`
 - source_decision(원천 판정): `continue_hybrid_sl_cooldown_review_in_stage84`
+- source_stage83_pushed_commit(원천 83단계 푸시 커밋): `d4271ebd649dcb51283603d8f59de6370ba2e989`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

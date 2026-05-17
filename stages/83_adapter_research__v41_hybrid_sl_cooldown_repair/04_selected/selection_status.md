@@ -12,6 +12,7 @@
 - adapter_under_review(검토 중 어댑터): `stage79_v41_atr_stop_lifecycle_surface`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage83_decision(83단계 판정): `continue_hybrid_sl_cooldown_review_in_stage84`
+- pushed_commit_hash(푸시된 커밋 해시): `d4271ebd649dcb51283603d8f59de6370ba2e989`
 - next_stage_or_branch(다음 단계/분기): `84_adapter_research__v41_hybrid_sl_cooldown_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
