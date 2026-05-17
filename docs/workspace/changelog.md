@@ -735,3 +735,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `b0aca3100ed26edfdcb89ed9adcc967ac0d40640`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage63(63단계) risk/ATR(위험/ATR) 후보를 복사 개발이 아니라 v2-native(브이투 고유) state/context gate(상태/문맥 게이트) 후보로 압박했다.
+## 2026-05-17 - Stage66 short-gate net scaling closeout(66단계 숏 게이트 순손익 확대 종료)
+
+- run(실행): `run66A_stage66_soft_gate_kpi_repair_v1`
+- decision(판정): `continue_net_scale_repair_in_stage67`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage65(65단계)의 short-only margin gate(숏 전용 마진 게이트)를 위험/보유 경계 안에서 압박해, 순손익 확대 가능성과 손실률 훼손 여부를 측정했다.

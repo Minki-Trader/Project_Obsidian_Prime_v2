@@ -1,8 +1,8 @@
-current_run_id: run66A_stage66_soft_gate_kpi_repair_v1
+current_run_id: run67A_stage67_short_gate_net_scale_review_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 66_adapter_research__soft_gate_kpi_repair
+active_stage: 67_adapter_research__short_gate_net_scale_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage65(65단계) closed(종료) as `continue_soft_gate_repair_in_stage66` and Stage66(66단계) `66_adapter_research__soft_gate_kpi_repair` is open_planned(열림 계획). Effect(효과): soft/side-specific gate(소프트/방향별 게이트) 실험 근거를 보존하고, 다음 연구 질문으로만 넘긴다.
+  Stage66(66단계) closed(종료) as `continue_net_scale_repair_in_stage67` and Stage67(67단계) `67_adapter_research__short_gate_net_scale_review` is open_planned(열림 계획). Effect(효과): short-gate net scaling(숏 게이트 순손익 확대) 근거를 보존하고, 다음 연구 질문으로만 넘긴다.
 - >-
-  Stage65 result(65단계 결과): validation(검증), OOS(표본외), PF(수익 팩터), net(순손익), DD(손실률), gate feature(게이트 피처)는 `stages/65_adapter_research__state_context_branch_review/03_reviews/stage65_state_context_summary.csv`와 `stages/65_adapter_research__state_context_branch_review/03_reviews/stage65_gate_feature_summary.csv`에 기록됐다. Effect(효과): 34D target surface(34D 목표 표면) 대비 남은 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage66 result(66단계 결과): validation(검증), OOS(표본외), PF(수익 팩터), net(순손익), DD(손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/66_adapter_research__soft_gate_kpi_repair/03_reviews/stage66_soft_gate_kpi_summary.csv`와 `stages/66_adapter_research__soft_gate_kpi_repair/03_reviews/stage66_risk_atr_telemetry.csv`에 기록됐다. Effect(효과): 34D target surface(34D 목표 표면) 대비 남은 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 stage36_cross_model_characteristic_synthesis:
@@ -4792,5 +4792,20 @@ stage65_state_context_branch_review:
   next_stage_or_branch: 66_adapter_research__soft_gate_kpi_repair
   report_path: stages/65_adapter_research__state_context_branch_review/03_reviews/stage65_decision.md
   packet_summary_path: docs/agent_control/packets/stage65_state_context_branch_review_v1/aggregate_summary.json
+  external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage66_soft_gate_kpi_repair:
+  packet_id: stage66_soft_gate_kpi_repair_v1
+  stage_id: 66_adapter_research__soft_gate_kpi_repair
+  status: closed_continue_net_scale_repair_in_stage67
+  current_run_id: run66A_stage66_soft_gate_kpi_repair_v1
+  adapter_under_review: s62_v41_sd8_h5
+  source_stage65_pushed_commit: b0aca3100ed26edfdcb89ed9adcc967ac0d40640
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_net_scale_repair_in_stage67
+  next_stage_or_branch: 67_adapter_research__short_gate_net_scale_review
+  report_path: stages/66_adapter_research__soft_gate_kpi_repair/03_reviews/stage66_decision.md
+  packet_summary_path: docs/agent_control/packets/stage66_soft_gate_kpi_repair_v1/aggregate_summary.json
   external_verification_status: completed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
