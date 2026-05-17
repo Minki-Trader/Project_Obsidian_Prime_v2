@@ -1112,3 +1112,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `df51abd7602801dc78cf3e23172bf03b13688557`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage116(116단계) 결과를 34D KPI(핵심 성과 지표)와 Stage114/110 참조점에 대고 판정하고, DD compression density repair(손실률 압축 밀도 수리)를 Stage118(118단계)로 넘겼다.
+## 2026-05-18 - Stage118 v41 DD compression density repair closeout(118단계 v41 손실률 압축 밀도 수리 종료)
+
+- run(실행): `run118A_stage118_v41_dd_compression_density_repair_v1`
+- decision(판정): `continue_dd_compression_repair_review_in_stage119`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage116(116단계)의 quality/density anchors(품질/밀도 기준점)에 model-risk cap(모델 위험 상한) 축소를 적용해 DD%(손실률) 압축 가능성을 실제 MT5 runtime(실행환경)으로 측정하고 Stage119(119단계) 후속 검토로 넘겼다.
