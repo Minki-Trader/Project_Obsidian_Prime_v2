@@ -964,3 +964,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `6c843b8b201da5e8aff17188d406a39c6c8c34f8`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage95(95단계) entry gate/confidence threshold(진입 게이트/신뢰도 문턱) 수리는 OOS early(표본외 초반)를 고치지 못해 Stage97(97단계) lifecycle/hold/re-entry(생명주기/보유/재진입) 수리로 넘겼다.
+## 2026-05-18 - Stage97 v41 OOS early lifecycle repair closeout(97단계 v41 표본외 초반 생명주기 수리 종료)
+
+- run(실행): `run97A_stage97_v41_oos_early_lifecycle_repair_v1`
+- decision(판정): `continue_oos_early_lifecycle_followup_review_in_stage98`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage96(96단계)의 판정대로 lifecycle/hold/re-entry(생명주기/보유/재진입)를 좁게 바꿔 OOS early flatline risk(표본외 초반 평탄화 위험)를 측정했다.
