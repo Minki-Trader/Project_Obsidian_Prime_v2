@@ -829,3 +829,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `91eb1e26ce16013fc555166a76a27685f859b5dc`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage77(77단계)의 stricter short gate(더 엄격한 숏 게이트)는 DD(손실률)를 일부 낮췄지만 net(순손익)을 훼손해 Stage79(79단계) ATR stop/lifecycle(ATR 손절/거래 생명주기) 수리로 넘겼다.
+## 2026-05-17 - Stage79 v41 ATR stop/lifecycle repair closeout(79단계 v41 ATR 손절/생명주기 수리 종료)
+
+- run(실행): `run79A_stage79_v41_atr_stop_lifecycle_repair_v1`
+- decision(판정): `continue_atr_stop_lifecycle_review_in_stage80`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage73(73단계)의 risk5 gate08(위험 5%, 게이트 0.08) 표면에서 ATR stop(ATR 손절)을 2.0/2.25로 좁혀 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
