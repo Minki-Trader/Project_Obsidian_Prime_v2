@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `93_adapter_research__v41_sl210_oos_early_recovery_repair`
 - source_run(원천 실행): `run93A_stage93_v41_sl210_oos_early_recovery_repair_v1`
 - source_decision(원천 판정): `continue_sl210_oos_early_followup_review_in_stage94`
+- source_stage93_pushed_commit(원천 93단계 푸시 커밋): `a3c2a42e378ffce41e07e947f0e68ed9e76606a6`
 - source_external_verification_status(원천 외부 검증 상태): `completed`
 - stage93_report(93단계 보고서): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_v41_sl210_oos_early_recovery_repair_report.md`
 - stage93_decision(93단계 판정): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_decision.md`

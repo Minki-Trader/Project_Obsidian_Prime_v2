@@ -16,6 +16,7 @@ Stage93(93단계) closed(종료) as v2-native v41 SL2.10 OOS early recovery repa
 - run(실행): `run93A_stage93_v41_sl210_oos_early_recovery_repair_v1`
 - decision(판정): `continue_sl210_oos_early_followup_review_in_stage94`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `a3c2a42e378ffce41e07e947f0e68ed9e76606a6`
 - report(보고서): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_v41_sl210_oos_early_recovery_repair_report.md`
 - stage93_decision(93단계 판정): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_risk_atr_telemetry.csv`

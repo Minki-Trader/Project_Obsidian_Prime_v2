@@ -938,5 +938,6 @@
 
 - run(실행): `run93A_stage93_v41_sl210_oos_early_recovery_repair_v1`
 - decision(판정): `continue_sl210_oos_early_followup_review_in_stage94`
+- pushed_commit_hash(푸시된 커밋 해시): `a3c2a42e378ffce41e07e947f0e68ed9e76606a6`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage92(92단계)의 판정대로 SL2.10 validation recovery(손절 2.10 검증 회복)와 TP4.0 OOS early clue(익절 4.0 표본외 초반 단서)를 좁게 결합해 측정했다.

@@ -15,6 +15,7 @@ Effect(효과): 이번 단계 결과는 operating claim(운영 주장)이 아니
 - gate_feature_summary(게이트 피처 요약): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_gate_feature_summary.csv`
 - tier_b_diagnostic(Tier B 진단): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_tier_b_diagnostic_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `a3c2a42e378ffce41e07e947f0e68ed9e76606a6`
 
 ## Next(다음)
 
