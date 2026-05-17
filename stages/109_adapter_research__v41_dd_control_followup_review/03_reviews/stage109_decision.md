@@ -16,7 +16,7 @@ Effect(효과): Stage108(108단계)은 DD(손실률)를 낮추는 길과 net/PF(
 - net_pf_best(순손익/수익 팩터 최선): `s106_v41_h3_cd9_lng_early_adx19`
 - dd_best(손실률 최선): `s108_v41_h4_cd10_lng_early_adx19`
 - external_verification_status(외부 검증 상태): `completed_existing_stage108_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `1c4035bceb96830d1d0f69bd5e44402522c77d27`
 
 ## Next(다음)
 

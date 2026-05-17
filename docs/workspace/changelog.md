@@ -1053,6 +1053,6 @@
 
 - run(실행): `run109A_stage109_v41_dd_control_followup_review_v1`
 - decision(판정): `continue_trade_density_net_scale_after_dd_tradeoff_repair_in_stage110`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `1c4035bceb96830d1d0f69bd5e44402522c77d27`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage108(108단계)은 손실률 개선과 순손익/수익 팩터 보존이 갈라졌고, 거래 밀도와 순손익 규모 격차가 남아 Stage110(110단계)로 넘겼다.
