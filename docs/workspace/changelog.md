@@ -806,3 +806,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `34f4c3069616acb7bb98ffbb317a4547ae21e1e3`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 0.08 short gate(숏 게이트)와 TP3.5(익절 폭 3.5)를 중심으로 risk cap(위험 상한)과 re-entry cooldown(재진입 냉각)을 좁게 바꿔 DD/net balance(손실률/순손익 균형)를 측정했다.
+## 2026-05-17 - Stage76 DD/net follow-up review closeout(76단계 손실률/순손익 후속 검토 종료)
+
+- run(실행): `run76A_stage76_v41_dd_balance_followup_review_v1`
+- decision(판정): `continue_entry_quality_dd_guard_in_stage77`
+- source_stage75_latest_commit(원천 75단계 최신 커밋): `09dde2a992bb129ae05016a41d2c1a40ac0e8059`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage75(75단계)의 risk scale(위험 배율) tradeoff(맞교환)를 검토해 Stage77(77단계) entry quality/DD guard(진입 품질/손실률 보호) 수리로 넘겼다.

@@ -1,8 +1,8 @@
-﻿current_run_id: run76A_stage76_v41_dd_balance_followup_review_v1
+﻿current_run_id: run77A_stage77_v41_entry_quality_dd_guard_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 76_adapter_research__v41_dd_balance_followup_review
+active_stage: 77_adapter_research__v41_entry_quality_dd_guard
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage75(75단계) closed(종료) as `continue_v41_dd_balance_repair_in_stage76` and Stage76(76단계) `76_adapter_research__v41_dd_balance_followup_review` is open_planned(열림 계획). Effect(효과): v41 DD/net balance(V41 손실률/순손익 균형) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
+  Stage76(76단계) closed(종료) as `continue_entry_quality_dd_guard_in_stage77` and Stage77(77단계) `77_adapter_research__v41_entry_quality_dd_guard` is open_planned(열림 계획). Effect(효과): Stage75(75단계) risk scale(위험 배율) tradeoff(맞교환)를 보존하고 entry quality/DD guard(진입 품질/손실률 보호) 수리 질문으로 넘긴다.
 - >-
-  Stage75 result(75단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_v41_dd_balance_summary.csv`와 `stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage76 result(76단계 결과): Stage75(75단계)는 DD(손실률)를 조금 낮췄지만 net(순손익)을 크게 줄여 34D gap(34D 격차)을 닫지 못했다. Effect(효과): Stage77(77단계)은 low-margin short(낮은 마진 숏)과 same-move re-entry(같은 방향 재진입) guard(보호)를 좁게 측정한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(v2 고유 연구)만 계속한다.
 stage36_cross_model_characteristic_synthesis:
@@ -4954,4 +4954,19 @@ stage75_v41_dd_balance_repair:
   report_path: stages/75_adapter_research__v41_dd_balance_repair/03_reviews/stage75_decision.md
   packet_summary_path: docs/agent_control/packets/stage75_v41_dd_balance_repair_v1/aggregate_summary.json
   external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage76_dd_balance_followup_review:
+  packet_id: stage76_v41_dd_balance_followup_review_v1
+  stage_id: 76_adapter_research__v41_dd_balance_followup_review
+  status: closed_continue_entry_quality_dd_guard_in_stage77
+  current_run_id: run76A_stage76_v41_dd_balance_followup_review_v1
+  source_run_id: run75A_stage75_v41_dd_balance_repair_v1
+  source_stage75_latest_commit: 09dde2a992bb129ae05016a41d2c1a40ac0e8059
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_entry_quality_dd_guard_in_stage77
+  next_stage_or_branch: 77_adapter_research__v41_entry_quality_dd_guard
+  report_path: stages/76_adapter_research__v41_dd_balance_followup_review/03_reviews/stage76_decision.md
+  packet_summary_path: docs/agent_control/packets/stage76_v41_dd_balance_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage75_evidence_reviewed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
