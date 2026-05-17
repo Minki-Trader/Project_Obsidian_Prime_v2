@@ -884,5 +884,6 @@
 - run(실행): `run86A_stage86_v41_validation_dd_followup_review_v1`
 - decision(판정): `continue_tp_risk_balance_repair_in_stage87`
 - source_stage85_pushed_commit(원천 85단계 푸시 커밋): `886e07afe1421a38b53c4c8ca5c629d574b3bbac`
+- pushed_commit_hash(푸시된 커밋 해시): `b487be5cc16858e44d57ce50e4b213d602a29fc1`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage85(85단계)는 risk cap(위험 상한)과 TP trim(익절 축소)의 분리 단서를 줬지만 34D KPI(34D 핵심 성과 지표)에는 아직 부족해 Stage87(87단계) 결합 수리로 넘겼다.

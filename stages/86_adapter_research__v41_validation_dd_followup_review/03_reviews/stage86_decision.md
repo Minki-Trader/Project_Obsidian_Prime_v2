@@ -14,6 +14,7 @@ Effect(효과): risk cap(위험 상한)은 DD(손실률)를 낮추는 단서를 
 - source_stage85_summary(원천 85단계 요약): `stages/85_adapter_research__v41_validation_dd_compression_repair/03_reviews/stage85_v41_validation_dd_compression_summary.csv`
 - source_stage85_segment(원천 85단계 구간): `stages/85_adapter_research__v41_validation_dd_compression_repair/03_reviews/stage85_segment_kpi_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage85_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `b487be5cc16858e44d57ce50e4b213d602a29fc1`
 
 ## Next(다음)
 

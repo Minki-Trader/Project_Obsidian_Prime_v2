@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `86_adapter_research__v41_validation_dd_followup_review`
 - source_run(원천 실행): `run86A_stage86_v41_validation_dd_followup_review_v1`
 - source_decision(원천 판정): `continue_tp_risk_balance_repair_in_stage87`
+- source_stage86_pushed_commit(원천 86단계 푸시 커밋): `b487be5cc16858e44d57ce50e4b213d602a29fc1`
 - source_stage85_pushed_commit(원천 85단계 푸시 커밋): `886e07afe1421a38b53c4c8ca5c629d574b3bbac`
 - stage86_review(86단계 검토): `stages/86_adapter_research__v41_validation_dd_followup_review/03_reviews/stage86_validation_dd_followup_review.md`
 - stage86_decision(86단계 판정): `stages/86_adapter_research__v41_validation_dd_followup_review/03_reviews/stage86_decision.md`

@@ -16,6 +16,7 @@ Stage86(86단계) closed(종료) as review gate(검토 게이트). Effect(효과
 - run(실행): `run86A_stage86_v41_validation_dd_followup_review_v1`
 - decision(판정): `continue_tp_risk_balance_repair_in_stage87`
 - external_verification_status(외부 검증 상태): `completed_existing_stage85_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `b487be5cc16858e44d57ce50e4b213d602a29fc1`
 - report(보고서): `stages/86_adapter_research__v41_validation_dd_followup_review/03_reviews/stage86_validation_dd_followup_review.md`
 - stage86_decision(86단계 판정): `stages/86_adapter_research__v41_validation_dd_followup_review/03_reviews/stage86_decision.md`
 - comparison_csv(비교 CSV): `stages/86_adapter_research__v41_validation_dd_followup_review/03_reviews/stage86_stage83_stage85_comparison.csv`
