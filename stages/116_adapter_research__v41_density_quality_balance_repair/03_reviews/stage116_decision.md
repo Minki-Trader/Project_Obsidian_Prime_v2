@@ -14,7 +14,7 @@ Effect(효과): 결과를 Stage117(117단계) 후속 검토로 넘겨 34D KPI(�
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/116_adapter_research__v41_density_quality_balance_repair/03_reviews/stage116_risk_atr_telemetry.csv`
 - gate_feature_summary(게이트 피처 요약): `stages/116_adapter_research__v41_density_quality_balance_repair/03_reviews/stage116_gate_feature_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `e2ef0707cdaaefc77df92e5dac641db4199c3cb7`
 
 ## Next(다음)
 

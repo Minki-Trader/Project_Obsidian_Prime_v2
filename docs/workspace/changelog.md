@@ -1102,6 +1102,6 @@
 
 - run(실행): `run116A_stage116_v41_density_quality_balance_repair_v1`
 - decision(판정): `continue_density_quality_followup_review_in_stage117`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `e2ef0707cdaaefc77df92e5dac641db4199c3cb7`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage114/115(114/115단계)의 품질 회복 단서에서 거래 수와 PF/DD(수익 팩터/손실률) 균형을 실제 MT5 runtime(실행환경)으로 측정하고 Stage117(117단계) 후속 검토로 넘겼다.
