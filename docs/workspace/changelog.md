@@ -975,6 +975,6 @@
 
 - run(실행): `run98A_stage98_v41_oos_early_lifecycle_followup_review_v1`
 - decision(판정): `continue_oos_early_side_session_context_repair_in_stage99`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `53522bfca9f6f989bba21ba19c5b67cc24cffc6e`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage97(97단계)의 lifecycle/hold/re-entry(생명주기/보유/재진입) 수리가 34D KPI(34D 핵심 성과 지표) 목표에 아직 부족하다고 판정하고 Stage99(99단계) side/session/context repair(방향/세션/문맥 수리)로 넘겼다.

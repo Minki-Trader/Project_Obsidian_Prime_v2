@@ -17,7 +17,7 @@ Effect(효과): lifecycle/hold/re-entry(생명주기/보유/재진입) 단독 �
 - segment_flags(구간 경고): `stages/98_adapter_research__v41_oos_early_lifecycle_followup_review/03_reviews/stage98_stage97_segment_flags.csv`
 - attribution_summary(귀속 요약): `stages/98_adapter_research__v41_oos_early_lifecycle_followup_review/03_reviews/stage98_lifecycle_attribution_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage97_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `53522bfca9f6f989bba21ba19c5b67cc24cffc6e`
 
 ## KPI Read(KPI 판독)
 
