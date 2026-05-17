@@ -791,3 +791,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `30bc138764da2c04c1552f0f9e12830f95eef250`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage71(71단계)의 0.08 short gate(숏 게이트)를 복원하고 risk cap(위험 상한)과 TP(take profit, 익절 폭)를 좁게 바꿔 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
+## 2026-05-17 - Stage74 TP/risk follow-up review closeout(74단계 TP/위험 후속 검토 종료)
+
+- run(실행): `run74A_stage74_v41_tp_risk_followup_review_v1`
+- decision(판정): `continue_v41_dd_balance_repair_in_stage75`
+- source_stage73_latest_commit(원천 73단계 최신 커밋): `76db6f199ff917da2f8311544f68dc6f24612e0e`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage73(73단계)의 TP/risk(익절 폭/위험) KPI(핵심 성과 지표)를 검토해 Stage75(75단계) DD/net balance(손실률/순손익 균형) 수리로 넘겼다.
