@@ -728,3 +728,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `44384f886c89f321673f152e95ca71060e6ce936`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage63(63단계) risk/ATR(위험/ATR) 후보를 복사 개발이 아니라 v2-native(브이투 고유) state/context gate(상태/문맥 게이트) 후보로 압박했다.
+## 2026-05-17 - Stage65 soft/side-specific state/context gate closeout(65단계 소프트/방향별 상태/문맥 게이트 종료)
+
+- run(실행): `run65A_stage65_state_context_branch_review_v1`
+- decision(판정): `continue_soft_gate_repair_in_stage66`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage63(63단계) risk/ATR(위험/ATR) 후보를 복사 개발이 아니라 v2-native(브이투 고유) state/context gate(상태/문맥 게이트) 후보로 압박했다.
