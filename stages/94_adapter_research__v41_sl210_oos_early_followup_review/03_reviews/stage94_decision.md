@@ -14,6 +14,7 @@ Effect(효과): Stage93 best(93단계 최선안)인 `s93_v41_h3_risk475_gate08_s
 - source_stage93_summary(원천 93단계 요약): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_v41_sl210_oos_early_recovery_repair_summary.csv`
 - source_stage93_segment(원천 93단계 구간): `stages/93_adapter_research__v41_sl210_oos_early_recovery_repair/03_reviews/stage93_segment_kpi_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage93_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `26a803de31c2b993f29617b7eabb0ff200192c59`
 
 ## Next(다음)
 

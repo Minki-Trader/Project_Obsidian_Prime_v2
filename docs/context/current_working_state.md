@@ -16,6 +16,7 @@ Stage94(94단계) closed(종료) as SL2.10 OOS early follow-up review(손절 2.1
 - run(실행): `run94A_stage94_v41_sl210_oos_early_followup_review_v1`
 - decision(판정): `continue_oos_early_entry_gate_repair_in_stage95`
 - external_verification_status(외부 검증 상태): `completed_existing_stage93_evidence_reviewed`
+- pushed_commit_hash(푸시된 커밋 해시): `26a803de31c2b993f29617b7eabb0ff200192c59`
 - review_report(검토 보고서): `stages/94_adapter_research__v41_sl210_oos_early_followup_review/03_reviews/stage94_sl210_oos_early_followup_review.md`
 - stage94_decision(94단계 판정): `stages/94_adapter_research__v41_sl210_oos_early_followup_review/03_reviews/stage94_decision.md`
 - comparison_csv(비교 CSV): `stages/94_adapter_research__v41_sl210_oos_early_followup_review/03_reviews/stage94_stage91_stage93_comparison.csv`

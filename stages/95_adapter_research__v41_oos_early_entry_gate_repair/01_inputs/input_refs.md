@@ -3,6 +3,7 @@
 - source_stage(원천 단계): `94_adapter_research__v41_sl210_oos_early_followup_review`
 - source_run(원천 실행): `run94A_stage94_v41_sl210_oos_early_followup_review_v1`
 - source_decision(원천 판정): `continue_oos_early_entry_gate_repair_in_stage95`
+- source_stage94_pushed_commit(원천 94단계 푸시 커밋): `26a803de31c2b993f29617b7eabb0ff200192c59`
 - source_stage93_closeout_commit(원천 93단계 종료 커밋): `a3c2a42e378ffce41e07e947f0e68ed9e76606a6`
 - stage94_review(94단계 검토): `stages/94_adapter_research__v41_sl210_oos_early_followup_review/03_reviews/stage94_sl210_oos_early_followup_review.md`
 - stage94_decision(94단계 판정): `stages/94_adapter_research__v41_sl210_oos_early_followup_review/03_reviews/stage94_decision.md`

@@ -946,5 +946,6 @@
 
 - run(실행): `run94A_stage94_v41_sl210_oos_early_followup_review_v1`
 - decision(판정): `continue_oos_early_entry_gate_repair_in_stage95`
+- pushed_commit_hash(푸시된 커밋 해시): `26a803de31c2b993f29617b7eabb0ff200192c59`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage93 best(93단계 최선안)의 full split(전체 분할) 균형은 보존하고, OOS early flatline risk(표본외 초반 평탄화 위험)를 Stage95(95단계) entry gate/confidence threshold(진입 게이트/신뢰도 문턱) 수리로 넘겼다.
