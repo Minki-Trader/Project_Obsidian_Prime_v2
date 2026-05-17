@@ -1,8 +1,8 @@
-﻿current_run_id: run106A_stage106_v41_oos_net_density_dd_after_early_recovery_repair_v1
+﻿current_run_id: run107A_stage107_v41_oos_net_density_dd_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair
+active_stage: 107_adapter_research__v41_oos_net_density_dd_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage105(105단계) closed(종료) as `continue_oos_net_density_dd_after_early_recovery_repair_in_stage106` and Stage106(106단계) `106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair` is open_planned(열림 계획). Effect(효과): OOS early(표본외 초반) 회복은 보존 조건으로 남기고 OOS net density/DD(표본외 순손익 밀도/손실률) 수리로 넘긴다.
+  Stage106(106단계) closed(종료) as `continue_oos_net_density_dd_followup_review_in_stage107` and Stage107(107단계) `107_adapter_research__v41_oos_net_density_dd_followup_review` is open_planned(열림 계획). Effect(효과): 초반 회복 보존 조건 아래 OOS net density/DD(표본외 순손익 밀도/손실률) 수리 결과를 후속 검토로 넘긴다.
 - >-
-  Stage105 result(105단계 결과)는 `stages/105_adapter_research__v41_oos_early_segment_followup_review/03_reviews/stage105_stage100_stage102_stage104_34d_comparison.csv`와 `stages/105_adapter_research__v41_oos_early_segment_followup_review/03_reviews/stage105_segment_tradeoff_summary.csv`에 기록된다. Effect(효과): Stage104(104단계)의 균형 후보가 34D KPI(34D 핵심 성과 지표)에 아직 부족한 이유를 다음 단계 입력으로 보존한다.
+  Stage106 result(106단계 결과)는 `stages/106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair/03_reviews/stage106_oos_net_density_dd_after_early_recovery_summary.csv`와 `stages/106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair/03_reviews/stage106_segment_kpi_summary.csv`에 기록된다. Effect(효과): Stage104 balanced(104단계 균형 후보) 대비 순손익/손실률 상충을 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5487,4 +5487,24 @@ stage105_v41_oos_early_segment_followup_review:
   packet_summary_path: docs/agent_control/packets/stage105_v41_oos_early_segment_followup_review_v1/aggregate_summary.json
   external_verification_status: completed_existing_stage104_mt5_runtime_evidence_reviewed
   pushed_commit_hash: 10ea0d39ab4063ab9b192b99539183c6bb8ce385
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage106_v41_oos_net_density_dd_after_early_recovery_repair:
+  packet_id: stage106_v41_oos_net_density_dd_after_early_recovery_repair_v1
+  stage_id: 106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair
+  status: closed_continue_oos_net_density_dd_followup_review_in_stage107
+  current_run_id: run106A_stage106_v41_oos_net_density_dd_after_early_recovery_repair_v1
+  adapter_under_review: s104_v41_h3_cd8_lng_early_adx19
+  source_stage105_closeout_commit: 10ea0d39ab4063ab9b192b99539183c6bb8ce385
+  source_stage105_latest_commit: 865027a04dba01702276876d9cec8c70c8ac5356
+  source_stage104_closeout_commit: 45400b9be01e87d5497aa3a96d1e229494e32444
+  source_stage104_latest_commit: 61778183dc73e327b612f58b70491a2f14408de2
+  source_stage102_latest_commit: 5ca329c468db459a8f68b9c28dd0897dfbf79623
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_oos_net_density_dd_followup_review_in_stage107
+  next_stage_or_branch: 107_adapter_research__v41_oos_net_density_dd_followup_review
+  report_path: stages/106_adapter_research__v41_oos_net_density_dd_after_early_recovery_repair/03_reviews/stage106_decision.md
+  packet_summary_path: docs/agent_control/packets/stage106_v41_oos_net_density_dd_after_early_recovery_repair_v1/aggregate_summary.json
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
