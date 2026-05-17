@@ -715,3 +715,9 @@
 - decision(판정): `continue_adapter_trade_shape_repair`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): legacy 34D(레거시 34D)를 복사하지 않고 v2-native(브이투 고유) hold5 trade-shape(보유 5봉 거래 형태) 후보를 측정했다.
+## 2026-05-17 - Stage63 risk/ATR drawdown compression closeout(63단계 위험/ATR 손실률 압축 종료)
+
+- run(실행): `run63A_stage63_risk_atr_drawdown_compression_v1`
+- decision(판정): `continue_stage63_due_to_incomplete_runtime`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage62(62단계) hold5(5봉 보유) 후보를 복사 개발이 아니라 v2-native(브이투 고유) 위험/ATR 압축 후보로 압박했다.

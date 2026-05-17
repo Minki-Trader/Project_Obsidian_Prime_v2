@@ -1,8 +1,8 @@
-current_run_id: run63A_stage63_v2_native_34d_target_followup_v1
+current_run_id: run64A_stage64_state_context_drawdown_smoothing_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 63_adapter_research__v2_native_34d_target_followup
+active_stage: 64_adapter_research__state_context_drawdown_smoothing
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage63(63단계) `63_adapter_research__v2_native_34d_target_followup` is open_planned(열림 계획) after Stage62(62단계) closed as `continue_adapter_trade_shape_repair`(어댑터 거래 형태 수리 계속). Effect(효과): Stage62(62단계)의 hold5(5봉 보유) 후보는 근거로 보존하고, 다음 연구는 34D KPI gap(34D 핵심 성과 지표 차이)을 더 줄이는 한 가지 경계 질문으로 좁힌다.
+  Stage64(64단계) `64_adapter_research__state_context_drawdown_smoothing` is open_planned(열림 계획) after Stage63(63단계) closed as `open_state_context_model_branch`(Stage63 판정). Effect(효과): Stage63(63단계)의 risk/ATR compression(위험/ATR 압축) 근거를 보존하고, 다음 연구는 state/context drawdown smoothing(상태/문맥 손실률 완화) 질문으로 좁힌다.
 - >-
-  Stage62 result(62단계 결과): validation(검증) PF(수익 팩터) 1.20, net(순손익) 474.42, DD(손실률) 18.04%; OOS(표본외) PF(수익 팩터) 1.32, net(순손익) 587.35, DD(손실률) 24.97%. Effect(효과): OOS PF(표본외 수익 팩터)는 34D extended PF(확장 수익 팩터) 1.302를 살짝 넘었지만, validation PF(검증 수익 팩터), DD(손실률), expectancy(기대값)는 34D latest(최신 34D) 수준에 못 미쳐 연구를 계속한다.
+  Stage63 result(63단계 결과): validation(검증) PF(수익 팩터), net(순손익), DD(손실률), and OOS(표본외) KPI(핵심 성과 지표)는 `stages/63_adapter_research__v2_native_34d_target_followup/03_reviews/stage63_risk_atr_compression_summary.csv`에 기록됐다. Effect(효과): 34D target surface(34D 목표 표면) 대비 부족한 부분을 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면) remains `legacy_34d_kpi_lesson_only_no_legacy_inheritance`; legacy 34D(레거시 34D)는 code copy(코드 복사)나 promotion inheritance(승격 상속)가 아니라 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하되, v2-native research(브이투 고유 연구)만 다음 실행에 쓴다.
 stage36_cross_model_characteristic_synthesis:
@@ -4745,4 +4745,19 @@ stage62_34d_target_trade_shape_batch:
   report_path: stages/62_adapter_research__kpi_margin_and_tier_b_reactivation/03_reviews/stage62_decision.md
   packet_summary_path: docs/agent_control/packets/stage62_34d_target_trade_shape_batch_v1/aggregate_summary.json
   external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage63_risk_atr_drawdown_compression:
+  packet_id: stage63_risk_atr_drawdown_compression_v1
+  stage_id: 63_adapter_research__v2_native_34d_target_followup
+  status: closed_continue_stage63_due_to_incomplete_runtime
+  current_run_id: run63A_stage63_risk_atr_drawdown_compression_v1
+  adapter_under_review: s62_v41_sd8_h5
+  source_stage62_pushed_commit: faaad81bce3c90a250d76cae0919c30a5c3c1cf6
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_stage63_due_to_incomplete_runtime
+  next_stage_or_branch: 64_adapter_research__state_context_drawdown_smoothing
+  report_path: stages/63_adapter_research__v2_native_34d_target_followup/03_reviews/stage63_decision.md
+  packet_summary_path: docs/agent_control/packets/stage63_risk_atr_drawdown_compression_v1/aggregate_summary.json
+  external_verification_status: blocked
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
