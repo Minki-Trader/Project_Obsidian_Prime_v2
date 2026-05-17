@@ -14,7 +14,7 @@ Effect(효과): Stage102(102단계)의 full OOS(전체 표본외) 개선과 초�
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_risk_atr_telemetry.csv`
 - gate_feature_summary(제한문 피처 요약): `stages/104_adapter_research__v41_oos_early_segment_repair/03_reviews/stage104_gate_feature_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `45400b9be01e87d5497aa3a96d1e229494e32444`
 
 ## Next(다음)
 
