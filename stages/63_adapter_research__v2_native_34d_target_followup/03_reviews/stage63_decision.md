@@ -14,6 +14,7 @@ Effect(효과): 이번 단계의 결과는 운영 주장(operating claim, 운영
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/63_adapter_research__v2_native_34d_target_followup/03_reviews/stage63_risk_atr_telemetry.csv`
 - tier_b_diagnostic(Tier B 진단): `stages/63_adapter_research__v2_native_34d_target_followup/03_reviews/stage63_tier_b_diagnostic_summary.csv`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `9ee5cdf86f8cd352f3aa01454f8e8364f44dc40d`
 
 ## Reason(이유)
 

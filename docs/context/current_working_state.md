@@ -16,6 +16,7 @@ Stage63(63단계) closed(종료) as v2-native risk/ATR compression batch(브이�
 - run(실행): `run63A_stage63_risk_atr_drawdown_compression_v1`
 - decision(판정): `open_state_context_model_branch`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `9ee5cdf86f8cd352f3aa01454f8e8364f44dc40d`
 - report(보고서): `stages/63_adapter_research__v2_native_34d_target_followup/03_reviews/stage63_risk_atr_compression_report.md`
 - stage63_decision(63단계 판정): `stages/63_adapter_research__v2_native_34d_target_followup/03_reviews/stage63_decision.md`
 
