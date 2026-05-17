@@ -1116,6 +1116,6 @@
 
 - run(실행): `run118A_stage118_v41_dd_compression_density_repair_v1`
 - decision(판정): `continue_dd_compression_repair_review_in_stage119`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `1edf5a69757ae2e58bfcf0e4126b325d291170af`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage116(116단계)의 quality/density anchors(품질/밀도 기준점)에 model-risk cap(모델 위험 상한) 축소를 적용해 DD%(손실률) 압축 가능성을 실제 MT5 runtime(실행환경)으로 측정하고 Stage119(119단계) 후속 검토로 넘겼다.
