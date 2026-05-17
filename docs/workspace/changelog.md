@@ -1000,3 +1000,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `30470ff25b02787f2aabfe8d78d1bf729c36bc72`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage100(100단계)의 PF(수익 팩터) 개선은 확인했지만 OOS net/DD/trade density(표본외 순손익/손실률/거래 밀도)가 34D KPI(34D 핵심 성과 지표) 목표에 부족해 Stage102(102단계) 수리로 넘겼다.
+## 2026-05-18 - Stage102 v41 OOS net density/DD repair closeout(102단계 v41 표본외 순손익 밀도/손실률 수리 종료)
+
+- run(실행): `run102A_stage102_v41_oos_net_density_dd_repair_v1`
+- decision(판정): `continue_oos_net_density_followup_review_in_stage103`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage100(100단계)의 PF(수익 팩터) 개선을 보존하며 OOS net/DD/trade density(표본외 순손익/손실률/거래 밀도) 수리를 실제 MT5 runtime(실행환경)으로 측정하고 Stage103(103단계) 후속 검토로 넘겼다.
