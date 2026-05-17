@@ -16,6 +16,7 @@ Stage81(81단계) closed(종료) as v2-native v41 early OOS segment repair batch
 - run(실행): `run81A_stage81_v41_early_oos_segment_repair_v1`
 - decision(판정): `continue_early_oos_segment_review_in_stage82`
 - external_verification_status(외부 검증 상태): `completed`
+- pushed_commit_hash(푸시된 커밋 해시): `642b154b71bccd28bfcc2ec5b532e0c00fa680da`
 - report(보고서): `stages/81_adapter_research__v41_early_oos_segment_repair/03_reviews/stage81_v41_early_oos_segment_report.md`
 - stage81_decision(81단계 판정): `stages/81_adapter_research__v41_early_oos_segment_repair/03_reviews/stage81_decision.md`
 - risk_atr_telemetry(위험/ATR 텔레메트리): `stages/81_adapter_research__v41_early_oos_segment_repair/03_reviews/stage81_risk_atr_telemetry.csv`

@@ -848,5 +848,6 @@
 
 - run(실행): `run81A_stage81_v41_early_oos_segment_repair_v1`
 - decision(판정): `continue_early_oos_segment_review_in_stage82`
+- pushed_commit_hash(푸시된 커밋 해시): `642b154b71bccd28bfcc2ec5b532e0c00fa680da`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage79(79단계)의 TP4/SL2(익절 4, 손절 2) 표면에서 cooldown/max-hold/SL sensitivity(재진입 냉각/최대 보유/손절 민감도)를 좁게 바꿔 OOS early(표본외 초반) 약점 수리 가능성을 측정했다.
