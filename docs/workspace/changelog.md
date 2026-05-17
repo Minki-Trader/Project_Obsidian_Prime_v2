@@ -814,3 +814,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `d3c526ae7a435c4e2ae30cb2cbddb736026f486d`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage75(75단계)의 risk scale(위험 배율) tradeoff(맞교환)를 검토해 Stage77(77단계) entry quality/DD guard(진입 품질/손실률 보호) 수리로 넘겼다.
+## 2026-05-17 - Stage77 v41 entry quality/DD guard closeout(77단계 v41 진입 품질/손실률 보호 종료)
+
+- run(실행): `run77A_stage77_v41_entry_quality_dd_guard_v1`
+- decision(판정): `continue_entry_quality_dd_guard_in_stage78`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage73(73단계)의 risk5 TP3.5/TP4.0(위험 5%, 익절폭 3.5/4.0) 표면에서 short gate(숏 게이트)를 0.10/0.12 임계값으로 강화해 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
