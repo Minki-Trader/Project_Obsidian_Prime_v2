@@ -821,3 +821,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `9e73e3c2b5e38ec3b3644458f8c36aaab53039b2`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage73(73단계)의 risk5 TP3.5/TP4.0(위험 5%, 익절폭 3.5/4.0) 표면에서 short gate(숏 게이트)를 0.10/0.12 임계값으로 강화해 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
+## 2026-05-17 - Stage78 entry quality follow-up review closeout(78단계 진입 품질 후속 검토 종료)
+
+- run(실행): `run78A_stage78_v41_entry_quality_followup_review_v1`
+- decision(판정): `continue_atr_stop_lifecycle_repair_in_stage79`
+- source_stage77_latest_commit(원천 77단계 최신 커밋): `e69a7a77fd0cf13d17ad40ec6f1de986a402aa83`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage77(77단계)의 stricter short gate(더 엄격한 숏 게이트)는 DD(손실률)를 일부 낮췄지만 net(순손익)을 훼손해 Stage79(79단계) ATR stop/lifecycle(ATR 손절/거래 생명주기) 수리로 넘겼다.

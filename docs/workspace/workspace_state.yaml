@@ -1,8 +1,8 @@
-﻿current_run_id: run78A_stage78_v41_entry_quality_followup_review_v1
+﻿current_run_id: run79A_stage79_v41_atr_stop_lifecycle_repair_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 78_adapter_research__v41_entry_quality_followup_review
+active_stage: 79_adapter_research__v41_atr_stop_lifecycle_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage77(77단계) closed(종료) as `continue_entry_quality_dd_guard_in_stage78` and Stage78(78단계) `78_adapter_research__v41_entry_quality_followup_review` is open_planned(열림 계획). Effect(효과): v41 entry quality/DD guard(V41 진입 품질/손실률 보호) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
+  Stage78(78단계) closed(종료) as `continue_atr_stop_lifecycle_repair_in_stage79` and Stage79(79단계) `79_adapter_research__v41_atr_stop_lifecycle_repair` is open_planned(열림 계획). Effect(효과): Stage77(77단계) entry gate(진입 게이트) net damage(순손익 훼손)를 보존하고 ATR stop/lifecycle(ATR 손절/거래 생명주기) 수리 질문으로 넘긴다.
 - >-
-  Stage77 result(77단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/77_adapter_research__v41_entry_quality_dd_guard/03_reviews/stage77_v41_entry_quality_dd_guard_summary.csv`와 `stages/77_adapter_research__v41_entry_quality_dd_guard/03_reviews/stage77_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage78 result(78단계 결과): stricter short gate(더 엄격한 숏 게이트)는 DD(손실률)를 일부 낮췄지만 Stage73(73단계)의 net(순손익)을 보존하지 못했다. Effect(효과): Stage79(79단계)는 gate(게이트)가 아니라 stop/lifecycle(손절/생명주기) 축을 좁게 측정한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(v2 고유 연구)만 계속한다.
 stage36_cross_model_characteristic_synthesis:
   packet_id: stage36_run30A_cross_model_characteristic_synthesis_v1
   stage_id: 36_model_selection__cross_model_characteristic_synthesis
@@ -4986,4 +4986,20 @@ stage77_v41_entry_quality_dd_guard:
   report_path: stages/77_adapter_research__v41_entry_quality_dd_guard/03_reviews/stage77_decision.md
   packet_summary_path: docs/agent_control/packets/stage77_v41_entry_quality_dd_guard_v1/aggregate_summary.json
   external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage78_entry_quality_followup_review:
+  packet_id: stage78_v41_entry_quality_followup_review_v1
+  stage_id: 78_adapter_research__v41_entry_quality_followup_review
+  status: closed_continue_atr_stop_lifecycle_repair_in_stage79
+  current_run_id: run78A_stage78_v41_entry_quality_followup_review_v1
+  source_run_id: run77A_stage77_v41_entry_quality_dd_guard_v1
+  source_stage77_closeout_commit: 9e73e3c2b5e38ec3b3644458f8c36aaab53039b2
+  source_stage77_latest_commit: e69a7a77fd0cf13d17ad40ec6f1de986a402aa83
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_atr_stop_lifecycle_repair_in_stage79
+  next_stage_or_branch: 79_adapter_research__v41_atr_stop_lifecycle_repair
+  report_path: stages/78_adapter_research__v41_entry_quality_followup_review/03_reviews/stage78_decision.md
+  packet_summary_path: docs/agent_control/packets/stage78_v41_entry_quality_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage77_evidence_reviewed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
