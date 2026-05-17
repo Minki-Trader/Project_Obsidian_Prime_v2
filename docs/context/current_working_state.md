@@ -15,6 +15,7 @@ Stage70(70단계) closed(종료) as v2-native new model branch batch(브이투 �
 
 - run(실행): `run70A_stage70_new_model_branch_from_short_gate_limit_v1`
 - decision(판정): `open_alternate_model_source_branch_in_stage71`
+- stage70_pushed_commit(70단계 푸시 커밋): `c5545f2fa61575f42bbdb441e35d03355a7555ba`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/70_adapter_research__new_model_branch_from_short_gate_limit/03_reviews/stage70_new_model_branch_report.md`
 - stage70_decision(70단계 판정): `stages/70_adapter_research__new_model_branch_from_short_gate_limit/03_reviews/stage70_decision.md`

@@ -1,6 +1,7 @@
 ﻿# Stage70 Decision(70단계 판정)
 
 decision(판정): `open_alternate_model_source_branch_in_stage71`
+pushed_commit_hash(푸시된 커밋 해시): `c5545f2fa61575f42bbdb441e35d03355a7555ba`
 
 Stage70(70단계)는 legacy 34D(레거시 34D)를 복사하지 않고, Stage69(69단계)의 short-gate branch limit(숏 게이트 분기 한계) 뒤에 run50BN v46/v47 source(실행50BN 브이46/브이47 원천)를 새 model branch(모델 분기)로 측정했다.
 

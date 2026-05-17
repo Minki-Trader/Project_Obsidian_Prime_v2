@@ -766,6 +766,7 @@
 ## 2026-05-17 - Stage70 new model branch closeout(70단계 새 모델 분기 종료)
 
 - run(실행): `run70A_stage70_new_model_branch_from_short_gate_limit_v1`
-- decision(판정): `continue_stage70_due_to_incomplete_runtime`
+- decision(판정): `open_alternate_model_source_branch_in_stage71`
+- pushed_commit_hash(푸시된 커밋 해시): `c5545f2fa61575f42bbdb441e35d03355a7555ba`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage69(69단계)의 short-gate branch limit(숏 게이트 분기 한계) 뒤에 run50BN v46/v47 source(실행50BN 브이46/브이47 원천)를 새 모델 분기로 측정했다.
