@@ -15,6 +15,7 @@ Stage67(67단계) closed(종료) as v2-native short-gate net/DD balance batch(�
 
 - run(실행): `run67A_stage67_short_gate_net_scale_review_v1`
 - decision(판정): `continue_dd_net_balance_repair_in_stage68`
+- pushed_commit_hash(푸시된 커밋 해시): `bac1862ba6bbe7c3092e5dffd2dbbb06d29b4659`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/67_adapter_research__short_gate_net_scale_review/03_reviews/stage67_short_gate_net_scale_report.md`
 - stage67_decision(67단계 판정): `stages/67_adapter_research__short_gate_net_scale_review/03_reviews/stage67_decision.md`

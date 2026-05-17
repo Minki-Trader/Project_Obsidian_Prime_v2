@@ -1,6 +1,7 @@
 ﻿# Stage67 Decision(67단계 판정)
 
 decision(판정): `continue_dd_net_balance_repair_in_stage68`
+pushed_commit_hash(푸시된 커밋 해시): `bac1862ba6bbe7c3092e5dffd2dbbb06d29b4659`
 
 Stage67(67단계)는 legacy 34D(레거시 34D)를 복사하지 않고, Stage66(66단계) best(최선)인 short-gate risk5 hold5(숏 게이트 위험5 보유5) 흐름을 control(대조군), 4.5% risk cap(4.5% 위험 상한), 12-bar cooldown(12봉 냉각)으로 좁게 비교했다.
 
