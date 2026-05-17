@@ -1,8 +1,8 @@
-﻿current_run_id: run110A_stage110_v41_trade_density_net_scale_after_dd_tradeoff_repair_v1
+﻿current_run_id: run111A_stage111_v41_trade_density_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair
+active_stage: 111_adapter_research__v41_trade_density_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage109(109단계) closed(종료) as `continue_trade_density_net_scale_after_dd_tradeoff_repair_in_stage110` and Stage110(110단계) `110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair` is open_planned(열림 계획). Effect(효과): hold/cooldown(보유/쿨다운)만으로는 34D KPI(34D 핵심 성과 지표) 격차가 닫히지 않아 trade density/net scale(거래 밀도/순손익 규모) 수리로 넘긴다.
+  Stage110(110단계) closed(종료) as `continue_trade_density_repair_review_in_stage111` and Stage111(111단계) `111_adapter_research__v41_trade_density_followup_review` is open_planned(열림 계획). Effect(효과): threshold/session gate(임계값/세션 제한문) 완화가 거래 밀도와 순손익 규모를 실제로 열었는지 후속 검토로 넘긴다.
 - >-
-  Stage109 result(109단계 결과)는 `stages/109_adapter_research__v41_dd_control_followup_review/03_reviews/stage109_stage106_stage108_34d_comparison.csv`와 `stages/109_adapter_research__v41_dd_control_followup_review/03_reviews/stage109_dd_net_tradeoff_summary.csv`에 기록된다. Effect(효과): DD(손실률) 개선 후보와 net/PF(순손익/수익 팩터) 보존 후보가 갈라진 원인을 다음 단계 입력으로 보존한다.
+  Stage110 result(110단계 결과)는 `stages/110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair/03_reviews/stage110_trade_density_net_scale_summary.csv`와 `stages/110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair/03_reviews/stage110_segment_kpi_summary.csv`에 기록된다. Effect(효과): 34D KPI(34D 핵심 성과 지표) 대비 거래 수/순손익/손실률 격차를 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5567,4 +5567,24 @@ stage109_v41_dd_control_followup_review:
   packet_summary_path: docs/agent_control/packets/stage109_v41_dd_control_followup_review_v1/aggregate_summary.json
   external_verification_status: completed_existing_stage108_mt5_runtime_evidence_reviewed
   pushed_commit_hash: 1c4035bceb96830d1d0f69bd5e44402522c77d27
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage110_v41_trade_density_net_scale_after_dd_tradeoff_repair:
+  packet_id: stage110_v41_trade_density_net_scale_after_dd_tradeoff_repair_v1
+  stage_id: 110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair
+  status: closed_continue_trade_density_repair_review_in_stage111
+  current_run_id: run110A_stage110_v41_trade_density_net_scale_after_dd_tradeoff_repair_v1
+  adapter_under_review: s106_v41_h3_cd9_lng_early_adx19
+  source_stage109_closeout_commit: 1c4035bceb96830d1d0f69bd5e44402522c77d27
+  source_stage109_latest_commit: 4fa01e96cf8a129eee7f94cd402d84914918b0f5
+  source_stage108_closeout_commit: d5f13807d196abd557faceb007b666950c1bb197
+  source_stage108_latest_commit: e94b562ad2c8a3a7fbcf5ca198f7f5799fae3219
+  source_stage106_latest_commit: 0e34739b13eaf7d8c7d9bfb48bf168396122d17a
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_trade_density_repair_review_in_stage111
+  next_stage_or_branch: 111_adapter_research__v41_trade_density_followup_review
+  report_path: stages/110_adapter_research__v41_trade_density_net_scale_after_dd_tradeoff_repair/03_reviews/stage110_decision.md
+  packet_summary_path: docs/agent_control/packets/stage110_v41_trade_density_net_scale_after_dd_tradeoff_repair_v1/aggregate_summary.json
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

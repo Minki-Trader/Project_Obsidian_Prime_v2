@@ -1056,3 +1056,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `1c4035bceb96830d1d0f69bd5e44402522c77d27`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage108(108단계)은 손실률 개선과 순손익/수익 팩터 보존이 갈라졌고, 거래 밀도와 순손익 규모 격차가 남아 Stage110(110단계)로 넘겼다.
+## 2026-05-18 - Stage110 v41 trade density/net scale repair closeout(110단계 v41 거래 밀도/순손익 규모 수리 종료)
+
+- run(실행): `run110A_stage110_v41_trade_density_net_scale_after_dd_tradeoff_repair_v1`
+- decision(판정): `continue_trade_density_repair_review_in_stage111`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): threshold/session gate(임계값/세션 제한문) 완화가 거래 수와 순손익 규모를 여는지 실제 MT5 runtime(실행환경)으로 측정하고 Stage111(111단계) 후속 검토로 넘겼다.
