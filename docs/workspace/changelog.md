@@ -961,6 +961,6 @@
 
 - run(실행): `run96A_stage96_v41_oos_early_entry_gate_followup_review_v1`
 - decision(판정): `continue_oos_early_lifecycle_repair_in_stage97`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `6c843b8b201da5e8aff17188d406a39c6c8c34f8`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage95(95단계) entry gate/confidence threshold(진입 게이트/신뢰도 문턱) 수리는 OOS early(표본외 초반)를 고치지 못해 Stage97(97단계) lifecycle/hold/re-entry(생명주기/보유/재진입) 수리로 넘겼다.

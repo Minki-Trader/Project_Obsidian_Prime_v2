@@ -16,7 +16,7 @@ Stage96(96단계) closed(종료) as v2-native v41 OOS early entry gate follow-up
 - run(실행): `run96A_stage96_v41_oos_early_entry_gate_followup_review_v1`
 - decision(판정): `continue_oos_early_lifecycle_repair_in_stage97`
 - external_verification_status(외부 검증 상태): `completed_existing_stage95_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `6c843b8b201da5e8aff17188d406a39c6c8c34f8`
 - report(보고서): `stages/96_adapter_research__v41_oos_early_entry_gate_followup_review/03_reviews/stage96_oos_early_entry_gate_followup_review.md`
 - comparison(비교): `stages/96_adapter_research__v41_oos_early_entry_gate_followup_review/03_reviews/stage96_stage93_stage95_comparison.csv`
 - stage96_decision(96단계 판정): `stages/96_adapter_research__v41_oos_early_entry_gate_followup_review/03_reviews/stage96_decision.md`

@@ -15,7 +15,7 @@ Effect(효과): Stage95(95단계)의 실패/보존 근거를 다음 수리 축�
 - source_segment_kpi(원천 구간 KPI): `stages/95_adapter_research__v41_oos_early_entry_gate_repair/03_reviews/stage95_segment_kpi_summary.csv`
 - source_gate_feature_summary(원천 게이트 피처 요약): `stages/95_adapter_research__v41_oos_early_entry_gate_repair/03_reviews/stage95_gate_feature_summary.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage95_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `6c843b8b201da5e8aff17188d406a39c6c8c34f8`
 
 ## Why(이유)
 

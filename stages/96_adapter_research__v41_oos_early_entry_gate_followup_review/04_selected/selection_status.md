@@ -7,7 +7,7 @@
 - source_decision(원천 판정): `continue_oos_early_entry_gate_followup_review_in_stage96`
 - stage96_decision(96단계 판정): `continue_oos_early_lifecycle_repair_in_stage97`
 - next_stage(다음 단계): `97_adapter_research__v41_oos_early_lifecycle_repair`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `6c843b8b201da5e8aff17188d406a39c6c8c34f8`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
