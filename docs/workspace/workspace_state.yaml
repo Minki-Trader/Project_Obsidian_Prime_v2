@@ -1,8 +1,8 @@
-﻿current_run_id: run91A_stage91_v41_sl205_net_recovery_oos_early_repair_v1
+﻿current_run_id: run92A_stage92_v41_sl205_net_recovery_followup_review_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 91_adapter_research__v41_sl205_net_recovery_oos_early_repair
+active_stage: 92_adapter_research__v41_sl205_net_recovery_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage89(89단계) closed(종료) as `continue_drawdown_oos_early_followup_review_in_stage90` and Stage90(90단계) `90_adapter_research__v41_drawdown_oos_early_followup_review` is open_planned(열림 계획). Effect(효과): v41 drawdown/OOS early repair(V41 손실률/표본외 초반 수리) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
+  Stage91(91단계) closed(종료) as `continue_sl205_net_recovery_followup_review_in_stage92` and Stage92(92단계) `92_adapter_research__v41_sl205_net_recovery_followup_review` is open_planned(열림 계획). Effect(효과): v41 SL2.05 net recovery/OOS early repair(V41 손절 2.05 순손익 회복/표본외 초반 수리) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
 - >-
-  Stage89 result(89단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_v41_drawdown_oos_early_repair_summary.csv`와 `stages/89_adapter_research__v41_drawdown_and_oos_early_repair/03_reviews/stage89_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage91 result(91단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_v41_sl205_net_recovery_oos_early_repair_summary.csv`와 `stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5214,16 +5214,22 @@ stage90_v41_drawdown_oos_early_followup_review:
   external_verification_status: completed_existing_stage89_evidence_reviewed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
 
+
 stage91_v41_sl205_net_recovery_oos_early_repair:
   packet_id: stage91_v41_sl205_net_recovery_oos_early_repair_v1
   stage_id: 91_adapter_research__v41_sl205_net_recovery_oos_early_repair
-  status: open_planned
+  status: closed_continue_sl205_net_recovery_followup_review_in_stage92
   current_run_id: run91A_stage91_v41_sl205_net_recovery_oos_early_repair_v1
-  source_stage90_decision: continue_sl205_net_recovery_and_oos_early_repair_in_stage91
-  source_stage90_pushed_commit: 7a3f7a77ef1b96908c52547af3247a0c899f0be5
+  adapter_under_review: s89_v41_h3_risk475_gate08_sl205_tp38_cd10
+  source_stage90_closeout_commit: 7a3f7a77ef1b96908c52547af3247a0c899f0be5
+  source_stage90_latest_commit: 80930456ad3951f9ab4ec4a52d1dc9583a0fcf96
+  source_stage89_closeout_commit: 50f767c3ae9c18f36a53e4ec95588299e61f5dc0
+  source_stage89_latest_commit: f0b6a5eb755b750cb5bc805c5d74bebbba23b1c3
   target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
-  source_adapter: s89_v41_h3_risk475_gate08_sl205_tp38_cd10
-  bounded_question: recover validation net and OOS early while preserving SL2.05 DD compression
-  report_path: stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/04_selected/selection_status.md
-  external_verification_status: planned
+  decision: continue_sl205_net_recovery_followup_review_in_stage92
+  next_stage_or_branch: 92_adapter_research__v41_sl205_net_recovery_followup_review
+  report_path: stages/91_adapter_research__v41_sl205_net_recovery_oos_early_repair/03_reviews/stage91_decision.md
+  packet_summary_path: docs/agent_control/packets/stage91_v41_sl205_net_recovery_oos_early_repair_v1/aggregate_summary.json
+  external_verification_status: completed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+

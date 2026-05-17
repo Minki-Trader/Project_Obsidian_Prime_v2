@@ -919,3 +919,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `7a3f7a77ef1b96908c52547af3247a0c899f0be5`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): SL2.05(손절 2.05)는 DD(손실률)와 OOS net(표본외 순손익) 단서를 줬지만 validation net/PF(검증 순손익/수익 팩터)와 OOS early(표본외 초반)가 남아 Stage91(91단계)로 넘겼다.
+## 2026-05-17 - Stage91 v41 SL2.05 net recovery/OOS early repair closeout(91단계 v41 손절 2.05 순손익 회복/표본외 초반 수리 종료)
+
+- run(실행): `run91A_stage91_v41_sl205_net_recovery_oos_early_repair_v1`
+- decision(판정): `continue_sl205_net_recovery_followup_review_in_stage92`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage90(90단계)의 판정대로 SL2.05(손절 2.05)의 DD(손실률) 압축을 보존하면서 validation net/PF(검증 순손익/수익 팩터)와 OOS early(표본외 초반)를 좁게 측정했다.
