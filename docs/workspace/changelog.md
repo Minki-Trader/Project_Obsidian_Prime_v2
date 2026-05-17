@@ -971,3 +971,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `beeb81ebc58ea4492a0fbe015dab3b1ba9f5cbd6`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage96(96단계)의 판정대로 lifecycle/hold/re-entry(생명주기/보유/재진입)를 좁게 바꿔 OOS early flatline risk(표본외 초반 평탄화 위험)를 측정했다.
+## 2026-05-18 - Stage98 v41 OOS early lifecycle follow-up review closeout(98단계 v41 표본외 초반 생명주기 후속 검토 종료)
+
+- run(실행): `run98A_stage98_v41_oos_early_lifecycle_followup_review_v1`
+- decision(판정): `continue_oos_early_side_session_context_repair_in_stage99`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage97(97단계)의 lifecycle/hold/re-entry(생명주기/보유/재진입) 수리가 34D KPI(34D 핵심 성과 지표) 목표에 아직 부족하다고 판정하고 Stage99(99단계) side/session/context repair(방향/세션/문맥 수리)로 넘겼다.

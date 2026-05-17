@@ -1,8 +1,8 @@
-﻿current_run_id: run98A_stage98_v41_oos_early_lifecycle_followup_review_v1
+﻿current_run_id: run99A_stage99_v41_oos_early_side_session_context_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 98_adapter_research__v41_oos_early_lifecycle_followup_review
+active_stage: 99_adapter_research__v41_oos_early_side_session_context_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage97(97단계) closed(종료) as `continue_oos_early_lifecycle_followup_review_in_stage98` and Stage98(98단계) `98_adapter_research__v41_oos_early_lifecycle_followup_review` is open_planned(열림 계획). Effect(효과): v41 OOS early lifecycle repair(V41 표본외 초반 생명주기 수리) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
+  Stage98(98단계) closed(종료) as `continue_oos_early_side_session_context_repair_in_stage99` and Stage99(99단계) `99_adapter_research__v41_oos_early_side_session_context_repair` is open_planned(열림 계획). Effect(효과): lifecycle-only repair(생명주기 단독 수리) 실패와 단서를 보존하고 side/session/context(방향/세션/문맥) 경계 수리로 넘긴다.
 - >-
-  Stage97 result(97단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/97_adapter_research__v41_oos_early_lifecycle_repair/03_reviews/stage97_v41_oos_early_lifecycle_repair_summary.csv`와 `stages/97_adapter_research__v41_oos_early_lifecycle_repair/03_reviews/stage97_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage98 result(98단계 결과): Stage97(97단계) H2(2봉 보유)는 OOS early(표본외 초반)를 조금 개선했지만 validation(검증)을 훼손했고, H4/CD8(4봉 보유/8봉 쿨다운)은 OOS early(표본외 초반)를 고치지 못했다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5335,4 +5335,23 @@ stage97_v41_oos_early_lifecycle_repair:
   packet_summary_path: docs/agent_control/packets/stage97_v41_oos_early_lifecycle_repair_v1/aggregate_summary.json
   external_verification_status: completed
   pushed_commit_hash: beeb81ebc58ea4492a0fbe015dab3b1ba9f5cbd6
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage98_v41_oos_early_lifecycle_followup_review:
+  packet_id: stage98_v41_oos_early_lifecycle_followup_review_v1
+  stage_id: 98_adapter_research__v41_oos_early_lifecycle_followup_review
+  status: closed_continue_oos_early_side_session_context_repair_in_stage99
+  current_run_id: run98A_stage98_v41_oos_early_lifecycle_followup_review_v1
+  source_stage97_closeout_commit: beeb81ebc58ea4492a0fbe015dab3b1ba9f5cbd6
+  source_stage97_latest_commit: 5154e76f306a4621b7bb11ee0cd1bfc4014d170a
+  source_stage93_closeout_commit: a3c2a42e378ffce41e07e947f0e68ed9e76606a6
+  source_stage93_latest_commit: e1b59cbbd7e75ddee05bdcb075fd983e1effc8bf
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_oos_early_side_session_context_repair_in_stage99
+  next_stage_or_branch: 99_adapter_research__v41_oos_early_side_session_context_repair
+  report_path: stages/98_adapter_research__v41_oos_early_lifecycle_followup_review/03_reviews/stage98_oos_early_lifecycle_followup_review.md
+  decision_path: stages/98_adapter_research__v41_oos_early_lifecycle_followup_review/03_reviews/stage98_decision.md
+  packet_summary_path: docs/agent_control/packets/stage98_v41_oos_early_lifecycle_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage97_evidence_reviewed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
