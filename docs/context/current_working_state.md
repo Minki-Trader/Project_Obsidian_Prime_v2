@@ -15,6 +15,7 @@ Stage72(72단계) closed(종료) as v2-native v41 gate repair batch(브이투 �
 
 - run(실행): `run72A_stage72_v41_source_repair_review_v1`
 - decision(판정): `continue_v41_gate_repair_in_stage73`
+- stage72_pushed_commit(72단계 푸시 커밋): `efe929c8118d147bbfae6b977bf0845231303df7`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/72_adapter_research__v41_source_repair_review/03_reviews/stage72_v41_gate_repair_report.md`
 - stage72_decision(72단계 판정): `stages/72_adapter_research__v41_source_repair_review/03_reviews/stage72_decision.md`

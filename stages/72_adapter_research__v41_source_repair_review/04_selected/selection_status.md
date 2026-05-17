@@ -8,6 +8,7 @@
 - adapter_under_review(검토 중 어댑터): `s71_v41_h3_risk45_short_gate`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage72_decision(72단계 판정): `continue_v41_gate_repair_in_stage73`
+- pushed_commit_hash(푸시된 커밋 해시): `efe929c8118d147bbfae6b977bf0845231303df7`
 - next_stage_or_branch(다음 단계/분기): `73_adapter_research__v41_gate_repair_followup`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

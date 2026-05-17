@@ -1,6 +1,7 @@
 ﻿# Stage72 Decision(72단계 판정)
 
 decision(판정): `continue_v41_gate_repair_in_stage73`
+pushed_commit_hash(푸시된 커밋 해시): `efe929c8118d147bbfae6b977bf0845231303df7`
 
 Stage72(72단계)는 Stage71(71단계)의 v41(브이41) short gate(숏 게이트)를 0.04/0.06 threshold(임계값)로 완화해 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
 
