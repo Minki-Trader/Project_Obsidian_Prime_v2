@@ -777,3 +777,9 @@
 - pushed_commit_hash(푸시된 커밋 해시): `2e6668ad46d91b13288b8d9555d5e54d0a64b911`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage70(70단계)의 v46/v47(브이46/브이47) 실패 뒤 v41(브이41) 원천을 risk cap(위험 상한)과 short gate(숏 게이트)로 좁게 측정했다.
+## 2026-05-17 - Stage72 v41 gate repair closeout(72단계 v41 게이트 수리 종료)
+
+- run(실행): `run72A_stage72_v41_source_repair_review_v1`
+- decision(판정): `continue_v41_gate_repair_in_stage73`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage71(71단계)의 v41 short gate(브이41 숏 게이트)를 0.04/0.06 임계값으로 완화해 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.

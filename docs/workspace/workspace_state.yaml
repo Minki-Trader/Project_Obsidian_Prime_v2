@@ -1,8 +1,8 @@
-﻿current_run_id: run72A_stage72_v41_source_repair_review_v1
+﻿current_run_id: run73A_stage73_v41_gate_repair_followup_v1
 updated_on: '2026-05-17'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 72_adapter_research__v41_source_repair_review
+active_stage: 73_adapter_research__v41_gate_repair_followup
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage71(71단계) closed(종료) as `continue_v41_source_repair_in_stage72` and Stage72(72단계) `72_adapter_research__v41_source_repair_review` is open_planned(열림 계획). Effect(효과): v41 source(브이41 원천) 측정 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
+  Stage72(72단계) closed(종료) as `continue_v41_gate_repair_in_stage73` and Stage73(73단계) `73_adapter_research__v41_gate_repair_followup` is open_planned(열림 계획). Effect(효과): v41 gate repair(브이41 게이트 수리) 근거를 보존하고 다음 경계 연구 질문으로만 넘긴다.
 - >-
-  Stage71 result(71단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/71_adapter_research__new_model_branch_review/03_reviews/stage71_v41_source_branch_summary.csv`와 `stages/71_adapter_research__new_model_branch_review/03_reviews/stage71_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
+  Stage72 result(72단계 결과): validation/OOS(검증/표본외), PF/net/DD(수익 팩터/순손익/손실률), risk/ATR telemetry(위험/ATR 텔레메트리)는 `stages/72_adapter_research__v41_source_repair_review/03_reviews/stage72_v41_gate_repair_summary.csv`와 `stages/72_adapter_research__v41_source_repair_review/03_reviews/stage72_risk_atr_telemetry.csv`에 기록된다. Effect(효과): 34D target surface(34D 목표 표면) 대비 KPI(핵심 성과 지표) 차이를 다음 단계 입력으로 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): 목표는 높게 유지하지만 v2-native research(브이투 고유 연구)만 계속한다.
 stage36_cross_model_characteristic_synthesis:
@@ -4888,5 +4888,20 @@ stage71_v41_source_branch_review:
   next_stage_or_branch: 72_adapter_research__v41_source_repair_review
   report_path: stages/71_adapter_research__new_model_branch_review/03_reviews/stage71_decision.md
   packet_summary_path: docs/agent_control/packets/stage71_new_model_branch_review_v1/aggregate_summary.json
+  external_verification_status: completed
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage72_v41_gate_repair:
+  packet_id: stage72_v41_source_repair_review_v1
+  stage_id: 72_adapter_research__v41_source_repair_review
+  status: closed_continue_v41_gate_repair_in_stage73
+  current_run_id: run72A_stage72_v41_source_repair_review_v1
+  adapter_under_review: s71_v41_h3_risk45_short_gate
+  source_stage71_pushed_commit: c6e46abaf901b672289160ba0e5a9d7008fcf2f1
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_v41_gate_repair_in_stage73
+  next_stage_or_branch: 73_adapter_research__v41_gate_repair_followup
+  report_path: stages/72_adapter_research__v41_source_repair_review/03_reviews/stage72_decision.md
+  packet_summary_path: docs/agent_control/packets/stage72_v41_source_repair_review_v1/aggregate_summary.json
   external_verification_status: completed
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
