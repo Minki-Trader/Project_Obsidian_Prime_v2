@@ -15,7 +15,7 @@ Effect(효과): lifecycle-only repair(생명주기 단독 수리)에서 막힌 O
 - projection(투영): `stages/99_adapter_research__v41_oos_early_side_session_context_repair/03_reviews/stage99_context_gate_projection.csv`
 - report(보고서): `stages/99_adapter_research__v41_oos_early_side_session_context_repair/03_reviews/stage99_oos_early_side_session_context_report.md`
 - external_verification_status(외부 검증 상태): `completed_existing_stage97_mt5_trade_attribution`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `aec4267b71425533e796dd4a6deb2e6b14265418`
 
 ## KPI Read(핵심 성과 지표 판독)
 

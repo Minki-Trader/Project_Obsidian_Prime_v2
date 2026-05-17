@@ -983,6 +983,6 @@
 - run(실행): `run99A_stage99_v41_oos_early_side_session_context_repair_v1`
 - decision(판정): `continue_context_gate_runtime_repair_in_stage100`
 - selected_gate(선택 제한문): `long_early_mid_range_adxlt20`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `aec4267b71425533e796dd4a6deb2e6b14265418`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage99(99단계)는 CD8(8봉 쿨다운)의 OOS early(표본외 초반) 약점을 문맥 조건으로 좁혔고, Stage100(100단계) 실제 실행환경 수리로 넘겼다.
