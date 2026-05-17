@@ -15,6 +15,7 @@ Stage73(73단계) closed(종료) as v2-native v41 TP/risk follow-up batch(v2 고
 
 - run(실행): `run73A_stage73_v41_gate_repair_followup_v1`
 - decision(판정): `continue_v41_tp_risk_repair_in_stage74`
+- pushed_commit_hash(푸시된 커밋 해시): `30bc138764da2c04c1552f0f9e12830f95eef250`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/73_adapter_research__v41_gate_repair_followup/03_reviews/stage73_v41_tp_risk_report.md`
 - stage73_decision(73단계 판정): `stages/73_adapter_research__v41_gate_repair_followup/03_reviews/stage73_decision.md`

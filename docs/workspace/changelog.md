@@ -788,5 +788,6 @@
 
 - run(실행): `run73A_stage73_v41_gate_repair_followup_v1`
 - decision(판정): `continue_v41_tp_risk_repair_in_stage74`
+- pushed_commit_hash(푸시된 커밋 해시): `30bc138764da2c04c1552f0f9e12830f95eef250`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage71(71단계)의 0.08 short gate(숏 게이트)를 복원하고 risk cap(위험 상한)과 TP(take profit, 익절 폭)를 좁게 바꿔 PF/net/DD(수익 팩터/순손익/손실률) 균형을 측정했다.
