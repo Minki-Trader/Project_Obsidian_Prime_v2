@@ -15,6 +15,7 @@ Stage136(136단계)는 Stage135(135단계)의 trade count/concentration(거래 �
 
 - run(실행): `run136A_stage136_stage122_survivor_trade_count_concentration_repair_v1`
 - decision(판정): `continue_trade_count_concentration_repair_in_new_bounded_stage`
+- pushed_commit_hash(푸시된 커밋 해시): `fd3728e2aa224b1dede8ee6c36d3aabfab710124`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_report.md`
 - summary(요약): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_summary.csv`

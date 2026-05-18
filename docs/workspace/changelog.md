@@ -1244,5 +1244,6 @@
 ## 2026-05-18T04:49:42Z Stage136 trade count/concentration repair closeout(136단계 거래 수/집중 수리 종료)
 
 - action(행동): closed(종료) `136_adapter_research__stage122_survivor_trade_count_concentration_repair` with decision(판정) `continue_trade_count_concentration_repair_in_new_bounded_stage`.
+- pushed_commit_hash(푸시된 커밋 해시): `fd3728e2aa224b1dede8ee6c36d3aabfab710124`
 - effect(효과): Stage135 survivor candidate(135단계 생존 후보)의 거래 수/집중 수리 결과를 Stage137(137단계) 검토로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

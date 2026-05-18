@@ -1,6 +1,7 @@
 ﻿# Stage136 Decision(136단계 판정)
 
 decision(판정): `continue_trade_count_concentration_repair_in_new_bounded_stage`
+pushed_commit_hash(푸시된 커밋 해시): `fd3728e2aa224b1dede8ee6c36d3aabfab710124`
 
 Stage136(136단계)는 trade count/concentration(거래 수/집중)만 좁게 수리했다. Effect(효과): Stage135(135단계)의 강한 PF/net(수익 팩터/순손익)을 보호하면서 거래 수와 집중 약점을 따로 검토한다.
 
