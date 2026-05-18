@@ -1420,4 +1420,5 @@
 
 - action(행동): closed(종료) `163_adapter_research__stage161_density_preserving_score_repair` with decision(판정) `open_stage164_density_repair_followup_due_to_kpi_damage_candidate_not_final`.
 - effect(효과): long-dense(롱 밀도 보존) 및 low-risk shortgate(저위험 숏 게이트) 변형을 MT5(메타트레이더5)로 측정하고 Stage164(164단계) 후속 판독으로 넘겼다.
+- pushed_commit_hash(푸시 커밋 해시): `deb4276a8b176549bd5df4f3ab9aea480a471f3f`
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

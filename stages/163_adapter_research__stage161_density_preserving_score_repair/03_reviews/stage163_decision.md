@@ -11,7 +11,7 @@
 - summary_csv(요약 CSV): `stages/163_adapter_research__stage161_density_preserving_score_repair/03_reviews/stage163_density_preserving_score_repair_summary.csv`
 - segment_kpi(구간 핵심 성과 지표): `stages/163_adapter_research__stage161_density_preserving_score_repair/03_reviews/stage163_segment_kpi_summary.csv`
 - probability_binding(확률 작동): `stages/163_adapter_research__stage161_density_preserving_score_repair/03_reviews/stage163_probability_binding_summary.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `deb4276a8b176549bd5df4f3ab9aea480a471f3f`
 - next_stage_or_branch(다음 단계 또는 분기): `164_adapter_research__stage163_density_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
