@@ -1,0 +1,170 @@
+{
+  "attribution": "stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_performance_attribution.csv",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "Midwide(중간넓은 문맥)의 OOS DD(표본외 낙폭) 개선이 표본별 trade mix(거래 구성) 차이일 수 있어 Stage182(182단계)에서 calibrated risk balance(보정 위험 균형)로 확인한다.",
+      "attribution_confidence": "medium(중간)",
+      "comparison_baseline": "Stage180 control(180단계 대조군)",
+      "likely_drivers": "Context filtering(문맥 필터링)이 OOS tail(표본외 꼬리)을 줄였지만 validation losing cluster(검증 손실 군집)는 아직 남았다.",
+      "next_probe": "Stage182(182단계)는 midwide context(중간넓은 문맥)를 유지하고 risk cap(위험 상한)을 0.0365보다 약간 낮춰 validation DD(검증 낙폭)를 34D 아래로 낮추되 validation net(검증 순손익)을 34D 위에 남길 수 있는지 본다.",
+      "observed_change": "Midwide context(중간넓은 문맥)는 OOS DD(표본외 낙폭)를 8.8227로 고치고 validation net(검증 순손익)을 1223.67로 올렸지만 validation DD(검증 낙폭)는 14.8516으로 실패했다.",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "segment_checks": "validation mid PF(검증 중반 수익요인)는 midwide에서도 1.487087로 34D PF(34D 수익요인) 아래다.",
+      "trade_shape": "midwide_val_net=1223.67; midwide_val_dd=14.8516; midwide_oos_dd=8.8227; hold2_val_net=446.88; cooldown_val_net=1085.62"
+    },
+    {
+      "alternative_explanations": "Net(순손익) 훼손은 exit timing(청산 타이밍) 문제일 수 있다.",
+      "attribution_confidence": "high(높음)",
+      "comparison_baseline": "Stage180 control(180단계 대조군)",
+      "likely_drivers": "Max hold(최대 보유) 축소가 손실 체류와 이익 체류를 함께 잘라 MFE capture(최대 유리 이동 포착)를 훼손했다.",
+      "next_probe": "Do not repeat blunt hold2(무딘 2봉 보유 반복 금지); keep as failure memory(실패 기억).",
+      "observed_change": "Hold2(2봉 보유)는 validation/OOS DD(검증/표본외 낙폭)를 통과권으로 낮췄지만 validation net(검증 순손익)을 446.88로 깨뜨렸다.",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "segment_checks": "validation mid PF(검증 중반 수익요인) 1.133111은 모든 변형 중 최악이다.",
+      "trade_shape": "short hold(짧은 보유)는 DD(낙폭) repair clue(수리 단서)이지만 standalone path(단독 경로)는 아니다."
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage182_tp45_midwide_risk_balance_repair_candidate_not_final",
+  "decision_path": "stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_decision.md",
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10792,
+      "sha256": "3c97b34195ad5a8ddf7a2ff1da54bd6a323330c66500e54c72068a9b85281a27",
+      "upserted_rows": 1
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5606,
+      "sha256": "9fc45040d63be6aed230bffd15cd433dd58dda48c1567699ce480cc1a2f534ea",
+      "upserted_rows": 6
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1004,
+      "sha256": "4e39df24d16bf0d6277df95378749bea6f9c9e076fdbe4ac870785de5df3b8ee",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "bcf66ba89eeeed5c3a1e6959053fe6f38bb113d38ac21f68354089167a71a8c7",
+      "upserted_rows": 1
+    }
+  },
+  "lesson_matrix": "stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_context_lifecycle_lesson_matrix.csv",
+  "lesson_rows": [
+    {
+      "adapter_id": "s180_tp45_control_risk0365_h3_cd5_ctxwide_sht54_lng52",
+      "hard_quality_pass": false,
+      "lesson": "Control(대조군)은 PF/net(수익요인/순손익)을 보존하지만 validation/OOS DD(검증/표본외 낙폭)와 mid PF(중반 수익요인)가 실패한다.",
+      "oos_balance_dd_percent": 14.2029,
+      "oos_dd_margin_vs_34d": -1.2937639999999995,
+      "oos_net": 823.11,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "source_role": "control_net_pf_preserved_dd_failed",
+      "source_run_id": "run180A_stage180_tp45_context_lifecycle_dd_repair_v1",
+      "validation_balance_dd_percent": 13.745,
+      "validation_dd_margin_vs_34d": -0.835863999999999,
+      "validation_mid_pf": 1.37500199,
+      "validation_mid_pf_gap_vs_34d_pf": -0.20815501000000003,
+      "validation_net": 1037.74,
+      "validation_net_gap_vs_34d": 50.139999999999986,
+      "validation_pf": 1.62
+    },
+    {
+      "adapter_id": "s180_tp45_cd8_risk0365_h3_cd8_ctxwide_sht54_lng52",
+      "hard_quality_pass": false,
+      "lesson": "Cooldown 8(8봉 대기)은 validation net/PF(검증 순손익/수익요인)를 올리지만 DD(낙폭)와 mid PF(중반 수익요인)를 고치지 못한다.",
+      "oos_balance_dd_percent": 14.2401,
+      "oos_dd_margin_vs_34d": -1.3309639999999998,
+      "oos_net": 800.74,
+      "oos_pf": 1.89,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "source_role": "cooldown8_net_lift_dd_still_failed",
+      "source_run_id": "run180A_stage180_tp45_context_lifecycle_dd_repair_v1",
+      "validation_balance_dd_percent": 13.7243,
+      "validation_dd_margin_vs_34d": -0.8151639999999993,
+      "validation_mid_pf": 1.365049155,
+      "validation_mid_pf_gap_vs_34d_pf": -0.21810784500000002,
+      "validation_net": 1085.62,
+      "validation_net_gap_vs_34d": 98.01999999999987,
+      "validation_pf": 1.64
+    },
+    {
+      "adapter_id": "s180_tp45_hold2_risk0365_h2_cd5_ctxwide_sht54_lng52",
+      "hard_quality_pass": false,
+      "lesson": "Hold 2(2봉 보유)는 DD(낙폭)를 고치지만 net(순손익)을 크게 깨고 late concentration(후반 집중)을 만든다.",
+      "oos_balance_dd_percent": 10.3819,
+      "oos_dd_margin_vs_34d": 2.5272360000000003,
+      "oos_net": 294.31,
+      "oos_pf": 1.63,
+      "quality_flags": "validation_net_below_34d;validation_mid_pf_below_34d;validation_late_concentration_above_50pct;oos_net_materially_below_stage171_primary",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "source_role": "hold2_dd_fixed_net_destroyed",
+      "source_run_id": "run180A_stage180_tp45_context_lifecycle_dd_repair_v1",
+      "validation_balance_dd_percent": 8.9028,
+      "validation_dd_margin_vs_34d": 4.006336000000001,
+      "validation_mid_pf": 1.133111481,
+      "validation_mid_pf_gap_vs_34d_pf": -0.4500455189999999,
+      "validation_net": 446.88,
+      "validation_net_gap_vs_34d": -540.72,
+      "validation_pf": 1.59
+    },
+    {
+      "adapter_id": "s180_tp45_midwide_risk0365_h3_cd5_ctxmid_sht54_lng52",
+      "hard_quality_pass": false,
+      "lesson": "Midwide context(중간넓은 문맥)는 validation net/PF(검증 순손익/수익요인)와 OOS DD(표본외 낙폭)를 개선하지만 validation DD(검증 낙폭)와 mid PF(중반 수익요인)가 남는다.",
+      "oos_balance_dd_percent": 8.8227,
+      "oos_dd_margin_vs_34d": 4.086436000000001,
+      "oos_net": 914.52,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "source_role": "midwide_oos_dd_fixed_net_lift_val_dd_failed",
+      "source_run_id": "run180A_stage180_tp45_context_lifecycle_dd_repair_v1",
+      "validation_balance_dd_percent": 14.8516,
+      "validation_dd_margin_vs_34d": -1.9424639999999993,
+      "validation_mid_pf": 1.487087346,
+      "validation_mid_pf_gap_vs_34d_pf": -0.0960696539999999,
+      "validation_net": 1223.67,
+      "validation_net_gap_vs_34d": 236.07000000000005,
+      "validation_pf": 1.68
+    }
+  ],
+  "overall_goal_complete": false,
+  "packet_id": "stage181_stage180_context_lifecycle_followup_review_v1",
+  "report_path": "stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_stage180_context_lifecycle_followup_review.md",
+  "route_matrix": "stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_route_matrix.csv",
+  "route_rows": [
+    {
+      "decision": "open_stage182_tp45_midwide_risk_balance_repair_candidate_not_final",
+      "guardrails": "do not use blunt risk cap collapse(무딘 위험 상한 붕괴); test small caps only and preserve ATR bracket/model-risk telemetry(ATR 브래킷/모델 위험 기록).",
+      "repair_question": "Can midwide context(중간넓은 문맥) plus calibrated risk balance(보정 위험 균형) fix validation DD(검증 낙폭) without dropping validation net/PF(검증 순손익/수익요인) below 34D(레거시 34D)?",
+      "route": "stage182_primary",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "source_clue": "s180_tp45_midwide_risk0365_h3_cd5_ctxmid_sht54_lng52",
+      "why": "Midwide(중간넓은 문맥)는 OOS DD(표본외 낙폭)를 고치고 net(순손익) buffer(완충)를 만들었으므로, slight risk balancing(가벼운 위험 균형)이 검증 낙폭만 낮출 가능성이 있다."
+    },
+    {
+      "decision": "open_stage182_tp45_midwide_risk_balance_repair_candidate_not_final",
+      "guardrails": "preserve as failure_memory(실패 기억), not invalid(무효).",
+      "repair_question": "Do not continue hold2(2봉 보유) as standalone repair(단독 수정).",
+      "route": "failure_memory",
+      "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+      "source_clue": "s180_tp45_hold2_risk0365_h2_cd5_ctxwide_sht54_lng52",
+      "why": "DD(낙폭)는 고치지만 net(순손익)과 mid PF(중반 수익요인)를 크게 훼손한다."
+    }
+  ],
+  "run_id": "run181A_stage181_stage180_context_lifecycle_followup_review_v1",
+  "stage_id": "181_adapter_research__stage180_context_lifecycle_followup_review",
+  "status": "completed"
+}

@@ -1,8 +1,8 @@
-﻿current_run_id: run181A_stage181_stage180_context_lifecycle_followup_review_v1
+﻿current_run_id: run182A_stage182_tp45_midwide_risk_balance_repair_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 181_adapter_research__stage180_context_lifecycle_followup_review
+active_stage: 182_adapter_research__tp45_midwide_risk_balance_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage180(180단계) closed(종료) as `open_stage181_bounded_followup_due_to_context_lifecycle_tradeoff_candidate_not_final` and Stage181(181단계) `181_adapter_research__stage180_context_lifecycle_followup_review` is open_planned(개방 계획). Effect(효과): TP45(익절 4.5) context/lifecycle DD repair(문맥/생활주기 낙폭 수정) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage181(181단계) closed(종료) as `open_stage182_tp45_midwide_risk_balance_repair_candidate_not_final` and Stage182(182단계) `182_adapter_research__tp45_midwide_risk_balance_repair` is open_planned(개방 계획). Effect(효과): Stage180(180단계)의 midwide context(중간넓은 문맥) 단서를 calibrated risk balance(보정 위험 균형) 수리로 넘긴다.
 - >-
-  Stage180 evidence(180단계 근거)는 `stages/180_adapter_research__tp45_context_lifecycle_dd_repair/03_reviews/stage180_tp45_context_lifecycle_report.md`, `stages/180_adapter_research__tp45_context_lifecycle_dd_repair/03_reviews/stage180_tp45_context_lifecycle_summary.csv`, `stages/180_adapter_research__tp45_context_lifecycle_dd_repair/03_reviews/stage180_quality_matrix.csv`, `stages/180_adapter_research__tp45_context_lifecycle_dd_repair/03_reviews/stage180_balance_curve_audit.csv`, `stages/180_adapter_research__tp45_context_lifecycle_dd_repair/03_reviews/stage180_risk_atr_telemetry.csv`에 있다. Effect(효과): net(순손익), PF(수익요인), DD(낙폭), segment(구간), concentration(집중도), ATR/risk telemetry(ATR/위험 기록)를 함께 본다.
+  Stage181 evidence(181단계 근거)는 `stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_stage180_context_lifecycle_followup_review.md`, `stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_route_matrix.csv`, `stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_context_lifecycle_lesson_matrix.csv`, `stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_performance_attribution.csv`에 있다. Effect(효과): Stage182(182단계)는 net buffer(순손익 완충)를 보존하면서 validation DD(검증 낙폭)만 낮출 수 있는지 본다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -7010,4 +7010,22 @@ stage180_tp45_context_lifecycle_dd_repair:
   external_verification_status: completed
   pushed_commit_hash: 0fb102c050efad24cc96435a08684516447808a9
   next_action: run181A_stage181_stage180_context_lifecycle_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage181_stage180_context_lifecycle_followup_review:
+  packet_id: stage181_stage180_context_lifecycle_followup_review_v1
+  stage_id: 181_adapter_research__stage180_context_lifecycle_followup_review
+  status: closed_open_stage182_tp45_midwide_risk_balance_repair_candidate_not_final
+  current_run_id: run181A_stage181_stage180_context_lifecycle_followup_review_v1
+  source_stage: 180_adapter_research__tp45_context_lifecycle_dd_repair
+  source_run: run180A_stage180_tp45_context_lifecycle_dd_repair_v1
+  decision: open_stage182_tp45_midwide_risk_balance_repair_candidate_not_final
+  report_path: stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_stage180_context_lifecycle_followup_review.md
+  decision_path: stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_decision.md
+  route_matrix_path: stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_route_matrix.csv
+  lesson_matrix_path: stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_context_lifecycle_lesson_matrix.csv
+  attribution_path: stages/181_adapter_research__stage180_context_lifecycle_followup_review/03_reviews/stage181_performance_attribution.csv
+  external_verification_status: review_only_source_stage180_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run182A_stage182_tp45_midwide_risk_balance_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
