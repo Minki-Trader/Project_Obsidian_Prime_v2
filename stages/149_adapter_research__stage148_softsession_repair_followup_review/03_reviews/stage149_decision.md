@@ -14,7 +14,7 @@ Stage149(149단계)는 Stage148(148단계) evidence(근거)를 review-only(검�
 - source_stage148_segments(원천 148단계 구간): `stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_segment_kpi_summary.csv`
 - source_stage148_risk_atr(원천 148단계 위험/ATR): `stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage148_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `21c48b7714b07876365eed250000e59d379f4b22`
 
 ## Next(다음)
 

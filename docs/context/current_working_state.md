@@ -20,6 +20,6 @@ Stage149(149단계)는 Stage148(148단계) softsession repair(소프트 세션 �
 - tradeoff_summary(상충 요약): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_softsession_tradeoff_summary.csv`
 - segment_failure_summary(구간 실패 요약): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_segment_failure_summary.csv`
 - route_decision(경로 판정): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_route_decision.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `21c48b7714b07876365eed250000e59d379f4b22`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
