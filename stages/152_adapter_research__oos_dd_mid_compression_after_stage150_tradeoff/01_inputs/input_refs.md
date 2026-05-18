@@ -1,0 +1,11 @@
+﻿# Stage152 Input References(152단계 입력 참조)
+
+- stage151_decision(151단계 판정): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_decision.md`
+- stage151_review(151단계 검토): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_stage150_validation_session_guard_followup_review.md`
+- stage151_tradeoff_summary(151단계 상충 요약): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_validation_guard_tradeoff_summary.csv`
+- stage151_segment_failure_summary(151단계 구간 실패 요약): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_segment_failure_summary.csv`
+- stage150_summary(150단계 요약): `stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_validation_session_guard_summary.csv`
+- stage150_segment_kpi(150단계 구간 KPI): `stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_segment_kpi_summary.csv`
+- stage150_risk_atr_telemetry(150단계 위험/ATR 기록): `stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_risk_atr_telemetry.csv`
+- repair_seed(수리 씨앗): `s150_session_mid_margin_restore_h3_cd5_sht54_lng52_risk035`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`

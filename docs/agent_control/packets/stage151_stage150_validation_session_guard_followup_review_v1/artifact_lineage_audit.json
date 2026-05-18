@@ -1,0 +1,61 @@
+{
+  "artifact_paths": [
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_stage150_validation_session_guard_followup_review.md",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_validation_guard_tradeoff_summary.csv",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_segment_failure_summary.csv",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_route_decision.csv",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_decision.md",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_followup_summary.json"
+  ],
+  "availability": "tracked",
+  "consumers": [
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_stage150_validation_session_guard_followup_review.md",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_decision.md",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_followup_summary.json",
+    "152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff"
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5157,
+      "sha256": "30d9b2cd1bad1929859a6cb3f0e217061833af6f409380974952d36c5e19dbbc",
+      "upserted_rows": 8
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10569,
+      "sha256": "dd49fb48cbae82f0853ec3855dd0b05999330085dc9755628d1a9afb518da3fd",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 974,
+      "sha256": "7f0478d6e06de43539927866200f2f10d862a5ec134dd9b305d586ca888576e6",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "6e97fae1fe58c8fe6fe08b6287d16559a75e78c1dd752a3665bf7ed65d9e6da3",
+      "upserted_rows": 1
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage151/stage150_validation_session_guard_followup_review.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_validation_session_guard_summary.csv",
+    "stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_segment_kpi_summary.csv",
+    "stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_risk_atr_telemetry.csv",
+    "stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_decision.md"
+  ]
+}

@@ -1,3 +1,7 @@
 ﻿# Stage151 Review Index(151단계 검토 색인)
 
-Stage151(151단계)은 open_planned(개방 계획) 상태다.
+- review(검토): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_stage150_validation_session_guard_followup_review.md`
+- tradeoff_summary(상충 요약): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_validation_guard_tradeoff_summary.csv`
+- segment_failure_summary(구간 실패 요약): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_segment_failure_summary.csv`
+- route_decision(경로 판정): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_route_decision.csv`
+- decision(판정): `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_decision.md`
