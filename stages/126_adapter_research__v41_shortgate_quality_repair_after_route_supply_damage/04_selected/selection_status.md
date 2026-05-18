@@ -8,5 +8,5 @@
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage126_decision(126단계 판정): `continue_shortgate_quality_followup_review_in_stage127_due_to_damage_or_no_repair`
 - next_stage_or_branch(다음 단계/분기): `127_adapter_research__v41_shortgate_quality_followup_review`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d25e503d4a72dc29affbcfa669db715ad85b4590`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`

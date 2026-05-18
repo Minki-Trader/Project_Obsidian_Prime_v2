@@ -1172,6 +1172,6 @@
 
 - run(실행): `run126A_stage126_v41_shortgate_quality_repair_after_route_supply_damage_v1`
 - decision(판정): `continue_shortgate_quality_followup_review_in_stage127_due_to_damage_or_no_repair`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d25e503d4a72dc29affbcfa669db715ad85b4590`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage124 shortgate(숏 게이트) 회수 단서를 cooldown/threshold(대기시간/임계값) 축에서 측정하고 Stage127(127단계) 후속 검토로 넘겼다.
