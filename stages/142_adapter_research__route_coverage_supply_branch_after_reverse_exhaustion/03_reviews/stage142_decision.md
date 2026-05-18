@@ -15,7 +15,7 @@ Stage142(142단계)는 route coverage supply(경로 커버리지 공급)만 좁�
 - source_stage141_hash_record_commit(원천 141단계 해시 기록 커밋): `eb72afcf6f3941bfa9aa84a6de438ba527fd60f8`
 - source_stage140_hash_record_commit(원천 140단계 해시 기록 커밋): `685cdb0454ddb1f32af8d34ffe0cb7ad00ed24f8`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `0f53be36d3bb88fc97ec44cfeaa3e600e7b9e414`
 
 ## Next(다음)
 
