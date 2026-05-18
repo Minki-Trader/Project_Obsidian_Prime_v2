@@ -1161,3 +1161,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `8a8a3c1d8b4355c116d1602ee6f444e65333fd91`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage122 risk035 ATR bracket(위험 3.5% ATR 괄호)을 유지한 채 side gate(방향 게이트) 경로 공급을 측정하고 Stage125(125단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage125 v41 route supply follow-up review closeout(125단계 v41 경로 공급 후속 검토 종료)
+
+- run(실행): `run125A_stage125_v41_route_supply_followup_review_after_stage124_v1`
+- decision(판정): `continue_shortgate_quality_repair_in_stage126_after_route_supply_damage`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage124 no-gate(무게이트) 밀도 확장의 품질 손상을 기록하고 shortgate(숏 게이트) 품질 수리로 넘겼다.

@@ -1,8 +1,8 @@
-﻿current_run_id: run125A_stage125_v41_route_supply_followup_review_after_stage124_v1
+﻿current_run_id: run126A_stage126_v41_shortgate_quality_repair_after_route_supply_damage_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 125_adapter_research__v41_route_supply_followup_review_after_stage124
+active_stage: 126_adapter_research__v41_shortgate_quality_repair_after_route_supply_damage
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage124(124단계) closed(종료) as `continue_route_supply_followup_review_in_stage125_due_to_damage_or_no_gain` and Stage125(125단계) `125_adapter_research__v41_route_supply_followup_review_after_stage124` is open_planned(열림 계획). Effect(효과): route supply(경로 공급) 결과를 후속 검토로 넘겨 34D trade count(34D 거래 수) 격차를 계속 줄인다.
+  Stage125(125단계) closed(종료) as `continue_shortgate_quality_repair_in_stage126_after_route_supply_damage` and Stage126(126단계) `126_adapter_research__v41_shortgate_quality_repair_after_route_supply_damage` is open_planned(열림 계획). Effect(효과): route supply(경로 공급)는 no-gate(무게이트)가 아니라 shortgate(숏 게이트) 품질 수리로 좁힌다.
 - >-
-  Stage124 result(124단계 결과)는 `stages/124_adapter_research__v41_route_supply_density_repair_after_small_gain/03_reviews/stage124_route_supply_density_repair_summary.csv`와 `stages/124_adapter_research__v41_route_supply_density_repair_after_small_gain/03_reviews/stage124_segment_kpi_summary.csv`에 기록했다. Effect(효과): 거래 수 증가가 PF/net/DD(수익 팩터/순손익/손실률)를 보존했는지 Stage125(125단계)에서 다시 판독한다.
+  Stage125 result(125단계 결과)는 `stages/125_adapter_research__v41_route_supply_followup_review_after_stage124/03_reviews/stage125_route_supply_followup_review.md`와 `stages/125_adapter_research__v41_route_supply_followup_review_after_stage124/03_reviews/stage125_route_supply_tradeoff_summary.csv`에 기록했다. Effect(효과): Stage124의 거래 수 증가는 품질 손상을 동반했다는 실패 기억을 보존한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5840,4 +5840,21 @@ stage124_v41_route_supply_density_repair_after_small_gain:
   packet_summary_path: docs/agent_control/packets/stage124_v41_route_supply_density_repair_after_small_gain_v1/aggregate_summary.json
   external_verification_status: completed
   pushed_commit_hash: 8a8a3c1d8b4355c116d1602ee6f444e65333fd91
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage125_v41_route_supply_followup_review_after_stage124:
+  packet_id: stage125_v41_route_supply_followup_review_after_stage124_v1
+  stage_id: 125_adapter_research__v41_route_supply_followup_review_after_stage124
+  status: closed_continue_shortgate_quality_repair_in_stage126_after_route_supply_damage
+  current_run_id: run125A_stage125_v41_route_supply_followup_review_after_stage124_v1
+  source_stage124_closeout_commit: 8a8a3c1d8b4355c116d1602ee6f444e65333fd91
+  source_stage124_latest_commit: 0e79bb6129abcd37032a925cded784cf775cc609
+  source_stage123_latest_commit: 410d29cb988af0d3a522201f5491fc8168405f7a
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_shortgate_quality_repair_in_stage126_after_route_supply_damage
+  next_stage_or_branch: 126_adapter_research__v41_shortgate_quality_repair_after_route_supply_damage
+  report_path: stages/125_adapter_research__v41_route_supply_followup_review_after_stage124/03_reviews/stage125_decision.md
+  packet_summary_path: docs/agent_control/packets/stage125_v41_route_supply_followup_review_after_stage124_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage124_mt5_runtime_evidence_reviewed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
