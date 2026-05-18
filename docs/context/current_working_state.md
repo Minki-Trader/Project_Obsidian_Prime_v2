@@ -15,6 +15,7 @@ Stage138(138단계)는 trade supply repair(거래 공급 수리)를 lifecycle(�
 
 - run(실행): `run138A_stage138_trade_supply_repair_after_stage136_no_gain_v1`
 - decision(판정): `proceed_to_stage139_trade_supply_followup_review_with_small_gain_candidate_not_final`
+- pushed_commit_hash(푸시 커밋 해시): `9a5bedb1b1e8e20d13ef1072edeca7039dba1080`
 - external_verification_status(외부 검증 상태): `completed`
 - report(보고서): `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_trade_supply_repair_report.md`
 - summary(요약): `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_trade_supply_repair_summary.csv`

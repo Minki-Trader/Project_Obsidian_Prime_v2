@@ -15,7 +15,7 @@ Stage138(138단계)는 trade supply repair(거래 공급 수리)를 lifecycle(�
 - source_stage137_latest_commit(원천 137단계 최신 커밋): `685ae86bd49fb58eb70668efc7d8b69706753396`
 - source_stage136_latest_commit(원천 136단계 최신 커밋): `bd39fb842cc24ba70a25771541c4255ac71f4a85`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `9a5bedb1b1e8e20d13ef1072edeca7039dba1080`
 
 ## Next(다음)
 
