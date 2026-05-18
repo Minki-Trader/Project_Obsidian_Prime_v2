@@ -1508,3 +1508,13 @@
 - action(행동): closed(종료) `174_adapter_research__wide_gate_mid_segment_recovery_repair` with decision(판정) `open_stage175_bounded_followup_due_to_mid_segment_tradeoff_candidate_not_final`.
 - effect(효과): wide gate(넓은 제한문), SL/TP(손절/익절), risk cap(위험 상한) 변형을 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage175(175단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T17:10:52Z Stage175 Stage174 wide gate follow-up review closeout(175단계 174단계 넓은 제한문 후속 검토 종료)
+
+- action(행동): closed(종료) `175_adapter_research__stage174_wide_gate_followup_review` with decision(판정) `open_stage176_tp45_dd_midpf_repair_candidate_not_final`.
+- effect(효과): TP45(익절 4.5) 단서를 Stage176(176단계) DD/mid PF/OOS DD(낙폭/중반 수익요인/표본외 낙폭) 수리로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T17:12:00Z Stage175 Stage174 wide gate follow-up review closeout(175단계 174단계 넓은 제한문 후속 검토 종료)
+
+- action(행동): closed(종료) `175_adapter_research__stage174_wide_gate_followup_review` with decision(판정) `open_stage176_tp45_dd_midpf_repair_candidate_not_final`.
+- effect(효과): TP45(익절 4.5) 단서를 Stage176(176단계) DD/mid PF/OOS DD(낙폭/중반 수익요인/표본외 낙폭) 수리로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

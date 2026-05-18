@@ -1,0 +1,141 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage176_tp45_dd_midpf_repair_candidate_not_final",
+  "decision_path": "stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_decision.md",
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10741,
+      "sha256": "969a7d13dde6499da8d4f4bc80e84d96fd2f17415dc0b0f825c278b81ea1a556",
+      "upserted_rows": 1
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5537,
+      "sha256": "cc3d69d65108aa0dd22ff9a9db40928c4a197c80f340a33586f66e330df0271b",
+      "upserted_rows": 6
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 998,
+      "sha256": "ad79d66debf4a18ab7d67b693d433444e03712e4633f6ab847b65e288ea225ab",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "a266aa54cc259912f224034848f8aee3d1e1d00e598d9fdfc733a760514de955",
+      "upserted_rows": 1
+    }
+  },
+  "lesson_matrix": "stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_stage174_lesson_matrix.csv",
+  "lesson_rows": [
+    {
+      "adapter_id": "s174_wide_sl2075_risk0365_h3_cd5_sht54_lng52",
+      "clue_type": "wide_original_stop_negative_memory",
+      "hard_quality_pass": false,
+      "lesson": "Original SL 2.075(기존 손절 2.075)와 wide gate(넓은 제한문)는 Stage172 SL 1.95(172단계 손절 1.95)보다 나아졌지만 34D net/PF/DD(34D 순손익/수익요인/낙폭)에는 아직 못 미친다.",
+      "oos_balance_dd_percent": 14.195,
+      "oos_net": 712.61,
+      "oos_pf": 1.83,
+      "quality_flags": "validation_pf_below_34d;validation_net_below_34d;validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run175A_stage175_stage174_wide_gate_followup_review_v1",
+      "source_run_id": "run174A_stage174_wide_gate_mid_segment_recovery_repair_v1",
+      "validation_balance_dd_percent": 13.6782,
+      "validation_dd_margin_vs_34d": -0.7690640000000002,
+      "validation_late_share": 0.4438,
+      "validation_mid_pf": 1.313064658,
+      "validation_net": 917.21,
+      "validation_net_gap_vs_34d": -70.38999999999999,
+      "validation_pf": 1.58
+    },
+    {
+      "adapter_id": "s174_wide_sl2075_risk0380_h3_cd5_sht54_lng52",
+      "clue_type": "risk_recapture_negative_memory",
+      "hard_quality_pass": false,
+      "lesson": "Risk 3.8 percent(위험 3.8퍼센트)는 validation PF/net(검증 수익요인/순손익)을 충분히 고치지 못했고 DD(낙폭)를 키웠다.",
+      "oos_balance_dd_percent": 14.8078,
+      "oos_net": 748.53,
+      "oos_pf": 1.82,
+      "quality_flags": "validation_pf_below_34d;validation_net_below_34d;validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run175A_stage175_stage174_wide_gate_followup_review_v1",
+      "source_run_id": "run174A_stage174_wide_gate_mid_segment_recovery_repair_v1",
+      "validation_balance_dd_percent": 14.2379,
+      "validation_dd_margin_vs_34d": -1.3287639999999996,
+      "validation_late_share": 0.4511,
+      "validation_mid_pf": 1.313499814,
+      "validation_net": 971.62,
+      "validation_net_gap_vs_34d": -15.980000000000018,
+      "validation_pf": 1.58
+    },
+    {
+      "adapter_id": "s174_wide_tp45_sl2075_risk0365_h3_cd5_sht54_lng52",
+      "clue_type": "primary_tp45_net_pf_clue",
+      "hard_quality_pass": false,
+      "lesson": "TP 4.5(익절 4.5)는 validation PF/net(검증 수익요인/순손익)을 회복하고 late share(후반 비중)를 낮췄지만, DD(낙폭), mid PF(중반 수익요인), OOS DD(표본외 낙폭)는 아직 실패다.",
+      "oos_balance_dd_percent": 14.2029,
+      "oos_net": 823.11,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run175A_stage175_stage174_wide_gate_followup_review_v1",
+      "source_run_id": "run174A_stage174_wide_gate_mid_segment_recovery_repair_v1",
+      "validation_balance_dd_percent": 13.745,
+      "validation_dd_margin_vs_34d": -0.835863999999999,
+      "validation_late_share": 0.4078,
+      "validation_mid_pf": 1.37500199,
+      "validation_net": 1037.74,
+      "validation_net_gap_vs_34d": 50.139999999999986,
+      "validation_pf": 1.62
+    },
+    {
+      "adapter_id": "s174_midwide_sl2075_risk0370_h3_cd5_sht54_lng52",
+      "clue_type": "secondary_midwide_trade_supply_clue",
+      "hard_quality_pass": false,
+      "lesson": "Midwide gate(중간 폭 제한문)는 validation PF/net(검증 수익요인/순손익)과 OOS DD(표본외 낙폭)를 좋게 했지만, validation DD(검증 낙폭)와 late concentration(후반 집중도)를 악화했다.",
+      "oos_balance_dd_percent": 9.1306,
+      "oos_net": 789.87,
+      "oos_pf": 1.82,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d;validation_late_concentration_above_50pct",
+      "run_id": "run175A_stage175_stage174_wide_gate_followup_review_v1",
+      "source_run_id": "run174A_stage174_wide_gate_mid_segment_recovery_repair_v1",
+      "validation_balance_dd_percent": 15.0661,
+      "validation_dd_margin_vs_34d": -2.1569640000000003,
+      "validation_late_share": 0.5435,
+      "validation_mid_pf": 1.416852862,
+      "validation_net": 1077.31,
+      "validation_net_gap_vs_34d": 89.70999999999992,
+      "validation_pf": 1.64
+    }
+  ],
+  "overall_goal_complete": false,
+  "packet_id": "stage175_stage174_wide_gate_followup_review_v1",
+  "report_path": "stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_stage174_wide_gate_followup_review.md",
+  "route_matrix": "stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_route_matrix.csv",
+  "route_rows": [
+    {
+      "decision": "open_stage176_tp45_dd_midpf_repair_candidate_not_final",
+      "guardrails": "no legacy method inheritance(레거시 방식 상속 없음); no date-specific filter(날짜 전용 필터 없음); keep v2 source model(v2 원천 모델 유지) unless Stage176(176단계) fails(실패).",
+      "repair_question": "Can TP 4.5(익절 4.5) keep validation PF/net(검증 수익요인/순손익) above 34D(34D) while reducing validation DD(검증 낙폭), OOS DD(표본외 낙폭), and mid PF weakness(중반 수익요인 약점)?",
+      "route": "stage176_primary",
+      "run_id": "run175A_stage175_stage174_wide_gate_followup_review_v1",
+      "source_clue": "s174_wide_tp45_sl2075_risk0365_h3_cd5_sht54_lng52",
+      "why": "TP 4.5(익절 4.5)는 Stage174(174단계)에서 validation PF/net(검증 수익요인/순손익)이 34D(34D)를 넘고 late share(후반 비중)가 50 percent(50퍼센트) 아래인 첫 단서다."
+    },
+    {
+      "decision": "open_stage176_tp45_dd_midpf_repair_candidate_not_final",
+      "guardrails": "do not treat validation net(검증 순손익) alone as sufficient(충분 조건).",
+      "repair_question": "Use midwide(중간 폭) only as a contrast(대조군) for trade supply(거래 공급) and OOS DD behavior(표본외 낙폭 행동).",
+      "route": "stage176_supporting_comparison",
+      "run_id": "run175A_stage175_stage174_wide_gate_followup_review_v1",
+      "source_clue": "s174_midwide_sl2075_risk0370_h3_cd5_sht54_lng52",
+      "why": "Midwide(중간 폭)는 OOS DD(표본외 낙폭)를 개선했지만 validation DD(검증 낙폭)와 late concentration(후반 집중도)를 악화했다."
+    }
+  ],
+  "run_id": "run175A_stage175_stage174_wide_gate_followup_review_v1",
+  "stage_id": "175_adapter_research__stage174_wide_gate_followup_review",
+  "status": "completed"
+}

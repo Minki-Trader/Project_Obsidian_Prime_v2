@@ -1,8 +1,8 @@
-﻿current_run_id: run175A_stage175_stage174_wide_gate_followup_review_v1
+﻿current_run_id: run176A_stage176_tp45_dd_midpf_repair_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 175_adapter_research__stage174_wide_gate_followup_review
+active_stage: 176_adapter_research__tp45_dd_midpf_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage174(174단계) closed(종료) as `open_stage175_bounded_followup_due_to_mid_segment_tradeoff_candidate_not_final` and Stage175(175단계) `175_adapter_research__stage174_wide_gate_followup_review` is open_planned(개방 계획). Effect(효과): wide gate(넓은 제한문)의 DD/concentration(낙폭/집중도) 장점과 mid PF/net(중반 수익요인/순손익) 손상을 분리해 판독한다.
+  Stage175(175단계) closed(종료) as `open_stage176_tp45_dd_midpf_repair_candidate_not_final` and Stage176(176단계) `176_adapter_research__tp45_dd_midpf_repair` is open_planned(개방 계획). Effect(효과): Stage174(174단계)의 TP45(익절 4.5) net/PF(순손익/수익요인) 단서를 DD/mid PF/OOS DD(낙폭/중반 수익요인/표본외 낙폭) 수리로 넘긴다.
 - >-
-  Stage174 evidence(174단계 근거)는 `stages/174_adapter_research__wide_gate_mid_segment_recovery_repair/03_reviews/stage174_wide_gate_mid_segment_recovery_report.md`, `stages/174_adapter_research__wide_gate_mid_segment_recovery_repair/03_reviews/stage174_wide_gate_mid_segment_recovery_summary.csv`, `stages/174_adapter_research__wide_gate_mid_segment_recovery_repair/03_reviews/stage174_quality_matrix.csv`, `stages/174_adapter_research__wide_gate_mid_segment_recovery_repair/03_reviews/stage174_balance_curve_audit.csv`, `stages/174_adapter_research__wide_gate_mid_segment_recovery_repair/03_reviews/stage174_risk_atr_telemetry.csv`에 있다. Effect(효과): net(순손익), PF(수익요인), DD(낙폭), segment(구간), concentration(집중도), ATR/risk telemetry(ATR/위험 기록)를 함께 본다.
+  Stage175 evidence(175단계 근거)는 `stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_stage174_wide_gate_followup_review.md`, `stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_route_matrix.csv`, `stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_stage174_lesson_matrix.csv`에 있다. Effect(효과): Stage176(176단계)는 손상 축을 좁혀 시작한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6901,4 +6901,21 @@ stage174_wide_gate_mid_segment_recovery_repair:
   external_verification_status: completed
   pushed_commit_hash: 7918c76576c0a1246ca3561f1bcf347baed89f90
   next_action: run175A_stage175_stage174_wide_gate_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage175_stage174_wide_gate_followup_review:
+  packet_id: stage175_stage174_wide_gate_followup_review_v1
+  stage_id: 175_adapter_research__stage174_wide_gate_followup_review
+  status: closed_open_stage176_tp45_dd_midpf_repair_candidate_not_final
+  current_run_id: run175A_stage175_stage174_wide_gate_followup_review_v1
+  source_stage: 174_adapter_research__wide_gate_mid_segment_recovery_repair
+  source_run: run174A_stage174_wide_gate_mid_segment_recovery_repair_v1
+  decision: open_stage176_tp45_dd_midpf_repair_candidate_not_final
+  report_path: stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_stage174_wide_gate_followup_review.md
+  decision_path: stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_decision.md
+  route_matrix_path: stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_route_matrix.csv
+  lesson_matrix_path: stages/175_adapter_research__stage174_wide_gate_followup_review/03_reviews/stage175_stage174_lesson_matrix.csv
+  external_verification_status: review_only_source_stage174_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run176A_stage176_tp45_dd_midpf_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
