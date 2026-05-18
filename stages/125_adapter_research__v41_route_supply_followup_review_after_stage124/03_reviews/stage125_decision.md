@@ -16,7 +16,7 @@ Effect(효과): no-gate(무게이트) 확장은 밀도는 늘렸지만 PF/net/DD
 - source_stage124_closeout_commit(원천 124단계 종료 커밋): `8a8a3c1d8b4355c116d1602ee6f444e65333fd91`
 - source_stage124_latest_commit(원천 124단계 최신 커밋): `0e79bb6129abcd37032a925cded784cf775cc609`
 - external_verification_status(외부 검증 상태): `completed_existing_stage124_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `1507d2f10cfd82a53d73fbb8936122a78f50efe6`
 
 ## Next(다음)
 

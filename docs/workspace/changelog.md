@@ -1165,6 +1165,6 @@
 
 - run(실행): `run125A_stage125_v41_route_supply_followup_review_after_stage124_v1`
 - decision(판정): `continue_shortgate_quality_repair_in_stage126_after_route_supply_damage`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `1507d2f10cfd82a53d73fbb8936122a78f50efe6`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage124 no-gate(무게이트) 밀도 확장의 품질 손상을 기록하고 shortgate(숏 게이트) 품질 수리로 넘겼다.
