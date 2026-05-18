@@ -1151,6 +1151,6 @@
 
 - run(실행): `run123A_stage123_v41_density_scale_followup_review_v1`
 - decision(판정): `continue_route_supply_density_repair_in_stage124_due_to_small_gain`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `36c6cbf4a89000b213d535b152ec2eb49fe26296`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage122(122단계)의 +2 trade(거래 2건 증가)는 충분하지 않다고 판정하고 Stage124(124단계) route supply density repair(경로 공급 밀도 수리)로 넘겼다.

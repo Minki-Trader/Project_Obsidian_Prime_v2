@@ -16,7 +16,7 @@ Effect(효과): 거래 수는 177에서 179로 늘었지만 34D의 404거래와�
 - source_stage122_closeout_commit(원천 122단계 종료 커밋): `d7d1d83862e40bc55f61473209d3a1c38b15d525`
 - source_stage122_latest_commit(원천 122단계 최신 커밋): `fed35f028fac5621453df67889c4a95cbd8bd77a`
 - external_verification_status(외부 검증 상태): `completed_existing_stage122_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `36c6cbf4a89000b213d535b152ec2eb49fe26296`
 
 ## Next(다음)
 
