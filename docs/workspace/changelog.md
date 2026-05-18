@@ -1147,3 +1147,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `d7d1d83862e40bc55f61473209d3a1c38b15d525`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): risk035 DD guardrail(위험 3.5% 손실률 가드레일)을 유지하려는 밀도 규모 수리를 측정하고 Stage123(123단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage123 v41 density scale follow-up review closeout(123단계 v41 밀도 규모 후속 검토 종료)
+
+- run(실행): `run123A_stage123_v41_density_scale_followup_review_v1`
+- decision(판정): `continue_route_supply_density_repair_in_stage124_due_to_small_gain`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage122(122단계)의 +2 trade(거래 2건 증가)는 충분하지 않다고 판정하고 Stage124(124단계) route supply density repair(경로 공급 밀도 수리)로 넘겼다.
