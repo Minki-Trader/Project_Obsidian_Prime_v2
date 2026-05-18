@@ -1,0 +1,42 @@
+{
+  "consumers": [
+    "stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage134_survivor_followup_review.md",
+    "stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage134_decision.md",
+    "stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage134_followup_summary.json"
+  ],
+  "ledger_links": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 4863,
+      "sha256": "19d8178b69f654938b523d145cefa9d5a8f7d52f5f2c7c251a8090d815a7e5fe",
+      "upserted_rows": 6
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10432,
+      "sha256": "c3e79a893fff42e9fa958eda805439c2bec177def2707ccf2cd7fbe41bc98768",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 957,
+      "sha256": "e64d95e40e22fdf5a62e30668bd4c5d3faba9b5e312d1bb9d546405b26f6440e",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "cd602c5ceeec268c46e2cbf8a47fc482ed72c4c20de04dfd80b30348788b3853",
+      "upserted_rows": 1
+    }
+  },
+  "source_inputs": [
+    "stages/133_adapter_research__stage122_survivor_density_recovery_branch/03_reviews/stage133_survivor_recovery_summary.csv",
+    "stages/133_adapter_research__stage122_survivor_density_recovery_branch/03_reviews/stage133_segment_kpi_summary.csv",
+    "stages/133_adapter_research__stage122_survivor_density_recovery_branch/03_reviews/stage133_risk_atr_telemetry.csv"
+  ]
+}

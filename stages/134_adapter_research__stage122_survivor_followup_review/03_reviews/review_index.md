@@ -1,3 +1,6 @@
 ﻿# Stage134 Review Index(134단계 검토 색인)
 
-Stage134(134단계)는 planned(계획) 상태다. Effect(효과): Stage133(133단계) 결과를 다음 review-only(검토 전용) 판정으로 연결한다.
+- review(검토): `stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage134_survivor_followup_review.md`
+- comparison(비교): `stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage134_stage133_candidate_comparison.csv`
+- route_decision(경로 판정): `stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage134_route_decision.csv`
+- decision(판정): `stages/134_adapter_research__stage122_survivor_followup_review/03_reviews/stage134_decision.md`
