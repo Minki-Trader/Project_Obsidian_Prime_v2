@@ -1,0 +1,10 @@
+﻿# Stage143 Input References(143단계 입력 참조)
+
+- source_stage(원천 단계): `142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion`
+- source_run(원천 실행): `run142A_stage142_route_coverage_supply_branch_after_reverse_exhaustion_v1`
+- stage142_decision(142단계 판정): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_decision.md`
+- stage142_report(142단계 보고서): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_route_coverage_supply_report.md`
+- stage142_summary(142단계 요약): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_route_coverage_supply_summary.csv`
+- stage142_segment_kpi(142단계 구간 KPI): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_segment_kpi_summary.csv`
+- stage142_risk_atr_telemetry(142단계 위험/ATR 원격측정): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_risk_atr_telemetry.csv`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
