@@ -1,0 +1,8 @@
+﻿# Stage140 Input References(140단계 입력 참조)
+
+- stage139_decision(139단계 판정): `stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_decision.md`
+- stage139_review(139단계 검토): `stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_stage138_trade_supply_followup_review.md`
+- stage139_comparison(139단계 비교): `stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_stage138_trade_supply_comparison.csv`
+- stage138_summary(138단계 요약): `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_trade_supply_repair_summary.csv`
+- stage138_segment_kpi(138단계 구간 KPI): `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_segment_kpi_summary.csv`
+- stage138_risk_atr_telemetry(138단계 위험/ATR 원격측정): `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_risk_atr_telemetry.csv`

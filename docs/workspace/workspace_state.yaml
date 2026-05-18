@@ -1,8 +1,8 @@
-﻿current_run_id: run139A_stage139_stage138_trade_supply_followup_review_v1
+﻿current_run_id: run140A_stage140_reverse_supply_late_concentration_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 139_adapter_research__stage138_trade_supply_followup_review
+active_stage: 140_adapter_research__reverse_supply_late_concentration_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage138(138단계) closed(종료) as `proceed_to_stage139_trade_supply_followup_review_with_small_gain_candidate_not_final` and Stage139(139단계) `139_adapter_research__stage138_trade_supply_followup_review` is open_planned(열린 계획). Effect(효과): trade supply repair(거래 공급 수리) 결과를 보존하고 새 판독 단계로 넘긴다.
+  Stage139(139단계) closed(종료) as `continue_stage140_reverse_supply_late_concentration_repair_candidate_not_final` and Stage140(140단계) `140_adapter_research__reverse_supply_late_concentration_repair` is active_planned(활성 계획). Effect(효과): reverse-on-opposite(반대 신호 반전)만 다음 bounded repair(경계 수리) 축으로 남긴다.
 - >-
-  Stage138 evidence(138단계 근거)는 `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_trade_supply_repair_report.md`, `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_trade_supply_repair_summary.csv`, `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_segment_kpi_summary.csv`, `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_risk_atr_telemetry.csv`에 있다. Effect(효과): 34D KPI(34D 핵심 성과 지표) 대비 거래 수 격차가 줄었는지 분리해서 본다.
+  Stage139 evidence(139단계 근거)는 `stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_stage138_trade_supply_followup_review.md`, `stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_stage138_trade_supply_comparison.csv`, `stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_route_decision.csv`에 있다. Effect(효과): +1 trade(거래 1건 증가)는 보존하되 충분하지 않음을 기록한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6113,7 +6113,7 @@ stage138_trade_supply_repair_after_stage136_no_gain:
   pushed_commit_hash: 9a5bedb1b1e8e20d13ef1072edeca7039dba1080
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
 
-stage139_stage138_trade_supply_followup_review:
+
   packet_id: stage139_stage138_trade_supply_followup_review_v1
   stage_id: 139_adapter_research__stage138_trade_supply_followup_review
   status: open_planned_from_stage138
@@ -6121,4 +6121,29 @@ stage139_stage138_trade_supply_followup_review:
   source_stage: 138_adapter_research__trade_supply_repair_after_stage136_no_gain
   source_decision: proceed_to_stage139_trade_supply_followup_review_with_small_gain_candidate_not_final
   next_action: run139A_stage139_stage138_trade_supply_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage139_stage138_trade_supply_followup_review:
+  packet_id: stage139_stage138_trade_supply_followup_review_v1
+  stage_id: 139_adapter_research__stage138_trade_supply_followup_review
+  status: closed_review_only
+  current_run_id: run139A_stage139_stage138_trade_supply_followup_review_v1
+  source_stage: 138_adapter_research__trade_supply_repair_after_stage136_no_gain
+  source_stage138_closeout_commit: 9a5bedb1b1e8e20d13ef1072edeca7039dba1080
+  source_stage138_hash_record_commit: 4a2ed5eb197334f8995fa37dc8f4345db7a0d341
+  decision: continue_stage140_reverse_supply_late_concentration_repair_candidate_not_final
+  report_path: stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_stage138_trade_supply_followup_review.md
+  decision_path: stages/139_adapter_research__stage138_trade_supply_followup_review/03_reviews/stage139_decision.md
+  next_action: run140A_stage140_reverse_supply_late_concentration_repair_v1
+  pushed_commit_hash: pending_until_push
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage140_reverse_supply_late_concentration_repair:
+  packet_id: stage140_reverse_supply_late_concentration_repair_v1
+  stage_id: 140_adapter_research__reverse_supply_late_concentration_repair
+  status: active_planned_from_stage139
+  current_run_id: run140A_stage140_reverse_supply_late_concentration_repair_v1
+  source_stage: 139_adapter_research__stage138_trade_supply_followup_review
+  source_decision: continue_stage140_reverse_supply_late_concentration_repair_candidate_not_final
+  next_action: run_stage140_reverse_supply_late_concentration_repair
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

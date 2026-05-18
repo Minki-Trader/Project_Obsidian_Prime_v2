@@ -1264,3 +1264,8 @@
 - effect(효과): Stage136/137(136/137단계)에서 남은 거래 수 부족을 lifecycle(생명주기) 축으로 측정하고 Stage139(139단계) 검토로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
 - pushed_commit_hash(푸시 커밋 해시): `9a5bedb1b1e8e20d13ef1072edeca7039dba1080`
+## 2026-05-18T05:46:26Z Stage139 Stage138 trade supply follow-up closeout(139단계 138단계 거래 공급 후속 종료)
+
+- action(행동): closed(종료) `139_adapter_research__stage138_trade_supply_followup_review` with decision(판정) `continue_stage140_reverse_supply_late_concentration_repair_candidate_not_final`.
+- effect(효과): reverse-on-opposite(반대 신호 반전)만 다음 Stage140(140단계) 수리 축으로 보존하고 flat exit(평탄 청산) 손상 축은 제외했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
