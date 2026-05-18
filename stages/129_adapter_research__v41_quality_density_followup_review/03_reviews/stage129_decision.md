@@ -16,7 +16,7 @@ Effect(효과): 현재 v41 surface(브이41 표면)는 34D KPI(34D 핵심 성과
 - source_stage128_closeout_commit(원천 128단계 종료 커밋): `5279689f46abfd215aae08864999d6983a9d25af`
 - source_stage128_latest_commit(원천 128단계 최신 커밋): `4d8ba3ab61aa63ca83eb4badba0ba9c524a8eee4`
 - external_verification_status(외부 검증 상태): `completed_existing_stage128_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `8f721f71a71d8ac7f990c4412ca47cef2a23c3da`
 
 ## Next(다음)
 

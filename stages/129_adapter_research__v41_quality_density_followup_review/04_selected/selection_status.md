@@ -8,5 +8,5 @@
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage129_decision(129단계 판정): `open_new_v2_model_branch_in_stage130_after_v41_quality_density_tradeoff_failure`
 - next_stage_or_branch(다음 단계/분기): `130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `8f721f71a71d8ac7f990c4412ca47cef2a23c3da`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`

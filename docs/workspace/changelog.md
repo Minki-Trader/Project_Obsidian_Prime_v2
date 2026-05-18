@@ -1193,6 +1193,6 @@
 
 - run(실행): `run129A_stage129_v41_quality_density_followup_review_v1`
 - decision(판정): `open_new_v2_model_branch_in_stage130_after_v41_quality_density_tradeoff_failure`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `8f721f71a71d8ac7f990c4412ca47cef2a23c3da`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): v41 surface(브이41 표면)가 safe-but-small(안전하지만 작음) 또는 dense-but-weak(촘촘하지만 약함)으로 갈라진 실패를 기록하고 Stage130 새 v2 모델 분기로 넘겼다.
