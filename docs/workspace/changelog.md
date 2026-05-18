@@ -1140,3 +1140,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `f29009ae21be39be5df56a51b9bd7fd724ceb633`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage120(120단계)의 +1 trade(거래 1건 증가)는 충분하지 않다고 판정하고 Stage122(122단계) density scale repair(밀도 규모 수리)로 넘겼다.
+## 2026-05-18 - Stage122 v41 density scale repair closeout(122단계 v41 밀도 규모 수리 종료)
+
+- run(실행): `run122A_stage122_v41_density_scale_repair_after_dd_guardrail_v1`
+- decision(판정): `continue_density_scale_followup_review_in_stage123_with_small_gain`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): risk035 DD guardrail(위험 3.5% 손실률 가드레일)을 유지하려는 밀도 규모 수리를 측정하고 Stage123(123단계) 후속 검토로 넘겼다.
