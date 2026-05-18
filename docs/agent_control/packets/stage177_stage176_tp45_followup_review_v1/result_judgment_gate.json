@@ -1,0 +1,155 @@
+{
+  "attribution": "stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_performance_attribution.csv",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "Observed DD(낙폭) improvement may be risk-shape scaling rather than better entry quality(진입 품질).",
+      "attribution_confidence": "medium(중간)",
+      "comparison_baseline": "s176_tp45_control_sl2075_risk0365_h3_cd5_sht54_lng52",
+      "likely_drivers": "Stop distance(손절 거리) reduced loss depth but truncated winners enough to damage net/PF(순손익/수익요인).",
+      "next_probe": "Stage178(178단계) should keep SL/TP(손절/익절) and gate(제한문) fixed while compressing model-controlled risk(모델 제어 위험) to test DD repair without stop truncation.",
+      "observed_change": "SL tightening(손절 축소) lowered validation DD(검증 낙폭) from control but cut validation PF/net(검증 수익요인/순손익).",
+      "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+      "segment_checks": "Validation mid PF(검증 중반 수익요인) remains below 34D(34D) for every Stage176(176단계) variant; OOS DD(표본외 낙폭) remains above 34D(34D).",
+      "trade_shape": "control validation_net(대조군 검증 순손익)=1037.74; sl200 validation_net(손절2.0 검증 순손익)=860.22; control validation_dd(대조군 검증 낙폭)=13.745; sl200 validation_dd(손절2.0 검증 낙폭)=11.6761"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage178_tp45_model_risk_compression_repair_candidate_not_final",
+  "decision_path": "stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_decision.md",
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10758,
+      "sha256": "cdb6e059bf5b30b61701e75bba1b1c91ce7b9f7b97468fd1b270d03793fa8129",
+      "upserted_rows": 1
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5560,
+      "sha256": "77684b64dcef98484568cd69dae4df5985dcd8b4449e6a5863644e81fa05ab1f",
+      "upserted_rows": 6
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1000,
+      "sha256": "54d19f838a95c227ac8074a365de404198e86cd532c0686070ede1564773d682",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "0ef4c96d3af50a41c8d1bc4d66b3453be782d9e12d86edbba267549a81e1c905",
+      "upserted_rows": 1
+    }
+  },
+  "lesson_matrix": "stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_stage176_lesson_matrix.csv",
+  "lesson_rows": [
+    {
+      "adapter_id": "s176_tp45_control_sl2075_risk0365_h3_cd5_sht54_lng52",
+      "clue_type": "primary_tp45_net_pf_preserved_dd_failed",
+      "hard_quality_pass": false,
+      "lesson": "TP45 control(익절 4.5 대조군)은 validation PF/net(검증 수익요인/순손익)을 34D(34D) 위로 보존했지만 DD/mid PF/OOS DD(낙폭/중반 수익요인/표본외 낙폭)는 실패했다.",
+      "oos_balance_dd_percent": 14.2029,
+      "oos_net": 823.11,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+      "source_run_id": "run176A_stage176_tp45_dd_midpf_repair_v1",
+      "validation_balance_dd_percent": 13.745,
+      "validation_dd_margin_vs_34d": -0.835863999999999,
+      "validation_late_share": 0.4078,
+      "validation_mid_pf": 1.37500199,
+      "validation_net": 1037.74,
+      "validation_net_gap_vs_34d": 50.139999999999986,
+      "validation_pf": 1.62
+    },
+    {
+      "adapter_id": "s176_tp45_sl200_risk0365_h3_cd5_sht54_lng52",
+      "clue_type": "sl_tightening_dd_clue_net_pf_damage",
+      "hard_quality_pass": false,
+      "lesson": "SL2.0(손절 2.0)은 validation DD(검증 낙폭)를 34D(34D) 아래로 낮췄지만 validation PF/net(검증 수익요인/순손익)을 크게 훼손했다.",
+      "oos_balance_dd_percent": 14.2549,
+      "oos_net": 912.02,
+      "oos_pf": 1.95,
+      "quality_flags": "validation_pf_below_34d;validation_net_below_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+      "source_run_id": "run176A_stage176_tp45_dd_midpf_repair_v1",
+      "validation_balance_dd_percent": 11.6761,
+      "validation_dd_margin_vs_34d": 1.2330360000000002,
+      "validation_late_share": 0.4434,
+      "validation_mid_pf": 1.383405272,
+      "validation_net": 860.22,
+      "validation_net_gap_vs_34d": -127.38,
+      "validation_pf": 1.53
+    },
+    {
+      "adapter_id": "s176_tp45_sl200_risk0355_h3_cd5_sht54_lng52",
+      "clue_type": "sl_tightening_plus_risk_cut_net_damage",
+      "hard_quality_pass": false,
+      "lesson": "SL2.0 plus risk cut(손절 2.0과 위험 축소)은 DD(낙폭)를 더 낮췄지만 net/PF(순손익/수익요인) 손상이 커졌다.",
+      "oos_balance_dd_percent": 14.0741,
+      "oos_net": 859.12,
+      "oos_pf": 1.94,
+      "quality_flags": "validation_pf_below_34d;validation_net_below_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+      "source_run_id": "run176A_stage176_tp45_dd_midpf_repair_v1",
+      "validation_balance_dd_percent": 11.3459,
+      "validation_dd_margin_vs_34d": 1.5632359999999998,
+      "validation_late_share": 0.444,
+      "validation_mid_pf": 1.366407972,
+      "validation_net": 824.66,
+      "validation_net_gap_vs_34d": -162.94000000000005,
+      "validation_pf": 1.53
+    },
+    {
+      "adapter_id": "s176_tp45_sl195_risk0360_h3_cd5_sht54_lng52",
+      "clue_type": "sl195_tightening_negative_memory",
+      "hard_quality_pass": false,
+      "lesson": "SL1.95(손절 1.95)는 DD(낙폭)를 낮춰도 validation PF/net(검증 수익요인/순손익)과 mid PF(중반 수익요인)를 더 악화했다.",
+      "oos_balance_dd_percent": 14.3265,
+      "oos_net": 903.83,
+      "oos_pf": 1.93,
+      "quality_flags": "validation_pf_below_34d;validation_net_below_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d",
+      "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+      "source_run_id": "run176A_stage176_tp45_dd_midpf_repair_v1",
+      "validation_balance_dd_percent": 11.6349,
+      "validation_dd_margin_vs_34d": 1.2742360000000001,
+      "validation_late_share": 0.4284,
+      "validation_mid_pf": 1.327323445,
+      "validation_net": 841.78,
+      "validation_net_gap_vs_34d": -145.82000000000005,
+      "validation_pf": 1.5
+    }
+  ],
+  "overall_goal_complete": false,
+  "packet_id": "stage177_stage176_tp45_followup_review_v1",
+  "report_path": "stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_stage176_tp45_followup_review.md",
+  "route_matrix": "stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_route_matrix.csv",
+  "route_rows": [
+    {
+      "decision": "open_stage178_tp45_model_risk_compression_repair_candidate_not_final",
+      "guardrails": "keep source model(원천 모델), TP45(익절 4.5), SL2.075(손절 2.075), wide gate(넓은 제한문), thresholds(문턱값), hold/cooldown(보유/대기) fixed; change only risk cap/confidence mapping(위험 상한/신뢰도 매핑).",
+      "repair_question": "Can model-risk compression(모델 위험 압축) reduce DD/OOS DD(낙폭/표본외 낙폭) while preserving TP45 validation PF/net(익절 4.5 검증 수익요인/순손익)?",
+      "route": "stage178_primary",
+      "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+      "source_clue": "s176_tp45_control_sl2075_risk0365_h3_cd5_sht54_lng52",
+      "why": "SL tightening(손절 축소) is a valid negative path because it fixes validation DD(검증 낙폭) by damaging validation PF/net(검증 수익요인/순손익)."
+    },
+    {
+      "decision": "open_stage178_tp45_model_risk_compression_repair_candidate_not_final",
+      "guardrails": "record as negative evidence(부정 근거), not invalid(무효).",
+      "repair_question": "Do not continue broad SL tightening(손절 축소) inside Stage178(178단계).",
+      "route": "failure_memory",
+      "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+      "source_clue": "s176_tp45_sl200_risk0365_h3_cd5_sht54_lng52",
+      "why": "SL2.0/1.95(손절 2.0/1.95) lowers validation DD(검증 낙폭) but leaves OOS DD(표본외 낙폭) high and destroys validation net/PF(검증 순손익/수익요인)."
+    }
+  ],
+  "run_id": "run177A_stage177_stage176_tp45_followup_review_v1",
+  "stage_id": "177_adapter_research__stage176_tp45_followup_review",
+  "status": "completed"
+}
