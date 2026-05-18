@@ -14,7 +14,7 @@ Stage139(139단계)는 Stage138(138단계) MT5(runtime, 런타임) 근거를 rev
 - source_stage138_risk_atr(원천 138단계 위험/ATR): `stages/138_adapter_research__trade_supply_repair_after_stage136_no_gain/03_reviews/stage138_risk_atr_telemetry.csv`
 - reverse_adapter(반전 어댑터): `s138_reverse_opposite_h3_cd5_risk035`
 - external_verification_status(외부 검증 상태): `completed_existing_stage138_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `5ccb7ae5c36b5c83638ee6157d6caa9a49e17031`
 
 ## Next(다음)
 
