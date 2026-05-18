@@ -1,0 +1,108 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage170_net_density_followup_review_candidate_not_final",
+  "decision_path": "stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_decision.md",
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10705,
+      "sha256": "e88fb8946598c9575429d6ba4126109b66e292fdcab6e554b931e6b45cb388f9",
+      "upserted_rows": 12
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5456,
+      "sha256": "45f58555a2d5c85e280bf8ef3268af39fc47c3ee150492de1d839452321b2a1b",
+      "upserted_rows": 13
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 992,
+      "sha256": "62b1e76b0e6e3676904d09c4aceadedecfa6dce4f1f90cc2f5a6002c1d646077",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage_run_ledger.csv",
+      "rows": 13,
+      "sha256": "79798bb1700607f534da614ae87ae53d592c1f8ac6033b47de18b9f47b2aedc1",
+      "upserted_rows": 12
+    }
+  },
+  "overall_goal_complete": false,
+  "packet_id": "stage169_net_density_lift_pf_preservation_v1",
+  "quality_rows": [
+    {
+      "adapter_id": "s169_short_pre_risk0300_h3_cd5_sht54_lng52",
+      "axis": "short_pre_risk0300",
+      "candidate_quality_pass": true,
+      "label": "stage169_short_pre_risk0300",
+      "long_block_rule": "lowedge_gate",
+      "model_risk_max_pct": 0.03,
+      "oos_dd_percent": 9.56,
+      "oos_early_net": 173.43,
+      "oos_early_pf": 1.7577995280957792,
+      "oos_net": 667.99,
+      "oos_net_delta_vs_stage167_primary": 147.14999999999998,
+      "oos_pf": 1.83,
+      "oos_trade_count": 178.0,
+      "quality_flags": "candidate_quality_pass_review_required",
+      "short_block_rule": "lowedge_or_pre",
+      "validation_net": 777.28,
+      "validation_net_delta_vs_stage167_primary": 154.01,
+      "validation_pf": 1.61,
+      "validation_trade_count": 243.0
+    },
+    {
+      "adapter_id": "s169_short_pre_risk0350_h3_cd5_sht54_lng52",
+      "axis": "short_pre_risk0350",
+      "candidate_quality_pass": true,
+      "label": "stage169_short_pre_risk0350",
+      "long_block_rule": "lowedge_gate",
+      "model_risk_max_pct": 0.035,
+      "oos_dd_percent": 11.03,
+      "oos_early_net": 208.22,
+      "oos_early_pf": 1.7492623245771861,
+      "oos_net": 835.78,
+      "oos_net_delta_vs_stage167_primary": 314.93999999999994,
+      "oos_pf": 1.82,
+      "oos_trade_count": 178.0,
+      "quality_flags": "candidate_quality_pass_review_required",
+      "short_block_rule": "lowedge_or_pre",
+      "validation_net": 983.96,
+      "validation_net_delta_vs_stage167_primary": 360.69000000000005,
+      "validation_pf": 1.61,
+      "validation_trade_count": 243.0
+    },
+    {
+      "adapter_id": "s169_short_pre_restore_long_risk0300_h3_cd5_sht54_lng52",
+      "axis": "short_pre_restore_long_risk0300",
+      "candidate_quality_pass": false,
+      "label": "stage169_short_pre_restore_long_risk0300",
+      "long_block_rule": "none",
+      "model_risk_max_pct": 0.03,
+      "oos_dd_percent": 13.14,
+      "oos_early_net": 183.5,
+      "oos_early_pf": 1.7056606675896016,
+      "oos_net": 568.58,
+      "oos_net_delta_vs_stage167_primary": 47.74000000000001,
+      "oos_pf": 1.58,
+      "oos_trade_count": 229.0,
+      "quality_flags": "oos_pf_below_34d;oos_dd_above_34d",
+      "short_block_rule": "lowedge_or_pre",
+      "validation_net": 950.69,
+      "validation_net_delta_vs_stage167_primary": 327.4200000000001,
+      "validation_pf": 1.59,
+      "validation_trade_count": 298.0
+    }
+  ],
+  "report_path": "stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_report.md",
+  "run_id": "run169A_stage169_net_density_lift_pf_preservation_v1",
+  "segment_kpi": "stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_segment_kpi_summary.csv",
+  "stage_id": "169_adapter_research__net_density_lift_pf_preservation",
+  "status": "completed",
+  "summary_csv": "stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_summary.csv"
+}

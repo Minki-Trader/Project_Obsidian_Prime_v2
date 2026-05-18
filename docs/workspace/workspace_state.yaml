@@ -1,8 +1,8 @@
-﻿current_run_id: run169A_stage169_net_density_lift_pf_preservation_v1
+﻿current_run_id: run170A_stage170_stage169_net_density_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 169_adapter_research__net_density_lift_pf_preservation
+active_stage: 170_adapter_research__stage169_net_density_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage168(168단계) closed(종료) as `open_stage169_net_density_lift_pf_preservation_candidate_not_final` and Stage169(169단계) `169_adapter_research__net_density_lift_pf_preservation` is open_planned(개방 계획). Effect(효과): Stage167(167단계)의 PF(수익요인) 통과 축을 net/density lift(순손익/밀도 상승) 수리로 좁힌다.
+  Stage169(169단계) closed(종료) as `open_stage170_net_density_followup_review_candidate_not_final` and Stage170(170단계) `170_adapter_research__stage169_net_density_followup_review` is open_planned(개방 계획). Effect(효과): net/density lift(순손익/밀도 상승) 결과를 후속 검토로 넘긴다.
 - >-
-  Stage168 evidence(168단계 근거)는 `stages/168_adapter_research__stage167_validation_pf_followup_review/03_reviews/stage168_stage167_validation_pf_followup_review.md`, `stages/168_adapter_research__stage167_validation_pf_followup_review/03_reviews/stage168_stage167_quality_matrix.csv`, `stages/168_adapter_research__stage167_validation_pf_followup_review/03_reviews/stage168_repair_route_summary.csv`에 있다. Effect(효과): PF pass(수익요인 통과)를 최종으로 착각하지 않고, net/density(순손익/밀도) 부족을 다음 질문으로 보존한다.
+  Stage169 evidence(169단계 근거)는 `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_report.md`, `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_summary.csv`, `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_segment_kpi_summary.csv`에 있다. Effect(효과): PF preservation(수익요인 보존), DD(낙폭), OOS early(표본외 초반), net/density(순손익/밀도)를 같이 판독한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6788,4 +6788,21 @@ stage168_stage167_validation_pf_followup_review:
   external_verification_status: review_only_source_stage167_completed
   pushed_commit_hash: 9d72168e7748ba32c549cf36aebe2230ab1ca47d
   next_action: run169A_stage169_net_density_lift_pf_preservation_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage169_net_density_lift_pf_preservation:
+  packet_id: stage169_net_density_lift_pf_preservation_v1
+  stage_id: 169_adapter_research__net_density_lift_pf_preservation
+  status: closed_open_stage170_net_density_followup_review_candidate_not_final
+  current_run_id: run169A_stage169_net_density_lift_pf_preservation_v1
+  source_stage: 168_adapter_research__stage167_validation_pf_followup_review
+  source_run: run168A_stage168_stage167_validation_pf_followup_review_v1
+  decision: open_stage170_net_density_followup_review_candidate_not_final
+  report_path: stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_report.md
+  decision_path: stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_decision.md
+  summary_path: stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_summary.csv
+  segment_kpi_path: stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_segment_kpi_summary.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run170A_stage170_stage169_net_density_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
