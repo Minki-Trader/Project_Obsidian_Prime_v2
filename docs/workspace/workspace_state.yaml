@@ -1,8 +1,8 @@
-﻿current_run_id: run189A_stage189_stage188_context_feature_followup_review_v1
+﻿current_run_id: run190A_stage190_net_preserving_dd_repair_from_long_strict_clue_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 189_adapter_research__stage188_context_feature_followup_review
+active_stage: 190_adapter_research__net_preserving_dd_repair_from_long_strict_clue
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage188(188단계) closed(종료) as `open_stage189_bounded_followup_due_to_context_feature_tradeoff_candidate_not_final` and Stage189(189단계) `189_adapter_research__stage188_context_feature_followup_review` is open_planned(개방 계획). Effect(효과): context/feature branch(문맥/피처 분기) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage189(189단계) closed(종료) as `open_stage190_net_preserving_dd_repair_from_long_strict_clue_candidate_not_final` and Stage190(190단계) `190_adapter_research__net_preserving_dd_repair_from_long_strict_clue` is open_planned(개방 계획). Effect(효과): long_strict(롱 강화)의 DD(낙폭) 단서를 control(대조군) net/PF(순손익/수익요인) 보존 조건으로 다시 측정한다.
 - >-
-  Stage188 evidence(188단계 근거)는 `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_context_feature_report.md`, `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_context_feature_summary.csv`, `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_quality_matrix.csv`, `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_balance_curve_audit.csv`, `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_risk_atr_telemetry.csv`에 있다. Effect(효과): 34D(34D) KPI(핵심 성과 지표) 근접도와 DD/mid PF(낙폭/중반 수익요인)를 함께 본다.
+  Stage189 evidence(189단계 근거)는 `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_followup_review.md`, `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_context_feature_tradeoff_matrix.csv`, `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_performance_attribution.csv`, `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_route_matrix.csv`에 있다. Effect(효과): Stage188(188단계)의 DD/net/mid PF(낙폭/순손익/중반 수익요인) 상충을 숨기지 않는다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_context_feature_branch`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_net_preserving_dd_repair`이고 legacy 34D(레거시 34D)는 KPI target(핵심 성과 지표 목표)로만 쓴다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7157,4 +7157,22 @@ stage188_v2_native_context_feature_branch:
   external_verification_status: completed
   pushed_commit_hash: ef973cd401a4dcc02021503a6a77c23b93dda977
   next_action: run189A_stage189_stage188_context_feature_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage189_stage188_context_feature_followup_review:
+  packet_id: stage189_stage188_context_feature_followup_review_v1
+  stage_id: 189_adapter_research__stage188_context_feature_followup_review
+  status: closed_open_stage190_net_preserving_dd_repair_from_long_strict_clue_candidate_not_final
+  current_run_id: run189A_stage189_stage188_context_feature_followup_review_v1
+  source_stage: 188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff
+  source_run: run188A_stage188_v2_native_context_feature_branch_after_midwide_tradeoff_v1
+  decision: open_stage190_net_preserving_dd_repair_from_long_strict_clue_candidate_not_final
+  report_path: stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_followup_review.md
+  decision_path: stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_decision.md
+  tradeoff_matrix_path: stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_context_feature_tradeoff_matrix.csv
+  attribution_path: stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_performance_attribution.csv
+  route_matrix_path: stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_route_matrix.csv
+  external_verification_status: review_only_source_stage188_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run190A_stage190_net_preserving_dd_repair_from_long_strict_clue_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

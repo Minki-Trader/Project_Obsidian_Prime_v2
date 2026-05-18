@@ -1,0 +1,13 @@
+﻿# Stage190 Inputs(190단계 입력)
+
+- source_stage(원천 단계): `189_adapter_research__stage188_context_feature_followup_review`
+- source_run(원천 실행): `run189A_stage189_stage188_context_feature_followup_review_v1`
+- source_decision(원천 판정): `open_stage190_net_preserving_dd_repair_from_long_strict_clue_candidate_not_final`
+- report(보고서): `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_followup_review.md`
+- tradeoff_matrix(상충 행렬): `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_context_feature_tradeoff_matrix.csv`
+- attribution(귀인): `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_performance_attribution.csv`
+- route_matrix(경로 행렬): `stages/189_adapter_research__stage188_context_feature_followup_review/03_reviews/stage189_route_matrix.csv`
+- source_stage188_quality(원천 188단계 품질): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_quality_matrix.csv`
+- source_stage188_summary(원천 188단계 요약): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_context_feature_summary.csv`
+- source_stage188_segment(원천 188단계 구간): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_segment_kpi_summary.csv`
+- source_stage188_gate(원천 188단계 게이트): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_gate_feature_summary.csv`
