@@ -1618,3 +1618,8 @@
 - action(행동): closed(종료) `194_adapter_research__tp475_late_concentration_midpf_repair` with decision(판정) `open_stage195_bounded_followup_due_to_late_midpf_tradeoff_candidate_not_final`.
 - effect(효과): risk-only increase(위험만 상향)를 피하고 context/hold/cooldown(문맥/보유/대기) 변형을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage195(195단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T23:02:13Z Stage195 Stage194 late/mid follow-up review closeout(195단계 194단계 후반/중반 후속 검토 종료)
+
+- action(행동): closed(종료) `195_adapter_research__stage194_late_midpf_followup_review` with decision(판정) `open_stage196_bctl_dd_compression_midpf_guard_candidate_not_final`.
+- effect(효과): bctl(문맥 재균형)을 다음 DD/mid PF(낙폭/중반 수익요인) 수리 단서로 고정하고, hold2(2봉 보유)는 실패 기억으로 남겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
