@@ -1394,3 +1394,8 @@
 - action(행동): closed(종료) `160_adapter_research__stage158_threshold_binding_audit` with decision(판정) `open_stage161_score_margin_or_side_filter_repair_candidate_not_final`.
 - effect(효과): Stage158 threshold(158단계 문턱값) 무변화가 handoff miss(전달 누락)가 아니라 saturated score table(포화 점수표) 문제임을 기록하고 Stage161(161단계) 수리축으로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T13:23:27Z Stage161 score margin or side filter repair closeout(161단계 점수 마진 또는 방향 필터 수리 종료)
+
+- action(행동): closed(종료) `161_adapter_research__score_margin_or_side_filter_repair` with decision(판정) `continue_stage162_score_margin_or_side_filter_repair_candidate_not_final`.
+- effect(효과): score saturation(점수 포화)을 낮춘 확률 보정(probability calibration, 확률 보정)과 방향 필터(side filter, 방향 필터) 축을 MT5(메타트레이더5)로 측정하고 Stage162(162단계) 후속 판독으로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

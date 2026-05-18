@@ -1,0 +1,117 @@
+{
+  "artifact_hashes": {
+    "model_rows": [
+      {
+        "block_mode": "both",
+        "feature0_max_implied_winner_prob": 0.5761168847658291,
+        "feature0_max_score_gap": 1.0,
+        "feature0_min_implied_winner_prob": 0.5761168847658291,
+        "feature0_min_score_gap": 1.0,
+        "feature0_score_rows": 4,
+        "feature1_scores_all_zero": true,
+        "logit_strength": 0.5,
+        "model_path": "stages\\161_adapter_research__score_margin_or_side_filter_repair\\02_runs\\run161A\\s161_cal050_both_risk0300_h3_cd5_sht54_lng52\\models\\s161_cal050_both_risk0300_h3_cd5_sht54_lng52_model.csv",
+        "model_sha256": "10239cdf84eceb8e942fa767d2726ff65e1836fcc6ba1ec6fbd189b889e3c1e0",
+        "risk_confidence_ceiling": 0.6,
+        "risk_confidence_floor": 0.5,
+        "run_id": "run161A_stage161_score_margin_or_side_filter_repair_v1",
+        "score_shape_label": "non_saturated_or_unknown",
+        "variant_id": "s161_cal050_both_risk0300_h3_cd5_sht54_lng52"
+      },
+      {
+        "block_mode": "both",
+        "feature0_max_implied_winner_prob": 0.5761168847658291,
+        "feature0_max_score_gap": 1.0,
+        "feature0_min_implied_winner_prob": 0.5761168847658291,
+        "feature0_min_score_gap": 1.0,
+        "feature0_score_rows": 4,
+        "feature1_scores_all_zero": true,
+        "logit_strength": 0.5,
+        "model_path": "stages\\161_adapter_research__score_margin_or_side_filter_repair\\02_runs\\run161A\\s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52\\models\\s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52_model.csv",
+        "model_sha256": "10239cdf84eceb8e942fa767d2726ff65e1836fcc6ba1ec6fbd189b889e3c1e0",
+        "risk_confidence_ceiling": 0.6,
+        "risk_confidence_floor": 0.5,
+        "run_id": "run161A_stage161_score_margin_or_side_filter_repair_v1",
+        "score_shape_label": "non_saturated_or_unknown",
+        "variant_id": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52"
+      },
+      {
+        "block_mode": "short",
+        "feature0_max_implied_winner_prob": 0.5761168847658291,
+        "feature0_max_score_gap": 1.0,
+        "feature0_min_implied_winner_prob": 0.5761168847658291,
+        "feature0_min_score_gap": 1.0,
+        "feature0_score_rows": 4,
+        "feature1_scores_all_zero": true,
+        "logit_strength": 0.5,
+        "model_path": "stages\\161_adapter_research__score_margin_or_side_filter_repair\\02_runs\\run161A\\s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52\\models\\s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52_model.csv",
+        "model_sha256": "10239cdf84eceb8e942fa767d2726ff65e1836fcc6ba1ec6fbd189b889e3c1e0",
+        "risk_confidence_ceiling": 0.6,
+        "risk_confidence_floor": 0.5,
+        "run_id": "run161A_stage161_score_margin_or_side_filter_repair_v1",
+        "score_shape_label": "non_saturated_or_unknown",
+        "variant_id": "s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52"
+      }
+    ],
+    "probability_rows_count": 12
+  },
+  "artifact_paths": {
+    "model_score": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_model_score_audit.csv",
+    "probability_binding": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_probability_binding_summary.csv",
+    "report": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_score_margin_or_side_filter_repair_report.md",
+    "risk_atr": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_risk_atr_telemetry.csv",
+    "segment_kpi": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_segment_kpi_summary.csv",
+    "stage_ledger": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage_run_ledger.csv",
+    "summary": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_score_margin_or_side_filter_repair_summary.csv"
+  },
+  "availability": "tracked",
+  "consumer": [
+    "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_score_margin_or_side_filter_repair_report.md",
+    "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_decision.md",
+    "162_adapter_research__stage161_score_margin_followup_review"
+  ],
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10650,
+      "sha256": "c2e83986578ccd7387d00e6bd9c1df8ae182c12d631a483c1010734e6fe6e067",
+      "upserted_rows": 12
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5343,
+      "sha256": "4bd81c4ddacdfc8906e7c59db36b144752ad8f396cb361557ef9354aca6b1a1d",
+      "upserted_rows": 26
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 984,
+      "sha256": "60f9f127987d06d31604921f1be11eea4ef389e6ad57cc34224a055d69dbfc10",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage_run_ledger.csv",
+      "rows": 12,
+      "sha256": "f436af7f4e332d1945b0aae5de37a6e387d4f824416f03a41f176aa91c95d91f",
+      "upserted_rows": 12
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage161/score_margin_or_side_filter_repair.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "stage_pipelines/stage161/score_margin_or_side_filter_repair.py",
+    "stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_decision.md",
+    "s156_low_edge_risk0300_h3_cd5_sht54_lng52"
+  ],
+  "status": "completed"
+}
