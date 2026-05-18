@@ -1,0 +1,11 @@
+﻿# Stage149 Input References(149단계 입력 참조)
+
+- source_stage(원천 단계): `148_adapter_research__softsession_supply_quality_repair_after_stage146_damage`
+- source_run(원천 실행): `run148A_stage148_softsession_supply_quality_repair_after_stage146_damage_v1`
+- stage148_decision(148단계 판정): `stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_decision.md`
+- stage148_report(148단계 보고서): `stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_softsession_supply_quality_repair_report.md`
+- stage148_summary(148단계 요약): `stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_softsession_supply_quality_repair_summary.csv`
+- stage148_segment_kpi(148단계 구간 KPI): `stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_segment_kpi_summary.csv`
+- stage148_risk_atr_telemetry(148단계 위험/ATR 기록): `stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_risk_atr_telemetry.csv`
+- repair_seed(수리 씨앗): `s146_control_bothgate_softsession_h3_cd5_sht54_lng52_risk035`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`

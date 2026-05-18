@@ -1,0 +1,60 @@
+{
+  "artifact_paths": {
+    "gate_feature": "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_gate_feature_summary.csv",
+    "report": "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_softsession_supply_quality_repair_report.md",
+    "risk_atr": "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_risk_atr_telemetry.csv",
+    "segment_kpi": "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_segment_kpi_summary.csv",
+    "stage_ledger": "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage_run_ledger.csv",
+    "summary": "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_softsession_supply_quality_repair_summary.csv"
+  },
+  "availability": "tracked",
+  "consumers": [
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_softsession_supply_quality_repair_report.md",
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_decision.md",
+    "149_adapter_research__stage148_softsession_repair_followup_review"
+  ],
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10551,
+      "sha256": "b38ab15f4d8d4262a0b312ba49a5587dc42169333420253c8eabd080e36a5535",
+      "upserted_rows": 16
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5112,
+      "sha256": "74a4e0e044deff1ec9a9860f70fcc0bdd7d8c0dd2da194bd385f78ddacb10870",
+      "upserted_rows": 29
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 971,
+      "sha256": "e49e4782f8526d88ea9e78c154fafc1b6cba66a8b7f072e8f37da8312dd6ec11",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage_run_ledger.csv",
+      "rows": 16,
+      "sha256": "6769168ccceeb49bf1952053ed8e25778b5fc9b686c3e0c4a6568068f605b031",
+      "upserted_rows": 16
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage148/softsession_supply_quality_repair_after_stage146_damage.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "stages/147_adapter_research__stage146_control_anchor_followup_review/03_reviews/stage147_control_anchor_tradeoff_summary.csv",
+    "stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_control_anchor_trade_supply_summary.csv",
+    "stage_pipelines/stage148/softsession_supply_quality_repair_after_stage146_damage.py"
+  ],
+  "status": "completed"
+}
