@@ -1369,3 +1369,8 @@
 - action(행동): closed(종료) `155_adapter_research__stage154_oos_mid_validation_followup_review` with decision(판정) `open_stage156_stage154_low_edge_oos_dd_compression_repair_candidate_not_final`.
 - effect(효과): Stage154(154단계)의 best seed(최선 씨앗)를 Stage156(156단계) OOS DD(표본외 낙폭) 압축으로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T11:41:05Z Stage156 OOS DD compression closeout(156단계 표본외 낙폭 압축 종료)
+
+- action(행동): closed(종료) `156_adapter_research__stage154_low_edge_oos_dd_compression_repair` with decision(판정) `proceed_to_stage157_stage156_followup_review_with_dd_compression_candidate_not_final`.
+- effect(효과): Stage154 low-edge seed(154단계 낮은 가장자리 씨앗)의 위험 상한과 ATR SL(ATR 손절)을 좁게 시험하고 Stage157(157단계) 검토로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

@@ -1,0 +1,56 @@
+{
+  "artifact_paths": {
+    "report": "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage156_oos_dd_compression_report.md",
+    "risk_atr": "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage156_risk_atr_telemetry.csv",
+    "segment_kpi": "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage156_segment_kpi_summary.csv",
+    "stage_ledger": "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage_run_ledger.csv",
+    "summary": "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage156_oos_dd_compression_summary.csv"
+  },
+  "consumers": [
+    "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage156_oos_dd_compression_report.md",
+    "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage156_decision.md",
+    "157_adapter_research__stage156_dd_compression_followup_review"
+  ],
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10619,
+      "sha256": "7ab8596724936f22ae9c5049407da074de3c6db28b97c76a074abcca48bbccbb",
+      "upserted_rows": 16
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5260,
+      "sha256": "a1c96bb089c9b9649becf267ce4a4a19de005ef197d6568f8ad7e600d174e07c",
+      "upserted_rows": 29
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 979,
+      "sha256": "10f5a96a26b5e13314acb4f65a13511a409529a7d0614593518f5d7dd1faaf09",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage_run_ledger.csv",
+      "rows": 16,
+      "sha256": "08860db13fae662b3d2ea111620074424cdfca5225890fc46546b3827ec5caf3",
+      "upserted_rows": 16
+    }
+  },
+  "producer": "stage_pipelines/stage156/stage154_low_edge_oos_dd_compression_repair.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/156_adapter_research__stage154_low_edge_oos_dd_compression_repair/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "s154_trim_low_edge_restore_h3_cd5_sht54_lng52_risk035",
+    "stage_pipelines/stage156/stage154_low_edge_oos_dd_compression_repair.py"
+  ],
+  "status": "completed"
+}
