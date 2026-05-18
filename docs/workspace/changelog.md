@@ -1426,4 +1426,5 @@
 
 - action(행동): closed(종료) `164_adapter_research__stage163_density_followup_review` with decision(판정) `open_stage165_side_context_oos_early_repair_candidate_not_final`.
 - effect(효과): Stage163(163단계) 결과가 full repair(완전 수리)가 아님을 기록하고 Stage165(165단계) side/context(방향/문맥) 수리로 넘겼다.
+- pushed_commit_hash(푸시 커밋 해시): `2aedebc9279ae76b6215c4073b99b1a1ba3fc15b`
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
