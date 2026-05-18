@@ -1,0 +1,127 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage169_net_density_lift_pf_preservation_candidate_not_final",
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10692,
+      "sha256": "4b34b10f96dc50accfd956b3b7b9b9c36dd17dd95c10dd134722219996d8b6fe",
+      "upserted_rows": 1
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5443,
+      "sha256": "d1648b1a8331c468ceef54d34e926f3e3dd13f1b36ede5bbc11bb53c92cb221c",
+      "upserted_rows": 10
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 991,
+      "sha256": "93a994c430b03aa88c44dcc69ff0ad467b9113dafef664227f71363cfc0be049",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/168_adapter_research__stage167_validation_pf_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "fc1e82cd50b725c2df580be5c990b76882a9d672317f5e25a65065f50b45dbad",
+      "upserted_rows": 1
+    }
+  },
+  "overall_goal_complete": false,
+  "packet_id": "stage168_stage167_validation_pf_followup_review_v1",
+  "quality_matrix": "stages/168_adapter_research__stage167_validation_pf_followup_review/03_reviews/stage168_stage167_quality_matrix.csv",
+  "quality_rows": [
+    {
+      "adapter_id": "s167_short_pre_guard_risk0250_h3_cd5_sht54_lng52",
+      "axis": "short_pre_guard",
+      "oos_dd_percent": 8.1,
+      "oos_early_pf": 1.7810285105249133,
+      "oos_net": 520.84,
+      "oos_pf": 1.82,
+      "oos_trade_count": 178.0,
+      "quality_flags": "candidate_quality_pass_review_required",
+      "review_judgment": "primary_pf_pass_density_preserved_net_still_below_34d",
+      "route_reason": "PF(수익요인), OOS(표본외), DD(낙폭), density(밀도)가 균형 있게 개선됐지만 net(순손익)은 34D보다 낮다.",
+      "route_role": "primary_stage169_net_density_lift_anchor",
+      "run_id": "run168A_stage168_stage167_validation_pf_followup_review_v1",
+      "source_run_id": "run167A_stage167_validation_pf_lift_density_preservation_v1",
+      "validation_net": 623.27,
+      "validation_pf": 1.63,
+      "validation_trade_count": 243.0
+    },
+    {
+      "adapter_id": "s167_short_wide_lowedge_risk0250_h3_cd5_sht54_lng52",
+      "axis": "short_wide_lowedge",
+      "oos_dd_percent": 10.39,
+      "oos_early_pf": 1.599065254688517,
+      "oos_net": 433.87,
+      "oos_pf": 1.84,
+      "oos_trade_count": 157.0,
+      "quality_flags": "candidate_quality_pass_review_required",
+      "review_judgment": "secondary_pf_pass_lower_net_density",
+      "route_reason": "PF(수익요인)는 통과했지만 short_pre_guard(숏 사전구간 보호)보다 net/density(순손익/밀도)가 낮다.",
+      "route_role": "secondary_guard_strength_clue",
+      "run_id": "run168A_stage168_stage167_validation_pf_followup_review_v1",
+      "source_run_id": "run167A_stage167_validation_pf_lift_density_preservation_v1",
+      "validation_net": 547.06,
+      "validation_pf": 1.61,
+      "validation_trade_count": 224.0
+    },
+    {
+      "adapter_id": "s167_short_cash45_guard_risk0250_h3_cd5_sht54_lng52",
+      "axis": "short_cash45_guard",
+      "oos_dd_percent": 6.41,
+      "oos_early_pf": 1.8964830214830215,
+      "oos_net": 404.33,
+      "oos_pf": 2.05,
+      "oos_trade_count": 144.0,
+      "quality_flags": "validation_pf_below_34d;validation_net_density_thin_vs_stage165_primary",
+      "review_judgment": "failure_memory_pf_failed_overfiltered",
+      "route_reason": "OOS(표본외)는 좋지만 validation PF(검증 수익요인)와 validation net(검증 순손익)이 무너져 주축으로 두지 않는다.",
+      "route_role": "negative_overfilter_memory",
+      "run_id": "run168A_stage168_stage167_validation_pf_followup_review_v1",
+      "source_run_id": "run167A_stage167_validation_pf_lift_density_preservation_v1",
+      "validation_net": 236.59,
+      "validation_pf": 1.41,
+      "validation_trade_count": 199.0
+    }
+  ],
+  "report_path": "stages/168_adapter_research__stage167_validation_pf_followup_review/03_reviews/stage168_stage167_validation_pf_followup_review.md",
+  "route_rows": [
+    {
+      "adapter_id": "s167_short_pre_guard_risk0250_h3_cd5_sht54_lng52",
+      "bounded_question": "Can net/density(순손익/밀도) move closer to 34D while preserving PF/DD/OOS early(수익요인/낙폭/표본외 초반)?",
+      "do_not_do": "Do not call this final(최종) and do not make risk scaling(위험 확대) the only explanation.",
+      "route": "stage169_primary_short_pre_guard_net_density_lift",
+      "route_rank": 1,
+      "run_id": "run168A_stage168_stage167_validation_pf_followup_review_v1",
+      "why": "PF(수익요인), OOS(표본외), DD(낙폭), density(밀도)가 균형 있게 개선됐지만 net(순손익)은 34D보다 낮다."
+    },
+    {
+      "adapter_id": "s167_short_wide_lowedge_risk0250_h3_cd5_sht54_lng52",
+      "bounded_question": "Use as backup(대체) if Stage169 density repair damages PF(수익요인).",
+      "do_not_do": "Do not prefer it over primary while net/density(순손익/밀도) is lower.",
+      "route": "secondary_wide_guard_conservative_backup",
+      "route_rank": 2,
+      "run_id": "run168A_stage168_stage167_validation_pf_followup_review_v1",
+      "why": "PF(수익요인)는 통과했지만 short_pre_guard(숏 사전구간 보호)보다 net/density(순손익/밀도)가 낮다."
+    },
+    {
+      "adapter_id": "s167_short_cash45_guard_risk0250_h3_cd5_sht54_lng52",
+      "bounded_question": "Keep as failure memory(실패 기억), not a repair anchor(수리 앵커).",
+      "do_not_do": "Do not cherry-pick(유리한 구간만 선택) high OOS PF(높은 표본외 수익요인).",
+      "route": "preserve_cash45_overfilter_failure_memory",
+      "route_rank": 3,
+      "run_id": "run168A_stage168_stage167_validation_pf_followup_review_v1",
+      "why": "OOS(표본외)는 좋지만 validation PF(검증 수익요인)와 validation net(검증 순손익)이 무너져 주축으로 두지 않는다."
+    }
+  ],
+  "route_summary": "stages/168_adapter_research__stage167_validation_pf_followup_review/03_reviews/stage168_repair_route_summary.csv",
+  "run_id": "run168A_stage168_stage167_validation_pf_followup_review_v1",
+  "stage_id": "168_adapter_research__stage167_validation_pf_followup_review",
+  "status": "completed"
+}
