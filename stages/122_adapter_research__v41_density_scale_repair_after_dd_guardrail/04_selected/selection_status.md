@@ -8,5 +8,5 @@
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage122_decision(122단계 판정): `continue_density_scale_followup_review_in_stage123_with_small_gain`
 - next_stage_or_branch(다음 단계/분기): `123_adapter_research__v41_density_scale_followup_review`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d7d1d83862e40bc55f61473209d3a1c38b15d525`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`

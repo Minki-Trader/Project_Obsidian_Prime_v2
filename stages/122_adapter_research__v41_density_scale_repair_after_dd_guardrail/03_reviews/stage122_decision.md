@@ -16,7 +16,7 @@ Effect(효과): 결과를 Stage123(123단계) follow-up review(후속 검토)로
 - source_stage121_closeout_commit(원천 121단계 종료 커밋): `f29009ae21be39be5df56a51b9bd7fd724ceb633`
 - source_stage121_latest_commit(원천 121단계 최신 커밋): `ff03a05b4412a6ed55238940ddd09fc07c3cc1d7`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d7d1d83862e40bc55f61473209d3a1c38b15d525`
 
 ## Next(다음)
 

@@ -1144,6 +1144,6 @@
 
 - run(실행): `run122A_stage122_v41_density_scale_repair_after_dd_guardrail_v1`
 - decision(판정): `continue_density_scale_followup_review_in_stage123_with_small_gain`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `d7d1d83862e40bc55f61473209d3a1c38b15d525`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): risk035 DD guardrail(위험 3.5% 손실률 가드레일)을 유지하려는 밀도 규모 수리를 측정하고 Stage123(123단계) 후속 검토로 넘겼다.
