@@ -20,6 +20,6 @@ Stage160(160단계)는 Stage158(158단계)의 threshold binding(문턱값 작동
 - probability_distribution_summary(확률 분포 요약): `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_probability_distribution_summary.csv`
 - runtime_reason_summary(런타임 이유 요약): `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_runtime_reason_summary.csv`
 - model_score_audit(모델 점수 감사): `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_model_score_audit.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `3805fd185dd669ebd674fe8df4cf19e504b07ee6`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).

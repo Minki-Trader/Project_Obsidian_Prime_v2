@@ -7,7 +7,7 @@
 - source_stage159_closeout_commit(원천 159단계 종료 커밋): `681c153ded59505a7cb407dde6f7b7572322bbf8`
 - stage160_decision(160단계 판정): `open_stage161_score_margin_or_side_filter_repair_candidate_not_final`
 - next_stage_or_branch(다음 단계/분기): `161_adapter_research__score_margin_or_side_filter_repair`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `3805fd185dd669ebd674fe8df4cf19e504b07ee6`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Effect(효과): Stage160(160단계)은 threshold binding audit(문턱값 작동 감사)만 닫고 Stage161(161단계) 수리로 넘긴다.
