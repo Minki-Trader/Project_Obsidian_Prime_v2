@@ -14,7 +14,7 @@ Stage151(151단계)는 Stage150(150단계) evidence(근거)를 review-only(검�
 - source_stage150_segments(원천 150단계 구간): `stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_segment_kpi_summary.csv`
 - source_stage150_risk_atr(원천 150단계 위험/ATR): `stages/150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff/03_reviews/stage150_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage150_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `a7b45527cba4d171e4d6363d12e8f90410cc0b28`
 
 ## Next(다음)
 
