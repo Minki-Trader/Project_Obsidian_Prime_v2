@@ -1,8 +1,8 @@
-﻿current_run_id: run172A_stage172_validation_drawdown_concentration_repair_v1
+﻿current_run_id: run173A_stage173_stage172_repair_followup_review_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 172_adapter_research__validation_drawdown_concentration_repair
+active_stage: 173_adapter_research__stage172_repair_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,12 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage171(171단계) closed(종료) as `open_stage172_validation_drawdown_concentration_repair_candidate_not_final` and Stage172(172단계) `172_adapter_research__validation_drawdown_concentration_repair` is open_planned(개방 계획). Effect(효과): near-34D(34D 근접) 숫자를 final(최종)로 보지 않고 validation drawdown/concentration repair(검증 낙폭/집중도 수리)로 넘긴다.
+  Stage172(172단계) closed(종료) as `open_stage173_bounded_repair_followup_due_to_drawdown_net_tradeoff_candidate_not_final` and Stage173(173단계) `173_adapter_research__stage172_repair_followup_review` is open_planned(개방 계획). Effect(효과): validation drawdown/concentration repair(검증 낙폭/집중도 수정) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
 - >-
-  Stage171 evidence(171단계 근거)는 `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_segment_stability_equity_curve_audit.md`, `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_balance_curve_summary.csv`, `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_monthly_kpi_summary.csv`, `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_concentration_audit.csv`, `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_drawdown_recovery_summary.csv`에 있다. Effect(효과): equity/balance curve(자산/잔고 곡선), segment(구간), recovery(회복), concentration(집중도)를 같이 본다.
+  Stage172 evidence(172단계 근거)는 `stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_validation_drawdown_concentration_repair_report.md`, `stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_validation_drawdown_concentration_repair_summary.csv`, `stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_quality_matrix.csv`, `stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_balance_curve_audit.csv`, `stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_risk_atr_telemetry.csv`에 있다. Effect(효과): net(순손익), PF(수익요인), DD(낙폭), segment(구간), concentration(집중도), ATR/risk telemetry(ATR/위험 기록)를 같이 본다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
-
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -6849,4 +6848,22 @@ stage171_segment_stability_equity_curve_audit:
   external_verification_status: review_only_source_stage169_mt5_reports_completed
   pushed_commit_hash: 9880380842d81463d7728384a0575bdd0079a252
   next_action: run172A_stage172_validation_drawdown_concentration_repair_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage172_validation_drawdown_concentration_repair:
+  packet_id: stage172_validation_drawdown_concentration_repair_v1
+  stage_id: 172_adapter_research__validation_drawdown_concentration_repair
+  status: closed_open_stage173_bounded_repair_followup_due_to_drawdown_net_tradeoff_candidate_not_final
+  current_run_id: run172A_stage172_validation_drawdown_concentration_repair_v1
+  source_stage: 171_adapter_research__segment_stability_equity_curve_audit
+  source_run: run171A_stage171_segment_stability_equity_curve_audit_v1
+  decision: open_stage173_bounded_repair_followup_due_to_drawdown_net_tradeoff_candidate_not_final
+  report_path: stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_validation_drawdown_concentration_repair_report.md
+  decision_path: stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_decision.md
+  summary_path: stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_validation_drawdown_concentration_repair_summary.csv
+  quality_matrix_path: stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_quality_matrix.csv
+  balance_curve_audit_path: stages/172_adapter_research__validation_drawdown_concentration_repair/03_reviews/stage172_balance_curve_audit.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run173A_stage173_stage172_repair_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
