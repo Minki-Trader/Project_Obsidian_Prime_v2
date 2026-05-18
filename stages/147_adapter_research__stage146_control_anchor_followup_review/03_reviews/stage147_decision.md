@@ -14,7 +14,7 @@ Stage147(147단계)는 Stage146(146단계) evidence(근거)를 review-only(검�
 - source_stage146_segments(원천 146단계 구간): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_segment_kpi_summary.csv`
 - source_stage146_risk_atr(원천 146단계 위험/ATR): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage146_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `2998bff304cfe0d681f894d320eb888a54643d76`
 
 ## Next(다음)
 
