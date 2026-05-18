@@ -1478,3 +1478,18 @@
 - action(행동): closed(종료) `170_adapter_research__stage169_net_density_followup_review` with decision(판정) `open_stage171_segment_stability_equity_curve_audit_candidate_not_final`.
 - effect(효과): Stage171(171단계)을 segment/equity/concentration audit(구간/자산 곡선/집중도 감사)로 열어 near-34D(34D 근접) 후보를 더 검증한다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T15:55:04Z Stage171 segment/equity curve audit closeout(171단계 구간/자산 곡선 감사 종료)
+
+- action(행동): closed(종료) `171_adapter_research__segment_stability_equity_curve_audit` with decision(판정) `open_stage172_validation_drawdown_concentration_repair_candidate_not_final`.
+- effect(효과): Stage172(172단계)를 validation drawdown/concentration repair(검증 낙폭/집중도 수리)로 열었다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T15:57:10Z Stage171 segment/equity curve audit closeout(171단계 구간/자산 곡선 감사 종료)
+
+- action(행동): closed(종료) `171_adapter_research__segment_stability_equity_curve_audit` with decision(판정) `open_stage172_validation_drawdown_concentration_repair_candidate_not_final`.
+- effect(효과): Stage172(172단계)를 validation drawdown/concentration repair(검증 낙폭/집중도 수리)로 열었다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T15:58:48Z Stage171 segment/equity curve audit closeout(171단계 구간/자산 곡선 감사 종료)
+
+- action(행동): closed(종료) `171_adapter_research__segment_stability_equity_curve_audit` with decision(판정) `open_stage172_validation_drawdown_concentration_repair_candidate_not_final`.
+- effect(효과): Stage172(172단계)를 validation drawdown/concentration repair(검증 낙폭/집중도 수리)로 열었다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
