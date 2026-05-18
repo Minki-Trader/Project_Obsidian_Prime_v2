@@ -1503,3 +1503,8 @@
 - action(행동): closed(종료) `173_adapter_research__stage172_repair_followup_review` with decision(판정) `open_stage174_wide_gate_mid_segment_recovery_repair_candidate_not_final`.
 - effect(효과): Stage172(172단계)의 DD/concentration(낙폭/집중도) 개선 단서와 net/PF(순손익/수익요인) 손상을 분리해 Stage174(174단계) 수리 질문으로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T17:03:19Z Stage174 wide gate mid segment recovery closeout(174단계 넓은 제한문 중반 구간 회복 종료)
+
+- action(행동): closed(종료) `174_adapter_research__wide_gate_mid_segment_recovery_repair` with decision(판정) `open_stage175_bounded_followup_due_to_mid_segment_tradeoff_candidate_not_final`.
+- effect(효과): wide gate(넓은 제한문), SL/TP(손절/익절), risk cap(위험 상한) 변형을 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage175(175단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
