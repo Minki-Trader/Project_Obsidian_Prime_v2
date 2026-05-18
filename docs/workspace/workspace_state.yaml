@@ -1,8 +1,8 @@
-﻿current_run_id: run136A_stage136_stage122_survivor_trade_count_concentration_repair_v1
+﻿current_run_id: run137A_stage137_stage136_trade_count_concentration_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 136_adapter_research__stage122_survivor_trade_count_concentration_repair
+active_stage: 137_adapter_research__stage136_trade_count_concentration_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage135(135단계) closed(종료) as `continue_stage136_trade_count_concentration_repair_candidate_not_final` and Stage136(136단계) `136_adapter_research__stage122_survivor_trade_count_concentration_repair` is active_planned(활성 계획). Effect(효과): survivor candidate(생존 후보)를 버리지 않고 거래 수/집중 약점만 좁게 수리한다.
+  Stage136(136단계) closed(종료) as `continue_trade_count_concentration_repair_in_new_bounded_stage` and Stage137(137단계) `137_adapter_research__stage136_trade_count_concentration_followup_review` is active_planned(활성 계획). Effect(효과): trade count/concentration(거래 수/집중) 수리 결과를 후속 검토로 넘긴다.
 - >-
-  Stage135 evidence(135단계 근거)는 `stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_segment_equity_audit_report.md`, `stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_segment_stability_summary.csv`, `stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_equity_curve_shape_audit.md`, `stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_risk_atr_behavior_audit.csv`에 있다. Effect(효과): KPI(핵심 성과 지표) 강점과 약점을 동시에 추적한다.
+  Stage136 evidence(136단계 근거)는 `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_report.md`, `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_summary.csv`, `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_segment_kpi_summary.csv`에 있다. Effect(효과): repair(수리)가 KPI(핵심 성과 지표)를 살렸는지 분리해서 본다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -6077,7 +6077,7 @@ stage135_stage122_survivor_segment_equity_audit:
   next_action: run136A_stage136_stage122_survivor_trade_count_concentration_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
 
-stage136_stage122_survivor_trade_count_concentration_repair:
+
   packet_id: stage136_stage122_survivor_trade_count_concentration_repair_v1
   stage_id: 136_adapter_research__stage122_survivor_trade_count_concentration_repair
   status: active_planned_from_stage135
@@ -6085,4 +6085,26 @@ stage136_stage122_survivor_trade_count_concentration_repair:
   source_stage: 135_adapter_research__stage122_survivor_segment_equity_audit
   source_decision: continue_stage136_trade_count_concentration_repair_candidate_not_final
   next_action: run_stage136_trade_count_concentration_repair
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage136_stage122_survivor_trade_count_concentration_repair:
+  packet_id: stage136_stage122_survivor_trade_count_concentration_repair_v1
+  stage_id: 136_adapter_research__stage122_survivor_trade_count_concentration_repair
+  status: closed_bounded_repair
+  current_run_id: run136A_stage136_stage122_survivor_trade_count_concentration_repair_v1
+  source_stage: 135_adapter_research__stage122_survivor_segment_equity_audit
+  decision: continue_trade_count_concentration_repair_in_new_bounded_stage
+  report_path: stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_report.md
+  decision_path: stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_decision.md
+  next_action: run137A_stage137_stage136_trade_count_concentration_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage137_stage136_trade_count_concentration_followup_review:
+  packet_id: stage137_stage136_trade_count_concentration_followup_review_v1
+  stage_id: 137_adapter_research__stage136_trade_count_concentration_followup_review
+  status: active_planned_from_stage136
+  current_run_id: run137A_stage137_stage136_trade_count_concentration_followup_review_v1
+  source_stage: 136_adapter_research__stage122_survivor_trade_count_concentration_repair
+  source_decision: continue_trade_count_concentration_repair_in_new_bounded_stage
+  next_action: run_stage137_followup_review
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
