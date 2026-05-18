@@ -1,8 +1,8 @@
-﻿current_run_id: run193A_stage193_stage192_tp475_midsegment_followup_review_v1
+﻿current_run_id: run194A_stage194_tp475_late_concentration_midpf_repair_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 193_adapter_research__stage192_tp475_midsegment_followup_review
+active_stage: 194_adapter_research__tp475_late_concentration_midpf_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage192(192단계) closed(종료) as `open_stage193_bounded_followup_due_to_tp475_midsegment_tradeoff_candidate_not_final` and Stage193(193단계) `193_adapter_research__stage192_tp475_midsegment_followup_review` is open_planned(개방 계획). Effect(효과): TP4.75(익절 4.75) midsegment net recovery(중반 구간 순손익 회복)의 KPI(핵심 성과 지표)를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage193(193단계) closed(종료) as `open_stage194_tp475_late_concentration_midpf_repair_candidate_not_final` and Stage194(194단계) `194_adapter_research__tp475_late_concentration_midpf_repair` is open_planned(개방 계획). Effect(효과): `s192_tp475_r0330`의 net/DD(순손익/낙폭) 통과를 보존하면서 late concentration/mid PF(후반 집중/중반 수익요인)만 좁게 고친다.
 - >-
-  Stage192 evidence(192단계 근거)는 `stages/192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression/03_reviews/stage192_tp475_midsegment_report.md`, `stages/192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression/03_reviews/stage192_tp475_midsegment_summary.csv`, `stages/192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression/03_reviews/stage192_quality_matrix.csv`, `stages/192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression/03_reviews/stage192_balance_curve_audit.csv`, `stages/192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression/03_reviews/stage192_risk_atr_telemetry.csv`에 있다. Effect(효과): net(순손익), PF(수익요인), DD(낙폭), segment(구간), concentration(집중도), ATR/risk telemetry(ATR/위험 기록)를 함께 본다.
+  Stage193 evidence(193단계 근거)는 `stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_followup_review.md`, `stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_tp475_tradeoff_matrix.csv`, `stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_performance_attribution.csv`, `stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_route_matrix.csv`에 있다. Effect(효과): Stage192(192단계)의 부분 성공과 남은 실패를 분리해 기록한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_tp475_midsegment_net_recovery`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_tp475_late_midpf_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7231,4 +7231,22 @@ stage192_tp475_midsegment_net_recovery:
   external_verification_status: completed
   pushed_commit_hash: 7d02adb83a1ebc3fd9e1977b22dad75a39be16ff
   next_action: run193A_stage193_stage192_tp475_midsegment_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage193_stage192_tp475_midsegment_followup_review:
+  packet_id: stage193_stage192_tp475_midsegment_followup_review_v1
+  stage_id: 193_adapter_research__stage192_tp475_midsegment_followup_review
+  status: closed_open_stage194_tp475_late_concentration_midpf_repair_candidate_not_final
+  current_run_id: run193A_stage193_stage192_tp475_midsegment_followup_review_v1
+  source_stage: 192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression
+  source_run: run192A_stage192_tp475_midsegment_net_recovery_without_dd_regression_v1
+  decision: open_stage194_tp475_late_concentration_midpf_repair_candidate_not_final
+  report_path: stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_followup_review.md
+  decision_path: stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_decision.md
+  tradeoff_matrix_path: stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_tp475_tradeoff_matrix.csv
+  attribution_path: stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_performance_attribution.csv
+  route_matrix_path: stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_route_matrix.csv
+  external_verification_status: review_only_source_stage192_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run194A_stage194_tp475_late_concentration_midpf_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
