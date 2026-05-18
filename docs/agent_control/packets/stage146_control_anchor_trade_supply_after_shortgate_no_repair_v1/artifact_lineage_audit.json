@@ -1,0 +1,24 @@
+{
+  "artifact_paths": {
+    "report": "stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_control_anchor_trade_supply_report.md",
+    "risk_atr": "stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_risk_atr_telemetry.csv",
+    "segment_kpi": "stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_segment_kpi_summary.csv",
+    "stage_ledger": "stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage_run_ledger.csv",
+    "summary": "stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_control_anchor_trade_supply_summary.csv"
+  },
+  "availability": "tracked",
+  "consumer": "147_adapter_research__stage146_control_anchor_followup_review",
+  "lineage_judgment": "connected_with_boundary",
+  "packet_id": "stage146_control_anchor_trade_supply_after_shortgate_no_repair_v1",
+  "producer": "stage_pipelines/stage146/control_anchor_trade_supply_after_shortgate_no_repair.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "run_id": "run146A_stage146_control_anchor_trade_supply_after_shortgate_no_repair_v1",
+  "source_inputs": [
+    "stage_pipelines/stage142/route_coverage_supply_branch_after_reverse_exhaustion.py",
+    "stage_pipelines/stage145/stage144_shortgate_quality_followup_review.py"
+  ]
+}
