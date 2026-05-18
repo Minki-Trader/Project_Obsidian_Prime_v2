@@ -1158,6 +1158,6 @@
 
 - run(실행): `run124A_stage124_v41_route_supply_density_repair_after_small_gain_v1`
 - decision(판정): `continue_route_supply_followup_review_in_stage125_due_to_damage_or_no_gain`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `8a8a3c1d8b4355c116d1602ee6f444e65333fd91`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage122 risk035 ATR bracket(위험 3.5% ATR 괄호)을 유지한 채 side gate(방향 게이트) 경로 공급을 측정하고 Stage125(125단계) 후속 검토로 넘겼다.
