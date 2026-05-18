@@ -14,7 +14,7 @@ Stage145(145단계)는 Stage144(144단계) MT5(runtime, 런타임) 근거를 rev
 - source_stage144_segments(원천 144단계 구간): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_segment_kpi_summary.csv`
 - source_stage144_risk_atr(원천 144단계 위험/ATR): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage144_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `6006e4546224f104f6d102a2a04ae2f9dfa26b06`
 
 ## Next(다음)
 
