@@ -8,7 +8,7 @@
 - decision(판정): `proceed_to_stage157_stage156_followup_review_with_dd_compression_candidate_not_final`
 - external_verification_status(외부 검증 상태): `completed`
 - next_stage_or_branch(다음 단계 또는 분기): `157_adapter_research__stage156_dd_compression_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `15c6091dfe5cbbcb742b44c573b4785e840279a9`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Effect(효과): Stage156(156단계)는 OOS DD(표본외 낙폭) 압축 실험만 닫고, Stage157(157단계) review(검토)로 넘긴다.
