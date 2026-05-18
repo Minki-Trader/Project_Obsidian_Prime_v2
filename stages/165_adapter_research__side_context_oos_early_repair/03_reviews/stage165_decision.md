@@ -12,7 +12,7 @@
 - segment_kpi(구간 핵심 성과 지표): `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_segment_kpi_summary.csv`
 - probability_binding(확률 작동): `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_probability_binding_summary.csv`
 - gate_feature_summary(게이트 피처 요약): `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_gate_feature_summary.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `8419d954cbdc2d8652da395a7bc7d9b11a02eb12`
 - next_stage_or_branch(다음 단계 또는 분기): `166_adapter_research__stage165_side_context_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

@@ -20,6 +20,6 @@ Stage165(165단계)는 side/context repair(방향/문맥 수리)를 MT5(MetaTrad
 - summary(요약): `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_side_context_oos_early_repair_summary.csv`
 - segment_kpi(구간 핵심 성과 지표): `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_segment_kpi_summary.csv`
 - gate_feature_summary(게이트 피처 요약): `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_gate_feature_summary.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `8419d954cbdc2d8652da395a7bc7d9b11a02eb12`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
