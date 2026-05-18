@@ -1,0 +1,8 @@
+﻿# Stage142 Input References(142단계 입력 참조)
+
+- stage141_decision(141단계 판정): `stages/141_adapter_research__stage140_reverse_supply_followup_review/03_reviews/stage141_decision.md`
+- stage141_review(141단계 검토): `stages/141_adapter_research__stage140_reverse_supply_followup_review/03_reviews/stage141_stage140_reverse_supply_followup_review.md`
+- stage141_comparison(141단계 비교): `stages/141_adapter_research__stage140_reverse_supply_followup_review/03_reviews/stage141_stage140_reverse_supply_comparison.csv`
+- stage140_summary(140단계 요약): `stages/140_adapter_research__reverse_supply_late_concentration_repair/03_reviews/stage140_reverse_supply_repair_summary.csv`
+- stage140_segment_kpi(140단계 구간 KPI): `stages/140_adapter_research__reverse_supply_late_concentration_repair/03_reviews/stage140_segment_kpi_summary.csv`
+- stage140_risk_atr_telemetry(140단계 위험/ATR 원격측정): `stages/140_adapter_research__reverse_supply_late_concentration_repair/03_reviews/stage140_risk_atr_telemetry.csv`
