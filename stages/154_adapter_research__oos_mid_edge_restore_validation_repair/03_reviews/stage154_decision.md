@@ -10,7 +10,7 @@
 - summary_csv(요약 CSV): `stages/154_adapter_research__oos_mid_edge_restore_validation_repair/03_reviews/stage154_oos_mid_validation_repair_summary.csv`
 - segment_kpi(구간 KPI): `stages/154_adapter_research__oos_mid_edge_restore_validation_repair/03_reviews/stage154_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/154_adapter_research__oos_mid_edge_restore_validation_repair/03_reviews/stage154_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `200c8ab3510b19d89711d0de5b5ca825b10180c4`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage154(154단계)는 margin_trim(마진 축소)의 OOS mid(표본외 중반) 장점과 validation memory(검증 기억)의 상충을 좁게 측정했다. Effect(효과): 이 판정은 다음 Stage155(155단계) review(검토)로 넘어가는 경계 기록이지 전체 목표 완료가 아니다.

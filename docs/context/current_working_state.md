@@ -20,6 +20,6 @@ Stage154(154단계)는 OOS mid seed(표본외 중반 씨앗)의 validation repai
 - summary(요약): `stages/154_adapter_research__oos_mid_edge_restore_validation_repair/03_reviews/stage154_oos_mid_validation_repair_summary.csv`
 - segment_kpi(구간 KPI): `stages/154_adapter_research__oos_mid_edge_restore_validation_repair/03_reviews/stage154_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/154_adapter_research__oos_mid_edge_restore_validation_repair/03_reviews/stage154_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `200c8ab3510b19d89711d0de5b5ca825b10180c4`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
