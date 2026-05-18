@@ -1498,3 +1498,8 @@
 - action(행동): closed(종료) `172_adapter_research__validation_drawdown_concentration_repair` with decision(판정) `open_stage173_bounded_repair_followup_due_to_drawdown_net_tradeoff_candidate_not_final`.
 - effect(효과): ATR SL(ATR 손절), risk cap(위험 상한), context gate(문맥 제한문) 변형을 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage173(173단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T16:39:45Z Stage173 Stage172 repair follow-up review closeout(173단계 172단계 수정 후속 검토 종료)
+
+- action(행동): closed(종료) `173_adapter_research__stage172_repair_followup_review` with decision(판정) `open_stage174_wide_gate_mid_segment_recovery_repair_candidate_not_final`.
+- effect(효과): Stage172(172단계)의 DD/concentration(낙폭/집중도) 개선 단서와 net/PF(순손익/수익요인) 손상을 분리해 Stage174(174단계) 수리 질문으로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
