@@ -8,7 +8,7 @@
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage146_decision(146단계 판정): `continue_stage147_control_anchor_followup_review_due_to_damage_or_no_trade_gain_candidate_not_final`
 - next_stage_or_branch(다음 단계/분기): `147_adapter_research__stage146_control_anchor_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `d17bc202a1cb49df164cd0e70a8445dd2f9694e2`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Effect(효과): Stage146(146단계)은 닫지만 전체 목표 완료나 운영 주장은 만들지 않는다.

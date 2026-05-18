@@ -20,6 +20,6 @@ Stage146(146단계)은 control anchor trade supply repair(대조군 앵커 거�
 - summary(요약): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_control_anchor_trade_supply_summary.csv`
 - segment_kpi(구간 KPI): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `d17bc202a1cb49df164cd0e70a8445dd2f9694e2`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
