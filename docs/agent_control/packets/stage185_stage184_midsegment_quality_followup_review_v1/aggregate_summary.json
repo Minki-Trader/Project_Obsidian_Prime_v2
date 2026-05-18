@@ -1,0 +1,150 @@
+{
+  "attribution": "stages/185_adapter_research__stage184_midsegment_quality_followup_review/03_reviews/stage185_failure_attribution.csv",
+  "attribution_rows": [
+    {
+      "effect": "threshold-only repair(문턱값만 수정)는 다음 주축으로 쓰지 않는다.",
+      "evidence": "best=s184_mid_r0325_control; val_net=1012.75; val_dd=13.3347; mid_pf=1.485500",
+      "likely_driver": "model score(모델 점수)가 이 구간에서 충분히 이산적이라 threshold(문턱값) 변화가 실제 진입을 바꾸지 못했다.",
+      "observed_change": "threshold lift(문턱값 상향)은 control(대조군)과 같은 KPI(핵심 성과 지표)를 냈다.",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1"
+    },
+    {
+      "effect": "다음 stage(단계)는 entry gate(진입 제한문)보다 bracket/exit shape(브래킷/청산 모양)으로 간다.",
+      "evidence": "qwide_val_net=553.78;qwide_mid_pf=1.318767;qwide_oos_dd=16.4543",
+      "likely_driver": "entry context(진입 문맥) 필터가 중반 손실만이 아니라 late/early winner(후반/초반 승자)도 제거했다.",
+      "observed_change": "qwide gate(넓은 품질 제한문)는 거래를 줄였지만 edge(우위)를 같이 잘랐다.",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage186_tp45_midwide_bracket_shape_repair_candidate_not_final",
+  "decision_path": "stages/185_adapter_research__stage184_midsegment_quality_followup_review/03_reviews/stage185_decision.md",
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10826,
+      "sha256": "4d799084eaf7f87f961da58851e9d8c39b5c25776cfdaba51f88bdcf2895cf49",
+      "upserted_rows": 1
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5654,
+      "sha256": "e72d714ded1c4da10cecb20573109c2cafcfe55eae7131f8244c5a43d29ace2d",
+      "upserted_rows": 6
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1008,
+      "sha256": "0b97c3f4fb14d54be4a77b39ecce268d12c1d255810fc06c474e51d2dada63aa",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/185_adapter_research__stage184_midsegment_quality_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "9e16b8d7340d8af362b36bec2fc4bc404139dc2873f13e55ee7879333e541ff1",
+      "upserted_rows": 1
+    }
+  },
+  "overall_goal_complete": false,
+  "packet_id": "stage185_stage184_midsegment_quality_followup_review_v1",
+  "report_path": "stages/185_adapter_research__stage184_midsegment_quality_followup_review/03_reviews/stage185_followup_review.md",
+  "route_matrix": "stages/185_adapter_research__stage184_midsegment_quality_followup_review/03_reviews/stage185_route_matrix.csv",
+  "route_rows": [
+    {
+      "bounded_question": "Can bracket/exit shape(브래킷/청산 모양) improve MFE capture(최대유리이동 포착) and mid PF(중반 수익요인) without broad entry filtering(넓은 진입 필터링)?",
+      "decision": "open_stage186_tp45_midwide_bracket_shape_repair_candidate_not_final",
+      "guardrail": "do_not_continue_wide_entry_gate_as_primary_repair",
+      "route": "stage186_primary",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1",
+      "source_clue": "s184_mid_r0325_control",
+      "why": "threshold(문턱값) did not change trades, and qwide gate(넓은 품질 제한문)는 net/OOS/mid PF(순손익/표본외/중반 수익요인)를 망가뜨렸다."
+    },
+    {
+      "bounded_question": "Preserve qwide gate(넓은 품질 제한문) as failure memory(실패 기억).",
+      "decision": "open_stage186_tp45_midwide_bracket_shape_repair_candidate_not_final",
+      "guardrail": "do_not_hide_failed_branch",
+      "route": "failure_memory",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1",
+      "source_clue": "stage184_qwide",
+      "why": "It lowered trade count(거래 수) but worsened validation net(검증 순손익), mid PF(중반 수익요인), and OOS DD(표본외 낙폭)."
+    }
+  ],
+  "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1",
+  "stage_id": "185_adapter_research__stage184_midsegment_quality_followup_review",
+  "status": "completed",
+  "tradeoff_matrix": "stages/185_adapter_research__stage184_midsegment_quality_followup_review/03_reviews/stage185_quality_tradeoff_matrix.csv",
+  "tradeoff_rows": [
+    {
+      "adapter_id": "s184_mid_r0325_control",
+      "axis": "control",
+      "oos_dd": 7.9373,
+      "oos_net": 772.55,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d",
+      "route_read": "control_near_miss_still_dd_and_mid_pf_failed",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1",
+      "source_run_id": "run184A_stage184_tp45_midwide_midsegment_quality_repair_v1",
+      "validation_dd": 13.3347,
+      "validation_mid_mfe_capture": 0.1989312482,
+      "validation_mid_net": 252.8,
+      "validation_mid_pf": 1.485500288,
+      "validation_net": 1012.75,
+      "validation_pf": 1.69
+    },
+    {
+      "adapter_id": "s184_mid_r0325_thr",
+      "axis": "thr",
+      "oos_dd": 7.9373,
+      "oos_net": 772.55,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d",
+      "route_read": "threshold_lift_no_trade_effect",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1",
+      "source_run_id": "run184A_stage184_tp45_midwide_midsegment_quality_repair_v1",
+      "validation_dd": 13.3347,
+      "validation_mid_mfe_capture": 0.1989312482,
+      "validation_mid_net": 252.8,
+      "validation_mid_pf": 1.485500288,
+      "validation_net": 1012.75,
+      "validation_pf": 1.69
+    },
+    {
+      "adapter_id": "s184_mid_r0325_qwide",
+      "axis": "qwide",
+      "oos_dd": 16.4543,
+      "oos_net": 400.25,
+      "oos_pf": 1.71,
+      "quality_flags": "validation_pf_below_34d;validation_net_below_34d;validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d;oos_net_materially_below_stage171_primary",
+      "route_read": "wide_quality_gate_damaged_net_oos_and_mid_pf",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1",
+      "source_run_id": "run184A_stage184_tp45_midwide_midsegment_quality_repair_v1",
+      "validation_dd": 13.4252,
+      "validation_mid_mfe_capture": 0.1490657756,
+      "validation_mid_net": 124.74,
+      "validation_mid_pf": 1.318767249,
+      "validation_net": 553.78,
+      "validation_pf": 1.55
+    },
+    {
+      "adapter_id": "s184_mid_r0325_qwide_thr",
+      "axis": "qwide_thr",
+      "oos_dd": 16.4543,
+      "oos_net": 400.25,
+      "oos_pf": 1.71,
+      "quality_flags": "validation_pf_below_34d;validation_net_below_34d;validation_balance_dd_above_34d;validation_mid_pf_below_34d;oos_balance_dd_above_34d;oos_net_materially_below_stage171_primary",
+      "route_read": "wide_quality_gate_damaged_net_oos_and_mid_pf",
+      "run_id": "run185A_stage185_stage184_midsegment_quality_followup_review_v1",
+      "source_run_id": "run184A_stage184_tp45_midwide_midsegment_quality_repair_v1",
+      "validation_dd": 13.4252,
+      "validation_mid_mfe_capture": 0.1490657756,
+      "validation_mid_net": 124.74,
+      "validation_mid_pf": 1.318767249,
+      "validation_net": 553.78,
+      "validation_pf": 1.55
+    }
+  ]
+}
