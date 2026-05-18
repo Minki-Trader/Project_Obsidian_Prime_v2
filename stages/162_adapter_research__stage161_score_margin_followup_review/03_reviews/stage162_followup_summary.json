@@ -1,0 +1,269 @@
+{
+  "best_pf_adapter": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+  "decision": "open_stage163_density_preserving_score_repair_candidate_not_final",
+  "failure_memory": [
+    {
+      "adapter_id": "s161_cal050_both_risk0300_h3_cd5_sht54_lng52",
+      "failure_label": "validation_pf_below_34d_not_enough",
+      "next_use": "Stage163 density-preserving score repair input",
+      "overall_goal_complete": false,
+      "reason": "Stage162 review found PF/net/DD/segment tradeoff that prevents research baseline selection."
+    },
+    {
+      "adapter_id": "s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52",
+      "failure_label": "validation_pf_below_34d_not_enough;oos_dd_above_34d_damage",
+      "next_use": "Stage163 density-preserving score repair input",
+      "overall_goal_complete": false,
+      "reason": "Stage162 review found PF/net/DD/segment tradeoff that prevents research baseline selection."
+    },
+    {
+      "adapter_id": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+      "failure_label": "pf_uplift_with_oos_early_segment_damage;pf_uplift_with_net_density_damage",
+      "next_use": "Stage163 density-preserving score repair input",
+      "overall_goal_complete": false,
+      "reason": "Stage162 review found PF/net/DD/segment tradeoff that prevents research baseline selection."
+    }
+  ],
+  "legacy_34d": {
+    "max_drawdown_percent": 12.909136,
+    "net_profit": 987.6,
+    "profit_factor": 1.583157,
+    "trade_count": 404
+  },
+  "overall_goal_complete": false,
+  "review_rows": [
+    {
+      "adapter_id": "s161_cal050_both_risk0300_h3_cd5_sht54_lng52",
+      "directional_050_060_band_rows": 468,
+      "directional_near_threshold_001_rows": 0,
+      "oos_dd_gap_vs_34d": 3.3591359999999995,
+      "oos_dd_percent": 9.55,
+      "oos_early_net": 184.48,
+      "oos_early_pf": 1.801703533,
+      "oos_late_pf": 2.080275434,
+      "oos_mid_pf": 1.620344597,
+      "oos_net": 722.94,
+      "oos_net_retention_vs_source": 0.7002925392796948,
+      "oos_pf": 1.85,
+      "oos_pf_gap_vs_34d": 0.26684300000000016,
+      "oos_trade_count": 189,
+      "oos_trade_retention_vs_source": 0.9792746113989638,
+      "overall_goal_complete": false,
+      "probability_binding_observed": true,
+      "side_filter_block_rows": 197,
+      "stage162_verdict": "validation_pf_below_34d_not_enough",
+      "threshold_or_margin_not_met_rows": 9376,
+      "validation_dd_percent": 8.25,
+      "validation_mid_pf": 1.351486257,
+      "validation_net": 729.69,
+      "validation_net_retention_vs_source": 0.7031191281473131,
+      "validation_pf": 1.55,
+      "validation_pf_gap_vs_34d": -0.03315699999999988,
+      "validation_trade_count": 270
+    },
+    {
+      "adapter_id": "s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52",
+      "directional_050_060_band_rows": 468,
+      "directional_near_threshold_001_rows": 0,
+      "oos_dd_gap_vs_34d": -0.4308639999999997,
+      "oos_dd_percent": 13.34,
+      "oos_early_net": 191.14,
+      "oos_early_pf": 1.729932025,
+      "oos_late_pf": 1.756125445,
+      "oos_mid_pf": 1.332531701,
+      "oos_net": 603.83,
+      "oos_net_retention_vs_source": 0.5849138849603813,
+      "oos_pf": 1.6,
+      "oos_pf_gap_vs_34d": 0.016843000000000163,
+      "oos_trade_count": 239,
+      "oos_trade_retention_vs_source": 1.238341968911917,
+      "overall_goal_complete": false,
+      "probability_binding_observed": true,
+      "side_filter_block_rows": 142,
+      "stage162_verdict": "validation_pf_below_34d_not_enough;oos_dd_above_34d_damage",
+      "threshold_or_margin_not_met_rows": 9376,
+      "validation_dd_percent": 8.25,
+      "validation_mid_pf": 1.508217214,
+      "validation_net": 884.03,
+      "validation_net_retention_vs_source": 0.8518390040374257,
+      "validation_pf": 1.53,
+      "validation_pf_gap_vs_34d": -0.0531569999999999,
+      "validation_trade_count": 325
+    },
+    {
+      "adapter_id": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+      "directional_050_060_band_rows": 468,
+      "directional_near_threshold_001_rows": 304,
+      "oos_dd_gap_vs_34d": 4.669136,
+      "oos_dd_percent": 8.24,
+      "oos_early_net": -1.41,
+      "oos_early_pf": 0.9786266485,
+      "oos_late_pf": 1.944847229,
+      "oos_mid_pf": 4.177558177,
+      "oos_net": 171.25,
+      "oos_net_retention_vs_source": 0.16588527035666545,
+      "oos_pf": 1.98,
+      "oos_pf_gap_vs_34d": 0.39684300000000006,
+      "oos_trade_count": 83,
+      "oos_trade_retention_vs_source": 0.43005181347150256,
+      "overall_goal_complete": false,
+      "probability_binding_observed": true,
+      "side_filter_block_rows": 55,
+      "stage162_verdict": "pf_uplift_with_oos_early_segment_damage;pf_uplift_with_net_density_damage",
+      "threshold_or_margin_not_met_rows": 9680,
+      "validation_dd_percent": 6.49,
+      "validation_mid_pf": 1.166180758,
+      "validation_net": 181.05,
+      "validation_net_retention_vs_source": 0.17445726013933457,
+      "validation_pf": 1.82,
+      "validation_pf_gap_vs_34d": 0.23684300000000014,
+      "validation_trade_count": 109
+    }
+  ],
+  "route_decision": [
+    {
+      "decision": "open_stage163_density_preserving_score_repair_candidate_not_final",
+      "next_stage": "163_adapter_research__stage161_density_preserving_score_repair",
+      "overall_goal_complete": false,
+      "preserve": "non_saturated_probability_binding_and_pf_uplift",
+      "primary_branch_to_repair": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+      "reason": "shortprob lifts validation/OOS PF above legacy 34D but loses too much net/trade density and has OOS early damage.",
+      "reject_as_final": "all_stage161_variants_candidate_not_final",
+      "repair": "recover_density_and_oos_early_segment_without_reintroducing_oos_dd_damage"
+    }
+  ],
+  "segment_damage_rows": [
+    {
+      "adapter_id": "s161_cal050_both_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 101.42,
+      "net_profit": 157.03,
+      "profit_factor": 1.351486257,
+      "segment": "mid",
+      "split": "validation_is",
+      "trade_count": 90
+    },
+    {
+      "adapter_id": "s161_cal050_both_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 49.38,
+      "net_profit": 184.48,
+      "profit_factor": 1.801703533,
+      "segment": "early",
+      "split": "oos",
+      "trade_count": 63
+    },
+    {
+      "adapter_id": "s161_cal050_both_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 46.21,
+      "net_profit": 176.06,
+      "profit_factor": 1.620344597,
+      "segment": "mid",
+      "split": "oos",
+      "trade_count": 63
+    },
+    {
+      "adapter_id": "s161_cal050_both_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 49.67,
+      "net_profit": 362.4,
+      "profit_factor": 2.080275434,
+      "segment": "late",
+      "split": "oos",
+      "trade_count": 63
+    },
+    {
+      "adapter_id": "s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 102.41,
+      "net_profit": 276.46,
+      "profit_factor": 1.508217214,
+      "segment": "mid",
+      "split": "validation_is",
+      "trade_count": 108
+    },
+    {
+      "adapter_id": "s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 52.94,
+      "net_profit": 191.14,
+      "profit_factor": 1.729932025,
+      "segment": "early",
+      "split": "oos",
+      "trade_count": 80
+    },
+    {
+      "adapter_id": "s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 64.21,
+      "net_profit": 121.68,
+      "profit_factor": 1.332531701,
+      "segment": "mid",
+      "split": "oos",
+      "trade_count": 80
+    },
+    {
+      "adapter_id": "s161_cal050_shortgate_risk0300_h3_cd5_sht54_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 72.2,
+      "net_profit": 291.01,
+      "profit_factor": 1.756125445,
+      "segment": "late",
+      "split": "oos",
+      "trade_count": 79
+    },
+    {
+      "adapter_id": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 33.94,
+      "net_profit": 17.67,
+      "profit_factor": 1.166180758,
+      "segment": "mid",
+      "split": "validation_is",
+      "trade_count": 36
+    },
+    {
+      "adapter_id": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+      "flags": "weak_pf;negative_or_flat_net;oos_early_damage",
+      "max_drawdown_amount": 34.09,
+      "net_profit": -1.41,
+      "profit_factor": 0.9786266485,
+      "segment": "early",
+      "split": "oos",
+      "trade_count": 28
+    },
+    {
+      "adapter_id": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 10.15,
+      "net_profit": 99.68,
+      "profit_factor": 4.177558177,
+      "segment": "mid",
+      "split": "oos",
+      "trade_count": 28
+    },
+    {
+      "adapter_id": "s161_cal050_shortprob_risk0300_h3_cd5_sht58_lng52",
+      "flags": "acceptable_measurement_only",
+      "max_drawdown_amount": 23.76,
+      "net_profit": 72.98,
+      "profit_factor": 1.944847229,
+      "segment": "late",
+      "split": "oos",
+      "trade_count": 27
+    }
+  ],
+  "source_reference": {
+    "adapter_id": "s156_low_edge_risk0300_h3_cd5_sht54_lng52",
+    "oos_dd_percent": 11.92,
+    "oos_mid_pf": 1.659175838,
+    "oos_net": 1032.34,
+    "oos_pf": 1.85,
+    "oos_trade_count": 193,
+    "validation_dd_percent": 10.23,
+    "validation_net": 1037.79,
+    "validation_pf": 1.55,
+    "validation_trade_count": 275
+  }
+}
