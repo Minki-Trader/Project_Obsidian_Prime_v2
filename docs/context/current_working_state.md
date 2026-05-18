@@ -19,6 +19,6 @@ Stage169(169단계)는 net/density lift with PF preservation(순손익/밀도 �
 - report(보고서): `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_report.md`
 - summary(요약): `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_summary.csv`
 - segment_kpi(구간 핵심 성과 지표): `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_segment_kpi_summary.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `9717fa54fd32bda22acd0845b80c1dc922e0fc17`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
