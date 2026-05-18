@@ -15,7 +15,7 @@ Stage148(148단계)는 softsession supply quality repair(소프트 세션 거래
 - source_stage147_hash_record_commit(원천 147단계 해시 기록 커밋): `cf5f7eb83d5b4fe07696f6ae11fe8146fa072558`
 - source_stage146_hash_record_commit(원천 146단계 해시 기록 커밋): `f63827bc249653329b99494eca2b17f0926af7cd`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `49c0f324848d9d7c2f4e0a5ac47ea269db1e4572`
 
 ## Next(다음)
 
