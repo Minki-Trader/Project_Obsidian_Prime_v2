@@ -8,7 +8,7 @@
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage121_decision(121단계 판정): `continue_density_scale_repair_in_stage122`
 - next_stage_or_branch(다음 단계/분기): `122_adapter_research__v41_density_scale_repair_after_dd_guardrail`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `f29009ae21be39be5df56a51b9bd7fd724ceb633`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Effect(효과): Stage121(121단계)은 후속 검토를 닫고, 전체 목표 완료 없이 Stage122(122단계)로 넘긴다.

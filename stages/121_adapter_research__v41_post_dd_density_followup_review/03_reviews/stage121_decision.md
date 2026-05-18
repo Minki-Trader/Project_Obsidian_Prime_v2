@@ -16,7 +16,7 @@ Effect(효과): Stage120은 PF/net(수익 팩터/순손익)을 34D 이상으로 
 - source_stage120_closeout_commit(원천 120단계 종료 커밋): `f33c473f286c340d2e9ce34aa8b63bf94e8ebe85`
 - source_stage120_latest_commit(원천 120단계 최신 커밋): `d825aab76421e0141aeaba5c53dc80d01c51f5d1`
 - external_verification_status(외부 검증 상태): `completed_existing_stage120_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `f29009ae21be39be5df56a51b9bd7fd724ceb633`
 
 ## Next(다음)
 

@@ -1137,6 +1137,6 @@
 
 - run(실행): `run121A_stage121_v41_post_dd_density_followup_review_v1`
 - decision(판정): `continue_density_scale_repair_in_stage122`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `f29009ae21be39be5df56a51b9bd7fd724ceb633`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage120(120단계)의 +1 trade(거래 1건 증가)는 충분하지 않다고 판정하고 Stage122(122단계) density scale repair(밀도 규모 수리)로 넘겼다.
