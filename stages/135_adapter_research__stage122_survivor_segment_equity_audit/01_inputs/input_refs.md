@@ -5,3 +5,8 @@
 - stage133_summary(133단계 요약): `stages/133_adapter_research__stage122_survivor_density_recovery_branch/03_reviews/stage133_survivor_recovery_summary.csv`
 - stage133_segment_kpi(133단계 구간 KPI): `stages/133_adapter_research__stage122_survivor_density_recovery_branch/03_reviews/stage133_segment_kpi_summary.csv`
 - stage133_risk_atr_telemetry(133단계 위험/ATR 원격측정): `stages/133_adapter_research__stage122_survivor_density_recovery_branch/03_reviews/stage133_risk_atr_telemetry.csv`
+- stage133_trade_audit(133단계 거래 감사): `stages/133_adapter_research__stage122_survivor_density_recovery_branch/03_reviews/stage133_trade_audit.csv`
+- validation_report(검증 보고서): `C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_val.htm`
+- oos_report(외부 표본 보고서): `C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_oos.htm`
+
+No new optimization(새 최적화 없음). Effect(효과): 기존 MT5(메타트레이더5) 근거만 감사한다.

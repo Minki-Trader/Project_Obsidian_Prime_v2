@@ -1,0 +1,231 @@
+{
+  "adapter_id": "s133_stage122_control_cd5_h3_risk035",
+  "artifacts": {
+    "concentration_risk_report": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_concentration_risk_report.md",
+    "decision": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_decision.md",
+    "equity_curve_shape_audit": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_equity_curve_shape_audit.md",
+    "long_short_kpi": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_long_short_kpi_summary.csv",
+    "monthly_kpi": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_monthly_kpi_summary.csv",
+    "performance_attribution": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_performance_attribution.md",
+    "report": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_segment_equity_audit_report.md",
+    "risk_atr_behavior_audit": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_risk_atr_behavior_audit.csv",
+    "route_decision": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_route_decision.csv",
+    "segment_stability": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_segment_stability_summary.csv",
+    "session_regime_kpi": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_session_regime_kpi_summary.csv",
+    "summary_json": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_segment_equity_audit_summary.json",
+    "trade_records": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage135_trade_shape_records.csv"
+  },
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "created_at_utc": "2026-05-18T04:29:41Z",
+  "data": {
+    "row_counts": {
+      "concentration": 19,
+      "long_short": 4,
+      "monthly": 16,
+      "risk_atr": 2,
+      "segments": 8,
+      "session_regime": 24,
+      "trades": 442
+    }
+  },
+  "decision": "continue_stage136_trade_count_concentration_repair_candidate_not_final",
+  "decision_reason": "PF/net은 강하지만 validation(검증) PF가 34D(레거시 기준) 정확값보다 아주 조금 낮고, validation late third(검증 후반 3분위) 손익 집중, OOS(외부 표본) drawdown(손실폭) 초과, 거래 수 부족이 남아 Stage136(136단계) 수리로 넘긴다.",
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 4877,
+      "sha256": "165969f45e74f20b3f65ce6a3b06406fb45799116581c8a7f7ccf627fded26f7",
+      "upserted_rows": 14
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10433,
+      "sha256": "08182477ddc9d472a5e4768be56f447bcfcb02c728e8c26f283ce460315e0641",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 958,
+      "sha256": "309f318efccd3db7525f92e2c98dbda18d3607f880cd69710c4b2fd581b7fb9b",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/135_adapter_research__stage122_survivor_segment_equity_audit/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "ea38cf823337dfa8a380f0759cb7e4d3a116ea00c56e7eacbcfece6d25cbacc9",
+      "upserted_rows": 1
+    }
+  },
+  "legacy_34d": {
+    "max_drawdown_percent": 12.909136,
+    "net_profit": 987.6,
+    "profit_factor": 1.583157,
+    "trade_count": 404
+  },
+  "next_stage": {
+    "bounded_question": "Can the survivor candidate raise trade count and reduce validation concentration without damaging PF/net, drawdown, risk/ATR, or OOS behavior?",
+    "packet_id": "stage136_stage122_survivor_trade_count_concentration_repair_v1",
+    "run_id": "run136A_stage136_stage122_survivor_trade_count_concentration_repair_v1",
+    "stage_id": "136_adapter_research__stage122_survivor_trade_count_concentration_repair"
+  },
+  "packet_id": "stage135_stage122_survivor_segment_equity_audit_v1",
+  "report_metrics": {
+    "oos": {
+      "balance_drawdown_maximal_amount": 160.19,
+      "balance_drawdown_maximal_percent": 13.45,
+      "deal_count": 358,
+      "equity_drawdown_maximal_amount": 174.95,
+      "equity_drawdown_maximal_percent": 14.66,
+      "expectancy": 6.16,
+      "gross_loss": -1473.65,
+      "gross_profit": 2575.69,
+      "long_trade_count": 82,
+      "long_win_rate_percent": 62.2,
+      "losing_trade_count": 77,
+      "loss_rate_percent": 43.02,
+      "max_drawdown_amount": 174.95,
+      "max_drawdown_percent": 14.66,
+      "missing_required_metrics": [],
+      "net_profit": 1102.04,
+      "parsed_row_count": 842,
+      "profit_factor": 1.75,
+      "recovery_factor": 6.3,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_oos.htm",
+      "sharpe_ratio": 25.68,
+      "short_trade_count": 97,
+      "short_win_rate_percent": 52.58,
+      "source_encoding": "utf-16",
+      "status": "completed",
+      "trade_count": 179,
+      "win_rate_percent": 56.98,
+      "winning_trade_count": 102
+    },
+    "validation_is": {
+      "balance_drawdown_maximal_amount": 184.18,
+      "balance_drawdown_maximal_percent": 17.75,
+      "deal_count": 526,
+      "equity_drawdown_maximal_amount": 244.97,
+      "equity_drawdown_maximal_percent": 11.85,
+      "expectancy": 5.3,
+      "gross_loss": -2390.6,
+      "gross_profit": 3783.26,
+      "long_trade_count": 108,
+      "long_win_rate_percent": 63.89,
+      "losing_trade_count": 122,
+      "loss_rate_percent": 46.39,
+      "max_drawdown_amount": 244.97,
+      "max_drawdown_percent": 11.85,
+      "missing_required_metrics": [],
+      "net_profit": 1392.66,
+      "parsed_row_count": 1178,
+      "profit_factor": 1.58,
+      "recovery_factor": 5.69,
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_val.htm",
+      "sharpe_ratio": 12.77,
+      "short_trade_count": 155,
+      "short_win_rate_percent": 46.45,
+      "source_encoding": "utf-16",
+      "status": "completed",
+      "trade_count": 263,
+      "win_rate_percent": 53.61,
+      "winning_trade_count": 141
+    }
+  },
+  "risk_flag_count": 9,
+  "run_id": "run135A_stage135_stage122_survivor_segment_equity_audit_v1",
+  "source_reports": {
+    "oos": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_oos.htm",
+    "validation_is": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_val.htm"
+  },
+  "split_summary": {
+    "oos": {
+      "equity_shape": {
+        "end_time": "2026-04-13T17:40:00",
+        "final_net": 1102.0400000000006,
+        "first_trade_equity": 13.66,
+        "longest_non_new_high_trades": 26,
+        "max_closed_trade_drawdown": 160.19000000000005,
+        "max_drawdown_prior_peak": 691.1900000000003,
+        "max_drawdown_trade_index": 127,
+        "max_drawdown_trough": 531.0000000000002,
+        "post_max_dd_net_gain": 571.0400000000004,
+        "recovered_after_max_drawdown": true,
+        "start_time": "2025-10-01T17:35:00"
+      },
+      "gap_to_34d": {
+        "dd_pct_gap_to_34d": 1.750864,
+        "net_gap_to_34d": 114.44,
+        "pf_gap_to_34d": 0.166843,
+        "trade_gap_to_34d": -225.0
+      },
+      "risk_flags": [
+        "drawdown_pct_above_34d",
+        "negative_month_count",
+        "top5_trade_share",
+        "trade_count_below_34d",
+        "trade_count_gap_to_34d"
+      ],
+      "source_kpi": {
+        "cost_stressed_expectancy": "5.856648045",
+        "expectancy": "6.16",
+        "max_drawdown_percent": "14.66",
+        "mfe_capture_ratio": "0.693250521",
+        "net_profit": "1102.04",
+        "profit_factor": "1.75",
+        "same_move_reentry_ratio": "0.05586592179",
+        "trade_count": "179",
+        "trades_per_day": "0.9179487179"
+      },
+      "source_report": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_oos.htm"
+    },
+    "validation_is": {
+      "equity_shape": {
+        "end_time": "2025-09-30T17:50:00",
+        "final_net": 1392.659999999999,
+        "first_trade_equity": -8.75,
+        "longest_non_new_high_trades": 27,
+        "max_closed_trade_drawdown": 184.18,
+        "max_drawdown_prior_peak": 537.5199999999999,
+        "max_drawdown_trade_index": 145,
+        "max_drawdown_trough": 353.33999999999986,
+        "post_max_dd_net_gain": 1039.319999999999,
+        "recovered_after_max_drawdown": true,
+        "start_time": "2025-01-02T16:50:00"
+      },
+      "gap_to_34d": {
+        "dd_pct_gap_to_34d": -1.059136,
+        "net_gap_to_34d": 405.06,
+        "pf_gap_to_34d": -0.003157,
+        "trade_gap_to_34d": -141.0
+      },
+      "risk_flags": [
+        "largest_third_net_share",
+        "negative_month_count",
+        "pf_below_34d_exact",
+        "segment_quality_early",
+        "segment_quality_late",
+        "segment_quality_mid",
+        "trade_count_below_34d",
+        "trade_count_gap_to_34d"
+      ],
+      "source_kpi": {
+        "cost_stressed_expectancy": "4.995285171",
+        "expectancy": "5.3",
+        "max_drawdown_percent": "11.85",
+        "mfe_capture_ratio": "0.6829799182",
+        "net_profit": "1392.66",
+        "profit_factor": "1.58",
+        "same_move_reentry_ratio": "0.07224334601",
+        "trade_count": "263",
+        "trades_per_day": "1.43715847"
+      },
+      "source_report": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/133_adapter_research__stage122_survivor_density_recovery_branch/02_runs/run133A/mt5/reports/Project_Obsidian_Prime_v2_run133A_stage133_stage122_survivor_density_recovery_branch_v1_s133_stage122_control_cd5_h3_risk035_rt_val.htm"
+    }
+  },
+  "stage_id": "135_adapter_research__stage122_survivor_segment_equity_audit",
+  "target_surface": "legacy_34d_kpi_lesson_only_no_legacy_inheritance"
+}

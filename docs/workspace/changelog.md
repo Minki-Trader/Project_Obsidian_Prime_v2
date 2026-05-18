@@ -1236,3 +1236,8 @@
 - action(행동): closed(종료) `134_adapter_research__stage122_survivor_followup_review` with decision(판정) `proceed_to_stage135_survivor_segment_equity_audit_candidate_not_final`.
 - effect(효과): survivor candidate(생존 후보)를 Stage135(135단계) segment/equity audit(구간/자금곡선 감사)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T04:25:48Z Stage135 segment/equity audit closeout(135단계 구간/자금곡선 감사 종료)
+
+- action(행동): closed(종료) `135_adapter_research__stage122_survivor_segment_equity_audit` with decision(판정) `continue_stage136_trade_count_concentration_repair_candidate_not_final`.
+- effect(효과): survivor candidate(생존 후보)는 보존하고, trade count/concentration(거래 수/집중) 수리를 Stage136(136단계)로 분리했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
