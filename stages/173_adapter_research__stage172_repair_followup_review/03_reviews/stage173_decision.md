@@ -11,7 +11,7 @@
 - report(보고서): `stages/173_adapter_research__stage172_repair_followup_review/03_reviews/stage173_stage172_repair_followup_review.md`
 - route_matrix(경로 행렬): `stages/173_adapter_research__stage172_repair_followup_review/03_reviews/stage173_route_matrix.csv`
 - lesson_matrix(교훈 행렬): `stages/173_adapter_research__stage172_repair_followup_review/03_reviews/stage173_stage172_lesson_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `20fc43e17ab69d1edb93a29266558999750dc286`
 - next_stage_or_branch(다음 단계 또는 분기): `174_adapter_research__wide_gate_mid_segment_recovery_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
