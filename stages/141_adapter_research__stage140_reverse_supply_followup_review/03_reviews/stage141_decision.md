@@ -14,7 +14,7 @@ Stage141(141단계)는 Stage140(140단계) MT5(runtime, 런타임) 근거를 rev
 - source_stage140_risk_atr(원천 140단계 위험/ATR): `stages/140_adapter_research__reverse_supply_late_concentration_repair/03_reviews/stage140_risk_atr_telemetry.csv`
 - best_adapter(최선 어댑터): `s140_reverse_control_h3_cd5_risk035`
 - external_verification_status(외부 검증 상태): `completed_existing_stage140_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `7445c3917e5c1e7a29f210309e4eb406cd3b35e2`
 
 ## Next(다음)
 
