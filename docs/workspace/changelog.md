@@ -1196,3 +1196,13 @@
 - pushed_commit_hash(푸시된 커밋 해시): `8f721f71a71d8ac7f990c4412ca47cef2a23c3da`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): v41 surface(브이41 표면)가 safe-but-small(안전하지만 작음) 또는 dense-but-weak(촘촘하지만 약함)으로 갈라진 실패를 기록하고 Stage130 새 v2 모델 분기로 넘겼다.
+## 2026-05-18T03:09:04Z Stage130 new v2 model branch closeout(130단계 새 v2 모델 분기 종료)
+
+- action(행동): closed(종료) `130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure` with decision(판정) `continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap`.
+- effect(효과): v42-v45 v2 source families(v42-v45 v2 원천 계열) evidence(근거)를 보존하고 Stage131(131단계)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T03:22:00Z Stage130 new v2 model branch closeout(130단계 새 v2 모델 분기 종료)
+
+- action(행동): closed(종료) `130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure` with decision(판정) `continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap`.
+- effect(효과): v42-v45 v2 source families(v42-v45 v2 원천 계열) evidence(근거)를 보존하고 Stage131(131단계)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

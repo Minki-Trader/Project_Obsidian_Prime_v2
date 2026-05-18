@@ -1,0 +1,34 @@
+{
+  "changed_variables": [
+    "run50BN source family v42",
+    "run50BN source family v43",
+    "run50BN source family v44",
+    "run50BN source family v45"
+  ],
+  "comparison_baseline": "Stage129 failure memory and legacy 34D KPI target as lesson-only measurement surface.",
+  "control_variables": [
+    "US100",
+    "M5",
+    "split_v1",
+    "Tier B disabled at runtime",
+    "wide ATR bracket",
+    "3% model-controlled risk cap",
+    "ONNX deferred"
+  ],
+  "decision_use": "route the branch to Stage131 confirmation or repair; do not claim deployment or final package completion.",
+  "failure_criteria": [
+    "34D KPI gap remains",
+    "OOS weak or damaged",
+    "risk/ATR telemetry missing",
+    "segment instability remains"
+  ],
+  "hypothesis": "Unused run50BN v42-v45 v2 source families may produce a better BaselineAdapter branch after v41 quality-density tradeoff failure.",
+  "status": "completed",
+  "stop_condition": "four bounded source-family variants only",
+  "success_criteria": [
+    "validation PF/net reaches 34D target",
+    "OOS remains positive and credible",
+    "ATR/risk telemetry present",
+    "no severe segment flags"
+  ]
+}

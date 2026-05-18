@@ -1,8 +1,8 @@
-﻿current_run_id: run130A_stage130_new_v2_model_branch_after_v41_tradeoff_failure_v1
+﻿current_run_id: run131A_stage131_new_v2_model_branch_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+active_stage: 131_adapter_research__new_v2_model_branch_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,12 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage129(129단계) closed(종료) as `open_new_v2_model_branch_in_stage130_after_v41_quality_density_tradeoff_failure` and Stage130(130단계) `130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure` is open_planned(열림 계획). Effect(효과): current v41 surface(현재 브이41 표면) 수리를 멈추고 새 v2-native model branch(브이투 고유 모델 분기)를 연다.
+  Stage130(130단계) closed(종료) as `continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap` and Stage131(131단계) `131_adapter_research__new_v2_model_branch_followup_review` is active_planned(활성 계획). Effect(효과): 새 v2 source branch(브이투 원천 분기)의 best candidate(최선 후보)를 34D KPI(34D 핵심 성과 지표) 차이 축소 작업으로 넘긴다.
 - >-
-  Stage129 result(129단계 결과)는 `stages/129_adapter_research__v41_quality_density_followup_review/03_reviews/stage129_quality_density_followup_review.md`와 `stages/129_adapter_research__v41_quality_density_followup_review/03_reviews/stage129_stage128_34d_gap_summary.csv`에 기록했다. Effect(효과): safe-but-small(안전하지만 작음)과 dense-but-weak(촘촘하지만 약함) 실패를 다음 모델 분기 입력으로 쓴다.
+  Stage130 evidence(130단계 근거)는 `stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_new_v2_model_branch_report.md`, `stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_new_v2_model_branch_summary.csv`, `stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_segment_kpi_summary.csv`에 있다. Effect(효과): KPI(핵심 성과 지표), segment(구간), risk/ATR telemetry(위험/ATR 원격측정)를 한 묶음으로 추적한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
+
 
 stage96_v41_oos_early_entry_gate_followup_review:
   packet_id: stage96_v41_oos_early_entry_gate_followup_review_v1
@@ -5925,4 +5926,48 @@ stage129_v41_quality_density_followup_review:
   packet_summary_path: docs/agent_control/packets/stage129_v41_quality_density_followup_review_v1/aggregate_summary.json
   external_verification_status: completed_existing_stage128_mt5_runtime_evidence_reviewed
   pushed_commit_hash: 8f721f71a71d8ac7f990c4412ca47cef2a23c3da
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+  packet_id: stage130_new_v2_model_branch_after_v41_tradeoff_failure_v1
+  stage_id: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+  status: closed_bounded_new_v2_model_branch
+  current_run_id: run130A_stage130_new_v2_model_branch_after_v41_tradeoff_failure_v1
+  source_stage: 129_adapter_research__v41_quality_density_followup_review
+  decision: continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap
+  report_path: stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_new_v2_model_branch_report.md
+  decision_path: stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_decision.md
+  next_action: run131A_stage131_new_v2_model_branch_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+  packet_id: stage131_new_v2_model_branch_followup_review_v1
+  stage_id: 131_adapter_research__new_v2_model_branch_followup_review
+  status: active_planned_from_stage130
+  current_run_id: run131A_stage131_new_v2_model_branch_followup_review_v1
+  source_stage: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+  source_decision: continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap
+  next_action: run_stage131_bounded_followup
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage130_new_v2_model_branch_after_v41_tradeoff_failure:
+  packet_id: stage130_new_v2_model_branch_after_v41_tradeoff_failure_v1
+  stage_id: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+  status: closed_bounded_new_v2_model_branch
+  current_run_id: run130A_stage130_new_v2_model_branch_after_v41_tradeoff_failure_v1
+  source_stage: 129_adapter_research__v41_quality_density_followup_review
+  decision: continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap
+  report_path: stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_new_v2_model_branch_report.md
+  decision_path: stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_decision.md
+  next_action: run131A_stage131_new_v2_model_branch_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage131_new_v2_model_branch_followup_review:
+  packet_id: stage131_new_v2_model_branch_followup_review_v1
+  stage_id: 131_adapter_research__new_v2_model_branch_followup_review
+  status: active_planned_from_stage130
+  current_run_id: run131A_stage131_new_v2_model_branch_followup_review_v1
+  source_stage: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+  source_decision: continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap
+  next_action: run_stage131_bounded_followup
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
