@@ -1,8 +1,8 @@
-﻿current_run_id: run197A_stage197_stage196_bctl_dd_midpf_followup_review_v1
+﻿current_run_id: run198A_stage198_bctl_adverse_excursion_dd_guard_repair_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 197_adapter_research__stage196_bctl_dd_midpf_followup_review
+active_stage: 198_adapter_research__bctl_adverse_excursion_dd_guard_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage196(196단계) closed(종료) as `open_stage197_bounded_followup_due_to_bctl_dd_midpf_tradeoff_candidate_not_final` and Stage197(197단계) `197_adapter_research__stage196_bctl_dd_midpf_followup_review` is open_planned(개방 계획). Effect(효과): bctl DD/mid PF(bctl 낙폭/중반 수익요인) 상충 결과를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage197(197단계) closed(종료) as `open_stage198_bctl_adverse_excursion_dd_guard_repair_candidate_not_final` and Stage198(198단계) `198_adapter_research__bctl_adverse_excursion_dd_guard_repair` is open_planned(개방 계획). Effect(효과): Stage196(196단계)의 risk-only compression(위험만 압축) 한계를 adverse excursion DD guard(불리한 움직임 낙폭 방어) 수리로 넘긴다.
 - >-
-  Stage196 evidence(196단계 근거)는 `stages/196_adapter_research__bctl_dd_compression_midpf_guard/03_reviews/stage196_bctl_dd_midpf_report.md`, `stages/196_adapter_research__bctl_dd_compression_midpf_guard/03_reviews/stage196_bctl_dd_midpf_summary.csv`, `stages/196_adapter_research__bctl_dd_compression_midpf_guard/03_reviews/stage196_quality_matrix.csv`, `stages/196_adapter_research__bctl_dd_compression_midpf_guard/03_reviews/stage196_balance_curve_audit.csv`, `stages/196_adapter_research__bctl_dd_compression_midpf_guard/03_reviews/stage196_risk_atr_telemetry.csv`에 있다. Effect(효과): net/PF/DD(순손익/수익요인/낙폭), segment(구간), concentration(집중도), ATR/risk telemetry(ATR/위험 기록)를 같이 본다.
+  Stage197 evidence(197단계 근거)는 `stages/197_adapter_research__stage196_bctl_dd_midpf_followup_review/03_reviews/stage197_followup_review.md`, `stages/197_adapter_research__stage196_bctl_dd_midpf_followup_review/03_reviews/stage197_bctl_dd_midpf_tradeoff_matrix.csv`, `stages/197_adapter_research__stage196_bctl_dd_midpf_followup_review/03_reviews/stage197_performance_attribution.csv`, `stages/197_adapter_research__stage196_bctl_dd_midpf_followup_review/03_reviews/stage197_route_matrix.csv`에 있다. Effect(효과): `s196_bctl_cd8_r0325`를 최선 단서로 남기되 DD/mid PF(낙폭/중반 수익요인) 실패를 최종 완료로 오해하지 않는다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_bctl_dd_compression_midpf_guard`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_bctl_adverse_excursion_dd_guard`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7305,4 +7305,20 @@ stage196_bctl_dd_compression_midpf_guard:
   external_verification_status: completed
   pushed_commit_hash: 24a078cce6907d56c6f8b7fca5d2ca848a68240b
   next_action: run197A_stage197_stage196_bctl_dd_midpf_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage197_stage196_bctl_dd_midpf_followup_review:
+  packet_id: stage197_stage196_bctl_dd_midpf_followup_review_v1
+  stage_id: 197_adapter_research__stage196_bctl_dd_midpf_followup_review
+  status: closed_open_stage198_bctl_adverse_excursion_dd_guard_repair_candidate_not_final
+  current_run_id: run197A_stage197_stage196_bctl_dd_midpf_followup_review_v1
+  source_stage: 196_adapter_research__bctl_dd_compression_midpf_guard
+  source_run: run196A_stage196_bctl_dd_compression_midpf_guard_v1
+  decision: open_stage198_bctl_adverse_excursion_dd_guard_repair_candidate_not_final
+  report_path: stages/197_adapter_research__stage196_bctl_dd_midpf_followup_review/03_reviews/stage197_followup_review.md
+  decision_path: stages/197_adapter_research__stage196_bctl_dd_midpf_followup_review/03_reviews/stage197_decision.md
+  tradeoff_matrix_path: stages/197_adapter_research__stage196_bctl_dd_midpf_followup_review/03_reviews/stage197_bctl_dd_midpf_tradeoff_matrix.csv
+  external_verification_status: review_only_source_stage196_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run198A_stage198_bctl_adverse_excursion_dd_guard_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

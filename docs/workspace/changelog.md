@@ -1628,3 +1628,8 @@
 - action(행동): closed(종료) `196_adapter_research__bctl_dd_compression_midpf_guard` with decision(판정) `open_stage197_bounded_followup_due_to_bctl_dd_midpf_tradeoff_candidate_not_final`.
 - effect(효과): risk-only increase(위험만 상향)를 피하고 bctl/risk/cooldown(bctl/위험/대기) 변형을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage197(197단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T23:34:14Z Stage197 Stage196 bctl DD mid PF follow-up review closeout(197단계 196단계 bctl 낙폭 중반 수익요인 후속 검토 종료)
+
+- action(행동): closed(종료) `197_adapter_research__stage196_bctl_dd_midpf_followup_review` with decision(판정) `open_stage198_bctl_adverse_excursion_dd_guard_repair_candidate_not_final`.
+- effect(효과): Stage196(196단계)의 최선 상충안과 실패 원인을 분리해 Stage198(198단계) adverse excursion DD guard(불리한 움직임 낙폭 방어)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
