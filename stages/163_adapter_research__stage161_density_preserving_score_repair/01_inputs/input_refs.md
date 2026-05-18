@@ -4,6 +4,7 @@
 - stage162_review(162단계 검토): `stages/162_adapter_research__stage161_score_margin_followup_review/03_reviews/stage162_stage161_score_margin_followup_review.md`
 - stage162_summary(162단계 요약): `stages/162_adapter_research__stage161_score_margin_followup_review/03_reviews/stage162_score_margin_followup_summary.csv`
 - stage162_segment_damage(162단계 구간 손상): `stages/162_adapter_research__stage161_score_margin_followup_review/03_reviews/stage162_segment_damage_summary.csv`
+- source_stage162_closeout_commit(원천 162단계 종료 커밋): `b6702e6ed96aab91eadddfbd0943e2b6c71f3a2a`
 - stage161_summary(161단계 요약): `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_score_margin_or_side_filter_repair_summary.csv`
 - stage161_probability_binding(161단계 확률 작동): `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_probability_binding_summary.csv`
 - source_stage161_closeout_commit(원천 161단계 종료 커밋): `b9f95b07366d9135d90df5a103070d98f1a0f1fd`
