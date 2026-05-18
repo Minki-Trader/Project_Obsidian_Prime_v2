@@ -17,7 +17,7 @@
 - monthly_kpi(월별 핵심 성과 지표): `stages/198_adapter_research__bctl_adverse_excursion_dd_guard_repair/03_reviews/stage198_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/198_adapter_research__bctl_adverse_excursion_dd_guard_repair/03_reviews/stage198_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/198_adapter_research__bctl_adverse_excursion_dd_guard_repair/03_reviews/stage198_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `227466ca040fa074eec46a42afe3bc439afb2fda`
 - next_stage_or_branch(다음 단계 또는 분기): `199_adapter_research__stage198_adverse_excursion_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
