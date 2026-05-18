@@ -1,8 +1,8 @@
-﻿current_run_id: run143A_stage143_stage142_route_coverage_followup_review_v1
+﻿current_run_id: run144A_stage144_route_shortgate_quality_repair_after_stage142_damage_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 143_adapter_research__stage142_route_coverage_followup_review
+active_stage: 144_adapter_research__route_shortgate_quality_repair_after_stage142_damage
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage142(142단계) closed(종료) as `continue_stage143_route_coverage_repair_after_damage_or_no_gain_candidate_not_final` and Stage143(143단계) `143_adapter_research__stage142_route_coverage_followup_review` is open_planned(열린 계획). Effect(효과): route coverage supply(경로 커버리지 공급) 결과를 보존하고 후속 검토로 넘긴다.
+  Stage143(143단계) closed(종료) as `open_stage144_route_shortgate_quality_repair_after_stage142_damage_candidate_not_final` and Stage144(144단계) `144_adapter_research__route_shortgate_quality_repair_after_stage142_damage` is active_planned(활성 계획). Effect(효과): shortgate(숏게이트) 거래 증가 단서를 보존하고 품질 수리 질문으로 넘어간다.
 - >-
-  Stage142 evidence(142단계 근거)는 `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_route_coverage_supply_report.md`, `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_route_coverage_supply_summary.csv`, `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_segment_kpi_summary.csv`, `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_risk_atr_telemetry.csv`에 있다. Effect(효과): 거래 수 증가와 KPI 손상을 분리해서 판정한다.
+  Stage143 evidence(143단계 근거)는 `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_stage142_route_coverage_followup_review.md`, `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_route_coverage_tradeoff_summary.csv`, `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_stage142_34d_comparison.csv`, `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_route_decision.csv`에 있다. Effect(효과): no-gate damage(무게이트 손상)와 shortgate salvage(숏게이트 수리 가능성)를 분리한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6221,12 +6221,29 @@ stage142_route_coverage_supply_branch_after_reverse_exhaustion:
   pushed_commit_hash: 0f53be36d3bb88fc97ec44cfeaa3e600e7b9e414
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
 
+
 stage143_stage142_route_coverage_followup_review:
   packet_id: stage143_stage142_route_coverage_followup_review_v1
   stage_id: 143_adapter_research__stage142_route_coverage_followup_review
-  status: open_planned_from_stage142
+  status: closed_review_only
   current_run_id: run143A_stage143_stage142_route_coverage_followup_review_v1
   source_stage: 142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion
-  source_decision: continue_stage143_route_coverage_repair_after_damage_or_no_gain_candidate_not_final
-  next_action: run143A_stage143_stage142_route_coverage_followup_review_v1
+  source_stage142_closeout_commit: 0f53be36d3bb88fc97ec44cfeaa3e600e7b9e414
+  source_stage142_hash_record_commit: 7813b4d26006336dcf1709949ce78d47462b3c47
+  source_stage141_hash_record_commit: eb72afcf6f3941bfa9aa84a6de438ba527fd60f8
+  decision: open_stage144_route_shortgate_quality_repair_after_stage142_damage_candidate_not_final
+  report_path: stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_stage142_route_coverage_followup_review.md
+  decision_path: stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_decision.md
+  next_action: run144A_stage144_route_shortgate_quality_repair_after_stage142_damage_v1
+  pushed_commit_hash: pending_until_push
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage144_route_shortgate_quality_repair_after_stage142_damage:
+  packet_id: stage144_route_shortgate_quality_repair_after_stage142_damage_v1
+  stage_id: 144_adapter_research__route_shortgate_quality_repair_after_stage142_damage
+  status: active_planned_from_stage143
+  current_run_id: run144A_stage144_route_shortgate_quality_repair_after_stage142_damage_v1
+  source_stage: 143_adapter_research__stage142_route_coverage_followup_review
+  source_decision: open_stage144_route_shortgate_quality_repair_after_stage142_damage_candidate_not_final
+  next_action: run_stage144_route_shortgate_quality_repair
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

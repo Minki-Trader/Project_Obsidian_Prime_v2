@@ -1,8 +1,7 @@
 ﻿# Stage143 Review Index(143단계 검토 색인)
 
-- status(상태): `open_planned`
-- source_stage(원천 단계): `142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion`
-- planned_packet(계획 작업 묶음): `stage143_stage142_route_coverage_followup_review_v1`
-- planned_run(계획 실행): `run143A_stage143_stage142_route_coverage_followup_review_v1`
-
-Effect(효과): Stage143(143단계)는 새 MT5 실행이 아니라 Stage142(142단계) 근거 판독에서 시작한다.
+- review(검토): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_stage142_route_coverage_followup_review.md`
+- tradeoff_summary(트레이드오프 요약): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_route_coverage_tradeoff_summary.csv`
+- comparison(비교): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_stage142_34d_comparison.csv`
+- route_decision(경로 판정): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_route_decision.csv`
+- decision(판정): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_decision.md`

@@ -1,0 +1,8 @@
+﻿# Stage144 Input References(144단계 입력 참조)
+
+- stage143_decision(143단계 판정): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_decision.md`
+- stage143_review(143단계 검토): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_stage142_route_coverage_followup_review.md`
+- stage143_tradeoff_summary(143단계 트레이드오프 요약): `stages/143_adapter_research__stage142_route_coverage_followup_review/03_reviews/stage143_route_coverage_tradeoff_summary.csv`
+- stage142_summary(142단계 요약): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_route_coverage_supply_summary.csv`
+- stage142_segment_kpi(142단계 구간 KPI): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_segment_kpi_summary.csv`
+- stage142_risk_atr_telemetry(142단계 위험/ATR 원격측정): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_risk_atr_telemetry.csv`
