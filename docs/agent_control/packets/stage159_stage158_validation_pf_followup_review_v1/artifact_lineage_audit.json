@@ -1,0 +1,55 @@
+{
+  "artifact_paths": [
+    "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage159_stage158_validation_pf_followup_review.md",
+    "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage159_threshold_binding_summary.csv",
+    "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage159_failure_memory.csv",
+    "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage159_route_decision.csv",
+    "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage159_decision.md",
+    "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage159_followup_summary.json"
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5305,
+      "sha256": "5ad99262a6dc64a2849bf79525775ff32b7ca0d683c4b79f840416eedee93940",
+      "upserted_rows": 8
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10637,
+      "sha256": "f77f3c11a02fefbbf825bbf06749c1c5fb41173b2b3fd47ab5629c3d8371b6c9",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 982,
+      "sha256": "f7d63603682b2afcdaa37d55cadea9e2a1de38f5d12a5b7c3466d28906bccaa6",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "bf8fcd6be39fcb3720c3a639f8542dd795a3b93de2fe6c4d593bd80cf8250b13",
+      "upserted_rows": 1
+    }
+  },
+  "producer": "stage_pipelines/stage159/stage158_validation_pf_followup_review.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/159_adapter_research__stage158_validation_pf_followup_review/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_validation_pf_margin_summary.csv",
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_segment_kpi_summary.csv",
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_gate_feature_summary.csv",
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_trade_audit.csv",
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_decision.md"
+  ],
+  "status": "completed"
+}

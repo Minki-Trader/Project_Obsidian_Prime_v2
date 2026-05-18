@@ -1384,3 +1384,8 @@
 - action(행동): closed(종료) `158_adapter_research__stage156_validation_pf_margin_repair` with decision(판정) `continue_stage159_stage158_followup_review_due_to_validation_pf_or_oos_damage_candidate_not_final`.
 - effect(효과): Stage156(156단계) DD(낙폭) 압축 후보의 validation PF(검증 수익요인) 수리 결과를 Stage159(159단계) review(검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T12:35:04Z Stage159 Stage158 validation PF follow-up review closeout(159단계 158단계 검증 수익요인 후속 검토 종료)
+
+- action(행동): closed(종료) `159_adapter_research__stage158_validation_pf_followup_review` with decision(판정) `open_stage160_stage158_threshold_binding_audit_candidate_not_final`.
+- effect(효과): threshold(문턱값) 조정 무변화 문제를 Stage160(160단계) threshold binding audit(문턱값 작동 감사)로 분리했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

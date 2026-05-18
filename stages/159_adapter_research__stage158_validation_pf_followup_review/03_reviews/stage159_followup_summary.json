@@ -1,0 +1,126 @@
+{
+  "all_threshold_variants_non_binding": true,
+  "decision": "open_stage160_stage158_threshold_binding_audit_candidate_not_final",
+  "failure_memory": [
+    {
+      "adapter_id": "s158_valpf_lng53_risk0300_h3_cd5_sht54_lng53",
+      "failure_label": "base_stage158_candidate",
+      "next_use": "threshold_binding_audit_input",
+      "overall_goal_complete": false,
+      "reason": "validation_pf_still_below_34d_and_threshold_variants_have_zero_or_near_zero_kpi_delta"
+    },
+    {
+      "adapter_id": "s158_valpf_lng53_risk0325_h3_cd5_sht54_lng53",
+      "failure_label": "threshold_non_binding_or_not_material",
+      "next_use": "threshold_binding_audit_input",
+      "overall_goal_complete": false,
+      "reason": "validation_pf_still_below_34d_and_threshold_variants_have_zero_or_near_zero_kpi_delta"
+    },
+    {
+      "adapter_id": "s158_valpf_sht55_lng53_risk0300_h3_cd5_sht55_lng53",
+      "failure_label": "threshold_non_binding_or_not_material",
+      "next_use": "threshold_binding_audit_input",
+      "overall_goal_complete": false,
+      "reason": "validation_pf_still_below_34d_and_threshold_variants_have_zero_or_near_zero_kpi_delta"
+    },
+    {
+      "adapter_id": "s158_valpf_sht55_risk0300_h3_cd5_sht55_lng52",
+      "failure_label": "threshold_non_binding_or_not_material",
+      "next_use": "threshold_binding_audit_input",
+      "overall_goal_complete": false,
+      "reason": "validation_pf_still_below_34d_and_threshold_variants_have_zero_or_near_zero_kpi_delta"
+    }
+  ],
+  "kpi_delta_rows": [
+    {
+      "adapter_id": "s158_valpf_lng53_risk0300_h3_cd5_sht54_lng53",
+      "oos_dd_delta_vs_base": 0.0,
+      "oos_dd_percent": 11.92,
+      "oos_gate_blocked_ratio": 0.02017405063,
+      "oos_mid_pf": 1.659175838,
+      "oos_mid_pf_delta_vs_base": 0.0,
+      "oos_net": 1032.34,
+      "oos_net_delta_vs_base": 0.0,
+      "oos_pf": 1.85,
+      "oos_pf_delta_vs_base": 0.0,
+      "overall_goal_complete": false,
+      "stage159_label": "base_stage158_candidate",
+      "validation_gate_blocked_ratio": 0.01950426656,
+      "validation_net": 1037.79,
+      "validation_pf": 1.55,
+      "validation_pf_delta_vs_base": 0.0
+    },
+    {
+      "adapter_id": "s158_valpf_lng53_risk0325_h3_cd5_sht54_lng53",
+      "oos_dd_delta_vs_base": 0.9199999999999999,
+      "oos_dd_percent": 12.84,
+      "oos_gate_blocked_ratio": 0.02017405063,
+      "oos_mid_pf": 1.66109081,
+      "oos_mid_pf_delta_vs_base": 0.0019149720000000148,
+      "oos_net": 1164.82,
+      "oos_net_delta_vs_base": 132.48000000000002,
+      "oos_pf": 1.84,
+      "oos_pf_delta_vs_base": -0.010000000000000009,
+      "overall_goal_complete": false,
+      "stage159_label": "threshold_non_binding_or_not_material",
+      "validation_gate_blocked_ratio": 0.01950426656,
+      "validation_net": 1179.05,
+      "validation_pf": 1.54,
+      "validation_pf_delta_vs_base": -0.010000000000000009
+    },
+    {
+      "adapter_id": "s158_valpf_sht55_lng53_risk0300_h3_cd5_sht55_lng53",
+      "oos_dd_delta_vs_base": 0.0,
+      "oos_dd_percent": 11.92,
+      "oos_gate_blocked_ratio": 0.02017405063,
+      "oos_mid_pf": 1.659175838,
+      "oos_mid_pf_delta_vs_base": 0.0,
+      "oos_net": 1032.34,
+      "oos_net_delta_vs_base": 0.0,
+      "oos_pf": 1.85,
+      "oos_pf_delta_vs_base": 0.0,
+      "overall_goal_complete": false,
+      "stage159_label": "threshold_non_binding_or_not_material",
+      "validation_gate_blocked_ratio": 0.01950426656,
+      "validation_net": 1037.79,
+      "validation_pf": 1.55,
+      "validation_pf_delta_vs_base": 0.0
+    },
+    {
+      "adapter_id": "s158_valpf_sht55_risk0300_h3_cd5_sht55_lng52",
+      "oos_dd_delta_vs_base": 0.0,
+      "oos_dd_percent": 11.92,
+      "oos_gate_blocked_ratio": 0.02017405063,
+      "oos_mid_pf": 1.659175838,
+      "oos_mid_pf_delta_vs_base": 0.0,
+      "oos_net": 1032.34,
+      "oos_net_delta_vs_base": 0.0,
+      "oos_pf": 1.85,
+      "oos_pf_delta_vs_base": 0.0,
+      "overall_goal_complete": false,
+      "stage159_label": "threshold_non_binding_or_not_material",
+      "validation_gate_blocked_ratio": 0.01950426656,
+      "validation_net": 1037.79,
+      "validation_pf": 1.55,
+      "validation_pf_delta_vs_base": 0.0
+    }
+  ],
+  "legacy_34d": {
+    "max_drawdown_percent": 12.909136,
+    "net_profit": 987.6,
+    "profit_factor": 1.583157,
+    "trade_count": 404
+  },
+  "overall_goal_complete": false,
+  "route_decision": [
+    {
+      "decision": "open_stage160_stage158_threshold_binding_audit_candidate_not_final",
+      "do_not_repeat": "do_not_keep_raising_thresholds_without_proving_thresholds_bind",
+      "next_axis": "audit_threshold_binding_decision_score_distribution_and_runtime_handoff_before_more_tuning",
+      "next_stage": "160_adapter_research__stage158_threshold_binding_audit",
+      "overall_goal_complete": false,
+      "primary_input": "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_validation_pf_margin_summary.csv",
+      "reason": "stage158_threshold_variants_did_not_materially_change_trade_count_or_kpi_and_validation_pf_remains_below_34d"
+    }
+  ]
+}
