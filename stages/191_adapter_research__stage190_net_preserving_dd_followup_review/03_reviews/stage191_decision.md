@@ -12,7 +12,7 @@
 - tradeoff_matrix(상충 행렬): `stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_net_dd_tradeoff_matrix.csv`
 - attribution(성과 귀속): `stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_performance_attribution.csv`
 - route_matrix(경로 행렬): `stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `6bb6b3e5cc0a6192ab985bd745da938ffad6d04d`
 - next_stage_or_branch(다음 단계 또는 분기): `192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
