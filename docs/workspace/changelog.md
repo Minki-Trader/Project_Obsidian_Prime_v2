@@ -1130,6 +1130,6 @@
 
 - run(실행): `run120A_stage120_v41_post_dd_density_expansion_repair_v1`
 - decision(판정): `continue_post_dd_density_followup_review_in_stage121_with_density_gain`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `f33c473f286c340d2e9ce34aa8b63bf94e8ebe85`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): risk cap 0.035(위험 상한 3.5%) DD guardrail(손실률 가드레일)을 유지한 채 threshold/cooldown(임계값/대기시간)을 좁게 풀어 density(밀도) 확장 가능성을 측정하고 Stage121(121단계) 후속 검토로 넘겼다.
