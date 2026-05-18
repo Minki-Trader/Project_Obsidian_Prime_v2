@@ -1,0 +1,75 @@
+{
+  "decision": "open_stage165_side_context_oos_early_repair_candidate_not_final",
+  "failure_memory": [
+    {
+      "adapter_id": "s163_longdense_risk0300_h3_cd5_sht58_lng52",
+      "failure_label": "oos_pf_below_34d;oos_early_damage",
+      "next_use": "Stage165 side/context OOS early repair input",
+      "overall_goal_complete": false,
+      "reason": "Stage164 found Stage163 did not satisfy full validation/OOS PF, DD, and OOS early requirements."
+    },
+    {
+      "adapter_id": "s163_longdense_risk0400_h3_cd5_sht58_lng52",
+      "failure_label": "oos_pf_below_34d;oos_dd_above_34d;oos_early_damage",
+      "next_use": "Stage165 side/context OOS early repair input",
+      "overall_goal_complete": false,
+      "reason": "Stage164 found Stage163 did not satisfy full validation/OOS PF, DD, and OOS early requirements."
+    },
+    {
+      "adapter_id": "s163_shortgate_risk0250_h3_cd5_sht54_lng52",
+      "failure_label": "validation_pf_below_34d",
+      "next_use": "Stage165 side/context OOS early repair input",
+      "overall_goal_complete": false,
+      "reason": "Stage164 found Stage163 did not satisfy full validation/OOS PF, DD, and OOS early requirements."
+    }
+  ],
+  "overall_goal_complete": false,
+  "route_decision": [
+    {
+      "decision": "open_stage165_side_context_oos_early_repair_candidate_not_final",
+      "do_not_repeat": "do_not_scale_risk_or_block_all_shorts_as_standalone_solution",
+      "next_axis": "side_context_router_with_oos_early_guard_and_validation_pf_repair",
+      "next_stage": "165_adapter_research__side_context_oos_early_repair",
+      "overall_goal_complete": false,
+      "reason": "Stage163 split the failure: long-dense improves validation PF but breaks OOS; low-risk shortgate protects OOS but fails validation PF."
+    }
+  ],
+  "rows": [
+    {
+      "adapter_id": "s163_longdense_risk0300_h3_cd5_sht58_lng52",
+      "candidate_quality_pass": false,
+      "oos_dd_percent": 11.86,
+      "oos_early_net": -15.58,
+      "oos_early_pf": 0.8552985976,
+      "oos_net": 100.38,
+      "oos_pf": 1.32,
+      "quality_flags": "oos_pf_below_34d;oos_early_damage",
+      "validation_net": 278.17,
+      "validation_pf": 1.71
+    },
+    {
+      "adapter_id": "s163_longdense_risk0400_h3_cd5_sht58_lng52",
+      "candidate_quality_pass": false,
+      "oos_dd_percent": 15.49,
+      "oos_early_net": -19.12,
+      "oos_early_pf": 0.8659468555,
+      "oos_net": 140.65,
+      "oos_pf": 1.33,
+      "quality_flags": "oos_pf_below_34d;oos_dd_above_34d;oos_early_damage",
+      "validation_net": 389.09,
+      "validation_pf": 1.68
+    },
+    {
+      "adapter_id": "s163_shortgate_risk0250_h3_cd5_sht54_lng52",
+      "candidate_quality_pass": false,
+      "oos_dd_percent": 11.18,
+      "oos_early_net": 159.76,
+      "oos_early_pf": 1.739355794,
+      "oos_net": 483.38,
+      "oos_pf": 1.61,
+      "quality_flags": "validation_pf_below_34d",
+      "validation_net": 691.57,
+      "validation_pf": 1.53
+    }
+  ]
+}
