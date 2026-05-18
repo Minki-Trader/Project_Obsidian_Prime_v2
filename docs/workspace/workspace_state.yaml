@@ -1,8 +1,8 @@
-﻿current_run_id: run191A_stage191_stage190_net_preserving_dd_followup_review_v1
+﻿current_run_id: run192A_stage192_tp475_midsegment_net_recovery_without_dd_regression_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 191_adapter_research__stage190_net_preserving_dd_followup_review
+active_stage: 192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage190(190단계) closed(종료) as `open_stage191_bounded_followup_due_to_net_preserving_dd_tradeoff_candidate_not_final` and Stage191(191단계) `191_adapter_research__stage190_net_preserving_dd_followup_review` is open_planned(개방 계획). Effect(효과): net-preserving DD repair(순손익 보존 낙폭 수정)의 KPI(핵심 성과 지표)를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage191(191단계) closed(종료) as `open_stage192_tp475_midsegment_net_recovery_without_dd_regression_candidate_not_final` and Stage192(192단계) `192_adapter_research__tp475_midsegment_net_recovery_without_dd_regression` is open_planned(개방 계획). Effect(효과): TP 4.75(익절 4.75)의 DD(낙폭) 단서를 유지하며 net/mid PF(순손익/중반 수익요인) 회복을 좁게 시험한다.
 - >-
-  Stage190 evidence(190단계 근거)는 `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_net_preserving_dd_report.md`, `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_net_preserving_dd_summary.csv`, `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_quality_matrix.csv`, `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_balance_curve_audit.csv`, `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_risk_atr_telemetry.csv`에 있다. Effect(효과): risk/TP(위험/익절) 회복 축이 DD/net/PF(낙폭/순손익/수익요인)에 미친 영향을 함께 본다.
+  Stage191 evidence(191단계 근거)는 `stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_followup_review.md`, `stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_net_dd_tradeoff_matrix.csv`, `stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_performance_attribution.csv`, `stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_route_matrix.csv`에 있다. Effect(효과): Stage190(190단계)의 net/DD/mid PF(순손익/낙폭/중반 수익요인) 상충을 숨기지 않는다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_net_preserving_dd_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_tp475_midsegment_net_recovery`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7194,4 +7194,22 @@ stage190_net_preserving_dd_repair:
   external_verification_status: completed
   pushed_commit_hash: 772d6605c69c7fd6ecd717a8b0043207dfc85f9e
   next_action: run191A_stage191_stage190_net_preserving_dd_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage191_stage190_net_preserving_dd_followup_review:
+  packet_id: stage191_stage190_net_preserving_dd_followup_review_v1
+  stage_id: 191_adapter_research__stage190_net_preserving_dd_followup_review
+  status: closed_open_stage192_tp475_midsegment_net_recovery_without_dd_regression_candidate_not_final
+  current_run_id: run191A_stage191_stage190_net_preserving_dd_followup_review_v1
+  source_stage: 190_adapter_research__net_preserving_dd_repair_from_long_strict_clue
+  source_run: run190A_stage190_net_preserving_dd_repair_from_long_strict_clue_v1
+  decision: open_stage192_tp475_midsegment_net_recovery_without_dd_regression_candidate_not_final
+  report_path: stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_followup_review.md
+  decision_path: stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_decision.md
+  tradeoff_matrix_path: stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_net_dd_tradeoff_matrix.csv
+  attribution_path: stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_performance_attribution.csv
+  route_matrix_path: stages/191_adapter_research__stage190_net_preserving_dd_followup_review/03_reviews/stage191_route_matrix.csv
+  external_verification_status: review_only_source_stage190_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run192A_stage192_tp475_midsegment_net_recovery_without_dd_regression_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

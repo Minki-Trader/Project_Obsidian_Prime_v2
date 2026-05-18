@@ -1598,3 +1598,8 @@
 - action(행동): closed(종료) `190_adapter_research__net_preserving_dd_repair_from_long_strict_clue` with decision(판정) `open_stage191_bounded_followup_due_to_net_preserving_dd_tradeoff_candidate_not_final`.
 - effect(효과): long_strict(롱 강화) DD(낙폭) 단서를 risk/TP(위험/익절) 회복 축과 함께 측정하고 Stage191(191단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T21:42:24Z Stage191 Stage190 net-preserving DD follow-up review closeout(191단계 190단계 순손익 보존 낙폭 후속 검토 종료)
+
+- action(행동): closed(종료) `191_adapter_research__stage190_net_preserving_dd_followup_review` with decision(판정) `open_stage192_tp475_midsegment_net_recovery_without_dd_regression_candidate_not_final`.
+- effect(효과): TP 4.75(익절 4.75)의 DD-pass near-miss clue(낙폭 통과 근접 실패 단서)를 Stage192(192단계) 수리 질문으로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
