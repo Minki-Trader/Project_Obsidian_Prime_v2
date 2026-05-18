@@ -1428,3 +1428,18 @@
 - effect(효과): Stage163(163단계) 결과가 full repair(완전 수리)가 아님을 기록하고 Stage165(165단계) side/context(방향/문맥) 수리로 넘겼다.
 - pushed_commit_hash(푸시 커밋 해시): `2aedebc9279ae76b6215c4073b99b1a1ba3fc15b`
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T14:29:42Z Stage165 side/context OOS early repair closeout(165단계 방향/문맥 표본외 초반 수리 종료)
+
+- action(행동): closed(종료) `165_adapter_research__side_context_oos_early_repair` with decision(판정) `open_stage166_side_context_repair_followup_due_to_kpi_damage_candidate_not_final`.
+- effect(효과): long cash-open guard(롱 현금장 초반 보호), low-edge side guard(낮은 엣지 방향 보호), mixed router(혼합 라우터)를 MT5(MetaTrader 5, 메타트레이더5)로 측정해 다음 경계를 정했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T14:31:58Z Stage165 side/context OOS early repair closeout(165단계 방향/문맥 표본외 초반 수리 종료)
+
+- action(행동): closed(종료) `165_adapter_research__side_context_oos_early_repair` with decision(판정) `open_stage166_side_context_repair_followup_due_to_kpi_damage_candidate_not_final`.
+- effect(효과): long cash-open guard(롱 현금장 초반 보호), low-edge side guard(낮은 엣지 방향 보호), mixed router(혼합 라우터)를 MT5(MetaTrader 5, 메타트레이더5)로 측정해 다음 경계를 정했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T14:33:39Z Stage165 side/context OOS early repair closeout(165단계 방향/문맥 표본외 초반 수리 종료)
+
+- action(행동): closed(종료) `165_adapter_research__side_context_oos_early_repair` with decision(판정) `open_stage166_side_context_repair_followup_due_to_kpi_damage_candidate_not_final`.
+- effect(효과): long cash-open guard(롱 현금장 초반 보호), low-edge side guard(낮은 엣지 방향 보호), mixed router(혼합 라우터)를 MT5(MetaTrader 5, 메타트레이더5)로 측정해 다음 경계를 정했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

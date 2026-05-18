@@ -1,8 +1,8 @@
-﻿current_run_id: run165A_stage165_side_context_oos_early_repair_v1
+﻿current_run_id: run166A_stage166_stage165_side_context_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 165_adapter_research__side_context_oos_early_repair
+active_stage: 166_adapter_research__stage165_side_context_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage161(161단계) closed(종료) as `continue_stage162_score_margin_or_side_filter_repair_candidate_not_final` and Stage162(162단계) `162_adapter_research__stage161_score_margin_followup_review` is open_planned(개방 계획). Effect(효과): score margin(점수 마진) / side filter(방향 필터) 결과를 후속 판독으로 넘긴다.
+  Stage165(165단계) closed(종료) as `open_stage166_side_context_repair_followup_due_to_kpi_damage_candidate_not_final` and Stage166(166단계) `166_adapter_research__stage165_side_context_followup_review` is open_planned(개방 계획). Effect(효과): side/context repair(방향/문맥 수리) 결과를 후속 검토로 넘긴다.
 - >-
-  Stage161 evidence(161단계 근거)는 `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_score_margin_or_side_filter_repair_report.md`, `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_score_margin_or_side_filter_repair_summary.csv`, `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_segment_kpi_summary.csv`, `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_probability_binding_summary.csv`에 있다. Effect(효과): threshold-only tuning(문턱값 단독 조정) 대신 실제 확률/방향 필터 작동 여부를 추적한다.
+  Stage165 evidence(165단계 근거)는 `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_side_context_oos_early_repair_report.md`, `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_side_context_oos_early_repair_summary.csv`, `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_segment_kpi_summary.csv`, `stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_gate_feature_summary.csv`에 있다. Effect(효과): validation/OOS KPI(검증/표본외 핵심 성과 지표), OOS early(표본외 초반), DD(낙폭), 방향별 문맥 차단을 같이 판독한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6723,10 +6723,16 @@ stage164_stage163_density_followup_review:
 stage165_side_context_oos_early_repair:
   packet_id: stage165_side_context_oos_early_repair_v1
   stage_id: 165_adapter_research__side_context_oos_early_repair
-  status: open_planned_from_stage164
+  status: closed_open_stage166_side_context_repair_followup_due_to_kpi_damage_candidate_not_final
   current_run_id: run165A_stage165_side_context_oos_early_repair_v1
   source_stage: 164_adapter_research__stage163_density_followup_review
-  source_stage164_closeout_commit: 2aedebc9279ae76b6215c4073b99b1a1ba3fc15b
-  source_decision: open_stage165_side_context_oos_early_repair_candidate_not_final
-  next_action: run165A_stage165_side_context_oos_early_repair_v1
+  source_run: run164A_stage164_stage163_density_followup_review_v1
+  decision: open_stage166_side_context_repair_followup_due_to_kpi_damage_candidate_not_final
+  report_path: stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_side_context_oos_early_repair_report.md
+  decision_path: stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_decision.md
+  summary_path: stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_side_context_oos_early_repair_summary.csv
+  segment_kpi_path: stages/165_adapter_research__side_context_oos_early_repair/03_reviews/stage165_segment_kpi_summary.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run166A_stage166_stage165_side_context_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
