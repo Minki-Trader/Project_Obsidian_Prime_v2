@@ -1,8 +1,8 @@
-﻿current_run_id: run167A_stage167_validation_pf_lift_density_preservation_v1
+﻿current_run_id: run168A_stage168_stage167_validation_pf_followup_review_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 167_adapter_research__validation_pf_lift_density_preservation
+active_stage: 168_adapter_research__stage167_validation_pf_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage166(166단계) closed(종료) as `open_stage167_validation_pf_lift_density_preservation_candidate_not_final` and Stage167(167단계) `167_adapter_research__validation_pf_lift_density_preservation` is open_planned(개방 계획). Effect(효과): Stage165(165단계) 결과에서 가장 수리 가치가 큰 shortgate low-edge(숏게이트 낮은 엣지) 축으로 좁힌다.
+  Stage167(167단계) closed(종료) as `open_stage168_validation_pf_followup_review_candidate_not_final` and Stage168(168단계) `168_adapter_research__stage167_validation_pf_followup_review` is open_planned(개방 계획). Effect(효과): validation PF lift(검증 수익요인 상승) 결과를 후속 검토로 넘긴다.
 - >-
-  Stage166 evidence(166단계 근거)는 `stages/166_adapter_research__stage165_side_context_followup_review/03_reviews/stage166_stage165_side_context_followup_review.md`, `stages/166_adapter_research__stage165_side_context_followup_review/03_reviews/stage166_stage165_quality_matrix.csv`, `stages/166_adapter_research__stage165_side_context_followup_review/03_reviews/stage166_repair_route_summary.csv`에 있다. Effect(효과): high PF but thin density(높은 수익요인이나 얇은 밀도)와 dense OOS but weak validation PF(밀도 있는 표본외이나 약한 검증 수익요인)를 분리해서 판독한다.
+  Stage167 evidence(167단계 근거)는 `stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_validation_pf_lift_density_preservation_report.md`, `stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_validation_pf_lift_density_preservation_summary.csv`, `stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_segment_kpi_summary.csv`, `stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_gate_feature_summary.csv`에 있다. Effect(효과): short-side block(숏 방향 차단), validation/OOS KPI(검증/표본외 핵심 성과 지표), density(밀도), DD(낙폭)를 같이 판독한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6753,4 +6753,21 @@ stage166_stage165_side_context_followup_review:
   external_verification_status: review_only_source_stage165_completed
   pushed_commit_hash: 905da4d9c24ee4122db3dc93727d70caab3a0b89
   next_action: run167A_stage167_validation_pf_lift_density_preservation_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage167_validation_pf_lift_density_preservation:
+  packet_id: stage167_validation_pf_lift_density_preservation_v1
+  stage_id: 167_adapter_research__validation_pf_lift_density_preservation
+  status: closed_open_stage168_validation_pf_followup_review_candidate_not_final
+  current_run_id: run167A_stage167_validation_pf_lift_density_preservation_v1
+  source_stage: 166_adapter_research__stage165_side_context_followup_review
+  source_run: run166A_stage166_stage165_side_context_followup_review_v1
+  decision: open_stage168_validation_pf_followup_review_candidate_not_final
+  report_path: stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_validation_pf_lift_density_preservation_report.md
+  decision_path: stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_decision.md
+  summary_path: stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_validation_pf_lift_density_preservation_summary.csv
+  segment_kpi_path: stages/167_adapter_research__validation_pf_lift_density_preservation/03_reviews/stage167_segment_kpi_summary.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run168A_stage168_stage167_validation_pf_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
