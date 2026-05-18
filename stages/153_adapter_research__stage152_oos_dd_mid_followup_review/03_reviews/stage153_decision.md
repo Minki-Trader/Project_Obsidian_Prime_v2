@@ -9,7 +9,7 @@
 - route_decision(경로 판정): `stages/153_adapter_research__stage152_oos_dd_mid_followup_review/03_reviews/stage153_route_decision.csv`
 - source_summary(원천 요약): `stages/152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff/03_reviews/stage152_oos_dd_mid_compression_summary.csv`
 - source_segments(원천 구간): `stages/152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff/03_reviews/stage152_segment_kpi_summary.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `6652a43e017b23003d704a1398916553b61e5562`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage153(153단계)는 review-only(검토 전용)로 닫는다. Effect(효과): Stage152(152단계) 실패를 보존하고 Stage154(154단계) repair(수리)로 넘긴다.
