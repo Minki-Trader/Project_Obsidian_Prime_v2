@@ -1175,3 +1175,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `d25e503d4a72dc29affbcfa669db715ad85b4590`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage124 shortgate(숏 게이트) 회수 단서를 cooldown/threshold(대기시간/임계값) 축에서 측정하고 Stage127(127단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage127 v41 shortgate quality follow-up review closeout(127단계 v41 숏 게이트 품질 후속 검토 종료)
+
+- run(실행): `run127A_stage127_v41_shortgate_quality_followup_review_v1`
+- decision(판정): `continue_quality_reframe_in_stage128_after_shortgate_repair_failure`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): Stage126 shortgate repair(126단계 숏 게이트 수리)이 34D KPI(34D 핵심 성과 지표) 격차를 줄이지 못했음을 기록하고 Stage128 quality-density reframe(128단계 품질-밀도 재구성)으로 넘겼다.
