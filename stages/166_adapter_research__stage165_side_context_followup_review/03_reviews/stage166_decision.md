@@ -11,7 +11,7 @@
 - report(보고서): `stages/166_adapter_research__stage165_side_context_followup_review/03_reviews/stage166_stage165_side_context_followup_review.md`
 - quality_matrix(품질 행렬): `stages/166_adapter_research__stage165_side_context_followup_review/03_reviews/stage166_stage165_quality_matrix.csv`
 - route_summary(경로 요약): `stages/166_adapter_research__stage165_side_context_followup_review/03_reviews/stage166_repair_route_summary.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `905da4d9c24ee4122db3dc93727d70caab3a0b89`
 - next_stage_or_branch(다음 단계 또는 분기): `167_adapter_research__validation_pf_lift_density_preservation`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
