@@ -1309,3 +1309,8 @@
 - action(행동): closed(종료) `146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair` with decision(판정) `continue_stage147_control_anchor_followup_review_due_to_damage_or_no_trade_gain_candidate_not_final`.
 - effect(효과): Stage142 control anchor(142단계 대조군 앵커)의 거래 공급 축을 MT5(메타트레이더5)로 측정하고 Stage147(147단계) 검토로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T08:22:53Z Stage147 Stage146 control anchor follow-up closeout(147단계 146단계 대조군 앵커 후속 종료)
+
+- action(행동): closed(종료) `147_adapter_research__stage146_control_anchor_followup_review` with decision(판정) `open_stage148_softsession_supply_quality_repair_after_stage146_damage_candidate_not_final`.
+- effect(효과): Stage146(146단계)의 거래 수 증가 단서와 validation/OOS mid(검증/표본외 중반) 손상을 분리하고 Stage148(148단계) 수리축으로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

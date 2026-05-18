@@ -4,9 +4,9 @@ Stage147(147단계)은 Stage146 control anchor trade supply repair(146단계 대
 
 ## Bounded Question(경계 질문)
 
-Did Stage146(146단계) increase trade count(거래 수) without damaging PF/net/DD(수익 팩터/순손익/손실률), segment KPI(구간 핵심 성과 지표), risk/ATR telemetry(위험/ATR 기록), and concentration(집중도)?
+Did Stage146(146단계) increase trade count(거래 수)를 without damaging PF/net/DD(수익 팩터/순손익/손실률), segment KPI(구간 핵심 성과 지표), risk/ATR telemetry(위험/ATR 기록), and concentration(집중도)?
 
-Effect(효과): Stage146 안에서 계속 고치지 않고, 결과 판독만 분리해 다음 수리 축을 좁게 고른다.
+Effect(효과): Stage146(146단계) 안에서 계속 고치지 않고, 결과 판독만 분리해 다음 수리 축을 좁게 고른다.
 
 ## Boundary(경계)
 

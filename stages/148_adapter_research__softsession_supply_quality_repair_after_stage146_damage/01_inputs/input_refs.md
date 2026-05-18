@@ -1,0 +1,10 @@
+﻿# Stage148 Input References(148단계 입력 참조)
+
+- stage147_decision(147단계 판정): `stages/147_adapter_research__stage146_control_anchor_followup_review/03_reviews/stage147_decision.md`
+- stage147_review(147단계 검토): `stages/147_adapter_research__stage146_control_anchor_followup_review/03_reviews/stage147_stage146_control_anchor_followup_review.md`
+- stage147_tradeoff_summary(147단계 상충 요약): `stages/147_adapter_research__stage146_control_anchor_followup_review/03_reviews/stage147_control_anchor_tradeoff_summary.csv`
+- stage147_segment_failure_summary(147단계 구간 실패 요약): `stages/147_adapter_research__stage146_control_anchor_followup_review/03_reviews/stage147_segment_failure_summary.csv`
+- stage146_summary(146단계 요약): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_control_anchor_trade_supply_summary.csv`
+- stage146_segment_kpi(146단계 구간 KPI): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_segment_kpi_summary.csv`
+- stage146_risk_atr_telemetry(146단계 위험/ATR 기록): `stages/146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair/03_reviews/stage146_risk_atr_telemetry.csv`
+- repair_seed(수리 씨앗): `s146_control_bothgate_softsession_h3_cd5_sht54_lng52_risk035`
