@@ -14,7 +14,7 @@ Stage143(143단계)는 Stage142(142단계) MT5(runtime, 런타임) 근거를 rev
 - source_stage142_segments(원천 142단계 구간): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_segment_kpi_summary.csv`
 - source_stage142_risk_atr(원천 142단계 위험/ATR): `stages/142_adapter_research__route_coverage_supply_branch_after_reverse_exhaustion/03_reviews/stage142_risk_atr_telemetry.csv`
 - external_verification_status(외부 검증 상태): `completed_existing_stage142_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `6c238545e2b7a0887e30504a9415046cad0a7e2a`
 
 ## Next(다음)
 
