@@ -1528,3 +1528,8 @@
 - action(행동): closed(종료) `177_adapter_research__stage176_tp45_followup_review` with decision(판정) `open_stage178_tp45_model_risk_compression_repair_candidate_not_final`.
 - effect(효과): SL tightening(손절 축소) 실패 기억을 보존하고 Stage178(178단계) model-risk compression(모델 위험 압축) 수리로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T18:09:46Z Stage178 TP45 model-risk compression closeout(178단계 익절 4.5 모델 위험 압축 종료)
+
+- action(행동): closed(종료) `178_adapter_research__tp45_model_risk_compression_repair` with decision(판정) `open_stage179_bounded_followup_due_to_risk_compression_tradeoff_candidate_not_final`.
+- effect(효과): source model(원천 모델), TP45(익절 4.5), SL(손절), gate(제한문), lifecycle(생활주기)을 고정하고 model-risk compression(모델 위험 압축)을 MT5(MetaTrader 5, 메타트레이더5)로 측정한 뒤 Stage179(179단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

@@ -1,8 +1,8 @@
-﻿current_run_id: run178A_stage178_tp45_model_risk_compression_repair_v1
+﻿current_run_id: run179A_stage179_stage178_risk_compression_followup_review_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 178_adapter_research__tp45_model_risk_compression_repair
+active_stage: 179_adapter_research__stage178_risk_compression_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage177(177단계) closed(종료) as `open_stage178_tp45_model_risk_compression_repair_candidate_not_final` and Stage178(178단계) `178_adapter_research__tp45_model_risk_compression_repair` is open_planned(개방 계획). Effect(효과): Stage176(176단계)의 SL tightening negative memory(손절 축소 부정 기억)를 보존하고 model-risk compression(모델 위험 압축) 수리로 넘긴다.
+  Stage178(178단계) closed(종료) as `open_stage179_bounded_followup_due_to_risk_compression_tradeoff_candidate_not_final` and Stage179(179단계) `179_adapter_research__stage178_risk_compression_followup_review` is open_planned(개방 계획). Effect(효과): TP45(익절 4.5) model-risk compression(모델 위험 압축) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
 - >-
-  Stage177 evidence(177단계 근거)는 `stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_stage176_tp45_followup_review.md`, `stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_route_matrix.csv`, `stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_stage176_lesson_matrix.csv`, `stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_performance_attribution.csv`에 있다. Effect(효과): Stage178(178단계)는 손상 축을 좁혀 시작한다.
+  Stage178 evidence(178단계 근거)는 `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_tp45_model_risk_compression_report.md`, `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_tp45_model_risk_compression_summary.csv`, `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_quality_matrix.csv`, `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_balance_curve_audit.csv`, `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_risk_atr_telemetry.csv`에 있다. Effect(효과): net(순손익), PF(수익요인), DD(낙폭), segment(구간), concentration(집중도), ATR/risk telemetry(ATR/위험 기록)를 함께 본다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6954,4 +6954,23 @@ stage177_stage176_tp45_followup_review:
   external_verification_status: review_only_source_stage176_mt5_reports_completed
   pushed_commit_hash: 79596eda49016e6437a356c69d3c9f5e6d62a9c2
   next_action: run178A_stage178_tp45_model_risk_compression_repair_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage178_tp45_model_risk_compression_repair:
+  packet_id: stage178_tp45_model_risk_compression_repair_v1
+  stage_id: 178_adapter_research__tp45_model_risk_compression_repair
+  status: closed_open_stage179_bounded_followup_due_to_risk_compression_tradeoff_candidate_not_final
+  current_run_id: run178A_stage178_tp45_model_risk_compression_repair_v1
+  source_stage: 177_adapter_research__stage176_tp45_followup_review
+  source_run: run177A_stage177_stage176_tp45_followup_review_v1
+  source_adapter: s176_tp45_control_sl2075_risk0365_h3_cd5_sht54_lng52
+  decision: open_stage179_bounded_followup_due_to_risk_compression_tradeoff_candidate_not_final
+  report_path: stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_tp45_model_risk_compression_report.md
+  decision_path: stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_decision.md
+  summary_path: stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_tp45_model_risk_compression_summary.csv
+  quality_matrix_path: stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_quality_matrix.csv
+  balance_curve_audit_path: stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_balance_curve_audit.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run179A_stage179_stage178_risk_compression_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
