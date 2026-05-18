@@ -17,7 +17,7 @@ Effect(효과): Stage126(126단계)의 threshold/cooldown(임계값/대기시간
 - source_stage126_closeout_commit(원천 126단계 종료 커밋): `d25e503d4a72dc29affbcfa669db715ad85b4590`
 - source_stage126_latest_commit(원천 126단계 최신 커밋): `e8144bed82184543c079a846193bb4e1c7aae9e0`
 - external_verification_status(외부 검증 상태): `completed_existing_stage126_mt5_runtime_evidence_reviewed`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `b08c8ede9ba36e0aee6670abb818e63076b8c7a5`
 
 ## Next(다음)
 
