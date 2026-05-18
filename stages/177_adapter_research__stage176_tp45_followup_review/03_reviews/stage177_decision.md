@@ -12,7 +12,7 @@
 - route_matrix(경로 행렬): `stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_route_matrix.csv`
 - lesson_matrix(교훈 행렬): `stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_stage176_lesson_matrix.csv`
 - attribution(귀속): `stages/177_adapter_research__stage176_tp45_followup_review/03_reviews/stage177_performance_attribution.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `79596eda49016e6437a356c69d3c9f5e6d62a9c2`
 - next_stage_or_branch(다음 단계 또는 분기): `178_adapter_research__tp45_model_risk_compression_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
