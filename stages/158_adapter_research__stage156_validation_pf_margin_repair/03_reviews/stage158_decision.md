@@ -9,7 +9,7 @@
 - summary_csv(요약 CSV): `stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_validation_pf_margin_summary.csv`
 - segment_kpi(구간 KPI): `stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `f863e4a3758d0095e8bf4333b6bcd0ad6a6391d3`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage158(158단계)는 validation PF(검증 수익요인) margin(여유) repair(수리)를 측정하고 Stage159(159단계) review(검토)로 넘긴다. Effect(효과): 성공/실패를 한 단계 안에서 끝없이 고치지 않는다.

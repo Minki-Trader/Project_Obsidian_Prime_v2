@@ -20,6 +20,6 @@ Stage158(158단계)는 Stage156(156단계) DD compression(낙폭 압축) 후보�
 - summary(요약): `stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_validation_pf_margin_summary.csv`
 - segment_kpi(구간 KPI): `stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `f863e4a3758d0095e8bf4333b6bcd0ad6a6391d3`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
