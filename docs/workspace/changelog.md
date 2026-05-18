@@ -1339,3 +1339,8 @@
 - action(행동): closed(종료) `151_adapter_research__stage150_validation_session_guard_followup_review` with decision(판정) `open_stage152_oos_dd_mid_compression_after_stage150_tradeoff_candidate_not_final`.
 - effect(효과): validation recovery(검증 회복)와 OOS DD/mid damage(표본외 손실률/중반 손상)를 분리하고 Stage152(152단계) 수리축으로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T10:14:34Z Stage152 OOS DD/mid compression closeout(152단계 표본외 낙폭/중반 압축 종료)
+
+- action(행동): closed(종료) `152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff` with decision(판정) `continue_stage153_oos_dd_mid_followup_review_due_to_damage_or_no_gain_candidate_not_final`.
+- effect(효과): Stage150(150단계)의 validation recovery(검증 회복)와 OOS DD/mid weakness(표본외 낙폭/중반 약점)를 좁은 MT5(메타트레이더5) 수리 변형으로 측정하고 Stage153(153단계) 검토로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
