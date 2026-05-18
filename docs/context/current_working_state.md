@@ -20,6 +20,6 @@ Stage152(152단계)는 Stage150 margin_restore(150단계 마진 복원)의 valid
 - summary(요약): `stages/152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff/03_reviews/stage152_oos_dd_mid_compression_summary.csv`
 - segment_kpi(구간 KPI): `stages/152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff/03_reviews/stage152_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff/03_reviews/stage152_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `94fc6e2bc70d0e64382c58b6b16d72916f401855`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
