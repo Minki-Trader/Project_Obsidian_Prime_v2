@@ -1,0 +1,56 @@
+﻿{
+  "artifact_paths": {
+    "report": "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_validation_pf_margin_report.md",
+    "risk_atr": "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_risk_atr_telemetry.csv",
+    "segment_kpi": "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_segment_kpi_summary.csv",
+    "stage_ledger": "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage_run_ledger.csv",
+    "summary": "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_validation_pf_margin_summary.csv"
+  },
+  "consumers": [
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_validation_pf_margin_report.md",
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage158_decision.md",
+    "159_adapter_research__stage158_validation_pf_followup_review"
+  ],
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10636,
+      "sha256": "f9ea49b49e4b57337d5471d364c10c2133cf48763faa67cb473f5523aa514feb",
+      "upserted_rows": 16
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5297,
+      "sha256": "97b9fc24591050736e0be7fa06f9772697e38501e65470f1502363ba84867c45",
+      "upserted_rows": 29
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 981,
+      "sha256": "324751ed20dea1f16c8f6f82a4c6b891fc73dea9043963f175d18e9174dc00fe",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage_run_ledger.csv",
+      "rows": 16,
+      "sha256": "f957b0db2ff865032b43b8d9a892e1d5a84883ef89eeed0dfc4c7eccc6e744f0",
+      "upserted_rows": 16
+    }
+  },
+  "producer": "stage_pipelines/stage158/stage156_validation_pf_margin_repair.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/158_adapter_research__stage156_validation_pf_margin_repair/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "s156_low_edge_risk0300_h3_cd5_sht54_lng52",
+    "stage_pipelines/stage158/stage156_validation_pf_margin_repair.py"
+  ],
+  "status": "completed"
+}
