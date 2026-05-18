@@ -1,6 +1,7 @@
 ﻿# Stage137 Decision(137단계 판정)
 
 decision(판정): `continue_stage138_bounded_trade_supply_repair_after_stage136_no_gain_candidate_not_final`
+pushed_commit_hash(푸시된 커밋 해시): `7cd9f72aebf247970ac57d93d249569ff3d3859e`
 
 Stage137(137단계)는 Stage136(136단계) MT5(runtime, 런타임) 근거를 review-only(검토 전용)로 판정했다. Effect(효과): Stage136 수리가 거래 수를 늘리지 못했음을 보존하고 Stage138(138단계) trade supply repair(거래 공급 수리)로 넘긴다.
 

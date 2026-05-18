@@ -15,6 +15,7 @@ Stage137(137단계)는 Stage136(136단계) 수리가 trade count(거래 수)를 
 
 - run(실행): `run137A_stage137_stage136_trade_count_concentration_followup_review_v1`
 - decision(판정): `continue_stage138_bounded_trade_supply_repair_after_stage136_no_gain_candidate_not_final`
+- pushed_commit_hash(푸시된 커밋 해시): `7cd9f72aebf247970ac57d93d249569ff3d3859e`
 - external_verification_status(외부 검증 상태): `completed_existing_stage136_mt5_runtime_evidence_reviewed`
 - report(보고서): `stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_stage136_followup_review.md`
 - comparison(비교): `stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_stage136_repair_comparison.csv`
