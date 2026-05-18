@@ -1,0 +1,8 @@
+﻿# Stage138 Input References(138단계 입력 참조)
+
+- stage137_decision(137단계 판정): `stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_decision.md`
+- stage137_review(137단계 검토): `stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_stage136_followup_review.md`
+- stage137_comparison(137단계 비교): `stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_stage136_repair_comparison.csv`
+- stage136_summary(136단계 요약): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_summary.csv`
+- stage136_segment_kpi(136단계 구간 KPI): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_segment_kpi_summary.csv`
+- stage136_risk_atr_telemetry(136단계 위험/ATR 원격측정): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_risk_atr_telemetry.csv`

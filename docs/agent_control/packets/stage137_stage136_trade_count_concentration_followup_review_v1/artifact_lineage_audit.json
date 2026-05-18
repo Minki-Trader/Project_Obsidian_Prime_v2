@@ -1,0 +1,60 @@
+{
+  "artifact_paths": [
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_stage136_followup_review.md",
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_stage136_repair_comparison.csv",
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_route_decision.csv",
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_decision.md",
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_followup_summary.json"
+  ],
+  "availability": "tracked",
+  "consumers": [
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_stage136_followup_review.md",
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_decision.md",
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage137_followup_summary.json",
+    "138_adapter_research__trade_supply_repair_after_stage136_no_gain"
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 4910,
+      "sha256": "96d4f5de40b7ee34b3ed38750d432c2d162c9e5724a3fa5b0458ba3b94ab69b5",
+      "upserted_rows": 6
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10450,
+      "sha256": "c3e1376b4b86975a46155a595ecd723c6a736ea3d71e97cfdd409b9c9cac0f8d",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 960,
+      "sha256": "2d9860e65284f2aab96963c125dd855239e77aa856822a8e177f66690ae4df50",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "dc439990f8baddcebe55f72ec797b1bc32d89aeda73f6869ff9499f0f69a2df0",
+      "upserted_rows": 1
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage137/stage136_trade_count_concentration_followup_review.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/137_adapter_research__stage136_trade_count_concentration_followup_review/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_summary.csv",
+    "stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_segment_kpi_summary.csv",
+    "stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_risk_atr_telemetry.csv",
+    "stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_decision.md"
+  ]
+}

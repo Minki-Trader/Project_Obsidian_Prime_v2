@@ -1,7 +1,7 @@
 ﻿# Stage137 Input References(137단계 입력 참조)
 
 - stage136_decision(136단계 판정): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_decision.md`
-- stage136_report(136단계 보고서): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_report.md`
 - stage136_summary(136단계 요약): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_trade_count_concentration_repair_summary.csv`
-- stage136_segment_kpi(136단계 구간 KPI): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_segment_kpi_summary.csv`
-- stage136_risk_atr_telemetry(136단계 위험/ATR 원격측정): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_risk_atr_telemetry.csv`
+- stage136_segments(136단계 구간): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_segment_kpi_summary.csv`
+- stage136_risk_atr(136단계 위험/ATR): `stages/136_adapter_research__stage122_survivor_trade_count_concentration_repair/03_reviews/stage136_risk_atr_telemetry.csv`
+- source_stage136_closeout_commit(원천 136단계 종료 커밋): `fd3728e2aa224b1dede8ee6c36d3aabfab710124`
