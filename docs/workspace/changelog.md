@@ -1389,3 +1389,8 @@
 - action(행동): closed(종료) `159_adapter_research__stage158_validation_pf_followup_review` with decision(판정) `open_stage160_stage158_threshold_binding_audit_candidate_not_final`.
 - effect(효과): threshold(문턱값) 조정 무변화 문제를 Stage160(160단계) threshold binding audit(문턱값 작동 감사)로 분리했다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T12:52:08Z Stage160 threshold binding audit closeout(160단계 문턱값 작동 감사 종료)
+
+- action(행동): closed(종료) `160_adapter_research__stage158_threshold_binding_audit` with decision(판정) `open_stage161_score_margin_or_side_filter_repair_candidate_not_final`.
+- effect(효과): Stage158 threshold(158단계 문턱값) 무변화가 handoff miss(전달 누락)가 아니라 saturated score table(포화 점수표) 문제임을 기록하고 Stage161(161단계) 수리축으로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

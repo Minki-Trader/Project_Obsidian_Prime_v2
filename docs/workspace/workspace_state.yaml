@@ -1,8 +1,8 @@
-﻿current_run_id: run160A_stage160_stage158_threshold_binding_audit_v1
+﻿current_run_id: run161A_stage161_score_margin_or_side_filter_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 160_adapter_research__stage158_threshold_binding_audit
+active_stage: 161_adapter_research__score_margin_or_side_filter_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage151(151단계) closed(종료) as `open_stage152_oos_dd_mid_compression_after_stage150_tradeoff_candidate_not_final` and Stage152(152단계) `152_adapter_research__oos_dd_mid_compression_after_stage150_tradeoff` is open_planned(개방 계획). Effect(효과): Stage150 margin_restore(마진 복원)의 validation recovery(검증 회복)를 보존하고 OOS DD/mid(표본외 손실률/중반)를 좁게 수리한다.
+  Stage160(160단계) closed(종료) as `open_stage161_score_margin_or_side_filter_repair_candidate_not_final` and Stage161(161단계) `161_adapter_research__score_margin_or_side_filter_repair` is open_planned(개방 계획). Effect(효과): threshold-only tuning(문턱값 단독 조정)을 멈추고 실제 행 선택을 바꾸는 score margin(점수 마진) 또는 side filter(방향 필터) 수리로 넘긴다.
 - >-
-  Stage151 evidence(151단계 근거)는 `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_stage150_validation_session_guard_followup_review.md`, `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_validation_guard_tradeoff_summary.csv`, `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_segment_failure_summary.csv`, `stages/151_adapter_research__stage150_validation_session_guard_followup_review/03_reviews/stage151_route_decision.csv`에 있다. Effect(효과): validation(검증) 개선과 OOS(표본외) 손상을 분리해 추적한다.
+  Stage160 evidence(160단계 근거)는 `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_threshold_binding_audit.md`, `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_threshold_binding_summary.csv`, `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_probability_distribution_summary.csv`, `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_runtime_reason_summary.csv`, `stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_model_score_audit.csv`에 있다. Effect(효과): Stage158(158단계) 문턱값 변형의 무변화를 set file(설정 파일), model CSV(모델 CSV), telemetry(기록)로 분해한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6629,7 +6629,7 @@ stage159_stage158_validation_pf_followup_review:
   pushed_commit_hash: 681c153ded59505a7cb407dde6f7b7572322bbf8
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
 
-stage160_stage158_threshold_binding_audit:
+
   packet_id: stage160_stage158_threshold_binding_audit_v1
   stage_id: 160_adapter_research__stage158_threshold_binding_audit
   status: open_planned_from_stage159
@@ -6637,4 +6637,31 @@ stage160_stage158_threshold_binding_audit:
   source_stage: 159_adapter_research__stage158_validation_pf_followup_review
   source_decision: open_stage160_stage158_threshold_binding_audit_candidate_not_final
   next_action: run160A_stage160_stage158_threshold_binding_audit_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage160_stage158_threshold_binding_audit:
+  packet_id: stage160_stage158_threshold_binding_audit_v1
+  stage_id: 160_adapter_research__stage158_threshold_binding_audit
+  status: closed_open_stage161_score_margin_or_side_filter_repair_candidate_not_final
+  current_run_id: run160A_stage160_stage158_threshold_binding_audit_v1
+  source_stage159_closeout_commit: 681c153ded59505a7cb407dde6f7b7572322bbf8
+  source_stage159_hash_record_commit: 5073783dfb21554831e4e7b35e8b6ce53e4e79e2
+  source_stage: 158_adapter_research__stage156_validation_pf_margin_repair
+  source_run: run158A_stage158_stage156_validation_pf_margin_repair_v1
+  decision: open_stage161_score_margin_or_side_filter_repair_candidate_not_final
+  report_path: stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_threshold_binding_audit.md
+  decision_path: stages/160_adapter_research__stage158_threshold_binding_audit/03_reviews/stage160_decision.md
+  packet_summary_path: docs/agent_control/packets/stage160_stage158_threshold_binding_audit_v1/aggregate_summary.json
+  next_stage_or_branch: 161_adapter_research__score_margin_or_side_filter_repair
+  pushed_commit_hash: pending_until_push
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage161_score_margin_or_side_filter_repair:
+  packet_id: stage161_score_margin_or_side_filter_repair_v1
+  stage_id: 161_adapter_research__score_margin_or_side_filter_repair
+  status: open_planned_from_stage160
+  current_run_id: run161A_stage161_score_margin_or_side_filter_repair_v1
+  source_stage: 160_adapter_research__stage158_threshold_binding_audit
+  source_decision: open_stage161_score_margin_or_side_filter_repair_candidate_not_final
+  next_action: run161A_stage161_score_margin_or_side_filter_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
