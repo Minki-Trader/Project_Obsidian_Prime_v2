@@ -12,7 +12,7 @@
 - tradeoff_matrix(상충 행렬): `stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_tp475_tradeoff_matrix.csv`
 - attribution(성과 귀속): `stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_performance_attribution.csv`
 - route_matrix(경로 행렬): `stages/193_adapter_research__stage192_tp475_midsegment_followup_review/03_reviews/stage193_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `fd4eaaf7ee8d2cf4fecd3d6b114f944630916530`
 - next_stage_or_branch(다음 단계 또는 분기): `194_adapter_research__tp475_late_concentration_midpf_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
