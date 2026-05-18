@@ -1578,3 +1578,8 @@
 - action(행동): closed(종료) `186_adapter_research__tp45_midwide_bracket_shape_repair` with decision(판정) `open_stage187_bounded_followup_due_to_bracket_shape_tradeoff_candidate_not_final`.
 - effect(효과): risk0325(위험 0.0325)를 중심으로 ATR SL/TP bracket(ATR 손절/익절 브래킷)을 MT5(MetaTrader 5, 메타트레이더5)로 측정한 뒤 Stage187(187단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T20:38:09Z Stage187 Stage186 bracket shape follow-up review closeout(187단계 186단계 브래킷 모양 후속 검토 종료)
+
+- action(행동): closed(종료) `187_adapter_research__stage186_bracket_shape_followup_review` with decision(판정) `open_stage188_v2_native_context_feature_branch_due_to_repeated_midwide_tradeoff_candidate_not_final`.
+- effect(효과): bracket/exit shape repair(브래킷/청산 모양 수정)의 tradeoff(상충)를 기록하고 Stage188(188단계) v2-native context/feature branch(v2 고유 문맥/피처 분기)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
