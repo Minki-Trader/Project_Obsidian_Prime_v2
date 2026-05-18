@@ -1,8 +1,8 @@
-﻿current_run_id: run121A_stage121_v41_post_dd_density_followup_review_v1
+﻿current_run_id: run122A_stage122_v41_density_scale_repair_after_dd_guardrail_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 121_adapter_research__v41_post_dd_density_followup_review
+active_stage: 122_adapter_research__v41_density_scale_repair_after_dd_guardrail
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage120(120단계) closed(종료) as `continue_post_dd_density_followup_review_in_stage121_with_density_gain` and Stage121(121단계) `121_adapter_research__v41_post_dd_density_followup_review` is open_planned(열림 계획). Effect(효과): post-DD density expansion(손실률 압축 뒤 밀도 확장) 결과를 후속 검토로 넘긴다.
+  Stage121(121단계) closed(종료) as `continue_density_scale_repair_in_stage122` and Stage122(122단계) `122_adapter_research__v41_density_scale_repair_after_dd_guardrail` is open_planned(열림 계획). Effect(효과): Stage120의 +1 trade(거래 1건 증가)는 충분하지 않으므로 더 큰 density scale repair(밀도 규모 수리)로 넘긴다.
 - >-
-  Stage120 result(120단계 결과)는 `stages/120_adapter_research__v41_post_dd_density_expansion_repair/03_reviews/stage120_post_dd_density_expansion_summary.csv`와 `stages/120_adapter_research__v41_post_dd_density_expansion_repair/03_reviews/stage120_segment_kpi_summary.csv`에 기록했다. Effect(효과): DD guardrail(손실률 가드레일)을 지키며 density(밀도)를 늘릴 수 있는지 다음 단계에서 판독한다.
+  Stage121 result(121단계 결과)는 `stages/121_adapter_research__v41_post_dd_density_followup_review/03_reviews/stage121_post_dd_density_followup_review.md`와 `stages/121_adapter_research__v41_post_dd_density_followup_review/03_reviews/stage121_density_gain_tradeoff_summary.csv`에 기록했다. Effect(효과): PF/net(수익 팩터/순손익)은 34D 이상이나, trade count(거래 수)와 DD%(손실률)는 아직 목표에 못 미침을 고정한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5770,4 +5770,22 @@ stage120_v41_post_dd_density_expansion_repair:
   packet_summary_path: docs/agent_control/packets/stage120_v41_post_dd_density_expansion_repair_v1/aggregate_summary.json
   external_verification_status: completed
   pushed_commit_hash: f33c473f286c340d2e9ce34aa8b63bf94e8ebe85
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+stage121_v41_post_dd_density_followup_review:
+  packet_id: stage121_v41_post_dd_density_followup_review_v1
+  stage_id: 121_adapter_research__v41_post_dd_density_followup_review
+  status: closed_continue_density_scale_repair_in_stage122
+  current_run_id: run121A_stage121_v41_post_dd_density_followup_review_v1
+  source_stage120_closeout_commit: f33c473f286c340d2e9ce34aa8b63bf94e8ebe85
+  source_stage120_latest_commit: d825aab76421e0141aeaba5c53dc80d01c51f5d1
+  source_stage119_latest_commit: 33280e4223984a5d49484a30cee574874e929b16
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: continue_density_scale_repair_in_stage122
+  next_stage_or_branch: 122_adapter_research__v41_density_scale_repair_after_dd_guardrail
+  report_path: stages/121_adapter_research__v41_post_dd_density_followup_review/03_reviews/stage121_decision.md
+  packet_summary_path: docs/agent_control/packets/stage121_v41_post_dd_density_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage120_mt5_runtime_evidence_reviewed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
