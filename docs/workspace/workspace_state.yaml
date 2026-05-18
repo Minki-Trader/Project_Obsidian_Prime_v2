@@ -1,8 +1,8 @@
-﻿current_run_id: run183A_stage183_stage182_midwide_risk_balance_followup_review_v1
+﻿current_run_id: run184A_stage184_tp45_midwide_midsegment_quality_repair_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 183_adapter_research__stage182_midwide_risk_balance_followup_review
+active_stage: 184_adapter_research__tp45_midwide_midsegment_quality_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage182(182단계) closed(종료) as `open_stage183_bounded_followup_due_to_midwide_risk_balance_tradeoff_candidate_not_final` and Stage183(183단계) `183_adapter_research__stage182_midwide_risk_balance_followup_review` is open_planned(개방 계획). Effect(효과): TP45(익절 4.5) midwide risk balance(중간넓은 문맥 위험 균형) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage183(183단계) closed(종료) as `open_stage184_tp45_midwide_midsegment_quality_repair_candidate_not_final` and Stage184(184단계) `184_adapter_research__tp45_midwide_midsegment_quality_repair` is open_planned(개방 계획). Effect(효과): risk-only repair(위험만 조정하는 수정)를 멈추고 midsegment quality repair(중반 구간 품질 수정)로 좁힌다.
 - >-
-  Stage182 evidence(182단계 근거)는 `stages/182_adapter_research__tp45_midwide_risk_balance_repair/03_reviews/stage182_tp45_midwide_risk_balance_report.md`, `stages/182_adapter_research__tp45_midwide_risk_balance_repair/03_reviews/stage182_tp45_midwide_risk_balance_summary.csv`, `stages/182_adapter_research__tp45_midwide_risk_balance_repair/03_reviews/stage182_quality_matrix.csv`, `stages/182_adapter_research__tp45_midwide_risk_balance_repair/03_reviews/stage182_balance_curve_audit.csv`, `stages/182_adapter_research__tp45_midwide_risk_balance_repair/03_reviews/stage182_risk_atr_telemetry.csv`에 있다. Effect(효과): net(순손익), PF(수익요인), DD(낙폭), segment(구간), concentration(집중도), ATR/risk telemetry(ATR/위험 기록)를 함께 본다.
+  Stage183 evidence(183단계 근거)는 `stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_followup_review.md`, `stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_risk_balance_tradeoff_matrix.csv`, `stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_midsegment_weakness_matrix.csv`, `stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_repair_route_matrix.csv`에 있다. Effect(효과): net(순손익), PF(수익요인), DD(낙폭), mid PF(중반 수익요인)의 상충을 장부화했다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -7047,4 +7047,22 @@ stage182_tp45_midwide_risk_balance_repair:
   external_verification_status: completed
   pushed_commit_hash: 3a916347df9690287249d9573a434e80702ce08b
   next_action: run183A_stage183_stage182_midwide_risk_balance_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage183_stage182_midwide_risk_balance_followup_review:
+  packet_id: stage183_stage182_midwide_risk_balance_followup_review_v1
+  stage_id: 183_adapter_research__stage182_midwide_risk_balance_followup_review
+  status: closed_open_stage184_tp45_midwide_midsegment_quality_repair_candidate_not_final
+  current_run_id: run183A_stage183_stage182_midwide_risk_balance_followup_review_v1
+  source_stage: 182_adapter_research__tp45_midwide_risk_balance_repair
+  source_run: run182A_stage182_tp45_midwide_risk_balance_repair_v1
+  decision: open_stage184_tp45_midwide_midsegment_quality_repair_candidate_not_final
+  report_path: stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_followup_review.md
+  decision_path: stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_decision.md
+  tradeoff_matrix_path: stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_risk_balance_tradeoff_matrix.csv
+  weakness_matrix_path: stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_midsegment_weakness_matrix.csv
+  route_matrix_path: stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_repair_route_matrix.csv
+  external_verification_status: review_only_source_stage182_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run184A_stage184_tp45_midwide_midsegment_quality_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

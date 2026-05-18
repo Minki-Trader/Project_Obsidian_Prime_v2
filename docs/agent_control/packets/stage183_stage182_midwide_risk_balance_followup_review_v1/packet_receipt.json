@@ -1,0 +1,233 @@
+{
+  "attribution": "stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_performance_attribution.csv",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "calendar weak months(달력 약한 달)는 진단 단서일 뿐이며 hardcode(고정 규칙)로 쓰면 과적합 위험이 있다.",
+      "attribution_confidence": "medium(중간)",
+      "comparison_baseline": "stage182_midwide_risk0365_control",
+      "likely_drivers": "same_trade_set_scaled_by_model_risk(같은 거래 집합의 모델 위험 축소)",
+      "next_probe": "Stage184(184단계) midwindow quality gate(중반 품질 제한문)",
+      "observed_change": "risk_cap_downshift(위험 상한 하향)은 DD(낙폭)를 거의 선형으로 낮췄다.",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "segment_checks": "near_miss=s182_tp45_midwide_risk0325_h3_cd5_ctxmid_sht54_lng52; near_miss_val_net=1012.75; near_miss_val_dd=13.3347; near_miss_mid_pf=1.485500",
+      "trade_shape": "mid_window(중반 구간)의 PF(수익요인)와 MFE capture(최대유리이동 포착률)가 핵심 약점이다."
+    },
+    {
+      "alternative_explanations": "one narrow cap(하나의 좁은 상한)만 문제가 아니라 mid PF(중반 수익요인)가 모든 cap(상한)에서 약하다.",
+      "attribution_confidence": "high(높음)",
+      "comparison_baseline": "legacy_34d_kpi_target_lesson_only",
+      "likely_drivers": "risk_budget_too_low_for_existing_trade_quality(현재 거래 품질 대비 위험 예산 부족)",
+      "next_probe": "quality_first_then_risk_balance(품질 우선 후 위험 균형)",
+      "observed_change": "risk0315(위험 0.0315)는 DD(낙폭)를 12.8880까지 낮췄지만 net(순손익)이 968.71로 34D(레거시 34D) 아래였다.",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "segment_checks": "dd_fixed_candidate=s182_tp45_midwide_risk0315_h3_cd5_ctxmid_sht54_lng52",
+      "trade_shape": "risk-only(위험만 조정)로는 34D 이상 KPI(핵심 성과 지표)를 동시에 만족하지 못한다."
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage184_tp45_midwide_midsegment_quality_repair_candidate_not_final",
+  "decision_path": "stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_decision.md",
+  "ledger_payload": {
+    "alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10809,
+      "sha256": "7cff5e56ee56790baf0a5c7c71c09254eea2b51f4efad9107caa9d7edba84925",
+      "upserted_rows": 1
+    },
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5632,
+      "sha256": "2e096dc9b2d58a6b065b0f04f890fe71ccfc3947da5c6f50c48b7f1881fa0342",
+      "upserted_rows": 8
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1006,
+      "sha256": "4f644d9ef4f980aefc644b63f2ec39ab385e8587850d9dc712bbb589cf40d953",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "71812913ba236bc6bdf665cd8c4d6279310e53cf9846063164e84d53720f7da0",
+      "upserted_rows": 1
+    }
+  },
+  "overall_goal_complete": false,
+  "packet_id": "stage183_stage182_midwide_risk_balance_followup_review_v1",
+  "report_path": "stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_followup_review.md",
+  "route_matrix": "stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_repair_route_matrix.csv",
+  "route_rows": [
+    {
+      "bounded_question": "Can TP45 midwide context(익절 4.5 중간넓은 문맥) repair the validation mid-window PF(검증 중반 수익요인) and DD(낙폭) with a targeted quality gate(품질 제한문), while preserving net(순손익), OOS(표본외), ATR bracket(ATR 브래킷), and model risk(모델 위험)?",
+      "decision": "open_stage184_tp45_midwide_midsegment_quality_repair_candidate_not_final",
+      "guardrail": "do_not_calendar_hardcode_weak_months_use_diagnostics_only",
+      "route": "stage184_primary",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "source_clue": "s182_tp45_midwide_risk0325_h3_cd5_ctxmid_sht54_lng52",
+      "why": "risk cap(위험 상한) alone almost reaches DD(낙폭), but mid PF(중반 수익요인) stays below 34D(레거시 34D) and the lowest cap(최저 상한) drops net(순손익)."
+    },
+    {
+      "bounded_question": "Do not continue pure risk cap(위험 상한) lowering as the only repair.",
+      "decision": "open_stage184_tp45_midwide_midsegment_quality_repair_candidate_not_final",
+      "guardrail": "preserve_as_failure_memory_not_invalid_strategy_death",
+      "route": "failure_memory",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "source_clue": "risk_only_axis",
+      "why": "It trades net(순손익) for DD(낙폭) and leaves mid PF(중반 수익요인) weak."
+    }
+  ],
+  "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+  "stage_id": "183_adapter_research__stage182_midwide_risk_balance_followup_review",
+  "status": "completed",
+  "tradeoff_matrix": "stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_risk_balance_tradeoff_matrix.csv",
+  "tradeoff_rows": [
+    {
+      "adapter_id": "s182_tp45_midwide_risk0365_h3_cd5_ctxmid_sht54_lng52",
+      "conclusion": "net_preserved_but_dd_failed_and_mid_pf_failed",
+      "late_net_share": 0.4983,
+      "oos_balance_dd_percent": 8.8227,
+      "oos_net": 914.52,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d",
+      "risk_cap": "0.0365",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "source_run_id": "run182A_stage182_tp45_midwide_risk_balance_repair_v1",
+      "validation_balance_dd_percent": 14.8516,
+      "validation_dd_margin_vs_34d": -1.9424639999999993,
+      "validation_early_pf": 1.761574873,
+      "validation_late_pf": 1.804597094,
+      "validation_mid_drawdown": 171.16,
+      "validation_mid_mfe_capture": 0.1992455741,
+      "validation_mid_net": 304.98,
+      "validation_mid_pf": 1.487087346,
+      "validation_mid_pf_gap_vs_34d": -0.0960696539999999,
+      "validation_mid_trade_count": 79,
+      "validation_net": 1223.67,
+      "validation_net_gap_vs_34d": 236.07000000000005,
+      "validation_pf": 1.68,
+      "weak_validation_months": "2025.01;2025.05;2025.08"
+    },
+    {
+      "adapter_id": "s182_tp45_midwide_risk0340_h3_cd5_ctxmid_sht54_lng52",
+      "conclusion": "net_preserved_but_dd_failed_and_mid_pf_failed",
+      "late_net_share": 0.4875,
+      "oos_balance_dd_percent": 8.2863,
+      "oos_net": 820.64,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d",
+      "risk_cap": "0.0340",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "source_run_id": "run182A_stage182_tp45_midwide_risk_balance_repair_v1",
+      "validation_balance_dd_percent": 13.8307,
+      "validation_dd_margin_vs_34d": -0.921564,
+      "validation_early_pf": 1.770956919,
+      "validation_late_pf": 1.806765398,
+      "validation_mid_drawdown": 151.62,
+      "validation_mid_mfe_capture": 0.2000198094,
+      "validation_mid_net": 275.25,
+      "validation_mid_pf": 1.489272446,
+      "validation_mid_pf_gap_vs_34d": -0.09388455399999995,
+      "validation_mid_trade_count": 79,
+      "validation_net": 1097.42,
+      "validation_net_gap_vs_34d": 109.82000000000005,
+      "validation_pf": 1.69,
+      "weak_validation_months": "2025.01;2025.05;2025.08"
+    },
+    {
+      "adapter_id": "s182_tp45_midwide_risk0325_h3_cd5_ctxmid_sht54_lng52",
+      "conclusion": "net_preserved_but_dd_failed_and_mid_pf_failed",
+      "late_net_share": 0.4833,
+      "oos_balance_dd_percent": 7.9373,
+      "oos_net": 772.55,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_balance_dd_above_34d;validation_mid_pf_below_34d",
+      "risk_cap": "0.0325",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "source_run_id": "run182A_stage182_tp45_midwide_risk_balance_repair_v1",
+      "validation_balance_dd_percent": 13.3347,
+      "validation_dd_margin_vs_34d": -0.4255639999999996,
+      "validation_early_pf": 1.771565495,
+      "validation_late_pf": 1.809201825,
+      "validation_mid_drawdown": 140.67,
+      "validation_mid_mfe_capture": 0.1989312482,
+      "validation_mid_net": 252.8,
+      "validation_mid_pf": 1.485500288,
+      "validation_mid_pf_gap_vs_34d": -0.09765671200000003,
+      "validation_mid_trade_count": 79,
+      "validation_net": 1012.75,
+      "validation_net_gap_vs_34d": 25.149999999999977,
+      "validation_pf": 1.69,
+      "weak_validation_months": "2025.01;2025.05;2025.08"
+    },
+    {
+      "adapter_id": "s182_tp45_midwide_risk0315_h3_cd5_ctxmid_sht54_lng52",
+      "conclusion": "dd_fixed_but_net_below_34d_and_mid_pf_failed",
+      "late_net_share": 0.4812,
+      "oos_balance_dd_percent": 7.8246,
+      "oos_net": 732.45,
+      "oos_pf": 1.91,
+      "quality_flags": "validation_net_below_34d;validation_mid_pf_below_34d",
+      "risk_cap": "0.0315",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1",
+      "source_run_id": "run182A_stage182_tp45_midwide_risk_balance_repair_v1",
+      "validation_balance_dd_percent": 12.888,
+      "validation_dd_margin_vs_34d": 0.021136000000000266,
+      "validation_early_pf": 1.752771325,
+      "validation_late_pf": 1.817064834,
+      "validation_mid_drawdown": 132.86,
+      "validation_mid_mfe_capture": 0.2029816752,
+      "validation_mid_net": 246.54,
+      "validation_mid_pf": 1.499564345,
+      "validation_mid_pf_gap_vs_34d": -0.0835926549999999,
+      "validation_mid_trade_count": 79,
+      "validation_net": 968.71,
+      "validation_net_gap_vs_34d": -18.889999999999986,
+      "validation_pf": 1.69,
+      "weak_validation_months": "2025.01;2025.05;2025.08"
+    }
+  ],
+  "weakness_matrix": "stages/183_adapter_research__stage182_midwide_risk_balance_followup_review/03_reviews/stage183_midsegment_weakness_matrix.csv",
+  "weakness_rows": [
+    {
+      "adapter_id": "s182_tp45_midwide_risk0365_h3_cd5_ctxmid_sht54_lng52",
+      "effect": "risk_cap_change_lowered_dd_but_did_not_repair_mid_window_quality",
+      "evidence": "mid_pf=1.487087; mid_drawdown=171.16; mid_mfe_capture=0.199246; weak_months=2025.01;2025.05;2025.08",
+      "next_repair_need": "target_midwindow_trade_quality_not_calendar_copy",
+      "primary_weakness": "validation_mid_pf_below_34d",
+      "risk_cap": "0.0365",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1"
+    },
+    {
+      "adapter_id": "s182_tp45_midwide_risk0340_h3_cd5_ctxmid_sht54_lng52",
+      "effect": "risk_cap_change_lowered_dd_but_did_not_repair_mid_window_quality",
+      "evidence": "mid_pf=1.489272; mid_drawdown=151.62; mid_mfe_capture=0.200020; weak_months=2025.01;2025.05;2025.08",
+      "next_repair_need": "target_midwindow_trade_quality_not_calendar_copy",
+      "primary_weakness": "validation_mid_pf_below_34d",
+      "risk_cap": "0.0340",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1"
+    },
+    {
+      "adapter_id": "s182_tp45_midwide_risk0325_h3_cd5_ctxmid_sht54_lng52",
+      "effect": "risk_cap_change_lowered_dd_but_did_not_repair_mid_window_quality",
+      "evidence": "mid_pf=1.485500; mid_drawdown=140.67; mid_mfe_capture=0.198931; weak_months=2025.01;2025.05;2025.08",
+      "next_repair_need": "target_midwindow_trade_quality_not_calendar_copy",
+      "primary_weakness": "validation_mid_pf_below_34d",
+      "risk_cap": "0.0325",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1"
+    },
+    {
+      "adapter_id": "s182_tp45_midwide_risk0315_h3_cd5_ctxmid_sht54_lng52",
+      "effect": "risk_cap_change_lowered_dd_but_did_not_repair_mid_window_quality",
+      "evidence": "mid_pf=1.499564; mid_drawdown=132.86; mid_mfe_capture=0.202982; weak_months=2025.01;2025.05;2025.08",
+      "next_repair_need": "target_midwindow_trade_quality_not_calendar_copy",
+      "primary_weakness": "validation_mid_pf_below_34d",
+      "risk_cap": "0.0315",
+      "run_id": "run183A_stage183_stage182_midwide_risk_balance_followup_review_v1"
+    }
+  ]
+}
