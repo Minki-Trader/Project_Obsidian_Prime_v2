@@ -1633,3 +1633,8 @@
 - action(행동): closed(종료) `197_adapter_research__stage196_bctl_dd_midpf_followup_review` with decision(판정) `open_stage198_bctl_adverse_excursion_dd_guard_repair_candidate_not_final`.
 - effect(효과): Stage196(196단계)의 최선 상충안과 실패 원인을 분리해 Stage198(198단계) adverse excursion DD guard(불리한 움직임 낙폭 방어)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T23:55:42Z Stage198 bctl adverse excursion DD guard repair closeout(198단계 bctl 불리한 움직임 낙폭 방어 수리 종료)
+
+- action(행동): closed(종료) `198_adapter_research__bctl_adverse_excursion_dd_guard_repair` with decision(판정) `open_stage199_bounded_followup_due_to_adverse_excursion_tradeoff_candidate_not_final`.
+- effect(효과): risk-only increase(위험만 상향)를 피하고 ATR stop/flat-exit(ATR 손절/평탄 청산) 변형을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage199(199단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
