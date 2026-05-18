@@ -1,8 +1,8 @@
-﻿current_run_id: run129A_stage129_v41_quality_density_followup_review_v1
+﻿current_run_id: run130A_stage130_new_v2_model_branch_after_v41_tradeoff_failure_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 129_adapter_research__v41_quality_density_followup_review
+active_stage: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage128(128단계) closed(종료) as `continue_quality_density_followup_review_in_stage129_due_to_damage_or_no_repair` and Stage129(129단계) `129_adapter_research__v41_quality_density_followup_review` is open_planned(열림 계획). Effect(효과): quality-density reframe(품질-밀도 재구성) 결과를 후속 검토로 넘겨 34D KPI(34D 핵심 성과 지표) 격차를 다시 판독한다.
+  Stage129(129단계) closed(종료) as `open_new_v2_model_branch_in_stage130_after_v41_quality_density_tradeoff_failure` and Stage130(130단계) `130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure` is open_planned(열림 계획). Effect(효과): current v41 surface(현재 브이41 표면) 수리를 멈추고 새 v2-native model branch(브이투 고유 모델 분기)를 연다.
 - >-
-  Stage128 result(128단계 결과)는 `stages/128_adapter_research__v41_quality_reframe_after_shortgate_failure/03_reviews/stage128_quality_reframe_summary.csv`와 `stages/128_adapter_research__v41_quality_reframe_after_shortgate_failure/03_reviews/stage128_segment_kpi_summary.csv`에 기록했다. Effect(효과): max_hold/ATR bracket(최대 보유/ATR 괄호)이 손실률과 순손익을 실제로 바꿨는지 추적한다.
+  Stage129 result(129단계 결과)는 `stages/129_adapter_research__v41_quality_density_followup_review/03_reviews/stage129_quality_density_followup_review.md`와 `stages/129_adapter_research__v41_quality_density_followup_review/03_reviews/stage129_stage128_34d_gap_summary.csv`에 기록했다. Effect(효과): safe-but-small(안전하지만 작음)과 dense-but-weak(촘촘하지만 약함) 실패를 다음 모델 분기 입력으로 쓴다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5908,4 +5908,21 @@ stage128_v41_quality_reframe_after_shortgate_failure:
   packet_summary_path: docs/agent_control/packets/stage128_v41_quality_reframe_after_shortgate_failure_v1/aggregate_summary.json
   external_verification_status: completed
   pushed_commit_hash: 5279689f46abfd215aae08864999d6983a9d25af
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage129_v41_quality_density_followup_review:
+  packet_id: stage129_v41_quality_density_followup_review_v1
+  stage_id: 129_adapter_research__v41_quality_density_followup_review
+  status: closed_open_new_v2_model_branch_in_stage130_after_v41_quality_density_tradeoff_failure
+  current_run_id: run129A_stage129_v41_quality_density_followup_review_v1
+  source_stage128_closeout_commit: 5279689f46abfd215aae08864999d6983a9d25af
+  source_stage128_latest_commit: 4d8ba3ab61aa63ca83eb4badba0ba9c524a8eee4
+  source_stage127_latest_commit: 30a94995ff3feccedf9815f683bdd71a72c9cc2c
+  target_surface: legacy_34d_kpi_lesson_only_no_legacy_inheritance
+  decision: open_new_v2_model_branch_in_stage130_after_v41_quality_density_tradeoff_failure
+  next_stage_or_branch: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+  report_path: stages/129_adapter_research__v41_quality_density_followup_review/03_reviews/stage129_decision.md
+  packet_summary_path: docs/agent_control/packets/stage129_v41_quality_density_followup_review_v1/aggregate_summary.json
+  external_verification_status: completed_existing_stage128_mt5_runtime_evidence_reviewed
+  pushed_commit_hash: pending_until_push
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

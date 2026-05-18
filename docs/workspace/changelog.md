@@ -1189,3 +1189,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `5279689f46abfd215aae08864999d6983a9d25af`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): shortgate threshold/cooldown(숏 게이트 임계값/대기시간) 반복을 멈추고 max_hold/ATR bracket(최대 보유/ATR 괄호) 재구성을 측정해 Stage129(129단계) 후속 검토로 넘겼다.
+## 2026-05-18 - Stage129 v41 quality-density follow-up review closeout(129단계 v41 품질-밀도 후속 검토 종료)
+
+- run(실행): `run129A_stage129_v41_quality_density_followup_review_v1`
+- decision(판정): `open_new_v2_model_branch_in_stage130_after_v41_quality_density_tradeoff_failure`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): v41 surface(브이41 표면)가 safe-but-small(안전하지만 작음) 또는 dense-but-weak(촘촘하지만 약함)으로 갈라진 실패를 기록하고 Stage130 새 v2 모델 분기로 넘겼다.
