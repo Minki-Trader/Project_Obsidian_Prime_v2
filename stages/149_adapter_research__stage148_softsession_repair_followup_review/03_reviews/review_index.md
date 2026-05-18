@@ -1,8 +1,7 @@
 ﻿# Stage149 Review Index(149단계 검토 색인)
 
-- status(상태): `open_planned`
-- source_stage(원천 단계): `148_adapter_research__softsession_supply_quality_repair_after_stage146_damage`
-- planned_packet(계획 작업 묶음): `stage149_stage148_softsession_repair_followup_review_v1`
-- planned_run(계획 실행): `run149A_stage149_stage148_softsession_repair_followup_review_v1`
-
-Effect(효과): Stage149(149단계)는 새 MT5 run(MT5 실행)이 아니라 Stage148(148단계) 근거 판독으로 시작한다.
+- review(검토): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_stage148_softsession_repair_followup_review.md`
+- tradeoff_summary(상충 요약): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_softsession_tradeoff_summary.csv`
+- segment_failure_summary(구간 실패 요약): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_segment_failure_summary.csv`
+- route_decision(경로 판정): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_route_decision.csv`
+- decision(판정): `stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_decision.md`

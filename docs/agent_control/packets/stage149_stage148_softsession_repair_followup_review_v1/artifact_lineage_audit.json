@@ -1,0 +1,62 @@
+{
+  "artifact_paths": [
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_stage148_softsession_repair_followup_review.md",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_softsession_tradeoff_summary.csv",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_segment_failure_summary.csv",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_route_decision.csv",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_decision.md",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_followup_summary.json"
+  ],
+  "availability": "tracked",
+  "consumers": [
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_stage148_softsession_repair_followup_review.md",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_decision.md",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage149_followup_summary.json",
+    "150_adapter_research__validation_session_guard_repair_after_stage148_tradeoff"
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5120,
+      "sha256": "2d23f3b5be7c78665177206fb5321fb06cc7c3dcbeb6f9711f962d5c983bc28a",
+      "upserted_rows": 8
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10552,
+      "sha256": "ada99bbe3f81df8e0768a176a012fc7199363261f0efab3c10ddafe3c04b12c8",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 972,
+      "sha256": "18a85c5841e058bdcaa1b80ccfc44ca8862c98d877b4429ec2d9b30d4414acc5",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "842e57812f82fb6a576c582c97c695afcb1c853b1599d91a661c82d973cda005",
+      "upserted_rows": 1
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage149/stage148_softsession_repair_followup_review.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/149_adapter_research__stage148_softsession_repair_followup_review/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_softsession_supply_quality_repair_summary.csv",
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_segment_kpi_summary.csv",
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_risk_atr_telemetry.csv",
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_gate_feature_summary.csv",
+    "stages/148_adapter_research__softsession_supply_quality_repair_after_stage146_damage/03_reviews/stage148_decision.md"
+  ]
+}
