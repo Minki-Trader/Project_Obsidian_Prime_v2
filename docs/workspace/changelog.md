@@ -1613,3 +1613,8 @@
 - action(행동): closed(종료) `193_adapter_research__stage192_tp475_midsegment_followup_review` with decision(판정) `open_stage194_tp475_late_concentration_midpf_repair_candidate_not_final`.
 - effect(효과): `s192_tp475_r0330`을 net/DD(순손익/낙폭) 통과 단서로 보존하고 Stage194(194단계) late/mid repair(후반/중반 수정)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T22:50:31Z Stage194 TP4.75 late concentration mid PF repair closeout(194단계 TP4.75 후반 집중 중반 수익요인 수정 종료)
+
+- action(행동): closed(종료) `194_adapter_research__tp475_late_concentration_midpf_repair` with decision(판정) `open_stage195_bounded_followup_due_to_late_midpf_tradeoff_candidate_not_final`.
+- effect(효과): risk-only increase(위험만 상향)를 피하고 context/hold/cooldown(문맥/보유/대기) 변형을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage195(195단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
