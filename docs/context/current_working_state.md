@@ -21,6 +21,6 @@ Stage190(190단계)는 long_strict(롱 강화) DD(낙폭) 단서에 risk/TP(위�
 - quality_matrix(품질 행렬): `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_quality_matrix.csv`
 - balance_curve_audit(잔고 곡선 감사): `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_balance_curve_audit.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/190_adapter_research__net_preserving_dd_repair_from_long_strict_clue/03_reviews/stage190_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `772d6605c69c7fd6ecd717a8b0043207dfc85f9e`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
