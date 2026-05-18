@@ -1182,3 +1182,10 @@
 - pushed_commit_hash(푸시된 커밋 해시): `b08c8ede9ba36e0aee6670abb818e63076b8c7a5`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): Stage126 shortgate repair(126단계 숏 게이트 수리)이 34D KPI(34D 핵심 성과 지표) 격차를 줄이지 못했음을 기록하고 Stage128 quality-density reframe(128단계 품질-밀도 재구성)으로 넘겼다.
+## 2026-05-18 - Stage128 v41 quality-density reframe closeout(128단계 v41 품질-밀도 재구성 종료)
+
+- run(실행): `run128A_stage128_v41_quality_reframe_after_shortgate_failure_v1`
+- decision(판정): `continue_quality_density_followup_review_in_stage129_due_to_damage_or_no_repair`
+- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
+- effect(효과): shortgate threshold/cooldown(숏 게이트 임계값/대기시간) 반복을 멈추고 max_hold/ATR bracket(최대 보유/ATR 괄호) 재구성을 측정해 Stage129(129단계) 후속 검토로 넘겼다.
