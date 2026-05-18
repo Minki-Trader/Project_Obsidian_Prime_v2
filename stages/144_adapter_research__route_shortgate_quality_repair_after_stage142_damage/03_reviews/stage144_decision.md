@@ -17,7 +17,7 @@ Effect(효과): 결과가 좋아도 final adapter(최종 어댑터)나 operating
 - source_stage143_hash_record_commit(원천 143단계 해시 기록 커밋): `ee0f8e716bbcf1252aac3f1f1178c6ecfc7d015a`
 - source_stage142_hash_record_commit(원천 142단계 해시 기록 커밋): `7813b4d26006336dcf1709949ce78d47462b3c47`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `594f259774f70267c36cebe38875a1d12c46c490`
 
 ## Next(다음)
 

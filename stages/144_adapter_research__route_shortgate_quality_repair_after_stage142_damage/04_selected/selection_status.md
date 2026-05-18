@@ -8,7 +8,7 @@
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - stage144_decision(144단계 판정): `continue_stage145_shortgate_quality_followup_review_due_to_damage_or_no_repair_candidate_not_final`
 - next_stage_or_branch(다음 단계/분기): `145_adapter_research__stage144_shortgate_quality_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `594f259774f70267c36cebe38875a1d12c46c490`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Effect(효과): Stage144(144단계)는 닫지만 전체 목표 완료나 운영 주장은 만들지 않는다.

@@ -20,6 +20,6 @@ Stage144(144단계)는 shortgate quality repair(숏게이트 품질 수리)를 �
 - summary(요약): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_shortgate_quality_repair_summary.csv`
 - segment_kpi(구간 KPI): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `594f259774f70267c36cebe38875a1d12c46c490`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
