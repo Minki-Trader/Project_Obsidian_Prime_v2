@@ -15,7 +15,7 @@ Stage140(140단계)는 reverse supply(반전 공급)와 late concentration(후�
 - source_stage139_hash_record_commit(원천 139단계 해시 기록 커밋): `7ddace59be1aac317467dfedc93e0e137d9f2e3c`
 - source_stage138_closeout_commit(원천 138단계 종료 커밋): `9a5bedb1b1e8e20d13ef1072edeca7039dba1080`
 - external_verification_status(외부 검증 상태): `completed`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `e2d8e9082a74723de334c18b2c32c972364097c8`
 
 ## Next(다음)
 

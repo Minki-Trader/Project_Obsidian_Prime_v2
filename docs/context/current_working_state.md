@@ -20,6 +20,6 @@ Stage140(140단계)는 reverse supply(반전 공급)와 late concentration(후�
 - summary(요약): `stages/140_adapter_research__reverse_supply_late_concentration_repair/03_reviews/stage140_reverse_supply_repair_summary.csv`
 - segment_kpi(구간 KPI): `stages/140_adapter_research__reverse_supply_late_concentration_repair/03_reviews/stage140_segment_kpi_summary.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/140_adapter_research__reverse_supply_late_concentration_repair/03_reviews/stage140_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `e2d8e9082a74723de334c18b2c32c972364097c8`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
