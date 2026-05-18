@@ -1186,6 +1186,6 @@
 
 - run(실행): `run128A_stage128_v41_quality_reframe_after_shortgate_failure_v1`
 - decision(판정): `continue_quality_density_followup_review_in_stage129_due_to_damage_or_no_repair`
-- pushed_commit_hash(푸시된 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시된 커밋 해시): `5279689f46abfd215aae08864999d6983a9d25af`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - effect(효과): shortgate threshold/cooldown(숏 게이트 임계값/대기시간) 반복을 멈추고 max_hold/ATR bracket(최대 보유/ATR 괄호) 재구성을 측정해 Stage129(129단계) 후속 검토로 넘겼다.
