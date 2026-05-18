@@ -1,8 +1,8 @@
-﻿current_run_id: run131A_stage131_new_v2_model_branch_followup_review_v1
+﻿current_run_id: run132A_stage132_v42_density_repair_followup_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 131_adapter_research__new_v2_model_branch_followup_review
+active_stage: 132_adapter_research__v42_density_repair_followup
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage130(130단계) closed(종료) as `continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap` and Stage131(131단계) `131_adapter_research__new_v2_model_branch_followup_review` is active_planned(활성 계획). Effect(효과): 새 v2 source branch(브이투 원천 분기)의 best candidate(최선 후보)를 34D KPI(34D 핵심 성과 지표) 차이 축소 작업으로 넘긴다.
+  Stage131(131단계) closed(종료) as `continue_v42_density_repair_in_stage132_due_to_34d_gap` and Stage132(132단계) `132_adapter_research__v42_density_repair_followup` is active_planned(활성 계획). Effect(효과): v42 density repair(v42 밀도 수리)의 성공/실패를 보존하고 다음 경계 판정으로 넘긴다.
 - >-
-  Stage130 evidence(130단계 근거)는 `stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_new_v2_model_branch_report.md`, `stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_new_v2_model_branch_summary.csv`, `stages/130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure/03_reviews/stage130_segment_kpi_summary.csv`에 있다. Effect(효과): KPI(핵심 성과 지표), segment(구간), risk/ATR telemetry(위험/ATR 원격측정)를 한 묶음으로 추적한다.
+  Stage131 evidence(131단계 근거)는 `stages/131_adapter_research__new_v2_model_branch_followup_review/03_reviews/stage131_v42_density_repair_report.md`, `stages/131_adapter_research__new_v2_model_branch_followup_review/03_reviews/stage131_v42_density_repair_summary.csv`, `stages/131_adapter_research__new_v2_model_branch_followup_review/03_reviews/stage131_segment_kpi_summary.csv`에 있다. Effect(효과): KPI(핵심 성과 지표), segment(구간), risk/ATR telemetry(위험/ATR 원격측정)를 함께 추적한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(브이투 고유 연구)만 계속한다.
 
@@ -5962,7 +5962,7 @@ stage130_new_v2_model_branch_after_v41_tradeoff_failure:
   next_action: run131A_stage131_new_v2_model_branch_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
 
-stage131_new_v2_model_branch_followup_review:
+
   packet_id: stage131_new_v2_model_branch_followup_review_v1
   stage_id: 131_adapter_research__new_v2_model_branch_followup_review
   status: active_planned_from_stage130
@@ -5970,4 +5970,48 @@ stage131_new_v2_model_branch_followup_review:
   source_stage: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
   source_decision: continue_new_v2_model_branch_repair_in_stage131_due_to_34d_gap
   next_action: run_stage131_bounded_followup
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+  packet_id: stage131_new_v2_model_branch_followup_review_v1
+  stage_id: 131_adapter_research__new_v2_model_branch_followup_review
+  status: closed_bounded_v42_density_repair
+  current_run_id: run131A_stage131_new_v2_model_branch_followup_review_v1
+  source_stage: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+  decision: continue_v42_density_repair_in_stage132_due_to_34d_gap
+  report_path: stages/131_adapter_research__new_v2_model_branch_followup_review/03_reviews/stage131_v42_density_repair_report.md
+  decision_path: stages/131_adapter_research__new_v2_model_branch_followup_review/03_reviews/stage131_decision.md
+  next_action: run132A_stage132_v42_density_repair_followup_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+
+  packet_id: stage132_v42_density_repair_followup_v1
+  stage_id: 132_adapter_research__v42_density_repair_followup
+  status: active_planned_from_stage131
+  current_run_id: run132A_stage132_v42_density_repair_followup_v1
+  source_stage: 131_adapter_research__new_v2_model_branch_followup_review
+  source_decision: continue_v42_density_repair_in_stage132_due_to_34d_gap
+  next_action: run_stage132_bounded_followup
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage131_new_v2_model_branch_followup_review:
+  packet_id: stage131_new_v2_model_branch_followup_review_v1
+  stage_id: 131_adapter_research__new_v2_model_branch_followup_review
+  status: closed_bounded_v42_density_repair
+  current_run_id: run131A_stage131_new_v2_model_branch_followup_review_v1
+  source_stage: 130_adapter_research__new_v2_model_branch_after_v41_tradeoff_failure
+  decision: continue_v42_density_repair_in_stage132_due_to_34d_gap
+  report_path: stages/131_adapter_research__new_v2_model_branch_followup_review/03_reviews/stage131_v42_density_repair_report.md
+  decision_path: stages/131_adapter_research__new_v2_model_branch_followup_review/03_reviews/stage131_decision.md
+  next_action: run132A_stage132_v42_density_repair_followup_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage132_v42_density_repair_followup:
+  packet_id: stage132_v42_density_repair_followup_v1
+  stage_id: 132_adapter_research__v42_density_repair_followup
+  status: active_planned_from_stage131
+  current_run_id: run132A_stage132_v42_density_repair_followup_v1
+  source_stage: 131_adapter_research__new_v2_model_branch_followup_review
+  source_decision: continue_v42_density_repair_in_stage132_due_to_34d_gap
+  next_action: run_stage132_bounded_followup
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
