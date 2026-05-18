@@ -16,7 +16,7 @@
 - monthly_kpi(월별 핵심 성과 지표): `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/178_adapter_research__tp45_model_risk_compression_repair/03_reviews/stage178_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `86794ec917bee816eb58c34e23bb00ef9ff373a7`
 - next_stage_or_branch(다음 단계 또는 분기): `179_adapter_research__stage178_risk_compression_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
