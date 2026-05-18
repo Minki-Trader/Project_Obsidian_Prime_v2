@@ -1,6 +1,13 @@
 ﻿# Stage188 Review Index(188단계 검토 색인)
 
-- status(상태): `open_planned_from_stage187`
-- source_stage(원천 단계): `187_adapter_research__stage186_bracket_shape_followup_review`
-- source_decision(원천 판정): `open_stage188_v2_native_context_feature_branch_due_to_repeated_midwide_tradeoff_candidate_not_final`
-- next_action(다음 행동): `run188A_stage188_v2_native_context_feature_branch_after_midwide_tradeoff_v1`
+- status(상태): `closed_open_stage189_bounded_followup_due_to_context_feature_tradeoff_candidate_not_final`
+- packet(작업 묶음): `stage188_v2_native_context_feature_branch_after_midwide_tradeoff_v1`
+- run(실행): `run188A_stage188_v2_native_context_feature_branch_after_midwide_tradeoff_v1`
+- decision(판정): `open_stage189_bounded_followup_due_to_context_feature_tradeoff_candidate_not_final`
+- report(보고서): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_context_feature_report.md`
+- summary(요약): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_context_feature_summary.csv`
+- quality_matrix(품질 행렬): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_quality_matrix.csv`
+- segment_kpi(구간 핵심 성과 지표): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_segment_kpi_summary.csv`
+- balance_curve_audit(잔고 곡선 감사): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_balance_curve_audit.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/188_adapter_research__v2_native_context_feature_branch_after_midwide_tradeoff/03_reviews/stage188_risk_atr_telemetry.csv`
+- next_stage_or_branch(다음 단계 또는 분기): `189_adapter_research__stage188_context_feature_followup_review`
