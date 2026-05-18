@@ -1416,3 +1416,8 @@
 - action(행동): closed(종료) `162_adapter_research__stage161_score_margin_followup_review` with decision(판정) `open_stage163_density_preserving_score_repair_candidate_not_final`.
 - effect(효과): Stage161(161단계)의 PF(수익요인) 개선 신호와 net/trade density(순손익/거래 밀도) 손상을 분리하고 Stage163(163단계) 수리축으로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-18T14:00:26Z Stage163 density-preserving score repair closeout(163단계 밀도 보존 점수 수리 종료)
+
+- action(행동): closed(종료) `163_adapter_research__stage161_density_preserving_score_repair` with decision(판정) `open_stage164_density_repair_followup_due_to_kpi_damage_candidate_not_final`.
+- effect(효과): long-dense(롱 밀도 보존) 및 low-risk shortgate(저위험 숏 게이트) 변형을 MT5(메타트레이더5)로 측정하고 Stage164(164단계) 후속 판독으로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
