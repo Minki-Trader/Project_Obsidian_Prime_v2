@@ -15,7 +15,7 @@
 - concentration_audit(집중도 감사): `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_concentration_audit.csv`
 - drawdown_recovery(낙폭 회복): `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_drawdown_recovery_summary.csv`
 - route_summary(경로 요약): `stages/171_adapter_research__segment_stability_equity_curve_audit/03_reviews/stage171_route_summary.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `9880380842d81463d7728384a0575bdd0079a252`
 - next_stage_or_branch(다음 단계 또는 분기): `172_adapter_research__validation_drawdown_concentration_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
