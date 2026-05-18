@@ -1,8 +1,8 @@
-﻿current_run_id: run145A_stage145_stage144_shortgate_quality_followup_review_v1
+﻿current_run_id: run146A_stage146_control_anchor_trade_supply_after_shortgate_no_repair_v1
 updated_on: '2026-05-18'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 145_adapter_research__stage144_shortgate_quality_followup_review
+active_stage: 146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage144(144단계) closed(종료) as `continue_stage145_shortgate_quality_followup_review_due_to_damage_or_no_repair_candidate_not_final` and Stage145(145단계) `145_adapter_research__stage144_shortgate_quality_followup_review` is open_planned(열린 계획). Effect(효과): shortgate quality repair(숏게이트 품질 수리) 결과를 보존하고 후속 검토로 넘긴다.
+  Stage145(145단계) closed(종료) as `open_stage146_control_anchor_trade_supply_repair_after_shortgate_no_repair_candidate_not_final` and Stage146(146단계) `146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair` is active_planned(활성 계획). Effect(효과): shortgate quality repair(숏게이트 품질 수리) 실패를 보존하고 control anchor(대조군 앵커) 수리 축으로 넘어간다.
 - >-
-  Stage144 evidence(144단계 근거)는 `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_shortgate_quality_repair_report.md`, `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_shortgate_quality_repair_summary.csv`, `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_segment_kpi_summary.csv`, `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_risk_atr_telemetry.csv`에 있다. Effect(효과): 거래 수 보존과 KPI(핵심 성과 지표) 회복 여부를 분리해서 판정한다.
+  Stage145 evidence(145단계 근거)는 `stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_stage144_shortgate_quality_followup_review.md`, `stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_shortgate_quality_tradeoff_summary.csv`, `stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_stage144_34d_comparison.csv`, `stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_route_decision.csv`에 있다. Effect(효과): Stage144(144단계) 수리 실패와 Stage146(146단계) 전환 이유를 분리해 추적한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
 
@@ -6260,9 +6260,25 @@ stage144_route_shortgate_quality_repair_after_stage142_damage:
 stage145_stage144_shortgate_quality_followup_review:
   packet_id: stage145_stage144_shortgate_quality_followup_review_v1
   stage_id: 145_adapter_research__stage144_shortgate_quality_followup_review
-  status: open_planned_from_stage144
+  status: closed_review_only
   current_run_id: run145A_stage145_stage144_shortgate_quality_followup_review_v1
   source_stage: 144_adapter_research__route_shortgate_quality_repair_after_stage142_damage
-  source_decision: continue_stage145_shortgate_quality_followup_review_due_to_damage_or_no_repair_candidate_not_final
-  next_action: run145A_stage145_stage144_shortgate_quality_followup_review_v1
+  source_stage144_closeout_commit: 594f259774f70267c36cebe38875a1d12c46c490
+  source_stage144_hash_record_commit: 07f23d8939ab31e6e7d1a564cc9c8c9496fa2704
+  source_stage143_hash_record_commit: ee0f8e716bbcf1252aac3f1f1178c6ecfc7d015a
+  decision: open_stage146_control_anchor_trade_supply_repair_after_shortgate_no_repair_candidate_not_final
+  report_path: stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_stage144_shortgate_quality_followup_review.md
+  decision_path: stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_decision.md
+  next_action: run146A_stage146_control_anchor_trade_supply_after_shortgate_no_repair_v1
+  pushed_commit_hash: pending_until_push
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage146_control_anchor_trade_supply_after_shortgate_no_repair:
+  packet_id: stage146_control_anchor_trade_supply_after_shortgate_no_repair_v1
+  stage_id: 146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair
+  status: active_planned_from_stage145
+  current_run_id: run146A_stage146_control_anchor_trade_supply_after_shortgate_no_repair_v1
+  source_stage: 145_adapter_research__stage144_shortgate_quality_followup_review
+  source_decision: open_stage146_control_anchor_trade_supply_repair_after_shortgate_no_repair_candidate_not_final
+  next_action: run_stage146_control_anchor_trade_supply_repair
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

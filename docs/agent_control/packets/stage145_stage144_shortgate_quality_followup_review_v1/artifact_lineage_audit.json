@@ -1,0 +1,62 @@
+{
+  "artifact_paths": [
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_stage144_shortgate_quality_followup_review.md",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_shortgate_quality_tradeoff_summary.csv",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_stage144_34d_comparison.csv",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_route_decision.csv",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_decision.md",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_followup_summary.json"
+  ],
+  "availability": "tracked",
+  "consumers": [
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_stage144_shortgate_quality_followup_review.md",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_decision.md",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_followup_summary.json",
+    "146_adapter_research__control_anchor_trade_supply_after_shortgate_no_repair"
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 5047,
+      "sha256": "2abb4c3858b39c0d5b6d64fb9af6b8aa1703f0d52efd867db3e20e78d9b7527e",
+      "upserted_rows": 7
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 10518,
+      "sha256": "e849bda043aca400050b13451f42ef430c325e2896ce10bbe4d902abbdebc250",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 968,
+      "sha256": "2ae39489e3af305090d6ddbe0050dc63c923b01077686f70d818f373678599d9",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "bee973c2602ec8a6d4a6bbef9200f68b3ea2f764b70523be3b0978b9af4a0993",
+      "upserted_rows": 1
+    }
+  },
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage145/stage144_shortgate_quality_followup_review.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "source_inputs": [
+    "stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_shortgate_quality_repair_summary.csv",
+    "stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_segment_kpi_summary.csv",
+    "stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_risk_atr_telemetry.csv",
+    "stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_gate_feature_summary.csv",
+    "stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_decision.md"
+  ]
+}

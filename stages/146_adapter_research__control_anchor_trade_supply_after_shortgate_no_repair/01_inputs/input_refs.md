@@ -1,0 +1,8 @@
+﻿# Stage146 Input References(146단계 입력 참조)
+
+- stage145_decision(145단계 판정): `stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_decision.md`
+- stage145_review(145단계 검토): `stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_stage144_shortgate_quality_followup_review.md`
+- stage145_tradeoff_summary(145단계 상충 요약): `stages/145_adapter_research__stage144_shortgate_quality_followup_review/03_reviews/stage145_shortgate_quality_tradeoff_summary.csv`
+- stage144_summary(144단계 요약): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_shortgate_quality_repair_summary.csv`
+- stage144_segment_kpi(144단계 구간 KPI): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_segment_kpi_summary.csv`
+- stage144_risk_atr_telemetry(144단계 위험/ATR 기록): `stages/144_adapter_research__route_shortgate_quality_repair_after_stage142_damage/03_reviews/stage144_risk_atr_telemetry.csv`
