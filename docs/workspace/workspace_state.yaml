@@ -1,8 +1,8 @@
-﻿current_run_id: run170A_stage170_stage169_net_density_followup_review_v1
-updated_on: '2026-05-18'
+﻿current_run_id: run171A_stage171_segment_stability_equity_curve_audit_v1
+updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 170_adapter_research__stage169_net_density_followup_review
+active_stage: 171_adapter_research__segment_stability_equity_curve_audit
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,12 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage169(169단계) closed(종료) as `open_stage170_net_density_followup_review_candidate_not_final` and Stage170(170단계) `170_adapter_research__stage169_net_density_followup_review` is open_planned(개방 계획). Effect(효과): net/density lift(순손익/밀도 상승) 결과를 후속 검토로 넘긴다.
+  Stage170(170단계) closed(종료) as `open_stage171_segment_stability_equity_curve_audit_candidate_not_final` and Stage171(171단계) `171_adapter_research__segment_stability_equity_curve_audit` is open_planned(개방 계획). Effect(효과): Stage169(169단계)의 near-34D(34D 근접) KPI(핵심 성과 지표)를 segment/equity/concentration audit(구간/자산 곡선/집중도 감사)로 넘긴다.
 - >-
-  Stage169 evidence(169단계 근거)는 `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_report.md`, `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_net_density_lift_pf_preservation_summary.csv`, `stages/169_adapter_research__net_density_lift_pf_preservation/03_reviews/stage169_segment_kpi_summary.csv`에 있다. Effect(효과): PF preservation(수익요인 보존), DD(낙폭), OOS early(표본외 초반), net/density(순손익/밀도)를 같이 판독한다.
+  Stage170 evidence(170단계 근거)는 `stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_stage169_net_density_followup_review.md`, `stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_stage169_quality_matrix.csv`, `stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_stage169_segment_review.csv`, `stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_repair_route_summary.csv`에 있다. Effect(효과): final net(최종 순손익) 하나로 판정하지 않고 early/mid/late(초반/중반/후반) 품질을 같이 본다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_no_legacy_inheritance`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)만 계속한다.
+
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -6805,4 +6806,25 @@ stage169_net_density_lift_pf_preservation:
   external_verification_status: completed
   pushed_commit_hash: 9717fa54fd32bda22acd0845b80c1dc922e0fc17
   next_action: run170A_stage170_stage169_net_density_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage170_stage169_net_density_followup_review:
+  packet_id: stage170_stage169_net_density_followup_review_v1
+  stage_id: 170_adapter_research__stage169_net_density_followup_review
+  status: closed_open_stage171_segment_stability_equity_curve_audit_candidate_not_final
+  current_run_id: run170A_stage170_stage169_net_density_followup_review_v1
+  source_stage: 169_adapter_research__net_density_lift_pf_preservation
+  source_run: run169A_stage169_net_density_lift_pf_preservation_v1
+  source_stage169_closeout_commit: 9717fa54fd32bda22acd0845b80c1dc922e0fc17
+  source_stage169_hash_record_commit: 5a27b8537dfff9fedb4c8961cfe64b7ab9d25b1a
+  decision: open_stage171_segment_stability_equity_curve_audit_candidate_not_final
+  primary_adapter: s169_short_pre_risk0350_h3_cd5_sht54_lng52
+  report_path: stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_stage169_net_density_followup_review.md
+  decision_path: stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_decision.md
+  quality_matrix_path: stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_stage169_quality_matrix.csv
+  segment_review_path: stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_stage169_segment_review.csv
+  route_summary_path: stages/170_adapter_research__stage169_net_density_followup_review/03_reviews/stage170_repair_route_summary.csv
+  external_verification_status: review_only_source_stage169_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run171A_stage171_segment_stability_equity_curve_audit_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
