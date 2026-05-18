@@ -1398,4 +1398,5 @@
 
 - action(행동): closed(종료) `161_adapter_research__score_margin_or_side_filter_repair` with decision(판정) `continue_stage162_score_margin_or_side_filter_repair_candidate_not_final`.
 - effect(효과): score saturation(점수 포화)을 낮춘 확률 보정(probability calibration, 확률 보정)과 방향 필터(side filter, 방향 필터) 축을 MT5(메타트레이더5)로 측정하고 Stage162(162단계) 후속 판독으로 넘겼다.
+- pushed_commit_hash(푸시 커밋 해시): `b9f95b07366d9135d90df5a103070d98f1a0f1fd`
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

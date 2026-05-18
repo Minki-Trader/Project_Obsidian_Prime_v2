@@ -12,7 +12,7 @@
 - risk_atr_telemetry(위험/ATR 기록): `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_risk_atr_telemetry.csv`
 - probability_binding(확률 작동): `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_probability_binding_summary.csv`
 - model_score_audit(모델 점수 감사): `stages/161_adapter_research__score_margin_or_side_filter_repair/03_reviews/stage161_model_score_audit.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `b9f95b07366d9135d90df5a103070d98f1a0f1fd`
 - next_stage_or_branch(다음 단계 또는 분기): `162_adapter_research__stage161_score_margin_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

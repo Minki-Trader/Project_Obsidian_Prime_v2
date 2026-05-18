@@ -5,6 +5,7 @@
 - current_run(현재 실행): `run162A_stage162_stage161_score_margin_followup_review_v1`
 - source_stage(원천 단계): `161_adapter_research__score_margin_or_side_filter_repair`
 - source_run(원천 실행): `run161A_stage161_score_margin_or_side_filter_repair_v1`
+- source_stage161_closeout_commit(원천 161단계 종료 커밋): `b9f95b07366d9135d90df5a103070d98f1a0f1fd`
 - source_decision(원천 판정): `continue_stage162_score_margin_or_side_filter_repair_candidate_not_final`
 - target_surface(목표 표면): `legacy_34d_kpi_lesson_only_no_legacy_inheritance`
 - selected_research_baseline(선택 연구 기준선): `none`
