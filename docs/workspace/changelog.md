@@ -1865,3 +1865,8 @@
 - action(행동): closed(종료) `238_adapter_research__score_shape_repair_after_threshold_surface_discrete` with decision(판정) `open_stage239_bounded_followup_due_to_score_shape_tradeoff_candidate_not_final`.
 - effect(효과): margin rank score(마진 순위 점수)를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage239(239단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T13:08:24Z Stage239 score shape follow-up review closeout(239단계 점수 형태 후속 검토 종료)
+
+- action(행동): closed(종료) `239_adapter_research__stage238_score_shape_followup_review` with decision(판정) `open_stage240_bounded_highbonus_dd_midpf_repair_after_score_shape_tradeoff_candidate_not_final`.
+- effect(효과): highbonus(고마진) net/OOS gain(순손익/표본외 개선)을 보존하고 DD/midPF(낙폭/중간 수익요인) 수리를 Stage240(240단계)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
