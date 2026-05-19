@@ -1,8 +1,8 @@
-﻿current_run_id: run201A_stage201_stage200_mid_drawdown_entry_quality_followup_review_v1
+﻿current_run_id: run202A_stage202_stage200_probability_binding_repair_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review
+active_stage: 202_adapter_research__stage200_probability_binding_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage200(200단계) closed(종료) as `open_stage201_bounded_followup_due_to_mid_drawdown_entry_quality_tradeoff_candidate_not_final` and Stage201(201단계) `201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review` is open_planned(개방 계획). Effect(효과): entry/context quality(진입/문맥 품질) 수리 결과를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage201(201단계) closed(종료) as `open_stage202_bounded_probability_binding_repair_candidate_not_final` and Stage202(202단계) `202_adapter_research__stage200_probability_binding_repair` is open_planned(개방 계획). Effect(효과): threshold-only(문턱값만 조정) no-op(무효 변화)와 qwide overfilter(넓은 제한문 과필터)를 피하고 probability binding(확률 구속) 수리로 넘어간다.
 - >-
-  Stage200 evidence(200단계 근거)는 `stages/200_adapter_research__stage198_mid_drawdown_entry_quality_repair/03_reviews/stage200_mid_drawdown_entry_quality_report.md`, `stages/200_adapter_research__stage198_mid_drawdown_entry_quality_repair/03_reviews/stage200_mid_drawdown_entry_quality_summary.csv`, `stages/200_adapter_research__stage198_mid_drawdown_entry_quality_repair/03_reviews/stage200_quality_matrix.csv`, `stages/200_adapter_research__stage198_mid_drawdown_entry_quality_repair/03_reviews/stage200_balance_curve_audit.csv`, `stages/200_adapter_research__stage198_mid_drawdown_entry_quality_repair/03_reviews/stage200_risk_atr_telemetry.csv`에 있다. Effect(효과): threshold/gate(문턱값/제한문) 변화가 DD/PF/OOS(낙폭/수익요인/표본외)에 준 영향을 같이 본다.
+  Stage201 evidence(201단계 근거)는 `stages/201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review/03_reviews/stage201_followup_review.md`, `stages/201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review/03_reviews/stage201_mid_drawdown_tradeoff_matrix.csv`, `stages/201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review/03_reviews/stage201_performance_attribution.csv`, `stages/201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review/03_reviews/stage201_route_matrix.csv`에 있다. Effect(효과): trade reduction(거래 감소) 자체를 품질 개선으로 오해하지 않는다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_mid_drawdown_entry_quality_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_probability_binding_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7375,4 +7375,20 @@ stage200_mid_drawdown_entry_quality_repair:
   external_verification_status: completed
   pushed_commit_hash: d1bee8df4f8900295da896f6dbb8284797545a16
   next_action: run201A_stage201_stage200_mid_drawdown_entry_quality_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage201_stage200_mid_drawdown_entry_quality_followup_review:
+  packet_id: stage201_stage200_mid_drawdown_entry_quality_followup_review_v1
+  stage_id: 201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review
+  status: closed_open_stage202_bounded_probability_binding_repair_candidate_not_final
+  current_run_id: run201A_stage201_stage200_mid_drawdown_entry_quality_followup_review_v1
+  source_stage: 200_adapter_research__stage198_mid_drawdown_entry_quality_repair
+  source_run: run200A_stage200_stage198_mid_drawdown_entry_quality_repair_v1
+  decision: open_stage202_bounded_probability_binding_repair_candidate_not_final
+  report_path: stages/201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review/03_reviews/stage201_followup_review.md
+  decision_path: stages/201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review/03_reviews/stage201_decision.md
+  tradeoff_matrix_path: stages/201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review/03_reviews/stage201_mid_drawdown_tradeoff_matrix.csv
+  external_verification_status: review_only_source_stage200_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run202A_stage202_stage200_probability_binding_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
