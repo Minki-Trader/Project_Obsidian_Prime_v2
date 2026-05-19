@@ -12,7 +12,7 @@
 - tradeoff_matrix(상충 행렬): `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_probability_binding_tradeoff_matrix.csv`
 - attribution(성과 원인 분해): `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_performance_attribution.csv`
 - route_matrix(경로 행렬): `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `e1110b277df623aae687191de84efb58e92c165f`
 - next_stage_or_branch(다음 단계 또는 분기): `204_adapter_research__selective_probability_margin_recovery_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

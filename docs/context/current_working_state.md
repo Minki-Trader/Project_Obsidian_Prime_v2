@@ -20,6 +20,6 @@ Stage203(203단계)는 Stage202(202단계) probability binding repair(확률 구
 - tradeoff_matrix(상충 행렬): `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_probability_binding_tradeoff_matrix.csv`
 - attribution(성과 원인 분해): `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_performance_attribution.csv`
 - route_matrix(경로 행렬): `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `e1110b277df623aae687191de84efb58e92c165f`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
