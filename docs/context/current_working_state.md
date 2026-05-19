@@ -21,6 +21,6 @@ Stage214(214단계)는 Stage213(213단계) OOS monthly/concentration repair(표�
 - tradeoff_matrix(상충 행렬): `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_tradeoff_matrix.csv`
 - attribution(성과 원인 분해): `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_performance_attribution.csv`
 - route_matrix(경로 행렬): `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `333d78643a2539da5e4170d16d6d19ab6ba67213`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).

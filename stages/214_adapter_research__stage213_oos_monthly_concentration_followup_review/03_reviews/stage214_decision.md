@@ -13,7 +13,7 @@
 - tradeoff_matrix(상충 행렬): `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_tradeoff_matrix.csv`
 - attribution(성과 원인 분해): `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_performance_attribution.csv`
 - route_matrix(경로 행렬): `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `333d78643a2539da5e4170d16d6d19ab6ba67213`
 - next_stage_or_branch(다음 단계 또는 분기): `215_adapter_research__validation_mid_pf_recovery_preserve_oos_gain`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
