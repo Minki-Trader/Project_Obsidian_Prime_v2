@@ -1,4 +1,4 @@
-﻿﻿## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
+﻿## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
 
 - completed(완료): `run31A_state_context_router_broad_mt5_probe_v1`
 - judgment(판정): `state_context_not_useful_or_inconclusive`
@@ -1919,4 +1919,9 @@
 
 - action(행동): closed(종료) `246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune` with decision(판정) `open_stage247_bounded_followup_due_to_soft_guard_tradeoff_candidate_not_final`.
 - effect(효과): hard guard(강한 차단)를 soft flat tilt(부드러운 무포지션 기울기)로 바꿔 MT5(MetaTrader 5, 메타트레이더5) KPI(핵심 성과 지표)를 측정하고 Stage247(247단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T16:25:36Z Stage247 Stage246 soft guard follow-up review closeout(247단계 246단계 부드러운 보호문 후속 검토 종료)
+
+- action(행동): closed(종료) `247_adapter_research__stage246_soft_guard_followup_review` with decision(판정) `open_stage248_bounded_entry_source_quality_repair_after_stage246_soft_guard_tradeoff_candidate_not_final`.
+- effect(효과): soft guard(부드러운 보호문)의 DD(낙폭) 개선과 net/PF(순손익/수익요인) 손상을 기록하고 `248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff`를 열었다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

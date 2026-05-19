@@ -1,0 +1,49 @@
+{
+  "attribution_confidence": "high_for_soft_guard_tradeoff",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "small OOS PF gain can be explained by lower exposure, not stronger full adapter quality",
+      "attribution_confidence": "high",
+      "attribution_id": "run247A_stage247_stage246_soft_guard_followup_review_v1__soft_guard_tradeoff_confirmed",
+      "comparison_baseline": "s246_cap0305_control",
+      "likely_drivers": "probability tilt lowered exposure quality inside the middle-window surface",
+      "next_probe": "248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff",
+      "observed_change": "soft guard variants lowered validation DD but reduced validation net and mid PF",
+      "segment_checks": "validation/OOS quality matrix, balance curve audit, segment KPI, and risk/ATR telemetry reviewed",
+      "trade_shape": "trade count stayed 269 validation and 195 OOS; sizing/exposure changed rather than route coverage"
+    },
+    {
+      "alternative_explanations": "rounding or tester variance is too small to close all three gaps",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run247A_stage247_stage246_soft_guard_followup_review_v1__control_near_miss_preserved",
+      "comparison_baseline": "legacy 34D lesson-only KPI target",
+      "likely_drivers": "core entry/source quality remains the limiting surface after risk and ATR are present",
+      "next_probe": "248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff",
+      "observed_change": "control remains closest to 34D but still misses validation net, DD, and mid PF together",
+      "segment_checks": "mid chronological third remains weak and validation DD is slightly above 34D",
+      "trade_shape": "ATR SL/TP and model-controlled risk are present; they are necessary but not sufficient"
+    },
+    {
+      "alternative_explanations": "DD gain is real but not enough for 34D-equivalent KPI",
+      "attribution_confidence": "high",
+      "attribution_id": "run247A_stage247_stage246_soft_guard_followup_review_v1__do_not_repeat_stronger_soft_guard",
+      "comparison_baseline": "s246_softlow_flat003 versus stronger soft rows",
+      "likely_drivers": "blanket low/mid suppression removes profitable middle-window trades",
+      "next_probe": "entry/source repair rather than stronger soft guard",
+      "observed_change": "larger soft penalties worsened net more than they helped DD",
+      "segment_checks": "softlow_flat005 and softlowmid rows reviewed against control",
+      "trade_shape": "same trade count and lower risk-weighted returns indicate quality dilution"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage248_bounded_entry_source_quality_repair_after_stage246_soft_guard_tradeoff_candidate_not_final",
+  "external_verification_status": "review_only_source_stage246_mt5_reports_completed",
+  "next_stage_or_branch": "248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff",
+  "observed_change": "soft guard lowered DD while damaging net and mid PF",
+  "overall_goal_complete": false,
+  "packet_id": "stage247_stage246_soft_guard_followup_review_v1",
+  "run_id": "run247A_stage247_stage246_soft_guard_followup_review_v1",
+  "source_run": "run246A_stage246_soft_timestamp_guard_repair_after_stage244_overprune_v1",
+  "source_stage": "246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune",
+  "stage_id": "247_adapter_research__stage246_soft_guard_followup_review"
+}
