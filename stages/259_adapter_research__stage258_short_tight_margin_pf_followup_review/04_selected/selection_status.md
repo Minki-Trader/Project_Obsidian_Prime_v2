@@ -8,5 +8,5 @@
 - decision(판정): `open_stage260_bounded_tight_plus_highedge_pf_oos_recovery_repair_candidate_not_final`
 - external_verification_status(외부 검증 상태): `review_only_source_stage258_mt5_reports_completed`
 - next_stage_or_branch(다음 단계 또는 분기): `260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `8d3f6644fa08bb344e7763d9d8e211f045c61f78`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
