@@ -13,7 +13,7 @@
 - samecap_validation_mid_pf_gap_vs_34d(동일 상한 34D 대비 중간 수익요인 차이): `-0.084683922`
 - balanced_validation_net_gap_vs_34d(균형형 34D 대비 검증 순손익 차이): `-112.21`
 - next_stage_or_branch(다음 단계 또는 분기): `242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `d005c4f7dcb4c95c6ac4d6c774205fec8df61d95`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage241(241단계) closeout(종료)는 overall goal complete(전체 목표 완료)가 아니다.
