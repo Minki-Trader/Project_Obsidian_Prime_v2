@@ -22,6 +22,6 @@ Stage231(231단계)는 lifecycle compression(생애주기 압축) 축으로 mid 
 - monthly_kpi(월별 KPI 핵심 성과 지표): `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `adc7978cadb5d930ae557c058a64968fda528f91`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
