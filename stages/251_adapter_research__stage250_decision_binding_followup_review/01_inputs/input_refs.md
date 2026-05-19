@@ -1,0 +1,8 @@
+﻿# Stage251 Inputs(251단계 입력)
+
+- source_stage(원천 단계): `250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect`
+- source_run(원천 실행): `run250A_stage250_decision_surface_binding_repair_after_stage248_threshold_no_effect_v1`
+- source_decision(원천 판정): `open_stage251_bounded_followup_due_to_decision_binding_tradeoff_candidate_not_final`
+- stage250_report(250단계 보고서): `stages/250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect/03_reviews/stage250_decision_binding_report.md`
+- stage250_quality_matrix(250단계 품질 행렬): `stages/250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect/03_reviews/stage250_quality_matrix.csv`
+- stage250_failure_memory(250단계 실패 기억): `stages/250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect/03_reviews/stage250_failure_memory.csv`
