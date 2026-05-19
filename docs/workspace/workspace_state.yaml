@@ -1,8 +1,8 @@
-current_run_id: run260A_stage260_tight_plus_highedge_pf_oos_recovery_repair_v1
+current_run_id: run261A_stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1
 updated_on: '2026-05-20'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair
+active_stage: 261_adapter_research__stage260_tight_plus_highedge_pf_oos_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage259(259단계) closed(종료) as `open_stage260_bounded_tight_plus_highedge_pf_oos_recovery_repair_candidate_not_final` and Stage260(260단계) `260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair` is open_planned(개방 계획). Effect(효과): Stage258(258단계)의 가장 강한 tradeoff(절충안)인 `s258_tight_plus_highedge`를 좁은 PF/OOS recovery(PF/표본외 회복) 질문으로 넘긴다.
+  Stage260(260단계) closed(종료) as `open_stage261_bounded_followup_due_to_stage260_pf_oos_tradeoff_candidate_not_final` and Stage261(261단계) `261_adapter_research__stage260_tight_plus_highedge_pf_oos_followup_review` is open_planned(개방 계획). Effect(효과): highedge PF/OOS repair(하이엣지 PF/표본외 수리) 결과를 독립 검토로 넘긴다.
 - >-
-  Stage259 evidence(259단계 근거)는 `stages/259_adapter_research__stage258_short_tight_margin_pf_followup_review/03_reviews/stage259_stage258_short_tight_margin_pf_followup_review.md`, `stages/259_adapter_research__stage258_short_tight_margin_pf_followup_review/03_reviews/stage259_tradeoff_review_matrix.csv`, `stages/259_adapter_research__stage258_short_tight_margin_pf_followup_review/03_reviews/stage259_performance_attribution.csv`, `stages/259_adapter_research__stage258_short_tight_margin_pf_followup_review/03_reviews/stage259_failure_memory.csv`에 있다. Effect(효과): Stage260(260단계)은 validation net/DD(검증 순수익/손실폭) 장점을 보존하면서 PF(수익 팩터), mid PF(중간 PF), OOS net/PF(표본외 순수익/PF)를 복구해야 한다.
+  Stage260 evidence(260단계 근거)는 `stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_tight_plus_highedge_pf_oos_recovery_report.md`, `stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_quality_matrix.csv`, `stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_performance_attribution.csv`, `stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_failure_memory.csv`에 있다. Effect(효과): 다음 단계가 결과를 final(최종)로 오해하지 않고 KPI(핵심 성과 지표) 약점과 개선을 분리한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_tight_plus_highedge_pf_oos_recovery_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 KPI 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
@@ -8536,10 +8536,33 @@ stage259_stage258_short_tight_margin_pf_followup_review:
 stage260_tight_plus_highedge_pf_oos_recovery_repair:
   packet_id: stage260_tight_plus_highedge_pf_oos_recovery_repair_v1
   stage_id: 260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair
-  status: open_planned_from_stage259
+  status: closed_open_stage261_followup_candidate_not_final
   current_run_id: run260A_stage260_tight_plus_highedge_pf_oos_recovery_repair_v1
   source_stage: 259_adapter_research__stage258_short_tight_margin_pf_followup_review
   source_run: run259A_stage259_stage258_short_tight_margin_pf_followup_review_v1
-  source_decision: open_stage260_bounded_tight_plus_highedge_pf_oos_recovery_repair_candidate_not_final
-  next_action: run260A_stage260_tight_plus_highedge_pf_oos_recovery_repair_v1
+  source_stage258_evidence_commit: 5dbd67b79c824e3d7049b6f482b8c83b0eda92db
+  source_stage258_hash_record_commit: 7f916e6bae523c45f269eb48c91f6c17e61a55e3
+  source_stage259_evidence_commit: 8d3f6644fa08bb344e7763d9d8e211f045c61f78
+  source_stage259_hash_record_commit: 28cfb566f3ae6633ec04237a307754666f6cde38
+  decision: open_stage261_bounded_followup_due_to_stage260_pf_oos_tradeoff_candidate_not_final
+  report_path: stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_tight_plus_highedge_pf_oos_recovery_report.md
+  decision_path: stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_decision.md
+  summary_path: stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_source_feature_kpi_summary.csv
+  quality_matrix_path: stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_quality_matrix.csv
+  probability_telemetry_path: stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_probability_telemetry_summary.csv
+  risk_atr_telemetry_path: stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_risk_atr_telemetry.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run261A_stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage261_stage260_tight_plus_highedge_pf_oos_followup_review:
+  packet_id: stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1
+  stage_id: 261_adapter_research__stage260_tight_plus_highedge_pf_oos_followup_review
+  status: open_planned_from_stage260
+  current_run_id: run261A_stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1
+  source_stage: 260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair
+  source_run: run260A_stage260_tight_plus_highedge_pf_oos_recovery_repair_v1
+  source_decision: open_stage261_bounded_followup_due_to_stage260_pf_oos_tradeoff_candidate_not_final
+  next_action: run261A_stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
