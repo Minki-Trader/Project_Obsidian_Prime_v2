@@ -22,6 +22,6 @@ Stage233(233단계)는 side/session/context(방향/세션/문맥) 축으로 KPI(
 - monthly_kpi(월별 KPI 핵심 성과 지표): `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `971fdb5f65a8c0d8fcf5580b31cea61e4ee71e72`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
