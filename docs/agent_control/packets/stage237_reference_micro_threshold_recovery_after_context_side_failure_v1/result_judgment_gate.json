@@ -1,0 +1,110 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage238_bounded_score_shape_repair_after_threshold_surface_discrete_candidate_not_final",
+  "external_verification_status": "review_only_source_stage235_mt5_telemetry_completed",
+  "failure_memory": [
+    {
+      "do_not_repeat": "Do not run micro threshold(미세 문턱값) variants on the current binary score shape(이진 점수 형태).",
+      "failure_id": "run237A_stage237_reference_micro_threshold_recovery_after_context_side_failure_v1__micro_threshold_surface_discrete",
+      "hypothesis": "Small threshold/rank-confidence(문턱값/순위 신뢰도) adjustments around the reference can recover validation net/PF(검증 순손익/수익요인).",
+      "reopen_condition": "Only reopen after model score shape(모델 점수 형태)가 more granular(더 세분화)해진다.",
+      "salvage_value": "Threshold(문턱값)이 아니라 score shape(점수 형태)를 바꿔야 한다는 다음 수리 축을 얻었다.",
+      "why_failed": "directional_near_threshold_001_rows=0;directional_pass_probability=0.576117;unique_probability_count=2"
+    },
+    {
+      "do_not_repeat": "Do not treat constant probability(상수 확률)를 rank-confidence(순위 신뢰도)로 해석하지 않는다.",
+      "failure_id": "run237A_stage237_reference_micro_threshold_recovery_after_context_side_failure_v1__score_shape_flat",
+      "hypothesis": "Reference model(기준 모델) has enough rank diversity(순위 다양성) for confidence gating(신뢰도 게이트).",
+      "reopen_condition": "Reopen threshold(문턱값) only after score distribution(점수 분포) has multiple useful ranks(유용한 여러 순위).",
+      "salvage_value": "Stage238(238단계)은 feature/model score diversity(특징/모델 점수 다양성)를 직접 다룬다.",
+      "why_failed": "feature0_min_implied_winner_prob=0.576117;feature0_max_implied_winner_prob=0.576117;feature1_scores_all_zero=True"
+    }
+  ],
+  "judgment_label": "negative_threshold_surface_candidate_not_final",
+  "next_condition": "Stage238 must repair score shape rather than repeat current threshold variants.",
+  "overall_goal_complete": false,
+  "packet_id": "stage237_reference_micro_threshold_recovery_after_context_side_failure_v1",
+  "reference_adapter": "s235_session_ref_h3_cd8",
+  "route_rows": [
+    {
+      "action": "Open Stage238(238단계) for score shape repair(점수 형태 수리) instead of repeating threshold(문턱값) variants.",
+      "effect": "현재 확률이 0.5761168848 근처 이산값이라 threshold(문턱값)만으로는 34D(34D 기준) 부족분을 세밀하게 회복할 수 없다는 실패 축을 보존한다.",
+      "evidence": "threshold_rows=2;score_shape_rows=1;reference_adapter=s235_session_ref_h3_cd8",
+      "risk": "Score shape repair(점수 형태 수리)는 새 모델/특징 축이므로 Stage238(238단계)에서 별도 경계가 필요하다.",
+      "route": "open_stage238_bounded_score_shape_repair_after_threshold_surface_discrete_candidate_not_final"
+    },
+    {
+      "action": "Do not run small long/short threshold(롱/숏 문턱값) sweeps around 0.52/0.54.",
+      "effect": "Stage225(225단계)와 Stage235(235단계) telemetry(기록)가 이미 no-rank surface(순위 없는 표면)를 보여 주므로 MT5(MetaTrader 5, 메타트레이더5) 시간을 아낀다.",
+      "evidence": "directional_near_threshold_001_rows=0 and pass probability is constant.",
+      "risk": "If a future model changes probabilities, threshold(문턱값) can be reopened in a new bounded stage(경계 단계).",
+      "route": "do_not_run_threshold_noop_variants"
+    }
+  ],
+  "run_id": "run237A_stage237_reference_micro_threshold_recovery_after_context_side_failure_v1",
+  "score_rows": [
+    {
+      "adapter_id": "s235_session_ref_h3_cd8",
+      "feature0_max_implied_winner_prob": 0.5761168848,
+      "feature0_max_score_gap": 1.0,
+      "feature0_min_implied_winner_prob": 0.5761168848,
+      "feature0_min_score_gap": 1.0,
+      "feature0_score_rows": 4,
+      "feature1_scores_all_zero": "True",
+      "logit_strength": 0.5,
+      "model_sha256": "10239cdf84eceb8e942fa767d2726ff65e1836fcc6ba1ec6fbd189b889e3c1e0",
+      "risk_confidence_ceiling": 0.6,
+      "risk_confidence_floor": 0.5,
+      "score_shape_label": "non_saturated_or_unknown",
+      "score_shape_status": "flat_binary_score_shape_no_micro_rank"
+    }
+  ],
+  "source_run_id": "run236A_stage236_stage235_side_specific_followup_review_v1",
+  "source_stage": "236_adapter_research__stage235_side_specific_followup_review",
+  "stage_id": "237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure",
+  "status": "passed_with_boundary",
+  "threshold_rows": [
+    {
+      "adapter_id": "s235_session_ref_h3_cd8",
+      "decision_counts": "{\"flat\":9569,\"long\":146,\"short\":129}",
+      "directional_near_threshold_001_rows": 0,
+      "directional_pass_max_probability": 0.5761168848,
+      "directional_pass_median_probability": 0.5761168848,
+      "directional_pass_min_probability": 0.5761168848,
+      "directional_pass_rows": 468,
+      "long_threshold": 0.52,
+      "micro_lower_threshold_expected_effect": "no_material_change_in_existing_stage225_and_stage235_evidence",
+      "micro_raise_to_0575_expected_effect": "no_material_change_because_pass_probability_is_0_5761168848",
+      "p_flat_unique_count": 2,
+      "p_long_unique_count": 2,
+      "p_short_unique_count": 2,
+      "raise_above_pass_probability_expected_effect": "binary_signal_collapse_risk",
+      "short_threshold": 0.54,
+      "split": "validation_is",
+      "threshold_or_margin_not_met_rows": 9376,
+      "threshold_surface_status": "discrete_no_rank_surface",
+      "view": "actual_routed_total"
+    },
+    {
+      "adapter_id": "s235_session_ref_h3_cd8",
+      "decision_counts": "{\"flat\":7384,\"long\":121,\"short\":79}",
+      "directional_near_threshold_001_rows": 0,
+      "directional_pass_max_probability": 0.5761168848,
+      "directional_pass_median_probability": 0.5761168848,
+      "directional_pass_min_probability": 0.5761168848,
+      "directional_pass_rows": 348,
+      "long_threshold": 0.52,
+      "micro_lower_threshold_expected_effect": "no_material_change_in_existing_stage225_and_stage235_evidence",
+      "micro_raise_to_0575_expected_effect": "no_material_change_because_pass_probability_is_0_5761168848",
+      "p_flat_unique_count": 2,
+      "p_long_unique_count": 2,
+      "p_short_unique_count": 2,
+      "raise_above_pass_probability_expected_effect": "binary_signal_collapse_risk",
+      "short_threshold": 0.54,
+      "split": "oos",
+      "threshold_or_margin_not_met_rows": 7236,
+      "threshold_surface_status": "discrete_no_rank_surface",
+      "view": "actual_routed_total"
+    }
+  ]
+}

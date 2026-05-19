@@ -1,0 +1,11 @@
+﻿# Stage238 Inputs(238단계 입력)
+
+- source_stage(원천 단계): `237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure`
+- source_run(원천 실행): `run237A_stage237_reference_micro_threshold_recovery_after_context_side_failure_v1`
+- source_decision(원천 판정): `open_stage238_bounded_score_shape_repair_after_threshold_surface_discrete_candidate_not_final`
+- reference_adapter(기준 어댑터): `s235_session_ref_h3_cd8`
+- report(보고서): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_threshold_surface_feasibility_report.md`
+- threshold_surface_audit(문턱값 표면 감사): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_threshold_surface_audit.csv`
+- score_shape_audit(점수 형태 감사): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_score_shape_audit.csv`
+- failure_memory(실패 기억): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_failure_memory.csv`
+- decision_path(판정 파일): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_decision.md`

@@ -1,6 +1,12 @@
 ﻿# Stage237 Review Index(237단계 검토 색인)
 
-- status(상태): `open_planned_from_stage236`
-- source_stage(원천 단계): `236_adapter_research__stage235_side_specific_followup_review`
-- source_decision(원천 판정): `open_stage237_bounded_reference_micro_threshold_recovery_after_context_side_failure_candidate_not_final`
-- next_action(다음 행동): `run237A_stage237_reference_micro_threshold_recovery_after_context_side_failure_v1`
+- status(상태): `reviewed_closed_open_stage238_bounded_score_shape_repair_after_threshold_surface_discrete_candidate_not_final`
+- packet(작업 묶음): `stage237_reference_micro_threshold_recovery_after_context_side_failure_v1`
+- run(실행): `run237A_stage237_reference_micro_threshold_recovery_after_context_side_failure_v1`
+- decision(판정): `open_stage238_bounded_score_shape_repair_after_threshold_surface_discrete_candidate_not_final`
+- report(보고서): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_threshold_surface_feasibility_report.md`
+- threshold_surface_audit(문턱값 표면 감사): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_threshold_surface_audit.csv`
+- score_shape_audit(점수 형태 감사): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_score_shape_audit.csv`
+- route_matrix(경로 행렬): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_route_matrix.csv`
+- failure_memory(실패 기억): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_failure_memory.csv`
+- next_stage_or_branch(다음 단계 또는 분기): `238_adapter_research__score_shape_repair_after_threshold_surface_discrete`
