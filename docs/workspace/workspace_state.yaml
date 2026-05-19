@@ -1,8 +1,8 @@
-﻿current_run_id: run204A_stage204_selective_probability_margin_recovery_repair_v1
+﻿current_run_id: run205A_stage205_stage204_selective_probability_margin_followup_review_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 204_adapter_research__selective_probability_margin_recovery_repair
+active_stage: 205_adapter_research__stage204_selective_probability_margin_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage203(203단계) closed(종료) as `open_stage204_selective_probability_margin_recovery_repair_candidate_not_final` and Stage204(204단계) `204_adapter_research__selective_probability_margin_recovery_repair` is open_planned(개방 계획). Effect(효과): side-wide cut(방향 전체 차단) 대신 selective probability/margin repair(선별 확률/마진 수리)로 넘어간다.
+  Stage204(204단계) closed(종료) as `open_stage205_bounded_followup_due_to_selective_probability_margin_tradeoff_candidate_not_final` and Stage205(205단계) `205_adapter_research__stage204_selective_probability_margin_followup_review` is open_planned(개방 계획). Effect(효과): selective probability/margin(선별 확률/마진) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
 - >-
-  Stage203 evidence(203단계 근거)는 `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_followup_review.md`, `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_probability_binding_tradeoff_matrix.csv`, `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_performance_attribution.csv`, `stages/203_adapter_research__stage202_probability_binding_followup_review/03_reviews/stage203_route_matrix.csv`에 있다. Effect(효과): DD improvement(낙폭 개선)과 net/OOS damage(순손익/표본외 손상)를 분리해서 본다.
+  Stage204 evidence(204단계 근거)는 `stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_selective_probability_margin_report.md`, `stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_selective_probability_margin_kpi_summary.csv`, `stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_quality_matrix.csv`, `stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_balance_curve_audit.csv`, `stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_risk_atr_telemetry.csv`에 있다. Effect(효과): 실제 구속된 threshold(문턱값)가 DD/PF/OOS(낙폭/수익요인/표본외)에 준 영향을 같이 본다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_selective_probability_margin_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
@@ -7426,4 +7426,23 @@ stage203_stage202_probability_binding_followup_review:
   external_verification_status: review_only_source_stage202_mt5_reports_completed
   pushed_commit_hash: e1110b277df623aae687191de84efb58e92c165f
   next_action: run204A_stage204_selective_probability_margin_recovery_repair_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage204_selective_probability_margin_repair:
+  packet_id: stage204_selective_probability_margin_recovery_repair_v1
+  stage_id: 204_adapter_research__selective_probability_margin_recovery_repair
+  status: closed_open_stage205_bounded_followup_due_to_selective_probability_margin_tradeoff_candidate_not_final
+  current_run_id: run204A_stage204_selective_probability_margin_recovery_repair_v1
+  source_stage: 203_adapter_research__stage202_probability_binding_followup_review
+  source_run: run203A_stage203_stage202_probability_binding_followup_review_v1
+  source_adapter: s202_cd8_ref_r0325
+  decision: open_stage205_bounded_followup_due_to_selective_probability_margin_tradeoff_candidate_not_final
+  report_path: stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_selective_probability_margin_report.md
+  decision_path: stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_decision.md
+  summary_path: stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_selective_probability_margin_kpi_summary.csv
+  quality_matrix_path: stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_quality_matrix.csv
+  balance_curve_audit_path: stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_balance_curve_audit.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run205A_stage205_stage204_selective_probability_margin_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
