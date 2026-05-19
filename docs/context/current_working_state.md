@@ -20,6 +20,6 @@ Stage251(251단계)는 Stage250(250단계) decision binding(결정 결합)을 re
 - tradeoff_matrix(상충 행렬): `stages/251_adapter_research__stage250_decision_binding_followup_review/03_reviews/stage251_tradeoff_review_matrix.csv`
 - attribution(성과 귀속): `stages/251_adapter_research__stage250_decision_binding_followup_review/03_reviews/stage251_performance_attribution.csv`
 - failure_memory(실패 기억): `stages/251_adapter_research__stage250_decision_binding_followup_review/03_reviews/stage251_failure_memory.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `5928b10add8f7d8da8680becdaf6ccf1049da1e6`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).

@@ -15,7 +15,7 @@
 - route_matrix(경로 행렬): `stages/251_adapter_research__stage250_decision_binding_followup_review/03_reviews/stage251_route_matrix.csv`
 - risk_atr_review(위험/ATR 검토): `stages/251_adapter_research__stage250_decision_binding_followup_review/03_reviews/stage251_risk_atr_review.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `252_adapter_research__asymmetric_binding_repair_after_stage250_overprune`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `5928b10add8f7d8da8680becdaf6ccf1049da1e6`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage251(251단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.
