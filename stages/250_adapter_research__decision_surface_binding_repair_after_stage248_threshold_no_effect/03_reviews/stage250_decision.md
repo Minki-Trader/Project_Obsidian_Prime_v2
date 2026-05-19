@@ -17,7 +17,7 @@
 - model_score_audit(모델 점수 감사): `stages/250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect/03_reviews/stage250_model_score_audit.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect/03_reviews/stage250_risk_atr_telemetry.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `251_adapter_research__stage250_decision_binding_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `70625d3b9651397a9c24ed4399483691f221780c`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage250(250단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.
