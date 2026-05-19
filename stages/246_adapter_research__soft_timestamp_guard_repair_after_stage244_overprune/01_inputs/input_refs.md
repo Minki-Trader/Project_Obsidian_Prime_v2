@@ -1,0 +1,9 @@
+﻿# Stage246 Inputs(246단계 입력)
+
+- source_stage(원천 단계): `245_adapter_research__stage244_timestamp_guard_followup_review`
+- source_decision(원천 판정): `open_stage246_bounded_soft_guard_repair_after_stage244_overprune_candidate_not_final`
+- source_report(원천 보고서): `stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_stage244_followup_review.md`
+- source_tradeoff_matrix(원천 상충 행렬): `stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_tradeoff_review_matrix.csv`
+- source_failure_memory(원천 실패 기억): `stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_failure_memory.csv`
+- source_stage244_quality_matrix(원천 244단계 품질 행렬): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_quality_matrix.csv`
+- source_stage244_gate_feature_summary(원천 244단계 보호문 피처 요약): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_gate_feature_summary.csv`

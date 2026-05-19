@@ -1,0 +1,183 @@
+{
+  "attribution_rows": [
+    {
+      "alternative_explanations": "none material; gate telemetry directly changed",
+      "attribution_confidence": "high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__timestamp_parser_repair_validated",
+      "comparison_baseline": "Stage242 inactive guard evidence",
+      "likely_drivers": "timestamp parser repair for YYYY.MM.DD HH:MM:SS feature time",
+      "next_probe": "repair guard selectivity, not parser",
+      "observed_change": "mid_window_rows and selective_blocked_signal_rows became nonzero",
+      "segment_checks": "validation/OOS gate_feature_summary reviewed for every Stage244 variant",
+      "trade_shape": "active guard reduced trade count where blocked rows became nonzero"
+    },
+    {
+      "alternative_explanations": "DD improvement came from removing too much profitable exposure",
+      "attribution_confidence": "high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__low_guard_overprune_damage",
+      "comparison_baseline": "s244_samecap_control",
+      "likely_drivers": "hard low-bucket middle-window block; 73 validation and 40 OOS signals blocked",
+      "next_probe": "soft or score-weighted guard instead of hard low block",
+      "observed_change": "validation_net_delta=-441.00;mid_pf_delta=-0.350229;oos_net_delta=-104.68",
+      "segment_checks": "validation/OOS and early/mid/late reviewed; mid PF dropped to 1.148244",
+      "trade_shape": "validation trades fell from 269 to 198; validation net fell from 967.85 to 526.85"
+    },
+    {
+      "alternative_explanations": "OOS PF gain does not rescue validation collapse",
+      "attribution_confidence": "high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__low_mid_guard_mid_pf_collapse",
+      "comparison_baseline": "s244_samecap_control",
+      "likely_drivers": "hard low+mid middle-window block; 87 validation and 46 OOS signals blocked",
+      "next_probe": "246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune",
+      "observed_change": "validation_net_delta=-514.39;mid_pf_delta=-0.479272;oos_net_delta=-117.16",
+      "segment_checks": "middle chronological third reviewed; validation mid PF dropped to 1.019201",
+      "trade_shape": "validation trades fell from 269 to 184"
+    },
+    {
+      "alternative_explanations": "small validation gain could be sizing noise; still useful as control arm",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__cap0305_near_miss_not_final",
+      "comparison_baseline": "s244_samecap_control and legacy 34D lesson-only KPI target",
+      "likely_drivers": "mild model-risk cap 0.0305 improves validation balance but trims OOS net",
+      "next_probe": "Stage246 should preserve cap0305 control while testing softer guard forms",
+      "observed_change": "validation_net_delta=8.82;validation_dd_delta=-0.4343;oos_net_delta=-37.04",
+      "segment_checks": "quality flags remain validation_net_below_34d, validation_balance_dd_above_34d, validation_mid_pf_below_34d",
+      "trade_shape": "trade count unchanged versus samecap; risk sizing changed"
+    }
+  ],
+  "best_reference": "s244_cap0305_control",
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage246_bounded_soft_guard_repair_after_stage244_overprune_candidate_not_final",
+  "external_verification_status": "review_only_source_stage244_mt5_reports_completed",
+  "failure_memory_rows": [
+    {
+      "evidence": "parser fixed and blocked rows became nonzero",
+      "failure_id": "stage245_active_guard_is_valid_but_not_quality_positive",
+      "impact": "activation is necessary but not sufficient",
+      "next_handling": "246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune"
+    },
+    {
+      "evidence": "s244_midlow_guard validation net 526.85 vs samecap 967.85",
+      "failure_id": "stage245_low_guard_overpruned_validation_net",
+      "impact": "DD improvement came with unacceptable net and mid PF damage",
+      "next_handling": "avoid hard low bucket block"
+    },
+    {
+      "evidence": "s244_midlowmid_guard mid PF 1.019201 and validation net 453.46",
+      "failure_id": "stage245_low_mid_guard_mid_pf_collapse",
+      "impact": "middle segment became nearly flat",
+      "next_handling": "test soft or score-weighted guard only"
+    },
+    {
+      "evidence": "s244_cap0305_control validation net gap -10.93; DD margin -0.033664; mid PF 1.522877",
+      "failure_id": "stage245_cap0305_near_miss_not_final",
+      "impact": "closest row remains below 34D",
+      "next_handling": "use as reference control in Stage246"
+    }
+  ],
+  "next_stage_or_branch": "246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune",
+  "overall_goal_complete": false,
+  "packet_id": "stage245_stage244_timestamp_guard_followup_review_v1",
+  "pushed_commit_hash": "pending_until_push",
+  "required_outputs": {
+    "attribution": "stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_performance_attribution.csv",
+    "decision": "stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_decision.md",
+    "failure_memory": "stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_failure_memory.csv",
+    "report": "stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_stage244_followup_review.md",
+    "route_matrix": "stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_route_matrix.csv",
+    "tradeoff_matrix": "stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_tradeoff_review_matrix.csv"
+  },
+  "run_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1",
+  "source_run_id": "run244A_stage244_timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard_v1",
+  "source_stage": "244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard",
+  "source_stage244_evidence_commit": "8a5691eac72e6b347263e7b0ab110004e2054668",
+  "source_stage244_hash_record_commit": "579cf6cddc067f425169846926b51617f651d563",
+  "stage_id": "245_adapter_research__stage244_timestamp_guard_followup_review",
+  "tradeoff_rows": [
+    {
+      "adapter_id": "s244_samecap_control",
+      "hard_quality_pass": "False",
+      "oos_net": "812.8",
+      "oos_net_delta_vs_samecap": "0.00",
+      "oos_pf": "1.78",
+      "read": "OOS(표본외)는 강하지만 34D(34D 기준) 대비 validation net/DD/mid PF(검증 순손익/낙폭/중간 수익요인)가 부족하다.",
+      "review_class": "samecap_reference_still_below_34d",
+      "selective_blocked_oos": 0,
+      "selective_blocked_validation": 0,
+      "validation_dd_delta_vs_samecap": "0.0000",
+      "validation_dd_percent": "13.3771",
+      "validation_mid_pf": "1.498473078",
+      "validation_mid_pf_delta_vs_samecap": "0.000000",
+      "validation_net": "967.85",
+      "validation_net_delta_vs_samecap": "0.00"
+    },
+    {
+      "adapter_id": "s244_midlow_guard",
+      "hard_quality_pass": "False",
+      "oos_net": "708.12",
+      "oos_net_delta_vs_samecap": "-104.68",
+      "oos_pf": "1.89",
+      "read": "low bucket(낮은 구간)을 막자 DD(낙폭)는 좋아졌지만 validation net(검증 순손익)과 mid PF(중간 수익요인)가 크게 무너졌다.",
+      "review_class": "active_low_guard_overpruned_validation_net_and_mid_pf",
+      "selective_blocked_oos": 40,
+      "selective_blocked_validation": 73,
+      "validation_dd_delta_vs_samecap": "-4.6331",
+      "validation_dd_percent": "8.744",
+      "validation_mid_pf": "1.148244061",
+      "validation_mid_pf_delta_vs_samecap": "-0.350229",
+      "validation_net": "526.85",
+      "validation_net_delta_vs_samecap": "-441.00"
+    },
+    {
+      "adapter_id": "s244_midlowmid_guard",
+      "hard_quality_pass": "False",
+      "oos_net": "695.64",
+      "oos_net_delta_vs_samecap": "-117.16",
+      "oos_pf": "1.9",
+      "read": "low+mid bucket(낮은+중간 구간)을 막자 mid PF(중간 수익요인)가 거의 1.0까지 내려가 over-prune(과차단)이 확인됐다.",
+      "review_class": "active_low_mid_guard_collapsed_mid_pf",
+      "selective_blocked_oos": 46,
+      "selective_blocked_validation": 87,
+      "validation_dd_delta_vs_samecap": "-1.6138",
+      "validation_dd_percent": "11.7633",
+      "validation_mid_pf": "1.019200907",
+      "validation_mid_pf_delta_vs_samecap": "-0.479272",
+      "validation_net": "453.46",
+      "validation_net_delta_vs_samecap": "-514.39"
+    },
+    {
+      "adapter_id": "s244_cap0305_control",
+      "hard_quality_pass": "False",
+      "oos_net": "775.76",
+      "oos_net_delta_vs_samecap": "-37.04",
+      "oos_pf": "1.78",
+      "read": "mild cap(완만한 상한)만 둔 near-miss(근접 실패)다. 가장 가깝지만 아직 34D(34D 기준)를 동시에 넘지 못한다.",
+      "review_class": "cap0305_control_near_miss_no_guard",
+      "selective_blocked_oos": 0,
+      "selective_blocked_validation": 0,
+      "validation_dd_delta_vs_samecap": "-0.4343",
+      "validation_dd_percent": "12.9428",
+      "validation_mid_pf": "1.522877251",
+      "validation_mid_pf_delta_vs_samecap": "0.024404",
+      "validation_net": "976.67",
+      "validation_net_delta_vs_samecap": "8.82"
+    },
+    {
+      "adapter_id": "s244_midlowmid_guard_cap0305",
+      "hard_quality_pass": "False",
+      "oos_net": "680.5",
+      "oos_net_delta_vs_samecap": "-132.30",
+      "oos_pf": "1.92",
+      "read": "cap(상한)과 hard guard(강한 보호문)를 같이 쓰면 OOS PF(표본외 수익요인)는 높지만 validation net(검증 순손익)이 크게 손상된다.",
+      "review_class": "cap0305_plus_active_guard_overpruned",
+      "selective_blocked_oos": 46,
+      "selective_blocked_validation": 87,
+      "validation_dd_delta_vs_samecap": "-3.0744",
+      "validation_dd_percent": "10.3027",
+      "validation_mid_pf": "1.027010759",
+      "validation_mid_pf_delta_vs_samecap": "-0.471462",
+      "validation_net": "454.48",
+      "validation_net_delta_vs_samecap": "-513.37"
+    }
+  ]
+}

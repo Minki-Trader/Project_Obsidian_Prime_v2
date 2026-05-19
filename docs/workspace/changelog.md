@@ -1900,3 +1900,8 @@
 - action(행동): closed(종료) `244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard` with decision(판정) `open_stage245_bounded_followup_due_to_timestamp_guard_tradeoff_candidate_not_final`.
 - effect(효과): 시간 형식 인식 low/mid margin guard(저/중간 마진 보호문)를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage245(245단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+
+## 2026-05-20 Stage245 stage244 timestamp guard follow-up review(245단계 244단계 시간 보호문 후속 검토)
+
+- action(행동): closed(종료) `245_adapter_research__stage244_timestamp_guard_followup_review` with decision(판정) `open_stage246_bounded_soft_guard_repair_after_stage244_overprune_candidate_not_final`.
+- effect(효과): hard guard(강한 보호문) over-prune damage(과차단 손상)를 기록하고 `246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune`를 열었다.

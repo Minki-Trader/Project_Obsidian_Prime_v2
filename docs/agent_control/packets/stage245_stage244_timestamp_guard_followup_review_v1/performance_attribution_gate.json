@@ -1,0 +1,50 @@
+{
+  "attribution_confidence": "high_for_overprune_damage",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "none material; gate telemetry directly changed",
+      "attribution_confidence": "high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__timestamp_parser_repair_validated",
+      "comparison_baseline": "Stage242 inactive guard evidence",
+      "likely_drivers": "timestamp parser repair for YYYY.MM.DD HH:MM:SS feature time",
+      "next_probe": "repair guard selectivity, not parser",
+      "observed_change": "mid_window_rows and selective_blocked_signal_rows became nonzero",
+      "segment_checks": "validation/OOS gate_feature_summary reviewed for every Stage244 variant",
+      "trade_shape": "active guard reduced trade count where blocked rows became nonzero"
+    },
+    {
+      "alternative_explanations": "DD improvement came from removing too much profitable exposure",
+      "attribution_confidence": "high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__low_guard_overprune_damage",
+      "comparison_baseline": "s244_samecap_control",
+      "likely_drivers": "hard low-bucket middle-window block; 73 validation and 40 OOS signals blocked",
+      "next_probe": "soft or score-weighted guard instead of hard low block",
+      "observed_change": "validation_net_delta=-441.00;mid_pf_delta=-0.350229;oos_net_delta=-104.68",
+      "segment_checks": "validation/OOS and early/mid/late reviewed; mid PF dropped to 1.148244",
+      "trade_shape": "validation trades fell from 269 to 198; validation net fell from 967.85 to 526.85"
+    },
+    {
+      "alternative_explanations": "OOS PF gain does not rescue validation collapse",
+      "attribution_confidence": "high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__low_mid_guard_mid_pf_collapse",
+      "comparison_baseline": "s244_samecap_control",
+      "likely_drivers": "hard low+mid middle-window block; 87 validation and 46 OOS signals blocked",
+      "next_probe": "246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune",
+      "observed_change": "validation_net_delta=-514.39;mid_pf_delta=-0.479272;oos_net_delta=-117.16",
+      "segment_checks": "middle chronological third reviewed; validation mid PF dropped to 1.019201",
+      "trade_shape": "validation trades fell from 269 to 184"
+    },
+    {
+      "alternative_explanations": "small validation gain could be sizing noise; still useful as control arm",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1__cap0305_near_miss_not_final",
+      "comparison_baseline": "s244_samecap_control and legacy 34D lesson-only KPI target",
+      "likely_drivers": "mild model-risk cap 0.0305 improves validation balance but trims OOS net",
+      "next_probe": "Stage246 should preserve cap0305 control while testing softer guard forms",
+      "observed_change": "validation_net_delta=8.82;validation_dd_delta=-0.4343;oos_net_delta=-37.04",
+      "segment_checks": "quality flags remain validation_net_below_34d, validation_balance_dd_above_34d, validation_mid_pf_below_34d",
+      "trade_shape": "trade count unchanged versus samecap; risk sizing changed"
+    }
+  ],
+  "run_id": "run245A_stage245_stage244_timestamp_guard_followup_review_v1"
+}
