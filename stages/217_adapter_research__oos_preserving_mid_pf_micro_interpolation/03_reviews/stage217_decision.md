@@ -16,7 +16,7 @@
 - monthly_kpi(월별 KPI 핵심 성과 지표): `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `053616518aa105c2830bd5d70a29b2ed65f2f61c`
 - next_stage_or_branch(다음 단계 또는 분기): `218_adapter_research__stage217_micro_interpolation_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
