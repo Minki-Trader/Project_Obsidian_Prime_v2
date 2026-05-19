@@ -19,6 +19,6 @@ Effect(효과): Stage264(264단계)는 OOS(표본외) 회복과 validation(검�
 - external_verification_status(외부 검증 상태): `review_only_source_stage262_mt5_reports_completed`
 - report(보고서): `stages/263_adapter_research__stage262_lowrank_lowedge_oos_followup_review/03_reviews/stage263_stage262_lowrank_lowedge_oos_followup_review.md`
 - tradeoff_matrix(절충 행렬): `stages/263_adapter_research__stage262_lowrank_lowedge_oos_followup_review/03_reviews/stage263_tradeoff_review_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `3342cf754631e42903aeee3725e42f98fcf9c260`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).
