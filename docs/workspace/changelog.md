@@ -1643,3 +1643,8 @@
 - action(행동): closed(종료) `199_adapter_research__stage198_adverse_excursion_followup_review` with decision(판정) `open_stage200_bounded_mid_drawdown_entry_quality_repair_candidate_not_final`.
 - effect(효과): Stage198(198단계)의 stop-tightening/flat-exit(손절 축소/평탄 청산) 상충을 분리하고 Stage200(200단계) entry/context quality repair(진입/문맥 품질 수리)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T00:26:25Z Stage200 mid drawdown entry quality repair closeout(200단계 중반 낙폭 진입 품질 수리 종료)
+
+- action(행동): closed(종료) `200_adapter_research__stage198_mid_drawdown_entry_quality_repair` with decision(판정) `open_stage201_bounded_followup_due_to_mid_drawdown_entry_quality_tradeoff_candidate_not_final`.
+- effect(효과): risk cap/ATR bracket/cooldown(위험 상한/ATR 브래킷/대기)을 고정하고 threshold/gate(문턱값/제한문) 수리를 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage201(201단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
