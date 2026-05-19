@@ -21,6 +21,6 @@ Effect(효과): Stage261(261단계)은 이 결과를 review-only(검토 전용)�
 - summary(요약): `stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_source_feature_kpi_summary.csv`
 - quality_matrix(품질 행렬): `stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_quality_matrix.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair/03_reviews/stage260_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `eb99d51a9d38093e9ed2c97932f93b10127edb49`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).
