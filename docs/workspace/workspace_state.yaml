@@ -1,8 +1,8 @@
-﻿current_run_id: run228A_stage228_stage227_selection_structure_followup_review_v1
+﻿current_run_id: run229A_stage229_dual_objective_guard_blend_after_selection_tradeoff_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 228_adapter_research__stage227_selection_structure_followup_review
+active_stage: 229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage227(227단계) closed(종료) as `open_stage228_bounded_followup_due_to_selection_structure_tradeoff_candidate_not_final` and Stage228(228단계) `228_adapter_research__stage227_selection_structure_followup_review` is open_planned(개방 계획). Effect(효과): long-threshold axis(롱 임계값 축) 반복을 멈추고 selection structure(선택 구조) 결과를 별도 review(검토)로 판정한다.
+  Stage228(228단계) closed(종료) as `open_stage229_bounded_dual_objective_guard_blend_after_selection_tradeoff_candidate_not_final` and Stage229(229단계) `229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff` is open_planned(개방 계획). Effect(효과): Stage227(227단계)의 선택 구조 상충을 dual-objective guard blend(이중목표 보호 혼합)로 좁힌다.
 - >-
-  Stage227 evidence(227단계 근거)는 `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_selection_structure_repair_report.md`, `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_selection_structure_kpi_summary.csv`, `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_quality_matrix.csv`, `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_monthly_kpi_summary.csv`, `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_concentration_risk_summary.csv`, `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_risk_atr_telemetry.csv`에 있다. Effect(효과): selection structure(선택 구조)가 validation/OOS(검증/표본외) 상충을 줄였는지 확인한다.
+  Stage228 evidence(228단계 근거)는 `stages/228_adapter_research__stage227_selection_structure_followup_review/03_reviews/stage228_followup_review.md`, `stages/228_adapter_research__stage227_selection_structure_followup_review/03_reviews/stage228_selection_structure_tradeoff_matrix.csv`, `stages/228_adapter_research__stage227_selection_structure_followup_review/03_reviews/stage228_performance_attribution.csv`, `stages/228_adapter_research__stage227_selection_structure_followup_review/03_reviews/stage228_route_matrix.csv`에 있다. Effect(효과): session-only(세션 전용)와 session-and-margin(세션+마진)을 다음 수리의 양쪽 경계로 기록한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_selection_structure_repair_after_threshold_axis_no_effect`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_dual_objective_guard_blend_after_selection_tradeoff`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7870,4 +7870,21 @@ stage227_selection_structure_repair_after_threshold_axis_no_effect:
   external_verification_status: completed
   pushed_commit_hash: e213ffa63a2bf4c52740fee3a8b669e6f3308ec0
   next_action: run228A_stage228_stage227_selection_structure_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage228_stage227_selection_structure_followup_review:
+  packet_id: stage228_stage227_selection_structure_followup_review_v1
+  stage_id: 228_adapter_research__stage227_selection_structure_followup_review
+  status: closed_open_stage229_bounded_dual_objective_guard_blend_after_selection_tradeoff_candidate_not_final
+  current_run_id: run228A_stage228_stage227_selection_structure_followup_review_v1
+  source_stage: 227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect
+  source_run: run227A_stage227_selection_structure_repair_after_threshold_axis_no_effect_v1
+  decision: open_stage229_bounded_dual_objective_guard_blend_after_selection_tradeoff_candidate_not_final
+  best_validation_clue: s227_sel_session_and_margin
+  report_path: stages/228_adapter_research__stage227_selection_structure_followup_review/03_reviews/stage228_followup_review.md
+  decision_path: stages/228_adapter_research__stage227_selection_structure_followup_review/03_reviews/stage228_decision.md
+  tradeoff_matrix_path: stages/228_adapter_research__stage227_selection_structure_followup_review/03_reviews/stage228_selection_structure_tradeoff_matrix.csv
+  external_verification_status: review_only_source_stage227_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run229A_stage229_dual_objective_guard_blend_after_selection_tradeoff_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
