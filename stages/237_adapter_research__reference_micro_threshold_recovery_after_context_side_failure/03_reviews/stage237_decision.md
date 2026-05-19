@@ -13,7 +13,7 @@
 - threshold_surface_audit(문턱값 표면 감사): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_threshold_surface_audit.csv`
 - score_shape_audit(점수 형태 감사): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_score_shape_audit.csv`
 - failure_memory(실패 기억): `stages/237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure/03_reviews/stage237_failure_memory.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `b3dc12f65905c2063fc8cac59298fabec8a1a6ce`
 - next_stage_or_branch(다음 단계 또는 분기): `238_adapter_research__score_shape_repair_after_threshold_surface_discrete`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
