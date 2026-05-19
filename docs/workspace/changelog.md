@@ -1855,3 +1855,13 @@
 - action(행동): closed(종료) `237_adapter_research__reference_micro_threshold_recovery_after_context_side_failure` with decision(판정) `open_stage238_bounded_score_shape_repair_after_threshold_surface_discrete_candidate_not_final`.
 - effect(효과): Stage235(235단계) telemetry(기록)로 threshold/rank-confidence(문턱값/순위 신뢰도) 축이 이진형임을 판정하고 Stage238(238단계) score shape repair(점수 형태 수리)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T12:48:26Z Stage238 score shape repair closeout(238단계 점수 형태 수리 종료)
+
+- action(행동): closed(종료) `238_adapter_research__score_shape_repair_after_threshold_surface_discrete` with decision(판정) `open_stage239_bounded_followup_due_to_score_shape_tradeoff_candidate_not_final`.
+- effect(효과): margin rank score(마진 순위 점수)를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage239(239단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T12:52:07Z Stage238 score shape repair closeout(238단계 점수 형태 수리 종료)
+
+- action(행동): closed(종료) `238_adapter_research__score_shape_repair_after_threshold_surface_discrete` with decision(판정) `open_stage239_bounded_followup_due_to_score_shape_tradeoff_candidate_not_final`.
+- effect(효과): margin rank score(마진 순위 점수)를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage239(239단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
