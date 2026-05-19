@@ -1,8 +1,8 @@
-current_run_id: run257A_stage257_stage256_source_feature_followup_review_v1
+current_run_id: run258A_stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1
 updated_on: '2026-05-20'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 257_adapter_research__stage256_source_feature_followup_review
+active_stage: 258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage256(256단계) closed(종료) as `open_stage257_bounded_followup_due_to_source_feature_branch_tradeoff_candidate_not_final` and Stage257(257단계) `257_adapter_research__stage256_source_feature_followup_review` is open_planned(개방 계획). Effect(효과): source/feature branch(소스/피처 분기)의 KPI(핵심 성과 지표) 상충을 분리해서 판정한다.
+  Stage257(257단계) closed(종료) as `open_stage258_bounded_short_tight_margin_pf_repair_after_stage256_tradeoff_candidate_not_final` and Stage258(258단계) `258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff` is open_planned(개방 계획). Effect(효과): Stage256(256단계)의 useful tradeoff(유용한 절충)를 PF repair(PF 수리) 질문으로 좁힌다.
 - >-
-  Stage256 evidence(256단계 근거)는 `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_source_feature_branch_report.md`, `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_quality_matrix.csv`, `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_performance_attribution.csv`, `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_failure_memory.csv`에 있다. Effect(효과): Stage257(257단계)가 수리축 지속, 축 교체, 또는 demotion(강등)을 좁게 판정한다.
+  Stage257 evidence(257단계 근거)는 `stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_stage256_source_feature_followup_review.md`, `stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_tradeoff_review_matrix.csv`, `stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_performance_attribution.csv`, `stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_failure_memory.csv`에 있다. Effect(효과): Stage258(258단계)는 `s256_short_tight_margin`의 net/DD/OOS(순수익/낙폭/표본외) 장점을 보존하며 PF(수익요인)를 수리한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_source_feature_filter_branch_after_binding_lifecycle_no_gain`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_short_tight_margin_pf_repair_after_stage256_tradeoff`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 stage96_v41_oos_early_entry_gate_followup_review:
   packet_id: stage96_v41_oos_early_entry_gate_followup_review_v1
@@ -8468,10 +8468,32 @@ stage256_source_feature_branch_after_binding_lifecycle_no_gain:
 stage257_stage256_source_feature_followup_review:
   packet_id: stage257_stage256_source_feature_followup_review_v1
   stage_id: 257_adapter_research__stage256_source_feature_followup_review
-  status: open_planned_from_stage256
+  status: closed_open_stage258_short_tight_margin_pf_repair_candidate_not_final
   current_run_id: run257A_stage257_stage256_source_feature_followup_review_v1
   source_stage: 256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain
   source_run: run256A_stage256_source_feature_branch_after_binding_lifecycle_no_gain_v1
-  source_decision: open_stage257_bounded_followup_due_to_source_feature_branch_tradeoff_candidate_not_final
-  next_action: run257A_stage257_stage256_source_feature_followup_review_v1
+  source_stage256_evidence_commit: c5e1c2f8bd930f1a5c9f025b1e67630897e5ab10
+  source_stage256_hash_record_commit: d5e503be2fbb26b773eb61b5caf16e7d602f784a
+  decision: open_stage258_bounded_short_tight_margin_pf_repair_after_stage256_tradeoff_candidate_not_final
+  report_path: stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_stage256_source_feature_followup_review.md
+  decision_path: stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_decision.md
+  tradeoff_matrix_path: stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_tradeoff_review_matrix.csv
+  attribution_path: stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_performance_attribution.csv
+  failure_memory_path: stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_failure_memory.csv
+  route_matrix_path: stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_route_matrix.csv
+  risk_atr_review_path: stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_risk_atr_review.csv
+  external_verification_status: review_only_source_stage256_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run258A_stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage258_short_tight_margin_pf_repair_after_stage256_tradeoff:
+  packet_id: stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1
+  stage_id: 258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff
+  status: open_planned_from_stage257
+  current_run_id: run258A_stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1
+  source_stage: 257_adapter_research__stage256_source_feature_followup_review
+  source_run: run257A_stage257_stage256_source_feature_followup_review_v1
+  source_decision: open_stage258_bounded_short_tight_margin_pf_repair_after_stage256_tradeoff_candidate_not_final
+  next_action: run258A_stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

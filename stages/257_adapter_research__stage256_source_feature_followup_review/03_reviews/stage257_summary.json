@@ -1,0 +1,393 @@
+{
+  "attribution_rows": [
+    {
+      "alternative_explanations": "공급 증가가 일부 좋은 구간을 잡았을 수 있으나 PF 약화가 남아 있어 신호 품질 개선으로 확정할 수 없다.",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run257A_stage257_stage256_source_feature_followup_review_v1__short_tight_margin_best_tradeoff",
+      "comparison_baseline": "s256_stage254_control",
+      "likely_drivers": "short margin block(숏 마진 차단문)을 tight band(좁은 구간)로 줄여 공급을 늘렸지만 score table(점수표), threshold(임계값), lifecycle(생명주기), ATR/risk(ATR/위험)는 고정했다.",
+      "next_probe": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff",
+      "observed_change": "s256_short_tight_margin validation_net +71.84, DD -3.9194, OOS net +174.20 vs control(대조군 대비 개선).",
+      "segment_checks": "validation/OOS(검증/표본외), early/mid/late PF(초기/중간/후기 수익요인), DD(낙폭), gate changed rows(차단문 변경 행), risk/ATR telemetry(위험/ATR 원격측정).",
+      "trade_shape": "net/DD/OOS는 좋아졌지만 validation PF 1.48, mid PF 1.5108, OOS PF 1.69로 34D급 품질은 아니다."
+    },
+    {
+      "alternative_explanations": "표본외 한 지표 상승은 구간 편향일 수 있다.",
+      "attribution_confidence": "medium",
+      "attribution_id": "run257A_stage257_stage256_source_feature_followup_review_v1__short_relaxation_failure_memory",
+      "comparison_baseline": "s256_stage254_control",
+      "likely_drivers": "숏 공급을 너무 크게 열면 validation PF(검증 수익요인) 또는 OOS(표본외)가 손상된다.",
+      "next_probe": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff",
+      "observed_change": "short_margin_relax and short_session_relax(숏 마진/숏 세션 완화)는 한쪽 KPI만 좋아지고 검증 또는 OOS가 훼손됐다.",
+      "segment_checks": "short_margin_relax validation PF 1.25, mid PF 1.1437; short_session_relax OOS net 581.18 and DD 14.3278.",
+      "trade_shape": "source gate(소스 차단문)는 효과가 있지만 넓은 완화는 불안정하다."
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage258_bounded_short_tight_margin_pf_repair_after_stage256_tradeoff_candidate_not_final",
+  "external_verification_status": "review_only_source_stage256_mt5_reports_completed",
+  "failure_memory_rows": [
+    {
+      "evidence": "hard_quality_pass=False for all Stage256 candidates(모든 후보 엄격 통과 실패).",
+      "failure_id": "run257A_stage257_stage256_source_feature_followup_review_v1__hard_quality_not_reached",
+      "impact": "Stage256은 유용한 tradeoff(절충)를 만들었지만 final adapter(최종 어댑터)가 아니다.",
+      "next_handling": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff"
+    },
+    {
+      "evidence": "best tradeoff s256_short_tight_margin has validation_pf=1.48 and validation_mid_pf=1.510763553.",
+      "failure_id": "run257A_stage257_stage256_source_feature_followup_review_v1__pf_midpf_remaining_weakness",
+      "impact": "34D급 목표에는 PF(수익요인)와 segment stability(구간 안정성) 회복이 필요하다.",
+      "next_handling": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff"
+    }
+  ],
+  "gate_rows": [
+    {
+      "adapter_id": "s256_stage254_control",
+      "allowed_signal_rows": "275",
+      "base_blocked_signal_rows": "193",
+      "blocked_signal_rows": "193",
+      "changed_gate_rows": "0",
+      "signal_rows": "468",
+      "source_branch_mode": "reference"
+    },
+    {
+      "adapter_id": "s256_long_session_relax",
+      "allowed_signal_rows": "293",
+      "base_blocked_signal_rows": "193",
+      "blocked_signal_rows": "175",
+      "changed_gate_rows": "18",
+      "signal_rows": "468",
+      "source_branch_mode": "long_session_relax"
+    },
+    {
+      "adapter_id": "s256_short_margin_relax",
+      "allowed_signal_rows": "360",
+      "base_blocked_signal_rows": "193",
+      "blocked_signal_rows": "108",
+      "changed_gate_rows": "85",
+      "signal_rows": "468",
+      "source_branch_mode": "short_margin_relax"
+    },
+    {
+      "adapter_id": "s256_short_session_relax",
+      "allowed_signal_rows": "345",
+      "base_blocked_signal_rows": "193",
+      "blocked_signal_rows": "123",
+      "changed_gate_rows": "70",
+      "signal_rows": "468",
+      "source_branch_mode": "short_session_relax"
+    },
+    {
+      "adapter_id": "s256_short_tight_margin",
+      "allowed_signal_rows": "310",
+      "base_blocked_signal_rows": "193",
+      "blocked_signal_rows": "158",
+      "changed_gate_rows": "35",
+      "signal_rows": "468",
+      "source_branch_mode": "short_tight_margin"
+    }
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 6908,
+      "sha256": "c74141c2eeac1ad952001de293c7f3887270c7b516acbf1f956a7b5033bd0fbf",
+      "upserted_rows": 19
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 11479,
+      "sha256": "0bf199a1c34eb5ffdba1302e54172284453d546427d75356b6a50623da93d020",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1080,
+      "sha256": "60dbcd19de34437b712bacd604a193b74eeacceba5ec576371bffeec41bd1098",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "a0068dd6f5475d1e17e72af09a5ae915bcd06340f82d4369011f1726f119ff59",
+      "upserted_rows": 1
+    }
+  },
+  "legacy_34d_lesson_only_targets": {
+    "validation_dd": 12.909136,
+    "validation_net": 987.6,
+    "validation_pf": 1.583157
+  },
+  "next_stage_or_branch": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff",
+  "overall_goal_complete": false,
+  "packet_id": "stage257_stage256_source_feature_followup_review_v1",
+  "pushed_commit_hash": "pending_until_push",
+  "risk_review_rows": [
+    {
+      "adapter_id": "s256_stage254_control",
+      "atr_enabled": "True",
+      "avg_atr_points": "3634.39774",
+      "avg_executed_lot": "0.009917716375",
+      "max_actual_risk_pct_after_floor": "0.0304859339",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s256_stage254_control",
+      "atr_enabled": "True",
+      "avg_atr_points": "3903.364499",
+      "avg_executed_lot": "0.006565137131",
+      "max_actual_risk_pct_after_floor": "0.0303072839",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    },
+    {
+      "adapter_id": "s256_long_session_relax",
+      "atr_enabled": "True",
+      "avg_atr_points": "3634.39774",
+      "avg_executed_lot": "0.01084721658",
+      "max_actual_risk_pct_after_floor": "0.0304566394",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s256_long_session_relax",
+      "atr_enabled": "True",
+      "avg_atr_points": "3903.364499",
+      "avg_executed_lot": "0.006733913502",
+      "max_actual_risk_pct_after_floor": "0.0304017719",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    },
+    {
+      "adapter_id": "s256_short_margin_relax",
+      "atr_enabled": "True",
+      "avg_atr_points": "3634.39774",
+      "avg_executed_lot": "0.01237809833",
+      "max_actual_risk_pct_after_floor": "0.0303621878",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s256_short_margin_relax",
+      "atr_enabled": "True",
+      "avg_atr_points": "3903.364499",
+      "avg_executed_lot": "0.01101661392",
+      "max_actual_risk_pct_after_floor": "0.0303935193",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    },
+    {
+      "adapter_id": "s256_short_session_relax",
+      "atr_enabled": "True",
+      "avg_atr_points": "3634.39774",
+      "avg_executed_lot": "0.01181633482",
+      "max_actual_risk_pct_after_floor": "0.0304145972",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s256_short_session_relax",
+      "atr_enabled": "True",
+      "avg_atr_points": "3903.364499",
+      "avg_executed_lot": "0.007113660338",
+      "max_actual_risk_pct_after_floor": "0.0303755488",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    },
+    {
+      "adapter_id": "s256_short_tight_margin",
+      "atr_enabled": "True",
+      "avg_atr_points": "3634.39774",
+      "avg_executed_lot": "0.01243600163",
+      "max_actual_risk_pct_after_floor": "0.030486622",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s256_short_tight_margin",
+      "atr_enabled": "True",
+      "avg_atr_points": "3903.364499",
+      "avg_executed_lot": "0.008739451477",
+      "max_actual_risk_pct_after_floor": "0.0304802344",
+      "max_model_risk_pct": "0.0305",
+      "model_risk_enabled": "True",
+      "read": "ATR/risk(ATR/위험)는 유지됐고, 이번 실패/진전은 주로 source gate(소스 차단문) 공급 변화에서 온다.",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    }
+  ],
+  "route_rows": [
+    {
+      "decision": "open_stage258_bounded_short_tight_margin_pf_repair_after_stage256_tradeoff_candidate_not_final",
+      "effect": "Stage258(258단계)는 short_tight_margin(숏 좁은 마진) 장점을 보존하면서 PF(수익요인)를 회복하는 bounded repair(경계 수리)를 한다.",
+      "evidence": "s256_short_tight_margin improved validation net, validation DD, and OOS net while remaining not-final due to PF weakness.",
+      "next_stage_or_branch": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff",
+      "route_id": "run257A_stage257_stage256_source_feature_followup_review_v1__open_stage258_short_tight_margin_pf_repair"
+    }
+  ],
+  "run_id": "run257A_stage257_stage256_source_feature_followup_review_v1",
+  "source_run": "run256A_stage256_source_feature_branch_after_binding_lifecycle_no_gain_v1",
+  "source_stage": "256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain",
+  "source_stage256_evidence_commit": "c5e1c2f8bd930f1a5c9f025b1e67630897e5ab10",
+  "source_stage256_hash_record_commit": "d5e503be2fbb26b773eb61b5caf16e7d602f784a",
+  "stage_id": "257_adapter_research__stage256_source_feature_followup_review",
+  "tradeoff_rows": [
+    {
+      "adapter_id": "s256_stage254_control",
+      "hard_quality_pass": "False",
+      "next_handling": "reference_only",
+      "oos_dd_percent": "9.5066",
+      "oos_net": "776.02",
+      "oos_net_delta_vs_control": "0.00",
+      "oos_pf": "1.78",
+      "oos_pf_delta_vs_control": "0.0000",
+      "plain_read": "대조군은 가까운 기준점이지만 34D급 hard pass(엄격 통과)는 아니다.",
+      "review_label": "control_reference_near_miss",
+      "validation_dd_delta_vs_control": "0.0000",
+      "validation_dd_margin_vs_34d": "-0.0190",
+      "validation_dd_percent": "12.9281",
+      "validation_early_pf": "1.596222842",
+      "validation_late_pf": "1.636394543",
+      "validation_mid_pf": "1.516650878",
+      "validation_mid_pf_delta_vs_control": "0.000000",
+      "validation_net": "972.15",
+      "validation_net_delta_vs_control": "0.00",
+      "validation_net_gap_vs_34d": "-15.45",
+      "validation_pf": "1.59"
+    },
+    {
+      "adapter_id": "s256_long_session_relax",
+      "hard_quality_pass": "False",
+      "next_handling": "do_not_promote_as_primary",
+      "oos_dd_percent": "11.7316",
+      "oos_net": "670.98",
+      "oos_net_delta_vs_control": "-105.04",
+      "oos_pf": "1.65",
+      "oos_pf_delta_vs_control": "-0.1300",
+      "plain_read": "검증 순수익과 낙폭은 좋아졌지만 표본외 순수익과 중간 PF가 훼손됐다.",
+      "review_label": "validation_gain_oos_damage",
+      "validation_dd_delta_vs_control": "-1.0706",
+      "validation_dd_margin_vs_34d": "1.0516",
+      "validation_dd_percent": "11.8575",
+      "validation_early_pf": "1.593294118",
+      "validation_late_pf": "1.648162872",
+      "validation_mid_pf": "1.481519658",
+      "validation_mid_pf_delta_vs_control": "-0.035131",
+      "validation_net": "1043.74",
+      "validation_net_delta_vs_control": "71.59",
+      "validation_net_gap_vs_34d": "56.14",
+      "validation_pf": "1.58"
+    },
+    {
+      "adapter_id": "s256_short_margin_relax",
+      "hard_quality_pass": "False",
+      "next_handling": "failure_memory_only",
+      "oos_dd_percent": "15.7578",
+      "oos_net": "956.46",
+      "oos_net_delta_vs_control": "180.44",
+      "oos_pf": "1.52",
+      "oos_pf_delta_vs_control": "-0.2600",
+      "plain_read": "표본외 순수익은 좋아졌지만 검증 PF와 중간 PF가 크게 무너졌다.",
+      "review_label": "oos_gain_validation_damage",
+      "validation_dd_delta_vs_control": "-1.0405",
+      "validation_dd_margin_vs_34d": "1.0215",
+      "validation_dd_percent": "11.8876",
+      "validation_early_pf": "1.395990436",
+      "validation_late_pf": "1.256645124",
+      "validation_mid_pf": "1.143669309",
+      "validation_mid_pf_delta_vs_control": "-0.372982",
+      "validation_net": "594.2",
+      "validation_net_delta_vs_control": "-377.95",
+      "validation_net_gap_vs_34d": "-393.40",
+      "validation_pf": "1.25"
+    },
+    {
+      "adapter_id": "s256_short_session_relax",
+      "hard_quality_pass": "False",
+      "next_handling": "side_clue_only",
+      "oos_dd_percent": "14.3278",
+      "oos_net": "581.18",
+      "oos_net_delta_vs_control": "-194.84",
+      "oos_pf": "1.56",
+      "oos_pf_delta_vs_control": "-0.2200",
+      "plain_read": "중간 PF는 조금 좋아졌지만 낙폭과 표본외가 훼손됐다.",
+      "review_label": "mid_pf_gain_dd_oos_damage",
+      "validation_dd_delta_vs_control": "1.4239",
+      "validation_dd_margin_vs_34d": "-1.4429",
+      "validation_dd_percent": "14.352",
+      "validation_early_pf": "1.376699319",
+      "validation_late_pf": "1.557430919",
+      "validation_mid_pf": "1.542702296",
+      "validation_mid_pf_delta_vs_control": "0.026051",
+      "validation_net": "993.12",
+      "validation_net_delta_vs_control": "20.97",
+      "validation_net_gap_vs_34d": "5.52",
+      "validation_pf": "1.51"
+    },
+    {
+      "adapter_id": "s256_short_tight_margin",
+      "hard_quality_pass": "False",
+      "next_handling": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff",
+      "oos_dd_percent": "11.8815",
+      "oos_net": "950.22",
+      "oos_net_delta_vs_control": "174.20",
+      "oos_pf": "1.69",
+      "oos_pf_delta_vs_control": "-0.0900",
+      "plain_read": "검증 순수익, 낙폭, 표본외 순수익은 좋아졌지만 PF(수익요인)와 중간 구간 PF가 아직 약하다.",
+      "review_label": "best_tradeoff_not_final",
+      "validation_dd_delta_vs_control": "-3.9194",
+      "validation_dd_margin_vs_34d": "3.9004",
+      "validation_dd_percent": "9.0087",
+      "validation_early_pf": "1.50693716",
+      "validation_late_pf": "1.436439541",
+      "validation_mid_pf": "1.510763553",
+      "validation_mid_pf_delta_vs_control": "-0.005887",
+      "validation_net": "1043.99",
+      "validation_net_delta_vs_control": "71.84",
+      "validation_net_gap_vs_34d": "56.39",
+      "validation_pf": "1.48"
+    }
+  ]
+}
