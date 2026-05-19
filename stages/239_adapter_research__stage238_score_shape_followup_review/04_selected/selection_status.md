@@ -8,5 +8,5 @@
 - external_verification_status(외부 검증 상태): `review_only_source_stage238_mt5_reports_completed`
 - decision(판정): `open_stage240_bounded_highbonus_dd_midpf_repair_after_score_shape_tradeoff_candidate_not_final`
 - next_stage_or_branch(다음 단계 또는 분기): `240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `36307c14a286f112dbb50d88733091a1bb169252`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`

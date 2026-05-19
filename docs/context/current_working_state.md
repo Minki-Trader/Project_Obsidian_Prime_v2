@@ -22,6 +22,6 @@ Stage239(239단계)는 Stage238(238단계) score shape repair(점수 형태 수�
 - tradeoff_matrix(상충 표): `stages/239_adapter_research__stage238_score_shape_followup_review/03_reviews/stage239_score_shape_tradeoff_matrix.csv`
 - attribution(성과 기여 분석): `stages/239_adapter_research__stage238_score_shape_followup_review/03_reviews/stage239_performance_attribution.csv`
 - failure_memory(실패 기억): `stages/239_adapter_research__stage238_score_shape_followup_review/03_reviews/stage239_failure_memory.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `36307c14a286f112dbb50d88733091a1bb169252`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
