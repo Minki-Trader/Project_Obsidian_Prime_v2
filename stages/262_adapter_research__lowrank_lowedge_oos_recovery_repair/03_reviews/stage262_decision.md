@@ -16,7 +16,7 @@
 - probability_telemetry(확률 원격측정): `stages/262_adapter_research__lowrank_lowedge_oos_recovery_repair/03_reviews/stage262_probability_telemetry_summary.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/262_adapter_research__lowrank_lowedge_oos_recovery_repair/03_reviews/stage262_risk_atr_telemetry.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `263_adapter_research__stage262_lowrank_lowedge_oos_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `8ac5d3953c7665247713cec835bde857c755b2aa`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage262(262단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.

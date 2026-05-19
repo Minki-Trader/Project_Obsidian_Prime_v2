@@ -21,6 +21,6 @@ Effect(효과): Stage263(263단계)은 이 결과를 review-only(검토 전용)�
 - summary(요약): `stages/262_adapter_research__lowrank_lowedge_oos_recovery_repair/03_reviews/stage262_source_feature_kpi_summary.csv`
 - quality_matrix(품질 행렬): `stages/262_adapter_research__lowrank_lowedge_oos_recovery_repair/03_reviews/stage262_quality_matrix.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/262_adapter_research__lowrank_lowedge_oos_recovery_repair/03_reviews/stage262_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `8ac5d3953c7665247713cec835bde857c755b2aa`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).
