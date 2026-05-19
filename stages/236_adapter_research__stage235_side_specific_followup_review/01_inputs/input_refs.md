@@ -1,0 +1,12 @@
+﻿# Stage236 Inputs(236단계 입력)
+
+- source_stage(원천 단계): `235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff`
+- source_run(원천 실행): `run235A_stage235_side_specific_validation_net_recovery_after_session_context_tradeoff_v1`
+- source_decision(원천 판정): `open_stage236_bounded_followup_due_to_side_specific_tradeoff_candidate_not_final`
+- report(보고서): `stages/235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff/03_reviews/stage235_side_specific_recovery_report.md`
+- summary_csv(요약 CSV): `stages/235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff/03_reviews/stage235_side_specific_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff/03_reviews/stage235_quality_matrix.csv`
+- monthly_kpi(월별 KPI 핵심 성과 지표): `stages/235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff/03_reviews/stage235_monthly_kpi_summary.csv`
+- concentration_risk(집중 위험): `stages/235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff/03_reviews/stage235_concentration_risk_summary.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff/03_reviews/stage235_risk_atr_telemetry.csv`
+- decision_path(판정 파일): `stages/235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff/03_reviews/stage235_decision.md`
