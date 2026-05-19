@@ -8,7 +8,7 @@
 - external_verification_status(외부 검증 상태): `completed`
 - decision(판정): `open_stage243_bounded_followup_due_to_selective_midsegment_tradeoff_candidate_not_final`
 - next_stage_or_branch(다음 단계 또는 분기): `243_adapter_research__stage242_selective_midsegment_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `a62f41abb82b2879008fdad85578eda1c78b1c21`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 - failure_memory(실패 기억): `mid_window_rows_zero_selective_guard_inactive_due_to_yyyy_dot_mm_dot_dd_time_parse`
 - attribution_boundary(기여 경계): `cap0305_improvement_from_mild_model_risk_cap_not_active_midwindow_guard`

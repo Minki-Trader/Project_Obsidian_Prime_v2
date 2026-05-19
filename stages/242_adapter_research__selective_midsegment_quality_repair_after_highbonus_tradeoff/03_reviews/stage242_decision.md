@@ -13,7 +13,7 @@
 - concentration_risk(집중 위험): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_risk_atr_telemetry.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `243_adapter_research__stage242_selective_midsegment_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `a62f41abb82b2879008fdad85578eda1c78b1c21`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 ## Failure Memory(실패 기억)
