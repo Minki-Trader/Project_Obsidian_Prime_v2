@@ -15,7 +15,7 @@
 - failure_memory(실패 기억): `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_failure_memory.csv`
 - oos_reference_bound(표본외 보존 경계): `s231_session_ref_h3_cd8`
 - validation_recovery_clue(검증 회복 단서): `s231_wide_h3_cd12`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `b31f4e73e8e233e03329c03ecb6100629588c74e`
 - next_stage_or_branch(다음 단계 또는 분기): `233_adapter_research__side_session_context_repair_after_lifecycle_failure`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
