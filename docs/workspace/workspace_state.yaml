@@ -1,8 +1,8 @@
-current_run_id: run254A_stage254_nonbinding_source_repair_after_binding_axis_no_gain_v1
+current_run_id: run255A_stage255_stage254_nonbinding_source_followup_review_v1
 updated_on: '2026-05-20'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain
+active_stage: 255_adapter_research__stage254_nonbinding_source_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage253(253단계) closed(종료) as `open_stage254_bounded_nonbinding_source_repair_after_binding_axis_no_gain_candidate_not_final` and Stage254(254단계) `254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain` is open_planned(개방 계획). Effect(효과): Stage252(252단계)의 asymmetric binding(비대칭 결합)은 KPI(핵심 성과 지표) 개선축이 아니라 failure memory(실패 기억)로 분리했다.
+  Stage254(254단계) closed(종료) as `open_stage255_bounded_followup_due_to_nonbinding_lifecycle_no_gain_candidate_not_final` and Stage255(255단계) `255_adapter_research__stage254_nonbinding_source_followup_review` is open_planned(개방 계획). Effect(효과): non-binding lifecycle repair(비결합 생명주기 수리)의 KPI(핵심 성과 지표) 상충을 분리해서 판정한다.
 - >-
-  Stage253 evidence(253단계 근거)는 `stages/253_adapter_research__stage252_asymmetric_binding_followup_review/03_reviews/stage253_stage252_asymmetric_binding_followup_review.md`, `stages/253_adapter_research__stage252_asymmetric_binding_followup_review/03_reviews/stage253_tradeoff_review_matrix.csv`, `stages/253_adapter_research__stage252_asymmetric_binding_followup_review/03_reviews/stage253_performance_attribution.csv`, `stages/253_adapter_research__stage252_asymmetric_binding_followup_review/03_reviews/stage253_failure_memory.csv`에 있다. Effect(효과): Stage254(254단계)는 binding(결합) 반복이 아니라 source/feature/lifecycle(원천/피처/생명주기) 축으로 좁게 간다.
+  Stage254 evidence(254단계 근거)는 `stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_nonbinding_source_repair_report.md`, `stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_quality_matrix.csv`, `stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_performance_attribution.csv`, `stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_failure_memory.csv`에 있다. Effect(효과): Stage255(255단계)가 수리축 지속, 축 교체, 또는 demotion(강등)을 좁게 판정한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_nonbinding_source_repair_after_binding_axis_no_gain`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_nonbinding_lifecycle_repair_after_binding_axis_no_gain`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 stage96_v41_oos_early_entry_gate_followup_review:
   packet_id: stage96_v41_oos_early_entry_gate_followup_review_v1
@@ -8400,10 +8400,33 @@ stage253_stage252_asymmetric_binding_followup_review:
 stage254_nonbinding_source_repair_after_binding_axis_no_gain:
   packet_id: stage254_nonbinding_source_repair_after_binding_axis_no_gain_v1
   stage_id: 254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain
-  status: open_planned_from_stage253
+  status: closed_open_stage255_followup_candidate_not_final
   current_run_id: run254A_stage254_nonbinding_source_repair_after_binding_axis_no_gain_v1
   source_stage: 253_adapter_research__stage252_asymmetric_binding_followup_review
   source_run: run253A_stage253_stage252_asymmetric_binding_followup_review_v1
-  source_decision: open_stage254_bounded_nonbinding_source_repair_after_binding_axis_no_gain_candidate_not_final
-  next_action: run254A_stage254_nonbinding_source_repair_after_binding_axis_no_gain_v1
+  source_stage252_evidence_commit: 53aa5f020f0b7e6d97325d9fc25b2a50a3be5c1d
+  source_stage252_hash_record_commit: 1ae463e528189f7d406580aa99923edf0600aa46
+  source_stage253_evidence_commit: e7f7a542e425fb4bdaf340cb669cc5b4dbb75933
+  source_stage253_hash_record_commit: ca9af85eaa28295532018b7b98950f829ca67645
+  decision: open_stage255_bounded_followup_due_to_nonbinding_lifecycle_no_gain_candidate_not_final
+  report_path: stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_nonbinding_source_repair_report.md
+  decision_path: stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_decision.md
+  summary_path: stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_nonbinding_source_kpi_summary.csv
+  quality_matrix_path: stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_quality_matrix.csv
+  probability_telemetry_path: stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_probability_telemetry_summary.csv
+  risk_atr_telemetry_path: stages/254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain/03_reviews/stage254_risk_atr_telemetry.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run255A_stage255_stage254_nonbinding_source_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage255_stage254_nonbinding_source_followup_review:
+  packet_id: stage255_stage254_nonbinding_source_followup_review_v1
+  stage_id: 255_adapter_research__stage254_nonbinding_source_followup_review
+  status: open_planned_from_stage254
+  current_run_id: run255A_stage255_stage254_nonbinding_source_followup_review_v1
+  source_stage: 254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain
+  source_run: run254A_stage254_nonbinding_source_repair_after_binding_axis_no_gain_v1
+  source_decision: open_stage255_bounded_followup_due_to_nonbinding_lifecycle_no_gain_candidate_not_final
+  next_action: run255A_stage255_stage254_nonbinding_source_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
