@@ -1688,3 +1688,8 @@
 - action(행동): closed(종료) `206_adapter_research__stage204_long_session_dd_micro_repair` with decision(판정) `open_stage207_bounded_followup_due_to_long_session_dd_tradeoff_candidate_not_final`.
 - effect(효과): long-session gate/risk cap(롱 세션 제한/위험 상한)을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage207(207단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T02:41:37Z Stage207 Stage206 DD micro repair follow-up review closeout(207단계 206단계 낙폭 미세 수리 후속 검토 종료)
+
+- action(행동): closed(종료) `207_adapter_research__stage206_long_session_dd_micro_repair_followup_review` with decision(판정) `open_stage208_bounded_risk_cap_interpolation_repair_candidate_not_final`.
+- effect(효과): risk0250(위험 2.5%) 단서를 Stage208(208단계) risk cap interpolation(위험 상한 보간)으로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
