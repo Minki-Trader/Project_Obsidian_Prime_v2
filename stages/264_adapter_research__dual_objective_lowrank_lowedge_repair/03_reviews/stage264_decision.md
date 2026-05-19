@@ -16,7 +16,7 @@
 - probability_telemetry(확률 원격측정): `stages/264_adapter_research__dual_objective_lowrank_lowedge_repair/03_reviews/stage264_probability_telemetry_summary.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/264_adapter_research__dual_objective_lowrank_lowedge_repair/03_reviews/stage264_risk_atr_telemetry.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `265_adapter_research__stage264_dual_objective_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `bc5b60d966920ee3441724d8ffc1771c4f2b68d2`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage264(264단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.
