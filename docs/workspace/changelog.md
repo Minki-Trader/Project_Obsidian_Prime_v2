@@ -1653,3 +1653,13 @@
 - action(행동): closed(종료) `201_adapter_research__stage200_mid_drawdown_entry_quality_followup_review` with decision(판정) `open_stage202_bounded_probability_binding_repair_candidate_not_final`.
 - effect(효과): threshold non-binding(문턱값 비구속)과 qwide overfilter(넓은 제한문 과필터)를 분리하고 Stage202(202단계) probability binding repair(확률 구속 수리)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T01:03:55Z Stage202 probability binding repair closeout(202단계 확률 구속 수리 종료)
+
+- action(행동): closed(종료) `202_adapter_research__stage200_probability_binding_repair` with decision(판정) `open_stage203_bounded_followup_due_to_probability_binding_tradeoff_candidate_not_final`.
+- effect(효과): risk cap/ATR bracket/cooldown(위험 상한/ATR 브래킷/대기)을 고정하고 threshold binding(문턱값 구속)을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage203(203단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T01:19:01Z Stage202 probability binding repair closeout(202단계 확률 구속 수리 종료)
+
+- action(행동): closed(종료) `202_adapter_research__stage200_probability_binding_repair` with decision(판정) `open_stage203_bounded_followup_due_to_probability_binding_tradeoff_candidate_not_final`.
+- effect(효과): risk cap/ATR bracket/cooldown(위험 상한/ATR 브래킷/대기)을 고정하고 threshold binding(문턱값 구속)을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage203(203단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
