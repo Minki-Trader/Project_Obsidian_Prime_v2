@@ -1693,3 +1693,8 @@
 - action(행동): closed(종료) `207_adapter_research__stage206_long_session_dd_micro_repair_followup_review` with decision(판정) `open_stage208_bounded_risk_cap_interpolation_repair_candidate_not_final`.
 - effect(효과): risk0250(위험 2.5%) 단서를 Stage208(208단계) risk cap interpolation(위험 상한 보간)으로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T03:01:41Z Stage208 risk cap interpolation repair closeout(208단계 위험 상한 보간 수리 종료)
+
+- action(행동): closed(종료) `208_adapter_research__stage206_risk_cap_interpolation_repair` with decision(판정) `open_stage209_bounded_followup_due_to_risk_cap_interpolation_tradeoff_candidate_not_final`.
+- effect(효과): risk cap interpolation(위험 상한 보간)을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage209(209단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
