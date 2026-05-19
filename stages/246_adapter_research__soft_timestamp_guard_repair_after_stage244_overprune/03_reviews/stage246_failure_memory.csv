@@ -1,0 +1,4 @@
+﻿failure_id,evidence,impact,next_handling
+stage246_cap0305_control_near_miss_not_final,validation_net=976.67;validation_dd=12.9428;validation_mid_pf=1.522877250708345;oos_net=775.76,"closest reference still misses 34D net, DD, and mid PF simultaneously",Stage247 must not accept final net proximity as completion
+stage246_soft_guard_reduced_dd_but_damaged_net,best_soft=s246_softlow_flat003;validation_net_delta_vs_control=-55.37;validation_dd_delta_vs_control=-0.7167,soft tilt solved part of DD but removed too much profitable validation exposure,avoid stronger soft low/mid tilt; inspect entry/source quality or non-middle-window risk shape
+stage246_mid_pf_remains_below_34d,all Stage246 variants keep validation_mid_pf below legacy_34d_target,middle segment remains the binding weakness,"Stage247 should focus on mid-window trade quality, not another blanket suppression"

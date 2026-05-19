@@ -1905,3 +1905,18 @@
 
 - action(행동): closed(종료) `245_adapter_research__stage244_timestamp_guard_followup_review` with decision(판정) `open_stage246_bounded_soft_guard_repair_after_stage244_overprune_candidate_not_final`.
 - effect(효과): hard guard(강한 보호문) over-prune damage(과차단 손상)를 기록하고 `246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune`를 열었다.
+## 2026-05-19T15:47:30Z Stage246 soft timestamp guard repair closeout(246단계 부드러운 시간 보호문 수리 종료)
+
+- action(행동): closed(종료) `246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune` with decision(판정) `continue_stage246_runtime_completion_due_to_incomplete_runtime_candidate_not_final`.
+- effect(효과): hard guard(강한 차단)를 soft flat tilt(부드러운 무포지션 기울기)로 바꿔 MT5(MetaTrader 5, 메타트레이더5) KPI(핵심 성과 지표)를 측정하고 Stage247(247단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T16:03:13Z Stage246 soft timestamp guard repair closeout(246단계 부드러운 시간 보호문 수리 종료)
+
+- action(행동): closed(종료) `246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune` with decision(판정) `open_stage247_bounded_followup_due_to_soft_guard_tradeoff_candidate_not_final`.
+- effect(효과): hard guard(강한 차단)를 soft flat tilt(부드러운 무포지션 기울기)로 바꿔 MT5(MetaTrader 5, 메타트레이더5) KPI(핵심 성과 지표)를 측정하고 Stage247(247단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T16:06:55Z Stage246 soft timestamp guard repair closeout(246단계 부드러운 시간 보호문 수리 종료)
+
+- action(행동): closed(종료) `246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune` with decision(판정) `open_stage247_bounded_followup_due_to_soft_guard_tradeoff_candidate_not_final`.
+- effect(효과): hard guard(강한 차단)를 soft flat tilt(부드러운 무포지션 기울기)로 바꿔 MT5(MetaTrader 5, 메타트레이더5) KPI(핵심 성과 지표)를 측정하고 Stage247(247단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

@@ -1,0 +1,13 @@
+﻿# Stage247 Inputs(247단계 입력)
+
+- source_stage(원천 단계): `246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune`
+- source_run(원천 실행): `run246A_stage246_soft_timestamp_guard_repair_after_stage244_overprune_v1`
+- source_decision(원천 판정): `open_stage247_bounded_followup_due_to_soft_guard_tradeoff_candidate_not_final`
+- report(보고서): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_soft_guard_repair_report.md`
+- summary(요약): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_soft_guard_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_quality_matrix.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_risk_atr_telemetry.csv`
+- soft_guard_feature_summary(부드러운 보호문 피처 요약): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_soft_guard_feature_summary.csv`
+- performance_attribution(성과 원인분해): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_performance_attribution.csv`
+- failure_memory(실패 기억): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_failure_memory.csv`
+- decision_path(판정 파일): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_decision.md`
