@@ -1,0 +1,11 @@
+﻿# Stage206 Input References(206단계 입력 참조)
+
+- source_stage(원천 단계): `205_adapter_research__stage204_selective_probability_margin_followup_review`
+- source_run(원천 실행): `run205A_stage205_stage204_selective_probability_margin_followup_review_v1`
+- source_decision(원천 판정): `open_stage206_long_session_dd_micro_repair_candidate_not_final`
+- source_report(원천 보고서): `stages/205_adapter_research__stage204_selective_probability_margin_followup_review/03_reviews/stage205_followup_review.md`
+- source_tradeoff_matrix(원천 상충 행렬): `stages/205_adapter_research__stage204_selective_probability_margin_followup_review/03_reviews/stage205_tradeoff_matrix.csv`
+- source_attribution(원천 성과 원인 분해): `stages/205_adapter_research__stage204_selective_probability_margin_followup_review/03_reviews/stage205_performance_attribution.csv`
+- source_route_matrix(원천 경로 행렬): `stages/205_adapter_research__stage204_selective_probability_margin_followup_review/03_reviews/stage205_route_matrix.csv`
+- source_stage204_quality_matrix(원천 204단계 품질 행렬): `stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_quality_matrix.csv`
+- source_stage204_selective_probability_telemetry(원천 204단계 선별 확률 기록): `stages/204_adapter_research__selective_probability_margin_recovery_repair/03_reviews/stage204_selective_probability_margin_telemetry_summary.csv`
