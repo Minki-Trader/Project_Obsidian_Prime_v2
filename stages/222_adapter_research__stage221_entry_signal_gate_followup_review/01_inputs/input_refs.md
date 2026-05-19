@@ -1,0 +1,12 @@
+﻿# Stage222 Inputs(222단계 입력)
+
+- source_stage(원천 단계): `221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure`
+- source_run(원천 실행): `run221A_stage221_entry_signal_gate_repair_after_lifecycle_axis_failure_v1`
+- source_decision(원천 판정): `open_stage222_bounded_followup_due_to_entry_signal_gate_tradeoff_candidate_not_final`
+- report(보고서): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_entry_signal_gate_repair_report.md`
+- summary_csv(요약 CSV): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_entry_signal_gate_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_quality_matrix.csv`
+- monthly_kpi(월별 KPI 핵심 성과 지표): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_monthly_kpi_summary.csv`
+- concentration_risk(집중 위험): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_concentration_risk_summary.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_risk_atr_telemetry.csv`
+- decision_path(판정 파일): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_decision.md`
