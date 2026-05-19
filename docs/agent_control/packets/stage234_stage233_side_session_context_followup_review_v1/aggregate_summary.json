@@ -1,0 +1,224 @@
+{
+  "attribution_rows": [
+    {
+      "confidence": "high",
+      "evidence": "ref_validation_net=952.16;p10_validation_net=952.16;ref_oos_net=719.48;p10_oos_net=719.48",
+      "finding": "session_ref_and_p10_are_effectively_no_gain",
+      "interpretation": "session_p10(세션 10분 변형)은 기준 세션과 같은 KPI(핵심 성과 지표)라 새 수리축으로 보기 어렵다.",
+      "next_use": "Do not repeat session_p10 no-op(효과 없는 반복) as Stage235(235단계)."
+    },
+    {
+      "confidence": "high",
+      "evidence": "validation_net=891.2;validation_mid_pf=1.39309;oos_net=671.23;validation_late_share=0.5029",
+      "finding": "session_p5_widens_but_damages_midpf_and_oos",
+      "interpretation": "session_p5(세션 5분 변형)은 넓혔지만 validation mid PF(검증 중반 수익요인), OOS net(표본외 순손익), late concentration(후반 집중)을 악화했다.",
+      "next_use": "Do not widen the long session gate(롱 세션 게이트) in this form."
+    },
+    {
+      "confidence": "high",
+      "evidence": "validation_mid_pf=1.67807;validation_dd=9.6957;oos_pf=1.85;validation_net=731.84;oos_net=602.79;oos_dd=12.8696",
+      "finding": "cashopen_is_a_midpf_clue_not_a_package",
+      "interpretation": "cashopen(현금장 초반)은 mid PF(중반 수익요인)와 DD(낙폭) 단서를 주지만 validation net(검증 순손익), early PF(초반 수익요인), OOS net/DD(표본외 순손익/낙폭)를 훼손했다.",
+      "next_use": "Use cashopen as a guarded clue(보호 단서), not as the whole adapter(전체 어댑터)."
+    },
+    {
+      "confidence": "high",
+      "evidence": "All Stage233 variants retained ATR SL/TP(ATR 손절/익절) and model-controlled risk%(모델 제어 위험 비율).",
+      "finding": "atr_and_model_risk_remain_present_but_not_sufficient",
+      "interpretation": "mandatory capability(필수 기능)는 유지됐지만 KPI(핵심 성과 지표) 통과 조건은 아니다.",
+      "next_use": "Keep ATR/risk fixed while Stage235(235단계) repairs side-specific validation net(방향별 검증 순손익)."
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage235_bounded_side_specific_validation_net_recovery_after_session_context_tradeoff_candidate_not_final",
+  "external_verification_status": "review_only_source_stage233_mt5_reports_completed",
+  "failure_memory": [
+    {
+      "do_not_repeat": "Do not rerun p5/p10 session-width-only repair.",
+      "failure_id": "run234A_stage234_stage233_side_session_context_followup_review_v1__session_p5_damage",
+      "hypothesis": "Slightly wider long session gate(조금 넓은 롱 세션 게이트) can recover validation net/PF(검증 순손익/수익요인).",
+      "reopen_condition": "Only reopen if a side-specific model or separate early-window guard changes the trade source.",
+      "salvage_value": "It proves simple widening is not the next repair axis.",
+      "why_failed": "It lowered validation net and mid PF, worsened OOS net, and pushed validation late share above 50%."
+    },
+    {
+      "do_not_repeat": "Do not use cashopen-only long gate as a full package.",
+      "failure_id": "run234A_stage234_stage233_side_session_context_followup_review_v1__cashopen_not_package",
+      "hypothesis": "Cash-open long context(현금장 초반 롱 문맥) can solve mid PF(중반 수익요인) and OOS(표본외) together.",
+      "reopen_condition": "Reopen only as a guarded subcomponent with OOS reference bound enforced.",
+      "salvage_value": "Use as a narrow clue for side-specific validation recovery.",
+      "why_failed": "It improved mid PF and DD but damaged validation net, early PF, OOS net, and OOS DD."
+    }
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 6257,
+      "sha256": "b0201cdef6ab6609e063d4b76612e9a37879d66111e4d5db1e6ab9ede533462b",
+      "upserted_rows": 9
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 11235,
+      "sha256": "49506918fcb5acfa82993a543671ed7bed6ca23e39b56ddd2103cdd263517ebb",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1057,
+      "sha256": "01d3724ca00728a572e95636a721a9eab0b555a599f2f43b0eaf887509a41288",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "b3e76c295a560986a455dfcad629a8eea4b23bd9d89cb5bf07748944ba274b9f",
+      "upserted_rows": 1
+    }
+  },
+  "oos_reference_bound": "s233_session_ref_h3_cd8",
+  "overall_goal_complete": false,
+  "packet_id": "stage234_stage233_side_session_context_followup_review_v1",
+  "pushed_commit_hash": "pending_until_push",
+  "repair_clue": "s233_cashopen_long_h3_cd8",
+  "required_outputs": {
+    "attribution": "stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_performance_attribution.csv",
+    "decision": "stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_decision.md",
+    "failure_memory": "stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_failure_memory.csv",
+    "report": "stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_side_session_context_followup_review.md",
+    "route": "stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_route_matrix.csv",
+    "tradeoff": "stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_side_session_context_tradeoff_matrix.csv"
+  },
+  "route_rows": [
+    {
+      "action": "Open Stage235(235단계) as bounded side-specific validation net recovery(방향별 검증 순손익 회복).",
+      "effect": "Stage233(233단계)의 cashopen mid PF clue(현금장 초반 중반 수익요인 단서)를 보존하되 OOS reference bound(표본외 기준 경계)를 깨지 않는지 시험한다.",
+      "oos_reference_bound": "s233_session_ref_h3_cd8",
+      "repair_clue": "s233_cashopen_long_h3_cd8",
+      "risk": "The clue may reduce trade supply(거래 공급) or raise OOS drawdown(표본외 낙폭).",
+      "route": "open_stage235_bounded_side_specific_validation_net_recovery_after_session_context_tradeoff_candidate_not_final"
+    },
+    {
+      "action": "Preserve p5/p10 evidence as failure/no-op memory(실패/무효 반복 기억).",
+      "effect": "Stage235(235단계)가 같은 세션 폭 조절을 반복하지 않는다.",
+      "oos_reference_bound": "s233_session_ref_h3_cd8",
+      "repair_clue": "",
+      "risk": "Ignoring the failure memory would create another broad stage(넓어진 단계).",
+      "route": "do_not_repeat_session_p5_or_p10_as_primary_axis"
+    }
+  ],
+  "run_id": "run234A_stage234_stage233_side_session_context_followup_review_v1",
+  "source_run_id": "run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1",
+  "source_stage": "233_adapter_research__side_session_context_repair_after_lifecycle_failure",
+  "stage_id": "234_adapter_research__stage233_side_session_context_followup_review",
+  "tradeoff_rows": [
+    {
+      "adapter_id": "s233_session_ref_h3_cd8",
+      "atr_model_risk_present": true,
+      "axis": "session_ref_h3_cd8",
+      "hard_quality_pass": false,
+      "oos_balance_dd_percent": 9.2072,
+      "oos_dd_margin_vs_reference": 0.0,
+      "oos_late_net_share": 0.428,
+      "oos_mfe_capture_ratio": 0.7127440841,
+      "oos_net": 719.48,
+      "oos_net_gap_vs_reference": 0.0,
+      "oos_pf": 1.74,
+      "oos_pf_gap_vs_reference": 0.0,
+      "quality_flags": "validation_net_below_34d;validation_early_pf_below_34d;validation_mid_pf_below_34d",
+      "review_class": "oos_preserved_validation_under_34d",
+      "validation_balance_dd_percent": 12.6953,
+      "validation_early_pf": 1.563704148,
+      "validation_early_pf_gap_vs_34d": -0.019452852,
+      "validation_late_net_share": 0.4729,
+      "validation_mfe_capture_ratio": 0.6773077989,
+      "validation_mid_pf": 1.541193855,
+      "validation_mid_pf_gap_vs_34d": -0.041963145,
+      "validation_net": 952.16,
+      "validation_net_gap_vs_34d": -35.44,
+      "validation_pf": 1.6
+    },
+    {
+      "adapter_id": "s233_session_p5_h3_cd8",
+      "atr_model_risk_present": true,
+      "axis": "session_p5_h3_cd8",
+      "hard_quality_pass": false,
+      "oos_balance_dd_percent": 9.2451,
+      "oos_dd_margin_vs_reference": -0.0379,
+      "oos_late_net_share": 0.4193,
+      "oos_mfe_capture_ratio": 0.7224287158,
+      "oos_net": 671.23,
+      "oos_net_gap_vs_reference": -48.25,
+      "oos_pf": 1.71,
+      "oos_pf_gap_vs_reference": -0.03,
+      "quality_flags": "validation_net_below_34d;validation_mid_pf_below_34d;validation_late_concentration_above_50pct;oos_net_materially_below_stage171_primary",
+      "review_class": "session_p5_damages_midpf_oos_net_and_late_concentration",
+      "validation_balance_dd_percent": 12.189,
+      "validation_early_pf": 1.655408122,
+      "validation_early_pf_gap_vs_34d": 0.072251122,
+      "validation_late_net_share": 0.5029,
+      "validation_mfe_capture_ratio": 0.67969241,
+      "validation_mid_pf": 1.393085559,
+      "validation_mid_pf_gap_vs_34d": -0.190071441,
+      "validation_net": 891.2,
+      "validation_net_gap_vs_34d": -96.4,
+      "validation_pf": 1.6
+    },
+    {
+      "adapter_id": "s233_session_p10_h3_cd8",
+      "atr_model_risk_present": true,
+      "axis": "session_p10_h3_cd8",
+      "hard_quality_pass": false,
+      "oos_balance_dd_percent": 9.2072,
+      "oos_dd_margin_vs_reference": 0.0,
+      "oos_late_net_share": 0.428,
+      "oos_mfe_capture_ratio": 0.7127440841,
+      "oos_net": 719.48,
+      "oos_net_gap_vs_reference": 0.0,
+      "oos_pf": 1.74,
+      "oos_pf_gap_vs_reference": 0.0,
+      "quality_flags": "validation_net_below_34d;validation_early_pf_below_34d;validation_mid_pf_below_34d",
+      "review_class": "oos_preserved_validation_under_34d",
+      "validation_balance_dd_percent": 12.6953,
+      "validation_early_pf": 1.563704148,
+      "validation_early_pf_gap_vs_34d": -0.019452852,
+      "validation_late_net_share": 0.4729,
+      "validation_mfe_capture_ratio": 0.6773077989,
+      "validation_mid_pf": 1.541193855,
+      "validation_mid_pf_gap_vs_34d": -0.041963145,
+      "validation_net": 952.16,
+      "validation_net_gap_vs_34d": -35.44,
+      "validation_pf": 1.6
+    },
+    {
+      "adapter_id": "s233_cashopen_long_h3_cd8",
+      "atr_model_risk_present": true,
+      "axis": "cashopen_long_h3_cd8",
+      "hard_quality_pass": false,
+      "oos_balance_dd_percent": 12.8696,
+      "oos_dd_margin_vs_reference": -3.6624,
+      "oos_late_net_share": 0.4462,
+      "oos_mfe_capture_ratio": 0.7116174188,
+      "oos_net": 602.79,
+      "oos_net_gap_vs_reference": -116.69,
+      "oos_pf": 1.85,
+      "oos_pf_gap_vs_reference": 0.11,
+      "quality_flags": "validation_net_below_34d;validation_early_pf_below_34d;oos_net_materially_below_stage171_primary",
+      "review_class": "cashopen_midpf_dd_clue_but_net_oos_damage",
+      "validation_balance_dd_percent": 9.6957,
+      "validation_early_pf": 1.531640832,
+      "validation_early_pf_gap_vs_34d": -0.051516168,
+      "validation_late_net_share": 0.4076,
+      "validation_mfe_capture_ratio": 0.6814146161,
+      "validation_mid_pf": 1.678066129,
+      "validation_mid_pf_gap_vs_34d": 0.094909129,
+      "validation_net": 731.84,
+      "validation_net_gap_vs_34d": -255.76,
+      "validation_pf": 1.6
+    }
+  ]
+}
