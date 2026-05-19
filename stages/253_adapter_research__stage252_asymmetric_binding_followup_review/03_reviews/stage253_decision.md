@@ -19,7 +19,7 @@
 - route_matrix(경로 행렬): `stages/253_adapter_research__stage252_asymmetric_binding_followup_review/03_reviews/stage253_route_matrix.csv`
 - risk_atr_review(위험/ATR 검토): `stages/253_adapter_research__stage252_asymmetric_binding_followup_review/03_reviews/stage253_risk_atr_review.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `254_adapter_research__nonbinding_source_repair_after_binding_axis_no_gain`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `e7f7a542e425fb4bdaf340cb669cc5b4dbb75933`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage253(253단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.
