@@ -1,8 +1,8 @@
-﻿﻿current_run_id: run231A_stage231_midpf_oos_repair_after_guard_blend_failure_v1
+﻿current_run_id: run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 232_adapter_research__stage231_lifecycle_followup_review
+active_stage: 233_adapter_research__side_session_context_repair_after_lifecycle_failure
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage231(231단계) closed(종료) as `open_stage232_bounded_followup_due_to_lifecycle_repair_tradeoff_candidate_not_final` and Stage232(232단계) `232_adapter_research__stage231_lifecycle_followup_review` is open_planned(개방 계획). Effect(효과): lifecycle repair(생애주기 수리)의 KPI(핵심 성과 지표) 상충을 별도 review(검토)로 판정한다.
+  Stage232(232단계) closed(종료) as `open_stage233_bounded_side_session_context_repair_after_lifecycle_failure_candidate_not_final` and Stage233(233단계) `233_adapter_research__side_session_context_repair_after_lifecycle_failure` is open_planned(개방 계획). Effect(효과): lifecycle repair(생애주기 수리) 실패를 side/session/context repair(방향/세션/문맥 수리)로 분리한다.
 - >-
-  Stage231 evidence(231단계 근거)는 `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_lifecycle_repair_report.md`, `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_lifecycle_repair_kpi_summary.csv`, `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_quality_matrix.csv`, `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_monthly_kpi_summary.csv`, `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_concentration_risk_summary.csv`, `stages/231_adapter_research__midpf_oos_repair_after_guard_blend_failure/03_reviews/stage231_risk_atr_telemetry.csv`에 있다. Effect(효과): hold/cooldown(보유/대기) 축이 mid PF/OOS(중반 수익요인/표본외)를 고치는지 확인한다.
+  Stage232 evidence(232단계 근거)는 `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_lifecycle_followup_review.md`, `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_lifecycle_tradeoff_matrix.csv`, `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_performance_attribution.csv`, `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_failure_memory.csv`에 있다. Effect(효과): Stage231(231단계)의 hold/cooldown(보유/대기) 상충을 반복하지 않게 한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_lifecycle_repair_after_guard_blend_failure`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_side_session_context_repair_after_lifecycle_failure`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7944,4 +7944,36 @@ stage231_midpf_oos_repair_after_guard_blend_failure:
   external_verification_status: completed
   pushed_commit_hash: adc7978cadb5d930ae557c058a64968fda528f91
   next_action: run232A_stage232_stage231_lifecycle_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage232_stage231_lifecycle_followup_review:
+  packet_id: stage232_stage231_lifecycle_followup_review_v1
+  stage_id: 232_adapter_research__stage231_lifecycle_followup_review
+  status: closed_open_stage233_bounded_side_session_context_repair_after_lifecycle_failure_candidate_not_final
+  current_run_id: run232A_stage232_stage231_lifecycle_followup_review_v1
+  source_stage: 231_adapter_research__midpf_oos_repair_after_guard_blend_failure
+  source_run: run231A_stage231_midpf_oos_repair_after_guard_blend_failure_v1
+  decision: open_stage233_bounded_side_session_context_repair_after_lifecycle_failure_candidate_not_final
+  oos_reference_bound: s231_session_ref_h3_cd8
+  validation_recovery_clue: s231_wide_h3_cd12
+  report_path: stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_lifecycle_followup_review.md
+  decision_path: stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_decision.md
+  tradeoff_matrix_path: stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_lifecycle_tradeoff_matrix.csv
+  failure_memory_path: stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_failure_memory.csv
+  external_verification_status: review_only_source_stage231_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage233_side_session_context_repair_after_lifecycle_failure:
+  packet_id: stage233_side_session_context_repair_after_lifecycle_failure_v1
+  stage_id: 233_adapter_research__side_session_context_repair_after_lifecycle_failure
+  status: open_planned_from_stage232
+  current_run_id: run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1
+  source_stage: 232_adapter_research__stage231_lifecycle_followup_review
+  source_run: run232A_stage232_stage231_lifecycle_followup_review_v1
+  source_decision: open_stage233_bounded_side_session_context_repair_after_lifecycle_failure_candidate_not_final
+  oos_reference_bound: s231_session_ref_h3_cd8
+  validation_recovery_clue: s231_wide_h3_cd12
+  next_action: run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
