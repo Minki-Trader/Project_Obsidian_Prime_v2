@@ -21,6 +21,6 @@ Stage245(245단계)는 Stage244(244단계) timestamp-aware guard(시간 형식 �
 - attribution(기여 분석): `stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_performance_attribution.csv`
 - failure_memory(실패 기억): `stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_failure_memory.csv`
 - route_matrix(경로 행렬): `stages/245_adapter_research__stage244_timestamp_guard_followup_review/03_reviews/stage245_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `1481b1323d65bd5974aefc973bc16d9fff74519a`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
