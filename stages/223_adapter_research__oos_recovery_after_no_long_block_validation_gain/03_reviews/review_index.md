@@ -1,7 +1,15 @@
 ﻿# Stage223 Review Index(223단계 검토 색인)
 
-- status(상태): `open_planned_from_stage222`
-- current_packet(현재 작업 묶음): `stage223_oos_recovery_after_no_long_block_validation_gain_v1`
-- current_run(현재 실행): `run223A_stage223_oos_recovery_after_no_long_block_validation_gain_v1`
-- source_stage(원천 단계): `222_adapter_research__stage221_entry_signal_gate_followup_review`
-- source_run(원천 실행): `run222A_stage222_stage221_entry_signal_gate_followup_review_v1`
+- status(상태): `closed_open_stage224_bounded_followup_due_to_oos_recovery_tradeoff_candidate_not_final`
+- packet(작업 묶음): `stage223_oos_recovery_after_no_long_block_validation_gain_v1`
+- run(실행): `run223A_stage223_oos_recovery_after_no_long_block_validation_gain_v1`
+- decision(판정): `open_stage224_bounded_followup_due_to_oos_recovery_tradeoff_candidate_not_final`
+- report(보고서): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_oos_recovery_report.md`
+- summary(요약): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_oos_recovery_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_quality_matrix.csv`
+- segment_kpi(구간 KPI 핵심 성과 지표): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_segment_kpi_summary.csv`
+- balance_curve_audit(잔고 곡선 감사): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_balance_curve_audit.csv`
+- monthly_kpi(월별 KPI 핵심 성과 지표): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_monthly_kpi_summary.csv`
+- concentration_risk(집중 위험): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_concentration_risk_summary.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/223_adapter_research__oos_recovery_after_no_long_block_validation_gain/03_reviews/stage223_risk_atr_telemetry.csv`
+- next_stage_or_branch(다음 단계 또는 분기): `224_adapter_research__stage223_oos_recovery_followup_review`

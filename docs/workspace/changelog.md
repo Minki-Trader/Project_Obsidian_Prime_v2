@@ -1775,3 +1775,8 @@
 - action(행동): closed(종료) `222_adapter_research__stage221_entry_signal_gate_followup_review` with decision(판정) `open_stage223_bounded_oos_recovery_after_no_long_block_validation_gain_candidate_not_final`.
 - effect(효과): no_long_block(롱 차단 제거)을 validation gain clue(검증 개선 단서)로 보존하고, OOS net(표본외 순손익)과 mid PF(중반 수익요인) 회복을 Stage223(223단계)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T07:22:03Z Stage223 OOS recovery closeout(223단계 표본외 회복 종료)
+
+- action(행동): closed(종료) `223_adapter_research__oos_recovery_after_no_long_block_validation_gain` with decision(판정) `open_stage224_bounded_followup_due_to_oos_recovery_tradeoff_candidate_not_final`.
+- effect(효과): no_long_block(롱 차단 제거) 이후 long guard(롱 보호) 회복 가능성을 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage224(224단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
