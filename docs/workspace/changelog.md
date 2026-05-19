@@ -1790,3 +1790,8 @@
 - action(행동): closed(종료) `225_adapter_research__validation_recovery_after_lowedge_oos_gain` with decision(판정) `open_stage226_bounded_followup_due_to_validation_recovery_tradeoff_candidate_not_final`.
 - effect(효과): lowedge OOS gain(저엣지 표본외 개선) 상태에서 long threshold(롱 문턱값) 완화를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage226(226단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T08:02:33Z Stage226 validation recovery follow-up review closeout(226단계 검증 회복 후속 검토 종료)
+
+- action(행동): closed(종료) `226_adapter_research__stage225_validation_recovery_followup_review` with decision(판정) `open_stage227_bounded_selection_structure_repair_after_threshold_axis_no_effect_candidate_not_final`.
+- effect(효과): Stage225(225단계)의 long threshold(롱 임계값) 조정 축이 KPI(핵심 성과 지표)를 바꾸지 못했으므로 Stage227(227단계) 선택 구조 수리로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

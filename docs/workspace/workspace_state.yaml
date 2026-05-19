@@ -1,8 +1,8 @@
-﻿current_run_id: run226A_stage226_stage225_validation_recovery_followup_review_v1
+﻿current_run_id: run227A_stage227_selection_structure_repair_after_threshold_axis_no_effect_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 226_adapter_research__stage225_validation_recovery_followup_review
+active_stage: 227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage225(225단계) closed(종료) as `open_stage226_bounded_followup_due_to_validation_recovery_tradeoff_candidate_not_final` and Stage226(226단계) `226_adapter_research__stage225_validation_recovery_followup_review` is open_planned(개방 계획). Effect(효과): lowedge OOS gain(저엣지 표본외 개선)을 유지한 long-threshold validation recovery(롱 문턱값 검증 회복)의 KPI(핵심 성과 지표) 상충을 별도 review(검토)로 판정한다.
+  Stage226(226단계) closed(종료) as `open_stage227_bounded_selection_structure_repair_after_threshold_axis_no_effect_candidate_not_final` and Stage227(227단계) `227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect` is open_planned(개방 계획). Effect(효과): Stage225(225단계)의 long-threshold axis(롱 임계값 축)이 no measurable change(측정 가능한 변화 없음)였으므로, 다음은 selection structure repair(선택 구조 수리)로 좁힌다.
 - >-
-  Stage225 evidence(225단계 근거)는 `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_validation_recovery_report.md`, `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_validation_recovery_kpi_summary.csv`, `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_quality_matrix.csv`, `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_monthly_kpi_summary.csv`, `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_concentration_risk_summary.csv`, `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_risk_atr_telemetry.csv`에 있다. Effect(효과): long threshold(롱 문턱값) 완화가 validation(검증) 회복에 도움이 됐는지 확인한다.
+  Stage226 evidence(226단계 근거)는 `stages/226_adapter_research__stage225_validation_recovery_followup_review/03_reviews/stage226_followup_review.md`, `stages/226_adapter_research__stage225_validation_recovery_followup_review/03_reviews/stage226_threshold_axis_tradeoff_matrix.csv`, `stages/226_adapter_research__stage225_validation_recovery_followup_review/03_reviews/stage226_performance_attribution.csv`, `stages/226_adapter_research__stage225_validation_recovery_followup_review/03_reviews/stage226_route_matrix.csv`에 있다. Effect(효과): OOS gain(표본외 개선)은 보존됐지만 validation(검증)은 34D(34D 기준) 미달이라는 판단을 분리 기록한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_validation_recovery_after_lowedge_oos_gain`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_selection_structure_repair_after_threshold_axis_no_effect`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7833,4 +7833,21 @@ stage225_validation_recovery_after_lowedge_oos_gain:
   external_verification_status: completed
   pushed_commit_hash: 21f86245b96f10ee1dc1569a6f92933b2635dbf8
   next_action: run226A_stage226_stage225_validation_recovery_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage226_stage225_validation_recovery_followup_review:
+  packet_id: stage226_stage225_validation_recovery_followup_review_v1
+  stage_id: 226_adapter_research__stage225_validation_recovery_followup_review
+  status: closed_open_stage227_bounded_selection_structure_repair_after_threshold_axis_no_effect_candidate_not_final
+  current_run_id: run226A_stage226_stage225_validation_recovery_followup_review_v1
+  source_stage: 225_adapter_research__validation_recovery_after_lowedge_oos_gain
+  source_run: run225A_stage225_validation_recovery_after_lowedge_oos_gain_v1
+  decision: open_stage227_bounded_selection_structure_repair_after_threshold_axis_no_effect_candidate_not_final
+  representative_adapter: s225_val_lowedge_lng520
+  report_path: stages/226_adapter_research__stage225_validation_recovery_followup_review/03_reviews/stage226_followup_review.md
+  decision_path: stages/226_adapter_research__stage225_validation_recovery_followup_review/03_reviews/stage226_decision.md
+  tradeoff_matrix_path: stages/226_adapter_research__stage225_validation_recovery_followup_review/03_reviews/stage226_threshold_axis_tradeoff_matrix.csv
+  external_verification_status: review_only_source_stage225_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run227A_stage227_selection_structure_repair_after_threshold_axis_no_effect_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
