@@ -1,4 +1,4 @@
-## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
+﻿## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
 
 - completed(완료): `run31A_state_context_router_broad_mt5_probe_v1`
 - judgment(판정): `state_context_not_useful_or_inconclusive`
@@ -1954,4 +1954,19 @@
 
 - action(행동): closed(종료) `251_adapter_research__stage250_decision_binding_followup_review` with decision(판정) `open_stage252_bounded_asymmetric_binding_repair_after_stage250_overprune_candidate_not_final`.
 - effect(효과): Stage250(250단계)의 active binding(활성 결합)과 overprune damage(과감축 손상)를 분리하고 `252_adapter_research__asymmetric_binding_repair_after_stage250_overprune`를 열었다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T18:38:25Z Stage252 asymmetric binding repair closeout(252단계 비대칭 결합 수리 종료)
+
+- action(행동): closed(종료) `252_adapter_research__asymmetric_binding_repair_after_stage250_overprune` with decision(판정) `open_stage253_bounded_followup_due_to_asymmetric_binding_no_gain_candidate_not_final`.
+- effect(효과): Stage250(250단계)의 overprune damage(과감축 손상)를 좁은 side/rank binding(방향/순위 결합) 수리 근거로 분리했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T18:39:50Z Stage252 asymmetric binding repair closeout(252단계 비대칭 결합 수리 종료)
+
+- action(행동): closed(종료) `252_adapter_research__asymmetric_binding_repair_after_stage250_overprune` with decision(판정) `open_stage253_bounded_followup_due_to_asymmetric_binding_no_gain_candidate_not_final`.
+- effect(효과): Stage250(250단계)의 overprune damage(과감축 손상)를 좁은 side/rank binding(방향/순위 결합) 수리 근거로 분리했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T18:55:58Z Stage252 asymmetric binding repair closeout(252단계 비대칭 결합 수리 종료)
+
+- action(행동): closed(종료) `252_adapter_research__asymmetric_binding_repair_after_stage250_overprune` with decision(판정) `open_stage253_bounded_followup_due_to_asymmetric_binding_no_gain_candidate_not_final`.
+- effect(효과): Stage250(250단계)의 overprune damage(과감축 손상)를 좁은 side/rank binding(방향/순위 결합) 수리 근거로 분리했다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
