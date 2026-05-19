@@ -21,6 +21,6 @@ Stage246(246단계)는 hard guard(강한 차단) 과차단을 soft timestamp gua
 - quality_matrix(품질 행렬): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_quality_matrix.csv`
 - soft_guard_feature_summary(부드러운 보호문 피처 요약): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_soft_guard_feature_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/246_adapter_research__soft_timestamp_guard_repair_after_stage244_overprune/03_reviews/stage246_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `b6a388299dd99e64595d08529ac4462d578297c9`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).
