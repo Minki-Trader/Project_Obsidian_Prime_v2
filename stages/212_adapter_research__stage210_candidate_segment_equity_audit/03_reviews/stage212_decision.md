@@ -15,7 +15,7 @@
 - concentration_matrix(집중 행렬): `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_concentration_matrix.csv`
 - risk_atr_matrix(위험/ATR 행렬): `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_risk_atr_telemetry_matrix.csv`
 - attribution(성과 원인 분해): `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_performance_attribution.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `04cd38bdb9444b1d8afb6d907781c8da6ad1310f`
 - next_stage_or_branch(다음 단계 또는 분기): `213_adapter_research__s210_r0315_oos_monthly_concentration_repair`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 

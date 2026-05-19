@@ -10,5 +10,5 @@
 - decision(판정): `open_stage213_bounded_oos_monthly_concentration_repair_for_s210_r0315_candidate_not_final`
 - audit_flags(감사 표식): `oos_negative_months,oos_top5_concentration_watch,oos_late_quarter_concentration_watch,thin_validation_dd_margin,final_balance_not_new_high`
 - next_stage_or_branch(다음 단계 또는 분기): `213_adapter_research__s210_r0315_oos_monthly_concentration_repair`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `04cd38bdb9444b1d8afb6d907781c8da6ad1310f`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
