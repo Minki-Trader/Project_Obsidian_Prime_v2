@@ -13,7 +13,7 @@
 - tradeoff_matrix(상충 행렬): `stages/220_adapter_research__stage219_entry_lifecycle_followup_review/03_reviews/stage220_lifecycle_tradeoff_matrix.csv`
 - attribution(성과 원인 분해): `stages/220_adapter_research__stage219_entry_lifecycle_followup_review/03_reviews/stage220_performance_attribution.csv`
 - route_matrix(경로 행렬): `stages/220_adapter_research__stage219_entry_lifecycle_followup_review/03_reviews/stage220_route_matrix.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `cc387629951effd1cafc154e7d5617b9ffa6f936`
 - next_stage_or_branch(다음 단계 또는 분기): `221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
