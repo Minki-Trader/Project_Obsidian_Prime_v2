@@ -1,0 +1,37 @@
+{
+  "attribution_confidence": "medium_high",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "validation improvement may be a cluster-removal gain rather than robust OOS improvement.",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run261A_stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1__lowrank_filter_best_validation_tradeoff",
+      "comparison_baseline": "s260_highedge_control",
+      "likely_drivers": "low-rank low-edge short signals were blocked while thresholds/lifecycle/ATR/risk stayed fixed.",
+      "next_probe": "262_adapter_research__lowrank_lowedge_oos_recovery_repair",
+      "observed_change": "s260_lowrank_lowedge_filter: validation_pf=1.61, validation_net=1291.28, validation_mid_pf=1.600364571, OOS net=775.97.",
+      "segment_checks": "validation/OOS, early/mid/late PF, DD, probability telemetry, risk/ATR telemetry.",
+      "trade_shape": "validation quality improved strongly but OOS net fell by 52.99 versus control."
+    },
+    {
+      "alternative_explanations": "OOS PF recovery may come from supply shrink.",
+      "attribution_confidence": "medium",
+      "attribution_id": "run261A_stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1__midlow_filter_side_clue",
+      "comparison_baseline": "s260_highedge_control",
+      "likely_drivers": "broader low/mid-rank filtering removed more supply and restored OOS PF while damaging validation net/DD.",
+      "next_probe": "262_adapter_research__lowrank_lowedge_oos_recovery_repair",
+      "observed_change": "s260_midlow_lowedge_filter: OOS PF=1.78 but validation net=972.15 and DD=12.9281.",
+      "segment_checks": "validation net/DD/mid PF and OOS PF/net.",
+      "trade_shape": "side clue only; not next primary anchor."
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage262_bounded_lowrank_lowedge_oos_recovery_candidate_not_final",
+  "external_verification_status": "review_only_source_stage260_mt5_reports_completed",
+  "next_stage_or_branch": "262_adapter_research__lowrank_lowedge_oos_recovery_repair",
+  "overall_goal_complete": false,
+  "packet_id": "stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1",
+  "run_id": "run261A_stage261_stage260_tight_plus_highedge_pf_oos_followup_review_v1",
+  "source_run": "run260A_stage260_tight_plus_highedge_pf_oos_recovery_repair_v1",
+  "source_stage": "260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair",
+  "stage_id": "261_adapter_research__stage260_tight_plus_highedge_pf_oos_followup_review"
+}
