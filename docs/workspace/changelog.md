@@ -1870,3 +1870,13 @@
 - action(행동): closed(종료) `239_adapter_research__stage238_score_shape_followup_review` with decision(판정) `open_stage240_bounded_highbonus_dd_midpf_repair_after_score_shape_tradeoff_candidate_not_final`.
 - effect(효과): highbonus(고마진) net/OOS gain(순손익/표본외 개선)을 보존하고 DD/midPF(낙폭/중간 수익요인) 수리를 Stage240(240단계)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T13:31:09Z Stage240 highbonus DD/midPF repair closeout(240단계 고마진 낙폭/중간 수익요인 수리 종료)
+
+- action(행동): closed(종료) `240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff` with decision(판정) `open_stage241_bounded_followup_due_to_highbonus_dd_midpf_tradeoff_candidate_not_final`.
+- effect(효과): highbonus(고마진) risk cap(위험 상한)과 score strength(점수 강도)를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage241(241단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T13:33:14Z Stage240 highbonus DD/midPF repair closeout(240단계 고마진 낙폭/중간 수익요인 수리 종료)
+
+- action(행동): closed(종료) `240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff` with decision(판정) `open_stage241_bounded_followup_due_to_highbonus_dd_midpf_tradeoff_candidate_not_final`.
+- effect(효과): highbonus(고마진) risk cap(위험 상한)과 score strength(점수 강도)를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage241(241단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

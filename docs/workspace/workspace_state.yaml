@@ -1,8 +1,8 @@
-﻿current_run_id: run240A_stage240_highbonus_dd_midpf_repair_after_score_shape_tradeoff_v1
+﻿current_run_id: run241A_stage241_stage240_highbonus_repair_followup_review_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff
+active_stage: 241_adapter_research__stage240_highbonus_repair_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage239(239단계) closed(종료) as `open_stage240_bounded_highbonus_dd_midpf_repair_after_score_shape_tradeoff_candidate_not_final` and Stage240(240단계) `240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff` is open_planned(개방 계획). Effect(효과): highbonus(고마진 보너스)의 net/OOS gain(순손익/표본외 개선)을 보존하면서 DD/PF(낙폭/수익요인) 수리를 별도 단계로 넘긴다.
+  Stage240(240단계) closed(종료) as `open_stage241_bounded_followup_due_to_highbonus_dd_midpf_tradeoff_candidate_not_final` and Stage241(241단계) `241_adapter_research__stage240_highbonus_repair_followup_review` is open_planned(개방 계획). Effect(효과): highbonus DD/midPF repair(고마진 낙폭/중간 수익요인 수리)의 KPI(핵심 성과 지표) 상충을 별도 review(검토)로 판정한다.
 - >-
-  Stage239 evidence(239단계 근거)는 `stages/239_adapter_research__stage238_score_shape_followup_review/03_reviews/stage239_score_shape_followup_review.md`, `stages/239_adapter_research__stage238_score_shape_followup_review/03_reviews/stage239_score_shape_tradeoff_matrix.csv`, `stages/239_adapter_research__stage238_score_shape_followup_review/03_reviews/stage239_performance_attribution.csv`, `stages/239_adapter_research__stage238_score_shape_followup_review/03_reviews/stage239_failure_memory.csv`에 있다. Effect(효과): Stage238(238단계) 상충을 숨기지 않고 Stage240(240단계)의 수리 축을 좁힌다.
+  Stage240 evidence(240단계 근거)는 `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_highbonus_repair_report.md`, `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_highbonus_repair_kpi_summary.csv`, `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_quality_matrix.csv`, `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_monthly_kpi_summary.csv`, `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_concentration_risk_summary.csv`, `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_risk_atr_telemetry.csv`에 있다. Effect(효과): risk cap(위험 상한)과 highbonus strength(고마진 강도) 수리가 34D(34D 기준)에 가까워졌는지 확인한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_highbonus_dd_midpf_repair_after_score_shape_tradeoff`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
@@ -8101,12 +8101,29 @@ stage239_stage238_score_shape_followup_review:
 stage240_highbonus_dd_midpf_repair_after_score_shape_tradeoff:
   packet_id: stage240_highbonus_dd_midpf_repair_after_score_shape_tradeoff_v1
   stage_id: 240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff
-  status: open_planned_from_stage239
+  status: closed_open_stage241_bounded_followup_due_to_highbonus_dd_midpf_tradeoff_candidate_not_final
   current_run_id: run240A_stage240_highbonus_dd_midpf_repair_after_score_shape_tradeoff_v1
   source_stage: 239_adapter_research__stage238_score_shape_followup_review
   source_run: run239A_stage239_stage238_score_shape_followup_review_v1
-  source_decision: open_stage240_bounded_highbonus_dd_midpf_repair_after_score_shape_tradeoff_candidate_not_final
-  highbonus_clue: s238_highbonus010_rank3f
-  reference_adapter: s238_rank3f_neutral_ref
-  next_action: run240A_stage240_highbonus_dd_midpf_repair_after_score_shape_tradeoff_v1
+  decision: open_stage241_bounded_followup_due_to_highbonus_dd_midpf_tradeoff_candidate_not_final
+  report_path: stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_highbonus_repair_report.md
+  decision_path: stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_decision.md
+  summary_path: stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_highbonus_repair_kpi_summary.csv
+  quality_matrix_path: stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_quality_matrix.csv
+  monthly_kpi_path: stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_monthly_kpi_summary.csv
+  concentration_path: stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_concentration_risk_summary.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run241A_stage241_stage240_highbonus_repair_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage241_stage240_highbonus_repair_followup_review:
+  packet_id: stage241_stage240_highbonus_repair_followup_review_v1
+  stage_id: 241_adapter_research__stage240_highbonus_repair_followup_review
+  status: open_planned_from_stage240
+  current_run_id: run241A_stage241_stage240_highbonus_repair_followup_review_v1
+  source_stage: 240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff
+  source_run: run240A_stage240_highbonus_dd_midpf_repair_after_score_shape_tradeoff_v1
+  source_decision: open_stage241_bounded_followup_due_to_highbonus_dd_midpf_tradeoff_candidate_not_final
+  next_action: run241A_stage241_stage240_highbonus_repair_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

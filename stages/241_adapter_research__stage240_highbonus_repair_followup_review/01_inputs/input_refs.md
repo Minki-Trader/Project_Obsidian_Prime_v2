@@ -1,0 +1,10 @@
+﻿# Stage241 Inputs(241단계 입력)
+
+- source_stage(원천 단계): `240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff`
+- source_run(원천 실행): `run240A_stage240_highbonus_dd_midpf_repair_after_score_shape_tradeoff_v1`
+- source_decision(원천 판정): `open_stage241_bounded_followup_due_to_highbonus_dd_midpf_tradeoff_candidate_not_final`
+- report(보고서): `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_highbonus_repair_report.md`
+- summary(요약): `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_highbonus_repair_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_quality_matrix.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_risk_atr_telemetry.csv`
+- decision_path(판정 파일): `stages/240_adapter_research__highbonus_dd_midpf_repair_after_score_shape_tradeoff/03_reviews/stage240_decision.md`
