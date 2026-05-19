@@ -22,6 +22,6 @@ Stage221(221단계)는 Stage220(220단계) 판정에 따라 bracket/risk/lifecyc
 - monthly_kpi(월별 KPI 핵심 성과 지표): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `49bc0adf2759507805640330c01dfe2dc9870df6`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).

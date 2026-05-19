@@ -16,7 +16,7 @@
 - monthly_kpi(월별 KPI 핵심 성과 지표): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/221_adapter_research__entry_signal_gate_repair_after_lifecycle_axis_failure/03_reviews/stage221_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `49bc0adf2759507805640330c01dfe2dc9870df6`
 - next_stage_or_branch(다음 단계 또는 분기): `222_adapter_research__stage221_entry_signal_gate_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
