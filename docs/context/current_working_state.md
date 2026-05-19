@@ -20,6 +20,6 @@ Stage248(248단계)는 Stage246/247(246/247단계)의 soft guard tradeoff(부드
 - summary(요약): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_entry_source_kpi_summary.csv`
 - quality_matrix(품질 행렬): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_quality_matrix.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `ab50acc695fdc069cb25dece7a66a38bb89bc925`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).
