@@ -14,7 +14,7 @@
 - tradeoff_matrix(상충 행렬): `stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_side_session_context_tradeoff_matrix.csv`
 - attribution(성과 원인 분해): `stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_performance_attribution.csv`
 - failure_memory(실패 기억): `stages/234_adapter_research__stage233_side_session_context_followup_review/03_reviews/stage234_failure_memory.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `d27cac4723c76a9aa05c4d4f43fefd0ead359753`
 - next_stage_or_branch(다음 단계 또는 분기): `235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
