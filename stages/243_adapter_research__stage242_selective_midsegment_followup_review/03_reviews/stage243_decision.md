@@ -12,7 +12,7 @@
 - failure_memory(실패 기억): `stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_failure_memory.csv`
 - route_matrix(경로 행렬): `stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_route_matrix.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `4b7c3394df8525180d4df401973cd8c61d8262e3`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage243(243단계) closeout(종료)는 overall goal complete(전체 목표 완료)가 아니다.

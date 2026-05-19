@@ -22,6 +22,6 @@ Important Stage242 Boundary(중요 242단계 경계): `stage242_gate_feature_sum
 - tradeoff_matrix(상충 행렬): `stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_tradeoff_review_matrix.csv`
 - attribution(기여 분석): `stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_performance_attribution.csv`
 - failure_memory(실패 기억): `stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_failure_memory.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `4b7c3394df8525180d4df401973cd8c61d8262e3`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준선), legacy_inheritance(레거시 상속), overall_goal_complete(전체 목표 완료).
