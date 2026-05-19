@@ -1,0 +1,11 @@
+﻿# Stage245 Inputs(245단계 입력)
+
+- source_stage(원천 단계): `244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard`
+- source_run(원천 실행): `run244A_stage244_timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard_v1`
+- source_decision(원천 판정): `open_stage245_bounded_followup_due_to_timestamp_guard_tradeoff_candidate_not_final`
+- report(보고서): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_selective_midsegment_report.md`
+- summary(요약): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_selective_midsegment_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_quality_matrix.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_risk_atr_telemetry.csv`
+- gate_feature_summary(보호문 피처 요약): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_gate_feature_summary.csv`
+- decision_path(판정 파일): `stages/244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard/03_reviews/stage244_decision.md`
