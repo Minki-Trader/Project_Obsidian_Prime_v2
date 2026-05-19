@@ -1,0 +1,8 @@
+﻿# Stage249 Inputs(249단계 입력)
+
+- source_stage(원천 단계): `248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff`
+- source_run(원천 실행): `run248A_stage248_entry_source_quality_repair_after_stage246_soft_guard_tradeoff_v1`
+- source_decision(원천 판정): `open_stage249_bounded_followup_due_to_entry_source_tradeoff_candidate_not_final`
+- stage248_report(248단계 보고서): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_entry_source_repair_report.md`
+- stage248_quality_matrix(248단계 품질 행렬): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_quality_matrix.csv`
+- stage248_failure_memory(248단계 실패 기억): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_failure_memory.csv`
