@@ -1,0 +1,48 @@
+{
+  "attribution_confidence": "medium_high",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "gain may come from removing a harmful cluster rather than durable signal quality; OOS net loss keeps confidence below high.",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run259A_stage259_stage258_short_tight_margin_pf_followup_review_v1__highedge_best_tradeoff",
+      "comparison_baseline": "s258_short_tight_control",
+      "likely_drivers": "high-edge short margin guard changed short supply while score table, threshold, lifecycle, ATR bracket, and model risk stayed fixed.",
+      "next_probe": "260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair",
+      "observed_change": "s258_tight_plus_highedge improved validation PF from 1.48 to 1.56 and validation net from 1043.99 to 1204.24 versus control.",
+      "segment_checks": "validation/OOS, early/mid/late PF, DD, gate row counts, probability telemetry, risk/ATR telemetry.",
+      "trade_shape": "validation DD stayed low at 9.0307, OOS DD improved to 9.5478, but OOS net fell by 121.26 versus control."
+    },
+    {
+      "alternative_explanations": "OOS PF gain could be sample shrink rather than robust edge.",
+      "attribution_confidence": "medium",
+      "attribution_id": "run259A_stage259_stage258_short_tight_margin_pf_followup_review_v1__lowedge_side_clue_not_primary",
+      "comparison_baseline": "s258_short_tight_control",
+      "likely_drivers": "low-edge guard pruned supply more aggressively and helped some OOS/mid-late buckets while damaging validation early/net quality.",
+      "next_probe": "260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair",
+      "observed_change": "s258_tight_plus_lowedge raised OOS PF to 1.76 and mid PF to 1.5565 but validation net fell to 815.42.",
+      "segment_checks": "early/mid/late PF and validation/OOS net/DD.",
+      "trade_shape": "useful side clue but not a primary path because validation net is below the 34D lesson-only target."
+    },
+    {
+      "alternative_explanations": "some OOS net was preserved, but validation/mid/OOS DD guardrails are too weak.",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run259A_stage259_stage258_short_tight_margin_pf_followup_review_v1__single_edge_guards_failure_memory",
+      "comparison_baseline": "s258_short_tight_control",
+      "likely_drivers": "single edge guard changes supply too broadly compared with the tight-plus composite guards.",
+      "next_probe": "260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair",
+      "observed_change": "lowedge_only and highedge_only both damaged at least one critical validation or OOS guardrail.",
+      "segment_checks": "validation PF/net/DD, mid PF, OOS PF/net/DD.",
+      "trade_shape": "single guard variants are failure memory, not next primary candidates."
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage260_bounded_tight_plus_highedge_pf_oos_recovery_repair_candidate_not_final",
+  "external_verification_status": "review_only_source_stage258_mt5_reports_completed",
+  "next_stage_or_branch": "260_adapter_research__tight_plus_highedge_pf_oos_recovery_repair",
+  "overall_goal_complete": false,
+  "packet_id": "stage259_stage258_short_tight_margin_pf_followup_review_v1",
+  "run_id": "run259A_stage259_stage258_short_tight_margin_pf_followup_review_v1",
+  "source_run": "run258A_stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1",
+  "source_stage": "258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff",
+  "stage_id": "259_adapter_research__stage258_short_tight_margin_pf_followup_review"
+}
