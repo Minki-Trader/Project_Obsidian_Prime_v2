@@ -1,0 +1,12 @@
+﻿# Stage230 Inputs(230단계 입력)
+
+- source_stage(원천 단계): `229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff`
+- source_run(원천 실행): `run229A_stage229_dual_objective_guard_blend_after_selection_tradeoff_v1`
+- source_decision(원천 판정): `open_stage230_bounded_followup_due_to_guard_blend_tradeoff_candidate_not_final`
+- report(보고서): `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_guard_blend_report.md`
+- summary_csv(요약 CSV): `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_guard_blend_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_quality_matrix.csv`
+- monthly_kpi(월별 KPI 핵심 성과 지표): `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_monthly_kpi_summary.csv`
+- concentration_risk(집중 위험): `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_concentration_risk_summary.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_risk_atr_telemetry.csv`
+- decision_path(판정 파일): `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_decision.md`
