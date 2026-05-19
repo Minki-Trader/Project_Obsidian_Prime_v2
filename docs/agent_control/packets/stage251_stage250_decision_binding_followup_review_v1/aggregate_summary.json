@@ -1,0 +1,415 @@
+{
+  "attribution_rows": [
+    {
+      "alternative_explanations": "some DD and OOS PF improvement can be mechanical exposure shrink, not true edge improvement",
+      "attribution_confidence": "high",
+      "attribution_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__binding_active_but_overpruned",
+      "comparison_baseline": "s250_stage248_binding_control",
+      "likely_drivers": "rank-conditioned flat tilt changed model probabilities before the same MT5 thresholds and pruned high-value trade supply",
+      "next_probe": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "observed_change": "Directional pass rows moved from 468 in the control to 309, 204, and 110 in the binding variants, but validation net collapsed.",
+      "segment_checks": "validation/OOS full split, early/mid/late PF, probability binding, risk/ATR telemetry, DD and OOS PF reviewed",
+      "trade_shape": "accepted/fill rows fell sharply; validation net fell by -765.62 to -859.27 while OOS net fell by -514.40 to -575.35"
+    },
+    {
+      "alternative_explanations": "small control drift versus Stage248 can come from Stage250 model/feature identity and tester path differences",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__control_still_near_miss_not_34d",
+      "comparison_baseline": "legacy 34D lesson-only KPI target",
+      "likely_drivers": "mid-window quality and decision/source binding remain limiting even with ATR bracket and model-controlled risk present",
+      "next_probe": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "observed_change": "Stage250 control stayed near the Stage248 reference but missed 34D-equivalent validation net, DD, and mid PF together.",
+      "segment_checks": "validation net gap, DD margin, validation mid PF, OOS net, and quality flags reviewed",
+      "trade_shape": "control validation net 972.15 is -15.45 below 34D; DD margin is -0.018964; mid PF remains 1.516650878"
+    },
+    {
+      "alternative_explanations": "lower DD can reflect fewer trades rather than stronger decision quality",
+      "attribution_confidence": "high",
+      "attribution_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__dd_pf_without_net_not_enough",
+      "comparison_baseline": "research-grade BaselineAdapter package criteria",
+      "likely_drivers": "exposure compression removed both bad and good trades instead of selectively repairing weak decisions",
+      "next_probe": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "observed_change": "Some variants improved DD or OOS PF, but the net/profit supply damage was too large.",
+      "segment_checks": "validation/OOS net, PF, DD, mid PF, OOS PF, and trade count checked",
+      "trade_shape": "best DD compression row still had validation net only 112.88 and validation PF 1.36"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "control": {
+    "adapter_id": "s250_stage248_binding_control",
+    "atr_stop_multiplier": "2.0325",
+    "atr_take_profit_multiplier": "4.615",
+    "axis": "stage248_binding_control",
+    "hard_quality_pass": "False",
+    "label": "stage250_stage248_binding_control",
+    "model_risk_max_pct": "0.0305",
+    "oos_balance_dd_percent": "9.5066",
+    "oos_late_net_share": "0.4163",
+    "oos_net": "776.02",
+    "oos_pf": "1.78",
+    "quality_flags": "validation_net_below_34d;validation_balance_dd_above_34d;validation_mid_pf_below_34d",
+    "short_block_rule": "midwide_lowedge",
+    "stage171_oos_net_delta": "-59.76",
+    "stage171_validation_dd_delta": "-1.3729",
+    "stage171_validation_net_delta": "-11.81",
+    "validation_balance_dd_percent": "12.9281",
+    "validation_dd_margin_vs_34d": "-0.018964",
+    "validation_early_pf": "1.596222842",
+    "validation_late_net_share": "0.4621",
+    "validation_late_pf": "1.636394543",
+    "validation_mid_pf": "1.516650878",
+    "validation_net": "972.15",
+    "validation_net_gap_vs_34d": "-15.45",
+    "validation_pf": "1.59"
+  },
+  "decision": "open_stage252_bounded_asymmetric_binding_repair_after_stage250_overprune_candidate_not_final",
+  "external_verification_status": "review_only_source_stage250_mt5_reports_completed",
+  "failure_memory_rows": [
+    {
+      "do_not_repeat": "do not treat directional-pass reduction or DD compression as sufficient improvement",
+      "failure_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__broad_rank_flat_tilt_overpruned",
+      "next_handling": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "salvage_value": "keep probability-binding diagnostics and avoid repeating inactive threshold-only nudges",
+      "source_failure": "stage250_rank_conditioned_flat_tilt_trade_supply_damage",
+      "why_it_matters": "decision binding became active, but the broad flat tilt removed too much profitable supply"
+    },
+    {
+      "do_not_repeat": "do not call high OOS PF or ATR/risk presence enough for final package completion",
+      "failure_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__control_near_miss_not_final",
+      "next_handling": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "salvage_value": "use the control as a reference surface, not as a final adapter",
+      "source_failure": "stage250_control_still_below_34d_combined_kpi",
+      "why_it_matters": "control net, DD, and mid PF still do not clear the 34D lesson-only target together"
+    },
+    {
+      "do_not_repeat": "do not split ATR/risk into a standalone success claim",
+      "failure_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__risk_atr_present_not_sufficient",
+      "next_handling": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "salvage_value": "keep ATR/risk telemetry in every follow-up run",
+      "source_failure": "mandatory_capability_present_but_kpi_not_repaired",
+      "why_it_matters": "ATR SL/TP and model-controlled risk are necessary, but net/PF/DD and segment stability still govern research quality"
+    }
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 6690,
+      "sha256": "85a34fc366fe24b54573547a2f9aa904a3a94dafc63f64796b22488e02257c1b",
+      "upserted_rows": 19
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 11400,
+      "sha256": "5adfb7cbd073d02ade9db49cf3a6c59bea9cdd068db65ebcbf31c29f74113e9c",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1074,
+      "sha256": "c07c382a7798e7bac65dfc538d0e9055886c3c6e18e450fa73b82988ac7365a6",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/251_adapter_research__stage250_decision_binding_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "c90f0ca25604dc9fb3cd334006d8cf3b8a54da650e3a327964ecdd75b3d8656a",
+      "upserted_rows": 1
+    }
+  },
+  "next_stage_or_branch": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+  "overall_goal_complete": false,
+  "packet_id": "stage251_stage250_decision_binding_followup_review_v1",
+  "pushed_commit_hash": "pending_until_push",
+  "risk_review_rows": [
+    {
+      "adapter_id": "s250_stage248_binding_control",
+      "avg_executed_lot": "0.009917716375",
+      "avg_open_sl_points": "7386.913407",
+      "avg_open_tp_points": "16772.74557",
+      "max_actual_risk_pct_after_floor": "0.0304859339",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s250_stage248_binding_control",
+      "avg_executed_lot": "0.006565137131",
+      "avg_open_sl_points": "7933.588343",
+      "avg_open_tp_points": "18014.02716",
+      "max_actual_risk_pct_after_floor": "0.0303072839",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    },
+    {
+      "adapter_id": "s250_low_flat020",
+      "avg_executed_lot": "0.00264221861",
+      "avg_open_sl_points": "7386.913407",
+      "avg_open_tp_points": "16772.74557",
+      "max_actual_risk_pct_after_floor": "0.0302543928",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s250_low_flat020",
+      "avg_executed_lot": "0.00236814346",
+      "avg_open_sl_points": "7933.588343",
+      "avg_open_tp_points": "18014.02716",
+      "max_actual_risk_pct_after_floor": "0.030409744",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    },
+    {
+      "adapter_id": "s250_low_flat025",
+      "avg_executed_lot": "0.001822429907",
+      "avg_open_sl_points": "7386.913407",
+      "avg_open_tp_points": "16772.74557",
+      "max_actual_risk_pct_after_floor": "0.0303370903",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s250_low_flat025",
+      "avg_executed_lot": "0.001675896624",
+      "avg_open_sl_points": "7933.588343",
+      "avg_open_tp_points": "18014.02716",
+      "max_actual_risk_pct_after_floor": "0.0304558062",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    },
+    {
+      "adapter_id": "s250_lowmid_flat025_015",
+      "avg_executed_lot": "0.00153291345",
+      "avg_open_sl_points": "7386.913407",
+      "avg_open_tp_points": "16772.74557",
+      "max_actual_risk_pct_after_floor": "0.0304978038",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "validation_is"
+    },
+    {
+      "adapter_id": "s250_lowmid_flat025_015",
+      "avg_executed_lot": "0.001385812236",
+      "avg_open_sl_points": "7933.588343",
+      "avg_open_tp_points": "18014.02716",
+      "max_actual_risk_pct_after_floor": "0.0303583919",
+      "max_model_risk_pct": "0.0305",
+      "read": "risk_atr_present_not_sufficient_for_final_package",
+      "risk_bucket": "mid",
+      "risk_floor_applied_count": "0",
+      "split": "oos"
+    }
+  ],
+  "route_rows": [
+    {
+      "decision": "candidate_not_final",
+      "effect": "keeps research/development boundary and avoids final-package claim",
+      "evidence": "hard_quality_pass false for all Stage250 candidates",
+      "next_stage_or_branch": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "route_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__do_not_accept_stage250_as_final"
+    },
+    {
+      "decision": "open_stage252_bounded_asymmetric_binding_repair_after_stage250_overprune_candidate_not_final",
+      "effect": "focuses Stage252 on selective/asymmetric repair instead of another broad threshold or broad flat-tilt pass",
+      "evidence": "binding moved decisions but broad flat tilt damaged validation net and mid PF",
+      "next_stage_or_branch": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "route_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__open_asymmetric_binding_repair"
+    }
+  ],
+  "run_id": "run251A_stage251_stage250_decision_binding_followup_review_v1",
+  "source_attribution_rows": [
+    {
+      "alternative_explanations": "small control delta may come from Stage250 model/feature identity and tester path differences",
+      "attribution_confidence": "high",
+      "attribution_id": "run250A_stage250_decision_surface_binding_repair_after_stage248_threshold_no_effect_v1__s250_stage248_binding_control",
+      "comparison_baseline": "s248_cap0305_reference",
+      "likely_drivers": "same decision design class, same thresholds, same ATR bracket, same model risk cap; model/feature identity changed for Stage250 binding audit",
+      "next_probe": "251_adapter_research__stage250_decision_binding_followup_review",
+      "observed_change": "Stage248 reference score surface near-repeated as Stage250 control",
+      "segment_checks": "validation/OOS, early/mid/late PF, DD, probability binding",
+      "trade_shape": "control row for decision-surface binding repair"
+    },
+    {
+      "alternative_explanations": "trade count reduction can mechanically reduce DD while damaging net",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run250A_stage250_decision_surface_binding_repair_after_stage248_threshold_no_effect_v1__s250_low_flat020",
+      "comparison_baseline": "s250_stage248_binding_control",
+      "likely_drivers": "rank-conditioned flat tilt changed probability surface before the same thresholds were applied",
+      "next_probe": "251_adapter_research__stage250_decision_binding_followup_review",
+      "observed_change": "validation_net_delta=-765.62;validation_dd_delta=-0.1571;validation_mid_pf_delta=-0.039720;oos_net_delta=-514.40",
+      "segment_checks": "validation/OOS KPI, early/mid/late segments, DD, risk/ATR telemetry, probability binding",
+      "trade_shape": "should reduce low-margin accepted decisions if binding is active"
+    },
+    {
+      "alternative_explanations": "trade count reduction can mechanically reduce DD while damaging net",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run250A_stage250_decision_surface_binding_repair_after_stage248_threshold_no_effect_v1__s250_low_flat025",
+      "comparison_baseline": "s250_stage248_binding_control",
+      "likely_drivers": "rank-conditioned flat tilt changed probability surface before the same thresholds were applied",
+      "next_probe": "251_adapter_research__stage250_decision_binding_followup_review",
+      "observed_change": "validation_net_delta=-841.42;validation_dd_delta=0.0909;validation_mid_pf_delta=-0.293885;oos_net_delta=-589.93",
+      "segment_checks": "validation/OOS KPI, early/mid/late segments, DD, risk/ATR telemetry, probability binding",
+      "trade_shape": "should reduce low-margin accepted decisions if binding is active"
+    },
+    {
+      "alternative_explanations": "trade count reduction can mechanically reduce DD while damaging net",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run250A_stage250_decision_surface_binding_repair_after_stage248_threshold_no_effect_v1__s250_lowmid_flat025_015",
+      "comparison_baseline": "s250_stage248_binding_control",
+      "likely_drivers": "rank-conditioned flat tilt changed probability surface before the same thresholds were applied",
+      "next_probe": "251_adapter_research__stage250_decision_binding_followup_review",
+      "observed_change": "validation_net_delta=-859.27;validation_dd_delta=-1.4873;validation_mid_pf_delta=-0.241059;oos_net_delta=-575.35",
+      "segment_checks": "validation/OOS KPI, early/mid/late segments, DD, risk/ATR telemetry, probability binding",
+      "trade_shape": "should reduce low-margin accepted decisions if binding is active"
+    }
+  ],
+  "source_failure_rows": [
+    {
+      "evidence": "best_adapter=s250_stage248_binding_control;hard_quality_pass=False",
+      "failure_id": "stage250_not_final_until_followup_review",
+      "impact": "one bounded decision-binding run does not complete the research package",
+      "next_handling": "251_adapter_research__stage250_decision_binding_followup_review"
+    },
+    {
+      "evidence": "Stage248 thresholds were wired into MT5, but model score probabilities stayed above the tested thresholds",
+      "failure_id": "stage248_threshold_no_effect_root_cause",
+      "impact": "do not repeat small threshold-only nudges",
+      "next_handling": "use rank-conditioned score binding or a new source branch"
+    },
+    {
+      "evidence": "validation_net_gap=-15.45;validation_dd_margin=-0.0190;validation_mid_pf_gap=-0.066506",
+      "failure_id": "stage250_reference_gap_vs_34d",
+      "impact": "Stage248 reference remains a near-miss, not a final adapter",
+      "next_handling": "251_adapter_research__stage250_decision_binding_followup_review"
+    }
+  ],
+  "source_run": "run250A_stage250_decision_surface_binding_repair_after_stage248_threshold_no_effect_v1",
+  "source_stage": "250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect",
+  "source_stage250_evidence_commit": "70625d3b9651397a9c24ed4399483691f221780c",
+  "source_stage250_hash_record_commit": "5f65e46fbcd2f3653cf461c254d27ca0977e01e4",
+  "stage_id": "251_adapter_research__stage250_decision_binding_followup_review",
+  "tradeoff_rows": [
+    {
+      "adapter_id": "s250_stage248_binding_control",
+      "axis": "stage248_binding_control",
+      "directional_pass_delta_vs_control": 0,
+      "directional_pass_validation": 468,
+      "flat_count_delta_vs_control": 0,
+      "flat_count_validation": 9569,
+      "hard_quality_pass": "False",
+      "next_handling": "use_as_reference_only_not_final",
+      "oos_net": "776.02",
+      "oos_net_delta_vs_control": "0.00",
+      "oos_pf": "1.78",
+      "order_filled_delta_vs_control": 0,
+      "order_filled_validation": 471,
+      "read": "near_repeat_control_not_34d_equivalent",
+      "validation_dd_delta_vs_control": "0.0000",
+      "validation_dd_margin_vs_34d": "-0.018964",
+      "validation_dd_percent": "12.9281",
+      "validation_mid_pf": "1.516650878",
+      "validation_mid_pf_delta_vs_control": "0.000000",
+      "validation_net": "972.15",
+      "validation_net_delta_vs_control": "0.00",
+      "validation_net_gap_vs_34d": "-15.45",
+      "validation_pf": "1.59"
+    },
+    {
+      "adapter_id": "s250_low_flat020",
+      "axis": "low_flat020",
+      "directional_pass_delta_vs_control": -159,
+      "directional_pass_validation": 309,
+      "flat_count_delta_vs_control": 97,
+      "flat_count_validation": 9666,
+      "hard_quality_pass": "False",
+      "next_handling": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "oos_net": "261.62",
+      "oos_net_delta_vs_control": "-514.40",
+      "oos_pf": "1.84",
+      "order_filled_delta_vs_control": -142,
+      "order_filled_validation": 329,
+      "read": "binding_active_but_overpruned_profitable_supply",
+      "validation_dd_delta_vs_control": "-0.1571",
+      "validation_dd_margin_vs_34d": "0.138136",
+      "validation_dd_percent": "12.771",
+      "validation_mid_pf": "1.476931091",
+      "validation_mid_pf_delta_vs_control": "-0.039720",
+      "validation_net": "206.53",
+      "validation_net_delta_vs_control": "-765.62",
+      "validation_net_gap_vs_34d": "-781.07",
+      "validation_pf": "1.44"
+    },
+    {
+      "adapter_id": "s250_low_flat025",
+      "axis": "low_flat025",
+      "directional_pass_delta_vs_control": -264,
+      "directional_pass_validation": 204,
+      "flat_count_delta_vs_control": 188,
+      "flat_count_validation": 9757,
+      "hard_quality_pass": "False",
+      "next_handling": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "oos_net": "186.09",
+      "oos_net_delta_vs_control": "-589.93",
+      "oos_pf": "1.82",
+      "order_filled_delta_vs_control": -314,
+      "order_filled_validation": 157,
+      "read": "binding_active_but_overpruned_profitable_supply",
+      "validation_dd_delta_vs_control": "0.0909",
+      "validation_dd_margin_vs_34d": "-0.109864",
+      "validation_dd_percent": "13.019",
+      "validation_mid_pf": "1.222765581",
+      "validation_mid_pf_delta_vs_control": "-0.293885",
+      "validation_net": "130.73",
+      "validation_net_delta_vs_control": "-841.42",
+      "validation_net_gap_vs_34d": "-856.87",
+      "validation_pf": "1.36"
+    },
+    {
+      "adapter_id": "s250_lowmid_flat025_015",
+      "axis": "lowmid_flat025_015",
+      "directional_pass_delta_vs_control": -358,
+      "directional_pass_validation": 110,
+      "flat_count_delta_vs_control": 188,
+      "flat_count_validation": 9757,
+      "hard_quality_pass": "False",
+      "next_handling": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "oos_net": "200.67",
+      "oos_net_delta_vs_control": "-575.35",
+      "oos_pf": "2.15",
+      "order_filled_delta_vs_control": -314,
+      "order_filled_validation": 157,
+      "read": "binding_active_but_overpruned_profitable_supply",
+      "validation_dd_delta_vs_control": "-1.4873",
+      "validation_dd_margin_vs_34d": "1.468336",
+      "validation_dd_percent": "11.4408",
+      "validation_mid_pf": "1.275591598",
+      "validation_mid_pf_delta_vs_control": "-0.241059",
+      "validation_net": "112.88",
+      "validation_net_delta_vs_control": "-859.27",
+      "validation_net_gap_vs_34d": "-874.72",
+      "validation_pf": "1.36"
+    }
+  ]
+}

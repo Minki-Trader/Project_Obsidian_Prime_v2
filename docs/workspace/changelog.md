@@ -1,4 +1,4 @@
-﻿## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
+## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
 
 - completed(완료): `run31A_state_context_router_broad_mt5_probe_v1`
 - judgment(판정): `state_context_not_useful_or_inconclusive`
@@ -1949,4 +1949,9 @@
 
 - action(행동): closed(종료) `250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect` with decision(판정) `open_stage251_bounded_followup_due_to_decision_binding_tradeoff_candidate_not_final`.
 - effect(효과): Stage248(248단계)의 threshold-only no-effect(임계값 전용 효과 없음)을 score binding(점수 결합) 수리 근거로 분리했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T18:07:12Z Stage251 Stage250 decision binding follow-up review closeout(251단계 250단계 결정 결합 후속 검토 종료)
+
+- action(행동): closed(종료) `251_adapter_research__stage250_decision_binding_followup_review` with decision(판정) `open_stage252_bounded_asymmetric_binding_repair_after_stage250_overprune_candidate_not_final`.
+- effect(효과): Stage250(250단계)의 active binding(활성 결합)과 overprune damage(과감축 손상)를 분리하고 `252_adapter_research__asymmetric_binding_repair_after_stage250_overprune`를 열었다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

@@ -1,0 +1,49 @@
+{
+  "attribution_confidence": "high",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "some DD and OOS PF improvement can be mechanical exposure shrink, not true edge improvement",
+      "attribution_confidence": "high",
+      "attribution_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__binding_active_but_overpruned",
+      "comparison_baseline": "s250_stage248_binding_control",
+      "likely_drivers": "rank-conditioned flat tilt changed model probabilities before the same MT5 thresholds and pruned high-value trade supply",
+      "next_probe": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "observed_change": "Directional pass rows moved from 468 in the control to 309, 204, and 110 in the binding variants, but validation net collapsed.",
+      "segment_checks": "validation/OOS full split, early/mid/late PF, probability binding, risk/ATR telemetry, DD and OOS PF reviewed",
+      "trade_shape": "accepted/fill rows fell sharply; validation net fell by -765.62 to -859.27 while OOS net fell by -514.40 to -575.35"
+    },
+    {
+      "alternative_explanations": "small control drift versus Stage248 can come from Stage250 model/feature identity and tester path differences",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__control_still_near_miss_not_34d",
+      "comparison_baseline": "legacy 34D lesson-only KPI target",
+      "likely_drivers": "mid-window quality and decision/source binding remain limiting even with ATR bracket and model-controlled risk present",
+      "next_probe": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "observed_change": "Stage250 control stayed near the Stage248 reference but missed 34D-equivalent validation net, DD, and mid PF together.",
+      "segment_checks": "validation net gap, DD margin, validation mid PF, OOS net, and quality flags reviewed",
+      "trade_shape": "control validation net 972.15 is -15.45 below 34D; DD margin is -0.018964; mid PF remains 1.516650878"
+    },
+    {
+      "alternative_explanations": "lower DD can reflect fewer trades rather than stronger decision quality",
+      "attribution_confidence": "high",
+      "attribution_id": "run251A_stage251_stage250_decision_binding_followup_review_v1__dd_pf_without_net_not_enough",
+      "comparison_baseline": "research-grade BaselineAdapter package criteria",
+      "likely_drivers": "exposure compression removed both bad and good trades instead of selectively repairing weak decisions",
+      "next_probe": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+      "observed_change": "Some variants improved DD or OOS PF, but the net/profit supply damage was too large.",
+      "segment_checks": "validation/OOS net, PF, DD, mid PF, OOS PF, and trade count checked",
+      "trade_shape": "best DD compression row still had validation net only 112.88 and validation PF 1.36"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage252_bounded_asymmetric_binding_repair_after_stage250_overprune_candidate_not_final",
+  "external_verification_status": "review_only_source_stage250_mt5_reports_completed",
+  "next_stage_or_branch": "252_adapter_research__asymmetric_binding_repair_after_stage250_overprune",
+  "observed_change": "Stage250 binding moved decisions but over-pruned profitable supply",
+  "overall_goal_complete": false,
+  "packet_id": "stage251_stage250_decision_binding_followup_review_v1",
+  "run_id": "run251A_stage251_stage250_decision_binding_followup_review_v1",
+  "source_run": "run250A_stage250_decision_surface_binding_repair_after_stage248_threshold_no_effect_v1",
+  "source_stage": "250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect",
+  "stage_id": "251_adapter_research__stage250_decision_binding_followup_review"
+}
