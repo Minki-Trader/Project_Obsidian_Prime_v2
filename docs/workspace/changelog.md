@@ -1708,3 +1708,8 @@
 - action(행동): closed(종료) `210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate` with decision(판정) `open_stage211_stage210_oos_net_recovery_followup_review_candidate_not_final`.
 - effect(효과): upper risk OOS recovery(상단 위험 표본외 회복)를 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage211(211단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T03:43:51Z Stage211 Stage210 OOS net recovery follow-up review closeout(211단계 210단계 표본외 순손익 회복 후속 검토 종료)
+
+- action(행동): closed(종료) `211_adapter_research__stage210_oos_net_recovery_followup_review` with decision(판정) `open_stage212_bounded_segment_equity_audit_for_s210_r0315_candidate_not_final`.
+- effect(효과): selected(선택) `s210_ls_r0315` for Stage212(212단계) segment/equity audit(구간/잔고곡선 감사).
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

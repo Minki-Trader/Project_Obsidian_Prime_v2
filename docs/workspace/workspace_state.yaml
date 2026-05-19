@@ -1,8 +1,8 @@
-﻿current_run_id: run211A_stage211_stage210_oos_net_recovery_followup_review_v1
+﻿current_run_id: run212A_stage212_stage210_candidate_segment_equity_audit_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 211_adapter_research__stage210_oos_net_recovery_followup_review
+active_stage: 212_adapter_research__stage210_candidate_segment_equity_audit
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage210(210단계) closed(종료) as `open_stage211_stage210_oos_net_recovery_followup_review_candidate_not_final` and Stage211(211단계) `211_adapter_research__stage210_oos_net_recovery_followup_review` is open_planned(개방 계획). Effect(효과): upper risk OOS recovery(상단 위험 표본외 회복) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage211(211단계) closed(종료) as `open_stage212_bounded_segment_equity_audit_for_s210_r0315_candidate_not_final` and Stage212(212단계) `212_adapter_research__stage210_candidate_segment_equity_audit` is open_planned(개방 계획). Effect(효과): `s210_ls_r0315`를 segment/equity audit(구간/잔고곡선 감사)로 넘긴다.
 - >-
-  Stage210 evidence(210단계 근거)는 `stages/210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate/03_reviews/stage210_oos_net_recovery_report.md`, `stages/210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate/03_reviews/stage210_oos_net_recovery_kpi_summary.csv`, `stages/210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate/03_reviews/stage210_quality_matrix.csv`, `stages/210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate/03_reviews/stage210_balance_curve_audit.csv`, `stages/210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate/03_reviews/stage210_risk_atr_telemetry.csv`에 있다. Effect(효과): upper risk cap(상단 위험 상한)이 DD/PF/OOS(낙폭/수익요인/표본외)에 준 영향을 같이 본다.
+  Stage211 evidence(211단계 근거)는 `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_followup_review.md`, `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_tradeoff_matrix.csv`, `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_performance_attribution.csv`, `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_route_matrix.csv`에 있다. Effect(효과): KPI(핵심 성과 지표) 개선과 남은 감사 필요성을 분리한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_oos_net_recovery_preserve_validation_gate`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_stage210_candidate_audit`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7551,4 +7551,21 @@ stage210_oos_net_recovery_preserve_validation_gate:
   external_verification_status: completed
   pushed_commit_hash: 80026754f6a61e5adfcf22c4144f523246afb5b1
   next_action: run211A_stage211_stage210_oos_net_recovery_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage211_stage210_oos_net_recovery_followup_review:
+  packet_id: stage211_stage210_oos_net_recovery_followup_review_v1
+  stage_id: 211_adapter_research__stage210_oos_net_recovery_followup_review
+  status: closed_open_stage212_bounded_segment_equity_audit_for_s210_r0315_candidate_not_final
+  current_run_id: run211A_stage211_stage210_oos_net_recovery_followup_review_v1
+  source_stage: 210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate
+  source_run: run210A_stage210_oos_net_recovery_preserve_stage208_validation_gate_v1
+  decision: open_stage212_bounded_segment_equity_audit_for_s210_r0315_candidate_not_final
+  selected_next_anchor: s210_ls_r0315
+  report_path: stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_followup_review.md
+  decision_path: stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_decision.md
+  tradeoff_matrix_path: stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_tradeoff_matrix.csv
+  external_verification_status: review_only_source_stage210_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run212A_stage212_stage210_candidate_segment_equity_audit_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
