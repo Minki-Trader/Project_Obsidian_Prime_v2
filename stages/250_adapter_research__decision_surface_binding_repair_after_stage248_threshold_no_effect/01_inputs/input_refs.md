@@ -1,0 +1,7 @@
+﻿# Stage250 Inputs(250단계 입력)
+
+- source_stage249_report(원천 249단계 보고서): `stages/249_adapter_research__stage248_entry_source_followup_review/03_reviews/stage249_stage248_entry_source_followup_review.md`
+- source_stage249_decision(원천 249단계 판정): `stages/249_adapter_research__stage248_entry_source_followup_review/03_reviews/stage249_decision.md`
+- stage248_quality_matrix(248단계 품질 행렬): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_quality_matrix.csv`
+- stage248_failure_memory(248단계 실패 기억): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_failure_memory.csv`
+- stage248_risk_atr_telemetry(248단계 위험/ATR 기록): `stages/248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff/03_reviews/stage248_risk_atr_telemetry.csv`

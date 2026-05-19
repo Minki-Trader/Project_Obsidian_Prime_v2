@@ -1,0 +1,49 @@
+{
+  "attribution_confidence": "high",
+  "attribution_rows": [
+    {
+      "alternative_explanations": "accepted score distribution may already sit outside the tested thresholds",
+      "attribution_confidence": "high",
+      "attribution_id": "run249A_stage249_stage248_entry_source_followup_review_v1__threshold_axis_no_effect_confirmed",
+      "comparison_baseline": "s248_cap0305_reference",
+      "likely_drivers": "the tested entry threshold knobs did not bind the runtime decision surface",
+      "next_probe": "250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect",
+      "observed_change": "all Stage248 threshold variants reproduced the reference validation and OOS KPI exactly",
+      "segment_checks": "validation/OOS full split, early/mid/late KPI, risk/ATR telemetry, and Stage248 failure memory reviewed",
+      "trade_shape": "trade count, net, DD, mid PF, OOS net, and risk telemetry stayed unchanged across variants"
+    },
+    {
+      "alternative_explanations": "rounding cannot close the net, DD, and mid PF gaps at the same time",
+      "attribution_confidence": "high",
+      "attribution_id": "run249A_stage249_stage248_entry_source_followup_review_v1__near_miss_still_not_34d_equivalent",
+      "comparison_baseline": "legacy 34D lesson-only KPI target",
+      "likely_drivers": "decision/source binding and mid-window quality remain the limiting surface",
+      "next_probe": "250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect",
+      "observed_change": "reference remains close but still misses 34D validation net, DD, and mid PF together",
+      "segment_checks": "mid PF gap and validation DD margin reviewed",
+      "trade_shape": "ATR bracket and model risk are present but not enough to repair KPI"
+    },
+    {
+      "alternative_explanations": "runtime risk telemetry is healthy, but entry quality still limits KPI",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run249A_stage249_stage248_entry_source_followup_review_v1__risk_atr_present_not_sufficient",
+      "comparison_baseline": "mandatory ATR/risk capability requirement",
+      "likely_drivers": "capability integration is necessary but not a standalone KPI repair",
+      "next_probe": "250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect",
+      "observed_change": "risk cap, ATR SL/TP, and telemetry are present without making the adapter final",
+      "segment_checks": "risk floor count, max actual risk, SL/TP points, and bucket telemetry reviewed",
+      "trade_shape": "max actual risk remained below 5 percent and min-lot floor did not inflate Stage248 rows"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage250_bounded_decision_surface_binding_repair_after_stage248_threshold_no_effect_candidate_not_final",
+  "external_verification_status": "review_only_source_stage248_mt5_reports_completed",
+  "next_stage_or_branch": "250_adapter_research__decision_surface_binding_repair_after_stage248_threshold_no_effect",
+  "observed_change": "Stage248 threshold variants produced no KPI or decision-surface movement",
+  "overall_goal_complete": false,
+  "packet_id": "stage249_stage248_entry_source_followup_review_v1",
+  "run_id": "run249A_stage249_stage248_entry_source_followup_review_v1",
+  "source_run": "run248A_stage248_entry_source_quality_repair_after_stage246_soft_guard_tradeoff_v1",
+  "source_stage": "248_adapter_research__entry_source_quality_repair_after_stage246_soft_guard_tradeoff",
+  "stage_id": "249_adapter_research__stage248_entry_source_followup_review"
+}
