@@ -1890,3 +1890,8 @@
 - action(행동): closed(종료) `242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff` with decision(판정) `open_stage243_bounded_followup_due_to_selective_midsegment_tradeoff_candidate_not_final`.
 - effect(효과): 중간 기간 low/mid margin guard(저/중간 마진 보호문)를 MT5(MetaTrader 5, 메타트레이더5)로 측정했지만 `mid_window_rows`(중간 창 행 수)가 `0`이라 inactive guard(비활성 보호문)로 기록하고 Stage243(243단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T14:31:38Z Stage243 Stage242 follow-up review closeout(243단계 242단계 후속 검토 종료)
+
+- action(행동): closed(종료) `243_adapter_research__stage242_selective_midsegment_followup_review` with decision(판정) `open_stage244_bounded_timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard_candidate_not_final`.
+- effect(효과): Stage242(242단계)의 inactive guard(비활성 보호문)와 cap0305 near-miss(0.0305 상한 근접 실패)를 분리하고 Stage244(244단계) timestamp-aware repair(시간 형식 인식 수리)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

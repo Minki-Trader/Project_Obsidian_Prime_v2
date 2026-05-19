@@ -1,0 +1,93 @@
+﻿{
+  "best_adapter": "s242_midlowmid_guard_cap0305",
+  "cap0305_vs_samecap": {
+    "oos_net_delta": -37.04,
+    "validation_dd_delta": -0.4343,
+    "validation_mid_pf_delta": 0.024404,
+    "validation_net_delta": 8.82
+  },
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage244_bounded_timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard_candidate_not_final",
+  "external_verification_status": "review_only_source_stage242_mt5_reports_completed",
+  "failure_memory": [
+    {
+      "do_not_repeat": "do not treat Stage242 guard variants as active guard evidence",
+      "failure_id": "run243A_stage243_stage242_selective_midsegment_followup_review_v1__stage242_guard_inactive",
+      "hypothesis": "Stage242 selective middle-window low/mid margin guard can repair mid PF and DD.",
+      "salvage_value": "guard idea remains untested; cap0305 near-miss gives a useful control arm",
+      "why_failed": "mid_window_rows=0;selective_blocked_signal_rows=0;feature_time_format=YYYY.MM.DD HH:MM:SS;parser_expected_iso_date"
+    },
+    {
+      "do_not_repeat": "do not call cap0305 a final adapter or proceed to ONNX hardening",
+      "failure_id": "run243A_stage243_stage242_selective_midsegment_followup_review_v1__cap0305_not_final",
+      "hypothesis": "Mild model-risk cap 0.0305 may close the 34D gap by itself.",
+      "salvage_value": "near-miss cap setting can be retained as a comparison arm",
+      "why_failed": "validation_net_gap_vs_34d=-10.93;validation_dd_margin_vs_34d=-0.033664;validation_mid_pf_below_34d;oos_net_delta_vs_samecap=-37.04"
+    }
+  ],
+  "ledger_payload": {
+    "artifact_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/artifact_registry.csv",
+      "rows": 6421,
+      "sha256": "a3202f9f884997fb37bcc0603573101af40140b3dbc214872ffb03099f1e2162",
+      "upserted_rows": 10
+    },
+    "project_alpha_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "rows": 11304,
+      "sha256": "d8b1038d1c72a321d284efbfeb8525fc3e831bc42013aab7c2b8f76dedf439c5",
+      "upserted_rows": 1
+    },
+    "run_registry": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "docs/registers/run_registry.csv",
+      "rows": 1066,
+      "sha256": "3bfeb43d80e2cd80adcc2b3a152a081114edb64139a940d48189ef7678e507d2",
+      "upserted_rows": 1
+    },
+    "stage_ledger": {
+      "hash_policy": "lf_normalized_text_register",
+      "path": "stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage_run_ledger.csv",
+      "rows": 1,
+      "sha256": "09f5dcf2d13ef48ec53f48ea0c5966201e34b34cd6b108aa50195eeff466d0d7",
+      "upserted_rows": 1
+    }
+  },
+  "next_stage": "244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard",
+  "overall_goal_complete": false,
+  "packet_id": "stage243_stage242_selective_midsegment_followup_review_v1",
+  "pushed_commit_hash": "pending_until_push",
+  "required_outputs": {
+    "attribution": "stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_performance_attribution.csv",
+    "decision": "stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_decision.md",
+    "failure_memory": "stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_failure_memory.csv",
+    "report": "stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_stage242_followup_review.md",
+    "tradeoff_matrix": "stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_tradeoff_review_matrix.csv"
+  },
+  "route_rows": [
+    {
+      "effect": "opens a timestamp-aware bounded repair instead of hiding the parser failure",
+      "reason": "Stage242 guard was inactive and cap0305 is near-miss but not final.",
+      "route_id": "open_stage244_bounded_timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard_candidate_not_final",
+      "status": "selected"
+    },
+    {
+      "effect": "prevents ONNX(ONNX) from starting on an unproven adapter",
+      "reason": "mandatory quality not met and active guard evidence missing",
+      "route_id": "proceed_to_onnx_hardening",
+      "status": "rejected"
+    },
+    {
+      "effect": "keeps the next stage bounded to timestamp-aware conditional repair",
+      "reason": "Stage240/Stage242 show OOS net damage from cap-only compression",
+      "route_id": "repeat_global_cap_only",
+      "status": "rejected"
+    }
+  ],
+  "run_id": "run243A_stage243_stage242_selective_midsegment_followup_review_v1",
+  "source_run": "run242A_stage242_selective_midsegment_quality_repair_after_highbonus_tradeoff_v1",
+  "source_stage": "242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff",
+  "stage_id": "243_adapter_research__stage242_selective_midsegment_followup_review"
+}

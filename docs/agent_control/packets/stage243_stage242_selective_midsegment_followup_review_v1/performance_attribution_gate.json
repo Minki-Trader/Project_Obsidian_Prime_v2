@@ -1,0 +1,47 @@
+﻿{
+  "attribution_rows": [
+    {
+      "alternative_explanations": "none material after gate telemetry",
+      "attribution_confidence": "high",
+      "attribution_id": "run243A_stage243_stage242_selective_midsegment_followup_review_v1__middle_window_guard_inactive",
+      "comparison_baseline": "s242_samecap_control",
+      "likely_drivers": "Stage242 parser did not parse YYYY.MM.DD HH:MM:SS feature time; mid_window_rows=0",
+      "next_probe": "244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard",
+      "observed_change": "low/mid guard variants matched samecap control",
+      "segment_checks": "gate_feature_summary validation/OOS all variants",
+      "trade_shape": "no selective blocked signal rows, so no trade shape change from guard"
+    },
+    {
+      "alternative_explanations": "minor rounding or tester path effects possible but guard telemetry rules them out as primary driver",
+      "attribution_confidence": "medium_high",
+      "attribution_id": "run243A_stage243_stage242_selective_midsegment_followup_review_v1__cap0305_near_miss",
+      "comparison_baseline": "s242_samecap_control",
+      "likely_drivers": "mild model-risk cap 0.0305, not active middle-window guard",
+      "next_probe": "timestamp-aware guard with cap0305 control arm",
+      "observed_change": "validation_net_delta=8.82;validation_dd_delta=-0.4343;mid_pf_delta=0.024404;oos_net_delta=-37.04",
+      "segment_checks": "validation early/mid/late and OOS full split reviewed",
+      "trade_shape": "trade_count unchanged; risk sizing changed; OOS net damaged"
+    },
+    {
+      "alternative_explanations": "KPI close enough to justify bounded repair, not enough for final candidate",
+      "attribution_confidence": "high",
+      "attribution_id": "run243A_stage243_stage242_selective_midsegment_followup_review_v1__still_below_34d",
+      "comparison_baseline": "legacy 34D lesson-only KPI target",
+      "likely_drivers": "midsegment quality remains weak and active guard was not actually applied",
+      "next_probe": "244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard",
+      "observed_change": "best row still has validation_net_gap_vs_34d=-10.93;validation_dd_margin_vs_34d=-0.033664;validation_mid_pf=1.522877",
+      "segment_checks": "quality matrix and segment KPI summary",
+      "trade_shape": "OOS remains strong by PF but net falls versus samecap"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment",
+  "decision": "open_stage244_bounded_timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard_candidate_not_final",
+  "external_verification_status": "review_only_source_stage242_mt5_reports_completed",
+  "next_stage": "244_adapter_research__timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard",
+  "overall_goal_complete": false,
+  "packet_id": "stage243_stage242_selective_midsegment_followup_review_v1",
+  "run_id": "run243A_stage243_stage242_selective_midsegment_followup_review_v1",
+  "source_run": "run242A_stage242_selective_midsegment_quality_repair_after_highbonus_tradeoff_v1",
+  "source_stage": "242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff",
+  "stage_id": "243_adapter_research__stage242_selective_midsegment_followup_review"
+}

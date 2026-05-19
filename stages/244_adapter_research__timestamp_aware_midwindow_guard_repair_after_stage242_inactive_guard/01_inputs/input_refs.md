@@ -1,0 +1,9 @@
+﻿# Stage244 Inputs(244단계 입력)
+
+- source_stage(원천 단계): `243_adapter_research__stage242_selective_midsegment_followup_review`
+- source_run(원천 실행): `run243A_stage243_stage242_selective_midsegment_followup_review_v1`
+- source_decision(원천 판정): `open_stage244_bounded_timestamp_aware_midwindow_guard_repair_after_stage242_inactive_guard_candidate_not_final`
+- stage243_report(243단계 보고서): `stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_stage242_followup_review.md`
+- stage243_failure_memory(243단계 실패 기억): `stages/243_adapter_research__stage242_selective_midsegment_followup_review/03_reviews/stage243_failure_memory.csv`
+- stage242_gate_feature_summary(242단계 보호문 피처 요약): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_gate_feature_summary.csv`
+- stage242_quality_matrix(242단계 품질 행렬): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_quality_matrix.csv`
