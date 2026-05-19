@@ -1,8 +1,8 @@
-﻿current_run_id: run212A_stage212_stage210_candidate_segment_equity_audit_v1
+﻿current_run_id: run213A_stage213_s210_r0315_oos_monthly_concentration_repair_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 212_adapter_research__stage210_candidate_segment_equity_audit
+active_stage: 213_adapter_research__s210_r0315_oos_monthly_concentration_repair
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage211(211단계) closed(종료) as `open_stage212_bounded_segment_equity_audit_for_s210_r0315_candidate_not_final` and Stage212(212단계) `212_adapter_research__stage210_candidate_segment_equity_audit` is open_planned(개방 계획). Effect(효과): `s210_ls_r0315`를 segment/equity audit(구간/잔고곡선 감사)로 넘긴다.
+  Stage212(212단계) closed(종료) as `open_stage213_bounded_oos_monthly_concentration_repair_for_s210_r0315_candidate_not_final` and Stage213(213단계) `213_adapter_research__s210_r0315_oos_monthly_concentration_repair` is open_planned(개방 계획). Effect(효과): `s210_ls_r0315`의 OOS monthly/concentration(표본외 월별/집중) 약점과 thin validation DD margin(얇은 검증 낙폭 여유)을 좁게 수리한다.
 - >-
-  Stage211 evidence(211단계 근거)는 `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_followup_review.md`, `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_tradeoff_matrix.csv`, `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_performance_attribution.csv`, `stages/211_adapter_research__stage210_oos_net_recovery_followup_review/03_reviews/stage211_route_matrix.csv`에 있다. Effect(효과): KPI(핵심 성과 지표) 개선과 남은 감사 필요성을 분리한다.
+  Stage212 evidence(212단계 근거)는 `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_segment_equity_audit.md`, `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_segment_equity_matrix.csv`, `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_monthly_stability_matrix.csv`, `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_concentration_matrix.csv`, `stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_risk_atr_telemetry_matrix.csv`에 있다. Effect(효과): headline KPI(헤드라인 핵심 성과 지표)와 곡선/구간 약점을 분리한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_stage210_candidate_audit`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_segment_equity_audit`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7568,4 +7568,25 @@ stage211_stage210_oos_net_recovery_followup_review:
   external_verification_status: review_only_source_stage210_mt5_reports_completed
   pushed_commit_hash: 6beda2e88076605ba2cb81e805ceb24f0c675b49
   next_action: run212A_stage212_stage210_candidate_segment_equity_audit_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage212_stage210_candidate_segment_equity_audit:
+  packet_id: stage212_stage210_candidate_segment_equity_audit_v1
+  stage_id: 212_adapter_research__stage210_candidate_segment_equity_audit
+  status: closed_open_stage213_bounded_oos_monthly_concentration_repair_for_s210_r0315_candidate_not_final
+  current_run_id: run212A_stage212_stage210_candidate_segment_equity_audit_v1
+  source_stage: 211_adapter_research__stage210_oos_net_recovery_followup_review
+  source_run: run211A_stage211_stage210_oos_net_recovery_followup_review_v1
+  selected_anchor: s210_ls_r0315
+  decision: open_stage213_bounded_oos_monthly_concentration_repair_for_s210_r0315_candidate_not_final
+  report_path: stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_segment_equity_audit.md
+  decision_path: stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_decision.md
+  segment_matrix_path: stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_segment_equity_matrix.csv
+  monthly_matrix_path: stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_monthly_stability_matrix.csv
+  concentration_matrix_path: stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_concentration_matrix.csv
+  risk_atr_matrix_path: stages/212_adapter_research__stage210_candidate_segment_equity_audit/03_reviews/stage212_risk_atr_telemetry_matrix.csv
+  audit_flags: oos_negative_months,oos_top5_concentration_watch,oos_late_quarter_concentration_watch,thin_validation_dd_margin,final_balance_not_new_high
+  external_verification_status: review_only_source_stage210_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run213A_stage213_s210_r0315_oos_monthly_concentration_repair_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
