@@ -1,8 +1,8 @@
-﻿current_run_id: run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1
+﻿current_run_id: run234A_stage234_stage233_side_session_context_followup_review_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 233_adapter_research__side_session_context_repair_after_lifecycle_failure
+active_stage: 234_adapter_research__stage233_side_session_context_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage232(232단계) closed(종료) as `open_stage233_bounded_side_session_context_repair_after_lifecycle_failure_candidate_not_final` and Stage233(233단계) `233_adapter_research__side_session_context_repair_after_lifecycle_failure` is open_planned(개방 계획). Effect(효과): lifecycle repair(생애주기 수리) 실패를 side/session/context repair(방향/세션/문맥 수리)로 분리한다.
+  Stage233(233단계) closed(종료) as `open_stage234_bounded_followup_due_to_side_session_context_tradeoff_candidate_not_final` and Stage234(234단계) `234_adapter_research__stage233_side_session_context_followup_review` is open_planned(개방 계획). Effect(효과): side/session/context repair(방향/세션/문맥 수리)의 KPI(핵심 성과 지표) 상충을 별도 review(검토)로 판정한다.
 - >-
-  Stage232 evidence(232단계 근거)는 `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_lifecycle_followup_review.md`, `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_lifecycle_tradeoff_matrix.csv`, `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_performance_attribution.csv`, `stages/232_adapter_research__stage231_lifecycle_followup_review/03_reviews/stage232_failure_memory.csv`에 있다. Effect(효과): Stage231(231단계)의 hold/cooldown(보유/대기) 상충을 반복하지 않게 한다.
+  Stage233 evidence(233단계 근거)는 `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_side_session_context_repair_report.md`, `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_side_session_context_kpi_summary.csv`, `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_quality_matrix.csv`, `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_monthly_kpi_summary.csv`, `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_concentration_risk_summary.csv`, `stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_risk_atr_telemetry.csv`에 있다. Effect(효과): 방향/세션/문맥 축이 validation/OOS(검증/표본외)를 함께 끌어올렸는지 확인한다.
 - >-
   Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_side_session_context_repair_after_lifecycle_failure`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
@@ -7968,12 +7968,18 @@ stage232_stage231_lifecycle_followup_review:
 stage233_side_session_context_repair_after_lifecycle_failure:
   packet_id: stage233_side_session_context_repair_after_lifecycle_failure_v1
   stage_id: 233_adapter_research__side_session_context_repair_after_lifecycle_failure
-  status: open_planned_from_stage232
+  status: closed_open_stage234_bounded_followup_due_to_side_session_context_tradeoff_candidate_not_final
   current_run_id: run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1
   source_stage: 232_adapter_research__stage231_lifecycle_followup_review
   source_run: run232A_stage232_stage231_lifecycle_followup_review_v1
-  source_decision: open_stage233_bounded_side_session_context_repair_after_lifecycle_failure_candidate_not_final
-  oos_reference_bound: s231_session_ref_h3_cd8
-  validation_recovery_clue: s231_wide_h3_cd12
-  next_action: run233A_stage233_side_session_context_repair_after_lifecycle_failure_v1
+  decision: open_stage234_bounded_followup_due_to_side_session_context_tradeoff_candidate_not_final
+  report_path: stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_side_session_context_repair_report.md
+  decision_path: stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_decision.md
+  summary_path: stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_side_session_context_kpi_summary.csv
+  quality_matrix_path: stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_quality_matrix.csv
+  monthly_kpi_path: stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_monthly_kpi_summary.csv
+  concentration_path: stages/233_adapter_research__side_session_context_repair_after_lifecycle_failure/03_reviews/stage233_concentration_risk_summary.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run234A_stage234_stage233_side_session_context_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
