@@ -16,7 +16,7 @@
 - probability_telemetry(확률 원격측정): `stages/258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff/03_reviews/stage258_probability_telemetry_summary.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/258_adapter_research__short_tight_margin_pf_repair_after_stage256_tradeoff/03_reviews/stage258_risk_atr_telemetry.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `259_adapter_research__stage258_short_tight_margin_pf_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `5dbd67b79c824e3d7049b6f482b8c83b0eda92db`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage258(258단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.
