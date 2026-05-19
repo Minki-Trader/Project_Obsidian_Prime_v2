@@ -16,7 +16,7 @@
 - probability_binding(확률 결합): `stages/252_adapter_research__asymmetric_binding_repair_after_stage250_overprune/03_reviews/stage252_probability_binding_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/252_adapter_research__asymmetric_binding_repair_after_stage250_overprune/03_reviews/stage252_risk_atr_telemetry.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `253_adapter_research__stage252_asymmetric_binding_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `53aa5f020f0b7e6d97325d9fc25b2a50a3be5c1d`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage252(252단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.
