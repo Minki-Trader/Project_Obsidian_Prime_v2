@@ -1,8 +1,8 @@
-﻿current_run_id: run214A_stage214_stage213_oos_monthly_concentration_followup_review_v1
+﻿current_run_id: run215A_stage215_validation_mid_pf_recovery_preserve_oos_gain_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 214_adapter_research__stage213_oos_monthly_concentration_followup_review
+active_stage: 215_adapter_research__validation_mid_pf_recovery_preserve_oos_gain
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage213(213단계) closed(종료) as `open_stage214_bounded_followup_due_to_stage213_repair_tradeoff_candidate_not_final` and Stage214(214단계) `214_adapter_research__stage213_oos_monthly_concentration_followup_review` is open_planned(개방 계획). Effect(효과): OOS monthly/concentration repair(표본외 월별/집중 수리)의 상충을 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage214(214단계) closed(종료) as `open_stage215_bounded_validation_mid_pf_recovery_preserve_oos_gain_candidate_not_final` and Stage215(215단계) `215_adapter_research__validation_mid_pf_recovery_preserve_oos_gain` is open_planned(개방 계획). Effect(효과): `s213_r03125_s200_t455`의 validation mid PF(검증 중반 수익요인)를 회복하면서 OOS gain(표본외 이득)을 보존하는지 좁게 시험한다.
 - >-
-  Stage213 evidence(213단계 근거)는 `stages/213_adapter_research__s210_r0315_oos_monthly_concentration_repair/03_reviews/stage213_oos_monthly_concentration_repair_report.md`, `stages/213_adapter_research__s210_r0315_oos_monthly_concentration_repair/03_reviews/stage213_oos_monthly_concentration_kpi_summary.csv`, `stages/213_adapter_research__s210_r0315_oos_monthly_concentration_repair/03_reviews/stage213_quality_matrix.csv`, `stages/213_adapter_research__s210_r0315_oos_monthly_concentration_repair/03_reviews/stage213_monthly_kpi_summary.csv`, `stages/213_adapter_research__s210_r0315_oos_monthly_concentration_repair/03_reviews/stage213_concentration_risk_summary.csv`, `stages/213_adapter_research__s210_r0315_oos_monthly_concentration_repair/03_reviews/stage213_risk_atr_telemetry.csv`에 있다. Effect(효과): bracket/risk(브래킷/위험) 수리가 KPI(핵심 성과 지표)와 곡선에 준 영향을 같이 본다.
+  Stage214 evidence(214단계 근거)는 `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_followup_review.md`, `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_tradeoff_matrix.csv`, `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_performance_attribution.csv`, `stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_route_matrix.csv`에 있다. Effect(효과): OOS improvement(표본외 개선)와 validation damage(검증 손상)를 분리한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_oos_monthly_concentration_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_validation_mid_pf_recovery`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7609,4 +7609,21 @@ stage213_s210_r0315_oos_monthly_concentration_repair:
   external_verification_status: completed
   pushed_commit_hash: 3937f368904f0871f0d78be46daee32b72a956c8
   next_action: run214A_stage214_stage213_oos_monthly_concentration_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage214_stage213_oos_monthly_concentration_followup_review:
+  packet_id: stage214_stage213_oos_monthly_concentration_followup_review_v1
+  stage_id: 214_adapter_research__stage213_oos_monthly_concentration_followup_review
+  status: closed_open_stage215_bounded_validation_mid_pf_recovery_preserve_oos_gain_candidate_not_final
+  current_run_id: run214A_stage214_stage213_oos_monthly_concentration_followup_review_v1
+  source_stage: 213_adapter_research__s210_r0315_oos_monthly_concentration_repair
+  source_run: run213A_stage213_s210_r0315_oos_monthly_concentration_repair_v1
+  decision: open_stage215_bounded_validation_mid_pf_recovery_preserve_oos_gain_candidate_not_final
+  repair_probe: s213_r03125_s200_t455
+  report_path: stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_followup_review.md
+  decision_path: stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_decision.md
+  tradeoff_matrix_path: stages/214_adapter_research__stage213_oos_monthly_concentration_followup_review/03_reviews/stage214_tradeoff_matrix.csv
+  external_verification_status: review_only_source_stage213_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run215A_stage215_validation_mid_pf_recovery_preserve_oos_gain_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
