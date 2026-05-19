@@ -1,8 +1,8 @@
-﻿current_run_id: run217A_stage217_oos_preserving_mid_pf_micro_interpolation_v1
+﻿current_run_id: run218A_stage218_stage217_micro_interpolation_followup_review_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 217_adapter_research__oos_preserving_mid_pf_micro_interpolation
+active_stage: 218_adapter_research__stage217_micro_interpolation_followup_review
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage216(216단계) closed(종료) as `open_stage217_bounded_oos_preserving_mid_pf_micro_interpolation_candidate_not_final` and Stage217(217단계) `217_adapter_research__oos_preserving_mid_pf_micro_interpolation` is open_planned(개방 계획). Effect(효과): Stage215(215단계)의 OOS preservation(표본외 보존)과 mid PF recovery(중반 수익요인 회복) 상충을 좁은 micro interpolation(미세 보간)으로 시험한다.
+  Stage217(217단계) closed(종료) as `open_stage218_bounded_followup_due_to_micro_interpolation_tradeoff_candidate_not_final` and Stage218(218단계) `218_adapter_research__stage217_micro_interpolation_followup_review` is open_planned(개방 계획). Effect(효과): micro interpolation(미세 보간)이 OOS preservation(표본외 보존)과 mid PF recovery(중반 수익요인 회복)를 동시에 만족했는지 별도 follow-up review(후속 검토)로 판정한다.
 - >-
-  Stage216 evidence(216단계 근거)는 `stages/216_adapter_research__stage215_mid_pf_recovery_followup_review/03_reviews/stage216_followup_review.md`, `stages/216_adapter_research__stage215_mid_pf_recovery_followup_review/03_reviews/stage216_tradeoff_matrix.csv`, `stages/216_adapter_research__stage215_mid_pf_recovery_followup_review/03_reviews/stage216_performance_attribution.csv`, `stages/216_adapter_research__stage215_mid_pf_recovery_followup_review/03_reviews/stage216_route_matrix.csv`에 있다. Effect(효과): `s215_r031375_s2025_t460`와 `s215_r031375_s2050_t465` 사이의 다음 수리 범위를 제한한다.
+  Stage217 evidence(217단계 근거)는 `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_micro_interpolation_report.md`, `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_micro_interpolation_kpi_summary.csv`, `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_quality_matrix.csv`, `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_monthly_kpi_summary.csv`, `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_concentration_risk_summary.csv`, `stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_risk_atr_telemetry.csv`에 있다. Effect(효과): SL/TP(손절/익절) 미세 보간이 KPI(핵심 성과 지표)에 준 영향을 같이 본다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_oos_preserving_mid_pf_recovery`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_oos_preserving_mid_pf_micro_interpolation`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7664,4 +7664,25 @@ stage216_stage215_mid_pf_recovery_followup_review:
   external_verification_status: review_only_source_stage215_mt5_reports_completed
   pushed_commit_hash: abb5fd5bef288e496cee6cf590715b83f33a22ae
   next_action: run217A_stage217_oos_preserving_mid_pf_micro_interpolation_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage217_oos_preserving_mid_pf_micro_interpolation:
+  packet_id: stage217_oos_preserving_mid_pf_micro_interpolation_v1
+  stage_id: 217_adapter_research__oos_preserving_mid_pf_micro_interpolation
+  status: closed_open_stage218_bounded_followup_due_to_micro_interpolation_tradeoff_candidate_not_final
+  current_run_id: run217A_stage217_oos_preserving_mid_pf_micro_interpolation_v1
+  source_stage: 216_adapter_research__stage215_mid_pf_recovery_followup_review
+  source_run: run216A_stage216_stage215_mid_pf_recovery_followup_review_v1
+  source_oos_preserver: s215_r031375_s2025_t460
+  source_mid_recovery: s215_r031375_s2050_t465
+  decision: open_stage218_bounded_followup_due_to_micro_interpolation_tradeoff_candidate_not_final
+  report_path: stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_micro_interpolation_report.md
+  decision_path: stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_decision.md
+  summary_path: stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_micro_interpolation_kpi_summary.csv
+  quality_matrix_path: stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_quality_matrix.csv
+  monthly_kpi_path: stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_monthly_kpi_summary.csv
+  concentration_path: stages/217_adapter_research__oos_preserving_mid_pf_micro_interpolation/03_reviews/stage217_concentration_risk_summary.csv
+  external_verification_status: completed
+  pushed_commit_hash: pending_until_push
+  next_action: run218A_stage218_stage217_micro_interpolation_followup_review_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
