@@ -1,4 +1,4 @@
-﻿# Current Working State(현재 작업 상태)
+# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1`
 - current_run(현재 실행): `run258A_stage258_short_tight_margin_pf_repair_after_stage256_tradeoff_v1`
@@ -21,6 +21,6 @@ Effect(효과): `s256_short_tight_margin`의 net/DD/OOS(순수익/낙폭/표본�
 - tradeoff_matrix(절충 행렬): `stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_tradeoff_review_matrix.csv`
 - attribution(성과 귀속): `stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_performance_attribution.csv`
 - failure_memory(실패 기억): `stages/257_adapter_research__stage256_source_feature_followup_review/03_reviews/stage257_failure_memory.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `fc0d2d3d782caa56518f3a38f00db15b8f0f5c0f`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).
