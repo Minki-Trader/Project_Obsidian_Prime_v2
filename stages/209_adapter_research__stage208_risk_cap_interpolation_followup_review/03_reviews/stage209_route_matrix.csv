@@ -1,0 +1,4 @@
+﻿run_id,route,adapter_id,action,effect,risk
+run209A_stage209_stage208_risk_cap_interpolation_followup_review_v1,stage210_primary_anchor(210단계 주 기준 후보),s208_ls_r0305,carry_forward_with_oos_recovery_guard(표본외 회복 조건으로 이월),highest validation/OOS net among Stage208 while still below 34D DD(208단계 중 검증/표본외 순손익 최고이면서 34D 낙폭 아래),validation DD margin is tight(검증 낙폭 여유가 좁음)
+run209A_stage209_stage208_risk_cap_interpolation_followup_review_v1,stage210_backup_dd_conservative(210단계 보조 낙폭 보수 후보),s208_ls_r0285,"preserve_as_backup_not_selected(보조 후보로 보존, 선택 아님)",better DD/midPF margin(낙폭/중반 수익요인 여유가 더 큼),lower validation/OOS net(검증/표본외 순손익이 낮음)
+run209A_stage209_stage208_risk_cap_interpolation_followup_review_v1,do_not_start_onnx_or_finalization(ONNX 또는 최종화 시작 금지),all_stage208_candidates,continue_bounded_repair(경계 수리 계속),prevents overclaim from validation KPI improvement(검증 KPI 개선을 과장하지 않음),none_if_boundary_is_kept(경계 유지 시 없음)

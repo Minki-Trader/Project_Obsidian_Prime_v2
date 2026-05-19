@@ -1698,3 +1698,8 @@
 - action(행동): closed(종료) `208_adapter_research__stage206_risk_cap_interpolation_repair` with decision(판정) `open_stage209_bounded_followup_due_to_risk_cap_interpolation_tradeoff_candidate_not_final`.
 - effect(효과): risk cap interpolation(위험 상한 보간)을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage209(209단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T03:14:20Z Stage209 Stage208 risk cap interpolation follow-up review closeout(209단계 208단계 위험 상한 보간 후속 검토 종료)
+
+- action(행동): closed(종료) `209_adapter_research__stage208_risk_cap_interpolation_followup_review` with decision(판정) `open_stage210_bounded_oos_net_recovery_preserve_stage208_validation_gate_candidate_not_final`.
+- effect(효과): selected(선택) `s208_ls_r0305` as Stage210(210단계) OOS net recovery(표본외 순손익 회복) anchor(기준 후보).
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.

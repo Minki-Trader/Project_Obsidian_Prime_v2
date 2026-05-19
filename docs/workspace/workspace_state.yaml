@@ -1,8 +1,8 @@
-﻿current_run_id: run209A_stage209_stage208_risk_cap_interpolation_followup_review_v1
+﻿current_run_id: run210A_stage210_oos_net_recovery_preserve_stage208_validation_gate_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 209_adapter_research__stage208_risk_cap_interpolation_followup_review
+active_stage: 210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage208(208단계) closed(종료) as `open_stage209_bounded_followup_due_to_risk_cap_interpolation_tradeoff_candidate_not_final` and Stage209(209단계) `209_adapter_research__stage208_risk_cap_interpolation_followup_review` is open_planned(개방 계획). Effect(효과): risk cap interpolation(위험 상한 보간) 결과를 별도 follow-up review(후속 검토)로 넘긴다.
+  Stage209(209단계) closed(종료) as `open_stage210_bounded_oos_net_recovery_preserve_stage208_validation_gate_candidate_not_final` and Stage210(210단계) `210_adapter_research__oos_net_recovery_preserve_stage208_validation_gate` is open_planned(개방 계획). Effect(효과): Stage208(208단계) 검증 통과 후보의 OOS net(표본외 순손익) 약점을 별도 경계 수리로 넘긴다.
 - >-
-  Stage208 evidence(208단계 근거)는 `stages/208_adapter_research__stage206_risk_cap_interpolation_repair/03_reviews/stage208_risk_cap_report.md`, `stages/208_adapter_research__stage206_risk_cap_interpolation_repair/03_reviews/stage208_risk_cap_kpi_summary.csv`, `stages/208_adapter_research__stage206_risk_cap_interpolation_repair/03_reviews/stage208_quality_matrix.csv`, `stages/208_adapter_research__stage206_risk_cap_interpolation_repair/03_reviews/stage208_balance_curve_audit.csv`, `stages/208_adapter_research__stage206_risk_cap_interpolation_repair/03_reviews/stage208_risk_atr_telemetry.csv`에 있다. Effect(효과): risk cap(위험 상한)이 DD/PF/OOS(낙폭/수익요인/표본외)에 준 영향을 같이 본다.
+  Stage209 evidence(209단계 근거)는 `stages/209_adapter_research__stage208_risk_cap_interpolation_followup_review/03_reviews/stage209_followup_review.md`, `stages/209_adapter_research__stage208_risk_cap_interpolation_followup_review/03_reviews/stage209_tradeoff_matrix.csv`, `stages/209_adapter_research__stage208_risk_cap_interpolation_followup_review/03_reviews/stage209_performance_attribution.csv`, `stages/209_adapter_research__stage208_risk_cap_interpolation_followup_review/03_reviews/stage209_route_matrix.csv`에 있다. Effect(효과): risk cap(위험 상한) 성공과 OOS(표본외) 약점을 분리해서 본다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_risk_cap_interpolation_repair`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Selected next anchor(선택된 다음 기준 후보)는 `s208_ls_r0305`이고 target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_oos_net_recovery_preserve_validation_gate`이다. Effect(효과): legacy 34D(레거시 34D)는 KPI lesson-only target(교훈 전용 핵심 성과 지표 목표)로만 사용한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7515,4 +7515,21 @@ stage208_risk_cap_interpolation_repair:
   external_verification_status: completed
   pushed_commit_hash: af3b2acbb32a1576c395270e937ea2465bb7aff0
   next_action: run209A_stage209_stage208_risk_cap_interpolation_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage209_stage208_risk_cap_interpolation_followup_review:
+  packet_id: stage209_stage208_risk_cap_interpolation_followup_review_v1
+  stage_id: 209_adapter_research__stage208_risk_cap_interpolation_followup_review
+  status: closed_open_stage210_bounded_oos_net_recovery_preserve_stage208_validation_gate_candidate_not_final
+  current_run_id: run209A_stage209_stage208_risk_cap_interpolation_followup_review_v1
+  source_stage: 208_adapter_research__stage206_risk_cap_interpolation_repair
+  source_run: run208A_stage208_stage206_risk_cap_interpolation_repair_v1
+  decision: open_stage210_bounded_oos_net_recovery_preserve_stage208_validation_gate_candidate_not_final
+  selected_next_anchor: s208_ls_r0305
+  report_path: stages/209_adapter_research__stage208_risk_cap_interpolation_followup_review/03_reviews/stage209_followup_review.md
+  decision_path: stages/209_adapter_research__stage208_risk_cap_interpolation_followup_review/03_reviews/stage209_decision.md
+  tradeoff_matrix_path: stages/209_adapter_research__stage208_risk_cap_interpolation_followup_review/03_reviews/stage209_tradeoff_matrix.csv
+  external_verification_status: review_only_source_stage208_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run210A_stage210_oos_net_recovery_preserve_stage208_validation_gate_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
