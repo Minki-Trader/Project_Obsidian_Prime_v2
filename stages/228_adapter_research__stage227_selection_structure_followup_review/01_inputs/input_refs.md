@@ -1,0 +1,12 @@
+﻿# Stage228 Inputs(228단계 입력)
+
+- source_stage(원천 단계): `227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect`
+- source_run(원천 실행): `run227A_stage227_selection_structure_repair_after_threshold_axis_no_effect_v1`
+- source_decision(원천 판정): `open_stage228_bounded_followup_due_to_selection_structure_tradeoff_candidate_not_final`
+- report(보고서): `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_selection_structure_repair_report.md`
+- summary_csv(요약 CSV): `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_selection_structure_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_quality_matrix.csv`
+- monthly_kpi(월별 KPI 핵심 성과 지표): `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_monthly_kpi_summary.csv`
+- concentration_risk(집중 위험): `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_concentration_risk_summary.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_risk_atr_telemetry.csv`
+- decision_path(판정 파일): `stages/227_adapter_research__selection_structure_repair_after_threshold_axis_no_effect/03_reviews/stage227_decision.md`
