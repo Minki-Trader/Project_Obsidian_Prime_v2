@@ -1735,3 +1735,8 @@
 - action(행동): closed(종료) `214_adapter_research__stage213_oos_monthly_concentration_followup_review` with decision(판정) `open_stage215_bounded_validation_mid_pf_recovery_preserve_oos_gain_candidate_not_final`.
 - effect(효과): selected(선택) `s213_r03125_s200_t455` as Stage215(215단계) repair probe(수리 탐침), not replacement(교체 아님).
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T05:00:02Z Stage215 validation mid PF recovery closeout(215단계 검증 중반 수익요인 회복 종료)
+
+- action(행동): closed(종료) `215_adapter_research__validation_mid_pf_recovery_preserve_oos_gain` with decision(판정) `open_stage216_bounded_followup_due_to_mid_pf_recovery_tradeoff_candidate_not_final`.
+- effect(효과): bracket interpolation(브래킷 보간)을 MT5(MetaTrader 5, 메타트레이더5)로 측정해 Stage216(216단계) follow-up review(후속 검토)로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
