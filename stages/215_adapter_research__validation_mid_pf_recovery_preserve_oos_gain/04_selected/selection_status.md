@@ -8,5 +8,5 @@
 - external_verification_status(외부 검증 상태): `completed`
 - decision(판정): `open_stage216_bounded_followup_due_to_mid_pf_recovery_tradeoff_candidate_not_final`
 - next_stage_or_branch(다음 단계 또는 분기): `216_adapter_research__stage215_mid_pf_recovery_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `1d6a2a4b1cda23981bb09e3fb4dfefa1cdd85825`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
