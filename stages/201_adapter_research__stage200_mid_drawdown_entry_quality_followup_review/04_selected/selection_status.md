@@ -8,5 +8,5 @@
 - external_verification_status(외부 검증 상태): `review_only_source_stage200_mt5_reports_completed`
 - decision(판정): `open_stage202_bounded_probability_binding_repair_candidate_not_final`
 - next_stage_or_branch(다음 단계 또는 분기): `202_adapter_research__stage200_probability_binding_repair`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `9d6c0635315bf0ded42a287499ef5c634b0be8ca`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
