@@ -1845,3 +1845,8 @@
 - action(행동): closed(종료) `235_adapter_research__side_specific_validation_net_recovery_after_session_context_tradeoff` with decision(판정) `open_stage236_bounded_followup_due_to_side_specific_tradeoff_candidate_not_final`.
 - effect(효과): Stage234(234단계) 검토 뒤 cashopen 45분(현금장 초반 45분)과 short block off(숏 차단 해제)를 MT5(MetaTrader 5, 메타트레이더5)로 측정하고 Stage236(236단계) follow-up review(후속 검토)로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+## 2026-05-19T11:15:36Z Stage236 side-specific follow-up review closeout(236단계 방향별 후속 검토 종료)
+
+- action(행동): closed(종료) `236_adapter_research__stage235_side_specific_followup_review` with decision(판정) `open_stage237_bounded_reference_micro_threshold_recovery_after_context_side_failure_candidate_not_final`.
+- effect(효과): Stage235(235단계)의 cashopen45(현금장 초반 45분), session width(세션 폭), short block off(숏 차단 해제) 실패 축을 분리하고 Stage237(237단계) micro threshold(미세 문턱값) 수리로 넘겼다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
