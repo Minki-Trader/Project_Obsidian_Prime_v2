@@ -1,8 +1,8 @@
-﻿current_run_id: run230A_stage230_stage229_guard_blend_followup_review_v1
+﻿current_run_id: run231A_stage231_midpf_oos_repair_after_guard_blend_failure_v1
 updated_on: '2026-05-19'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 230_adapter_research__stage229_guard_blend_followup_review
+active_stage: 231_adapter_research__midpf_oos_repair_after_guard_blend_failure
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage229(229단계) closed(종료) as `open_stage230_bounded_followup_due_to_guard_blend_tradeoff_candidate_not_final` and Stage230(230단계) `230_adapter_research__stage229_guard_blend_followup_review` is open_planned(개방 계획). Effect(효과): dual-objective guard blend(이중목표 보호 혼합)의 KPI(핵심 성과 지표) 상충을 별도 review(검토)로 판정한다.
+  Stage230(230단계) closed(종료) as `open_stage231_bounded_midpf_oos_repair_after_guard_blend_failure_candidate_not_final` and Stage231(231단계) `231_adapter_research__midpf_oos_repair_after_guard_blend_failure` is open_planned(개방 계획). Effect(효과): guard blend(보호 혼합) 실패를 mid PF/OOS repair(중반 수익요인/표본외 수리)로 분리한다.
 - >-
-  Stage229 evidence(229단계 근거)는 `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_guard_blend_report.md`, `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_guard_blend_kpi_summary.csv`, `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_quality_matrix.csv`, `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_monthly_kpi_summary.csv`, `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_concentration_risk_summary.csv`, `stages/229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff/03_reviews/stage229_risk_atr_telemetry.csv`에 있다. Effect(효과): margin band(마진 구간) 폭이 validation/OOS(검증/표본외)를 동시에 살리는지 확인한다.
+  Stage230 evidence(230단계 근거)는 `stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_guard_blend_followup_review.md`, `stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_guard_blend_tradeoff_matrix.csv`, `stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_performance_attribution.csv`, `stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_failure_memory.csv`에 있다. Effect(효과): Stage229(229단계)의 검증 회복/OOS 훼손 상충을 숨기지 않고 다음 수리 경계로 전달한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_dual_objective_guard_blend_after_selection_tradeoff`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_midpf_oos_repair_after_guard_blend_failure`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속한다.
 
 
 stage96_v41_oos_early_entry_gate_followup_review:
@@ -7906,4 +7906,34 @@ stage229_dual_objective_guard_blend_after_selection_tradeoff:
   external_verification_status: completed
   pushed_commit_hash: bb0fdb1e380e09fc4b2ccc086423c230aea0905e
   next_action: run230A_stage230_stage229_guard_blend_followup_review_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage230_stage229_guard_blend_followup_review:
+  packet_id: stage230_stage229_guard_blend_followup_review_v1
+  stage_id: 230_adapter_research__stage229_guard_blend_followup_review
+  status: closed_open_stage231_bounded_midpf_oos_repair_after_guard_blend_failure_candidate_not_final
+  current_run_id: run230A_stage230_stage229_guard_blend_followup_review_v1
+  source_stage: 229_adapter_research__dual_objective_guard_blend_after_selection_tradeoff
+  source_run: run229A_stage229_dual_objective_guard_blend_after_selection_tradeoff_v1
+  decision: open_stage231_bounded_midpf_oos_repair_after_guard_blend_failure_candidate_not_final
+  oos_reference_bound: s229_blend_session_only_ref
+  validation_recovery_clue: s229_blend_wide_margin_band
+  report_path: stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_guard_blend_followup_review.md
+  decision_path: stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_decision.md
+  tradeoff_matrix_path: stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_guard_blend_tradeoff_matrix.csv
+  failure_memory_path: stages/230_adapter_research__stage229_guard_blend_followup_review/03_reviews/stage230_failure_memory.csv
+  external_verification_status: review_only_source_stage229_mt5_reports_completed
+  pushed_commit_hash: pending_until_push
+  next_action: run231A_stage231_midpf_oos_repair_after_guard_blend_failure_v1
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage231_midpf_oos_repair_after_guard_blend_failure:
+  packet_id: stage231_midpf_oos_repair_after_guard_blend_failure_v1
+  stage_id: 231_adapter_research__midpf_oos_repair_after_guard_blend_failure
+  status: open_planned_from_stage230
+  current_run_id: run231A_stage231_midpf_oos_repair_after_guard_blend_failure_v1
+  source_stage: 230_adapter_research__stage229_guard_blend_followup_review
+  source_run: run230A_stage230_stage229_guard_blend_followup_review_v1
+  source_decision: open_stage231_bounded_midpf_oos_repair_after_guard_blend_failure_candidate_not_final
+  next_action: run231A_stage231_midpf_oos_repair_after_guard_blend_failure_v1
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
