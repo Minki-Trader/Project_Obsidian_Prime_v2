@@ -1,0 +1,11 @@
+﻿# Stage243 Inputs(243단계 입력)
+
+- source_stage(원천 단계): `242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff`
+- source_run(원천 실행): `run242A_stage242_selective_midsegment_quality_repair_after_highbonus_tradeoff_v1`
+- source_decision(원천 판정): `open_stage243_bounded_followup_due_to_selective_midsegment_tradeoff_candidate_not_final`
+- report(보고서): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_selective_midsegment_report.md`
+- summary(요약): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_selective_midsegment_kpi_summary.csv`
+- quality_matrix(품질 행렬): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_quality_matrix.csv`
+- risk_atr_telemetry(위험/ATR 기록): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_risk_atr_telemetry.csv`
+- gate_feature_summary(보호문 피처 요약): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_gate_feature_summary.csv`
+- decision_path(판정 파일): `stages/242_adapter_research__selective_midsegment_quality_repair_after_highbonus_tradeoff/03_reviews/stage242_decision.md`
