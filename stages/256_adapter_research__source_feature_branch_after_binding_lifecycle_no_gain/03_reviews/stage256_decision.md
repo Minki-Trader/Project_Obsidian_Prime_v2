@@ -1,4 +1,4 @@
-﻿# Stage256 Decision(256단계 판정)
+# Stage256 Decision(256단계 판정)
 
 - stage(단계): `256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain`
 - run(실행): `run256A_stage256_source_feature_branch_after_binding_lifecycle_no_gain_v1`
@@ -16,7 +16,7 @@
 - probability_telemetry(확률 원격측정): `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_probability_telemetry_summary.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_risk_atr_telemetry.csv`
 - next_stage_or_branch(다음 단계 또는 분기): `257_adapter_research__stage256_source_feature_followup_review`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `c5e1c2f8bd930f1a5c9f025b1e67630897e5ab10`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
 Stage256(256단계) closeout(종료)은 overall goal complete(전체 목표 완료)가 아니다.

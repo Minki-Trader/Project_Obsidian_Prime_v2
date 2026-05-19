@@ -1,4 +1,4 @@
-﻿# Current Working State(현재 작업 상태)
+# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage257_stage256_source_feature_followup_review_v1`
 - current_run(현재 실행): `run257A_stage257_stage256_source_feature_followup_review_v1`
@@ -21,6 +21,6 @@ Effect(효과): Stage257(257단계)는 이 결과를 review-only(검토 전용)�
 - summary(요약): `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_source_feature_kpi_summary.csv`
 - quality_matrix(품질 행렬): `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_quality_matrix.csv`
 - risk_atr_telemetry(위험/ATR 원격측정): `stages/256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain/03_reviews/stage256_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `c5e1c2f8bd930f1a5c9f025b1e67630897e5ab10`
 
 Forbidden claims(금지 주장): deployment(배포), live_readiness(실거래 준비), runtime_authority(런타임 권위), operating_promotion(운영 승격), operating_reference(운영 기준), production_baseline(생산 기준), overall_goal_complete(전체 목표 완료).
