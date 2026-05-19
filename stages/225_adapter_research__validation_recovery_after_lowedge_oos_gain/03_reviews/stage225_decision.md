@@ -16,7 +16,7 @@
 - monthly_kpi(월별 KPI 핵심 성과 지표): `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_monthly_kpi_summary.csv`
 - concentration_risk(집중 위험): `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_concentration_risk_summary.csv`
 - risk_atr_telemetry(위험/ATR 기록): `stages/225_adapter_research__validation_recovery_after_lowedge_oos_gain/03_reviews/stage225_risk_atr_telemetry.csv`
-- pushed_commit_hash(푸시 커밋 해시): `pending_until_push`
+- pushed_commit_hash(푸시 커밋 해시): `21f86245b96f10ee1dc1569a6f92933b2635dbf8`
 - next_stage_or_branch(다음 단계 또는 분기): `226_adapter_research__stage225_validation_recovery_followup_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`
 
