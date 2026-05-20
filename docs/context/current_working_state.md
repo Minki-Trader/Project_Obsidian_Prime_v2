@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267H_stage267_soft_noncalendar_adapter_design_v1`
+- current_run(현재 실행): `run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `run267H_soft_noncalendar_adapter_design_completed`
+- status(상태): `run267I_p0_soft_noncalendar_adapter_mt5_batch_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -82,12 +82,15 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267F non-calendar guard MT5 review(비달력 방어 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_review.md`
 - Stage267(267단계) run267G ADX follow-up and DI failure memory(ADX 후속과 DI 실패 기억): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267G_adx_followup_failure_memory.md`
 - Stage267(267단계) run267H soft non-calendar Adapter design(부드러운 비달력 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267H_soft_noncalendar_adapter_design.md`
+- Stage267(267단계) run267I P0 soft non-calendar Adapter materialization(P0 부드러운 비달력 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_materialization.md`
+- Stage267(267단계) run267I P0 soft non-calendar Adapter MT5 execution(P0 부드러운 비달력 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_execution.md`
 
 ## Current Next Action(현재 다음 행동)
+- latest_mt5_execution(최신 MT5 실행): attempts(시도) `4`, KPI records(핵심 성과 지표 기록) `4`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_execution.md`.
 
-- next_run(다음 실행): `run267I_materialize_top_soft_noncalendar_adapter_candidates`
-- action(행동): run267H(267H 실행)에서 soft feature engineering matrix(부드러운 피처 엔지니어링 행렬), Adapter surface matrix(어댑터 표면 행렬), experiment queue(실험 대기열)를 만들었다.
-- effect(효과): hard guard(강한 방어)를 반복하지 않고 `s264_aih` 핵심 후보와 `s264_lc` 방어 기준을 P0 materialization(우선 물질화) 후보로 좁힌다.
-- next_action(다음 행동): `run267I_materialize_top_soft_noncalendar_adapter_candidates`. Effect(효과): P0 soft non-calendar Adapter(부드러운 비달력 어댑터) 후보를 실제 feature/model/set/ini(피처/모델/설정/초기화) 묶음으로 물질화할지 검증한다.
+- next_run(다음 실행): `run267I_review_p0_soft_noncalendar_adapter_mt5_results`
+- action(행동): run267I(267I 실행)에서 P0 후보 `s264_aih`, `s264_lc`의 `adx_atr_soft_score` feature/model/set/ini(피처/모델/설정/초기화) 묶음을 만들고 MT5(MetaTrader 5, 메타트레이더5) batch(묶음) 실행까지 완료했다.
+- effect(효과): hard guard(강한 방어)가 아니라 부드러운 ADX/ATR 점수(soft ADX/ATR score, 부드러운 ADX/ATR 점수)를 모델 입력으로 붙였을 때 실제 tester output(테스터 출력)과 KPI(핵심 성과 지표)가 생성되는지 확인했다.
+- next_action(다음 행동): `run267I_review_p0_soft_noncalendar_adapter_mt5_results`. Effect(효과): 거래 수, PF(수익 팩터), DD(drawdown, 손실폭), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)를 읽어 이 soft Adapter(부드러운 어댑터)가 계속 볼 가치가 있는지 판정한다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).

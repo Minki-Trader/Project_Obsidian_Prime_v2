@@ -1,0 +1,68 @@
+{
+  "artifact_hashes": {
+    "attempts": "1b649a63c292d26e895686812eedc1e523c1323b2602b48f258e51bc50e3ec91",
+    "feature_model_manifest": "8a032f0daaae0d79ffc1afbd626372818df96a061b135e67d73025a53e7f4c9d",
+    "runtime_contract": "e2b76bebfe15aa7c00fda27313b212c0446e0ae680d308eeb72b4acac6779d7b",
+    "soft_score_diagnostics": "1706e63c6c04a39b934d697861de3b16dddb00461d436be052ab98ae15bf07c4"
+  },
+  "artifact_paths": {
+    "attempts": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/attempts.csv",
+    "feature_model_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/feature_model_manifest.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/lineage.json",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_materialization.md",
+    "result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/result.json",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/run_manifest.json",
+    "runtime_contract": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/runtime_contract.csv",
+    "soft_score_diagnostics": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/soft_score_diagnostics.csv"
+  },
+  "availability": "tracked_after_commit_reproducible_from_command",
+  "consumer": "run267I_execute_p0_soft_noncalendar_adapter_mt5_batch",
+  "created_at_utc": "2026-05-20T18:20:34Z",
+  "lineage_judgment": "connected_with_boundary",
+  "lineage_rows": [
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_aih",
+      "common_path": "OPV2/s267i/run267I_p0_soft_noncalendar_adapter/adxatrsoft/s264_aih/features/s264_aih_adxatrsoft.csv",
+      "common_sha256": "a5a1a50b36d2b6174b494bc720797faf0a2d6d0bd59c063388edde8fb1e7e816",
+      "run267i_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/adxatrsoft/s264_aih/features/s264_aih_adxatrsoft.csv",
+      "run267i_sha256": "a5a1a50b36d2b6174b494bc720797faf0a2d6d0bd59c063388edde8fb1e7e816",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_aih",
+      "common_path": "OPV2/s267i/run267I_p0_soft_noncalendar_adapter/adxatrsoft/s264_aih/models/s264_aih_adxatrsoft_model.csv",
+      "common_sha256": "95c6242f2d1c846e9a242f3588941d906ced5d8ca18dbb8c59c893359aa190c8",
+      "run267i_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/adxatrsoft/s264_aih/models/s264_aih_adxatrsoft_model.csv",
+      "run267i_sha256": "95c6242f2d1c846e9a242f3588941d906ced5d8ca18dbb8c59c893359aa190c8",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_lc",
+      "common_path": "OPV2/s267i/run267I_p0_soft_noncalendar_adapter/adxatrsoft/s264_lc/features/s264_lc_adxatrsoft.csv",
+      "common_sha256": "065de19959183424b2c5d68509ee848cca2fd2a1fd1777d0256ff8fffcd81dc4",
+      "run267i_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/adxatrsoft/s264_lc/features/s264_lc_adxatrsoft.csv",
+      "run267i_sha256": "065de19959183424b2c5d68509ee848cca2fd2a1fd1777d0256ff8fffcd81dc4",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_lc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_lc",
+      "common_path": "OPV2/s267i/run267I_p0_soft_noncalendar_adapter/adxatrsoft/s264_lc/models/s264_lc_adxatrsoft_model.csv",
+      "common_sha256": "95c6242f2d1c846e9a242f3588941d906ced5d8ca18dbb8c59c893359aa190c8",
+      "run267i_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/adxatrsoft/s264_lc/models/s264_lc_adxatrsoft_model.csv",
+      "run267i_sha256": "95c6242f2d1c846e9a242f3588941d906ced5d8ca18dbb8c59c893359aa190c8",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_lc_model.csv"
+    }
+  ],
+  "producer": "stage_pipelines/stage267/run267I_soft_noncalendar_adapter_materialization.py",
+  "run_id": "run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1",
+  "source_inputs": {
+    "run267B_feature_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features.csv",
+    "run267H_experiment_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267H/soft_noncalendar_adapter_design/experiment_queue.csv",
+    "run267H_feature_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267H/soft_noncalendar_adapter_design/soft_feature_engineering_matrix.csv"
+  },
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol"
+}

@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267H_soft_noncalendar_adapter_design_completed`
+- stage_status(단계 상태): `run267I_p0_soft_noncalendar_adapter_mt5_batch_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267H_stage267_soft_noncalendar_adapter_design_v1`
-- last_completed_run(마지막 완료 실행): `run267H_stage267_soft_noncalendar_adapter_design_v1`
+- current_run(현재 실행): `run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -45,11 +45,13 @@
 - run267F_non_calendar_guard_mt5_review(267F 비달력 방어 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_review.md`
 - run267G_adx_followup_failure_memory(267G ADX 후속과 DI 실패 기억): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267G_adx_followup_failure_memory.md`
 - run267H_soft_noncalendar_adapter_design(267H 부드러운 비달력 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267H_soft_noncalendar_adapter_design.md`
-- next_action(다음 행동): `run267I_materialize_top_soft_noncalendar_adapter_candidates`
+- run267I_soft_noncalendar_adapter_materialization(267I 부드러운 비달력 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_materialization.md`
+- run267I_soft_noncalendar_adapter_mt5_execution(267I 부드러운 비달력 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_execution.md`
+- next_action(다음 행동): `run267I_review_p0_soft_noncalendar_adapter_mt5_results`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
 Effect(효과): 후보군은 감정이나 과거 기록이 아니라 다음 연구에 실제로 도움이 되는지로 유지, 탈락, 갱신된다.
 
-Run267H(267H 실행)는 soft non-calendar Adapter design(부드러운 비달력 어댑터 설계)을 완료했다.
-Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, P0 물질화 후보는 `s264_aih` core(핵심)와 `s264_lc` control(기준)의 `adx_atr_soft_score`로 좁힌다.
+Run267I(267I 실행)는 P0 soft non-calendar Adapter materialization(P0 부드러운 비달력 어댑터 물질화)과 MT5 execution(MT5 실행)을 완료했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 `s264_aih`, `s264_lc` `adx_atr_soft_score` 실행 결과를 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질) 관점에서 검토한다.
