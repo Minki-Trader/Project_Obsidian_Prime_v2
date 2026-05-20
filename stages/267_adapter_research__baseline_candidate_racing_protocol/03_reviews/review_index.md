@@ -1,6 +1,6 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267I_p0_soft_noncalendar_adapter_mt5_batch_completed`
+- status(상태): `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`
 - current_run(현재 실행): `run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1`
 - last_completed_run(마지막 완료 실행): `run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
@@ -54,10 +54,12 @@
 - run267H_soft_noncalendar_adapter_design(267H 부드러운 비달력 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267H_soft_noncalendar_adapter_design.md`
 - run267I_soft_noncalendar_adapter_materialization(267I 부드러운 비달력 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_materialization.md`
 - run267I_soft_noncalendar_adapter_mt5_execution(267I 부드러운 비달력 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_execution.md`
+- run267I_soft_noncalendar_adapter_mt5_review(267I 부드러운 비달력 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_review.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
-Run267I(267I 실행)는 P0 soft non-calendar Adapter materialization(P0 부드러운 비달력 어댑터 물질화)과 MT5 execution(MT5 실행)을 완료했다.
-Effect(효과): Stage267(267단계)는 후보 선택(selected candidate, 선택 후보)이나 ONNX readiness(ONNX 준비)를 주장하지 않고, `run267I_review_p0_soft_noncalendar_adapter_mt5_results`에서 P0 soft non-calendar Adapter(우선순위 0 부드러운 비달력 어댑터) MT5(MetaTrader 5, 메타트레이더5) 결과를 검토한다.
+Run267I(267I 실행)는 P0 soft non-calendar Adapter materialization(P0 부드러운 비달력 어댑터 물질화), MT5 execution(MT5 실행), MT5 review(MT5 검토)까지 완료했다.
+Effect(효과): 순수익/PF(profit factor, 수익 팩터)는 2024년 원형보다 좋아졌지만 DD(drawdown, 손실폭), Monday(월요일), July(7월), chron_mid(중간 순서 구간) 약점이 남아 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
+Next action(다음 행동): `run267J_design_retrained_soft_context_adapter_probe_with_stop_rules`. Effect(효과): score-table extension(점수표 확장) 반복을 막고, true retrain(진짜 재학습) soft-context Adapter probe(부드러운 문맥 어댑터 탐침)를 설계하거나 짧은 stop rule(중단 규칙)로 분기를 닫는다.

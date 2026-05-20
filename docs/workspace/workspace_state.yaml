@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage267(267단계) run267I(267I 실행) P0 soft non-calendar Adapter MT5 execution(P0 부드러운 비달력 어댑터 MT5 실행) `run267I_p0_soft_noncalendar_adapter_mt5_batch_completed`. Effect(효과): `s264_aih`와 `s264_lc`의 `adx_atr_soft_score` feature/model/set/ini(피처/모델/설정/초기화) 묶음을 만들고 4개 MT5(MetaTrader 5, 메타트레이더5) attempt(시도)를 실행했지만 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+  Stage267(267단계) run267I(267I 실행) P0 soft non-calendar Adapter MT5 review(P0 부드러운 비달력 어댑터 MT5 검토) `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`. Effect(효과): `s264_aih`와 `s264_lc`의 `adx_atr_soft_score` MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)로 검토했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267I_review_p0_soft_noncalendar_adapter_mt5_results`이다. Effect(효과): 생성된 KPI(핵심 성과 지표), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)를 읽어 약한 구간과 거래 품질을 본다.
+  Next action(다음 행동)는 `run267J_design_retrained_soft_context_adapter_probe_with_stop_rules`이다. Effect(효과): score-table extension(점수표 확장) 반복을 막고 true retrain(진짜 재학습) soft-context Adapter probe(부드러운 문맥 어댑터 탐침)를 설계하거나 짧은 stop rule(중단 규칙)로 분기를 닫는다.
 - >-
-  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267I_p0_soft_noncalendar_adapter_mt5_batch_completed(267I P0 부드러운 비달력 어댑터 MT5 실행 완료, 검토 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
+  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267I_p0_soft_noncalendar_adapter_mt5_review_completed(267I P0 부드러운 비달력 어댑터 MT5 검토 완료 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
   Stage267 baseline candidate pool(267단계 기준 후보군)은 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`이다. Effect(효과): R&D racing(연구개발 경주), Adapter development(어댑터 개발), stability/weakness/time-slice validation(안정성/취약점/기간 구간 검증), feature ablation(피처 제거), similar feature replacement(유사 피처 대체), equity curve review(평가금 곡선 검토)를 거치기 전에는 ONNX review(ONNX 검토)로 가지 않는다.
 - >-
@@ -8697,7 +8697,7 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267I_p0_soft_noncalendar_adapter_mt5_batch_completed
+  status: run267I_p0_soft_noncalendar_adapter_mt5_review_completed
   current_run_id: run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1
   last_completed_run_id: run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
@@ -8731,8 +8731,9 @@ stage267_baseline_candidate_racing_protocol:
   run267H_soft_noncalendar_adapter_design_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267H_soft_noncalendar_adapter_design.md
   run267I_soft_noncalendar_adapter_materialization_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_materialization.md
   run267I_soft_noncalendar_adapter_mt5_execution_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_execution.md
+  run267I_soft_noncalendar_adapter_mt5_review_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_review.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267I_review_p0_soft_noncalendar_adapter_mt5_results
+  next_action: run267J_design_retrained_soft_context_adapter_probe_with_stop_rules
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
