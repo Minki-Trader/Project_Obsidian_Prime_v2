@@ -1,0 +1,254 @@
+{
+  "context_info": {
+    "atr_14_over_atr_50_q33": 1.1567053000132244,
+    "context_rows": 11651,
+    "di_spread_14_abs_q33": 6.317218144734699,
+    "historical_vol_20_edges": [
+      0.19134930272897085,
+      0.2737485865751902
+    ],
+    "source_info": {
+      "duplicates": 0,
+      "first_time_utc": "2024-01-02T16:40:00Z",
+      "last_time_utc": "2024-12-31T22:00:00Z",
+      "missing_signal_rows": 0,
+      "route_coverage_rows": 3,
+      "rows": 11651,
+      "source_signal_column": "stage56_context_et_event_signal",
+      "source_variant_id": "v41_v22_midcov_et40_agree_h2c0_no_b",
+      "split": "train",
+      "tier": "Tier A"
+    }
+  },
+  "created_at_utc": "2026-05-20T17:20:21Z",
+  "inputs": {
+    "run267d_design": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267D/adapter_p2_materialization/design.csv",
+    "run267d_review": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267D/adapter_p2_materialization/candidate_axis_review.csv",
+    "run267e_guard_comparison": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267E/adapter_p2_followup_design/guard_comparison.csv",
+    "run267e_negative_slices": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267E/adapter_p2_followup_design/negative_slice_summary.csv"
+  },
+  "lineage": [
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_aih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s264_aih/features/s264_aih_adx2025.csv",
+      "common_sha256": "d09a73104ceab3f4022ab47b8543cd85b7897f0e63af6004e55404d1dc3733d6",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s264_aih/features/s264_aih_adx2025.csv",
+      "run267f_sha256": "d09a73104ceab3f4022ab47b8543cd85b7897f0e63af6004e55404d1dc3733d6",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aih/features/s264_aih_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_aih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s264_aih/models/s264_aih_adx2025_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s264_aih/models/s264_aih_adx2025_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aih/models/s264_aih_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_aia",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s264_aia/features/s264_aia_adx2025.csv",
+      "common_sha256": "28325ca26e56fd779258dfe1c1d01451b7551128091879c16213fa795ca15074",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s264_aia/features/s264_aia_adx2025.csv",
+      "run267f_sha256": "28325ca26e56fd779258dfe1c1d01451b7551128091879c16213fa795ca15074",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aia/features/s264_aia_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_aia",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s264_aia/models/s264_aia_adx2025_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s264_aia/models/s264_aia_adx2025_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aia/models/s264_aia_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s258_stc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s258_stc/features/s258_stc_adx2025.csv",
+      "common_sha256": "75fa7058f89efd93ff3dcc544cee13dd06bec71f7e0090d3bf132b2c72ea2bd3",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s258_stc/features/s258_stc_adx2025.csv",
+      "run267f_sha256": "75fa7058f89efd93ff3dcc544cee13dd06bec71f7e0090d3bf132b2c72ea2bd3",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s258_stc/features/s258_stc_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s258_stc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s258_stc/models/s258_stc_adx2025_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s258_stc/models/s258_stc_adx2025_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s258_stc/models/s258_stc_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_lc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s264_lc/features/s264_lc_adx2025.csv",
+      "common_sha256": "cf60e78f8ec61f37f1faee2d26894cd563cdf8bdc7fd0f7ebe63e75d1b9b88b8",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s264_lc/features/s264_lc_adx2025.csv",
+      "run267f_sha256": "cf60e78f8ec61f37f1faee2d26894cd563cdf8bdc7fd0f7ebe63e75d1b9b88b8",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_lc/features/s264_lc_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_lc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s264_lc/models/s264_lc_adx2025_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s264_lc/models/s264_lc_adx2025_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_lc/models/s264_lc_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s262_lih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s262_lih/features/s262_lih_adx2025.csv",
+      "common_sha256": "67486d578a72dce828c9ea32c15f672767ecda792076a9f95744143989a6440c",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s262_lih/features/s262_lih_adx2025.csv",
+      "run267f_sha256": "67486d578a72dce828c9ea32c15f672767ecda792076a9f95744143989a6440c",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s262_lih/features/s262_lih_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s262_lih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/adx2025/s262_lih/models/s262_lih_adx2025_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "adx2025",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/adx2025/s262_lih/models/s262_lih_adx2025_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s262_lih/models/s262_lih_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_aih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s264_aih/features/s264_aih_dilowq33.csv",
+      "common_sha256": "e16cd6d02832d9f671f404534a967b2c7ce74a8f42d15945df01a9c33bb7dc4d",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s264_aih/features/s264_aih_dilowq33.csv",
+      "run267f_sha256": "e16cd6d02832d9f671f404534a967b2c7ce74a8f42d15945df01a9c33bb7dc4d",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aih/features/s264_aih_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_aih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s264_aih/models/s264_aih_dilowq33_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s264_aih/models/s264_aih_dilowq33_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aih/models/s264_aih_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_aia",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s264_aia/features/s264_aia_dilowq33.csv",
+      "common_sha256": "329afbce4bc377a86d743ac2f676f07dd73045a5c6e7fde9230774993e93cf71",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s264_aia/features/s264_aia_dilowq33.csv",
+      "run267f_sha256": "329afbce4bc377a86d743ac2f676f07dd73045a5c6e7fde9230774993e93cf71",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aia/features/s264_aia_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_aia",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s264_aia/models/s264_aia_dilowq33_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s264_aia/models/s264_aia_dilowq33_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_aia/models/s264_aia_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s258_stc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s258_stc/features/s258_stc_dilowq33.csv",
+      "common_sha256": "866150266ace9fc03a032377f815ca22143cece8cb3fdd5cbb5d880a52a9f35c",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s258_stc/features/s258_stc_dilowq33.csv",
+      "run267f_sha256": "866150266ace9fc03a032377f815ca22143cece8cb3fdd5cbb5d880a52a9f35c",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s258_stc/features/s258_stc_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s258_stc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s258_stc/models/s258_stc_dilowq33_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s258_stc/models/s258_stc_dilowq33_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s258_stc/models/s258_stc_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s264_lc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s264_lc/features/s264_lc_dilowq33.csv",
+      "common_sha256": "7127b4c1a8ae070048adcff3d63742077956231478d76fbb5452c7faf35357e4",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s264_lc/features/s264_lc_dilowq33.csv",
+      "run267f_sha256": "7127b4c1a8ae070048adcff3d63742077956231478d76fbb5452c7faf35357e4",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_lc/features/s264_lc_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s264_lc",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s264_lc/models/s264_lc_dilowq33_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s264_lc/models/s264_lc_dilowq33_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s264_lc/models/s264_lc_atrcomp_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "candidate_alias": "s262_lih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s262_lih/features/s262_lih_dilowq33.csv",
+      "common_sha256": "fbeef37fe38d1f3c2936892e09c5bf8a5b965b27dddceede00a744e77d3cf091",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s262_lih/features/s262_lih_dilowq33.csv",
+      "run267f_sha256": "fbeef37fe38d1f3c2936892e09c5bf8a5b965b27dddceede00a744e77d3cf091",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s262_lih/features/s262_lih_atrcomp.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "candidate_alias": "s262_lih",
+      "common_path": "OPV2/s267f/run267F_atrcomp_guard_robustness/dilowq33/s262_lih/models/s262_lih_dilowq33_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "guard_variant": "dilowq33",
+      "run267f_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267F/atrcomp_guard_robustness/dilowq33/s262_lih/models/s262_lih_dilowq33_model.csv",
+      "run267f_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_axis": "atrcomp",
+      "source_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/OPV2/s267d/run267D_adapter_p2/atrcomp/s262_lih/models/s262_lih_atrcomp_model.csv"
+    }
+  ],
+  "run_id": "run267F_stage267_atrcomp_guard_robustness_non_calendar_v1",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol"
+}
