@@ -1,0 +1,199 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "created_at_utc": "2026-05-20T22:14:56Z",
+  "failure_memory": [
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "do_not_repeat": "do_not_tune_single_monday_or_session_threshold_without_pool_wide_axis",
+      "failed_boundary": "internal_adapter_branch_candidate_selection",
+      "reopen_condition": "only_reopen_if_pool_wide_axis_creates_distinct_stable_shape",
+      "salvage_value": "keep_internal_feature_order_materialization_as_runtime_reproduction_seed",
+      "weak_slice_evidence": "Monday=-95.7;session_07_12=-90.49",
+      "why_failed": "runtime_reproduced_but_ablation_and_replacement_have_same_shape_and_weak_slices_remain"
+    },
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "do_not_repeat": "do_not_tune_single_monday_or_session_threshold_without_pool_wide_axis",
+      "failed_boundary": "internal_adapter_branch_candidate_selection",
+      "reopen_condition": "only_reopen_if_pool_wide_axis_creates_distinct_stable_shape",
+      "salvage_value": "keep_internal_feature_order_materialization_as_runtime_reproduction_seed",
+      "weak_slice_evidence": "Monday=-96.81;session_07_12=-91.41",
+      "why_failed": "runtime_reproduced_but_ablation_and_replacement_have_same_shape_and_weak_slices_remain"
+    }
+  ],
+  "gate_receipt": [
+    {
+      "effect": "hypothesis, comparison, controls, stop conditions, evidence plan are explicit",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/next_pool_wide_stability_queue.csv",
+      "gate_id": "experiment_design",
+      "gate_status": "passed"
+    },
+    {
+      "effect": "run267R uses 2024 MT5 results as review evidence only, not training target",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_review/review_result.json",
+      "gate_id": "data_integrity",
+      "gate_status": "bounded"
+    },
+    {
+      "effect": "variant collapse prevents model or candidate selection claim",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/internal_adapter_prune_matrix.csv",
+      "gate_id": "model_validation",
+      "gate_status": "bounded"
+    },
+    {
+      "effect": "selected candidate and ONNX readiness remain not claimed",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267R_internal_adapter_stability_followup_or_prune.md",
+      "gate_id": "result_judgment",
+      "gate_status": "passed"
+    },
+    {
+      "effect": "source review artifacts connect to run267R outputs",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/lineage.json",
+      "gate_id": "artifact_lineage",
+      "gate_status": "passed"
+    }
+  ],
+  "goal_achieve": "not_claimed",
+  "lineage": {
+    "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+    "lineage_judgment": "connected_prune_receipt_no_candidate_selection",
+    "outputs": {
+      "failure_memory": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/failure_memory.csv",
+      "gate_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/gate_receipt.csv",
+      "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/lineage.json",
+      "next_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/next_pool_wide_stability_queue.csv",
+      "prune_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/internal_adapter_prune_matrix.csv",
+      "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267R_internal_adapter_stability_followup_or_prune.md",
+      "result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267R/internal_adapter_stability_followup_or_prune/result.json"
+    },
+    "producer": "stage_pipelines/stage267/run267R_internal_adapter_stability_followup_or_prune.py",
+    "source_inputs": [
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_review/candidate_summary.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_review/candidate_test_review.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_review/negative_slice_summary.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_review/curve_diagnostics.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_review/source_reproduction_audit.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_review/review_result.json",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_review.md"
+    ],
+    "source_run_id": "run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1"
+  },
+  "next_action": "run267S_materialize_pool_wide_orthogonal_stability_racing_matrix",
+  "next_queue": [
+    {
+      "candidate_scope": "s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control",
+      "changed_variables": "ablation/replacement axis identity(제거/대체 축 정체성), candidate-wide materialization(후보군 전체 물질화)",
+      "comparison_baseline": "run267N(267N 실행) pool-wide P0 surface(후보군 전체 P0 표면)와 run267Q(267Q 실행) internal reproduction(내부 재현)",
+      "control_variables": "US100;M5;historical_2024;fixed_cost_deposit_tester_contract;same_candidate_pool;same_no_onnx_claim_boundary",
+      "decision_use": "내부 Adapter(어댑터) 분기를 살릴지, 후보군 전체에서 새 축으로 갈지 정한다.",
+      "evidence_plan": "candidate_test_review;negative_slice_summary;curve_diagnostics;source_reproduction_audit;artifact_registry",
+      "failure_criteria": "모든 변형이 같은 KPI(핵심 성과 지표) 모양으로 접히거나 Monday/session(월요일/세션) 손실이 반복된다.",
+      "hypothesis": "좋은 후보라면 feature ablation(피처 제거)과 similar replacement(유사 대체)가 모두 같은 모양으로 접히지 않아야 한다.",
+      "invalid_conditions": "feature order(피처 순서), set/ini identity(설정/초기화 정체성), parser(파서) 불일치가 있으면 무효다.",
+      "priority": "P0",
+      "queue_id": "run267S_axis01_pool_wide_variant_distinguishability",
+      "sample_scope": "Tier A(티어 A) and actual routed total(실제 라우팅 전체) historical 2024 stress(2024 과거 압박)",
+      "stop_conditions": "같은 약한 구간을 한 분기에서 두 번 넘게 수리하지 않는다.",
+      "success_criteria": "각 후보의 변형별 curve/time-slice/trade-quality(곡선/시간구간/거래품질)가 구분되고, 약한 구간이 악화되지 않는다."
+    },
+    {
+      "candidate_scope": "s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control",
+      "changed_variables": "volatility regime(변동성 상태), ATR compression(ATR 압축), trend strength(추세 강도) 구조 feature(피처)",
+      "comparison_baseline": "run267Q(267Q 실행)의 Monday/session(월요일/세션) 손실",
+      "control_variables": "US100;M5;historical_2024;fixed_cost_deposit_tester_contract;same_candidate_pool;same_no_onnx_claim_boundary",
+      "decision_use": "single-slice repair(단일 구간 수리) 병목을 피하고 넓은 안정성 축을 고른다.",
+      "evidence_plan": "time_slice_kpi;trade_records;curve_zoom_review;failure_memory",
+      "failure_criteria": "특정 요일 또는 특정 시간만 맞추고 trade count(거래 수)가 무너지거나 다른 월이 깊게 파인다.",
+      "hypothesis": "약한 요일/세션을 직접 막는 대신, 비달력 구조 feature(피처)가 약한 구간 손실을 덜 흔들리게 해야 한다.",
+      "invalid_conditions": "요일 자체를 학습 target(목표)로 과최적화하면 무효다.",
+      "priority": "P0",
+      "queue_id": "run267S_axis02_non_calendar_weak_slice_resilience",
+      "sample_scope": "2024 historical stress(2024 과거 압박) with weekday/session/hour/month(요일/세션/시간/월) KPI(핵심 성과 지표)",
+      "stop_conditions": "Monday/session(월요일/세션) 전용 threshold(문턱값) 반복은 중단한다.",
+      "success_criteria": "전체 net/PF/DD(순수익/수익 팩터/손실폭)를 크게 훼손하지 않고 약한 구간 손실이 줄어든다."
+    },
+    {
+      "candidate_scope": "s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control",
+      "changed_variables": "candidate inclusion(후보 포함), stress/control role(압박/통제 역할)",
+      "comparison_baseline": "Stage267(267단계) initial scoreboard(초기 점수판), run267B(267B 실행), run267O(267O 실행)",
+      "control_variables": "US100;M5;historical_2024;fixed_cost_deposit_tester_contract;same_candidate_pool;same_no_onnx_claim_boundary",
+      "decision_use": "다섯 후보 유지/탈락/회수 조건을 업데이트한다.",
+      "evidence_plan": "pool_candidate_decision;candidate_role_update;negative_result_register_delta",
+      "failure_criteria": "두 후보만 반복 수리하고 나머지 후보군의 역할 판정이 비어 있다.",
+      "hypothesis": "run267Q(267Q 실행)에서 빠진 세 후보도 동일한 안정성 축에서는 다시 비교 가치가 있을 수 있다.",
+      "invalid_conditions": "서로 다른 기간 또는 서로 다른 tester contract(테스터 계약)를 같은 비교처럼 쓰면 무효다.",
+      "priority": "P1",
+      "queue_id": "run267S_axis03_candidate_pool_prune_or_restore",
+      "sample_scope": "all five Baseline candidates(다섯 기준 후보) under same route interpretation(같은 라우팅 해석)",
+      "stop_conditions": "탈락 근거가 생긴 후보는 감정적으로 유지하지 않는다.",
+      "success_criteria": "각 후보가 다음 연구에 왜 남는지 또는 왜 탈락하는지 근거가 생긴다."
+    }
+  ],
+  "onnx_readiness": "not_claimed",
+  "prune_matrix": [
+    {
+      "all_reproduced_from_source": "true",
+      "best_net_profit": 408.29,
+      "best_profit_factor": 1.347088,
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "decision": "prune_internal_adapter_branch_to_salvage_clue",
+      "do_not_repeat": "do_not_tune_single_monday_or_session_threshold_without_pool_wide_axis",
+      "monday_net": -95.7,
+      "monday_trade_count": 54,
+      "negative_slice_rows": 40,
+      "onnx_readiness": "not_claimed",
+      "reason": "runtime_reproduced_but_ablation_and_replacement_have_same_shape_and_weak_slices_remain",
+      "review_rows": 4,
+      "salvage_value": "keep_internal_feature_order_materialization_as_runtime_reproduction_seed",
+      "selected_candidate": "none",
+      "session_07_12_net": -90.49,
+      "session_07_12_trade_count": 6,
+      "source_reproduction_mismatches": 0,
+      "trade_count_min": 315,
+      "unique_kpi_shapes": 1,
+      "variant_collapse": true,
+      "weak_slice_recurred": true,
+      "worst_dd_percent": 15.85,
+      "worst_month": "2024-06",
+      "worst_month_net": -32.37
+    },
+    {
+      "all_reproduced_from_source": "true",
+      "best_net_profit": 412.57,
+      "best_profit_factor": 1.349864,
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "decision": "prune_internal_adapter_branch_to_salvage_clue",
+      "do_not_repeat": "do_not_tune_single_monday_or_session_threshold_without_pool_wide_axis",
+      "monday_net": -96.81,
+      "monday_trade_count": 54,
+      "negative_slice_rows": 40,
+      "onnx_readiness": "not_claimed",
+      "reason": "runtime_reproduced_but_ablation_and_replacement_have_same_shape_and_weak_slices_remain",
+      "review_rows": 4,
+      "salvage_value": "keep_internal_feature_order_materialization_as_runtime_reproduction_seed",
+      "selected_candidate": "none",
+      "session_07_12_net": -91.41,
+      "session_07_12_trade_count": 6,
+      "source_reproduction_mismatches": 0,
+      "trade_count_min": 314,
+      "unique_kpi_shapes": 1,
+      "variant_collapse": true,
+      "weak_slice_recurred": true,
+      "worst_dd_percent": 15.9,
+      "worst_month": "2024-06",
+      "worst_month_net": -32.73
+    }
+  ],
+  "run_id": "run267R_stage267_internal_adapter_stability_followup_or_prune_v1",
+  "selected_candidate": "none",
+  "source_review_status": "run267Q_internal_feature_order_confirmed_adapter_mt5_review_completed",
+  "source_run_id": "run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "run267R_internal_adapter_stability_followup_or_prune_completed"
+}
