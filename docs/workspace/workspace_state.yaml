@@ -1,4 +1,4 @@
-﻿current_run_id: run267K_stage267_retrained_soft_context_adapter_materialization_v1
+﻿current_run_id: run267L_stage267_retrained_soft_context_followup_or_prune_v1
 updated_on: '2026-05-21'
 project_mode: clean_stage_restart
 active_branch: main
@@ -16,15 +16,17 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
+  Stage267(267단계) run267L(267L 실행) retrained soft-context follow-up/prune(재학습 부드러운 문맥 후속/가지치기) `run267L_retrained_soft_context_followup_or_prune_completed`. Effect(효과): run267K(267K 실행)의 순수익 개선 단서는 보존하되 Monday(월요일), 2024-12, trade count(거래 수) 약점 때문에 standalone retrain branch(독립 재학습 분기)는 salvage clue(회수 단서)로 낮추고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+- >-
   Stage267(267단계) run267K(267K 실행) retrained soft-context Adapter MT5 review(재학습 부드러운 문맥 어댑터 MT5 검토) `run267K_retrained_soft_context_adapter_mt5_review_completed`. Effect(효과): `s264_aih`, `s264_lc` P0 supervised EBM(지도학습 EBM) score table(점수표)을 물질화하고 MT5 batch(MT5 묶음) 실행, trade quality(거래 품질), curve(곡선), time-slice KPI(시간 구간 핵심 성과 지표)를 검토했으며 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
   Stage267(267단계) run267J(267J 실행) retrained soft-context Adapter design(재학습 부드러운 문맥 어댑터 설계) `run267J_retrained_soft_context_adapter_design_completed`. Effect(효과): run267I(267I 실행)의 점수표 확장 결과를 source audit(원천 감사), weakness target(약점 목표), stop rule(중단 규칙)로 연결했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
   Stage267(267단계) run267I(267I 실행) P0 soft non-calendar Adapter MT5 review(P0 부드러운 비달력 어댑터 MT5 검토) `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`. Effect(효과): `s264_aih`와 `s264_lc`의 `adx_atr_soft_score` MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)로 검토했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267L_design_retrained_soft_context_adapter_followup_or_prune`이다. Effect(효과): retrain branch(재학습 분기)를 한 번 더 좁게 수리할지, 아니면 후보군 경주(candidate racing, 후보 경주)로 되돌려 가지치기할지 결정한다.
+  Next action(다음 행동)는 `run267M_design_pool_wide_ablation_replacement_and_weak_slice_matrix`이다. Effect(효과): 다섯 Baseline candidates(기준 후보) 전체의 ablation/replacement(제거/대체)와 weak-slice matrix(약한 구간 행렬)로 되돌아간다.
 - >-
-  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267K_retrained_soft_context_adapter_mt5_review_completed(267K 재학습 부드러운 문맥 어댑터 MT5 검토 완료 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
+  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267L_retrained_soft_context_followup_or_prune_completed(267L 재학습 부드러운 문맥 후속/가지치기 완료 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
   Stage267 baseline candidate pool(267단계 기준 후보군)은 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`이다. Effect(효과): R&D racing(연구개발 경주), Adapter development(어댑터 개발), stability/weakness/time-slice validation(안정성/취약점/기간 구간 검증), feature ablation(피처 제거), similar feature replacement(유사 피처 대체), equity curve review(평가금 곡선 검토)를 거치기 전에는 ONNX review(ONNX 검토)로 가지 않는다.
 - >-
@@ -8701,9 +8703,9 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267K_retrained_soft_context_adapter_mt5_review_completed
-  current_run_id: run267K_stage267_retrained_soft_context_adapter_materialization_v1
-  last_completed_run_id: run267K_stage267_retrained_soft_context_adapter_materialization_v1
+  status: run267L_retrained_soft_context_followup_or_prune_completed
+  current_run_id: run267L_stage267_retrained_soft_context_followup_or_prune_v1
+  last_completed_run_id: run267L_stage267_retrained_soft_context_followup_or_prune_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
   source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_decision: stage266_planning_superseded_before_run_by_user_goal
@@ -8740,8 +8742,9 @@ stage267_baseline_candidate_racing_protocol:
   run267K_retrained_soft_context_adapter_materialization_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_materialization.md
   run267K_retrained_soft_context_adapter_mt5_execution_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_execution.md
   run267K_retrained_soft_context_adapter_mt5_review_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_review.md
+  run267L_retrained_soft_context_followup_or_prune_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267L_design_retrained_soft_context_adapter_followup_or_prune
+  next_action: run267M_design_pool_wide_ablation_replacement_and_weak_slice_matrix
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

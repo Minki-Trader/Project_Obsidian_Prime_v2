@@ -1,0 +1,189 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "created_at_utc": "2026-05-20T19:51:35Z",
+  "decision": "prune_standalone_retrain_branch_and_return_to_pool_wide_racing",
+  "decision_matrix": [
+    {
+      "candidate_alias": "s264_lc",
+      "candidate_id": "s264_lowrank_control",
+      "candidate_role": "defensive_control(방어 기준)",
+      "chron_mid_gate": "pass(통과)",
+      "chron_mid_net": -0.12,
+      "dd_gate": "pass(통과)",
+      "december_net": -276.73,
+      "decision": "prune_standalone_retrain_branch(독립 재학습 분기 가지치기)",
+      "do_not_repeat": "do_not_extend_score_table_retrain_without_new_structure(새 구조 없는 점수표 재학습 반복 금지)",
+      "equity_dd_percent": 24.29,
+      "july_gate": "pass(통과)",
+      "july_net": -59.01,
+      "monday_gate": "fail(실패)",
+      "monday_net": -294.12,
+      "net_gate": "pass(통과)",
+      "net_profit": 779.14,
+      "passed_gate_count": 5,
+      "pf_gate": "pass(통과)",
+      "profit_factor": 1.358718,
+      "salvage_value": "keep_soft_context_score_as_candidate_feature(부드러운 문맥 점수는 후보 피처로 보존)",
+      "trade_count": 285,
+      "trade_gate": "fail(실패)"
+    },
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core(핵심 도전자)",
+      "chron_mid_gate": "pass(통과)",
+      "chron_mid_net": 3.74,
+      "dd_gate": "pass(통과)",
+      "december_net": -237.96,
+      "decision": "prune_standalone_retrain_branch(독립 재학습 분기 가지치기)",
+      "do_not_repeat": "do_not_extend_score_table_retrain_without_new_structure(새 구조 없는 점수표 재학습 반복 금지)",
+      "equity_dd_percent": 22.92,
+      "july_gate": "pass(통과)",
+      "july_net": -53.03,
+      "monday_gate": "fail(실패)",
+      "monday_net": -262.28,
+      "net_gate": "pass(통과)",
+      "net_profit": 677.92,
+      "passed_gate_count": 5,
+      "pf_gate": "pass(통과)",
+      "profit_factor": 1.355457,
+      "salvage_value": "keep_soft_context_score_as_candidate_feature(부드러운 문맥 점수는 후보 피처로 보존)",
+      "trade_count": 285,
+      "trade_gate": "fail(실패)"
+    }
+  ],
+  "goal_achieve": "not_claimed",
+  "lineage": {
+    "created_at_utc": "2026-05-20T19:51:35Z",
+    "inputs": {
+      "run267B_kpi_summary": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/mt5_kpi_summary.csv",
+      "run267J_stop_rules": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267J/retrained_soft_context_adapter_design/stop_rules.csv",
+      "run267J_weakness_targets": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267J/retrained_soft_context_adapter_design/weakness_target_matrix.csv",
+      "run267K_candidate_review": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/candidate_retrained_soft_context_review.csv",
+      "run267K_curve_diagnostics": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/curve_diagnostics.csv",
+      "run267K_negative_slices": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/negative_slice_summary.csv"
+    },
+    "outputs": {
+      "decision_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267L/retrained_soft_context_followup_or_prune/followup_or_prune_decision_matrix.csv",
+      "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267L/retrained_soft_context_followup_or_prune/lineage.json",
+      "next_experiment_design": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267L/retrained_soft_context_followup_or_prune/next_pool_wide_experiment_design.csv",
+      "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md",
+      "result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267L/retrained_soft_context_followup_or_prune/result.json",
+      "stop_rule_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267L/retrained_soft_context_followup_or_prune/stop_rule_audit.csv",
+      "validation_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267L/retrained_soft_context_followup_or_prune/design_validation_receipt.csv"
+    },
+    "run_id": "run267L_stage267_retrained_soft_context_followup_or_prune_v1",
+    "stage_id": "267_adapter_research__baseline_candidate_racing_protocol"
+  },
+  "next_action": "run267M_design_pool_wide_ablation_replacement_and_weak_slice_matrix",
+  "next_experiment_design": [
+    {
+      "candidate_scope": "s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control",
+      "changed_variables": "feature_category_ablation_and_trend_strength_replacement(피처 범주 제거와 추세 강도 유사 대체)",
+      "comparison_baseline": "run267B_historical_2024_and_run267K_retrain_review(267B 2024와 267K 재학습 검토)",
+      "control_variables": "US100;M5;2024 historical stress;same cost/deposit/tester contract(US100;M5;2024 과거 압박;동일 비용/예치금/테스터 계약)",
+      "decision_use": "rank_prune_or_salvage_baseline_candidates(후보 순위화/가지치기/회수 결정)",
+      "design_id": "run267M_pool_wide_weak_slice_ablation_matrix",
+      "evidence_plan": "candidate_review;negative_slice_summary;curve_diagnostics;trade_records;ledger_rows(후보 검토, 음수 구간, 곡선 진단, 거래 기록, 장부 행)",
+      "failure_criteria": "candidate_only_survives_one_month_or_one_feature(한 달 또는 한 피처에서만 생존)",
+      "hypothesis": "weak_slices_are_feature_structure_problem_not_single_threshold_problem(약한 구간은 단일 문턱값이 아니라 피처 구조 문제)",
+      "invalid_conditions": "feature_order_or_label_split_unresolved_or_2024_outcome_used(피처 순서/라벨 분리 미확인 또는 2024 결과 사용)",
+      "success_criteria": "DD_and_weak_month_reduced_without_trade_count_collapse(손실폭과 약한 월 감소, 거래 수 붕괴 없음)"
+    },
+    {
+      "candidate_scope": "s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control",
+      "changed_variables": "ADX_ATR_soft_score_replaced_by_DI_spread_ATR_rank_volatility_state(ADX/ATR 점수를 DI 스프레드/ATR 순위/변동성 상태로 대체)",
+      "comparison_baseline": "stage267_adx_atr_soft_score_and_run267K_supervised_retrain(ADX/ATR 점수와 267K 지도 재학습)",
+      "control_variables": "same split, same MT5 tester, same route interpretation(동일 분리, 동일 MT5 테스터, 동일 라우팅 해석)",
+      "decision_use": "separate_real_signal_from_indicator_accident(실제 신호와 지표 우연 분리)",
+      "design_id": "run267M_replacement_axis_adx_atr_di_family",
+      "evidence_plan": "feature_manifest;parity_check;time_slice_kpi;curve_review(피처 목록, 동등성 점검, 시간 구간 KPI, 곡선 검토)",
+      "failure_criteria": "performance_disappears_when_ADX_removed(ADX 제거 시 성과 소멸)",
+      "hypothesis": "trend_strength_signal_should_survive_similar_replacement(추세 강도 신호는 유사 대체에서도 버텨야 함)",
+      "invalid_conditions": "replacement_feature_uses_future_bar(대체 피처가 미래 봉 사용)",
+      "success_criteria": "candidate_degrades_gracefully(후보가 완만하게 약화)"
+    },
+    {
+      "candidate_scope": "s264_aih;s264_lc salvage only(회수 단서만)",
+      "changed_variables": "none_design_gate_only(없음, 설계 게이트만)",
+      "comparison_baseline": "run267J_stop_rules_and_run267K_actual_review(267J 중단 규칙과 267K 실제 검토)",
+      "control_variables": "claim_boundary_no_candidate_no_onnx(선택 후보 없음, ONNX 없음)",
+      "decision_use": "prevent_repair_loop_longer_than_allowed(허용보다 긴 수리 루프 방지)",
+      "design_id": "run267M_pool_return_prune_receipt",
+      "evidence_plan": "this_report_and_state_sync(이 보고서와 상태 동기화)",
+      "failure_criteria": "next_work_tunes_only_Monday_threshold(다음 작업이 월요일 문턱값만 조정)",
+      "hypothesis": "pure_retrain_branch_is_salvage_not_candidate(순수 재학습 분기는 후보가 아니라 회수 단서)",
+      "invalid_conditions": "missing_run267K_review_evidence(267K 검토 근거 누락)",
+      "success_criteria": "next_work_targets_all_five_candidates(다음 작업이 다섯 후보 전체를 겨냥)"
+    }
+  ],
+  "onnx_readiness": "not_claimed",
+  "run_id": "run267L_stage267_retrained_soft_context_followup_or_prune_v1",
+  "selected_candidate": "none",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "run267L_retrained_soft_context_followup_or_prune_completed",
+  "stop_rule_audit": [
+    {
+      "action": "do_not_close_as_failure_but_stop_pure_retrain_loop(실패 종료는 아니지만 순수 재학습 반복 중단)",
+      "effect": "preserves_improvement_without_micro_loop(개선 단서는 보존하고 미세 반복은 막음)",
+      "evidence_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/candidate_retrained_soft_context_review.csv",
+      "rule_id": "J_STOP_03_p0_underperforms_run267I",
+      "status": "partial_trigger(부분 발동)",
+      "trigger_evidence": "net_pf_dd_improved_but_trade_count_collapsed(순수익/수익 팩터/손실폭 개선, 거래 수 축소)"
+    },
+    {
+      "action": "prune_standalone_retrain_branch_and_return_to_pool_wide_design(독립 재학습 분기 가지치기 후 후보군 전체 설계 복귀)",
+      "effect": "prevents_single_slice_bottleneck(단일 구간 병목 방지)",
+      "evidence_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/negative_slice_summary.csv",
+      "rule_id": "J_STOP_04_weak_slices_not_repaired",
+      "status": "triggered(발동)",
+      "trigger_evidence": "Monday_and_2024_12_remain_deep_negative(월요일과 2024-12 깊은 음수 유지)"
+    },
+    {
+      "action": "no_selected_candidate_no_onnx(선택 후보 없음, ONNX 없음)",
+      "effect": "keeps_RnD_racing_boundary(연구개발 경주 경계 유지)",
+      "evidence_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/curve_diagnostics.csv",
+      "rule_id": "GOAL_GUARD_trade_count_and_curve",
+      "status": "not_goal_candidate(목표 후보 아님)",
+      "trigger_evidence": "trade_count_fail=True;monday_fail=True;december_hole=True;net_pf_improved=True"
+    }
+  ],
+  "validation_receipt": [
+    {
+      "check_family": "obsidian-experiment-design(실험 설계)",
+      "check_id": "experiment_design_receipt",
+      "effect": "prevents_vague_followup(모호한 후속 방지)",
+      "evidence_source": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267L/retrained_soft_context_followup_or_prune/next_pool_wide_experiment_design.csv",
+      "failure_action": "do_not_materialize_run267M(267M 물질화 금지)",
+      "pass_condition": "all_rows_have_required_fields(모든 행 필수 필드 존재)",
+      "requirement": "hypothesis_comparison_controls_success_failure_stop_evidence_named(가설/비교/통제/성공/실패/중단/근거 명명)"
+    },
+    {
+      "check_family": "obsidian-data-integrity(데이터 무결성)",
+      "check_id": "data_integrity_receipt",
+      "effect": "prevents_historical_stress_leakage(과거 압박 누수 방지)",
+      "evidence_source": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md",
+      "failure_action": "mark_invalid(무효 처리)",
+      "pass_condition": "2024_outcome_not_used_for_training_target(2024 결과를 학습 목표로 쓰지 않음)",
+      "requirement": "source_time_axis_split_leakage_boundary_named(원천/시간축/분리/누수 경계 명명)"
+    },
+    {
+      "check_family": "obsidian-model-validation(모델 검증)",
+      "check_id": "model_validation_receipt",
+      "effect": "prevents_one_split_model_claim(단일 분리 모델 주장 방지)",
+      "evidence_source": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md",
+      "failure_action": "downgrade_to_inconclusive(불충분으로 낮춤)",
+      "pass_condition": "no_model_selection_claim(모델 선택 주장 없음)",
+      "requirement": "model_family_threshold_policy_overfit_risk_named(모델군/문턱값 정책/과적합 위험 명명)"
+    },
+    {
+      "check_family": "obsidian-result-judgment(결과 판정)",
+      "check_id": "result_judgment_receipt",
+      "effect": "keeps_research_boundary(연구 경계 유지)",
+      "evidence_source": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md",
+      "failure_action": "block_closeout_claim(종료 주장 차단)",
+      "pass_condition": "selected_candidate_none_and_onnx_not_claimed(선택 후보 없음과 ONNX 미주장)",
+      "requirement": "claim_boundary_selected_candidate_onnx_goal_all_named(주장 경계/선택 후보/ONNX/목표 상태 명명)"
+    }
+  ]
+}
