@@ -7,7 +7,7 @@
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `stage267_run267B_historical_2024_balance_time_slice_review_completed_visual_zoom_pending`
+- status(상태): `stage267_run267B_historical_2024_visual_ablation_replacement_design_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -62,12 +62,13 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) historical 2024 balance curve diagnostics(2024 과거 압박 잔액 곡선 진단): `stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/balance_curve_diagnostics.csv`
 - Stage267(267단계) historical 2024 candidate weakness summary(2024 과거 압박 후보 약점 요약): `stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/candidate_weakness_summary.csv`
 - Stage267(267단계) historical 2024 balance/time-slice review(2024 과거 압박 잔액/시간 구간 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_balance_time_slice_review.md`
+- Stage267(267단계) historical 2024 visual ablation design(2024 시각/제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_visual_ablation_design_report.md`
 
 ## Current Next Action(현재 다음 행동)
 
-- next_run(다음 실행): `run267B_stage267_extended_period_ablation_probe_v1`
-- action(행동): 2024 historical stress(2024 과거 압박) MT5 deal list(거래 목록)에서 3,574개 trade record(거래 기록)와 490개 time-slice KPI(시간 구간 핵심 성과 지표)를 만들었다.
-- effect(효과): 공통 약점은 vol_low(낮은 변동성), 2024-07(2024년 7월), Monday(월요일), late session(후반 세션)으로 드러났고, selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비)는 계속 없다.
-- next_action(다음 행동): MT5 chart PNG(MT5 차트 이미지) visual zoom review(시각 확대 검토)를 보강하고, vol_low/July/Monday/late-session(낮은 변동성/7월/월요일/후반 세션) 약점을 기준으로 feature ablation(피처 제거)과 similar replacement(유사 대체)를 설계한다.
+- next_run(다음 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants`
+- action(행동): 2024 historical stress(2024 과거 압박) MT5 chart PNG(MT5 차트 이미지) 10개를 sanity check(기초 점검)하고, 약점 기반 ablation/replacement design(제거/대체 설계) 10개를 만들었다.
+- effect(효과): 공통 약점인 vol_low(낮은 변동성), 2024-07(2024년 7월), Monday(월요일), late session(후반 세션)을 다음 실행 가능한 feature ablation(피처 제거), similar replacement(유사 대체), feature engineering(피처 엔지니어링) 질문으로 바꾸었다.
+- next_action(다음 행동): `run267C_stage267_execute_prioritized_ablation_replacement_variants`. Effect(효과): 설계만 끝낸 상태에서 멈추지 않고, 실제 rerun(재실행)으로 어떤 후보가 덜 깨지는지 확인한다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
