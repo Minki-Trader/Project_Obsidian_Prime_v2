@@ -1,6 +1,6 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267Q_internal_feature_order_confirmed_adapter_materialized_execution_pending`
+- status(상태): `run267Q_internal_feature_order_confirmed_adapter_mt5_review_completed`
 - current_run(현재 실행): `run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1`
 - last_completed_run(마지막 완료 실행): `run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
@@ -67,6 +67,8 @@
 - run267O_pool_wide_balance_timeslice_trade_quality_review(267O 후보군 전체 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267O_pool_wide_balance_timeslice_trade_quality_review.md`
 - run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design(267P 내부 피처 순서 확인 및 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design.md`
 - run267Q_internal_feature_order_confirmed_adapter_materialization(267Q 내부 피처 순서 확인 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_materialization.md`
+- run267Q_internal_feature_order_confirmed_adapter_mt5_execution(267Q 내부 피처 순서 확인 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_execution.md`
+- run267Q_internal_feature_order_confirmed_adapter_mt5_review(267Q 내부 피처 순서 확인 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_review.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
@@ -87,6 +89,5 @@ Effect(효과): run267O(267O 실행)의 거래/곡선/시간구간 검토까지 
 Run267O(267O 실행)는 run267N(267N 실행)의 48개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 거래 단위로 다시 파싱해 balance/time-slice/trade-quality review(잔액/시간구간/거래품질 검토)를 완료했다.
 Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N 실행)의 feature order(피처 순서), runtime contract(런타임 계약), materialization boundary(물질화 경계)와 대조해 Adapter design queue(어댑터 설계 큐)와 failure memory(실패 기억)를 만들었다.
 Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
-Effect(효과): next action(다음 행동)은 MT5(MetaTrader 5, 메타트레이더5) 실행이며 selected candidate(선택 후보)와 ONNX readiness(ONNX 준비)는 없다.
-Effect(효과): selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 없고, 다음 run267Q(267Q 실행)는 내부 피처 순서가 확인된 후보만 물질화 대상으로 삼는다.
-Effect(효과): 강한 KPI(핵심 성과 지표) 단서는 남겼지만 약한 월/구간과 proxy/internal feature(대체/내부 피처) 경계가 남아 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 없다.
+Run267Q(267Q 실행)는 internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토)를 완료했다.
+Effect(효과): MT5(MetaTrader 5, 메타트레이더5)에서 run267N(267N 실행) 원천 표면을 재현했지만, 변형 차이가 후보별로 접혀 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.

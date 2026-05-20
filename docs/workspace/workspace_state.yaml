@@ -16,7 +16,7 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage267(267단계) run267Q(267Q 실행) internal feature order confirmed Adapter materialization(내부 피처 순서 확인 어댑터 물질화) `run267Q_internal_feature_order_confirmed_adapter_materialized_execution_pending`. Effect(효과): run267P(267P 실행)의 P0 volatility/ATR(변동성/ATR) Adapter design queue(어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 고정했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+  Stage267(267단계) run267Q(267Q 실행) internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토) `run267Q_internal_feature_order_confirmed_adapter_mt5_review_completed`. Effect(효과): run267N(267N 실행)의 강한 P0 volatility/ATR(변동성/ATR) 단서를 내부 Adapter feature(내부 어댑터 피처)로 고정한 뒤 MT5(MetaTrader 5, 메타트레이더5)에서 재현했고, 변형 차이가 접혀 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
   Stage267(267단계) run267P(267P 실행) internal feature order confirmation and Adapter design(내부 피처 순서 확인 및 어댑터 설계) `run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design_completed`. Effect(효과): run267O(267O 실행)의 강한 KPI(핵심 성과 지표) 단서를 run267N(267N 실행)의 feature order(피처 순서), runtime contract(런타임 계약), materialization boundary(물질화 경계)와 대조했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
@@ -34,9 +34,9 @@ current_focus:
 - >-
   Stage267(267단계) run267I(267I 실행) P0 soft non-calendar Adapter MT5 review(P0 부드러운 비달력 어댑터 MT5 검토) `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`. Effect(효과): `s264_aih`와 `s264_lc`의 `adx_atr_soft_score` MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)로 검토했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267Q_execute_internal_feature_order_confirmed_adapter_mt5_batch`이다. Effect(효과): 물질화된 내부 Adapter(어댑터) 후보를 MT5(MetaTrader 5, 메타트레이더5)에서 실행한다.
+  Next action(다음 행동)는 `run267R_design_internal_adapter_stability_followup_or_prune`이다. Effect(효과): run267Q(267Q 실행)의 재현 성공과 Monday/session(월요일/세션) 약점을 보고 내부 Adapter(어댑터)를 짧게 후속 검증할지, 가지치기하고 후보군 전체 racing(경주)으로 되돌릴지 설계한다.
 - >-
-  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267Q_internal_feature_order_confirmed_adapter_materialized_execution_pending(267Q 내부 피처 순서 확인 어댑터 물질화 완료, MT5 실행 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
+  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267Q_internal_feature_order_confirmed_adapter_mt5_review_completed(267Q 내부 피처 순서 확인 어댑터 MT5 검토 완료, 후속/가지치기 설계 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
   Stage267 baseline candidate pool(267단계 기준 후보군)은 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`이다. Effect(효과): R&D racing(연구개발 경주), Adapter development(어댑터 개발), stability/weakness/time-slice validation(안정성/취약점/기간 구간 검증), feature ablation(피처 제거), similar feature replacement(유사 피처 대체), equity curve review(평가금 곡선 검토)를 거치기 전에는 ONNX review(ONNX 검토)로 가지 않는다.
 - >-
@@ -8713,7 +8713,7 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267Q_internal_feature_order_confirmed_adapter_materialized_execution_pending
+  status: run267Q_internal_feature_order_confirmed_adapter_mt5_review_completed
   current_run_id: run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1
   last_completed_run_id: run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
@@ -8760,8 +8760,10 @@ stage267_baseline_candidate_racing_protocol:
   run267O_pool_wide_balance_timeslice_trade_quality_review_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267O_pool_wide_balance_timeslice_trade_quality_review.md
   run267P_internal_feature_order_confirmation_adapter_design_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design.md
   run267Q_internal_feature_order_confirmed_adapter_materialization_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_materialization.md
+  run267Q_internal_feature_order_confirmed_adapter_mt5_execution_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_execution.md
+  run267Q_internal_feature_order_confirmed_adapter_mt5_review_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_review.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267Q_execute_internal_feature_order_confirmed_adapter_mt5_batch
+  next_action: run267R_design_internal_adapter_stability_followup_or_prune
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
