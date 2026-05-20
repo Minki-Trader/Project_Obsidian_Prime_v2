@@ -1,0 +1,23 @@
+{
+  "artifact_paths": {
+    "candidate_surface_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/candidate_upstream_raw_surface_manifest.csv",
+    "feature_family_column_map": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/feature_family_column_map.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md",
+    "run267W_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/run267W_score_table_rebuild_queue.csv",
+    "schema_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/true_internal_surface_schema_matrix.csv"
+  },
+  "availability": "tracked_stage_local_artifacts",
+  "consumer": "run267W_build_true_internal_ablation_score_tables_from_reconstructed_surfaces",
+  "created_at_utc": "2026-05-20T23:29:28Z",
+  "lineage_judgment": "connected_with_boundary",
+  "parent_run_id": "run267U_stage267_true_internal_feature_ablation_design_v1",
+  "producer": "stage_pipelines/stage267/run267V_reconstruct_upstream_feature_surface.py",
+  "run_id": "run267V_stage267_reconstruct_upstream_feature_surface_v1",
+  "source_inputs": {
+    "historical_probe_producer": "stage_pipelines/stage267/historical_stress_2024_probe.py",
+    "run267U_design_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267U/true_internal_feature_ablation_design/true_internal_ablation_design_matrix.csv",
+    "run267U_rebuild_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267U/true_internal_feature_ablation_design/upstream_feature_surface_rebuild_queue.csv",
+    "run267U_source_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267U/true_internal_feature_ablation_design/candidate_source_surface_audit.csv"
+  },
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol"
+}

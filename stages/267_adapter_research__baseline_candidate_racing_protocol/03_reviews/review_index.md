@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267U_true_internal_feature_ablation_design_completed`
-- current_run(현재 실행): `run267U_stage267_true_internal_feature_ablation_design_v1`
-- last_completed_run(마지막 완료 실행): `run267U_stage267_true_internal_feature_ablation_design_v1`
+- status(상태): `run267V_upstream_feature_surface_reconstructed`
+- current_run(현재 실행): `run267V_stage267_reconstruct_upstream_feature_surface_v1`
+- last_completed_run(마지막 완료 실행): `run267V_stage267_reconstruct_upstream_feature_surface_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -75,6 +75,7 @@
 - run267T_pool_wide_orthogonal_stability_mt5_execution(267T 후보군 전체 직교 안정성 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_execution.md`
 - run267T_pool_wide_orthogonal_stability_mt5_review(267T 후보군 전체 직교 안정성 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md`
 - run267U_true_internal_feature_ablation_design(267U 진짜 내부 피처 제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267U_true_internal_feature_ablation_design.md`
+- run267V_reconstruct_upstream_feature_surface(267V 상류 피처 표면 재구축): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
@@ -97,7 +98,7 @@ Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N �
 Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
 Run267Q(267Q 실행)는 internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토)를 완료했다.
 Effect(효과): MT5(MetaTrader 5, 메타트레이더5)에서 run267N(267N 실행) 원천 표면을 재현했지만, 변형 차이가 후보별로 접혀 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
-- next_action(다음 행동): `run267V_reconstruct_upstream_feature_surface_for_true_internal_feature_ablation`
+- next_action(다음 행동): `run267W_build_true_internal_ablation_score_tables_from_reconstructed_surfaces`
 
 Run267S(267S 실행)는 후보군 전체 직교 안정성 경주 행렬을 물질화했다.
 Effect(효과): selected candidate(선택 후보) 없이 다음 MT5(MetaTrader 5, 메타트레이더5) 물질화/실행 큐로 넘어갈 수 있게 후보, 축, 실패 기억, 중단 조건을 연결했다.
@@ -107,3 +108,6 @@ Effect(효과): selected candidate(선택 후보) 없이 실행 대기 상태의
 
 Run267U(267U 실행)는 source feature surface(원천 피처 표면)가 압축 rank/gate/context(순위/게이트/문맥) 중심임을 확인했다.
 Effect(효과): next action(다음 행동)은 MT5(MetaTrader 5, 메타트레이더5) 재실행이 아니라 run267V(267V 실행) 상류 raw feature surface(원시 피처 표면) 재구축이다.
+
+Run267V(267V 실행)는 후보 5개 raw feature surface(원시 피처 표면)를 재구축했다.
+Effect(효과): selected candidate(선택 후보)는 없고, 다음 행동은 score table/model(점수표/모델) 재구축이다.

@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267U_true_internal_feature_ablation_design_completed`
+- stage_status(단계 상태): `run267V_upstream_feature_surface_reconstructed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267U_stage267_true_internal_feature_ablation_design_v1`
-- last_completed_run(마지막 완료 실행): `run267U_stage267_true_internal_feature_ablation_design_v1`
+- current_run(현재 실행): `run267V_stage267_reconstruct_upstream_feature_surface_v1`
+- last_completed_run(마지막 완료 실행): `run267V_stage267_reconstruct_upstream_feature_surface_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -68,7 +68,8 @@
 - run267T_pool_wide_orthogonal_stability_mt5_execution(267T 후보군 전체 직교 안정성 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_execution.md`
 - run267T_pool_wide_orthogonal_stability_mt5_review(267T 후보군 전체 직교 안정성 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md`
 - run267U_true_internal_feature_ablation_design(267U 진짜 내부 피처 제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267U_true_internal_feature_ablation_design.md`
-- next_action(다음 행동): `run267V_reconstruct_upstream_feature_surface_for_true_internal_feature_ablation`
+- run267V_reconstruct_upstream_feature_surface(267V 상류 피처 표면 재구축): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md`
+- next_action(다음 행동): `run267W_build_true_internal_ablation_score_tables_from_reconstructed_surfaces`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -100,3 +101,6 @@ Effect(효과): selected candidate(선택 후보) 없이 실행 대기 상태의
 
 Run267U(267U 실행)는 source feature surface(원천 피처 표면)가 압축 rank/gate/context(순위/게이트/문맥) 중심임을 확인했다.
 Effect(효과): next action(다음 행동)은 MT5(MetaTrader 5, 메타트레이더5) 재실행이 아니라 run267V(267V 실행) 상류 raw feature surface(원시 피처 표면) 재구축이다.
+
+Run267V(267V 실행)는 후보 5개 raw feature surface(원시 피처 표면)를 재구축했다.
+Effect(효과): selected candidate(선택 후보)는 없고, 다음 행동은 score table/model(점수표/모델) 재구축이다.

@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267U_stage267_true_internal_feature_ablation_design_v1`
+- current_run(현재 실행): `run267V_stage267_reconstruct_upstream_feature_surface_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `true_internal_feature_ablation_design`
-- status(상태): `run267U_true_internal_feature_ablation_design_completed`
+- adapter_under_review(검토 중 어댑터): `upstream_feature_surface_reconstruction`
+- status(상태): `run267V_upstream_feature_surface_reconstructed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -105,10 +105,12 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267T pool-wide orthogonal stability MT5 execution(후보군 전체 직교 안정성 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_execution.md`
 - Stage267(267단계) run267T pool-wide orthogonal stability MT5 review(후보군 전체 직교 안정성 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md`
 - run267U_true_internal_feature_ablation_design(267U 진짜 내부 피처 제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267U_true_internal_feature_ablation_design.md`
+- run267V_reconstruct_upstream_feature_surface(267V 상류 피처 표면 재구축): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md`
 
 ## Current Next Action(현재 다음 행동)
 - latest_mt5_review(최신 MT5 검토): unique metric signatures(고유 지표 서명) `2`, selected_candidate(선택 후보) `none`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md`.
 - latest_design(최신 설계): run267U(267U 실행) true internal feature ablation design(진짜 내부 피처 제거 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267U_true_internal_feature_ablation_design.md`.
+- latest_materialization(최신 물질화): run267V(267V 실행) upstream feature surface reconstruction(상류 피처 표면 재구축) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md`.
 - latest_mt5_execution(최신 MT5 실행): attempts(시도) `34` of `34`, KPI records(핵심 성과 지표 기록) `34`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_execution.md`.
 - latest_design(최신 설계): run267R(267R 실행) internal Adapter follow-up/prune(내부 어댑터 후속/가지치기) report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267R_internal_adapter_stability_followup_or_prune.md`.
 - latest_matrix(최신 행렬): run267S(267S 실행) pool-wide orthogonal stability racing matrix(후보군 전체 직교 안정성 경주 행렬) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267S_pool_wide_orthogonal_stability_racing_matrix.md`.
@@ -125,10 +127,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267V_reconstruct_upstream_feature_surface_for_true_internal_feature_ablation`
-- action(행동): run267U(267U 실행)는 run267T(267T 실행)의 KPI signature collapse(KPI 서명 접힘)를 run267N(267N 실행)의 source feature surface(원천 피처 표면)까지 역추적했다.
-- effect(효과): proxy adapter variant(대체 어댑터 변형)를 true internal feature ablation(진짜 내부 피처 제거)로 오해하지 않고, 다음 run267V(267V 실행)가 상류 피처 표면 재구축에서 시작하게 한다.
-- next_action(다음 행동): `run267V_reconstruct_upstream_feature_surface_for_true_internal_feature_ablation`
+- next_run(다음 실행): `run267W_build_true_internal_ablation_score_tables_from_reconstructed_surfaces`
+- action(행동): run267V(267V 실행)는 Stage56(56단계) 2024 Tier A(티어 A) source frame(원천 프레임)에서 후보 5개 raw feature surface(원시 피처 표면)를 재구축했다.
+- effect(효과): true internal feature ablation(진짜 내부 피처 제거)을 위해 feature order(피처 순서)를 바꿀 수 있는 입력을 만들었고, MT5(MetaTrader 5, 메타트레이더5)는 score table/model(점수표/모델) 재구축 전까지 막는다.
+- next_action(다음 행동): `run267W_build_true_internal_ablation_score_tables_from_reconstructed_surfaces`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -161,3 +163,6 @@ Effect(효과): `17`개 변형과 `34`개 시도를 만들었고, source variant
 
 Run267U(267U 실행)는 Stage58(58단계) 이후 연구 단서가 충분히 활용됐는지 재점검했다.
 Effect(효과): run267M/N/O/P/S/T(267M/N/O/P/S/T 실행)가 이전 연구를 후보군 경주로 끌어온 것은 맞지만, run267T(267T 실행)의 접힘 때문에 true internal feature ablation(진짜 내부 피처 제거)까지 활용했다고는 주장하지 않는다.
+
+Run267V(267V 실행)는 Stage56(56단계) 2024 Tier A(티어 A) source frame(원천 프레임)을 재생성해 후보 5개 raw feature surface(원시 피처 표면)를 만들었다.
+Effect(효과): proxy adapter variant(대체 어댑터 변형) 반복이 아니라, 다음 run267W(267W 실행)에서 실제 feature order(피처 순서)에 맞는 score table/model(점수표/모델)을 만들 수 있다.
