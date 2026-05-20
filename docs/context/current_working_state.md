@@ -7,7 +7,7 @@
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `stage267_run267C_p0_mt5_variant_smoke_completed`
+- status(상태): `run267C_p1_soft_axis_followup_review_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -67,12 +67,15 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267C P0 MT5 variant materialization(우선순위 0 MT5 변형 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_materialization_report.md`
 - Stage267(267단계) run267C P0 MT5 smoke execution(우선순위 0 MT5 스모크 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_smoke_execution_report.md`
 - Stage267(267단계) run267C P0 MT5 full batch review(우선순위 0 MT5 전체 묶음 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_full_batch_review.md`
+- Stage267(267단계) run267C P1 soft-axis follow-up materialization(P1 부드러운 축 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_soft_axis_followup_materialization_report.md`
+- Stage267(267단계) run267C P1 soft-axis follow-up MT5 execution(P1 부드러운 축 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_soft_axis_followup_mt5_execution_report.md`
+- Stage267(267단계) run267C P1 soft-axis follow-up review(P1 부드러운 축 후속 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_soft_axis_followup_review.md`
 
 ## Current Next Action(현재 다음 행동)
 
 - next_run(다음 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants_v1`
-- action(행동): run267C(267C 실행) P0 MT5 smoke execution(우선순위 0 MT5 스모크 실행)을 `30`개 attempt(시도)로 수행했다.
-- effect(효과): `30`개 KPI(핵심 성과 지표) 기록을 확보했지만 full P0 batch(전체 우선순위 0 묶음)와 후보 선택은 아직 아니다.
-- next_action(다음 행동): `run267C_design_p0_axis_followup_feature_engineering_variants`. Effect(효과): 강제 차단으로 확인한 약점 축을 soft feature(부드러운 피처), similar replacement(유사 대체), adapter variant(어댑터 변형)로 바꿔 다시 시험한다.
+- action(행동): run267C(267C 실행) P1 soft-axis MT5 execution(P1 부드러운 축 MT5 실행)을 `50`개 attempt(시도)로 수행했다.
+- effect(효과): `50`개 KPI(핵심 성과 지표)를 확보했지만, 아직 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+- next_action(다음 행동): `run267C_select_p1_axes_for_adapter_prototype_or_p2_replacement`. Effect(효과): P1 축 중 덜 깨진 쪽만 adapter prototype(어댑터 원형)이나 P2 replacement(2차 대체)로 좁히고, 약한 축은 실패 기록으로 남긴다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
