@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants_v1`
+- current_run(현재 실행): `run267D_stage267_adapter_p2_materialization_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `run267C_p1_axis_selection_completed`
+- status(상태): `run267D_adapter_p2_design_materialized_execution_pending`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -71,12 +71,13 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267C P1 soft-axis follow-up MT5 execution(P1 부드러운 축 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_soft_axis_followup_mt5_execution_report.md`
 - Stage267(267단계) run267C P1 soft-axis follow-up review(P1 부드러운 축 후속 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_soft_axis_followup_review.md`
 - Stage267(267단계) run267C P1 axis selection(P1 축 선택): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_axis_selection_report.md`
+- Stage267(267단계) run267D Adapter/P2 materialization(어댑터/2차 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_materialization_report.md`
 
 ## Current Next Action(현재 다음 행동)
 
-- next_run(다음 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants_v1`
-- action(행동): run267C(267C 실행) P1 axis selection(P1 축 선택)에서 late21(후반 21시)을 Adapter prototype(어댑터 원형) 축으로, atrcomp/vlowadx(ATR 압축/낮은 변동성+ADX)를 P2 replacement(2차 대체) 축으로 분리했다.
-- effect(효과): 다음 작업은 후보 선택이 아니라 axis family(축 계열)를 Adapter prototype(어댑터 원형)과 P2 replacement(2차 대체)로 물질화하는 것이다.
-- next_action(다음 행동): `run267D_materialize_late21_adapter_prototype_and_p2_replacement_design`. Effect(효과): late21(후반 21시)은 어댑터 원형으로, atrcomp/vlowadx(ATR 압축/낮은 변동성+ADX)는 2차 대체 설계로 물질화해 다시 MT5(메타트레이더5) 검증한다.
+- next_run(다음 실행): `run267D_stage267_adapter_p2_materialization_v1`
+- action(행동): run267D(267D 실행)에서 late21(후반 21시) Adapter prototype(어댑터 원형)과 atrcomp/vlowadx(ATR 압축/낮은 변동성+ADX) P2 replacement(2차 대체)를 MT5(MetaTrader 5, 메타트레이더5) 재실행 가능한 설계 묶음으로 물질화했다.
+- effect(효과): 선택 축이 말뿐인 판단이 아니라 feature/model copy(피처/모델 복사), runtime contract(런타임 계약), set/ini(설정/초기화), attempt manifest(시도 목록)로 추적된다.
+- next_action(다음 행동): `run267D_execute_adapter_prototype_and_p2_replacement_mt5_batch`. Effect(효과): 새 run267D(267D 실행) set/ini(설정/초기화)를 MT5(MetaTrader 5, 메타트레이더5) Strategy Tester(전략 테스터)에 실행해 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 다시 본다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).

@@ -1,8 +1,8 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267C_p1_axis_selection_completed`
+- stage_status(단계 상태): `run267D_adapter_p2_design_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants_v1`
+- current_run(현재 실행): `run267D_stage267_adapter_p2_materialization_v1`
 - last_completed_run(마지막 완료 실행): `run267A_stage267_baseline_candidate_racing_protocol_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
@@ -34,11 +34,12 @@
 - run267C_p1_soft_axis_followup_mt5_execution(267C P1 부드러운 축 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_soft_axis_followup_mt5_execution_report.md`
 - run267C_p1_soft_axis_followup_review(267C P1 부드러운 축 후속 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_soft_axis_followup_review.md`
 - run267C_p1_axis_selection(267C P1 축 선택): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p1_axis_selection_report.md`
-- next_action(다음 행동): `run267D_materialize_late21_adapter_prototype_and_p2_replacement_design`
+- run267D_adapter_p2_materialization(267D 어댑터/2차 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_materialization_report.md`
+- next_action(다음 행동): `run267D_execute_adapter_prototype_and_p2_replacement_mt5_batch`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
 Effect(효과): 후보군은 감정이나 과거 기록이 아니라 다음 연구에 실제로 도움이 되는지로 유지, 탈락, 갱신된다.
 
-Run267C(267C 실행)는 P1 axis selection(P1 축 선택)을 완료했다.
-Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 late21(후반 21시) Adapter prototype(어댑터 원형)과 atrcomp/vlowadx(ATR 압축/낮은 변동성+ADX) P2 replacement(2차 대체)를 물질화하는 작업이다.
+Run267D(267D 실행)는 Adapter/P2 materialization(어댑터/2차 대체 물질화)을 완료했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 run267D(267D 실행) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에 실행해 곡선과 구간 품질을 다시 보는 작업이다.
