@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage267(267단계) run267D(267D 실행) Adapter/P2 materialization(어댑터/2차 대체 물질화) completed(완료). Effect(효과): late21(후반 21시), atrcomp/vlowadx(ATR 압축/낮은 변동성+ADX)가 run267D(267D 실행) feature/model copy(피처/모델 복사), runtime contract(런타임 계약), set/ini(설정/초기화)로 추적되지만 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+  Stage267(267단계) run267D(267D 실행) Adapter/P2 MT5 review(어댑터/2차 대체 MT5 검토) `run267D_adapter_p2_mt5_review_completed`. Effect(효과): `30` attempts(시도)에서 `30` KPI records(핵심 성과 지표 기록)를 만들었지만 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267D_execute_adapter_prototype_and_p2_replacement_mt5_batch`이다. Effect(효과): run267D(267D 실행) MT5(MetaTrader 5, 메타트레이더5) batch(묶음 실행)로 Adapter prototype(어댑터 원형)과 P2 replacement(2차 대체)가 실제 곡선과 거래 품질에서 덜 깨지는지 확인한다.
+  Next action(다음 행동)는 `run267E_design_adapter_p2_followup_from_run267D_review`이다. Effect(효과): run267D(267D 실행) review(검토)에서 보인 atrcomp(ATR 압축 대체), late21(후반 21시), vlowadx(낮은 변동성+ADX)의 다른 약점을 다음 설계에서 분리한다.
 - >-
   Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267D_adapter_p2_materialized_execution_pending(267D 어댑터/2차 대체 물질화 뒤 실행 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
@@ -8697,7 +8697,7 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267D_adapter_p2_design_materialized_execution_pending
+  status: run267D_adapter_p2_mt5_review_completed
   current_run_id: run267D_stage267_adapter_p2_materialization_v1
   last_completed_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
@@ -8722,7 +8722,7 @@ stage267_baseline_candidate_racing_protocol:
   historical_2024_candidate_weakness_summary_path: stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/candidate_weakness_summary.csv
   historical_2024_balance_time_slice_review_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_balance_time_slice_review.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267D_execute_adapter_prototype_and_p2_replacement_mt5_batch
+  next_action: run267E_design_adapter_p2_followup_from_run267D_review
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
