@@ -1,4 +1,4 @@
-﻿current_run_id: run267O_stage267_pool_wide_balance_timeslice_trade_quality_review_v1
+﻿current_run_id: run267P_stage267_pool_wide_internal_feature_order_confirmation_and_adapter_design_v1
 updated_on: '2026-05-21'
 project_mode: clean_stage_restart
 active_branch: main
@@ -16,6 +16,8 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
+  Stage267(267단계) run267P(267P 실행) internal feature order confirmation and Adapter design(내부 피처 순서 확인 및 어댑터 설계) `run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design_completed`. Effect(효과): run267O(267O 실행)의 강한 KPI(핵심 성과 지표) 단서를 run267N(267N 실행)의 feature order(피처 순서), runtime contract(런타임 계약), materialization boundary(물질화 경계)와 대조했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+- >-
   Stage267(267단계) run267O(267O 실행) pool-wide balance/time-slice/trade-quality review(후보군 전체 잔액/시간구간/거래품질 검토) `run267O_pool_wide_balance_timeslice_trade_quality_review_completed`. Effect(효과): run267N(267N 실행)의 48개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 거래 목록, 곡선, 약한 구간으로 검토했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
   Stage267(267단계) run267N(267N 실행) pool-wide P0 KPI review(후보군 전체 P0 KPI 검토) `run267N_pool_wide_ablation_replacement_kpi_review_completed`. Effect(효과): 48개 MT5(MetaTrader 5, 메타트레이더5) KPI(핵심 성과 지표)를 2024 baseline(기준)과 비교했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
@@ -30,9 +32,9 @@ current_focus:
 - >-
   Stage267(267단계) run267I(267I 실행) P0 soft non-calendar Adapter MT5 review(P0 부드러운 비달력 어댑터 MT5 검토) `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`. Effect(효과): `s264_aih`와 `s264_lc`의 `adx_atr_soft_score` MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)로 검토했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design`이다. Effect(효과): 내부 feature order(피처 순서) 확인과 Adapter(어댑터) 설계 가능성을 검토한다.
+  Next action(다음 행동)는 `run267Q_materialize_internal_feature_order_confirmed_adapter_candidates`이다. Effect(효과): 내부 feature order(피처 순서)가 확인된 Adapter(어댑터) 후보만 다음 물질화 후보로 좁힌다.
 - >-
-  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267O_pool_wide_balance_timeslice_trade_quality_review_completed(267O 후보군 전체 잔액/시간구간/거래품질 검토 완료, 내부 피처 확인 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
+  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design_completed(267P 내부 피처 순서 확인 및 어댑터 설계 완료, 내부 피처 물질화 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
   Stage267 baseline candidate pool(267단계 기준 후보군)은 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`이다. Effect(효과): R&D racing(연구개발 경주), Adapter development(어댑터 개발), stability/weakness/time-slice validation(안정성/취약점/기간 구간 검증), feature ablation(피처 제거), similar feature replacement(유사 피처 대체), equity curve review(평가금 곡선 검토)를 거치기 전에는 ONNX review(ONNX 검토)로 가지 않는다.
 - >-
@@ -8709,9 +8711,9 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267O_pool_wide_balance_timeslice_trade_quality_review_completed
-  current_run_id: run267O_stage267_pool_wide_balance_timeslice_trade_quality_review_v1
-  last_completed_run_id: run267O_stage267_pool_wide_balance_timeslice_trade_quality_review_v1
+  status: run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design_completed
+  current_run_id: run267P_stage267_pool_wide_internal_feature_order_confirmation_and_adapter_design_v1
+  last_completed_run_id: run267P_stage267_pool_wide_internal_feature_order_confirmation_and_adapter_design_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
   source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_decision: stage266_planning_superseded_before_run_by_user_goal
@@ -8754,8 +8756,9 @@ stage267_baseline_candidate_racing_protocol:
   run267N_pool_wide_ablation_replacement_mt5_execution_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_mt5_execution.md
   run267N_pool_wide_ablation_replacement_kpi_review_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_kpi_review.md
   run267O_pool_wide_balance_timeslice_trade_quality_review_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267O_pool_wide_balance_timeslice_trade_quality_review.md
+  run267P_internal_feature_order_confirmation_adapter_design_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design
+  next_action: run267Q_materialize_internal_feature_order_confirmed_adapter_candidates
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
