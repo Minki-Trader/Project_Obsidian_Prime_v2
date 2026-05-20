@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267N_pool_wide_ablation_replacement_kpi_review_completed`
-- current_run(현재 실행): `run267N_stage267_pool_wide_ablation_replacement_materialization_v1`
-- last_completed_run(마지막 완료 실행): `run267N_stage267_pool_wide_ablation_replacement_materialization_v1`
+- status(상태): `run267O_pool_wide_balance_timeslice_trade_quality_review_completed`
+- current_run(현재 실행): `run267O_stage267_pool_wide_balance_timeslice_trade_quality_review_v1`
+- last_completed_run(마지막 완료 실행): `run267O_stage267_pool_wide_balance_timeslice_trade_quality_review_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -64,6 +64,7 @@
 - run267N_pool_wide_ablation_replacement_materialization(267N 후보군 전체 제거/대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`
 - run267N_pool_wide_ablation_replacement_mt5_execution(267N 후보군 전체 제거/대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_mt5_execution.md`
 - run267N_pool_wide_ablation_replacement_kpi_review(267N 후보군 전체 제거/대체 KPI 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_kpi_review.md`
+- run267O_pool_wide_balance_timeslice_trade_quality_review(267O 후보군 전체 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267O_pool_wide_balance_timeslice_trade_quality_review.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
@@ -79,4 +80,7 @@ Run267M(267M 실행)는 다섯 Baseline candidates(기준 후보) 전체의 abla
 Effect(효과): selected candidate(선택 후보)는 없고, 후보군 전체 P0 물질화로 넘어갔다.
 
 Run267N(267N 실행)는 다섯 Baseline candidates(기준 후보)의 P0 ablation/replacement(우선 제거/대체)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
-Effect(효과): selected candidate(선택 후보)는 여전히 없고, next_action(다음 행동)은 `run267O_pool_wide_balance_timeslice_trade_quality_review`이다.
+Effect(효과): run267O(267O 실행)의 거래/곡선/시간구간 검토까지 이어졌고, selected candidate(선택 후보)는 여전히 없다.
+
+Run267O(267O 실행)는 run267N(267N 실행)의 48개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 거래 단위로 다시 파싱해 balance/time-slice/trade-quality review(잔액/시간구간/거래품질 검토)를 완료했다.
+Effect(효과): 강한 KPI(핵심 성과 지표) 단서는 남겼지만 약한 월/구간과 proxy/internal feature(대체/내부 피처) 경계가 남아 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 없다.
