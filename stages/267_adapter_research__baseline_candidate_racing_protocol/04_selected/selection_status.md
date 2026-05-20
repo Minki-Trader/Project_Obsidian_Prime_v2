@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`
+- stage_status(단계 상태): `run267J_retrained_soft_context_adapter_design_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1`
-- last_completed_run(마지막 완료 실행): `run267I_stage267_p0_soft_noncalendar_adapter_materialization_v1`
+- current_run(현재 실행): `run267J_stage267_retrained_soft_context_adapter_design_v1`
+- last_completed_run(마지막 완료 실행): `run267J_stage267_retrained_soft_context_adapter_design_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -48,12 +48,15 @@
 - run267I_soft_noncalendar_adapter_materialization(267I 부드러운 비달력 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_materialization.md`
 - run267I_soft_noncalendar_adapter_mt5_execution(267I 부드러운 비달력 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_execution.md`
 - run267I_soft_noncalendar_adapter_mt5_review(267I 부드러운 비달력 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_review.md`
-- next_action(다음 행동): `run267J_design_retrained_soft_context_adapter_probe_with_stop_rules`
+- run267J_retrained_soft_context_adapter_design(267J 재학습 부드러운 문맥 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267J_retrained_soft_context_adapter_design.md`
+- next_action(다음 행동): `run267K_audit_retrain_source_and_materialize_soft_context_p0`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
 Effect(효과): 후보군은 감정이나 과거 기록이 아니라 다음 연구에 실제로 도움이 되는지로 유지, 탈락, 갱신된다.
-
 Run267I(267I 실행)는 P0 soft non-calendar Adapter materialization(P0 부드러운 비달력 어댑터 물질화), MT5 execution(MT5 실행), MT5 review(MT5 검토)까지 완료했다.
 Effect(효과): 순수익/PF(profit factor, 수익 팩터)는 2024년 원형보다 좋아졌지만 DD(drawdown, 손실폭), Monday(월요일), July(7월), chron_mid(중간 순서 구간) 약점이 남아 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
-Next action(다음 행동): `run267J_design_retrained_soft_context_adapter_probe_with_stop_rules`. Effect(효과): score-table extension(점수표 확장) 반복을 막고, true retrain(진짜 재학습) soft-context Adapter probe(부드러운 문맥 어댑터 탐침)를 설계하거나 짧은 stop rule(중단 규칙)로 분기를 닫는다.
+
+Run267J(267J 실행)는 retrained soft-context Adapter design(재학습 부드러운 문맥 어댑터 설계)을 완료했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 여전히 없고, run267K(267K 실행)는 원천 감사 통과 없이는 물질화하지 않는다.
+Next action(다음 행동): `run267K_audit_retrain_source_and_materialize_soft_context_p0`. Effect(효과): source audit(원천 감사)에서 label(라벨), split(스플릿), feature order(피처 순서)가 확인될 때만 P0 soft-context Adapter(우선 부드러운 문맥 어댑터)를 물질화한다.
