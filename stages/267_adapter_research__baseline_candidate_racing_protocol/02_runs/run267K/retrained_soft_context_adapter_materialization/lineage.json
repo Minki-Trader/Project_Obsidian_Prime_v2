@@ -1,0 +1,78 @@
+{
+  "availability": "tracked_repo_outputs_plus_common_files_copy",
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "created_at_utc": "2026-05-20T19:19:23Z",
+  "inputs": [
+    {
+      "artifact_id": "run267J_retrain_design",
+      "exists": true,
+      "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267J/retrained_soft_context_adapter_design/retrain_probe_design.csv",
+      "sha256": "b858b6524549cdc7830584e7a920749c54fc9a22b945697efbdfe0ce7965cf48"
+    },
+    {
+      "artifact_id": "run267J_validation_plan",
+      "exists": true,
+      "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267J/retrained_soft_context_adapter_design/data_integrity_model_validation_plan.csv",
+      "sha256": "ea691ad214cd225a42c9c73746e0079906485580db34f5f58c601ede0d2f2695"
+    },
+    {
+      "artifact_id": "run267I_candidate_review",
+      "exists": true,
+      "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267I/p0_soft_noncalendar_adapter_materialization/candidate_soft_adapter_review.csv",
+      "sha256": "17b0c7ae66dc7487e88dc047b23242819fe93f3c4919755de58a009cc995d98c"
+    },
+    {
+      "artifact_id": "stage264_manifest",
+      "exists": true,
+      "path": "stages/264_adapter_research__dual_objective_lowrank_lowedge_repair/02_runs/run264A/run_manifest.json",
+      "sha256": "5f9d7c0b685ebbbb5fdd4b0b543190e3731203b2d359fce29888b372c74b86e4"
+    },
+    {
+      "artifact_id": "model_input_dataset",
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43"
+    },
+    {
+      "artifact_id": "model_input_feature_order",
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+    },
+    {
+      "artifact_id": "training_label_split_contract",
+      "exists": true,
+      "path": "docs/contracts/training_label_split_contract_fpmarkets_v2.md",
+      "sha256": "142cbace9a4ddb4868aba8dec7ec1bf0ab43fd51087a33c7c2ccbe0fd906d865"
+    },
+    {
+      "artifact_id": "model_input_contract",
+      "exists": true,
+      "path": "docs/contracts/model_input_feature_set_contract_fpmarkets_v2.md",
+      "sha256": "7d89879df153a36b3511de50de47ddc626485cf377656a94a4d90c8b8ce7f964"
+    },
+    {
+      "artifact_id": "producer_script",
+      "exists": true,
+      "path": "stage_pipelines/stage267/run267K_retrained_soft_context_adapter_materialization.py",
+      "sha256": "4eae96c3852f846f0a4bb5b86f2839e0a1f8f59b14efbbd6f8acd44fbad75e0d"
+    }
+  ],
+  "lineage_judgment": "connected_with_boundary",
+  "outputs": {
+    "attempts": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/attempts.csv",
+    "feature_model_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/feature_model_manifest.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/lineage.json",
+    "model_validation_snapshot": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/model_validation_snapshot.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_materialization.md",
+    "result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/result.json",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/run_manifest.json",
+    "runtime_contract": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/runtime_contract.csv",
+    "score_table_parity_check": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/score_table_parity_check.csv",
+    "source_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/source_audit.csv",
+    "term_importance": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/term_importance.csv",
+    "training_frame_diagnostics": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267K/retrained_soft_context_adapter_materialization/training_frame_diagnostics.csv"
+  },
+  "run_id": "run267K_stage267_retrained_soft_context_adapter_materialization_v1",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol"
+}

@@ -1,0 +1,9 @@
+﻿check_id,check_family,status,evidence,effect
+K_AUDIT_01_run267J_design,artifact_lineage(산출물 계보),pass,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267J/retrained_soft_context_adapter_design/retrain_probe_design.csv,ties_materialization_to_run267J_design(물질화를 267J 설계에 연결)
+K_AUDIT_02_training_dataset,data_integrity(데이터 무결성),pass,data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet;sha256=5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43,"uses_original_label_dataset_not_MT5_profit(원래 라벨 데이터셋 사용, MT5 손익 라벨 아님)"
+K_AUDIT_03_feature_order_contract,data_integrity(데이터 무결성),pass,data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt;sha256=fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2,confirms_stage58_model_input_surface_exists(58개 모델 입력 표면 존재 확인)
+K_AUDIT_04_label_split_contract,model_validation(모델 검증),pass,docs/contracts/training_label_split_contract_fpmarkets_v2.md,keeps_label_v1_and_split_v1_named(라벨 v1과 스플릿 v1을 이름 붙임)
+K_AUDIT_05_source_model_family,model_validation(모델 검증),pass_with_boundary,stages/264_adapter_research__dual_objective_lowrank_lowedge_repair/02_runs/run264A/run_manifest.json,resolves_source_as_decision_binding_score_table_not_original_supervised_model(원천이 원래 지도학습 모델이 아니라 결정 표면 점수표임을 확정)
+K_AUDIT_06_2024_boundary,data_integrity(데이터 무결성),pass,2024 rows are exported for MT5 historical stress only,prevents_training_on_2024_MT5_profit(2024 MT5 손익 학습 방지)
+K_AUDIT_07_source_frame,data_integrity(데이터 무결성),pass,rows=46650;duplicates=0;missing_labels=0,confirms_Tier_A_time_ordered_label_surface(티어 A 시간순 라벨 표면 확인)
+K_AUDIT_08_runtime_mapping,runtime_parity_precheck(런타임 동등성 사전 점검),pass_with_boundary,score_table_parity_check;attempts.csv;runtime_contract.csv,"prepares_MT5_batch_without_runtime_authority_claim(MT5 묶음 준비, 런타임 권위 주장 없음)"
