@@ -1,0 +1,69 @@
+{
+  "run_id": "run267B_stage267_extended_period_ablation_probe_v1",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "input_manifest_materialized_no_execution_yet",
+  "created_on": "2026-05-20",
+  "packet_id": "stage267_baseline_candidate_racing_protocol_v1",
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "candidate_pool": [
+    "s264_allow_inner_high_quarter",
+    "s264_lowrank_control",
+    "s262_lowrank_inner_half_filter",
+    "s264_allow_inner_all_oos_anchor",
+    "s258_short_tight_control"
+  ],
+  "hypothesis": "The five Baseline candidates(기준 후보) should be compared by break resistance(깨짐 저항), not by single best KPI(단일 최고 핵심 성과 지표).",
+  "decision_use": "This run can decide what to execute next for R&D racing(연구개발 경주), Adapter development(어댑터 개발) eligibility, and candidate downgrade(후보 하향). It cannot select an operating baseline(운영 기준선) or start ONNX(ONNX) review.",
+  "comparison_baseline": "Stage267 run267A(267A 실행) initial scoreboard(초기 점수판) plus source Stage258/262/264/265(258/262/264/265단계) evidence.",
+  "control_variables": [
+    "symbol=US100",
+    "timeframe=M5",
+    "broker=FPMarkets",
+    "base split contract=split_v1_calendar_train_20220901_20241231_val_20250101_20250930_oos_20251001_20260413",
+    "candidate pool fixed to five initial Baseline candidates(기준 후보)",
+    "no operating claim(운영 주장 없음)",
+    "no ONNX(ONNX) work until goal gate(목표 게이트)"
+  ],
+  "changed_variables": [
+    "extended historical period probe(확장 과거 기간 탐침)",
+    "feature/category ablation(피처/범주 제거)",
+    "similar feature replacement(유사 피처 대체)",
+    "equity visual grading(평가금 시각 판정)",
+    "prior research utilization audit(이전 연구 활용 감사)"
+  ],
+  "sample_scope": {
+    "canonical_validation": "2025-01-02 16:35:00 through 2025-09-30 22:00:00 in materialized candidate feature files",
+    "canonical_oos": "2025-10-01 16:35:00 through 2026-04-13 22:00:00 in materialized candidate feature files",
+    "historical_2024_probe": "2024 training-era(학습 기간) historical stress only; requires rematerialization and must not be called OOS(표본외)"
+  },
+  "success_criteria": [
+    "All five candidates have executable manifests(실행 가능 목록) for the same period and ablation/replacement surface.",
+    "Balance/equity graph(잔액/평가금 그래프) grading can be tied to exact MT5 report(메타트레이더5 보고서) images.",
+    "Ablation/replacement plan distinguishes upstream full feature categories(상류 전체 피처 범주) from the compressed stage gate features(압축 단계 게이트 피처)."
+  ],
+  "failure_criteria": [
+    "A candidate needs a unique relaxed gate(완화 게이트) to be compared.",
+    "Historical 2024(2024년) is misread as OOS(표본외).",
+    "Only one metric(지표) or one month(월) drives the next repair loop."
+  ],
+  "invalid_conditions": [
+    "feature order(피처 순서), model file(모델 파일), or MT5 report(메타트레이더5 보고서) identity is missing",
+    "source files cannot be read because of path length(경로 길이) without recording the long-path access note",
+    "candidate-specific settings are changed without a manifest(목록)"
+  ],
+  "stop_conditions": [
+    "If extended period(확장 기간), ablation(제거), replacement(대체), or equity zoom(평가금 확대) breaks a candidate, downgrade it instead of opening endless repair(무한 수리).",
+    "If a repair branch(수리 분기) would need more than two stages(두 단계), close or pivot(마감 또는 전환).",
+    "If evidence is missing, mark missing_required(필수 누락), blocked(차단), or out_of_scope_by_claim(주장 범위 밖)."
+  ],
+  "evidence_plan": [
+    "source_feature_manifest.csv",
+    "extended_period_probe_plan.csv",
+    "feature_ablation_map.csv",
+    "similar_feature_replacement_map.csv",
+    "equity_report_manifest.csv",
+    "stage267_prior_research_utilization_audit.md",
+    "stage267_run267B_input_readiness_report.md"
+  ],
+  "execution_status": "not_executed_manifest_only"
+}
