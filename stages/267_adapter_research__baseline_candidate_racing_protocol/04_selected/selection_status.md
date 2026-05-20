@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267F_atrcomp_guard_robustness_materialized_execution_pending`
+- stage_status(단계 상태): `run267F_non_calendar_guard_mt5_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
 - current_run(현재 실행): `run267F_stage267_atrcomp_guard_robustness_non_calendar_v1`
-- last_completed_run(마지막 완료 실행): `run267E_stage267_adapter_p2_followup_design_v1`
+- last_completed_run(마지막 완료 실행): `run267F_stage267_atrcomp_guard_robustness_non_calendar_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -41,11 +41,13 @@
 - run267E_atrcomp_monday_guard_mt5_execution(267E ATR 압축 월요일 방어 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_execution.md`
 - run267E_atrcomp_monday_guard_mt5_review(267E ATR 압축 월요일 방어 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_review.md`
 - run267F_atrcomp_guard_robustness_materialization(267F ATR 압축 방어 견고성 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_materialization.md`
-- next_action(다음 행동): `run267F_execute_non_calendar_guard_mt5_batch`
+- run267F_non_calendar_guard_mt5_execution(267F 비달력 방어 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_execution.md`
+- run267F_non_calendar_guard_mt5_review(267F 비달력 방어 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_review.md`
+- next_action(다음 행동): `run267G_design_adx_guard_followup_and_di_replacement_failure_memory`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
 Effect(효과): 후보군은 감정이나 과거 기록이 아니라 다음 연구에 실제로 도움이 되는지로 유지, 탈락, 갱신된다.
 
-Run267F(267F 실행)는 atrcomp guard robustness materialization(ATR 압축 방어 견고성 물질화)을 완료했다.
-Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 ADX(추세 강도)와 DI spread(방향성 차이) guard(방어)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행해 calendar prune(달력 절단) 의존 여부를 확인하는 작업이다.
+Run267F(267F 실행)는 non-calendar guard MT5 review(비달력 방어 MT5 검토)를 완료했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, `adx2025`는 부분 지지, `dilowq33`는 유사 대체 악화로 기록해 다음은 run267G(267G 실행) 실패 기억과 후속 설계로 간다.

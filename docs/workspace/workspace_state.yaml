@@ -16,11 +16,11 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage267(267단계) run267F(267F 실행) atrcomp guard robustness materialization(ATR 압축 방어 견고성 물질화) `run267F_atrcomp_guard_robustness_materialized_execution_pending`. Effect(효과): ADX(추세 강도)와 DI spread(방향성 차이) 비달력 guard(방어)를 MT5(MetaTrader 5, 메타트레이더5) 실행 가능한 묶음으로 만들었지만 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+  Stage267(267단계) run267F(267F 실행) non-calendar guard MT5 review(비달력 방어 MT5 검토) `run267F_non_calendar_guard_mt5_review_completed`. Effect(효과): 비달력 guard(방어)의 trade/time-slice/curve review(거래/시간 구간/곡선 검토)를 완료했지만 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267F_execute_non_calendar_guard_mt5_batch`이다. Effect(효과): run267F(267F 실행) 20개 attempt(시도)를 실행해 비달력 guard(방어)가 run267E(267E 실행)의 calendar prune(달력 절단) 의심을 줄이는지 확인한다.
+  Next action(다음 행동)는 `run267G_design_adx_guard_followup_and_di_replacement_failure_memory`이다. Effect(효과): `adx2025`는 부분 지지만 남기고, `dilowq33`는 유사 대체 악화로 실패 기억(failure memory, 실패 기억)에 남겨 다음 Adapter(어댑터) 설계 방향을 좁힌다.
 - >-
-  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267F_atrcomp_guard_robustness_materialized_execution_pending(267F ATR 압축 방어 견고성 물질화 완료, 실행 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
+  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267F_non_calendar_guard_mt5_review_completed(267F 비달력 방어 MT5 검토 완료 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
   Stage267 baseline candidate pool(267단계 기준 후보군)은 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`이다. Effect(효과): R&D racing(연구개발 경주), Adapter development(어댑터 개발), stability/weakness/time-slice validation(안정성/취약점/기간 구간 검증), feature ablation(피처 제거), similar feature replacement(유사 피처 대체), equity curve review(평가금 곡선 검토)를 거치기 전에는 ONNX review(ONNX 검토)로 가지 않는다.
 - >-
@@ -8697,9 +8697,9 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267F_atrcomp_guard_robustness_materialized_execution_pending
+  status: run267F_non_calendar_guard_mt5_review_completed
   current_run_id: run267F_stage267_atrcomp_guard_robustness_non_calendar_v1
-  last_completed_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
+  last_completed_run_id: run267F_stage267_atrcomp_guard_robustness_non_calendar_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
   source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_decision: stage266_planning_superseded_before_run_by_user_goal
@@ -8725,8 +8725,10 @@ stage267_baseline_candidate_racing_protocol:
   run267E_atrcomp_monday_guard_mt5_execution_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_execution.md
   run267E_atrcomp_monday_guard_mt5_review_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_review.md
   run267F_atrcomp_guard_robustness_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_materialization.md
+  run267F_non_calendar_guard_mt5_execution_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_execution.md
+  run267F_non_calendar_guard_mt5_review_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_review.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267F_execute_non_calendar_guard_mt5_batch
+  next_action: run267G_design_adx_guard_followup_and_di_replacement_failure_memory
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

@@ -7,7 +7,7 @@
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `run267F_atrcomp_guard_robustness_materialized_execution_pending`
+- status(상태): `run267F_non_calendar_guard_mt5_review_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -78,12 +78,14 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267E atrcomp Monday guard MT5 execution(ATR 압축 월요일 방어 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_execution.md`
 - Stage267(267단계) run267E atrcomp Monday guard MT5 review(ATR 압축 월요일 방어 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_review.md`
 - Stage267(267단계) run267F atrcomp guard robustness materialization(ATR 압축 방어 견고성 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_materialization.md`
+- Stage267(267단계) run267F non-calendar guard MT5 execution(비달력 방어 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_execution.md`
+- Stage267(267단계) run267F non-calendar guard MT5 review(비달력 방어 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_review.md`
 
 ## Current Next Action(현재 다음 행동)
 
-- next_run(다음 실행): `run267F_execute_non_calendar_guard_mt5_batch`
-- action(행동): run267F(267F 실행)에서 atrcomp(ATR 압축 대체) 기반 비달력 guard(방어) 2종을 feature/model/set/ini(피처/모델/설정/초기화) 묶음으로 물질화했다.
-- effect(효과): run267E(267E 실행)의 Monday guard(월요일 방어) 개선이 calendar prune(달력 절단)에만 기대는지, ADX(추세 강도)와 DI spread(방향성 차이) 같은 비달력 축으로도 재현되는지 MT5(MetaTrader 5, 메타트레이더5) 실행에서 확인할 수 있게 했다.
-- next_action(다음 행동): `run267F_execute_non_calendar_guard_mt5_batch`. Effect(효과): 20개 MT5(MetaTrader 5, 메타트레이더5) attempt(시도)를 실행해 run267D/run267E(267D/267E 실행)와 비교 가능한 guard comparison(방어 비교)을 만든다.
+- next_run(다음 실행): `run267G_design_adx_guard_followup_and_di_replacement_failure_memory`
+- action(행동): run267F(267F 실행)의 비달력 guard(방어) 2종을 MT5(MetaTrader 5, 메타트레이더5)에서 실행하고 trade/time-slice/curve review(거래/시간 구간/곡선 검토)까지 완료했다.
+- effect(효과): `adx2025`는 부분 지지만 남기고, `dilowq33`는 유사 대체 악화로 실패 기억(failure memory, 실패 기억)에 남겨 다음 Adapter(어댑터) 설계를 좁힌다.
+- next_action(다음 행동): `run267G_design_adx_guard_followup_and_di_replacement_failure_memory`. Effect(효과): ADX(추세 강도) guard(방어)의 후속 설계 여부와 DI spread(방향성 차이) replacement(대체)의 반복 금지 또는 재구성 조건을 정한다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
