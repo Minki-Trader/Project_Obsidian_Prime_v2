@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267D_stage267_adapter_p2_materialization_v1`
+- current_run(현재 실행): `run267E_stage267_adapter_p2_followup_design_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `run267D_adapter_p2_mt5_review_completed`
+- status(상태): `run267E_adapter_p2_followup_materialized_execution_pending`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -74,12 +74,13 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267D Adapter/P2 materialization(어댑터/2차 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_materialization_report.md`
 - Stage267(267단계) run267D Adapter/P2 MT5 execution(어댑터/2차 대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_mt5_execution_report.md`
 - Stage267(267단계) run267D Adapter/P2 MT5 review(어댑터/2차 대체 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_mt5_review.md`
+- Stage267(267단계) run267E Adapter/P2 follow-up materialization(어댑터/2차 대체 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_followup.md`
 
 ## Current Next Action(현재 다음 행동)
 
-- next_run(다음 실행): `run267D_stage267_adapter_p2_materialization_v1`
-- action(행동): run267D(267D 실행)에서 late21(후반 21시) Adapter prototype(어댑터 원형)과 atrcomp/vlowadx(ATR 압축/낮은 변동성+ADX) P2 replacement(2차 대체) 30개 MT5(MetaTrader 5, 메타트레이더5) attempt(시도)를 실행했다.
-- effect(효과): 선택 축이 설계 묶음에 머물지 않고 Strategy Tester(전략 테스터) KPI(핵심 성과 지표), report(보고서), forensics(포렌식) 근거로 넘어갔다.
-- next_action(다음 행동): `run267E_design_adapter_p2_followup_from_run267D_review`. Effect(효과): run267D(267D 실행) 검토에서 보인 atrcomp(ATR 압축 대체) 건설적 축, late21(후반 21시) 어댑터 원형 관찰축, vlowadx(낮은 변동성+ADX) 손실폭 취약축을 다음 설계로 분리한다.
+- next_run(다음 실행): `run267E_stage267_adapter_p2_followup_design_v1`
+- action(행동): run267E(267E 실행)에서 run267D(267D 실행) 검토의 atrcomp(ATR 압축 대체) Monday(월요일) 취약점을 MT5(MetaTrader 5, 메타트레이더5) attempt(시도) 10개로 물질화했다.
+- effect(효과): Stage58(58단계) 이후 연구가 압축 피처(compressed feature, 압축 피처)로만 남지 않고, 후보군 공통 약점인 요일 취약성을 실제 재실행 가능한 feature/set/ini(피처/설정/초기화) 묶음으로 이어간다.
+- next_action(다음 행동): `run267E_execute_atrcomp_monday_guard_mt5_batch`. Effect(효과): atrcomp Monday guard(ATR 압축 월요일 방어)가 실제 MT5(MetaTrader 5, 메타트레이더5) KPI(핵심 성과 지표)에서 손실폭을 줄이는지, 아니면 단순 절단인지 확인한다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).

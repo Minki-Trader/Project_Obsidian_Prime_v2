@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267D_adapter_p2_mt5_review_completed`
-- current_run(현재 실행): `run267D_stage267_adapter_p2_materialization_v1`
-- last_completed_run(마지막 완료 실행): `run267A_stage267_baseline_candidate_racing_protocol_v1`
+- status(상태): `run267E_adapter_p2_followup_materialized_execution_pending`
+- current_run(현재 실행): `run267E_stage267_adapter_p2_followup_design_v1`
+- last_completed_run(마지막 완료 실행): `run267D_stage267_adapter_p2_materialization_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -44,10 +44,11 @@
 - run267D_adapter_p2_materialization(267D 어댑터/2차 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_materialization_report.md`
 - run267D_adapter_p2_mt5_execution(267D 어댑터/2차 대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_mt5_execution_report.md`
 - run267D_adapter_p2_mt5_review(267D 어댑터/2차 대체 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_mt5_review.md`
+- run267E_adapter_p2_followup_materialization(267E 어댑터/2차 대체 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_followup.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
-Run267D(267D 실행)는 Adapter/P2 MT5 execution(어댑터/2차 대체 MT5 실행)을 완료했다.
-Effect(효과): Stage267(267단계)는 후보 선택(selected candidate, 선택 후보), ONNX readiness(ONNX 준비), runtime authority(런타임 권위)를 주장하지 않고, `run267E_design_adapter_p2_followup_from_run267D_review`에서 다음 Adapter/P2(어댑터/2차 대체) 설계를 분리한다.
+Run267E(267E 실행)는 Adapter/P2 follow-up materialization(어댑터/2차 대체 후속 물질화)을 완료했다.
+Effect(효과): Stage267(267단계)는 후보 선택(selected candidate, 선택 후보), ONNX readiness(ONNX 준비), runtime authority(런타임 권위)를 주장하지 않고, `run267E_execute_atrcomp_monday_guard_mt5_batch`에서 atrcomp Monday guard(ATR 압축 월요일 방어)를 실제 KPI(핵심 성과 지표)로 확인한다.

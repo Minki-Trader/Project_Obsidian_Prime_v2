@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267D_adapter_p2_mt5_review_completed`
+- stage_status(단계 상태): `run267E_adapter_p2_followup_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267D_stage267_adapter_p2_materialization_v1`
-- last_completed_run(마지막 완료 실행): `run267A_stage267_baseline_candidate_racing_protocol_v1`
+- current_run(현재 실행): `run267E_stage267_adapter_p2_followup_design_v1`
+- last_completed_run(마지막 완료 실행): `run267D_stage267_adapter_p2_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -37,11 +37,12 @@
 - run267D_adapter_p2_materialization(267D 어댑터/2차 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_materialization_report.md`
 - run267D_adapter_p2_mt5_execution(267D 어댑터/2차 대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_mt5_execution_report.md`
 - run267D_adapter_p2_mt5_review(267D 어댑터/2차 대체 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267D_adapter_p2_mt5_review.md`
-- next_action(다음 행동): `run267E_design_adapter_p2_followup_from_run267D_review`
+- run267E_adapter_p2_followup_materialization(267E 어댑터/2차 대체 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267E_p2_followup.md`
+- next_action(다음 행동): `run267E_execute_atrcomp_monday_guard_mt5_batch`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
 Effect(효과): 후보군은 감정이나 과거 기록이 아니라 다음 연구에 실제로 도움이 되는지로 유지, 탈락, 갱신된다.
 
-Run267D(267D 실행)는 Adapter/P2 MT5 execution(어댑터/2차 대체 MT5 실행)을 완료했다.
-Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 실행된 30개 KPI(핵심 성과 지표), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 바탕으로 후속 설계를 분리하는 작업이다.
+Run267E(267E 실행)는 Adapter/P2 follow-up materialization(어댑터/2차 대체 후속 물질화)을 완료했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 atrcomp Monday guard(ATR 압축 월요일 방어) 10개 MT5(MetaTrader 5, 메타트레이더5) attempt(시도)를 실행해 실제 KPI(핵심 성과 지표)를 확인하는 작업이다.
