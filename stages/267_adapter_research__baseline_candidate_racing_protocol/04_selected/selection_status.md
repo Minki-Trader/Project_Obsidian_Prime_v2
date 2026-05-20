@@ -1,6 +1,6 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267K_retrained_soft_context_adapter_materialized_execution_pending`
+- stage_status(단계 상태): `run267K_retrained_soft_context_adapter_mt5_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
 - current_run(현재 실행): `run267K_stage267_retrained_soft_context_adapter_materialization_v1`
 - last_completed_run(마지막 완료 실행): `run267K_stage267_retrained_soft_context_adapter_materialization_v1`
@@ -50,7 +50,9 @@
 - run267I_soft_noncalendar_adapter_mt5_review(267I 부드러운 비달력 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_review.md`
 - run267J_retrained_soft_context_adapter_design(267J 재학습 부드러운 문맥 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267J_retrained_soft_context_adapter_design.md`
 - run267K_retrained_soft_context_adapter_materialization(267K 재학습 부드러운 문맥 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_materialization.md`
-- next_action(다음 행동): `run267K_execute_retrained_soft_context_adapter_mt5_batch`
+- run267K_retrained_soft_context_adapter_mt5_execution(267K 재학습 부드러운 문맥 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_execution.md`
+- run267K_retrained_soft_context_adapter_mt5_review(267K 재학습 부드러운 문맥 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_review.md`
+- next_action(다음 행동): `run267L_design_retrained_soft_context_adapter_followup_or_prune`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -62,4 +64,6 @@ Run267J(267J 실행)는 retrained soft-context Adapter design(재학습 부드�
 Effect(효과): run267K(267K 실행)의 원천 감사와 중단 규칙을 만들었다.
 
 Run267K(267K 실행)는 retrained soft-context Adapter materialization(재학습 부드러운 문맥 어댑터 물질화)을 완료했다.
-Effect(효과): selected candidate(선택 후보)는 여전히 없고, next_action(다음 행동)은 `run267K_execute_retrained_soft_context_adapter_mt5_batch`이다.
+Run267K(267K 실행)는 retrained soft-context Adapter MT5 review(재학습 부드러운 문맥 어댑터 MT5 검토)를 완료했다.
+Effect(효과): 순수익/PF(profit factor, 수익 팩터)는 2024년 원형보다 크게 좋아졌지만 DD(drawdown, 손실폭)가 아직 Goal Achieve(목표 달성) 곡선 기준에 못 미쳐 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
+Effect(효과): selected candidate(선택 후보)는 여전히 없고, next_action(다음 행동)은 `run267L_design_retrained_soft_context_adapter_followup_or_prune`이다.

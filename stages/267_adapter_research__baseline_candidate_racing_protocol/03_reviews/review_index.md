@@ -1,6 +1,6 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267K_retrained_soft_context_adapter_materialized_execution_pending`
+- status(상태): `run267K_retrained_soft_context_adapter_mt5_review_completed`
 - current_run(현재 실행): `run267K_stage267_retrained_soft_context_adapter_materialization_v1`
 - last_completed_run(마지막 완료 실행): `run267K_stage267_retrained_soft_context_adapter_materialization_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
@@ -57,6 +57,8 @@
 - run267I_soft_noncalendar_adapter_mt5_review(267I 부드러운 비달력 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267I_soft_noncalendar_adapter_mt5_review.md`
 - run267J_retrained_soft_context_adapter_design(267J 재학습 부드러운 문맥 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267J_retrained_soft_context_adapter_design.md`
 - run267K_retrained_soft_context_adapter_materialization(267K 재학습 부드러운 문맥 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_materialization.md`
+- run267K_retrained_soft_context_adapter_mt5_execution(267K 재학습 부드러운 문맥 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_execution.md`
+- run267K_retrained_soft_context_adapter_mt5_review(267K 재학습 부드러운 문맥 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_review.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
@@ -68,4 +70,6 @@ Run267J(267J 실행)는 retrained soft-context Adapter design(재학습 부드�
 Effect(효과): run267K(267K 실행)의 원천 감사와 중단 규칙을 만들었다.
 
 Run267K(267K 실행)는 retrained soft-context Adapter materialization(재학습 부드러운 문맥 어댑터 물질화)을 완료했다.
-Effect(효과): selected candidate(선택 후보)는 여전히 없고, next_action(다음 행동)은 `run267K_execute_retrained_soft_context_adapter_mt5_batch`이다.
+Run267K(267K 실행)는 retrained soft-context Adapter MT5 review(재학습 부드러운 문맥 어댑터 MT5 검토)를 완료했다.
+Effect(효과): 순수익/PF(profit factor, 수익 팩터)는 2024년 원형보다 크게 좋아졌지만 DD(drawdown, 손실폭)가 아직 Goal Achieve(목표 달성) 곡선 기준에 못 미쳐 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
+Effect(효과): selected candidate(선택 후보)는 여전히 없고, next_action(다음 행동)은 `run267L_design_retrained_soft_context_adapter_followup_or_prune`이다.
