@@ -1,4 +1,4 @@
-current_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
+﻿current_run_id: run267B_stage267_extended_period_ablation_probe_v1
 updated_on: '2026-05-20'
 project_mode: clean_stage_restart
 active_branch: main
@@ -15,6 +15,10 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage267(267단계) run267A(267A 실행) initial evidence synthesis(초기 근거 합성) completed(완료). Effect(효과): five Baseline candidates(다섯 기준 후보)를 `stage267_initial_scoreboard.csv`, `stage267_monthly_weakness_matrix.csv`, `stage267_segment_weakness_matrix.csv`, and `stage267_racing_gap_report.md`로 비교했고, selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+- >-
+  Next action(다음 행동)는 `run267B_stage267_extended_period_ablation_probe_v1`이다. Effect(효과): 2024-style extended period test(2024년식 확장 기간 시험), feature/category ablation(피처/범주 제거), similar feature replacement(유사 피처 대체), and equity curve visual grading(평가금 곡선 시각 판정)을 준비한다.
 - >-
   Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_planned(활성 계획). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
@@ -8693,15 +8697,20 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: active_planned_from_user_goal
-  current_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
+  status: initial_evidence_synthesis_completed_next_run_planned
+  current_run_id: run267B_stage267_extended_period_ablation_probe_v1
+  last_completed_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
   source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_decision: stage266_planning_superseded_before_run_by_user_goal
   baseline_candidate_pool_path: stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv
   experiment_design_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_experiment_design_receipt.md
+  initial_scoreboard_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv
+  monthly_weakness_matrix_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_monthly_weakness_matrix.csv
+  segment_weakness_matrix_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_segment_weakness_matrix.csv
+  racing_gap_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_racing_gap_report.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267A_stage267_baseline_candidate_racing_protocol_v1
+  next_action: run267B_stage267_extended_period_ablation_probe_v1
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

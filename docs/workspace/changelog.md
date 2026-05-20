@@ -2042,3 +2042,9 @@
 - action(행동): Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review`를 run execution(실행 수행) 전 planning_superseded(계획 대체)로 낮추고 Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol`을 열었다.
 - effect(효과): single-candidate late-segment repair(단일 후보 후반 구간 수리) 병목을 멈추고 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`을 R&D racing(연구개발 경주) 기준 후보군으로 고정했다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`.
+
+## 2026-05-20T00:00:00Z Stage267 initial evidence synthesis(267단계 초기 근거 합성)
+
+- action(행동): completed(완료) `run267A_stage267_baseline_candidate_racing_protocol_v1` as existing evidence synthesis(기존 근거 합성) and planned(계획) `run267B_stage267_extended_period_ablation_probe_v1`.
+- effect(효과): five-candidate scoreboard(다섯 후보 점수판), monthly weakness matrix(월별 약점 행렬), segment weakness matrix(구간 약점 행렬), and racing gap report(경주 공백 보고)를 만들었다. Candidate selection(후보 선택), selected baseline(선택 기준선), ONNX readiness(ONNX 준비)는 주장하지 않는다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`.
