@@ -1,0 +1,76 @@
+{
+  "packet_id": "stage267_baseline_candidate_racing_protocol_v1",
+  "current_run_id": "run267A_stage267_baseline_candidate_racing_protocol_v1",
+  "work_packet_lifecycle": "stage_state_sync_to_experiment_design_to_report",
+  "primary_family": "state_sync",
+  "primary_skill": "obsidian-stage-transition",
+  "support_skills": [
+    "obsidian-reentry-read",
+    "obsidian-artifact-lineage",
+    "obsidian-claim-discipline"
+  ],
+  "required_gates": [
+    "state_sync_audit",
+    "final_claim_guard"
+  ],
+  "branch_worktree_fit": "main_clean_at_intake",
+  "branch_action": "stay_on_main",
+  "phase_plan": [
+    "confirm_current_truth",
+    "supersede_stage266_planning_before_run",
+    "open_stage267_baseline_candidate_racing_protocol",
+    "materialize_candidate_pool_manifest",
+    "materialize_experiment_design_receipt",
+    "sync_current_truth_docs",
+    "verify_stage_state_alignment"
+  ],
+  "skills_considered": [
+    {
+      "skill": "obsidian-experiment-design",
+      "reason": "Stage267 content is an experiment design(실험 설계) protocol; receipt is written in the stage review folder."
+    },
+    {
+      "skill": "obsidian-data-integrity",
+      "reason": "Extended period and feature checks require data boundary(데이터 경계); receipt is embedded in the experiment design file."
+    },
+    {
+      "skill": "obsidian-model-validation",
+      "reason": "Candidate comparison touches model/threshold selection(모델/임계값 선택); receipt is embedded in the experiment design file."
+    },
+    {
+      "skill": "obsidian-exploration-mandate",
+      "reason": "R&D racing(연구개발 경주) keeps exploration open while avoiding operating claims(운영 주장)."
+    }
+  ],
+  "skills_not_used_as_primary": [
+    {
+      "skill": "obsidian-run-evidence-system",
+      "reason": "No run result(실행 결과) was created in this packet."
+    },
+    {
+      "skill": "obsidian-runtime-parity",
+      "reason": "No MT5 runtime reproduction(MT5 런타임 재현) or ONNX parity(ONNX 동등성) was attempted."
+    }
+  ],
+  "phase_stop_conditions": [
+    "Do not claim selected_research_baseline(선택 연구 기준선).",
+    "Do not claim ONNX readiness(ONNX 준비).",
+    "Do not claim operating reference(운영 기준), production baseline(생산 기준선), or overall goal complete(전체 목표 완료)."
+  ],
+  "handoff_surface": [
+    "docs/workspace/workspace_state.yaml",
+    "docs/context/current_working_state.md",
+    "stages/266_adapter_research__late_segment_stability_repair_after_stage265_review/04_selected/selection_status.md",
+    "stages/266_adapter_research__late_segment_stability_repair_after_stage265_review/03_reviews/review_index.md",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/00_spec/stage_brief.md",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/input_refs.md",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_experiment_design_receipt.md",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/04_selected/selection_status.md",
+    "docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md"
+  ],
+  "final_answer_filter": [
+    "obsidian-answer-clarity",
+    "obsidian-claim-discipline"
+  ]
+}

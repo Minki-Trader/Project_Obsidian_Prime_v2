@@ -1,4 +1,4 @@
-## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
+﻿## 2026-05-09 Stage37 State Context Router(37단계 상태 문맥 라우터)
 
 - completed(완료): `run31A_state_context_router_broad_mt5_probe_v1`
 - judgment(판정): `state_context_not_useful_or_inconclusive`
@@ -2036,3 +2036,9 @@
 - action(행동): closed(종료) `265_adapter_research__stage264_dual_objective_followup_review` with decision(판정) `open_stage266_bounded_late_segment_stability_repair_after_stage265_review_candidate_not_final`.
 - effect(효과): `s264_allow_inner_high_quarter`를 positive research candidate(긍정 연구 후보)로 보존하되 final(최종)로 부르지 않고 Stage266(266단계) 후반 구간 안정화 수리로 넘겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment`.
+
+## 2026-05-20T00:00:00Z Stage266 planning superseded and Stage267 baseline racing opened(266단계 계획 대체 및 267단계 기준 후보 경주 개방)
+
+- action(행동): Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review`를 run execution(실행 수행) 전 planning_superseded(계획 대체)로 낮추고 Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol`을 열었다.
+- effect(효과): single-candidate late-segment repair(단일 후보 후반 구간 수리) 병목을 멈추고 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`을 R&D racing(연구개발 경주) 기준 후보군으로 고정했다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`.

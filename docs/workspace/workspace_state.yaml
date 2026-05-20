@@ -1,8 +1,8 @@
-current_run_id: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
+current_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
 updated_on: '2026-05-20'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
+active_stage: 267_adapter_research__baseline_candidate_racing_protocol
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,17 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage265(265단계) closed(종료) as `open_stage266_bounded_late_segment_stability_repair_after_stage265_review_candidate_not_final` and Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` is open_planned(개방 계획). Effect(효과): Stage264(264단계)의 좋은 후보를 최종으로 부르지 않고 후반 구간/월별 약점 수리로 넘긴다.
+  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_planned(활성 계획). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
+- >-
+  Stage267 baseline candidate pool(267단계 기준 후보군)은 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`이다. Effect(효과): R&D racing(연구개발 경주), Adapter development(어댑터 개발), stability/weakness/time-slice validation(안정성/취약점/기간 구간 검증), feature ablation(피처 제거), similar feature replacement(유사 피처 대체), equity curve review(평가금 곡선 검토)를 거치기 전에는 ONNX review(ONNX 검토)로 가지 않는다.
+- >-
+  Stage267 forbidden claims(267단계 금지 주장)은 deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료)이다. Effect(효과): current Baseline(현재 기준선)은 operating baseline(운영 기준선)이 아니라 R&D racing research candidate pool(연구개발 경주용 연구 후보군)으로만 남는다.
+- >-
+  Stage266 evidence boundary(266단계 근거 경계)는 planning_superseded_before_run(실행 전 계획 대체)이다. Effect(효과): Stage266(266단계)의 좁은 late segment repair(후반 구간 수리) 계획은 실패나 성공이 아니라 Stage267(267단계) 후보군 경주 설계의 입력 단서로 보존된다.
 - >-
   Stage265 evidence(265단계 근거)는 `stages/265_adapter_research__stage264_dual_objective_followup_review/03_reviews/stage265_stage264_dual_objective_followup_review.md`, `stages/265_adapter_research__stage264_dual_objective_followup_review/03_reviews/stage265_tradeoff_review_matrix.csv`, `stages/265_adapter_research__stage264_dual_objective_followup_review/03_reviews/stage265_failure_memory.csv`에 있다. Effect(효과): `s264_allow_inner_high_quarter`가 positive research candidate(긍정 연구 후보)지만 final(최종)은 아님을 고정한다.
 - >-
-  Target surface(목표 표면)는 `legacy_34d_kpi_lesson_only_v2_native_late_segment_stability_repair`이다. Effect(효과): legacy 34D(레거시 34D)는 목표 KPI(핵심 성과 지표) 참고값일 뿐이고 v2-native research(v2 고유 연구)를 계속한다.
+  Target surface(목표 표면)는 `v2_native_baseline_candidate_racing_research_pool`이고 legacy 34D(레거시 34D)는 lesson-only KPI target(교훈 전용 핵심 성과 지표 목표)이다. Effect(효과): v2-native research(v2 고유 연구)를 계속하되 legacy result inheritance(레거시 결과 상속)는 하지 않는다.
 - >-
   Stage264(264단계) closed(종료) as `open_stage265_bounded_followup_due_to_stage264_dual_objective_candidate_not_final` and Stage265(265단계) `265_adapter_research__stage264_dual_objective_followup_review` is open_planned(개방 계획). Effect(효과): dual objective lowrank lowedge repair(이중목표 낮은 순위 낮은 가장자리 수리) 결과를 다음 경계 검토로 넘긴다.
 - >-
@@ -8673,10 +8679,29 @@ stage265_stage264_dual_objective_followup_review:
 stage266_late_segment_stability_repair_after_stage265_review:
   packet_id: stage266_late_segment_stability_repair_after_stage265_review_v1
   stage_id: 266_adapter_research__late_segment_stability_repair_after_stage265_review
-  status: open_planned_from_stage265
+  status: planning_superseded_before_run_by_stage267_user_goal
   current_run_id: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_stage: 265_adapter_research__stage264_dual_objective_followup_review
   source_run: run265A_stage265_stage264_dual_objective_followup_review_v1
   source_decision: open_stage266_bounded_late_segment_stability_repair_after_stage265_review_candidate_not_final
-  next_action: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
+  superseded_by_stage: 267_adapter_research__baseline_candidate_racing_protocol
+  superseded_decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
+  next_action: run267A_stage267_baseline_candidate_racing_protocol_v1
+  evidence_boundary: planning_only_no_run_execution_no_result_judgment
+  boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
+
+stage267_baseline_candidate_racing_protocol:
+  packet_id: stage267_baseline_candidate_racing_protocol_v1
+  stage_id: 267_adapter_research__baseline_candidate_racing_protocol
+  status: active_planned_from_user_goal
+  current_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
+  source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
+  source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
+  source_decision: stage266_planning_superseded_before_run_by_user_goal
+  baseline_candidate_pool_path: stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv
+  experiment_design_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_experiment_design_receipt.md
+  decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
+  next_action: run267A_stage267_baseline_candidate_racing_protocol_v1
+  target_surface: v2_native_baseline_candidate_racing_research_pool
+  claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
