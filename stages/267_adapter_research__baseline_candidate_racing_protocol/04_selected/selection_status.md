@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design_completed`
+- stage_status(단계 상태): `run267Q_internal_feature_order_confirmed_adapter_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267P_stage267_pool_wide_internal_feature_order_confirmation_and_adapter_design_v1`
-- last_completed_run(마지막 완료 실행): `run267P_stage267_pool_wide_internal_feature_order_confirmation_and_adapter_design_v1`
+- current_run(현재 실행): `run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267Q_stage267_internal_feature_order_confirmed_adapter_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -59,7 +59,8 @@
 - run267N_pool_wide_ablation_replacement_kpi_review(267N 후보군 전체 제거/대체 KPI 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_kpi_review.md`
 - run267O_pool_wide_balance_timeslice_trade_quality_review(267O 후보군 전체 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267O_pool_wide_balance_timeslice_trade_quality_review.md`
 - run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design(267P 내부 피처 순서 확인 및 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267P_pool_wide_internal_feature_order_confirmation_and_adapter_design.md`
-- next_action(다음 행동): `run267Q_materialize_internal_feature_order_confirmed_adapter_candidates`
+- run267Q_internal_feature_order_confirmed_adapter_materialization(267Q 내부 피처 순서 확인 어댑터 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_materialization.md`
+- next_action(다음 행동): `run267Q_execute_internal_feature_order_confirmed_adapter_mt5_batch`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -79,5 +80,7 @@ Effect(효과): run267O(267O 실행)의 거래/곡선/시간구간 검토까지 
 
 Run267O(267O 실행)는 run267N(267N 실행)의 48개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 거래 단위로 다시 파싱해 balance/time-slice/trade-quality review(잔액/시간구간/거래품질 검토)를 완료했다.
 Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N 실행)의 feature order(피처 순서), runtime contract(런타임 계약), materialization boundary(물질화 경계)와 대조해 Adapter design queue(어댑터 설계 큐)와 failure memory(실패 기억)를 만들었다.
+Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
+Effect(효과): next action(다음 행동)은 MT5(MetaTrader 5, 메타트레이더5) 실행이며 selected candidate(선택 후보)와 ONNX readiness(ONNX 준비)는 없다.
 Effect(효과): selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 없고, 다음 run267Q(267Q 실행)는 내부 피처 순서가 확인된 후보만 물질화 대상으로 삼는다.
 Effect(효과): 강한 KPI(핵심 성과 지표) 단서는 남겼지만 약한 월/구간과 proxy/internal feature(대체/내부 피처) 경계가 남아 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 없다.

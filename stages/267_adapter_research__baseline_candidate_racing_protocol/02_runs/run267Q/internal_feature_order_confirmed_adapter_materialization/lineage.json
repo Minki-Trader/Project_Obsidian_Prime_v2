@@ -1,0 +1,105 @@
+{
+  "artifact_paths": {
+    "attempt_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/attempts.csv",
+    "feature_diagnostics": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/feature_diagnostics.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/lineage.json",
+    "model_score_table_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/model_score_table_audit.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_materialization.md",
+    "result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/result.json",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/run_manifest.json",
+    "runtime_contract": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/runtime_contract.csv",
+    "variant_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/internal_adapter_variant_manifest.csv"
+  },
+  "availability": "tracked_plus_common_files_copy(추적 산출물과 Common Files 복사)",
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "consumer": "run267Q_execute_internal_feature_order_confirmed_adapter_mt5_batch",
+  "lineage_judgment": "connected_with_boundary_no_candidate_selection",
+  "lineage_rows": [
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aih/run267q_01_s264_aih_abl_volatility_bandwidth/features/s264_aih_abl_volatility_bandwidth_internal_adapter.csv",
+      "common_sha256": "b9e1b2cac7aa24f8761175de3857cf98e234d4cc700980b42eab252917ae12f4",
+      "queue_id": "run267Q_01_s264_aih_abl_volatility_bandwidth",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aih/run267q_01_s264_aih_abl_volatility_bandwidth/features/s264_aih_abl_volatility_bandwidth_internal_adapter.csv",
+      "run267q_sha256": "b9e1b2cac7aa24f8761175de3857cf98e234d4cc700980b42eab252917ae12f4",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_01_s264_aih_abl_volatility_bandwidth/features/s264_aih_abl_volatility_bandwidth.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aih/run267q_01_s264_aih_abl_volatility_bandwidth/models/s264_aih_abl_volatility_bandwidth_internal_adapter_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267Q_01_s264_aih_abl_volatility_bandwidth",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aih/run267q_01_s264_aih_abl_volatility_bandwidth/models/s264_aih_abl_volatility_bandwidth_internal_adapter_model.csv",
+      "run267q_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_01_s264_aih_abl_volatility_bandwidth/models/s264_aih_abl_volatility_bandwidth_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aih/run267q_02_s264_aih_rep_volatility_atr/features/s264_aih_rep_volatility_atr_internal_adapter.csv",
+      "common_sha256": "fc6c24bd6fc6921a1a747f342fda463aa342afc6749c9b80e47321cd63af9efc",
+      "queue_id": "run267Q_02_s264_aih_rep_volatility_atr",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aih/run267q_02_s264_aih_rep_volatility_atr/features/s264_aih_rep_volatility_atr_internal_adapter.csv",
+      "run267q_sha256": "fc6c24bd6fc6921a1a747f342fda463aa342afc6749c9b80e47321cd63af9efc",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_04_s264_aih_rep_volatility_atr/features/s264_aih_rep_volatility_atr.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aih/run267q_02_s264_aih_rep_volatility_atr/models/s264_aih_rep_volatility_atr_internal_adapter_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267Q_02_s264_aih_rep_volatility_atr",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aih/run267q_02_s264_aih_rep_volatility_atr/models/s264_aih_rep_volatility_atr_internal_adapter_model.csv",
+      "run267q_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_04_s264_aih_rep_volatility_atr/models/s264_aih_rep_volatility_atr_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aia/run267q_03_s264_aia_abl_volatility_bandwidth/features/s264_aia_abl_volatility_bandwidth_internal_adapter.csv",
+      "common_sha256": "19e4395003e04dfd9f253f542cb9e1cb8ce6f1027dd5f908c012275c34ec5d21",
+      "queue_id": "run267Q_03_s264_aia_abl_volatility_bandwidth",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aia/run267q_03_s264_aia_abl_volatility_bandwidth/features/s264_aia_abl_volatility_bandwidth_internal_adapter.csv",
+      "run267q_sha256": "19e4395003e04dfd9f253f542cb9e1cb8ce6f1027dd5f908c012275c34ec5d21",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_15_s264_aia_abl_volatility_bandwidth/features/s264_aia_abl_volatility_bandwidth.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aia/run267q_03_s264_aia_abl_volatility_bandwidth/models/s264_aia_abl_volatility_bandwidth_internal_adapter_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267Q_03_s264_aia_abl_volatility_bandwidth",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aia/run267q_03_s264_aia_abl_volatility_bandwidth/models/s264_aia_abl_volatility_bandwidth_internal_adapter_model.csv",
+      "run267q_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_15_s264_aia_abl_volatility_bandwidth/models/s264_aia_abl_volatility_bandwidth_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aia/run267q_04_s264_aia_rep_volatility_atr/features/s264_aia_rep_volatility_atr_internal_adapter.csv",
+      "common_sha256": "7eab65f88a5d58222b809f470090171969fe13aa3173e0d281f5dc3d346cbeac",
+      "queue_id": "run267Q_04_s264_aia_rep_volatility_atr",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aia/run267q_04_s264_aia_rep_volatility_atr/features/s264_aia_rep_volatility_atr_internal_adapter.csv",
+      "run267q_sha256": "7eab65f88a5d58222b809f470090171969fe13aa3173e0d281f5dc3d346cbeac",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_19_s264_aia_rep_volatility_atr/features/s264_aia_rep_volatility_atr.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267q/run267Q_internal_feature_order_adapter/s264_aia/run267q_04_s264_aia_rep_volatility_atr/models/s264_aia_rep_volatility_atr_internal_adapter_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267Q_04_s264_aia_rep_volatility_atr",
+      "run267q_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Q/internal_feature_order_confirmed_adapter_materialization/variants/s264_aia/run267q_04_s264_aia_rep_volatility_atr/models/s264_aia_rep_volatility_atr_internal_adapter_model.csv",
+      "run267q_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_19_s264_aia_rep_volatility_atr/models/s264_aia_rep_volatility_atr_model.csv"
+    }
+  ],
+  "producer": "stage_pipelines/stage267/run267Q_internal_feature_order_confirmed_adapter_materialization.py",
+  "registry_links": [
+    "artifact_registry.csv",
+    "run_registry.csv",
+    "alpha_run_ledger.csv",
+    "stage_run_ledger.csv"
+  ],
+  "source_inputs": [
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267P/pool_wide_internal_feature_order_confirmation_and_adapter_design/adapter_design_queue.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267P/pool_wide_internal_feature_order_confirmation_and_adapter_design/internal_feature_order_audit.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267P/pool_wide_internal_feature_order_confirmation_and_adapter_design/candidate_axis_decision.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267P/pool_wide_internal_feature_order_confirmation_and_adapter_design/failure_memory.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267P/pool_wide_internal_feature_order_confirmation_and_adapter_design/review_result.json"
+  ]
+}
