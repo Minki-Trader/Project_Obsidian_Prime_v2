@@ -7,7 +7,7 @@
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `stage267_run267C_weak_slice_counterfactual_triage_completed_mt5_variants_pending`
+- status(상태): `stage267_run267C_p0_mt5_variant_smoke_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -64,12 +64,15 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) historical 2024 balance/time-slice review(2024 과거 압박 잔액/시간 구간 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_balance_time_slice_review.md`
 - Stage267(267단계) historical 2024 visual ablation design(2024 시각/제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_visual_ablation_design_report.md`
 - Stage267(267단계) run267C weak-slice counterfactual triage(약점 구간 반사실 선별): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_weak_slice_counterfactual_triage_report.md`
+- Stage267(267단계) run267C P0 MT5 variant materialization(우선순위 0 MT5 변형 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_materialization_report.md`
+- Stage267(267단계) run267C P0 MT5 smoke execution(우선순위 0 MT5 스모크 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_smoke_execution_report.md`
+- Stage267(267단계) run267C P0 MT5 full batch review(우선순위 0 MT5 전체 묶음 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_full_batch_review.md`
 
 ## Current Next Action(현재 다음 행동)
 
 - next_run(다음 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants_v1`
-- action(행동): run267B(267B 실행) 2024 routed trade records(라우팅 거래 기록)로 weak-slice counterfactual triage(약점 구간 반사실 선별)를 실행했다.
-- effect(효과): naive filter(단순 필터)로 좋아 보이는 축과 trade count collapse(거래 수 붕괴)를 일으키는 축을 분리해, 다음 MT5 variant(MT5 변형) 물질화 우선순위를 좁혔다.
-- next_action(다음 행동): `run267C_materialize_p0_mt5_variants_from_counterfactual_triage`. Effect(효과): counterfactual(반사실)로 좁힌 P0(우선순위 0) 축을 실제 MT5 rerun(MT5 재실행) 후보로 만든다.
+- action(행동): run267C(267C 실행) P0 MT5 smoke execution(우선순위 0 MT5 스모크 실행)을 `30`개 attempt(시도)로 수행했다.
+- effect(효과): `30`개 KPI(핵심 성과 지표) 기록을 확보했지만 full P0 batch(전체 우선순위 0 묶음)와 후보 선택은 아직 아니다.
+- next_action(다음 행동): `run267C_design_p0_axis_followup_feature_engineering_variants`. Effect(효과): 강제 차단으로 확인한 약점 축을 soft feature(부드러운 피처), similar replacement(유사 대체), adapter variant(어댑터 변형)로 바꿔 다시 시험한다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).

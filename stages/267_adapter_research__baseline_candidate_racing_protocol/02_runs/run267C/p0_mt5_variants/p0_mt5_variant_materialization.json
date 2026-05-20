@@ -1,0 +1,66 @@
+{
+  "attempt_count": 30,
+  "candidate_count": 5,
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "created_at_utc": "2026-05-20T14:28:06Z",
+  "diagnostic_variant_count": 3,
+  "execution_status": "not_executed_input_materialized_only",
+  "feature_variant_count": 15,
+  "latest_judgment": {
+    "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+    "evidence_available": [
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/p0_mt5_variant_manifest.json",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/p0_variant_design_matrix.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/feature_variant_manifest.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/attempts.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_materialization_report.md"
+    ],
+    "evidence_missing": [
+      "actual MT5 tester execution",
+      "new MT5 KPI summary",
+      "new trade records and time-slice KPI",
+      "balance/equity curve visual review",
+      "full feature ablation and similar replacement retraining",
+      "Adapter validation",
+      "ONNX parity"
+    ],
+    "judgment_label": "materialized_not_yet_mt5_evaluated",
+    "next_condition": "run267C_execute_p0_mt5_variant_smoke_or_batch",
+    "result_subject": "run267C P0 MT5 variant materialization"
+  },
+  "next_action": "run267C_execute_p0_mt5_variant_smoke_or_batch",
+  "onnx_readiness": "not_claimed",
+  "outputs": {
+    "attempt_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/attempts.csv",
+    "feature_variant_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/feature_variant_manifest.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_materialization_report.md",
+    "result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/p0_mt5_variant_materialization.json",
+    "variant_design_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/p0_variant_design_matrix.csv",
+    "variant_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/p0_mt5_variants/p0_mt5_variant_manifest.json"
+  },
+  "packet_id": "stage267_baseline_candidate_racing_protocol_v1",
+  "run_id": "run267C_stage267_execute_prioritized_ablation_replacement_variants_v1",
+  "run_number": "run267C",
+  "selected_candidate": "none",
+  "source_counterfactual_triage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_counterfactual_kpi.csv",
+  "source_info": {
+    "duplicates": 0,
+    "first_time_utc": "2024-01-02T16:40:00Z",
+    "last_time_utc": "2024-12-31T22:00:00Z",
+    "missing_signal_rows": 0,
+    "route_coverage_rows": 3,
+    "rows": 11651,
+    "source_signal_column": "stage56_context_et_event_signal",
+    "source_variant_id": "v41_v22_midcov_et40_agree_h2c0_no_b",
+    "split": "train",
+    "tier": "Tier A"
+  },
+  "source_triage_summary": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/candidate_counterfactual_triage_summary.csv",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "stage267_run267C_p0_mt5_variant_materialized_execution_pending",
+  "volatility_edges": [
+    0.19637160003185267,
+    0.3013770580291748
+  ],
+  "volatility_edges_source": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_proxyw58/features.parquet"
+}

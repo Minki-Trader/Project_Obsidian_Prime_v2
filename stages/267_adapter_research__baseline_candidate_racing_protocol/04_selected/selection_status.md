@@ -1,6 +1,6 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267C_weak_slice_counterfactual_triage_completed_mt5_variants_pending`
+- stage_status(단계 상태): `run267C_p0_mt5_full_batch_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
 - current_run(현재 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants_v1`
 - last_completed_run(마지막 완료 실행): `run267A_stage267_baseline_candidate_racing_protocol_v1`
@@ -27,11 +27,14 @@
 - historical_2024_balance_time_slice_review(2024 잔액/시간 구간 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_balance_time_slice_review.md`
 - historical_2024_visual_ablation_design(2024 시각/제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_visual_ablation_design_report.md`
 - run267C_counterfactual_triage(267C 반사실 선별): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_weak_slice_counterfactual_triage_report.md`
-- next_action(다음 행동): `run267C_materialize_p0_mt5_variants_from_counterfactual_triage`
+- run267C_p0_mt5_variant_materialization(267C 우선순위 0 MT5 변형 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_materialization_report.md`
+- run267C_p0_mt5_smoke_execution(267C 우선순위 0 MT5 스모크 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_variant_smoke_execution_report.md`
+- run267C_p0_mt5_full_batch_review(267C 우선순위 0 MT5 전체 묶음 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_p0_mt5_full_batch_review.md`
+- next_action(다음 행동): `run267C_design_p0_axis_followup_feature_engineering_variants`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
 Effect(효과): 후보군은 감정이나 과거 기록이 아니라 다음 연구에 실제로 도움이 되는지로 유지, 탈락, 갱신된다.
 
-Run267C(267C 실행)는 run267B(267B 실행)의 routed trade records(라우팅 거래 기록)로 weak-slice counterfactual triage(약점 구간 반사실 선별)를 완료했다.
-Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 실제 MT5 variant(MT5 변형) 물질화다.
+Run267C(267C 실행)는 P0 MT5 smoke execution(우선순위 0 MT5 스모크 실행)을 좁게 수행했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, 다음은 강제 차단을 소프트 피처/유사 대체/어댑터 변형으로 바꾸는 후속 설계다.
