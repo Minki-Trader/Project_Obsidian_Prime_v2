@@ -1,7 +1,7 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267B_historical_2024_visual_ablation_replacement_design_completed`
-- current_run(현재 실행): `run267B_stage267_extended_period_ablation_probe_v1`
+- status(상태): `run267C_weak_slice_counterfactual_triage_completed_mt5_variants_pending`
+- current_run(현재 실행): `run267C_stage267_execute_prioritized_ablation_replacement_variants_v1`
 - last_completed_run(마지막 완료 실행): `run267A_stage267_baseline_candidate_racing_protocol_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
@@ -33,10 +33,11 @@
 - run267B_historical_2024_candidate_weakness_summary(267B 2024 후보 약점 요약): `stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/candidate_weakness_summary.csv`
 - run267B_historical_2024_balance_time_slice_review(267B 2024 잔액/시간 구간 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_balance_time_slice_review.md`
 - run267B_historical_2024_visual_ablation_design(267B 2024 시각/제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_visual_ablation_design_report.md`
+- run267C_weak_slice_counterfactual_triage(267C 약점 구간 반사실 선별): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_weak_slice_counterfactual_triage_report.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
-Run267B(267B 실행)는 input readiness(입력 준비), existing MT5 report(기존 MT5 보고서)의 equity curve shape grading(평가금 곡선 형태 판정), 2024 historical stress(2024 과거 압박) 입력 물질화(materialization, 산출물화), 2024 MT5 Strategy Tester execution(MT5 전략 테스터 실행), 2024 balance/time-slice review(잔액/시간 구간 검토), visual artifact sanity(시각 산출물 기초 점검), ablation/replacement design(제거/대체 설계)을 완료했다.
-Effect(효과): Stage267(267단계)는 후보 선택(selected candidate, 선택 후보), ONNX readiness(ONNX 준비), runtime authority(런타임 권위)를 주장하지 않고, `run267C_stage267_execute_prioritized_ablation_replacement_variants`로 넘어간다.
+Run267C(267C 실행)는 run267B(267B 실행)의 2024 routed trade records(라우팅 거래 기록)로 weak-slice counterfactual triage(약점 구간 반사실 선별)를 완료했다.
+Effect(효과): Stage267(267단계)는 후보 선택(selected candidate, 선택 후보), ONNX readiness(ONNX 준비), runtime authority(런타임 권위)를 주장하지 않고, `run267C_materialize_p0_mt5_variants_from_counterfactual_triage`로 넘어간다.

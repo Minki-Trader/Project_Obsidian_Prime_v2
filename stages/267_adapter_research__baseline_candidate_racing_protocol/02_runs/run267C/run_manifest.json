@@ -1,0 +1,66 @@
+{
+  "changed_variables": [
+    "counterfactual removal of vol_low",
+    "counterfactual removal of 2024-07",
+    "counterfactual removal of Monday",
+    "counterfactual removal of late session",
+    "compound weak-axis removals"
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "comparison_baseline": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/trade_records.csv",
+  "control_variables": [
+    "source trade records are run267B 2024 historical stress routed totals",
+    "candidate pool remains the five baseline research candidates",
+    "no MT5 rerun is claimed in this pass"
+  ],
+  "created_on": "2026-05-20",
+  "decision_use": "Prioritize the next MT5 variant materialization; cannot select a candidate, cannot start ONNX review.",
+  "evidence_plan": [
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_counterfactual_kpi.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_intersection_kpi.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/candidate_counterfactual_triage_summary.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_counterfactual_triage.json",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_weak_slice_counterfactual_triage_report.md"
+  ],
+  "failure_criteria": "All useful-looking improvements require severe trade-count collapse or only hide a broad curve defect.",
+  "hypothesis": "Common weak slices from run267B reveal whether P0 ablation/replacement variants should be MT5-tested or rejected as naive overprune.",
+  "invalid_conditions": "Missing run267B trade records, duplicate tier records included, or period mislabeled as OOS.",
+  "latest_judgment": {
+    "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+    "evidence_available": [
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/run_manifest.json",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_counterfactual_kpi.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_intersection_kpi.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/candidate_counterfactual_triage_summary.csv",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_counterfactual_triage.json",
+      "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_weak_slice_counterfactual_triage_report.md"
+    ],
+    "evidence_missing": [
+      "actual MT5 ablation/replacement reruns",
+      "full feature-category ablation",
+      "similar feature replacement model materialization",
+      "Adapter validation",
+      "ONNX parity"
+    ],
+    "judgment_label": "exploratory_counterfactual_only",
+    "next_condition": "run267C_materialize_p0_mt5_variants_from_counterfactual_triage",
+    "result_subject": "run267C weak-slice counterfactual triage"
+  },
+  "next_action": "run267C_materialize_p0_mt5_variants_from_counterfactual_triage",
+  "outputs": {
+    "counterfactual_kpi": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_counterfactual_kpi.csv",
+    "intersection_kpi": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_intersection_kpi.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267C_weak_slice_counterfactual_triage_report.md",
+    "result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/weak_slice_counterfactual_triage.json",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/run_manifest.json",
+    "triage_summary": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267C/candidate_counterfactual_triage_summary.csv"
+  },
+  "packet_id": "stage267_baseline_candidate_racing_protocol_v1",
+  "run_id": "run267C_stage267_execute_prioritized_ablation_replacement_variants_v1",
+  "run_number": "run267C",
+  "sample_scope": "historical_2024_train_era_stress closed trades from run267B routed_total records",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "stage267_run267C_weak_slice_counterfactual_triage_completed_mt5_variants_pending",
+  "stop_conditions": "If counterfactual requires over-pruning, move to feature engineering or candidate downgrade rather than calendar/threshold micro-repair.",
+  "success_criteria": "Identify which P0 axes deserve MT5 materialization without treating naive filters as final repairs."
+}
