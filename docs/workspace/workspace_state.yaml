@@ -1,4 +1,4 @@
-﻿current_run_id: run267S_stage267_pool_wide_orthogonal_stability_racing_matrix_v1
+﻿current_run_id: run267T_stage267_pool_wide_orthogonal_stability_mt5_attempts_v1
 updated_on: '2026-05-21'
 project_mode: clean_stage_restart
 active_branch: main
@@ -15,6 +15,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage267(267단계) run267T(267T 실행) pool-wide orthogonal stability MT5 attempts(후보군 전체 직교 안정성 MT5 시도) `run267T_pool_wide_orthogonal_stability_mt5_attempts_built_execution_pending`. Effect(효과): run267S(267S 실행) 행렬에서 `17`개 변형과 `34`개 set/ini(설정/초기화) 시도를 만들었고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - >-
   Stage267(267단계) run267S(267S 실행) pool-wide orthogonal stability racing matrix(후보군 전체 직교 안정성 경주 행렬) `run267S_pool_wide_orthogonal_stability_racing_matrix_materialized`. Effect(효과): 다섯 Baseline candidates(기준 후보)를 같은 세 안정성 축에 다시 올렸고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - >-
@@ -38,9 +40,9 @@ current_focus:
 - >-
   Stage267(267단계) run267I(267I 실행) P0 soft non-calendar Adapter MT5 review(P0 부드러운 비달력 어댑터 MT5 검토) `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`. Effect(효과): `s264_aih`와 `s264_lc`의 `adx_atr_soft_score` MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)로 검토했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267T_build_pool_wide_orthogonal_stability_mt5_attempts`이다. Effect(효과): run267S(267S 실행) 행렬을 받아 다음 MT5(MetaTrader 5, 메타트레이더5) 물질화 후보를 만든다.
+  Next action(다음 행동)는 `run267T_execute_pool_wide_orthogonal_stability_mt5_batch`이다. Effect(효과): run267T(267T 실행) 시도 목록을 MT5(MetaTrader 5, 메타트레이더5) batch(묶음)로 실행한다.
 - >-
-  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267S_pool_wide_orthogonal_stability_racing_matrix_materialized(267S 후보군 전체 직교 안정성 경주 행렬 물질화 완료, 다음 MT5 물질화 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
+  Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267T_pool_wide_orthogonal_stability_mt5_attempts_built_execution_pending(267T 후보군 전체 직교 안정성 MT5 시도 물질화 완료, 실행 대기 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
   Stage267 baseline candidate pool(267단계 기준 후보군)은 `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`이다. Effect(효과): R&D racing(연구개발 경주), Adapter development(어댑터 개발), stability/weakness/time-slice validation(안정성/취약점/기간 구간 검증), feature ablation(피처 제거), similar feature replacement(유사 피처 대체), equity curve review(평가금 곡선 검토)를 거치기 전에는 ONNX review(ONNX 검토)로 가지 않는다.
 - >-
@@ -8717,9 +8719,9 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267S_pool_wide_orthogonal_stability_racing_matrix_materialized
-  current_run_id: run267S_stage267_pool_wide_orthogonal_stability_racing_matrix_v1
-  last_completed_run_id: run267S_stage267_pool_wide_orthogonal_stability_racing_matrix_v1
+  status: run267T_pool_wide_orthogonal_stability_mt5_attempts_built_execution_pending
+  current_run_id: run267T_stage267_pool_wide_orthogonal_stability_mt5_attempts_v1
+  last_completed_run_id: run267T_stage267_pool_wide_orthogonal_stability_mt5_attempts_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
   source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_decision: stage266_planning_superseded_before_run_by_user_goal
@@ -8768,8 +8770,9 @@ stage267_baseline_candidate_racing_protocol:
   run267Q_internal_feature_order_confirmed_adapter_mt5_review_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_review.md
   run267R_internal_adapter_stability_followup_or_prune_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267R_internal_adapter_stability_followup_or_prune.md
   run267S_pool_wide_orthogonal_stability_racing_matrix_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267S_pool_wide_orthogonal_stability_racing_matrix.md
+  run267T_pool_wide_orthogonal_stability_mt5_attempts_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_attempts.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267T_build_pool_wide_orthogonal_stability_mt5_attempts
+  next_action: run267T_execute_pool_wide_orthogonal_stability_mt5_batch
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
