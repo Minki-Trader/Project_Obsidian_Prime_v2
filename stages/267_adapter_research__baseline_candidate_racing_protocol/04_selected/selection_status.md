@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267G_adx_followup_failure_memory_completed`
+- stage_status(단계 상태): `run267H_soft_noncalendar_adapter_design_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267G_stage267_adx_followup_failure_memory_v1`
-- last_completed_run(마지막 완료 실행): `run267G_stage267_adx_followup_failure_memory_v1`
+- current_run(현재 실행): `run267H_stage267_soft_noncalendar_adapter_design_v1`
+- last_completed_run(마지막 완료 실행): `run267H_stage267_soft_noncalendar_adapter_design_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -44,11 +44,12 @@
 - run267F_non_calendar_guard_mt5_execution(267F 비달력 방어 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_execution.md`
 - run267F_non_calendar_guard_mt5_review(267F 비달력 방어 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267F_guard_robustness_review.md`
 - run267G_adx_followup_failure_memory(267G ADX 후속과 DI 실패 기억): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267G_adx_followup_failure_memory.md`
-- next_action(다음 행동): `run267H_design_soft_noncalendar_adapter_feature_engineering_matrix`
+- run267H_soft_noncalendar_adapter_design(267H 부드러운 비달력 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267H_soft_noncalendar_adapter_design.md`
+- next_action(다음 행동): `run267I_materialize_top_soft_noncalendar_adapter_candidates`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
 Effect(효과): 후보군은 감정이나 과거 기록이 아니라 다음 연구에 실제로 도움이 되는지로 유지, 탈락, 갱신된다.
 
-Run267G(267G 실행)는 ADX follow-up and DI failure memory(ADX 후속과 DI 실패 기억)를 완료했다.
-Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, `adx2025`는 soft context seed(부드러운 문맥 씨앗), `dilowq33`는 exact repeat block(정확 반복 차단)으로 다음 run267H(267H 실행) 설계에 넘긴다.
+Run267H(267H 실행)는 soft non-calendar Adapter design(부드러운 비달력 어댑터 설계)을 완료했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, P0 물질화 후보는 `s264_aih` core(핵심)와 `s264_lc` control(기준)의 `adx_atr_soft_score`로 좁힌다.
