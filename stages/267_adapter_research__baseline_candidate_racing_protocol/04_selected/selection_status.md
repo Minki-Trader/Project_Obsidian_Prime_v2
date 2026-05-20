@@ -1,6 +1,6 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267T_pool_wide_orthogonal_stability_mt5_attempts_built_execution_pending`
+- stage_status(단계 상태): `run267T_pool_wide_orthogonal_stability_mt5_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
 - current_run(현재 실행): `run267T_stage267_pool_wide_orthogonal_stability_mt5_attempts_v1`
 - last_completed_run(마지막 완료 실행): `run267T_stage267_pool_wide_orthogonal_stability_mt5_attempts_v1`
@@ -65,7 +65,9 @@
 - run267R_internal_adapter_stability_followup_or_prune(267R 내부 어댑터 안정성 후속/가지치기): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267R_internal_adapter_stability_followup_or_prune.md`
 - run267S_pool_wide_orthogonal_stability_racing_matrix(267S 후보군 전체 직교 안정성 경주 행렬): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267S_pool_wide_orthogonal_stability_racing_matrix.md`
 - run267T_pool_wide_orthogonal_stability_mt5_attempts(267T 후보군 전체 직교 안정성 MT5 시도): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_attempts.md`
-- next_action(다음 행동): `run267T_execute_pool_wide_orthogonal_stability_mt5_batch`
+- run267T_pool_wide_orthogonal_stability_mt5_execution(267T 후보군 전체 직교 안정성 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_execution.md`
+- run267T_pool_wide_orthogonal_stability_mt5_review(267T 후보군 전체 직교 안정성 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md`
+- next_action(다음 행동): `run267U_design_true_internal_feature_ablation_after_run267T_signature_collapse`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
