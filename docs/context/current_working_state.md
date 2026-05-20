@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267L_stage267_retrained_soft_context_followup_or_prune_v1`
+- current_run(현재 실행): `run267M_stage267_pool_wide_ablation_replacement_design_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `soft_context_retrain_branch_pruned_to_salvage`
-- status(상태): `run267L_retrained_soft_context_followup_or_prune_completed`
+- adapter_under_review(검토 중 어댑터): `pool_wide_ablation_replacement_design`
+- status(상태): `run267M_pool_wide_ablation_replacement_design_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -90,27 +90,29 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267K retrained soft-context Adapter MT5 execution(재학습 부드러운 문맥 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_execution.md`
 - Stage267(267단계) run267K retrained soft-context Adapter MT5 review(재학습 부드러운 문맥 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_review.md`
 - Stage267(267단계) run267L retrained soft-context follow-up/prune(재학습 부드러운 문맥 후속/가지치기): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md`
+- Stage267(267단계) run267M pool-wide ablation/replacement design(후보군 전체 제거/대체 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`
 
 ## Current Next Action(현재 다음 행동)
 - latest_mt5_execution(최신 MT5 실행): attempts(시도) `4`, KPI records(핵심 성과 지표 기록) `4`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_execution.md`.
 - latest_mt5_review(최신 MT5 검토): review rows(검토 행) `2`, negative slices(음수 구간) `18`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_review.md`.
 - latest_materialization(최신 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_materialization.md`.
 - latest_design(최신 설계): run267L(267L 실행) follow-up/prune(후속/가지치기) report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md`.
+- latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 
-- next_run(다음 실행): `run267M_design_pool_wide_ablation_replacement_and_weak_slice_matrix`
-- action(행동): run267L(267L 실행)는 run267K(267K 실행)의 개선과 약점을 대조해 standalone retrain branch(독립 재학습 분기)를 salvage clue(회수 단서)로 가지치기했다.
-- effect(효과): 다음 작업은 한 구간 미세 수리가 아니라 다섯 Baseline candidates(기준 후보) 전체의 ablation/replacement(제거/대체)와 weak-slice matrix(약한 구간 행렬)로 돌아간다.
-- next_action(다음 행동): `run267M_design_pool_wide_ablation_replacement_and_weak_slice_matrix`. Effect(효과): 다섯 Baseline candidates(기준 후보) 전체의 ablation/replacement(제거/대체)와 weak-slice matrix(약한 구간 행렬)로 되돌아간다.
+- next_run(다음 실행): `run267N_materialize_pool_wide_ablation_replacement_p0`
+- action(행동): run267M(267M 실행)는 다섯 Baseline candidates(기준 후보) 전체의 feature/category ablation(피처/범주 제거), similar replacement(유사 대체), weak-slice matrix(약한 구간 행렬), P0 materialization queue(P0 물질화 큐)를 만들었다.
+- effect(효과): 다음 작업은 후보별 강점/약점을 같은 조건으로 물질화해 누가 덜 깨지는지 볼 수 있다.
+- next_action(다음 행동): `run267N_materialize_pool_wide_ablation_replacement_p0`. Effect(효과): P0 ablation/replacement(우선 제거/대체) 변형을 물질화해 MT5(MetaTrader 5, 메타트레이더5) 실행 준비로 넘긴다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 Run267I(267I 실행)는 P0 soft non-calendar Adapter MT5 review(P0 부드러운 비달력 어댑터 MT5 검토)를 완료했다.
 Effect(효과): 순수익/PF(profit factor, 수익 팩터)는 2024년 원형보다 좋아졌지만 DD(drawdown, 손실폭)가 여전히 불편해 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
 
-Run267J(267J 실행)는 retrained soft-context Adapter design(재학습 부드러운 문맥 어댑터 설계)을 완료했다.
-Effect(효과): run267I(267I 실행)의 개선을 선택 후보(selected candidate, 선택 후보)로 올리지 않고, 원천 감사와 짧은 중단 규칙으로 다음 run267K(267K 실행)를 제한했다.
-
 Run267K(267K 실행)는 retrained soft-context Adapter MT5 review(재학습 부드러운 문맥 어댑터 MT5 검토)를 완료했다.
-Effect(효과): 순수익/PF(profit factor, 수익 팩터)는 2024년 원형보다 크게 좋아졌지만 DD(drawdown, 손실폭), Monday(월요일), 2024-12 약점이 남아 선택 후보(selected candidate, 선택 후보)는 없다.
+Effect(효과): 순수익/PF(profit factor, 수익 팩터)는 좋아졌지만 Monday(월요일), 2024-12 약점과 거래 수 축소가 남았다.
 
-Run267L(267L 실행)는 retrained soft-context branch(재학습 부드러운 문맥 분기)를 standalone candidate(독립 후보)가 아니라 salvage clue(회수 단서)로 가지치기했다.
-Effect(효과): 다음 행동(next action, 다음 행동)은 `run267M_design_pool_wide_ablation_replacement_and_weak_slice_matrix`이고, 다섯 Baseline candidates(기준 후보) 전체의 ablation/replacement(제거/대체)와 weak-slice matrix(약한 구간 행렬)로 되돌아간다.
+Run267L(267L 실행)는 retrained soft-context branch(재학습 부드러운 문맥 분기)를 salvage clue(회수 단서)로 가지치기했다.
+Effect(효과): 한 후보 수리 루프를 끊고 후보군 전체 검증으로 되돌렸다.
+
+Run267M(267M 실행)는 다섯 Baseline candidates(기준 후보) 전체의 ablation/replacement(제거/대체), weak-slice matrix(약한 구간 행렬), P0 materialization queue(P0 물질화 큐)를 설계했다.
+Effect(효과): 다음 행동(next action, 다음 행동)은 `run267N_materialize_pool_wide_ablation_replacement_p0`이고, 아직 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 없다.
