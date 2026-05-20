@@ -1,0 +1,38 @@
+{
+  "artifact_paths": {
+    "attempt_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/attempts.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/lineage.json",
+    "model_validation": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/model_validation_snapshot.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267W_true_internal_ablation_score_table_materialization.md",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/run_manifest.json",
+    "runtime_contract": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/runtime_contract.csv",
+    "schema_correction": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/schema_correction_audit.csv",
+    "score_table_parity": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/score_table_parity_check.csv",
+    "surface_alignment": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/surface_alignment_check.csv",
+    "term_importance": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/term_importance.csv",
+    "training_diagnostics": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/training_frame_diagnostics.csv",
+    "variant_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv"
+  },
+  "availability": "tracked_generated_with_manifest_and_common_file_copies",
+  "boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "consumer": "run267X_execute_true_internal_ablation_score_table_mt5_batch",
+  "lineage_judgment": "connected_with_boundary",
+  "parent_run_id": "run267V_stage267_reconstruct_upstream_feature_surface_v1",
+  "producer": "stage_pipelines/stage267/run267W_true_internal_ablation_score_table_materialization.py",
+  "registry_links": {
+    "alpha_run_ledger": "docs/registers/alpha_run_ledger.csv",
+    "artifact_registry": "docs/registers/artifact_registry.csv",
+    "run_registry": "docs/registers/run_registry.csv",
+    "stage_run_ledger": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage_run_ledger.csv"
+  },
+  "run_id": "run267W_stage267_true_internal_ablation_score_table_materialization_v1",
+  "source_inputs": {
+    "model_input_contract": "docs/contracts/model_input_feature_set_contract_fpmarkets_v2.md",
+    "model_input_dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "run267V_report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md",
+    "run267V_schema": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/true_internal_surface_schema_matrix.csv",
+    "run267V_surface_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/candidate_upstream_raw_surface_manifest.csv",
+    "run267W_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/run267W_score_table_rebuild_queue.csv",
+    "training_contract": "docs/contracts/training_label_split_contract_fpmarkets_v2.md"
+  }
+}

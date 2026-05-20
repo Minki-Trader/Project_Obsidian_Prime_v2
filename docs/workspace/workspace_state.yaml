@@ -1,4 +1,4 @@
-﻿current_run_id: run267V_stage267_reconstruct_upstream_feature_surface_v1
+﻿current_run_id: run267W_stage267_true_internal_ablation_score_table_materialization_v1
 updated_on: '2026-05-21'
 project_mode: clean_stage_restart
 active_branch: main
@@ -15,6 +15,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage267(267단계) run267W(267W 실행) true internal ablation score table materialization(진짜 내부 제거 점수표 물질화) `run267W_true_internal_ablation_score_tables_materialized_execution_pending`. Effect(효과): run267V(267V 실행)의 raw feature surface(원시 피처 표면)에 맞춰 24개 score table/model(점수표/모델)과 48개 MT5(MetaTrader 5, 메타트레이더5) 시도 입력을 만들었고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - >-
   Stage267(267단계) run267V(267V 실행) upstream feature surface reconstruction(상류 피처 표면 재구축) `run267V_upstream_feature_surface_reconstructed`. Effect(효과): Stage56(56단계) 2024 Tier A(티어 A) source frame(원천 프레임)에서 후보 5개의 raw feature surface(원시 피처 표면)를 만들었고, score table/model(점수표/모델) 재구축 전에는 MT5(MetaTrader 5, 메타트레이더5) 실행과 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)를 주장하지 않는다.
 - >-
@@ -44,7 +46,7 @@ current_focus:
 - >-
   Stage267(267단계) run267I(267I 실행) P0 soft non-calendar Adapter MT5 review(P0 부드러운 비달력 어댑터 MT5 검토) `run267I_p0_soft_noncalendar_adapter_mt5_review_completed`. Effect(효과): `s264_aih`와 `s264_lc`의 `adx_atr_soft_score` MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표)로 검토했고 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267W_build_true_internal_ablation_score_tables_from_reconstructed_surfaces`이다. Effect(효과): 재구축된 raw feature surface(원시 피처 표면)에 맞는 score table/model(점수표/모델)을 만든다.
+  Next action(다음 행동)는 `run267X_execute_true_internal_ablation_score_table_mt5_batch`이다. Effect(효과): 물질화된 score table/model(점수표/모델)을 MT5(MetaTrader 5, 메타트레이더5)로 실행해 거래/곡선/시간구간을 확인한다.
 - >-
   Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_run267T_pool_wide_orthogonal_stability_mt5_review_completed(267T 후보군 전체 직교 안정성 MT5 검토 완료 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
@@ -8723,9 +8725,9 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267V_upstream_feature_surface_reconstructed
-  current_run_id: run267V_stage267_reconstruct_upstream_feature_surface_v1
-  last_completed_run_id: run267V_stage267_reconstruct_upstream_feature_surface_v1
+  status: run267W_true_internal_ablation_score_tables_materialized_execution_pending
+  current_run_id: run267W_stage267_true_internal_ablation_score_table_materialization_v1
+  last_completed_run_id: run267W_stage267_true_internal_ablation_score_table_materialization_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
   source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_decision: stage266_planning_superseded_before_run_by_user_goal
@@ -8779,8 +8781,9 @@ stage267_baseline_candidate_racing_protocol:
   run267T_pool_wide_orthogonal_stability_mt5_review_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md
   run267U_true_internal_feature_ablation_design_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267U_true_internal_feature_ablation_design.md
   run267V_reconstruct_upstream_feature_surface_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md
+  run267W_true_internal_ablation_score_table_materialization_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267W_true_internal_ablation_score_table_materialization.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267W_build_true_internal_ablation_score_tables_from_reconstructed_surfaces
+  next_action: run267X_execute_true_internal_ablation_score_table_mt5_batch
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment

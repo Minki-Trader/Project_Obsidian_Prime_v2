@@ -76,6 +76,7 @@
 - run267T_pool_wide_orthogonal_stability_mt5_review(267T 후보군 전체 직교 안정성 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md`
 - run267U_true_internal_feature_ablation_design(267U 진짜 내부 피처 제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267U_true_internal_feature_ablation_design.md`
 - run267V_reconstruct_upstream_feature_surface(267V 상류 피처 표면 재구축): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md`
+- Stage267(267단계) run267W true internal ablation score table materialization(진짜 내부 제거 점수표 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267W_true_internal_ablation_score_table_materialization.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`

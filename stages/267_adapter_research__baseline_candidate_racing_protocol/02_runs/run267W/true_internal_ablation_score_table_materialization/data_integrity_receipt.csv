@@ -1,0 +1,10 @@
+﻿field,value
+data_source,Stage56 Tier A label surface rows=46650; run267V upstream 2024 surfaces
+time_axis,UTC timestamp for training; bar_time_server string for MT5 runtime 2024 feature CSV
+sample_scope,US100 M5 Tier A; train 2022-09-01 to 2024-12-31; validation/OOS retained for offline sanity
+missing_or_duplicate_check,duplicates=0;missing_labels=0;alignment_rows=24
+feature_label_boundary,uses label_v1_fwd12 split_v1 only; no MT5 PnL or weak-month outcome is a training label
+split_boundary,train/validation/OOS split_v1 preserved; 2024 runtime is train-era historical stress output
+leakage_risk,selection bias remains because variants were chosen after earlier Stage267 reviews; MT5 execution still required
+data_hash_or_identity,variant_manifest_path=stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv
+integrity_judgment,usable_with_boundary

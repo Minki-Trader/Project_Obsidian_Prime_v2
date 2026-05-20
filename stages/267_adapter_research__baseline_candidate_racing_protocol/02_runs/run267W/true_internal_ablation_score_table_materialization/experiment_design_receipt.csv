@@ -1,0 +1,12 @@
+﻿field,value
+hypothesis,true_internal_feature_order_ablation_can_restore_candidate_distinguishability_after_proxy_signature_collapse
+decision_use,materialize_MT5_attempt_inputs_only_no_candidate_selection
+comparison_baseline,run267N_proxy_adapter_variants_and_run267T_signature_collapse
+control_variables,US100;M5;label_v1;split_v1;Tier_A_training;2024_historical_stress_runtime_window
+changed_variables,feature_order;removed_feature_family;supervised_EBM_score_table_hash
+sample_scope,train/validation/OOS rows from label surface; runtime 2024 rows=11651
+success_criteria,24 score tables built with parity pass and runtime feature hashes
+failure_criteria,"missing raw feature, parity failure, time-axis mismatch, or no feature-order hash change for direct probes"
+invalid_conditions,2024 MT5 profit used as training target or label/split boundary changed
+stop_conditions,do_not_execute_MT5_if_any_model_or_feature_contract_missing
+evidence_plan,variant_manifest;runtime_contract;score_table_parity;surface_alignment;attempt_manifest;ledger_rows
