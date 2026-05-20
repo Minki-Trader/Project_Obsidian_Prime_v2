@@ -7,7 +7,7 @@
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
 - adapter_under_review(검토 중 어댑터): `none_pool_level_racing_protocol`
-- status(상태): `stage267_run267B_input_readiness_materialized_next_execution_pending`
+- status(상태): `stage267_run267B_equity_curve_shape_grading_completed_partial_next_execution_pending`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -48,11 +48,13 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) racing gap report(경주 공백 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_racing_gap_report.md`
 - Stage267(267단계) run267B input readiness report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - Stage267(267단계) prior research utilization audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
+- Stage267(267단계) equity curve shape grading(평가금 곡선 형태 판정): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_equity_curve_shape_grading.csv`
+- Stage267(267단계) equity curve shape report(평가금 곡선 형태 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_equity_curve_shape_grading_report.md`
 
 ## Current Next Action(현재 다음 행동)
 
 - next_run(다음 실행): `run267B_stage267_extended_period_ablation_probe_v1`
-- action(행동): 2024-style extended period test(2024년식 확장 기간 시험), feature/category ablation(피처/범주 제거), similar feature replacement(유사 피처 대체), and equity curve visual grading(평가금 곡선 시각 판정)의 입력 목록(input manifests, 입력 목록)을 물질화했다.
-- effect(효과): 후보군을 바로 ONNX(ONNX)로 보내지 않고, 다음 실행에서 넓은 조건으로 깨뜨려 볼 수 있는 공통 표면(common surface, 공통 표면)을 만든다.
+- action(행동): existing MT5 report(기존 MT5 보고서)의 balance path(잔액 경로)에서 first-pass equity curve shape grading(1차 평가금 곡선 형태 판정)을 완료했다.
+- effect(효과): 후보군을 바로 ONNX(ONNX)로 보내지 않고, 다음 실행에서 2024 historical stress(2024 과거 압박), full feature/category ablation(전체 피처/범주 제거), similar replacement(유사 대체), full/zoom visual review(전체/확대 시각 검토)를 어디부터 때릴지 좁힌다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).

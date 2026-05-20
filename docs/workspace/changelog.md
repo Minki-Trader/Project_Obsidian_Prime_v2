@@ -2054,3 +2054,9 @@
 - action(행동): materialized(물질화) `run267B_stage267_extended_period_ablation_probe_v1` input readiness(입력 준비) as manifest(목록), source feature manifest(원천 피처 목록), extended period plan(확장 기간 계획), feature ablation map(피처 제거 지도), similar replacement map(유사 대체 지도), equity report manifest(평가금 보고서 목록), and prior research utilization audit(이전 연구 활용 감사).
 - effect(효과): five Baseline candidates(다섯 기준 후보)를 바로 선택하지 않고, 2024 historical stress(2024 과거 압박), full feature/category ablation(전체 피처/범주 제거), similar feature replacement(유사 피처 대체), and equity full/zoom grading(평가금 전체/확대 판정)을 같은 판에서 실행할 준비를 남겼다.
 - boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`.
+
+## 2026-05-20T00:00:00Z Stage267 Run267B equity curve shape grading(267단계 267B 평가금 곡선 형태 판정)
+
+- action(행동): completed_partial(부분 완료) existing MT5 report balance path grading(기존 MT5 보고서 잔액 경로 판정) for five Baseline candidates(다섯 기준 후보) across validation/OOS(검증/표본외).
+- effect(효과): all ten candidate/split paths(후보/분할 경로 10개)가 `B_shape_watch`로 남았고, final below peak(마지막 고점 이탈)과 `s258_short_tight_control` OOS(표본외) DD/worst month(손실폭/최악 월)를 다음 검증 집중점으로 고정했다.
+- boundary(주장 경계): `research_development_only_no_selected_candidate_no_onnx_until_goal_gate`.
