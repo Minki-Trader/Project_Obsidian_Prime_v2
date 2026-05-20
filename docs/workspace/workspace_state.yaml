@@ -16,9 +16,9 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage267(267단계) run267B(267B 실행) equity curve shape grading(평가금 곡선 형태 판정) completed_partial(부분 완료). Effect(효과): existing MT5 reports(기존 MT5 보고서) 10개 balance path(잔액 경로)를 판정했고 all candidates(모든 후보)가 `B_shape_watch`로 남았으며, selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
+  Stage267(267단계) run267B(267B 실행) historical 2024 input materialization(2024 과거 압박 입력 산출물화) completed(완료). Effect(효과): Stage56 v41(56단계 v41) Tier A(티어 A) 2024 train-era(학습 기간) source signal(원천 신호)을 재생성했고 다섯 후보 모두 MT5 set/ini(MT5 설정/초기화) 10개를 만들었지만 selected candidate(선택 후보)나 ONNX readiness(ONNX 준비)는 주장하지 않는다.
 - >-
-  Next action(다음 행동)는 `run267B_stage267_extended_period_ablation_probe_v1` remaining execution pass(남은 실행 회차)다. Effect(효과): 2024-style extended period test(2024년식 확장 기간 시험)는 training-era historical stress(학습 기간 과거 압박)로 라벨링(labeling, 라벨링)하고, feature/category ablation(피처/범주 제거)과 similar feature replacement(유사 피처 대체)는 full 58-feature contract(전체 58개 피처 계약) 재물질화(rematerialization, 재물질화)가 필요하다는 경계를 지킨다.
+  Next action(다음 행동)는 `run267B_2024_historical_stress_mt5_execution`이다. Effect(효과): 2024-style extended period test(2024년식 확장 기간 시험)는 training-era historical stress(학습 기간 과거 압박)로 라벨링(labeling, 라벨링)하고, 실제 KPI(핵심 성과 지표)는 MT5 execution(MT5 실행) 후에만 판정한다.
 - >-
   Stage266(266단계) `266_adapter_research__late_segment_stability_repair_after_stage265_review` was superseded before run execution(실행 전 대체) by the user-directed long R&D racing goal(장기 연구개발 경주 목표), and Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` is active_input_readiness_materialized(입력 준비 물질화 활성). Effect(효과): a single-candidate late-segment repair(단일 후보 후반 구간 수리) no longer drives the next work; the five-candidate research baseline pool(연구 기준 후보군)이 같은 조건에서 비교된다.
 - >-
@@ -8697,7 +8697,7 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: initial_evidence_synthesis_completed_next_run_planned
+  status: run267B_historical_2024_input_materialized_mt5_execution_pending
   current_run_id: run267B_stage267_extended_period_ablation_probe_v1
   last_completed_run_id: run267A_stage267_baseline_candidate_racing_protocol_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
@@ -8709,8 +8709,11 @@ stage267_baseline_candidate_racing_protocol:
   monthly_weakness_matrix_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_monthly_weakness_matrix.csv
   segment_weakness_matrix_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_segment_weakness_matrix.csv
   racing_gap_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_racing_gap_report.md
+  historical_2024_manifest_path: stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/manifest.json
+  historical_2024_feature_manifest_path: stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features.csv
+  historical_2024_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_historical_2024_probe_report.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267B_stage267_extended_period_ablation_probe_v1
+  next_action: run267B_2024_historical_stress_mt5_execution
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
