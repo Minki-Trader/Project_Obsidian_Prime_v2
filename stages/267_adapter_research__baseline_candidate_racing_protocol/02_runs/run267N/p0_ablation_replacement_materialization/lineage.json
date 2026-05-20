@@ -1,0 +1,458 @@
+{
+  "artifact_paths": {
+    "attempt_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/attempts.csv",
+    "feature_diagnostics": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/feature_diagnostics.csv",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/run_manifest.json",
+    "runtime_contract": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/runtime_contract.csv",
+    "variant_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/p0_materialized_variant_manifest.csv"
+  },
+  "availability": "tracked_plus_common_files_copy(추적 산출물 + Common Files 복사)",
+  "consumer": "run267N_execute_pool_wide_ablation_replacement_p0_mt5_batch",
+  "lineage_judgment": "connected_with_boundary(경계付き 연결)",
+  "lineage_rows": [
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_01_s264_aih_abl_volatility_bandwidth/features/s264_aih_abl_volatility_bandwidth.csv",
+      "common_sha256": "e73a3ecbf94a379e2dec33679b2cdb0a4c28f1af73027e97bda978883762502d",
+      "queue_id": "run267N_01_s264_aih_abl_volatility_bandwidth",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_01_s264_aih_abl_volatility_bandwidth/features/s264_aih_abl_volatility_bandwidth.csv",
+      "run267n_sha256": "e73a3ecbf94a379e2dec33679b2cdb0a4c28f1af73027e97bda978883762502d",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_01_s264_aih_abl_volatility_bandwidth/models/s264_aih_abl_volatility_bandwidth_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_01_s264_aih_abl_volatility_bandwidth",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_01_s264_aih_abl_volatility_bandwidth/models/s264_aih_abl_volatility_bandwidth_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_02_s264_aih_abl_trend_strength_direction/features/s264_aih_abl_trend_strength_direction.csv",
+      "common_sha256": "b5b2185c10206e94d6103b1fb912c1e0ffc77bf358b1007ef0e771d8d7e1a34c",
+      "queue_id": "run267N_02_s264_aih_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_02_s264_aih_abl_trend_strength_direction/features/s264_aih_abl_trend_strength_direction.csv",
+      "run267n_sha256": "b5b2185c10206e94d6103b1fb912c1e0ffc77bf358b1007ef0e771d8d7e1a34c",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_02_s264_aih_abl_trend_strength_direction/models/s264_aih_abl_trend_strength_direction_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_02_s264_aih_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_02_s264_aih_abl_trend_strength_direction/models/s264_aih_abl_trend_strength_direction_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_03_s264_aih_rep_trend_strength_adx/features/s264_aih_rep_trend_strength_adx.csv",
+      "common_sha256": "5c0381f04626c4a6a1b03eaa15be6202ca2ab964fddd05b9788959043ac2ba51",
+      "queue_id": "run267N_03_s264_aih_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_03_s264_aih_rep_trend_strength_adx/features/s264_aih_rep_trend_strength_adx.csv",
+      "run267n_sha256": "5c0381f04626c4a6a1b03eaa15be6202ca2ab964fddd05b9788959043ac2ba51",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_03_s264_aih_rep_trend_strength_adx/models/s264_aih_rep_trend_strength_adx_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_03_s264_aih_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_03_s264_aih_rep_trend_strength_adx/models/s264_aih_rep_trend_strength_adx_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_04_s264_aih_rep_volatility_atr/features/s264_aih_rep_volatility_atr.csv",
+      "common_sha256": "f614ae2326c51a8b84c702a01a2287529f8069bc181bea033cb6236f5021220f",
+      "queue_id": "run267N_04_s264_aih_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_04_s264_aih_rep_volatility_atr/features/s264_aih_rep_volatility_atr.csv",
+      "run267n_sha256": "f614ae2326c51a8b84c702a01a2287529f8069bc181bea033cb6236f5021220f",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aih/run267n_04_s264_aih_rep_volatility_atr/models/s264_aih_rep_volatility_atr_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_04_s264_aih_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aih/run267n_04_s264_aih_rep_volatility_atr/models/s264_aih_rep_volatility_atr_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_05_s264_lc_abl_gate_rank_bucket/features/s264_lc_abl_gate_rank_bucket.csv",
+      "common_sha256": "48a5edb3ddab753fa375bf1505499e04c682b37f60d61a64d09aca1749a51ef7",
+      "queue_id": "run267N_05_s264_lc_abl_gate_rank_bucket",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_05_s264_lc_abl_gate_rank_bucket/features/s264_lc_abl_gate_rank_bucket.csv",
+      "run267n_sha256": "48a5edb3ddab753fa375bf1505499e04c682b37f60d61a64d09aca1749a51ef7",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_lc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_05_s264_lc_abl_gate_rank_bucket/models/s264_lc_abl_gate_rank_bucket_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "queue_id": "run267N_05_s264_lc_abl_gate_rank_bucket",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_05_s264_lc_abl_gate_rank_bucket/models/s264_lc_abl_gate_rank_bucket_model.csv",
+      "run267n_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_lc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_06_s264_lc_abl_gate_variant_rule/features/s264_lc_abl_gate_variant_rule.csv",
+      "common_sha256": "6f1a3c1dd083d5dff3766188bbe1ed838bc504af77c23cf8c7eef13ebf5ce0e7",
+      "queue_id": "run267N_06_s264_lc_abl_gate_variant_rule",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_06_s264_lc_abl_gate_variant_rule/features/s264_lc_abl_gate_variant_rule.csv",
+      "run267n_sha256": "6f1a3c1dd083d5dff3766188bbe1ed838bc504af77c23cf8c7eef13ebf5ce0e7",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_lc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_06_s264_lc_abl_gate_variant_rule/models/s264_lc_abl_gate_variant_rule_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "queue_id": "run267N_06_s264_lc_abl_gate_variant_rule",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_06_s264_lc_abl_gate_variant_rule/models/s264_lc_abl_gate_variant_rule_model.csv",
+      "run267n_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_lc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_07_s264_lc_abl_trend_strength_direction/features/s264_lc_abl_trend_strength_direction.csv",
+      "common_sha256": "0901f29c0e39504b32e786735553211fc431719f4e773f42a0d0ceb9f5d969a8",
+      "queue_id": "run267N_07_s264_lc_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_07_s264_lc_abl_trend_strength_direction/features/s264_lc_abl_trend_strength_direction.csv",
+      "run267n_sha256": "0901f29c0e39504b32e786735553211fc431719f4e773f42a0d0ceb9f5d969a8",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_lc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_07_s264_lc_abl_trend_strength_direction/models/s264_lc_abl_trend_strength_direction_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_07_s264_lc_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_07_s264_lc_abl_trend_strength_direction/models/s264_lc_abl_trend_strength_direction_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_lc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_08_s264_lc_rep_trend_strength_adx/features/s264_lc_rep_trend_strength_adx.csv",
+      "common_sha256": "0e21fd64227d903870a6b0abe78041fd611ffcf25c7ddb50dcfb97315f678dc6",
+      "queue_id": "run267N_08_s264_lc_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_08_s264_lc_rep_trend_strength_adx/features/s264_lc_rep_trend_strength_adx.csv",
+      "run267n_sha256": "0e21fd64227d903870a6b0abe78041fd611ffcf25c7ddb50dcfb97315f678dc6",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_lc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_08_s264_lc_rep_trend_strength_adx/models/s264_lc_rep_trend_strength_adx_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_08_s264_lc_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_08_s264_lc_rep_trend_strength_adx/models/s264_lc_rep_trend_strength_adx_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_lc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_09_s264_lc_rep_volatility_atr/features/s264_lc_rep_volatility_atr.csv",
+      "common_sha256": "832fb735d315c8fe6111a64714cb93365b94634ca1c1af00f76a0351dafcd58a",
+      "queue_id": "run267N_09_s264_lc_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_09_s264_lc_rep_volatility_atr/features/s264_lc_rep_volatility_atr.csv",
+      "run267n_sha256": "832fb735d315c8fe6111a64714cb93365b94634ca1c1af00f76a0351dafcd58a",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_lc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_lc/run267n_09_s264_lc_rep_volatility_atr/models/s264_lc_rep_volatility_atr_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_09_s264_lc_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_lc/run267n_09_s264_lc_rep_volatility_atr/models/s264_lc_rep_volatility_atr_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_lc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_10_s262_lih_abl_gate_rank_bucket/features/s262_lih_abl_gate_rank_bucket.csv",
+      "common_sha256": "ddd585aae8be942763110c8acfa83112c8c7670457d81ef685dcc2c633fdeaad",
+      "queue_id": "run267N_10_s262_lih_abl_gate_rank_bucket",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_10_s262_lih_abl_gate_rank_bucket/features/s262_lih_abl_gate_rank_bucket.csv",
+      "run267n_sha256": "ddd585aae8be942763110c8acfa83112c8c7670457d81ef685dcc2c633fdeaad",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s262_lih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_10_s262_lih_abl_gate_rank_bucket/models/s262_lih_abl_gate_rank_bucket_model.csv",
+      "common_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "queue_id": "run267N_10_s262_lih_abl_gate_rank_bucket",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_10_s262_lih_abl_gate_rank_bucket/models/s262_lih_abl_gate_rank_bucket_model.csv",
+      "run267n_sha256": "5df52c60031e899e5df948eadad98ea84fe7a5a9c4ed0129c20e026e01f59482",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s262_lih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_11_s262_lih_abl_ma_trend/features/s262_lih_abl_ma_trend.csv",
+      "common_sha256": "623f09ae55301baf386fff8ecf99e323ebd4229ecb0b895346bd19d1e050b887",
+      "queue_id": "run267N_11_s262_lih_abl_ma_trend",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_11_s262_lih_abl_ma_trend/features/s262_lih_abl_ma_trend.csv",
+      "run267n_sha256": "623f09ae55301baf386fff8ecf99e323ebd4229ecb0b895346bd19d1e050b887",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s262_lih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_11_s262_lih_abl_ma_trend/models/s262_lih_abl_ma_trend_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_11_s262_lih_abl_ma_trend",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_11_s262_lih_abl_ma_trend/models/s262_lih_abl_ma_trend_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s262_lih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_12_s262_lih_abl_trend_strength_direction/features/s262_lih_abl_trend_strength_direction.csv",
+      "common_sha256": "909ee5bc045dd1136d7519bf4185b02128b909f0726420bde7424ed0cb771eae",
+      "queue_id": "run267N_12_s262_lih_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_12_s262_lih_abl_trend_strength_direction/features/s262_lih_abl_trend_strength_direction.csv",
+      "run267n_sha256": "909ee5bc045dd1136d7519bf4185b02128b909f0726420bde7424ed0cb771eae",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s262_lih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_12_s262_lih_abl_trend_strength_direction/models/s262_lih_abl_trend_strength_direction_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_12_s262_lih_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_12_s262_lih_abl_trend_strength_direction/models/s262_lih_abl_trend_strength_direction_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s262_lih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_13_s262_lih_rep_trend_strength_adx/features/s262_lih_rep_trend_strength_adx.csv",
+      "common_sha256": "4a1346c534dfeea32974a8f12e62cbfb8a3e402290b33f601e5cc53144e86ee4",
+      "queue_id": "run267N_13_s262_lih_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_13_s262_lih_rep_trend_strength_adx/features/s262_lih_rep_trend_strength_adx.csv",
+      "run267n_sha256": "4a1346c534dfeea32974a8f12e62cbfb8a3e402290b33f601e5cc53144e86ee4",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s262_lih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_13_s262_lih_rep_trend_strength_adx/models/s262_lih_rep_trend_strength_adx_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_13_s262_lih_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_13_s262_lih_rep_trend_strength_adx/models/s262_lih_rep_trend_strength_adx_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s262_lih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_14_s262_lih_rep_volatility_atr/features/s262_lih_rep_volatility_atr.csv",
+      "common_sha256": "e6b55db87ddc7d6fe8322dc3b1146b295c0e699be04b49585df3744f11d890f0",
+      "queue_id": "run267N_14_s262_lih_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_14_s262_lih_rep_volatility_atr/features/s262_lih_rep_volatility_atr.csv",
+      "run267n_sha256": "e6b55db87ddc7d6fe8322dc3b1146b295c0e699be04b49585df3744f11d890f0",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s262_lih.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s262_lih/run267n_14_s262_lih_rep_volatility_atr/models/s262_lih_rep_volatility_atr_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_14_s262_lih_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s262_lih/run267n_14_s262_lih_rep_volatility_atr/models/s262_lih_rep_volatility_atr_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s262_lih_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_15_s264_aia_abl_volatility_bandwidth/features/s264_aia_abl_volatility_bandwidth.csv",
+      "common_sha256": "f21cc96bb47f05d6d1af6cd66631f3d0a512204da92268a7510fbe7e545e4dc0",
+      "queue_id": "run267N_15_s264_aia_abl_volatility_bandwidth",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_15_s264_aia_abl_volatility_bandwidth/features/s264_aia_abl_volatility_bandwidth.csv",
+      "run267n_sha256": "f21cc96bb47f05d6d1af6cd66631f3d0a512204da92268a7510fbe7e545e4dc0",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aia.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_15_s264_aia_abl_volatility_bandwidth/models/s264_aia_abl_volatility_bandwidth_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_15_s264_aia_abl_volatility_bandwidth",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_15_s264_aia_abl_volatility_bandwidth/models/s264_aia_abl_volatility_bandwidth_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aia_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_16_s264_aia_abl_trend_strength_direction/features/s264_aia_abl_trend_strength_direction.csv",
+      "common_sha256": "7173dee539374d547b9e60350eee6f44722a3f74b3f53557ae871221eb216dec",
+      "queue_id": "run267N_16_s264_aia_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_16_s264_aia_abl_trend_strength_direction/features/s264_aia_abl_trend_strength_direction.csv",
+      "run267n_sha256": "7173dee539374d547b9e60350eee6f44722a3f74b3f53557ae871221eb216dec",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aia.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_16_s264_aia_abl_trend_strength_direction/models/s264_aia_abl_trend_strength_direction_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_16_s264_aia_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_16_s264_aia_abl_trend_strength_direction/models/s264_aia_abl_trend_strength_direction_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aia_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_17_s264_aia_abl_session_timing/features/s264_aia_abl_session_timing.csv",
+      "common_sha256": "19c5f8323ca529afb1fbe361fba32f022efc606b17618fb922b74a2dd1b51c41",
+      "queue_id": "run267N_17_s264_aia_abl_session_timing",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_17_s264_aia_abl_session_timing/features/s264_aia_abl_session_timing.csv",
+      "run267n_sha256": "19c5f8323ca529afb1fbe361fba32f022efc606b17618fb922b74a2dd1b51c41",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aia.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_17_s264_aia_abl_session_timing/models/s264_aia_abl_session_timing_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_17_s264_aia_abl_session_timing",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_17_s264_aia_abl_session_timing/models/s264_aia_abl_session_timing_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aia_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_18_s264_aia_rep_trend_strength_adx/features/s264_aia_rep_trend_strength_adx.csv",
+      "common_sha256": "8def7b427403649f750708d3ff20e73f81a501c7dd3370a03425e82a8be7162b",
+      "queue_id": "run267N_18_s264_aia_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_18_s264_aia_rep_trend_strength_adx/features/s264_aia_rep_trend_strength_adx.csv",
+      "run267n_sha256": "8def7b427403649f750708d3ff20e73f81a501c7dd3370a03425e82a8be7162b",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aia.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_18_s264_aia_rep_trend_strength_adx/models/s264_aia_rep_trend_strength_adx_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_18_s264_aia_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_18_s264_aia_rep_trend_strength_adx/models/s264_aia_rep_trend_strength_adx_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aia_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_19_s264_aia_rep_volatility_atr/features/s264_aia_rep_volatility_atr.csv",
+      "common_sha256": "2cf8ec33b94bf6ca7bc72889c22b6dd1cebbb7a08820aa819bec315728e8607a",
+      "queue_id": "run267N_19_s264_aia_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_19_s264_aia_rep_volatility_atr/features/s264_aia_rep_volatility_atr.csv",
+      "run267n_sha256": "2cf8ec33b94bf6ca7bc72889c22b6dd1cebbb7a08820aa819bec315728e8607a",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s264_aia.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s264_aia/run267n_19_s264_aia_rep_volatility_atr/models/s264_aia_rep_volatility_atr_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_19_s264_aia_rep_volatility_atr",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s264_aia/run267n_19_s264_aia_rep_volatility_atr/models/s264_aia_rep_volatility_atr_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s264_aia_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_20_s258_stc_abl_price_return_range/features/s258_stc_abl_price_return_range.csv",
+      "common_sha256": "3954d0c7691a038fe2aa1afaacc366f4b9be690b466e1963a0089a4016920e5e",
+      "queue_id": "run267N_20_s258_stc_abl_price_return_range",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_20_s258_stc_abl_price_return_range/features/s258_stc_abl_price_return_range.csv",
+      "run267n_sha256": "3954d0c7691a038fe2aa1afaacc366f4b9be690b466e1963a0089a4016920e5e",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s258_stc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_20_s258_stc_abl_price_return_range/models/s258_stc_abl_price_return_range_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_20_s258_stc_abl_price_return_range",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_20_s258_stc_abl_price_return_range/models/s258_stc_abl_price_return_range_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s258_stc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_21_s258_stc_abl_volatility_bandwidth/features/s258_stc_abl_volatility_bandwidth.csv",
+      "common_sha256": "ec6686d60f93ac0f3c9f8d1f587242ac123fbc6de5fcfada40556b08a8e07061",
+      "queue_id": "run267N_21_s258_stc_abl_volatility_bandwidth",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_21_s258_stc_abl_volatility_bandwidth/features/s258_stc_abl_volatility_bandwidth.csv",
+      "run267n_sha256": "ec6686d60f93ac0f3c9f8d1f587242ac123fbc6de5fcfada40556b08a8e07061",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s258_stc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_21_s258_stc_abl_volatility_bandwidth/models/s258_stc_abl_volatility_bandwidth_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_21_s258_stc_abl_volatility_bandwidth",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_21_s258_stc_abl_volatility_bandwidth/models/s258_stc_abl_volatility_bandwidth_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s258_stc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_22_s258_stc_abl_trend_strength_direction/features/s258_stc_abl_trend_strength_direction.csv",
+      "common_sha256": "0ee76d65950bdf06180abfb15f37edab71059f3dec6cdcb51a0e277a0ae6cd8a",
+      "queue_id": "run267N_22_s258_stc_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_22_s258_stc_abl_trend_strength_direction/features/s258_stc_abl_trend_strength_direction.csv",
+      "run267n_sha256": "0ee76d65950bdf06180abfb15f37edab71059f3dec6cdcb51a0e277a0ae6cd8a",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s258_stc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_22_s258_stc_abl_trend_strength_direction/models/s258_stc_abl_trend_strength_direction_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_22_s258_stc_abl_trend_strength_direction",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_22_s258_stc_abl_trend_strength_direction/models/s258_stc_abl_trend_strength_direction_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s258_stc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_23_s258_stc_abl_session_timing/features/s258_stc_abl_session_timing.csv",
+      "common_sha256": "a90ae3776b010d53b7401d1b8592f7315b3d1af684fa7497607b6330c3e53544",
+      "queue_id": "run267N_23_s258_stc_abl_session_timing",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_23_s258_stc_abl_session_timing/features/s258_stc_abl_session_timing.csv",
+      "run267n_sha256": "a90ae3776b010d53b7401d1b8592f7315b3d1af684fa7497607b6330c3e53544",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s258_stc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_23_s258_stc_abl_session_timing/models/s258_stc_abl_session_timing_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_23_s258_stc_abl_session_timing",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_23_s258_stc_abl_session_timing/models/s258_stc_abl_session_timing_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s258_stc_model.csv"
+    },
+    {
+      "artifact_role": "feature_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_24_s258_stc_rep_trend_strength_adx/features/s258_stc_rep_trend_strength_adx.csv",
+      "common_sha256": "889177a23a420422db2f91fada107d6ed61540ea63ea788955e90b20f06512e2",
+      "queue_id": "run267N_24_s258_stc_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_24_s258_stc_rep_trend_strength_adx/features/s258_stc_rep_trend_strength_adx.csv",
+      "run267n_sha256": "889177a23a420422db2f91fada107d6ed61540ea63ea788955e90b20f06512e2",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features/s258_stc.csv"
+    },
+    {
+      "artifact_role": "model_csv",
+      "common_path": "OPV2/s267n/run267N_p0_ablation_replacement/s258_stc/run267n_24_s258_stc_rep_trend_strength_adx/models/s258_stc_rep_trend_strength_adx_model.csv",
+      "common_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "queue_id": "run267N_24_s258_stc_rep_trend_strength_adx",
+      "run267n_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267N/p0_ablation_replacement_materialization/variants/s258_stc/run267n_24_s258_stc_rep_trend_strength_adx/models/s258_stc_rep_trend_strength_adx_model.csv",
+      "run267n_sha256": "8ccd93e40603631f49390554d32005821aec9b160212bcd3173fbde4dd8649fe",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/models/s258_stc_model.csv"
+    }
+  ],
+  "producer": "stage_pipelines/stage267/run267N_pool_wide_ablation_replacement_materialization.py",
+  "registry_links": [
+    "artifact_registry.csv",
+    "run_registry.csv",
+    "alpha_run_ledger.csv",
+    "stage_run_ledger.csv"
+  ],
+  "source_inputs": [
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267M/pool_wide_ablation_replacement_design/p0_materialization_queue.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267M/pool_wide_ablation_replacement_design/ablation_replacement_matrix.csv",
+    "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/historical_2024/features.csv"
+  ]
+}
