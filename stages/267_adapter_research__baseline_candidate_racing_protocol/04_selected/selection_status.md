@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267R_internal_adapter_stability_followup_or_prune_completed`
+- stage_status(단계 상태): `run267S_pool_wide_orthogonal_stability_racing_matrix_materialized`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267R_stage267_internal_adapter_stability_followup_or_prune_v1`
-- last_completed_run(마지막 완료 실행): `run267R_stage267_internal_adapter_stability_followup_or_prune_v1`
+- current_run(현재 실행): `run267S_stage267_pool_wide_orthogonal_stability_racing_matrix_v1`
+- last_completed_run(마지막 완료 실행): `run267S_stage267_pool_wide_orthogonal_stability_racing_matrix_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -63,7 +63,8 @@
 - run267Q_internal_feature_order_confirmed_adapter_mt5_execution(267Q 내부 피처 순서 확인 어댑터 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_execution.md`
 - run267Q_internal_feature_order_confirmed_adapter_mt5_review(267Q 내부 피처 순서 확인 어댑터 MT5 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Q_internal_feature_order_confirmed_adapter_mt5_review.md`
 - run267R_internal_adapter_stability_followup_or_prune(267R 내부 어댑터 안정성 후속/가지치기): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267R_internal_adapter_stability_followup_or_prune.md`
-- next_action(다음 행동): `run267S_materialize_pool_wide_orthogonal_stability_racing_matrix`
+- run267S_pool_wide_orthogonal_stability_racing_matrix(267S 후보군 전체 직교 안정성 경주 행렬): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267S_pool_wide_orthogonal_stability_racing_matrix.md`
+- next_action(다음 행동): `run267T_build_pool_wide_orthogonal_stability_mt5_attempts`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -86,3 +87,6 @@ Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N �
 Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
 Run267Q(267Q 실행)는 internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토)를 완료했다.
 Effect(효과): MT5(MetaTrader 5, 메타트레이더5)에서 run267N(267N 실행) 원천 표면을 재현했지만, 변형 차이가 후보별로 접혀 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
+
+Run267S(267S 실행)는 후보군 전체 직교 안정성 경주 행렬을 물질화했다.
+Effect(효과): selected candidate(선택 후보) 없이 다음 MT5(MetaTrader 5, 메타트레이더5) 물질화/실행 큐로 넘어갈 수 있게 후보, 축, 실패 기억, 중단 조건을 연결했다.
