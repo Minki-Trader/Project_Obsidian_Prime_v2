@@ -1,6 +1,6 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267N_pool_wide_ablation_replacement_materialized_execution_pending`
+- stage_status(단계 상태): `run267N_pool_wide_ablation_replacement_kpi_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
 - current_run(현재 실행): `run267N_stage267_pool_wide_ablation_replacement_materialization_v1`
 - last_completed_run(마지막 완료 실행): `run267N_stage267_pool_wide_ablation_replacement_materialization_v1`
@@ -55,7 +55,9 @@
 - run267L_retrained_soft_context_followup_or_prune(267L 재학습 부드러운 문맥 후속/가지치기): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md`
 - run267M_pool_wide_ablation_replacement_design(267M 후보군 전체 제거/대체 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`
 - run267N_pool_wide_ablation_replacement_materialization(267N 후보군 전체 제거/대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`
-- next_action(다음 행동): `run267N_execute_pool_wide_ablation_replacement_p0_mt5_batch`
+- run267N_pool_wide_ablation_replacement_mt5_execution(267N 후보군 전체 제거/대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_mt5_execution.md`
+- run267N_pool_wide_ablation_replacement_kpi_review(267N 후보군 전체 제거/대체 KPI 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_kpi_review.md`
+- next_action(다음 행동): `run267O_pool_wide_balance_timeslice_trade_quality_review`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -71,4 +73,4 @@ Run267M(267M 실행)는 다섯 Baseline candidates(기준 후보) 전체의 abla
 Effect(효과): selected candidate(선택 후보)는 없고, 후보군 전체 P0 물질화로 넘어갔다.
 
 Run267N(267N 실행)는 다섯 Baseline candidates(기준 후보)의 P0 ablation/replacement(우선 제거/대체)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
-Effect(효과): selected candidate(선택 후보)는 여전히 없고, next_action(다음 행동)은 `run267N_execute_pool_wide_ablation_replacement_p0_mt5_batch`이다.
+Effect(효과): selected candidate(선택 후보)는 여전히 없고, next_action(다음 행동)은 `run267O_pool_wide_balance_timeslice_trade_quality_review`이다.

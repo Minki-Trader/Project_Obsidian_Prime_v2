@@ -6,8 +6,8 @@
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `pool_wide_ablation_replacement_p0_materialization`
-- status(상태): `run267N_pool_wide_ablation_replacement_materialized_execution_pending`
+- adapter_under_review(검토 중 어댑터): `pool_wide_ablation_replacement_p0_kpi_review`
+- status(상태): `run267N_pool_wide_ablation_replacement_kpi_review_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -92,8 +92,11 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267L retrained soft-context follow-up/prune(재학습 부드러운 문맥 후속/가지치기): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267L_retrained_soft_context_followup_or_prune.md`
 - Stage267(267단계) run267M pool-wide ablation/replacement design(후보군 전체 제거/대체 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`
 - Stage267(267단계) run267N pool-wide P0 materialization(후보군 전체 P0 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`
+- Stage267(267단계) run267N pool-wide P0 MT5 execution(후보군 전체 P0 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_mt5_execution.md`
+- Stage267(267단계) run267N pool-wide P0 KPI review(후보군 전체 P0 KPI 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_kpi_review.md`
 
 ## Current Next Action(현재 다음 행동)
+- latest_mt5_execution(최신 MT5 실행): attempts(시도) `48` of `48`, KPI records(핵심 성과 지표 기록) `48`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_mt5_execution.md`.
 - latest_mt5_execution(최신 MT5 실행): attempts(시도) `4`, KPI records(핵심 성과 지표 기록) `4`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_execution.md`.
 - latest_mt5_review(최신 MT5 검토): review rows(검토 행) `2`, negative slices(음수 구간) `18`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_mt5_review.md`.
 - latest_materialization(최신 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267K_retrained_soft_context_adapter_materialization.md`.
@@ -101,10 +104,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267N_execute_pool_wide_ablation_replacement_p0_mt5_batch`
-- action(행동): run267N(267N 실행)는 run267M(267M 실행)의 P0 queue(P0 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
-- effect(효과): 다음 작업은 같은 후보군의 P0 변형을 MT5(MetaTrader 5, 메타트레이더5)에서 실행해 누가 덜 깨지는지 확인할 수 있다.
-- next_action(다음 행동): `run267N_execute_pool_wide_ablation_replacement_p0_mt5_batch`. Effect(효과): 물질화된 P0 attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5) 묶음 실행으로 넘긴다.
+- next_run(다음 실행): `run267O_pool_wide_balance_timeslice_trade_quality_review`
+- action(행동): run267N(267N 실행)는 48개 MT5(MetaTrader 5, 메타트레이더5) KPI(핵심 성과 지표)를 baseline(기준) 2024 KPI와 비교했다.
+- effect(효과): 다음 작업은 balance/equity curve(잔액/평가금 곡선), trade quality(거래 품질), time-slice KPI(시간 구간 핵심 성과 지표)로 KPI 단서를 압박 검토하는 것이다.
+- next_action(다음 행동): `run267O_pool_wide_balance_timeslice_trade_quality_review`. Effect(효과): KPI 단서를 balance/equity curve(잔액/평가금 곡선), trade quality(거래 품질), time-slice KPI(시간 구간 핵심 성과 지표)로 검토한다.
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -121,4 +124,4 @@ Run267M(267M 실행)는 다섯 Baseline candidates(기준 후보) 전체의 abla
 Effect(효과): 다음 행동을 한 후보 미세 수리가 아니라 후보군 전체 P0 물질화로 전환했다.
 
 Run267N(267N 실행)는 run267M(267M 실행)의 P0 queue(P0 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
-Effect(효과): 다음 행동(next action, 다음 행동)은 `run267N_execute_pool_wide_ablation_replacement_p0_mt5_batch`이고, 아직 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 없다.
+Effect(효과): 다음 행동(next action, 다음 행동)은 `run267O_pool_wide_balance_timeslice_trade_quality_review`이고, 아직 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 없다.
