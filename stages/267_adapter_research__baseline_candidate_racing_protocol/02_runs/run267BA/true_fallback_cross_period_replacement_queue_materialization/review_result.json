@@ -1,0 +1,869 @@
+{
+  "adapter_hold_audit": [
+    {
+      "check_id": "run267BA_adapter_hold_01",
+      "effect": "prevents Adapter implementation from starting while route and replacement evidence are still moving",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_readiness_status.csv",
+      "readiness_item": "true_fallback_route",
+      "reason": "fallback used count and component rows are not separable yet",
+      "status": "blocked"
+    },
+    {
+      "check_id": "run267BA_adapter_hold_02",
+      "effect": "prevents Adapter implementation from starting while route and replacement evidence are still moving",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/cross_period_replacement_queue.csv",
+      "readiness_item": "cross_period_replacement",
+      "reason": "Tier A 2024 replacement references exist, non-2024 period frames are still pending",
+      "status": "partial"
+    },
+    {
+      "check_id": "run267BA_adapter_hold_03",
+      "effect": "prevents Adapter implementation from starting while route and replacement evidence are still moving",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv",
+      "readiness_item": "feature_order_and_model_hash",
+      "reason": "true internal replacement artifacts have feature order hashes, but route evidence is not stable",
+      "status": "partial"
+    },
+    {
+      "check_id": "run267BA_adapter_hold_04",
+      "effect": "prevents Adapter implementation from starting while route and replacement evidence are still moving",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AY/pool_wide_state_feature_engineering_second_followup_balance_timeslice_trade_quality_review/candidate_second_followup_review.csv",
+      "readiness_item": "risk_atr_runtime_handoff",
+      "reason": "risk and ATR effects must be rechecked after replacement execution",
+      "status": "held"
+    },
+    {
+      "check_id": "run267BA_adapter_hold_05",
+      "effect": "prevents Adapter implementation from starting while route and replacement evidence are still moving",
+      "evidence": "",
+      "readiness_item": "onnx_parity",
+      "reason": "ONNX review stays closed until the long goal gate has strong evidence",
+      "status": "not_allowed"
+    }
+  ],
+  "artifact_hashes": {
+    "producer": "80ce4dd62890d7d1b039c629df777b2f73dd54b7f33f3412dd8c687c96fbbef5",
+    "source_candidate_decision": "c8f498d4ab8442ab48549d52722cc44a4c875c977efad5e476ce9620279e0446",
+    "source_failure_memory": "455793229ab87ca9dc6b56aabd5327b025632d10c53c712e7dc8381171ae1398",
+    "source_prior_research_audit": "e4aedd7c267dc86ae5c32c510e42133d890a4260b6f79be5c8ca16e729b0b21f",
+    "source_queue": "29da189237538377f661e7e7ceb4d830722786db7f6f821b7ea530e7f0ec5dc7",
+    "source_route_gap_audit": "71c2774e4ec1194155edb29ddeb1df28bd875407b6c7404bd37f64db97088601",
+    "source_true_internal_attempt": "268114dab7270401b63db3167fd8b48ca30e95beda9d32d118656523555b6379",
+    "source_true_internal_variant": "8fcacc4233f5970f19c7d62653de158772784e62fedff5f019c4af77fce9e026"
+  },
+  "candidate_role_filter": [
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "deep_negative_slice_count": "4",
+      "onnx_readiness": "not_claimed",
+      "run267AZ_decision": "conditional_challenger_hold_no_third_same_repair(조건부 도전자 보류, 같은 3차 수리 금지)",
+      "run267BA_lane": "active_replacement_and_route_probe",
+      "run267BA_use": "keep only for true fallback, similar replacement, and cross-period checks",
+      "selected_candidate": "none",
+      "worst_slice_axis": "month",
+      "worst_slice_bucket": "2024-12",
+      "worst_slice_net_min": "-232.8"
+    },
+    {
+      "candidate_alias": "s264_lc",
+      "candidate_id": "s264_lowrank_control",
+      "candidate_role": "defensive_control",
+      "deep_negative_slice_count": "2",
+      "onnx_readiness": "not_claimed",
+      "run267AZ_decision": "defensive_control_only_after_source_regression(원천 후퇴 뒤 방어 기준 전용)",
+      "run267BA_lane": "defensive_control_reference",
+      "run267BA_use": "use as defensive control after source regression",
+      "selected_candidate": "none",
+      "worst_slice_axis": "weekday",
+      "worst_slice_bucket": "Monday",
+      "worst_slice_net_min": "-233.05"
+    },
+    {
+      "candidate_alias": "s262_lih",
+      "candidate_id": "s262_lowrank_inner_half_filter",
+      "candidate_role": "validation_heavy",
+      "deep_negative_slice_count": "2",
+      "onnx_readiness": "not_claimed",
+      "run267AZ_decision": "validation_control_only_after_repeat_hole(반복 구멍 뒤 검증 기준 전용)",
+      "run267BA_lane": "validation_control_reference",
+      "run267BA_use": "use as validation-heavy control only",
+      "selected_candidate": "none",
+      "worst_slice_axis": "weekday",
+      "worst_slice_bucket": "Monday",
+      "worst_slice_net_min": "-245.93"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "deep_negative_slice_count": "2",
+      "onnx_readiness": "not_claimed",
+      "run267AZ_decision": "adapter_watch_held_until_slice_gate(구간 게이트 전 어댑터 관찰 보류)",
+      "run267BA_lane": "active_replacement_and_route_probe",
+      "run267BA_use": "keep only for true fallback, similar replacement, and cross-period checks",
+      "selected_candidate": "none",
+      "worst_slice_axis": "weekday",
+      "worst_slice_bucket": "Monday",
+      "worst_slice_net_min": "-260.2"
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "deep_negative_slice_count": "3",
+      "onnx_readiness": "not_claimed",
+      "run267AZ_decision": "stress_challenger_prune_or_wide_rescue(압박 도전자 가지치기 또는 넓은 회수)",
+      "run267BA_lane": "stress_replacement_probe",
+      "run267BA_use": "keep as stress challenger, not as selected candidate",
+      "selected_candidate": "none",
+      "worst_slice_axis": "weekday",
+      "worst_slice_bucket": "Monday",
+      "worst_slice_net_min": "-283.04"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "counts": {
+    "adapter_hold_rows": 5,
+    "candidate_decision_rows": 5,
+    "candidate_filter_rows": 5,
+    "failure_memory_rows": 7,
+    "fallback_requirement_rows": 10,
+    "fallback_status_rows": 3,
+    "materialization_queue_rows": 5,
+    "ready_attempt_reference_rows": 10,
+    "replacement_rows": 5,
+    "route_gap_rows": 1,
+    "source_queue_rows": 5,
+    "true_internal_attempt_rows": 48,
+    "true_internal_variant_rows": 24
+  },
+  "created_at_utc": "2026-05-21T09:09:17Z",
+  "cross_period_replacement_queue": [
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "claim_boundary": "replacement_queue_only_no_selected_candidate_no_ONNX",
+      "cross_period_status": "non_2024_period_not_materialized_yet",
+      "execution_use": "run267BB may execute or clone only the Tier A reference-ready subset; routed rows remain boundary evidence",
+      "feature_family": "trend_strength(추세 강도)",
+      "feature_order_hash": "129ce96a0e184682383602f54ff8edc3acd50fa26339a71c61328c13214c27cd",
+      "materialization_id": "run267BA_replacement_01",
+      "ready_status": "tier_a_2024_reference_ready_cross_period_frame_required",
+      "routed_attempt_boundary": "run267w_03_s264_aih_rep_trend_strength_adx_rt_2024",
+      "routed_status": "not_true_fallback_evidence_until_manifest_fields_exist",
+      "runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aih/run267w_03_s264_aih_rep_trend_strength_adx/features/s264_aih_rep_trend_strength_adx_true_internal.csv",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aih/run267w_03_s264_aih_rep_trend_strength_adx/models/s264_aih_rep_trend_strength_adx_true_internal_model.csv",
+      "source_queue_id": "run267AZ_q02_cross_period_similar_feature_replacement",
+      "source_true_internal_queue_id": "run267W_03_s264_aih_rep_trend_strength_adx",
+      "test_id": "rep_trend_strength_adx",
+      "tier_a_2024_attempt": "run267w_03_s264_aih_rep_trend_strength_adx_ta_2024",
+      "tier_a_2024_set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_03_s264_aih_rep_trend_strength_adx_ta_2024.set"
+    },
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "claim_boundary": "replacement_queue_only_no_selected_candidate_no_ONNX",
+      "cross_period_status": "non_2024_period_not_materialized_yet",
+      "execution_use": "run267BB may execute or clone only the Tier A reference-ready subset; routed rows remain boundary evidence",
+      "feature_family": "volatility_risk(변동성 위험)",
+      "feature_order_hash": "9a73828f6d51f71329536d8603e4ca27dcaa4c63ad7f6b254f7a293d899dd00d",
+      "materialization_id": "run267BA_replacement_02",
+      "ready_status": "tier_a_2024_reference_ready_cross_period_frame_required",
+      "routed_attempt_boundary": "run267w_04_s264_aih_rep_volatility_atr_rt_2024",
+      "routed_status": "not_true_fallback_evidence_until_manifest_fields_exist",
+      "runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aih/run267w_04_s264_aih_rep_volatility_atr/features/s264_aih_rep_volatility_atr_true_internal.csv",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aih/run267w_04_s264_aih_rep_volatility_atr/models/s264_aih_rep_volatility_atr_true_internal_model.csv",
+      "source_queue_id": "run267AZ_q02_cross_period_similar_feature_replacement",
+      "source_true_internal_queue_id": "run267W_04_s264_aih_rep_volatility_atr",
+      "test_id": "rep_volatility_atr",
+      "tier_a_2024_attempt": "run267w_04_s264_aih_rep_volatility_atr_ta_2024",
+      "tier_a_2024_set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_04_s264_aih_rep_volatility_atr_ta_2024.set"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "replacement_queue_only_no_selected_candidate_no_ONNX",
+      "cross_period_status": "non_2024_period_not_materialized_yet",
+      "execution_use": "run267BB may execute or clone only the Tier A reference-ready subset; routed rows remain boundary evidence",
+      "feature_family": "trend_strength(추세 강도)",
+      "feature_order_hash": "3fa971741f7384c060223564505aa4e6fc5a87ace83bf50c8e82bc4f01fa4a2e",
+      "materialization_id": "run267BA_replacement_03",
+      "ready_status": "tier_a_2024_reference_ready_cross_period_frame_required",
+      "routed_attempt_boundary": "run267w_18_s264_aia_rep_trend_strength_adx_rt_2024",
+      "routed_status": "not_true_fallback_evidence_until_manifest_fields_exist",
+      "runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aia/run267w_18_s264_aia_rep_trend_strength_adx/features/s264_aia_rep_trend_strength_adx_true_internal.csv",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aia/run267w_18_s264_aia_rep_trend_strength_adx/models/s264_aia_rep_trend_strength_adx_true_internal_model.csv",
+      "source_queue_id": "run267AZ_q02_cross_period_similar_feature_replacement",
+      "source_true_internal_queue_id": "run267W_18_s264_aia_rep_trend_strength_adx",
+      "test_id": "rep_trend_strength_adx",
+      "tier_a_2024_attempt": "run267w_18_s264_aia_rep_trend_strength_adx_ta_2024",
+      "tier_a_2024_set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_18_s264_aia_rep_trend_strength_adx_ta_2024.set"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "replacement_queue_only_no_selected_candidate_no_ONNX",
+      "cross_period_status": "non_2024_period_not_materialized_yet",
+      "execution_use": "run267BB may execute or clone only the Tier A reference-ready subset; routed rows remain boundary evidence",
+      "feature_family": "volatility_risk(변동성 위험)",
+      "feature_order_hash": "057a939561d360f5b6f80e7e505f4ded89da87cb4f89dec12bf23756e6199274",
+      "materialization_id": "run267BA_replacement_04",
+      "ready_status": "tier_a_2024_reference_ready_cross_period_frame_required",
+      "routed_attempt_boundary": "run267w_19_s264_aia_rep_volatility_atr_rt_2024",
+      "routed_status": "not_true_fallback_evidence_until_manifest_fields_exist",
+      "runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aia/run267w_19_s264_aia_rep_volatility_atr/features/s264_aia_rep_volatility_atr_true_internal.csv",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s264_aia/run267w_19_s264_aia_rep_volatility_atr/models/s264_aia_rep_volatility_atr_true_internal_model.csv",
+      "source_queue_id": "run267AZ_q02_cross_period_similar_feature_replacement",
+      "source_true_internal_queue_id": "run267W_19_s264_aia_rep_volatility_atr",
+      "test_id": "rep_volatility_atr",
+      "tier_a_2024_attempt": "run267w_19_s264_aia_rep_volatility_atr_ta_2024",
+      "tier_a_2024_set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_19_s264_aia_rep_volatility_atr_ta_2024.set"
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "claim_boundary": "replacement_queue_only_no_selected_candidate_no_ONNX",
+      "cross_period_status": "non_2024_period_not_materialized_yet",
+      "execution_use": "run267BB may execute or clone only the Tier A reference-ready subset; routed rows remain boundary evidence",
+      "feature_family": "trend_strength(추세 강도)",
+      "feature_order_hash": "d2bbf9430fc7a98d780f3c4b76321df58d89e58dda79fcae753ec25fac4dd2ce",
+      "materialization_id": "run267BA_replacement_05",
+      "ready_status": "tier_a_2024_reference_ready_cross_period_frame_required",
+      "routed_attempt_boundary": "run267w_24_s258_stc_rep_trend_strength_adx_rt_2024",
+      "routed_status": "not_true_fallback_evidence_until_manifest_fields_exist",
+      "runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s258_stc/run267w_24_s258_stc_rep_trend_strength_adx/features/s258_stc_rep_trend_strength_adx_true_internal.csv",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/variants/s258_stc/run267w_24_s258_stc_rep_trend_strength_adx/models/s258_stc_rep_trend_strength_adx_true_internal_model.csv",
+      "source_queue_id": "run267AZ_q02_cross_period_similar_feature_replacement",
+      "source_true_internal_queue_id": "run267W_24_s258_stc_rep_trend_strength_adx",
+      "test_id": "rep_trend_strength_adx",
+      "tier_a_2024_attempt": "run267w_24_s258_stc_rep_trend_strength_adx_ta_2024",
+      "tier_a_2024_set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_24_s258_stc_rep_trend_strength_adx_ta_2024.set"
+    }
+  ],
+  "data_integrity_receipt": [
+    {
+      "effect": "anchors materialization to run267AZ design instead of memory",
+      "receipt_id": "run267BA_data_01",
+      "row_count": 5,
+      "source": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/next_experiment_queue.csv",
+      "status": "loaded"
+    },
+    {
+      "effect": "keeps Tier B and actual routed total blocked until manifest fields exist",
+      "receipt_id": "run267BA_data_02",
+      "row_count": 1,
+      "source": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AW/pool_wide_state_feature_engineering_second_followup_materialization/route_gap_audit.csv",
+      "status": "loaded_gap_boundary"
+    },
+    {
+      "effect": "uses real feature order/model hash artifacts rather than proxy-only variants",
+      "receipt_id": "run267BA_data_03",
+      "row_count": 24,
+      "source": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv",
+      "status": "loaded_true_internal_replacement_surface"
+    }
+  ],
+  "experiment_design_receipt": [
+    {
+      "comparison": "run267AY review, run267AZ design, run267V/W true internal feature artifacts",
+      "failure_criteria": "fallback route or Adapter readiness is claimed without required fields",
+      "hypothesis": "Candidates should not be selected until they survive route, replacement, and cross-period pressure.",
+      "question": "Can run267AZ queue be split into true fallback, cross-period replacement, ablation memory, and Adapter hold lanes?",
+      "receipt_id": "run267BA_design_01",
+      "status": "completed_materialization_receipt",
+      "success_criteria": "ready and blocked lanes are explicit; no synthetic routed claim is made"
+    },
+    {
+      "comparison": "true internal replacement manifest versus run267AW route gap audit",
+      "failure_criteria": "Tier A+B duplicate rows are used as actual routed total",
+      "hypothesis": "Tier A 2024 replacement references can move as a diagnostic subset while routed totals remain blocked.",
+      "question": "Which subset can move without hiding the true fallback gap?",
+      "receipt_id": "run267BA_design_02",
+      "status": "completed_with_route_gap_boundary",
+      "success_criteria": "replacement_ready_rows > 0 and true fallback blocked rows are preserved"
+    }
+  ],
+  "failure_memory_refresh": [
+    {
+      "affected_scope": "all baseline candidates(모든 기준 후보)",
+      "boundary": "diagnostic negative memory, not idea death(진단 부정 기억, 아이디어 사망 아님)",
+      "do_not_repeat": "do not run a third same-style state pressure loop(같은 방식의 3차 상태 압박 루프 금지)",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AY/pool_wide_state_feature_engineering_second_followup_balance_timeslice_trade_quality_review/candidate_second_followup_review.csv",
+      "memory_id": "run267AZ_mem01_second_pressure_no_watch_rows",
+      "pattern": "second follow-up pressure produced zero watch rows(2차 후속 압박이 관찰 행 0개를 만듦)",
+      "reopen_condition": "a new market-structure hypothesis explains the holes(새 시장 구조 가설이 구멍을 설명)",
+      "salvage_angle": "switch to true fallback, replacement, and cross-period checks(실제 대체, 대체 피처, 확장 기간 확인으로 전환)"
+    },
+    {
+      "affected_scope": "s264_aia;s258_stc;s262_lih;s264_lc;s264_aih",
+      "boundary": "worst_negative_slice=-283.04",
+      "do_not_repeat": "do not solve it with a literal weekday filter alone(요일 직접 필터 하나로 해결 금지)",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AY/pool_wide_state_feature_engineering_second_followup_balance_timeslice_trade_quality_review/negative_slice_summary.csv",
+      "memory_id": "run267AZ_mem02_deep_monday_cluster_persists",
+      "pattern": "Monday remains a deep loss cluster after noncalendar pressure(비달력 압박 뒤에도 월요일 깊은 손실 군집 지속)",
+      "reopen_condition": "Monday loss improves and adjacent slices do not worsen(월요일 손실이 줄고 인접 구간이 악화되지 않음)",
+      "salvage_angle": "test whether Tier B fallback or similar trend/range features changes the same cluster(Tier B 대체나 유사 추세/범위 피처가 같은 군집을 바꾸는지 시험)"
+    },
+    {
+      "affected_scope": "especially s264_aih, s264_lc, s262_lih(특히 s264_aih, s264_lc, s262_lih)",
+      "boundary": "worst_candidate=s258_stc;worst_slice=-283.04",
+      "do_not_repeat": "do not add a month literal repair(월 직접 수리 금지)",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AY/pool_wide_state_feature_engineering_second_followup_balance_timeslice_trade_quality_review/candidate_second_followup_review.csv",
+      "memory_id": "run267AZ_mem03_2024_12_not_fixed_by_interaction",
+      "pattern": "2024-12 remains a month hole after range/volatility interaction(범위/변동성 상호작용 뒤에도 2024-12 월 구멍 지속)",
+      "reopen_condition": "2024-12 improves under a noncalendar feature family and other months survive(비달력 피처군에서 2024-12가 개선되고 다른 월이 생존)",
+      "salvage_angle": "map to cross-period regime and similar feature replacement(확장 기간 레짐과 유사 피처 대체로 매핑)"
+    },
+    {
+      "affected_scope": "s264_aia;s264_aih",
+      "boundary": "Adapter development held, not abandoned(어댑터 개발 보류, 포기 아님)",
+      "do_not_repeat": "do not implement Adapter before route and feature-order evidence stabilizes(라우팅과 피처 순서 근거 안정 전 어댑터 구현 금지)",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AW/pool_wide_state_feature_engineering_second_followup_materialization/route_gap_audit.csv",
+      "memory_id": "run267AZ_mem04_adapter_not_ready",
+      "pattern": "adapter-looking candidates still have weak-slice and route gaps(어댑터처럼 보이는 후보도 약한 구간과 라우팅 공백이 남음)",
+      "reopen_condition": "one candidate passes routed/cross-period/similar replacement checks(한 후보가 라우팅/확장 기간/유사 대체 확인 통과)",
+      "salvage_angle": "write readiness audit instead of package(패키지 대신 준비 감사 작성)"
+    },
+    {
+      "affected_scope": "s264_aih;s264_aia;s258_stc",
+      "boundary": "route_blocker_named",
+      "do_not_repeat": "do not call synthetic Tier A+B or fallback-disabled rows actual routed total",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_manifest_requirements.csv",
+      "memory_id": "run267BA_mem01_true_fallback_manifest_still_missing",
+      "pattern": "true fallback route cannot be claimed from duplicate Tier A+B rows",
+      "reopen_condition": "fallback used count and component rows become separable",
+      "salvage_angle": "repair manifest fields or keep Tier A-only boundary"
+    },
+    {
+      "affected_scope": "all_baseline_candidates",
+      "boundary": "research_utilization_partial_not_complete",
+      "do_not_repeat": "do not treat compressed rank/gate reuse as full feature ablation",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md",
+      "memory_id": "run267BA_mem02_prior_research_not_sufficient_until_replacement_runs",
+      "pattern": "Stage58 이후 연구는 사용됐지만 현재 목표 기준으로는 충분하지 않음",
+      "reopen_condition": "replacement and cross-period results survive without deep weak slices",
+      "salvage_angle": "use true internal replacement and cross-period queue"
+    },
+    {
+      "affected_scope": "s264_aih;s264_aia",
+      "boundary": "adapter_held_not_abandoned",
+      "do_not_repeat": "do not start Adapter package from headline KPI only",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/adapter_readiness_hold_audit.csv",
+      "memory_id": "run267BA_mem03_adapter_hold_until_route_and_replacement_survive",
+      "pattern": "Adapter-looking rows remain held until route and replacement checks survive",
+      "reopen_condition": "one candidate passes routed, cross-period, and similar replacement checks",
+      "salvage_angle": "use readiness audit as handoff checklist"
+    }
+  ],
+  "gate_audit": [
+    {
+      "effect": "run267BA is anchored to the latest design queue",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/next_experiment_queue.csv",
+      "gate_id": "source_queue_loaded",
+      "status": "pass"
+    },
+    {
+      "effect": "blocked route fields are explicit instead of hidden",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_manifest_requirements.csv",
+      "gate_id": "true_fallback_boundary_preserved",
+      "status": "pass_with_blocker"
+    },
+    {
+      "effect": "similar replacement can move without claiming broad survival",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/cross_period_replacement_queue.csv",
+      "gate_id": "replacement_ready_subset_named",
+      "status": "pass"
+    },
+    {
+      "effect": "Adapter implementation remains held",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/adapter_readiness_hold_audit.csv",
+      "gate_id": "adapter_hold_preserved",
+      "status": "pass"
+    },
+    {
+      "effect": "selected candidate and ONNX readiness stay not claimed",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/result_judgment.csv",
+      "gate_id": "selection_and_onnx_claim_closed",
+      "status": "pass"
+    }
+  ],
+  "goal_achieve": "not_claimed",
+  "judgment": "queue_materialized_with_true_fallback_blocked_and_replacement_ready_subset_no_candidate_selection",
+  "lineage": {
+    "artifact_hashes": {
+      "producer": "80ce4dd62890d7d1b039c629df777b2f73dd54b7f33f3412dd8c687c96fbbef5",
+      "source_candidate_decision": "c8f498d4ab8442ab48549d52722cc44a4c875c977efad5e476ce9620279e0446",
+      "source_failure_memory": "455793229ab87ca9dc6b56aabd5327b025632d10c53c712e7dc8381171ae1398",
+      "source_prior_research_audit": "e4aedd7c267dc86ae5c32c510e42133d890a4260b6f79be5c8ca16e729b0b21f",
+      "source_queue": "29da189237538377f661e7e7ceb4d830722786db7f6f821b7ea530e7f0ec5dc7",
+      "source_route_gap_audit": "71c2774e4ec1194155edb29ddeb1df28bd875407b6c7404bd37f64db97088601",
+      "source_true_internal_attempt": "268114dab7270401b63db3167fd8b48ca30e95beda9d32d118656523555b6379",
+      "source_true_internal_variant": "8fcacc4233f5970f19c7d62653de158772784e62fedff5f019c4af77fce9e026"
+    },
+    "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+    "created_at_utc": "2026-05-21T09:09:17Z",
+    "goal_achieve": "not_claimed",
+    "onnx_readiness": "not_claimed",
+    "outputs": {
+      "adapter_hold_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/adapter_readiness_hold_audit.csv",
+      "candidate_role_filter": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/candidate_role_filter.csv",
+      "cross_period_replacement_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/cross_period_replacement_queue.csv",
+      "data_integrity_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/data_integrity_receipt.csv",
+      "experiment_design_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/experiment_design_receipt.csv",
+      "failure_memory_refresh": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/failure_memory_refresh.csv",
+      "gate_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/gate_audit.csv",
+      "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/lineage.json",
+      "materialization_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/materialization_queue.csv",
+      "ready_attempt_reference": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/ready_attempt_reference.csv",
+      "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BA_true_fallback_cross_period_replacement_queue_materialization.md",
+      "result_judgment": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/result_judgment.csv",
+      "review_result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/review_result.json",
+      "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/run_manifest.json",
+      "runtime_parity_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/runtime_parity_receipt.csv",
+      "true_fallback_requirements": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_manifest_requirements.csv",
+      "true_fallback_status": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_readiness_status.csv"
+    },
+    "parent_run_id": "run267AZ_stage267_pool_wide_state_feature_engineering_second_followup_or_adapter_branch_design_v1",
+    "run_id": "run267BA_stage267_true_fallback_cross_period_replacement_queue_materialization_v1",
+    "selected_candidate": "none",
+    "sources": {
+      "producer": "stage_pipelines/stage267/run267BA_materialize_true_fallback_cross_period_replacement_queue_from_run267AZ_design.py",
+      "source_candidate_decision": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/candidate_branch_decision_matrix.csv",
+      "source_failure_memory": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/failure_memory.csv",
+      "source_prior_research_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md",
+      "source_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/next_experiment_queue.csv",
+      "source_route_gap_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AW/pool_wide_state_feature_engineering_second_followup_materialization/route_gap_audit.csv",
+      "source_true_internal_attempt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/attempts.csv",
+      "source_true_internal_variant": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv"
+    },
+    "stage_id": "267_adapter_research__baseline_candidate_racing_protocol"
+  },
+  "materialization_queue": [
+    {
+      "blocked_row_count": 3,
+      "candidate_scope": "s264_aih;s264_aia;s258_stc",
+      "effect": "turns the run267AZ design queue into explicit ready, held, or blocked lanes",
+      "next_step": "repair missing true fallback manifest fields before routed claim",
+      "priority": "P0",
+      "queue_id": "run267AZ_q01_true_fallback_route_readiness",
+      "ready_row_count": 0,
+      "run267BA_status": "blocked_manifest_requirements_materialized",
+      "source_materialization_readiness": "ready_for_run267BA_manifest_design(run267BA 목록 설계 준비)",
+      "workstream": "true_fallback_route_boundary(실제 대체 라우팅 경계)"
+    },
+    {
+      "blocked_row_count": 0,
+      "candidate_scope": "s264_aih;s264_aia;s258_stc",
+      "effect": "turns the run267AZ design queue into explicit ready, held, or blocked lanes",
+      "next_step": "execute Tier A replacement-ready subset or materialize adjacent-period frames",
+      "priority": "P0",
+      "queue_id": "run267AZ_q02_cross_period_similar_feature_replacement",
+      "ready_row_count": 5,
+      "run267BA_status": "replacement_reference_subset_materialized_cross_period_pending",
+      "source_materialization_readiness": "ready_for_feature_surface_materialization(피처 표면 물질화 준비)",
+      "workstream": "similar_feature_replacement_and_cross_period(유사 피처 대체와 확장 기간)"
+    },
+    {
+      "blocked_row_count": 0,
+      "candidate_scope": "all_baseline_candidates(모든 기준 후보)",
+      "effect": "turns the run267AZ design queue into explicit ready, held, or blocked lanes",
+      "next_step": "refresh category ablation after run267BB review",
+      "priority": "P1",
+      "queue_id": "run267AZ_q03_category_ablation_failure_memory_refresh",
+      "ready_row_count": 0,
+      "run267BA_status": "design_queue_materialized_after_replacement_review",
+      "source_materialization_readiness": "design_first_then_materialize(먼저 설계 후 물질화)",
+      "workstream": "category_ablation_and_failure_memory(범주 제거와 실패 기억)"
+    },
+    {
+      "blocked_row_count": 1,
+      "candidate_scope": "s264_aia;s264_aih",
+      "effect": "turns the run267AZ design queue into explicit ready, held, or blocked lanes",
+      "next_step": "keep Adapter implementation held until route and replacement evidence improve",
+      "priority": "P1",
+      "queue_id": "run267AZ_q04_adapter_contract_hold_audit",
+      "ready_row_count": 0,
+      "run267BA_status": "audit_materialized_adapter_held",
+      "source_materialization_readiness": "audit_only_no_adapter_implementation(감사 전용, 어댑터 구현 없음)",
+      "workstream": "adapter_readiness_hold_boundary(어댑터 준비 보류 경계)"
+    },
+    {
+      "blocked_row_count": 0,
+      "candidate_scope": "s264_aih;s264_lc;s262_lih;s264_aia;s258_stc",
+      "effect": "turns the run267AZ design queue into explicit ready, held, or blocked lanes",
+      "next_step": "refresh candidate roles after run267BB evidence",
+      "priority": "P1",
+      "queue_id": "run267AZ_q05_candidate_pool_prune_or_refresh_decision",
+      "ready_row_count": 0,
+      "run267BA_status": "decision_receipt_materialized_after_next_review",
+      "source_materialization_readiness": "decision_receipt_only(결정 영수증 전용)",
+      "workstream": "candidate_pool_refresh(후보군 갱신)"
+    }
+  ],
+  "next_action": "run267BB_execute_cross_period_replacement_ready_subset_or_repair_true_fallback_manifest_fields",
+  "onnx_readiness": "not_claimed",
+  "outputs": {
+    "adapter_hold_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/adapter_readiness_hold_audit.csv",
+    "candidate_role_filter": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/candidate_role_filter.csv",
+    "cross_period_replacement_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/cross_period_replacement_queue.csv",
+    "data_integrity_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/data_integrity_receipt.csv",
+    "experiment_design_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/experiment_design_receipt.csv",
+    "failure_memory_refresh": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/failure_memory_refresh.csv",
+    "gate_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/gate_audit.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/lineage.json",
+    "materialization_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/materialization_queue.csv",
+    "ready_attempt_reference": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/ready_attempt_reference.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BA_true_fallback_cross_period_replacement_queue_materialization.md",
+    "result_judgment": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/result_judgment.csv",
+    "review_result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/review_result.json",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/run_manifest.json",
+    "runtime_parity_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/runtime_parity_receipt.csv",
+    "true_fallback_requirements": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_manifest_requirements.csv",
+    "true_fallback_status": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_readiness_status.csv"
+  },
+  "parent_run_id": "run267AZ_stage267_pool_wide_state_feature_engineering_second_followup_or_adapter_branch_design_v1",
+  "ready_attempt_reference": [
+    {
+      "attempt_name": "run267w_03_s264_aih_rep_trend_strength_adx_ta_2024",
+      "attempt_role": "tier_only_total",
+      "candidate_alias": "s264_aih",
+      "effect": "can seed replacement execution",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_03_s264_aih_rep_trend_strength_adx_ta_2024.ini",
+      "queue_id": "run267W_03_s264_aih_rep_trend_strength_adx",
+      "readiness": "ready_as_Tier_A_reference",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_03_s264_aih_rep_trend_strength_adx_ta_2024.set",
+      "test_id": "rep_trend_strength_adx",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "run267w_03_s264_aih_rep_trend_strength_adx_rt_2024",
+      "attempt_role": "routed_total",
+      "candidate_alias": "s264_aih",
+      "effect": "kept only as boundary reference, not actual routed total proof",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_03_s264_aih_rep_trend_strength_adx_rt_2024.ini",
+      "queue_id": "run267W_03_s264_aih_rep_trend_strength_adx",
+      "readiness": "blocked_as_true_fallback_evidence_until_manifest_fields_exist",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_03_s264_aih_rep_trend_strength_adx_rt_2024.set",
+      "test_id": "rep_trend_strength_adx",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "run267w_04_s264_aih_rep_volatility_atr_ta_2024",
+      "attempt_role": "tier_only_total",
+      "candidate_alias": "s264_aih",
+      "effect": "can seed replacement execution",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_04_s264_aih_rep_volatility_atr_ta_2024.ini",
+      "queue_id": "run267W_04_s264_aih_rep_volatility_atr",
+      "readiness": "ready_as_Tier_A_reference",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_04_s264_aih_rep_volatility_atr_ta_2024.set",
+      "test_id": "rep_volatility_atr",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "run267w_04_s264_aih_rep_volatility_atr_rt_2024",
+      "attempt_role": "routed_total",
+      "candidate_alias": "s264_aih",
+      "effect": "kept only as boundary reference, not actual routed total proof",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_04_s264_aih_rep_volatility_atr_rt_2024.ini",
+      "queue_id": "run267W_04_s264_aih_rep_volatility_atr",
+      "readiness": "blocked_as_true_fallback_evidence_until_manifest_fields_exist",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_04_s264_aih_rep_volatility_atr_rt_2024.set",
+      "test_id": "rep_volatility_atr",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "run267w_18_s264_aia_rep_trend_strength_adx_ta_2024",
+      "attempt_role": "tier_only_total",
+      "candidate_alias": "s264_aia",
+      "effect": "can seed replacement execution",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_18_s264_aia_rep_trend_strength_adx_ta_2024.ini",
+      "queue_id": "run267W_18_s264_aia_rep_trend_strength_adx",
+      "readiness": "ready_as_Tier_A_reference",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_18_s264_aia_rep_trend_strength_adx_ta_2024.set",
+      "test_id": "rep_trend_strength_adx",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "run267w_18_s264_aia_rep_trend_strength_adx_rt_2024",
+      "attempt_role": "routed_total",
+      "candidate_alias": "s264_aia",
+      "effect": "kept only as boundary reference, not actual routed total proof",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_18_s264_aia_rep_trend_strength_adx_rt_2024.ini",
+      "queue_id": "run267W_18_s264_aia_rep_trend_strength_adx",
+      "readiness": "blocked_as_true_fallback_evidence_until_manifest_fields_exist",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_18_s264_aia_rep_trend_strength_adx_rt_2024.set",
+      "test_id": "rep_trend_strength_adx",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "run267w_19_s264_aia_rep_volatility_atr_ta_2024",
+      "attempt_role": "tier_only_total",
+      "candidate_alias": "s264_aia",
+      "effect": "can seed replacement execution",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_19_s264_aia_rep_volatility_atr_ta_2024.ini",
+      "queue_id": "run267W_19_s264_aia_rep_volatility_atr",
+      "readiness": "ready_as_Tier_A_reference",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_19_s264_aia_rep_volatility_atr_ta_2024.set",
+      "test_id": "rep_volatility_atr",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "run267w_19_s264_aia_rep_volatility_atr_rt_2024",
+      "attempt_role": "routed_total",
+      "candidate_alias": "s264_aia",
+      "effect": "kept only as boundary reference, not actual routed total proof",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_19_s264_aia_rep_volatility_atr_rt_2024.ini",
+      "queue_id": "run267W_19_s264_aia_rep_volatility_atr",
+      "readiness": "blocked_as_true_fallback_evidence_until_manifest_fields_exist",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_19_s264_aia_rep_volatility_atr_rt_2024.set",
+      "test_id": "rep_volatility_atr",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "run267w_24_s258_stc_rep_trend_strength_adx_ta_2024",
+      "attempt_role": "tier_only_total",
+      "candidate_alias": "s258_stc",
+      "effect": "can seed replacement execution",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_24_s258_stc_rep_trend_strength_adx_ta_2024.ini",
+      "queue_id": "run267W_24_s258_stc_rep_trend_strength_adx",
+      "readiness": "ready_as_Tier_A_reference",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_24_s258_stc_rep_trend_strength_adx_ta_2024.set",
+      "test_id": "rep_trend_strength_adx",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "run267w_24_s258_stc_rep_trend_strength_adx_rt_2024",
+      "attempt_role": "routed_total",
+      "candidate_alias": "s258_stc",
+      "effect": "kept only as boundary reference, not actual routed total proof",
+      "ini_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_24_s258_stc_rep_trend_strength_adx_rt_2024.ini",
+      "queue_id": "run267W_24_s258_stc_rep_trend_strength_adx",
+      "readiness": "blocked_as_true_fallback_evidence_until_manifest_fields_exist",
+      "set_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/mt5/run267w_24_s258_stc_rep_trend_strength_adx_rt_2024.set",
+      "test_id": "rep_trend_strength_adx",
+      "tier": "Tier A+B"
+    }
+  ],
+  "result_judgment": [
+    {
+      "claim_boundary": "materialization only; no selected candidate; no ONNX readiness",
+      "evidence_available": "queue_rows=5;replacement_rows=5;fallback_blocked_rows=3",
+      "evidence_missing": "MT5 execution, true fallback manifest fields, non-2024 cross-period execution, Adapter implementation, ONNX parity",
+      "judgment_label": "queue_materialized_with_true_fallback_blocked_and_replacement_ready_subset_no_candidate_selection",
+      "next_condition": "run267BB_execute_cross_period_replacement_ready_subset_or_repair_true_fallback_manifest_fields",
+      "result_subject": "overall_run267BA_materialization"
+    },
+    {
+      "claim_boundary": "do not claim routed survival",
+      "evidence_available": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_manifest_requirements.csv",
+      "evidence_missing": "fallback_used_count, Tier B component row, actual routed total reconciliation",
+      "judgment_label": "blocked_missing_required_manifest_fields",
+      "next_condition": "repair manifest fields or keep Tier A-only boundary",
+      "result_subject": "true_fallback_route"
+    },
+    {
+      "claim_boundary": "diagnostic queue only",
+      "evidence_available": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/cross_period_replacement_queue.csv",
+      "evidence_missing": "non-2024 period frame and MT5 results",
+      "judgment_label": "reference_subset_ready_execution_pending",
+      "next_condition": "execute or clone ready subset in run267BB",
+      "result_subject": "similar_replacement_cross_period"
+    },
+    {
+      "claim_boundary": "no Adapter implementation yet",
+      "evidence_available": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/adapter_readiness_hold_audit.csv",
+      "evidence_missing": "stable route evidence, stable replacement survival, runtime handoff package",
+      "judgment_label": "adapter_held",
+      "next_condition": "revisit only after routed and replacement checks survive",
+      "result_subject": "adapter_readiness"
+    }
+  ],
+  "run_id": "run267BA_stage267_true_fallback_cross_period_replacement_queue_materialization_v1",
+  "run_manifest": {
+    "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+    "counts": {
+      "adapter_hold_rows": 5,
+      "candidate_decision_rows": 5,
+      "candidate_filter_rows": 5,
+      "failure_memory_rows": 7,
+      "fallback_requirement_rows": 10,
+      "fallback_status_rows": 3,
+      "materialization_queue_rows": 5,
+      "ready_attempt_reference_rows": 10,
+      "replacement_rows": 5,
+      "route_gap_rows": 1,
+      "source_queue_rows": 5,
+      "true_internal_attempt_rows": 48,
+      "true_internal_variant_rows": 24
+    },
+    "created_at_utc": "2026-05-21T09:09:17Z",
+    "judgment": "queue_materialized_with_true_fallback_blocked_and_replacement_ready_subset_no_candidate_selection",
+    "next_action": "run267BB_execute_cross_period_replacement_ready_subset_or_repair_true_fallback_manifest_fields",
+    "run_id": "run267BA_stage267_true_fallback_cross_period_replacement_queue_materialization_v1",
+    "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+    "status": "run267BA_true_fallback_cross_period_replacement_queue_materialized_with_route_gap_boundary_execution_pending"
+  },
+  "runtime_parity_receipt": [
+    {
+      "effect": "next run can decide execution from explicit references",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/ready_attempt_reference.csv",
+      "receipt_id": "run267BA_runtime_01",
+      "status": "not_executed_materialization_only",
+      "subject": "MT5 execution"
+    },
+    {
+      "effect": "runtime reproduction is not claimed from duplicate rows",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267BA/true_fallback_cross_period_replacement_queue_materialization/true_fallback_manifest_requirements.csv",
+      "receipt_id": "run267BA_runtime_02",
+      "status": "blocked_missing_true_fallback_manifest_fields",
+      "subject": "true fallback runtime reproduction"
+    },
+    {
+      "effect": "keeps ONNX review closed until a strong candidate exists",
+      "evidence": "",
+      "receipt_id": "run267BA_runtime_03",
+      "status": "not_allowed_until_goal_gate",
+      "subject": "ONNX parity"
+    }
+  ],
+  "selected_candidate": "none",
+  "sources": {
+    "producer": "stage_pipelines/stage267/run267BA_materialize_true_fallback_cross_period_replacement_queue_from_run267AZ_design.py",
+    "source_candidate_decision": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/candidate_branch_decision_matrix.csv",
+    "source_failure_memory": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/failure_memory.csv",
+    "source_prior_research_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md",
+    "source_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AZ/pool_wide_state_feature_engineering_second_followup_or_adapter_branch/next_experiment_queue.csv",
+    "source_route_gap_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AW/pool_wide_state_feature_engineering_second_followup_materialization/route_gap_audit.csv",
+    "source_true_internal_attempt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/attempts.csv",
+    "source_true_internal_variant": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv"
+  },
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "run267BA_true_fallback_cross_period_replacement_queue_materialized_with_route_gap_boundary_execution_pending",
+  "true_fallback_requirements": [
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "tier_a_primary_record_id",
+      "requirement_id": "run267BA_true_fallback_req_01",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "links Tier A used component row to source attempt"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "tier_b_fallback_record_id",
+      "requirement_id": "run267BA_true_fallback_req_02",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "links Tier B fallback component row to source attempt"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "route_rule_id",
+      "requirement_id": "run267BA_true_fallback_req_03",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "names the exact fallback rule instead of a synthetic sum"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "fallback_trigger_condition",
+      "requirement_id": "run267BA_true_fallback_req_04",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "shows why fallback was used"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "fallback_used_count",
+      "requirement_id": "run267BA_true_fallback_req_05",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "proves fallback count is nonzero"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "component_record_view",
+      "requirement_id": "run267BA_true_fallback_req_06",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "keeps Tier A and Tier B rows separable"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "actual_routed_total_record_view",
+      "requirement_id": "run267BA_true_fallback_req_07",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "separates routed total from component rows"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "mt5_set_ini_pair",
+      "requirement_id": "run267BA_true_fallback_req_08",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "anchors the Strategy Tester input files"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "trade_list_path",
+      "requirement_id": "run267BA_true_fallback_req_09",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "anchors the trade-level review"
+    },
+    {
+      "current_status": "missing_required",
+      "effect": "prevents duplicate Tier A+B rows from being treated as actual routed fallback evidence",
+      "required_field": "route_reconciliation_hash",
+      "requirement_id": "run267BA_true_fallback_req_10",
+      "source_gap": "missing_required_before_Tier_A_B_or_actual_routed_total_claim",
+      "why_required": "prevents post-hoc route rewriting"
+    }
+  ],
+  "true_fallback_status": [
+    {
+      "actual_routed_total_status": "blocked_missing_true_fallback_manifest",
+      "candidate_alias": "s264_aih",
+      "claim_boundary": "route_readiness_only_no_runtime_reproduction_no_ONNX",
+      "materialization_status": "blocked_missing_true_fallback_manifest_fields",
+      "next_required_action": "repair_true_fallback_manifest_fields_before_any_routed_claim",
+      "ready_for_execution": "false",
+      "source_queue_id": "run267AZ_q01_true_fallback_route_readiness",
+      "source_route_gap_id": "run267AW_route_gap_true_tier_b_fallback",
+      "tier_a_record_status": "materialized_for_8_second_followup_attempts",
+      "tier_b_record_status": "blocked_missing_true_fallback_manifest"
+    },
+    {
+      "actual_routed_total_status": "blocked_missing_true_fallback_manifest",
+      "candidate_alias": "s264_aia",
+      "claim_boundary": "route_readiness_only_no_runtime_reproduction_no_ONNX",
+      "materialization_status": "blocked_missing_true_fallback_manifest_fields",
+      "next_required_action": "repair_true_fallback_manifest_fields_before_any_routed_claim",
+      "ready_for_execution": "false",
+      "source_queue_id": "run267AZ_q01_true_fallback_route_readiness",
+      "source_route_gap_id": "run267AW_route_gap_true_tier_b_fallback",
+      "tier_a_record_status": "materialized_for_8_second_followup_attempts",
+      "tier_b_record_status": "blocked_missing_true_fallback_manifest"
+    },
+    {
+      "actual_routed_total_status": "blocked_missing_true_fallback_manifest",
+      "candidate_alias": "s258_stc",
+      "claim_boundary": "route_readiness_only_no_runtime_reproduction_no_ONNX",
+      "materialization_status": "blocked_missing_true_fallback_manifest_fields",
+      "next_required_action": "repair_true_fallback_manifest_fields_before_any_routed_claim",
+      "ready_for_execution": "false",
+      "source_queue_id": "run267AZ_q01_true_fallback_route_readiness",
+      "source_route_gap_id": "run267AW_route_gap_true_tier_b_fallback",
+      "tier_a_record_status": "materialized_for_8_second_followup_attempts",
+      "tier_b_record_status": "blocked_missing_true_fallback_manifest"
+    }
+  ]
+}
