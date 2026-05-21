@@ -1,0 +1,10 @@
+﻿field,value
+data_source,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AC/noncalendar_state_guard_score_table_materialization/noncalendar_state_guard_variant_manifest.csv and stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AE/noncalendar_state_guard_balance_timeslice_trade_quality_review/candidate_test_review.csv
+time_axis,bar_time_server from run267AC runtime feature files; MT5 test window stays 2024.01.02 through 2025.01.01
+sample_scope,US100 M5 2024 historical stress window; followup variants only for s264_aia dual rows and s264_aih one pressure row
+missing_or_duplicate_check,variant_feature_missing_cells=0;shared_state_rows=7
+feature_label_boundary,no MT5 PnL becomes a label; model is not retrained; only pre-existing guard score feature terms are changed
+split_boundary,materialization-only; execution and KPI review remain pending run267AH
+leakage_risk,"weak-slice evidence influenced followup design, so next run must be read as exploratory pressure not selection proof"
+data_hash_or_identity,run_manifest=stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/run_manifest.json
+integrity_judgment,usable_with_boundary

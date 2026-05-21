@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AF_stage267_noncalendar_state_guard_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267AG_stage267_noncalendar_state_guard_followup_queue_materialization_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `noncalendar_state_guard_followup_or_prune_design`
-- status(상태): `run267AF_noncalendar_state_guard_followup_or_prune_design_completed`
+- adapter_under_review(검토 중 어댑터): `noncalendar_state_guard_followup_queue_materialization`
+- status(상태): `run267AG_noncalendar_state_guard_followup_queue_materialized_execution_pending`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -116,6 +116,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - run267AD_noncalendar_state_guard_score_table_mt5_execution(267AD 비달력 상태 방어 점수표 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AD_noncalendar_state_guard_score_table_mt5_execution.md`
 - run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review(267AE 비달력 상태 방어 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review.md`
 - run267AF_noncalendar_state_guard_followup_or_prune_design(267AF 비달력 상태 방어 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AF_noncalendar_state_guard_followup_or_prune_design.md`
+- run267AG_noncalendar_state_guard_followup_queue_materialization(267AG 비달력 상태 방어 후속 큐 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AG_noncalendar_state_guard_followup_queue_materialization.md`
 
 ## Current Next Action(현재 다음 행동)
 - latest_design(최신 설계): run267AF(267AF 실행) candidate decisions(후보 결정) `5`, queue rows(큐 행) `4`, failure memory(실패 기억) `4`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AF_noncalendar_state_guard_followup_or_prune_design.md`.
@@ -143,10 +144,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267AG_materialize_noncalendar_state_guard_followup_queue`
-- action(행동): run267AF(267AF 실행)는 run267AE(267AE 실행)의 거래/곡선/시간구간 근거를 후보별 후속/가지치기 설계로 바꿨다.
-- effect(효과): 다음 run267AG(267AG 실행)에서 어떤 축을 물질화하고 어떤 후보를 멈출지 큐와 중단 조건을 남겼다.
-- next_action(다음 행동): `run267AG_materialize_noncalendar_state_guard_followup_queue`
+- next_run(다음 실행): `run267AH_execute_noncalendar_state_guard_followup_mt5_batch`
+- action(행동): run267AG(267AG 실행)는 run267AF(267AF 실행)의 후속/가지치기 큐를 MT5(MetaTrader 5, 메타트레이더5) 실행 대기 입력으로 물질화했다.
+- effect(효과): 다음 run267AH(267AH 실행)에서 6개 MT5(MetaTrader 5, 메타트레이더5) 시도를 실행해 거래/곡선/시간구간/거래 품질을 확인할 수 있다.
+- next_action(다음 행동): `run267AH_execute_noncalendar_state_guard_followup_mt5_batch`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -213,3 +214,6 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 Run267AF(267AF 실행)는 run267AE(267AE 실행)의 noncalendar state guard review(비달력 상태 방어 검토)를 후보별 follow-up/prune design(후속/가지치기 설계)로 바꿨다.
 Effect(효과): s264_aia는 P0 후속 관찰, s264_lc는 고순익 control audit(방어 기준 감사), s264_aih는 압박 후 downgrade(강등) 경계, s262_lih와 s258_stc는 control/stress boundary(비교/압박 경계)로 분리했다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
+
+Run267AG(267AG 실행)는 run267AF(267AF 실행)의 noncalendar state guard follow-up queue(비달력 상태 방어 후속 큐)를 물질화했다.
+Effect(효과): s264_aia 2개 replacement(대체) 압박, s264_aih 1개 role pressure(역할 압박), s264_lc control audit(방어 기준 감사)을 분리했고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
