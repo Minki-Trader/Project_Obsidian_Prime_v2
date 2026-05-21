@@ -1,6 +1,7 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
 - status(상태): `run267CQ_shared_weakness_breakout_followup_or_prune_design_completed`
+- run267CR_shared_weakness_breakout_followup_materialization(267CR 공유 약점 돌파 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CR_shared_weakness_breakout_followup_materialization.md`
 - run267CN_pool_wide_shared_weakness_breakout_materialization(267CN 후보군 전체 공유 약점 돌파 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CN_pool_wide_shared_weakness_breakout_materialization.md`
 - run267CO_pool_wide_shared_weakness_breakout_mt5_execution(267CO 후보군 전체 공유 약점 돌파 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CO_pool_wide_shared_weakness_breakout_mt5_execution.md`
 - run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review(267CP 후보군 전체 공유 약점 돌파 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review.md`
@@ -417,4 +418,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267CQ(267CQ 실행)는 run267CP(267CP 실행)의 후보 선택 보류 상태를 다음 실험 설계로 바꿨다.
 Effect(효과): queue(대기열) `6`개 중 P0에는 pool-wide state phase replacement(후보군 전체 상태 국면 대체), lc/aia cross-period pressure(확장 기간 압박), aih aggressive supply expansion(공격형 공급 확장)을 둔다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267CR(267CR 실행)은 run267CQ(267CQ 실행)의 공유 약점 후속 대기열을 MT5(MetaTrader 5, 메타트레이더5) 실행 대기 산출물로 바꿨다.
+Effect(효과): variants(변형) `7`개, attempts(시도) `14`개, held rows(보류 행) `2`개를 남기고 다음 행동을 `run267CS_execute_shared_weakness_breakout_followup_mt5_batch`로 고정했다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.

@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267CQ_shared_weakness_breakout_followup_or_prune_design_completed`
+- stage_status(단계 상태): `run267CR_shared_weakness_breakout_followup_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267CQ_stage267_shared_weakness_breakout_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267CQ_stage267_shared_weakness_breakout_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267CR_stage267_shared_weakness_breakout_followup_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267CR_stage267_shared_weakness_breakout_followup_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267CR_materialize_shared_weakness_breakout_followup_queue`
+- next_action(다음 행동): `run267CS_execute_shared_weakness_breakout_followup_mt5_batch`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -343,6 +343,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267CO_pool_wide_shared_weakness_breakout_mt5_execution(267CO 후보군 전체 공유 약점 돌파 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CO_pool_wide_shared_weakness_breakout_mt5_execution.md`
 - run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review(267CP 후보군 전체 공유 약점 돌파 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review.md`
 - run267CQ_shared_weakness_breakout_followup_or_prune_design(267CQ 공유 약점 돌파 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CQ_shared_weakness_breakout_followup_or_prune_design.md`
+- run267CR_shared_weakness_breakout_followup_materialization(267CR 공유 약점 돌파 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CR_shared_weakness_breakout_followup_materialization.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
@@ -418,3 +419,4 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 Run267CQ(267CQ 실행)는 run267CP(267CP 실행)의 후보 선택 보류 상태를 다음 실험 설계로 바꿨다.
 Effect(효과): queue(대기열) `6`개 중 P0에는 pool-wide state phase replacement(후보군 전체 상태 국면 대체), lc/aia cross-period pressure(확장 기간 압박), aih aggressive supply expansion(공격형 공급 확장)을 둔다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+- run267CR_summary(267CR 요약): Run267CR(267CR 실행)은 run267CQ(267CQ 실행)의 공유 약점 후속 queue(대기열)를 variants(변형) `7`개와 attempts(시도) `14`개로 물질화했다. Effect(효과): 다음 run267CS(267CS 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 곡선/약점 구간/거래 품질을 검증할 수 있다.
