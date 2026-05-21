@@ -25,12 +25,14 @@ def run_mt5_tester(
     ini_copy_payload = None
     if tester_profile_ini_path is not None:
         io_path(tester_profile_ini_path.parent).mkdir(parents=True, exist_ok=True)
-        shutil.copy2(io_path(ini_path), io_path(tester_profile_ini_path))
+        ini_text = io_path(ini_path).read_text(encoding="utf-8-sig")
+        io_path(tester_profile_ini_path).write_text(ini_text, encoding="utf-8")
         execution_ini_path = tester_profile_ini_path
         ini_copy_payload = {
             "source": ini_path.as_posix(),
             "destination": tester_profile_ini_path.as_posix(),
             "sha256": sha256_file(tester_profile_ini_path),
+            "encoding_policy": "utf-8-no-bom",
         }
 
     command = [str(terminal_path), f"/config:{execution_ini_path.resolve()}"]
