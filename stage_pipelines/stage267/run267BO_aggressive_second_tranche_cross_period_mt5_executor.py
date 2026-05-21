@@ -1,0 +1,864 @@
+﻿from __future__ import annotations
+
+import argparse
+import csv
+import json
+import shutil
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any, Mapping, Sequence
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from foundation.control_plane.ledger import (
+    ALPHA_LEDGER_COLUMNS,
+    RUN_REGISTRY_COLUMNS,
+    io_path,
+    json_ready,
+    path_exists,
+    read_csv_rows,
+    sha256_file_lf_normalized,
+    upsert_csv_rows,
+)
+from foundation.control_plane.mt5_tier_balance_completion import (
+    COMMON_FILES_ROOT_DEFAULT,
+    EA_TESTER_SET_NAME,
+    METAEDITOR_PATH_DEFAULT,
+    TERMINAL_DATA_ROOT_DEFAULT,
+    TERMINAL_PATH_DEFAULT,
+    TESTER_PROFILE_ROOT_DEFAULT,
+    clear_runtime_outputs,
+)
+from foundation.mt5 import runtime_support as mt5
+from foundation.mt5.runtime_artifacts import extract_mt5_strategy_report_metrics
+from stage_pipelines.stage267 import historical_2024_mt5_executor as historical_executor
+from stage_pipelines.stage267 import run267BN_aggressive_second_tranche_cross_period_materialization as materializer
+
+
+STAGE_ID = materializer.STAGE_ID
+RUN_NUMBER = "run267BO"
+RUN_ID = "run267BO_stage267_aggressive_second_tranche_cross_period_mt5_execution_v1"
+SOURCE_RUN_ID = materializer.RUN_ID
+PARENT_RUN_ID = materializer.PARENT_RUN_ID
+CLAIM_BOUNDARY = materializer.CLAIM_BOUNDARY
+
+STAGE_ROOT = materializer.STAGE_ROOT
+REVIEWS_ROOT = materializer.REVIEWS_ROOT
+RUN_ROOT = STAGE_ROOT / "02_runs" / RUN_NUMBER / "aggressive_second_tranche_cross_period_mt5_execution"
+
+SOURCE_RUN_MANIFEST_PATH = materializer.RUN_MANIFEST_PATH
+SOURCE_ATTEMPT_MANIFEST_PATH = materializer.ATTEMPT_MANIFEST_PATH
+SOURCE_RUNTIME_CONTRACT_PATH = materializer.RUNTIME_CONTRACT_PATH
+SOURCE_REPORT_PATH = materializer.REPORT_PATH
+
+EXECUTION_RESULT_PATH = RUN_ROOT / "execution_result.json"
+KPI_RECORDS_PATH = RUN_ROOT / "kpi_records.json"
+KPI_SUMMARY_PATH = RUN_ROOT / "kpi_summary.csv"
+FORENSICS_PATH = RUN_ROOT / "backtest_forensics.csv"
+EXECUTED_ATTEMPTS_PATH = RUN_ROOT / "attempts_executed.csv"
+PROFILE_ENCODING_RECEIPT_PATH = RUN_ROOT / "profile_encoding_receipt.csv"
+RUNTIME_PARITY_RECEIPT_PATH = RUN_ROOT / "runtime_parity_receipt.csv"
+RESULT_JUDGMENT_PATH = RUN_ROOT / "result_judgment.csv"
+RUN_MANIFEST_PATH = RUN_ROOT / "run_manifest.json"
+LINEAGE_PATH = RUN_ROOT / "lineage.json"
+REPORT_PATH = REVIEWS_ROOT / "stage267_run267BO_aggressive_second_tranche_cross_period_mt5_execution.md"
+PRODUCER_PATH = Path("stage_pipelines/stage267/run267BO_aggressive_second_tranche_cross_period_mt5_executor.py")
+COMPILE_LOG_PATH = RUN_ROOT / "mt5" / "compile_run267bo.log"
+
+STAGE_LEDGER_PATH = materializer.STAGE_LEDGER_PATH
+PROJECT_LEDGER_PATH = materializer.PROJECT_LEDGER_PATH
+RUN_REGISTRY_PATH = materializer.RUN_REGISTRY_PATH
+ARTIFACT_REGISTRY_PATH = materializer.ARTIFACT_REGISTRY_PATH
+CURRENT_WORKING_STATE_PATH = materializer.CURRENT_WORKING_STATE_PATH
+WORKSPACE_STATE_PATH = materializer.WORKSPACE_STATE_PATH
+SELECTION_STATUS_PATH = materializer.SELECTION_STATUS_PATH
+REVIEW_INDEX_PATH = materializer.REVIEW_INDEX_PATH
+
+STAGE_LEDGER_COLUMNS = materializer.STAGE_LEDGER_COLUMNS
+ARTIFACT_COLUMNS = materializer.ARTIFACT_COLUMNS
+
+COMPLETED_STATUS = "run267BO_aggressive_second_tranche_cross_period_mt5_batch_completed"
+PARTIAL_STATUS = "run267BO_aggressive_second_tranche_cross_period_mt5_batch_partial"
+BLOCKED_STATUS = "run267BO_aggressive_second_tranche_cross_period_mt5_batch_blocked"
+NEXT_COMPLETED = "run267BP_review_aggressive_second_tranche_cross_period_balance_timeslice_trade_quality"
+NEXT_PARTIAL = "run267BO_classify_state_acceleration_zero_trade_runtime_gap_before_balance_review"
+NEXT_BLOCKED = "run267BO_repair_aggressive_second_tranche_cross_period_mt5_execution_blocker"
+
+TIER_PAIR_BOUNDARY = materializer.TIER_PAIR_BOUNDARY
+MATERIALIZATION_BOUNDARY = materializer.MATERIALIZATION_BOUNDARY
+
+
+def utc_now() -> str:
+    return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def rel(path: Path | str) -> str:
+    item = Path(path)
+    try:
+        return item.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return item.as_posix()
+
+
+def read_json(path: Path) -> dict[str, Any]:
+    return json.loads(io_path(path).read_text(encoding="utf-8-sig"))
+
+
+def write_json(path: Path, payload: Any) -> None:
+    io_path(path.parent).mkdir(parents=True, exist_ok=True)
+    io_path(path).write_text(
+        json.dumps(json_ready(payload), ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
+
+def write_csv(path: Path, rows: Sequence[Mapping[str, Any]], columns: Sequence[str] | None = None) -> None:
+    io_path(path.parent).mkdir(parents=True, exist_ok=True)
+    ordered: list[str] = []
+    for row in rows:
+        for key in row:
+            if key not in ordered:
+                ordered.append(key)
+    fieldnames = list(columns or ordered or ("status", "notes"))
+    with io_path(path).open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n", extrasaction="ignore")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({column: "" if row.get(column) is None else row.get(column) for column in fieldnames})
+
+
+def write_md(path: Path, text: str) -> None:
+    io_path(path.parent).mkdir(parents=True, exist_ok=True)
+    io_path(path).write_text(text.rstrip() + "\n", encoding="utf-8-sig")
+
+
+def read_text(path: Path) -> str:
+    return io_path(path).read_text(encoding="utf-8-sig")
+
+
+def replace_line_prefix(text: str, prefix: str, replacement: str) -> str:
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        if line.startswith(prefix):
+            lines[index] = replacement
+            return "\n".join(lines) + "\n"
+    return text.rstrip() + "\n" + replacement + "\n"
+
+
+def append_after_contains(text: str, needle: str, line: str) -> str:
+    if line in text:
+        return text
+    lines = text.splitlines()
+    for index, existing in enumerate(lines):
+        if needle in existing:
+            lines.insert(index + 1, line)
+            return "\n".join(lines) + "\n"
+    return text.rstrip() + "\n" + line + "\n"
+
+
+def append_block_once(text: str, unique_text: str, block: str) -> str:
+    if unique_text in text:
+        return text
+    return text.rstrip() + "\n\n" + block.rstrip() + "\n"
+
+
+def prepend_current_focus(text: str, focus_block: str) -> str:
+    marker = "current_focus:\n"
+    if focus_block.strip() in text or marker not in text:
+        return text
+    return text.replace(marker, marker + focus_block, 1)
+
+
+def update_stage267_workspace_block(text: str, *, status: str, run_id: str, next_action: str, report_entry: str) -> str:
+    lines = text.splitlines()
+    out: list[str] = []
+    in_stage267 = False
+    inserted_report = report_entry.strip() in text
+    for line in lines:
+        if line.startswith("current_run_id:"):
+            out.append(f"current_run_id: {run_id}")
+            continue
+        if line.startswith("stage267_baseline_candidate_racing_protocol:"):
+            in_stage267 = True
+            out.append(line)
+            continue
+        if in_stage267 and line and not line.startswith(" ") and not line.startswith("#"):
+            if not inserted_report:
+                out.append(report_entry)
+                inserted_report = True
+            in_stage267 = False
+        if in_stage267:
+            stripped = line.strip()
+            if stripped.startswith("status:"):
+                out.append(f"  status: {status}")
+                continue
+            if stripped.startswith("current_run_id:"):
+                out.append(f"  current_run_id: {run_id}")
+                continue
+            if stripped.startswith("last_completed_run_id:"):
+                out.append(f"  last_completed_run_id: {run_id}")
+                continue
+            if stripped.startswith("next_action:"):
+                if not inserted_report:
+                    out.append(report_entry)
+                    inserted_report = True
+                out.append(f"  next_action: {next_action}")
+                continue
+        out.append(line)
+    if in_stage267 and not inserted_report:
+        out.append(report_entry)
+    return "\n".join(out) + "\n"
+
+
+def load_attempts(names: Sequence[str], limit: int | None) -> tuple[list[dict[str, Any]], int]:
+    manifest = read_json(SOURCE_RUN_MANIFEST_PATH)
+    attempts = [dict(row) for row in manifest.get("attempts", [])]
+    selected = attempts
+    if names:
+        wanted = set(names)
+        selected = [attempt for attempt in attempts if attempt.get("attempt_name") in wanted]
+    if limit is not None:
+        selected = selected[: max(0, limit)]
+    for attempt in selected:
+        attempt.setdefault("tier_pair_boundary", TIER_PAIR_BOUNDARY)
+        attempt.setdefault("materialization_boundary", MATERIALIZATION_BOUNDARY)
+    return selected, len(attempts)
+
+
+def status_token(base_status: str, selected_count: int, total_count: int, kpi_count: int) -> str:
+    if base_status == "completed" and selected_count == total_count and kpi_count == selected_count:
+        return COMPLETED_STATUS
+    if kpi_count:
+        return PARTIAL_STATUS
+    return BLOCKED_STATUS
+
+
+def next_action_for(status: str, selected_count: int, total_count: int, kpi_count: int) -> str:
+    if not kpi_count:
+        return NEXT_BLOCKED
+    if status == COMPLETED_STATUS and selected_count == total_count:
+        return NEXT_COMPLETED
+    return NEXT_PARTIAL
+
+
+def profile_has_bom(path: Path) -> tuple[bool, str]:
+    if not path_exists(path):
+        return False, ""
+    head = io_path(path).read_bytes()[:4]
+    return head.startswith(b"\xef\xbb\xbf"), head.hex()
+
+
+def profile_encoding_rows(execution_results: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for result in execution_results:
+        copy_payload = result.get("tester_profile_ini_copy") if isinstance(result, Mapping) else None
+        destination = Path(str(copy_payload.get("destination"))) if isinstance(copy_payload, Mapping) else None
+        has_bom, head_hex = profile_has_bom(destination) if destination else (False, "")
+        rows.append(
+            {
+                "attempt_name": result.get("attempt_name"),
+                "tester_profile_path": destination.as_posix() if destination else "",
+                "exists": path_exists(destination) if destination else False,
+                "has_bom": has_bom,
+                "head_hex": head_hex,
+                "encoding_policy": copy_payload.get("encoding_policy") if isinstance(copy_payload, Mapping) else "",
+                "status": "checked" if destination else "missing",
+            }
+        )
+    return rows
+
+
+def supplement_truncated_html_reports(
+    report_records: Sequence[Mapping[str, Any]],
+    attempts: Sequence[Mapping[str, Any]],
+    *,
+    terminal_data_root: Path,
+    run_output_root: Path,
+) -> list[dict[str, Any]]:
+    reports_root = run_output_root / "mt5" / "reports"
+    io_path(reports_root).mkdir(parents=True, exist_ok=True)
+    by_attempt = {str(record.get("attempt_name")): dict(record) for record in report_records}
+    repaired: list[dict[str, Any]] = []
+    for attempt in attempts:
+        attempt_name = str(attempt.get("attempt_name"))
+        record = by_attempt.get(
+            attempt_name,
+            {
+                "attempt_name": attempt_name,
+                "tier": attempt.get("tier"),
+                "split": attempt.get("split"),
+                "report_name": mt5.report_name_from_attempt(attempt, run_id=RUN_ID),
+                "status": "missing",
+            },
+        )
+        if record.get("status") == "completed":
+            repaired.append(record)
+            continue
+        report_name = str(record.get("report_name") or mt5.report_name_from_attempt(attempt, run_id=RUN_ID))
+        truncated_source = terminal_data_root / f"{report_name}.h"
+        if not path_exists(truncated_source):
+            repaired.append(record)
+            continue
+        html_destination = reports_root / f"{report_name}.htm"
+        shutil.copy2(io_path(truncated_source), io_path(html_destination))
+        record["html_report"] = {
+            "source_path": truncated_source.as_posix(),
+            "path": html_destination.as_posix(),
+            "sha256": sha256_file_lf_normalized(html_destination),
+            "salvage_note": "truncated_htm_extension_from_mt5_dot_h",
+        }
+        record["metrics"] = extract_mt5_strategy_report_metrics(html_destination)
+        record["status"] = record["metrics"]["status"]
+        record["truncated_report_salvage"] = "completed_from_dot_h"
+        repaired.append(record)
+    return repaired
+
+
+def annotate_kpi_rows(rows: Sequence[Mapping[str, Any]], attempts: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    prefixes = [(str(attempt.get("record_view_prefix")), attempt) for attempt in attempts]
+    annotated: list[dict[str, Any]] = []
+    for row in rows:
+        next_row = dict(row)
+        record_view = str(row.get("record_view", ""))
+        for prefix, attempt in prefixes:
+            if prefix and record_view.startswith(prefix):
+                next_row["queue_id"] = attempt.get("queue_id")
+                next_row["source_queue_id"] = attempt.get("source_queue_id")
+                next_row["source_variant_id"] = attempt.get("source_variant_id")
+                next_row["source_first_tranche_attempt_name"] = attempt.get("source_first_tranche_attempt_name")
+                next_row["candidate_id"] = attempt.get("candidate_id")
+                next_row["candidate_alias"] = attempt.get("candidate_alias")
+                next_row["candidate_role"] = attempt.get("candidate_role")
+                next_row["variant_id"] = attempt.get("variant_id")
+                next_row["target_period"] = attempt.get("target_period")
+                next_row["period_id"] = attempt.get("period_id")
+                next_row["model_materialization_type"] = attempt.get("model_materialization_type")
+                next_row["tier_pair_boundary"] = attempt.get("tier_pair_boundary")
+                break
+        annotated.append(next_row)
+    return annotated
+
+
+def executed_attempt_rows(
+    attempts: Sequence[Mapping[str, Any]],
+    execution_results: Sequence[Mapping[str, Any]],
+) -> list[dict[str, Any]]:
+    by_name = {str(item.get("attempt_name")): item for item in execution_results}
+    rows: list[dict[str, Any]] = []
+    for attempt in attempts:
+        result = by_name.get(str(attempt.get("attempt_name")), {})
+        rows.append(
+            {
+                "attempt_name": attempt.get("attempt_name"),
+                "queue_id": attempt.get("queue_id"),
+                "candidate_id": attempt.get("candidate_id"),
+                "candidate_alias": attempt.get("candidate_alias"),
+                "candidate_role": attempt.get("candidate_role"),
+                "variant_id": attempt.get("variant_id"),
+                "target_period": attempt.get("target_period"),
+                "period_id": attempt.get("period_id"),
+                "source_variant_id": attempt.get("source_variant_id"),
+                "source_first_tranche_attempt_name": attempt.get("source_first_tranche_attempt_name"),
+                "tier": attempt.get("tier"),
+                "split": attempt.get("split"),
+                "attempt_role": attempt.get("attempt_role"),
+                "record_view_prefix": attempt.get("record_view_prefix"),
+                "set_path": attempt.get("set", {}).get("path"),
+                "ini_path": attempt.get("ini", {}).get("path"),
+                "common_telemetry_path": attempt.get("common_telemetry_path"),
+                "common_summary_path": attempt.get("common_summary_path"),
+                "execution_status": result.get("status", "not_executed"),
+                "runtime_status": result.get("runtime_outputs", {}).get("status") if isinstance(result, Mapping) else "",
+                "report_status": result.get("strategy_tester_report", {}).get("status") if isinstance(result, Mapping) else "",
+            }
+        )
+    return rows
+
+
+def runtime_parity_rows(
+    profile_rows: Sequence[Mapping[str, Any]],
+    kpi_count: int,
+    attempts: Sequence[Mapping[str, Any]],
+) -> list[dict[str, Any]]:
+    no_bom_count = sum(1 for row in profile_rows if str(row.get("has_bom")).lower() == "false" and row.get("exists"))
+    return [
+        {
+            "field": "tester_profile_encoding",
+            "status": "completed" if no_bom_count == len(profile_rows) and profile_rows else "blocked",
+            "value": f"no_bom={no_bom_count}/{len(profile_rows)}",
+            "effect": "tester profile(테스터 프로필) BOM(바이트 순서 표시) 차단 재발 여부를 확인한다.",
+        },
+        {
+            "field": "runtime_outputs",
+            "status": "completed" if kpi_count else "blocked",
+            "value": str(kpi_count),
+            "effect": "CSV handoff(CSV 인계)와 strategy report(전략 보고서)가 KPI(핵심 성과 지표)로 이어졌는지 확인한다.",
+        },
+        {
+            "field": "tier_boundary",
+            "status": "blocked_for_fallback",
+            "value": TIER_PAIR_BOUNDARY,
+            "effect": "Tier B(티어 B)와 actual routed total(실제 라우팅 전체)을 합성하지 않는다.",
+        },
+        {
+            "field": "attempt_count",
+            "status": "checked",
+            "value": str(len(attempts)),
+            "effect": "공격형 2차 확장 기간 묶음(tranche, 묶음)의 실행 범위를 고정한다.",
+        },
+    ]
+
+
+def annotate_forensic_rows(rows: Sequence[Mapping[str, Any]], attempts: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    by_name = {str(attempt.get("attempt_name")): attempt for attempt in attempts}
+    output: list[dict[str, Any]] = []
+    for row in rows:
+        next_row = dict(row)
+        attempt = by_name.get(str(row.get("attempt_name")))
+        if attempt:
+            next_row["variant_id"] = attempt.get("variant_id")
+            next_row["target_period"] = attempt.get("target_period")
+            next_row["period_id"] = attempt.get("period_id")
+            next_row["source_variant_id"] = attempt.get("source_variant_id")
+            next_row["source_first_tranche_attempt_name"] = attempt.get("source_first_tranche_attempt_name")
+        output.append(next_row)
+    return output
+
+
+def result_judgment_rows(status: str, next_action: str) -> list[dict[str, Any]]:
+    return [
+        {"field": "run_status", "value": status, "judgment": "mt5_execution_completed_or_partial" if status != BLOCKED_STATUS else "blocked"},
+        {"field": "selected_candidate", "value": "none", "judgment": "not_selected"},
+        {"field": "selected_research_baseline", "value": "none", "judgment": "not_selected"},
+        {"field": "onnx_readiness", "value": "not_claimed", "judgment": "not_ready"},
+        {"field": "goal_achieve", "value": "not_claimed", "judgment": "not_claimed"},
+        {"field": "next_action", "value": next_action, "judgment": "review_or_repair_next"},
+    ]
+
+
+def report_markdown(result: Mapping[str, Any], status: str, next_action: str) -> str:
+    rows = list(result.get("kpi_summary_rows", []))
+    blocked_rows = [
+        row
+        for row in result.get("execution_results", [])
+        if row.get("status") != "completed"
+        or row.get("runtime_outputs", {}).get("status") != "completed"
+        or row.get("strategy_tester_report", {}).get("status") != "completed"
+    ]
+    lines = [
+        "# Stage267 run267BO Aggressive Second Tranche Cross-period MT5 Execution(공격형 2차 묶음 확장 기간 MT5 실행)",
+        "",
+        "## Summary(요약)",
+        "",
+        f"- run_id(실행 ID): `{RUN_ID}`",
+        f"- source_run(원천 실행): `{SOURCE_RUN_ID}`",
+        f"- status(상태): `{status}`",
+        f"- attempts_executed(실행 시도): `{len(result.get('attempts_executed', []))}`",
+        f"- kpi_records(KPI 기록): `{len(result.get('mt5_kpi_records', []))}`",
+        f"- blocked_or_gap_attempts(차단 또는 공백 시도): `{len(blocked_rows)}`",
+        "- selected_candidate(선택 후보): `none`",
+        "- ONNX readiness(ONNX 준비): `not_claimed`",
+        "- Goal Achieve(목표 달성): `not_claimed`",
+        "",
+        "Action(행동): run267BN(267BN 실행)의 s264_aih(핵심 도전자) cross-period(확장 기간) attempt(시도) 4개를 MT5(MetaTrader 5, 메타트레이더5) Strategy Tester(전략 테스터)로 실행했다.",
+        "Effect(효과): anti_overconstraint_prune(과제약 제거)이 2023H2/2025H1/2025H2에서 버티는지, state_acceleration_interaction(상태 가속 상호작용)이 2025H1 대조군으로 유효한지 확인한다.",
+        "",
+        "## KPI Snapshot(KPI 요약)",
+        "",
+        "| variant(변형) | period(기간) | net_profit(순수익) | PF(수익 팩터) | trades(거래 수) | max_DD%(최대 손실폭 %) |",
+        "| --- | --- | ---: | ---: | ---: | ---: |",
+    ]
+    for row in rows:
+        lines.append(
+            "| `{variant}` | `{period}` | {net} | {pf} | {trades} | {dd} |".format(
+                variant=row.get("variant_id", row.get("record_view", "")),
+                period=row.get("target_period", ""),
+                net=row.get("net_profit", ""),
+                pf=row.get("profit_factor", ""),
+                trades=row.get("trade_count", ""),
+                dd=row.get("max_drawdown_percent", ""),
+            )
+        )
+    if not rows:
+        lines.append("| `none` |  |  |  |  |  |")
+    lines.extend(
+        [
+            "",
+            "## Blocked / Gap Attempts(차단/공백 시도)",
+            "",
+            "| attempt(시도) | variant(변형) | period(기간) | tester(테스터) | runtime(런타임) | report(보고서) | note(메모) |",
+            "| --- | --- | --- | --- | --- | --- | --- |",
+        ]
+    )
+    for row in blocked_rows:
+        report_metrics = row.get("strategy_tester_report", {}).get("metrics", {})
+        runtime_outputs = row.get("runtime_outputs", {})
+        note = "trade_count={trades}; runtime_summary_exists={summary}; runtime_telemetry_exists={telemetry}".format(
+            trades=report_metrics.get("trade_count", ""),
+            summary=runtime_outputs.get("summary_exists", ""),
+            telemetry=runtime_outputs.get("telemetry_exists", ""),
+        )
+        lines.append(
+            "| `{attempt}` | `{variant}` | `{period}` | `{tester}` | `{runtime}` | `{report}` | {note} |".format(
+                attempt=row.get("attempt_name", ""),
+                variant=row.get("variant_id", ""),
+                period=row.get("target_period", ""),
+                tester=row.get("status", ""),
+                runtime=runtime_outputs.get("status", ""),
+                report=row.get("strategy_tester_report", {}).get("status", ""),
+                note=note,
+            )
+        )
+    if not blocked_rows:
+        lines.append("| `none` |  |  |  |  |  |  |")
+    lines.extend(
+        [
+            "",
+            "## Boundary(경계)",
+            "",
+            "- 이 실행은 research racing(연구 경주) 실행이며 candidate selection(후보 선택)이 아니다.",
+            "- balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질) 검토 전에는 좋은 후보라고 말하지 않는다.",
+            "- ONNX parity(ONNX 동등성)나 ONNX conversion(ONNX 변환)은 시작하지 않는다.",
+            "",
+            "## Artifacts(산출물)",
+            "",
+            f"- execution_result(실행 결과): `{rel(EXECUTION_RESULT_PATH)}`",
+            f"- kpi_summary(KPI 요약): `{rel(KPI_SUMMARY_PATH)}`",
+            f"- profile_encoding_receipt(프로필 인코딩 영수증): `{rel(PROFILE_ENCODING_RECEIPT_PATH)}`",
+            f"- forensics(포렌식): `{rel(FORENSICS_PATH)}`",
+            f"- next_action(다음 행동): `{next_action}`",
+        ]
+    )
+    return "\n".join(lines) + "\n"
+
+
+def write_run_payloads(
+    result: Mapping[str, Any],
+    status: str,
+    next_action: str,
+    profile_rows: Sequence[Mapping[str, Any]],
+) -> None:
+    write_json(EXECUTION_RESULT_PATH, result)
+    write_json(KPI_RECORDS_PATH, result.get("mt5_kpi_records", []))
+    write_csv(KPI_SUMMARY_PATH, result.get("kpi_summary_rows", []))
+    write_csv(FORENSICS_PATH, result.get("backtest_forensics", []))
+    write_csv(EXECUTED_ATTEMPTS_PATH, executed_attempt_rows(result.get("attempts_executed", []), result.get("execution_results", [])))
+    write_csv(PROFILE_ENCODING_RECEIPT_PATH, profile_rows)
+    write_csv(RUNTIME_PARITY_RECEIPT_PATH, runtime_parity_rows(profile_rows, len(result.get("mt5_kpi_records", [])), result.get("attempts_executed", [])))
+    write_csv(RESULT_JUDGMENT_PATH, result_judgment_rows(status, next_action))
+    write_json(
+        RUN_MANIFEST_PATH,
+        {
+            "run_id": RUN_ID,
+            "stage_id": STAGE_ID,
+            "source_run_id": SOURCE_RUN_ID,
+            "parent_run_id": PARENT_RUN_ID,
+            "status": status,
+            "created_at_utc": result["created_at_utc"],
+            "attempt_count": len(result.get("attempts_executed", [])),
+            "attempts_total_available": result.get("attempts_total_available"),
+            "kpi_record_count": len(result.get("mt5_kpi_records", [])),
+            "next_action": next_action,
+            "claim_boundary": CLAIM_BOUNDARY,
+            "selected_candidate": "none",
+            "selected_research_baseline": "none",
+            "onnx_readiness": "not_claimed",
+            "goal_achieve": "not_claimed",
+        },
+    )
+    write_json(
+        LINEAGE_PATH,
+        {
+            "run_id": RUN_ID,
+            "stage_id": STAGE_ID,
+            "source_run_id": SOURCE_RUN_ID,
+            "sources": {
+                "source_run_manifest": rel(SOURCE_RUN_MANIFEST_PATH),
+                "source_attempt_manifest": rel(SOURCE_ATTEMPT_MANIFEST_PATH),
+                "source_runtime_contract": rel(SOURCE_RUNTIME_CONTRACT_PATH),
+                "source_report": rel(SOURCE_REPORT_PATH),
+            },
+            "outputs": {
+                "execution_result": rel(EXECUTION_RESULT_PATH),
+                "kpi_summary": rel(KPI_SUMMARY_PATH),
+                "profile_encoding_receipt": rel(PROFILE_ENCODING_RECEIPT_PATH),
+                "report": rel(REPORT_PATH),
+            },
+            "lineage_judgment": "connected_with_boundary",
+        },
+    )
+    write_md(REPORT_PATH, report_markdown(result, status, next_action))
+
+
+def upsert_artifacts(created_at: str) -> None:
+    entries = (
+        ("stage267_run267BO_producer", "producer_script", PRODUCER_PATH, "Executes run267BO second aggressive cross-period tranche."),
+        ("stage267_run267BO_source_manifest", "source_manifest", SOURCE_RUN_MANIFEST_PATH, "Source run267BN manifest."),
+        ("stage267_run267BO_compile_log", "compile_log", COMPILE_LOG_PATH, "MetaEditor compile log."),
+        ("stage267_run267BO_execution_result", "execution_result", EXECUTION_RESULT_PATH, "MT5 execution result payload."),
+        ("stage267_run267BO_kpi_records", "kpi_records", KPI_RECORDS_PATH, "MT5 KPI records."),
+        ("stage267_run267BO_kpi_summary", "kpi_summary", KPI_SUMMARY_PATH, "MT5 KPI summary."),
+        ("stage267_run267BO_forensics", "backtest_forensics", FORENSICS_PATH, "Backtest forensics."),
+        ("stage267_run267BO_attempts_executed", "attempts_executed", EXECUTED_ATTEMPTS_PATH, "Executed attempts."),
+        ("stage267_run267BO_profile_encoding", "profile_encoding_receipt", PROFILE_ENCODING_RECEIPT_PATH, "Profile encoding receipt."),
+        ("stage267_run267BO_runtime_parity", "runtime_parity_receipt", RUNTIME_PARITY_RECEIPT_PATH, "Runtime parity receipt."),
+        ("stage267_run267BO_result_judgment", "result_judgment", RESULT_JUDGMENT_PATH, "Result judgment."),
+        ("stage267_run267BO_run_manifest", "run_manifest", RUN_MANIFEST_PATH, "Run manifest."),
+        ("stage267_run267BO_lineage", "lineage", LINEAGE_PATH, "Lineage map."),
+        ("stage267_run267BO_report", "review_report", REPORT_PATH, "User-facing report."),
+    )
+    rows = read_csv_rows(ARTIFACT_REGISTRY_PATH)
+    new_rows = [
+        {
+            "artifact_id": artifact_id,
+            "artifact_type": artifact_type,
+            "path": rel(path),
+            "sha256": sha256_file_lf_normalized(path) if path_exists(path) else "missing",
+            "stage_id": STAGE_ID,
+            "run_id": RUN_ID,
+            "created_at_utc": created_at,
+            "notes": notes,
+        }
+        for artifact_id, artifact_type, path, notes in entries
+    ]
+    replacement_ids = {row["artifact_id"] for row in new_rows}
+    merged = [row for row in rows if row.get("artifact_id") not in replacement_ids]
+    merged.extend(new_rows)
+    write_csv(ARTIFACT_REGISTRY_PATH, merged, ARTIFACT_COLUMNS)
+
+
+def upsert_ledgers(status: str, next_action: str, kpi_count: int, attempt_count: int, total_count: int) -> None:
+    stage_row = {
+        "row_id": "stage267_run267BO_aggressive_second_tranche_cross_period_mt5_execution",
+        "stage_id": STAGE_ID,
+        "run_id": RUN_ID,
+        "view": "aggressive_second_tranche_cross_period_mt5_execution",
+        "tier_scope": "Tier A first; Tier B and actual routed total blocked until true fallback manifest exists",
+        "scoreboard": "mt5_runtime_aggressive_second_tranche_cross_period",
+        "status": status,
+        "judgment": "mt5_runtime_evidence_no_candidate_selection" if kpi_count else "blocked_no_kpi",
+        "evidence_boundary": "mt5_strategy_tester_reports_no_candidate_selection_no_onnx",
+        "report_path": rel(REPORT_PATH),
+        "notes": f"kpi_records={kpi_count};attempts={attempt_count}/{total_count};next_action={next_action}.",
+    }
+    run_row = {
+        "run_id": RUN_ID,
+        "stage_id": STAGE_ID,
+        "lane": "aggressive_second_tranche_cross_period_mt5_execution",
+        "status": status,
+        "judgment": "mt5_runtime_evidence_no_candidate_selection" if kpi_count else "blocked_no_kpi",
+        "path": rel(REPORT_PATH),
+        "notes": f"kpi_records={kpi_count};selected_candidate=none;onnx_readiness=not_claimed.",
+    }
+    project_row = {
+        "ledger_row_id": f"{RUN_ID}__aggressive_second_tranche_cross_period_mt5_execution",
+        "stage_id": STAGE_ID,
+        "run_id": RUN_ID,
+        "subrun_id": "aggressive_second_tranche_cross_period_mt5_execution",
+        "parent_run_id": SOURCE_RUN_ID,
+        "record_view": "aggressive_second_tranche_cross_period_mt5_execution",
+        "tier_scope": "Tier A first; true fallback blocked",
+        "kpi_scope": "mt5_runtime_aggressive_second_tranche_cross_period",
+        "scoreboard_lane": "aggressive_cross_period_execution",
+        "status": status,
+        "judgment": "mt5_runtime_evidence_no_candidate_selection" if kpi_count else "blocked_no_kpi",
+        "path": rel(REPORT_PATH),
+        "primary_kpi": f"kpi_records={kpi_count};attempts={attempt_count}/{total_count}",
+        "guardrail_kpi": "selected_candidate=none;onnx_readiness=not_claimed;goal_achieve=not_claimed",
+        "external_verification_status": "completed" if kpi_count else "blocked",
+        "notes": f"Next action: {next_action}.",
+    }
+    upsert_csv_rows(STAGE_LEDGER_PATH, STAGE_LEDGER_COLUMNS, [stage_row], key="row_id")
+    upsert_csv_rows(RUN_REGISTRY_PATH, RUN_REGISTRY_COLUMNS, [run_row], key="run_id")
+    upsert_csv_rows(PROJECT_LEDGER_PATH, ALPHA_LEDGER_COLUMNS, [project_row], key="ledger_row_id")
+
+
+def update_docs(status: str, next_action: str, kpi_count: int, attempt_count: int, total_count: int) -> None:
+    report_line = f"- run267BO_aggressive_second_tranche_cross_period_mt5_execution(267BO 공격형 2차 묶음 확장 기간 MT5 실행): `{rel(REPORT_PATH)}`"
+    block = "\n".join(
+        [
+            "Run267BO(267BO 실행)는 run267BN(267BN 실행)의 공격형 2차 확장 기간 묶음(tranche, 묶음)을 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.",
+            f"Effect(효과): attempt(시도) `{attempt_count}/{total_count}`개 중 KPI records(KPI 기록) `{kpi_count}`개를 만들었고, 남은 gap(공백)은 state_acceleration_interaction(상태 가속 상호작용)의 zero-trade/no-runtime-output(거래 0개/런타임 출력 없음) 분류다.",
+            "Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.",
+        ]
+    )
+    for path in (CURRENT_WORKING_STATE_PATH, SELECTION_STATUS_PATH, REVIEW_INDEX_PATH):
+        text = read_text(path)
+        text = replace_line_prefix(text, "- current_run(현재 실행):", f"- current_run(현재 실행): `{RUN_ID}`")
+        text = replace_line_prefix(text, "- status(상태):", f"- status(상태): `{status}`")
+        text = replace_line_prefix(text, "- stage_status(단계 상태):", f"- stage_status(단계 상태): `{status}`")
+        text = replace_line_prefix(text, "- last_completed_run(마지막 완료 실행):", f"- last_completed_run(마지막 완료 실행): `{RUN_ID}`")
+        text = replace_line_prefix(text, "- next_run(다음 실행):", f"- next_run(다음 실행): `{next_action}`")
+        text = replace_line_prefix(text, "- next_action(다음 행동):", f"- next_action(다음 행동): `{next_action}`")
+        text = append_after_contains(text, "stage267_run267BN_aggressive_second_tranche_cross_period_materialization.md", report_line)
+        text = append_block_once(text, "Run267BO(267BO 실행)는", block)
+        write_md(path, text)
+
+    workspace = read_text(WORKSPACE_STATE_PATH)
+    focus = (
+        "- >-\n"
+        f"  Stage267(267단계) run267BO(267BO 실행) aggressive second tranche cross-period MT5 execution(공격형 2차 묶음 확장 기간 MT5 실행) `{status}`. "
+        f"Effect(효과): run267BN(267BN 실행)의 s264_aih(핵심 도전자) cross-period(확장 기간) 4개 attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5) tester output(테스터 출력)과 KPI(핵심 성과 지표)로 연결했고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.\n"
+    )
+    workspace = prepend_current_focus(workspace, focus)
+    workspace = update_stage267_workspace_block(
+        workspace,
+        status=status,
+        run_id=RUN_ID,
+        next_action=next_action,
+        report_entry=f"  run267BO_aggressive_second_tranche_cross_period_mt5_execution_report_path: {rel(REPORT_PATH)}",
+    )
+    write_md(WORKSPACE_STATE_PATH, workspace)
+
+
+def execute(args: argparse.Namespace) -> dict[str, Any]:
+    created_at = utc_now()
+    attempts, total_count = load_attempts(args.attempt_name or [], args.limit)
+    if not attempts:
+        raise RuntimeError("no run267BO attempts selected")
+
+    for attempt in attempts:
+        clear_runtime_outputs(args.common_files_root, attempt)
+        mt5.remove_existing_mt5_report_artifacts(args.terminal_data_root, attempt, run_id=RUN_ID)
+
+    compile_payload = mt5.compile_mql5_ea(args.metaeditor_path, mt5.EA_SOURCE_PATH, COMPILE_LOG_PATH)
+    execution_results: list[dict[str, Any]] = []
+    if compile_payload.get("status") == "completed":
+        for attempt in attempts:
+            tester_result = mt5.run_mt5_tester(
+                args.terminal_path,
+                Path(str(attempt["ini"]["path"])),
+                set_path=Path(str(attempt["set"]["path"])),
+                tester_profile_set_path=args.tester_profile_root / EA_TESTER_SET_NAME,
+                tester_profile_ini_path=args.tester_profile_root / f"opv2_s267bo_{attempt['attempt_name']}.ini",
+                timeout_seconds=args.timeout_seconds,
+            )
+            tester_result.update(
+                {
+                    "attempt_name": attempt.get("attempt_name"),
+                    "queue_id": attempt.get("queue_id"),
+                    "source_queue_id": attempt.get("source_queue_id"),
+                    "source_variant_id": attempt.get("source_variant_id"),
+                    "source_first_tranche_attempt_name": attempt.get("source_first_tranche_attempt_name"),
+                    "candidate_id": attempt.get("candidate_id"),
+                    "candidate_alias": attempt.get("candidate_alias"),
+                    "candidate_role": attempt.get("candidate_role"),
+                    "variant_id": attempt.get("variant_id"),
+                    "target_period": attempt.get("target_period"),
+                    "period_id": attempt.get("period_id"),
+                    "tier": attempt.get("tier"),
+                    "split": attempt.get("split"),
+                    "attempt_role": attempt.get("attempt_role"),
+                    "record_view_prefix": attempt.get("record_view_prefix"),
+                    "model_materialization_type": attempt.get("model_materialization_type"),
+                    "tier_pair_boundary": attempt.get("tier_pair_boundary"),
+                    "materialization_boundary": attempt.get("materialization_boundary"),
+                    "ini_path": attempt["ini"]["path"],
+                }
+            )
+            tester_result["runtime_outputs"] = mt5.wait_for_mt5_runtime_outputs(
+                args.common_files_root,
+                attempt,
+                timeout_seconds=args.runtime_timeout_seconds,
+                poll_seconds=2,
+            )
+            if tester_result["runtime_outputs"].get("status") != "completed":
+                tester_result["status"] = "blocked"
+            execution_results.append(tester_result)
+
+    report_records = mt5.collect_mt5_strategy_report_artifacts(
+        terminal_data_root=args.terminal_data_root,
+        run_output_root=RUN_ROOT,
+        attempts=attempts,
+        run_id=RUN_ID,
+    )
+    report_records = supplement_truncated_html_reports(
+        report_records,
+        attempts,
+        terminal_data_root=args.terminal_data_root,
+        run_output_root=RUN_ROOT,
+    )
+    mt5.attach_mt5_report_metrics(execution_results, report_records)
+    kpi_records = mt5.build_mt5_kpi_records(execution_results)
+    kpi_rows = annotate_kpi_rows(historical_executor.kpi_summary_rows(kpi_records), attempts)
+    forensics = annotate_forensic_rows(historical_executor.forensic_rows(attempts, execution_results, report_records), attempts)
+    base_status = historical_executor.execution_status(execution_results, kpi_records)
+    status = status_token(base_status, len(attempts), total_count, len(kpi_records))
+    next_action = next_action_for(status, len(attempts), total_count, len(kpi_records))
+    profile_rows = profile_encoding_rows(execution_results)
+    result = {
+        "run_id": RUN_ID,
+        "source_run_id": SOURCE_RUN_ID,
+        "parent_run_id": PARENT_RUN_ID,
+        "stage_id": STAGE_ID,
+        "created_at_utc": created_at,
+        "execution_status": status,
+        "base_execution_status": base_status,
+        "claim_boundary": CLAIM_BOUNDARY,
+        "compile": compile_payload,
+        "attempts_total_available": total_count,
+        "attempts_executed": attempts,
+        "execution_results": execution_results,
+        "strategy_tester_reports": report_records,
+        "mt5_kpi_records": kpi_records,
+        "kpi_summary_rows": kpi_rows,
+        "backtest_forensics": forensics,
+        "profile_encoding_rows": profile_rows,
+        "runtime_module_hashes": mt5.mt5_runtime_module_hashes(),
+        "input_manifest": rel(SOURCE_RUN_MANIFEST_PATH),
+        "tier_pair_boundary": TIER_PAIR_BOUNDARY,
+        "selected_candidate": "none",
+        "selected_research_baseline": "none",
+        "onnx_readiness": "not_claimed",
+        "goal_achieve": "not_claimed",
+        "next_action": next_action,
+    }
+    write_run_payloads(result, status, next_action, profile_rows)
+    upsert_ledgers(status, next_action, len(kpi_records), len(attempts), total_count)
+    upsert_artifacts(created_at)
+    update_docs(status, next_action, len(kpi_records), len(attempts), total_count)
+    return result
+
+
+def parse_args(argv: Sequence[str]) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Execute run267BO aggressive second tranche cross-period attempts in MT5.")
+    parser.add_argument("--attempt-name", action="append", default=[])
+    parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--timeout-seconds", type=int, default=900)
+    parser.add_argument("--runtime-timeout-seconds", type=int, default=120)
+    parser.add_argument("--terminal-path", type=Path, default=TERMINAL_PATH_DEFAULT)
+    parser.add_argument("--metaeditor-path", type=Path, default=METAEDITOR_PATH_DEFAULT)
+    parser.add_argument("--terminal-data-root", type=Path, default=TERMINAL_DATA_ROOT_DEFAULT)
+    parser.add_argument("--common-files-root", type=Path, default=COMMON_FILES_ROOT_DEFAULT)
+    parser.add_argument("--tester-profile-root", type=Path, default=TESTER_PROFILE_ROOT_DEFAULT)
+    return parser.parse_args(argv)
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    args = parse_args(argv or sys.argv[1:])
+    result = execute(args)
+    print(
+        json.dumps(
+            {
+                "execution_status": result["execution_status"],
+                "attempt_count": len(result.get("attempts_executed", [])),
+                "attempts_total_available": result.get("attempts_total_available"),
+                "kpi_records": len(result.get("mt5_kpi_records", [])),
+                "next_action": result["next_action"],
+                "selected_candidate": result.get("selected_candidate"),
+                "onnx_readiness": result.get("onnx_readiness"),
+                "goal_achieve": result.get("goal_achieve"),
+                "report": rel(REPORT_PATH),
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
