@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267AM_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review_completed`
+- stage_status(단계 상태): `run267AN_noncalendar_state_guard_repair_followup_or_prune_design_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AM_stage267_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review_v1`
-- last_completed_run(마지막 완료 실행): `run267AM_stage267_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review_v1`
+- current_run(현재 실행): `run267AN_stage267_noncalendar_state_guard_repair_followup_or_prune_design_v1`
+- last_completed_run(마지막 완료 실행): `run267AN_stage267_noncalendar_state_guard_repair_followup_or_prune_design_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -86,7 +86,8 @@
 - run267AK_noncalendar_state_guard_repair_queue_materialization(267AK 비달력 상태 방어 수리 큐 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AK_noncalendar_state_guard_repair_queue_materialization.md`
 - run267AL_noncalendar_state_guard_repair_mt5_execution(267AL 비달력 상태 방어 수리 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AL_noncalendar_state_guard_repair_mt5_execution.md`
 - run267AM_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review(267AM 비달력 상태 방어 수리 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AM_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review.md`
-- next_action(다음 행동): `run267AN_design_noncalendar_state_guard_repair_followup_or_prune`
+- run267AN_noncalendar_state_guard_repair_followup_or_prune_design(267AN 비달력 상태 방어 수리 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AN_noncalendar_state_guard_repair_followup_or_prune_design.md`
+- next_action(다음 행동): `run267AO_materialize_pool_wide_state_feature_engineering_queue`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -165,4 +166,8 @@ Effect(효과): score-table repair(점수표 수리)가 실제 tester output(테
 
 Run267AM(267AM 실행)은 run267AL(267AL 실행)의 repair MT5 reports(수리 MT5 보고서)를 거래 단위로 다시 읽었다.
 Effect(효과): headline KPI(대표 핵심 성과 지표)만 보지 않고 Monday(월요일), 2024-12(2024년 12월), chron segment(시간 순서 구간), session(세션)을 비교해 다음 설계/가지치기 조건을 만들었다.
+Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
+
+Run267AN(267AN 실행)은 run267AM(267AM 실행)의 repair review(수리 검토)를 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
+Effect(효과): s264_aia의 같은 bounded repair(경계 수리)는 약한 구간 gate(게이트) 미통과로 닫고, 단서는 후보군 전체 state feature engineering(상태 피처 엔지니어링)으로 넘긴다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
