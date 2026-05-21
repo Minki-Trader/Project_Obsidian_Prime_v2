@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267BV_directional_impulse_followup_or_prune_design_completed`
-- current_run(현재 실행): `run267BV_stage267_directional_impulse_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267BV_stage267_directional_impulse_followup_or_prune_design_v1`
+- status(상태): `run267BW_aggressive_impulse_dd_shape_cross_period_materialized_execution_pending`
+- current_run(현재 실행): `run267BW_stage267_aggressive_impulse_dd_shape_cross_period_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267BW_stage267_aggressive_impulse_dd_shape_cross_period_materialization_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -144,7 +144,7 @@ Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N �
 Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
 Run267Q(267Q 실행)는 internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토)를 완료했다.
 Effect(효과): MT5(MetaTrader 5, 메타트레이더5)에서 run267N(267N 실행) 원천 표면을 재현했지만, 변형 차이가 후보별로 접혀 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
-- next_action(다음 행동): `run267BW_materialize_aggressive_impulse_dd_shape_cross_period_queue`
+- next_action(다음 행동): `run267BX_execute_aggressive_impulse_dd_shape_cross_period_mt5_batch`
 
 Run267S(267S 실행)는 후보군 전체 직교 안정성 경주 행렬을 물질화했다.
 Effect(효과): selected candidate(선택 후보) 없이 다음 MT5(MetaTrader 5, 메타트레이더5) 물질화/실행 큐로 넘어갈 수 있게 후보, 축, 실패 기억, 중단 조건을 연결했다.
@@ -249,12 +249,12 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 
 Run267BC(267BC 실행)는 run267BB(267BB 실행)의 `s264_aia` watch pair(관찰 쌍)를 adjacent-period(인접 기간) MT5 attempt inputs(MT5 시도 입력)로 물질화했다.
 Effect(효과): feature frames(피처 프레임) `6`개와 attempts(시도) `6`개를 만들었지만, MT5 execution(MT5 실행)은 아직 하지 않았으므로 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
-- stage_status(단계 상태): `run267BV_directional_impulse_followup_or_prune_design_completed`
+- stage_status(단계 상태): `run267BW_aggressive_impulse_dd_shape_cross_period_materialized_execution_pending`
 
 Run267BD(267BD 실행)은 run267BC(267BC 실행)의 `s264_aia` adjacent-period replacement(인접 기간 대체) attempt(시도) `1/6`개를 MT5(MetaTrader 5, 메타트레이더5)에서 실행 또는 실행 시도했다.
 Effect(효과): KPI records(KPI 기록) `0`개를 만들었고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`로 남긴다.
 Next action(다음 행동): `run267BD_repair_s264_aia_adjacent_period_replacement_mt5_execution_blocker`. Effect(효과): KPI(핵심 성과 지표)와 report(보고서)가 없으므로 curve/time-slice/trade-quality review(곡선/시간구간/거래품질 검토) 전에 MT5(MetaTrader 5, 메타트레이더5) execution blocker(실행 차단 사유)를 먼저 고친다.
-- adapter_under_review(검토 중 어댑터): `directional_impulse_followup_or_prune_design`
+- adapter_under_review(검토 중 어댑터): `aggressive_impulse_dd_shape_cross_period_materialization`
 - run267BE_mt5_tester_start_diagnostic(267BE MT5 테스터 시작 진단): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BE_mt5_tester_start_diagnostic.md`
 
 Run267BE(267BE 실행)는 run267BD(267BD 실행)의 MT5 tester start blocker(MT5 테스터 시작 차단)를 별도 진단으로 고정했다.
@@ -321,6 +321,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267BT_pool_wide_directional_impulse_followup_mt5_execution(267BT 후보군 전체 방향/임펄스 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BT_pool_wide_directional_impulse_followup_mt5_execution.md`
 - run267BU_pool_wide_directional_impulse_followup_balance_timeslice_trade_quality_review(267BU 후보군 전체 방향/임펄스 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BU_pool_wide_directional_impulse_followup_balance_timeslice_trade_quality_review.md`
 - run267BV_directional_impulse_followup_or_prune_design(267BV 방향/임펄스 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BV_directional_impulse_followup_or_prune_design.md`
+- run267BW_aggressive_impulse_dd_shape_cross_period_materialization(267BW 공격형 임펄스 손실폭 형태 확장 기간 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BW_aggressive_impulse_dd_shape_cross_period_materialization.md`
 
 Run267BT(267BT 실행)는 run267BS(267BS 실행)의 후보군 전체 방향/임펄스 후속 attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): attempt(시도) `10/10`개 중 KPI records(KPI 기록) `10`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
@@ -332,4 +333,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267BV(267BV 실행)는 run267BU(267BU 실행)의 방향/임펄스 검토를 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
 Effect(효과): directional_asymmetry(방향 비대칭)는 독립 분기에서 가지치기하고, aggressive_impulse_replacement(공격형 임펄스 대체)는 DD-shape pressure(손실폭 형태 압박), cross-period(확장 기간), similar replacement(유사 대체)로 넘긴다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267BW(267BW 실행)는 run267BV(267BV 실행)의 aggressive impulse cross-period pressure(공격형 임펄스 확장 기간 압박) 큐를 MT5(MetaTrader 5, 메타트레이더5) 입력으로 물질화했다.
+Effect(효과): 상위 3개 관찰 후보 x 3개 기간 = `9`개 attempt(시도)를 만들었고, 다음 run267BX(267BX 실행)에서 기간별 PF/DD(수익 팩터/손실폭), curve(곡선), time-slice(시간 구간), trade quality(거래 품질)를 확인할 수 있다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
