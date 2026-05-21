@@ -1,0 +1,5 @@
+﻿gate_id,status,evidence,effect
+source_queue_present(원천 대기열 존재),passed,queue_rows=3,run267BZ 대기열을 누락 없이 소비했는지 확인한다.
+p0_attempts_materialized(P0 시도 물질화),passed,attempts=2;held_rows=1,P0 두 개는 실행 입력으로 만들고 P1 하나는 보류했음을 확인한다.
+score_table_validation(점수표 검증),passed,all materialized rows passed score-table probability smoke check(모든 물질화 행이 점수표 확률 스모크 확인 통과),새 피처 순서와 점수표 폭이 맞는지 확인한다.
+claim_boundary(주장 경계),passed,selected_candidate=none;selected_research_baseline=none;onnx_readiness=not_claimed;goal_achieve=not_claimed,물질화를 후보 선택이나 ONNX 검토로 과장하지 않는다.
