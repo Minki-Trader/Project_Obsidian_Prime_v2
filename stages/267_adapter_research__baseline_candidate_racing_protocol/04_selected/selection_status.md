@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267W_true_internal_ablation_score_tables_materialized_execution_pending`
+- stage_status(단계 상태): `run267Y_true_internal_ablation_kpi_signature_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267W_stage267_true_internal_ablation_score_table_materialization_v1`
-- last_completed_run(마지막 완료 실행): `run267W_stage267_true_internal_ablation_score_table_materialization_v1`
+- current_run(현재 실행): `run267Y_stage267_true_internal_ablation_kpi_signature_review_v1`
+- last_completed_run(마지막 완료 실행): `run267Y_stage267_true_internal_ablation_kpi_signature_review_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -70,7 +70,9 @@
 - run267U_true_internal_feature_ablation_design(267U 진짜 내부 피처 제거 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267U_true_internal_feature_ablation_design.md`
 - run267V_reconstruct_upstream_feature_surface(267V 상류 피처 표면 재구축): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267V_reconstruct_upstream_feature_surface.md`
 - Stage267(267단계) run267W true internal ablation score table materialization(진짜 내부 제거 점수표 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267W_true_internal_ablation_score_table_materialization.md`
-- next_action(다음 행동): `run267X_execute_true_internal_ablation_score_table_mt5_batch`
+- run267X_true_internal_ablation_score_table_mt5_execution(267X 진짜 내부 제거 점수표 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267X_true_internal_ablation_score_table_mt5_execution.md`
+- run267Y_true_internal_ablation_kpi_signature_review(267Y 진짜 내부 제거 KPI 서명 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Y_true_internal_ablation_kpi_signature_review.md`
+- next_action(다음 행동): `run267Z_balance_timeslice_trade_quality_review_true_internal_ablation_results`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
