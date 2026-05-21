@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267CU_shared_weakness_breakout_followup_or_prune_design_completed`
+- stage_status(단계 상태): `run267CV_shared_weakness_breakout_followup_or_prune_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267CU_stage267_shared_weakness_breakout_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267CU_stage267_shared_weakness_breakout_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267CV_stage267_shared_weakness_breakout_followup_or_prune_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267CV_stage267_shared_weakness_breakout_followup_or_prune_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267CV_materialize_shared_weakness_breakout_followup_or_prune_queue`
+- next_action(다음 행동): `run267CW_execute_shared_weakness_breakout_followup_or_prune_mt5_batch`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -347,6 +347,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267CS_shared_weakness_breakout_followup_mt5_execution(267CS 공유 약점 돌파 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CS_shared_weakness_breakout_followup_mt5_execution.md`
 - run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review(267CT 공유 약점 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review.md`
 - run267CU_shared_weakness_breakout_followup_or_prune_design(267CU 공유 약점 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CU_shared_weakness_breakout_followup_or_prune_design.md`
+- run267CV_shared_weakness_breakout_followup_or_prune_materialization(267CV 공유 약점 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CV_shared_weakness_breakout_followup_or_prune_materialization.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
@@ -434,4 +435,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267CU(267CU 실행)는 run267CT(267CT 실행)의 balance/time-slice/trade-quality(잔액/시간구간/거래품질) 근거를 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
 Effect(효과): queue(대기열) `6`개 중 P0에는 balanced pair cross-period pressure(균형 쌍 확장 기간 압박), s258 redzone Monday/DD pressure(위험 구역 월요일/DD 압박), explosive shock-state combo(폭발형 충격-상태 조합)를 둔다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267CV(267CV 실행)는 run267CU(267CU 실행)의 follow-up/prune queue(후속/가지치기 대기열)를 실제 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 바꿨다.
+Effect(효과): variants(변형) `5`개와 attempts(시도) `10`개를 만들고, cross-period state_phase(확장 기간 상태 구간)와 feature ablation/replacement(피처 제거/대체)는 held(보류)로 기록했다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
