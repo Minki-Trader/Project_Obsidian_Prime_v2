@@ -1,6 +1,7 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
 - status(상태): `run267CM_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_completed`
+- run267CN_pool_wide_shared_weakness_breakout_materialization(267CN 후보군 전체 공유 약점 돌파 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CN_pool_wide_shared_weakness_breakout_materialization.md`
 - current_run(현재 실행): `run267CM_stage267_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_v1`
 - last_completed_run(마지막 완료 실행): `run267CM_stage267_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
@@ -397,4 +398,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267CK(267CK 실행)는 run267CJ(267CJ 실행)의 follow-up(후속) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): attempt(시도) `4/4`개 중 KPI records(KPI 기록) `4`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267CN(267CN 실행)는 run267CM(267CM 실행)의 P0 공유 약점/공격형 재진입 큐를 MT5(MetaTrader 5, 메타트레이더5) 입력으로 물질화했다.
+Effect(효과): variants(변형) `6`개, attempts(시도) `12`개, control receipts(대조 영수증) `2`개, guardrail receipts(가드레일 영수증) `2`개를 남기고 다음 행동을 `run267CO_execute_pool_wide_shared_weakness_breakout_mt5_batch`으로 고정했다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
