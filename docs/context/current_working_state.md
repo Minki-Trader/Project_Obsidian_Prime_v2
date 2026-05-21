@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267BB_stage267_cross_period_replacement_ready_subset_review_v1`
+- current_run(현재 실행): `run267BC_stage267_adjacent_period_replacement_frame_materialization_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `cross_period_replacement_ready_subset_review`
-- status(상태): `run267BB_cross_period_replacement_ready_subset_review_completed_route_gap_blocked`
+- adapter_under_review(검토 중 어댑터): `adjacent_period_replacement_materialization`
+- status(상태): `run267BC_adjacent_period_replacement_frames_materialized_route_manifest_repair_inputs_ready_execution_pending`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -137,6 +137,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - run267AZ_pool_wide_state_feature_engineering_second_followup_or_adapter_branch(267AZ 후보군 전체 상태 피처 엔지니어링 2차 후속/어댑터 분기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AZ_pool_wide_state_feature_engineering_second_followup_or_adapter_branch.md`
 - run267BA_true_fallback_cross_period_replacement_queue_materialization(267BA 실제 대체/확장 기간/유사 대체 큐 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BA_true_fallback_cross_period_replacement_queue_materialization.md`
 - run267BB_cross_period_replacement_ready_subset_review(267BB 확장 기간 대체 부분집합 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BB_cross_period_replacement_ready_subset_review.md`
+- run267BC_adjacent_period_replacement_materialization(267BC 인접 기간 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BC_adjacent_period_replacement_materialization.md`
 - run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review(267AU 후보군 전체 상태 피처 엔지니어링 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review.md`
 
 - latest_design(최신 설계): run267AV(267AV 실행) profile decisions(프로필 결정) `8`, candidate decisions(후보 결정) `5`, queue rows(큐 행) `5`, failure memory(실패 기억) `5`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AV_pool_wide_state_feature_engineering_followup_or_adapter_branch.md`.
@@ -183,10 +184,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267BC_materialize_adjacent_period_replacement_frames_for_s264_aia_watch_pair_and_route_manifest_repair_inputs`
+- next_run(다음 실행): `run267BD_execute_s264_aia_adjacent_period_replacement_mt5_batch_or_repair_materialization_gaps`
 - action(행동): run267AS(267AS 실행)는 run267AR(267AR 실행)의 후속 큐를 run267AT(267AT 실행) MT5(MetaTrader 5, 메타트레이더5) 실행 대기 입력으로 물질화했다.
 - effect(효과): 같은 월요일/12월 수리를 직접 달력 필터로 반복하지 않고, 비달력 상태 압박(noncalendar state pressure, 비달력 상태 압박)이 실제 거래/곡선/시간구간을 개선하는지 볼 수 있다.
-- next_action(다음 행동): `run267BC_materialize_adjacent_period_replacement_frames_for_s264_aia_watch_pair_and_route_manifest_repair_inputs`
+- next_action(다음 행동): `run267BD_execute_s264_aia_adjacent_period_replacement_mt5_batch_or_repair_materialization_gaps`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -332,3 +333,6 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 Run267BB(267BB 실행)는 run267BA(267BA 실행)의 replacement subset(대체 부분집합)을 run267Z(267Z 실행) 거래/곡선/구간 근거와 결합했다.
 Effect(효과): 5개 replacement rows(대체 행) 중 s264_aia watch pair(관찰 쌍) 2개만 다음 adjacent-period materialization(인접 기간 물질화)로 넘기고, true fallback(실제 대체)은 duplicate Tier A+B(중복 Tier A+B)라 계속 차단했다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267BC(267BC 실행)는 run267BB(267BB 실행)의 `s264_aia` watch pair(관찰 쌍)를 adjacent-period(인접 기간) MT5 attempt inputs(MT5 시도 입력)로 물질화했다.
+Effect(효과): feature frames(피처 프레임) `6`개와 attempts(시도) `6`개를 만들었지만, MT5 execution(MT5 실행)은 아직 하지 않았으므로 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.

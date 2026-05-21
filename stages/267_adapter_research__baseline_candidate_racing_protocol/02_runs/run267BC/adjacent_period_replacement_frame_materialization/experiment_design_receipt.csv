@@ -1,0 +1,12 @@
+﻿field,value
+hypothesis,s264_aia replacement watch pair is useful only if adjacent periods do not break it
+decision_use,materialize MT5 attempt inputs; decide later from adjacent-period KPI and curve evidence
+comparison_baseline,run267BB 2024 Tier A replacement subset review
+control_variables,same s264_aia score tables; same feature order hash; no calendar rule change; Tier A only
+changed_variables,runtime feature period window only
+sample_scope,"2023H2 train-era, 2025H1 validation-era, 2025H2 OOS-followthrough Tier A source frames"
+success_criteria,MT5 execution later shows viable net/PF/trades/DD and no deep Monday/month hole
+failure_criteria,watch pair collapses outside 2024 or remains dependent on one period
+invalid_conditions,"feature order hash mismatch, duplicate timestamps, missing model, or routed total claim from fallback-disabled rows"
+stop_conditions,execute only these six Tier A attempts before any Adapter build; keep true fallback blocked until manifest repair
+evidence_plan,"attempt manifest, MT5 KPI, trade records, balance/equity curve, time-slice KPI, route boundary audit"

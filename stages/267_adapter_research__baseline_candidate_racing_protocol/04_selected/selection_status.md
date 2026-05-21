@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267BB_cross_period_replacement_ready_subset_review_completed_route_gap_blocked`
+- stage_status(단계 상태): `run267BC_adjacent_period_replacement_frames_materialized_route_manifest_repair_inputs_ready_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267BB_stage267_cross_period_replacement_ready_subset_review_v1`
-- last_completed_run(마지막 완료 실행): `run267BB_stage267_cross_period_replacement_ready_subset_review_v1`
+- current_run(현재 실행): `run267BC_stage267_adjacent_period_replacement_frame_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267BC_stage267_adjacent_period_replacement_frame_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -100,6 +100,7 @@
 - run267AZ_pool_wide_state_feature_engineering_second_followup_or_adapter_branch(267AZ 후보군 전체 상태 피처 엔지니어링 2차 후속/어댑터 분기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AZ_pool_wide_state_feature_engineering_second_followup_or_adapter_branch.md`
 - run267BA_true_fallback_cross_period_replacement_queue_materialization(267BA 실제 대체/확장 기간/유사 대체 큐 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BA_true_fallback_cross_period_replacement_queue_materialization.md`
 - run267BB_cross_period_replacement_ready_subset_review(267BB 확장 기간 대체 부분집합 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BB_cross_period_replacement_ready_subset_review.md`
+- run267BC_adjacent_period_replacement_materialization(267BC 인접 기간 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BC_adjacent_period_replacement_materialization.md`
 - run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review(267AU 후보군 전체 상태 피처 엔지니어링 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review.md`
 - next_action(다음 행동): `run267BC_materialize_adjacent_period_replacement_frames_for_s264_aia_watch_pair_and_route_manifest_repair_inputs`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
@@ -235,3 +236,6 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 Run267BB(267BB 실행)는 run267BA(267BA 실행)의 replacement subset(대체 부분집합)을 run267Z(267Z 실행) 거래/곡선/구간 근거와 결합했다.
 Effect(효과): 5개 replacement rows(대체 행) 중 s264_aia watch pair(관찰 쌍) 2개만 다음 adjacent-period materialization(인접 기간 물질화)로 넘기고, true fallback(실제 대체)은 duplicate Tier A+B(중복 Tier A+B)라 계속 차단했다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267BC(267BC 실행)는 run267BB(267BB 실행)의 `s264_aia` watch pair(관찰 쌍)를 adjacent-period(인접 기간) MT5 attempt inputs(MT5 시도 입력)로 물질화했다.
+Effect(효과): feature frames(피처 프레임) `6`개와 attempts(시도) `6`개를 만들었지만, MT5 execution(MT5 실행)은 아직 하지 않았으므로 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
