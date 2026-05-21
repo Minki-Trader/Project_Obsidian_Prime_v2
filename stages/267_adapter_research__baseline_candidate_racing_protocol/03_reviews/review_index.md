@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267AS_pool_wide_state_feature_engineering_followup_materialized_execution_pending`
-- current_run(현재 실행): `run267AS_stage267_pool_wide_state_feature_engineering_followup_materialization_v1`
-- last_completed_run(마지막 완료 실행): `run267AS_stage267_pool_wide_state_feature_engineering_followup_materialization_v1`
+- status(상태): `run267AT_pool_wide_state_feature_engineering_followup_mt5_batch_completed`
+- current_run(현재 실행): `run267AT_stage267_pool_wide_state_feature_engineering_followup_mt5_execution_v1`
+- last_completed_run(마지막 완료 실행): `run267AT_stage267_pool_wide_state_feature_engineering_followup_mt5_execution_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -99,6 +99,7 @@
 - Stage267(267단계) run267AQ pool-wide state feature engineering balance/time-slice/trade-quality review(후보군 전체 상태 피처 엔지니어링 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AQ_pool_wide_state_feature_engineering_balance_timeslice_trade_quality_review.md`
 - Stage267(267단계) run267AR pool-wide state feature engineering follow-up/Adapter branch design(후보군 전체 상태 피처 엔지니어링 후속/어댑터 분기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AR_pool_wide_state_feature_engineering_followup_or_adapter_branch.md`
 - run267AS_pool_wide_state_feature_engineering_followup_materialization(267AS 후보군 전체 상태 피처 엔지니어링 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AS_pool_wide_state_feature_engineering_followup_materialization.md`
+- run267AT_pool_wide_state_feature_engineering_followup_mt5_execution(267AT 후보군 전체 상태 피처 엔지니어링 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AT_pool_wide_state_feature_engineering_followup_mt5_execution.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
 - run267B_input_readiness_report(267B 입력 준비 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267B_input_readiness_report.md`
 - routing_receipt(라우팅 기록): `docs/agent_control/packets/stage267_baseline_candidate_racing_protocol_v1/routing_receipt.json`
@@ -121,7 +122,7 @@ Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N �
 Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
 Run267Q(267Q 실행)는 internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토)를 완료했다.
 Effect(효과): MT5(MetaTrader 5, 메타트레이더5)에서 run267N(267N 실행) 원천 표면을 재현했지만, 변형 차이가 후보별로 접혀 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
-- next_action(다음 행동): `run267AT_execute_pool_wide_state_feature_engineering_followup_mt5_batch`
+- next_action(다음 행동): `run267AU_review_pool_wide_state_feature_engineering_followup_mt5_results`
 
 Run267S(267S 실행)는 후보군 전체 직교 안정성 경주 행렬을 물질화했다.
 Effect(효과): selected candidate(선택 후보) 없이 다음 MT5(MetaTrader 5, 메타트레이더5) 물질화/실행 큐로 넘어갈 수 있게 후보, 축, 실패 기억, 중단 조건을 연결했다.
@@ -188,3 +189,7 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 
 Run267AS(267AS 실행)는 pool-wide state feature engineering follow-up materialization(후보군 전체 상태 피처 엔지니어링 후속 물질화)을 완료했다.
 Effect(효과): 8개 follow-up variant(후속 변형)와 16개 MT5(MetaTrader 5, 메타트레이더5) attempt(시도)를 만들었지만 아직 실행 결과가 아니므로 선택 후보(selected candidate, 선택 후보)는 없다.
+
+Run267AT(267AT 실행)는 run267AS(267AS 실행)의 pool-wide state feature engineering follow-up queue(후보군 전체 상태 피처 엔지니어링 후속 큐)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
+Effect(효과): 실제 tester output(테스터 출력)과 KPI(핵심 성과 지표)를 얻었지만, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 없다.
+Next action(다음 행동): `run267AU_review_pool_wide_state_feature_engineering_followup_mt5_results`. Effect(효과): 후보별 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 다시 판정한다.
