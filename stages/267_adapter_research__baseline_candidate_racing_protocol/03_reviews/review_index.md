@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267BP_state_acceleration_zero_trade_gap_classification_completed`
-- current_run(현재 실행): `run267BP_stage267_state_acceleration_zero_trade_gap_classification_v1`
-- last_completed_run(마지막 완료 실행): `run267BP_stage267_state_acceleration_zero_trade_gap_classification_v1`
+- status(상태): `run267BQ_anti_overconstraint_cross_period_balance_timeslice_trade_quality_review_completed`
+- current_run(현재 실행): `run267BQ_stage267_anti_overconstraint_cross_period_balance_timeslice_trade_quality_v1`
+- last_completed_run(마지막 완료 실행): `run267BQ_stage267_anti_overconstraint_cross_period_balance_timeslice_trade_quality_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -118,6 +118,7 @@
 - run267BN_aggressive_second_tranche_cross_period_materialization(267BN 공격형 2차 묶음 확장 기간 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BN_aggressive_second_tranche_cross_period_materialization.md`
 - run267BO_aggressive_second_tranche_cross_period_mt5_execution(267BO 공격형 2차 묶음 확장 기간 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BO_aggressive_second_tranche_cross_period_mt5_execution.md`
 - run267BP_state_acceleration_zero_trade_gap_classification(267BP 상태 가속 거래 0개 공백 분류): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BP_state_acceleration_zero_trade_gap_classification.md`
+- run267BQ_anti_overconstraint_cross_period_balance_timeslice_trade_quality(267BQ 과제약 제거 확장 기간 잔액/시간구간/거래품질): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BQ_anti_overconstraint_cross_period_balance_timeslice_trade_quality.md`
 - run267BD_adjacent_period_replacement_mt5_execution(267BD 인접 기간 대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BD_adjacent_period_replacement_mt5_execution.md`
 - run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review(267AU 후보군 전체 상태 피처 엔지니어링 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
@@ -142,7 +143,7 @@ Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N �
 Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
 Run267Q(267Q 실행)는 internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토)를 완료했다.
 Effect(효과): MT5(MetaTrader 5, 메타트레이더5)에서 run267N(267N 실행) 원천 표면을 재현했지만, 변형 차이가 후보별로 접혀 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
-- next_action(다음 행동): `run267BQ_review_anti_overconstraint_cross_period_balance_timeslice_trade_quality`
+- next_action(다음 행동): `run267BR_design_anti_overconstraint_cross_period_followup_or_prune`
 
 Run267S(267S 실행)는 후보군 전체 직교 안정성 경주 행렬을 물질화했다.
 Effect(효과): selected candidate(선택 후보) 없이 다음 MT5(MetaTrader 5, 메타트레이더5) 물질화/실행 큐로 넘어갈 수 있게 후보, 축, 실패 기억, 중단 조건을 연결했다.
@@ -247,18 +248,18 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 
 Run267BC(267BC 실행)는 run267BB(267BB 실행)의 `s264_aia` watch pair(관찰 쌍)를 adjacent-period(인접 기간) MT5 attempt inputs(MT5 시도 입력)로 물질화했다.
 Effect(효과): feature frames(피처 프레임) `6`개와 attempts(시도) `6`개를 만들었지만, MT5 execution(MT5 실행)은 아직 하지 않았으므로 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
-- stage_status(단계 상태): `run267BP_state_acceleration_zero_trade_gap_classification_completed`
+- stage_status(단계 상태): `run267BQ_anti_overconstraint_cross_period_balance_timeslice_trade_quality_review_completed`
 
 Run267BD(267BD 실행)은 run267BC(267BC 실행)의 `s264_aia` adjacent-period replacement(인접 기간 대체) attempt(시도) `1/6`개를 MT5(MetaTrader 5, 메타트레이더5)에서 실행 또는 실행 시도했다.
 Effect(효과): KPI records(KPI 기록) `0`개를 만들었고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`로 남긴다.
 Next action(다음 행동): `run267BD_repair_s264_aia_adjacent_period_replacement_mt5_execution_blocker`. Effect(효과): KPI(핵심 성과 지표)와 report(보고서)가 없으므로 curve/time-slice/trade-quality review(곡선/시간구간/거래품질 검토) 전에 MT5(MetaTrader 5, 메타트레이더5) execution blocker(실행 차단 사유)를 먼저 고친다.
-- adapter_under_review(검토 중 어댑터): `state_acceleration_zero_trade_gap_classification`
+- adapter_under_review(검토 중 어댑터): `anti_overconstraint_cross_period_balance_timeslice_trade_quality`
 - run267BE_mt5_tester_start_diagnostic(267BE MT5 테스터 시작 진단): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BE_mt5_tester_start_diagnostic.md`
 
 Run267BE(267BE 실행)는 run267BD(267BD 실행)의 MT5 tester start blocker(MT5 테스터 시작 차단)를 별도 진단으로 고정했다.
 Effect(효과): q02 feature/model(피처/모델)은 존재하지만 q02와 cached 2024 control(캐시된 2024 대조)이 모두 terminal login(터미널 로그인) 뒤 tester start(테스터 시작)로 넘어가지 않아, 후보 약점(candidate weakness, 후보 약점)이 아니라 외부 MT5 automation state(MT5 자동화 상태) 문제로 경계를 낮춘다.
 Next action(다음 행동): `run267BF_repair_mt5_tester_automation_profile_start_before_adjacent_batch`. Effect(효과): adjacent-period replacement(인접 기간 대체) batch(묶음)를 다시 실행하기 전에 tester profile handoff(테스터 프로필 인계)를 먼저 복구한다.
-- next_run(다음 실행): `run267BQ_review_anti_overconstraint_cross_period_balance_timeslice_trade_quality`
+- next_run(다음 실행): `run267BR_design_anti_overconstraint_cross_period_followup_or_prune`
 - run267BF_mt5_tester_unique_report_repair(267BF MT5 테스터 고유 보고서 수리): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BF_mt5_tester_unique_report_repair.md`
 
 Run267BF(267BF 실행)는 run267BE(267BE 실행)의 MT5 tester start blocker(MT5 테스터 시작 차단)를 fresh unique Report(새 고유 보고서) profile(프로필)로 수리 검증했다.
@@ -303,4 +304,8 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 
 Run267BP(267BP 실행)는 run267BO(267BO 실행)의 state_acceleration_interaction(상태 가속 상호작용) 2025H1 zero-trade/runtime gap(거래 0개/런타임 출력 공백)을 분류했다.
 Effect(효과): tester report(테스터 보고서)는 완료됐고 trade count(거래 수)는 0이므로, 같은 축을 그대로 재실행하기보다 inactive surface(비활성 표면) 실패 기억으로 남긴다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267BQ(267BQ 실행)는 run267BP(267BP 실행)에서 남긴 3개 anti_overconstraint_prune(과제약 제거) 완료 행을 거래 목록(trade list, 거래 목록)으로 다시 읽었다.
+Effect(효과): trade records(거래 기록) `812`개, time-slice rows(시간 구간 행) `92`개, negative slices(음수 구간) `18`개를 만들었고, 확장 기간 안정성이 아직 불편함을 기록했다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
