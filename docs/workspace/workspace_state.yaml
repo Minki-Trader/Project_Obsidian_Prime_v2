@@ -1,4 +1,4 @@
-﻿current_run_id: run267AE_stage267_noncalendar_state_guard_balance_timeslice_trade_quality_review_v1
+﻿current_run_id: run267AF_stage267_noncalendar_state_guard_followup_or_prune_design_v1
 updated_on: '2026-05-21'
 project_mode: clean_stage_restart
 active_branch: main
@@ -16,7 +16,7 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
-  Stage267(267단계) run267AE(267AE 실행) noncalendar state guard balance/time-slice/trade-quality review(비달력 상태 방어 잔액/시간구간/거래품질 검토) `run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review_completed`. Effect(효과): run267AD(267AD 실행)의 14개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 거래 목록, 곡선, 약한 구간으로 검토했고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+  Stage267(267단계) run267AF(267AF 실행) noncalendar state guard follow-up/prune design(비달력 상태 방어 후속/가지치기 설계) `run267AF_noncalendar_state_guard_followup_or_prune_design_completed`. Effect(효과): run267AE(267AE 실행)의 거래/곡선/시간구간 근거를 다음 실험 큐와 후보별 가지치기 경계로 바꿨고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - >-
   Stage267(267단계) run267AC(267AC 실행) noncalendar state guard score table materialization(비달력 상태 방어 점수표 물질화) `run267AC_noncalendar_state_guard_score_tables_materialized_execution_pending`. Effect(효과): run267AB(267AB 실행)의 상태 guard(방어 장치) 큐를 7개 score table/model(점수표/모델)과 14개 MT5(MetaTrader 5, 메타트레이더5) 시도 입력으로 만들었고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - >-
@@ -8733,9 +8733,9 @@ stage266_late_segment_stability_repair_after_stage265_review:
 stage267_baseline_candidate_racing_protocol:
   packet_id: stage267_baseline_candidate_racing_protocol_v1
   stage_id: 267_adapter_research__baseline_candidate_racing_protocol
-  status: run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review_completed
-  current_run_id: run267AE_stage267_noncalendar_state_guard_balance_timeslice_trade_quality_review_v1
-  last_completed_run_id: run267AE_stage267_noncalendar_state_guard_balance_timeslice_trade_quality_review_v1
+  status: run267AF_noncalendar_state_guard_followup_or_prune_design_completed
+  current_run_id: run267AF_stage267_noncalendar_state_guard_followup_or_prune_design_v1
+  last_completed_run_id: run267AF_stage267_noncalendar_state_guard_followup_or_prune_design_v1
   source_stage: 266_adapter_research__late_segment_stability_repair_after_stage265_review
   source_run: run266A_stage266_late_segment_stability_repair_after_stage265_review_v1
   source_decision: stage266_planning_superseded_before_run_by_user_goal
@@ -8798,8 +8798,9 @@ stage267_baseline_candidate_racing_protocol:
   run267AC_noncalendar_state_guard_score_table_materialization_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AC_noncalendar_state_guard_score_table_materialization.md
   run267AD_noncalendar_state_guard_score_table_mt5_execution_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AD_noncalendar_state_guard_score_table_mt5_execution.md
   run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review.md
+  run267AF_noncalendar_state_guard_followup_or_prune_design_report_path: stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AF_noncalendar_state_guard_followup_or_prune_design.md
   decision_path: docs/decisions/2026-05-20_stage266_superseded_stage267_baseline_racing_open.md
-  next_action: run267AF_noncalendar_state_guard_followup_or_prune_design
+  next_action: run267AG_materialize_noncalendar_state_guard_followup_queue
   target_surface: v2_native_baseline_candidate_racing_research_pool
   claim_boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate
   boundary: research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment
