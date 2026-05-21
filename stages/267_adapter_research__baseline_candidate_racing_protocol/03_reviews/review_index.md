@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267BF_mt5_tester_unique_report_repair_q02_runtime_report_completed`
-- current_run(현재 실행): `run267BF_stage267_mt5_tester_unique_report_repair_v1`
-- last_completed_run(마지막 완료 실행): `run267BF_stage267_mt5_tester_unique_report_repair_v1`
+- status(상태): `run267BH_aggressive_candidate_pressure_queue_materialized_execution_pending`
+- current_run(현재 실행): `run267BH_stage267_aggressive_candidate_pressure_queue_v1`
+- last_completed_run(마지막 완료 실행): `run267BH_stage267_aggressive_candidate_pressure_queue_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -108,6 +108,8 @@
 - run267BA_true_fallback_cross_period_replacement_queue_materialization(267BA 실제 대체/확장 기간/유사 대체 큐 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BA_true_fallback_cross_period_replacement_queue_materialization.md`
 - run267BB_cross_period_replacement_ready_subset_review(267BB 확장 기간 대체 부분집합 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BB_cross_period_replacement_ready_subset_review.md`
 - run267BC_adjacent_period_replacement_materialization(267BC 인접 기간 대체 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BC_adjacent_period_replacement_materialization.md`
+- run267BG_adjacent_period_replacement_fresh_report_mt5_execution(267BG 인접 기간 대체 새 보고서 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BG_adjacent_period_replacement_fresh_report_mt5_execution.md`
+- run267BH_aggressive_candidate_pressure_queue(267BH 공격형 후보 압박 큐): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BH_aggressive_candidate_pressure_queue.md`
 - run267BD_adjacent_period_replacement_mt5_execution(267BD 인접 기간 대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BD_adjacent_period_replacement_mt5_execution.md`
 - run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review(267AU 후보군 전체 상태 피처 엔지니어링 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review.md`
 - prior_research_utilization_audit(이전 연구 활용 감사): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_prior_research_utilization_audit.md`
@@ -132,7 +134,7 @@ Run267P(267P 실행)는 run267O(267O 실행)의 강한 단서를 run267N(267N �
 Run267Q(267Q 실행)는 run267P(267P 실행)의 P0 Adapter design queue(P0 어댑터 설계 큐)를 feature/model/set/ini(피처/모델/설정/초기화) 산출물로 물질화했다.
 Run267Q(267Q 실행)는 internal feature order confirmed Adapter MT5 review(내부 피처 순서 확인 어댑터 MT5 검토)를 완료했다.
 Effect(효과): MT5(MetaTrader 5, 메타트레이더5)에서 run267N(267N 실행) 원천 표면을 재현했지만, 변형 차이가 후보별로 접혀 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
-- next_action(다음 행동): `run267BG_execute_remaining_adjacent_period_replacement_with_fresh_report_profiles`
+- next_action(다음 행동): `run267BI_repair_tester_handoff_and_execute_aggressive_pressure_queue_tranche`
 
 Run267S(267S 실행)는 후보군 전체 직교 안정성 경주 행렬을 물질화했다.
 Effect(효과): selected candidate(선택 후보) 없이 다음 MT5(MetaTrader 5, 메타트레이더5) 물질화/실행 큐로 넘어갈 수 있게 후보, 축, 실패 기억, 중단 조건을 연결했다.
@@ -237,7 +239,7 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 
 Run267BC(267BC 실행)는 run267BB(267BB 실행)의 `s264_aia` watch pair(관찰 쌍)를 adjacent-period(인접 기간) MT5 attempt inputs(MT5 시도 입력)로 물질화했다.
 Effect(효과): feature frames(피처 프레임) `6`개와 attempts(시도) `6`개를 만들었지만, MT5 execution(MT5 실행)은 아직 하지 않았으므로 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
-- stage_status(단계 상태): `run267BF_mt5_tester_unique_report_repair_q02_runtime_report_completed`
+- stage_status(단계 상태): `run267BH_aggressive_candidate_pressure_queue_materialized_execution_pending`
 
 Run267BD(267BD 실행)은 run267BC(267BC 실행)의 `s264_aia` adjacent-period replacement(인접 기간 대체) attempt(시도) `1/6`개를 MT5(MetaTrader 5, 메타트레이더5)에서 실행 또는 실행 시도했다.
 Effect(효과): KPI records(KPI 기록) `0`개를 만들었고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`로 남긴다.
@@ -254,3 +256,11 @@ Next action(다음 행동): `run267BF_repair_mt5_tester_automation_profile_start
 Run267BF(267BF 실행)는 run267BE(267BE 실행)의 MT5 tester start blocker(MT5 테스터 시작 차단)를 fresh unique Report(새 고유 보고서) profile(프로필)로 수리 검증했다.
 Effect(효과): q02 adjacent-period replacement(q02 인접 기간 대체)가 tester start(테스터 시작), runtime output(런타임 출력), strategy report(전략 보고서)까지 이어졌으므로 다음 batch(묶음)는 fresh report/profile(새 보고서/프로필) 정책으로 다시 실행한다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
+
+Run267BG(267BG 실행)는 run267BC(267BC 실행)의 `s264_aia` adjacent-period replacement(인접 기간 대체) attempt(시도) `1/6`개를 fresh report/profile(새 보고서/프로필) 정책으로 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
+Effect(효과): KPI records(KPI 기록) `0`개를 만들었고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`로 둔다.
+Next action(다음 행동): `run267BG_repair_adjacent_period_replacement_fresh_report_mt5_execution_blocker`. Effect(효과): report(보고서)와 KPI(핵심 성과 지표)가 있으면 curve/time-slice/trade-quality review(곡선/시간구간/거래품질 검토)로 넘기고, 없으면 MT5(MetaTrader 5, 메타트레이더5) execution blocker(실행 차단 사유)를 먼저 고친다.
+
+Run267BH(267BH 실행)는 updated goal(갱신 목표)에 맞춰 aggressive/폭발형 experiment queue(공격형 실험 큐) `20`개를 물질화했다.
+Effect(효과): baseline candidate(기준 후보)를 고르는 과정이 defensive filter stacking(방어 필터 덧붙이기)만 되지 않게 하고, 넓은 허용/손익 비대칭/상호작용 피처/과제약 제거 축을 다음 실행 후보로 만든다.
+Next action(다음 행동): `run267BI_repair_tester_handoff_and_execute_aggressive_pressure_queue_tranche`. Effect(효과): MT5(MetaTrader 5, 메타트레이더5) tester handoff(테스터 인계)를 고친 뒤 coarse aggressive tranche(거친 공격형 묶음)를 실행한다.
