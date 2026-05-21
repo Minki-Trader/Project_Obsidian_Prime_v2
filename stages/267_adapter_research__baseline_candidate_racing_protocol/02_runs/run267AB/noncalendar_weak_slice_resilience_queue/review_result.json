@@ -1,0 +1,509 @@
+{
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "counts": {
+    "broad_state_candidate_count": 5,
+    "focus_spec_count": 7,
+    "focus_trade_count": 2365,
+    "guard_queue_rows": 7,
+    "joined_trade_count": 2363,
+    "missing_join_count": 2,
+    "overrepresented_state_rows": 27,
+    "ready_guard_queue_rows": 7,
+    "state_contrast_rows": 184
+  },
+  "created_at_utc": "2026-05-21T01:12:57Z",
+  "data_integrity_receipt": [
+    {
+      "data_hash_or_identity": "s258_stc:7410b222f1ae465a185b9b4fde698f96b3d81a536f73d2e0b19fd2506c4cb3ad;s262_lih:3965cb3fd353a671a780b3f2fedc8064026590251eedca62b02f6acf64c0debd;s264_aia:f165c68816031ef72d25d6c7e5eb7ac456a7e87784b208758f9779d0233e8908;s264_aih:d1f3804ef4bbe8555dff0a566a8f1a405bafd2bb52f1b5453c04cab03cc8d101;s264_lc:1e3d19decfaf09123f57f2b1132adde901513a0fa508db12140b262bd41f5d1d",
+      "data_source": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Z/true_internal_ablation_balance_timeslice_trade_quality_review/trade_records.csv plus run267V upstream raw feature surfaces",
+      "feature_label_boundary": "no new label is trained; MT5 PnL is used only for post-run attribution and queue design",
+      "integrity_judgment": "usable_with_boundary",
+      "leakage_risk": "future risk appears only if guard is trained on weak-slice PnL; run267AB only designs queue and does not train score table",
+      "missing_or_duplicate_check": "joined=2363/2365;missing_join_count=2;surface_duplicate_bar_time_rows=0_from_manifest",
+      "sample_scope": "Tier A 2024 true internal ablation focus rows from run267AA queue; Tier A+B duplicate boundary excluded",
+      "split_boundary": "2024 historical train-era stress diagnostic only; not operating validation or production baseline",
+      "time_axis": "trade open_time converted to bar_time_server; run267V time_axis=bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester"
+    }
+  ],
+  "design_receipt": [
+    {
+      "field": "hypothesis",
+      "value": "Monday_and_2024_12_holes_have_noncalendar_market_state_components"
+    },
+    {
+      "field": "decision_use",
+      "value": "decide_which_candidate_test_rows_can_move_to_state_guard_score_table_design"
+    },
+    {
+      "field": "comparison_baseline",
+      "value": "run267Z Tier A candidate_test_review plus run267AA followup queue"
+    },
+    {
+      "field": "control_variables",
+      "value": "same_2024_period_same_MT5_trade_reports_same_candidate_pool_same_run267V_feature_surfaces"
+    },
+    {
+      "field": "changed_variables",
+      "value": "feature_state_bucket_attribution_and_guard_queue_only"
+    },
+    {
+      "field": "sample_scope",
+      "value": "Tier A focus trades; Tier A+B duplicate rows excluded from routing evidence"
+    },
+    {
+      "field": "success_criteria",
+      "value": "broad_state_guard_candidates=historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=mid;abs_di_spread_14=high;atr_14_over_atr_50=high;ready_queue_rows=7"
+    },
+    {
+      "field": "failure_criteria",
+      "value": "only_calendar_literal_or_incoherent_state_explains_weak_slices"
+    },
+    {
+      "field": "invalid_conditions",
+      "value": "missing_trade_feature_join_or_PnL_used_as_training_label_or_duplicate_Tier_A_plus_B_used_as_routed_evidence"
+    },
+    {
+      "field": "stop_conditions",
+      "value": "do_not_tune_Monday_or_December_literal_filter;stop_guard_loop_after_two_failed_passes"
+    },
+    {
+      "field": "evidence_plan",
+      "value": "guard_materialization_queue;state_contrast;future_score_table_manifest;future_MT5_trade_list_review"
+    }
+  ],
+  "focus_specs": [
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "priority": "P0",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "test_id": "rep_trend_strength_adx"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "priority": "P0",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "test_id": "rep_volatility_atr"
+    },
+    {
+      "candidate_alias": "s262_lih",
+      "candidate_id": "s262_lowrank_inner_half_filter",
+      "candidate_role": "validation_heavy",
+      "priority": "P0",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "test_id": "rep_trend_strength_adx"
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "priority": "P0",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "test_id": "abl_price_return_range"
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "priority": "P0",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "test_id": "abl_trend_strength_direction"
+    },
+    {
+      "candidate_alias": "s264_lc",
+      "candidate_id": "s264_lowrank_control",
+      "candidate_role": "defensive_control",
+      "priority": "P1",
+      "scope_label": "high_net_gate_audit_control",
+      "test_id": "abl_gate_variant_rule"
+    },
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "priority": "P2",
+      "scope_label": "core_challenger_pressure_hold",
+      "test_id": "abl_volatility_bandwidth"
+    }
+  ],
+  "goal_achieve": "not_claimed",
+  "guard_materialization_queue": [
+    {
+      "calendar_literal_filter_allowed": "false",
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "queue_materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_loss_moves_to_other_time_slice_or_state_signal_disappears",
+      "guard_intent": "soft_entry_or_risk_penalty_from_noncalendar_state",
+      "guard_rule_family": "constructive_axis_soft_state_guard",
+      "guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=mid",
+      "invalid_criteria": "feature_join_missing_or_MT5_PnL_used_as_training_label_or_Tier_A_plus_B_duplicate_used_as_routing_evidence",
+      "materialization_status": "ready_for_noncalendar_state_guard_score_table_design",
+      "next_required_artifacts": "score_table_variant_manifest;runtime_contract;surface_alignment;MT5_attempt_manifest;trade_list_review",
+      "priority": "P0",
+      "queue_id": "run267AB_q01_s264_aia_rep_trend_strength_adx",
+      "source_evidence": "historical_vol_5_over_20=high:weak_net=-292.73:enrichment=1.227;abs_return_1_over_atr_14=high:weak_net=-274.84:enrichment=1.229;abs_di_spread_14=mid:weak_net=-75.27:enrichment=1.326",
+      "source_scope_label": "constructive_curve_watch_not_selection",
+      "source_test_id": "rep_trend_strength_adx",
+      "success_criteria": "future_score_table_preserves_trade_supply_and_reduces_weak_slice_loss_without_calendar_literal_filter"
+    },
+    {
+      "calendar_literal_filter_allowed": "false",
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "queue_materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_loss_moves_to_other_time_slice_or_state_signal_disappears",
+      "guard_intent": "soft_entry_or_risk_penalty_from_noncalendar_state",
+      "guard_rule_family": "constructive_axis_soft_state_guard",
+      "guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=mid",
+      "invalid_criteria": "feature_join_missing_or_MT5_PnL_used_as_training_label_or_Tier_A_plus_B_duplicate_used_as_routing_evidence",
+      "materialization_status": "ready_for_noncalendar_state_guard_score_table_design",
+      "next_required_artifacts": "score_table_variant_manifest;runtime_contract;surface_alignment;MT5_attempt_manifest;trade_list_review",
+      "priority": "P0",
+      "queue_id": "run267AB_q02_s264_aia_rep_volatility_atr",
+      "source_evidence": "historical_vol_5_over_20=high:weak_net=-332.61:enrichment=1.270;abs_return_1_over_atr_14=high:weak_net=-193.99:enrichment=1.197;abs_di_spread_14=mid:weak_net=-69.64:enrichment=1.241",
+      "source_scope_label": "constructive_curve_watch_not_selection",
+      "source_test_id": "rep_volatility_atr",
+      "success_criteria": "future_score_table_preserves_trade_supply_and_reduces_weak_slice_loss_without_calendar_literal_filter"
+    },
+    {
+      "calendar_literal_filter_allowed": "false",
+      "candidate_alias": "s262_lih",
+      "candidate_id": "s262_lowrank_inner_half_filter",
+      "candidate_role": "validation_heavy",
+      "claim_boundary": "queue_materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_loss_moves_to_other_time_slice_or_state_signal_disappears",
+      "guard_intent": "soft_entry_or_risk_penalty_from_noncalendar_state",
+      "guard_rule_family": "constructive_axis_soft_state_guard",
+      "guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=high",
+      "invalid_criteria": "feature_join_missing_or_MT5_PnL_used_as_training_label_or_Tier_A_plus_B_duplicate_used_as_routing_evidence",
+      "materialization_status": "ready_for_noncalendar_state_guard_score_table_design",
+      "next_required_artifacts": "score_table_variant_manifest;runtime_contract;surface_alignment;MT5_attempt_manifest;trade_list_review",
+      "priority": "P0",
+      "queue_id": "run267AB_q03_s262_lih_rep_trend_strength_adx",
+      "source_evidence": "historical_vol_5_over_20=high:weak_net=-220.59:enrichment=1.235;abs_return_1_over_atr_14=high:weak_net=-216.14:enrichment=1.188;abs_di_spread_14=high:weak_net=-166.16:enrichment=1.209",
+      "source_scope_label": "constructive_curve_watch_not_selection",
+      "source_test_id": "rep_trend_strength_adx",
+      "success_criteria": "future_score_table_preserves_trade_supply_and_reduces_weak_slice_loss_without_calendar_literal_filter"
+    },
+    {
+      "calendar_literal_filter_allowed": "false",
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "claim_boundary": "queue_materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_loss_moves_to_other_time_slice_or_state_signal_disappears",
+      "guard_intent": "soft_entry_or_risk_penalty_from_noncalendar_state",
+      "guard_rule_family": "constructive_axis_soft_state_guard",
+      "guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=high",
+      "invalid_criteria": "feature_join_missing_or_MT5_PnL_used_as_training_label_or_Tier_A_plus_B_duplicate_used_as_routing_evidence",
+      "materialization_status": "ready_for_noncalendar_state_guard_score_table_design",
+      "next_required_artifacts": "score_table_variant_manifest;runtime_contract;surface_alignment;MT5_attempt_manifest;trade_list_review",
+      "priority": "P0",
+      "queue_id": "run267AB_q04_s258_stc_abl_price_return_range",
+      "source_evidence": "historical_vol_5_over_20=high:weak_net=-336.77:enrichment=1.181;abs_return_1_over_atr_14=high:weak_net=-291.61:enrichment=1.225;abs_di_spread_14=high:weak_net=-210.04:enrichment=1.209",
+      "source_scope_label": "constructive_curve_watch_not_selection",
+      "source_test_id": "abl_price_return_range",
+      "success_criteria": "future_score_table_preserves_trade_supply_and_reduces_weak_slice_loss_without_calendar_literal_filter"
+    },
+    {
+      "calendar_literal_filter_allowed": "false",
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "claim_boundary": "queue_materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_loss_moves_to_other_time_slice_or_state_signal_disappears",
+      "guard_intent": "soft_entry_or_risk_penalty_from_noncalendar_state",
+      "guard_rule_family": "constructive_axis_soft_state_guard",
+      "guard_state_features": "historical_vol_5_over_20=high;abs_di_spread_14=mid;atr_14_over_atr_50=high",
+      "invalid_criteria": "feature_join_missing_or_MT5_PnL_used_as_training_label_or_Tier_A_plus_B_duplicate_used_as_routing_evidence",
+      "materialization_status": "ready_for_noncalendar_state_guard_score_table_design",
+      "next_required_artifacts": "score_table_variant_manifest;runtime_contract;surface_alignment;MT5_attempt_manifest;trade_list_review",
+      "priority": "P0",
+      "queue_id": "run267AB_q05_s258_stc_abl_trend_strength_direction",
+      "source_evidence": "historical_vol_5_over_20=high:weak_net=-338.90:enrichment=1.272;abs_di_spread_14=mid:weak_net=-149.32:enrichment=1.191;atr_14_over_atr_50=high:weak_net=-147.72:enrichment=1.216",
+      "source_scope_label": "constructive_curve_watch_not_selection",
+      "source_test_id": "abl_trend_strength_direction",
+      "success_criteria": "future_score_table_preserves_trade_supply_and_reduces_weak_slice_loss_without_calendar_literal_filter"
+    },
+    {
+      "calendar_literal_filter_allowed": "false",
+      "candidate_alias": "s264_lc",
+      "candidate_id": "s264_lowrank_control",
+      "candidate_role": "defensive_control",
+      "claim_boundary": "queue_materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_loss_moves_to_other_time_slice_or_state_signal_disappears",
+      "guard_intent": "soft_entry_or_risk_penalty_from_noncalendar_state",
+      "guard_rule_family": "control_audit_soft_state_penalty",
+      "guard_state_features": "historical_vol_5_over_20=high;abs_di_spread_14=high;atr_14_over_atr_50=high",
+      "invalid_criteria": "feature_join_missing_or_MT5_PnL_used_as_training_label_or_Tier_A_plus_B_duplicate_used_as_routing_evidence",
+      "materialization_status": "ready_for_noncalendar_state_guard_score_table_design",
+      "next_required_artifacts": "score_table_variant_manifest;runtime_contract;surface_alignment;MT5_attempt_manifest;trade_list_review",
+      "priority": "P1",
+      "queue_id": "run267AB_q06_s264_lc_abl_gate_variant_rule",
+      "source_evidence": "historical_vol_5_over_20=high:weak_net=-373.54:enrichment=1.180;abs_di_spread_14=high:weak_net=-124.87:enrichment=1.182;atr_14_over_atr_50=high:weak_net=-101.43:enrichment=1.151",
+      "source_scope_label": "high_net_gate_audit_control",
+      "source_test_id": "abl_gate_variant_rule",
+      "success_criteria": "future_score_table_preserves_trade_supply_and_reduces_weak_slice_loss_without_calendar_literal_filter"
+    },
+    {
+      "calendar_literal_filter_allowed": "false",
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "claim_boundary": "queue_materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_loss_moves_to_other_time_slice_or_state_signal_disappears",
+      "guard_intent": "soft_entry_or_risk_penalty_from_noncalendar_state",
+      "guard_rule_family": "pressure_or_prune_state_guard_design",
+      "guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;atr_14_over_atr_50=high",
+      "invalid_criteria": "feature_join_missing_or_MT5_PnL_used_as_training_label_or_Tier_A_plus_B_duplicate_used_as_routing_evidence",
+      "materialization_status": "ready_for_noncalendar_state_guard_score_table_design",
+      "next_required_artifacts": "score_table_variant_manifest;runtime_contract;surface_alignment;MT5_attempt_manifest;trade_list_review",
+      "priority": "P2",
+      "queue_id": "run267AB_q07_s264_aih_abl_volatility_bandwidth",
+      "source_evidence": "historical_vol_5_over_20=high:weak_net=-353.36:enrichment=1.261;abs_return_1_over_atr_14=high:weak_net=-292.60:enrichment=1.222;atr_14_over_atr_50=high:weak_net=-103.74:enrichment=1.170",
+      "source_scope_label": "core_challenger_pressure_hold",
+      "source_test_id": "abl_volatility_bandwidth",
+      "success_criteria": "future_score_table_preserves_trade_supply_and_reduces_weak_slice_loss_without_calendar_literal_filter"
+    }
+  ],
+  "judgment": "noncalendar_state_guard_queue_ready_no_candidate_selection",
+  "next_action": "run267AC_build_noncalendar_state_guard_score_tables_from_run267AB_queue",
+  "onnx_readiness": "not_claimed",
+  "outputs": {
+    "data_integrity_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/data_integrity_receipt.csv",
+    "design_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/design_receipt.csv",
+    "guard_materialization_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/guard_materialization_queue.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/lineage.json",
+    "repeated_state_summary": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/repeated_state_summary.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AB_noncalendar_weak_slice_resilience_queue.md",
+    "result_judgment": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/result_judgment.csv",
+    "review_result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/review_result.json",
+    "trade_feature_join_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/trade_feature_join_audit.csv",
+    "weak_slice_state_contrast": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/weak_slice_state_contrast.csv"
+  },
+  "parent_review_run_id": "run267Z_stage267_true_internal_ablation_balance_timeslice_trade_quality_review_v1",
+  "repeated_state_summary": [
+    {
+      "affected_candidate_aliases": "s258_stc;s262_lih;s264_aia;s264_aih;s264_lc",
+      "affected_tests": "s258_stc:abl_price_return_range;s258_stc:abl_trend_strength_direction;s262_lih:rep_trend_strength_adx;s264_aia:rep_trend_strength_adx;s264_aia:rep_volatility_atr;s264_aih:abl_volatility_bandwidth;s264_lc:abl_gate_variant_rule",
+      "candidate_count": 5,
+      "enrichment_mean": 1.232434938907102,
+      "focus_row_count": 7,
+      "materialization_read": "broad_state_guard_candidate",
+      "state_bucket": "high",
+      "state_feature": "historical_vol_5_over_20",
+      "weak_net_sum": -2248.5
+    },
+    {
+      "affected_candidate_aliases": "s258_stc;s262_lih;s264_aia;s264_aih",
+      "affected_tests": "s258_stc:abl_price_return_range;s262_lih:rep_trend_strength_adx;s264_aia:rep_trend_strength_adx;s264_aia:rep_volatility_atr;s264_aih:abl_volatility_bandwidth",
+      "candidate_count": 4,
+      "enrichment_mean": 1.2123437156236305,
+      "focus_row_count": 5,
+      "materialization_read": "broad_state_guard_candidate",
+      "state_bucket": "high",
+      "state_feature": "abs_return_1_over_atr_14",
+      "weak_net_sum": -1269.1799999999998
+    },
+    {
+      "affected_candidate_aliases": "s258_stc;s264_aia;s264_aih",
+      "affected_tests": "s258_stc:abl_trend_strength_direction;s264_aia:rep_trend_strength_adx;s264_aia:rep_volatility_atr;s264_aih:abl_volatility_bandwidth",
+      "candidate_count": 3,
+      "enrichment_mean": 1.2348838788047212,
+      "focus_row_count": 4,
+      "materialization_read": "broad_state_guard_candidate",
+      "state_bucket": "mid",
+      "state_feature": "abs_di_spread_14",
+      "weak_net_sum": -346.53000000000003
+    },
+    {
+      "affected_candidate_aliases": "s258_stc;s262_lih;s264_lc",
+      "affected_tests": "s258_stc:abl_price_return_range;s262_lih:rep_trend_strength_adx;s264_lc:abl_gate_variant_rule",
+      "candidate_count": 3,
+      "enrichment_mean": 1.199896093287652,
+      "focus_row_count": 3,
+      "materialization_read": "broad_state_guard_candidate",
+      "state_bucket": "high",
+      "state_feature": "abs_di_spread_14",
+      "weak_net_sum": -501.07000000000005
+    },
+    {
+      "affected_candidate_aliases": "s258_stc;s264_aih;s264_lc",
+      "affected_tests": "s258_stc:abl_trend_strength_direction;s264_aih:abl_volatility_bandwidth;s264_lc:abl_gate_variant_rule",
+      "candidate_count": 3,
+      "enrichment_mean": 1.1787755319057223,
+      "focus_row_count": 3,
+      "materialization_read": "broad_state_guard_candidate",
+      "state_bucket": "high",
+      "state_feature": "atr_14_over_atr_50",
+      "weak_net_sum": -352.88999999999993
+    },
+    {
+      "affected_candidate_aliases": "s258_stc;s264_aia",
+      "affected_tests": "s258_stc:abl_price_return_range;s264_aia:rep_trend_strength_adx;s264_aia:rep_volatility_atr",
+      "candidate_count": 2,
+      "enrichment_mean": 1.1803269008478077,
+      "focus_row_count": 3,
+      "materialization_read": "watch_state_guard_candidate",
+      "state_bucket": "high",
+      "state_feature": "abs_return_zscore_20",
+      "weak_net_sum": -855.1899999999999
+    },
+    {
+      "affected_candidate_aliases": "s264_aia;s264_aih",
+      "affected_tests": "s264_aia:rep_trend_strength_adx;s264_aih:abl_volatility_bandwidth",
+      "candidate_count": 2,
+      "enrichment_mean": 1.1986746555562873,
+      "focus_row_count": 2,
+      "materialization_read": "watch_state_guard_candidate",
+      "state_bucket": "mid",
+      "state_feature": "bollinger_width_20",
+      "weak_net_sum": -410.08000000000004
+    }
+  ],
+  "result_judgment": [
+    {
+      "claim_boundary": "queue_materialized_no_candidate_selection_no_onnx_no_operating_claim",
+      "evidence_available": "joined_trades=2363/2365;overrepresented_state_rows=27;broad_state_candidates=5;guard_queue_ready_rows=7",
+      "evidence_missing": "actual_guard_score_tables;MT5_execution;balance_equity_curve_after_guard;real_Tier_B_fallback_routing",
+      "judgment_label": "noncalendar_state_guard_queue_ready_no_candidate_selection",
+      "next_condition": "run267AC_build_noncalendar_state_guard_score_tables_from_run267AB_queue",
+      "result_subject": "run267AB_stage267_noncalendar_weak_slice_resilience_queue_v1",
+      "user_explanation_hook": "쉽게 말하면 약한 월/요일 자체를 자르지 않고, 그 안에서 반복된 시장 상태를 guard 후보로만 넘긴다."
+    }
+  ],
+  "run_id": "run267AB_stage267_noncalendar_weak_slice_resilience_queue_v1",
+  "selected_candidate": "none",
+  "source_run_id": "run267AA_stage267_true_internal_ablation_followup_or_adapter_design_v1",
+  "source_surface_run_id": "run267V_stage267_reconstruct_upstream_feature_surface_v1",
+  "sources": {
+    "run267AA_candidate_decision": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AA/true_internal_ablation_followup_or_adapter_design/candidate_axis_decision.csv",
+    "run267AA_followup_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AA/true_internal_ablation_followup_or_adapter_design/followup_design_queue.csv",
+    "run267V_feature_family_map": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/feature_family_column_map.csv",
+    "run267V_surface_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/candidate_upstream_raw_surface_manifest.csv",
+    "run267Z_candidate_test_review": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Z/true_internal_ablation_balance_timeslice_trade_quality_review/candidate_test_review.csv",
+    "run267Z_trade_records": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267Z/true_internal_ablation_balance_timeslice_trade_quality_review/trade_records.csv"
+  },
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "run267AB_noncalendar_weak_slice_resilience_queue_materialized",
+  "trade_feature_join_audit": [
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "integrity_judgment": "usable_with_boundary",
+      "join_rate": 1.0,
+      "joined_trade_count": 332,
+      "missing_join_count": 0,
+      "missing_join_examples": "",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "surface_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/surfaces/s264_aia/s264_aia_upstream_raw_feature_surface.csv",
+      "surface_sha256": "f165c68816031ef72d25d6c7e5eb7ac456a7e87784b208758f9779d0233e8908",
+      "test_id": "rep_trend_strength_adx",
+      "time_axis": "bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester",
+      "trade_count": 332
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "integrity_judgment": "usable_with_boundary",
+      "join_rate": 1.0,
+      "joined_trade_count": 339,
+      "missing_join_count": 0,
+      "missing_join_examples": "",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "surface_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/surfaces/s264_aia/s264_aia_upstream_raw_feature_surface.csv",
+      "surface_sha256": "f165c68816031ef72d25d6c7e5eb7ac456a7e87784b208758f9779d0233e8908",
+      "test_id": "rep_volatility_atr",
+      "time_axis": "bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester",
+      "trade_count": 339
+    },
+    {
+      "candidate_alias": "s262_lih",
+      "candidate_id": "s262_lowrank_inner_half_filter",
+      "candidate_role": "validation_heavy",
+      "integrity_judgment": "usable_with_boundary",
+      "join_rate": 1.0,
+      "joined_trade_count": 331,
+      "missing_join_count": 0,
+      "missing_join_examples": "",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "surface_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/surfaces/s262_lih/s262_lih_upstream_raw_feature_surface.csv",
+      "surface_sha256": "3965cb3fd353a671a780b3f2fedc8064026590251eedca62b02f6acf64c0debd",
+      "test_id": "rep_trend_strength_adx",
+      "time_axis": "bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester",
+      "trade_count": 331
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "integrity_judgment": "usable_with_boundary",
+      "join_rate": 0.9968253968253968,
+      "joined_trade_count": 314,
+      "missing_join_count": 1,
+      "missing_join_examples": "2024-08-05 17:00:01",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "surface_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/surfaces/s258_stc/s258_stc_upstream_raw_feature_surface.csv",
+      "surface_sha256": "7410b222f1ae465a185b9b4fde698f96b3d81a536f73d2e0b19fd2506c4cb3ad",
+      "test_id": "abl_price_return_range",
+      "time_axis": "bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester",
+      "trade_count": 315
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "integrity_judgment": "usable_with_boundary",
+      "join_rate": 1.0,
+      "joined_trade_count": 325,
+      "missing_join_count": 0,
+      "missing_join_examples": "",
+      "scope_label": "constructive_curve_watch_not_selection",
+      "surface_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/surfaces/s258_stc/s258_stc_upstream_raw_feature_surface.csv",
+      "surface_sha256": "7410b222f1ae465a185b9b4fde698f96b3d81a536f73d2e0b19fd2506c4cb3ad",
+      "test_id": "abl_trend_strength_direction",
+      "time_axis": "bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester",
+      "trade_count": 325
+    },
+    {
+      "candidate_alias": "s264_lc",
+      "candidate_id": "s264_lowrank_control",
+      "candidate_role": "defensive_control",
+      "integrity_judgment": "usable_with_boundary",
+      "join_rate": 1.0,
+      "joined_trade_count": 400,
+      "missing_join_count": 0,
+      "missing_join_examples": "",
+      "scope_label": "high_net_gate_audit_control",
+      "surface_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/surfaces/s264_lc/s264_lc_upstream_raw_feature_surface.csv",
+      "surface_sha256": "1e3d19decfaf09123f57f2b1132adde901513a0fa508db12140b262bd41f5d1d",
+      "test_id": "abl_gate_variant_rule",
+      "time_axis": "bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester",
+      "trade_count": 400
+    },
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "integrity_judgment": "usable_with_boundary",
+      "join_rate": 0.9969040247678018,
+      "joined_trade_count": 322,
+      "missing_join_count": 1,
+      "missing_join_examples": "2024-08-05 17:00:01",
+      "scope_label": "core_challenger_pressure_hold",
+      "surface_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267V/upstream_feature_surface_reconstruction/surfaces/s264_aih/s264_aih_upstream_raw_feature_surface.csv",
+      "surface_sha256": "d1f3804ef4bbe8555dff0a566a8f1a405bafd2bb52f1b5453c04cab03cc8d101",
+      "test_id": "abl_volatility_bandwidth",
+      "time_axis": "bar_time_server_matches_MT5_history_timestamp_UTC_rendered_for_tester",
+      "trade_count": 323
+    }
+  ]
+}

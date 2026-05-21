@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AA_stage267_true_internal_ablation_followup_or_adapter_design_v1`
+- current_run(현재 실행): `run267AB_stage267_noncalendar_weak_slice_resilience_queue_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `true_internal_ablation_followup_or_adapter_design`
-- status(상태): `run267AA_true_internal_ablation_followup_or_adapter_design_completed`
+- adapter_under_review(검토 중 어댑터): `noncalendar_weak_slice_resilience_queue`
+- status(상태): `run267AB_noncalendar_weak_slice_resilience_queue_materialized`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -111,6 +111,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267Y true internal ablation KPI signature review(진짜 내부 제거 KPI 서명 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Y_true_internal_ablation_kpi_signature_review.md`
 - Stage267(267단계) run267Z true internal ablation balance/time-slice/trade-quality review(진짜 내부 제거 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Z_true_internal_ablation_balance_timeslice_trade_quality_review.md`
 - Stage267(267단계) run267AA true internal ablation follow-up or Adapter design(진짜 내부 제거 후속 또는 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AA_true_internal_ablation_followup_or_adapter_design.md`
+- Stage267(267단계) run267AB noncalendar weak-slice resilience queue(비달력 약점 구간 견고성 큐): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AB_noncalendar_weak_slice_resilience_queue.md`
 
 ## Current Next Action(현재 다음 행동)
 - latest_mt5_review(최신 MT5 검토): run267Z(267Z 실행) candidate-test rows(후보-시험 행) `24`, constructive curve rows(건설적 곡선 행) `5`, negative Tier A slices(음수 Tier A 구간) `120`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Z_true_internal_ablation_balance_timeslice_trade_quality_review.md`.
@@ -135,10 +136,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267AB_materialize_noncalendar_weak_slice_resilience_queue`
-- action(행동): run267AA(267AA 실행)는 run267Z(267Z 실행)의 건설적 행과 실패 구멍을 후속 설계 큐로 나눴다.
-- effect(효과): Baseline candidate(기준 후보)를 고르지 않고, non-calendar weak-slice attribution(비달력 약점 구간 귀속)과 real fallback routing(실제 대체 라우팅)을 다음 검증으로 보낸다.
-- next_action(다음 행동): `run267AB_materialize_noncalendar_weak_slice_resilience_queue`
+- next_run(다음 실행): `run267AC_build_noncalendar_state_guard_score_tables_from_run267AB_queue`
+- action(행동): run267AB(267AB 실행)는 run267Z(267Z 실행) 거래와 run267V(267V 실행) raw feature surface(원시 피처 표면)를 결합해 비달력 약점 상태를 큐로 만들었다.
+- effect(효과): Monday(월요일)/2024-12(2024년 12월)를 직접 자르지 않고, 반복된 시장 상태 guard(방어 장치)만 다음 score table(점수표) 설계로 보낸다.
+- next_action(다음 행동): `run267AC_build_noncalendar_state_guard_score_tables_from_run267AB_queue`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -188,3 +189,6 @@ Effect(효과): true internal feature ablation(진짜 내부 피처 제거)은 p
 
 Run267AA(267AA 실행)는 run267Z(267Z 실행)의 true internal ablation(진짜 내부 제거) 결과를 후속 설계로 정리했다.
 Effect(효과): constructive rows(건설적 행) `5`개는 watch(관찰)로만 남기고, selected candidate(선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
+
+Run267AB(267AB 실행)는 noncalendar weak-slice resilience queue(비달력 약점 구간 견고성 큐)를 물질화했다.
+Effect(효과): joined trades(결합 거래) `2363/2365`, ready guard rows(준비 방어 행) `7`를 남겼고, selected candidate(선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
