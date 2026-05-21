@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267BD_stage267_adjacent_period_replacement_mt5_execution_v1`
+- current_run(현재 실행): `run267BE_stage267_mt5_tester_start_diagnostic_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `adjacent_period_replacement_mt5_execution`
-- status(상태): `run267BD_adjacent_period_replacement_mt5_batch_blocked`
+- adapter_under_review(검토 중 어댑터): `mt5_tester_start_diagnostic`
+- status(상태): `run267BE_mt5_tester_start_diagnostic_blocked_global_tester_start`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -185,10 +185,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267BD_repair_s264_aia_adjacent_period_replacement_mt5_execution_blocker`
+- next_run(다음 실행): `run267BF_repair_mt5_tester_automation_profile_start_before_adjacent_batch`
 - action(행동): run267AS(267AS 실행)는 run267AR(267AR 실행)의 후속 큐를 run267AT(267AT 실행) MT5(MetaTrader 5, 메타트레이더5) 실행 대기 입력으로 물질화했다.
 - effect(효과): 같은 월요일/12월 수리를 직접 달력 필터로 반복하지 않고, 비달력 상태 압박(noncalendar state pressure, 비달력 상태 압박)이 실제 거래/곡선/시간구간을 개선하는지 볼 수 있다.
-- next_action(다음 행동): `run267BD_repair_s264_aia_adjacent_period_replacement_mt5_execution_blocker`
+- next_action(다음 행동): `run267BF_repair_mt5_tester_automation_profile_start_before_adjacent_batch`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -341,3 +341,8 @@ Effect(효과): feature frames(피처 프레임) `6`개와 attempts(시도) `6`�
 Run267BD(267BD 실행)은 run267BC(267BC 실행)의 `s264_aia` adjacent-period replacement(인접 기간 대체) attempt(시도) `1/6`개를 MT5(MetaTrader 5, 메타트레이더5)에서 실행 또는 실행 시도했다.
 Effect(효과): KPI records(KPI 기록) `0`개를 만들었고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`로 남긴다.
 Next action(다음 행동): `run267BD_repair_s264_aia_adjacent_period_replacement_mt5_execution_blocker`. Effect(효과): KPI(핵심 성과 지표)와 report(보고서)가 없으므로 curve/time-slice/trade-quality review(곡선/시간구간/거래품질 검토) 전에 MT5(MetaTrader 5, 메타트레이더5) execution blocker(실행 차단 사유)를 먼저 고친다.
+- run267BE_mt5_tester_start_diagnostic(267BE MT5 테스터 시작 진단): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BE_mt5_tester_start_diagnostic.md`
+
+Run267BE(267BE 실행)는 run267BD(267BD 실행)의 MT5 tester start blocker(MT5 테스터 시작 차단)를 별도 진단으로 고정했다.
+Effect(효과): q02 feature/model(피처/모델)은 존재하지만 q02와 cached 2024 control(캐시된 2024 대조)이 모두 terminal login(터미널 로그인) 뒤 tester start(테스터 시작)로 넘어가지 않아, 후보 약점(candidate weakness, 후보 약점)이 아니라 외부 MT5 automation state(MT5 자동화 상태) 문제로 경계를 낮춘다.
+Next action(다음 행동): `run267BF_repair_mt5_tester_automation_profile_start_before_adjacent_batch`. Effect(효과): adjacent-period replacement(인접 기간 대체) batch(묶음)를 다시 실행하기 전에 tester profile handoff(테스터 프로필 인계)를 먼저 복구한다.
