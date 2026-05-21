@@ -314,3 +314,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 Run267BR(267BR 실행)는 run267BQ(267BQ 실행)의 anti_overconstraint_prune(과제약 제거) 확장 기간 약점을 후속/가지치기 설계로 바꿨다.
 Effect(효과): branch decisions(분기 판단) `4`개, followup queue rows(후속 대기열 행) `3`개, failure memory rows(실패 기억 행) `2`개를 만들고, standalone selection(독립 선택)은 낮추되 aggressive impulse branch(공격형 임펄스 분기)를 열었다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267BS(267BS 실행)는 run267BR(267BR 실행)의 P0 follow-up queue(P0 후속 대기열)를 후보군 전체 direction/impulse materialization(방향/임펄스 물질화)으로 바꿨다.
+Effect(효과): variants(변형) `10`개와 Tier A(티어 A) MT5(MetaTrader 5, 메타트레이더5) attempts(시도) `10`개를 만들었고, 다음 run267BT(267BT 실행)에서 KPI(핵심 성과 지표)와 curve/time-slice/trade-quality(곡선/시간구간/거래품질)를 볼 수 있다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
