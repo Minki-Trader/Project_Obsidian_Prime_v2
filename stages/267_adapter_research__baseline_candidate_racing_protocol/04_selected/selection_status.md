@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267AD_noncalendar_state_guard_score_table_mt5_batch_completed`
+- stage_status(단계 상태): `run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AD_stage267_noncalendar_state_guard_score_table_mt5_execution_v1`
-- last_completed_run(마지막 완료 실행): `run267AD_stage267_noncalendar_state_guard_score_table_mt5_execution_v1`
+- current_run(현재 실행): `run267AE_stage267_noncalendar_state_guard_balance_timeslice_trade_quality_review_v1`
+- last_completed_run(마지막 완료 실행): `run267AE_stage267_noncalendar_state_guard_balance_timeslice_trade_quality_review_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -77,7 +77,8 @@
 - run267AB_noncalendar_weak_slice_resilience_queue(267AB 비달력 약점 구간 견고성 큐): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AB_noncalendar_weak_slice_resilience_queue.md`
 - run267AC_noncalendar_state_guard_score_table_materialization(267AC 비달력 상태 방어 점수표 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AC_noncalendar_state_guard_score_table_materialization.md`
 - run267AD_noncalendar_state_guard_score_table_mt5_execution(267AD 비달력 상태 방어 점수표 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AD_noncalendar_state_guard_score_table_mt5_execution.md`
-- next_action(다음 행동): `run267AE_review_noncalendar_state_guard_score_table_mt5_results`
+- run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review(267AE 비달력 상태 방어 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review.md`
+- next_action(다음 행동): `run267AF_noncalendar_state_guard_followup_or_prune_design`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -112,7 +113,6 @@ Effect(효과): next action(다음 행동)은 MT5(MetaTrader 5, 메타트레이�
 
 Run267V(267V 실행)는 후보 5개 raw feature surface(원시 피처 표면)를 재구축했다.
 Effect(효과): selected candidate(선택 후보)는 없고, 다음 행동은 score table/model(점수표/모델) 재구축이다.
-- status(상태): `run267AC_noncalendar_state_guard_score_tables_materialized_execution_pending`
 
 Run267AA(267AA 실행)는 후보 선택이 아니라 후속 설계를 완료했다.
 Effect(효과): 후보군은 유지하되, s264_aia/s262_lih/s258_stc는 비달력 약점 귀속 후속으로, s264_lc는 고순익 게이트 감사로, s264_aih는 압박/가지치기 판단으로 분리했다.
@@ -125,3 +125,7 @@ Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없�
 
 Run267AD(267AD 실행)는 run267AC(267AC 실행)의 noncalendar state guard score table(비달력 상태 방어 점수표)을 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): 실제 tester output(테스터 출력)과 KPI(핵심 성과 지표)를 얻었지만, 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
+
+Run267AE(267AE 실행)는 run267AD(267AD 실행)의 noncalendar state guard score table MT5 reports(비달력 상태 방어 점수표 MT5 보고서)를 거래 단위로 다시 읽었다.
+Effect(효과): headline KPI(대표 핵심 성과 지표)만 보지 않고 balance/equity curve(잔액/평가금 곡선), weak slice(약한 구간), trade quality(거래 품질)를 다음 연구 입력으로 고정한다.
+Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.

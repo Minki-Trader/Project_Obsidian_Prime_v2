@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AD_stage267_noncalendar_state_guard_score_table_mt5_execution_v1`
+- current_run(현재 실행): `run267AE_stage267_noncalendar_state_guard_balance_timeslice_trade_quality_review_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `noncalendar_state_guard_score_table_materialization`
-- status(상태): `run267AD_noncalendar_state_guard_score_table_mt5_batch_completed`
+- adapter_under_review(검토 중 어댑터): `noncalendar_state_guard_balance_timeslice_trade_quality_review`
+- status(상태): `run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -114,8 +114,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267AB noncalendar weak-slice resilience queue(비달력 약점 구간 견고성 큐): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AB_noncalendar_weak_slice_resilience_queue.md`
 - run267AC_noncalendar_state_guard_score_table_materialization(267AC 비달력 상태 방어 점수표 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AC_noncalendar_state_guard_score_table_materialization.md`
 - run267AD_noncalendar_state_guard_score_table_mt5_execution(267AD 비달력 상태 방어 점수표 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AD_noncalendar_state_guard_score_table_mt5_execution.md`
+- run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review(267AE 비달력 상태 방어 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review.md`
 
 ## Current Next Action(현재 다음 행동)
+- latest_mt5_review(최신 MT5 검토): run267AE(267AE 실행) trade records(거래 기록) `4422`, candidate-test rows(후보-시험 행) `7`, constructive curve rows(건설적 곡선 행) `2`, negative Tier A slices(음수 Tier A 구간) `52`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AE_noncalendar_state_guard_balance_timeslice_trade_quality_review.md`.
 - latest_mt5_execution(최신 MT5 실행): attempts(시도) `14` of `14`, KPI records(KPI 기록) `14`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AD_noncalendar_state_guard_score_table_mt5_execution.md`.
 - latest_mt5_review(최신 MT5 검토): run267Z(267Z 실행) candidate-test rows(후보-시험 행) `24`, constructive curve rows(건설적 곡선 행) `5`, negative Tier A slices(음수 Tier A 구간) `120`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Z_true_internal_ablation_balance_timeslice_trade_quality_review.md`.
 - latest_kpi_review(최신 KPI 검토): unique signatures(고유 서명) `24`, tier duplicate pairs(티어 중복 쌍) `24`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Y_true_internal_ablation_kpi_signature_review.md`.
@@ -139,10 +141,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267AE_review_noncalendar_state_guard_score_table_mt5_results`
-- action(행동): run267AD(267AD 실행)는 run267AC(267AC 실행)의 14개 noncalendar state guard score table MT5 attempts(비달력 상태 방어 점수표 MT5 시도)를 실행했다.
-- effect(효과): 다음 run267AE(267AE 실행)에서 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 검토할 수 있게 실제 tester output(테스터 출력)을 확보했다.
-- next_action(다음 행동): `run267AE_review_noncalendar_state_guard_score_table_mt5_results`
+- next_run(다음 실행): `run267AF_noncalendar_state_guard_followup_or_prune_design`
+- action(행동): run267AE(267AE 실행)는 run267AD(267AD 실행)의 14개 noncalendar state guard MT5 reports(비달력 상태 방어 MT5 보고서)를 거래 단위로 검토했다.
+- effect(효과): balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)를 다음 follow-up/prune design(후속/가지치기 설계)의 입력으로 만들었다.
+- next_action(다음 행동): `run267AF_noncalendar_state_guard_followup_or_prune_design`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -201,3 +203,7 @@ Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없�
 
 Run267AD(267AD 실행)는 run267AC(267AC 실행)의 noncalendar state guard score table(비달력 상태 방어 점수표)을 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): 실제 tester output(테스터 출력)과 KPI(핵심 성과 지표)를 얻었지만, 선택 후보(selected candidate, 선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
+
+Run267AE(267AE 실행)는 run267AD(267AD 실행)의 noncalendar state guard score table MT5 reports(비달력 상태 방어 점수표 MT5 보고서)를 거래 단위로 다시 읽었다.
+Effect(효과): headline KPI(대표 핵심 성과 지표)만 보지 않고 balance/equity curve(잔액/평가금 곡선), weak slice(약한 구간), trade quality(거래 품질)를 다음 연구 입력으로 고정한다.
+Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
