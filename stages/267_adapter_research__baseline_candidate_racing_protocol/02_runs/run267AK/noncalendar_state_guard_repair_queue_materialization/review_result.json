@@ -1,0 +1,854 @@
+{
+  "attempt_count": 4,
+  "attempts": [
+    {
+      "attempt_name": "run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_ta_2024",
+      "attempt_role": "tier_only_total",
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "common_summary_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/telemetry/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_ta_2024_summary.csv",
+      "common_telemetry_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/telemetry/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_ta_2024_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "execution_status": "not_executed",
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 2.0325,
+        "InpAtrTakeProfitMultiplier": 4.615,
+        "InpBlockLongFeatureMax": 2.5,
+        "InpBlockLongFeatureMin": 1.5,
+        "InpBlockLongFeatureRange": true,
+        "InpBlockShortFeatureMax": 1.5,
+        "InpBlockShortFeatureMin": 0.5,
+        "InpBlockShortFeatureRange": true,
+        "InpEntryTransitionOnly": false,
+        "InpEntryTransitionRearmMinConfidenceDelta": 0.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackSideFilterFeatureIndex": 2,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpFixedLot": 0.25,
+        "InpMagic": 26732101,
+        "InpModelRiskConfidenceCeiling": 0.6,
+        "InpModelRiskConfidenceFloor": 0.5,
+        "InpModelRiskFallbackLot": 0.25,
+        "InpModelRiskMaxPct": 0.0305,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true,
+        "InpReentryCooldownBars": 0,
+        "InpSameDirectionReentryCooldownBars": 8,
+        "InpSideFilterEnabled": true,
+        "InpSideFilterFeatureIndex": 2
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_ta_2024.ini",
+        "sha256": "a1559542db44421a0f0aa22c28011e250bcded8a02a5b3c07c6050d80a5f8bf4",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2024.01.02",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run267AK_stage267_noncalendar_state_guard_repair_queue_materialization_v1_run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_ta_2024",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2025.01.01",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 3,
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "queue_id": "run267AK_q01a_s264_aia_rep_trend_strength_adx_repair",
+      "record_view_prefix": "mt5_ta_s264_aia_rep_trend_strength_adx_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_ta_2024.set",
+        "sha256": "02944922ae5d6eed391825d57d1c10f62450c4430af0a0bf2aa2578a94ec3eae"
+      },
+      "source_queue_id": "run267AG_q02a_s264_aia_rep_trend_strength_adx_pressure",
+      "source_test_id": "rep_trend_strength_adx",
+      "split": "historical_2024_tier_a_train_era_stress",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_rt_2024",
+      "attempt_role": "routed_total",
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "common_summary_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/telemetry/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_rt_2024_summary.csv",
+      "common_telemetry_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/telemetry/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_rt_2024_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "execution_status": "not_executed",
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 2.0325,
+        "InpAtrTakeProfitMultiplier": 4.615,
+        "InpBlockLongFeatureMax": 2.5,
+        "InpBlockLongFeatureMin": 1.5,
+        "InpBlockLongFeatureRange": true,
+        "InpBlockShortFeatureMax": 1.5,
+        "InpBlockShortFeatureMin": 0.5,
+        "InpBlockShortFeatureRange": true,
+        "InpEntryTransitionOnly": false,
+        "InpEntryTransitionRearmMinConfidenceDelta": 0.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackSideFilterFeatureIndex": 2,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpFixedLot": 0.25,
+        "InpMagic": 26732102,
+        "InpModelRiskConfidenceCeiling": 0.6,
+        "InpModelRiskConfidenceFloor": 0.5,
+        "InpModelRiskFallbackLot": 0.25,
+        "InpModelRiskMaxPct": 0.0305,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true,
+        "InpReentryCooldownBars": 0,
+        "InpSameDirectionReentryCooldownBars": 8,
+        "InpSideFilterEnabled": true,
+        "InpSideFilterFeatureIndex": 2
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_rt_2024.ini",
+        "sha256": "f020727bd1570e73253cb1a65ea79ad963073271322bf3f916ddb1a00d4cac18",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2024.01.02",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run267AK_stage267_noncalendar_state_guard_repair_queue_materialization_v1_run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_rt_2024",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2025.01.01",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 3,
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "queue_id": "run267AK_q01a_s264_aia_rep_trend_strength_adx_repair",
+      "record_view_prefix": "mt5_rt_s264_aia_rep_trend_strength_adx_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_rt_2024.set",
+        "sha256": "fb78cca052f6fc7133ab63b981c1c27a06ec9696aad87a3d77fcd38ad758dbf3"
+      },
+      "source_queue_id": "run267AG_q02a_s264_aia_rep_trend_strength_adx_pressure",
+      "source_test_id": "rep_trend_strength_adx",
+      "split": "historical_2024_tier_a_train_era_stress",
+      "tier": "Tier A+B"
+    },
+    {
+      "attempt_name": "run267ak_q01b_s264_aia_rep_volatility_atr_repair_ta_2024",
+      "attempt_role": "tier_only_total",
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "common_summary_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/telemetry/run267ak_q01b_s264_aia_rep_volatility_atr_repair_ta_2024_summary.csv",
+      "common_telemetry_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/telemetry/run267ak_q01b_s264_aia_rep_volatility_atr_repair_ta_2024_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "execution_status": "not_executed",
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 2.0325,
+        "InpAtrTakeProfitMultiplier": 4.615,
+        "InpBlockLongFeatureMax": 2.5,
+        "InpBlockLongFeatureMin": 1.5,
+        "InpBlockLongFeatureRange": true,
+        "InpBlockShortFeatureMax": 1.5,
+        "InpBlockShortFeatureMin": 0.5,
+        "InpBlockShortFeatureRange": true,
+        "InpEntryTransitionOnly": false,
+        "InpEntryTransitionRearmMinConfidenceDelta": 0.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackSideFilterFeatureIndex": 2,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpFixedLot": 0.25,
+        "InpMagic": 26732201,
+        "InpModelRiskConfidenceCeiling": 0.6,
+        "InpModelRiskConfidenceFloor": 0.5,
+        "InpModelRiskFallbackLot": 0.25,
+        "InpModelRiskMaxPct": 0.0305,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true,
+        "InpReentryCooldownBars": 0,
+        "InpSameDirectionReentryCooldownBars": 8,
+        "InpSideFilterEnabled": true,
+        "InpSideFilterFeatureIndex": 2
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01b_s264_aia_rep_volatility_atr_repair_ta_2024.ini",
+        "sha256": "109374cee60d71bb09462a5da9afe004785cfc23592a3514e1ff6175b3e808aa",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2024.01.02",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run267AK_stage267_noncalendar_state_guard_repair_queue_materialization_v1_run267ak_q01b_s264_aia_rep_volatility_atr_repair_ta_2024",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2025.01.01",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 3,
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "queue_id": "run267AK_q01b_s264_aia_rep_volatility_atr_repair",
+      "record_view_prefix": "mt5_ta_s264_aia_rep_volatility_atr_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01b_s264_aia_rep_volatility_atr_repair_ta_2024.set",
+        "sha256": "40cb2fef6aa03645bc88d80fc5f9cad5d0f67c44b47a849d8e211610ea0ffe80"
+      },
+      "source_queue_id": "run267AG_q02b_s264_aia_rep_volatility_atr_pressure",
+      "source_test_id": "rep_volatility_atr",
+      "split": "historical_2024_tier_a_train_era_stress",
+      "tier": "Tier A"
+    },
+    {
+      "attempt_name": "run267ak_q01b_s264_aia_rep_volatility_atr_repair_rt_2024",
+      "attempt_role": "routed_total",
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "common_summary_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/telemetry/run267ak_q01b_s264_aia_rep_volatility_atr_repair_rt_2024_summary.csv",
+      "common_telemetry_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/telemetry/run267ak_q01b_s264_aia_rep_volatility_atr_repair_rt_2024_telemetry.csv",
+      "execution_policy": {
+        "close_on_flat_signal": false,
+        "close_only_on_opposite_signal": false,
+        "reverse_on_opposite_signal": true
+      },
+      "execution_status": "not_executed",
+      "extra_set_values": {
+        "InpAtrMaxStopPoints": 0.0,
+        "InpAtrMaxTakeProfitPoints": 0.0,
+        "InpAtrMinStopPoints": 0.0,
+        "InpAtrMinTakeProfitPoints": 0.0,
+        "InpAtrPeriod": 14,
+        "InpAtrSltpEnabled": true,
+        "InpAtrStopMultiplier": 2.0325,
+        "InpAtrTakeProfitMultiplier": 4.615,
+        "InpBlockLongFeatureMax": 2.5,
+        "InpBlockLongFeatureMin": 1.5,
+        "InpBlockLongFeatureRange": true,
+        "InpBlockShortFeatureMax": 1.5,
+        "InpBlockShortFeatureMin": 0.5,
+        "InpBlockShortFeatureRange": true,
+        "InpEntryTransitionOnly": false,
+        "InpEntryTransitionRearmMinConfidenceDelta": 0.0,
+        "InpFallbackEnabled": false,
+        "InpFallbackSideFilterFeatureIndex": 2,
+        "InpFallbackUseOnPrimaryFlat": false,
+        "InpFallbackUseOnPrimaryLowConfidence": false,
+        "InpFixedLot": 0.25,
+        "InpMagic": 26732202,
+        "InpModelRiskConfidenceCeiling": 0.6,
+        "InpModelRiskConfidenceFloor": 0.5,
+        "InpModelRiskFallbackLot": 0.25,
+        "InpModelRiskMaxPct": 0.0305,
+        "InpModelRiskMinPct": 0.005,
+        "InpModelRiskSizingEnabled": true,
+        "InpReentryCooldownBars": 0,
+        "InpSameDirectionReentryCooldownBars": 8,
+        "InpSideFilterEnabled": true,
+        "InpSideFilterFeatureIndex": 2
+      },
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01b_s264_aia_rep_volatility_atr_repair_rt_2024.ini",
+        "sha256": "74c0f743b40c7a29071a366683a91ebc80fe803bf02d432f506db5cf1a41e170",
+        "tester": {
+          "Deposit": 500,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2024.01.02",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_run267AK_stage267_noncalendar_state_guard_repair_queue_materialization_v1_run267ak_q01b_s264_aia_rep_volatility_atr_repair_rt_2024",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2025.01.01",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "max_hold_bars": 3,
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "queue_id": "run267AK_q01b_s264_aia_rep_volatility_atr_repair",
+      "record_view_prefix": "mt5_rt_s264_aia_rep_volatility_atr_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "set": {
+        "format": "mt5_set",
+        "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/mt5/run267ak_q01b_s264_aia_rep_volatility_atr_repair_rt_2024.set",
+        "sha256": "b1aeffaa45ef4369429ff36122a04fc7a858e8e99f78f4758155591e7fd9d258"
+      },
+      "source_queue_id": "run267AG_q02b_s264_aia_rep_volatility_atr_pressure",
+      "source_test_id": "rep_volatility_atr",
+      "split": "historical_2024_tier_a_train_era_stress",
+      "tier": "Tier A+B"
+    }
+  ],
+  "audit_pass_count": 2,
+  "candidate_count": 1,
+  "candidate_gate_decision": [
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "challenger_core",
+      "claim_boundary": "no_selected_candidate_no_onnx_no_goal_achieve",
+      "deferred_reason": "run267AJ_downgraded_core_role_and_no_specific_new_state_reason_named",
+      "materialized_variant_count": 0,
+      "next_condition": "only_reopen_if_s264_aia_fails_or_new_state_reason_is_named",
+      "run267AJ_decision_label": "downgrade_core_role_to_prune_boundary",
+      "run267AK_gate_decision": "design_gate_only_core_role_prune_boundary"
+    },
+    {
+      "candidate_alias": "s264_lc",
+      "candidate_id": "s264_lowrank_control",
+      "candidate_role": "defensive_control",
+      "claim_boundary": "no_selected_candidate_no_onnx_no_goal_achieve",
+      "deferred_reason": "no_new_run267AI_evidence_for_this_candidate",
+      "materialized_variant_count": 0,
+      "next_condition": "pool_wide_queue_targets_candidate_again",
+      "run267AJ_decision_label": "preserve_defensive_control_no_new_run267AI_evidence",
+      "run267AK_gate_decision": "preserved_role_no_new_run267AK_materialization"
+    },
+    {
+      "candidate_alias": "s262_lih",
+      "candidate_id": "s262_lowrank_inner_half_filter",
+      "candidate_role": "validation_heavy",
+      "claim_boundary": "no_selected_candidate_no_onnx_no_goal_achieve",
+      "deferred_reason": "no_new_run267AI_evidence_for_this_candidate",
+      "materialized_variant_count": 0,
+      "next_condition": "pool_wide_queue_targets_candidate_again",
+      "run267AJ_decision_label": "preserve_validation_heavy_control_no_new_run267AI_evidence",
+      "run267AK_gate_decision": "preserved_role_no_new_run267AK_materialization"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "no_selected_candidate_no_onnx_no_goal_achieve",
+      "deferred_reason": "",
+      "materialized_variant_count": 2,
+      "next_condition": "run267AL_MT5_review_reduces_Monday_and_2024_12_without_trade_count_collapse",
+      "run267AJ_decision_label": "continue_bounded_state_guard_materialization_watch",
+      "run267AK_gate_decision": "materialized_P0_bounded_repair_watch_not_selection"
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger",
+      "claim_boundary": "no_selected_candidate_no_onnx_no_goal_achieve",
+      "deferred_reason": "no_new_run267AI_evidence_for_this_candidate",
+      "materialized_variant_count": 0,
+      "next_condition": "pool_wide_queue_targets_candidate_again",
+      "run267AJ_decision_label": "preserve_stress_boundary_no_new_run267AI_evidence",
+      "run267AK_gate_decision": "preserved_role_no_new_run267AK_materialization"
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "created_at_utc": "2026-05-21T03:51:30Z",
+  "data_integrity_receipt": [
+    {
+      "field": "data_source",
+      "value": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/followup_variant_manifest.csv and stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AJ/noncalendar_state_guard_followup_design/next_experiment_queue.csv"
+    },
+    {
+      "field": "time_axis",
+      "value": "inherits run267AG runtime feature files and 2024 historical stress window"
+    },
+    {
+      "field": "sample_scope",
+      "value": "US100 M5 2024 historical stress; s264_aia two constructive replacement rows"
+    },
+    {
+      "field": "missing_or_duplicate_check",
+      "value": "missing_feature_cells=0;source_variants_found=2"
+    },
+    {
+      "field": "feature_label_boundary",
+      "value": "no new training label; score-table guard terms only"
+    },
+    {
+      "field": "split_boundary",
+      "value": "materialization only; MT5 execution and trade review remain pending"
+    },
+    {
+      "field": "leakage_risk",
+      "value": "repair selected after weak-slice review, so future MT5 result must be treated as exploratory"
+    },
+    {
+      "field": "data_hash_or_identity",
+      "value": "variant_manifest=stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/repair_variant_manifest.csv"
+    },
+    {
+      "field": "integrity_judgment",
+      "value": "usable_with_boundary"
+    }
+  ],
+  "deferred_queue": [
+    {
+      "candidate_scope": "s264_aih",
+      "claim_boundary": "deferred_design_boundary_no_candidate_selection_no_onnx",
+      "defer_reason": "design_gate_only_s264_aih_needs_state_reason_before_any_new_materialization",
+      "materialization_readiness": "design_gate_before_any_materialization",
+      "next_condition": "only_materialize_if_s264_aia_repair_fails_or_specific_noncalendar_state_reason_is_named",
+      "priority": "P0",
+      "queue_id": "run267AK_q02_s264_aih_core_role_prune_confirmation",
+      "workstream": "core_role_prune_or_salvage_boundary"
+    },
+    {
+      "candidate_scope": "s264_aia;s264_aih",
+      "claim_boundary": "deferred_design_boundary_no_candidate_selection_no_onnx",
+      "defer_reason": "real_Tier_B_fallback_probe_deferred_until_q01_survives",
+      "materialization_readiness": "deferred_until_q01_survives",
+      "next_condition": "q01_MT5_review_survives_without_duplicate_Tier_A_plus_B_claim",
+      "priority": "P1",
+      "queue_id": "run267AK_q03_real_fallback_routing_probe_design",
+      "workstream": "real_tier_b_fallback_gap"
+    },
+    {
+      "candidate_scope": "surviving_watch_rows",
+      "claim_boundary": "deferred_design_boundary_no_candidate_selection_no_onnx",
+      "defer_reason": "broader_period_pressure_deferred_until_repair_survives_2024",
+      "materialization_readiness": "deferred_until_q01_or_q02_survives",
+      "next_condition": "q01_or_q02_survivor_has_cleaner_2024_curve",
+      "priority": "P1",
+      "queue_id": "run267AK_q04_broader_period_pressure_after_repair",
+      "workstream": "broader_period_pressure"
+    }
+  ],
+  "deferred_queue_count": 3,
+  "dynamic_artifacts": [
+    {
+      "artifact_id": "stage267_run267AK_run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_runtime_feature",
+      "artifact_type": "runtime_feature_csv",
+      "notes": "Run267AK runtime feature CSV for run267AK_q01a_s264_aia_rep_trend_strength_adx_repair.",
+      "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/features/s264_aia_rep_trend_strength_adx_repair_guard.csv"
+    },
+    {
+      "artifact_id": "stage267_run267AK_run267ak_q01a_s264_aia_rep_trend_strength_adx_repair_runtime_model",
+      "artifact_type": "runtime_model_csv",
+      "notes": "Run267AK repair EBM score table CSV for run267AK_q01a_s264_aia_rep_trend_strength_adx_repair.",
+      "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/models/s264_aia_rep_trend_strength_adx_repair_guard_model.csv"
+    },
+    {
+      "artifact_id": "stage267_run267AK_run267ak_q01b_s264_aia_rep_volatility_atr_repair_runtime_feature",
+      "artifact_type": "runtime_feature_csv",
+      "notes": "Run267AK runtime feature CSV for run267AK_q01b_s264_aia_rep_volatility_atr_repair.",
+      "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/features/s264_aia_rep_volatility_atr_repair_guard.csv"
+    },
+    {
+      "artifact_id": "stage267_run267AK_run267ak_q01b_s264_aia_rep_volatility_atr_repair_runtime_model",
+      "artifact_type": "runtime_model_csv",
+      "notes": "Run267AK repair EBM score table CSV for run267AK_q01b_s264_aia_rep_volatility_atr_repair.",
+      "path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/models/s264_aia_rep_volatility_atr_repair_guard_model.csv"
+    }
+  ],
+  "experiment_design_receipt": [
+    {
+      "field": "hypothesis",
+      "value": "run267AJ_s264_aia_constructive_rows_may_survive_a_bounded_noncalendar_state_guard_repair"
+    },
+    {
+      "field": "decision_use",
+      "value": "materialize_MT5_attempt_inputs_only_no_candidate_selection"
+    },
+    {
+      "field": "comparison_baseline",
+      "value": "run267AI s264_aia rep_trend_strength_adx and rep_volatility_atr Tier A rows"
+    },
+    {
+      "field": "control_variables",
+      "value": "same_2024_period_same_run267AG_feature_order_same_thresholds_same_RuntimeProbeEA"
+    },
+    {
+      "field": "changed_variables",
+      "value": "guard_score_table_terms_only_for_s264_aia_repair_profile"
+    },
+    {
+      "field": "sample_scope",
+      "value": "Tier A and Tier A+B 2024 historical runtime attempts planned; Tier A+B remains fallback-disabled duplicate boundary until real fallback probe"
+    },
+    {
+      "field": "success_criteria",
+      "value": "run267AL_trades_at_least_290_net_at_least_900_PF_at_least_1_35_DD_at_most_18_worst_month_above_minus_120_Monday_above_minus_180"
+    },
+    {
+      "field": "failure_criteria",
+      "value": "trade_count_collapse_or_Monday_or_December_hole_remains_deep"
+    },
+    {
+      "field": "invalid_conditions",
+      "value": "literal_weekday_month_filter_or_feature_order_untracked_or_non_guard_model_rows_changed"
+    },
+    {
+      "field": "stop_conditions",
+      "value": "stop_after_one_materialization_and_one_MT5_review_if_deep_holes_remain"
+    },
+    {
+      "field": "evidence_plan",
+      "value": "repair_queue;variant_manifest;runtime_contract;model_repair_audit;attempt_manifest;future_MT5_curve_review"
+    }
+  ],
+  "external_verification_status": "not_applicable_materialization_only",
+  "failure_memory": [
+    {
+      "affected_scope": "s264_aia;s264_aih",
+      "boundary": "negative_memory_not_candidate_selection",
+      "do_not_repeat": "do_not_fix_with_literal_Monday_filter_without_state_reason",
+      "evidence": "common_worst_slice=Monday;negative_slices=16",
+      "memory_id": "run267AJ_m01_repeated_monday_hole",
+      "pattern": "constructive_headline_with_repeated_deep_weekday_hole",
+      "reopen_condition": "weak_slice_loss_reduces_without_trade_count_collapse",
+      "salvage_angle": "noncalendar_return_volatility_state_guard_or_prune"
+    },
+    {
+      "affected_scope": "s264_aia;s264_aih",
+      "boundary": "negative_memory_not_candidate_selection",
+      "do_not_repeat": "do_not_optimize_only_December_or_hide_month_loss_with_calendar_filter",
+      "evidence": "common_worst_month=2024-12;negative_slices=16",
+      "memory_id": "run267AJ_m02_repeated_december_hole",
+      "pattern": "constructive_headline_with_repeated_deep_month_hole",
+      "reopen_condition": "December_loss_reduces_and_non_December_curve_does_not_degrade",
+      "salvage_angle": "state_guard_that_also_survives_non_December_segments"
+    },
+    {
+      "affected_scope": "all_run267AI_attempts",
+      "boundary": "routing_gap_memory",
+      "do_not_repeat": "do_not_treat_duplicate_Tier_A_plus_B_as_routed_robustness",
+      "evidence": "duplicate_rows=3",
+      "memory_id": "run267AJ_m03_tier_ab_duplicate_boundary",
+      "pattern": "Tier_A_plus_B_rows_duplicate_when_fallback_disabled",
+      "reopen_condition": "fallback_enabled_manifest_and_nonduplicate_route_role_counts",
+      "salvage_angle": "explicit_real_fallback_probe_after_state_guard_survives"
+    },
+    {
+      "affected_scope": "s264_aih",
+      "boundary": "prune_boundary_memory",
+      "do_not_repeat": "do_not_keep_core_role_repair_loop_beyond_one_more_bounded_stage",
+      "evidence": "s264_aih_DD=18.28;Monday=-243.84;2024-12=-194.95",
+      "memory_id": "run267AJ_m04_core_challenger_pressure_fragile",
+      "pattern": "s264_aih_core_role_pressure_has_worse_hole_than_s264_aia",
+      "reopen_condition": "specific_noncalendar_state_reason_and_cleaner_curve",
+      "salvage_angle": "new_feature_engineering_only_if_state_reason_is_named"
+    },
+    {
+      "affected_scope": "s264_aia;s264_aih",
+      "boundary": "thin_slice_memory_not_primary_objective",
+      "do_not_repeat": "do_not_build_a_repair_loop_around_sparse_three_trade_session_loss",
+      "evidence": "session_07_12_has_three_trades_per_touched_row_in_run267AI_negative_slice_review",
+      "memory_id": "run267AJ_m05_sparse_session_07_12_not_tuning_target",
+      "pattern": "session_07_12_negative_slice_is_sparse",
+      "reopen_condition": "same_session_hole_repeats_with_sufficient_trade_count_in_future_review",
+      "salvage_angle": "use_only_as_secondary_slice_check_after_broader_state_guard"
+    },
+    {
+      "affected_scope": "s264_aia",
+      "boundary": "materialization_memory_no_kpi_claim",
+      "do_not_repeat": "do_not_claim_performance_improvement_before_run267AL_MT5_execution",
+      "evidence": "run267AK source feature files copied from run267AG; non_guard_model_rows unchanged by audit",
+      "memory_id": "run267AK_m06_materialized_only_guard_terms_changed",
+      "pattern": "repair_materialization_changes_guard_score_table_terms_only",
+      "reopen_condition": "run267AL_shows_cleaner_2024_curve_without_trade_count_collapse",
+      "salvage_angle": "execute_and_review_balance_time_slice_trade_quality"
+    }
+  ],
+  "goal_achieve": "not_claimed",
+  "inputs": {
+    "run267AG_runtime_contract": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/runtime_contract.csv",
+    "run267AG_variant_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/followup_variant_manifest.csv",
+    "run267AI_candidate_test_review": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AI/noncalendar_state_guard_followup_balance_timeslice_trade_quality_review/candidate_test_review.csv",
+    "run267AI_tier_duplicate_review": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AI/noncalendar_state_guard_followup_balance_timeslice_trade_quality_review/tier_duplicate_review.csv",
+    "run267AJ_candidate_decision": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AJ/noncalendar_state_guard_followup_design/candidate_followup_decision.csv",
+    "run267AJ_failure_memory": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AJ/noncalendar_state_guard_followup_design/failure_memory.csv",
+    "run267AJ_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AJ/noncalendar_state_guard_followup_design/next_experiment_queue.csv"
+  },
+  "judgment": "repair_queue_materialized_execution_pending_no_candidate_selection",
+  "missing_feature_cells": 0,
+  "model_repair_audit": [
+    {
+      "audit_read": "pass_guard_terms_only",
+      "candidate_alias": "s264_aia",
+      "changed_guard_score_rows": 3,
+      "guard_score_feature_index": 32,
+      "guard_score_rows": 5,
+      "neutral_bins_preserved": true,
+      "non_guard_rows_changed": false,
+      "queue_id": "run267AK_q01a_s264_aia_rep_trend_strength_adx_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "repair_terms": "0.000/0.000/0.000;0.000/0.000/0.000;-0.055/0.110/-0.055;-0.095/0.190/-0.095;-0.135/0.270/-0.135",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/models/s264_aia_rep_trend_strength_adx_repair_guard_model.csv",
+      "source_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/variants/s264_aia/run267ag_q02a_s264_aia_rep_trend_strength_adx_pressure/models/s264_aia_rep_trend_strength_adx_followup_guard_model.csv",
+      "source_test_id": "rep_trend_strength_adx"
+    },
+    {
+      "audit_read": "pass_guard_terms_only",
+      "candidate_alias": "s264_aia",
+      "changed_guard_score_rows": 3,
+      "guard_score_feature_index": 32,
+      "guard_score_rows": 5,
+      "neutral_bins_preserved": true,
+      "non_guard_rows_changed": false,
+      "queue_id": "run267AK_q01b_s264_aia_rep_volatility_atr_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "repair_terms": "0.000/0.000/0.000;0.000/0.000/0.000;-0.055/0.110/-0.055;-0.095/0.190/-0.095;-0.135/0.270/-0.135",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/models/s264_aia_rep_volatility_atr_repair_guard_model.csv",
+      "source_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/variants/s264_aia/run267ag_q02b_s264_aia_rep_volatility_atr_pressure/models/s264_aia_rep_volatility_atr_followup_guard_model.csv",
+      "source_test_id": "rep_volatility_atr"
+    }
+  ],
+  "next_action": "run267AL_execute_noncalendar_state_guard_repair_mt5_batch",
+  "onnx_readiness": "not_claimed",
+  "outputs": {
+    "attempt_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/attempt_manifest.csv",
+    "candidate_gate_decision": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/candidate_gate_decision.csv",
+    "data_integrity_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/data_integrity_receipt.csv",
+    "deferred_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/deferred_queue.csv",
+    "experiment_design_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/experiment_design_receipt.csv",
+    "failure_memory": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/failure_memory.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/lineage.json",
+    "model_repair_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/model_repair_audit.csv",
+    "repair_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/repair_materialization_queue.csv",
+    "repair_variant_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/repair_variant_manifest.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AK_noncalendar_state_guard_repair_queue_materialization.md",
+    "result_judgment": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/result_judgment.csv",
+    "review_result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/review_result.json",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/run_manifest.json",
+    "runtime_contract": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/runtime_contract.csv"
+  },
+  "parent_run_id": "run267AJ_stage267_noncalendar_state_guard_followup_design_v1",
+  "repair_queue": [
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_Monday_or_December_hole_remains_deep",
+      "materialization_status": "ready_for_score_table_materialization",
+      "priority": "P0",
+      "queue_id": "run267AK_q01a_s264_aia_rep_trend_strength_adx_repair",
+      "reason": "materialize_run267AJ_P0_bounded_noncalendar_state_guard_repair_watch",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "source_evidence": "run267AI net=1133.77;pf=1.601406;trades=301;DD=14.73;worst_month=2024-12:-157.55;worst_slice=weekday:Monday:-289.75",
+      "source_guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=mid",
+      "source_queue_id": "run267AG_q02a_s264_aia_rep_trend_strength_adx_pressure",
+      "source_run267AJ_queue_id": "run267AK_q01_s264_aia_dual_replacement_state_guard_repair",
+      "source_test_id": "rep_trend_strength_adx",
+      "stop_condition": "stop_after_one_materialization_and_one_MT5_review_if_deep_holes_remain",
+      "success_criteria": "trade_count_at_least_280;net_profit_at_least_900;PF_at_least_1.35;DD_at_most_18;Monday_loss_above_-180;December_loss_above_-120"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "materialization_only_no_candidate_selection_no_onnx",
+      "failure_criteria": "trade_count_collapses_or_Monday_or_December_hole_remains_deep",
+      "materialization_status": "ready_for_score_table_materialization",
+      "priority": "P0",
+      "queue_id": "run267AK_q01b_s264_aia_rep_volatility_atr_repair",
+      "reason": "materialize_run267AJ_P0_bounded_noncalendar_state_guard_repair_watch",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "source_evidence": "run267AI net=1080.68;pf=1.640475;trades=296;DD=13.77;worst_month=2024-12:-154.93;worst_slice=weekday:Monday:-234.18",
+      "source_guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=mid",
+      "source_queue_id": "run267AG_q02b_s264_aia_rep_volatility_atr_pressure",
+      "source_run267AJ_queue_id": "run267AK_q01_s264_aia_dual_replacement_state_guard_repair",
+      "source_test_id": "rep_volatility_atr",
+      "stop_condition": "stop_after_one_materialization_and_one_MT5_review_if_deep_holes_remain",
+      "success_criteria": "trade_count_at_least_280;net_profit_at_least_900;PF_at_least_1.35;DD_at_most_18;Monday_loss_above_-180;December_loss_above_-120"
+    }
+  ],
+  "repair_variant_manifest": [
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "materialization_only_no_candidate_selection_no_onnx",
+      "common_feature_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/features/s264_aia_rep_trend_strength_adx_repair_guard.csv",
+      "common_feature_sha256": "8b4adff3ae773c6318ba00dc5ec2b30ce839dba880506249bab926754409efc6",
+      "common_model_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/models/s264_aia_rep_trend_strength_adx_repair_guard_model.csv",
+      "common_model_sha256": "23763a979981b3af64a47f0a97aeae93c7bfe7a651b8c6781d002a6b14da3713",
+      "feature_count": 33,
+      "feature_order": "stage56_context_et_event_signal;stage264_source_feature_rank_bucket;stage264_source_feature_gate_allow_inner_all_oos_anchor;atr_14;atr_50;atr_14_over_atr_50;bollinger_width_20;bb_position_20;bb_squeeze;historical_vol_20;historical_vol_5_over_20;di_spread_14;supertrend_10_3;vortex_indicator;ema9_ema20_diff;ema20_ema50_diff;ema50_ema200_diff;sma50_sma200_ratio;close_ema20_ratio;close_ema50_ratio;minutes_from_cash_open;is_us_cash_open;is_first_30m_after_open;is_last_30m_before_cash_close;log_return_1;log_return_3;hl_range;return_zscore_20;return_1_over_atr_14;close_open_ratio;gap_percent;close_prev_close_ratio;stage267_noncalendar_guard_score",
+      "feature_order_hash": "9538d6f8d118de681e7e2ec3c4aaa3c73b5ab64c0e84c5fd858790646a06c07f",
+      "guard_score_feature_index": 32,
+      "missing_feature_cells": 0,
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "neutral_bins_preserved": true,
+      "priority": "P0",
+      "queue_id": "run267AK_q01a_s264_aia_rep_trend_strength_adx_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "repair_terms": "0.000/0.000/0.000;0.000/0.000/0.000;-0.055/0.110/-0.055;-0.095/0.190/-0.095;-0.135/0.270/-0.135",
+      "runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/features/s264_aia_rep_trend_strength_adx_repair_guard.csv",
+      "runtime_feature_sha256": "8b4adff3ae773c6318ba00dc5ec2b30ce839dba880506249bab926754409efc6",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01a_s264_aia_rep_trend_strength_adx_repair/models/s264_aia_rep_trend_strength_adx_repair_guard_model.csv",
+      "runtime_model_sha256": "23763a979981b3af64a47f0a97aeae93c7bfe7a651b8c6781d002a6b14da3713",
+      "runtime_rows": 11651,
+      "signal_rows": 540,
+      "source_guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=mid",
+      "source_queue_id": "run267AG_q02a_s264_aia_rep_trend_strength_adx_pressure",
+      "source_run267AJ_queue_id": "run267AK_q01_s264_aia_dual_replacement_state_guard_repair",
+      "source_runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/variants/s264_aia/run267ag_q02a_s264_aia_rep_trend_strength_adx_pressure/features/s264_aia_rep_trend_strength_adx_followup_guard.csv",
+      "source_runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/variants/s264_aia/run267ag_q02a_s264_aia_rep_trend_strength_adx_pressure/models/s264_aia_rep_trend_strength_adx_followup_guard_model.csv",
+      "source_test_id": "rep_trend_strength_adx"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "claim_boundary": "materialization_only_no_candidate_selection_no_onnx",
+      "common_feature_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/features/s264_aia_rep_volatility_atr_repair_guard.csv",
+      "common_feature_sha256": "34668090aa72c853b8bfa12b288500779d21ab6b6064ff33c209b02c619501eb",
+      "common_model_path": "OPV2/s267ak/run267AK_noncalendar_state_guard_repair/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/models/s264_aia_rep_volatility_atr_repair_guard_model.csv",
+      "common_model_sha256": "05a95a58b31d80aa51721378cb6b17b974094f778bf8c5756bcadd6509b2db4f",
+      "feature_count": 33,
+      "feature_order": "stage56_context_et_event_signal;stage264_source_feature_rank_bucket;stage264_source_feature_gate_allow_inner_all_oos_anchor;atr_50;atr_14_over_atr_50;bollinger_width_20;bb_position_20;bb_squeeze;historical_vol_20;historical_vol_5_over_20;adx_14;di_spread_14;supertrend_10_3;vortex_indicator;ema9_ema20_diff;ema20_ema50_diff;ema50_ema200_diff;sma50_sma200_ratio;close_ema20_ratio;close_ema50_ratio;minutes_from_cash_open;is_us_cash_open;is_first_30m_after_open;is_last_30m_before_cash_close;log_return_1;log_return_3;hl_range;return_zscore_20;return_1_over_atr_14;close_open_ratio;gap_percent;close_prev_close_ratio;stage267_noncalendar_guard_score",
+      "feature_order_hash": "a7032f8f23a27346a640a139d7eabdb0bd340589c7a15da4770f922dccc9de25",
+      "guard_score_feature_index": 32,
+      "missing_feature_cells": 0,
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "neutral_bins_preserved": true,
+      "priority": "P0",
+      "queue_id": "run267AK_q01b_s264_aia_rep_volatility_atr_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "repair_terms": "0.000/0.000/0.000;0.000/0.000/0.000;-0.055/0.110/-0.055;-0.095/0.190/-0.095;-0.135/0.270/-0.135",
+      "runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/features/s264_aia_rep_volatility_atr_repair_guard.csv",
+      "runtime_feature_sha256": "34668090aa72c853b8bfa12b288500779d21ab6b6064ff33c209b02c619501eb",
+      "runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AK/noncalendar_state_guard_repair_queue_materialization/variants/s264_aia/run267ak_q01b_s264_aia_rep_volatility_atr_repair/models/s264_aia_rep_volatility_atr_repair_guard_model.csv",
+      "runtime_model_sha256": "05a95a58b31d80aa51721378cb6b17b974094f778bf8c5756bcadd6509b2db4f",
+      "runtime_rows": 11651,
+      "signal_rows": 540,
+      "source_guard_state_features": "historical_vol_5_over_20=high;abs_return_1_over_atr_14=high;abs_di_spread_14=mid",
+      "source_queue_id": "run267AG_q02b_s264_aia_rep_volatility_atr_pressure",
+      "source_run267AJ_queue_id": "run267AK_q01_s264_aia_dual_replacement_state_guard_repair",
+      "source_runtime_feature_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/variants/s264_aia/run267ag_q02b_s264_aia_rep_volatility_atr_pressure/features/s264_aia_rep_volatility_atr_followup_guard.csv",
+      "source_runtime_model_file": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AG/noncalendar_state_guard_followup_queue_materialization/variants/s264_aia/run267ag_q02b_s264_aia_rep_volatility_atr_pressure/models/s264_aia_rep_volatility_atr_followup_guard_model.csv",
+      "source_test_id": "rep_volatility_atr"
+    }
+  ],
+  "result_judgment": [
+    {
+      "claim_boundary": "score_table_materialization_only_no_candidate_selection_no_onnx_no_operating_claim",
+      "evidence_available": "variants=2;attempts=4;audit_pass=2/2;deferred=3",
+      "evidence_missing": "MT5_execution;trade_list_review;balance_equity_curve;time_slice_KPI;trade_quality_after_repair;real_Tier_B_fallback",
+      "judgment_label": "repair_queue_materialized_execution_pending_no_candidate_selection",
+      "next_condition": "run267AL_execute_noncalendar_state_guard_repair_mt5_batch",
+      "result_subject": "run267AK_stage267_noncalendar_state_guard_repair_queue_materialization_v1",
+      "user_explanation_hook": "좋아 보였던 s264_aia 두 줄만 실제 실행 입력으로 만들었고, 성능 판단은 다음 MT5 실행 뒤에만 할 수 있다."
+    }
+  ],
+  "run_id": "run267AK_stage267_noncalendar_state_guard_repair_queue_materialization_v1",
+  "runtime_contract": [
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "feature_count": 33,
+      "feature_order_hash": "9538d6f8d118de681e7e2ec3c4aaa3c73b5ab64c0e84c5fd858790646a06c07f",
+      "known_difference": "uses run267AG runtime feature surface and changes only guard score-table terms; no retraining and no calendar literal filter",
+      "long_threshold": 0.52,
+      "max_hold_bars": 3,
+      "min_margin": 0.0,
+      "model_backend": "ebm_table",
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "queue_id": "run267AK_q01a_s264_aia_rep_trend_strength_adx_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "runtime_claim_boundary": "research_only_execution_pending_no_selected_candidate_no_onnx",
+      "shared_contract": "US100 M5;2024 historical stress window;RuntimeProbeEA;run267AG feature order;repair score-table terms;attempt set/ini identity",
+      "short_threshold": 0.54,
+      "source_test_id": "rep_trend_strength_adx"
+    },
+    {
+      "candidate_alias": "s264_aia",
+      "candidate_id": "s264_allow_inner_all_oos_anchor",
+      "candidate_role": "oos_anchor",
+      "feature_count": 33,
+      "feature_order_hash": "a7032f8f23a27346a640a139d7eabdb0bd340589c7a15da4770f922dccc9de25",
+      "known_difference": "uses run267AG runtime feature surface and changes only guard score-table terms; no retraining and no calendar literal filter",
+      "long_threshold": 0.52,
+      "max_hold_bars": 3,
+      "min_margin": 0.0,
+      "model_backend": "ebm_table",
+      "model_materialization_type": "research_score_table_noncalendar_state_guard_repair_from_run267AJ_v1",
+      "queue_id": "run267AK_q01b_s264_aia_rep_volatility_atr_repair",
+      "repair_profile": "aia_dual_replacement_state_guard_repair_v3",
+      "runtime_claim_boundary": "research_only_execution_pending_no_selected_candidate_no_onnx",
+      "shared_contract": "US100 M5;2024 historical stress window;RuntimeProbeEA;run267AG feature order;repair score-table terms;attempt set/ini identity",
+      "short_threshold": 0.54,
+      "source_test_id": "rep_volatility_atr"
+    }
+  ],
+  "selected_candidate": "none",
+  "source_materialization_run_id": "run267AG_stage267_noncalendar_state_guard_followup_queue_materialization_v1",
+  "source_variants_found": 2,
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "run267AK_noncalendar_state_guard_repair_queue_materialized_execution_pending",
+  "variant_count": 2
+}
