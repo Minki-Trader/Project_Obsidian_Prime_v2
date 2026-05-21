@@ -318,3 +318,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 Run267BS(267BS 실행)는 run267BR(267BR 실행)의 P0 follow-up queue(P0 후속 대기열)를 후보군 전체 direction/impulse materialization(방향/임펄스 물질화)으로 바꿨다.
 Effect(효과): variants(변형) `10`개와 Tier A(티어 A) MT5(MetaTrader 5, 메타트레이더5) attempts(시도) `10`개를 만들었고, 다음 run267BT(267BT 실행)에서 KPI(핵심 성과 지표)와 curve/time-slice/trade-quality(곡선/시간구간/거래품질)를 볼 수 있다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+- run267BT_pool_wide_directional_impulse_followup_mt5_execution(267BT 후보군 전체 방향/임펄스 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BT_pool_wide_directional_impulse_followup_mt5_execution.md`
+
+Run267BT(267BT 실행)는 run267BS(267BS 실행)의 후보군 전체 방향/임펄스 후속 attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
+Effect(효과): attempt(시도) `10/10`개 중 KPI records(KPI 기록) `10`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
