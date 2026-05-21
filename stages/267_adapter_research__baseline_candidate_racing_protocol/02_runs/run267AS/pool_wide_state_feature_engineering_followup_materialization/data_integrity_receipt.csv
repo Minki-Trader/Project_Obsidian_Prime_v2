@@ -1,0 +1,10 @@
+﻿field,value
+data_source,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AR/pool_wide_state_feature_engineering_followup_or_adapter_branch/next_experiment_queue.csv and stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AO/pool_wide_state_feature_engineering_materialization/state_feature_variant_manifest.csv
+time_axis,bar_time_server from run267AO runtime feature files; MT5 test window stays 2024.01.02 through 2025.01.01
+sample_scope,US100 M5 2024 historical stress window; run267AS creates 8 follow-up pressure variants
+missing_or_duplicate_check,variant_feature_missing_cells=0;ready_queue_rows=8/8
+feature_label_boundary,no MT5 PnL becomes a label; model is not retrained; only pre-existing state feature score terms are changed
+split_boundary,materialization-only; execution and KPI review remain pending run267AT
+leakage_risk,"weak-slice evidence influenced follow-up pressure, so next run must be read as exploratory pressure, not selection proof"
+data_hash_or_identity,run_manifest=stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AS/pool_wide_state_feature_engineering_followup_materialization/run_manifest.json
+integrity_judgment,usable_with_boundary

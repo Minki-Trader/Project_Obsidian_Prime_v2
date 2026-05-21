@@ -1,0 +1,13 @@
+﻿field,value
+hypothesis,"run267AQ headline-positive candidates may fail because state-feature score terms are too mild, so role-specific noncalendar pressure can test whether weak slices reduce without calendar filters"
+decision_use,create run267AT MT5 attempt inputs only; no candidate selection and no ONNX readiness claim
+comparison_baseline,run267AO state feature score tables plus run267AQ balance/time-slice/trade-quality review and run267AR follow-up queue
+control_variables,same 2024 period; same five-candidate pool roles; same run267AO feature order; same thresholds; same RuntimeProbeEA
+changed_variables,state-feature score-table terms by candidate role and profile; no retraining; no literal weekday/month filters
+sample_scope,Tier A and Tier A+B duplicate-boundary 2024 historical runtime attempts planned
+success_criteria,future run267AT review must preserve trade count and reduce Monday/2024-12 holes without DD worsening
+failure_criteria,"headline improves while deep slices remain, trade count thins, DD worsens, or controls move identically to challengers"
+invalid_conditions,literal calendar filter; feature order mismatch; missing MT5 report; Tier A+B duplicate boundary called real fallback
+stop_conditions,"if run267AT keeps same deep holes, stop this pressure loop and redirect rather than extending the same repair"
+evidence_plan,pressure_design;materialization_queue;variant_manifest;runtime_contract;attempt_manifest;model_pressure_audit;future_MT5_KPI;future_curve_time_slice_trade_quality_review
+required_gate_coverage,experiment_design_schema;artifact_lineage_connected;runtime_parity_boundary;result_claim_guard

@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AR_stage267_pool_wide_state_feature_engineering_followup_or_adapter_branch_v1`
+- current_run(현재 실행): `run267AS_stage267_pool_wide_state_feature_engineering_followup_materialization_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `pool_wide_state_feature_engineering_followup_or_adapter_branch`
-- status(상태): `run267AR_pool_wide_state_feature_engineering_followup_or_adapter_branch_design_completed`
+- adapter_under_review(검토 중 어댑터): `pool_wide_state_feature_engineering_followup_materialization`
+- status(상태): `run267AS_pool_wide_state_feature_engineering_followup_materialized_execution_pending`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -128,6 +128,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267AP pool-wide state feature engineering MT5 execution(후보군 전체 상태 피처 엔지니어링 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AP_pool_wide_state_feature_engineering_mt5_execution.md`
 - Stage267(267단계) run267AQ pool-wide state feature engineering balance/time-slice/trade-quality review(후보군 전체 상태 피처 엔지니어링 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AQ_pool_wide_state_feature_engineering_balance_timeslice_trade_quality_review.md`
 - Stage267(267단계) run267AR pool-wide state feature engineering follow-up/Adapter branch design(후보군 전체 상태 피처 엔지니어링 후속/어댑터 분기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AR_pool_wide_state_feature_engineering_followup_or_adapter_branch.md`
+- run267AS_pool_wide_state_feature_engineering_followup_materialization(267AS 후보군 전체 상태 피처 엔지니어링 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AS_pool_wide_state_feature_engineering_followup_materialization.md`
 
 ## Current Next Action(현재 다음 행동)
 - latest_design(최신 설계): run267AR(267AR 실행) profile decisions(프로필 결정) `20`, candidate decisions(후보 결정) `5`, queue rows(큐 행) `5`, failure memory(실패 기억) `8`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AR_pool_wide_state_feature_engineering_followup_or_adapter_branch.md`.
@@ -165,10 +166,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267AS_materialize_pool_wide_state_feature_engineering_followup_queue`
-- action(행동): run267AN(267AN 실행)은 run267AM(267AM 실행)의 수리 검토를 수리 분기 종료와 다음 큐로 정리했다.
-- effect(효과): 같은 월요일/12월 수리를 반복하지 않고 후보군 전체 상태 피처 엔지니어링으로 전환할 수 있다.
-- next_action(다음 행동): `run267AS_materialize_pool_wide_state_feature_engineering_followup_queue`
+- next_run(다음 실행): `run267AT_execute_pool_wide_state_feature_engineering_followup_mt5_batch`
+- action(행동): run267AS(267AS 실행)는 run267AR(267AR 실행)의 후속 큐를 run267AT(267AT 실행) MT5(MetaTrader 5, 메타트레이더5) 실행 대기 입력으로 물질화했다.
+- effect(효과): 같은 월요일/12월 수리를 직접 달력 필터로 반복하지 않고, 비달력 상태 압박(noncalendar state pressure, 비달력 상태 압박)이 실제 거래/곡선/시간구간을 개선하는지 볼 수 있다.
+- next_action(다음 행동): `run267AT_execute_pool_wide_state_feature_engineering_followup_mt5_batch`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -275,3 +276,6 @@ Effect(효과): 높은 headline KPI(대표 핵심 성과 지표)를 바로 선�
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 없다.
 Effect(효과): headline KPI(대표 핵심 성과 지표)가 좋아도 월별/요일별/시간대별/세션별/후반 구간에서 깊게 깨지는지 확인할 수 있다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 없다.
+
+Run267AS(267AS 실행)는 run267AR(267AR 실행)의 next experiment queue(다음 실험 큐)를 pool-wide state feature engineering follow-up materialization(후보군 전체 상태 피처 엔지니어링 후속 물질화)으로 바꿨다.
+Effect(효과): 8개 variant(변형)와 16개 MT5(MetaTrader 5, 메타트레이더5) attempt(시도)를 만들었고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
