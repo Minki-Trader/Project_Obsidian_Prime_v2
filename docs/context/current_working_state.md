@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267Y_stage267_true_internal_ablation_kpi_signature_review_v1`
+- current_run(현재 실행): `run267Z_stage267_true_internal_ablation_balance_timeslice_trade_quality_review_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `true_internal_ablation_kpi_signature_review`
-- status(상태): `run267Y_true_internal_ablation_kpi_signature_review_completed`
+- adapter_under_review(검토 중 어댑터): `true_internal_ablation_balance_timeslice_trade_quality_review`
+- status(상태): `run267Z_true_internal_ablation_balance_timeslice_trade_quality_review_completed`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -109,8 +109,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - Stage267(267단계) run267W true internal ablation score table materialization(진짜 내부 제거 점수표 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267W_true_internal_ablation_score_table_materialization.md`
 - Stage267(267단계) run267X true internal ablation score table MT5 execution(진짜 내부 제거 점수표 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267X_true_internal_ablation_score_table_mt5_execution.md`
 - Stage267(267단계) run267Y true internal ablation KPI signature review(진짜 내부 제거 KPI 서명 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Y_true_internal_ablation_kpi_signature_review.md`
+- Stage267(267단계) run267Z true internal ablation balance/time-slice/trade-quality review(진짜 내부 제거 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Z_true_internal_ablation_balance_timeslice_trade_quality_review.md`
 
 ## Current Next Action(현재 다음 행동)
+- latest_mt5_review(최신 MT5 검토): run267Z(267Z 실행) candidate-test rows(후보-시험 행) `24`, constructive curve rows(건설적 곡선 행) `5`, negative Tier A slices(음수 Tier A 구간) `120`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Z_true_internal_ablation_balance_timeslice_trade_quality_review.md`.
 - latest_kpi_review(최신 KPI 검토): unique signatures(고유 서명) `24`, tier duplicate pairs(티어 중복 쌍) `24`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Y_true_internal_ablation_kpi_signature_review.md`.
 - latest_mt5_execution(최신 MT5 실행): attempts(시도) `48` of `48`, KPI records(핵심 성과 지표 기록) `48`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267X_true_internal_ablation_score_table_mt5_execution.md`.
 - latest_mt5_review(최신 MT5 검토): unique metric signatures(고유 지표 서명) `2`, selected_candidate(선택 후보) `none`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267T_pool_wide_orthogonal_stability_mt5_review.md`.
@@ -132,10 +134,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267Z_balance_timeslice_trade_quality_review_true_internal_ablation_results`
+- next_run(다음 실행): `run267AA_true_internal_ablation_followup_or_adapter_design`
 - action(행동): run267V(267V 실행)는 Stage56(56단계) 2024 Tier A(티어 A) source frame(원천 프레임)에서 후보 5개 raw feature surface(원시 피처 표면)를 재구축했다.
 - effect(효과): true internal feature ablation(진짜 내부 피처 제거)을 위해 feature order(피처 순서)를 바꿀 수 있는 입력을 만들었고, MT5(MetaTrader 5, 메타트레이더5)는 score table/model(점수표/모델) 재구축 전까지 막는다.
-- next_action(다음 행동): `run267Z_balance_timeslice_trade_quality_review_true_internal_ablation_results`
+- next_action(다음 행동): `run267AA_true_internal_ablation_followup_or_adapter_design`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -179,4 +181,6 @@ Run267X(267X 실행)는 run267W(267W 실행)의 true internal ablation score tab
 Effect(효과): 이전 proxy adapter(대체 어댑터) 접힘 문제를 실제 feature order(피처 순서) 변화 기반 runtime evidence(런타임 근거)로 다시 볼 수 있다.
 
 Run267Y(267Y 실행)는 run267X(267X 실행)의 KPI signature(KPI 서명)를 검토했다.
+Run267Z(267Z 실행)는 run267X(267X 실행)의 48개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)로 다시 검토했다.
+Effect(효과): run267Y(267Y 실행)의 KPI signature(핵심 성과 지표 서명) 구분력을 곡선과 약한 구간까지 확장했지만, Tier A+B(Tier A+B 합산)는 fallback disabled(대체 비활성) 중복 경계라 selected candidate(선택 후보)와 ONNX readiness(ONNX 준비)는 계속 없다.
 Effect(효과): true internal feature ablation(진짜 내부 피처 제거)은 proxy collapse(대체 접힘)를 벗어났지만, Tier A+B(Tier A+B 합산)는 fallback(대체)이 꺼진 중복 행이라 다음 곡선/시간구간 검토에서 경계를 유지한다.
