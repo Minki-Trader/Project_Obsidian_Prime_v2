@@ -1,14 +1,14 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267CH_stage267_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_v1`
+- current_run(현재 실행): `run267CI_stage267_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review`
-- status(상태): `run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_completed`
-- next_action(다음 행동): `run267CI_design_pool_wide_orthogonal_loss_shape_state_followup_or_prune`
+- adapter_under_review(검토 중 어댑터): `pool_wide_orthogonal_loss_shape_state_followup_or_prune_design`
+- status(상태): `run267CI_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_completed`
+- next_action(다음 행동): `run267CJ_materialize_pool_wide_orthogonal_loss_shape_state_followup_queue`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -174,6 +174,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - run267CF_pool_wide_orthogonal_loss_shape_state_materialization(267CF 후보군 전체 직교 손실 형태/상태 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CF_pool_wide_orthogonal_loss_shape_state_materialization.md`
 - run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution(267CG 후보군 전체 직교 손실 형태/상태 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution.md`
 - run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review(267CH 후보군 전체 직교 손실 형태/상태 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review.md`
+- run267CI_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design(267CI 후보군 전체 직교 손실 형태/상태 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CI_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design.md`
   Effect(효과): run267CE(267CE 실행)의 P0 materialization queue(P0 물질화 큐)를 variants(변형) `10`개와 MT5(MetaTrader 5, 메타트레이더5) attempts(시도) `20`개로 만들었고, selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 
 ## Current Next Action(현재 다음 행동)
@@ -490,3 +491,4 @@ Run267CG(267CG 실행)는 run267CF(267CF 실행)의 orthogonal loss-shape/state(
 Effect(효과): attempt(시도) `20/20`개 중 KPI records(KPI 기록) `20`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
 Run267CH(267CH 실행)는 run267CG(267CG 실행)의 20개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 다시 읽었다. Effect(효과): selected candidate(선택 후보)는 없고, 수익 확장 축과 DD(drawdown, 손실폭) 위험 축을 run267CI(267CI 실행) 후속/가지치기로 넘긴다.
+Run267CI(267CI 실행)는 run267CH(267CH 실행)의 curve/time-slice/trade-quality(곡선/시간구간/거래품질) 근거를 branch decisions(분기 판단) `5`개, materialization queue(물질화 대기열) `5`개, prune rows(가지치기 행) `5`개로 바꿨다. Effect(효과): headline net(대표 순수익)으로 후보를 고르지 않고, s264_lc 공격형 통제 후속과 s258_stc 압박 비교 전용 경계를 분리한다.

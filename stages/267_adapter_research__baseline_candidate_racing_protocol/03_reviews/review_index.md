@@ -1,8 +1,8 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_completed`
-- current_run(현재 실행): `run267CH_stage267_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_v1`
-- last_completed_run(마지막 완료 실행): `run267CH_stage267_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_v1`
+- status(상태): `run267CI_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_completed`
+- current_run(현재 실행): `run267CI_stage267_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_v1`
+- last_completed_run(마지막 완료 실행): `run267CI_stage267_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -333,6 +333,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267CF_pool_wide_orthogonal_loss_shape_state_materialization(267CF 후보군 전체 직교 손실 형태/상태 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CF_pool_wide_orthogonal_loss_shape_state_materialization.md`
 - run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution(267CG 후보군 전체 직교 손실 형태/상태 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution.md`
 - run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review(267CH 후보군 전체 직교 손실 형태/상태 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review.md`
+- run267CI_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design(267CI 후보군 전체 직교 손실 형태/상태 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CI_pool_wide_orthogonal_loss_shape_state_followup_or_prune_design.md`
 
 Run267BT(267BT 실행)는 run267BS(267BS 실행)의 후보군 전체 방향/임펄스 후속 attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): attempt(시도) `10/10`개 중 KPI records(KPI 기록) `10`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
