@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267CG_pool_wide_orthogonal_loss_shape_state_mt5_batch_completed`
+- stage_status(단계 상태): `run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267CG_stage267_pool_wide_orthogonal_loss_shape_state_mt5_execution_v1`
-- last_completed_run(마지막 완료 실행): `run267CG_stage267_pool_wide_orthogonal_loss_shape_state_mt5_execution_v1`
+- current_run(현재 실행): `run267CH_stage267_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_v1`
+- last_completed_run(마지막 완료 실행): `run267CH_stage267_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267CH_review_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality`
+- next_action(다음 행동): `run267CI_design_pool_wide_orthogonal_loss_shape_state_followup_or_prune`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -333,6 +333,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267CE_pool_wide_orthogonal_loss_shape_state_pivot_queue_design(267CE 후보군 전체 직교 손실 형태/상태 방향전환 큐 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CE_pool_wide_orthogonal_loss_shape_state_pivot_queue_design.md`
 - run267CF_pool_wide_orthogonal_loss_shape_state_materialization(267CF 후보군 전체 직교 손실 형태/상태 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CF_pool_wide_orthogonal_loss_shape_state_materialization.md`
 - run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution(267CG 후보군 전체 직교 손실 형태/상태 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution.md`
+- run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review(267CH 후보군 전체 직교 손실 형태/상태 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CH_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality_review.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
