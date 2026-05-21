@@ -1,14 +1,14 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267CF_stage267_pool_wide_orthogonal_loss_shape_state_materialization_v1`
+- current_run(현재 실행): `run267CG_stage267_pool_wide_orthogonal_loss_shape_state_mt5_execution_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `pool_wide_orthogonal_loss_shape_state_materialization`
-- status(상태): `run267CF_pool_wide_orthogonal_loss_shape_state_materialized_execution_pending`
-- next_action(다음 행동): `run267CG_execute_pool_wide_orthogonal_loss_shape_state_mt5_batch`
+- adapter_under_review(검토 중 어댑터): `pool_wide_orthogonal_loss_shape_state_mt5_execution`
+- status(상태): `run267CG_pool_wide_orthogonal_loss_shape_state_mt5_batch_completed`
+- next_action(다음 행동): `run267CH_review_pool_wide_orthogonal_loss_shape_state_balance_timeslice_trade_quality`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -172,6 +172,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - run267CD_aggressive_impulse_dd_shape_followup_prune_or_pivot_design(267CD 공격형 임펄스 손실폭 형태 후속 가지치기/방향전환 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CD_aggressive_impulse_dd_shape_followup_prune_or_pivot_design.md`
 - run267CE_pool_wide_orthogonal_loss_shape_state_pivot_queue_design(267CE 후보군 전체 직교 손실 형태/상태 방향전환 큐 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CE_pool_wide_orthogonal_loss_shape_state_pivot_queue_design.md`
 - run267CF_pool_wide_orthogonal_loss_shape_state_materialization(267CF 후보군 전체 직교 손실 형태/상태 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CF_pool_wide_orthogonal_loss_shape_state_materialization.md`
+- run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution(267CG 후보군 전체 직교 손실 형태/상태 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CG_pool_wide_orthogonal_loss_shape_state_mt5_execution.md`
   Effect(효과): run267CE(267CE 실행)의 P0 materialization queue(P0 물질화 큐)를 variants(변형) `10`개와 MT5(MetaTrader 5, 메타트레이더5) attempts(시도) `20`개로 만들었고, selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 
 ## Current Next Action(현재 다음 행동)
@@ -375,8 +376,8 @@ Next action(다음 행동): `run267BD_repair_s264_aia_adjacent_period_replacemen
 Run267BE(267BE 실행)는 run267BD(267BD 실행)의 MT5 tester start blocker(MT5 테스터 시작 차단)를 별도 진단으로 고정했다.
 Effect(효과): q02 feature/model(피처/모델)은 존재하지만 q02와 cached 2024 control(캐시된 2024 대조)이 모두 terminal login(터미널 로그인) 뒤 tester start(테스터 시작)로 넘어가지 않아, 후보 약점(candidate weakness, 후보 약점)이 아니라 외부 MT5 automation state(MT5 자동화 상태) 문제로 경계를 낮춘다.
 Next action(다음 행동): `run267BF_repair_mt5_tester_automation_profile_start_before_adjacent_batch`. Effect(효과): adjacent-period replacement(인접 기간 대체) batch(묶음)를 다시 실행하기 전에 tester profile handoff(테스터 프로필 인계)를 먼저 복구한다.
-- stage_status(단계 상태): `run267CF_pool_wide_orthogonal_loss_shape_state_materialized_execution_pending`
-- last_completed_run(마지막 완료 실행): `run267CF_stage267_pool_wide_orthogonal_loss_shape_state_materialization_v1`
+- stage_status(단계 상태): `run267CG_pool_wide_orthogonal_loss_shape_state_mt5_batch_completed`
+- last_completed_run(마지막 완료 실행): `run267CG_stage267_pool_wide_orthogonal_loss_shape_state_mt5_execution_v1`
 - run267BF_mt5_tester_unique_report_repair(267BF MT5 테스터 고유 보고서 수리): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BF_mt5_tester_unique_report_repair.md`
 
 Run267BF(267BF 실행)는 run267BE(267BE 실행)의 MT5 tester start blocker(MT5 테스터 시작 차단)를 fresh unique Report(새 고유 보고서) profile(프로필)로 수리 검증했다.
@@ -481,4 +482,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267CF(267CF 실행)는 run267CE(267CE 실행)의 P0 materialization queue(P0 물질화 큐)를 실제 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 바꿨다.
 Effect(효과): variants(변형) `10`개와 MT5(MetaTrader 5, 메타트레이더5) attempts(시도) `20`개를 만들고 다음 행동을 `run267CG_execute_pool_wide_orthogonal_loss_shape_state_mt5_batch`으로 고정했다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267CG(267CG 실행)는 run267CF(267CF 실행)의 orthogonal loss-shape/state(직교 손실 형태/상태) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
+Effect(효과): attempt(시도) `20/20`개 중 KPI records(KPI 기록) `20`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
