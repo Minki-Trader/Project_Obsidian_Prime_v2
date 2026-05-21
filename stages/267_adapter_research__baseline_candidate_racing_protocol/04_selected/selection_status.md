@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267Z_true_internal_ablation_balance_timeslice_trade_quality_review_completed`
+- stage_status(단계 상태): `run267AA_true_internal_ablation_followup_or_adapter_design_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267Z_stage267_true_internal_ablation_balance_timeslice_trade_quality_review_v1`
-- last_completed_run(마지막 완료 실행): `run267Z_stage267_true_internal_ablation_balance_timeslice_trade_quality_review_v1`
+- current_run(현재 실행): `run267AA_stage267_true_internal_ablation_followup_or_adapter_design_v1`
+- last_completed_run(마지막 완료 실행): `run267AA_stage267_true_internal_ablation_followup_or_adapter_design_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -73,7 +73,8 @@
 - run267X_true_internal_ablation_score_table_mt5_execution(267X 진짜 내부 제거 점수표 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267X_true_internal_ablation_score_table_mt5_execution.md`
 - run267Y_true_internal_ablation_kpi_signature_review(267Y 진짜 내부 제거 KPI 서명 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Y_true_internal_ablation_kpi_signature_review.md`
 - Stage267(267단계) run267Z true internal ablation balance/time-slice/trade-quality review(진짜 내부 제거 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Z_true_internal_ablation_balance_timeslice_trade_quality_review.md`
-- next_action(다음 행동): `run267AA_true_internal_ablation_followup_or_adapter_design`
+- run267AA_true_internal_ablation_followup_or_adapter_design(267AA 진짜 내부 제거 후속 또는 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AA_true_internal_ablation_followup_or_adapter_design.md`
+- next_action(다음 행동): `run267AB_materialize_noncalendar_weak_slice_resilience_queue`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -108,4 +109,7 @@ Effect(효과): next action(다음 행동)은 MT5(MetaTrader 5, 메타트레이�
 
 Run267V(267V 실행)는 후보 5개 raw feature surface(원시 피처 표면)를 재구축했다.
 Effect(효과): selected candidate(선택 후보)는 없고, 다음 행동은 score table/model(점수표/모델) 재구축이다.
-- status(상태): `run267Z_true_internal_ablation_balance_timeslice_trade_quality_review_completed`
+- status(상태): `run267AA_true_internal_ablation_followup_or_adapter_design_completed`
+
+Run267AA(267AA 실행)는 후보 선택이 아니라 후속 설계를 완료했다.
+Effect(효과): 후보군은 유지하되, s264_aia/s262_lih/s258_stc는 비달력 약점 귀속 후속으로, s264_lc는 고순익 게이트 감사로, s264_aih는 압박/가지치기 판단으로 분리했다.
