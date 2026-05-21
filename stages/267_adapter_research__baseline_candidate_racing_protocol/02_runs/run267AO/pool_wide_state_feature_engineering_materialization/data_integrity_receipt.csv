@@ -1,0 +1,10 @@
+﻿field,value
+data_source,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AN/noncalendar_state_guard_repair_followup_or_prune_design/next_experiment_queue.csv and stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv
+time_axis,bar_time_server from run267W runtime feature files aligned to run267V raw surface
+sample_scope,US100 M5 2024 historical stress runtime surface
+missing_or_duplicate_check,context_missing_rows=0;surface_alignment_pass=20/20
+feature_label_boundary,state features use raw market feature quantile scaling only; no MT5 PnL is used as a training label
+split_boundary,materialization only; execution and review remain pending
+leakage_risk,"profiles were chosen after weak-slice repair failure, so future MT5 review must treat them as exploratory"
+data_hash_or_identity,variant_manifest=stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AO/pool_wide_state_feature_engineering_materialization/state_feature_variant_manifest.csv
+integrity_judgment,usable_with_boundary

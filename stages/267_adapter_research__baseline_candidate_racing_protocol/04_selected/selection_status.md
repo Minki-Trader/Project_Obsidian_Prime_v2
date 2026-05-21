@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267AN_noncalendar_state_guard_repair_followup_or_prune_design_completed`
+- stage_status(단계 상태): `run267AO_pool_wide_state_feature_engineering_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AN_stage267_noncalendar_state_guard_repair_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267AN_stage267_noncalendar_state_guard_repair_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267AO_stage267_pool_wide_state_feature_engineering_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267AO_stage267_pool_wide_state_feature_engineering_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -87,7 +87,8 @@
 - run267AL_noncalendar_state_guard_repair_mt5_execution(267AL 비달력 상태 방어 수리 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AL_noncalendar_state_guard_repair_mt5_execution.md`
 - run267AM_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review(267AM 비달력 상태 방어 수리 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AM_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review.md`
 - run267AN_noncalendar_state_guard_repair_followup_or_prune_design(267AN 비달력 상태 방어 수리 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AN_noncalendar_state_guard_repair_followup_or_prune_design.md`
-- next_action(다음 행동): `run267AO_materialize_pool_wide_state_feature_engineering_queue`
+- run267AO_pool_wide_state_feature_engineering_materialization(267AO 후보군 전체 상태 피처 엔지니어링 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AO_pool_wide_state_feature_engineering_materialization.md`
+- next_action(다음 행동): `run267AP_execute_pool_wide_state_feature_engineering_mt5_batch`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -171,3 +172,6 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 Run267AN(267AN 실행)은 run267AM(267AM 실행)의 repair review(수리 검토)를 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
 Effect(효과): s264_aia의 같은 bounded repair(경계 수리)는 약한 구간 gate(게이트) 미통과로 닫고, 단서는 후보군 전체 state feature engineering(상태 피처 엔지니어링)으로 넘긴다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
+
+Run267AO(267AO 실행)는 pool-wide state feature engineering materialization(후보군 전체 상태 피처 엔지니어링 물질화)을 완료했다.
+Effect(효과): 다음 run267AP(267AP 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 실제 거래/곡선/시간구간 영향을 확인한다. 선택 후보(selected candidate, 선택 후보)는 없다.

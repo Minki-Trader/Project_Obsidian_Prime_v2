@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AN_stage267_noncalendar_state_guard_repair_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267AO_stage267_pool_wide_state_feature_engineering_materialization_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `noncalendar_state_guard_repair_followup_or_prune_design`
-- status(상태): `run267AN_noncalendar_state_guard_repair_followup_or_prune_design_completed`
+- adapter_under_review(검토 중 어댑터): `pool_wide_state_feature_engineering_materialization`
+- status(상태): `run267AO_pool_wide_state_feature_engineering_materialized_execution_pending`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -124,6 +124,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - run267AL_noncalendar_state_guard_repair_mt5_execution(267AL 비달력 상태 방어 수리 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AL_noncalendar_state_guard_repair_mt5_execution.md`
 - run267AM_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review(267AM 비달력 상태 방어 수리 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AM_noncalendar_state_guard_repair_balance_timeslice_trade_quality_review.md`
 - run267AN_noncalendar_state_guard_repair_followup_or_prune_design(267AN 비달력 상태 방어 수리 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AN_noncalendar_state_guard_repair_followup_or_prune_design.md`
+- run267AO_pool_wide_state_feature_engineering_materialization(267AO 후보군 전체 상태 피처 엔지니어링 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AO_pool_wide_state_feature_engineering_materialization.md`
 
 ## Current Next Action(현재 다음 행동)
 - latest_design(최신 설계): run267AN(267AN 실행) repair decisions(수리 결정) `2`, queue rows(큐 행) `3`, failure memory(실패 기억) `4`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AN_noncalendar_state_guard_repair_followup_or_prune_design.md`.
@@ -158,10 +159,10 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - latest_design(최신 설계): run267M(267M 실행) pool-wide ablation/replacement design(후보군 전체 제거/대체 설계) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267M_pool_wide_ablation_replacement_design.md`.
 - latest_materialization(최신 물질화): run267N(267N 실행) pool-wide P0 materialization(후보군 전체 P0 물질화) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267N_pool_wide_ablation_replacement_materialization.md`.
 
-- next_run(다음 실행): `run267AO_materialize_pool_wide_state_feature_engineering_queue`
+- next_run(다음 실행): `run267AP_execute_pool_wide_state_feature_engineering_mt5_batch`
 - action(행동): run267AN(267AN 실행)은 run267AM(267AM 실행)의 수리 검토를 수리 분기 종료와 다음 큐로 정리했다.
 - effect(효과): 같은 월요일/12월 수리를 반복하지 않고 후보군 전체 상태 피처 엔지니어링으로 전환할 수 있다.
-- next_action(다음 행동): `run267AO_materialize_pool_wide_state_feature_engineering_queue`
+- next_action(다음 행동): `run267AP_execute_pool_wide_state_feature_engineering_mt5_batch`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -257,3 +258,6 @@ Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비)
 Run267AN(267AN 실행)은 run267AM(267AM 실행)의 repair review(수리 검토)를 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
 Effect(효과): s264_aia의 같은 bounded repair(경계 수리)는 약한 구간 gate(게이트) 미통과로 닫고, 단서는 후보군 전체 state feature engineering(상태 피처 엔지니어링)으로 넘긴다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
+
+Run267AO(267AO 실행)는 run267AN(267AN 실행)의 pool-wide state feature engineering queue(후보군 전체 상태 피처 엔지니어링 큐)를 물질화했다.
+Effect(효과): 다섯 Baseline candidates(기준 후보)에 네 개 비달력 상태 피처 축을 붙인 20개 variant(변형)와 40개 MT5(MetaTrader 5, 메타트레이더5) attempt(시도)를 만들었고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 없다.
