@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267AI_noncalendar_state_guard_followup_balance_timeslice_trade_quality_review_completed`
+- stage_status(단계 상태): `run267AJ_noncalendar_state_guard_followup_design_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AI_stage267_noncalendar_state_guard_followup_balance_timeslice_trade_quality_review_v1`
-- last_completed_run(마지막 완료 실행): `run267AI_stage267_noncalendar_state_guard_followup_balance_timeslice_trade_quality_review_v1`
+- current_run(현재 실행): `run267AJ_stage267_noncalendar_state_guard_followup_design_v1`
+- last_completed_run(마지막 완료 실행): `run267AJ_stage267_noncalendar_state_guard_followup_design_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -82,7 +82,8 @@
 - run267AG_noncalendar_state_guard_followup_queue_materialization(267AG 비달력 상태 방어 후속 큐 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AG_noncalendar_state_guard_followup_queue_materialization.md`
 - run267AH_noncalendar_state_guard_followup_mt5_execution(267AH 비달력 상태 방어 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AH_noncalendar_state_guard_followup_mt5_execution.md`
 - run267AI_noncalendar_state_guard_followup_balance_timeslice_trade_quality_review(267AI 비달력 상태 방어 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AI_noncalendar_state_guard_followup_balance_timeslice_trade_quality_review.md`
-- next_action(다음 행동): `run267AJ_design_followup_from_run267AI_curve_time_slice_review`
+- run267AJ_noncalendar_state_guard_followup_design(267AJ 비달력 상태 방어 후속 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AJ_noncalendar_state_guard_followup_design.md`
+- next_action(다음 행동): `run267AK_materialize_noncalendar_state_guard_repair_queue_from_run267AJ`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -146,4 +147,8 @@ Effect(효과): 실제 tester output(테스터 출력)과 KPI(핵심 성과 지�
 
 Run267AI(267AI 실행)는 run267AH(267AH 실행)의 noncalendar state guard follow-up MT5 reports(비달력 상태 방어 후속 MT5 보고서)를 거래 단위로 다시 읽었다.
 Effect(효과): headline KPI(대표 핵심 성과 지표)만 보지 않고 balance/equity curve(잔액/평가금 곡선), weak slice(약한 구간), trade quality(거래 품질)를 다음 연구 입력으로 고정한다.
+Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
+
+Run267AJ(267AJ 실행)는 run267AI(267AI 실행)의 noncalendar state guard follow-up review(비달력 상태 방어 후속 검토)를 다음 설계로 바꿨다.
+Effect(효과): s264_aia는 비달력 상태 guard(상태 방어) 물질화 관찰로 넘기고, s264_aih는 가지치기/수리 경계로 낮췄다.
 Boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`이다.
