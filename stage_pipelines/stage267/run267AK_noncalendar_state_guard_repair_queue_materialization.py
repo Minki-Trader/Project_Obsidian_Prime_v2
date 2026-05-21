@@ -823,7 +823,28 @@ def build_receipts(result: Mapping[str, Any]) -> tuple[list[dict[str, Any]], lis
 def attempt_rows(attempts: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for attempt in attempts:
-        rows.append({column: attempt.get(column, "") for column in ATTEMPT_COLUMNS})
+        rows.append(
+            {
+                "attempt_name": attempt.get("attempt_name", ""),
+                "queue_id": attempt.get("queue_id", ""),
+                "candidate_id": attempt.get("candidate_id", ""),
+                "candidate_alias": attempt.get("candidate_alias", ""),
+                "candidate_role": attempt.get("candidate_role", ""),
+                "source_test_id": attempt.get("source_test_id", ""),
+                "source_queue_id": attempt.get("source_queue_id", ""),
+                "repair_profile": attempt.get("repair_profile", ""),
+                "tier": attempt.get("tier", ""),
+                "attempt_role": attempt.get("attempt_role", ""),
+                "record_view_prefix": attempt.get("record_view_prefix", ""),
+                "set_path": attempt.get("set", {}).get("path", ""),
+                "set_sha256": attempt.get("set", {}).get("sha256", ""),
+                "ini_path": attempt.get("ini", {}).get("path", ""),
+                "ini_sha256": attempt.get("ini", {}).get("sha256", ""),
+                "common_telemetry_path": attempt.get("common_telemetry_path", ""),
+                "common_summary_path": attempt.get("common_summary_path", ""),
+                "execution_status": attempt.get("execution_status", ""),
+            }
+        )
     return rows
 
 
