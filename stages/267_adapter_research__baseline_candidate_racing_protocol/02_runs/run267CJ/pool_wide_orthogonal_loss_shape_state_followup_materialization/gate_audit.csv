@@ -1,0 +1,6 @@
+﻿gate_id,status,evidence,effect
+source_queue_present,passed,queue_rows=5,run267CI queue(대기열)를 silently dropping rows(행 누락) 없이 소비했다
+p0_attempts_materialized,passed,attempts=4;variants=2,two P0 variants(P0 변형 2개)에 Tier A(티어 A)와 duplicate-boundary Tier A+B(중복 경계 티어 A+B) inputs(입력)가 있다
+held_or_receipt_rows_preserved,passed,held_rows=3;state_seed_rows=10;stress_receipts=1,P1/P2 rows(P1/P2 행)를 hidden MT5 attempts(숨은 MT5 시도)로 바꾸지 않았다
+score_table_validation,passed,all materialized feature/model rows passed probability smoke check,invalid feature/model ordering(무효 피처/모델 순서)을 tester batch(테스터 묶음) 전에 차단했다
+claim_boundary_preserved,passed,selected_candidate=none;selected_research_baseline=none;onnx_readiness=not_claimed;goal_achieve=not_claimed,materialization(물질화)이 candidate selection(후보 선택)으로 바뀌지 않게 했다
