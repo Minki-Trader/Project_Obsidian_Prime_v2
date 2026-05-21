@@ -1,11 +1,12 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review_completed`
+- status(상태): `run267CQ_shared_weakness_breakout_followup_or_prune_design_completed`
 - run267CN_pool_wide_shared_weakness_breakout_materialization(267CN 후보군 전체 공유 약점 돌파 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CN_pool_wide_shared_weakness_breakout_materialization.md`
 - run267CO_pool_wide_shared_weakness_breakout_mt5_execution(267CO 후보군 전체 공유 약점 돌파 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CO_pool_wide_shared_weakness_breakout_mt5_execution.md`
 - run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review(267CP 후보군 전체 공유 약점 돌파 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review.md`
-- current_run(현재 실행): `run267CP_stage267_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review_v1`
-- last_completed_run(마지막 완료 실행): `run267CP_stage267_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review_v1`
+- run267CQ_shared_weakness_breakout_followup_or_prune_design(267CQ 공유 약점 돌파 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CQ_shared_weakness_breakout_followup_or_prune_design.md`
+- current_run(현재 실행): `run267CQ_stage267_shared_weakness_breakout_followup_or_prune_design_v1`
+- last_completed_run(마지막 완료 실행): `run267CQ_stage267_shared_weakness_breakout_followup_or_prune_design_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -412,4 +413,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267CP(267CP 실행)는 run267CO(267CO 실행)의 12개 MT5(MetaTrader 5, 메타트레이더5) 보고서를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 다시 읽었다.
 Effect(효과): candidate_profile_rows(후보-프로필 행) `6`, negative_slices(음수 구간) `34`를 만들었고, 다음은 follow-up/prune design(후속/가지치기 설계)이다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267CQ(267CQ 실행)는 run267CP(267CP 실행)의 후보 선택 보류 상태를 다음 실험 설계로 바꿨다.
+Effect(효과): queue(대기열) `6`개 중 P0에는 pool-wide state phase replacement(후보군 전체 상태 국면 대체), lc/aia cross-period pressure(확장 기간 압박), aih aggressive supply expansion(공격형 공급 확장)을 둔다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
