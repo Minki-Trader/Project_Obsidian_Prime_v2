@@ -1,9 +1,9 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267AB_noncalendar_weak_slice_resilience_queue_materialized`
+- stage_status(단계 상태): `run267AC_noncalendar_state_guard_score_tables_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267AB_stage267_noncalendar_weak_slice_resilience_queue_v1`
-- last_completed_run(마지막 완료 실행): `run267AB_stage267_noncalendar_weak_slice_resilience_queue_v1`
+- current_run(현재 실행): `run267AC_stage267_noncalendar_state_guard_score_table_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267AC_stage267_noncalendar_state_guard_score_table_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
@@ -75,7 +75,8 @@
 - Stage267(267단계) run267Z true internal ablation balance/time-slice/trade-quality review(진짜 내부 제거 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267Z_true_internal_ablation_balance_timeslice_trade_quality_review.md`
 - run267AA_true_internal_ablation_followup_or_adapter_design(267AA 진짜 내부 제거 후속 또는 어댑터 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AA_true_internal_ablation_followup_or_adapter_design.md`
 - run267AB_noncalendar_weak_slice_resilience_queue(267AB 비달력 약점 구간 견고성 큐): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AB_noncalendar_weak_slice_resilience_queue.md`
-- next_action(다음 행동): `run267AC_build_noncalendar_state_guard_score_tables_from_run267AB_queue`
+- run267AC_noncalendar_state_guard_score_table_materialization(267AC 비달력 상태 방어 점수표 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AC_noncalendar_state_guard_score_table_materialization.md`
+- next_action(다음 행동): `run267AD_execute_noncalendar_state_guard_score_table_mt5_batch`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -110,10 +111,13 @@ Effect(효과): next action(다음 행동)은 MT5(MetaTrader 5, 메타트레이�
 
 Run267V(267V 실행)는 후보 5개 raw feature surface(원시 피처 표면)를 재구축했다.
 Effect(효과): selected candidate(선택 후보)는 없고, 다음 행동은 score table/model(점수표/모델) 재구축이다.
-- status(상태): `run267AB_noncalendar_weak_slice_resilience_queue_materialized`
+- status(상태): `run267AC_noncalendar_state_guard_score_tables_materialized_execution_pending`
 
 Run267AA(267AA 실행)는 후보 선택이 아니라 후속 설계를 완료했다.
 Effect(효과): 후보군은 유지하되, s264_aia/s262_lih/s258_stc는 비달력 약점 귀속 후속으로, s264_lc는 고순익 게이트 감사로, s264_aih는 압박/가지치기 판단으로 분리했다.
 
 Run267AB(267AB 실행)는 후보 선택이 아니라 다음 score table(점수표) 설계 큐를 만들었다.
 Effect(효과): 후보군은 유지하고, 달력 필터가 아닌 volatility/return shock state(변동성/수익률 충격 상태) guard(방어 장치) 후보만 다음으로 넘긴다.
+
+Run267AC(267AC 실행)는 noncalendar state guard score table materialization(비달력 상태 방어 점수표 물질화)을 완료했다.
+Effect(효과): 선택 후보(selected candidate, 선택 후보)는 계속 없고, run267AD(267AD 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 실제 거래/곡선/시간구간 영향을 확인한다.

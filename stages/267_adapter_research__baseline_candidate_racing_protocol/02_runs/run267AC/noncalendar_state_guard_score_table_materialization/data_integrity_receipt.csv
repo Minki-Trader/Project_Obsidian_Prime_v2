@@ -1,0 +1,10 @@
+﻿field,value
+data_source,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AB/noncalendar_weak_slice_resilience_queue/guard_materialization_queue.csv and stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267W/true_internal_ablation_score_table_materialization/true_internal_ablation_variant_manifest.csv
+time_axis,bar_time_server from run267W runtime feature files aligned to run267V raw surface
+sample_scope,US100 M5 2024 historical stress window; run267AB ready guard queue rows only
+missing_or_duplicate_check,context_missing_rows=0;surface_alignment_pass=7
+feature_label_boundary,guard states use raw feature quantile buckets; no MT5 PnL is used as a training label
+split_boundary,materialization uses 2024 train-era historical stress runtime surface only; execution and review remain pending
+leakage_risk,"guard queue was selected after weak-slice attribution, so next MT5 and broader review must treat this as exploratory"
+data_hash_or_identity,variant_manifest=stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267AC/noncalendar_state_guard_score_table_materialization/noncalendar_state_guard_variant_manifest.csv
+integrity_judgment,usable_with_boundary
