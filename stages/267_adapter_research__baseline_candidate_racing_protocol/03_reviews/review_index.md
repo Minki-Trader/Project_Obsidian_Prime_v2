@@ -1,6 +1,6 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267DE_shared_weakness_breakout_second_followup_or_prune_mt5_batch_completed`
+- status(상태): `run267DF_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review_completed`
 - run267CR_shared_weakness_breakout_followup_materialization(267CR 공유 약점 돌파 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CR_shared_weakness_breakout_followup_materialization.md`
 - run267CS_shared_weakness_breakout_followup_mt5_execution(267CS 공유 약점 돌파 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CS_shared_weakness_breakout_followup_mt5_execution.md`
 - run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review(267CT 공유 약점 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review.md`
@@ -15,12 +15,13 @@
 - run267DC_shared_weakness_breakout_second_followup_or_prune_design(267DC 공유 약점 2차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DC_shared_weakness_breakout_second_followup_or_prune_design.md`
 - run267DD_shared_weakness_breakout_second_followup_or_prune_materialization(267DD 공유 약점 2차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DD_shared_weakness_breakout_second_followup_or_prune_materialization.md`
 - run267DE_shared_weakness_breakout_second_followup_or_prune_mt5_execution(267DE 공유 약점 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DE_shared_weakness_breakout_second_followup_or_prune_mt5_execution.md`
+- run267DF_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review(267DF 공유 약점 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DF_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review.md`
 - run267CN_pool_wide_shared_weakness_breakout_materialization(267CN 후보군 전체 공유 약점 돌파 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CN_pool_wide_shared_weakness_breakout_materialization.md`
 - run267CO_pool_wide_shared_weakness_breakout_mt5_execution(267CO 후보군 전체 공유 약점 돌파 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CO_pool_wide_shared_weakness_breakout_mt5_execution.md`
 - run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review(267CP 후보군 전체 공유 약점 돌파 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review.md`
 - run267CQ_shared_weakness_breakout_followup_or_prune_design(267CQ 공유 약점 돌파 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CQ_shared_weakness_breakout_followup_or_prune_design.md`
-- current_run(현재 실행): `run267DE_stage267_shared_weakness_breakout_second_followup_or_prune_mt5_execution_v1`
-- last_completed_run(마지막 완료 실행): `run267DE_stage267_shared_weakness_breakout_second_followup_or_prune_mt5_execution_v1`
+- current_run(현재 실행): `run267DF_stage267_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review_v1`
+- last_completed_run(마지막 완료 실행): `run267DF_stage267_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -487,4 +488,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DE(267DE 실행)는 run267DD(267DD 실행)의 shared weakness second follow-up/prune(공유 약점 후속/가지치기) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): attempt(시도) `13/13`개 중 KPI records(KPI 기록) `13`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DF(267DF 실행)는 run267DE(267DE 실행)의 MT5(MetaTrader 5, 메타트레이더5) report(보고서)를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 다시 읽었다.
+Effect(효과): candidate_profile_rows(후보-프로필 행) `5`, negative_slices(음수 구간) `41`를 만들었고, 다음은 second follow-up/prune design(2차 후속/가지치기 설계)이다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
