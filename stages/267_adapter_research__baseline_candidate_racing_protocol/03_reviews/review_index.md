@@ -1,6 +1,6 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267DT_runtime_gap_aware_fifth_followup_or_prune_design_completed`
+- status(상태): `run267DU_runtime_gap_aware_fifth_followup_or_prune_materialized_execution_pending`
 - run267CR_shared_weakness_breakout_followup_materialization(267CR 공유 약점 돌파 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CR_shared_weakness_breakout_followup_materialization.md`
 - run267CS_shared_weakness_breakout_followup_mt5_execution(267CS 공유 약점 돌파 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CS_shared_weakness_breakout_followup_mt5_execution.md`
 - run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review(267CT 공유 약점 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review.md`
@@ -30,12 +30,13 @@
 - run267DR_runtime_gap_aware_fourth_followup_or_prune_mt5_execution(267DR 런타임 공백 반영 4차 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DR_runtime_gap_aware_fourth_followup_or_prune_mt5_execution.md`
 - run267DS_runtime_gap_aware_fourth_followup_or_prune_balance_timeslice_trade_quality_review(267DS 런타임 공백 반영 4차 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DS_runtime_gap_aware_fourth_followup_or_prune_balance_timeslice_trade_quality_with_init_failures.md`
 - run267DT_runtime_gap_aware_fifth_followup_or_prune_design(267DT 런타임 공백 반영 5차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DT_runtime_gap_aware_fifth_followup_or_prune_design.md`
+- run267DU_runtime_gap_aware_fifth_followup_or_prune_materialization(267DU 런타임 공백 반영 5차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DU_runtime_gap_aware_fifth_followup_or_prune_materialization.md`
 - run267CN_pool_wide_shared_weakness_breakout_materialization(267CN 후보군 전체 공유 약점 돌파 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CN_pool_wide_shared_weakness_breakout_materialization.md`
 - run267CO_pool_wide_shared_weakness_breakout_mt5_execution(267CO 후보군 전체 공유 약점 돌파 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CO_pool_wide_shared_weakness_breakout_mt5_execution.md`
 - run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review(267CP 후보군 전체 공유 약점 돌파 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CP_pool_wide_shared_weakness_breakout_balance_timeslice_trade_quality_review.md`
 - run267CQ_shared_weakness_breakout_followup_or_prune_design(267CQ 공유 약점 돌파 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CQ_shared_weakness_breakout_followup_or_prune_design.md`
-- current_run(현재 실행): `run267DT_stage267_runtime_gap_aware_fifth_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267DT_stage267_runtime_gap_aware_fifth_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267DU_stage267_runtime_gap_aware_fifth_followup_or_prune_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267DU_stage267_runtime_gap_aware_fifth_followup_or_prune_materialization_v1`
 - source_stage(원천 단계): `266_adapter_research__late_segment_stability_repair_after_stage265_review`
 - source_decision(원천 판정): `stage266_planning_superseded_before_run_by_user_goal`
 - candidate_pool_manifest(후보군 목록): `stages/267_adapter_research__baseline_candidate_racing_protocol/01_inputs/baseline_candidate_pool.csv`
@@ -562,4 +563,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DT(267DT 실행)는 run267DS(267DS 실행)의 초기화 실패/약점 구간을 다음 materialization queue(물질화 대기열)로 바꿨다.
 Effect(효과): repair gate(수리 게이트) `1`, aggressive/explosive branch(공격/폭발 분기) `3`, defensive control(방어 대조) `1`, diagnostic(진단) `1`을 나눴다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DU(267DU 실행)는 run267DT(267DT 실행)의 materialization queue(물질화 대기열)를 feature/model/set/ini(피처/모델/설정/초기화 파일) 입력으로 바꿨다.
+Effect(효과): variants(변형) `9`개, attempts(시도) `9`개, held rows(보류 행) `2`개, diagnostics(진단) `4`개를 만들었다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.

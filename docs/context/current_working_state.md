@@ -1,18 +1,18 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267DT_stage267_runtime_gap_aware_fifth_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267DU_stage267_runtime_gap_aware_fifth_followup_or_prune_materialization_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `runtime_gap_aware_fifth_followup_or_prune_design`
-- status(상태): `run267DT_runtime_gap_aware_fifth_followup_or_prune_design_completed`
+- adapter_under_review(검토 중 어댑터): `runtime_gap_aware_fifth_followup_or_prune_materialization`
+- status(상태): `run267DU_runtime_gap_aware_fifth_followup_or_prune_materialized_execution_pending`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
 - run267CR_summary(267CR 요약): Run267CR(267CR 실행)은 run267CQ(267CQ 실행)의 공유 약점 후속 queue(대기열)를 variants(변형) `7`개와 attempts(시도) `14`개로 물질화했다. Effect(효과): 다음 run267CS(267CS 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 곡선/약점 구간/거래 품질을 검증할 수 있다.
 - run267CM_summary(267CM 요약): Run267CM(267CM 실행)은 run267CL(267CL 실행)의 양수 후보를 선택하지 않고, feature blueprint(피처 청사진) `3`개, branch decision(분기 판단) `5`개, materialization queue(물질화 대기열) `4`개, prune row(가지치기 행) `4`개로 바꿨다. Effect(효과): 같은 축 수리 루프는 끊고, 공유 약점 상태 피처와 공격형 s264_aih 분기로 다음 실행을 연다.
 - run267CN_summary(267CN 요약): Run267CN(267CN 실행)은 run267CM(267CM 실행)의 공유 약점 돌파 큐를 variants(변형) `6`개, attempts(시도) `12`개, control receipts(대조 영수증) `2`개, guardrail receipts(가드레일 영수증) `2`개로 물질화했다. Effect(효과): 다음 run267CO(267CO 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 곡선/약점 구간/거래 품질을 검증할 수 있다.
-- next_action(다음 행동): `run267DU_materialize_runtime_gap_aware_fifth_followup_or_prune_queue`
+- next_action(다음 행동): `run267DV_execute_runtime_gap_aware_fifth_followup_or_prune_mt5_batch`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -226,6 +226,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - run267DR_runtime_gap_aware_fourth_followup_or_prune_mt5_execution(267DR 런타임 공백 반영 4차 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DR_runtime_gap_aware_fourth_followup_or_prune_mt5_execution.md`
 - run267DS_runtime_gap_aware_fourth_followup_or_prune_balance_timeslice_trade_quality_review(267DS 런타임 공백 반영 4차 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DS_runtime_gap_aware_fourth_followup_or_prune_balance_timeslice_trade_quality_with_init_failures.md`
 - run267DT_runtime_gap_aware_fifth_followup_or_prune_design(267DT 런타임 공백 반영 5차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DT_runtime_gap_aware_fifth_followup_or_prune_design.md`
+- run267DU_runtime_gap_aware_fifth_followup_or_prune_materialization(267DU 런타임 공백 반영 5차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DU_runtime_gap_aware_fifth_followup_or_prune_materialization.md`
 
 ## Current Next Action(현재 다음 행동)
 - latest_design(최신 설계): run267DT(267DT 실행) queue_rows(대기열 행) `6`, aggressive_rows(공격형 행) `3`, prune_rows(가지치기 행) `4`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DT_runtime_gap_aware_fifth_followup_or_prune_design.md`.
@@ -287,7 +288,7 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - next_run(다음 실행): `run267BT_execute_pool_wide_directional_impulse_followup_mt5_batch`
 - action(행동): run267AS(267AS 실행)는 run267AR(267AR 실행)의 후속 큐를 run267AT(267AT 실행) MT5(MetaTrader 5, 메타트레이더5) 실행 대기 입력으로 물질화했다.
 - effect(효과): 같은 월요일/12월 수리를 직접 달력 필터로 반복하지 않고, 비달력 상태 압박(noncalendar state pressure, 비달력 상태 압박)이 실제 거래/곡선/시간구간을 개선하는지 볼 수 있다.
-- next_action(다음 행동): `run267DQ_materialize_runtime_gap_aware_fourth_followup_or_prune_queue`
+- next_action(다음 행동): `run267DV_execute_runtime_gap_aware_fifth_followup_or_prune_mt5_batch`
 
 Forbidden claims(금지 주장): deployment(배포), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), operating reference(운영 기준), production baseline(생산 기준선), overall goal complete(전체 목표 완료).
 
@@ -680,4 +681,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DT(267DT 실행)는 run267DS(267DS 실행)의 초기화 실패/약점 구간을 다음 materialization queue(물질화 대기열)로 바꿨다.
 Effect(효과): repair gate(수리 게이트) `1`, aggressive/explosive branch(공격/폭발 분기) `3`, defensive control(방어 대조) `1`, diagnostic(진단) `1`을 나눴다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DU(267DU 실행)는 run267DT(267DT 실행)의 materialization queue(물질화 대기열)를 feature/model/set/ini(피처/모델/설정/초기화 파일) 입력으로 바꿨다.
+Effect(효과): variants(변형) `9`개, attempts(시도) `9`개, held rows(보류 행) `2`개, diagnostics(진단) `4`개를 만들었다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
