@@ -596,5 +596,8 @@ Effect(효과): attempt(시도) `9/9`개 중 KPI records(KPI 기록) `9`개를 �
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
 
 Run267EA(267EA 실행)는 run267DZ(267DZ 실행)의 9개 MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 다시 읽었다.
+Run267EB(267EB 실행)는 run267EA(267EA 실행)의 후보 프로필/음수 구간/성과 귀속 근거를 7차 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
+Effect(효과): materialization queue(물질화 대기열) `8`개, aggressive/explosive rows(공격/폭발 행) `2`개, prune matrix(가지치기 행렬) `5`개, failure memory(실패 기억) `6`개를 만들었다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
 Effect(효과): candidate_profile_rows(후보-프로필 행) `9`, negative_slices(음수 구간) `71`를 만들었고, 다음은 seventh follow-up/prune design(7차 후속/가지치기 설계)이다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.

@@ -1,0 +1,6 @@
+﻿gate_id,gate_name,status,evidence,effect
+gate267eb_source_artifacts,source artifacts available(원천 산출물 사용 가능),passed,profile_rows=9;negative_slices=71,Design is tied to reviewed evidence.
+gate267eb_aggressive_required,aggressive rows present(공격형 행 존재),passed,aggressive_rows=2,Prevents defensive-only filter loop.
+gate267eb_pool_coverage,missing pool axes rejoin(누락 후보군 축 재합류),passed,s262_lih and s264_aia rejoin row present.,Keeps baseline candidate pool broad.
+gate267eb_filter_stack_prune,filter stack pruned(필터 누적 가지치기),passed,prune_rows=5,Weak slices are not hidden by naked exclusions.
+gate267eb_failure_memory,failure memory recorded(실패 기억 기록),passed,failure_memory=6,Repeated weak directions have explicit stop/reopen conditions.
