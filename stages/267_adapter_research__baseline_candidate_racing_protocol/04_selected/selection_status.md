@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267DM_shared_weakness_breakout_third_followup_or_prune_mt5_batch_partial`
+- stage_status(단계 상태): `run267DN_shared_weakness_breakout_third_followup_or_prune_remaining_runtime_retry_blocked`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267DM_stage267_shared_weakness_breakout_third_followup_or_prune_mt5_execution_v1`
-- last_completed_run(마지막 완료 실행): `run267DM_stage267_shared_weakness_breakout_third_followup_or_prune_mt5_execution_v1`
+- current_run(현재 실행): `run267DN_stage267_shared_weakness_breakout_third_followup_or_prune_remaining_runtime_retry_v1`
+- last_completed_run(마지막 완료 실행): `run267DN_stage267_shared_weakness_breakout_third_followup_or_prune_remaining_runtime_retry_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267DM_execute_remaining_shared_weakness_breakout_third_followup_or_prune_mt5_batch`
+- next_action(다음 행동): `run267DO_review_run267DM_run267DN_balance_timeslice_trade_quality_with_runtime_gaps`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -365,6 +365,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267DK_shared_weakness_breakout_third_followup_or_prune_design(267DK 공유 약점 3차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DK_shared_weakness_breakout_third_followup_or_prune_design.md`
 - run267DL_shared_weakness_breakout_third_followup_or_prune_materialization(267DL 공유 약점 3차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DL_shared_weakness_breakout_third_followup_or_prune_materialization.md`
 - run267DM_shared_weakness_breakout_third_followup_or_prune_mt5_execution(267DM 공유 약점 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DM_shared_weakness_breakout_third_followup_or_prune_mt5_execution.md`
+- run267DN_remaining_runtime_retry(267DN 남은 런타임 재시도): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DN_shared_weakness_breakout_third_followup_or_prune_remaining_runtime_retry.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
@@ -524,4 +525,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DM(267DM 실행)는 run267DL(267DL 실행)의 shared weakness third follow-up/prune(공유 약점 후속/가지치기) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): attempt(시도) `14/14`개 중 KPI records(KPI 기록) `5`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DN(267DN 실행)은 run267DM(267DM 실행)의 missing runtime output(누락 런타임 출력) attempt(시도)를 좁게 재시도했다.
+Effect(효과): retry attempts(재시도 시도) `9`개 중 recovered KPI records(회복 KPI 기록) `0`개를 만들었고, 다음에는 run267DM/run267DN(267DM/267DN 실행)을 함께 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 다시 본다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
