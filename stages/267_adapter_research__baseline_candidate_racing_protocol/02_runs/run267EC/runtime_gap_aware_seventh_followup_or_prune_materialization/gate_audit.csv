@@ -1,0 +1,7 @@
+﻿gate_id,gate_name,status,evidence,effect
+gate267ec_source_inputs,source inputs present(원천 입력 존재),pass,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267EB/runtime_gap_aware_seventh_followup_or_prune_design/materialization_queue.csv;stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DY/runtime_gap_aware_sixth_followup_or_prune_materialization/variant_manifest.csv;stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267B/source_feature_manifest.csv,"run267EB 설계와 run267DY 물질화 근거, canonical source(정식 원천)를 같이 사용한다."
+gate267ec_materialization_count,materialization count(물질화 수),pass,variants=14;attempts=14,run267ED 실행 가능한 set/ini(설정/초기화)를 만들었다.
+gate267ec_aggressive_required,aggressive rows preserved(공격형 행 보존),pass,aggressive_attempts=5,방어형 필터 루프만 반복하지 않고 공급 확장 실험을 포함한다.
+gate267ec_pool_coverage,pool coverage rejoined(후보군 커버리지 재합류),pass,coverage_variants=4;s262=2;s264_aia=2,s262_lih/s264_aia 누락으로 후보군이 조기 축소되는 일을 막는다.
+gate267ec_anti_filter_stack,anti filter stack enforced(필터 누적 방지),pass,q08 held; no standalone hour/day/month exclusion attempt,약점 구간을 숨기는 미세 조정 대신 구조 실험으로 남겼다.
+gate267ec_claim_guard,claim guard(주장 경계),pass,selected_candidate=none;selected_research_baseline=none;onnx=not_claimed;goal=not_claimed,물질화와 성능 판정을 섞지 않는다.
