@@ -1,0 +1,9 @@
+﻿gate_id,status,evidence,effect
+source_design_present,pass,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DG/shared_weakness_breakout_second_followup_or_prune_design/review_result.json,connects run267DG design to materialization.
+source_materializer_present,pass,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DD/shared_weakness_breakout_second_followup_or_prune_materialization/variant_manifest.csv,connects executable artifacts to prior source manifests.
+active_variants_materialized,pass,variants=7,materializes survivor/control/stress/deescalation lanes.
+attempts_prepared,pass,attempts=11,prepares next MT5 batch without s264_aih failed lane.
+held_rows_present,pass,held_rows=2,keeps failed prune and handoff-only queues explicit.
+s264_aih_not_executable,pass,s264_aih absent from executable variants,prevents a failed destructive path from being repeated.
+handoff_receipts_complete,pass,handoff_receipts=11,every attempt has set/ini/model/feature identity.
+no_selection_or_onnx_claim,pass,selected_candidate=none;onnx=not_claimed,keeps claim boundary correct.
