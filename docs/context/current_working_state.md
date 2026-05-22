@@ -1,18 +1,18 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267DH_stage267_shared_weakness_breakout_second_followup_or_prune_materialization_v1`
+- current_run(현재 실행): `run267DI_stage267_shared_weakness_breakout_second_followup_or_prune_mt5_execution_v1`
 - active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
 - selected_research_baseline(선택 연구 기준선): `none`
 - baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
 - target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `shared_weakness_breakout_second_followup_or_prune_materialization`
-- status(상태): `run267DH_shared_weakness_breakout_second_followup_or_prune_materialized_execution_pending`
+- adapter_under_review(검토 중 어댑터): `shared_weakness_breakout_second_followup_or_prune_mt5_execution`
+- status(상태): `run267DI_shared_weakness_breakout_second_followup_or_prune_mt5_batch_completed`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
 - run267CR_summary(267CR 요약): Run267CR(267CR 실행)은 run267CQ(267CQ 실행)의 공유 약점 후속 queue(대기열)를 variants(변형) `7`개와 attempts(시도) `14`개로 물질화했다. Effect(효과): 다음 run267CS(267CS 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 곡선/약점 구간/거래 품질을 검증할 수 있다.
 - run267CM_summary(267CM 요약): Run267CM(267CM 실행)은 run267CL(267CL 실행)의 양수 후보를 선택하지 않고, feature blueprint(피처 청사진) `3`개, branch decision(분기 판단) `5`개, materialization queue(물질화 대기열) `4`개, prune row(가지치기 행) `4`개로 바꿨다. Effect(효과): 같은 축 수리 루프는 끊고, 공유 약점 상태 피처와 공격형 s264_aih 분기로 다음 실행을 연다.
 - run267CN_summary(267CN 요약): Run267CN(267CN 실행)은 run267CM(267CM 실행)의 공유 약점 돌파 큐를 variants(변형) `6`개, attempts(시도) `12`개, control receipts(대조 영수증) `2`개, guardrail receipts(가드레일 영수증) `2`개로 물질화했다. Effect(효과): 다음 run267CO(267CO 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 곡선/약점 구간/거래 품질을 검증할 수 있다.
-- next_action(다음 행동): `run267DI_execute_shared_weakness_breakout_second_followup_or_prune_mt5_batch`
+- next_action(다음 행동): `run267DJ_review_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
@@ -208,9 +208,11 @@ Effect(효과): 후보가 덜 깨지는지, 넓은 기간과 구간에서 버티
 - run267DF_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review(267DF 공유 약점 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DF_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review.md`
 - run267DG_shared_weakness_breakout_second_followup_or_prune_design(267DG 공유 약점 2차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DG_shared_weakness_breakout_second_followup_or_prune_design.md`
 - run267DH_shared_weakness_breakout_second_followup_or_prune_materialization(267DH 공유 약점 2차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DH_shared_weakness_breakout_second_followup_or_prune_materialization.md`
-  Effect(효과): run267DF(267DF 실행)의 balance/time-slice/trade-quality(잔액/시간구간/거래품질) 근거를 branch decisions(분기 판단) `5`개, materialization queue(물질화 대기열) `6`개, prune matrix(가지치기 행렬) `6`개, failure memory(실패 기억) `6`개로 바꿨고, selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run267DI_shared_weakness_breakout_second_followup_or_prune_mt5_execution(267DI 공유 약점 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DI_shared_weakness_breakout_second_followup_or_prune_mt5_execution.md`
+  Effect(효과): run267DH(267DH 실행)의 MT5(MetaTrader 5, 메타트레이더5) attempt(시도) `11/11`개를 실행해 KPI records(KPI 기록) `11`개를 만들었고, selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 
 ## Current Next Action(현재 다음 행동)
+- latest_mt5_execution(최신 MT5 실행): run267DI(267DI 실행) attempts(시도) `11/11`, KPI records(KPI 기록) `11`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DI_shared_weakness_breakout_second_followup_or_prune_mt5_execution.md`.
 - latest_materialization(최신 물질화): run267DH(267DH 실행) variants(변형) `7`, attempts(시도) `11`, held_rows(보류 행) `2`, handoff_receipts(인계 영수증) `11`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DH_shared_weakness_breakout_second_followup_or_prune_materialization.md`.
 - latest_design(최신 설계): run267DG(267DG 실행) branch_decisions(분기 판단) `5`, materialization_queue(물질화 대기열) `6`, prune_rows(가지치기 행) `6`, failure_memory(실패 기억) `6`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DG_shared_weakness_breakout_second_followup_or_prune_design.md`.
 - latest_review(최신 검토): run267DF(267DF 실행) candidate_profile_rows(후보-프로필 행) `5`, negative_slices(음수 구간) `41`, report(보고서) `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DF_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review.md`.
@@ -614,4 +616,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DH(267DH 실행)는 run267DG(267DG 실행)의 materialization queue(물질화 대기열)를 실제 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 바꿨다.
 Effect(효과): variants(변형) `7`개, attempts(시도) `11`개, held rows(보류 행) `2`개, handoff receipts(인계 영수증) `11`개를 만들었다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DI(267DI 실행)는 run267DH(267DH 실행)의 shared weakness second follow-up/prune(공유 약점 후속/가지치기) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
+Effect(효과): attempt(시도) `11/11`개 중 KPI records(KPI 기록) `11`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
