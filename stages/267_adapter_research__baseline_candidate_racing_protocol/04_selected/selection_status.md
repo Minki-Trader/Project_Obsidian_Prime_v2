@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267EC_runtime_gap_aware_seventh_followup_or_prune_materialized_execution_pending`
+- stage_status(단계 상태): `run267EE_runtime_gap_aware_seventh_followup_or_prune_balance_timeslice_trade_quality_review_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267EC_stage267_runtime_gap_aware_seventh_followup_or_prune_materialization_v1`
-- last_completed_run(마지막 완료 실행): `run267EC_stage267_runtime_gap_aware_seventh_followup_or_prune_materialization_v1`
+- current_run(현재 실행): `run267EE_stage267_runtime_gap_aware_seventh_followup_or_prune_balance_timeslice_trade_quality_review_v1`
+- last_completed_run(마지막 완료 실행): `run267EE_stage267_runtime_gap_aware_seventh_followup_or_prune_balance_timeslice_trade_quality_review_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267ED_execute_runtime_gap_aware_seventh_followup_or_prune_mt5_batch`
+- next_action(다음 행동): `run267EF_design_runtime_gap_aware_eighth_followup_or_prune_from_run267EE_review`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -380,6 +380,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267EA_runtime_gap_aware_sixth_followup_or_prune_balance_timeslice_trade_quality_review(267EA 런타임 공백 반영 6차 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267EA_runtime_gap_aware_sixth_followup_or_prune_balance_timeslice_trade_quality_review.md`
 - run267EB_runtime_gap_aware_seventh_followup_or_prune_design(267EB 런타임 공백 반영 7차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267EB_runtime_gap_aware_seventh_followup_or_prune_design.md`
 - run267EC_runtime_gap_aware_seventh_followup_or_prune_materialization(267EC 런타임 공백 반영 7차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267EC_runtime_gap_aware_seventh_followup_or_prune_materialization.md`
+- run267ED_runtime_gap_aware_seventh_followup_or_prune_mt5_execution(267ED 런타임 공백 반영 7차 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267ED_runtime_gap_aware_seventh_followup_or_prune_mt5_execution.md`
+- run267EE_runtime_gap_aware_seventh_followup_or_prune_balance_timeslice_trade_quality_review(267EE 런타임 공백 반영 7차 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267EE_runtime_gap_aware_seventh_followup_or_prune_balance_timeslice_trade_quality_review.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
@@ -603,4 +605,12 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267EC(267EC 실행)는 run267EB(267EB 실행)의 materialization queue(물질화 대기열)를 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 바꿨다.
 Effect(효과): variants(변형) `14`개, attempts(시도) `14`개, held rows(보류 행) `1`개, aggressive attempts(공격형 시도) `5`개, coverage variants(커버리지 변형) `4`개를 만들었다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267ED(267ED 실행)는 run267EC(267EC 실행)의 runtime gap aware seventh follow-up/prune(런타임 공백 반영 7차 후속/가지치기) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
+Effect(효과): attempt(시도) `14/14`개 중 KPI records(KPI 기록) `9`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267EE(267EE 실행)는 run267ED(267ED 실행)의 9개 MT5(MetaTrader 5, 메타트레이더5) 결과를 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 다시 읽었다.
+Effect(효과): candidate_profile_rows(후보-프로필 행) `9`, negative_slices(음수 구간) `79`를 만들었고, 다음은 eighth follow-up/prune design(8차 후속/가지치기 설계)이다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
