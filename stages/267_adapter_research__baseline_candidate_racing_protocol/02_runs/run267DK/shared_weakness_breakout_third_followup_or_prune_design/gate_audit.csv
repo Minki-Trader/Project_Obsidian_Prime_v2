@@ -1,0 +1,7 @@
+﻿gate_id,status,evidence,effect
+all_five_candidates_decided,pass,decision_aliases=s264_aia;s262_lih;s258_stc;s264_lc;s264_aih,keeps the whole Baseline candidate pool(기준 후보군 전체)을 다룬다.
+aggressive_explosive_queue_present,pass,s258 aggressive explosive queue present,prevents overly defensive-only progress(방어 전용 진행 방지).
+ablation_replacement_queue_present,pass,s264_aia ablation/replacement queue present,keeps feature reliance check alive(피처 의존 점검 유지).
+control_guardrail_present,pass,s262/s264_lc control guardrail rows present,keeps defensive/validation controls(방어/검증 대조)을 비교에 붙인다.
+prune_blocks_headline_and_onnx,pass,headline and ONNX prune rows present,prevents number-only selection and premature ONNX(숫자 선택 및 조기 ONNX 방지).
+failure_memory_present,pass,failure_memory=6,records failures as next research material(실패를 다음 연구 재료로 남긴다).
