@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267DC_shared_weakness_breakout_second_followup_or_prune_design_completed`
+- stage_status(단계 상태): `run267DD_shared_weakness_breakout_second_followup_or_prune_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267DC_stage267_shared_weakness_breakout_second_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267DC_stage267_shared_weakness_breakout_second_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267DD_stage267_shared_weakness_breakout_second_followup_or_prune_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267DD_stage267_shared_weakness_breakout_second_followup_or_prune_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267DD_materialize_shared_weakness_breakout_second_followup_or_prune_queue`
+- next_action(다음 행동): `run267DE_execute_shared_weakness_breakout_second_followup_or_prune_mt5_batch`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -355,6 +355,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267DA_shared_weakness_breakout_second_followup_or_prune_mt5_execution(267DA 공유 약점 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DA_shared_weakness_breakout_second_followup_or_prune_mt5_execution.md`
 - run267DB_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review(267DB 공유 약점 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DB_shared_weakness_breakout_second_followup_or_prune_balance_timeslice_trade_quality_review.md`
 - run267DC_shared_weakness_breakout_second_followup_or_prune_design(267DC 공유 약점 2차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DC_shared_weakness_breakout_second_followup_or_prune_design.md`
+- run267DD_shared_weakness_breakout_second_followup_or_prune_materialization(267DD 공유 약점 2차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DD_shared_weakness_breakout_second_followup_or_prune_materialization.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
@@ -474,4 +475,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DC(267DC 실행)는 run267DB(267DB 실행)의 balance/time-slice/trade-quality(잔액/시간구간/거래품질) 근거를 second follow-up/prune design(2차 후속/가지치기 설계)으로 바꿨다.
 Effect(효과): branch decisions(분기 판단) `5`, materialization queue(물질화 대기열) `6`, prune matrix(가지치기 행렬) `5`, failure memory(실패 기억) `5`를 만들었다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DD(267DD 실행)는 run267DC(267DC 실행)의 2차 follow-up/prune queue(후속/가지치기 대기열)를 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 물질화했다.
+Effect(효과): variants(변형) `8`개와 attempts(시도) `13`개를 만들고, survivor ablation/replacement(생존 후보 제거/대체)는 run267DE/run267DF 이후로 보류했다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
