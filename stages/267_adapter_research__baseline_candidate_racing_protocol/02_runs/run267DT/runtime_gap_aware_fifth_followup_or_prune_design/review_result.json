@@ -1,0 +1,483 @@
+{
+  "aggressive_queue_count": 3,
+  "branch_decisions": [
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger(압박 도전자)",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "decision_id": "bd267dt_s258_supply_continuity_repair_once",
+      "decision_label": "repair_once_then_drop_if_still_failed(한 번 수리 후 실패 반복 시 종료)",
+      "next_use": "P0 handoff repair plus narrow MT5 retry(P0 인계 수리와 좁은 MT5 재시도)",
+      "reopen_condition": "preflight open check(사전 열기 점검)가 통과하고 runtime output(런타임 출력)이 생성될 때.",
+      "source_evidence": "run267DS(267DS 실행) supply continuity 3/3 init_failed, ebm_table_open_failed:5003.",
+      "stop_condition": "수리 뒤에도 init_failed(초기화 실패)가 반복되면 이 branch(분기)는 닫는다.",
+      "why": "실패 원인이 성능이 아니라 table handoff(테이블 인계)라서 후보 자체를 성급히 버리지는 않는다."
+    },
+    {
+      "candidate_alias": "s258_stc",
+      "candidate_id": "s258_short_tight_control",
+      "candidate_role": "stress_challenger(압박 도전자)",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "decision_id": "bd267dt_s258_taper_not_enough_use_aggressive_noncalendar",
+      "decision_label": "do_not_add_more_calendar_filters_try_noncalendar_impulse(달력 필터 추가 대신 비달력 충격 실험)",
+      "next_use": "P0 aggressive noncalendar reentry(P0 공격형 비달력 재진입)",
+      "reopen_condition": "2025H1 validation(2025 상반기 검증)이 회복되고 거래 수가 유지될 때.",
+      "source_evidence": "2025H1 net -3.69, 2025H2 net 33.93, avg PF 1.10837.",
+      "stop_condition": "거래 수가 얇아지거나 2025H1/H2 품질이 계속 약하면 s258 공격 축을 낮춘다.",
+      "why": "필터를 덕지덕지 붙이는 방향을 피하고, 시장 상태 의미가 있는 충격/변동성 축으로 바꾼다."
+    },
+    {
+      "candidate_alias": "s264_aih",
+      "candidate_id": "s264_allow_inner_high_quarter",
+      "candidate_role": "core_challenger(핵심 도전자)",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "decision_id": "bd267dt_s264_aih_reenter_as_explosive_core_challenger",
+      "decision_label": "reenter_aggressive_challenger_queue(공격형 도전자 대기열 재진입)",
+      "next_use": "P0 explosive shock-state probe(P0 폭발형 충격 상태 탐침)",
+      "reopen_condition": "OOS final month(표본외 마지막 달) 손실을 줄이며 validation(검증)을 크게 훼손하지 않을 때.",
+      "source_evidence": "initial scoreboard(초기 점수판) OOS net 857.67, PF 1.74, final OOS month 2026.04 -41.14.",
+      "stop_condition": "OOS 회복이 무너지면 shock-state 방향은 실패 기억으로 닫는다.",
+      "why": "DS 이후 흐름이 s258/s264_lc로 좁아졌으므로 핵심 도전자를 다시 전면 테스트한다."
+    },
+    {
+      "candidate_alias": "s264_lc",
+      "candidate_id": "s264_lowrank_control",
+      "candidate_role": "defensive_control(방어 대조)",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "decision_id": "bd267dt_s264_lc_keep_control_only",
+      "decision_label": "control_only_no_selection(대조 전용, 선택 아님)",
+      "next_use": "P0 defensive control DD cluster(P0 방어 대조 손실폭 군집)",
+      "reopen_condition": "DD cluster(손실폭 군집)가 설명되고 대조 기준으로만 쓰일 때.",
+      "source_evidence": "run267DS(267DS 실행) net 1522.61 but DD 24.39, Monday -235.05.",
+      "stop_condition": "DD를 줄이려는 수리가 2단계 이상 반복되면 닫는다.",
+      "why": "수익은 좋지만 DD(drawdown, 손실폭)와 월/요일 구멍이 불편하다."
+    },
+    {
+      "candidate_alias": "s264_aia;s262_lih",
+      "candidate_id": "s264_allow_inner_all_oos_anchor;s262_lowrank_inner_half_filter",
+      "candidate_role": "oos_anchor_and_validation_heavy(표본외 앵커와 검증 중심)",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "decision_id": "bd267dt_aia_lih_no_blind_retry",
+      "decision_label": "diagnostic_before_runtime_retry(런타임 재시도 전 진단)",
+      "next_use": "P1 supply manifest diagnostic(P1 공급 목록 진단)",
+      "reopen_condition": "nonzero activation(비영 활성)이 증명될 때.",
+      "source_evidence": "prior runtime gap(이전 런타임 공백) and no current DS completed profile(현재 DS 완료 프로필 없음).",
+      "stop_condition": "공급 증명이 없으면 이번 루프에서 실행하지 않는다.",
+      "why": "무거래/공백을 반복 실행하면 병목이 되므로 신호 공급 증명부터 만든다."
+    }
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+  "created_at_utc": "2026-05-22T04:43:33Z",
+  "evidence_map": [
+    {
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "effect": "성능 약화와 런타임 인계 실패를 분리한다.",
+      "evidence_id": "ev267dt_ds_summary_s258",
+      "observed_value": "attempt_count=6;completed=3;init_failure=3;avg_net=73.666667;max_dd=17.93",
+      "source_field": "s258_stc row",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DS/runtime_gap_aware_fourth_followup_or_prune_balance_timeslice_trade_quality_with_init_failures/candidate_init_failure_summary.csv",
+      "used_for": "s258 repair and aggressive reentry design(수리와 공격 재진입 설계)"
+    },
+    {
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "effect": "수익이 커도 선택하지 않고 위험 경계로만 쓴다.",
+      "evidence_id": "ev267dt_ds_summary_s264_lc",
+      "observed_value": "avg_net=1522.61;PF=1.418226;max_dd=24.39;worst_month=-163.98",
+      "source_field": "s264_lc row",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DS/runtime_gap_aware_fourth_followup_or_prune_balance_timeslice_trade_quality_with_init_failures/candidate_init_failure_summary.csv",
+      "used_for": "defensive control DD cluster design(방어 대조 손실폭 군집 설계)"
+    },
+    {
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "effect": "방어 대조만 보던 흐름을 공격형 탐색으로 넓힌다.",
+      "evidence_id": "ev267dt_s264_aih_scoreboard",
+      "observed_value": "OOS net 857.67;OOS PF 1.74;final OOS month 2026.04 -41.14",
+      "source_field": "s264_allow_inner_high_quarter",
+      "source_path": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv",
+      "used_for": "explosive core challenger reentry(폭발형 핵심 도전자 재진입)"
+    },
+    {
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "effect": "단일 피처 우연 적합인지 검증하는 다음 실험을 준비한다.",
+      "evidence_id": "ev267dt_goal_similar_replacement",
+      "observed_value": "feature ablation/replacement must be revisited from baseline pool(기준 후보군 기준 재검토 필요)",
+      "source_field": "similar replacement requirement(유사 대체 요구)",
+      "source_path": "user_goal_context(사용자 목표 문맥)",
+      "used_for": "q06 similar feature replacement queue(q06 유사 피처 대체 대기열)"
+    }
+  ],
+  "experiment_design_receipt": [
+    {
+      "changed_variables": "EBM table handoff(EBM 테이블 인계), noncalendar impulse(비달력 충격), explosive shock-state(폭발형 충격 상태), similar replacement(유사 대체).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "comparison_baseline": "run267DS(267DS 실행) candidate profile, init failure, negative slice evidence(후보 프로필/초기화 실패/음수 구간 근거).",
+      "control_variables": "US100 M5, Stage267 후보군, split scope(구간 범위), no operating claim(운영 주장 없음).",
+      "decision_use": "run267DU(267DU 실행) 물질화 대상과 보류/가지치기 대상을 정한다.",
+      "design_id": "ed267dt_runtime_gap_aware_fifth_followup_or_prune",
+      "evidence_plan": "feature_blueprint, materialization_queue, failure_memory, run_manifest, gate_audit, DS source hashes, next DU materialization receipts.",
+      "failure_criteria": "같은 초기화 실패 반복, 2025H1/H2 품질 재붕괴, s264_aih OOS 회복 소실, 단일 피처 의존성 확인.",
+      "hypothesis": "DS 근거를 보면 s258_stc는 테이블 인계 실패와 성능 약화를 분리해야 하고, s264_aih는 다시 공격형 도전자로 압박해야 한다.",
+      "invalid_conditions": "feature order mismatch(피처 순서 불일치), data leakage(데이터 누수), missing report(보고서 누락), duplicate-boundary misread(중복 경계 오독).",
+      "sample_scope": "2023H2, historical_2024, validation_is, OOS, 2025H1/H2, 2026.04 weak final month.",
+      "stop_conditions": "repair loop(수리 루프)는 최대 1개 후속 수리만 허용하고, 같은 약점 축 미세조정 반복은 중단한다.",
+      "success_criteria": "수리 분기는 init failure(초기화 실패) 제거, 공격 분기는 거래 수/수익/PF/DD가 함께 개선, 대체 분기는 붕괴하지 않음."
+    }
+  ],
+  "failure_memory": [
+    {
+      "affected_scope": "s258_stc supply continuity run267dq_01/02/03",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "init failure(초기화 실패)를 zero-trade success(무거래 성공)로 해석하지 않는다.",
+      "memory_id": "fm267dt_ebm_table_open_failed_5003",
+      "pattern": "init_failure_ebm_table_open_failed(초기화 실패 EBM 테이블 열기 실패)",
+      "reopen_condition": "preflight open receipt(사전 열기 영수증)가 통과할 때.",
+      "salvage_value": "table handoff repair(테이블 인계 수리) 후 처음으로 성능을 볼 수 있다.",
+      "why_failed": "runtime telemetry(런타임 텔레메트리)가 ebm_table_open_failed:5003을 남겼다."
+    },
+    {
+      "affected_scope": "s258_stc monday late DD taper",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "시간대 필터만 더 붙이지 않는다.",
+      "memory_id": "fm267dt_s258_validation_oos_quality_decay",
+      "pattern": "validation_oos_quality_decay(검증/표본외 품질 약화)",
+      "reopen_condition": "2025H1 validation(검증)이 양수로 회복될 때.",
+      "salvage_value": "calendar filter(달력 필터)가 아니라 noncalendar impulse(비달력 충격)로 다시 볼 가치가 있다.",
+      "why_failed": "2025H1 net -3.69, 2025H2 net 33.93, PF near 1.0."
+    },
+    {
+      "affected_scope": "s264_lc historical_2024",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "수익이 크다는 이유로 선택 후보로 말하지 않는다.",
+      "memory_id": "fm267dt_s264_lc_dd_cluster",
+      "pattern": "profit_with_uncomfortable_dd_cluster(수익 있지만 손실폭 군집 불편)",
+      "reopen_condition": "DD cluster(손실폭 군집)가 설명되고 대조 용도에 한정될 때.",
+      "salvage_value": "defensive control(방어 대조) 경계로 유용하다.",
+      "why_failed": "DD 24.39, Monday -235.05, 2024-06 -163.98."
+    },
+    {
+      "affected_scope": "s264_aih 2026.04",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "OOS 전체 숫자만 보고 약한 마지막 달을 숨기지 않는다.",
+      "memory_id": "fm267dt_s264_aih_oos_final_month_loss",
+      "pattern": "oos_final_month_loss(표본외 마지막 달 손실)",
+      "reopen_condition": "OOS PF(표본외 수익 팩터)를 유지하면서 2026.04 손실을 줄일 때.",
+      "salvage_value": "explosive shock-state(폭발형 충격 상태) 실험의 표적 약점으로 쓸 수 있다.",
+      "why_failed": "initial scoreboard(초기 점수판)에서 OOS final month(표본외 마지막 달) 2026.04가 -41.14다."
+    }
+  ],
+  "feature_blueprints": [
+    {
+      "aggressive_or_defensive": "repair_gate(수리 게이트)",
+      "candidate_aliases": "s258_stc",
+      "candidate_ids": "s258_short_tight_control",
+      "changed_variables": "model/table export path(모델/테이블 출력 경로), Common Files handoff(공통 파일 인계), preflight open check(사전 열기 점검).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "failure_read": "테이블 인계 수리 뒤에도 0 trade(무거래) 또는 init failure(초기화 실패)가 반복되면 이 공급 연속성 경로는 닫는다.",
+      "feature_family": "runtime_handoff_repair(런타임 인계 수리)",
+      "feature_id": "bp267dt_s258_ebm_table_handoff_repair",
+      "held_variables": "candidate identity(후보 정체성), split(구간), threshold release 금지(임계값 해제 금지).",
+      "market_meaning": "s258_stc(258 STC 후보)의 supply continuity(공급 연속성)가 시장 의미 전에 EBM table open failure(EBM 테이블 열기 실패)로 막혔는지 확인한다.",
+      "materialization_note": "run267DU(267DU 실행)에서 P0 preflight와 좁은 MT5 재시도까지 연결한다.",
+      "source_evidence": "run267DS(267DS 실행) init_failure_attempts(초기화 실패 시도) 3, ebm_table_open_failed:5003 3.",
+      "success_read": "세 구간 모두 init failure(초기화 실패)가 사라지고 nonzero feature/model ready(비영 피처/모델 준비)가 확인된다."
+    },
+    {
+      "aggressive_or_defensive": "aggressive(공격형)",
+      "candidate_aliases": "s258_stc",
+      "candidate_ids": "s258_short_tight_control",
+      "changed_variables": "impulse strength(충격 강도), volatility compression break(변동성 압축 돌파), late-session risk shape(후반 세션 위험 형태).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "failure_read": "2025H1/2025H2 품질이 계속 약하거나 거래 수가 얇아지면 s258_stc 공격 축을 낮춘다.",
+      "feature_family": "noncalendar_impulse_reentry(비달력 충격 재진입)",
+      "feature_id": "bp267dt_s258_noncalendar_impulse_reentry",
+      "held_variables": "기존 calendar ban(달력 금지) 추가 금지, 기존 split(구간) 유지.",
+      "market_meaning": "월요일/후반 시간 필터를 더 두껍게 붙이지 않고, 충격/추세/변동성 상태에서 살아나는 거래만 다시 열어본다.",
+      "materialization_note": "P0 aggressive queue(공격형 대기열)로 보낸다.",
+      "source_evidence": "run267DS(267DS 실행) taper rows: 2023H2 net 190.76, 2025H1 net -3.69, 2025H2 net 33.93.",
+      "success_read": "2025H1 검증 붕괴를 줄이면서 거래 수를 과도하게 줄이지 않는다."
+    },
+    {
+      "aggressive_or_defensive": "explosive_aggressive(폭발형 공격)",
+      "candidate_aliases": "s264_aih",
+      "candidate_ids": "s264_allow_inner_high_quarter",
+      "changed_variables": "shock-state gate(충격 상태 관문), trend-strength replacement(추세 강도 대체), late-OOS drawdown guard(후반 표본외 손실 방어).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "failure_read": "OOS 회복이 사라지거나 validation(검증)이 더 깨지면 공격형 shock-state는 실패 기억으로 닫는다.",
+      "feature_family": "explosive_shock_state(폭발형 충격 상태)",
+      "feature_id": "bp267dt_s264_aih_explosive_shock_state",
+      "held_variables": "s264_aih identity(s264 AIH 정체성), no operating claim(운영 주장 없음).",
+      "market_meaning": "현재 가장 밀어볼 만한 core challenger(핵심 도전자)를 다시 전면에 놓고 OOS final month(표본외 마지막 달) 손실이 우연인지 확인한다.",
+      "materialization_note": "run267DU(267DU 실행)의 P0 aggressive challenger queue(공격형 도전자 대기열)로 보낸다.",
+      "source_evidence": "initial scoreboard(초기 점수판): OOS net 857.67, PF 1.74, final OOS month 2026.04 -41.14.",
+      "success_read": "OOS 회복은 유지하면서 2026.04 손실과 validation weak PF(검증 약한 PF)를 덜 깨뜨린다."
+    },
+    {
+      "aggressive_or_defensive": "defensive_control(방어 대조)",
+      "candidate_aliases": "s264_lc",
+      "candidate_ids": "s264_lowrank_control",
+      "changed_variables": "drawdown cluster tagging(손실폭 군집 태깅), weak month attribution(약한 월 귀속).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "failure_read": "DD 구조가 설명되지 않으면 대조 후보도 확장하지 않는다.",
+      "feature_family": "dd_cluster_control(손실폭 군집 대조)",
+      "feature_id": "bp267dt_s264_lc_dd_cluster_control",
+      "held_variables": "defensive control role(방어 대조 역할), no candidate selection(후보 선택 없음).",
+      "market_meaning": "수익은 좋지만 24.39% DD(drawdown, 손실폭), Monday(월요일), 2024-06/12 구멍이 있어 방어 대조로만 둔다.",
+      "materialization_note": "P0 control queue(대조 대기열)로 보낸다.",
+      "source_evidence": "run267DS(267DS 실행): net 1522.61, PF 1.42, trades 473, DD 24.39, Monday -235.05.",
+      "success_read": "방어 대조의 허용 불가 손실 조건을 명확히 해 다음 경주 비교 기준을 만든다."
+    },
+    {
+      "aggressive_or_defensive": "diagnostic_only(진단 전용)",
+      "candidate_aliases": "s264_aia;s262_lih",
+      "candidate_ids": "s264_allow_inner_all_oos_anchor;s262_lowrank_inner_half_filter",
+      "changed_variables": "nonzero activation manifest(비영 활성 목록), feature-row supply count(피처 행 공급 수).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "failure_read": "공급 증명이 없으면 이번 루프에서는 보류한다.",
+      "feature_family": "pre_runtime_supply_manifest(런타임 전 공급 목록)",
+      "feature_id": "bp267dt_aia_lih_supply_manifest_diagnostic",
+      "held_variables": "MT5 blind retry(눈먼 MT5 재시도) 금지.",
+      "market_meaning": "무거래/공백 경로를 MT5(MetaTrader 5, 메타트레이더5)에 다시 던지기 전에 신호 공급 자체가 있는지 검증한다.",
+      "materialization_note": "P1 diagnostic queue(진단 대기열)로 보낸다.",
+      "source_evidence": "이전 runtime gap(런타임 공백) 계열에서 s264_aia/s262_lih는 completed runtime(완료 런타임)이 약했다.",
+      "success_read": "신호 공급이 증명되면 다음 공격/대조 실행에 재합류시킨다."
+    },
+    {
+      "aggressive_or_defensive": "aggressive_validation(공격형 검증)",
+      "candidate_aliases": "s264_aih;s258_stc",
+      "candidate_ids": "s264_allow_inner_high_quarter;s258_short_tight_control",
+      "changed_variables": "ADX-like trend strength(ADX 유사 추세 강도), ATR-z impulse(ATR 표준화 충격), range expansion(범위 확장).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "failure_read": "대체 피처에서 완전히 붕괴하면 feature dependency(피처 의존성) 실패로 기록한다.",
+      "feature_family": "similar_feature_replacement(유사 피처 대체)",
+      "feature_id": "bp267dt_similar_feature_replacement_pack",
+      "held_variables": "same candidate pool(동일 후보군), same split scope(동일 구간 범위), no ONNX claim(ONNX 주장 없음).",
+      "market_meaning": "ADX(추세 강도) 하나에 우연히 붙은 것이 아니라, 유사한 추세/변동성 의미에서도 살아남는지 본다.",
+      "materialization_note": "P0/P1 사이의 replacement queue(대체 대기열)로 보낸다.",
+      "source_evidence": "goal requirement(목표 요구): similar replacement(유사 대체)를 baseline 후보군 기준으로 다시 수행해야 한다.",
+      "success_read": "대체 피처에서도 후보가 완전히 무너지지 않으면 Adapter(어댑터) 개발 가치가 올라간다."
+    }
+  ],
+  "gate_audit": [
+    {
+      "effect": "stale stage(낡은 단계)에서 시작하지 않았다.",
+      "evidence": "workspace_state and selection_status point to run267DS and next run267DT",
+      "gate_id": "gate267dt_reentry_truth",
+      "gate_name": "current truth agrees(현재 진실 일치)",
+      "status": "passed"
+    },
+    {
+      "effect": "가설/비교/성공/실패/무효 조건을 먼저 고정했다.",
+      "evidence": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/experiment_design_receipt.csv",
+      "gate_id": "gate267dt_experiment_design",
+      "gate_name": "experiment design fields present(실험 설계 필드 존재)",
+      "status": "passed"
+    },
+    {
+      "effect": "방어 대조만 진행하지 않고 s258/s264_aih 공격형 실험을 포함했다.",
+      "evidence": "queue_rows=6;feature_rows=6",
+      "gate_id": "gate267dt_aggressive_included",
+      "gate_name": "aggressive branch included(공격형 분기 포함)",
+      "status": "passed"
+    },
+    {
+      "effect": "같은 초기화 실패 수리를 길게 끌지 않도록 stop condition(중단 조건)을 둔다.",
+      "evidence": "prune_rows=4",
+      "gate_id": "gate267dt_repair_loop_cap",
+      "gate_name": "repair loop cap(수리 루프 제한)",
+      "status": "passed"
+    },
+    {
+      "effect": "운영/ONNX/목표 달성 주장을 만들지 않았다.",
+      "evidence": "selected_candidate=none;selected_research_baseline=none;onnx_readiness=not_claimed",
+      "gate_id": "gate267dt_claim_boundary",
+      "gate_name": "claim boundary held(주장 경계 유지)",
+      "status": "passed"
+    }
+  ],
+  "goal_achieve": "not_claimed",
+  "materialization_queue": [
+    {
+      "aggressive_or_defensive": "repair_gate(수리 게이트)",
+      "candidate_aliases": "s258_stc",
+      "candidate_ids": "s258_short_tight_control",
+      "changed_variables": "EBM table path(EBM 테이블 경로), Common Files copy(공통 파일 복사), preflight open receipt(사전 열기 영수증).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "control_variables": "same 2023H2/2025H1/2025H2 splits(동일 구간), same supply continuity profile(동일 공급 연속성 프로필).",
+      "failure_criteria": "ebm_table_open_failed:5003 repeats(반복) or zero-trade report remains after repair(수리 후 무거래 지속).",
+      "invalid_conditions": "model/table hash(모델/테이블 해시) missing, feature order mismatch(피처 순서 불일치), report parser mismatch(보고서 파서 불일치).",
+      "priority": "P0_repair",
+      "queue_id": "q01_s258_supply_continuity_table_handoff_repair",
+      "runtime_instruction": "materialize preflight receipts, then narrow MT5 retry(사전 영수증 생성 후 좁은 MT5 재시도).",
+      "sample_scope": "adjacent_2023_h2_train_pre_2024;adjacent_2025_h1_validation_post_2024;adjacent_2025_h2_oos_followthrough.",
+      "source_evidence": "run267DS init failure(초기화 실패) attempts run267dq_01/02/03.",
+      "success_criteria": "init_failed(초기화 실패) 0 and runtime output(런타임 출력) exists.",
+      "workstream": "runtime_handoff_repair(런타임 인계 수리)"
+    },
+    {
+      "aggressive_or_defensive": "aggressive(공격형)",
+      "candidate_aliases": "s258_stc",
+      "candidate_ids": "s258_short_tight_control",
+      "changed_variables": "impulse strength(충격 강도), ATR-z shock(ATR 표준화 충격), late-session risk size(후반 세션 위험 크기).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "control_variables": "no additional weekday/month ban(요일/월 금지 추가 없음), same splits(동일 구간).",
+      "failure_criteria": "validation remains negative(검증 음수 유지) or OOS trade quality decays(표본외 거래 품질 저하).",
+      "invalid_conditions": "hidden calendar filter(숨은 달력 필터) or changed candidate identity(후보 정체성 변경).",
+      "priority": "P0_aggressive",
+      "queue_id": "q02_s258_noncalendar_impulse_reentry_cross_period",
+      "runtime_instruction": "materialize aggressive variant pack(공격형 변형 묶음 물질화).",
+      "sample_scope": "2023H2, 2025H1 validation, 2025H2 OOS followthrough.",
+      "source_evidence": "run267DS taper completed 3 rows but validation/OOS weak.",
+      "success_criteria": "2025H1 net_profit(순수익) turns positive and PF(수익 팩터) > 1.08 without severe trade-count loss(거래 수 급감 없음).",
+      "workstream": "aggressive_noncalendar_impulse(공격형 비달력 충격)"
+    },
+    {
+      "aggressive_or_defensive": "explosive_aggressive(폭발형 공격)",
+      "candidate_aliases": "s264_aih",
+      "candidate_ids": "s264_allow_inner_high_quarter",
+      "changed_variables": "shock-state gate(충격 상태 관문), trend-strength replacement(추세 강도 대체), late-OOS risk shape(후반 표본외 위험 형태).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "control_variables": "same core challenger identity(동일 핵심 도전자 정체성), no ONNX claim(ONNX 주장 없음).",
+      "failure_criteria": "OOS recovery disappears(표본외 회복 소실) or validation damage grows(검증 손상 확대).",
+      "invalid_conditions": "feature order drift(피처 순서 드리프트), leakage(누수), or missing Tier boundary(티어 경계 누락).",
+      "priority": "P0_explosive",
+      "queue_id": "q03_s264_aih_explosive_shock_state_oos_final_month",
+      "runtime_instruction": "materialize explosive challenger attempts(폭발형 도전자 시도 물질화).",
+      "sample_scope": "validation_is and OOS including 2026.04 final month(검증 및 2026.04 마지막 표본외).",
+      "source_evidence": "initial scoreboard OOS net 857.67 and OOS final month 2026.04 -41.14.",
+      "success_criteria": "OOS final month loss(마지막 표본외 월 손실) improves while OOS PF(표본외 수익 팩터) remains strong.",
+      "workstream": "explosive_core_challenger_reentry(폭발형 핵심 도전자 재진입)"
+    },
+    {
+      "aggressive_or_defensive": "defensive_control(방어 대조)",
+      "candidate_aliases": "s264_lc",
+      "candidate_ids": "s264_lowrank_control",
+      "changed_variables": "DD cluster labels(손실폭 군집 라벨), weak-month audit(약한 월 감사).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "control_variables": "historical_2024 scope(2024 과거 범위), defensive role(방어 역할).",
+      "failure_criteria": "DD repair loop(손실폭 수리 반복)가 생기면 중단한다.",
+      "invalid_conditions": "duplicate-boundary treated as actual fallback(중복 경계를 실제 대체로 취급).",
+      "priority": "P0_control",
+      "queue_id": "q04_s264_lc_defensive_dd_cluster_control",
+      "runtime_instruction": "materialize only if needed as control receipt(필요 시 대조 영수증으로만 물질화).",
+      "sample_scope": "historical_2024 Tier A; duplicate-boundary Tier A+B marked as not true fallback(실제 대체 아님 표시).",
+      "source_evidence": "run267DS DD 24.39, Monday -235.05, 2024-06 -163.98, 2024-12 -129.63.",
+      "success_criteria": "control risk boundary(대조 위험 경계)가 명확히 기록된다.",
+      "workstream": "defensive_dd_cluster_control(방어 손실폭 군집 대조)"
+    },
+    {
+      "aggressive_or_defensive": "diagnostic_only(진단 전용)",
+      "candidate_aliases": "s264_aia;s262_lih",
+      "candidate_ids": "s264_allow_inner_all_oos_anchor;s262_lowrank_inner_half_filter",
+      "changed_variables": "signal supply manifest(신호 공급 목록), feature activation count(피처 활성 수).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "control_variables": "no blind MT5 retry(눈먼 MT5 재시도 없음).",
+      "failure_criteria": "activation proof missing(활성 증명 누락) or all-skip state(전체 스킵 상태).",
+      "invalid_conditions": "diagnostic without source hashes(원천 해시 없는 진단).",
+      "priority": "P1_diagnostic",
+      "queue_id": "q05_s264_aia_s262_lih_supply_manifest_diagnostic",
+      "runtime_instruction": "do not schedule MT5 until diagnostic passes(진단 통과 전 MT5 배정 금지).",
+      "sample_scope": "historical_2024 and prior weak slices as diagnostic only(2024 과거와 이전 약점 구간 진단 전용).",
+      "source_evidence": "current DS has no completed rows for these candidates; prior gap memory remains.",
+      "success_criteria": "nonzero activation proof(비영 활성 증명)가 생성된다.",
+      "workstream": "pre_runtime_supply_diagnostic(런타임 전 공급 진단)"
+    },
+    {
+      "aggressive_or_defensive": "aggressive_validation(공격형 검증)",
+      "candidate_aliases": "s264_aih;s258_stc",
+      "candidate_ids": "s264_allow_inner_high_quarter;s258_short_tight_control",
+      "changed_variables": "ADX-like trend strength(ADX 유사 추세 강도), ATR-z impulse(ATR 표준화 충격), range expansion(범위 확장).",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "control_variables": "same split windows(동일 구간), same candidate identities(동일 후보 정체성).",
+      "failure_criteria": "one-feature dependency(단일 피처 의존성) appears.",
+      "invalid_conditions": "replacement changes label timing(대체가 라벨 시점을 바꿈) or feature leakage(피처 누수).",
+      "priority": "P1_replacement",
+      "queue_id": "q06_s264_aih_s258_similar_feature_replacement",
+      "runtime_instruction": "materialize after q03/q02 shape is available(q03/q02 형태 확보 후 물질화).",
+      "sample_scope": "validation/OOS plus weak month zoom(검증/표본외 및 약한 월 확대).",
+      "source_evidence": "goal requires feature/category ablation and similar replacement(유사 피처 대체).",
+      "success_criteria": "candidate does not collapse under similar feature replacement(유사 피처 대체에서 완전 붕괴하지 않음).",
+      "workstream": "similar_feature_replacement(유사 피처 대체)"
+    }
+  ],
+  "next_action": "run267DU_materialize_runtime_gap_aware_fifth_followup_or_prune_queue",
+  "onnx_readiness": "not_claimed",
+  "outputs": {
+    "branch_decision_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/branch_decision_matrix.csv",
+    "evidence_map": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/evidence_map.csv",
+    "experiment_design_receipt": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/experiment_design_receipt.csv",
+    "failure_memory": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/failure_memory.csv",
+    "feature_blueprint": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/feature_blueprint.csv",
+    "gate_audit": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/gate_audit.csv",
+    "lineage": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/lineage.json",
+    "materialization_queue": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/materialization_queue.csv",
+    "prune_matrix": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/prune_matrix.csv",
+    "report": "stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DT_runtime_gap_aware_fifth_followup_or_prune_design.md",
+    "result_judgment": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/result_judgment.csv",
+    "review_result": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/review_result.json",
+    "run_manifest": "stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/run_manifest.json"
+  },
+  "parent_run_id": "run267DS_stage267_runtime_gap_aware_fourth_followup_or_prune_balance_timeslice_trade_quality_with_init_failures_v1",
+  "prune_matrix": [
+    {
+      "affected_attempts": "run267dq_01;run267dq_02;run267dq_03",
+      "affected_candidate_aliases": "s258_stc",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "같은 table open failure(테이블 열기 실패)를 성능 실험처럼 반복하지 않는다.",
+      "prune_id": "pr267dt_no_third_stage_supply_repair_loop",
+      "prune_label": "repair_once_only(수리 한 번만)",
+      "reopen_condition": "preflight open check(사전 열기 점검)와 runtime output(런타임 출력)이 모두 성공할 때.",
+      "salvage_value": "수리 성공 시 supply continuity(공급 연속성) 성능을 처음으로 유효하게 볼 수 있다.",
+      "why_pruned": "EBM table open failure(EBM 테이블 열기 실패)는 수리 대상이지만, 같은 분기를 3단계 이상 끌지 않는다."
+    },
+    {
+      "affected_attempts": "time-slice weak rows",
+      "affected_candidate_aliases": "s258_stc;s264_lc",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "약한 월 하나를 줄이려고 비슷한 repair(수리)를 반복하지 않는다.",
+      "prune_id": "pr267dt_no_more_calendar_filter_stack",
+      "prune_label": "no_filter_stack(필터 덕지덕지 금지)",
+      "reopen_condition": "필터가 아니라 구조적 상태 피처로 설명될 때.",
+      "salvage_value": "시장 상태 의미가 있는 impulse/shock/replacement(충격/상태/대체) 축으로 전환한다.",
+      "why_pruned": "요일/월/시간 약점을 단순 배제 필터로 계속 덮으면 목표와 어긋난다."
+    },
+    {
+      "affected_attempts": "run267dq_07_rt_2024",
+      "affected_candidate_aliases": "s264_lc",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "중복 경계 숫자를 fallback(대체) 성과로 말하지 않는다.",
+      "prune_id": "pr267dt_duplicate_boundary_not_fallback",
+      "prune_label": "not_true_fallback(실제 대체 아님)",
+      "reopen_condition": "actual routed total(실제 라우팅 전체) 텔레메트리가 생길 때.",
+      "salvage_value": "대조 해석의 경계로는 유용하다.",
+      "why_pruned": "Tier A+B(티어 A+B)는 duplicate-boundary(중복 경계)라 실제 routed total(라우팅 전체)이 아니다."
+    },
+    {
+      "affected_attempts": "prior runtime gap routes",
+      "affected_candidate_aliases": "s264_aia;s262_lih",
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "do_not_repeat": "무거래/공백 경로를 같은 설정으로 재시도하지 않는다.",
+      "prune_id": "pr267dt_aia_lih_no_blind_runtime_retry",
+      "prune_label": "diagnostic_before_retry(재시도 전 진단)",
+      "reopen_condition": "nonzero activation manifest(비영 활성 목록)가 생성될 때.",
+      "salvage_value": "신호 공급만 증명되면 다시 후보군 경주에 올릴 수 있다.",
+      "why_pruned": "공급 증명 없이 MT5(MetaTrader 5, 메타트레이더5)를 반복하면 병목이 된다."
+    }
+  ],
+  "result_judgment": [
+    {
+      "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate",
+      "evidence_available": "run267DS profile/init failure/negative slice evidence(프로필/초기화 실패/음수 구간 근거), initial scoreboard(초기 점수판), monthly weakness matrix(월별 약점 행렬)",
+      "evidence_missing": "run267DU materialized artifacts(267DU 물질화 산출물), MT5 execution(메타트레이더5 실행), Adapter package(어댑터 패키지), ONNX parity(ONNX 동등성)",
+      "judgment_label": "runtime_gap_aware_fifth_followup_or_prune_design_completed_no_candidate_selection",
+      "next_condition": "run267DU_materialize_runtime_gap_aware_fifth_followup_or_prune_queue",
+      "result_subject": "run267DT runtime gap aware fifth follow-up/prune design(267DT 런타임 공백 반영 5차 후속/가지치기 설계)",
+      "user_explanation_hook": "이번 작업은 다음 큐를 정한 설계이며, 후보 선택이나 ONNX 준비가 아니다."
+    }
+  ],
+  "run_id": "run267DT_stage267_runtime_gap_aware_fifth_followup_or_prune_design_v1",
+  "selected_candidate": "none",
+  "selected_research_baseline": "none",
+  "stage_id": "267_adapter_research__baseline_candidate_racing_protocol",
+  "status": "run267DT_runtime_gap_aware_fifth_followup_or_prune_design_completed"
+}

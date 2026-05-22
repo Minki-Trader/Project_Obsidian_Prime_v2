@@ -1,0 +1,6 @@
+﻿gate_id,gate_name,status,evidence,effect
+gate267dt_reentry_truth,current truth agrees(현재 진실 일치),passed,workspace_state and selection_status point to run267DS and next run267DT,stale stage(낡은 단계)에서 시작하지 않았다.
+gate267dt_experiment_design,experiment design fields present(실험 설계 필드 존재),passed,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DT/runtime_gap_aware_fifth_followup_or_prune_design/experiment_design_receipt.csv,가설/비교/성공/실패/무효 조건을 먼저 고정했다.
+gate267dt_aggressive_included,aggressive branch included(공격형 분기 포함),passed,queue_rows=6;feature_rows=6,방어 대조만 진행하지 않고 s258/s264_aih 공격형 실험을 포함했다.
+gate267dt_repair_loop_cap,repair loop cap(수리 루프 제한),passed,prune_rows=4,같은 초기화 실패 수리를 길게 끌지 않도록 stop condition(중단 조건)을 둔다.
+gate267dt_claim_boundary,claim boundary held(주장 경계 유지),passed,selected_candidate=none;selected_research_baseline=none;onnx_readiness=not_claimed,운영/ONNX/목표 달성 주장을 만들지 않았다.
