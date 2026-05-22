@@ -1,0 +1,5 @@
+﻿gate_id,gate_name,status,evidence,effect
+scope_completion_gate,run267DP queue rows accounted,pass,queue_rows=4;materialized_queue_rows=3;held_rows=1,실행할 축과 보류할 축을 섞지 않는다.
+runtime_evidence_gate,mt5 inputs materialized without execution claim,pass,attempts=8;next_action=run267DR_execute_runtime_gap_aware_fourth_followup_or_prune_mt5_batch,아직 KPI(핵심 성과 지표)를 주장하지 않고 실행 준비만 말한다.
+artifact_lineage_audit,source and output hashes connected,pass,variants=7;handoff_receipts=8,"다음 실행에서 입력 정체성(identity, 정체성)을 잃지 않는다."
+final_claim_guard,forbidden claims withheld,pass,selected_candidate=none;selected_research_baseline=none;onnx_readiness=not_claimed;goal_achieve=not_claimed,물질화 결과를 후보 선정이나 ONNX 준비로 과장하지 않는다.
