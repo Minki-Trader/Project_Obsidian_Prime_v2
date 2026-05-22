@@ -1,6 +1,6 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267EQ_runtime_gap_aware_tenth_followup_or_prune_balance_timeslice_trade_quality_review_completed_with_init_failures`
+- status(상태): `run267ER_runtime_gap_aware_tenth_followup_or_prune_design_completed`
 - run267CR_shared_weakness_breakout_followup_materialization(267CR 공유 약점 돌파 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CR_shared_weakness_breakout_followup_materialization.md`
 - run267CS_shared_weakness_breakout_followup_mt5_execution(267CS 공유 약점 돌파 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CS_shared_weakness_breakout_followup_mt5_execution.md`
 - run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review(267CT 공유 약점 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review.md`
@@ -676,4 +676,9 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267EQ(267EQ 실행)는 run267EP(267EP 실행)의 8개 KPI(핵심 성과 지표)와 4개 init/runtime gap(초기화/런타임 공백)을 trade list(거래 목록), balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 다시 읽었다.
 Effect(효과): candidate_profile_rows(후보-프로필 행) `8`, init_failure_groups(초기화 실패 묶음) `4`, negative_slices(음수 구간) `69`, followup_queue(후속 대기열) `5`개를 만들었다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+- run267ER_runtime_gap_aware_tenth_followup_or_prune_design(267ER 런타임 공백 반영 10차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267ER_runtime_gap_aware_tenth_followup_or_prune_design.md`
+
+Run267ER(267ER 실행)는 run267EQ(267EQ 실행)의 reviewed evidence(검토 근거)를 원천으로 runtime handoff gap(런타임 인계 공백), 2026.04 shared fragility(공유 취약성), duplicate signature(중복 서명), validation low-PF watch(검증 낮은 PF 관찰), aggressive non-filter branch(공격형 비필터 분기)를 분리했다.
+Effect(효과): materialization queue(물질화 대기열) `5`개, active rows(활성 행) `4`개, aggressive rows(공격형 행) `1`개, prune matrix(가지치기 행렬) `5`개, failure memory(실패 기억) `5`개를 만들었다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
