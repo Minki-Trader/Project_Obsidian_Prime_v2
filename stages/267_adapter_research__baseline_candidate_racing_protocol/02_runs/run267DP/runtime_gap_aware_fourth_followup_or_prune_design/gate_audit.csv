@@ -1,0 +1,7 @@
+gate_id,gate_name,status,evidence,effect
+g01,source_evidence_loaded(원천 근거 적재),pass,stages/267_adapter_research__baseline_candidate_racing_protocol/02_runs/run267DO/shared_weakness_breakout_third_followup_or_prune_balance_timeslice_trade_quality_with_runtime_gaps/review_result.json,run267DO 근거에서 출발해 오래된 가정 사용을 줄였다.
+g02,runtime_gap_honored(런타임 공백 존중),pass,retry_recovered_kpi_records=0;runtime_gap_attempts=9,무거래/차단 경로를 성과 후보처럼 비교하지 않았다.
+g03,repair_loop_bounded(수정 반복 제한),pass,prune repeated runtime retry(반복 런타임 재시도 가지치기),같은 공백을 계속 끌지 않고 공급 증명 조건으로 바꿨다.
+g04,aggressive_and_control_branches_present(공격형과 대조 분기 포함),pass,"s258 P0 aggressive queue(공격형 대기열), s264_lc P0 control queue(대조 대기열)",방어 필터만 쌓지 않고 살아 있는 공급 축도 계속 시험한다.
+g05,forbidden_claim_guard(금지 주장 방어),pass,selected_candidate=none;selected_research_baseline=none;onnx_readiness=not_claimed;goal_achieve=not_claimed,운영/ONNX/목표 완료 주장을 만들지 않았다.
+g06,artifact_lineage_connected(산출물 계보 연결),pass,"run_manifest(실행 목록), lineage(계보), artifact registry(산출물 등록부)",다음 run267DQ가 어떤 산출물에서 출발하는지 추적 가능하다.

@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267DO_shared_weakness_breakout_third_followup_or_prune_balance_timeslice_trade_quality_with_runtime_gaps_completed`
+- stage_status(단계 상태): `run267DP_runtime_gap_aware_fourth_followup_or_prune_design_completed`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267DO_stage267_shared_weakness_breakout_third_followup_or_prune_balance_timeslice_trade_quality_with_runtime_gaps_v1`
-- last_completed_run(마지막 완료 실행): `run267DO_stage267_shared_weakness_breakout_third_followup_or_prune_balance_timeslice_trade_quality_with_runtime_gaps_v1`
+- current_run(현재 실행): `run267DP_stage267_runtime_gap_aware_fourth_followup_or_prune_design_v1`
+- last_completed_run(마지막 완료 실행): `run267DP_stage267_runtime_gap_aware_fourth_followup_or_prune_design_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267DP_design_runtime_gap_aware_fourth_followup_or_prune_from_run267DO_review`
+- next_action(다음 행동): `run267DQ_materialize_runtime_gap_aware_fourth_followup_or_prune_queue`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -116,7 +116,7 @@
 - run267BR_anti_overconstraint_cross_period_followup_or_prune_design(267BR 과제약 제거 확장 기간 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BR_anti_overconstraint_cross_period_followup_or_prune_design.md`
 - run267BD_adjacent_period_replacement_mt5_execution(267BD 인접 기간 대체 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267BD_adjacent_period_replacement_mt5_execution.md`
 - run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review(267AU 후보군 전체 상태 피처 엔지니어링 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267AU_pool_wide_state_feature_engineering_followup_balance_timeslice_trade_quality_review.md`
-- next_action(다음 행동): `run267BT_execute_pool_wide_directional_impulse_followup_mt5_batch`
+- next_action(다음 행동): `run267DQ_materialize_runtime_gap_aware_fourth_followup_or_prune_queue`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
 
 Stage267(267단계)는 Baseline candidate pool(기준 후보군)을 racing start line(경주 출발선)으로 둘 뿐, operating baseline(운영 기준선)으로 선택하지 않는다.
@@ -367,6 +367,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267DM_shared_weakness_breakout_third_followup_or_prune_mt5_execution(267DM 공유 약점 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DM_shared_weakness_breakout_third_followup_or_prune_mt5_execution.md`
 - run267DN_remaining_runtime_retry(267DN 남은 런타임 재시도): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DN_shared_weakness_breakout_third_followup_or_prune_remaining_runtime_retry.md`
 - run267DO_runtime_gap_aware_balance_timeslice_trade_quality_review(267DO 런타임 공백 포함 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DO_shared_weakness_breakout_third_followup_or_prune_balance_timeslice_trade_quality_with_runtime_gaps.md`
+- run267DP_runtime_gap_aware_fourth_followup_or_prune_design(267DP 런타임 공백 반영 4차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DP_runtime_gap_aware_fourth_followup_or_prune_design.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
@@ -534,4 +535,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DO(267DO 실행)는 run267DM/run267DN(267DM/267DN 실행)을 함께 읽어 completed runtime(완료 런타임) 행은 곡선/시간구간/거래품질로, blocked retry(차단 재시도) 행은 runtime gap(런타임 공백)으로 분리했다.
 Effect(효과): candidate_profile_rows(후보-프로필 행) `5`, runtime_gap_attempts(런타임 공백 시도) `9`, negative_slices(음수 구간) `6`를 만들었고, 다음은 runtime gap aware fourth follow-up/prune design(런타임 공백 반영 4차 후속/가지치기 설계)이다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DP(267DP 실행)는 run267DO(267DO 실행)의 completed runtime(완료 런타임)과 runtime gap(런타임 공백)을 분리해 fourth follow-up/prune design(4차 후속/가지치기 설계)으로 바꿨다.
+Effect(효과): materialization queue(물질화 대기열) `4`개, prune matrix(가지치기 행렬) `4`개, failure memory(실패 기억) `4`개를 만들었다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
