@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267EJ_runtime_gap_aware_ninth_followup_or_prune_design_completed`
+- stage_status(단계 상태): `run267EK_runtime_gap_aware_ninth_followup_or_prune_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267EJ_stage267_runtime_gap_aware_ninth_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267EJ_stage267_runtime_gap_aware_ninth_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267EK_stage267_runtime_gap_aware_ninth_followup_or_prune_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267EK_stage267_runtime_gap_aware_ninth_followup_or_prune_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267EK_materialize_runtime_gap_aware_ninth_followup_or_prune_queue`
+- next_action(다음 행동): `run267EL_execute_runtime_gap_aware_ninth_followup_or_prune_mt5_batch`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -638,4 +638,9 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267EJ(267EJ 실행)는 run267EI(267EI 실행)의 tracked report(추적 보고서)를 원천으로 handoff gap(인계 공백), 2026.04 shared state(공유 상태), duplicate signature(중복 서명), validation low-PF watch(검증 낮은 PF 관찰), aggressive non-filter reentry(공격형 비필터 재진입)를 9차 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
 Effect(효과): materialization queue(물질화 대기열) `5`개, aggressive rows(공격 행) `1`개, prune matrix(가지치기 행렬) `4`개, failure memory(실패 기억) `4`개를 만들었다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+- run267EK_runtime_gap_aware_ninth_followup_or_prune_materialization(267EK 런타임 공백 반영 9차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267EK_runtime_gap_aware_ninth_followup_or_prune_materialization.md`
+
+Run267EK(267EK 실행)는 run267EJ(267EJ 실행)의 queue(대기열)를 MT5(MetaTrader 5, 메타트레이더5) 실행 가능한 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 물질화했다.
+Effect(효과): variants(변형) `12`개, attempts(시도) `12`개, handoff precheck attempts(인계 사전검사 시도) `4`개, aggressive attempts(공격 시도) `2`개, held rows(보류 행) `1`개를 만들었다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
