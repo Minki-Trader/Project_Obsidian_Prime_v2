@@ -1,12 +1,12 @@
 ﻿# Stage267 Selection Status(267단계 선택 상태)
 
-- stage_status(단계 상태): `run267DX_runtime_gap_aware_sixth_followup_or_prune_design_completed`
+- stage_status(단계 상태): `run267DY_runtime_gap_aware_sixth_followup_or_prune_materialized_execution_pending`
 - current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267DX_stage267_runtime_gap_aware_sixth_followup_or_prune_design_v1`
-- last_completed_run(마지막 완료 실행): `run267DX_stage267_runtime_gap_aware_sixth_followup_or_prune_design_v1`
+- current_run(현재 실행): `run267DY_stage267_runtime_gap_aware_sixth_followup_or_prune_materialization_v1`
+- last_completed_run(마지막 완료 실행): `run267DY_stage267_runtime_gap_aware_sixth_followup_or_prune_materialization_v1`
 - selected_research_baseline(선택 연구 기준선): `none`
 - selected_candidate(선택 후보): `none`
-- next_action(다음 행동): `run267DY_materialize_runtime_gap_aware_sixth_followup_or_prune_queue`
+- next_action(다음 행동): `run267DZ_execute_runtime_gap_aware_sixth_followup_or_prune_mt5_batch`
 - candidate_pool(후보군): `s264_allow_inner_high_quarter;s264_lowrank_control;s262_lowrank_inner_half_filter;s264_allow_inner_all_oos_anchor;s258_short_tight_control`
 - source_boundary(원천 경계): `research_candidate_pool_only`
 - initial_scoreboard(초기 점수판): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_initial_scoreboard.csv`
@@ -376,6 +376,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run267DV_runtime_gap_aware_fifth_followup_or_prune_mt5_execution(267DV 런타임 공백 반영 5차 후속/가지치기 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DV_runtime_gap_aware_fifth_followup_or_prune_mt5_execution.md`
 - run267DW_runtime_gap_aware_fifth_followup_or_prune_balance_timeslice_trade_quality_review(267DW 런타임 공백 반영 5차 후속/가지치기 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DW_runtime_gap_aware_fifth_followup_or_prune_balance_timeslice_trade_quality_with_init_failures.md`
 - run267DX_runtime_gap_aware_sixth_followup_or_prune_design(267DX 런타임 공백 반영 6차 후속/가지치기 설계): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DX_runtime_gap_aware_sixth_followup_or_prune_design.md`
+- run267DY_runtime_gap_aware_sixth_followup_or_prune_materialization(267DY 런타임 공백 반영 6차 후속/가지치기 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267DY_runtime_gap_aware_sixth_followup_or_prune_materialization.md`
 - run267BS_variant_count(267BS 변형 수): `10`
 - run267BS_attempt_count(267BS 시도 수): `10`
 
@@ -579,4 +580,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 Run267DX(267DX 실행)는 run267DW(267DW 실행)의 후보 프로필/초기화 실패/약한 구간 근거를 6차 follow-up/prune design(후속/가지치기 설계)으로 바꿨다.
 Effect(효과): materialization queue(물질화 대기열) `6`개, aggressive/explosive branch(공격/폭발 분기) `3`개, prune matrix(가지치기 행렬) `3`개를 만들었다.
+Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+Run267DY(267DY 실행)는 run267DX(267DX 실행)의 6차 follow-up/prune queue(후속/가지치기 대기열)를 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 바꿨다.
+Effect(효과): variants(변형) `9`개, attempts(시도) `9`개, held rows(보류 행) `1`개를 만들었고, q06 filter-stack(필터 누적) 분기는 단독 실행하지 않았다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
