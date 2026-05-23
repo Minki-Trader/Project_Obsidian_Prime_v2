@@ -1,19 +1,56 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `stage267_baseline_candidate_racing_protocol_v1`
-- current_run(현재 실행): `run267ET_stage267_runtime_gap_aware_tenth_followup_or_prune_mt5_execution_v1`
-- active_stage(활성 단계): `267_adapter_research__baseline_candidate_racing_protocol`
+- current_packet(현재 작업 묶음): `stage285_onnx_export_parity_runtime_reproduction_cp282d_v1`
+- current_run(현재 실행): `run285A_export_cp282d_adapter_to_onnx_and_runtime_reproduction_v1`
+- active_stage(활성 단계): `285_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp282d`
 - selected_research_baseline(선택 연구 기준선): `none`
-- baseline_candidate_pool(기준 후보군): `s264_allow_inner_high_quarter`, `s264_lowrank_control`, `s262_lowrank_inner_half_filter`, `s264_allow_inner_all_oos_anchor`, `s258_short_tight_control`
-- target_surface(목표 표면): `v2_native_baseline_candidate_racing_research_pool`
-- adapter_under_review(검토 중 어댑터): `runtime_gap_aware_tenth_followup_or_prune_mt5_execution`
-- status(상태): `run267ET_runtime_gap_aware_tenth_followup_or_prune_mt5_batch_partial`
+- source_stage(원천 단계): `284_onnx_candidate_campaign__onnx_go_pressure_for_cp282d_adapter`
+- target_surface(목표 표면): `onnx_export_parity_runtime_reproduction_cp282d`
+- adapter_under_review(검토 중 어댑터): `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`
+- status(상태): `completed_cp282d_onnx_export_parity_runtime_reproduction_package_ready_for_main_push`
+- stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
+- stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
 - run267CR_summary(267CR 요약): Run267CR(267CR 실행)은 run267CQ(267CQ 실행)의 공유 약점 후속 queue(대기열)를 variants(변형) `7`개와 attempts(시도) `14`개로 물질화했다. Effect(효과): 다음 run267CS(267CS 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 곡선/약점 구간/거래 품질을 검증할 수 있다.
 - run267CM_summary(267CM 요약): Run267CM(267CM 실행)은 run267CL(267CL 실행)의 양수 후보를 선택하지 않고, feature blueprint(피처 청사진) `3`개, branch decision(분기 판단) `5`개, materialization queue(물질화 대기열) `4`개, prune row(가지치기 행) `4`개로 바꿨다. Effect(효과): 같은 축 수리 루프는 끊고, 공유 약점 상태 피처와 공격형 s264_aih 분기로 다음 실행을 연다.
 - run267CN_summary(267CN 요약): Run267CN(267CN 실행)은 run267CM(267CM 실행)의 공유 약점 돌파 큐를 variants(변형) `6`개, attempts(시도) `12`개, control receipts(대조 영수증) `2`개, guardrail receipts(가드레일 영수증) `2`개로 물질화했다. Effect(효과): 다음 run267CO(267CO 실행)에서 MT5(MetaTrader 5, 메타트레이더5)로 곡선/약점 구간/거래 품질을 검증할 수 있다.
-- next_action(다음 행동): `stop_after_run267ET_mt5_runtime_probe_user_requested_pause`
-- claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_goal_gate`
+- run269A_summary(269A 요약): run269A(269A 실행)는 selectable seed(선택 가능 씨앗) `3`개와 support control(보조 대조) `1`개를 가진 candidate package queue(후보 패키지 대기열)를 설계했다. Effect(효과): Stage267(267단계)의 alias/profile(별칭/프로필)을 후보로 보존하지 않고, package(패키지) 단위로 run269B(269B 실행)에 넘긴다.
+- run269B_summary(269B 요약): run269B(269B 실행)는 materialized candidate package blueprints(물질화된 후보 패키지 청사진) `4`개를 만들었다. Effect(효과): selectable blueprint(선택 가능 청사진) `3`개와 support control(보조 대조) `1`개를 run269C(269C 실행)의 scoring/handoff input(점수/인계 입력) 작업으로 넘긴다.
+- run269C_summary(269C 요약): run269C(269C 실행)는 scoring input specs(점수 입력 규격), handoff input plan(인계 입력 계획), package identity receipts(패키지 정체성 영수증)를 만들었다. Effect(효과): run269D(269D 실행)가 각 package(패키지)의 score columns(점수 열), adapter schema hash(어댑터 스키마 해시), decision rule hash(판단 규칙 해시), handoff payload fields(인계 페이로드 필드)를 소비할 수 있다.
+- run269D_summary(269D 요약): run269D(269D 실행)는 scoring materialization probe(점수 물질화 탐침)를 완료했다. Effect(효과): package(패키지) `4`개, Tier A separate(티어 A 분리) `46650`행, Tier B separate(티어 B 분리) `46650`행, Tier A+B combined(티어 A+B 합산) `93300`행의 score table(점수표)과 handoff JSON(인계 JSON)을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run269E_summary(269E 요약): run269E(269E 실행)는 materialized score surface screen(물질화 점수 표면 선별)을 완료했다. Effect(효과): `cp269A_asymmetric_nonfilter_reentry_surface`를 Stage270(270단계) aggressive upside probe(공격형 상방 탐침) seed(씨앗)로 넘기고, failure memory(실패 기억) `2`행과 support control(보조 대조) `1`행을 남겼으며, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
+- run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- next_action(다음 행동): `commit_and_push_main_then_mark_goal_achieved`
+- claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_final_package_for_onnx_research_handoff_only`
+
+Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
+Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.
+
+Stage268(268단계)는 Stage267(267단계)의 profile(프로필)을 continue clue(계속 볼 단서), failure memory(실패 기억), judgment deferred(판단 보류), non-candidate(비후보), fresh candidate area(새 후보 영역)로 나누고 닫았다.
+Effect(효과): candidate package(후보 패키지)는 `0`개였고, Stage269(269단계)는 새 thesis(논제)로 후보 패키지 설계를 시작한다.
+
+Stage269(269단계)의 run269A(269A 실행)는 `run269A_fresh_candidate_package_queue_design_v1`로 완료됐다.
+Effect(효과): `cp269A_asymmetric_nonfilter_reentry_surface`, `cp269B_identity_collapse_disambiguator`, `cp269C_session_skew_reward_surface`, `cp269D_runtime_handoff_isolation_control`을 다음 materialized blueprint(물질화된 청사진) 대상으로 넘긴다.
+
+Stage269(269단계)의 run269B(269B 실행)는 `run269B_materialized_candidate_package_blueprints_v1`로 완료됐다.
+Effect(효과): 네 package(패키지)에 hypothesis(가설), comparison baseline(비교 기준), control/changed variables(고정/변경 변수), feature order source(피처 순서 원천), scoring owner(점수 소유자), decision rule(판단 규칙), risk rule(위험 규칙), Adapter output schema(어댑터 출력 스키마), runtime handoff plan(런타임 인계 계획)을 붙였다.
+
+Stage269(269단계)의 run269C(269C 실행)는 `run269C_materialized_scoring_handoff_inputs_v1`로 완료됐다.
+Effect(효과): `stage_pipelines/stage269/materialize_scoring_handoff_inputs.py`가 run269B(269B 실행) 청사진에서 scoring/handoff input(점수/인계 입력)을 생성했고, 아직 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+Stage269(269단계)의 run269D(269D 실행)는 `run269D_scoring_materialization_probe_v1`로 완료됐다.
+Effect(효과): `stage_pipelines/stage269/execute_scoring_materialization_probe.py`가 run269C(269C 실행) 규격을 Tier A/Tier B(티어 A/티어 B) model input dataset(모델 입력 데이터셋)에 적용해 score table(점수표), handoff JSON(인계 JSON), tier receipt(티어 영수증), data integrity receipt(데이터 무결성 영수증)를 만들었다. Boundary(경계): performance improvement(성과 개선), selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+Stage269(269단계)의 run269E(269E 실행)는 `run269E_materialized_score_surface_screen_v1`로 완료됐다.
+Effect(효과): `stage_pipelines/stage269/screen_materialized_scores.py`가 run269D(269D 실행)의 score table(점수표)을 구조적으로 선별해 Stage270(270단계) aggressive upside probe(공격형 상방 탐침) 대기열 `1`행, failure memory(실패 기억) `2`행, support control(보조 대조) `1`행을 만들었다. Boundary(경계): trading KPI(거래 핵심 성과 지표), selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+Stage270(270단계)의 run270A(270A 실행)는 `run270A_aggressive_upside_probe_design_v1`로 완료됐다.
+Effect(효과): `stage_pipelines/stage270/design_aggressive_upside_probe.py`가 run269E(269E 실행)의 queue(대기열), cp269A(269A 패키지) score table(점수표), cp269D(269D 패키지) support control(보조 대조)을 소비해 aggressive branch(공격형 분기) `6`개와 structural supply metrics(구조 공급 지표)를 만들었다. Boundary(경계): trading KPI(거래 핵심 성과 지표), selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+Stage270(270단계)의 run270B(270B 실행)는 `run270B_aggressive_probe_payload_materialization_v1`로 완료됐다.
+Effect(효과): `stage_pipelines/stage270/materialize_aggressive_probe_payloads.py`가 run270A(270A 실행)의 branch(분기)를 payload parquet(페이로드 parquet), handoff JSON(인계 JSON), Tier A MT5 signal CSV(Tier A MT5 신호 CSV), MT5 probe queue(MT5 탐침 대기열)로 물질화했다. Boundary(경계): MT5 runtime output(MT5 런타임 출력), trading KPI(거래 핵심 성과 지표), selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
 
 Stage266(266단계)는 실행(run, 실행) 전 계획(planning, 계획) 상태에서 사용자 지정 R&D racing goal(연구개발 경주 목표)에 의해 superseded(대체)되었다.
 Effect(효과): `s264_allow_inner_high_quarter`만 좁게 late segment repair(후반 구간 수리)하지 않고, Stage267(267단계)에서 다섯 후보를 같은 연구 기준 후보군(research baseline candidate pool, 연구 기준 후보군)으로 비교한다.
@@ -814,3 +851,116 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 Run267ET(267ET 실행)는 run267ES(267ES 실행)의 runtime gap aware tenth follow-up/prune(런타임 공백 반영 10차 후속/가지치기) attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5)에서 실행했다.
 Effect(효과): attempt(시도) `12/12`개 중 KPI records(KPI 기록) `8`개를 만들었고, 다음에는 balance/equity curve(잔액/평가금 곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)를 본다.
 Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+- run270C_summary(270C 요약): run270C(270C 실행)는 aggressive probe(공격형 탐침) signal replay(신호 재생)를 MT5(MetaTrader 5, 메타트레이더5)로 시도했다. Effect(효과): attempts(시도) `20`개와 KPI records(KPI 기록) `20`개를 남겼고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run270D_summary(270D 요약): run270D(270D 실행)는 run270C(270C 실행)의 MT5(MetaTrader 5, 메타트레이더5) report(보고서) `20`개를 trade list(거래 목록), curve(곡선), time-slice KPI(시간구간 핵심 성과 지표), trade quality(거래 품질)로 검토했다. Effect(효과): trade records(거래 기록) `7628`개, active probe failures(활성 탐침 실패) `4`개, survivors(생존 후보) `0`개를 남겼고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run270E_summary(270E 요약): Stage270(270단계)는 active probe survivor(활성 탐침 생존 후보) `0`개로 닫고 Stage271(271단계) `271_onnx_candidate_campaign__fresh_edge_rebuild_after_nonfilter_failure`를 열었다. Effect(효과): 같은 non-filter reward-skew repair(비필터 보상 기울기 수리)를 반복하지 않고 fresh edge rebuild(새 거래 우위 재구성)로 넘어간다.
+- stage271_open_summary(271단계 개방 요약): Stage271(271단계)는 loss-asymmetry/time-risk decision surface(손실 비대칭/시간 위험 판단 표면)를 새 후보 패키지 질문으로 다룬다. Effect(효과): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 아직 없다.
+
+- run271A_summary(271A 요약): run271A(271A 실행)는 selectable fresh candidate seed(선택 가능 새 후보 씨앗) `3`개와 support control(보조 대조) `1`개를 설계했다. Effect(효과): Stage270(270단계)의 failure memory(실패 기억)를 후보 보존이 아니라 새 candidate package queue(후보 패키지 대기열)로 바꿨고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run271B_summary(271B 요약): run271B(271B 실행)는 selectable blueprint(선택 가능 청사진) `3`개와 support control(보조 대조) `1`개를 물질화했다. Effect(효과): feature order hash(피처 순서 해시), decision rule hash(판단 규칙 해시), risk rule hash(위험 규칙 해시), Adapter schema hash(어댑터 스키마 해시), handoff plan(인계 계획)을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run271C_summary(271C 요약): run271C(271C 실행)는 rows(행) `46650`, feature_count(피처 수) `58`, feature_order_hash(피처 순서 해시) `fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2`를 확인하고 scoring input specs(점수 입력 규격)와 handoff skeletons(인계 골격)를 만들었다. Effect(효과): run271D(271D 실행)가 점수표(score table, 점수표)를 만들 수 있지만, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run271D_summary(271D 요약): run271D(271D 실행)는 package(패키지) `4`개에 Tier A separate(Tier A 분리) `46650`행, Tier B separate(Tier B 분리) `46650`행, Tier A+B combined(Tier A+B 합산) `93300`행의 score table(점수표)을 만들었다. Effect(효과): run271E(271E 실행)가 score surface(점수 표면)를 선별할 수 있지만 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run271E_summary(271E 요약): run271E(271E 실행)는 Stage272 probe queue(272단계 탐침 대기열) `1`행과 failure memory(실패 기억) `2`행을 만들었다. Effect(효과): cp271B(271B 패키지)는 probe seed(탐침 씨앗)로만 남기고 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run271F_summary(271F 요약): Stage271(271단계)는 `cp271B_time_risk_phase_router_surface`를 Stage272(272단계) pressure probe seed(압박 탐침 씨앗)로 넘기고 닫았다. Effect(효과): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않고 `run272A_design_time_risk_router_pressure_probe_packet`으로 넘어간다.
+
+- stage272_open_summary(272단계 개방 요약): Stage272(272단계)는 time-risk router pressure probe(시간 위험 라우터 압박 탐침)를 단일 질문으로 연다. Effect(효과): OOS(표본외), weak slice(약한 구간), route mix(경로 혼합)를 압박해 Adapter package(어댑터 패키지)로 넘길 가치가 있는지 본다.
+
+- run272A_summary(272A 요약): run272A(272A 실행)는 time-risk router pressure probe packet(시간 위험 라우터 압박 탐침 묶음)을 설계했다. Effect(효과): branch(분기) `6`개와 MT5 probe design queue(MT5 탐침 설계 대기열) `4`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run272B_summary(272B 요약): run272B(272B 실행)는 time-risk router pressure probe payloads(시간 위험 라우터 압박 탐침 페이로드)를 물질화했다. Effect(효과): payload parquet(페이로드 파케이) `4`개와 MT5 probe queue(MT5 탐침 대기열) `4`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run272C_summary(272C 요약): run272C(272C 실행)는 time-risk router(시간 위험 라우터) route signal replay(경로 신호 재생)를 MT5(`MetaTrader 5`, 메타트레이더5)로 준비/시도했다. Effect(효과): attempts(시도) `16`개와 KPI records(KPI 기록) `16`개를 남겼고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run272D_summary(272D 요약): run272D(272D 실행)는 q04(4번 분기)를 pressure survivor(압박 생존 분기)로 남겼다. Effect(효과): Stage273(273단계) stability validation(안정성 검증) 씨앗은 생겼지만, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- stage273_open_summary(273단계 개방 요약): Stage273(273단계)는 q04(4번 분기) stability validation(안정성 검증)으로 열렸다. Effect(효과): Stage272(272단계)의 pressure survivor(압박 생존 분기)를 후보로 확정하지 않고, 곡선/구간/거래품질 압박으로 넘긴다.
+
+- run273A_summary(273A 요약): run273A(273A 실행)는 q04(4번 분기)의 stability validation packet(안정성 검증 묶음)을 설계했다. Effect(효과): stability plan(안정성 계획), slice plan(구간 계획), curve queue(곡선 대기열), trade quality plan(거래 품질 계획), Adapter identity precheck(어댑터 정체성 사전점검)를 만들었고 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run273B_summary(273B 요약): run273B(273B 실행)는 q04(4번 분기)의 MT5 report(MT5 보고서) 거래 목록과 잔액 곡선을 검토해 stability failure(안정성 실패)를 기록했다. Effect(효과): failure rows(실패 행) `4`개를 만들었고 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run273C_summary(273C 요약): Stage273(273단계)는 q04(4번 분기) stability failure(안정성 실패)로 닫고 Stage274(274단계) 후보 재구성을 열었다. Effect(효과): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않고 next_action(다음 행동)은 `run274A_design_post_q04_failure_candidate_rebuild_packet`이다.
+
+- run274A_summary(274A 요약): run274A(274A 실행)는 q04(4번 분기) 실패 이후 candidate rebuild thesis queue(후보 재구성 논제 대기열) `4`개를 만들었다. Effect(효과): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않고 run274B(274B 실행) 물질화로 넘긴다.
+
+- run274B_summary(274B 요약): run274B(274B 실행)는 post-q04 candidate package blueprint(q04 이후 후보 패키지 청사진) `4`개를 물질화했다. Effect(효과): selectable blueprint(선택 가능 청사진) `3`개와 support control(보조 대조) `1`개를 run274C(274C 실행) 점수/인계 입력으로 넘기며, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run274C_summary(274C 요약): run274C(274C 실행)는 scoring input specs(점수 입력 규격), handoff input plan(인계 입력 계획), package identity receipts(패키지 정체성 영수증), handoff skeletons(인계 골격)을 package(패키지) `4`개에 대해 만들었다. Effect(효과): selectable package(선택 가능 패키지) `3`개와 support control(보조 대조) `1`개를 run274D(274D 실행)의 deterministic score materialization(결정 점수 물질화) 입력으로 넘기며, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run274D_summary(274D 요약): run274D(274D 실행)는 package(패키지) `4`개에 deterministic score table(결정 점수표)을 만들고 Tier A separate/Tier B separate/Tier A+B combined(티어 A 분리/티어 B 분리/티어 A+B 합산) 요약 `12`행을 기록했다. Effect(효과): run274E(274E 실행)에서 score surface(점수 표면)를 선별할 수 있지만, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run274E_summary(274E 요약): run274E(274E 실행)는 score surface(점수 표면) `4`개를 q04 control(q04 대조)과 비교했고, probe queue(탐침 대기열) `0`행, failure memory(실패 기억) `3`행을 만들었다. Effect(효과): Stage274(274단계)의 post-q04 rebuild(q04 이후 재구성)는 filter-like/duplicate(필터형/중복) 실패로 닫을 준비를 하며, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run274F_summary(274F 요약): Stage274(274단계)는 probe queue(탐침 대기열) `0`행, failure memory(실패 기억) `3`행으로 닫고 Stage275(275단계)를 fresh candidate construction(새 후보 구성)으로 열었다. Effect(효과): q04 repair(q04 수리) 반복을 끊고 새 active entry/direction surface(새 활성 진입/방향 표면)를 요구한다.
+
+- run275A_summary(275A 요약): run275A(275A 실행)는 selectable fresh candidate seed(선택 가능 새 후보 씨앗) `4`개와 support control(보조 대조) `1`개를 설계했다. Effect(효과): q04 repair(q04 수리)를 반복하지 않고 새 active entry/direction switch(활성 진입/방향 전환) 조건을 run275B(275B 실행) 청사진 물질화로 넘긴다. Boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run275B_summary(275B 요약): run275B(275B 실행)는 selectable blueprint(선택 가능 청사진) `4`개와 support control(보조 대조) `1`개를 물질화했다. Effect(효과): feature order hash(피처 순서 해시), decision rule hash(판단 규칙 해시), risk rule hash(위험 규칙 해시), Adapter schema hash(어댑터 스키마 해시)를 package(패키지)별로 고정하고 run275C(275C 실행) 점수/인계 입력으로 넘긴다. Boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run275C_summary(275C 요약): run275C(275C 실행)는 scoring input specs(점수 입력 규격)와 handoff skeletons(인계 골격)를 package(패키지) `5`개에 대해 만들었다. Effect(효과): complete input packages(완전 입력 패키지) `4/5`개를 run275D(275D 실행) score materialization(점수 물질화)로 넘긴다. Boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run275D_summary(275D 요약): run275D(275D 실행)는 package(패키지) `5`개의 score table(점수표)와 handoff JSON(인계 JSON)을 만들었다. Effect(효과): Tier A/B/A+B(티어 A/B/A+B) 합산 `466500`행 중 active signal(활성 신호) `147774`개를 run275E(275E 실행) screen(선별)으로 넘기며, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run275E_summary(275E 요약): run275E(275E 실행)는 Stage276 aggressive probe seed(276단계 공격형 탐침 씨앗) `3`개와 failure memory(실패 기억) `1`개를 만들었다. Effect(효과): 다음 작업은 Stage275(275단계)를 닫고 Stage276(276단계)에서 MT5 pressure probe(MT5 압박 탐침)를 설계하는 것이며, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run275F_summary(275F 요약): Stage275(275단계)를 probe seed(탐침 씨앗) `3`개와 failure memory(실패 기억) `1`개로 닫고 Stage276(276단계)를 aggressive fresh surface probe(공격형 새 표면 탐침)로 열었다. Effect(효과): 다음 실행은 MT5 pressure probe(MT5 압박 탐침) 설계이며 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 없다.
+
+- run276A_summary(276A 요약): branch plan(분기 계획) `12`행과 MT5 probe design queue(MT5 탐침 설계 대기열) `12`행을 만들었다. Effect(효과): run276B(276B 실행)가 payload(페이로드)를 만들 수 있고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run276B_summary(276B 요약): payload parquet(페이로드 파케이) `12`개와 MT5 probe queue(MT5 탐침 대기열) `12`행을 만들었다. Effect(효과): run276C(276C 실행)에서 MT5 runtime output(MT5 런타임 출력)을 시도할 수 있고, selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run276C_summary(276C 요약): run276C(276C 실행)는 aggressive fresh surface(공격형 새 표면) route signal replay(경로 신호 재생)를 MT5(MetaTrader 5, 메타트레이더5)로 준비/시도했다. Effect(효과): attempts(시도) `48`개와 KPI records(KPI 기록) `48`개를 남겼거나 준비했고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run276D_summary(276D 요약): run276D(276D 실행)는 run276C(276C 실행)의 48개 MT5(MetaTrader 5, 메타트레이더5) report(보고서)를 trade list(거래 목록), curve(곡선), time-slice KPI(시간 구간 핵심 성과 지표), trade quality(거래 품질)로 검토했다. Effect(효과): survivor watch(생존 관찰) `0`개와 failure memory(실패 기억) `12`개를 남겼고 selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run276E_summary(276E 요약): Stage276(276단계)을 valid negative(유효한 부정)로 닫고 Stage277(277단계)을 fresh thesis rebuild(새 논제 재구성) seed(씨앗) `4`개로 열었다. Effect(효과): failure memory(실패 기억) `12`개를 후보 보존이 아니라 새 thesis(논제) 입력으로 넘기며 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run277A_summary(277A 요약): seed(씨앗) `4`개를 package queue(패키지 대기열) `4`개와 feature/decision/risk/Adapter handoff(피처/판단/위험/어댑터 인계) 계획으로 바꿨다. Effect(효과): 다음 run277B(277B 실행)에서 물질화할 수 있지만 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run277B_summary(277B 요약): package blueprint(패키지 청사진) `4`개와 feature contract/decision rule/adapter schema/hash receipts(피처 계약/판단 규칙/어댑터 스키마/해시 영수증)를 만들었다. Effect(효과): run277C(277C 실행) scoring/handoff input(점수/인계 입력)으로 넘기며 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run277C_summary(277C 요약): scoring/handoff input(점수/인계 입력) `4`개를 만들었다. Effect(효과): run277D(277D 실행)가 점수표와 handoff JSON(인계 JSON)을 만들 수 있지만 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run277D_summary(277D 요약): package(패키지) `4`개에 대해 Tier A/Tier B(티어 A/티어 B) score table(점수표)와 handoff JSON(인계 JSON)을 만들었다. Effect(효과): run277E(277E 실행) score surface screen(점수 표면 선별)로 넘기며 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run277E_summary(277E 요약): score surface screen(점수 표면 선별)에서 probe queue(탐침 대기열) `2`개와 failure memory(실패 기억) `2`개를 만들었다. Effect(효과): Stage278(278단계) MT5 probe(MT5 탐침)로 넘기되 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run277F_summary(277F 요약): Stage277(277단계)을 probe queue(탐침 대기열) `2`개와 failure memory(실패 기억) `2`개로 닫고 Stage278(278단계)을 fresh thesis MT5 probe(새 논제 MT5 탐침)로 열었다. Effect(효과): cp277C/cp277D(277C/277D 패키지)는 probe seed(탐침 씨앗)일 뿐 selected candidate(선택 후보)가 아니며, ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run278A_summary(278A 요약): fresh thesis MT5 probe packet(새 논제 MT5 탐침 묶음)을 branch(분기) `8`개와 MT5 probe design queue(MT5 탐침 설계 대기열) `6`개로 설계했다. Effect(효과): run278B(278B 실행)가 payload(페이로드)를 만들 수 있지만 selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run278B_summary(278B 요약): fresh thesis MT5 probe payloads(새 논제 MT5 탐침 페이로드)를 물질화했다. Effect(효과): payload parquet(페이로드 파케이) `6`개와 MT5 probe queue(MT5 탐침 대기열) `6`행을 만들었고, selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run278C_summary(278C 요약): run278C(278C 실행)는 MT5 probe(MT5 탐침)를 tester(테스터) 전에 차단했다. Effect(효과): active/flat(활성/관망) 신호 `6`개를 long/short(롱/숏)로 임의 변환하지 않고 direction mapping gap(방향 매핑 공백)으로 기록했으며 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- stage279_open_summary(279단계 개시 요약): Stage278(278단계)은 direction mapping gap(방향 매핑 공백)으로 닫고 Stage279(279단계)를 열었다. Effect(효과): blocked attempts(차단 시도) `6`개와 gap rows(공백 행) `6`개를 입력으로 삼아 supported direction surface(지원되는 방향 표면) 또는 discard(폐기)를 설계한다.
+
+- run279A_summary(279A 요약): direction mapping rebuild(방향 매핑 재구성) branch(분기) `5`개와 materialization queue(물질화 대기열) `4`개를 설계했다. Effect(효과): run279B(279B 실행)가 supported direction source(지원되는 방향 원천)를 물질화하거나 폐기할 수 있고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run279B_summary(279B 요약): direction mapping input materialization(방향 매핑 입력 물질화)을 완료했다. Effect(효과): directional payload(방향 페이로드) `12`개와 MT5 probe queue(MT5 탐침 대기열) `12`행을 만들었고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run279C_summary(279C 요약): directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)를 준비/실행했다. Effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `0`개를 기록했거나 준비했고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run279D_summary(279D 요약): Stage279(279단계)를 runtime probe review(런타임 탐침 검토)로 닫고 Stage280(280단계)를 열었다. Effect(효과): survivor seed(생존 씨앗) `3`개와 failure memory(실패 기억) `8`개를 만들었고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run280A_summary(280A 요약): Stage280(280단계)는 생존 씨앗 `3`개를 월/세션/곡선/거래품질로 압박했고 선택 후보 없이 Stage281(281단계)를 열었다. Effect(효과): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run281A_summary(281A 요약): 손실폭 정규화 방향 후보 입력 `4`개를 물질화했다. Effect(효과): MT5 탐침으로 넘길 수 있지만 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run281B_summary(281B 요약): 손실폭 정규화 방향 후보 MT5 탐침을 실행/준비했다. Effect(효과): attempts(시도) `24`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `0`개를 기록했거나 준비했고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run281C_summary(281C 요약): Stage281(281단계)의 MT5 탐침 `4`개 분기를 검토하고 선택 후보 없이 Stage282(282단계)를 열었다. Effect(효과): OOS(표본외) 상방은 실패 기억으로만 쓰고 validation-first(검증 우선) 후보 구성을 새 질문으로 넘긴다.
+
+- run282A_summary(282A 요약): validation-first(검증 우선) 후보 입력 `4`개를 물질화했다. Effect(효과): MT5 탐침으로 넘길 수 있지만 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run282B_summary(282B 요약): 검증 우선 비대칭 확인 MT5 탐침을 실행/준비했다. Effect(효과): attempts(시도) `12`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `12`개를 기록했거나 준비했고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
+
+- run282C_summary(282C 요약): `cp282D_macro_trend_countercheck_surface`를 Adapter package(어댑터 패키지) 대상으로 선택하고 Stage283(283단계)를 열었다. Effect(효과): 후보는 생겼지만 Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 아직 없다.
+
+- run283A_summary(283A 요약): `cp282D_macro_trend_countercheck_surface`의 Adapter package(어댑터 패키지) `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`를 구성하고 Stage284(284단계)를 열었다. Effect(효과): ONNX readiness(온엑스 준비)는 아직 주장하지 않고 마지막 압박 검증으로 넘긴다.
+
+- run284A_summary(284A 요약): Adapter package(어댑터 패키지) `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`가 ONNX-go pressure(온엑스 진행 압박)를 통과했다. Effect(효과): Stage285(285단계)에서 ONNX export/parity/runtime reproduction(온엑스 내보내기/동등성/런타임 재현)을 시작한다.
+
+- run285A_summary(285A 요약): ONNX export(온엑스 내보내기), Python parity(파이썬 동등성), feature order parity(피처 순서 동등성), MT5 runtime reproduction(MT5 런타임 재현)을 `completed`로 기록했다. Effect(효과): attempts(시도) `6`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `6`개를 cp282D 후보 패키지 근거로 묶고, main push(메인 푸시) 전까지 Goal Achieve(목표 달성)는 `complete_pending_main_push`로 둔다.

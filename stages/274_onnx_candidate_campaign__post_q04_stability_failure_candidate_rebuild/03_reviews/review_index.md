@@ -1,0 +1,39 @@
+﻿# Stage274 Review Index(274단계 검토 색인)
+
+- stage_brief(단계 개요): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/00_spec/stage_brief.md`
+- input_refs(입력 참조): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/01_inputs/input_refs.md`
+- selection_status(선택 상태): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/04_selected/selection_status.md`
+- stage_run_ledger(단계 실행 장부): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/stage_run_ledger.csv`
+- source_stage273_closeout(원천 273단계 종료): `stages/273_onnx_candidate_campaign__time_risk_router_stability_validation/03_reviews/stage273_closeout_stage274_candidate_rebuild_handoff.md`
+
+- run274A_report(274A 보고서): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274A_report.md`
+- run274A_candidate_queue(274A 후보 대기열): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274A/candidate_rebuild_thesis_queue.csv`
+- run274A_failure_map(274A 실패 지도): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274A/failure_to_requirement_map.csv`
+- run274A_blueprint_seeds(274A 청사진 씨앗): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274A/candidate_package_blueprint_seeds.csv`
+
+- run274B_report(274B 보고서): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274B_report.md`
+- run274B_package_blueprints(274B 패키지 청사진): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274B/package_blueprints.json`
+- run274B_blueprint_matrix(274B 청사진 행렬): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274B_blueprints.csv`
+- run274B_scoring_surface_plan(274B 점수 표면 계획): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274B/scoring_surface_plan.csv`
+- run274B_adapter_contract_plan(274B 어댑터 계약 계획): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274B/adapter_contract_plan.csv`
+
+- run274C_report(274C 보고서): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274C_report.md`
+- run274C_scoring_input_specs(274C 점수 입력 규격): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274C/scoring_input_specs.json`
+- run274C_handoff_input_plan(274C 인계 입력 계획): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274C/handoff_input_plan.csv`
+- run274C_package_identity_receipts(274C 패키지 정체성 영수증): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274C/package_identity_receipts.csv`
+- run274C_handoff_matrix(274C 인계 행렬): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274C_handoff_matrix.csv`
+
+- run274D_report(274D 보고서): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274D_report.md`
+- run274D_score_surface_summary(274D 점수 표면 요약): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274D/score_surface_summary.csv`
+- run274D_summary_by_view(274D 보기별 요약): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274D_score_surface_summary.csv`
+- run274D_normalization_receipt(274D 정규화 영수증): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274D/normalization_receipt.json`
+
+- run274E_report(274E 보고서): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/run274E_report.md`
+- run274E_screening_decision_matrix(274E 선별 결정 행렬): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274E/screening_decision_matrix.csv`
+- run274E_failure_memory(274E 실패 기억): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274E/failure_memory.csv`
+- run274E_probe_queue(274E 탐침 대기열): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274E/probe_queue.csv`
+- run274E_stage275_handoff(274E 275단계 인계): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274E/stage275_handoff_recommendation.json`
+
+- stage274_closeout_stage275(274단계 종료/275단계 개방): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/stage274_closeout_stage275_fresh_candidate_construction_handoff.md`
+- stage274_to_stage275_decision(274->275 결정): `docs/decisions/2026-05-23_stage274_closeout_stage275_fresh_candidate_construction_open.md`
+- run274F_manifest(274F 실행 목록): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/02_runs/run274F/run_manifest.json`

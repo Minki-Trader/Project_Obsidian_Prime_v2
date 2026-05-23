@@ -1,0 +1,12 @@
+{
+  "direction_surface_hash": "8caa09c2553f85444b4a01adcb187d1bce362959f467a8e8aacee749b9a8e483",
+  "materialized_branch_id": "run282A_cp282D_macro_trend_countercheck",
+  "rule": {
+    "blend": "Use q03 direction only when q03 is non-flat and DI spread or RSI slope agrees; otherwise use q02 direction.",
+    "countercheck": "Allow direction only when local DI/EMA trend agrees or macro relative strength plus DI agree.",
+    "pressure": "Require historical_vol_5_over_20 in [0.70, 1.50] and abs(return_zscore_20) <= 1.25."
+  },
+  "runtime_signal": "route_signal_value",
+  "selected_candidate": "cp282D_macro_trend_countercheck_surface",
+  "surface_summary": "q03 can replace q02 only when local trend and macro countercheck agree."
+}

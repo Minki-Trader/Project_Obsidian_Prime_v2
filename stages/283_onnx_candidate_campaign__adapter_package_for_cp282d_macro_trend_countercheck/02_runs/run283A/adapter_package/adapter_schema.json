@@ -1,0 +1,25 @@
+{
+  "adapter_package_id": "stage283_cp282d_macro_trend_countercheck_adapter_package_v1",
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_candidate_package_gate",
+  "feature_order_hash": "171b545c231c11df3686e77d62d930c01807dc1165c49fb5e96bbb1bf97ed22d",
+  "runtime_input_features": [
+    "route_signal_value"
+  ],
+  "runtime_output": {
+    "score_flat": "1.0 when route_signal_value is 0 else 0.0",
+    "score_long": "1.0 when route_signal_value is +1 else 0.0",
+    "score_short": "1.0 when route_signal_value is -1 else 0.0"
+  },
+  "selected_candidate": "cp282D_macro_trend_countercheck_surface",
+  "source_feature_order_hash": "3a8ef7800f010e2347232cb22d143ed140641c2413b04f4fd77c04a2a1e3ad14",
+  "source_reconstruction_features": [
+    "direction_signal_value",
+    "historical_vol_5_over_20",
+    "return_zscore_20",
+    "di_spread_14",
+    "ema20_ema50_diff",
+    "rsi_14_slope_3",
+    "us100_minus_mega8_equal_return_1",
+    "us100_minus_top3_weighted_return_1"
+  ]
+}

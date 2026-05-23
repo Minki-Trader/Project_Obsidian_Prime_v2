@@ -96,3 +96,65 @@ Register ideas when they become durable work, not for every passing thought.
 - 2026-05-03 Stage16 closeout(16단계 종료): QDA(이차 판별 분석)는 `closed_inconclusive_qda_class_covariance_runtime_probe_evidence`로 닫았다. 효과(effect, 효과): `run10I` 보존 단서와 full58(전체 58개 피처) reg0.18(정규화 0.18) OOS(표본외) spike(튀는 성과)를 실패 기억과 함께 남기고, 같은 single split(단일 분할) QDA micro-tuning(미세 조정)은 멈춘다.
 - 2026-05-03 Stage17 open-only(17단계 개방만): `17_topic_pending__open_only`를 topic pending(주제 보류)으로 열었다. 효과(effect, 효과): 새 topic(주제), model family(모델 계열), run(실행), KPI(핵심성과지표)는 아직 만들지 않는다.
 - 2026-05-03 Stage17 topic selection(17단계 주제 선택): `17_model_family_challenge__xgboost_regularized_boosting_scout`를 XGBoost(`Extreme Gradient Boosting`, 익스트림 그래디언트 부스팅) regularized boosting(규제 부스팅) 주제로 열었다. 효과(effect, 효과): 첫 XGBoost(익스지부스트) run(실행)을 설계할 수 있게 하되 baseline(기준선), promotion(승격), runtime authority(런타임 권위)는 만들지 않는다.
+
+| `IDEA-ST271-FRESH-EDGE-REBUILD-AFTER-NONFILTER-FAILURE` | `271_onnx_candidate_campaign__fresh_edge_rebuild_after_nonfilter_failure` | loss-asymmetry/time-risk decision surface(손실 비대칭/시간 위험 판단 표면)가 Stage270(270단계)의 non-filter reward-skew failure(비필터 보상 기울기 실패)를 새 후보 패키지 경로로 바꿀 수 있다 | `Tier A + Tier B paired exploration(Tier A + Tier B 쌍 탐색)` | `opened_research_development_only` | `run271A_design_fresh_edge_rebuild_queue`에서 fresh edge rebuild queue(새 거래 우위 재구성 대기열)를 설계한다. selected candidate(선택 후보), ONNX readiness(온엑스 준비), runtime authority(런타임 권위)는 없음 |
+
+| `IDEA-ST271-CP271B-TIME-RISK-PHASE-ROUTER` | `271_onnx_candidate_campaign__fresh_edge_rebuild_after_nonfilter_failure` | time-risk phase router(시간 위험 국면 라우터)가 Stage270(270단계) 실패 뒤 약한 구간을 분리할 수 있다 | `Tier A + Tier B paired structural scout(Tier A + Tier B 쌍 구조 스카우트)` | `probe_seed_not_candidate` | run271E(271E 실행); Stage272 probe queue(272단계 탐침 대기열) 1행, selected candidate(선택 후보) 아님 |
+
+| `IDEA-ST272-TIME-RISK-ROUTER-PRESSURE-PROBE` | `272_onnx_candidate_campaign__time_risk_router_pressure_probe` | time-risk phase router(시간 위험 국면 라우터)가 OOS(표본외) 약점과 route mix(경로 혼합) 붕괴를 견디면 Adapter package(어댑터 패키지) 압박으로 넘어갈 수 있다 | `Tier A + Tier B paired exploration(Tier A + Tier B 쌍 탐색)` | `opened_research_development_only` | `run272A_design_time_risk_router_pressure_probe_packet`에서 pressure design(압박 설계), discard condition(폐기 조건), MT5 probe plan(MT5 탐침 계획)을 만든다. selected candidate(선택 후보), ONNX readiness(온엑스 준비)는 없음 |
+
+| `IDEA-ST272-TIME-RISK-ROUTER-PRESSURE-PROBE-RUN272A` | `272_onnx_candidate_campaign__time_risk_router_pressure_probe` | cp271B(271B 패키지)의 time-risk router(시간 위험 라우터)를 압박 분기 `6`개로 나눠 MT5 probe(MT5 탐침) 전 failure boundary(실패 경계)를 본다 | `Tier A + Tier B paired exploration(Tier A + Tier B 쌍 탐색)` | `design_packet_ready_no_candidate` | MT5 probe design queue(MT5 탐침 설계 대기열) `5`행. selected candidate(선택 후보), ONNX readiness(온엑스 준비)는 없음 |
+
+| `IDEA-ST272-TIME-RISK-ROUTER-PRESSURE-PROBE-RUN272B` | `272_onnx_candidate_campaign__time_risk_router_pressure_probe` | run272A(272A 실행)의 pressure branch(압박 분기)를 payload parquet(페이로드 파케이)와 MT5 signal CSV(MT5 신호 CSV)로 물질화한다 | `Tier A + Tier B paired exploration(Tier A + Tier B 쌍 탐색)` | `payload_materialized_no_candidate` | payload(페이로드) `4`개, MT5 queue(MT5 대기열) `4`행, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST272-TIME-RISK-ROUTER-PRESSURE-PROBE-RUN272D` | `272_onnx_candidate_campaign__time_risk_router_pressure_probe` | q04(4번 분기)를 pressure survivor(압박 생존 분기)로 Stage273(273단계)에 넘긴다 | `Tier A + Tier B paired MT5 runtime probe(Tier A + Tier B 쌍 MT5 런타임 탐침)` | `pressure_survivor_no_candidate` | survivor rows(생존 행) `2`개, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST274-POST-Q04-CANDIDATE-BLUEPRINTS-RUN274B` | `274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild` | q04 failure memory(q04 실패 기억)를 새 candidate package blueprint(후보 패키지 청사진)로 재구성 | `blueprints=4;selectable=3;support_control=1` | `materialized_blueprint_no_selection` | selected candidate(선택 후보) 없음, ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST275-FRESH-CANDIDATE-CONSTRUCTION-AFTER-FILTER-LIKE-FAILURE` | `275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure` | filter-like rebuild failure(필터형 재구성 실패) 이후 새 active entry/direction surface(새 활성 진입/방향 표면)를 만든다 | `Tier A + Tier B paired exploration(Tier A + Tier B 쌍 탐색)` | `opened_research_development_only` | next_action(다음 행동) `run275A_design_fresh_candidate_construction_packet`; selected candidate(선택 후보), ONNX readiness(온엑스 준비)는 없음 |
+
+## 2026-05-23 run275E_screen_fresh_candidate_score_surfaces_v1
+
+- idea(아이디어): Stage276 aggressive fresh surface probe(276단계 공격형 새 표면 탐침) seeds(씨앗) `3`개.
+- evidence(근거): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275E/stage276_queue.csv`
+- boundary(경계): probe seed(탐침 씨앗)이며 selected candidate(선택 후보)가 아니다.
+
+| `IDEA-ST276-AGGRESSIVE-FRESH-SURFACE-PROBE` | `276_onnx_candidate_campaign__aggressive_fresh_surface_probe` | Stage275(275단계) fresh surface(새 표면) queue(대기열)를 MT5 pressure probe(MT5 압박 탐침)로 검증한다. | `Tier A + Tier B paired exploration(Tier A + Tier B 쌍 탐색)` | `opened_research_development_only` | next_action(다음 행동) `run276A_design_aggressive_fresh_surface_probe_packet`; selected candidate(선택 후보), ONNX readiness(ONNX 준비) 없음 |
+
+| `IDEA-ST277-FRESH-THESIS-REBUILD-AFTER-AGGRESSIVE-SURFACE-FAILURE` | `277_onnx_candidate_campaign__fresh_thesis_rebuild` | Stage276(276단계) failure memory(실패 기억)를 fresh thesis rebuild(새 논제 재구성)로 바꾼다. | `Tier A + Tier B paired exploration(Tier A + Tier B 쌍 탐색)` | `opened_research_development_only` | seed rows(씨앗 행) `4`; next_action(다음 행동) `run277A_design_fresh_thesis_rebuild_packet`; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST277-FRESH-THESIS-REBUILD-RUN277A` | `277_onnx_candidate_campaign__fresh_thesis_rebuild` | Stage276(276단계) failure memory(실패 기억)를 candidate package queue(후보 패키지 대기열)로 재구성한다. | `package_rows=4;support_control=1` | `design_packet_ready_no_selection` | next_action(다음 행동) `run277B_materialize_fresh_thesis_candidate_blueprints`; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST277-FRESH-THESIS-REBUILD-RUN277B` | `277_onnx_candidate_campaign__fresh_thesis_rebuild` | run277A(277A 실행) package queue(패키지 대기열)를 materialized blueprint(물질화 청사진)로 바꾼다. | `blueprints=4` | `blueprint_materialized_no_selection` | next_action(다음 행동) `run277C_materialize_fresh_thesis_scoring_handoff_inputs`; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST277-FRESH-THESIS-REBUILD-RUN277C` | `277_onnx_candidate_campaign__fresh_thesis_rebuild` | run277B(277B 실행) blueprints(청사진)를 scoring/handoff input(점수/인계 입력)으로 바꾼다. | `scoring_specs=4` | `input_materialized_no_selection` | next_action(다음 행동) `run277D_execute_fresh_thesis_scoring_probe`; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST277-FRESH-THESIS-REBUILD-RUN277D` | `277_onnx_candidate_campaign__fresh_thesis_rebuild` | run277C(277C 실행) scoring specs(점수 규격)를 Tier A/Tier B(티어 A/티어 B) score table(점수표)로 물질화한다. | `packages=4` | `score_materialized_no_selection` | next_action(다음 행동) `run277E_screen_fresh_thesis_score_surfaces`; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST277-FRESH-THESIS-REBUILD-RUN277E` | `277_onnx_candidate_campaign__fresh_thesis_rebuild` | run277D(277D 실행) score surface(점수 표면)를 Stage278(278단계) MT5 probe(MT5 탐침) queue(대기열)로 선별한다. | `probe_queue=2;failure_memory=2` | `probe_queue_ready_no_selection` | next_action(다음 행동) `run277F_close_stage277_open_stage278_fresh_thesis_mt5_probe`; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST278-FRESH-THESIS-MT5-PROBE` | `278_onnx_candidate_campaign__fresh_thesis_mt5_probe` | Stage277(277단계)의 `cp277C/cp277D` score surface(점수 표면)를 MT5(`MetaTrader 5`, 메타트레이더5) signal payload(신호 페이로드)와 pressure probe(압박 탐침)로 검증한다. | `Tier A used + Tier B fallback + actual routed total(Tier A 사용 + Tier B 대체 + 실제 라우팅 전체)` | `opened_runtime_probe_preparation_only` | next_action(다음 행동) `run278A_design_fresh_thesis_mt5_probe_packet`; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST278-FRESH-THESIS-MT5-PROBE-RUN278A` | `278_onnx_candidate_campaign__fresh_thesis_mt5_probe` | `cp277C/cp277D` score surface(점수 표면)를 MT5(`MetaTrader 5`, 메타트레이더5) payload(페이로드)용 branch(분기) `8`개로 설계한다. | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `design_ready_no_candidate` | MT5 probe design queue(MT5 탐침 설계 대기열) `6`개; selected candidate(선택 후보), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST278-FRESH-THESIS-MT5-PROBE-RUN278B` | `278_onnx_candidate_campaign__fresh_thesis_mt5_probe` | run278A(278A 실행)의 MT5 probe design queue(MT5 탐침 설계 대기열)를 payload parquet(페이로드 파케이), handoff JSON(인계 JSON), MT5 signal CSV(MT5 신호 CSV)로 물질화한다. | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `payload_materialized_no_candidate` | payload(페이로드) `6`개, MT5 queue(MT5 대기열) `6`행, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST278-FRESH-THESIS-MT5-PROBE-RUN278C` | `278_onnx_candidate_campaign__fresh_thesis_mt5_probe` | active/flat(활성/관망) payload(페이로드)를 MT5 tester(MT5 테스터)에 넣기 전 direction mapping gap(방향 매핑 공백)을 검사한다. | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `blocked_direction_mapping_missing` | blocked attempts(차단 시도) `6`개, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST279-DIRECTIONAL-RUNTIME-MAPPING-REBUILD` | `279_onnx_candidate_campaign__directional_runtime_mapping_rebuild` | active/flat(활성/관망) surface(표면)를 supported direction surface(지원되는 방향 표면)로 재구성하거나 폐기한다. | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `stage_open_no_candidate` | direction gap rows(방향 공백 행) `6`, blocked attempts(차단 시도) `6`, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST279-DIRECTIONAL-MAPPING-RUN279A` | `279_onnx_candidate_campaign__directional_runtime_mapping_rebuild` | active/flat(활성/관망) mask(마스크)에 supported direction source(지원되는 방향 원천)를 붙이는 branch(분기)를 설계한다. | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `design_ready_no_candidate` | branch(분기) `5`개, queue(대기열) `4`개, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST279-DIRECTIONAL-MAPPING-RUN279B` | `279_onnx_candidate_campaign__directional_runtime_mapping_rebuild` | active/flat(활성/관망) mask(마스크)에 feature-derived direction(피처 기반 방향)을 붙여 MT5 probe(MT5 탐침) 입력을 만든다. | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `materialized_no_candidate` | directional payload(방향 페이로드) `12`개, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST280-DIRECTIONAL-STABILITY` | `280_onnx_candidate_campaign__directional_mapping_stability_validation` | Stage279(279단계) survivor seed(생존 씨앗)를 curve/month/session/trade-quality stress(곡선/월/세션/거래품질 압박)로 검증한다. | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `opened_no_candidate` | survivor seed(생존 씨앗) `3`개, selected candidate(선택 후보) 없음 |
+
+| `IDEA-ST281-DRAWDOWN-NORMALIZED-DIRECTION` | `281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild` | 손실폭 정규화 방향 후보 재구성 | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `opened_no_candidate` | Stage280(280단계) 실패 기억에서 새 판단/위험 표면을 만든다 |
+
+| `IDEA-ST281-RUN281A-DRAWDOWN-NORMALIZED-INPUTS` | `281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild` | 손실폭 정규화 방향 후보 입력 `4`개 | `Tier A used + Tier B fallback stress + actual routed total` | `materialized_no_candidate` | MT5 탐침으로 검증 필요 |
+
+| `IDEA-ST282-VALIDATION-FIRST-ASYMMETRIC-CONFIRMATION` | `282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild` | validation-first asymmetric confirmation(검증 우선 비대칭 확인) | `Tier A used + Tier B fallback stress + actual routed total(Tier A 사용 + Tier B 대체 스트레스 + 실제 라우팅 전체)` | `opened_no_candidate` | Stage281(281단계)의 OOS(표본외) 상방 착시를 막고 검증 회복력을 먼저 요구한다. |
+
+| `IDEA-ST282-RUN282A-VALIDATION-FIRST-INPUTS` | `282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild` | validation-first candidate inputs(검증 우선 후보 입력) `4`개 | `Tier A used + Tier B fallback stress + actual routed total` | `materialized_no_candidate` | MT5 탐침으로 검증 회복력과 표본외 상방을 함께 본다. |
+
+| `IDEA-ST283-ADAPTER-PACKAGE-CP282D` | `283_onnx_candidate_campaign__adapter_package_for_cp282d_macro_trend_countercheck` | Adapter package(어댑터 패키지) for `cp282D_macro_trend_countercheck_surface` | `Tier A used + Tier B fallback stress + actual routed total` | `opened_adapter_package_pending` | 선택 후보를 온엑스 전 추적 가능 패키지로 고정한다. |

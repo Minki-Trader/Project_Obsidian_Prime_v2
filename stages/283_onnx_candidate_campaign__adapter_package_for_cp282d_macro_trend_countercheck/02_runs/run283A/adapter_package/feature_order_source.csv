@@ -1,0 +1,9 @@
+position,feature_name,dtype,source,required,meaning
+0,direction_signal_value,int8,Stage279 q02/q03 directional payload,1,base direction source before countercheck
+1,historical_vol_5_over_20,float,Stage279 feature payload,1,volatility compression/expansion guard
+2,return_zscore_20,float,Stage279 feature payload,1,return pressure guard
+3,di_spread_14,float,Stage279 feature payload,1,local trend direction check
+4,ema20_ema50_diff,float,Stage279 feature payload,1,local trend slope check
+5,rsi_14_slope_3,float,Stage279 feature payload,1,q03 replacement countercheck
+6,us100_minus_mega8_equal_return_1,float,Stage279 feature payload,1,macro relative strength check
+7,us100_minus_top3_weighted_return_1,float,Stage279 feature payload,1,macro concentration countercheck

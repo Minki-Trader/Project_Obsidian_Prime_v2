@@ -1,0 +1,10 @@
+﻿# Stage282 Review Index(282단계 검토 색인)
+
+- stage_brief(단계 개요): `stages/282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild/00_spec/stage_brief.md`
+- input_refs(입력 참조): `stages/282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild/01_inputs/input_refs.md`
+
+- run282A_report(282A 보고서): `stages/282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild/03_reviews/run282A_candidate_packet_materialization_report.md`
+
+- run282B_report(282B 보고서): `stages/282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild/03_reviews/run282B_validation_first_asymmetric_confirmation_mt5_probe_report.md`
+
+- run282C_report(282C 보고서): `stages/282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild/03_reviews/run282C_candidate_selection_stage283_open_report.md`

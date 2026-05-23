@@ -1,0 +1,10 @@
+﻿# Stage281 Review Index(281단계 검토 색인)
+
+- stage_open_report(단계 개시 보고): `stages/280_onnx_candidate_campaign__directional_mapping_stability_validation/03_reviews/run280A_stability_validation_report.md`
+- input_refs(입력 참조): `stages/281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild/01_inputs/input_refs.md`
+
+- run281A_report(281A 보고서): `stages/281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild/03_reviews/run281A_candidate_rebuild_materialization_report.md`
+
+- run281B_report(281B 보고서): `stages/281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild/03_reviews/run281B_drawdown_normalized_directional_mt5_probe_report.md`
+
+- run281C_report(281C 보고서): `stages/281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild/03_reviews/run281C_probe_review_stage282_open_report.md`

@@ -1,0 +1,28 @@
+{
+  "class_order": [
+    "short",
+    "flat",
+    "long"
+  ],
+  "feature_order": [
+    "route_signal_value"
+  ],
+  "feature_order_hash": "171b545c231c11df3686e77d62d930c01807dc1165c49fb5e96bbb1bf97ed22d",
+  "input_name": "float_input",
+  "input_shape": [
+    "N",
+    1
+  ],
+  "model_path": "stages/285_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp282d/02_runs/run285A/models/cp282d_route_signal_identity.onnx",
+  "output_name": "probabilities",
+  "output_shape": [
+    "N",
+    3
+  ],
+  "probability_formula": {
+    "p_flat": "1 - route_signal_value^2",
+    "p_long": "0.5 * (route_signal_value^2 + route_signal_value)",
+    "p_short": "0.5 * (route_signal_value^2 - route_signal_value)"
+  },
+  "sha256": "8402a7dedac4a7674ed51f682816ca82b4b7d1f4bbb1541898ea76ed9bddbede"
+}

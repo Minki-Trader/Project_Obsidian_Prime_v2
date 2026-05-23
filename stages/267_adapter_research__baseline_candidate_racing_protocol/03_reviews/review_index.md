@@ -1,6 +1,12 @@
 ﻿# Stage267 Review Index(267단계 리뷰 인덱스)
 
-- status(상태): `run267ET_runtime_gap_aware_tenth_followup_or_prune_mt5_batch_partial`
+- closeout_report(종료 보고): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_closeout_onnx_campaign_handoff.md`
+- closeout_status(종료 상태): `closed_as_reference_evidence_no_selected_candidate`
+- handoff_stage(인계 단계): `268_onnx_candidate_campaign__stage267_lineage_triage`
+- status(상태): `closed_as_reference_evidence_no_selected_candidate`
+
+Stage267(267단계)은 run267ET(267ET 실행)까지의 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
+효과(effect, 효과): selected candidate(선택 후보), selected research baseline(선택 연구 기준선), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)를 주장하지 않고 Stage268(268단계) lineage triage(계보 분리)로 넘긴다.
 - run267CR_shared_weakness_breakout_followup_materialization(267CR 공유 약점 돌파 후속 물질화): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CR_shared_weakness_breakout_followup_materialization.md`
 - run267CS_shared_weakness_breakout_followup_mt5_execution(267CS 공유 약점 돌파 후속 MT5 실행): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CS_shared_weakness_breakout_followup_mt5_execution.md`
 - run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review(267CT 공유 약점 후속 잔액/시간구간/거래품질 검토): `stages/267_adapter_research__baseline_candidate_racing_protocol/03_reviews/stage267_run267CT_shared_weakness_breakout_followup_balance_timeslice_trade_quality_review.md`

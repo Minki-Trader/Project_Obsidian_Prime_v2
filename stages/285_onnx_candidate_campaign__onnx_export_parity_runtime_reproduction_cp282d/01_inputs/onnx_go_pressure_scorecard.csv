@@ -1,0 +1,13 @@
+check_name,status,value,threshold,effect
+validation_net_profit,passed,89.64,>=75,검증 순수익이 어댑터 이후 온엑스 내보내기 압박을 견딘다.
+validation_pf,passed,1.36,>=1.25,검증 수익 팩터가 약한 후보 수준을 넘는다.
+validation_recovery,passed,0.53,>=0.45,검증 손실폭 대비 회복이 최소선을 넘는다.
+validation_trade_count,passed,80,>=75,검증 거래 수가 너무 얇지 않다.
+tier_b_validation_net_profit,passed,85.5,>50,Tier B 대체 검증이 음수로 깨지지 않는다.
+oos_net_profit,passed,190.55,>=150,표본외 상방이 유지된다.
+oos_pf,passed,1.74,>=1.50,표본외 수익 팩터가 충분하다.
+oos_recovery,passed,2.16,>=1.50,표본외 회복이 충분하다.
+weak_month_floor,passed,-77.4,>-90,검증 최악 월이 치명적이지 않다.
+weak_session_floor,passed,35.83,>-5,검증 세션이 모두 양수권이다.
+losing_streak_watch,passed,11,<=11,손실 연속은 감시 대상이지만 폐기선은 넘지 않는다.
+concentration_watch,passed,2.13878,<=2.50,상위 거래 집중이 온엑스 진행 전 폐기선은 아니다.

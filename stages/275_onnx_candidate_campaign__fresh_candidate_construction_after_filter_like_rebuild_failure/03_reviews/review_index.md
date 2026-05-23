@@ -1,0 +1,40 @@
+﻿# Stage275 Review Index(275단계 검토 색인)
+
+- stage_brief(단계 개요): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/00_spec/stage_brief.md`
+- input_refs(입력 참조): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/01_inputs/input_refs.md`
+- selection_status(선택 상태): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/04_selected/selection_status.md`
+- stage_run_ledger(단계 실행 장부): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/03_reviews/stage_run_ledger.csv`
+- source_stage274_closeout(원천 274단계 종료): `stages/274_onnx_candidate_campaign__post_q04_stability_failure_candidate_rebuild/03_reviews/stage274_closeout_stage275_handoff.md`
+
+- run275A_report(275A 보고서): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/03_reviews/run275A_report.md`
+- run275A_construction_queue(275A 구성 대기열): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275A/queue.csv`
+- run275A_failure_boundary_map(275A 실패 경계 지도): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275A/failure_map.csv`
+- run275A_feature_identity(275A 피처 정체성): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275A/feature_id.csv`
+
+- run275B_report(275B 보고서): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/03_reviews/run275B_report.md`
+
+- run275B_blueprints(275B 청사진): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275B/blueprints.json`
+
+- run275B_identity(275B 정체성): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275B/identity.csv`
+
+- run275C_report(275C 보고서): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/03_reviews/run275C_report.md`
+
+- run275C_specs(275C 규격): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275C/specs.json`
+
+- run275C_handoff(275C 인계): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275C/handoff.csv`
+
+- run275D_report(275D 보고서): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/03_reviews/run275D_report.md`
+
+- run275D_summary(275D 요약): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275D/summary.csv`
+
+- run275D_tier(275D 티어): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275D/tier.csv`
+
+- run275E_report(275E 보고서): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/03_reviews/run275E_report.md`
+
+- run275E_screen(275E 선별): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275E/screen.csv`
+
+- run275E_stage276_queue(275E 276단계 대기열): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275E/stage276_queue.csv`
+
+- stage275_closeout_stage276(275단계 종료/276단계 개방): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/03_reviews/stage275_closeout_stage276_handoff.md`
+- stage275_to_stage276_decision(275->276 결정): `docs/decisions/2026-05-23_stage275_closeout_stage276_aggressive_fresh_surface_probe_open.md`
+- run275F_manifest(275F 실행 목록): `stages/275_onnx_candidate_campaign__fresh_candidate_construction_after_filter_like_rebuild_failure/02_runs/run275F/run_manifest.json`

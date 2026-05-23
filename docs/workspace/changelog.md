@@ -2060,3 +2060,928 @@
 - action(행동): completed_partial(부분 완료) existing MT5 report balance path grading(기존 MT5 보고서 잔액 경로 판정) for five Baseline candidates(다섯 기준 후보) across validation/OOS(검증/표본외).
 - effect(효과): all ten candidate/split paths(후보/분할 경로 10개)가 `B_shape_watch`로 남았고, final below peak(마지막 고점 이탈)과 `s258_short_tight_control` OOS(표본외) DD/worst month(손실폭/최악 월)를 다음 검증 집중점으로 고정했다.
 - boundary(주장 경계): `research_development_only_no_selected_candidate_no_onnx_until_goal_gate`.
+## 2026-05-23 Stage267 closeout and Stage268 ONNX candidate campaign open(267단계 종료 및 268단계 온엑스 후보 캠페인 개방)
+
+- action(행동): closed(종료) Stage267(267단계) `267_adapter_research__baseline_candidate_racing_protocol` as reference evidence(참고 근거) after run267ET(267ET 실행), and opened(개방) Stage268(268단계) `268_onnx_candidate_campaign__stage267_lineage_triage`.
+- effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)로 승격하지 않고, ONNX-worthy candidate campaign(온엑스화 가치 후보 캠페인)을 lineage triage(계보 분리)부터 시작한다.
+- boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_candidate_package_gate`.
+
+## 2026-05-23 Stage268 lineage triage closeout and Stage269 open(268단계 계보 분리 종료 및 269단계 개방)
+
+- action(행동): completed(완료) run268A(268A 실행) `run268A_stage267_profile_lineage_triage_v1` and opened(개방) Stage269(269단계) `269_onnx_candidate_campaign__fresh_thesis_candidate_construction`.
+- effect(효과): Stage267(267단계) profile(프로필) `12`개를 continue clue(계속 볼 단서) `3`, failure memory only(실패 기억만) `5`, judgment deferred(판단 보류) `4`, candidate package(후보 패키지) `0`으로 분리했다. 다음은 fresh thesis candidate package queue(새 논제 후보 패키지 대기열) 설계다.
+- boundary(주장 경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 아직 `none/not_claimed`다.
+## 2026-05-23 Stage269 Run269C Scoring/Handoff Input Materialization(269단계 269C 점수/인계 입력 물질화)
+
+- completed(완료): `run269C_materialized_scoring_handoff_inputs_v1`
+- producer(생산자): `stage_pipelines/stage269/materialize_scoring_handoff_inputs.py`
+- packages(패키지): `4`
+- selectable_packages(선택 가능 패키지): `3`
+- support_controls(보조 대조): `1`
+- next_action(다음 행동): `run269D_execute_scoring_materialization_probe`
+- effect(효과): run269B(269B 실행)의 후보 패키지 청사진(candidate package blueprint, 후보 패키지 청사진)을 score columns(점수 열), adapter schema hash(어댑터 스키마 해시), decision rule hash(판단 규칙 해시), handoff payload fields(인계 페이로드 필드)로 물질화했다.
+
+## 2026-05-23 Stage269 Run269B Candidate Package Blueprint Materialization(269단계 269B 후보 패키지 청사진 물질화)
+
+- completed(완료): `run269B_materialized_candidate_package_blueprints_v1`
+- blueprints(청사진): `4`
+- selectable_blueprints(선택 가능 청사진): `3`
+- support_control(보조 대조): `1`
+- artifact_lineage(산출물 계보): `connected_with_boundary`
+- next_action(다음 행동): `run269C_materialize_scoring_handoff_inputs`
+- effect(효과): run269A(269A 실행)의 후보 패키지 씨앗(candidate package seed, 후보 패키지 씨앗)을 feature order source(피처 순서 원천), scoring owner(점수 소유자), decision rule(판단 규칙), risk rule(위험 규칙), Adapter output schema(어댑터 출력 스키마), runtime handoff plan(런타임 인계 계획)이 있는 청사진으로 바꿨다.
+
+## 2026-05-23 Stage269 Run269A Candidate Package Queue Design(269단계 269A 후보 패키지 대기열 설계)
+
+- completed(완료): `run269A_fresh_candidate_package_queue_design_v1`
+- queue_rows(대기열 행): `4`
+- selectable_seed(선택 가능 씨앗): `3`
+- support_control(보조 대조): `1`
+- next_action(다음 행동): `run269B_materialize_candidate_package_blueprints`
+- effect(효과): Stage267(267단계)의 alias/profile(별칭/프로필)을 후보로 보존하지 않고, ONNX-worthy candidate package(온엑스화 가치 후보 패키지)로 발전시킬 수 있는 설계 단위만 다음 실행으로 넘겼다.
+
+## 2026-05-23 Stage269 Run269D Scoring Materialization Probe(269단계 269D 점수 물질화 탐침)
+
+- completed(완료): `run269D_scoring_materialization_probe_v1`
+- packages(패키지): `4`
+- Tier A separate(티어 A 분리): `46650` rows(행)
+- Tier B separate(티어 B 분리): `46650` rows(행)
+- Tier A+B combined(티어 A+B 합산): `93300` materialization rows(물질화 행)
+- score_tables(점수표): `4`
+- handoff_payloads(인계 페이로드): `4`
+- data_integrity(데이터 무결성): `score_formula_uses_label_or_future_columns=false`
+- next_action(다음 행동): `run269E_screen_materialized_scores_for_stage270_aggressive_upside_queue`
+- effect(효과): run269C(269C 실행)의 scoring input specs(점수 입력 규격)를 실제 Tier A/Tier B(티어 A/티어 B) model input dataset(모델 입력 데이터셋)에 적용해 점수표와 compact handoff JSON(짧은 인계 JSON)을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않았다.
+
+## 2026-05-23 Stage269 Run269E Materialized Score Surface Screen(269단계 269E 물질화 점수 표면 선별)
+
+- completed(완료): `run269E_materialized_score_surface_screen_v1`
+- screened_packages(선별 패키지): `4`
+- stage270_queue_rows(270단계 대기열 행): `1`
+- queued_package(대기 패키지): `cp269A_asymmetric_nonfilter_reentry_surface`
+- failure_memory_rows(실패 기억 행): `2`
+- support_control_rows(보조 대조 행): `1`
+- next_action(다음 행동): `open_stage270_aggressive_upside_probe_from_run269E_queue`
+- effect(효과): run269D(269D 실행)의 score table(점수표)을 구조적으로 선별해 cp269A(269A 패키지)는 Stage270(270단계) aggressive upside probe(공격형 상방 탐침) seed(씨앗)로 넘기고, cp269B/cp269C(269B/269C 패키지)는 failure memory(실패 기억)로 낮췄으며, cp269D(269D 패키지)는 support control(보조 대조)로 유지했다. selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-23 Stage269 Handoff and Stage270 Open(269단계 인계 및 270단계 개방)
+
+- decision(결정): `docs/decisions/2026-05-23_stage269_handoff_stage270_open.md`
+- opened_stage(개방 단계): `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`
+- source_seed(원천 씨앗): `cp269A_asymmetric_nonfilter_reentry_surface`
+- support_control(보조 대조): `cp269D_runtime_handoff_isolation_control`
+- effect(효과): Stage269(269단계)의 candidate construction(후보 구성)을 더 늘리지 않고, bounded non-filter reward skew(경계 있는 비필터 보상 기울기)를 Stage270(270단계)의 단일 질문으로 압박한다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-23 Stage270 Run270A Aggressive Upside Probe Design(270단계 270A 공격형 상방 탐침 설계)
+
+- completed(완료): `run270A_aggressive_upside_probe_design_v1`
+- variants(변형): `6`
+- source_seed(원천 씨앗): `cp269A_asymmetric_nonfilter_reentry_surface`
+- support_control(보조 대조): `cp269D_runtime_handoff_isolation_control`
+- next_action(다음 행동): `run270B_materialize_aggressive_probe_payloads`
+- effect(효과): branch(분기)마다 upside question(상방 질문), failure mode(실패 방식), discard condition(폐기 조건), Tier A/B supply metrics(티어 A/B 공급 지표)를 붙였다. trading KPI(거래 핵심 성과 지표), selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-23 Stage270 Run270B Aggressive Probe Payload Materialization(270단계 270B 공격형 탐침 페이로드 물질화)
+
+- completed(완료): `run270B_aggressive_probe_payload_materialization_v1`
+- payloads(페이로드): `6`
+- handoff_json(인계 JSON): `6`
+- Tier A MT5 signal CSV(Tier A MT5 신호 CSV): `6`
+- mt5_queue_rows(MT5 대기열 행): `5`
+- active_probe_rows(활성 탐침 행): `4`
+- control_rows(대조 행): `1`
+- failure_boundary_excluded(실패 경계 제외): `1`
+- next_action(다음 행동): `run270C_execute_or_prepare_mt5_aggressive_probe`
+- effect(효과): run270A(270A 실행)의 branch(분기)를 파일 단위 runtime probe(런타임 탐침) 준비물로 바꿨다. MT5 runtime output(MT5 런타임 출력), trading KPI(거래 핵심 성과 지표), selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 아직 없다.
+
+## 2026-05-23 run270C aggressive probe MT5 signal replay(270C 공격형 탐침 MT5 신호 재생)
+
+- status(상태): `blocked_aggressive_probe_mt5_signal_replay_no_kpi`
+- judgment(판정): `blocked_runtime_probe_missing_mt5_execution`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 시도하고 KPI records(KPI 기록) `0`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run270C aggressive probe MT5 signal replay(270C 공격형 탐침 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_probe_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 시도하고 KPI records(KPI 기록) `2`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run270C aggressive probe MT5 signal replay(270C 공격형 탐침 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_probe_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 시도하고 KPI records(KPI 기록) `20`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run270C aggressive probe MT5 signal replay(270C 공격형 탐침 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_probe_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 시도하고 KPI records(KPI 기록) `20`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run270D balance/time-slice/trade-quality review(270D 잔액/시간구간/거래품질 검토)
+
+- status(상태): `completed_aggressive_probe_balance_timeslice_trade_quality_review_no_survivor_selection`
+- judgment(판정): `valid_negative_active_aggressive_probe_no_candidate_selection`
+- effect(효과): trade records(거래 기록) `7628`개와 variant summary(변형 요약) `5`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run270D balance/time-slice/trade-quality review(270D 잔액/시간구간/거래품질 검토)
+
+- status(상태): `completed_aggressive_probe_balance_timeslice_trade_quality_review_no_survivor_selection`
+- judgment(판정): `valid_negative_active_aggressive_probe_no_candidate_selection`
+- effect(효과): trade records(거래 기록) `7628`개와 variant summary(변형 요약) `5`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run270D balance/time-slice/trade-quality review(270D 잔액/시간구간/거래품질 검토)
+
+- status(상태): `completed_aggressive_probe_balance_timeslice_trade_quality_review_no_survivor_selection`
+- judgment(판정): `valid_negative_active_aggressive_probe_no_candidate_selection`
+- effect(효과): trade records(거래 기록) `7628`개와 variant summary(변형 요약) `5`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 Stage270 closeout and Stage271 open(270단계 종료 및 271단계 개방)
+
+- status(상태): `completed_stage270_closeout_stage271_open_no_candidate_selection`
+- judgment(판정): `stage270_valid_negative_closed_stage271_opened_fresh_thesis`
+- effect(효과): Stage270(270단계) active probe survivor(활성 탐침 생존 후보) `0`개를 failure memory(실패 기억)로 남기고 Stage271(271단계)을 fresh thesis(새 논제)로 열었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 Stage270 closeout and Stage271 open(270단계 종료 및 271단계 개방)
+
+- status(상태): `completed_stage270_closeout_stage271_open_no_candidate_selection`
+- judgment(판정): `stage270_valid_negative_closed_stage271_opened_fresh_thesis`
+- effect(효과): Stage270(270단계) active probe survivor(활성 탐침 생존 후보) `0`개를 failure memory(실패 기억)로 남기고 Stage271(271단계)을 fresh thesis(새 논제)로 열었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271A fresh edge rebuild queue design(271A 새 거래 우위 재구성 대기열 설계)
+
+- status(상태): `completed_fresh_edge_rebuild_queue_design_no_candidate_selection`
+- judgment(판정): `exploratory_design_queue_ready_no_candidate_selection`
+- effect(효과): selectable fresh candidate seed(선택 가능 새 후보 씨앗) `3`개와 support control(보조 대조) `1`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271A fresh edge rebuild queue design(271A 새 거래 우위 재구성 대기열 설계)
+
+- status(상태): `completed_fresh_edge_rebuild_queue_design_no_candidate_selection`
+- judgment(판정): `exploratory_design_queue_ready_no_candidate_selection`
+- effect(효과): selectable fresh candidate seed(선택 가능 새 후보 씨앗) `3`개와 support control(보조 대조) `1`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271B fresh edge rebuild blueprints(271B 새 거래 우위 재구성 청사진)
+
+- status(상태): `completed_fresh_edge_rebuild_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `exploratory_blueprints_materialized_no_candidate_selection`
+- effect(효과): selectable blueprint(선택 가능 청사진) `3`개와 support control(보조 대조) `1`개를 물질화했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271B fresh edge rebuild blueprints(271B 새 거래 우위 재구성 청사진)
+
+- status(상태): `completed_fresh_edge_rebuild_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `exploratory_blueprints_materialized_no_candidate_selection`
+- effect(효과): selectable blueprint(선택 가능 청사진) `3`개와 support control(보조 대조) `1`개를 물질화했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271B fresh edge rebuild blueprints(271B 새 거래 우위 재구성 청사진)
+
+- status(상태): `completed_fresh_edge_rebuild_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `exploratory_blueprints_materialized_no_candidate_selection`
+- effect(효과): selectable blueprint(선택 가능 청사진) `3`개와 support control(보조 대조) `1`개를 물질화했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271C scoring/handoff inputs(271C 점수/인계 입력)
+
+- status(상태): `completed_fresh_edge_scoring_handoff_input_materialization_no_candidate_selection`
+- judgment(판정): `exploratory_scoring_handoff_inputs_materialized_no_candidate_selection`
+- effect(효과): feature order hash(피처 순서 해시)를 확인하고 scoring input specs(점수 입력 규격)와 handoff skeletons(인계 골격)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271D fresh edge scoring probe(271D 새 거래 우위 점수 탐침)
+
+- status(상태): `completed_fresh_edge_scoring_probe_no_candidate_selection`
+- judgment(판정): `exploratory_score_table_materialized_no_candidate_selection`
+- effect(효과): Tier A/Tier B/Tier A+B(티어 A/티어 B/티어 A+B) score table(점수표)과 handoff(인계) receipt(영수증)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271D fresh edge scoring probe(271D 새 거래 우위 점수 탐침)
+
+- status(상태): `completed_fresh_edge_scoring_probe_no_candidate_selection`
+- judgment(판정): `exploratory_score_table_materialized_no_candidate_selection`
+- effect(효과): Tier A/Tier B/Tier A+B(티어 A/티어 B/티어 A+B) score table(점수표)과 handoff(인계) receipt(영수증)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271D fresh edge scoring probe(271D 새 거래 우위 점수 탐침)
+
+- status(상태): `completed_fresh_edge_scoring_probe_no_candidate_selection`
+- judgment(판정): `exploratory_score_table_materialized_no_candidate_selection`
+- effect(효과): Tier A/Tier B/Tier A+B(티어 A/티어 B/티어 A+B) score table(점수표)과 handoff(인계) receipt(영수증)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run271E fresh edge score surface screen(271E 새 거래 우위 점수 표면 선별)
+
+- status(상태): `completed_fresh_edge_score_surface_screen_no_candidate_selection`
+- judgment(판정): `screened_probe_seed_and_failure_memory_no_candidate_selection`
+- effect(효과): cp271B(271B 패키지)를 Stage272(272단계) pressure probe(압박 탐침) seed(씨앗)로 넘기는 queue(대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 Stage271 closeout and Stage272 open(271단계 종료 및 272단계 개방)
+
+- status(상태): `completed_stage271_closeout_stage272_open_no_candidate_selection`
+- judgment(판정): `stage271_probe_seed_closed_stage272_pressure_probe_opened`
+- effect(효과): `cp271B_time_risk_phase_router_surface`를 Stage272(272단계) pressure probe seed(압박 탐침 씨앗)로만 넘겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272A time-risk router pressure design(272A 시간 위험 라우터 압박 설계)
+
+- status(상태): `completed_time_risk_router_pressure_probe_packet_design_no_candidate_selection`
+- judgment(판정): `pressure_probe_packet_ready_no_candidate_selection`
+- effect(효과): branch(분기) `6`개와 MT5 probe design queue(MT5 탐침 설계 대기열) `5`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272A time-risk router pressure design(272A 시간 위험 라우터 압박 설계)
+
+- status(상태): `completed_time_risk_router_pressure_probe_packet_design_no_candidate_selection`
+- judgment(판정): `pressure_probe_packet_ready_no_candidate_selection`
+- effect(효과): branch(분기) `6`개와 MT5 probe design queue(MT5 탐침 설계 대기열) `4`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272A time-risk router pressure design(272A 시간 위험 라우터 압박 설계)
+
+- status(상태): `completed_time_risk_router_pressure_probe_packet_design_no_candidate_selection`
+- judgment(판정): `pressure_probe_packet_ready_no_candidate_selection`
+- effect(효과): branch(분기) `6`개와 MT5 probe design queue(MT5 탐침 설계 대기열) `4`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272A time-risk router pressure design(272A 시간 위험 라우터 압박 설계)
+
+- status(상태): `completed_time_risk_router_pressure_probe_packet_design_no_candidate_selection`
+- judgment(판정): `pressure_probe_packet_ready_no_candidate_selection`
+- effect(효과): branch(분기) `6`개와 MT5 probe design queue(MT5 탐침 설계 대기열) `4`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272B time-risk router payload materialization(272B 시간 위험 라우터 페이로드 물질화)
+
+- status(상태): `completed_time_risk_router_pressure_probe_payload_materialization_no_candidate_selection`
+- judgment(판정): `pressure_probe_payloads_materialized_no_runtime_or_candidate_claim`
+- effect(효과): payload parquet(페이로드 파케이) `4`개와 MT5 probe queue(MT5 탐침 대기열) `4`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272C time-risk router MT5 signal replay(272C 시간 위험 라우터 MT5 신호 재생)
+
+- status(상태): `prepared_time_risk_router_mt5_probe_materialized_no_runtime_kpi`
+- judgment(판정): `runtime_probe_prepared_no_external_execution`
+- effect(효과): MT5(`MetaTrader 5`, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `0`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272C time-risk router MT5 signal replay(272C 시간 위험 라우터 MT5 신호 재생)
+
+- status(상태): `completed_time_risk_router_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(`MetaTrader 5`, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `2`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272C time-risk router MT5 signal replay(272C 시간 위험 라우터 MT5 신호 재생)
+
+- status(상태): `completed_time_risk_router_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(`MetaTrader 5`, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `8`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272C time-risk router MT5 signal replay(272C 시간 위험 라우터 MT5 신호 재생)
+
+- status(상태): `completed_time_risk_router_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(`MetaTrader 5`, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `16`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run272D time-risk router MT5 probe review(272D 시간 위험 라우터 MT5 탐침 검토)
+
+- status(상태): `completed_time_risk_router_mt5_probe_review_no_candidate_selection`
+- judgment(판정): `q04_pressure_survivor_for_stability_validation_no_candidate_selection`
+- effect(효과): q04(4번 분기)를 Stage273(273단계) stability validation(안정성 검증) seed(씨앗)로 분리했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 Stage272 closeout Stage273 open(272단계 종료 273단계 개방)
+
+- status(상태): `completed_stage272_closeout_stage273_stability_validation_open_no_candidate_selection`
+- judgment(판정): `stage272_pressure_survivor_handoff_stage273_opened_no_candidate_selection`
+- effect(효과): q04(4번 분기)를 Stage273(273단계) stability validation(안정성 검증) seed(씨앗)로 넘겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run273A stability validation packet design(273A 안정성 검증 묶음 설계)
+
+- status(상태): `completed_time_risk_router_stability_validation_packet_design_no_candidate_selection`
+- judgment(판정): `stability_validation_packet_ready_no_candidate_selection`
+- effect(효과): q04(4번 분기)를 후보로 확정하지 않고 run273B(273B 실행) 안정성 검토 대기열로 넘겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run273A stability validation packet design(273A 안정성 검증 묶음 설계)
+
+- status(상태): `completed_time_risk_router_stability_validation_packet_design_no_candidate_selection`
+- judgment(판정): `stability_validation_packet_ready_no_candidate_selection`
+- effect(효과): q04(4번 분기)를 후보로 확정하지 않고 run273B(273B 실행) 안정성 검토 대기열로 넘겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run273B stability validation review(273B 안정성 검증 검토)
+
+- status(상태): `completed_time_risk_router_stability_validation_review_no_candidate_selection`
+- judgment(판정): `negative_valid_q04_stability_failure_no_adapter_handoff`
+- effect(효과): q04(4번 분기)의 월/시간 손실 집중과 잔액 곡선 약점을 valid negative(유효한 부정)로 기록했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run273C Stage273 closeout Stage274 open(273C 273단계 종료 274단계 개방)
+
+- status(상태): `completed_stage273_closeout_stage274_candidate_rebuild_open_no_candidate_selection`
+- judgment(판정): `stage273_q04_stability_failure_handoff_stage274_opened_no_candidate_selection`
+- effect(효과): q04(4번 분기)를 실패 기억으로 닫고 Stage274(274단계) fresh candidate rebuild(새 후보 재구성)를 열었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274A post-q04 failure candidate rebuild design(274A q04 실패 이후 후보 재구성 설계)
+
+- status(상태): `completed_post_q04_failure_candidate_rebuild_packet_design_no_candidate_selection`
+- judgment(판정): `fresh_candidate_rebuild_queue_ready_no_candidate_selection`
+- effect(효과): q04(4번 분기)를 반복하지 않고 fresh thesis(새 논제) 후보 대기열 `4`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274B candidate package blueprint materialization(274B 후보 패키지 청사진 물질화)
+
+- status(상태): `completed_post_q04_failure_candidate_package_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `materialized_candidate_package_blueprints_ready_no_candidate_selection`
+- effect(효과): q04(4번 분기) 실패 이후 새 후보 청사진 `4`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274C scoring/handoff input materialization(274C 점수/인계 입력 물질화)
+
+- status(상태): `completed_post_q04_failure_scoring_handoff_input_materialization_no_candidate_selection`
+- judgment(판정): `scoring_handoff_inputs_ready_no_candidate_selection`
+- effect(효과): package(패키지) `4`개에 scoring input spec(점수 입력 규격), handoff input plan(인계 입력 계획), handoff skeleton(인계 골격)을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274D score surface materialization(274D 점수 표면 물질화)
+
+- status(상태): `completed_post_q04_failure_score_surface_materialization_no_candidate_selection`
+- judgment(판정): `score_surfaces_materialized_no_candidate_selection`
+- effect(효과): package(패키지) `4`개에 score table(점수표)과 paired summary(쌍 요약) `12`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274E score surface screen(274E 점수 표면 선별)
+
+- status(상태): `completed_post_q04_failure_score_surface_screen_no_survivor_no_candidate_selection`
+- judgment(판정): `negative_valid_filter_like_score_surfaces_no_probe_survivor`
+- effect(효과): score surface(점수 표면) `4`개를 비교해 probe queue(탐침 대기열) `0`행과 failure memory(실패 기억) `3`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274F Stage274 closeout and Stage275 open(274F 274단계 종료와 275단계 개방)
+
+- status(상태): `completed_stage274_closeout_stage275_fresh_candidate_construction_open_no_candidate_selection`
+- judgment(판정): `stage274_filter_like_score_surface_failure_stage275_opened_no_candidate_selection`
+- effect(효과): Stage274(274단계)를 no-survivor(생존 없음)로 닫고 Stage275(275단계)를 fresh candidate construction(새 후보 구성)으로 열었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274F Stage274 closeout and Stage275 open(274F 274단계 종료와 275단계 개방)
+
+- status(상태): `completed_stage274_closeout_stage275_fresh_candidate_construction_open_no_candidate_selection`
+- judgment(판정): `stage274_filter_like_score_surface_failure_stage275_opened_no_candidate_selection`
+- effect(효과): Stage274(274단계)를 no-survivor(생존 없음)로 닫고 Stage275(275단계)를 fresh candidate construction(새 후보 구성)으로 열었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run274F Stage274 closeout and Stage275 open(274F 274단계 종료와 275단계 개방)
+
+- status(상태): `completed_stage274_closeout_stage275_fresh_candidate_construction_open_no_candidate_selection`
+- judgment(판정): `stage274_filter_like_score_surface_failure_stage275_opened_no_candidate_selection`
+- effect(효과): Stage274(274단계)를 no-survivor(생존 없음)로 닫고 Stage275(275단계)를 fresh candidate construction(새 후보 구성)으로 열었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275A fresh candidate construction packet design(275A 새 후보 구성 묶음 설계)
+
+- status(상태): `completed_fresh_candidate_construction_packet_design_no_candidate_selection`
+- judgment(판정): `fresh_candidate_construction_queue_ready_no_candidate_selection`
+- effect(효과): selectable fresh candidate seed(선택 가능 새 후보 씨앗) `4`개와 support control(보조 대조) `1`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275A fresh candidate construction packet design(275A 새 후보 구성 묶음 설계)
+
+- status(상태): `completed_fresh_candidate_construction_packet_design_no_candidate_selection`
+- judgment(판정): `fresh_candidate_construction_queue_ready_no_candidate_selection`
+- effect(효과): selectable fresh candidate seed(선택 가능 새 후보 씨앗) `4`개와 support control(보조 대조) `1`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275B fresh candidate package blueprint materialization(275B 새 후보 패키지 청사진 물질화)
+
+- status(상태): `completed_fresh_candidate_package_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `fresh_candidate_blueprints_materialized_no_candidate_selection`
+- effect(효과): selectable blueprint(선택 가능 청사진) `4`개와 support control(보조 대조) `1`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275C fresh candidate scoring/handoff input materialization(275C 새 후보 점수/인계 입력 물질화)
+
+- status(상태): `completed_fresh_candidate_scoring_handoff_input_materialization_no_candidate_selection`
+- judgment(판정): `scoring_handoff_inputs_ready_no_candidate_selection`
+- effect(효과): package(패키지) `5`개에 scoring input specs(점수 입력 규격)와 handoff skeletons(인계 골격)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275C fresh candidate scoring/handoff input materialization(275C 새 후보 점수/인계 입력 물질화)
+
+- status(상태): `completed_fresh_candidate_scoring_handoff_input_materialization_no_candidate_selection`
+- judgment(판정): `scoring_handoff_inputs_ready_no_candidate_selection`
+- effect(효과): package(패키지) `5`개에 scoring input specs(점수 입력 규격)와 handoff skeletons(인계 골격)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275D fresh candidate score surface materialization(275D 새 후보 점수 표면 물질화)
+
+- status(상태): `completed_fresh_candidate_score_surface_materialization_no_candidate_selection`
+- judgment(판정): `fresh_candidate_score_surfaces_materialized_no_candidate_selection`
+- effect(효과): package(패키지) `5`개에 score table(점수표)과 handoff JSON(인계 JSON)을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275E fresh candidate score surface screen(275E 새 후보 점수 표면 선별)
+
+- status(상태): `completed_fresh_candidate_score_surface_screen_probe_queue_no_candidate_selection`
+- judgment(판정): `screened_stage276_probe_seeds_and_failure_memory_no_candidate_selection`
+- effect(효과): Stage276 probe seed(276단계 탐침 씨앗) `3`개와 failure memory(실패 기억) `1`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run275F Stage275 closeout and Stage276 open(275F 275단계 종료와 276단계 개방)
+
+- status(상태): `completed_stage275_closeout_stage276_aggressive_fresh_surface_probe_open_no_candidate_selection`
+- judgment(판정): `stage275_probe_seeds_handoff_stage276_opened_no_candidate_selection`
+- effect(효과): Stage276 probe seed(276단계 탐침 씨앗) `3`개를 stage-local input(단계 로컬 입력)으로 고정했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276A aggressive fresh surface probe design(276A 공격형 새 표면 탐침 설계)
+
+- status(상태): `completed_aggressive_fresh_surface_probe_packet_design_no_candidate_selection`
+- judgment(판정): `aggressive_probe_packet_ready_no_candidate_selection`
+- effect(효과): MT5 probe design queue(MT5 탐침 설계 대기열) `12`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276B aggressive fresh surface payload materialization(276B 공격형 새 표면 페이로드 물질화)
+
+- status(상태): `completed_aggressive_fresh_surface_probe_payload_materialization_no_candidate_selection`
+- judgment(판정): `aggressive_probe_payloads_materialized_no_runtime_or_candidate_claim`
+- effect(효과): payload parquet(페이로드 파케이) `12`개와 MT5 probe queue(MT5 탐침 대기열) `12`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `prepared_aggressive_fresh_surface_mt5_probe_no_runtime_kpi`
+- judgment(판정): `runtime_probe_prepared_no_external_execution`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `0`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `2`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `2`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `6`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `12`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `18`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `24`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `30`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `36`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `42`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276D aggressive fresh surface MT5 review(276D 공격형 새 표면 MT5 검토)
+
+- status(상태): `partial_aggressive_fresh_surface_mt5_review_parser_mismatch`
+- judgment(판정): `inconclusive_parser_mismatch_no_candidate_selection`
+- effect(효과): 48개 MT5 report(보고서)를 trade/curve/slice(거래/곡선/구간)로 검토하고 survivor watch(생존 관찰) `0`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276C aggressive fresh surface MT5 signal replay(276C 공격형 새 표면 MT5 신호 재생)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)를 준비/시도하고 KPI records(KPI 기록) `48`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276D aggressive fresh surface MT5 review(276D 공격형 새 표면 MT5 검토)
+
+- status(상태): `completed_aggressive_fresh_surface_mt5_review_no_survivor_selection`
+- judgment(판정): `valid_negative_aggressive_fresh_surface_probe_no_candidate_selection`
+- effect(효과): 48개 MT5 report(보고서)를 trade/curve/slice(거래/곡선/구간)로 검토하고 survivor watch(생존 관찰) `0`개를 남겼다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276E Stage276 closeout and Stage277 open(276E 276단계 종료와 277단계 개시)
+
+- status(상태): `completed_stage276_closeout_stage277_fresh_thesis_rebuild_open_no_candidate_selection`
+- judgment(판정): `valid_negative_aggressive_fresh_surface_probe_stage277_opened_no_candidate_selection`
+- effect(효과): Stage277 fresh thesis seed(277단계 새 논제 씨앗) `4`개를 열고 Stage276 failure memory(276단계 실패 기억) `12`개를 입력으로 고정했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276E Stage276 closeout and Stage277 open(276E 276단계 종료와 277단계 개시)
+
+- status(상태): `completed_stage276_closeout_stage277_fresh_thesis_rebuild_open_no_candidate_selection`
+- judgment(판정): `valid_negative_aggressive_fresh_surface_probe_stage277_opened_no_candidate_selection`
+- effect(효과): Stage277 fresh thesis seed(277단계 새 논제 씨앗) `4`개를 열고 Stage276 failure memory(276단계 실패 기억) `12`개를 입력으로 고정했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run276E Stage276 closeout and Stage277 open(276E 276단계 종료와 277단계 개시)
+
+- status(상태): `completed_stage276_closeout_stage277_fresh_thesis_rebuild_open_no_candidate_selection`
+- judgment(판정): `valid_negative_aggressive_fresh_surface_probe_stage277_opened_no_candidate_selection`
+- effect(효과): Stage277 fresh thesis seed(277단계 새 논제 씨앗) `4`개를 열고 Stage276 failure memory(276단계 실패 기억) `12`개를 입력으로 고정했다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277A Fresh thesis rebuild packet design(새 논제 재구성 묶음 설계)
+
+- status(상태): `completed_fresh_thesis_rebuild_packet_design_no_candidate_selection`
+- judgment(판정): `fresh_thesis_rebuild_packet_ready_no_candidate_selection`
+- effect(효과): package queue(패키지 대기열) `4`개를 만들고 run277B(277B 실행) materialization(물질화)으로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277A Fresh thesis rebuild packet design(새 논제 재구성 묶음 설계)
+
+- status(상태): `completed_fresh_thesis_rebuild_packet_design_no_candidate_selection`
+- judgment(판정): `fresh_thesis_rebuild_packet_ready_no_candidate_selection`
+- effect(효과): package queue(패키지 대기열) `4`개를 만들고 run277B(277B 실행) materialization(물질화)으로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277B Fresh thesis candidate blueprint materialization(새 논제 후보 청사진 물질화)
+
+- status(상태): `completed_fresh_thesis_candidate_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `fresh_thesis_candidate_blueprints_materialized_no_candidate_selection`
+- effect(효과): blueprint(청사진) `4`개를 만들고 run277C(277C 실행) scoring/handoff input(점수/인계 입력)으로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277C Fresh thesis scoring/handoff input materialization(새 논제 점수/인계 입력 물질화)
+
+- status(상태): `completed_fresh_thesis_scoring_handoff_input_materialization_no_candidate_selection`
+- judgment(판정): `fresh_thesis_scoring_handoff_inputs_materialized_no_candidate_selection`
+- effect(효과): scoring specs(점수 규격) `4`개를 만들고 run277D(277D 실행) scoring probe(점수 탐침)로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277B Fresh thesis candidate blueprint materialization(새 논제 후보 청사진 물질화)
+
+- status(상태): `completed_fresh_thesis_candidate_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `fresh_thesis_candidate_blueprints_materialized_no_candidate_selection`
+- effect(효과): blueprint(청사진) `4`개를 만들고 run277C(277C 실행) scoring/handoff input(점수/인계 입력)으로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277C Fresh thesis scoring/handoff input materialization(새 논제 점수/인계 입력 물질화)
+
+- status(상태): `completed_fresh_thesis_scoring_handoff_input_materialization_no_candidate_selection`
+- judgment(판정): `fresh_thesis_scoring_handoff_inputs_materialized_no_candidate_selection`
+- effect(효과): scoring specs(점수 규격) `4`개를 만들고 run277D(277D 실행) scoring probe(점수 탐침)로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277B Fresh thesis candidate blueprint materialization(새 논제 후보 청사진 물질화)
+
+- status(상태): `completed_fresh_thesis_candidate_blueprint_materialization_no_candidate_selection`
+- judgment(판정): `fresh_thesis_candidate_blueprints_materialized_no_candidate_selection`
+- effect(효과): blueprint(청사진) `4`개를 만들고 run277C(277C 실행) scoring/handoff input(점수/인계 입력)으로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277C Fresh thesis scoring/handoff input materialization(새 논제 점수/인계 입력 물질화)
+
+- status(상태): `completed_fresh_thesis_scoring_handoff_input_materialization_no_candidate_selection`
+- judgment(판정): `fresh_thesis_scoring_handoff_inputs_materialized_no_candidate_selection`
+- effect(효과): scoring specs(점수 규격) `4`개를 만들고 run277D(277D 실행) scoring probe(점수 탐침)로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277D Fresh thesis scoring probe(새 논제 점수 탐침)
+
+- status(상태): `completed_fresh_thesis_scoring_probe_no_candidate_selection`
+- judgment(판정): `fresh_thesis_score_tables_materialized_no_candidate_selection`
+- effect(효과): score table(점수표)와 handoff JSON(인계 JSON)을 만들고 run277E(277E 실행) score surface screen(점수 표면 선별)로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), MT5 runtime result(MT5 런타임 결과), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277E Fresh thesis score surface screen(새 논제 점수 표면 선별)
+
+- status(상태): `completed_fresh_thesis_score_surface_screen_no_candidate_selection`
+- judgment(판정): `fresh_thesis_score_surface_probe_queue_ready_no_candidate_selection`
+- effect(효과): probe queue(탐침 대기열) `2`개와 failure memory(실패 기억) `2`개를 만들고 Stage278(278단계) MT5 probe(MT5 탐침)로 넘긴다.
+- boundary(경계): selected candidate(선택 후보), MT5 runtime result(MT5 런타임 결과), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run277F Stage277 closeout and Stage278 open(277F 277단계 종료와 278단계 개방)
+
+- status(상태): `completed_stage277_closeout_stage278_fresh_thesis_mt5_probe_open_no_candidate_selection`
+- judgment(판정): `stage277_probe_queue_handoff_stage278_opened_no_candidate_selection`
+- effect(효과): Stage278(278단계) probe queue(탐침 대기열) `2`개와 failure memory(실패 기억) `2`개를 고정했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run278A Fresh thesis MT5 probe packet design(새 논제 MT5 탐침 묶음 설계)
+
+- status(상태): `completed_fresh_thesis_mt5_probe_packet_design_no_candidate_selection`
+- judgment(판정): `fresh_thesis_mt5_probe_packet_ready_no_candidate_selection`
+- effect(효과): branch(분기) `8`개와 MT5 probe design queue(MT5 탐침 설계 대기열) `6`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run278B Fresh thesis MT5 probe payload materialization(새 논제 MT5 탐침 페이로드 물질화)
+
+- status(상태): `completed_fresh_thesis_mt5_probe_payload_materialization_no_candidate_selection`
+- judgment(판정): `fresh_thesis_mt5_probe_payloads_materialized_no_runtime_or_candidate_claim`
+- effect(효과): payload parquet(페이로드 파케이) `6`개와 MT5 probe queue(MT5 탐침 대기열) `6`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run278C Fresh thesis MT5 probe readiness block(새 논제 MT5 탐침 준비 차단)
+
+- status(상태): `blocked_fresh_thesis_mt5_probe_direction_mapping_missing_no_candidate_selection`
+- judgment(판정): `blocked_runtime_probe_missing_supported_direction_mapping`
+- effect(효과): supported direction mapping(지원되는 방향 매핑)이 없어 MT5 tester(MT5 테스터)를 실행하지 않고 차단 근거를 남겼다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run278C Fresh thesis MT5 probe readiness block(새 논제 MT5 탐침 준비 차단)
+
+- status(상태): `blocked_fresh_thesis_mt5_probe_direction_mapping_missing_no_candidate_selection`
+- judgment(판정): `blocked_runtime_probe_missing_supported_direction_mapping`
+- effect(효과): supported direction mapping(지원되는 방향 매핑)이 없어 MT5 tester(MT5 테스터)를 실행하지 않고 차단 근거를 남겼다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 Stage278 closeout and Stage279 directional runtime mapping open(278단계 종료와 279단계 방향 런타임 매핑 개시)
+
+- status(상태): `completed_stage278_closeout_stage279_directional_runtime_mapping_open_no_candidate_selection`
+- judgment(판정): `stage278_direction_mapping_blocker_handoff_stage279_opened_no_candidate_selection`
+- effect(효과): direction mapping gap(방향 매핑 공백)을 새 stage(단계)의 질문으로 분리했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-23 run279A Directional runtime mapping rebuild packet design(방향 런타임 매핑 재구성 묶음 설계)
+
+- status(상태): `completed_directional_runtime_mapping_rebuild_packet_design_no_candidate_selection`
+- judgment(판정): `directional_runtime_mapping_rebuild_packet_ready_no_candidate_selection`
+- effect(효과): branch(분기) `5`개와 queue(대기열) `4`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279B Directional runtime mapping input materialization(방향 런타임 매핑 입력 물질화)
+
+- status(상태): `completed_directional_runtime_mapping_inputs_materialized_no_candidate_selection`
+- judgment(판정): `directional_runtime_mapping_inputs_materialized_no_runtime_or_candidate_claim`
+- effect(효과): directional payload(방향 페이로드) `12`개와 queue(대기열) `12`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279B Directional runtime mapping input materialization(방향 런타임 매핑 입력 물질화)
+
+- status(상태): `completed_directional_runtime_mapping_inputs_materialized_no_candidate_selection`
+- judgment(판정): `directional_runtime_mapping_inputs_materialized_no_runtime_or_candidate_claim`
+- effect(효과): directional payload(방향 페이로드) `12`개와 queue(대기열) `12`행을 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `prepared_directional_runtime_mapping_mt5_probe_no_runtime_kpi`
+- judgment(판정): `runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `0`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `partial_directional_runtime_mapping_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `3`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `partial_directional_runtime_mapping_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `12`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `partial_directional_runtime_mapping_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `24`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `partial_directional_runtime_mapping_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `36`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `partial_directional_runtime_mapping_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `48`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `partial_directional_runtime_mapping_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_inconclusive_no_candidate_selection`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `60`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279C Directional runtime mapping MT5 signal replay(방향 런타임 매핑 MT5 신호 재생)
+
+- status(상태): `completed_directional_runtime_mapping_mt5_signal_replay_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_inconclusive_no_candidate_selection`
+- effect(효과): attempts(시도) `72`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `72`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run279D Stage279 closeout and Stage280 open(279D 279단계 종료와 280단계 개시)
+
+- status(상태): `completed_stage279_runtime_probe_review_stage280_open_no_candidate_selection`
+- judgment(판정): `directional_mapping_runtime_probe_reviewed_survivor_seeds_stage280_opened_no_candidate_selection`
+- effect(효과): survivor seed(생존 씨앗) `3`개와 failure memory(실패 기억) `8`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run280A Stage280 stability validation(280A 280단계 안정성 검증)
+
+- status(상태): `completed_directional_mapping_stability_validation_no_candidate_selection`
+- judgment(판정): `directional_mapping_seeds_failed_stability_no_candidate_selection_stage281_opened`
+- effect(효과): seed(씨앗) `3`개를 실패 기억으로 정리하고 Stage281(281단계)를 열었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run281A Candidate rebuild materialization(281A 후보 재구성 물질화)
+
+- status(상태): `completed_drawdown_normalized_candidate_rebuild_inputs_materialized_no_candidate_selection`
+- judgment(판정): `fresh_drawdown_normalized_candidate_inputs_materialized_no_candidate_selection`
+- effect(효과): branch(분기) `4`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run281B Drawdown-normalized directional MT5 probe(281B 손실폭 정규화 방향 MT5 탐침)
+
+- status(상태): `prepared_drawdown_normalized_directional_mt5_probe_no_runtime_kpi`
+- judgment(판정): `runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `24`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `0`개를 기록했거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run281B Drawdown-normalized directional MT5 probe(281B 손실폭 정규화 방향 MT5 탐침)
+
+- status(상태): `partial_drawdown_normalized_directional_mt5_probe_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_requires_continuation_no_candidate_selection`
+- effect(효과): attempts(시도) `24`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `12`개를 기록했거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run281B Drawdown-normalized directional MT5 probe(281B 손실폭 정규화 방향 MT5 탐침)
+
+- status(상태): `completed_drawdown_normalized_directional_mt5_probe_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_requires_review_no_candidate_selection`
+- effect(효과): attempts(시도) `24`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `24`개를 기록했거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run281C Stage281 probe review(281C 281단계 탐침 검토)
+
+- status(상태): `completed_drawdown_normalized_directional_probe_review_no_candidate_selection_stage282_opened`
+- judgment(판정): `drawdown_normalized_directional_rebuild_failed_validation_stability_no_candidate_selection`
+- effect(효과): branch(분기) `4`개를 실패 기억으로 닫고 Stage282(282단계) seed(씨앗) `4`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run281C Stage281 probe review(281C 281단계 탐침 검토)
+
+- status(상태): `completed_drawdown_normalized_directional_probe_review_no_candidate_selection_stage282_opened`
+- judgment(판정): `drawdown_normalized_directional_rebuild_failed_validation_stability_no_candidate_selection`
+- effect(효과): branch(분기) `4`개를 실패 기억으로 닫고 Stage282(282단계) seed(씨앗) `4`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run282A Validation-first candidate materialization(282A 검증 우선 후보 물질화)
+
+- status(상태): `completed_validation_first_asymmetric_confirmation_inputs_materialized_no_candidate_selection`
+- judgment(판정): `fresh_validation_first_candidate_inputs_materialized_no_candidate_selection`
+- effect(효과): branch(분기) `4`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run282B Validation-first MT5 probe(282B 검증 우선 MT5 탐침)
+
+- status(상태): `partial_validation_first_asymmetric_confirmation_mt5_probe_no_candidate_selection`
+- judgment(판정): `runtime_probe_partial_requires_continuation_no_candidate_selection`
+- effect(효과): attempts(시도) `12`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `12`개를 기록했거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run282B Validation-first MT5 probe(282B 검증 우선 MT5 탐침)
+
+- status(상태): `completed_validation_first_asymmetric_confirmation_mt5_probe_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_requires_review_no_candidate_selection`
+- effect(효과): attempts(시도) `24`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `24`개를 기록했거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run282C Candidate selection(282C 후보 선택)
+
+- status(상태): `completed_validation_first_probe_review_candidate_selected_stage283_opened`
+- judgment(판정): `cp282D_selected_for_adapter_package_no_onnx_readiness`
+- effect(효과): `cp282D_macro_trend_countercheck_surface`를 Adapter package(어댑터 패키지) 대상으로 선택하고 Stage283(283단계)를 열었다.
+- boundary(경계): Adapter package(어댑터 패키지)는 `pending`, ONNX readiness(온엑스 준비)와 Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run283A Adapter package(283A 어댑터 패키지)
+
+- status(상태): `completed_adapter_package_for_selected_candidate_stage284_opened`
+- judgment(판정): `adapter_package_built_no_onnx_readiness`
+- effect(효과): `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`를 구성하고 Stage284(284단계)를 열었다.
+- boundary(경계): ONNX readiness(온엑스 준비)와 Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run284A ONNX-go pressure(284A 온엑스 진행 압박)
+
+- status(상태): `completed_onnx_go_pressure_passed_stage285_opened`
+- judgment(판정): `onnx_go_approved_for_export_no_parity_yet`
+- effect(효과): Stage285(285단계) ONNX export/parity/runtime reproduction(온엑스 내보내기/동등성/런타임 재현)을 열었다.
+- boundary(경계): Goal Achieve(목표 달성)와 런타임 권위는 `not_claimed`다.
+
+## 2026-05-24 - Stage285 ONNX Package(285단계 온엑스 패키지)
+
+- run285A(285A 실행): cp282D(282D 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현)으로 닫았다. Effect(효과): main push(메인 푸시)만 남은 후보 패키지 상태를 기록한다.
+
+## 2026-05-24 - Stage285 ONNX Package(285단계 온엑스 패키지)
+
+- run285A(285A 실행): cp282D(282D 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현)으로 닫았다. Effect(효과): main push(메인 푸시)만 남은 후보 패키지 상태를 기록한다.
+
+## 2026-05-24 - Stage285 ONNX Package(285단계 온엑스 패키지)
+
+- run285A(285A 실행): cp282D(282D 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현)으로 닫았다. Effect(효과): main push(메인 푸시)만 남은 후보 패키지 상태를 기록한다.
