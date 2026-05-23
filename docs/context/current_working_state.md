@@ -7,7 +7,7 @@
 - source_stage(원천 단계): `284_onnx_candidate_campaign__onnx_go_pressure_for_cp282d_adapter`
 - target_surface(목표 표면): `onnx_export_parity_runtime_reproduction_cp282d`
 - adapter_under_review(검토 중 어댑터): `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`
-- status(상태): `completed_cp282d_onnx_export_parity_runtime_reproduction_package_ready_for_main_push`
+- status(상태): `goal_achieved_after_main_push`
 - stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
 - stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
@@ -22,7 +22,7 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `commit_and_push_main_then_mark_goal_achieved`
+- next_action(다음 행동): `none_goal_achieved`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_final_package_for_onnx_research_handoff_only`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
@@ -963,4 +963,6 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 - run284A_summary(284A 요약): Adapter package(어댑터 패키지) `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`가 ONNX-go pressure(온엑스 진행 압박)를 통과했다. Effect(효과): Stage285(285단계)에서 ONNX export/parity/runtime reproduction(온엑스 내보내기/동등성/런타임 재현)을 시작한다.
 
-- run285A_summary(285A 요약): ONNX export(온엑스 내보내기), Python parity(파이썬 동등성), feature order parity(피처 순서 동등성), MT5 runtime reproduction(MT5 런타임 재현)을 `completed`로 기록했다. Effect(효과): attempts(시도) `6`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `6`개를 cp282D 후보 패키지 근거로 묶고, main push(메인 푸시) 전까지 Goal Achieve(목표 달성)는 `complete_pending_main_push`로 둔다.
+- run285A_summary(285A 요약): ONNX export(온엑스 내보내기), Python parity(파이썬 동등성), feature order parity(피처 순서 동등성), MT5 runtime reproduction(MT5 런타임 재현)을 `completed`로 기록했다. Effect(효과): attempts(시도) `6`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `6`개를 cp282D 후보 패키지 근거로 묶고, main push(메인 푸시)를 완료해 Goal Achieve(목표 달성)를 `achieved_after_main_push`로 닫았다.
+
+- run285A_push_receipt(285A 푸시 영수증): commit(커밋) `4a1dc0d2`를 origin/main(원격 메인)에 push(푸시)했다. Effect(효과): ONNX package(온엑스 패키지) 산출물, Adapter package(어댑터 패키지), parity receipt(동등성 영수증), MT5 runtime reproduction receipt(MT5 런타임 재현 영수증)가 GitHub main(GitHub 메인)에 동기화됐다.
