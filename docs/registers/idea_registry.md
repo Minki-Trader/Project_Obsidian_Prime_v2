@@ -178,3 +178,5 @@ Register ideas when they become durable work, not for every passing thought.
 | `IDEA-ST294-MT5-OUTCOME-RELABEL-DIRECTIONAL-FLIP` | `294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild` | MT5 outcome relabel and directional flip rebuild(MT5 결과 재라벨/방향 반전 재구성) | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | Stage293(293단계)의 near-breakeven dense losers(고밀도 근본전 손실)를 실제 체결 손익 label(라벨)로 재구성 |
 
 | `IDEA-ST295-SPLIT-CONSISTENT-OUTCOME-DISTILLATION` | `295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild` | split-consistent outcome distillation(분할 일관 결과 증류) | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | Stage294(294단계)의 OOS 양수/validation 음수 비대칭을 새 label/decision/risk surface(라벨/판단/위험 표면)로 재구성 |
+
+| `IDEA-ST296-DENSITY-FLOOR-PROFIT-EXPANSION` | `296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild` | density-floor profit expansion(거래 밀도 하한 수익 확장) | `Tier A used + Tier B fallback + actual routed total` | `opened_from_stage295_no_candidate` | cp295D 수익 단서와 cp295B/E OOS 상방 단서를 4-10 trades/day(일 4-10거래) 새 표면으로 재구성 |

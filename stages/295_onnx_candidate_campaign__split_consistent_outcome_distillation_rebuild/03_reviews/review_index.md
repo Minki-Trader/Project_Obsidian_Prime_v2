@@ -1,1 +1,12 @@
 ﻿# Stage295 Review Index(295단계 검토 색인)
+
+- run295A_report(295A 보고): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/03_reviews/run295A_split_consistent_outcome_distillation_materialization_report.md`
+- run295A_mt5_queue(295A MT5 대기열): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/02_runs/run295A/mt5_probe_queue.csv`
+
+- run295B_report(295B 보고): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/03_reviews/run295B_split_consistent_outcome_distillation_mt5_probe_report.md`
+- run295B_execution_result(295B 실행 결과): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/02_runs/run295B/execution_result.json`
+- run295B_mt5_kpi_summary(295B MT5 KPI 요약): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/02_runs/run295B/mt5_kpi_summary.csv`
+
+- run295C_report(295C 보고): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/03_reviews/run295C_split_consistent_outcome_distillation_review_stage296_open_report.md`
+- run295C_scoreboard(295C 점수표): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/02_runs/run295C/split_consistent_outcome_distillation_review_scoreboard.csv`
+- run295C_failure_memory(295C 실패 기억): `stages/295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild/02_runs/run295C/failure_memory.csv`
