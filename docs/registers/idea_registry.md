@@ -176,3 +176,5 @@ Register ideas when they become durable work, not for every passing thought.
 | `IDEA-ST293-PROFIT-SCALE-DENSITY-CALIBRATION` | `293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild` | runtime-aware profit-scale/density/curve calibration(런타임 인식 순수익 규모/밀도/곡선 보정) | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | Stage292(292단계)의 proxy-runtime gap(대리-런타임 공백)을 새 구조 논제로 전환 |
 
 | `IDEA-ST294-MT5-OUTCOME-RELABEL-DIRECTIONAL-FLIP` | `294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild` | MT5 outcome relabel and directional flip rebuild(MT5 결과 재라벨/방향 반전 재구성) | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | Stage293(293단계)의 near-breakeven dense losers(고밀도 근본전 손실)를 실제 체결 손익 label(라벨)로 재구성 |
+
+| `IDEA-ST295-SPLIT-CONSISTENT-OUTCOME-DISTILLATION` | `295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild` | split-consistent outcome distillation(분할 일관 결과 증류) | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | Stage294(294단계)의 OOS 양수/validation 음수 비대칭을 새 label/decision/risk surface(라벨/판단/위험 표면)로 재구성 |

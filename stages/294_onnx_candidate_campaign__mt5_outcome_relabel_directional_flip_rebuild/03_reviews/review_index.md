@@ -1,1 +1,12 @@
 ﻿# Stage294 Review Index(294단계 검토 색인)
+
+- run294A_report(294A 보고): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/03_reviews/run294A_mt5_outcome_relabel_directional_flip_materialization_report.md`
+- run294A_mt5_queue(294A MT5 대기열): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/02_runs/run294A/mt5_probe_queue.csv`
+
+- run294B_report(294B 보고): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/03_reviews/run294B_mt5_outcome_relabel_directional_flip_mt5_probe_report.md`
+- run294B_execution_result(294B 실행 결과): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/02_runs/run294B/execution_result.json`
+- run294B_mt5_kpi_summary(294B MT5 KPI 요약): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/02_runs/run294B/mt5_kpi_summary.csv`
+
+- run294C_report(294C 보고): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/03_reviews/run294C_mt5_outcome_relabel_directional_flip_review_stage295_open_report.md`
+- run294C_scoreboard(294C 점수표): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/02_runs/run294C/mt5_outcome_relabel_directional_flip_review_scoreboard.csv`
+- run294C_failure_memory(294C 실패 기억): `stages/294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild/02_runs/run294C/failure_memory.csv`

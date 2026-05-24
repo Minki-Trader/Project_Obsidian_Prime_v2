@@ -3215,3 +3215,31 @@
 - judgment(판정): `profit_scale_density_calibration_runtime_probe_negative_no_adapter_no_onnx`
 - effect(효과): Stage293(293단계)를 `none` 선택 상태로 판정하고 `294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild`를 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 `not_started/not_claimed`다.
+
+## 2026-05-24 run294A MT5 outcome relabel directional flip materialization(294A MT5 결과 재라벨 방향 반전 물질화)
+
+- status(상태): `completed_mt5_outcome_relabel_directional_flip_candidates_materialized_no_selection`
+- judgment(판정): `mt5_outcome_relabel_directional_flip_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run294B MT5 outcome relabel directional flip MT5 probe(294B MT5 결과 재라벨 방향 반전 MT5 탐침)
+
+- status(상태): `prepared_mt5_outcome_relabel_directional_flip_mt5_probe_no_runtime_kpi`
+- judgment(판정): `mt5_outcome_relabel_directional_flip_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run294B MT5 outcome relabel directional flip MT5 probe(294B MT5 결과 재라벨 방향 반전 MT5 탐침)
+
+- status(상태): `completed_mt5_outcome_relabel_directional_flip_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run294C MT5 outcome relabel directional flip review(294C MT5 결과 재라벨 방향 반전 검토)
+
+- status(상태): `completed_mt5_outcome_relabel_directional_flip_review_no_candidate_stage295_opened`
+- judgment(판정): `mt5_outcome_relabel_directional_flip_runtime_probe_negative_no_adapter_no_onnx`
+- effect(효과): Stage294(294단계)를 `none` 선택 상태로 판정하고 `295_onnx_candidate_campaign__split_consistent_outcome_distillation_rebuild`를 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 `not_started/not_claimed`다.
