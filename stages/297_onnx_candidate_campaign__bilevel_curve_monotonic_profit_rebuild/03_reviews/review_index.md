@@ -1,1 +1,12 @@
 ﻿# Stage297 Review Index(297단계 검토 색인)
+
+- run297A_report(297A 보고): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/03_reviews/run297A_bilevel_curve_monotonic_profit_materialization_report.md`
+- run297A_mt5_queue(297A MT5 대기열): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/02_runs/run297A/mt5_probe_queue.csv`
+- run297A_bucket_receipt(297A 구간 영수증): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/02_runs/run297A/stage296_outcome_bucket_receipt.csv`
+
+- run297B_report(297B 보고): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/03_reviews/run297B_bilevel_curve_monotonic_profit_mt5_probe_report.md`
+- run297B_execution_result(297B 실행 결과): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/02_runs/run297B/execution_result.json`
+- run297B_mt5_kpi_summary(297B MT5 KPI 요약): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/02_runs/run297B/mt5_kpi_summary.csv`
+- run297C_report(297C 보고): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/03_reviews/run297C_bilevel_curve_monotonic_profit_review_stage298_open_report.md`
+- run297C_scoreboard(297C 점수판): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/02_runs/run297C/bilevel_curve_monotonic_profit_review_scoreboard.csv`
+- stage298_seed_queue(298단계 씨앗 대기열): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/02_runs/run297C/stage298_seed_queue.csv`

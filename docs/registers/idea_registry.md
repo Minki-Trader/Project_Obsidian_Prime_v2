@@ -182,3 +182,9 @@ Register ideas when they become durable work, not for every passing thought.
 | `IDEA-ST296-DENSITY-FLOOR-PROFIT-EXPANSION` | `296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild` | density-floor profit expansion(거래 밀도 하한 수익 확장) | `Tier A used + Tier B fallback + actual routed total` | `opened_from_stage295_no_candidate` | cp295D 수익 단서와 cp295B/E OOS 상방 단서를 4-10 trades/day(일 4-10거래) 새 표면으로 재구성 |
 
 | `IDEA-ST297-BILEVEL-CURVE-MONOTONIC-PROFIT` | `297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild` | bi-level curve-monotonic profit rebuild(이중 단계 곡선 단조 수익 재구성) | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | Stage296(296단계)의 proxy-positive/runtime-gated(대리 양수/런타임 관문) 공백을 entry creation(진입 생성), profit scale(순수익 규모), curve veto(곡선 거부) 공동 목적함수로 재구성 |
+
+## run297C_review_bilevel_curve_monotonic_profit_mt5_probe_v1 profit-scale edge amplification handoff(수익 규모 거래우위 증폭 인계)
+
+- idea_id(아이디어 ID): `stage298_profit_scale_edge_amplification_primary`
+- hypothesis(가설): Stage297(297단계)의 낮은 순수익은 진입 수가 아니라 payoff magnitude(보상 크기)와 exit asymmetry(청산 비대칭)의 병목일 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).

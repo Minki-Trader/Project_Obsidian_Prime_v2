@@ -87,3 +87,10 @@ Negative results are preserved because they prevent repeated dead ends.
 | `NEG-ST295-SPLIT-CONSISTENT-OUTCOME-DISTILLATION` | `IDEA-ST295-SPLIT-CONSISTENT-OUTCOME-DISTILLATION` | split-consistent outcome distillation(분할 일관 결과 증류)이 ONNX-worthy candidate(온엑스화 가치 후보)로 닫히지 않음 | 모든 actual routed total(실제 라우팅 전체)이 4-10 trades/day(일 4-10거래), split-positive 수익, 곡선 proxy(대리 지표)를 동시에 통과하지 못함 | cp295D는 저밀도 수익 단서, cp295B/E는 OOS 상방 단서로만 보존 | fresh density-floor profit expansion(새 거래 밀도 하한 수익 확장)에서만 재개 |
 
 | `NEG-ST296-DENSITY-FLOOR-PROFIT-EXPANSION` | `IDEA-ST296-DENSITY-FLOOR-PROFIT-EXPANSION` | density-floor profit expansion(거래 밀도 하한 수익 확장)이 ONNX-worthy candidate(ONNX화 가치 후보)로 닫히지 않음 | run296C(296C 실행)에서 최소 거래수, 일 4-10거래, 순수익 규모, PF(수익 팩터), 회복, 기대값, 곡선 포켓을 함께 통과한 패키지가 없음 | cp296 proxy(대리) 상방은 보존하되 MT5 runtime(메타트레이더5 런타임)에서 수익 규모와 곡선 품질을 같이 만족해야 함 | 새 curve-monotonic profit objective(곡선 단조 수익 목적함수) 또는 entry/risk surface(진입/위험 표면)일 때만 재개 |
+
+## run297C_review_bilevel_curve_monotonic_profit_mt5_probe_v1 Stage297 low profit-scale negative memory(297단계 낮은 수익 규모 부정 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): 4-10 trades/day(일 4-10거래)는 대체로 유지됐지만 순수익 규모, OOS PF(표본외 수익 팩터), recovery(회복), curve pocket(곡선 포켓)이 동시에 부족했다.
+- do_not_repeat(반복 금지): Stage297 robust bucket(강건 구간) agree/soft flip/veto 임계값만 좁게 바꾸는 repair(수리)는 하지 않는다.
+- reopen_condition(재개 조건): 실제 MT5 routed total(라우팅 전체)에서 validation/OOS 각각 net profit(순수익) 300 이상과 combined(합산) 800 이상을 먼저 보여야 한다.
