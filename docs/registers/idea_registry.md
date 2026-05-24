@@ -230,3 +230,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage304_curve_pocket_aware_profit_source`
 - hypothesis(가설): 곡선 포켓을 WFO(워크포워드 최적화) 목적에 넣으면 순수익 규모와 매끄러운 곡선을 함께 만들 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run305C_review_runtime_realized_curve_attribution_mt5_probe_v1 curve-pocket-aware profit source(怨≪꽑 ?ъ폆 ?몄떇 ?섏씡 ?먯쿇)
+
+- idea_id(?꾩씠?붿뼱 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(媛??: 怨≪꽑 ?ъ폆??WFO(?뚰겕?ъ썙??理쒖쟻?? 紐⑹쟻???ｌ쑝硫??쒖닔??洹쒕え? 留ㅻ걚?ъ슫 怨≪꽑???④퍡 留뚮뱾 ???덈떎.
+- evidence_boundary(洹쇨굅 寃쎄퀎): research_development_only(?곌뎄媛쒕컻 ?꾩슜), selected_candidate=none.

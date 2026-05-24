@@ -3502,3 +3502,24 @@
 - judgment(판정): `actual_mt5_no_onnx_worthy_candidate_runtime_realized_curve_rebuild_opened`
 - effect(효과): Stage304(304단계)를 닫고 `305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild`를 열었다.
 - boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.
+
+## 2026-05-24 run305A Runtime-realized curve attribution materialization(305A 런타임 실제 곡선 기여도 물질화)
+
+- status(상태): `completed_runtime_realized_curve_attribution_candidates_materialized_no_selection`
+- judgment(판정): `runtime_realized_curve_attribution_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+
+## 2026-05-24 run305B Curve-pocket-aware profit source MT5 probe(305B 怨≪꽑 ?ъ폆 ?몄떇 ?섏씡 ?먯쿇 MT5 ?먯묠)
+
+- status(?곹깭): `completed_runtime_realized_curve_attribution_mt5_probe_no_selection`
+- judgment(?먯젙): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(?④낵): attempts(?쒕룄) `36`媛쒖? MT5 KPI records(MT5 KPI 湲곕줉) `36`媛쒕? 湲곕줉?덈떎.
+- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+
+## 2026-05-24 run305C Runtime-realized curve attribution review(305C 런타임 실제 곡선 기여도 검토)
+
+- status(?곹깭): `completed_runtime_realized_curve_attribution_review_stage306_opened`
+- judgment(?먯젙): `actual_mt5_no_onnx_worthy_candidate_runtime_realized_curve_rebuild_opened`
+- effect(효과): Stage305(305단계)를 닫고 `306_onnx_candidate_campaign__anti_surface_trade_shape_rebuild`를 열었다.
+- boundary(寃쎄퀎): ?댁쁺 ?밴꺽?대굹 ?고???沅뚯쐞??二쇱옣?섏? ?딅뒗??

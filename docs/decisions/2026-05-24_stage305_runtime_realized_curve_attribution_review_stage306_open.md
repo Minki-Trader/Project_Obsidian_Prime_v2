@@ -1,0 +1,9 @@
+﻿# Stage306 Decision(304?④퀎 寃곗젙)
+
+- decision(寃곗젙): `actual_mt5_no_onnx_worthy_candidate_runtime_realized_curve_rebuild_opened`
+- selected_candidate(?좏깮 ?꾨낫): `none`
+- Adapter package(?대뙌???⑦궎吏): `none`
+- ONNX readiness(?⑥뿊??以鍮?: `not_started`
+- next_stage(?ㅼ쓬 ?④퀎): `306_onnx_candidate_campaign__anti_surface_trade_shape_rebuild`
+
+Effect(?④낵): ?ㅼ젣 MT5(硫뷀??몃젅?대뜑5) report source_path(蹂닿퀬???먯쿇 寃쎈줈)瑜??댁슜??怨≪꽑 ?먯젙??蹂듦뎄?섍퀬, ?꾨낫媛 ?놁쑝硫????고???湲곗뿬???ш뎄?깆쑝濡??섍릿??

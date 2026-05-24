@@ -2,3 +2,13 @@
 
 - source_review(원천 검토): `stages/304_onnx_candidate_campaign__curve_pocket_aware_profit_source_rebuild/03_reviews/run304C_curve_pocket_aware_profit_source_review_stage305_open_report.md`
 - seed_queue(씨앗 대기열): `stages/304_onnx_candidate_campaign__curve_pocket_aware_profit_source_rebuild/02_runs/run304C/stage305_seed_queue.csv`
+
+- run305A_report(305A 보고): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/03_reviews/run305A_runtime_realized_curve_attribution_materialization_report.md`
+- run305A_mt5_queue(305A MT5 대기열): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/02_runs/run305A/mt5_probe_queue.csv`
+
+- run305B_report(305B 蹂닿퀬): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/03_reviews/run305B_runtime_realized_curve_attribution_mt5_probe_report.md`
+- run305B_execution_result(305B ?ㅽ뻾 寃곌낵): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/02_runs/run305B/execution_result.json`
+- run305B_mt5_kpi_summary(305B MT5 KPI ?붿빟): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/02_runs/run305B/mt5_kpi_summary.csv`
+- run305C_report(305C 보고): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/03_reviews/run305C_runtime_realized_curve_attribution_review_stage306_open_report.md`
+- run305C_scoreboard(305C 점수표): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/02_runs/run305C/runtime_realized_curve_attribution_review_scoreboard.csv`
+- stage306_seed_queue(306단계 씨앗 대기열): `stages/305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild/02_runs/run305C/stage306_seed_queue.csv`
