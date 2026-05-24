@@ -1,1 +1,12 @@
 ﻿# Stage292 Review Index(292단계 검토 색인)
+
+- run292A_report(292A 보고): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/03_reviews/run292A_anti_direction_meta_label_trade_simulator_materialization_report.md`
+- run292A_mt5_queue(292A MT5 대기열): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/02_runs/run292A/mt5_probe_queue.csv`
+
+- run292B_report(292B 보고): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/03_reviews/run292B_anti_direction_meta_label_trade_simulator_mt5_probe_report.md`
+- run292B_execution_result(292B 실행 결과): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/02_runs/run292B/execution_result.json`
+- run292B_mt5_kpi_summary(292B MT5 KPI 요약): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/02_runs/run292B/mt5_kpi_summary.csv`
+
+- run292C_report(292C 보고): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/03_reviews/run292C_anti_direction_meta_trade_sim_review_stage293_open_report.md`
+- run292C_scoreboard(292C 점수표): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/02_runs/run292C/anti_direction_meta_trade_sim_review_scoreboard.csv`
+- run292C_failure_memory(292C 실패 기억): `stages/292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild/02_runs/run292C/failure_memory.csv`

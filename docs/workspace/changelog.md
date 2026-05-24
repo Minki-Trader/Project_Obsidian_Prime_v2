@@ -3159,3 +3159,31 @@
 - effect(효과): Stage291(291단계)을 선택 후보 없이 닫고 `292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild`를 열었다.
 - selected_candidate(선택 후보): `none`
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run292A Anti-direction meta-label trade simulator materialization(292A 역방향 메타라벨 거래 시뮬레이터 물질화)
+
+- status(상태): `completed_anti_direction_meta_label_trade_simulator_candidates_materialized_no_selection`
+- judgment(판정): `anti_direction_meta_label_trade_simulator_inputs_materialized_no_candidate_selection`
+- effect(효과): branch(분기) `6`개와 MT5 queue(MT5 대기열) `6`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run292B Anti-direction meta-label trade simulator MT5 probe(292B 역방향 메타라벨 거래 시뮬레이터 MT5 탐침)
+
+- status(상태): `prepared_anti_direction_meta_label_trade_simulator_mt5_probe_no_runtime_kpi`
+- judgment(판정): `anti_direction_meta_trade_sim_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run292B Anti-direction meta-label trade simulator MT5 probe(292B 역방향 메타라벨 거래 시뮬레이터 MT5 탐침)
+
+- status(상태): `completed_anti_direction_meta_label_trade_simulator_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run292C Anti-direction meta trade sim review(292C 반대방향 메타 거래 시뮬레이터 검토)
+
+- status(상태): `completed_anti_direction_meta_trade_sim_review_no_candidate_stage293_opened`
+- judgment(판정): `anti_direction_meta_trade_sim_runtime_probe_negative_no_adapter_no_onnx`
+- effect(효과): Stage292(292단계)를 `none` 선택 상태로 판정하고 `293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild`를 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 `not_started/not_claimed`다.
