@@ -158,3 +158,7 @@ Register ideas when they become durable work, not for every passing thought.
 | `IDEA-ST282-RUN282A-VALIDATION-FIRST-INPUTS` | `282_onnx_candidate_campaign__validation_first_asymmetric_confirmation_rebuild` | validation-first candidate inputs(검증 우선 후보 입력) `4`개 | `Tier A used + Tier B fallback stress + actual routed total` | `materialized_no_candidate` | MT5 탐침으로 검증 회복력과 표본외 상방을 함께 본다. |
 
 | `IDEA-ST283-ADAPTER-PACKAGE-CP282D` | `283_onnx_candidate_campaign__adapter_package_for_cp282d_macro_trend_countercheck` | Adapter package(어댑터 패키지) for `cp282D_macro_trend_countercheck_surface` | `Tier A used + Tier B fallback stress + actual routed total` | `opened_adapter_package_pending` | 선택 후보를 온엑스 전 추적 가능 패키지로 고정한다. |
+
+| `IDEA-ST286-RUN286A-TRADE-DENSITY-CURVE-QUALITY` | `286_onnx_candidate_campaign__trade_density_curve_quality_rebuild` | trade density/curve quality first(거래 밀도/곡선 품질 우선) 후보 `5`개 | `Tier A used + Tier B fallback stress + actual routed total` | `materialized_no_candidate` | 4-10 trades/day(일 4-10거래)와 순수익 규모를 먼저 맞춘 뒤 Adapter/ONNX(어댑터/온엑스)로 넘긴다. |
+
+| `IDEA-ST287-DENSITY-SCALE-CURVE-POCKET-REBUILD` | `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild` | density/scale clue(밀도/규모 단서) `2`개에서 curve pocket(곡선 포켓)을 구조적으로 줄이는 새 후보 구성 | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | threshold-only repair(임계값만 고치는 수리)를 금지하고 과거 stage(단계) 약점 자료를 다시 연결한다. |

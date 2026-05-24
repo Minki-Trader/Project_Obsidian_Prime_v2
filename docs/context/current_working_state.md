@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `stage285_onnx_export_parity_runtime_reproduction_cp282d_v1`
-- current_run(현재 실행): `run285A_export_cp282d_adapter_to_onnx_and_runtime_reproduction_v1`
-- active_stage(활성 단계): `285_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp282d`
+- current_packet(현재 작업 묶음): `stage287_density_scale_curve_pocket_rebuild_v1`
+- current_run(현재 실행): `run286C_review_trade_density_curve_quality_mt5_probe_v1`
+- active_stage(활성 단계): `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild`
 - selected_research_baseline(선택 연구 기준선): `none`
-- source_stage(원천 단계): `284_onnx_candidate_campaign__onnx_go_pressure_for_cp282d_adapter`
+- source_stage(원천 단계): `286_onnx_candidate_campaign__trade_density_curve_quality_rebuild`
 - target_surface(목표 표면): `onnx_export_parity_runtime_reproduction_cp282d`
 - adapter_under_review(검토 중 어댑터): `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`
-- status(상태): `goal_achieved_after_main_push`
+- status(상태): `opened_density_scale_curve_pocket_rebuild`
 - stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
 - stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
@@ -22,8 +22,8 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `none_goal_achieved`
-- claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_final_package_for_onnx_research_handoff_only`
+- next_action(다음 행동): `run287A_design_density_scale_curve_pocket_rebuild_packet`
+- claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_candidate_package_gate`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
 Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.
@@ -966,3 +966,7 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run285A_summary(285A 요약): ONNX export(온엑스 내보내기), Python parity(파이썬 동등성), feature order parity(피처 순서 동등성), MT5 runtime reproduction(MT5 런타임 재현)을 `completed`로 기록했다. Effect(효과): attempts(시도) `6`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `6`개를 cp282D 후보 패키지 근거로 묶고, main push(메인 푸시)를 완료해 Goal Achieve(목표 달성)를 `achieved_after_main_push`로 닫았다.
 
 - run285A_push_receipt(285A 푸시 영수증): commit(커밋) `4a1dc0d2`를 origin/main(원격 메인)에 push(푸시)했다. Effect(효과): ONNX package(온엑스 패키지) 산출물, Adapter package(어댑터 패키지), parity receipt(동등성 영수증), MT5 runtime reproduction receipt(MT5 런타임 재현 영수증)가 GitHub main(GitHub 메인)에 동기화됐다.
+
+- run286A_summary(286A 요약): trade density/curve quality first(거래 밀도/곡선 품질 우선) 후보 `5`개를 물질화했다. Effect(효과): 4-10 trades/day(일 4-10거래)에 닿는지 MT5(메타트레이더5)로 검증할 수 있고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run286C_summary(286C 요약): Stage286(286단계)은 density/scale clue(밀도/규모 단서) `2`개를 찾았지만 curve pocket(곡선 포켓) 때문에 selected candidate(선택 후보) 없이 닫고 Stage287(287단계)을 열었다. Effect(효과): Adapter/ONNX(어댑터/온엑스)는 진행하지 않고 곡선 포켓을 새 구조로 줄이는 질문으로 넘긴다.

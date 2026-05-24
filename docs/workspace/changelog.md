@@ -2989,3 +2989,24 @@
 ## 2026-05-24 - Stage285 ONNX Package(285단계 온엑스 패키지)
 
 - run285A(285A 실행): cp282D(282D 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현)으로 닫았다. Effect(효과): main push(메인 푸시)만 남은 후보 패키지 상태를 기록한다.
+
+## 2026-05-24 run286A Trade density candidate materialization(286A 거래 밀도 후보 물질화)
+
+- status(상태): `completed_trade_density_curve_quality_candidate_inputs_materialized_no_selection`
+- judgment(판정): `high_scale_signal_density_candidates_materialized_no_candidate_selection`
+- effect(효과): Stage286(286단계)를 열고 후보 `5`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run286B Trade density curve quality MT5 probe(286B 거래 밀도/곡선 품질 MT5 탐침)
+
+- status(상태): `completed_trade_density_curve_quality_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `30`개를 남겼거나 준비했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run286C Density scale clue, curve quality failure(286C 밀도/규모 단서, 곡선 품질 실패)
+
+- status(상태): `completed_trade_density_curve_quality_review_no_candidate_stage287_opened`
+- judgment(판정): `density_scale_found_but_curve_pockets_fail_no_candidate`
+- effect(효과): Stage286(286단계)을 selected candidate(선택 후보) 없이 닫고 Stage287(287단계)을 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.

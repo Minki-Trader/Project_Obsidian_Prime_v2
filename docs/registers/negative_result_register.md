@@ -65,3 +65,5 @@ Negative results are preserved because they prevent repeated dead ends.
 | `NEG-ST280-DIRECTIONAL-STABILITY` | `280_onnx_candidate_campaign__directional_mapping_stability_validation` | 생존 씨앗 `3`개가 안정성 검증에서 선택 후보가 되지 못함 | 새 손실폭 정규화 판단/위험 표면일 때만 재개 | `stages/280_onnx_candidate_campaign__directional_mapping_stability_validation/02_runs/run280A/stability_failure_memory.csv` |
 
 | `NEG-ST281-DRAWDOWN-NORMALIZED-DIRECTION` | `281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild` | drawdown-normalized directional rebuild(손실폭 정규화 방향 재구성)이 validation(검증) 회복력 기준을 통과하지 못함 | OOS(표본외) 상방은 후보 선택 근거가 아니라 Stage282(282단계) 새 논제 입력으로만 사용 | `stages/281_onnx_candidate_campaign__drawdown_normalized_directional_candidate_rebuild/02_runs/run281C/failure_memory.csv` |
+
+| `NEG-ST286-CURVE-QUALITY-FAIL` | `286_onnx_candidate_campaign__trade_density_curve_quality_rebuild` | `run286C_review_trade_density_curve_quality_mt5_probe_v1` | density/scale clue(밀도/규모 단서)는 있으나 curve pocket(곡선 포켓)과 underwater ratio(수중 비율)가 ONNX-worthy candidate(온엑스 가치 후보) 기준 미달 | Stage287(287단계)에서 새 구조로만 재개 | threshold-only repair(임계값만 고치는 수리) 금지 |
