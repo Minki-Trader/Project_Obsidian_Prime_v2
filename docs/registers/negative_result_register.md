@@ -71,3 +71,5 @@ Negative results are preserved because they prevent repeated dead ends.
 | `NEG-ST287-DENSITY-SCALE-CURVE-POCKET` | `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild` | `run287C_review_density_scale_curve_pocket_mt5_probe_v1` | density/profit seed found but no candidate(밀도/수익 씨앗은 있으나 후보 없음) | efficiency/curve gate failed(효율/곡선 게이트 실패) | reopen only with risk/reward/exit surface(위험/보상/청산 표면으로만 재개) |
 
 | `NEG-ST288-RISK-REWARD-EXIT` | `288_onnx_candidate_campaign__risk_reward_exit_asymmetry_rebuild` | `run288C_review_risk_reward_exit_asymmetry_mt5_probe_v1` | risk/reward/exit-only failed(위험/보상/청산 단독 실패) | OOS and curve did not survive(표본외와 곡선 생존 실패) | reopen only with regime-conditioned edge surface(국면 조건부 엣지 표면으로만 재개) |
+
+| `NEG-ST289-REGIME-CONDITIONED-EDGE` | `289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild` | `run289C_review_regime_conditioned_edge_mt5_probe_v1` | regime-conditioned inherited signal filtering failed(국면 조건부 계승 신호 필터링 실패) | validation net/PF/recovery(검증 순수익/수익 팩터/회복)가 후보 기준 미달 | reopen only with payoff-weighted fresh model surface(수익 가중 새 모델 표면으로만 재개) |

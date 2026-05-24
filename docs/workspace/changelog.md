@@ -3073,3 +3073,31 @@
 - judgment(판정): `risk_reward_exit_did_not_solve_edge_quality_no_adapter_no_onnx`
 - effect(효과): Stage288(288단계)을 selected candidate(선택 후보) 없이 닫고 Stage289(289단계)을 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run289A Regime-conditioned edge materialization(289A 국면 조건부 엣지 물질화)
+
+- status(상태): `completed_regime_conditioned_edge_candidates_materialized_no_selection`
+- judgment(판정): `regime_conditioned_edge_candidate_inputs_materialized_no_candidate_selection`
+- effect(효과): 후보 `5`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run289B Regime-conditioned edge MT5 probe(289B 국면 조건부 엣지 MT5 탐침)
+
+- status(상태): `prepared_regime_conditioned_edge_mt5_probe_no_runtime_kpi`
+- judgment(판정): `regime_conditioned_edge_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run289B Regime-conditioned edge MT5 probe(289B 국면 조건부 엣지 MT5 탐침)
+
+- status(상태): `completed_regime_conditioned_edge_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 KPI 기록) `30`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run289C Regime-conditioned edge review(289C 국면 조건부 엣지 검토)
+
+- status(상태): `completed_regime_conditioned_edge_review_no_candidate_stage290_opened`
+- judgment(판정): `regime_conditioned_filtering_did_not_create_positive_edge_no_adapter_no_onnx`
+- effect(효과): Stage289(289단계)는 selected candidate(선택 후보) 없이 닫고 Stage290(290단계)을 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.

@@ -2,3 +2,13 @@
 
 - input_refs(입력 참조): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/01_inputs/input_refs.md`
 - seed_queue(씨앗 대기열): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/01_inputs/stage289_regime_conditioned_edge_seed_queue.csv`
+
+- run289A_report(289A 보고서): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/03_reviews/run289A_regime_conditioned_edge_materialization_report.md`
+
+- run289B_report(289B 보고서): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/03_reviews/run289B_regime_conditioned_edge_mt5_probe_report.md`
+- run289B_execution_result(289B 실행 결과): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/02_runs/run289B/execution_result.json`
+- run289B_mt5_kpi_summary(289B MT5 KPI 요약): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/02_runs/run289B/mt5_kpi_summary.csv`
+
+- run289C_report(289C 보고서): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/03_reviews/run289C_regime_conditioned_edge_review_stage290_open_report.md`
+- run289C_scoreboard(289C 점수판): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/02_runs/run289C/regime_conditioned_edge_scoreboard.csv`
+- run289C_failure_memory(289C 실패 기억): `stages/289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild/02_runs/run289C/failure_memory.csv`
