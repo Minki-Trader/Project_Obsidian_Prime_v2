@@ -200,3 +200,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage300_split_forward_shape_generalization_primary`
 - hypothesis(가설): Stage299(299단계)의 validation(검증) 회복은 일반화되지 않았으므로 시간 순서 subfold(하위 분할)에서 살아남는 형태만 후보가 될 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+
+## run300C_review_split_forward_trade_shape_generalization_mt5_probe_v1 split-forward trade shape handoff(분할 전진 거래 형태 인계)
+
+- idea_id(아이디어 ID): `stage301_orthogonal_profit_source_primary`
+- hypothesis(가설): Stage300(300단계)의 validation(검증) 회복은 일반화되지 않았으므로 시간 순서 subfold(하위 분할)에서 살아남는 형태만 후보가 될 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).

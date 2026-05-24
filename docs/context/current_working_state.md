@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `300_onnx_candidate_campaign__split_forward_trade_shape_generalization_rebuild_v1`
-- current_run(현재 실행): `run299C_review_runtime_realized_trade_shape_mt5_probe_v1`
-- active_stage(활성 단계): `300_onnx_candidate_campaign__split_forward_trade_shape_generalization_rebuild`
+- current_packet(현재 작업 묶음): `301_onnx_candidate_campaign__orthogonal_profit_source_rebuild_v1`
+- current_run(현재 실행): `run300C_review_split_forward_trade_shape_generalization_mt5_probe_v1`
+- active_stage(활성 단계): `301_onnx_candidate_campaign__orthogonal_profit_source_rebuild`
 - selected_research_baseline(선택 연구 기준선): `none`
-- source_stage(원천 단계): `298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild`
+- source_stage(원천 단계): `299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild`
 - target_surface(목표 표면): `none`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_runtime_realized_trade_shape_review_no_candidate_stage300_opened`
+- status(상태): `completed_split_forward_trade_shape_generalization_review_no_candidate_stage301_opened`
 - stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
 - stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
@@ -22,7 +22,7 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run300A_design_split_forward_trade_shape_generalization_rebuild_packet`
+- next_action(다음 행동): `run301A_design_orthogonal_profit_source_rebuild_packet`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_candidate_package_gate`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
@@ -1044,3 +1044,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 - run299B_summary(299B 요약): runtime-realized trade shape MT5 probe(런타임 실제 거래 형태 MT5 탐침)를 실행했다. Effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 엮었고 후보/어댑터/ONNX(온엑스) 주장은 하지 않는다.
 - run299C_summary(299C 요약): Stage299(299단계) actual MT5 review(실제 MT5 검토)는 후보를 선택하지 않고 Stage300(300단계)을 열었다. Effect(효과): validation-positive/OOS-negative(검증 양수/표본외 음수) 실패를 failure memory(실패 기억)로 남기고 split-forward trade shape generalization(분할 전진 거래 형태 일반화)으로 질문을 바꾼다.
+
+- run300A_summary(300A 요약): split-forward trade shape generalization(분할 전진 거래 형태 일반화) 후보 `6`개를 물질화했다. Effect(효과): MT5 queue(MT5 대기열) `6`개를 만들었고 selected_candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- run300B_summary(300B 요약): split-forward trade shape generalization MT5 probe(런타임 실제 거래 형태 MT5 탐침)를 실행했다. Effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 엮었고 후보/어댑터/ONNX(온엑스) 주장은 하지 않는다.
+- run300C_summary(300C 요약): Stage300(300단계) actual MT5 review(실제 MT5 검토)는 후보를 선택하지 않고 Stage301(301단계)을 열었다. Effect(효과): split-forward trade shape generalization(분할 전진 거래 형태 일반화) 실패를 failure memory(실패 기억)로 남기고 orthogonal profit source(직교 수익 원천) 질문으로 바꾼다.

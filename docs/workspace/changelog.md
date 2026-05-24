@@ -3390,3 +3390,24 @@
 - judgment(판정): `runtime_realized_trade_shape_actual_mt5_negative_oos_generalization_failure_no_adapter_no_onnx`
 - effect(효과): Stage299(299단계)을 후보 없음으로 닫고 Stage300(300단계) split-forward trade shape generalization(분할 전진 거래 형태 일반화)을 열었다.
 - boundary(경계): Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 시작하지 않았다.
+
+## 2026-05-24 run300A Split-forward trade shape generalization materialization(300A 분할 전진 거래 형태 일반화 물질화)
+
+- status(상태): `completed_split_forward_trade_shape_generalization_candidates_materialized_no_selection`
+- judgment(판정): `split_forward_trade_shape_generalization_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+
+## 2026-05-24 run300B split-forward trade shape generalization MT5 probe(300B 런타임 실제 거래 형태 MT5 탐침)
+
+- status(상태): `completed_split_forward_trade_shape_generalization_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run300C split-forward trade shape generalization review(300C 런타임 실제 거래 형태 검토)
+
+- status(상태): `completed_split_forward_trade_shape_generalization_review_no_candidate_stage301_opened`
+- judgment(판정): `split_forward_trade_shape_generalization_actual_mt5_negative_no_profit_scale_no_adapter_no_onnx`
+- effect(효과): Stage300(300단계)을 후보 없음으로 닫고 Stage301(301단계) orthogonal profit source(직교 수익 원천)를 열었다.
+- boundary(경계): Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 시작하지 않았다.
