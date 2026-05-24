@@ -162,3 +162,7 @@ Register ideas when they become durable work, not for every passing thought.
 | `IDEA-ST286-RUN286A-TRADE-DENSITY-CURVE-QUALITY` | `286_onnx_candidate_campaign__trade_density_curve_quality_rebuild` | trade density/curve quality first(거래 밀도/곡선 품질 우선) 후보 `5`개 | `Tier A used + Tier B fallback stress + actual routed total` | `materialized_no_candidate` | 4-10 trades/day(일 4-10거래)와 순수익 규모를 먼저 맞춘 뒤 Adapter/ONNX(어댑터/온엑스)로 넘긴다. |
 
 | `IDEA-ST287-DENSITY-SCALE-CURVE-POCKET-REBUILD` | `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild` | density/scale clue(밀도/규모 단서) `2`개에서 curve pocket(곡선 포켓)을 구조적으로 줄이는 새 후보 구성 | `Tier A used + Tier B fallback stress + actual routed total` | `opened_no_candidate` | threshold-only repair(임계값만 고치는 수리)를 금지하고 과거 stage(단계) 약점 자료를 다시 연결한다. |
+
+| `IDEA-ST287-RUN287A-DENSITY-SCALE-CURVE-POCKET` | `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild` | density/scale curve-pocket rebuild(밀도/규모 곡선 포켓 재구성) 후보 `5`개 | `Tier A used + Tier B fallback stress + actual routed total` | `materialized_no_candidate` | 과거 stage(단계) 자료를 활용해 session/volatility/hold(세션/변동성/보유) 구조를 바꾼다. |
+
+| `IDEA-ST288-RISK-REWARD-EXIT-ASYMMETRY` | `288_onnx_candidate_campaign__risk_reward_exit_asymmetry_rebuild` | ATR SL/TP + exit overlay + model risk sizing(ATR 손절/익절 + 청산 오버레이 + 모델 위험 크기) | `Tier A used + Tier B fallback stress + actual routed total` | `opened` | Stage287(287단계) density/profit seed(밀도/수익 씨앗)의 효율/곡선 실패를 risk/reward/exit surface(위험/보상/청산 표면)로 다시 실험한다. |

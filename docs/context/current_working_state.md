@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `stage287_density_scale_curve_pocket_rebuild_v1`
-- current_run(현재 실행): `run286C_review_trade_density_curve_quality_mt5_probe_v1`
-- active_stage(활성 단계): `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild`
+- current_packet(현재 작업 묶음): `stage288_risk_reward_exit_asymmetry_rebuild_v1`
+- current_run(현재 실행): `run287C_review_density_scale_curve_pocket_mt5_probe_v1`
+- active_stage(활성 단계): `288_onnx_candidate_campaign__risk_reward_exit_asymmetry_rebuild`
 - selected_research_baseline(선택 연구 기준선): `none`
-- source_stage(원천 단계): `286_onnx_candidate_campaign__trade_density_curve_quality_rebuild`
-- target_surface(목표 표면): `onnx_export_parity_runtime_reproduction_cp282d`
-- adapter_under_review(검토 중 어댑터): `stage283_cp282d_macro_trend_countercheck_adapter_package_v1`
-- status(상태): `opened_density_scale_curve_pocket_rebuild`
+- source_stage(원천 단계): `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild`
+- target_surface(목표 표면): `none`
+- adapter_under_review(검토 중 어댑터): `none`
+- status(상태): `completed_density_scale_curve_pocket_review_no_candidate_stage288_opened`
 - stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
 - stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
@@ -22,7 +22,7 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run287A_design_density_scale_curve_pocket_rebuild_packet`
+- next_action(다음 행동): `run288A_design_risk_reward_exit_asymmetry_rebuild_packet`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_candidate_package_gate`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
@@ -970,3 +970,9 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run286A_summary(286A 요약): trade density/curve quality first(거래 밀도/곡선 품질 우선) 후보 `5`개를 물질화했다. Effect(효과): 4-10 trades/day(일 4-10거래)에 닿는지 MT5(메타트레이더5)로 검증할 수 있고 selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 
 - run286C_summary(286C 요약): Stage286(286단계)은 density/scale clue(밀도/규모 단서) `2`개를 찾았지만 curve pocket(곡선 포켓) 때문에 selected candidate(선택 후보) 없이 닫고 Stage287(287단계)을 열었다. Effect(효과): Adapter/ONNX(어댑터/온엑스)는 진행하지 않고 곡선 포켓을 새 구조로 줄이는 질문으로 넘긴다.
+
+- run287A_summary(287A 요약): density/scale curve-pocket rebuild(밀도/규모 곡선 포켓 재구성) 후보 `5`개를 물질화했다. Effect(효과): 과거 stage(단계) 약점 자료를 연결했고 threshold-only repair(임계값 단독 수리)는 피했다.
+
+- run287B_summary(287B 요약): density scale curve pocket MT5 probe(밀도/규모/곡선 포켓 MT5 탐침)를 실행했다. Effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 남겼고, 후보/어댑터/온엑스 주장은 하지 않는다.
+
+- run287C_summary(287C 요약): Stage287(287단계)은 density/profit seed(밀도/수익 씨앗)를 찾았지만 efficiency/curve gate(효율/곡선 게이트) 실패로 후보 없이 닫고 Stage288(288단계)을 열었다. Effect(효과): Adapter/ONNX(어댑터/온엑스)는 진행하지 않고 risk/reward/exit surface(위험/보상/청산 표면)를 새 질문으로 넘긴다.

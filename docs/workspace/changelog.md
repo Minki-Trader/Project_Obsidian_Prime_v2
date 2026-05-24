@@ -3010,3 +3010,31 @@
 - judgment(판정): `density_scale_found_but_curve_pockets_fail_no_candidate`
 - effect(효과): Stage286(286단계)을 selected candidate(선택 후보) 없이 닫고 Stage287(287단계)을 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run287A Density scale curve pocket materialization(287A 밀도/규모/곡선 포켓 물질화)
+
+- status(상태): `completed_density_scale_curve_pocket_candidate_inputs_materialized_no_selection`
+- judgment(판정): `curve_pocket_rebuild_candidate_inputs_materialized_no_candidate_selection`
+- effect(효과): 후보 `5`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run287B Density scale curve pocket MT5 probe(287B 밀도/규모/곡선 포켓 MT5 탐침)
+
+- status(상태): `prepared_density_scale_curve_pocket_mt5_probe_no_runtime_kpi`
+- judgment(판정): `density_scale_curve_pocket_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run287B Density scale curve pocket MT5 probe(287B 밀도/규모/곡선 포켓 MT5 탐침)
+
+- status(상태): `completed_density_scale_curve_pocket_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 KPI 기록) `30`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run287C Density scale curve pocket review(287C 밀도/규모/곡선 포켓 검토)
+
+- status(상태): `completed_density_scale_curve_pocket_review_no_candidate_stage288_opened`
+- judgment(판정): `density_profit_seed_found_but_efficiency_curve_fail_no_adapter_no_onnx`
+- effect(효과): Stage287(287단계)을 selected candidate(선택 후보) 없이 닫고 Stage288(288단계)을 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
