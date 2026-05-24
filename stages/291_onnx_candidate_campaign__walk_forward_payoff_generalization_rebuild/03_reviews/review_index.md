@@ -1,1 +1,12 @@
 ﻿# Stage291 Review Index(291단계 검토 색인)
+
+- run291A_report(291A 보고): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/03_reviews/run291A_walk_forward_payoff_generalization_materialization_report.md`
+- run291A_mt5_queue(291A MT5 대기열): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/02_runs/run291A/mt5_probe_queue.csv`
+
+- run291B_report(291B 보고): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/03_reviews/run291B_walk_forward_payoff_generalization_mt5_probe_report.md`
+- run291B_execution_result(291B 실행 결과): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/02_runs/run291B/execution_result.json`
+- run291B_mt5_kpi_summary(291B MT5 KPI 요약): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/02_runs/run291B/mt5_kpi_summary.csv`
+
+- run291C_report(291C 보고): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/03_reviews/run291C_walk_forward_payoff_review_stage292_open_report.md`
+- run291C_scoreboard(291C 점수판): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/02_runs/run291C/walk_forward_payoff_review_scoreboard.csv`
+- run291C_failure_memory(291C 실패 기억): `stages/291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild/02_runs/run291C/failure_memory.csv`

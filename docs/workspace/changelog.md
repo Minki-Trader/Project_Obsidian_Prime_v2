@@ -3130,3 +3130,32 @@
 - effect(효과): Stage290(290단계)을 검토하고 `291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild`를 열었다.
 - selected_candidate(선택 후보): `none`
 - boundary(경계): ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run291A Walk-forward payoff generalization materialization(291A 워크포워드 손익 일반화 물질화)
+
+- status(상태): `completed_walk_forward_payoff_generalization_candidates_materialized_no_selection`
+- judgment(판정): `walk_forward_payoff_generalization_inputs_materialized_no_candidate_selection`
+- effect(효과): train-only WFO(학습 전용 워크포워드) 후보 `6`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run291B Walk-forward payoff generalization MT5 probe(291B 워크포워드 손익 일반화 MT5 탐침)
+
+- status(상태): `prepared_walk_forward_payoff_generalization_mt5_probe_no_runtime_kpi`
+- judgment(판정): `walk_forward_payoff_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run291B Walk-forward payoff generalization MT5 probe(291B 워크포워드 손익 일반화 MT5 탐침)
+
+- status(상태): `completed_walk_forward_payoff_generalization_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run291C Walk-forward payoff review(291C 워크포워드 손익 검토)
+
+- status(상태): `completed_walk_forward_payoff_review_no_candidate_stage292_opened`
+- judgment(판정): `walk_forward_payoff_generalization_runtime_probe_negative_no_adapter_no_onnx`
+- effect(효과): Stage291(291단계)을 선택 후보 없이 닫고 `292_onnx_candidate_campaign__anti_direction_meta_label_trade_simulator_rebuild`를 열었다.
+- selected_candidate(선택 후보): `none`
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
