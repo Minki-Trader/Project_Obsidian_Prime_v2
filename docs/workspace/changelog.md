@@ -3038,3 +3038,38 @@
 - judgment(판정): `density_profit_seed_found_but_efficiency_curve_fail_no_adapter_no_onnx`
 - effect(효과): Stage287(287단계)을 selected candidate(선택 후보) 없이 닫고 Stage288(288단계)을 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run288A Risk reward exit asymmetry materialization(288A 위험/보상/청산 비대칭 물질화)
+
+- status(상태): `completed_risk_reward_exit_asymmetry_candidates_materialized_no_selection`
+- judgment(판정): `risk_reward_exit_candidate_inputs_materialized_no_candidate_selection`
+- effect(효과): 후보 `5`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run288B Risk reward exit asymmetry MT5 probe(288B 위험/보상/청산 비대칭 MT5 탐침)
+
+- status(상태): `prepared_risk_reward_exit_asymmetry_mt5_probe_no_runtime_kpi`
+- judgment(판정): `risk_reward_exit_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run288B Risk reward exit asymmetry MT5 probe(288B 위험/보상/청산 비대칭 MT5 탐침)
+
+- status(상태): `partial_risk_reward_exit_asymmetry_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_partial_requires_continuation_or_review_no_selection`
+- effect(효과): attempts(시도) `1`개와 MT5 KPI records(MT5 KPI 기록) `1`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run288B Risk reward exit asymmetry MT5 probe(288B 위험/보상/청산 비대칭 MT5 탐침)
+
+- status(상태): `completed_risk_reward_exit_asymmetry_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `30`개와 MT5 KPI records(MT5 KPI 기록) `30`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run288C Risk reward exit review(288C 위험/보상/청산 검토)
+
+- status(상태): `completed_risk_reward_exit_review_no_candidate_stage289_opened`
+- judgment(판정): `risk_reward_exit_did_not_solve_edge_quality_no_adapter_no_onnx`
+- effect(효과): Stage288(288단계)을 selected candidate(선택 후보) 없이 닫고 Stage289(289단계)을 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.

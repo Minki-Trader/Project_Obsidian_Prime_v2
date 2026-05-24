@@ -166,3 +166,5 @@ Register ideas when they become durable work, not for every passing thought.
 | `IDEA-ST287-RUN287A-DENSITY-SCALE-CURVE-POCKET` | `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild` | density/scale curve-pocket rebuild(밀도/규모 곡선 포켓 재구성) 후보 `5`개 | `Tier A used + Tier B fallback stress + actual routed total` | `materialized_no_candidate` | 과거 stage(단계) 자료를 활용해 session/volatility/hold(세션/변동성/보유) 구조를 바꾼다. |
 
 | `IDEA-ST288-RISK-REWARD-EXIT-ASYMMETRY` | `288_onnx_candidate_campaign__risk_reward_exit_asymmetry_rebuild` | ATR SL/TP + exit overlay + model risk sizing(ATR 손절/익절 + 청산 오버레이 + 모델 위험 크기) | `Tier A used + Tier B fallback stress + actual routed total` | `opened` | Stage287(287단계) density/profit seed(밀도/수익 씨앗)의 효율/곡선 실패를 risk/reward/exit surface(위험/보상/청산 표면)로 다시 실험한다. |
+
+| `IDEA-ST289-REGIME-CONDITIONED-EDGE-SURFACE` | `289_onnx_candidate_campaign__regime_conditioned_edge_surface_rebuild` | regime-conditioned edge surface(국면 조건부 엣지 표면) | `Tier A used + Tier B fallback stress + actual routed total` | `opened` | Stage288(288단계) exit/risk-only(청산/위험 단독) 실패 후 session/volatility/macro/trend(세션/변동성/매크로/추세) 결합 표면을 만든다. |

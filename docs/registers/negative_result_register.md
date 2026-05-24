@@ -69,3 +69,5 @@ Negative results are preserved because they prevent repeated dead ends.
 | `NEG-ST286-CURVE-QUALITY-FAIL` | `286_onnx_candidate_campaign__trade_density_curve_quality_rebuild` | `run286C_review_trade_density_curve_quality_mt5_probe_v1` | density/scale clue(밀도/규모 단서)는 있으나 curve pocket(곡선 포켓)과 underwater ratio(수중 비율)가 ONNX-worthy candidate(온엑스 가치 후보) 기준 미달 | Stage287(287단계)에서 새 구조로만 재개 | threshold-only repair(임계값만 고치는 수리) 금지 |
 
 | `NEG-ST287-DENSITY-SCALE-CURVE-POCKET` | `287_onnx_candidate_campaign__density_scale_curve_pocket_rebuild` | `run287C_review_density_scale_curve_pocket_mt5_probe_v1` | density/profit seed found but no candidate(밀도/수익 씨앗은 있으나 후보 없음) | efficiency/curve gate failed(효율/곡선 게이트 실패) | reopen only with risk/reward/exit surface(위험/보상/청산 표면으로만 재개) |
+
+| `NEG-ST288-RISK-REWARD-EXIT` | `288_onnx_candidate_campaign__risk_reward_exit_asymmetry_rebuild` | `run288C_review_risk_reward_exit_asymmetry_mt5_probe_v1` | risk/reward/exit-only failed(위험/보상/청산 단독 실패) | OOS and curve did not survive(표본외와 곡선 생존 실패) | reopen only with regime-conditioned edge surface(국면 조건부 엣지 표면으로만 재개) |
