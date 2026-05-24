@@ -3187,3 +3187,31 @@
 - judgment(판정): `anti_direction_meta_trade_sim_runtime_probe_negative_no_adapter_no_onnx`
 - effect(효과): Stage292(292단계)를 `none` 선택 상태로 판정하고 `293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild`를 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 `not_started/not_claimed`다.
+
+## 2026-05-24 run293A Profit-scale Density Calibration materialization(293A ??갑??硫뷀??쇰꺼 嫄곕옒 ?쒕??덉씠??臾쇱쭏??
+
+- status(?곹깭): `completed_profit_scale_density_calibration_candidates_materialized_no_selection`
+- judgment(?먯젙): `profit_scale_density_calibration_inputs_materialized_no_candidate_selection`
+- effect(?④낵): branch(遺꾧린) `6`媛쒖? MT5 queue(MT5 ?湲곗뿴) `6`媛쒕? 留뚮뱾?덈떎.
+- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+
+## 2026-05-24 run293B profit-scale density calibration MT5 probe(293B ??갑??硫뷀??쇰꺼 嫄곕옒 ?쒕??덉씠??MT5 ?먯묠)
+
+- status(?곹깭): `prepared_profit_scale_density_calibration_mt5_probe_no_runtime_kpi`
+- judgment(?먯젙): `anti_direction_meta_trade_sim_runtime_probe_prepared_no_external_execution`
+- effect(?④낵): attempts(?쒕룄) `36`媛쒖? MT5 KPI records(MT5 KPI 湲곕줉) `0`媛쒕? 湲곕줉?덈떎.
+- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+
+## 2026-05-24 run293B profit-scale density calibration MT5 probe(293B ??갑??硫뷀??쇰꺼 嫄곕옒 ?쒕??덉씠??MT5 ?먯묠)
+
+- status(?곹깭): `completed_profit_scale_density_calibration_mt5_probe_no_selection`
+- judgment(?먯젙): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(?④낵): attempts(?쒕룄) `36`媛쒖? MT5 KPI records(MT5 KPI 湲곕줉) `36`媛쒕? 湲곕줉?덈떎.
+- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+
+## 2026-05-24 run293C Profit-scale density calibration review(293C 순수익 규모/거래 밀도 보정 검토)
+
+- status(상태): `completed_profit_scale_density_calibration_review_no_candidate_stage294_opened`
+- judgment(판정): `profit_scale_density_calibration_runtime_probe_negative_no_adapter_no_onnx`
+- effect(효과): Stage293(293단계)를 `none` 선택 상태로 판정하고 `294_onnx_candidate_campaign__mt5_outcome_relabel_directional_flip_rebuild`를 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 `not_started/not_claimed`다.
