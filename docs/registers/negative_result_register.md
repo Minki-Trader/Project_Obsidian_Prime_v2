@@ -115,3 +115,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): 일부 후보는 validation(검증) 순수익/PF(수익 팩터)를 회복했지만 OOS(표본외)가 음수라 ONNX-worthy(온엑스 가치) 조건을 만족하지 못했다.
 - do_not_repeat(반복 금지): 같은 trade-shape quantile(거래 형태 분위) 또는 loss-cluster veto(손실 군집 거부) 조정만 반복하지 않는다.
 - reopen_condition(재개 조건): split-forward(분할 전진) 구조에서 validation/OOS 모두 순수익 300 이상과 곡선 포켓 제거를 먼저 보여야 한다.
+
+## run301C_review_orthogonal_profit_source_mt5_probe_v1 Stage301 positive-small failure memory(301단계 양수-소규모 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): 일부 profile(프로필)은 validation/OOS(검증/표본외) 모두 양수였지만 수익 규모, 회복계수, 곡선 포켓 조건을 동시에 만족하지 못했다.
+- do_not_repeat(반복 금지): HGB inverse-return(HGB 역방향 수익률) density(밀도)만 좁게 조정하지 않는다.
+- reopen_condition(재개 조건): 실제 MT5(메타트레이더5)에서 충분한 OOS(표본외) 순수익과 매끄러운 확대 곡선을 먼저 보여야 한다.

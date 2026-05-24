@@ -206,3 +206,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage301_orthogonal_profit_source_primary`
 - hypothesis(가설): Stage300(300단계)의 validation(검증) 회복은 일반화되지 않았으므로 시간 순서 subfold(하위 분할)에서 살아남는 형태만 후보가 될 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+
+## run301C_review_orthogonal_profit_source_mt5_probe_v1 payoff convexity handoff(보상 볼록성 인계)
+
+- idea_id(아이디어 ID): `stage302_payoff_convexity_profit_scale_primary`
+- hypothesis(가설): Stage301(301단계)의 작은 양수 MT5(메타트레이더5) edge(우위)는 방향 모델보다 보상/청산/위험 표면을 바꿔야 수익 규모로 커질 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).

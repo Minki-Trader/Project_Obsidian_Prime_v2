@@ -2,3 +2,14 @@
 
 - source_review(원천 검토): `stages/300_onnx_candidate_campaign__split_forward_trade_shape_generalization_rebuild/03_reviews/run300C_split_forward_trade_shape_generalization_review_stage301_open_report.md`
 - seed_queue(씨앗 대기열): `stages/300_onnx_candidate_campaign__split_forward_trade_shape_generalization_rebuild/02_runs/run300C/stage301_seed_queue.csv`
+
+- run301A_report(301A 보고): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/03_reviews/run301A_orthogonal_profit_source_materialization_report.md`
+- run301A_mt5_queue(301A MT5 대기열): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/02_runs/run301A/mt5_probe_queue.csv`
+- run301A_model_receipt(301A 모델 영수증): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/02_runs/run301A/orthogonal_profit_source_model_receipt.csv`
+
+- run301B_report(301B 보고): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/03_reviews/run301B_orthogonal_profit_source_mt5_probe_report.md`
+- run301B_execution_result(301B 실행 결과): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/02_runs/run301B/execution_result.json`
+- run301B_mt5_kpi_summary(301B MT5 KPI 요약): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/02_runs/run301B/mt5_kpi_summary.csv`
+- run301C_report(301C 보고): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/03_reviews/run301C_orthogonal_profit_source_review_stage302_open_report.md`
+- run301C_scoreboard(301C 점수판): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/02_runs/run301C/orthogonal_profit_source_review_scoreboard.csv`
+- stage302_seed_queue(302단계 씨앗 대기열): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/02_runs/run301C/stage302_seed_queue.csv`

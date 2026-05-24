@@ -3411,3 +3411,31 @@
 - judgment(판정): `split_forward_trade_shape_generalization_actual_mt5_negative_no_profit_scale_no_adapter_no_onnx`
 - effect(효과): Stage300(300단계)을 후보 없음으로 닫고 Stage301(301단계) orthogonal profit source(직교 수익 원천)를 열었다.
 - boundary(경계): Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 시작하지 않았다.
+
+## 2026-05-24 run301A Orthogonal profit source materialization(301A 직교 수익 원천 물질화)
+
+- status(상태): `completed_orthogonal_profit_source_candidates_materialized_no_selection`
+- judgment(판정): `orthogonal_profit_source_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+
+## 2026-05-24 run301A Orthogonal profit source materialization(301A 직교 수익 원천 물질화)
+
+- status(상태): `completed_orthogonal_profit_source_candidates_materialized_no_selection`
+- judgment(판정): `orthogonal_profit_source_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+
+## 2026-05-24 run301B orthogonal profit source MT5 probe(301B 직교 수익 원천 MT5 탐침)
+
+- status(상태): `completed_orthogonal_profit_source_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run301C orthogonal profit source review(301C 직교 수익 원천 검토)
+
+- status(상태): `completed_orthogonal_profit_source_review_no_candidate_stage302_opened`
+- judgment(판정): `actual_mt5_positive_small_but_not_onnx_worthy_no_adapter_no_onnx`
+- effect(효과): Stage301(301단계)을 후보 없음으로 닫고 Stage302(302단계) payoff convexity(보상 볼록성) 재구성을 열었다.
+- boundary(경계): Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 시작하지 않았다.
