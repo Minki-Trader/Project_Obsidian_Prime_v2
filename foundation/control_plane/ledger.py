@@ -44,7 +44,7 @@ def io_path(path: Path) -> Path:
     resolved = path.resolve()
     if sys.platform == "win32":
         text = str(resolved)
-        if len(text) >= 200 and not text.startswith("\\\\?\\"):
+        if not text.startswith("\\\\?\\"):
             return Path("\\\\?\\" + text)
     return resolved
 

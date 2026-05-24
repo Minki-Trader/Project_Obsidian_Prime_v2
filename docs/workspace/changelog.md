@@ -3285,3 +3285,31 @@
 - judgment(판정): `split_consistent_outcome_distillation_runtime_probe_negative_density_profit_curve_gate_failed`
 - effect(효과): Stage295(295단계)를 선택 후보 없이 닫고 Stage296(296단계) density-floor profit expansion(거래 밀도 하한 수익 확장)을 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `not_started/not_claimed`다.
+
+## 2026-05-24 run296A Density-floor profit expansion materialization(296A 거래 밀도 하한 수익 확장 물질화)
+
+- status(상태): `completed_density_floor_profit_expansion_candidates_materialized_no_selection`
+- judgment(판정): `density_floor_profit_expansion_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+
+## 2026-05-24 run296B density-floor profit expansion MT5 probe(296B 거래 밀도 하한 수익 확장 MT5 탐침)
+
+- status(상태): `prepared_density_floor_profit_expansion_mt5_probe_no_runtime_kpi`
+- judgment(판정): `density_floor_profit_expansion_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run296B density-floor profit expansion MT5 probe(296B 거래 밀도 하한 수익 확장 MT5 탐침)
+
+- status(상태): `completed_density_floor_profit_expansion_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run296C Density-floor profit expansion review(296C 거래 밀도 하한 수익 확장 검토)
+
+- status(상태): `completed_density_floor_profit_expansion_review_no_candidate_stage297_opened`
+- judgment(판정): `density_floor_profit_expansion_runtime_probe_negative_no_adapter_no_onnx`
+- effect(효과): Stage296(296단계)를 `none` 선택 상태로 판정하고 `297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild`를 열었다.
+- boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 `not_started/not_claimed`다.

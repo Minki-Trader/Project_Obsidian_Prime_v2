@@ -1,1 +1,13 @@
 ﻿# Stage296 Review Index(296단계 검토 색인)
+
+- run296A_report(296A 보고): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/03_reviews/run296A_density_floor_profit_expansion_materialization_report.md`
+- run296A_mt5_queue(296A MT5 대기열): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/02_runs/run296A/mt5_probe_queue.csv`
+
+- run296B_report(296B 보고): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/03_reviews/run296B_density_floor_profit_expansion_mt5_probe_report.md`
+- run296B_execution_result(296B 실행 결과): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/02_runs/run296B/execution_result.json`
+- run296B_mt5_kpi_summary(296B MT5 KPI 요약): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/02_runs/run296B/mt5_kpi_summary.csv`
+
+- run296C_report(296C 보고): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/03_reviews/run296C_density_floor_profit_expansion_review_stage297_open_report.md`
+- run296C_scoreboard(296C 점수표): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/02_runs/run296C/density_floor_profit_expansion_review_scoreboard.csv`
+- run296C_failure_memory(296C 실패 기억): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/02_runs/run296C/failure_memory.csv`
+- run296C_local_pockets(296C 국소 포켓): `stages/296_onnx_candidate_campaign__density_floor_profit_expansion_rebuild/02_runs/run296C/local_curve_pocket_diagnostics.csv`
