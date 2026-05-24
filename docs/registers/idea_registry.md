@@ -212,3 +212,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage302_payoff_convexity_profit_scale_primary`
 - hypothesis(가설): Stage301(301단계)의 작은 양수 MT5(메타트레이더5) edge(우위)는 방향 모델보다 보상/청산/위험 표면을 바꿔야 수익 규모로 커질 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+
+## run302C_review_payoff_convexity_profit_scale_mt5_probe_v1 regime-balanced router handoff(레짐 균형 라우터 인계)
+
+- idea_id(아이디어 ID): `stage303_regime_balanced_profit_scale_router_primary`
+- hypothesis(가설): Stage302(302단계)의 OOS scale(표본외 규모)은 레짐/세션 조건을 분리해야 validation damage(검증 손상) 없이 살아남을 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).

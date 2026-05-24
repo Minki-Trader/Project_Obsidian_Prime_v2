@@ -2,3 +2,14 @@
 
 - source_review(원천 검토): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/03_reviews/run301C_orthogonal_profit_source_review_stage302_open_report.md`
 - seed_queue(씨앗 대기열): `stages/301_onnx_candidate_campaign__orthogonal_profit_source_rebuild/02_runs/run301C/stage302_seed_queue.csv`
+
+- run302A_report(302A 보고): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/03_reviews/run302A_payoff_convexity_profit_scale_materialization_report.md`
+- run302A_mt5_queue(302A MT5 대기열): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/02_runs/run302A/mt5_probe_queue.csv`
+- run302A_model_receipt(302A 모델 영수증): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/02_runs/run302A/payoff_convexity_model_receipt.csv`
+
+- run302B_report(302B 보고): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/03_reviews/run302B_payoff_convexity_profit_scale_mt5_probe_report.md`
+- run302B_execution_result(302B 실행 결과): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/02_runs/run302B/execution_result.json`
+- run302B_mt5_kpi_summary(302B MT5 KPI 요약): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/02_runs/run302B/mt5_kpi_summary.csv`
+- run302C_report(302C 보고): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/03_reviews/run302C_payoff_convexity_profit_scale_review_stage303_open_report.md`
+- run302C_scoreboard(302C 점수판): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/02_runs/run302C/payoff_convexity_profit_scale_review_scoreboard.csv`
+- stage303_seed_queue(303단계 씨앗 대기열): `stages/302_onnx_candidate_campaign__payoff_convexity_profit_scale_rebuild/02_runs/run302C/stage303_seed_queue.csv`
