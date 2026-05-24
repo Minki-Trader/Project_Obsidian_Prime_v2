@@ -136,3 +136,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): 일부 profile(프로필)은 OOS(표본외) 수익 규모가 컸지만 validation(검증) 손익/회복/곡선 포켓 조건을 동시에 만족하지 못했다.
 - do_not_repeat(반복 금지): ATR/risk(ATR/위험) 배수만 좁게 조정하지 않는다.
 - reopen_condition(재개 조건): 실제 MT5(메타트레이더5)에서 충분한 OOS(표본외) 순수익과 매끄러운 확대 곡선을 먼저 보여야 한다.
+
+## run304C_review_curve_pocket_aware_profit_source_mt5_probe_v1 Stage304 curve-pocket-aware failure memory(304단계 곡선 포켓 인식 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): 실제 MT5(메타트레이더5) routed total(라우팅 전체)에서 수익 규모, 효율, 밀도, 곡선 포켓을 동시에 만족하지 못한 분기.
+- do_not_repeat(반복 금지): 같은 Stage304 표면에서 lot(랏), ATR(평균진폭), density(밀도)만 미세 조정하지 않는다.
+- reopen_condition(재개 조건): runtime-realized trade attribution(런타임 실제 거래 기여도)으로 새 수익 원천을 만들 때만 재사용한다.

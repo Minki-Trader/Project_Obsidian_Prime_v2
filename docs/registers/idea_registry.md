@@ -224,3 +224,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage304_curve_pocket_aware_profit_source_primary`
 - hypothesis(가설): Stage303(302단계)의 OOS scale(표본외 규모)은 레짐/세션 조건을 분리해야 validation damage(검증 손상) 없이 살아남을 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+
+## run304C_review_curve_pocket_aware_profit_source_mt5_probe_v1 curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)
+
+- idea_id(아이디어 ID): `stage304_curve_pocket_aware_profit_source`
+- hypothesis(가설): 곡선 포켓을 WFO(워크포워드 최적화) 목적에 넣으면 순수익 규모와 매끄러운 곡선을 함께 만들 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.

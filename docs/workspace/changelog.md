@@ -3481,3 +3481,24 @@
 - judgment(판정): `actual_mt5_oos_scale_validation_damage_not_onnx_worthy_no_adapter_no_onnx`
 - effect(효과): Stage303(302단계)를 후보 없음으로 닫고 Stage303(303단계) regime-balanced profit scale router(레짐 균형 수익 규모 라우터)를 열었다.
 - boundary(경계): Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 시작하지 않았다.
+
+## 2026-05-24 run304A Curve-pocket-aware profit source materialization(304A 곡선 포켓 인식 수익 원천 물질화)
+
+- status(상태): `completed_curve_pocket_aware_profit_source_candidates_materialized_no_selection`
+- judgment(판정): `curve_pocket_aware_profit_source_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+
+## 2026-05-24 run304B Curve-pocket-aware profit source MT5 probe(304B 곡선 포켓 인식 수익 원천 MT5 탐침)
+
+- status(상태): `completed_curve_pocket_aware_profit_source_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run304C Curve-pocket-aware profit source review(304C 곡선 포켓 인식 수익 원천 검토)
+
+- status(상태): `completed_curve_pocket_aware_profit_source_review_stage305_opened`
+- judgment(판정): `actual_mt5_no_onnx_worthy_candidate_runtime_realized_curve_rebuild_opened`
+- effect(효과): Stage304(304단계)를 닫고 `305_onnx_candidate_campaign__runtime_realized_curve_attribution_rebuild`를 열었다.
+- boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.
