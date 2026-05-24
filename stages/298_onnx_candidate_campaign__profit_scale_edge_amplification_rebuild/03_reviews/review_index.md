@@ -2,3 +2,14 @@
 
 - source_review(원천 검토): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/03_reviews/run297C_bilevel_curve_monotonic_profit_review_stage298_open_report.md`
 - seed_queue(씨앗 대기열): `stages/297_onnx_candidate_campaign__bilevel_curve_monotonic_profit_rebuild/02_runs/run297C/stage298_seed_queue.csv`
+
+- run298A_report(298A 보고): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/03_reviews/run298A_profit_scale_edge_amplification_materialization_report.md`
+- run298A_mt5_queue(298A MT5 대기열): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/02_runs/run298A/mt5_probe_queue.csv`
+- run298A_payoff_receipt(298A 보상 영수증): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/02_runs/run298A/stage297_payoff_amplification_receipt.csv`
+
+- run298B_report(298B 보고): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/03_reviews/run298B_profit_scale_edge_amplification_mt5_probe_report.md`
+- run298B_execution_result(298B 실행 결과): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/02_runs/run298B/execution_result.json`
+- run298B_mt5_kpi_summary(298B MT5 KPI 요약): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/02_runs/run298B/mt5_kpi_summary.csv`
+- run298C_report(298C 보고): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/03_reviews/run298C_profit_scale_edge_amplification_review_stage299_open_report.md`
+- run298C_scoreboard(298C 점수판): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/02_runs/run298C/profit_scale_edge_amplification_review_scoreboard.csv`
+- stage299_seed_queue(299단계 씨앗 대기열): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/02_runs/run298C/stage299_seed_queue.csv`

@@ -3341,3 +3341,31 @@
 - judgment(판정): `bilevel_curve_monotonic_profit_actual_mt5_negative_low_profit_scale_no_adapter_no_onnx`
 - effect(효과): Stage297(297단계)을 후보 없음으로 닫고 Stage298(298단계) profit-scale edge amplification(수익 규모 거래우위 증폭)을 열었다.
 - boundary(경계): Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 시작하지 않았다.
+
+## 2026-05-24 run298A Profit-scale edge amplification materialization(298A 수익 규모 거래우위 증폭 물질화)
+
+- status(상태): `completed_profit_scale_edge_amplification_candidates_materialized_no_selection`
+- judgment(판정): `profit_scale_edge_amplification_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+
+## 2026-05-24 run298B profit-scale edge amplification MT5 probe(298B 수익 규모 거래우위 증폭 MT5 탐침)
+
+- status(상태): `prepared_profit_scale_edge_amplification_mt5_probe_no_runtime_kpi`
+- judgment(판정): `profit_scale_edge_amplification_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run298B profit-scale edge amplification MT5 probe(298B 수익 규모 거래우위 증폭 MT5 탐침)
+
+- status(상태): `completed_profit_scale_edge_amplification_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run298C profit-scale edge amplification review(298C 수익 규모 거래우위 증폭 검토)
+
+- status(상태): `completed_profit_scale_edge_amplification_review_no_candidate_stage299_opened`
+- judgment(판정): `profit_scale_edge_amplification_actual_mt5_negative_validation_damage_no_adapter_no_onnx`
+- effect(효과): Stage298(298단계)을 후보 없음으로 닫고 Stage299(299단계) runtime-realized trade shape(런타임 실제 거래 형태)을 열었다.
+- boundary(경계): Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 시작하지 않았다.

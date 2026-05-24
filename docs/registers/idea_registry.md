@@ -188,3 +188,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage298_profit_scale_edge_amplification_primary`
 - hypothesis(가설): Stage297(297단계)의 낮은 순수익은 진입 수가 아니라 payoff magnitude(보상 크기)와 exit asymmetry(청산 비대칭)의 병목일 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+
+## run298C_review_profit_scale_edge_amplification_mt5_probe_v1 runtime-realized trade shape handoff(런타임 실제 거래 형태 인계)
+
+- idea_id(아이디어 ID): `stage299_runtime_realized_trade_shape_primary`
+- hypothesis(가설): validation damage(검증 손상)는 entry score(진입 점수)가 아니라 실제 hold/exit/trade-shape(보유/청산/거래 형태) 병목일 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
