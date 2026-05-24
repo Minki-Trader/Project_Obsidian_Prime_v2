@@ -3101,3 +3101,32 @@
 - judgment(판정): `regime_conditioned_filtering_did_not_create_positive_edge_no_adapter_no_onnx`
 - effect(효과): Stage289(289단계)는 selected candidate(선택 후보) 없이 닫고 Stage290(290단계)을 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-24 run290A Payoff-weighted edge model materialization(290A 손익가중 엣지 모델 물질화)
+
+- status(상태): `completed_payoff_weighted_edge_model_candidates_materialized_no_selection`
+- judgment(판정): `payoff_weighted_model_inputs_materialized_no_candidate_selection`
+- effect(효과): model surface(모델 표면) `6`개를 MT5 probe queue(MT5 탐침 대기열)로 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run290B Payoff-weighted edge model MT5 probe(290B 손익가중 엣지 모델 MT5 탐침)
+
+- status(상태): `prepared_payoff_weighted_edge_model_mt5_probe_no_runtime_kpi`
+- judgment(판정): `payoff_weighted_edge_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run290B Payoff-weighted edge model MT5 probe(290B 손익가중 엣지 모델 MT5 탐침)
+
+- status(상태): `completed_payoff_weighted_edge_model_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run290C Payoff-weighted edge review(290C 손익가중 엣지 검토)
+
+- status(상태): `completed_payoff_weighted_edge_review_no_candidate_stage291_opened`
+- judgment(판정): `payoff_weighted_edge_model_did_not_meet_onnx_worthy_gate_no_adapter_no_onnx`
+- effect(효과): Stage290(290단계)을 검토하고 `291_onnx_candidate_campaign__walk_forward_payoff_generalization_rebuild`를 열었다.
+- selected_candidate(선택 후보): `none`
+- boundary(경계): ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `not_claimed`다.
