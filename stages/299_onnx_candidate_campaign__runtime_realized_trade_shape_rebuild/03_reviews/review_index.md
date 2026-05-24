@@ -2,3 +2,14 @@
 
 - source_review(원천 검토): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/03_reviews/run298C_profit_scale_edge_amplification_review_stage299_open_report.md`
 - seed_queue(씨앗 대기열): `stages/298_onnx_candidate_campaign__profit_scale_edge_amplification_rebuild/02_runs/run298C/stage299_seed_queue.csv`
+
+- run299A_report(299A 보고): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/03_reviews/run299A_runtime_realized_trade_shape_materialization_report.md`
+- run299A_mt5_queue(299A MT5 대기열): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/02_runs/run299A/mt5_probe_queue.csv`
+- run299A_trade_shape_receipt(299A 거래 형태 영수증): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/02_runs/run299A/stage298_runtime_trade_shape_receipt.csv`
+
+- run299B_report(299B 보고): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/03_reviews/run299B_runtime_realized_trade_shape_mt5_probe_report.md`
+- run299B_execution_result(299B 실행 결과): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/02_runs/run299B/execution_result.json`
+- run299B_mt5_kpi_summary(299B MT5 KPI 요약): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/02_runs/run299B/mt5_kpi_summary.csv`
+- run299C_report(299C 보고): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/03_reviews/run299C_runtime_realized_trade_shape_review_stage300_open_report.md`
+- run299C_scoreboard(299C 점수판): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/02_runs/run299C/runtime_realized_trade_shape_review_scoreboard.csv`
+- stage300_seed_queue(300단계 씨앗 대기열): `stages/299_onnx_candidate_campaign__runtime_realized_trade_shape_rebuild/02_runs/run299C/stage300_seed_queue.csv`

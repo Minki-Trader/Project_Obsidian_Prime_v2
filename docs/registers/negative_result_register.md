@@ -101,3 +101,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): OOS(표본외) 양수 단서는 있었지만 validation(검증)이 음수로 돌아서고 DD(손실폭)가 커졌다.
 - do_not_repeat(반복 금지): payoff rank(보상 순위), hold widening(보유 확장), density8 control(밀도 8 대조)을 같은 임계값만 바꿔 반복하지 않는다.
 - reopen_condition(재개 조건): 런타임 실제 거래 형태가 validation/OOS 모두 순수익 300 이상과 깊은 포켓 제거를 보여야 한다.
+
+## run299C_review_runtime_realized_trade_shape_mt5_probe_v1 Stage299 validation-positive OOS-negative memory(299단계 검증 양수 표본외 음수 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): 일부 후보는 validation(검증) 순수익/PF(수익 팩터)를 회복했지만 OOS(표본외)가 음수라 ONNX-worthy(온엑스 가치) 조건을 만족하지 못했다.
+- do_not_repeat(반복 금지): 같은 trade-shape quantile(거래 형태 분위) 또는 loss-cluster veto(손실 군집 거부) 조정만 반복하지 않는다.
+- reopen_condition(재개 조건): split-forward(분할 전진) 구조에서 validation/OOS 모두 순수익 300 이상과 곡선 포켓 제거를 먼저 보여야 한다.
