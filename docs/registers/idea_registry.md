@@ -335,3 +335,14 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea_id(아이디어 ID): `stage314_runtime_outcome_feature_source_review`
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run315A_design_runtime_outcome_feature_interaction_rebuild_packet_v1 runtime_outcome_feature_interaction(런타임 결과 피처 상호작용)
+
+- idea_id(아이디어 ID): `stage315_runtime_outcome_feature_interaction`
+- hypothesis(가설): actual hour outcome(실제 시간별 결과)과 feature interaction(피처 상호작용)을 결합하면 trade density(거래 밀도)와 profit scale(수익 규모)을 같이 회복할 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run315C_review_runtime_outcome_feature_interaction_mt5_probe_v1 runtime_outcome_feature_interaction_review(런타임 결과 피처 상호작용 검토)
+
+- idea_id(아이디어 ID): `stage315_runtime_outcome_feature_interaction_review`
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.

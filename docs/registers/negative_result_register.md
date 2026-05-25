@@ -216,3 +216,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 최소 거래 수, 밀도, 수익 규모, 효율, 곡선 포켓을 동시에 만족하지 못했다.
 - do_not_repeat(반복 금지): 시간-방향 표만 좁게 다시 보정하지 않는다.
 - reopen_condition(재개 조건): runtime outcome source(런타임 결과 원천) 자체를 바꿀 때만 재사용한다.
+
+## run315C_review_runtime_outcome_feature_interaction_mt5_probe_v1 Stage315 runtime outcome feature interaction failure memory(315단계 런타임 결과 피처 상호작용 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 최소 거래수, 4-10 trades/day(일 4-10거래), 수익 규모, 효율, 곡선 포켓을 동시에 만족하지 못했다.
+- do_not_repeat(반복 금지): hour-only repair(시간만 고치는 수리)나 lot-only scale(랏만 키우는 규모화)을 반복하지 않는다.
+- reopen_condition(재개 조건): feature/model/risk surface(피처/모델/위험 표면)를 새로 바꿀 때만 재사용한다.
