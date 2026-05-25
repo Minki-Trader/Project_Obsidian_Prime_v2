@@ -258,3 +258,14 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage307_post_trade_shape_scale_ml`
 - hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도)이 direction flip(방향 반전)보다 큰 수익 원천을 만들 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## stage308_non_return_rank_profit_source
+
+- hypothesis(가설): non-return-rank(비수익순위) state/rule source(상태/규칙 원천)가 Stage307(307단계) return-rank(수익 순위) 실패 이후 수익 규모와 곡선을 동시에 회복할 수 있다.
+- boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
+
+## run308C_review_non_return_rank_profit_source_mt5_probe_v1 non-return-rank profit source(비수익순위 수익 원천)
+
+- idea_id(아이디어 ID): `stage308_non_return_rank_profit_source`
+- hypothesis(가설): return-rank(수익 순위)를 직접 쓰지 않는 session/breadth/volatility/trend(세션/브레드스/변동성/추세) 원천이 더 좋은 수익 곡선을 만들 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.

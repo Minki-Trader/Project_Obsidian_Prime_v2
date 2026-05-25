@@ -3600,3 +3600,32 @@
 - judgment(판정): `actual_mt5_no_onnx_worthy_candidate_non_return_rank_rebuild_opened`
 - effect(효과): Stage307(307단계)를 닫고 `308_onnx_candidate_campaign__non_return_rank_profit_source_rebuild`를 열었다.
 - boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.
+
+## 2026-05-24 run308A Non-return-rank profit source materialization(308A 비수익순위 수익 원천 물질화)
+
+- run_id(실행 ID): `run308A_design_non_return_rank_profit_source_rebuild_packet_v1`
+- status(상태): `completed_non_return_rank_profit_source_candidates_materialized_no_selection`
+- candidates(후보): `6`
+- mt5_queue_rows(MT5 대기열 수): `6`
+- next_action(다음 행동): `run308B_execute_non_return_rank_profit_source_mt5_probe`
+
+## 2026-05-24 run308B Non-return-rank profit source MT5 probe(308B 비수익순위 수익 원천 MT5 탐침)
+
+- status(상태): `completed_non_return_rank_profit_source_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run308C Non-return-rank profit source review(308C 비수익순위 수익 원천 검토)
+
+- status(상태): `completed_non_return_rank_profit_source_review_stage309_opened`
+- judgment(판정): `actual_mt5_no_onnx_worthy_candidate_split_coherent_profit_curve_rebuild_opened`
+- effect(효과): Stage308(308단계)를 닫고 `309_onnx_candidate_campaign__split_coherent_profit_curve_source_rebuild`를 열었다.
+- boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.
+
+## 2026-05-24 run308C Non-return-rank profit source review(308C 비수익순위 수익 원천 검토)
+
+- status(상태): `completed_non_return_rank_profit_source_review_stage309_opened`
+- judgment(판정): `actual_mt5_no_onnx_worthy_candidate_split_coherent_profit_curve_rebuild_opened`
+- effect(효과): Stage308(308단계)를 닫고 `309_onnx_candidate_campaign__split_coherent_profit_curve_source_rebuild`를 열었다.
+- boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.
