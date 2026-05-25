@@ -4006,8 +4006,11 @@
 
 ## 2026-05-26 - Stage325 ONNX Package(325단계 온엑스 패키지)
 
-- run325A(325A 실행): cp322A(322A 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현)으로 닫았다. Effect(효과): main push(메인 푸시)만 남은 후보 패키지 상태를 기록한다.
+- run325A(325A 실행): cp322A(322A 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현) `completed`로 기록했다. Effect(효과): Goal Achieve(목표 달성)는 `achieved_after_main_push_f67d80be`이고 next_action(다음 행동)은 `none_goal_achieved`이다.
 
-## 2026-05-26 - Stage325 ONNX Package(325단계 온엑스 패키지)
+## 2026-05-26 - Stage325 Main Push Closeout(325단계 메인 푸시 종료)
 
-- run325A(325A 실행): cp322A(322A 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현) `completed`로 기록했다. Effect(효과): Goal Achieve(목표 달성)는 `complete_pending_main_push`이고 next_action(다음 행동)은 `commit_and_push_main_then_mark_goal_achieved`이다.
+- package_commit(패키지 커밋): `f67d80be`
+- status(상태): `completed_cp322a_onnx_export_parity_runtime_reproduction_main_pushed_goal_achieved`
+- judgment(판정): `onnx_export_parity_and_mt5_runtime_reproduction_passed_main_pushed_goal_achieved`
+- effect(효과): ONNX export/parity/runtime reproduction(온엑스 내보내기/동등성/런타임 재현) 산출물을 main(메인)에 push(푸시)해 Goal Achieve(목표 달성)를 `achieved_after_main_push_f67d80be`로 닫았다.

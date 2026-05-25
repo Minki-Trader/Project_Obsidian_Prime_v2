@@ -4,8 +4,8 @@
 - run_id(실행 ID): `run325A_export_cp322a_adapter_to_onnx_and_runtime_reproduction_v1`
 - selected_candidate(선택 후보): `cp322A_cp321b_exact_replay_control_surface`
 - Adapter package(어댑터 패키지): `stage323_cp322a_selected_curve_adapter_package_v1`
-- status(상태): `completed_cp322a_onnx_export_parity_runtime_reproduction_package_ready_for_main_push`
-- judgment(판정): `onnx_export_parity_and_mt5_runtime_reproduction_passed_main_push_pending`
+- status(상태): `completed_cp322a_onnx_export_parity_runtime_reproduction_main_pushed_goal_achieved`
+- judgment(판정): `onnx_export_parity_and_mt5_runtime_reproduction_passed_main_pushed_goal_achieved`
 - ONNX model(온엑스 모델): `stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx`
 - feature_order_hash(피처 순서 해시): `839a84eca981d034211de743c0f9830335149e2a4817e947de6b96dd9fb5a70c`
 - Python inference check(파이썬 추론 확인): `stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/python_inference_check.json`
@@ -13,8 +13,8 @@
 - MT5 runtime reproduction(MT5 런타임 재현): `completed`
 - attempts(시도): `6/6`
 - runtime_metric_comparison(런타임 지표 비교): `78` rows(행), `0` failed(실패)
-- Goal Achieve(목표 달성): `complete_pending_main_push`
-- next_action(다음 행동): `commit_and_push_main_then_mark_goal_achieved`
+- Goal Achieve(목표 달성): `achieved_after_main_push_f67d80be`
+- next_action(다음 행동): `none_goal_achieved`
 
 ## KPI(핵심 성과 지표)
 
