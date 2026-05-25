@@ -4003,3 +4003,11 @@
 - judgment(판정): `onnx_go_approved_for_export_no_parity_yet`
 - effect(효과): `stage323_cp322a_selected_curve_adapter_package_v1`가 export(내보내기) 전 압박을 통과해 Stage325(325단계)를 열었다.
 - boundary(경계): ONNX parity(온엑스 동등성), MT5 runtime reproduction(MT5 런타임 재현), Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-26 - Stage325 ONNX Package(325단계 온엑스 패키지)
+
+- run325A(325A 실행): cp322A(322A 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현)으로 닫았다. Effect(효과): main push(메인 푸시)만 남은 후보 패키지 상태를 기록한다.
+
+## 2026-05-26 - Stage325 ONNX Package(325단계 온엑스 패키지)
+
+- run325A(325A 실행): cp322A(322A 후보) Adapter package(어댑터 패키지)를 ONNX model(온엑스 모델), parity receipts(동등성 영수증), MT5 runtime reproduction(MT5 런타임 재현) `completed`로 기록했다. Effect(효과): Goal Achieve(목표 달성)는 `complete_pending_main_push`이고 next_action(다음 행동)은 `commit_and_push_main_then_mark_goal_achieved`이다.

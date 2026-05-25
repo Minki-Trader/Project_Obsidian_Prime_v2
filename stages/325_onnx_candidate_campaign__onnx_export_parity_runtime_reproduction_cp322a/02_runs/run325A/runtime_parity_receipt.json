@@ -1,0 +1,60 @@
+{
+  "known_differences": [
+    "Stage322 source model backend(원천 모델 백엔드)은 ebm_table(표 기반 모델)이고 Stage325 backend(325단계 백엔드)은 onnx(온엑스)다.",
+    "Both surfaces(두 표면)는 run322b_route_signal -1/0/+1을 같은 short/flat/long(매도/관망/매수) probability(확률)로 해석해야 한다."
+  ],
+  "parity_check": {
+    "compared_rows": 78,
+    "comparison_csv": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/runtime_metric_comparison.csv",
+    "failed_rows": 0,
+    "onnx_kpi": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5_kpi_summary.csv",
+    "source_kpi": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/mt5_kpi_summary.csv"
+  },
+  "parity_identity": {
+    "attempt_count": 6,
+    "compile": {
+      "actual_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_06088f0ad409fd9b.log",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+        "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "/log:C:\\Users\\awdse\\AppData\\Local\\Temp\\obsidian_prime_mt5_compile\\compile_06088f0ad409fd9b.log"
+      ],
+      "command_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_06088f0ad409fd9b.log",
+      "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5/mt5_compile.log",
+      "log_sha256": "05f2b8658b86b071e7eec5c805dae7b4d4823fafc6e11be1277a5349af10e7c3",
+      "returncode": 1,
+      "status": "completed",
+      "stderr": "",
+      "stdout": ""
+    },
+    "feature_order_hash": "839a84eca981d034211de743c0f9830335149e2a4817e947de6b96dd9fb5a70c",
+    "mt5_kpi_record_count": 6,
+    "onnx_model": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx",
+    "onnx_model_sha256": "b0b34d31a78eef63084bc2157a81a83d88458a0e5aa605631e60af592ef9e723"
+  },
+  "passed": true,
+  "research_path": "stage_pipelines/stage325/export_cp322a_adapter_to_onnx_and_runtime_reproduction.py",
+  "run_id": "run325A_export_cp322a_adapter_to_onnx_and_runtime_reproduction_v1",
+  "runtime_claim_boundary": "runtime_reproduction_receipt_only_no_runtime_authority",
+  "runtime_path": [
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5/run322A_cp322A_cp321b_exact_replay_control_tier_a_val_onnx.ini",
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5/run322A_cp322A_cp321b_exact_replay_control_tier_b_val_onnx.ini",
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5/run322A_cp322A_cp321b_exact_replay_control_routed_val_onnx.ini",
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5/run322A_cp322A_cp321b_exact_replay_control_tier_a_oos_onnx.ini",
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5/run322A_cp322A_cp321b_exact_replay_control_tier_b_oos_onnx.ini",
+    "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/mt5/run322A_cp322A_cp321b_exact_replay_control_routed_oos_onnx.ini"
+  ],
+  "shared_contract": {
+    "decision_thresholds": {
+      "long": 0.55,
+      "min_margin": 0.0,
+      "short": 0.55
+    },
+    "feature_order": [
+      "run322b_route_signal"
+    ],
+    "feature_order_hash": "839a84eca981d034211de743c0f9830335149e2a4817e947de6b96dd9fb5a70c",
+    "risk_logic": "Stage322 set mirrored: max_hold_bars=1, close_on_flat_signal=true, ATR SL/TP and model risk sizing copied",
+    "runtime_handoff": "stages/323_onnx_candidate_campaign__selected_curve_adapter_package/02_runs/run323A/adapter_package/runtime_handoff_manifest.json"
+  }
+}
