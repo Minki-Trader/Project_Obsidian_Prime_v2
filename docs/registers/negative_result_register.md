@@ -172,3 +172,11 @@ Negative results are preserved because they prevent repeated dead ends.
 - preserved_clue(보존 단서): cp308E(308E 후보)는 OOS(표본외) 수익 단서가 있으나 validation(검증) 수익과 DD(drawdown, 손실폭)가 약하다.
 - do_not_repeat(반복 금지): Stage308(308단계) 표면에서 density/hold/ATR(밀도/보유/평균진폭)만 좁게 조정하지 않는다.
 - reopen_condition(재개 조건): split-coherent(분할 일관) validation/OOS(검증/표본외) 수익과 곡선 포켓이 같이 개선될 때만 재사용한다.
+
+## run309C_review_split_coherent_profit_curve_source_mt5_probe_v1 Stage309 split-coherent source failure memory(309단계 분할 일관 원천 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): actual MT5(실제 메타트레이더5) routed total(라우팅 전체)에서 수익 규모, 효율, 곡선 포켓을 동시에 만족하지 못했다.
+- preserved_clue(보존 단서): cp309A/cp309E(309A/309E 후보)는 양수 조각이 있으나 각각 규모/거래수/곡선이 부족하다.
+- do_not_repeat(반복 금지): Stage309(309단계) 표면에서 density/hold/lot(밀도/보유/랏)만 좁게 조정하지 않는다.
+- reopen_condition(재개 조건): runtime positive fragments(런타임 양수 조각)를 새 allocation layer(배분 계층)로 결합할 때만 재사용한다.

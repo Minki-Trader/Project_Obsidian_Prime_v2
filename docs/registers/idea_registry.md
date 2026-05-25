@@ -269,3 +269,14 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage308_non_return_rank_profit_source`
 - hypothesis(가설): return-rank(수익 순위)를 직접 쓰지 않는 session/breadth/volatility/trend(세션/브레드스/변동성/추세) 원천이 더 좋은 수익 곡선을 만들 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## stage309_split_coherent_profit_curve_source
+
+- hypothesis(가설): split-coherent profit curve source(분할 일관 수익 곡선 원천)가 OOS upside(표본외 상방)와 validation curve stability(검증 곡선 안정성)를 동시에 만들 수 있다.
+- boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
+
+## run309C_review_split_coherent_profit_curve_source_mt5_probe_v1 split-coherent profit curve source(분할 일관 수익 곡선 원천)
+
+- idea_id(아이디어 ID): `stage309_split_coherent_profit_curve_source`
+- hypothesis(가설): split coherence(분할 일관성)를 강제하면 validation/OOS(검증/표본외) 양수 조각을 동시에 만들 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
