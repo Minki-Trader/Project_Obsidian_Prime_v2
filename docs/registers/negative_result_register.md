@@ -237,3 +237,11 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 최소 거래수, 4-10 trades/day(일 4-10거래), 수익 규모, 효율, 곡선 포켓을 동시에 만족하지 못했다.
 - do_not_repeat(반복 금지): 한 표면의 lot/hold(랏/보유) 좁은 수리를 반복하지 않는다.
 - reopen_condition(재개 조건): 새 feature surface(피처 표면)나 curve stability(곡선 안정성) 구조를 만들 때만 재사용한다.
+
+## run318C_review_post_non_time_curve_stability_mt5_probe_v1 Stage318 curve-pocket failure memory(318단계 곡선 포켓 실패 기억)
+
+- failed_profiles(실패 프로필): `4` direct failures plus survivor seeds still not selected.
+- failure_boundary(실패 경계): 큰 순수익만으로 ONNX-worthy(온엑스 가치 있음) 후보가 되지 않는다. DD%(드로다운 비율), 양수 월 비율, 긴 underwater stretch(수중 구간)가 같이 통과해야 한다.
+- preserved_clue(보존 단서): cp318A/cp318D(318A/318D 후보)는 수익 규모와 거래 밀도 단서로 Stage319(319단계)에 넘긴다.
+- do_not_repeat(반복 금지): Stage318(318단계) score threshold(점수 임계값)만 좁게 올리고 내리는 repair(수리)를 반복하지 않는다.
+- reopen_condition(재개 조건): curve-pocket risk asymmetry(곡선 포켓 위험 비대칭)나 새 feature/risk surface(피처/위험 표면)가 있을 때만 다시 쓴다.

@@ -3891,3 +3891,24 @@
 - judgment(판정): `actual_mt5_no_onnx_worthy_candidate_fresh_non_time_profit_source_opened`
 - effect(효과): Stage317(317단계)를 닫고 `318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild`를 열었다.
 - boundary(경계): 운영 승격이나 런타임 권위를 주장하지 않는다.
+
+## 2026-05-24 run318A Post non-time curve stability materialization(318A 비시간 이후 곡선 안정성 물질화)
+
+- status(상태): `completed_post_non_time_curve_stability_candidates_materialized_no_selection`
+- judgment(판정): `post_non_time_curve_stability_outcome_distillation_materialized_no_candidate_selection`
+- effect(효과): 후보 `6`개와 MT5 대기열 `6`개를 만들었다.
+- boundary(경계): 선택 후보, Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 없다.
+
+## 2026-05-24 run318B Post non-time curve stability MT5 probe(318B 비시간 이후 곡선 안정성 MT5 탐침)
+
+- status(상태): `completed_post_non_time_curve_stability_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-25 run318C Post non-time curve stability review(318C 비시간 이후 곡선 안정성 검토)
+
+- status(상태): `completed_post_non_time_curve_stability_review_stage319_opened_no_selection`
+- judgment(판정): `actual_mt5_profit_scale_found_but_curve_pocket_gate_failed_stage319_opened`
+- effect(효과): Stage318(318단계)을 닫고 `319_onnx_candidate_campaign__curve_pocket_risk_asymmetry_rebuild`를 열었다.
+- boundary(경계): 운영 승격, 런타임 권위, ONNX(온엑스) 준비를 주장하지 않는다.

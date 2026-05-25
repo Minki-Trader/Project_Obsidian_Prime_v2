@@ -368,3 +368,17 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea_id(아이디어 ID): `stage317_fresh_non_time_profit_source_review`
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run318A_design_post_non_time_curve_stability_rebuild_packet_v1 post_non_time_curve_stability(비시간 이후 곡선 안정성)
+
+- idea_id(아이디어 ID): `stage318_post_non_time_curve_stability`
+- hypothesis(가설): Stage317(317단계) 실제 MT5(메타트레이더5) outcome(결과)을 비시간 feature surface(피처 표면)로 증류하면 trade count(거래 수), profit scale(수익 규모), curve stability(곡선 안정성)를 함께 회복할 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run318C_review_post_non_time_curve_stability_mt5_probe_v1 post_non_time_curve_stability(비시간 이후 곡선 안정성)
+
+- idea_id(아이디어 ID): `stage318_post_non_time_curve_stability_actual_review`
+- hypothesis(가설): Stage317(317단계) actual outcome(실제 결과)을 증류하면 수익 규모와 거래 밀도를 회복할 수 있다.
+- result(결과): 수익 규모는 만들었으나 smooth curve(매끈한 곡선) 조건은 실패했다.
+- survivor_seed_count(생존 씨앗 수): `2`
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
