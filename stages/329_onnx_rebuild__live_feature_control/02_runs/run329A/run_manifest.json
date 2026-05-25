@@ -1,0 +1,52 @@
+{
+  "stage_id": "329_onnx_rebuild__live_feature_control",
+  "run_id": "run329A_design_live_feature_rebuild_control_after_cp322a_block_v1",
+  "status": "completed_live_feature_rebuild_control_design_ready_for_materialization",
+  "judgment": "research_rebuild_control_open_no_goal_achieve",
+  "decision": "stage329_opened_live_feature_forward_rebuild_control_no_candidate_selected",
+  "generated_at_utc": "2026-05-25T22:32:42Z",
+  "command": "python stage_pipelines/stage329/design_live_feature_rebuild_control.py",
+  "candidate_mutation": "none",
+  "selected_candidate": "none",
+  "feature_set_rows": [
+    {
+      "feature_set_id": "core56_no_top3_weight_features",
+      "feature_count": 56,
+      "feature_order_hash": "84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89",
+      "input_dependency": "US100+VIX+US10YR+USDX+mega8 equities; no top3 monthly weights",
+      "forward_data_boundary": "common_ready_end=2026-05-22T23:00:00Z",
+      "status": "preferred_first_materialization_control",
+      "anti_overfit_reason": "removes 2026-05 missing top3 weight contract while preserving broad live-computable context"
+    },
+    {
+      "feature_set_id": "macro48_no_equity_breadth_or_top3",
+      "feature_count": 48,
+      "feature_order_hash": "147d9acd038b2b175a130281525ff49540bf21b36df2952066712a91198b9c40",
+      "input_dependency": "US100+VIX+US10YR+USDX only",
+      "forward_data_boundary": "common_ready_end=2026-05-25T18:30:00Z",
+      "status": "parallel_resilience_control",
+      "anti_overfit_reason": "tests whether external equity breadth dependency is required or merely overfit-supporting context"
+    },
+    {
+      "feature_set_id": "us100_technical42_no_external",
+      "feature_count": 42,
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "input_dependency": "US100 OHLC/session only",
+      "forward_data_boundary": "requested_to=2026-05-25T21:05:00Z",
+      "status": "minimal_parity_control",
+      "anti_overfit_reason": "lowest dependency feature set for Python/MT5 parity and failure isolation"
+    },
+    {
+      "feature_set_id": "core58_full_contract",
+      "feature_count": 58,
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "input_dependency": "US100+VIX+US10YR+USDX+mega8 equities+top3 monthly weights",
+      "forward_data_boundary": "top3_weights_max_month=2026-04",
+      "status": "blocked_until_2026_05_weight_contract_or_no_top3_variant",
+      "anti_overfit_reason": "do not infer 2026-05 top3 weights dynamically at runtime"
+    }
+  ],
+  "next_action": "run329B_parameterize_forward_feature_materializer_and_build_live_feature_frames",
+  "goal_achieve": "not_claimed",
+  "claim_boundary": "research_development_only_no_new_data_tuning_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

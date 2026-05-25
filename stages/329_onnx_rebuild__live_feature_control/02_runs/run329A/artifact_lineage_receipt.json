@@ -1,0 +1,39 @@
+{
+  "source_inputs": [
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/03_reviews/final_stage328B_decision_report.md",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/rebuild_option_queue.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/feature_live_rebuild_matrix.csv",
+    "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/stage01_raw_export_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv"
+  ],
+  "producer": "stage_pipelines/stage329/design_live_feature_rebuild_control.py",
+  "consumer": [
+    "stages/329_onnx_rebuild__live_feature_control/03_reviews/run329A_live_feature_rebuild_control_design.md",
+    "stages/329_onnx_rebuild__live_feature_control/03_reviews/final_stage329A_decision_report.md",
+    "stages/329_onnx_rebuild__live_feature_control/04_selected/selection_status.md",
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "artifact_paths": [
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/forward_raw_coverage_audit.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/live_feature_set_design_matrix.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/materializer_gap_audit.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/anti_overfit_control_spec.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/rebuild_run_queue.csv"
+  ],
+  "artifact_hashes": {
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "forward_raw_summary_sha256": "210f29cbf0e0d99a4e9cf2b8a354a69628fd57890d8843321a2d884af251a712",
+    "stage328_decision_sha256": "be691d6d6fa3d6222cac2c6dedffcc6a9011c38eae25e721db419fc42ac8d0f2"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "availability": "tracked_design_and_generated_receipts",
+  "lineage_judgment": "connected_with_boundary"
+}

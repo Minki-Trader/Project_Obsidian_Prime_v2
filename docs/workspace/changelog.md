@@ -4047,3 +4047,10 @@
 - status(상태): `completed_cp318_outcome_source_audit_rebuild_required`
 - judgment(판정): `blocked_repair_required_no_goal_achieve`
 - effect(효과): cp318A outcome distillation(결과 증류)은 forward authority(전진 권한)가 아니므로 cp322A Goal Achieve(목표 달성), live readiness(실거래 준비), deployment(배포)를 주장하지 않는다.
+
+## 2026-05-26 - Stage329A Live Feature Rebuild Control(329A 실시간 피처 재구축 대조)
+
+- run329A(329A 실행): Stage328B(328B 단계 실행)의 cp318 outcome source block(cp318 결과 원천 차단)을 받아 core56/macro48/us100-only feature set(피처 세트) materialization queue(물질화 대기열)를 만들었다.
+- status(상태): `completed_live_feature_rebuild_control_design_ready_for_materialization`
+- judgment(판정): `research_rebuild_control_open_no_goal_achieve`
+- effect(효과): cp322A(322A 후보)는 수정하지 않고, forward holdout(전진 보류)을 threshold tuning(임계값 튜닝)에 쓰지 않는 rebuild-control(재구축 대조)을 열었다.

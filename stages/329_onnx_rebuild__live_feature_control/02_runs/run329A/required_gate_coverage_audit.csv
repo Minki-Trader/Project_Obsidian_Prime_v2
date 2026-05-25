@@ -1,0 +1,6 @@
+gate_name,status,evidence_path,effect
+experiment_design(실험 설계),passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/experiment_design_receipt.json,candidate selection(후보 선택) 없이 rebuild-control(재구축 대조) 범위를 고정했다.
+data_integrity(데이터 무결성),passed_with_materialization_blockers_named,stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/data_integrity_receipt.json,forward raw data(전진 원천 데이터)는 있지만 materializer/session/weight gaps(물질화기/세션/가중치 공백)를 이름 붙였다.
+model_validation(모델 검증),passed_design_only,stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/model_validation_receipt.json,training(학습) 전 overfit controls(과적합 방지 대조)를 고정했다.
+artifact_lineage(산출물 계보),passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/artifact_lineage_receipt.json,Stage328/326/data inputs(입력)와 Stage329 outputs(출력)를 연결했다.
+result_judgment(결과 판정),passed_no_goal_achieve,stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/result_judgment.csv,"Goal Achieve(목표 달성), ONNX readiness(온엑스 준비), runtime authority(런타임 권위)를 주장하지 않는다."

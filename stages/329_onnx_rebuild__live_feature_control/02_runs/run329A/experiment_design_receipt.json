@@ -1,0 +1,33 @@
+{
+  "hypothesis": "A live-computable feature rebuild control(실시간 계산 가능 피처 재구축 대조) can remove the cp318/cp322 outcome-distillation overfit path.",
+  "decision_use": "Open Stage329 materialization and later WFO/ONNX research without changing cp322A.",
+  "comparison_baseline": "Stage328B cp318 outcome source audit",
+  "control_variables": [
+    "cp322A frozen artifact unchanged",
+    "forward holdout starts 2026-04-14 and remains untouched for threshold selection",
+    "no Stage316/317/source_code/hyp_signal outcome features"
+  ],
+  "changed_variables": [
+    "feature set variants: core56, macro48, us100 technical42",
+    "materializer parameterization for forward window"
+  ],
+  "sample_scope": "old train/validation/OOS model input plus Stage326 forward raw M5 data",
+  "success_criteria": "feature materialization queue, anti-overfit controls, and materializer gaps are explicit",
+  "failure_criteria": "attempting to retune cp322A or infer split-local forward rank",
+  "invalid_conditions": [
+    "missing forward raw data",
+    "unresolved timestamp binding",
+    "untracked feature order changes"
+  ],
+  "stop_conditions": [
+    "do not select a candidate in run329A",
+    "do not claim ONNX readiness"
+  ],
+  "evidence_plan": [
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/forward_raw_coverage_audit.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/live_feature_set_design_matrix.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/materializer_gap_audit.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/anti_overfit_control_spec.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/rebuild_run_queue.csv"
+  ]
+}

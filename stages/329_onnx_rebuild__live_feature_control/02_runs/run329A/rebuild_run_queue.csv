@@ -1,0 +1,5 @@
+queue_id,priority,action,feature_set_id,success_gate,blocked_if
+run329B_core56_forward_feature_frame,1,parameterize materializer and build core56 forward feature frame,core56_no_top3_weight_features,feature_order_hash fixed; no missing external rows before common-ready-end; no labels used for selection,materializer cannot preserve old outputs by default
+run329B_macro48_forward_feature_frame,2,build macro48 forward feature frame as lower-dependency control,macro48_no_equity_breadth_or_top3,US100/VIX/US10YR/USDX exact timestamp alignment passes,regime symbols have unresolved timestamp binding
+run329C_train_wfo_rebuild_candidates,3,train small ONNX-friendly models using old train/validation/OOS only,core56 and macro48,"rolling WFO, split pocket, class balance, calibration, and parity receipts exist",feature materialization or label boundary fails
+run329D_forward_holdout_replay,4,score untouched forward holdout after fixed train/WFO selection,survivor only,forward result exists without threshold retuning,no survivor or no MT5/runtime handoff parity

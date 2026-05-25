@@ -1,0 +1,7 @@
+control_id,rule,effect
+no_cp322a_repair_tuning,"Do not adjust cp322A threshold, D/B surface, lot, ATR, or runtime logic.",prevents a failed frozen artifact from being silently repaired into a different artifact.
+no_outcome_distillation_features,"Reject Stage316/317 scores, source_code, hyp_signal, and actual MT5 net_profit labels as model inputs.",removes the Stage318 overfit path found in run328B.
+train_only_thresholds,Classification thresholds and label thresholds come from train split only; validation/OOS/forward cannot set them.,stops forward or OOS data from becoming calibration data.
+rolling_wfo_before_onnx,Any candidate must survive rolling WFO and split pocket checks before ONNX packaging.,single-split success cannot become model authority.
+parity_first_materialization,Build feature frames with hashes and feature order before training or MT5 claims.,prevents Python model outputs from drifting away from runtime inputs.
+untouched_forward_holdout,"2026-04-14+ data is used first for feature readiness and final forward checks, not for selecting thresholds.",preserves the forward robustness question.

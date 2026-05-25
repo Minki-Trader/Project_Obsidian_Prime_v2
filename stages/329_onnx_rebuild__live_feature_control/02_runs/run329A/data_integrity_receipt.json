@@ -1,0 +1,60 @@
+{
+  "data_source": [
+    "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/stage01_raw_export_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+    "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset_summary.json",
+    "foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv"
+  ],
+  "time_axis": "Stage326 raw MT5 unix seconds; manifests still require timestamp/session binding before runtime claims",
+  "sample_scope": {
+    "old_model_input": {
+      "train": {
+        "rows": 29222,
+        "first_timestamp": "2022-09-01T16:40:00+00:00",
+        "last_timestamp": "2024-12-31T22:00:00+00:00",
+        "class_distribution": {
+          "short": 9064,
+          "flat": 9643,
+          "long": 10515
+        }
+      },
+      "validation": {
+        "rows": 9844,
+        "first_timestamp": "2025-01-02T16:35:00+00:00",
+        "last_timestamp": "2025-09-30T22:00:00+00:00",
+        "class_distribution": {
+          "short": 2920,
+          "flat": 3631,
+          "long": 3293
+        }
+      },
+      "oos": {
+        "rows": 7584,
+        "first_timestamp": "2025-10-01T16:35:00+00:00",
+        "last_timestamp": "2026-04-13T22:00:00+00:00",
+        "class_distribution": {
+          "short": 2259,
+          "flat": 2968,
+          "long": 2357
+        }
+      }
+    },
+    "forward_raw": {
+      "requested_from_utc": "2026-04-14T00:00:00Z",
+      "requested_to_utc": "2026-05-25T21:05:00Z",
+      "core58_common_ready_end_utc": "2026-05-22T23:00:00Z",
+      "macro48_common_ready_end_utc": "2026-05-25T18:30:00Z",
+      "raw_summary_sha256": "210f29cbf0e0d99a4e9cf2b8a354a69628fd57890d8843321a2d884af251a712"
+    }
+  },
+  "missing_or_duplicate_check": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/forward_raw_coverage_audit.csv",
+  "feature_label_boundary": "forward data is feature-readiness only; labels/thresholds cannot be selected from it",
+  "split_boundary": "train/validation/oos old contract plus 2026-04-14+ untouched forward holdout",
+  "leakage_risk": "top3 weights, equity session gaps, materializer hard-coded old end, split-local rank",
+  "data_hash_or_identity": {
+    "model_input_feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "forward_raw_summary_sha256": "210f29cbf0e0d99a4e9cf2b8a354a69628fd57890d8843321a2d884af251a712",
+    "top3_weights_sha256": "08531dbf5235a166e5b2e9dc675ec3d41a0cc84066d00592c37f500aa8f89981"
+  },
+  "integrity_judgment": "usable_for_design_materialization_required"
+}

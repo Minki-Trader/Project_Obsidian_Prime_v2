@@ -1,0 +1,17 @@
+{
+  "model_family": "not_trained_in_run329A",
+  "target_and_label": "label_v1_fwd12 train-threshold contract for future materialization only",
+  "split_method": "train/validation/oos old plus untouched forward holdout",
+  "selection_metric": "not_applicable_design_only",
+  "secondary_metrics": [
+    "feature coverage",
+    "materializer gap",
+    "anti-overfit controls",
+    "future WFO gates"
+  ],
+  "threshold_policy": "train_only_or_fixed_before_forward; no forward threshold tuning",
+  "overfit_risk": "controlled by removing outcome-distillation features and rejecting split-local rank",
+  "calibration_risk": "future scores cannot be probability claims before calibration receipts",
+  "comparison_baseline": "cp322A blocked artifact and Stage328B outcome-source audit",
+  "validation_judgment": "research_rebuild_control_open_no_goal_achieve"
+}
