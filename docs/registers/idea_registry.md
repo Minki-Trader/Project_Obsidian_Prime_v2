@@ -346,3 +346,14 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea_id(아이디어 ID): `stage315_runtime_outcome_feature_interaction_review`
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run316A_design_post_interaction_profit_scale_curve_rebuild_packet_v1 post_interaction_profit_scale_curve(상호작용 이후 수익 규모/곡선)
+
+- idea_id(아이디어 ID): `stage316_post_interaction_profit_scale_curve`
+- hypothesis(가설): 20/22시 sell-only(매도 전용) 시간 내부 샘플링이 거래수와 곡선을 같이 맞출 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run316C_review_post_interaction_profit_scale_curve_mt5_probe_v1 post_interaction_profit_scale_curve_review(상호작용 이후 수익 규모/곡선 검토)
+
+- idea_id(아이디어 ID): `stage316_post_interaction_profit_scale_curve_review`
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
