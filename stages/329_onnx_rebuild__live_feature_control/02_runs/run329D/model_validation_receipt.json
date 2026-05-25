@@ -1,0 +1,17 @@
+{
+  "model_family": "run329C sklearn LogisticRegression exported to ONNX",
+  "target_and_label": "no forward labels generated in run329D",
+  "split_method": "forward holdout score replay only",
+  "selection_metric": "none; no candidate selection",
+  "secondary_metrics": [
+    "signal density",
+    "side attribution",
+    "slice attribution",
+    "ONNX parity"
+  ],
+  "threshold_policy": "fixed thresholds from run329C",
+  "overfit_risk": "raw forward density can look strong because session row density differs; old-session parity view mitigates but does not prove profitability",
+  "calibration_risk": "logistic scores are ranking scores, not calibrated edge probabilities",
+  "comparison_baseline": "run329C OOS signal density",
+  "validation_judgment": "forward_score_replay_completed_session_parity_warning_no_goal_achieve"
+}

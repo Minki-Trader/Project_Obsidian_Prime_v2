@@ -1,0 +1,21 @@
+{
+  "hypothesis": "Forward holdout scores should remain nonzero under old-session parity without threshold retuning.",
+  "fixed_inputs": [
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/forward_replay_candidate_queue.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_frames",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C"
+  ],
+  "changed_inputs": "none",
+  "view_policy": [
+    "raw_forward",
+    "old_session_parity"
+  ],
+  "threshold_policy": "reuse run329C train-only nonflat-margin thresholds exactly",
+  "forbidden_actions": [
+    "new training",
+    "threshold search",
+    "D/B rule change",
+    "profit fitting"
+  ],
+  "success_boundary": "signal supply and ONNX parity diagnostics only; not forward passed"
+}

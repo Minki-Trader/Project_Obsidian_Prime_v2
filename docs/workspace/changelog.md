@@ -4068,3 +4068,10 @@
 - status(상태): `completed_train_wfo_rebuild_candidates_no_forward_tuning`
 - judgment(판정): `research_wfo_candidates_ready_for_forward_replay_no_goal_achieve`
 - effect(효과): forward holdout(전진 보류 표본)을 쓰지 않고 WFO(워크포워드), OOS(표본외), ONNX parity(온엑스 동등성)를 확인했으며, selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 만들지 않았다.
+
+## 2026-05-26 - Stage329D Forward Score Replay(329D 전진 점수 재생)
+
+- run329D(329D 실행): run329C(329C 실행)의 fixed threshold(고정 임계값)와 ONNX(온엑스)를 run329B(329B 실행) forward feature frames(전진 피처 프레임)에 적용했다.
+- status(상태): `completed_forward_holdout_score_replay_without_threshold_retuning`
+- judgment(판정): `forward_score_replay_completed_session_parity_warning_no_goal_achieve`
+- effect(효과): raw/session parity(원본/세션 동등)를 분리했고, 수익/라벨/MT5/runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

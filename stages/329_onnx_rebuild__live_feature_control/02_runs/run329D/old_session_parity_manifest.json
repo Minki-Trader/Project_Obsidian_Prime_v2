@@ -1,0 +1,33 @@
+{
+  "source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+  "minute_count": 66,
+  "first_minute_utc": 995,
+  "last_minute_utc": 1320,
+  "split_rows": [
+    {
+      "split": "oos",
+      "rows": 7584,
+      "days": 131,
+      "rows_per_day": 57.89312977099237,
+      "start": "2025-10-01T16:35:00+00:00",
+      "end": "2026-04-13T22:00:00+00:00"
+    },
+    {
+      "split": "train",
+      "rows": 29222,
+      "days": 573,
+      "rows_per_day": 50.99825479930192,
+      "start": "2022-09-01T16:40:00+00:00",
+      "end": "2024-12-31T22:00:00+00:00"
+    },
+    {
+      "split": "validation",
+      "rows": 9844,
+      "days": 183,
+      "rows_per_day": 53.79234972677595,
+      "start": "2025-01-02T16:35:00+00:00",
+      "end": "2025-09-30T22:00:00+00:00"
+    }
+  ],
+  "lineage_judgment": "old_model_input_session_minutes_used_as_forward_parity_mask"
+}

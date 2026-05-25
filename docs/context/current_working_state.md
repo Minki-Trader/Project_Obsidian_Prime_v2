@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `329_onnx_rebuild__live_feature_control_v3`
-- current_run(현재 실행): `run329C_train_wfo_rebuild_candidates_v1`
+- current_packet(현재 작업 묶음): `329_onnx_rebuild__live_feature_control_v4`
+- current_run(현재 실행): `run329D_forward_holdout_score_replay_without_threshold_retuning_v1`
 - active_stage(활성 단계): `329_onnx_rebuild__live_feature_control`
 - selected_research_baseline(선택 연구 기준선): `none`
 - source_stage(원천 단계): `329_onnx_rebuild__live_feature_control`
-- target_surface(목표 표면): `train_wfo_rebuild_without_forward_tuning`
+- target_surface(목표 표면): `forward_score_replay_without_threshold_retuning`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_train_wfo_rebuild_candidates_no_forward_tuning`
-- decision(판정): `research_wfo_candidates_ready_for_forward_replay_no_goal_achieve`
+- status(상태): `completed_forward_holdout_score_replay_without_threshold_retuning`
+- decision(판정): `forward_score_replay_completed_session_parity_warning_no_goal_achieve`
+- run329D_summary(329D 요약): forward holdout score replay(전진 보류 점수 재생)를 `completed_forward_holdout_score_replay_without_threshold_retuning`로 닫았다. Effect(효과): raw_forward(원본 전진) 세션 밀도 불일치를 기록하고 old_session_parity(기존 세션 동등) view(보기)에서 fixed threshold(고정 임계값) 신호 공급을 확인했지만, selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 없다.
 - run329C_summary(329C 요약): train/WFO rebuild candidates(학습/워크포워드 재구축 후보)를 `completed_train_wfo_rebuild_candidates_no_forward_tuning`로 닫았다. Effect(효과): research ONNX(연구 온엑스) 6개를 만들고 6개를 forward replay queue(전진 재생 대기열)에 넣었지만, selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 없다.
 - run329B_summary(329B 요약): forward feature frame materialization(전진 피처 프레임 물질화)을 `completed_forward_feature_frames_materialized_with_session_boundary`로 닫았다. Effect(효과): feature frame(피처 프레임)은 준비됐지만 모델 학습(model training, 모델 학습), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
 - run329A_summary(329A 요약): live feature rebuild control design(실시간 피처 재구축 대조 설계)을 `completed_live_feature_rebuild_control_design_ready_for_materialization`로 닫았다. Effect(효과): core56/macro48/us100-only feature set(피처 세트) 대기열과 materializer gap(물질화기 공백)을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 없다.
@@ -30,8 +31,8 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run329D_forward_holdout_score_replay_without_threshold_retuning`
-- claim_boundary(주장 경계): `research_development_only_old_train_validation_oos_used_no_forward_tuning_research_onnx_exports_not_runtime_handoff_no_selected_candidate_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- next_action(다음 행동): `run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_or_block`
+- claim_boundary(주장 경계): `research_development_only_forward_score_replay_no_label_no_profit_no_mt5_runtime_no_threshold_retuning_no_selected_candidate_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
 Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.
