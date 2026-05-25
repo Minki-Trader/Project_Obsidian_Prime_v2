@@ -1,0 +1,20 @@
+{
+  "stage_id": "327_onnx_candidate_campaign__cp322a_overfit_forward_parity_robustness",
+  "run_id": "run327A_audit_cp322a_overfit_forward_parity_v1",
+  "generated_at_utc": "2026-05-25T21:49:17Z",
+  "objective": "cp322A overfit/forward/parity robustness audit(과적합/전진/동등성 강건성 감사)",
+  "frozen_items": [
+    "onnx_model(온닉스 모델)",
+    "adapter_package(어댑터 패키지)",
+    "feature_order(피처 순서)",
+    "decision_thresholds(판단 임계값)",
+    "risk_lot_logic(위험/랏 로직)"
+  ],
+  "success_condition": "leakage-safe forward signal handoff or standalone live-computable ONNX path identified(누수 방지 전진 신호 인계 또는 독립 ONNX 경로 식별)",
+  "forbidden": [
+    "new_data_tuning(새 데이터 튜닝)",
+    "threshold_refit(임계값 재맞춤)",
+    "candidate_reselection(후보 재선택)"
+  ],
+  "claim_boundary": "research_development_only_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

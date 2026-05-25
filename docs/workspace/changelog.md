@@ -4026,3 +4026,10 @@
 - run326A(326A 실행): MT5(메타트레이더5) export(내보내기)를 다시 실행해 US10YR(미국 10년물) M5(5분봉)를 `2026-05-25T19:55:00Z`까지 확보했다.
 - status(상태): `blocked_forward_signal_handoff_missing`
 - effect(효과): `blocked_forward_data_missing`(전진 데이터 누락 차단)은 해소됐고, 남은 차단은 `blocked_forward_signal_handoff_missing`(전진 신호 인계 누락)이다.
+
+## 2026-05-26 - Stage327 cp322A Overfit/Forward/Parity Probe(327단계 cp322A 과적합/전진/동등성 탐침)
+
+- run327A(327A 실행): cp322A(322A 후보)의 ONNX parity(온닉스 동등성), runtime parity(런타임 동등성), forward handoff(전진 인계), overfit risk(과적합 위험)를 함께 감사했다.
+- status(상태): `completed_overfit_forward_parity_probe_forward_signal_blocked`
+- judgment(판정): `blocked_repair_required_no_goal_achieve`
+- effect(효과): forward signal handoff(전진 신호 인계)와 leakage-safe signal contract(누수 방지 신호 계약)가 해결되지 않아 Goal Achieve(목표 달성), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격)을 주장하지 않는다.
