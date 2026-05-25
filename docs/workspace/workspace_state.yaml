@@ -1,8 +1,8 @@
-﻿current_run_id: run327A_audit_cp322a_overfit_forward_parity_v1
+﻿current_run_id: run328A_extract_frozen_signal_contract_no_new_data_tuning_v1
 updated_on: '2026-05-26'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 327_onnx_candidate_campaign__cp322a_overfit_forward_parity_robustness
+active_stage: 328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -15,6 +15,8 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage328(328단계) run328A(328A 실행) frozen signal contract extraction(고정 신호 계약 추출)을 닫았다. Effect(효과): split-local rank(분할 내부 순위)는 forward leakage(전진 누수)이고 train-only frozen threshold(학습 전용 고정 임계값)는 cp322A와 다른 신호라 Goal Achieve(목표 달성)는 주장하지 않는다.
 - >-
   Stage327(327단계) run327A(327A 실행) cp322A overfit/forward/parity probe(과적합/전진/동등성 탐침)를 닫았다. Effect(효과): ONNX parity(온닉스 동등성)는 과거 창에서 유지됐지만 `run322b_route_signal` forward handoff(전진 인계)가 없고 split rank/outcome pressure(분할 순위/결과 압력) 위험이 커서 Goal Achieve(목표 달성)는 주장하지 않는다.
 - >-

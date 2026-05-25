@@ -4033,3 +4033,10 @@
 - status(상태): `completed_overfit_forward_parity_probe_forward_signal_blocked`
 - judgment(판정): `blocked_repair_required_no_goal_achieve`
 - effect(효과): forward signal handoff(전진 신호 인계)와 leakage-safe signal contract(누수 방지 신호 계약)가 해결되지 않아 Goal Achieve(목표 달성), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격)을 주장하지 않는다.
+
+## 2026-05-26 - Stage328 cp322A Frozen Signal Contract Extraction(328단계 cp322A 고정 신호 계약 추출)
+
+- run328A(328A 실행): cp322A(322A 후보)의 `run322b_route_signal` 계약을 threshold reproduction audit(임계값 재현 감사)와 upstream dependency matrix(상위 의존성 행렬)로 추출했다.
+- status(상태): `completed_frozen_signal_contract_extraction_forward_generator_not_safe`
+- judgment(판정): `blocked_repair_required_no_goal_achieve`
+- effect(효과): exact replay(정확 재생)는 과거 창 전용이고 forward-safe generator(전진 안전 생성기)는 아직 안전하지 않아 Goal Achieve(목표 달성), live readiness(실거래 준비), deployment(배포)를 주장하지 않는다.

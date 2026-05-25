@@ -1,0 +1,11 @@
+{
+  "stage_id": "328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction",
+  "run_id": "run328A_extract_frozen_signal_contract_no_new_data_tuning_v1",
+  "generated_at_utc": "2026-05-25T22:02:49Z",
+  "data_source": "stages/321_onnx_candidate_campaign__post_controller_profit_curve_rebuild/02_runs/run321A/payloads/run321A_cp321B_d_or_b_score60_scale_curve_payload.parquet",
+  "time_axis": "timestamp/ts_floor UTC historical shared window; forward bars not used for threshold fitting(UTC 과거 공유 창, 전진 봉으로 임계값 맞추지 않음)",
+  "sample_scope": "train/validation/oos historical rows only for contract audit(계약 감사용 과거 행)",
+  "feature_label_boundary": "No new forward data consumed; outcome-derived Stage318 lineage remains a risk(새 전진 데이터 미사용, 결과 유래 318단계 계보는 위험)",
+  "leakage_risk": "Using forward split-local rank would require seeing the forward distribution(전진 분포를 봐야 하므로 누수)",
+  "integrity_judgment": "usable_for_audit_not_forward_generation(감사용 가능, 전진 생성용 아님)"
+}

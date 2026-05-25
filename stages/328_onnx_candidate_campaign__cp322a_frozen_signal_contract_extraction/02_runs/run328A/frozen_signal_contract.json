@@ -1,0 +1,37 @@
+{
+  "stage_id": "328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction",
+  "run_id": "run328A_extract_frozen_signal_contract_no_new_data_tuning_v1",
+  "generated_at_utc": "2026-05-25T22:02:49Z",
+  "contract": {
+    "rule_name": "d_or_b_score60",
+    "exact_formula": "if (sig_d != 0 or sig_b != 0) and split_local_rank(score_mean) >= 0.60 then sig_d if sig_d != 0 else sig_b else 0",
+    "score_mean_inputs": [
+      "score_d",
+      "score_b",
+      "score_f",
+      "score_a",
+      "score_c",
+      "score_e"
+    ],
+    "signal_inputs": [
+      "sig_d",
+      "sig_b"
+    ],
+    "historical_split_thresholds": {
+      "oos": -0.041969626145228645,
+      "train": -0.09175034666278475,
+      "validation": -0.049650827524286574
+    },
+    "frozen_threshold_candidates": {
+      "train_only": -0.09175034666278475,
+      "train_validation": -0.08226707508069421,
+      "all_old": -0.07513331057612696
+    },
+    "exact_historical_active_count": 12608,
+    "exact_historical_long_count": 4604,
+    "exact_historical_short_count": 8004,
+    "contract_judgment": "exact_cp322a_forward_signal_contract_not_safe_without_upstream_rebuild"
+  },
+  "decision": "exact_cp322a_forward_signal_contract_not_safe_without_upstream_rebuild",
+  "claim_boundary": "research_development_only_no_new_data_tuning_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

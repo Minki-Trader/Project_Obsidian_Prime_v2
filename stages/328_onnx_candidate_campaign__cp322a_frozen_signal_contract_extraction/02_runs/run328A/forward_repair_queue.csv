@@ -1,0 +1,5 @@
+queue_id,repair_probe,allowed,changes_cp322a,new_data_tuning_risk,purpose
+run328B,deep_audit_cp318_outcome_source(318단계 결과 원천 심층 감사),yes,no,no,Stage318 outcome model(결과 모델)이 forward authority(전진 권위)로 부적합한지 증명하고 대체 경계를 정한다.
+run328C,train_only_frozen_threshold_control(학습 전용 고정 임계값 대조),research_control_only,yes,no,train-only threshold(학습 전용 임계값)이 얼마나 다른 신호가 되는지 대조한다. cp322A 통과 주장에는 쓰지 않는다.
+stage329,standalone_live_feature_onnx_design(실시간 피처 독립 ONNX 설계),yes,yes_new_stage,must_control,precomputed route signal(사전 계산 경로 신호) 없이 live-computable features(실시간 계산 피처)를 먹는 새 ONNX 경로를 설계한다.
+runtime_fixture,historical_replay_fixture_only(과거 재생 고정물 전용),parity_fixture_only,no,no,old-window parity(과거 창 동등성)를 반복 검증하는 고정물로만 쓰고 forward claim(전진 주장)은 금지한다.
