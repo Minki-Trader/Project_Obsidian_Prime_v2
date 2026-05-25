@@ -407,3 +407,8 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage321_consensus_profit_curve_source`
 - hypothesis(가설): Stage319(319단계)의 D/B/F/A/C/E 표면 합의와 합집합이 Stage320(320단계) 제어기보다 수익 규모와 곡선 균형을 더 잘 보존할 수 있다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+## run322A_design_cp321b_curve_stability_pressure_packet_v1 cp321B curve stability pressure(cp321B 곡선 안정성 압박)
+
+- idea_id(아이디어 ID): `stage322_cp321b_curve_stability_pressure`
+- hypothesis(가설): cp321B(321B 씨앗)는 exact replay(정확 재생)와 threshold/source/risk perturbation(임계값/원천/위험 교란)을 견뎌야 Adapter(어댑터)로 넘길 가치가 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.

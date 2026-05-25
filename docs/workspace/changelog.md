@@ -3966,3 +3966,19 @@
 
 - status(상태): `completed_post_controller_profit_curve_review_stage322_opened_no_selection`
 - effect(효과): `cp321B_d_or_b_score60_scale_curve_surface`를 Stage322(322단계) 압박 씨앗으로 넘겼다.
+## 2026-05-26 run322A cp321B curve stability pressure materialization(322A cp321B 곡선 안정성 압박 물질화)
+
+- status(상태): `completed_cp321b_curve_stability_pressure_candidates_materialized_no_selection`
+- judgment(판정): `cp321b_stability_pressure_candidates_materialized_requires_actual_mt5_no_selection`
+- effect(효과): candidates(후보) `6`개와 MT5 queue(MT5 대기열) `6`개를 만들었다.
+
+## 2026-05-26 run322B cp321B Curve Stability Pressure MT5 Probe(322B cp321B 곡선 안정성 압박 MT5 탐침)
+
+- status(상태): `completed_cp321b_curve_stability_pressure_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_stability_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+## 2026-05-26 run322C cp321B curve stability pressure review(322C cp321B 곡선 안정성 압박 검토)
+
+- status(상태): `completed_cp321b_curve_stability_pressure_review_stage323_opened`
+- selected_candidate(선택 후보): `cp322A_cp321b_exact_replay_control_surface`
+- effect(효과): Stage323(323단계) `323_onnx_candidate_campaign__selected_curve_adapter_package`를 열었다.

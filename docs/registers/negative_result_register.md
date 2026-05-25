@@ -261,3 +261,8 @@ Negative results are preserved because they prevent repeated dead ends.
 
 - cp321C(321C 후보): highest profit scale(최대 수익 규모)이지만 OOS(표본외) 확대 구간 포켓 때문에 Stage322(322단계) 씨앗에서 제외.
 - cp321A/cp321D/cp321E/cp321F: DD/PF/zoom gate(드로다운/수익 팩터/확대 관문) 중 하나 이상 실패.
+## run322C_review_cp321b_curve_stability_pressure_mt5_probe_v1 Stage322 pressure memory(322단계 압박 기억)
+
+- selected_candidate(선택 후보): `cp322A_cp321b_exact_replay_control_surface`
+- boundary(경계): Adapter(어댑터)와 ONNX(온엑스)는 not_started(미시작).
+- do_not_repeat(반복 금지): exact replay(정확 재생)만 통과한 경우에는 후보로 포장하지 않는다.
