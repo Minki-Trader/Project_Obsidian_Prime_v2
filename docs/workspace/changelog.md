@@ -4040,3 +4040,10 @@
 - status(상태): `completed_frozen_signal_contract_extraction_forward_generator_not_safe`
 - judgment(판정): `blocked_repair_required_no_goal_achieve`
 - effect(효과): exact replay(정확 재생)는 과거 창 전용이고 forward-safe generator(전진 안전 생성기)는 아직 안전하지 않아 Goal Achieve(목표 달성), live readiness(실거래 준비), deployment(배포)를 주장하지 않는다.
+
+## 2026-05-26 - Stage328B cp318 Outcome Source Audit(328B cp318 결과 원천 감사)
+
+- run328B(328B 실행): Stage318(318단계) cp318A outcome source(결과 원천), live feature rebuild matrix(실시간 피처 재구축 행렬), estimated-vs-actual MT5 gap(추정 대 실제 MT5 차이)을 감사했다.
+- status(상태): `completed_cp318_outcome_source_audit_rebuild_required`
+- judgment(판정): `blocked_repair_required_no_goal_achieve`
+- effect(효과): cp318A outcome distillation(결과 증류)은 forward authority(전진 권한)가 아니므로 cp322A Goal Achieve(목표 달성), live readiness(실거래 준비), deployment(배포)를 주장하지 않는다.

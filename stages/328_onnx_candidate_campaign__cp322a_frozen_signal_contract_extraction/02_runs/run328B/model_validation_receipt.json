@@ -1,0 +1,56 @@
+{
+  "model_family": "ExtraTrees outcome distillation(결과 증류) from Stage318",
+  "target_and_label": "net_profit regression and net_profit>0 classification",
+  "split_method": "not clean forward; validation+OOS actual trades included in training",
+  "selection_metric": "estimated net/PF/trades/day/gates plus later actual MT5 review",
+  "secondary_metrics": {
+    "in_sample_auc": 0.8605914918734261,
+    "positive_rate": 0.3240953947368421,
+    "training_net_profit_total": -11641.44,
+    "actual_vs_estimated_gap": [
+      {
+        "split": "validation",
+        "estimated_net_profit": 2749.3,
+        "actual_mt5_net_profit": 392856.96,
+        "net_scale_ratio_actual_to_estimated": 142.89344924162515,
+        "estimated_pf": 3.15672,
+        "actual_mt5_pf": 1.24,
+        "pf_gap_actual_minus_estimated": -1.91672,
+        "estimated_trade_count": 740,
+        "actual_mt5_trade_count": 1660,
+        "trade_count_ratio_actual_to_estimated": 2.2432432432432434,
+        "estimated_trades_per_day": 4.04372,
+        "actual_mt5_trades_per_day": null,
+        "actual_max_drawdown_percent": 35.48,
+        "stage318C_failed_gates": "smooth_curve;stability_pressure",
+        "judgment": "estimated_replay_not_reliable_as_forward_calibration"
+      },
+      {
+        "split": "oos",
+        "estimated_net_profit": 1731.3,
+        "actual_mt5_net_profit": 254199.3,
+        "net_scale_ratio_actual_to_estimated": 146.82568012476173,
+        "estimated_pf": 2.47548,
+        "actual_mt5_pf": 1.23,
+        "pf_gap_actual_minus_estimated": -1.2454800000000001,
+        "estimated_trade_count": 908,
+        "actual_mt5_trade_count": 1216,
+        "trade_count_ratio_actual_to_estimated": 1.3392070484581498,
+        "estimated_trades_per_day": 6.9313,
+        "actual_mt5_trades_per_day": null,
+        "actual_max_drawdown_percent": 17.54,
+        "stage318C_failed_gates": "smooth_curve;stability_pressure",
+        "judgment": "estimated_replay_not_reliable_as_forward_calibration"
+      }
+    ]
+  },
+  "threshold_policy": {
+    "score_threshold": -0.9024387592300359,
+    "probability_floor": 0.44,
+    "target_raw_signals_per_day": 20.0
+  },
+  "overfit_risk": "high; outcome labels from validation+OOS actual MT5 trades and upstream research features",
+  "calibration_risk": "scores rank/select historical winners; not calibrated forward probabilities",
+  "comparison_baseline": "run328A frozen contract and Stage318 run318C no-selection review",
+  "validation_judgment": "blocked_repair_required_no_goal_achieve"
+}

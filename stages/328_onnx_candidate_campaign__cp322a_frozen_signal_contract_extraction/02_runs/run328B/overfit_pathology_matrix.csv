@@ -1,0 +1,5 @@
+risk_id,evidence,why_it_matters,forward_consequence,severity,repair_direction
+stage317_actual_outcome_distillation,Stage317 validation+OOS actual MT5 trades(317단계 검증+표본외 실제 MT5 거래),과거 validation+OOS(검증+표본외) 실제 손익을 학습 target(목표)으로 쓴다.,새 forward(전진) 구간에서는 같은 outcome label(결과 라벨)이 존재하지 않아 frozen generator(고정 생성기)가 없다.,critical,train-only/WFO(학습 전용/워크포워드) source rebuild(원천 재구축)
+in_sample_auc_interpreted_too_strongly,0.8605914918734261,"AUC가 표본내(in-sample, 표본내)라 모델 일반화가 아니라 과거 조각 분류력을 보여준다.",ONNX(온엑스)로 고정해도 forward authority(전진 권한)가 생기지 않는다.,high,chronological holdout(시간순 보류)와 WFO(워크포워드)로 분리
+estimated_to_actual_scale_break,validation_ratio=142.89; oos_ratio=146.83,Stage318 추정 replay(재생) 순수익과 실제 MT5(메타트레이더5) 순수익 규모가 140배 이상 벌어진다.,estimated scoreboard(추정 점수판)를 forward calibration(전진 보정)으로 쓸 수 없다.,high,MT5 actual(실제 MT5) 기준 재검증과 비용/슬리피지 압박
+upstream_research_feature_dependency,"stage316_*, stage317_*, payoff_edge_score, smooth_curve_score, source_code, hyp_signal",시장 원천 피처가 아니라 이전 연구 표면과 신호를 다시 입력으로 먹는다.,Stage322/323/325 cp322A identity ONNX(정체성 온엑스)는 새 구간 신호를 자체 생성하지 못한다.,critical,raw market(원천 시장) 피처 기반 standalone packet(독립 패킷) 또는 upstream full rebuild(상류 전체 재구축)

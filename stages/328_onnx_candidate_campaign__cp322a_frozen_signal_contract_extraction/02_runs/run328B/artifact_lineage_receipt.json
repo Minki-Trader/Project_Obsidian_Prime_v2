@@ -1,0 +1,41 @@
+{
+  "source_inputs": [
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318A/models/run318A_cp318A_outcome_dense20_curve_stability_curve_stability_surface.json",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318A/runtime_outcome_training_diagnostics.json",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318A/runtime_outcome_training_set.csv",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318A/model_scout_scoreboard.csv",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318B/mt5_kpi_summary.csv",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/03_reviews/run318A_materialization.md",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/03_reviews/run318C_review_stage319_open.md"
+  ],
+  "producer": "stage_pipelines/stage328/deep_audit_cp318_outcome_source.py",
+  "consumer": [
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/03_reviews/run328B_cp318_outcome_source_audit.md",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/03_reviews/final_stage328B_decision_report.md",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/04_selected/selection_status.md",
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "artifact_paths": [
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/outcome_source_training_audit.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/feature_live_rebuild_matrix.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/mt5_actual_vs_estimated_gap.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/overfit_pathology_matrix.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/rebuild_option_queue.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/03_reviews/run328B_cp318_outcome_source_audit.md"
+  ],
+  "artifact_hashes": {
+    "cp318a_model_spec_sha256": "8c3699e26a89e9f68820713aa1787550006bd1d448f4d73c92ab043efd72f5c0",
+    "training_set_sha256": "cf9809f2e6584e3eacae577d44647ad01b4c1f6b6f90b7220d054eb7e058bd91",
+    "stage318_pipeline_sha256": "59ac4e25104424ec84464277b337ea27eac9e5d721b4b881349ed4e47cf37a88"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/03_reviews/stage_run_ledger.csv"
+  ],
+  "availability": "tracked_reports_and_generated_run_artifacts",
+  "lineage_judgment": "connected_with_boundary"
+}

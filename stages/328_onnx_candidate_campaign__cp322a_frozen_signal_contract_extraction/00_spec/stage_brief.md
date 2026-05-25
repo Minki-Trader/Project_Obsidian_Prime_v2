@@ -1,8 +1,7 @@
-﻿# Stage328 Frozen Signal Contract Extraction(328단계 고정 신호 계약 추출)
+﻿# Stage328 cp322A Frozen Signal Contract Extraction(328단계 cp322A 고정 신호 계약 추출)
 
-- stage_id(단계 ID): `328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction`
-- run_id(실행 ID): `run328A_extract_frozen_signal_contract_no_new_data_tuning_v1`
-- objective(목표): `run322b_route_signal`을 새 forward(전진) 데이터 튜닝 없이 만들 수 있는지 확인한다.
-- fixed_rule(고정 규칙): cp322A ONNX(온닉스), adapter(어댑터), feature order(피처 순서), D/B rule(D/B 규칙), threshold(임계값)는 변경하지 않는다.
-- effect(효과): split-local rank(분할 내부 순위)를 그대로 전진에 쓰는 누수와, frozen numeric threshold(고정 숫자 임계값) 대체가 cp322A를 바꾸는 문제를 분리한다.
-- next_action(다음 행동): `run328B_deep_audit_cp318_outcome_source_and_live_feature_rebuild_options`
+- active_question(활성 질문): cp322A(322A 후보)를 수정하지 않고, `run322b_route_signal`의 upstream source(상류 원천)가 forward-safe(전진 안전)인지 확인한다.
+- run328A(328A 실행): frozen signal contract(고정 신호 계약)을 추출했고, exact replay(정확 재생)는 과거 창 전용임을 확인했다.
+- run328B(328B 실행): Stage318 outcome source(318단계 결과 원천)와 live feature rebuild(실시간 피처 재구축) 가능성을 감사한다.
+- fixed_rules(고정 규칙): selected candidate(선택 후보), ONNX model(온엑스 모델), Adapter package(어댑터 패키지), feature order(피처 순서), D/B decision surface(D/B 판단 표면), score threshold(점수 임계값), risk/lot/ATR/runtime logic(위험/랏/ATR/런타임 로직)을 수정하지 않는다.
+- claim_boundary(주장 경계): `research_development_only_no_new_data_tuning_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

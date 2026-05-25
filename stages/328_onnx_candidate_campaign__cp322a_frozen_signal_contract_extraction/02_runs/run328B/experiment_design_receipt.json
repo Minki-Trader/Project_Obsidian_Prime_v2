@@ -1,0 +1,32 @@
+{
+  "hypothesis": "cp318A outcome source(결과 원천)가 cp322A forward signal generation(전진 신호 생성)에 충분한 권한을 제공하는지 감사한다.",
+  "decision_use": "forward robustness goal(전진 견고성 목표)의 차단 원인과 다음 rebuild direction(재구축 방향)을 정한다.",
+  "comparison_baseline": "run328A frozen signal contract extraction(고정 신호 계약 추출)",
+  "control_variables": [
+    "cp322A selected candidate unchanged(선택 후보 불변)",
+    "ONNX model unchanged(온엑스 모델 불변)",
+    "score threshold unchanged(점수 임계값 불변)",
+    "risk/lot/runtime logic unchanged(위험/랏/런타임 로직 불변)"
+  ],
+  "changed_variables": [
+    "none_on_candidate; audit_only(후보 변경 없음; 감사 전용)"
+  ],
+  "sample_scope": "Stage318 existing training diagnostics, model spec, estimated replay scoreboard, run318B MT5 actual KPI",
+  "success_criteria": "source authority(원천 권한), leakage risk(누수 위험), rebuild options(재구축 선택지)를 문서와 receipt(영수증)에 고정",
+  "failure_criteria": "cp318A can be trusted as forward authority without rebuild",
+  "invalid_conditions": [
+    "missing Stage318 artifacts",
+    "missing run318B actual MT5 evidence"
+  ],
+  "stop_conditions": [
+    "do not tune cp322A",
+    "do not generate forward signal from split-local rank"
+  ],
+  "evidence_plan": [
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/outcome_source_training_audit.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/feature_live_rebuild_matrix.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/mt5_actual_vs_estimated_gap.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/02_runs/run328B/overfit_pathology_matrix.csv",
+    "stages/328_onnx_candidate_campaign__cp322a_frozen_signal_contract_extraction/03_reviews/run328B_cp318_outcome_source_audit.md"
+  ]
+}

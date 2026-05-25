@@ -1,0 +1,21 @@
+{
+  "data_source": [
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318A/runtime_outcome_training_diagnostics.json",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318A/runtime_outcome_training_set.csv",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318A/model_scout_scoreboard.csv",
+    "stages/318_onnx_candidate_campaign__post_non_time_curve_stability_rebuild/02_runs/run318B/mt5_kpi_summary.csv"
+  ],
+  "time_axis": "existing Stage318 artifacts; no new bars created; timestamp policy inherited from Stage318/Stage317 MT5 evidence",
+  "sample_scope": "Stage317 validation+OOS actual MT5 trades(317단계 검증+표본외 실제 MT5 거래)",
+  "missing_or_duplicate_check": "not re-run; this is source authority audit using existing materialized evidence",
+  "feature_label_boundary": "net_profit and positive_trade are labels from actual MT5 trades; not available for forward features",
+  "split_boundary": "Stage317 validation+OOS used in training, therefore not a clean forward boundary",
+  "leakage_risk": "actual outcome distillation plus split-local threshold/rank paths",
+  "data_hash_or_identity": {
+    "training_set_rows": 24320,
+    "training_set_sha256": "cf9809f2e6584e3eacae577d44647ad01b4c1f6b6f90b7220d054eb7e058bd91",
+    "training_diagnostics_sha256": "82f921326360cf25aeb8ec46fc304026f37309bbe99064d0c0e7758dcc91d688",
+    "mt5_kpi_sha256": "248b3bbaa7a5c597e916f392879c22e651174625fca239864445059de2100769"
+  },
+  "integrity_judgment": "usable_with_boundary_not_forward_authority"
+}
