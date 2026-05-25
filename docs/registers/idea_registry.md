@@ -401,3 +401,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage320_validation_pocket_drawdown_controller`
 - hypothesis(가설): cp319D(319D 후보)의 validation pocket(검증 포켓)은 VIX/quality state(VIX/품질 상태)로 줄일 수 있다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run321A_design_post_controller_profit_curve_rebuild_packet_v1 post_controller_profit_curve_source(제어기 이후 수익 곡선 원천)
+
+- idea_id(아이디어 ID): `stage321_consensus_profit_curve_source`
+- hypothesis(가설): Stage319(319단계)의 D/B/F/A/C/E 표면 합의와 합집합이 Stage320(320단계) 제어기보다 수익 규모와 곡선 균형을 더 잘 보존할 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.

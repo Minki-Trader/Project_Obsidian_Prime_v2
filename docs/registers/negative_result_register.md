@@ -256,3 +256,8 @@ Negative results are preserved because they prevent repeated dead ends.
 
 - failure_boundary(실패 경계): VIX/quality controller(VIX/품질 제어기)는 검증 DD%(드로다운 비율)와 PF(수익 팩터)를 악화시켰다.
 - do_not_repeat(반복 금지): 같은 controller(제어기) 변형 반복 금지.
+
+## run321C_review_post_controller_profit_curve_mt5_probe_v1 Stage321 review failure memory(321단계 검토 실패 기억)
+
+- cp321C(321C 후보): highest profit scale(최대 수익 규모)이지만 OOS(표본외) 확대 구간 포켓 때문에 Stage322(322단계) 씨앗에서 제외.
+- cp321A/cp321D/cp321E/cp321F: DD/PF/zoom gate(드로다운/수익 팩터/확대 관문) 중 하나 이상 실패.

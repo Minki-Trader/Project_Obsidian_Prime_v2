@@ -3943,3 +3943,26 @@
 
 - status(상태): `completed_validation_pocket_drawdown_controller_review_stage321_opened_no_selection`
 - effect(효과): Stage321(321단계)을 열었다.
+
+## 2026-05-26 run321A Post-controller profit curve source(321A 제어기 이후 수익 곡선 원천)
+
+- status(상태): `completed_post_controller_profit_curve_candidates_materialized_no_selection`
+- judgment(판정): `post_controller_profit_curve_candidates_materialized_requires_actual_mt5_no_selection`
+- effect(효과): 후보 `6`개와 MT5 queue(MT5 대기열) `6`개를 만들었다.
+
+## 2026-05-26 run321B Post-controller profit curve MT5 probe(321B 제어기 이후 수익 곡선 MT5 탐침)
+
+- status(상태): `prepared_post_controller_profit_curve_mt5_probe_no_runtime_kpi`
+- judgment(판정): `post_controller_profit_curve_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+
+## 2026-05-26 run321B Post-controller profit curve MT5 probe(321B 제어기 이후 수익 곡선 MT5 탐침)
+
+- status(상태): `completed_post_controller_profit_curve_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+
+## 2026-05-26 run321C Post-controller profit curve review(321C 제어기 이후 수익 곡선 검토)
+
+- status(상태): `completed_post_controller_profit_curve_review_stage322_opened_no_selection`
+- effect(효과): `cp321B_d_or_b_score60_scale_curve_surface`를 Stage322(322단계) 압박 씨앗으로 넘겼다.
