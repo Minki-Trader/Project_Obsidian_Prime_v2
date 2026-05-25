@@ -1,0 +1,5 @@
+check_name,status,value,expected,effect
+runtime_feature_order,passed,run322b_route_signal,run322b_route_signal,ONNX(온엑스) 입력 순서가 MT5 feature CSV(피처 CSV)와 맞는다.
+logical_alias,passed,route_signal_value,route_signal_value,Stage322(322단계) 논리 신호와 MT5 열 이름의 alias(별칭)가 명시됐다.
+known_difference_recorded,passed,Stage322 design artifact(설계 산출물)는 logical feature(논리 피처) route_signal_value를 쓴다. Stage322 MT5 feature CSV(피처 CSV)는 runtime column(런타임 열) run322b_route_signal을 쓴,both names recorded,feature order parity(피처 순서 동등성) 때 이름 혼동을 줄인다.
+tier_b_fallback_usage,passed,0.0,0,선택 후보는 Tier A used(티어 A 사용)만으로 재현됐고 fallback(대체)에 숨은 수익을 기대지 않는다.

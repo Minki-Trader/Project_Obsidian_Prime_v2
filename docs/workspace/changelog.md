@@ -3996,3 +3996,10 @@
 - judgment(판정): `adapter_package_built_no_onnx_readiness`
 - effect(효과): `stage323_cp322a_selected_curve_adapter_package_v1`를 구성하고 Stage324(324단계)를 열었다.
 - boundary(경계): ONNX readiness(온엑스 준비)와 Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-26 run324A ONNX-go pressure(324A 온엑스 진행 압박)
+
+- status(상태): `completed_onnx_go_pressure_passed_stage325_opened`
+- judgment(판정): `onnx_go_approved_for_export_no_parity_yet`
+- effect(효과): `stage323_cp322a_selected_curve_adapter_package_v1`가 export(내보내기) 전 압박을 통과해 Stage325(325단계)를 열었다.
+- boundary(경계): ONNX parity(온엑스 동등성), MT5 runtime reproduction(MT5 런타임 재현), Goal Achieve(목표 달성)는 `not_claimed`다.

@@ -1,0 +1,20 @@
+check_name,status,value,threshold,effect
+validation_minimum_trade_count,passed,919,>=750,검증 거래 수가 ONNX(온엑스) 패키지 실험을 할 만큼 충분하다.
+oos_minimum_trade_count,passed,637,>=500,표본외 거래 수가 과소 표본이 아니다.
+validation_trades_per_day_4_10,passed,5.02186,4..10,검증 일 거래수가 사용자가 요구한 4-10 trades/day(일 4-10거래)에 들어온다.
+oos_trades_per_day_4_10,passed,4.86259,4..10,표본외 일 거래수가 사용자가 요구한 4-10 trades/day(일 4-10거래)에 들어온다.
+validation_net_profit_scale,passed,472738,>=450000,"검증 순수익(net profit, 순수익)이 규모 조건을 넘는다."
+oos_net_profit_scale,passed,237628,>=200000,"표본외 순수익(net profit, 순수익)이 규모 조건을 넘는다."
+combined_net_profit_scale,passed,710366,>=650000,검증+표본외 합산 순수익이 scale(규모) 조건을 넘는다.
+validation_pf_efficiency,passed,1.64,>=1.55,검증 profit factor(수익 팩터)가 효율 조건을 넘는다.
+oos_pf_efficiency,passed,1.51,>=1.50,표본외 profit factor(수익 팩터)가 효율 조건을 넘는다.
+validation_dd_bound,passed,19.11,<=20,검증 drawdown(손실폭)이 Stage322 압박 한계 안에 있다.
+oos_dd_bound,passed,15.51,<=18,표본외 drawdown(손실폭)이 Stage322 압박 한계 안에 있다.
+validation_recovery,passed,4.34,>=4.0,검증 recovery(회복)가 손실 대비 회복 조건을 넘는다.
+oos_recovery,passed,5.72,>=5.0,표본외 recovery(회복)가 손실 대비 회복 조건을 넘는다.
+validation_expectancy,passed,514.41,>=450,검증 expectancy(기대값)가 비용 후 여유를 남긴다.
+oos_expectancy,passed,373.04,>=350,표본외 expectancy(기대값)가 비용 후 여유를 남긴다.
+validation_zoom_pocket,passed,-1035,>=-1500,검증 확대 구간의 움푹 파인 포켓이 Stage322 기준 안에 있다.
+oos_zoom_pocket,passed,32,>=-500,표본외 확대 구간의 움푹 파인 포켓이 Stage322 기준 안에 있다.
+validation_negative_month_count,passed,3,<=3,검증 음수 월이 과하게 퍼지지 않는다.
+oos_negative_month_count,passed,1,<=1,표본외 음수 월이 제한적이다.
