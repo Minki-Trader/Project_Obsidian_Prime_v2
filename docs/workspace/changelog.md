@@ -4020,3 +4020,9 @@
 - run326A(326A 실행): cp322A(322A 후보) frozen forward robustness gate(고정 전진 견고성 게이트)를 `Forward Blocked`(전진 차단)로 닫았다.
 - status(상태): `blocked_forward_data_missing_and_signal_handoff_missing`
 - effect(효과): US10YR(미국 10년물) regime data(국면 데이터)와 frozen route signal handoff(고정 경로 신호 인계)가 부족해 MT5 forward result(MT5 전진 결과)를 만들지 않았고, live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위)는 주장하지 않는다.
+
+## 2026-05-26 - Stage326 US10YR Data Retry(326단계 US10YR 데이터 재시도)
+
+- run326A(326A 실행): MT5(메타트레이더5) export(내보내기)를 다시 실행해 US10YR(미국 10년물) M5(5분봉)를 `2026-05-25T19:55:00Z`까지 확보했다.
+- status(상태): `blocked_forward_signal_handoff_missing`
+- effect(효과): `blocked_forward_data_missing`(전진 데이터 누락 차단)은 해소됐고, 남은 차단은 `blocked_forward_signal_handoff_missing`(전진 신호 인계 누락)이다.

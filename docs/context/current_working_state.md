@@ -7,9 +7,9 @@
 - source_stage(원천 단계): `325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a`
 - target_surface(목표 표면): `cp322A_cp321b_exact_replay_control_surface`
 - adapter_under_review(검토 중 어댑터): `stage323_cp322a_selected_curve_adapter_package_v1`
-- status(상태): `blocked_forward_data_missing_and_signal_handoff_missing`
+- status(상태): `blocked_forward_signal_handoff_missing`
 - decision(판정): `Forward Blocked`(전진 차단)
-- run326A_summary(326A 요약): cp322A(322A 후보) frozen forward robustness gate(고정 전진 견고성 게이트)는 `Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): US10YR(미국 10년물) regime data(국면 데이터)가 forward end(전진 종료)에 닿지 않았고, frozen ONNX(고정 오닉스)의 `run322b_route_signal` forward handoff(전진 인계)가 없어 MT5 forward result(MT5 전진 결과)를 만들지 않는다.
+- run326A_summary(326A 요약): cp322A(322A 후보) frozen forward robustness gate(고정 전진 견고성 게이트)는 `Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): US10YR(미국 10년물) regime data(국면 데이터)는 재수집으로 forward end(전진 종료)에 닿았지만, frozen ONNX(고정 오닉스)의 `run322b_route_signal` forward handoff(전진 인계)가 없어 MT5 forward result(MT5 전진 결과)를 만들지 않는다.
 - stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
 - stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.

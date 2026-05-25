@@ -61,7 +61,6 @@ FORWARD_START_UTC = "2026-04-14T00:00:00Z"
 REQUIRED_REGIME_SYMBOLS = ("VIX", "USDX", "US10YR")
 REQUIRED_FORWARD_FEATURE = "run322b_route_signal"
 DECISION = "Forward Blocked"
-STATUS = "blocked_forward_data_missing_and_signal_handoff_missing"
 CLAIM_BOUNDARY = (
     "forward robustness only; no live readiness, deployment, operating promotion, "
     "runtime authority, or operating reference"
@@ -173,6 +172,32 @@ def csv_row_count_and_time_stats(path: Path) -> dict[str, Any]:
         "non_monotonic_steps": non_monotonic,
         "largest_gap_seconds": largest_gap_seconds,
     }
+
+
+def compute_status(data_receipt: dict[str, Any], gap: dict[str, Any]) -> str:
+    data_blocked = data_receipt["blocking_status"] == "blocked_forward_data_missing"
+    signal_blocked = gap["blocking_status"] == "blocked_forward_signal_handoff_missing"
+    if data_blocked and signal_blocked:
+        return "blocked_forward_data_missing_and_signal_handoff_missing"
+    if data_blocked:
+        return "blocked_forward_data_missing"
+    if signal_blocked:
+        return "blocked_forward_signal_handoff_missing"
+    return "blocked_forward_unknown"
+
+
+def build_blocked_reasons(data_receipt: dict[str, Any], gap: dict[str, Any]) -> list[str]:
+    reasons: list[str] = []
+    if data_receipt["blocking_status"] == "blocked_forward_data_missing":
+        missing = ", ".join(data_receipt["required_incomplete_symbols"]) or "unknown"
+        reasons.append(
+            f"`blocked_forward_data_missing`(전진 데이터 누락/불완전): required regime data(필수 국면 데이터) 중 {missing}이 forward end(전진 종료)에 닿지 못했다."
+        )
+    if gap["blocking_status"] == "blocked_forward_signal_handoff_missing":
+        reasons.append(
+            "`blocked_forward_signal_handoff_missing`(전진 신호 인계 누락): frozen ONNX(고정 오닉스)가 요구하는 `run322b_route_signal` forward CSV(전진 씨에스브이)가 없다."
+        )
+    return reasons
 
 
 def analyze_forward_data(generated_at_utc: str) -> tuple[dict[str, Any], list[dict[str, Any]]]:
@@ -333,10 +358,34 @@ def write_reports(
     contract: dict[str, Any],
     gap: dict[str, Any],
 ) -> list[Path]:
-    blocked_reasons = [
-        "`blocked_forward_data_missing`(전진 데이터 누락/불완전): required regime data(필수 국면 데이터) 중 US10YR(미국 10년물)이 forward end(전진 종료)에 닿지 못했다.",
-        "`blocked_forward_signal_handoff_missing`(전진 신호 인계 누락): frozen ONNX(고정 오닉스)가 요구하는 `run322b_route_signal` forward CSV(전진 씨에스브이)가 없다.",
-    ]
+    status = compute_status(data_receipt, gap)
+    blocked_reasons = build_blocked_reasons(data_receipt, gap)
+    blocked_reason_text = chr(10).join(f"- {reason}" for reason in blocked_reasons)
+    data_missing = data_receipt["blocking_status"] == "blocked_forward_data_missing"
+    if data_missing:
+        regime_status = "`blocked_forward_data_missing`(전진 데이터 누락/불완전)"
+        regime_body = """
+- VIX(VIX 변동성 지수), USDX(달러 지수), US10YR(미국 10년물) are required regime slices(필수 국면 구간) for this gate(게이트).
+- At least one required regime symbol(필수 국면 심볼)이 requested forward end(요청 전진 종료)에 닿지 못했다.
+- effect(효과): session/hour/month/volatility/ADX/VIX/USD/rate regime slices(세션/시간/월/변동성/ADX/VIX/달러/금리 국면 구간)를 성공 판정 근거로 사용할 수 없다.
+"""
+        regime_repair = """
+1. US10YR/VIX/USDX forward M5(5분봉)를 US100(나스닥100) 종료 시점까지 확보한다.
+2. timestamp/timezone binding(타임스탬프/시간대 묶음)을 명시한다.
+3. 그 다음 frozen signal handoff(고정 신호 인계)를 먼저 만든다.
+"""
+    else:
+        regime_status = "`coverage_available_with_timezone_boundary`(범위 확보, 시간대 경계 남음)"
+        regime_body = """
+- VIX(VIX 변동성 지수), USDX(달러 지수), US10YR(미국 10년물) required regime data(필수 국면 데이터)는 requested forward end(요청 전진 종료)에 닿았다.
+- timezone status(시간대 상태)는 raw manifest(원천 목록)에서 `UNRESOLVED_REQUIRES_MANUAL_BINDING`로 남아 있다.
+- effect(효과): 1번 data missing blocker(데이터 누락 차단)는 해소됐지만, positive forward judgment(긍정 전진 판정)에는 frozen signal handoff(고정 신호 인계)와 시간대 묶음 확인이 여전히 필요하다.
+"""
+        regime_repair = """
+1. timestamp/timezone binding(타임스탬프/시간대 묶음)을 명시한다.
+2. frozen route-signal handoff(고정 경로 신호 인계)를 만든다.
+3. 그 다음 MT5 forward run(MT5 전진 실행)을 수행한다.
+"""
     common_boundary = (
         "Boundary(경계): 이 판단은 forward robustness(전진 견고성) 게이트만 다룬다. "
         "live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), "
@@ -352,7 +401,7 @@ def write_reports(
 - frozen package(고정 패키지): `cp322A_cp321b_exact_replay_control_surface`
 - forward window(전진 구간): `{FORWARD_START_UTC}` 이후부터 latest available MT5 broker data(최신 확보 가능 MT5 브로커 데이터)
 - decision(판정): `{DECISION}`(전진 차단)
-- status(상태): `{STATUS}`
+- status(상태): `{status}`
 - effect(효과): 후보를 고치지 않고, forward 판단을 막는 데이터/인계 공백을 근거로 고정한다.
 
 {common_boundary}
@@ -383,7 +432,7 @@ def write_reports(
 
 ## Why(이유)
 
-{chr(10).join(f"- {reason}" for reason in blocked_reasons)}
+{blocked_reason_text}
 
 ## Data read(데이터 판독)
 
@@ -402,20 +451,15 @@ def write_reports(
 
 ## Status(상태)
 
-`blocked_forward_data_missing`(전진 데이터 누락/불완전).
+{regime_status}.
 
 ## Evidence(근거)
 
-- VIX(VIX 변동성 지수), USDX(달러 지수), US10YR(미국 10년물) are required regime slices(필수 국면 구간) for this gate(게이트).
-- US10YR(미국 10년물) does not cover(포괄하지 못함) the requested forward end(요청 전진 종료).
-- timezone status(시간대 상태)는 raw manifest(원천 목록)에서 `UNRESOLVED_REQUIRES_MANUAL_BINDING`로 남아 있다.
-- effect(효과): session/hour/month/volatility/ADX/VIX/USD/rate regime slices(세션/시간/월/변동성/ADX/VIX/달러/금리 국면 구간)를 성공 판정 근거로 사용할 수 없다.
+{regime_body.strip()}
 
 ## Required repair(필수 수정)
 
-1. US10YR(미국 10년물) forward M5(5분봉)를 US100(나스닥100) 종료 시점까지 확보한다.
-2. timestamp/timezone binding(타임스탬프/시간대 묶음)을 명시한다.
-3. 그 다음 frozen signal handoff(고정 신호 인계)를 먼저 만든다.
+{regime_repair.strip()}
 """
     path = REVIEWS_DIR / "regime_attribution_report.md"
     write_md(path, regime_report)
@@ -503,11 +547,11 @@ effect(효과): 곡선 근거 없이 `Forward Passed`(전진 통과)를 주장�
 
 ## Status(상태)
 
-`{STATUS}`
+`{status}`
 
 ## Blocking facts(차단 사실)
 
-{chr(10).join(f"- {reason}" for reason in blocked_reasons)}
+{blocked_reason_text}
 
 ## What was not changed(변경하지 않은 것)
 
@@ -528,8 +572,8 @@ cp322A(322A 후보)는 ONNX research artifact(오닉스 연구 산출물)로 보
 
 ## Next exact repair(다음 정확한 수정)
 
-1. Complete US10YR/VIX/USDX forward regime data(US10YR/VIX/USDX 전진 국면 데이터 완성)를 먼저 한다.
-2. Create a frozen forward route-signal handoff(고정 전진 경로 신호 인계)를 만든다. 이때 score threshold(점수 임계값)와 D/B rule(D/B 규칙)을 새 데이터에 맞추지 않는다.
+1. Create a frozen forward route-signal handoff(고정 전진 경로 신호 인계)를 만든다. 이때 score threshold(점수 임계값)와 D/B rule(D/B 규칙)을 새 데이터에 맞추지 않는다.
+2. Confirm timestamp/timezone binding(타임스탬프/시간대 묶음 확인)을 한다.
 3. Then run MT5 forward(그 다음 MT5 전진 실행)를 수행하고, net/PF/DD/curve pocket(순손익/수익 팩터/손실폭/곡선 포켓)을 다시 판정한다.
 
 effect(효과): 현재 작업은 success(성공)가 아니라 blocked(차단)로 닫아, 후보 과대 주장과 데이터 누락 판정을 분리한다.
@@ -559,7 +603,7 @@ effect(효과): 현재 작업은 success(성공)가 아니라 blocked(차단)로
 - selected candidate(선택 후보): `cp322A_cp321b_exact_replay_control_surface`
 - package status(패키지 상태): ONNX research artifact preserved(오닉스 연구 산출물 보존)
 - forward decision(전진 판정): `{DECISION}`(전진 차단)
-- blocker(차단 사유): `{STATUS}`
+- blocker(차단 사유): `{status}`
 - operating status(운영 상태): no live readiness(실거래 준비 없음), no deployment(배포 없음), no operating promotion(운영 승격 없음), no runtime authority(런타임 권위 없음), no operating reference(운영 기준 없음)
 - effect(효과): cp322A(322A 후보)는 폐기하지 않고 보존하지만, forward robustness(전진 견고성) 통과 후보로도 올리지 않는다.
 """
@@ -596,6 +640,7 @@ effect(효과): 현재 작업은 success(성공)가 아니라 blocked(차단)로
 
 
 def write_receipts(generated_at_utc: str, data_receipt: dict[str, Any], contract: dict[str, Any], gap: dict[str, Any]) -> list[Path]:
+    status = compute_status(data_receipt, gap)
     paths: list[Path] = []
     for name, payload in [
         ("forward_data_integrity_receipt.json", data_receipt),
@@ -612,10 +657,10 @@ def write_receipts(generated_at_utc: str, data_receipt: dict[str, Any], contract
         "stage_id": STAGE_ID,
         "run_id": RUN_ID,
         "decision": DECISION,
-        "status": STATUS,
+        "status": status,
         "forward_window_start_utc": FORWARD_START_UTC,
         "mt5_forward_run_attempted": False,
-        "mt5_forward_run_blocked_reason": STATUS,
+        "mt5_forward_run_blocked_reason": status,
         "selected_candidate": "cp322A_cp321b_exact_replay_control_surface",
         "claim_boundary": CLAIM_BOUNDARY,
         "receipts": [
@@ -642,7 +687,7 @@ def write_receipts(generated_at_utc: str, data_receipt: dict[str, Any], contract
             "run_id": RUN_ID,
             "stage_id": STAGE_ID,
             "decision": DECISION,
-            "status": STATUS,
+            "status": status,
             "mt5_forward_run_attempted": "no",
             "forward_data_status": data_receipt["blocking_status"],
             "runtime_handoff_status": gap["blocking_status"],
@@ -671,10 +716,10 @@ def write_receipts(generated_at_utc: str, data_receipt: dict[str, Any], contract
     gate_rows = [
         {
             "gate": "data_integrity",
-            "status": "failed",
+            "status": "failed" if data_receipt["blocking_status"] == "blocked_forward_data_missing" else "completed",
             "evidence": rel(RUN_DIR / "forward_data_integrity_receipt.json"),
-            "claim_supported": "Forward Blocked",
-            "notes": "blocked_forward_data_missing",
+            "claim_supported": "Forward Blocked" if data_receipt["blocking_status"] == "blocked_forward_data_missing" else "data_blocker_removed",
+            "notes": data_receipt["blocking_status"],
         },
         {
             "gate": "runtime_parity",
@@ -695,7 +740,7 @@ def write_receipts(generated_at_utc: str, data_receipt: dict[str, Any], contract
             "status": "completed",
             "evidence": rel(REVIEWS_DIR / "final_forward_decision_report.md"),
             "claim_supported": "Forward Blocked",
-            "notes": STATUS,
+            "notes": status,
         },
     ]
     path = RUN_DIR / "required_gate_coverage_audit.csv"
@@ -721,7 +766,7 @@ def write_receipts(generated_at_utc: str, data_receipt: dict[str, Any], contract
             rel(SELECTED_DIR / "selection_status.md"),
         ],
         "decision": DECISION,
-        "status": STATUS,
+        "status": status,
         "claim_boundary": CLAIM_BOUNDARY,
     }
     path = RUN_DIR / "artifact_lineage_receipt.json"
@@ -730,7 +775,12 @@ def write_receipts(generated_at_utc: str, data_receipt: dict[str, Any], contract
     return paths
 
 
-def write_stage_ledger() -> Path:
+def write_stage_ledger(status: str, data_receipt: dict[str, Any]) -> Path:
+    notes = "frozen forward route signal missing; MT5 forward run not performed."
+    if data_receipt["blocking_status"] == "blocked_forward_data_missing":
+        notes = "US10YR regime data incomplete; " + notes
+    else:
+        notes = "required regime data coverage repaired; " + notes
     path = REVIEWS_DIR / "stage_run_ledger.csv"
     rows = [
         {
@@ -740,11 +790,11 @@ def write_stage_ledger() -> Path:
             "view": "frozen_forward_gate",
             "tier_scope": "Tier A used/Tier B fallback/actual routed total not available",
             "scoreboard": "forward_robustness",
-            "status": STATUS,
+            "status": status,
             "judgment": DECISION,
             "evidence_boundary": CLAIM_BOUNDARY,
             "report_path": rel(REVIEWS_DIR / "final_forward_decision_report.md"),
-            "notes": "US10YR regime data incomplete; frozen forward route signal missing; MT5 forward run not performed.",
+            "notes": notes,
         }
     ]
     write_csv(
@@ -767,7 +817,11 @@ def write_stage_ledger() -> Path:
     return path
 
 
-def update_registers(generated_at_utc: str, artifacts: list[Path]) -> None:
+def update_registers(generated_at_utc: str, artifacts: list[Path], status: str, data_receipt: dict[str, Any]) -> None:
+    data_note = "data_blocker=blocked_forward_data_missing" if data_receipt["blocking_status"] == "blocked_forward_data_missing" else "data_blocker=resolved"
+    guardrail_note = "US10YR regime data incomplete; forward route signal missing"
+    if data_receipt["blocking_status"] != "blocked_forward_data_missing":
+        guardrail_note = "forward route signal missing; regime data coverage available with timezone boundary"
     upsert_csv(
         ROOT / "docs" / "registers" / "run_registry.csv",
         ["run_id"],
@@ -775,10 +829,10 @@ def update_registers(generated_at_utc: str, artifacts: list[Path]) -> None:
             "run_id": RUN_ID,
             "stage_id": STAGE_ID,
             "lane": "runtime_backtest",
-            "status": STATUS,
+            "status": status,
             "judgment": DECISION,
             "path": rel(REVIEWS_DIR / "final_forward_decision_report.md"),
-            "notes": "selected_candidate=cp322A_cp321b_exact_replay_control_surface;mt5_forward_run=blocked;data_blocker=blocked_forward_data_missing;handoff_blocker=blocked_forward_signal_handoff_missing;no_operating_claims.",
+            "notes": f"selected_candidate=cp322A_cp321b_exact_replay_control_surface;mt5_forward_run=blocked;{data_note};handoff_blocker=blocked_forward_signal_handoff_missing;no_operating_claims.",
         },
     )
     upsert_csv(
@@ -794,11 +848,11 @@ def update_registers(generated_at_utc: str, artifacts: list[Path]) -> None:
             "tier_scope": "Tier A used/Tier B fallback/actual routed total unavailable",
             "kpi_scope": "forward_robustness",
             "scoreboard_lane": "runtime_backtest",
-            "status": STATUS,
+            "status": status,
             "judgment": DECISION,
             "path": rel(REVIEWS_DIR / "final_forward_decision_report.md"),
             "primary_kpi": "not_available_no_forward_mt5_run",
-            "guardrail_kpi": "US10YR regime data incomplete; forward route signal missing",
+            "guardrail_kpi": guardrail_note,
             "external_verification_status": "data_export_attempted_mt5_not_run_due_blocker",
             "notes": "No Forward Passed/Forward Failed decision; no live readiness/deployment/operating claims.",
         },
@@ -818,12 +872,17 @@ def update_registers(generated_at_utc: str, artifacts: list[Path]) -> None:
                 "stage_id": STAGE_ID,
                 "run_id": RUN_ID,
                 "created_at_utc": generated_at_utc,
-                "notes": STATUS,
+                "notes": status,
             },
         )
 
 
-def update_current_truth() -> None:
+def update_current_truth(status: str, data_receipt: dict[str, Any]) -> None:
+    data_clause = (
+        "US10YR(미국 10년물) regime data(국면 데이터)가 forward end(전진 종료)에 닿지 않았고, "
+        if data_receipt["blocking_status"] == "blocked_forward_data_missing"
+        else "US10YR(미국 10년물) regime data(국면 데이터)는 재수집으로 forward end(전진 종료)에 닿았지만, "
+    )
     workspace_state = ROOT / "docs" / "workspace" / "workspace_state.yaml"
     text, had_bom = read_text_lossless(workspace_state)
     newline = detect_newline(text)
@@ -840,13 +899,20 @@ def update_current_truth() -> None:
         if line.startswith("active_stage:"):
             output.append(f"active_stage: {STAGE_ID}")
             continue
+        if "Stage326(326단계) run326A(326A 실행) cp322A frozen forward robustness gate" in line:
+            output.append(
+                "  Stage326(326단계) run326A(326A 실행) cp322A frozen forward robustness gate(고정 전진 견고성 게이트)는 "
+                f"`Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): {data_clause}frozen ONNX(고정 오닉스)가 요구하는 `run322b_route_signal` "
+                "forward handoff(전진 인계)가 없어 MT5 forward result(MT5 전진 결과)를 만들지 않는다."
+            )
+            inserted_focus = True
+            continue
         output.append(line)
         if line == "current_focus:" and not inserted_focus:
             output.append("- >-")
             output.append(
                 "  Stage326(326단계) run326A(326A 실행) cp322A frozen forward robustness gate(고정 전진 견고성 게이트)는 "
-                "`Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): US10YR(미국 10년물) regime data(국면 데이터)가 "
-                "forward end(전진 종료)에 닿지 않았고, frozen ONNX(고정 오닉스)가 요구하는 `run322b_route_signal` "
+                f"`Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): {data_clause}frozen ONNX(고정 오닉스)가 요구하는 `run322b_route_signal` "
                 "forward handoff(전진 인계)가 없어 MT5 forward result(MT5 전진 결과)를 만들지 않는다."
             )
             inserted_focus = True
@@ -874,16 +940,23 @@ def update_current_truth() -> None:
             updated_lines.append("- target_surface(목표 표면): `cp322A_cp321b_exact_replay_control_surface`")
             continue
         if line.startswith("- status(상태):"):
-            updated_lines.append(f"- status(상태): `{STATUS}`")
+            updated_lines.append(f"- status(상태): `{status}`")
             if not inserted_summary:
                 updated_lines.append(f"- decision(판정): `{DECISION}`(전진 차단)")
                 updated_lines.append(
                     "- run326A_summary(326A 요약): cp322A(322A 후보) frozen forward robustness gate(고정 전진 견고성 게이트)는 "
-                    "`Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): US10YR(미국 10년물) regime data(국면 데이터)가 "
-                    "forward end(전진 종료)에 닿지 않았고, frozen ONNX(고정 오닉스)의 `run322b_route_signal` "
+                    f"`Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): {data_clause}frozen ONNX(고정 오닉스)의 `run322b_route_signal` "
                     "forward handoff(전진 인계)가 없어 MT5 forward result(MT5 전진 결과)를 만들지 않는다."
                 )
                 inserted_summary = True
+            continue
+        if line.startswith("- run326A_summary(326A 요약):"):
+            updated_lines.append(
+                "- run326A_summary(326A 요약): cp322A(322A 후보) frozen forward robustness gate(고정 전진 견고성 게이트)는 "
+                f"`Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): {data_clause}frozen ONNX(고정 오닉스)의 `run322b_route_signal` "
+                "forward handoff(전진 인계)가 없어 MT5 forward result(MT5 전진 결과)를 만들지 않는다."
+            )
+            inserted_summary = True
             continue
         if line.startswith("- next_action(다음 행동):"):
             updated_lines.append("- next_action(다음 행동): `complete_forward_data_and_frozen_route_signal_handoff_before_mt5_forward`")
@@ -902,12 +975,23 @@ def update_current_truth() -> None:
 ## 2026-05-26 - Stage326 cp322A Frozen Forward Gate(326단계 cp322A 고정 전진 게이트)
 
 - run326A(326A 실행): cp322A(322A 후보) frozen forward robustness gate(고정 전진 견고성 게이트)를 `Forward Blocked`(전진 차단)로 닫았다.
-- status(상태): `{STATUS}`
-- effect(효과): US10YR(미국 10년물) regime data(국면 데이터)와 frozen route signal handoff(고정 경로 신호 인계)가 부족해 MT5 forward result(MT5 전진 결과)를 만들지 않았고, live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위)는 주장하지 않는다.
+- status(상태): `{status}`
+- effect(효과): {data_clause}frozen route signal handoff(고정 경로 신호 인계)가 부족해 MT5 forward result(MT5 전진 결과)를 만들지 않았고, live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위)는 주장하지 않는다.
 """
     if "## 2026-05-26 - Stage326 cp322A Frozen Forward Gate" not in changelog_text:
         entry = lines_with_newline(entry, newline)
         write_text_preserving_bom(changelog, changelog_text.rstrip() + entry, had_bom)
+    elif "## 2026-05-26 - Stage326 US10YR Data Retry" not in changelog_text and data_receipt["blocking_status"] != "blocked_forward_data_missing":
+        retry_entry = f"""
+
+## 2026-05-26 - Stage326 US10YR Data Retry(326단계 US10YR 데이터 재시도)
+
+- run326A(326A 실행): MT5(메타트레이더5) export(내보내기)를 다시 실행해 US10YR(미국 10년물) M5(5분봉)를 `2026-05-25T19:55:00Z`까지 확보했다.
+- status(상태): `{status}`
+- effect(효과): `blocked_forward_data_missing`(전진 데이터 누락 차단)은 해소됐고, 남은 차단은 `blocked_forward_signal_handoff_missing`(전진 신호 인계 누락)이다.
+"""
+        retry_entry = lines_with_newline(retry_entry, newline)
+        write_text_preserving_bom(changelog, changelog_text.rstrip() + retry_entry, had_bom)
 
     decision_doc = ROOT / "docs" / "decisions" / "2026-05-26_stage326_cp322a_frozen_forward_blocked.md"
     write_md(
@@ -916,7 +1000,7 @@ def update_current_truth() -> None:
 # Stage326 cp322A Frozen Forward Blocked(326단계 cp322A 고정 전진 차단)
 
 - decision(판정): `{DECISION}`(전진 차단)
-- status(상태): `{STATUS}`
+- status(상태): `{status}`
 - evidence(근거): `{rel(REVIEWS_DIR / 'final_forward_decision_report.md')}`
 - effect(효과): cp322A(322A 후보)를 ONNX research artifact(오닉스 연구 산출물)로 보존하지만 forward pass(전진 통과), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위)를 주장하지 않는다.
 """,
@@ -932,14 +1016,15 @@ def main() -> None:
 
     data_receipt, data_rows = analyze_forward_data(generated_at_utc)
     contract, gap = audit_frozen_contract(generated_at_utc)
+    status = compute_status(data_receipt, gap)
     artifacts: list[Path] = []
     artifacts.extend(write_reports(generated_at_utc, data_receipt, data_rows, contract, gap))
     artifacts.extend(write_receipts(generated_at_utc, data_receipt, contract, gap))
-    artifacts.append(write_stage_ledger())
-    update_registers(generated_at_utc, artifacts)
-    update_current_truth()
+    artifacts.append(write_stage_ledger(status, data_receipt))
+    update_registers(generated_at_utc, artifacts, status, data_receipt)
+    update_current_truth(status, data_receipt)
 
-    print(json.dumps({"stage_id": STAGE_ID, "run_id": RUN_ID, "decision": DECISION, "status": STATUS}, ensure_ascii=False))
+    print(json.dumps({"stage_id": STAGE_ID, "run_id": RUN_ID, "decision": DECISION, "status": status}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
