@@ -230,3 +230,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 최소 거래수, 4-10 trades/day(일 4-10거래), 수익 규모, 효율, 곡선 포켓을 동시에 만족하지 못했다.
 - do_not_repeat(반복 금지): hour-only repair(시간만 고치는 수리)를 더 반복하지 않는다.
 - reopen_condition(재개 조건): non-time profit source(비시간 수익 원천)나 새 model surface(모델 표면)를 만들 때만 재사용한다.
+
+## run317C_review_fresh_non_time_profit_source_mt5_probe_v1 Stage317 fresh non-time profit source failure memory(317단계 새 비시간 수익 원천 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 최소 거래수, 4-10 trades/day(일 4-10거래), 수익 규모, 효율, 곡선 포켓을 동시에 만족하지 못했다.
+- do_not_repeat(반복 금지): 한 표면의 lot/hold(랏/보유) 좁은 수리를 반복하지 않는다.
+- reopen_condition(재개 조건): 새 feature surface(피처 표면)나 curve stability(곡선 안정성) 구조를 만들 때만 재사용한다.

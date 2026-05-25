@@ -357,3 +357,14 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea_id(아이디어 ID): `stage316_post_interaction_profit_scale_curve_review`
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run317A_design_fresh_non_time_profit_source_rebuild_packet_v1 fresh_non_time_profit_source(새 비시간 수익 원천)
+
+- idea_id(아이디어 ID): `stage317_fresh_non_time_profit_source`
+- hypothesis(가설): 시간 조건 없이 USDX/ADX/momentum/Bollinger(달러지수/ADX/모멘텀/볼린저) 상태 조합이 거래수와 수익 규모를 같이 만들 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run317C_review_fresh_non_time_profit_source_mt5_probe_v1 fresh_non_time_profit_source_review(새 비시간 수익 원천 검토)
+
+- idea_id(아이디어 ID): `stage317_fresh_non_time_profit_source_review`
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
