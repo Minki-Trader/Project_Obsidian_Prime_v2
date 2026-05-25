@@ -195,3 +195,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 수익 규모, 효율, 거래수, 곡선 포켓을 동시에 만족하지 못했다.
 - do_not_repeat(반복 금지): hour mirror(시간 반전)만 좁게 반복하지 않는다.
 - reopen_condition(재개 조건): 모델/피처 비대칭 표면이 함께 바뀔 때만 재사용한다.
+
+## run312C_review_fresh_model_asymmetry_mt5_probe_v1 Stage312 fresh model asymmetry failure memory(312단계 새 모델 비대칭 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 최소 거래 수, 밀도, 수익 규모, 효율, 곡선 포켓을 동시에 만족하지 못했다.
+- do_not_repeat(반복 금지): 시간-방향 표만 좁게 다시 보정하지 않는다.
+- reopen_condition(재개 조건): runtime outcome source(런타임 결과 원천) 자체를 바꿀 때만 재사용한다.

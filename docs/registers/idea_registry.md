@@ -302,3 +302,14 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage311_post_allocation_fresh_edge`
 - hypothesis(가설): 불리 시간대 방향 반전과 피처 지원이 검증 손실을 줄일 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run312A_design_fresh_model_asymmetry_rebuild_packet_v1 fresh_model_asymmetry(새 모델 비대칭)
+
+- idea_id(아이디어 ID): `stage312_fresh_model_asymmetry`
+- hypothesis(가설): actual hour-direction memory(실제 시간-방향 기억)를 새 decision surface(판단 표면)로 쓰면 수익 규모와 밀도를 동시에 압박할 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run312C_review_fresh_model_asymmetry_mt5_probe_v1 fresh_model_asymmetry_review(새 모델 비대칭 검토)
+
+- idea_id(아이디어 ID): `stage312_fresh_model_asymmetry_review`
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
