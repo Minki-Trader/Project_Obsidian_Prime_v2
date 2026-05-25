@@ -1,0 +1,26 @@
+{
+  "hypothesis": "Live-computable feature sets can be materialized after the cp322A forward handoff block without reusing outcome-distilled signals.",
+  "decision_use": "Feed run329C train/WFO rebuild controls; not select a model and not tune on forward holdout.",
+  "comparison_baseline": "Stage328B blocked cp318 outcome source and Stage329A materialization queue.",
+  "control_variables": [
+    "foundation feature formulas",
+    "bar-close timestamp alignment",
+    "train-only label threshold policy for later runs",
+    "forward holdout remains unlabeled and unoptimized"
+  ],
+  "changed_variables": [
+    "date window parameterized through stage wrapper",
+    "feature subsets core56/macro48/us100_technical42",
+    "historical preload used only for rolling continuity"
+  ],
+  "sample_scope": "2026-04-14T01:05:00+00:00 to 2026-05-25T21:05:00+00:00 with valid-session boundaries per feature set",
+  "success_criteria": "At least one forward feature frame with finite aligned rows is materialized and registered.",
+  "failure_criteria": "No feature set has valid rows or source alignment cannot be proven.",
+  "invalid_conditions": "Labels, thresholds, or cp322A signal replay are used to filter rows.",
+  "stop_conditions": "Stop before training if materialized frames lack old-window train/WFO counterpart or parity receipts.",
+  "evidence_plan": [
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_set_materialization_summary.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/missing_feature_counts.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/invalid_row_samples.csv"
+  ]
+}

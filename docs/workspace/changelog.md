@@ -4054,3 +4054,10 @@
 - status(상태): `completed_live_feature_rebuild_control_design_ready_for_materialization`
 - judgment(판정): `research_rebuild_control_open_no_goal_achieve`
 - effect(효과): cp322A(322A 후보)는 수정하지 않고, forward holdout(전진 보류)을 threshold tuning(임계값 튜닝)에 쓰지 않는 rebuild-control(재구축 대조)을 열었다.
+
+## 2026-05-26 - Stage329B Forward Feature Frames(329B 전진 피처 프레임)
+
+- run329B(329B 실행): historical preload(기존 선적재)와 forward raw(전진 원천)를 결합해 core56/macro48/us100-only feature frame(피처 프레임)을 물질화했다.
+- status(상태): `completed_forward_feature_frames_materialized_with_session_boundary`
+- judgment(판정): `research_materialization_completed_no_goal_achieve`
+- effect(효과): forward holdout(전진 보류)은 feature-only(피처 전용)로 남겼고, label(라벨), threshold tuning(임계값 튜닝), selected candidate(선택 후보), Goal Achieve(목표 달성)는 만들지 않았다.

@@ -1,0 +1,29 @@
+{
+  "feature_set_id": "macro48_no_equity_breadth_or_top3",
+  "role": "parallel_resilience_control",
+  "feature_count": 48,
+  "feature_order_sha256": "147d9acd038b2b175a130281525ff49540bf21b36df2952066712a91198b9c40",
+  "required_symbols": [
+    "US100",
+    "VIX",
+    "US10YR",
+    "USDX"
+  ],
+  "scope_rows": 8232,
+  "valid_rows": 5484,
+  "invalid_rows": 2748,
+  "alignment_missing_rows": 2504,
+  "finite_missing_rows": 2748,
+  "first_valid_timestamp": "2026-04-14T03:05:00+00:00",
+  "last_valid_timestamp": "2026-05-22T23:55:00+00:00",
+  "forward_requested_start_utc": "2026-04-14T00:00:00+00:00",
+  "forward_output_start_utc": "2026-04-14T01:05:00+00:00",
+  "forward_requested_to_utc": "2026-05-25T21:05:00+00:00",
+  "preload_start_utc": "2026-04-01T00:00:00+00:00",
+  "parquet_path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_frames/macro48_no_equity_breadth_or_top3.parquet",
+  "parquet_sha256": "527bd2b485439cbb1323d66f687585bb980902839feb0cb6e225566f9cb62bec",
+  "feature_order_path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_orders/macro48_no_equity_breadth_or_top3_feature_order.txt",
+  "feature_order_sha256_file": "17886b27cc5b9e7e4664b335d20f3f4fe9377e9939fea7d9de0bfc948776b9bf",
+  "status": "materialized",
+  "claim_boundary": "research_development_only_forward_features_materialized_no_labels_no_threshold_tuning_no_candidate_selected_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

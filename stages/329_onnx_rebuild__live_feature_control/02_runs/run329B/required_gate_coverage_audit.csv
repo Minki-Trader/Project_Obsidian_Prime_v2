@@ -1,0 +1,7 @@
+gate_name,status,evidence_path,effect
+experiment_design(실험 설계),passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/experiment_design_receipt.json,forward feature materialization(전진 피처 물질화)의 목적과 금지선을 고정했다.
+data_integrity(데이터 무결성),passed_with_session_boundary,stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/data_integrity_receipt.json,"historical preload(기존 선적재)와 forward raw(전진 원천)의 연결, 결측, 세션 경계를 기록했다."
+model_validation(모델 검증),passed_materialization_only,stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/model_validation_receipt.json,모델/임계값/점수 선택을 하지 않았음을 고정했다.
+runtime_parity(런타임 동등성),not_attempted_by_claim,stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/runtime_parity_receipt.json,Python materialization(파이썬 물질화)만 주장하고 MT5/runtime authority(런타임 권위)는 주장하지 않는다.
+artifact_lineage(산출물 계보),passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/artifact_lineage_receipt.json,"입력 원천, 산출물, 다음 소비 실행을 연결했다."
+result_judgment(결과 판정),passed_no_goal_achieve,stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/result_judgment.csv,"Goal Achieve(목표 달성)와 운영 주장(operating claim, 운영 주장)을 만들지 않았다."

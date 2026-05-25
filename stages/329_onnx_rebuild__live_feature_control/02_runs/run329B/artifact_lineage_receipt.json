@@ -1,0 +1,35 @@
+{
+  "source_inputs": [
+    "data/raw/mt5_bars/m5",
+    "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5",
+    "foundation/config/top3_monthly_price_proxy_weights_fpmarkets_v2.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329A/rebuild_run_queue.csv"
+  ],
+  "producer": "stage_pipelines/stage329/materialize_forward_feature_frames.py",
+  "consumer": "run329C_train_wfo_rebuild_candidates_without_forward_tuning",
+  "artifact_paths": [
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_set_materialization_summary.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/missing_feature_counts.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/invalid_row_samples.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/experiment_design_receipt.json",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/data_integrity_receipt.json",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/model_validation_receipt.json",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/runtime_parity_receipt.json"
+  ],
+  "artifact_hashes": {
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_set_materialization_summary.csv": "771bbcf11c5b5515f4ecda39c9315f5aa1bf5c90d6a2f90f3e2eba99f1359d4a",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/missing_feature_counts.csv": "2d74a6df25a462cdab1e4e7cc906df1d487f699a60c61e46d4def14de70b2f31",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/invalid_row_samples.csv": "e2e04ceb29e81872345670a7a2a7193d489d99fc87355a9619537193f6ef459e",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/experiment_design_receipt.json": "9e13c9f926f326b4ea40678a3c90f259536d1900c99b488ec740f1f521a104b7",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/data_integrity_receipt.json": "c1e48d7a4a62970e524c9b3275202d2616cdfeb9a0637568fa6a766fa6101031",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/model_validation_receipt.json": "2655496a71d47bf895bb0912a2a5f4f3cfdf33957f4555ddab1457e14bcfb116",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/runtime_parity_receipt.json": "80b36e5a2bf80836d12ff74c1d81a972a0dfb415e41ca758457cae72b10798a1"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "availability": "tracked_after_force_add_for_ignored_run_dir",
+  "lineage_judgment": "connected_with_session_boundary"
+}
