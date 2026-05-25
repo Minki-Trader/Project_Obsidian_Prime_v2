@@ -157,3 +157,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): 실제 MT5(메타트레이더5) routed total(라우팅 전체)에서 수익 규모, 효율, 밀도, 곡선 포켓을 동시에 만족하지 못한 분기다.
 - do_not_repeat(반복 금지): 같은 Stage306 표면에서 lot(랏), ATR(평균진폭), density(밀도)만 미세 조정하지 않는다.
 - reopen_condition(재개 조건): 새 수익 원천이나 새 구조가 validation/OOS(검증/표본외) 규모와 곡선을 함께 개선할 때만 재사용한다.
+
+## run307C_review_post_trade_shape_scale_mt5_probe_v1 Stage307 post-trade-shape scale failure memory(307단계 거래 형태 이후 수익 규모 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): 실제 MT5(메타트레이더5) routed total(라우팅 전체)에서 수익 규모, 효율, 밀도, 곡선 포켓을 동시에 만족하지 못한 분기다.
+- do_not_repeat(반복 금지): 같은 Stage307 return-rank(수익 순위) 표면에서 lot(랏), ATR(평균진폭), density(밀도)만 미세 조정하지 않는다.
+- reopen_condition(재개 조건): 새 수익 원천이나 새 구조가 validation/OOS(검증/표본외) 규모와 곡선을 함께 개선할 때만 재사용한다.

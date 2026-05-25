@@ -247,3 +247,14 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage306_anti_surface_trade_shape`
 - hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도)이 direction flip(방향 반전)보다 큰 수익 원천을 만들 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## stage307_post_trade_shape_scale_ml
+
+- hypothesis(가설): fresh ML return-rank(새 머신러닝 수익 순위) surface(표면)가 Stage306(306단계) rule repair(규칙 수리)보다 큰 profit scale(수익 규모)을 만들 수 있다.
+- boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
+
+## run307C_review_post_trade_shape_scale_mt5_probe_v1 anti-surface trade-shape source(반표면 거래 형태 원천)
+
+- idea_id(아이디어 ID): `stage307_post_trade_shape_scale_ml`
+- hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도)이 direction flip(방향 반전)보다 큰 수익 원천을 만들 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
