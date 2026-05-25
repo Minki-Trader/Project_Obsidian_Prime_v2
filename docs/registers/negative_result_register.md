@@ -188,3 +188,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - preserved_clue(보존 단서): 양수 조각이 있더라도 배분만으로는 ONNX-worthy(온엑스 가치 있음) 후보가 되지 않을 수 있다.
 - do_not_repeat(반복 금지): Stage310 allocation(310단계 배분)을 lot/hold/density(수량/보유/밀도)만 좁게 바꿔 반복하지 않는다.
 - reopen_condition(재개 조건): 새 feature/model/risk surface(피처/모델/위험 표면)가 함께 바뀔 때만 재사용한다.
+
+## run311C_review_post_allocation_fresh_edge_mt5_probe_v1 Stage311 fresh edge failure memory(311단계 새 엣지 실패 기억)
+
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): actual MT5(실제 메타트레이더5)에서 수익 규모, 효율, 거래수, 곡선 포켓을 동시에 만족하지 못했다.
+- do_not_repeat(반복 금지): hour mirror(시간 반전)만 좁게 반복하지 않는다.
+- reopen_condition(재개 조건): 모델/피처 비대칭 표면이 함께 바뀔 때만 재사용한다.

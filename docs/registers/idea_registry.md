@@ -291,3 +291,14 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage310_runtime_positive_fragment_allocation`
 - hypothesis(가설): 양수 조각을 배분하면 거래수와 곡선 품질이 함께 개선될 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## stage311_post_allocation_fresh_edge
+
+- hypothesis(가설): Stage310(310단계)의 validation loss(검증 손실) 시간 구조를 adverse-hour mirror(불리 시간대 방향 반전)로 바꾸면 새 edge(엣지)가 될 수 있다.
+- boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
+
+## run311C_review_post_allocation_fresh_edge_mt5_probe_v1 post_allocation_fresh_edge(배분 이후 새 엣지)
+
+- idea_id(아이디어 ID): `stage311_post_allocation_fresh_edge`
+- hypothesis(가설): 불리 시간대 방향 반전과 피처 지원이 검증 손실을 줄일 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.

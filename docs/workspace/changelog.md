@@ -3687,3 +3687,32 @@
 - judgment(판정): `actual_mt5_no_onnx_worthy_candidate_post_allocation_fresh_edge_rebuild_opened`
 - effect(효과): Stage310(310단계)을 닫고 `311_onnx_candidate_campaign__post_allocation_fresh_edge_rebuild`를 열었다.
 - boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.
+
+## 2026-05-24 run311A Post-allocation fresh edge materialization(311A 배분 이후 새 엣지 물질화)
+
+- run_id(실행 ID): `run311A_design_post_allocation_fresh_edge_rebuild_packet_v1`
+- status(상태): `completed_post_allocation_fresh_edge_candidates_materialized_no_selection`
+- candidates(후보): `6`
+- mt5_queue_rows(MT5 대기열 행): `6`
+- next_action(다음 행동): `run311B_execute_post_allocation_fresh_edge_mt5_probe`
+
+## 2026-05-24 run311B Post-allocation fresh edge MT5 probe(311B 배분 이후 새 엣지 MT5 탐침)
+
+- status(상태): `prepared_post_allocation_fresh_edge_mt5_probe_no_runtime_kpi`
+- judgment(판정): `post_allocation_fresh_edge_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run311B Post-allocation fresh edge MT5 probe(311B 배분 이후 새 엣지 MT5 탐침)
+
+- status(상태): `completed_post_allocation_fresh_edge_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run311C Post-allocation fresh edge review(311C 배분 이후 새 엣지 검토)
+
+- status(상태): `completed_post_allocation_fresh_edge_review_stage312_opened`
+- judgment(판정): `actual_mt5_no_onnx_worthy_candidate_fresh_model_asymmetry_rebuild_opened`
+- effect(효과): Stage311(311단계)을 닫고 `312_onnx_candidate_campaign__fresh_model_asymmetry_rebuild`를 열었다.
+- boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.
