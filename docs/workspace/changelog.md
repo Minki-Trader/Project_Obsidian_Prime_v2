@@ -4061,3 +4061,10 @@
 - status(상태): `completed_forward_feature_frames_materialized_with_session_boundary`
 - judgment(판정): `research_materialization_completed_no_goal_achieve`
 - effect(효과): forward holdout(전진 보류)은 feature-only(피처 전용)로 남겼고, label(라벨), threshold tuning(임계값 튜닝), selected candidate(선택 후보), Goal Achieve(목표 달성)는 만들지 않았다.
+
+## 2026-05-26 - Stage329C Train/WFO Rebuild Candidates(329C 학습/WFO 재구축 후보)
+
+- run329C(329C 실행): core56/macro48/us100-only feature set(피처 세트) 3개와 LogisticRegression(로지스틱 회귀) 2개 규격으로 research ONNX(연구 온엑스) 후보 `6`개를 만들었다.
+- status(상태): `completed_train_wfo_rebuild_candidates_no_forward_tuning`
+- judgment(판정): `research_wfo_candidates_ready_for_forward_replay_no_goal_achieve`
+- effect(효과): forward holdout(전진 보류 표본)을 쓰지 않고 WFO(워크포워드), OOS(표본외), ONNX parity(온엑스 동등성)를 확인했으며, selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 만들지 않았다.

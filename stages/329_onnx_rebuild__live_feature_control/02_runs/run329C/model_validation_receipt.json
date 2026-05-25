@@ -1,0 +1,18 @@
+{
+  "model_family": "sklearn logistic regression multiclass exported to ONNX",
+  "target_and_label": "label_class 0=short, 1=flat, 2=long from label_v1_fwd12",
+  "split_method": "fixed train/validation/OOS plus six expanding WFO folds inside train+validation",
+  "selection_metric": "predeclared research gates, not profit and not forward performance",
+  "secondary_metrics": [
+    "balanced_accuracy",
+    "macro_f1",
+    "log_loss",
+    "WFO min/mean/std",
+    "ONNX parity"
+  ],
+  "threshold_policy": "train-only q60 nonflat probability-margin threshold for later forward replay",
+  "overfit_risk": "survivor queue still needs untouched forward replay and MT5/runtime parity",
+  "calibration_risk": "probabilities are logistic scores, not calibrated trading edge",
+  "comparison_baseline": "three-class random/log-loss baseline and Stage328B outcome-source block",
+  "validation_judgment": "research_wfo_candidates_ready_for_forward_replay_no_goal_achieve"
+}

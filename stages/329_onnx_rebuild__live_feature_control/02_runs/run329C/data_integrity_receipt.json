@@ -1,0 +1,17 @@
+{
+  "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+  "model_input_summary": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+  "feature_order_sources": {
+    "core56_no_top3_weight_features": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_orders/core56_no_top3_weight_features_feature_order.txt",
+    "macro48_no_equity_breadth_or_top3": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_orders/macro48_no_equity_breadth_or_top3_feature_order.txt",
+    "us100_technical42_no_external": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329B/feature_orders/us100_technical42_no_external_feature_order.txt"
+  },
+  "time_axis": "existing model-input timestamp order, UTC-aware storage, bar-close feature rows",
+  "sample_scope": "old train/validation/OOS only; no Stage329B forward parquet read for training",
+  "missing_or_duplicate_check": "model input validated monotonic and duplicate-free",
+  "feature_label_boundary": "label_v1_fwd12 already materialized before forward window; no forward labels generated",
+  "split_boundary": "train split fits final models; validation/OOS evaluate; WFO folds stay before 2025-10 OOS",
+  "leakage_risk": "using OOS metrics for queue decision can still create research selection pressure; run329D remains judgment-only",
+  "data_hash_or_identity": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+  "integrity_judgment": "usable_with_research_selection_boundary"
+}

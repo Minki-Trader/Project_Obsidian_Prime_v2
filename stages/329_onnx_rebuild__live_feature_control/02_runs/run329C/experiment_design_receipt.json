@@ -1,0 +1,27 @@
+{
+  "hypothesis": "Small fixed logistic ONNX research models can reveal whether live-computable feature sets are stable enough for forward replay without outcome-distilled cp322A signals.",
+  "decision_use": "Create or reject a forward replay queue for run329D; not select an operating candidate.",
+  "comparison_baseline": "Stage329B materialized feature sets and random three-class baseline.",
+  "control_variables": [
+    "feature sets fixed from run329B",
+    "model family fixed to logistic regression",
+    "C fixed at 0.25",
+    "forward holdout not read",
+    "train-only q60 nonflat margin threshold"
+  ],
+  "changed_variables": [
+    "feature_set_id",
+    "class_weight"
+  ],
+  "sample_scope": "old train 2022-09-01..2024-12-31, validation 2025-01-02..2025-09-30, OOS 2025-10-01..2026-04-13",
+  "success_criteria": "Candidates pass predeclared validation/OOS/WFO/parity floors and produce fixed threshold manifests.",
+  "failure_criteria": "All candidates fail WFO, OOS, or ONNX parity gates.",
+  "invalid_conditions": "Forward feature rows or forward labels influence training, threshold, or queue decisions.",
+  "stop_conditions": "Stop before MT5/runtime claims; run329D must score untouched forward frames with fixed thresholds.",
+  "evidence_plan": [
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/candidate_screen.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/wfo_fold_metrics.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx_parity_summary.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/forward_replay_candidate_queue.csv"
+  ]
+}

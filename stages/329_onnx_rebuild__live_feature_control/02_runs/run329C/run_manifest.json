@@ -1,0 +1,22 @@
+{
+  "stage_id": "329_onnx_rebuild__live_feature_control",
+  "run_id": "run329C_train_wfo_rebuild_candidates_v1",
+  "parent_run_id": "run329B_materialize_forward_live_feature_frames_v1",
+  "generated_at_utc": "2026-05-25T23:19:29Z",
+  "status": "completed_train_wfo_rebuild_candidates_no_forward_tuning",
+  "judgment": "research_wfo_candidates_ready_for_forward_replay_no_goal_achieve",
+  "decision": "stage329C_wfo_survivor_queue_materialized_no_candidate_selected",
+  "next_action": "run329D_forward_holdout_score_replay_without_threshold_retuning",
+  "goal_achieve": "not_claimed",
+  "candidate_count": 6,
+  "survivor_count": 6,
+  "gate_thresholds": {
+    "validation_balanced_accuracy_min": 0.38,
+    "oos_balanced_accuracy_min": 0.38,
+    "wfo_min_balanced_accuracy_min": 0.36,
+    "oos_log_loss_max": 1.08,
+    "train_oos_balanced_accuracy_gap_max": 0.05,
+    "onnx_max_abs_diff_max": 1e-05
+  },
+  "claim_boundary": "research_development_only_old_train_validation_oos_used_no_forward_tuning_research_onnx_exports_not_runtime_handoff_no_selected_candidate_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

@@ -1,0 +1,7 @@
+gate_name,status,evidence_path,effect
+experiment_design(실험 설계),passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/experiment_design_receipt.json,"모델군, 피처셋, 임계값 정책, forward 사용 금지를 사전에 고정했다."
+data_integrity(데이터 무결성),passed_with_research_boundary,stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/data_integrity_receipt.json,기존 train/validation/OOS만 사용했고 forward parquet(전진 파케이)는 학습에 쓰지 않았다.
+model_validation(모델 검증),passed_research_candidates_only,stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/model_validation_receipt.json,"WFO(워크포워드), OOS(표본외), ONNX parity(온엑스 동등성)를 같이 봤다."
+runtime_parity(런타임 동등성),passed_onnxruntime_only_no_mt5,stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/runtime_parity_receipt.json,Python/ONNX probability parity(확률 동등성)는 봤지만 MT5 runtime authority(런타임 권위)는 없다.
+artifact_lineage(산출물 계보),passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/artifact_lineage_receipt.json,"입력 데이터, 모델, ONNX, 예측, 다음 forward replay(전진 재생) 대기열을 연결했다."
+result_judgment(결과 판정),passed_no_goal_achieve,stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/result_judgment.csv,"선택 후보, 운영 주장, Goal Achieve(목표 달성)를 만들지 않는다."
