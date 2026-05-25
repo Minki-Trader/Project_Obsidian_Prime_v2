@@ -1,0 +1,22 @@
+{
+  "receipt_id": "run326A_artifact_lineage_receipt",
+  "generated_at_utc": "2026-05-25T21:22:35Z",
+  "stage_id": "326_forward__cp322a_frozen_forward_gate",
+  "run_id": "run326A_cp322a_frozen_forward_robustness_gate_v1",
+  "inputs": {
+    "raw_export_summary": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/stage01_raw_export_summary.json",
+    "adapter_package": "stages/323_onnx_candidate_campaign__selected_curve_adapter_package/02_runs/run323A/adapter_package",
+    "onnx_model": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx",
+    "source_route_signal_dir": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features"
+  },
+  "outputs": [
+    "stages/326_forward__cp322a_frozen_forward_gate/02_runs/run326A/forward_data_integrity_receipt.json",
+    "stages/326_forward__cp322a_frozen_forward_gate/02_runs/run326A/frozen_contract_receipt.json",
+    "stages/326_forward__cp322a_frozen_forward_gate/02_runs/run326A/runtime_handoff_gap_receipt.json",
+    "stages/326_forward__cp322a_frozen_forward_gate/03_reviews/final_forward_decision_report.md",
+    "stages/326_forward__cp322a_frozen_forward_gate/04_selected/selection_status.md"
+  ],
+  "decision": "Forward Blocked",
+  "status": "blocked_forward_data_missing_and_signal_handoff_missing",
+  "claim_boundary": "forward robustness only; no live readiness, deployment, operating promotion, runtime authority, or operating reference"
+}

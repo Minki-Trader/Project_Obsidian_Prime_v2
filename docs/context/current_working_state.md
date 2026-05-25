@@ -1,13 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a_v1`
-- current_run(현재 실행): `run325A_export_cp322a_adapter_to_onnx_and_runtime_reproduction_v1`
-- active_stage(활성 단계): `325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a`
+- current_packet(현재 작업 묶음): `326_forward__cp322a_frozen_forward_gate_v1`
+- current_run(현재 실행): `run326A_cp322a_frozen_forward_robustness_gate_v1`
+- active_stage(활성 단계): `326_forward__cp322a_frozen_forward_gate`
 - selected_research_baseline(선택 연구 기준선): `none`
-- source_stage(원천 단계): `324_onnx_candidate_campaign__onnx_go_pressure_for_cp322a_adapter`
-- target_surface(목표 표면): `cp322A_onnx_export_parity_runtime_reproduction`
+- source_stage(원천 단계): `325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a`
+- target_surface(목표 표면): `cp322A_cp321b_exact_replay_control_surface`
 - adapter_under_review(검토 중 어댑터): `stage323_cp322a_selected_curve_adapter_package_v1`
-- status(상태): `completed_cp322a_onnx_export_parity_runtime_reproduction_main_pushed_goal_achieved`
+- status(상태): `blocked_forward_data_missing_and_signal_handoff_missing`
+- decision(판정): `Forward Blocked`(전진 차단)
+- run326A_summary(326A 요약): cp322A(322A 후보) frozen forward robustness gate(고정 전진 견고성 게이트)는 `Forward Blocked`(전진 차단)로 닫혔다. Effect(효과): US10YR(미국 10년물) regime data(국면 데이터)가 forward end(전진 종료)에 닿지 않았고, frozen ONNX(고정 오닉스)의 `run322b_route_signal` forward handoff(전진 인계)가 없어 MT5 forward result(MT5 전진 결과)를 만들지 않는다.
 - stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
 - stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
@@ -22,8 +24,8 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `none_goal_achieved`
-- claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_final_package_for_onnx_research_handoff_only`
+- next_action(다음 행동): `complete_forward_data_and_frozen_route_signal_handoff_before_mt5_forward`
+- claim_boundary(주장 경계): `forward robustness only; no live readiness, deployment, operating promotion, runtime authority, or operating reference`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
 Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.
