@@ -251,3 +251,8 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): 수익 규모가 커도 validation DD%(검증 드로다운 비율)와 underwater stretch(수중 구간)가 깊으면 ONNX-worthy(온엑스 가치 있음) 후보가 아니다.
 - preserved_clue(보존 단서): cp319D/cp319B/cp319F(319D/319B/319F 후보)는 Stage320(320단계) validation pocket controller(검증 포켓 제어기) 씨앗으로 쓴다.
 - do_not_repeat(반복 금지): volatility cap(변동성 상한)만 다시 조절하는 좁은 수리를 반복하지 않는다.
+
+## run320C_review_validation_pocket_drawdown_controller_mt5_probe_v1 Stage320 controller failure(320단계 제어기 실패)
+
+- failure_boundary(실패 경계): VIX/quality controller(VIX/품질 제어기)는 검증 DD%(드로다운 비율)와 PF(수익 팩터)를 악화시켰다.
+- do_not_repeat(반복 금지): 같은 controller(제어기) 변형 반복 금지.

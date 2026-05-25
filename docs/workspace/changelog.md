@@ -3926,3 +3926,20 @@
 - judgment(판정): `actual_mt5_profit_scale_density_improved_but_validation_curve_pocket_failed_stage320_opened`
 - effect(효과): Stage319(319단계)을 닫고 `320_onnx_candidate_campaign__validation_pocket_drawdown_controller`를 열었다.
 - boundary(경계): 운영 승격, 런타임 권위, ONNX(온엑스) 준비를 주장하지 않는다.
+
+## 2026-05-25 run320A Validation pocket drawdown controller(320A 검증 포켓 드로다운 제어기)
+
+- status(상태): `completed_validation_pocket_drawdown_controller_candidates_materialized_no_selection`
+- judgment(판정): `validation_pocket_drawdown_controller_candidates_materialized_requires_actual_mt5_no_selection`
+- effect(효과): 후보 `6`개와 MT5 queue(MT5 대기열) `6`개를 만들었다.
+
+## 2026-05-25 run320B Validation pocket drawdown controller MT5 probe(320B 검증 포켓 드로다운 제어기 MT5 탐침)
+
+- status(상태): `completed_validation_pocket_drawdown_controller_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `36`개를 기록했다.
+
+## 2026-05-25 run320C Validation pocket controller review(320C 검증 포켓 제어기 검토)
+
+- status(상태): `completed_validation_pocket_drawdown_controller_review_stage321_opened_no_selection`
+- effect(효과): Stage321(321단계)을 열었다.

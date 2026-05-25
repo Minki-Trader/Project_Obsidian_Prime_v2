@@ -395,3 +395,9 @@ Register ideas when they become durable work, not for every passing thought.
 - result(결과): profit scale(수익 규모)과 density(밀도)는 개선됐지만 validation pocket(검증 포켓)이 남았다.
 - survivor_seed_count(생존 씨앗 수): `4`
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run320A_design_validation_pocket_drawdown_controller_packet_v1 validation_pocket_drawdown_controller(검증 포켓 드로다운 제어기)
+
+- idea_id(아이디어 ID): `stage320_validation_pocket_drawdown_controller`
+- hypothesis(가설): cp319D(319D 후보)의 validation pocket(검증 포켓)은 VIX/quality state(VIX/품질 상태)로 줄일 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
