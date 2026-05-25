@@ -3772,3 +3772,38 @@
 - judgment(판정): `actual_mt5_no_onnx_worthy_candidate_runtime_outcome_source_pivot_opened`
 - effect(효과): Stage313(313단계)를 닫고 `314_onnx_candidate_campaign__runtime_outcome_feature_source_rebuild`를 열었다.
 - boundary(경계): 운영 승격이나 런타임 권위를 주장하지 않는다.
+
+## 2026-05-24 run314A Runtime outcome feature source materialization(314A 런타임 결과 피처 원천 물질화)
+
+- status(상태): `completed_runtime_outcome_feature_source_candidates_materialized_no_selection`
+- judgment(판정): `runtime_outcome_feature_source_surfaces_materialized_no_candidate_selection`
+- effect(효과): 후보 `6`개와 MT5 대기열 `6`개를 만들었다.
+- boundary(경계): 선택 후보, Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 없다.
+
+## 2026-05-24 run314A Runtime outcome feature source materialization(314A 런타임 결과 피처 원천 물질화)
+
+- status(상태): `completed_runtime_outcome_feature_source_candidates_materialized_no_selection`
+- judgment(판정): `runtime_outcome_feature_source_surfaces_materialized_no_candidate_selection`
+- effect(효과): 후보 `6`개와 MT5 대기열 `6`개를 만들었다.
+- boundary(경계): 선택 후보, Adapter(어댑터), ONNX(온엑스), Goal Achieve(목표 달성)는 없다.
+
+## 2026-05-24 run314B Runtime outcome feature source MT5 probe(314B 런타임 결과 피처 원천 MT5 탐침)
+
+- status(상태): `prepared_runtime_outcome_feature_source_mt5_probe_no_runtime_kpi`
+- judgment(판정): `runtime_outcome_feature_source_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run314B Runtime outcome feature source MT5 probe(314B 런타임 결과 피처 원천 MT5 탐침)
+
+- status(상태): `completed_runtime_outcome_feature_source_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run314C Runtime outcome feature source review(314C 런타임 결과 피처 원천 검토)
+
+- status(상태): `completed_runtime_outcome_feature_source_review_stage315_opened`
+- judgment(판정): `actual_mt5_no_onnx_worthy_candidate_runtime_outcome_feature_source_opened`
+- effect(효과): Stage314(314단계)를 닫고 `315_onnx_candidate_campaign__runtime_outcome_feature_interaction_rebuild`를 열었다.
+- boundary(경계): 운영 승격이나 런타임 권위를 주장하지 않는다.

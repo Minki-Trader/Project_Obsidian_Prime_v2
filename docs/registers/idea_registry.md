@@ -324,3 +324,14 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea_id(아이디어 ID): `stage313_runtime_outcome_source_pivot_review`
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run314A_design_runtime_outcome_feature_source_rebuild_packet_v1 runtime_outcome_feature_source(런타임 결과 피처 원천)
+
+- idea_id(아이디어 ID): `stage314_runtime_outcome_feature_source`
+- hypothesis(가설): actual hour-direction memory(실제 시간-방향 기억)를 새 decision surface(판단 표면)로 쓰면 수익 규모와 밀도를 동시에 압박할 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run314C_review_runtime_outcome_feature_source_mt5_probe_v1 runtime_outcome_feature_source_review(런타임 결과 피처 원천 검토)
+
+- idea_id(아이디어 ID): `stage314_runtime_outcome_feature_source_review`
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.

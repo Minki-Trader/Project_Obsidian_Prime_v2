@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `314_onnx_candidate_campaign__runtime_outcome_feature_source_rebuild_v1`
-- current_run(현재 실행): `run313C_review_runtime_outcome_source_pivot_mt5_probe_v1`
-- active_stage(활성 단계): `314_onnx_candidate_campaign__runtime_outcome_feature_source_rebuild`
+- current_packet(현재 작업 묶음): `315_onnx_candidate_campaign__runtime_outcome_feature_interaction_rebuild_v1`
+- current_run(현재 실행): `run314C_review_runtime_outcome_feature_source_mt5_probe_v1`
+- active_stage(활성 단계): `315_onnx_candidate_campaign__runtime_outcome_feature_interaction_rebuild`
 - selected_research_baseline(선택 연구 기준선): `none`
 - source_stage(원천 단계): `310_onnx_candidate_campaign__runtime_positive_fragment_allocation_rebuild`
 - target_surface(목표 표면): `none`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_runtime_outcome_source_pivot_review_stage314_opened`
+- status(상태): `completed_runtime_outcome_feature_source_review_stage315_opened`
 - stage267_closeout(267단계 종료): `closed_as_reference_evidence_no_selected_candidate`
 - stage268_closeout(268단계 종료): `completed_lineage_triage_no_candidate_selection`
 - run267CQ_summary(267CQ 요약): run267CP(267CP 실행)의 약한 구간을 feature blueprint(피처 청사진) `5`개, materialization queue(물질화 대기열) `6`개, prune rows(가지치기 행) `4`개로 바꿨다. Effect(효과): s264_lc/s264_aia는 확장 기간 압박, s264_aih는 공격형 공급 확장, s258_stc는 한 번의 고위험 압박으로 분리한다.
@@ -22,7 +22,7 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run314A_design_runtime_outcome_feature_source_rebuild_packet`
+- next_action(다음 행동): `run315A_design_runtime_outcome_feature_interaction_rebuild_packet`
 - claim_boundary(주장 경계): `research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_candidate_package_gate`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
@@ -1114,3 +1114,8 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 
 - run313B_summary(313B 요약): runtime outcome source pivot MT5 probe(런타임 결과 원천 전환 MT5 탐침)를 실행했다. Effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `0`개를 만들었고 선택 후보/Adapter(어댑터)/ONNX(온엑스)는 주장하지 않는다.
 - run313C_summary(313C 요약): Stage313(313단계) actual MT5(실제 메타트레이더5) 검토를 완료했다. Effect(효과): selected_candidate(선택 후보)는 `none`이고 next_stage(다음 단계)는 `314_onnx_candidate_campaign__runtime_outcome_feature_source_rebuild`다.
+
+- run314A_summary(314A 요약): runtime outcome feature source(런타임 결과 피처 원천) 후보 `6`개를 materialized(물질화)했다. Effect(효과): 최소 거래 수와 4-10 trades/day(일 4-10거래)를 설계 밀도로 맞춘 MT5 queue(MT5 대기열) `6`개를 만들었고 선택 후보/Adapter(어댑터)/ONNX(온엑스)는 주장하지 않는다.
+
+- run314B_summary(314B 요약): runtime outcome feature source MT5 probe(런타임 결과 피처 원천 MT5 탐침)를 실행했다. Effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `0`개를 만들었고 선택 후보/Adapter(어댑터)/ONNX(온엑스)는 주장하지 않는다.
+- run314C_summary(314C 요약): Stage314(314단계) actual MT5(실제 메타트레이더5) 검토를 완료했다. Effect(효과): selected_candidate(선택 후보)는 `none`이고 next_stage(다음 단계)는 `315_onnx_candidate_campaign__runtime_outcome_feature_interaction_rebuild`다.
