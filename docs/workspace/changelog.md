@@ -3982,3 +3982,17 @@
 - status(상태): `completed_cp321b_curve_stability_pressure_review_stage323_opened`
 - selected_candidate(선택 후보): `cp322A_cp321b_exact_replay_control_surface`
 - effect(효과): Stage323(323단계) `323_onnx_candidate_campaign__selected_curve_adapter_package`를 열었다.
+
+## 2026-05-26 run323A Adapter package(323A 어댑터 패키지)
+
+- status(상태): `completed_selected_curve_adapter_package_stage324_opened`
+- judgment(판정): `adapter_package_built_no_onnx_readiness`
+- effect(효과): `stage323_cp322a_selected_curve_adapter_package_v1`를 구성하고 Stage324(324단계)를 열었다.
+- boundary(경계): ONNX readiness(온엑스 준비)와 Goal Achieve(목표 달성)는 `not_claimed`다.
+
+## 2026-05-26 run323A Adapter package(323A 어댑터 패키지)
+
+- status(상태): `completed_selected_curve_adapter_package_stage324_opened`
+- judgment(판정): `adapter_package_built_no_onnx_readiness`
+- effect(효과): `stage323_cp322a_selected_curve_adapter_package_v1`를 구성하고 Stage324(324단계)를 열었다.
+- boundary(경계): ONNX readiness(온엑스 준비)와 Goal Achieve(목표 달성)는 `not_claimed`다.

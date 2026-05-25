@@ -1,0 +1,33 @@
+{
+  "boolean_interpretation": {
+    "atr_sltp_enabled": true,
+    "close_on_flat_signal": true,
+    "exit_risk_overlay_enabled": false,
+    "model_risk_sizing_enabled": true
+  },
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_onnx_go_pressure_gate",
+  "known_tradeoff": "Selected curve(선택 곡선)는 cp322C(322C 후보)보다 net profit(순수익)은 낮지만 OOS zoom pocket(표본외 확대 포켓)을 통과했다.",
+  "parameters": {
+    "atr_max_stop_points": "900",
+    "atr_max_take_profit_points": "1800",
+    "atr_min_stop_points": "70",
+    "atr_min_take_profit_points": "100",
+    "atr_period": "14",
+    "atr_sltp_enabled": "1",
+    "atr_stop_multiplier": "0.78",
+    "atr_take_profit_multiplier": "3.35",
+    "close_on_flat_signal": "1",
+    "exit_risk_overlay_enabled": "0",
+    "fixed_lot": "0.42",
+    "max_hold_bars": "1",
+    "model_risk_confidence_ceiling": "0.99",
+    "model_risk_confidence_floor": "0.58",
+    "model_risk_fallback_lot": "0.08",
+    "model_risk_max_pct": "0.026",
+    "model_risk_min_pct": "0.004",
+    "model_risk_sizing_enabled": "1",
+    "same_direction_reentry_cooldown_bars": "0"
+  },
+  "risk_logic_summary": "model risk sizing(모델 위험 크기) plus fixed lot(고정 랏) as used in Stage322 MT5 runtime probe(런타임 탐침)",
+  "selected_candidate": "cp322A_cp321b_exact_replay_control_surface"
+}

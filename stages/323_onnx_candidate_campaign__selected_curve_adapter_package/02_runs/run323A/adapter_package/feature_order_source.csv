@@ -1,0 +1,5 @@
+position,feature_name,dtype,source,required,meaning
+0,route_signal_value,int8,Stage322 model/handoff(모델/인계) logical signal(논리 신호),1,logical direction signal(논리 방향 신호) mapped into run322b_route_signal
+1,candidate_decision_score,float32,Stage322 route feature table(경로 피처 표),1,decision score(판단 점수) used before frozen signal replay(동결 신호 재생)
+2,source_active_mask,int8,Stage322 route feature table(경로 피처 표),1,active/flat(활성/관망) source mask(원천 마스크)
+3,model_risk_pct,float32,Stage322 route feature table(경로 피처 표),1,risk sizing percentage(위험 크기 비율) used by MT5 risk bridge(위험 연결)

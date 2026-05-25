@@ -1,0 +1,91 @@
+{
+  "adapter_package_id": "stage323_cp322a_selected_curve_adapter_package_v1",
+  "claim_boundary": "research_development_only_no_live_readiness_no_runtime_authority_no_operating_promotion_no_operating_reference_no_production_baseline_no_deployment_no_onnx_until_onnx_go_pressure_gate",
+  "known_differences": [
+    "Stage322 design artifact(설계 산출물)는 logical feature(논리 피처) route_signal_value를 쓴다.",
+    "Stage322 MT5 feature CSV(피처 CSV)는 runtime column(런타임 열) run322b_route_signal을 쓴다.",
+    "Stage323 Adapter(어댑터)는 이 alias(별칭)를 명시해 ONNX parity(온엑스 동등성)에서 혼동을 막는다."
+  ],
+  "parity_check": "Stage322 MT5 runtime probe(런타임 탐침) completed; Stage323 packages handoff only; Stage324 must pressure before ONNX export(내보내기).",
+  "parity_identity": {
+    "feature_hashes": {
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_oos_route_signal.csv": "266216bfca5dcbdf70d5b9a4d9c4691b0673b0a371a257637e7fee0c354ba533",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_val_route_signal.csv": "e7f3c75dfdc711325389c549f2c8d6ed7e5f5daa785aecd10c1d991a7be86646",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_oos_route_signal.csv": "a887e426a33c082016edf4b2f4c6a117bf949c7516edbf62e611dd96f313cb20",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_val_route_signal.csv": "bc36b391baa16061c0078928d4469a13e3ada93848e78f31f2ac3da78abcea79"
+    },
+    "feature_paths": [
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_val_route_signal.csv",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_oos_route_signal.csv",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_val_route_signal.csv",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_oos_route_signal.csv"
+    ],
+    "mt5_actual_routed_metrics": [
+      {
+        "expectancy": 514.41,
+        "feature_ready_count": 9844,
+        "fill_count": 1085,
+        "fill_rate": 0.9990791896869244,
+        "max_drawdown_percent": 19.11,
+        "model_fail_count": 42964,
+        "model_ok_count": 9844,
+        "net_profit": 472738.31,
+        "no_tier_count": 42964,
+        "order_attempt_count": 1086,
+        "profit_factor": 1.64,
+        "record_view": "mt5_run322A_cp322A_cp321b_exact_replay_control_actual_routed_validation_is",
+        "recovery_factor": 4.34,
+        "reject_count": 1,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/mt5/reports/Project_Obsidian_Prime_v2_run322B_execute_cp321b_curve_stability_pressure_mt5_probe_v1_run322A_cp322A_cp321b_exact_replay_control_routed_val.htm",
+        "route_role": "actual_routed_total",
+        "skip_count": 42964,
+        "split": "validation_is",
+        "status": "completed",
+        "tier_a_used_count": 9844,
+        "tier_b_fallback_used_count": 0,
+        "tier_scope": "Tier A+B",
+        "trade_count": 919
+      },
+      {
+        "expectancy": 373.04,
+        "feature_ready_count": 7584,
+        "fill_count": 757,
+        "fill_rate": 1.0,
+        "max_drawdown_percent": 15.51,
+        "model_fail_count": 29753,
+        "model_ok_count": 7584,
+        "net_profit": 237627.93,
+        "no_tier_count": 29753,
+        "order_attempt_count": 757,
+        "profit_factor": 1.51,
+        "record_view": "mt5_run322A_cp322A_cp321b_exact_replay_control_actual_routed_oos",
+        "recovery_factor": 5.72,
+        "reject_count": 0,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/mt5/reports/Project_Obsidian_Prime_v2_run322B_execute_cp321b_curve_stability_pressure_mt5_probe_v1_run322A_cp322A_cp321b_exact_replay_control_routed_oos.htm",
+        "route_role": "actual_routed_total",
+        "skip_count": 29753,
+        "split": "oos",
+        "status": "completed",
+        "tier_a_used_count": 7584,
+        "tier_b_fallback_used_count": 0,
+        "tier_scope": "Tier A+B",
+        "trade_count": 637
+      }
+    ],
+    "payload_hash": "c892692f087ec186f58447941a0221f6b3937a7e887ee843744715c78d7c2bf1",
+    "payload_path": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322A/payloads/run322A_cp322A_cp321b_exact_replay_control_payload.parquet",
+    "source_handoff_hash": "bf1b10f62a1524d56722ccbfc59e0ddf3ceafbfb1cd42242d5dbd50ee4091306",
+    "source_handoff_path": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322A/handoff/run322A_cp322A_cp321b_exact_replay_control_handoff.json",
+    "source_model_hash": "75694543f84a814b6dd94d0d33156295feb45358e083f168f51a46554dec6be2",
+    "source_model_path": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322A/models/run322A_cp322A_cp321b_exact_replay_control_stability_pressure_surface.json"
+  },
+  "research_path": "stage_pipelines/stage323/build_adapter_package_for_cp322a_selected_curve.py",
+  "runtime_claim_boundary": "runtime_probe_only_no_runtime_authority",
+  "runtime_path": {
+    "stage322_execution_result": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/execution_result.json",
+    "stage322_mt5_probe": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/mt5_kpi_summary.csv",
+    "stage322_runtime_parity_receipt": "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/runtime_parity_receipt.json"
+  },
+  "selected_candidate": "cp322A_cp321b_exact_replay_control_surface",
+  "shared_contract": "run322b_route_signal(실행 신호)은 route_signal_value(경로 신호값)의 MT5 feature alias(피처 별칭)이며 -1/0/+1 의미를 유지한다."
+}
