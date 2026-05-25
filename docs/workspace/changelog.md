@@ -3523,3 +3523,31 @@
 - judgment(?먯젙): `actual_mt5_no_onnx_worthy_candidate_runtime_realized_curve_rebuild_opened`
 - effect(효과): Stage305(305단계)를 닫고 `306_onnx_candidate_campaign__anti_surface_trade_shape_rebuild`를 열었다.
 - boundary(寃쎄퀎): ?댁쁺 ?밴꺽?대굹 ?고???沅뚯쐞??二쇱옣?섏? ?딅뒗??
+
+## 2026-05-24 run306A Anti-surface trade-shape materialization(306A 반표면 거래 형태 물질화)
+
+- status(상태): `completed_anti_surface_trade_shape_candidates_materialized_no_selection`
+- judgment(판정): `anti_surface_trade_shape_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+
+## 2026-05-24 run306A Anti-surface trade-shape materialization(306A 반표면 거래 형태 물질화)
+
+- status(상태): `completed_anti_surface_trade_shape_candidates_materialized_no_selection`
+- judgment(판정): `anti_surface_trade_shape_inputs_materialized_no_candidate_selection`
+- effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+
+## 2026-05-24 run306B Anti-surface trade-shape MT5 probe(306B 반표면 거래 형태 MT5 탐침)
+
+- status(상태): `completed_anti_surface_trade_shape_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+
+## 2026-05-24 run306C Anti-surface trade-shape review(306C 반표면 거래 형태 검토)
+
+- status(상태): `completed_anti_surface_trade_shape_review_stage307_opened`
+- judgment(판정): `actual_mt5_no_onnx_worthy_candidate_post_trade_shape_rebuild_opened`
+- effect(효과): Stage306(306단계)를 닫고 `307_onnx_candidate_campaign__post_trade_shape_scale_rebuild`를 열었다.
+- boundary(경계): 운영 승격이나 런타임 권위는 주장하지 않는다.

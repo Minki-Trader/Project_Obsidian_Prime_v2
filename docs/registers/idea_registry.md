@@ -236,3 +236,14 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(?꾩씠?붿뼱 ID): `stage306_runtime_realized_curve_attribution`
 - hypothesis(媛??: 怨≪꽑 ?ъ폆??WFO(?뚰겕?ъ썙??理쒖쟻?? 紐⑹쟻???ｌ쑝硫??쒖닔??洹쒕え? 留ㅻ걚?ъ슫 怨≪꽑???④퍡 留뚮뱾 ???덈떎.
 - evidence_boundary(洹쇨굅 寃쎄퀎): research_development_only(?곌뎄媛쒕컻 ?꾩슜), selected_candidate=none.
+
+## stage306_anti_surface_trade_shape
+
+- hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도) can create a larger smoother candidate than direction-flip repair.
+- boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
+
+## run306C_review_anti_surface_trade_shape_mt5_probe_v1 anti-surface trade-shape source(반표면 거래 형태 원천)
+
+- idea_id(아이디어 ID): `stage306_anti_surface_trade_shape`
+- hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도)이 direction flip(방향 반전)보다 큰 수익 원천을 만들 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
