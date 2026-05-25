@@ -245,3 +245,9 @@ Negative results are preserved because they prevent repeated dead ends.
 - preserved_clue(보존 단서): cp318A/cp318D(318A/318D 후보)는 수익 규모와 거래 밀도 단서로 Stage319(319단계)에 넘긴다.
 - do_not_repeat(반복 금지): Stage318(318단계) score threshold(점수 임계값)만 좁게 올리고 내리는 repair(수리)를 반복하지 않는다.
 - reopen_condition(재개 조건): curve-pocket risk asymmetry(곡선 포켓 위험 비대칭)나 새 feature/risk surface(피처/위험 표면)가 있을 때만 다시 쓴다.
+
+## run319C_review_curve_pocket_risk_asymmetry_mt5_probe_v1 Stage319 validation pocket memory(319단계 검증 포켓 기억)
+
+- failure_boundary(실패 경계): 수익 규모가 커도 validation DD%(검증 드로다운 비율)와 underwater stretch(수중 구간)가 깊으면 ONNX-worthy(온엑스 가치 있음) 후보가 아니다.
+- preserved_clue(보존 단서): cp319D/cp319B/cp319F(319D/319B/319F 후보)는 Stage320(320단계) validation pocket controller(검증 포켓 제어기) 씨앗으로 쓴다.
+- do_not_repeat(반복 금지): volatility cap(변동성 상한)만 다시 조절하는 좁은 수리를 반복하지 않는다.

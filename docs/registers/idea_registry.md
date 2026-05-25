@@ -382,3 +382,16 @@ Register ideas when they become durable work, not for every passing thought.
 - result(결과): 수익 규모는 만들었으나 smooth curve(매끈한 곡선) 조건은 실패했다.
 - survivor_seed_count(생존 씨앗 수): `2`
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run319A_design_curve_pocket_risk_asymmetry_rebuild_packet_v1 curve_pocket_risk_asymmetry(곡선 포켓 위험 비대칭)
+
+- idea_id(아이디어 ID): `stage319_curve_pocket_risk_asymmetry`
+- hypothesis(가설): Stage318(318단계) 수익 표면에서 변동성/추세 과열 구간을 줄이면 수익 규모와 4-10 trades/day(일 4-10거래)를 유지하면서 곡선 포켓을 줄일 수 있다.
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## run319C_review_curve_pocket_risk_asymmetry_mt5_probe_v1 curve_pocket_risk_asymmetry_review(곡선 포켓 위험 비대칭 검토)
+
+- idea_id(아이디어 ID): `stage319_curve_pocket_risk_asymmetry_actual_review`
+- result(결과): profit scale(수익 규모)과 density(밀도)는 개선됐지만 validation pocket(검증 포켓)이 남았다.
+- survivor_seed_count(생존 씨앗 수): `4`
+- boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.

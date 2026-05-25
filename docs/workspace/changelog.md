@@ -3912,3 +3912,17 @@
 - judgment(판정): `actual_mt5_profit_scale_found_but_curve_pocket_gate_failed_stage319_opened`
 - effect(효과): Stage318(318단계)을 닫고 `319_onnx_candidate_campaign__curve_pocket_risk_asymmetry_rebuild`를 열었다.
 - boundary(경계): 운영 승격, 런타임 권위, ONNX(온엑스) 준비를 주장하지 않는다.
+
+## 2026-05-25 run319A Curve-pocket risk asymmetry materialization(319A 곡선 포켓 위험 비대칭 물질화)
+
+- status(상태): `completed_curve_pocket_risk_asymmetry_candidates_materialized_no_selection`
+- judgment(판정): `curve_pocket_risk_asymmetry_candidates_materialized_requires_actual_mt5_no_selection`
+- effect(효과): 후보 `6`개와 MT5 queue(MT5 대기열) `6`개를 만들었다.
+- boundary(경계): 선택 후보, Adapter(어댑터), ONNX(온엑스)를 주장하지 않는다.
+
+## 2026-05-25 run319C Curve-pocket risk asymmetry review(319C 곡선 포켓 위험 비대칭 검토)
+
+- status(상태): `completed_curve_pocket_risk_asymmetry_review_stage320_opened_no_selection`
+- judgment(판정): `actual_mt5_profit_scale_density_improved_but_validation_curve_pocket_failed_stage320_opened`
+- effect(효과): Stage319(319단계)을 닫고 `320_onnx_candidate_campaign__validation_pocket_drawdown_controller`를 열었다.
+- boundary(경계): 운영 승격, 런타임 권위, ONNX(온엑스) 준비를 주장하지 않는다.
