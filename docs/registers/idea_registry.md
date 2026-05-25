@@ -280,3 +280,14 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage309_split_coherent_profit_curve_source`
 - hypothesis(가설): split coherence(분할 일관성)를 강제하면 validation/OOS(검증/표본외) 양수 조각을 동시에 만들 수 있다.
 - evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+
+## stage310_runtime_positive_fragment_allocation
+
+- hypothesis(가설): Stage309(309단계)의 runtime positive fragments(런타임 양수 조각)를 allocation layer(배분 계층)로 묶으면 거래수와 곡선 품질이 같이 개선될 수 있다.
+- boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
+
+## run310C_review_runtime_positive_fragment_allocation_mt5_probe_v1 runtime_positive_fragment_allocation(런타임 양수 조각 배분)
+
+- idea_id(아이디어 ID): `stage310_runtime_positive_fragment_allocation`
+- hypothesis(가설): 양수 조각을 배분하면 거래수와 곡선 품질이 함께 개선될 수 있다.
+- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
