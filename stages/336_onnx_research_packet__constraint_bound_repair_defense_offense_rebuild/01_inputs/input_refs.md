@@ -94,3 +94,13 @@ Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected
 - regime_slice_schema_matrix(국면 조각 스키마 행렬): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/regime_slice_schema_matrix.csv`
 - run336I_review_queue(336I 검토 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/run336I_review_queue.csv`
 - final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/final_runner_scaffold_materialization_decision.json`
+
+## run336I Runner Scaffold Review(336I 러너 뼈대 검토)
+
+- scaffold_index_manifest_review(뼈대 색인/목록 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/scaffold_index_manifest_review.csv`
+- individual_scaffold_file_review(개별 뼈대 파일 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/individual_scaffold_file_review.csv`
+- proxy_mt5_scaffold_review(프록시/MT5 뼈대 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/proxy_mt5_scaffold_review.csv`
+- runtime_identity_scaffold_review(런타임 정체성 뼈대 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/runtime_identity_scaffold_review.csv`
+- runner_scaffold_acceptance(러너 뼈대 승인): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/runner_scaffold_acceptance_matrix.csv`
+- run336J_queue(336J 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/run336J_proxy_mt5_probe_materialization_queue.csv`
+- final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/final_runner_scaffold_review_decision.json`

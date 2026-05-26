@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild_v1`
-- current_run(현재 실행): `run336I_review_constraint_bound_runner_scaffolds_v1`
+- current_run(현재 실행): `run336J_materialize_proxy_expected_fresh_mt5_probe_inputs_v1`
 - active_stage(활성 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - target_surface(목표 표면): `constraint_bound_repair_defense_offense_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_constraint_bound_runner_scaffolds_materialized_no_execution`
-- decision(결정): `stage336H_runner_scaffolds_materialized_run336I_review_ready_no_selection`
+- status(상태): `completed_constraint_bound_runner_scaffold_review_no_execution`
+- decision(결정): `stage336I_runner_scaffolds_reviewed_run336J_proxy_mt5_probe_inputs_ready_no_selection`
+- run336I_summary(336I 요약): runner scaffold review(러너 뼈대 검토)를 `completed_constraint_bound_runner_scaffold_review_no_execution`로 완료했다. Effect(효과): individual scaffold review(개별 뼈대 검토) `31`행, proxy/MT5 review(프록시/MT5 검토) `7`행, run336J queue(336J 대기열) `7`행을 만들었다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336H_summary(336H 요약): runner scaffold(러너 뼈대) 물질화를 `completed_constraint_bound_runner_scaffolds_materialized_no_execution`로 완료했다. Effect(효과): scaffold index(뼈대 색인) `31`행, individual scaffold(개별 뼈대) `31`개, run336I review queue(336I 검토 대기열) `9`행을 만들었다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336G_summary(336G 요약): execution blueprint review(실행 청사진 검토)를 `completed_constraint_bound_execution_blueprint_review_no_selection`로 완료했다. Effect(효과): run336F blueprint(336F 청사진) `31`행을 검토하고 runner scaffold acceptance matrix(러너 뼈대 승인 행렬) `31`행, run336H queue(336H 대기열) `9`행을 만들었다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336F_summary(336F 요약): execution blueprint materialization(실행 청사진 물질화)을 `completed_constraint_bound_execution_blueprints_materialized_no_selection`로 완료했다. Effect(효과): blueprint catalog(청사진 목록) `31`행, negative control blueprint(부정 대조 청사진) `10`행, run336G review queue(336G 검토 대기열) `7`행을 만들었다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
