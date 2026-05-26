@@ -1,0 +1,9 @@
+gate,status,evidence_path,notes
+source_artifacts_present,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/source_artifact_hashes.json,all run333C signal payload and raw bar sources present
+queued_views_screened,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/proxy_kpi_by_view.csv,queued=15;kpi_rows=15
+proxy_trade_records_exist,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/proxy_trade_records.csv,proxy_trades=2222
+cost_ladder_complete,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/cost_stress_report.csv,cost_rows=105;expected=105
+curve_pocket_complete,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/curve_pocket_report.csv,curve_rows=150
+runtime_probe_queue_boundary,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/runtime_probe_branch_queue.csv,runtime_probe_design_rows=1;no MT5 run in run333D
+no_retune_guard,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/no_retune_guard_receipt.json,"no threshold, lot, model, ONNX, D/B rule, ATR SL/TP, or runtime handoff change."
+final_claim_guard,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/result_judgment_receipt.json,"proxy screen only; no Forward Passed/Failed, runtime authority, or Goal Achieve."

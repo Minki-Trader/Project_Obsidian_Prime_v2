@@ -1,0 +1,14 @@
+{
+  "data_source": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/cost_curve_input_queue.csv",
+    "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "signal timestamps and bar timestamps are UTC bar opens; proxy close uses 12 later M5 bars.",
+  "sample_scope": "15 queued run333C guarded signal payloads; one expected-invalid breadth negative-control is excluded.",
+  "missing_or_duplicate_check": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/proxy_coverage_audit.csv",
+  "feature_label_boundary": "no labels, future returns, or forward PnL are used to set guard rules.",
+  "split_boundary": "raw-forward proxy screen only; not train/validation selection and not MT5.",
+  "leakage_risk": "interpreting proxy KPI as Forward Passed or selecting a threshold from the proxy result.",
+  "data_hash_or_identity": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333D/source_artifact_hashes.json",
+  "integrity_judgment": "usable_for_proxy_cost_curve_screen_only"
+}

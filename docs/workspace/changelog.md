@@ -4241,3 +4241,13 @@
 - payload_views(페이로드 보기): `16`
 - next_action(다음 행동): `run333D_screen_guarded_payload_cost_curve_and_pocket_risk_v1`
 - effect(효과): run333D(333D 실행)의 cost/curve/pocket screen(비용/곡선/포켓 선별) 입력을 만들고, 후보 선택이나 Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage333D Cost Curve Pocket Screen(333D 비용 곡선 포켓 선별)
+
+- run333D(333D 실행): guarded signal payload(방어 신호 페이로드)를 cost/curve/pocket proxy(비용/곡선/포켓 대리검증)로 압박했다.
+- status(상태): `completed_guarded_payload_cost_curve_pocket_screen_no_forward_decision`
+- judgment(판정): `proxy_cost_curve_screen_completed_research_only_no_goal_achieve`
+- screen_survivor_count(선별 생존 수): `1`
+- screen_failure_count(선별 실패 수): `10`
+- next_action(다음 행동): `run333E_runtime_probe_queue_or_failure_memory_from_screen_v1`
+- effect(효과): 다음 run333E(333E 실행)의 runtime probe queue(런타임 탐침 대기열) 또는 failure memory(실패 기억) 입력을 만들고, 후보 선택이나 Goal Achieve(목표 달성)는 주장하지 않는다.
