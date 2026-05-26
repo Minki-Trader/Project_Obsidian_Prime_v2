@@ -4569,3 +4569,12 @@
 - action(행동): MT5 API(메타트레이더5 API)로 2026-04-14 이후 최신 US100 M5 broker data(브로커 데이터)를 확인하고, 6개 frozen ONNX handoff(고정 온엑스 인계)를 run336K 전용 report/telemetry identity(보고서/기록 정체성)로 Strategy Tester(전략 테스터)에 실행했다.
 - effect(효과): fresh MT5 runtime output(신규 MT5 런타임 출력)은 `6/6 completed(완료)`이고 US100 M5는 `2026-05-26T17:15:00Z` close(종가)까지 `8427`행 확보됐지만, feature CSV(피처 CSV)가 `2026-05-22/2026-05-23`에서 멈춰 latest feature handoff gap(최신 피처 인계 공백) `6/6`이다.
 - boundary(경계): 이 결과는 diagnostic-only(진단 전용)이며 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), live readiness(실거래 준비), deployment(배포), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336L Feature Handoff Repair Decision(336L 피처 인계 수리 결정)
+
+- run_id(실행 ID): `run336L_review_fresh_mt5_runtime_probe_and_repair_or_rebuild_decision_v1`
+- status(상태): `completed_live_safe_feature_handoff_repair_decision_no_forward_decision`
+- decision(결정): `stage336L_run336M_live_safe_feature_handoff_repair_queue_ready_no_selection`
+- action(행동): run336K fresh MT5 runtime probe(신규 MT5 런타임 탐침), proxy-MT5 difference(프록시-MT5 차이), live-safe overnight_return(실시간 안전 야간 수익률) overlap identity(겹친 행 정체성)를 함께 검토했다.
+- effect(효과): macro48/u42(거시48/US100 기술42)는 run336M(336M 실행) 수리 대기열로 보내고 core56(핵심56)은 equity refresh(주식 데이터 갱신) 전까지 제외한다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

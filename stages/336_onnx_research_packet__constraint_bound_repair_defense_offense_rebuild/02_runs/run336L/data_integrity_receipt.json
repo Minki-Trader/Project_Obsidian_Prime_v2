@@ -1,0 +1,53 @@
+{
+  "claim_boundary": "research_development_only_stage336L_feature_handoff_repair_decision_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "data_hash_or_identity": "stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336L/raw_symbol_coverage.csv",
+  "data_source": {
+    "historical_preload": "data/raw/mt5_bars/m5",
+    "run336K_fresh_raw": "stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336K/raw_refresh_probe",
+    "stage326_forward_fallback": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5"
+  },
+  "feature_label_boundary": "no labels, score threshold changes, or forward KPI filters are introduced in run336L",
+  "integrity_judgment": "usable_for_run336M_repair_queue_not_forward_decision",
+  "leakage_risk": "old overnight_return required current-day close key; live-safe repair removes that current-day close availability dependency",
+  "missing_or_duplicate_check": "combined raw is sorted and duplicate timestamps keep latest forward source priority",
+  "sample_scope": [
+    {
+      "alignment_missing_rows": 6357,
+      "feature_count": 56,
+      "feature_order_sha256": "84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89",
+      "feature_set_id": "core56_no_top3_weight_features",
+      "finite_missing_rows": 6357,
+      "first_valid_timestamp": "2026-04-14T16:35:00+00:00",
+      "last_valid_timestamp": "2026-05-22T23:00:00+00:00",
+      "required_symbols": "US100;VIX;US10YR;USDX;NVDA;AAPL;MSFT;AMZN;AMD;GOOGL.xnas;META;TSLA",
+      "scope_rows": 8427,
+      "valid_rows": 2070
+    },
+    {
+      "alignment_missing_rows": 2623,
+      "feature_count": 48,
+      "feature_order_sha256": "147d9acd038b2b175a130281525ff49540bf21b36df2952066712a91198b9c40",
+      "feature_set_id": "macro48_no_equity_breadth_or_top3",
+      "finite_missing_rows": 2798,
+      "first_valid_timestamp": "2026-04-14T03:05:00+00:00",
+      "last_valid_timestamp": "2026-05-26T17:15:00+00:00",
+      "required_symbols": "US100;VIX;US10YR;USDX",
+      "scope_rows": 8427,
+      "valid_rows": 5629
+    },
+    {
+      "alignment_missing_rows": 0,
+      "feature_count": 42,
+      "feature_order_sha256": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "feature_set_id": "us100_technical42_no_external",
+      "finite_missing_rows": 426,
+      "first_valid_timestamp": "2026-04-14T01:05:00+00:00",
+      "last_valid_timestamp": "2026-05-26T17:15:00+00:00",
+      "required_symbols": "US100",
+      "scope_rows": 8427,
+      "valid_rows": 8001
+    }
+  ],
+  "split_boundary": "fresh forward repair feasibility only",
+  "time_axis": "bar-close timestamp key plus broker-clock-to-event conversion; live-safe overnight uses prior completed cash-session close only"
+}
