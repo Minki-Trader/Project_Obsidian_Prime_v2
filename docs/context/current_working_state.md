@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness_v3`
-- current_run(현재 실행): `run330D_regime_attribution_v1`
+- current_run(현재 실행): `run330E_mt5_runtime_probe_or_block_v1`
 - active_stage(활성 단계): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness`
 - selected_research_baseline(선택 연구 기준선): `none`
 - source_stage(원천 단계): `329_onnx_rebuild__live_feature_control`
 - target_surface(목표 표면): `forward_safe_non_identity_control_surface_curve_review`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `stage330_run330C_score_curve_pressure_completed_regime_attribution_next`
-- decision(판정): `stage330C_score_curve_pressure_fragile_runtime_and_regime_review_next`
+- status(상태): `stage330_run330D_regime_source_attribution_completed_runtime_probe_next`
+- decision(판정): `stage330D_regime_source_pressure_runtime_probe_or_block_next`
+- run330D_summary(330D 요약): regime/source/direction attribution(국면/원천/방향 귀속)을 `completed_regime_source_attribution_no_forward_decision`로 닫았다. Effect(효과): 국면 포켓과 원천 취약성을 분리했지만 raw-forward MT5(원본 전진 MT5)가 없어 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 없다.
 - run330C_summary(330C 요약): score-curve/cost/lot/regime proxy(점수 곡선/비용/로트/국면 대리검증)와 Stage329F session MT5 reference(세션 MT5 참고)를 `completed_score_curve_cost_pressure_review_no_forward_decision`로 닫았다. Effect(효과): raw-forward MT5(원본 전진 MT5)가 없어 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 없다.
 - run330B_summary(330B 요약): forward-safe control surface materialization(전진 안전 대조 표면 물질화)을 `completed_forward_safe_control_surface_materialization_no_selection`로 닫았다. Effect(효과): 고정 threshold(임계값) score/signal payload(점수/신호 인계물), data audit(데이터 감사), ONNX parity(온엑스 동등성), raw/session gap guard(원본/세션 간극 방어)를 만들었고 선택 후보는 없다.
 - run330A_summary(330A 요약): forward-safe non-identity ONNX robustness design(전진 안전 비정체성 온엑스 강건성 설계)을 `completed_forward_safe_non_identity_design_no_selection`로 닫았다. Effect(효과): 후보 선택 없이 guardrail(방어 규칙), anti-overfit control(과적합 방어), runtime parity plan(런타임 동등성 계획), run330B materialization queue(330B 물질화 대기열)를 만들었다.
@@ -39,7 +40,7 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run330D_regime_attribution_v1`
+- next_action(다음 행동): `run330E_mt5_runtime_probe_or_block_v1`
 - claim_boundary(주장 경계): `research_development_only_fixed_threshold_control_surface_materialization_no_forward_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.

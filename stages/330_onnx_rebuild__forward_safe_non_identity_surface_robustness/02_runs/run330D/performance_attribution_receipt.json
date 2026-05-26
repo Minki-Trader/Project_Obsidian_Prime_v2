@@ -1,0 +1,10 @@
+{
+  "observed_change": "run330D decomposes run330C proxy and MT5 reference by regime, source view, and direction.",
+  "comparison_baseline": "run330C_forward_mt5_or_score_curve_review_v1",
+  "likely_drivers": "raw/session density, session-only MT5 reference, direction skew, month/hour/session pockets, volatility/ADX/VIX/USD/rate regimes",
+  "segment_checks": "session, hour, month, volatility, ADX, VIX, USD, rate, direction, source view",
+  "trade_shape": "source_view_attribution_matrix.csv and directional_fragility_report.csv",
+  "alternative_explanations": "score proxy is not MT5; raw-forward MT5 output is still missing",
+  "attribution_confidence": "medium_for_proxy_attribution_low_for_runtime_authority",
+  "next_probe": "run330E_mt5_runtime_probe_or_block_v1"
+}

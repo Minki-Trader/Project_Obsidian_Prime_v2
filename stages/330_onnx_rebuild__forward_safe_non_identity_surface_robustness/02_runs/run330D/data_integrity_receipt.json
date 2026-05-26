@@ -1,0 +1,14 @@
+{
+  "data_source": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_proxy_trade_records.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/session_mt5_reference_trade_records.csv"
+  ],
+  "time_axis": "Trade open/close timestamps are UTC-like strings carried from run330C score proxy and Stage329F MT5 reference.",
+  "sample_scope": "2026-04-14+ forward raw/session proxy plus old-session MT5 reference.",
+  "missing_or_duplicate_check": "Run330C coverage audit is inherited; run330D performs attribution only.",
+  "feature_label_boundary": "No new labels, thresholds, features, or model training are introduced.",
+  "split_boundary": "Latest forward remains read-only; Stage329F MT5 is reference only.",
+  "leakage_risk": "Attribution could tempt selection of c56 watchlist; result judgment keeps no selection.",
+  "data_hash_or_identity": "d26b1334d335e1fedb31e28285d3f94814b3fa771666d064fd681ebd3a0e5409",
+  "integrity_judgment": "usable_with_boundary_attribution_only"
+}
