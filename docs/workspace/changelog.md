@@ -4503,3 +4503,11 @@
 - decision(결정): `stage336C_inputs_reviewed_run336D_controlled_research_queue_ready_no_selection`
 - effect(효과): package(패키지) `6`개와 run336D queue(336D 대기열) `9`행을 만들고, proxy expected vs MT5 runtime probe(프록시 예상값 대 MT5 런타임 탐침) 비교를 다음 필수 계약으로 고정했다.
 - boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336D Constraint-Bound Implementation Materialization(336D 제약 기반 구현 물질화)
+
+- run_id(실행 ID): `run336D_materialize_constraint_bound_research_implementation_queue_v1`
+- status(상태): `completed_constraint_bound_research_implementation_queue_materialized_no_selection`
+- decision(결정): `stage336D_materialized_controlled_research_protocols_ready_for_review_no_selection`
+- effect(효과): protocol(계약) `9`개, branch-specific canary(분기 전용 카나리) `4`개, proxy/MT5 usability contract(프록시/MT5 활용성 계약) `7`행을 만들었다.
+- boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

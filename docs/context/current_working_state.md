@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild_v1`
-- current_run(현재 실행): `run336D_materialize_constraint_bound_research_implementation_queue_v1`
+- current_run(현재 실행): `run336E_review_constraint_bound_research_implementation_protocols_v1`
 - active_stage(활성 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - target_surface(목표 표면): `constraint_bound_repair_defense_offense_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_constraint_bound_materialized_input_review_no_selection`
-- decision(결정): `stage336C_inputs_reviewed_run336D_controlled_research_queue_ready_no_selection`
+- status(상태): `completed_constraint_bound_research_implementation_queue_materialized_no_selection`
+- decision(결정): `stage336D_materialized_controlled_research_protocols_ready_for_review_no_selection`
+- run336D_summary(336D 요약): constraint-bound implementation protocol materialization(제약 기반 구현 계약 물질화)을 `completed_constraint_bound_research_implementation_queue_materialized_no_selection`로 완료했다. Effect(효과): protocol(계약) `9`개, branch-specific negative control(분기 전용 부정 대조) `4`행, proxy expected vs MT5 usability contract(프록시 예상값 대 MT5 활용성 계약) `7`행을 만들고 `run336E_review_constraint_bound_research_implementation_protocols_v1`로 넘긴다. Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336C_summary(336C 요약): constraint-bound materialized input review(제약 기반 물질화 입력 검토)를 `completed_constraint_bound_materialized_input_review_no_selection`로 완료했다. Effect(효과): package(패키지) `6`개, run336D queue(336D 대기열) `9`행을 만들고, proxy expected result(프록시 예상 결과)와 MT5 runtime probe(런타임 탐침) 차이 및 활용성 판정을 다음 필수 산출물로 고정한다. Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336B_summary(336B 요약): constraint-bound materialized inputs(제약 기반 물질화 입력)을 `completed_constraint_bound_repair_defense_offense_inputs_materialized_no_selection`로 만들었다. Effect(효과): branch spec cards(분기 명세 카드) `6`행, proxy block manifest(프록시 차단 목록) `84`행, negative-control checklist(부정 대조 체크리스트) `60`행을 만들고 `run336C_review_constraint_bound_materialized_inputs_v1`로 넘긴다. Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336A_summary(336A 요약): constraint-bound rebuild packet design(제약 기반 재구성 묶음 설계)을 `completed_constraint_bound_rebuild_packet_design_no_selection`로 완료했다. Effect(효과): branch design(분기 설계) `6`개, proxy exclusion contract(프록시 차단 계약) `14`행, runtime parity contract(런타임 동등성 계약) `5`행을 만들고 `run336B_materialize_constraint_bound_repair_defense_offense_inputs_v1`로 넘긴다. Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.

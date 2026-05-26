@@ -40,3 +40,13 @@ Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected
 - negative_control_review(부정 대조 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/negative_control_enforcement_review.csv`
 - run336D_queue(336D 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/run336D_controlled_research_implementation_queue.csv`
 - final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/final_constraint_bound_input_review_decision.json`
+
+## run336D Constraint-Bound Implementation Materialization(336D 제약 기반 구현 물질화)
+
+- protocol_cards(계약 카드): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/controlled_research_protocol_cards.csv`
+- branch_specific_negative_controls(분기 전용 부정 대조): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/branch_specific_negative_control_matrix.csv`
+- proxy_expected_vs_mt5_usability_contract(프록시 예상값 대 MT5 활용성 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/proxy_expected_vs_mt5_usability_contract.csv`
+- runtime_preflight_manifest(런타임 사전점검 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/runtime_probe_execution_preflight_manifest.csv`
+- tier_pair_no_lookahead_contract(티어 쌍 및 미래 참조 금지 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/tier_pair_and_no_lookahead_contract.csv`
+- run336E_review_queue(336E 검토 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/run336E_review_queue.csv`
+- final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/final_constraint_bound_implementation_materialization_decision.json`
