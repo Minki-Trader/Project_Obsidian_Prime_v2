@@ -4495,3 +4495,11 @@
 - decision(결정): `stage336B_materialized_constraint_bound_inputs_ready_for_review_no_selection`
 - effect(효과): branch package(분기 패키지), proxy block(프록시 차단), gate template(게이트 틀), runtime preflight(런타임 사전 점검), negative control(부정 대조), regime slice(국면 조각) 입력을 만들었다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336C Constraint-Bound Input Review(336C 제약 기반 입력 검토)
+
+- run_id(실행 ID): `run336C_review_constraint_bound_materialized_inputs_v1`
+- status(상태): `completed_constraint_bound_materialized_input_review_no_selection`
+- decision(결정): `stage336C_inputs_reviewed_run336D_controlled_research_queue_ready_no_selection`
+- effect(효과): package(패키지) `6`개와 run336D queue(336D 대기열) `9`행을 만들고, proxy expected vs MT5 runtime probe(프록시 예상값 대 MT5 런타임 탐침) 비교를 다음 필수 계약으로 고정했다.
+- boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

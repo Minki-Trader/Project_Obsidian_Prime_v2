@@ -31,3 +31,12 @@ Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected
 - regime_slice_schema(국면 조각 구조): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/regime_slice_output_schema.csv`
 - package_manifest(패키지 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/materialized_input_package_manifest.csv`
 - run336C_review_queue(336C 검토 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/run336C_review_queue.csv`
+
+## run336C Constraint-Bound Input Review(336C 제약 기반 입력 검토)
+
+- branch_spec_review(분기 명세 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/branch_spec_card_review.csv`
+- proxy_block_review(프록시 차단 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/proxy_block_enforcement_review.csv`
+- runtime_preflight_review(런타임 사전점검 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/runtime_preflight_schema_review.csv`
+- negative_control_review(부정 대조 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/negative_control_enforcement_review.csv`
+- run336D_queue(336D 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/run336D_controlled_research_implementation_queue.csv`
+- final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336C/final_constraint_bound_input_review_decision.json`
