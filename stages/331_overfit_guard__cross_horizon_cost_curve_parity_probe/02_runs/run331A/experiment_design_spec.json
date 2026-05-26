@@ -1,0 +1,65 @@
+{
+  "run_id": "run331A_design_cross_horizon_cost_curve_parity_probe_packet_v1",
+  "hypothesis": "Stage330 preserved clues(보존 단서)는 retuning(재튜닝) 없이 cross-horizon/cost/curve/parity(교차 기간/비용/곡선/동등성) 압박을 견뎌야 다음 물질화로 갈 수 있다.",
+  "decision_use": "run331B materialization(331B 물질화) 범위와 차단 조건을 정한다; candidate selection(후보 선택)에는 쓰지 않는다.",
+  "comparison_baseline": "run330F raw-forward full-window MT5 result(원본 전진 전체 창 MT5 결과) and run330G high-pressure negative controls(높은 압력 부정 대조군)",
+  "control_variables": [
+    "candidate identity(후보 정체성)",
+    "ONNX model(온엑스 모델)",
+    "feature order(피처 순서)",
+    "score threshold(점수 임계값)",
+    "risk/lot/ATR SLTP logic(위험/수량/ATR 손절익절 로직)",
+    "runtime handoff fields(런타임 인계 필드)"
+  ],
+  "changed_variables": [
+    "evaluation slice only(평가 절편만 변경)",
+    "cost stress ladder only(비용 압박 사다리만 변경)",
+    "curve pocket partition only(곡선 포켓 분할만 변경)",
+    "parity evidence requirement only(동등성 근거 요구만 변경)"
+  ],
+  "sample_scope": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "runtime_scope": "run330E/run330F raw-forward MT5 evidence",
+    "start": "2026-04-14 07:00:00",
+    "end": "2026-05-22 18:10:00",
+    "trade_rows": 1347,
+    "attempts": [
+      "c56_bal_rf",
+      "c56_plain_rf",
+      "m48_bal_rf",
+      "m48_plain_rf",
+      "u42_bal_rf",
+      "u42_plain_rf"
+    ]
+  },
+  "success_criteria": [
+    "all planned views materialize without tuning(계획된 모든 보기 무튜닝 물질화)",
+    "preserved clues retain interpretable cost/curve/direction evidence(보존 단서가 비용/곡선/방향 근거를 유지)",
+    "runtime parity handoff paths are explicit(런타임 동등성 인계 경로가 명시됨)"
+  ],
+  "failure_criteria": [
+    "preserved clue fails cost+1 and curve pocket together(보존 단서가 비용+1과 곡선 포켓을 함께 실패)",
+    "cross-horizon slice reverses the full-window read(교차 기간 절편이 전체 창 판독을 뒤집음)",
+    "D/B source or runtime parity remains untraceable for claims needing it(D/B 원천 또는 런타임 동등성 추적 불가)"
+  ],
+  "invalid_conditions": [
+    "missing run330F or run330G artifacts(run330F 또는 run330G 산출물 누락)",
+    "timestamp parse failure(타임스탬프 파싱 실패)",
+    "candidate id mismatch across reports(보고서 간 후보 ID 불일치)",
+    "any threshold/lot/rule retuning(임계값/수량/규칙 재튜닝 발생)"
+  ],
+  "stop_conditions": [
+    "input artifact missing means block before materialization(입력 산출물 누락 시 물질화 전 차단)",
+    "less than two horizon views per preserved clue means downgrade claim(보존 단서별 기간 보기 2개 미만이면 주장 하향)",
+    "runtime handoff mismatch means runtime replay blocked(런타임 인계 불일치 시 런타임 재생 차단)"
+  ],
+  "evidence_plan": [
+    "candidate_probe_matrix.csv",
+    "cross_horizon_partition_plan.csv",
+    "cost_curve_probe_plan.csv",
+    "runtime_parity_handoff_plan.csv",
+    "run331B materialized no-retune controls"
+  ],
+  "claim_boundary": "research_development_only_cross_horizon_cost_curve_parity_design_no_threshold_retuning_no_candidate_selection_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

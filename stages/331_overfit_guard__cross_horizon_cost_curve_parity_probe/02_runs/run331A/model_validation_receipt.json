@@ -1,0 +1,18 @@
+{
+  "model_family": "Stage330 forward-safe non-identity ONNX clue set",
+  "target_and_label": "fixed Stage330 score/signal behavior, no new label",
+  "split_method": "runtime raw-forward plus planned cross-horizon slices",
+  "selection_metric": "none_no_selection",
+  "secondary_metrics": [
+    "cost ladder",
+    "curve pocket",
+    "direction split",
+    "runtime parity"
+  ],
+  "threshold_policy": "fixed_no_retune",
+  "overfit_risk": "single forward window and preserved-clue selection pressure",
+  "calibration_risk": "scores are used as fixed decision surface, not probability claims",
+  "comparison_baseline": "run330F full-window MT5 and run330G pressure matrix",
+  "validation_judgment": "exploratory_design_only",
+  "claim_boundary": "research_development_only_cross_horizon_cost_curve_parity_design_no_threshold_retuning_no_candidate_selection_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

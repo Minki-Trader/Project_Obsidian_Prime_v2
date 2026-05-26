@@ -4137,3 +4137,11 @@
 - judgment(판정): `negative_memory_and_preserved_clues_no_forward_pass_no_goal_achieve`
 - next_stage(다음 단계): `331_overfit_guard__cross_horizon_cost_curve_parity_probe`
 - effect(효과): Stage330(330단계)은 선택 후보 없이 닫고 Stage331(331단계)을 연구 검증 질문으로 열었다.
+
+## 2026-05-26 - Stage331A Cross-Horizon Cost Curve Parity Design(331A 교차 기간 비용 곡선 동등성 설계)
+
+- run331A(331A 실행): Stage330(330단계)의 preserved clue(보존 단서)와 negative control(부정 대조군)을 no-retune(무재튜닝) 검증 설계로 묶었다.
+- status(상태): `completed_cross_horizon_cost_curve_parity_probe_design_no_selection`
+- judgment(판정): `experiment_design_completed_research_only_no_goal_achieve`
+- next_action(다음 행동): `run331B_materialize_no_retune_replay_and_resampling_controls_v1`
+- effect(효과): 후보 선택 없이 run331B(331B 실행)의 물질화 대기열만 만든다.
