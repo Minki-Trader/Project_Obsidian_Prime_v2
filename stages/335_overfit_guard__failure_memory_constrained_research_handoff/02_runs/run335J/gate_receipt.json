@@ -1,0 +1,47 @@
+{
+  "failed_gates": [],
+  "required_gates": [
+    {
+      "detail": "queue_rows=11",
+      "evidence_path": "run335J_materialization_queue.csv",
+      "gate": "parent_queue_loaded",
+      "status": "passed"
+    },
+    {
+      "detail": "rows=132",
+      "evidence_path": "proxy_expected_numeric_values.csv",
+      "gate": "proxy_numeric_values_materialized",
+      "status": "passed"
+    },
+    {
+      "detail": "rows=132",
+      "evidence_path": "mt5_runtime_probe_result_bridge.csv",
+      "gate": "mt5_existing_runtime_values_materialized",
+      "status": "passed"
+    },
+    {
+      "detail": "rows=132",
+      "evidence_path": "proxy_mt5_difference_matrix.csv",
+      "gate": "difference_matrix_materialized",
+      "status": "passed"
+    },
+    {
+      "detail": "rows=11",
+      "evidence_path": "proxy_mt5_usability_decision_matrix.csv",
+      "gate": "diagnostic_usability_not_forward_usability",
+      "status": "passed"
+    },
+    {
+      "detail": "rows=6",
+      "evidence_path": "mt5_runtime_forensics_bridge.csv",
+      "gate": "actual_mt5_forensics_bridge",
+      "status": "passed"
+    },
+    {
+      "detail": "no candidate, no Forward Passed/Failed, no runtime authority, no Goal Achieve",
+      "evidence_path": "result_judgment.csv",
+      "gate": "claim_boundary_preserved",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "claim_boundary": "research_development_only_stage335J_proxy_mt5_existing_runtime_comparison_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "evidence_available": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/proxy_mt5_difference_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/proxy_mt5_usability_decision_matrix.csv"
+  ],
+  "evidence_missing": [
+    "fresh independent MT5 runtime probe per Stage335 branch",
+    "independent proxy source not derived from existing MT5 evidence"
+  ],
+  "judgment_label": "diagnostic_positive_forward_inconclusive",
+  "next_condition": "run335K_repair_independent_proxy_mt5_runtime_probe_materialization_v1",
+  "result_subject": "run335J_materialize_proxy_expected_values_and_mt5_runtime_probe_attempts_or_block_v1",
+  "user_explanation_hook": "The comparison is useful for diagnostics, but not enough for a forward pass/fail decision."
+}

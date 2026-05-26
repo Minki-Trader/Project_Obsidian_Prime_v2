@@ -1,0 +1,8 @@
+gate,status,evidence_path,detail
+parent_queue_loaded,passed,run335J_materialization_queue.csv,queue_rows=11
+proxy_numeric_values_materialized,passed,proxy_expected_numeric_values.csv,rows=132
+mt5_existing_runtime_values_materialized,passed,mt5_runtime_probe_result_bridge.csv,rows=132
+difference_matrix_materialized,passed,proxy_mt5_difference_matrix.csv,rows=132
+diagnostic_usability_not_forward_usability,passed,proxy_mt5_usability_decision_matrix.csv,rows=11
+actual_mt5_forensics_bridge,passed,mt5_runtime_forensics_bridge.csv,rows=6
+claim_boundary_preserved,passed,result_judgment.csv,"no candidate, no Forward Passed/Failed, no runtime authority, no Goal Achieve"

@@ -4396,3 +4396,19 @@
 - decision(결정): `stage335H_probe_inputs_reviewed_proxy_mt5_not_usable_ready_for_execution_or_block_design_no_selection`
 - effect(효과): run335G(335G 실행)의 11개 probe input package(탐침 입력 패키지)를 검토하고 proxy/MT5 근거 공백 22개를 다음 설계 조건으로 넘겼다.
 - boundary(경계): no candidate(후보 없음), no Forward Passed/Failed(전진 통과/실패 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음).
+
+## 2026-05-26 Stage335I Proxy-MT5 Design(335I 프록시-MT5 설계)
+
+- run_id(실행 ID): `run335I_design_proxy_expected_and_mt5_runtime_probe_or_block_v1`
+- status(상태): `completed_proxy_expected_mt5_runtime_probe_or_block_design_no_selection`
+- decision(결정): `stage335I_proxy_mt5_design_ready_for_materialization_no_selection`
+- effect(효과): 11개 Stage335 protocol(계약)을 proxy expected value(프록시 예상값), MT5 runtime result or block(MT5 런타임 결과 또는 차단), difference comparison(차이 비교) 물질화 대기열로 바꿨다.
+- boundary(경계): no candidate(후보 없음), no Forward Passed/Failed(전진 통과/실패 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음).
+
+## 2026-05-26 Stage335J Proxy-MT5 Numeric Comparison(335J 프록시-MT5 숫자 비교)
+
+- run_id(실행 ID): `run335J_materialize_proxy_expected_values_and_mt5_runtime_probe_attempts_or_block_v1`
+- status(상태): `completed_proxy_expected_and_existing_mt5_runtime_result_comparison_no_selection`
+- decision(결정): `stage335J_proxy_mt5_existing_runtime_comparison_diagnostic_usable_not_forward_usable_no_selection`
+- effect(효과): proxy expected values(프록시 예상값), existing MT5 runtime values(기존 MT5 런타임 값), difference matrix(차이 행렬), usability decision(활용 가능성 결정)을 만들었다.
+- boundary(경계): diagnostic usable(진단 활용 가능)이나 forward pass/fail usable(전진 통과/실패 활용 가능)은 아님. Goal Achieve(목표 달성)는 주장하지 않는다.

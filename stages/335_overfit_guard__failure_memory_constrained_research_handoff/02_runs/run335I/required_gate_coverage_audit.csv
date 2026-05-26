@@ -1,0 +1,10 @@
+gate,status,evidence_path,detail
+parent_queue_loaded,passed,run335I_proxy_mt5_execution_or_block_design_queue.csv,queue_rows=11
+proxy_expected_design_rows,passed,proxy_expected_value_design_matrix.csv,design_rows=11;schema_rows=132
+mt5_runtime_design_rows,passed,mt5_runtime_probe_or_block_design.csv,mt5_rows=11
+environment_preflight_recorded,passed,mt5_environment_preflight.csv,preflight_rows=5;passed=True
+difference_contract_rows,passed,proxy_mt5_difference_comparison_contract.csv,difference_rows=132
+usability_rules_not_claimed,passed,proxy_mt5_usability_judgment_rule.csv,usability_rows=11
+no_retune_guard_locked,passed,forbidden_retune_audit.csv,no_retune_rows=11
+next_materialization_queue,passed,run335J_materialization_queue.csv,queue_rows=11
+claim_boundary_preserved,passed,result_judgment.csv,"no candidate selection, no forward pass/fail, no runtime authority, no goal achieve"

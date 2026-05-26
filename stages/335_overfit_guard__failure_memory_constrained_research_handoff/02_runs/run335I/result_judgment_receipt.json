@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "research_development_only_stage335I_proxy_mt5_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "evidence_available": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335I/required_gate_coverage_audit.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335I/run335J_materialization_queue.csv"
+  ],
+  "evidence_missing": [
+    "proxy expected numeric values",
+    "MT5 tester report",
+    "runtime telemetry",
+    "proxy-MT5 difference table"
+  ],
+  "judgment_label": "exploratory_design_completed",
+  "next_condition": "run335J_materialize_proxy_expected_values_and_mt5_runtime_probe_attempts_or_block_v1",
+  "result_subject": "run335I_design_proxy_expected_and_mt5_runtime_probe_or_block_v1",
+  "user_explanation_hook": "The comparison is now designed, but no proxy or MT5 numeric result can be used yet."
+}

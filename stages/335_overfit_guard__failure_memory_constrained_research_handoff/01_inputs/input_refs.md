@@ -79,3 +79,19 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - proxy_mt5_evidence_gap_register(프록시-MT5 근거 공백 등록부): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/proxy_mt5_evidence_gap_register.csv`
 - run335I_queue(335I 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/run335I_proxy_mt5_execution_or_block_design_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335H_probe_input_materialization_review.md`
+
+## run335I Proxy-MT5 Design(335I 프록시-MT5 설계)
+
+- proxy_expected_value_schema(프록시 예상값 구조): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335I/proxy_expected_value_schema.csv`
+- mt5_runtime_probe_or_block_design(MT5 런타임 탐침 또는 차단 설계): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335I/mt5_runtime_probe_or_block_design.csv`
+- difference_contract(차이 비교 계약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335I/proxy_mt5_difference_comparison_contract.csv`
+- run335J_queue(335J 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335I/run335J_materialization_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335I_proxy_expected_mt5_runtime_probe_or_block_design.md`
+
+## run335J Proxy-MT5 Numeric Comparison(335J 프록시-MT5 숫자 비교)
+
+- proxy_expected_numeric_values(프록시 예상 숫자값): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/proxy_expected_numeric_values.csv`
+- mt5_runtime_probe_result_bridge(MT5 런타임 탐침 결과 연결): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/mt5_runtime_probe_result_bridge.csv`
+- difference_matrix(차이 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/proxy_mt5_difference_matrix.csv`
+- usability_decision(활용 가능성 결정): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/proxy_mt5_usability_decision_matrix.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335J_proxy_mt5_existing_runtime_comparison.md`

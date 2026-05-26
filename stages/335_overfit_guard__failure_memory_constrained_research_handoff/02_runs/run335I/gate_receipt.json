@@ -1,0 +1,59 @@
+{
+  "failed_gates": [],
+  "required_gates": [
+    {
+      "detail": "queue_rows=11",
+      "evidence_path": "run335I_proxy_mt5_execution_or_block_design_queue.csv",
+      "gate": "parent_queue_loaded",
+      "status": "passed"
+    },
+    {
+      "detail": "design_rows=11;schema_rows=132",
+      "evidence_path": "proxy_expected_value_design_matrix.csv",
+      "gate": "proxy_expected_design_rows",
+      "status": "passed"
+    },
+    {
+      "detail": "mt5_rows=11",
+      "evidence_path": "mt5_runtime_probe_or_block_design.csv",
+      "gate": "mt5_runtime_design_rows",
+      "status": "passed"
+    },
+    {
+      "detail": "preflight_rows=5;passed=True",
+      "evidence_path": "mt5_environment_preflight.csv",
+      "gate": "environment_preflight_recorded",
+      "status": "passed"
+    },
+    {
+      "detail": "difference_rows=132",
+      "evidence_path": "proxy_mt5_difference_comparison_contract.csv",
+      "gate": "difference_contract_rows",
+      "status": "passed"
+    },
+    {
+      "detail": "usability_rows=11",
+      "evidence_path": "proxy_mt5_usability_judgment_rule.csv",
+      "gate": "usability_rules_not_claimed",
+      "status": "passed"
+    },
+    {
+      "detail": "no_retune_rows=11",
+      "evidence_path": "forbidden_retune_audit.csv",
+      "gate": "no_retune_guard_locked",
+      "status": "passed"
+    },
+    {
+      "detail": "queue_rows=11",
+      "evidence_path": "run335J_materialization_queue.csv",
+      "gate": "next_materialization_queue",
+      "status": "passed"
+    },
+    {
+      "detail": "no candidate selection, no forward pass/fail, no runtime authority, no goal achieve",
+      "evidence_path": "result_judgment.csv",
+      "gate": "claim_boundary_preserved",
+      "status": "passed"
+    }
+  ]
+}
