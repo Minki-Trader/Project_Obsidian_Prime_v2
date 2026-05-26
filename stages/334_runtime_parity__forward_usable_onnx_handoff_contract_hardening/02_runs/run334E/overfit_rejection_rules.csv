@@ -1,0 +1,6 @@
+rule_id,trigger,judgment,effect
+reject_threshold_retune,any run changes decision_threshold or margin threshold using forward evidence,invalid_overfit_repair,prevents forward-data threshold fitting
+reject_lot_optimization,any run changes lot size to improve drawdown or recovery,invalid_lot_repair,keeps lot-normalized evidence separate from optimization
+reject_date_or_hour_pruning,"any run removes a losing date, hour, month, or regime pocket without pre-forward rule source",invalid_pocket_overfit,prevents curve pocket fitting
+reject_direction_drop_as_fix,any run drops sell or buy direction only because run334D attribution is weak,diagnostic_only_until_predeclared_feature_source,keeps long/short attribution from becoming an after-the-fact rule edit
+reject_db_attribution_claim,any run claims D/B source attribution for Stage330 non-identity single-surface evidence,invalid_source_claim,keeps absent D/B tags from being invented

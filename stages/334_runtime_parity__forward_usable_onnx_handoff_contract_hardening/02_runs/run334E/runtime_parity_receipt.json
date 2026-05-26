@@ -1,0 +1,21 @@
+{
+  "known_differences": [
+    "This is a design packet and does not launch MT5.",
+    "Stage330 non-identity ONNX evidence is not cp322A exact identity.",
+    "D/B source tags are unavailable for Stage330 single-surface evidence."
+  ],
+  "parity_check": "runtime identity requirements and queue lineage are materialized for the next run.",
+  "parity_identity": {
+    "lineage_rows": 6,
+    "queue_rows": 42,
+    "run330e_manifest_sha256": "8d1eb7270ae503459789d8e72b60922ab3c4c93f6354ee69b03b7913744ca16a",
+    "run334d_all_six_sha256": "a49c4bc357d9dbb7129dcd7cc1f18233b27f51998721ce6299c14f829c14ca39"
+  },
+  "research_path": "stage_pipelines/stage334/design_no_retune_nonidentity_stress_probe.py",
+  "runtime_claim_boundary": "design_only_no_runtime_authority",
+  "runtime_path": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F"
+  ],
+  "shared_contract": "run334F queue must preserve feature matrix, ONNX path/hash, trade records, slice reports, fixed threshold, and no-selection boundary."
+}

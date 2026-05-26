@@ -33,3 +33,11 @@ Effect(효과): 다음 단계는 positive KPI(긍정 핵심지표)를 바로 후
 - run334D_regime(334D 국면): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/regime_slice_reconciliation_summary.csv`
 - run334D_memory(334D 기억): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/preserved_clue_and_failure_memory.csv`
 - run334D_final_decision(334D 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/final_reconciliation_decision.json`
+
+## run334E No-Retune Stress Probe Design Outputs(334E 무재튜닝 압박 탐침 설계 출력)
+
+- run334E_contract(334E 계약): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/no_retune_stress_probe_contract.csv`
+- run334E_rejection_rules(334E 거절 규칙): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/overfit_rejection_rules.csv`
+- run334E_matrix(334E 행렬): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/stress_probe_matrix.csv`
+- run334F_queue(334F 대기열): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/run334F_materialization_queue.csv`
+- run334E_final_decision(334E 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/final_stress_probe_design_decision.json`

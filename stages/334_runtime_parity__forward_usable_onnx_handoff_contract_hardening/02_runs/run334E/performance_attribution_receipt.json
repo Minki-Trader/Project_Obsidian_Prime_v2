@@ -1,0 +1,33 @@
+{
+  "alternative_explanations": [
+    "short forward window noise",
+    "tester cost assumptions",
+    "single-surface source attribution limits"
+  ],
+  "attribution_confidence": "medium_design_only",
+  "comparison_baseline": "run334D reconciliation rows",
+  "likely_drivers": [
+    "thin PF",
+    "cost sensitivity",
+    "rolling curve pocket",
+    "long underwater stretch",
+    "short-side loss",
+    "rate/ADX/month/hour loss slices"
+  ],
+  "next_probe": "run334F_materialize_no_retune_nonidentity_stress_probe_inputs_v1",
+  "observed_change": "run334E transforms run334D preserved clues and failure memory into stress axes.",
+  "segment_checks": [
+    "cost_plus_1",
+    "cost_plus_2",
+    "rolling_worst_curve",
+    "worst_regime_slice",
+    "directional_side",
+    "underwater_stretch",
+    "runtime_identity"
+  ],
+  "trade_shape": {
+    "amber_attempt_count": 3,
+    "red_attempt_count": 3,
+    "stress_queue_rows": 42
+  }
+}

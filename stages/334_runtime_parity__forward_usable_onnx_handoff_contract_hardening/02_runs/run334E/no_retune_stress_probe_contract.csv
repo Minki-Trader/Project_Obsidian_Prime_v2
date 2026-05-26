@@ -1,0 +1,5 @@
+contract_id,requirement,allowed,forbidden,effect
+all_six_carry_forward,carry all six reconciled non-identity attempts,all attempts remain in the stress matrix,dropping weak attempts before the stress design,prevents KPI cherry-pick from c56_plain_rf and m48_plain_rf
+no_forward_retune,"fixed existing model, feature order, score threshold, lot, risk, ATR SL/TP, and runtime handoff",diagnostic replay and stress labels,"model training, threshold search, lot optimization, rule rewrite, date-pocket exclusion",keeps the probe from becoming a second overfit loop
+stress_is_diagnostic,"cost, curve, regime, direction, and underwater axes are evidence axes only",rank severity and materialize fixed-input checks,selecting a candidate because one stress axis looks better,"turns positive rows into research clues, not promotion claims"
+runtime_identity_required,feature/model/set/report/telemetry identity must stay attached,manifested reuse of Stage330E/330F evidence,anonymous report reuse or untracked handoff files,keeps runtime parity visible before any future MT5 run
