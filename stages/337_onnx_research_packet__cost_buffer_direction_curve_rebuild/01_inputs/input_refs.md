@@ -138,3 +138,15 @@ Effect(효과): 다음 실행은 이 패키지 명세들이 실제 runner scaffo
 - run337J_queue(337J 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/run337J_runner_scaffold_materialization_queue.csv`
 
 Effect(효과): 다음 실행은 이 검토 결과를 근거로 비실행 runner scaffold(러너 뼈대)를 만든다.
+
+## run337J Outputs(337J 산출물)
+
+- runner_scaffold_source_lineage(러너 골격 원천 계보): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/runner_scaffold_source_lineage.csv`
+- runner_scaffold_family_manifest(러너 골격 가족 목록): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/runner_scaffold_family_manifest.csv`
+- runner_scaffold_index(러너 골격 색인): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/runner_scaffold_index.csv`
+- preflight_checklist(사전점검 목록): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/preflight_checklist.csv`
+- blocked_execution_command(차단 실행 명령): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/blocked_execution_command.csv`
+- claim_boundary_receipt(주장 경계 영수증): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/claim_boundary_receipt.json`
+- run337K_queue(337K 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/run337K_runner_scaffold_review_queue.csv`
+
+Effect(효과): 다음 실행은 실제 실행이 아니라, 이 골격들이 실행 가능한 준비 상태인지 먼저 검토한다.

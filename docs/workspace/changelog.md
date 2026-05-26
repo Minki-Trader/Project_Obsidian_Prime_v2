@@ -4695,3 +4695,12 @@
 - action(행동): run337H(337H 실행)의 package spec(패키지 명세)을 검토하고 run337J(337J 실행) runner scaffold(러너 뼈대) 물질화 대기열을 만들었다.
 - effect(효과): 다음 실행은 실제 실행 전 단계의 러너 뼈대만 만들 수 있고, 학습과 MT5 실행은 계속 닫힌다.
 - boundary(경계): model training(모델 학습), MT5 execution(MT5 실행), selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage337J Runner Scaffold Materialization(337J 러너 골격 물질화)
+
+- run_id(실행 ID): `run337J_materialize_runner_scaffolds_v1`
+- status(상태): `completed_runner_scaffolds_materialized_no_training_no_mt5`
+- decision(결정): `stage337J_runner_scaffolds_ready_for_run337K_review_no_training_no_mt5_no_selection`
+- action(행동): run337I(337I 실행)의 승인 package family(패키지 묶음)를 비실행 runner scaffold(러너 골격), preflight checklist(사전점검 목록), blocked execution command(차단 실행 명령)로 물질화했다.
+- effect(효과): 다음 run337K(337K 실행)는 실제 실행 전에 원천 계보, 사전점검, 차단 명령, 주장 경계를 검토할 수 있다.
+- boundary(경계): model training(모델 학습), MT5 execution(MT5 실행), selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
