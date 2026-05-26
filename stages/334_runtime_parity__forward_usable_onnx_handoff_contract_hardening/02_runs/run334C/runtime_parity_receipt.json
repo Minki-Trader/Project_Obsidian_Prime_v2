@@ -1,0 +1,23 @@
+{
+  "known_differences": [
+    "cp322A exact is blocked by missing route signal",
+    "run333E is a probability bridge reference",
+    "future non-identity queue uses Stage330E existing MT5 outputs and must be reconciled as all-six, not selected by best KPI"
+  ],
+  "parity_check": "file existence and hash check for reports, telemetry, set/ini, model, feature matrix; no new MT5 execution in run334C",
+  "parity_identity": {
+    "all_future_rows_ready": true,
+    "future_ready_count": 6,
+    "future_total_count": 6
+  },
+  "research_path": "stage_pipelines/stage334/design_subject_separated_runtime_probe_or_block.py",
+  "runtime_claim_boundary": "runtime_probe_design_only",
+  "runtime_path": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5_runtime_probe_summary.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5_runtime_probe_summary.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/*.set",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/reports/*.htm",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/runtime_telemetry/*.csv"
+  ],
+  "shared_contract": "subject_id, feature order/source, model source, threshold source, set/ini, report, telemetry, and claim boundary must travel together."
+}

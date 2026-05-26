@@ -4283,3 +4283,11 @@
 - judgment(판정): `handoff_inputs_materialized_research_only_no_goal_achieve`
 - next_action(다음 행동): `run334C_design_subject_separated_runtime_probe_or_block_v1`
 - effect(효과): input materialization(입력 물질화) 전용이므로 selected candidate(선택 후보), Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage334C Subject Runtime Probe Or Block(334C 대상 런타임 탐침 또는 차단)
+
+- run334C(334C 실행): cp322A exact block(322A 정확 동일 차단), run333E reference-only(333E 참고 전용), future non-identity all-six reconciliation queue(미래 비정체성 6개 전체 대조 대기열)를 만들었다.
+- status(상태): `completed_subject_separated_runtime_probe_or_block_design_no_selection`
+- judgment(판정): `runtime_probe_block_design_completed_research_only_no_goal_achieve`
+- next_action(다음 행동): `run334D_reconcile_existing_non_identity_runtime_probe_evidence_no_selection_v1`
+- effect(효과): runtime probe design(런타임 탐침 설계) 전용이므로 selected candidate(선택 후보), Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

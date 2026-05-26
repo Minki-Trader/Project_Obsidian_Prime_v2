@@ -18,3 +18,9 @@ Effect(효과): 다음 단계는 positive KPI(긍정 핵심지표)를 바로 후
 - run334B_package_index(334B 패키지 색인): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/source_authority_gate_receipt.csv`
 - run334B_runtime_probe_queue(334B 런타임 탐침 대기열): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/stage334C_runtime_probe_design_queue.csv`
 - run334B_final_decision(334B 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/final_materialization_decision.json`
+
+## run334C Runtime Probe Or Block Outputs(334C 런타임 탐침 또는 차단 출력)
+
+- run334C_decision_matrix(334C 결정 행렬): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334C/runtime_probe_or_block_decision_matrix.csv`
+- run334C_future_queue(334C 미래 대기열): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334C/future_non_identity_runtime_reconciliation_queue.csv`
+- run334C_final_decision(334C 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334C/final_runtime_probe_or_block_decision.json`
