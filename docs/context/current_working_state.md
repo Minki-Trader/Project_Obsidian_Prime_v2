@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v16`
-- current_run(현재 실행): `run335P_materialize_balanced_repair_defense_offense_research_inputs_v1`
+- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v17`
+- current_run(현재 실행): `run335Q_review_balanced_repair_defense_offense_research_inputs_v1`
 - active_stage(활성 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - target_surface(목표 표면): `failure_memory_constrained_research_handoff`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_runtime_metric_usability_and_repair_decision_no_forward_decision`
-- decision(결정): `stage335O_proxy_context_only_runtime_metrics_usable_with_boundary_repair_defense_offense_queue`
+- status(상태): `completed_balanced_repair_defense_offense_inputs_materialized_no_forward_decision`
+- decision(결정): `stage335P_balanced_inputs_materialized_proxy_blocked_exact_join_repair_ready_no_selection`
+- run335P_summary(335P 요약): repair/defense/offense research inputs(수리/방어/공격 연구 입력)을 `completed_balanced_repair_defense_offense_inputs_materialized_no_forward_decision`로 물질화했다. Effect(효과): exact join gap(정확 조인 공백)은 same-bar floor(동일 봉 보정)로 귀속 전용 수리 가능하고, proxy(프록시)는 selection(선택)에서 차단하며, `run335Q_review_balanced_repair_defense_offense_research_inputs_v1` 검토 대기열로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335O_summary(335O 요약): runtime metric usability/repair decision(런타임 지표 활용성/수리 결정)을 `completed_runtime_metric_usability_and_repair_decision_no_forward_decision`로 완료했다. Effect(효과): proxy(프록시)는 selection/Forward decision(선택/전진 판정)에는 `not_usable`이고, MT5 structured metrics(구조화 지표)는 `run335P_materialize_balanced_repair_defense_offense_research_inputs_v1`의 repair/defense/offense inputs(수리/방어/공격 입력)으로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335N_summary(335N 요약): branch-specific runtime metric materialization(분기별 런타임 지표 물질화)을 `completed_branch_specific_runtime_metric_materialization_no_forward_decision`로 완료했다. Effect(효과): MT5 report(보고서)에서 trade ledger(거래 장부) `1347`행과 branch runtime metric matrix(분기 런타임 지표 행렬) `270`행을 만들었고, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335M_summary(335M 요약): branch-specific runtime metric extraction design(분기별 런타임 지표 추출 설계)을 `completed_branch_specific_runtime_metric_extraction_design_no_forward_decision`로 완료했다. Effect(효과): contract rows(계약 행) `45`개와 run335N materialization queue(335N 물질화 대기열) `9`개를 만들어 repeated aggregate proxy(반복 집계 프록시)를 분기별 forward judgment(전진 판정) 근거로 쓰는 경로를 차단했다.

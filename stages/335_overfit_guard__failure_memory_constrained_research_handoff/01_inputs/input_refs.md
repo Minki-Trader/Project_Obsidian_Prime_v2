@@ -143,3 +143,13 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - defense_queue(방어 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/defensive_guard_queue.csv`
 - offense_queue(공격 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/offensive_research_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335O_runtime_metric_usability_and_repair_decision.md`
+
+## run335P Balanced Repair Defense Offense Inputs(335P 균형형 수리 방어 공격 입력)
+
+- exact_join_gap_repair_ledger(정확 조인 수리 장부): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/exact_join_gap_repair_ledger.csv`
+- proxy_bridge_rejection_matrix(프록시 차단 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/proxy_bridge_rejection_matrix.csv`
+- branch_specific_proxy_rebuild_spec(분기별 프록시 재구축 규격): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/branch_specific_proxy_rebuild_spec.csv`
+- predeclared_research_constraints(사전 선언 연구 제약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/predeclared_research_constraints.csv`
+- balanced_input_packages(균형 입력 패키지): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/balanced_repair_defense_offense_input_packages.csv`
+- run335Q_review_queue(335Q 검토 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/run335Q_review_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335P_balanced_repair_defense_offense_inputs.md`
