@@ -11,3 +11,12 @@
 - run334G_overfit_rejection_audit(334G 과적합 거절 감사): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/overfit_rejection_audit.csv`
 
 Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)을 직접 제외 조건으로 쓰지 않고, 먼저 predeclared protocol(사전 선언 계약)을 만든다.
+
+## run335A Design Outputs(335A 설계 출력)
+
+- failure_axis_taxonomy(실패 축 분류): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/failure_axis_taxonomy.csv`
+- research_protocol_queue(연구 계약 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/research_protocol_queue.csv`
+- next_materialization_contract(다음 물질화 계약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/next_materialization_contract.csv`
+- negative_control_plan(부정 대조 계획): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/negative_control_plan.csv`
+- anti_overfit_design_receipt(과적합 방어 설계 영수증): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/anti_overfit_design_receipt.json`
+- final_design_decision(최종 설계 결정): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/final_design_decision.json`

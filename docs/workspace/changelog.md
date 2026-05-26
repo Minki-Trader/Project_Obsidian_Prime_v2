@@ -4332,3 +4332,11 @@
 - next_stage(다음 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - next_action(다음 행동): `run335A_design_failure_memory_constrained_research_packet_v1`
 - effect(효과): 실패 기억은 다음 연구의 제약으로 쓰되, forward pocket(전진 포켓)을 직접 필터로 쓰는 overfit path(과적합 경로)는 금지한다.
+
+## 2026-05-26 - Stage335A Failure-Memory Constrained Research Packet(335A 실패 기억 제약 연구 패킷)
+
+- run335A(335A 실행): Stage334(334단계)의 실패 축을 predeclared research constraints(사전 선언 연구 제약)로 변환했다.
+- status(상태): `completed_failure_memory_constrained_research_packet_design_no_selection`
+- judgment(판정): `stage335A_predeclared_research_constraints_ready_no_goal_achieve`
+- next_action(다음 행동): `run335B_materialize_failure_memory_guard_inputs_v1`
+- effect(효과): direct forward-pocket filtering(전진 포켓 직접 필터링), threshold retuning(임계값 재튜닝), lot optimization(로트 최적화)을 금지하고 run335B(335B 실행)의 입력 물질화로 넘긴다.

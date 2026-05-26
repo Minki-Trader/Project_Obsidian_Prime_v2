@@ -1,0 +1,7 @@
+gate,status,evidence,effect,notes
+source_artifact_presence,pass,source_artifact_hashes.json,Design is tied to Stage334 closeout and run334G failure memory.,all sources present
+failure_axis_coverage,pass,failure_axis_taxonomy.csv,All Stage334 failure axes are converted to research constraints.,axis_rows=7
+no_retune_guard,pass,anti_overfit_design_receipt.json,"Direct pocket filtering, threshold retuning, and lot optimization remain forbidden.",forbidden repair paths blocked
+paired_tier_contract,pass,split_and_tier_reporting_contract.csv,"Future scoring must report Tier A, Tier B, and combined views.",design-only contract ready
+materialization_next_step,pass,next_materialization_contract.csv,run335B can materialize guard inputs without training or selection.,next_action=run335B_materialize_failure_memory_guard_inputs_v1
+final_claim_guard,pass,result_judgment.csv,"No Forward Passed/Failed, runtime authority, or Goal Achieve is claimed.",research_development_only_stage335A_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve

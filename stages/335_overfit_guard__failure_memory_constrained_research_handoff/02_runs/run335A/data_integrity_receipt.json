@@ -1,0 +1,33 @@
+{
+  "data_hash_or_identity": {
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/attempt_failure_memory_review.csv": "e07f00c5dc46be17b9f06c107e2f124d88d1fe625d85919de335089fcd89f753",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/axis_failure_heatmap.csv": "96c71f627ab9799c9a9be9772eccd8186f0b97884e2bdfa43608285e3d36c426",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/final_stress_review_decision.json": "f1a348b3f81945356976a1d2984aca3e477495a3e779fdcb3edf5b6b003b7f98",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/overfit_rejection_audit.csv": "ae7c3857e5b9da9783b039dce7c204e16fee31fd9fce3750c870ac548b892c78",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/runtime_identity_review.csv": "47b16fb39937a4ff3bb9c3740ebf9acca5a984d408c9157083e127588a0bfcf7",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/final_stage_closeout_decision.json": "29e4701e2cf94502b6c71292ca0c7b602aeb637b7f278eea198d8ad162f1fd3d",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage334_closeout_summary.csv": "abe641e1b7ec140a0231954eb8f4ef3aa99d5309cb05e9e15e1da93260df2049",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage334_to_stage335_failure_memory_handoff.csv": "16b568a8c85072888797afda0d33e9994a8662b4c7582bf06fe690dcb7e0188e",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage335_open_plan.csv": "3825c83a72683b9f58f0a8059361ca71af0cd4cf17667d8fa99237d874af4dca",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/03_reviews/run334H_stage334_closeout_open_stage335.md": "c44db1be11fc721f30945be9ddf6694b89e1e7067c6c52a2d53d135c84ff0320"
+  },
+  "data_source": [
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/03_reviews/run334H_stage334_closeout_open_stage335.md",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/final_stage_closeout_decision.json",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage334_closeout_summary.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage334_to_stage335_failure_memory_handoff.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage335_open_plan.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/attempt_failure_memory_review.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/axis_failure_heatmap.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/runtime_identity_review.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/overfit_rejection_audit.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/final_stress_review_decision.json"
+  ],
+  "feature_label_boundary": "no features or labels are generated in run335A; future features must be timestamp-safe",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_risk": "direct use of Stage334 forward pockets as filters is the main leakage/overfit path and is forbidden",
+  "missing_or_duplicate_check": "deferred to run335B guard input materialization with required manifest",
+  "sample_scope": "Stage334 failure-memory artifacts only; no new forward fitting",
+  "split_boundary": "WFO and paired Tier contract must be written before scoring or model training",
+  "time_axis": "run335A does not rebuild bars; future materialization must state bar timestamp and timezone before scoring"
+}

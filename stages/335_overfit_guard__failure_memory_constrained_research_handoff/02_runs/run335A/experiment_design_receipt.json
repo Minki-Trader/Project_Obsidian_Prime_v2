@@ -1,0 +1,29 @@
+{
+  "changed_variables": "research protocol and evidence requirements only",
+  "comparison_baseline": "Stage334 run334G no-retune stress review and Stage334H failure-memory handoff",
+  "control_variables": [
+    "no model training in run335A",
+    "no threshold retuning",
+    "no lot optimization",
+    "no direct forward pocket filtering",
+    "paired Tier reporting remains required"
+  ],
+  "decision_use": "Design only; may authorize run335B guard-input materialization but cannot select or promote a candidate.",
+  "evidence_plan": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/source_artifact_hashes.json",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/failure_axis_taxonomy.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/research_protocol_queue.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/next_materialization_contract.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/negative_control_plan.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/predeclared_evidence_plan.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/split_and_tier_reporting_contract.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/runtime_parity_requirement_bridge.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/anti_overfit_design_receipt.json"
+  ],
+  "failure_criteria": "any axis requires forbidden tuning or direct pocket filtering",
+  "hypothesis": "Stage334 failure axes can be converted into predeclared research constraints without creating another overfit repair.",
+  "invalid_conditions": "missing Stage334 source evidence or missing claim boundary",
+  "sample_scope": "US100 M5 research scope inherited from Stage334; no new data fitting in run335A",
+  "stop_conditions": "stop before materialization if source evidence or no-retune guard fails",
+  "success_criteria": "all failure axes have protocol, invalid condition, evidence plan, and next materialization contract"
+}
