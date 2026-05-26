@@ -1,0 +1,59 @@
+{
+  "failed_gates": [],
+  "required_gates": [
+    {
+      "detail": "parent_failed_gates=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/required_gate_coverage_audit.csv",
+      "gate": "parent_run335D_gate_inheritance",
+      "status": "passed"
+    },
+    {
+      "detail": "review_queue_rows=11",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/run335E_review_queue.csv",
+      "gate": "review_queue_loaded",
+      "status": "passed"
+    },
+    {
+      "detail": "failed_schema_rows=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/payload_schema_audit.csv",
+      "gate": "payload_schema_audit",
+      "status": "passed"
+    },
+    {
+      "detail": "failed_source_rows=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/source_binding_review.csv",
+      "gate": "source_binding_review",
+      "status": "passed"
+    },
+    {
+      "detail": "failed_runtime_rows=0;no_runtime_authority_claimed",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/runtime_boundary_review.csv",
+      "gate": "runtime_boundary_review",
+      "status": "passed"
+    },
+    {
+      "detail": "failed_forbidden_rows=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/forbidden_claim_review.csv",
+      "gate": "forbidden_claim_review",
+      "status": "passed"
+    },
+    {
+      "detail": "review_rows=11;failed_reviews=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/branch_input_review_matrix.csv",
+      "gate": "branch_review_completion",
+      "status": "passed"
+    },
+    {
+      "detail": "next_queue_rows=11",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/run335F_probe_protocol_design_queue.csv",
+      "gate": "run335F_queue_ready",
+      "status": "passed"
+    },
+    {
+      "detail": "selected_candidate=none;forward_passed=not_claimed;goal_achieve=not_claimed",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/result_judgment.csv",
+      "gate": "selection_claim_guard",
+      "status": "passed"
+    }
+  ]
+}

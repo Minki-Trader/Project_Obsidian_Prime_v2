@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v5`
-- current_run(현재 실행): `run335E_review_guarded_branch_input_materialization_v1`
+- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v6`
+- current_run(현재 실행): `run335F_design_guarded_branch_probe_protocols_v1`
 - active_stage(활성 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - target_surface(목표 표면): `failure_memory_constrained_research_handoff`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_guarded_branch_research_inputs_materialized_no_selection`
-- decision(판정): `stage335D_guarded_branch_inputs_materialized_ready_for_review_no_selection`
+- status(상태): `completed_guarded_branch_input_materialization_review_no_selection`
+- decision(판정): `stage335E_branch_input_packages_reviewed_ready_for_probe_protocol_design_no_selection`
+- run335E_summary(335E 요약): guarded branch input materialization review(방어 분기 입력 실체화 검토)를 `completed_guarded_branch_input_materialization_review_no_selection`로 완료했다. Effect(효과): branch input package(분기 입력 패키지) 11개를 검토하고 run335F probe protocol design queue(335F 탐침 계약 설계 대기열) 11개를 만들었고, 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335D_summary(335D 요약): guarded branch research input materialization(방어 분기 연구 입력 실체화)을 `completed_guarded_branch_research_inputs_materialized_no_selection`로 완료했다. Effect(효과): branch payload(분기 페이로드) 11개와 run335E review queue(335E 검토 대기열) 11개를 만들었고, 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335C_summary(335C 요약): guarded failure-memory research branch design(방어 실패 기억 연구 분기 설계)을 `completed_guarded_failure_memory_research_branch_design_no_selection`로 완료했다. Effect(효과): branch(분기) 11개와 negative control/stop condition/tier KPI/runtime gate(부정 대조/중단 조건/티어 KPI/런타임 게이트)를 만들었고, 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335B_summary(335B 요약): failure memory guard input materialization(실패 기억 방어 입력 실체화)을 `completed_failure_memory_guard_inputs_materialized_no_selection`로 완료했다. Effect(효과): 7개 실패 축의 source/hash/row/tier/negative-control/runtime requirement(원천/해시/행/티어/부정 대조/런타임 요구)을 만들었고, 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.

@@ -45,3 +45,11 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - branch_source_binding_matrix(분기 원천 연결 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/branch_source_binding_matrix.csv`
 - run335E_review_queue(335E 검토 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/run335E_review_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335D_guarded_branch_research_input_materialization.md`
+
+## run335E Branch Input Review(335E 분기 입력 검토)
+
+- branch_input_review_matrix(분기 입력 검토 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/branch_input_review_matrix.csv`
+- payload_schema_audit(페이로드 구조 감사): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/payload_schema_audit.csv`
+- materialization_gap_register(실체화 공백 등록부): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/materialization_gap_register.csv`
+- run335F_probe_protocol_design_queue(335F 탐침 계약 설계 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/run335F_probe_protocol_design_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335E_guarded_branch_input_materialization_review.md`
