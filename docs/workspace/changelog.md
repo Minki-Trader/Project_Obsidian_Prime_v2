@@ -4089,3 +4089,10 @@
 - status(상태): `completed_forward_mt5_kpi_regime_cost_curve_review_no_final_forward_decision`
 - judgment(판정): `forward_mt5_review_completed_research_only_no_goal_achieve`
 - effect(효과): watchlist(관찰 목록)는 만들었지만 선택 후보, Forward Passed(전진 통과), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage329G Raw Forward Session Gap Overfit Review(329G 원본 전진 세션 간극/과적합 검토)
+
+- run329G(329G 실행): raw_forward(원본 전진)와 old_session_parity(기존 세션 동등)의 행/신호 간극, exclusive raw signal(원본 전용 신호), 비용/곡선 취약성을 합쳐 과적합 압력을 기록했다.
+- status(상태): `completed_raw_forward_session_gap_and_overfit_pressure_review_no_forward_decision`
+- judgment(판정): `raw_forward_gap_keeps_forward_decision_open_no_goal_achieve`
+- effect(효과): Forward Passed(전진 통과), Forward Failed(전진 실패), selected candidate(선택 후보), Goal Achieve(목표 달성)를 주장하지 않는다.

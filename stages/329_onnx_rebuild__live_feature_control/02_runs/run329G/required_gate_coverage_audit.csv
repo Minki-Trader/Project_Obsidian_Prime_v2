@@ -1,0 +1,4 @@
+gate_name,status,evidence_path,effect
+data_integrity(데이터 무결성),completed_with_gap_warning,stages/329_onnx_rebuild__live_feature_control/02_runs/run329G/raw_forward_session_gap_report.csv,raw_forward(원본 전진)와 old_session_parity(기존 세션 동등)의 행/신호 공급 차이를 분리한다.
+model_validation(모델 검증),completed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329G/overfit_pressure_report.csv,과적합 압력 신호를 수익성 주장과 분리한다.
+result_judgment(결과 판정),passed_no_goal_achieve,stages/329_onnx_rebuild__live_feature_control/02_runs/run329G/result_judgment.csv,"Forward Passed(전진 통과), Forward Failed(전진 실패), Goal Achieve(목표 달성)를 주장하지 않는다."
