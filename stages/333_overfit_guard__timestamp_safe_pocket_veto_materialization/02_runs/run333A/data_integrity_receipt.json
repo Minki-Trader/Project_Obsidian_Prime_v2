@@ -1,0 +1,14 @@
+{
+  "data_source": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/feature_matrices/c56_plain_raw_forward_features.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/feature_matrices/m48_plain_raw_forward_features.csv"
+  ],
+  "time_axis": "timestamp_utc is UTC bar timestamp; session features are derived from timestamp only",
+  "sample_scope": "US100 M5 raw-forward feature handoff, 2026-04-14 through 2026-05-22/23 depending on source matrix",
+  "missing_or_duplicate_check": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/timestamp_integrity_audit.csv",
+  "feature_label_boundary": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_boundary_audit.csv",
+  "split_boundary": "materialization only; no train/validation/OOS selection or threshold fitting in run333A",
+  "leakage_risk": "joining breadth source by timestamp or using known Stage331 pocket dates; mitigated by deterministic same-timestamp join and no date filters",
+  "data_hash_or_identity": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv",
+  "integrity_judgment": "usable_with_breadth_overlap_boundary"
+}

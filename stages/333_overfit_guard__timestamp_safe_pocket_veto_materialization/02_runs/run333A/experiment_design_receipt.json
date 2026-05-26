@@ -1,0 +1,18 @@
+{
+  "hypothesis": "Stage332 pocket-veto theses can be materialized as timestamp-safe feature/control frames without retuning.",
+  "decision_use": "Decide whether run333B can design guarded scoring controls from materialized features.",
+  "comparison_baseline": "run332D feature thesis registry and run332E runtime contract.",
+  "control_variables": "US100 M5 raw-forward sample; fixed existing source matrices; no threshold, lot, model, ONNX, or D/B rule changes.",
+  "changed_variables": "Only predeclared feature columns, timestamp-derived session columns, and one same-timestamp breadth join.",
+  "sample_scope": "forward feature handoff from run330E, not a new model-training split.",
+  "success_criteria": "four frames, source hash match, zero duplicate timestamps, explicit boundary per feature.",
+  "failure_criteria": "missing source matrix, unbounded future join, feature column missing, or hidden threshold logic.",
+  "invalid_conditions": "tester outcome, future return, hard-coded pocket timestamp, or model/threshold update appears in materialization.",
+  "stop_conditions": "stop before scoring if any required gate fails.",
+  "evidence_plan": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_boundary_audit.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/timestamp_integrity_audit.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/required_gate_coverage_audit.csv"
+  ]
+}

@@ -1,0 +1,9 @@
+gate,status,evidence_path,notes
+source_artifacts_present,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/source_artifact_hashes.json,all Stage332/330 source artifacts present
+feature_queue_consumed,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv,materialized_frames=4
+source_matrix_identity_match,pass,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/raw_forward_feature_matrix_manifest.csv,all source matrix hashes match run330E manifest
+feature_label_boundary_named,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_boundary_audit.csv,all materialized feature columns have no-future/no-outcome boundary
+timestamp_integrity_audited,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/timestamp_integrity_audit.csv,"duplicate timestamps are zero; market/external gaps are recorded, not hidden"
+no_retune_guard,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/no_retune_guard_receipt.json,"no model, threshold, lot, D/B rule, or ONNX was changed."
+final_claim_guard,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/result_judgment_receipt.json,"feature materialization only; no forward pass/fail, runtime authority, or Goal Achieve."
+outputs_exist,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/run_manifest.json,run333A artifacts are materialized.

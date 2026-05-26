@@ -1,0 +1,34 @@
+thesis_id,feature_name,source_type,feature_label_boundary,future_data_used,tester_outcome_used,threshold_or_lot_used
+pv_c56_volatility_cost_shape_sentry,bar_time_server,identity_column,identity only; no label or outcome,False,False,False
+pv_c56_volatility_cost_shape_sentry,timestamp_utc,identity_column,identity only; no label or outcome,False,False,False
+pv_c56_volatility_cost_shape_sentry,row_index,identity_column,identity only; no label or outcome,False,False,False
+pv_c56_volatility_cost_shape_sentry,atr_14_over_atr_50,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_c56_volatility_cost_shape_sentry,historical_vol_5_over_20,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_c56_volatility_cost_shape_sentry,return_1_over_atr_14,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_c56_volatility_cost_shape_sentry,adx_14,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_c56_volatility_cost_shape_sentry,di_spread_14,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_c56_session_liquidity_veto,bar_time_server,identity_column,identity only; no label or outcome,False,False,False
+pv_c56_session_liquidity_veto,timestamp_utc,identity_column,identity only; no label or outcome,False,False,False
+pv_c56_session_liquidity_veto,row_index,identity_column,identity only; no label or outcome,False,False,False
+pv_c56_session_liquidity_veto,timestamp_hour_utc,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,timestamp_weekday_utc,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,session_bucket_utc,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,session_bucket_code,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,session_asia,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,session_europe,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,session_us_open,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,session_us_late,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_c56_session_liquidity_veto,session_rollover,timestamp_derived,calendar-derived from timestamp_utc; no future return or tester outcome,False,False,False
+pv_m48_macro_rate_volatility_guard,bar_time_server,identity_column,identity only; no label or outcome,False,False,False
+pv_m48_macro_rate_volatility_guard,timestamp_utc,identity_column,identity only; no label or outcome,False,False,False
+pv_m48_macro_rate_volatility_guard,row_index,identity_column,identity only; no label or outcome,False,False,False
+pv_m48_macro_rate_volatility_guard,vix_change_1,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_m48_macro_rate_volatility_guard,vix_zscore_20,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_m48_macro_rate_volatility_guard,us10yr_change_1,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_m48_macro_rate_volatility_guard,us10yr_zscore_20,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_m48_macro_rate_volatility_guard,usdx_change_1,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_m48_macro_rate_volatility_guard,usdx_zscore_20,existing_forward_feature,inherited from run332D availability audit: uses bar t or older only,False,False,False
+pv_m48_breadth_reintroduction_control,bar_time_server,identity_column,identity only; no label or outcome,False,False,False
+pv_m48_breadth_reintroduction_control,timestamp_utc,identity_column,identity only; no label or outcome,False,False,False
+pv_m48_breadth_reintroduction_control,row_index,identity_column,identity only; no label or outcome,False,False,False
+pv_m48_breadth_reintroduction_control,joined_us100_minus_mega8_equal_return_1,same_timestamp_joined_existing_feature,joined by timestamp_utc from c56_plain existing feature; missing overlap is recorded,False,False,False
