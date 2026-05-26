@@ -4120,3 +4120,5 @@
 - effect(효과): selected candidate(선택 후보), Forward Passed(전진 통과), Forward Failed(전진 실패), Goal Achieve(목표 달성)는 없고, 다음은 `run330C_forward_mt5_or_score_curve_review_v1`다.
 
 - 2026-05-26: Stage330(330단계) `run330D_regime_attribution_v1` regime/source attribution(국면/원천 귀속)을 완료했다. 효과(effect, 효과): c56 watchlist(관찰 목록)와 m48/u42 raw density pressure(원본 밀도 압력)를 분리하고 Goal Achieve(목표 달성)는 주장하지 않는다.
+
+- 2026-05-26: Stage330(330단계) `run330E_mt5_runtime_probe_or_block_v1` raw-forward MT5 runtime probe(원본 전진 MT5 런타임 탐침)를 `blocked_raw_forward_mt5_runtime_probe_no_completed_runtime`로 기록했다. effect(효과): handoff(인계)와 tester blocker(테스터 차단 사유)를 분리했고 Goal Achieve(목표 달성)는 주장하지 않는다.

@@ -1,0 +1,148 @@
+{
+  "tester_identity": {
+    "terminal": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+    "terminal_extra_args": [],
+    "broker_terminal_data_root": "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075",
+    "terminal_process_probe": {
+      "status": "running",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+      ],
+      "returncode": 0,
+      "processes": [
+        {
+          "ProcessId": 22520,
+          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ],
+      "matching_processes": [
+        {
+          "ProcessId": 22520,
+          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ]
+    },
+    "symbol": "US100",
+    "timeframe": "M5",
+    "deposit": 500,
+    "leverage": "1:100",
+    "modeling_mode": "Every tick based on real ticks / MT5 model=4",
+    "date_range": [
+      "2026.04.14..2026.05.23",
+      "2026.04.14..2026.05.24"
+    ]
+  },
+  "ea_identity": {
+    "entrypoint": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "module_hashes": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "status": "present",
+        "sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "status": "present",
+        "sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "status": "present",
+        "sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "status": "present",
+        "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "status": "present",
+        "sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "status": "present",
+        "sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "status": "present",
+        "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+      }
+    ],
+    "set_files": [
+      {
+        "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/c56_bal_rf.set",
+        "sha256": "60012686582d47cdd067ff9f403896b6d0d2bea22052a3738a16bdb825db56dc",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/c56_plain_rf.set",
+        "sha256": "deb81fe82ecd96738cc09ed55ba29fb048621945493371fda10d7ae2e3941ee6",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/m48_bal_rf.set",
+        "sha256": "13815f183e7923cbb63d731833a22b7653ac8311c1c453b36a9f899786409829",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/m48_plain_rf.set",
+        "sha256": "a81d3680081f8a2ac18eccc4e9ab4eef42ebdbf86e3d6a6cd3e855db8270469a",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/u42_bal_rf.set",
+        "sha256": "534094e07dba66b34c0b61a2f08c9c45783c043c80ce761e08c1c9ad900f1101",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/u42_plain_rf.set",
+        "sha256": "08407610e5f09ddc373b57bdc86431b94638614131f097d9ecf5a13b8c8a659d",
+        "format": "mt5_set",
+        "parameter_count": 49
+      }
+    ],
+    "model_hashes": {
+      "c56_bal": "0685c7be80c7a9871f626201a8641c33903773bec62b8453405c73fe6e511369",
+      "c56_plain": "28d6a644c4c3d8b322093c676c801f867d82568163a502e97457b46d5b530c85",
+      "m48_bal": "2c5f7bf622bb77dbd8001ccf0eb438aaa3547a37270b7867422495efdb100659",
+      "m48_plain": "ed80d304d1ce4a3b56b0cbcac8143b3b35b078dca899eee838dedca77846eee9",
+      "u42_bal": "ea676504449e5f1818e93f852bb24227d463b421ede69f4a20fe6b1d0b3425b7",
+      "u42_plain": "f6e1232824dfe499551e21e1a571e0abbb9ca96442752987cb9f0d8107330cc8"
+    }
+  },
+  "report_identity": [
+    {
+      "attempt_name": "c56_bal_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run330E_mt5_runtime_probe_or_block_v1_c56_bal_rf",
+      "status": "missing"
+    }
+  ],
+  "trade_evidence": [],
+  "cost_assumptions": {
+    "spread": "broker tester setting, not overwritten by run330E",
+    "commission": "broker tester setting, not overwritten by run330E",
+    "slippage": "InpDeviationPoints=default_or_set_file_value",
+    "swap": "broker tester setting"
+  },
+  "forensic_checks": [
+    "MetaEditor compile attempted before tester run.",
+    "Runtime telemetry and summary files are checked after tester run.",
+    "Strategy report artifacts are copied when MT5 emits them."
+  ],
+  "backtest_judgment": "blocked"
+}

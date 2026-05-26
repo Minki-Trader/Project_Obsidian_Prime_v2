@@ -1,0 +1,116 @@
+{
+  "compile": {
+    "status": "completed",
+    "command": [
+      "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+      "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "/log:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\330_onnx_rebuild__forward_safe_non_identity_surface_robustness\\02_runs\\run330E\\mt5\\mt5_compile.log"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "",
+    "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/mt5_compile.log",
+    "command_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/mt5_compile.log",
+    "actual_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/mt5_compile.log",
+    "log_sha256": "d10f334709d40580cf7c34586030094e2fbb14ad9f0ab4b0f54602a355932d7e"
+  },
+  "terminal_process_probe": {
+    "status": "running",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-Command",
+      "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+    ],
+    "returncode": 0,
+    "processes": [
+      {
+        "ProcessId": 22520,
+        "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+      }
+    ],
+    "matching_processes": [
+      {
+        "ProcessId": 22520,
+        "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+      }
+    ]
+  },
+  "terminal_extra_args": [],
+  "execution_results": [
+    {
+      "status": "blocked",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_s330e_c56_bal_rf.ini"
+      ],
+      "returncode": null,
+      "blocker": "terminal_already_running_config_not_applied",
+      "blocker_explanation": "A running terminal64.exe process can absorb a /config launch without applying the requested strategy tester configuration. The terminal must be closed or a separate portable instance must be used before rerun.",
+      "terminal_process_probe": {
+        "status": "running",
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+        ],
+        "returncode": 0,
+        "processes": [
+          {
+            "ProcessId": 22520,
+            "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+          }
+        ],
+        "matching_processes": [
+          {
+            "ProcessId": 22520,
+            "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+          }
+        ]
+      },
+      "runtime_outputs": {
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage330/run330E_raw_forward_mt5_runtime_probe/telemetry/c56_bal_rf_telemetry.csv",
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage330/run330E_raw_forward_mt5_runtime_probe/telemetry/c56_bal_rf_summary.csv",
+        "telemetry_exists": false,
+        "summary_exists": false,
+        "status": "blocked",
+        "wait_status": "skipped_terminal_already_running"
+      },
+      "attempt_name": "c56_bal_rf",
+      "candidate_id": "core56_no_top3_weight_features__l2_balanced_c025",
+      "artifact_slug": "c56_bal",
+      "feature_set_id": "core56_no_top3_weight_features",
+      "model_id": "l2_balanced_c025",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "attempt_role": "raw_forward_tier_a_no_fallback_runtime_probe",
+      "record_view_prefix": "mt5_c56_bal_raw_forward",
+      "routing_mode": "tier_a_primary_no_fallback",
+      "signal_policy": "raw_forward ONNX probabilities with fixed train-only margin threshold; no forward retuning",
+      "ini_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/c56_bal_rf.ini",
+      "set_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/c56_bal_rf.set",
+      "strategy_tester_report": {
+        "attempt_name": "c56_bal_rf",
+        "tier": "Tier A",
+        "split": "forward_raw_forward",
+        "report_name": "Project_Obsidian_Prime_v2_run330E_mt5_runtime_probe_or_block_v1_c56_bal_rf",
+        "status": "missing"
+      }
+    }
+  ],
+  "strategy_tester_reports": [
+    {
+      "attempt_name": "c56_bal_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run330E_mt5_runtime_probe_or_block_v1_c56_bal_rf",
+      "status": "missing"
+    }
+  ],
+  "mt5_kpi_records": []
+}

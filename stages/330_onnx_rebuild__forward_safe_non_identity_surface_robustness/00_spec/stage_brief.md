@@ -41,3 +41,11 @@ Effect(효과): Stage329(329단계)의 c56_plain(낮은 압력 단서)을 곧바
 - decision(결정): `stage330D_regime_source_pressure_runtime_probe_or_block_next`
 - next_action(다음 행동): `run330E_mt5_runtime_probe_or_block_v1`
 - effect(효과): regime/source/direction attribution(국면/원천/방향 귀속)을 만들었고, raw-forward MT5(원본 전진 MT5)가 없어 선택 후보와 Forward Passed(전진 통과)는 없다.
+
+## run330E_raw_forward_mt5_runtime_probe_summary(330E 원본 전진 MT5 런타임 탐침 요약)
+
+- run(실행): `run330E_mt5_runtime_probe_or_block_v1`
+- status(상태): `blocked_raw_forward_mt5_runtime_probe_no_completed_runtime`
+- judgment(판정): `raw_forward_runtime_probe_blocked_requires_runtime_repair_no_goal_achieve`
+- next_action(다음 행동): `repair_stage330E_runtime_probe_blocker_then_rerun`
+- effect(효과): raw-forward(원본 전진) handoff(인계)를 MT5(메타트레이더5) 실행 입력으로 만들고, 실행이 막히면 차단 사유를 증거로 남긴다.
