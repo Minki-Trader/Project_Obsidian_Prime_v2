@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness_v1`
-- current_run(현재 실행): `run330A_design_forward_safe_non_identity_surface_robustness_packet_v1`
+- current_packet(현재 작업 묶음): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness_v2`
+- current_run(현재 실행): `run330B_materialize_forward_safe_non_identity_control_surfaces_v1`
 - active_stage(활성 단계): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness`
 - selected_research_baseline(선택 연구 기준선): `none`
 - source_stage(원천 단계): `329_onnx_rebuild__live_feature_control`
 - target_surface(목표 표면): `forward_safe_non_identity_surface_robustness`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `stage330_open_planned_after_stage329H_cp322a_exact_handoff_closeout`
-- decision(판정): `cp322a_exact_forward_handoff_not_repairable_under_frozen_rules_research_artifact_preserved`
+- status(상태): `stage330_run330A_design_completed_materialization_next`
+- decision(판정): `stage330A_design_packet_completed_materialization_next_no_candidate_selection`
+- run330A_summary(330A 요약): forward-safe non-identity ONNX robustness design(전진 안전 비정체성 온엑스 강건성 설계)을 `completed_forward_safe_non_identity_design_no_selection`로 닫았다. Effect(효과): 후보 선택 없이 guardrail(방어 규칙), anti-overfit control(과적합 방어), runtime parity plan(런타임 동등성 계획), run330B materialization queue(330B 물질화 대기열)를 만들었다.
 - run329H_summary(329H 요약): cp322A exact handoff repair feasibility(정확 인계 수리 가능성)를 `completed_cp322a_exact_handoff_repair_feasibility_stage329_closed`로 닫았다. Effect(효과): 2026-04-14 이후 exact route-signal(정확 경로 신호)이 없고 split-local rank(분할 내부 순위)는 누수라서 cp322A는 연구 산출물로 보존한다.
 - stage330_open_summary(330단계 개방 요약): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness`를 open_planned(열림 계획)로 열었다. Effect(효과): Stage329 연구 온엑스 단서는 선택 후보가 아니라 다음 설계의 압박 입력으로만 쓴다.
 - run329G_summary(329G 요약): raw-forward/session gap and overfit pressure review(원본 전진/세션 간극 및 과적합 압력 검토)를 `completed_raw_forward_session_gap_and_overfit_pressure_review_no_forward_decision`로 닫았다. Effect(효과): session-parity MT5(세션 동등 MT5) 성과는 연구 근거로 보존하지만 raw_forward(원본 전진) 공급 간극 때문에 Forward Passed(전진 통과)는 없다.
@@ -36,8 +37,8 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run330A_design_forward_safe_non_identity_surface_robustness_packet_v1`
-- claim_boundary(주장 경계): `research_development_only_forward_safe_non_identity_onnx_rebuild_no_cp322a_exact_repair_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- next_action(다음 행동): `run330B_materialize_forward_safe_non_identity_control_surfaces_v1`
+- claim_boundary(주장 경계): `research_development_only_forward_safe_non_identity_onnx_rebuild_no_cp322a_exact_repair_no_forward_threshold_tuning_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
 Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.

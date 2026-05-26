@@ -1,0 +1,25 @@
+{
+  "data_hash_or_identity": {
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/cost_stress_report.csv": "651c410f1b328519dccf8fad9e38aa82b5227c5972d02203cf036d5a58742ef4",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/curve_pocket_report.csv": "d58a5a51c2c1b7f7cea97c8503d0da630c1d854dbd77e0b366ec6796a650b486",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/forward_mt5_kpi_report.csv": "89519f2a348aff048f64ea67b8be94a98c2f9aac504ff1359a910dc29d400765",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329G/overfit_pressure_report.csv": "50447736e006648e555dba670a5d0775645ad9deb485c666f1f02fb58aa2aaee",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329G/raw_forward_session_gap_report.csv": "6ff2ea59770e1fd5f13269926afa5c4500a1b5ada77a6ce3050e656b739ae65b",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/stage329_closeout_decision.json": "edf29f6d10bee6680d18387ff94702754e63bd05915850f5e39f4ea8b008b47d"
+  },
+  "data_source": [
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329G/raw_forward_session_gap_report.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329G/overfit_pressure_report.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/forward_mt5_kpi_report.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/cost_stress_report.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/curve_pocket_report.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/stage329_closeout_decision.json"
+  ],
+  "feature_label_boundary": "forward labels and forward profit cannot affect training, threshold, lot, or rule choices",
+  "integrity_judgment": "usable_with_boundary_for_design_only",
+  "leakage_risk": "split-local rank, forward threshold search, and session-only success are the primary leakage paths",
+  "missing_or_duplicate_check": "run330A inherits Stage329 receipts; run330B must re-audit latest broker rows before materialization",
+  "sample_scope": "Stage329 latest forward evidence begins 2026-04-14; cp322A exact route handoff has zero rows after 2026-04-13",
+  "split_boundary": "old train/WFO/OOS evidence is separated from latest 2026-04-14+ forward holdout",
+  "time_axis": "US100 M5 broker/server timestamps; raw and session-filtered views stay separate"
+}

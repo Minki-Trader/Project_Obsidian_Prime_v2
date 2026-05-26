@@ -1,0 +1,8 @@
+control_id,rule,evidence,effect
+AO01_predeclare_subjects,"Stage330B may test c56_plain plus fixed negative controls, but cannot add a late winner from forward profit.",stage330B_materialization_queue.csv,keeps multiple testing visible
+AO02_forward_holdout_is_read_only,"2026-04-14+ data is read-only for judgment, not for threshold, feature, or lot selection.",experiment_design_receipt.json,protects forward sample from leakage
+AO03_negative_controls_required,At least one medium-pressure and two high-pressure controls must be reported next to any low-pressure clue.,candidate_evidence_input_matrix.csv,prevents cherry-picking one appealing curve
+AO04_density_guard_before_profit,Raw/session signal density and exclusive raw signal rate are checked before profit interpretation.,robustness_test_queue.csv,stops raw-forward supply mismatch from being hidden by KPI
+AO05_no_lot_or_cost_repair,"Lot sizing, spread, slippage, ATR SL/TP, and decision rules remain fixed during forward tests.",design_guardrail_matrix.csv,keeps execution settings from repairing a weak model
+AO06_split_instability_kept,Train/validation sign flip and WFO gaps are reported even if latest forward is positive.,source evidence snapshot,keeps older instability in the decision
+AO07_claim_downgrade_default,"Missing tester, feature, regime, or cost evidence downgrades to inconclusive or blocked.",result_judgment.csv,prevents design completion from becoming Goal Achieve

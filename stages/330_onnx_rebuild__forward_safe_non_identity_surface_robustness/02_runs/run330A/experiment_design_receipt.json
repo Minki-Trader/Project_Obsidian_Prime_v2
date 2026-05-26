@@ -1,0 +1,46 @@
+{
+  "changed_variables": [
+    "subject changes from cp322A identity ONNX to forward-safe non-identity research ONNX controls",
+    "Stage330 adds explicit anti-overfit, raw-forward, regime, cost, and runtime parity gates"
+  ],
+  "comparison_baseline": "Stage329 cp322A exact handoff blocked state plus Stage329 research ONNX controls",
+  "control_variables": [
+    "no cp322A exact repair claim",
+    "no 2026-04-14+ threshold tuning",
+    "fixed decision/risk/lot/ATR SLTP logic during replay",
+    "raw and session views reported separately"
+  ],
+  "decision_use": "decide whether to materialize controlled Stage330 surfaces and later judge Forward Passed/Failed/Blocked",
+  "evidence_plan": [
+    "frozen forward MT5 report",
+    "regime attribution report",
+    "source and direction attribution report",
+    "lot-normalized report",
+    "cost stress report",
+    "curve pocket report",
+    "final forward decision report"
+  ],
+  "failure_criteria": [
+    "net/PF/DD/curve pocket loses core behavior under fixed rules",
+    "raw-forward signal density explodes",
+    "cost stress or regime slices reveal non-robust one-pocket edge"
+  ],
+  "hypothesis": "A non-identity ONNX built only from live-computable features may be more forward-safe than cp322A exact replay, but only if it survives raw/session gap, cost, curve, regime, and runtime parity checks without forward tuning.",
+  "invalid_conditions": [
+    "forward data incomplete",
+    "feature order or timestamp boundary cannot be proven",
+    "forward threshold, lot, or rule retuning occurs"
+  ],
+  "sample_scope": "US100 M5 old train/WFO/OOS evidence plus 2026-04-14+ latest broker forward data when available",
+  "stop_conditions": [
+    "blocked_forward_data_missing",
+    "runtime parity handoff missing",
+    "density explosion repeats in raw forward",
+    "required report cannot be produced"
+  ],
+  "success_criteria": [
+    "fixed surface survives forward, raw/session, curve, cost, regime, and runtime parity evidence",
+    "enough trades exist for judgment",
+    "no missing forward data or handoff gap remains"
+  ]
+}

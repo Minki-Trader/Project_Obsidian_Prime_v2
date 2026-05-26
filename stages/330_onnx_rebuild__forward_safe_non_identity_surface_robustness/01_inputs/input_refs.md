@@ -8,3 +8,11 @@
 - research_onnx(연구 온엑스): `stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx/`
 
 Effect(효과): 입력은 다음 설계를 위한 evidence(근거)이며 selected candidate(선택 후보)가 아니다.
+
+## run330A_design_outputs(330A 설계 출력)
+
+- design_report(설계 보고서): `stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/03_reviews/run330A_forward_safe_non_identity_surface_robustness_design.md`
+- candidate_evidence(후보 근거): `stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330A/candidate_evidence_input_matrix.csv`
+- materialization_queue(물질화 대기열): `stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330A/stage330B_materialization_queue.csv`
+
+Effect(효과): run330B(330B 실행)는 이 설계 출력만 입력으로 삼아 forward data audit(전진 데이터 감사)와 고정 규칙 replay(재생)를 시작한다.
