@@ -20,3 +20,11 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - negative_control_plan(부정 대조 계획): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/negative_control_plan.csv`
 - anti_overfit_design_receipt(과적합 방어 설계 영수증): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/anti_overfit_design_receipt.json`
 - final_design_decision(최종 설계 결정): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/final_design_decision.json`
+
+## run335B Guard Input Materialization(335B 방어 입력 실체화)
+
+- guard_input_manifest(방어 입력 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/guard_input_manifest.csv`
+- source_file_index(원천 파일 색인): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/source_file_index.csv`
+- latest_forward_data_inventory(최신 전진 데이터 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/latest_forward_data_inventory.csv`
+- runtime_handoff_requirement_inventory(런타임 인계 요구 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/runtime_handoff_requirement_inventory.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335B_failure_memory_guard_input_materialization.md`

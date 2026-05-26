@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v2`
-- current_run(현재 실행): `run335B_materialize_failure_memory_guard_inputs_v1`
+- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v3`
+- current_run(현재 실행): `run335C_design_guarded_failure_memory_research_branches_v1`
 - active_stage(활성 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - target_surface(목표 표면): `failure_memory_constrained_research_handoff`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_failure_memory_constrained_research_packet_design_no_selection`
-- decision(판정): `stage335A_failure_memory_axes_converted_to_predeclared_research_contract_no_selection`
+- status(상태): `completed_failure_memory_guard_inputs_materialized_no_selection`
+- decision(판정): `stage335B_guard_inputs_materialized_ready_for_branch_design_no_selection`
+- run335B_summary(335B 요약): failure memory guard input materialization(실패 기억 방어 입력 실체화)을 `completed_failure_memory_guard_inputs_materialized_no_selection`로 완료했다. Effect(효과): 7개 실패 축의 source/hash/row/tier/negative-control/runtime requirement(원천/해시/행/티어/부정 대조/런타임 요구)을 만들었고, 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335A_summary(335A 요약): failure memory constrained research packet(실패 기억 제약 연구 패킷)을 `completed_failure_memory_constrained_research_packet_design_no_selection`로 설계했다. Effect(효과): 실패 축 `7`개를 run335B(335B 실행)의 guard input materialization(방어 입력 물질화) 계약으로 넘기고 selected candidate(선택 후보), Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run334H_summary(334H 요약): Stage334 closeout/open Stage335(334단계 종료/335단계 개방)를 `completed_stage334_closeout_open_stage335_no_selection`로 완료했다. Effect(효과): 실패 기억 축 `7`개를 Stage335(335단계) 연구 제약으로 넘기고 selected candidate(선택 후보), Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run334G_summary(334G 요약): no-retune stress review(무재튜닝 압박 검토)를 `completed_no_retune_stress_materialization_review_no_selection`로 완료했다. Effect(효과): 6개 attempt(시도) 모두 failure memory(실패 기억)이며 다음 run334H(334H 실행)는 Stage334 closeout/handoff(단계 종료/인계)다.

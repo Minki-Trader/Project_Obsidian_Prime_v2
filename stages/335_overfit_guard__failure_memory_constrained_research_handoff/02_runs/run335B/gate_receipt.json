@@ -1,0 +1,47 @@
+{
+  "failed_gates": [],
+  "required_gates": [
+    {
+      "detail": "missing_source_files=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/source_file_index.csv",
+      "gate": "source_artifact_presence",
+      "status": "passed"
+    },
+    {
+      "detail": "guard_rows=7;blocked_rows=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/guard_input_manifest.csv",
+      "gate": "materialization_contract_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "raw refresh and existing forward feature identities are recorded; no Forward Passed/Failed claim",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/latest_forward_data_inventory.csv",
+      "gate": "latest_forward_data_boundary",
+      "status": "passed_with_boundary"
+    },
+    {
+      "detail": "tier_rows=21",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/tier_view_guard_matrix.csv",
+      "gate": "paired_tier_contract",
+      "status": "passed"
+    },
+    {
+      "detail": "threshold/lot/direct pocket/subject swap/runtime authority repairs are blocked",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/forbidden_repair_check.csv",
+      "gate": "forbidden_repair_guard",
+      "status": "passed"
+    },
+    {
+      "detail": "runtime requirements materialized; runtime authority not claimed",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/runtime_handoff_requirement_inventory.csv",
+      "gate": "runtime_claim_guard",
+      "status": "passed"
+    },
+    {
+      "detail": "no candidate, no Forward Passed/Failed, no Goal Achieve",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/result_judgment.csv",
+      "gate": "final_claim_guard",
+      "status": "passed"
+    }
+  ]
+}
