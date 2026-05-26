@@ -1,0 +1,6 @@
+evidence_id,required_file,minimum_fields,failure_read
+python_source_kpi,candidate KPI/cost/curve report produced before MT5,trade_count;net_profit;profit_factor;expectancy;max_drawdown;cost2_pf;rolling20_min_net,no performance judgment before Python source KPI exists
+mt5_tester_output,report htm plus screenshot/png when available,strategy tester report path; tester settings; report sha256,blocked_runtime_evidence_missing
+telemetry_reconciliation,runtime telemetry CSV and summary CSV,order_fill_count;model_ok_count;trade_count;net;PF;timestamp range,invalid_or_blocked_if_mismatch
+handoff_manifest,run manifest with feature/model/set/ini/report hashes,feature hash;model hash;feature order hash;threshold;EA/module hashes;terminal path,artifact_lineage_disconnected
+claim_boundary_receipt,result_judgment_receipt.json,runtime_probe_only;no_runtime_authority;no_goal_achieve,claim_violation_if_authority_language_appears

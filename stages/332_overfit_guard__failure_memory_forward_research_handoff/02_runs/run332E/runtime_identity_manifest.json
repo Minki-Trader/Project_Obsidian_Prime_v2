@@ -1,0 +1,75 @@
+{
+  "run_id": "run332E_runtime_parity_probe_design_v1",
+  "reference_run": "run331C_runtime_replay_or_block_cross_horizon_probe_v1",
+  "reference_attempt_count": 6,
+  "reference_replay_all_match": true,
+  "module_identity": [
+    {
+      "module_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "exists": true,
+      "current_sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19",
+      "run331C_sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19",
+      "matches_run331C": true,
+      "future_probe_requirement": "hash_must_be_recorded; if changed, module version and reason must be in run manifest"
+    },
+    {
+      "module_path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+      "exists": true,
+      "current_sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a",
+      "run331C_sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a",
+      "matches_run331C": true,
+      "future_probe_requirement": "hash_must_be_recorded; if changed, module version and reason must be in run manifest"
+    },
+    {
+      "module_path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+      "exists": true,
+      "current_sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1",
+      "run331C_sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1",
+      "matches_run331C": true,
+      "future_probe_requirement": "hash_must_be_recorded; if changed, module version and reason must be in run manifest"
+    },
+    {
+      "module_path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+      "exists": true,
+      "current_sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560",
+      "run331C_sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560",
+      "matches_run331C": true,
+      "future_probe_requirement": "hash_must_be_recorded; if changed, module version and reason must be in run manifest"
+    },
+    {
+      "module_path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+      "exists": true,
+      "current_sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8",
+      "run331C_sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8",
+      "matches_run331C": true,
+      "future_probe_requirement": "hash_must_be_recorded; if changed, module version and reason must be in run manifest"
+    },
+    {
+      "module_path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+      "exists": true,
+      "current_sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f",
+      "run331C_sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f",
+      "matches_run331C": true,
+      "future_probe_requirement": "hash_must_be_recorded; if changed, module version and reason must be in run manifest"
+    },
+    {
+      "module_path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+      "exists": true,
+      "current_sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7",
+      "run331C_sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7",
+      "matches_run331C": true,
+      "future_probe_requirement": "hash_must_be_recorded; if changed, module version and reason must be in run manifest"
+    }
+  ],
+  "compile_identity": {
+    "source_log": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/mt5_compile.log",
+    "source_log_sha256": "71b04d8f17e14d6e234677104535ed5c5b424ee60749c4c50e567f7b9cc05921",
+    "recorded_returncode": 1,
+    "recorded_status": "completed",
+    "log_reports_zero_errors": true,
+    "future_requirement": "future runtime probe must keep compile log and treat compile alone as insufficient without tester/report/telemetry evidence"
+  },
+  "terminal_path_reference": "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+  "terminal_data_root_reference": "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E",
+  "claim_boundary": "research_development_only_runtime_parity_probe_contract_design_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

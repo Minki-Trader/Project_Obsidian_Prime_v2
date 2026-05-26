@@ -23,3 +23,8 @@ Effect(효과): 다음 단계는 기존 Stage331(331단계)의 좋은 숫자를 
 - run332D_feature_label_boundary(332D 피처 라벨 경계): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_label_boundary_receipt.json`
 - run332D_pocket_veto_plan(332D 포켓 거부 계획): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/pocket_veto_plan.csv`
 - run332D_materialization_queue(332D 물질화 대기열): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_materialization_queue.csv`
+
+- run332E_runtime_parity_contract(332E 런타임 동등성 계약): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332E/runtime_parity_contract.csv`
+- run332E_run_variant_boundary(332E 실행 변형 경계): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332E/run_variant_boundary.csv`
+- run332E_probe_readiness(332E 탐침 준비도): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332E/runtime_probe_readiness_matrix.csv`
+- run332E_runtime_identity(332E 런타임 정체성): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332E/runtime_identity_manifest.json`

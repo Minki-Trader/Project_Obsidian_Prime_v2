@@ -1,0 +1,8 @@
+gate,status,evidence
+source_runtime_reference_loaded,pass,run332D design inputs and run331C runtime replay evidence exist.
+module_identity_audited,pass,EA and include module hashes are recorded.
+module_identity_matches_reference,pass,current RuntimeProbeEA module hashes match run331C reference hashes.
+runtime_probe_readiness_boundary_named,pass,"future branches are design-ready only, not runtime-ready."
+no_retune_guard,pass,"No threshold, lot, model, ONNX, EA, or runtime handoff change was made."
+final_claim_guard,pass,"No Forward Passed/Failed, live readiness, deployment, operating promotion, runtime authority, or Goal Achieve claim."
+outputs_exist,pass,Durable run332E CSV/JSON outputs exist.

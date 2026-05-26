@@ -4200,3 +4200,10 @@
 - status(상태): `completed_pocket_veto_feature_thesis_design_no_selection`
 - effect(효과): Stage331/332C(331/332C단계)의 cost/curve failure memory(비용/곡선 실패 기억)를 feature thesis registry(피처 논제 등록부), label boundary receipt(라벨 경계 영수증), pocket veto plan(포켓 거부 계획), materialization queue(물질화 대기열)로 바꿨다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage332E runtime parity probe contract(런타임 동등성 탐침 계약)
+
+- run(실행): `run332E_runtime_parity_probe_design_v1`
+- status(상태): `completed_runtime_parity_probe_contract_design_no_runtime_execution`
+- effect(효과): future materialized branch(미래 물질화 분기)의 MT5 runtime probe(런타임 탐침)를 해석하기 위한 feature/model/threshold/risk/report/telemetry identity(피처/모델/임계값/위험/보고서/기록 정체성) 계약을 만들었다.
+- boundary(경계): 새 MT5 실행, Forward Passed/Failed(전진 통과/실패), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

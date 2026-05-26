@@ -1,0 +1,21 @@
+{
+  "research_path": "stage_pipelines/stage332/design_runtime_parity_probe_contract.py",
+  "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+  "shared_contract": "features, feature order, model/hash, threshold, decision surface, ATR/risk/lot logic, tester settings, report, telemetry, and source KPI must reconcile before runtime probe interpretation",
+  "known_differences": "future probes may change run id, report path, telemetry path, and approved payload paths only",
+  "parity_check": "contract_design_only; no new MT5 tester run in run332E",
+  "parity_identity": {
+    "module_match_count": 7,
+    "module_total": 7,
+    "all_modules_match_run331C": true,
+    "compile_identity": {
+      "source_log": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/mt5_compile.log",
+      "source_log_sha256": "71b04d8f17e14d6e234677104535ed5c5b424ee60749c4c50e567f7b9cc05921",
+      "recorded_returncode": 1,
+      "recorded_status": "completed",
+      "log_reports_zero_errors": true,
+      "future_requirement": "future runtime probe must keep compile log and treat compile alone as insufficient without tester/report/telemetry evidence"
+    }
+  },
+  "runtime_claim_boundary": "research_only_runtime_contract_no_runtime_authority"
+}
