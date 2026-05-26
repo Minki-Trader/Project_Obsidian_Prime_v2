@@ -17,3 +17,11 @@ Effect(효과): Stage329(329단계)의 c56_plain(낮은 압력 단서)을 곧바
 - decision(결정): `stage330A_design_packet_completed_materialization_next_no_candidate_selection`
 - next_action(다음 행동): `run330B_materialize_forward_safe_non_identity_control_surfaces_v1`
 - effect(효과): low-pressure clue(낮은 압력 단서)는 선택 후보가 아니라, raw/session gap(원본/세션 간극), cost stress(비용 압박), curve pocket(곡선 포켓), runtime parity(런타임 동등성)를 통과해야 하는 입력으로 남긴다.
+
+## run330B_materialization_summary(330B 물질화 요약)
+
+- run(실행): `run330B_materialize_forward_safe_non_identity_control_surfaces_v1`
+- status(상태): `completed_forward_safe_control_surface_materialization_no_selection`
+- decision(결정): `stage330B_control_surfaces_materialized_curve_and_runtime_review_next`
+- next_action(다음 행동): `run330C_forward_mt5_or_score_curve_review_v1`
+- effect(효과): fixed threshold(고정 임계값) score/signal payload(점수/신호 인계물)를 만들었고, raw/session gap(원본/세션 간극)과 ONNX parity(온엑스 동등성)를 다음 검토의 필수 입력으로 고정했다.
