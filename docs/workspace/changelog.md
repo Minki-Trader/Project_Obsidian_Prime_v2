@@ -4632,3 +4632,12 @@
 - action(행동): run337A(337A 실행)의 설계 계약을 source lineage(원천 계보), data integrity contract(데이터 무결성 계약), branch payload(분기 패키지), gate schema(게이트 스키마), proxy expected/MT5 observed/difference/usability(프록시 예상값/Mt5 관측값/차이/활용성) 산출물로 물질화했다.
 - effect(효과): proxy(프록시)는 signal sanity only(신호 점검 전용)로 낮추고, MT5 runtime(런타임)과 cost/direction/curve gate(비용/방향/곡선 게이트) 없이는 KPI authority(KPI 권한)를 주장하지 못하게 했다.
 - boundary(경계): selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage337C Proxy-MT5 Usability Review(337C 프록시-MT5 활용성 검토)
+
+- run_id(실행 ID): `run337C_review_materialized_inputs_and_proxy_mt5_usability_v1`
+- status(상태): `completed_materialized_inputs_proxy_mt5_usability_review_no_selection`
+- decision(결정): `stage337C_review_accepts_protocol_queue_proxy_not_kpi_no_selection`
+- action(행동): run337B(337B 실행)의 source/data/proxy/branch/core56(원천/데이터/프록시/분기/핵심56) 산출물을 검토해 protocol-only acceptance(계약 전용 승인)와 rejected claim memory(거절 주장 기억)를 만들었다.
+- effect(효과): proxy(프록시) 일치는 signal sanity only(신호 점검 전용)로 제한되고, 다음 run337D(337D 실행)는 실행 계약을 만든다.
+- boundary(경계): selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

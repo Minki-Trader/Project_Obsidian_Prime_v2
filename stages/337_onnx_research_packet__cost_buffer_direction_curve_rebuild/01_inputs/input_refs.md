@@ -36,3 +36,16 @@ Effect(효과): 다음 실행은 proxy(프록시)만 보지 않고 MT5 runtime p
 - next_queue(다음 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337B/run337C_review_queue.csv`
 
 Effect(효과): proxy(프록시)는 signal sanity check(신호 점검)로만 쓰고, KPI(핵심 성과 지표) 판정은 MT5 runtime probe(런타임 탐침)와 비용/곡선/방향 게이트에 묶는다.
+
+## run337C Outputs(337C 산출물)
+
+## run337C Outputs(337C 산출물)
+
+- source_lineage_review(원천 계보 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337C/source_lineage_review.csv`
+- data_integrity_review(데이터 무결성 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337C/data_integrity_review.csv`
+- proxy_mt5_review(프록시-MT5 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337C/proxy_mt5_usability_review.csv`
+- branch_acceptance(분기 승인): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337C/branch_gate_acceptance_matrix.csv`
+- rejected_claim_memory(거절 주장 기억): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337C/rejected_claim_memory.csv`
+- next_queue(다음 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337C/run337D_research_execution_protocol_queue.csv`
+
+Effect(효과): 다음 실행은 모델 학습 전 no-lookahead(미래참조 방어), proxy-MT5 fresh probe(신규 프록시-MT5 탐침), core56 repair(핵심56 수리), cost/direction/curve gate(비용/방향/곡선 게이트) 계약을 먼저 만든다.
