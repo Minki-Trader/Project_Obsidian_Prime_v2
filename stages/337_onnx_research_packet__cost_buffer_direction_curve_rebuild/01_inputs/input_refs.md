@@ -174,3 +174,13 @@ Effect(효과): 다음 실행은 proxy expected value(프록시 예상값)와 MT
 - run337M_queue(337M 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/run337M_proxy_mt5_input_review_queue.csv`
 
 Effect(효과): 다음 실행은 입력 묶음이 실제 fresh MT5 runtime probe(신규 메타트레이더5 런타임 탐침) 시도로 넘어가도 되는지 검토한다.
+
+## run337M Outputs(337M 산출물)
+
+- input_artifact_review(입력 산출물 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337M/input_artifact_lineage_review.csv`
+- package_family_review(패키지군 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337M/package_family_input_review.csv`
+- accepted_inputs(승인 입력): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337M/accepted_inputs_for_runtime_probe_attempt.csv`
+- repair_gap_queue(수리 공백 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337M/repair_input_gap_queue.csv`
+- run337N_queue(337N 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337M/run337N_fresh_mt5_runtime_probe_attempt_queue.csv`
+
+Effect(효과): run337N(337N 실행)에서 실제 fresh MT5 runtime probe(신규 메타트레이더5 런타임 탐침)를 시도하거나, 사전점검 실패를 정확히 차단할 수 있다.

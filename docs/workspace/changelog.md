@@ -4721,3 +4721,11 @@
 - decision(결정): `stage337L_proxy_mt5_inputs_ready_for_run337M_review_no_training_no_mt5_no_selection`
 - action(행동): proxy expected template(프록시 예상값 템플릿), fresh MT5 handoff package(신규 메타트레이더5 인계 패키지), difference/usability contract(차이/활용성 계약)를 만들었다.
 - effect(효과): run337M(337M 실행) 검토 대기열 `9`행을 열었고, MT5 execution(MT5 실행), Forward decision(전진 판정), runtime authority(런타임 권위)는 주장하지 않는다.
+
+## Stage337M Proxy MT5 Input Review(337M 프록시 MT5 입력 검토)
+
+- run_id(실행 ID): `run337M_review_proxy_expected_fresh_mt5_probe_inputs_v1`
+- status(상태): `completed_proxy_expected_fresh_mt5_probe_input_review_accepts_runtime_probe_attempt_queue_no_training_no_mt5`
+- decision(결정): `stage337M_proxy_mt5_inputs_reviewed_accept_runtime_probe_attempt_queue_no_training_no_mt5_no_selection`
+- action(행동): run337L(337L 실행)의 입력 산출물, queue(대기열), claim boundary(주장 경계), no-lookahead guard(미래참조 방어)를 검토했다.
+- effect(효과): run337N(337N 실행) fresh MT5 runtime probe attempt-or-block(신규 메타트레이더5 런타임 탐침 시도 또는 차단) 대기열 `5`행을 열었고 MT5 execution(MT5 실행), Forward decision(전진 판정), runtime authority(런타임 권위)는 주장하지 않는다.

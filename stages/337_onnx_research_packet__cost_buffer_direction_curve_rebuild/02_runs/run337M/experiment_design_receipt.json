@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "research_development_only_stage337M_proxy_mt5_input_review_no_model_training_no_mt5_execution_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "controls": [
+    "no model training",
+    "no threshold retune",
+    "no lot optimization",
+    "no MT5 execution in run337M",
+    "Forward decision blocked"
+  ],
+  "failure_condition": "missing input, incomplete claim boundary, or row-count mismatch routes to repair_input_gap_queue",
+  "hypothesis": "run337L proxy expected/fresh MT5 input packages are internally consistent enough to open a fresh MT5 runtime probe attempt-or-block queue without training or retuning.",
+  "metrics": {
+    "failed_gate_rows": 0,
+    "gate_rows": 17,
+    "input_artifact_rows": 20,
+    "package_family_review_rows": 14,
+    "queue_review_rows": 9,
+    "repair_gap_rows": 0,
+    "run337n_queue_rows": 5
+  },
+  "primary_family": "runtime_backtest_readiness_review",
+  "run_id": "run337M_review_proxy_expected_fresh_mt5_probe_inputs_v1",
+  "success_condition": "all materialized input reviews pass and run337N attempt queue has five subject rows"
+}

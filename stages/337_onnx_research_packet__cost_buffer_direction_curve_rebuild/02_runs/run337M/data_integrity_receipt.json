@@ -1,0 +1,32 @@
+{
+  "data_hash_or_identity": "input_artifact_rows=20",
+  "data_source": [
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/source_lineage_index.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/no_lookahead_pre_execution_guards.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/proxy_expected_result_template.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/proxy_expected_source_identity_manifest.json",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/fresh_mt5_probe_handoff_package.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/mt5_probe_execution_manifest.json",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/mt5_probe_handoff_precheck.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/mt5_tester_input_manifest.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/proxy_mt5_difference_runner_contract.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/usability_decision_runner_contract.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/core56_asof_source_handoff_package.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/cost_direction_curve_extractor_package.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/regime_asof_source_inventory.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/runtime_identity_preflight_package.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/claim_boundary_output_registry_binding.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/run337M_proxy_mt5_input_review_queue.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/required_gate_coverage_audit.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/result_judgment.csv",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/final_proxy_mt5_probe_input_materialization_decision.json",
+    "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/run_manifest.json"
+  ],
+  "feature_label_boundary": "proxy template and tester manifest require closed-bar-only and no nearest/future join; no label or KPI is created in run337M.",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_risk": "highest risk is treating prior proxy aggregate context as fresh KPI; run337M keeps it signal-sanity-only.",
+  "missing_or_duplicate_check": "run337M checks artifact existence and requires run337N preflight to perform broker data gap/duplicate/timezone checks before execution.",
+  "sample_scope": "five Stage337 probe subjects, 25 proxy template rows, 5 MT5 handoff rows, 5 tester manifest rows.",
+  "split_boundary": "post-2026-04-14 forward probe boundary only; no training/validation split mutation.",
+  "time_axis": "US100 M5 forward window starts at 2026-04-14; tester end remains latest_available_at_future_execution_preflight; closed-bar-only rule retained."
+}
