@@ -4472,3 +4472,10 @@
 - decision(결정): `stage335R_materialized_same_bar_attribution_repair_and_proxy_scout_no_selection`
 - effect(효과): same-bar attribution repair(동일 봉 귀속 수리)를 적용하고 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침) 차이를 diagnostic-only(진단 전용)로 재물질화했다.
 - boundary(경계): proxy(프록시)는 selection/Forward decision(선택/전진 판정)에 `blocked`이며 Goal Achieve(목표 달성)는 `not_claimed`.
+## 2026-05-26 Stage335S Review and Stage336 Open(335S 검토 및 336단계 개방)
+
+- run_id(실행 ID): `run335S_review_repaired_attribution_proxy_scout_and_open_constraint_bound_research_packet_v1`
+- status(상태): `completed_stage335_closeout_open_stage336_constraint_bound_research_packet_no_selection`
+- decision(결정): `stage335S_close_stage335_open_stage336_constraint_bound_research_packet_no_selection`
+- effect(효과): run335R(335R 실행)의 repaired attribution/proxy scout(수리 귀속/프록시 탐침)를 검토하고 Stage336(336단계) constraint-bound research packet(제약 기반 연구 묶음)을 열었다.
+- boundary(경계): proxy(프록시)는 selection/Forward decision(선택/전진 판정)에 `blocked`이며 Goal Achieve(목표 달성)는 `not_claimed`.

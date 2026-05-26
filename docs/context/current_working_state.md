@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v19`
-- current_run(현재 실행): `run335S_review_repaired_attribution_proxy_scout_and_open_constraint_bound_research_packet_v1`
-- active_stage(활성 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
+- current_packet(현재 작업 묶음): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild_v1`
+- current_run(현재 실행): `run336A_design_constraint_bound_repair_defense_offense_rebuild_packet_v1`
+- active_stage(활성 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
-- source_stage(원천 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
-- target_surface(목표 표면): `failure_memory_constrained_research_handoff`
+- source_stage(원천 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
+- target_surface(목표 표면): `constraint_bound_repair_defense_offense_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_repaired_attribution_and_proxy_scout_materialized_no_forward_decision`
-- decision(결정): `stage335R_materialized_same_bar_attribution_repair_and_proxy_scout_no_selection`
+- status(상태): `completed_stage335_closeout_open_stage336_constraint_bound_research_packet_no_selection`
+- decision(결정): `stage335S_close_stage335_open_stage336_constraint_bound_research_packet_no_selection`
+- run335S_summary(335S 요약): repaired attribution/proxy scout review(수리 귀속/프록시 탐침 검토)를 `completed_stage335_closeout_open_stage336_constraint_bound_research_packet_no_selection`로 완료했다. Effect(효과): repair(수리) `9`행 통과, old proxy(기존 프록시) 선택 차단 유지, Stage336(336단계) `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`를 열고 `run336A_design_constraint_bound_repair_defense_offense_rebuild_packet_v1`로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335R_summary(335R 요약): repaired attribution/proxy scout(수리 귀속/프록시 탐침)를 `completed_repaired_attribution_and_proxy_scout_materialized_no_forward_decision`로 완료했다. Effect(효과): same-bar attribution repair(동일 봉 귀속 수리) `9`행, proxy comparison(프록시 비교) `792`행, constraint packet(제약 묶음) `6`행을 만들고 `run335S_review_repaired_attribution_proxy_scout_and_open_constraint_bound_research_packet_v1`로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335Q_summary(335Q 요약): balanced input review(균형 입력 검토)를 `completed_balanced_repair_defense_offense_input_review_no_forward_decision`로 완료했다. Effect(효과): same-bar attribution repair(동일 봉 귀속 수리)는 승인, proxy(프록시)는 선택 차단 유지, `run335R_materialize_repaired_attribution_and_branch_specific_proxy_scout_v1`에서 repaired attribution/proxy scout(수리 귀속/프록시 스카우트)를 물질화한다. Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335P_summary(335P 요약): repair/defense/offense research inputs(수리/방어/공격 연구 입력)을 `completed_balanced_repair_defense_offense_inputs_materialized_no_forward_decision`로 물질화했다. Effect(효과): exact join gap(정확 조인 공백)은 same-bar floor(동일 봉 보정)로 귀속 전용 수리 가능하고, proxy(프록시)는 selection(선택)에서 차단하며, `run335Q_review_balanced_repair_defense_offense_research_inputs_v1` 검토 대기열로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
@@ -87,7 +88,7 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run335S_review_repaired_attribution_proxy_scout_and_open_constraint_bound_research_packet_v1`
+- next_action(다음 행동): `run336A_design_constraint_bound_repair_defense_offense_rebuild_packet_v1`
 - claim_boundary(주장 경계): `research_development_only_subject_separated_runtime_probe_or_block_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
