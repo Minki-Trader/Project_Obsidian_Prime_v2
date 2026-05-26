@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337G_review_protocol_bound_execution_blueprints_v1`
+- latest_run(최신 실행): `run337H_materialize_reviewed_execution_packages_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -13,6 +13,7 @@
 - run337E_summary(337E 요약): `completed_research_execution_protocol_review_accepts_blueprint_queue_no_training`. Effect(효과): run337D(337D 실행)의 no-lookahead/proxy-MT5/core56/cost-direction-curve/offense/regime/runtime/training boundary(미래참조/프록시-MT5/핵심56/비용-방향-곡선/공격/국면/런타임/학습 경계) 절차를 검토하고 run337F(337F 실행) 청사진 물질화 대기열로 넘긴다.
 - run337F_summary(337F 요약): `completed_protocol_bound_execution_blueprints_materialized_no_training`. Effect(효과): no-lookahead/proxy-MT5/core56/cost-direction-curve/offense/regime/runtime(미래참조/프록시-MT5/핵심56/비용-방향-곡선/공격/국면/런타임) 청사진과 스키마를 만들고 run337G(337G 실행) 검토 대기열로 넘긴다.
 - run337G_summary(337G 요약): `completed_protocol_bound_execution_blueprint_review_accepts_package_queue_no_training`. Effect(효과): run337F(337F 실행) 청사진을 검토해 8개 blueprint family(청사진 묶음)를 run337H(337H 실행) package materialization(패키지 물질화) 대기열로 넘긴다.
+- run337H_summary(337H 요약): `completed_reviewed_execution_packages_materialized_no_training_no_mt5`. Effect(효과): run337G(337G 실행)가 승인한 8개 청사진 묶음을 reviewed package spec(검토된 패키지 명세)과 run337I(337I 실행) 검토 대기열로 물질화한다.
 - selected_candidate(선택 후보): `none`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed_for_stage337_new_work`

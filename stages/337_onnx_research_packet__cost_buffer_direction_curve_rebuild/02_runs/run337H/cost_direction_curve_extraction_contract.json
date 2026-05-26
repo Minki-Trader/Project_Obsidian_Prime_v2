@@ -1,0 +1,75 @@
+{
+  "claim_boundary": "research_development_only_stage337H_package_materialization_no_model_training_no_mt5_execution_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "claim_boundary_rule": "net/PF/DD/curve claims remain blocked until all reports are materialized and reviewed",
+  "contract_id": "stage337H_cost_direction_curve_extraction_contract_v1",
+  "execution_allowed": false,
+  "invalid_if": "any required report is absent while net/PF/DD/curve claims are made",
+  "reports": {
+    "D_B_source_attribution": [
+      "source_family",
+      "net",
+      "PF",
+      "expectancy",
+      "trade_count",
+      "drawdown_contribution"
+    ],
+    "cost_stress_report": [
+      "cost_multiplier",
+      "net",
+      "PF",
+      "expectancy",
+      "maxDD",
+      "recovery",
+      "trades_per_day"
+    ],
+    "curve_pocket_report": [
+      "window",
+      "worst_pocket_net",
+      "worst_pocket_dd",
+      "longest_underwater",
+      "recovery_bars"
+    ],
+    "long_short_attribution": [
+      "side",
+      "net",
+      "PF",
+      "expectancy",
+      "maxDD",
+      "trade_count"
+    ],
+    "lot_normalized_report": [
+      "lot_basis",
+      "net_per_lot",
+      "dd_per_lot",
+      "expectancy_per_trade"
+    ],
+    "regime_slice_report": [
+      "slice_family",
+      "slice_value",
+      "net",
+      "PF",
+      "expectancy",
+      "trade_count",
+      "maxDD"
+    ],
+    "spread_slippage_stress_report": [
+      "spread_points",
+      "slippage_points",
+      "net",
+      "PF",
+      "expectancy",
+      "maxDD",
+      "trade_count"
+    ]
+  },
+  "required_report_groups": [
+    "D_B_source_attribution",
+    "cost_stress_report",
+    "curve_pocket_report",
+    "long_short_attribution",
+    "lot_normalized_report",
+    "regime_slice_report",
+    "spread_slippage_stress_report"
+  ],
+  "source_schema": "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/cost_direction_curve_report_schema.json"
+}

@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337H_materialize_reviewed_execution_packages_v1`
+- current_run(현재 실행): `run337I_review_materialized_execution_packages_v1`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_protocol_bound_execution_blueprint_review_accepts_package_queue_no_training`
-- decision(결정): `stage337G_blueprints_reviewed_open_run337H_packages_no_training_no_mt5_no_selection`
+- status(상태): `completed_reviewed_execution_packages_materialized_no_training_no_mt5`
+- decision(결정): `stage337H_packages_ready_for_review_no_training_no_mt5_no_selection`
+- run337H_summary(337H 요약): `completed_reviewed_execution_packages_materialized_no_training_no_mt5`. Effect(효과): 8개 패키지 명세와 차단 행렬을 만들고 run337I(337I 실행) 검토 대기열로 넘기며, 학습/MT5/후보 선택은 계속 닫아둔다.
 - run337G_summary(337G 요약): `completed_protocol_bound_execution_blueprint_review_accepts_package_queue_no_training`. Effect(효과): 8개 청사진 묶음을 검토 승인하고 run337H(337H 실행) 패키지 물질화 대기열로 넘기며, 학습/MT5/후보 선택은 계속 닫아둔다.
 - run337F_summary(337F 요약): `completed_protocol_bound_execution_blueprints_materialized_no_training`. Effect(효과): 실행 청사진과 스키마를 만들고 run337G(337G 실행) 검토 대기열로 넘기며, 학습/MT5/후보 선택은 계속 닫아둔다.
 - run337E_summary(337E 요약): `completed_research_execution_protocol_review_accepts_blueprint_queue_no_training`. Effect(효과): 절차 검토를 통과시켜 run337F(337F 실행) blueprint materialization(청사진 물질화) 대기열을 열고, 학습/MT5/후보 선택은 계속 닫아둔다.

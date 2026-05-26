@@ -106,3 +106,19 @@ Effect(효과): 다음 실행은 이 청사진들이 실제 materialization pack
 - run337H_queue(337H 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/run337H_package_materialization_queue.csv`
 
 Effect(효과): 다음 실행은 이 검토 결과를 근거로 실제 package spec(패키지 명세)을 만들되, 학습과 MT5 실행은 계속 닫아둔다.
+
+## run337H Outputs(337H 산출물)
+
+- package_source_lineage_review(패키지 원천 계보 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/package_source_lineage_review.csv`
+- no_lookahead_canary_harness_package_spec(미래참조 방어 패키지 명세): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/no_lookahead_canary_harness_package_spec.csv`
+- proxy_mt5_fresh_probe_package_spec(프록시-MT5 신규 탐침 패키지 명세): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/proxy_mt5_fresh_probe_package_spec.csv`
+- core56_asof_repair_package_spec(핵심56 시점 기준 수리 패키지 명세): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/core56_asof_repair_package_spec.csv`
+- cost_direction_curve_extraction_package_spec(비용/방향/곡선 추출 패키지 명세): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/cost_direction_curve_extraction_package_spec.csv`
+- offense_branch_thesis_package_spec(공격 분기 논제 패키지 명세): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/offense_branch_thesis_package_spec.csv`
+- economic_regime_asof_join_package_spec(경제 국면 시점 기준 조인 패키지 명세): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/economic_regime_asof_join_package_spec.csv`
+- runtime_probe_package_spec(런타임 탐침 패키지 명세): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/runtime_probe_package_spec.csv`
+- package_blocker_matrix(패키지 차단 행렬): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/package_blocker_matrix.csv`
+- package_manifest_index(패키지 색인): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/package_manifest_index.csv`
+- run337I_queue(337I 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/run337I_package_review_queue.csv`
+
+Effect(효과): 다음 실행은 이 패키지 명세들이 실제 runner scaffold(러너 뼈대)로 넘어가도 되는지 검토한다.

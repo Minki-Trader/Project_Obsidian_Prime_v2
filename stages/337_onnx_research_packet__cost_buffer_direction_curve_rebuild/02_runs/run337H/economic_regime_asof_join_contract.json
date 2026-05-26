@@ -1,0 +1,43 @@
+{
+  "asof_rule": "source_timestamp <= cycle_bar_time and asof_status must not be future_join",
+  "claim_boundary": "research_development_only_stage337H_package_materialization_no_model_training_no_mt5_execution_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "contract_id": "stage337H_economic_regime_asof_join_contract_v1",
+  "execution_allowed": false,
+  "invalid_if": "asof_status is future_join or source timestamp is missing",
+  "required_columns": [
+    "candidate_id",
+    "cycle_bar_time",
+    "slice_family",
+    "slice_value",
+    "source_timestamp",
+    "asof_status",
+    "session",
+    "hour",
+    "month",
+    "volatility",
+    "ADX",
+    "VIX",
+    "USD",
+    "rate",
+    "net",
+    "PF",
+    "expectancy",
+    "trade_count",
+    "maxDD",
+    "long_short",
+    "D_source",
+    "B_source",
+    "D_plus_B"
+  ],
+  "slice_families": [
+    "VIX",
+    "USD",
+    "rate",
+    "ADX",
+    "volatility",
+    "session",
+    "hour",
+    "month"
+  ],
+  "source_schema": "stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/economic_regime_slice_schema.json"
+}

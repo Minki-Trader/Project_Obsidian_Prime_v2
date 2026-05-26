@@ -1,0 +1,26 @@
+{
+  "changed_variables": "package spec files, output contracts, blocker matrix, package index, run337I review queue",
+  "claim_boundary": "research_development_only_stage337H_package_materialization_no_model_training_no_mt5_execution_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "comparison_baseline": "run337G accepted blueprint queue and run337F source blueprints",
+  "control_variables": "no model training, no MT5 execution, no threshold retune, no lot optimization, no forward-pocket filtering, no candidate selection",
+  "decision_use": "allow run337I to review materialized package specs before any runner scaffold or execution attempt",
+  "evidence_plan": "package CSVs, contract JSONs, blocker matrix, acceptance matrix, run337I queue, gate audit, receipts, report, ledgers",
+  "failure_criteria": "missing package family, missing contract, open execution flag, or missing blocker criteria",
+  "hypothesis": "run337G accepted blueprints can be converted into package specs without opening training or MT5 execution",
+  "invalid_conditions": "using package specs to claim Forward Passed, runtime authority, candidate selection, or Goal Achieve",
+  "metrics": {
+    "accepted_package_rows": 8,
+    "failed_gate_rows": 0,
+    "gate_rows": 14,
+    "package_acceptance_rows": 8,
+    "package_family_count": 8,
+    "package_index_rows": 8,
+    "package_spec_rows": 46,
+    "run337i_queue_rows": 9,
+    "source_lineage_rows": 28
+  },
+  "run_id": "run337H_materialize_reviewed_execution_packages_v1",
+  "sample_scope": "package specs only; no trading KPI sample, no model fit, no MT5 trade rows",
+  "stop_conditions": "any gate fails; repair package spec before review",
+  "success_criteria": "all eight package families materialized, execution closed, gates pass, and run337I queue is ready"
+}
