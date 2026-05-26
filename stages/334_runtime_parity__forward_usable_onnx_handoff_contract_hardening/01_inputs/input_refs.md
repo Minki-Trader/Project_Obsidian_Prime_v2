@@ -48,3 +48,11 @@ Effect(효과): 다음 단계는 positive KPI(긍정 핵심지표)를 바로 후
 - run334F_views(334F 진단 보기): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/`
 - run334F_summary(334F 실패 기억 요약): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/stress_failure_memory_summary.csv`
 - run334F_final_decision(334F 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/final_materialization_decision.json`
+
+## run334G No-Retune Stress Review Outputs(334G 무재튜닝 압박 검토 출력)
+
+- run334G_attempt_review(334G 시도 검토): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/attempt_failure_memory_review.csv`
+- run334G_axis_heatmap(334G 축 열지도): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/axis_failure_heatmap.csv`
+- run334G_clue_resolution(334G 단서 판정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/preserved_clue_resolution.csv`
+- run334H_queue(334H 대기열): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/run334H_failure_memory_handoff_queue.csv`
+- run334G_final_decision(334G 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/final_stress_review_decision.json`

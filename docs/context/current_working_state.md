@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening_v7`
-- current_run(현재 실행): `run334G_review_no_retune_stress_probe_materialization_and_failure_memory_v1`
+- current_packet(현재 작업 묶음): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening_v8`
+- current_run(현재 실행): `run334H_close_stage334_open_failure_memory_research_handoff_v1`
 - active_stage(활성 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `333_overfit_guard__timestamp_safe_pocket_veto_materialization`
 - target_surface(목표 표면): `forward_usable_onnx_handoff_contract_hardening`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_no_retune_stress_probe_materialization_ready_for_review`
-- decision(판정): `stage334F_fixed_input_diagnostic_views_materialized_no_selection`
+- status(상태): `completed_stress_review_ready_for_stage_closeout_handoff`
+- decision(판정): `stage334G_all_six_no_retune_stress_review_blocks_selection_failure_memory_handoff`
+- run334G_summary(334G 요약): no-retune stress review(무재튜닝 압박 검토)를 `completed_no_retune_stress_materialization_review_no_selection`로 완료했다. Effect(효과): 6개 attempt(시도) 모두 failure memory(실패 기억)이며 다음 run334H(334H 실행)는 Stage334 closeout/handoff(단계 종료/인계)다.
 - run334F_summary(334F 요약): no-retune stress probe materialization(무재튜닝 압박 탐침 물질화)을 `completed_no_retune_nonidentity_stress_probe_input_materialization_no_selection`로 완료했다. Effect(효과): 42개 fixed-input diagnostic view(고정 입력 진단 보기)를 만들었고, 다음 run334G(334G 실행)는 실패 기억과 보존 단서를 검토한다.
 - run334E_summary(334E 요약): no-retune non-identity stress probe design(무재튜닝 비정체성 압박 탐침 설계)을 `completed_no_retune_nonidentity_stress_probe_design_no_selection`로 완료했다. Effect(효과): 6개 전체를 run334F(334F 실행)의 fixed-input diagnostic materialization(고정 입력 진단 물질화)으로 넘기고 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run334D_summary(334D 요약): existing non-identity runtime evidence reconciliation(기존 비정체성 런타임 근거 대조)을 `completed_existing_nonidentity_runtime_evidence_reconciliation_no_selection`로 완료했다. Effect(효과): 6개 전체를 cost/curve/regime/direction(비용/곡선/국면/방향) 기준으로 대조했고, 다음 run334E(334E 실행)는 no-retune stress probe design(무재튜닝 압박 탐침 설계)로 넘어간다.
