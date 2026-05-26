@@ -1,0 +1,23 @@
+{
+  "observed_change": "full-window clues are decomposed across horizon/cost/resampling/parity controls",
+  "comparison_baseline": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/forward_mt5_kpi_report.csv",
+  "likely_drivers": [
+    "cost sensitivity",
+    "curve pockets",
+    "direction split",
+    "trade concentration"
+  ],
+  "segment_checks": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_horizon_kpi_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv"
+  ],
+  "trade_shape": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_survival_summary.csv",
+  "alternative_explanations": [
+    "single forward window",
+    "broker tester cost assumptions",
+    "D/B source missing"
+  ],
+  "attribution_confidence": "medium_research_only",
+  "next_probe": "run331C_runtime_replay_or_block_cross_horizon_probe_v1"
+}

@@ -1,0 +1,19 @@
+{
+  "result_subject": "run331B_materialize_no_retune_replay_and_resampling_controls_v1",
+  "evidence_available": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_horizon_kpi_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/runtime_parity_materialization_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_survival_summary.csv"
+  ],
+  "evidence_missing": [
+    "fresh MT5 runtime replay",
+    "D/B source attribution",
+    "final forward pass/fail decision"
+  ],
+  "judgment_label": "exploratory_materialization_no_forward_decision",
+  "claim_boundary": "research_development_only_no_retune_replay_resampling_controls_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "next_condition": "run331C_runtime_replay_or_block_cross_horizon_probe_v1",
+  "user_explanation_hook": "무재튜닝 검증 표를 만든 것이며 아직 전진 통과가 아니다."
+}

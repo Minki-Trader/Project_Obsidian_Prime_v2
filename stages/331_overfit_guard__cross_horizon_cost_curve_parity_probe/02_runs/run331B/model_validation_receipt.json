@@ -1,0 +1,18 @@
+{
+  "model_family": "Stage330 forward-safe non-identity ONNX clue set",
+  "target_and_label": "fixed no-retune forward MT5 signal behavior",
+  "split_method": "cross-horizon trade partitions and deterministic resampling controls",
+  "selection_metric": "none_no_selection",
+  "secondary_metrics": [
+    "cost survival",
+    "rolling pocket",
+    "resampling positive share",
+    "runtime parity materialization"
+  ],
+  "threshold_policy": "fixed_no_retune",
+  "overfit_risk": "preserved clues can still be single-window artifacts",
+  "calibration_risk": "score calibration not claimed",
+  "comparison_baseline": "run330F full-window MT5 and run330G pressure matrix",
+  "validation_judgment": "exploratory_materialization_only",
+  "claim_boundary": "research_development_only_no_retune_replay_resampling_controls_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

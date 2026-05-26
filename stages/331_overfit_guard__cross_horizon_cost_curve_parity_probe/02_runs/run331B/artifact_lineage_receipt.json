@@ -1,0 +1,45 @@
+{
+  "generated_at_utc": "2026-05-26T03:48:08Z",
+  "source_inputs": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331A/candidate_probe_matrix.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331A/cross_horizon_partition_plan.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331A/cost_curve_probe_plan.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331A/runtime_parity_handoff_plan.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/trade_level_records.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/forward_mt5_kpi_report.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/runtime_telemetry",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/reports"
+  ],
+  "producer": "stage_pipelines/stage331/materialize_no_retune_replay_and_resampling_controls.py",
+  "consumer": "run331C_runtime_replay_or_block_cross_horizon_probe_v1",
+  "artifact_paths": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_horizon_kpi_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/runtime_parity_materialization_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_survival_summary.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/performance_attribution_receipt.json",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/model_validation_receipt.json",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/runtime_parity_receipt.json",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/result_judgment_receipt.json",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/result_judgment.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/required_gate_coverage_audit.csv",
+    "stage_pipelines/stage331/materialize_no_retune_replay_and_resampling_controls.py"
+  ],
+  "artifact_hashes": {
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_horizon_kpi_report.csv": "27461f8a04e4df7378d2f8ad59ec639cf108e09c2ba761d49116e3ce2f5edce0",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv": "12b367bee52ad2101fcdde5dd21153d71e2f1bd46319da708d62eb90d15121de",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv": "75d99669f6434694cdb84fe31a1d4ffcfd8096b7660e9902974edc2b9ac086c9",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/runtime_parity_materialization_report.csv": "53f2a41a568da6ba2bab95b9cc3cf43cf685e2ecb056577d98bbb733a7dd398d",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_survival_summary.csv": "79f8277a64e1962d9ccccce69614084629d2c1928e04cbe760c4b29b4ac50f7d",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/performance_attribution_receipt.json": "e335bd647a710a31b47a7ddb8f69c01f9bea6e60ef2d8aeac41bd0869e184662",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/model_validation_receipt.json": "c05572179f1052471ceb14e41597e492bd29f2495a69f7b5fca21349417d6f8f",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/runtime_parity_receipt.json": "719648c62acbc6e58c68c1a586b2d42c4cff1d16edefefbe0d3bd1baaf2a4615",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/result_judgment_receipt.json": "b67887e4b3db89b336601203baf71d2608a82d55f835ec71b50b65a3c3cb64c0",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/result_judgment.csv": "6330a3540e12f4e5227afab1bc2cf4d1823873c67cb708c1c214ad82ea169677",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/required_gate_coverage_audit.csv": "2aafb6816e8362d5a05367113ca6f07cb66a55b4b8dfec722bfa1039dbfd1554",
+    "stage_pipelines/stage331/materialize_no_retune_replay_and_resampling_controls.py": "fa2c8642eae1da9da38075abdf46b3a6fb3c95f0f97ad0525b7971de98e0877e"
+  },
+  "lineage_judgment": "connected_with_no_retune_materialization_boundary",
+  "claim_boundary": "research_development_only_no_retune_replay_resampling_controls_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

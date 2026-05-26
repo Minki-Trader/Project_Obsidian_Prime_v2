@@ -4145,3 +4145,11 @@
 - judgment(판정): `experiment_design_completed_research_only_no_goal_achieve`
 - next_action(다음 행동): `run331B_materialize_no_retune_replay_and_resampling_controls_v1`
 - effect(효과): 후보 선택 없이 run331B(331B 실행)의 물질화 대기열만 만든다.
+
+## 2026-05-26 - Stage331B No-Retune Replay Resampling Controls(331B 무재튜닝 재생 재표본 대조군)
+
+- run331B(331B 실행): run331A(331A 실행) 설계를 실제 기간/비용/곡선/재표본/런타임 동등성 표로 물질화했다.
+- status(상태): `completed_no_retune_replay_resampling_controls_no_forward_decision`
+- judgment(판정): `no_retune_materialization_completed_research_only_no_goal_achieve`
+- next_action(다음 행동): `run331C_runtime_replay_or_block_cross_horizon_probe_v1`
+- effect(효과): 새 후보 선택 없이 run331C(331C 실행)의 runtime replay or block(런타임 재생 또는 차단) 입력을 만든다.
