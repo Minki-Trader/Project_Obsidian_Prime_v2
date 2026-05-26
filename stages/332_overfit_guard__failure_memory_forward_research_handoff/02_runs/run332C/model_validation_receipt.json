@@ -1,0 +1,12 @@
+{
+  "model_family": "Stage331 RF forward-safe research artifacts; no new model trained in run332C.",
+  "target_and_label": "unchanged from source artifacts; run332C only reads post-run KPI/curve evidence.",
+  "split_method": "existing raw-forward window plus deterministic time/rolling slices.",
+  "selection_metric": "none; no candidate selection allowed.",
+  "secondary_metrics": "cost2_pf, rolling20_min_net, temporal slice net, trade count, runtime replay match.",
+  "threshold_policy": "fixed/no retune; run332C does not search thresholds.",
+  "overfit_risk": "using Stage331 pockets as repair targets; mitigated by writing veto rules instead of repair parameters.",
+  "calibration_risk": "not applicable; no score probability claim.",
+  "comparison_baseline": "Stage331 final matrix and negative controls.",
+  "validation_judgment": "cost_curve_guarded_scout_research_only_no_goal_achieve"
+}

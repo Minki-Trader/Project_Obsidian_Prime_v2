@@ -13,3 +13,8 @@
 - run332B_raw_refresh_probe(332B 원본 갱신 탐침): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/raw_refresh_probe_manifest.json`
 
 Effect(효과): 다음 단계는 기존 Stage331(331단계)의 좋은 숫자를 재튜닝(retuning, 재튜닝)하지 않고, 추적 가능한 입력과 차단 조건만 사용한다.
+
+- run332C_guarded_scout_matrix(332C 방어 탐침 행렬): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C/guarded_scout_matrix.csv`
+- run332C_cost_veto(332C 비용 거부): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C/cost_convexity_veto_table.csv`
+- run332C_curve_veto(332C 곡선 포켓 거부): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C/curve_pocket_veto_table.csv`
+- run332C_queue(332C 대기열): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C/guarded_scout_queue.csv`

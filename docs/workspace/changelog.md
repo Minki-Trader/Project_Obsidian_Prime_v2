@@ -4186,3 +4186,10 @@
 - judgment(판정): `data_guard_inputs_materialized_research_only_no_goal_achieve`
 - next_action(다음 행동): `run332C_design_or_materialize_cost_curve_guarded_scout_v1`
 - effect(효과): cost/curve guarded scout(비용/곡선 방어 탐색)의 입력은 준비됐지만 Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage332C cost/curve guarded scout(비용/곡선 방어 탐침)
+
+- run(실행): `run332C_design_or_materialize_cost_curve_guarded_scout_v1`
+- status(상태): `completed_cost_curve_guarded_scout_materialization_no_selection`
+- effect(효과): Stage331(331단계)의 preserved clue(보존 단서)를 선택하지 않고, cost convexity/curve pocket/temporal balance(비용 볼록성/곡선 포켓/시간 균형) veto(거부) 조건과 run332D(332D 실행) 대기열로 바꿨다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

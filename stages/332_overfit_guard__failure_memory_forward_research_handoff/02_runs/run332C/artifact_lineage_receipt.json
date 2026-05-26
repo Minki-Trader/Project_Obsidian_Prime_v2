@@ -1,0 +1,68 @@
+{
+  "source_inputs": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/final_decision_matrix.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/overfit_guard_failure_memory.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/survivor_clue_disposition.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_horizon_kpi_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/runtime_replay_compare_report.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/guard_input_manifest.csv"
+  ],
+  "producer": "stage_pipelines/stage332/materialize_cost_curve_guarded_scout.py",
+  "consumer": [
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/03_reviews/run332C_cost_curve_guarded_scout.md",
+    "run332D_design_pocket_veto_feature_thesis_v1"
+  ],
+  "artifact_hashes": [
+    {
+      "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/final_decision_matrix.csv",
+      "sha256": "a2b24bc49ca8427868860322cda7953173dbfa7b392741294a74a4854c720106",
+      "exists": true
+    },
+    {
+      "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/overfit_guard_failure_memory.csv",
+      "sha256": "9212d58176a447563a41733ac38bfbedd5ca4c09dc2970efed35db99e4fd866f",
+      "exists": true
+    },
+    {
+      "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/survivor_clue_disposition.csv",
+      "sha256": "c63915d73b30714e3af890921c344f0da1511128adbc360015aae51b28930aa6",
+      "exists": true
+    },
+    {
+      "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv",
+      "sha256": "12b367bee52ad2101fcdde5dd21153d71e2f1bd46319da708d62eb90d15121de",
+      "exists": true
+    },
+    {
+      "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_horizon_kpi_report.csv",
+      "sha256": "27461f8a04e4df7378d2f8ad59ec639cf108e09c2ba761d49116e3ce2f5edce0",
+      "exists": true
+    },
+    {
+      "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv",
+      "sha256": "75d99669f6434694cdb84fe31a1d4ffcfd8096b7660e9902974edc2b9ac086c9",
+      "exists": true
+    },
+    {
+      "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/runtime_replay_compare_report.csv",
+      "sha256": "d825d416edf01de8af9472bb970495be0ebb77332c7fbdd9ce215e4a9adcdd8d",
+      "exists": true
+    },
+    {
+      "path": "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/guard_input_manifest.csv",
+      "sha256": "cde30821111823ae22bcc87920a60cca26d5ba4ca7cfd3637b858cb55cb11577",
+      "exists": true
+    }
+  ],
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/03_reviews/stage_run_ledger.csv"
+  ],
+  "availability": "tracked_outputs_with_source_hashes",
+  "lineage_judgment": "connected_with_boundary"
+}

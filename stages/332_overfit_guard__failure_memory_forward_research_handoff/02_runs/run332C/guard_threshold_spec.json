@@ -1,0 +1,29 @@
+{
+  "source": "Stage331 failure memory, not optimized on new data",
+  "no_retune_policy": {
+    "threshold_retuning": "forbidden",
+    "lot_optimization": "forbidden",
+    "model_update": "forbidden",
+    "pocket_exclusion_after_viewing": "forbidden"
+  },
+  "cost_levels_to_report": [
+    0,
+    0.25,
+    0.5,
+    1,
+    2,
+    3,
+    5
+  ],
+  "hard_veto_rules": {
+    "cost2_profit_factor_lt_1": "failure_memory_only_no_selection_language",
+    "rolling20_min_net_lt_0": "curve_pocket_veto_no_selection_language"
+  },
+  "warning_rules": {
+    "cost1_profit_factor_lte_1_05": "near_break_even_cost_fragility",
+    "any_month_or_half_net_lte_0": "temporal_concentration_warning",
+    "trade_count_lt_100": "low_frequency_claim_warning"
+  },
+  "next_research_use": "Design future feature theses that must pass these fixed reports before any ONNX export package language.",
+  "claim_boundary": "research_development_only_cost_curve_guarded_scout_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}
