@@ -1,0 +1,59 @@
+{
+  "failed_gates": [],
+  "required_gates": [
+    {
+      "detail": "run335B guard sources are present and hashed",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/source_artifact_hashes.json",
+      "gate": "run335B_source_presence",
+      "status": "passed"
+    },
+    {
+      "detail": "branch_rows=11",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_design_matrix.csv",
+      "gate": "branch_design_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "queue_rows=11;ready_rows=11",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/run335D_materialization_queue.csv",
+      "gate": "materialization_queue_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "tier_rows=33",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/tier_kpi_plan.csv",
+      "gate": "paired_tier_contract",
+      "status": "passed"
+    },
+    {
+      "detail": "negative_control_rows=21",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/negative_control_matrix.csv",
+      "gate": "negative_control_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "runtime requirements are carried forward; no runtime authority claimed",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/runtime_parity_gate_plan.csv",
+      "gate": "runtime_boundary_guard",
+      "status": "passed"
+    },
+    {
+      "detail": "selection_eligible_false=11",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_design_matrix.csv",
+      "gate": "no_candidate_no_retune_guard",
+      "status": "passed"
+    },
+    {
+      "detail": "evidence_rows=88",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_evidence_requirements.csv",
+      "gate": "evidence_requirement_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "no candidate, no Forward Passed/Failed, no runtime authority, no Goal Achieve",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/result_judgment.csv",
+      "gate": "final_claim_guard",
+      "status": "passed"
+    }
+  ]
+}

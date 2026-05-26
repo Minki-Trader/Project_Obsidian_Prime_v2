@@ -28,3 +28,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - latest_forward_data_inventory(최신 전진 데이터 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/latest_forward_data_inventory.csv`
 - runtime_handoff_requirement_inventory(런타임 인계 요구 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/runtime_handoff_requirement_inventory.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335B_failure_memory_guard_input_materialization.md`
+
+## run335C Branch Design Outputs(335C 분기 설계 출력)
+
+- branch_design_matrix(분기 설계 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_design_matrix.csv`
+- run335D_materialization_queue(335D 물질화 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/run335D_materialization_queue.csv`
+- negative_control_matrix(부정 대조 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/negative_control_matrix.csv`
+- tier_kpi_plan(티어 KPI 계획): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/tier_kpi_plan.csv`
+- runtime_parity_gate_plan(런타임 동등성 게이트 계획): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/runtime_parity_gate_plan.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335C_guarded_failure_memory_branch_design.md`

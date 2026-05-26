@@ -1,0 +1,19 @@
+{
+  "changed_variables": "branch input specs, evidence contracts, negative controls, stop conditions",
+  "comparison_baseline": "Stage334 failure memory, run335B guard input manifest, no-trade/random/shuffle/adjacent controls",
+  "control_variables": [
+    "fixed split boundary",
+    "fixed threshold policy",
+    "fixed lot/risk logic",
+    "paired Tier A/B/A+B reporting",
+    "runtime identity requirement before runtime claim"
+  ],
+  "decision_use": "may influence run335D materialization only, not candidate selection",
+  "evidence_plan": "branch_evidence_requirements.csv",
+  "failure_criteria": "branch requires forbidden tuning/filtering or negative control behaves similarly",
+  "hypothesis": "failure memory can guide guarded research branches without becoming post-hoc forward fitting",
+  "invalid_conditions": "subject swap, missing data identity, hidden Tier B, or runtime claim without tester output",
+  "sample_scope": "US100 M5 research branch design after OOS boundary 2026-04-13",
+  "stop_conditions": "see branch_stop_condition_matrix.csv",
+  "success_criteria": "run335D can materialize branch inputs without forbidden repair"
+}

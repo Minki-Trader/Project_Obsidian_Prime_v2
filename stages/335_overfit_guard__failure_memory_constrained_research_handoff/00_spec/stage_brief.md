@@ -10,4 +10,4 @@
 - claim_boundary(주장 경계): `research_development_only_stage335_failure_memory_constrained_research_no_forward_pocket_filtering_no_model_training_until_predeclared_protocol_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Effect(효과): Stage335(335단계)는 후보 수리(repair, 수리)나 선택(selection, 선택)이 아니라, 실패 축을 재사용 가능한 연구 계약(research contract, 연구 계약)으로 바꾸는 단계다.
-- latest_run(최신 실행): `run335B_materialize_failure_memory_guard_inputs_v1`
+- latest_run(최신 실행): `run335C_design_guarded_failure_memory_research_branches_v1`
