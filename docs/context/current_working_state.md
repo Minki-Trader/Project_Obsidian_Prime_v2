@@ -1285,3 +1285,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337Q_open_run337R_tester_boundary_or_source_policy_repair_no_selection`
 - next_action(다음 행동): `run337R_fresh_boundary_repaired_forward_attribution_and_asof_policy_review_v1`
 - effect(효과): tester ToDate boundary repair probe(테스터 종료일 경계 수리 탐침)를 MT5(메타트레이더5) `5/5`로 실행했고, tester reached feature last(테스터 피처 끝 도달) `0/5`, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성) `25/25`를 기록했다.
+
+## Stage337 run337R(337R 실행) - 2026-05-27
+
+- status(상태): `completed_stage337R_boundary_attribution_stress_forward_blocked_no_goal_achieve`
+- decision(결정): `stage337R_open_run337S_tester_visible_source_policy_repair_or_next_data_boundary_probe_no_selection`
+- next_action(다음 행동): `run337S_tester_visible_source_policy_repair_or_next_data_boundary_probe_v1`
+- effect(효과): trade-level attribution/stress(거래 단위 귀속/압박)를 만들고 tester/as-of blockers(테스터/시점 기준 차단 요소)를 분리했다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
