@@ -4,7 +4,9 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
+- latest_run(최신 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
+- run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - selected_candidate(선택 후보): `none`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed_for_stage337_new_work`

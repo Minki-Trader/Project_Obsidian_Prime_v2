@@ -4614,3 +4614,12 @@
 - action(행동): run336O(336O 실행)의 scorecard(점수표), cost stress(비용 압박), direction/curve/regime attribution(방향/곡선/국면 귀속)을 stage closeout(단계 종료) 판정으로 묶었다.
 - effect(효과): repaired subset(수리 부분집합)은 Forward Failed(전진 실패) 범위로 기록하고, Stage337(337단계)을 cost buffer/direction/curve rebuild(비용 버퍼/방향/곡선 재구성) 단계로 열었다.
 - boundary(경계): selected candidate(선택 후보), live readiness(실거래 준비), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage337A Cost Direction Curve Design(337A 비용/방향/곡선 설계)
+
+- run_id(실행 ID): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
+- status(상태): `completed_cost_direction_curve_rebuild_packet_design_no_selection`
+- decision(결정): `stage337A_cost_direction_curve_rebuild_design_ready_no_selection`
+- action(행동): Stage336P(336P 실행)의 failure memory(실패 기억)를 Stage337(337단계)의 설계 제약, branch matrix(분기 행렬), gate contract(게이트 계약), proxy-MT5 contract(프록시-MT5 계약), negative controls(부정 대조), run337B queue(337B 대기열)로 물질화했다.
+- effect(효과): proxy test(프록시 테스트)는 proxy expected result(프록시 예상 결과), MT5 runtime probe result(MT5 런타임 탐침 결과), difference report(차이 보고서), usability label(활용성 라벨)을 함께 요구한다.
+- boundary(경계): selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
