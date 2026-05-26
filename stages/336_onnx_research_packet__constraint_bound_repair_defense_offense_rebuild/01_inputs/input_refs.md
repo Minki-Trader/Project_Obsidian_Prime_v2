@@ -50,3 +50,13 @@ Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected
 - tier_pair_no_lookahead_contract(티어 쌍 및 미래 참조 금지 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/tier_pair_and_no_lookahead_contract.csv`
 - run336E_review_queue(336E 검토 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/run336E_review_queue.csv`
 - final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336D/final_constraint_bound_implementation_materialization_decision.json`
+
+## run336E Protocol Review(336E 계약 검토)
+
+- review_queue_completion(검토 대기열 완료): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/review_queue_completion.csv`
+- branch_specific_negative_control_review(분기 전용 부정 대조 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/branch_specific_negative_control_review.csv`
+- proxy_mt5_usability_review(프록시-MT5 활용성 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/proxy_mt5_usability_contract_review.csv`
+- runtime_preflight_review(런타임 사전점검 검토): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/runtime_preflight_manifest_review.csv`
+- protocol_acceptance_matrix(계약 승인 행렬): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/protocol_acceptance_matrix.csv`
+- run336F_blueprint_queue(336F 청사진 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/run336F_execution_blueprint_queue.csv`
+- final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/final_protocol_review_decision.json`

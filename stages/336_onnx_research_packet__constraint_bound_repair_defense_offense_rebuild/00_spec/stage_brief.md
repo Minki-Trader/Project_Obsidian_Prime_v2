@@ -10,4 +10,4 @@
 - claim_boundary(주장 경계): `research_development_only_stage336_constraint_bound_repair_defense_offense_rebuild_no_model_training_until_predeclared_protocol_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Effect(효과): Stage336(336단계)는 새 후보 선택이 아니라, run335S(335S 실행)의 accepted constraints(승인 제약) `6`개를 먼저 배선해 다음 research packet(연구 묶음)의 과적합 경로를 막는 단계다.
-- latest_run(최신 실행): `run336D_materialize_constraint_bound_research_implementation_queue_v1`
+- latest_run(최신 실행): `run336E_review_constraint_bound_research_implementation_protocols_v1`
