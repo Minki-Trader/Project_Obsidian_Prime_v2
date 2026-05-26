@@ -122,3 +122,13 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - lookahead_bias_rejection_matrix(미래정보 편향 거절 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/lookahead_bias_rejection_matrix.csv`
 - run335N_metric_materialization_queue(335N 지표 물질화 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/run335N_metric_materialization_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335M_branch_specific_runtime_metric_extraction_design.md`
+## run335N Branch-Specific Runtime Metric Materialization(335N 분기별 런타임 지표 물질화)
+
+- runtime_trade_ledger(런타임 거래 장부): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/runtime_trade_ledger.csv`
+- attempt_runtime_metric_summary(시도별 런타임 지표 요약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/attempt_runtime_metric_summary.csv`
+- trade_telemetry_join_audit(거래-기록 연결 감사): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/trade_telemetry_join_audit.csv`
+- branch_runtime_metric_matrix(분기 런타임 지표 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/branch_runtime_metric_matrix.csv`
+- cost_stress_metric_matrix(비용 압박 지표 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/cost_stress_metric_matrix.csv`
+- curve_pocket_underwater_matrix(곡선 포켓/수중 구간 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/curve_pocket_underwater_matrix.csv`
+- regime_direction_slice_matrix(국면/방향 조각 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/regime_direction_slice_matrix.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335N_branch_specific_runtime_metric_materialization.md`
