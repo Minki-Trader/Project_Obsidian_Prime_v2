@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild_v1`
-- current_run(현재 실행): `run336O_repaired_forward_attribution_and_cost_stress_v1`
+- current_run(현재 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - active_stage(활성 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - target_surface(목표 표면): `constraint_bound_repair_defense_offense_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_timestamp_aligned_proxy_mt5_parity_review_no_forward_decision`
-- decision(결정): `stage336N_timestamp_aligned_parity_passed_queue_forward_attribution_no_selection`
+- status(상태): `completed_repaired_forward_attribution_cost_stress_no_forward_decision`
+- decision(결정): `stage336O_forward_attribution_requires_failure_memory_no_selection`
+- run336O_summary(336O 요약): repaired forward attribution/cost stress(수리 전진 귀속/비용 압박)를 `completed_repaired_forward_attribution_cost_stress_no_forward_decision`로 완료했다. Effect(효과): best repaired clue(최선 수리 단서)는 `m48_plain_rf` score(점수) `12`지만, cost/direction/curve fragility(비용/방향/곡선 취약성)가 남아 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336N_summary(336N 요약): timestamp-aligned proxy-MT5 parity(타임스탬프 정렬 프록시-MT5 동등성)를 `completed_timestamp_aligned_proxy_mt5_parity_review_no_forward_decision`로 검토했다. Effect(효과): run336M(336M 실행)의 0/20 raw mismatch(원시 불일치)는 timestamp basis(타임스탬프 기준) 차이였고, aligned parity(정렬 동등성)는 `20/20 matched(일치)`다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336M_summary(336M 요약): live-safe feature handoff repair(실시간 안전 피처 인계 수리)를 `completed_live_safe_feature_handoff_repair_probe_partial_no_forward_decision`로 실행했다. Effect(효과): MT5 completed(MT5 완료) `4/4`, feature latest gaps(최신 피처 공백) `0`로 기록했고, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336L_summary(336L 요약): live-safe feature handoff repair decision(실시간 안전 피처 인계 수리 결정)을 `completed_live_safe_feature_handoff_repair_decision_no_forward_decision`로 완료했다. Effect(효과): macro48/u42(거시48/US100 기술42)는 run336M(336M 실행) 수리 대상으로 보내고 core56(핵심56)은 equity refresh(주식 데이터 갱신) 전까지 차단한다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

@@ -4596,3 +4596,12 @@
 - action(행동): run336M(336M 실행)의 proxy-MT5 mismatch(프록시-MT5 불일치)를 MT5 feature_ready cycle timestamps(피처 준비 사이클 타임스탬프) 기준으로 다시 계산했다.
 - effect(효과): aligned proxy-MT5 parity(정렬 프록시-MT5 동등성)는 `20/20 matched(일치)`이며, 다음은 forward attribution/cost stress(전진 귀속/비용 압박)다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336O Repaired Forward Attribution and Cost Stress(336O 수리 전진 귀속 및 비용 압박)
+
+- run_id(실행 ID): `run336O_repaired_forward_attribution_and_cost_stress_v1`
+- status(상태): `completed_repaired_forward_attribution_cost_stress_no_forward_decision`
+- decision(결정): `stage336O_forward_attribution_requires_failure_memory_no_selection`
+- action(행동): run336M(336M 실행)의 MT5 report/deal list(보고서/딜 목록)를 trade-level(거래 수준)로 분해해 cost stress(비용 압박), curve pocket(곡선 포켓), direction/session/month/regime slice(방향/세션/월/국면 조각)를 계산했다.
+- effect(효과): repaired handoff(수리 인계)는 동작하지만 cost/direction/curve fragility(비용/방향/곡선 취약성)가 남아 Forward Passed(전진 통과)와 Goal Achieve(목표 달성)는 주장하지 않는다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
