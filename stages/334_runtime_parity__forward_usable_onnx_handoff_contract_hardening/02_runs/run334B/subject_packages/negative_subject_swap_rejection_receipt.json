@@ -1,0 +1,19 @@
+{
+  "claim_effect": "gate rejection proves the materializer does not silently approve subject swaps",
+  "created_at_utc": "2026-05-26T08:06:42Z",
+  "forbidden_mapping_attempt": {
+    "attempted_claim": "cp322A exact forward handoff",
+    "attempted_feature_source": "run333e_signal_replay_bridge p_short,p_flat,p_long",
+    "attempted_subject_id": "cp322a_preserved_exact_identity"
+  },
+  "gate_result": "must_reject",
+  "package_role": "negative_control",
+  "rejection_reasons": [
+    "cp322A subject contract requires run322b_route_signal.",
+    "run333E bridge feature order has 3 probability columns, not cp322A route-signal identity.",
+    "Stage333G proved post-2026-04-14 cp322A exact route-signal rows are missing."
+  ],
+  "runtime_claim_boundary": "not_applicable_rejected_control",
+  "status": "materialized_and_rejected_by_source_authority_gate",
+  "subject_id": "negative_subject_swap_control"
+}

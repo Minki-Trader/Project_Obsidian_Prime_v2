@@ -4275,3 +4275,11 @@
 - judgment(판정): `contract_hardening_design_completed_research_only_no_goal_achieve`
 - next_action(다음 행동): `run334B_materialize_subject_separated_handoff_contract_inputs_v1`
 - effect(효과): design-only(설계 전용)이므로 selected candidate(선택 후보), Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage334B Subject-Separated Handoff Input Materialization(334B 대상 분리 인계 입력 물질화)
+
+- run334B(334B 실행): subject package(대상 패키지) 4개, source authority gate receipt(원천 권위 게이트 영수증), future feature source index(미래 피처 원천 색인), runtime probe design queue(런타임 탐침 설계 대기열)를 만들었다.
+- status(상태): `completed_subject_separated_handoff_contract_inputs_materialized_no_selection`
+- judgment(판정): `handoff_inputs_materialized_research_only_no_goal_achieve`
+- next_action(다음 행동): `run334C_design_subject_separated_runtime_probe_or_block_v1`
+- effect(효과): input materialization(입력 물질화) 전용이므로 selected candidate(선택 후보), Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

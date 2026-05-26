@@ -1,0 +1,28 @@
+{
+  "allowed_action": "materialize timestamp-safe feature and handoff skeleton with explicit lineage",
+  "created_at_utc": "2026-05-26T08:06:42Z",
+  "data_source": {
+    "existing_forward_feature_manifest": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/raw_forward_feature_matrix_manifest.csv",
+    "existing_guard_input_manifest": "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/guard_input_manifest.csv",
+    "latest_raw_refresh_probe_csv": "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/raw_refresh_probe/US100/bars_us100_m5_mt5api_raw.csv",
+    "latest_raw_refresh_probe_manifest": "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/raw_refresh_probe_manifest.json",
+    "latest_raw_refresh_probe_status": "CSV data exists and is hashed, but collector native manifest failed due path handling."
+  },
+  "feature_source_index": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/future_non_identity_feature_source_index.csv",
+  "forbidden_action": "train or tune on forward KPI in this run",
+  "gate_result": "ready_for_runtime_probe_design",
+  "model_policy": "no model training or ONNX export in run334B",
+  "next_condition": "Select an existing pre-forward model source or design a new non-identity research packet without using forward KPI as the selection objective.",
+  "package_role": "future_research_candidate_input",
+  "runtime_handoff_policy": "run334C may design a runtime probe only after subject_id, feature order, model source, threshold source, set/ini, report, and telemetry identity are declared",
+  "sample_scope": {
+    "existing_forward_feature_sources": 6,
+    "raw_refresh_csv_sha256": "aed6a45a0bc3526eda09e87cf383e5387f3e0d2e26d1bb5d5e2284a9af6cebb3",
+    "raw_refresh_first_timestamp": "2026-05-25T01:00:00+00:00",
+    "raw_refresh_last_timestamp": "2026-05-25T19:55:00+00:00",
+    "raw_refresh_probe_rows": 228
+  },
+  "status": "materialized_contract_input_skeleton_no_training_no_threshold_search",
+  "subject_id": "future_forward_usable_non_identity_onnx",
+  "threshold_policy": "no threshold search in run334B; inherited thresholds are reference metadata only"
+}

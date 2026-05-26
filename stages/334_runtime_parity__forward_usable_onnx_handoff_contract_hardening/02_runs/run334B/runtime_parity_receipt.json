@@ -1,0 +1,27 @@
+{
+  "known_differences": [
+    "cp322A exact requires run322b_route_signal and has no post-2026-04-14 rows",
+    "run333E is a 3-column probability bridge reference, not cp322A exact",
+    "future non-identity ONNX has only a skeleton in run334B"
+  ],
+  "parity_check": "manifest and hash packaging only; no new MT5 execution in run334B",
+  "parity_identity": {
+    "cp322a_onnx_sha256": "b0b34d31a78eef63084bc2157a81a83d88458a0e5aa605631e60af592ef9e723",
+    "run333e_bridge_onnx_sha256": "13a4958c0079e398a1cbfaf6375d4d798ab4a1c3fc692a2a403ab44d044b57df",
+    "run333e_report_sha256": "a4c5a52e931a9609e969fce4812068eb1c1320fc792d0f9e6fbf7bb13d061028"
+  },
+  "research_path": "stage_pipelines/stage334/materialize_subject_separated_handoff_contract_inputs.py",
+  "runtime_claim_boundary": "research-only",
+  "runtime_path": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/runtime_probe_handoff_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5_runtime_probe_summary.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/reports/Project_Obsidian_Prime_v2_run333E_m48_breadth_soft_veto_replay.htm",
+    "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/run_manifest.json"
+  ],
+  "shared_contract": [
+    "subject_id must match source authority",
+    "feature order hash must be declared",
+    "threshold source must be inherited or explicitly non-selection",
+    "MT5 report and telemetry hashes required before runtime claim"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "changed_variables": {
+    "lot": "none",
+    "model_training": "none",
+    "risk_logic": "none",
+    "runtime_handoff": "manifests only",
+    "threshold": "none"
+  },
+  "gate_rows": [
+    {
+      "actual_gate_result": "blocked_or_boundary_preserved",
+      "expected_gate_result": "blocked_or_boundary_preserved",
+      "forward_runtime_eligible": false,
+      "materialized_status": "control_manifest_materialized",
+      "package_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/subject_packages/cp322a_preserved_identity_audit_manifest.json",
+      "queue_id": "s334B_q01_cp322a_preserved_identity_audit",
+      "reason": "route_signal_rows_after_2026_04_14=0; latest=2026-04-13T22:00:00Z",
+      "source_authority_gate": "passed_boundary_preserved",
+      "subject_id": "cp322a_preserved_exact_identity"
+    },
+    {
+      "actual_gate_result": "usable_with_boundary",
+      "expected_gate_result": "usable_with_boundary",
+      "forward_runtime_eligible": false,
+      "materialized_status": "reference_manifest_materialized",
+      "package_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/subject_packages/run333e_signal_bridge_reference_manifest.json",
+      "queue_id": "s334B_q02_run333e_signal_bridge_boundary_package",
+      "reason": "positive MT5 replay reference packaged, but not candidate and not cp322A exact",
+      "source_authority_gate": "passed_reference_boundary",
+      "subject_id": "run333e_signal_replay_bridge"
+    },
+    {
+      "actual_gate_result": "ready_for_runtime_probe_design",
+      "expected_gate_result": "ready_for_runtime_probe_design",
+      "forward_runtime_eligible": "design_only",
+      "materialized_status": "handoff_skeleton_materialized",
+      "package_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/subject_packages/future_forward_usable_non_identity_handoff_skeleton.json",
+      "queue_id": "s334B_q03_forward_usable_non_identity_contract_input",
+      "reason": "timestamp-safe source index and raw refresh boundary materialized; no training or threshold search",
+      "source_authority_gate": "passed_skeleton_boundary",
+      "subject_id": "future_forward_usable_non_identity_onnx"
+    },
+    {
+      "actual_gate_result": "must_reject",
+      "expected_gate_result": "must_reject",
+      "forward_runtime_eligible": false,
+      "materialized_status": "negative_control_rejected",
+      "package_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/subject_packages/negative_subject_swap_rejection_receipt.json",
+      "queue_id": "s334B_q04_negative_subject_swap_guard",
+      "reason": "cp322A subject cannot consume run333E probability bridge as exact route signal",
+      "source_authority_gate": "rejected_forbidden_subject_swap",
+      "subject_id": "negative_subject_swap_control"
+    }
+  ],
+  "judgment": "overfit_guard_materialized_no_selection",
+  "negative_control": "rejected_by_source_authority_gate"
+}
