@@ -266,3 +266,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - selected_candidate(선택 후보): `cp322A_cp321b_exact_replay_control_surface`
 - boundary(경계): Adapter(어댑터)와 ONNX(온엑스)는 not_started(미시작).
 - do_not_repeat(반복 금지): exact replay(정확 재생)만 통과한 경우에는 후보로 포장하지 않는다.
+
+## run330G_raw_forward_failure_fragility_memory_and_overfit_followup_v1 Stage330 failure memory(330단계 실패 기억)
+
+- failed_or_high_pressure_profiles(실패 또는 높은 압력 프로필): `c56_bal_rf, m48_bal_rf, u42_bal_rf, u42_plain_rf`
+- preserved_clues_not_selection(선택 아닌 보존 단서): `c56_plain_rf, m48_plain_rf`
+- memory_rows(기억 행): `6`
+- failure_boundary(실패 경계): raw-forward MT5(원본 전진 MT5) 양수 결과만으로는 cost stress(비용 압박), curve pocket(곡선 포켓), direction attribution(방향 귀속), D/B source(D/B 원천) 공백을 닫지 못했다.
+- do_not_repeat(반복 금지): forward(전진) 양수 후보에 threshold(임계값), lot(수량), balanced/plain(균형/일반)만 좁게 맞추는 수리를 반복하지 않는다.
+- reopen_condition(재개 조건): cross-horizon(교차 기간), cost stress(비용 압박), curve pocket(곡선 포켓), runtime parity(런타임 동등성)가 같은 no-retune(무재튜닝) 기준에서 동시에 약해질 때만 재개한다.

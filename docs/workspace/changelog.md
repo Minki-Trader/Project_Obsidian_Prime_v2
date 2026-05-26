@@ -4129,3 +4129,11 @@
 - status(상태): `completed_raw_forward_mt5_kpi_regime_cost_curve_review_no_final_forward_decision`
 - judgment(판정): `raw_forward_mt5_review_completed_research_only_no_goal_achieve`
 - effect(효과): watchlist(관찰 목록)는 만들었지만 선택 후보, Forward Passed(전진 통과), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage330G Failure Fragility Memory(330G 실패 취약성 기억)
+
+- run330G(330G 실행): run330F(330F 실행)의 raw-forward MT5(원본 전진 MT5) 결과를 overfit pressure(과적합 압력), failure memory(실패 기억), follow-up queue(후속 대기열)로 분해했다.
+- status(상태): `completed_failure_fragility_memory_stage330_closed_no_selection`
+- judgment(판정): `negative_memory_and_preserved_clues_no_forward_pass_no_goal_achieve`
+- next_stage(다음 단계): `331_overfit_guard__cross_horizon_cost_curve_parity_probe`
+- effect(효과): Stage330(330단계)은 선택 후보 없이 닫고 Stage331(331단계)을 연구 검증 질문으로 열었다.

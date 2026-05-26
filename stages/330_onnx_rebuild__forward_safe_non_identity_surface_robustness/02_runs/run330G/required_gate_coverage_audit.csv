@@ -1,0 +1,6 @@
+gate_name,status,evidence_path,effect
+model_validation(모델 검증),completed_unresolved_overfit_pressure,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330G/overfit_pressure_matrix.csv,cost/curve/direction/D-B source(비용/곡선/방향/D-B 원천) 압력을 한 표로 묶어 선택 후보 주장을 막는다.
+exploration_failure_memory(탐색 실패 기억),completed,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330G/failure_memory_report.csv,negative memory(부정 기억)와 preserved clue(보존 단서)를 분리해 같은 과적합 수리를 반복하지 않는다.
+result_judgment(결과 판정),passed_no_goal_achieve,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330G/result_judgment.csv,"Forward Passed/Failed(전진 통과/실패), selected candidate(선택 후보), Goal Achieve(목표 달성)를 주장하지 않는다."
+stage_transition(단계 전환),completed_research_handoff_only,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330G/stage331_open_receipt.json,Stage331(331단계)을 연구 검증 질문으로 열며 operating reference(운영 기준)를 만들지 않는다.
+artifact_lineage(산출물 계보),passed,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330G/artifact_lineage_receipt.json,run330F MT5 분석에서 run330G 실패 기억과 Stage331 입력으로 이어지는 경로를 연결한다.
