@@ -1,0 +1,6 @@
+check,status,evidence,effect
+cp322a_candidate_onnx_exists,passed,stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx,cp322A ONNX(온엑스) artifact(산출물)는 남아 있지만 forward handoff(전진 인계)를 만들려면 run322b_route_signal(322B 경로 신호)이 필요하다.
+cp322a_required_feature_order,passed,"[""run322b_route_signal""]",identity surface(정체성 표면)는 시장 피처가 아니라 route signal(경로 신호) 하나만 소비한다.
+route_signal_forward_coverage_after_2026_04_14,failed_missing_forward_rows,"{""latest_route_signal_timestamp"": ""2026-04-13T22:00:00Z"", ""total_forward_active"": 0, ""total_forward_rows"": 0}",2026-04-14 이후 exact route signal(정확 경로 신호)이 없으면 cp322A exact MT5 forward(정확 MT5 전진)를 만들 수 없다.
+run333e_bridge_subject_identity,failed_not_cp322a_exact_subject,"{""bridge_features"": [""p_short"", ""p_flat"", ""p_long""], ""bridge_rows"": ""5484"", ""bridge_type"": ""identity_probability_bridge_not_candidate_model""}",run333E bridge(333E 연결기)는 probability replay(확률 재생) 3열이며 cp322A의 run322b_route_signal(322B 경로 신호) 1열과 다르다.
+exact_candidate_runtime_handoff_materialized,not_materialized_boundary_preserved,"{""exact_handoff_materializable"": false, ""reason"": ""missing exact route signal rows after 2026-04-14""}",positive signal replay(긍정 신호 재생)는 연구 근거로 보존하지만 cp322A Forward Passed(전진 통과)로 승격하지 않는다.

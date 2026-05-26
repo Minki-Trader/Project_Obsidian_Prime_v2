@@ -1,0 +1,53 @@
+{
+  "artifact_hashes": {
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/artifact_lineage_receipt.json": "c1e9669886a126d698c01fa9759b7b928d8d5e40b35cf6838b6eaadaba7f3e86",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/bridge_subject_mismatch_report.csv": "54688f8e318e0e45b754353ba0671beebd37351e65c1b67a6205f09af6c409b8",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/data_integrity_receipt.json": "424d59a1c26b07485ef4dd2bae37daa3bd265563cd25d70e8c607b828e4e4dbd",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/exact_handoff_feasibility_report.csv": "bc75c839995cbc3878f04dfe6e9cfd8f745f503adb0913a980162239c3566333",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/final_forward_decision.json": "9547263d4da1bc9a48e48f1b7739d2e6482ef821bbec39d694f2a4026a5ea939",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/model_validation_receipt.json": "f5eee564f295013551de834a79bdfeb33ea2802e0f4e80586c3b01fa4e3cdf63",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/repair_option_matrix.csv": "8a9c2b5dfee7777785e89f04d330dd24126ec24db4747eda6b1fea179a333047",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/required_gate_coverage_audit.csv": "12298168a04d036a1c5f07697dd38429decda70b76b90cffba041f57daf4f597",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/result_judgment.csv": "63eae38192740a65ec5eb7eb09c9a53fff88b49c31af8b808e2ceb1452086400",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/run_manifest.json": "f76d6329ebacba2156c7a4bbd8fdde4ea9a7d4412d0a225106360ba3922be482",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/runtime_parity_receipt.json": "769ea8479b8f9589b55671d179d938ec027e751aaa5a04242346d5360d3476aa",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/source_route_signal_coverage.csv": "32bd95839be80c32d0e0f084edbe6900b619a5765a30f2fd492dead0e9b631c4"
+  },
+  "artifact_paths": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/source_route_signal_coverage.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/exact_handoff_feasibility_report.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/bridge_subject_mismatch_report.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/repair_option_matrix.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/final_forward_decision.json",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/runtime_parity_receipt.json",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/model_validation_receipt.json",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/data_integrity_receipt.json",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/result_judgment.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/required_gate_coverage_audit.csv"
+  ],
+  "availability": "tracked_after_stage_closeout_push",
+  "claim_boundary": "research_development_only_cp322a_exact_handoff_not_materialized_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "consumer": [
+    "docs/decisions/2026-05-26_stage333G_exact_candidate_handoff_boundary_stage334_open.md",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/00_spec/stage_brief.md",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/04_selected/selection_status.md"
+  ],
+  "lineage_judgment": "connected_with_boundary",
+  "producer": "stage_pipelines/stage333/exact_candidate_handoff_or_preserve_boundary.py",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "docs/registers/artifact_registry.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/03_reviews/stage_run_ledger.csv"
+  ],
+  "source_inputs": [
+    "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/onnx_export_report.json",
+    "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/runtime_probe_handoff_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333F/final_forward_decision.json",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_val_route_signal.csv",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_oos_route_signal.csv",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_val_route_signal.csv",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_oos_route_signal.csv"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "known_differences": [
+    "run333E uses p_short/p_flat/p_long probability bridge(확률 연결기) and is not the cp322A route-signal identity input(경로 신호 정체성 입력).",
+    "Stage322 route-signal files(경로 신호 파일)은 2026-04-13 22:00:00에서 끝나며 2026-04-14 이후 행이 없다."
+  ],
+  "parity_check": "artifact_hash_and_forward_coverage_audit_no_new_mt5_run",
+  "parity_identity": {
+    "cp322a_onnx_sha256": "b0b34d31a78eef63084bc2157a81a83d88458a0e5aa605631e60af592ef9e723",
+    "onnx_feature_order_hash": "839a84eca981d034211de743c0f9830335149e2a4817e947de6b96dd9fb5a70c",
+    "run333e_bridge_feature_order_hash": "f72337efcd3c25492b22e13562fdc9aff69b7ba2cc1aa4340ae678351a2e3991",
+    "run333e_bridge_onnx_sha256": "13a4958c0079e398a1cbfaf6375d4d798ab4a1c3fc692a2a403ab44d044b57df"
+  },
+  "research_path": "stage_pipelines/stage333/exact_candidate_handoff_or_preserve_boundary.py",
+  "runtime_claim_boundary": "research_only_exact_cp322a_runtime_handoff_not_materialized",
+  "runtime_path": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx",
+  "shared_contract": {
+    "candidate": "cp322A_cp321b_exact_replay_control_surface",
+    "required_feature_order": [
+      "run322b_route_signal"
+    ],
+    "required_forward_input": "run322b_route_signal after 2026-04-13"
+  }
+}
