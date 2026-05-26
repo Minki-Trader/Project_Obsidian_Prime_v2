@@ -1,0 +1,31 @@
+{
+  "alternative_explanations": [
+    "positive net may come from short forward window luck",
+    "MT5 cost assumptions may understate live-like spread/slippage",
+    "single-surface non-identity ONNX cannot explain cp322A D/B source behavior"
+  ],
+  "attribution_confidence": "medium_research_only",
+  "comparison_baseline": "run334C queue plus Stage330F raw-forward MT5 review.",
+  "likely_drivers": [
+    "feature set breadth and model weighting",
+    "trade density",
+    "short-side losses",
+    "extra round-trip cost sensitivity",
+    "rate, ADX, month, and hour loss pockets"
+  ],
+  "next_probe": "run334E_design_no_retune_forward_usable_nonidentity_stress_probe_from_reconciled_memory_v1",
+  "observed_change": "The six Stage330 non-identity probes show positive headline net values but uneven cost, curve, underwater, direction, and regime behavior.",
+  "segment_checks": [
+    "cost stress",
+    "curve pocket",
+    "underwater stretch",
+    "long/short attribution",
+    "session/hour/month/volatility/ADX/VIX/USD/rate slices",
+    "lot normalization"
+  ],
+  "trade_shape": {
+    "attempt_count": 6,
+    "failure_memory_count": 6,
+    "preserved_clue_count": 2
+  }
+}

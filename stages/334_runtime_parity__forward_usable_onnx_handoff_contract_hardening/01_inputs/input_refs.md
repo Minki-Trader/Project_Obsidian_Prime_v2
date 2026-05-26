@@ -24,3 +24,12 @@ Effect(효과): 다음 단계는 positive KPI(긍정 핵심지표)를 바로 후
 - run334C_decision_matrix(334C 결정 행렬): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334C/runtime_probe_or_block_decision_matrix.csv`
 - run334C_future_queue(334C 미래 대기열): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334C/future_non_identity_runtime_reconciliation_queue.csv`
 - run334C_final_decision(334C 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334C/final_runtime_probe_or_block_decision.json`
+
+## run334D Existing Non-Identity Runtime Reconciliation Outputs(334D 기존 비정체성 런타임 대조 출력)
+
+- run334D_all_six(334D 전체 6개): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/all_six_runtime_reconciliation.csv`
+- run334D_cost_curve(334D 비용 곡선): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/cost_curve_guard_reconciliation.csv`
+- run334D_attribution(334D 귀속): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/attribution_reconciliation_summary.csv`
+- run334D_regime(334D 국면): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/regime_slice_reconciliation_summary.csv`
+- run334D_memory(334D 기억): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/preserved_clue_and_failure_memory.csv`
+- run334D_final_decision(334D 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334D/final_reconciliation_decision.json`

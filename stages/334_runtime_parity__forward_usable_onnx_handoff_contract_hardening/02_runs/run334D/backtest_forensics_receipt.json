@@ -1,0 +1,63 @@
+{
+  "backtest_judgment": "usable_with_boundary",
+  "cost_assumptions": "Base MT5 report cost assumptions are inherited; run330F synthetic spread/slippage stress is used only as a no-retune sensitivity screen.",
+  "ea_identity": {
+    "entrypoint": "Stage330E MT5 runtime probe package",
+    "identity_boundary": "run334D reconciles existing reports and does not alter EA, set, model, threshold, risk, or lot logic.",
+    "model_bundle_source": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/raw_forward_feature_matrix_manifest.csv",
+    "parameter_source": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334C/future_non_identity_runtime_reconciliation_queue.csv"
+  },
+  "forensic_checks": [
+    "all six run334C queue rows reconciled",
+    "Stage330F KPI/cost/curve/underwater/lot/direction/regime files parsed",
+    "D/B attribution kept out_of_scope_by_claim when source tags are absent",
+    "no new tester run, threshold search, or lot optimization performed"
+  ],
+  "report_identity": {
+    "hashes": {
+      "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5_runtime_probe_summary.csv": "ceeb32dbc4309ce0391fbc18c015d633c0bc04bec3be4ddc905bb8cadde6d146",
+      "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/cost_stress_report.csv": "6f91fe258b1548fd5273ba6aba99efed69eb0b3209a8de2dffeed54611d125de",
+      "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/curve_pocket_report.csv": "5b7fe3f36d2b9522fdf6b56bc3b4dc1978291209b971b423656a4d8e0fa2b532",
+      "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/forward_mt5_kpi_report.csv": "26f8e12a36569849417dadb2ad903fe6db6f9b5d2a10e079670d205bc908b5ff"
+    },
+    "stage330e_summary": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5_runtime_probe_summary.csv",
+    "stage330f_cost": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/cost_stress_report.csv",
+    "stage330f_curve": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/curve_pocket_report.csv",
+    "stage330f_kpi": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/forward_mt5_kpi_report.csv"
+  },
+  "tester_identity": {
+    "broker": "FPMarkets",
+    "date_range": "post-2026-04-14 through latest Stage330E manifest timestamps",
+    "deposit_leverage_modeling_spread": "inherited from Stage330E set/ini/report artifacts; not reparameterized in run334D",
+    "symbol": "US100",
+    "terminal": "Stage330E portable MT5 runtime probe outputs inherited; run334D does not launch a new tester.",
+    "timeframe": "M5"
+  },
+  "trade_evidence": {
+    "net_profit": {
+      "c56_bal_rf": 1.45,
+      "c56_plain_rf": 147.06,
+      "m48_bal_rf": 57.84,
+      "m48_plain_rf": 269.88,
+      "u42_bal_rf": 8.66,
+      "u42_plain_rf": 119.91
+    },
+    "profit_factor": {
+      "c56_bal_rf": 1.0,
+      "c56_plain_rf": 1.67,
+      "m48_bal_rf": 1.08,
+      "m48_plain_rf": 1.49,
+      "u42_bal_rf": 1.01,
+      "u42_plain_rf": 1.17
+    },
+    "reconciled_attempt_count": 6,
+    "trade_counts": {
+      "c56_bal_rf": 75,
+      "c56_plain_rf": 77,
+      "m48_bal_rf": 277,
+      "m48_plain_rf": 269,
+      "u42_bal_rf": 323,
+      "u42_plain_rf": 326
+    }
+  }
+}

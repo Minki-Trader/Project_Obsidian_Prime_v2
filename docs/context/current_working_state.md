@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening_v4`
-- current_run(현재 실행): `run334D_reconcile_existing_non_identity_runtime_probe_evidence_no_selection_v1`
+- current_packet(현재 작업 묶음): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening_v5`
+- current_run(현재 실행): `run334E_design_no_retune_forward_usable_nonidentity_stress_probe_from_reconciled_memory_v1`
 - active_stage(활성 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `333_overfit_guard__timestamp_safe_pocket_veto_materialization`
 - target_surface(목표 표면): `forward_usable_onnx_handoff_contract_hardening`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_runtime_probe_block_design_ready_for_all_six_reconciliation`
-- decision(판정): `stage334C_cp322a_blocked_run333e_reference_future_nonidentity_all_six_reconciliation_queue_no_selection`
+- status(상태): `completed_existing_nonidentity_reconciliation_ready_for_next_stress_probe_design`
+- decision(판정): `stage334D_preserved_clues_and_failure_memory_reconciled_no_selection`
+- run334D_summary(334D 요약): existing non-identity runtime evidence reconciliation(기존 비정체성 런타임 근거 대조)을 `completed_existing_nonidentity_runtime_evidence_reconciliation_no_selection`로 완료했다. Effect(효과): 6개 전체를 cost/curve/regime/direction(비용/곡선/국면/방향) 기준으로 대조했고, 다음 run334E(334E 실행)는 no-retune stress probe design(무재튜닝 압박 탐침 설계)로 넘어간다.
 - run334C_summary(334C 요약): subject-separated runtime probe/block(대상 분리 런타임 탐침/차단)을 `completed_subject_separated_runtime_probe_or_block_design_no_selection`로 판단했다. Effect(효과): cp322A exact(322A 정확 동일)는 차단, run333E bridge(333E 연결기)는 참고 전용, future non-identity ONNX(미래 비정체성 온엑스)는 Stage330E(330E 단계 실행) 6개 전체 대조 대기열로 넘겨 KPI cherry-pick(KPI 골라잡기)을 막는다.
 - run334B_summary(334B 요약): subject-separated handoff inputs(대상 분리 인계 입력)를 `completed_subject_separated_handoff_contract_inputs_materialized_no_selection`로 물질화했다. Effect(효과): cp322A exact(322A 정확 동일)는 forward route-signal(전진 경로 신호) 누락으로 보존 차단, run333E bridge(333E 연결기)는 참고 패키지, future non-identity ONNX(미래 비정체성 온엑스)는 skeleton(뼈대), negative control(부정 대조)은 must_reject(반드시 거절)로 분리했다.
 - run334A_summary(334A 요약): forward-usable ONNX handoff contract(전진 사용 가능 온엑스 인계 계약)를 `completed_forward_usable_onnx_handoff_contract_design_no_selection`로 설계했다. Effect(효과): cp322A/run333E/future non-identity ONNX(cp322A/333E/미래 비정체성 온엑스)를 subject boundary(주체 경계)로 분리하고 overfit gate(과적합 게이트)와 run334B queue(334B 대기열)를 만들었다.

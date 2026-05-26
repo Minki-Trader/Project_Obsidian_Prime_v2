@@ -1,0 +1,22 @@
+{
+  "known_differences": [
+    "cp322A exact is still blocked by missing post-2026-04-14 route signal.",
+    "Stage330 non-identity ONNX evidence is not cp322A exact identity.",
+    "D/B source attribution is out_of_scope_by_claim because Stage330 uses one probability surface."
+  ],
+  "parity_check": "existing Stage330E MT5 report/telemetry evidence reconciled against Stage330F KPI/cost/curve/regime reports; no new MT5 authority claimed.",
+  "parity_identity": {
+    "queue_rows": 6,
+    "reconciled_rows": 6,
+    "run330e_summary_sha256": "ceeb32dbc4309ce0391fbc18c015d633c0bc04bec3be4ddc905bb8cadde6d146",
+    "run330f_kpi_sha256": "26f8e12a36569849417dadb2ad903fe6db6f9b5d2a10e079670d205bc908b5ff",
+    "run334c_queue_sha256": "fce026233fc73e4d099f9e2d33f384226322bc368c1930191165c387b45973b6"
+  },
+  "research_path": "stage_pipelines/stage334/reconcile_existing_nonidentity_runtime_evidence.py",
+  "runtime_claim_boundary": "runtime_probe_reconciliation_research_only",
+  "runtime_path": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F"
+  ],
+  "shared_contract": "attempt_name, artifact_slug, feature set, ONNX hash, fixed threshold, MT5 report, telemetry, and no-selection boundary must align."
+}
