@@ -4479,3 +4479,11 @@
 - decision(결정): `stage335S_close_stage335_open_stage336_constraint_bound_research_packet_no_selection`
 - effect(효과): run335R(335R 실행)의 repaired attribution/proxy scout(수리 귀속/프록시 탐침)를 검토하고 Stage336(336단계) constraint-bound research packet(제약 기반 연구 묶음)을 열었다.
 - boundary(경계): proxy(프록시)는 selection/Forward decision(선택/전진 판정)에 `blocked`이며 Goal Achieve(목표 달성)는 `not_claimed`.
+
+## 2026-05-26 Stage336A Constraint-Bound Rebuild Packet Design(336A 제약 기반 재구성 묶음 설계)
+
+- run_id(실행 ID): `run336A_design_constraint_bound_repair_defense_offense_rebuild_packet_v1`
+- status(상태): `completed_constraint_bound_rebuild_packet_design_no_selection`
+- decision(결정): `stage336A_constraint_bound_rebuild_packet_designed_no_selection`
+- effect(효과): constraints(제약) `6`개를 repair/defense/offense/runtime(수리/방어/공격/런타임) 설계와 negative control(부정 대조)로 배선했다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

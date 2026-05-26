@@ -9,4 +9,13 @@
 - stage336_opening_contract(336단계 개방 계약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335S/stage336_opening_contract.csv`
 - run336A_design_queue(336A 설계 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335S/run336A_design_queue.csv`
 
+## run336A Outputs(336A 산출물)
+
+- branch_design(분기 설계): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336A/constraint_bound_rebuild_branch_design_matrix.csv`
+- proxy_exclusion_contract(프록시 차단 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336A/predeclared_scoring_and_proxy_exclusion_contract.csv`
+- cost_curve_direction_gate_contract(비용/곡선/방향 게이트 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336A/cost_curve_direction_gate_contract.csv`
+- runtime_parity_probe_contract(런타임 동등성 탐침 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336A/runtime_parity_probe_contract.csv`
+- negative_control_matrix(부정 대조 행렬): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336A/negative_control_and_stop_condition_matrix.csv`
+- run336B_queue(336B 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336A/run336B_materialization_queue.csv`
+
 Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)를 만들지 않는다.
