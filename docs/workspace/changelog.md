@@ -4082,3 +4082,10 @@
 - status(상태): `blocked_session_parity_runtime_probe_no_completed_mt5_runtime`
 - judgment(판정): `materialized_only_no_external_runtime_execution`
 - effect(효과): runtime probe(런타임 탐침)까지만 주장하고, selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage329F Forward MT5 KPI Regime Cost Curve Review(329F 전진 MT5 핵심 지표/국면/비용/곡선 검토)
+
+- run329F(329F 실행): run329E(329E 실행)의 MT5 report/telemetry(보고서/실행 기록)를 KPI(핵심 성과 지표), regime(국면), cost stress(비용 압박), curve pocket(곡선 포켓)으로 분해했다.
+- status(상태): `completed_forward_mt5_kpi_regime_cost_curve_review_no_final_forward_decision`
+- judgment(판정): `forward_mt5_review_completed_research_only_no_goal_achieve`
+- effect(효과): watchlist(관찰 목록)는 만들었지만 선택 후보, Forward Passed(전진 통과), Goal Achieve(목표 달성)는 주장하지 않는다.
