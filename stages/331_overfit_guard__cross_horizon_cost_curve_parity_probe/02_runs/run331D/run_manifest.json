@@ -1,0 +1,39 @@
+{
+  "stage_id": "331_overfit_guard__cross_horizon_cost_curve_parity_probe",
+  "run_id": "run331D_final_cross_horizon_overfit_guard_decision_v1",
+  "run_number": "run331D",
+  "parent_run_id": "run331C_runtime_replay_or_block_cross_horizon_probe_v1",
+  "generated_at_utc": "2026-05-26T04:22:12Z",
+  "primary_family": "kpi_evidence",
+  "primary_skill": "obsidian-result-judgment",
+  "support_skills": [
+    "obsidian-performance-attribution",
+    "obsidian-model-validation",
+    "obsidian-artifact-lineage"
+  ],
+  "required_gates": [
+    "kpi_contract_audit",
+    "row_grain_audit",
+    "source_authority_audit",
+    "required_gate_coverage_audit",
+    "final_claim_guard",
+    "state_sync_audit"
+  ],
+  "status": "completed_final_cross_horizon_overfit_guard_decision_stage331_closed_no_selection",
+  "judgment": "stage331_closed_no_selection_research_handoff_no_goal_achieve",
+  "decision": "no_attempt_passed_overfit_guard_for_selection_runtime_parity_matched_fragility_real",
+  "source_inputs": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330G/failure_memory_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_survival_summary.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/runtime_replay_compare_report.csv"
+  ],
+  "forward_passed": "not_claimed",
+  "forward_failed": "not_claimed",
+  "selected_candidate": "none",
+  "goal_achieve": "not_claimed",
+  "next_stage_id": "332_overfit_guard__failure_memory_forward_research_handoff",
+  "next_action": "run332A_design_failure_memory_forward_research_handoff_packet_v1",
+  "claim_boundary": "research_development_only_final_cross_horizon_overfit_guard_decision_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

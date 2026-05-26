@@ -4161,3 +4161,12 @@
 - judgment(판정): `materialized_only_no_external_runtime_execution`
 - next_action(다음 행동): `repair_stage331C_runtime_replay_blocker_then_rerun`
 - effect(효과): runtime parity(런타임 동등성) 근거를 강화했지만 Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage331D Final Cross-Horizon Overfit Guard Decision(331D 최종 교차 기간 과적합 방어 판정)
+
+- run331D(331D 실행): Stage331(331단계)을 no selection(선택 없음) 연구 인계로 닫았다.
+- status(상태): `completed_final_cross_horizon_overfit_guard_decision_stage331_closed_no_selection`
+- judgment(판정): `stage331_closed_no_selection_research_handoff_no_goal_achieve`
+- next_stage(다음 단계): `332_overfit_guard__failure_memory_forward_research_handoff`
+- next_action(다음 행동): `run332A_design_failure_memory_forward_research_handoff_packet_v1`
+- effect(효과): runtime replay(런타임 재생)는 맞았지만 cost/curve/resampling guard(비용/곡선/재표본 방어) 때문에 Forward Passed(전진 통과), Forward Failed(전진 실패), Goal Achieve(목표 달성)는 주장하지 않는다.

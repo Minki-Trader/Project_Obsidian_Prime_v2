@@ -1,0 +1,37 @@
+{
+  "skill": "obsidian-artifact-lineage",
+  "source_inputs": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330G/failure_memory_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331A/run_manifest.json",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_survival_summary.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/cost_curve_by_horizon_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/resampling_stability_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/runtime_replay_compare_report.csv"
+  ],
+  "producer": "stage_pipelines/stage331/final_cross_horizon_overfit_guard_decision.py",
+  "consumer": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/03_reviews/run331D_final_cross_horizon_overfit_guard_decision.md",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/00_spec/stage_brief.md",
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "artifact_paths": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/final_decision_matrix.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/evidence_rollup.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/survivor_clue_disposition.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/overfit_guard_failure_memory.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/required_gate_coverage_audit.csv"
+  ],
+  "artifact_hashes": "recorded in docs/registers/artifact_registry.csv",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "availability": "tracked",
+  "lineage_judgment": "connected_with_boundary",
+  "generated_at_utc": "2026-05-26T04:22:12Z"
+}

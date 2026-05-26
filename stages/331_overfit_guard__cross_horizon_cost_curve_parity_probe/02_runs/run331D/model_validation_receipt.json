@@ -1,0 +1,20 @@
+{
+  "skill": "obsidian-model-validation",
+  "model_family": "Stage330 forward-safe non-identity ONNX research artifacts",
+  "target_and_label": "raw-forward fixed-threshold trade direction/control-surface replay; no new label built in Stage331",
+  "split_method": "post-2026-04-14 raw-forward replay with cross-horizon and runtime replay checks",
+  "selection_metric": "none selected; guard matrix blocks selection",
+  "secondary_metrics": [
+    "profit factor after cost",
+    "rolling20 minimum net",
+    "third/fifth positive share",
+    "runtime replay metric match",
+    "negative control catch rate"
+  ],
+  "threshold_policy": "fixed from source artifacts; no threshold retuning",
+  "overfit_risk": "headline profit can be preserved while plus2 cost and rolling pockets fail",
+  "calibration_risk": "scores remain decision surface outputs, not probability claims",
+  "comparison_baseline": "Stage330G failure memory and run331B negative controls",
+  "validation_judgment": "exploratory_research_handoff_no_selection",
+  "selection_eligible_attempts": 0
+}
