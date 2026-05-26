@@ -4560,3 +4560,12 @@
 - action(행동): proxy expected value(프록시 예상값)와 fresh MT5 runtime probe(신규 MT5 런타임 탐침)의 입력/차이/활용성 계약을 물질화했다.
 - effect(효과): run336K(336K 실행)가 실제 MT5(MetaTrader 5, 메타트레이더5) 탐침을 시도하거나 정확한 blocker(차단 사유)를 기록해야 한다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336K Fresh MT5 Runtime Probe(336K 신규 MT5 런타임 탐침)
+
+- run_id(실행 ID): `run336K_attempt_fresh_mt5_runtime_probe_or_block_v1`
+- status(상태): `completed_fresh_mt5_runtime_probe_attempt_with_feature_handoff_gaps_no_forward_decision`
+- decision(결정): `stage336K_fresh_mt5_probe_repair_required_before_forward_or_runtime_claim`
+- action(행동): MT5 API(메타트레이더5 API)로 2026-04-14 이후 최신 US100 M5 broker data(브로커 데이터)를 확인하고, 6개 frozen ONNX handoff(고정 온엑스 인계)를 run336K 전용 report/telemetry identity(보고서/기록 정체성)로 Strategy Tester(전략 테스터)에 실행했다.
+- effect(효과): fresh MT5 runtime output(신규 MT5 런타임 출력)은 `6/6 completed(완료)`이고 US100 M5는 `2026-05-26T17:15:00Z` close(종가)까지 `8427`행 확보됐지만, feature CSV(피처 CSV)가 `2026-05-22/2026-05-23`에서 멈춰 latest feature handoff gap(최신 피처 인계 공백) `6/6`이다.
+- boundary(경계): 이 결과는 diagnostic-only(진단 전용)이며 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), live readiness(실거래 준비), deployment(배포), Goal Achieve(목표 달성)는 `not_claimed`.
