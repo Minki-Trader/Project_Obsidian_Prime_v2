@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337P_materialize_runtime_data_and_feature_source_repair_probe_v1`
+- current_run(현재 실행): `run337Q_review_runtime_data_and_feature_source_repair_probe_v1`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_stage337O_timestamp_aligned_runtime_review_repair_queue_no_forward_decision`
-- decision(결정): `stage337O_open_run337P_runtime_data_and_feature_source_repair_no_selection`
+- status(상태): `completed_stage337P_asof_feature_source_repair_probe_runtime_completed_tester_gap_remains_no_forward_decision`
+- decision(결정): `stage337P_open_run337Q_repair_probe_review_no_selection`
+- run337P_summary(337P 요약): `completed_stage337P_asof_feature_source_repair_probe_runtime_completed_tester_gap_remains_no_forward_decision`. Effect(효과): core56/m48/u42 source repair probe(원천 수리 탐침)를 MT5(메타트레이더5) `5/5`로 실행했고, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성)는 `25/25` 일치했지만 tester current-day gap(테스터 현재일 공백) `5`개가 남아 run337Q(337Q 실행) 리뷰로 넘긴다.
 - run337K_summary(337K 요약): `completed_runner_scaffold_review_accepts_run337L_materialization_no_training_no_mt5`. Effect(효과): runner scaffold review(러너 골격 검토)를 통과시키고 proxy expected/fresh MT5 input materialization(프록시 예상값/신규 메타트레이더5 입력 물질화)로 넘기며, 학습/MT5 실행/후보 선택은 계속 닫아둔다.
 - run337L_summary(337L 요약): `completed_proxy_expected_fresh_mt5_probe_inputs_materialized_no_mt5_execution`. Effect(효과): proxy expected/fresh MT5 input package(프록시 예상값/신규 메타트레이더5 입력 패키지)를 만들고 run337M(337M 실행) 검토로 넘기며, MT5 실행/학습/후보 선택은 계속 닫아둔다.
 - run337M_summary(337M 요약): `completed_proxy_expected_fresh_mt5_probe_input_review_accepts_runtime_probe_attempt_queue_no_training_no_mt5`. Effect(효과): run337L 입력 패키지를 검토해 run337N runtime probe attempt-or-block(런타임 탐침 시도 또는 차단)으로 넘기며, MT5 실행/학습/후보 선택은 계속 닫아둔다.
@@ -1270,3 +1271,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - timestamp-aligned parity(타임스탬프 정렬 동등성): `20/20 matched(일치)`
 - next_action(다음 행동): `run337P_materialize_runtime_data_and_feature_source_repair_probe_v1`
 - effect(효과): run337N(337N 실행)의 원시 불일치를 시간축 기준으로 분해했고, tester/macro/core56 repair(테스터/거시/핵심56 수리)를 다음 실행으로 넘겼다.
+
+## Stage337 run337P(337P 실행) - 2026-05-27
+
+- status(상태): `completed_stage337P_asof_feature_source_repair_probe_runtime_completed_tester_gap_remains_no_forward_decision`
+- decision(결정): `stage337P_open_run337Q_repair_probe_review_no_selection`
+- next_action(다음 행동): `run337Q_review_runtime_data_and_feature_source_repair_probe_v1`
+- effect(효과): core56/m48/u42 repair probe(수리 탐침)를 MT5(메타트레이더5) `5/5`로 실행했고, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성)는 `25/25` 일치했다. tester current-day gap(테스터 현재일 공백) `5`개가 남아 결과는 선택이나 Forward decision(전진 판정)이 아니라 run337Q(337Q 실행) 리뷰 입력이다.
