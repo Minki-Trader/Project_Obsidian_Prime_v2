@@ -9,6 +9,7 @@
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
 - run337C_summary(337C 요약): `completed_materialized_inputs_proxy_mt5_usability_review_no_selection`. Effect(효과): proxy-MT5(프록시-MT5) 활용성을 signal sanity only(신호 점검 전용)로 검토하고 run337D(337D 실행) 실행 계약으로 넘겼다.
+- run337D_summary(337D 요약): `completed_research_execution_protocols_materialized_no_selection`. Effect(효과): no-lookahead(미래참조 방어), proxy-MT5 fresh probe(프록시-MT5 신규 탐침), core56 repair(핵심56 수리), cost/direction/curve gate(비용/방향/곡선 게이트), economic regime as-of(경제 국면 시점 기준) 실행 절차를 물질화하고 run337E(337E 실행) 검토로 넘긴다.
 - selected_candidate(선택 후보): `none`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed_for_stage337_new_work`

@@ -5,9 +5,9 @@
 - selected_candidate(선택 후보): `none`
 - source_stage(원천 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
-- latest_run(최신 실행): `run337C_review_materialized_inputs_and_proxy_mt5_usability_v1`
-- latest_decision(최신 결정): `stage337C_review_accepts_protocol_queue_proxy_not_kpi_no_selection`
-- current_run(현재 실행): `run337D_materialize_research_execution_protocols_v1`
+- latest_run(최신 실행): `run337D_materialize_research_execution_protocols_v1`
+- latest_decision(최신 결정): `stage337D_materialized_execution_protocols_review_next_no_selection`
+- current_run(현재 실행): `run337E_review_research_execution_protocols_v1`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed_for_stage337_new_work`
 - live_readiness(실거래 준비): `not_claimed`
@@ -15,5 +15,5 @@
 - operating_promotion(운영 승격): `not_claimed`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337D_materialize_research_execution_protocols_v1`
-- effect(효과): run337C(337C 실행)는 proxy-MT5(프록시-MT5) 일치를 signal sanity only(신호 점검 전용)로 제한하고, branch packages(분기 패키지)는 protocol design only(계약 설계 전용)로 넘겼다. 아직 선택 후보는 없다.
+- next_action(다음 행동): `run337E_review_research_execution_protocols_v1`
+- effect(효과): run337D(337D 실행)는 no-lookahead(미래참조 방어), proxy-MT5 fresh probe(프록시-MT5 신규 탐침), core56 repair(핵심56 수리), cost/direction/curve gate(비용/방향/곡선 게이트), economic regime as-of(경제 국면 시점 기준) 절차를 만들었다. 아직 선택 후보는 없다.

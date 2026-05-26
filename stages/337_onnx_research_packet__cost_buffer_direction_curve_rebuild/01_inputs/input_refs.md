@@ -49,3 +49,18 @@ Effect(효과): proxy(프록시)는 signal sanity check(신호 점검)로만 쓰
 - next_queue(다음 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337C/run337D_research_execution_protocol_queue.csv`
 
 Effect(효과): 다음 실행은 모델 학습 전 no-lookahead(미래참조 방어), proxy-MT5 fresh probe(신규 프록시-MT5 탐침), core56 repair(핵심56 수리), cost/direction/curve gate(비용/방향/곡선 게이트) 계약을 먼저 만든다.
+
+## run337D Outputs(337D 산출물)
+
+## run337D Outputs(337D 산출물)
+
+- no_lookahead_execution_protocol(미래참조 방어 절차): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/no_lookahead_execution_protocol.csv`
+- proxy_mt5_fresh_probe_protocol(프록시-MT5 신규 탐침 절차): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/proxy_mt5_fresh_probe_protocol.csv`
+- core56_refresh_repair_protocol(핵심56 갱신 수리 절차): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/core56_refresh_repair_protocol.csv`
+- cost_direction_curve_gate_protocol(비용/방향/곡선 게이트 절차): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/cost_direction_curve_gate_execution_protocol.csv`
+- offense_rebuild_protocol(공격형 재구성 절차): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/offense_rebuild_execution_protocol.csv`
+- economic_regime_asof_protocol(경제 국면 시점 기준 절차): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/economic_regime_asof_protocol.csv`
+- runtime_probe_requirements(런타임 탐침 요구사항): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/runtime_probe_package_requirements.csv`
+- run337E_queue(337E 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/run337E_review_execution_protocols_queue.csv`
+
+Effect(효과): 다음 실행은 학습이나 후보 선택이 아니라, 이 절차들이 실제로 과적합 방어와 MT5 근거 요구를 충분히 고정했는지 검토한다.
