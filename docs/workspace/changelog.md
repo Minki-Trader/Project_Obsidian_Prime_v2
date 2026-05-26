@@ -4578,3 +4578,21 @@
 - action(행동): run336K fresh MT5 runtime probe(신규 MT5 런타임 탐침), proxy-MT5 difference(프록시-MT5 차이), live-safe overnight_return(실시간 안전 야간 수익률) overlap identity(겹친 행 정체성)를 함께 검토했다.
 - effect(효과): macro48/u42(거시48/US100 기술42)는 run336M(336M 실행) 수리 대기열로 보내고 core56(핵심56)은 equity refresh(주식 데이터 갱신) 전까지 제외한다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336M Live-Safe Feature Handoff Repair(336M 실시간 안전 피처 인계 수리)
+
+- run_id(실행 ID): `run336M_materialize_live_safe_feature_handoff_repair_v1`
+- status(상태): `completed_live_safe_feature_handoff_repair_probe_partial_no_forward_decision`
+- decision(결정): `stage336M_repaired_feature_handoff_probe_needs_runtime_or_parity_repair_no_selection`
+- action(행동): macro48/u42(거시48/US100 기술42) repaired feature CSV(수리된 피처 CSV)를 만들고 MT5 Strategy Tester(전략 테스터)를 다시 실행했다.
+- effect(효과): latest broker bar(최신 브로커 봉) 피처 인계 공백은 `0/4`로 제거했고 MT5 runtime probe(MT5 런타임 탐침)는 `4/4 completed(완료)`였지만, raw proxy basis(원시 프록시 기준) mismatch(불일치)가 남아 run336N(336N 실행) 검토로 넘겼다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336N Timestamp-Aligned Parity Review(336N 타임스탬프 정렬 동등성 검토)
+
+- run_id(실행 ID): `run336N_repair_gap_or_parity_review_v1`
+- status(상태): `completed_timestamp_aligned_proxy_mt5_parity_review_no_forward_decision`
+- decision(결정): `stage336N_timestamp_aligned_parity_passed_queue_forward_attribution_no_selection`
+- action(행동): run336M(336M 실행)의 proxy-MT5 mismatch(프록시-MT5 불일치)를 MT5 feature_ready cycle timestamps(피처 준비 사이클 타임스탬프) 기준으로 다시 계산했다.
+- effect(효과): aligned proxy-MT5 parity(정렬 프록시-MT5 동등성)는 `20/20 matched(일치)`이며, 다음은 forward attribution/cost stress(전진 귀속/비용 압박)다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

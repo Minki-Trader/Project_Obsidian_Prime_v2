@@ -1,14 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild_v1`
-- current_run(현재 실행): `run336M_materialize_live_safe_feature_handoff_repair_v1`
+- current_run(현재 실행): `run336O_repaired_forward_attribution_and_cost_stress_v1`
 - active_stage(활성 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - target_surface(목표 표면): `constraint_bound_repair_defense_offense_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_live_safe_feature_handoff_repair_decision_no_forward_decision`
-- decision(결정): `stage336L_run336M_live_safe_feature_handoff_repair_queue_ready_no_selection`
+- status(상태): `completed_timestamp_aligned_proxy_mt5_parity_review_no_forward_decision`
+- decision(결정): `stage336N_timestamp_aligned_parity_passed_queue_forward_attribution_no_selection`
+- run336N_summary(336N 요약): timestamp-aligned proxy-MT5 parity(타임스탬프 정렬 프록시-MT5 동등성)를 `completed_timestamp_aligned_proxy_mt5_parity_review_no_forward_decision`로 검토했다. Effect(효과): run336M(336M 실행)의 0/20 raw mismatch(원시 불일치)는 timestamp basis(타임스탬프 기준) 차이였고, aligned parity(정렬 동등성)는 `20/20 matched(일치)`다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+- run336M_summary(336M 요약): live-safe feature handoff repair(실시간 안전 피처 인계 수리)를 `completed_live_safe_feature_handoff_repair_probe_partial_no_forward_decision`로 실행했다. Effect(효과): MT5 completed(MT5 완료) `4/4`, feature latest gaps(최신 피처 공백) `0`로 기록했고, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336L_summary(336L 요약): live-safe feature handoff repair decision(실시간 안전 피처 인계 수리 결정)을 `completed_live_safe_feature_handoff_repair_decision_no_forward_decision`로 완료했다. Effect(효과): macro48/u42(거시48/US100 기술42)는 run336M(336M 실행) 수리 대상으로 보내고 core56(핵심56)은 equity refresh(주식 데이터 갱신) 전까지 차단한다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336K_summary(336K 요약): fresh MT5 runtime probe(신규 MT5 런타임 탐침)를 `6/6` completed(완료)로 실행했다. Effect(효과): US100 M5 broker data(브로커 데이터)는 `2026-05-26T17:15:00Z` close(종가)까지 `8427`행 확보됐지만 frozen feature CSV(고정 피처 CSV)가 `2026-05-22/2026-05-23`에서 멈춰 latest feature handoff gap(최신 피처 인계 공백) `6/6`이다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336J_summary(336J 요약): proxy/MT5 probe input materialization(프록시/MT5 탐침 입력 물질화)을 `completed_proxy_expected_fresh_mt5_probe_inputs_materialized_no_mt5_execution`로 완료했다. Effect(효과): run336K runtime probe attempt queue(336K 런타임 탐침 시도 대기열) `7`행을 만들고 MT5 execution(MT5 실행), Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

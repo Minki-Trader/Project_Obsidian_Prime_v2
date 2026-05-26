@@ -1,0 +1,143 @@
+{
+  "alignment_missing_counts": {
+    "AAPL": 7944,
+    "AMD": 7944,
+    "AMZN": 7944,
+    "GOOGL.xnas": 7944,
+    "META": 7944,
+    "MSFT": 7944,
+    "NVDA": 7944,
+    "TSLA": 7944,
+    "US10YR": 2126,
+    "USDX": 1075,
+    "VIX": 1130
+  },
+  "broker_clock_timezone": "Europe/Athens",
+  "invalid_reason_breakdown": {
+    "contract_version_mismatch": 0,
+    "external_alignment_missing": 8158,
+    "main_symbol_missing": 0,
+    "numeric_invalid": 0,
+    "session_semantics_missing": 1391,
+    "warmup_incomplete": 300,
+    "weights_unavailable": 4851
+  },
+  "invalid_rows": 9384,
+  "raw_rows": 10830,
+  "raw_time_axis_policy": "raw_broker_clock_bar_close_key_not_direct_utc",
+  "session_time_policy_status": "closed_by_broker_session_calendar_mapper_v1",
+  "session_timezone": "America/New_York",
+  "source_identities": [
+    {
+      "broker_symbol": "US100",
+      "combined_first_timestamp": "2026-04-01T00:00:00+00:00",
+      "combined_last_timestamp": "2026-05-26T18:10:00+00:00",
+      "combined_rows": 10830,
+      "contract_symbol": "US100",
+      "selected_forward_path": "stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336M/raw_refresh_probe/US100/bars_us100_m5_mt5api_raw.csv",
+      "selected_forward_source": "run336K_fresh_raw"
+    },
+    {
+      "broker_symbol": "VIX",
+      "combined_first_timestamp": "2026-04-01T00:00:00+00:00",
+      "combined_last_timestamp": "2026-05-26T18:10:00+00:00",
+      "combined_rows": 9700,
+      "contract_symbol": "VIX",
+      "selected_forward_path": "stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336M/raw_refresh_probe/VIX/bars_vix_m5_mt5api_raw.csv",
+      "selected_forward_source": "run336K_fresh_raw"
+    },
+    {
+      "broker_symbol": "US10YR",
+      "combined_first_timestamp": "2026-04-01T00:00:00+00:00",
+      "combined_last_timestamp": "2026-05-26T18:10:00+00:00",
+      "combined_rows": 8727,
+      "contract_symbol": "US10YR",
+      "selected_forward_path": "stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336M/raw_refresh_probe/US10YR/bars_us10yr_m5_mt5api_raw.csv",
+      "selected_forward_source": "run336K_fresh_raw"
+    },
+    {
+      "broker_symbol": "USDX",
+      "combined_first_timestamp": "2026-04-01T00:00:00+00:00",
+      "combined_last_timestamp": "2026-05-26T18:10:00+00:00",
+      "combined_rows": 9797,
+      "contract_symbol": "USDX",
+      "selected_forward_path": "stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336M/raw_refresh_probe/USDX/bars_usdx_m5_mt5api_raw.csv",
+      "selected_forward_source": "run336K_fresh_raw"
+    },
+    {
+      "broker_symbol": "NVDA.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "NVDA",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/NVDA/bars_nvda_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    },
+    {
+      "broker_symbol": "AAPL.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "AAPL",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/AAPL/bars_aapl_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    },
+    {
+      "broker_symbol": "MSFT.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "MSFT",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/MSFT/bars_msft_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    },
+    {
+      "broker_symbol": "AMZN.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "AMZN",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/AMZN/bars_amzn_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    },
+    {
+      "broker_symbol": "AMD.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "AMD",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/AMD/bars_amd_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    },
+    {
+      "broker_symbol": "GOOGL.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "GOOGL.xnas",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/GOOGL.xnas/bars_googl_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    },
+    {
+      "broker_symbol": "META.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "META",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/META/bars_meta_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    },
+    {
+      "broker_symbol": "TSLA.xnas",
+      "combined_first_timestamp": "2026-04-01T16:35:00+00:00",
+      "combined_last_timestamp": "2026-05-22T23:00:00+00:00",
+      "combined_rows": 2886,
+      "contract_symbol": "TSLA",
+      "selected_forward_path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/TSLA/bars_tsla_xnas_m5_mt5api_raw.csv",
+      "selected_forward_source": "stage326_forward_raw_fallback"
+    }
+  ],
+  "time_axis_policy_version": "docs/contracts/time_axis_policy_fpmarkets_v2.md@2026-04-24",
+  "valid_rows": 1446,
+  "weights_version": "run336M_same_weights_live_safe_overnight_no_retune"
+}

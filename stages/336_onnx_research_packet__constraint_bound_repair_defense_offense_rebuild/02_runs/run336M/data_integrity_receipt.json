@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "research_development_only_stage336M_live_safe_feature_handoff_repair_probe_same_onnx_same_feature_order_same_threshold_same_risk_same_lot_no_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "data_hash_or_identity": [
+    "d7baa1d1322b033db670b1f28908e4df2dbc27ec237153f49d8542d97ef670ec",
+    "16c391d3d140492f02d5ec0bcc0fa4df9d4e5785d0f632c304779a46de844912"
+  ],
+  "data_source": "run336M MT5 fresh raw probe plus run336L live-safe overnight_return repair",
+  "feature_label_boundary": "no labels, no outcomes, no retune; live-safe overnight uses only prior completed cash-session close",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_risk": "current-day cash close must not be used for current partial session; overlap identity audit guards this",
+  "missing_or_duplicate_check": "feature CSV freshness and required-symbol alignment checked per feature set",
+  "run_id": "run336M_materialize_live_safe_feature_handoff_repair_v1",
+  "sample_scope": "US100 M5 from 2026-04-14 to 2026-05-26T18:10:00Z; queued feature sets macro48/u42 only",
+  "split_boundary": "forward runtime probe after existing OOS boundary",
+  "time_axis": "UTC M5 bar close, MT5 tester ToDate through latest broker close"
+}
