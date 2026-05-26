@@ -1,12 +1,12 @@
 ﻿# run333E Signal Payload Runtime Probe Or Block(333E 신호 페이로드 런타임 탐침 또는 차단)
 
 - run_id(실행 ID): `run333E_runtime_probe_queue_or_failure_memory_from_screen_v1`
-- status(상태): `blocked_signal_payload_runtime_replay_mt5_probe_no_completed_runtime`
-- judgment(판정): `signal_payload_runtime_probe_blocked_requires_runtime_repair_no_goal_achieve`
-- decision(결정): `stage333E_signal_payload_runtime_probe_blocked_no_pass_fail_judgment`
-- completed_mt5_attempts(완료 MT5 시도): `0`
-- runtime_blockers(런타임 차단 사유): `terminal_already_running_config_not_applied`
-- next_action(다음 행동): `repair_run333E_signal_replay_runtime_blocker_then_rerun`
+- status(상태): `completed_signal_payload_runtime_replay_mt5_probe_no_forward_decision`
+- judgment(판정): `signal_payload_runtime_probe_completed_research_only_no_goal_achieve`
+- decision(결정): `stage333E_signal_payload_mt5_evidence_available_review_required_no_selection`
+- completed_mt5_attempts(완료 MT5 시도): `1`
+- runtime_blockers(런타임 차단 사유): `none`
+- next_action(다음 행동): `run333F_review_signal_replay_mt5_forensics_and_packaging_boundary_v1`
 - claim_boundary(주장 경계): `research_development_only_signal_payload_runtime_replay_bridge_no_threshold_retuning_no_lot_optimization_no_candidate_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 ## What Changed(무엇이 바뀌었나)

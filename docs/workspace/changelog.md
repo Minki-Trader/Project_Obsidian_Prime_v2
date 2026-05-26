@@ -4251,3 +4251,10 @@
 - screen_failure_count(선별 실패 수): `10`
 - next_action(다음 행동): `run333E_runtime_probe_queue_or_failure_memory_from_screen_v1`
 - effect(효과): 다음 run333E(333E 실행)의 runtime probe queue(런타임 탐침 대기열) 또는 failure memory(실패 기억) 입력을 만들고, 후보 선택이나 Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage333F Signal Replay MT5 Forensics And Packaging Boundary(333F 신호 재생 MT5 포렌식 및 패키징 경계)
+
+- run333F(333F 실행): run333E(333E 실행)의 completed MT5 report/telemetry(완료 MT5 보고서/실행기록)를 KPI(핵심 성과 지표), regime(국면), cost stress(비용 압박), curve pocket(곡선 포켓), packaging boundary(패키징 경계)로 분해했다.
+- status(상태): `completed_signal_replay_mt5_forensics_packaging_boundary_no_forward_decision`
+- judgment(판정): `signal_payload_mt5_positive_but_packaging_boundary_research_only_no_goal_achieve`
+- effect(효과): 양수 신호 재생 근거는 보존하지만 selected candidate(선택 후보), Forward Passed(전진 통과), Goal Achieve(목표 달성)는 주장하지 않는다.
