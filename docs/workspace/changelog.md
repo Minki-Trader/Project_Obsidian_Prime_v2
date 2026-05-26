@@ -4729,3 +4729,5 @@
 - decision(결정): `stage337M_proxy_mt5_inputs_reviewed_accept_runtime_probe_attempt_queue_no_training_no_mt5_no_selection`
 - action(행동): run337L(337L 실행)의 입력 산출물, queue(대기열), claim boundary(주장 경계), no-lookahead guard(미래참조 방어)를 검토했다.
 - effect(효과): run337N(337N 실행) fresh MT5 runtime probe attempt-or-block(신규 메타트레이더5 런타임 탐침 시도 또는 차단) 대기열 `5`행을 열었고 MT5 execution(MT5 실행), Forward decision(전진 판정), runtime authority(런타임 권위)는 주장하지 않는다.
+- 2026-05-27: Stage337 run337N(337N 실행) `completed_stage337N_fresh_mt5_runtime_probe_attempt_partial_or_block_no_forward_decision`. Effect(효과): fresh MT5 runtime probe(신규 MT5 런타임 탐침)를 최신 피처 인계 기준으로 처리하고 core56 blocker(차단 사유)를 분리했다. Forward/Goal(전진/목표) 주장은 없음.
+- 2026-05-27: Stage337 run337O(337O 실행) `completed_stage337O_timestamp_aligned_runtime_review_repair_queue_no_forward_decision`. Effect(효과): timestamp-aligned parity(타임스탬프 정렬 동등성)와 repair queue(수리 대기열)를 만들고 Forward/Goal(전진/목표) 주장은 없음.

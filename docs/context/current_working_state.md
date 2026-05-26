@@ -1,14 +1,14 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337N_attempt_fresh_mt5_runtime_probe_or_block_v1`
+- current_run(현재 실행): `run337P_materialize_runtime_data_and_feature_source_repair_probe_v1`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_proxy_expected_fresh_mt5_probe_input_review_accepts_runtime_probe_attempt_queue_no_training_no_mt5`
-- decision(결정): `stage337M_proxy_mt5_inputs_reviewed_accept_runtime_probe_attempt_queue_no_training_no_mt5_no_selection`
+- status(상태): `completed_stage337O_timestamp_aligned_runtime_review_repair_queue_no_forward_decision`
+- decision(결정): `stage337O_open_run337P_runtime_data_and_feature_source_repair_no_selection`
 - run337K_summary(337K 요약): `completed_runner_scaffold_review_accepts_run337L_materialization_no_training_no_mt5`. Effect(효과): runner scaffold review(러너 골격 검토)를 통과시키고 proxy expected/fresh MT5 input materialization(프록시 예상값/신규 메타트레이더5 입력 물질화)로 넘기며, 학습/MT5 실행/후보 선택은 계속 닫아둔다.
 - run337L_summary(337L 요약): `completed_proxy_expected_fresh_mt5_probe_inputs_materialized_no_mt5_execution`. Effect(효과): proxy expected/fresh MT5 input package(프록시 예상값/신규 메타트레이더5 입력 패키지)를 만들고 run337M(337M 실행) 검토로 넘기며, MT5 실행/학습/후보 선택은 계속 닫아둔다.
 - run337M_summary(337M 요약): `completed_proxy_expected_fresh_mt5_probe_input_review_accepts_runtime_probe_attempt_queue_no_training_no_mt5`. Effect(효과): run337L 입력 패키지를 검토해 run337N runtime probe attempt-or-block(런타임 탐침 시도 또는 차단)으로 넘기며, MT5 실행/학습/후보 선택은 계속 닫아둔다.
@@ -1254,3 +1254,19 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - run324A_summary(324A 요약): `stage323_cp322a_selected_curve_adapter_package_v1`가 ONNX-go pressure(온엑스 진행 압박)를 통과해 Stage325(325단계)를 열었다. Effect(효과): export(내보내기)를 시작할 수 있지만 ONNX parity(온엑스 동등성), MT5 runtime reproduction(MT5 런타임 재현), Goal Achieve(목표 달성)는 아직 아니다.
 
 - run325A_summary(325A 요약): ONNX export(온엑스 내보내기), Python parity(파이썬 동등성), feature order parity(피처 순서 동등성), MT5 runtime reproduction(MT5 런타임 재현)을 `completed`로 기록했다. Effect(효과): attempts(시도) `6`개와 MT5 KPI records(MT5 핵심 성과 지표 기록) `6`개를 cp322A 후보 패키지 근거로 묶고, main push(메인 푸시)를 완료해 Goal Achieve(목표 달성)를 `achieved_after_main_push_f67d80be`로 닫았다.
+
+## Stage337 run337N(337N 실행) - 2026-05-27
+
+- status(상태): `completed_stage337N_fresh_mt5_runtime_probe_attempt_partial_or_block_no_forward_decision`
+- decision(결정): `stage337N_runtime_probe_needs_repair_before_forward_or_selection_judgment`
+- latest US100 close(최신 US100 종가): `2026-05-27T01:15:00Z`
+- next_action(다음 행동): `run337O_review_fresh_mt5_runtime_probe_and_core56_repair_or_attribution_queue_v1`
+- effect(효과): 최신 MT5(메타트레이더5) 봉 기준으로 m48/u42 피처 인계를 다시 만들고 runtime probe(런타임 탐침)를 실행했다. core56은 source repair(원천 수리) 전까지 차단한다.
+
+## Stage337 run337O(337O 실행) - 2026-05-27
+
+- status(상태): `completed_stage337O_timestamp_aligned_runtime_review_repair_queue_no_forward_decision`
+- decision(결정): `stage337O_open_run337P_runtime_data_and_feature_source_repair_no_selection`
+- timestamp-aligned parity(타임스탬프 정렬 동등성): `20/20 matched(일치)`
+- next_action(다음 행동): `run337P_materialize_runtime_data_and_feature_source_repair_probe_v1`
+- effect(효과): run337N(337N 실행)의 원시 불일치를 시간축 기준으로 분해했고, tester/macro/core56 repair(테스터/거시/핵심56 수리)를 다음 실행으로 넘겼다.
