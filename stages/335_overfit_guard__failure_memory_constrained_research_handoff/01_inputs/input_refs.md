@@ -113,3 +113,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - proxy_numeric_protocol_specificity_audit(프록시 숫자 계약 특이성 감사): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/proxy_numeric_protocol_specificity_audit.csv`
 - proxy_usability_scope_matrix(프록시 활용 범위 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/proxy_usability_scope_matrix.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335L_independent_runtime_parity_proxy_usability_review.md`
+## run335M Branch-Specific Metric Extraction Design(335M 분기별 지표 추출 설계)
+
+- branch_specific_metric_schema(분기별 지표 구조): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/branch_specific_metric_schema.csv`
+- branch_runtime_metric_extraction_contract(분기별 런타임 지표 추출 계약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/branch_runtime_metric_extraction_contract.csv`
+- metric_source_availability_audit(지표 원천 가용성 감사): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/metric_source_availability_audit.csv`
+- mt5_report_parser_feasibility_audit(MT5 보고서 파서 가능성 감사): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/mt5_report_parser_feasibility_audit.csv`
+- lookahead_bias_rejection_matrix(미래정보 편향 거절 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/lookahead_bias_rejection_matrix.csv`
+- run335N_metric_materialization_queue(335N 지표 물질화 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/run335N_metric_materialization_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335M_branch_specific_runtime_metric_extraction_design.md`

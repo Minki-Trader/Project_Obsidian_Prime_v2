@@ -1,0 +1,43 @@
+{
+  "changed_variables": "measurement extraction schema and materialization queue only.",
+  "claim_boundary": "research_development_only_stage335M_branch_specific_runtime_metric_extraction_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "comparison_baseline": "run335L row-level parity plus repeated aggregate numeric proxy audit.",
+  "control_variables": "ONNX, feature order, threshold, D/B surface, risk, lot, ATR SL/TP, and runtime handoff remain fixed.",
+  "decision": "stage335M_branch_specific_metric_extraction_contract_ready_no_selection",
+  "decision_use": "Authorize run335N extractor materialization and prevent forward pass/fail claims until structured trade metrics exist.",
+  "evidence_plan": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/branch_specific_metric_schema.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/branch_runtime_metric_extraction_contract.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/run335N_metric_materialization_queue.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "Any branch needs post-outcome filter, threshold change, or missing source is hidden.",
+  "hypothesis": "Branch-specific runtime extraction can replace repeated aggregate proxy values with auditable MT5-derived metrics.",
+  "invalid_conditions": "HTML report absent, ambiguous timestamp join, subject mismatch, or parsed trade ledger missing for a numeric claim.",
+  "judgment": "branch_specific_metric_extraction_contract_ready_trade_ledger_materialization_required_no_forward_decision",
+  "metrics": {
+    "branch_count": 11,
+    "contract_rows": 45,
+    "gate_rows": 8,
+    "lookahead_rows": 66,
+    "parser_report_count": 6,
+    "queue_rows": 9,
+    "schema_rows": 12,
+    "source_rows": 8
+  },
+  "outputs": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/branch_specific_metric_schema.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/branch_runtime_metric_extraction_contract.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/metric_source_availability_audit.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/mt5_report_parser_feasibility_audit.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/lookahead_bias_rejection_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/run335N_metric_materialization_queue.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/required_gate_coverage_audit.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335M/result_judgment.csv"
+  ],
+  "run_id": "run335M_branch_specific_runtime_metric_extraction_design_v1",
+  "stage_id": "335_overfit_guard__failure_memory_constrained_research_handoff",
+  "status": "completed_branch_specific_runtime_metric_extraction_design_no_forward_decision",
+  "stop_conditions": "Stop at design boundary; materialize extractors in run335N before interpretation.",
+  "success_criteria": "All 11 protocols receive branch-specific metric contracts and no-retune/lookahead guards."
+}

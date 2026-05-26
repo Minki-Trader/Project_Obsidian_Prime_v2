@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v13`
-- current_run(현재 실행): `run335M_branch_specific_runtime_metric_extraction_design_v1`
+- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v14`
+- current_run(현재 실행): `run335N_materialize_branch_specific_runtime_metric_extractors_v1`
 - active_stage(활성 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - target_surface(목표 표면): `failure_memory_constrained_research_handoff`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_independent_runtime_parity_and_proxy_usability_review_no_forward_decision`
-- decision(판정): `stage335L_runtime_parity_usable_proxy_numeric_not_branch_specific_no_selection`
+- status(상태): `completed_branch_specific_runtime_metric_extraction_design_no_forward_decision`
+- decision(판정): `stage335M_branch_specific_metric_extraction_contract_ready_no_selection`
+- run335M_summary(335M 요약): branch-specific runtime metric extraction design(분기별 런타임 지표 추출 설계)을 `completed_branch_specific_runtime_metric_extraction_design_no_forward_decision`로 완료했다. Effect(효과): contract rows(계약 행) `45`개와 run335N materialization queue(335N 물질화 대기열) `9`개를 만들어 repeated aggregate proxy(반복 집계 프록시)를 분기별 forward judgment(전진 판정) 근거로 쓰는 경로를 차단했다.
 - run335L_summary(335L 요약): independent runtime parity/proxy usability review(독립 런타임 동등성/프록시 활용성 검토)를 `completed_independent_runtime_parity_and_proxy_usability_review_no_forward_decision`로 완료했다. Effect(효과): overlap rows(겹친 행) `30404`, decision mismatch(결정 불일치) `0`, terminal flat gap(말단 관망 공백) `2`개를 확인했고, numeric proxy(숫자 프록시)는 repeated aggregate(반복 집계)라 forward pass/fail(전진 통과/실패)에 쓰지 않는다.
 - run335K_summary(335K 요약): independent proxy signal expected values/fresh MT5 runtime probe(독립 프록시 예상 신호값/신규 MT5 런타임 탐침)를 `completed_independent_proxy_signal_and_mt5_runtime_probe_materialized_no_forward_decision`로 처리했다. Effect(효과): signal parity difference(신호 동등성 차이)와 numeric proxy vs fresh MT5 difference(숫자 프록시 대 신규 MT5 차이)를 만들었지만 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335J_summary(335J 요약): proxy expected and existing MT5 runtime result comparison(프록시 예상값 및 기존 MT5 런타임 결과 비교)을 `completed_proxy_expected_and_existing_mt5_runtime_result_comparison_no_selection`로 완료했다. Effect(효과): 132개 difference row(차이 행)를 만들고 진단 활용 가능성은 확인했지만, 독립 fresh runtime probe(새 독립 런타임 탐침)가 아니므로 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.

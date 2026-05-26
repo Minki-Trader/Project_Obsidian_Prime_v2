@@ -4427,3 +4427,10 @@
 - decision(결정): `stage335L_runtime_parity_usable_proxy_numeric_not_branch_specific_no_selection`
 - effect(효과): row-level probability/decision parity(행 단위 확률/결정 동등성)는 overlap rows(겹친 행) `30404`개에서 mismatch(불일치) `0`개로 확인했다.
 - boundary(경계): numeric proxy(숫자 프록시)는 branch-specific(분기별) 판정력이 없어 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+## 2026-05-26 Stage335M Branch-Specific Metric Extraction Design(335M 분기별 지표 추출 설계)
+
+- run_id(실행 ID): `run335M_branch_specific_runtime_metric_extraction_design_v1`
+- status(상태): `completed_branch_specific_runtime_metric_extraction_design_no_forward_decision`
+- decision(결정): `stage335M_branch_specific_metric_extraction_contract_ready_no_selection`
+- effect(효과): branch-specific metric contract(분기별 지표 계약) `45`개와 run335N queue(335N 대기열) `9`개를 만들었다.
+- boundary(경계): structured trade ledger(구조화 거래 장부)가 아직 없으므로 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
