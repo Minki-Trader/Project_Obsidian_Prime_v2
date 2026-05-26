@@ -1299,3 +1299,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337S_open_run337T_source_clean_u42_cost_fragility_or_tester_rollover_probe_no_selection`
 - next_action(다음 행동): `run337T_source_clean_u42_cost_fragility_or_tester_rollover_probe_v1`
 - effect(효과): u42 source-clean control(원천 깨끗한 대조군), m48/core56 source-policy repair(원천 정책 수리), tester rollover(테스터 이월) 조건을 분리했다. Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## Stage337 run337T(337T 실행) - 2026-05-27
+
+- status(상태): `completed_stage337T_u42_source_clean_cost_fragility_review_no_forward_decision`
+- decision(결정): `stage337T_open_run337U_cost_buffer_rebuild_or_tester_rollover_reprobe_no_selection`
+- next_action(다음 행동): `run337U_source_clean_cost_buffer_rebuild_or_tester_rollover_reprobe_v1`
+- effect(효과): u42 source-clean control(원천 깨끗한 대조군)은 proxy/MT5 parity(프록시/MT5 동등성)는 맞지만 비용 1포인트와 약한 구간에서 취약해 ONNX-ready(온엑스 준비)로 보지 않는다.

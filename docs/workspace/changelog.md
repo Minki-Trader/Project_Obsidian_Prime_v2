@@ -4735,3 +4735,4 @@
 - 2026-05-27: Stage337 run337Q(337Q 실행) `completed_stage337Q_tester_date_boundary_probe_partial_no_forward_decision`. Effect(효과): tester date boundary repair probe(테스터 종료일 경계 수리 탐침)를 MT5(메타트레이더5) `5/5`로 실행했고 Forward/Goal(전진/목표) 주장은 없음.
 - 2026-05-27: Stage337 run337R(337R 실행) `completed_stage337R_boundary_attribution_stress_forward_blocked_no_goal_achieve`. Effect(효과): boundary forward attribution/stress review(경계 전진 귀속/압박 리뷰)를 완료했고 Forward/Goal(전진/목표) 주장은 없음.
 - 2026-05-27: Stage337 run337S(337S 실행) `completed_stage337S_source_policy_repair_decision_no_forward_decision`. Effect(효과): source policy/tester boundary/cost fragility(원천 정책/테스터 경계/비용 취약성)를 분리했고 Forward/Goal(전진/목표) 주장은 없음.
+- 2026-05-27: Stage337 run337T(337T 실행) `completed_stage337T_u42_source_clean_cost_fragility_review_no_forward_decision`. Effect(효과): u42 source-clean cost fragility(원천 깨끗한 비용 취약성)를 확인했고 Forward/Goal(전진/목표) 주장은 없음.
