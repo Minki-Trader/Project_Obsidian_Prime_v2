@@ -4535,3 +4535,11 @@
 - decision(결정): `stage336G_execution_blueprints_reviewed_run336H_runner_scaffolds_ready_no_selection`
 - effect(효과): run336F execution blueprint(336F 실행 청사진)를 검토하고 run336H runner scaffold queue(336H 러너 뼈대 대기열) `9`행을 만들었다.
 - boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336H Runner Scaffolds(336H 러너 뼈대)
+
+- run_id(실행 ID): `run336H_materialize_constraint_bound_runner_scaffolds_v1`
+- status(상태): `completed_constraint_bound_runner_scaffolds_materialized_no_execution`
+- decision(결정): `stage336H_runner_scaffolds_materialized_run336I_review_ready_no_selection`
+- effect(효과): accepted blueprint(승인 청사진) `31`개를 runner scaffold(러너 뼈대)와 schema(스키마) 산출물로 만들었다.
+- boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

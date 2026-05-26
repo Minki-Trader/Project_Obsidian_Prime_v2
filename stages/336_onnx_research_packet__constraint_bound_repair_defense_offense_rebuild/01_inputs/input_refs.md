@@ -83,3 +83,14 @@ Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected
 - runner_scaffold_acceptance(러너 뼈대 승인): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336G/runner_scaffold_acceptance_matrix.csv`
 - run336H_queue(336H 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336G/run336H_runner_scaffold_queue.csv`
 - final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336G/final_execution_blueprint_review_decision.json`
+
+## run336H Runner Scaffolds(336H 러너 뼈대)
+
+- scaffold_index(뼈대 색인): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/scaffold_index.csv`
+- scaffold_manifest(뼈대 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/scaffold_manifest.json`
+- negative_control_scaffolds(부정 대조 뼈대): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/negative_control_scaffold_matrix.csv`
+- proxy_mt5_difference_schema(프록시/MT5 차이 스키마): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/proxy_mt5_difference_schema.csv`
+- runtime_identity_manifest_schema(런타임 정체성 목록 스키마): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/runtime_identity_manifest_schema.csv`
+- regime_slice_schema_matrix(국면 조각 스키마 행렬): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/regime_slice_schema_matrix.csv`
+- run336I_review_queue(336I 검토 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/run336I_review_queue.csv`
+- final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336H/final_runner_scaffold_materialization_decision.json`
