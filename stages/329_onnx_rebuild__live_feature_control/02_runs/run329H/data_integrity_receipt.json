@@ -1,0 +1,22 @@
+{
+  "data_hash_or_identity": {
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_oos_route_signal.csv": "51107a967a70e173dd5011d855962323f1a41d865624dadc90b9ee82a8227006",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_val_route_signal.csv": "4d8c68c7ad48ec4cd5d32d1c7ecdb1644f8d01105db6bbd9d1be3ec99982d98b",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_oos_route_signal.csv": "9d86d6d77fd4f52a44425a1b410ad1b160240273ed78c0bcd2d69fbc15f07842",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_val_route_signal.csv": "d90fbf0aad1bfd3e06e91f485a97ff9bbc40d3e88014c0abc66fc9b9d9b574e2"
+  },
+  "data_source": [
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_val_route_signal.csv",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_oos_route_signal.csv",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_val_route_signal.csv",
+    "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_oos_route_signal.csv"
+  ],
+  "feature_label_boundary": "No labels or new forward threshold tuning are used in this run.",
+  "generated_at_utc": "2026-05-26T00:57:59Z",
+  "integrity_judgment": "usable_with_boundary_old_window_only_forward_handoff_missing",
+  "leakage_risk": "recomputing split-local rank on latest forward would require future distribution and remains forbidden.",
+  "missing_or_duplicate_check": "forward rows after 2026-04-14 count is zero for exact cp322A route-signal files.",
+  "sample_scope": "Stage322 validation/OOS route-signal handoff through 2026-04-13; no exact cp322A route rows after 2026-04-14.",
+  "split_boundary": "Existing validation/OOS rows are old evidence only; latest forward is a separate unresolved handoff boundary.",
+  "time_axis": "FPMarkets US100 M5 broker timestamps in Stage322 route-signal CSV; forward requirement starts at 2026-04-14."
+}

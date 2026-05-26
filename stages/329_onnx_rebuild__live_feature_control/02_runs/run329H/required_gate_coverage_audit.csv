@@ -1,0 +1,5 @@
+gate,status,evidence,effect
+source_authority_audit,passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/exact_handoff_repair_feasibility_matrix.csv,distinguishes cp322A exact repair from Stage329 research ONNX evidence
+runtime_parity_audit,passed_with_boundary,stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/runtime_parity_receipt.json,keeps old-window parity from becoming latest-forward runtime authority
+data_integrity_audit,passed_with_boundary,stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/route_signal_coverage_audit.csv,confirms exact route-signal handoff has zero rows after 2026-04-13
+final_claim_guard,passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/stage329_closeout_decision.json,"no Forward Passed, no Forward Failed, no Goal Achieve, no operating claim"

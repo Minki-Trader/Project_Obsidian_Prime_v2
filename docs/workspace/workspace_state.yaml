@@ -1,8 +1,8 @@
-﻿current_run_id: run329G_raw_forward_session_gap_and_overfit_pressure_review_v1
+﻿current_run_id: run330A_design_forward_safe_non_identity_surface_robustness_packet_v1
 updated_on: '2026-05-26'
 project_mode: clean_stage_restart
 active_branch: main
-active_stage: 329_onnx_rebuild__live_feature_control
+active_stage: 330_onnx_rebuild__forward_safe_non_identity_surface_robustness
 current_operating_reference: null
 current_shadow_challenger: null
 exploration_rule: tier_a_and_tier_b_are_paired_exploration_labels; routed runs use
@@ -16,11 +16,15 @@ shared_window:
 practical_modeling_start: '2022-09-01'
 current_focus:
 - >-
+  Stage330(330단계) `330_onnx_rebuild__forward_safe_non_identity_surface_robustness` is open_planned(열림 계획). Effect(효과): cp322A exact repair(정확 수리)를 성공으로 포장하지 않고 forward-safe non-identity ONNX(전진 안전 비정체성 온엑스) 설계로 넘어간다.
+- >-
+  Stage329(329단계) run329H(329H 실행)는 `cp322a_exact_forward_handoff_not_repairable_under_frozen_rules_research_artifact_preserved`로 닫혔다. Effect(효과): Forward Blocked(전진 차단)는 cp322A exact handoff(정확 인계)에만 붙이고 Goal Achieve(목표 달성)는 주장하지 않는다.
+- >-
   Stage329(329단계) run329G(329G 실행) raw-forward/session gap review(원본 전진/세션 간극 검토)를 `completed_raw_forward_session_gap_and_overfit_pressure_review_no_forward_decision`로 닫았다. Effect(효과): 세션 동등 MT5 양수 근거를 전진 통과로 올리지 않고 과적합 압력으로 보존한다.
 - >-
   Stage329(329단계) run329F(329F 실행) forward MT5 review(전진 MT5 검토)를 `completed_forward_mt5_kpi_regime_cost_curve_review_no_final_forward_decision`로 닫았다. Effect(효과): KPI(핵심 성과 지표), regime(국면), cost stress(비용 압박), curve pocket(곡선 포켓)을 기록했지만 Goal Achieve(목표 달성)는 없다.
 - >-
-  Stage329(329단계) run329E(329E 실행) session parity runtime probe(세션 동등 런타임 탐침)를 `blocked_session_parity_runtime_probe_no_completed_mt5_runtime`로 기록했다. Effect(효과): old_session_parity(기존 세션 동등) 입력을 MT5 RuntimeProbeEA(런타임 탐침 EA)에 넘겼지만 Goal Achieve(목표 달성)는 없다.
+  Stage329(329단계) run329E(329E 실행) session parity runtime probe(세션 동등 런타임 탐침)를 `completed_session_parity_runtime_probe_no_candidate_selection`로 다시 닫았다. Effect(효과): portable MT5(포터블 메타트레이더5)로 6/6 runtime/report/telemetry(런타임/보고서/실행 기록)를 확보했지만 selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 없다.
 - >-
   Stage329(329단계) run329D(329D 실행) forward holdout score replay(전진 보류 점수 재생)를 닫았다. Effect(효과): raw/session parity(원본/세션 동등) view(보기)를 분리해 신호 공급과 ONNX parity(온엑스 동등성)를 확인했지만, Goal Achieve(목표 달성)는 없다.
 - >-
@@ -9301,3 +9305,15 @@ stage267_recent_narrative_notes:
   Run267ES(267ES 실행)는 run267ER(267ER 실행)의 queue(대기열)를 MT5(MetaTrader 5, 메타트레이더5) 실행 가능한 feature/model/set/ini(피처/모델/설정/초기화) 입력으로 물질화했다. Effect(효과): variants(변형) `12`개, attempts(시도) `12`개, handoff precheck attempts(인계 사전검사 시도) `4`개, aggressive attempts(공격 시도) `2`개, held rows(보류 행) `1`개를 만들었다. Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
 - >-
   Run267ET(267ET 실행)는 run267ES(267ES 실행)의 12개 attempt(시도)를 MT5(MetaTrader 5, 메타트레이더5) runtime probe(런타임 탐침)로 실행했다. Effect(효과): KPI records(KPI 기록) `8`개와 init failure(초기화 실패) `4`개를 남겼고, next_action(다음 행동)은 사용자 요청에 맞춰 `stop_after_run267ET_mt5_runtime_probe_user_requested_pause`로 둔다. Boundary(경계): selected candidate(선택 후보), selected research baseline(선택 연구 기준 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 계속 `none/not_claimed`다.
+
+stage329H_cp322a_exact_handoff_closeout:
+  packet_id: 329_onnx_rebuild__live_feature_control_v8
+  stage_id: 329_onnx_rebuild__live_feature_control
+  status: completed_cp322a_exact_handoff_repair_feasibility_stage329_closed
+  judgment: Forward Blocked
+  decision: cp322a_exact_forward_handoff_not_repairable_under_frozen_rules_research_artifact_preserved
+  current_run_id: run329H_cp322A_exact_handoff_repair_feasibility_or_research_artifact_closeout_v1
+  next_stage: 330_onnx_rebuild__forward_safe_non_identity_surface_robustness
+  next_run_id: run330A_design_forward_safe_non_identity_surface_robustness_packet_v1
+  report_path: stages/329_onnx_rebuild__live_feature_control/03_reviews/run329H_cp322a_exact_handoff_repair_feasibility.md
+  boundary: research_development_only_cp322a_exact_forward_handoff_blocked_no_threshold_retuning_no_candidate_selection_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve

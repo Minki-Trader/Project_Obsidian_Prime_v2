@@ -1,0 +1,49 @@
+{
+  "known_differences": [
+    "Historical Stage322 feature name route_signal_value is aliased to run322b_route_signal in Stage323/325.",
+    "Stage329 rebuilt ONNX candidates consume live feature frames and are not cp322A exact handoff repairs.",
+    "No exact route-signal CSV exists for timestamps after 2026-04-13."
+  ],
+  "parity_check": "existing Stage325 ONNX/runtime parity remains old-window evidence; latest forward runtime cannot be executed exactly without route-signal handoff.",
+  "parity_identity": {
+    "adapter_package": "stage323_cp322a_selected_curve_adapter_package_v1",
+    "branch_lane": "replay_control",
+    "decision_rule": "d_or_b_score60",
+    "feature_order": [
+      "run322b_route_signal"
+    ],
+    "feature_order_hash": "839a84eca981d034211de743c0f9830335149e2a4817e947de6b96dd9fb5a70c",
+    "identity_judgment": "identity_surface_requires_external_route_signal_value",
+    "onnx_input_name": "float_input",
+    "onnx_input_shape": [
+      "N",
+      1
+    ],
+    "onnx_model_path": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx",
+    "onnx_sha256": "b0b34d31a78eef63084bc2157a81a83d88458a0e5aa605631e60af592ef9e723",
+    "probability_formula": {
+      "p_flat": "1 - signal^2",
+      "p_long": "0.5 * (signal^2 + signal)",
+      "p_short": "0.5 * (signal^2 - signal)"
+    },
+    "runtime_feature_order_csv": "stages/323_onnx_candidate_campaign__selected_curve_adapter_package/02_runs/run323A/adapter_package/feature_order_runtime.csv",
+    "selected_candidate": "cp322A_cp321b_exact_replay_control_surface",
+    "shared_contract": "run322b_route_signal(실행 신호)은 route_signal_value(경로 신호값)의 MT5 feature alias(피처 별칭)이며 -1/0/+1 의미를 유지한다.",
+    "source_runtime_feature_order": [
+      "route_signal_value"
+    ]
+  },
+  "research_path": "stage_pipelines/stage329/cp322a_exact_handoff_repair_feasibility.py",
+  "runtime_claim_boundary": "runtime_probe_only_old_window_no_runtime_authority_latest_forward_blocked",
+  "runtime_path": {
+    "onnx_model": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/models/cp322a_route_signal_identity.onnx",
+    "stage322_route_signal_files": [
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_val_route_signal.csv",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_a_oos_route_signal.csv",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_val_route_signal.csv",
+      "stages/322_onnx_candidate_campaign__cp321b_curve_stability_pressure/02_runs/run322B/features/run322A_cp322A_cp321b_exact_replay_control_tier_b_oos_route_signal.csv"
+    ],
+    "stage325_runtime_receipt": "stages/325_onnx_candidate_campaign__onnx_export_parity_runtime_reproduction_cp322a/02_runs/run325A/runtime_parity_receipt.json"
+  },
+  "shared_contract": "cp322A ONNX consumes a single run322b_route_signal feature whose meaning is -1 short, 0 flat, +1 long."
+}
