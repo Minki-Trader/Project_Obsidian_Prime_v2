@@ -64,3 +64,15 @@ Effect(효과): 다음 실행은 모델 학습 전 no-lookahead(미래참조 방
 - run337E_queue(337E 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337D/run337E_review_execution_protocols_queue.csv`
 
 Effect(효과): 다음 실행은 학습이나 후보 선택이 아니라, 이 절차들이 실제로 과적합 방어와 MT5 근거 요구를 충분히 고정했는지 검토한다.
+
+## run337E Outputs(337E 산출물)
+
+## run337E Outputs(337E 산출물)
+
+- protocol_input_lineage_review(절차 입력 계보 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337E/protocol_input_lineage_review.csv`
+- accepted_protocols_for_blueprint_queue(청사진용 승인 절차 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337E/accepted_protocols_for_blueprint_queue.csv`
+- repair_protocol_gap_queue(수리 절차 공백 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337E/repair_protocol_gap_queue.csv`
+- run337F_blueprint_queue(337F 청사진 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337E/run337F_blueprint_materialization_queue.csv`
+- gate_audit(게이트 감사): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337E/required_gate_coverage_audit.csv`
+
+Effect(효과): 다음 실행은 모델 학습이 아니라, 검토 통과한 절차를 실제 실행 청사진과 schema(스키마)로 바꾼다.

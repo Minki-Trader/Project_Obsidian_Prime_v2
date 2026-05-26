@@ -1,0 +1,26 @@
+{
+  "changed_variables": "protocol review labels and blueprint queue",
+  "claim_boundary": "research_development_only_stage337E_protocol_review_no_model_training_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "comparison_baseline": "run337D materialized protocols and gate audit",
+  "control_variables": "no model training, no MT5 execution, no threshold retune, no lot optimization, no forward-pocket filtering",
+  "decision_use": "decide whether run337F may materialize guarded execution blueprints",
+  "evidence_plan": "review CSVs, accepted queue, repair gap queue, run337F queue, receipts, report, ledgers, artifact registry",
+  "failure_criteria": "any protocol family lacks fresh MT5 requirement, no-lookahead guard, core56 lock, runtime package, or training boundary",
+  "hypothesis": "run337D protocols are sufficient to open blueprint materialization without allowing training, candidate selection, or runtime claims",
+  "invalid_conditions": "claiming Forward Passed, runtime authority, or candidate selection from protocol files",
+  "metrics": {
+    "accepted_protocol_families": 8,
+    "accepted_review_rows": 38,
+    "failed_gate_rows": 0,
+    "gate_rows": 12,
+    "lineage_rows": 13,
+    "repair_gap_rows": 0,
+    "review_family_count": 8,
+    "review_rows": 38,
+    "run337f_queue_rows": 7
+  },
+  "run_id": "run337E_review_research_execution_protocols_v1",
+  "sample_scope": "Stage337 protocol files only; no new trading KPI sample",
+  "stop_conditions": "any gate fails; send to repair_protocol_gap_queue before blueprint materialization",
+  "success_criteria": "all protocol families accepted and repair gap queue empty"
+}
