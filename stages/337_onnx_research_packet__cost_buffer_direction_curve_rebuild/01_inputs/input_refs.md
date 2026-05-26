@@ -150,3 +150,15 @@ Effect(효과): 다음 실행은 이 검토 결과를 근거로 비실행 runner
 - run337K_queue(337K 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337J/run337K_runner_scaffold_review_queue.csv`
 
 Effect(효과): 다음 실행은 실제 실행이 아니라, 이 골격들이 실행 가능한 준비 상태인지 먼저 검토한다.
+
+## run337K Outputs(337K 산출물)
+
+- runner_scaffold_review_source_lineage(러너 골격 검토 원천 계보): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/runner_scaffold_review_source_lineage.csv`
+- family_scaffold_review(가족 골격 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/family_scaffold_review.csv`
+- scaffold_index_review(골격 색인 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/scaffold_index_review.csv`
+- preflight_checklist_review(사전점검 목록 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/preflight_checklist_review.csv`
+- blocked_execution_command_review(차단 실행 명령 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/blocked_execution_command_review.csv`
+- accepted_scaffolds_for_run337L(337L용 승인 골격): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/accepted_scaffolds_for_run337L_materialization.csv`
+- run337L_queue(337L 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/run337L_proxy_mt5_input_materialization_queue.csv`
+
+Effect(효과): 다음 실행은 proxy expected value(프록시 예상값)와 MT5 probe input(메타트레이더5 탐침 입력)을 만들 준비만 받는다. 아직 MT5 execution(MT5 실행) 자체는 하지 않는다.
