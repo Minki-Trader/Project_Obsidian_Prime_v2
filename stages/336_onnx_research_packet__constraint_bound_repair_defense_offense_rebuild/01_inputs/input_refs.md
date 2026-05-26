@@ -19,3 +19,15 @@
 - run336B_queue(336B 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336A/run336B_materialization_queue.csv`
 
 Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)를 만들지 않는다.
+
+
+## run336B Outputs(336B 산출물)
+
+- branch_spec_cards(분기 명세 카드): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/branch_spec_cards.csv`
+- proxy_block_manifest(프록시 차단 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/score_input_allowlist_and_proxy_block_manifest.csv`
+- gate_template_manifest(게이트 틀 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/gate_template_manifest.csv`
+- runtime_preflight_schema(런타임 사전 점검 구조): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/runtime_parity_preflight_schema.csv`
+- negative_control_checklist(부정 대조 체크리스트): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/negative_control_checklist.csv`
+- regime_slice_schema(국면 조각 구조): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/regime_slice_output_schema.csv`
+- package_manifest(패키지 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/materialized_input_package_manifest.csv`
+- run336C_review_queue(336C 검토 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336B/run336C_review_queue.csv`

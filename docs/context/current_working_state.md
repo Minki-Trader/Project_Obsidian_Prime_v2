@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild_v1`
-- current_run(현재 실행): `run336B_materialize_constraint_bound_repair_defense_offense_inputs_v1`
+- current_run(현재 실행): `run336C_review_constraint_bound_materialized_inputs_v1`
 - active_stage(활성 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - target_surface(목표 표면): `constraint_bound_repair_defense_offense_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_constraint_bound_rebuild_packet_design_no_selection`
-- decision(결정): `stage336A_constraint_bound_rebuild_packet_designed_no_selection`
+- status(상태): `completed_constraint_bound_repair_defense_offense_inputs_materialized_no_selection`
+- decision(결정): `stage336B_materialized_constraint_bound_inputs_ready_for_review_no_selection`
+- run336B_summary(336B 요약): constraint-bound materialized inputs(제약 기반 물질화 입력)을 `completed_constraint_bound_repair_defense_offense_inputs_materialized_no_selection`로 만들었다. Effect(효과): branch spec cards(분기 명세 카드) `6`행, proxy block manifest(프록시 차단 목록) `84`행, negative-control checklist(부정 대조 체크리스트) `60`행을 만들고 `run336C_review_constraint_bound_materialized_inputs_v1`로 넘긴다. Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336A_summary(336A 요약): constraint-bound rebuild packet design(제약 기반 재구성 묶음 설계)을 `completed_constraint_bound_rebuild_packet_design_no_selection`로 완료했다. Effect(효과): branch design(분기 설계) `6`개, proxy exclusion contract(프록시 차단 계약) `14`행, runtime parity contract(런타임 동등성 계약) `5`행을 만들고 `run336B_materialize_constraint_bound_repair_defense_offense_inputs_v1`로 넘긴다. Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335S_summary(335S 요약): repaired attribution/proxy scout review(수리 귀속/프록시 탐침 검토)를 `completed_stage335_closeout_open_stage336_constraint_bound_research_packet_no_selection`로 완료했다. Effect(효과): repair(수리) `9`행 통과, old proxy(기존 프록시) 선택 차단 유지, Stage336(336단계) `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`를 열고 `run336A_design_constraint_bound_repair_defense_offense_rebuild_packet_v1`로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335R_summary(335R 요약): repaired attribution/proxy scout(수리 귀속/프록시 탐침)를 `completed_repaired_attribution_and_proxy_scout_materialized_no_forward_decision`로 완료했다. Effect(효과): same-bar attribution repair(동일 봉 귀속 수리) `9`행, proxy comparison(프록시 비교) `792`행, constraint packet(제약 묶음) `6`행을 만들고 `run335S_review_repaired_attribution_proxy_scout_and_open_constraint_bound_research_packet_v1`로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
