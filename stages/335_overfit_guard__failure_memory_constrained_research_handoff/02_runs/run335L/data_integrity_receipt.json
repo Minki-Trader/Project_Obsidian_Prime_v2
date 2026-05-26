@@ -1,0 +1,20 @@
+{
+  "data_hash_or_identity": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/row_level_runtime_parity_summary.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/row_level_runtime_parity_gap_rows.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/runtime_probability_diff_extremes.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/proxy_numeric_protocol_specificity_audit.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/fresh_runtime_derived_metric_audit.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/proxy_usability_scope_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/required_gate_coverage_audit.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/result_judgment.csv"
+  ],
+  "data_source": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K",
+  "feature_label_boundary": "review-only; no labels, training, or threshold search are introduced",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_risk": "numeric proxy branch specificity remains weak because aggregate values repeat across protocols",
+  "missing_or_duplicate_check": "outer join by bar_time_server; terminal feature-only gaps are recorded in row_level_runtime_parity_gap_rows.csv",
+  "sample_scope": "US100 M5 raw-forward non-identity probes copied from run335K, six attempts",
+  "split_boundary": "post-OOS raw-forward probe evidence; not cp322A exact forward pass/fail evidence",
+  "time_axis": "bar_time_server and timestamp_utc are bar-close aligned; MT5 telemetry cycle rows use bar_time from tester runtime"
+}

@@ -4415,7 +4415,15 @@
 
 ## 2026-05-26 - run335K_repair_independent_proxy_mt5_runtime_probe_materialization_v1
 
-- status(상태): `completed_independent_probe_inputs_materialized_execution_pending_no_forward_decision`
-- decision(결정): `stage335K_independent_runtime_materialization_or_probe_gap_repair_continues_no_selection`
+- status(상태): `completed_independent_proxy_signal_and_mt5_runtime_probe_materialized_no_forward_decision`
+- decision(결정): `stage335K_independent_proxy_signal_mt5_runtime_probe_diagnostic_usable_not_forward_usable_no_selection`
 - effect(효과): 독립 proxy signal expected values(프록시 예상 신호값), fresh MT5 runtime summary(신규 MT5 런타임 요약), difference matrices(차이 행렬)를 만들었다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## 2026-05-26 Stage335L Runtime Parity/Proxy Usability Review(335L 런타임 동등성/프록시 활용성 검토)
+
+- run_id(실행 ID): `run335L_independent_runtime_parity_and_proxy_usability_review_v1`
+- status(상태): `completed_independent_runtime_parity_and_proxy_usability_review_no_forward_decision`
+- decision(결정): `stage335L_runtime_parity_usable_proxy_numeric_not_branch_specific_no_selection`
+- effect(효과): row-level probability/decision parity(행 단위 확률/결정 동등성)는 overlap rows(겹친 행) `30404`개에서 mismatch(불일치) `0`개로 확인했다.
+- boundary(경계): numeric proxy(숫자 프록시)는 branch-specific(분기별) 판정력이 없어 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

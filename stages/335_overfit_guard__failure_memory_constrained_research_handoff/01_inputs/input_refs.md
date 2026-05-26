@@ -104,3 +104,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - signal_difference(신호 차이): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_signal_vs_mt5_runtime_difference.csv`
 - numeric_difference(숫자 차이): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_numeric_vs_fresh_mt5_difference.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335K_independent_proxy_mt5_runtime_probe.md`
+
+## run335L Runtime Parity/Proxy Usability Review(335L 런타임 동등성/프록시 활용성 검토)
+
+- row_level_runtime_parity_summary(행 단위 런타임 동등성 요약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/row_level_runtime_parity_summary.csv`
+- row_level_runtime_parity_gap_rows(행 단위 공백 행): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/row_level_runtime_parity_gap_rows.csv`
+- runtime_probability_diff_extremes(런타임 확률 차이 최대치): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/runtime_probability_diff_extremes.csv`
+- proxy_numeric_protocol_specificity_audit(프록시 숫자 계약 특이성 감사): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/proxy_numeric_protocol_specificity_audit.csv`
+- proxy_usability_scope_matrix(프록시 활용 범위 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335L/proxy_usability_scope_matrix.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335L_independent_runtime_parity_proxy_usability_review.md`
