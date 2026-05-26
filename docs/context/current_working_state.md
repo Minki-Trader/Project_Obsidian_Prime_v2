@@ -1292,3 +1292,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337R_open_run337S_tester_visible_source_policy_repair_or_next_data_boundary_probe_no_selection`
 - next_action(다음 행동): `run337S_tester_visible_source_policy_repair_or_next_data_boundary_probe_v1`
 - effect(효과): trade-level attribution/stress(거래 단위 귀속/압박)를 만들고 tester/as-of blockers(테스터/시점 기준 차단 요소)를 분리했다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## Stage337 run337S(337S 실행) - 2026-05-27
+
+- status(상태): `completed_stage337S_source_policy_repair_decision_no_forward_decision`
+- decision(결정): `stage337S_open_run337T_source_clean_u42_cost_fragility_or_tester_rollover_probe_no_selection`
+- next_action(다음 행동): `run337T_source_clean_u42_cost_fragility_or_tester_rollover_probe_v1`
+- effect(효과): u42 source-clean control(원천 깨끗한 대조군), m48/core56 source-policy repair(원천 정책 수리), tester rollover(테스터 이월) 조건을 분리했다. Goal Achieve(목표 달성)는 주장하지 않는다.
