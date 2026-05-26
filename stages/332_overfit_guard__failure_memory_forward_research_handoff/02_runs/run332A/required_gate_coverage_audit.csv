@@ -1,0 +1,8 @@
+gate,status,evidence_path,notes
+work_packet_schema_lint,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/experiment_design_spec.json,"hypothesis, baseline, controls, changed variables, sample scope, criteria, invalid and stop conditions are declared"
+data_integrity_plan_gate,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/data_integrity_plan.csv,"time axis, sample scope, leakage risk, and Stage332B data audit requirement are explicit"
+model_validation_plan_gate,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/model_validation_plan.csv,no model update or threshold selection occurs in run332A
+no_retune_guard,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/failure_memory_to_research_constraints.csv,"Stage331 weak pockets become constraints, not tuning targets"
+artifact_lineage_audit,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/artifact_lineage_receipt.json,source inputs and generated design artifacts are connected
+required_gate_coverage_audit,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/required_gate_coverage_audit.csv,all run332A design gates are listed in closeout
+final_claim_guard,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/result_judgment_receipt.json,"Forward Passed, Forward Failed, live readiness, deployment, operating promotion, runtime authority, and Goal Achieve are not claimed"

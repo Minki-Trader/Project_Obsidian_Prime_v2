@@ -1,0 +1,39 @@
+{
+  "stage_id": "332_overfit_guard__failure_memory_forward_research_handoff",
+  "run_id": "run332A_design_failure_memory_forward_research_handoff_packet_v1",
+  "run_number": "run332A",
+  "parent_run_id": "run331D_final_cross_horizon_overfit_guard_decision_v1",
+  "generated_at_utc": "2026-05-26T04:31:54Z",
+  "primary_family": "experiment_design",
+  "primary_skill": "obsidian-experiment-design",
+  "support_skills": [
+    "obsidian-data-integrity",
+    "obsidian-model-validation",
+    "obsidian-artifact-lineage",
+    "obsidian-result-judgment"
+  ],
+  "required_gates": [
+    "work_packet_schema_lint",
+    "data_integrity_plan_gate",
+    "model_validation_plan_gate",
+    "no_retune_guard",
+    "artifact_lineage_audit",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "status": "completed_failure_memory_forward_research_handoff_design_no_selection",
+  "judgment": "experiment_design_completed_research_only_no_goal_achieve",
+  "decision": "stage332A_design_packet_ready_for_data_and_guard_materialization_no_selection",
+  "source_inputs": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/final_decision_matrix.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/overfit_guard_failure_memory.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/survivor_clue_disposition.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/raw_forward_feature_matrix_manifest.csv"
+  ],
+  "forward_passed": "not_claimed",
+  "forward_failed": "not_claimed",
+  "selected_candidate": "none",
+  "goal_achieve": "not_claimed",
+  "next_action": "run332B_materialize_failure_memory_forward_data_and_guard_inputs_v1",
+  "claim_boundary": "research_development_only_failure_memory_forward_research_design_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

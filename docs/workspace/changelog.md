@@ -4170,3 +4170,11 @@
 - next_stage(다음 단계): `332_overfit_guard__failure_memory_forward_research_handoff`
 - next_action(다음 행동): `run332A_design_failure_memory_forward_research_handoff_packet_v1`
 - effect(효과): runtime replay(런타임 재생)는 맞았지만 cost/curve/resampling guard(비용/곡선/재표본 방어) 때문에 Forward Passed(전진 통과), Forward Failed(전진 실패), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage332A Failure Memory Forward Research Handoff Design(332A 실패 기억 전진 연구 인계 설계)
+
+- run332A(332A 실행): Stage331(331단계)의 failure memory(실패 기억)를 research constraints(연구 제약), branch queue(분기 대기열), data/model/parity evidence plan(데이터/모델/동등성 근거 계획)으로 바꿨다.
+- status(상태): `completed_failure_memory_forward_research_handoff_design_no_selection`
+- judgment(판정): `experiment_design_completed_research_only_no_goal_achieve`
+- next_action(다음 행동): `run332B_materialize_failure_memory_forward_data_and_guard_inputs_v1`
+- effect(효과): 과적합 포켓을 직접 고치지 않고 다음 실행의 차단 조건으로 고정했으며, Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 주장하지 않는다.
