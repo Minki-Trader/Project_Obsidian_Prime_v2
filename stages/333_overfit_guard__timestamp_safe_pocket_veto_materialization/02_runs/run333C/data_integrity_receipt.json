@@ -1,0 +1,15 @@
+{
+  "data_source": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/scoring_branch_queue.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/signal_payload_manifest.csv"
+  ],
+  "time_axis": "timestamp_utc is parsed as UTC; signal timestamps are joined on UTC bar time.",
+  "sample_scope": "c56_plain 2070 feature rows with 486 source signals; m48_plain 5484 feature rows with 2562 source signals.",
+  "missing_or_duplicate_check": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/payload_manifest.csv",
+  "feature_label_boundary": "guard scores use materialized features and expanding-past/session maps only; no future returns, labels, tester outcomes, or PnL.",
+  "split_boundary": "raw-forward materialization only; no train or forward PnL calibration.",
+  "leakage_risk": "post-hoc pocket-date filters or forward KPI-tuned rank thresholds.",
+  "data_hash_or_identity": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/source_artifact_hashes.json",
+  "integrity_judgment": "usable_for_guarded_payload_materialization_with_breadth_boundary"
+}

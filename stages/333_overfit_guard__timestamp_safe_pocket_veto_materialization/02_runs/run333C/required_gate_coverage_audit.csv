@@ -1,0 +1,8 @@
+gate,status,evidence_path,notes
+source_artifacts_present,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/source_artifact_hashes.json,all run333A/run333B/run330B sources present
+protocol_and_queue_complete,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/scoring_branch_queue.csv,protocols=4;queues=16
+payload_materialization_complete,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/payload_manifest.csv,payload_manifest_rows=16;signal_files=16
+no_label_or_future_columns,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/payload_column_forbidden_audit.json,no forbidden columns
+breadth_missing_abstain_boundary,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/breadth_missing_abstain_audit.csv,breadth negative control is expected-invalid and hard/soft keep missing rows out of scored guarded views
+no_retune_guard,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/no_retune_guard_receipt.json,"no model, ONNX, threshold, lot, D/B rule, ATR SL/TP, or runtime handoff mutation."
+final_claim_guard,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/result_judgment_receipt.json,"payload materialization only; no Forward Passed/Failed, runtime authority, or Goal Achieve claim."

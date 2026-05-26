@@ -1,0 +1,47 @@
+{
+  "stage_id": "333_overfit_guard__timestamp_safe_pocket_veto_materialization",
+  "run_id": "run333C_materialize_guarded_veto_scoring_payloads_v1",
+  "run_number": "run333C",
+  "parent_run_id": "run333B_design_guarded_veto_scoring_no_retune_v1",
+  "generated_at_utc": "2026-05-26T05:58:40Z",
+  "primary_family": "experiment_execution",
+  "primary_skill": "obsidian-experiment-design",
+  "support_skills": [
+    "obsidian-data-integrity",
+    "obsidian-model-validation",
+    "obsidian-artifact-lineage",
+    "obsidian-result-judgment"
+  ],
+  "required_gates": [
+    "scope_completion_gate",
+    "skill_receipt_lint",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "status": "completed_guarded_veto_scoring_payload_materialization_no_selection",
+  "judgment": "guarded_veto_payload_materialized_research_only_no_goal_achieve",
+  "decision": "guarded_veto_payloads_ready_for_cost_curve_screen_no_forward_judgment",
+  "source_inputs": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/materialization_readiness_matrix.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_boundary_audit.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/guarded_scoring_protocol.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/score_formula_contract.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/scoring_branch_queue.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/required_gate_coverage_audit.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/signal_payload_manifest.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/signal_payloads/c56_plain_raw_forward_signals.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/signal_payloads/m48_plain_raw_forward_signals.csv"
+  ],
+  "payload_views": 16,
+  "signal_payload_manifest_rows": 16,
+  "cost_curve_queue_rows": 16,
+  "failed_gates": [],
+  "selected_candidate": "none",
+  "forward_passed": "not_claimed",
+  "forward_failed": "not_claimed",
+  "runtime_authority": "not_claimed",
+  "goal_achieve": "not_claimed",
+  "next_action": "run333D_screen_guarded_payload_cost_curve_and_pocket_risk_v1",
+  "claim_boundary": "research_development_only_guarded_veto_scoring_payload_materialization_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

@@ -1,0 +1,21 @@
+{
+  "hypothesis": "Predeclared guarded veto scores can be materialized on fixed raw-forward signals without fitting to forward PnL.",
+  "decision_use": "Create comparable signal payloads for run333D cost/curve/pocket screening; not candidate selection.",
+  "comparison_baseline": "control_no_veto signal payloads from c56_plain and m48_plain raw-forward source signals.",
+  "control_variables": "fixed source signal payloads, fixed ONNX outputs, fixed thresholds, fixed lot/risk/runtime handoff, fixed run333B score protocol.",
+  "changed_variables": "guard score annotations and predeclared hard/soft/negative-control view materialization only.",
+  "sample_scope": "US100 M5 raw-forward scope inherited from run330B/run330E and run333A.",
+  "success_criteria": "sixteen payloads, signal manifests, cost-curve queue, breadth abstain audit, and no failed gates.",
+  "failure_criteria": "missing source payload, hash mismatch, fewer than sixteen payloads, forbidden future/label column, or retune mutation.",
+  "invalid_conditions": [
+    "forward_pnl_fit",
+    "known_pocket_date_feature",
+    "lot_or_threshold_repair",
+    "missing_breadth_imputation_as_tradeable"
+  ],
+  "stop_conditions": "stop before run333D or MT5 if any required gate fails.",
+  "evidence_plan": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/payload_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/cost_curve_input_queue.csv"
+  ]
+}
