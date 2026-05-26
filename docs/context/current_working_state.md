@@ -1278,3 +1278,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337P_open_run337Q_repair_probe_review_no_selection`
 - next_action(다음 행동): `run337Q_review_runtime_data_and_feature_source_repair_probe_v1`
 - effect(효과): core56/m48/u42 repair probe(수리 탐침)를 MT5(메타트레이더5) `5/5`로 실행했고, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성)는 `25/25` 일치했다. tester current-day gap(테스터 현재일 공백) `5`개가 남아 결과는 선택이나 Forward decision(전진 판정)이 아니라 run337Q(337Q 실행) 리뷰 입력이다.
+
+## Stage337 run337Q(337Q 실행) - 2026-05-27
+
+- status(상태): `completed_stage337Q_tester_date_boundary_probe_partial_no_forward_decision`
+- decision(결정): `stage337Q_open_run337R_tester_boundary_or_source_policy_repair_no_selection`
+- next_action(다음 행동): `run337R_fresh_boundary_repaired_forward_attribution_and_asof_policy_review_v1`
+- effect(효과): tester ToDate boundary repair probe(테스터 종료일 경계 수리 탐침)를 MT5(메타트레이더5) `5/5`로 실행했고, tester reached feature last(테스터 피처 끝 도달) `0/5`, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성) `25/25`를 기록했다.
