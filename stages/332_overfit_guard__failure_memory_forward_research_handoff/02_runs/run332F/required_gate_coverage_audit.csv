@@ -1,0 +1,9 @@
+gate,status,evidence_path,notes
+source_stage_evidence_present,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332F/source_artifact_hashes.json,all run332A-E source artifacts present
+feature_materialization_queue_ready,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_materialization_queue.csv,queued_branches=4
+runtime_contract_handoff_ready,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332E/runtime_probe_readiness_matrix.csv,contract_rows=6;readiness_rows=4;claim_boundary_ok=True
+next_stage_scope_named,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/00_spec/stage_brief.md,"Stage333 is a materialization question, not a selection or operating promotion."
+no_retune_guard,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332F/no_retune_guard_receipt.json,"no threshold, lot, model, ONNX, D/B rule, or runtime handoff change in run332F."
+state_sync_audit,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332F/state_sync_receipt.json,"workspace state, current working state, stage selection docs, and next stage docs are written by this run."
+final_claim_guard,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332F/result_judgment_receipt.json,"Forward Passed/Failed, runtime authority, live readiness, deployment, and Goal Achieve are not claimed."
+outputs_exist,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332F/run_manifest.json,run332F closeout artifacts are materialized.
