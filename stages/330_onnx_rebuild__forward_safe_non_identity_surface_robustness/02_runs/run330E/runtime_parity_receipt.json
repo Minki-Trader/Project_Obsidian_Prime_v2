@@ -63,10 +63,10 @@
       "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/mt5_compile.log",
       "command_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/mt5_compile.log",
       "actual_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/mt5/mt5_compile.log",
-      "log_sha256": "d10f334709d40580cf7c34586030094e2fbb14ad9f0ab4b0f54602a355932d7e"
+      "log_sha256": "5c9bd879083329c952c02c0dd8962b308688d3c57e3bb3869674052e85b3c3bd"
     },
     "terminal_process_probe": {
-      "status": "running",
+      "status": "not_running",
       "command": [
         "powershell",
         "-NoProfile",
@@ -81,21 +81,15 @@
           "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
         }
       ],
-      "matching_processes": [
-        {
-          "ProcessId": 22520,
-          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
-          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
-        }
-      ]
+      "matching_processes": []
     },
-    "terminal_extra_args": [],
+    "terminal_extra_args": [
+      "/portable"
+    ],
     "planned_attempt_count": 6,
-    "executed_attempt_count": 1,
-    "completed_attempt_count": 0,
-    "runtime_blockers": [
-      "terminal_already_running_config_not_applied"
-    ]
+    "executed_attempt_count": 6,
+    "completed_attempt_count": 6,
+    "runtime_blockers": []
   },
   "runtime_claim_boundary": "runtime_probe_research_only_no_runtime_authority"
 }

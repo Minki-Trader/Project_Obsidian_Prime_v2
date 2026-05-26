@@ -1,15 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness_v3`
-- current_run(현재 실행): `repair_stage330E_runtime_probe_blocker_then_rerun`
+- current_packet(현재 작업 묶음): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness_v6`
+- current_run(현재 실행): `run330F_raw_forward_mt5_kpi_regime_cost_curve_review_v1`
 - active_stage(활성 단계): `330_onnx_rebuild__forward_safe_non_identity_surface_robustness`
 - selected_research_baseline(선택 연구 기준선): `none`
 - source_stage(원천 단계): `329_onnx_rebuild__live_feature_control`
-- target_surface(목표 표면): `raw_forward_mt5_runtime_probe_or_block`
+- target_surface(목표 표면): `raw_forward_mt5_kpi_regime_cost_curve_review`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `blocked_raw_forward_mt5_runtime_probe_no_completed_runtime`
-- decision(판정): `raw_forward_runtime_probe_blocked_requires_runtime_repair_no_goal_achieve`
-- run330E_summary(330E 요약): raw-forward MT5 runtime probe(원본 전진 MT5 런타임 탐침)를 `blocked_raw_forward_mt5_runtime_probe_no_completed_runtime`로 기록했다. Effect(효과): threshold(임계값)과 D/B rule(D/B 규칙)은 고정했고, raw-forward MT5(원본 전진 MT5) 완료 근거 없이는 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)를 주장하지 않는다.
+- status(상태): `completed_raw_forward_mt5_kpi_regime_cost_curve_review_no_final_forward_decision`
+- decision(판정): `raw_forward_mt5_review_completed_research_only_no_goal_achieve`
+- run330F_summary(330F 요약): raw-forward MT5 KPI/regime/cost/curve review(원본 전진 MT5 핵심 지표/국면/비용/곡선 검토)를 `completed_raw_forward_mt5_kpi_regime_cost_curve_review_no_final_forward_decision`로 닫았다. Effect(효과): watchlist(관찰 목록)는 만들었지만 selected candidate(선택 후보), Forward Passed(전진 통과), Goal Achieve(목표 달성)는 없다.
+- run330E_summary(330E 요약): raw-forward MT5 runtime probe(원본 전진 MT5 런타임 탐침)를 `completed_raw_forward_mt5_runtime_probe_no_forward_decision`로 다시 닫았다. Effect(효과): portable MT5(포터블 메타트레이더5)로 6/6 report/telemetry(보고서/실행 기록)를 확보했지만 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 없다.
 - run330D_summary(330D 요약): regime/source/direction attribution(국면/원천/방향 귀속)을 `completed_regime_source_attribution_no_forward_decision`로 닫았다. Effect(효과): 국면 포켓과 원천 취약성을 분리했지만 raw-forward MT5(원본 전진 MT5)가 없어 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 없다.
 - run330C_summary(330C 요약): score-curve/cost/lot/regime proxy(점수 곡선/비용/로트/국면 대리검증)와 Stage329F session MT5 reference(세션 MT5 참고)를 `completed_score_curve_cost_pressure_review_no_forward_decision`로 닫았다. Effect(효과): raw-forward MT5(원본 전진 MT5)가 없어 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 없다.
 - run330B_summary(330B 요약): forward-safe control surface materialization(전진 안전 대조 표면 물질화)을 `completed_forward_safe_control_surface_materialization_no_selection`로 닫았다. Effect(효과): 고정 threshold(임계값) score/signal payload(점수/신호 인계물), data audit(데이터 감사), ONNX parity(온엑스 동등성), raw/session gap guard(원본/세션 간극 방어)를 만들었고 선택 후보는 없다.
@@ -41,8 +42,8 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `repair_stage330E_runtime_probe_blocker_then_rerun`
-- claim_boundary(주장 경계): `research_development_only_fixed_threshold_control_surface_materialization_no_forward_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- next_action(다음 행동): `run330G_raw_forward_failure_fragility_memory_and_overfit_followup`
+- claim_boundary(주장 경계): `research_development_only_forward_mt5_review_no_threshold_retuning_no_candidate_selection_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
 Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.

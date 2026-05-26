@@ -1,5 +1,5 @@
 gate_name,status,evidence_path,effect
-runtime_parity(런타임 동등성),blocked,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/runtime_parity_receipt.json,"ONNX(온엑스), feature order(피처 순서), MT5 EA(메타트레이더5 전문가 자문) 입력 연결을 확인한다."
-backtest_forensics(백테스트 포렌식),blocked,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/backtest_forensics_receipt.json,"tester identity(테스터 정체성), report path(보고서 경로), cost assumption(비용 가정)을 분리한다."
+runtime_parity(런타임 동등성),completed,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/runtime_parity_receipt.json,"ONNX(온엑스), feature order(피처 순서), MT5 EA(메타트레이더5 전문가 자문) 입력 연결을 확인한다."
+backtest_forensics(백테스트 포렌식),usable_with_boundary,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/backtest_forensics_receipt.json,"tester identity(테스터 정체성), report path(보고서 경로), cost assumption(비용 가정)을 분리한다."
 data_integrity(데이터 무결성),passed,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/raw_forward_feature_matrix_manifest.csv,run330B raw_forward(원본 전진) timestamp(타임스탬프)와 run329B feature frame(피처 프레임)을 일치시킨다.
 result_judgment(결과 판정),passed_no_goal_achieve,stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/result_judgment.csv,Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)를 올리지 않는다.

@@ -4122,3 +4122,10 @@
 - 2026-05-26: Stage330(330단계) `run330D_regime_attribution_v1` regime/source attribution(국면/원천 귀속)을 완료했다. 효과(effect, 효과): c56 watchlist(관찰 목록)와 m48/u42 raw density pressure(원본 밀도 압력)를 분리하고 Goal Achieve(목표 달성)는 주장하지 않는다.
 
 - 2026-05-26: Stage330(330단계) `run330E_mt5_runtime_probe_or_block_v1` raw-forward MT5 runtime probe(원본 전진 MT5 런타임 탐침)를 `blocked_raw_forward_mt5_runtime_probe_no_completed_runtime`로 기록했다. effect(효과): handoff(인계)와 tester blocker(테스터 차단 사유)를 분리했고 Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage330F Raw Forward MT5 KPI Regime Cost Curve Review(330F 원본 전진 MT5 핵심 지표/국면/비용/곡선 검토)
+
+- run330F(330F 실행): run330E(330E 실행)의 MT5 report/telemetry(보고서/실행 기록)를 KPI(핵심 성과 지표), regime(국면), cost stress(비용 압박), curve pocket(곡선 포켓)으로 분해했다.
+- status(상태): `completed_raw_forward_mt5_kpi_regime_cost_curve_review_no_final_forward_decision`
+- judgment(판정): `raw_forward_mt5_review_completed_research_only_no_goal_achieve`
+- effect(효과): watchlist(관찰 목록)는 만들었지만 선택 후보, Forward Passed(전진 통과), Goal Achieve(목표 달성)는 주장하지 않는다.
