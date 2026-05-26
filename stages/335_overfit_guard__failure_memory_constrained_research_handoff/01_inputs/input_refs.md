@@ -37,3 +37,11 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - tier_kpi_plan(티어 KPI 계획): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/tier_kpi_plan.csv`
 - runtime_parity_gate_plan(런타임 동등성 게이트 계획): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/runtime_parity_gate_plan.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335C_guarded_failure_memory_branch_design.md`
+
+## run335D Branch Input Materialization(335D 분기 입력 실체화)
+
+- branch_input_package_manifest(분기 입력 패키지 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/branch_input_package_manifest.csv`
+- branch_payloads(분기 페이로드): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/branch_payloads`
+- branch_source_binding_matrix(분기 원천 연결 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/branch_source_binding_matrix.csv`
+- run335E_review_queue(335E 검토 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/run335E_review_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335D_guarded_branch_research_input_materialization.md`

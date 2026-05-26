@@ -1,0 +1,43 @@
+{
+  "data_hash_or_identity": {
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/fixed_control_lock_manifest.csv": "6dd242ff2a8dc9e9d51eac46eee2e9fe72bd1630f1ba2a0c787ceada35025287",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/forbidden_repair_check.csv": "04122dd9d8e79bbfb460389de269d22331e238df72b01948cfe855fa37100ff1",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/guard_input_manifest.csv": "8865ee5bd2a697ea767f2e26632e0046cb8dbf9d22b601f2bd6cb213708f2d94",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/latest_forward_data_inventory.csv": "ea312667bc5b0ddbaa25ee29091394c01602466218696f9780f764da34f5c6e1",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/runtime_handoff_requirement_inventory.csv": "7e3fa32c6bb63e8afbc00e8ee5dcc02ffa3602eea304c37bb45df07091697053",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/source_file_index.csv": "2ceb660c2aceb6803484c5a37420f13729aac195f41b770bcdd1ac13af21a4c0",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_design_matrix.csv": "48264a62e2703d65349c3e77da0b7022e5833554abbeaece6a568074854700d2",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_evidence_requirements.csv": "e07fef2df8ebfe7d957d64043aee2e5f51f5f4a5b2e48fc6b8efa5a40b266be3",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_stop_condition_matrix.csv": "e0d01cd05b8fcb3f6be5df36f33fd1bda66c85120861c27efc3443e0469d70c9",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/final_branch_design_decision.json": "e6963868c520bbf797b219a0e2a2080905fba6ac4714b35e1cbcf410df141f59",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/negative_control_matrix.csv": "4092d1153a3e60915421fe52fb54bd6bf05606fc13eb92fe4d5c6e9c6f924bd9",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/run335D_materialization_queue.csv": "424b23947da471b79c8d65a7695ddcd2038b4e179134f59c4016619f61bb57c5",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/runtime_parity_gate_plan.csv": "3b2c9aa745f7e3e562d65119ac7691d490002a5585ec4319c3deecd9e5232f64",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/source_artifact_hashes.json": "6baf4bbeee138fb88e95645c3459cbf81308526319707983397e5ba541b5cfe4",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/tier_kpi_plan.csv": "4feed3245e004cc52ae1b11321a7409a73c55cec53d46fd3a9fe4dbab91e1b35"
+  },
+  "data_source": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/run335D_materialization_queue.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_design_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_evidence_requirements.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/negative_control_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/branch_stop_condition_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/tier_kpi_plan.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/runtime_parity_gate_plan.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/source_artifact_hashes.json",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335C/final_branch_design_decision.json",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/source_file_index.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/guard_input_manifest.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/fixed_control_lock_manifest.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/forbidden_repair_check.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/latest_forward_data_inventory.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335B/runtime_handoff_requirement_inventory.csv"
+  ],
+  "feature_label_boundary": "No feature or label generation occurs in run335D; future feature frames must be timestamp-safe and predeclared before scoring.",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_risk": "Using Stage334 failure pockets as direct filters remains the main leakage and overfit path; run335D only packages guards.",
+  "missing_or_duplicate_check": "source_binding_rows=80;missing_source_bindings=0",
+  "sample_scope": "US100 M5 Stage335 branch input materialization; no new score, model, threshold, lot, or MT5 result.",
+  "split_boundary": "Tier A separate, Tier B separate, and Tier A+B combined reporting remain required; WFO or runtime splits are not redefined here.",
+  "time_axis": "run335D does not create market bars; it preserves parent source timestamps and requires future probes to restate timezone and bar convention."
+}

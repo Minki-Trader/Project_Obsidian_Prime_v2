@@ -1,0 +1,669 @@
+{
+  "branch": {
+    "branch_id": "run335C_b05_regime_predeclared_macro_state",
+    "branch_name": "regime_predeclared_macro_state",
+    "branch_status": "designed_ready_for_materialization",
+    "branch_type": "single_axis_guard",
+    "changed_variables_allowed": "regime input inventory and state labels defined before score reading",
+    "changed_variables_forbidden": "excluding known losing regime labels from Stage334 after looking at outcomes",
+    "claim_boundary": "research_development_only_stage335C_branch_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+    "comparison_baseline": "Stage334 failure memory; run335B guard inputs; no-trade/random/shuffle/adjacent controls",
+    "control_variables": "[\"fixed train/validation/OOS boundary until WFO contract is written\", \"fixed threshold policy until explicitly predeclared\", \"fixed lot/risk logic during diagnostic scoring\", \"Tier A separate, Tier B separate, and Tier A+B combined reporting\", \"no runtime authority without MT5 tester report and telemetry\"]",
+    "decision_use": "may_influence_next_design_only_not_candidate_selection",
+    "failure_axes": "[\"regime_slice\"]",
+    "failure_criteria": "branch only improves through forbidden tuning, direct filters, or subject swap",
+    "hypothesis": "regime_slice can guide a timestamp-safe research branch without direct forward-pocket fitting.",
+    "invalid_conditions": "Directly excluding the known losing regime labels from Stage334.",
+    "negative_controls": "[\"negative_control_regime_slice\"]",
+    "sample_scope": "US100 M5 research branch design; post-2026-04-14 forward evidence remains research-only",
+    "selection_eligible": "false",
+    "source_file_index": "[\"run330F_regime_attribution_report\", \"run330F_session_hour_month_regime_slices\", \"run334F_regime_slice_diagnostics\", \"run334G_axis_failure_heatmap\", \"run335A_materialization_contract\"]",
+    "stop_conditions": "Stop or downgrade if any forbidden variable is required to improve the result.",
+    "success_criteria": "future materialization can test the branch without forbidden tuning or direct pocket filtering"
+  },
+  "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "evidence_requirements": [
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "source_file_index",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "all source files hashed and row-counted",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "latest_forward_data_inventory",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "post-2026-04-14 raw/feature evidence boundary named",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "feature_label_boundary_statement",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "no future data enters feature or label construction",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "paired_tier_kpi_plan",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "Tier A separate, Tier B separate, and Tier A+B combined rows exist",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "negative_control_report",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "shuffle/adjacent/state-neutral control is evaluated or explicitly blocked",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "no_retune_receipt",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "threshold, lot, direct pocket filtering, and subject swap remain forbidden",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "runtime_parity_requirement",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "MT5 tester output and telemetry required before runtime claim",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "evidence_id": "result_judgment",
+      "missing_policy": "missing_required_or_blocked_not_silent_skip",
+      "proves": "candidate/forward/runtime/goal claims remain not_claimed unless evidence exists",
+      "required_before": "run335D_materialization_or_any_later_scoring"
+    }
+  ],
+  "fixed_control_locks": [
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "selected_candidate",
+      "effect": "selection remains none",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "none"
+    },
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "model_family",
+      "effect": "no ONNX or model file is created",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "unchanged"
+    },
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "feature_order",
+      "effect": "future branch must declare feature order before scoring",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "unchanged"
+    },
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "threshold_policy",
+      "effect": "no threshold retuning in run335B",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "fixed_until_predeclared"
+    },
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "risk_lot_logic",
+      "effect": "no lot/risk optimization in run335B",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "fixed_until_predeclared"
+    },
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "split_boundary",
+      "effect": "no random shuffle or pocket-specific split",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "old OOS through 2026-04-13; forward after 2026-04-14"
+    },
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "tier_reporting",
+      "effect": "all later KPI rows must preserve paired tier views or record missing_required",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "Tier A separate + Tier B separate + Tier A+B combined"
+    },
+    {
+      "claim_boundary": "research_development_only_stage335B_guard_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "control_id": "runtime_handoff",
+      "effect": "compile-only or Python-only parity cannot become authority",
+      "lock_status": "locked_for_run335B",
+      "locked_value": "identity required before runtime claim"
+    }
+  ],
+  "forbidden_repairs": [
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cost_stress",
+      "forbidden_rule": "no new model training in run335B",
+      "forbidden_rule_id": "model_training"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cost_stress",
+      "forbidden_rule": "no threshold search or calibration from Stage334/335 results",
+      "forbidden_rule_id": "threshold_retuning"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cost_stress",
+      "forbidden_rule": "no lot or risk optimization from failure memory",
+      "forbidden_rule_id": "lot_optimization"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cost_stress",
+      "forbidden_rule": "no direct date/hour/month/regime exclusion copied from failure pockets",
+      "forbidden_rule_id": "direct_forward_pocket_filtering"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cost_stress",
+      "forbidden_rule": "no dropping long/short side after seeing direction failure",
+      "forbidden_rule_id": "side_drop_or_side_threshold"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cost_stress",
+      "forbidden_rule": "no runtime authority without MT5 tester output and telemetry",
+      "forbidden_rule_id": "runtime_authority_claim"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cost_stress",
+      "forbidden_rule": "cp322A exact cannot consume run333E or non-identity evidence as exact handoff",
+      "forbidden_rule_id": "subject_swap"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "curve_pocket",
+      "forbidden_rule": "no new model training in run335B",
+      "forbidden_rule_id": "model_training"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "curve_pocket",
+      "forbidden_rule": "no threshold search or calibration from Stage334/335 results",
+      "forbidden_rule_id": "threshold_retuning"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "curve_pocket",
+      "forbidden_rule": "no lot or risk optimization from failure memory",
+      "forbidden_rule_id": "lot_optimization"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "curve_pocket",
+      "forbidden_rule": "no direct date/hour/month/regime exclusion copied from failure pockets",
+      "forbidden_rule_id": "direct_forward_pocket_filtering"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "curve_pocket",
+      "forbidden_rule": "no dropping long/short side after seeing direction failure",
+      "forbidden_rule_id": "side_drop_or_side_threshold"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "curve_pocket",
+      "forbidden_rule": "no runtime authority without MT5 tester output and telemetry",
+      "forbidden_rule_id": "runtime_authority_claim"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "curve_pocket",
+      "forbidden_rule": "cp322A exact cannot consume run333E or non-identity evidence as exact handoff",
+      "forbidden_rule_id": "subject_swap"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "direction",
+      "forbidden_rule": "no new model training in run335B",
+      "forbidden_rule_id": "model_training"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "direction",
+      "forbidden_rule": "no threshold search or calibration from Stage334/335 results",
+      "forbidden_rule_id": "threshold_retuning"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "direction",
+      "forbidden_rule": "no lot or risk optimization from failure memory",
+      "forbidden_rule_id": "lot_optimization"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "direction",
+      "forbidden_rule": "no direct date/hour/month/regime exclusion copied from failure pockets",
+      "forbidden_rule_id": "direct_forward_pocket_filtering"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "direction",
+      "forbidden_rule": "no dropping long/short side after seeing direction failure",
+      "forbidden_rule_id": "side_drop_or_side_threshold"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "direction",
+      "forbidden_rule": "no runtime authority without MT5 tester output and telemetry",
+      "forbidden_rule_id": "runtime_authority_claim"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "direction",
+      "forbidden_rule": "cp322A exact cannot consume run333E or non-identity evidence as exact handoff",
+      "forbidden_rule_id": "subject_swap"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "drawdown_shape",
+      "forbidden_rule": "no new model training in run335B",
+      "forbidden_rule_id": "model_training"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "drawdown_shape",
+      "forbidden_rule": "no threshold search or calibration from Stage334/335 results",
+      "forbidden_rule_id": "threshold_retuning"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "drawdown_shape",
+      "forbidden_rule": "no lot or risk optimization from failure memory",
+      "forbidden_rule_id": "lot_optimization"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "drawdown_shape",
+      "forbidden_rule": "no direct date/hour/month/regime exclusion copied from failure pockets",
+      "forbidden_rule_id": "direct_forward_pocket_filtering"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "drawdown_shape",
+      "forbidden_rule": "no dropping long/short side after seeing direction failure",
+      "forbidden_rule_id": "side_drop_or_side_threshold"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "drawdown_shape",
+      "forbidden_rule": "no runtime authority without MT5 tester output and telemetry",
+      "forbidden_rule_id": "runtime_authority_claim"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "drawdown_shape",
+      "forbidden_rule": "cp322A exact cannot consume run333E or non-identity evidence as exact handoff",
+      "forbidden_rule_id": "subject_swap"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "regime_slice",
+      "forbidden_rule": "no new model training in run335B",
+      "forbidden_rule_id": "model_training"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "regime_slice",
+      "forbidden_rule": "no threshold search or calibration from Stage334/335 results",
+      "forbidden_rule_id": "threshold_retuning"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "regime_slice",
+      "forbidden_rule": "no lot or risk optimization from failure memory",
+      "forbidden_rule_id": "lot_optimization"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "regime_slice",
+      "forbidden_rule": "no direct date/hour/month/regime exclusion copied from failure pockets",
+      "forbidden_rule_id": "direct_forward_pocket_filtering"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "regime_slice",
+      "forbidden_rule": "no dropping long/short side after seeing direction failure",
+      "forbidden_rule_id": "side_drop_or_side_threshold"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "regime_slice",
+      "forbidden_rule": "no runtime authority without MT5 tester output and telemetry",
+      "forbidden_rule_id": "runtime_authority_claim"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "regime_slice",
+      "forbidden_rule": "cp322A exact cannot consume run333E or non-identity evidence as exact handoff",
+      "forbidden_rule_id": "subject_swap"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "runtime_parity",
+      "forbidden_rule": "no new model training in run335B",
+      "forbidden_rule_id": "model_training"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "runtime_parity",
+      "forbidden_rule": "no threshold search or calibration from Stage334/335 results",
+      "forbidden_rule_id": "threshold_retuning"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "runtime_parity",
+      "forbidden_rule": "no lot or risk optimization from failure memory",
+      "forbidden_rule_id": "lot_optimization"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "runtime_parity",
+      "forbidden_rule": "no direct date/hour/month/regime exclusion copied from failure pockets",
+      "forbidden_rule_id": "direct_forward_pocket_filtering"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "runtime_parity",
+      "forbidden_rule": "no dropping long/short side after seeing direction failure",
+      "forbidden_rule_id": "side_drop_or_side_threshold"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "runtime_parity",
+      "forbidden_rule": "no runtime authority without MT5 tester output and telemetry",
+      "forbidden_rule_id": "runtime_authority_claim"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "runtime_parity",
+      "forbidden_rule": "cp322A exact cannot consume run333E or non-identity evidence as exact handoff",
+      "forbidden_rule_id": "subject_swap"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cp322a_exact_forward_handoff_missing",
+      "forbidden_rule": "no new model training in run335B",
+      "forbidden_rule_id": "model_training"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cp322a_exact_forward_handoff_missing",
+      "forbidden_rule": "no threshold search or calibration from Stage334/335 results",
+      "forbidden_rule_id": "threshold_retuning"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cp322a_exact_forward_handoff_missing",
+      "forbidden_rule": "no lot or risk optimization from failure memory",
+      "forbidden_rule_id": "lot_optimization"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cp322a_exact_forward_handoff_missing",
+      "forbidden_rule": "no direct date/hour/month/regime exclusion copied from failure pockets",
+      "forbidden_rule_id": "direct_forward_pocket_filtering"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cp322a_exact_forward_handoff_missing",
+      "forbidden_rule": "no dropping long/short side after seeing direction failure",
+      "forbidden_rule_id": "side_drop_or_side_threshold"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cp322a_exact_forward_handoff_missing",
+      "forbidden_rule": "no runtime authority without MT5 tester output and telemetry",
+      "forbidden_rule_id": "runtime_authority_claim"
+    },
+    {
+      "check_status": "passed_for_run335B_manifest_only",
+      "effect": "run335B creates guard inputs only and cannot be used as candidate evidence",
+      "failure_axis": "cp322a_exact_forward_handoff_missing",
+      "forbidden_rule": "cp322A exact cannot consume run333E or non-identity evidence as exact handoff",
+      "forbidden_rule_id": "subject_swap"
+    }
+  ],
+  "materialization_queue": {
+    "branch_id": "run335C_b05_regime_predeclared_macro_state",
+    "branch_name": "regime_predeclared_macro_state",
+    "forbidden_outputs": "[\"candidate_signal\", \"threshold_change\", \"lot_change\", \"direct_forward_pocket_filter\", \"runtime_authority_claim\"]",
+    "materialization_action": "materialize_branch_input_spec_control_payloads_only",
+    "minimum_outputs": "[\"branch_input_manifest\", \"tier_kpi_view_rows\", \"negative_control_payload\", \"forbidden_repair_receipt\", \"data_integrity_receipt\"]",
+    "queue_id": "run335D_materialize_guarded_branch_research_inputs_v1__regime_predeclared_macro_state",
+    "ready_for_run335D": "true",
+    "required_inputs": "[\"run330F_regime_attribution_report\", \"run330F_session_hour_month_regime_slices\", \"run334F_regime_slice_diagnostics\", \"run334G_axis_failure_heatmap\", \"run335A_materialization_contract\"]"
+  },
+  "materialization_status": "input_spec_payload_materialized_no_scoring",
+  "negative_controls": [
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "claim_effect": "prevents branch design from becoming candidate claim",
+      "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "control_id": "negative_control_regime_slice",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+      "pass_condition": "target branch separates from control without forbidden repair"
+    }
+  ],
+  "next_consumer": "run335E_review_guarded_branch_input_materialization_v1",
+  "parent_run_id": "run335C_design_guarded_failure_memory_research_branches_v1",
+  "run_id": "run335D_materialize_guarded_branch_research_inputs_v1",
+  "runtime_parity_gates": [],
+  "selection_eligible": false,
+  "source_bindings": [
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "branch_name": "regime_predeclared_macro_state",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "258",
+      "sha256": "29bf53618bf082c7d3d259e721d236d04b2e89629113434ebb26a59d9c192392",
+      "source_exists": "true",
+      "source_id": "run330F_regime_attribution_report",
+      "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/regime_attribution_report.csv",
+      "source_role": "raw-forward regime attribution report",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    },
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "branch_name": "regime_predeclared_macro_state",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "258",
+      "sha256": "29bf53618bf082c7d3d259e721d236d04b2e89629113434ebb26a59d9c192392",
+      "source_exists": "true",
+      "source_id": "run330F_session_hour_month_regime_slices",
+      "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/session_hour_month_volatility_adx_vix_usd_rate_slices.csv",
+      "source_role": "raw-forward session/hour/month/volatility/ADX/VIX/USD/rate slices",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    },
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "branch_name": "regime_predeclared_macro_state",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "6",
+      "sha256": "3d5e34b703093646c01c5ac912f6a88eb4ea6ce2a9bcc2b1b8b4454656e7967d",
+      "source_exists": "true",
+      "source_id": "run334F_regime_slice_diagnostics",
+      "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/regime_slice_diagnostic_views.csv",
+      "source_role": "fixed no-retune regime diagnostic views",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    },
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "branch_name": "regime_predeclared_macro_state",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "6",
+      "sha256": "96c71f627ab9799c9a9be9772eccd8186f0b97884e2bdfa43608285e3d36c426",
+      "source_exists": "true",
+      "source_id": "run334G_axis_failure_heatmap",
+      "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/axis_failure_heatmap.csv",
+      "source_role": "axis failure heatmap",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    },
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "branch_name": "regime_predeclared_macro_state",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "7",
+      "sha256": "5eaacb4f13a86cf6c10f7a0e384626dcda1e2b3e5e57a13689ae92e6c8b00e62",
+      "source_exists": "true",
+      "source_id": "run335A_materialization_contract",
+      "source_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/next_materialization_contract.csv",
+      "source_role": "stage335A contract",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    }
+  ],
+  "stage_id": "335_overfit_guard__failure_memory_constrained_research_handoff",
+  "stop_conditions": [
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "stop_or_downgrade",
+      "stop_rule_id": "forbidden_tuning_required",
+      "trigger": "improvement requires threshold, lot, stop, target, or direct pocket filter"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "downgrade_to_overfit_memory",
+      "stop_rule_id": "negative_control_tracks_target",
+      "trigger": "negative control improves similarly to target branch"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "missing_required_or_blocked",
+      "stop_rule_id": "tier_view_missing",
+      "trigger": "Tier A, Tier B, or combined view is absent without explicit boundary"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "no_runtime_claim",
+      "stop_rule_id": "runtime_evidence_missing",
+      "trigger": "MT5 tester report or telemetry is absent"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "invalid_or_must_reject",
+      "stop_rule_id": "subject_boundary_break",
+      "trigger": "cp322A exact is mixed with run333E or non-identity evidence"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "blocked_until_repaired",
+      "stop_rule_id": "data_identity_mismatch",
+      "trigger": "source hash, row count, or time-axis identity mismatches"
+    }
+  ],
+  "tier_kpi_plan": [
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "kpi_scope": "signal/trade/risk/execution names preserved",
+      "meaning": "full-context sample read",
+      "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+      "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+      "required": "true",
+      "view": "Tier A separate"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "kpi_scope": "same KPI names with partial-context label",
+      "meaning": "partial-context sample read",
+      "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+      "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+      "required": "true",
+      "view": "Tier B separate"
+    },
+    {
+      "branch_id": "run335C_b05_regime_predeclared_macro_state",
+      "kpi_scope": "synthetic sum cannot be called actual routed total",
+      "meaning": "combined read or actual routed total",
+      "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+      "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+      "required": "true",
+      "view": "Tier A+B combined"
+    }
+  ]
+}
