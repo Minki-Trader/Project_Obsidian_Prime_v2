@@ -91,3 +91,18 @@ Effect(효과): 다음 실행은 모델 학습이 아니라, 검토 통과한 �
 - run337G_queue(337G 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/run337G_blueprint_review_queue.csv`
 
 Effect(효과): 다음 실행은 이 청사진들이 실제 materialization package(물질화 패키지)로 넘어가도 되는지 검토한다.
+
+## run337G Outputs(337G 산출물)
+
+- blueprint_review_source_lineage(청사진 검토 원천 계보): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/blueprint_review_source_lineage.csv`
+- no_lookahead_harness_blueprint_review(미래참조 방어 청사진 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/no_lookahead_harness_blueprint_review.csv`
+- proxy_mt5_blueprint_review(프록시-MT5 청사진 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/proxy_mt5_blueprint_review.csv`
+- core56_repair_blueprint_review(핵심56 수리 청사진 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/core56_repair_blueprint_review.csv`
+- cost_direction_curve_extraction_blueprint_review(비용/방향/곡선 추출 청사진 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/cost_direction_curve_extraction_blueprint_review.csv`
+- offense_branch_blueprint_review(공격 분기 청사진 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/offense_branch_blueprint_review.csv`
+- economic_regime_asof_blueprint_review(경제 국면 시점 기준 청사진 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/economic_regime_asof_blueprint_review.csv`
+- runtime_probe_package_blueprint_review(런타임 탐침 패키지 청사진 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/runtime_probe_package_blueprint_review.csv`
+- accepted_blueprints_for_package_queue(패키지용 승인 청사진 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/accepted_blueprints_for_package_queue.csv`
+- run337H_queue(337H 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337G/run337H_package_materialization_queue.csv`
+
+Effect(효과): 다음 실행은 이 검토 결과를 근거로 실제 package spec(패키지 명세)을 만들되, 학습과 MT5 실행은 계속 닫아둔다.
