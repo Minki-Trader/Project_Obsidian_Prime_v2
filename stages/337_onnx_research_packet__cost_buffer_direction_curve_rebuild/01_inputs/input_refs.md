@@ -122,3 +122,19 @@ Effect(효과): 다음 실행은 이 검토 결과를 근거로 실제 package s
 - run337I_queue(337I 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337H/run337I_package_review_queue.csv`
 
 Effect(효과): 다음 실행은 이 패키지 명세들이 실제 runner scaffold(러너 뼈대)로 넘어가도 되는지 검토한다.
+
+## run337I Outputs(337I 산출물)
+
+- package_review_source_lineage(패키지 검토 원천 계보): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/package_review_source_lineage.csv`
+- no_lookahead_package_review(미래참조 방어 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/no_lookahead_package_review.csv`
+- proxy_mt5_package_review(프록시-MT5 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/proxy_mt5_package_review.csv`
+- core56_package_review(핵심56 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/core56_package_review.csv`
+- cost_direction_curve_package_review(비용/방향/곡선 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/cost_direction_curve_package_review.csv`
+- offense_package_review(공격 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/offense_package_review.csv`
+- economic_regime_package_review(경제 국면 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/economic_regime_package_review.csv`
+- runtime_package_review(런타임 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/runtime_package_review.csv`
+- claim_guard_package_review(주장 방어 패키지 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/claim_guard_package_review.csv`
+- accepted_packages_for_runner_scaffold_queue(러너 뼈대용 승인 패키지 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/accepted_packages_for_runner_scaffold_queue.csv`
+- run337J_queue(337J 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337I/run337J_runner_scaffold_materialization_queue.csv`
+
+Effect(효과): 다음 실행은 이 검토 결과를 근거로 비실행 runner scaffold(러너 뼈대)를 만든다.

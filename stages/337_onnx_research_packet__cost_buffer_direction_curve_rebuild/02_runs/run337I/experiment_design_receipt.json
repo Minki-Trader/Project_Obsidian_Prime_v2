@@ -1,0 +1,26 @@
+{
+  "changed_variables": "package review labels, accepted package queue, repair gap queue, and runner scaffold materialization queue",
+  "claim_boundary": "research_development_only_stage337I_package_review_no_model_training_no_mt5_execution_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "comparison_baseline": "run337H package specs, contracts, blocker matrix, acceptance matrix, final decision, and manifest",
+  "control_variables": "no model training, no MT5 execution, no threshold retune, no lot optimization, no forward-pocket filtering, no candidate selection",
+  "decision_use": "decide whether run337J may materialize non-executing runner scaffolds for package families",
+  "evidence_plan": "review CSVs, accepted queue, repair gap queue, run337J queue, gate audit, receipts, final decision, ledgers, artifact registry",
+  "failure_criteria": "missing package family, open execution flag, missing identity contract, or weak blocker matrix",
+  "hypothesis": "run337H package specs are complete enough to open runner scaffold materialization without training or MT5 execution",
+  "invalid_conditions": "using package review to claim Forward Passed, runtime authority, candidate selection, live readiness, or Goal Achieve",
+  "metrics": {
+    "accepted_package_families": 9,
+    "accepted_review_rows": 9,
+    "failed_gate_rows": 0,
+    "gate_rows": 15,
+    "repair_gap_rows": 0,
+    "review_family_count": 9,
+    "review_rows": 9,
+    "run337j_queue_rows": 9,
+    "source_lineage_rows": 22
+  },
+  "run_id": "run337I_review_materialized_execution_packages_v1",
+  "sample_scope": "package review only; no trading KPI sample, model fit, or MT5 trade rows",
+  "stop_conditions": "any gate fails; repair package spec before runner scaffold materialization",
+  "success_criteria": "all package families accepted, repair gap queue empty, and run337J runner scaffold queue ready"
+}
