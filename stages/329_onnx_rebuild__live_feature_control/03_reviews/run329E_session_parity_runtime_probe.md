@@ -1,11 +1,11 @@
 ﻿# run329E Session Parity Runtime Probe(329E 세션 동등 런타임 탐침)
 
 - run_id(실행 ID): `run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1`
-- status(상태): `blocked_session_parity_runtime_probe_no_completed_mt5_runtime`
-- judgment(판정): `runtime_probe_blocked_requires_runtime_repair_no_goal_achieve`
+- status(상태): `completed_session_parity_runtime_probe_no_candidate_selection`
+- judgment(판정): `runtime_probe_completed_research_only_no_goal_achieve`
 - selected_candidate(선택 후보): `none`
 - goal_achieve(목표 달성): `not_claimed`
-- blockers(차단 사유): `terminal_already_running_config_not_applied`
+- blockers(차단 사유): `none`
 
 ## Scope(범위)
 
@@ -17,16 +17,16 @@ Effect(효과): 새 threshold(임계값), 새 decision rule(판단 규칙), 새 
 
 | attempt(시도) | candidate(후보) | tester(테스터) | runtime(런타임) | blocker(차단 사유) | model_ok(모델 성공) | orders(주문) | PF(수익 팩터) | trades(거래) |
 |---|---|---|---|---|---:|---:|---:|---:|
-| c56_bal_sp | c56_bal | blocked | blocked | terminal_already_running_config_not_applied |  |  |  |  |
-| c56_plain_sp | c56_plain | not_attempted | not_attempted |  |  |  |  |  |
-| m48_bal_sp | m48_bal | not_attempted | not_attempted |  |  |  |  |  |
-| m48_plain_sp | m48_plain | not_attempted | not_attempted |  |  |  |  |  |
-| u42_bal_sp | u42_bal | not_attempted | not_attempted |  |  |  |  |  |
-| u42_plain_sp | u42_plain | not_attempted | not_attempted |  |  |  |  |  |
+| c56_bal_sp | c56_bal | completed | completed |  | 1789 | 126 | 1.15 | 70 |
+| c56_plain_sp | c56_plain | completed | completed |  | 1789 | 132 | 1.87 | 70 |
+| m48_bal_sp | m48_bal | completed | completed |  | 1789 | 128 | 1.5 | 71 |
+| m48_plain_sp | m48_plain | completed | completed |  | 1789 | 131 | 1.98 | 69 |
+| u42_bal_sp | u42_bal | completed | completed |  | 1914 | 126 | 1.01 | 70 |
+| u42_plain_sp | u42_plain | completed | completed |  | 1914 | 137 | 1.54 | 72 |
 
 ## Boundary(경계)
 
-- completed_attempt_count(완료 시도 수): `0`
+- completed_attempt_count(완료 시도 수): `6`
 - runtime_authority(런타임 권위): `not_claimed`
 - operating_promotion(운영 승격): `not_claimed`
 - Forward Passed(전진 통과): `not_claimed`
@@ -36,4 +36,4 @@ Effect(효과): 새 threshold(임계값), 새 decision rule(판단 규칙), 새 
 
 ## Next(다음)
 
-`repair_stage329E_runtime_probe_blocker_then_rerun`
+`run329F_forward_mt5_kpi_regime_cost_curve_review`

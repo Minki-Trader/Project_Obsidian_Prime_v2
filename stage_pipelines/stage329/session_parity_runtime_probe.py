@@ -581,6 +581,7 @@ def execute_attempts(
     tester_profile_root: Path,
     timeout_seconds: int,
     runtime_timeout_seconds: int,
+    terminal_extra_args: Sequence[str],
 ) -> dict[str, Any]:
     compile_payload = mt5.compile_mql5_ea(metaeditor_path, mt5.EA_SOURCE_PATH, MT5_DIR / "mt5_compile.log")
     terminal_process_probe = detect_running_terminal_processes(terminal_path)
@@ -595,6 +596,7 @@ def execute_attempts(
                     "status": "blocked",
                     "command": [
                         str(terminal_path),
+                        *terminal_extra_args,
                         f"/config:{tester_profile_ini_path}",
                     ],
                     "returncode": None,
@@ -620,6 +622,7 @@ def execute_attempts(
                         tester_profile_set_path=tester_profile_root / mt5.EA_TESTER_SET_NAME,
                         tester_profile_ini_path=tester_profile_ini_path,
                         timeout_seconds=timeout_seconds,
+                        terminal_extra_args=terminal_extra_args,
                     )
                 except subprocess.TimeoutExpired as exc:
                     result = {
@@ -674,6 +677,7 @@ def execute_attempts(
     return {
         "compile": compile_payload,
         "terminal_process_probe": terminal_process_probe,
+        "terminal_extra_args": list(terminal_extra_args),
         "execution_results": execution_results,
         "strategy_tester_reports": report_records,
         "mt5_kpi_records": kpi_records,
@@ -738,6 +742,34 @@ def runtime_blockers(execution_result: Mapping[str, Any]) -> list[str]:
         if row.get("blocker")
     }
     return sorted(blockers)
+
+
+def copy_runtime_telemetry_artifacts(common_files_root: Path, attempts: Sequence[dict[str, Any]]) -> list[Path]:
+    telemetry_dir = RUN_DIR / "mt5" / "telemetry"
+    os_path(telemetry_dir).mkdir(parents=True, exist_ok=True)
+    rows: list[dict[str, Any]] = []
+    artifacts: list[Path] = []
+    for attempt in attempts:
+        for kind, key in (("telemetry", "common_telemetry_path"), ("summary", "common_summary_path")):
+            source = common_files_root / Path(str(attempt[key]))
+            destination = telemetry_dir / f"{attempt['attempt_name']}_{kind}.csv"
+            row = {
+                "attempt_name": attempt["attempt_name"],
+                "artifact_kind": kind,
+                "source_path": str(source),
+                "repo_path": rel(destination),
+                "status": "missing",
+                "sha256": "",
+            }
+            if path_exists(source):
+                shutil.copy2(os_path(source), os_path(destination))
+                row["status"] = "copied"
+                row["sha256"] = sha256_file(destination)
+                artifacts.append(destination)
+            rows.append(row)
+    manifest = RUN_DIR / "mt5_runtime_telemetry_artifacts.csv"
+    write_csv(manifest, ["attempt_name", "artifact_kind", "source_path", "repo_path", "status", "sha256"], rows)
+    return [manifest, *artifacts]
 
 
 def write_run_artifacts(
@@ -815,6 +847,8 @@ def write_run_artifacts(
     kpi_path = RUN_DIR / "mt5_kpi_records.json"
     write_json(kpi_path, execution_result.get("mt5_kpi_records", []))
     artifacts.append(kpi_path)
+    telemetry_artifacts = copy_runtime_telemetry_artifacts(Path(args.common_files_root), all_attempts)
+    artifacts.extend(telemetry_artifacts)
 
     runtime_receipt = RUN_DIR / "runtime_parity_receipt.json"
     completed_count = sum(1 for row in execution_result.get("execution_results", []) if row.get("status") == "completed")
@@ -839,6 +873,7 @@ def write_run_artifacts(
                 "module_hashes": mt5.mt5_runtime_module_hashes(),
                 "compile": execution_result.get("compile", {}),
                 "terminal_process_probe": execution_result.get("terminal_process_probe", {}),
+                "terminal_extra_args": execution_result.get("terminal_extra_args", []),
                 "planned_attempt_count": len(all_attempts),
                 "executed_attempt_count": len(executed_attempts),
                 "completed_attempt_count": completed_count,
@@ -855,6 +890,7 @@ def write_run_artifacts(
         {
             "tester_identity": {
                 "terminal": str(args.terminal_path),
+                "terminal_extra_args": execution_result.get("terminal_extra_args", []),
                 "broker_terminal_data_root": str(args.terminal_data_root),
                 "terminal_process_probe": execution_result.get("terminal_process_probe", {}),
                 "symbol": "US100",
@@ -981,6 +1017,7 @@ def write_run_artifacts(
             "completed_attempt_count": completed_count,
             "runtime_blockers": blockers,
             "terminal_process_probe_status": execution_result.get("terminal_process_probe", {}).get("status", ""),
+            "terminal_extra_args": execution_result.get("terminal_extra_args", []),
             "execution_scope": {"start_index": int(args.start_index), "limit": args.limit},
             "claim_boundary": CLAIM_BOUNDARY,
         },
@@ -1253,6 +1290,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--tester-profile-root", default=str(TESTER_PROFILE_ROOT_DEFAULT))
     parser.add_argument("--timeout-seconds", type=int, default=900)
     parser.add_argument("--runtime-timeout-seconds", type=int, default=180)
+    parser.add_argument("--terminal-extra-arg", action="append", default=[])
     parser.add_argument("--start-index", type=int, default=0)
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--materialize-only", action="store_true")
@@ -1290,6 +1328,7 @@ def main() -> None:
             tester_profile_root=tester_profile_root,
             timeout_seconds=int(args.timeout_seconds),
             runtime_timeout_seconds=int(args.runtime_timeout_seconds),
+            terminal_extra_args=list(args.terminal_extra_arg or []),
         )
     status, judgment, decision, next_action = classify(all_attempts, executed_attempts, execution_result, args.materialize_only)
     artifacts = write_run_artifacts(

@@ -4,7 +4,7 @@ import shutil
 import subprocess
 import time
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Mapping, Sequence
 
 import pandas as pd
 
@@ -20,6 +20,7 @@ def run_mt5_tester(
     tester_profile_set_path: Path | None = None,
     tester_profile_ini_path: Path | None = None,
     timeout_seconds: int = 300,
+    terminal_extra_args: Sequence[str] | None = None,
 ) -> dict[str, Any]:
     execution_ini_path = ini_path
     ini_copy_payload = None
@@ -35,7 +36,7 @@ def run_mt5_tester(
             "encoding_policy": "utf-8-no-bom",
         }
 
-    command = [str(terminal_path), f"/config:{execution_ini_path.resolve()}"]
+    command = [str(terminal_path), *(terminal_extra_args or []), f"/config:{execution_ini_path.resolve()}"]
     if not path_exists(terminal_path):
         return {
             "status": "blocked",
