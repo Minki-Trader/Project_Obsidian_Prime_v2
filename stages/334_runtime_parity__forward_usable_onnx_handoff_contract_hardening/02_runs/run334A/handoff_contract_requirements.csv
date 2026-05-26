@@ -1,0 +1,7 @@
+requirement_id,requirement,evidence_required,blocks_if_missing,overfit_risk_reduced
+R01_subject_identity,"Every ONNX handoff must declare subject_id, parent evidence, feature owner, and forbidden aliases.",subject_boundary_contract.csv plus artifact hashes,True,subject swap(주체 바꿔치기)
+R02_forward_data_scope,Forward rows must start after 2026-04-13 and must not use split-local forward ranks.,data_integrity_contract.csv with row counts and timestamp policy,True,lookahead/leakage(미래 누수)
+R03_threshold_policy,Threshold must be inherited from pre-forward design or declared as exploratory non-selection.,threshold_policy_receipt and changed-variable record,True,forward retuning(전진 재튜닝)
+R04_runtime_parity,"Python, ONNX, MT5 set/ini, tester report, and telemetry must share feature/order/risk identity.",runtime_parity_contract.csv and MT5 report/telemetry hash,True,runtime drift(런타임 드리프트)
+R05_cost_curve_guard,"Any positive MT5 result must pass cost, curve pocket, underwater, and direction attribution review.","cost_stress_report, curve_pocket_report, direction attribution",True,single-pocket selection(단일 포켓 선택)
+R06_negative_control,At least one forbidden subject-swap control must be tested and rejected by the gate.,negative_control_rejection_receipt,True,gate that only approves(승인만 하는 게이트)

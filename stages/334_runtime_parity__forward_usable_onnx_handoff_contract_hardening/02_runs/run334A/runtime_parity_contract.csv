@@ -1,0 +1,6 @@
+contract_id,research_side,runtime_side,required_evidence,claim_if_missing
+runtime_feature_identity,feature table and ONNX input order,MT5 CSV input and ONNX tensor order,"feature_order.csv, feature_order_hash, ONNX input metadata",blocked
+runtime_risk_identity,risk logic JSON and lot policy,EA set file and telemetry risk columns,"risk hash, set hash, telemetry lot/SL/TP fields",blocked
+tester_output_identity,queued attempt manifest,MT5 report HTML/PNG and telemetry,"report hash, chart hash, telemetry hash, tester config",blocked
+python_onnx_parity,Python scorer or feature bridge,ONNX output checked row-level,"max_abs_diff, row_count, sample hash",inconclusive
+subject_boundary_identity,declared subject_id and source parent,runtime package subject_id and model file path,subject_boundary_contract row and runtime manifest field,invalid

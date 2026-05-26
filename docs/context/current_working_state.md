@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening_v1`
-- current_run(현재 실행): `run334A_design_forward_usable_onnx_handoff_contract_after_cp322a_boundary_v1`
+- current_packet(현재 작업 묶음): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening_v2`
+- current_run(현재 실행): `run334B_materialize_subject_separated_handoff_contract_inputs_v1`
 - active_stage(활성 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `333_overfit_guard__timestamp_safe_pocket_veto_materialization`
 - target_surface(목표 표면): `forward_usable_onnx_handoff_contract_hardening`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `open_planned_stage334_after_stage333_closeout`
-- decision(판정): `stage333G_cp322a_exact_handoff_missing_preserve_boundary_open_stage334_contract_hardening`
+- status(상태): `completed_contract_design_ready_for_materialization`
+- decision(판정): `stage334A_contract_hardening_ready_for_subject_separated_materialization_no_selection`
+- run334A_summary(334A 요약): forward-usable ONNX handoff contract(전진 사용 가능 온엑스 인계 계약)를 `completed_forward_usable_onnx_handoff_contract_design_no_selection`로 설계했다. Effect(효과): cp322A/run333E/future non-identity ONNX(cp322A/333E/미래 비정체성 온엑스)를 subject boundary(주체 경계)로 분리하고 overfit gate(과적합 게이트)와 run334B queue(334B 대기열)를 만들었다.
 - run333G_summary(333G 요약): exact candidate handoff audit(정확 후보 인계 감사)를 `completed_exact_candidate_handoff_audit_boundary_preserved_stage333_closed`로 닫았다. Effect(효과): cp322A route signal(경로 신호)은 2026-04-14 이후 없고 run333E bridge(333E 연결기)는 다른 주체라서 Stage333(333단계)는 no selection(선택 없음)으로 닫고 Stage334(334단계)를 연다.
 - run333F_summary(333F 요약): signal replay MT5 forensics(신호 재생 MT5 포렌식)를 `completed_signal_replay_mt5_forensics_packaging_boundary_no_forward_decision`로 닫았다. Effect(효과): positive MT5 evidence(양수 MT5 근거)를 보존했지만 identity bridge/package boundary(정체성 연결기/패키징 경계) 때문에 Forward Passed(전진 통과)와 Goal Achieve(목표 달성)는 없다.
 - run333E_summary(333E 요약): signal payload runtime replay bridge(신호 페이로드 런타임 재생 연결기)를 `completed_signal_payload_runtime_replay_mt5_probe_no_forward_decision`로 닫았다. Effect(효과): portable MT5(포터블 메타트레이더5)로 report/telemetry(보고서/실행기록)를 확보했지만, Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
@@ -61,8 +62,8 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run334A_design_forward_usable_onnx_handoff_contract_after_cp322a_boundary_v1`
-- claim_boundary(주장 경계): `research_development_only_forward_usable_onnx_handoff_contract_hardening_separate_cp322a_preserved_artifact_from_new_research_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- next_action(다음 행동): `run334B_materialize_subject_separated_handoff_contract_inputs_v1`
+- claim_boundary(주장 경계): `research_development_only_forward_usable_onnx_handoff_contract_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
 Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.

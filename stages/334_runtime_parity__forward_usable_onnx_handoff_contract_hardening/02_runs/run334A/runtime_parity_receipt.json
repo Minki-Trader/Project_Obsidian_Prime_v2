@@ -1,0 +1,21 @@
+{
+  "known_differences": [
+    "cp322A exact identity consumes run322b_route_signal but has no forward rows.",
+    "run333E bridge consumes p_short/p_flat/p_long and is research-only."
+  ],
+  "parity_check": "contract_design_only_no_mt5_execution",
+  "parity_identity": {
+    "cp322a_feature_order": [
+      "run322b_route_signal"
+    ],
+    "cp322a_feature_order_hash": "839a84eca981d034211de743c0f9830335149e2a4817e947de6b96dd9fb5a70c",
+    "run333e_feature_order_hash": "f72337efcd3c25492b22e13562fdc9aff69b7ba2cc1aa4340ae678351a2e3991"
+  },
+  "research_path": "stage_pipelines/stage334/design_forward_usable_onnx_handoff_contract.py",
+  "runtime_claim_boundary": "research_only_no_runtime_authority",
+  "runtime_path": "not_materialized_in_stage334A",
+  "shared_contract": [
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334A/runtime_parity_contract.csv",
+    "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334A/subject_boundary_contract.csv"
+  ]
+}

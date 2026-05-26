@@ -1,0 +1,5 @@
+data_check,required_rule,invalid_if
+timestamp_policy,All forward rows use UTC timestamp and broker server timestamp with monotonic order.,timezone inferred only from filename or mixed server/UTC order
+forward_scope,Forward evaluation starts strictly after 2026-04-13 OOS close.,old validation/OOS rows are mixed into forward KPI
+feature_label_boundary,"No feature may use realized forward outcome, split-local rank, or full-window distribution.",feature requires future rows to compute current bar
+source_completeness,"US100 M5 and any macro/regime feature source must declare row counts, gaps, and latest timestamp.",missing source is silently filled or dropped

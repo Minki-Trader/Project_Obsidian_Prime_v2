@@ -1,0 +1,19 @@
+{
+  "data_hash_or_identity": {
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/runtime_probe_handoff_manifest.csv": "b82c317f7cd4c292b41758b8a6262cb2dedbc7cb85730534036f044b5e773b92",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333F/final_forward_decision.json": "174b38f96e822592ff1ffc246540510d6fc32da78404aebd0d2c60e1d7e8ee56",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/source_route_signal_coverage.csv": "32bd95839be80c32d0e0f084edbe6900b619a5765a30f2fd492dead0e9b631c4"
+  },
+  "data_source": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333G/source_route_signal_coverage.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/runtime_probe_handoff_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333F/final_forward_decision.json"
+  ],
+  "feature_label_boundary": "no forward outcome rank, no full-window distribution, no split-local rank",
+  "integrity_judgment": "usable_with_boundary_design_only",
+  "leakage_risk": "using positive run333E replay to tune threshold or relabel cp322A",
+  "missing_or_duplicate_check": "deferred to Stage334B materialization; required by data_integrity_contract.csv",
+  "sample_scope": "contract design using prior Stage333 evidence",
+  "split_boundary": "cp322A old validation/OOS is historical only; forward starts after 2026-04-13",
+  "time_axis": "forward rows must be UTC ordered and after 2026-04-13; Stage334A creates no new bars"
+}
