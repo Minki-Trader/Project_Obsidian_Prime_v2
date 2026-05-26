@@ -41,3 +41,10 @@ Effect(효과): 다음 단계는 positive KPI(긍정 핵심지표)를 바로 후
 - run334E_matrix(334E 행렬): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/stress_probe_matrix.csv`
 - run334F_queue(334F 대기열): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/run334F_materialization_queue.csv`
 - run334E_final_decision(334E 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334E/final_stress_probe_design_decision.json`
+
+## run334F No-Retune Stress Probe Materialization Outputs(334F 무재튜닝 압박 탐침 물질화 출력)
+
+- run334F_manifest(334F 물질화 목록): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/materialization_manifest.csv`
+- run334F_views(334F 진단 보기): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/`
+- run334F_summary(334F 실패 기억 요약): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/stress_failure_memory_summary.csv`
+- run334F_final_decision(334F 최종 결정): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/final_materialization_decision.json`

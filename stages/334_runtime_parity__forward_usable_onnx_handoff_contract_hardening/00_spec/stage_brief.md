@@ -10,4 +10,4 @@
 - claim_boundary(주장 경계): `research_development_only_forward_usable_onnx_handoff_contract_hardening_separate_cp322a_preserved_artifact_from_new_research_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Effect(효과): cp322A(322A 후보)는 preserved research artifact(보존 연구 산출물)로 두고, 다음 연구는 exact replay(정확 재생), non-identity ONNX(비정체성 온엑스), runtime handoff(런타임 인계), cost/curve/parity guard(비용/곡선/동등성 방어)를 같은 계약으로 묶는다.
-- latest_run(최신 실행): `run334E_design_no_retune_forward_usable_nonidentity_stress_probe_from_reconciled_memory_v1`
+- latest_run(최신 실행): `run334F_materialize_no_retune_nonidentity_stress_probe_inputs_v1`

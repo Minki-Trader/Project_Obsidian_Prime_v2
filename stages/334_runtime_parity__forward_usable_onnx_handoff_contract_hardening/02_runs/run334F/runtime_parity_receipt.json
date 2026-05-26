@@ -1,0 +1,19 @@
+{
+  "known_differences": [
+    "No MT5 rerun is launched in run334F.",
+    "Stage330 non-identity ONNX remains separate from cp322A exact.",
+    "Runtime authority remains not claimed."
+  ],
+  "parity_check": "runtime_identity_diagnostic_views.csv records existence and hashes for source feature/model/trade/slice files.",
+  "parity_identity": {
+    "all_identity_sources_available": true,
+    "identity_rows": 6
+  },
+  "research_path": "stage_pipelines/stage334/materialize_no_retune_nonidentity_stress_probe_inputs.py",
+  "runtime_claim_boundary": "materialization_only_no_runtime_authority",
+  "runtime_path": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F"
+  ],
+  "shared_contract": "run334F materializes diagnostic views from fixed Stage330E/330F feature, model, report, trade, and slice identities."
+}
