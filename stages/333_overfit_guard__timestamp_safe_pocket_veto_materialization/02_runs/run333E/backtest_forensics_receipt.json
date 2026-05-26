@@ -1,0 +1,111 @@
+{
+  "tester_identity": {
+    "terminal": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+    "terminal_extra_args": [],
+    "broker_terminal_data_root": "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075",
+    "terminal_process_probe": {
+      "status": "running",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+      ],
+      "returncode": 0,
+      "processes": [
+        {
+          "ProcessId": 22520,
+          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ],
+      "matching_processes": [
+        {
+          "ProcessId": 22520,
+          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ]
+    },
+    "symbol": "US100",
+    "timeframe": "M5",
+    "deposit": 500,
+    "leverage": "1:100",
+    "modeling_mode": "Every tick based on real ticks / MT5 model=4",
+    "date_range": "2026.04.14..2026.05.23"
+  },
+  "ea_identity": {
+    "entrypoint": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "module_hashes": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "status": "present",
+        "sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "status": "present",
+        "sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "status": "present",
+        "sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "status": "present",
+        "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "status": "present",
+        "sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "status": "present",
+        "sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "status": "present",
+        "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+      }
+    ],
+    "set_file": {
+      "path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/m48_breadth_soft_veto_replay.set",
+      "sha256": "9f9e14a6f1c51e3cdccf9df4122da973cdbb2ce44c656f5e9d1a8e8a1f328a43",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "identity_onnx": {
+      "path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/onnx/signal_payload_identity_probability_bridge.onnx",
+      "sha256": "13a4958c0079e398a1cbfaf6375d4d798ab4a1c3fc692a2a403ab44d044b57df",
+      "format": "onnx_identity_probability_bridge",
+      "feature_count": 3
+    }
+  },
+  "report_identity": [
+    {
+      "attempt_name": "m48_breadth_soft_veto_replay",
+      "tier": "Tier A",
+      "split": "raw_forward_signal_payload_replay",
+      "report_name": "Project_Obsidian_Prime_v2_run333E_m48_breadth_soft_veto_replay",
+      "status": "missing"
+    }
+  ],
+  "trade_evidence": [],
+  "cost_assumptions": {
+    "spread": "broker tester setting, not overwritten by run333E",
+    "commission": "broker tester setting, not overwritten by run333E",
+    "slippage": "InpDeviationPoints=default_or_set_file_value",
+    "swap": "broker tester setting"
+  },
+  "forensic_checks": [
+    "MetaEditor compile attempted before tester run.",
+    "Runtime telemetry and summary files checked after tester run.",
+    "Strategy Tester report copied when MT5 emits it."
+  ],
+  "backtest_judgment": "blocked"
+}

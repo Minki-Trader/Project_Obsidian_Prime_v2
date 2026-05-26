@@ -1,0 +1,12 @@
+{
+  "model_family": "identity_probability_bridge_not_candidate_model",
+  "target_and_label": "no training target; bridge passes p_short/p_flat/p_long from frozen signal payload replay frame",
+  "split_method": "runtime_probe",
+  "selection_metric": "none",
+  "secondary_metrics": "signal payload parity; MT5 tester forensics if available",
+  "threshold_policy": "fixed train-only threshold inherited from run330B source artifact",
+  "overfit_risk": "bridge is not trained, but the guarded signal branch remains proxy-screen-selected and needs packaging-boundary review",
+  "calibration_risk": "probabilities are replayed values, not recalibrated",
+  "comparison_baseline": "run330E m48_plain_rf source MT5 reference and run333D proxy cost/curve screen",
+  "validation_judgment": "exploratory_runtime_probe_only"
+}

@@ -1,0 +1,7 @@
+gate_name,status,evidence_path,effect
+data_integrity,completed,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/data_integrity_receipt.json,timestamp and signal replay identity is checked before MT5 execution
+model_validation,completed_with_boundary,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/model_validation_receipt.json,identity bridge is recorded as non-candidate and non-trained
+runtime_parity,blocked,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/runtime_parity_receipt.json,signal payload to MT5 handoff is either executed or blocked with identity
+backtest_forensics,blocked,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/backtest_forensics_receipt.json,"tester identity, report path, and cost assumptions are recorded"
+artifact_lineage,completed,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/artifact_lineage_receipt.json,"source queue, bridge files, reports, and next consumer are connected"
+result_judgment,completed,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/result_judgment.csv,Forward Passed/Failed and Goal Achieve are not claimed

@@ -1,0 +1,24 @@
+{
+  "data_source": {
+    "source_prediction": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/predictions/m48_plain_raw_forward_score.parquet",
+    "scored_payload": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/scored_payloads/pv_m48_breadth_reintroduction_control__soft_veto_scored_payload.csv",
+    "guarded_signal_payload": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/signal_payloads/pv_m48_breadth_reintroduction_control__soft_veto_signals.csv"
+  },
+  "time_axis": "UTC bar-close timestamp; MT5 tester set uses FromDate/ToDate around the same bar-close span.",
+  "sample_scope": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "rows": 5484,
+    "start": "2026-04-14T03:05:00+00:00",
+    "end": "2026-05-22T23:55:00+00:00"
+  },
+  "missing_or_duplicate_check": "prediction/scored payload one-to-one timestamp merge and signal payload exact replay parity completed",
+  "feature_label_boundary": "no labels or future returns consumed; only frozen prediction probabilities and predeclared guard flags are replayed",
+  "split_boundary": "post-2026-04-14 raw forward replay scope",
+  "leakage_risk": "guard feature came from Stage333 timestamp-safe materialization; breadth missing rows remain a boundary",
+  "data_hash_or_identity": {
+    "feature_csv_sha256": "3d80278772709144aaf18b1892c82641a2db70429ac9a134ec6f0ead365e7ccd",
+    "guarded_signal_payload_sha256": "de7ad1045942869d67c1a6592467070623ec4a42479f77c05932662ffe16010c"
+  },
+  "integrity_judgment": "usable_with_boundary"
+}

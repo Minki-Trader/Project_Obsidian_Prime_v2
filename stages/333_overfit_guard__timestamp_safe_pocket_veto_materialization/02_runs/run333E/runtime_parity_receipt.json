@@ -1,0 +1,115 @@
+{
+  "research_path": "stage_pipelines/stage333/runtime_probe_queue_or_failure_memory_from_screen.py",
+  "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+  "shared_contract": {
+    "signal_payload": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/signal_payloads/pv_m48_breadth_reintroduction_control__soft_veto_signals.csv",
+    "bridge_features": {
+      "path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/signal_replay_bridge/m48_breadth_soft_veto_probability_bridge_features.csv",
+      "sha256": "3d80278772709144aaf18b1892c82641a2db70429ac9a134ec6f0ead365e7ccd",
+      "rows": 5484,
+      "feature_count": 3,
+      "feature_order_hash": "f72337efcd3c25492b22e13562fdc9aff69b7ba2cc1aa4340ae678351a2e3991",
+      "format": "probability_identity_bridge_features_all_runtime_rows"
+    },
+    "bridge_model": "identity ONNX probability bridge; not a candidate model",
+    "threshold": 0.07078808758599892,
+    "risk_lot": "fixed lot 0.1, max hold 12, no ATR SLTP, no model risk sizing",
+    "time_axis": "bar close UTC timestamp, InpCsvTimestampIsBarClose=true"
+  },
+  "known_differences": [
+    "The MT5 run replays a frozen signal payload through an identity bridge instead of proving a packaged guarded ONNX model.",
+    "This is runtime_probe, not runtime_authority."
+  ],
+  "parity_check": {
+    "signal_payload_preflight": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/signal_replay_preflight_audit.csv",
+    "onnxruntime_identity_check": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/identity_bridge_onnxruntime_check.json",
+    "mt5_summary": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5_runtime_probe_summary.csv"
+  },
+  "parity_identity": {
+    "module_hashes": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "status": "present",
+        "sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "status": "present",
+        "sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "status": "present",
+        "sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "status": "present",
+        "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "status": "present",
+        "sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "status": "present",
+        "sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "status": "present",
+        "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+      }
+    ],
+    "feature_order_hash": "f72337efcd3c25492b22e13562fdc9aff69b7ba2cc1aa4340ae678351a2e3991",
+    "identity_onnx_sha256": "13a4958c0079e398a1cbfaf6375d4d798ab4a1c3fc692a2a403ab44d044b57df",
+    "set_sha256": "9f9e14a6f1c51e3cdccf9df4122da973cdbb2ce44c656f5e9d1a8e8a1f328a43",
+    "ini_sha256": "4ba3303d0f8da47aceacdcf5eca8e2b0fb8035a1114a5d19db68c0a63261602a",
+    "compile": {
+      "status": "completed",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+        "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "/log:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\333_overfit_guard__timestamp_safe_pocket_veto_materialization\\02_runs\\run333E\\mt5\\mt5_compile.log"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "",
+      "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/mt5_compile.log",
+      "command_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/mt5_compile.log",
+      "actual_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/mt5_compile.log",
+      "log_sha256": "93c7dc608033aa503b0c9473314838150b8b60a0a6e17c34e03c2a51131cdd44"
+    },
+    "terminal_process_probe": {
+      "status": "running",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+      ],
+      "returncode": 0,
+      "processes": [
+        {
+          "ProcessId": 22520,
+          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ],
+      "matching_processes": [
+        {
+          "ProcessId": 22520,
+          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ]
+    },
+    "completed_attempt_count": 0,
+    "runtime_blockers": [
+      "terminal_already_running_config_not_applied"
+    ]
+  },
+  "runtime_claim_boundary": "runtime_probe_research_only_no_runtime_authority"
+}

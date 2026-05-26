@@ -1,0 +1,18 @@
+{
+  "hypothesis": "The sole run333D survivor deserves a narrow MT5 signal-replay probe before any packaging or failure-memory decision.",
+  "decision_use": "Decide whether to review MT5 runtime evidence or record runtime blocker/failure memory.",
+  "comparison_baseline": "run333D proxy screen and run330E m48_plain_rf source MT5 reference.",
+  "control_variables": "source probabilities, fixed threshold, fixed lot, max hold, no ATR SLTP, no model risk sizing.",
+  "changed_variables": "guarded signal payload is replayed through an identity probability bridge.",
+  "sample_scope": "US100 M5 raw forward after 2026-04-14 through available run330B forward frame.",
+  "success_criteria": "preflight exact signal parity plus MT5 report/telemetry/summary emitted.",
+  "failure_criteria": "preflight mismatch, compile failure, terminal/config failure, missing telemetry, or missing Strategy Tester report.",
+  "invalid_conditions": "threshold retune, lot optimization, trained bridge model, or missing timestamp identity.",
+  "stop_conditions": "stop at runtime probe boundary; do not claim Forward Passed/Failed or Goal Achieve.",
+  "evidence_plan": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/runtime_probe_handoff_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5_runtime_probe_summary.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/runtime_parity_receipt.json",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/backtest_forensics_receipt.json"
+  ]
+}

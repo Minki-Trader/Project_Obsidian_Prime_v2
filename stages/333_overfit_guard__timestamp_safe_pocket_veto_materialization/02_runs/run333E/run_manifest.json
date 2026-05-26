@@ -1,0 +1,134 @@
+{
+  "stage_id": "333_overfit_guard__timestamp_safe_pocket_veto_materialization",
+  "run_number": "run333E",
+  "run_id": "run333E_runtime_probe_queue_or_failure_memory_from_screen_v1",
+  "parent_run_id": "run333D_screen_guarded_payload_cost_curve_and_pocket_risk_v1",
+  "generated_at_utc": "2026-05-26T06:51:11Z",
+  "status": "blocked_signal_payload_runtime_replay_mt5_probe_no_completed_runtime",
+  "judgment": "signal_payload_runtime_probe_blocked_requires_runtime_repair_no_goal_achieve",
+  "decision": "stage333E_signal_payload_runtime_probe_blocked_no_pass_fail_judgment",
+  "next_action": "repair_run333E_signal_replay_runtime_blocker_then_rerun",
+  "attempt": {
+    "attempt_name": "m48_breadth_soft_veto_replay",
+    "queue_id": "pv_m48_breadth_reintroduction_control__soft_veto",
+    "thesis_id": "pv_m48_breadth_reintroduction_control",
+    "source_artifact": "m48_plain",
+    "scoring_mode": "soft_veto",
+    "candidate_id": "macro48_no_equity_breadth_or_top3__l2_plain_c025",
+    "artifact_slug": "m48_plain",
+    "feature_set_id": "macro48_no_equity_breadth_or_top3",
+    "model_id": "l2_plain_c025",
+    "tier": "Tier A",
+    "split": "raw_forward_signal_payload_replay",
+    "attempt_role": "signal_payload_runtime_replay_bridge_not_candidate_model",
+    "record_view_prefix": "signal_payload_replay",
+    "routing_mode": "tier_a_signal_payload_replay_no_fallback",
+    "signal_policy": "run333C guarded signal payload replayed through identity probability bridge; no threshold retuning",
+    "from_date": "2026.04.14",
+    "to_date": "2026.05.23",
+    "decision_threshold": 0.07078808758599892,
+    "feature_order_hash": "f72337efcd3c25492b22e13562fdc9aff69b7ba2cc1aa4340ae678351a2e3991",
+    "feature_export": {
+      "path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/signal_replay_bridge/m48_breadth_soft_veto_probability_bridge_features.csv",
+      "sha256": "3d80278772709144aaf18b1892c82641a2db70429ac9a134ec6f0ead365e7ccd",
+      "rows": 5484,
+      "feature_count": 3,
+      "feature_order_hash": "f72337efcd3c25492b22e13562fdc9aff69b7ba2cc1aa4340ae678351a2e3991",
+      "format": "probability_identity_bridge_features_all_runtime_rows"
+    },
+    "identity_onnx": {
+      "path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/onnx/signal_payload_identity_probability_bridge.onnx",
+      "sha256": "13a4958c0079e398a1cbfaf6375d4d798ab4a1c3fc692a2a403ab44d044b57df",
+      "format": "onnx_identity_probability_bridge",
+      "feature_count": 3
+    },
+    "feature_copy": {
+      "source": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/signal_replay_bridge/m48_breadth_soft_veto_probability_bridge_features.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/features/m48_breadth_soft_veto_probability_bridge_features.csv",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/features/m48_breadth_soft_veto_probability_bridge_features.csv",
+      "sha256": "3d80278772709144aaf18b1892c82641a2db70429ac9a134ec6f0ead365e7ccd"
+    },
+    "model_copy": {
+      "source": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/onnx/signal_payload_identity_probability_bridge.onnx",
+      "common_path": "Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/models/signal_payload_identity_probability_bridge.onnx",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/models/signal_payload_identity_probability_bridge.onnx",
+      "sha256": "13a4958c0079e398a1cbfaf6375d4d798ab4a1c3fc692a2a403ab44d044b57df"
+    },
+    "set": {
+      "path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/m48_breadth_soft_veto_replay.set",
+      "sha256": "9f9e14a6f1c51e3cdccf9df4122da973cdbb2ce44c656f5e9d1a8e8a1f328a43",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "ini": {
+      "path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/m48_breadth_soft_veto_replay.ini",
+      "sha256": "4ba3303d0f8da47aceacdcf5eca8e2b0fb8035a1114a5d19db68c0a63261602a",
+      "format": "mt5_tester_ini",
+      "tester": {
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "Symbol": "US100",
+        "Period": "M5",
+        "Model": 4,
+        "Deposit": 500,
+        "Leverage": "1:100",
+        "Optimization": 0,
+        "ExecutionMode": 0,
+        "ForwardMode": 0,
+        "UseLocal": 1,
+        "UseRemote": 0,
+        "UseCloud": 0,
+        "ReplaceReport": 1,
+        "ShutdownTerminal": 1,
+        "FromDate": "2026.04.14",
+        "ToDate": "2026.05.23",
+        "Report": "Project_Obsidian_Prime_v2_run333E_m48_breadth_soft_veto_replay",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+      }
+    },
+    "common_feature_path": "Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/features/m48_breadth_soft_veto_probability_bridge_features.csv",
+    "common_model_path": "Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/models/signal_payload_identity_probability_bridge.onnx",
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/telemetry/m48_breadth_soft_veto_replay_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/telemetry/m48_breadth_soft_veto_replay_summary.csv",
+    "report_name": "Project_Obsidian_Prime_v2_run333E_m48_breadth_soft_veto_replay",
+    "preflight": {
+      "source_prediction_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/predictions/m48_plain_raw_forward_score.parquet",
+      "source_prediction_sha256": "b852c08b3dbda7a3c365f6735479ee1008b5988d1edfc500141a23fd27925d35",
+      "source_signal_payload_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/signal_payloads/m48_plain_raw_forward_signals.csv",
+      "source_signal_payload_sha256": "cef275247adde84edac7972bed964ed7d7c947157614d4b990083366c7f5bac4",
+      "guarded_signal_payload_path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/signal_payloads/pv_m48_breadth_reintroduction_control__soft_veto_signals.csv",
+      "guarded_signal_payload_sha256": "de7ad1045942869d67c1a6592467070623ec4a42479f77c05932662ffe16010c",
+      "scored_payload_path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333C/scored_payloads/pv_m48_breadth_reintroduction_control__soft_veto_scored_payload.csv",
+      "scored_payload_sha256": "15abbea7dfe6300f01e836231d5d71e9b3aa2e3285ed689c0f5b667b6620f771",
+      "rows": 5484,
+      "source_signal_rows": 2562,
+      "guarded_signal_rows": 473,
+      "replay_nonflat_rows": 473,
+      "forced_flat_rows": 2089,
+      "threshold": 0.07078808758599892,
+      "signal_payload_parity_matched": true,
+      "first_timestamp": "2026-04-14T03:05:00+00:00",
+      "last_timestamp": "2026-05-22T23:55:00+00:00",
+      "candidate_id": "macro48_no_equity_breadth_or_top3__l2_plain_c025",
+      "artifact_slug": "m48_plain",
+      "feature_set_id": "macro48_no_equity_breadth_or_top3",
+      "model_id": "l2_plain_c025"
+    },
+    "onnxruntime_check": {
+      "provider": "onnxruntime_CPUExecutionProvider",
+      "sample_rows": 25,
+      "input_name": "input",
+      "output_shape": [
+        25,
+        3
+      ],
+      "max_abs_diff": 0.0,
+      "status": "completed"
+    },
+    "claim_boundary": "research_development_only_signal_payload_runtime_replay_bridge_no_threshold_retuning_no_lot_optimization_no_candidate_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+  },
+  "execution_result_path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/execution_result.json",
+  "runtime_blockers": [
+    "terminal_already_running_config_not_applied"
+  ],
+  "claim_boundary": "research_development_only_signal_payload_runtime_replay_bridge_no_threshold_retuning_no_lot_optimization_no_candidate_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

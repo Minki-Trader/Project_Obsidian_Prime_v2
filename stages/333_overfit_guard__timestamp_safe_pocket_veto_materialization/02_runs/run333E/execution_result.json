@@ -1,0 +1,117 @@
+{
+  "compile": {
+    "status": "completed",
+    "command": [
+      "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+      "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "/log:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\333_overfit_guard__timestamp_safe_pocket_veto_materialization\\02_runs\\run333E\\mt5\\mt5_compile.log"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "",
+    "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/mt5_compile.log",
+    "command_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/mt5_compile.log",
+    "actual_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/mt5_compile.log",
+    "log_sha256": "93c7dc608033aa503b0c9473314838150b8b60a0a6e17c34e03c2a51131cdd44"
+  },
+  "terminal_process_probe": {
+    "status": "running",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-Command",
+      "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+    ],
+    "returncode": 0,
+    "processes": [
+      {
+        "ProcessId": 22520,
+        "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+      }
+    ],
+    "matching_processes": [
+      {
+        "ProcessId": 22520,
+        "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+      }
+    ]
+  },
+  "terminal_extra_args": [],
+  "execution_results": [
+    {
+      "status": "blocked",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_s333e_m48_breadth_soft_veto_replay.ini"
+      ],
+      "returncode": null,
+      "blocker": "terminal_already_running_config_not_applied",
+      "blocker_explanation": "running terminal64.exe can absorb /config without applying tester configuration",
+      "terminal_process_probe": {
+        "status": "running",
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+        ],
+        "returncode": 0,
+        "processes": [
+          {
+            "ProcessId": 22520,
+            "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+          }
+        ],
+        "matching_processes": [
+          {
+            "ProcessId": 22520,
+            "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+          }
+        ]
+      },
+      "runtime_outputs": {
+        "telemetry_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/telemetry/m48_breadth_soft_veto_replay_telemetry.csv",
+        "summary_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage333/run333E_signal_payload_runtime_replay/telemetry/m48_breadth_soft_veto_replay_summary.csv",
+        "telemetry_exists": false,
+        "summary_exists": false,
+        "status": "blocked",
+        "wait_status": "skipped_terminal_already_running"
+      },
+      "attempt_name": "m48_breadth_soft_veto_replay",
+      "queue_id": "pv_m48_breadth_reintroduction_control__soft_veto",
+      "thesis_id": "pv_m48_breadth_reintroduction_control",
+      "candidate_id": "macro48_no_equity_breadth_or_top3__l2_plain_c025",
+      "artifact_slug": "m48_plain",
+      "feature_set_id": "macro48_no_equity_breadth_or_top3",
+      "model_id": "l2_plain_c025",
+      "tier": "Tier A",
+      "split": "raw_forward_signal_payload_replay",
+      "attempt_role": "signal_payload_runtime_replay_bridge_not_candidate_model",
+      "routing_mode": "tier_a_signal_payload_replay_no_fallback",
+      "signal_policy": "run333C guarded signal payload replayed through identity probability bridge; no threshold retuning",
+      "ini_path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/m48_breadth_soft_veto_replay.ini",
+      "set_path": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333E/mt5/m48_breadth_soft_veto_replay.set",
+      "strategy_tester_report": {
+        "attempt_name": "m48_breadth_soft_veto_replay",
+        "tier": "Tier A",
+        "split": "raw_forward_signal_payload_replay",
+        "report_name": "Project_Obsidian_Prime_v2_run333E_m48_breadth_soft_veto_replay",
+        "status": "missing"
+      }
+    }
+  ],
+  "strategy_tester_reports": [
+    {
+      "attempt_name": "m48_breadth_soft_veto_replay",
+      "tier": "Tier A",
+      "split": "raw_forward_signal_payload_replay",
+      "report_name": "Project_Obsidian_Prime_v2_run333E_m48_breadth_soft_veto_replay",
+      "status": "missing"
+    }
+  ],
+  "mt5_kpi_records": []
+}
