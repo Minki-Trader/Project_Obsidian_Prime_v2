@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Feature theses can reduce pocket concentration only if they are predeclared and timestamp-safe.",
+  "decision_use": "Choose research branches worthy of future materialization, not candidate selection.",
+  "comparison_baseline": "run332C guarded scout and Stage331 failure memory.",
+  "control_variables": "fixed cost ladder, no threshold retuning, no lot optimization, no Stage331 pocket exclusion.",
+  "changed_variables": "future feature families only, not changed in run332D.",
+  "sample_scope": "train/WFO, validation, OOS, raw-forward, Tier A/Tier B/Tier A+B required before selection language.",
+  "success_criteria": "future branch passes cost2 and rolling pocket veto without temporal concentration.",
+  "failure_criteria": "future branch only fixes known pocket or one month.",
+  "invalid_conditions": "feature uses future returns, tester outcome, or hard-coded pocket dates.",
+  "stop_conditions": "stop before materialization if label boundary or feature source is not reproducible.",
+  "evidence_plan": "feature_thesis_registry.csv; feature_label_boundary_receipt.json; pocket_veto_plan.csv; feature_availability_audit.csv"
+}

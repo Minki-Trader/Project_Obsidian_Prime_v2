@@ -4193,3 +4193,10 @@
 - status(상태): `completed_cost_curve_guarded_scout_materialization_no_selection`
 - effect(효과): Stage331(331단계)의 preserved clue(보존 단서)를 선택하지 않고, cost convexity/curve pocket/temporal balance(비용 볼록성/곡선 포켓/시간 균형) veto(거부) 조건과 run332D(332D 실행) 대기열로 바꿨다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage332D pocket veto feature thesis(포켓 거부 피처 논제)
+
+- run(실행): `run332D_design_pocket_veto_feature_thesis_v1`
+- status(상태): `completed_pocket_veto_feature_thesis_design_no_selection`
+- effect(효과): Stage331/332C(331/332C단계)의 cost/curve failure memory(비용/곡선 실패 기억)를 feature thesis registry(피처 논제 등록부), label boundary receipt(라벨 경계 영수증), pocket veto plan(포켓 거부 계획), materialization queue(물질화 대기열)로 바꿨다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), live readiness(실거래 준비), deployment(배포), operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

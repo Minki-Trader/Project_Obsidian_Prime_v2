@@ -1,0 +1,17 @@
+{
+  "time_axis": "timestamp_utc is the feature decision timestamp; derived session/hour features use timestamp only.",
+  "allowed_inputs": [
+    "US100 M5 bar values at or before decision bar",
+    "VIX/USD/US10YR latest-known values at or before decision timestamp",
+    "prior-bar breadth/divergence values when source identity is reproducible"
+  ],
+  "forbidden_inputs": [
+    "future returns",
+    "realized tester PnL",
+    "Stage331 pocket date labels as features",
+    "post-forward threshold search",
+    "lot optimization"
+  ],
+  "feature_label_boundary": "features must be computable before trade decision; labels/outcomes are evaluation-only.",
+  "boundary_judgment": "usable_for_design_only_materialization_requires_source_identity_receipt"
+}

@@ -18,3 +18,8 @@ Effect(효과): 다음 단계는 기존 Stage331(331단계)의 좋은 숫자를 
 - run332C_cost_veto(332C 비용 거부): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C/cost_convexity_veto_table.csv`
 - run332C_curve_veto(332C 곡선 포켓 거부): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C/curve_pocket_veto_table.csv`
 - run332C_queue(332C 대기열): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332C/guarded_scout_queue.csv`
+
+- run332D_feature_thesis_registry(332D 피처 논제 등록부): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_thesis_registry.csv`
+- run332D_feature_label_boundary(332D 피처 라벨 경계): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_label_boundary_receipt.json`
+- run332D_pocket_veto_plan(332D 포켓 거부 계획): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/pocket_veto_plan.csv`
+- run332D_materialization_queue(332D 물질화 대기열): `stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_materialization_queue.csv`
