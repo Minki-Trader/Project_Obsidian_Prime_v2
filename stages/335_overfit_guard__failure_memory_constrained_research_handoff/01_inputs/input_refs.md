@@ -153,3 +153,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - balanced_input_packages(균형 입력 패키지): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/balanced_repair_defense_offense_input_packages.csv`
 - run335Q_review_queue(335Q 검토 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335P/run335Q_review_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335P_balanced_repair_defense_offense_inputs.md`
+
+## run335Q Balanced Input Review(335Q 균형 입력 검토)
+
+- exact_join_repair_review(정확 조인 수리 검토): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335Q/exact_join_repair_review.csv`
+- proxy_rebuild_or_block_review(프록시 재구축/차단 검토): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335Q/proxy_rebuild_or_block_review.csv`
+- predeclared_constraint_review(사전 제약 검토): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335Q/predeclared_constraint_review.csv`
+- balanced_package_review(균형 패키지 검토): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335Q/balanced_package_review.csv`
+- run335R_materialization_queue(335R 물질화 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335Q/run335R_materialization_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335Q_balanced_input_review.md`
