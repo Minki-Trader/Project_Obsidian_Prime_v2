@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v8`
-- current_run(현재 실행): `run335H_review_guarded_branch_probe_input_materialization_v1`
+- current_packet(현재 작업 묶음): `335_overfit_guard__failure_memory_constrained_research_handoff_v9`
+- current_run(현재 실행): `run335I_design_proxy_expected_and_mt5_runtime_probe_or_block_v1`
 - active_stage(활성 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
 - target_surface(목표 표면): `failure_memory_constrained_research_handoff`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_guarded_branch_probe_inputs_materialized_no_selection`
-- decision(판정): `stage335G_probe_inputs_materialized_ready_for_review_no_selection`
+- status(상태): `completed_guarded_branch_probe_input_materialization_review_no_selection`
+- decision(판정): `stage335H_probe_inputs_reviewed_proxy_mt5_not_usable_ready_for_execution_or_block_design_no_selection`
+- run335H_summary(335H 요약): probe input materialization review(탐침 입력 물질화 검토)를 `completed_guarded_branch_probe_input_materialization_review_no_selection`로 완료했다. Effect(효과): package(패키지) 11개 검토, evidence gap(근거 공백) 22개, run335I proxy/MT5 execution-or-block design queue(335I 프록시/MT5 실행 또는 차단 설계 대기열) 11개를 만들었고, 활용 가능성(usability, 활용 가능성), Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335G_summary(335G 요약): guarded branch probe input materialization(방어 분기 탐침 입력 물질화)을 `completed_guarded_branch_probe_inputs_materialized_no_selection`로 완료했다. Effect(효과): probe package(탐침 패키지) 11개, proxy expected manifest(프록시 예상값 목록) 11개, MT5 result-or-block(MT5 결과 또는 차단) 11개, comparison readiness(비교 준비도) 11개를 만들었고, 활용 가능성(usability, 활용 가능성)과 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335F_summary(335F 요약): guarded branch probe protocol design(방어 분기 탐침 계약 설계)을 `completed_guarded_branch_probe_protocol_design_no_selection`로 완료했다. Effect(효과): protocol(계약) 11개와 run335G probe input materialization queue(335G 탐침 입력 물질화 대기열) 11개를 만들었고, 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.
 - run335E_summary(335E 요약): guarded branch input materialization review(방어 분기 입력 실체화 검토)를 `completed_guarded_branch_input_materialization_review_no_selection`로 완료했다. Effect(효과): branch input package(분기 입력 패키지) 11개를 검토하고 run335F probe protocol design queue(335F 탐침 계약 설계 대기열) 11개를 만들었고, 선택 후보나 Goal Achieve(목표 달성)는 주장하지 않는다.

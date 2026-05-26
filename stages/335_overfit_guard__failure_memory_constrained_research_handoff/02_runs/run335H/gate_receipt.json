@@ -1,0 +1,77 @@
+{
+  "failed_gates": [],
+  "required_gates": [
+    {
+      "detail": "packages=11;parent_failed_gates=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/probe_input_package_manifest.csv",
+      "gate": "parent_materialization_loaded",
+      "status": "passed"
+    },
+    {
+      "detail": "review_rows=11;failed_reviews=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/probe_input_review_matrix.csv",
+      "gate": "scope_completion_gate",
+      "status": "passed"
+    },
+    {
+      "detail": "schema_rows=11;failed_schema=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/payload_schema_audit.csv",
+      "gate": "payload_schema_audit",
+      "status": "passed"
+    },
+    {
+      "detail": "proxy_rows=11;failed_proxy=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/proxy_expected_readiness_review.csv",
+      "gate": "proxy_expected_schema_review",
+      "status": "passed"
+    },
+    {
+      "detail": "mt5_rows=11;failed_mt5=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/mt5_runtime_result_or_block_review.csv",
+      "gate": "mt5_runtime_result_or_block_review",
+      "status": "passed"
+    },
+    {
+      "detail": "usability_rows=11;failed_usability=0;all_not_usable_yet=true",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/proxy_mt5_usability_review.csv",
+      "gate": "proxy_mt5_usability_guard",
+      "status": "passed"
+    },
+    {
+      "detail": "gap_rows=22;expected=22",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/proxy_mt5_evidence_gap_register.csv",
+      "gate": "external_evidence_gap_recorded",
+      "status": "passed"
+    },
+    {
+      "detail": "measurement_rows=66;expected=66",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/measurement_input_manifest.csv",
+      "gate": "kpi_contract_audit",
+      "status": "passed"
+    },
+    {
+      "detail": "runtime_bridge_rows=27;expected=27",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/runtime_bridge_input_manifest.csv",
+      "gate": "runtime_bridge_boundary_review",
+      "status": "passed"
+    },
+    {
+      "detail": "failed_forbidden=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/forbidden_claim_review.csv",
+      "gate": "forbidden_claim_guard",
+      "status": "passed"
+    },
+    {
+      "detail": "next_queue_rows=11;expected=11",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/run335I_proxy_mt5_execution_or_block_design_queue.csv",
+      "gate": "required_gate_coverage_audit",
+      "status": "passed"
+    },
+    {
+      "detail": "run evidence, data integrity, runtime parity, artifact lineage, result judgment, and claim discipline receipts emitted",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335H/run_evidence_system_receipt.json",
+      "gate": "skill_receipt_lint",
+      "status": "passed"
+    }
+  ]
+}
