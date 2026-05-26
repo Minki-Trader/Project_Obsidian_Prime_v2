@@ -1,0 +1,89 @@
+{
+  "research_path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331B/candidate_survival_summary.csv",
+  "runtime_path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5",
+  "shared_contract": "run330E model, feature CSV, feature order, fixed threshold, risk and lot logic are reused; only run/report/telemetry identity is isolated",
+  "known_differences": [
+    "InpExplorationLabel",
+    "InpRunId",
+    "InpTelemetryCsvPath",
+    "InpSummaryCsvPath"
+  ],
+  "parity_check": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/runtime_replay_compare_report.csv",
+  "parity_identity": {
+    "module_hashes": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "status": "present",
+        "sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "status": "present",
+        "sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "status": "present",
+        "sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "status": "present",
+        "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "status": "present",
+        "sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "status": "present",
+        "sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "status": "present",
+        "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+      }
+    ],
+    "compile": {
+      "status": "completed",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+        "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "/log:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\331_overfit_guard__cross_horizon_cost_curve_parity_probe\\02_runs\\run331C\\mt5\\mt5_compile.log"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "",
+      "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/mt5_compile.log",
+      "command_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/mt5_compile.log",
+      "actual_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/mt5_compile.log",
+      "log_sha256": "71b04d8f17e14d6e234677104535ed5c5b424ee60749c4c50e567f7b9cc05921"
+    },
+    "terminal_process_probe": {
+      "status": "not_running",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+      ],
+      "returncode": 0,
+      "processes": [
+        {
+          "ProcessId": 22520,
+          "ExecutablePath": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "CommandLine": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ],
+      "matching_processes": []
+    },
+    "planned_attempt_count": 6,
+    "completed_attempt_count": 6,
+    "matched_attempt_count": 6,
+    "runtime_blockers": []
+  },
+  "runtime_claim_boundary": "runtime_probe_only_no_runtime_authority"
+}

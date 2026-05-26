@@ -1,0 +1,529 @@
+{
+  "tester_identity": {
+    "terminal": "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+    "terminal_extra_args": [
+      "/portable"
+    ],
+    "broker_terminal_data_root": "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E",
+    "symbol": "US100",
+    "timeframe": "M5",
+    "deposit": "500",
+    "leverage": "1:100",
+    "modeling_mode": "Every tick based on real ticks / MT5 model=4",
+    "date_range": [
+      "2026.04.14..2026.05.23",
+      "2026.04.14..2026.05.24"
+    ]
+  },
+  "ea_identity": {
+    "entrypoint": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "module_hashes": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "status": "present",
+        "sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "status": "present",
+        "sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "status": "present",
+        "sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "status": "present",
+        "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "status": "present",
+        "sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "status": "present",
+        "sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "status": "present",
+        "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+      }
+    ],
+    "set_files": [
+      {
+        "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/c56_bal_rf.set",
+        "sha256": "cb7e0be046e8a44d02744295abe6f3dbf1ab3437f79647b220d908d05b12cbe1",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/c56_plain_rf.set",
+        "sha256": "4fdbd940df7e8c86e03c2e0cc4c630e8e9d9fe3e36f3e7461dc6f7a162358053",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/m48_bal_rf.set",
+        "sha256": "053e91165e92fd21ad96ae8ec2e4e446a6cf781a9248b72289503977210a5da3",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/m48_plain_rf.set",
+        "sha256": "ff25fbeaae6cd806539959be27755016cbda92ecd09285935d11e48d00378484",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/u42_bal_rf.set",
+        "sha256": "66a9880f5067409e14b955c918e8663b7d779fb7b3fe0517b4921bdacafe087d",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/u42_plain_rf.set",
+        "sha256": "d5ac87cb1fe37f185d0349d7d960514753ae0ab64474f40d11b17dc6d66f93c2",
+        "format": "mt5_set",
+        "parameter_count": 49
+      }
+    ],
+    "model_hashes": {
+      "c56_bal": "0685c7be80c7a9871f626201a8641c33903773bec62b8453405c73fe6e511369",
+      "c56_plain": "28d6a644c4c3d8b322093c676c801f867d82568163a502e97457b46d5b530c85",
+      "m48_bal": "2c5f7bf622bb77dbd8001ccf0eb438aaa3547a37270b7867422495efdb100659",
+      "m48_plain": "ed80d304d1ce4a3b56b0cbcac8143b3b35b078dca899eee838dedca77846eee9",
+      "u42_bal": "ea676504449e5f1818e93f852bb24227d463b421ede69f4a20fe6b1d0b3425b7",
+      "u42_plain": "f6e1232824dfe499551e21e1a571e0abbb9ca96442752987cb9f0d8107330cc8"
+    }
+  },
+  "report_identity": [
+    {
+      "attempt_name": "c56_bal_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_bal_rf",
+      "status": "completed",
+      "html_report": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_bal_rf.htm",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_bal_rf.htm",
+        "sha256": "5bbf7f3b3288e2fd7af7f56e3177f4c9e10a8044d079ce20cb35ee5d0514d5c3"
+      },
+      "metrics": {
+        "status": "completed",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_bal_rf.htm",
+        "source_encoding": "utf-16",
+        "parsed_row_count": 426,
+        "net_profit": 1.45,
+        "gross_profit": 342.9,
+        "gross_loss": -341.45,
+        "profit_factor": 1.0,
+        "expectancy": 0.02,
+        "recovery_factor": 0.01,
+        "sharpe_ratio": 0.07,
+        "balance_drawdown_maximal_amount": 106.45,
+        "balance_drawdown_maximal_percent": 21.29,
+        "equity_drawdown_maximal_amount": 112.77,
+        "equity_drawdown_maximal_percent": 22.55,
+        "trade_count": 75,
+        "short_trade_count": 33,
+        "short_win_rate_percent": 39.39,
+        "long_trade_count": 42,
+        "long_win_rate_percent": 61.9,
+        "deal_count": 150,
+        "winning_trade_count": 39,
+        "win_rate_percent": 52.0,
+        "losing_trade_count": 36,
+        "loss_rate_percent": 48.0,
+        "max_drawdown_amount": 112.77,
+        "max_drawdown_percent": 22.55,
+        "missing_required_metrics": []
+      },
+      "chart": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_bal_rf.png",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_bal_rf.png",
+        "sha256": "1acc0d097654c8ee94544610c71b09a8a2b323c9593b4feb1e5b22597b5a355f"
+      }
+    },
+    {
+      "attempt_name": "c56_plain_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_plain_rf",
+      "status": "completed",
+      "html_report": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_plain_rf.htm",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_plain_rf.htm",
+        "sha256": "a4aab23b32ba8cfce2bf85fea2d2a62cf2329a32a16dae8cf33e57f387e9a7ab"
+      },
+      "metrics": {
+        "status": "completed",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_plain_rf.htm",
+        "source_encoding": "utf-16",
+        "parsed_row_count": 434,
+        "net_profit": 147.06,
+        "gross_profit": 365.89,
+        "gross_loss": -218.83,
+        "profit_factor": 1.67,
+        "expectancy": 1.91,
+        "recovery_factor": 2.09,
+        "sharpe_ratio": 9.48,
+        "balance_drawdown_maximal_amount": 53.23,
+        "balance_drawdown_maximal_percent": 7.74,
+        "equity_drawdown_maximal_amount": 70.4,
+        "equity_drawdown_maximal_percent": 10.08,
+        "trade_count": 77,
+        "short_trade_count": 19,
+        "short_win_rate_percent": 52.63,
+        "long_trade_count": 58,
+        "long_win_rate_percent": 62.07,
+        "deal_count": 154,
+        "winning_trade_count": 46,
+        "win_rate_percent": 59.74,
+        "losing_trade_count": 31,
+        "loss_rate_percent": 40.26,
+        "max_drawdown_amount": 70.4,
+        "max_drawdown_percent": 10.08,
+        "missing_required_metrics": []
+      },
+      "chart": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_plain_rf.png",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_c56_plain_rf.png",
+        "sha256": "0790d51cd686bd9f4fe0e98a442977cd8ed528f0bba3951dbfde61d6147f7b49"
+      }
+    },
+    {
+      "attempt_name": "m48_bal_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_bal_rf",
+      "status": "completed",
+      "html_report": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_bal_rf.htm",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_bal_rf.htm",
+        "sha256": "96d03ecb6091384fbf509e6dc9e2c2cd48a5002660e8426d835e0d13794d6005"
+      },
+      "metrics": {
+        "status": "completed",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_bal_rf.htm",
+        "source_encoding": "utf-16",
+        "parsed_row_count": 1234,
+        "net_profit": 57.84,
+        "gross_profit": 774.64,
+        "gross_loss": -716.8,
+        "profit_factor": 1.08,
+        "expectancy": 0.21,
+        "recovery_factor": 0.4,
+        "sharpe_ratio": 1.8,
+        "balance_drawdown_maximal_amount": 133.91,
+        "balance_drawdown_maximal_percent": 26.29,
+        "equity_drawdown_maximal_amount": 143.61,
+        "equity_drawdown_maximal_percent": 28.11,
+        "trade_count": 277,
+        "short_trade_count": 61,
+        "short_win_rate_percent": 40.98,
+        "long_trade_count": 216,
+        "long_win_rate_percent": 53.7,
+        "deal_count": 554,
+        "winning_trade_count": 141,
+        "win_rate_percent": 50.9,
+        "losing_trade_count": 136,
+        "loss_rate_percent": 49.1,
+        "max_drawdown_amount": 143.61,
+        "max_drawdown_percent": 28.11,
+        "missing_required_metrics": []
+      },
+      "chart": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_bal_rf.png",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_bal_rf.png",
+        "sha256": "24be857d3d4d2bbcfd2d099bd86ddf5a598eca0bce07d8d9fc2f317842fda110"
+      }
+    },
+    {
+      "attempt_name": "m48_plain_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_plain_rf",
+      "status": "completed",
+      "html_report": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_plain_rf.htm",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_plain_rf.htm",
+        "sha256": "4161fd142b2e199b26f8c1dfd75844f4baf4b61323b1c2e08500a2fdf0bfb0bf"
+      },
+      "metrics": {
+        "status": "completed",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_plain_rf.htm",
+        "source_encoding": "utf-16",
+        "parsed_row_count": 1202,
+        "net_profit": 269.88,
+        "gross_profit": 823.05,
+        "gross_loss": -553.17,
+        "profit_factor": 1.49,
+        "expectancy": 1.0,
+        "recovery_factor": 3.46,
+        "sharpe_ratio": 9.03,
+        "balance_drawdown_maximal_amount": 68.57,
+        "balance_drawdown_maximal_percent": 12.43,
+        "equity_drawdown_maximal_amount": 77.96,
+        "equity_drawdown_maximal_percent": 14.1,
+        "trade_count": 269,
+        "short_trade_count": 31,
+        "short_win_rate_percent": 54.84,
+        "long_trade_count": 238,
+        "long_win_rate_percent": 57.14,
+        "deal_count": 538,
+        "winning_trade_count": 153,
+        "win_rate_percent": 56.88,
+        "losing_trade_count": 116,
+        "loss_rate_percent": 43.12,
+        "max_drawdown_amount": 77.96,
+        "max_drawdown_percent": 14.1,
+        "missing_required_metrics": []
+      },
+      "chart": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_plain_rf.png",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_m48_plain_rf.png",
+        "sha256": "770eeee81cddd339f35f42d3ea38e56f89cd1dc5dcbccad4bcfcea16bbc047f5"
+      }
+    },
+    {
+      "attempt_name": "u42_bal_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_bal_rf",
+      "status": "completed",
+      "html_report": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_bal_rf.htm",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_bal_rf.htm",
+        "sha256": "e775016a13dfd05047dcf9a12b3040e6b01c04b12eb63b09aa78b9ef51cc2654"
+      },
+      "metrics": {
+        "status": "completed",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_bal_rf.htm",
+        "source_encoding": "utf-16",
+        "parsed_row_count": 1418,
+        "net_profit": 8.66,
+        "gross_profit": 829.99,
+        "gross_loss": -821.33,
+        "profit_factor": 1.01,
+        "expectancy": 0.03,
+        "recovery_factor": 0.05,
+        "sharpe_ratio": 0.27,
+        "balance_drawdown_maximal_amount": 158.45,
+        "balance_drawdown_maximal_percent": 30.12,
+        "equity_drawdown_maximal_amount": 163.25,
+        "equity_drawdown_maximal_percent": 30.87,
+        "trade_count": 323,
+        "short_trade_count": 58,
+        "short_win_rate_percent": 39.66,
+        "long_trade_count": 265,
+        "long_win_rate_percent": 53.58,
+        "deal_count": 646,
+        "winning_trade_count": 165,
+        "win_rate_percent": 51.08,
+        "losing_trade_count": 158,
+        "loss_rate_percent": 48.92,
+        "max_drawdown_amount": 163.25,
+        "max_drawdown_percent": 30.87,
+        "missing_required_metrics": []
+      },
+      "chart": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_bal_rf.png",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_bal_rf.png",
+        "sha256": "ed4ac1e1d92f1f0639ee6de7cdf5b5cf752091a2c5bc5c0307246349847a8c7c"
+      }
+    },
+    {
+      "attempt_name": "u42_plain_rf",
+      "tier": "Tier A",
+      "split": "forward_raw_forward",
+      "report_name": "Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_plain_rf",
+      "status": "completed",
+      "html_report": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_plain_rf.htm",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_plain_rf.htm",
+        "sha256": "d3655f66b309faeb3f0975ef9064539f6760da684d8fe47b295cb7086770eea1"
+      },
+      "metrics": {
+        "status": "completed",
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_plain_rf.htm",
+        "source_encoding": "utf-16",
+        "parsed_row_count": 1430,
+        "net_profit": 119.91,
+        "gross_profit": 824.25,
+        "gross_loss": -704.34,
+        "profit_factor": 1.17,
+        "expectancy": 0.37,
+        "recovery_factor": 1.06,
+        "sharpe_ratio": 4.06,
+        "balance_drawdown_maximal_amount": 95.53,
+        "balance_drawdown_maximal_percent": 14.97,
+        "equity_drawdown_maximal_amount": 112.86,
+        "equity_drawdown_maximal_percent": 17.37,
+        "trade_count": 326,
+        "short_trade_count": 30,
+        "short_win_rate_percent": 56.67,
+        "long_trade_count": 296,
+        "long_win_rate_percent": 56.42,
+        "deal_count": 652,
+        "winning_trade_count": 184,
+        "win_rate_percent": 56.44,
+        "losing_trade_count": 142,
+        "loss_rate_percent": 43.56,
+        "max_drawdown_amount": 112.86,
+        "max_drawdown_percent": 17.37,
+        "missing_required_metrics": []
+      },
+      "chart": {
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_plain_rf.png",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/mt5/reports/Project_Obsidian_Prime_v2_run331C_runtime_replay_or_block_cross_horizon_probe_v1_u42_plain_rf.png",
+        "sha256": "5c97c75c3efcd8f438a11cbf16707f34c7842617767c6c267cf132f81bea5967"
+      }
+    }
+  ],
+  "trade_evidence": [
+    {
+      "attempt_name": "c56_bal_rf",
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "source_trade_count": 75,
+      "replay_trade_count": 75,
+      "source_net_profit": 1.45,
+      "replay_net_profit": 1.45,
+      "net_delta": 0.0,
+      "source_profit_factor": 1.0,
+      "replay_profit_factor": 1.0,
+      "pf_delta": 0.0,
+      "source_order_fill_count": 134,
+      "replay_order_fill_count": 134,
+      "source_model_ok_count": 2070,
+      "replay_model_ok_count": 2070,
+      "metrics_match": true,
+      "blocker": "",
+      "boundary": "runtime_replay_probe_only_no_runtime_authority"
+    },
+    {
+      "attempt_name": "c56_plain_rf",
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "source_trade_count": 77,
+      "replay_trade_count": 77,
+      "source_net_profit": 147.06,
+      "replay_net_profit": 147.06,
+      "net_delta": 0.0,
+      "source_profit_factor": 1.67,
+      "replay_profit_factor": 1.67,
+      "pf_delta": 0.0,
+      "source_order_fill_count": 142,
+      "replay_order_fill_count": 142,
+      "source_model_ok_count": 2070,
+      "replay_model_ok_count": 2070,
+      "metrics_match": true,
+      "blocker": "",
+      "boundary": "runtime_replay_probe_only_no_runtime_authority"
+    },
+    {
+      "attempt_name": "m48_bal_rf",
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "source_trade_count": 277,
+      "replay_trade_count": 277,
+      "source_net_profit": 57.84,
+      "replay_net_profit": 57.84,
+      "net_delta": 0.0,
+      "source_profit_factor": 1.08,
+      "replay_profit_factor": 1.08,
+      "pf_delta": 0.0,
+      "source_order_fill_count": 513,
+      "replay_order_fill_count": 513,
+      "source_model_ok_count": 5484,
+      "replay_model_ok_count": 5484,
+      "metrics_match": true,
+      "blocker": "",
+      "boundary": "runtime_replay_probe_only_no_runtime_authority"
+    },
+    {
+      "attempt_name": "m48_plain_rf",
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "source_trade_count": 269,
+      "replay_trade_count": 269,
+      "source_net_profit": 269.88,
+      "replay_net_profit": 269.88,
+      "net_delta": 0.0,
+      "source_profit_factor": 1.49,
+      "replay_profit_factor": 1.49,
+      "pf_delta": 0.0,
+      "source_order_fill_count": 519,
+      "replay_order_fill_count": 519,
+      "source_model_ok_count": 5484,
+      "replay_model_ok_count": 5484,
+      "metrics_match": true,
+      "blocker": "",
+      "boundary": "runtime_replay_probe_only_no_runtime_authority"
+    },
+    {
+      "attempt_name": "u42_bal_rf",
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "source_trade_count": 323,
+      "replay_trade_count": 323,
+      "source_net_profit": 8.66,
+      "replay_net_profit": 8.66,
+      "net_delta": 0.0,
+      "source_profit_factor": 1.01,
+      "replay_profit_factor": 1.01,
+      "pf_delta": 0.0,
+      "source_order_fill_count": 616,
+      "replay_order_fill_count": 616,
+      "source_model_ok_count": 7648,
+      "replay_model_ok_count": 7648,
+      "metrics_match": true,
+      "blocker": "",
+      "boundary": "runtime_replay_probe_only_no_runtime_authority"
+    },
+    {
+      "attempt_name": "u42_plain_rf",
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "source_trade_count": 326,
+      "replay_trade_count": 326,
+      "source_net_profit": 119.91,
+      "replay_net_profit": 119.91,
+      "net_delta": 0.0,
+      "source_profit_factor": 1.17,
+      "replay_profit_factor": 1.17,
+      "pf_delta": 0.0,
+      "source_order_fill_count": 640,
+      "replay_order_fill_count": 640,
+      "source_model_ok_count": 7648,
+      "replay_model_ok_count": 7648,
+      "metrics_match": true,
+      "blocker": "",
+      "boundary": "runtime_replay_probe_only_no_runtime_authority"
+    }
+  ],
+  "cost_assumptions": {
+    "spread": "broker tester setting, not overwritten by run331C",
+    "commission": "broker tester setting, not overwritten by run331C",
+    "slippage": "InpDeviationPoints/default EA behavior; no optimization",
+    "swap": "broker tester setting"
+  },
+  "forensic_checks": [
+    "MetaEditor compile attempted before tester run.",
+    "Runtime telemetry and summary files were isolated under the run331C common path.",
+    "Strategy report artifacts were copied into the run331C run folder.",
+    "Replay metrics were compared against run330E source metrics without retuning."
+  ],
+  "backtest_judgment": "usable_with_boundary"
+}

@@ -1,0 +1,17 @@
+{
+  "result_subject": "run331C_runtime_replay_or_block_cross_horizon_probe_v1",
+  "evidence_available": [
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/runtime_replay_compare_report.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/decision_surface_replay_diff.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/backtest_forensics_receipt.json"
+  ],
+  "evidence_missing": [
+    "final Stage331 pass/fail decision",
+    "D/B source attribution remains outside this replay scope",
+    "runtime authority evidence is not claimed"
+  ],
+  "judgment_label": "runtime_probe",
+  "claim_boundary": "research_development_only_runtime_replay_cross_horizon_probe_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "next_condition": "run331D_final_cross_horizon_overfit_guard_decision_v1",
+  "user_explanation_hook": "같은 입력을 새 경로로 다시 돌려 재현성을 봤지만, 운영 권위나 목표 달성은 아니다."
+}

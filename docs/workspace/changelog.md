@@ -4153,3 +4153,11 @@
 - judgment(판정): `no_retune_materialization_completed_research_only_no_goal_achieve`
 - next_action(다음 행동): `run331C_runtime_replay_or_block_cross_horizon_probe_v1`
 - effect(효과): 새 후보 선택 없이 run331C(331C 실행)의 runtime replay or block(런타임 재생 또는 차단) 입력을 만든다.
+
+## 2026-05-26 - Stage331C Runtime Replay Cross-Horizon Probe(331C 런타임 재생 교차 기간 탐침)
+
+- run331C(331C 실행): run330E MT5 런타임 입력을 재튜닝 없이 새 report/telemetry(보고서/실행 기록) 경로에서 재실행했다.
+- status(상태): `blocked_runtime_replay_cross_horizon_probe_no_forward_decision`
+- judgment(판정): `materialized_only_no_external_runtime_execution`
+- next_action(다음 행동): `repair_stage331C_runtime_replay_blocker_then_rerun`
+- effect(효과): runtime parity(런타임 동등성) 근거를 강화했지만 Goal Achieve(목표 달성)는 주장하지 않는다.
