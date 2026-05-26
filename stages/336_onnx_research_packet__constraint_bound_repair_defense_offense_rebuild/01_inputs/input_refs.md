@@ -60,3 +60,14 @@ Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected
 - protocol_acceptance_matrix(계약 승인 행렬): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/protocol_acceptance_matrix.csv`
 - run336F_blueprint_queue(336F 청사진 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/run336F_execution_blueprint_queue.csv`
 - final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336E/final_protocol_review_decision.json`
+
+## run336F Execution Blueprints(336F 실행 청사진)
+
+- blueprint_catalog(청사진 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/execution_blueprint_catalog.csv`
+- blueprint_field_contracts(청사진 필드 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/blueprint_field_contract_matrix.csv`
+- negative_control_blueprints(부정 대조 청사진): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/negative_control_runner_blueprints.csv`
+- proxy_mt5_blueprints(프록시-MT5 청사진): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/proxy_mt5_runtime_usability_blueprints.csv`
+- runtime_identity_blueprints(런타임 정체성 청사진): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/runtime_identity_blueprints.csv`
+- gate_regime_tier_blueprints(게이트/국면/티어 청사진): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/gate_runner_blueprints.csv`; `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/regime_slice_runner_blueprints.csv`; `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/tier_no_lookahead_runner_blueprints.csv`
+- run336G_review_queue(336G 검토 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/run336G_review_queue.csv`
+- final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336F/final_execution_blueprint_materialization_decision.json`

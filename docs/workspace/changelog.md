@@ -4519,3 +4519,11 @@
 - decision(결정): `stage336E_protocols_reviewed_run336F_execution_blueprints_ready_no_selection`
 - effect(효과): run336D(336D 실행) 구현 계약을 검토하고 run336F execution blueprint queue(336F 실행 청사진 대기열) `9`행을 만들었다.
 - boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336F Execution Blueprints(336F 실행 청사진)
+
+- run_id(실행 ID): `run336F_materialize_constraint_bound_execution_blueprints_v1`
+- status(상태): `completed_constraint_bound_execution_blueprints_materialized_no_selection`
+- decision(결정): `stage336F_execution_blueprints_materialized_run336G_review_ready_no_selection`
+- effect(효과): execution blueprint(실행 청사진) `31`행과 run336G review queue(336G 검토 대기열) `7`행을 만들었다.
+- boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
