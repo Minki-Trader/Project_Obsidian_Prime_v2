@@ -25,3 +25,11 @@ Effect(효과): Stage329(329단계)의 c56_plain(낮은 압력 단서)을 곧바
 - decision(결정): `stage330B_control_surfaces_materialized_curve_and_runtime_review_next`
 - next_action(다음 행동): `run330C_forward_mt5_or_score_curve_review_v1`
 - effect(효과): fixed threshold(고정 임계값) score/signal payload(점수/신호 인계물)를 만들었고, raw/session gap(원본/세션 간극)과 ONNX parity(온엑스 동등성)를 다음 검토의 필수 입력으로 고정했다.
+
+## run330C_score_curve_cost_pressure_summary(330C 점수 곡선 비용 압박 요약)
+
+- run(실행): `run330C_forward_mt5_or_score_curve_review_v1`
+- status(상태): `completed_score_curve_cost_pressure_review_no_forward_decision`
+- decision(결정): `stage330C_score_curve_pressure_fragile_runtime_and_regime_review_next`
+- next_action(다음 행동): `run330D_regime_attribution_v1`
+- effect(효과): score proxy(점수 대리검증)와 session MT5 reference(세션 MT5 참고)를 분리했고, raw-forward MT5(원본 전진 MT5)가 없어서 선택 후보와 Forward Passed(전진 통과)는 없다.

@@ -1,0 +1,10 @@
+{
+  "observed_change": "run330B signals are converted into score-curve proxy trades and compared with old-session MT5 reference.",
+  "comparison_baseline": "run329F_forward_mt5_kpi_regime_cost_curve_review_v1",
+  "likely_drivers": "raw/session density, long/short skew, high-pressure controls, cost sensitivity, curve pocket concentration",
+  "segment_checks": "view, direction, month, hour, session, volatility, ADX, VIX, USD, rate, curve thirds, rolling worst 20",
+  "trade_shape": "score_curve_proxy_kpi_report.csv plus score_curve_pocket_report.csv",
+  "alternative_explanations": "proxy fill model is not MT5; latest broker bars have documented tail gap in run330B",
+  "attribution_confidence": "medium_for_score_proxy_low_for_runtime",
+  "next_probe": "run330D_regime_attribution_v1"
+}

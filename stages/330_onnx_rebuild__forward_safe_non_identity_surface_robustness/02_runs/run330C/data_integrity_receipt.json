@@ -1,0 +1,15 @@
+{
+  "data_source": [
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/signal_payload_manifest.csv",
+    "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/forward_mt5_kpi_report.csv"
+  ],
+  "time_axis": "US100 M5 broker bars use MT5 API Unix seconds converted to UTC; signal timestamps are UTC bar opens.",
+  "sample_scope": "2026-04-14+ latest forward raw and old-session parity views from run330B.",
+  "missing_or_duplicate_check": "Exact timestamp coverage checked through score_proxy_coverage_audit.csv.",
+  "feature_label_boundary": "No labels or future outcome columns are used for signal generation; forward outcome is read only for proxy scoring.",
+  "split_boundary": "Latest forward holdout only; no threshold, feature, or lot tuning.",
+  "leakage_risk": "Score proxy outcome is not a training input and cannot select or tune thresholds in this run.",
+  "data_hash_or_identity": "bab6e86560e3dff5360ff3b6c68b98970a4aeca03482542d14c0781b466079e3",
+  "integrity_judgment": "usable_with_boundary_score_proxy_not_mt5"
+}

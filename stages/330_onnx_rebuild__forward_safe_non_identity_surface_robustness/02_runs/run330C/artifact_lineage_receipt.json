@@ -1,0 +1,171 @@
+{
+  "stage_id": "330_onnx_rebuild__forward_safe_non_identity_surface_robustness",
+  "run_id": "run330C_forward_mt5_or_score_curve_review_v1",
+  "parent_run_id": "run330B_materialize_forward_safe_non_identity_control_surfaces_v1",
+  "source_runs": [
+    "run330B_materialize_forward_safe_non_identity_control_surfaces_v1",
+    "run329F_forward_mt5_kpi_regime_cost_curve_review_v1"
+  ],
+  "generated_at_utc": "2026-05-26T01:43:22Z",
+  "inputs": [
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/signal_payload_manifest.csv",
+      "sha256": "bab6e86560e3dff5360ff3b6c68b98970a4aeca03482542d14c0781b466079e3"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330B/raw_session_gap_guard.csv",
+      "sha256": "f2fab59505a2c2bdd98ac12c23946eac39115be075e9b0b6f830e3cb864780ab"
+    },
+    {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329F/forward_mt5_kpi_report.csv",
+      "sha256": "89519f2a348aff048f64ea67b8be94a98c2f9aac504ff1359a910dc29d400765"
+    },
+    {
+      "path": "stages/326_forward__cp322a_frozen_forward_gate/01_inputs/raw_m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "588ff618448decee1e4f881c1fe5efd0b2c9048e8b8bc4202e91507a3f234adf"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_proxy_trade_records.csv",
+      "sha256": "d26b1334d335e1fedb31e28285d3f94814b3fa771666d064fd681ebd3a0e5409",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_curve_proxy_kpi_report.csv",
+      "sha256": "c472f6b1cb2261307ada887cefffc85c3f47aa9202aba0f233b53f57188283d8",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_proxy_coverage_audit.csv",
+      "sha256": "57b073a3dc8e8fe09420b3b1b67efb510e7d23c5eeada19e6b82a95917cc142d",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_curve_pocket_report.csv",
+      "sha256": "03c5be71d558aff60caf69b3d8e8cbbc775e1817671e97fbfa28e94a159f17a7",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_underwater_stretch_report.csv",
+      "sha256": "fa63e9e64cec6b24d9503f7e9512b12a24fddb06177574b3dfb1cff591686eae",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_cost_stress_report.csv",
+      "sha256": "4dc34689d375c7ede113c443520591a839b07105190096fd8d00df29ec21a023",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_lot_normalized_report.csv",
+      "sha256": "0d1f3e91f1123cb7f19f02f844bc5e851e54bd66e337d32f28214321657bcb51",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_long_short_attribution_report.csv",
+      "sha256": "4aa594b8e08c60f2af7eaae04d3416daa11ed00781bd5b7d854dbc57ed54273f",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_regime_attribution_proxy_report.csv",
+      "sha256": "561b1c3a0a84640c26931404e968f97a6dc9fa92e1537431fa48a954c80f0f57",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/db_attribution_report.csv",
+      "sha256": "569f44a173629ee52a8fb73603620ed822d5295b17f69c9b12cca260b27faceb",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/score_mt5_bridge_comparison.csv",
+      "sha256": "a90309874bcea8756dcb6876e4ce29a0c60bc4b8636fed55fdd5da46ee738c67",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/raw_session_curve_gap_report.csv",
+      "sha256": "be7378ed5f115bb71da4a12a31cd8336dee2037e60e7325db1bb3da495d798d1",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/session_mt5_reference_kpi_report.csv",
+      "sha256": "30fb11b9d00d2e73910ce28df4cec7ea8f0d8f9c585728dabf9fc7efcf4f551b",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/session_mt5_reference_cost_stress_report.csv",
+      "sha256": "5fbbb68f3e0bcb78e1d8f24b0318a9d642a153f4bb06b0d23b275852a66a527f",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/session_mt5_reference_curve_pocket_report.csv",
+      "sha256": "1548e198f2be475d684301cda8381ce84a510b6c2ba3a071c7f8e2cc8b38f8fc",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/session_mt5_reference_trade_records.csv",
+      "sha256": "8fe07e7e4cd9949f3c13ed9229697184076a208386003c87a27b8d24eb7b6c7a",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/required_gate_coverage_audit.csv",
+      "sha256": "38d7790d334381ab7684d15423ed99dc69c7cb22a2033d2a25fc192ba5f7dd7c",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/data_integrity_receipt.json",
+      "sha256": "ed759fc459f38f5da1b52068c51464e58194c4331499a7341559933e4b8062f5",
+      "artifact_type": "json_receipt"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/model_validation_receipt.json",
+      "sha256": "1981c18669abcb6aae25a7f50fac98ed0d7df88c70a450cfd9eb68a6193e80d0",
+      "artifact_type": "json_receipt"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/runtime_parity_receipt.json",
+      "sha256": "cd80caaea644dec5253bc7d381bf270dbec04b2b1c08001ed2441481fddf52c3",
+      "artifact_type": "json_receipt"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/backtest_forensics_receipt.json",
+      "sha256": "e2f3f518dae1ebd99f575f92bef0acaaf33ff875c7a84dda55a7b0c459ad2ddb",
+      "artifact_type": "json_receipt"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/performance_attribution_receipt.json",
+      "sha256": "cf4644d3429bb3068f96bb91adfa1cd76e4ea5e285ac0a61f0e19e4308852031",
+      "artifact_type": "json_receipt"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/final_forward_decision.json",
+      "sha256": "c56e793c432a0e1dd0abbe6f44c39d2f7c0237bbfda4f05a88bc84bac07fecd5",
+      "artifact_type": "json_receipt"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/result_judgment.csv",
+      "sha256": "0b784b75651c2eb1ac6106ce44ec0022a82aa710af8cbea132eefc238a5b08fe",
+      "artifact_type": "csv_report"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330C/run_manifest.json",
+      "sha256": "5b96ff813b7be63424316dcec73abdb42b839145ca0dfec11aa161bcf3506ac2",
+      "artifact_type": "json_receipt"
+    },
+    {
+      "path": "stage_pipelines/stage330/forward_mt5_or_score_curve_review.py",
+      "sha256": "1aae2424aa7fb09b6d0f366f93638c8892aa34e2f190f32821e44762ef2b4ae6",
+      "artifact_type": "pipeline_script"
+    },
+    {
+      "path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/03_reviews/run330C_forward_score_curve_cost_pressure_review.md",
+      "sha256": "8c74fe8b703bda15e4f95ff16f088bd35691ce40d51d85c637768851f1721b6c",
+      "artifact_type": "review_report"
+    },
+    {
+      "path": "docs/decisions/2026-05-26_stage330C_score_curve_cost_pressure_review.md",
+      "sha256": "27342a703d7a6eec1032b580922c4c37e753d863bfe382a81d59803c6d2c9e6b",
+      "artifact_type": "review_report"
+    }
+  ],
+  "claim_boundary": "research_development_only_score_curve_proxy_and_session_mt5_reference_no_forward_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

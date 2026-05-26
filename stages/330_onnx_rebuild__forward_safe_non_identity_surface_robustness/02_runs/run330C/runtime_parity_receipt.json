@@ -1,0 +1,16 @@
+{
+  "research_path": "stage_pipelines/stage330/forward_mt5_or_score_curve_review.py",
+  "runtime_path": "No new raw-forward MT5 tester run in run330C; Stage329F session-parity MT5 reports are reference only.",
+  "shared_contract": "run330B fixed signal payloads preserve timestamp, side, score, threshold, and view identity.",
+  "known_differences": [
+    "score proxy uses non-overlap hold12 close-to-close movement and is not the MT5 EA fill/risk engine",
+    "raw_forward MT5 report is missing",
+    "Stage329F MT5 evidence covers old_session_parity only"
+  ],
+  "parity_check": "score_mt5_bridge_comparison.csv compares old_session score proxy with Stage329F MT5; raw MT5 remains missing",
+  "parity_identity": {
+    "run330B_signal_manifest_sha256": "bab6e86560e3dff5360ff3b6c68b98970a4aeca03482542d14c0781b466079e3",
+    "run329F_mt5_kpi_sha256": "89519f2a348aff048f64ea67b8be94a98c2f9aac504ff1359a910dc29d400765"
+  },
+  "runtime_claim_boundary": "research_only_no_runtime_authority"
+}
