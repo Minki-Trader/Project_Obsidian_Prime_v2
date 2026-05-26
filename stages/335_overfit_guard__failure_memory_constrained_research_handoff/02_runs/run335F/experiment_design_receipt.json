@@ -1,0 +1,22 @@
+{
+  "changed_variables": "protocol measurement schemas and guardrail views only",
+  "comparison_baseline": "run335E reviewed branch input packages and Stage334/335 failure memory",
+  "control_variables": [
+    "fixed threshold policy",
+    "fixed lot/risk logic",
+    "paired Tier A/B/A+B reporting",
+    "no direct forward-pocket filter",
+    "no runtime authority without MT5 tester output"
+  ],
+  "decision_use": "may influence run335G materialization only; not candidate selection or forward pass/fail",
+  "evidence_plan": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/probe_protocol_design_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "any branch needs forbidden tuning or direct filtering to become materializable",
+  "hypothesis": "Reviewed branch inputs can be converted into predeclared probe protocols without fitting known forward pockets.",
+  "invalid_conditions": "payload missing, failed run335E review, missing claim boundary, or selection eligibility true",
+  "sample_scope": "US100 M5 Stage335 research design; no new market-data scoring",
+  "stop_conditions": "stop before materialization if any gate fails",
+  "success_criteria": "11 protocols have measurement, negative control, stop, runtime bridge, and no-retune guard"
+}

@@ -1,0 +1,253 @@
+{
+  "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "forbidden_outputs": [
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "check_status": "rejected_by_materialization_contract",
+      "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+      "forbidden_output": "candidate_signal"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "check_status": "rejected_by_materialization_contract",
+      "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+      "forbidden_output": "threshold_change"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "check_status": "rejected_by_materialization_contract",
+      "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+      "forbidden_output": "lot_change"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "check_status": "rejected_by_materialization_contract",
+      "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+      "forbidden_output": "direct_forward_pocket_filter"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "check_status": "rejected_by_materialization_contract",
+      "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+      "forbidden_output": "runtime_authority_claim"
+    }
+  ],
+  "negative_controls": [
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "claim_effect": "prevents branch design from becoming candidate claim",
+      "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "control_id": "negative_control_cost_stress",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+      "pass_condition": "target branch separates from control without forbidden repair"
+    }
+  ],
+  "next_consumer": "run335G_materialize_guarded_branch_probe_inputs_v1",
+  "parent_run_id": "run335E_review_guarded_branch_input_materialization_v1",
+  "protocol": {
+    "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+    "branch_name": "cost_spread_slippage_grid_guard",
+    "branch_type": "single_axis_guard",
+    "changed_variables": "cost stress labels and measurement columns only",
+    "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+    "comparison_baseline": "run335E reviewed branch inputs; Stage334/335 failure memory; no-trade/random/shuffle/adjacent controls",
+    "control_variables": [
+      "fixed selected subject boundary",
+      "fixed threshold policy until explicitly predeclared",
+      "fixed lot and risk logic",
+      "fixed ATR SL/TP logic",
+      "Tier A separate, Tier B separate, and Tier A+B combined reporting",
+      "no runtime authority without MT5 tester report and telemetry"
+    ],
+    "decision_use": "may_influence_next_materialization_only_not_candidate_selection",
+    "evidence_plan": [
+      "protocol payload",
+      "source binding manifest",
+      "negative control probe plan",
+      "stop condition probe plan",
+      "paired tier measurement plan",
+      "proxy expected result versus MT5 runtime probe comparison contract",
+      "runtime requirement bridge when runtime is touched",
+      "forbidden repair audit"
+    ],
+    "failure_axes": "[\"cost_stress\"]",
+    "failure_criteria": "branch only improves through forbidden tuning, direct filters, or subject swap",
+    "hypothesis": "cost_stress can guide a timestamp-safe research branch without direct forward-pocket fitting.",
+    "invalid_conditions": "threshold, lot, stop, target, or score cutoff changes after cost result",
+    "predeclared_measurements": "base_cost, cost_plus_1, cost_plus_2, widened_spread, slippage_shock",
+    "probe_family": "cost_stress_grid",
+    "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__cost_spread_slippage_grid_guard",
+    "protocol_status": "designed_ready_for_materialization",
+    "sample_scope": "US100 M5 Stage335 research probe design; post-2026-04-14 evidence remains research-only until runtime/data gates close",
+    "selection_eligible": "false",
+    "stop_conditions": "Stop or downgrade if any forbidden variable is required to improve the result.",
+    "success_criteria": "future materialization can produce measurement inputs without threshold retuning, lot optimization, direct forward-pocket filtering, or subject swap"
+  },
+  "run_id": "run335F_design_guarded_branch_probe_protocols_v1",
+  "runtime_gates": [],
+  "source_bindings": [
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "42",
+      "sha256": "6f91fe258b1548fd5273ba6aba99efed69eb0b3209a8de2dffeed54611d125de",
+      "source_exists": "true",
+      "source_id": "run330F_cost_stress_report",
+      "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/cost_stress_report.csv",
+      "source_role": "raw-forward cost stress report",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    },
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "12",
+      "sha256": "75de9b6b808e732fb748880b8056a790722c75d43b3eb2a44c652c6c60678689",
+      "source_exists": "true",
+      "source_id": "run334F_cost_stress_diagnostics",
+      "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/cost_stress_diagnostic_views.csv",
+      "source_role": "fixed no-retune cost diagnostic views",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    },
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "6",
+      "sha256": "96c71f627ab9799c9a9be9772eccd8186f0b97884e2bdfa43608285e3d36c426",
+      "source_exists": "true",
+      "source_id": "run334G_axis_failure_heatmap",
+      "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/axis_failure_heatmap.csv",
+      "source_role": "axis failure heatmap",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    },
+    {
+      "artifact_type": "csv_table",
+      "binding_status": "bound",
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "branch_name": "cost_spread_slippage_grid_guard",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+      "integrity_judgment": "usable_with_boundary",
+      "row_count": "7",
+      "sha256": "5eaacb4f13a86cf6c10f7a0e384626dcda1e2b3e5e57a13689ae92e6c8b00e62",
+      "source_exists": "true",
+      "source_id": "run335A_materialization_contract",
+      "source_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/next_materialization_contract.csv",
+      "source_role": "stage335A contract",
+      "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+    }
+  ],
+  "source_package": {
+    "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+    "branch_name": "cost_spread_slippage_grid_guard",
+    "branch_type": "single_axis_guard",
+    "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+    "evidence_requirement_count": "8",
+    "failure_axes": "[\"cost_stress\"]",
+    "missing_source_count": "0",
+    "negative_control_count": "1",
+    "package_id": "run335D_materialize_guarded_branch_research_inputs_v1__cost_spread_slippage_grid_guard",
+    "package_status": "materialized_input_spec_only",
+    "payload_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/branch_payloads/run335C_b01_cost_spread_slippage_grid_guard.json",
+    "payload_sha256": "c53492a0df1a5de639528bb861b83e645509b9490fbc8212943a6c16a7b5db4f",
+    "runtime_gate_count": "0",
+    "selection_eligible": "false",
+    "source_binding_count": "4",
+    "stop_condition_count": "6",
+    "tier_kpi_rows": "3"
+  },
+  "stage_id": "335_overfit_guard__failure_memory_constrained_research_handoff",
+  "stop_conditions": [
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "stop_or_downgrade",
+      "stop_rule_id": "forbidden_tuning_required",
+      "trigger": "improvement requires threshold, lot, stop, target, or direct pocket filter"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "downgrade_to_overfit_memory",
+      "stop_rule_id": "negative_control_tracks_target",
+      "trigger": "negative control improves similarly to target branch"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "missing_required_or_blocked",
+      "stop_rule_id": "tier_view_missing",
+      "trigger": "Tier A, Tier B, or combined view is absent without explicit boundary"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "no_runtime_claim",
+      "stop_rule_id": "runtime_evidence_missing",
+      "trigger": "MT5 tester report or telemetry is absent"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "invalid_or_must_reject",
+      "stop_rule_id": "subject_boundary_break",
+      "trigger": "cp322A exact is mixed with run333E or non-identity evidence"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "required_action": "blocked_until_repaired",
+      "stop_rule_id": "data_identity_mismatch",
+      "trigger": "source hash, row count, or time-axis identity mismatches"
+    }
+  ],
+  "tier_kpi_plan": [
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "kpi_scope": "signal/trade/risk/execution names preserved",
+      "meaning": "full-context sample read",
+      "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+      "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+      "required": "true",
+      "view": "Tier A separate"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "kpi_scope": "same KPI names with partial-context label",
+      "meaning": "partial-context sample read",
+      "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+      "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+      "required": "true",
+      "view": "Tier B separate"
+    },
+    {
+      "branch_id": "run335C_b01_cost_spread_slippage_grid_guard",
+      "kpi_scope": "synthetic sum cannot be called actual routed total",
+      "meaning": "combined read or actual routed total",
+      "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+      "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+      "required": "true",
+      "view": "Tier A+B combined"
+    }
+  ]
+}

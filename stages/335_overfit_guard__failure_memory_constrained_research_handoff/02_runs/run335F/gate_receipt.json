@@ -1,0 +1,71 @@
+{
+  "failed_gates": [],
+  "required_gates": [
+    {
+      "detail": "parent_failed_gates=0;failed_reviews=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/required_gate_coverage_audit.csv",
+      "gate": "parent_run335E_gate_inheritance",
+      "status": "passed"
+    },
+    {
+      "detail": "protocol_rows=11",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/probe_protocol_design_matrix.csv",
+      "gate": "protocol_design_count",
+      "status": "passed"
+    },
+    {
+      "detail": "payload_rows=11;missing_payloads=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/protocol_payload_manifest.csv",
+      "gate": "protocol_payload_count",
+      "status": "passed"
+    },
+    {
+      "detail": "measurement_rows=66",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/predeclared_measurement_plan.csv",
+      "gate": "measurement_plan_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "negative_control_rows=21",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/negative_control_probe_plan.csv",
+      "gate": "negative_control_probe_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "stop_condition_rows=66",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/stop_condition_probe_plan.csv",
+      "gate": "stop_condition_probe_coverage",
+      "status": "passed"
+    },
+    {
+      "detail": "runtime_bridge_rows=27;no_runtime_authority_claimed",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/runtime_bridge_requirement_plan.csv",
+      "gate": "runtime_bridge_boundary",
+      "status": "passed"
+    },
+    {
+      "detail": "proxy_mt5_contract_rows=11;future_proxy_expected_and_mt5_actual_difference_required",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/proxy_mt5_comparison_contract.csv",
+      "gate": "proxy_mt5_comparison_contract",
+      "status": "passed"
+    },
+    {
+      "detail": "threshold, lot, direct pocket filter, runtime authority, and goal achieve outputs remain forbidden",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/no_retune_probe_guard.csv",
+      "gate": "no_retune_guard",
+      "status": "passed"
+    },
+    {
+      "detail": "queue_rows=11;selection_true=0",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/run335G_probe_input_materialization_queue.csv",
+      "gate": "run335G_queue_ready",
+      "status": "passed"
+    },
+    {
+      "detail": "selected_candidate=none;forward_passed=not_claimed;goal_achieve=not_claimed",
+      "evidence_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/result_judgment.csv",
+      "gate": "selection_claim_guard",
+      "status": "passed"
+    }
+  ]
+}

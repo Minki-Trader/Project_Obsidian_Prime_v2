@@ -53,3 +53,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - materialization_gap_register(실체화 공백 등록부): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/materialization_gap_register.csv`
 - run335F_probe_protocol_design_queue(335F 탐침 계약 설계 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335E/run335F_probe_protocol_design_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335E_guarded_branch_input_materialization_review.md`
+
+## run335F Probe Protocol Design(335F 탐침 계약 설계)
+
+- probe_protocol_design_matrix(탐침 계약 설계 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/probe_protocol_design_matrix.csv`
+- predeclared_measurement_plan(사전 선언 측정 계획): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/predeclared_measurement_plan.csv`
+- proxy_mt5_comparison_contract(대리검증 MT5 비교 계약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/proxy_mt5_comparison_contract.csv`
+- no_retune_probe_guard(무재튜닝 탐침 방어): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/no_retune_probe_guard.csv`
+- run335G_probe_input_materialization_queue(335G 탐침 입력 물질화 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/run335G_probe_input_materialization_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335F_guarded_branch_probe_protocol_design.md`
