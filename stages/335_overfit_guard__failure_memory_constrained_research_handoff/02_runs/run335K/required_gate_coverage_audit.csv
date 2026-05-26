@@ -1,0 +1,9 @@
+gate_name,status,evidence_path,effect
+source_identity_loaded,passed,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/independent_handoff_attempt_manifest.csv,six frozen run330E source attempts are isolated into run335K handoff files.
+no_retune_guard,passed,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/no_retune_handoff_audit.csv,"threshold, lot, risk, hold, and ATR keys stay unchanged while identity paths change."
+proxy_signal_expected_values,passed,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_signal_expected_values.csv,Python ONNX expected signal counts are independently materialized.
+mt5_runtime_execution,passed,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/mt5_fresh_runtime_probe_summary.csv,fresh MT5 tester reports and telemetry are required before runtime usability is raised.
+signal_parity_difference,passed,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_signal_vs_mt5_runtime_difference.csv,proxy expected signal counts are compared against MT5 telemetry counts.
+numeric_proxy_fresh_mt5_difference,passed_with_boundary,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_numeric_vs_fresh_mt5_difference.csv,run335J numeric proxy values are compared to fresh runtime aggregates as diagnostics only.
+claim_boundary,passed_no_goal_achieve,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/result_judgment.csv,"Forward Passed/Failed, runtime authority, and Goal Achieve remain not claimed."
+compile_or_existing_ex5,passed,stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/mt5/mt5_compile.log,EA compile or existing portable ex5 identity is recorded before tester output is trusted.

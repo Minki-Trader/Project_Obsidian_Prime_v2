@@ -4412,3 +4412,10 @@
 - decision(결정): `stage335J_proxy_mt5_existing_runtime_comparison_diagnostic_usable_not_forward_usable_no_selection`
 - effect(효과): proxy expected values(프록시 예상값), existing MT5 runtime values(기존 MT5 런타임 값), difference matrix(차이 행렬), usability decision(활용 가능성 결정)을 만들었다.
 - boundary(경계): diagnostic usable(진단 활용 가능)이나 forward pass/fail usable(전진 통과/실패 활용 가능)은 아님. Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - run335K_repair_independent_proxy_mt5_runtime_probe_materialization_v1
+
+- status(상태): `completed_independent_probe_inputs_materialized_execution_pending_no_forward_decision`
+- decision(결정): `stage335K_independent_runtime_materialization_or_probe_gap_repair_continues_no_selection`
+- effect(효과): 독립 proxy signal expected values(프록시 예상 신호값), fresh MT5 runtime summary(신규 MT5 런타임 요약), difference matrices(차이 행렬)를 만들었다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

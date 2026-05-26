@@ -1,0 +1,15 @@
+{
+  "claim_boundary": "research_development_only_stage335K_independent_proxy_mt5_probe_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "evidence_available": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/mt5_fresh_runtime_probe_summary.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_signal_vs_mt5_runtime_difference.csv"
+  ],
+  "evidence_missing": [
+    "branch-specific fresh P/L proxy model",
+    "cp322A exact post-2026-04-14 route signal"
+  ],
+  "judgment_label": "runtime_probe",
+  "next_condition": "run335L_independent_runtime_parity_and_proxy_usability_review_v1",
+  "result_subject": "run335K_repair_independent_proxy_mt5_runtime_probe_materialization_v1",
+  "user_explanation_hook": "Fresh MT5 rerun can support runtime parity diagnostics, but not forward pass/fail."
+}

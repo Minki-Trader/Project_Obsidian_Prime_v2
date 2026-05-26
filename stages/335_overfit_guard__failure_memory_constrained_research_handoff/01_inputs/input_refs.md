@@ -95,3 +95,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - difference_matrix(차이 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/proxy_mt5_difference_matrix.csv`
 - usability_decision(활용 가능성 결정): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335J/proxy_mt5_usability_decision_matrix.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335J_proxy_mt5_existing_runtime_comparison.md`
+
+## run335K_repair_independent_proxy_mt5_runtime_probe_materialization_v1
+
+- handoff_attempts(인계 시도): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/independent_handoff_attempt_manifest.csv`
+- proxy_signal_expected_values(프록시 예상 신호값): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_signal_expected_values.csv`
+- fresh_mt5_runtime_summary(신규 MT5 런타임 요약): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/mt5_fresh_runtime_probe_summary.csv`
+- signal_difference(신호 차이): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_signal_vs_mt5_runtime_difference.csv`
+- numeric_difference(숫자 차이): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_numeric_vs_fresh_mt5_difference.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335K_independent_proxy_mt5_runtime_probe.md`

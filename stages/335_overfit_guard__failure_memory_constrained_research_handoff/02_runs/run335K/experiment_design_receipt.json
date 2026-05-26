@@ -1,0 +1,27 @@
+{
+  "changed_variables": [
+    "run id",
+    "Common Files model/feature copy path",
+    "telemetry path",
+    "report name",
+    "magic number"
+  ],
+  "comparison_baseline": "run335J existing-runtime proxy comparison and run330E source attempts",
+  "control_variables": [
+    "same ONNX",
+    "same feature order",
+    "same min margin",
+    "same lot/risk/hold keys",
+    "same date range"
+  ],
+  "decision_use": "diagnostic runtime repair and proxy/MT5 usability review only",
+  "evidence_plan": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/proxy_signal_vs_mt5_runtime_difference.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/mt5_fresh_runtime_probe_summary.csv"
+  ],
+  "failure_criteria": "runtime reports missing or signal counts mismatch",
+  "hypothesis": "Fresh runtime identity plus independent Python ONNX signal expectations can separate runtime parity from reused existing MT5 evidence.",
+  "invalid_conditions": "threshold, lot, risk, ATR, or model file content changes",
+  "stop_conditions": "do not use as forward pass/fail if numeric proxy remains aggregate or subject boundary is non-exact cp322A",
+  "success_criteria": "all six attempts rerun and Python expected signal counts match MT5 telemetry"
+}
