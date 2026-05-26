@@ -1,5 +1,6 @@
 ﻿# Stage334 Selection Status(334단계 선택 상태)
 
+- stage_status(단계 상태): `closed_no_selection_failure_memory_handoff`
 - selected_candidate(선택 후보): `none`
 - cp322A_status(cp322A 상태): `research_artifact_preserved_exact_forward_handoff_missing`
 - latest_contract_design(최신 계약 설계): `run334A_design_forward_usable_onnx_handoff_contract_after_cp322a_boundary_v1`
@@ -9,7 +10,7 @@
 - latest_stress_design(최신 압박 설계): `run334E_design_no_retune_forward_usable_nonidentity_stress_probe_from_reconciled_memory_v1`
 - latest_stress_materialization(최신 압박 물질화): `run334F_materialize_no_retune_nonidentity_stress_probe_inputs_v1`
 - latest_stress_review(최신 압박 검토): `run334G_review_no_retune_stress_probe_materialization_and_failure_memory_v1`
-- active_question(활성 질문): `forward_usable_onnx_handoff_contract_hardening_without_overfit`
+- latest_closeout(최신 종료): `run334H_close_stage334_open_failure_memory_research_handoff_v1`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
 - live_readiness(실거래 준비): `not_claimed`
@@ -17,5 +18,6 @@
 - operating_promotion(운영 승격): `not_claimed`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run334H_close_stage334_open_failure_memory_research_handoff_v1`
-- effect(효과): Stage334G(334G 실행)는 6개 non-identity clue(비정체성 단서)를 모두 failure memory(실패 기억)로 닫고, Stage334 closeout/handoff(단계 종료/인계) 준비로 넘긴다.
+- next_stage(다음 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
+- next_action(다음 행동): `run335A_design_failure_memory_constrained_research_packet_v1`
+- effect(효과): Stage334(334단계)는 forward-usable ONNX handoff(전진 사용 가능 온엑스 인계)를 선택하지 못했고, 실패 기억을 Stage335(335단계)의 연구 제약으로 넘기며 닫혔다.

@@ -1,0 +1,13 @@
+﻿# Stage335 Input References(335단계 입력 참조)
+
+- source_stage(원천 단계): `334_runtime_parity__forward_usable_onnx_handoff_contract_hardening`
+- source_closeout_report(원천 종료 보고서): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/03_reviews/run334H_stage334_closeout_open_stage335.md`
+- stage334_closeout_summary(334단계 종료 요약): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage334_closeout_summary.csv`
+- failure_memory_handoff(실패 기억 인계): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage334_to_stage335_failure_memory_handoff.csv`
+- stage335_open_plan(335단계 개방 계획): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage335_open_plan.csv`
+- run334G_attempt_review(334G 시도 검토): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/attempt_failure_memory_review.csv`
+- run334G_axis_heatmap(334G 축 열지도): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/axis_failure_heatmap.csv`
+- run334G_runtime_identity_review(334G 런타임 정체성 검토): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/runtime_identity_review.csv`
+- run334G_overfit_rejection_audit(334G 과적합 거절 감사): `stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/overfit_rejection_audit.csv`
+
+Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)을 직접 제외 조건으로 쓰지 않고, 먼저 predeclared protocol(사전 선언 계약)을 만든다.
