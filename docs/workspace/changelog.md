@@ -4713,3 +4713,11 @@
 - action(행동): run337J(337J 실행)의 runner scaffold(러너 골격), preflight checklist(사전점검 목록), blocked command(차단 명령), claim boundary(주장 경계)를 검토했다.
 - effect(효과): run337L(337L 실행)에서 proxy expected/fresh MT5 input package(프록시 예상값/신규 메타트레이더5 입력 패키지)를 만들 수 있게 했다.
 - boundary(경계): model training(모델 학습), MT5 execution(MT5 실행), selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 모두 `not_claimed`다.
+
+## Stage337L Proxy MT5 Input Materialization(337L 프록시-MT5 입력 물질화)
+
+- run_id(실행 ID): `run337L_materialize_proxy_expected_fresh_mt5_probe_inputs_v1`
+- status(상태): `completed_proxy_expected_fresh_mt5_probe_inputs_materialized_no_mt5_execution`
+- decision(결정): `stage337L_proxy_mt5_inputs_ready_for_run337M_review_no_training_no_mt5_no_selection`
+- action(행동): proxy expected template(프록시 예상값 템플릿), fresh MT5 handoff package(신규 메타트레이더5 인계 패키지), difference/usability contract(차이/활용성 계약)를 만들었다.
+- effect(효과): run337M(337M 실행) 검토 대기열 `9`행을 열었고, MT5 execution(MT5 실행), Forward decision(전진 판정), runtime authority(런타임 권위)는 주장하지 않는다.

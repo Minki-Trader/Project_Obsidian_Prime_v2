@@ -1,15 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337L_materialize_proxy_expected_fresh_mt5_probe_inputs_v1`
+- current_run(현재 실행): `run337M_review_proxy_expected_fresh_mt5_probe_inputs_v1`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - source_stage(원천 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_runner_scaffold_review_accepts_run337L_materialization_no_training_no_mt5`
-- decision(결정): `stage337K_runner_scaffolds_reviewed_open_run337L_proxy_mt5_inputs_no_training_no_mt5_no_selection`
+- status(상태): `completed_proxy_expected_fresh_mt5_probe_inputs_materialized_no_mt5_execution`
+- decision(결정): `stage337L_proxy_mt5_inputs_ready_for_run337M_review_no_training_no_mt5_no_selection`
 - run337K_summary(337K 요약): `completed_runner_scaffold_review_accepts_run337L_materialization_no_training_no_mt5`. Effect(효과): runner scaffold review(러너 골격 검토)를 통과시키고 proxy expected/fresh MT5 input materialization(프록시 예상값/신규 메타트레이더5 입력 물질화)로 넘기며, 학습/MT5 실행/후보 선택은 계속 닫아둔다.
+- run337L_summary(337L 요약): `completed_proxy_expected_fresh_mt5_probe_inputs_materialized_no_mt5_execution`. Effect(효과): proxy expected/fresh MT5 input package(프록시 예상값/신규 메타트레이더5 입력 패키지)를 만들고 run337M(337M 실행) 검토로 넘기며, MT5 실행/학습/후보 선택은 계속 닫아둔다.
 - run337J_summary(337J 요약): `completed_runner_scaffolds_materialized_no_training_no_mt5`. Effect(효과): 러너 골격, 사전점검, 차단 실행 명령, 주장 경계 영수증을 만들고 run337K(337K 실행) 검토로 넘기며, 학습/MT5/후보 선택은 계속 닫아둔다.
 - run337I_summary(337I 요약): `completed_materialized_execution_package_review_accepts_runner_scaffold_queue_no_training_no_mt5`. Effect(효과): 패키지 명세를 검토 승인하고 run337J(337J 실행) 러너 뼈대 대기열로 넘기며, 학습/MT5/후보 선택은 계속 닫아둔다.
 - run337H_summary(337H 요약): `completed_reviewed_execution_packages_materialized_no_training_no_mt5`. Effect(효과): 8개 패키지 명세와 차단 행렬을 만들고 run337I(337I 실행) 검토 대기열로 넘기며, 학습/MT5/후보 선택은 계속 닫아둔다.
@@ -115,7 +116,7 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run337L_materialize_proxy_expected_fresh_mt5_probe_inputs_v1`
+- next_action(다음 행동): `run337M_review_proxy_expected_fresh_mt5_probe_inputs_v1`
 - claim_boundary(주장 경계): `research_development_only_subject_separated_runtime_probe_or_block_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.

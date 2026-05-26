@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "research_development_only_stage337L_proxy_mt5_input_materialization_no_model_training_no_mt5_execution_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "execution_command_created": false,
+  "execution_status": "not_run_in_run337L",
+  "forbidden": "model_training;mt5_execution;threshold_retune;lot_optimization;forward_pocket_filtering;candidate_selection;Forward_Passed;Forward_Failed;live_readiness;deployment;operating_promotion;runtime_authority;Goal_Achieve",
+  "forward_window_end_policy": "latest_available_at_future_execution_preflight",
+  "forward_window_start": "2026-04-14",
+  "required_before_execution": [
+    "run337M materialized input review",
+    "no-lookahead guards accepted",
+    "runtime identity preflight accepted",
+    "fresh broker data inventory accepted",
+    "claim boundary output registry binding accepted"
+  ],
+  "run_id": "run337L_materialize_proxy_expected_fresh_mt5_probe_inputs_v1",
+  "run_number": "run337L",
+  "stage_id": "337_onnx_research_packet__cost_buffer_direction_curve_rebuild",
+  "subjects": [
+    "m48_bal_rf",
+    "m48_plain_rf",
+    "u42_bal_rf",
+    "u42_plain_rf",
+    "core56_refresh_candidate"
+  ],
+  "symbol": "US100",
+  "timeframe": "M5",
+  "would_be_future_command": "python stage_pipelines/stage337/attempt_fresh_mt5_runtime_probe_or_block.py --input-run run337M"
+}

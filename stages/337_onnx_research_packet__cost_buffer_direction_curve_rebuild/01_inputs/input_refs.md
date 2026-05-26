@@ -162,3 +162,15 @@ Effect(효과): 다음 실행은 실제 실행이 아니라, 이 골격들이 �
 - run337L_queue(337L 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337K/run337L_proxy_mt5_input_materialization_queue.csv`
 
 Effect(효과): 다음 실행은 proxy expected value(프록시 예상값)와 MT5 probe input(메타트레이더5 탐침 입력)을 만들 준비만 받는다. 아직 MT5 execution(MT5 실행) 자체는 하지 않는다.
+
+## run337L Outputs(337L 산출물)
+
+- proxy_expected_template(프록시 예상값 템플릿): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/proxy_expected_result_template.csv`
+- proxy_source_manifest(프록시 원천 목록): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/proxy_expected_source_identity_manifest.json`
+- fresh_mt5_handoff_package(신규 MT5 인계 패키지): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/fresh_mt5_probe_handoff_package.csv`
+- difference_contract(차이 계약): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/proxy_mt5_difference_runner_contract.csv`
+- usability_contract(활용성 계약): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/usability_decision_runner_contract.csv`
+- runtime_identity_preflight(런타임 정체성 사전점검): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/runtime_identity_preflight_package.csv`
+- run337M_queue(337M 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337L/run337M_proxy_mt5_input_review_queue.csv`
+
+Effect(효과): 다음 실행은 입력 묶음이 실제 fresh MT5 runtime probe(신규 메타트레이더5 런타임 탐침) 시도로 넘어가도 되는지 검토한다.
