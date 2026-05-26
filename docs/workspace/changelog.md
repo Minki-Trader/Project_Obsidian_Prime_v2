@@ -4659,3 +4659,12 @@
 - action(행동): run337D(337D 실행)의 절차 산출물을 검토해 accepted_protocols_for_blueprint_queue(청사진 승인 절차 대기열)와 run337F_blueprint_queue(337F 청사진 대기열)를 만들었다.
 - effect(효과): 과적합 방어 절차가 충분하다는 범위 안에서 다음 청사진 물질화를 열되, 모델 학습과 MT5 실행, 선택 후보 주장은 계속 금지한다.
 - boundary(경계): selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage337F Protocol-Bound Execution Blueprints(337F 절차 기반 실행 청사진)
+
+- run_id(실행 ID): `run337F_materialize_protocol_bound_execution_blueprints_v1`
+- status(상태): `completed_protocol_bound_execution_blueprints_materialized_no_training`
+- decision(결정): `stage337F_blueprints_ready_for_review_no_training_no_selection`
+- action(행동): run337E(337E 실행)의 승인 절차를 proxy-MT5/core56/cost-direction-curve/offense/regime/runtime(프록시-MT5/핵심56/비용-방향-곡선/공격/국면/런타임) 청사진과 스키마로 물질화했다.
+- effect(효과): 다음 실행은 실제 패키지 생성 전에 청사진 완전성을 검토할 수 있다.
+- boundary(경계): model training(모델 학습), MT5 execution(MT5 실행), selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

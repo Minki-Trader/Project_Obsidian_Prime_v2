@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "research_development_only_stage337F_blueprint_materialization_no_model_training_no_mt5_execution_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "invalid_if": "future_join_flag=true or source_timestamp > target_cycle_bar_time",
+  "join_keys": [
+    "target_cycle_bar_time",
+    "source_timestamp",
+    "symbol",
+    "feature_name"
+  ],
+  "repair_required_if": "missing source hash, stale gap beyond tolerance, duplicate source timestamp, or feature latest gap",
+  "required_columns": [
+    "target_cycle_bar_time",
+    "source_timestamp",
+    "symbol",
+    "feature_name",
+    "feature_value",
+    "source_file",
+    "source_sha256",
+    "join_lag_seconds",
+    "stale_flag",
+    "future_join_flag"
+  ],
+  "schema_id": "stage337F_core56_asof_join_schema_v1"
+}

@@ -76,3 +76,18 @@ Effect(효과): 다음 실행은 학습이나 후보 선택이 아니라, 이 �
 - gate_audit(게이트 감사): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337E/required_gate_coverage_audit.csv`
 
 Effect(효과): 다음 실행은 모델 학습이 아니라, 검토 통과한 절차를 실제 실행 청사진과 schema(스키마)로 바꾼다.
+
+## run337F Outputs(337F 산출물)
+
+- blueprint_source_lineage_review(청사진 원천 계보 검토): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/blueprint_source_lineage_review.csv`
+- no_lookahead_harness_blueprint(미래참조 방어 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/no_lookahead_harness_blueprint.csv`
+- proxy_expected_schema_blueprint(프록시 예상값 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/proxy_expected_schema_blueprint.csv`
+- mt5_runtime_probe_package_blueprint(MT5 런타임 탐침 패키지 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/mt5_runtime_probe_package_blueprint.csv`
+- core56_repair_blueprint(핵심56 수리 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/core56_repair_blueprint.csv`
+- cost_direction_curve_extraction_blueprint(비용/방향/곡선 추출 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/cost_direction_curve_extraction_blueprint.csv`
+- offense_branch_blueprint(공격 분기 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/offense_branch_blueprint.csv`
+- economic_regime_asof_source_blueprint(경제 국면 시점 기준 원천 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/economic_regime_asof_source_blueprint.csv`
+- runtime_probe_package_blueprint(런타임 탐침 패키지 청사진): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/runtime_probe_package_blueprint.csv`
+- run337G_queue(337G 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337F/run337G_blueprint_review_queue.csv`
+
+Effect(효과): 다음 실행은 이 청사진들이 실제 materialization package(물질화 패키지)로 넘어가도 되는지 검토한다.
