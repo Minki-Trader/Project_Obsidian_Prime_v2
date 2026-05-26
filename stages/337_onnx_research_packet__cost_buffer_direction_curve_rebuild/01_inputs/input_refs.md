@@ -23,3 +23,16 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 나쁜 조각을 
 - next_queue(다음 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337A/run337B_materialization_queue.csv`
 
 Effect(효과): 다음 실행은 proxy(프록시)만 보지 않고 MT5 runtime probe(런타임 탐침)까지 같이 만들어 difference(차이)와 usability(활용성)를 판정한다.
+
+## run337B Outputs(337B 산출물)
+
+## run337B Outputs(337B 산출물)
+
+- source_lineage(원천 계보): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337B/source_lineage_index.csv`
+- proxy_expected(프록시 예상값): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337B/proxy_expected_signal_values.csv`
+- mt5_observed(MT5 관측값): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337B/mt5_runtime_probe_observed_values.csv`
+- difference_report(차이 보고서): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337B/proxy_mt5_difference_report.csv`
+- usability_decision(활용성 결정): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337B/proxy_mt5_usability_decision.csv`
+- next_queue(다음 대기열): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337B/run337C_review_queue.csv`
+
+Effect(효과): proxy(프록시)는 signal sanity check(신호 점검)로만 쓰고, KPI(핵심 성과 지표) 판정은 MT5 runtime probe(런타임 탐침)와 비용/곡선/방향 게이트에 묶는다.

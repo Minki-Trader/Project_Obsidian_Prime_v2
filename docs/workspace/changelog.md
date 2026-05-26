@@ -4623,3 +4623,12 @@
 - action(행동): Stage336P(336P 실행)의 failure memory(실패 기억)를 Stage337(337단계)의 설계 제약, branch matrix(분기 행렬), gate contract(게이트 계약), proxy-MT5 contract(프록시-MT5 계약), negative controls(부정 대조), run337B queue(337B 대기열)로 물질화했다.
 - effect(효과): proxy test(프록시 테스트)는 proxy expected result(프록시 예상 결과), MT5 runtime probe result(MT5 런타임 탐침 결과), difference report(차이 보고서), usability label(활용성 라벨)을 함께 요구한다.
 - boundary(경계): selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage337B Inputs and Proxy-MT5 Usability(337B 입력 및 프록시-MT5 활용성)
+
+- run_id(실행 ID): `run337B_materialize_cost_direction_curve_rebuild_inputs_v1`
+- status(상태): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`
+- decision(결정): `stage337B_materialized_inputs_ready_proxy_mt5_context_only_no_selection`
+- action(행동): run337A(337A 실행)의 설계 계약을 source lineage(원천 계보), data integrity contract(데이터 무결성 계약), branch payload(분기 패키지), gate schema(게이트 스키마), proxy expected/MT5 observed/difference/usability(프록시 예상값/Mt5 관측값/차이/활용성) 산출물로 물질화했다.
+- effect(효과): proxy(프록시)는 signal sanity only(신호 점검 전용)로 낮추고, MT5 runtime(런타임)과 cost/direction/curve gate(비용/방향/곡선 게이트) 없이는 KPI authority(KPI 권한)를 주장하지 못하게 했다.
+- boundary(경계): selected candidate(선택 후보), Forward Passed(전진 통과), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
