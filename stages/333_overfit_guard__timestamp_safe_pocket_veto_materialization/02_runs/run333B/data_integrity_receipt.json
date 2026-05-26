@@ -1,0 +1,11 @@
+{
+  "data_source": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv",
+  "time_axis": "inherits run333A timestamp_utc; run333B does not calculate time-dependent scores",
+  "sample_scope": "four materialized feature frames; breadth branch keeps overlap/missing boundary",
+  "missing_or_duplicate_check": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/timestamp_integrity_audit.csv",
+  "feature_label_boundary": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_boundary_audit.csv",
+  "split_boundary": "design only; no score calibration on forward PnL",
+  "leakage_risk": "using full forward PnL or known pocket dates to set guard thresholds",
+  "data_hash_or_identity": "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/source_artifact_hashes.json",
+  "integrity_judgment": "usable_for_design_only"
+}

@@ -1,0 +1,42 @@
+{
+  "stage_id": "333_overfit_guard__timestamp_safe_pocket_veto_materialization",
+  "run_id": "run333B_design_guarded_veto_scoring_no_retune_v1",
+  "run_number": "run333B",
+  "parent_run_id": "run333A_materialize_timestamp_safe_pocket_veto_features_v1",
+  "generated_at_utc": "2026-05-26T05:43:31Z",
+  "primary_family": "experiment_design",
+  "primary_skill": "obsidian-experiment-design",
+  "support_skills": [
+    "obsidian-data-integrity",
+    "obsidian-model-validation",
+    "obsidian-artifact-lineage",
+    "obsidian-result-judgment"
+  ],
+  "required_gates": [
+    "work_packet_schema_lint",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "status": "completed_guarded_veto_scoring_design_no_selection",
+  "judgment": "guarded_scoring_design_research_only_no_goal_achieve",
+  "decision": "guarded_veto_scoring_protocol_ready_for_materialization_no_threshold_retune",
+  "source_inputs": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/materialization_readiness_matrix.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_boundary_audit.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/required_gate_coverage_audit.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_thesis_registry.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/pocket_veto_plan.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332E/runtime_probe_readiness_matrix.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332F/stage332_to_stage333_handoff.csv"
+  ],
+  "scoring_protocols": 4,
+  "queued_scoring_views": 16,
+  "selected_candidate": "none",
+  "forward_passed": "not_claimed",
+  "forward_failed": "not_claimed",
+  "runtime_authority": "not_claimed",
+  "goal_achieve": "not_claimed",
+  "next_action": "run333C_materialize_guarded_veto_scoring_payloads_v1",
+  "claim_boundary": "research_development_only_guarded_veto_scoring_design_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

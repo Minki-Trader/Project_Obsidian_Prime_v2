@@ -1,0 +1,8 @@
+gate,status,evidence_path,notes
+source_artifacts_present,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/source_artifact_hashes.json,all run333A/run332 source artifacts present
+all_materialized_frames_referenced,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/guarded_scoring_protocol.csv,protocol_rows=4
+run333C_queue_complete,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/scoring_branch_queue.csv,queue_rows=16
+no_retune_guard,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/no_retune_guard_receipt.json,"no threshold, lot, model, ONNX, D/B rule, or runtime handoff change in design."
+runtime_claim_boundary,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/result_judgment_receipt.json,design ready only; runtime authority and forward pass are forbidden.
+invalid_conditions_named,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/invalid_condition_matrix.csv,retune/leakage/runtime-claim invalid conditions are explicit.
+outputs_exist,pass,stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/run_manifest.json,run333B design artifacts are materialized.

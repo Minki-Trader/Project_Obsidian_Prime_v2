@@ -1,0 +1,12 @@
+{
+  "model_family": "none_new_model_guarded_scoring_protocol_only",
+  "target_and_label": "no new label; scoring protocol must not use future returns",
+  "split_method": "design only; future run333C must use train/WFO-only or expanding-past calibration",
+  "selection_metric": "not_applicable_no_selection",
+  "secondary_metrics": "future cost ladder, rolling pocket, temporal slices, negative controls",
+  "threshold_policy": "no score threshold retuning; veto bands must be predeclared before KPI read",
+  "overfit_risk": "guard rules tuned to Stage331/forward pocket",
+  "calibration_risk": "guard scores are ranks/flags, not probabilities",
+  "comparison_baseline": "control_no_veto and negative-control branch queue",
+  "validation_judgment": "exploratory_design_only"
+}

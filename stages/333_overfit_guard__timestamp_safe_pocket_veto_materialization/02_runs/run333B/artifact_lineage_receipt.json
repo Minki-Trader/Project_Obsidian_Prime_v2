@@ -1,0 +1,30 @@
+{
+  "source_inputs": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_materialization_manifest.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/materialization_readiness_matrix.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/feature_boundary_audit.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333A/required_gate_coverage_audit.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/feature_thesis_registry.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332D/pocket_veto_plan.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332E/runtime_probe_readiness_matrix.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332F/stage332_to_stage333_handoff.csv"
+  ],
+  "producer": "stage_pipelines/stage333/design_guarded_veto_scoring_no_retune.py",
+  "consumer": "run333C_materialize_guarded_veto_scoring_payloads_v1",
+  "artifact_paths": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/guarded_scoring_protocol.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/score_formula_contract.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/scoring_branch_queue.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/invalid_condition_matrix.csv"
+  ],
+  "artifact_hashes": "recorded in docs/registers/artifact_registry.csv",
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "availability": "tracked",
+  "lineage_judgment": "connected_with_design_boundary",
+  "generated_at_utc": "2026-05-26T05:43:31Z"
+}

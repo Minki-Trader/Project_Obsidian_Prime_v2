@@ -1,0 +1,6 @@
+condition_id,invalid_trigger,result
+forward_pnl_fit,guard threshold chosen by raw-forward net/PF/DD/curve pocket,invalid_overfit_repair
+known_pocket_date_feature,date range or explicit Stage331 pocket timestamp used as feature/filter,invalid_leakage
+runtime_claim_without_tester,runtime authority or Forward Passed claimed before MT5 report/telemetry reconciliation,invalid_claim_boundary
+lot_or_threshold_repair,"lot, ATR SL/TP, D/B surface, or score threshold changed to rescue KPI",invalid_retune
+pv_m48_breadth_reintroduction_control__missing_breadth_imputation,missing breadth rows are forward-filled or future-filled instead of abstain/overlap view,invalid_data_handoff

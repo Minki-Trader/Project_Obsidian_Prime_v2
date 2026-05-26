@@ -1,0 +1,22 @@
+{
+  "hypothesis": "Materialized pocket-veto features can be scored in a no-retune way by predeclaring transforms, veto modes, and invalid conditions before any KPI read.",
+  "decision_use": "Authorize run333C scoring payload materialization without granting candidate or forward status.",
+  "comparison_baseline": "run333A materialized feature frames and run332D/332E guard contracts.",
+  "control_variables": "US100 M5 forward handoff scope, fixed source frames, fixed model/threshold/lot/runtime handoff.",
+  "changed_variables": "scoring protocol only; hard/soft/control/negative-control views are queued.",
+  "sample_scope": "raw-forward feature frame scope; no new training or MT5 execution.",
+  "success_criteria": "four protocols, sixteen queued views, explicit invalid conditions, and no runtime or forward claim.",
+  "failure_criteria": "missing feature frame, missing queue row, or any threshold/lot/model retune.",
+  "invalid_conditions": [
+    "forward_pnl_fit",
+    "known_pocket_date_feature",
+    "runtime_claim_without_tester",
+    "lot_or_threshold_repair",
+    "pv_m48_breadth_reintroduction_control__missing_breadth_imputation"
+  ],
+  "stop_conditions": "stop before scoring if any source hash, feature boundary, or claim-boundary gate fails.",
+  "evidence_plan": [
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/guarded_scoring_protocol.csv",
+    "stages/333_overfit_guard__timestamp_safe_pocket_veto_materialization/02_runs/run333B/scoring_branch_queue.csv"
+  ]
+}
