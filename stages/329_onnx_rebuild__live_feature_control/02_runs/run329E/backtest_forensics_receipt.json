@@ -1,0 +1,146 @@
+{
+  "tester_identity": {
+    "terminal": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+    "broker_terminal_data_root": "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075",
+    "terminal_process_probe": {
+      "status": "running",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference='SilentlyContinue'; Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+      ],
+      "returncode": 0,
+      "processes": [
+        {
+          "process_id": 22520,
+          "executable_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "command_line": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ],
+      "matching_processes": [
+        {
+          "process_id": 22520,
+          "executable_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+          "command_line": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+        }
+      ]
+    },
+    "symbol": "US100",
+    "timeframe": "M5",
+    "deposit": 500,
+    "leverage": "1:100",
+    "modeling_mode": "Every tick based on real ticks / MT5 model=4",
+    "date_range": [
+      "2026.04.14..2026.05.23"
+    ]
+  },
+  "ea_identity": {
+    "entrypoint": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "module_hashes": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "status": "present",
+        "sha256": "8052a066c6bb961354e7231bf8aab83fe8277d1396343ca86bf1309809c62c19"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "status": "present",
+        "sha256": "f1ec27d4078f98c26e018aa9c62b9aac1cb6f2b99abf6bf211aac8ba5ee6708a"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "status": "present",
+        "sha256": "825b0e289e62c6495fb6af52c1c370a715835bd313dfa2e615375db561389df1"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "status": "present",
+        "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "status": "present",
+        "sha256": "4a6da19b719c01d5134e829fd7f0aa99d94c4564d70ded16bccc20ed4baf72b8"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "status": "present",
+        "sha256": "cf1032c866501f142ecb2372fe7e6d14eb711eafcf8d908dcb8f4226403b281f"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "status": "present",
+        "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+      }
+    ],
+    "set_files": [
+      {
+        "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_bal_sp.set",
+        "sha256": "5a3662087b1d677dd178dde43bc3ecbd1d97f58516d860443f9d7a04435e11ed",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_plain_sp.set",
+        "sha256": "226524f31c86a7f1f2148834ae2cb81aef04053b26087504641c5bddb953ee10",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/m48_bal_sp.set",
+        "sha256": "b27052ff5e89c05bd604059394effc125cf72059e9fd3aa5697e3b43522c9590",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/m48_plain_sp.set",
+        "sha256": "cfc76bf19f9e6e0432f3bd22b217c7b5a74b1010bba8a9670b071939c2c978f4",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/u42_bal_sp.set",
+        "sha256": "10117a09170b1e1bd46ac4df767df6c35243dc7c002107a8680052d74aa62170",
+        "format": "mt5_set",
+        "parameter_count": 49
+      },
+      {
+        "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/u42_plain_sp.set",
+        "sha256": "fe0f46daed8d632887af0844e692bdaa4350863d53451f51c6ae9f8a32eeaad0",
+        "format": "mt5_set",
+        "parameter_count": 49
+      }
+    ],
+    "model_hashes": {
+      "c56_bal": "0685c7be80c7a9871f626201a8641c33903773bec62b8453405c73fe6e511369",
+      "c56_plain": "28d6a644c4c3d8b322093c676c801f867d82568163a502e97457b46d5b530c85",
+      "m48_bal": "2c5f7bf622bb77dbd8001ccf0eb438aaa3547a37270b7867422495efdb100659",
+      "m48_plain": "ed80d304d1ce4a3b56b0cbcac8143b3b35b078dca899eee838dedca77846eee9",
+      "u42_bal": "ea676504449e5f1818e93f852bb24227d463b421ede69f4a20fe6b1d0b3425b7",
+      "u42_plain": "f6e1232824dfe499551e21e1a571e0abbb9ca96442752987cb9f0d8107330cc8"
+    }
+  },
+  "report_identity": [
+    {
+      "attempt_name": "c56_bal_sp",
+      "tier": "Tier A",
+      "split": "forward_old_session_parity",
+      "report_name": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_c56_bal_sp",
+      "status": "missing"
+    }
+  ],
+  "trade_evidence": [],
+  "cost_assumptions": {
+    "spread": "broker tester setting, not overwritten by run329E",
+    "commission": "broker tester setting, not overwritten by run329E",
+    "slippage": "InpDeviationPoints=default_or_set_file_value",
+    "swap": "broker tester setting"
+  },
+  "forensic_checks": [
+    "MetaEditor compile attempted before tester run.",
+    "Runtime telemetry and summary files are checked after tester run.",
+    "Strategy report artifacts are copied when MT5 emits them."
+  ],
+  "backtest_judgment": "blocked"
+}

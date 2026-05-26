@@ -1,0 +1,5 @@
+gate_name,status,evidence_path,effect
+runtime_parity(런타임 동등성),blocked,stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/runtime_parity_receipt.json,Python/ONNX(파이썬/온엑스) 점수에서 MT5 RuntimeProbeEA(런타임 탐침 EA) 입력으로 넘어가는지 확인한다.
+backtest_forensics(백테스트 포렌식),blocked,stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/backtest_forensics_receipt.json,"tester identity(테스터 정체성), report path(보고서 경로), cost assumption(비용 가정)을 성공 주장과 분리한다."
+artifact_lineage(산출물 계보),passed,stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/artifact_lineage_receipt.json,run329B/run329C/run329D 입력과 run329E MT5 산출물을 연결한다.
+result_judgment(결과 판정),passed_no_goal_achieve,stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/result_judgment.csv,runtime_probe(런타임 탐침)를 runtime_authority(런타임 권위)나 Goal Achieve(목표 달성)로 올리지 않는다.

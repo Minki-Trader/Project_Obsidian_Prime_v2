@@ -1,0 +1,434 @@
+[
+  {
+    "attempt_name": "c56_bal_sp",
+    "candidate_id": "core56_no_top3_weight_features__l2_balanced_c025",
+    "artifact_slug": "c56_bal",
+    "feature_set_id": "core56_no_top3_weight_features",
+    "model_id": "l2_balanced_c025",
+    "tier": "Tier A",
+    "split": "forward_old_session_parity",
+    "attempt_role": "session_parity_tier_only_total",
+    "record_view_prefix": "mt5_c56_bal_session_parity",
+    "set": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_bal_sp.set",
+      "sha256": "5a3662087b1d677dd178dde43bc3ecbd1d97f58516d860443f9d7a04435e11ed",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "ini": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_bal_sp.ini",
+      "sha256": "8c165502f4e03f2196ea88fa5416d5c808056c4ece096cd4defa52a1b31c0ae3",
+      "format": "mt5_tester_ini",
+      "tester": {
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "Symbol": "US100",
+        "Period": "M5",
+        "Model": 4,
+        "Deposit": 500,
+        "Leverage": "1:100",
+        "Optimization": 0,
+        "ExecutionMode": 0,
+        "ForwardMode": 0,
+        "UseLocal": 1,
+        "UseRemote": 0,
+        "UseCloud": 0,
+        "ReplaceReport": 1,
+        "ShutdownTerminal": 1,
+        "FromDate": "2026.04.14",
+        "ToDate": "2026.05.23",
+        "Report": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_c56_bal_sp",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+      }
+    },
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/c56_bal_sp_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/c56_bal_sp_summary.csv",
+    "feature_export": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/c56_bal_old_session_parity_features.csv",
+      "sha256": "38f11453b7fc29d29e603a0edea8677937160d3e2b9f4fd5b25e8f8fa862718a",
+      "rows": 1789,
+      "feature_count": 56,
+      "feature_order_hash": "84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89",
+      "first_timestamp": "2026-04-14T16:35:00+00:00",
+      "last_timestamp": "2026-05-22T22:00:00+00:00",
+      "format": "mt5_feature_csv_bar_time_server_plus_ordered_float32_features"
+    },
+    "model_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx/c56_bal.onnx",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/c56_bal.onnx",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/c56_bal.onnx",
+      "sha256": "0685c7be80c7a9871f626201a8641c33903773bec62b8453405c73fe6e511369"
+    },
+    "feature_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/c56_bal_old_session_parity_features.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/c56_bal_old_session_parity_features.csv",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/c56_bal_old_session_parity_features.csv",
+      "sha256": "38f11453b7fc29d29e603a0edea8677937160d3e2b9f4fd5b25e8f8fa862718a"
+    },
+    "from_date": "2026.04.14",
+    "to_date": "2026.05.23",
+    "decision_threshold": 0.06677452101508195,
+    "decision_surface_mapping": "stage329D_pred_nonflat_and_probability_margin>=threshold_reproduced_as_min_margin_only",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "signal_policy": "old_session_parity ONNX probabilities with fixed train-only margin threshold; no forward retuning"
+  },
+  {
+    "attempt_name": "c56_plain_sp",
+    "candidate_id": "core56_no_top3_weight_features__l2_plain_c025",
+    "artifact_slug": "c56_plain",
+    "feature_set_id": "core56_no_top3_weight_features",
+    "model_id": "l2_plain_c025",
+    "tier": "Tier A",
+    "split": "forward_old_session_parity",
+    "attempt_role": "session_parity_tier_only_total",
+    "record_view_prefix": "mt5_c56_plain_session_parity",
+    "set": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_plain_sp.set",
+      "sha256": "226524f31c86a7f1f2148834ae2cb81aef04053b26087504641c5bddb953ee10",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "ini": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_plain_sp.ini",
+      "sha256": "7525f41f7963008974f3453e125d4689bef0551e26982363f39ea835bda9165f",
+      "format": "mt5_tester_ini",
+      "tester": {
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "Symbol": "US100",
+        "Period": "M5",
+        "Model": 4,
+        "Deposit": 500,
+        "Leverage": "1:100",
+        "Optimization": 0,
+        "ExecutionMode": 0,
+        "ForwardMode": 0,
+        "UseLocal": 1,
+        "UseRemote": 0,
+        "UseCloud": 0,
+        "ReplaceReport": 1,
+        "ShutdownTerminal": 1,
+        "FromDate": "2026.04.14",
+        "ToDate": "2026.05.23",
+        "Report": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_c56_plain_sp",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+      }
+    },
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/c56_plain_sp_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/c56_plain_sp_summary.csv",
+    "feature_export": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/c56_plain_old_session_parity_features.csv",
+      "sha256": "38f11453b7fc29d29e603a0edea8677937160d3e2b9f4fd5b25e8f8fa862718a",
+      "rows": 1789,
+      "feature_count": 56,
+      "feature_order_hash": "84f313815393429acb9690d727b61b4a3dfd2354678bd357a53db570ba37bc89",
+      "first_timestamp": "2026-04-14T16:35:00+00:00",
+      "last_timestamp": "2026-05-22T22:00:00+00:00",
+      "format": "mt5_feature_csv_bar_time_server_plus_ordered_float32_features"
+    },
+    "model_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx/c56_plain.onnx",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/c56_plain.onnx",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/c56_plain.onnx",
+      "sha256": "28d6a644c4c3d8b322093c676c801f867d82568163a502e97457b46d5b530c85"
+    },
+    "feature_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/c56_plain_old_session_parity_features.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/c56_plain_old_session_parity_features.csv",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/c56_plain_old_session_parity_features.csv",
+      "sha256": "38f11453b7fc29d29e603a0edea8677937160d3e2b9f4fd5b25e8f8fa862718a"
+    },
+    "from_date": "2026.04.14",
+    "to_date": "2026.05.23",
+    "decision_threshold": 0.07096937220715405,
+    "decision_surface_mapping": "stage329D_pred_nonflat_and_probability_margin>=threshold_reproduced_as_min_margin_only",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "signal_policy": "old_session_parity ONNX probabilities with fixed train-only margin threshold; no forward retuning"
+  },
+  {
+    "attempt_name": "m48_bal_sp",
+    "candidate_id": "macro48_no_equity_breadth_or_top3__l2_balanced_c025",
+    "artifact_slug": "m48_bal",
+    "feature_set_id": "macro48_no_equity_breadth_or_top3",
+    "model_id": "l2_balanced_c025",
+    "tier": "Tier A",
+    "split": "forward_old_session_parity",
+    "attempt_role": "session_parity_tier_only_total",
+    "record_view_prefix": "mt5_m48_bal_session_parity",
+    "set": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/m48_bal_sp.set",
+      "sha256": "b27052ff5e89c05bd604059394effc125cf72059e9fd3aa5697e3b43522c9590",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "ini": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/m48_bal_sp.ini",
+      "sha256": "63e53dcc4a4014ab2b6d4574aa02a4873b36495ad930ca1d51939502173788fc",
+      "format": "mt5_tester_ini",
+      "tester": {
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "Symbol": "US100",
+        "Period": "M5",
+        "Model": 4,
+        "Deposit": 500,
+        "Leverage": "1:100",
+        "Optimization": 0,
+        "ExecutionMode": 0,
+        "ForwardMode": 0,
+        "UseLocal": 1,
+        "UseRemote": 0,
+        "UseCloud": 0,
+        "ReplaceReport": 1,
+        "ShutdownTerminal": 1,
+        "FromDate": "2026.04.14",
+        "ToDate": "2026.05.23",
+        "Report": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_m48_bal_sp",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+      }
+    },
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/m48_bal_sp_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/m48_bal_sp_summary.csv",
+    "feature_export": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/m48_bal_old_session_parity_features.csv",
+      "sha256": "72a448d28a412c4eb89841f3cb8ae1f30e0466d6bbbf173ba6071bdc07caab68",
+      "rows": 1789,
+      "feature_count": 48,
+      "feature_order_hash": "147d9acd038b2b175a130281525ff49540bf21b36df2952066712a91198b9c40",
+      "first_timestamp": "2026-04-14T16:35:00+00:00",
+      "last_timestamp": "2026-05-22T22:00:00+00:00",
+      "format": "mt5_feature_csv_bar_time_server_plus_ordered_float32_features"
+    },
+    "model_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx/m48_bal.onnx",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/m48_bal.onnx",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/m48_bal.onnx",
+      "sha256": "2c5f7bf622bb77dbd8001ccf0eb438aaa3547a37270b7867422495efdb100659"
+    },
+    "feature_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/m48_bal_old_session_parity_features.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/m48_bal_old_session_parity_features.csv",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/m48_bal_old_session_parity_features.csv",
+      "sha256": "72a448d28a412c4eb89841f3cb8ae1f30e0466d6bbbf173ba6071bdc07caab68"
+    },
+    "from_date": "2026.04.14",
+    "to_date": "2026.05.23",
+    "decision_threshold": 0.06601092665437092,
+    "decision_surface_mapping": "stage329D_pred_nonflat_and_probability_margin>=threshold_reproduced_as_min_margin_only",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "signal_policy": "old_session_parity ONNX probabilities with fixed train-only margin threshold; no forward retuning"
+  },
+  {
+    "attempt_name": "m48_plain_sp",
+    "candidate_id": "macro48_no_equity_breadth_or_top3__l2_plain_c025",
+    "artifact_slug": "m48_plain",
+    "feature_set_id": "macro48_no_equity_breadth_or_top3",
+    "model_id": "l2_plain_c025",
+    "tier": "Tier A",
+    "split": "forward_old_session_parity",
+    "attempt_role": "session_parity_tier_only_total",
+    "record_view_prefix": "mt5_m48_plain_session_parity",
+    "set": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/m48_plain_sp.set",
+      "sha256": "cfc76bf19f9e6e0432f3bd22b217c7b5a74b1010bba8a9670b071939c2c978f4",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "ini": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/m48_plain_sp.ini",
+      "sha256": "a9c135ae4deffc10cf33567f5b91c43d38a0e476597440d1594e77d32175c42d",
+      "format": "mt5_tester_ini",
+      "tester": {
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "Symbol": "US100",
+        "Period": "M5",
+        "Model": 4,
+        "Deposit": 500,
+        "Leverage": "1:100",
+        "Optimization": 0,
+        "ExecutionMode": 0,
+        "ForwardMode": 0,
+        "UseLocal": 1,
+        "UseRemote": 0,
+        "UseCloud": 0,
+        "ReplaceReport": 1,
+        "ShutdownTerminal": 1,
+        "FromDate": "2026.04.14",
+        "ToDate": "2026.05.23",
+        "Report": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_m48_plain_sp",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+      }
+    },
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/m48_plain_sp_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/m48_plain_sp_summary.csv",
+    "feature_export": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/m48_plain_old_session_parity_features.csv",
+      "sha256": "72a448d28a412c4eb89841f3cb8ae1f30e0466d6bbbf173ba6071bdc07caab68",
+      "rows": 1789,
+      "feature_count": 48,
+      "feature_order_hash": "147d9acd038b2b175a130281525ff49540bf21b36df2952066712a91198b9c40",
+      "first_timestamp": "2026-04-14T16:35:00+00:00",
+      "last_timestamp": "2026-05-22T22:00:00+00:00",
+      "format": "mt5_feature_csv_bar_time_server_plus_ordered_float32_features"
+    },
+    "model_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx/m48_plain.onnx",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/m48_plain.onnx",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/m48_plain.onnx",
+      "sha256": "ed80d304d1ce4a3b56b0cbcac8143b3b35b078dca899eee838dedca77846eee9"
+    },
+    "feature_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/m48_plain_old_session_parity_features.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/m48_plain_old_session_parity_features.csv",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/m48_plain_old_session_parity_features.csv",
+      "sha256": "72a448d28a412c4eb89841f3cb8ae1f30e0466d6bbbf173ba6071bdc07caab68"
+    },
+    "from_date": "2026.04.14",
+    "to_date": "2026.05.23",
+    "decision_threshold": 0.07078808758599892,
+    "decision_surface_mapping": "stage329D_pred_nonflat_and_probability_margin>=threshold_reproduced_as_min_margin_only",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "signal_policy": "old_session_parity ONNX probabilities with fixed train-only margin threshold; no forward retuning"
+  },
+  {
+    "attempt_name": "u42_bal_sp",
+    "candidate_id": "us100_technical42_no_external__l2_balanced_c025",
+    "artifact_slug": "u42_bal",
+    "feature_set_id": "us100_technical42_no_external",
+    "model_id": "l2_balanced_c025",
+    "tier": "Tier A",
+    "split": "forward_old_session_parity",
+    "attempt_role": "session_parity_tier_only_total",
+    "record_view_prefix": "mt5_u42_bal_session_parity",
+    "set": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/u42_bal_sp.set",
+      "sha256": "10117a09170b1e1bd46ac4df767df6c35243dc7c002107a8680052d74aa62170",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "ini": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/u42_bal_sp.ini",
+      "sha256": "26ef64be5110c5356b99e4ad183affc4257caae419ee17b79c6909068ad6a38f",
+      "format": "mt5_tester_ini",
+      "tester": {
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "Symbol": "US100",
+        "Period": "M5",
+        "Model": 4,
+        "Deposit": 500,
+        "Leverage": "1:100",
+        "Optimization": 0,
+        "ExecutionMode": 0,
+        "ForwardMode": 0,
+        "UseLocal": 1,
+        "UseRemote": 0,
+        "UseCloud": 0,
+        "ReplaceReport": 1,
+        "ShutdownTerminal": 1,
+        "FromDate": "2026.04.14",
+        "ToDate": "2026.05.23",
+        "Report": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_u42_bal_sp",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+      }
+    },
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/u42_bal_sp_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/u42_bal_sp_summary.csv",
+    "feature_export": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/u42_bal_old_session_parity_features.csv",
+      "sha256": "4675656c500a269f3a5cf97562b214d0f4c8795566be620f9c836b70df683b7a",
+      "rows": 1914,
+      "feature_count": 42,
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "first_timestamp": "2026-04-14T16:35:00+00:00",
+      "last_timestamp": "2026-05-22T22:00:00+00:00",
+      "format": "mt5_feature_csv_bar_time_server_plus_ordered_float32_features"
+    },
+    "model_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx/u42_bal.onnx",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/u42_bal.onnx",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/u42_bal.onnx",
+      "sha256": "ea676504449e5f1818e93f852bb24227d463b421ede69f4a20fe6b1d0b3425b7"
+    },
+    "feature_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/u42_bal_old_session_parity_features.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/u42_bal_old_session_parity_features.csv",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/u42_bal_old_session_parity_features.csv",
+      "sha256": "4675656c500a269f3a5cf97562b214d0f4c8795566be620f9c836b70df683b7a"
+    },
+    "from_date": "2026.04.14",
+    "to_date": "2026.05.23",
+    "decision_threshold": 0.06160298154533757,
+    "decision_surface_mapping": "stage329D_pred_nonflat_and_probability_margin>=threshold_reproduced_as_min_margin_only",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "signal_policy": "old_session_parity ONNX probabilities with fixed train-only margin threshold; no forward retuning"
+  },
+  {
+    "attempt_name": "u42_plain_sp",
+    "candidate_id": "us100_technical42_no_external__l2_plain_c025",
+    "artifact_slug": "u42_plain",
+    "feature_set_id": "us100_technical42_no_external",
+    "model_id": "l2_plain_c025",
+    "tier": "Tier A",
+    "split": "forward_old_session_parity",
+    "attempt_role": "session_parity_tier_only_total",
+    "record_view_prefix": "mt5_u42_plain_session_parity",
+    "set": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/u42_plain_sp.set",
+      "sha256": "fe0f46daed8d632887af0844e692bdaa4350863d53451f51c6ae9f8a32eeaad0",
+      "format": "mt5_set",
+      "parameter_count": 49
+    },
+    "ini": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/u42_plain_sp.ini",
+      "sha256": "a88b16a12aec6310bff68967c4b75ba79a6e9338884d533b8d8e3ffeb5721f85",
+      "format": "mt5_tester_ini",
+      "tester": {
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "Symbol": "US100",
+        "Period": "M5",
+        "Model": 4,
+        "Deposit": 500,
+        "Leverage": "1:100",
+        "Optimization": 0,
+        "ExecutionMode": 0,
+        "ForwardMode": 0,
+        "UseLocal": 1,
+        "UseRemote": 0,
+        "UseCloud": 0,
+        "ReplaceReport": 1,
+        "ShutdownTerminal": 1,
+        "FromDate": "2026.04.14",
+        "ToDate": "2026.05.23",
+        "Report": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_u42_plain_sp",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+      }
+    },
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/u42_plain_sp_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/telemetry/u42_plain_sp_summary.csv",
+    "feature_export": {
+      "path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/u42_plain_old_session_parity_features.csv",
+      "sha256": "4675656c500a269f3a5cf97562b214d0f4c8795566be620f9c836b70df683b7a",
+      "rows": 1914,
+      "feature_count": 42,
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "first_timestamp": "2026-04-14T16:35:00+00:00",
+      "last_timestamp": "2026-05-22T22:00:00+00:00",
+      "format": "mt5_feature_csv_bar_time_server_plus_ordered_float32_features"
+    },
+    "model_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329C/onnx/u42_plain.onnx",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/u42_plain.onnx",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/models/u42_plain.onnx",
+      "sha256": "f6e1232824dfe499551e21e1a571e0abbb9ca96442752987cb9f0d8107330cc8"
+    },
+    "feature_copy": {
+      "source": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/feature_matrices/u42_plain_old_session_parity_features.csv",
+      "common_path": "Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/u42_plain_old_session_parity_features.csv",
+      "absolute_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Project_Obsidian_Prime_v2/stage329/run329E_session_parity_runtime_probe/features/u42_plain_old_session_parity_features.csv",
+      "sha256": "4675656c500a269f3a5cf97562b214d0f4c8795566be620f9c836b70df683b7a"
+    },
+    "from_date": "2026.04.14",
+    "to_date": "2026.05.23",
+    "decision_threshold": 0.06695556909679398,
+    "decision_surface_mapping": "stage329D_pred_nonflat_and_probability_margin>=threshold_reproduced_as_min_margin_only",
+    "routing_mode": "tier_a_primary_no_fallback",
+    "signal_policy": "old_session_parity ONNX probabilities with fixed train-only margin threshold; no forward retuning"
+  }
+]

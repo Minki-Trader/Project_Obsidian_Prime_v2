@@ -1,0 +1,115 @@
+{
+  "compile": {
+    "status": "completed",
+    "command": [
+      "C:\\Program Files\\MetaTrader 5\\metaeditor64.exe",
+      "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "/log:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\329_onnx_rebuild__live_feature_control\\02_runs\\run329E\\mt5\\mt5_compile.log"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "",
+    "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/mt5_compile.log",
+    "command_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/mt5_compile.log",
+    "actual_log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/mt5_compile.log",
+    "log_sha256": "374755d5098dc2ea5390f3ee6a1588b849bfef0290a7de3b5bf836cb95f23c7f"
+  },
+  "terminal_process_probe": {
+    "status": "running",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-Command",
+      "$ErrorActionPreference='SilentlyContinue'; Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+    ],
+    "returncode": 0,
+    "processes": [
+      {
+        "process_id": 22520,
+        "executable_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "command_line": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+      }
+    ],
+    "matching_processes": [
+      {
+        "process_id": 22520,
+        "executable_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "command_line": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+      }
+    ]
+  },
+  "execution_results": [
+    {
+      "status": "blocked",
+      "command": [
+        "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+        "/config:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Profiles\\Tester\\opv2_s329e_c56_bal_sp.ini"
+      ],
+      "returncode": null,
+      "blocker": "terminal_already_running_config_not_applied",
+      "blocker_explanation": "An already running terminal64.exe process can absorb a /config launch without starting the requested strategy tester configuration.",
+      "terminal_process_probe": {
+        "status": "running",
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$ErrorActionPreference='SilentlyContinue'; Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+        ],
+        "returncode": 0,
+        "processes": [
+          {
+            "process_id": 22520,
+            "executable_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "command_line": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+          }
+        ],
+        "matching_processes": [
+          {
+            "process_id": 22520,
+            "executable_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+            "command_line": "\"C:\\Program Files\\MetaTrader 5\\terminal64.exe\""
+          }
+        ]
+      },
+      "runtime_outputs": {
+        "telemetry_path": "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\Common\\Files\\Project_Obsidian_Prime_v2\\stage329\\run329E_session_parity_runtime_probe\\telemetry\\c56_bal_sp_telemetry.csv",
+        "summary_path": "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\Common\\Files\\Project_Obsidian_Prime_v2\\stage329\\run329E_session_parity_runtime_probe\\telemetry\\c56_bal_sp_summary.csv",
+        "telemetry_exists": false,
+        "summary_exists": false,
+        "status": "blocked",
+        "wait_status": "skipped_terminal_already_running"
+      },
+      "attempt_name": "c56_bal_sp",
+      "candidate_id": "core56_no_top3_weight_features__l2_balanced_c025",
+      "artifact_slug": "c56_bal",
+      "feature_set_id": "core56_no_top3_weight_features",
+      "model_id": "l2_balanced_c025",
+      "tier": "Tier A",
+      "split": "forward_old_session_parity",
+      "attempt_role": "session_parity_tier_only_total",
+      "record_view_prefix": "mt5_c56_bal_session_parity",
+      "routing_mode": "tier_a_primary_no_fallback",
+      "signal_policy": "old_session_parity ONNX probabilities with fixed train-only margin threshold; no forward retuning",
+      "ini_path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_bal_sp.ini",
+      "set_path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329E/mt5/c56_bal_sp.set",
+      "strategy_tester_report": {
+        "attempt_name": "c56_bal_sp",
+        "tier": "Tier A",
+        "split": "forward_old_session_parity",
+        "report_name": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_c56_bal_sp",
+        "status": "missing"
+      }
+    }
+  ],
+  "strategy_tester_reports": [
+    {
+      "attempt_name": "c56_bal_sp",
+      "tier": "Tier A",
+      "split": "forward_old_session_parity",
+      "report_name": "Project_Obsidian_Prime_v2_run329E_session_parity_forward_signal_payload_and_mt5_runtime_probe_v1_c56_bal_sp",
+      "status": "missing"
+    }
+  ],
+  "mt5_kpi_records": []
+}

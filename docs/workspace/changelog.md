@@ -4075,3 +4075,10 @@
 - status(상태): `completed_forward_holdout_score_replay_without_threshold_retuning`
 - judgment(판정): `forward_score_replay_completed_session_parity_warning_no_goal_achieve`
 - effect(효과): raw/session parity(원본/세션 동등)를 분리했고, 수익/라벨/MT5/runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage329E Session Parity Runtime Probe(329E 세션 동등 런타임 탐침)
+
+- run329E(329E 실행): run329D(329D 실행)의 old_session_parity(기존 세션 동등) prediction(예측)을 MT5 RuntimeProbeEA(런타임 탐침 EA) 입력으로 만들고 외부 실행을 시도했다.
+- status(상태): `blocked_session_parity_runtime_probe_no_completed_mt5_runtime`
+- judgment(판정): `materialized_only_no_external_runtime_execution`
+- effect(효과): runtime probe(런타임 탐침)까지만 주장하고, selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
