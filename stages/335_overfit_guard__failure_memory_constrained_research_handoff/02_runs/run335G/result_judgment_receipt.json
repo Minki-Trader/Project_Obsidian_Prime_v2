@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "research_development_only_stage335G_probe_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "evidence_available": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/probe_input_package_manifest.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/proxy_mt5_comparison_readiness_matrix.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/required_gate_coverage_audit.csv"
+  ],
+  "evidence_missing": [
+    "proxy expected numeric results",
+    "MT5 runtime probe report",
+    "proxy-vs-MT5 difference values",
+    "forward pass/fail evidence"
+  ],
+  "judgment_label": "exploratory_materialization",
+  "next_condition": "run335H_review_guarded_branch_probe_input_materialization_v1",
+  "result_subject": "run335G_materialize_guarded_branch_probe_inputs_v1",
+  "user_explanation_hook": "Inputs are ready for review, but proxy and MT5 results are absent, so usability is not claimed."
+}

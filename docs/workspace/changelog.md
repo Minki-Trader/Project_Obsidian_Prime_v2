@@ -4380,3 +4380,11 @@
 - decision(결정): `stage335F_probe_protocols_designed_ready_for_materialization_no_selection`
 - effect(효과): 11개 guarded branch probe protocol(방어 분기 탐침 계약)을 run335G(335G 실행) 물질화 입력으로 만들었다.
 - boundary(경계): no candidate(후보 없음), no Forward Passed/Failed(전진 통과/실패 없음), no Goal Achieve(목표 달성 없음).
+
+## 2026-05-26 Stage335G Probe Input Materialization(335G 탐침 입력 물질화)
+
+- run_id(실행 ID): `run335G_materialize_guarded_branch_probe_inputs_v1`
+- status(상태): `completed_guarded_branch_probe_inputs_materialized_no_selection`
+- decision(결정): `stage335G_probe_inputs_materialized_ready_for_review_no_selection`
+- effect(효과): 11개 branch(분기)를 proxy-vs-MT5 comparison(프록시-MT5 비교) 가능한 입력 패키지로 물질화했다.
+- boundary(경계): no candidate(후보 없음), no Forward Passed/Failed(전진 통과/실패 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음).

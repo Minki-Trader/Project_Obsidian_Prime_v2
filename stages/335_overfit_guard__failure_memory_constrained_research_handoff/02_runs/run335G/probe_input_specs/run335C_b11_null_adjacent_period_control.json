@@ -1,0 +1,1003 @@
+{
+  "claim_boundary": "research_development_only_stage335G_probe_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "materialization_queue": {
+    "branch_id": "run335C_b11_null_adjacent_period_control",
+    "branch_name": "null_adjacent_period_control",
+    "forbidden_outputs": "[\"candidate_signal\", \"threshold_change\", \"lot_change\", \"direct_forward_pocket_filter\", \"runtime_authority_claim\", \"goal_achieve_claim\"]",
+    "materialization_action": "materialize_probe_input_specs_no_scoring",
+    "minimum_outputs": "[\"probe_input_manifest\", \"measurement_plan\", \"proxy_mt5_comparison_contract\", \"proxy_expected_result_manifest\", \"mt5_runtime_probe_result_or_block\", \"negative_control_plan\", \"stop_condition_plan\", \"runtime_bridge_or_out_of_scope\", \"no_retune_guard\"]",
+    "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+    "queue_id": "run335G_materialize_guarded_branch_probe_inputs_v1__null_adjacent_period_control",
+    "ready_for_run335G": "true",
+    "required_protocol_payload": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/protocol_payloads/run335C_b11_null_adjacent_period_control.json",
+    "selection_eligible": "false"
+  },
+  "materialization_status": "probe_input_spec_materialized_no_scoring_no_runtime_execution",
+  "measurement_rows": [
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "kpi_scope": "measurement_plan_only_no_new_trading_kpi",
+      "meaning": "Tier A separate measurement required",
+      "measurement_view": "tier_a_separate",
+      "missing_policy": "blocked_or_out_of_scope_by_claim_before_any_score_interpretation",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required": "true"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "kpi_scope": "measurement_plan_only_no_new_trading_kpi",
+      "meaning": "Tier B separate measurement required",
+      "measurement_view": "tier_b_separate",
+      "missing_policy": "blocked_or_out_of_scope_by_claim_before_any_score_interpretation",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required": "true"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "kpi_scope": "measurement_plan_only_no_new_trading_kpi",
+      "meaning": "Tier A+B combined measurement required",
+      "measurement_view": "tier_a_plus_b_combined",
+      "missing_policy": "blocked_or_out_of_scope_by_claim_before_any_score_interpretation",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required": "true"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "kpi_scope": "measurement_plan_only_no_new_trading_kpi",
+      "meaning": "lot-normalized read required before any scale interpretation",
+      "measurement_view": "lot_normalized",
+      "missing_policy": "blocked_or_out_of_scope_by_claim_before_any_score_interpretation",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required": "true"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "kpi_scope": "measurement_plan_only_no_new_trading_kpi",
+      "meaning": "spread/slippage stress read required when scoring exists",
+      "measurement_view": "cost_stress",
+      "missing_policy": "blocked_or_out_of_scope_by_claim_before_any_score_interpretation",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required": "true"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "kpi_scope": "measurement_plan_only_no_new_trading_kpi",
+      "meaning": "curve pocket and underwater stretch read required when scoring exists",
+      "measurement_view": "curve_pocket",
+      "missing_policy": "blocked_or_out_of_scope_by_claim_before_any_score_interpretation",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required": "true"
+    }
+  ],
+  "mt5_runtime_probe_contract": {
+    "effect": "missing MT5 runtime probe blocks runtime or forward interpretation",
+    "required_before": "any runtime, forward, or usability claim",
+    "required_evidence": [
+      "MT5 tester report",
+      "runtime telemetry",
+      "settings/set identity",
+      "spread/slippage record",
+      "subject and handoff identity"
+    ],
+    "status": "not_executed_out_of_scope_by_claim_materialization_only"
+  },
+  "negative_control_rows": [
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "prevents protocol from becoming candidate evidence if control behaves like target",
+      "control_id": "negative_control_cost_stress",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "must_warn_if": "control behaves similarly or better; branch becomes overfit memory",
+      "predeclared_control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "prevents protocol from becoming candidate evidence if control behaves like target",
+      "control_id": "negative_control_cp322a_exact_forward_handoff_missing",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "must_warn_if": "control behaves similarly or better; branch becomes overfit memory",
+      "predeclared_control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "prevents protocol from becoming candidate evidence if control behaves like target",
+      "control_id": "negative_control_curve_pocket",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "must_warn_if": "control behaves similarly or better; branch becomes overfit memory",
+      "predeclared_control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "prevents protocol from becoming candidate evidence if control behaves like target",
+      "control_id": "negative_control_direction",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "must_warn_if": "control behaves similarly or better; branch becomes overfit memory",
+      "predeclared_control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "prevents protocol from becoming candidate evidence if control behaves like target",
+      "control_id": "negative_control_drawdown_shape",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "must_warn_if": "control behaves similarly or better; branch becomes overfit memory",
+      "predeclared_control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "prevents protocol from becoming candidate evidence if control behaves like target",
+      "control_id": "negative_control_regime_slice",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "must_warn_if": "control behaves similarly or better; branch becomes overfit memory",
+      "predeclared_control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "prevents protocol from becoming candidate evidence if control behaves like target",
+      "control_id": "negative_control_runtime_parity",
+      "control_role": "must_warn_if_control_improves_like_target",
+      "must_warn_if": "control behaves similarly or better; branch becomes overfit memory",
+      "predeclared_control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control"
+    }
+  ],
+  "next_consumer": "run335H_review_guarded_branch_probe_input_materialization_v1",
+  "no_retune_guard_rows": [
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "direct_forward_pocket_filter_policy": "forbidden",
+      "forbidden_outputs": "[\"candidate_signal\", \"direct_forward_pocket_filter\", \"lot_change\", \"runtime_authority_claim\", \"threshold_change\"]",
+      "guard_status": "locked",
+      "lot_policy": "unchanged_no_optimization",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "runtime_authority_policy": "forbidden_without_MT5_tester_report_and_telemetry",
+      "threshold_policy": "unchanged_no_search"
+    }
+  ],
+  "package_id": "run335G_materialize_guarded_branch_probe_inputs_v1__null_adjacent_period_control",
+  "parent_run_id": "run335F_design_guarded_branch_probe_protocols_v1",
+  "protocol": {
+    "branch_id": "run335C_b11_null_adjacent_period_control",
+    "branch_name": "null_adjacent_period_control",
+    "branch_type": "global_negative_control",
+    "changed_variables": "control labels and comparison queue only",
+    "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+    "comparison_baseline": "run335E reviewed branch inputs; Stage334/335 failure memory; no-trade/random/shuffle/adjacent controls",
+    "control_variables": "[\"fixed selected subject boundary\", \"fixed threshold policy until explicitly predeclared\", \"fixed lot and risk logic\", \"fixed ATR SL/TP logic\", \"Tier A separate, Tier B separate, and Tier A+B combined reporting\", \"no runtime authority without MT5 tester report and telemetry\"]",
+    "decision_use": "may_influence_next_materialization_only_not_candidate_selection",
+    "evidence_plan": "[\"protocol payload\", \"source binding manifest\", \"negative control probe plan\", \"stop condition probe plan\", \"paired tier measurement plan\", \"proxy expected result versus MT5 runtime probe comparison contract\", \"runtime requirement bridge when runtime is touched\", \"forbidden repair audit\"]",
+    "failure_axes": "[\"cost_stress\", \"curve_pocket\", \"direction\", \"drawdown_shape\", \"regime_slice\", \"runtime_parity\", \"cp322a_exact_forward_handoff_missing\"]",
+    "failure_criteria": "branch only improves through forbidden tuning, direct filters, or subject swap",
+    "hypothesis": "cost_stress can guide a timestamp-safe research branch without direct forward-pocket fitting. | curve_pocket can guide a timestamp-safe research branch without direct forward-pocket fitting. | direction can guide a timestamp-safe research branch without direct forward-pocket fitting. | drawdown_shape can guide a timestamp-safe research branch without direct forward-pocket fitting. | regime_slice can guide a timestamp-safe research branch without direct forward-pocket fitting. | runtime_parity can guide a timestamp-safe research branch without direct forward-pocket fitting. | cp322a_exact_forward_handoff_missing can guide a timestamp-safe research branch without direct forward-pocket fitting.",
+    "invalid_conditions": "control improvement reused as candidate evidence",
+    "predeclared_measurements": "adjacent-period null, state-neutral null, shuffle warning, target-control divergence",
+    "probe_family": "null_adjacent_period_control",
+    "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+    "protocol_status": "designed_ready_for_materialization",
+    "sample_scope": "US100 M5 Stage335 research probe design; post-2026-04-14 evidence remains research-only until runtime/data gates close",
+    "selection_eligible": "false",
+    "stop_conditions": "Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result.",
+    "success_criteria": "future materialization can produce measurement inputs without threshold retuning, lot optimization, direct forward-pocket filtering, or subject swap"
+  },
+  "proxy_expected_result_contract": {
+    "effect": "future proxy result must fill this before any MT5 comparison or usability read",
+    "required_dimensions": [
+      "net_profit",
+      "profit_factor",
+      "max_drawdown",
+      "trades_per_day",
+      "expectancy",
+      "recovery_factor",
+      "curve_pocket",
+      "underwater_stretch",
+      "lot_normalized_result",
+      "spread_slippage_stress",
+      "session_hour_regime",
+      "long_short_attribution"
+    ],
+    "required_views": [
+      "Tier A separate",
+      "Tier B separate",
+      "Tier A+B combined"
+    ],
+    "status": "schema_materialized_no_proxy_result_yet"
+  },
+  "proxy_mt5_contract_rows": [
+    {
+      "allowed_claim": "proxy_vs_MT5_comparison_evidence_only_no_candidate_selection",
+      "blocked_if": "[\"proxy_expected_missing\", \"MT5_runtime_probe_missing_when_runtime_claim_is_needed\", \"difference_unexplained\", \"proxy_positive_but_MT5_risk_shape_negative\", \"MT5_positive_without_matching_subject_or_handoff_identity\"]",
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "comparison_dimensions": "[\"net_profit\", \"profit_factor\", \"max_drawdown\", \"trades_per_day\", \"expectancy\", \"recovery_factor\", \"curve_pocket\", \"underwater_stretch\", \"lot_normalized_result\", \"spread_slippage_stress\", \"session_hour_regime\", \"long_short_attribution\"]",
+      "difference_read": "proxy_expected_minus_mt5_actual_and_direction_of_disagreement",
+      "mt5_runtime_probe_required": "true_for_runtime_or_forward_interpretation",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "proxy_expected_required": "true",
+      "usability_judgment_rule": "usable_only_if_proxy_and_MT5_agree_on_risk_shape_or_disagreement_is_explained_by_logged_runtime_cost_fill_session_or_handoff_difference"
+    }
+  ],
+  "proxy_mt5_usability_contract": {
+    "current_usability": "not_usable_yet",
+    "future_rule": "usable only if proxy and MT5 agree on risk shape or any difference is explained by logged runtime, cost, fill, session, or handoff evidence",
+    "reason": "proxy expected values and MT5 runtime probe results are not both present in run335G"
+  },
+  "run_id": "run335G_materialize_guarded_branch_probe_inputs_v1",
+  "runtime_bridge_rows": [
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "bridge_status": "required_before_any_runtime_claim",
+      "evidence": "feature_order_hash and adapter manifest",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_before": "runtime_probe",
+      "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist",
+      "runtime_requirement": "exact_feature_order"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "bridge_status": "required_before_any_runtime_claim",
+      "evidence": "ONNX sha256, package manifest, threshold policy",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_before": "runtime_probe",
+      "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist",
+      "runtime_requirement": "model_identity"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "bridge_status": "required_before_any_runtime_claim",
+      "evidence": "handoff manifest, row counts, signal timestamps",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_before": "runtime_probe",
+      "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist",
+      "runtime_requirement": "file_handoff_identity"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "bridge_status": "required_before_any_runtime_claim",
+      "evidence": "tester report, telemetry, settings, spread/slippage record",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_before": "runtime_authority_candidate",
+      "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist",
+      "runtime_requirement": "MT5_strategy_tester_output"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "bridge_status": "required_before_any_runtime_claim",
+      "evidence": "genuine post-2026-04-14 route-signal source; source_authority_gate=stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/source_authority_gate_receipt.csv",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_before": "any cp322A exact Forward Passed/Failed claim",
+      "runtime_claim_boundary": "cp322A exact remains blocked unless exact handoff is proven",
+      "runtime_requirement": "cp322a_exact_subject_boundary"
+    }
+  ],
+  "selection_eligible": false,
+  "source_protocol_payload": {
+    "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+    "forbidden_outputs": [
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "check_status": "rejected_by_materialization_contract",
+        "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+        "forbidden_output": "candidate_signal"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "check_status": "rejected_by_materialization_contract",
+        "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+        "forbidden_output": "threshold_change"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "check_status": "rejected_by_materialization_contract",
+        "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+        "forbidden_output": "lot_change"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "check_status": "rejected_by_materialization_contract",
+        "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+        "forbidden_output": "direct_forward_pocket_filter"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "check_status": "rejected_by_materialization_contract",
+        "effect": "keeps run335D as input materialization only; no scoring, retune, or runtime authority claim",
+        "forbidden_output": "runtime_authority_claim"
+      }
+    ],
+    "negative_controls": [
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "prevents branch design from becoming candidate claim",
+        "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+        "control_id": "negative_control_cost_stress",
+        "control_role": "must_warn_if_control_improves_like_target",
+        "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+        "pass_condition": "target branch separates from control without forbidden repair"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "prevents branch design from becoming candidate claim",
+        "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+        "control_id": "negative_control_cp322a_exact_forward_handoff_missing",
+        "control_role": "must_warn_if_control_improves_like_target",
+        "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+        "pass_condition": "target branch separates from control without forbidden repair"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "prevents branch design from becoming candidate claim",
+        "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+        "control_id": "negative_control_curve_pocket",
+        "control_role": "must_warn_if_control_improves_like_target",
+        "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+        "pass_condition": "target branch separates from control without forbidden repair"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "prevents branch design from becoming candidate claim",
+        "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+        "control_id": "negative_control_direction",
+        "control_role": "must_warn_if_control_improves_like_target",
+        "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+        "pass_condition": "target branch separates from control without forbidden repair"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "prevents branch design from becoming candidate claim",
+        "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+        "control_id": "negative_control_drawdown_shape",
+        "control_role": "must_warn_if_control_improves_like_target",
+        "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+        "pass_condition": "target branch separates from control without forbidden repair"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "prevents branch design from becoming candidate claim",
+        "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+        "control_id": "negative_control_regime_slice",
+        "control_role": "must_warn_if_control_improves_like_target",
+        "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+        "pass_condition": "target branch separates from control without forbidden repair"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "prevents branch design from becoming candidate claim",
+        "control_design": "shuffle_or_adjacent_period_or_state_neutral_control_predeclared_before_materialization",
+        "control_id": "negative_control_runtime_parity",
+        "control_role": "must_warn_if_control_improves_like_target",
+        "fail_condition": "control behaves similarly or better; branch becomes overfit memory",
+        "pass_condition": "target branch separates from control without forbidden repair"
+      }
+    ],
+    "next_consumer": "run335G_materialize_guarded_branch_probe_inputs_v1",
+    "parent_run_id": "run335E_review_guarded_branch_input_materialization_v1",
+    "protocol": {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "branch_type": "global_negative_control",
+      "changed_variables": "control labels and comparison queue only",
+      "claim_boundary": "research_development_only_stage335F_probe_protocol_design_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "comparison_baseline": "run335E reviewed branch inputs; Stage334/335 failure memory; no-trade/random/shuffle/adjacent controls",
+      "control_variables": [
+        "fixed selected subject boundary",
+        "fixed threshold policy until explicitly predeclared",
+        "fixed lot and risk logic",
+        "fixed ATR SL/TP logic",
+        "Tier A separate, Tier B separate, and Tier A+B combined reporting",
+        "no runtime authority without MT5 tester report and telemetry"
+      ],
+      "decision_use": "may_influence_next_materialization_only_not_candidate_selection",
+      "evidence_plan": [
+        "protocol payload",
+        "source binding manifest",
+        "negative control probe plan",
+        "stop condition probe plan",
+        "paired tier measurement plan",
+        "proxy expected result versus MT5 runtime probe comparison contract",
+        "runtime requirement bridge when runtime is touched",
+        "forbidden repair audit"
+      ],
+      "failure_axes": "[\"cost_stress\", \"curve_pocket\", \"direction\", \"drawdown_shape\", \"regime_slice\", \"runtime_parity\", \"cp322a_exact_forward_handoff_missing\"]",
+      "failure_criteria": "branch only improves through forbidden tuning, direct filters, or subject swap",
+      "hypothesis": "cost_stress can guide a timestamp-safe research branch without direct forward-pocket fitting. | curve_pocket can guide a timestamp-safe research branch without direct forward-pocket fitting. | direction can guide a timestamp-safe research branch without direct forward-pocket fitting. | drawdown_shape can guide a timestamp-safe research branch without direct forward-pocket fitting. | regime_slice can guide a timestamp-safe research branch without direct forward-pocket fitting. | runtime_parity can guide a timestamp-safe research branch without direct forward-pocket fitting. | cp322a_exact_forward_handoff_missing can guide a timestamp-safe research branch without direct forward-pocket fitting.",
+      "invalid_conditions": "control improvement reused as candidate evidence",
+      "predeclared_measurements": "adjacent-period null, state-neutral null, shuffle warning, target-control divergence",
+      "probe_family": "null_adjacent_period_control",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "protocol_status": "designed_ready_for_materialization",
+      "sample_scope": "US100 M5 Stage335 research probe design; post-2026-04-14 evidence remains research-only until runtime/data gates close",
+      "selection_eligible": "false",
+      "stop_conditions": "Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result. | Stop or downgrade if any forbidden variable is required to improve the result.",
+      "success_criteria": "future materialization can produce measurement inputs without threshold retuning, lot optimization, direct forward-pocket filtering, or subject swap"
+    },
+    "run_id": "run335F_design_guarded_branch_probe_protocols_v1",
+    "runtime_gates": [
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "evidence": "feature_order_hash and adapter manifest",
+        "forbidden_shortcut": "Python column order assumed from file name",
+        "required_before": "runtime_probe",
+        "requirement": "exact_feature_order",
+        "run335C_status": "required_for_future_runtime_branch",
+        "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "evidence": "ONNX sha256, package manifest, threshold policy",
+        "forbidden_shortcut": "bridge ONNX treated as cp322A exact",
+        "required_before": "runtime_probe",
+        "requirement": "model_identity",
+        "run335C_status": "required_for_future_runtime_branch",
+        "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "evidence": "handoff manifest, row counts, signal timestamps",
+        "forbidden_shortcut": "compile-only parity",
+        "required_before": "runtime_probe",
+        "requirement": "file_handoff_identity",
+        "run335C_status": "required_for_future_runtime_branch",
+        "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "evidence": "tester report, telemetry, settings, spread/slippage record",
+        "forbidden_shortcut": "Python KPI used as runtime authority",
+        "required_before": "runtime_authority_candidate",
+        "requirement": "MT5_strategy_tester_output",
+        "run335C_status": "required_for_future_runtime_branch",
+        "runtime_claim_boundary": "not_applicable_until_mt5_tester_output_and_telemetry_exist"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "evidence": "genuine post-2026-04-14 route-signal source; source_authority_gate=stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/source_authority_gate_receipt.csv",
+        "forbidden_shortcut": "run333E bridge or non-identity evidence treated as cp322A exact handoff",
+        "required_before": "any cp322A exact Forward Passed/Failed claim",
+        "requirement": "cp322a_exact_subject_boundary",
+        "run335C_status": "required_for_future_runtime_branch",
+        "runtime_claim_boundary": "cp322A exact remains blocked unless exact handoff is proven"
+      }
+    ],
+    "source_bindings": [
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "3d84b9a3d3e42893fbf010b9e66999b3108fc0eb92c9aa9b8905ae0a846c080a",
+        "source_exists": "true",
+        "source_id": "run329H_exact_handoff_feasibility_matrix",
+        "source_path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/exact_handoff_repair_feasibility_matrix.csv",
+        "source_role": "cp322A exact handoff feasibility matrix",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "4",
+        "sha256": "9634c1a990bb64c2b1898962b6f9c5f6b076add1dcd8f41e42ac6315dd31fa81",
+        "source_exists": "true",
+        "source_id": "run329H_route_signal_coverage_audit",
+        "source_path": "stages/329_onnx_rebuild__live_feature_control/02_runs/run329H/route_signal_coverage_audit.csv",
+        "source_role": "cp322A exact route-signal coverage audit",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "42",
+        "sha256": "6f91fe258b1548fd5273ba6aba99efed69eb0b3209a8de2dffeed54611d125de",
+        "source_exists": "true",
+        "source_id": "run330F_cost_stress_report",
+        "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/cost_stress_report.csv",
+        "source_role": "raw-forward cost stress report",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "24",
+        "sha256": "5b7fe3f36d2b9522fdf6b56bc3b4dc1978291209b971b423656a4d8e0fa2b532",
+        "source_exists": "true",
+        "source_id": "run330F_curve_pocket_report",
+        "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/curve_pocket_report.csv",
+        "source_role": "raw-forward curve pocket report",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "12",
+        "sha256": "d26d0559680f58b17809211f0c3f49a14d905d9ff3f12480ee05a0e5021538cf",
+        "source_exists": "true",
+        "source_id": "run330F_long_short_attribution_report",
+        "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/long_short_attribution_report.csv",
+        "source_role": "raw-forward long/short attribution report",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "258",
+        "sha256": "29bf53618bf082c7d3d259e721d236d04b2e89629113434ebb26a59d9c192392",
+        "source_exists": "true",
+        "source_id": "run330F_regime_attribution_report",
+        "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/regime_attribution_report.csv",
+        "source_role": "raw-forward regime attribution report",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "258",
+        "sha256": "29bf53618bf082c7d3d259e721d236d04b2e89629113434ebb26a59d9c192392",
+        "source_exists": "true",
+        "source_id": "run330F_session_hour_month_regime_slices",
+        "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/session_hour_month_volatility_adx_vix_usd_rate_slices.csv",
+        "source_role": "raw-forward session/hour/month/volatility/ADX/VIX/USD/rate slices",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "0b8c57686a7c213fe8486d04abaff9b6f9069176deef693dc0b59a4db0fa9888",
+        "source_exists": "true",
+        "source_id": "run330F_underwater_stretch_report",
+        "source_path": "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330F/underwater_stretch_report.csv",
+        "source_role": "raw-forward underwater stretch report",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "json_manifest_or_receipt",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "1",
+        "sha256": "86c4ef045d2e98c69f6b28261fe54df9145b9b355d905fe551da6b79a493cd5f",
+        "source_exists": "true",
+        "source_id": "run334B_cp322a_identity_audit_manifest",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/subject_packages/cp322a_preserved_identity_audit_manifest.json",
+        "source_role": "cp322A preserved identity audit manifest",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "json_manifest_or_receipt",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "1",
+        "sha256": "8d420b99a2a3ba1e20920c9bf3b454fca85b9518d8e13418c250e251e1cbcae0",
+        "source_exists": "true",
+        "source_id": "run334B_runtime_parity_receipt",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/runtime_parity_receipt.json",
+        "source_role": "subject-separated runtime parity receipt",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "4",
+        "sha256": "48da4582853f4185b689ce3dfea5a3c5c74a595bdb301ee9eb67feda2e696df0",
+        "source_exists": "true",
+        "source_id": "run334B_source_authority_gate",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334B/source_authority_gate_receipt.csv",
+        "source_role": "subject-separated source authority gate",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "12",
+        "sha256": "75de9b6b808e732fb748880b8056a790722c75d43b3eb2a44c652c6c60678689",
+        "source_exists": "true",
+        "source_id": "run334F_cost_stress_diagnostics",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/cost_stress_diagnostic_views.csv",
+        "source_role": "fixed no-retune cost diagnostic views",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "22aba510e17f600b72dc3d2798f7ca1b1022e9aa3f80cb5852c7a67b85dd21ec",
+        "source_exists": "true",
+        "source_id": "run334F_curve_pocket_diagnostics",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/curve_pocket_diagnostic_views.csv",
+        "source_role": "fixed no-retune curve diagnostic views",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "3fcca23beec1f09a5b416cd41bbf9cea18e9aef7dc4846e248db7e50950746d8",
+        "source_exists": "true",
+        "source_id": "run334F_direction_diagnostics",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/direction_diagnostic_views.csv",
+        "source_role": "fixed no-retune direction diagnostic views",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "3d5e34b703093646c01c5ac912f6a88eb4ea6ce2a9bcc2b1b8b4454656e7967d",
+        "source_exists": "true",
+        "source_id": "run334F_regime_slice_diagnostics",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/regime_slice_diagnostic_views.csv",
+        "source_role": "fixed no-retune regime diagnostic views",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "d2c52d8bb3a564411b2d203526779a57f09c86af5c0177048974c03bc0049300",
+        "source_exists": "true",
+        "source_id": "run334F_runtime_identity_diagnostics",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/runtime_identity_diagnostic_views.csv",
+        "source_role": "fixed no-retune runtime identity diagnostics",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "443820d96677501a284d28a88c7dbf508023b4c39b94df9f7fea0e83dc59a51d",
+        "source_exists": "true",
+        "source_id": "run334F_underwater_diagnostics",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334F/diagnostic_views/underwater_diagnostic_views.csv",
+        "source_role": "fixed no-retune underwater diagnostic views",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "96c71f627ab9799c9a9be9772eccd8186f0b97884e2bdfa43608285e3d36c426",
+        "source_exists": "true",
+        "source_id": "run334G_axis_failure_heatmap",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/axis_failure_heatmap.csv",
+        "source_role": "axis failure heatmap",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "6",
+        "sha256": "47b16fb39937a4ff3bb9c3740ebf9acca5a984d408c9157083e127588a0bfcf7",
+        "source_exists": "true",
+        "source_id": "run334G_runtime_identity_review",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334G/runtime_identity_review.csv",
+        "source_role": "runtime identity review",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "7",
+        "sha256": "16b568a8c85072888797afda0d33e9994a8662b4c7582bf06fe690dcb7e0188e",
+        "source_exists": "true",
+        "source_id": "run334H_failure_memory_handoff",
+        "source_path": "stages/334_runtime_parity__forward_usable_onnx_handoff_contract_hardening/02_runs/run334H/stage334_to_stage335_failure_memory_handoff.csv",
+        "source_role": "stage334 to stage335 failure handoff",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "7",
+        "sha256": "5eaacb4f13a86cf6c10f7a0e384626dcda1e2b3e5e57a13689ae92e6c8b00e62",
+        "source_exists": "true",
+        "source_id": "run335A_materialization_contract",
+        "source_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/next_materialization_contract.csv",
+        "source_role": "stage335A contract",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      },
+      {
+        "artifact_type": "csv_table",
+        "binding_status": "bound",
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "branch_name": "null_adjacent_period_control",
+        "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+        "feature_label_boundary_statement": "This source may constrain future protocol design only; it does not create labels, change features, or tune thresholds.",
+        "integrity_judgment": "usable_with_boundary",
+        "row_count": "4",
+        "sha256": "e72f2b7ac7f41476572a8614e458d7bde3a5b307646404a0052f709df1b9ba0e",
+        "source_exists": "true",
+        "source_id": "run335A_runtime_parity_bridge",
+        "source_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335A/runtime_parity_requirement_bridge.csv",
+        "source_role": "stage335A runtime bridge",
+        "time_axis_statement": "Source rows are review/manifest evidence. Any future score frame must use FPMarkets v2 broker-clock close key and the session mapper before session features."
+      }
+    ],
+    "source_package": {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "branch_type": "global_negative_control",
+      "claim_boundary": "research_development_only_stage335D_branch_input_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_direct_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+      "evidence_requirement_count": "8",
+      "failure_axes": "[\"cost_stress\", \"curve_pocket\", \"direction\", \"drawdown_shape\", \"regime_slice\", \"runtime_parity\", \"cp322a_exact_forward_handoff_missing\"]",
+      "missing_source_count": "0",
+      "negative_control_count": "7",
+      "package_id": "run335D_materialize_guarded_branch_research_inputs_v1__null_adjacent_period_control",
+      "package_status": "materialized_input_spec_only",
+      "payload_path": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335D/branch_payloads/run335C_b11_null_adjacent_period_control.json",
+      "payload_sha256": "746a4d3603fdaf98964f554bb01afe2789dcc2fb746dec10965d4ed4ea5a7392",
+      "runtime_gate_count": "5",
+      "selection_eligible": "false",
+      "source_binding_count": "22",
+      "stop_condition_count": "6",
+      "tier_kpi_rows": "3"
+    },
+    "stage_id": "335_overfit_guard__failure_memory_constrained_research_handoff",
+    "stop_conditions": [
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+        "required_action": "stop_or_downgrade",
+        "stop_rule_id": "forbidden_tuning_required",
+        "trigger": "improvement requires threshold, lot, stop, target, or direct pocket filter"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+        "required_action": "downgrade_to_overfit_memory",
+        "stop_rule_id": "negative_control_tracks_target",
+        "trigger": "negative control improves similarly to target branch"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+        "required_action": "missing_required_or_blocked",
+        "stop_rule_id": "tier_view_missing",
+        "trigger": "Tier A, Tier B, or combined view is absent without explicit boundary"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+        "required_action": "no_runtime_claim",
+        "stop_rule_id": "runtime_evidence_missing",
+        "trigger": "MT5 tester report or telemetry is absent"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+        "required_action": "invalid_or_must_reject",
+        "stop_rule_id": "subject_boundary_break",
+        "trigger": "cp322A exact is mixed with run333E or non-identity evidence"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+        "required_action": "blocked_until_repaired",
+        "stop_rule_id": "data_identity_mismatch",
+        "trigger": "source hash, row count, or time-axis identity mismatches"
+      }
+    ],
+    "tier_kpi_plan": [
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "kpi_scope": "signal/trade/risk/execution names preserved",
+        "meaning": "full-context sample read",
+        "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+        "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+        "required": "true",
+        "view": "Tier A separate"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "kpi_scope": "same KPI names with partial-context label",
+        "meaning": "partial-context sample read",
+        "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+        "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+        "required": "true",
+        "view": "Tier B separate"
+      },
+      {
+        "branch_id": "run335C_b11_null_adjacent_period_control",
+        "kpi_scope": "synthetic sum cannot be called actual routed total",
+        "meaning": "combined read or actual routed total",
+        "missing_policy": "missing_required_blocked_or_out_of_scope_by_claim",
+        "profit_attribution_boundary": "no per-tier profit claim unless routed account path tracks it directly",
+        "required": "true",
+        "view": "Tier A+B combined"
+      }
+    ]
+  },
+  "stage_id": "335_overfit_guard__failure_memory_constrained_research_handoff",
+  "stop_condition_rows": [
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_action": "stop_or_downgrade",
+      "stop_rule_id": "forbidden_tuning_required",
+      "trigger": "improvement requires threshold, lot, stop, target, or direct pocket filter"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_action": "downgrade_to_overfit_memory",
+      "stop_rule_id": "negative_control_tracks_target",
+      "trigger": "negative control improves similarly to target branch"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_action": "missing_required_or_blocked",
+      "stop_rule_id": "tier_view_missing",
+      "trigger": "Tier A, Tier B, or combined view is absent without explicit boundary"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_action": "no_runtime_claim",
+      "stop_rule_id": "runtime_evidence_missing",
+      "trigger": "MT5 tester report or telemetry is absent"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_action": "invalid_or_must_reject",
+      "stop_rule_id": "subject_boundary_break",
+      "trigger": "cp322A exact is mixed with run333E or non-identity evidence"
+    },
+    {
+      "branch_id": "run335C_b11_null_adjacent_period_control",
+      "branch_name": "null_adjacent_period_control",
+      "claim_effect": "no Forward Passed/Failed and no Goal Achieve under this condition",
+      "protocol_id": "run335F_design_guarded_branch_probe_protocols_v1__null_adjacent_period_control",
+      "required_action": "blocked_until_repaired",
+      "stop_rule_id": "data_identity_mismatch",
+      "trigger": "source hash, row count, or time-axis identity mismatches"
+    }
+  ]
+}

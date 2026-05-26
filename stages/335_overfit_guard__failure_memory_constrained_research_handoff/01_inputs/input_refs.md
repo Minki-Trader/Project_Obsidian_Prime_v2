@@ -62,3 +62,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - no_retune_probe_guard(무재튜닝 탐침 방어): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/no_retune_probe_guard.csv`
 - run335G_probe_input_materialization_queue(335G 탐침 입력 물질화 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335F/run335G_probe_input_materialization_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335F_guarded_branch_probe_protocol_design.md`
+
+## run335G Probe Input Materialization(335G 탐침 입력 물질화)
+
+- probe_input_package_manifest(탐침 입력 패키지 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/probe_input_package_manifest.csv`
+- probe_input_specs(탐침 입력 명세): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/probe_input_specs`
+- proxy_expected_result_manifest(프록시 예상값 목록): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/proxy_expected_result_manifest.csv`
+- mt5_runtime_probe_result_or_block(MT5 런타임 탐침 결과 또는 차단): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/mt5_runtime_probe_result_or_block.csv`
+- proxy_mt5_comparison_readiness_matrix(프록시-MT5 비교 준비 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/proxy_mt5_comparison_readiness_matrix.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335G_guarded_branch_probe_input_materialization.md`

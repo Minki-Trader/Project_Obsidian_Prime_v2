@@ -1,0 +1,22 @@
+{
+  "changed_variables": "materialized input specs and manifests only",
+  "comparison_baseline": "run335F protocol design plus Stage334/335 failure memory.",
+  "control_variables": [
+    "fixed subject boundary",
+    "fixed threshold policy",
+    "fixed lot and risk logic",
+    "fixed ATR SL/TP logic",
+    "predeclared proxy-vs-MT5 comparison contract"
+  ],
+  "decision_use": "May only decide whether probe input materialization is ready for review and later proxy/MT5 execution.",
+  "evidence_plan": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/probe_input_package_manifest.csv",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335G/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "Any package missing, selection enabled, proxy/MT5 usability claimed, or forbidden retune output appears.",
+  "hypothesis": "Guarded branch protocols can be materialized into probe input specs without retuning, direct forward-pocket filters, or selection.",
+  "invalid_conditions": "Materialization changes threshold, lot, model, risk, subject identity, or direct forward-pocket filters.",
+  "sample_scope": "US100 M5 Stage335 research materialization; no new broker data or runtime result in this run",
+  "stop_conditions": "Stop or downgrade if gates fail or proxy/MT5 evidence is claimed without actual runtime evidence.",
+  "success_criteria": "11 packages, proxy expected schema, MT5 result-or-block, comparison readiness, controls, stop conditions, and no-retune guard materialized."
+}
