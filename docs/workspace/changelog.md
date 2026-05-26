@@ -4551,3 +4551,12 @@
 - decision(결정): `stage336I_runner_scaffolds_reviewed_run336J_proxy_mt5_probe_inputs_ready_no_selection`
 - effect(효과): run336H scaffold(336H 뼈대)를 검토하고 run336J proxy/MT5 materialization queue(336J 프록시/MT5 물질화 대기열) `7`행을 만들었다.
 - boundary(경계): 후보 선택, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336J Proxy/MT5 Probe Inputs(336J 프록시/MT5 탐침 입력)
+
+- run_id(실행 ID): `run336J_materialize_proxy_expected_fresh_mt5_probe_inputs_v1`
+- status(상태): `completed_proxy_expected_fresh_mt5_probe_inputs_materialized_no_mt5_execution`
+- decision(결정): `stage336J_proxy_mt5_probe_inputs_materialized_run336K_runtime_probe_attempt_ready_no_selection`
+- action(행동): proxy expected value(프록시 예상값)와 fresh MT5 runtime probe(신규 MT5 런타임 탐침)의 입력/차이/활용성 계약을 물질화했다.
+- effect(효과): run336K(336K 실행)가 실제 MT5(MetaTrader 5, 메타트레이더5) 탐침을 시도하거나 정확한 blocker(차단 사유)를 기록해야 한다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

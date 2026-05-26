@@ -104,3 +104,14 @@ Boundary(경계): 이 입력은 research design(연구 설계)용이며 selected
 - runner_scaffold_acceptance(러너 뼈대 승인): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/runner_scaffold_acceptance_matrix.csv`
 - run336J_queue(336J 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/run336J_proxy_mt5_probe_materialization_queue.csv`
 - final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336I/final_runner_scaffold_review_decision.json`
+
+## run336J Proxy/MT5 Probe Inputs(336J 프록시/MT5 탐침 입력)
+
+- negative_control_execution_plan(부정 대조 실행 계획): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/negative_control_execution_plan.csv`
+- runtime_identity_preflight_manifest(런타임 정체성 사전점검 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/runtime_identity_preflight_manifest.csv`
+- proxy_expected_result_template(프록시 예상값 틀): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/proxy_expected_result_template.csv`
+- mt5_probe_execution_manifest(MT5 탐침 실행 목록): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/mt5_probe_execution_manifest.json`
+- proxy_mt5_difference_runner_contract(프록시/MT5 차이 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/proxy_mt5_difference_runner_contract.csv`
+- usability_decision_runner_contract(활용성 결정 계약): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/usability_decision_runner_contract.csv`
+- run336K_runtime_probe_attempt_queue(336K 런타임 탐침 시도 대기열): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/run336K_runtime_probe_attempt_queue.csv`
+- final_decision(최종 결정): `stages/336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild/02_runs/run336J/final_proxy_mt5_probe_input_materialization_decision.json`
