@@ -4465,3 +4465,10 @@
 - decision(결정): `stage335Q_accept_same_bar_attribution_repair_keep_proxy_blocked_queue_branch_specific_proxy_scout`
 - effect(효과): same-bar attribution repair(동일 봉 귀속 수리)를 승인하고 proxy(프록시)는 선택 차단 유지, run335R(335R 실행) 물질화 대기열을 만들었다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+## 2026-05-26 Stage335R Repaired Attribution Proxy Scout(335R 수리 귀속 프록시 탐침)
+
+- run_id(실행 ID): `run335R_materialize_repaired_attribution_and_branch_specific_proxy_scout_v1`
+- status(상태): `completed_repaired_attribution_and_proxy_scout_materialized_no_forward_decision`
+- decision(결정): `stage335R_materialized_same_bar_attribution_repair_and_proxy_scout_no_selection`
+- effect(효과): same-bar attribution repair(동일 봉 귀속 수리)를 적용하고 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침) 차이를 diagnostic-only(진단 전용)로 재물질화했다.
+- boundary(경계): proxy(프록시)는 selection/Forward decision(선택/전진 판정)에 `blocked`이며 Goal Achieve(목표 달성)는 `not_claimed`.

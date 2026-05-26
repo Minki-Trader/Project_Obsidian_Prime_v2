@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "research_development_only_stage335R_repaired_attribution_proxy_scout_no_model_training_no_threshold_retuning_no_lot_optimization_no_forward_pocket_filtering_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "known_differences": "run335R creates repaired attribution views only; no new MT5 execution and no EA/runtime logic change",
+  "parity_check": "reuses run335K/run335N parsed MT5 outputs; same-bar repair is attribution-only",
+  "parity_identity": {
+    "repaired_join_view": "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335R/repaired_trade_telemetry_join_view.csv",
+    "source_run": "run335K/run335N"
+  },
+  "research_path": "stage_pipelines/stage335/materialize_repaired_attribution_and_branch_specific_proxy_scout.py",
+  "run_id": "run335R_materialize_repaired_attribution_and_branch_specific_proxy_scout_v1",
+  "runtime_claim_boundary": "runtime_probe_diagnostic_only_no_runtime_authority",
+  "runtime_path": [
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/runtime_telemetry",
+    "stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335K/mt5/reports"
+  ],
+  "shared_contract": "feature rows, telemetry rows, trade reports, fixed no-retune runtime outputs from run335K/run335N"
+}

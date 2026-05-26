@@ -162,3 +162,12 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - balanced_package_review(균형 패키지 검토): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335Q/balanced_package_review.csv`
 - run335R_materialization_queue(335R 물질화 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335Q/run335R_materialization_queue.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335Q_balanced_input_review.md`
+## run335R Repaired Attribution Proxy Scout(335R 수리 귀속 프록시 탐침)
+
+- repaired_trade_telemetry_join_view(수리된 거래-기록 조인 보기): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335R/repaired_trade_telemetry_join_view.csv`
+- repaired_runtime_trade_ledger(수리된 런타임 거래 장부): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335R/repaired_runtime_trade_ledger.csv`
+- proxy_scout_vs_mt5_runtime_comparison(프록시 대 MT5 런타임 비교): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335R/proxy_scout_vs_mt5_runtime_comparison.csv`
+- proxy_scout_usability_decision(프록시 탐침 활용성 판정): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335R/proxy_scout_usability_decision.csv`
+- constraint_bound_research_packet_inputs(제약 기반 연구 묶음 입력): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335R/constraint_bound_research_packet_inputs.csv`
+- run335S_review_queue(335S 검토 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335R/run335S_review_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335R_repaired_attribution_proxy_scout.md`
