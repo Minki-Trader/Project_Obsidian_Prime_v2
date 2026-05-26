@@ -1,0 +1,22 @@
+{
+  "skill": "obsidian-result-judgment",
+  "result_subject": "run332B_materialize_failure_memory_forward_data_and_guard_inputs_v1",
+  "evidence_available": [
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/data_integrity_report.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/guard_input_manifest.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/raw_refresh_probe_manifest.json",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/required_gate_coverage_audit.csv"
+  ],
+  "evidence_missing": [
+    "new feature frame from the refreshed raw bars",
+    "new cost-curve scout result",
+    "new MT5 runtime report for a future branch"
+  ],
+  "judgment_label": "usable_with_boundary",
+  "claim_boundary": "research_development_only_data_guard_input_materialization_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve",
+  "next_condition": "Run run332C with existing forward guard inputs or materialize refreshed feature frames before any new model work.",
+  "user_explanation_hook": "Existing guard inputs are traceable, and the latest raw probe exists, but this is data readiness only, not forward pass.",
+  "forward_passed": "not_claimed",
+  "forward_failed": "not_claimed",
+  "goal_achieve": "not_claimed"
+}

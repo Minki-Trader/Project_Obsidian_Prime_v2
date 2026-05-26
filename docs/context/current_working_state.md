@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `332_overfit_guard__failure_memory_forward_research_handoff_v2`
-- current_run(현재 실행): `run332B_materialize_failure_memory_forward_data_and_guard_inputs_v1`
+- current_packet(현재 작업 묶음): `332_overfit_guard__failure_memory_forward_research_handoff_v3`
+- current_run(현재 실행): `run332C_design_or_materialize_cost_curve_guarded_scout_v1`
 - active_stage(활성 단계): `332_overfit_guard__failure_memory_forward_research_handoff`
 - selected_research_baseline(선택 연구 기준선): `none`
 - source_stage(원천 단계): `331_overfit_guard__cross_horizon_cost_curve_parity_probe`
-- target_surface(목표 표면): `failure_memory_data_guard_materialization`
+- target_surface(목표 표면): `cost_curve_guarded_scout`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_failure_memory_forward_research_handoff_design_no_selection`
-- decision(판정): `experiment_design_completed_research_only_no_goal_achieve`
+- status(상태): `completed_data_guard_input_materialization_with_refresh_probe_boundary_no_selection`
+- decision(판정): `data_guard_inputs_materialized_research_only_no_goal_achieve`
+- run332B_summary(332B 요약): data/guard input materialization(데이터/방어 입력 물질화)을 `completed_data_guard_input_materialization_with_refresh_probe_boundary_no_selection`로 완료했다. Effect(효과): 기존 feature handoff(피처 인계) 정체성과 raw refresh probe(원본 갱신 탐침)를 분리해 기록했고, 다음 run332C(332C 실행)의 cost curve guarded scout(비용 곡선 방어 탐색)로 넘긴다.
 - run332A_summary(332A 요약): failure memory forward research handoff design(실패 기억 전진 연구 인계 설계)을 `completed_failure_memory_forward_research_handoff_design_no_selection`로 완료했다. Effect(효과): Stage331(331단계)의 실패를 다음 run332B(332B 실행)의 data integrity/guard input(데이터 무결성/방어 입력) 조건으로 바꿨고, 후보 선택이나 Goal Achieve(목표 달성)는 없다.
 - run331D_summary(331D 요약): final cross-horizon overfit guard decision(최종 교차 기간 과적합 방어 판정)을 `completed_final_cross_horizon_overfit_guard_decision_stage331_closed_no_selection`로 닫았다. Effect(효과): runtime parity(런타임 동등성)는 맞았지만 선택 가능한 ONNX(온엑스)는 없어서 Stage332(332단계)의 failure memory research handoff(실패 기억 연구 인계)로 넘긴다.
 - run331C_summary(331C 요약): runtime replay or block(런타임 재생 또는 차단)을 `completed_runtime_replay_cross_horizon_probe_no_forward_decision`로 실행했다. Effect(효과): run330E의 고정 입력을 run331C 전용 telemetry/report(실행 기록/보고서)로 재생했지만 선택 후보, Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 없다.
@@ -49,8 +50,8 @@
 - stage270_open_summary(270단계 개방 요약): Stage270(270단계) `270_onnx_candidate_campaign__aggressive_nonfilter_upside_probe`가 run269E(269E 실행) queue(대기열)에서 열렸다. Effect(효과): Stage269(269단계)를 더 늘리지 않고 cp269A(269A 패키지)의 upside(상방), failure mode(실패 방식), discard condition(폐기 조건)을 새 질문으로 압박한다.
 - run270A_summary(270A 요약): run270A(270A 실행)는 aggressive upside probe design(공격형 상방 탐침 설계)을 완료했다. Effect(효과): branch(분기) `6`개, Tier A/B supply metrics(티어 A/B 공급 지표), threshold receipt(임계값 영수증), readiness receipt(준비 영수증)를 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run270B_summary(270B 요약): run270B(270B 실행)는 aggressive probe payload materialization(공격형 탐침 페이로드 물질화)을 완료했다. Effect(효과): payload parquet(페이로드 parquet) `6`개, handoff JSON(인계 JSON) `6`개, Tier A MT5 signal CSV(Tier A MT5 신호 CSV) `6`개, MT5 probe queue(MT5 탐침 대기열) `5`행을 만들었고, selected candidate(선택 후보), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-- next_action(다음 행동): `run332B_materialize_failure_memory_forward_data_and_guard_inputs_v1`
-- claim_boundary(주장 경계): `research_development_only_failure_memory_forward_research_design_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- next_action(다음 행동): `run332C_design_or_materialize_cost_curve_guarded_scout_v1`
+- claim_boundary(주장 경계): `research_development_only_data_guard_input_materialization_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 Stage267(267단계)은 run267ET(267ET 실행)까지 진행된 MT5 runtime probe(MT5 런타임 탐침)를 reference evidence(참고 근거)로 남기고 닫았다.
 Effect(효과): Stage267(267단계)의 baseline pool(기준 후보군), alias(별칭), profile(프로필), run id(실행 ID)를 selected candidate(선택 후보)나 ONNX-ready package(온엑스 준비 패키지)로 읽지 않는다.

@@ -4178,3 +4178,11 @@
 - judgment(판정): `experiment_design_completed_research_only_no_goal_achieve`
 - next_action(다음 행동): `run332B_materialize_failure_memory_forward_data_and_guard_inputs_v1`
 - effect(효과): 과적합 포켓을 직접 고치지 않고 다음 실행의 차단 조건으로 고정했으며, Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-26 - Stage332B Data Guard Input Materialization(332B 데이터 방어 입력 물질화)
+
+- run332B(332B 실행): 기존 forward feature handoff(전진 피처 인계)의 row/hash identity(행/해시 정체성)를 확인하고, US100 M5 raw refresh probe(원본 갱신 탐침)를 CSV+repaired manifest(CSV+보강 목록)로 기록했다.
+- status(상태): `completed_data_guard_input_materialization_with_refresh_probe_boundary_no_selection`
+- judgment(판정): `data_guard_inputs_materialized_research_only_no_goal_achieve`
+- next_action(다음 행동): `run332C_design_or_materialize_cost_curve_guarded_scout_v1`
+- effect(효과): cost/curve guarded scout(비용/곡선 방어 탐색)의 입력은 준비됐지만 Forward Passed/Failed(전진 통과/실패), Goal Achieve(목표 달성)는 주장하지 않는다.

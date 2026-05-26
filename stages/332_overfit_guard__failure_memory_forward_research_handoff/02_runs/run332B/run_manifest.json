@@ -1,0 +1,42 @@
+{
+  "stage_id": "332_overfit_guard__failure_memory_forward_research_handoff",
+  "run_id": "run332B_materialize_failure_memory_forward_data_and_guard_inputs_v1",
+  "run_number": "run332B",
+  "parent_run_id": "run332A_design_failure_memory_forward_research_handoff_packet_v1",
+  "generated_at_utc": "2026-05-26T04:42:14Z",
+  "primary_family": "experiment_execution",
+  "primary_skill": "obsidian-data-integrity",
+  "support_skills": [
+    "obsidian-artifact-lineage",
+    "obsidian-result-judgment",
+    "obsidian-environment-reproducibility"
+  ],
+  "required_gates": [
+    "data_integrity_report",
+    "guard_input_manifest",
+    "raw_refresh_probe_boundary",
+    "no_retune_guard",
+    "artifact_lineage_audit",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "status": "completed_data_guard_input_materialization_with_refresh_probe_boundary_no_selection",
+  "judgment": "data_guard_inputs_materialized_research_only_no_goal_achieve",
+  "decision": "existing_forward_feature_handoff_usable_refresh_probe_partial_manifest_repaired_no_model_work",
+  "source_inputs": [
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/research_branch_queue.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332A/failure_memory_to_research_constraints.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331D/final_decision_matrix.csv",
+    "stages/331_overfit_guard__cross_horizon_cost_curve_parity_probe/02_runs/run331C/runtime_replay_compare_report.csv",
+    "stages/330_onnx_rebuild__forward_safe_non_identity_surface_robustness/02_runs/run330E/raw_forward_feature_matrix_manifest.csv",
+    "stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/raw_refresh_probe/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "guard_inputs_ready_count": 6,
+  "raw_refresh_probe_status": "CSV data exists and is hashed, but collector native manifest failed due path handling.",
+  "forward_passed": "not_claimed",
+  "forward_failed": "not_claimed",
+  "selected_candidate": "none",
+  "goal_achieve": "not_claimed",
+  "next_action": "run332C_design_or_materialize_cost_curve_guarded_scout_v1",
+  "claim_boundary": "research_development_only_data_guard_input_materialization_no_threshold_retuning_no_lot_optimization_no_model_update_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve"
+}

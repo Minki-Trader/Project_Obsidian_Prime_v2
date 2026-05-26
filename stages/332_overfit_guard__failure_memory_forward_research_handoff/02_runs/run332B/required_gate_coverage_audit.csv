@@ -1,0 +1,8 @@
+gate,status,evidence_path,notes
+data_integrity_report,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/data_integrity_report.csv,"main raw archive, run330E feature handoff, and run332B raw refresh probe are separated"
+guard_input_manifest,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/guard_input_manifest.csv,feature matrix row counts and sha256 are checked against run330E manifest
+raw_refresh_probe_boundary,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/raw_refresh_probe_manifest.json,"collector native manifest failed on path handling, so run332B records a repaired manifest for the US100 CSV"
+no_retune_guard,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/no_retune_guard_receipt.json,"no threshold, lot, model, or decision surface changed"
+artifact_lineage_audit,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/artifact_lineage_receipt.json,"source inputs, generated reports, and registry rows are linked"
+required_gate_coverage_audit,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/required_gate_coverage_audit.csv,run332B required gates are represented before closeout
+final_claim_guard,pass,stages/332_overfit_guard__failure_memory_forward_research_handoff/02_runs/run332B/result_judgment_receipt.json,"Forward Passed/Failed, live readiness, deployment, operating promotion, runtime authority, and Goal Achieve are not claimed"
