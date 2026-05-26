@@ -4441,3 +4441,11 @@
 - decision(결정): `stage335N_structured_runtime_metric_materialized_no_selection`
 - effect(효과): runtime trade ledger(런타임 거래 장부) `1347`행과 branch metric matrix(분기 지표 행렬) `270`행을 만들었다.
 - boundary(경계): 이 결과는 diagnostic(진단)이며 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## 2026-05-26 Stage335O Runtime Metric Usability and Repair Decision(335O 런타임 지표 활용성 및 수리 결정)
+
+- run_id(실행 ID): `run335O_branch_specific_runtime_metric_usability_and_repair_decision_v1`
+- status(상태): `completed_runtime_metric_usability_and_repair_decision_no_forward_decision`
+- decision(결정): `stage335O_proxy_context_only_runtime_metrics_usable_with_boundary_repair_defense_offense_queue`
+- effect(효과): proxy(프록시)를 context-only(문맥 전용)로 낮추고, MT5 structured runtime metrics(구조화 런타임 지표)를 repair/defense/offense queue(수리/방어/공격 대기열)로 넘겼다.
+- boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.

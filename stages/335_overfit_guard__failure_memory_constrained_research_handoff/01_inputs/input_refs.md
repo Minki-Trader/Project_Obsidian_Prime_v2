@@ -132,3 +132,14 @@ Effect(효과): Stage335(335단계)는 실패한 forward pocket(전진 포켓)�
 - curve_pocket_underwater_matrix(곡선 포켓/수중 구간 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/curve_pocket_underwater_matrix.csv`
 - regime_direction_slice_matrix(국면/방향 조각 행렬): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335N/regime_direction_slice_matrix.csv`
 - decision(결정): `docs/decisions/2026-05-26_stage335N_branch_specific_runtime_metric_materialization.md`
+
+## run335O Runtime Metric Usability and Repair Decision(335O 런타임 지표 활용성 및 수리 결정)
+
+- attempt_scorecard(시도 점수표): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/attempt_runtime_usability_scorecard.csv`
+- proxy_usability(프록시 활용성): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/proxy_mt5_usability_decision.csv`
+- branch_decision(분기 결정): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/branch_metric_usability_decision.csv`
+- fragility_findings(취약성 발견): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/runtime_fragility_findings.csv`
+- repair_queue(수리 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/repair_research_queue.csv`
+- defense_queue(방어 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/defensive_guard_queue.csv`
+- offense_queue(공격 대기열): `stages/335_overfit_guard__failure_memory_constrained_research_handoff/02_runs/run335O/offensive_research_queue.csv`
+- decision(결정): `docs/decisions/2026-05-26_stage335O_runtime_metric_usability_and_repair_decision.md`
