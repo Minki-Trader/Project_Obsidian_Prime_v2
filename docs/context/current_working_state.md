@@ -1,14 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_packet(현재 작업 묶음): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild_v1`
-- current_run(현재 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
-- active_stage(활성 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
+- current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
+- current_run(현재 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
+- active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
-- source_stage(원천 단계): `335_overfit_guard__failure_memory_constrained_research_handoff`
-- target_surface(목표 표면): `constraint_bound_repair_defense_offense_rebuild`
+- source_stage(원천 단계): `336_onnx_research_packet__constraint_bound_repair_defense_offense_rebuild`
+- target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
 - adapter_under_review(검토 중 어댑터): `none`
-- status(상태): `completed_repaired_forward_attribution_cost_stress_no_forward_decision`
-- decision(결정): `stage336O_forward_attribution_requires_failure_memory_no_selection`
+- status(상태): `completed_stage336_closeout_open_stage337_no_selection`
+- decision(결정): `stage336P_repaired_forward_subset_failed_open_stage337_cost_direction_curve_rebuild_no_selection`
+- run336P_summary(336P 요약): Stage336 closeout/open Stage337(336단계 종료/337단계 개방)을 `completed_stage336_closeout_open_stage337_no_selection`로 완료했다. Effect(효과): run336O(336O 실행)의 비용/방향/곡선 취약성은 repaired subset Forward Failed(수리 부분집합 전진 실패)로 고정하고, Stage337(337단계) cost buffer/direction/curve rebuild(비용 버퍼/방향/곡선 재구성)로 넘긴다. Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336O_summary(336O 요약): repaired forward attribution/cost stress(수리 전진 귀속/비용 압박)를 `completed_repaired_forward_attribution_cost_stress_no_forward_decision`로 완료했다. Effect(효과): best repaired clue(최선 수리 단서)는 `m48_plain_rf` score(점수) `12`지만, cost/direction/curve fragility(비용/방향/곡선 취약성)가 남아 Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336N_summary(336N 요약): timestamp-aligned proxy-MT5 parity(타임스탬프 정렬 프록시-MT5 동등성)를 `completed_timestamp_aligned_proxy_mt5_parity_review_no_forward_decision`로 검토했다. Effect(효과): run336M(336M 실행)의 0/20 raw mismatch(원시 불일치)는 timestamp basis(타임스탬프 기준) 차이였고, aligned parity(정렬 동등성)는 `20/20 matched(일치)`다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - run336M_summary(336M 요약): live-safe feature handoff repair(실시간 안전 피처 인계 수리)를 `completed_live_safe_feature_handoff_repair_probe_partial_no_forward_decision`로 실행했다. Effect(효과): MT5 completed(MT5 완료) `4/4`, feature latest gaps(최신 피처 공백) `0`로 기록했고, Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

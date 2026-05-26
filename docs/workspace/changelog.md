@@ -4605,3 +4605,12 @@
 - action(행동): run336M(336M 실행)의 MT5 report/deal list(보고서/딜 목록)를 trade-level(거래 수준)로 분해해 cost stress(비용 압박), curve pocket(곡선 포켓), direction/session/month/regime slice(방향/세션/월/국면 조각)를 계산했다.
 - effect(효과): repaired handoff(수리 인계)는 동작하지만 cost/direction/curve fragility(비용/방향/곡선 취약성)가 남아 Forward Passed(전진 통과)와 Goal Achieve(목표 달성)는 주장하지 않는다.
 - boundary(경계): Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
+
+## Stage336P Closeout and Stage337 Open(336P 종료 및 337단계 개방)
+
+- run_id(실행 ID): `run336P_forward_decision_or_failure_memory_handoff_v1`
+- status(상태): `completed_stage336_closeout_open_stage337_no_selection`
+- decision(결정): `stage336P_repaired_forward_subset_failed_open_stage337_cost_direction_curve_rebuild_no_selection`
+- action(행동): run336O(336O 실행)의 scorecard(점수표), cost stress(비용 압박), direction/curve/regime attribution(방향/곡선/국면 귀속)을 stage closeout(단계 종료) 판정으로 묶었다.
+- effect(효과): repaired subset(수리 부분집합)은 Forward Failed(전진 실패) 범위로 기록하고, Stage337(337단계)을 cost buffer/direction/curve rebuild(비용 버퍼/방향/곡선 재구성) 단계로 열었다.
+- boundary(경계): selected candidate(선택 후보), live readiness(실거래 준비), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 `not_claimed`.
