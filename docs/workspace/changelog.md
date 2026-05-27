@@ -4830,3 +4830,4 @@
 - 2026-05-28: Stage337 run337DE trained cost shape two-stage handoff candidates(비용 곡선 2단계 인계 후보) and opened `run337DF_review_cost_shape_two_stage_handoff_training_without_db_v1`.
 - 2026-05-28: Stage337 run337DF reviewed cost shape two-stage handoff training(비용 곡선 2단계 인계 학습 검토) and opened `run337DG_design_validation_pocket_cost_shape_repair_without_db_v1`.
 - 2026-05-28: Stage337 run337DG designed validation pocket cost-shape repair(검증 포켓 비용 곡선 수리 설계) and opened `run337DH_materialize_validation_pocket_cost_shape_repair_inputs_without_db_v1`.
+- 2026-05-28: Stage337 run337DH materialized validation pocket cost-shape repair inputs(검증 포켓 비용 곡선 수리 입력) and opened `run337DI_review_validation_pocket_cost_shape_repair_inputs_without_db_v1`.
