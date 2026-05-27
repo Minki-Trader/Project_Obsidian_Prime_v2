@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337DC_design_cost_shape_two_stage_handoff_repair_without_db_v1`
+- current_run(현재 실행): `run337DD_materialize_cost_shape_two_stage_handoff_repair_inputs_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337DB_objective_feature_training_review_cost_shape_blocks_no_selection_no_mt5`
-- decision(결정): `stage337DB_open_run337DC_design_cost_shape_two_stage_handoff_repair`
-- latest_completed_run(최근 완료 실행): `run337DB_review_objective_feature_contract_pivot_training_without_db_v1`
-- next_action(다음 행동): `run337DC_design_cost_shape_two_stage_handoff_repair_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337DB_objective_feature_contract_pivot_training_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337DC_cost_shape_two_stage_handoff_repair_design_no_training_no_selection`
+- decision(결정): `stage337DC_open_run337DD_materialize_cost_shape_two_stage_handoff_repair_inputs`
+- latest_completed_run(최근 완료 실행): `run337DC_design_cost_shape_two_stage_handoff_repair_without_db_v1`
+- next_action(다음 행동): `run337DD_materialize_cost_shape_two_stage_handoff_repair_inputs_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337DC_cost_shape_two_stage_handoff_repair_design_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -60,6 +60,15 @@
 
 
 
+
+
+## Stage337 run337DC(337DC 실행) - 2026-05-28
+
+- status(상태): `completed_stage337DC_cost_shape_two_stage_handoff_repair_design_no_training_no_selection`
+- judgment(판정): `cost_shape_repair_design_ready_no_runtime_release`
+- decision(결정): `stage337DC_open_run337DD_materialize_cost_shape_two_stage_handoff_repair_inputs`
+- next_action(다음 행동): `run337DD_materialize_cost_shape_two_stage_handoff_repair_inputs_without_db_v1`
+- effect(효과): cost shape/two-stage/point-cost identity(비용 곡선/2단계/포인트 비용 정체성) 수리 설계를 만들었다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337DB(337DB 실행) - 2026-05-28
 

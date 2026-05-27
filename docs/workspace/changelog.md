@@ -4825,3 +4825,4 @@
 - 2026-05-28: Stage337 run337CZ materialized objective/feature contract pivot inputs(목표/피처 계약 전환 입력) and opened `run337DA_train_objective_feature_contract_pivot_candidates_without_db_v1`.
 - 2026-05-28: Stage337 run337DA trained objective/feature contract pivot candidates(목표/피처 계약 전환 후보) and opened `run337DB_review_objective_feature_contract_pivot_training_without_db_v1`.
 - 2026-05-28: Stage337 run337DB reviewed objective/feature contract pivot training(목표/피처 계약 전환 학습) and opened `run337DC_design_cost_shape_two_stage_handoff_repair_without_db_v1`.
+- 2026-05-28: Stage337 run337DC designed cost shape two-stage handoff repair(비용 곡선 2단계 인계 수리 설계) and opened `run337DD_materialize_cost_shape_two_stage_handoff_repair_inputs_without_db_v1`.
