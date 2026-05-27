@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CT_review_weak_density_control_repaired_candidates_without_db_v1`
+- current_run(현재 실행): `run337CU_design_feature_label_separability_control_repair_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CS_weak_density_control_repaired_training_review_required_no_selection_no_mt5`
-- decision(결정): `stage337CS_open_run337CT_review_weak_density_control_repaired_candidates`
-- latest_completed_run(최근 완료 실행): `run337CS_train_weak_density_control_repaired_candidates_without_db_v1`
-- next_action(다음 행동): `run337CT_review_weak_density_control_repaired_candidates_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CS_weak_density_control_repaired_training_without_db_train_only_density_policy_no_validation_oos_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CT_release_lock_review_no_mt5_no_selection`
+- decision(결정): `stage337CT_open_run337CU_feature_label_separability_control_repair_design`
+- latest_completed_run(최근 완료 실행): `run337CT_review_weak_density_control_repaired_candidates_without_db_v1`
+- next_action(다음 행동): `run337CU_design_feature_label_separability_control_repair_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CT_weak_density_control_repaired_training_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -44,6 +44,15 @@
 
 
 
+
+
+## Stage337 run337CT(337CT 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CT_release_lock_review_no_mt5_no_selection`
+- judgment(판정): `release_blocked_by_weak_model_discrimination_and_extended_control_alignment`
+- decision(결정): `stage337CT_open_run337CU_feature_label_separability_control_repair_design`
+- next_action(다음 행동): `run337CU_design_feature_label_separability_control_repair_without_db_v1`
+- effect(효과): release_rows(해제 행) `0`, extended_control_block_rows(확장 대조 차단 행) `96`로 MT5 probe(MT5 탐침)를 보류했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CS(337CS 실행) - 2026-05-28
 

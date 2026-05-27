@@ -4816,3 +4816,4 @@
 - 2026-05-28: Stage337 run337CQ designed weak density/control alignment repair(약한 밀도/대조 정렬 수리) and opened `run337CR_materialize_weak_density_control_alignment_repair_inputs_without_db_v1`.
 - 2026-05-28: Stage337 run337CR materialized weak density/control alignment repair inputs(약한 밀도/대조 정렬 수리 입력) and opened `run337CS_train_weak_density_control_repaired_candidates_without_db_v1`.
 - 2026-05-28: Stage337 run337CS trained weak density/control repaired candidates(약한 밀도/대조 수리 후보) and opened `run337CT_review_weak_density_control_repaired_candidates_without_db_v1`.
+- 2026-05-28: Stage337 run337CT reviewed weak density/control repaired training(약한 밀도/대조 수리 학습) and opened `run337CU_design_feature_label_separability_control_repair_without_db_v1`.
