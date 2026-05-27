@@ -4793,3 +4793,4 @@
 - 2026-05-27: Stage337 run337BT materialized guarded model scout inputs(방어 모델 스카우트 입력) and opened run337BU(337BU 실행).
 - 2026-05-28: Stage337 run337BU trained guarded model scouts(방어 모델 스카우트) and opened run337BV(337BV 실행) for MT5 runtime comparison.
 - 2026-05-28: Stage337 run337BV executed model scout MT5 runtime probe(모델 스카우트 MT5 런타임 탐침) and opened `run337BW_review_model_scout_runtime_probe_without_db_v1`.
+- 2026-05-28: Stage337 run337BW reviewed runtime probe(런타임 탐침) and opened `run337BX_tester_gap_reprobe_or_runtime_kpi_attribution_without_db_v1`.
