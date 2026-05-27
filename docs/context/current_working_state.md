@@ -1271,3 +1271,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337AI_open_run337AJ_history_cache_repair_or_rollover_wait_reprobe_no_selection`
 - next_action(다음 행동): `run337AJ_data_history_cache_repair_or_next_rollover_wait_reprobe_v1`
 - effect(효과): tester model mode(테스터 모델 방식) 경계를 재탐침했고 Forward Passed/Failed(전방 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## Stage337 run337AJ(337AJ 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AJ_history_cache_warmup_gap_remains_no_forward_decision`
+- decision(결정): `stage337AJ_open_run337AK_next_rollover_or_synthetic_custom_parity_repair_no_selection`
+- next_action(다음 행동): `run337AK_next_rollover_or_synthetic_custom_parity_repair_v1`
+- effect(효과): MT5 API history warmup(API 이력 예열) 후 tester cache(테스터 캐시)가 feature_last(피처 끝)까지 움직이는지 검증했다. Forward Passed/Failed(전방 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
