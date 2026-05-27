@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CA_label_boundary_lifecycle_cost_frontier_probe_without_db_v1`
+- current_run(현재 실행): `run337CB_lifecycle_aware_no_overfit_design_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337BZ_runtime_kpi_no_overfit_matrix_label_lifecycle_first_no_forward_decision`
-- decision(결정): `stage337BZ_open_run337CA_label_boundary_lifecycle_cost_frontier_probe`
-- latest_completed_run(최근 완료 실행): `run337BZ_runtime_kpi_attribution_and_no_overfit_research_matrix_without_db_v1`
-- next_action(다음 행동): `run337CA_label_boundary_lifecycle_cost_frontier_probe_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337BZ_runtime_kpi_no_overfit_matrix_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CA_label_boundary_lifecycle_cost_frontier_probe_no_forward_decision`
+- decision(결정): `stage337CA_open_run337CB_lifecycle_aware_no_overfit_design`
+- latest_completed_run(최근 완료 실행): `run337CA_label_boundary_lifecycle_cost_frontier_probe_without_db_v1`
+- next_action(다음 행동): `run337CB_lifecycle_aware_no_overfit_design_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CA_label_boundary_lifecycle_cost_frontier_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -21,6 +21,15 @@
 
 
 
+
+
+## Stage337 run337CA(337CA 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CA_label_boundary_lifecycle_cost_frontier_probe_no_forward_decision`
+- judgment(판정): `labelable_proxy_score_and_mt5_lifecycle_rule_materialized_design_next`
+- decision(결정): `stage337CA_open_run337CB_lifecycle_aware_no_overfit_design`
+- next_action(다음 행동): `run337CB_lifecycle_aware_no_overfit_design_without_db_v1`
+- effect(효과): labelable-only proxy score(라벨 가능 전용 프록시 점수)와 max-hold lifecycle rule(최대보유 생애주기 규칙)을 물질화했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337BZ(337BZ 실행) - 2026-05-28
 
