@@ -1215,3 +1215,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337AA_open_run337AB_custom_symbol_intraday_tester_visibility_probe_no_selection`
 - next_action(다음 행동): `run337AB_custom_symbol_intraday_tester_visibility_probe_v1`
 - effect(효과): Strategy Tester current-day boundary(전략 테스터 현재일 경계)를 MT5 micro probe(MT5 미세 탐침)로 확인했다. completed(완료) `3/3`, gaps(공백) `3/3`, cap(경계) `2`.
+
+## Stage337 run337AB(337AB 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AB_custom_symbol_tester_visibility_inconclusive_no_forward_decision`
+- decision(결정): `stage337AB_open_run337AC_next_day_broker_or_custom_symbol_seed_repair_no_selection`
+- next_action(다음 행동): `run337AC_next_day_broker_rollover_or_custom_symbol_seed_repair_v1`
+- effect(효과): custom symbol(커스텀 심볼) `US100.OPV337AB`로 tester visibility(테스터 가시성)를 확인했다. broker gap(브로커 공백) `tester_feature_last_gap_remains`, custom gap(커스텀 공백) `tester_feature_last_gap_remains`, proxy parity(프록시 동등성) `6/10`.

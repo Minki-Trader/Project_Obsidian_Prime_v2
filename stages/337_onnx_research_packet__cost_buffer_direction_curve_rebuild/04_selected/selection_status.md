@@ -3,16 +3,20 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AA_tester_history_cache_repair_or_actual_source_session_policy_probe_v1`
-- latest_decision(최신 결정): `stage337AA_open_run337AB_custom_symbol_intraday_tester_visibility_probe_no_selection`
-- current_run(현재 실행): `run337AB_custom_symbol_intraday_tester_visibility_probe_v1`
-- tester_visibility_micro_probe(테스터 가시성 미세 탐침): `3/3 completed(완료)`
-- tester_feature_last_gap(테스터 피처 마지막 공백): `3/3`
-- current_day_midnight_cap(현재일 자정 경계): `2`
+- latest_run(최신 실행): `run337AB_custom_symbol_intraday_tester_visibility_probe_v1`
+- latest_decision(최신 결정): `stage337AB_open_run337AC_next_day_broker_or_custom_symbol_seed_repair_no_selection`
+- current_run(현재 실행): `run337AC_next_day_broker_rollover_or_custom_symbol_seed_repair_v1`
+- custom_symbol(커스텀 심볼): `US100.OPV337AB`
+- custom_seed_status(커스텀 심볼 심기 상태): `completed`
+- custom_api_latest_m5_close(커스텀 API 최신 5분봉 종가): `2026-05-27T05:15:00Z`
+- MT5 runtime completed(MT5 런타임 완료): `2/2`
+- broker_control_gap(브로커 대조 공백): `tester_feature_last_gap_remains`
+- custom_tester_gap(커스텀 테스터 공백): `tester_feature_last_gap_remains`
+- timestamp_aligned_proxy_parity(시점 맞춤 프록시 동등성): `6/10`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
-- Forward Blocked(전진 차단): `tester_current_day_visibility_boundary`
+- Forward Blocked(전진 차단): `tester_current_day_visibility_boundary_not_operating_resolved`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AB_custom_symbol_intraday_tester_visibility_probe_v1`
-- effect(효과): run337AA(337AA 실행)는 Strategy Tester(전략 테스터)가 현재일 장중 봉을 보지 못하는 경계를 확인했고, 최신 forward(전진) 판정은 아직 막혀 있다.
+- next_action(다음 행동): `run337AC_next_day_broker_rollover_or_custom_symbol_seed_repair_v1`
+- effect(효과): run337AB(337AB 실행)는 custom symbol(커스텀 심볼)로 Strategy Tester(전략 테스터)의 intraday visibility(장중 가시성)를 탐침했고, 최신 forward(전진) 판정은 아직 주장하지 않는다.
