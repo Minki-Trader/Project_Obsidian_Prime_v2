@@ -3,22 +3,22 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AU_materialize_balanced_no_lookahead_repair_inputs_without_db_v1`
-- latest_decision(최신 결정): `stage337AU_open_run337AV_review_balanced_repair_inputs_without_db_no_selection`
-- current_run(현재 실행): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
+- latest_run(최신 실행): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
+- latest_decision(최신 결정): `stage337AV_open_run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_no_selection`
+- current_run(현재 실행): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
 - broker_forward_boundary(브로커 전진 경계): `failed`
 - tester_visible_cutoff_policy(테스터 가시 컷오프 정책): `confirmed_current_day_intraday_hidden`
 - completed_day_attribution_status(완성일 귀속 상태): `usable_without_db_for_attribution_only`
 - db_source_status(D/B 원천 상태): `out_of_scope_by_claim_no_timestamp_aligned_sidecar`
 - db_source_sidecar_feasible(D/B 원천 보조표 가능): `false`
-- repair_inputs_status(수리 입력 상태): `balanced_no_lookahead_without_db_materialized`
-- repair_input_rows(수리 입력 행): `344`
-- protocol_input_rows(프로토콜 입력 행): `9`
+- repair_inputs_status(수리 입력 상태): `balanced_no_lookahead_without_db_reviewed`
+- protocol_review_passed(프로토콜 검토 통과): `9/9`
+- runtime_acceptance_rows(런타임 수락 행): `9`
 - negative_control_rows(부정 대조 행): `3`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
 - Forward Blocked(전진 차단): `broker_tester_current_day_cutoff_and_db_source_out_of_scope`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
-- effect(효과): run337AU(337AU 실행)는 균형 수리 프로토콜을 행 단위 pre-trade input(진입 전 입력)과 부정 대조로 물질화했다.
+- next_action(다음 행동): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
+- effect(효과): run337AV(337AV 실행)는 리뷰 통과 입력을 MT5 runtime probe attempt(MT5 런타임 탐침 시도)로 넘기지만 운영/전진 주장은 막는다.

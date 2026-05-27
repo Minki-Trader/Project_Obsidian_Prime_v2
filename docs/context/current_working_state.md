@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
+- current_run(현재 실행): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337AU_balanced_no_lookahead_repair_inputs_materialized_no_training_no_selection`
-- decision(결정): `stage337AU_open_run337AV_review_balanced_repair_inputs_without_db_no_selection`
-- latest_completed_run(최근 완료 실행): `run337AU_materialize_balanced_no_lookahead_repair_inputs_without_db_v1`
-- next_action(다음 행동): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337AU_balanced_no_lookahead_repair_inputs_without_db_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337AV_balanced_no_lookahead_repair_inputs_reviewed_no_training_no_selection`
+- decision(결정): `stage337AV_open_run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_no_selection`
+- latest_completed_run(최근 완료 실행): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
+- next_action(다음 행동): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337AV_balanced_no_lookahead_repair_input_review_without_db_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 ## Stage337 run337AU(337AU 실행) - 2026-05-27
 
@@ -19,6 +19,14 @@
 - decision(결정): `stage337AU_open_run337AV_review_balanced_repair_inputs_without_db_no_selection`
 - next_action(다음 행동): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
 - effect(효과): run337AU(337AU 실행)는 run337AT(337AT 실행)의 protocol(프로토콜)을 실제 pre-trade feature frame(진입 전 피처 프레임), feature binding(피처 연결), negative control(부정 대조), proxy contract(프록시 계약)으로 물질화했다. Forward/Goal(전진/목표)은 주장하지 않는다.
+
+## Stage337 run337AV(337AV 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AV_balanced_no_lookahead_repair_inputs_reviewed_no_training_no_selection`
+- judgment(판정): `repair_inputs_review_pass_runtime_probe_attempt_queue_ready_but_no_forward_or_goal_claim`
+- decision(결정): `stage337AV_open_run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_no_selection`
+- next_action(다음 행동): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
+- effect(효과): run337AV(337AV 실행)는 run337AU(337AU 실행)의 pre-trade input(진입 전 입력), protocol binding(프로토콜 연결), negative control(부정 대조), proxy-MT5 contract(프록시-MT5 계약)을 검토해 run337AW(337AW 실행) 런타임 탐침 시도 대기열로 넘겼다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage267 Candidate Pool(267단계 후보군)
 
