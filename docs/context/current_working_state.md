@@ -1313,3 +1313,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337U_open_run337V_cost_buffer_rebuild_and_source_policy_repair_design_no_selection`
 - next_action(다음 행동): `run337V_cost_buffer_rebuild_and_source_policy_repair_design_v1`
 - effect(효과): tester rollover reprobe(테스터 이월 재탐침)를 MT5(메타트레이더5) `1/1`로 실행했고, tester reached feature last(테스터 피처 끝 도달) `0/1`, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성) `5/5`를 기록했다.
+
+## Stage337 run337V(337V 실행) - 2026-05-27
+
+- status(상태): `completed_stage337V_cost_buffer_source_policy_repair_design_no_training_no_selection`
+- decision(결정): `stage337V_open_run337W_materialize_cost_buffer_source_policy_repair_inputs_no_selection`
+- next_action(다음 행동): `run337W_materialize_cost_buffer_source_policy_repair_inputs_v1`
+- effect(효과): cost buffer(비용 버퍼), source policy(원천 정책), overfit/parity firewall(과적합/동등성 방화벽), tester boundary(테스터 경계)를 run337W 물질화 대기열로 고정했다.
