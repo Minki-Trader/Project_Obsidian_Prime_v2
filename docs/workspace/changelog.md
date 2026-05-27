@@ -4790,3 +4790,4 @@
 - 2026-05-27: Stage337 run337BQ built as-of feature join/runtime parity package(시점 기준 피처 결합/런타임 동등성 패키지) and queued MT5 parity probe(MT5 동등성 탐침).
 - 2026-05-27: Stage337 run337BR MT5 feature parity probe(MT5 피처 동등성 탐침) `completed_stage337BR_mt5_feature_parity_probe_overlap_matched_tester_gap_remains_no_forward_decision`; no Forward/Goal claim(전진/목표 주장 없음).
 - 2026-05-27: Stage337 run337BS feature parity/stale lag review(피처 동등성/낡은 지연 검토) `completed_stage337BS_feature_parity_review_stale_lag_risk_named_no_forward_decision`; run337BT queue opened.
+- 2026-05-27: Stage337 run337BT materialized guarded model scout inputs(방어 모델 스카우트 입력) and opened run337BU(337BU 실행).

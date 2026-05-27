@@ -1,19 +1,28 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337BT_materialize_stale_lag_guarded_model_scout_inputs_without_db_v1`
+- current_run(현재 실행): `run337BU_train_guarded_model_scouts_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337BS_feature_parity_review_stale_lag_risk_named_no_forward_decision`
-- decision(결정): `stage337BS_open_run337BT_stale_lag_guarded_model_scout_inputs`
-- latest_completed_run(최근 완료 실행): `run337BS_review_mt5_feature_parity_and_stale_lag_stress_without_db_v1`
-- next_action(다음 행동): `run337BT_materialize_stale_lag_guarded_model_scout_inputs_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337BS_feature_parity_and_stale_lag_review_without_db_no_model_training_no_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337BT_stale_lag_guarded_model_scout_inputs_materialized_no_training_no_selection`
+- decision(결정): `stage337BT_open_run337BU_train_guarded_model_scouts`
+- latest_completed_run(최근 완료 실행): `run337BT_materialize_stale_lag_guarded_model_scout_inputs_without_db_v1`
+- next_action(다음 행동): `run337BU_train_guarded_model_scouts_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337BT_stale_lag_guarded_model_scout_inputs_without_db_no_model_training_no_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
+
+
+## Stage337 run337BT(337BT 실행) - 2026-05-27
+
+- status(상태): `completed_stage337BT_stale_lag_guarded_model_scout_inputs_materialized_no_training_no_selection`
+- judgment(판정): `guarded_model_scout_inputs_ready_training_not_run_forward_not_claimed`
+- decision(결정): `stage337BT_open_run337BU_train_guarded_model_scouts`
+- next_action(다음 행동): `run337BU_train_guarded_model_scouts_without_db_v1`
+- effect(효과): 낡은 지연 방어 모델 스카우트 입력을 만들었고, 실제 training/proxy-MT5(학습/프록시-MT5) 비교는 다음 실행으로 넘긴다.
 
 ## Stage337 run337BS(337BS 실행) - 2026-05-27
 
