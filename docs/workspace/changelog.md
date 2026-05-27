@@ -4841,3 +4841,4 @@
 
 - 2026-05-28: Stage337 run337DP reviewed guarded training outputs, kept selection/MT5/Forward closed, and opened `run337DQ_design_validation_support_and_control_residual_repair_without_db_v1`.
 - 2026-05-28: Stage337 run337DQ designed validation/control residual repair and opened `run337DR_materialize_validation_support_control_residual_repair_inputs_without_db_v1`.
+- 2026-05-28: Stage337 run337DR materialized row-level validation/control repair inputs and opened `run337DS_review_validation_support_control_residual_materialization_without_db_v1`.
