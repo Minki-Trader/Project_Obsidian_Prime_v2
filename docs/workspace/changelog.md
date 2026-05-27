@@ -4786,3 +4786,4 @@
 - 2026-05-27: Stage337 run337BN created forward-safe route-signal rebuild design(전진 안전 경로 신호 재구축 설계) with no-overfit gates(무과적합 게이트), negative controls(부정 대조), and MT5 proof requirements(MT5 검증 요구사항).
 - 2026-05-27: Stage337 run337BO refreshed MT5 raw M5 data(MT5 원천 M5 데이터), audited live-computable inputs(실시간 계산 가능 입력), and opened feature parity preflight(피처 동등성 사전점검).
 - 2026-05-27: Stage337 run337BO refreshed MT5 raw M5 data(MT5 원천 M5 데이터), audited live-computable inputs(실시간 계산 가능 입력), and opened feature parity preflight(피처 동등성 사전점검).
+- 2026-05-27: Stage337 run337BP built live-computable feature frame preflight(실시간 계산 가능 피처 프레임 사전점검) and opened as-of/runtime parity package(시점 기준/런타임 동등성 패키지).
