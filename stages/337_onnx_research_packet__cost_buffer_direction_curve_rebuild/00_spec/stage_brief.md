@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337BE_materialize_bounded_repair_implementation_preflight_without_db_v1`
+- latest_run(최신 실행): `run337BF_review_bounded_repair_implementation_preflight_without_db_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -60,3 +60,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - run337BC_summary(337BC 요약): `completed_stage337BC_bounded_no_overfit_repair_blueprints_materialized_no_training_no_selection`. Effect(효과): bounded blueprints(제한 청사진) `5`, cp322A freeze contracts(322A 고정 계약) `9`, falsification gates(반증 게이트) `30`를 만들고 run337BD(337BD 실행) 검토를 연다. Forward/Goal(전진/목표)은 주장하지 않는다.
 - run337BD_summary(337BD 요약): `completed_stage337BD_bounded_no_overfit_blueprints_reviewed_ready_for_implementation_preflight_no_training_no_selection`. Effect(효과): bounded blueprint review(제한 청사진 검토) `5/5`, freeze review(고정 검토) `9/9`, gates(게이트) `11/11`를 완료하고 run337BE(337BE 실행) implementation preflight(구현 사전점검)를 연다. Forward/Goal(전진/목표)은 주장하지 않는다.
 - run337BE_summary(337BE 요약): `completed_stage337BE_bounded_repair_implementation_preflight_materialized_no_training_no_selection`. Effect(효과): implementation preflight(구현 사전점검) `5`행, proxy-MT5 difference(프록시-MT5 차이) matched `85/85`, gates(게이트) `10/10`를 만들고 run337BF(337BF 실행) 검토를 연다. Forward/Goal(전진/목표)은 주장하지 않는다.
+- run337BF_summary(337BF 요약): `completed_stage337BF_bounded_implementation_preflight_reviewed_ready_for_scaffold_inputs_no_training_no_selection`. Effect(효과): proxy usability(프록시 사용성) `5/5`, balance(균형) `5/5`, gates(게이트) `12/12`를 검토하고 run337BG(337BG 실행) scaffold inputs(스캐폴드 입력)를 연다. Forward/Goal(전진/목표)은 주장하지 않는다.

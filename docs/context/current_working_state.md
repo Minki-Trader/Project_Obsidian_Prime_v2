@@ -1,22 +1,31 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337BF_review_bounded_repair_implementation_preflight_without_db_v1`
+- current_run(현재 실행): `run337BG_materialize_bounded_repair_scaffold_inputs_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337BE_bounded_repair_implementation_preflight_materialized_no_training_no_selection`
-- decision(결정): `stage337BE_open_run337BF_review_bounded_repair_implementation_preflight_no_training_no_selection`
-- latest_completed_run(최근 완료 실행): `run337BE_materialize_bounded_repair_implementation_preflight_without_db_v1`
-- next_action(다음 행동): `run337BF_review_bounded_repair_implementation_preflight_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337BE_bounded_implementation_preflight_without_db_cp322a_frozen_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337BF_bounded_implementation_preflight_reviewed_ready_for_scaffold_inputs_no_training_no_selection`
+- decision(결정): `stage337BF_open_run337BG_materialize_bounded_repair_scaffold_inputs_no_training_no_selection`
+- latest_completed_run(최근 완료 실행): `run337BF_review_bounded_repair_implementation_preflight_without_db_v1`
+- next_action(다음 행동): `run337BG_materialize_bounded_repair_scaffold_inputs_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337BF_bounded_preflight_review_without_db_cp322a_frozen_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
 
 
 
+
+
+## Stage337 run337BF(337BF 실행) - 2026-05-27
+
+- status(상태): `completed_stage337BF_bounded_implementation_preflight_reviewed_ready_for_scaffold_inputs_no_training_no_selection`
+- judgment(판정): `preflight_review_accepts_bounded_scaffold_inputs_with_proxy_signal_only_and_mt5_gap_blocker`
+- decision(결정): `stage337BF_open_run337BG_materialize_bounded_repair_scaffold_inputs_no_training_no_selection`
+- next_action(다음 행동): `run337BG_materialize_bounded_repair_scaffold_inputs_without_db_v1`
+- effect(효과): run337BF(337BF 실행)는 사전점검을 검토하고 proxy-MT5(프록시-MT5)는 신호 동등성 전용, MT5 tester gap(MT5 테스터 공백)은 전진 차단으로 유지했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337BE(337BE 실행) - 2026-05-27
 
