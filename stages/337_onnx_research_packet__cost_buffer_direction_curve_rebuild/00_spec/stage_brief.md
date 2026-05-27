@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337X_review_materialized_cost_buffer_source_policy_repair_inputs_v1`
+- latest_run(최신 실행): `run337Y_materialize_actual_source_age_proxy_mt5_repair_probe_inputs_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -21,6 +21,7 @@
 - run337W_summary(337W 요약): `completed_stage337W_cost_buffer_source_policy_repair_inputs_materialized_no_training_no_mt5`. Effect(효과): 비용/원천/프록시-MT5/테스터/모델 검증 입력 계약을 물질화했다.
 - run337X_summary(337X 요약): `completed_stage337X_materialized_inputs_review_evidence_gaps_bound_no_training_no_mt5`. Effect(효과): 입력 계약은 완성됐지만 실제 측정 증거 부족으로 run337Y 측정 패키지를 연다.
 - run337M_summary(337M 요약): `completed_proxy_expected_fresh_mt5_probe_input_review_accepts_runtime_probe_attempt_queue_no_training_no_mt5`. Effect(효과): run337L 입력 묶음을 검토하고 run337N runtime probe attempt-or-block(런타임 탐침 시도 또는 차단) 대기열 `5`행을 열었다.
+- run337Y_summary(337Y 요약): `completed_stage337Y_actual_source_age_proxy_mt5_repair_probe_inputs_materialized_no_training_no_new_mt5`. Effect(효과): 실제 source timestamp(원천 시점), proxy expected value(프록시 예상값), timestamp-aligned proxy-MT5 difference(시점 정렬 프록시-MT5 차이), split/negative control(분할/부정 대조) 입력을 물질화했고 run337Z 실행/검토 대기열을 연다.
 - selected_candidate(선택 후보): `none`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed_for_stage337_new_work`
