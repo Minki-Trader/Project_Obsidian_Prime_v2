@@ -4787,3 +4787,4 @@
 - 2026-05-27: Stage337 run337BO refreshed MT5 raw M5 data(MT5 원천 M5 데이터), audited live-computable inputs(실시간 계산 가능 입력), and opened feature parity preflight(피처 동등성 사전점검).
 - 2026-05-27: Stage337 run337BO refreshed MT5 raw M5 data(MT5 원천 M5 데이터), audited live-computable inputs(실시간 계산 가능 입력), and opened feature parity preflight(피처 동등성 사전점검).
 - 2026-05-27: Stage337 run337BP built live-computable feature frame preflight(실시간 계산 가능 피처 프레임 사전점검) and opened as-of/runtime parity package(시점 기준/런타임 동등성 패키지).
+- 2026-05-27: Stage337 run337BQ built as-of feature join/runtime parity package(시점 기준 피처 결합/런타임 동등성 패키지) and queued MT5 parity probe(MT5 동등성 탐침).

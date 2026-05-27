@@ -1,18 +1,25 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337BQ_implement_asof_feature_join_and_runtime_parity_package_without_db_v1`
+- current_run(현재 실행): `run337BR_execute_mt5_feature_parity_probe_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337BP_live_computable_feature_frame_preflight_no_training_no_selection`
-- decision(결정): `stage337BP_open_run337BQ_asof_join_and_runtime_parity_package`
-- latest_completed_run(최근 완료 실행): `run337BP_build_live_computable_feature_frame_preflight_without_db_v1`
-- next_action(다음 행동): `run337BQ_implement_asof_feature_join_and_runtime_parity_package_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337BP_live_computable_feature_frame_preflight_without_db_no_model_training_no_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337BQ_asof_feature_join_runtime_parity_package_no_training_no_selection`
+- decision(결정): `stage337BQ_open_run337BR_mt5_feature_parity_probe`
+- latest_completed_run(최근 완료 실행): `run337BQ_implement_asof_feature_join_and_runtime_parity_package_without_db_v1`
+- next_action(다음 행동): `run337BR_execute_mt5_feature_parity_probe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337BQ_asof_feature_join_runtime_parity_package_without_db_no_model_training_no_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
+## Stage337 run337BQ(337BQ 실행) - 2026-05-27
+
+- status(상태): `completed_stage337BQ_asof_feature_join_runtime_parity_package_no_training_no_selection`
+- judgment(판정): `asof_join_reduced_external_alignment_gap_runtime_parity_package_ready_mt5_not_executed`
+- decision(결정): `stage337BQ_open_run337BR_mt5_feature_parity_probe`
+- next_action(다음 행동): `run337BR_execute_mt5_feature_parity_probe_without_db_v1`
+- effect(효과): run337BQ(337BQ 실행)는 as-of join(시점 기준 결합)으로 외부 정렬 공백을 줄이고 MT5 parity package(MT5 동등성 패키지)를 만들었다. 실제 MT5 실행/전진 통과/목표 달성은 주장하지 않는다.
 
 ## Stage337 run337BP(337BP 실행) - 2026-05-27
 
