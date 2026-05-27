@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`
+- current_run(현재 실행): `run337CE_execute_lifecycle_aware_mt5_runtime_probe_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CC_lifecycle_aware_no_overfit_inputs_materialized_no_training_no_selection`
-- decision(결정): `stage337CC_open_run337CD_train_lifecycle_aware_guarded_scouts`
-- latest_completed_run(최근 완료 실행): `run337CC_materialize_lifecycle_aware_no_overfit_inputs_without_db_v1`
-- next_action(다음 행동): `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CC_lifecycle_aware_input_materialization_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CD_lifecycle_aware_guarded_scouts_trained_proxy_expected_materialized_no_selection`
+- decision(결정): `stage337CD_open_run337CE_execute_lifecycle_aware_mt5_runtime_probe`
+- latest_completed_run(최근 완료 실행): `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`
+- next_action(다음 행동): `run337CE_execute_lifecycle_aware_mt5_runtime_probe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CD_lifecycle_aware_guarded_training_without_db_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -24,6 +24,15 @@
 
 
 
+
+
+## Stage337 run337CD(337CD 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CD_lifecycle_aware_guarded_scouts_trained_proxy_expected_materialized_no_selection`
+- judgment(판정): `cost2_aware_scouts_materialized_but_proxy_cost2_guard_still_failed_requires_attribution`
+- decision(결정): `stage337CD_open_run337CE_execute_lifecycle_aware_mt5_runtime_probe`
+- next_action(다음 행동): `run337CE_execute_lifecycle_aware_mt5_runtime_probe_without_db_v1`
+- effect(효과): cost2-aware ONNX scout(비용2 인식 온엑스 스카우트), proxy expected(프록시 예상), MT5 probe package(MT5 탐침 패키지)를 만들었다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CC(337CC 실행) - 2026-05-28
 
