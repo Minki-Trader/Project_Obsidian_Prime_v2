@@ -3,9 +3,9 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AF_failure_memory_and_no_overfit_rebuild_queue_v1`
-- latest_decision(최신 결정): `stage337AF_open_run337AG_no_overfit_rebuild_scaffold_materialization_no_selection`
-- current_run(현재 실행): `run337AG_no_overfit_rebuild_scaffold_materialization_v1`
+- latest_run(최신 실행): `run337AG_no_overfit_rebuild_scaffold_materialization_v1`
+- latest_decision(최신 결정): `stage337AG_open_run337AH_visibility_repair_and_no_overfit_preflight_no_selection`
+- current_run(현재 실행): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
 - completed_day_slice_gap(완성일 구간 공백): `tester_reached_feature_last`
 - full_current_day_control_gap(현재일 전체 대조 공백): `tester_feature_last_gap_remains`
 - completed_day_net(완성일 순수익): `99.9`
@@ -18,5 +18,5 @@
 - Forward Blocked(전진 차단): `latest_current_day_visibility_boundary_not_operating_resolved`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AG_no_overfit_rebuild_scaffold_materialization_v1`
-- effect(효과): run337AF(337AF 실행)는 failure memory(실패 기억) `7`, guardrail(가드레일) `9`, next experiment queue(다음 실험 대기열) `7`를 물질화했다. Forward/Goal(전진/목표)은 주장하지 않는다.
+- next_action(다음 행동): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
+- effect(효과): run337AG(337AG 실행)는 scaffold(뼈대) `7`, predeclared gate(사전 선언 게이트) `7`, execution queue(실행 대기열) `7`를 물질화했다. Forward/Goal(전진/목표)은 주장하지 않는다.

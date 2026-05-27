@@ -1,14 +1,14 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337AG_no_overfit_rebuild_scaffold_materialization_v1`
+- current_run(현재 실행): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
 - status(상태): `completed_stage337AE_completed_day_attribution_cost_stress_fragile_no_forward_decision`
-- decision(결정): `stage337AF_open_run337AG_no_overfit_rebuild_scaffold_materialization_no_selection`
-- latest_completed_run(최근 완료 실행): `run337AF_failure_memory_and_no_overfit_rebuild_queue_v1`
-- next_action(다음 행동): `run337AG_no_overfit_rebuild_scaffold_materialization_v1`
+- decision(결정): `stage337AG_open_run337AH_visibility_repair_and_no_overfit_preflight_no_selection`
+- latest_completed_run(최근 완료 실행): `run337AG_no_overfit_rebuild_scaffold_materialization_v1`
+- next_action(다음 행동): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
 - claim_boundary(주장 경계): `research_development_only_stage337AE_completed_day_forward_attribution_cost_stress_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 ## Stage337 run337Y(337Y 실행) - 2026-05-27
@@ -1250,3 +1250,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337AF_open_run337AG_no_overfit_rebuild_scaffold_materialization_no_selection`
 - next_action(다음 행동): `run337AG_no_overfit_rebuild_scaffold_materialization_v1`
 - effect(효과): failure memory(실패 기억) `7`, no-overfit guardrail(무과적합 가드레일) `9`, balanced next queue(균형 다음 대기열) `7`를 물질화했다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## Stage337 run337AG(337AG 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AG_no_overfit_rebuild_scaffold_materialized_no_training_no_selection`
+- decision(결정): `stage337AG_open_run337AH_visibility_repair_and_no_overfit_preflight_no_selection`
+- next_action(다음 행동): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
+- effect(효과): scaffold(뼈대) `7`, predeclared gate(사전 선언 게이트) `7`, execution queue(실행 대기열) `7`를 물질화했다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
