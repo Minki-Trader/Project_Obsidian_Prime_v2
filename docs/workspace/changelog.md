@@ -4840,3 +4840,4 @@
 - 2026-05-28: Stage337 run337DO trained guarded prediction surface validation-edge repair candidates(방어 예측 표면 검증 우위 수리 후보 학습) and opened `run337DP_review_guarded_prediction_surface_validation_edge_training_without_db_v1`.
 
 - 2026-05-28: Stage337 run337DP reviewed guarded training outputs, kept selection/MT5/Forward closed, and opened `run337DQ_design_validation_support_and_control_residual_repair_without_db_v1`.
+- 2026-05-28: Stage337 run337DQ designed validation/control residual repair and opened `run337DR_materialize_validation_support_control_residual_repair_inputs_without_db_v1`.
