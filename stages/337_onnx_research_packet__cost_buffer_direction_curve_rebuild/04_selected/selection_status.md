@@ -3,21 +3,22 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AT_balanced_no_lookahead_repair_protocol_without_db_v1`
-- latest_decision(최신 결정): `stage337AT_open_run337AU_materialize_balanced_repair_inputs_without_db_no_selection`
-- current_run(현재 실행): `run337AU_materialize_balanced_no_lookahead_repair_inputs_without_db_v1`
+- latest_run(최신 실행): `run337AU_materialize_balanced_no_lookahead_repair_inputs_without_db_v1`
+- latest_decision(최신 결정): `stage337AU_open_run337AV_review_balanced_repair_inputs_without_db_no_selection`
+- current_run(현재 실행): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
 - broker_forward_boundary(브로커 전진 경계): `failed`
 - tester_visible_cutoff_policy(테스터 가시 컷오프 정책): `confirmed_current_day_intraday_hidden`
 - completed_day_attribution_status(완성일 귀속 상태): `usable_without_db_for_attribution_only`
 - db_source_status(D/B 원천 상태): `out_of_scope_by_claim_no_timestamp_aligned_sidecar`
 - db_source_sidecar_feasible(D/B 원천 보조표 가능): `false`
-- repair_protocol_status(수리 프로토콜 상태): `balanced_no_lookahead_without_db_materialized`
-- protocol_count(프로토콜 수): `9`
-- fragility_status(취약 상태): `short_side_chron_late_cost_buffer_underwater_fragile`
+- repair_inputs_status(수리 입력 상태): `balanced_no_lookahead_without_db_materialized`
+- repair_input_rows(수리 입력 행): `344`
+- protocol_input_rows(프로토콜 입력 행): `9`
+- negative_control_rows(부정 대조 행): `3`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
 - Forward Blocked(전진 차단): `broker_tester_current_day_cutoff_and_db_source_out_of_scope`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AU_materialize_balanced_no_lookahead_repair_inputs_without_db_v1`
-- effect(효과): run337AT(337AT 실행)는 D/B source(D/B 원천) 없이 가능한 balanced repair protocol(균형 수리 프로토콜)을 만들고, 다음 입력 물질화로 넘긴다.
+- next_action(다음 행동): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
+- effect(효과): run337AU(337AU 실행)는 균형 수리 프로토콜을 행 단위 pre-trade input(진입 전 입력)과 부정 대조로 물질화했다.
