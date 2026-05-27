@@ -1208,3 +1208,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337Z_open_run337AA_tester_history_cache_or_source_session_policy_repair_no_selection`
 - next_action(다음 행동): `run337AA_tester_history_cache_repair_or_actual_source_session_policy_probe_v1`
 - effect(효과): MT5 runtime reprobe(MT5 런타임 재탐침) `1/1`, tester feature_last reach(테스터 피처 마지막 도달) `0/1`, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성) `5/5`를 기록했다.
+
+## Stage337 run337AA(337AA 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AA_tester_current_day_boundary_diagnosed_no_forward_decision`
+- decision(결정): `stage337AA_open_run337AB_custom_symbol_intraday_tester_visibility_probe_no_selection`
+- next_action(다음 행동): `run337AB_custom_symbol_intraday_tester_visibility_probe_v1`
+- effect(효과): Strategy Tester current-day boundary(전략 테스터 현재일 경계)를 MT5 micro probe(MT5 미세 탐침)로 확인했다. completed(완료) `3/3`, gaps(공백) `3/3`, cap(경계) `2`.

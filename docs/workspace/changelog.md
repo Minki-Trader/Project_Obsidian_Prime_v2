@@ -4742,3 +4742,4 @@
 - 2026-05-27: Stage337 run337X(337X 실행) `completed_stage337X_materialized_inputs_review_evidence_gaps_bound_no_training_no_mt5`. Effect(효과): 입력 계약은 검토 완료, 실제 증거 부족으로 run337Y 측정 패키지를 열었고 Forward/Goal(전진/목표) 주장은 없음.
 - 2026-05-27: Stage337 run337Y(337Y 실행) `completed_stage337Y_actual_source_age_proxy_mt5_repair_probe_inputs_materialized_no_training_no_new_mt5`. Effect(효과): 실제 측정 입력과 MT5 reprobe package(MT5 재탐침 패키지)를 만들었고 Forward/Goal(전진/목표) 주장은 없음.
 - 2026-05-27: Stage337 run337Z(337Z 실행) `completed_stage337Z_actual_source_age_proxy_mt5_reprobe_gap_or_execution_issue_no_forward_decision`. Effect(효과): MT5 runtime reprobe(MT5 런타임 재탐침) `1/1`와 proxy-vs-MT5(프록시 대 MT5) 비교를 기록했고 Forward/Goal(전진/목표) 주장은 없다.
+- 2026-05-27: Stage337 run337AA(337AA 실행) `completed_stage337AA_tester_current_day_boundary_diagnosed_no_forward_decision`. Effect(효과): Strategy Tester current-day boundary(전략 테스터 현재일 경계) `2`건을 확인했고 Forward/Goal(전진/목표) 주장은 없다.
