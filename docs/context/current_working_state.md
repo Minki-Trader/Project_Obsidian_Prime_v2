@@ -1306,3 +1306,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337T_open_run337U_cost_buffer_rebuild_or_tester_rollover_reprobe_no_selection`
 - next_action(다음 행동): `run337U_source_clean_cost_buffer_rebuild_or_tester_rollover_reprobe_v1`
 - effect(효과): u42 source-clean control(원천 깨끗한 대조군)은 proxy/MT5 parity(프록시/MT5 동등성)는 맞지만 비용 1포인트와 약한 구간에서 취약해 ONNX-ready(온엑스 준비)로 보지 않는다.
+
+## Stage337 run337U(337U 실행) - 2026-05-27
+
+- status(상태): `completed_stage337U_tester_rollover_reprobe_gap_remains_no_forward_decision`
+- decision(결정): `stage337U_open_run337V_cost_buffer_rebuild_and_source_policy_repair_design_no_selection`
+- next_action(다음 행동): `run337V_cost_buffer_rebuild_and_source_policy_repair_design_v1`
+- effect(효과): tester rollover reprobe(테스터 이월 재탐침)를 MT5(메타트레이더5) `1/1`로 실행했고, tester reached feature last(테스터 피처 끝 도달) `0/1`, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성) `5/5`를 기록했다.
