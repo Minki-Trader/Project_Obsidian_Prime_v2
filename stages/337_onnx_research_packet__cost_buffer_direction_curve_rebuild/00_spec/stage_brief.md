@@ -123,3 +123,5 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - 2026-05-28: run337DM(337DM 실행) materialized prediction surface validation-edge repair inputs(예측 표면 검증 우위 수리 입력). Status(상태) `completed_stage337DM_prediction_surface_validation_edge_repair_inputs_materialized_no_training_no_selection`. Forward/Goal(전진/목표)은 주장하지 않음.
 - 2026-05-28: run337DN(337DN 실행) reviewed prediction surface validation-edge repair inputs(예측 표면 검증 우위 수리 입력 검토). Status(상태) `completed_stage337DN_repair_inputs_review_guarded_training_eligible_no_selection_no_mt5`. Forward/Goal(전진/목표)은 주장하지 않음.
 - 2026-05-28: run337DO(337DO 실행) trained guarded prediction surface validation-edge repair candidates(방어 예측 표면 검증 우위 수리 후보 학습). Status(상태) `completed_stage337DO_guarded_prediction_surface_validation_edge_training_onnx_materialized_review_required_no_selection_no_mt5`. Forward/Goal(전진/목표)은 주장하지 않음.
+
+- 2026-05-28: run337DP(337DP 실행) reviewed DO guarded training, blocked release on validation/control, and opened `run337DQ_design_validation_support_and_control_residual_repair_without_db_v1`.
