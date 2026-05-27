@@ -1201,3 +1201,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337X_open_run337Y_actual_source_age_proxy_mt5_tester_repair_inputs_no_selection`
 - next_action(다음 행동): `run337Y_materialize_actual_source_age_proxy_mt5_repair_probe_inputs_v1`
 - effect(효과): run337W 입력 계약 `13/13`개를 검토했고, source/proxy/MT5/tester/split(원천/프록시/MT5/테스터/분할) 실제 증거가 부족해 학습/전진/런타임/목표 주장을 금지한다.
+
+## Stage337 run337Z(337Z 실행) - 2026-05-27
+
+- status(상태): `completed_stage337Z_actual_source_age_proxy_mt5_reprobe_gap_or_execution_issue_no_forward_decision`
+- decision(결정): `stage337Z_open_run337AA_tester_history_cache_or_source_session_policy_repair_no_selection`
+- next_action(다음 행동): `run337AA_tester_history_cache_repair_or_actual_source_session_policy_probe_v1`
+- effect(효과): MT5 runtime reprobe(MT5 런타임 재탐침) `1/1`, tester feature_last reach(테스터 피처 마지막 도달) `0/1`, timestamp-aligned proxy parity(시점 맞춤 프록시 동등성) `5/5`를 기록했다.
