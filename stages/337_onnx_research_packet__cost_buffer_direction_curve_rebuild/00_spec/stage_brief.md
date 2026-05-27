@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337AS_completed_day_attribution_without_db_and_forward_window_lock_v1`
+- latest_run(최신 실행): `run337AT_balanced_no_lookahead_repair_protocol_without_db_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -48,3 +48,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - run337AQ_summary(337AQ 요약): `completed_stage337AQ_tester_visible_cutoff_policy_db_instrumentation_no_forward_decision`. Effect(효과): tester visible cutoff(테스터 가시 컷오프) current-day gap(현재일 공백) `16`행, completed visible(완성일 가시) `1`행, D/B missing(D/B 누락) `7`.
 - run337AR_summary(337AR 요약): `completed_stage337AR_db_source_sidecar_not_feasible_out_of_scope_locked_no_forward_decision`. Effect(효과): scanned files(스캔 파일) `2003`, direct sidecar(직접 보조표) `0`, D/B source status(D/B 원천 상태) `out_of_scope_by_claim_no_timestamp_aligned_sidecar`.
 - run337AS_summary(337AS 요약): `completed_stage337AS_completed_day_non_db_attribution_forward_window_locked_no_forward_decision`. Effect(효과): trades(거래) `344`, net(순익) `99.89999999999999`, PF(수익 팩터) `1.1343066871017182`, proxy match(프록시 일치) `10/10`, next_action(다음 행동) `run337AT_balanced_no_lookahead_repair_protocol_without_db_v1`.
+- run337AT_summary(337AT 요약): `completed_stage337AT_balanced_no_lookahead_repair_protocol_materialized_no_training_no_selection`. Effect(효과): balanced protocol(균형 프로토콜) `9`개, next_action(다음 행동) `run337AU_materialize_balanced_no_lookahead_repair_inputs_without_db_v1`; Forward/Goal(전진/목표)은 주장하지 않는다.
