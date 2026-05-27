@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CU_design_feature_label_separability_control_repair_without_db_v1`
+- current_run(현재 실행): `run337CV_materialize_feature_label_separability_control_repair_inputs_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CT_release_lock_review_no_mt5_no_selection`
-- decision(결정): `stage337CT_open_run337CU_feature_label_separability_control_repair_design`
-- latest_completed_run(최근 완료 실행): `run337CT_review_weak_density_control_repaired_candidates_without_db_v1`
-- next_action(다음 행동): `run337CU_design_feature_label_separability_control_repair_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CT_weak_density_control_repaired_training_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CU_feature_label_separability_control_repair_design_no_training_no_selection`
+- decision(결정): `stage337CU_open_run337CV_materialize_feature_label_separability_control_repair_inputs`
+- latest_completed_run(최근 완료 실행): `run337CU_design_feature_label_separability_control_repair_without_db_v1`
+- next_action(다음 행동): `run337CV_materialize_feature_label_separability_control_repair_inputs_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CU_feature_label_separability_control_repair_design_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -45,6 +45,17 @@
 
 
 
+
+
+
+
+## Stage337 run337CU(337CU 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CU_feature_label_separability_control_repair_design_no_training_no_selection`
+- judgment(판정): `feature_label_separability_and_control_orthogonalization_repair_design_ready`
+- decision(결정): `stage337CU_open_run337CV_materialize_feature_label_separability_control_repair_inputs`
+- next_action(다음 행동): `run337CV_materialize_feature_label_separability_control_repair_inputs_without_db_v1`
+- effect(효과): density-only repair(밀도 단독 수리)를 금지하고 feature/label/control repair(피처/라벨/대조 수리) 입력 물질화를 열었다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CT(337CT 실행) - 2026-05-28
 
