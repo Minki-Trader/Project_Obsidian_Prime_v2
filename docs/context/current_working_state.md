@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CE_execute_lifecycle_aware_mt5_runtime_probe_without_db_v1`
+- current_run(현재 실행): `run337CF_review_lifecycle_aware_runtime_probe_and_failure_attribution_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CD_lifecycle_aware_guarded_scouts_trained_proxy_expected_materialized_no_selection`
-- decision(결정): `stage337CD_open_run337CE_execute_lifecycle_aware_mt5_runtime_probe`
-- latest_completed_run(최근 완료 실행): `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`
-- next_action(다음 행동): `run337CE_execute_lifecycle_aware_mt5_runtime_probe_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CD_lifecycle_aware_guarded_training_without_db_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CE_lifecycle_aware_mt5_runtime_probe_overlap_parity_tester_gap_remains_no_forward_decision`
+- decision(결정): `stage337CE_open_run337CF_runtime_probe_gap_and_failure_attribution_review`
+- latest_completed_run(최근 완료 실행): `run337CE_execute_lifecycle_aware_mt5_runtime_probe_without_db_v1`
+- next_action(다음 행동): `run337CF_review_lifecycle_aware_runtime_probe_and_failure_attribution_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CE_lifecycle_aware_mt5_runtime_probe_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -25,6 +25,15 @@
 
 
 
+
+
+## Stage337 run337CE(337CE 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CE_lifecycle_aware_mt5_runtime_probe_overlap_parity_tester_gap_remains_no_forward_decision`
+- judgment(판정): `mt5_runtime_matches_cd_proxy_expected_on_overlap_but_tester_gap_remains_cost2_proxy_guard_failed`
+- decision(결정): `stage337CE_open_run337CF_runtime_probe_gap_and_failure_attribution_review`
+- next_action(다음 행동): `run337CF_review_lifecycle_aware_runtime_probe_and_failure_attribution_without_db_v1`
+- effect(효과): CD ONNX(온엑스)를 MT5 runtime probe(MT5 런타임 탐침)로 실행하고 proxy expected(프록시 예상)와 telemetry(기록)를 비교했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CD(337CD 실행) - 2026-05-28
 
