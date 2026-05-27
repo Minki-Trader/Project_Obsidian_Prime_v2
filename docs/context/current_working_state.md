@@ -1,23 +1,23 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
+- current_run(현재 실행): `run337AQ_tester_visible_cutoff_policy_and_db_instrumentation_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337AO_asof_regime_db_source_inputs_materialized_no_training_no_selection`
-- decision(결정): `stage337AO_open_run337AP_broker_tester_history_repair_no_selection`
-- latest_completed_run(최근 완료 실행): `run337AO_asof_regime_and_db_source_materialization_v1`
-- next_action(다음 행동): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337AO_asof_regime_and_db_source_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337AP_broker_history_repair_gap_remains_no_forward_decision`
+- decision(결정): `stage337AP_open_run337AQ_tester_visible_cutoff_and_db_instrumentation_no_selection`
+- latest_completed_run(최근 완료 실행): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
+- next_action(다음 행동): `run337AQ_tester_visible_cutoff_policy_and_db_instrumentation_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337AP_broker_history_repair_reprobe_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
-## Stage337 run337Y(337Y 실행) - 2026-05-27
+## Stage337 run337AP(337AP 실행) - 2026-05-27
 
-- status(상태): `completed_stage337Y_actual_source_age_proxy_mt5_repair_probe_inputs_materialized_no_training_no_new_mt5`
-- decision(결정): `stage337Y_open_run337Z_execute_or_review_actual_source_age_proxy_mt5_repair_probe_no_selection`
-- next_action(다음 행동): `run337Z_execute_or_review_actual_source_age_proxy_mt5_repair_probe_v1`
-- effect(효과): 실제 source timestamp(원천 시점), proxy expected value(프록시 예상값), timestamp-aligned proxy-MT5 difference(시점 정렬 프록시-MT5 차이), split/negative control(분할/부정 대조)을 만들었다. 신규 MT5(메타트레이더5)는 run337Y에서 실행하지 않았고, run337Z에서 실행 또는 차단을 판정한다.
+- status(상태): `completed_stage337AP_broker_history_repair_gap_remains_no_forward_decision`
+- decision(결정): `stage337AP_open_run337AQ_tester_visible_cutoff_and_db_instrumentation_no_selection`
+- next_action(다음 행동): `run337AQ_tester_visible_cutoff_policy_and_db_instrumentation_v1`
+- effect(효과): broker tester history repair(브로커 테스터 이력 수리)를 재탐침했고 proxy expected(프록시 예상값)와 MT5 runtime(런타임)의 사용 가능성을 분리했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage267 Candidate Pool(267단계 후보군)
 

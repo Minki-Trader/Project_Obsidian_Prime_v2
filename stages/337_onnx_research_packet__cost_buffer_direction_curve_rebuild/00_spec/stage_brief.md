@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337AO_asof_regime_and_db_source_materialization_v1`
+- latest_run(최신 실행): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -44,3 +44,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - run337AM_summary(337AM 요약): `completed_stage337AM_no_lookahead_rebuild_inputs_materialized_no_training_no_selection`. Effect(효과): failure memory bindings(실패 기억 연결) `7`, cost/direction/curve inputs(비용/방향/곡선 입력) `18`, next_action(다음 행동) `run337AN_broker_rollover_reprobe_when_utc_day_boundary_available_v1`.
 - run337AN_summary(337AN 요약): `completed_stage337AN_broker_rollover_reprobe_gap_remains_no_forward_decision`. Effect(효과): broker gap(브로커 공백) `tester_feature_last_gap_remains`, proxy/MT5 parity(프록시/메타트레이더5 동등성) `5/5`; Forward/Goal(전진/목표)은 주장하지 않는다.
 - run337AO_summary(337AO 요약): `completed_stage337AO_asof_regime_db_source_inputs_materialized_no_training_no_selection`. Effect(효과): as-of macro join(시점 기준 거시 결합) `344`행, D/B source(D/B 원천) missing_required `7`.
+- run337AP_summary(337AP 요약): `completed_stage337AP_broker_history_repair_gap_remains_no_forward_decision`. Effect(효과): broker history repair(브로커 이력 수리) 런타임 `3/3`, tester reached feature_last(테스터 피처 끝 도달) `0/3`, timestamp-aligned proxy/MT5(시점 맞춤 프록시/MT5) `15/15`.
