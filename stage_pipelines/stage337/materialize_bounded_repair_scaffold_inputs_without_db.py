@@ -720,6 +720,22 @@ def write_receipts(final: Mapping[str, Any]) -> list[Path]:
             },
         ),
         (
+            ARTIFACT_RECEIPT,
+            {
+                "skill": "obsidian-artifact-lineage",
+                "run_id": RUN_ID,
+                "source_inputs": [aw.rel(path) for path in INPUT_FILES],
+                "producer": aw.rel(Path(__file__)),
+                "consumer": NEXT_RUN_ID,
+                "artifact_paths": [aw.rel(path) for path in OUTPUT_FILES],
+                "artifact_hashes": "recorded_in_artifact_registry(산출물 등록부에 기록)",
+                "registry_links": [aw.rel(RUN_REGISTRY), aw.rel(ALPHA_LEDGER), aw.rel(STAGE_LEDGER), aw.rel(ARTIFACT_REGISTRY)],
+                "availability": "tracked_and_reproducible_from_script(추적됨, 스크립트로 재현 가능)",
+                "lineage_judgment": "connected_with_boundary(경계 포함 연결)",
+                "claim_boundary": CLAIM_BOUNDARY,
+            },
+        ),
+        (
             JUDGMENT_RECEIPT,
             {
                 "skill": "obsidian-result-judgment",
@@ -968,7 +984,7 @@ def update_registers(final: Mapping[str, Any]) -> list[Path]:
 
 
 def update_artifact_registry(paths: Sequence[Path], final: Mapping[str, Any]) -> Path:
-    columns, rows = aw.read_csv_table(ARTIFACT_REGISTRY, prefer_head=True)
+    columns, rows = aw.read_csv_table(ARTIFACT_REGISTRY, prefer_head=False)
     columns = columns or list(aw.ARTIFACT_COLUMNS)
     rows = [row for row in rows if not str(row.get("artifact_id", "")).startswith(f"{RUN_ID}::")]
     created_at = now_utc()
