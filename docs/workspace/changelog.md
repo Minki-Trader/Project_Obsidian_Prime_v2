@@ -4818,3 +4818,4 @@
 - 2026-05-28: Stage337 run337CS trained weak density/control repaired candidates(약한 밀도/대조 수리 후보) and opened `run337CT_review_weak_density_control_repaired_candidates_without_db_v1`.
 - 2026-05-28: Stage337 run337CT reviewed weak density/control repaired training(약한 밀도/대조 수리 학습) and opened `run337CU_design_feature_label_separability_control_repair_without_db_v1`.
 - 2026-05-28: Stage337 run337CU designed feature/label separability control repair(피처/라벨 분리력 대조 수리) and opened `run337CV_materialize_feature_label_separability_control_repair_inputs_without_db_v1`.
+- 2026-05-28: Stage337 run337CV materialized feature/label separability control repair inputs(피처/라벨 분리력 대조 수리 입력) and opened `run337CW_train_feature_label_separability_control_repaired_candidates_without_db_v1`.
