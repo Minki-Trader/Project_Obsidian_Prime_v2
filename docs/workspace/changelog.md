@@ -4756,3 +4756,4 @@
 - 2026-05-27: Stage337 run337AJ(337AJ 실행) `completed_stage337AJ_cache_repair_reprobe_materialized_execution_pending_no_forward_decision`. Effect(효과): API history warmup(API 이력 예열) 후 tester cache(테스터 캐시) 경계를 재탐침했고 Forward/Goal(전방/목표)은 주장하지 않음.
 - 2026-05-27: Stage337 run337AK(337AK 실행) `completed_stage337AK_synthetic_custom_exact_timestamp_proxy_parity_repaired_no_forward_decision`. Effect(효과): exact timestamp proxy(정확 시각 프록시) `10/10`를 기록하고 Forward/Goal(전진/목표)은 주장하지 않음.
 - 2026-05-27: Stage337 run337AL(337AL 실행) `completed_stage337AL_proxy_role_lock_refreshed_broker_rollover_not_due_no_forward_decision`. Effect(효과): exact timestamp proxy(정확 시각 프록시) 사용성을 고정하고 Forward/Goal(전진/목표)은 주장하지 않음.
+- 2026-05-27: Stage337 run337AM(337AM 실행) `completed_stage337AM_no_lookahead_rebuild_inputs_materialized_no_training_no_selection`. Effect(효과): no-lookahead cost/direction/curve rebuild input(미래참조 없는 비용/방향/곡선 재구성 입력)을 물질화했고 Forward/Goal(전진/목표)은 주장하지 않음.
