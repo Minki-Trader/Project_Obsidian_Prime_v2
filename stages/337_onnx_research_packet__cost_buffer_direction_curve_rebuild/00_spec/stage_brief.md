@@ -73,3 +73,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - 2026-05-27: run337BO(337BO 실행) materialized fresh forward raw inputs(최신 전진 원천 입력) and opened run337BP(337BP 실행) feature parity preflight(피처 동등성 사전점검). Forward/Goal(전진/목표)은 주장하지 않는다.
 - 2026-05-27: run337BP(337BP 실행) materialized live-computable feature frames(실시간 계산 가능 피처 프레임) and opened run337BQ(337BQ 실행) as-of join/runtime parity(시점 기준 결합/런타임 동등성). Forward/Goal(전진/목표)은 주장하지 않는다.
 - 2026-05-27: run337BQ(337BQ 실행) implemented as-of feature join(시점 기준 피처 결합) and exported runtime parity package(런타임 동등성 패키지). Forward/Goal(전진/목표)은 주장하지 않는다.
+- 2026-05-27: run337BR(337BR 실행) executed MT5 feature parity probe(MT5 피처 동등성 탐침). Status(상태) `completed_stage337BR_mt5_feature_parity_probe_overlap_matched_tester_gap_remains_no_forward_decision`. Forward/Goal(전진/목표)은 주장하지 않음.

@@ -61,7 +61,10 @@ bool OP_IsMetadataColumn(const string raw_name)
             name == "missing_feature_group_mask" ||
             name == "available_feature_group_mask" ||
             name == "dataset_id" ||
-            name == "run_id");
+            name == "run_id" ||
+            name == "symbol" ||
+            name == "broker_symbol" ||
+            name == "contract_symbol");
   }
 
 bool OP_TokenLooksInvalidNumber(const string token)
