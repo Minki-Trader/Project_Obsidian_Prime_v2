@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CC_materialize_lifecycle_aware_no_overfit_inputs_without_db_v1`
+- current_run(현재 실행): `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CB_lifecycle_aware_no_overfit_design_materialized_no_training_no_selection`
-- decision(결정): `stage337CB_open_run337CC_materialize_lifecycle_aware_no_overfit_inputs`
-- latest_completed_run(최근 완료 실행): `run337CB_lifecycle_aware_no_overfit_design_without_db_v1`
-- next_action(다음 행동): `run337CC_materialize_lifecycle_aware_no_overfit_inputs_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CB_lifecycle_aware_no_overfit_design_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CC_lifecycle_aware_no_overfit_inputs_materialized_no_training_no_selection`
+- decision(결정): `stage337CC_open_run337CD_train_lifecycle_aware_guarded_scouts`
+- latest_completed_run(최근 완료 실행): `run337CC_materialize_lifecycle_aware_no_overfit_inputs_without_db_v1`
+- next_action(다음 행동): `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CC_lifecycle_aware_input_materialization_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -23,6 +23,15 @@
 
 
 
+
+
+## Stage337 run337CC(337CC 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CC_lifecycle_aware_no_overfit_inputs_materialized_no_training_no_selection`
+- judgment(판정): `lifecycle_target_inputs_proxy_mt5_boundary_negative_controls_and_cost_stress_materialized`
+- decision(결정): `stage337CC_open_run337CD_train_lifecycle_aware_guarded_scouts`
+- next_action(다음 행동): `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`
+- effect(효과): lifecycle target inputs(생애주기 타깃 입력), proxy-MT5 boundary(프록시-MT5 경계), negative controls(부정 대조), cost stress(비용 압박)를 물질화했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CB(337CB 실행) - 2026-05-28
 
