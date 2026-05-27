@@ -1,20 +1,29 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337BU_train_guarded_model_scouts_without_db_v1`
+- current_run(현재 실행): `run337BV_execute_model_scout_mt5_runtime_probe_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337BT_stale_lag_guarded_model_scout_inputs_materialized_no_training_no_selection`
-- decision(결정): `stage337BT_open_run337BU_train_guarded_model_scouts`
-- latest_completed_run(최근 완료 실행): `run337BT_materialize_stale_lag_guarded_model_scout_inputs_without_db_v1`
-- next_action(다음 행동): `run337BU_train_guarded_model_scouts_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337BT_stale_lag_guarded_model_scout_inputs_without_db_no_model_training_no_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337BU_guarded_model_scouts_trained_proxy_expected_materialized_mt5_probe_queued_no_selection`
+- decision(결정): `stage337BU_open_run337BV_model_scout_mt5_runtime_probe`
+- latest_completed_run(최근 완료 실행): `run337BU_train_guarded_model_scouts_without_db_v1`
+- next_action(다음 행동): `run337BV_execute_model_scout_mt5_runtime_probe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337BU_guarded_model_scout_training_without_db_no_forward_selection_no_threshold_tuning_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
 
+
+
+## Stage337 run337BU(337BU 실행) - 2026-05-28
+
+- status(상태): `completed_stage337BU_guarded_model_scouts_trained_proxy_expected_materialized_mt5_probe_queued_no_selection`
+- judgment(판정): `python_and_onnx_scout_models_materialized_proxy_forward_diagnostics_ready_mt5_runtime_comparison_missing`
+- decision(결정): `stage337BU_open_run337BV_model_scout_mt5_runtime_probe`
+- next_action(다음 행동): `run337BV_execute_model_scout_mt5_runtime_probe_without_db_v1`
+- effect(효과): 방어/공격 모델 스카우트를 학습하고 ONNX(온엑스)와 proxy expected(프록시 예상)를 만들었지만, MT5 runtime comparison(MT5 런타임 비교)은 다음 실행 필수 조건으로 남겼다.
 
 ## Stage337 run337BT(337BT 실행) - 2026-05-27
 
