@@ -1,16 +1,24 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
+- current_run(현재 실행): `run337AY_shifted_custom_protocol_attribution_probe_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337AW_balanced_no_lookahead_runtime_probe_evidence_bound_gap_remains_no_forward_decision`
-- decision(결정): `stage337AW_open_run337AX_tester_gap_repair_and_protocol_attribution_without_db_no_selection`
-- latest_completed_run(최근 완료 실행): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
-- next_action(다음 행동): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337AW_balanced_no_lookahead_runtime_probe_without_db_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337AX_tester_gap_repair_route_selected_protocol_attribution_ready_no_forward_decision`
+- decision(결정): `stage337AX_open_run337AY_shifted_custom_protocol_attribution_probe_without_db_no_selection`
+- latest_completed_run(최근 완료 실행): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
+- next_action(다음 행동): `run337AY_shifted_custom_protocol_attribution_probe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337AX_tester_gap_repair_route_and_protocol_attribution_without_db_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+
+## Stage337 run337AX(337AX 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AX_tester_gap_repair_route_selected_protocol_attribution_ready_no_forward_decision`
+- judgment(판정): `broker_current_day_gap_remains_shifted_custom_and_completed_day_routes_reach_feature_last`
+- decision(결정): `stage337AX_open_run337AY_shifted_custom_protocol_attribution_probe_without_db_no_selection`
+- next_action(다음 행동): `run337AY_shifted_custom_protocol_attribution_probe_without_db_v1`
+- effect(효과): run337AX(337AX 실행)는 broker current-day gap(브로커 현재일 공백)을 negative control(부정 대조)로 유지하고, shifted custom exact timestamp(이동 커스텀 정확 시각)를 다음 프로토콜 귀속 탐침의 주 경로로 선택했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337AW(337AW 실행) - 2026-05-27
 

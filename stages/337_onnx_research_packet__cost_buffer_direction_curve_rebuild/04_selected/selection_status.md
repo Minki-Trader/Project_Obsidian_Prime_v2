@@ -3,22 +3,19 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
-- latest_decision(최신 결정): `stage337AW_open_run337AX_tester_gap_repair_and_protocol_attribution_without_db_no_selection`
-- current_run(현재 실행): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
-- broker_forward_boundary(브로커 전진 경계): `not_closed_tester_feature_last_gap_remains`
+- latest_run(최신 실행): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
+- latest_decision(최신 결정): `stage337AX_open_run337AY_shifted_custom_protocol_attribution_probe_without_db_no_selection`
+- current_run(현재 실행): `run337AY_shifted_custom_protocol_attribution_probe_without_db_v1`
+- broker_forward_boundary(브로커 전진 경계): `not_closed_broker_current_day_gap_remains`
 - tester_visible_cutoff_policy(테스터 가시 컷오프 정책): `confirmed_current_day_intraday_hidden`
-- completed_day_attribution_status(완성일 귀속 상태): `usable_without_db_for_attribution_only`
-- db_source_status(D/B 원천 상태): `out_of_scope_by_claim_no_timestamp_aligned_sidecar`
-- db_source_sidecar_feasible(D/B 원천 보조표 가능): `false`
-- repair_inputs_status(수리 입력 상태): `balanced_no_lookahead_without_db_runtime_evidence_bound`
-- protocol_runtime_rows(프로토콜 런타임 행): `9`
-- proxy_mt5_parity(프록시-MT5 동등성): `45/45`
-- tester_gap_status(테스터 공백 상태): `tester_feature_last_gap_remains`
+- completed_day_route(완성일 경로): `tester_reached_feature_last`
+- shifted_custom_route(이동 커스텀 경로): `tester_reached_feature_last`
+- broker_current_day_route(브로커 현재일 경로): `tester_feature_last_gap_remains`
+- protocol_bindings(프로토콜 연결): `9`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
-- Forward Blocked(전진 차단): `not_closed_gap_repair_required`
+- Forward Blocked(전진 차단): `not_closed_gap_repair_probe_open`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
-- effect(효과): run337AW(337AW 실행)는 runtime probe evidence(런타임 탐침 근거)를 protocol/control(프로토콜/대조) 행에 묶었지만 전진/운영 주장은 막는다.
+- next_action(다음 행동): `run337AY_shifted_custom_protocol_attribution_probe_without_db_v1`
+- effect(효과): run337AX(337AX 실행)는 공백 수리 경로를 선택했지만 전진/운영 주장은 막는다.

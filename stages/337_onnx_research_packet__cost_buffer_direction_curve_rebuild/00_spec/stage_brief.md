@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
+- latest_run(최신 실행): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -52,3 +52,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - run337AU_summary(337AU 요약): `completed_stage337AU_balanced_no_lookahead_repair_inputs_materialized_no_training_no_selection`. Effect(효과): repair_input_rows(수리 입력 행) `344`, protocol inputs(프로토콜 입력) `9`, next_action(다음 행동) `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`; Forward/Goal(전진/목표)은 주장하지 않는다.
 - run337AV_summary(337AV 요약): `completed_stage337AV_balanced_no_lookahead_repair_inputs_reviewed_no_training_no_selection`. Effect(효과): protocol reviews(프로토콜 검토) `9/9`, runtime acceptance(런타임 수락) `9`, next_action(다음 행동) `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`; Forward/Goal(전진/목표)은 주장하지 않는다.
 - run337AW_summary(337AW 요약): `completed_stage337AW_balanced_no_lookahead_runtime_probe_evidence_bound_gap_remains_no_forward_decision`. Effect(효과): protocol runtime rows(프로토콜 런타임 행) `9`, proxy/MT5 parity(프록시/MT5 동등성) `45/45`, tester gap(테스터 공백) `tester_feature_last_gap_remains`; Forward/Goal(전진/목표)은 주장하지 않는다.
+- run337AX_summary(337AX 요약): `completed_stage337AX_tester_gap_repair_route_selected_protocol_attribution_ready_no_forward_decision`. Effect(효과): completed-day(완성일) `tester_reached_feature_last`, shifted custom(이동 커스텀) `tester_reached_feature_last`, broker current-day(브로커 현재일) `tester_feature_last_gap_remains`를 분리하고 run337AY(337AY 실행) 귀속 탐침을 연다; Forward/Goal(전진/목표)은 주장하지 않는다.
