@@ -3,22 +3,22 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AV_review_balanced_no_lookahead_repair_inputs_without_db_v1`
-- latest_decision(최신 결정): `stage337AV_open_run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_no_selection`
-- current_run(현재 실행): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
-- broker_forward_boundary(브로커 전진 경계): `failed`
+- latest_run(최신 실행): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
+- latest_decision(최신 결정): `stage337AW_open_run337AX_tester_gap_repair_and_protocol_attribution_without_db_no_selection`
+- current_run(현재 실행): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
+- broker_forward_boundary(브로커 전진 경계): `not_closed_tester_feature_last_gap_remains`
 - tester_visible_cutoff_policy(테스터 가시 컷오프 정책): `confirmed_current_day_intraday_hidden`
 - completed_day_attribution_status(완성일 귀속 상태): `usable_without_db_for_attribution_only`
 - db_source_status(D/B 원천 상태): `out_of_scope_by_claim_no_timestamp_aligned_sidecar`
 - db_source_sidecar_feasible(D/B 원천 보조표 가능): `false`
-- repair_inputs_status(수리 입력 상태): `balanced_no_lookahead_without_db_reviewed`
-- protocol_review_passed(프로토콜 검토 통과): `9/9`
-- runtime_acceptance_rows(런타임 수락 행): `9`
-- negative_control_rows(부정 대조 행): `3`
+- repair_inputs_status(수리 입력 상태): `balanced_no_lookahead_without_db_runtime_evidence_bound`
+- protocol_runtime_rows(프로토콜 런타임 행): `9`
+- proxy_mt5_parity(프록시-MT5 동등성): `45/45`
+- tester_gap_status(테스터 공백 상태): `tester_feature_last_gap_remains`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
-- Forward Blocked(전진 차단): `broker_tester_current_day_cutoff_and_db_source_out_of_scope`
+- Forward Blocked(전진 차단): `not_closed_gap_repair_required`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AW_attempt_balanced_no_lookahead_runtime_probe_without_db_v1`
-- effect(효과): run337AV(337AV 실행)는 리뷰 통과 입력을 MT5 runtime probe attempt(MT5 런타임 탐침 시도)로 넘기지만 운영/전진 주장은 막는다.
+- next_action(다음 행동): `run337AX_tester_gap_repair_and_protocol_attribution_without_db_v1`
+- effect(효과): run337AW(337AW 실행)는 runtime probe evidence(런타임 탐침 근거)를 protocol/control(프로토콜/대조) 행에 묶었지만 전진/운영 주장은 막는다.
