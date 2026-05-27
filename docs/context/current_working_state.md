@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CP_review_purged_serial_dependence_guarded_training_controls_without_db_v1`
+- current_run(현재 실행): `run337CQ_design_weak_density_and_control_alignment_repair_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CO_purged_serial_dependence_guarded_training_onnx_materialized_control_review_required_no_selection`
-- decision(결정): `stage337CO_open_run337CP_review_purged_serial_dependence_guarded_training_controls`
-- latest_completed_run(최근 완료 실행): `run337CO_train_purged_serial_dependence_guarded_candidates_without_db_v1`
-- next_action(다음 행동): `run337CP_review_purged_serial_dependence_guarded_training_controls_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CO_purged_serial_dependence_guarded_training_without_db_diagnostic_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CP_control_review_all_mt5_probe_held_weak_or_blocked_no_selection`
+- decision(결정): `stage337CP_open_run337CQ_weak_density_and_control_alignment_repair_design`
+- latest_completed_run(최근 완료 실행): `run337CP_review_purged_serial_dependence_guarded_training_controls_without_db_v1`
+- next_action(다음 행동): `run337CQ_design_weak_density_and_control_alignment_repair_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CP_purged_guarded_training_control_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -38,6 +38,15 @@
 
 
 
+
+
+## Stage337 run337CP(337CP 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CP_control_review_all_mt5_probe_held_weak_or_blocked_no_selection`
+- judgment(판정): `purged_training_control_review_blocks_mt5_probe_all_models_weak_or_negative_control_blocked`
+- decision(결정): `stage337CP_open_run337CQ_weak_density_and_control_alignment_repair_design`
+- next_action(다음 행동): `run337CQ_design_weak_density_and_control_alignment_repair_without_db_v1`
+- effect(효과): CO 모델 `40`개를 검토했고 MT5 probe(MT5 탐침)는 모두 보류했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CO(337CO 실행) - 2026-05-28
 
