@@ -1,15 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337Z_execute_or_review_actual_source_age_proxy_mt5_repair_probe_v1`
+- current_run(현재 실행): `run337AD_completed_day_forward_slice_or_next_day_rollover_confirm_v1`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337Y_actual_source_age_proxy_mt5_repair_probe_inputs_materialized_no_training_no_new_mt5`
-- decision(결정): `stage337Y_open_run337Z_execute_or_review_actual_source_age_proxy_mt5_repair_probe_no_selection`
-- latest_completed_run(최근 완료 실행): `run337Y_materialize_actual_source_age_proxy_mt5_repair_probe_inputs_v1`
-- next_action(다음 행동): `run337Z_execute_or_review_actual_source_age_proxy_mt5_repair_probe_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337Y_actual_measurement_inputs_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337AC_shifted_custom_seed_repair_confirms_current_day_tester_policy_no_forward_decision`
+- decision(결정): `stage337AC_open_run337AD_completed_day_forward_slice_or_next_day_rollover_confirm_no_selection`
+- latest_completed_run(최근 완료 실행): `run337AC_next_day_broker_rollover_or_custom_symbol_seed_repair_v1`
+- next_action(다음 행동): `run337AD_completed_day_forward_slice_or_next_day_rollover_confirm_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337AC_next_day_rollover_or_custom_symbol_seed_repair_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 ## Stage337 run337Y(337Y 실행) - 2026-05-27
 
@@ -1222,3 +1222,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337AB_open_run337AC_next_day_broker_or_custom_symbol_seed_repair_no_selection`
 - next_action(다음 행동): `run337AC_next_day_broker_rollover_or_custom_symbol_seed_repair_v1`
 - effect(효과): custom symbol(커스텀 심볼) `US100.OPV337AB`로 tester visibility(테스터 가시성)를 확인했다. broker gap(브로커 공백) `tester_feature_last_gap_remains`, custom gap(커스텀 공백) `tester_feature_last_gap_remains`, proxy parity(프록시 동등성) `6/10`.
+
+## Stage337 run337AC(337AC 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AC_shifted_custom_seed_repair_confirms_current_day_tester_policy_no_forward_decision`
+- decision(결정): `stage337AC_open_run337AD_completed_day_forward_slice_or_next_day_rollover_confirm_no_selection`
+- next_action(다음 행동): `run337AD_completed_day_forward_slice_or_next_day_rollover_confirm_v1`
+- effect(효과): shifted custom mirror(이동 커스텀 미러) `US100.OPV337ACM`로 tester current-day boundary(테스터 현재일 경계)를 분리했다. broker gap(브로커 공백) `tester_feature_last_gap_remains`, shifted gap(이동 공백) `tester_reached_feature_last`, proxy parity(프록시 동등성) `5/10`.
