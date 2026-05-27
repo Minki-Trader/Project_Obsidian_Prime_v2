@@ -3,19 +3,19 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337BI_materialize_bounded_measurement_harness_without_db_v1`
-- latest_decision(최신 결정): `stage337BI_open_run337BJ_review_bounded_measurement_harness_no_training_no_selection`
-- current_run(현재 실행): `run337BJ_review_bounded_measurement_harness_without_db_v1`
+- latest_run(최신 실행): `run337BJ_review_bounded_measurement_harness_without_db_v1`
+- latest_decision(최신 결정): `stage337BJ_open_run337BK_materialize_mt5_probe_execution_package_no_training_no_selection`
+- current_run(현재 실행): `run337BK_materialize_mt5_probe_execution_package_without_db_v1`
 - frozen_subject(고정 대상): `cp322A_cp321b_exact_replay_control_surface`
-- harness_component_rows(하네스 컴포넌트 행): `7`
-- profit_schema_rows(수익 스키마 행): `11`
-- proxy_mt5_schema_rows(프록시-MT5 스키마 행): `8`
-- mt5_probe_manifest_rows(MT5 탐침 목록 행): `7`
-- cost_stress_rows(비용 스트레스 행): `6`
+- component_review_rows(컴포넌트 검토 행): `7`
+- profit_schema_review_rows(수익 스키마 검토 행): `11`
+- proxy_mt5_schema_review_rows(프록시-MT5 스키마 검토 행): `8`
+- mt5_manifest_review_rows(MT5 목록 검토 행): `7`
+- execution_plan_review_rows(실행 계획 검토 행): `6`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
-- Forward Blocked(전진 차단): `not_closed_measurement_harness_review_open`
+- Forward Blocked(전진 차단): `not_closed_mt5_probe_package_open`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337BJ_review_bounded_measurement_harness_without_db_v1`
-- effect(효과): run337BI(337BI 실행)는 측정 하네스 입력만 물질화했고 전진/운영 주장은 막는다.
+- next_action(다음 행동): `run337BK_materialize_mt5_probe_execution_package_without_db_v1`
+- effect(효과): run337BJ(337BJ 실행)는 MT5 탐침 패키지 입력만 열었고 전진/운영 주장은 막는다.
