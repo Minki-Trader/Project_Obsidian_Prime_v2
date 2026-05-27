@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
+- latest_run(최신 실행): `run337AI_tester_visibility_alternative_repair_or_rollover_reprobe_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -37,3 +37,4 @@
 - claim_boundary(주장 경계): `research_development_only_stage337_cost_buffer_direction_curve_rebuild_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve_no_forward_pocket_filtering_no_threshold_retuning_no_lot_optimization_without_predeclared_protocol`
 
 Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기지 않고 새 설계 제약으로 쓴다. 아직 model training(모델 학습), candidate selection(후보 선택), live readiness(실거래 준비)는 없다.
+- run337AI_summary(337AI 요약): `completed_stage337AI_all_tester_model_alternatives_gap_remain_no_forward_decision`. Effect(효과): model4 gap(모델4 공백) `tester_feature_last_gap_remains`, alternative reached(대체 방식 도달) `0/3`, proxy parity(프록시 동등성) `20/20`를 기록했다.

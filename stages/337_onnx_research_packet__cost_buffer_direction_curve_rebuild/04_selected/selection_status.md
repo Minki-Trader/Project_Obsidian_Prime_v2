@@ -3,20 +3,17 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
-- latest_decision(최신 결정): `stage337AH_open_run337AI_tester_visibility_alternative_repair_or_rollover_reprobe_no_selection`
-- current_run(현재 실행): `run337AI_tester_visibility_alternative_repair_or_rollover_reprobe_v1`
-- completed_day_slice_gap(완성일 구간 공백): `tester_reached_feature_last`
-- full_current_day_control_gap(현재일 전체 대조 공백): `tester_feature_last_gap_remains`
-- completed_day_net(완성일 순수익): `99.9`
-- completed_day_pf(완성일 수익 팩터): `1.1343066871`
-- completed_day_mt5_equity_dd(완성일 MT5 평가금 손실폭): `112.86`
-- completed_day_mt5_recovery(완성일 MT5 회복 계수): `0.89`
-- one_point_stress_pf(1포인트 압박 수익 팩터): `1.08630090555`
-- Forward Passed(전진 통과): `not_claimed`
-- Forward Failed(전진 실패): `not_claimed`
-- Forward Blocked(전진 차단): `latest_current_day_visibility_boundary_not_operating_resolved`
+- latest_run(최신 실행): `run337AI_tester_visibility_alternative_repair_or_rollover_reprobe_v1`
+- latest_decision(최신 결정): `stage337AI_open_run337AJ_history_cache_repair_or_rollover_wait_reprobe_no_selection`
+- current_run(현재 실행): `run337AJ_data_history_cache_repair_or_next_rollover_wait_reprobe_v1`
+- parent_run(상위 실행): `run337AH_execute_full_current_day_visibility_repair_and_no_overfit_preflight_v1`
+- model4_real_tick_gap_status(real tick 대조 공백 상태): `tester_feature_last_gap_remains`
+- model4_real_tick_gap_minutes(real tick 공백 분): `125.0`
+- alternative_modes_reached_feature_last(대체 방식 feature_last 도달): `0/3`
+- proxy_mt5_parity(프록시/MT5 동등성): `20/20`
+- Forward Passed(전방 통과): `not_claimed`
+- Forward Failed(전방 실패): `not_claimed`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AI_tester_visibility_alternative_repair_or_rollover_reprobe_v1`
-- effect(효과): run337AH(337AH 실행)는 full current-day visibility repair(현재일 전체 가시성 수리)를 실행했고 full_current_day_gap(현재일 전체 공백) `tester_feature_last_gap_remains`, proxy/MT5 parity(프록시/MT5 동등성) `10/10`를 기록했다. Forward/Goal(전진/목표)은 주장하지 않는다.
+- next_action(다음 행동): `run337AJ_data_history_cache_repair_or_next_rollover_wait_reprobe_v1`
+- effect(효과): run337AI(337AI 실행)는 tester model mode(테스터 모델 방식)만 바꿔 visibility boundary(가시성 경계)를 재탐침했다. Forward/Goal(전방/목표)은 주장하지 않는다.
