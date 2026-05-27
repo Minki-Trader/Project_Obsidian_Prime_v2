@@ -275,3 +275,11 @@ Negative results are preserved because they prevent repeated dead ends.
 - failure_boundary(실패 경계): raw-forward MT5(원본 전진 MT5) 양수 결과만으로는 cost stress(비용 압박), curve pocket(곡선 포켓), direction attribution(방향 귀속), D/B source(D/B 원천) 공백을 닫지 못했다.
 - do_not_repeat(반복 금지): forward(전진) 양수 후보에 threshold(임계값), lot(수량), balanced/plain(균형/일반)만 좁게 맞추는 수리를 반복하지 않는다.
 - reopen_condition(재개 조건): cross-horizon(교차 기간), cost stress(비용 압박), curve pocket(곡선 포켓), runtime parity(런타임 동등성)가 같은 no-retune(무재튜닝) 기준에서 동시에 약해질 때만 재개한다.
+
+## run337AF_failure_memory_and_no_overfit_rebuild_queue_v1 Stage337 cost/direction/curve negative memory(337단계 비용/방향/곡선 부정 기억)
+
+- failed_or_boundary_profiles(실패 또는 경계 프로필): `7`
+- failure_boundary(실패 경계): completed-day positive net(완성일 양수 순수익)은 cost stress(비용 압박), recovery/DD(회복/손실폭), direction asymmetry(방향 비대칭), curve pocket(곡선 포켓), D/B source gap(D/B 원천 공백), economic regime gap(경제 국면 공백), full current-day visibility gap(현재일 전체 가시성 공백)을 닫지 못했다.
+- do_not_repeat(반복 금지): forward data(전진 데이터)에 threshold/lot/short/risk(임계값/랏/숏/위험)를 좁게 맞추지 않는다.
+- preserved_clue(보존 단서): cost ladder(비용 사다리), rolling pocket(이동 포켓), side-specific payoff(방향별 손익), as-of regime source(시점 기준 국면 원천), proxy/MT5 role lock(프록시/MT5 역할 고정)을 run337AG(337AG 실행)로 넘긴다.
+- reopen_condition(재개 조건): predeclared split/WFO(사전 선언 분할/워크포워드)와 MT5 runtime probe(MT5 런타임 탐침)에서 비용/곡선/방향/데이터/동등성 gate(게이트)가 동시에 닫힐 때만 재개한다.
