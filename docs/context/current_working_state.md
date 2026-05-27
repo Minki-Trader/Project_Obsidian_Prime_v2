@@ -1,17 +1,26 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337BA_materialize_no_overfit_repair_inputs_from_shifted_attribution_without_db_v1`
+- current_run(현재 실행): `run337BB_review_no_overfit_repair_inputs_from_shifted_attribution_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337AZ_no_overfit_repair_design_materialized_no_training_no_selection`
-- decision(결정): `stage337AZ_open_run337BA_materialize_no_overfit_repair_inputs_without_db_no_selection`
-- latest_completed_run(최근 완료 실행): `run337AZ_no_overfit_repair_design_from_shifted_attribution_without_db_v1`
-- next_action(다음 행동): `run337BA_materialize_no_overfit_repair_inputs_from_shifted_attribution_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337AZ_no_overfit_repair_design_from_shifted_attribution_without_db_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337BA_no_overfit_repair_inputs_materialized_no_training_no_selection`
+- decision(결정): `stage337BA_open_run337BB_review_materialized_no_overfit_repair_inputs_no_selection`
+- latest_completed_run(최근 완료 실행): `run337BA_materialize_no_overfit_repair_inputs_from_shifted_attribution_without_db_v1`
+- next_action(다음 행동): `run337BB_review_no_overfit_repair_inputs_from_shifted_attribution_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337BA_no_overfit_repair_input_materialization_without_db_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
+
+
+## Stage337 run337BA(337BA 실행) - 2026-05-27
+
+- status(상태): `completed_stage337BA_no_overfit_repair_inputs_materialized_no_training_no_selection`
+- judgment(판정): `run337AZ_design_converted_to_repair_input_contracts_without_forward_retune`
+- decision(결정): `stage337BA_open_run337BB_review_materialized_no_overfit_repair_inputs_no_selection`
+- next_action(다음 행동): `run337BB_review_no_overfit_repair_inputs_from_shifted_attribution_without_db_v1`
+- effect(효과): run337BA(337BA 실행)는 run337AZ(337AZ 실행)의 설계를 피처/게이트/proxy-MT5/부정 대조 계약으로 물질화했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337AZ(337AZ 실행) - 2026-05-27
 
