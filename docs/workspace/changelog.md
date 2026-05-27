@@ -4811,3 +4811,4 @@
 - 2026-05-28: Stage337 run337CL reviewed guarded training(방어 학습 검토) and opened `run337CM_design_serial_dependence_label_boundary_repair_without_db_v1`.
 - 2026-05-28: Stage337 run337CM designed serial-dependence label-boundary repair(연속 의존 라벨 경계 수리) and opened `run337CN_materialize_serial_dependence_label_boundary_repair_inputs_without_db_v1`.
 - 2026-05-28: Stage337 run337CN materialized serial-dependence repair inputs(연속 의존 수리 입력) and opened `run337CO_train_purged_serial_dependence_guarded_candidates_without_db_v1`.
+- 2026-05-28: Stage337 run337CO trained purged guarded candidates(제거 방어 후보) and opened `run337CP_review_purged_serial_dependence_guarded_training_controls_without_db_v1`.
