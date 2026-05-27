@@ -1,23 +1,23 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337AR_db_source_sidecar_feasibility_or_out_of_scope_lock_v1`
+- current_run(현재 실행): `run337AS_completed_day_attribution_without_db_and_forward_window_lock_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337AQ_tester_visible_cutoff_policy_db_instrumentation_no_forward_decision`
-- decision(결정): `stage337AQ_open_run337AR_db_source_sidecar_or_out_of_scope_lock_no_selection`
-- latest_completed_run(최근 완료 실행): `run337AQ_tester_visible_cutoff_policy_and_db_instrumentation_v1`
-- next_action(다음 행동): `run337AR_db_source_sidecar_feasibility_or_out_of_scope_lock_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337AQ_tester_visible_cutoff_policy_db_instrumentation_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337AR_db_source_sidecar_not_feasible_out_of_scope_locked_no_forward_decision`
+- decision(결정): `stage337AR_db_source_attribution_out_of_scope_by_claim_no_selection`
+- latest_completed_run(최근 완료 실행): `run337AR_db_source_sidecar_feasibility_or_out_of_scope_lock_v1`
+- next_action(다음 행동): `run337AS_completed_day_attribution_without_db_and_forward_window_lock_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337AR_db_source_sidecar_feasibility_lock_no_model_training_no_threshold_retuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
-## Stage337 run337AQ(337AQ 실행) - 2026-05-27
+## Stage337 run337AR(337AR 실행) - 2026-05-27
 
-- status(상태): `completed_stage337AQ_tester_visible_cutoff_policy_db_instrumentation_no_forward_decision`
-- decision(결정): `stage337AQ_open_run337AR_db_source_sidecar_or_out_of_scope_lock_no_selection`
-- next_action(다음 행동): `run337AR_db_source_sidecar_feasibility_or_out_of_scope_lock_v1`
-- effect(효과): tester visible cutoff(테스터 가시 컷오프)를 current-day forward boundary(현재일 전진 경계)로 고정하고, D/B source(D/B 원천)는 sidecar feasibility(보조표 가능성) 또는 out_of_scope lock(범위 밖 고정)으로 다음 작업을 좁혔다. Forward/Goal(전진/목표)은 주장하지 않는다.
+- status(상태): `completed_stage337AR_db_source_sidecar_not_feasible_out_of_scope_locked_no_forward_decision`
+- decision(결정): `stage337AR_db_source_attribution_out_of_scope_by_claim_no_selection`
+- next_action(다음 행동): `run337AS_completed_day_attribution_without_db_and_forward_window_lock_v1`
+- effect(효과): D/B source sidecar(D/B 원천 보조표)는 frozen lineage(고정 계보)에서 직접 준비된 증거가 없어 out_of_scope_by_claim(주장 범위 밖)으로 고정했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage267 Candidate Pool(267단계 후보군)
 
