@@ -1278,3 +1278,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337AJ_open_run337AK_next_rollover_or_synthetic_custom_parity_repair_no_selection`
 - next_action(다음 행동): `run337AK_next_rollover_or_synthetic_custom_parity_repair_v1`
 - effect(효과): MT5 API history warmup(API 이력 예열) 후 tester cache(테스터 캐시)가 feature_last(피처 끝)까지 움직이는지 검증했다. Forward Passed/Failed(전방 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## Stage337 run337AK(337AK 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AK_synthetic_custom_exact_timestamp_proxy_parity_repaired_no_forward_decision`
+- decision(결정): `stage337AK_open_run337AL_boundary_policy_or_rollover_wait_no_selection`
+- next_action(다음 행동): `run337AL_exact_timestamp_policy_boundary_or_broker_rollover_wait_v1`
+- effect(효과): exact tester cycle timestamp(정확 테스터 사이클 시각) 기준으로 proxy/MT5 parity(프록시/MT5 동등성)를 `10/10`까지 확인했다. Broker forward decision(브로커 전진 판정), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
