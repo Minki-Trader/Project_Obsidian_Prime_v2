@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337BB_review_no_overfit_repair_inputs_from_shifted_attribution_without_db_v1`
+- latest_run(최신 실행): `run337BC_materialize_bounded_no_overfit_repair_blueprints_from_reviewed_inputs_without_db_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -57,3 +57,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - run337AZ_summary(337AZ 요약): `completed_stage337AZ_no_overfit_repair_design_materialized_no_training_no_selection`. Effect(효과): run337AY 취약성 귀속을 no-overfit repair design(무과적합 수리 설계) `5`행, falsification gates(반증 게이트) `6`행, run337BA queue(337BA 대기열) `2`행으로 바꿨고 Forward/Goal(전진/목표)은 주장하지 않는다.
 - run337BA_summary(337BA 요약): `completed_stage337BA_no_overfit_repair_inputs_materialized_no_training_no_selection`. Effect(효과): run337AZ 설계를 feature contracts(피처 계약) `5`행, gate contracts(게이트 계약) `6`행, negative controls(부정 대조) `6`행으로 물질화했고 run337BB(337BB 실행) 검토를 연다. Forward/Goal(전진/목표)은 주장하지 않는다.
 - run337BB_summary(337BB 요약): `completed_stage337BB_no_overfit_repair_inputs_reviewed_ready_for_bounded_blueprint_no_training_no_selection`. Effect(효과): run337BA 입력 계약을 feature review(피처 검토) `5/5`, gate review(게이트 검토) `6/6`, firewall(방화벽) `8/8`로 검토하고 run337BC(337BC 실행) 제한 청사진을 연다. Forward/Goal(전진/목표)은 주장하지 않는다.
+- run337BC_summary(337BC 요약): `completed_stage337BC_bounded_no_overfit_repair_blueprints_materialized_no_training_no_selection`. Effect(효과): bounded blueprints(제한 청사진) `5`, cp322A freeze contracts(322A 고정 계약) `9`, falsification gates(반증 게이트) `30`를 만들고 run337BD(337BD 실행) 검토를 연다. Forward/Goal(전진/목표)은 주장하지 않는다.
