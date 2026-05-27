@@ -3,19 +3,17 @@
 - stage_id(단계 ID): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - stage_status(단계 상태): `open_active`
 - selected_candidate(선택 후보): `none`
-- latest_run(최신 실행): `run337AM_no_lookahead_cost_direction_curve_rebuild_input_materialization_v1`
-- latest_decision(최신 결정): `stage337AM_open_run337AN_broker_rollover_reprobe_and_run337AO_asof_instrumentation_no_selection`
-- current_run(현재 실행): `run337AN_broker_rollover_reprobe_when_utc_day_boundary_available_v1`
-- secondary_current_run(보조 현재 실행): `run337AO_asof_regime_and_db_source_materialization_v1`
-- no_lookahead_inputs_materialized(미래참조 방지 입력 물질화): `8/8`
-- failure_memory_bindings(실패 기억 연결): `7`
-- cost_direction_curve_inputs(비용/방향/곡선 입력): `18`
-- proxy_runtime_signal_usable(프록시 런타임 신호 사용 가능): `2/2`
+- latest_run(최신 실행): `run337AN_broker_rollover_reprobe_when_utc_day_boundary_available_v1`
+- latest_decision(최신 결정): `stage337AN_open_run337AO_asof_regime_db_and_run337AP_broker_history_repair_no_selection`
+- current_run(현재 실행): `run337AO_asof_regime_and_db_source_materialization_v1`
+- secondary_current_run(보조 현재 실행): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
 - broker_forward_boundary(브로커 전진 경계): `failed`
+- broker_gap_status(브로커 공백 상태): `tester_feature_last_gap_remains`
+- exact_proxy_parity(정확 프록시 동등성): `5/5`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
 - Forward Blocked(전진 차단): `broker_tester_feature_last_not_reached`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337AN_broker_rollover_reprobe_when_utc_day_boundary_available_v1`
-- effect(효과): failure memory(실패 기억)를 selector(선택자)가 아닌 predeclared gate input(사전 선언 게이트 입력)으로 잠그고, broker rollover reprobe(브로커 이월 재탐침)와 as-of source materialization(시점 기준 원천 물질화)을 연다.
+- next_action(다음 행동): `run337AO_asof_regime_and_db_source_materialization_v1`
+- effect(효과): run337AN(337AN 실행)은 frozen broker rollover reprobe(고정 브로커 이월 재탐침)를 실행했고, forward decision(전진 판정)은 아직 주장하지 않는다.
