@@ -4784,3 +4784,5 @@
 - 2026-05-27: Stage337 run337BL reviewed MT5 probe package(MT5 탐침 패키지 검토) and blocked actual MT5 execution(실제 MT5 실행 차단) until route-signal handoff(경로 신호 인계) is repaired/proven.
 - 2026-05-27: Stage337 run337BM proved exact cp322A route-signal forward handoff(정확 cp322A 경로 신호 전진 인계) is not feasible under frozen rules(고정 규칙 내 불가능) and opened forward-safe rebuild design(전진 안전 재구축 설계).
 - 2026-05-27: Stage337 run337BN created forward-safe route-signal rebuild design(전진 안전 경로 신호 재구축 설계) with no-overfit gates(무과적합 게이트), negative controls(부정 대조), and MT5 proof requirements(MT5 검증 요구사항).
+- 2026-05-27: Stage337 run337BO refreshed MT5 raw M5 data(MT5 원천 M5 데이터), audited live-computable inputs(실시간 계산 가능 입력), and opened feature parity preflight(피처 동등성 사전점검).
+- 2026-05-27: Stage337 run337BO refreshed MT5 raw M5 data(MT5 원천 M5 데이터), audited live-computable inputs(실시간 계산 가능 입력), and opened feature parity preflight(피처 동등성 사전점검).
