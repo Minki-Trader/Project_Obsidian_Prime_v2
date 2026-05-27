@@ -1320,3 +1320,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337V_open_run337W_materialize_cost_buffer_source_policy_repair_inputs_no_selection`
 - next_action(다음 행동): `run337W_materialize_cost_buffer_source_policy_repair_inputs_v1`
 - effect(효과): cost buffer(비용 버퍼), source policy(원천 정책), overfit/parity firewall(과적합/동등성 방화벽), tester boundary(테스터 경계)를 run337W 물질화 대기열로 고정했다.
+
+## Stage337 run337W(337W 실행) - 2026-05-27
+
+- status(상태): `completed_stage337W_cost_buffer_source_policy_repair_inputs_materialized_no_training_no_mt5`
+- decision(결정): `stage337W_open_run337X_review_materialized_repair_inputs_no_selection`
+- next_action(다음 행동): `run337X_review_materialized_cost_buffer_source_policy_repair_inputs_v1`
+- effect(효과): source age(원천 나이), feature-label boundary(피처-라벨 경계), proxy-MT5 schema(프록시-MT5 스키마), tester boundary(테스터 경계), model validation firewall(모델 검증 방화벽)을 실제 입력 파일로 만들었다. Forward/Goal(전진/목표)은 주장하지 않는다.

@@ -4738,3 +4738,4 @@
 - 2026-05-27: Stage337 run337T(337T 실행) `completed_stage337T_u42_source_clean_cost_fragility_review_no_forward_decision`. Effect(효과): u42 source-clean cost fragility(원천 깨끗한 비용 취약성)를 확인했고 Forward/Goal(전진/목표) 주장은 없음.
 - 2026-05-27: Stage337 run337U(337U 실행) `completed_stage337U_tester_rollover_reprobe_gap_remains_no_forward_decision`. Effect(효과): tester rollover reprobe(테스터 이월 재탐침)를 MT5(메타트레이더5) `1/1`로 실행했고 Forward/Goal(전진/목표) 주장은 없음.
 - 2026-05-27: Stage337 run337V(337V 실행) `completed_stage337V_cost_buffer_source_policy_repair_design_no_training_no_selection`. Effect(효과): 비용 버퍼/원천 정책 수리 설계를 만들고 run337W 물질화 대기열을 열었으며 Forward/Goal(전진/목표) 주장은 없음.
+- 2026-05-27: Stage337 run337W(337W 실행) `completed_stage337W_cost_buffer_source_policy_repair_inputs_materialized_no_training_no_mt5`. Effect(효과): 비용/원천/프록시-MT5/테스터/모델 검증 입력을 물질화했고 Forward/Goal(전진/목표) 주장은 없음.
