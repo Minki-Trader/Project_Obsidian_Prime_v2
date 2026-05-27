@@ -4802,3 +4802,4 @@
 - 2026-05-28: Stage337 run337CC materialized lifecycle-aware no-overfit inputs(생애주기 인식 무과적합 입력) and opened `run337CD_train_lifecycle_aware_guarded_scouts_without_db_v1`.
 - 2026-05-28: Stage337 run337CD trained lifecycle-aware guarded scouts(생애주기 인식 방어 스카우트) and opened `run337CE_execute_lifecycle_aware_mt5_runtime_probe_without_db_v1`.
 - 2026-05-28: Stage337 run337CE executed lifecycle-aware MT5 runtime probe(생애주기 인식 MT5 런타임 탐침) and opened `run337CF_review_lifecycle_aware_runtime_probe_and_failure_attribution_without_db_v1`.
+- 2026-05-28: Stage337 run337CF reviewed lifecycle runtime failure attribution(생애주기 런타임 실패 귀속) and opened `run337CG_design_directional_label_action_policy_repair_without_db_v1`.
