@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337AO_asof_regime_and_db_source_materialization_v1`
-- secondary_current_run(보조 현재 실행): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
+- current_run(현재 실행): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
+- secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337AN_broker_rollover_reprobe_gap_remains_no_forward_decision`
-- decision(결정): `stage337AN_open_run337AO_asof_regime_db_and_run337AP_broker_history_repair_no_selection`
-- latest_completed_run(최근 완료 실행): `run337AN_broker_rollover_reprobe_when_utc_day_boundary_available_v1`
-- next_action(다음 행동): `run337AO_asof_regime_and_db_source_materialization_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337AN_broker_rollover_reprobe_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337AO_asof_regime_db_source_inputs_materialized_no_training_no_selection`
+- decision(결정): `stage337AO_open_run337AP_broker_tester_history_repair_no_selection`
+- latest_completed_run(최근 완료 실행): `run337AO_asof_regime_and_db_source_materialization_v1`
+- next_action(다음 행동): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337AO_asof_regime_and_db_source_materialization_no_model_training_no_threshold_retuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 ## Stage337 run337Y(337Y 실행) - 2026-05-27
 
@@ -1309,3 +1309,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - next_action(다음 행동): `run337AO_asof_regime_and_db_source_materialization_v1`
 - secondary_next_action(보조 다음 행동): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
 - effect(효과): broker gap(브로커 공백) `tester_feature_last_gap_remains`, exact proxy/MT5 parity(정확 프록시/메타트레이더5 동등성) `5/5`를 기록했다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## Stage337 run337AO(337AO 실행) - 2026-05-27
+
+- status(상태): `completed_stage337AO_asof_regime_db_source_inputs_materialized_no_training_no_selection`
+- decision(결정): `stage337AO_open_run337AP_broker_tester_history_repair_no_selection`
+- next_action(다음 행동): `run337AP_broker_tester_history_repair_or_next_rollover_v1`
+- effect(효과): as-of macro join(시점 기준 거시 결합) `344`행, no_future_source_violations(미래 원천 위반) `0`, D/B missing columns(D/B 누락 컬럼) `7`를 기록했다. Forward Passed/Failed(전진 통과/실패), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
