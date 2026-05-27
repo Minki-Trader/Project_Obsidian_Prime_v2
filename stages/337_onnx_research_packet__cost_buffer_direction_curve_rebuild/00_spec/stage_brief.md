@@ -128,3 +128,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - 2026-05-28: run337DQ(337DQ 실행) designed validation/control residual repair and opened `run337DR_materialize_validation_support_control_residual_repair_inputs_without_db_v1`.
 - 2026-05-28: run337DR(337DR 실행) materialized row-level validation/control repair inputs and opened `run337DS_review_validation_support_control_residual_materialization_without_db_v1`.
 - 2026-05-28: run337DS(337DS 실행) reviewed row-level materialization, blocked release on broad validation failure/control residual, and opened `run337DT_design_broad_validation_failure_control_residual_repair_without_db_v1`.
+- 2026-05-28: run337DT(337DT 실행) designed broad validation failure/control residual repair and opened `run337DU_materialize_broad_validation_failure_control_residual_repair_inputs_without_db_v1`.
