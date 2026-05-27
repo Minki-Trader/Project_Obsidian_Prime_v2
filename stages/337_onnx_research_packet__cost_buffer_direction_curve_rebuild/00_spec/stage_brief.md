@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337AC_next_day_broker_rollover_or_custom_symbol_seed_repair_v1`
+- latest_run(최신 실행): `run337AD_completed_day_forward_slice_or_next_day_rollover_confirm_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -25,6 +25,7 @@
 - run337AA_summary(337AA 요약): `completed_stage337AA_tester_current_day_boundary_diagnosed_no_forward_decision`. Effect(효과): tester history/cache session policy probe(테스터 히스토리/캐시 세션 정책 탐침)로 Strategy Tester(전략 테스터)의 current-day midnight cap(현재일 자정 경계) `2`건과 tester feature_last gap(테스터 피처 마지막 공백) `3/3`을 확인했다.
 - run337AB_summary(337AB 요약): `completed_stage337AB_custom_symbol_tester_visibility_inconclusive_no_forward_decision`. Effect(효과): custom symbol tester visibility(커스텀 심볼 테스터 가시성) `tester_feature_last_gap_remains`와 proxy parity(프록시 동등성) `6/10`를 기록했다.
 - run337AC_summary(337AC 요약): `completed_stage337AC_shifted_custom_seed_repair_confirms_current_day_tester_policy_no_forward_decision`. Effect(효과): shifted custom gap(이동 커스텀 공백) `tester_reached_feature_last`와 proxy parity(프록시 동등성) `5/10`를 기록했다.
+- run337AD_summary(337AD 요약): `completed_stage337AD_completed_day_forward_slice_reached_feature_last_no_forward_decision`. Effect(효과): completed-day slice(완성일 구간) `tester_reached_feature_last`와 proxy parity(프록시 동등성) `10/10`를 기록했다.
 - selected_candidate(선택 후보): `none`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed_for_stage337_new_work`
