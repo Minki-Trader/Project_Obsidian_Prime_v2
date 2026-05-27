@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CZ_materialize_objective_feature_contract_pivot_inputs_without_db_v1`
+- current_run(현재 실행): `run337DA_train_objective_feature_contract_pivot_candidates_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CY_objective_feature_contract_pivot_design_no_training_no_selection`
-- decision(결정): `stage337CY_open_run337CZ_materialize_objective_feature_contract_pivot_inputs`
-- latest_completed_run(최근 완료 실행): `run337CY_design_objective_feature_contract_pivot_after_separability_control_failure_without_db_v1`
-- next_action(다음 행동): `run337CZ_materialize_objective_feature_contract_pivot_inputs_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CY_objective_feature_contract_pivot_design_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CZ_objective_feature_contract_pivot_inputs_materialized_no_training_no_selection`
+- decision(결정): `stage337CZ_open_run337DA_train_objective_feature_contract_pivot_candidates`
+- latest_completed_run(최근 완료 실행): `run337CZ_materialize_objective_feature_contract_pivot_inputs_without_db_v1`
+- next_action(다음 행동): `run337DA_train_objective_feature_contract_pivot_candidates_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CZ_objective_feature_contract_pivot_inputs_without_db_train_only_thresholds_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -52,6 +52,18 @@
 
 
 
+
+
+
+
+
+## Stage337 run337CZ(337CZ 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CZ_objective_feature_contract_pivot_inputs_materialized_no_training_no_selection`
+- judgment(판정): `objective_feature_contract_pivot_inputs_materialized_ready_for_guarded_training`
+- decision(결정): `stage337CZ_open_run337DA_train_objective_feature_contract_pivot_candidates`
+- next_action(다음 행동): `run337DA_train_objective_feature_contract_pivot_candidates_without_db_v1`
+- effect(효과): cost tradeability/payoff rank/control residual/feature contract/two-stage handoff(비용 거래가능성/보상 순위/대조 잔차/피처 계약/2단계 인계) 입력을 만들었다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CY(337CY 실행) - 2026-05-28
 
