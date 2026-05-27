@@ -4792,3 +4792,4 @@
 - 2026-05-27: Stage337 run337BS feature parity/stale lag review(피처 동등성/낡은 지연 검토) `completed_stage337BS_feature_parity_review_stale_lag_risk_named_no_forward_decision`; run337BT queue opened.
 - 2026-05-27: Stage337 run337BT materialized guarded model scout inputs(방어 모델 스카우트 입력) and opened run337BU(337BU 실행).
 - 2026-05-28: Stage337 run337BU trained guarded model scouts(방어 모델 스카우트) and opened run337BV(337BV 실행) for MT5 runtime comparison.
+- 2026-05-28: Stage337 run337BV executed model scout MT5 runtime probe(모델 스카우트 MT5 런타임 탐침) and opened `run337BW_review_model_scout_runtime_probe_without_db_v1`.
