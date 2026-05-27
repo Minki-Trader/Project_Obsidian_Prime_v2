@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337DB_review_objective_feature_contract_pivot_training_without_db_v1`
+- current_run(현재 실행): `run337DC_design_cost_shape_two_stage_handoff_repair_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337DA_objective_feature_contract_pivot_candidates_trained_review_required_no_selection_no_mt5`
-- decision(결정): `stage337DA_open_run337DB_review_objective_feature_contract_pivot_training`
-- latest_completed_run(최근 완료 실행): `run337DA_train_objective_feature_contract_pivot_candidates_without_db_v1`
-- next_action(다음 행동): `run337DB_review_objective_feature_contract_pivot_training_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337DA_objective_feature_contract_pivot_training_without_db_train_only_inputs_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337DB_objective_feature_training_review_cost_shape_blocks_no_selection_no_mt5`
+- decision(결정): `stage337DB_open_run337DC_design_cost_shape_two_stage_handoff_repair`
+- latest_completed_run(최근 완료 실행): `run337DB_review_objective_feature_contract_pivot_training_without_db_v1`
+- next_action(다음 행동): `run337DC_design_cost_shape_two_stage_handoff_repair_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337DB_objective_feature_contract_pivot_training_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -57,6 +57,17 @@
 
 
 
+
+
+
+
+## Stage337 run337DB(337DB 실행) - 2026-05-28
+
+- status(상태): `completed_stage337DB_objective_feature_training_review_cost_shape_blocks_no_selection_no_mt5`
+- judgment(판정): `onnx_rank_signal_and_controls_clear_but_cost_shape_blocks_runtime_probe`
+- decision(결정): `stage337DB_open_run337DC_design_cost_shape_two_stage_handoff_repair`
+- next_action(다음 행동): `run337DC_design_cost_shape_two_stage_handoff_repair_without_db_v1`
+- effect(효과): ONNX/rank/control(ONNX/순위/대조)은 보존하고 cost shape(비용 곡선) 차단을 다음 수리 설계로 넘긴다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337DA(337DA 실행) - 2026-05-28
 
