@@ -4805,3 +4805,4 @@
 - 2026-05-28: Stage337 run337CF reviewed lifecycle runtime failure attribution(생애주기 런타임 실패 귀속) and opened `run337CG_design_directional_label_action_policy_repair_without_db_v1`.
 - 2026-05-28: Stage337 run337CG designed directional label/action policy repair(방향 라벨/행동 정책 수리) and opened `run337CH_materialize_directional_label_action_policy_repair_inputs_without_db_v1`.
 - 2026-05-28: Stage337 run337CH materialized directional label/action policy repair inputs(방향 라벨/행동 정책 수리 입력) and opened `run337CI_review_directional_label_action_policy_repair_inputs_without_db_v1`.
+- 2026-05-28: Stage337 run337CI reviewed directional label/action repair inputs(방향 라벨/행동 수리 입력) and opened `run337CJ_materialize_directional_label_action_candidate_training_inputs_without_db_v1`.
