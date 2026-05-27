@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337CK_guarded_directional_label_action_candidate_training_without_db_v1`
+- current_run(현재 실행): `run337CL_review_guarded_directional_label_action_candidate_training_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337CJ_directional_label_action_candidate_training_inputs_materialized_no_training_no_selection`
-- decision(결정): `stage337CJ_open_run337CK_guarded_directional_label_action_candidate_training`
-- latest_completed_run(최근 완료 실행): `run337CJ_materialize_directional_label_action_candidate_training_inputs_without_db_v1`
-- next_action(다음 행동): `run337CK_guarded_directional_label_action_candidate_training_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337CJ_directional_label_action_candidate_training_inputs_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337CK_guarded_directional_label_action_candidate_training_onnx_materialized_negative_control_review_required_no_selection`
+- decision(결정): `stage337CK_open_run337CL_guarded_training_negative_control_review`
+- latest_completed_run(최근 완료 실행): `run337CK_guarded_directional_label_action_candidate_training_without_db_v1`
+- next_action(다음 행동): `run337CL_review_guarded_directional_label_action_candidate_training_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337CK_guarded_directional_label_action_training_without_db_negative_control_review_required_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -31,6 +31,17 @@
 
 
 
+
+
+
+
+## Stage337 run337CK(337CK 실행) - 2026-05-28
+
+- status(상태): `completed_stage337CK_guarded_directional_label_action_candidate_training_onnx_materialized_negative_control_review_required_no_selection`
+- judgment(판정): `exploratory_guarded_candidate_models_trained_onnx_parity_passed_shifted_control_risk_flagged_no_forward_selection`
+- decision(결정): `stage337CK_open_run337CL_guarded_training_negative_control_review`
+- next_action(다음 행동): `run337CL_review_guarded_directional_label_action_candidate_training_without_db_v1`
+- effect(효과): label_v3/action_v3 후보를 학습하고 ONNX parity(온엑스 동등성), negative controls(부정 대조), proxy expected(프록시 예상)를 만들었다. shifted-control high alignment(이동 대조 높은 정렬)는 CL review(검토)로 넘기며 Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337CJ(337CJ 실행) - 2026-05-28
 
