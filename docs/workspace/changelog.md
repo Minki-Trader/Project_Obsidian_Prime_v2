@@ -4808,3 +4808,4 @@
 - 2026-05-28: Stage337 run337CI reviewed directional label/action repair inputs(방향 라벨/행동 수리 입력) and opened `run337CJ_materialize_directional_label_action_candidate_training_inputs_without_db_v1`.
 - 2026-05-28: Stage337 run337CJ materialized directional label/action candidate training inputs(방향 라벨/행동 후보 학습 입력) and opened `run337CK_guarded_directional_label_action_candidate_training_without_db_v1`.
 - 2026-05-28: Stage337 run337CK trained guarded directional label/action candidates(방어 방향 라벨/행동 후보) and opened `run337CL_review_guarded_directional_label_action_candidate_training_without_db_v1`.
+- 2026-05-28: Stage337 run337CL reviewed guarded training(방어 학습 검토) and opened `run337CM_design_serial_dependence_label_boundary_repair_without_db_v1`.
