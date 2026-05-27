@@ -4821,3 +4821,4 @@
 - 2026-05-28: Stage337 run337CV materialized feature/label separability control repair inputs(피처/라벨 분리력 대조 수리 입력) and opened `run337CW_train_feature_label_separability_control_repaired_candidates_without_db_v1`.
 - 2026-05-28: Stage337 run337CW trained feature/label separability control repaired candidates(피처/라벨 분리력 대조 수리 후보) and opened `run337CX_review_feature_label_separability_control_training_without_db_v1`.
 - 2026-05-28: Stage337 run337CX reviewed separability/control training(분리력/대조 학습 검토) and opened `run337CY_design_objective_feature_contract_pivot_after_separability_control_failure_without_db_v1`.
+- 2026-05-28: Stage337 run337CY designed objective/feature contract pivot(목표/피처 계약 전환 설계) and opened `run337CZ_materialize_objective_feature_contract_pivot_inputs_without_db_v1`.
