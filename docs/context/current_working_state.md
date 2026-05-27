@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337DE_train_cost_shape_two_stage_handoff_candidates_without_db_v1`
+- current_run(현재 실행): `run337DF_review_cost_shape_two_stage_handoff_training_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337DD_cost_shape_two_stage_handoff_inputs_materialized_no_training_no_selection`
-- decision(결정): `stage337DD_open_run337DE_train_cost_shape_two_stage_handoff_candidates`
-- latest_completed_run(최근 완료 실행): `run337DD_materialize_cost_shape_two_stage_handoff_repair_inputs_without_db_v1`
-- next_action(다음 행동): `run337DE_train_cost_shape_two_stage_handoff_candidates_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337DD_cost_shape_two_stage_handoff_input_materialization_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337DE_cost_shape_two_stage_handoff_candidates_trained_review_required_no_selection_no_mt5`
+- decision(결정): `stage337DE_open_run337DF_review_cost_shape_two_stage_handoff_training`
+- latest_completed_run(최근 완료 실행): `run337DE_train_cost_shape_two_stage_handoff_candidates_without_db_v1`
+- next_action(다음 행동): `run337DF_review_cost_shape_two_stage_handoff_training_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337DE_cost_shape_two_stage_handoff_training_without_db_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -62,6 +62,15 @@
 
 
 
+
+
+## Stage337 run337DE(337DE 실행) - 2026-05-28
+
+- status(상태): `completed_stage337DE_cost_shape_two_stage_handoff_candidates_trained_review_required_no_selection_no_mt5`
+- judgment(판정): `guarded_two_stage_cost_shape_candidates_trained_review_required`
+- decision(결정): `stage337DE_open_run337DF_review_cost_shape_two_stage_handoff_training`
+- next_action(다음 행동): `run337DF_review_cost_shape_two_stage_handoff_training_without_db_v1`
+- effect(효과): stage1/stage2 cost-shape handoff(1/2단계 비용 곡선 인계) 후보 `54`개를 학습했고 ONNX parity(ONNX 동등성)를 확인했다. Forward/Goal(전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337DD(337DD 실행) - 2026-05-28
 
