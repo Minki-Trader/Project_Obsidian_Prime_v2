@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337DO_train_guarded_prediction_surface_validation_edge_repair_candidates_without_db_v1`
+- current_run(현재 실행): `run337DP_review_guarded_prediction_surface_validation_edge_training_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337DN_repair_inputs_review_guarded_training_eligible_no_selection_no_mt5`
-- decision(결정): `stage337DN_open_run337DO_train_guarded_prediction_surface_validation_edge_repair_candidates`
-- latest_completed_run(최근 완료 실행): `run337DN_review_prediction_surface_validation_edge_repair_inputs_without_db_v1`
-- next_action(다음 행동): `run337DO_train_guarded_prediction_surface_validation_edge_repair_candidates_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337DN_prediction_surface_validation_edge_repair_input_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337DO_guarded_prediction_surface_validation_edge_training_onnx_materialized_review_required_no_selection_no_mt5`
+- decision(결정): `stage337DO_open_run337DP_review_guarded_prediction_surface_validation_edge_training`
+- latest_completed_run(최근 완료 실행): `run337DO_train_guarded_prediction_surface_validation_edge_repair_candidates_without_db_v1`
+- next_action(다음 행동): `run337DP_review_guarded_prediction_surface_validation_edge_training_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337DO_guarded_prediction_surface_validation_edge_training_without_db_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -72,6 +72,15 @@
 
 
 
+
+
+## Stage337 run337DO(337DO 실행) - 2026-05-28
+
+- status(상태): `completed_stage337DO_guarded_prediction_surface_validation_edge_training_onnx_materialized_review_required_no_selection_no_mt5`
+- judgment(판정): `guarded_candidates_trained_onnx_parity_review_required_no_selection`
+- decision(결정): `stage337DO_open_run337DP_review_guarded_prediction_surface_validation_edge_training`
+- next_action(다음 행동): `run337DP_review_guarded_prediction_surface_validation_edge_training_without_db_v1`
+- effect(효과): 방어 후보와 ONNX를 만들었지만 DP 검토 전 선택/MT5/Forward(전진)는 주장하지 않는다. Goal(목표)은 주장하지 않는다.
 
 ## Stage337 run337DN(337DN 실행) - 2026-05-28
 
