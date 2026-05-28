@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337EO_refresh_survivor_feature_handoff_and_surface_reprobe_without_db_v1`
+- current_run(현재 실행): `run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337EN_latest_raw_available_survivor_feature_handoff_stale_all_flat_memory_no_selection`
-- decision(결정): `stage337EN_open_run337EO_refresh_survivor_feature_handoff_and_surface_reprobe`
-- latest_completed_run(최근 완료 실행): `run337EN_surface_degeneracy_memory_or_full_survivor_runtime_probe_without_db_v1`
-- next_action(다음 행동): `run337EO_refresh_survivor_feature_handoff_and_surface_reprobe_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337EN_surface_degeneracy_memory_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337EO_survivor_feature_handoff_refreshed_surface_reprobed_no_forward_decision`
+- decision(결정): `stage337EO_open_run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory`
+- latest_completed_run(최근 완료 실행): `run337EO_refresh_survivor_feature_handoff_and_surface_reprobe_without_db_v1`
+- next_action(다음 행동): `run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337EO_survivor_feature_handoff_refresh_surface_reprobe_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -2161,3 +2161,12 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337DY_open_run337DZ_train_guarded_transfer_density_control_repair_candidates`
 - next_action(다음 행동): `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`
 - effect(효과): 입력 검토로 제한 학습을 열었지만 선택/MT5/Forward(전진)는 주장하지 않는다. Goal(목표)은 주장하지 않는다.
+
+## Stage337 run337EO(337EO 실행) - 2026-05-28
+
+- status(상태): `completed_stage337EO_survivor_feature_handoff_refreshed_surface_reprobed_no_forward_decision`
+- judgment(판정): `survivor_feature_handoff_refreshed_and_frozen_onnx_surface_reprobed_but_forward_decision_not_claimed`
+- decision(결정): `stage337EO_open_run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory`
+- next_action(다음 행동): `run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory_without_db_v1`
+- effect(효과): feature handoff(피처 인계)를 새 forward rows(전진 행)로 갱신하고 frozen ONNX surface(고정 ONNX 표면)를 재탐침했다. Forward/Goal(전진/목표)은 주장하지 않는다.
+- open_caveat(열린 주의점): macro-equity 58 feature set(매크로-주식 58 피처 세트)은 `2026-04-30T23:55:00+00:00`까지만 유효하다. effect(효과): top3 monthly proxy weight(월간 top3 대리 가중치) handoff(인계)를 run337EP(337EP 실행)에서 분리해야 한다.

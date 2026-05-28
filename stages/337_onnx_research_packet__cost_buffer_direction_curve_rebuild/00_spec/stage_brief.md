@@ -149,3 +149,8 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - 2026-05-28: run337EL(337EL 실행) attempted argmax runtime parity probe(argmax 런타임 동등성 탐침). Status(상태) `completed_stage337EL_argmax_runtime_parity_probe_executed_review_required_no_selection`. Forward/Goal(전진/목표)은 주장하지 않음.
 - 2026-05-28: run337EM(337EM 실행) expanded argmax runtime parity probe(argmax 런타임 동등성 탐침). Status(상태) `completed_stage337EM_argmax_runtime_parity_expanded_direction_pocket_probe_no_selection`. Forward/Goal(전진/목표)은 주장하지 않음.
 - 2026-05-28: run337EN(337EN 실행) separated raw forward data availability(원천 전진 데이터 가용성) from stale survivor feature handoff(낡은 생존 후보 피처 인계). Status(상태) `completed_stage337EN_latest_raw_available_survivor_feature_handoff_stale_all_flat_memory_no_selection`. Forward/Goal(전진/목표)은 주장하지 않음.
+
+## run337EO Refresh/Reprobe Note(갱신/재탐침 기록)
+
+- status(상태): `completed_stage337EO_survivor_feature_handoff_refreshed_surface_reprobed_no_forward_decision`
+- effect(효과): 피처 인계 stale(정체) 문제를 exact 58/42 refresh(정확 58/42 갱신)로 줄였고, 다음 MT5/KPI 검증으로 넘긴다.
