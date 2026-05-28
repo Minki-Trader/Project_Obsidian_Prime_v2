@@ -4868,3 +4868,12 @@
 ## 2026-05-28 - Stage337 run337EO
 
 - survivor feature handoff(생존 후보 피처 인계) refresh/reprobe(갱신/재탐침)를 완료했다. Effect(효과): `38350` forward feature rows(전진 피처 행)와 `556` nonflat rows(비평탄 행)를 기록했고 Forward/Goal(전진/목표)은 주장하지 않는다.
+
+## 2026-05-28 run337EP Top3 Weight Contract Refresh Runtime Probe(상위3 가중치 계약 갱신 런타임 탐침)
+
+- Added(추가): `stage_pipelines/stage337/top3_weight_contract_refresh_and_runtime_probe.py`.
+- Added(추가): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337EP_top3_weight_contract_refresh_runtime_probe.md`.
+- Added(추가): `docs/decisions/2026-05-28_stage337EP_top3_weight_contract_refresh_runtime_probe.md`.
+- Updated(갱신): Stage337 status(337단계 상태), selection status(선택 상태), run/artifact ledgers(실행/산출물 장부).
+- Result(결과): matched_rows(일치 행) `1932`, probability_mismatch_rows(확률 불일치 행) `0`, decision_mismatch_rows(결정 불일치 행) `0`.
+- Boundary(경계): Forward Passed/Failed/Goal Achieve(전진 통과/실패/목표 달성)는 `not_claimed`.

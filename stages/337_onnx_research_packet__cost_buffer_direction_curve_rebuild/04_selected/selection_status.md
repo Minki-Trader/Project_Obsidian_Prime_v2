@@ -1,19 +1,23 @@
 ﻿# Stage337 Selection Status(337단계 선택 상태)
 
-- latest_run(최신 실행): `run337EO_refresh_survivor_feature_handoff_and_surface_reprobe_without_db_v1`
-- latest_decision(최신 결정): `stage337EO_open_run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory`
-- current_run(현재 실행): `run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory_without_db_v1`
+- latest_run(최신 실행): `run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory_without_db_v1`
+- latest_decision(최신 결정): `stage337EP_open_run337EQ_forward_kpi_attribution_cost_stress_curve_pocket`
+- current_run(현재 실행): `run337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_v1`
 - frozen_subject(고정 대상): `cp322A_cp321b_exact_replay_control_surface`
-- exact_cp322a_forward_handoff(정확 cp322A 전진 인계): `not_feasible_under_frozen_rules`
+- exact_cp322a_forward_handoff(정확 cp322A 전진 인계): `top3_2026_05_contract_repaired_no_lookahead_feature_handoff_available`
 - preserved_status(보존 상태): `research_artifact_only`
-- rebuild_status(재구축 상태): `completed_stage337EO_survivor_feature_handoff_refreshed_surface_reprobed_no_forward_decision`
-- raw_us100_last_close_utc(원천 US100 마지막 종가 UTC): `2026-05-28T02:45:00Z`
-- survivor_feature_rows_after_forward_total(생존 후보 전진 피처 행 합): `38350`
-- latest_overlap_nonflat_rows(최신 겹침 비평탄 행): `556`
+- rebuild_status(재구축 상태): `completed_stage337EP_top3_weight_contract_repaired_runtime_probe_executed_no_forward_decision`
+- raw_us100_last_close_utc(원천 US100 마지막 종가 UTC): `2026-05-28T06:00:00Z`
+- valid_feature_set_rows_total(유효 피처 세트 행 합): `16265`
+- survivor_feature_rows_after_forward_total(생존 후보 전진 피처 행 합): `56870`
+- latest_overlap_nonflat_rows(최신 겹침 비평탄 행): `814`
+- mt5_argmax_matched_rows(MT5 최대확률 일치 행): `1932`
+- mt5_probability_mismatch_rows(MT5 확률 불일치 행): `0`
+- mt5_decision_mismatch_rows(MT5 결정 불일치 행): `0`
 - Forward Passed(전진 통과): `not_claimed`
 - Forward Failed(전진 실패): `not_claimed`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory_without_db_v1`
-- effect(효과): refreshed feature handoff(갱신 피처 인계)와 frozen ONNX surface reprobe(고정 ONNX 표면 재탐침)를 완료했고, MT5/KPI 검증으로 이어간다.
-- open_caveat(열린 주의점): macro-equity 58 feature set(매크로-주식 58 피처 세트)은 `2026-04-30T23:55:00+00:00`까지만 유효하다. effect(효과): run337EP(337EP 실행)는 top3 monthly proxy weight(월간 top3 대리 가중치) handoff(인계)를 먼저 분리하고 Forward(전진) 판정을 보류한다.
+- next_action(다음 행동): `run337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_v1`
+- effect(효과): top3 weight contract(상위3 가중치 계약), exact feature handoff(정확 피처 인계), MT5 argmax runtime parity(MT5 최대확률 런타임 동등성)는 보강했다. Forward KPI(전진 성과 지표)는 아직 없으므로 다음 EQ 실행에서 판단한다.
+- open_caveat(열린 주의점): run337EP(337EP 실행)는 trading disabled(거래 비활성) probe(탐침)이다. effect(효과): 수익성/낙폭/비용 스트레스/곡선 포켓 주장은 금지하고, run337EQ(337EQ 실행)에서 별도 검증한다.

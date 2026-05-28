@@ -154,3 +154,7 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 
 - status(상태): `completed_stage337EO_survivor_feature_handoff_refreshed_surface_reprobed_no_forward_decision`
 - effect(효과): 피처 인계 stale(정체) 문제를 exact 58/42 refresh(정확 58/42 갱신)로 줄였고, 다음 MT5/KPI 검증으로 넘긴다.
+
+## run337EP Top3 Weight Contract Refresh Runtime Probe(상위3 가중치 계약 갱신 런타임 탐침)
+
+- 2026-05-28: run337EP(337EP 실행) repaired top3 monthly proxy weight contract(월간 상위3 대리 가중치 계약) for 2026-05 and executed MT5 argmax runtime parity probe(MT5 최대확률 런타임 동등성 탐침). Status(상태) `completed_stage337EP_top3_weight_contract_repaired_runtime_probe_executed_no_forward_decision`. Matched rows(일치 행) `1932`, probability/decision mismatches(확률/결정 불일치) `0/0`. Forward/Goal(전진/목표)은 주장하지 않음.
