@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337DY_review_transfer_density_control_objective_repair_inputs_without_db_v1`
+- current_run(현재 실행): `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337DX_transfer_density_control_objective_repair_inputs_materialized_no_training_no_selection`
-- decision(결정): `stage337DX_open_run337DY_review_transfer_density_control_objective_repair_inputs`
-- latest_completed_run(최근 완료 실행): `run337DX_materialize_transfer_density_control_objective_repair_inputs_without_db_v1`
-- next_action(다음 행동): `run337DY_review_transfer_density_control_objective_repair_inputs_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337DX_transfer_density_control_objective_repair_input_materialization_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337DY_repair_inputs_review_guarded_training_eligible_with_drawdown_tag_limit_no_selection_no_mt5`
+- decision(결정): `stage337DY_open_run337DZ_train_guarded_transfer_density_control_repair_candidates`
+- latest_completed_run(최근 완료 실행): `run337DY_review_transfer_density_control_objective_repair_inputs_without_db_v1`
+- next_action(다음 행동): `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337DY_transfer_density_control_objective_input_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -2019,3 +2019,10 @@ Boundary(경계): selected candidate(선택 후보), selected research baseline(
 - decision(결정): `stage337DX_open_run337DY_review_transfer_density_control_objective_repair_inputs`
 - next_action(다음 행동): `run337DY_review_transfer_density_control_objective_repair_inputs_without_db_v1`
 - effect(효과): 학습 전용 수리 입력을 만들었지만 학습/선택/MT5/Forward(전진)는 주장하지 않는다. Goal(목표)은 주장하지 않는다.
+## Stage337 run337DY(337DY 실행) - 2026-05-28
+
+- status(상태): `completed_stage337DY_repair_inputs_review_guarded_training_eligible_with_drawdown_tag_limit_no_selection_no_mt5`
+- judgment(판정): `inputs_train_only_and_wfo_feasible_but_drawdown_binary_tag_broad_controls_required`
+- decision(결정): `stage337DY_open_run337DZ_train_guarded_transfer_density_control_repair_candidates`
+- next_action(다음 행동): `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`
+- effect(효과): 입력 검토로 제한 학습을 열었지만 선택/MT5/Forward(전진)는 주장하지 않는다. Goal(목표)은 주장하지 않는다.

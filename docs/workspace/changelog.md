@@ -4848,3 +4848,4 @@
 - 2026-05-28: Stage337 run337DV reviewed broad validation materialization and opened `run337DW_design_transfer_density_control_objective_repair_without_db_v1`.
 - 2026-05-28: Stage337 run337DW designed transfer/density/control/objective repair contracts and opened `run337DX_materialize_transfer_density_control_objective_repair_inputs_without_db_v1`.
 - 2026-05-28: Stage337 run337DX materialized transfer/density/control/objective repair inputs and opened `run337DY_review_transfer_density_control_objective_repair_inputs_without_db_v1`.
+- 2026-05-28: Stage337 run337DY reviewed transfer/density/control/objective inputs and opened `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`.
