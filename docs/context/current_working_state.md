@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337EG_review_proxy_survivor_attribution_package_precheck_without_db_v1`
+- current_run(현재 실행): `run337EH_materialize_proxy_survivor_row_level_runtime_probe_inputs_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337EF_training_review_proxy_survivors_found_no_selection_no_mt5`
-- decision(결정): `stage337EF_open_run337EG_review_proxy_survivor_attribution_package_precheck`
-- latest_completed_run(최근 완료 실행): `run337EF_review_validation_density_trade_count_repair_training_without_db_v1`
-- next_action(다음 행동): `run337EG_review_proxy_survivor_attribution_package_precheck_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337EF_validation_density_trade_count_repair_training_review_without_db_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337EG_proxy_survivor_attribution_package_precheck_row_level_tape_ready_no_selection_no_mt5`
+- decision(결정): `stage337EG_open_run337EH_materialize_proxy_survivor_row_level_runtime_probe_inputs`
+- latest_completed_run(최근 완료 실행): `run337EG_review_proxy_survivor_attribution_package_precheck_without_db_v1`
+- next_action(다음 행동): `run337EH_materialize_proxy_survivor_row_level_runtime_probe_inputs_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337EG_proxy_survivor_attribution_package_precheck_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -80,6 +80,15 @@
 
 
 
+
+
+## Stage337 run337EG(337EG 실행) - 2026-05-28
+
+- status(상태): `completed_stage337EG_proxy_survivor_attribution_package_precheck_row_level_tape_ready_no_selection_no_mt5`
+- judgment(판정): `proxy_survivors_package_precheck_clear_but_density_direction_curve_watches_require_controlled_runtime_materialization_no_selection`
+- decision(결정): `stage337EG_open_run337EH_materialize_proxy_survivor_row_level_runtime_probe_inputs`
+- next_action(다음 행동): `run337EH_materialize_proxy_survivor_row_level_runtime_probe_inputs_without_db_v1`
+- effect(효과): 프록시 생존 후보 `7`개를 행 단위로 재생했고 패키지 실패 `0`개를 확인했다. 다만 밀도/방향/곡선 감시를 런타임 입력 물질화로 넘기며 선택/MT5/Forward/Goal(선택/MT5/전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337EF(337EF 실행) - 2026-05-28
 
