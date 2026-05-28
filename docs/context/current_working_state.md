@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337EA_review_guarded_transfer_density_control_training_without_db_v1`
+- current_run(현재 실행): `run337EB_design_validation_density_trade_count_repair_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337DZ_guarded_transfer_density_control_repair_candidates_trained_onnx_materialized_review_required_no_selection_no_mt5`
-- decision(결정): `stage337DZ_open_run337EA_review_guarded_transfer_density_control_training`
-- latest_completed_run(최근 완료 실행): `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`
-- next_action(다음 행동): `run337EA_review_guarded_transfer_density_control_training_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337DZ_guarded_transfer_density_control_training_without_db_train_only_auxiliary_weights_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337EA_guarded_transfer_density_control_training_review_validation_floor_density_blocks_release_no_selection_no_mt5`
+- decision(결정): `stage337EA_open_run337EB_design_validation_density_trade_count_repair`
+- latest_completed_run(최근 완료 실행): `run337EA_review_guarded_transfer_density_control_training_without_db_v1`
+- next_action(다음 행동): `run337EB_design_validation_density_trade_count_repair_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337EA_guarded_transfer_density_control_training_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -74,6 +74,15 @@
 
 
 
+
+
+## Stage337 run337EA(337EA 실행) - 2026-05-28
+
+- status(상태): `completed_stage337EA_guarded_transfer_density_control_training_review_validation_floor_density_blocks_release_no_selection_no_mt5`
+- judgment(판정): `onnx_and_controls_clear_but_validation_pf_trade_count_and_density_block_release`
+- decision(결정): `stage337EA_open_run337EB_design_validation_density_trade_count_repair`
+- next_action(다음 행동): `run337EB_design_validation_density_trade_count_repair_without_db_v1`
+- effect(효과): ONNX/control(ONNX/대조)은 통과했지만 validation PF/trade count/density(검증 PF/거래수/밀도)가 release(해제)를 막아 EB 설계로 넘긴다. Goal(목표)은 주장하지 않는다.
 
 ## Stage337 run337DZ(337DZ 실행) - 2026-05-28
 
