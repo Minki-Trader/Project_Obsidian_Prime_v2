@@ -4877,3 +4877,11 @@
 - Updated(갱신): Stage337 status(337단계 상태), selection status(선택 상태), run/artifact ledgers(실행/산출물 장부).
 - Result(결과): matched_rows(일치 행) `1932`, probability_mismatch_rows(확률 불일치 행) `0`, decision_mismatch_rows(결정 불일치 행) `0`.
 - Boundary(경계): Forward Passed/Failed/Goal Achieve(전진 통과/실패/목표 달성)는 `not_claimed`.
+
+## 2026-05-28 run337EQ Forward KPI Blocked(전진 성과 차단)
+
+- Added(추가): `stage_pipelines/stage337/forward_kpi_attribution_cost_stress_curve_pocket.py`.
+- Added(추가): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337EQ_forward_kpi_blocked.md`.
+- Added(추가): `docs/decisions/2026-05-28_stage337EQ_forward_blocked.md`.
+- Result(결과): MT5 reports(MT5 보고서) `7`, trade rows(거래 행) `351`, rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-90.71` / `0.66` / `123.4`.
+- Decision(결정): `Forward Blocked(전진 차단)` because latest visibility gap(최신 가시성 공백) is `360.03` minutes.

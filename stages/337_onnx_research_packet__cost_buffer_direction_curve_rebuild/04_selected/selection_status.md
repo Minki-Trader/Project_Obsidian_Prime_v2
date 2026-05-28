@@ -1,23 +1,21 @@
 ﻿# Stage337 Selection Status(337단계 선택 상태)
 
-- latest_run(최신 실행): `run337EP_refreshed_forward_surface_runtime_probe_or_failure_memory_without_db_v1`
-- latest_decision(최신 결정): `stage337EP_open_run337EQ_forward_kpi_attribution_cost_stress_curve_pocket`
-- current_run(현재 실행): `run337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_v1`
-- frozen_subject(고정 대상): `cp322A_cp321b_exact_replay_control_surface`
-- exact_cp322a_forward_handoff(정확 cp322A 전진 인계): `top3_2026_05_contract_repaired_no_lookahead_feature_handoff_available`
+- latest_run(최신 실행): `run337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_v1`
+- latest_decision(최신 결정): `Forward Blocked(전진 차단): latest_visibility_gap(최신 가시성 공백)`
+- current_run(현재 실행): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
+- frozen_subject(고정 대상): `cp322A_cp321b_exact_replay_control_surface / stage337 survivor forward surface`
 - preserved_status(보존 상태): `research_artifact_only`
-- rebuild_status(재구축 상태): `completed_stage337EP_top3_weight_contract_repaired_runtime_probe_executed_no_forward_decision`
+- rebuild_status(재구축 상태): `blocked_stage337EQ_forward_kpi_missing_or_tester_visibility_gap`
 - raw_us100_last_close_utc(원천 US100 마지막 종가 UTC): `2026-05-28T06:00:00Z`
-- valid_feature_set_rows_total(유효 피처 세트 행 합): `16265`
-- survivor_feature_rows_after_forward_total(생존 후보 전진 피처 행 합): `56870`
-- latest_overlap_nonflat_rows(최신 겹침 비평탄 행): `814`
-- mt5_argmax_matched_rows(MT5 최대확률 일치 행): `1932`
-- mt5_probability_mismatch_rows(MT5 확률 불일치 행): `0`
-- mt5_decision_mismatch_rows(MT5 결정 불일치 행): `0`
+- mt5_runtime_last_utc(MT5 런타임 마지막 UTC): `2026-05-27T23:59:58Z`
+- latest_visibility_gap_minutes(최신 가시성 공백 분): `360.03`
+- mt5_report_rows(MT5 보고서 행): `7`
+- parsed_trade_rows(파싱 거래 행): `351`
+- rank1_net_pf_dd(1순위 순손익/PF/낙폭): `-90.71` / `0.66` / `123.4`
 - Forward Passed(전진 통과): `not_claimed`
-- Forward Failed(전진 실패): `not_claimed`
+- Forward Failed(전진 실패): `not_claimed_due_latest_visibility_gap`
+- Forward Blocked(전진 차단): `claimed_latest_visibility_gap`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_v1`
-- effect(효과): top3 weight contract(상위3 가중치 계약), exact feature handoff(정확 피처 인계), MT5 argmax runtime parity(MT5 최대확률 런타임 동등성)는 보강했다. Forward KPI(전진 성과 지표)는 아직 없으므로 다음 EQ 실행에서 판단한다.
-- open_caveat(열린 주의점): run337EP(337EP 실행)는 trading disabled(거래 비활성) probe(탐침)이다. effect(효과): 수익성/낙폭/비용 스트레스/곡선 포켓 주장은 금지하고, run337EQ(337EQ 실행)에서 별도 검증한다.
+- next_action(다음 행동): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
+- effect(효과): 성과/귀속/비용/곡선 포켓은 생성했지만 최신 6시간 tester visibility(테스터 가시성) 공백 때문에 차단으로 닫는다.

@@ -158,3 +158,7 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 ## run337EP Top3 Weight Contract Refresh Runtime Probe(상위3 가중치 계약 갱신 런타임 탐침)
 
 - 2026-05-28: run337EP(337EP 실행) repaired top3 monthly proxy weight contract(월간 상위3 대리 가중치 계약) for 2026-05 and executed MT5 argmax runtime parity probe(MT5 최대확률 런타임 동등성 탐침). Status(상태) `completed_stage337EP_top3_weight_contract_repaired_runtime_probe_executed_no_forward_decision`. Matched rows(일치 행) `1932`, probability/decision mismatches(확률/결정 불일치) `0/0`. Forward/Goal(전진/목표)은 주장하지 않음.
+
+## run337EQ Forward KPI Blocked(전진 성과 차단)
+
+- 2026-05-28: run337EQ(337EQ 실행) generated MT5 reports(MT5 보고서) `7` and trade rows(거래 행) `351`. Status(상태) `blocked_stage337EQ_forward_kpi_missing_or_tester_visibility_gap`. rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-90.71` / `0.66` / `123.4`. Forward Blocked(전진 차단): latest visibility gap(최신 가시성 공백) `360.03`분.
