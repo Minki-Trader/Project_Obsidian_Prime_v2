@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337EI_review_proxy_survivor_runtime_probe_inputs_without_db_v1`
+- current_run(현재 실행): `run337EJ_materialize_argmax_adapter_parity_probe_contract_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337EH_proxy_survivor_runtime_probe_inputs_materialized_no_mt5_no_selection`
-- decision(결정): `stage337EH_open_run337EI_review_proxy_survivor_runtime_probe_inputs`
-- latest_completed_run(최근 완료 실행): `run337EH_materialize_proxy_survivor_row_level_runtime_probe_inputs_without_db_v1`
-- next_action(다음 행동): `run337EI_review_proxy_survivor_runtime_probe_inputs_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337EH_proxy_survivor_runtime_probe_input_materialization_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337EI_runtime_input_review_adapter_argmax_mismatch_blocks_external_mt5_no_selection`
+- decision(결정): `stage337EI_open_run337EJ_materialize_argmax_adapter_parity_probe_contract`
+- latest_completed_run(최근 완료 실행): `run337EI_review_proxy_survivor_runtime_probe_inputs_without_db_v1`
+- next_action(다음 행동): `run337EJ_materialize_argmax_adapter_parity_probe_contract_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337EI_proxy_survivor_runtime_input_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -82,6 +82,15 @@
 
 
 
+
+
+## Stage337 run337EI(337EI 실행) - 2026-05-28
+
+- status(상태): `completed_stage337EI_runtime_input_review_adapter_argmax_mismatch_blocks_external_mt5_no_selection`
+- judgment(판정): `runtime_inputs_complete_but_existing_decision_surface_threshold_contract_mismatches_proxy_argmax`
+- decision(결정): `stage337EI_open_run337EJ_materialize_argmax_adapter_parity_probe_contract`
+- next_action(다음 행동): `run337EJ_materialize_argmax_adapter_parity_probe_contract_without_db_v1`
+- effect(효과): 런타임 입력 패키지는 완전하지만 현재 DecisionSurface(결정 표면)가 threshold/margin(임계값/마진)이라 proxy argmax(프록시 최대확률 선택)와 맞지 않는다. 실제 MT5/Forward/Goal(실제 MT5/전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337EH(337EH 실행) - 2026-05-28
 
