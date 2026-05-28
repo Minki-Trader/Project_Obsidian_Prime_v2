@@ -4857,3 +4857,4 @@
 - 2026-05-28: Stage337 run337EE trained validation-density/trade-count repair candidates(검증-밀도/거래수 수리 후보) and opened `run337EF_review_validation_density_trade_count_repair_training_without_db_v1`.
 - 2026-05-28: Stage337 run337EF reviewed EE training and opened `run337EG_review_proxy_survivor_attribution_package_precheck_without_db_v1` with proxy survivors=7.
 - 2026-05-28: Stage337 run337EG replayed 7 proxy survivors row-level and opened `run337EH_materialize_proxy_survivor_row_level_runtime_probe_inputs_without_db_v1` without selection/MT5/Forward claims.
+- 2026-05-28: Stage337 run337EH materialized runtime probe inputs for 7 proxy survivors and opened `run337EI_review_proxy_survivor_runtime_probe_inputs_without_db_v1` without MT5/Forward claims.
