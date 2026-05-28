@@ -4852,3 +4852,4 @@
 - 2026-05-28: Stage337 run337DZ trained guarded transfer/density/control repair candidates(방어 전이/밀도/대조 수리 후보 학습) and opened `run337EA_review_guarded_transfer_density_control_training_without_db_v1`.
 - 2026-05-28: Stage337 run337EA reviewed guarded transfer/density/control training(방어 전이/밀도/대조 학습 검토) and opened `run337EB_design_validation_density_trade_count_repair_without_db_v1`.
 - 2026-05-28: Stage337 run337EB designed validation-density/trade-count repair(검증-밀도/거래수 수리 설계) and opened `run337EC_materialize_validation_density_trade_count_repair_inputs_without_db_v1`.
+- 2026-05-28: Stage337 run337EC materialized validation-density/trade-count repair inputs(검증-밀도/거래수 수리 입력) and opened `run337ED_review_validation_density_trade_count_repair_inputs_without_db_v1`.
