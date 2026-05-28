@@ -4849,3 +4849,4 @@
 - 2026-05-28: Stage337 run337DW designed transfer/density/control/objective repair contracts and opened `run337DX_materialize_transfer_density_control_objective_repair_inputs_without_db_v1`.
 - 2026-05-28: Stage337 run337DX materialized transfer/density/control/objective repair inputs and opened `run337DY_review_transfer_density_control_objective_repair_inputs_without_db_v1`.
 - 2026-05-28: Stage337 run337DY reviewed transfer/density/control/objective inputs and opened `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`.
+- 2026-05-28: Stage337 run337DZ trained guarded transfer/density/control repair candidates(방어 전이/밀도/대조 수리 후보 학습) and opened `run337EA_review_guarded_transfer_density_control_training_without_db_v1`.

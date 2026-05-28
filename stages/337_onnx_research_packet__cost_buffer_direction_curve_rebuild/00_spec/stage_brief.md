@@ -134,3 +134,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 - 2026-05-28: run337DW(337DW 실행) designed transfer/density/control/objective repair contracts and opened `run337DX_materialize_transfer_density_control_objective_repair_inputs_without_db_v1`.
 - 2026-05-28: run337DX(337DX 실행) materialized transfer/density/control/objective repair inputs and opened `run337DY_review_transfer_density_control_objective_repair_inputs_without_db_v1`.
 - 2026-05-28: run337DY(337DY 실행) reviewed transfer/density/control/objective inputs and opened `run337DZ_train_guarded_transfer_density_control_repair_candidates_without_db_v1`.
+- 2026-05-28: run337DZ(337DZ 실행) trained guarded transfer/density/control repair candidates(방어 전이/밀도/대조 수리 후보 학습). Status(상태) `completed_stage337DZ_guarded_transfer_density_control_repair_candidates_trained_onnx_materialized_review_required_no_selection_no_mt5`. Forward/Goal(전진/목표)은 주장하지 않음.
