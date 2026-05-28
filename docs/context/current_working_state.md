@@ -1,16 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337EB_design_validation_density_trade_count_repair_without_db_v1`
+- current_run(현재 실행): `run337EC_materialize_validation_density_trade_count_repair_inputs_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337EA_guarded_transfer_density_control_training_review_validation_floor_density_blocks_release_no_selection_no_mt5`
-- decision(결정): `stage337EA_open_run337EB_design_validation_density_trade_count_repair`
-- latest_completed_run(최근 완료 실행): `run337EA_review_guarded_transfer_density_control_training_without_db_v1`
-- next_action(다음 행동): `run337EB_design_validation_density_trade_count_repair_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337EA_guarded_transfer_density_control_training_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337EB_validation_density_trade_count_repair_design_no_training_no_selection`
+- decision(결정): `stage337EB_open_run337EC_materialize_validation_density_trade_count_repair_inputs`
+- latest_completed_run(최근 완료 실행): `run337EB_design_validation_density_trade_count_repair_without_db_v1`
+- next_action(다음 행동): `run337EC_materialize_validation_density_trade_count_repair_inputs_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337EB_validation_density_trade_count_repair_design_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
 
 
 
@@ -75,6 +75,15 @@
 
 
 
+
+
+## Stage337 run337EB(337EB 실행) - 2026-05-28
+
+- status(상태): `completed_stage337EB_validation_density_trade_count_repair_design_no_training_no_selection`
+- judgment(판정): `repair_design_ready_for_train_only_validation_density_trade_count_materialization`
+- decision(결정): `stage337EB_open_run337EC_materialize_validation_density_trade_count_repair_inputs`
+- next_action(다음 행동): `run337EC_materialize_validation_density_trade_count_repair_inputs_without_db_v1`
+- effect(효과): validation PF/trade count/density(검증 PF/거래수/밀도) 실패를 train-only repair design(학습 전용 수리 설계)로 고정했다. 선택/MT5/Forward/Goal(선택/MT5/전진/목표)은 주장하지 않는다.
 
 ## Stage337 run337EA(337EA 실행) - 2026-05-28
 
