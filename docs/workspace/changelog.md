@@ -4863,3 +4863,4 @@
 - 2026-05-28: Stage337 run337EK implemented argmax probe mode in the runtime EA and passed MetaEditor compile; opened `run337EL_materialize_common_files_and_run_argmax_parity_probe_without_db_v1` without runtime authority.
 - 2026-05-28: Stage337 run337EL attempted argmax runtime parity probe and opened `run337EM_review_or_expand_argmax_runtime_parity_probe_without_db_v1` without Forward/Goal claims.
 - 2026-05-28: Stage337 run337EM expanded argmax runtime parity into a direction pocket and opened `run337EN_surface_degeneracy_memory_or_full_survivor_runtime_probe_without_db_v1` without Forward/Goal claims.
+- 2026-05-28: Stage337 run337EN confirmed latest raw data exists but survivor feature handoff is stale, opening `run337EO_refresh_survivor_feature_handoff_and_surface_reprobe_without_db_v1` without Forward/Goal claims.
