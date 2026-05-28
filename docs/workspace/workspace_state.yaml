@@ -1,4 +1,4 @@
-current_run_id: run337ER_forward_decision_review_or_failure_memory_without_db_v1
+current_run_id: run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1
 updated_on: '2026-05-28'
 project_mode: clean_stage_restart
 active_branch: main
@@ -15,6 +15,16 @@ shared_window:
   status: stage01_closed_stage02_closed_stage03_closed_stage04_closed_stage05_closed_stage06_closed_stage07_closed_stage08_closed_stage09_closed_stage10_closed_stage11_closed_stage12_reviewed_closed_stage13_reviewed_closed_stage14_reviewed_closed_stage15_reviewed_closed_stage16_reviewed_closed_stage17_reviewed_closed_stage18_reviewed_closed_stage19_reviewed_closed_stage20_reviewed_closed_stage21_reviewed_closed_stage22_reviewed_closed_stage23_reviewed_closed_stage24_reviewed_closed_stage25_reviewed_closed_stage26_reviewed_closed_stage27_reviewed_closed_stage28_reviewed_closed_stage29_reviewed_closed_stage30_reviewed_closed_stage31_reviewed_closed_stage32_reviewed_closed_goal_complete
 practical_modeling_start: '2022-09-01'
 current_focus:
+- >-
+  Stage337 run337ER focus complete: shifted custom diagnostic(이동 커스텀 진단)
+  `US100.OPV337ERD`를 짧은 Common Files(공용 파일) 경로로 재시드하고 7개 frozen
+  ONNX(고정 ONNX)를 trading-enabled MT5 tester(거래 활성 MT5 테스터)로 재실행했다.
+  Effect(효과): seed status(seed 상태) `completed`, MT5 report(MT5 보고서) `7`,
+  trade rows(거래 행) `267`, blocked gates(차단 게이트) `0`, rank1
+  net/PF/DD(1순위 순손익/PF/낙폭) `-33.75`/`0.82`/`66.81`,
+  short-negative attempts(숏 음수 시도) `7/7`을 기록했다. Boundary(경계): shifted
+  custom(이동 커스텀)은 synthetic diagnostic(합성 진단)이므로 Forward Failed(전진 실패)는
+  주장하지 않고, broker visibility gap(브로커 가시성 공백) 근거의 Forward Blocked(전진 차단)를 유지한다.
 - >-
   Stage337 run337EQ focus complete: forward KPI attribution(전진 성과 귀속), cost stress(비용 스트레스), curve pocket(곡선 포켓)을 MT5 report(보고서) `7`개와 trade rows(거래 행) `351`개로 생성했다. Effect(효과): rank1 net/PF/DD(1순위 순손익/수익 팩터/낙폭)는 `-90.71`/`0.66`/`123.4`로 나쁘지만 latest visibility gap(최신 가시성 공백) `360.03`분 때문에 Forward Blocked(전진 차단)로 닫는다.
 - >-

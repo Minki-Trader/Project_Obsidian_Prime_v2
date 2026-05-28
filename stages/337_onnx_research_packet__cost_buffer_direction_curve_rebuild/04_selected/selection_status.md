@@ -1,21 +1,23 @@
 ﻿# Stage337 Selection Status(337단계 선택 상태)
 
-- latest_run(최신 실행): `run337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_v1`
-- latest_decision(최신 결정): `Forward Blocked(전진 차단): latest_visibility_gap(최신 가시성 공백)`
-- current_run(현재 실행): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
+- latest_run(최신 실행): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
+- latest_decision(최신 결정): `Forward Blocked(전진 차단): broker visibility gap(브로커 가시성 공백) 유지, synthetic failure memory(합성 실패 기억) 강화`
+- current_run(현재 실행): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
 - frozen_subject(고정 대상): `cp322A_cp321b_exact_replay_control_surface / stage337 survivor forward surface`
 - preserved_status(보존 상태): `research_artifact_only`
-- rebuild_status(재구축 상태): `blocked_stage337EQ_forward_kpi_missing_or_tester_visibility_gap`
+- rebuild_status(재구축 상태): `completed_stage337ER_shifted_custom_failure_memory_no_forward_decision`
 - raw_us100_last_close_utc(원천 US100 마지막 종가 UTC): `2026-05-28T06:00:00Z`
 - mt5_runtime_last_utc(MT5 런타임 마지막 UTC): `2026-05-27T23:59:58Z`
 - latest_visibility_gap_minutes(최신 가시성 공백 분): `360.03`
-- mt5_report_rows(MT5 보고서 행): `7`
-- parsed_trade_rows(파싱 거래 행): `351`
-- rank1_net_pf_dd(1순위 순손익/PF/낙폭): `-90.71` / `0.66` / `123.4`
+- shifted_custom_symbol(이동 커스텀 심볼): `US100.OPV337ERD`
+- shifted_mt5_report_rows(이동 MT5 보고서 행): `7`
+- shifted_parsed_trade_rows(이동 파싱 거래 행): `267`
+- shifted_rank1_net_pf_dd(이동 1순위 순손익/PF/낙폭): `-33.75` / `0.82` / `66.81`
+- shifted_failure_memory(이동 실패 기억): negative net(순손익 음수) `5/7`, cost-1pt fragile(1포인트 비용 취약) `6/7`, nonconstructive curve(비구성적 곡선) `7/7`, short-negative(숏 음수) `7/7`
 - Forward Passed(전진 통과): `not_claimed`
-- Forward Failed(전진 실패): `not_claimed_due_latest_visibility_gap`
-- Forward Blocked(전진 차단): `claimed_latest_visibility_gap`
+- Forward Failed(전진 실패): `not_claimed_synthetic_route`
+- Forward Blocked(전진 차단): `claimed_broker_latest_visibility_gap`
 - runtime_authority(런타임 권위): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
-- next_action(다음 행동): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
-- effect(효과): 성과/귀속/비용/곡선 포켓은 생성했지만 최신 6시간 tester visibility(테스터 가시성) 공백 때문에 차단으로 닫는다.
+- next_action(다음 행동): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
+- effect(효과): shifted custom diagnostic(이동 커스텀 진단)은 최신 창을 봤지만 합성 경로이므로 Forward Failed(전진 실패)를 주장하지 않는다. broker Strategy Tester(브로커 전략 테스터)의 최신 6시간 visibility gap(가시성 공백)은 그대로라 Forward Blocked(전진 차단)를 유지한다.

@@ -4885,3 +4885,11 @@
 - Added(추가): `docs/decisions/2026-05-28_stage337EQ_forward_blocked.md`.
 - Result(결과): MT5 reports(MT5 보고서) `7`, trade rows(거래 행) `351`, rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-90.71` / `0.66` / `123.4`.
 - Decision(결정): `Forward Blocked(전진 차단)` because latest visibility gap(최신 가시성 공백) is `360.03` minutes.
+
+## 2026-05-28 run337ER Shifted Custom Failure Memory(이동 커스텀 실패 기억)
+
+- Added(추가): `stage_pipelines/stage337/forward_decision_review_or_failure_memory_without_db.py`.
+- Added(추가): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337ER_shifted_custom_failure_memory.md`.
+- Added(추가): `docs/decisions/2026-05-28_stage337ER_shifted_custom_failure_memory.md`.
+- Result(결과): shifted custom symbol(이동 커스텀 심볼) `US100.OPV337ERD`, MT5 reports(MT5 보고서) `7`, trade rows(거래 행) `267`, blocked gates(차단 게이트) `0`, rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-33.75` / `0.82` / `66.81`.
+- Decision(결정): broker Forward Blocked(브로커 전진 차단) 유지; shifted custom route(이동 커스텀 경로)는 synthetic diagnostic(합성 진단)이므로 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.

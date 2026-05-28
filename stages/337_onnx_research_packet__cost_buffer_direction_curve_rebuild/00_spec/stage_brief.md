@@ -162,3 +162,7 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 ## run337EQ Forward KPI Blocked(전진 성과 차단)
 
 - 2026-05-28: run337EQ(337EQ 실행) generated MT5 reports(MT5 보고서) `7` and trade rows(거래 행) `351`. Status(상태) `blocked_stage337EQ_forward_kpi_missing_or_tester_visibility_gap`. rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-90.71` / `0.66` / `123.4`. Forward Blocked(전진 차단): latest visibility gap(최신 가시성 공백) `360.03`분.
+
+## run337ER Shifted Custom Failure Memory(이동 커스텀 실패 기억)
+
+- 2026-05-28: run337ER(337ER 실행) seeded shifted custom symbol(이동 커스텀 심볼) `US100.OPV337ERD` and reran 7 frozen ONNX(고정 ONNX) attempts(시도) with trading enabled(거래 활성). Status(상태) `completed_stage337ER_shifted_custom_failure_memory_no_forward_decision`. Result(결과): MT5 reports(MT5 보고서) `7`, trade rows(거래 행) `267`, blocked gates(차단 게이트) `0`, rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-33.75` / `0.82` / `66.81`, short-negative attempts(숏 음수 시도) `7/7`. Boundary(경계): shifted custom(이동 커스텀)은 synthetic diagnostic(합성 진단)이므로 Forward Failed(전진 실패)는 주장하지 않고, broker Forward Blocked(브로커 전진 차단)를 유지한다.

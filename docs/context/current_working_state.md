@@ -1,16 +1,25 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
+- current_run(현재 실행): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `blocked_stage337EQ_forward_kpi_missing_or_tester_visibility_gap`
-- decision(결정): `stage337EQ_forward_blocked_latest_visibility_gap_open_run337ER`
-- latest_completed_run(최근 완료 실행): `run337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_v1`
-- next_action(다음 행동): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337EQ_forward_kpi_attribution_cost_stress_curve_pocket_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337ER_shifted_custom_failure_memory_no_forward_decision`
+- decision(결정): `Forward Blocked(전진 차단): broker visibility gap(브로커 가시성 공백) 유지, synthetic failure memory(합성 실패 기억) 강화`
+- latest_completed_run(최근 완료 실행): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
+- next_action(다음 행동): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337ER_shifted_custom_failure_memory_without_db_synthetic_timestamp_shift_diagnostic_only_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+
+## run337ER Shifted Custom Failure Memory(이동 커스텀 실패 기억)
+
+- status(상태): `completed_stage337ER_shifted_custom_failure_memory_no_forward_decision`
+- decision(결정): `Forward Blocked(전진 차단)` 유지.
+- effect(효과): shifted custom symbol(이동 커스텀 심볼) `US100.OPV337ERD`와 짧은 Common Files(공용 파일) 경로로 7개 frozen ONNX(고정 ONNX)를 MT5 tester(메타트레이더5 테스터)에서 재실행했다. seed status(seed 상태) `completed`, MT5 report(MT5 보고서) `7`, trade rows(거래 행) `267`, blocked gates(차단 게이트) `0`.
+- failure memory(실패 기억): rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-33.75` / `0.82` / `66.81`; attempts with negative net(순손익 음수 시도) `5/7`; cost-1pt fragile(1포인트 비용 취약) `6/7`; nonconstructive curve(비구성적 곡선) `7/7`; short-negative attempts(숏 음수 시도) `7/7`.
+- boundary(경계): shifted custom route(이동 커스텀 경로)는 synthetic diagnostic(합성 진단)이므로 Forward Passed/Failed(전진 통과/실패)는 주장하지 않는다. broker forward(브로커 전진)는 run337EQ latest visibility gap(최신 가시성 공백) 때문에 Forward Blocked(전진 차단)로 남긴다.
+- next_action(다음 행동): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
 
 ## run337EQ Forward KPI Blocked(전진 성과 차단)
 
