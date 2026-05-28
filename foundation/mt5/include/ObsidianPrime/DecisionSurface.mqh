@@ -21,10 +21,78 @@ private:
    double m_long_threshold;
    double m_min_margin;
    bool   m_invert_signal;
+   string m_decision_mode;
 
    bool IsFiniteProbability(const double value)
      {
       return (MathIsValidNumber(value) && value >= -0.000001 && value <= 1.000001);
+     }
+
+   string NormalizeDecisionMode(const string value)
+     {
+      string text = value;
+      StringTrimLeft(text);
+      StringTrimRight(text);
+      StringToLower(text);
+      if(text == "" || text == "threshold" || text == "threshold_margin")
+         return "threshold_margin";
+      if(text == "argmax" || text == "argmax_probe" || text == "three_class_argmax")
+         return "argmax_probe";
+      return "threshold_margin";
+     }
+
+   bool IsArgmaxProbeMode()
+     {
+      return (m_decision_mode == "argmax_probe");
+     }
+
+   void EvaluateArgmax(const double p_short,
+                       const double p_flat,
+                       const double p_long,
+                       SOpDecisionResult &result)
+     {
+      int signal = OP_DECISION_SHORT;
+      string label = "short";
+      string reason = "argmax_probe_short";
+      double confidence = p_short;
+      double margin = p_short - MathMax(p_flat, p_long);
+
+      if(p_flat > confidence)
+        {
+         signal = OP_DECISION_FLAT;
+         label = "flat";
+         reason = "argmax_probe_flat";
+         confidence = p_flat;
+         margin = p_flat - MathMax(p_short, p_long);
+        }
+
+      if(p_long > confidence)
+        {
+         signal = OP_DECISION_LONG;
+         label = "long";
+         reason = "argmax_probe_long";
+         confidence = p_long;
+         margin = p_long - MathMax(p_short, p_flat);
+        }
+
+      if(m_invert_signal && signal == OP_DECISION_LONG)
+        {
+         signal = OP_DECISION_SHORT;
+         label = "short";
+         reason = "inverse_" + reason;
+        }
+      else if(m_invert_signal && signal == OP_DECISION_SHORT)
+        {
+         signal = OP_DECISION_LONG;
+         label = "long";
+         reason = "inverse_" + reason;
+        }
+
+      result.signal = signal;
+      result.label = label;
+      result.reason = reason;
+      result.confidence = confidence;
+      result.margin = margin;
      }
 
 public:
@@ -34,6 +102,7 @@ public:
       m_long_threshold = 0.55;
       m_min_margin = 0.05;
       m_invert_signal = false;
+      m_decision_mode = "threshold_margin";
      }
 
    void Configure(const double short_threshold,
@@ -45,6 +114,16 @@ public:
       m_long_threshold = long_threshold;
       m_min_margin = min_margin;
       m_invert_signal = invert_signal;
+     }
+
+   void ConfigureDecisionMode(const string decision_mode)
+     {
+      m_decision_mode = NormalizeDecisionMode(decision_mode);
+     }
+
+   string DecisionMode() const
+     {
+      return m_decision_mode;
      }
 
    void Evaluate(const double p_short,
@@ -61,6 +140,12 @@ public:
       if(!IsFiniteProbability(p_short) || !IsFiniteProbability(p_flat) || !IsFiniteProbability(p_long))
         {
          result.reason = "probability_invalid";
+         return;
+        }
+
+      if(IsArgmaxProbeMode())
+        {
+         EvaluateArgmax(p_short, p_flat, p_long, result);
          return;
         }
 

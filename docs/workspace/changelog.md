@@ -4860,3 +4860,4 @@
 - 2026-05-28: Stage337 run337EH materialized runtime probe inputs for 7 proxy survivors and opened `run337EI_review_proxy_survivor_runtime_probe_inputs_without_db_v1` without MT5/Forward claims.
 - 2026-05-28: Stage337 run337EI reviewed runtime inputs and opened `run337EJ_materialize_argmax_adapter_parity_probe_contract_without_db_v1` because current DecisionSurface is threshold/margin while proxy replay is argmax.
 - 2026-05-28: Stage337 run337EJ materialized argmax adapter parity contract and opened `run337EK_implement_argmax_probe_decision_surface_without_db_v1` without MT5/Forward claims.
+- 2026-05-28: Stage337 run337EK implemented argmax probe mode in the runtime EA and passed MetaEditor compile; opened `run337EL_materialize_common_files_and_run_argmax_parity_probe_without_db_v1` without runtime authority.
