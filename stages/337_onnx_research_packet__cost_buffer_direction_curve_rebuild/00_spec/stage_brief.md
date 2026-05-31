@@ -4,7 +4,7 @@
 - status(상태): `open_active`
 - opened_by(개방 실행): `run336P_forward_decision_or_failure_memory_handoff_v1`
 - first_run(첫 실행): `run337A_design_cost_buffer_direction_curve_rebuild_packet_v1`
-- latest_run(최신 실행): `run337BF_review_bounded_repair_implementation_preflight_without_db_v1`
+- latest_run(최신 실행): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
 - active_question(활성 질문): run336O/run336P(336O/336P 실행)의 cost buffer(비용 버퍼), direction symmetry(방향 대칭), curve pocket(곡선 포켓) 실패를 forward pocket overfit(전진 구간 과적합) 없이 새 ONNX research packet(온엑스 연구 묶음)으로 재구성할 수 있는가?
 - run337A_summary(337A 요약): `completed_cost_direction_curve_rebuild_packet_design_no_selection`. Effect(효과): 다음 run337B(337B 실행)는 proxy expected value(프록시 예상값)와 MT5 runtime probe(MT5 런타임 탐침)를 함께 물질화해야 한다.
 - run337B_summary(337B 요약): `completed_cost_direction_curve_rebuild_inputs_materialized_no_selection`. Effect(효과): proxy expected value(프록시 예상값)와 MT5 runtime value(MT5 런타임 값)를 비교해 signal sanity only(신호 점검 전용) 활용성으로 낮췄다.
@@ -166,3 +166,4 @@ Effect(효과): Stage337(337단계)은 run336O(336O 실행)의 실패를 숨기�
 ## run337ER Shifted Custom Failure Memory(이동 커스텀 실패 기억)
 
 - 2026-05-28: run337ER(337ER 실행) seeded shifted custom symbol(이동 커스텀 심볼) `US100.OPV337ERD` and reran 7 frozen ONNX(고정 ONNX) attempts(시도) with trading enabled(거래 활성). Status(상태) `completed_stage337ER_shifted_custom_failure_memory_no_forward_decision`. Result(결과): MT5 reports(MT5 보고서) `7`, trade rows(거래 행) `267`, blocked gates(차단 게이트) `0`, rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-33.75` / `0.82` / `66.81`, short-negative attempts(숏 음수 시도) `7/7`. Boundary(경계): shifted custom(이동 커스텀)은 synthetic diagnostic(합성 진단)이므로 Forward Failed(전진 실패)는 주장하지 않고, broker Forward Blocked(브로커 전진 차단)를 유지한다.
+- run337ES_summary(337ES 요약): `completed_stage337ES_no_overfit_repair_design_and_broker_reprobe_contract_no_training_no_selection`. Effect(효과): ER 실패 기억을 no-overfit repair hypotheses(무과적합 수리 가설) `6`행, guardrails(가드레일) `7`행, ET queue(ET 대기열) `3`행으로 바꾸고 Forward/Goal(전진/목표)은 주장하지 않는다.

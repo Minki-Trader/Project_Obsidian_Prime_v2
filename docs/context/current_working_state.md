@@ -1,16 +1,25 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - current_packet(현재 작업 묶음): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild_v1`
-- current_run(현재 실행): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
+- current_run(현재 실행): `run337ET_materialize_no_overfit_repair_inputs_or_broker_forward_reprobe_without_db_v1`
 - secondary_current_run(보조 현재 실행): `none`
 - active_stage(활성 단계): `337_onnx_research_packet__cost_buffer_direction_curve_rebuild`
 - selected_research_baseline(선택 연구 기준): `none`
 - target_surface(목표 표면): `cost_buffer_direction_curve_rebuild`
-- status(상태): `completed_stage337ER_shifted_custom_failure_memory_no_forward_decision`
-- decision(결정): `Forward Blocked(전진 차단): broker visibility gap(브로커 가시성 공백) 유지, synthetic failure memory(합성 실패 기억) 강화`
-- latest_completed_run(최근 완료 실행): `run337ER_forward_decision_review_or_failure_memory_without_db_v1`
-- next_action(다음 행동): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
-- claim_boundary(주장 경계): `research_development_only_stage337ER_shifted_custom_failure_memory_without_db_synthetic_timestamp_shift_diagnostic_only_no_new_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+- status(상태): `completed_stage337ES_no_overfit_repair_design_and_broker_reprobe_contract_no_training_no_selection`
+- decision(결정): `stage337ES_open_run337ET_materialize_no_overfit_inputs_or_execute_broker_reprobe_no_forward_decision`
+- latest_completed_run(최근 완료 실행): `run337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_v1`
+- next_action(다음 행동): `run337ET_materialize_no_overfit_repair_inputs_or_broker_forward_reprobe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_only_stage337ES_no_overfit_repair_or_broker_rollover_reprobe_without_db_no_model_training_no_threshold_tuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
+
+
+## run337ES No-Overfit Repair or Broker Rollover Reprobe(무과적합 수리 또는 브로커 롤오버 재탐침)
+
+- status(상태): `completed_stage337ES_no_overfit_repair_design_and_broker_reprobe_contract_no_training_no_selection`
+- judgment(판정): `failure_memory_converted_to_guarded_repair_queue_broker_forward_requires_real_tester_visibility_reprobe`
+- decision(결정): `stage337ES_open_run337ET_materialize_no_overfit_inputs_or_execute_broker_reprobe_no_forward_decision`
+- effect(효과): ER(실행 ER) 실패 기억을 cost/side/density/curve/proxy-MT5/broker(비용/방향/밀도/곡선/프록시-MT5/브로커) 계약으로 바꾸고 ET(실행 ET)를 연다. Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
+- next_action(다음 행동): `run337ET_materialize_no_overfit_repair_inputs_or_broker_forward_reprobe_without_db_v1`
 
 ## run337ER Shifted Custom Failure Memory(이동 커스텀 실패 기억)
 

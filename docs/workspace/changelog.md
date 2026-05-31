@@ -4893,3 +4893,11 @@
 - Added(추가): `docs/decisions/2026-05-28_stage337ER_shifted_custom_failure_memory.md`.
 - Result(결과): shifted custom symbol(이동 커스텀 심볼) `US100.OPV337ERD`, MT5 reports(MT5 보고서) `7`, trade rows(거래 행) `267`, blocked gates(차단 게이트) `0`, rank1 net/PF/DD(1순위 순손익/PF/낙폭) `-33.75` / `0.82` / `66.81`.
 - Decision(결정): broker Forward Blocked(브로커 전진 차단) 유지; shifted custom route(이동 커스텀 경로)는 synthetic diagnostic(합성 진단)이므로 Forward Passed/Failed(전진 통과/실패)와 Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-05-28 run337ES No-Overfit Repair or Broker Rollover Reprobe(무과적합 수리 또는 브로커 롤오버 재탐침)
+
+- Added(추가): `stage_pipelines/stage337/no_overfit_repair_or_broker_rollover_reprobe_without_db.py`.
+- Added(추가): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337ES_no_overfit_repair_or_broker_rollover_reprobe.md`.
+- Added(추가): `docs/decisions/2026-05-28_stage337ES_no_overfit_repair_or_broker_rollover_reprobe.md`.
+- Result(결과): no-overfit hypotheses(무과적합 가설) `6`, guardrails(가드레일) `7`, queue rows(대기열 행) `3`.
+- Decision(결정): Forward Passed/Failed(전진 통과/실패)는 주장하지 않고 ET(실행 ET) 수리 입력/브로커 재탐침으로 넘긴다.
