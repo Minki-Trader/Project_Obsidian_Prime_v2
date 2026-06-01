@@ -452,3 +452,13 @@ Negative results are preserved because they prevent repeated dead ends.
 - salvage_value(회수 가치): best proxy rows(최선 프록시 행)와 ONNX parity(온엑스 동등성) 행을 다음 확장 탐색 씨앗으로 보존한다.
 - reopen_condition(재개 조건): new feature/source/model or relaxed-but-recorded scout surface(새 피처/원천/모델 또는 기록된 완화 탐색 표면).
 - do_not_repeat(반복 금지): 같은 label/table(라벨/표)에서 동일 grid(격자)만 반복하지 않는다.
+
+## 2026-06-02 run356C_expand_density_recovery_proxy_training_search_without_db_v1
+
+- hypothesis(가설): raw return regression and union heads(원시 수익률 회귀와 합집합 헤드)가 trade/day(일별 거래수) 3+와 stress net(압박 순수익)을 동시에 회복한다.
+- variants_tried(시도 변형): Ridge/ExtraTrees regression(릿지/엑스트라트리 회귀), quantile/cost/ADX/session grid(분위수/비용/ADX/세션 격자), union non-overlap(합집합 비중첩).
+- failed_boundary(실패 경계): proxy scout candidate queue(프록시 탐색 후보 대기열).
+- why_failed(실패 이유): validation/oos(검증/표본외)에서 3+ trade/day(일별 거래수)와 positive stress KPI(양수 압박 KPI)를 동시에 만족하지 못했다.
+- salvage_value(회수 가치): positive edge(양수 단서)는 trade/day(일별 거래수) 약 2 근처까지 올라왔고, dense rows(고밀도 행)는 validation(검증) 양수와 OOS(표본외) 음수 괴리를 드러냈다.
+- reopen_condition(재개 조건): high-density label pivot(고밀도 라벨 전환), cost/session aware target(비용/세션 인식 타깃), 또는 MT5-aligned lifecycle label(MT5 정렬 생명주기 라벨)이 생길 때.
+- do_not_repeat(반복 금지): 같은 label(라벨)에서 score threshold(점수 임계값)만 더 조이는 미세 탐색.
