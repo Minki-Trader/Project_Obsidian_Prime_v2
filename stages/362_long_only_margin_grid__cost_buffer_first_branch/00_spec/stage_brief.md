@@ -53,3 +53,9 @@ Effect(효과): regime router(국면 라우터), long quality label(롱 품질 �
 Action(행동): q05 long-only margin grid(q05 롱 단독 마진 격자)를 report-derived open-time probability filter(보고서 파생 진입 시점 확률 필터)로 구체화했다.
 
 Effect(효과): 35개 격자 중 validation/OOS +0.30 cost and density gate(검증/표본외 +0.30 비용 및 밀도 게이트)를 동시에 통과한 행은 `0`개이며, 다음 작업은 `run362C_review_q05_long_only_margin_grid_without_db_v1` 검토다.
+
+## run362C Review Closeout(362C 검토 종료)
+
+Action(행동): Stage362B(362B 실행)의 35-row margin grid(35행 마진 격자)와 rank near-miss(순위 근접 실패)를 검토했다.
+
+Effect(효과): validation/OOS(검증/표본외) cost positive(비용 양수)와 density >= 3(밀도 3 이상)를 동시에 만족한 행이 없어 Stage362(362단계)는 후보 선택 없이 Stage363(363단계) lower-floor/rank surface(낮은 하한/순위 표면)로 분기한다.

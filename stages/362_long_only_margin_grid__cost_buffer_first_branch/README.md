@@ -21,3 +21,9 @@ Effect(효과): 다음 재진입은 margin grid(마진 격자) 하나만 실행�
 Action(행동): Stage362B(362B 실행)는 margin grid(마진 격자)를 구체화했다.
 
 Effect(효과): 다음 재진입은 Stage362C review(362C 검토)에서 no-selection judgment(선택 없음 판정)와 다음 공격 씨앗을 결정한다.
+
+## run362C Review(362C 검토)
+
+Action(행동): margin-only surface(마진 단독 표면)를 no-selection negative memory(선택 없음 부정 기억)로 닫았다.
+
+Effect(효과): Stage363(363단계)은 lower-floor/rank surface(낮은 하한/순위 표면)만 작게 탐색한다.

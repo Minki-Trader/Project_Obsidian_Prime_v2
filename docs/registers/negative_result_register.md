@@ -505,3 +505,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - evidence(근거): q05 no-late(후반 제외)는 OOS(표본외) net(순수익) `305.66`이지만 validation(검증) net(순수익) `-449.38`이다.
 - judgment(판정): negative_report_derived_control(부정, 보고서 파생 대조)
 - reopen_condition(재개 조건): WFO regime router(WFO 국면 라우터)가 validation non-negative(검증 비음수), OOS positive(표본외 양수), density >= 3(밀도 3 이상)을 만족해야 한다.
+
+## 2026-06-02 FM-ST362C-Q05-MARGIN-GRID-DENSITY-COLLAPSE
+
+- source_run(원천 실행): `run362C_review_q05_long_only_margin_grid_without_db_v1`
+- failure(실패): p_long_floor>=0.40 margin-only tightening(p_long 하한 0.40 이상 마진 단독 조임)은 validation/OOS cost positive(검증/표본외 비용 양수)와 density >= 3(밀도 3 이상)를 동시에 회복하지 못했다.
+- salvage_value(회수 가치): validation-derived margin rank near miss(검증 파생 마진 순위 근접 실패)는 Stage363(363단계) lower-floor/rank surface(낮은 하한/순위 표면)의 씨앗이다.
+- do_not_repeat(반복 금지): sparse cost-positive pocket(희소 비용 양수 구간)을 candidate selection(후보 선택)으로 올리지 않는다.
+- reopen_condition(재개 조건): Stage363B(363B 실행)가 validation/OOS cost positive(검증/표본외 비용 양수)와 density >= 3(밀도 3 이상)를 동시에 만들 때.
+- evidence(근거): `stages/362_long_only_margin_grid__cost_buffer_first_branch/02_runs/run362C/review_findings.csv`
