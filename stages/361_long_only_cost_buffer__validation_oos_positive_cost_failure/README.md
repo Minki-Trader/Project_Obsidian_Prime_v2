@@ -6,3 +6,9 @@ Stage361(361단계)은 q05 long-only(롱 단독) edge(우위)의 cost buffer(비
 - next_run_id(다음 실행 ID): `run361A_design_long_only_cost_buffer_probe_without_db_v1`
 - seed_queue(씨앗 대기열): `stages/360_regime_stability_pivot__oos_long_cash_edge_validation_loss/02_runs/run360C/stage361_seed_queue.csv`
 - source_review(원천 검토): `stages/360_regime_stability_pivot__oos_long_cash_edge_validation_loss/03_reviews/run360C_regime_stability_pivot_materialized_input_review.md`
+
+## run361A Design Closeout(361A 설계 종료)
+
+- report(보고서): `stages/361_long_only_cost_buffer__validation_oos_positive_cost_failure/03_reviews/run361A_long_only_cost_buffer_design.md`
+- final_decision(최종 결정): `stages/361_long_only_cost_buffer__validation_oos_positive_cost_failure/02_runs/run361A/final_decision.json`
+- next_run_id(다음 실행 ID): `run361B_materialize_long_only_cost_buffer_inputs_without_db_v1`

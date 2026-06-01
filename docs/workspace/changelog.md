@@ -6018,3 +6018,9 @@ Effect(효과): Stage360C review branch(검토 분기)를 열었고 운영 주�
 Action(행동): Stage360C reviewed report-derived scorecards(360C 보고서 파생 점수표 검토) and opened Stage361 long-only cost buffer(361단계 롱 단독 비용 버퍼 개설).
 
 Effect(효과): q05 long-only(롱 단독) 단서를 후보가 아니라 proxy/MT5 검증 전 탐색 문제로 넘겼다.
+
+## 2026-06-02 run361A
+
+Action(행동): Stage361A designed q05 long-only cost buffer materialization(361A q05 롱 단독 비용 버퍼 구체화 설계).
+
+Effect(효과): current truth(현재 진실)를 `run361B_materialize_long_only_cost_buffer_inputs_without_db_v1`로 이동했고, 운영 주장(operating claim, 운영 주장)은 하지 않았다.

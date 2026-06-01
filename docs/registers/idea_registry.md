@@ -691,3 +691,10 @@ Register ideas when they become durable work, not for every passing thought.
 - hypothesis(가설): short removal(숏 제거)은 validation/OOS(검증/표본외)를 양수로 만들지만 cost stress(비용 압박)가 부족하므로, long-only quality margin(롱 단독 품질 마진)이 필요하다.
 - evidence_boundary(근거 경계): report-derived review seed(보고서 파생 검토 씨앗).
 - next_action(다음 행동): `run361A_design_long_only_cost_buffer_probe_without_db_v1`.
+
+## IDEA-ST361A-Q05-LONG-ONLY-MARGIN-REGIME-LABEL
+
+- idea(아이디어): q05 long-only(롱 단독) margin/regime/label(마진/국면/라벨) 설계로 +0.30 cost buffer(+0.30 비용 버퍼)를 회복한다.
+- hypothesis(가설): Stage360C(360C 실행)의 비용 전 검증/표본외 양수 단서는 margin gap(마진 gap), regime router(국면 라우터), cost-aware label(비용 인식 라벨)을 통해 비용 후에도 보존될 수 있다.
+- evidence_boundary(근거 경계): design_only(설계 전용).
+- next_action(다음 행동): `run361B_materialize_long_only_cost_buffer_inputs_without_db_v1`.

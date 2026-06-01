@@ -15,3 +15,9 @@ Can q05 long-only edge gain +0.30 cost buffer while preserving validation/OOS po
 Action(행동): Stage360C(360C 실행)는 q05 long-only(롱 단독)를 Stage361(361단계)의 offensive seed(공격 씨앗)로 넘겼다.
 
 Effect(효과): long/cash hard veto(롱/현금장 고정 제외)와 simple no-late veto(단순 후반 제외)에 묶이지 않고, margin/regime/label(마진/국면/라벨) 쪽으로 새 수익 원천을 탐색한다.
+
+## run361A Design Closeout(361A 설계 종료)
+
+Action(행동): long-only cost buffer(롱 단독 비용 버퍼)를 broad margin/regime/label design(넓은 마진/국면/라벨 설계)로 전환했다.
+
+Effect(효과): run361B(361B 실행)는 새 후보 선택 없이 timestamp-safe materialization(시점 안전 구체화)을 수행한다.
