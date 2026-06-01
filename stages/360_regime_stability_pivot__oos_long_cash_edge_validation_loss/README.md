@@ -21,3 +21,9 @@ Effect(효과): 다음 작업은 Stage359(359단계)의 무거운 MT5 runtime pr
 Action(행동): q05 OOS net(q05 표본외 순수익) `262.85` 단서를 broad/exreme/WFO/cost design(넓은/극단/WFO/비용 설계)로 전환했다.
 
 Effect(효과): Stage360B(360B 실행)는 OOS clue(표본외 단서)를 바로 후보로 쓰지 않고 validation/cost/month/session(검증/비용/월/세션) 제약부터 물질화한다.
+
+## run360B Materialization(360B 구체화)
+
+- report(보고서): `stages/360_regime_stability_pivot__oos_long_cash_edge_validation_loss/03_reviews/run360B_regime_stability_pivot_materialization.md`
+- final_decision(최종 결정): `stages/360_regime_stability_pivot__oos_long_cash_edge_validation_loss/02_runs/run360B/final_decision.json`
+- next_run_id(다음 실행 ID): `run360C_review_regime_stability_pivot_materialized_inputs_without_db_v1`

@@ -677,3 +677,10 @@ Register ideas when they become durable work, not for every passing thought.
 | `IDEA-ST360-REGIME-STABILITY-PIVOT` | `360_regime_stability_pivot__oos_long_cash_edge_validation_loss` | q05 OOS long/cash edge(q05 표본외 롱/현금장 우위)를 validation loss(검증 손실), late-session loss(후반 세션 손실), monthly instability(월별 불안정), cost fragility(비용 취약성)를 통제하면서 보존할 수 있는지 탐색한다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `stage_branch_opened_no_selection(단계 분기 완료, 선택 없음)` | next_action(다음 행동) `run360A_design_regime_stability_pivot_without_db_v1`; operating claim(운영 주장), runtime authority(런타임 권위), Goal Achieve(목표 달성) 없음 |
 
 | `IDEA-ST360A-REGIME-STABILITY-DESIGN-QUEUE` | `360_regime_stability_pivot__oos_long_cash_edge_validation_loss` | q05 OOS long/cash clue(q05 표본외 롱/현금장 단서)를 side/session/regime/cost rule stack(방향/세션/국면/비용 규칙 묶음)으로 넓게 물질화하면 validation/OOS stability(검증/표본외 안정성)를 회복할 수 있다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `design_ready_no_selection(설계 준비, 선택 없음)` | next_action(다음 행동) `run360B_materialize_regime_stability_pivot_inputs_without_db_v1`; operating claim(운영 주장), runtime authority(런타임 권위), Goal Achieve(목표 달성) 없음 |
+
+## IDEA-ST360B-REPORT-DERIVED-FILTER-SCORECARDS
+
+- idea(아이디어): Stage359B MT5 report(보고서)를 closed-trade diagnostic scorecard(종료 거래 진단 점수표)로 분해해 long/cash, late veto, side firewall clue(롱/현금장, 후반 제외, 방향 방화벽 단서)를 검토한다.
+- hypothesis(가설): OOS positive clue(표본외 긍정 단서)는 session/side/cost(세션/방향/비용) 분해 뒤에야 proxy(프록시) 또는 MT5 replay(MT5 재생) 대상으로 판단할 수 있다.
+- evidence_boundary(근거 경계): report_derived_materialization_only(보고서 파생 구체화 전용).
+- next_action(다음 행동): `run360C_review_regime_stability_pivot_materialized_inputs_without_db_v1`.

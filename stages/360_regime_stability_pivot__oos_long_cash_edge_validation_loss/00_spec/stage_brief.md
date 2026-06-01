@@ -44,3 +44,9 @@ Effect(효과): OOS-only positive(표본외만 긍정)를 후보로 오해하지
 Action(행동): q05 OOS net(q05 표본외 순수익) `262.85` 단서를 broad/exreme/WFO/cost design(넓은/극단/WFO/비용 설계)로 전환했다.
 
 Effect(효과): Stage360B(360B 실행)는 OOS clue(표본외 단서)를 바로 후보로 쓰지 않고 validation/cost/month/session(검증/비용/월/세션) 제약부터 물질화한다.
+
+## run360B Materialization(360B 구체화)
+
+Action(행동): Stage359B report(보고서)를 closed-trade diagnostics(종료 거래 진단)로 물질화했다.
+
+Effect(효과): Stage360C(360C 실행)는 무거운 전체 stage(단계) 대신 scorecard(점수표) 단위로 검토할 수 있다.

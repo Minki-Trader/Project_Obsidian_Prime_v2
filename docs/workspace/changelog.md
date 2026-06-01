@@ -6006,3 +6006,9 @@ Effect(효과): `mt5_probe_queue_rows=8`로 Stage357B(357B 실행)를 닫고, ne
 
 - action(행동): `run360A_design_regime_stability_pivot_without_db_v1` completed(완료), `run360B_materialize_regime_stability_pivot_inputs_without_db_v1` opened(개설).
 - effect(효과): q05 OOS clue(q05 표본외 단서)를 12-row materialization queue(12행 물질화 대기열)와 WFO/cost/session controls(WFO/비용/세션 대조)로 바꿨다.
+
+## 2026-06-02 run360B
+
+Action(행동): Stage360B materialized report-derived trade/filter/cost/month/session scorecards(360B 보고서 파생 거래/필터/비용/월/세션 점수표 구체화).
+
+Effect(효과): Stage360C review branch(검토 분기)를 열었고 운영 주장(operating claim, 운영 주장)은 하지 않았다.
