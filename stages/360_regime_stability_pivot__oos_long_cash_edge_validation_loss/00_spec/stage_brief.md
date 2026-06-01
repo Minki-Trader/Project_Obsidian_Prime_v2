@@ -50,3 +50,9 @@ Effect(효과): Stage360B(360B 실행)는 OOS clue(표본외 단서)를 바로 �
 Action(행동): Stage359B report(보고서)를 closed-trade diagnostics(종료 거래 진단)로 물질화했다.
 
 Effect(효과): Stage360C(360C 실행)는 무거운 전체 stage(단계) 대신 scorecard(점수표) 단위로 검토할 수 있다.
+
+## run360C Review Closeout(360C 검토 종료)
+
+Action(행동): q05 long-only(롱 단독)를 다음 stage(단계) 씨앗으로 선택했다.
+
+Effect(효과): Stage360(360단계)은 report-derived review(보고서 파생 검토)로 닫고, Stage361(361단계)은 cost buffer(비용 버퍼) 질문으로 연다.

@@ -42,3 +42,16 @@ Effect(효과): Stage360B(360B 실행)는 OOS clue(표본외 단서)를 바로 �
 Action(행동): report-derived filter scorecard(보고서 파생 필터 점수표)를 만들었다.
 
 Effect(효과): selection_status(선택 상태)는 여전히 `opened_no_selection(개설됨, 선택 없음)`이며 운영 주장(operating claim, 운영 주장)은 없다.
+
+## run360C Review Closeout(360C 검토 종료 기록)
+
+- run_id(실행 ID): `run360C_review_regime_stability_pivot_materialized_inputs_without_db_v1`
+- status(상태): `reviewed_stage360C_regime_stability_inputs_long_only_seed_stage361_opened_no_selection_no_mt5`
+- judgment(판정): `long_only_edge_positive_but_cost_fragile_stage361_seed_no_candidate_selection`
+- next_stage_id(다음 단계 ID): `361_long_only_cost_buffer__validation_oos_positive_cost_failure`
+- next_run_id(다음 실행 ID): `run361A_design_long_only_cost_buffer_probe_without_db_v1`
+- claim_boundary(주장 경계): `review_only_report_derived_stage_branch_no_new_model_training_no_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+Action(행동): q05 long-only(롱 단독)를 Stage361(361단계)의 탐색 씨앗으로 분기했다.
+
+Effect(효과): Stage360(360단계)은 선택 없이 종료되고, 운영 주장(operating claim, 운영 주장)은 없다.

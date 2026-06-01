@@ -6012,3 +6012,9 @@ Effect(효과): `mt5_probe_queue_rows=8`로 Stage357B(357B 실행)를 닫고, ne
 Action(행동): Stage360B materialized report-derived trade/filter/cost/month/session scorecards(360B 보고서 파생 거래/필터/비용/월/세션 점수표 구체화).
 
 Effect(효과): Stage360C review branch(검토 분기)를 열었고 운영 주장(operating claim, 운영 주장)은 하지 않았다.
+
+## 2026-06-02 run360C
+
+Action(행동): Stage360C reviewed report-derived scorecards(360C 보고서 파생 점수표 검토) and opened Stage361 long-only cost buffer(361단계 롱 단독 비용 버퍼 개설).
+
+Effect(효과): q05 long-only(롱 단독) 단서를 후보가 아니라 proxy/MT5 검증 전 탐색 문제로 넘겼다.

@@ -684,3 +684,10 @@ Register ideas when they become durable work, not for every passing thought.
 - hypothesis(가설): OOS positive clue(표본외 긍정 단서)는 session/side/cost(세션/방향/비용) 분해 뒤에야 proxy(프록시) 또는 MT5 replay(MT5 재생) 대상으로 판단할 수 있다.
 - evidence_boundary(근거 경계): report_derived_materialization_only(보고서 파생 구체화 전용).
 - next_action(다음 행동): `run360C_review_regime_stability_pivot_materialized_inputs_without_db_v1`.
+
+## IDEA-ST361-LONG-ONLY-COST-BUFFER
+
+- idea(아이디어): q05 long-only(롱 단독) edge(우위)에 margin/regime/label(마진/국면/라벨) 필터를 더해 +0.30 cost buffer(+0.30 비용 버퍼)를 회복한다.
+- hypothesis(가설): short removal(숏 제거)은 validation/OOS(검증/표본외)를 양수로 만들지만 cost stress(비용 압박)가 부족하므로, long-only quality margin(롱 단독 품질 마진)이 필요하다.
+- evidence_boundary(근거 경계): report-derived review seed(보고서 파생 검토 씨앗).
+- next_action(다음 행동): `run361A_design_long_only_cost_buffer_probe_without_db_v1`.

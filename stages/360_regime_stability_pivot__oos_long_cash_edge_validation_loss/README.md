@@ -27,3 +27,9 @@ Effect(효과): Stage360B(360B 실행)는 OOS clue(표본외 단서)를 바로 �
 - report(보고서): `stages/360_regime_stability_pivot__oos_long_cash_edge_validation_loss/03_reviews/run360B_regime_stability_pivot_materialization.md`
 - final_decision(최종 결정): `stages/360_regime_stability_pivot__oos_long_cash_edge_validation_loss/02_runs/run360B/final_decision.json`
 - next_run_id(다음 실행 ID): `run360C_review_regime_stability_pivot_materialized_inputs_without_db_v1`
+
+## run360C Review Closeout(360C 검토 종료)
+
+- report(보고서): `stages/360_regime_stability_pivot__oos_long_cash_edge_validation_loss/03_reviews/run360C_regime_stability_pivot_materialized_input_review.md`
+- next_stage_id(다음 단계 ID): `361_long_only_cost_buffer__validation_oos_positive_cost_failure`
+- next_run_id(다음 실행 ID): `run361A_design_long_only_cost_buffer_probe_without_db_v1`

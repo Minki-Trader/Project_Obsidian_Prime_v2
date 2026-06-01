@@ -498,3 +498,10 @@ Negative results are preserved because they prevent repeated dead ends.
 - do_not_repeat(반복 금지): OOS-only positive(표본외만 긍정)를 candidate selection(후보 선택)이나 operating promotion(운영 승격)처럼 반복하지 않는다.
 - reopen_condition(재개 조건): Stage360(360단계) WFO/broad sweep(WFO/넓은 탐색)가 validation/OOS stability(검증/표본외 안정성), trade/day(일별 거래수) 3+, cost buffer(비용 완충)를 함께 회복할 때.
 - claim_boundary(주장 경계): `state_sync_stage_branch_stage359_to_stage360_regime_stability_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## FM-ST360C-SIMPLE-LATE-VETO
+
+- subject(대상): simple late veto(단순 후반 제외)
+- evidence(근거): q05 no-late(후반 제외)는 OOS(표본외) net(순수익) `305.66`이지만 validation(검증) net(순수익) `-449.38`이다.
+- judgment(판정): negative_report_derived_control(부정, 보고서 파생 대조)
+- reopen_condition(재개 조건): WFO regime router(WFO 국면 라우터)가 validation non-negative(검증 비음수), OOS positive(표본외 양수), density >= 3(밀도 3 이상)을 만족해야 한다.
