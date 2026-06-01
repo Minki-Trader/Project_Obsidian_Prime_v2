@@ -698,3 +698,11 @@ Register ideas when they become durable work, not for every passing thought.
 - hypothesis(가설): Stage360C(360C 실행)의 비용 전 검증/표본외 양수 단서는 margin gap(마진 gap), regime router(국면 라우터), cost-aware label(비용 인식 라벨)을 통해 비용 후에도 보존될 수 있다.
 - evidence_boundary(근거 경계): design_only(설계 전용).
 - next_action(다음 행동): `run361B_materialize_long_only_cost_buffer_inputs_without_db_v1`.
+
+## IDEA-ST362-Q05-LONG-ONLY-MARGIN-GRID
+
+- idea(아이디어): q05 long-only(롱 단독) margin grid(마진 격자)를 먼저 구체화해 +0.30 cost buffer(+0.30 비용 버퍼) 가능 표면을 찾는다.
+- hypothesis(가설): broad margin surface(넓은 마진 표면)가 validation/OOS(검증/표본외) 모두에서 비용 후 양수를 만들면 regime/label(국면/라벨) 복잡도를 붙일 가치가 생긴다.
+- tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`
+- evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`
+- next_action(다음 행동): `run362B_materialize_q05_long_only_margin_grid_without_db_v1`

@@ -6024,3 +6024,13 @@ Effect(효과): q05 long-only(롱 단독) 단서를 후보가 아니라 proxy/MT
 Action(행동): Stage361A designed q05 long-only cost buffer materialization(361A q05 롱 단독 비용 버퍼 구체화 설계).
 
 Effect(효과): current truth(현재 진실)를 `run361B_materialize_long_only_cost_buffer_inputs_without_db_v1`로 이동했고, 운영 주장(operating claim, 운영 주장)은 하지 않았다.
+
+## 2026-06-02 run362A
+
+Action(행동): Stage361B heavy materialization(361B 무거운 구체화)을 Stage362 q05 long-only margin grid(362단계 q05 롱 단독 마진 격자)로 분기했다.
+
+Effect(효과): current truth(현재 진실)를 `362_long_only_margin_grid__cost_buffer_first_branch`와 `run362B_materialize_q05_long_only_margin_grid_without_db_v1`로 이동했고, 운영 주장(operating claim, 운영 주장)은 하지 않았다.
+
+- source_margin_grid_rows(원천 마진 격자 행): `35`
+- source_materialization_queue_rows(원천 구체화 대기열 행): `5`
+- claim_boundary(주장 경계): `state_sync_stage_branch_user_requested_long_only_margin_grid_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
