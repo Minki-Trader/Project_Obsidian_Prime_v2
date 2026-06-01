@@ -471,3 +471,30 @@ Negative results are preserved because they prevent repeated dead ends.
 - salvage_value(회수 가치): OOS PF(표본외 수익 팩터) `1.0744976620172675`와 OOS net(표본외 순수익) `0.031124279379026655`는 high-density label pivot(고밀도 라벨 전환)의 seed surface(씨앗 표면)로 보존한다.
 - reopen_condition(재개 조건): Stage357B(357B 실행)에서 timestamp-safe(시점 안전) label(라벨), ONNX parity(온엑스 동등성), non-overlap proxy(비중첩 프록시)로 trade/day(일별 거래수) 3+를 회복할 때.
 - claim_boundary(주장 경계): `state_sync_stage_branch_user_requested_high_density_label_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 run359D Stage359C Runtime Probe Failure Memory(359D Stage359C 런타임 탐침 실패 기억)
+
+- source_run(원천 실행): `run359C_review_high_density_label_pivot_mt5_probe_without_db_v1`
+- failure(실패): validation positive rows(검증 양수 행) `0/2`, q05 validation net(q05 검증 순수익) `-222.41`, q05 validation max DD%(q05 검증 최대 낙폭 비율) `94.77`, q05 OOS monthly positive(q05 표본외 월별 양수) `2/7`, cost drag +0.30 survivors(추가 비용 0.30 생존 행) `0`.
+- salvage_value(회수 가치): q05 OOS net(q05 표본외 순수익) `262.85`, PF(수익 팩터) `1.09`, trades(거래수) `936`, long/cash contribution(롱/현금장 기여), proxy-MT5 mismatch(프록시-MT5 불일치) `0`.
+- do_not_repeat(반복 금지): OOS-only positive(표본외만 긍정)를 candidate selection(후보 선택)이나 operating promotion(운영 승격)처럼 반복하지 않는다.
+- reopen_condition(재개 조건): Stage360(360단계) WFO/broad sweep(WFO/넓은 탐색)가 validation/OOS stability(검증/표본외 안정성), trade/day(일별 거래수) 3+, cost buffer(비용 완충)를 함께 회복할 때.
+- claim_boundary(주장 경계): `state_sync_stage_branch_stage359_to_stage360_regime_stability_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 run359D Stage359C Runtime Probe Failure Memory(359D Stage359C 런타임 탐침 실패 기억)
+
+- source_run(원천 실행): `run359C_review_high_density_label_pivot_mt5_probe_without_db_v1`
+- failure(실패): validation positive rows(검증 양수 행) `0/2`, q05 validation net(q05 검증 순수익) `-222.41`, q05 validation max DD%(q05 검증 최대 낙폭 비율) `94.77`, q05 OOS monthly positive(q05 표본외 월별 양수) `2/7`, cost drag +0.30 survivors(추가 비용 0.30 생존 행) `0`.
+- salvage_value(회수 가치): q05 OOS net(q05 표본외 순수익) `262.85`, PF(수익 팩터) `1.09`, trades(거래수) `936`, long/cash contribution(롱/현금장 기여), proxy-MT5 mismatch(프록시-MT5 불일치) `0`.
+- do_not_repeat(반복 금지): OOS-only positive(표본외만 긍정)를 candidate selection(후보 선택)이나 operating promotion(운영 승격)처럼 반복하지 않는다.
+- reopen_condition(재개 조건): Stage360(360단계) WFO/broad sweep(WFO/넓은 탐색)가 validation/OOS stability(검증/표본외 안정성), trade/day(일별 거래수) 3+, cost buffer(비용 완충)를 함께 회복할 때.
+- claim_boundary(주장 경계): `state_sync_stage_branch_stage359_to_stage360_regime_stability_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 run359D Stage359C Runtime Probe Failure Memory(359D Stage359C 런타임 탐침 실패 기억)
+
+- source_run(원천 실행): `run359C_review_high_density_label_pivot_mt5_probe_without_db_v1`
+- failure(실패): validation positive rows(검증 양수 행) `0/2`, q05 validation net(q05 검증 순수익) `-222.41`, q05 validation max DD%(q05 검증 최대 낙폭 비율) `94.77`, q05 OOS monthly positive(q05 표본외 월별 양수) `2/7`, cost drag +0.30 survivors(추가 비용 0.30 생존 행) `0`.
+- salvage_value(회수 가치): q05 OOS net(q05 표본외 순수익) `262.85`, PF(수익 팩터) `1.09`, trades(거래수) `936`, long/cash contribution(롱/현금장 기여), proxy-MT5 mismatch(프록시-MT5 불일치) `0`.
+- do_not_repeat(반복 금지): OOS-only positive(표본외만 긍정)를 candidate selection(후보 선택)이나 operating promotion(운영 승격)처럼 반복하지 않는다.
+- reopen_condition(재개 조건): Stage360(360단계) WFO/broad sweep(WFO/넓은 탐색)가 validation/OOS stability(검증/표본외 안정성), trade/day(일별 거래수) 3+, cost buffer(비용 완충)를 함께 회복할 때.
+- claim_boundary(주장 경계): `state_sync_stage_branch_stage359_to_stage360_regime_stability_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

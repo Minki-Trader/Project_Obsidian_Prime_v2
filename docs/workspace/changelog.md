@@ -5996,3 +5996,8 @@ Effect(효과): `mt5_probe_queue_rows=8`로 Stage357B(357B 실행)를 닫고, ne
 - status(상태): `completed_stage357B_high_density_label_pivot_positive_proxy_queue_ready_no_selection`
 - judgment(판정): `positive_proxy_high_density_label_pivot_mt5_probe_required_no_operating_claim`
 - claim_boundary(주장 경계): `research_development_high_density_label_pivot_proxy_scout_only_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 Stage359D branch to Stage360(Stage359D에서 Stage360으로 분기)
+
+- action(행동): `run359D_branch_to_stage360_regime_stability_pivot_v1` completed(완료), `360_regime_stability_pivot__oos_long_cash_edge_validation_loss` opened(개설), `run360A_design_regime_stability_pivot_without_db_v1` set as current run(현재 실행으로 설정).
+- effect(효과): Stage359C(359C 실행)의 OOS positive clue(표본외 긍정 단서)와 validation/cost weakness(검증/비용 약점)를 Stage360(360단계)의 좁은 질문으로 분리했다.
