@@ -283,3 +283,162 @@ Negative results are preserved because they prevent repeated dead ends.
 - do_not_repeat(반복 금지): forward data(전진 데이터)에 threshold/lot/short/risk(임계값/랏/숏/위험)를 좁게 맞추지 않는다.
 - preserved_clue(보존 단서): cost ladder(비용 사다리), rolling pocket(이동 포켓), side-specific payoff(방향별 손익), as-of regime source(시점 기준 국면 원천), proxy/MT5 role lock(프록시/MT5 역할 고정)을 run337AG(337AG 실행)로 넘긴다.
 - reopen_condition(재개 조건): predeclared split/WFO(사전 선언 분할/워크포워드)와 MT5 runtime probe(MT5 런타임 탐침)에서 비용/곡선/방향/데이터/동등성 gate(게이트)가 동시에 닫힐 때만 재개한다.
+
+## 2026-06-01 run338A Stage Branch Negative Memory(부정 기억)
+
+- subject(대상): Stage337 proxy-positive MT5-negative runtime probe(프록시 양수 MT5 음수 런타임 탐침)
+- judgment(판정): `valid_negative(유효한 부정)`
+- carried_to(이월 대상): `338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JR/final_decision.json`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JR/jr_mt5_runtime_probe_review_scorecard.csv`, `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338A/stage338_negative_memory_seed.csv`
+- effect(효과): 신호 재현 문제로 오해하지 않고 거래 생명주기 수리 제약으로 사용한다.
+
+## 2026-06-01 Stage339B Lifecycle Exit Failure Memory(생명주기 청산 실패 기억)
+
+- subject(대상): close_on_flat(평탄 청산) and aggressive long relief(공격적 롱 완화)
+- evidence(근거): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339B/failure_memory.csv`
+- judgment(판정): `negative_clue_with_salvage(회수 가치 있는 부정 단서)`
+- effect(효과): 실패 변형을 버리지 않고 run339C(339C 실행)의 제약으로 바꾼다.
+
+## 2026-06-01 Stage339B Lifecycle Exit Failure Memory(생명주기 청산 실패 기억)
+
+- subject(대상): close_on_flat(평탄 청산) and aggressive long relief(공격적 롱 완화)
+- evidence(근거): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339B/failure_memory.csv`
+- judgment(판정): `negative_clue_with_salvage(회수 가치 있는 부정 단서)`
+- effect(효과): 실패 변형을 버리지 않고 run339C(339C 실행)의 제약으로 바꾼다.
+
+## 2026-06-01 Stage339E Side Balance Failure Memory(방향 균형 실패 기억)
+
+- subject(대상): strict_short_overprune(엄격한 숏 과삭감) and raw_long_relief_profit_tax(무제약 롱 완화 수익세)
+- evidence(근거): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339E/failure_memory.csv`
+- judgment(판정): `negative_clue_with_salvage(회수 가치 있는 부정 단서)`
+- effect(효과): short_threshold(숏 임계값) 0.57+ 단독 수리와 long_threshold(롱 임계값) 0.44~0.46 단독 완화를 반복하지 않고, min_margin(최소 마진)을 다음 제약으로 쓴다.
+
+## 2026-06-01 Stage340B Balance Failure Memory(340B 균형 실패 기억)
+
+- subject(대상): over-relieved long balance(과완화 롱 균형) and short_threshold_056(숏 임계값 0.56)
+- evidence(근거): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340B/failure_memory.csv`
+- judgment(판정): `negative_clue_with_salvage(회수 가치가 있는 부정 단서)`
+- effect(효과): 균형만 보고 threshold(임계값)를 완화하는 반복을 막고 f01(에프01) 주변 압박으로 좁힌다.
+
+## 2026-06-01 Stage340E Close-On-Flat Control Mismatch(평탄 청산 대조 불일치)
+
+- subject(대상): `run340D_close_on_flat_true_pressure_surface`
+- evidence(근거): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/control_semantics_audit.csv`, `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/failure_memory.csv`
+- judgment(판정): `negative_surface_with_invalid_exact_control(무효 정확 대조를 가진 부정 표면)`
+- effect(효과): run340D(340D 실행)를 원본 f01 실패로 과장하지 않고, close_on_flat=True(평탄 청산 켬) 재사용을 막는다.
+
+## 2026-06-01 Stage340E Close-On-Flat Control Mismatch(평탄 청산 대조 불일치)
+
+- subject(대상): `run340D_close_on_flat_true_pressure_surface`
+- evidence(근거): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/control_semantics_audit.csv`, `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/failure_memory.csv`
+- judgment(판정): `negative_surface_with_invalid_exact_control(무효 정확 대조를 가진 부정 표면)`
+- effect(효과): run340D(340D 실행)를 원본 f01 실패로 과장하지 않고, close_on_flat=True(평탄 청산 켬) 재사용을 막는다.
+
+## 2026-06-01 Stage340H Hold-Only Recovery Tax(보유 단독 회복 손상)
+
+- subject(대상): `q07_h10` and `q08_h14`
+- evidence(근거): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340H/failure_memory.csv`
+- judgment(판정): `negative_clue_with_constraint(제약으로 남기는 부정 단서)`
+- effect(효과): hold-only(보유만 변경) 반복을 줄이고 session/regime(세션/국면) 조건과 결합할 때만 다시 연다.
+
+## 2026-06-01 Stage342D Hard Firewall Failure Memory(342D 강한 방화벽 실패 기억)
+
+- subject(대상): `hard_early_long_0_110_trade_shape_tax`
+- evidence(근거): `stages/342_session_long_firewall__early_long_filter_mt5_probe/02_runs/run342D/failure_memory.csv`
+- judgment(판정): `positive_clue_with_selection_blocker(선정 차단이 있는 긍정 단서)`
+- effect(효과): hard block(강한 차단)을 반복 선정하지 않고 soft window(부드러운 구간)로 이동한다.
+
+## 2026-06-01 Stage342G Soft Window Failure Memory(342G 부드러운 구간 실패 기억)
+
+- subject(대상): `soft_window_0_45_0_75_trade_shape_no_recovery`
+- evidence(근거): `stages/342_session_long_firewall__early_long_filter_mt5_probe/02_runs/run342G/failure_memory.csv`
+- judgment(판정): `negative_boundary_with_preserved_profit_clue(수익 단서를 보존한 부정 경계)`
+- effect(효과): time-window only(시간 구간만) 변형을 반복하지 않고 quality/margin(품질/마진) 축으로 이동한다.
+
+## run344E Exit Overlay Failure Memory(청산 오버레이 실패 기억)
+
+- failure(실패): s09/s10/s12 exit lifecycle overlay(청산 생명주기 오버레이)는 net/PF/expectancy(순수익/수익 팩터/기대값)를 훼손했다.
+- effect(효과): 다음 작업에서 전역 청산 수리(global exit repair, 전역 청산 수리)를 기본 해법으로 반복하지 않는다.
+
+## run344E Exit Overlay Failure Memory(청산 오버레이 실패 기억)
+
+- failure(실패): s09/s10/s12 exit lifecycle overlay(청산 생명주기 오버레이)는 net/PF/expectancy(순수익/수익 팩터/기대값)를 훼손했다.
+- effect(효과): 다음 작업에서 전역 청산 수리(global exit repair, 전역 청산 수리)를 기본 해법으로 반복하지 않는다.
+
+## 2026-06-01 run344L Failure Memory(실패 기억)
+
+- source_run(원천 실행): `run344L_review_s07_deal_level_cost_session_forward_replay_validation_without_db_v1`
+- failure(실패): heavy cost recovery breaks(강한 비용 회복 실패), cash-open concentration(현금장 초반 집중), short carry majority(숏 기여 과반)
+- effect(효과): 다음 run344M은 이 조건을 완화하지 않고 설계 제약으로 가져간다.
+
+## 2026-06-01 run344L Failure Memory(실패 기억)
+
+- source_run(원천 실행): `run344L_review_s07_deal_level_cost_session_forward_replay_validation_without_db_v1`
+- failure(실패): heavy cost recovery breaks(강한 비용 회복 실패), cash-open concentration(현금장 초반 집중), short carry majority(숏 기여 과반)
+- effect(효과): 다음 run344M은 이 조건을 완화하지 않고 설계 제약으로 가져간다.
+
+## 2026-06-01 run346B Cash-Open Side-Filter Failure Memory(현금장 방향 필터 실패 기억)
+
+- source_run(원천 실행): `run346B_review_cash_open_runtime_probe_source_pivot_without_db_v1`
+- failure(실패): single side-filter variants(단일 방향 필터 변형)는 balance(균형) 또는 trade count(거래수)를 일부 바꿨지만 net/PF/recovery(순수익/수익 팩터/회복)를 함께 개선하지 못했다.
+- evidence(근거): `stages/346_cash_open_runtime_review__asymmetric_source_pivot/02_runs/run346B/failure_memory.csv`
+- salvage_value(회수 가치): long-quality fragment(롱 품질 조각)와 short-carry fragment(숏 기여 조각)를 separate source/head(분리 원천/헤드)로 넘긴다.
+- do_not_repeat(반복 금지): cash-open short block(현금장 초반 숏 차단), late-long firewall(후반 롱 방화벽), short-only(숏 전용)를 운영 후보처럼 반복하지 않는다.
+
+| `NR-ST347C-LONG-OOS-MISSING` | `IDEA-ST347-RUN347C-ASYMMETRIC-SOURCE-PROXY-TRAINING` | long quality teacher label(롱 품질 교사 라벨)이 validation/test(검증/테스트)에 없다 | run347C split audit(347C 분할 감사) | long head(롱 헤드)는 OOS 검증 불충분으로 낮춰 말한다 | richer long source label(더 풍부한 롱 원천 라벨) 또는 MT5 probe(런타임 탐침) 비교 시 재개 |
+
+## 2026-06-01 run348A Proxy Review Constraint Memory(프록시 검토 제약 기억)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- constraint(제약): long OOS positive labels(롱 표본외 양성 라벨)이 `0`이라 long quality(롱 품질)를 OOS(`out-of-sample`, 표본외) 근거로 주장할 수 없다.
+- proxy_boundary(프록시 경계): proxy expected value(프록시 예상값)는 signal sanity check(신호 점검)이고 MT5 KPI(MT5 핵심 성과 지표)가 아니다.
+- effect(효과): run348B(348B 실행)는 선정(selection, 선정)이 아니라 review/triage(검토/분류)로만 닫아야 한다.
+- evidence(근거): `stages/348_cash_open_proxy_review__long_oos_gap_short_carry_triage/02_runs/run348A/stage348_negative_memory_seed.csv`
+
+## 2026-06-01 run348B Proxy Review Negative Memory(프록시 검토 부정 기억)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- negative_memory(부정 기억): long OOS positive labels(롱 표본외 양성 라벨) `0`; default short OOS head(기본 숏 표본외 헤드) 약함.
+- salvage_value(회수 가치): ONNX deployable short threshold seeds(온엑스 배포 가능 숏 임계값 씨앗) `4`개.
+- do_not_repeat(반복 금지): all-split proxy queue(전체 분할 프록시 대기열)를 candidate selection(후보 선정)이나 MT5 KPI(MT5 핵심 성과 지표)처럼 쓰지 않는다.
+- reopen_condition(재개 조건): run348C/MT5 probe(348C/MT5 탐침)에서 실제 거래 KPI(거래 핵심 성과 지표)가 확인되거나 long OOS label source(롱 표본외 라벨 원천)가 보강될 때.
+- evidence(근거): `stages/348_cash_open_proxy_review__long_oos_gap_short_carry_triage/02_runs/run348B/review_findings.csv`
+
+## 2026-06-01 run348B Proxy Review Negative Memory(프록시 검토 부정 기억)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- negative_memory(부정 기억): long OOS positive labels(롱 표본외 양성 라벨) `0`; default short OOS head(기본 숏 표본외 헤드) 약함.
+- salvage_value(회수 가치): ONNX deployable short threshold seeds(온엑스 배포 가능 숏 임계값 씨앗) `4`개.
+- do_not_repeat(반복 금지): all-split proxy queue(전체 분할 프록시 대기열)를 candidate selection(후보 선정)이나 MT5 KPI(MT5 핵심 성과 지표)처럼 쓰지 않는다.
+- reopen_condition(재개 조건): run348C/MT5 probe(348C/MT5 탐침)에서 실제 거래 KPI(거래 핵심 성과 지표)가 확인되거나 long OOS label source(롱 표본외 라벨 원천)가 보강될 때.
+- evidence(근거): `stages/348_cash_open_proxy_review__long_oos_gap_short_carry_triage/02_runs/run348B/review_findings.csv`
+
+## 2026-06-01 run348C Runtime Boundary Memory(런타임 경계 기억)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- constraint(제약): feature count(피처 수) `53` vs MT5 v2 contract(MT5 v2 계약) `58`.
+- constraint(제약): cash_open_regime_allocator(현금장 국면 배분기)는 현재 EA(`Expert Advisor`, 전문가 자문)에서 partial mapping(부분 매핑)이다.
+- effect(효과): run348D(348D 실행)의 MT5 result(MT5 결과)는 반드시 이 경계를 감안해 proxy-MT5 diff(프록시-MT5 차이)로 읽어야 한다.
+- evidence(근거): `stages/348_cash_open_proxy_review__long_oos_gap_short_carry_triage/02_runs/run348C/feature_order_contract.csv`, `stages/348_cash_open_proxy_review__long_oos_gap_short_carry_triage/02_runs/run348C/runtime_mapping_audit.csv`
+
+## 2026-06-01 run348C Runtime Boundary Memory(런타임 경계 기억)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- constraint(제약): feature count(피처 수) `53` vs MT5 v2 contract(MT5 v2 계약) `58`.
+- constraint(제약): cash_open_regime_allocator(현금장 국면 배분기)는 현재 EA(`Expert Advisor`, 전문가 자문)에서 partial mapping(부분 매핑)이다.
+- effect(효과): run348D(348D 실행)의 MT5 result(MT5 결과)는 반드시 이 경계를 감안해 proxy-MT5 diff(프록시-MT5 차이)로 읽어야 한다.
+- evidence(근거): `stages/348_cash_open_proxy_review__long_oos_gap_short_carry_triage/02_runs/run348C/feature_order_contract.csv`, `stages/348_cash_open_proxy_review__long_oos_gap_short_carry_triage/02_runs/run348C/runtime_mapping_audit.csv`
+
+## stage351B_proxy_weak_trade_surface
+
+- result(결과): proxy(프록시)는 약하지만 MT5 probe(MT5 탐침) 인계는 가능하다.
+- reopen_condition(재개 조건): MT5 runtime probe(MT5 런타임 탐침)가 proxy(프록시)와 다른 수익 구조를 보이거나 새 threshold/rule stack(임계값/규칙 묶음)이 생길 때 재개한다.
+
+## 2026-06-02 run354C Existing Surface Density-Edge Failure(기존 표면 밀도-엣지 실패)
+
+- source_run(원천 실행): `run354C_expand_proxy_filter_sweep_without_db_v1`
+- failure(실패): existing probability surface(기존 확률 표면)는 hold/filter/threshold(보유기간/필터/임계값) 확장에서도 validation/OOS(검증/표본외) 순수익, 비용 압박, trade/day(일별 거래수) `3+`를 동시에 만족하지 못했다.
+- evidence(근거): `stages/354_proxy_trade_shape_scout__small_candidate_queue/02_runs/run354C/failure_memory.csv`
+- salvage_value(회수 가치): best near miss(최상 근접 실패)를 다음 label/source/model family(라벨/원천/모델 계열) 설계 제약으로 사용한다.
+- do_not_repeat(반복 금지): 같은 surface(표면)의 threshold-only search(임계값 전용 탐색)를 운영 후보처럼 반복하지 않는다.
+- reopen_condition(재개 조건): 새 label/source/model family(라벨/원천/모델 계열) 또는 MT5 runtime diff(MT5 런타임 차이)가 생길 때.

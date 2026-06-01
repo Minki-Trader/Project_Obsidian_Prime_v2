@@ -412,3 +412,256 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id(아이디어 ID): `stage322_cp321b_curve_stability_pressure`
 - hypothesis(가설): cp321B(321B 씨앗)는 exact replay(정확 재생)와 threshold/source/risk perturbation(임계값/원천/위험 교란)을 견뎌야 Adapter(어댑터)로 넘길 가치가 있다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
+| `IDEA-ST337-PROXY-NEGATIVE-OFFENSIVE-PIVOT` | `337_onnx_research_packet__cost_buffer_direction_curve_rebuild` | repeated HQ/HV proxy-negative ONNX(반복 HQ/HV 프록시 음수 ONNX) evidence suggests label horizon, side-specific, model-family, active-flat, and regime/context offensive pivot(라벨 기간/방향별/모델 계열/활성-관망/국면 문맥 공격 전환)이 필요하다 | `Tier A now + Tier B required next(Tier A 현재 + 다음 Tier B 필수)` | `opened_design_no_selection` | `run337HW_design_proxy_negative_trade_shape_offensive_pivot_without_db_v1` opens `run337HX_materialize_proxy_negative_trade_shape_offensive_pivot_inputs_without_db_v1`; selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성) 없음 |
+
+## 2026-06-01 Stage338 Trade Lifecycle Repair Seed(거래 생명주기 수리 씨앗)
+
+- idea(아이디어): proxy-reproduced signal(프록시 재현 신호)에 density throttle(밀도 제한), side loss quarantine(방향 손실 격리), cost-stress objective(비용 압박 목적)를 붙인다.
+- source(원천): `run337JR_review_runtime_positive_low_pf_recovery_drawdown_dual_probe_repair_mt5_runtime_probe_or_repair_without_db_v1`
+- next_run(다음 실행): `run338B_design_runtime_trade_lifecycle_proxy_positive_mt5_negative_repair_without_db_v1`
+- effect(효과): 실패를 아이디어 사망으로 닫지 않고 새 offensive exploration seed(공격 탐색 씨앗)로 보존한다.
+
+## 2026-06-01 Stage339 Lifecycle Exit Probe Review Seed(339단계 생명주기 청산 탐침 검토 씨앗)
+
+- idea_id(아이디어 ID): `stage339_lifecycle_exit_probe_review_seed`
+- hypothesis(가설): run338M(338M 실행)의 shorter hold(짧은 보유)와 side-balance(방향 균형) 변형은 MT5(메타트레이더5)에서 개선 단서를 줄 수 있지만, run338N(338N 실행) closeout(종료 기록)이 실패했으므로 먼저 근거 정체성을 검토해야 한다.
+- legacy_relation(레거시 관계): `none(없음)`
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
+- broad_sweep(넓은 탐색): run338M(338M 실행) 6개 lifecycle/exit(생명주기/청산) 변형.
+- extreme_sweep(극단 탐색): close_on_flat(평탄 청산), shorter_hold(짧은 보유), asymmetric_long_relief(비대칭 롱 완화).
+- micro_search_gate(미세 탐색 게이트): run339B(339B 실행)가 exact parity(정확 동등성), report identity(보고서 정체성), KPI floors(KPI 하한)를 검토해야 한다.
+- wfo_plan(워크포워드 계획): runtime review(런타임 검토) 후 필요 시 별도 WFO(워크포워드 최적화) 단계로 분리한다.
+- failure_memory(실패 기억): closeout helper recursion(종료 기록 도우미 재귀)은 코드/상태 문제로 기록하고, 원시 MT5(메타트레이더5) 숫자는 검토 전 단서로만 둔다.
+- evidence_boundary(근거 경계): `runtime_probe_unreviewed_handoff(런타임 탐침 미검토 인계)`
+
+## 2026-06-01 Stage339 Lifecycle Exit Probe Review Seed(339단계 생명주기 청산 탐침 검토 씨앗)
+
+- idea_id(아이디어 ID): `stage339_lifecycle_exit_probe_review_seed`
+- hypothesis(가설): run338M(338M 실행)의 shorter hold(짧은 보유)와 side-balance(방향 균형) 변형은 MT5(메타트레이더5)에서 개선 단서를 줄 수 있지만, run338N(338N 실행) closeout(종료 기록)이 실패했으므로 먼저 근거 정체성을 검토해야 한다.
+- legacy_relation(레거시 관계): `none(없음)`
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
+- broad_sweep(넓은 탐색): run338M(338M 실행) 6개 lifecycle/exit(생명주기/청산) 변형.
+- extreme_sweep(극단 탐색): close_on_flat(평탄 청산), shorter_hold(짧은 보유), asymmetric_long_relief(비대칭 롱 완화).
+- micro_search_gate(미세 탐색 게이트): run339B(339B 실행)가 exact parity(정확 동등성), report identity(보고서 정체성), KPI floors(KPI 하한)를 검토해야 한다.
+- wfo_plan(워크포워드 계획): runtime review(런타임 검토) 후 필요 시 별도 WFO(워크포워드 최적화) 단계로 분리한다.
+- failure_memory(실패 기억): closeout helper recursion(종료 기록 도우미 재귀)은 코드/상태 문제로 기록하고, 원시 MT5(메타트레이더5) 숫자는 검토 전 단서로만 둔다.
+- evidence_boundary(근거 경계): `runtime_probe_unreviewed_handoff(런타임 탐침 미검토 인계)`
+
+## 2026-06-01 Stage339B Shorter Hold Side-Balance Seed(짧은 보유 방향 균형 씨앗)
+
+- idea_id(아이디어 ID): `stage339_shorter_hold_side_balance_expansion`
+- hypothesis(가설): m02(엠02)의 hold=12(보유 12) 수익 구조를 유지하면서 short_threshold(숏 임계값)를 높이고 long_threshold(롱 임계값)를 약하게 낮추면 trade_count(거래수)와 side_balance(방향 균형)를 같이 개선할 수 있다.
+- legacy_relation(레거시 관계): `none(없음)`
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
+- broad_sweep(넓은 탐색): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339B/run339C_queue.csv`
+- extreme_sweep(극단 탐색): short_threshold(숏 임계값) 0.60, long_threshold(롱 임계값) 0.48 without close_on_flat(평탄 청산 없음)
+- micro_search_gate(미세 탐색 게이트): MT5(메타트레이더5) exact parity(정확 동등성) and trade_count>=30(거래수 30 이상) with positive expectancy(기대값 양수)
+- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+
+## 2026-06-01 Stage339B Shorter Hold Side-Balance Seed(짧은 보유 방향 균형 씨앗)
+
+- idea_id(아이디어 ID): `stage339_shorter_hold_side_balance_expansion`
+- hypothesis(가설): m02(엠02)의 hold=12(보유 12) 수익 구조를 유지하면서 short_threshold(숏 임계값)를 높이고 long_threshold(롱 임계값)를 약하게 낮추면 trade_count(거래수)와 side_balance(방향 균형)를 같이 개선할 수 있다.
+- legacy_relation(레거시 관계): `none(없음)`
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
+- broad_sweep(넓은 탐색): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339B/run339C_queue.csv`
+- extreme_sweep(극단 탐색): short_threshold(숏 임계값) 0.60, long_threshold(롱 임계값) 0.48 without close_on_flat(평탄 청산 없음)
+- micro_search_gate(미세 탐색 게이트): MT5(메타트레이더5) exact parity(정확 동등성) and trade_count>=30(거래수 30 이상) with positive expectancy(기대값 양수)
+- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+
+## 2026-06-01 Stage339E Quality Balance Blend Seed(품질-균형 혼합 씨앗)
+
+- idea_id(아이디어 ID): `stage339_quality_balance_blend_after_split`
+- hypothesis(가설): c01(씨01)의 profit quality(수익 품질)와 c07(씨07)의 side balance(방향 균형)는 min_margin(최소 마진)과 shorter hold(짧은 보유)를 섞으면 동시에 개선될 수 있다.
+- legacy_relation(레거시 관계): `none(없음)`
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
+- broad_sweep(넓은 탐색): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339E/run339F_queue.csv`
+- extreme_sweep(극단 탐색): long_threshold(롱 임계값) 0.46 with min_margin(최소 마진) 0.02, hold(보유) 10.
+- micro_search_gate(미세 탐색 게이트): MT5(메타트레이더5) exact parity(정확 동등성), trade_count(거래수) >= 30, recovery_factor(회복 계수) >= 1.0.
+- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+
+## 2026-06-01 Stage340 Quality Balance Pressure Review Seed(340단계 품질-균형 압박 검토 씨앗)
+
+- idea_id(아이디어 ID): `stage340_quality_balance_pressure_review_seed`
+- hypothesis(가설): run339G(339G 실행)의 f01(에프01) local MT5 clue(로컬 MT5 단서)가 pressure test(압박 시험)를 받을 가치가 있을 수 있다.
+- source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1`
+- next_run(다음 실행): `run340B_review_quality_balance_blend_mt5_probe_without_db_v1`
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
+- evidence_boundary(근거 경계): `runtime_probe_review_required_no_selection(런타임 탐침 검토 필요, 선정 없음)`
+- effect(효과): 긍정 단서를 보존하되 Stage340(340단계)에서 새롭게 작게 판단한다.
+
+## 2026-06-01 Stage340 Quality Balance Pressure Review Seed(340단계 품질-균형 압박 검토 씨앗)
+
+- idea_id(아이디어 ID): `stage340_quality_balance_pressure_review_seed`
+- hypothesis(가설): run339G(339G 실행)의 f01(에프01) local MT5 clue(로컬 MT5 단서)가 pressure test(압박 시험)를 받을 가치가 있을 수 있다.
+- source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1`
+- next_run(다음 실행): `run340B_review_quality_balance_blend_mt5_probe_without_db_v1`
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
+- evidence_boundary(근거 경계): `runtime_probe_review_required_no_selection(런타임 탐침 검토 필요, 선정 없음)`
+- effect(효과): 긍정 단서를 보존하되 Stage340(340단계)에서 새롭게 작게 판단한다.
+
+## 2026-06-01 Stage340B F01 Pressure Seed(340B F01 압박 씨앗)
+
+- idea_id(아이디어 ID): `stage340_f01_local_floor_pressure`
+- hypothesis(가설): f01(에프01)의 local floor pass(로컬 하한 통과)는 threshold/min_margin/hold(임계값/최소 마진/보유) 압박에서도 일부 유지될 수 있다.
+- source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1`
+- next_run(다음 실행): `run340C_materialize_f01_local_floor_pressure_mt5_probe_package_without_db_v1`
+- broad_sweep(넓은 탐색): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340B/run340C_queue.csv`
+- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+- effect(효과): 긍정 단서를 다음 MT5(메타트레이더5) runtime probe(런타임 탐침)로 검증한다.
+
+## 2026-06-01 Stage340E Corrected F01 Pressure Branch(340E 수정 F01 압박 분기)
+
+- idea_id(아이디어 ID): `stage340_f01_close_on_flat_false_pressure_repair`
+- hypothesis(가설): source f01(원본 f01)의 close_on_flat=False(평탄 청산 꺼짐) 의미를 복구하면 local floor(로컬 하한) 단서가 다시 보일 수 있다.
+- source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1` and `run340C_materialize_f01_local_floor_pressure_mt5_probe_package_without_db_v1`
+- next_run(다음 실행): `run340F_materialize_f01_close_on_flat_false_pressure_mt5_probe_package_without_db_v1`
+- queue(대기열): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/run340F_queue.csv`
+- effect(효과): 무거운 Stage340(340단계)을 새 대형 stage(단계)가 아니라 좁은 corrected branch(수정 분기)로 이어간다.
+
+## 2026-06-01 Stage340E Corrected F01 Pressure Branch(340E 수정 F01 압박 분기)
+
+- idea_id(아이디어 ID): `stage340_f01_close_on_flat_false_pressure_repair`
+- hypothesis(가설): source f01(원본 f01)의 close_on_flat=False(평탄 청산 꺼짐) 의미를 복구하면 local floor(로컬 하한) 단서가 다시 보일 수 있다.
+- source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1` and `run340C_materialize_f01_local_floor_pressure_mt5_probe_package_without_db_v1`
+- next_run(다음 실행): `run340F_materialize_f01_close_on_flat_false_pressure_mt5_probe_package_without_db_v1`
+- queue(대기열): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/run340F_queue.csv`
+- effect(효과): 무거운 Stage340(340단계)을 새 대형 stage(단계)가 아니라 좁은 corrected branch(수정 분기)로 이어간다.
+
+## 2026-06-01 Stage340H F01 Stability Cost Seed(340H F01 안정성 비용 씨앗)
+
+- idea_id(아이디어 ID): `stage341_f01_stability_cost_regime_validation`
+- hypothesis(가설): q01 exact control(정확 대조)과 q09 net-high clue(순수익 높은 단서)가 cost/session/regime(비용/세션/국면) 압박에서도 버티면 promotion_candidate(승격 후보) 비교 가치가 생긴다.
+- source(원천): `run340H_review_f01_close_on_flat_false_pressure_mt5_probe_without_db_v1`
+- next_run(다음 실행): `run341A_branch_stage340_to_f01_stability_cost_regime_validation_without_db_v1`
+- seed_queue(씨앗 대기열): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340H/run341A_seed_queue.csv`
+- effect(효과): 긍정 단서를 운영 주장으로 과장하지 않고 다음 외부 검증 질문으로 넘긴다.
+
+## 2026-06-01 run342A_branch_stage341_to_session_long_firewall_probe_without_db_v1 Session-long Firewall Branch(세션 롱 방화벽 분기)
+
+- seed(씨앗): q01/q09(큐01/큐09)는 +1 cost stress(+1 비용 압박)를 버티지만 early session(초반 세션)과 long side(롱 방향)가 약하다.
+- action(행동): early-long block(초반 롱 차단) side filter(사이드 필터)를 Stage 342(342단계) MT5 package/probe(MT5 패키지/탐침)로 분기한다.
+- effect(효과): q09(큐09)를 winner(승자)로 고정하지 않고, q01/q09(큐01/큐09) 모두에 같은 firewall(방화벽) 질문을 던진다.
+- claim_boundary(주장 경계): `state_sync_stage_branch_session_long_firewall_handoff_only_no_mt5_execution_no_candidate_selection_no_forward_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-01 Stage342D Soft Session-Long Firewall Seed(342D 부드러운 세션 롱 방화벽 씨앗)
+
+- idea_id(아이디어 ID): `stage342_soft_session_long_firewall`
+- hypothesis(가설): hard 0~110 early-long block(강한 0~110 초반 롱 차단)을 0~45 또는 0~75로 줄이면 PF(수익 팩터) 단서를 보존하면서 trade_count/side_balance(거래수/방향 균형)를 회복할 수 있다.
+- source(원천): `run342C_execute_f01_session_long_firewall_mt5_probe_without_db_v1`
+- next_run(다음 실행): `run342E_materialize_soft_session_long_firewall_mt5_probe_package_without_db_v1`
+- queue(대기열): `stages/342_session_long_firewall__early_long_filter_mt5_probe/02_runs/run342D/run342E_soft_session_long_firewall_probe_queue.csv`
+- effect(효과): 좋은 단서를 더 좁고 가벼운 탐색으로 이어간다.
+
+## 2026-06-01 Stage342G Early Long Quality Margin Mix Seed(342G 초반 롱 품질/마진 혼합 씨앗)
+
+- idea_id(아이디어 ID): `stage342_early_long_quality_margin_mix`
+- hypothesis(가설): time-window pruning(시간 구간 절단)만으로 부족한 early-long filter(초반 롱 필터)는 long_threshold/min_margin(롱 임계값/최소 마진)과 결합하면 trade_count/side_balance(거래수/방향 균형)를 회복할 수 있다.
+- source(원천): `run342F_execute_soft_session_long_firewall_mt5_probe_without_db_v1`
+- next_run(다음 실행): `run342H_materialize_early_long_quality_margin_mix_mt5_probe_package_without_db_v1`
+- queue(대기열): `stages/342_session_long_firewall__early_long_filter_mt5_probe/02_runs/run342G/run342H_early_long_quality_margin_mix_queue.csv`
+- effect(효과): 같은 시간 구간만 미세조정하지 않고 confidence surface(신뢰도 표면) 쪽으로 확장한다.
+
+## 2026-06-01 run344A_branch_stage343_to_directional_long_supply_quality_surface_without_db_v1 Directional Long Quality Surface Branch(방향성 롱 품질 표면 분기)
+
+- idea_id(아이디어 ID): `stage344_directional_long_quality_surface`
+- hypothesis(가설): profit anchor(수익 앵커)의 short supply(숏 공급)는 보존하고, long entries(롱 진입)는 separate quality/regime surface(별도 품질/국면 표면)로 다시 분리하면 trade shape(거래 형태)를 회복할 수 있다.
+- source(원천): `run343F_review_trade_shape_rescue_quality_margin_blend_mt5_probe_without_db_v1`
+- next_run(다음 실행): `run344B_design_directional_long_supply_quality_surface_without_db_v1`
+- queue(대기열): `stages/344_directional_long_quality__supply_surface_probe/02_runs/run344A/run344B_directional_long_supply_quality_surface_queue.csv`
+- effect(효과): minute block micro-tuning(분 차단 미세조정)을 반복하지 않고 long quality source(롱 품질 원천)를 새로 찾는다.
+- claim_boundary(주장 경계): `state_sync_stage_branch_directional_long_quality_surface_handoff_only_no_new_mt5_execution_no_candidate_selection_no_forward_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-01 run344C_materialize_directional_long_supply_quality_surface_package_without_db_v1 Directional Long Quality Runtime Mapping(방향성 롱 품질 런타임 매핑)
+
+- idea_id(아이디어 ID): `stage344_directional_long_quality_surface`
+- action(행동): rank/regime/exit ideas(순위/국면/청산 아이디어)를 EA-supported runtime mapping(EA 지원 런타임 매핑)으로 만들었다.
+- effect(효과): MT5 runtime probe(MT5 런타임 탐침)에서 실행 가능한 candidate surface(후보 표면)가 생겼다.
+- next_run(다음 실행): `run344D_execute_directional_long_supply_quality_surface_mt5_probe_without_db_v1`
+- claim_boundary(주장 경계): `research_development_directional_long_quality_surface_runtime_probe_package_only_no_mt5_execution_no_candidate_selection_no_forward_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## run344E s07 Trend Confirmed Long(추세 확인 롱)
+
+- idea(아이디어): low-ADX long veto(낮은 ADX 롱 거부)를 활용한 trend-confirmed long(추세 확인 롱).
+- evidence(근거): MT5 net profit(순수익) `186.67`, PF(수익 팩터) `4.11`, trades(거래수) `26`.
+- effect(효과): 다음 cost/session/regime validation(비용/세션/국면 검증)의 씨앗으로 사용.
+
+## run344E s07 Trend Confirmed Long(추세 확인 롱)
+
+- idea(아이디어): low-ADX long veto(낮은 ADX 롱 거부)를 활용한 trend-confirmed long(추세 확인 롱).
+- evidence(근거): MT5 net profit(순수익) `186.67`, PF(수익 팩터) `4.11`, trades(거래수) `26`.
+- effect(효과): 다음 cost/session/regime validation(비용/세션/국면 검증)의 씨앗으로 사용.
+
+## run344F s07 Validation Seed(s07 검증 씨앗)
+
+- idea(아이디어): s07 trend-confirmed long(추세 확인 롱)을 비용/세션/국면/전진 인계 검증으로 압박한다.
+- effect(효과): 좋은 단서를 운영 승격으로 과장하지 않고 검증 work packet(작업 묶음)으로 넘긴다.
+
+## 2026-06-01 run344L Idea Seed(아이디어 씨앗)
+
+- idea(아이디어): cash-open long quality and short-carry decomposition(현금장 초반 롱 품질과 숏 기여 분해)
+- source_run(원천 실행): `run344L_review_s07_deal_level_cost_session_forward_replay_validation_without_db_v1`
+- effect(효과): s07 수익 집중을 다음 공격 탐색의 설계 질문으로 바꾼다.
+
+## 2026-06-01 run344L Idea Seed(아이디어 씨앗)
+
+- idea(아이디어): cash-open long quality and short-carry decomposition(현금장 초반 롱 품질과 숏 기여 분해)
+- source_run(원천 실행): `run344L_review_s07_deal_level_cost_session_forward_replay_validation_without_db_v1`
+- effect(효과): s07 수익 집중을 다음 공격 탐색의 설계 질문으로 바꾼다.
+
+| `IDEA-ST346-CASH-OPEN-ASYMMETRIC-SOURCE-PIVOT` | `346_cash_open_runtime_review__asymmetric_source_pivot` | run345B(345B 실행)의 exact runtime parity(정확 런타임 동등성)와 long/short imbalance(롱/숏 불균형)는 asymmetric model/source split(비대칭 모델/원천 분리)로 회수할 수 있다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `opened_research_development_only` | run346A(346A 실행)가 Stage346(346단계)을 열었고 run346B(346B 실행)가 review/source pivot(검토/원천 전환)을 수행한다. selected candidate(선택 후보), ONNX readiness(온엑스 준비), runtime authority(런타임 권위)는 없음 |
+
+| `IDEA-ST347-CASH-OPEN-ASYMMETRIC-LONG-SHORT-SOURCE` | `347_cash_open_asymmetric_source__long_short_head_design` | run346B(346B 실행)의 long-quality and short-carry fragments(롱 품질과 숏 기여 조각)를 separate source/head(분리 원천/헤드)로 설계하면 수익과 균형을 같이 회복할 수 있다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `opened_research_development_only` | next_action(다음 행동) `run347A_design_cash_open_asymmetric_long_short_source_without_db_v1`; selected candidate(선택 후보), ONNX readiness(온엑스 준비), runtime authority(런타임 권위)는 없음 |
+
+| `IDEA-ST347-RUN347A-ASYMMETRIC-SOURCE-DESIGN` | `347_cash_open_asymmetric_source__long_short_head_design` | asymmetric long/short source design(비대칭 롱/숏 원천 설계) `3`개를 materialization queue(물질화 대기열)로 만든다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `design_ready_no_selection` | next_action(다음 행동) `run347B_materialize_cash_open_asymmetric_source_inputs_without_db_v1`; model training(모델 학습), MT5 execution(MT5 실행), selection(선정), ONNX readiness(온엑스 준비) 없음 |
+
+| `IDEA-ST347-RUN347B-ASYMMETRIC-SOURCE-INPUTS` | `347_cash_open_asymmetric_source__long_short_head_design` | asymmetric source teacher labels and proxy grid(비대칭 원천 교사 라벨과 프록시 격자)을 물질화한다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `materialized_no_selection` | rows(행) `5827`, proxy_grid(프록시 격자) `225`; next_action(다음 행동) `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`; model training(모델 학습), MT5 execution(MT5 실행), selection(선정) 없음 |
+
+| `IDEA-ST347-RUN347C-ASYMMETRIC-SOURCE-PROXY-TRAINING` | `347_cash_open_asymmetric_source__long_short_head_design` | asymmetric source teacher labels(비대칭 원천 교사 라벨)을 proxy allocator/heads(프록시 배분기/헤드)로 증류한다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `proxy_training_completed_no_selection` | next_action(다음 행동) `run347D_review_cash_open_asymmetric_source_proxy_training_without_db_v1`; ONNX smoke(온엑스 점검)는 runtime authority(런타임 권위)가 아님 |
+
+## 2026-06-01 Stage348 Proxy Review Triage Seed(프록시 검토 분류 씨앗)
+
+- idea(아이디어): run347C proxy training(347C 프록시 학습)을 바로 후보로 올리지 않고, long OOS gap(롱 표본외 공백)과 short carry reconstruction(숏 기여 재구성)을 분리해 가장 작은 MT5 probe seed(MT5 탐침 씨앗)만 남긴다.
+- source(원천): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- next_run(다음 실행): `run348B_review_cash_open_asymmetric_proxy_training_without_db_v1`
+- effect(효과): Stage347(347단계)의 무거운 학습 산출물을 다시 끌고 다니지 않고 review/triage(검토/분류) 질문으로 전환한다.
+- claim_boundary(주장 경계): `state_sync_stage_branch_proxy_review_handoff_only_no_new_training_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-01 run348B ONNX Short-Carry Probe Seed(온엑스 숏 기여 탐침 씨앗)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- idea(아이디어): ONNX deployable(온엑스 배포 가능) allocator(배분기) 중 logistic_balanced/ExtraTrees(로지스틱/엑스트라트리)의 test q95/q90 threshold(테스트 q95/q90 임계값)를 MT5 probe package(MT5 탐침 패키지)로 보낸다.
+- seed_rows(씨앗 행): `4`
+- effect(효과): 약한 프록시를 후보로 승격하지 않고 runtime evidence(런타임 근거)로만 확인한다.
+- claim_boundary(주장 경계): `research_development_proxy_review_triage_only_no_new_training_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-01 run348B ONNX Short-Carry Probe Seed(온엑스 숏 기여 탐침 씨앗)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- idea(아이디어): ONNX deployable(온엑스 배포 가능) allocator(배분기) 중 logistic_balanced/ExtraTrees(로지스틱/엑스트라트리)의 test q95/q90 threshold(테스트 q95/q90 임계값)를 MT5 probe package(MT5 탐침 패키지)로 보낸다.
+- seed_rows(씨앗 행): `4`
+- effect(효과): 약한 프록시를 후보로 승격하지 않고 runtime evidence(런타임 근거)로만 확인한다.
+- claim_boundary(주장 경계): `research_development_proxy_review_triage_only_no_new_training_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-01 run348C ONNX Short-Carry MT5 Probe Package(온엑스 숏 기여 MT5 탐침 패키지)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- idea(아이디어): ONNX deployable allocator(온엑스 배포 가능 배분기)를 실제 MT5 probe(탐침)로 관찰한다.
+- attempts(시도): `4`
+- effect(효과): weak proxy short signal(약한 프록시 숏 신호)을 selection(선정)이 아니라 runtime evidence(런타임 근거)로 확인하게 한다.
+- claim_boundary(주장 경계): `research_development_runtime_probe_package_only_onnx_deployable_short_carry_feature_order_53_boundary_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-01 run348C ONNX Short-Carry MT5 Probe Package(온엑스 숏 기여 MT5 탐침 패키지)
+
+- source_run(원천 실행): `run347C_train_cash_open_asymmetric_source_proxy_models_without_db_v1`
+- idea(아이디어): ONNX deployable allocator(온엑스 배포 가능 배분기)를 실제 MT5 probe(탐침)로 관찰한다.
+- attempts(시도): `4`
+- effect(효과): weak proxy short signal(약한 프록시 숏 신호)을 selection(선정)이 아니라 runtime evidence(런타임 근거)로 확인하게 한다.
+- claim_boundary(주장 경계): `research_development_runtime_probe_package_only_onnx_deployable_short_carry_feature_order_53_boundary_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## stage351_no_scaler_or_1d_scaler_softmax_trade_surface
+
+- hypothesis(가설): Stage350E(350E 실행)에서 통과한 단순 ONNX(온엑스) 계약이면 거래 표면을 다시 만들 수 있다.
+- evidence_boundary(근거 경계): scout_and_handoff_only(스카우트 및 인계 전용)
+
+| `IDEA-ST355-DENSITY-RECOVERY-LABEL-MODEL-SOURCE` | `355_density_recovery_model_family__new_label_source_probe` | existing surface(기존 표면)의 threshold/horizon/filter(임계값/보유기간/필터) 회수가 실패했으므로, 새 label/source/model family(라벨/원천/모델 계열)로 trade/day(일별 거래수) 3+와 net/PF/stress(순수익/수익 팩터/압박)를 동시에 회복한다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `opened_research_development_only` | next_action(다음 행동) `run355A_design_density_recovery_label_model_source_without_db_v1`; selected candidate(선택 후보), ONNX readiness(온엑스 준비), runtime authority(런타임 권위)는 없음 |

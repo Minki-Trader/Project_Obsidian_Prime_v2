@@ -1,0 +1,5 @@
+﻿# Stage353 Trade Shape Offense(353단계 거래 형태 공격 탐색)
+
+- source_stage(원천 단계): `352_runtime_probe_report_repair__no_scaler_1d_mt5_kpi_identity`
+- current_run(현재 실행): `run353A_branch_stage352_to_trade_shape_offensive_rebuild_without_db_v1`
+- claim_boundary(주장 경계): `offensive_exploration_seed_from_stage352_report_repair_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
