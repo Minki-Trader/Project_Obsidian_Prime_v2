@@ -10,3 +10,14 @@ Stage362(362단계)는 Stage361A(361A 실행)의 q05 long-only margin grid(q05 �
 Action(행동): Stage361B(361B 실행)의 무거운 materialization bundle(구체화 묶음)을 Stage362(362단계)로 나눴다.
 
 Effect(효과): 다음 재진입은 margin grid(마진 격자) 하나만 실행하면 된다.
+
+## run362B Materialization Closeout(362B 구체화 종료)
+
+- report(보고서): `stages/362_long_only_margin_grid__cost_buffer_first_branch/03_reviews/run362B_q05_long_only_margin_grid_materialization.md`
+- final_decision(최종 결정): `stages/362_long_only_margin_grid__cost_buffer_first_branch/02_runs/run362B/final_decision.json`
+- passing_cross_split_rows(교차 분할 통과 행): `0`
+- next_run_id(다음 실행 ID): `run362C_review_q05_long_only_margin_grid_without_db_v1`
+
+Action(행동): Stage362B(362B 실행)는 margin grid(마진 격자)를 구체화했다.
+
+Effect(효과): 다음 재진입은 Stage362C review(362C 검토)에서 no-selection judgment(선택 없음 판정)와 다음 공격 씨앗을 결정한다.

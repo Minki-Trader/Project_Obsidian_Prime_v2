@@ -47,3 +47,9 @@ Effect(효과): regime router(국면 라우터), long quality label(롱 품질 �
 - `s361B_r03_long_quality_label_inputs`: margin grid(마진 격자) 단서가 비용 후 양수일 때 label stage(라벨 단계)로 분기
 - `s361B_r04_short_firewall_negative_control`: short control(숏 대조)은 negative control(부정 대조) stage(단계)로 분리
 - `s361B_r05_density_no_trade_controls`: density/no-trade controls(밀도/무거래 대조)는 score surface(점수 표면) 뒤 검증 stage(단계)로 분리
+
+## run362B Materialization Closeout(362B 구체화 종료)
+
+Action(행동): q05 long-only margin grid(q05 롱 단독 마진 격자)를 report-derived open-time probability filter(보고서 파생 진입 시점 확률 필터)로 구체화했다.
+
+Effect(효과): 35개 격자 중 validation/OOS +0.30 cost and density gate(검증/표본외 +0.30 비용 및 밀도 게이트)를 동시에 통과한 행은 `0`개이며, 다음 작업은 `run362C_review_q05_long_only_margin_grid_without_db_v1` 검토다.

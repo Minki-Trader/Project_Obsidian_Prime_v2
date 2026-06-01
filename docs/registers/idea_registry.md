@@ -706,3 +706,11 @@ Register ideas when they become durable work, not for every passing thought.
 - tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`
 - evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`
 - next_action(다음 행동): `run362B_materialize_q05_long_only_margin_grid_without_db_v1`
+
+## IDEA-ST362B-Q05-LONG-ONLY-MARGIN-GRID-MATERIALIZATION
+
+- idea(아이디어): q05 long-only(롱 단독) open-time probability margin(진입 시점 확률 마진)으로 비용 버퍼 표면을 찾는다.
+- evidence(근거): Stage362B(362B 실행) 35개 grid(격자)에서 validation/OOS +0.30 cost and density gate(검증/표본외 +0.30 비용 및 밀도 게이트) 동시 통과 `0`.
+- salvage_value(회수 가치): sparse cost-positive pockets(희소 비용 양수 구간)는 있으나 density collapse(밀도 붕괴)가 커서 lower-floor/rank/regime(낮은 하한/순위/국면) 공격 탐색 씨앗으로만 사용한다.
+- next_action(다음 행동): `run362C_review_q05_long_only_margin_grid_without_db_v1`
+- claim_boundary(주장 경계): `research_development_materialization_only_q05_long_only_margin_grid_report_derived_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
