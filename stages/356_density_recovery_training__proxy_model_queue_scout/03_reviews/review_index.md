@@ -8,3 +8,5 @@
 - `stages/356_density_recovery_training__proxy_model_queue_scout/03_reviews/run356B_density_recovery_proxy_training.md`
 
 - `stages/356_density_recovery_training__proxy_model_queue_scout/03_reviews/run356C_density_recovery_proxy_expansion.md`
+
+- `stages/356_density_recovery_training__proxy_model_queue_scout/03_reviews/run356C_stage_split_to_357.md`

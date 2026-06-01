@@ -462,3 +462,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - salvage_value(회수 가치): positive edge(양수 단서)는 trade/day(일별 거래수) 약 2 근처까지 올라왔고, dense rows(고밀도 행)는 validation(검증) 양수와 OOS(표본외) 음수 괴리를 드러냈다.
 - reopen_condition(재개 조건): high-density label pivot(고밀도 라벨 전환), cost/session aware target(비용/세션 인식 타깃), 또는 MT5-aligned lifecycle label(MT5 정렬 생명주기 라벨)이 생길 때.
 - do_not_repeat(반복 금지): 같은 label(라벨)에서 score threshold(점수 임계값)만 더 조이는 미세 탐색.
+
+## 2026-06-02 run357A_branch_stage356_to_high_density_label_pivot_without_db_v1
+
+- subject(대상): Stage356C density recovery expansion(356C 밀도 회복 확장)
+- result_label(결과 라벨): `negative_memory_for_stage357_seed(357단계 씨앗용 부정 기억)`
+- failure_boundary(실패 경계): validation trade/day(검증 일별 거래수) `2.4451219512195124`와 validation PF(검증 수익 팩터) `1.013945130731893`가 후보 조건을 넘지 못했다.
+- salvage_value(회수 가치): OOS PF(표본외 수익 팩터) `1.0744976620172675`와 OOS net(표본외 순수익) `0.031124279379026655`는 high-density label pivot(고밀도 라벨 전환)의 seed surface(씨앗 표면)로 보존한다.
+- reopen_condition(재개 조건): Stage357B(357B 실행)에서 timestamp-safe(시점 안전) label(라벨), ONNX parity(온엑스 동등성), non-overlap proxy(비중첩 프록시)로 trade/day(일별 거래수) 3+를 회복할 때.
+- claim_boundary(주장 경계): `state_sync_stage_branch_user_requested_high_density_label_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
