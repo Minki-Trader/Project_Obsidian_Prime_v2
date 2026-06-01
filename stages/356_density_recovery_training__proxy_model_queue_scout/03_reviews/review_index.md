@@ -4,3 +4,5 @@
 - `stages/356_density_recovery_training__proxy_model_queue_scout/03_reviews/stage_run_ledger.csv`
 - `stages/356_density_recovery_training__proxy_model_queue_scout/00_spec/stage_brief.md`
 - `stages/356_density_recovery_training__proxy_model_queue_scout/01_inputs/run356B_training_queue_ref.csv`
+
+- `stages/356_density_recovery_training__proxy_model_queue_scout/03_reviews/run356B_density_recovery_proxy_training.md`

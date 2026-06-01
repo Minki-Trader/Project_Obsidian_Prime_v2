@@ -5949,3 +5949,13 @@ Effect(효과): current truth(현재 진실)는 `356_density_recovery_training__
 - training_queue_rows(학습 대기열 행): `4`
 - label_table_rows(라벨 표 행): `186600`
 - claim_boundary(주장 경계): `state_sync_stage_branch_user_requested_proxy_training_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 run356B_train_density_recovery_proxy_models_without_db_v1
+
+Action(행동): 4개 label variant(라벨 변형)와 3개 model family(모델 계열)를 학습하고 proxy threshold sweep(프록시 임계값 탐색)을 실행했다.
+
+Effect(효과): mt5_probe_queue_rows(MT5 탐침 대기열 행) `0`로 Stage356B(356B 실행)를 닫고, next_run(다음 실행)을 `run356C_expand_density_recovery_proxy_training_search_without_db_v1`로 동기화했다.
+
+- status(상태): `completed_stage356B_proxy_training_no_density_stress_queue_expand_required_no_selection`
+- judgment(판정): `negative_proxy_training_scout_no_density_stress_edge_queue_no_operating_claim`
+- claim_boundary(주장 경계): `research_development_proxy_model_training_scout_only_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

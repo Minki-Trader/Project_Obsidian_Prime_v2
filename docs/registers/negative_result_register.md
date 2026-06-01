@@ -442,3 +442,13 @@ Negative results are preserved because they prevent repeated dead ends.
 - salvage_value(회수 가치): best near miss(최상 근접 실패)를 다음 label/source/model family(라벨/원천/모델 계열) 설계 제약으로 사용한다.
 - do_not_repeat(반복 금지): 같은 surface(표면)의 threshold-only search(임계값 전용 탐색)를 운영 후보처럼 반복하지 않는다.
 - reopen_condition(재개 조건): 새 label/source/model family(라벨/원천/모델 계열) 또는 MT5 runtime diff(MT5 런타임 차이)가 생길 때.
+
+## 2026-06-02 run356B_train_density_recovery_proxy_models_without_db_v1
+
+- hypothesis(가설): density recovery labels(밀도 회복 라벨)이 proxy training(프록시 학습)에서 trade/day(일별 거래수) 3+와 stress net(압박 순수익)을 동시에 회복한다.
+- variants_tried(시도 변형): 4 label variants(라벨 변형) x 3 model families(모델 계열) x threshold/margin/session/ADX grid(임계값/마진/세션/ADX 격자).
+- failed_boundary(실패 경계): `proxy_scout_queue(프록시 탐색 대기열)`.
+- why_failed(실패 이유): validation/OOS stress net, PF, density, balance(검증/표본외 압박 순수익, PF, 밀도, 균형) 동시 통과 행이 없다.
+- salvage_value(회수 가치): best proxy rows(최선 프록시 행)와 ONNX parity(온엑스 동등성) 행을 다음 확장 탐색 씨앗으로 보존한다.
+- reopen_condition(재개 조건): new feature/source/model or relaxed-but-recorded scout surface(새 피처/원천/모델 또는 기록된 완화 탐색 표면).
+- do_not_repeat(반복 금지): 같은 label/table(라벨/표)에서 동일 grid(격자)만 반복하지 않는다.
