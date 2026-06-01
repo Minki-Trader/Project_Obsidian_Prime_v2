@@ -5931,3 +5931,21 @@ Action(행동): Stage354C(354C 실행) expanded proxy filter sweep(확장 프록
 Effect(효과): density-valid queue(밀도 유효 대기열) `0`개를 확인하고 다음 실행을 `run355A_design_density_recovery_label_model_source_without_db_v1`로 동기화했다.
 
 - claim_boundary(주장 경계): `expanded_proxy_filter_sweep_only_existing_stage351b_surfaces_raw_close_horizon_proxy_mt5_probe_required_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 run355B_materialize_density_recovery_label_inputs_without_db_v1
+
+Action(행동): Stage355B(355B 실행) timestamp-safe label materialization(시점 안전 라벨 물질화)을 완료했다.
+
+Effect(효과): training queue(학습 대기열) `4`개를 만들고 다음 실행을 `run355C_train_density_recovery_proxy_models_without_db_v1`로 동기화했다.
+
+- claim_boundary(주장 경계): `research_development_label_materialization_only_timestamp_safe_density_recovery_inputs_no_model_training_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 run356A_branch_stage355_to_density_recovery_proxy_training_without_db_v1
+
+Action(행동): Stage355B(355B 실행) label materialization(라벨 물질화) 이후 model training(모델 학습)을 Stage356(356단계)으로 분기했다.
+
+Effect(효과): current truth(현재 진실)는 `356_density_recovery_training__proxy_model_queue_scout`와 `run356B_train_density_recovery_proxy_models_without_db_v1`로 가벼워졌고, Stage355(355단계)는 no_selection split(선택 없음 분기)로 닫혔다.
+
+- training_queue_rows(학습 대기열 행): `4`
+- label_table_rows(라벨 표 행): `186600`
+- claim_boundary(주장 경계): `state_sync_stage_branch_user_requested_proxy_training_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

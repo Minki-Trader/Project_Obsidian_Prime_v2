@@ -1,13 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
-- current_stage_id(현재 단계 ID): `355_density_recovery_model_family__new_label_source_probe`
-- current_run_id(현재 실행 ID): `run355B_materialize_density_recovery_label_inputs_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run355A_design_density_recovery_label_model_source_without_db_v1`
-- current_status(현재 상태): `completed_stage355A_density_recovery_design_queue_opened_no_selection`
-- current_judgment(현재 판정): `experiment_design_completed_new_label_model_source_queue_no_operating_claim`
-- current_decision(현재 결정): `stage355A_open_run355B_materialize_density_recovery_label_inputs`
-- claim_boundary(주장 경계): `research_development_experiment_design_only_new_label_source_model_queue_no_training_no_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- current_stage_id(현재 단계 ID): `356_density_recovery_training__proxy_model_queue_scout`
+- current_run_id(현재 실행 ID): `run356B_train_density_recovery_proxy_models_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run356A_branch_stage355_to_density_recovery_proxy_training_without_db_v1`
+- current_status(현재 상태): `completed_stage356A_user_requested_stage_split_proxy_training_opened_no_selection`
+- current_judgment(현재 판정): `stage_branch_completed_stage355_label_materialization_split_to_stage356_proxy_training_no_operating_claim`
+- current_decision(현재 결정): `stage356A_open_run356B_train_density_recovery_proxy_models_without_db_v1`
+- claim_boundary(주장 경계): `state_sync_stage_branch_user_requested_proxy_training_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
-Action(행동): Stage355A(355A 실행)에서 density recovery label/model/source design(밀도 회복 라벨/모델/원천 설계)을 완료했다.
+Action(행동): Stage355B(355B 실행)의 timestamp-safe label materialization(시점 안전 라벨 물질화)을 닫고, Stage356(356단계) proxy model training(프록시 모델 학습)으로 분기했다.
 
-Effect(효과): Stage355B(355B 실행)는 `3`개 materialization queue(물질화 대기열)에서 새 label source(라벨 원천)를 실제 데이터로 만든다.
+Effect(효과): 다음 재진입(re-entry, 재진입)은 Stage356(356단계)의 4행 training queue(학습 대기열)에서 바로 시작하며, MT5 KPI(MT5 핵심 성과 지표)는 아직 주장하지 않는다.
