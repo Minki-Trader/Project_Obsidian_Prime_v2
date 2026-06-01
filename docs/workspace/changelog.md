@@ -6001,3 +6001,8 @@ Effect(효과): `mt5_probe_queue_rows=8`로 Stage357B(357B 실행)를 닫고, ne
 
 - action(행동): `run359D_branch_to_stage360_regime_stability_pivot_v1` completed(완료), `360_regime_stability_pivot__oos_long_cash_edge_validation_loss` opened(개설), `run360A_design_regime_stability_pivot_without_db_v1` set as current run(현재 실행으로 설정).
 - effect(효과): Stage359C(359C 실행)의 OOS positive clue(표본외 긍정 단서)와 validation/cost weakness(검증/비용 약점)를 Stage360(360단계)의 좁은 질문으로 분리했다.
+
+## 2026-06-02 Stage360A regime stability design(Stage360A 국면 안정성 설계)
+
+- action(행동): `run360A_design_regime_stability_pivot_without_db_v1` completed(완료), `run360B_materialize_regime_stability_pivot_inputs_without_db_v1` opened(개설).
+- effect(효과): q05 OOS clue(q05 표본외 단서)를 12-row materialization queue(12행 물질화 대기열)와 WFO/cost/session controls(WFO/비용/세션 대조)로 바꿨다.

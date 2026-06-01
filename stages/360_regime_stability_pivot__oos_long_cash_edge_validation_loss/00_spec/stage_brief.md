@@ -31,3 +31,16 @@ Can the Stage359C q05 OOS long/cash edge(Stage359C q05 표본외 롱/현금장 �
 Action(행동): `run360A_design_regime_stability_pivot_without_db_v1`는 side/session/regime rule stack(방향/세션/국면 규칙 묶음), long-cash preservation(롱/현금장 보존), short firewall(숏 방화벽), late-session veto(후반 세션 거부), cost stress(비용 압박)를 설계한다.
 
 Effect(효과): OOS-only positive(표본외만 긍정)를 후보로 오해하지 않고, validation/OOS stability(검증/표본외 안정성)를 다시 공격적으로 탐색한다.
+
+## run360A Design Closeout(360A 설계 종료 기록)
+
+- run_id(실행 ID): `run360A_design_regime_stability_pivot_without_db_v1`
+- status(상태): `completed_stage360A_regime_stability_pivot_design_ready_no_selection_no_mt5`
+- judgment(판정): `regime_stability_pivot_design_ready_materialization_required_no_operating_claim`
+- next_run_id(다음 실행 ID): `run360B_materialize_regime_stability_pivot_inputs_without_db_v1`
+- queue_rows(대기열 행): `12`
+- claim_boundary(주장 경계): `research_development_design_only_regime_stability_pivot_no_model_training_no_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+Action(행동): q05 OOS net(q05 표본외 순수익) `262.85` 단서를 broad/exreme/WFO/cost design(넓은/극단/WFO/비용 설계)로 전환했다.
+
+Effect(효과): Stage360B(360B 실행)는 OOS clue(표본외 단서)를 바로 후보로 쓰지 않고 validation/cost/month/session(검증/비용/월/세션) 제약부터 물질화한다.
