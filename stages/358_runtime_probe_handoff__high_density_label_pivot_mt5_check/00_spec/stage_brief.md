@@ -1,41 +1,28 @@
 ﻿# Stage358 Runtime Probe Handoff(358단계 런타임 탐침 인계)
 
 - canonical_stage_id(정식 단계 ID): `358_runtime_probe_handoff__high_density_label_pivot_mt5_check`
-- current_run_id(현재 실행 ID): `run358B_package_high_density_label_pivot_mt5_probe_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run358A_branch_stage357_to_runtime_probe_handoff_without_db_v1`
+- current_run_id(현재 실행 ID): `run358C_execute_high_density_label_pivot_mt5_probe_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run358B_package_high_density_label_pivot_mt5_probe_without_db_v1`
 - source_stage_id(원천 단계 ID): `357_high_density_label_pivot__trade_frequency_recovery`
 - source_run_id(원천 실행 ID): `run357B_design_high_density_label_pivot_without_db_v1`
-- superseded_run_id(대체된 실행 ID): `run357C_package_high_density_label_pivot_mt5_probe_without_db_v1`
-- selection_status(선택 상태): `stage_branch_opened_no_selection(단계 분기 완료, 선택 없음)`
-- claim_boundary(주장 경계): `state_sync_stage_branch_user_requested_runtime_probe_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `runtime_probe_package_ready_no_selection(런타임 탐침 패키지 준비, 선택 없음)`
+- claim_boundary(주장 경계): `research_development_runtime_probe_package_only_high_density_label_pivot_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
 Stage357B(357B 실행)의 high-density H12 classifier proxy queue(고밀도 H12 분류기 프록시 대기열)를 MT5 package/runtime probe(MT5 패키지/런타임 탐침)로 옮기고, proxy expected value(프록시 예상값)와 MT5 KPI(MT5 핵심 성과 지표)를 의미 있게 비교할 수 있는가?
 
-## Source Truth(원천 진실)
+## Stage358B Closeout(358B 종료 기록)
 
-- trained_models(학습 모델): `12`
-- onnx_parity_rows(온엑스 동등성 행): `12/12`
-- threshold_sweep_rows(임계값 스윕 행): `6912`
-- mt5_probe_queue_rows(MT5 탐침 대기열 행): `8`
-- best_model_id(최선 모델 ID): `run357B_d04_h12_q45_55_high_density_band__extratrees_cls_depth5_leaf100_seed11`
-- best_validation_trade_per_day(최선 검증 일별 거래수): `3.191256830601093`
-- best_validation_stress_pf(최선 검증 압박 수익 팩터): `1.0468369083281632`
-- best_oos_trade_per_day(최선 표본외 일별 거래수): `3.4427480916030535`
-- best_oos_stress_pf(최선 표본외 압박 수익 팩터): `1.0837603236717956`
-- candidate_gate(후보 게이트): `passed_proxy_mt5_probe_queue(프록시 MT5 탐침 대기열 통과)`
+- package_status(패키지 상태): `ready_for_run358C(358C 실행 준비)`
+- executable_attempt_rows(실행 가능 시도 행): `4`
+- mapping_gap_rows(매핑 차이 행): `6`
+- expected_tape_rows(예상 테이프 행): `139424`
 
-## Scope(범위)
+Action(행동): `pside/all(방향확률/전체 세션)` 후보 2개를 validation/oos(검증/표본외) 4개 attempt(시도)로 물질화했다.
 
-Stage358(358단계)는 package/handoff/runtime probe(패키지/인계/런타임 탐침), proxy-to-MT5 attribution(프록시 대 MT5 귀속), runtime parity gap(런타임 동등성 차이) 기록을 다룬다. 새 model training(모델 학습)이나 새 proxy scout(프록시 탐색)는 이 단계의 기본 작업이 아니다.
+Effect(효과): 다음 실행은 MT5 runtime evidence(MT5 런타임 근거)를 만들 수 있고, 지원되지 않는 session/score policy(세션/점수 정책)는 runtime parity gap(런타임 동등성 차이)으로 분리된다.
 
-## Next Work(다음 작업)
+## Required Boundary(필수 경계)
 
-- next_run_id(다음 실행 ID): `run358B_package_high_density_label_pivot_mt5_probe_without_db_v1`
-- primary_family(주 작업군): `runtime_backtest(런타임 백테스트)`
-- required_boundary(필수 경계): MT5 execution evidence(MT5 실행 근거)가 없으면 runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), goal achieve(목표 달성)를 주장하지 않는다.
-
-Action(행동): MT5 probe(MT5 탐침) 작업을 새 단계로 분리한다.
-
-Effect(효과): proxy scout(프록시 탐색) 기록과 runtime verification(런타임 검증) 기록이 섞이지 않고, 다음 회차가 패키지와 실행 근거만 좁게 다룰 수 있다.
+MT5 execution evidence(MT5 실행 근거)가 없으면 runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), goal achieve(목표 달성)를 주장하지 않는다.
