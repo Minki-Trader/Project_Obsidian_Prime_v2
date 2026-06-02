@@ -43,3 +43,5 @@
 - `run364U_materialize_density_side_balance_repair_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364U_density_side_balance_repair_inputs.md` - density/side-balance repair inputs(밀도/방향 균형 수리 입력).
 
 - `run364V_train_density_side_balance_repair_onnx_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364V_density_side_balance_repair_onnx_scout.md` - density side-balance ONNX scout(밀도 방향 균형 온엑스 탐색).
+
+- [run364W] run364W_package_density_side_balance_repair_runtime_probe_without_db_v1: stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364W_density_side_balance_repair_runtime_probe_package.md - runtime package(런타임 패키지), MT5 execution(MT5 실행) not_run(미실행)

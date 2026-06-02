@@ -146,3 +146,8 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 - action(행동): existing ONNX probabilities(기존 온엑스 확률)에 short threshold(숏 임계값)와 ADX/maxhold(ADX/최대보유)를 조합한 dual-side runtime surface(양방향 런타임 표면)를 만들었다.
 - effect(효과): `dual_pshort_0_45__adx_block_40_0__maxhold_8`가 validation/combined density(검증/합산 밀도) `3.0721649485` / `3.2462462462`와 long/short(롱/숏) `952` / `129`를 보여 다음 MT5 package(MT5 패키지) 후보가 됐다.
 - next(다음): `run364W_package_density_side_balance_repair_runtime_probe_without_db_v1`
+
+## run364W density side-balance runtime package(밀도 방향 균형 런타임 패키지)
+
+- current truth(현재 진실): selected dual-side candidate(선택 양방향 후보)를 MT5 package(MT5 패키지)로 만들었다.
+- effect(효과): run364X Strategy Tester(전략 테스터) 실행 준비가 됐다.

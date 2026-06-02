@@ -6219,3 +6219,5 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): density/side-balance repair inputs(밀도/방향 균형 수리 입력)를 materialize(구체화)했다.
 - effect(효과): 다음 `run364V_train_density_side_balance_repair_onnx_scout_without_db_v1`에서 ADX40/maxhold6(ADX40/최대보유6)와 short router(숏 라우터) 씨앗을 바로 시험할 수 있다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364U_density_side_balance_repair_inputs.md`
+
+- run364W_package_density_side_balance_repair_runtime_probe_without_db_v1: packaged(패키지 완료) selected density side-balance repair candidate(선택 밀도 방향 균형 수리 후보) for MT5 runtime probe(MT5 런타임 탐침).

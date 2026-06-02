@@ -877,3 +877,5 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): existing ONNX(기존 온엑스)의 short probability(숏 확률)를 runtime threshold(런타임 임계값)로 열면 long-only failure(롱 전용 실패)를 줄이면서 density(밀도)를 유지할 수 있다.
 - positive clue(긍정 단서): `dual_pshort_0_45__adx_block_40_0__maxhold_8` proxy combined net/PF/density(프록시 합산 순수익/수익 팩터/밀도) `771.564` / `1.2218406503` / `3.2462462462`.
 - boundary(경계): MT5 runtime probe(MT5 런타임 탐침) 전 operating claim(운영 주장) 없음.
+
+- run364W_package_density_side_balance_repair_runtime_probe_without_db_v1: dual-side threshold + ADX long block(양방향 임계값 + ADX 롱 차단) moved from proxy(프록시) to runtime package(런타임 패키지); MT5 evidence(MT5 근거) still required(아직 필요).
