@@ -559,3 +559,9 @@ Negative results are preserved because they prevent repeated dead ends.
 - salvage_value(회수 가치): dense M5 source(고밀도 M5 원천), calendar exit semantics(캘린더 청산 의미), no-split simulator(비분할 시뮬레이터)는 다음 탐색에 재사용한다.
 - reopen_condition(재개 조건): direct dense M5 ONNX scout(직접 고밀도 M5 ONNX 탐색) 또는 MT5 dense flat tape(고밀도 flat 테이프)에서 PF>=1.05와 trade/day>=3이 같이 나온다.
 - do_not_repeat(반복 금지): sparse long trade table(희소 롱 거래표)에만 cost filter(비용 필터)를 얹어 운영 후보처럼 말하지 않는다.
+
+## run364J Direct Dense M5 ONNX Scout No Strict Candidate(364J 직접 고밀도 5분봉 온엑스 탐색 엄격 후보 없음)
+
+Action(행동): direct dense M5 ONNX scout(직접 고밀도 5분봉 온엑스 탐색)를 strict cost-density gate(엄격 비용-밀도 게이트)로 닫았다.
+
+Effect(효과): 다음 작업은 failure memory(실패 기억)를 이용해 새 offensive seed(공격 씨앗)를 고른다. 아이디어 사망(idea dead, 아이디어 사망)은 아니다.

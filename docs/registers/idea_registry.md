@@ -810,3 +810,11 @@ Register ideas when they become durable work, not for every passing thought.
 - failure_memory(실패 기억): run364I found cost-filter overlay OOS PF weak(run364I 비용 필터 덧씌우기 표본외 수익 팩터 약함).
 - evidence_boundary(근거 경계): `scout_only(탐색 전용)`
 - next_action(다음 행동): `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`
+
+## IDEA-ST364J-DIRECT-DENSE-M5-RETURN-ONNX-SCOUT
+
+- idea(아이디어): direct dense M5 return label(직접 고밀도 5분봉 수익 라벨)로 sparse tape(희소 테이프) 문제를 우회한다.
+- best_model_id(최선 모델 ID): `all58__dense_h24_move8pts__rf_depth5_leaf80_n48`.
+- best_oos_net(최선 표본외 순수익): `439.321`.
+- runtime_probe_candidate_count(런타임 탐침 후보 수): `0`.
+- claim_boundary(주장 경계): `research_development_direct_dense_m5_model_training_and_proxy_scout_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.

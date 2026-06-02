@@ -51,3 +51,9 @@ Effect(효과): proxy expected tape(프록시 예상 테이프)와 MT5 telemetry
 Action(행동): dense source repair(고밀도 원천 수리)를 proxy scorecard(프록시 점수표)로 구체화했다.
 
 Effect(효과): 다음 실행은 `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`이고, 운영 주장은 없다.
+
+## run364J Direct Dense M5 ONNX Scout(364J 직접 고밀도 5분봉 온엑스 탐색)
+
+Action(행동): direct dense M5 model(직접 고밀도 5분봉 모델)을 학습하고 ONNX smoke parity(온엑스 연기 동등성)를 점검했다.
+
+Effect(효과): 다음 작업은 `run364K_review_direct_dense_m5_onnx_scout_without_db_v1`이고, 운영 주장(operating claim, 운영 주장)은 없다.
