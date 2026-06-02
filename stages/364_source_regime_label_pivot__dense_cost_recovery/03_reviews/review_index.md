@@ -7,3 +7,5 @@
 - `run364C_review_timestamp_context_cost_surface_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364C_timestamp_context_cost_surface_review.md` - timestamp context cost surface review(시점 문맥 비용 표면 검토).
 
 - `run364D_materialize_timestamp_context_training_seed_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364D_timestamp_context_training_seed_materialization.md` - timestamp context training seed materialization(시점 문맥 학습 씨앗 구체화).
+
+- `run364E_train_timestamp_context_cost_filter_model_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364E_timestamp_context_cost_filter_model_training.md` - timestamp context cost filter model training(시점 문맥 비용 필터 모델 학습).

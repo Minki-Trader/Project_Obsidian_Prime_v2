@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364E_train_timestamp_context_cost_filter_model_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364D_materialize_timestamp_context_training_seed_without_db_v1`
+- current_run_id(현재 실행 ID): `run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364E_train_timestamp_context_cost_filter_model_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `training_seed_materialized_model_training_opened_no_selection(학습 씨앗 구체화 완료, 모델 학습 열림, 선택 없음)`
-- claim_boundary(주장 경계): `research_development_materialization_only_timestamp_context_training_seed_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `model_trained_onnx_exported_runtime_probe_opened_no_operating_claim(모델 학습 및 ONNX 내보내기 완료, 런타임 탐침 열림, 운영 주장 없음)`
+- claim_boundary(주장 경계): `research_development_model_training_and_onnx_export_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -54,3 +54,9 @@ Effect(효과): best seed(최선 씨앗)는 `s364_r02_drop_worst_open_hour_minut
 Action(행동): timestamp-safe feature/label seed table(시점 안전 피처/라벨 씨앗 표) `1114`행을 만들었다.
 
 Effect(효과): 다음 작업은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`에서 model training(모델 학습)과 ONNX precheck(ONNX 사전 점검)를 시작한다.
+
+## run364E Model Training Closeout(364E 모델 학습 종료)
+
+Action(행동): cost-filter model(비용 필터 모델)을 학습하고 ONNX smoke(ONNX 스모크)를 `3/4` 통과시켰다.
+
+Effect(효과): best ONNX model(최선 ONNX 모델)은 `rf_depth3_balanced`이고 다음 작업은 `run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1`다.

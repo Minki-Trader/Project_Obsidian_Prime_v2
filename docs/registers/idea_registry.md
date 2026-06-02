@@ -772,3 +772,11 @@ Register ideas when they become durable work, not for every passing thought.
 - model_task_queue(모델 작업 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364D/run364E_model_task_queue.csv`.
 - next_action(다음 행동): `run364E_train_timestamp_context_cost_filter_model_without_db_v1`.
 - claim_boundary(주장 경계): `research_development_materialization_only_timestamp_context_training_seed_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## IDEA-ST364E-TIMESTAMP-CONTEXT-COST-FILTER-ONNX
+
+- idea(아이디어): timestamp context(시점 문맥)를 ONNX-exportable cost-filter model(ONNX 변환 가능 비용 필터 모델)로 학습한다.
+- best_onnx_model(최선 ONNX 모델): `rf_depth3_balanced` / `density_3_0`.
+- validation_oos_read(검증/표본외 판독): validation_net(검증 순수익) `287.83`, oos_net(표본외 순수익) `78.86`.
+- runtime_probe_queue(런타임 탐침 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364E/run364F_runtime_probe_queue.csv`.
+- claim_boundary(주장 경계): `research_development_model_training_and_onnx_export_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.

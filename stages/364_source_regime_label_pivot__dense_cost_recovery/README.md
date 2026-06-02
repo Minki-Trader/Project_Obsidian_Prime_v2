@@ -21,3 +21,9 @@ Effect(효과): 다음 실행은 `run364D_materialize_timestamp_context_training
 Action(행동): q05 trade table(q05 거래표)를 model training seed(모델 학습 씨앗)로 구체화했다.
 
 Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`이고, 운영 주장은 없다.
+
+## run364E Model Training(364E 모델 학습)
+
+Action(행동): timestamp context(시점 문맥) 학습 씨앗으로 ONNX-exportable cost filter(ONNX 변환 가능 비용 필터)를 만들었다.
+
+Effect(효과): 다음 실행은 `run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1`이고, 운영 주장은 없다.
