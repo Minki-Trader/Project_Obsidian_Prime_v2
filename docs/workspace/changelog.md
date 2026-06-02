@@ -6165,3 +6165,15 @@ Effect(효과): proxy candidate(프록시 후보)가 생겼지만 MT5 runtime pr
 Action(행동): dynamic exit trade shape(동적 청산 거래 형태)를 학습 모델 위에 얹어 3/day+(일 3회 이상) 후보를 탐색했다.
 
 Effect(효과): proxy candidate(프록시 후보)가 생겼지만 MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장을 하지 않는다.
+
+## 2026-06-02 run364M Density Lift Runtime Probe Package(364M 밀도 상향 런타임 탐침 포장)
+
+Action(행동): `h12_move5__rf5_l80_n64` direct ONNX(직접 온엑스)를 feature matrix(피처 행렬), expected tape(예상 테이프), set/ini(설정/INI)와 함께 Common Files(공용 파일)에 동기화했다.
+
+Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`에서 MT5 runtime probe(MT5 런타임 탐침)를 실행할 수 있다. 운영 승격과 runtime authority(런타임 권위)는 주장하지 않는다.
+
+## 2026-06-02 run364M Density Lift Runtime Probe Package(364M 밀도 상향 런타임 탐침 포장)
+
+Action(행동): `h12_move5__rf5_l80_n64` direct ONNX(직접 온엑스)를 feature matrix(피처 행렬), expected tape(예상 테이프), set/ini(설정/INI)와 함께 Common Files(공용 파일)에 동기화했다.
+
+Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`에서 MT5 runtime probe(MT5 런타임 탐침)를 실행할 수 있다. 운영 승격과 runtime authority(런타임 권위)는 주장하지 않는다.

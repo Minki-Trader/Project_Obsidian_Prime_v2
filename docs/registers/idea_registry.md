@@ -829,3 +829,9 @@ Register ideas when they become durable work, not for every passing thought.
 - micro_search_gate(미세 탐색 게이트): validation/OOS density >= 3/day(검증/표본외 밀도 3/일 이상), net > 0(순수익 양수), PF >= 1.05(수익 팩터 1.05 이상).
 - wfo_plan(WFO 계획): scout(탐색) 통과 후 WFO(워크포워드 최적화).
 - evidence_boundary(근거 경계): `research_development_kpi_evidence_review_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1
+
+- idea(아이디어): density-lift ONNX(밀도 상향 온엑스)를 MT5-native maxhold trade shape(MT5 원생 최대 보유 거래 형태)로 probe(탐침)한다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364M_density_lift_trade_shape_onnx_runtime_probe_package.md`.
+- boundary(경계): `research_development_runtime_probe_package_only_common_files_synced_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.

@@ -29,3 +29,15 @@
 Action(행동): dynamic exit(동적 청산)으로 trade density(거래 밀도)를 회복했다.
 
 Effect(효과): 후보는 proxy(프록시) 기준이며 MT5 KPI(MT5 핵심 성과 지표)를 대체하지 않는다.
+
+## 2026-06-02 run364M runtime package(364M 런타임 포장)
+
+Action(행동): `h12_move5__rf5_l80_n64`를 MT5-native maxhold runtime probe(MT5 원생 최대 보유 런타임 탐침)로 포장했다.
+
+Effect(효과): 운영 승격은 없고, 다음 단계는 MT5 실행 증거를 수집하는 것이다.
+
+## 2026-06-02 run364M runtime package(364M 런타임 포장)
+
+Action(행동): `h12_move5__rf5_l80_n64`를 MT5-native maxhold runtime probe(MT5 원생 최대 보유 런타임 탐침)로 포장했다.
+
+Effect(효과): 운영 승격은 없고, 다음 단계는 MT5 실행 증거를 수집하는 것이다.

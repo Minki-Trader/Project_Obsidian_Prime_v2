@@ -1,0 +1,34 @@
+{
+  "claim_boundary": "research_development_runtime_probe_package_only_common_files_synced_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "decision_surface": {
+    "InpCloseOnFlatSignal": false,
+    "InpDecisionMode": "threshold_margin",
+    "InpLongThreshold": 0.0,
+    "InpMaxConcurrentPositions": 1,
+    "InpMaxHoldBars": 8,
+    "InpMinMargin": -0.000562137088,
+    "InpShortThreshold": 1.1
+  },
+  "expected_tapes": {
+    "mt5_native_trade_tape": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/expected_tapes/mt5_native_maxhold_expected_trade_tape.csv",
+    "probability_tape": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/expected_tapes/density_lift_expected_probability_tape.csv",
+    "proxy_trade_tape": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/expected_tapes/parent_proxy_flat_or_opp_trade_tape.csv",
+    "semantic_comparison": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/runtime_semantic_comparison.csv"
+  },
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "known_differences": [
+    "parent proxy(부모 프록시)는 flat dominant(플랫 우세) 청산이다.",
+    "primary MT5 attempt(주 MT5 시도)는 current EA(현재 EA)가 정확히 실행 가능한 max hold only(최대 보유만) 청산이다.",
+    "close_on_flat approximation(플랫 신호 청산 근사)은 validation expected net(검증 예상 순손익)이 음수라 선택하지 않는다."
+  ],
+  "model_id": "h12_move5__rf5_l80_n64",
+  "mt5_execution": "not_run",
+  "parent_proxy_attempt": "run364M_h12_move5_rf5_l80_n64_parent_proxy_flat_or_opp",
+  "parent_proxy_trade_shape": "flat_or_opp_dynamic_exit",
+  "primary_attempt": "run364M_h12_move5_rf5_l80_n64_selected_margin_maxhold_only",
+  "run_id": "run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1",
+  "runtime_authority": "not_claimed",
+  "runtime_trade_shape": "mt5_native_maxhold_only",
+  "score_threshold": -0.000562137088,
+  "threshold_id": "long_only_margin__density_16_0__maxhold_8__flat_or_opp"
+}
