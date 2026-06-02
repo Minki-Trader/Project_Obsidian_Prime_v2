@@ -763,3 +763,12 @@ Register ideas when they become durable work, not for every passing thought.
 - seed_queue(씨앗 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364C/run364D_training_seed_queue.csv`.
 - fragility_memory(취약성 기억): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364C/monthly_stability.csv`.
 - claim_boundary(주장 경계): `research_development_review_only_timestamp_context_positive_scout_month_fragility_training_seed_handoff_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## IDEA-ST364D-TIMESTAMP-CONTEXT-TRAINING-SEED
+
+- idea(아이디어): timestamp context(시점 문맥)를 hard-coded rule(하드코딩 규칙)이 아니라 cost-filter model training seed(비용 필터 모델 학습 씨앗)로 사용한다.
+- training_seed_table(학습 씨앗 표): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364D/timestamp_context_training_seed_table.csv`.
+- feature_schema(피처 스키마): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364D/timestamp_context_feature_schema.json`.
+- model_task_queue(모델 작업 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364D/run364E_model_task_queue.csv`.
+- next_action(다음 행동): `run364E_train_timestamp_context_cost_filter_model_without_db_v1`.
+- claim_boundary(주장 경계): `research_development_materialization_only_timestamp_context_training_seed_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.

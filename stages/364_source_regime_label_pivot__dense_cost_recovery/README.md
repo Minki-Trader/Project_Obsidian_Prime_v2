@@ -15,3 +15,9 @@ Effect(효과): 비용 양수와 trade density(거래 밀도)를 동시에 보�
 Action(행동): Stage364B(364B) positive scout(긍정 스카우트)를 월별 안정성과 과적합 위험으로 검토했다.
 
 Effect(효과): 다음 실행은 `run364D_materialize_timestamp_context_training_seed_without_db_v1`이고, 운영 주장은 없다.
+
+## run364D Training Seed(364D 학습 씨앗)
+
+Action(행동): q05 trade table(q05 거래표)를 model training seed(모델 학습 씨앗)로 구체화했다.
+
+Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`이고, 운영 주장은 없다.

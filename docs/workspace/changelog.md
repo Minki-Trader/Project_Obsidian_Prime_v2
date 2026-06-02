@@ -6097,3 +6097,27 @@ Effect(효과): positive scout(긍정 스카우트)는 training seed(학습 씨�
 Action(행동): Stage364B(364B) passing rows(통과 행) 33개를 split/month/family stability(분할/월/계열 안정성)로 검토했다.
 
 Effect(효과): positive scout(긍정 스카우트)는 training seed(학습 씨앗)로 보존하고, candidate selection(후보 선택)과 MT5 operating claim(MT5 운영 주장)은 하지 않았다.
+
+## 2026-06-02 run364D Timestamp Context Training Seed Materialization(364D 시점 문맥 학습 씨앗 구체화)
+
+Action(행동): q05 report-derived trade table(q05 보고서 파생 거래표)을 feature/label separated training seed(피처/라벨 분리 학습 씨앗)로 만들었다.
+
+Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`이며, 아직 model training(모델 학습), ONNX export(ONNX 내보내기), MT5 execution(MT5 실행), candidate selection(후보 선택)은 없다.
+
+## 2026-06-02 run364D Timestamp Context Training Seed Materialization(364D 시점 문맥 학습 씨앗 구체화)
+
+Action(행동): q05 report-derived trade table(q05 보고서 파생 거래표)을 feature/label separated training seed(피처/라벨 분리 학습 씨앗)로 만들었다.
+
+Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`이며, 아직 model training(모델 학습), ONNX export(ONNX 내보내기), MT5 execution(MT5 실행), candidate selection(후보 선택)은 없다.
+
+## 2026-06-02 run364D Timestamp Context Training Seed Materialization(364D 시점 문맥 학습 씨앗 구체화)
+
+Action(행동): q05 report-derived trade table(q05 보고서 파생 거래표)을 feature/label separated training seed(피처/라벨 분리 학습 씨앗)로 만들었다.
+
+Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`이며, 아직 model training(모델 학습), ONNX export(ONNX 내보내기), MT5 execution(MT5 실행), candidate selection(후보 선택)은 없다.
+
+## 2026-06-02 run364D Timestamp Context Training Seed Materialization(364D 시점 문맥 학습 씨앗 구체화)
+
+Action(행동): q05 report-derived trade table(q05 보고서 파생 거래표)을 feature/label separated training seed(피처/라벨 분리 학습 씨앗)로 만들었다.
+
+Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`이며, 아직 model training(모델 학습), ONNX export(ONNX 내보내기), MT5 execution(MT5 실행), candidate selection(후보 선택)은 없다.
