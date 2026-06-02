@@ -1,15 +1,18 @@
-﻿# Current working state(현재 작업 상태)
+﻿# Current Working State(현재 작업 상태)
 
-date(날짜): 2026-06-02
+## Current Truth(현재 진실)
 
-stage(단계): `364_source_regime_label_pivot__dense_cost_recovery`
+- active_stage(현재 단계): `364_source_regime_label_pivot__dense_cost_recovery`
+- latest_completed_run(최근 완료 실행): `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
+- current_run(현재 실행): `run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
+- status(상태): `completed_stage364S_drawdown_side_balance_overlay_mt5_runtime_probe_executed_review_required_no_authority`
+- judgment(판정): `mt5_runtime_probe_outputs_available_proxy_diff_review_required_no_authority`
+- decision(결정): `stage364S_open_run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
 
-current_run_id(현재 실행 ID): `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
+## Effect(효과)
 
-latest_completed_run_id(최근 완료 실행 ID): `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`
+run364S(364S 실행)은 MT5 runtime probe(MT5 런타임 탐침)를 시도했고, run364T(364T 실행)는 결과를 검토하거나 blocker(차단 사유)를 수리해야 한다.
 
-current_truth(현재 진실): `run364R`은 ADX side filter(ADX 방향 필터) runtime package(런타임 패키지)를 만들었다. OOS expected net(표본외 예상 순수익)은 `403.359`, PF(수익 팩터)는 `1.326943746`, trade density(거래 밀도)는 `3.4833333333`다.
+## Claim Boundary(주장 경계)
 
-next_action(다음 행동): `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`에서 MT5 Strategy Tester(MT5 전략 테스터)를 실행하고 proxy-vs-MT5 diff(프록시-MT5 차이)를 기록한다.
-
-claim_boundary(주장 경계): `research_development_runtime_probe_package_only_common_files_synced_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+`research_development_mt5_runtime_probe_attempt_only_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

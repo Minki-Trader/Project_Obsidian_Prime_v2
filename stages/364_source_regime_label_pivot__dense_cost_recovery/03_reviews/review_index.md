@@ -35,3 +35,5 @@
 - `run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Q_drawdown_side_balance_overlay_onnx_scout.md` - drawdown side-balance overlay ONNX scout(낙폭 방향 균형 오버레이 온엑스 탐색).
 
 - `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364R_drawdown_side_balance_overlay_runtime_probe_package.md` - ADX side filter runtime probe package(ADX 방향 필터 런타임 탐침 패키지).
+
+- `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364S_drawdown_side_balance_overlay_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침) attempt(시도).

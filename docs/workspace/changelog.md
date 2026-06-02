@@ -6195,3 +6195,15 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): drawdown side-balance overlay ONNX scout(낙폭 방향 균형 오버레이 온엑스 탐색)를 실행했다.
 - effect(효과): 다음 `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`에서 MT5 runtime probe package(MT5 런타임 탐침 패키지)를 만들 후보를 고정했다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Q_drawdown_side_balance_overlay_onnx_scout.md`
+
+## 2026-06-02 run364S Drawdown Side Balance Overlay MT5 Runtime Probe(364S 낙폭 방향 균형 오버레이 온엑스 MT5 런타임 탐침)
+
+- action(행동): MT5 runtime probe(MT5 런타임 탐침)를 시도했다.
+- effect(효과): external verification(외부 검증) 상태 `completed(완료)`, matched_rows(일치 수) `17428`, mismatch_rows(불일치 수) `0`를 기록했다.
+- boundary(경계): operating promotion/runtime authority/Goal Achieve(운영 승격/런타임 권위/목표 달성)는 주장하지 않는다.
+
+## 2026-06-02 run364S Drawdown Side Balance Overlay MT5 Runtime Probe(364S 낙폭 방향 균형 오버레이 온엑스 MT5 런타임 탐침)
+
+- action(행동): MT5 runtime probe(MT5 런타임 탐침)를 시도했다.
+- effect(효과): external verification(외부 검증) 상태 `completed(완료)`, matched_rows(일치 수) `17428`, mismatch_rows(불일치 수) `0`를 기록했다.
+- boundary(경계): operating promotion/runtime authority/Goal Achieve(운영 승격/런타임 권위/목표 달성)는 주장하지 않는다.
