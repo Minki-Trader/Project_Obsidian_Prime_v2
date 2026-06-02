@@ -6243,3 +6243,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): PF/DD density bridge proxy scout(PF/DD 밀도 연결 프록시 정찰)를 실행했다.
 - effect(효과): `run364AE_review_pf_dd_near_miss_density_bridge_scout_without_db_v1` review(검토) 대상으로 selected proxy(선택 프록시)를 남겼다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AD_pf_dd_density_bridge_scout.md`
+
+## 2026-06-02 - run364AF_materialize_pf_lift_density_safe_expansion_without_db_v1
+
+- action(행동): PF lift density-safe expansion(PF 상승 밀도 안전 확장) 입력을 구체화했다.
+- effect(효과): `run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1` scout(정찰)로 넘길 queue(대기열)를 만들었다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AF_pf_lift_density_safe_inputs.md`

@@ -919,3 +919,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): density-safe candidate(밀도 안전 후보)는 남기되 PF target(PF 목표) 전 package(패키지)는 금지한다.
 - positive clue(긍정 단서): PF 1.27대와 DD 개선이 동시에 보인다.
 - failure memory(실패 기억): PF 1.30 이상 후보는 밀도가 무너지는 경향이 있어 density bridge(밀도 연결)와 함께 시험해야 한다.
+
+## run364AF_materialize_pf_lift_density_safe_expansion_without_db_v1
+
+- idea(아이디어): PF lift(PF 상승)와 density restore(밀도 복원)를 고정 임계값으로 동시에 시험한다.
+- positive clue(긍정 단서): PF 1.3066 후보와 density 3.006 후보가 따로 존재한다.
+- failure memory(실패 기억): PF만 올리면 density(밀도)가 무너지고, density만 지키면 PF(수익 팩터)가 부족하다.
