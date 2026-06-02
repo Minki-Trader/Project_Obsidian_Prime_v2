@@ -11,3 +11,5 @@
 - `run364E_train_timestamp_context_cost_filter_model_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364E_timestamp_context_cost_filter_model_training.md` - timestamp context cost filter model training(시점 문맥 비용 필터 모델 학습).
 
 - `run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364F_timestamp_context_onnx_runtime_probe_package.md` - timestamp context ONNX runtime probe package(시점 문맥 ONNX 런타임 탐침 패키지).
+
+- `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364G_timestamp_context_onnx_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침) attempt(시도).

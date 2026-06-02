@@ -33,3 +33,9 @@ Effect(효과): 다음 실행은 `run364F_prepare_timestamp_context_onnx_runtime
 Action(행동): timestamp context cost-filter(시점 문맥 비용 필터)를 MT5 runtime package(MT5 런타임 패키지)로 만들었다.
 
 Effect(효과): proxy expected tape(프록시 예상 테이프)와 MT5 telemetry(MT5 런타임 기록)를 비교할 준비가 끝났다.
+
+## run364G MT5 Runtime Probe(MT5 런타임 탐침)
+
+- run_id(실행 ID): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`
+- summary(요약): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364G/timestamp_context_onnx_mt5_probe_summary.csv`
+- effect(효과): Stage364(364단계)의 proxy(프록시)를 MT5 runtime evidence(MT5 런타임 근거)로 대조한다.
