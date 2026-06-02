@@ -6213,3 +6213,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): `run364S` ADX side filter(ADX 방향 필터) MT5 runtime probe(MT5 런타임 탐침)를 review(검토)하고 `run364U` repair queue(수리 대기열)를 만들었다.
 - effect(효과): net/PF/DD(순수익/수익 팩터/낙폭) 개선 단서는 남기고 density/long-only(밀도/롱 전용) blocker(차단)를 운영 주장 전에 닫았다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364T_drawdown_side_balance_overlay_mt5_runtime_probe_review.md`
+
+## 2026-06-02 - run364U_materialize_density_side_balance_repair_inputs_without_db_v1
+
+- action(행동): density/side-balance repair inputs(밀도/방향 균형 수리 입력)를 materialize(구체화)했다.
+- effect(효과): 다음 `run364V_train_density_side_balance_repair_onnx_scout_without_db_v1`에서 ADX40/maxhold6(ADX40/최대보유6)와 short router(숏 라우터) 씨앗을 바로 시험할 수 있다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364U_density_side_balance_repair_inputs.md`

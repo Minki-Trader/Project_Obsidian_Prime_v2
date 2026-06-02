@@ -865,3 +865,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): ADX side filter(ADX 방향 필터)는 run364S(364S 실행)에서 MT5 net/PF/DD(순수익/수익 팩터/낙폭)를 개선했지만, density floor(거래 밀도 하한)와 long-only(롱 전용)를 동시에 고쳐야 한다.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364T_drawdown_side_balance_overlay_mt5_runtime_probe_review.md`.
 - reopen_condition(재개 조건): run364U(364U 실행)에서 validation/combined density(검증/합산 밀도) >= 3/day(일 3회 이상)와 nonzero short route(0이 아닌 숏 라우트)를 timestamp-safe(시점 안전)하게 만들 때.
+
+## run364U_materialize_density_side_balance_repair_inputs_without_db_v1
+
+- idea(아이디어): ADX side filter(ADX 방향 필터)를 완화하고 max hold(최대 보유)를 줄이면 density floor(밀도 하한)를 회복하면서 drawdown clue(낙폭 단서)를 유지할 수 있다.
+- positive clue(긍정 단서): `adx_block_min_40_0__maxhold_6` expected combined net/PF(예상 합산 순수익/수익 팩터) `727.563` / `1.240896634`.
+- failure memory(실패 기억): proxy(프록시)일 뿐이며 MT5 runtime probe(MT5 런타임 탐침) 전에는 operating claim(운영 주장) 금지.
