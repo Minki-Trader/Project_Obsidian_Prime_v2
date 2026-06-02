@@ -1,12 +1,12 @@
 ﻿# Stage363 Brief(363단계 개요): Lower-Floor Rank Surface(낮은 하한 순위 표면)
 
 - canonical_stage_id(정식 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
-- current_run_id(현재 실행 ID): `run363B_materialize_q05_lower_floor_rank_surface_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run363A_branch_stage362_to_lower_floor_rank_surface_without_db_v1`
+- current_run_id(현재 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run363B_materialize_q05_lower_floor_rank_surface_without_db_v1`
 - source_stage_id(원천 단계 ID): `362_long_only_margin_grid__cost_buffer_first_branch`
 - source_run_id(원천 실행 ID): `run362C_review_q05_long_only_margin_grid_without_db_v1`
-- selection_status(선택 상태): `stage_branch_opened_no_selection(단계 분기 완료, 선택 없음)`
-- claim_boundary(주장 경계): `state_sync_stage_branch_lower_floor_rank_surface_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `materialized_review_required_no_selection(구체화 완료, 검토 필요, 선택 없음)`
+- claim_boundary(주장 경계): `research_development_materialization_only_q05_lower_floor_rank_surface_report_derived_validation_thresholds_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -36,3 +36,9 @@ Effect(효과): regime/label/router(국면/라벨/라우터)를 아직 붙이지
 - wfo_plan(WFO 계획): Stage363B(363B 실행)가 positive scout(긍정 탐색)를 만들 때만 WFO(walk-forward optimization, 워크포워드 최적화)로 강화한다.
 - failure_memory(실패 기억): Stage362C(362C 실행)는 p_long_floor>=0.40 margin-only tightening(마진 단독 조임)을 반복 금지로 기록했다.
 - evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`
+
+## run363B Materialization Closeout(363B 구체화 종료)
+
+Action(행동): lower-floor/rank surface(낮은 하한/순위 표면) `90`개 cross-split row(교차 분할 행)를 구체화했다.
+
+Effect(효과): validation/OOS(검증/표본외) +0.30 cost positive(비용 양수)와 density >= 3(밀도 3 이상)를 동시에 통과한 행은 `0`개이며, 다음 작업은 `run363C_review_q05_lower_floor_rank_surface_without_db_v1` 검토다.

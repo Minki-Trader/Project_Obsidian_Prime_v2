@@ -6043,3 +6043,15 @@ Effect(효과): passing_cross_split_rows(교차 분할 통과 행) `0`으로 `ru
 
 - gate_result(게이트 결과): `10/10`
 - claim_boundary(주장 경계): `research_development_materialization_only_q05_long_only_margin_grid_report_derived_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## 2026-06-02 run363B Lower-Floor Rank Surface Materialization(363B 낮은 하한 순위 표면 구체화)
+
+Action(행동): validation-derived lower-floor/rank surface(검증 파생 낮은 하한/순위 표면)를 q05 long-only table(q05 롱 단독 표)에 구체화했다.
+
+Effect(효과): cross-split pass(교차 분할 통과)가 없어 current truth(현재 진실)는 run363C review(363C 검토)로 이동했다.
+
+## 2026-06-02 run363B Lower-Floor Rank Surface Materialization(363B 낮은 하한 순위 표면 구체화)
+
+Action(행동): validation-derived lower-floor/rank surface(검증 파생 낮은 하한/순위 표면)를 q05 long-only table(q05 롱 단독 표)에 구체화했다.
+
+Effect(효과): cross-split pass(교차 분할 통과)가 없어 current truth(현재 진실)는 run363C review(363C 검토)로 이동했다.

@@ -730,3 +730,11 @@ Register ideas when they become durable work, not for every passing thought.
 - tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`.
 - evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`.
 - next_action(다음 행동): `run363B_materialize_q05_lower_floor_rank_surface_without_db_v1`.
+
+## IDEA-ST363B-Q05-LOWER-FLOOR-RANK-MATERIALIZATION
+
+- idea(아이디어): q05 lower-floor/rank surface(q05 낮은 하한/순위 표면)를 report-derived materialization(보고서 파생 구체화)로 평가한다.
+- evidence(근거): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363B/lower_floor_rank_cross_split.csv`.
+- result(결과): passing_cross_split_rows(교차 분할 통과 행) `0`.
+- next_action(다음 행동): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`.
+- claim_boundary(주장 경계): `research_development_materialization_only_q05_lower_floor_rank_surface_report_derived_validation_thresholds_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
