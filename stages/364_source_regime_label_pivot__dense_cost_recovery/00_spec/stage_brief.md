@@ -60,3 +60,9 @@ Effect(효과): 다음 작업은 `run364E_train_timestamp_context_cost_filter_mo
 Action(행동): cost-filter model(비용 필터 모델)을 학습하고 ONNX smoke(ONNX 스모크)를 `3/4` 통과시켰다.
 
 Effect(효과): best ONNX model(최선 ONNX 모델)은 `rf_depth3_balanced`이고 다음 작업은 `run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1`다.
+
+## run364F Runtime Probe Package Closeout(364F 런타임 탐침 패키지 종료)
+
+Action(행동): feature_rows(피처 행) `1114`개와 expected tape(예상 테이프) `1114`개를 Common Files(공용 파일)에 동기화했다.
+
+Effect(효과): 다음 단계 분기 없이 같은 Stage364(364단계)에서 `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`로 외부 검증을 이어간다.

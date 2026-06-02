@@ -780,3 +780,11 @@ Register ideas when they become durable work, not for every passing thought.
 - validation_oos_read(검증/표본외 판독): validation_net(검증 순수익) `287.83`, oos_net(표본외 순수익) `78.86`.
 - runtime_probe_queue(런타임 탐침 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364E/run364F_runtime_probe_queue.csv`.
 - claim_boundary(주장 경계): `research_development_model_training_and_onnx_export_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## IDEA-ST364F-TIMESTAMP-CONTEXT-ONNX-RUNTIME-PROBE
+
+- idea(아이디어): timestamp context(시점 문맥) cost-filter score(비용 필터 점수)를 MT5 long threshold(MT5 롱 임계값)로 실행한다.
+- package(패키지): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364F/runtime_probe_attempt_package.csv`.
+- expected_tape(예상 테이프): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364F/expected_probability_tapes/timestamp_context_expected_probability_tape.csv`.
+- next_action(다음 행동): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`.
+- claim_boundary(주장 경계): `research_development_runtime_probe_package_only_common_files_synced_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.

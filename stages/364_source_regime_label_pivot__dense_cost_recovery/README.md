@@ -27,3 +27,9 @@ Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_mo
 Action(행동): timestamp context(시점 문맥) 학습 씨앗으로 ONNX-exportable cost filter(ONNX 변환 가능 비용 필터)를 만들었다.
 
 Effect(효과): 다음 실행은 `run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1`이고, 운영 주장은 없다.
+
+## run364F Runtime Probe Package(364F 런타임 탐침 패키지)
+
+Action(행동): timestamp context cost-filter(시점 문맥 비용 필터)를 MT5 runtime package(MT5 런타임 패키지)로 만들었다.
+
+Effect(효과): proxy expected tape(프록시 예상 테이프)와 MT5 telemetry(MT5 런타임 기록)를 비교할 준비가 끝났다.

@@ -6121,3 +6121,9 @@ Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_mo
 Action(행동): q05 report-derived trade table(q05 보고서 파생 거래표)을 feature/label separated training seed(피처/라벨 분리 학습 씨앗)로 만들었다.
 
 Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_model_without_db_v1`이며, 아직 model training(모델 학습), ONNX export(ONNX 내보내기), MT5 execution(MT5 실행), candidate selection(후보 선택)은 없다.
+
+## 2026-06-02 run364F Timestamp Context ONNX Runtime Probe Package(364F 시점 문맥 ONNX 런타임 탐침 패키지)
+
+Action(행동): ONNX adapter(온엑스 어댑터), feature matrix(피처 행렬), expected tape(예상 테이프), set/ini(설정/INI)를 만들고 Common Files(공용 파일)에 동기화했다.
+
+Effect(효과): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`에서 외부 MT5 runtime probe(MT5 런타임 탐침)를 바로 시도할 수 있다. 운영 주장은 없다.

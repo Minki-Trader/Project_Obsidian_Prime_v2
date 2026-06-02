@@ -25,3 +25,9 @@
 Action(행동): Stage364D(364D)의 학습 씨앗으로 비용 필터 모델을 학습하고 ONNX(온엑스) 스모크를 통과시켰다.
 
 Effect(효과): Stage364(364단계)는 운영 승격 없이 runtime probe preparation(런타임 탐침 준비)으로 진행한다.
+
+## run364F Runtime Probe Package(364F 런타임 탐침 패키지)
+
+Action(행동): `rf_depth3_balanced` ONNX(온엑스)를 p3 adapter(p3 어댑터)로 감싸고 feature/threshold/expected tape(피처/임계값/예상 테이프)를 인계했다.
+
+Effect(효과): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`에서 MT5 runtime probe(MT5 런타임 탐침)를 실행할 수 있지만, operating promotion(운영 승격)은 없다.
