@@ -116,3 +116,9 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 - action(행동): run364O(364O 실행)의 MT5 review(MT5 검토)를 trade lifecycle/risk/side-balance inputs(거래 생명주기/위험/방향 균형 입력)로 materialize(구체화)했다.
 - effect(효과): 다음 `run364Q`에서 risk overlay(위험 오버레이), calendar hold cap(달력 보유 상한), short-side router(숏 방향 라우터)를 바로 탐색할 수 있다.
 - next(다음): `run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1`
+
+## run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1
+
+- action(행동): risk overlay ONNX scout(위험 오버레이 온엑스 탐색), hold cap proxy(보유 상한 프록시), short router proxy(숏 라우터 프록시)를 실행했다.
+- effect(효과): run364O(364O 실행)의 positive clue(긍정 단서)를 다음 runtime package(런타임 패키지) 후보로 좁혔다.
+- next(다음): `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`

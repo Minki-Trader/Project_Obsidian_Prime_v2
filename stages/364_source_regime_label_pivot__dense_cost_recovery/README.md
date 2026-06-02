@@ -1,7 +1,7 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1`
+Current run(현재 실행): `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`
+Latest completed run(최근 완료 실행): `run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1`
 
-Stage364(364단계)는 dense cost recovery(고밀도 비용 회복)를 계속 탐색한다. `run364P`는 MT5 positive clue(MT5 긍정 단서)를 operating claim(운영 주장)으로 키우지 않고, drawdown/hold/side-balance(낙폭/보유/방향 균형) offensive input(공격 입력)으로 바꿨다.
+Stage364(364단계)는 dense cost recovery(고밀도 비용 회복)를 같은 stage(단계) 안에서 계속 탐색한다. `run364Q`는 새 stage branch(단계 분기)를 만들지 않고 risk overlay/hold cap/short router(위험 오버레이/보유 상한/숏 라우터)를 proxy(프록시)로 좁혔다.

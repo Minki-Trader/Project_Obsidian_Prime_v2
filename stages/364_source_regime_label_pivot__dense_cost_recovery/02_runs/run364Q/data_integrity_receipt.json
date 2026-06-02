@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "research_development_overlay_onnx_training_and_proxy_scout_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "created_at_utc": "2026-06-02T06:43:59Z",
+  "data_source": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364P/risk_overlay_training_table.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/expected_tapes/density_lift_expected_probability_tape.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "feature_label_boundary": "features at entry, labels from later MT5 close; labels are supervision only",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_risk": "hold-cap forced exit proxy uses future cap open as backtest label, not runtime feature",
+  "missing_or_duplicate_check": "validated by row counts and timestamp joins during script execution",
+  "run_id": "run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1",
+  "sample_scope": "Tier A validation/oos run364O reviewed MT5 trades plus run364M probability tape",
+  "split_boundary": "validation split trains risk model, oos split is readout",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "time_axis": "entry_bar_closed_features_from_run364P_post_trade_labels_only_for_supervision_no_runtime_feature_leak"
+}

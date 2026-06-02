@@ -847,3 +847,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): MT5 positive clue(MT5 긍정 단서)를 drawdown/hold/side-balance(낙폭/보유/방향 균형) labels(라벨)로 바꾸면 다음 ONNX(온엑스) 탐색의 손실 꼬리를 줄일 수 있다.
 - failure_memory(실패 기억): long-only(롱 전용)와 hold tail(보유 꼬리)는 운영 차단이다.
 - reopen_condition(재개 조건): run364Q proxy(프록시)가 trade/day(일 거래수) >= 3, net positive(순수익 양수), PF(수익 팩터)>1.15, drawdown(낙폭) 개선을 보이면 MT5 runtime probe(MT5 런타임 탐침)로 간다.
+
+## run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1
+
+- idea(아이디어): long-only positive clue(롱 전용 긍정 단서)에 risk overlay(위험 오버레이), hold cap(보유 상한), short router(숏 라우터)를 덧대 drawdown/side balance(낙폭/방향 균형)를 수리한다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Q_drawdown_side_balance_overlay_onnx_scout.md`.
+- boundary(경계): proxy scout(프록시 탐색)이며 MT5 runtime probe(MT5 런타임 탐침) 전 운영 주장(operating claim, 운영 주장)은 없다.

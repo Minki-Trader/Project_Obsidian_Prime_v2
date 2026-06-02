@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "research_development_overlay_onnx_training_and_proxy_scout_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364O MT5 closed trade tape(닫힌 거래 테이프)",
+  "created_at_utc": "2026-06-02T06:43:59Z",
+  "decision_use": "다음 runtime probe package(런타임 탐침 패키지) 후보 선택",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364Q/risk_overlay_model_scorecard.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364Q/overlay_policy_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364Q/hold_cap_proxy_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364Q/short_router_proxy_surface.csv"
+  ],
+  "hypothesis": "risk overlay(위험 오버레이), hold cap(보유 상한), short router(숏 라우터)가 run364O의 drawdown/long-only/hold-tail(낙폭/롱 전용/보유 꼬리)을 줄일 수 있다.",
+  "invalid_conditions": "entry feature(진입 피처)에 post-trade label(거래 후 라벨)이 섞이면 invalid(무효)",
+  "run_id": "run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "success_criteria": "oos net/PF/drawdown(표본외 순수익/수익 팩터/낙폭) 중 둘 이상 개선, trade density(거래 밀도) 3/day 이상 유지"
+}
