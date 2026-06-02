@@ -151,3 +151,8 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 
 - current truth(현재 진실): selected dual-side candidate(선택 양방향 후보)를 MT5 package(MT5 패키지)로 만들었다.
 - effect(효과): run364X Strategy Tester(전략 테스터) 실행 준비가 됐다.
+
+## run364X MT5 runtime probe(MT5 런타임 탐침)
+
+- current truth(현재 진실): run364W package(패키지)를 Strategy Tester(전략 테스터)로 실행 시도했다.
+- effect(효과): proxy-vs-MT5 diff(프록시-MT5 차이) review(검토) 입력을 만들었다.
