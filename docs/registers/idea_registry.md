@@ -901,3 +901,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): strict pass zero(엄격 통과 0)를 실패 기억으로 닫고 stress_zone_3(3번 압박 구간)을 density bridge(밀도 연결) 씨앗으로 재사용한다.
 - positive clue(긍정 단서): best PF near-miss(최고 수익 팩터 근접 실패)가 있다.
 - failure memory(실패 기억): density-only selection(밀도만 좋은 선택)은 PF/DD(수익 팩터/낙폭)를 악화한다.
+
+## run364AC_materialize_pf_dd_near_miss_density_bridge_without_db_v1
+
+- idea(아이디어): stress_zone_3(압박 구간 3)의 5거래 내외 밀도 부족을 timestamp-safe restoration(시점 안전 복원)으로 메운다.
+- positive clue(긍정 단서): stress_zone_3/4(압박 구간 3/4)는 DD(낙폭)를 줄인다.
+- failure memory(실패 기억): density-only(밀도 단독)는 PF/DD(수익 팩터/낙폭)를 악화한다.
