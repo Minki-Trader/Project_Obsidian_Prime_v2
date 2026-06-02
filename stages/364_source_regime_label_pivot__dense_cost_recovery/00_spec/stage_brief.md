@@ -1,8 +1,8 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364Y_review_density_side_balance_repair_mt5_runtime_probe_without_db_v1`
+- current_run_id(현재 실행 ID): `run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
 - selection_status(선택 상태): `runtime_positive_density_side_balance_repair_required_no_operating_claim(런타임 양수, 밀도/방향 균형 수리 필요, 운영 주장 없음)`

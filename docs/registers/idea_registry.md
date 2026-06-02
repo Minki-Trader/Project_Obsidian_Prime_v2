@@ -883,3 +883,9 @@ Register ideas when they become durable work, not for every passing thought.
 - run364X_execute_density_side_balance_repair_mt5_runtime_probe_without_db_v1: MT5 runtime probe(MT5 런타임 탐침) produced proxy-vs-MT5 diff(프록시-MT5 차이) for dual-side threshold(양방향 임계값) candidate.
 
 - run364Y_review_density_side_balance_repair_mt5_runtime_probe_without_db_v1: density side-balance candidate(밀도 방향 균형 후보) became positive MT5 stress candidate(긍정 MT5 압박 후보); cost/session/drawdown stress(비용/세션/낙폭 압박) required.
+
+## run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1
+
+- idea(아이디어): session/account-state/short guardrails(세션/계좌상태/숏 가드레일)이 density(밀도)를 유지하면서 PF/DD(수익 팩터/낙폭)를 개선할 수 있다.
+- positive clue(긍정 단서): `run364Y` MT5 net/PF/trades(MT5 순수익/수익 팩터/거래수) `989.22` / `1.3` / `1081`.
+- failure memory(실패 기억): simple filter proxy(단순 필터 프록시)는 sequence replay(순서 재생)와 MT5 runtime probe(MT5 런타임 탐침)를 대체하지 않는다.

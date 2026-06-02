@@ -49,3 +49,9 @@
 - [run364X] run364X_execute_density_side_balance_repair_mt5_runtime_probe_without_db_v1: stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364X_density_side_balance_repair_mt5_runtime_probe.md - MT5 runtime probe(MT5 런타임 탐침), authority(권위) not_claimed(주장 안 함)
 
 - [run364Y] run364Y_review_density_side_balance_repair_mt5_runtime_probe_without_db_v1: stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Y_density_side_balance_repair_mt5_runtime_probe_review.md - MT5 review(MT5 검토), positive candidate(긍정 후보), no authority(권위 없음)
+
+## run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Z_density_side_balance_cost_session_stress_inputs.md`
+- judgment(판정): `stress_inputs_ready_pf_drawdown_session_repair_scout_no_operating_claim`
+- effect(효과): cost/session/drawdown stress(비용/세션/낙폭 압박)를 `run364AA` scout queue(탐색 대기열)로 materialize(구체화)했다.
