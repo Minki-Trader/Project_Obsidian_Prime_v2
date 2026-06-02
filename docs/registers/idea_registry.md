@@ -895,3 +895,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): session/account-state/short guardrails(세션/계좌상태/숏 가드레일)이 PF/DD(수익 팩터/낙폭)를 개선할 수 있다.
 - positive clue(긍정 단서): selected proxy(선택 프록시) `maxhold6_density_control__ps0_45__adx40_0__hold6__none`.
 - failure memory(실패 기억): proxy replay(프록시 재생)는 MT5 runtime probe(MT5 런타임 탐침)를 대체하지 않는다.
+
+## run364AB_review_density_side_balance_cost_session_stress_scout_without_db_v1
+
+- idea(아이디어): strict pass zero(엄격 통과 0)를 실패 기억으로 닫고 stress_zone_3(3번 압박 구간)을 density bridge(밀도 연결) 씨앗으로 재사용한다.
+- positive clue(긍정 단서): best PF near-miss(최고 수익 팩터 근접 실패)가 있다.
+- failure memory(실패 기억): density-only selection(밀도만 좋은 선택)은 PF/DD(수익 팩터/낙폭)를 악화한다.
