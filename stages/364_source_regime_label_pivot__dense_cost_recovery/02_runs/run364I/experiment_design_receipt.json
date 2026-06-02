@@ -1,0 +1,32 @@
+{
+  "changed_variables": [
+    "dense source scope",
+    "keep threshold",
+    "calendar max hold",
+    "session veto"
+  ],
+  "claim_boundary": "research_development_dense_m5_proxy_prefilter_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364G MT5 negative probe and run359B q05 dense runtime(run364G MT5 부정 탐침 및 run359B q05 고밀도 런타임)",
+  "control_variables": [
+    "fixed_lot=0.10",
+    "cost_stress_per_trade=0.30",
+    "single_position=true"
+  ],
+  "created_at_utc": "2026-06-02T03:11:02Z",
+  "decision_use": "choose next offensive run(다음 공격 실행 선택)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364I/dense_proxy_variant_scorecard.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364I/dense_source_coverage.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364I/dense_runtime_repair_findings.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364I/run364J_offensive_next_queue.csv"
+  ],
+  "failure_criteria": "density recovers but OOS PF/net remains weak",
+  "hypothesis": "dense M5 source(고밀도 M5 원천) and calendar exit(캘린더 청산) can repair run364G sparse runtime failure.",
+  "invalid_conditions": "raw M5 join missing, ONNX scoring failure, timestamp disorder",
+  "parent_run_id": "run364H_review_timestamp_context_onnx_mt5_runtime_probe_without_db_v1",
+  "run_id": "run364I_design_dense_m5_runtime_repair_proxy_without_db_v1",
+  "sample_scope": "Tier A validation+OOS q05 runtime cycles(Tier A 검증+표본외 q05 런타임 사이클)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "stop_conditions": "open direct dense ONNX scout if strict cross-split success count is zero",
+  "success_criteria": "cross-split net>0, PF>=1.05, trade/day>=3 without trade splitting"
+}

@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364I_design_runtime_failure_repair_offensive_queue_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364H_review_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`
+- current_run_id(현재 실행 ID): `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364I_design_dense_m5_runtime_repair_proxy_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `runtime_probe_valid_negative_overlap_parity_clue_offensive_repair_queue_opened_no_operating_claim(런타임 탐침 유효 부정, 겹친 구간 동등성 단서, 공격 수리 대기열 열림, 운영 주장 없음)`
-- claim_boundary(주장 경계): `research_development_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `dense_m5_proxy_scouted_direct_dense_onnx_scout_opened_no_operating_claim(고밀도 M5 프록시 탐색 완료, 직접 고밀도 ONNX 탐색 열림, 운영 주장 없음)`
+- claim_boundary(주장 경계): `research_development_dense_m5_proxy_prefilter_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -72,3 +72,9 @@ Effect(효과): 다음 단계 분기 없이 같은 Stage364(364단계)에서 `ru
 - run_id(실행 ID): `run364H_review_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`
 - judgment(판정): `valid_negative_mt5_kpi_overlap_parity_positive_clue_sparse_runtime_tape_trade_shape_failure_no_authority`
 - effect(효과): sparse runtime tape(희소 런타임 테이프) 실패를 다음 dense source/runtime exit repair(고밀도 원천/런타임 청산 수리)로 넘긴다.
+
+## run364I Dense M5 Runtime Repair Proxy(364I 고밀도 M5 런타임 수리 프록시)
+
+Action(행동): q05 dense runtime cycles(q05 고밀도 런타임 사이클) `17428`개에 run364E ONNX cost filter(ONNX 비용 필터)를 적용하고 calendar exit proxy(캘린더 청산 프록시)를 탐색했다.
+
+Effect(효과): sparse expected tape(희소 예상 테이프) 실패는 수리 가능하지만, strict cross-split success(엄격 교차 분할 성공)가 `0`개라 `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`로 직접 고밀도 모델 탐색을 연다.

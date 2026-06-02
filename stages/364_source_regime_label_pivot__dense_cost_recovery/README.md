@@ -45,3 +45,9 @@ Effect(효과): proxy expected tape(프록시 예상 테이프)와 MT5 telemetry
 - run_id(실행 ID): `run364H_review_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`
 - findings(검토 발견): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/review_findings.csv`
 - effect(효과): ONNX parity clue(ONNX 동등성 단서)는 보존하고, MT5 KPI negative(MT5 KPI 부정)는 실패 기억으로 남긴다.
+
+## run364I Dense M5 Runtime Repair Proxy(364I 고밀도 M5 런타임 수리 프록시)
+
+Action(행동): dense source repair(고밀도 원천 수리)를 proxy scorecard(프록시 점수표)로 구체화했다.
+
+Effect(효과): 다음 실행은 `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`이고, 운영 주장은 없다.

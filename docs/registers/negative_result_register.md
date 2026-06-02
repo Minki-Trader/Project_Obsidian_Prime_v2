@@ -550,3 +550,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - do_not_repeat(반복 금지): 같은 sparse event tape(희소 이벤트 테이프)의 threshold-only search(임계값 전용 탐색)를 반복하지 않는다.
 - reopen_condition(재개 조건): dense M5 source(고밀도 M5 원천), calendar exit semantics(캘린더 청산 의미), session/regime router(세션/국면 라우터)가 trade/day 3+와 MT5 순수익 양수를 동시에 만들 때.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/failure_memory.csv`.
+
+## FM-ST364I-COST-FILTER-DENSE-OOS-WEAK
+
+- run_id(실행 ID): `run364I_design_dense_m5_runtime_repair_proxy_without_db_v1`
+- failed_boundary(실패 경계): `proxy_prefilter_strict_cross_split_success(프록시 선별 엄격 교차 분할 성공)`
+- why_failed(실패 이유): dense source(고밀도 원천)는 회복됐지만 run364E cost filter(비용 필터)의 OOS profit factor(표본외 수익 팩터)가 약했다.
+- salvage_value(회수 가치): dense M5 source(고밀도 M5 원천), calendar exit semantics(캘린더 청산 의미), no-split simulator(비분할 시뮬레이터)는 다음 탐색에 재사용한다.
+- reopen_condition(재개 조건): direct dense M5 ONNX scout(직접 고밀도 M5 ONNX 탐색) 또는 MT5 dense flat tape(고밀도 flat 테이프)에서 PF>=1.05와 trade/day>=3이 같이 나온다.
+- do_not_repeat(반복 금지): sparse long trade table(희소 롱 거래표)에만 cost filter(비용 필터)를 얹어 운영 후보처럼 말하지 않는다.

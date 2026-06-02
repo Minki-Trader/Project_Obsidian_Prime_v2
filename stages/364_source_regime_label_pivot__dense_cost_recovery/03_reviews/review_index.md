@@ -15,3 +15,5 @@
 - `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364G_timestamp_context_onnx_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침) attempt(시도).
 
 - `run364H_review_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364H_timestamp_context_onnx_mt5_runtime_probe_review.md` - MT5 probe review(MT5 탐침 검토) and offensive repair queue(공격 수리 대기열).
+
+- `run364I_design_dense_m5_runtime_repair_proxy_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364I_dense_m5_runtime_repair_proxy.md` - dense M5 runtime repair proxy(고밀도 M5 런타임 수리 프록시).

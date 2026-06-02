@@ -1,0 +1,23 @@
+{
+  "claim_boundary": "research_development_dense_m5_proxy_prefilter_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "created_at_utc": "2026-06-02T03:11:02Z",
+  "data_hash_or_identity": {
+    "dense_rows": 17428,
+    "raw_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+  },
+  "data_source": [
+    "stages/359_runtime_probe_execution__high_density_label_pivot_mt5_check/02_runs/run359B/runtime_telemetry/q05_pside_all_validation_telemetry.csv",
+    "stages/359_runtime_probe_execution__high_density_label_pivot_mt5_check/02_runs/run359B/runtime_telemetry/q05_pside_all_oos_telemetry.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "feature_label_boundary": "features from q05 runtime probabilities and timestamp fields only; proxy PnL uses later raw price after scoring",
+  "integrity_judgment": "usable_with_proxy_boundary(프록시 경계 조건부 사용 가능)",
+  "leakage_risk": "proxy PnL must not feed threshold except validation target threshold; OOS read only",
+  "missing_or_duplicate_check": "raw price join missing rows = 0",
+  "parent_run_id": "run364H_review_timestamp_context_onnx_mt5_runtime_probe_without_db_v1",
+  "run_id": "run364I_design_dense_m5_runtime_repair_proxy_without_db_v1",
+  "sample_scope": "validation 2025-01-02..2025-09-30, OOS 2025-10-01..2026-04-13 q05 cycle rows",
+  "split_boundary": "run359B validation/OOS retained",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "time_axis": "mt5_runtime_bar_time_joined_to_raw_m5_time_open_unix_no_timezone_conversion"
+}

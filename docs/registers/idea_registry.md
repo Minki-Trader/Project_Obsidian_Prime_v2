@@ -796,3 +796,17 @@ Register ideas when they become durable work, not for every passing thought.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/review_findings.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/failure_memory.csv`.
 - next_action(다음 행동): `run364I_design_runtime_failure_repair_offensive_queue_without_db_v1`.
 - claim_boundary(주장 경계): `research_development_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## IDEA-ST364I-DIRECT-DENSE-M5-RETURN-ONNX-SCOUT
+
+- idea(아이디어): q05 probability bridge(q05 확률 연결)와 sparse long cost filter(희소 롱 비용 필터)를 벗어나 processed dense M5 features(처리 고밀도 M5 피처)로 직접 ONNX(온엑스) 모델을 학습한다.
+- hypothesis(가설): dense direct return label(고밀도 직접 수익 라벨)이 OOS edge(표본외 우위)를 더 넓게 만든다.
+- legacy_relation(레거시 관계): `none(없음)`
+- tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`
+- broad_sweep(넓은 탐색): logreg/rf/extra-trees shallow ONNX(로지스틱/랜덤포레스트/엑스트라트리 얕은 ONNX), long-only/two-sided(롱 전용/양방향), trade/day 3/5/7/10.
+- extreme_sweep(극단 탐색): all-M5 dense control(전체 M5 고밀도 대조), q05-free source(q05 제거 원천), no-18-hour veto(18시 제외).
+- micro_search_gate(미세 탐색 게이트): validation+OOS proxy(검증+표본외 프록시) net>0, PF>=1.05, trade/day>=3.
+- wfo_plan(WFO 계획): positive scout(긍정 탐색) 이후 WFO(walk-forward optimization, 워크포워드 최적화) 강화.
+- failure_memory(실패 기억): run364I found cost-filter overlay OOS PF weak(run364I 비용 필터 덧씌우기 표본외 수익 팩터 약함).
+- evidence_boundary(근거 경계): `scout_only(탐색 전용)`
+- next_action(다음 행동): `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`

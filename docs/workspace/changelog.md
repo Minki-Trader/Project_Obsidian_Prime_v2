@@ -6139,3 +6139,11 @@ Effect(효과): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_withou
 - action(행동): run364G MT5 runtime probe(MT5 런타임 탐침)를 성과 귀속과 실패 기억으로 검토했다.
 - effect(효과): next_run(다음 실행) `run364I_design_runtime_failure_repair_offensive_queue_without_db_v1`가 sparse tape threshold-only search(희소 테이프 임계값 전용 탐색)를 반복하지 않게 한다.
 - boundary(경계): runtime authority/operating promotion/Goal Achieve(런타임 권위/운영 승격/목표 달성)는 주장하지 않는다.
+
+## 2026-06-02 run364I Dense M5 Runtime Repair Proxy(364I 고밀도 M5 런타임 수리 프록시)
+
+Action(행동): run359B q05 dense runtime cycle(q05 고밀도 런타임 사이클)을 run364E ONNX cost filter(ONNX 비용 필터)와 결합해 proxy sweep(프록시 탐색)을 실행했다.
+
+Effect(효과): dense_rows(고밀도 행) `17428`, strict_success_count(엄격 성공 수) `0`로 기록했고, 다음 공격 실행 `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`를 열었다.
+
+Boundary(경계): MT5 execution(MT5 실행), operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
