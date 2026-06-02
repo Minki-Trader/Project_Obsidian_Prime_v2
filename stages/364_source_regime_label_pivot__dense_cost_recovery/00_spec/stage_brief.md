@@ -104,3 +104,9 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 - matched_rows(일치 수): `17428`
 - mismatch_rows(불일치 수): `0`
 - effect(효과): 실제 MT5 실행 결과 또는 blocker(차단 사유)를 다음 review/repair(검토/수리)로 넘긴다.
+
+## run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1
+
+- action(행동): `run364N` MT5 runtime probe(MT5 런타임 탐침)를 KPI/performance attribution(KPI/성과 귀속)으로 review(검토)했다.
+- effect(효과): positive net profit(양수 순수익) 단서는 유지하고, drawdown/long-only/hold tail(낙폭/롱 전용/보유 꼬리)을 다음 공격 탐색 입력으로 바꿨다.
+- next(다음): `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`

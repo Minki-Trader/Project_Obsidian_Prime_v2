@@ -835,3 +835,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): density-lift ONNX(밀도 상향 온엑스)를 MT5-native maxhold trade shape(MT5 원생 최대 보유 거래 형태)로 probe(탐침)한다.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364M_density_lift_trade_shape_onnx_runtime_probe_package.md`.
 - boundary(경계): `research_development_runtime_probe_package_only_common_files_synced_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1
+
+- idea(아이디어): dense long-only ONNX(고밀도 롱 전용 온엑스) runtime probe(런타임 탐침)는 양수 수익 단서가 있다.
+- failure memory(실패 기억): drawdown(낙폭), long-only(롱 전용), hold tail(보유 꼬리)는 promotion blocker(승격 차단)다.
+- next seed(다음 씨앗): calendar hold cap(달력 보유 상한), drawdown tail exit(낙폭 꼬리 청산), short side balance(숏 방향 균형), regime/session filter(국면/세션 필터).

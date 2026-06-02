@@ -1,18 +1,15 @@
-﻿# Current Working State(현재 작업 상태)
+﻿# Current working state(현재 작업 상태)
 
-## Current Truth(현재 진실)
+date(날짜): 2026-06-02
 
-- active_stage(현재 단계): `364_source_regime_label_pivot__dense_cost_recovery`
-- latest_completed_run(최근 완료 실행): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`
-- current_run(현재 실행): `run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`
-- status(상태): `completed_stage364N_density_lift_trade_shape_onnx_mt5_runtime_probe_executed_review_required_no_authority`
-- judgment(판정): `mt5_runtime_probe_outputs_available_proxy_diff_review_required_no_authority`
-- decision(결정): `stage364N_open_run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`
+stage(단계): `364_source_regime_label_pivot__dense_cost_recovery`
 
-## Effect(효과)
+current_run_id(현재 실행 ID): `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`
 
-run364N(364N 실행)은 MT5 runtime probe(MT5 런타임 탐침)를 시도했고, run364O(364O 실행)는 결과를 검토하거나 blocker(차단 사유)를 수리해야 한다.
+latest_completed_run_id(최근 완료 실행 ID): `run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`
 
-## Claim Boundary(주장 경계)
+current_truth(현재 진실): `run364N` MT5 runtime probe(MT5 런타임 탐침)는 net profit(순수익) `818.67`, profit factor(수익 팩터) `1.26`, trade count(거래수) `1047`로 positive clue(긍정 단서)다. 다만 drawdown(낙폭), long-only(롱 전용), hold tail(보유 꼬리) 때문에 promotion-ineligible(승격 부적격)이다.
 
-`research_development_mt5_runtime_probe_attempt_only_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+next_action(다음 행동): `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`에서 drawdown/side-balance(낙폭/방향 균형) offensive inputs(공격 입력)를 materialize(구체화)한다.
+
+claim_boundary(주장 경계): `research_development_mt5_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

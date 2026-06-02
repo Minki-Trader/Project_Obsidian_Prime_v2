@@ -6177,3 +6177,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 Action(행동): `h12_move5__rf5_l80_n64` direct ONNX(직접 온엑스)를 feature matrix(피처 행렬), expected tape(예상 테이프), set/ini(설정/INI)와 함께 Common Files(공용 파일)에 동기화했다.
 
 Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`에서 MT5 runtime probe(MT5 런타임 탐침)를 실행할 수 있다. 운영 승격과 runtime authority(런타임 권위)는 주장하지 않는다.
+
+## 2026-06-02 - run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1
+
+- action(행동): `run364N` MT5 runtime probe(MT5 런타임 탐침)를 review(검토)하고 `run364P` offensive input queue(공격 입력 대기열)를 만들었다.
+- effect(효과): positive runtime clue(긍정 런타임 단서)를 유지하면서 운영 주장(operating claim, 운영 주장)은 차단했다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364O_density_lift_trade_shape_onnx_mt5_runtime_probe_review.md`
