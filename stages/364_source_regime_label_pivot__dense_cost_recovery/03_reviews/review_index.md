@@ -75,3 +75,10 @@
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AC_density_bridge_inputs.md`
 - judgment(판정): `density_bridge_scout_inputs_ready_no_operating_claim`
 - effect(효과): run364AD(364AD 실행) density bridge scout queue(밀도 연결 정찰 대기열)를 만들었다.
+
+## run364AD_train_pf_dd_near_miss_density_bridge_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AD_pf_dd_density_bridge_scout.md`
+- judgment(판정): `proxy_scout_completed_timestamp_safe_bridge_candidates_ranked_mt5_probe_required_no_authority`
+- selected(선택): `stress3_restore_long_p0_42_adx35_0__ps0_45__adx40_0__hold8`
+- effect(효과): top_n(상위 N개) 표현을 고정 임계값으로 바꿔 안전하게 scout(정찰)했다.

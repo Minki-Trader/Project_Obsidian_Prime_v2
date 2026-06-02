@@ -907,3 +907,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): stress_zone_3(압박 구간 3)의 5거래 내외 밀도 부족을 timestamp-safe restoration(시점 안전 복원)으로 메운다.
 - positive clue(긍정 단서): stress_zone_3/4(압박 구간 3/4)는 DD(낙폭)를 줄인다.
 - failure memory(실패 기억): density-only(밀도 단독)는 PF/DD(수익 팩터/낙폭)를 악화한다.
+
+## run364AD_train_pf_dd_near_miss_density_bridge_scout_without_db_v1
+
+- idea(아이디어): near-miss density bridge(근접 실패 밀도 연결)를 top_n(상위 N개) 없이 고정 임계값으로 시험한다.
+- positive clue(긍정 단서): selected proxy(선택 프록시) `stress3_restore_long_p0_42_adx35_0__ps0_45__adx40_0__hold8`.
+- failure memory(실패 기억): top_n month ranking(월 전체 상위 N개 순위)은 timestamp-safe(시점 안전)가 아니므로 직접 재생 금지.
