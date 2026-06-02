@@ -889,3 +889,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): session/account-state/short guardrails(세션/계좌상태/숏 가드레일)이 density(밀도)를 유지하면서 PF/DD(수익 팩터/낙폭)를 개선할 수 있다.
 - positive clue(긍정 단서): `run364Y` MT5 net/PF/trades(MT5 순수익/수익 팩터/거래수) `989.22` / `1.3` / `1081`.
 - failure memory(실패 기억): simple filter proxy(단순 필터 프록시)는 sequence replay(순서 재생)와 MT5 runtime probe(MT5 런타임 탐침)를 대체하지 않는다.
+
+## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
+
+- idea(아이디어): session/account-state/short guardrails(세션/계좌상태/숏 가드레일)이 PF/DD(수익 팩터/낙폭)를 개선할 수 있다.
+- positive clue(긍정 단서): selected proxy(선택 프록시) `maxhold6_density_control__ps0_45__adx40_0__hold6__none`.
+- failure memory(실패 기억): proxy replay(프록시 재생)는 MT5 runtime probe(MT5 런타임 탐침)를 대체하지 않는다.

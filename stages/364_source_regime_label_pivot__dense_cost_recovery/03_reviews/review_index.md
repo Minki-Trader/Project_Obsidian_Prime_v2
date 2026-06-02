@@ -55,3 +55,10 @@
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Z_density_side_balance_cost_session_stress_inputs.md`
 - judgment(판정): `stress_inputs_ready_pf_drawdown_session_repair_scout_no_operating_claim`
 - effect(효과): cost/session/drawdown stress(비용/세션/낙폭 압박)를 `run364AA` scout queue(탐색 대기열)로 materialize(구체화)했다.
+
+## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AA_density_side_balance_cost_session_stress_scout.md`
+- judgment(판정): `proxy_scout_completed_pf_dd_stress_candidates_ranked_mt5_probe_required_no_authority`
+- selected(선택): `maxhold6_density_control__ps0_45__adx40_0__hold6__none`
+- effect(효과): PF/DD guardrail proxy scout(PF/DD 가드레일 프록시 탐색)를 완료하고 review(검토)로 넘긴다.
