@@ -1,0 +1,31 @@
+{
+  "changed_variables": [
+    "short probability threshold(숏 확률 임계값)",
+    "long ADX block minimum(롱 ADX 차단 최소값)",
+    "max hold bars(최대 보유 봉)"
+  ],
+  "claim_boundary": "research_development_onnx_threshold_scout_and_shadow_training_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364T ADX38.688 maxhold8 long-only MT5 probe and run364U ADX40 maxhold6 proxy(364T 롱 전용 MT5 탐침과 364U ADX40/최대보유6 프록시)",
+  "control_variables": [
+    "same ONNX model(같은 온엑스 모델)",
+    "same feature order(같은 피처 순서)",
+    "no trade splitting(거래 쪼개기 없음)",
+    "one position max(최대 1포지션)"
+  ],
+  "created_at_utc": "2026-06-02T09:01:30Z",
+  "decision_use": "select next MT5 runtime package candidate(다음 MT5 런타임 패키지 후보 선택)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364V/dual_side_runtime_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364V/expected_tapes/dual_side_selected_expected_trade_tape.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364V/shadow_loss_guard_onnx_smoke_report.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364V/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "density below floor, long-only remains, OOS net negative, or MT5 drift later invalidates proxy(밀도 하한 실패, 롱 전용 지속, OOS 음수, 또는 이후 MT5 차이로 무효)",
+  "hypothesis": "existing ONNX probabilities plus runtime-executable short threshold can repair long-only failure without losing density(기존 온엑스 확률과 실행 가능한 숏 임계값이 밀도를 잃지 않고 롱 전용 실패를 수리할 수 있다)",
+  "invalid_conditions": "missing probability parity or timestamp mismatch(확률 동등성 누락 또는 시각 불일치)",
+  "run_id": "run364V_train_density_side_balance_repair_onnx_scout_without_db_v1",
+  "sample_scope": "validation and OOS only, Tier A(Tier A 검증/OOS 전용)",
+  "skill": "obsidian-experiment-design(실험 설계)",
+  "stop_conditions": "package selected candidate next; no operating claim before MT5(선택 후보를 다음에 패키지, MT5 전 운영 주장 금지)",
+  "success_criteria": "validation and combined density >=3, validation/OOS net positive, OOS PF >=1.15, nonzero short count(검증/합산 밀도 3 이상, 검증/OOS 순수익 양수, OOS PF 1.15 이상, 숏 거래 존재)"
+}

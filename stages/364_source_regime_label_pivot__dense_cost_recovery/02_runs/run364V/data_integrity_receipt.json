@@ -1,0 +1,32 @@
+{
+  "claim_boundary": "research_development_onnx_threshold_scout_and_shadow_training_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "created_at_utc": "2026-06-02T09:01:30Z",
+  "data_hash_or_identity": {
+    "parent_final_sha256": "39c59758b742dc59f0c2658abe9a52b17896c7f4b3455679892696252cc29d40",
+    "source_probability_sha256": "8fd53a43e2ba3cd8ac24605509f7cf97da6aa81256feaffb9be3b43a229bfc45"
+  },
+  "data_source": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364U/final_decision.json",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364U/required_gate_coverage_audit.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364U/run364V_training_queue.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364U/density_repair_candidate_table.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364U/short_router_candidate_table.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364U/repair_training_seed_table.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364U/session_regime_density_gap.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364U_density_side_balance_repair_inputs.md",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364R/expected_tapes/adx_side_filter_expected_probability_tape.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364R/expected_tapes/adx_side_filter_expected_trade_tape.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/feature_order.json",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/feature_matrices/density_lift_trade_shape_features.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364L/onnx/h12_move5__rf5_l80_n64.onnx"
+  ],
+  "feature_label_boundary": "dual-side threshold uses only current ONNX probabilities and current ADX feature(양방향 임계값은 현재 확률과 현재 ADX만 사용); shadow loss guard uses post-trade label only as non-runtime supervision(그림자 손실 방어는 거래 후 라벨을 비런타임 지도학습에만 사용)",
+  "integrity_judgment": "usable_with_boundary(경계 조건부 사용 가능)",
+  "leakage_risk": "shadow model is not runtime-selected because labels are post-trade(그림자 모델은 거래 후 라벨이므로 런타임 선택하지 않음)",
+  "missing_or_duplicate_check": "runtime frame duplicate timestamp check passed(런타임 프레임 중복 시각 점검 통과)",
+  "run_id": "run364V_train_density_side_balance_repair_onnx_scout_without_db_v1",
+  "sample_scope": "US100 M5 validation+OOS 17428 rows, Tier A only(US100 5분봉 검증+OOS 17428행, Tier A 전용)",
+  "skill": "obsidian-data-integrity(데이터 무결성)",
+  "split_boundary": "validation selects thresholds; OOS readout stays separate(검증이 임계값을 고르고 OOS 판독은 분리)",
+  "time_axis": "run364M/run364R inherited closed M5 bar open timestamp(닫힌 5분봉 open timestamp 상속)"
+}

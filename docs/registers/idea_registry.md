@@ -871,3 +871,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): ADX side filter(ADX 방향 필터)를 완화하고 max hold(최대 보유)를 줄이면 density floor(밀도 하한)를 회복하면서 drawdown clue(낙폭 단서)를 유지할 수 있다.
 - positive clue(긍정 단서): `adx_block_min_40_0__maxhold_6` expected combined net/PF(예상 합산 순수익/수익 팩터) `727.563` / `1.240896634`.
 - failure memory(실패 기억): proxy(프록시)일 뿐이며 MT5 runtime probe(MT5 런타임 탐침) 전에는 operating claim(운영 주장) 금지.
+
+## run364V_train_density_side_balance_repair_onnx_scout_without_db_v1
+
+- idea(아이디어): existing ONNX(기존 온엑스)의 short probability(숏 확률)를 runtime threshold(런타임 임계값)로 열면 long-only failure(롱 전용 실패)를 줄이면서 density(밀도)를 유지할 수 있다.
+- positive clue(긍정 단서): `dual_pshort_0_45__adx_block_40_0__maxhold_8` proxy combined net/PF/density(프록시 합산 순수익/수익 팩터/밀도) `771.564` / `1.2218406503` / `3.2462462462`.
+- boundary(경계): MT5 runtime probe(MT5 런타임 탐침) 전 operating claim(운영 주장) 없음.

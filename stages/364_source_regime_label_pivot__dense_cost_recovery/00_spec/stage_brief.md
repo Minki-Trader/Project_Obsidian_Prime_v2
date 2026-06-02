@@ -140,3 +140,9 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 - action(행동): run364T(실행 364T)의 density failure(밀도 실패)와 long-only failure(롱 전용 실패)를 ADX/hold/short/session repair inputs(ADX/보유/숏/세션 수리 입력)로 materialize(구체화)했다.
 - effect(효과): 다음 `run364V_train_density_side_balance_repair_onnx_scout_without_db_v1`에서 density repair(밀도 수리)와 side-balance(방향 균형)를 바로 scout(탐색)할 수 있다.
 - best repair(최선 수리): `adx_block_min_40_0__maxhold_6` validation/combined density(검증/합산 밀도) `3.1701030928` / `3.3843843844`.
+
+## run364V_train_density_side_balance_repair_onnx_scout_without_db_v1
+
+- action(행동): existing ONNX probabilities(기존 온엑스 확률)에 short threshold(숏 임계값)와 ADX/maxhold(ADX/최대보유)를 조합한 dual-side runtime surface(양방향 런타임 표면)를 만들었다.
+- effect(효과): `dual_pshort_0_45__adx_block_40_0__maxhold_8`가 validation/combined density(검증/합산 밀도) `3.0721649485` / `3.2462462462`와 long/short(롱/숏) `952` / `129`를 보여 다음 MT5 package(MT5 패키지) 후보가 됐다.
+- next(다음): `run364W_package_density_side_balance_repair_runtime_probe_without_db_v1`

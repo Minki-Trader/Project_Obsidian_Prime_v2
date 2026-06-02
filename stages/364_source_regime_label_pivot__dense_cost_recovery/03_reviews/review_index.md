@@ -41,3 +41,5 @@
 - `run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364T_drawdown_side_balance_overlay_mt5_runtime_probe_review.md` - ADX side filter MT5 runtime probe review(ADX 방향 필터 MT5 런타임 탐침 검토).
 
 - `run364U_materialize_density_side_balance_repair_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364U_density_side_balance_repair_inputs.md` - density/side-balance repair inputs(밀도/방향 균형 수리 입력).
+
+- `run364V_train_density_side_balance_repair_onnx_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364V_density_side_balance_repair_onnx_scout.md` - density side-balance ONNX scout(밀도 방향 균형 온엑스 탐색).
