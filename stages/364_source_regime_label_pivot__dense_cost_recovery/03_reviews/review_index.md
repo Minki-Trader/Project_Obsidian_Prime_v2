@@ -82,3 +82,10 @@
 - judgment(판정): `proxy_scout_completed_timestamp_safe_bridge_candidates_ranked_mt5_probe_required_no_authority`
 - selected(선택): `stress3_restore_long_p0_42_adx35_0__ps0_45__adx40_0__hold8`
 - effect(효과): top_n(상위 N개) 표현을 고정 임계값으로 바꿔 안전하게 scout(정찰)했다.
+
+## run364AE_review_pf_dd_near_miss_density_bridge_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AE_pf_dd_density_bridge_review.md`
+- judgment(판정): `negative_for_package_positive_for_pf_lift_density_safe_expansion_no_authority`
+- package_decision(패키지 결정): `no_package_pf_below_target(패키지 없음, PF 목표 미달)`
+- effect(효과): PF 목표 미달을 패키지 금지와 run364AF(364AF 실행) queue(대기열)로 연결했다.

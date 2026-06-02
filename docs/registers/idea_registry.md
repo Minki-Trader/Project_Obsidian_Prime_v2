@@ -913,3 +913,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): near-miss density bridge(근접 실패 밀도 연결)를 top_n(상위 N개) 없이 고정 임계값으로 시험한다.
 - positive clue(긍정 단서): selected proxy(선택 프록시) `stress3_restore_long_p0_42_adx35_0__ps0_45__adx40_0__hold8`.
 - failure memory(실패 기억): top_n month ranking(월 전체 상위 N개 순위)은 timestamp-safe(시점 안전)가 아니므로 직접 재생 금지.
+
+## run364AE_review_pf_dd_near_miss_density_bridge_scout_without_db_v1
+
+- idea(아이디어): density-safe candidate(밀도 안전 후보)는 남기되 PF target(PF 목표) 전 package(패키지)는 금지한다.
+- positive clue(긍정 단서): PF 1.27대와 DD 개선이 동시에 보인다.
+- failure memory(실패 기억): PF 1.30 이상 후보는 밀도가 무너지는 경향이 있어 density bridge(밀도 연결)와 함께 시험해야 한다.

@@ -27,3 +27,8 @@ Next action(다음 행동): run364Z cost/session/drawdown stress materialization
 
 - action(행동): timestamp-safe bridge scout(시점 안전 연결 정찰)를 완료했다.
 - effect(효과): Stage364(364단계) 안에서 review(검토)로 이어간다.
+
+## run364AE_review_pf_dd_near_miss_density_bridge_scout_without_db_v1
+
+- action(행동): bridge scout(연결 정찰)를 review(검토)했다.
+- effect(효과): Stage364(364단계) 안에서 PF lift density-safe expansion(PF 상승 밀도 안전 확장)으로 이어간다.
