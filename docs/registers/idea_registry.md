@@ -818,3 +818,14 @@ Register ideas when they become durable work, not for every passing thought.
 - best_oos_net(최선 표본외 순수익): `439.321`.
 - runtime_probe_candidate_count(런타임 탐침 후보 수): `0`.
 - claim_boundary(주장 경계): `research_development_direct_dense_m5_model_training_and_proxy_scout_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## IDEA-ST364L-DENSITY-LIFT-TRADE-SHAPE-ONNX-SCOUT
+
+- hypothesis(가설): h24 quality clue(24봉 품질 단서)와 h6 density clue(6봉 밀도 단서)를 shorter hold and exit policy(짧은 보유와 청산 정책)로 결합하면 3/day+(일 3회 이상) density(밀도)를 회복할 수 있다.
+- legacy_relation(레거시 관계): `none(없음)`.
+- tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B out_of_scope_by_claim(Tier A+B 주장 범위 밖)`.
+- broad_sweep(넓은 탐색): `horizon_m5=[3,4,6,8,12]`, `target_density=[3,5,8,12]`, `policy=[long_only,two_sided,side_asym]`.
+- extreme_sweep(극단 탐색): `target_density=[16,20]`, `hold_m5=[2,3]`, `cost_stress=[0.30,0.45,0.60]`.
+- micro_search_gate(미세 탐색 게이트): validation/OOS density >= 3/day(검증/표본외 밀도 3/일 이상), net > 0(순수익 양수), PF >= 1.05(수익 팩터 1.05 이상).
+- wfo_plan(WFO 계획): scout(탐색) 통과 후 WFO(워크포워드 최적화).
+- evidence_boundary(근거 경계): `research_development_kpi_evidence_review_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.

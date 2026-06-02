@@ -19,3 +19,5 @@
 - `run364I_design_dense_m5_runtime_repair_proxy_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364I_dense_m5_runtime_repair_proxy.md` - dense M5 runtime repair proxy(고밀도 M5 런타임 수리 프록시).
 
 - `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364J_direct_dense_m5_onnx_scout.md` - direct dense M5 ONNX scout(직접 고밀도 5분봉 온엑스 탐색).
+
+- `run364K_review_direct_dense_m5_onnx_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364K_direct_dense_m5_onnx_scout_review.md` - direct dense M5 ONNX scout review(직접 고밀도 5분봉 온엑스 탐색 검토).

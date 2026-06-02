@@ -6147,3 +6147,9 @@ Action(행동): run359B q05 dense runtime cycle(q05 고밀도 런타임 사이�
 Effect(효과): dense_rows(고밀도 행) `17428`, strict_success_count(엄격 성공 수) `0`로 기록했고, 다음 공격 실행 `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`를 열었다.
 
 Boundary(경계): MT5 execution(MT5 실행), operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+## 2026-06-02 run364K Direct Dense M5 ONNX Scout Review(364K 직접 고밀도 5분봉 온엑스 탐색 검토)
+
+Action(행동): direct dense M5 scout(직접 고밀도 5분봉 탐색)의 negative result(부정 결과)를 review(검토)했다.
+
+Effect(효과): h24 quality clue(24봉 품질 단서)와 h6 density clue(6봉 밀도 단서)를 다음 trade-shape scout(거래 형태 탐색)로 넘겼다.

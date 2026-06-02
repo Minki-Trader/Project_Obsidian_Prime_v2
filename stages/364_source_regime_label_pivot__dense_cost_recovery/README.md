@@ -57,3 +57,9 @@ Effect(효과): 다음 실행은 `run364J_train_direct_dense_m5_return_onnx_scou
 Action(행동): direct dense M5 model(직접 고밀도 5분봉 모델)을 학습하고 ONNX smoke parity(온엑스 연기 동등성)를 점검했다.
 
 Effect(효과): 다음 작업은 `run364K_review_direct_dense_m5_onnx_scout_without_db_v1`이고, 운영 주장(operating claim, 운영 주장)은 없다.
+
+## run364K Direct Dense M5 ONNX Scout Review(364K 직접 고밀도 5분봉 온엑스 탐색 검토)
+
+Action(행동): run364J(364J 실행)의 low-density profit clue(저밀도 수익 단서)를 failure memory(실패 기억)와 next offensive seed(다음 공격 씨앗)로 바꿨다.
+
+Effect(효과): `run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1`에서 density lift trade shape(밀도 상향 거래 형태)를 시험한다.

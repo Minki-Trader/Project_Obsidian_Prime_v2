@@ -565,3 +565,9 @@ Negative results are preserved because they prevent repeated dead ends.
 Action(행동): direct dense M5 ONNX scout(직접 고밀도 5분봉 온엑스 탐색)를 strict cost-density gate(엄격 비용-밀도 게이트)로 닫았다.
 
 Effect(효과): 다음 작업은 failure memory(실패 기억)를 이용해 새 offensive seed(공격 씨앗)를 고른다. 아이디어 사망(idea dead, 아이디어 사망)은 아니다.
+
+## run364K Direct Dense M5 Density Bottleneck Failure Memory(364K 직접 고밀도 5분봉 밀도 병목 실패 기억)
+
+Action(행동): run364J(364J 실행)의 strict_candidate_rows(엄격 후보 행) `0`개를 확인하고 failure memory(실패 기억)를 남겼다.
+
+Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀도 주장)에 반복 사용하지 않고, h6 density row(6봉 밀도 행)는 validation stability repair(검증 안정성 수리) 조건으로 재개한다.

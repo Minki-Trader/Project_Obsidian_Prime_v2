@@ -1,0 +1,24 @@
+{
+  "alternative_explanations": [
+    "proxy semantics not MT5(프록시 의미가 MT5 아님)",
+    "single-window scout(단일 구간 탐색)",
+    "feature dependency all58(전체58 피처 의존)"
+  ],
+  "attribution_confidence": "medium(중간)",
+  "claim_boundary": "research_development_kpi_evidence_review_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364I dense proxy(364I 고밀도 프록시) and run364J strict density gate(364J 엄격 밀도 게이트).",
+  "likely_drivers": [
+    "hold horizon(보유 기간)",
+    "non-overlap proxy(비중첩 프록시)",
+    "threshold selection(임계값 선택)",
+    "validation instability(검증 불안정)"
+  ],
+  "next_probe": "run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1",
+  "observed_change": "run364J recovered OOS net/PF(표본외 순수익/수익 팩터 회복) but failed density(밀도 실패).",
+  "run_id": "run364K_review_direct_dense_m5_onnx_scout_without_db_v1",
+  "segment_checks": [
+    "label/horizon/policy decomposition(라벨/보유기간/정책 분해)",
+    "density-pass versus profit-pass split(밀도 통과와 수익 통과 분리)"
+  ],
+  "trade_shape": "h24 profit rows(24봉 수익 행)는 low frequency(저빈도), h6 density rows(6봉 밀도 행)는 validation loss(검증 손실)."
+}

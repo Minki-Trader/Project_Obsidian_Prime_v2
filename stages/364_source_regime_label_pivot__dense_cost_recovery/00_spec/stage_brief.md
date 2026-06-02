@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364K_review_direct_dense_m5_onnx_scout_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364K_review_direct_dense_m5_onnx_scout_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `direct_dense_m5_onnx_scout_completed_no_operating_claim(직접 고밀도 5분봉 온엑스 탐색 완료, 운영 주장 없음)`
-- claim_boundary(주장 경계): `research_development_direct_dense_m5_model_training_and_proxy_scout_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `direct_dense_m5_scout_reviewed_density_lift_next_seed_opened_no_operating_claim(직접 고밀도 5분봉 탐색 검토 완료, 밀도 상향 다음 씨앗 열림, 운영 주장 없음)`
+- claim_boundary(주장 경계): `research_development_kpi_evidence_review_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -84,3 +84,9 @@ Effect(효과): sparse expected tape(희소 예상 테이프) 실패는 수리 �
 Action(행동): all58/runtime_core feature set(전체58/런타임 핵심 피처셋)과 direct return label(직접 수익 라벨)을 학습했다.
 
 Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수)는 `0`이고, 다음 실행은 `run364K_review_direct_dense_m5_onnx_scout_without_db_v1`이다.
+
+## run364K Direct Dense M5 ONNX Scout Review Closeout(364K 직접 고밀도 5분봉 온엑스 탐색 검토 종료)
+
+Action(행동): run364J(364J 실행)의 192개 threshold row(임계값 행)를 review class(검토 분류)로 나눴다.
+
+Effect(효과): strict_candidate_rows(엄격 후보 행)는 `0`이고, 다음 실행은 `run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1`이다.
