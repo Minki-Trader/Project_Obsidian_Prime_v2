@@ -6153,3 +6153,15 @@ Boundary(경계): MT5 execution(MT5 실행), operating promotion(운영 승격),
 Action(행동): direct dense M5 scout(직접 고밀도 5분봉 탐색)의 negative result(부정 결과)를 review(검토)했다.
 
 Effect(효과): h24 quality clue(24봉 품질 단서)와 h6 density clue(6봉 밀도 단서)를 다음 trade-shape scout(거래 형태 탐색)로 넘겼다.
+
+## 2026-06-02 run364L Density Lift Trade Shape ONNX Scout(364L 밀도 상향 거래 형태 온엑스 탐색)
+
+Action(행동): dynamic exit trade shape(동적 청산 거래 형태)를 학습 모델 위에 얹어 3/day+(일 3회 이상) 후보를 탐색했다.
+
+Effect(효과): proxy candidate(프록시 후보)가 생겼지만 MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장을 하지 않는다.
+
+## 2026-06-02 run364L Density Lift Trade Shape ONNX Scout(364L 밀도 상향 거래 형태 온엑스 탐색)
+
+Action(행동): dynamic exit trade shape(동적 청산 거래 형태)를 학습 모델 위에 얹어 3/day+(일 3회 이상) 후보를 탐색했다.
+
+Effect(효과): proxy candidate(프록시 후보)가 생겼지만 MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장을 하지 않는다.

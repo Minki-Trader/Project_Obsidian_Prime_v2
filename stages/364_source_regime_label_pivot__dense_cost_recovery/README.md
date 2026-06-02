@@ -63,3 +63,9 @@ Effect(효과): 다음 작업은 `run364K_review_direct_dense_m5_onnx_scout_with
 Action(행동): run364J(364J 실행)의 low-density profit clue(저밀도 수익 단서)를 failure memory(실패 기억)와 next offensive seed(다음 공격 씨앗)로 바꿨다.
 
 Effect(효과): `run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1`에서 density lift trade shape(밀도 상향 거래 형태)를 시험한다.
+
+## run364L Density Lift Trade Shape ONNX Scout(364L 밀도 상향 거래 형태 온엑스 탐색)
+
+Action(행동): h24 quality clue(24봉 품질 단서)와 h6 density clue(6봉 밀도 단서)를 dynamic exit(동적 청산)로 결합했다.
+
+Effect(효과): 다음 실행은 `run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1`이고, 운영 주장(operating claim, 운영 주장)은 없다.
