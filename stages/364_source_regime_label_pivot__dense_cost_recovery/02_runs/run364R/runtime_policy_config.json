@@ -1,0 +1,37 @@
+{
+  "claim_boundary": "research_development_runtime_probe_package_only_common_files_synced_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "decision_surface": {
+    "InpBlockLongFeatureMax": 1000000.0,
+    "InpBlockLongFeatureMin": 38.68818,
+    "InpBlockLongFeatureRange": true,
+    "InpCloseOnFlatSignal": false,
+    "InpDecisionMode": "threshold_margin",
+    "InpLongThreshold": 0.0,
+    "InpMaxConcurrentPositions": 1,
+    "InpMaxHoldBars": 8,
+    "InpMinMargin": -0.000562137088,
+    "InpShortThreshold": 1.1,
+    "InpSideFilterEnabled": true,
+    "InpSideFilterFeatureIndex": 34
+  },
+  "expected_tapes": {
+    "comparison": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364R/adx_side_filter_expected_comparison.csv",
+    "probability_tape": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364R/expected_tapes/adx_side_filter_expected_probability_tape.csv",
+    "trade_tape": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364R/expected_tapes/adx_side_filter_expected_trade_tape.csv"
+  },
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "known_differences": [
+    "risk overlay ONNX(위험 오버레이 온엑스)는 current EA(현재 EA)가 직접 추론하지 않아 shadow handoff(그림자 인계)로 둔다.",
+    "selected runtime executable overlay(선택 실행 가능 오버레이)는 existing feature range side filter(기존 피처 범위 방향 필터)다.",
+    "proxy expected value(프록시 예상값)는 MT5 Strategy Tester(MT5 전략 테스터) KPI를 대체하지 않는다."
+  ],
+  "model_id": "h12_move5__rf5_l80_n64",
+  "mt5_execution": "not_run",
+  "primary_attempt": "run364R_h12_rf5_adx34_block_high_side_filter_maxhold8",
+  "run_id": "run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1",
+  "runtime_authority": "not_claimed",
+  "runtime_trade_shape": "mt5_native_maxhold8_plus_adx_side_filter",
+  "score_threshold": -0.000562137088,
+  "source_package_run_id": "run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1",
+  "threshold_id": "long_only_margin__density_16_0__maxhold_8__adx34_block_high"
+}

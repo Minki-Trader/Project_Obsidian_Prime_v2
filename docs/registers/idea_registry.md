@@ -853,3 +853,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): long-only positive clue(롱 전용 긍정 단서)에 risk overlay(위험 오버레이), hold cap(보유 상한), short router(숏 라우터)를 덧대 drawdown/side balance(낙폭/방향 균형)를 수리한다.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Q_drawdown_side_balance_overlay_onnx_scout.md`.
 - boundary(경계): proxy scout(프록시 탐색)이며 MT5 runtime probe(MT5 런타임 탐침) 전 운영 주장(operating claim, 운영 주장)은 없다.
+
+## run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1
+
+- idea(아이디어): risk overlay ONNX(위험 오버레이 온엑스)를 바로 실행하지 못하는 대신, current EA(현재 EA)가 지원하는 `adx_14` side filter(방향 필터)로 runtime probe(런타임 탐침)를 먼저 연다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364R_drawdown_side_balance_overlay_runtime_probe_package.md`.
+- reopen_condition(재개 조건): run364S MT5 result(MT5 결과)가 PF(수익 팩터), drawdown(낙폭), trade density(거래 밀도)를 유지하면 full overlay ONNX composition(전체 오버레이 온엑스 합성)을 다시 시도한다.

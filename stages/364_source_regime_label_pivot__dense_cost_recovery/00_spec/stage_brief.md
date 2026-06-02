@@ -122,3 +122,9 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 - action(행동): risk overlay ONNX scout(위험 오버레이 온엑스 탐색), hold cap proxy(보유 상한 프록시), short router proxy(숏 라우터 프록시)를 실행했다.
 - effect(효과): run364O(364O 실행)의 positive clue(긍정 단서)를 다음 runtime package(런타임 패키지) 후보로 좁혔다.
 - next(다음): `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`
+
+## run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1
+
+- action(행동): ADX side filter(ADX 방향 필터) MT5 runtime probe package(MT5 런타임 탐침 패키지)를 만들었다.
+- effect(효과): OOS expected net(표본외 예상 순수익) `403.359`와 trade density(거래 밀도) `3.4833333333`인 실행 가능 후보를 다음 MT5 실행으로 넘긴다.
+- next(다음): `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
