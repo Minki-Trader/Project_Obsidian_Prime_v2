@@ -69,3 +69,9 @@ Effect(효과): `run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1
 Action(행동): h24 quality clue(24봉 품질 단서)와 h6 density clue(6봉 밀도 단서)를 dynamic exit(동적 청산)로 결합했다.
 
 Effect(효과): 다음 실행은 `run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1`이고, 운영 주장(operating claim, 운영 주장)은 없다.
+
+## run364N MT5 Runtime Probe(MT5 런타임 탐침)
+
+- run_id(실행 ID): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`
+- summary(요약): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364N/density_lift_mt5_probe_summary.csv`
+- effect(효과): Stage364(364단계)의 proxy(프록시)를 MT5 runtime evidence(MT5 런타임 근거)와 대조한다.

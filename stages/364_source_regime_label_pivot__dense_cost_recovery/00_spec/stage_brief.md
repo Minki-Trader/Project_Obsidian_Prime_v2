@@ -96,3 +96,11 @@ Effect(효과): strict_candidate_rows(엄격 후보 행)는 `0`이고, 다음 �
 Action(행동): dynamic exit trade shape(동적 청산 거래 형태)로 3/day+(일 3회 이상) proxy candidate(프록시 후보)를 탐색했다.
 
 Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수)는 `5`이고, 다음 실행은 `run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1`이다.
+
+## run364N MT5 Runtime Probe(MT5 런타임 탐침)
+
+- run_id(실행 ID): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`
+- external_verification_status(외부 검증 상태): `completed(완료)`
+- matched_rows(일치 수): `17428`
+- mismatch_rows(불일치 수): `0`
+- effect(효과): 실제 MT5 실행 결과 또는 blocker(차단 사유)를 다음 review/repair(검토/수리)로 넘긴다.

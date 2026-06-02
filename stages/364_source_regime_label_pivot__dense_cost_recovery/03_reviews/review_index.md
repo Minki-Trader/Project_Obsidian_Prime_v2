@@ -25,3 +25,5 @@
 - `run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364L_density_lift_trade_shape_onnx_scout.md` - density lift trade shape ONNX scout(밀도 상향 거래 형태 온엑스 탐색).
 
 - `run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364M_density_lift_trade_shape_onnx_runtime_probe_package.md` - density lift trade shape ONNX runtime probe package(밀도 상향 거래 형태 온엑스 런타임 탐침 포장).
+
+- `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364N_density_lift_trade_shape_onnx_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침) attempt(시도).
