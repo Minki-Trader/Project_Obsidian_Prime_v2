@@ -541,3 +541,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - do_not_repeat(반복 금지): 이 상태를 promotion candidate(승격 후보)나 runtime authority(런타임 권위)로 과장하지 않는다.
 - reopen_condition(재개 조건): `run364D_materialize_timestamp_context_training_seed_without_db_v1`가 WFO/month stability(WFO/월 안정성)를 개선하고 MT5 runtime probe(MT5 런타임 탐침)로 재확인한다.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364C/monthly_stability.csv`.
+
+## 2026-06-02 FM-ST364H-SPARSE-RUNTIME-TAPE-NEGATIVE-MT5-KPI
+
+- source_run(원천 실행): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`
+- failure(실패): MT5 net_profit(순수익) `-230.65`, PF(수익 팩터) `0.78`, trade_count(거래수) `66`, closed_trades_per_business_day(영업일당 종료 거래) `0.47482`.
+- salvage_value(회수 가치): proxy-MT5 parity(프록시-MT5 동등성)는 matched_rows(일치 행) `472`, mismatch_rows(불일치 행) `0`로 좋다.
+- do_not_repeat(반복 금지): 같은 sparse event tape(희소 이벤트 테이프)의 threshold-only search(임계값 전용 탐색)를 반복하지 않는다.
+- reopen_condition(재개 조건): dense M5 source(고밀도 M5 원천), calendar exit semantics(캘린더 청산 의미), session/regime router(세션/국면 라우터)가 trade/day 3+와 MT5 순수익 양수를 동시에 만들 때.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/failure_memory.csv`.

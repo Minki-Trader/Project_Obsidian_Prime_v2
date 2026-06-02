@@ -6127,3 +6127,15 @@ Effect(효과): 다음 실행은 `run364E_train_timestamp_context_cost_filter_mo
 Action(행동): ONNX adapter(온엑스 어댑터), feature matrix(피처 행렬), expected tape(예상 테이프), set/ini(설정/INI)를 만들고 Common Files(공용 파일)에 동기화했다.
 
 Effect(효과): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`에서 외부 MT5 runtime probe(MT5 런타임 탐침)를 바로 시도할 수 있다. 운영 주장은 없다.
+
+## 2026-06-02 run364H Timestamp Context ONNX MT5 Probe Review(364H 시점 문맥 ONNX MT5 탐침 검토)
+
+- action(행동): run364G MT5 runtime probe(MT5 런타임 탐침)를 성과 귀속과 실패 기억으로 검토했다.
+- effect(효과): next_run(다음 실행) `run364I_design_runtime_failure_repair_offensive_queue_without_db_v1`가 sparse tape threshold-only search(희소 테이프 임계값 전용 탐색)를 반복하지 않게 한다.
+- boundary(경계): runtime authority/operating promotion/Goal Achieve(런타임 권위/운영 승격/목표 달성)는 주장하지 않는다.
+
+## 2026-06-02 run364H Timestamp Context ONNX MT5 Probe Review(364H 시점 문맥 ONNX MT5 탐침 검토)
+
+- action(행동): run364G MT5 runtime probe(MT5 런타임 탐침)를 성과 귀속과 실패 기억으로 검토했다.
+- effect(효과): next_run(다음 실행) `run364I_design_runtime_failure_repair_offensive_queue_without_db_v1`가 sparse tape threshold-only search(희소 테이프 임계값 전용 탐색)를 반복하지 않게 한다.
+- boundary(경계): runtime authority/operating promotion/Goal Achieve(런타임 권위/운영 승격/목표 달성)는 주장하지 않는다.

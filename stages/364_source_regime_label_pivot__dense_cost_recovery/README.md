@@ -39,3 +39,9 @@ Effect(효과): proxy expected tape(프록시 예상 테이프)와 MT5 telemetry
 - run_id(실행 ID): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`
 - summary(요약): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364G/timestamp_context_onnx_mt5_probe_summary.csv`
 - effect(효과): Stage364(364단계)의 proxy(프록시)를 MT5 runtime evidence(MT5 런타임 근거)로 대조한다.
+
+## run364H MT5 Runtime Probe Review(MT5 런타임 탐침 검토)
+
+- run_id(실행 ID): `run364H_review_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`
+- findings(검토 발견): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/review_findings.csv`
+- effect(효과): ONNX parity clue(ONNX 동등성 단서)는 보존하고, MT5 KPI negative(MT5 KPI 부정)는 실패 기억으로 남긴다.

@@ -788,3 +788,11 @@ Register ideas when they become durable work, not for every passing thought.
 - expected_tape(예상 테이프): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364F/expected_probability_tapes/timestamp_context_expected_probability_tape.csv`.
 - next_action(다음 행동): `run364G_execute_timestamp_context_onnx_mt5_runtime_probe_without_db_v1`.
 - claim_boundary(주장 경계): `research_development_runtime_probe_package_only_common_files_synced_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+
+## IDEA-ST364H-DENSE-M5-SOURCE-RUNTIME-REPAIR
+
+- idea(아이디어): sparse event tape(희소 이벤트 테이프)를 dense M5 source(고밀도 M5 원천)와 calendar exit semantics(캘린더 청산 의미)로 수리한다.
+- hypothesis(가설): ONNX handoff(ONNX 인계)는 맞으므로 signal source density(신호 원천 밀도)와 runtime exit(런타임 청산)를 바꾸면 trade/day(일별 거래수) 3+와 MT5 net positive(MT5 순수익 양수)를 다시 시험할 수 있다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/review_findings.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/failure_memory.csv`.
+- next_action(다음 행동): `run364I_design_runtime_failure_repair_offensive_queue_without_db_v1`.
+- claim_boundary(주장 경계): `research_development_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
