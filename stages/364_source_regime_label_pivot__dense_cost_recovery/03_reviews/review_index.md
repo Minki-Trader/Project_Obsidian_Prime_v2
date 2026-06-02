@@ -37,3 +37,5 @@
 - `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364R_drawdown_side_balance_overlay_runtime_probe_package.md` - ADX side filter runtime probe package(ADX 방향 필터 런타임 탐침 패키지).
 
 - `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364S_drawdown_side_balance_overlay_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침) attempt(시도).
+
+- `run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364T_drawdown_side_balance_overlay_mt5_runtime_probe_review.md` - ADX side filter MT5 runtime probe review(ADX 방향 필터 MT5 런타임 탐침 검토).

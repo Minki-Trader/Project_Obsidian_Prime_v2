@@ -859,3 +859,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): risk overlay ONNX(위험 오버레이 온엑스)를 바로 실행하지 못하는 대신, current EA(현재 EA)가 지원하는 `adx_14` side filter(방향 필터)로 runtime probe(런타임 탐침)를 먼저 연다.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364R_drawdown_side_balance_overlay_runtime_probe_package.md`.
 - reopen_condition(재개 조건): run364S MT5 result(MT5 결과)가 PF(수익 팩터), drawdown(낙폭), trade density(거래 밀도)를 유지하면 full overlay ONNX composition(전체 오버레이 온엑스 합성)을 다시 시도한다.
+
+## run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1
+
+- idea(아이디어): ADX side filter(ADX 방향 필터)는 run364S(364S 실행)에서 MT5 net/PF/DD(순수익/수익 팩터/낙폭)를 개선했지만, density floor(거래 밀도 하한)와 long-only(롱 전용)를 동시에 고쳐야 한다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364T_drawdown_side_balance_overlay_mt5_runtime_probe_review.md`.
+- reopen_condition(재개 조건): run364U(364U 실행)에서 validation/combined density(검증/합산 밀도) >= 3/day(일 3회 이상)와 nonzero short route(0이 아닌 숏 라우트)를 timestamp-safe(시점 안전)하게 만들 때.

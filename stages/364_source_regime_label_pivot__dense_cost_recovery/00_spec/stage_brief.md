@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364L_train_density_lift_trade_shape_onnx_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364U_materialize_density_side_balance_repair_inputs_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `density_lift_trade_shape_proxy_candidate_opened_no_operating_claim(밀도 상향 거래 형태 프록시 후보 열림, 운영 주장 없음)`
-- claim_boundary(주장 경계): `research_development_density_lift_trade_shape_model_training_and_proxy_scout_only_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `runtime_positive_density_side_balance_repair_required_no_operating_claim(런타임 양수, 밀도/방향 균형 수리 필요, 운영 주장 없음)`
+- claim_boundary(주장 경계): `research_development_mt5_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -128,3 +128,9 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 - action(행동): ADX side filter(ADX 방향 필터) MT5 runtime probe package(MT5 런타임 탐침 패키지)를 만들었다.
 - effect(효과): OOS expected net(표본외 예상 순수익) `403.359`와 trade density(거래 밀도) `3.4833333333`인 실행 가능 후보를 다음 MT5 실행으로 넘긴다.
 - next(다음): `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
+
+## run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1
+
+- action(행동): `run364S` ADX side filter(ADX 방향 필터) MT5 runtime probe(MT5 런타임 탐침)를 review(검토)했다.
+- effect(효과): net/PF/DD(순수익/수익 팩터/낙폭) 개선 단서는 보존하고, density floor(거래 밀도 하한)와 long-only(롱 전용) 실패를 `run364U` 입력으로 바꿨다.
+- next(다음): `run364U_materialize_density_side_balance_repair_inputs_without_db_v1`

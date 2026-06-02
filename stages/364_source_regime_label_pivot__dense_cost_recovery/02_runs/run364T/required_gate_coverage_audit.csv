@@ -1,0 +1,9 @@
+﻿gate_id,status,evidence,effect(효과)
+kpi_contract_audit,passed,stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364S/drawdown_side_balance_overlay_mt5_probe_summary.csv,MT5 KPI fields are present and report status is completed
+row_grain_audit,passed,summary_trade_count=935; closed_trade_rows=935,closed trade attribution has the same grain as MT5 KPI
+source_authority_audit,passed,closed_trade_net_sum=928.89; mt5_net=928.89; report_status=completed,Strategy Tester report remains the KPI authority
+density_guardrail_audit,passed,stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364T/density_guardrail_audit.csv,"density failure is recorded, not hidden: {'validation': 'failed', 'oos': 'passed', 'combined': 'failed'}"
+performance_attribution_audit,passed,stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364T/kpi_delta_vs_run364O.csv; stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364T/review_findings.csv,KPI improvement and blockers are separated
+result_judgment_audit,passed,positive_runtime_probe_profit_pf_drawdown_clue_promotion_ineligible_density_below_floor_long_only_no_authority,positive runtime clue is not promoted
+artifact_lineage_audit,passed,stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364T/input_manifest.csv,inputs and outputs are connected before handoff
+required_gate_coverage_audit,passed,8/8 gates recorded,work packet can be closed without missing required gates

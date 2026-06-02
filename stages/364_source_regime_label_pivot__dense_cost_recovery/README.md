@@ -1,7 +1,7 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364S_execute_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
+Current run(현재 실행): `run364U_materialize_density_side_balance_repair_inputs_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364R_package_drawdown_side_balance_overlay_runtime_probe_without_db_v1`
+Latest completed run(최근 완료 실행): `run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
 
-Stage364(364단계)는 dense cost recovery(고밀도 비용 회복)를 같은 stage(단계) 안에서 계속 탐색한다. `run364R`은 risk overlay(위험 오버레이)를 current EA executable side filter(현재 EA 실행 가능 방향 필터)로 바꿔 MT5 tester(MT5 테스터) 실행 직전까지 포장했다.
+Stage364(364단계)는 source/regime label pivot(원천/국면 라벨 전환) 안에서 dense cost recovery(고밀도 비용 회복)를 탐색한다. `run364T`는 ADX side filter(ADX 방향 필터) MT5 runtime probe(MT5 런타임 탐침)를 positive clue(긍정 단서)로 보존하되 density/side-balance repair(밀도/방향 균형 수리)를 다음 작업으로 열었다.

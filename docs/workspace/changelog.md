@@ -6207,3 +6207,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): MT5 runtime probe(MT5 런타임 탐침)를 시도했다.
 - effect(효과): external verification(외부 검증) 상태 `completed(완료)`, matched_rows(일치 수) `17428`, mismatch_rows(불일치 수) `0`를 기록했다.
 - boundary(경계): operating promotion/runtime authority/Goal Achieve(운영 승격/런타임 권위/목표 달성)는 주장하지 않는다.
+
+## 2026-06-02 - run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1
+
+- action(행동): `run364S` ADX side filter(ADX 방향 필터) MT5 runtime probe(MT5 런타임 탐침)를 review(검토)하고 `run364U` repair queue(수리 대기열)를 만들었다.
+- effect(효과): net/PF/DD(순수익/수익 팩터/낙폭) 개선 단서는 남기고 density/long-only(밀도/롱 전용) blocker(차단)를 운영 주장 전에 닫았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364T_drawdown_side_balance_overlay_mt5_runtime_probe_review.md`
