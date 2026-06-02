@@ -6055,3 +6055,33 @@ Effect(효과): cross-split pass(교차 분할 통과)가 없어 current truth(�
 Action(행동): validation-derived lower-floor/rank surface(검증 파생 낮은 하한/순위 표면)를 q05 long-only table(q05 롱 단독 표)에 구체화했다.
 
 Effect(효과): cross-split pass(교차 분할 통과)가 없어 current truth(현재 진실)는 run363C review(363C 검토)로 이동했다.
+
+## 2026-06-02 run363C Lower-Floor Rank Surface Review and Stage364 Branch(363C 낮은 하한 순위 표면 검토 및 364단계 분기)
+
+Action(행동): Stage363B(363B 실행)의 passing_cross_split_rows(교차 분할 통과 행) `0` 결과를 검토하고 Stage364(364단계)를 열었다.
+
+Effect(효과): current truth(현재 진실)는 `364_source_regime_label_pivot__dense_cost_recovery` / `run364B_materialize_timestamp_context_cost_surface_without_db_v1`로 이동했고, 같은 threshold micro-tuning(임계값 미세조정)은 반복 금지로 기록됐다.
+
+## 2026-06-02 run363C Lower-Floor Rank Surface Review and Stage364 Branch(363C 낮은 하한 순위 표면 검토 및 364단계 분기)
+
+Action(행동): Stage363B(363B 실행)의 passing_cross_split_rows(교차 분할 통과 행) `0` 결과를 검토하고 Stage364(364단계)를 열었다.
+
+Effect(효과): current truth(현재 진실)는 `364_source_regime_label_pivot__dense_cost_recovery` / `run364B_materialize_timestamp_context_cost_surface_without_db_v1`로 이동했고, 같은 threshold micro-tuning(임계값 미세조정)은 반복 금지로 기록됐다.
+
+## 2026-06-02 run363C Lower-Floor Rank Surface Review and Stage364 Branch(363C 낮은 하한 순위 표면 검토 및 364단계 분기)
+
+Action(행동): Stage363B(363B 실행)의 passing_cross_split_rows(교차 분할 통과 행) `0` 결과를 검토하고 Stage364(364단계)를 열었다.
+
+Effect(효과): current truth(현재 진실)는 `364_source_regime_label_pivot__dense_cost_recovery` / `run364B_materialize_timestamp_context_cost_surface_without_db_v1`로 이동했고, 같은 threshold micro-tuning(임계값 미세조정)은 반복 금지로 기록됐다.
+
+## 2026-06-02 run363C Lower-Floor Rank Surface Review and Stage364 Branch(363C 낮은 하한 순위 표면 검토 및 364단계 분기)
+
+Action(행동): Stage363B(363B 실행)의 passing_cross_split_rows(교차 분할 통과 행) `0` 결과를 검토하고 Stage364(364단계)를 열었다.
+
+Effect(효과): current truth(현재 진실)는 `364_source_regime_label_pivot__dense_cost_recovery` / `run364B_materialize_timestamp_context_cost_surface_without_db_v1`로 이동했고, 같은 threshold micro-tuning(임계값 미세조정)은 반복 금지로 기록됐다.
+
+## 2026-06-02 run363C Lower-Floor Rank Surface Review and Stage364 Branch(363C 낮은 하한 순위 표면 검토 및 364단계 분기)
+
+Action(행동): Stage363B(363B 실행)의 passing_cross_split_rows(교차 분할 통과 행) `0` 결과를 검토하고 Stage364(364단계)를 열었다.
+
+Effect(효과): current truth(현재 진실)는 `364_source_regime_label_pivot__dense_cost_recovery` / `run364B_materialize_timestamp_context_cost_surface_without_db_v1`로 이동했고, 같은 threshold micro-tuning(임계값 미세조정)은 반복 금지로 기록됐다.

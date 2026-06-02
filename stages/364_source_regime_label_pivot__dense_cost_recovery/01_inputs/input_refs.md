@@ -1,0 +1,10 @@
+﻿# Stage364 Input References(364단계 입력 참조)
+
+- source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
+- source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
+- parent_materialization_run_id(부모 구체화 실행 ID): `run363B_materialize_q05_lower_floor_rank_surface_without_db_v1`
+- source_cross_split(원천 교차 분할): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363B/lower_floor_rank_cross_split.csv`
+- source_failure_attribution(원천 실패 귀속): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363B/lower_floor_rank_failure_attribution.csv`
+- source_final_decision(원천 최종 결정): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363B/final_decision.json`
+- stage364_design_queue(364단계 설계 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364A/run364B_design_queue.csv`
+- claim_boundary(주장 경계): `state_sync_stage_branch_source_regime_label_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

@@ -738,3 +738,12 @@ Register ideas when they become durable work, not for every passing thought.
 - result(결과): passing_cross_split_rows(교차 분할 통과 행) `0`.
 - next_action(다음 행동): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`.
 - claim_boundary(주장 경계): `research_development_materialization_only_q05_lower_floor_rank_surface_report_derived_validation_thresholds_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+
+## IDEA-ST364-SOURCE-REGIME-LABEL-PIVOT-DENSE-COST-RECOVERY
+
+- idea(아이디어): timestamp-safe source/regime/label context(시점 안전 원천/국면/라벨 문맥)로 q05 dense cost(q05 고밀도 비용)를 회복한다.
+- source_failure_memory(원천 실패 기억): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363C/failure_memory.csv`.
+- design_queue(설계 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364A/run364B_design_queue.csv`.
+- tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`.
+- evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`.
+- claim_boundary(주장 경계): `state_sync_stage_branch_source_regime_label_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.

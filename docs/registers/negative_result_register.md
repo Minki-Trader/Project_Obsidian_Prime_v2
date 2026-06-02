@@ -523,3 +523,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - do_not_repeat(반복 금지): lower-floor/rank threshold(낮은 하한/순위 임계값)만 더 조이는 미세 탐색을 후보 선택처럼 반복하지 않는다.
 - reopen_condition(재개 조건): 새 regime/label/source(국면/라벨/원천)가 density(밀도)와 cost stress(비용 압박)를 같이 회복할 때.
 - evidence(근거): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363B/lower_floor_rank_failure_attribution.csv`
+
+## 2026-06-02 FM-ST363C-LOWER-FLOOR-RANK-DENSITY-COST-TRADEOFF
+
+- source_run(원천 실행): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
+- failure(실패): lower-floor/rank surface(낮은 하한/순위 표면)는 cost-positive sparse rows(비용 양수 희소 행)를 만들었지만 density >= 3(밀도 3 이상)을 동시에 만족하지 못했다.
+- salvage_value(회수 가치): sparse cost-positive variants(희소 비용 양수 변형), open-hour clue(진입 시간 단서), dense control failure(고밀도 대조 실패).
+- do_not_repeat(반복 금지): lower-floor/rank threshold micro-tuning(낮은 하한/순위 임계값 미세조정)을 후보 선택처럼 반복하지 않는다.
+- reopen_condition(재개 조건): timestamp-safe context/regime/label source(시점 안전 문맥/국면/라벨 원천)가 density >= 3(밀도 3 이상)과 cost positive(비용 양수)를 같이 만든다.
+- evidence(근거): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363C/review_findings.csv`.

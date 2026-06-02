@@ -1,24 +1,25 @@
 ﻿# Stage363 Selection Status(363단계 선택 상태)
 
-- selection_status(선택 상태): `materialized_review_required_no_selection(구체화 완료, 검토 필요, 선택 없음)`
+- selection_status(선택 상태): `closed_no_selection_branched_to_stage364(종료, 선택 없음, 364단계 분기)`
 - active_stage_id(활성 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - current_run_id(현재 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run363B_materialize_q05_lower_floor_rank_surface_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
+- next_stage_id(다음 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
+- next_run_id(다음 실행 ID): `run364A_branch_stage363_to_source_regime_label_pivot_without_db_v1`
 - candidate_selection(후보 선택): `not_run`
 - runtime_authority(런타임 권위): `not_claimed`
 - operating_promotion(운영 승격): `not_claimed`
 - live_readiness(실거래 준비): `not_claimed`
 - goal_achieve(목표 달성): `not_claimed`
 
-## run363B Materialization Closeout(363B 구체화 종료 기록)
+## run363C Review Closeout(363C 검토 종료 기록)
 
-- status(상태): `completed_stage363B_q05_lower_floor_rank_surface_materialized_review_required_no_selection_no_mt5`
-- judgment(판정): `lower_floor_rank_surface_materialized_no_cross_split_density_cost_pass_review_required_no_operating_claim`
-- gate_result(게이트 결과): `10/10`
-- passing_cross_split_rows(교차 분할 통과 행): `0`
-- next_run_id(다음 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- claim_boundary(주장 경계): `research_development_materialization_only_q05_lower_floor_rank_surface_report_derived_validation_thresholds_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- status(상태): `completed_stage363C_q05_lower_floor_rank_surface_reviewed_no_selection_stage364_branch`
+- judgment(판정): `negative_lower_floor_rank_density_cost_tradeoff_preserved_timestamp_context_pivot_no_operating_claim`
+- gate_result(게이트 결과): `11/11`
+- stage364_design_queue_rows(364단계 설계 대기열 행): `6`
+- claim_boundary(주장 경계): `research_development_review_only_q05_lower_floor_rank_negative_memory_and_stage364_handoff_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
-Action(행동): lower-floor/rank surface(낮은 하한/순위 표면)를 구체화했다.
+Action(행동): lower-floor/rank surface(낮은 하한/순위 표면)를 더 미세조정하지 않고 Stage364(364단계)로 분기했다.
 
-Effect(효과): Stage363(363단계)는 후보 선택 없이 review(검토)로 진행한다.
+Effect(효과): 다음 탐색은 timestamp-safe context/regime/label source(시점 안전 문맥/국면/라벨 원천)에 집중한다.
