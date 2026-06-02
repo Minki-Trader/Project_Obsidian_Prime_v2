@@ -110,3 +110,9 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 - action(행동): `run364N` MT5 runtime probe(MT5 런타임 탐침)를 KPI/performance attribution(KPI/성과 귀속)으로 review(검토)했다.
 - effect(효과): positive net profit(양수 순수익) 단서는 유지하고, drawdown/long-only/hold tail(낙폭/롱 전용/보유 꼬리)을 다음 공격 탐색 입력으로 바꿨다.
 - next(다음): `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`
+
+## run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1
+
+- action(행동): run364O(364O 실행)의 MT5 review(MT5 검토)를 trade lifecycle/risk/side-balance inputs(거래 생명주기/위험/방향 균형 입력)로 materialize(구체화)했다.
+- effect(효과): 다음 `run364Q`에서 risk overlay(위험 오버레이), calendar hold cap(달력 보유 상한), short-side router(숏 방향 라우터)를 바로 탐색할 수 있다.
+- next(다음): `run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1`

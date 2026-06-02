@@ -6183,3 +6183,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): `run364N` MT5 runtime probe(MT5 런타임 탐침)를 review(검토)하고 `run364P` offensive input queue(공격 입력 대기열)를 만들었다.
 - effect(효과): positive runtime clue(긍정 런타임 단서)를 유지하면서 운영 주장(operating claim, 운영 주장)은 차단했다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364O_density_lift_trade_shape_onnx_mt5_runtime_probe_review.md`
+
+## 2026-06-02 - run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1
+
+- action(행동): drawdown/side-balance offensive inputs(낙폭/방향 균형 공격 입력)를 materialize(구체화)했다.
+- effect(효과): 다음 `run364Q`에서 모델/룰 탐색을 바로 실행할 수 있게 했다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364P_drawdown_side_balance_offensive_inputs.md`

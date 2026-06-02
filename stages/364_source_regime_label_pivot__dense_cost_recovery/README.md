@@ -1,7 +1,7 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`
+Current run(현재 실행): `run364Q_train_drawdown_side_balance_overlay_onnx_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`
+Latest completed run(최근 완료 실행): `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`
 
-Stage364(364단계)는 source/regime label pivot(원천/국면 라벨 전환) 안에서 dense cost recovery(고밀도 비용 회복)를 탐색한다. `run364O`는 MT5 runtime probe(MT5 런타임 탐침)를 운영 승격(operating promotion, 운영 승격)이 아니라 다음 offensive exploration(공격 탐색) 입력으로 정리했다.
+Stage364(364단계)는 dense cost recovery(고밀도 비용 회복)를 계속 탐색한다. `run364P`는 MT5 positive clue(MT5 긍정 단서)를 operating claim(운영 주장)으로 키우지 않고, drawdown/hold/side-balance(낙폭/보유/방향 균형) offensive input(공격 입력)으로 바꿨다.

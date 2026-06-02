@@ -29,3 +29,5 @@
 - `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364N_density_lift_trade_shape_onnx_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침) attempt(시도).
 
 - `run364O_review_density_lift_trade_shape_onnx_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364O_density_lift_trade_shape_onnx_mt5_runtime_probe_review.md` - MT5 runtime probe review(MT5 런타임 탐침 검토).
+
+- `run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364P_drawdown_side_balance_offensive_inputs.md` - drawdown/side-balance offensive inputs(낙폭/방향 균형 공격 입력).

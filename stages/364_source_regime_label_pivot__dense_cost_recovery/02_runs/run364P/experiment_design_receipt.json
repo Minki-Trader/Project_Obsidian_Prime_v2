@@ -1,0 +1,13 @@
+{
+  "broad_sweep": "calendar cap(달력 상한), avoid classifier(회피 분류기), short probability router(숏 확률 라우터), session/regime filter(세션/국면 필터)",
+  "evidence_boundary": "input_materialization_only(입력 구체화 전용)",
+  "extreme_sweep": "8 M5 cap(8개 M5봉 상한), q99 short band(q99 숏 구간), worst single slice drop(최악 단일 구간 제거)",
+  "failure_memory": "run364O blockers(차단): drawdown(낙폭), long-only(롱 전용), hold tail(보유 꼬리)",
+  "hypothesis": "drawdown/hold/side-balance(낙폭/보유/방향 균형) labels(라벨)을 entry-known feature(진입 시점 피처)에 붙이면 고밀도 ONNX(온엑스) 단서를 훼손하지 않고 위험 꼬리를 줄일 수 있다.",
+  "idea_id": "IDEA-ST364-DRAWDOWN-SIDE-BALANCE-OFFENSIVE-INPUTS",
+  "legacy_relation": "none(없음)",
+  "micro_search_gate": "proxy(프록시) net positive(순수익 양수), PF(수익 팩터)>1.15, trade/day(일 거래수)>=3, drawdown(낙폭) 개선",
+  "run_id": "run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1",
+  "tier_scope": "Tier A materialized(Tier A 구체화), Tier B out_of_scope_by_claim(Tier B 주장 범위 밖)",
+  "wfo_plan": "run364Q가 positive proxy(긍정 프록시)를 만들 때 WFO(워크포워드 최적화) 강화로 이동한다."
+}

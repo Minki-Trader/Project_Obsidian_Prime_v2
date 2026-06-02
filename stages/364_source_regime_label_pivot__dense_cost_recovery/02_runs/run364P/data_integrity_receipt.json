@@ -1,0 +1,44 @@
+{
+  "claim_boundary(주장 경계)": "research_development_input_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "data_hash_or_identity": {
+    "closed_trade_sha256": "2ca86b63c4a167c870713bee4e0f0b03c553e6a3db3138d10a06b3e3e28a7cf1",
+    "feature_matrix_sha256": "b30205801b5d8c3615d886adafd7053e225179a31aaac01d4782d36c391990ca",
+    "probability_tape_sha256": "7d64cbf175f2bb35f440a57d872803479c90cee49a963b9a35024ca648eb6fe1"
+  },
+  "data_source": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364O/final_decision.json",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364O/required_gate_coverage_audit.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364O/run364P_offensive_input_queue.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364O/closed_trade_attribution.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364O/drawdown_cluster_attribution.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364O/failure_memory.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364O/positive_clues.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364O_density_lift_trade_shape_onnx_mt5_runtime_probe_review.md",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/expected_tapes/density_lift_expected_probability_tape.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/expected_tapes/mt5_native_maxhold_expected_trade_tape.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364M/feature_matrices/density_lift_trade_shape_features.csv"
+  ],
+  "feature_label_boundary": "entry feature(진입 피처)는 expected entry bar(예상 진입 봉)의 닫힌 봉 값이고, labels(라벨)는 이후 MT5 close(청산) 결과에서만 온다.",
+  "integrity_judgment": "usable_with_boundary(경계 조건부 사용 가능)",
+  "leakage_risk": "risk labels(위험 라벨)를 feature(피처)로 다시 넣는 경로가 가장 큰 위험이며, 이번 산출물은 label columns(라벨 열)을 명시 분리한다.",
+  "missing_or_duplicate_check": {
+    "feature_columns": 58,
+    "joined_trade_rows": 1047,
+    "missing_probability_rows": 0
+  },
+  "run_id": "run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1",
+  "sample_scope": {
+    "actual_trade_rows": 1047,
+    "expected_trade_rows": 1047,
+    "feature_rows": 17428,
+    "probability_rows": 17428,
+    "split_values": [
+      "oos",
+      "validation"
+    ],
+    "symbol": "US100",
+    "timeframe": "M5"
+  },
+  "split_boundary": "validation/OOS split(검증/표본외 분할)은 run364M package(364M 패키지)에서 상속한다.",
+  "time_axis": "feature timestamp(피처 타임스탬프)은 MT5 package(MT5 패키지)의 bar_time_server(브로커 봉 시간)와 expected entry timestamp(예상 진입 시간)를 join key(결합 키)로 쓴다."
+}

@@ -841,3 +841,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): dense long-only ONNX(고밀도 롱 전용 온엑스) runtime probe(런타임 탐침)는 양수 수익 단서가 있다.
 - failure memory(실패 기억): drawdown(낙폭), long-only(롱 전용), hold tail(보유 꼬리)는 promotion blocker(승격 차단)다.
 - next seed(다음 씨앗): calendar hold cap(달력 보유 상한), drawdown tail exit(낙폭 꼬리 청산), short side balance(숏 방향 균형), regime/session filter(국면/세션 필터).
+
+## run364P_materialize_drawdown_side_balance_offensive_inputs_without_db_v1
+
+- idea(아이디어): MT5 positive clue(MT5 긍정 단서)를 drawdown/hold/side-balance(낙폭/보유/방향 균형) labels(라벨)로 바꾸면 다음 ONNX(온엑스) 탐색의 손실 꼬리를 줄일 수 있다.
+- failure_memory(실패 기억): long-only(롱 전용)와 hold tail(보유 꼬리)는 운영 차단이다.
+- reopen_condition(재개 조건): run364Q proxy(프록시)가 trade/day(일 거래수) >= 3, net positive(순수익 양수), PF(수익 팩터)>1.15, drawdown(낙폭) 개선을 보이면 MT5 runtime probe(MT5 런타임 탐침)로 간다.
