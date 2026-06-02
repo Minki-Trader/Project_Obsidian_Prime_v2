@@ -881,3 +881,5 @@ Register ideas when they become durable work, not for every passing thought.
 - run364W_package_density_side_balance_repair_runtime_probe_without_db_v1: dual-side threshold + ADX long block(양방향 임계값 + ADX 롱 차단) moved from proxy(프록시) to runtime package(런타임 패키지); MT5 evidence(MT5 근거) still required(아직 필요).
 
 - run364X_execute_density_side_balance_repair_mt5_runtime_probe_without_db_v1: MT5 runtime probe(MT5 런타임 탐침) produced proxy-vs-MT5 diff(프록시-MT5 차이) for dual-side threshold(양방향 임계값) candidate.
+
+- run364Y_review_density_side_balance_repair_mt5_runtime_probe_without_db_v1: density side-balance candidate(밀도 방향 균형 후보) became positive MT5 stress candidate(긍정 MT5 압박 후보); cost/session/drawdown stress(비용/세션/낙폭 압박) required.

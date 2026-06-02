@@ -1,8 +1,8 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364U_materialize_density_side_balance_repair_inputs_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364T_review_drawdown_side_balance_overlay_mt5_runtime_probe_without_db_v1`
+- current_run_id(현재 실행 ID): `run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364Y_review_density_side_balance_repair_mt5_runtime_probe_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
 - selection_status(선택 상태): `runtime_positive_density_side_balance_repair_required_no_operating_claim(런타임 양수, 밀도/방향 균형 수리 필요, 운영 주장 없음)`
@@ -156,3 +156,7 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 
 - current truth(현재 진실): run364W package(패키지)를 Strategy Tester(전략 테스터)로 실행 시도했다.
 - effect(효과): proxy-vs-MT5 diff(프록시-MT5 차이) review(검토) 입력을 만들었다.
+
+## run364Y MT5 runtime review(MT5 런타임 검토)
+
+- current truth(현재 진실): density/side repair(밀도/방향 수리)가 MT5에서 positive(긍정)였지만 cost/session stress(비용/세션 압박)가 남았다.

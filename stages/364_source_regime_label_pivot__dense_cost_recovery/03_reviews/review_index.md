@@ -47,3 +47,5 @@
 - [run364W] run364W_package_density_side_balance_repair_runtime_probe_without_db_v1: stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364W_density_side_balance_repair_runtime_probe_package.md - runtime package(런타임 패키지), MT5 execution(MT5 실행) not_run(미실행)
 
 - [run364X] run364X_execute_density_side_balance_repair_mt5_runtime_probe_without_db_v1: stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364X_density_side_balance_repair_mt5_runtime_probe.md - MT5 runtime probe(MT5 런타임 탐침), authority(권위) not_claimed(주장 안 함)
+
+- [run364Y] run364Y_review_density_side_balance_repair_mt5_runtime_probe_without_db_v1: stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364Y_density_side_balance_repair_mt5_runtime_probe_review.md - MT5 review(MT5 검토), positive candidate(긍정 후보), no authority(권위 없음)
