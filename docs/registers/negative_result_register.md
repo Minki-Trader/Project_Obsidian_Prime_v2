@@ -532,3 +532,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - do_not_repeat(반복 금지): lower-floor/rank threshold micro-tuning(낮은 하한/순위 임계값 미세조정)을 후보 선택처럼 반복하지 않는다.
 - reopen_condition(재개 조건): timestamp-safe context/regime/label source(시점 안전 문맥/국면/라벨 원천)가 density >= 3(밀도 3 이상)과 cost positive(비용 양수)를 같이 만든다.
 - evidence(근거): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363C/review_findings.csv`.
+
+## 2026-06-02 FM-ST364C-TIMESTAMP-CONTEXT-MONTH-FRAGILITY
+
+- source_run(원천 실행): `run364C_review_timestamp_context_cost_surface_without_db_v1`
+- failure_memory(실패 기억): timestamp context pass rows(시점 문맥 통과 행)는 split net(분할 순수익)은 양수지만 monthly positive coverage(월별 양수 커버리지)가 약하다.
+- best_seed_status(최선 씨앗 상태): validation positive months(검증 양수 월) `3/9`, OOS positive months(표본외 양수 월) `3/7`.
+- do_not_repeat(반복 금지): 이 상태를 promotion candidate(승격 후보)나 runtime authority(런타임 권위)로 과장하지 않는다.
+- reopen_condition(재개 조건): `run364D_materialize_timestamp_context_training_seed_without_db_v1`가 WFO/month stability(WFO/월 안정성)를 개선하고 MT5 runtime probe(MT5 런타임 탐침)로 재확인한다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364C/monthly_stability.csv`.

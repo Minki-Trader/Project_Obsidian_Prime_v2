@@ -6085,3 +6085,15 @@ Effect(효과): current truth(현재 진실)는 `364_source_regime_label_pivot__
 Action(행동): Stage363B(363B 실행)의 passing_cross_split_rows(교차 분할 통과 행) `0` 결과를 검토하고 Stage364(364단계)를 열었다.
 
 Effect(효과): current truth(현재 진실)는 `364_source_regime_label_pivot__dense_cost_recovery` / `run364B_materialize_timestamp_context_cost_surface_without_db_v1`로 이동했고, 같은 threshold micro-tuning(임계값 미세조정)은 반복 금지로 기록됐다.
+
+## 2026-06-02 run364C Timestamp Context Cost Surface Review(364C 시점 문맥 비용 표면 검토)
+
+Action(행동): Stage364B(364B) passing rows(통과 행) 33개를 split/month/family stability(분할/월/계열 안정성)로 검토했다.
+
+Effect(효과): positive scout(긍정 스카우트)는 training seed(학습 씨앗)로 보존하고, candidate selection(후보 선택)과 MT5 operating claim(MT5 운영 주장)은 하지 않았다.
+
+## 2026-06-02 run364C Timestamp Context Cost Surface Review(364C 시점 문맥 비용 표면 검토)
+
+Action(행동): Stage364B(364B) passing rows(통과 행) 33개를 split/month/family stability(분할/월/계열 안정성)로 검토했다.
+
+Effect(효과): positive scout(긍정 스카우트)는 training seed(학습 씨앗)로 보존하고, candidate selection(후보 선택)과 MT5 operating claim(MT5 운영 주장)은 하지 않았다.
