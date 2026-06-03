@@ -6339,3 +6339,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): threshold edge floor001 MT5 runtime probe(임계값 경계 하한 0.001 MT5 런타임 탐침)를 review(검토)했다.
 - effect(효과): net/PF/RF(순수익/수익 팩터/회복 계수) 단서를 보존하고, actual density(실제 밀도) `2.9159159159` 미달을 다음 repair input(수리 입력)으로 바꿨다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AW_threshold_edge_floor001_mt5_runtime_probe_review.md`
+
+## 2026-06-03 - run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1
+
+- action(행동): threshold-edge density restore cost/session inputs(임계값 경계 밀도 복원 비용/세션 입력)를 물질화했다.
+- effect(효과): `run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1` scout queue(스카우트 대기열)를 만들고, runtime authority(런타임 권위)와 operating promotion(운영 승격)은 주장하지 않았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AX_density_restore_materialization.md`

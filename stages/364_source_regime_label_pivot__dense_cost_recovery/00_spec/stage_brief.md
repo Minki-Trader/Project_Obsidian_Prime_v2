@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364AW_review_threshold_edge_floor001_mt5_runtime_probe_without_db_v1`
+- current_run_id(현재 실행 ID): `run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364AW_threshold_edge_floor001_mt5_probe_reviewed_positive_net_pf_density_below_floor_long_skew_repair_required_no_authority`
-- claim_boundary(주장 경계): `research_development_mt5_runtime_probe_review_only_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364AX_threshold_edge_density_restore_cost_session_inputs_materialized_no_authority`
+- claim_boundary(주장 경계): `research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -245,3 +245,9 @@ Effect(효과): proxy/MT5 diff(프록시/MT5 차이)와 runtime parity(런타임
 Action(행동): run364AV(364AV 실행)의 MT5 runtime probe(MT5 런타임 탐침)를 KPI/density/session/side(핵심 성과 지표/밀도/세션/방향)로 검토했다.
 
 Effect(효과): net/PF/RF(순수익/수익 팩터/회복 계수)는 긍정 단서지만 실제 density(밀도)가 `2.9159159159`로 3/day(일 3회) 하한 아래라 운영 주장 없이 `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1` 수리 입력으로 넘긴다.
+
+## run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1
+
+Action(행동): AW MT5 runtime probe review(AW MT5 런타임 탐침 검토)를 AY scout queue(AY 스카우트 대기열)로 materialize(물질화)했다.
+
+Effect(효과): Stage364(364단계)를 분기하지 않고 density restore(밀도 복원), short-side restore(숏 방향 복원), cost/session stress(비용/세션 압박)를 다음 proxy scout(프록시 스카우트) 입력으로 넘긴다.

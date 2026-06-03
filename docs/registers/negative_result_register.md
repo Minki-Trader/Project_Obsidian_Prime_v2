@@ -601,3 +601,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): mixed_positive_runtime_probe_promotion_ineligible(혼합 긍정 런타임 탐침, 승격 부적격).
 - blocker(차단 사유): actual trade density(실제 거래 밀도) `2.9159159159` < 3/day(일 3회), long/short(롱/숏) `887/84`, equity DD(수익곡선 낙폭) `17.51%`.
 - effect(효과): positive clue(긍정 단서)는 폐기하지 않고 `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1` 수리 입력으로 넘긴다.
+
+## run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1
+
+- status(상태): materialized_repair_inputs_no_authority(수리 입력 물질화, 권위 없음).
+- failure memory(실패 기억): AW actual MT5 density(AW 실제 MT5 밀도) `2.9159159159` < 3/day(일 3회), long share(롱 비중) `0.9134912461`, DD(낙폭) `17.51`%.
+- effect(효과): 같은 blocker(차단 원인)를 반복하지 않고, AY scout(스카우트)의 제약과 비교축으로 바꾼다.
