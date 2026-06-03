@@ -6321,3 +6321,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): threshold-edge PF gap repair scout(임계값 경계 PF 간극 수리 정찰)를 실행했다.
 - effect(효과): `run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1` review queue(검토 대기열)를 만들고 운영 주장은 닫았다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AS_threshold_edge_pf_gap_repair_scout.md`
+
+## 2026-06-03 - run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1
+
+- action(행동): threshold-edge floor001 strict pass(임계값 경계 하한 0.001 엄격 통과)를 검토했다.
+- effect(효과): `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1` runtime probe package(런타임 탐침 패키지) 대기열을 만들고 운영 주장은 닫았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AT_threshold_edge_pf_gap_repair_review.md`

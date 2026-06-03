@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364AS_train_threshold_edge_pf_gap_repair_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364AS_threshold_edge_pf_gap_repair_proxy_scout_no_mt5_no_authority`
-- claim_boundary(주장 경계): `research_development_proxy_scout_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364AT_proxy_package_candidate_review_runtime_probe_required_no_authority`
+- claim_boundary(주장 경계): `research_development_proxy_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -227,3 +227,9 @@ Effect(효과): Stage364(364단계) 안에서 stage(단계) 분기 없이 run364
 Action(행동): run364AR(364AR 실행) queue(대기열) 중 실행 가능한 7행을 proxy replay(프록시 재생)했다.
 
 Effect(효과): Stage364(364단계) 안에서 package(패키지) 없이 다음 review(검토)로 넘길 threshold-edge(임계값 경계) 표면을 만들었다.
+
+## run364AT Threshold-Edge PF Gap Review Closeout(364AT 임계값 경계 PF 간극 검토 종료)
+
+Action(행동): run364AS(364AS 실행)의 floor001 strict pass(하한 0.001 엄격 통과)를 검토했다.
+
+Effect(효과): runtime authority(런타임 권위) 없이 `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1` runtime probe package(런타임 탐침 패키지)로 넘길 후보를 기록했다.

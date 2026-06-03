@@ -1,0 +1,11 @@
+﻿run_id,gate_id,status,observed,required,effect
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,strict_proxy_package_candidate(엄격 프록시 패키지 후보),passed,1,1,PF/density/split/side/DD 조건을 동시에 만족한 후보를 런타임 탐침 대상으로 연다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,selected_profit_factor_target(선택 PF 목표),passed,1.3105654109,1.3,프록시 기준 PF 1.30 이상인지 확인한다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,selected_density_floor(선택 밀도 하한),passed,3.1981981982,3.0,거래수 쪼개기 없이 3/day 이상 밀도인지 확인한다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,validation_oos_pf_net(검증/표본외 PF와 순수익),passed,validation and oos positive with PF>=1.30(검증/표본외 양수와 PF 1.30 이상),validation/oos net>0 and PF>=1.30(검증/표본외 순수익 양수와 PF 1.30 이상),한쪽 split(분할)만 좋은 후보를 걸러낸다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,drawdown_improvement(낙폭 개선),passed,-133.571,>= -147.924,threshold-edge clue(임계값 경계 단서) 대비 DD가 악화되지 않았는지 본다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,short_side_presence(숏 방향 존재),passed,87.0,50,롱만 남은 구조를 피한다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,session_stress(세션 압박),passed,0,0,세션 단위 음수 구간이 있는지 본다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,month_side_stress(월/방향 압박),warning,10,0,월/방향 손실 군집은 MT5 탐침 후 repair(수리) 후보로 남긴다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,cost_runtime_evidence(비용/런타임 근거),out_of_scope_by_claim(주장 범위 밖),not_run(미실행),MT5 runtime probe(MT5 런타임 탐침),프록시 결과를 MT5 KPI로 대체하지 않는다.
+run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1,operating_claim_boundary(운영 주장 경계),passed,runtime_authority=not_claimed; operating_promotion=not_claimed,no operating claim(운영 주장 없음),좋은 프록시를 운영 가능 모델로 착각하지 않게 한다.

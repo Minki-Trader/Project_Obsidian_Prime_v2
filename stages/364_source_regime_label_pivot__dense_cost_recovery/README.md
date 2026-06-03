@@ -104,3 +104,9 @@ Effect(효과): Stage364(364단계) 안에서 stage(단계) 분기 없이 다음
 Action(행동): AR queue(대기열) 7행을 proxy replay(프록시 재생)했다.
 
 Effect(효과): threshold-edge(임계값 경계) 단서의 PF gap(PF 간극) 수리 가능성을 표면으로 남겼다.
+
+## run364AT Threshold-Edge PF Gap Review(364AT 임계값 경계 PF 간극 검토)
+
+Action(행동): AS strict pass(AS 엄격 통과)를 package/probe(패키지/탐침) 관점으로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 MT5 runtime probe(MT5 런타임 탐침) 준비로 이어간다.

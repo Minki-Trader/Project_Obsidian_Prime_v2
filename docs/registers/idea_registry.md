@@ -998,3 +998,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): threshold-edge(임계값 경계) PF gap(PF 간극)을 보유 압축과 후반 롱 혼합으로 줄인다.
 - hypothesis(가설): PF(수익 팩터) 1.30 접근이 density(밀도) 3/day 붕괴 없이 가능할 수 있다.
 - effect(효과): proxy scout(프록시 정찰) 표면으로 다음 review(검토)가 package(패키지) 가능성과 실패 기억을 나눌 수 있게 한다.
+
+## run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1
+
+- idea(아이디어): threshold-edge floor001(임계값 경계 하한 0.001)이 PF(수익 팩터) 1.30과 density(밀도) 3/day를 동시에 회복한다.
+- evidence(근거): proxy(프록시) net `862.283`, PF `1.3105654109`, density `3.1981981982`, DD `-133.571`.
+- next_condition(다음 조건): MT5 runtime probe(MT5 런타임 탐침)에서 proxy/MT5 diff(프록시/MT5 차이)를 기록한다.

@@ -178,3 +178,11 @@
 - strict_pass_rows(엄격 통과 행): `1`
 - selected_pf(선택 PF): `1.3105654109`
 - effect(효과): `run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1` review queue(검토 대기열)를 만든다.
+
+## run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AT_threshold_edge_pf_gap_repair_review.md`
+- judgment(판정): `positive_proxy_package_candidate_for_runtime_probe_not_operating_promotion`
+- package_candidate_rows(패키지 후보 행): `1`
+- next_run(다음 실행): `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1`
+- effect(효과): proxy package candidate(프록시 패키지 후보)를 MT5 runtime probe(MT5 런타임 탐침) 준비로 넘긴다.
