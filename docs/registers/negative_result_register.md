@@ -578,3 +578,8 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - why_failed(실패 이유): density-safe(밀도 안전) 행은 PF/DD(수익 팩터/낙폭)가 약하고 PF-pass(PF 통과) 행은 density(밀도)가 부족했다.
 - salvage_value(회수 가치): hold6 density(6봉 보유 밀도), sparse PF-pass(희소 PF 통과), threshold edge DD(임계값 경계 DD)를 다음 입력으로 보존한다.
 - reopen_condition(재개 조건): PF>=1.30과 density>=3/day가 같은 row grain(행 단위)에서 동시 통과한다.
+
+## run364AQ_review_hold6_pf_dd_repair_offensive_scout_without_db_v1
+
+- negative_result(부정 결과): strict_pass_rows(엄격 통과 행) 0, package_candidate_rows(패키지 후보 행) 0.
+- effect(효과): MT5 runtime probe(MT5 런타임 탐침)로 승격하지 않고 PF gap(PF 간극) 수리 queue(대기열)로 낮춘다.

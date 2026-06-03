@@ -982,3 +982,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): hold6 density(6봉 밀도)와 sparse PF(희소 수익 팩터) 수리 축을 proxy replay(프록시 재생)로 비교한다.
 - effect(효과): PF(수익 팩터), density(밀도), DD(낙폭)를 동시에 보며 다음 검토로 넘긴다.
+
+## run364AQ_review_hold6_pf_dd_repair_offensive_scout_without_db_v1
+
+- idea(아이디어): threshold edge(임계값 경계)가 PF/DD를 동시에 조금 개선하지만 PF 1.30에는 부족하다.
+- effect(효과): 보유 기간, 미세 하한, late-long blend(후반 롱 결합) 축으로 다음 공격 탐색을 연다.
