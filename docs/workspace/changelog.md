@@ -6297,3 +6297,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): hold6 PF/DD repair inputs(6봉 PF/DD 수리 입력)를 구체화했다.
 - effect(효과): `run364AP_train_hold6_pf_dd_repair_offensive_scout_without_db_v1` scout queue(정찰 대기열)를 만들고 운영 주장은 닫았다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AO_hold6_pf_dd_repair_offensive_inputs.md`
+
+## 2026-06-03 - run364AP_train_hold6_pf_dd_repair_offensive_scout_without_db_v1
+
+- action(행동): hold6 PF/DD repair proxy scout(6봉 PF/DD 수리 프록시 정찰)를 실행했다.
+- effect(효과): `run364AQ_review_hold6_pf_dd_repair_offensive_scout_without_db_v1` review queue(검토 대기열)를 만들고 운영 주장은 닫았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AP_hold6_pf_dd_repair_offensive_scout.md`

@@ -151,3 +151,11 @@
 - judgment(판정): `hold6_pf_dd_repair_inputs_ready_with_loss_guard_as_diagnostic_no_authority`
 - ap_queue_rows(AP 대기열 행): `8`
 - effect(효과): `run364AP_train_hold6_pf_dd_repair_offensive_scout_without_db_v1` replay(재생) 입력을 만든다.
+
+## run364AP_train_hold6_pf_dd_repair_offensive_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AP_hold6_pf_dd_repair_offensive_scout.md`
+- judgment(판정): `proxy_scout_completed_hold6_pf_dd_repair_ranked_mt5_probe_required_no_authority`
+- strict_pass_rows(엄격 통과 행): `0`
+- selected_pf(선택 PF): `1.2724135667`
+- effect(효과): `run364AQ_review_hold6_pf_dd_repair_offensive_scout_without_db_v1` review(검토) 대기열을 만든다.

@@ -977,3 +977,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): hold6 density(6봉 밀도) 씨앗과 sparse PF(희소 수익 팩터) 씨앗을 PF/DD repair(PF/DD 수리) 축으로 섞는다.
 - effect(효과): PF(수익 팩터) 1.30, density(밀도) 3/day, DD(낙폭) 수리를 동시에 보는 다음 replay(재생) 입력을 만든다.
+
+## run364AP_train_hold6_pf_dd_repair_offensive_scout_without_db_v1
+
+- idea(아이디어): hold6 density(6봉 밀도)와 sparse PF(희소 수익 팩터) 수리 축을 proxy replay(프록시 재생)로 비교한다.
+- effect(효과): PF(수익 팩터), density(밀도), DD(낙폭)를 동시에 보며 다음 검토로 넘긴다.
