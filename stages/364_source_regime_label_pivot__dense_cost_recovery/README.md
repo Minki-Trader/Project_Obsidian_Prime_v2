@@ -140,3 +140,9 @@ Effect(효과): density floor(밀도 하한) 복원 후보를 `run364AZ_review_t
 Action(행동): AY surface(AY 표면)를 package decision(패키지 결정)과 BA queue(BA 대기열)로 검토했다.
 
 Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364BA_materialize_density_restore_stress_to_candidate_inputs_without_db_v1`로 이어간다.
+
+## run364BA Density Restore Stress-To-Candidate Materialization(364BA 밀도 복원 압박-후보 물질화)
+
+Action(행동): AZ positive clue(AZ 긍정 단서)를 BB queue(BB 대기열)로 물질화했다.
+
+Effect(효과): 다음 proxy scout(프록시 스카우트)를 실행할 수 있게 했다.

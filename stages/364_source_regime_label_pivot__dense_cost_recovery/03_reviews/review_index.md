@@ -208,3 +208,10 @@
 - package_decision(패키지 결정): `not_opened_no_package_eligible_rows`
 - next_run(다음 실행): `run364BA_materialize_density_restore_stress_to_candidate_inputs_without_db_v1`
 - effect(효과): stress pass(압박 통과)를 BA materialization(BA 물질화) 대기열로 넘겼다.
+
+## run364BA_materialize_density_restore_stress_to_candidate_inputs_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BA_density_restore_materialization.md`
+- judgment(판정): `materialization_completed_stress_positive_clues_to_candidate_scout_inputs_no_authority`
+- next_run(다음 실행): `run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1`
+- effect(효과): BB scout queue(BB 스카우트 대기열)를 만들었다.

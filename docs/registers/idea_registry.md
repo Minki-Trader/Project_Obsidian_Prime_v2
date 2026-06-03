@@ -1037,3 +1037,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): stress pass(압박 통과) `ax03_short_restore_ps450_floor050_stress`를 candidate(후보)로 재물질화한다.
 - effect(효과): package ineligible(패키지 부적격)을 idea-dead(아이디어 사망)로 닫지 않고 공격 탐색 씨앗으로 쓴다.
+
+## run364BA_materialize_density_restore_stress_to_candidate_inputs_without_db_v1
+
+- idea(아이디어): `ax03_short_restore_ps450_floor050_stress` stress pass(압박 통과)를 candidate(후보)로 재시험한다.
+- effect(효과): package ineligible(패키지 부적격)을 공격 탐색 씨앗으로 바꾼다.
