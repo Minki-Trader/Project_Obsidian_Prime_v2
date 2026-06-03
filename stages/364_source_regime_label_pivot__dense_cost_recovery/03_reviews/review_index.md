@@ -223,3 +223,12 @@
 - selected(선택): `run364BB_ba02_between_ax03_ax08_floor025_ps450`
 - package_eligible_rows(패키지 검토 가능 행): `0`
 - effect(효과): `run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1` review(검토) 대상으로 넘긴다.
+
+## run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BC_density_restore_stress_candidate_review.md`
+- judgment(판정): `package_review_candidate_exists_open_runtime_probe_package_no_authority`
+- package_decision(패키지 결정): `open_runtime_probe_package_queue_no_authority`
+- selected(선택): `ba02_between_ax03_ax08_floor025_ps450`
+- next_run(다음 실행): `run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1`
+- effect(효과): runtime probe package(런타임 탐침 패키지)를 연다.

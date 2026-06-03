@@ -631,3 +631,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): pending_review(검토 대기).
 - action(행동): BB proxy surface(BB 프록시 표면)를 만들었다.
 - effect(효과): negative/positive(부정/긍정) 판정은 `run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1` review(검토)에서 package eligibility(패키지 가능성)와 분리해 결정한다.
+
+## run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1
+
+- status(상태): package_opened_no_authority(패키지 열림, 권위 없음).
+- action(행동): package candidate(패키지 후보) 외 실패/구현 필요 행을 failure memory(실패 기억)로 남겼다.
+- effect(효과): 좋은 후보만 기억하지 않고 실패 제약도 다음 패키지에 같이 넘긴다.

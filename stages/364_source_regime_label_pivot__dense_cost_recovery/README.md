@@ -152,3 +152,9 @@ Effect(효과): 다음 proxy scout(프록시 스카우트)를 실행할 수 있�
 Action(행동): BA queue(BA 대기열)를 proxy replay(프록시 재생)로 실행했다.
 
 Effect(효과): package-reviewable(패키지 검토 가능) 후보 여부를 `run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1` review(검토)로 넘긴다.
+
+## run364BC Density Restore Stress Candidate Review(364BC 밀도 복원 압박 후보 검토)
+
+Action(행동): BB package candidates(BB 패키지 후보)를 검토했다.
+
+Effect(효과): `run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1` runtime probe package(런타임 탐침 패키지)로 이어간다.

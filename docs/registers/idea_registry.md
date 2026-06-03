@@ -1047,3 +1047,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): AZ stress pass(AZ 압박 통과)를 candidate(후보)로 바꿔 PF 1.25와 추정 MT5 밀도 3/day를 동시에 시험한다.
 - effect(효과): package ineligible(패키지 부적격) 단서를 idea-dead(아이디어 사망)로 닫지 않고 공격 탐색으로 재사용한다.
+
+## run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1
+
+- idea(아이디어): `ba02_between_ax03_ax08_floor025_ps450` proxy candidate(프록시 후보)를 MT5 runtime probe package(MT5 런타임 탐침 패키지)로 확인한다.
+- effect(효과): 프록시에서 보인 PF/density(PF/밀도) 구조를 실제 MT5 실행 의미로 압박한다.
