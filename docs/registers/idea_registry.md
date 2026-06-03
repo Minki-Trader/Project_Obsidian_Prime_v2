@@ -987,3 +987,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): threshold edge(임계값 경계)가 PF/DD를 동시에 조금 개선하지만 PF 1.30에는 부족하다.
 - effect(효과): 보유 기간, 미세 하한, late-long blend(후반 롱 결합) 축으로 다음 공격 탐색을 연다.
+
+## run364AR_materialize_threshold_edge_pf_gap_repair_inputs_without_db_v1
+
+- idea(아이디어): threshold-edge(임계값 경계) 후보의 PF gap(PF 간극)을 hold compression(보유 압축), margin floor(마진 하한), late-long blend(후반 롱 혼합)로 줄인다.
+- effect(효과): package(패키지) 실패를 idea-dead(아이디어 사망)로 닫지 않고 다음 proxy scout(프록시 정찰)로 넘긴다.

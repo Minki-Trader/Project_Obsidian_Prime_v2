@@ -166,3 +166,7 @@
 - judgment(판정): `negative_for_package_positive_for_threshold_edge_pf_dd_seed_no_authority`
 - package_candidate_rows(패키지 후보 행): `0`
 - next_action(다음 행동): `run364AR_materialize_threshold_edge_pf_gap_repair_inputs_without_db_v1`
+
+- `run364AR_materialize_threshold_edge_pf_gap_repair_inputs_without_db_v1`: threshold-edge PF gap repair materialization(임계값 경계 PF 간극 수리 구체화). report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AR_threshold_edge_pf_gap_repair_materialization.md`
+
+- `run364AR_materialize_threshold_edge_pf_gap_repair_inputs_without_db_v1`: threshold-edge PF gap repair materialization(임계값 경계 PF 간극 수리 구체화). report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AR_threshold_edge_pf_gap_repair_materialization.md`

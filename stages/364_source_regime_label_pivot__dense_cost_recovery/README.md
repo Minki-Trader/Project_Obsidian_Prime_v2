@@ -92,3 +92,9 @@ Next action(다음 행동): run364Z cost/session/drawdown stress materialization
 
 - action(행동): run364AQ(364AQ 실행) review(검토)를 닫았다.
 - effect(효과): Stage364(364단계) 안에서 다음 materialization(구체화)로 이어간다.
+
+## run364AR Threshold Edge PF Gap Repair Materialization(364AR 임계값 경계 PF 간극 수리 구체화)
+
+Action(행동): AQ queue(대기열) 8행을 AS scout queue(정찰 대기열)로 구체화했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage(단계) 분기 없이 다음 공격 탐색으로 이어간다.

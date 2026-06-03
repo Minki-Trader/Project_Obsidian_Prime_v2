@@ -214,3 +214,10 @@ Effect(효과): Stage364(364단계) 안에서 package(패키지) 없이 다음 r
 Action(행동): run364AP(364AP 실행) proxy surface(프록시 표면)를 검토해 package(패키지)를 부정하고 threshold edge(임계값 경계) PF/DD 개선 단서를 보존했다.
 
 Effect(효과): Stage364(364단계) 안에서 stage(단계) 분기 없이 run364AR(364AR 실행) materialization(구체화)로 이어간다.
+
+## run364AR_materialize_threshold_edge_pf_gap_repair_inputs_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AR_threshold_edge_pf_gap_repair_materialization.md`
+- judgment(판정): `materialization_completed_threshold_edge_pf_gap_repair_inputs_no_authority`
+- queue_rows(대기열 행): `8`
+- effect(효과): `run364AS_train_threshold_edge_pf_gap_repair_scout_without_db_v1` scout queue(정찰 대기열)를 만들었다.
