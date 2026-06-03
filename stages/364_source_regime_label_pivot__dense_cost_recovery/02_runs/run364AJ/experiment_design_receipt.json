@@ -1,0 +1,23 @@
+{
+  "changed_variables": "session_policy and side_policy only(세션 정책과 방향 정책만 변경)",
+  "claim_boundary": "research_development_proxy_scout_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1",
+  "control_variables": "US100 M5, base ONNX probabilities, max_hold 8, no top_n, no trade splitting(US100 5분봉, 기본 ONNX 확률, 최대 보유 8, top_n 없음, 거래 쪼개기 없음)",
+  "created_at_utc": "2026-06-03T03:31:09Z",
+  "decision_use": "rank candidates for run364AK review(run364AK 검토 후보 순위화)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AJ/session_side_pf_lift_density_repair_proxy_scout_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AJ/strict_proxy_candidates.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AJ/final_decision.json",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AJ/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "density loss, PF below target, split loss, side collapse(밀도 손실, PF 목표 미달, 분할 손실, 방향 붕괴)",
+  "hypothesis": "session/side rules can lift PF while keeping density >=3/day without trade splitting(세션/방향 규칙이 거래 쪼개기 없이 PF를 올리고 일 3회 이상 밀도를 유지할 수 있음)",
+  "invalid_conditions": "top_n, trade splitting, post-entry or OOS-picked threshold(top_n, 거래 쪼개기, 진입 후 또는 표본외 선택 임계값)",
+  "run_id": "run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1",
+  "sample_scope": "validation/oos proxy replay(검증/표본외 프록시 재생)",
+  "skill": "obsidian-experiment-design(옵시디언 실험 설계)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "stop_conditions": "after 12 queue rows ranked and review queue produced(대기열 12행 순위화 및 검토 대기열 생성 후)",
+  "success_criteria": "PF>=1.30, density>=3/day, split net positive, short side nonzero(PF 1.30 이상, 일 3회 이상, 분할 순수익 양수, 숏 0 아님)"
+}

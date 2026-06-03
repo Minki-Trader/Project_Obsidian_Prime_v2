@@ -943,3 +943,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): 핵심 세션 양수 포켓과 프리마켓 숏 끌림을 분리해 PF와 밀도를 동시에 시험한다.
 - positive clue(긍정 단서): us_cash_core(미국 현금장 핵심) 롱/숏은 모두 PF 1.31 이상이다.
 - failure memory(실패 기억): PF 통과 씨앗은 밀도를 잃으므로 밀도 복원 규칙과 함께 시험해야 한다.
+
+## run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1
+
+- idea(아이디어): session/side policy(세션/방향 정책)로 premarket short drag(프리마켓 숏 끌림)를 줄이고 core session edge(핵심 세션 엣지)를 보존한다.
+- positive clue(긍정 단서): selected proxy(선택 프록시) `selected_control_full_session_선택_대조_전체_세션__ps0_45__floor0_0__hold8`.
+- failure memory(실패 기억): MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장 금지.

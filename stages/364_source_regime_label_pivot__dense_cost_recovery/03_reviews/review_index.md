@@ -109,3 +109,10 @@
 - judgment(판정): `session_side_pf_lift_density_repair_inputs_ready_no_operating_claim`
 - queue_rows(대기열 행): `12`
 - effect(효과): `run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1` scout queue(정찰 대기열)를 만들었다.
+
+## run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AJ_session_side_pf_lift_density_repair_scout.md`
+- judgment(판정): `proxy_scout_completed_session_side_pf_lift_density_repair_ranked_mt5_probe_required_no_authority`
+- selected(선택): `selected_control_full_session_선택_대조_전체_세션__ps0_45__floor0_0__hold8`
+- effect(효과): session/side PF lift density repair queue(세션/방향 PF 상승 밀도 수리 대기열)를 프록시로 재생해 `run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1` 검토 대상으로 넘겼다.
