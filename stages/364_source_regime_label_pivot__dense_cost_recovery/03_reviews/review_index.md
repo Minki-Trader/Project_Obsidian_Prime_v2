@@ -130,3 +130,10 @@
 - judgment(판정): `pf_pass_density_restore_offensive_inputs_ready_no_operating_claim`
 - queue_rows(대기열 행): `12`
 - effect(효과): `run364AM_train_pf_pass_density_restore_offensive_scout_without_db_v1` scout queue(정찰 대기열)를 만들었다.
+
+## run364AM_train_pf_pass_density_restore_offensive_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AM_pf_pass_density_restore_offensive_scout.md`
+- judgment(판정): `proxy_scout_completed_pf_pass_density_restore_ranked_mt5_probe_required_no_authority`
+- selected(선택): `density_anchor_hold6_pf_probe_밀도_기준_보유6_PF_탐침__seed_selected_control_full_session_선택_대조_전체_세션_ps0_45_floor0_0_hold8__ps0_45__floor0_00__hold6`
+- effect(효과): PF-pass density restore queue(PF 통과 밀도 복원 대기열)를 프록시로 재생해 `run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1` 검토 대상으로 넘겼다.
