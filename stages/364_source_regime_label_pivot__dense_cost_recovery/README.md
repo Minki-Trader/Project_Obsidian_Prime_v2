@@ -98,3 +98,9 @@ Next action(다음 행동): run364Z cost/session/drawdown stress materialization
 Action(행동): AQ queue(대기열) 8행을 AS scout queue(정찰 대기열)로 구체화했다.
 
 Effect(효과): Stage364(364단계) 안에서 stage(단계) 분기 없이 다음 공격 탐색으로 이어간다.
+
+## run364AS Threshold-Edge PF Gap Repair Scout(364AS 임계값 경계 PF 간극 수리 정찰)
+
+Action(행동): AR queue(대기열) 7행을 proxy replay(프록시 재생)했다.
+
+Effect(효과): threshold-edge(임계값 경계) 단서의 PF gap(PF 간극) 수리 가능성을 표면으로 남겼다.

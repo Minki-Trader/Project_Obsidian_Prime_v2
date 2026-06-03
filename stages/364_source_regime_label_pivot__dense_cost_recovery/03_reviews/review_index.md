@@ -170,3 +170,11 @@
 - `run364AR_materialize_threshold_edge_pf_gap_repair_inputs_without_db_v1`: threshold-edge PF gap repair materialization(임계값 경계 PF 간극 수리 구체화). report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AR_threshold_edge_pf_gap_repair_materialization.md`
 
 - `run364AR_materialize_threshold_edge_pf_gap_repair_inputs_without_db_v1`: threshold-edge PF gap repair materialization(임계값 경계 PF 간극 수리 구체화). report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AR_threshold_edge_pf_gap_repair_materialization.md`
+
+## run364AS_train_threshold_edge_pf_gap_repair_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AS_threshold_edge_pf_gap_repair_scout.md`
+- judgment(판정): `proxy_scout_completed_threshold_edge_pf_gap_repair_ranked_review_required_no_authority`
+- strict_pass_rows(엄격 통과 행): `1`
+- selected_pf(선택 PF): `1.3105654109`
+- effect(효과): `run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1` review queue(검토 대기열)를 만든다.

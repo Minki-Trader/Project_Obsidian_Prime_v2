@@ -992,3 +992,9 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): threshold-edge(임계값 경계) 후보의 PF gap(PF 간극)을 hold compression(보유 압축), margin floor(마진 하한), late-long blend(후반 롱 혼합)로 줄인다.
 - effect(효과): package(패키지) 실패를 idea-dead(아이디어 사망)로 닫지 않고 다음 proxy scout(프록시 정찰)로 넘긴다.
+
+## run364AS_train_threshold_edge_pf_gap_repair_scout_without_db_v1
+
+- idea(아이디어): threshold-edge(임계값 경계) PF gap(PF 간극)을 보유 압축과 후반 롱 혼합으로 줄인다.
+- hypothesis(가설): PF(수익 팩터) 1.30 접근이 density(밀도) 3/day 붕괴 없이 가능할 수 있다.
+- effect(효과): proxy scout(프록시 정찰) 표면으로 다음 review(검토)가 package(패키지) 가능성과 실패 기억을 나눌 수 있게 한다.

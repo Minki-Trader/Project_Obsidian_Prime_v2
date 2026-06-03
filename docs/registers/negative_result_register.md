@@ -583,3 +583,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 - negative_result(부정 결과): strict_pass_rows(엄격 통과 행) 0, package_candidate_rows(패키지 후보 행) 0.
 - effect(효과): MT5 runtime probe(MT5 런타임 탐침)로 승격하지 않고 PF gap(PF 간극) 수리 queue(대기열)로 낮춘다.
+
+## run364AS_train_threshold_edge_pf_gap_repair_scout_without_db_v1
+
+- status(상태): pending_review(검토 대기).
+- action(행동): AS scout(정찰) 표면을 만들었다.
+- effect(효과): strict_pass_rows(엄격 통과 행)와 selected KPI(선택 KPI)는 다음 review(검토)에서 negative/positive(부정/긍정)로 분리한다.
