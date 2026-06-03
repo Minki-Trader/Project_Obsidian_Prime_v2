@@ -128,3 +128,9 @@ Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이
 Action(행동): AV runtime probe(런타임 탐침)를 성과 귀속(performance attribution, 성과 귀속)으로 검토했다.
 
 Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1` density restore(밀도 복원)로 이어간다.
+
+## run364AY Density Restore Cost/Session Proxy Scout(364AY 밀도 복원 비용/세션 프록시 스카우트)
+
+Action(행동): AX queue(대기열)를 proxy replay(프록시 재생)로 실행했다.
+
+Effect(효과): density floor(밀도 하한) 복원 후보를 `run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1` review(검토)로 넘긴다.

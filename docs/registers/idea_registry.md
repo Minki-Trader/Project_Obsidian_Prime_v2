@@ -1027,3 +1027,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): AW positive runtime clue(AW 긍정 런타임 단서)의 density miss(밀도 미달)를 proxy density buffer(프록시 밀도 완충), short-side restore(숏 방향 복원), session/month stress labels(세션/월 압박 라벨)로 복원한다.
 - effect(효과): promotion-ineligible(승격 부적격)을 idea-dead(아이디어 사망)로 닫지 않고, 다음 공격 탐색 씨앗으로 전환한다.
+
+## run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1
+
+- idea(아이디어): threshold-edge floor001(임계값 경계 하한 0.001)의 net/PF(순수익/수익 팩터) 단서를 살리고 density(밀도)를 3/day(일 3회) 이상으로 복원한다.
+- effect(효과): trade splitting(거래 쪼개기) 없이 entry_margin_floor(진입 마진 하한)와 short threshold(숏 임계값) 완화를 탐색했다.

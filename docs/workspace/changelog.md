@@ -6345,3 +6345,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): threshold-edge density restore cost/session inputs(임계값 경계 밀도 복원 비용/세션 입력)를 물질화했다.
 - effect(효과): `run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1` scout queue(스카우트 대기열)를 만들고, runtime authority(런타임 권위)와 operating promotion(운영 승격)은 주장하지 않았다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AX_density_restore_materialization.md`
+
+## 2026-06-03 - run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1
+
+- action(행동): density restore cost/session proxy scout(밀도 복원 비용/세션 프록시 스카우트)를 실행했다.
+- effect(효과): `run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1` review queue(검토 대기열)를 만들고 운영 주장은 닫았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AY_density_restore_scout.md`

@@ -192,3 +192,11 @@
 - `run364AW_review_threshold_edge_floor001_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AW_threshold_edge_floor001_mt5_runtime_probe_review.md` - MT5 runtime probe review(MT5 런타임 탐침 검토), density repair required(밀도 수리 필요).
 
 - `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AX_density_restore_materialization.md` - density restore cost/session materialization(밀도 복원 비용/세션 물질화).
+
+## run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AY_density_restore_scout.md`
+- judgment(판정): `proxy_scout_completed_density_restore_candidates_ranked_review_required_no_authority`
+- selected(선택): `run364AY_ax08_density_overstress_floor000`
+- package_eligible_rows(패키지 검토 가능 행): `0`
+- effect(효과): `run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1` review(검토) 대상으로 넘긴다.
