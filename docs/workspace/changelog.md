@@ -6273,3 +6273,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): session/side PF lift density repair review(세션/방향 PF 상승 밀도 수리 검토)를 완료했다.
 - effect(효과): package(패키지)를 닫고 `run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1` queue(대기열)를 만들었다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AK_session_side_pf_lift_density_repair_review.md`
+
+## 2026-06-03 - run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1
+
+- action(행동): PF-pass density restore offensive inputs(PF 통과 밀도 복원 공격 입력)를 구체화했다.
+- effect(효과): `run364AM_train_pf_pass_density_restore_offensive_scout_without_db_v1` scout queue(정찰 대기열)를 만들고 운영 주장은 닫았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AL_pf_pass_density_restore_offensive_inputs.md`

@@ -123,3 +123,10 @@
 - judgment(판정): `negative_for_package_positive_for_pf_pass_density_restore_offensive_seed_no_authority`
 - package_decision(패키지 결정): `no_package_strict_rows_zero_and_selected_pf_below_target(패키지 없음, 엄격 행 0 및 선택 PF 목표 미달)`
 - effect(효과): package(패키지)를 닫고 `run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1` offensive queue(공격 대기열)를 열었다.
+
+## run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AL_pf_pass_density_restore_offensive_inputs.md`
+- judgment(판정): `pf_pass_density_restore_offensive_inputs_ready_no_operating_claim`
+- queue_rows(대기열 행): `12`
+- effect(효과): `run364AM_train_pf_pass_density_restore_offensive_scout_without_db_v1` scout queue(정찰 대기열)를 만들었다.

@@ -62,3 +62,8 @@ Next action(다음 행동): run364Z cost/session/drawdown stress materialization
 
 - action(행동): run364AJ(364AJ 실행) proxy scout(프록시 정찰)를 검토했다.
 - effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 `run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1`로 이어간다.
+
+## run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1
+
+- action(행동): run364AK(364AK 실행) queue(대기열)를 run364AM(364AM 실행) 입력으로 구체화했다.
+- effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 공격 탐색을 이어간다.

@@ -955,3 +955,8 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): PF-pass density-fail(PF 통과 밀도 실패) row(행)를 버리지 않고 density restore(밀도 복원) 공격 seed(씨앗)로 바꾼다.
 - positive clue(긍정 단서): PF(수익 팩터) 1.30 이상 row(행)가 있으나 density(밀도)가 3/day 아래로 떨어진다.
 - failure memory(실패 기억): density-safe(밀도 안전) control(대조)은 PF(수익 팩터) 목표 아래라 package(패키지)가 아니다.
+
+## run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1
+
+- idea(아이디어): PF-pass density-fail(PF 통과 밀도 실패) 씨앗을 core short(핵심 숏), late long(후반 롱), non-drag session(비끌림 세션) 복원 축으로 나눈다.
+- effect(효과): PF(수익 팩터) 1.30과 density(밀도) 3/day를 동시에 요구하는 다음 정찰 입력을 만든다.
