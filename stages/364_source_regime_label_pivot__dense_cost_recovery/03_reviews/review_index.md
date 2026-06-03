@@ -137,3 +137,10 @@
 - judgment(판정): `proxy_scout_completed_pf_pass_density_restore_ranked_mt5_probe_required_no_authority`
 - selected(선택): `density_anchor_hold6_pf_probe_밀도_기준_보유6_PF_탐침__seed_selected_control_full_session_선택_대조_전체_세션_ps0_45_floor0_0_hold8__ps0_45__floor0_00__hold6`
 - effect(효과): PF-pass density restore queue(PF 통과 밀도 복원 대기열)를 프록시로 재생해 `run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1` 검토 대상으로 넘겼다.
+
+## run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AN_pf_pass_density_restore_offensive_review.md`
+- judgment(판정): `negative_for_package_positive_for_hold6_density_and_sparse_pf_repair_seed_no_authority`
+- package(패키지): none(없음)
+- effect(효과): run364AM(364AM 실행) proxy scout(프록시 정찰)를 package(패키지) 없이 닫고 `run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1` 입력으로 넘겼다.

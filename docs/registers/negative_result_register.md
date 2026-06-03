@@ -571,3 +571,10 @@ Effect(효과): 다음 작업은 failure memory(실패 기억)를 이용해 새 
 Action(행동): run364J(364J 실행)의 strict_candidate_rows(엄격 후보 행) `0`개를 확인하고 failure memory(실패 기억)를 남겼다.
 
 Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀도 주장)에 반복 사용하지 않고, h6 density row(6봉 밀도 행)는 validation stability repair(검증 안정성 수리) 조건으로 재개한다.
+
+## run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1
+
+- failed_boundary(실패 경계): PF>=1.30 and density>=3/day without trade splitting(PF 1.30 이상과 하루 3회 이상, 거래 쪼개기 없음).
+- why_failed(실패 이유): density-safe(밀도 안전) 행은 PF/DD(수익 팩터/낙폭)가 약하고 PF-pass(PF 통과) 행은 density(밀도)가 부족했다.
+- salvage_value(회수 가치): hold6 density(6봉 보유 밀도), sparse PF-pass(희소 PF 통과), threshold edge DD(임계값 경계 DD)를 다음 입력으로 보존한다.
+- reopen_condition(재개 조건): PF>=1.30과 density>=3/day가 같은 row grain(행 단위)에서 동시 통과한다.

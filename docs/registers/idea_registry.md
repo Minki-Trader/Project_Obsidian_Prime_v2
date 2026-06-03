@@ -966,3 +966,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): PF-pass density-fail(PF 통과 밀도 실패) 씨앗을 core short(핵심 숏), late long(후반 롱), non-drag session(비끌림 세션) 복원으로 시험한다.
 - clue(단서): selected proxy(선택 프록시) `density_anchor_hold6_pf_probe_밀도_기준_보유6_PF_탐침__seed_selected_control_full_session_선택_대조_전체_세션_ps0_45_floor0_0_hold8__ps0_45__floor0_00__hold6`.
 - failure memory(실패 기억): MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장 금지.
+
+## run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1
+
+- idea(아이디어): hold6 density(6봉 보유 밀도)와 sparse PF-pass(희소 PF 통과)를 분리해 다음 PF/DD repair(PF/DD 수리) 씨앗으로 쓴다.
+- positive clue(긍정 단서): density(밀도) 회복은 가능하지만 PF/DD(수익 팩터/낙폭) 수리가 필요하다.
+- failure memory(실패 기억): strict package(엄격 패키지)는 `0`이라 운영 주장 금지.
