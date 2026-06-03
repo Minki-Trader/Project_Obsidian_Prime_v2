@@ -1,13 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-current_stage(현재 단계): `364_source_regime_label_pivot__dense_cost_recovery`
+date(날짜): 2026-06-03
 
-latest_completed_run(최근 완료 실행): `run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`
+stage(단계): `364_source_regime_label_pivot__dense_cost_recovery`
 
-current_run(현재 실행): `run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`
+current_run_id(현재 실행 ID): `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1`
 
-current_truth(현재 진실): run364BE(364BE 실행)는 run364BD package(364BD 패키지)를 MT5 Strategy Tester(MT5 전략 테스터)로 실행 시도했다. runtime_completed_rows(런타임 완료 행)는 `1`, usable_report_rows(사용 가능 보고서 행)는 `1`, actual MT5 net/PF/trades(실제 MT5 순수익/수익 팩터/거래수)는 `900.36` / `1.35` / `1016`이다.
+latest_completed_run_id(최근 완료 실행 ID): `run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`
 
-operating_truth_boundary(운영 진실 경계): no runtime authority(런타임 권위 없음), no operating promotion(운영 승격 없음), no live readiness(실거래 준비 없음), no goal achieve(목표 달성 없음).
+current_truth(현재 진실): `run364BF` reviewed(검토 완료) `run364BE` MT5 runtime probe(MT5 런타임 탐침). MT5 net/PF/trades(순수익/수익 팩터/거래수)는 `900.36` / `1.35` / `1016`이고, actual trade density(실제 거래 밀도)는 `3.0510510511` per business day(영업일당)로 사용자 하한 3/day(일 3회)를 통과했다.
 
-next_action(다음 행동): `run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`에서 proxy/MT5 diff(프록시/MT5 차이), cost stress(비용 압박), side balance(방향 균형), session/regime stability(세션/국면 안정성)를 review(검토)한다.
+next_action(다음 행동): `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1`에서 forward/regime stress input(전진/국면 압박 입력)과 session/side guardrail(세션/방향 가드레일)을 구체화한다.
+
+claim_boundary(주장 경계): `research_development_mt5_runtime_probe_review_only_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

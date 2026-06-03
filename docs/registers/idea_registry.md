@@ -1060,3 +1060,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): density restore stress candidate(밀도 복원 압박 후보)의 trade density(거래 밀도) 회복과 PF lift(PF 개선)를 MT5 runtime(MT5 런타임)에서 확인한다.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/density_restore_stress_candidate_mt5_probe_summary.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/proxy_mt5_runtime_difference.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/probability_runtime_difference.csv`
 - boundary(경계): runtime authority(런타임 권위)는 not_claimed(주장 없음).
+
+## run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1
+
+- idea(아이디어): density restore stress candidate(밀도 복원 압박 후보)는 MT5 net/PF/density(순수익/수익 팩터/밀도)를 유지했다.
+- positive clue(긍정 단서): net `900.36`, PF `1.35`, density `3.0510510511`, clean parity(깨끗한 동등성).
+- failure memory(실패 기억): long share(롱 비중) `0.9025590551`와 missing forward/regime evidence(전진/국면 근거 누락)가 운영 승격을 막는다.

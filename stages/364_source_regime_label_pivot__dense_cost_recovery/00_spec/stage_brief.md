@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`
+- current_run_id(현재 실행 ID): `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364BE_density_restore_stress_candidate_mt5_runtime_probe_executed_review_required_no_authority`
-- claim_boundary(주장 경계): `research_development_mt5_runtime_probe_attempt_only_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364BF_density_restore_stress_candidate_mt5_probe_reviewed_positive_density_pf_forward_regime_stress_required_no_authority`
+- claim_boundary(주장 경계): `research_development_mt5_runtime_probe_review_only_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -286,3 +286,9 @@ Effect(효과): Stage364(364단계)를 분기하지 않고 `run364BD_package_den
 
 - action(행동): selected primary(선택 주 후보)를 MT5 runtime probe package(MT5 런타임 탐침 패키지)로 만들었다.
 - effect(효과): `run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1` Strategy Tester(전략 테스터) 실행 준비가 끝났다.
+
+## run364BF Density Restore Stress Candidate MT5 Review Closeout(364BF 밀도 복원 압박 후보 MT5 검토 종료)
+
+Action(행동): run364BE(364BE 실행)의 MT5 runtime probe(MT5 런타임 탐침)를 KPI/density/session/side(핵심 성과 지표/밀도/세션/방향)로 검토했다.
+
+Effect(효과): net/PF/density(순수익/수익 팩터/밀도)는 긍정 단서이고 actual density(실제 밀도)는 `3.0510510511`로 3/day(일 3회)를 통과했다. 다만 forward/regime stress(전진/국면 압박) 전까지 운영 주장은 닫지 않는다.

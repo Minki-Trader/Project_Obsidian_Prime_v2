@@ -164,3 +164,27 @@ Effect(효과): `run364BD_package_density_restore_stress_candidate_runtime_probe
 Action(행동): `run364BB_ba02_between_ax03_ax08_floor025_ps450` package(패키지)를 완료했다.
 
 Effect(효과): `run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1` MT5 runtime probe(MT5 런타임 탐침)로 이어간다.
+
+## run364BF Density Restore Stress Candidate MT5 Runtime Probe Review(364BF 밀도 복원 압박 후보 MT5 런타임 탐침 검토)
+
+Action(행동): BE runtime probe(런타임 탐침)를 performance attribution(성과 귀속)으로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1` forward/regime stress(전진/국면 압박)로 이어간다.
+
+## run364BF Density Restore Stress Candidate MT5 Runtime Probe Review(364BF 밀도 복원 압박 후보 MT5 런타임 탐침 검토)
+
+Action(행동): BE runtime probe(런타임 탐침)를 performance attribution(성과 귀속)으로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1` forward/regime stress(전진/국면 압박)로 이어간다.
+
+## run364BF Density Restore Stress Candidate MT5 Runtime Probe Review(364BF 밀도 복원 압박 후보 MT5 런타임 탐침 검토)
+
+Action(행동): BE runtime probe(런타임 탐침)를 performance attribution(성과 귀속)으로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1` forward/regime stress(전진/국면 압박)로 이어간다.
+
+## run364BF Density Restore Stress Candidate MT5 Runtime Probe Review(364BF 밀도 복원 압박 후보 MT5 런타임 탐침 검토)
+
+Action(행동): BE runtime probe(런타임 탐침)를 performance attribution(성과 귀속)으로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1` forward/regime stress(전진/국면 압박)로 이어간다.
