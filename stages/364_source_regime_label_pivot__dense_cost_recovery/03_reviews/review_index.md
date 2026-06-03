@@ -144,3 +144,10 @@
 - judgment(판정): `negative_for_package_positive_for_hold6_density_and_sparse_pf_repair_seed_no_authority`
 - package(패키지): none(없음)
 - effect(효과): run364AM(364AM 실행) proxy scout(프록시 정찰)를 package(패키지) 없이 닫고 `run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1` 입력으로 넘겼다.
+
+## run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AO_hold6_pf_dd_repair_offensive_inputs.md`
+- judgment(판정): `hold6_pf_dd_repair_inputs_ready_with_loss_guard_as_diagnostic_no_authority`
+- ap_queue_rows(AP 대기열 행): `8`
+- effect(효과): `run364AP_train_hold6_pf_dd_repair_offensive_scout_without_db_v1` replay(재생) 입력을 만든다.

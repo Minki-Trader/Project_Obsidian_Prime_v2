@@ -77,3 +77,8 @@ Next action(다음 행동): run364Z cost/session/drawdown stress materialization
 
 - action(행동): run364AM(364AM 실행) PF-pass density restore scout(PF 통과 밀도 복원 정찰)를 검토했다.
 - effect(효과): Stage364(364단계) 안에서 `run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1` materialization(구체화)로 이어간다.
+
+## run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1
+
+- action(행동): run364AP(364AP 실행) queue(대기열)를 materialize(구체화)했다.
+- effect(효과): Stage364(364단계) 안에서 stage(단계) 분기 없이 다음 공격 탐색으로 이어간다.

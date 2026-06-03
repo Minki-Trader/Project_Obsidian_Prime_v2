@@ -1,0 +1,20 @@
+{
+  "changed_variables": "max_hold, short threshold, margin floor, session/side repair policy(최대 보유, 숏 임계값, 마진 하한, 세션/방향 수리 정책)",
+  "claim_boundary": "research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1",
+  "control_variables": "US100 M5, existing probability tape, no top_n, no trade splitting(US100 5분봉, 기존 확률 테이프, top_n 없음, 거래 쪼개기 없음)",
+  "created_at_utc": "2026-06-03T04:54:45Z",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AO/run364AP_scout_queue.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AO/repair_axis_map.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AO/dd_guardrail_design.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AO/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "PF remains below target, density falls below 3/day, DD worsens, or split profit fails(PF 목표 미달, 밀도 3 미만, 낙폭 악화, 분할 수익 실패)",
+  "forbidden": "top_n, trade splitting, OOS threshold selection, hard month-only filtering(top_n, 거래 쪼개기, 표본외 임계값 선택, 월 단독 고정 필터)",
+  "hypothesis": "hold6 density seed can repair PF/DD when mixed with sparse PF seed(6봉 밀도 씨앗은 희소 PF 씨앗과 섞이면 PF/DD를 수리할 수 있음)",
+  "run_id": "run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1",
+  "skill": "obsidian-experiment-design(실험 설계)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "success_criteria": "run364AP tests PF>=1.30, density>=3/day, DD no worse than hold6 anchor(364AP가 PF 1.30 이상, 하루 밀도 3 이상, DD가 6봉 기준보다 나쁘지 않음을 시험)"
+}

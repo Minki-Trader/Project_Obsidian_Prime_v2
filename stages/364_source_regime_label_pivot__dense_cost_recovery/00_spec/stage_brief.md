@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364AP_train_hold6_pf_dd_repair_offensive_scout_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364AN_pf_pass_density_restore_review_negative_for_package_positive_hold6_density_seed_no_authority`
-- claim_boundary(주장 경계): `research_development_proxy_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364AO_hold6_pf_dd_repair_inputs_materialized_no_training_no_mt5_no_authority`
+- claim_boundary(주장 경계): `research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -196,3 +196,9 @@ Effect(효과): `density_anchor_hold6_pf_probe_밀도_기준_보유6_PF_탐침__
 Action(행동): run364AM(364AM 실행) proxy scout(프록시 정찰) 12개 행을 package gate(패키지 게이트), policy attribution(정책 귀속), positive clue(긍정 단서), failure memory(실패 기억)로 검토했다.
 
 Effect(효과): strict package row(엄격 패키지 행) `0` 때문에 package(패키지)는 닫고, hold6 density(6봉 보유 밀도)와 sparse PF(희소 수익 팩터) 단서를 `run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1` 입력으로 넘겼다.
+
+## run364AO Hold6 PF/DD Repair Inputs Closeout(364AO 6봉 PF/DD 수리 입력 종료)
+
+Action(행동): run364AN(364AN 실행) review queue(검토 대기열) 7개를 run364AP(364AP 실행) scout queue(정찰 대기열) 8개로 구체화했다.
+
+Effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 hold6 density(6봉 밀도)와 sparse PF(희소 수익 팩터) 단서를 이어간다.

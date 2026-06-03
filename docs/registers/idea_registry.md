@@ -972,3 +972,8 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): hold6 density(6봉 보유 밀도)와 sparse PF-pass(희소 PF 통과)를 분리해 다음 PF/DD repair(PF/DD 수리) 씨앗으로 쓴다.
 - positive clue(긍정 단서): density(밀도) 회복은 가능하지만 PF/DD(수익 팩터/낙폭) 수리가 필요하다.
 - failure memory(실패 기억): strict package(엄격 패키지)는 `0`이라 운영 주장 금지.
+
+## run364AO_materialize_hold6_pf_dd_repair_offensive_inputs_without_db_v1
+
+- idea(아이디어): hold6 density(6봉 밀도) 씨앗과 sparse PF(희소 수익 팩터) 씨앗을 PF/DD repair(PF/DD 수리) 축으로 섞는다.
+- effect(효과): PF(수익 팩터) 1.30, density(밀도) 3/day, DD(낙폭) 수리를 동시에 보는 다음 replay(재생) 입력을 만든다.
