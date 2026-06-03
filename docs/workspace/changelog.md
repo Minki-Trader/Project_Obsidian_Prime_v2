@@ -6327,3 +6327,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): threshold-edge floor001 strict pass(임계값 경계 하한 0.001 엄격 통과)를 검토했다.
 - effect(효과): `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1` runtime probe package(런타임 탐침 패키지) 대기열을 만들고 운영 주장은 닫았다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AT_threshold_edge_pf_gap_repair_review.md`
+
+## 2026-06-03 - run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1
+
+- action(행동): threshold edge floor001 MT5 runtime probe(임계값 경계 하한 0.001 MT5 런타임 탐침)를 실행 시도했다.
+- effect(효과): runtime telemetry(런타임 기록), strategy tester report(전략 테스터 보고서), proxy/MT5 diff(프록시/MT5 차이)를 기록했다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AV_threshold_edge_floor001_mt5_runtime_probe.md`

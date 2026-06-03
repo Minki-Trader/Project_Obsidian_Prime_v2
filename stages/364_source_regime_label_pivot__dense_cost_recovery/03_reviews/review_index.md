@@ -186,3 +186,5 @@
 - package_candidate_rows(패키지 후보 행): `1`
 - next_run(다음 실행): `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1`
 - effect(효과): proxy package candidate(프록시 패키지 후보)를 MT5 runtime probe(MT5 런타임 탐침) 준비로 넘긴다.
+
+- `run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AV_threshold_edge_floor001_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침), authority(권위) not_claimed(주장 없음).

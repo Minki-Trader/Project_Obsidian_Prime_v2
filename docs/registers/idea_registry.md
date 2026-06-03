@@ -1010,3 +1010,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): threshold-edge floor001(임계값 경계 하한 0.001)의 PF lift(PF 개선)를 MT5 runtime(MT5 런타임)에서 확인한다.
 - positive clue(긍정 단서): expected PF(예상 수익 팩터) `1.3105654109`, density(밀도) `3.1981981982`.
 - failure memory(실패 기억): MT5 report/telemetry(MT5 보고서/기록) 전에는 runtime authority(런타임 권위) 금지.
+
+## run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1
+
+- idea(아이디어): threshold-edge floor001(임계값 경계 하한 0.001)의 PF lift(PF 개선)를 MT5 runtime(MT5 런타임)에서 확인한다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AV/threshold_edge_floor001_mt5_probe_summary.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AV/proxy_mt5_runtime_difference.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AV/probability_runtime_difference.csv`
+- boundary(경계): runtime authority(런타임 권위)는 not_claimed(주장 없음).
