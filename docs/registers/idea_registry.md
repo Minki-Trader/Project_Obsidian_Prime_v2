@@ -931,3 +931,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): PF lift(PF 상승)와 density restore(밀도 복원)를 고정 임계값으로 재생해 동시 통과 후보를 찾는다.
 - positive clue(긍정 단서): selected proxy(선택 프록시) `selected_density_safe_control__ps0_45__floor0_0__hold8`.
 - failure memory(실패 기억): MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장 금지.
+
+## run364AH_review_pf_lift_density_safe_expansion_scout_without_db_v1
+
+- idea(아이디어): 밀도 통과 후보를 패키지로 올리기 전에 PF/세션/방향 압박을 분해한다.
+- positive clue(긍정 단서): 미국 현금장 핵심 세션은 롱/숏 모두 양수 PF 포켓을 보인다.
+- failure memory(실패 기억): PF 통과 행은 밀도 3/day를 잃고, 밀도 통과 행은 PF 1.30을 못 넘는다.
