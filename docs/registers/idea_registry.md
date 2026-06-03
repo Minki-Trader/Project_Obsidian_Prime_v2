@@ -1054,3 +1054,9 @@ Register ideas when they become durable work, not for every passing thought.
 - effect(효과): 프록시에서 보인 PF/density(PF/밀도) 구조를 실제 MT5 실행 의미로 압박한다.
 
 - run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1: ba02 density restore stress candidate(ba02 밀도 복원 압박 후보)를 MT5 runtime package(MT5 런타임 패키지)로 이동했다. MT5 evidence(MT5 근거)는 아직 필요하다.
+
+## run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1
+
+- idea(아이디어): density restore stress candidate(밀도 복원 압박 후보)의 trade density(거래 밀도) 회복과 PF lift(PF 개선)를 MT5 runtime(MT5 런타임)에서 확인한다.
+- evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/density_restore_stress_candidate_mt5_probe_summary.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/proxy_mt5_runtime_difference.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/probability_runtime_difference.csv`
+- boundary(경계): runtime authority(런타임 권위)는 not_claimed(주장 없음).

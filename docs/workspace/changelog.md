@@ -6377,3 +6377,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BC_density_restore_stress_candidate_review.md`
 
 - run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1: packaged(패키지 완료) density restore stress candidate(밀도 복원 압박 후보) for MT5 runtime probe(MT5 런타임 탐침).
+
+## 2026-06-03 - run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1
+
+- action(행동): density restore stress candidate MT5 runtime probe(밀도 복원 압박 후보 MT5 런타임 탐침)를 실행 시도했다.
+- effect(효과): runtime telemetry(런타임 기록), strategy tester report(전략 테스터 보고서), proxy/MT5 diff(프록시/MT5 차이)를 기록했다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BE_density_restore_stress_candidate_mt5_runtime_probe.md`
