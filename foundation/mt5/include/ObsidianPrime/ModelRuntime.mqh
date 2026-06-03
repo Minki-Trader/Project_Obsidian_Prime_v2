@@ -16,6 +16,7 @@ private:
    bool   m_use_cpu_only;
    bool   m_no_conversion;
    bool   m_set_output_shape;
+   bool   m_use_matrix_tensor;
    int    m_feature_count;
    long   m_output_count;
    ulong  m_input_shape[];
@@ -24,6 +25,8 @@ private:
    float  m_input[];
    long   m_label[];
    float  m_probability[];
+   matrixf m_input_matrix;
+   matrixf m_probability_matrix;
    uint   m_create_flags;
    uint   m_run_flags;
 
@@ -60,7 +63,9 @@ private:
       ArrayInitialize(m_input, 0.0f);
       ArrayInitialize(m_label, 0);
       ArrayInitialize(m_probability, 0.0f);
-     }
+      m_input_matrix.Resize(1, (ulong)feature_count);
+      m_probability_matrix.Resize(1, 3);
+      }
 
    void BuildFlags()
      {
@@ -135,6 +140,7 @@ public:
       m_use_cpu_only = true;
       m_no_conversion = false;
       m_set_output_shape = true;
+      m_use_matrix_tensor = false;
       m_feature_count = OP_DEFAULT_FEATURE_COUNT;
       m_output_count = 0;
       m_create_flags = 0;
@@ -150,19 +156,21 @@ public:
    void Configure(const string model_path,
                   const string model_id,
                   const bool common_files,
-                  const bool use_cpu_only,
-                  const bool no_conversion,
-                  const bool set_output_shape,
-                  const int feature_count)
-     {
-      m_model_path = model_path;
-      m_model_id = model_id;
-      m_common_files = common_files;
-      m_use_cpu_only = use_cpu_only;
-      m_no_conversion = no_conversion;
-      m_set_output_shape = set_output_shape;
-      m_feature_count = feature_count > 0 ? feature_count : OP_DEFAULT_FEATURE_COUNT;
-     }
+                   const bool use_cpu_only,
+                   const bool no_conversion,
+                   const bool set_output_shape,
+                   const bool use_matrix_tensor,
+                   const int feature_count)
+      {
+       m_model_path = model_path;
+       m_model_id = model_id;
+       m_common_files = common_files;
+       m_use_cpu_only = use_cpu_only;
+       m_no_conversion = no_conversion;
+       m_set_output_shape = set_output_shape;
+       m_use_matrix_tensor = use_matrix_tensor;
+       m_feature_count = feature_count > 0 ? feature_count : OP_DEFAULT_FEATURE_COUNT;
+      }
 
    string ModelId() const
      {
@@ -266,18 +274,29 @@ public:
             reason = StringFormat("feature_nonfinite_at:%d", i);
             return false;
            }
-         m_input[i] = (float)value;
-        }
+          m_input[i] = (float)value;
+          if(m_use_matrix_tensor)
+             m_input_matrix[0][i] = (float)value;
+         }
 
-      ArrayInitialize(m_label, 0);
-      ArrayInitialize(m_probability, 0.0f);
+       ArrayInitialize(m_label, 0);
+       ArrayInitialize(m_probability, 0.0f);
+       if(m_use_matrix_tensor)
+         {
+          for(int j = 0; j < 3; j++)
+             m_probability_matrix[0][j] = 0.0f;
+         }
 
-      ResetLastError();
-      bool ok = false;
-      if(m_output_count == 1)
-         ok = OnnxRun(m_handle, m_run_flags, m_input, m_probability);
-      else if(m_output_count == 2)
-         ok = OnnxRun(m_handle, m_run_flags, m_input, m_label, m_probability);
+       ResetLastError();
+       bool ok = false;
+       if(m_use_matrix_tensor && m_output_count == 1)
+          ok = OnnxRun(m_handle, m_run_flags, m_input_matrix, m_probability_matrix);
+       else if(m_use_matrix_tensor && m_output_count == 2)
+          ok = OnnxRun(m_handle, m_run_flags, m_input_matrix, m_label, m_probability_matrix);
+       else if(m_output_count == 1)
+          ok = OnnxRun(m_handle, m_run_flags, m_input, m_probability);
+       else if(m_output_count == 2)
+          ok = OnnxRun(m_handle, m_run_flags, m_input, m_label, m_probability);
       else
         {
          reason = StringFormat("onnx_output_count_unsupported:%d", (int)m_output_count);
@@ -290,9 +309,18 @@ public:
          return false;
         }
 
-      p_short = (double)m_probability[0];
-      p_flat = (double)m_probability[1];
-      p_long = (double)m_probability[2];
+       if(m_use_matrix_tensor)
+         {
+          p_short = (double)m_probability_matrix[0][0];
+          p_flat = (double)m_probability_matrix[0][1];
+          p_long = (double)m_probability_matrix[0][2];
+         }
+       else
+         {
+          p_short = (double)m_probability[0];
+          p_flat = (double)m_probability[1];
+          p_long = (double)m_probability[2];
+         }
 
       if(!IsFiniteOutputValue(p_short) || !IsFiniteOutputValue(p_flat) || !IsFiniteOutputValue(p_long))
         {

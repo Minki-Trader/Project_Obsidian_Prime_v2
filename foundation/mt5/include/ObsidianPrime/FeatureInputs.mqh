@@ -14,6 +14,8 @@ string OP_Trim(const string value)
 string OP_Unquote(const string value)
   {
    string text = OP_Trim(value);
+   if(StringLen(text) > 0 && StringGetCharacter(text, 0) == 0xFEFF)
+      text = StringSubstr(text, 1);
    const int n = StringLen(text);
    if(n >= 2 && StringGetCharacter(text, 0) == '"' && StringGetCharacter(text, n - 1) == '"')
       text = StringSubstr(text, 1, n - 2);
@@ -322,7 +324,7 @@ private:
          flags |= FILE_COMMON;
 
       ResetLastError();
-      const int handle = FileOpen(m_path, flags);
+      const int handle = FileOpen(m_path, flags, 0, CP_UTF8);
       if(handle == INVALID_HANDLE)
         {
          m_load_reason = StringFormat("feature_csv_open_failed:%d", GetLastError());

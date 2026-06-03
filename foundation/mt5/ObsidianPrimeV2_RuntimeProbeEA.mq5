@@ -33,6 +33,7 @@ input bool            InpModelUseCommonFiles = true;
 input bool            InpModelUseCpuOnly = true;
 input bool            InpModelNoConversion = false;
 input bool            InpSetOutputShape = true;
+input bool            InpModelUseMatrixTensor = false;
 input string          InpFeatureOrderHash = "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2";
 
 input bool            InpFallbackEnabled = false;
@@ -68,6 +69,14 @@ input double          InpBlockShortFeatureMax = 0.0;
 input bool            InpBlockLongFeatureRange = false;
 input double          InpBlockLongFeatureMin = 0.0;
 input double          InpBlockLongFeatureMax = 0.0;
+input bool            InpBlockPremarketShort = false;
+input int             InpPremarketStartHour = 12;
+input int             InpPremarketEndHour = 17;
+input bool            InpMarchNonHour16MarginFilter = false;
+input int             InpMarchFilterMonth = 3;
+input int             InpMarchFilterBlockedHour = 16;
+input double          InpMarchFilterAbsMarginMin = 0.10;
+input double          InpEntryMarginFloor = 0.0;
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -211,6 +220,93 @@ void ApplySideFeatureFilter(const double &features[],
                         + DoubleToString(feature_value, 6)
                         + "|"
                         + decision.reason;
+     }
+  }
+
+double SignalSideMargin(const int signal,
+                        const double p_short,
+                        const double p_flat,
+                        const double p_long)
+  {
+   if(signal == OP_DECISION_SHORT)
+      return p_short - MathMax(p_flat, p_long);
+   if(signal == OP_DECISION_LONG)
+      return p_long - MathMax(p_flat, p_short);
+   return 0.0;
+  }
+
+double DirectionalAbsMargin(const double p_short,
+                            const double p_flat,
+                            const double p_long)
+  {
+   const double short_margin = p_short - MathMax(p_flat, p_long);
+   const double long_margin = p_long - MathMax(p_flat, p_short);
+   return MathMax(MathAbs(short_margin), MathAbs(long_margin));
+  }
+
+void ApplyRuntimeTimeFilters(const datetime target_time,
+                             const double p_short,
+                             const double p_flat,
+                             const double p_long,
+                             SOpDecisionResult &decision)
+  {
+   if(decision.signal == OP_DECISION_FLAT)
+      return;
+
+   MqlDateTime parts;
+   TimeToStruct(target_time, parts);
+
+   if(InpMarchNonHour16MarginFilter && parts.mon == InpMarchFilterMonth)
+     {
+      const double abs_margin = DirectionalAbsMargin(p_short, p_flat, p_long);
+      if(parts.hour == InpMarchFilterBlockedHour || abs_margin < InpMarchFilterAbsMarginMin)
+        {
+         decision.signal = OP_DECISION_FLAT;
+         decision.label = "flat";
+         decision.confidence = 0.0;
+         decision.margin = 0.0;
+         decision.reason = "march_non_hour16_margin_filter:hour="
+                           + (string)parts.hour
+                           + ",abs_margin="
+                           + DoubleToString(abs_margin, 6)
+                           + "|"
+                           + decision.reason;
+         return;
+        }
+     }
+
+   if(InpEntryMarginFloor > 0.0)
+     {
+      const double side_margin = SignalSideMargin(decision.signal, p_short, p_flat, p_long);
+      if(side_margin < InpEntryMarginFloor)
+        {
+         decision.signal = OP_DECISION_FLAT;
+         decision.label = "flat";
+         decision.confidence = 0.0;
+         decision.margin = 0.0;
+         decision.reason = "entry_margin_floor:"
+                           + DoubleToString(side_margin, 6)
+                           + "<"
+                           + DoubleToString(InpEntryMarginFloor, 6)
+                           + "|"
+                           + decision.reason;
+         return;
+        }
+     }
+
+   if(InpBlockPremarketShort && decision.signal == OP_DECISION_SHORT)
+     {
+      if(parts.hour >= InpPremarketStartHour && parts.hour < InpPremarketEndHour)
+        {
+         decision.signal = OP_DECISION_FLAT;
+         decision.label = "flat";
+         decision.confidence = 0.0;
+         decision.margin = 0.0;
+         decision.reason = "premarket_short_block:hour="
+                           + (string)parts.hour
+                           + "|"
+                           + decision.reason;
+        }
      }
   }
 
@@ -445,10 +541,11 @@ bool InitPrimaryModel(string &reason)
    g_model_runtime.Configure(InpModelPath,
                              InpModelId,
                              InpModelUseCommonFiles,
-                             InpModelUseCpuOnly,
-                             InpModelNoConversion,
-                             InpSetOutputShape,
-                             InpFeatureCount);
+                              InpModelUseCpuOnly,
+                              InpModelNoConversion,
+                              InpSetOutputShape,
+                              InpModelUseMatrixTensor,
+                              InpFeatureCount);
    return g_model_runtime.Init(reason);
   }
 
@@ -465,10 +562,11 @@ bool InitFallbackModel(string &reason)
    g_fallback_model_runtime.Configure(InpFallbackModelPath,
                                       InpFallbackModelId,
                                       InpModelUseCommonFiles,
-                                      InpModelUseCpuOnly,
-                                      InpModelNoConversion,
-                                      InpSetOutputShape,
-                                      InpFallbackFeatureCount);
+                                       InpModelUseCpuOnly,
+                                       InpModelNoConversion,
+                                       InpSetOutputShape,
+                                       InpModelUseMatrixTensor,
+                                       InpFallbackFeatureCount);
    return g_fallback_model_runtime.Init(reason);
   }
 
@@ -840,6 +938,7 @@ void ProcessClosedBar()
                                  decision,
                                  secondary_trigger);
      }
+   ApplyRuntimeTimeFilters(target_time, p_short, p_flat, p_long, decision);
 
    const int routed_signal_before_entry_gate = decision.signal;
    const double routed_confidence_before_entry_gate = decision.confidence;

@@ -137,7 +137,7 @@ private:
          flags |= FILE_COMMON;
 
       ResetLastError();
-      const int handle = FileOpen(m_table_path, flags);
+      const int handle = FileOpen(m_table_path, flags, 0, CP_UTF8);
       if(handle == INVALID_HANDLE)
         {
          reason = StringFormat("ebm_table_open_failed:%d", GetLastError());

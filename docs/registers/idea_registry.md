@@ -1004,3 +1004,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): threshold-edge floor001(임계값 경계 하한 0.001)이 PF(수익 팩터) 1.30과 density(밀도) 3/day를 동시에 회복한다.
 - evidence(근거): proxy(프록시) net `862.283`, PF `1.3105654109`, density `3.1981981982`, DD `-133.571`.
 - next_condition(다음 조건): MT5 runtime probe(MT5 런타임 탐침)에서 proxy/MT5 diff(프록시/MT5 차이)를 기록한다.
+
+## run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1
+
+- idea(아이디어): threshold-edge floor001(임계값 경계 하한 0.001)의 PF lift(PF 개선)를 MT5 runtime(MT5 런타임)에서 확인한다.
+- positive clue(긍정 단서): expected PF(예상 수익 팩터) `1.3105654109`, density(밀도) `3.1981981982`.
+- failure memory(실패 기억): MT5 report/telemetry(MT5 보고서/기록) 전에는 runtime authority(런타임 권위) 금지.

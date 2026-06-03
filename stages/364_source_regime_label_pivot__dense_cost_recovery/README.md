@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1`
+Current run(현재 실행): `run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364Y_review_density_side_balance_repair_mt5_runtime_probe_without_db_v1`
+Latest completed run(최근 완료 실행): `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1`
 
-Current truth(현재 진실): run364X MT5 runtime probe(MT5 런타임 탐침)는 positive(긍정)이지만 operating authority(운영 권위)는 아직 없다.
+Current truth(현재 진실): run364AU(364AU 실행)는 threshold-edge floor001 proxy(임계값 경계 하한 0.001 프록시)를 MT5 runtime probe package(MT5 런타임 탐침 패키지)로 만들었다.
 
-Next action(다음 행동): run364Z cost/session/drawdown stress materialization(비용/세션/낙폭 압박 구체화).
+Next action(다음 행동): run364AV MT5 runtime probe(MT5 런타임 탐침) 실행과 proxy/MT5 diff(프록시/MT5 차이) 기록.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 
@@ -110,3 +110,9 @@ Effect(효과): threshold-edge(임계값 경계) 단서의 PF gap(PF 간극) 수
 Action(행동): AS strict pass(AS 엄격 통과)를 package/probe(패키지/탐침) 관점으로 검토했다.
 
 Effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 MT5 runtime probe(MT5 런타임 탐침) 준비로 이어간다.
+
+## run364AU Threshold Edge Floor001 Runtime Probe Package(364AU 임계값 경계 하한 0.001 런타임 탐침 패키지)
+
+Action(행동): AS selected proxy(AS 선택 프록시)를 MT5 set/ini(MT5 설정/INI), Common Files(공용 파일), compile receipt(컴파일 영수증)로 package(패키지)했다.
+
+Effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 `run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1` 실행으로 이어간다.
