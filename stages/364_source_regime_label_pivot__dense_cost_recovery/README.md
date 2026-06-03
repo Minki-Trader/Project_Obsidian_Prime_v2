@@ -158,3 +158,9 @@ Effect(효과): package-reviewable(패키지 검토 가능) 후보 여부를 `ru
 Action(행동): BB package candidates(BB 패키지 후보)를 검토했다.
 
 Effect(효과): `run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1` runtime probe package(런타임 탐침 패키지)로 이어간다.
+
+## run364BD density restore stress candidate runtime package(밀도 복원 압박 후보 런타임 패키지)
+
+Action(행동): `run364BB_ba02_between_ax03_ax08_floor025_ps450` package(패키지)를 완료했다.
+
+Effect(효과): `run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1` MT5 runtime probe(MT5 런타임 탐침)로 이어간다.

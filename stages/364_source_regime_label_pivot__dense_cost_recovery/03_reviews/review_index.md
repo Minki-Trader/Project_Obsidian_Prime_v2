@@ -232,3 +232,5 @@
 - selected(선택): `ba02_between_ax03_ax08_floor025_ps450`
 - next_run(다음 실행): `run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1`
 - effect(효과): runtime probe package(런타임 탐침 패키지)를 연다.
+
+- [run364BD] run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1: stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BD_density_restore_stress_candidate_runtime_probe_package.md - runtime package(런타임 패키지), MT5 execution(MT5 실행) not_run(미실행)

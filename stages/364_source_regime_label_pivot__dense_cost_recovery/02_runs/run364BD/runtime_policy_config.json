@@ -1,0 +1,61 @@
+{
+  "claim_boundary": "research_development_runtime_probe_package_only_common_files_synced_compile_checked_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "decision_surface": {
+    "InpBlockLongFeatureMax": 1000000.0,
+    "InpBlockLongFeatureMin": 40.0,
+    "InpBlockLongFeatureRange": true,
+    "InpBlockPremarketShort": true,
+    "InpCloseOnFlatSignal": false,
+    "InpDecisionMode": "threshold_margin",
+    "InpEntryMarginFloor": 0.00025,
+    "InpLongThreshold": 0.0,
+    "InpMarchFilterAbsMarginMin": 0.1,
+    "InpMarchFilterBlockedHour": 16,
+    "InpMarchFilterMonth": 3,
+    "InpMarchNonHour16MarginFilter": true,
+    "InpMaxHoldBars": 6,
+    "InpMinMargin": -0.000562137088,
+    "InpPremarketEndHour": 17,
+    "InpPremarketStartHour": 12,
+    "InpReverseOnOppositeSignal": true,
+    "InpShortThreshold": 0.45,
+    "InpSideFilterEnabled": true,
+    "InpSideFilterFeatureIndex": 34
+  },
+  "expected_proxy": {
+    "combined_expectancy": 0.8271133094,
+    "combined_long_count": 1009,
+    "combined_max_drawdown": -127.733,
+    "combined_net_profit": 919.75,
+    "combined_profit_factor": 1.3178004168,
+    "combined_recovery_factor": 7.2005668073,
+    "combined_short_count": 103,
+    "combined_trade_count": 1112,
+    "combined_trade_per_business_day": 3.3393393393,
+    "estimated_mt5_trade_count": 1014,
+    "estimated_mt5_trade_per_business_day": 3.045045045
+  },
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "known_differences": [
+    "proxy expected value(프록시 예상값)는 MT5 Strategy Tester(MT5 전략 테스터) KPI(핵심 성과 지표)를 대체하지 않는다.",
+    "spread/slippage/fill(스프레드/슬리피지/체결)은 run364BE MT5 실행 뒤 확인한다."
+  ],
+  "model_id": "h12_move5__rf5_l80_n64",
+  "mt5_execution": "not_run",
+  "output_contract": "p_short_p_flat_p_long_direct_three_class_probability_threshold_margin",
+  "parent_run_id": "run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1",
+  "parent_scout_run_id": "run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1",
+  "proxy_policy": {
+    "bridge_policy": "restore_march_non_hour16_margin",
+    "bridge_policy_value": 0.1,
+    "restore_policy": "search between ax03 density safety and ax08 over-stress buffer(ax03 밀도 안전과 ax08 과압박 버퍼 사이 탐색)",
+    "session_policy": "all_sessions_except_premarket_short(프리마켓 숏 제외 전체 세션)",
+    "side_policy": "long_all_short_no_premarket(롱 전체, 숏 프리마켓 제외)",
+    "top_n_status": "forbidden(금지)",
+    "trade_splitting_status": "not_used(거래 쪼개기 없음)"
+  },
+  "run_id": "run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1",
+  "runtime_authority": "not_claimed",
+  "variant_id": "run364BB_ba02_between_ax03_ax08_floor025_ps450"
+}

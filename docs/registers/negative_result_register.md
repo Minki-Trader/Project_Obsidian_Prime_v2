@@ -637,3 +637,5 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): package_opened_no_authority(패키지 열림, 권위 없음).
 - action(행동): package candidate(패키지 후보) 외 실패/구현 필요 행을 failure memory(실패 기억)로 남겼다.
 - effect(효과): 좋은 후보만 기억하지 않고 실패 제약도 다음 패키지에 같이 넘긴다.
+
+- run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1: package_only_no_authority(패키지 전용, 권위 없음). Effect(효과): 실행 전 operating claim(운영 주장)을 막는다.
