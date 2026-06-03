@@ -134,3 +134,9 @@ Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이
 Action(행동): AX queue(대기열)를 proxy replay(프록시 재생)로 실행했다.
 
 Effect(효과): density floor(밀도 하한) 복원 후보를 `run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1` review(검토)로 넘긴다.
+
+## run364AZ Density Restore Scout Review(364AZ 밀도 복원 스카우트 검토)
+
+Action(행동): AY surface(AY 표면)를 package decision(패키지 결정)과 BA queue(BA 대기열)로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364BA_materialize_density_restore_stress_to_candidate_inputs_without_db_v1`로 이어간다.

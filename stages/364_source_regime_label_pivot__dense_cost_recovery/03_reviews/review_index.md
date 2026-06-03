@@ -200,3 +200,11 @@
 - selected(선택): `run364AY_ax08_density_overstress_floor000`
 - package_eligible_rows(패키지 검토 가능 행): `0`
 - effect(효과): `run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1` review(검토) 대상으로 넘긴다.
+
+## run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AZ_density_restore_review.md`
+- judgment(판정): `no_package_eligible_proxy_stress_pass_positive_clue_open_ba_materialization_no_authority`
+- package_decision(패키지 결정): `not_opened_no_package_eligible_rows`
+- next_run(다음 실행): `run364BA_materialize_density_restore_stress_to_candidate_inputs_without_db_v1`
+- effect(효과): stress pass(압박 통과)를 BA materialization(BA 물질화) 대기열로 넘겼다.

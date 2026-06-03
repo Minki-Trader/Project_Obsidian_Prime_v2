@@ -1032,3 +1032,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): threshold-edge floor001(임계값 경계 하한 0.001)의 net/PF(순수익/수익 팩터) 단서를 살리고 density(밀도)를 3/day(일 3회) 이상으로 복원한다.
 - effect(효과): trade splitting(거래 쪼개기) 없이 entry_margin_floor(진입 마진 하한)와 short threshold(숏 임계값) 완화를 탐색했다.
+
+## run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1
+
+- idea(아이디어): stress pass(압박 통과) `ax03_short_restore_ps450_floor050_stress`를 candidate(후보)로 재물질화한다.
+- effect(효과): package ineligible(패키지 부적격)을 idea-dead(아이디어 사망)로 닫지 않고 공격 탐색 씨앗으로 쓴다.

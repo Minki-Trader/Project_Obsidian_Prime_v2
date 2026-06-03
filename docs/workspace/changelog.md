@@ -6351,3 +6351,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): density restore cost/session proxy scout(밀도 복원 비용/세션 프록시 스카우트)를 실행했다.
 - effect(효과): `run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1` review queue(검토 대기열)를 만들고 운영 주장은 닫았다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AY_density_restore_scout.md`
+
+## 2026-06-03 - run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1
+
+- action(행동): density restore scout review(밀도 복원 스카우트 검토)를 실행했다.
+- effect(효과): package(패키지)는 열지 않고 `run364BA_materialize_density_restore_stress_to_candidate_inputs_without_db_v1` materialization queue(물질화 대기열)를 만들었다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AZ_density_restore_review.md`
