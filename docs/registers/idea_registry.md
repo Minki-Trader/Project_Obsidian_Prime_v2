@@ -949,3 +949,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): session/side policy(세션/방향 정책)로 premarket short drag(프리마켓 숏 끌림)를 줄이고 core session edge(핵심 세션 엣지)를 보존한다.
 - positive clue(긍정 단서): selected proxy(선택 프록시) `selected_control_full_session_선택_대조_전체_세션__ps0_45__floor0_0__hold8`.
 - failure memory(실패 기억): MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장 금지.
+
+## run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1
+
+- idea(아이디어): PF-pass density-fail(PF 통과 밀도 실패) row(행)를 버리지 않고 density restore(밀도 복원) 공격 seed(씨앗)로 바꾼다.
+- positive clue(긍정 단서): PF(수익 팩터) 1.30 이상 row(행)가 있으나 density(밀도)가 3/day 아래로 떨어진다.
+- failure memory(실패 기억): density-safe(밀도 안전) control(대조)은 PF(수익 팩터) 목표 아래라 package(패키지)가 아니다.

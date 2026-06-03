@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364AJ_session_side_pf_lift_density_repair_proxy_scout_no_mt5_no_authority`
-- claim_boundary(주장 경계): `research_development_proxy_scout_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364AK_session_side_pf_lift_density_repair_review_negative_for_package_positive_pf_density_restore_seed_no_authority`
+- claim_boundary(주장 경계): `research_development_proxy_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -172,3 +172,9 @@ Effect(효과): 다음 실행은 `run364AJ_train_session_side_pf_lift_density_re
 Action(행동): run364AI(364AI 실행) queue(대기열) `12`개를 timestamp-safe session/side proxy replay(시점 안전 세션/방향 프록시 재생)로 실행했다.
 
 Effect(효과): `selected_control_full_session_선택_대조_전체_세션__ps0_45__floor0_0__hold8`를 `run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1` review(검토) 대상으로 넘기며, operating claim(운영 주장)은 없다.
+
+## run364AK Session-Side PF Lift Density Repair Review Closeout(364AK 세션/방향 PF 상승 밀도 수리 검토 종료)
+
+Action(행동): run364AJ(364AJ 실행) proxy scout(프록시 정찰)를 package gate(패키지 게이트), session/side(세션/방향), month/side(월/방향), policy attribution(정책 귀속)으로 검토했다.
+
+Effect(효과): strict package row(엄격 패키지 행) `0` 때문에 package(패키지)는 닫고, PF-pass density-fail(PF 통과 밀도 실패) 단서를 `run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1` 입력으로 넘겼다.

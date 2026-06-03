@@ -1,0 +1,7 @@
+﻿run_id,gate_id,status,observed,required,effect(효과)
+run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1,strict_package_rows(엄격 패키지 행),failed,0,1,"PF(수익 팩터), density(밀도), split(분할), short side(숏 방향)를 동시에 만족하지 못하면 package(패키지)를 막는다."
+run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1,selected_profit_factor_target(선택 PF 목표),failed,1.2739357721,1.3,선택 row(행)의 PF(수익 팩터)가 목표 아래면 운영 후보로 올리지 않는다.
+run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1,selected_density_floor(선택 밀도 하한),passed,3.006006006,3.0,거래 빈도가 너무 낮은 수익 착시를 막는다.
+run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1,selected_split_profit(선택 분할 수익),passed,validation=339.043; oos=501.012,both_positive(둘 다 양수),validation(검증)과 OOS(표본외)가 반대로 갈리는 후보를 막는다.
+run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1,best_pf_density_bridge(최고 PF 밀도 연결),failed,pf=1.3287468527; density=2.6636636637,pf>=1.3; density>=3.0,PF(수익 팩터)가 오른 row(행)의 density(밀도) 붕괴를 다음 탐색 제약으로 바꾼다.
+run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1,external_runtime_evidence(외부 런타임 근거),out_of_scope_by_claim(주장 범위 밖),not_run(미실행),MT5 runtime probe(MT5 런타임 탐침),이번 review(검토)를 MT5(메타트레이더5) 권위로 오해하지 않게 한다.

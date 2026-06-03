@@ -1,0 +1,25 @@
+{
+  "alternative_explanations": "proxy sequence can diverge from MT5 fill and spread(프록시 순서는 MT5 체결과 스프레드에서 달라질 수 있음)",
+  "attribution_confidence": "medium_proxy_review_only(중간, 프록시 검토 전용)",
+  "claim_boundary": "research_development_proxy_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1",
+  "created_at_utc": "2026-06-03T03:51:44Z",
+  "likely_drivers": "premarket short block, short threshold strictness, core session pocket, late-long drawdown relief(프리마켓 숏 차단, 숏 임계값 엄격화, 핵심 세션 포켓, 후반 롱 낙폭 완화)",
+  "next_probe": "run364AL_materialize_pf_pass_density_restore_offensive_inputs_without_db_v1",
+  "observed_change": "PF-pass rows exist but density breaks; density-safe rows stay below PF target(PF 통과 행은 있으나 밀도 붕괴, 밀도 안전 행은 PF 목표 미달)",
+  "run_id": "run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1",
+  "segment_checks": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AK/session_side_review.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AK/month_side_review.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AK/policy_review.csv"
+  ],
+  "skill": "obsidian-performance-attribution(성과 귀속)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "trade_shape": {
+    "expectancy": 0.8392157842,
+    "long_count": 882,
+    "max_drawdown": -142.323,
+    "short_count": 119,
+    "trade_count": 1001
+  }
+}
