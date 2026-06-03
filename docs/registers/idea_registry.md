@@ -925,3 +925,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): PF lift(PF 상승)와 density restore(밀도 복원)를 고정 임계값으로 동시에 시험한다.
 - positive clue(긍정 단서): PF 1.3066 후보와 density 3.006 후보가 따로 존재한다.
 - failure memory(실패 기억): PF만 올리면 density(밀도)가 무너지고, density만 지키면 PF(수익 팩터)가 부족하다.
+
+## run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1
+
+- idea(아이디어): PF lift(PF 상승)와 density restore(밀도 복원)를 고정 임계값으로 재생해 동시 통과 후보를 찾는다.
+- positive clue(긍정 단서): selected proxy(선택 프록시) `selected_density_safe_control__ps0_45__floor0_0__hold8`.
+- failure memory(실패 기억): MT5 runtime probe(MT5 런타임 탐침) 전에는 운영 주장 금지.

@@ -95,3 +95,10 @@
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AF_pf_lift_density_safe_inputs.md`
 - judgment(판정): `pf_lift_density_safe_expansion_inputs_ready_no_operating_claim`
 - effect(효과): run364AG(364AG 실행) PF lift density-safe scout queue(PF 상승 밀도 안전 정찰 대기열)를 만들었다.
+
+## run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AG_pf_lift_density_safe_scout.md`
+- judgment(판정): `proxy_scout_completed_pf_lift_density_safe_candidates_ranked_mt5_probe_required_no_authority`
+- selected(선택): `selected_density_safe_control__ps0_45__floor0_0__hold8`
+- effect(효과): PF lift density-safe queue(PF 상승 밀도 안전 대기열)를 프록시로 재생해 `run364AH_review_pf_lift_density_safe_expansion_scout_without_db_v1` 검토 대상으로 넘겼다.

@@ -1,0 +1,23 @@
+{
+  "changed_variables": "short threshold, March restore policy, entry margin floor(숏 임계값, 3월 복원 정책, 진입 마진 하한)",
+  "claim_boundary": "research_development_proxy_scout_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364AD selected proxy and run364V base runtime proxy(364AD 선택 프록시와 364V 기준 런타임 프록시)",
+  "control_variables": "US100 M5, max_hold 8, ADX block 40, reverse-on-opposite, no trade splitting(US100 5분봉, 최대 보유 8, ADX 차단 40, 반대 신호 반전, 거래 쪼개기 없음)",
+  "created_at_utc": "2026-06-03T02:34:04Z",
+  "decision_use": "rank proxy candidates for review, not MT5 package authority(검토용 프록시 후보 순위화, MT5 패키지 권위 아님)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AG/pf_lift_density_safe_proxy_scout_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AG/expected_tapes/selected_trade_tape.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AG/required_gate_coverage_audit.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AG/final_decision.json"
+  ],
+  "failure_criteria": "PF lift breaks density or density restore keeps PF below 1.30(PF 상승이 밀도를 깨거나 밀도 복원이 PF 1.30 미만 유지)",
+  "hypothesis": "PF lift and density restore can jointly find PF>=1.30 with density>=3/day without trade splitting(PF 상승과 밀도 복원이 거래 쪼개기 없이 PF 1.30 이상과 일 3회 이상 밀도를 함께 찾을 수 있음)",
+  "invalid_conditions": "top_n replay, post-entry ranking, MT5 claim without MT5 output(top_n 재생, 진입 후 순위, MT5 출력 없는 MT5 주장)",
+  "run_id": "run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1",
+  "sample_scope": "validation and OOS proxy replay(검증과 표본외 프록시 재생)",
+  "skill": "obsidian-experiment-design(옵시디언 실험 설계)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "stop_conditions": "strict pass zero moves to review/repair, strict pass nonzero moves to review before package(엄격 통과 0이면 검토/수리, 1개 이상이면 패키지 전 검토)",
+  "success_criteria": "combined PF>=1.30, density>=3/day, split net positive, short side nonzero(PF 1.30 이상, 일 3회 이상 밀도, 분할 순수익 양수, 숏 0 아님)"
+}
