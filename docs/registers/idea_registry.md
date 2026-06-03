@@ -1042,3 +1042,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 - idea(아이디어): `ax03_short_restore_ps450_floor050_stress` stress pass(압박 통과)를 candidate(후보)로 재시험한다.
 - effect(효과): package ineligible(패키지 부적격)을 공격 탐색 씨앗으로 바꾼다.
+
+## run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1
+
+- idea(아이디어): AZ stress pass(AZ 압박 통과)를 candidate(후보)로 바꿔 PF 1.25와 추정 MT5 밀도 3/day를 동시에 시험한다.
+- effect(효과): package ineligible(패키지 부적격) 단서를 idea-dead(아이디어 사망)로 닫지 않고 공격 탐색으로 재사용한다.

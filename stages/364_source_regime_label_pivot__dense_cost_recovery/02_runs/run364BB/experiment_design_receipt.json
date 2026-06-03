@@ -1,0 +1,22 @@
+{
+  "changed_variables": "short threshold and entry margin floor from BA queue(BA 대기열의 숏 임계값과 진입 마진 하한)",
+  "claim_boundary": "research_development_proxy_scout_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364AW MT5 runtime probe review(364AW MT5 런타임 탐침 검토)",
+  "control_variables": "US100 M5 probability tape, one-position replay, no top_n, no trade splitting(US100 5분봉 확률 테이프, 단일 포지션 재생, top_n 없음, 거래 쪼개기 없음)",
+  "created_at_utc": "2026-06-03T09:11:49Z",
+  "decision_use": "open BB review for MT5 package decision(BB 검토를 열어 MT5 패키지 여부를 결정)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BB/density_restore_stress_to_candidate_proxy_scout_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BB/package_eligible_candidates.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BB/run364BC_review_queue.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BB/final_decision.json"
+  ],
+  "failure_criteria": "package eligible rows zero or DD/cost stress worsens(패키지 가능 행 0 또는 낙폭/비용 압박 악화)",
+  "hypothesis": "stress pass can become package-reviewable density candidate without trade splitting(압박 통과가 거래 쪼개기 없이 패키지 검토 가능 밀도 후보가 될 수 있음)",
+  "invalid_conditions": "top_n, trade splitting, OOS threshold selection, future feature use(top_n, 거래 쪼개기, OOS 임계값 선택, 미래 피처 사용)",
+  "run_id": "run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1",
+  "sample_scope": "BA candidate rows executable without new runtime policy(새 런타임 정책 없이 실행 가능한 BA 후보 행)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "stop_conditions": "after 4 executable rows and 2 implementation diagnostics are recorded(실행 가능 4행과 구현 진단 2행 기록 후 중지)",
+  "success_criteria": "estimated MT5 density>=3/day, PF>=1.25, split net positive, short nonzero(추정 MT5 밀도 3/day 이상, PF 1.25 이상, 분할 순수익 양수, 숏 0 아님)"
+}

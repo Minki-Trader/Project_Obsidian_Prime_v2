@@ -625,3 +625,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): materialization_only(물질화만).
 - action(행동): BB scout(BB 스카우트) 입력을 만들었다.
 - effect(효과): 아직 MT5 package(MT5 패키지)나 operating promotion(운영 승격)은 없다.
+
+## run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1
+
+- status(상태): pending_review(검토 대기).
+- action(행동): BB proxy surface(BB 프록시 표면)를 만들었다.
+- effect(효과): negative/positive(부정/긍정) 판정은 `run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1` review(검토)에서 package eligibility(패키지 가능성)와 분리해 결정한다.

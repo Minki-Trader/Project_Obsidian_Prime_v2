@@ -215,3 +215,11 @@
 - judgment(판정): `materialization_completed_stress_positive_clues_to_candidate_scout_inputs_no_authority`
 - next_run(다음 실행): `run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1`
 - effect(효과): BB scout queue(BB 스카우트 대기열)를 만들었다.
+
+## run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1
+
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BB_density_restore_stress_candidate_scout.md`
+- judgment(판정): `proxy_scout_completed_density_restore_stress_candidates_ranked_review_required_no_authority`
+- selected(선택): `run364BB_ba02_between_ax03_ax08_floor025_ps450`
+- package_eligible_rows(패키지 검토 가능 행): `0`
+- effect(효과): `run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1` review(검토) 대상으로 넘긴다.
