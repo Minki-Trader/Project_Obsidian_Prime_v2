@@ -595,3 +595,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): positive_proxy_with_runtime_missing(런타임 누락이 있는 긍정 프록시).
 - failure_memory(실패 기억): month-side negative rows(월/방향 음수 행) `10`개와 MT5 runtime evidence(MT5 런타임 근거) 부재.
 - effect(효과): 다음 run(실행)은 runtime probe(런타임 탐침)와 비용 압박 검토를 반드시 수행해야 한다.
+
+## run364AW_review_threshold_edge_floor001_mt5_runtime_probe_without_db_v1
+
+- status(상태): mixed_positive_runtime_probe_promotion_ineligible(혼합 긍정 런타임 탐침, 승격 부적격).
+- blocker(차단 사유): actual trade density(실제 거래 밀도) `2.9159159159` < 3/day(일 3회), long/short(롱/숏) `887/84`, equity DD(수익곡선 낙폭) `17.51%`.
+- effect(효과): positive clue(긍정 단서)는 폐기하지 않고 `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1` 수리 입력으로 넘긴다.

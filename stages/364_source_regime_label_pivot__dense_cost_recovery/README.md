@@ -116,3 +116,15 @@ Effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 MT
 Action(행동): AS selected proxy(AS 선택 프록시)를 MT5 set/ini(MT5 설정/INI), Common Files(공용 파일), compile receipt(컴파일 영수증)로 package(패키지)했다.
 
 Effect(효과): Stage364(364단계) 안에서 새 stage(단계) 분기 없이 `run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1` 실행으로 이어간다.
+
+## run364AW Threshold Edge Floor001 MT5 Runtime Probe Review(364AW 임계값 경계 하한 0.001 MT5 런타임 탐침 검토)
+
+Action(행동): AV runtime probe(런타임 탐침)를 성과 귀속(performance attribution, 성과 귀속)으로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1` density restore(밀도 복원)로 이어간다.
+
+## run364AW Threshold Edge Floor001 MT5 Runtime Probe Review(364AW 임계값 경계 하한 0.001 MT5 런타임 탐침 검토)
+
+Action(행동): AV runtime probe(런타임 탐침)를 성과 귀속(performance attribution, 성과 귀속)으로 검토했다.
+
+Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364AX_materialize_threshold_edge_density_restore_cost_session_inputs_without_db_v1` density restore(밀도 복원)로 이어간다.

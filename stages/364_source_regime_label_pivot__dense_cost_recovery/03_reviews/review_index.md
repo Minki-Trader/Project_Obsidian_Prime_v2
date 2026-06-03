@@ -188,3 +188,5 @@
 - effect(효과): proxy package candidate(프록시 패키지 후보)를 MT5 runtime probe(MT5 런타임 탐침) 준비로 넘긴다.
 
 - `run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AV_threshold_edge_floor001_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침), authority(권위) not_claimed(주장 없음).
+
+- `run364AW_review_threshold_edge_floor001_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364AW_threshold_edge_floor001_mt5_runtime_probe_review.md` - MT5 runtime probe review(MT5 런타임 탐침 검토), density repair required(밀도 수리 필요).
