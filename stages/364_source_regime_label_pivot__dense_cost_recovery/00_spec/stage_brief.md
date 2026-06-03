@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364AI_materialize_session_side_pf_lift_density_repair_inputs_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364AH_review_pf_lift_density_safe_expansion_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364AI_materialize_session_side_pf_lift_density_repair_inputs_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364AH_pf_lift_density_safe_review_negative_for_package_positive_session_side_repair_no_authority`
-- claim_boundary(주장 경계): `research_development_proxy_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364AI_session_side_pf_lift_density_repair_inputs_materialized_no_training_no_mt5_no_authority`
+- claim_boundary(주장 경계): `research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -160,3 +160,9 @@ Effect(효과): strict_cross_split_success_count(엄격 교차 분할 성공 수
 ## run364Y MT5 runtime review(MT5 런타임 검토)
 
 - current truth(현재 진실): density/side repair(밀도/방향 수리)가 MT5에서 positive(긍정)였지만 cost/session stress(비용/세션 압박)가 남았다.
+
+## run364AI Session/Side PF Lift Density Repair Inputs Closeout(364AI 세션/방향 PF 상승 밀도 수리 입력 종료)
+
+Action(행동): run364AH(364AH 실행)의 세션/방향 단서를 `12`개 고정 규칙 대기열로 구체화했다.
+
+Effect(효과): 다음 실행은 `run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1`이고, top_n(상위 N개 자르기)과 trade splitting(거래 쪼개기)은 금지 상태로 남긴다.

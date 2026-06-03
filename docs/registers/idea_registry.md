@@ -937,3 +937,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): 밀도 통과 후보를 패키지로 올리기 전에 PF/세션/방향 압박을 분해한다.
 - positive clue(긍정 단서): 미국 현금장 핵심 세션은 롱/숏 모두 양수 PF 포켓을 보인다.
 - failure memory(실패 기억): PF 통과 행은 밀도 3/day를 잃고, 밀도 통과 행은 PF 1.30을 못 넘는다.
+
+## run364AI_materialize_session_side_pf_lift_density_repair_inputs_without_db_v1
+
+- idea(아이디어): 핵심 세션 양수 포켓과 프리마켓 숏 끌림을 분리해 PF와 밀도를 동시에 시험한다.
+- positive clue(긍정 단서): us_cash_core(미국 현금장 핵심) 롱/숏은 모두 PF 1.31 이상이다.
+- failure memory(실패 기억): PF 통과 씨앗은 밀도를 잃으므로 밀도 복원 규칙과 함께 시험해야 한다.

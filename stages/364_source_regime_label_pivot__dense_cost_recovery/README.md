@@ -47,3 +47,8 @@ Next action(다음 행동): run364Z cost/session/drawdown stress materialization
 
 - action(행동): run364AG(364AG 실행) 프록시 정찰을 검토했다.
 - effect(효과): Stage364(364단계) 안에서 run364AI(실행364AI) 수리 입력으로 이어간다.
+
+## run364AI_materialize_session_side_pf_lift_density_repair_inputs_without_db_v1
+
+- action(행동): session/side PF lift density repair inputs(세션/방향 PF 상승 밀도 수리 입력)를 만들었다.
+- effect(효과): Stage364(364단계) 안에서 `run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1`로 이어간다.

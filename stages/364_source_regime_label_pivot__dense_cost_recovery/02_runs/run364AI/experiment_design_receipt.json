@@ -1,0 +1,22 @@
+{
+  "changed_variables": "session policy, side policy, PF-pass density restore policy(세션 정책, 방향 정책, PF 통과 밀도 복원 정책)",
+  "claim_boundary": "research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364AH_review_pf_lift_density_safe_expansion_scout_without_db_v1",
+  "control_variables": "US100 M5, selected proxy seed, fixed thresholds, no top_n, no trade splitting(US100 5분봉, 선택 프록시 씨앗, 고정 임계값, top_n 없음, 거래 쪼개기 없음)",
+  "created_at_utc": "2026-06-03T03:14:57Z",
+  "decision_use": "prepare run364AJ proxy scout queue(run364AJ 프록시 정찰 대기열 준비)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AI/run364AJ_scout_queue.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AI/required_gate_coverage_audit.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364AI/final_decision.json"
+  ],
+  "failure_criteria": "queue omits controls, uses top_n, or permits trade splitting(대기열이 대조를 빠뜨리거나 top_n/거래 쪼개기를 허용)",
+  "hypothesis": "session/side rules can lift PF while restoring density without trade splitting(세션/방향 규칙이 거래 쪼개기 없이 PF를 올리고 밀도를 복원할 수 있음)",
+  "invalid_conditions": "post-entry ranking or OOS threshold selection(진입 후 순위 또는 표본외 임계값 선택)",
+  "run_id": "run364AI_materialize_session_side_pf_lift_density_repair_inputs_without_db_v1",
+  "sample_scope": "proxy materialization only(프록시 구체화 전용)",
+  "skill": "obsidian-experiment-design(옵시디언 실험 설계)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "stop_conditions": "materialization complete after queue, gates, ledgers, report(대기열/게이트/장부/보고서 이후 구체화 완료)",
+  "success_criteria": "next run can test PF>=1.30 and density>=3/day(PF 1.30 이상과 일 3회 이상 밀도 시험 가능)"
+}
