@@ -715,3 +715,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - failure_memory(실패 기억): bad months(나쁜 월) `['2025-08', '2025-12']`, cost stress delta(비용 압박 차이) `-1.13`, MT5 reprobe missing(MT5 재탐침 없음).
 - salvage_value(회수 가치): h17 focus(17시 집중)와 synthetic_short_overlay(합성 숏 오버레이)는 CI repair seed(CI 수리 씨앗)로 남긴다.
 - reopen_condition(재개 조건): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`가 stress_adjusted_net_delta>=0(압박 조정 순수익 차이 0 이상), density>=3(밀도 3 이상), short_count>=100(숏 100개 이상)을 동시에 만든다.
+
+<!-- run364CJ__boundary__run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
+- `run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1` boundary note(경계 메모): proxy scout(프록시 정찰) did not run new MT5(새 MT5 미실행), so runtime authority(런타임 권위) and operating promotion(운영 승격) remain not claimed(주장 안 함).

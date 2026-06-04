@@ -299,3 +299,10 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 Action(행동): cost-stable h17 source guard queue(비용 안정 17시 원천 가드 대기열)를 proxy scout(프록시 정찰)로 실행했다.
 
 Effect(효과): `cg09_best_open_hour_overlay_focus`를 CH review(CH 검토)로 넘기고 stage branch(단계 분기)는 만들지 않는다.
+
+<!-- run364CJ__run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
+## run364CJ h17 focus month cost stress repair scout(17시 집중 월/비용 압박 수리 정찰)
+
+Action(행동): `16` CJ repair candidates(CJ 수리 후보)를 proxy replay(프록시 재생)했다.
+
+Effect(효과): selected proxy repair(선택 프록시 수리) `cj09_cg07_native_short_cost_firewall_short_floor_rescue`를 `run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1` review(검토)로 넘기고 runtime authority(런타임 권위)는 주장하지 않는다.
