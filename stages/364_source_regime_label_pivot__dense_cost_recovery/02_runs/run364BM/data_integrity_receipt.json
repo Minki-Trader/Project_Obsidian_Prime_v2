@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "research_development_proxy_scout_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "created_at_utc": "2026-06-04T14:09:24Z",
+  "data_source": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BK/closed_trade_attribution.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BJ/runtime_telemetry/run364BJ_h19_opp_margin_bh02_telemetry.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "feature_label_boundary": "candidate features are entry-known probability/hour/session only; future bars are label/evaluation only(후보 피처는 진입시점 확률/시간/세션만, 미래 봉은 라벨/평가 전용)",
+  "integrity_judgment": "usable_proxy_with_boundary(경계 포함 프록시 사용 가능)",
+  "leakage_risk": "same-tape threshold choice, therefore review required and no operating claim(동일 테이프 임계값 선택이라 검토 필요 및 운영 주장 없음)",
+  "run_id": "run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1",
+  "sample_scope": "US100 M5 BK runtime probe trades plus flat-no-position telemetry cycles(US100 M5 BK 런타임 탐침 거래와 무포지션 telemetry cycle)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "time_axis": "MT5 entry_time and telemetry written_at are broker-aligned; raw M5 time_open_unix matches entry quote timestamps(MT5 진입시각과 telemetry 작성시각은 브로커 정렬, 원천 M5 time_open_unix는 진입 호가 시각과 정합)"
+}

@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1`
+Current run(현재 실행): `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364AU_package_threshold_edge_floor001_runtime_probe_without_db_v1`
+Latest completed run(최근 완료 실행): `run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1`
 
-Current truth(현재 진실): run364AU(364AU 실행)는 threshold-edge floor001 proxy(임계값 경계 하한 0.001 프록시)를 MT5 runtime probe package(MT5 런타임 탐침 패키지)로 만들었다.
+Current truth(현재 진실): run364BM(364BM 실행)은 `bm04_short_router_ps0440_h17_20_overlay_fixed6` combined proxy subject(합산 프록시 검토 대상)를 만들었지만 synthetic short PF(합성 숏 PF)가 낮아 package candidate(패키지 후보)는 아니다.
 
-Next action(다음 행동): run364AV MT5 runtime probe(MT5 런타임 탐침) 실행과 proxy/MT5 diff(프록시/MT5 차이) 기록.
+Next action(다음 행동): `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`에서 packageability(패키지 가능성)와 MT5 reprobe handoff(MT5 재탐침 인계)를 검토한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 
@@ -216,3 +216,27 @@ Effect(효과): Stage364(364단계)를 유지하고 `run364BI_review_density_res
 Action(행동): BK positive runtime clue(BK 긍정 런타임 단서)를 BM scout(BM 정찰) 입력으로 바꿨다.
 
 Effect(효과): short balance(숏 균형)와 equity DD(평가손익 낙폭)가 닫히기 전까지 운영 주장을 만들지 않는다.
+
+## run364BM H19 Stress Short-Balance Proxy Scout(364BM h19 압박 숏 균형 프록시 정찰)
+
+Action(행동): h17-20 short router(17~20시 숏 라우터)를 fixed6 proxy(고정6봉 프록시)로 정찰했다.
+
+Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN 검토)로 넘어가며, MT5 재탐침 전까지 운영 주장은 닫는다.
+
+## run364BM H19 Stress Short-Balance Proxy Scout(364BM h19 압박 숏 균형 프록시 정찰)
+
+Action(행동): h17-20 short router(17~20시 숏 라우터)를 fixed6 proxy(고정6봉 프록시)로 정찰했다.
+
+Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN 검토)로 넘어가며, MT5 재탐침 전까지 운영 주장은 닫는다.
+
+## run364BM H19 Stress Short-Balance Proxy Scout(364BM h19 압박 숏 균형 프록시 정찰)
+
+Action(행동): h17-20 short router(17~20시 숏 라우터)를 fixed6 proxy(고정6봉 프록시)로 정찰했다.
+
+Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN 검토)로 넘어가며, MT5 재탐침 전까지 운영 주장은 닫는다.
+
+## run364BM H19 Stress Short-Balance Proxy Scout(364BM h19 압박 숏 균형 프록시 정찰)
+
+Action(행동): h17-20 short router(17~20시 숏 라우터)를 fixed6 proxy(고정6봉 프록시)로 정찰했다.
+
+Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN 검토)로 넘어가며, MT5 재탐침 전까지 운영 주장은 닫는다.

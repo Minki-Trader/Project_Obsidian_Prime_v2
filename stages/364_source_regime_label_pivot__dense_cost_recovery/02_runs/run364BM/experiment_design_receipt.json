@@ -1,0 +1,22 @@
+{
+  "changed_variables": [
+    "short probability threshold(숏 확률 임계값)",
+    "h17-20 session overlay(17~20시 세션 오버레이)",
+    "fixed6 synthetic label(고정6봉 합성 라벨)"
+  ],
+  "claim_boundary": "research_development_proxy_scout_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364BK_review_h19_opposite_margin_runtime_probe_without_db_v1",
+  "control_variables": [
+    "US100 M5",
+    "fixed 0.1 lot(고정 0.1랏)",
+    "one-position semantics(단일 포지션 의미)",
+    "no trade splitting(거래 쪼개기 없음)"
+  ],
+  "created_at_utc": "2026-06-04T14:09:24Z",
+  "decision_use": "run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1",
+  "failure_criteria": "PF or density breaks, short source net negative, or MT5 reprobe fails(PF/밀도 붕괴, 숏 원천 순손실, MT5 재탐침 실패)",
+  "hypothesis": "h17-20 short source can restore short balance while preserving net/PF/density(17~20시 숏 원천이 순수익/PF/밀도를 보존하며 숏 균형을 복원할 수 있음)",
+  "run_id": "run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "success_criteria": "PF>=1.35, density>=3/day, short_share>=0.12, closed DD improves(PF 1.35 이상, 밀도 3/day 이상, 숏비중 0.12 이상, 종료거래 낙폭 개선)"
+}

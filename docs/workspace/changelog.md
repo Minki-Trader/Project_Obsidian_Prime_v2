@@ -6413,3 +6413,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): h19 stress short-balance inputs(h19 압박 숏 균형 입력)를 materialize(물질화)했다.
 - effect(효과): `run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1` queue(대기열)를 만들고, 운영 주장 없이 다음 탐색으로 넘겼다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BL_h19_stress_short_balance_materialization.md`
+
+## 2026-06-04 - run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1
+
+- action(행동): h19 stress short-balance proxy scout(h19 압박 숏 균형 프록시 정찰)를 실행했다.
+- effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`를 BN review(BN 검토)로 넘기고, MT5 runtime probe(MT5 런타임 탐침) 전 운영 주장을 차단했다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BM_h19_stress_short_balance_proxy_scout.md`

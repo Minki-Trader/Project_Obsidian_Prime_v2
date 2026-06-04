@@ -660,3 +660,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): materialization_only_no_authority(물질화 전용, 권위 없음).
 - failure memory(실패 기억): long deletion(롱 삭제)만으로 short target(숏 목표)을 맞추려면 `181`건 제거가 필요하지만 density removable budget(삭제 가능 밀도 여유)은 `7`건뿐이다.
 - effect(효과): 같은 blocker(차단 원인)를 반복하지 않고 new short source(새 숏 원천) 탐색 제약으로 바꾼다.
+
+## run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1
+
+- status(상태): proxy_only_review_required(프록시 전용, 검토 필요).
+- failure_memory(실패 기억): synthetic fixed6 label(합성 고정6봉 라벨)과 same-tape threshold(동일 테이프 임계값)는 MT5 runtime evidence(MT5 런타임 근거)를 대체하지 못한다.
+- effect(효과): BN review(BN 검토)에서 packageability(패키지 가능성)와 MT5 reprobe(MT5 재탐침)를 먼저 확인한다.

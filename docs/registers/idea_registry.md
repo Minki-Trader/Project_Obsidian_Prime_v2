@@ -1096,3 +1096,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): h19 guard(h19 가드)의 MT5 net/PF/density(순수익/수익 팩터/밀도) 단서를 short source(숏 원천)와 equity DD stress(평가손익 낙폭 압박)로 분리한다.
 - positive clue(긍정 단서): parent net/PF/density `959.64` / `1.38` / `3.021021021`.
 - failure memory(실패 기억): short share(숏 비중) `0.0984095427`, equity DD(평가손익 낙폭) `18.24%`, density removable budget(삭제 가능 밀도 여유) `7`.
+
+## run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1
+
+- idea(아이디어): h17-20 short router(17~20시 숏 라우터)가 h19 guard(h19 가드)의 short balance(숏 균형)를 회복할 수 있다.
+- positive clue(긍정 단서): selected proxy net/PF/density/short share `967.76` / `1.3650661562` / `3.1471471471` / `0.1440839695`.
+- effect(효과): long delete(롱 삭제) 대신 new short source(새 숏 원천)를 다음 MT5 검토 후보로 만든다.
