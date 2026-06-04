@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "data_hash_or_identity": {
+    "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md": "c9082692c2f01b40d4422274721c22b0074ec1f17a726c0e25387b5c74568fe5",
+    "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5": "43a15043b4bf0ffa95d3a3f016e3947212a1058e7f1be760b62b64f8d4caaa1e",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BX/runtime_ablation_scoreboard.csv": "e5298c3fa06432c11432b792216659d7ec99433310cf1c6f4b73378bcfb8925c",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BX/runtime_policy_config.json": "75cac59eca4ebd92a1bd0013810733041e64cdc5a1a7fc84a95731d86a0b03ca",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/final_decision.json": "6ecc73eb131d996d448fa36316d46265cc61ba493e5a201df027e785c6699414",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/mt5_trade_attribution_by_variant.csv": "e696e17d71987751cff1bb8b1ca8a414e3ea09a37316a3a90e2a8f53c9597a12",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/run364BZ_guard_input_queue.csv": "0478aed157cfb550948200a27b90a5d7394bb54e3bcc16200a9b237fed3b5a9d",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/trade_membership_delta.csv": "7fb13e568cf5eb17921d37c2946f46db3f266541e4c0858fec06a99795f343b4",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/variant_pair_deltas.csv": "4dc84f9a9a3fc58a34fa9ff2316d6415cfa8a29de84ec66a5d42a6a60dd01927",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BY_review_overlay_hour17_native_short_ablation_runtime_probe.md": "6f7ef96f496fa86d8995182353a8c7d8d3e641ce97d84e79bb388563ebaac0e9"
+  },
+  "data_source": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/mt5_trade_attribution_by_variant.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/trade_membership_delta.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BX/runtime_policy_config.json"
+  ],
+  "feature_label_boundary": "no new labels; only entry-known month/hour and closed-bar probabilities(새 라벨 없음; 진입 시점 월/시각과 닫힌 봉 확률만 사용)",
+  "integrity_judgment": "usable_with_boundary(경계부 사용 가능)",
+  "leakage_risk": "post-run threshold scan can overfit; therefore h17 floors are negative-control/deferred(사후 임계값 탐색은 과적합 위험이 있어 17시 하한은 음성 대조/보류)",
+  "missing_or_duplicate_check": "row grain audited by BY; BZ preserves candidate-level and trade-level rows(BY에서 행 단위 감사, BZ는 후보/거래 행 보존)",
+  "run_id": "run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1",
+  "sample_scope": "US100 M5 validation OOS MT5 runtime probe trades(US100 M5 검증 OOS MT5 런타임 탐침 거래)",
+  "split_boundary": "runtime validation OOS only; no forward claim(런타임 검증 OOS 전용, 전진 주장 없음)",
+  "time_axis": "MT5 server timestamp; open_time is execution time and probabilities are closed-bar runtime inputs(MT5 서버 시각; open_time은 실행 시각이고 확률은 닫힌 봉 런타임 입력)"
+}

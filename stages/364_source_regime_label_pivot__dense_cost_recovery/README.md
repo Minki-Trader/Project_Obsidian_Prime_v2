@@ -263,3 +263,8 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 ## run364BY BX runtime ablation review(BX 런타임 제거 비교 검토)
 
 `runtime_ablation_review_positive_clue_bx03_december_late_session_guard_no_authority`. Next(다음): `run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1`.
+
+<!-- run364BZ -->
+## run364BZ bx03 December late-session guard inputs(BX3 12월 후반 세션 가드 입력)
+
+`materialized_december_h22_calendar_semantics_and_h17_overlay_guard_inputs_no_authority`. Next(다음): `run364CA_execute_bx03_guard_stack_runtime_probe_without_db_v1`.

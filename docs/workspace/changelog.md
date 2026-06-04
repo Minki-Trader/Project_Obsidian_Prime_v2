@@ -6476,3 +6476,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364BY -->
 - 2026-06-04T18:23:37Z `run364BY_review_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1` reviewed BX runtime ablation(BX 런타임 제거 비교 검토). Judgment(판정): `runtime_ablation_review_positive_clue_bx03_december_late_session_guard_no_authority`.
+
+<!-- run364BZ -->
+- 2026-06-04T18:41:34Z `run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1` materialized BX3 guard inputs(BX3 가드 입력 구체화). Judgment(판정): `materialized_december_h22_calendar_semantics_and_h17_overlay_guard_inputs_no_authority`.

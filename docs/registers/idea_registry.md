@@ -1147,3 +1147,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BY_bx03_december_late_session_guard -->
 - Idea(아이디어): BX3 개선은 December h22 long guard(12월 22시 롱 가드)와 h17 overlay(17시 오버레이)를 분리해 더 검증한다. Effect(효과): net/PF(순수익/수익 팩터)를 유지하면서 equity DD(평가손익 낙폭)와 월 압박을 줄이는 다음 탐색으로 연결한다.
+
+<!-- run364BZ_bx3_guard_inputs -->
+- Idea(아이디어): BX3 개선을 December h22 calendar block(12월 h22 달력 차단), h17 overlay(17시 오버레이), native short control(기본 숏 대조)로 분리한다. Effect(효과): 다음 MT5 runtime probe(MT5 런타임 탐침)가 어떤 수익 원천을 검증하는지 선명해진다.

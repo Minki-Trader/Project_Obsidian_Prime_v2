@@ -283,3 +283,6 @@
 
 <!-- run364BY -->
 - `run364BY_review_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1`: BX runtime ablation review(BX 런타임 제거 비교 검토) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BY_review_overlay_hour17_native_short_ablation_runtime_probe.md`
+
+<!-- run364BZ -->
+- `run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1`: bx03 December late-session guard input materialization(BX3 12월 후반 세션 가드 입력 구체화) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BZ_bx03_december_late_session_guard_inputs.md`

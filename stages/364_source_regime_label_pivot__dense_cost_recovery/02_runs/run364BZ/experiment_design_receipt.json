@@ -1,0 +1,33 @@
+{
+  "changed_variables": [
+    "calendar block start/end hour",
+    "synthetic overlay enabled",
+    "synthetic p_short/margin floors"
+  ],
+  "claim_boundary": "research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "bx03_hour17_overlay_plus_weak_late_session_firewall",
+  "control_variables": [
+    "US100 M5",
+    "same ONNX",
+    "fixed lot 0.1",
+    "max_hold_bars=6",
+    "no trade splitting"
+  ],
+  "decision_use": "choose CA runtime probe variants(CA 런타임 탐침 변형 선택)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BZ/guard_candidate_matrix.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BZ/run364CA_runtime_attempt_queue.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BZ/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "density collapse or lower net/PF without DD benefit(밀도 붕괴 또는 DD 이득 없는 수익/PF 하락)",
+  "hypothesis": "BX3 gain can be separated into calendar h22 firewall and h17 overlay source(BX3 개선을 달력 h22 방화벽과 17시 오버레이 원천으로 분리할 수 있다)",
+  "invalid_conditions": [
+    "MT5 output missing",
+    "EA params not reflected",
+    "timestamp unsafe filter"
+  ],
+  "run_id": "run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1",
+  "sample_scope": "BX3 MT5 validation OOS trade attribution(BX3 MT5 검증 OOS 거래 귀속)",
+  "stop_conditions": "stop h17 threshold escalation if proxy remains negative(프록시가 계속 부정이면 17시 임계값 상승 중지)",
+  "success_criteria": "CA probe keeps density >=3/day and improves net/PF/recovery or DD(CA 탐침이 밀도 3/day 이상과 수익/PF/회복 또는 DD 개선)"
+}
