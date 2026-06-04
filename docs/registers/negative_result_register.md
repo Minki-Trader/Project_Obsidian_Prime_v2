@@ -708,3 +708,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - failure_memory(실패 기억): h17 floor tightening(17시 하한 강화), overlay-only stress(오버레이 전용 압박), and short-floor variants(숏 하한 변형)는 net/PF or short balance(순수익/PF 또는 숏 균형)를 흔들었다.
 - salvage_value(회수 가치): `cg09_best_open_hour_overlay_focus`는 small lift(작은 우위)와 short floor(숏 하한)를 같이 보존한다.
 - reopen_condition(재개 조건): CH review(CH 검토)가 month/source/cost stress(월/원천/비용 압박)를 통과하고 MT5 reprobe(MT5 재탐침)가 열릴 때.
+
+## run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1
+
+- status(상태): CG h17 focus package rejected(CG 17시 집중 패키지 거절).
+- failure_memory(실패 기억): bad months(나쁜 월) `['2025-08', '2025-12']`, cost stress delta(비용 압박 차이) `-1.13`, MT5 reprobe missing(MT5 재탐침 없음).
+- salvage_value(회수 가치): h17 focus(17시 집중)와 synthetic_short_overlay(합성 숏 오버레이)는 CI repair seed(CI 수리 씨앗)로 남긴다.
+- reopen_condition(재개 조건): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`가 stress_adjusted_net_delta>=0(압박 조정 순수익 차이 0 이상), density>=3(밀도 3 이상), short_count>=100(숏 100개 이상)을 동시에 만든다.

@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
+Current run(현재 실행): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
 
-Current truth(현재 진실): run364CG(364CG 실행)는 `cg09_best_open_hour_overlay_focus`를 no-split proxy review subject(무분할 프록시 검토 대상)로 만들었다. Proxy net/PF/density/trades(프록시 순수익/수익 팩터/밀도/거래수)는 `1001.5` / `1.3999745705` / `3.2070063694` / `1007`이고, 새 MT5 실행 전까지 운영 권위는 없다.
+Current truth(현재 진실): run364CH(364CH 실행)는 `cg09_best_open_hour_overlay_focus`를 package(패키지)에서 거절하고 CI repair seed(CI 수리 씨앗)로 보존했다. 이유는 bad months(나쁜 월) `['2025-08', '2025-12']`, cost stress delta(비용 압박 차이) `-1.13`, new MT5 execution(새 MT5 실행) 없음이다.
 
-Next action(다음 행동): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`에서 source/month/cost stress(원천/월/비용 압박)와 package gate(패키지 게이트)를 검토한다.
+Next action(다음 행동): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`에서 h17 focus(17시 집중), bad month guard(나쁜 월 가드), short floor rescue(숏 하한 복원)를 구체화한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 

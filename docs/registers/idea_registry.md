@@ -1172,3 +1172,10 @@ Register ideas when they become durable work, not for every passing thought.
 - hypothesis(가설): current-session cost-stable h17 source guard(현재 세션 비용 안정 17시 원천 가드)가 no-split scout(무분할 정찰)에서 PF/DD/source quality(PF/DD/원천 품질)를 개선할 수 있다.
 - evidence_boundary(근거 경계): materialization_only(구체화 전용), no runtime authority(런타임 권위 없음).
 - next(다음): `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`.
+
+## run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1
+
+- idea(아이디어): h17 overlay focus(17시 오버레이 집중)는 small net/PF lift(작은 순수익/PF 우위)를 만들지만 month/cost stress(월/비용 압박)를 해결해야 한다.
+- positive clue(긍정 단서): net/PF/density/shorts `1001.5` / `1.3999745705` / `3.2070063694` / `104`.
+- evidence_boundary(근거 경계): review only(검토 전용), no new MT5 execution(새 MT5 실행 없음).
+- next action(다음 행동): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`.

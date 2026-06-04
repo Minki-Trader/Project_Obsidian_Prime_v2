@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364CG_cost_stable_h17_source_guard_proxy_scout_h17_focus_selected_review_required_no_authority`
-- claim_boundary(주장 경계): `research_development_proxy_scout_only_rule_surface_no_new_model_artifact_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364CH_h17_focus_review_package_rejected_open_ci_no_authority`
+- claim_boundary(주장 경계): `research_development_kpi_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -370,3 +370,9 @@ Effect(효과): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db
 Action(행동): CF queue(CF 대기열) 12개를 existing MT5 closed-trade replay(기존 MT5 종료 거래 재생)로 정찰했다.
 
 Effect(효과): `cg09_best_open_hour_overlay_focus`가 no-split(무분할) 기준으로 small lift(작은 우위)를 보여 `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1` review(검토)로 넘기며, runtime authority(런타임 권위)는 주장하지 않는다.
+
+## run364CH Cost-Stable H17 Source Guard Review Closeout(364CH 비용 안정 17시 원천 가드 검토 종료)
+
+Action(행동): CG selected h17 focus(CG 선택 17시 집중)를 package gate(패키지 게이트), month/source/cost attribution(월/원천/비용 귀속), proxy/MT5 diff(프록시/MT5 차이)로 검토했다.
+
+Effect(효과): package(패키지)는 거절하고 `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`에서 같은 Stage364(364단계) 안의 수리 입력으로 이어간다.

@@ -6502,3 +6502,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): cost-stable h17 source guard proxy scout(비용 안정 17시 원천 가드 프록시 정찰)를 실행했다.
 - effect(효과): `cg09_best_open_hour_overlay_focus`를 `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1` 검토 대상으로 넘기고 main sync(메인 동기화) 전까지 운영 주장은 만들지 않는다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CG_cost_stable_h17_source_guard_proxy_scout.md`
+
+## 2026-06-05 - run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1
+
+- action(행동): cost-stable h17 source guard proxy(비용 안정 17시 원천 가드 프록시)를 package gate(패키지 게이트)와 stress attribution(압박 귀속)으로 검토했다.
+- effect(효과): package(패키지)는 거절하고 `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1` CI repair inputs(CI 수리 입력)를 열었다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CH_cost_stable_h17_source_guard_review.md`
