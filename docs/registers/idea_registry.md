@@ -1150,3 +1150,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BZ_bx3_guard_inputs -->
 - Idea(아이디어): BX3 개선을 December h22 calendar block(12월 h22 달력 차단), h17 overlay(17시 오버레이), native short control(기본 숏 대조)로 분리한다. Effect(효과): 다음 MT5 runtime probe(MT5 런타임 탐침)가 어떤 수익 원천을 검증하는지 선명해진다.
+
+<!-- run364CA_bx3_guard_stack_runtime -->
+- Idea(아이디어): December h22-only block(12월 h22 단독 차단), h21-h23 stress(h21-h23 압박), native short same-calendar control(같은 달력 기본 숏 대조)를 MT5 runtime probe(MT5 런타임 탐침)로 분리한다. Effect(효과): BX3 개선이 calendar semantics(달력 의미)인지 synthetic overlay(합성 오버레이)인지 더 선명하게 판별한다.

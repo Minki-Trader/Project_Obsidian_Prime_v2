@@ -286,3 +286,6 @@
 
 <!-- run364BZ -->
 - `run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1`: bx03 December late-session guard input materialization(BX3 12월 후반 세션 가드 입력 구체화) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BZ_bx03_december_late_session_guard_inputs.md`
+
+<!-- run364CA -->
+- `run364CA_execute_bx03_guard_stack_runtime_probe_without_db_v1`: bx03 guard stack MT5 runtime probe(BX3 가드 묶음 MT5 런타임 탐침) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CA_bx03_guard_stack_runtime_probe.md`

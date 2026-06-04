@@ -6479,3 +6479,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364BZ -->
 - 2026-06-04T18:41:34Z `run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1` materialized BX3 guard inputs(BX3 가드 입력 구체화). Judgment(판정): `materialized_december_h22_calendar_semantics_and_h17_overlay_guard_inputs_no_authority`.
+
+<!-- run364CA -->
+- 2026-06-04T18:52:44Z `run364CA_execute_bx03_guard_stack_runtime_probe_without_db_v1` executed BX3 guard stack MT5 runtime probe(BX3 가드 묶음 MT5 런타임 탐침). Judgment(판정): `runtime_probe_completed_best_ca01_bx03_semantics_control_review_required_no_authority`.
