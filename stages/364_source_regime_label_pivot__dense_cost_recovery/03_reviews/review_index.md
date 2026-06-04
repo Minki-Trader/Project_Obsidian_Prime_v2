@@ -250,3 +250,5 @@
 - `run364BJ_implement_h19_opposite_margin_runtime_guard_without_db_v1`: h19 opposite-margin runtime guard(19시 반대마진 런타임 가드) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BJ_h19_opposite_margin_runtime_guard.md`
 
 - `run364BK_review_h19_opposite_margin_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BK_h19_opposite_margin_runtime_probe_review.md` - h19 runtime probe review(19시 런타임 탐침 검토), positive clue(긍정 단서) but no authority(권위 없음).
+
+- `run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BL_h19_stress_short_balance_materialization.md` - h19 stress short-balance materialization(h19 압박 숏 균형 물질화).

@@ -654,3 +654,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- run364BI_density_breaking_repairs -->
 - Negative memory(부정 기억): exact month/hour hard filters(정확 월/시간 강한 필터)는 density(밀도) < 3/day로 이번 경로에서 rejected(거절). Effect(효과): 같은 삭제식 수리를 운영 후보로 끌고 가지 않는다.
+
+## run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1
+
+- status(상태): materialization_only_no_authority(물질화 전용, 권위 없음).
+- failure memory(실패 기억): long deletion(롱 삭제)만으로 short target(숏 목표)을 맞추려면 `181`건 제거가 필요하지만 density removable budget(삭제 가능 밀도 여유)은 `7`건뿐이다.
+- effect(효과): 같은 blocker(차단 원인)를 반복하지 않고 new short source(새 숏 원천) 탐색 제약으로 바꾼다.

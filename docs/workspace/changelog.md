@@ -6407,3 +6407,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): h19 opposite-margin runtime probe(19시 반대마진 런타임 탐침)를 review(검토)했다.
 - effect(효과): MT5 net/PF/density(MT5 순수익/수익 팩터/밀도) 긍정 단서를 보존하고, short balance/equity DD/forward cost stress(숏 균형/평가손익 낙폭/전진 비용 압박)를 `run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1` 입력으로 바꿨다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BK_h19_opposite_margin_runtime_probe_review.md`
+
+## 2026-06-04 - run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1
+
+- action(행동): h19 stress short-balance inputs(h19 압박 숏 균형 입력)를 materialize(물질화)했다.
+- effect(효과): `run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1` queue(대기열)를 만들고, 운영 주장 없이 다음 탐색으로 넘겼다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BL_h19_stress_short_balance_materialization.md`

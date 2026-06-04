@@ -1090,3 +1090,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): h19 opposite-margin guard(19시 반대마진 가드)가 MT5에서 BF 기준선보다 net/PF(순수익/수익 팩터)를 올리는지 검토한다.
 - positive clue(긍정 단서): net `959.64`, PF `1.38`, density `3.021021021`, time-margin guard observed(시간-마진 가드 관측) `54`.
 - failure memory(실패 기억): short share(숏 비중) `0.0984095427`, equity DD(평가손익 낙폭) `18.24%`, forward/cost stress missing(전진/비용 압박 누락).
+
+## run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1
+
+- idea(아이디어): h19 guard(h19 가드)의 MT5 net/PF/density(순수익/수익 팩터/밀도) 단서를 short source(숏 원천)와 equity DD stress(평가손익 낙폭 압박)로 분리한다.
+- positive clue(긍정 단서): parent net/PF/density `959.64` / `1.38` / `3.021021021`.
+- failure memory(실패 기억): short share(숏 비중) `0.0984095427`, equity DD(평가손익 낙폭) `18.24%`, density removable budget(삭제 가능 밀도 여유) `7`.

@@ -210,3 +210,9 @@ Effect(효과): Stage364(364단계)를 유지하고 `run364BI_review_density_res
 ## run364BJ h19 opposite-margin runtime guard(19시 반대마진 런타임 가드)
 
 `mt5_runtime_probe_outputs_available_for_h19_guard_review_required_no_authority`. Next(다음): `run364BK_review_h19_opposite_margin_runtime_probe_without_db_v1`.
+
+## run364BL H19 Stress Short-Balance Materialization(364BL h19 압박 숏 균형 물질화)
+
+Action(행동): BK positive runtime clue(BK 긍정 런타임 단서)를 BM scout(BM 정찰) 입력으로 바꿨다.
+
+Effect(효과): short balance(숏 균형)와 equity DD(평가손익 낙폭)가 닫히기 전까지 운영 주장을 만들지 않는다.
