@@ -684,3 +684,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): BO package rejected(BO 패키지 거절).
 - failure_memory(실패 기억): selected proxy(선택 프록시)는 month_bad_count(월 나쁨 수) `2`이고 MT5 reprobe(MT5 재탐침)가 없다.
 - effect(효과): package(패키지)가 아니라 broad clean short-share lift(넓은 클린 숏 비중 보강) 제약으로 넘긴다.
+
+## run364BQ_train_broad_clean_short_share_lift_scout_without_db_v1
+
+- status(상태): package not opened(패키지 열지 않음).
+- failure_memory(실패 기억): selected proxy(선택 프록시)는 month_bad_count(월 나쁨 수) `1`이고 MT5 reprobe(MT5 재탐침)가 없다.
+- salvage_value(회수 가치): short share(숏 비중) 목표와 PF(수익 팩터) 목표는 동시에 통과했다.
+- reopen_condition(재개 조건): `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`에서 월 압박 원인과 proxy/MT5 diff(프록시/MT5 차이)를 닫는다.
