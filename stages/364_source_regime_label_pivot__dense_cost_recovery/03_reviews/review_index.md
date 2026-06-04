@@ -277,3 +277,6 @@
 
 <!-- run364BW -->
 - [run364BW review(검토)](run364BW_review_synthetic_short_source_runtime_probe.md) - `runtime_probe_review_positive_clue_weak_overlay_increment_native_short_and_hour17_edge_no_authority`.
+
+<!-- run364BX -->
+- `run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1`: overlay hour17/native short ablation runtime probe(17시 오버레이/기본 숏 제거 비교 런타임 탐침) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BX_overlay_hour17_native_short_ablation_runtime_probe.md`

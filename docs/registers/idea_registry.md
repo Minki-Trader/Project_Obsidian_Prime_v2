@@ -1141,3 +1141,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BW -->
 - Idea(아이디어): hour17-only synthetic overlay(17시 한정 합성 덧씌움) + native short control(기본 숏 대조). Evidence(근거): BV overlay hour17 was positive while non-17 overlay dragged net(BV 덧씌움 17시는 양수, 비17시는 순수익 부담).
+
+<!-- run364BX_overlay_hour17_ablation -->
+- Idea(아이디어): hour17 overlay(17시 오버레이)와 native short(기본 숏)을 MT5 ablation(MT5 제거 비교)으로 분리한다. Effect(효과): synthetic short source(합성 숏 원천)가 실제 수익인지 churn(회전)인지 판별한다.

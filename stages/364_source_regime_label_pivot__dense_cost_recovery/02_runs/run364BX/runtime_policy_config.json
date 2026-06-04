@@ -1,0 +1,60 @@
+{
+  "baseline_run_id": "run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1",
+  "bv_reference": {
+    "equity_drawdown_amount": 130.11,
+    "net_profit": 966.32,
+    "profit_factor": 1.38,
+    "recovery_factor": 7.43,
+    "trade_count": 1018
+  },
+  "claim_boundary": "research_development_runtime_ablation_probe_only_no_new_model_training_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "feature_business_days": 314,
+  "model_id": "h12_move5__rf5_l80_n64",
+  "parent_run_id": "run364BW_review_synthetic_short_source_runtime_probe_without_db_v1",
+  "run_id": "run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1",
+  "selected_candidate_id": "bs02_late_year_parent_session_suppress__moy12__h21__side_long",
+  "variants": [
+    {
+      "calendar_block": {
+        "enabled": true,
+        "end_hour": 22,
+        "month": 12,
+        "side": "long",
+        "start_hour": 21
+      },
+      "hypothesis": "hour17 overlay(17시 오버레이)만 남기면 non-17 overlay(17시 외 오버레이) 손실을 줄인다.",
+      "synthetic_enabled": true,
+      "synthetic_hours": "17",
+      "timestamp_safety": "entry-known server hour and closed-bar model probabilities only(진입 시점 서버 시간과 닫힌 봉 모델 확률만 사용)",
+      "variant_id": "bx01_overlay_hour17_only_keep_native_short"
+    },
+    {
+      "calendar_block": {
+        "enabled": true,
+        "end_hour": 22,
+        "month": 12,
+        "side": "long",
+        "start_hour": 21
+      },
+      "hypothesis": "native short(기본 숏)만으로 overlay churn(오버레이 회전)을 제거한다.",
+      "synthetic_enabled": false,
+      "synthetic_hours": "",
+      "timestamp_safety": "entry-known server hour and closed-bar model probabilities only(진입 시점 서버 시간과 닫힌 봉 모델 확률만 사용)",
+      "variant_id": "bx02_native_short_only_overlay_disabled"
+    },
+    {
+      "calendar_block": {
+        "enabled": true,
+        "end_hour": 23,
+        "month": 12,
+        "side": "long",
+        "start_hour": 21
+      },
+      "hypothesis": "hour17 overlay(17시 오버레이)에 weak late-session entry firewall(약한 후반 세션 진입 방화벽)을 붙인다.",
+      "synthetic_enabled": true,
+      "synthetic_hours": "17",
+      "timestamp_safety": "entry-known server hour and closed-bar model probabilities only(진입 시점 서버 시간과 닫힌 봉 모델 확률만 사용)",
+      "variant_id": "bx03_hour17_overlay_plus_weak_late_session_firewall"
+    }
+  ]
+}
