@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1`
+- current_run_id(현재 실행 ID): `run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364BK_review_h19_opposite_margin_runtime_probe_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364BG_density_restore_forward_regime_stress_inputs_materialized_no_authority`
-- claim_boundary(주장 경계): `research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364BK_h19_opposite_margin_runtime_probe_reviewed_positive_net_pf_density_short_balance_equity_dd_stress_required_no_authority`
+- claim_boundary(주장 경계): `research_development_mt5_runtime_probe_review_only_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -304,3 +304,9 @@ Effect(효과): Stage364(364단계)를 분기하지 않고, 운영 주장 없이
 Action(행동): BG queue(BG 대기열)를 closed-trade probability replay(종료 거래 확률 재생)로 평가했다.
 
 Effect(효과): `bh02_long_h19_margin_opp_0020`를 `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1` 검토로 넘기고, hard delete repair(강한 삭제 수리)는 밀도 붕괴로 닫았다.
+
+## run364BK H19 Opposite-Margin Runtime Probe Review Closeout(364BK 19시 반대마진 런타임 탐침 검토 종료)
+
+Action(행동): run364BJ(364BJ 실행)의 MT5 runtime probe(MT5 런타임 탐침)를 KPI/density/session/side/equity(핵심 성과 지표/밀도/세션/방향/평가손익)로 검토했다.
+
+Effect(효과): net/PF/density(순수익/수익 팩터/밀도)는 긍정 단서이고 actual density(실제 밀도) `3.021021021`는 3/day(일 3회)를 통과했다. 다만 short share(숏 비중) `0.0984095427`와 equity DD(평가손익 낙폭) `18.24%` 때문에 운영 주장은 닫지 않고 `run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1` 입력으로 넘긴다.

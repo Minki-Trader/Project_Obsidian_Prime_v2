@@ -1084,3 +1084,9 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BJ_h19_opposite_margin_runtime_guard -->
 - Idea(아이디어): h19 opposite-margin runtime guard(19시 반대마진 런타임 가드). Effect(효과): proxy clue(프록시 단서)를 MT5에서 같은 의미로 시험 가능하게 한다.
+
+## run364BK_review_h19_opposite_margin_runtime_probe_without_db_v1
+
+- idea(아이디어): h19 opposite-margin guard(19시 반대마진 가드)가 MT5에서 BF 기준선보다 net/PF(순수익/수익 팩터)를 올리는지 검토한다.
+- positive clue(긍정 단서): net `959.64`, PF `1.38`, density `3.021021021`, time-margin guard observed(시간-마진 가드 관측) `54`.
+- failure memory(실패 기억): short share(숏 비중) `0.0984095427`, equity DD(평가손익 낙폭) `18.24%`, forward/cost stress missing(전진/비용 압박 누락).
