@@ -1182,3 +1182,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364CJ__run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
 - `run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1`: h17 focus repair scout(17시 집중 수리 정찰). Selected `cj09_cg07_native_short_cost_firewall_short_floor_rescue` as proxy review seed(프록시 검토 씨앗). Effect(효과): CH month/cost/short-floor failure memory(CH 월/비용/숏 하한 실패 기억)를 measurable repair surface(측정 가능한 수리 표면)로 전환.
+
+<!-- run364CK__run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
+- `run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1`: h17 repair review(17시 수리 검토). Positive clue(긍정 단서): net/PF/density/shorts/stress `1034.32` / `1.4184722658` / `3.1942675159` / `100` / `31.69`. Effect(효과): bad-month repair seed(손실 월 수리 씨앗)로 보존.

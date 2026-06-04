@@ -306,3 +306,10 @@ Effect(효과): `cg09_best_open_hour_overlay_focus`를 CH review(CH 검토)로 �
 Action(행동): `16` CJ repair candidates(CJ 수리 후보)를 proxy replay(프록시 재생)했다.
 
 Effect(효과): selected proxy repair(선택 프록시 수리) `cj09_cg07_native_short_cost_firewall_short_floor_rescue`를 `run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1` review(검토)로 넘기고 runtime authority(런타임 권위)는 주장하지 않는다.
+
+<!-- run364CK__run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
+## run364CK h17 focus repair review(17시 집중 수리 검토)
+
+Action(행동): CJ selected repair(CJ 선택 수리)를 package gate(패키지 게이트)와 month/source/cost attribution(월/원천/비용 귀속)으로 검토했다.
+
+Effect(효과): package(패키지)는 거절하고 `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1`로 CL repair input(CL 수리 입력)을 연다.
