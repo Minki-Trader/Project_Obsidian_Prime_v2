@@ -1,0 +1,74 @@
+{
+  "alternative_explanations": [
+    "runtime position lifecycle differs from fixed-hold proxy(런타임 포지션 생명주기가 고정 보유 프록시와 다름)",
+    "real-tick execution and swap affect net(실제 틱 실행과 스왑이 순손익에 영향)",
+    "calendar block and overlay interaction not isolated yet(달력 차단과 덧씌움 상호작용 미분리)"
+  ],
+  "attribution_confidence": "medium_counterfactual_ablation_required",
+  "claim_boundary": "research_development_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "run364BK MT5 reference and run364BS proxy(BK MT5 기준과 BS 프록시)",
+  "likely_drivers": [
+    "long_threshold source remains dominant(롱 임계값 원천이 지배적)",
+    "native_short_threshold outperforms synthetic overlay(기본 숏 임계값이 합성 덧씌움보다 강함)",
+    "synthetic overlay non-17 hours are drag(합성 덧씌움 비17시가 부담)"
+  ],
+  "next_probe": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BW/run364BX_runtime_ablation_queue.csv",
+  "observed_change": "BV MT5 probe net 966.32 vs BK 959.64 and proxy 1063.14(BV MT5 순수익 966.32, BK 959.64, proxy 1063.14 대비)",
+  "run_id": "run364BW_review_synthetic_short_source_runtime_probe_without_db_v1",
+  "segment_checks": {
+    "close_hour": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BW/attribution_by_hour.csv",
+    "direction": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BW/attribution_by_direction.csv",
+    "month": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BW/attribution_by_month.csv",
+    "source_bucket": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BW/attribution_by_source_bucket.csv"
+  },
+  "trade_shape": {
+    "net_profit": 966.32,
+    "profit_factor": 1.38,
+    "recovery_factor": 7.43,
+    "synthetic_overlay": [
+      {
+        "avg_hold_minutes": 111.820336,
+        "direction": "long",
+        "expectancy": 0.905531,
+        "gross_loss": -2194.58,
+        "gross_profit": 3013.18,
+        "loss_count": 419,
+        "net_profit": 818.6,
+        "profit_factor": 1.37301,
+        "source_bucket": "long_threshold",
+        "trade_count": 904,
+        "win_count": 485,
+        "win_rate_percent": 53.650442
+      },
+      {
+        "avg_hold_minutes": 277.806098,
+        "direction": "short",
+        "expectancy": 3.139024,
+        "gross_loss": -119.19,
+        "gross_profit": 247.89,
+        "loss_count": 20,
+        "net_profit": 128.7,
+        "profit_factor": 2.079789,
+        "source_bucket": "native_short_threshold",
+        "trade_count": 41,
+        "win_count": 21,
+        "win_rate_percent": 51.219512
+      },
+      {
+        "avg_hold_minutes": 29.657534,
+        "direction": "short",
+        "expectancy": 0.260548,
+        "gross_loss": -250.73,
+        "gross_profit": 269.75,
+        "loss_count": 40,
+        "net_profit": 19.02,
+        "profit_factor": 1.075858,
+        "source_bucket": "synthetic_short_overlay",
+        "trade_count": 73,
+        "win_count": 33,
+        "win_rate_percent": 45.205479
+      }
+    ],
+    "trade_count": 1018
+  }
+}

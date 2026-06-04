@@ -1138,3 +1138,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BV_synthetic_short_source -->
 - Idea(아이디어): BQ/BS synthetic short source(합성 숏 원천)를 runtime overlay(런타임 덧씌움)로 표현한다. Effect(효과): proxy short share repair(프록시 숏 비중 수리)를 MT5 cost/fill(비용/체결)로 검증한다.
+
+<!-- run364BW -->
+- Idea(아이디어): hour17-only synthetic overlay(17시 한정 합성 덧씌움) + native short control(기본 숏 대조). Evidence(근거): BV overlay hour17 was positive while non-17 overlay dragged net(BV 덧씌움 17시는 양수, 비17시는 순수익 부담).

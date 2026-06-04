@@ -274,3 +274,6 @@
 
 <!-- run364BV -->
 - `run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1`: synthetic short source runtime repair(합성 숏 원천 런타임 수리) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BV_synthetic_short_source_runtime_repair.md`
+
+<!-- run364BW -->
+- [run364BW review(검토)](run364BW_review_synthetic_short_source_runtime_probe.md) - `runtime_probe_review_positive_clue_weak_overlay_increment_native_short_and_hour17_edge_no_authority`.

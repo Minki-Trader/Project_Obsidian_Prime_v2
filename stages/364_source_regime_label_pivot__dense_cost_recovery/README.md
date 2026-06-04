@@ -250,3 +250,6 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 ## run364BV synthetic short source runtime repair(합성 숏 원천 런타임 수리)
 
 `blocked_runtime_probe_attempted_outputs_or_report_missing_no_authority`. Next(다음): `run364BW_review_synthetic_short_source_runtime_probe_without_db_v1`.
+
+<!-- run364BW -->
+- `run364BW_review_synthetic_short_source_runtime_probe_without_db_v1` reviewed BV runtime probe(BV 런타임 탐침 검토): synthetic overlay(합성 덧씌움) weak positive, native short/hour17 clue(기본 숏/17시 단서) opened `run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1`.
