@@ -99,6 +99,25 @@ EA(`Expert Advisor`, 전문가 자문)는 한 파일(all-in-one file, 일체형 
 
 ---
 
+### 4.4 Runtime time-margin guard(런타임 시간-마진 가드)
+
+`ObsidianPrimeV2_RuntimeProbeEA`는 기본값으로 비활성(disabled, 비활성)인 범용 시간-마진 가드(generic time-margin guard, 범용 시간-마진 가드)를 가진다.
+
+관련 입력(input, 입력):
+
+- `InpTimeMarginGuardEnabled`: 가드 사용 여부(enabled flag, 사용 여부)
+- `InpTimeMarginGuardSide`: `long`, `short`, `both`, `signal` 중 하나
+- `InpTimeMarginGuardStartHour`: 시작 서버 시간(server hour, 서버 시간)
+- `InpTimeMarginGuardEndHour`: 종료 서버 시간, half-open range(반개구간)로 해석
+- `InpTimeMarginGuardBasis`: `opposite`, `flat`, `abs_directional`, 기본 fallback(대체) `signal_max_other`
+- `InpTimeMarginGuardMinMargin`: 최소 마진(minimum margin, 최소 마진)
+
+`opposite` basis(기준)는 long(롱)에서 `p_long - p_short`, short(숏)에서 `p_short - p_long`이다. 효과(effect, 효과)는 Python proxy(파이썬 프록시)의 hour/side/opposite-margin rule(시간/방향/반대마진 규칙)을 MT5 런타임에서도 같은 의미로 표현하게 하는 것이다.
+
+이 가드는 closed M5 bar(닫힌 5분봉) 확률 `[p_short, p_flat, p_long]`와 대상 bar time(대상 봉 시간)만 사용해야 한다. 효과(effect, 효과)는 current-bar contamination(현재봉 오염)과 look-ahead bias(미래참조 편향)를 막는 것이다.
+
+---
+
 ## 5. 데이터 획득 원칙
 
 ### 5.1 OHLC source

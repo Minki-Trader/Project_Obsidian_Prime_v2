@@ -77,6 +77,12 @@ input int             InpMarchFilterMonth = 3;
 input int             InpMarchFilterBlockedHour = 16;
 input double          InpMarchFilterAbsMarginMin = 0.10;
 input double          InpEntryMarginFloor = 0.0;
+input bool            InpTimeMarginGuardEnabled = false;
+input string          InpTimeMarginGuardSide = "long";
+input int             InpTimeMarginGuardStartHour = 0;
+input int             InpTimeMarginGuardEndHour = 24;
+input string          InpTimeMarginGuardBasis = "opposite";
+input double          InpTimeMarginGuardMinMargin = 0.0;
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -244,6 +250,67 @@ double DirectionalAbsMargin(const double p_short,
    return MathMax(MathAbs(short_margin), MathAbs(long_margin));
   }
 
+bool HourInRange(const int hour, const int start_hour, const int end_hour)
+  {
+   const int normalized_hour = (hour % 24 + 24) % 24;
+   const int normalized_start = (start_hour % 24 + 24) % 24;
+   int normalized_end = end_hour;
+   if(normalized_end == 24)
+      normalized_end = 24;
+   else
+      normalized_end = (normalized_end % 24 + 24) % 24;
+
+   if(normalized_end == 24)
+      return normalized_hour >= normalized_start && normalized_hour < 24;
+   if(normalized_start == normalized_end)
+      return true;
+   if(normalized_start < normalized_end)
+      return normalized_hour >= normalized_start && normalized_hour < normalized_end;
+   return normalized_hour >= normalized_start || normalized_hour < normalized_end;
+  }
+
+bool TimeMarginGuardSideMatches(const int signal)
+  {
+   string side = InpTimeMarginGuardSide;
+   StringToLower(side);
+   if(side == "long")
+      return signal == OP_DECISION_LONG;
+   if(side == "short")
+      return signal == OP_DECISION_SHORT;
+   if(side == "both" || side == "signal")
+      return signal == OP_DECISION_LONG || signal == OP_DECISION_SHORT;
+   return false;
+  }
+
+double TimeMarginGuardValue(const int signal,
+                            const double p_short,
+                            const double p_flat,
+                            const double p_long)
+  {
+   string basis = InpTimeMarginGuardBasis;
+   StringToLower(basis);
+
+   if(basis == "opposite")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_long;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_short;
+      return 0.0;
+     }
+   if(basis == "flat")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_flat;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_flat;
+      return 0.0;
+     }
+   if(basis == "abs_directional")
+      return DirectionalAbsMargin(p_short, p_flat, p_long);
+   return SignalSideMargin(signal, p_short, p_flat, p_long);
+  }
+
 void ApplyRuntimeTimeFilters(const datetime target_time,
                              const double p_short,
                              const double p_flat,
@@ -272,6 +339,36 @@ void ApplyRuntimeTimeFilters(const datetime target_time,
                            + "|"
                            + decision.reason;
          return;
+        }
+     }
+
+   if(InpTimeMarginGuardEnabled && TimeMarginGuardSideMatches(decision.signal))
+     {
+      if(HourInRange(parts.hour, InpTimeMarginGuardStartHour, InpTimeMarginGuardEndHour))
+        {
+         const double guard_margin = TimeMarginGuardValue(decision.signal, p_short, p_flat, p_long);
+         if(guard_margin < InpTimeMarginGuardMinMargin)
+           {
+            string guard_basis = InpTimeMarginGuardBasis;
+            StringToLower(guard_basis);
+            decision.signal = OP_DECISION_FLAT;
+            decision.label = "flat";
+            decision.confidence = 0.0;
+            decision.margin = 0.0;
+            decision.reason = "time_margin_guard:hour="
+                              + (string)parts.hour
+                              + ",side="
+                              + InpTimeMarginGuardSide
+                              + ",basis="
+                              + guard_basis
+                              + ",margin="
+                              + DoubleToString(guard_margin, 6)
+                              + "<"
+                              + DoubleToString(InpTimeMarginGuardMinMargin, 6)
+                              + "|"
+                              + decision.reason;
+            return;
+           }
         }
      }
 

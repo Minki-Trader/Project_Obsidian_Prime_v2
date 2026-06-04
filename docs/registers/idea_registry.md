@@ -1081,3 +1081,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BI_h19_runtime_guard -->
 - Idea(아이디어): generic hour/side/opposite-margin guard(범용 시간/방향/반대마진 가드). Seed(씨앗): `bh02_long_h19_margin_opp_0020`. Effect(효과): proxy clue(프록시 단서)를 MT5에서 같은 의미로 시험할 수 있게 한다.
+
+<!-- run364BJ_h19_opposite_margin_runtime_guard -->
+- Idea(아이디어): h19 opposite-margin runtime guard(19시 반대마진 런타임 가드). Effect(효과): proxy clue(프록시 단서)를 MT5에서 같은 의미로 시험 가능하게 한다.

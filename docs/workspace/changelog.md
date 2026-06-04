@@ -6398,3 +6398,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364BI -->
 - 2026-06-04T12:29:04Z `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1` reviewed BH h19 margin candidate(BH 19시 마진 후보 검토). Effect(효과): parameter-only package(파라미터만 패키지) 금지와 BJ runtime guard support(BJ 런타임 가드 지원) 대기열 생성.
+
+<!-- run364BJ -->
+- 2026-06-04T12:48:11Z `run364BJ_implement_h19_opposite_margin_runtime_guard_without_db_v1` added EA time-margin guard(EA 시간-마진 가드 추가), packaged exact h19 opposite-margin candidate(정확 19시 반대마진 후보 패키지), and attempted MT5 runtime probe(MT5 런타임 탐침 시도).

@@ -245,3 +245,6 @@
 
 <!-- run364BI -->
 - `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1`: forward/regime scout review(전진/국면 탐색 검토) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BI_forward_regime_stress_scout_review.md`
+
+<!-- run364BJ -->
+- `run364BJ_implement_h19_opposite_margin_runtime_guard_without_db_v1`: h19 opposite-margin runtime guard(19시 반대마진 런타임 가드) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BJ_h19_opposite_margin_runtime_guard.md`

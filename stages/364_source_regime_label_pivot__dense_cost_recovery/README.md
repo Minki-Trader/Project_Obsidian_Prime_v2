@@ -205,3 +205,8 @@ Effect(효과): Stage364(364단계)를 유지하고 `run364BI_review_density_res
 ## run364BI forward/regime scout review(전진/국면 탐색 검토)
 
 `proxy_candidate_positive_but_parameter_only_package_ineligible_runtime_guard_support_required_no_authority`. Next(다음): `run364BJ_implement_h19_opposite_margin_runtime_guard_without_db_v1`.
+
+<!-- run364BJ -->
+## run364BJ h19 opposite-margin runtime guard(19시 반대마진 런타임 가드)
+
+`mt5_runtime_probe_outputs_available_for_h19_guard_review_required_no_authority`. Next(다음): `run364BK_review_h19_opposite_margin_runtime_probe_without_db_v1`.
