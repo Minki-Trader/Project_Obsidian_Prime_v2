@@ -298,3 +298,9 @@ Effect(효과): net/PF/density(순수익/수익 팩터/밀도)는 긍정 단서�
 Action(행동): run364BF(364BF 실행)의 MT5 positive clue(MT5 긍정 단서)를 forward/regime stress inputs(전진/국면 압박 입력)와 BH scout queue(BH 스카우트 대기열)로 materialize(물질화)했다.
 
 Effect(효과): Stage364(364단계)를 분기하지 않고, 운영 주장 없이 `run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1`에서 forward-like replay(전진 유사 재생)와 soft firewall(소프트 방화벽)을 시험할 수 있게 했다.
+
+## run364BH Forward Regime Stress Proxy Scout Closeout(364BH 전진 국면 압박 프록시 탐색 종료)
+
+Action(행동): BG queue(BG 대기열)를 closed-trade probability replay(종료 거래 확률 재생)로 평가했다.
+
+Effect(효과): `bh02_long_h19_margin_opp_0020`를 `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1` 검토로 넘기고, hard delete repair(강한 삭제 수리)는 밀도 붕괴로 닫았다.

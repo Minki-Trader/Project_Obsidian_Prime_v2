@@ -1,0 +1,20 @@
+{
+  "alternative_explanations": "same-tape overfit and closed-trade DD underestimates tester equity DD(동일 테이프 과적합 및 종료 거래 DD가 테스터 equity DD를 과소평가)",
+  "attribution_confidence": "medium_proxy_only(프록시 전용 중간)",
+  "comparison_baseline": "run364BE/BF current MT5 policy(현재 MT5 정책)",
+  "likely_drivers": "removes a small set of weak hour19 long entries with low selected-vs-opposite margin(선택-반대 margin 낮은 약한 19시 롱 소수 제거)",
+  "next_probe": "run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1",
+  "observed_change": "selected=bh02_long_h19_margin_opp_0020; net=938.59; pf=1.3732279833; density=3.012012012",
+  "run_id": "run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1",
+  "segment_checks": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BH/selected_forward_block_replay.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BH/selected_month_regime_replay.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BH/selected_segment_attribution.csv"
+  ],
+  "trade_shape": {
+    "long_count": 904,
+    "long_share": 0.9012961117,
+    "short_count": 99,
+    "trade_count": 1003
+  }
+}

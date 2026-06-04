@@ -1,0 +1,18 @@
+{
+  "calibration_risk": "probabilities are runtime ONNX scores, treated as ranking/margin not calibrated truth(확률은 런타임 ONNX 점수, 보정된 진실이 아니라 순위/margin으로 취급)",
+  "comparison_baseline": "current BF MT5 closed trades(현재 BF MT5 종료 거래)",
+  "model_family": "no new model trained; policy replay over existing ONNX runtime tape(새 모델 학습 없음, 기존 ONNX 런타임 테이프 정책 재생)",
+  "overfit_risk": "medium-high because threshold discovered on same runtime tape(같은 런타임 테이프에서 임계값 발견, 중상 위험)",
+  "run_id": "run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1",
+  "secondary_metrics": [
+    "short_share",
+    "forward_fail_count",
+    "weak_month_fail_count",
+    "removed_trade_count"
+  ],
+  "selection_metric": "multi-KPI score net/PF/density/DD/forward blocks/long-share(순수익/PF/밀도/DD/전진 블록/롱 비중 다중 KPI)",
+  "split_method": "historical runtime tape replay(과거 런타임 테이프 재생)",
+  "target_and_label": "closed-trade PnL label for proxy evaluation only(종료 거래 손익 라벨은 프록시 평가 전용)",
+  "threshold_policy": "fixed scout thresholds after BG queue, review required(BG 대기열 뒤 고정 탐색 임계값, 검토 필요)",
+  "validation_judgment": "exploratory_proxy_review_required(탐색 프록시, 검토 필요)"
+}

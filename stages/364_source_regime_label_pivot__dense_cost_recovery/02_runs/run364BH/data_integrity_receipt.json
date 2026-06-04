@@ -1,0 +1,19 @@
+{
+  "data_hash_or_identity": {
+    "closed_trade_sha256": "6b4e278c2829c8381ee13db2492a8c0a602b331752d60a4e1de5b49bf07cd24b",
+    "selected_rows": 1003
+  },
+  "data_source": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BF/closed_trade_attribution.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/density_restore_stress_candidate_mt5_probe_summary.csv",
+    "BE telemetry path from summary(BE 요약의 telemetry 경로)"
+  ],
+  "feature_label_boundary": "policy guard uses entry hour and closed-bar probabilities known at decision time; PnL labels are used only for proxy evaluation(정책 가드는 결정 시점에 아는 진입 시간/닫힌 봉 확률만 사용, 손익 라벨은 프록시 평가 전용)",
+  "integrity_judgment": "usable_with_boundary(경계 포함 사용 가능)",
+  "leakage_risk": "threshold and exact-slice variants are selected after outcome review, so no operating claim(임계값/정확 조각 후보는 결과 검토 뒤 선택됐으므로 운영 주장 없음)",
+  "missing_or_duplicate_check": "entry probability join missing rows=0 and duplicate entry_time=0(진입 확률 결합 누락 0, 중복 진입시각 0)",
+  "run_id": "run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1",
+  "sample_scope": "FPMarkets US100 M5 MT5 closed trades 2025-01-02..2026-04-13, Tier A only(FPMarkets US100 5분봉 MT5 종료 거래, Tier A만)",
+  "split_boundary": "historical runtime-probe tape replay, not new forward split(과거 런타임 탐침 테이프 재생, 새 전진 분할 아님)",
+  "time_axis": "entry_time from MT5 closed trades joined to telemetry written_at; telemetry bar_time is prior closed M5 bar(MT5 종료 거래 진입시각을 telemetry 작성시각과 결합, telemetry bar_time은 직전 닫힌 5분봉)"
+}

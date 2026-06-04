@@ -1,15 +1,9 @@
-﻿# Current Working State(현재 작업 상태)
+﻿# Current working state(현재 작업 상태)
 
-date(날짜): 2026-06-04
+updated_at_utc(UTC 수정시각): `2026-06-04T12:11:09Z`
 
-stage(단계): `364_source_regime_label_pivot__dense_cost_recovery`
+current_truth(현재 진실): `run364BH`는 BG forward/regime stress queue(전진/국면 압박 대기열)를 proxy replay(프록시 재생)로 평가했다. selected(선택)는 `bh02_long_h19_margin_opp_0020`이고 net/PF/trades/density(순수익/수익 팩터/거래수/밀도)는 `938.59` / `1.3732279833` / `1003` / `3.012012012`다.
 
-current_run_id(현재 실행 ID): `run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1`
+operating_truth_boundary(운영 진실 경계): 새 MT5 execution(새 MT5 실행), forward pass(전진 통과), runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), Goal Achieve(목표 달성)는 모두 not_claimed(미주장)이다.
 
-latest_completed_run_id(최근 완료 실행 ID): `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1`
-
-current_truth(현재 진실): `run364BG` materialized(물질화 완료) BF MT5 runtime probe review(BF MT5 런타임 탐침 검토)를 forward/regime stress inputs(전진/국면 압박 입력)로 바꿨다. Parent MT5 net/PF/trades/density(부모 MT5 순수익/수익 팩터/거래수/밀도)는 `900.36` / `1.35` / `1016` / `3.0510510511`다.
-
-next_action(다음 행동): `run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1`에서 forward-like block replay(전진 유사 블록 재생), month/hour/side soft firewall(月/시간/방향 소프트 방화벽), short restore(숏 복원), drawdown tail stress(낙폭 꼬리 압박)를 proxy scout(프록시 스카우트)로 실행한다.
-
-claim_boundary(주장 경계): `research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+next_action(다음 행동): `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1`에서 selected proxy candidate(선택 프록시 후보)를 review(검토)하고, package(패키지) 가능성과 short source(숏 원천) 분리를 판단한다.

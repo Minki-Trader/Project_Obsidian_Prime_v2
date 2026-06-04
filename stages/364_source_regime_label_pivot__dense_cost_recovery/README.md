@@ -188,3 +188,15 @@ Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이
 Action(행동): BE runtime probe(런타임 탐침)를 performance attribution(성과 귀속)으로 검토했다.
 
 Effect(효과): Stage364(364단계) 안에서 stage branch(단계 분기) 없이 `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1` forward/regime stress(전진/국면 압박)로 이어간다.
+
+## run364BH Forward Regime Stress Proxy Scout(364BH 전진 국면 압박 프록시 탐색)
+
+Action(행동): 기존 MT5 runtime evidence(런타임 근거)에 미세 margin guard(마진 가드)를 시산했다.
+
+Effect(효과): Stage364(364단계)를 유지하고 `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1` review(검토)로 이어간다.
+
+## run364BH Forward Regime Stress Proxy Scout(364BH 전진 국면 압박 프록시 탐색)
+
+Action(행동): 기존 MT5 runtime evidence(런타임 근거)에 미세 margin guard(마진 가드)를 시산했다.
+
+Effect(효과): Stage364(364단계)를 유지하고 `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1` review(검토)로 이어간다.

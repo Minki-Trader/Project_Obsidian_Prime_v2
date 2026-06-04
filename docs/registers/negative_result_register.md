@@ -645,3 +645,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): materialized_forward_regime_stress_inputs_no_authority(전진/국면 압박 입력 물질화, 권위 없음).
 - failure_memory(실패 기억): forward pass(전진 통과) 없음, long share(롱 비중) `0.9025590551`, drawdown(낙폭) `18.3`%.
 - effect(효과): 같은 차단 원인을 반복 보고하지 않고 BH scout(BH 스카우트)의 비교축으로 바꾼다.
+
+## run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1
+
+- status(상태): density-breaking repairs rejected(밀도 붕괴 수리 거절).
+- failure_memory(실패 기억): month/hour hard delete(월/시간 강한 삭제)는 PF를 올려도 trade density(거래 밀도)를 3/day 아래로 깎는다.
+- effect(효과): 다음 작업은 hard delete(강한 삭제)보다 micro margin guard(미세 margin 가드)나 new short source(새 숏 원천)에 집중한다.

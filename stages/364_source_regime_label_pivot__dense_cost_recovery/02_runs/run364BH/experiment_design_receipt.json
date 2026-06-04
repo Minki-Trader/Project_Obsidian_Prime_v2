@@ -1,0 +1,18 @@
+{
+  "changed_variables": "entry guard on hour/probability margin only for scout(탐색에서만 시간/확률 margin 진입 가드 변경)",
+  "comparison_baseline": "run364BE/BF current MT5 runtime policy(현재 MT5 런타임 정책)",
+  "control_variables": "US100 M5, fixed 0.1 lot, one position, no trade splitting, no new MT5 execution(US100 5분봉, 0.1 lot, 단일 포지션, 거래 쪼개기 없음, 새 MT5 실행 없음)",
+  "decision_use": "BI review and possible runtime-probe package prep(BI 검토 및 가능한 런타임 탐침 패키지 준비)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BH/forward_regime_stress_proxy_scout_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BH/required_gate_coverage_audit.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BH_forward_regime_stress_proxy_scout.md"
+  ],
+  "failure_criteria": "density <3/day, long skew worsens, or exact-slice curve fit dominates(밀도 3/day 미만, 롱 편향 악화, 정확 조각 과적합 우세)",
+  "hypothesis": "a tiny closed-bar hour19 margin guard can improve PF/DD while preserving 3/day density(작은 19시 닫힌 봉 margin 가드가 3/day 밀도를 보존하며 PF/DD를 개선할 수 있음)",
+  "invalid_conditions": "telemetry join mismatch or operating claim without MT5 rerun(telemetry 결합 불일치 또는 MT5 재실행 없는 운영 주장)",
+  "run_id": "run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1",
+  "sample_scope": "MT5 closed trade tape plus telemetry probabilities(MT5 종료 거래 테이프와 원격측정 확률)",
+  "stop_conditions": "send only selected micro candidate to review; reject density-breaking repairs(선택된 미세 후보만 검토로 보내고 밀도 붕괴 수리는 거절)",
+  "success_criteria": "net/PF improve, density >=3/day, no forward-like block net<=0, long share not worse than parent(순수익/PF 개선, 밀도 3/day 이상, 전진 유사 블록 음수 없음, 롱 비중 부모보다 악화 없음)"
+}

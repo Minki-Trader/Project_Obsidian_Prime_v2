@@ -1,0 +1,16 @@
+{
+  "known_differences": "BH does not rerun EA, does not replay full tick sequence after changed guard(BH는 EA 재실행이나 변경 가드 후 전체 틱 재생을 하지 않음)",
+  "parity_check": "consumes BE clean probability/runtime parity, adds only proxy closed-trade filter(BE의 깨끗한 확률/런타임 동등성을 소비하고 종료 거래 필터만 추가)",
+  "parity_identity": {
+    "selected_variant_id": "bh02_long_h19_margin_opp_0020",
+    "source_probability_diff": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/probability_runtime_difference.csv"
+  },
+  "research_path": "stage_pipelines/stage364/train_density_restore_forward_regime_stress_scout_without_db.py",
+  "run_id": "run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1",
+  "runtime_claim_boundary": "research_only_proxy_scout(연구 전용 프록시 탐색)",
+  "runtime_path": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BF/runtime_parity_receipt.json",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BE/density_restore_stress_candidate_mt5_probe_summary.csv"
+  ],
+  "shared_contract": "closed M5 bar probabilities, entry hour, one-position MT5 semantics(닫힌 5분봉 확률, 진입 시간, 단일 포지션 MT5 의미)"
+}
