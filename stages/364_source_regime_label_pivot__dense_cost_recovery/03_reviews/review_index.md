@@ -303,3 +303,5 @@
 - `run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1`: review CD swap-stable source guard MT5 runtime probe(CD 스왑 안정 원천 가드 MT5 런타임 탐침 리뷰) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe.md`
 
 - `run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1` -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CF_cost_stable_h17_source_guard_offensive_inputs.md`: CF cost-stable h17 source guard offensive inputs(CF 비용 안정 17시 원천 가드 공격 입력).
+
+- `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CG_cost_stable_h17_source_guard_proxy_scout.md` - cost-stable h17 source guard proxy scout(비용 안정 17시 원천 가드 프록시 정찰).

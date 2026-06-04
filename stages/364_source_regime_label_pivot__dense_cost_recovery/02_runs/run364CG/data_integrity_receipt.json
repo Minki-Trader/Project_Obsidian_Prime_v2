@@ -1,0 +1,69 @@
+{
+  "data_hash_or_identity": [
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/final_decision.json",
+      "sha256": "77bf01d590f8ae3dea8cb832a0cc4d9c3cf5d957864395d86067ab9ae6406ea4"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/required_gate_coverage_audit.csv",
+      "sha256": "01155460f117a11b9d0d57ce018401fcc1e6788308c6d0cbe394622869cd67d2"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/run364CG_cost_stable_h17_source_guard_scout_queue.csv",
+      "sha256": "a2eb120701a2dcf772b571b06bbdfc2cc876ccd034655fb59580b41107c761f0"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/cost_layered_scorecard.csv",
+      "sha256": "6f0054bc7ec87371caf5fd2a4591102d030c1dc958cbd639708c655f8ac8438f"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/h17_overlay_quality_by_month.csv",
+      "sha256": "ce88ba39f2e2dbfa5929a425af482b8dff2c4e9d05e611193bef8c9617ae5438"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/h17_overlay_quality_by_open_hour.csv",
+      "sha256": "a947f14fce42ba3f56ba499e8c740f41df6095e1264845943ffc7580c944d223"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/data_integrity_audit.csv",
+      "sha256": "77a9542a16cb18ab662a88db52a4daa573fa58212d5294ba6c5ca6fa2f3448c0"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CF/run_manifest.json",
+      "sha256": "e618bcb42fa0c8efafa2d36ec43de1c0c2009c973940b0e0609dec331f3786ed"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CE/final_decision.json",
+      "sha256": "7ae207fbe354e1f9033551842efeb17ee77ab3cb33134cc68de30e71b2e91878"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CE/cd_trade_attribution_by_variant.csv",
+      "sha256": "2828524f5a7710af2135a803ed89b6974ae528acf4fb46d4991fd1723e05c80c"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CE/attribution_by_variant_source_bucket.csv",
+      "sha256": "034f8b43b2df3751597cc931726b9f220a90b757ad5aa90185a6ddbbadf1aab3"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CE/cd02_vs_cd03_source_overlay_value_decomposition.csv",
+      "sha256": "6215e0e07b48bce2f1a2f98d7674fb4808ed27bed00893c158cfa6cf5c7a29cf"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CE/cd_pair_deltas.csv",
+      "sha256": "4dd2b7aa0652e0e38b1600ef3bf7df5d38fcad5c82cc53cad2e582ce79159c15"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CE/run_manifest.json",
+      "sha256": "8ffc654e07d87fdc9d07753257af4eaf840eb6ed963cdb06c738119dff4ae2e0"
+    }
+  ],
+  "data_source": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CE/cd_trade_attribution_by_variant.csv",
+  "feature_label_boundary": "live-like rule fields are entry-known; realized PnL only offline scoring(실거래 유사 규칙 필드는 진입기지, 실현 손익은 오프라인 점수만)",
+  "integrity_judgment": "usable_with_boundary(경계부 사용 가능)",
+  "leakage_risk": "month/source rules were inspired by parent evidence and need CH review(월/원천 규칙은 상위 근거에서 착안했으므로 CH 검토 필요)",
+  "missing_or_duplicate_check": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CG/data_integrity_audit.csv",
+  "run_id": "run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1",
+  "sample_scope": "US100 M5 Tier A used, CD02 1008 trades and CD03 1002 trades(US100 M5 Tier A 사용, CD02 1008거래 및 CD03 1002거래)",
+  "split_boundary": "single runtime replay scout, no WFO claim(단일 런타임 재생 정찰, WFO 주장 없음)",
+  "time_axis": "MT5 report open_time/close_time, sorted by open_time(MT5 보고서 진입/청산 시각, 진입 시각 정렬)"
+}

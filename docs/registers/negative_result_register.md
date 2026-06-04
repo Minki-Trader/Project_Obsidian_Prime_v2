@@ -701,3 +701,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- run364BU_synthetic_short_source_blocker -->
 - Blocker memory(차단 기억): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1` could not run exact MT5 precheck(정확 MT5 사전점검) because synthetic short source runtime support(합성 숏 원천 런타임 지원)가 missing(누락)이다. Effect(효과): 다음 작업은 같은 외부 검증 누락을 말로만 반복하지 않고 source materialization(원천 물질화) 또는 rejection(거절)을 해야 한다.
+
+## run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1
+
+- status(상태): no operating package yet(아직 운영 패키지 없음).
+- failure_memory(실패 기억): h17 floor tightening(17시 하한 강화), overlay-only stress(오버레이 전용 압박), and short-floor variants(숏 하한 변형)는 net/PF or short balance(순수익/PF 또는 숏 균형)를 흔들었다.
+- salvage_value(회수 가치): `cg09_best_open_hour_overlay_focus`는 small lift(작은 우위)와 short floor(숏 하한)를 같이 보존한다.
+- reopen_condition(재개 조건): CH review(CH 검토)가 month/source/cost stress(월/원천/비용 압박)를 통과하고 MT5 reprobe(MT5 재탐침)가 열릴 때.

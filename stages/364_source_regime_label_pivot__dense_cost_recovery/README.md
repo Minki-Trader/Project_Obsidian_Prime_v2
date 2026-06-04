@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`
+Current run(현재 실행): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
 
-Current truth(현재 진실): run364BT(364BT 실행)는 `bs02_late_year_parent_session_suppress__moy12__h21__side_long`를 BU MT5 precheck(BU MT5 사전검사)로 넘겼지만 low-sample watch(소표본 관찰)와 no-authority(무권위) 경계를 유지한다.
+Current truth(현재 진실): run364CG(364CG 실행)는 `cg09_best_open_hour_overlay_focus`를 no-split proxy review subject(무분할 프록시 검토 대상)로 만들었다. Proxy net/PF/density/trades(프록시 순수익/수익 팩터/밀도/거래수)는 `1001.5` / `1.3999745705` / `3.2070063694` / `1007`이고, 새 MT5 실행 전까지 운영 권위는 없다.
 
-Next action(다음 행동): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`에서 MT5 precheck request(사전검사 요청)를 물질화하고 좁은 Strategy Tester probe(전략 테스터 탐침)를 시도한다.
+Next action(다음 행동): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`에서 source/month/cost stress(원천/월/비용 압박)와 package gate(패키지 게이트)를 검토한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 
@@ -293,3 +293,9 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 ## run364CE review swap-stable source guard runtime probe(스왑 안정 원천 가드 런타임 탐침 리뷰)
 
 `runtime_probe_review_usable_with_boundary_same_session_swap_stability_passed_h17_overlay_value_confirmed_no_authority`. Next(다음): `run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1`.
+
+## run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1
+
+Action(행동): cost-stable h17 source guard queue(비용 안정 17시 원천 가드 대기열)를 proxy scout(프록시 정찰)로 실행했다.
+
+Effect(효과): `cg09_best_open_hour_overlay_focus`를 CH review(CH 검토)로 넘기고 stage branch(단계 분기)는 만들지 않는다.

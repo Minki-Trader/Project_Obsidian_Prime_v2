@@ -1,0 +1,25 @@
+{
+  "changed_variables": [
+    "source/hour/month/probability rule filters(원천/시간/월/확률 규칙 필터)"
+  ],
+  "comparison_baseline": "cd02_ca01_clone_current_session",
+  "control_variables": [
+    "same CE parsed MT5 trades(동일 CE 파싱 MT5 거래)",
+    "fixed 0.1 lot inherited(고정 0.1랏 상속)",
+    "no added entries(추가 진입 없음)"
+  ],
+  "decision_use": "open CH review, not package or authority(CH 검토 개방, 패키지나 권위 아님)",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CG/cg_proxy_scout_surface.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CG/candidate_source_attribution.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CG/candidate_month_stability.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CG/proxy_mt5_diff_plan.csv"
+  ],
+  "failure_criteria": "density collapse, short floor failure, or source/month stress artifact(밀도 붕괴, 숏 하한 실패, 원천/월 압박 착시)",
+  "hypothesis": "h17 overlay focus can preserve density and slightly lift net/PF without trade splitting(17시 오버레이 집중이 거래 쪼개기 없이 밀도와 순수익/PF를 보존 또는 소폭 개선한다)",
+  "invalid_conditions": "future PnL used as live feature or added trade slices(미래 손익을 실거래 피처로 쓰거나 거래 조각 추가)",
+  "run_id": "run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1",
+  "sample_scope": "FPMarkets US100 M5 Stage364 CE CD02/CD03 closed trades(FPMarkets US100 M5 364단계 CE CD02/CD03 종료 거래)",
+  "stop_conditions": "CH review decides package gate, failure memory, or next offensive seed(CH 검토가 패키지 게이트/실패 기억/다음 공격 씨앗 결정)",
+  "success_criteria": "density >=3, net/PF not worse, short_count >=100, no splitting(밀도 3 이상, 순수익/PF 비악화, 숏 100개 이상, 무분할)"
+}

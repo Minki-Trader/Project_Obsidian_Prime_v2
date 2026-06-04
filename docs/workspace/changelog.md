@@ -6496,3 +6496,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-04T20:15:14Z `run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1` reviewed CD same-session swap/source guard runtime output(CD 동일 세션 스왑/원천 가드 런타임 출력 리뷰). Judgment(판정): `runtime_probe_review_usable_with_boundary_same_session_swap_stability_passed_h17_overlay_value_confirmed_no_authority`.
 
 - 2026-06-04T20:32:54Z `run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1` completed(완료): materialized(구체화) `12` CG scout rows(CG 정찰 행); next `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`.
+
+## 2026-06-05 - run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1
+
+- action(행동): cost-stable h17 source guard proxy scout(비용 안정 17시 원천 가드 프록시 정찰)를 실행했다.
+- effect(효과): `cg09_best_open_hour_overlay_focus`를 `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1` 검토 대상으로 넘기고 main sync(메인 동기화) 전까지 운영 주장은 만들지 않는다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CG_cost_stable_h17_source_guard_proxy_scout.md`
