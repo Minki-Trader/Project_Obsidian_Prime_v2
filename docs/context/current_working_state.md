@@ -1,9 +1,19 @@
-﻿# Current working state(현재 작업 상태)
+﻿# Current Working State(현재 작업 상태)
 
-updated_at_utc(UTC 수정시각): `2026-06-04T12:11:09Z`
+Updated(갱신): 2026-06-04T12:33:16Z
 
-current_truth(현재 진실): `run364BH`는 BG forward/regime stress queue(전진/국면 압박 대기열)를 proxy replay(프록시 재생)로 평가했다. selected(선택)는 `bh02_long_h19_margin_opp_0020`이고 net/PF/trades/density(순수익/수익 팩터/거래수/밀도)는 `938.59` / `1.3732279833` / `1003` / `3.012012012`다.
+Active stage(활성 단계): `364_source_regime_label_pivot__dense_cost_recovery`
 
-operating_truth_boundary(운영 진실 경계): 새 MT5 execution(새 MT5 실행), forward pass(전진 통과), runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), Goal Achieve(목표 달성)는 모두 not_claimed(미주장)이다.
+Latest completed run(최근 완료 실행): `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1`
 
-next_action(다음 행동): `run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1`에서 selected proxy candidate(선택 프록시 후보)를 review(검토)하고, package(패키지) 가능성과 short source(숏 원천) 분리를 판단한다.
+Current run(현재 실행): `run364BJ_implement_h19_opposite_margin_runtime_guard_without_db_v1`
+
+Current truth(현재 진실): `run364BI` reviewed(검토) the BH selected proxy candidate(선택 프록시 후보). The candidate remains a positive research clue(긍정 연구 단서), but it is not parameter-only package ready(파라미터만 패키지 준비 아님) because runtime semantic gap(런타임 의미 차이) remains.
+
+Selected clue(선택 단서): `bh02_long_h19_margin_opp_0020` net `938.59`, PF `1.3732279833`, trades `1003`, density `3.012012012`.
+
+Open blocker(열린 차단): current EA(현재 EA) lacks generic hour/side/opposite-margin guard(범용 시간/방향/반대마진 가드 없음).
+
+Next action(다음 행동): `run364BJ_implement_h19_opposite_margin_runtime_guard_without_db_v1` implements or blocks the exact runtime guard support(정확 런타임 가드 지원을 구현하거나 차단 기록).
+
+Operating boundary(운영 경계): no new MT5 execution(새 MT5 실행 없음), no forward pass(전진 통과 없음), no runtime authority(런타임 권위 없음), no operating promotion(운영 승격 없음), no Goal Achieve(목표 달성 없음).

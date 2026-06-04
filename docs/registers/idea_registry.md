@@ -1078,3 +1078,6 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): hour19 closed-bar margin guard(19시 닫힌 봉 margin 가드)가 PF/DD(수익 팩터/낙폭)를 밀도 붕괴 없이 개선할 수 있다.
 - positive clue(긍정 단서): selected net/PF/density `938.59` / `1.3732279833` / `3.012012012`.
 - effect(효과): short balance(숏 균형)는 별도 source exploration(원천 탐색)으로 분리한다.
+
+<!-- run364BI_h19_runtime_guard -->
+- Idea(아이디어): generic hour/side/opposite-margin guard(범용 시간/방향/반대마진 가드). Seed(씨앗): `bh02_long_h19_margin_opp_0020`. Effect(효과): proxy clue(프록시 단서)를 MT5에서 같은 의미로 시험할 수 있게 한다.
