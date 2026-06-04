@@ -6494,3 +6494,5 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364CE -->
 - 2026-06-04T20:15:14Z `run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1` reviewed CD same-session swap/source guard runtime output(CD 동일 세션 스왑/원천 가드 런타임 출력 리뷰). Judgment(판정): `runtime_probe_review_usable_with_boundary_same_session_swap_stability_passed_h17_overlay_value_confirmed_no_authority`.
+
+- 2026-06-04T20:32:54Z `run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1` completed(완료): materialized(구체화) `12` CG scout rows(CG 정찰 행); next `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`.

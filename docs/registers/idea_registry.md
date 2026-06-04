@@ -1165,3 +1165,10 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364CE_cost_stable_h17_source_guard -->
 - Idea(아이디어): current-session CA01/BX3 semantics(현재 세션 CA01/BX3 의미)를 stable source(안정 원천)로 쓰고, h17 synthetic overlay(17시 합성 오버레이)를 offensive seed(공격 씨앗)로 보존한다. Effect(효과): stale swap-table net(낡은 스왑표 순수익)에 끌리지 않고 source guard(원천 가드)를 확장한다.
+
+### run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1 cost-stable h17 source guard offensive queue(비용 안정 17시 원천 가드 공격 대기열)
+
+- idea_id(아이디어 ID): `IDEA-ST364-SOURCE-REGIME-LABEL-PIVOT-DENSE-COST-RECOVERY`
+- hypothesis(가설): current-session cost-stable h17 source guard(현재 세션 비용 안정 17시 원천 가드)가 no-split scout(무분할 정찰)에서 PF/DD/source quality(PF/DD/원천 품질)를 개선할 수 있다.
+- evidence_boundary(근거 경계): materialization_only(구체화 전용), no runtime authority(런타임 권위 없음).
+- next(다음): `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`.
