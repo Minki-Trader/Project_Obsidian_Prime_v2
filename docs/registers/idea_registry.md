@@ -1153,3 +1153,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364CA_bx3_guard_stack_runtime -->
 - Idea(아이디어): December h22-only block(12월 h22 단독 차단), h21-h23 stress(h21-h23 압박), native short same-calendar control(같은 달력 기본 숏 대조)를 MT5 runtime probe(MT5 런타임 탐침)로 분리한다. Effect(효과): BX3 개선이 calendar semantics(달력 의미)인지 synthetic overlay(합성 오버레이)인지 더 선명하게 판별한다.
+
+<!-- run364CB_swap_sensitive_guard_stack -->
+- Idea(아이디어): BX3 guard stack(BX3 가드 묶음)은 trade path(거래 경로) 기준으로 유지되지만 net rank(순수익 순위)는 swap table(스왑표)에 민감하다. Effect(효과): 다음 탐색은 h17 synthetic overlay(17시 합성 오버레이)와 h21-h22 calendar block(h21-h22 캘린더 차단)을 보존하되, swap-stable reprobe(스왑 안정 재탐침)와 gross/net/cost 분리 평가를 같이 진행한다.

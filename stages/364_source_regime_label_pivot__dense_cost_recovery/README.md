@@ -273,3 +273,8 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 ## run364CA bx03 guard stack runtime probe(BX3 가드 묶음 런타임 탐침)
 
 `runtime_probe_completed_best_ca01_bx03_semantics_control_review_required_no_authority`. Next(다음): `run364CB_review_bx03_guard_stack_runtime_probe_without_db_v1`.
+
+<!-- run364CB -->
+## run364CB BX3 guard stack runtime probe review(BX3 가드 묶음 런타임 탐침 리뷰)
+
+`runtime_probe_review_usable_with_boundary_ca01_best_positive_vs_bv_but_swap_sensitive_below_bx3_no_authority`. Next(다음): `run364CC_materialize_swap_stable_reprobe_and_source_guard_inputs_without_db_v1`.

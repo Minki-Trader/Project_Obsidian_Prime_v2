@@ -1,0 +1,19 @@
+{
+  "claim_boundary": "research_development_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "evidence_available": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CA/runtime_probe_scoreboard.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CB/ca_trade_attribution_by_variant.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CB/ca_pair_deltas.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CB/ca01_vs_bx3_swap_reconciliation.csv"
+  ],
+  "evidence_missing": [
+    "same-session swap reprobe(동일 세션 스왑 재탐침)",
+    "forward replay(전진 재생)",
+    "runtime authority closure(런타임 권위 폐쇄)"
+  ],
+  "judgment_label": "runtime_probe_review_usable_with_boundary_ca01_best_positive_vs_bv_but_swap_sensitive_below_bx3_no_authority",
+  "next_condition": "run364CC_materialize_swap_stable_reprobe_and_source_guard_inputs_without_db_v1",
+  "result_subject": "CA BX3 guard stack runtime probe review(CA BX3 가드 묶음 런타임 탐침 리뷰)",
+  "run_id": "run364CB_review_bx03_guard_stack_runtime_probe_without_db_v1",
+  "user_explanation_hook": "CA did not break the signal path; the profit difference is swap-sensitive(CA는 신호 경로를 깨지 않았고 순수익 차이는 스왑 민감)."
+}

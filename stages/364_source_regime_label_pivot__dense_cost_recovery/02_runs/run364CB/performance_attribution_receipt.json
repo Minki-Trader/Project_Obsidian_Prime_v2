@@ -1,0 +1,24 @@
+{
+  "alternative_explanations": "future broker swap table updates may change net ranking even when signal path is identical(향후 브로커 스왑표 갱신은 신호 경로가 같아도 순위 변경 가능)",
+  "attribution_confidence": "high_for_swap_diff_medium_for_cost_future_stability(스왑 차이는 높음, 비용 미래 안정성은 중간)",
+  "claim_boundary": "research_development_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": [
+    "run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1",
+    "run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1"
+  ],
+  "likely_drivers": [
+    "same trade path and gross profit versus BX3(거래 경로와 총손익은 BX3와 동일)",
+    "swap table/cost drift explains -10.69 net difference(스왑 비용표 드리프트가 -10.69 순수익 차이를 설명)",
+    "h22-only isolation reopens h21 longs and hurts net(h22 단독 분리는 h21 롱을 열어 순수익을 훼손)",
+    "h17 synthetic short overlay remains positive versus native control(17시 합성 숏 오버레이는 기본 숏 대조보다 우세)"
+  ],
+  "next_probe": "run364CC_materialize_swap_stable_reprobe_and_source_guard_inputs_without_db_v1",
+  "observed_change": "CA01 net 997.49 is below prior BX3 1008.18 but above BV by 31.17(CA01 순수익은 이전 BX3보다 낮고 BV보다 높음)",
+  "run_id": "run364CB_review_bx03_guard_stack_runtime_probe_without_db_v1",
+  "segment_checks": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CB/ca01_vs_bx3_swap_reconciliation.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CB/attribution_by_variant_source_bucket.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CB/attribution_by_variant_month.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CB/ca_pair_deltas.csv"
+  ]
+}

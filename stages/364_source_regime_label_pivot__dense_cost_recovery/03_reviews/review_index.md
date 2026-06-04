@@ -289,3 +289,6 @@
 
 <!-- run364CA -->
 - `run364CA_execute_bx03_guard_stack_runtime_probe_without_db_v1`: bx03 guard stack MT5 runtime probe(BX3 가드 묶음 MT5 런타임 탐침) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CA_bx03_guard_stack_runtime_probe.md`
+
+<!-- run364CB -->
+- `run364CB_review_bx03_guard_stack_runtime_probe_without_db_v1`: CA BX3 guard stack runtime probe review(CA BX3 가드 묶음 런타임 탐침 리뷰) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CB_review_bx03_guard_stack_runtime_probe.md`
