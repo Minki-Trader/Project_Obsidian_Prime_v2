@@ -6449,3 +6449,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): BQ broad clean short-share lift(BQ 넓은 클린 숏비중 상승)를 package gate(패키지 게이트)와 stress attribution(압박 귀속)으로 검토했다.
 - effect(효과): package(패키지)는 거절하고 `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`로 연말 숏비중/밀도 수리를 넘겼다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BR_broad_clean_short_share_lift_review.md`
+
+## 2026-06-05 - run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1
+
+- action(행동): late-year short-share stress repair proxy scout(연말 숏비중 압박 수리 프록시 탐색)를 실행했다.
+- effect(효과): `bs02_late_year_parent_session_suppress__moy12__h21__side_long`를 `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1` 검토로 넘기고 package(패키지)는 열지 않았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BS_late_year_short_share_stress_repair_scout.md`

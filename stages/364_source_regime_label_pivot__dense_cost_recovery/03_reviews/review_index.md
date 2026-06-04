@@ -264,3 +264,5 @@
 - `run364BQ_train_broad_clean_short_share_lift_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BQ_broad_clean_short_share_lift_scout.md` - broad clean short-share lift scout(넓은 클린 숏비중 상승 정찰).
 
 - `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BR_broad_clean_short_share_lift_review.md` - broad clean short-share lift review(넓은 클린 숏비중 상승 검토).
+
+- `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BS_late_year_short_share_stress_repair_scout.md` - late-year short-share stress repair scout(연말 숏비중 압박 수리 탐색).

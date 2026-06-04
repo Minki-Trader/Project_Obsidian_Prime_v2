@@ -691,3 +691,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - failure_memory(실패 기억): selected proxy(선택 프록시)는 month_bad_count(월 나쁨 수) `1`이고 MT5 reprobe(MT5 재탐침)가 없다.
 - salvage_value(회수 가치): short share(숏 비중) 목표와 PF(수익 팩터) 목표는 동시에 통과했다.
 - reopen_condition(재개 조건): `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`에서 월 압박 원인과 proxy/MT5 diff(프록시/MT5 차이)를 닫는다.
+
+## run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1
+
+- status(상태): package not opened(패키지 열지 않음).
+- failure_memory(실패 기억): proxy stress clear(프록시 압박 해소)가 있어도 MT5 reprobe(MT5 재탐침)와 BT review(BT 검토)가 없으면 operating claim(운영 주장)이 아니다.
+- salvage_value(회수 가치): `bs02_late_year_parent_session_suppress__moy12__h21__side_long`는 late-year/session repair(연말/세션 수리) 후보로 검토 가치가 있다.
+- reopen_condition(재개 조건): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`에서 overfit watch(과적합 관찰)와 proxy/MT5 diff(프록시/MT5 차이)를 닫는다.

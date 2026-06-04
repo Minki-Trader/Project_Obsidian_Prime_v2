@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`
+Current run(현재 실행): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`
 
-Current truth(현재 진실): run364BR(364BR 실행)는 BQ proxy clue(BQ 프록시 단서)를 package reject(패키지 거절)로 닫고 late-year short-share stress repair(연말 숏비중 압박 수리)를 BS로 열었다.
+Current truth(현재 진실): run364BS(364BS 실행)는 `bs02_late_year_parent_session_suppress__moy12__h21__side_long` proxy repair candidate(프록시 수리 후보)를 만들었고 month_bad_count(월 나쁨 수)는 `0`지만 MT5 검토 전이다.
 
-Next action(다음 행동): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`에서 late-year/month-of-year repair(연말/월중 수리)를 실행한다.
+Next action(다음 행동): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`에서 overfit watch(과적합 관찰), proxy/MT5 diff(프록시/MT5 차이), package precheck eligibility(패키지 사전검사 적격성)를 검토한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 
