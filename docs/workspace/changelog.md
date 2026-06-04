@@ -6491,3 +6491,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364CD -->
 - 2026-06-04T19:52:01Z `run364CD_execute_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1` executed same-session swap-stable source guard MT5 runtime probe(동일 세션 스왑 안정 원천 가드 MT5 런타임 탐침). Judgment(판정): `runtime_probe_completed_best_cd01_bx3_clone_current_session_same_session_review_required_no_authority`.
+
+<!-- run364CE -->
+- 2026-06-04T20:15:14Z `run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1` reviewed CD same-session swap/source guard runtime output(CD 동일 세션 스왑/원천 가드 런타임 출력 리뷰). Judgment(판정): `runtime_probe_review_usable_with_boundary_same_session_swap_stability_passed_h17_overlay_value_confirmed_no_authority`.

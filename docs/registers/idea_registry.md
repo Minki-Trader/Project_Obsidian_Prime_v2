@@ -1162,3 +1162,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364CD_swap_stable_source_guard_runtime -->
 - Idea(아이디어): BX3 clone(BX3 복제), CA01 clone(CA01 복제), native short control(기본 숏 대조)을 같은 CD MT5 session(CD MT5 세션)에서 다시 실행한다. Effect(효과): swap drift(스왑 드리프트)인지 source overlay value(원천 오버레이 가치)인지 다음 리뷰에서 분리할 수 있다.
+
+<!-- run364CE_cost_stable_h17_source_guard -->
+- Idea(아이디어): current-session CA01/BX3 semantics(현재 세션 CA01/BX3 의미)를 stable source(안정 원천)로 쓰고, h17 synthetic overlay(17시 합성 오버레이)를 offensive seed(공격 씨앗)로 보존한다. Effect(효과): stale swap-table net(낡은 스왑표 순수익)에 끌리지 않고 source guard(원천 가드)를 확장한다.

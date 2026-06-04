@@ -298,3 +298,6 @@
 
 <!-- run364CD -->
 - `run364CD_execute_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1`: swap-stable source guard MT5 runtime probe(스왑 안정 원천 가드 MT5 런타임 탐침) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CD_swap_stable_reprobe_and_source_guard_mt5_runtime_probe.md`
+
+<!-- run364CE -->
+- `run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1`: review CD swap-stable source guard MT5 runtime probe(CD 스왑 안정 원천 가드 MT5 런타임 탐침 리뷰) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe.md`

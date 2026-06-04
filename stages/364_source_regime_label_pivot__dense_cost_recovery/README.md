@@ -288,3 +288,8 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 ## run364CD swap-stable source guard MT5 runtime probe(스왑 안정 원천 가드 MT5 런타임 탐침)
 
 `runtime_probe_completed_best_cd01_bx3_clone_current_session_same_session_review_required_no_authority`. Next(다음): `run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1`.
+
+<!-- run364CE -->
+## run364CE review swap-stable source guard runtime probe(스왑 안정 원천 가드 런타임 탐침 리뷰)
+
+`runtime_probe_review_usable_with_boundary_same_session_swap_stability_passed_h17_overlay_value_confirmed_no_authority`. Next(다음): `run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1`.
