@@ -1066,3 +1066,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): density restore stress candidate(밀도 복원 압박 후보)는 MT5 net/PF/density(순수익/수익 팩터/밀도)를 유지했다.
 - positive clue(긍정 단서): net `900.36`, PF `1.35`, density `3.0510510511`, clean parity(깨끗한 동등성).
 - failure memory(실패 기억): long share(롱 비중) `0.9025590551`와 missing forward/regime evidence(전진/국면 근거 누락)가 운영 승격을 막는다.
+
+## run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1
+
+- idea(아이디어): BF positive runtime clue(BF 긍정 런타임 단서)를 forward-like block replay(전진 유사 블록 재생), month/hour/side soft firewall(月/시간/방향 소프트 방화벽), short restore(숏 복원)로 압박한다.
+- positive clue(긍정 단서): MT5 net `900.36`, PF `1.35`, density `3.0510510511`.
+- failure memory(실패 기억): long share(롱 비중) `0.9025590551`와 missing forward/regime evidence(전진/국면 근거 누락)는 운영 승격을 막는다.

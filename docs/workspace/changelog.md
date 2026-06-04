@@ -6389,3 +6389,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): density restore stress candidate MT5 runtime probe(밀도 복원 압박 후보 MT5 런타임 탐침)를 review(검토)했다.
 - effect(효과): net/PF/density(순수익/수익 팩터/밀도) 단서를 보존하고, forward/regime stress(전진/국면 압박)를 다음 input(입력)으로 바꿨다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BF_density_restore_stress_candidate_mt5_runtime_probe_review.md`
+
+## 2026-06-04 - run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1
+
+- action(행동): density restore forward/regime stress inputs(밀도 복원 전진/국면 압박 입력)를 물질화했다.
+- effect(효과): `run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1` scout queue(스카우트 대기열)를 만들고, 운영 주장은 닫았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BG_density_restore_forward_regime_stress_inputs.md`

@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "data_hash_or_identity": "6b4e278c2829c8381ee13db2492a8c0a602b331752d60a4e1de5b49bf07cd24b",
+  "data_source": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BF/closed_trade_attribution.csv",
+  "feature_label_boundary": "entry month/hour/side are decision-time fields; drawdown/profit/hold are post-trade labels only(진입 월/시간/방향은 결정 시점 필드, 낙폭/수익/보유는 거래 후 라벨 전용)",
+  "integrity_judgment": "usable_with_boundary(경계 포함 사용 가능)",
+  "leakage_risk": "using historical weak month/hour as live hard-delete would overfit(과거 약한 월/시간을 실전 강제 삭제로 쓰면 과적합)",
+  "missing_or_duplicate_check": "closed_trade_rows matched parent final decision(종료 거래 행 수가 부모 최종 결정과 일치)",
+  "next_run_id": "run364BH_train_density_restore_forward_regime_stress_scout_without_db_v1",
+  "parent_run_id": "run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1",
+  "run_id": "run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1",
+  "sample_scope": "US100 M5 MT5 runtime probe trades; 2025-01-02..2026-04-13; rows=1016",
+  "split_boundary": "forward-like calendar blocks are stress slices, not claimed forward pass(전진 유사 달력 블록은 압박 조각, 전진 통과 주장 아님)",
+  "status": "passed(통과)",
+  "time_axis": "MT5 broker-clock closed trade timestamps; month/hour are entry-time-known fields(MT5 브로커 시계 종료 거래 시각, 월/시간은 진입 시점 정보)"
+}

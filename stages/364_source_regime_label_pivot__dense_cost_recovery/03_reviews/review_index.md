@@ -238,3 +238,5 @@
 - `run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BE_density_restore_stress_candidate_mt5_runtime_probe.md` - MT5 runtime probe(MT5 런타임 탐침), authority(권위) not_claimed(주장 없음).
 
 - `run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BF_density_restore_stress_candidate_mt5_runtime_probe_review.md` - MT5 runtime probe review(MT5 런타임 탐침 검토), forward/regime stress required(전진/국면 압박 필요).
+
+- `run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BG_density_restore_forward_regime_stress_inputs.md` - density restore forward/regime stress input materialization(밀도 복원 전진/국면 압박 입력 물질화).

@@ -639,3 +639,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - effect(효과): 좋은 후보만 기억하지 않고 실패 제약도 다음 패키지에 같이 넘긴다.
 
 - run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1: package_only_no_authority(패키지 전용, 권위 없음). Effect(효과): 실행 전 operating claim(운영 주장)을 막는다.
+
+## run364BG_materialize_density_restore_forward_regime_stress_inputs_without_db_v1
+
+- status(상태): materialized_forward_regime_stress_inputs_no_authority(전진/국면 압박 입력 물질화, 권위 없음).
+- failure_memory(실패 기억): forward pass(전진 통과) 없음, long share(롱 비중) `0.9025590551`, drawdown(낙폭) `18.3`%.
+- effect(효과): 같은 차단 원인을 반복 보고하지 않고 BH scout(BH 스카우트)의 비교축으로 바꾼다.
