@@ -1144,3 +1144,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BX_overlay_hour17_ablation -->
 - Idea(아이디어): hour17 overlay(17시 오버레이)와 native short(기본 숏)을 MT5 ablation(MT5 제거 비교)으로 분리한다. Effect(효과): synthetic short source(합성 숏 원천)가 실제 수익인지 churn(회전)인지 판별한다.
+
+<!-- run364BY_bx03_december_late_session_guard -->
+- Idea(아이디어): BX3 개선은 December h22 long guard(12월 22시 롱 가드)와 h17 overlay(17시 오버레이)를 분리해 더 검증한다. Effect(효과): net/PF(순수익/수익 팩터)를 유지하면서 equity DD(평가손익 낙폭)와 월 압박을 줄이는 다음 탐색으로 연결한다.

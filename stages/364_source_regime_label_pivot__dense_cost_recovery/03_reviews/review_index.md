@@ -280,3 +280,6 @@
 
 <!-- run364BX -->
 - `run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1`: overlay hour17/native short ablation runtime probe(17시 오버레이/기본 숏 제거 비교 런타임 탐침) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BX_overlay_hour17_native_short_ablation_runtime_probe.md`
+
+<!-- run364BY -->
+- `run364BY_review_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1`: BX runtime ablation review(BX 런타임 제거 비교 검토) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BY_review_overlay_hour17_native_short_ablation_runtime_probe.md`

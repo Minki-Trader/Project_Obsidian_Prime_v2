@@ -6473,3 +6473,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364BX -->
 - 2026-06-04T17:51:07Z `run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1` executed 3-way MT5 runtime ablation(3방향 MT5 런타임 제거 비교). Judgment(판정): `blocked_runtime_ablation_outputs_or_report_missing_no_authority`.
+
+<!-- run364BY -->
+- 2026-06-04T18:23:37Z `run364BY_review_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1` reviewed BX runtime ablation(BX 런타임 제거 비교 검토). Judgment(판정): `runtime_ablation_review_positive_clue_bx03_december_late_session_guard_no_authority`.

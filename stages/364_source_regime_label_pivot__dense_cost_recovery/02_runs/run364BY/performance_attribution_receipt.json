@@ -1,0 +1,24 @@
+{
+  "alternative_explanations": "single December membership change and MT5 lifecycle coupling may overstate generality(단일 12월 구성 변화와 MT5 생명주기 결합이 일반성을 과장할 수 있음)",
+  "attribution_confidence": "medium_runtime_trade_membership_exact_but_forward_unproven",
+  "claim_boundary": "research_development_runtime_ablation_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": [
+    "run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1",
+    "bx01_hour17_overlay",
+    "bx02_native_short_only"
+  ],
+  "likely_drivers": [
+    "December h22 long loss block(12월 22시 롱 손실 차단)",
+    "h17 overlay positive versus native-only(17시 오버레이가 기본 숏 단독보다 양호)",
+    "h19/h20 overlay removal reduced churn(19/20시 오버레이 제거로 회전 감소)"
+  ],
+  "next_probe": "run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1",
+  "observed_change": "BX3 improved net/PF versus BV and BX controls(BX3가 BV와 BX 대조군 대비 순수익/수익 팩터 개선)",
+  "run_id": "run364BY_review_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1",
+  "segment_checks": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/attribution_by_variant_month.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/attribution_by_variant_open_hour.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/attribution_by_variant_source_bucket.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BY/variant_pair_deltas.csv"
+  ]
+}
