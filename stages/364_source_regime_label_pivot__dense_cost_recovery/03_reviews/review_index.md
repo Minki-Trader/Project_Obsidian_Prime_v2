@@ -262,3 +262,5 @@
 - `run364BP_review_short_source_quality_repair_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BP_short_source_quality_repair_review.md` - short source quality repair review(숏 원천 품질 수리 검토).
 
 - `run364BQ_train_broad_clean_short_share_lift_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BQ_broad_clean_short_share_lift_scout.md` - broad clean short-share lift scout(넓은 클린 숏비중 상승 정찰).
+
+- `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BR_broad_clean_short_share_lift_review.md` - broad clean short-share lift review(넓은 클린 숏비중 상승 검토).

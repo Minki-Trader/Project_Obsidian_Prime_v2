@@ -1120,3 +1120,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): broad clean h17/h20 short source(넓은 클린 17/20시 숏 원천)와 overlap-safe h16 extension(겹침 안전 16시 확장)을 결합하면 short share(숏 비중)를 회복할 수 있다.
 - positive clue(긍정 단서): bo90 net/PF(순수익/PF) `1044.49` / `1.4158388603`, bo05 synthetic short PF(합성 숏 PF) `2.8224308655`.
 - next action(다음 행동): `run364BQ_train_broad_clean_short_share_lift_scout_without_db_v1`.
+
+## run364BR_review_broad_clean_short_share_lift_scout_without_db_v1
+
+- idea(아이디어): BQ h19 bridge(19시 브리지)는 short share(숏 비중)를 복구하는 positive clue(긍정 단서)지만 late-year stress(연말 압박)가 남는다.
+- positive clue(긍정 단서): net/PF/density/short share `1047.85` / `1.4129932946` / `3.0870870871` / `0.1215953307`.
+- next action(다음 행동): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`.

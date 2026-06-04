@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`
+Current run(현재 실행): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364BQ_train_broad_clean_short_share_lift_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`
 
-Current truth(현재 진실): run364BQ(364BQ 실행)는 `bq04_h19_bridge_short_share_lift__h17_19_20__ps4375__m0750__chronological_no_overlap` proxy clue(프록시 단서)를 만들었지만 month stress(월 압박)와 MT5 미실행 때문에 review required(검토 필요)로 닫았다.
+Current truth(현재 진실): run364BR(364BR 실행)는 BQ proxy clue(BQ 프록시 단서)를 package reject(패키지 거절)로 닫고 late-year short-share stress repair(연말 숏비중 압박 수리)를 BS로 열었다.
 
-Next action(다음 행동): `run364BR_review_broad_clean_short_share_lift_scout_without_db_v1`에서 package gate(패키지 게이트), stress attribution(압박 귀속), proxy/MT5 diff(프록시/MT5 차이)를 검토한다.
+Next action(다음 행동): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`에서 late-year/month-of-year repair(연말/월중 수리)를 실행한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 
