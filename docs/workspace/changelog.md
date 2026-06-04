@@ -6488,3 +6488,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364CC -->
 - 2026-06-04T19:33:19Z `run364CC_materialize_swap_stable_reprobe_and_source_guard_inputs_without_db_v1` materialized swap-stable reprobe and source guard runtime inputs(스왑 안정 재탐침 및 원천 가드 런타임 입력 구체화). Judgment(판정): `experiment_design_materialized_swap_stable_reprobe_and_source_guard_runtime_handoff_ready_no_authority`.
+
+<!-- run364CD -->
+- 2026-06-04T19:52:01Z `run364CD_execute_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1` executed same-session swap-stable source guard MT5 runtime probe(동일 세션 스왑 안정 원천 가드 MT5 런타임 탐침). Judgment(판정): `runtime_probe_completed_best_cd01_bx3_clone_current_session_same_session_review_required_no_authority`.

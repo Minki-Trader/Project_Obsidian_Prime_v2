@@ -1,0 +1,68 @@
+{
+  "baseline_bv_run_id": "run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1",
+  "baseline_bx_run_id": "run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1",
+  "baseline_ca_run_id": "run364CA_execute_bx03_guard_stack_runtime_probe_without_db_v1",
+  "baseline_run_id": "run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1",
+  "bv_reference": {
+    "equity_drawdown_amount": null,
+    "net_profit": 966.32,
+    "profit_factor": 1.38,
+    "recovery_factor": null,
+    "trade_count": 1018
+  },
+  "claim_boundary": "research_development_runtime_probe_only_no_new_model_training_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "feature_business_days": 314,
+  "model_id": "h12_move5__rf5_l80_n64",
+  "parent_run_id": "run364CC_materialize_swap_stable_reprobe_and_source_guard_inputs_without_db_v1",
+  "probe_question": "Can BX3/CA01 swap drift vanish in one current MT5 session, and does h17 overlay still add value?(BX3/CA01 스왑 드리프트가 현재 MT5 동일 세션에서 사라지는지와 17시 오버레이 가치가 유지되는지 확인)",
+  "run_id": "run364CD_execute_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1",
+  "same_session_batch_required": true,
+  "selected_candidate_id": "bs02_late_year_parent_session_suppress__moy12__h21__side_long",
+  "source_guard_matrix": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CC/source_guard_candidate_matrix.csv",
+  "source_pair_matrix": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CC/same_session_reprobe_pair_matrix.csv",
+  "source_queue": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CC/run364CD_runtime_attempt_queue.csv",
+  "variants": [
+    {
+      "calendar_block": {
+        "enabled": true,
+        "end_hour": 23,
+        "month": 12,
+        "side": "long",
+        "start_hour": 21
+      },
+      "hypothesis": "cd01_bx3_clone_current_session same-session swap/source runtime probe(cd01_bx3_clone_current_session 동일 세션 스왑/원천 런타임 탐침)",
+      "synthetic_enabled": true,
+      "synthetic_hours": "17",
+      "timestamp_safety": "entry-known server hour and closed-bar model probabilities only(진입 시점 서버 시간과 닫힌 봉 모델 확률만 사용)",
+      "variant_id": "cd01_bx3_clone_current_session"
+    },
+    {
+      "calendar_block": {
+        "enabled": true,
+        "end_hour": 23,
+        "month": 12,
+        "side": "long",
+        "start_hour": 21
+      },
+      "hypothesis": "cd02_ca01_clone_current_session same-session swap/source runtime probe(cd02_ca01_clone_current_session 동일 세션 스왑/원천 런타임 탐침)",
+      "synthetic_enabled": true,
+      "synthetic_hours": "17",
+      "timestamp_safety": "entry-known server hour and closed-bar model probabilities only(진입 시점 서버 시간과 닫힌 봉 모델 확률만 사용)",
+      "variant_id": "cd02_ca01_clone_current_session"
+    },
+    {
+      "calendar_block": {
+        "enabled": true,
+        "end_hour": 23,
+        "month": 12,
+        "side": "long",
+        "start_hour": 21
+      },
+      "hypothesis": "cd03_native_short_same_calendar_current_session same-session swap/source runtime probe(cd03_native_short_same_calendar_current_session 동일 세션 스왑/원천 런타임 탐침)",
+      "synthetic_enabled": false,
+      "synthetic_hours": "",
+      "timestamp_safety": "entry-known server hour and closed-bar model probabilities only(진입 시점 서버 시간과 닫힌 봉 모델 확률만 사용)",
+      "variant_id": "cd03_native_short_same_calendar_current_session"
+    }
+  ]
+}

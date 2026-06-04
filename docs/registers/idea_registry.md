@@ -1159,3 +1159,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364CC_swap_source_guard_handoff -->
 - Idea(아이디어): BX3와 CA01의 trade path(거래 경로)가 같으므로 next runtime probe(다음 런타임 탐침)는 same-session swap stability(동일 세션 스왑 안정성)와 h17 synthetic overlay source value(17시 합성 오버레이 원천 가치)를 같이 본다. Effect(효과): 비용 드리프트와 원천 단서를 분리해 다음 공격 탐색을 덜 흐리게 만든다.
+
+<!-- run364CD_swap_stable_source_guard_runtime -->
+- Idea(아이디어): BX3 clone(BX3 복제), CA01 clone(CA01 복제), native short control(기본 숏 대조)을 같은 CD MT5 session(CD MT5 세션)에서 다시 실행한다. Effect(효과): swap drift(스왑 드리프트)인지 source overlay value(원천 오버레이 가치)인지 다음 리뷰에서 분리할 수 있다.
