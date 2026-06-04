@@ -1114,3 +1114,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): h17 core + h20 margin band(17시 핵심 + 20시 마진 밴드)는 BM negative short source(BM 음수 숏 원천)를 proxy(프록시) 단서로 수리할 수 있다.
 - positive clue(긍정 단서): net/PF/density/short share `1037.17` / `1.4101564709` / `3.0750750751` / `0.1201171875`.
 - caution(주의): month_bad_count(월 나쁨 수) `2`라서 package(패키지)는 BP 검토 전까지 닫는다.
+
+## run364BP_review_short_source_quality_repair_scout_without_db_v1
+
+- idea(아이디어): broad clean h17/h20 short source(넓은 클린 17/20시 숏 원천)와 overlap-safe h16 extension(겹침 안전 16시 확장)을 결합하면 short share(숏 비중)를 회복할 수 있다.
+- positive clue(긍정 단서): bo90 net/PF(순수익/PF) `1044.49` / `1.4158388603`, bo05 synthetic short PF(합성 숏 PF) `2.8224308655`.
+- next action(다음 행동): `run364BQ_train_broad_clean_short_share_lift_scout_without_db_v1`.

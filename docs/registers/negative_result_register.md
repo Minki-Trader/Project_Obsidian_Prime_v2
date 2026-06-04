@@ -678,3 +678,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): package not opened(패키지 열지 않음).
 - failure_memory(실패 기억): broad pool negative control(넓은 풀 부정 대조)은 hard pass(하드 통과)를 만들지 못했고, selected proxy(선택 프록시)는 month stress(월 압박)가 남았다.
 - effect(효과): 다음 검토는 프록시 단서를 보존하되 MT5 package(MT5 패키지)로 바로 올리지 않는다.
+
+## run364BP_review_short_source_quality_repair_scout_without_db_v1
+
+- status(상태): BO package rejected(BO 패키지 거절).
+- failure_memory(실패 기억): selected proxy(선택 프록시)는 month_bad_count(월 나쁨 수) `2`이고 MT5 reprobe(MT5 재탐침)가 없다.
+- effect(효과): package(패키지)가 아니라 broad clean short-share lift(넓은 클린 숏 비중 보강) 제약으로 넘긴다.
