@@ -1102,3 +1102,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): h17-20 short router(17~20시 숏 라우터)가 h19 guard(h19 가드)의 short balance(숏 균형)를 회복할 수 있다.
 - positive clue(긍정 단서): selected proxy net/PF/density/short share `967.76` / `1.3650661562` / `3.1471471471` / `0.1440839695`.
 - effect(효과): long delete(롱 삭제) 대신 new short source(새 숏 원천)를 다음 MT5 검토 후보로 만든다.
+
+## run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1
+
+- idea(아이디어): h17 core + h20 margin band(17시 핵심 + 20시 마진 밴드)가 BM의 음수 숏 원천을 양수 품질로 바꿀 수 있다.
+- positive clue(긍정 단서): repair seed net/PF/density/short share `1037.17` / `1.4101564709` / `3.0750750751` / `0.1201171875`.
+- effect(효과): 패키지 승격 대신 BO 공격 정찰로 이어간다.

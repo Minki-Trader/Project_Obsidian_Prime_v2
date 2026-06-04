@@ -666,3 +666,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): proxy_only_review_required(프록시 전용, 검토 필요).
 - failure_memory(실패 기억): synthetic fixed6 label(합성 고정6봉 라벨)과 same-tape threshold(동일 테이프 임계값)는 MT5 runtime evidence(MT5 런타임 근거)를 대체하지 못한다.
 - effect(효과): BN review(BN 검토)에서 packageability(패키지 가능성)와 MT5 reprobe(MT5 재탐침)를 먼저 확인한다.
+
+## run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1
+
+- status(상태): BM package candidate rejected(BM 패키지 후보 거절).
+- failure_memory(실패 기억): BM selected synthetic short PF(합성 숏 수익 팩터) `0.8733691583`라서 combined proxy(합산 프록시)만으로 패키지하면 안 된다.
+- effect(효과): next run(다음 실행)은 standalone short source quality(숏 원천 단독 품질)를 먼저 수리한다.

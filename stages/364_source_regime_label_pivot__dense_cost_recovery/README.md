@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`
+Current run(현재 실행): `run364BO_train_short_source_quality_repair_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`
 
-Current truth(현재 진실): run364BM(364BM 실행)은 `bm04_short_router_ps0440_h17_20_overlay_fixed6` combined proxy subject(합산 프록시 검토 대상)를 만들었지만 synthetic short PF(합성 숏 PF)가 낮아 package candidate(패키지 후보)는 아니다.
+Current truth(현재 진실): run364BN(364BN 실행)은 BM package(패키지)를 거절하고 `bn02_h17_or_h20_margin_08_10_quality_repair`를 BO repair scout(BO 수리 정찰)로 넘겼다.
 
-Next action(다음 행동): `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`에서 packageability(패키지 가능성)와 MT5 reprobe handoff(MT5 재탐침 인계)를 검토한다.
+Next action(다음 행동): `run364BO_train_short_source_quality_repair_scout_without_db_v1`에서 short source quality repair(숏 원천 품질 수리)를 공격 정찰한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 

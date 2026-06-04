@@ -254,3 +254,5 @@
 - `run364BL_materialize_h19_runtime_probe_stress_short_balance_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BL_h19_stress_short_balance_materialization.md` - h19 stress short-balance materialization(h19 압박 숏 균형 물질화).
 
 - `run364BM_train_h19_stress_short_balance_proxy_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BM_h19_stress_short_balance_proxy_scout.md` - h19 stress short-balance proxy scout(h19 압박 숏 균형 프록시 정찰).
+
+- `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BN_h19_stress_short_balance_proxy_review.md` - h19 stress short-balance proxy review(h19 압박 숏 균형 프록시 검토).
