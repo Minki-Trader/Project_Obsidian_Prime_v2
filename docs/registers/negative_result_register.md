@@ -672,3 +672,9 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - status(상태): BM package candidate rejected(BM 패키지 후보 거절).
 - failure_memory(실패 기억): BM selected synthetic short PF(합성 숏 수익 팩터) `0.8733691583`라서 combined proxy(합산 프록시)만으로 패키지하면 안 된다.
 - effect(효과): next run(다음 실행)은 standalone short source quality(숏 원천 단독 품질)를 먼저 수리한다.
+
+## run364BO_train_short_source_quality_repair_scout_without_db_v1
+
+- status(상태): package not opened(패키지 열지 않음).
+- failure_memory(실패 기억): broad pool negative control(넓은 풀 부정 대조)은 hard pass(하드 통과)를 만들지 못했고, selected proxy(선택 프록시)는 month stress(월 압박)가 남았다.
+- effect(효과): 다음 검토는 프록시 단서를 보존하되 MT5 package(MT5 패키지)로 바로 올리지 않는다.

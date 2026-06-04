@@ -1,12 +1,12 @@
 ﻿# Stage364 Brief(364단계 개요): Source Regime Label Pivot(원천 국면 라벨 전환)
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
-- current_run_id(현재 실행 ID): `run364BO_train_short_source_quality_repair_scout_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`
+- current_run_id(현재 실행 ID): `run364BP_review_short_source_quality_repair_scout_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364BO_train_short_source_quality_repair_scout_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364BN_short_source_quality_review_open_bo_repair_scout_no_authority`
-- claim_boundary(주장 경계): `research_development_kpi_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `completed_stage364BO_short_source_quality_repair_proxy_scout_stress_watch_review_required_no_authority`
+- claim_boundary(주장 경계): `research_development_proxy_scout_only_rule_surface_no_new_model_artifact_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -328,3 +328,9 @@ Effect(효과): Stage364(364단계)를 분기하지 않고 `run364BN_review_h19_
 Action(행동): BM combined proxy(BM 합산 프록시)를 package reject(패키지 거절)와 repair seed(수리 씨앗)으로 분리했다.
 
 Effect(효과): `bn02_h17_or_h20_margin_08_10_quality_repair`를 `run364BO_train_short_source_quality_repair_scout_without_db_v1`로 넘기고, 운영 주장은 계속 닫는다.
+
+## run364BO Short Source Quality Repair Scout Closeout(364BO 숏 원천 품질 수리 정찰 종료)
+
+Action(행동): BN repair seed(BN 수리 씨앗)를 entry-known rule surface(진입기지 규칙 표면)와 broad negative control(넓은 부정 대조)로 재생했다.
+
+Effect(효과): `bo00_bn_seed_h17_or_h20_margin_08_10_reference`는 proxy(프록시) 단서로 남았지만 month stress watch(월 압박 관찰) 때문에 package(패키지)는 열지 않고 `run364BP_review_short_source_quality_repair_scout_without_db_v1`로 검토를 넘긴다.

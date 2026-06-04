@@ -1108,3 +1108,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): h17 core + h20 margin band(17시 핵심 + 20시 마진 밴드)가 BM의 음수 숏 원천을 양수 품질로 바꿀 수 있다.
 - positive clue(긍정 단서): repair seed net/PF/density/short share `1037.17` / `1.4101564709` / `3.0750750751` / `0.1201171875`.
 - effect(효과): 패키지 승격 대신 BO 공격 정찰로 이어간다.
+
+## run364BO_train_short_source_quality_repair_scout_without_db_v1
+
+- idea(아이디어): h17 core + h20 margin band(17시 핵심 + 20시 마진 밴드)는 BM negative short source(BM 음수 숏 원천)를 proxy(프록시) 단서로 수리할 수 있다.
+- positive clue(긍정 단서): net/PF/density/short share `1037.17` / `1.4101564709` / `3.0750750751` / `0.1201171875`.
+- caution(주의): month_bad_count(월 나쁨 수) `2`라서 package(패키지)는 BP 검토 전까지 닫는다.

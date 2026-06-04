@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364BO_train_short_source_quality_repair_scout_without_db_v1`
+Current run(현재 실행): `run364BP_review_short_source_quality_repair_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364BN_review_h19_stress_short_balance_proxy_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364BO_train_short_source_quality_repair_scout_without_db_v1`
 
-Current truth(현재 진실): run364BN(364BN 실행)은 BM package(패키지)를 거절하고 `bn02_h17_or_h20_margin_08_10_quality_repair`를 BO repair scout(BO 수리 정찰)로 넘겼다.
+Current truth(현재 진실): run364BO(364BO 실행)는 `bo00_bn_seed_h17_or_h20_margin_08_10_reference` proxy clue(프록시 단서)를 보존했지만 month stress watch(월 압박 관찰) 때문에 package(패키지)는 열지 않았다.
 
-Next action(다음 행동): `run364BO_train_short_source_quality_repair_scout_without_db_v1`에서 short source quality repair(숏 원천 품질 수리)를 공격 정찰한다.
+Next action(다음 행동): `run364BP_review_short_source_quality_repair_scout_without_db_v1`에서 package gate(패키지 게이트)와 proxy/MT5 diff(프록시/MT5 차이)를 검토한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 
