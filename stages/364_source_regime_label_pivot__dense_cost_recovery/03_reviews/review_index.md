@@ -307,3 +307,5 @@
 - `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CG_cost_stable_h17_source_guard_proxy_scout.md` - cost-stable h17 source guard proxy scout(비용 안정 17시 원천 가드 프록시 정찰).
 
 - `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CH_cost_stable_h17_source_guard_review.md` - cost-stable h17 source guard review(비용 안정 17시 원천 가드 검토).
+
+- `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CI_h17_focus_month_cost_stress_repair_inputs.md` - h17 focus month cost stress repair inputs(17시 집중 월/비용 압박 수리 입력).

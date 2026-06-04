@@ -1,0 +1,30 @@
+{
+  "changed_variables": [
+    "cost_stress_policy(비용 압박 정책)",
+    "month_guard_policy(월 가드 정책)",
+    "short_floor_policy(숏 하한 정책)"
+  ],
+  "claim_boundary": "research_development_materialization_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "comparison_baseline": "CG selected h17 focus and parent CD02(CG 선택 17시 집중과 상위 CD02)",
+  "control_variables": [
+    "symbol US100(심볼 US100)",
+    "timeframe M5(시간프레임 M5)",
+    "no new entries(새 진입 없음)",
+    "no top_n(top_n 없음)"
+  ],
+  "created_at_utc": "2026-06-04T21:20:30Z",
+  "decision_use": "run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1",
+  "evidence_plan": [
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CI/run364CJ_h17_focus_month_cost_stress_repair_scout_queue.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CI/data_integrity_audit.csv",
+    "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364CI/required_gate_coverage_audit.csv"
+  ],
+  "failure_criteria": "edge only survives by exact-date deletion, top_n, trade splitting, or short collapse",
+  "hypothesis": "h17 focus can be repaired by cost stress guard, timestamp-safe month guard, and short floor rescue(17시 집중은 비용 압박 가드/시점 안전 월 가드/숏 하한 복원으로 수리 가능)",
+  "invalid_conditions": "lookahead feature, exact 2025 date filter, synthetic extra entries",
+  "run_id": "run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1",
+  "sample_scope": "Stage364 CG/CH proxy evidence only(Stage364 CG/CH 프록시 근거 전용)",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "stop_conditions": "open MT5 package only after CJ proxy clears stress/source/month guards",
+  "success_criteria": "net_delta>0, PF>=parent, density>=3, short_count>=100, stress_delta>=0"
+}

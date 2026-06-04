@@ -6508,3 +6508,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): cost-stable h17 source guard proxy(비용 안정 17시 원천 가드 프록시)를 package gate(패키지 게이트)와 stress attribution(압박 귀속)으로 검토했다.
 - effect(효과): package(패키지)는 거절하고 `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1` CI repair inputs(CI 수리 입력)를 열었다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CH_cost_stable_h17_source_guard_review.md`
+
+## 2026-06-05 - run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1
+
+- action(행동): CH failure memory(CH 실패 기억)를 `16`개 CJ repair scout(CJ 수리 정찰) 입력으로 구체화했다.
+- effect(효과): stage branch(단계 분기) 없이 `run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1`로 비용/월/숏 하한 수리 replay(재생)를 연다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364CI_h17_focus_month_cost_stress_repair_inputs.md`

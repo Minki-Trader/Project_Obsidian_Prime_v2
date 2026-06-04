@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`
+Current run(현재 실행): `run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`
 
-Current truth(현재 진실): run364CH(364CH 실행)는 `cg09_best_open_hour_overlay_focus`를 package(패키지)에서 거절하고 CI repair seed(CI 수리 씨앗)로 보존했다. 이유는 bad months(나쁜 월) `['2025-08', '2025-12']`, cost stress delta(비용 압박 차이) `-1.13`, new MT5 execution(새 MT5 실행) 없음이다.
+Current truth(현재 진실): run364CI(364CI 실행)는 CH failure memory(CH 실패 기억)를 `16`개 CJ scout queue(CJ 정찰 대기열)로 구체화했다. no-split(무분할), no top_n(no top_n), no exact date filter(정확 날짜 필터 없음) 조건을 기록했다.
 
-Next action(다음 행동): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`에서 h17 focus(17시 집중), bad month guard(나쁜 월 가드), short floor rescue(숏 하한 복원)를 구체화한다.
+Next action(다음 행동): `run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1`에서 queue(대기열)를 proxy replay(프록시 재생)한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 
