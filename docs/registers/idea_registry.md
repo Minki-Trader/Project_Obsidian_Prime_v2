@@ -1156,3 +1156,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364CB_swap_sensitive_guard_stack -->
 - Idea(아이디어): BX3 guard stack(BX3 가드 묶음)은 trade path(거래 경로) 기준으로 유지되지만 net rank(순수익 순위)는 swap table(스왑표)에 민감하다. Effect(효과): 다음 탐색은 h17 synthetic overlay(17시 합성 오버레이)와 h21-h22 calendar block(h21-h22 캘린더 차단)을 보존하되, swap-stable reprobe(스왑 안정 재탐침)와 gross/net/cost 분리 평가를 같이 진행한다.
+
+<!-- run364CC_swap_source_guard_handoff -->
+- Idea(아이디어): BX3와 CA01의 trade path(거래 경로)가 같으므로 next runtime probe(다음 런타임 탐침)는 same-session swap stability(동일 세션 스왑 안정성)와 h17 synthetic overlay source value(17시 합성 오버레이 원천 가치)를 같이 본다. Effect(효과): 비용 드리프트와 원천 단서를 분리해 다음 공격 탐색을 덜 흐리게 만든다.
