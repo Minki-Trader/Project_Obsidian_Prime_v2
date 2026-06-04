@@ -1,0 +1,52 @@
+{
+  "backtest_judgment": "blocked(차단)",
+  "claim_boundary": "research_development_runtime_precheck_and_blocker_recovery_only_no_exact_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "cost_assumptions": "tester identity fixed, broker-native real-tick costs intended but not executed(테스터 정체성 고정, 브로커 실제 틱 비용 의도이나 미실행)",
+  "ea_identity": [
+    {
+      "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "sha256": "474b6e21556b6fd885e401d9f484f4846ee38fac499340e7eaff608d421e7894",
+      "status": "present"
+    },
+    {
+      "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+      "sha256": "c9ac23f4953755b27072ef14239cf9d4f3d703f12f460942af703702b9bccaaf",
+      "status": "present"
+    },
+    {
+      "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+      "sha256": "49cc0bf61d6feccc52c47d9246804c99991bb0df7d7cc49dc6398d02f52bc597",
+      "status": "present"
+    },
+    {
+      "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+      "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560",
+      "status": "present"
+    },
+    {
+      "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+      "sha256": "314193b3d713d5ee96a89088a33935b2bb203c4ed006f7f4254b119c294a2e00",
+      "status": "present"
+    },
+    {
+      "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+      "sha256": "115f79936493a0d944484ffb619d6120a3f49a8b044c509ec5f4753267373637",
+      "status": "present"
+    },
+    {
+      "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+      "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7",
+      "status": "present"
+    }
+  ],
+  "forensic_checks": [
+    "set_manifest",
+    "ini_manifest",
+    "compile_attempt",
+    "semantic_gap_audit"
+  ],
+  "report_identity": "missing_not_run(미실행으로 누락)",
+  "run_id": "run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1",
+  "tester_identity": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BU/tester_identity_contract.csv",
+  "trade_evidence": "proxy only; no exact MT5 trades(프록시 전용, 정확 MT5 거래 없음)"
+}

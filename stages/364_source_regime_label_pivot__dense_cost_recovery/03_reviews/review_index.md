@@ -268,3 +268,6 @@
 - `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BS_late_year_short_share_stress_repair_scout.md` - late-year short-share stress repair scout(연말 숏비중 압박 수리 탐색).
 
 - `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`: `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BT_late_year_short_share_stress_repair_review.md` - late-year stress repair review(연말 압박 수리 검토).
+
+<!-- run364BU -->
+- `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`: late-year session gate MT5 precheck(연말 세션 게이트 MT5 사전점검) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BU_late_year_session_gate_mt5_precheck.md`

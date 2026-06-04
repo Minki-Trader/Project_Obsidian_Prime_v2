@@ -240,3 +240,8 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 Action(행동): h17-20 short router(17~20시 숏 라우터)를 fixed6 proxy(고정6봉 프록시)로 정찰했다.
 
 Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN 검토)로 넘어가며, MT5 재탐침 전까지 운영 주장은 닫는다.
+
+<!-- run364BU -->
+## run364BU late-year session gate MT5 precheck(연말 세션 게이트 MT5 사전점검)
+
+`inconclusive_runtime_precheck_calendar_gate_supported_but_exact_mt5_blocked_synthetic_short_source_no_authority`. Next(다음): `run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1`.

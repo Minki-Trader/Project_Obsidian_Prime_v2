@@ -1132,3 +1132,6 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): December h21 long suppression(12월 21시 롱 억제)은 proxy stress(프록시 압박)를 해소할 수 있지만 low-sample watch(소표본 관찰)가 필요하다.
 - positive clue(긍정 단서): selected proxy(선택 프록시) net/PF/density/short share `1063.14` / `1.4220035161` / `3.0720720721` / `0.1221896383`.
 - next action(다음 행동): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`.
+
+<!-- run364BU_late_year_session_gate -->
+- Idea(아이디어): December h21 long suppression(12월 21시 롱 억제) as runtime calendar block(런타임 달력 차단). Effect(효과): low-sample proxy repair(소표본 프록시 수리)를 `.set` parameter(설정 파라미터)로 표현한다.

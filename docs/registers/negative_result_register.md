@@ -698,3 +698,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - failure_memory(실패 기억): proxy stress clear(프록시 압박 해소)가 있어도 MT5 reprobe(MT5 재탐침)와 BT review(BT 검토)가 없으면 operating claim(운영 주장)이 아니다.
 - salvage_value(회수 가치): `bs02_late_year_parent_session_suppress__moy12__h21__side_long`는 late-year/session repair(연말/세션 수리) 후보로 검토 가치가 있다.
 - reopen_condition(재개 조건): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`에서 overfit watch(과적합 관찰)와 proxy/MT5 diff(프록시/MT5 차이)를 닫는다.
+
+<!-- run364BU_synthetic_short_source_blocker -->
+- Blocker memory(차단 기억): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1` could not run exact MT5 precheck(정확 MT5 사전점검) because synthetic short source runtime support(합성 숏 원천 런타임 지원)가 missing(누락)이다. Effect(효과): 다음 작업은 같은 외부 검증 누락을 말로만 반복하지 않고 source materialization(원천 물질화) 또는 rejection(거절)을 해야 한다.

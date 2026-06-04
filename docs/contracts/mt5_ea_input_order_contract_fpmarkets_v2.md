@@ -118,6 +118,24 @@ EA(`Expert Advisor`, 전문가 자문)는 한 파일(all-in-one file, 일체형 
 
 ---
 
+### 4.5 Runtime calendar block(런타임 달력 차단)
+
+`ObsidianPrimeV2_RuntimeProbeEA`는 기본값으로 비활성(disabled, 비활성)인 범용 달력 차단(generic calendar block, 범용 달력 차단)을 가진다.
+
+관련 입력(input, 입력):
+
+- `InpCalendarBlockEnabled`: 달력 차단 사용 여부(enabled flag, 사용 여부)
+- `InpCalendarBlockSide`: `long`, `short`, `both`, `signal` 중 하나
+- `InpCalendarBlockMonth`: 차단할 server month(서버 월). `0` 이하는 all months(전체 월)로 해석
+- `InpCalendarBlockStartHour`: 시작 서버 시간(server hour, 서버 시간)
+- `InpCalendarBlockEndHour`: 종료 서버 시간, half-open range(반개구간)로 해석
+
+이 차단은 target bar time(대상 봉 시간)의 month/hour(월/시간)와 현재 decision side(판정 방향)만 사용한다. 효과(effect, 효과)는 `December h21 long suppression(12월 21시 롱 억제)`처럼 entry-known calendar/session rule(진입시점에 아는 달력/세션 규칙)을 `.set` parameter(설정 파라미터)로 표현하게 하는 것이다.
+
+이 차단은 model probability(모델 확률), realized PnL(실현 손익), future bar(미래 봉), trade outcome ranking(거래 결과 순위)을 사용하면 안 된다. 효과(effect, 효과)는 look-ahead bias(미래참조 편향)를 막고 proxy repair(프록시 수리)를 런타임 의미(runtime semantics, 런타임 의미)와 분리하는 것이다.
+
+---
+
 ## 5. 데이터 획득 원칙
 
 ### 5.1 OHLC source

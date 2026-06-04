@@ -83,6 +83,11 @@ input int             InpTimeMarginGuardStartHour = 0;
 input int             InpTimeMarginGuardEndHour = 24;
 input string          InpTimeMarginGuardBasis = "opposite";
 input double          InpTimeMarginGuardMinMargin = 0.0;
+input bool            InpCalendarBlockEnabled = false;
+input string          InpCalendarBlockSide = "long";
+input int             InpCalendarBlockMonth = 0;
+input int             InpCalendarBlockStartHour = 0;
+input int             InpCalendarBlockEndHour = 24;
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -282,6 +287,19 @@ bool TimeMarginGuardSideMatches(const int signal)
    return false;
   }
 
+bool CalendarBlockSideMatches(const int signal)
+  {
+   string side = InpCalendarBlockSide;
+   StringToLower(side);
+   if(side == "long")
+      return signal == OP_DECISION_LONG;
+   if(side == "short")
+      return signal == OP_DECISION_SHORT;
+   if(side == "both" || side == "signal")
+      return signal == OP_DECISION_LONG || signal == OP_DECISION_SHORT;
+   return false;
+  }
+
 double TimeMarginGuardValue(const int signal,
                             const double p_short,
                             const double p_flat,
@@ -322,6 +340,27 @@ void ApplyRuntimeTimeFilters(const datetime target_time,
 
    MqlDateTime parts;
    TimeToStruct(target_time, parts);
+
+   if(InpCalendarBlockEnabled && CalendarBlockSideMatches(decision.signal))
+     {
+      const bool month_matches = InpCalendarBlockMonth <= 0 || parts.mon == InpCalendarBlockMonth;
+      if(month_matches && HourInRange(parts.hour, InpCalendarBlockStartHour, InpCalendarBlockEndHour))
+        {
+         decision.signal = OP_DECISION_FLAT;
+         decision.label = "flat";
+         decision.confidence = 0.0;
+         decision.margin = 0.0;
+         decision.reason = "calendar_block:month="
+                           + (string)parts.mon
+                           + ",hour="
+                           + (string)parts.hour
+                           + ",side="
+                           + InpCalendarBlockSide
+                           + "|"
+                           + decision.reason;
+         return;
+        }
+     }
 
    if(InpMarchNonHour16MarginFilter && parts.mon == InpMarchFilterMonth)
      {
