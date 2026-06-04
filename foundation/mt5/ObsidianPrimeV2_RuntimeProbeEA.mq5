@@ -88,6 +88,10 @@ input string          InpCalendarBlockSide = "long";
 input int             InpCalendarBlockMonth = 0;
 input int             InpCalendarBlockStartHour = 0;
 input int             InpCalendarBlockEndHour = 24;
+input bool            InpSyntheticShortSourceEnabled = false;
+input string          InpSyntheticShortSourceHours = "17|19|20";
+input double          InpSyntheticShortSourcePShortMin = 0.4375;
+input double          InpSyntheticShortSourceMarginVsLongMin = 0.075;
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -298,6 +302,73 @@ bool CalendarBlockSideMatches(const int signal)
    if(side == "both" || side == "signal")
       return signal == OP_DECISION_LONG || signal == OP_DECISION_SHORT;
    return false;
+  }
+
+bool HourListContains(const int hour, const string raw_hours)
+  {
+   string hours = raw_hours;
+   StringTrimLeft(hours);
+   StringTrimRight(hours);
+   StringToLower(hours);
+   if(hours == "" || hours == "*" || hours == "all")
+      return true;
+
+   StringReplace(hours, ",", "|");
+   StringReplace(hours, ";", "|");
+   string parts[];
+   const int count = StringSplit(hours, '|', parts);
+   for(int i = 0; i < count; i++)
+     {
+      string part = parts[i];
+      StringTrimLeft(part);
+      StringTrimRight(part);
+      if(part == "")
+         continue;
+      const int dash = StringFind(part, "-");
+      if(dash > 0)
+        {
+         const int start_hour = (int)StringToInteger(StringSubstr(part, 0, dash));
+         const int end_hour = (int)StringToInteger(StringSubstr(part, dash + 1));
+         if(HourInRange(hour, start_hour, end_hour))
+            return true;
+         continue;
+        }
+      if(hour == (int)StringToInteger(part))
+         return true;
+     }
+   return false;
+  }
+
+void ApplySyntheticShortSourceOverlay(const datetime target_time,
+                                      const double p_short,
+                                      const double p_flat,
+                                      const double p_long,
+                                      SOpDecisionResult &decision)
+  {
+   if(!InpSyntheticShortSourceEnabled)
+      return;
+
+   MqlDateTime parts;
+   TimeToStruct(target_time, parts);
+   if(!HourListContains(parts.hour, InpSyntheticShortSourceHours))
+      return;
+
+   const double margin_vs_long = p_short - p_long;
+   if(p_short < InpSyntheticShortSourcePShortMin || margin_vs_long < InpSyntheticShortSourceMarginVsLongMin)
+      return;
+
+   decision.signal = OP_DECISION_SHORT;
+   decision.label = "short";
+   decision.confidence = p_short;
+   decision.margin = margin_vs_long;
+   decision.reason = "synthetic_short_source_overlay:hour="
+                     + (string)parts.hour
+                     + ",p_short="
+                     + DoubleToString(p_short, 6)
+                     + ",margin_vs_long="
+                     + DoubleToString(margin_vs_long, 6)
+                     + "|"
+                     + decision.reason;
   }
 
 double TimeMarginGuardValue(const int signal,
@@ -1074,6 +1145,7 @@ void ProcessClosedBar()
                                  decision,
                                  secondary_trigger);
      }
+   ApplySyntheticShortSourceOverlay(target_time, p_short, p_flat, p_long, decision);
    ApplyRuntimeTimeFilters(target_time, p_short, p_flat, p_long, decision);
 
    const int routed_signal_before_entry_gate = decision.signal;

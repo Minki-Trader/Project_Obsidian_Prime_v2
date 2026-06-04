@@ -245,3 +245,8 @@ Effect(효과): `bm04_short_router_ps0440_h17_20_overlay_fixed6`가 BN review(BN
 ## run364BU late-year session gate MT5 precheck(연말 세션 게이트 MT5 사전점검)
 
 `inconclusive_runtime_precheck_calendar_gate_supported_but_exact_mt5_blocked_synthetic_short_source_no_authority`. Next(다음): `run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1`.
+
+<!-- run364BV -->
+## run364BV synthetic short source runtime repair(합성 숏 원천 런타임 수리)
+
+`blocked_runtime_probe_attempted_outputs_or_report_missing_no_authority`. Next(다음): `run364BW_review_synthetic_short_source_runtime_probe_without_db_v1`.

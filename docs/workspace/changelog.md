@@ -6464,3 +6464,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364BU -->
 - 2026-06-04T16:42:33Z `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1` added calendar block support(달력 차단 지원 추가), compile-checked EA(컴파일 확인 EA), and recorded exact MT5 precheck blocker(정확 MT5 사전점검 차단 사유 기록).
+
+<!-- run364BV -->
+- 2026-06-04T17:04:10Z `run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1` materialized synthetic short source overlay(합성 숏 원천 덧씌움) and MT5 runtime probe(MT5 런타임 탐침). Judgment(판정): `blocked_runtime_probe_attempted_outputs_or_report_missing_no_authority`.

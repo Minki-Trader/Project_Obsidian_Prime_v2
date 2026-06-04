@@ -1135,3 +1135,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364BU_late_year_session_gate -->
 - Idea(아이디어): December h21 long suppression(12월 21시 롱 억제) as runtime calendar block(런타임 달력 차단). Effect(효과): low-sample proxy repair(소표본 프록시 수리)를 `.set` parameter(설정 파라미터)로 표현한다.
+
+<!-- run364BV_synthetic_short_source -->
+- Idea(아이디어): BQ/BS synthetic short source(합성 숏 원천)를 runtime overlay(런타임 덧씌움)로 표현한다. Effect(효과): proxy short share repair(프록시 숏 비중 수리)를 MT5 cost/fill(비용/체결)로 검증한다.

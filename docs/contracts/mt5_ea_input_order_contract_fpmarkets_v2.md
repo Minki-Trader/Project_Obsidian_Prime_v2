@@ -136,6 +136,23 @@ EA(`Expert Advisor`, 전문가 자문)는 한 파일(all-in-one file, 일체형 
 
 ---
 
+### 4.6 Runtime synthetic short source overlay(런타임 합성 숏 원천 덧씌움)
+
+`ObsidianPrimeV2_RuntimeProbeEA`는 기본값으로 비활성(disabled, 비활성)인 합성 숏 원천 덧씌움(synthetic short source overlay, 합성 숏 원천 덧씌움)을 가진다.
+
+관련 입력(input, 입력):
+
+- `InpSyntheticShortSourceEnabled`: 합성 숏 원천 사용 여부(enabled flag, 사용 여부)
+- `InpSyntheticShortSourceHours`: 허용할 server hour list(서버 시간 목록). 예: `17|19|20`
+- `InpSyntheticShortSourcePShortMin`: 최소 `p_short`
+- `InpSyntheticShortSourceMarginVsLongMin`: 최소 `p_short - p_long`
+
+이 overlay(덧씌움)는 target bar time(대상 봉 시간)의 hour(시간)와 closed M5 bar(닫힌 5분봉) 모델 확률 `[p_short, p_flat, p_long]`만 사용한다. 조건이 맞으면 decision(판정)을 short(숏)으로 바꾼다. 효과(effect, 효과)는 Python proxy(파이썬 프록시)가 entry-known probability/hour rule(진입시점 확률/시간 규칙)로 만든 synthetic fixed-hold short source(합성 고정 보유 숏 원천)를 MT5 runtime probe(MT5 런타임 탐침)에서 표현할 수 있게 하는 것이다.
+
+이 overlay(덧씌움)는 realized PnL(실현 손익), future bar(미래 봉), exact year-month(정확 연월), trade outcome ranking(거래 결과 순위), top_n(상위 선택)을 사용하면 안 된다. 효과(effect, 효과)는 look-ahead bias(미래참조 편향)를 막고, proxy expected value(프록시 예상값)를 MT5 KPI(MT5 핵심 성과 지표)로 착각하지 않게 하는 것이다.
+
+---
+
 ## 5. 데이터 획득 원칙
 
 ### 5.1 OHLC source

@@ -271,3 +271,6 @@
 
 <!-- run364BU -->
 - `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`: late-year session gate MT5 precheck(연말 세션 게이트 MT5 사전점검) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BU_late_year_session_gate_mt5_precheck.md`
+
+<!-- run364BV -->
+- `run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1`: synthetic short source runtime repair(합성 숏 원천 런타임 수리) -> `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BV_synthetic_short_source_runtime_repair.md`
