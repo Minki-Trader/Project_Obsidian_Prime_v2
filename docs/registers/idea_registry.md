@@ -1126,3 +1126,9 @@ Register ideas when they become durable work, not for every passing thought.
 - idea(아이디어): BQ h19 bridge(19시 브리지)는 short share(숏 비중)를 복구하는 positive clue(긍정 단서)지만 late-year stress(연말 압박)가 남는다.
 - positive clue(긍정 단서): net/PF/density/short share `1047.85` / `1.4129932946` / `3.0870870871` / `0.1215953307`.
 - next action(다음 행동): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`.
+
+## run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1
+
+- idea(아이디어): December h21 long suppression(12월 21시 롱 억제)은 proxy stress(프록시 압박)를 해소할 수 있지만 low-sample watch(소표본 관찰)가 필요하다.
+- positive clue(긍정 단서): selected proxy(선택 프록시) net/PF/density/short share `1063.14` / `1.4220035161` / `3.0720720721` / `0.1221896383`.
+- next action(다음 행동): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`.

@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`
+Current run(현재 실행): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`
 
-Current truth(현재 진실): run364BS(364BS 실행)는 `bs02_late_year_parent_session_suppress__moy12__h21__side_long` proxy repair candidate(프록시 수리 후보)를 만들었고 month_bad_count(월 나쁨 수)는 `0`지만 MT5 검토 전이다.
+Current truth(현재 진실): run364BT(364BT 실행)는 `bs02_late_year_parent_session_suppress__moy12__h21__side_long`를 BU MT5 precheck(BU MT5 사전검사)로 넘겼지만 low-sample watch(소표본 관찰)와 no-authority(무권위) 경계를 유지한다.
 
-Next action(다음 행동): `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1`에서 overfit watch(과적합 관찰), proxy/MT5 diff(프록시/MT5 차이), package precheck eligibility(패키지 사전검사 적격성)를 검토한다.
+Next action(다음 행동): `run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1`에서 MT5 precheck request(사전검사 요청)를 물질화하고 좁은 Strategy Tester probe(전략 테스터 탐침)를 시도한다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 

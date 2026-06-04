@@ -6455,3 +6455,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): late-year short-share stress repair proxy scout(연말 숏비중 압박 수리 프록시 탐색)를 실행했다.
 - effect(효과): `bs02_late_year_parent_session_suppress__moy12__h21__side_long`를 `run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1` 검토로 넘기고 package(패키지)는 열지 않았다.
 - report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BS_late_year_short_share_stress_repair_scout.md`
+
+## 2026-06-05 - run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1
+
+- action(행동): late-year short-share stress repair review(연말 숏비중 압박 수리 검토)를 완료했다.
+- effect(효과): `bs02_late_year_parent_session_suppress__moy12__h21__side_long`를 BU MT5 precheck(BU MT5 사전검사)로 넘기고 authority(권위)는 주장하지 않았다.
+- report(보고서): `stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BT_late_year_short_share_stress_repair_review.md`

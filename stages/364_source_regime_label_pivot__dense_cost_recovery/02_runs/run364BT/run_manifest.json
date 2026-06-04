@@ -1,0 +1,234 @@
+{
+  "claim_boundary": "research_development_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "created_at_utc": "2026-06-04T16:23:33Z",
+  "final_decision": {
+    "baseline_run_id": "run364BF_review_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1",
+    "claim_boundary": "research_development_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+    "created_at_utc": "2026-06-04T16:23:33Z",
+    "decision": "stage364BT_open_run364BU_late_year_session_gate_mt5_precheck",
+    "forward_passed": "not_claimed",
+    "gate_passes": 9,
+    "gate_total": 9,
+    "goal_achieve": "not_claimed",
+    "judgment": "positive_proxy_repair_review_precheck_eligible_low_sample_watch_no_mt5_authority",
+    "live_readiness": "not_claimed",
+    "new_model_training": "not_run",
+    "new_mt5_execution": "not_run",
+    "next_run_id": "run364BU_prepare_late_year_session_gate_mt5_precheck_without_db_v1",
+    "operating_promotion": "not_claimed",
+    "overfit_watch": "low_sample_month_of_year_session_gate_watch(소표본 월중 세션 게이트 관찰)",
+    "parent_run_id": "run364BS_train_late_year_short_share_stress_repair_scout_without_db_v1",
+    "precheck_decision": "eligible_for_bu_precheck_not_package_authority(BU 사전검사 적격, 패키지 권위 아님)",
+    "reviewed_candidate_id": "bs02_late_year_parent_session_suppress__moy12__h21__side_long",
+    "reviewed_closed_drawdown_amount": 67.67,
+    "reviewed_density": 3.0720720721,
+    "reviewed_expectancy": 1.0392346041,
+    "reviewed_long_trade_count": 898,
+    "reviewed_min_month_net": 8.44,
+    "reviewed_min_month_profit_factor": 1.0908354181,
+    "reviewed_month_bad_count": 0,
+    "reviewed_net_profit": 1063.14,
+    "reviewed_package_like_rows": 37,
+    "reviewed_parent_suppress_hours": "21",
+    "reviewed_parent_suppress_months": "12",
+    "reviewed_parent_suppress_side": "long",
+    "reviewed_parent_suppressed_net_profit": -15.29,
+    "reviewed_parent_suppressed_trade_count": 5,
+    "reviewed_profit_factor": 1.4220035161,
+    "reviewed_recovery_factor": 15.7106103148,
+    "reviewed_short_share": 0.1221896383,
+    "reviewed_short_trade_count": 125,
+    "reviewed_trade_count": 1023,
+    "robustness_review_rows": 15,
+    "run_id": "run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1",
+    "run_number": "run364BT",
+    "runtime_authority": "not_claimed",
+    "source_runtime_probe_run_id": "run364BK_review_h19_opposite_margin_runtime_probe_without_db_v1",
+    "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+    "status": "completed_stage364BT_bs_review_precheck_eligible_open_bu_no_authority"
+  },
+  "inputs": [
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/final_decision.json",
+      "sha256": "86ffd32440caea3ad9bb4fcfad9abda232014eb482d31d52be5e7d6ac150a460"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/required_gate_coverage_audit.csv",
+      "sha256": "71d35605d5d7e8e8bff51769904e22325e242234f6f69bac2e995d1520fe147a"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/bs_rule_surface.csv",
+      "sha256": "709e49a2b6ca6301aec5577e654c897c09f013881767858397428c09de823289"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/selected_bs_candidate.json",
+      "sha256": "adcec77bbf211d758e9466a994376d25a32cac06cb3e9321530a035ea4f00c39"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/selected_bs_trade_tape.csv",
+      "sha256": "dea014579553a2733d4c28a21d848cfb3297b4b0618507886be0c3969b4d6baa"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/selected_bs_synthetic_short_tape.csv",
+      "sha256": "e32518896e515a1aa2c6a98b2a7daac730f2b16c898ee5f53b6176f21b7b6d4b"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/selected_bs_displaced_parent_trades.csv",
+      "sha256": "b00ee78f22406ca5327b54f0fbe036918aecb5ea5e00ce256d13a984df993fbd"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/selected_bs_parent_suppressed_trades.csv",
+      "sha256": "e61531badc8587ea3687a4ba4db3bbc3230b9e924dc75f829f16b7822df0a229"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/late_year_stress_repair_attribution.csv",
+      "sha256": "bb255e6b08f9d923f62cfc1cb9ee189273fed0ab8c260ac69588a03b5189c0fd"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/stress_slice_review.csv",
+      "sha256": "d855afcbbc4e9ca79f8d55b1b7d30818b36c2bca1627aed96ad2135755543d3a"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/overfit_guardrail_audit.csv",
+      "sha256": "6364464f2051c922ba8e936bf91f9f2cc50a9f984753262739099d01ba796ecc"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/proxy_mt5_diff_plan.csv",
+      "sha256": "e969f96672730d73bb0a0a9de21a56ef871dbf603b61463cba10764d76039f04"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/run364BT_review_queue.csv",
+      "sha256": "f3bcfddc9626c9d350229b24b15205ed3d51b6b455ac56b98644595c33a72599"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BS/run_manifest.json",
+      "sha256": "d358c523c7ccfd9a25067bab7fd43ccbfc60a17f9412be9fd6287bf22ebb0fc6"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/input_manifest.csv",
+      "sha256": "f297e0b5a5f87bedf9ab5af24169b6f6c93ed42b5e8e0c81004e880b817b2067"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/package_precheck_decision.csv",
+      "sha256": "e1838e504e2e35220cbda29a4679516b63f4ce91ade3f9d4b320bce41688b2ab"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/overfit_review.csv",
+      "sha256": "911099db3549130412b5b7c92625a575cf27018d062ca97f29fec699b0a3d59f"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/robustness_surface_review.csv",
+      "sha256": "b4c0090fd053bb8ce0b6c31062b7b72483d7dbc57d89b6e04b8e86a5e3e19426"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/proxy_mt5_diff_review.csv",
+      "sha256": "a0043ed3371ce89c251bb5c4c5b913e9d244686a4e30d97407cc76202db08d31"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/run364BU_mt5_precheck_queue.csv",
+      "sha256": "e819f71c7bc50757e5771c3de858b30c486def95be9f3c7499edbe1a51e02b69"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/work_packet.json",
+      "sha256": "ffedf6b950272fc4c8050156fe0344b6f211e7ad0e70aa1d7584d4f902c76dc5"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/kpi_evidence_receipt.json",
+      "sha256": "e33c60c2e6c8b5bb4e4074b884b4470102d63b7eeded0a425daf4534d26992c2"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/data_integrity_receipt.json",
+      "sha256": "a41ecd80bf16bcabc2cbd36ecd6d0d7fe33cbb36153f37dba036dabc39ca125c"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/performance_attribution_receipt.json",
+      "sha256": "21fc969189f824bc9c61c01f25cb1931d109323f39e4d9c50c6e8ba75a4adbbd"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/result_judgment_receipt.json",
+      "sha256": "35469eba70c96b7d61558d3627a05a99abe1a7b937efdb2ba6a81a8c3ebddc5e"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/claim_boundary_receipt.json",
+      "sha256": "8287b6aecd4710f1df23fca02520c01994f4b73125a22b383692e001ef9ea78d"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/required_gate_coverage_audit.csv",
+      "sha256": "25ec95e8719007279b7d14709e64cc09c97d85bc51e42967de1bbb2893a3755c"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364BT/final_decision.json",
+      "sha256": "a14e6e5c5beb00dc5943263986bd1fd0383338889d059270365d5bd3dc66e0ae"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364BT_late_year_short_share_stress_repair_review.md",
+      "sha256": "34170b0338dde398b4e688f1377411e6eeb09fa29ded19bef13719a529b72f9b"
+    },
+    {
+      "path": "docs/decisions/2026-06-05_stage364BT_late_year_short_share_stress_repair_review.md",
+      "sha256": "af962433e9bae249e7a7dc599ba5de4e540a6c3dad104bd7f8543bbbd9c0fd3e"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/review_index.md",
+      "sha256": "23eb07ed8b0ecfc2a47d82d47b616c73c4d363de562f93bd4b74d3ffc84a2fac"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/stage_run_ledger.csv",
+      "sha256": "b39b7aee552d4e0a88aafc3d7313b19a82531f852dada917741fa5c1230a8c10"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/00_spec/stage_brief.md",
+      "sha256": "b11a338bc8550f03f39679e411da4fda54bc9b6cb0dc5f28ccf13af63c573333"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/04_selected/selection_status.md",
+      "sha256": "1dabd1ddc68ae48d2c732a98d7a60f91ce8bb456273dcedfdb48be0530a4b17a"
+    },
+    {
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/README.md",
+      "sha256": "92ba2c67a7bcdc32daa459295834daf3eebc8c9d3548a94ef5030562dbee260a"
+    },
+    {
+      "path": "docs/workspace/workspace_state.yaml",
+      "sha256": "09a5ba7d6316c90e9431c152b8b41d2077d4358dcf62204015691c45d0ec9f65"
+    },
+    {
+      "path": "docs/context/current_working_state.md",
+      "sha256": "b028139cd2dea47961206e53a56a00726ef3862c9086835a3a35136a3de20eb2"
+    },
+    {
+      "path": "docs/workspace/changelog.md",
+      "sha256": "8c29a535c4222b21d2ac2f92ff5d3e4be93a44e3c383d95dc0e0fdb8dd6e98c2"
+    },
+    {
+      "path": "docs/registers/run_registry.csv",
+      "sha256": "2b5c65ab102c1184cd088d6bd2dae37747fed8a1a2d40cb3df11e25649961063"
+    },
+    {
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "sha256": "0efe2ad43c81848242c107f935b13788a67eb0773cd81b9a2130cfe3d7fb10c0"
+    },
+    {
+      "path": "docs/registers/artifact_registry.csv",
+      "sha256": "a4c609dcc6612c6fffc063f6682a71d78f2eb94684a34e7cffe762ee9808825f"
+    },
+    {
+      "path": "docs/registers/idea_registry.md",
+      "sha256": "cf3a1814e8e1b6e5a872759a17e0cf13e914db1e48218da6dcd1de41f3cbcd9e"
+    },
+    {
+      "path": "docs/registers/negative_result_register.md",
+      "sha256": "e63c760444a289c3a3334a2bc11fb49d68201e7825f5174edd62cb90fb458c34"
+    },
+    {
+      "path": "stage_pipelines/stage364/review_late_year_short_share_stress_repair_scout_without_db.py",
+      "sha256": "9fae559ebdd5aa0aee8e8fda659948009104a34e58ef369f4ec1d992dacaac35"
+    }
+  ],
+  "producer": "stage_pipelines/stage364/review_late_year_short_share_stress_repair_scout_without_db.py",
+  "run_id": "run364BT_review_late_year_short_share_stress_repair_scout_without_db_v1",
+  "run_number": "run364BT",
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery"
+}
