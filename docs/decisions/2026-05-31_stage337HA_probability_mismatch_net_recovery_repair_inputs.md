@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337HA Decision(337HA 결정)
+
+- run_id(실행 ID): `run337HA_materialize_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_inputs_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337GZ_design_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_without_db_v1`
+- status(상태): `completed_stage337HA_probability_mismatch_net_recovery_repair_inputs_materialized_no_training_no_selection`
+- judgment(판정): `train_only_probability_mismatch_net_recovery_inputs_materialized_review_required`
+- decision(결정): `stage337HA_open_run337HB_review_probability_mismatch_net_recovery_repair_inputs`
+- next_action(다음 행동): `run337HB_review_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337HA_probability_mismatch_net_recovery_repair_inputs.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HA/train_only_probability_mismatch_net_recovery_input_frame.parquet`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HA/target_contract_audit.csv`
+
+Action(행동): probability mismatch/net recovery repair(확률 불일치/순수익 회복 수리)을 학습 전용 입력으로 물질화했다.
+Effect(효과): HB review(HB 검토)가 target contract(목표 계약), feature boundary(피처 경계), weight sanity(가중치 정상성)를 검토할 수 있다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337HA_probability_mismatch_net_recovery_repair_inputs_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

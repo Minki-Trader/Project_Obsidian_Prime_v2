@@ -214,6 +214,71 @@ def export_sklearn_to_onnx_zipmap_disabled(
     }
 
 
+def export_lightgbm_classifier_to_onnx(
+    model: Any,
+    output_path: Path,
+    *,
+    feature_count: int,
+    input_name: str = "float_input",
+    target_opset: int = 13,
+    drop_label_output: bool = True,
+) -> dict[str, Any]:
+    from onnxmltools.convert import convert_lightgbm
+    from onnxmltools.convert.common.data_types import FloatTensorType
+
+    onnx_model = convert_lightgbm(
+        model,
+        initial_types=[(input_name, FloatTensorType([None, int(feature_count)]))],
+        target_opset=target_opset,
+        zipmap=False,
+    )
+    outputs_before = [
+        {
+            "name": output.name,
+            "value_type": output.type.WhichOneof("value"),
+            "shape": _onnx_output_shape(output),
+        }
+        for output in onnx_model.graph.output
+    ]
+    probability_outputs = [
+        item["name"]
+        for item in outputs_before
+        if len(item["shape"]) == 2 and item["shape"][-1] in {len(LABEL_ORDER), "N"}
+    ]
+    if drop_label_output and probability_outputs:
+        keep_name = probability_outputs[0]
+        keep_outputs = [output for output in onnx_model.graph.output if output.name == keep_name]
+        del onnx_model.graph.output[:]
+        onnx_model.graph.output.extend(keep_outputs)
+
+    io_path(output_path.parent).mkdir(parents=True, exist_ok=True)
+    io_path(output_path).write_bytes(onnx_model.SerializeToString())
+    outputs = [
+        {
+            "name": output.name,
+            "value_type": output.type.WhichOneof("value"),
+            "shape": _onnx_output_shape(output),
+        }
+        for output in onnx_model.graph.output
+    ]
+    final_probability_outputs = [
+        item["name"]
+        for item in outputs
+        if len(item["shape"]) == 2 and item["shape"][-1] in {len(LABEL_ORDER), "N"}
+    ]
+    return {
+        "path": output_path.as_posix(),
+        "sha256": sha256_file(output_path),
+        "input_name": input_name,
+        "target_opset": target_opset,
+        "zipmap_disabled": True,
+        "label_output_dropped": bool(drop_label_output and probability_outputs),
+        "outputs_before_drop": outputs_before,
+        "outputs": outputs,
+        "probability_output_name": final_probability_outputs[0] if final_probability_outputs else outputs[-1]["name"],
+    }
+
+
 def export_xgboost_classifier_to_onnx(
     model: Any,
     output_path: Path,

@@ -1,0 +1,14 @@
+﻿# 2026-05-31 Stage337EX Decision(337EX 결정)
+
+- run_id(실행 ID): `run337EX_review_broker_confirmed_side_cost_curve_repair_inputs_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337EW_materialize_broker_confirmed_side_cost_curve_repair_inputs_without_db_v1`
+- status(상태): `completed_stage337EX_side_cost_curve_repair_inputs_review_guarded_training_eligible_no_training_no_selection`
+- judgment(판정): `train_only_side_cost_curve_inputs_pass_feature_label_quarantine_review_guarded_training_eligible`
+- decision(결정): `stage337EX_open_run337EY_train_broker_confirmed_side_cost_curve_repair_candidates_without_db`
+- next_action(다음 행동): `run337EY_train_broker_confirmed_side_cost_curve_repair_candidates_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337EX_broker_confirmed_side_cost_curve_repair_input_review.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337EX/required_gate_coverage_audit.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337EX/ey_training_task_matrix.csv`
+
+Action(행동): EW 입력을 feature-label boundary(피처-라벨 경계), forward quarantine(전진 격리), release gate(해제 게이트) 기준으로 검토했다.
+Effect(효과): EY guarded training(방어 학습)을 열되 Forward/Goal(전진/목표), runtime authority(런타임 권위), operating promotion(운영 승격)은 주장하지 않는다.
+
+claim_boundary(주장 경계): `research_development_only_stage337EX_broker_confirmed_side_cost_curve_repair_input_review_without_db_no_model_training_no_threshold_tuning_no_db_rule_rewrite_no_lot_optimization_no_candidate_selection_no_mt5_probe_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

@@ -1,0 +1,12 @@
+﻿# 2026-06-01 Stage337IV Decision(337IV 결정)
+
+- run_id(실행 ID): `run337IV_materialize_lifecycle_cost_positive_low_edge_cost_stress_trade_shape_expansion_inputs_without_db_v1`
+- decision(결정): `stage337IV_open_run337IW_review_positive_low_edge_expansion_inputs`
+- judgment(판정): `timestamp_safe_positive_low_edge_expansion_inputs_materialized_review_required`
+- next_run_id(다음 실행 ID): `run337IW_review_lifecycle_cost_positive_low_edge_cost_stress_trade_shape_expansion_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IV/iv_positive_low_edge_expansion_input_frame.parquet`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IV/iv_weight_audit.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IV/run337IW_training_task_seed_matrix.csv`
+
+Action(행동): timestamp-safe(시점 안전) 양수 낮은 엣지 확장 입력을 물질화했다.
+Effect(효과): 다음 단계는 학습이 아니라 입력 적격성 검토로 닫힌다.
+
+claim_boundary(주장 경계): `research_development_input_materialization_only_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_achieve`

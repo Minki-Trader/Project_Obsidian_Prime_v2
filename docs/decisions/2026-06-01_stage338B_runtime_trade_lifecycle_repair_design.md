@@ -1,0 +1,12 @@
+﻿# 2026-06-01 Stage338B Decision(338B 결정)
+
+- run_id(실행 ID): `run338B_design_runtime_trade_lifecycle_proxy_positive_mt5_negative_repair_without_db_v1`
+- decision(결정): `stage338B_open_run338C_materialize_runtime_trade_lifecycle_repair_inputs`
+- judgment(판정): `trade_lifecycle_repair_design_opened_from_valid_negative_runtime_probe_no_selection`
+- next_run_id(다음 실행 ID): `run338C_materialize_runtime_trade_lifecycle_proxy_positive_mt5_negative_repair_inputs_without_db_v1`
+- evidence(근거): `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338B/run338B_trade_lifecycle_design_matrix.csv`, `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338B/run338B_experiment_design_contract.csv`, `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338B/run338B_data_integrity_contract.csv`, `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338B/run338C_materialization_queue.csv`
+
+Action(행동): trade lifecycle repair(거래 생명주기 수리) 설계를 materialization-ready(입력 생성 준비) 상태로 닫았다.
+Effect(효과): Stage338(338단계)이 곧바로 data/materialization(데이터/입력 생성)으로 이동한다.
+
+claim_boundary(주장 경계): `research_development_design_only_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

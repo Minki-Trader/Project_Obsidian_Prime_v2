@@ -1,0 +1,15 @@
+﻿# 2026-06-01 Stage337HW Decision(337HW 결정)
+
+- run_id(실행 ID): `run337HW_design_proxy_negative_trade_shape_offensive_pivot_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337HV_review_proxy_negative_trade_shape_second_order_repair_training_without_db_v1`
+- status(상태): `completed_stage337HW_proxy_negative_trade_shape_offensive_pivot_design_no_training_no_selection`
+- decision(결정): `stage337HW_open_run337HX_proxy_negative_trade_shape_offensive_pivot_inputs`
+- next_action(다음 행동): `run337HX_materialize_proxy_negative_trade_shape_offensive_pivot_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337HW_proxy_negative_trade_shape_offensive_pivot_design.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HW/offensive_pivot_design_matrix.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HW/experiment_design_contract.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HW/run337HX_materialization_queue.csv`
+
+Action(행동): repeated proxy negative(반복 프록시 음수)를 offensive pivot(공격 전환) 아이디어로 등록하고 물질화 대기열을 열었다.
+Effect(효과): 같은 blocker(차단 원인)를 3차 가중치 수리로만 반복하지 않고 새 수익 원천을 탐색한다.
+
+runtime_authority(런타임 권위): `not_claimed`
+goal_achieve(목표 달성): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337HW_proxy_negative_trade_shape_offensive_pivot_design_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_runtime_package_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

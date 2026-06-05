@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337HJ Decision(337HJ 결정)
+
+- run_id(실행 ID): `run337HJ_review_mt5_negative_repair_probability_mismatch_net_recovery_post_runtime_probe_inputs_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337HI_materialize_mt5_negative_repair_probability_mismatch_net_recovery_post_runtime_probe_inputs_without_db_v1`
+- status(상태): `completed_stage337HJ_post_runtime_probe_repair_inputs_review_guarded_training_eligible_no_training_no_selection`
+- judgment(판정): `hi_inputs_target_contract_weights_saturation_and_parity_reviewed_guarded_training_eligible`
+- decision(결정): `stage337HJ_open_run337HK_train_post_runtime_probe_repair_candidates`
+- next_action(다음 행동): `run337HK_train_mt5_negative_repair_probability_mismatch_net_recovery_post_runtime_probe_candidates_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337HJ_post_runtime_probe_repair_input_review.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HJ/hk_training_task_eligibility.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HJ/hh_weight_review.csv`
+
+Action(행동): HI materialized inputs(HI 물질화 입력)을 guarded training eligible(방어 학습 적격)로 검토했다.
+Effect(효과): HK에서 ONNX(온엑스) 후보 학습을 시도할 수 있지만, 운영 주장(operating claim, 운영 주장)은 아직 없다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337HJ_post_runtime_probe_repair_input_review_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

@@ -1,0 +1,5 @@
+﻿# 2026-06-01 Stage337JJ Decision(337JJ 결정)
+
+- decision(결정): `stage337JJ_open_run337JK_runtime_positive_low_pf_recovery_drawdown_dual_probe_repair_design`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JJ/jj_runtime_probe_attempt_review.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JJ/jj_trade_shape_comparison.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JJ/jj_proxy_mt5_attribution.csv`
+- claim_boundary(주장 경계): `research_development_runtime_probe_review_only_no_candidate_selection_no_forward_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

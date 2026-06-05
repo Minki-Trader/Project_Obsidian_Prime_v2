@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337GL Decision(337GL 결정)
+
+- run_id(실행 ID): `run337GL_review_runtime_positive_side_stability_gb_pf_recovery_drawdown_repair_inputs_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337GK_materialize_runtime_positive_side_stability_gb_pf_recovery_drawdown_repair_inputs_without_db_v1`
+- status(상태): `completed_stage337GL_side_stability_gb_pf_recovery_drawdown_repair_inputs_review_guarded_training_eligible_no_training_no_selection`
+- judgment(판정): `gk_inputs_feature_boundary_weights_and_tasks_reviewed_guarded_training_eligible`
+- decision(결정): `stage337GL_open_run337GM_train_side_stability_gb_pf_recovery_drawdown_repair_candidates`
+- next_action(다음 행동): `run337GM_train_runtime_positive_side_stability_gb_pf_recovery_drawdown_repair_candidates_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337GL_side_stability_gb_pf_recovery_drawdown_repair_input_review.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GL/gk_input_review.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GL/gk_weight_review.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GL/gm_training_task_eligibility.csv`
+
+Action(행동): GK materialized inputs(GK 물질화 입력)를 guarded training(방어 학습) 적격으로 검토했다.
+Effect(효과): GM에서 학습과 ONNX export(ONNX 내보내기)를 시도할 수 있다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337GL_side_stability_gb_pf_recovery_drawdown_repair_input_review_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

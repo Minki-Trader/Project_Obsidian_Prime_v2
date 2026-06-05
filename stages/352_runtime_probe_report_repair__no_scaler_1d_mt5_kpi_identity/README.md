@@ -1,0 +1,6 @@
+﻿# Stage352 Runtime Probe Report Repair(352단계 런타임 탐침 보고서 수리)
+
+- source_stage(원천 단계): `351_onnx_trade_surface_rebuild__no_scaler_or_1d_scaler_runtime_contract`
+- branch_run(분기 실행): `run352A_branch_stage351_to_report_identity_repair_without_db_v1`
+- next_run(다음 실행): `run352B_repair_no_scaler_1d_mt5_report_identity_reuse_outputs_without_db_v1`
+- claim_boundary(주장 경계): `state_sync_stage_branch_report_identity_repair_handoff_only_no_new_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

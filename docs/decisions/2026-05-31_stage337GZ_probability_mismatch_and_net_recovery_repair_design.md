@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337GZ Decision(337GZ 결정)
+
+- run_id(실행 ID): `run337GZ_design_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337GY_review_runtime_positive_side_stability_gb_pf_recovery_drawdown_mt5_negative_repair_mt5_runtime_probe_or_repair_without_db_v1`
+- status(상태): `completed_stage337GZ_probability_mismatch_and_net_recovery_repair_design_no_training_no_selection`
+- judgment(판정): `mt5_negative_near_parity_converted_to_train_only_net_recovery_and_parity_repair_design`
+- decision(결정): `stage337GZ_open_run337HA_probability_mismatch_and_net_recovery_repair_inputs`
+- next_action(다음 행동): `run337HA_materialize_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337GZ_probability_mismatch_and_net_recovery_repair_design.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GZ/run337HA_training_task_blueprint.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GZ/probability_mismatch_repair_check_plan.csv`
+
+Action(행동): GY negative MT5 result(GY 음수 메타트레이더5 결과)를 HA input materialization(HA 입력 물질화) 계약으로 바꿨다.
+Effect(효과): net recovery(순수익 회복), exact runtime parity(정확 런타임 동등성), target contract(목표 계약)을 다음 실행의 필수 조건으로 만들었다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337GZ_probability_mismatch_and_net_recovery_repair_design_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

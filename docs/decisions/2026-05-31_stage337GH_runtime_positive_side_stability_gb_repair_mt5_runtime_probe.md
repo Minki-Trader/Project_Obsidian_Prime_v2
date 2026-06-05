@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337GH Decision(337GH 결정)
+
+- run_id(실행 ID): `run337GH_execute_runtime_positive_side_stability_gb_repair_mt5_runtime_probe_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337GG_materialize_runtime_positive_side_stability_gb_repair_runtime_probe_package_without_db_v1`
+- status(상태): `completed_stage337GH_runtime_positive_side_stability_gb_repair_mt5_runtime_probe_executed_review_required_no_forward_decision`
+- judgment(판정): `mt5_runtime_probe_outputs_available_proxy_diff_review_required_no_selection`
+- decision(결정): `stage337GH_open_run337GI_review_runtime_positive_side_stability_gb_repair_mt5_runtime_probe`
+- next_action(다음 행동): `run337GI_review_runtime_positive_side_stability_gb_repair_mt5_runtime_probe_or_repair_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337GH_runtime_positive_side_stability_gb_repair_mt5_runtime_probe.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GH/runtime_positive_side_stability_mt5_runtime_probe_summary.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GH/mt5_execution_result.json`
+
+Action(행동): MT5 runtime probe(MT5 런타임 탐침)를 시도하고 결과 또는 blocker(차단 사유)를 기록했다.
+Effect(효과): 다음 GA review(GA 검토)가 proxy-vs-MT5 diff(프록시-MT5 차이), attribution(귀속), usability(활용 가능성)을 판정할 수 있다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337GH_runtime_positive_side_stability_gb_repair_mt5_runtime_probe_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

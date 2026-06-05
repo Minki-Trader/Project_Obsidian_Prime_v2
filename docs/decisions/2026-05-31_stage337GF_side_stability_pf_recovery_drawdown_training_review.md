@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337GF Decision(337GF 결정)
+
+- run_id(실행 ID): `run337GF_review_runtime_positive_side_stability_pf_recovery_drawdown_training_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337GE_train_runtime_positive_side_stability_pf_recovery_drawdown_repair_candidates_without_db_v1`
+- status(상태): `completed_stage337GF_side_stability_pf_recovery_drawdown_training_review_runtime_probe_queue_open_no_selection_no_mt5`
+- judgment(판정): `onnx_candidates_have_parity_positive_proxy_clues_runtime_probe_required_no_selection`
+- decision(결정): `stage337GF_open_run337GG_materialize_runtime_positive_side_stability_gb_repair_runtime_probe_package_without_db`
+- next_action(다음 행동): `run337GG_materialize_runtime_positive_side_stability_gb_repair_runtime_probe_package_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337GF_side_stability_pf_recovery_drawdown_training_review.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GF/proxy_clue_review.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GF/runtime_probe_candidate_queue.csv`
+
+Action(행동): positive proxy clue(긍정 프록시 단서)를 MT5 runtime probe(MT5 런타임 탐침) 패키지로 넘겼다.
+Effect(효과): 프록시 점수를 운영 주장으로 쓰지 않고 실제 MT5 비교로 연결한다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337GF_side_stability_pf_recovery_drawdown_training_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

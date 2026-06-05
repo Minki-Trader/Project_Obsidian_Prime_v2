@@ -1,0 +1,12 @@
+﻿# 2026-06-01 Stage337IN Decision(337IN 결정)
+
+- run_id(실행 ID): `run337IN_materialize_proxy_mt5_negative_lifecycle_cost_trade_shape_repair_inputs_without_db_v1`
+- decision(결정): `stage337IN_open_run337IO_review_lifecycle_cost_trade_shape_repair_inputs`
+- judgment(판정): `timestamp_safe_lifecycle_cost_trade_shape_repair_inputs_materialized_review_required`
+- next_run_id(다음 실행 ID): `run337IO_review_proxy_mt5_negative_lifecycle_cost_trade_shape_repair_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IN/in_lifecycle_cost_trade_shape_repair_input_frame.parquet`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IN/in_weight_audit.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IN/run337IO_training_task_seed_matrix.csv`
+
+Action(행동): timestamp-safe(시점 안전) 수리 입력을 물질화했다.
+Effect(효과): 다음 단계는 학습이 아니라 입력 적격성 검토로 닫힌다.
+
+claim_boundary(주장 경계): `research_development_input_materialization_only_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_achieve`

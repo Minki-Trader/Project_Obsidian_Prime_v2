@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337HP Decision(337HP 결정)
+
+- run_id(실행 ID): `run337HP_train_post_runtime_probe_proxy_negative_trade_shape_repair_candidates_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337HO_review_post_runtime_probe_proxy_negative_trade_shape_repair_inputs_without_db_v1`
+- status(상태): `completed_stage337HP_proxy_negative_trade_shape_repair_candidates_trained_onnx_materialized_review_required_no_selection_no_mt5`
+- judgment(판정): `guarded_proxy_negative_trade_shape_repair_lightgbm_candidates_trained_with_onnx_parity_review_required_no_selection`
+- decision(결정): `stage337HP_open_run337HQ_review_proxy_negative_trade_shape_training`
+- next_action(다음 행동): `run337HQ_review_post_runtime_probe_proxy_negative_trade_shape_repair_training_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337HP_proxy_negative_trade_shape_repair_lightgbm_training.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HP/trained_model_manifest.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HP/onnx_parity_matrix.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HP/inner_holdout_proxy_trade_scorecard.csv`
+
+Action(행동): 5개 guarded ONNX candidates(방어 ONNX 후보)를 만들었다.
+Effect(효과): HQ review(HQ 검토) 전까지 candidate selection(후보 선택)이나 operating promotion(운영 승격)은 닫힌 상태로 유지한다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337HP_proxy_negative_trade_shape_repair_lightgbm_training_without_db_reviewed_HN_HO_train_only_inputs_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

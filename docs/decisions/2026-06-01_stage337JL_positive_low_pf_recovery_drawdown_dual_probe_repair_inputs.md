@@ -1,0 +1,11 @@
+﻿# 2026-06-01 Stage337JL Decision(337JL 결정)
+
+- decision(결정): `stage337JL_open_run337JM_runtime_positive_low_pf_recovery_drawdown_dual_probe_repair_input_review`
+- judgment(판정): `timestamp_safe_runtime_positive_low_pf_recovery_drawdown_dual_probe_repair_inputs_materialized_review_required`
+- next_run_id(다음 실행 ID): `run337JM_review_runtime_positive_low_pf_recovery_drawdown_dual_probe_repair_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JL/jl_runtime_positive_low_pf_recovery_drawdown_repair_input_frame.parquet`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JL/jl_weight_audit.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337JL/run337JM_training_task_seed_matrix.csv`
+
+Action(행동): JK design(JK 설계)을 timestamp-safe(시점 안전) input materialization(입력 물질화)로 바꿨다.
+Effect(효과): 학습 전에 leakage(누출), feature boundary(피처 경계), weight health(가중치 상태)를 JM에서 검토할 수 있다.
+
+claim_boundary(주장 경계): `research_development_input_materialization_only_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_achieve`

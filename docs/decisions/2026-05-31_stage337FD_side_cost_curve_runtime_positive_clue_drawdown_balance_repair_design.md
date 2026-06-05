@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337FD Decision(337FD 결정)
+
+- run_id(실행 ID): `run337FD_design_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337FC_review_broker_confirmed_side_cost_curve_mt5_runtime_probe_or_repair_without_db_v1`
+- status(상태): `completed_stage337FD_runtime_positive_clue_drawdown_balance_repair_design_no_training_no_selection`
+- judgment(판정): `ey003_positive_mt5_clue_converted_to_drawdown_recovery_side_balance_repair_design`
+- decision(결정): `stage337FD_open_run337FE_materialize_runtime_positive_clue_repair_inputs_without_db`
+- next_action(다음 행동): `run337FE_materialize_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337FD_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_design.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FD/runtime_positive_clue_repair_design_matrix.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FD/repair_objective_contract.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FD/negative_control_plan.csv`
+
+Action(행동): ey003 positive MT5 clue(ey003 긍정 MT5 단서)를 drawdown/recovery/side-balance repair design(낙폭/회복/방향 균형 수리 설계)로 전환했다.
+Effect(효과): FE materialization(FE 물질화)은 운영 승격이 아니라 안전한 수리 입력 생성으로 제한된다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337FD_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_design_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

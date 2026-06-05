@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337GR Decision(337GR 결정)
+
+- run_id(실행 ID): `run337GR_design_runtime_positive_side_stability_gb_pf_recovery_drawdown_mt5_negative_repair_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337GQ_review_runtime_positive_side_stability_gb_pf_recovery_drawdown_repair_mt5_runtime_probe_or_repair_without_db_v1`
+- status(상태): `completed_stage337GR_mt5_negative_side_stability_gb_pf_recovery_drawdown_repair_design_no_training_no_selection`
+- judgment(판정): `all_negative_mt5_runtime_result_converted_to_net_recovery_repair_design_no_operating_claim`
+- decision(결정): `stage337GR_open_run337GS_mt5_negative_repair_inputs`
+- next_action(다음 행동): `run337GS_materialize_runtime_positive_side_stability_gb_pf_recovery_drawdown_mt5_negative_repair_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337GR_mt5_negative_side_stability_gb_pf_recovery_drawdown_repair_design.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GR/experiment_design_contract.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GR/run337GS_training_task_blueprint.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GR/release_gate_contract.csv`
+
+Action(행동): all-negative MT5 runtime review(전부 음수 MT5 런타임 검토)를 GS materialization queue(GS 물질화 대기열)로 넘겼다.
+Effect(효과): 수리(repair, 수리)는 계속 탐색으로 열어 두되, operating promotion(운영 승격), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337GR_mt5_negative_side_stability_gb_pf_recovery_drawdown_repair_design_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

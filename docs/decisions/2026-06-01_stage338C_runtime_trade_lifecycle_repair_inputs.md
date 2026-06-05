@@ -1,0 +1,12 @@
+﻿# 2026-06-01 Stage338C Decision(338C 결정)
+
+- run_id(실행 ID): `run338C_materialize_runtime_trade_lifecycle_proxy_positive_mt5_negative_repair_inputs_without_db_v1`
+- decision(결정): `stage338C_open_run338D_review_runtime_trade_lifecycle_repair_inputs`
+- judgment(판정): `timestamp_safe_trade_lifecycle_repair_inputs_materialized_review_required_no_selection`
+- next_run_id(다음 실행 ID): `run338D_review_runtime_trade_lifecycle_proxy_positive_mt5_negative_repair_inputs_without_db_v1`
+- evidence(근거): `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338C/run338C_trade_lifecycle_repair_input_frame.parquet`, `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338C/run338C_feature_label_boundary_audit.csv`, `stages/338_runtime_trade_lifecycle__proxy_positive_mt5_negative_repair/02_runs/run338C/run338D_input_review_queue.csv`
+
+Action(행동): Stage338(338단계) trade lifecycle repair(거래 생명주기 수리) 입력을 만들었다.
+Effect(효과): 학습 전에 입력 검토 단계가 누수와 분포를 점검하게 한다.
+
+claim_boundary(주장 경계): `research_development_input_materialization_only_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

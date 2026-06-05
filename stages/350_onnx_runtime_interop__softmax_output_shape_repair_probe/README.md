@@ -1,0 +1,6 @@
+﻿# Stage350 ONNX Runtime Interop Repair(350단계 온엑스 런타임 상호운용 수리)
+
+- source_stage(원천 단계): `349_onnx_short_carry_runtime__execute_mt5_probe`
+- branch_run(분기 실행): `run350A_branch_stage349_to_onnx_runtime_interop_repair_without_db_v1`
+- next_run(다음 실행): `run350B_probe_softmax_output_shape_and_conversion_semantics_without_db_v1`
+- claim_boundary(주장 경계): `state_sync_stage_branch_onnx_runtime_interop_repair_handoff_only_no_new_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`

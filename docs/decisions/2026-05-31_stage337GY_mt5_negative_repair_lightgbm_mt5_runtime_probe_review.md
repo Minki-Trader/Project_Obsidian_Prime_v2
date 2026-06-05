@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337GY Decision(337GY 결정)
+
+- run_id(실행 ID): `run337GY_review_runtime_positive_side_stability_gb_pf_recovery_drawdown_mt5_negative_repair_mt5_runtime_probe_or_repair_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337GX_execute_runtime_positive_side_stability_gb_pf_recovery_drawdown_mt5_negative_repair_mt5_runtime_probe_without_db_v1`
+- status(상태): `completed_stage337GY_mt5_negative_repair_lightgbm_mt5_review_negative_net_probability_mismatch_repair_required_no_forward_decision`
+- judgment(판정): `mt5_runtime_probe_completed_net_negative_probability_mismatch_small_repair_required_no_selection`
+- decision(결정): `stage337GY_open_run337GZ_probability_mismatch_and_net_recovery_repair_design`
+- next_action(다음 행동): `run337GZ_design_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337GY_mt5_negative_repair_lightgbm_mt5_runtime_probe_review.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GY/mt5_kpi_review.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337GY/runtime_parity_review.csv`
+
+Action(행동): MT5 runtime probe(메타트레이더5 런타임 탐침)의 KPI(핵심 성과 지표)와 probability mismatch(확률 불일치)를 함께 닫았다.
+Effect(효과): negative MT5 result(음수 메타트레이더5 결과)를 operating claim(운영 주장)으로 올리지 않고 GZ repair design(GZ 수리 설계)으로 보냈다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337GY_mt5_negative_repair_lightgbm_mt5_runtime_probe_review_without_db_no_new_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

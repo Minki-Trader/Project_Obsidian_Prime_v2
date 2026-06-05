@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337HQ Decision(337HQ 결정)
+
+- run_id(실행 ID): `run337HQ_review_post_runtime_probe_proxy_negative_trade_shape_repair_training_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337HP_train_post_runtime_probe_proxy_negative_trade_shape_repair_candidates_without_db_v1`
+- status(상태): `completed_stage337HQ_proxy_negative_trade_shape_training_review_all_proxy_negative_no_runtime_package_no_selection`
+- judgment(판정): `onnx_parity_passed_but_all_inner_holdout_proxy_negative_second_order_repair_design_required`
+- decision(결정): `stage337HQ_open_run337HR_proxy_negative_trade_shape_second_order_repair_design`
+- next_action(다음 행동): `run337HR_design_proxy_negative_trade_shape_second_order_repair_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337HQ_proxy_negative_trade_shape_training_review.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HQ/training_candidate_review.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HQ/proxy_negative_training_memory.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337HQ/runtime_package_decision.csv`
+
+Action(행동): HP ONNX candidates(HP ONNX 후보)를 runtime package(런타임 패키지)로 넘기지 않고 HR second-order repair design(HR 2차 수리 설계)으로 넘겼다.
+Effect(효과): ONNX parity(ONNX 동등성)만 좋은 후보를 운영 가능 모델로 착각하지 않는다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337HQ_proxy_negative_trade_shape_training_review_without_db_onnx_parity_reviewed_all_proxy_negative_no_runtime_package_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

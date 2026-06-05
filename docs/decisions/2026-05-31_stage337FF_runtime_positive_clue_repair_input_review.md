@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337FF Decision(337FF 결정)
+
+- run_id(실행 ID): `run337FF_review_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_inputs_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337FE_materialize_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_inputs_without_db_v1`
+- status(상태): `completed_stage337FF_runtime_positive_clue_repair_inputs_review_guarded_training_eligible_no_training_no_selection`
+- judgment(판정): `train_only_repair_inputs_pass_boundary_weight_review_guarded_training_eligible`
+- decision(결정): `stage337FF_open_run337FG_train_runtime_positive_clue_repair_candidates_without_db`
+- next_action(다음 행동): `run337FG_train_side_cost_curve_runtime_positive_clue_repair_candidates_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337FF_runtime_positive_clue_repair_input_review.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FF/fg_training_task_matrix.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FF/repair_weight_review.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FF/feature_label_boundary_review.csv`
+
+Action(행동): FE 입력 검토를 통과한 작업만 FG training(FG 학습)으로 넘겼다.
+Effect(효과): 모델 학습은 다음 run(실행)에서 시작되며, 이 결정은 운영 승격이 아니다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337FF_runtime_positive_clue_repair_input_review_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

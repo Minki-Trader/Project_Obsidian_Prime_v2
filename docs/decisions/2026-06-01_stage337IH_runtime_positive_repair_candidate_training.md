@@ -1,0 +1,12 @@
+﻿# 2026-06-01 Stage337IH Decision(337IH 결정)
+
+- run_id(실행 ID): `run337IH_train_runtime_positive_low_pf_drawdown_side_balance_repair_candidates_without_db_v1`
+- decision(결정): `stage337IH_open_run337II_review_runtime_positive_low_pf_drawdown_side_balance_repair_training`
+- judgment(판정): `runtime_positive_repair_candidates_trained_with_onnx_parity_and_proxy_score_review_required`
+- next_action(다음 행동): `run337II_review_runtime_positive_low_pf_drawdown_side_balance_repair_training_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IH/trained_model_manifest.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IH/onnx_parity_matrix.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337IH/inner_holdout_proxy_trade_scorecard.csv`
+
+Action(행동): 런타임 양수 수리 입력을 ONNX(온엑스) 후보 학습으로 변환했다.
+Effect(효과): 다음 II review(II 검토)가 프록시 점수를 MT5 KPI(MT5 핵심 성과 지표)로 착각하지 않게 분리한다.
+
+claim_boundary(주장 경계): `research_development_candidate_training_only_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_runtime_package_authority_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_achieve`

@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337FE Decision(337FE 결정)
+
+- run_id(실행 ID): `run337FE_materialize_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_inputs_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337FD_design_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_without_db_v1`
+- status(상태): `completed_stage337FE_runtime_positive_clue_repair_inputs_materialized_no_training_no_selection`
+- judgment(판정): `train_only_drawdown_recovery_side_balance_repair_inputs_materialized_review_required`
+- decision(결정): `stage337FE_open_run337FF_review_runtime_positive_clue_repair_inputs_without_db`
+- next_action(다음 행동): `run337FF_review_side_cost_curve_runtime_positive_clue_drawdown_balance_repair_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337FE_runtime_positive_clue_drawdown_balance_repair_inputs.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FE/train_only_runtime_positive_clue_repair_input_frame.parquet`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FE/fd_repair_weight_audit.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FE/feature_label_boundary_audit.csv`
+
+Action(행동): drawdown/recovery/side-balance repair input(낙폭/회복/방향 균형 수리 입력)을 학습 전용 프레임으로 만들었다.
+Effect(효과): 다음 FF review(FF 검토)는 모델 학습 전 데이터 무결성과 수리 가중치가 안전한지 판단한다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337FE_runtime_positive_clue_repair_input_materialization_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_candidate_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`

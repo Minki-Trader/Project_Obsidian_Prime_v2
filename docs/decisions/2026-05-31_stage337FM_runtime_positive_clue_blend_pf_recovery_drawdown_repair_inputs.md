@@ -1,0 +1,16 @@
+﻿# 2026-05-31 Stage337FM Decision(337FM 결정)
+
+- run_id(실행 ID): `run337FM_materialize_runtime_positive_clue_blend_pf_recovery_drawdown_repair_inputs_without_db_v1`
+- parent_run_id(부모 실행 ID): `run337FL_design_runtime_positive_clue_blend_pf_recovery_drawdown_repair_without_db_v1`
+- status(상태): `completed_stage337FM_runtime_positive_clue_blend_pf_recovery_drawdown_repair_inputs_materialized_no_training_no_selection`
+- judgment(판정): `train_only_blend_pf_recovery_drawdown_repair_inputs_materialized_review_required`
+- decision(결정): `stage337FM_open_run337FN_review_runtime_positive_clue_blend_pf_recovery_drawdown_repair_inputs`
+- next_action(다음 행동): `run337FN_review_runtime_positive_clue_blend_pf_recovery_drawdown_repair_inputs_without_db_v1`
+- evidence(근거): `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/03_reviews/run337FM_runtime_positive_clue_blend_pf_recovery_drawdown_repair_inputs.md`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FM/train_only_runtime_positive_blend_pf_recovery_drawdown_repair_input_frame.parquet`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FM/fl_repair_weight_audit.csv`, `stages/337_onnx_research_packet__cost_buffer_direction_curve_rebuild/02_runs/run337FM/run337FO_training_task_seed_matrix.csv`
+
+Action(행동): FL repair design(FL 수리 설계)을 train-only input artifacts(학습 전용 입력 산출물)로 물질화했다.
+Effect(효과): FN review(FN 검토)가 feature boundary(피처 경계), weight audit(가중치 감사), training eligibility(학습 적격성)를 판단할 수 있다.
+
+Forward/Goal(전진/목표): `not_claimed`
+runtime_authority(런타임 권위): `not_claimed`
+claim_boundary(주장 경계): `research_development_only_stage337FM_runtime_positive_clue_blend_pf_recovery_drawdown_repair_inputs_without_db_no_model_training_no_threshold_tuning_no_lot_optimization_no_operating_selection_no_mt5_execution_no_forward_passed_no_forward_failed_no_live_readiness_no_deployment_no_operating_promotion_no_runtime_authority_no_goal_achieve`
