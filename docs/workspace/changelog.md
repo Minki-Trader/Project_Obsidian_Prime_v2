@@ -6520,3 +6520,6 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364CK__run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
 - 2026-06-04T22:01:20Z `run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1` reviewed CJ h17 repair(CJ 17시 수리 검토); package rejected(패키지 거절); next `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CL__run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1 -->
+- 2026-06-04T22:14:49Z `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1` materialized CK package rejection(CK 패키지 거절) into `16` CM repair scout rows(CM 수리 정찰 행); next `run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1`; no authority claim(권위 주장 없음).

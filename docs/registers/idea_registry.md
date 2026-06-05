@@ -1185,3 +1185,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- run364CK__run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
 - `run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1`: h17 repair review(17시 수리 검토). Positive clue(긍정 단서): net/PF/density/shorts/stress `1034.32` / `1.4184722658` / `3.1942675159` / `100` / `31.69`. Effect(효과): bad-month repair seed(손실 월 수리 씨앗)로 보존.
+
+<!-- run364CL__run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1 -->
+- `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1`: bad month/source balance repair inputs(손실 월/원천 균형 수리 입력). Effect(효과): CK positive proxy clue(CK 긍정 프록시 단서)를 exact-year filtering(정확 연도 필터링) 없이 CM offensive scout(CM 공격 정찰)로 전환.

@@ -721,3 +721,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- run364CK__run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
 - `run364CK_review_h17_focus_month_cost_stress_repair_scout_without_db_v1` package rejection(패키지 거절): bad months(손실 월) `2025-08;2025-12` remain despite positive proxy KPI(긍정 프록시 KPI). Reopen condition(재개 조건): `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1` creates bad_month_count_zero(손실 월 0) without exact-date filtering(정확 날짜 필터 없음).
+
+<!-- run364CL__run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1 -->
+- `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1` preserves CK package rejection(CK 패키지 거절 보존): bad months(손실 월) `2025-08;2025-12` remain unresolved until `run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1` replay(재생). Reopen condition(재개 조건): bad_month_count==0 and stress_delta>=0 without top_n/trade splitting/exact-year date filter(top_n/거래 쪼개기/정확 연도 날짜 필터 없이 손실 월 0 및 압박 차이 0 이상).
