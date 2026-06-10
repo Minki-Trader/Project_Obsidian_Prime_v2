@@ -15,6 +15,7 @@
 | `FeatureInputs.mqh` | closed bar(닫힌 봉), external symbols(외부 심볼), session calendar(세션 달력), weight table(가중치 표) | feature vector(피처 벡터)와 readiness(준비 상태)를 분리 기록 |
 | `ModelRuntime.mqh` | ONNX session(ONNX 세션), shape(형태), feature order hash(피처 순서 해시) | Python/MT5 parity(파이썬/MT5 동등성) 검토 단위를 작게 유지 |
 | `DecisionSurface.mqh` | probability(확률), threshold(임계값), no-trade rule(무거래 규칙) | 알파 아이디어(alpha idea, 알파 아이디어)와 주문 실행(order execution, 주문 실행)을 분리 |
+| `ProbabilityBinVeto.mqh` | probability-bin veto(확률 구간 차단), validation-derived blocked buckets(검증 유래 차단 구간) | Python proxy(Python 프록시)의 구간 차단을 EA(`Expert Advisor`, 전문가 자문)에서 재현 |
 | `ExecutionBridge.mqh` | order request(주문 요청), broker constraints(브로커 제약), fill/reject(체결/거부) | 수익(profit, 수익) 주장 전 실행 KPI(execution KPI, 실행 KPI)를 남김 |
 | `RuntimeTelemetry.mqh` | skip reason(스킵 사유), decision output(판정 출력), tester output(테스터 출력) | MT5 snapshot(MT5 스냅샷)과 KPI record(KPI 기록)를 연결 |
 

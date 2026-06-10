@@ -724,3 +724,265 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- run364CL__run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1 -->
 - `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1` preserves CK package rejection(CK 패키지 거절 보존): bad months(손실 월) `2025-08;2025-12` remain unresolved until `run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1` replay(재생). Reopen condition(재개 조건): bad_month_count==0 and stress_delta>=0 without top_n/trade splitting/exact-year date filter(top_n/거래 쪼개기/정확 연도 날짜 필터 없이 손실 월 0 및 압박 차이 0 이상).
+
+<!-- run364CM__boundary__run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1 -->
+- `run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1` boundary note(경계 메모): proxy scout(프록시 정찰) produced bad_month_count_zero(손실 월 0) but did not run new MT5(새 MT5 미실행), so runtime authority(런타임 권위) and operating promotion(운영 승격) remain not claimed(주장 안 함). Reopen condition(재개 조건): `run364CN_review_h17_bad_month_source_balance_repair_scout_without_db_v1` reviews package gate(패키지 게이트) and MT5 reprobe boundary(MT5 재탐침 경계).
+
+<!-- run364CN__run364CN_review_h17_bad_month_source_balance_repair_scout_without_db_v1 -->
+- `run364CN_review_h17_bad_month_source_balance_repair_scout_without_db_v1` residual risk(잔여 위험): weakest months(약한 월) `2025-12` net `2.66` and synthetic overlay(합성 오버레이) thin sample(얇은 표본). Reopen condition(재개 조건): `run364CO_materialize_h17_bad_month_source_balance_repair_mt5_runtime_probe_inputs_without_db_v1` or later MT5 probe(MT5 탐침)가 proxy/MT5 diff(프록시/MT5 차이)를 불리하게 보이면 source/month guard(원천/월 가드)를 다시 연다.
+
+<!-- run364CQ__run364CQ_review_h17_bad_month_source_balance_repair_mt5_runtime_probe_without_db_v1 -->
+- `run364CQ_review_h17_bad_month_source_balance_repair_mt5_runtime_probe_without_db_v1`: Not invalid(무효 아님), but zero bad month(손실 월 0) claim failed in MT5 because `2025-12` net `-3.97`. Reopen condition(재개 조건): MT5 month attribution(월 귀속) non-negative with density >= 3 and short floor >= 100.
+
+<!-- run364CS__boundary__run364CS_train_h17_month12_long_equity_drawdown_repair_scout_without_db_v1 -->
+- `run364CS_train_h17_month12_long_equity_drawdown_repair_scout_without_db_v1` boundary note(경계 메모): proxy scout(프록시 정찰)는 긍정 단서를 만들었지만 MT5 equity DD(MT5 수익곡선 낙폭)를 직접 증명하지 못합니다. Effect(효과): `run364CT_review_h17_month12_long_equity_drawdown_repair_scout_without_db_v1`에서 runtime probe boundary(런타임 탐침 경계)를 먼저 판단합니다.
+
+<!-- run364CT__runtime_gap__run364CT_review_h17_month12_long_equity_drawdown_repair_scout_without_db_v1 -->
+- `run364CT_review_h17_month12_long_equity_drawdown_repair_scout_without_db_v1` runtime gap(런타임 간극): cr04 proxy(프록시)는 긍정이지만 현재 EA(전문가 자문)는 piecewise month12 margin guard(구간별 12월 마진 가드)를 정확히 표현하지 못합니다. Effect(효과): cr04를 버리지 않고 `run364CU_implement_h17_month12_secondary_month_margin_guard_runtime_package_without_db_v1`에서 도구를 먼저 수리합니다.
+
+<!-- run364CW__run364CW_review_h17_month12_secondary_month_guard_mt5_runtime_probe_without_db_v1 -->
+- `run364CW_review_h17_month12_secondary_month_guard_mt5_runtime_probe_without_db_v1`: Not invalid(무효 아님), but operating claim(운영 주장)은 equity DD `130.11`, long share `0.896090535`, proxy net diff `-56.18` 때문에 닫지 않습니다. Reopen condition(재개 조건): MT5 density >= 3, short floor >= 100, month attribution non-negative(월 귀속 비음수)를 유지하며 equity DD와 side balance(방향 균형)를 개선합니다.
+
+<!-- run364CX__run364CX_materialize_h17_equity_drawdown_side_balance_stress_repair_inputs_without_db_v1 -->
+- `run364CX_materialize_h17_equity_drawdown_side_balance_stress_repair_inputs_without_db_v1`: Not invalid(무효 아님). Materialization only(구체화 전용)라 성능 개선을 주장하지 않는다. Reopen condition(재개 조건): `run364CY_train_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1`가 density >= 3, short_count >= 100, month12 net >= 0을 보존하며 equity-risk proxy(수익곡선 위험 프록시)나 long share(롱 비중)를 개선해야 한다.
+
+<!-- run364CY__run364CY_train_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1 -->
+- `run364CY_train_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1`: Not invalid(무효 아님). Proxy positive(프록시 긍정)이지만 MT5 equity DD(MT5 수익곡선 낙폭)와 EA risk-scale representation(EA 위험비율 표현)이 없어 operating claim(운영 주장)은 금지.
+
+<!-- run364CZ__runtime_gap__run364CZ_review_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1 -->
+- `run364CZ_review_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1` runtime gap(런타임 간극): cx05 proxy(프록시)는 긍정이지만 현재 EA(전문가 자문)는 side/hour/margin risk-scale overlay(방향/시간/마진 위험비율 오버레이)를 정확히 표현하지 못합니다. Effect(효과): 직접 MT5 package(MT5 패키지)를 막고 `run364DA_implement_h17_short_quality_risk_scale_runtime_package_without_db_v1`에서 도구를 먼저 수리합니다.
+
+<!-- run364DC__side_balance__run364DC_review_h17_short_quality_risk_scale_mt5_runtime_probe_without_db_v1 -->
+- `run364DC_review_h17_short_quality_risk_scale_mt5_runtime_probe_without_db_v1`: pure exposure scaling(순수 노출 증폭)은 net profit(순수익)을 올렸지만 long/short balance(롱/숏 균형)를 해결하지 못함. Effect(효과): 같은 수리만 반복하지 않고 short-source expansion(숏 원천 확장)을 다음 제약으로 둠.
+
+<!-- run364DD__run364DD_train_h17_short_source_expansion_runtime_positive_scout_without_db_v1 -->
+- `run364DD_train_h17_short_source_expansion_runtime_positive_scout_without_db_v1`: Not invalid(무효 아님). Proxy scout(프록시 탐색) only(전용)이므로 MT5 runtime probe(MT5 런타임 탐침) 전까지 operating claim(운영 주장) 금지.
+
+<!-- run364DE__run364DE_review_h17_short_source_expansion_runtime_positive_scout_without_db_v1 -->
+- `run364DE_review_h17_short_source_expansion_runtime_positive_scout_without_db_v1`: Not invalid(무효 아님). Existing EA lacked exact flat-margin guard(기존 EA에 정확한 flat 마진 조건 없음); operating claim(운영 주장) 금지 until MT5 probe(MT5 탐침) exists.
+
+<!-- run364DF__run364DF_implement_h17_short_source_expansion_runtime_package_without_db_v1 -->
+- `run364DF_implement_h17_short_source_expansion_runtime_package_without_db_v1`: Not invalid(무효 아님). Package only(패키지 전용); MT5 runtime output(MT5 런타임 출력) 전까지 operating claim(운영 주장) 금지.
+<!-- run364DH__profit_retreat__run364DH_review_h17_short_source_expansion_mt5_runtime_probe_without_db_v1 -->
+- `run364DH_review_h17_short_source_expansion_mt5_runtime_probe_without_db_v1`: short-source expansion(숏 원천 확장)은 거래수 증가만으로는 충분하지 않았습니다. Net delta vs DB(DB 대비 순수익 변화) `-30.9`, PF delta(PF 변화) `-0.03`. Effect(효과): DI는 low-quality added shorts(저품질 추가 숏)를 거르는 방향으로 진행합니다.
+<!-- run364DI__month_stress_boundary__run364DI_train_h17_short_source_profit_recovery_scout_without_db_v1 -->
+- `run364DI_train_h17_short_source_profit_recovery_scout_without_db_v1`: month-stress variants(月 스트레스 변형)는 높은 proxy score(프록시 점수)를 보였지만 multi-month runtime repair(다중 월 런타임 보정)와 overfit risk(과적합 위험)가 있어 selected package candidate(선택 패키지 후보)로 직접 승격하지 않았습니다. Effect(효과): 월 배제는 운영 필터가 아니라 regime clue(국면 단서)로만 남깁니다.
+<!-- run364DJ__month_stress_boundary__run364DJ_review_h17_short_source_profit_recovery_scout_without_db_v1 -->
+- `run364DJ_review_h17_short_source_profit_recovery_scout_without_db_v1`: month-stress(月 스트레스) variants remain regime clues(국면 단서) only; they are not selected package candidates(선택 패키지 후보 아님).
+<!-- run364DK__run364DK_implement_h17_short_source_profit_recovery_runtime_package_without_db_v1 -->
+- `run364DK_implement_h17_short_source_profit_recovery_runtime_package_without_db_v1`: Not invalid(무효 아님). Package only(패키지 전용); MT5 runtime output(MT5 런타임 출력) 전까지 operating claim(운영 주장) 금지.
+<!-- run364DM__db_threshold_not_exceeded__run364DM_review_h17_short_source_profit_recovery_mt5_runtime_probe_without_db_v1 -->
+- `run364DM_review_h17_short_source_profit_recovery_mt5_runtime_probe_without_db_v1`: short-source profit recovery(숏 원천 수익 회복)는 DB를 아직 초과하지 못했습니다. Net delta vs DB(DB 대비 순수익 변화) `-0.67`, PF delta(PF 변화) `-0.01`. Effect(효과): DN은 PF 상승 없는 밀도 추가를 금지하고 품질 다듬기만 탐색합니다.
+<!-- run364DN__no_calibrated_pf_pass__run364DN_train_h17_short_source_pf_balance_polish_scout_without_db_v1 -->
+- `run364DN_train_h17_short_source_pf_balance_polish_scout_without_db_v1`: no parameter-only candidate(파라미터 전용 후보 없음)가 calibrated net>DB and PF>DB(보정 순수익/PF DB 초과)를 동시에 통과했습니다. Effect(효과): DO는 net-only pass(순수익만 통과)를 패키지로 과장하지 않습니다.
+<!-- run364DO__parameter_only_pf_fail__run364DO_review_h17_short_source_pf_balance_polish_scout_without_db_v1 -->
+- `run364DO_review_h17_short_source_pf_balance_polish_scout_without_db_v1`: DN parameter-only polish(DN 파라미터 전용 다듬기)는 strict calibrated DB net/PF exceedance(엄격 보정 DB 순수익/PF 초과)를 달성하지 못했습니다. Effect(효과): runtime package(런타임 패키지)를 열지 않고 새 수익 원천 탐색으로 전환합니다.
+<!-- run364DP__strict_candidate_absent__run364DP_train_h17_short_source_model_label_offensive_reseed_without_db_v1 -->
+- `run364DP_train_h17_short_source_model_label_offensive_reseed_without_db_v1`: short-source model/label reseed(숏 원천 모델/라벨 재시드)는 strict cross-split contract(엄격 교차 분할 계약)를 통과하지 못했습니다. Effect(효과): DQ는 OOS-only clue(표본외 전용 단서)를 package(패키지)로 과장하지 않습니다.
+<!-- run364DQ__density_below_min__run364DQ_review_h17_short_source_model_label_offensive_reseed_without_db_v1 -->
+- `run364DQ_review_h17_short_source_model_label_offensive_reseed_without_db_v1`: DP ONNX seed(DP ONNX 씨앗)는 density below 3/day(일 3회 미만 밀도)라 runtime package(런타임 패키지)로 열지 않았습니다. Effect(효과): OOS-only low-density clue(OOS 전용 저밀도 단서)를 운영 후보로 과장하지 않습니다.
+<!-- run364DR__strict_candidate_absent__run364DR_train_h17_short_source_density_pf_bridge_reseed_without_db_v1 -->
+- `run364DR_train_h17_short_source_density_pf_bridge_reseed_without_db_v1`: density/PF bridge(밀도/PF 브리지)는 strict cross-split candidate(엄격 교차 분할 후보)를 만들지 못했습니다. density_both_count(양쪽 밀도 통과 수)는 `2013`지만 density_and_net_count(양쪽 밀도+순수익 통과 수)는 `0`입니다. Effect(효과): 밀도만 올리는 경로를 반복하지 않습니다.
+<!-- run364DS__density_bridge_failed__run364DS_review_h17_short_source_density_pf_bridge_reseed_without_db_v1 -->
+- `run364DS_review_h17_short_source_density_pf_bridge_reseed_without_db_v1`: DR density/PF bridge(DR 밀도/PF 브리지)는 package rejected(패키지 거절)입니다. density_both_count(양쪽 밀도 통과 수) `2013` 중 density_and_net_count(양쪽 밀도+순수익 통과 수)는 `0`입니다. Effect(효과): DP score bridge(DP 점수 브리지)만 넓히는 반복을 멈춥니다.
+<!-- run364DT__strict_candidate_absent__run364DT_train_h17_density_failure_regime_behavior_reseed_without_db_v1 -->
+- `run364DT_train_h17_density_failure_regime_behavior_reseed_without_db_v1`: regime/behavior reseed(국면/현상 재시드)는 strict cross-split candidate(엄격 교차 분할 후보)를 만들지 못했습니다. Effect(효과): DU에서 OOS clue(표본외 단서)와 validation failure(검증 실패)를 분리 검토합니다.
+<!-- run364DU__validation_failure__run364DU_review_h17_density_failure_regime_behavior_reseed_without_db_v1 -->
+- `run364DU_review_h17_density_failure_regime_behavior_reseed_without_db_v1`: regime/behavior reseed(국면/현상 재시드)는 validation net/PF(검증 순수익/PF) 실패로 package rejected(패키지 거절)입니다. Effect(효과): OOS-only success(OOS 전용 성공)를 운영 근거로 쓰지 않습니다.
+<!-- run364DV__strict_candidate_absent__run364DV_train_h17_validation_stability_regime_source_reseed_without_db_v1 -->
+- `run364DV_train_h17_validation_stability_regime_source_reseed_without_db_v1`: validation-stability reseed(검증 안정성 재시드)는 strict cross-split candidate(엄격 교차 분할 후보)를 만들지 못했습니다. Effect(효과): DW에서 실패 기억과 재사용 단서를 분리 검토합니다.
+<!-- run364DW__density_below_objective__run364DW_review_h17_validation_stability_regime_source_reseed_without_db_v1 -->
+- `run364DW_review_h17_validation_stability_regime_source_reseed_without_db_v1`: DV validation-stability model(DV 검증 안정성 모델)은 density below 3/day(일 3회 미만 밀도)로 package rejected(패키지 거절)입니다. Effect(효과): 높은 PF를 낮은 거래수 모델로 과장하지 않습니다.
+<!-- run364DX__strict_candidate_absent__run364DX_train_h17_validation_stability_density_recovery_reseed_without_db_v1 -->
+- `run364DX_train_h17_validation_stability_density_recovery_reseed_without_db_v1`: density recovery reseed(밀도 회복 재시드)는 strict cross-split candidate(엄격 교차 분할 후보)를 만들지 못했습니다. Effect(효과): DY에서 수익/밀도 tradeoff(절충)를 분리 검토합니다.
+<!-- run364DY__oos_pf_net_failed__run364DY_review_h17_validation_stability_density_recovery_reseed_without_db_v1 -->
+- `run364DY_review_h17_validation_stability_density_recovery_reseed_without_db_v1`: DX density recovery(DX 밀도 회복)는 OOS net/PF failure(표본외 순수익/PF 실패)로 package rejected(패키지 거절)입니다. Effect(효과): 검증 전용 밀도 회복을 운영 근거로 쓰지 않습니다.
+<!-- run364DZ__strict_candidate_absent__run364DZ_train_h17_density_pf_balance_reseed_without_db_v1 -->
+- `run364DZ_train_h17_density_pf_balance_reseed_without_db_v1`: density/PF balance reseed(밀도/PF 균형 재시드)는 strict cross-split candidate(엄격 교차 분할 후보)를 만들지 못했습니다. Effect(효과): EA review(EA 검토)에서 실패 기억과 재사용 단서를 분리합니다.
+<!-- run364EA__validation_pf_floor__run364EA_review_h17_density_pf_balance_reseed_without_db_v1 -->
+- `run364EA_review_h17_density_pf_balance_reseed_without_db_v1`: DZ는 OOS(표본외)는 회복했지만 validation PF(검증 수익 팩터)가 `1.0038126802`라 package(패키지)로 열 수 없습니다. Effect(효과): EB는 검증 PF 바닥을 직접 제약으로 씁니다.
+<!-- run364EB__strict_candidate_absent__run364EB_train_h17_validation_pf_floor_density_recovery_reseed_without_db_v1 -->
+- `run364EB_train_h17_validation_pf_floor_density_recovery_reseed_without_db_v1`: validation PF floor density recovery(검증 PF 바닥 밀도 회복)가 strict cross-split candidate(엄격 교차 분할 후보)를 만들지 못했습니다. Effect(효과): EC review(EC 검토)에서 salvage value(회수 가치)와 reopen condition(재개 조건)을 분리합니다.
+<!-- run364EC__dual_pf_floor__run364EC_review_h17_validation_pf_floor_density_recovery_reseed_without_db_v1 -->
+- `run364EC_review_h17_validation_pf_floor_density_recovery_reseed_without_db_v1`: EB는 density_net_count(밀도+순수익 후보 수) `144`를 만들었지만 pf110_count(PF 1.10 양쪽 통과 수)는 `0`입니다. Effect(효과): ED는 min_pf(최소 PF)를 직접 보상합니다.
+<!-- run364ED__strict_candidate_absent__run364ED_train_h17_dual_pf_floor_bridge_reseed_without_db_v1 -->
+- `run364ED_train_h17_dual_pf_floor_bridge_reseed_without_db_v1`: strict dual PF floor(엄격 양쪽 PF 바닥) 후보 수는 `0`입니다. Effect(효과): EE review(EE 검토)에서 scout(스카우트) 가치와 다음 공격 씨앗을 분리합니다.
+<!-- run364EE__dual_pf_floor_bridge_failed__run364EE_review_h17_dual_pf_floor_bridge_reseed_without_db_v1 -->
+- `run364EE_review_h17_dual_pf_floor_bridge_reseed_without_db_v1`: ED selected min_pf(선택 최소 PF) `1.0219124076`, pf110_count `0`라 package(패키지)를 열지 않습니다. Effect(효과): 직접 min_pf 격자 반복을 피하고 EF 원천 회전으로 넘깁니다.
+<!-- run364EF__strict_candidate_absent__run364EF_train_h17_validation_source_rotation_density_recovery_without_db_v1 -->
+- `run364EF_train_h17_validation_source_rotation_density_recovery_without_db_v1`: strict candidate(엄격 후보)는 `0`입니다. Effect(효과): EG review(EG 검토)에서 PF bridge(수익 팩터 연결) 정도와 다음 씨앗을 분리합니다.
+<!-- run364EG__pf108_bridge_missing__run364EG_review_h17_validation_source_rotation_density_recovery_without_db_v1 -->
+- `run364EG_review_h17_validation_source_rotation_density_recovery_without_db_v1`: EF pf108_count(PF 1.08 양쪽 통과 수) `0`라 package(패키지)를 열지 않습니다. Effect(효과): EH는 OOS PF 1.08 연결을 밀도 보존과 함께 탐색합니다.
+<!-- run364EH__strict_candidate_absent__run364EH_train_h17_oos_pf108_bridge_density_preserve_without_db_v1 -->
+- `run364EH_train_h17_oos_pf108_bridge_density_preserve_without_db_v1`: strict candidate(엄격 후보)는 `0`입니다. Effect(효과): EI review(EI 검토)에서 PF bridge(수익 팩터 연결) 정도와 다음 씨앗을 분리합니다.
+<!-- run364EI__density_floor_failed__run364EI_review_h17_oos_pf108_bridge_density_preserve_without_db_v1 -->
+- `run364EI_review_h17_oos_pf108_bridge_density_preserve_without_db_v1`: EH OOS PF(표본외 PF) `1.2623046122`는 좋지만 density(밀도)가 `2.9344262295` / `2.8320610687`라 package(패키지)를 열지 않습니다. Effect(효과): EJ는 밀도 바닥 회수를 먼저 봅니다.
+<!-- run364EJ__oos112_density_absent__run364EJ_train_h17_density_floor_oos_pf_salvage_without_db_v1 -->
+- `run364EJ_train_h17_density_floor_oos_pf_salvage_without_db_v1`: OOS PF 1.12 density candidate(표본외 PF 1.12 밀도 후보)는 `0`입니다. Effect(효과): EK review(EK 검토)에서 밀도 복구 실패와 남은 PF 단서를 분리합니다.
+<!-- run364EK__oos_pf_collapsed__run364EK_review_h17_density_floor_oos_pf_salvage_without_db_v1 -->
+- `run364EK_review_h17_density_floor_oos_pf_salvage_without_db_v1`: selected OOS PF(선택 표본외 PF)는 `1.0183147066`이고 density_oos108_val104_count(밀도 OOS108 검증104 후보 수)는 `0`입니다. Effect(효과): package(패키지)를 열지 않고 EL 수리 조건으로 넘깁니다.
+<!-- run364EM__cost_stress_caution__run364EM_review_h17_oos108_validation_floor_bridge_without_db_v1 -->
+- `run364EM_review_h17_oos108_validation_floor_bridge_without_db_v1`: cost stress(비용 압박)는 validation cost 0.6(검증 비용 0.6)에서 실패합니다. Effect(효과): EN/MT5 probe(EN/MT5 탐침)는 비용 압박을 별도 판정 조건으로 가져갑니다.
+<!-- run364EN__no_authority__run364EN_materialize_h17_oos108_validation_floor_bridge_runtime_package_without_db_v1 -->
+- `run364EN_materialize_h17_oos108_validation_floor_bridge_runtime_package_without_db_v1`: Not invalid(무효 아님). Package only(패키지 전용); MT5 runtime output(MT5 런타임 출력) 전까지 operating claim(운영 주장) 금지.
+<!-- run364EO__no_authority__run364EO_execute_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1 -->
+- `run364EO_execute_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1`: runtime probe attempt(런타임 탐침 시도)일 뿐 operating claim(운영 주장)은 없습니다.
+<!-- run364EP__cost_side_no_authority__run364EP_review_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1 -->
+- `run364EP_review_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1`: positive runtime clue(긍정 런타임 단서)는 있지만 validation cost stress(검증 비용 압박), short-heavy(숏 편중), forward/replay absence(전진/재생 부재) 때문에 authority(권위) 없음. Effect(효과): 운영 주장을 막고 EQ 수리 조건으로 전환합니다.
+## stage364EQ_existing_surface_strict_pass_zero
+
+- failed boundary(실패 경계): strict operational proxy pass(엄격 운영 프록시 통과) across cost/PF/density/side/net(비용/PF/밀도/방향/순수익).
+- why failed(실패 이유): existing EL surface(기존 EL 표면)는 combined net>=523.58(합산 순수익 523.58 이상), cost0.9(비용0.9), density(밀도), short share(숏 비중), PF floor(PF 바닥)를 동시에 만족하지 못했다.
+- salvage value(회수 가치): model/label/feature reseed(모델/라벨/피처 재시드)로 이동.
+- do-not-repeat note(반복 금지 메모): 같은 surface micro-search(표면 미세탐색)를 운영 후보처럼 반복하지 않는다.
+- reopen condition(재개 조건): ER에서 full trade tape(전체 거래 테이프)와 새 cost-aware labels(비용 인식 라벨)를 만든 뒤 재평가.
+<!-- run364ER__strict_candidate_absent__run364ER_train_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1 -->
+- `run364ER_train_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1`: cost-side reseed(비용/방향 재시드)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): ES에서 OOS clue(표본외 단서)와 validation/cost failure(검증/비용 실패)를 분리 검토합니다.
+<!-- run364ES__density_cost_short_failure__run364ES_review_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1 -->
+- `run364ES_review_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1`: density>=3 and validation/OOS cost0.6 pass(밀도 3 이상과 검증/표본외 비용0.6 통과)를 동시에 만족한 row(행)가 0개라 package rejected(패키지 거절)입니다. Effect(효과): threshold micro-search(임계값 미세탐색) 반복 대신 ET에서 label/score(라벨/점수)를 다시 엽니다.
+<!-- run364ET__strict_candidate_absent__run364ET_train_h17_oos108_density_cost_short_balance_reseed_without_db_v1 -->
+- `run364ET_train_h17_oos108_density_cost_short_balance_reseed_without_db_v1`: density/cost/short balance reseed(밀도/비용/숏 균형 재시드)가 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): EU에서 실패 조건과 salvage segment(회수 구간)를 분리합니다.
+<!-- run364EU__cost09_density_edge_failure__run364EU_review_h17_oos108_density_cost_short_balance_reseed_without_db_v1 -->
+- `run364EU_review_h17_oos108_density_cost_short_balance_reseed_without_db_v1`: ET selected candidate(ET 선택 후보)는 combined density(합산 밀도) `2.9936305733`와 combined cost0.9 net(합산 비용0.9 순수익) `-111.709` 때문에 package rejected(패키지 거절)입니다. Effect(효과): OOS-only cost strength(표본외 전용 비용 강점)를 운영 근거로 쓰지 않고 EV 수리 조건으로 넘깁니다.
+<!-- run364EV__strict_candidate_absent__run364EV_train_h17_oos108_cost09_density_edge_recovery_without_db_v1 -->
+- `run364EV_train_h17_oos108_cost09_density_edge_recovery_without_db_v1`: cost09/density edge recovery(비용0.9/밀도 엣지 회복)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): EW에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364EW__validation_overfit_oos_collapse__run364EW_review_h17_oos108_cost09_density_edge_recovery_without_db_v1 -->
+- `run364EW_review_h17_oos108_cost09_density_edge_recovery_without_db_v1`: EV selected candidate(EV 선택 후보)는 OOS net/PF(표본외 순수익/PF) `-17.382` / `0.9763940571`로 package rejected(패키지 거절)입니다. Effect(효과): validation cost09(검증 비용0.9) 단독 보상 반복을 금지합니다.
+<!-- run364EX__strict_candidate_absent__run364EX_train_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1 -->
+- `run364EX_train_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1`: OOS preserve cost09/short rebalance(표본외 보존 비용0.9/숏 재균형)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): EY에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364EY__pf125_cost09_gap__run364EY_review_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1 -->
+- `run364EY_review_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1`: EX selected candidate(EX 선택 후보)는 OOS PF/cost0.9(표본외 수익 팩터/비용0.9) 부족으로 package rejected(패키지 거절)입니다. Effect(효과): PF 1.25와 비용0.9 간격 수리를 다음 조건으로 고정합니다.
+<!-- run364EZ__strict_candidate_absent__run364EZ_train_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1 -->
+- `run364EZ_train_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1`: OOS PF125 cost09 gap repair(표본외 PF 1.25 비용0.9 간격 수리)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FA에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FA__validation_density_cost_short_collapse__run364FA_review_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1 -->
+- `run364FA_review_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1`: EZ selected candidate(EZ 선택 후보)는 validation/density/combined cost/short(검증/밀도/합산 비용/숏) 붕괴로 package rejected(패키지 거절)입니다. Effect(효과): 표본외 PF 전용 선택을 금지하고 밀도 3/day(일 3회) 회복을 다음 조건으로 고정합니다.
+<!-- run364FB__strict_candidate_absent__run364FB_train_h17_oos108_pf125_density_bridge_repair_without_db_v1 -->
+- `run364FB_train_h17_oos108_pf125_density_bridge_repair_without_db_v1`: PF125 density bridge repair(PF125 밀도 연결 수리)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FC에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FC__pf125_short_cost09_gap__run364FC_review_h17_oos108_pf125_density_bridge_repair_without_db_v1 -->
+- `run364FC_review_h17_oos108_pf125_density_bridge_repair_without_db_v1`: FB selected candidate(FB 선택 후보)는 OOS PF/cost0.9/short share(표본외 PF/비용0.9/숏 비중) 간격으로 package rejected(패키지 거절)입니다. Effect(효과): 밀도 3/day(일 3회)를 보존하면서 숏/비용 균형 수리를 다음 조건으로 고정합니다.
+<!-- run364FD__strict_candidate_absent__run364FD_train_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1 -->
+- `run364FD_train_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1`: PF125 short/cost09 balance repair(PF125 숏/비용0.9 균형 수리)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FE에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FE__density_reloss__run364FE_review_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1 -->
+- `run364FE_review_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1`: FD selected candidate(FD 선택 후보)는 validation/combined density(검증/합산 밀도) 재손실로 package rejected(패키지 거절)입니다. Effect(효과): 표본외 PF/비용0.9 보존과 밀도 재결합을 다음 조건으로 고정합니다.
+<!-- run364FF__strict_candidate_absent__run364FF_train_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1 -->
+- `run364FF_train_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1`: PF125 density rejoin cost09 short guard(PF125 밀도 재결합 비용0.9 숏 가드)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FG에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FG__density_profit_failure__run364FG_review_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1 -->
+- `run364FG_review_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1`: FF selected candidate(FF 선택 후보)는 validation/combined density(검증/합산 밀도)와 validation cost(검증 비용)가 부족해 package rejected(패키지 거절)입니다. Effect(효과): 표본외 PF/비용 단서는 보존하고 검증 밀도 수익 실패를 다음 조건으로 고정합니다.
+<!-- run364FH__strict_candidate_absent__run364FH_train_h17_oos108_pf125_validation_density_profit_repair_without_db_v1 -->
+- `run364FH_train_h17_oos108_pf125_validation_density_profit_repair_without_db_v1`: validation density profit repair(검증 밀도 수익 수리)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FI에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FI__oos_pf_cost_reloss__run364FI_review_h17_oos108_pf125_validation_density_profit_repair_without_db_v1 -->
+- `run364FI_review_h17_oos108_pf125_validation_density_profit_repair_without_db_v1`: FH selected candidate(FH 선택 후보)는 OOS PF(표본외 수익 팩터) `1.1853206259`, OOS cost0.9(표본외 비용0.9) `-61.113`, combined cost0.9(합산 비용0.9) `-281.932` 때문에 package rejected(패키지 거절)입니다. Effect(효과): 검증 밀도 회복만으로 운영 후보를 만들지 않습니다.
+<!-- run364FJ__strict_candidate_absent__run364FJ_train_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1 -->
+- `run364FJ_train_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1`: OOS density preserve repair(표본외 밀도 보존 수리)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FK에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FK__density_reloss__run364FK_review_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1 -->
+- `run364FK_review_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1`: FJ selected candidate(FJ 선택 후보)는 OOS PF(표본외 수익 팩터) `1.4709758917`와 OOS cost0.9(표본외 비용0.9) `132.92`를 회복했지만 density(밀도)가 `2.131147541` / `2.5496183206` / `2.3057324841`라 package rejected(패키지 거절)입니다. Effect(효과): PF만 좋은 저밀도 후보를 운영 후보로 올리지 않습니다.
+<!-- run364FL__strict_candidate_absent__run364FL_train_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1 -->
+- `run364FL_train_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1`: dual density OOS cost bridge(양쪽 밀도 표본외 비용 연결)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FM에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FM__oos_cost_reloss__run364FM_review_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1 -->
+- `run364FM_review_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1`: FL selected candidate(FL 선택 후보)는 density3(밀도3)는 회복했지만 OOS PF(표본외 수익 팩터) `1.0477871778`와 OOS cost0.9(표본외 비용0.9) `-198.611` 때문에 package rejected(패키지 거절)입니다. Effect(효과): 밀도만 좋은 저수익 후보를 운영 후보로 올리지 않습니다.
+<!-- run364FN__strict_candidate_absent__run364FN_train_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1 -->
+- `run364FN_train_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1`: density cost decoupled bridge(밀도 비용 분리 연결)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FO에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FO__density_pf_overlap_absent__run364FO_review_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1 -->
+- `run364FO_review_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1`: strict_candidate_count(엄격 후보 수) `0`, density3_all_splits_oos_pf105_count(전 분할 밀도3과 표본외 PF105 동시 수) `0`, oos_pf125_cost09_density3_count(표본외 PF125/비용0.9/밀도3 동시 수) `0`로 package rejected(패키지 거절)입니다. Effect(효과): 저밀도 수익 후보를 운영 후보로 올리지 않습니다.
+<!-- run364FP__strict_candidate_absent__run364FP_train_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1 -->
+- `run364FP_train_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1`: positive density floor reseed(양수 밀도 바닥 재시드)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FQ에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FQ__positive_density_absent__run364FQ_review_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1 -->
+- `run364FQ_review_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1`: validation_positive_density3_count(검증 양수 밀도3 수) `0`, density3_all_splits_valpos_oospos_count(전 분할 양수 밀도3 수) `0`, strict_candidate_count(엄격 후보 수) `0`로 package rejected(패키지 거절)입니다. Effect(효과): 저밀도 비용 후보를 운영 후보로 올리지 않습니다.
+<!-- run364FR__strict_candidate_absent__run364FR_train_h17_oos108_pf125_density3_regime_split_repair_without_db_v1 -->
+- `run364FR_train_h17_oos108_pf125_density3_regime_split_repair_without_db_v1`: density3 regime split repair(밀도3 국면 분할 수리)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FS에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FS__profit_salvage_density_lost__run364FS_review_h17_oos108_pf125_density3_regime_split_repair_without_db_v1 -->
+- `run364FS_review_h17_oos108_pf125_density3_regime_split_repair_without_db_v1`: selected validation net(선택 검증 순수익) `188.314`, combined net(합산 순수익) `181.752`이지만 density3_all_splits_count(전 분할 밀도3 수) `0`로 package rejected(패키지 거절)입니다. Effect(효과): 낮은 거래수 수익 후보를 운영 후보로 올리지 않습니다.
+<!-- run364FT__strict_candidate_absent__run364FT_train_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1 -->
+- `run364FT_train_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1`: regime profit density reexpand(국면 수익 밀도 재확장)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FU에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FU__density_recovered_profit_failed__run364FU_review_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1 -->
+- `run364FU_review_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1`: density3(밀도3)는 `246`행으로 회복됐지만 OOS profit(표본외 수익)이 실패했습니다. Effect(효과): FV에서 density3를 보존하고 OOS net/PF를 직접 수리합니다.
+<!-- run364FV__strict_candidate_absent__run364FV_train_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1 -->
+- `run364FV_train_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1`: density3 OOS profit bridge(밀도3 표본외 수익 연결)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FW에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FW__oos_profit_recovered_density_lost__run364FW_review_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1 -->
+- `run364FW_review_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1`: OOS profit(표본외 수익)은 회복됐지만 density3(밀도3)가 `0`행으로 사라졌습니다. Effect(효과): FX에서 FT 밀도 앵커와 FV 수익 앵커를 재결합합니다.
+<!-- run364FX__strict_candidate_absent__run364FX_train_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1 -->
+- `run364FX_train_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1`: profit density dual anchor rejoin(수익 밀도 이중 앵커 재결합)은 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): FY에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364FY__density_recovered_oos_profit_failed__run364FY_review_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1 -->
+- `run364FY_review_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1`: density3(밀도3)는 `162`행으로 회복됐지만 OOS profit(표본외 수익)이 실패했습니다. Effect(효과): FZ에서 밀도-수익 충돌을 재혼합합니다.
+<!-- run364FZ__strict_candidate_absent__run364FZ_train_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1 -->
+- `run364FZ_train_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1`: density profit conflict reblend(밀도 수익 충돌 재혼합)은 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GA에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364GA__conflict_reblend_worse__run364GA_review_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1 -->
+- `run364GA_review_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1`: density profit conflict reblend(밀도 수익 충돌 재혼합)는 selected OOS net/PF(선택 표본외 순수익/수익 팩터) `-107.009` / `0.8470401907`와 density(밀도) `2.7103825137/2.786259542/2.7420382166`로 실패했습니다. Effect(효과): GB에서 세션/방향 손실 군집을 차단합니다.
+<!-- run364GB__strict_candidate_absent__run364GB_train_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1 -->
+- `run364GB_train_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1`: session side loss veto rescue(세션 방향 손실 차단 회수)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GC에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364GC__profit_recovered_density_cost_failed__run364GC_review_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1 -->
+- `run364GC_review_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1`: session side loss veto rescue(세션 방향 손실 차단 회수)는 selected OOS net/PF(선택 표본외 순수익/수익 팩터) `60.74` / `1.1268140527`를 회복했지만 density/cost(밀도/비용) `2.5464480874/2.106870229/2.3630573248` / `-334.895`로 실패했습니다. Effect(효과): GD에서 수익 보존 밀도 회복을 실행합니다.
+<!-- run364GD__strict_candidate_absent__run364GD_train_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1 -->
+- `run364GD_train_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1`: profit preserving density recovery(수익 보존 밀도 회복)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GE에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364GE__oos_profit_improved_validation_density_failed__run364GE_review_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1 -->
+- `run364GE_review_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1`: profit preserving density recovery(수익 보존 밀도 회복)는 selected OOS net/PF(선택 표본외 순수익/수익 팩터) `83.737` / `1.184927453`로 개선됐지만 validation/density(검증/밀도) `16.965` / `2.0546448087/2.0458015267/2.050955414`로 실패했습니다. Effect(효과): GF에서 수익 바닥 밀도 상승을 실행합니다.
+<!-- run364GF__strict_candidate_absent__run364GF_train_h17_oos108_pf125_profit_floor_density_lift_without_db_v1 -->
+- `run364GF_train_h17_oos108_pf125_profit_floor_density_lift_without_db_v1`: profit-floor density lift(수익 바닥 밀도 상승)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GG에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364GG__density3_failed__run364GG_review_h17_oos108_pf125_profit_floor_density_lift_without_db_v1 -->
+- `run364GG_review_h17_oos108_pf125_profit_floor_density_lift_without_db_v1`: GF selected(선택) 후보는 validation net/PF(검증 순수익/수익 팩터) `78.008` / `1.101326856`와 OOS PF(표본외 수익 팩터) `1.2040677568`를 만들었지만 density(밀도) `2.2568306011/1.9694656489/2.1369426752`로 실패했습니다. Effect(효과): GH에서 밀도3 수익 바닥 수리를 실행합니다.
+<!-- run364GH__strict_candidate_absent__run364GH_train_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1 -->
+- `run364GH_train_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1`: density3 profit-floor repair(밀도3 수익 바닥 수리)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GI에서 실패 경계와 회수 단서를 분리합니다.
+<!-- run364GI__density_lift_cost_floor_failed__run364GI_review_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1 -->
+- `run364GI_review_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1`: GH selected(선택) 후보는 density(밀도) `2.7103825137/2.6870229008/2.7006369427`로 개선됐지만 validation net(검증 순수익) `0.439`, OOS cost0.6(표본외 비용0.6) `-23.483`, combined cost0.9(합산 비용0.9) `-426.244`로 실패했습니다. Effect(효과): GJ에서 밀도-비용 바닥 재결합을 실행합니다.
+<!-- run364GK__cost_repaired_density_lost__run364GK_review_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1 -->
+- `run364GK_review_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1`: GJ는 OOS cost0.6(표본외 비용0.6) `25.124`와 combined cost0.9(합산 비용0.9) `-18.374`로 개선됐지만 combined density(합산 밀도) `1.6369426752`로 실패했습니다. Effect(효과): GL에서 비용 수리 상태를 보존하며 밀도를 재확장합니다.
+<!-- run364GJ__strict_candidate_absent__run364GJ_train_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1 -->
+- `run364GJ_train_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1`: density-cost floor rejoin(밀도-비용 바닥 재결합)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GK에서 비용 회복과 밀도 손실을 분리합니다.
+<!-- run364GL__strict_candidate_absent__run364GL_train_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1 -->
+- `run364GL_train_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1`: cost-repaired density reexpand(비용 수리 후 밀도 재확장)는 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GM에서 밀도 회복과 비용 보존을 분리합니다.
+<!-- run364GM__density_recovered_cost_failed__run364GM_review_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1 -->
+- `run364GM_review_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1`: GL은 combined density(합산 밀도) `2.4713375796`를 회복했지만 OOS cost0.6(표본외 비용0.6) `-79.072`와 combined cost0.9(합산 비용0.9) `-427.54`로 실패했습니다. Effect(효과): GN에서 비용 앵커와 밀도 앵커를 분리합니다.
+<!-- run364GN__strict_candidate_absent__run364GN_train_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1 -->
+- `run364GN_train_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GO에서 비용·밀도 균형 후보와 실패 경계를 분리합니다.
+<!-- run364GO__sparse_pf999__run364GO_review_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1 -->
+- `run364GO_review_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1`: sparse PF999 selector failure(희소 PF999 선택기 실패). Effect(효과): GP에서 PF를 캡하고 최소 밀도/거래수 바닥을 하드 조건으로 둡니다.
+<!-- run364GP__strict_candidate_absent__run364GP_train_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1 -->
+- `run364GP_train_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GQ에서 PF cap 수리 효과와 남은 비용/밀도 경계를 분리합니다.
+<!-- run364GQ__cost_density_incomplete__run364GQ_review_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1 -->
+- `run364GQ_review_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1`: selector repaired but cost-density frontier incomplete(선택기 수리 완료, 비용-밀도 경계 미완). Effect(효과): GR에서 비용 근접 경계를 먼저 고정합니다.
+<!-- run364GR__strict_candidate_absent__run364GR_train_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1 -->
+- `run364GR_train_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GS에서 비용 수리와 밀도 부족을 분리해 다음 재탐색 조건을 정합니다.
+<!-- run364GS__partial_cost_repair_oos_cost_density_weak__run364GS_review_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1 -->
+- `run364GS_review_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1`: combined cost0.9(합산 비용0.9)는 수리됐지만 OOS cost0.6(표본외 비용0.6)과 density lift(밀도 상승)가 약합니다. Effect(효과): GT 조건은 합산 비용 보존 + 표본외 비용/밀도 상승입니다.
+<!-- run364GT__strict_candidate_absent__run364GT_train_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1 -->
+- `run364GT_train_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GU에서 비용 보존과 밀도 상승의 어느 쪽이 다시 깨졌는지 분리합니다.
+<!-- run364GU__density_lift_without_oos_cost_repair__run364GU_review_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1 -->
+- `run364GU_review_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1`: OOS density(표본외 밀도)는 상승했지만 OOS cost0.6(표본외 비용0.6) `-29.212`로 package(패키지) 실패입니다. Effect(효과): density-only lift(밀도만 올리는 선택)를 다음 run(실행)에서 반복하지 않습니다.
+<!-- run364GV__strict_candidate_absent__run364GV_train_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1 -->
+- `run364GV_train_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GW에서 OOS cost0.6(표본외 비용0.6)과 density(밀도) 중 실패 축을 분리합니다.
+<!-- run364GW__cost_repair_density_preserve_fail__run364GW_review_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1 -->
+- `run364GW_review_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1`: cost repair(비용 수리)는 됐지만 OOS density(표본외 밀도) `1.2900763359`와 combined density(합산 밀도) `1.3280254777`가 부족합니다. Effect(효과): cost-only repair(비용만 수리)를 package(패키지)로 올리지 않습니다.
+<!-- run364GX__strict_candidate_absent__run364GX_train_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1 -->
+- `run364GX_train_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): GY에서 cost hold(비용 유지)와 density recovery(밀도 회복)의 실패 축을 분리합니다.
+<!-- run364GY__profit_cost_clue_density_fail__run364GY_review_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1 -->
+- `run364GY_review_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1`: OOS profit/cost0.6(표본외 수익/비용0.6)은 개선됐지만 OOS density(표본외 밀도) `1.3053435115`, combined density(합산 밀도) `1.2993630573`, combined cost0.9(합산 비용0.9) `-132.105`가 package(패키지) 기준에 부족합니다. Effect(효과): profit-only selection(수익만 보는 선택)을 운영 후보로 올리지 않습니다.
+<!-- run364GZ__strict_candidate_absent__run364GZ_train_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1 -->
+- `run364GZ_train_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): HA에서 profit/cost/density(수익/비용/밀도) 중 실패 축을 분리합니다.
+<!-- run364HA__density_cost_clue_profit_cost06_fail__run364HA_review_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1 -->
+- `run364HA_review_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1`: OOS density(표본외 밀도)와 combined cost0.9(합산 비용0.9)는 회복됐지만 OOS net/PF/cost0.6(표본외 순수익/수익 팩터/비용0.6) `45.36`/`1.1193919853`/`-8.94`, combined density(합산 밀도) `1.3057324841`가 부족합니다. Effect(효과): density/cost-only repair(밀도/비용만 수리)를 package(패키지)로 올리지 않습니다.
+<!-- run364HB__strict_candidate_absent__run364HB_train_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1 -->
+- `run364HB_train_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1`: strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): HC에서 profit/PF/cost0.6(수익/수익 팩터/비용0.6), density(밀도), cost floor(비용 바닥) 실패 축을 분리합니다.
+<!-- run364HC__hb_cost_improved_density_profit_regressed__run364HC_review_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1 -->
+- `run364HC_review_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1`: HB combined cost0.9(합산 비용0.9)는 `-24.605`로 좋아졌지만 OOS net/PF/density/cost0.6(표본외 순수익/수익 팩터/밀도/비용0.6)는 `40.598`/`1.1145199235`/`1.2977099237`/`-10.402`라 package(패키지) 부적격입니다. Effect(효과): HB single-score(HB 단일 점수)를 반복하지 않습니다.
+<!-- run364HD__strict_candidate_absent__run364HD_train_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1 -->
+- `run364HD_train_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1`: dual-surface switch(이중 표면 전환)가 strict candidate(엄격 후보)를 만들지 못했습니다. Effect(효과): HE에서 수익 복구, 비용, 밀도 실패 축을 분리합니다.
+<!-- run364HE__package_rejected__run364HE_review_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1 -->
+- `run364HE_review_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1`: HD는 package(패키지)로 열지 않았습니다. 이유(reason, 이유): strict_candidate_count=0, OOS net/PF 목표 미달, MT5 runtime probe(MT5 런타임 탐침) 없음. Effect(효과): 운영 주장을 차단하고 HF 탐색 조건으로 바꿉니다.
+<!-- run364HJ__density_boundary__run364HJ_materialize_h17_oos108_pf125_probability_bin_veto_runtime_package_without_db_v1 -->
+- `run364HJ_materialize_h17_oos108_pf125_probability_bin_veto_runtime_package_without_db_v1`: Not invalid(무효 아님). Package only(패키지 전용)이며 expected OOS density(예상 표본외 밀도) `1.3740458015`는 3/day(일 3회) 목표보다 낮아 운영 후보로 주장하지 않습니다.
+<!-- run364HK__no_authority__run364HK_execute_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- `run364HK_execute_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1`: runtime probe attempt(런타임 탐침 시도)일 뿐 operating claim(운영 주장)은 없습니다. Expected density(예상 밀도) `1.3740458015`도 3/day(일 3회) 미만입니다.
+<!-- run364HL__density_side_cost_no_authority__run364HL_review_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- `run364HL_review_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1`: positive runtime clue(긍정 런타임 단서)는 있지만 trade density(거래 밀도) `1.7261146497`가 3/day(일 3회) 미만이고 short-heavy/cost/partial-route(숏 편중/비용/부분 라우트)가 남아 authority(권위) 없음. Effect(효과): 운영 주장을 막고 HM 수리 탐색으로 넘깁니다.
+<!-- run364HM__direct_strict_pass_zero__run364HM_train_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1 -->
+- `run364HM_train_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1`: direct strict pass(직접 엄격 통과)는 `0`개입니다. Effect(효과): scaled density estimate(스케일 밀도 추정)를 MT5 proof(MT5 증명)로 부르지 않고 HN review(HN 검토)로 넘깁니다.
+<!-- run364HN__no_authority__run364HN_review_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1 -->
+- `run364HN_review_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1`: scaled density estimate(스케일 밀도 추정)는 긍정 단서지만 direct density proof(직접 밀도 증명), 새 MT5 runtime probe(새 MT5 런타임 탐침), runtime package(런타임 패키지)가 아직 없어 authority(권위) 없음. Effect(효과): 운영 주장 대신 HO 패키지 물질화로 넘깁니다.
+<!-- run364HO__no_authority__run364HO_materialize_h17_oos108_pf125_single_source_probability_bin_veto_runtime_package_without_db_v1 -->
+- `run364HO_materialize_h17_oos108_pf125_single_source_probability_bin_veto_runtime_package_without_db_v1`: runtime package(런타임 패키지)는 준비됐지만 MT5 execution(MT5 실행)과 tester output(테스터 출력)이 없어 authority(권위) 없음. Effect(효과): 운영 주장 대신 HP 런타임 탐침으로 넘깁니다.
+<!-- run364HP__no_authority__run364HP_execute_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- `run364HP_execute_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1`: MT5 runtime probe(MT5 런타임 탐침)는 authority(권위) 없음. Effect(효과): 운영 주장 대신 HQ review(HQ 검토)로 넘깁니다.
+<!-- run364HQ__profit_quality_density_no_authority__run364HQ_review_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- `run364HQ_review_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1`: MT5 net(순수익)은 양수지만 PF(수익 팩터) `1.05`, RF(회복 계수) `0.4`, density(밀도) `2.9681528662` 때문에 authority(권위) 없음. Effect(효과): 운영 주장을 막고 HR 수리 탐색으로 넘깁니다.
+<!-- run364HR__no_strict_joint_pass__run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1 -->
+- `run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`: strict joint pass(엄격 동시 통과) `0`. Effect(효과): 운영 주장 없이 HS에서 품질/밀도 단서를 분리 검토합니다.

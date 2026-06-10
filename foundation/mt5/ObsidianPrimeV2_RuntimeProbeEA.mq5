@@ -5,6 +5,7 @@
 #include "include/ObsidianPrime/ModelRuntime.mqh"
 #include "include/ObsidianPrime/EbmTableRuntime.mqh"
 #include "include/ObsidianPrime/DecisionSurface.mqh"
+#include "include/ObsidianPrime/ProbabilityBinVeto.mqh"
 #include "include/ObsidianPrime/ExecutionBridge.mqh"
 #include "include/ObsidianPrime/RuntimeTelemetry.mqh"
 
@@ -77,12 +78,30 @@ input int             InpMarchFilterMonth = 3;
 input int             InpMarchFilterBlockedHour = 16;
 input double          InpMarchFilterAbsMarginMin = 0.10;
 input double          InpEntryMarginFloor = 0.0;
+input bool            InpProbabilityBinVetoEnabled = false;
+input string          InpProbabilityBinVetoPFlatEdges = "";
+input string          InpProbabilityBinVetoShortLongGapEdges = "";
+input string          InpProbabilityBinVetoRules = "";
 input bool            InpTimeMarginGuardEnabled = false;
 input string          InpTimeMarginGuardSide = "long";
 input int             InpTimeMarginGuardStartHour = 0;
 input int             InpTimeMarginGuardEndHour = 24;
 input string          InpTimeMarginGuardBasis = "opposite";
 input double          InpTimeMarginGuardMinMargin = 0.0;
+input bool            InpMonthMarginGuardEnabled = false;
+input string          InpMonthMarginGuardSide = "long";
+input int             InpMonthMarginGuardMonth = 0;
+input int             InpMonthMarginGuardStartHour = 0;
+input int             InpMonthMarginGuardEndHour = 24;
+input string          InpMonthMarginGuardBasis = "opposite";
+input double          InpMonthMarginGuardMinMargin = 0.0;
+input bool            InpMonthMarginGuard2Enabled = false;
+input string          InpMonthMarginGuard2Side = "long";
+input int             InpMonthMarginGuard2Month = 0;
+input int             InpMonthMarginGuard2StartHour = 0;
+input int             InpMonthMarginGuard2EndHour = 24;
+input string          InpMonthMarginGuard2Basis = "opposite";
+input double          InpMonthMarginGuard2MinMargin = 0.0;
 input bool            InpCalendarBlockEnabled = false;
 input string          InpCalendarBlockSide = "long";
 input int             InpCalendarBlockMonth = 0;
@@ -92,6 +111,10 @@ input bool            InpSyntheticShortSourceEnabled = false;
 input string          InpSyntheticShortSourceHours = "17|19|20";
 input double          InpSyntheticShortSourcePShortMin = 0.4375;
 input double          InpSyntheticShortSourceMarginVsLongMin = 0.075;
+input double          InpSyntheticShortSourceMarginVsFlatMin = -1.0;
+input bool            InpSyntheticShortMonthBlockEnabled = false;
+input int             InpSyntheticShortMonthBlockMonth = 0;
+input string          InpSyntheticShortMonthBlockHours = "*";
 
 input bool            InpAllowTrading = true;
 input double          InpFixedLot = 0.10;
@@ -126,6 +149,12 @@ input double          InpModelRiskMaxPct = 0.05;
 input double          InpModelRiskConfidenceFloor = 0.55;
 input double          InpModelRiskConfidenceCeiling = 0.85;
 input double          InpModelRiskFallbackLot = 0.10;
+input bool            InpRiskScaleOverlayEnabled = false;
+input string          InpRiskScaleOverlaySide = "short";
+input string          InpRiskScaleOverlayHours = "17|18|19|20";
+input string          InpRiskScaleOverlayBasis = "margin_vs_long";
+input double          InpRiskScaleOverlayMinMarginVsLong = 0.080;
+input double          InpRiskScaleOverlayMultiplier = 1.10;
 
 input bool            InpTelemetryEnabled = true;
 input bool            InpTelemetryUseCommonFiles = true;
@@ -140,6 +169,7 @@ COpEbmTableRuntime   g_ebm_table_runtime;
 COpEbmTableRuntime   g_fallback_ebm_table_runtime;
 COpDecisionSurface   g_decision_surface;
 COpDecisionSurface   g_fallback_decision_surface;
+COpProbabilityBinVeto g_probability_bin_veto;
 COpExecutionBridge   g_execution_bridge;
 COpRuntimeTelemetry  g_telemetry;
 
@@ -291,9 +321,48 @@ bool TimeMarginGuardSideMatches(const int signal)
    return false;
   }
 
+bool MonthMarginGuardSideMatches(const int signal)
+  {
+   string side = InpMonthMarginGuardSide;
+   StringToLower(side);
+   if(side == "long")
+      return signal == OP_DECISION_LONG;
+   if(side == "short")
+      return signal == OP_DECISION_SHORT;
+   if(side == "both" || side == "signal")
+      return signal == OP_DECISION_LONG || signal == OP_DECISION_SHORT;
+   return false;
+  }
+
+bool MonthMarginGuard2SideMatches(const int signal)
+  {
+   string side = InpMonthMarginGuard2Side;
+   StringToLower(side);
+   if(side == "long")
+      return signal == OP_DECISION_LONG;
+   if(side == "short")
+      return signal == OP_DECISION_SHORT;
+   if(side == "both" || side == "signal")
+      return signal == OP_DECISION_LONG || signal == OP_DECISION_SHORT;
+   return false;
+  }
+
 bool CalendarBlockSideMatches(const int signal)
   {
    string side = InpCalendarBlockSide;
+   StringToLower(side);
+   if(side == "long")
+      return signal == OP_DECISION_LONG;
+   if(side == "short")
+      return signal == OP_DECISION_SHORT;
+   if(side == "both" || side == "signal")
+      return signal == OP_DECISION_LONG || signal == OP_DECISION_SHORT;
+   return false;
+  }
+
+bool RiskScaleOverlaySideMatches(const int signal)
+  {
+   string side = InpRiskScaleOverlaySide;
    StringToLower(side);
    if(side == "long")
       return signal == OP_DECISION_LONG;
@@ -354,7 +423,10 @@ void ApplySyntheticShortSourceOverlay(const datetime target_time,
       return;
 
    const double margin_vs_long = p_short - p_long;
-   if(p_short < InpSyntheticShortSourcePShortMin || margin_vs_long < InpSyntheticShortSourceMarginVsLongMin)
+   const double margin_vs_flat = p_short - p_flat;
+   if(p_short < InpSyntheticShortSourcePShortMin
+      || margin_vs_long < InpSyntheticShortSourceMarginVsLongMin
+      || margin_vs_flat < InpSyntheticShortSourceMarginVsFlatMin)
       return;
 
    decision.signal = OP_DECISION_SHORT;
@@ -367,6 +439,8 @@ void ApplySyntheticShortSourceOverlay(const datetime target_time,
                      + DoubleToString(p_short, 6)
                      + ",margin_vs_long="
                      + DoubleToString(margin_vs_long, 6)
+                     + ",margin_vs_flat="
+                     + DoubleToString(margin_vs_flat, 6)
                      + "|"
                      + decision.reason;
   }
@@ -398,6 +472,118 @@ double TimeMarginGuardValue(const int signal,
    if(basis == "abs_directional")
       return DirectionalAbsMargin(p_short, p_flat, p_long);
    return SignalSideMargin(signal, p_short, p_flat, p_long);
+  }
+
+double MonthMarginGuardValue(const int signal,
+                             const double p_short,
+                             const double p_flat,
+                             const double p_long)
+  {
+   string basis = InpMonthMarginGuardBasis;
+   StringToLower(basis);
+
+   if(basis == "opposite")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_long;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_short;
+      return 0.0;
+     }
+   if(basis == "flat")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_flat;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_flat;
+      return 0.0;
+     }
+   if(basis == "abs_directional")
+      return DirectionalAbsMargin(p_short, p_flat, p_long);
+   return SignalSideMargin(signal, p_short, p_flat, p_long);
+  }
+
+double MonthMarginGuard2Value(const int signal,
+                              const double p_short,
+                              const double p_flat,
+                              const double p_long)
+  {
+   string basis = InpMonthMarginGuard2Basis;
+   StringToLower(basis);
+
+   if(basis == "opposite")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_long;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_short;
+      return 0.0;
+     }
+   if(basis == "flat")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_flat;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_flat;
+      return 0.0;
+     }
+   if(basis == "abs_directional")
+      return DirectionalAbsMargin(p_short, p_flat, p_long);
+   return SignalSideMargin(signal, p_short, p_flat, p_long);
+  }
+
+double RiskScaleOverlayBasisValue(const int signal,
+                                  const double p_short,
+                                  const double p_flat,
+                                  const double p_long)
+  {
+   string basis = InpRiskScaleOverlayBasis;
+   StringToLower(basis);
+
+   if(basis == "margin_vs_long" || basis == "opposite")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_long;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_short;
+      return 0.0;
+     }
+   if(basis == "flat")
+     {
+      if(signal == OP_DECISION_SHORT)
+         return p_short - p_flat;
+      if(signal == OP_DECISION_LONG)
+         return p_long - p_flat;
+      return 0.0;
+     }
+   if(basis == "abs_directional")
+      return DirectionalAbsMargin(p_short, p_flat, p_long);
+   return SignalSideMargin(signal, p_short, p_flat, p_long);
+  }
+
+double RiskScaleOverlayMultiplier(const datetime target_time,
+                                  const SOpDecisionResult &decision,
+                                  const double p_short,
+                                  const double p_flat,
+                                  const double p_long)
+  {
+   if(!InpRiskScaleOverlayEnabled || decision.signal == OP_DECISION_FLAT)
+      return 1.0;
+   if(!RiskScaleOverlaySideMatches(decision.signal))
+      return 1.0;
+
+   MqlDateTime parts;
+   TimeToStruct(target_time, parts);
+   if(!HourListContains(parts.hour, InpRiskScaleOverlayHours))
+      return 1.0;
+
+   const double basis_value = RiskScaleOverlayBasisValue(decision.signal, p_short, p_flat, p_long);
+   if(basis_value < InpRiskScaleOverlayMinMarginVsLong)
+      return 1.0;
+
+   if(!MathIsValidNumber(InpRiskScaleOverlayMultiplier) || InpRiskScaleOverlayMultiplier <= 0.0)
+      return 1.0;
+   return InpRiskScaleOverlayMultiplier;
   }
 
 void ApplyRuntimeTimeFilters(const datetime target_time,
@@ -433,6 +619,27 @@ void ApplyRuntimeTimeFilters(const datetime target_time,
         }
      }
 
+   if(InpSyntheticShortMonthBlockEnabled && decision.signal == OP_DECISION_SHORT)
+     {
+      const bool month_matches = InpSyntheticShortMonthBlockMonth <= 0 || parts.mon == InpSyntheticShortMonthBlockMonth;
+      const bool hour_matches = HourListContains(parts.hour, InpSyntheticShortMonthBlockHours);
+      const bool synthetic_reason = StringFind(decision.reason, "synthetic_short_source_overlay") >= 0;
+      if(month_matches && hour_matches && synthetic_reason)
+        {
+         decision.signal = OP_DECISION_FLAT;
+         decision.label = "flat";
+         decision.confidence = 0.0;
+         decision.margin = 0.0;
+         decision.reason = "synthetic_short_month_block:month="
+                           + (string)parts.mon
+                           + ",hour="
+                           + (string)parts.hour
+                           + "|"
+                           + decision.reason;
+         return;
+        }
+     }
+
    if(InpMarchNonHour16MarginFilter && parts.mon == InpMarchFilterMonth)
      {
       const double abs_margin = DirectionalAbsMargin(p_short, p_flat, p_long);
@@ -449,6 +656,72 @@ void ApplyRuntimeTimeFilters(const datetime target_time,
                            + "|"
                            + decision.reason;
          return;
+        }
+     }
+
+   if(InpMonthMarginGuardEnabled && MonthMarginGuardSideMatches(decision.signal))
+     {
+      const bool month_matches = InpMonthMarginGuardMonth <= 0 || parts.mon == InpMonthMarginGuardMonth;
+      if(month_matches && HourInRange(parts.hour, InpMonthMarginGuardStartHour, InpMonthMarginGuardEndHour))
+        {
+         const double guard_margin = MonthMarginGuardValue(decision.signal, p_short, p_flat, p_long);
+         if(guard_margin < InpMonthMarginGuardMinMargin)
+           {
+            string guard_basis = InpMonthMarginGuardBasis;
+            StringToLower(guard_basis);
+            decision.signal = OP_DECISION_FLAT;
+            decision.label = "flat";
+            decision.confidence = 0.0;
+            decision.margin = 0.0;
+            decision.reason = "month_margin_guard:month="
+                              + (string)parts.mon
+                              + ",hour="
+                              + (string)parts.hour
+                              + ",side="
+                              + InpMonthMarginGuardSide
+                              + ",basis="
+                              + guard_basis
+                              + ",margin="
+                              + DoubleToString(guard_margin, 6)
+                              + "<"
+                              + DoubleToString(InpMonthMarginGuardMinMargin, 6)
+                              + "|"
+                              + decision.reason;
+            return;
+           }
+        }
+     }
+
+   if(InpMonthMarginGuard2Enabled && MonthMarginGuard2SideMatches(decision.signal))
+     {
+      const bool month_matches = InpMonthMarginGuard2Month <= 0 || parts.mon == InpMonthMarginGuard2Month;
+      if(month_matches && HourInRange(parts.hour, InpMonthMarginGuard2StartHour, InpMonthMarginGuard2EndHour))
+        {
+         const double guard_margin = MonthMarginGuard2Value(decision.signal, p_short, p_flat, p_long);
+         if(guard_margin < InpMonthMarginGuard2MinMargin)
+           {
+            string guard_basis = InpMonthMarginGuard2Basis;
+            StringToLower(guard_basis);
+            decision.signal = OP_DECISION_FLAT;
+            decision.label = "flat";
+            decision.confidence = 0.0;
+            decision.margin = 0.0;
+            decision.reason = "month_margin_guard2:month="
+                              + (string)parts.mon
+                              + ",hour="
+                              + (string)parts.hour
+                              + ",side="
+                              + InpMonthMarginGuard2Side
+                              + ",basis="
+                              + guard_basis
+                              + ",margin="
+                              + DoubleToString(guard_margin, 6)
+                              + "<"
+                              + DoubleToString(InpMonthMarginGuard2MinMargin, 6)
+                              + "|"
+                              + decision.reason;
+            return;
+           }
         }
      }
 
@@ -555,6 +828,7 @@ struct SOpRiskSizingDecision
    double executed_lot;
    bool   min_lot_floor_applied;
    double actual_risk_pct_after_floor;
+   double risk_scale_multiplier;
   };
 
 double NormalizeAdapterLot(const double requested)
@@ -617,7 +891,8 @@ double ModelRiskPctFromDecision(const SOpDecisionResult &decision)
   }
 
 SOpRiskSizingDecision BuildRiskSizingDecision(const SOpDecisionResult &decision,
-                                              const double open_sl_points)
+                                              const double open_sl_points,
+                                              const double risk_scale_multiplier)
   {
    SOpRiskSizingDecision sizing;
    sizing.model_risk_pct = ModelRiskPctFromDecision(decision);
@@ -626,6 +901,9 @@ SOpRiskSizingDecision BuildRiskSizingDecision(const SOpDecisionResult &decision,
    sizing.executed_lot = 0.0;
    sizing.min_lot_floor_applied = false;
    sizing.actual_risk_pct_after_floor = 0.0;
+   sizing.risk_scale_multiplier = (MathIsValidNumber(risk_scale_multiplier) && risk_scale_multiplier > 0.0)
+                                  ? risk_scale_multiplier
+                                  : 1.0;
 
    if(decision.signal == OP_DECISION_FLAT)
       return sizing;
@@ -634,16 +912,17 @@ SOpRiskSizingDecision BuildRiskSizingDecision(const SOpDecisionResult &decision,
    const double balance = AccountInfoDouble(ACCOUNT_BALANCE);
    if(!InpModelRiskSizingEnabled || risk_money_per_lot <= 0.0 || balance <= 0.0)
      {
-      sizing.model_risk_pct = 0.0;
+     sizing.model_risk_pct = 0.0;
       sizing.clipped_risk_pct = 0.0;
-      sizing.computed_lot = InpModelRiskFallbackLot > 0.0 ? InpModelRiskFallbackLot : InpFixedLot;
+      sizing.computed_lot = (InpModelRiskFallbackLot > 0.0 ? InpModelRiskFallbackLot : InpFixedLot)
+                            * sizing.risk_scale_multiplier;
       sizing.executed_lot = NormalizeAdapterLot(sizing.computed_lot);
       sizing.min_lot_floor_applied = sizing.computed_lot < 0.01;
       return sizing;
      }
 
    const double risk_money = balance * sizing.clipped_risk_pct;
-   sizing.computed_lot = risk_money / risk_money_per_lot;
+   sizing.computed_lot = (risk_money / risk_money_per_lot) * sizing.risk_scale_multiplier;
    sizing.min_lot_floor_applied = sizing.computed_lot < 0.01;
    sizing.executed_lot = NormalizeAdapterLot(sizing.computed_lot);
    sizing.actual_risk_pct_after_floor = (sizing.executed_lot * risk_money_per_lot) / balance;
@@ -1147,6 +1426,7 @@ void ProcessClosedBar()
      }
    ApplySyntheticShortSourceOverlay(target_time, p_short, p_flat, p_long, decision);
    ApplyRuntimeTimeFilters(target_time, p_short, p_flat, p_long, decision);
+   g_probability_bin_veto.Apply(target_time, p_short, p_flat, p_long, decision);
 
    const int routed_signal_before_entry_gate = decision.signal;
    const double routed_confidence_before_entry_gate = decision.confidence;
@@ -1180,7 +1460,21 @@ void ProcessClosedBar()
    const double open_tp_points = ClampAdapterPoints(atr_points * InpAtrTakeProfitMultiplier,
                                                     InpAtrMinTakeProfitPoints,
                                                     InpAtrMaxTakeProfitPoints);
-   const SOpRiskSizingDecision risk_sizing = BuildRiskSizingDecision(decision, open_sl_points);
+   const double risk_scale_multiplier = RiskScaleOverlayMultiplier(target_time,
+                                                                   decision,
+                                                                   p_short,
+                                                                   p_flat,
+                                                                   p_long);
+   if(risk_scale_multiplier != 1.0)
+      decision.reason = "risk_scale_overlay:multiplier="
+                        + DoubleToString(risk_scale_multiplier, 6)
+                        + ",basis="
+                        + InpRiskScaleOverlayBasis
+                        + "|"
+                        + decision.reason;
+   const SOpRiskSizingDecision risk_sizing = BuildRiskSizingDecision(decision,
+                                                                    open_sl_points,
+                                                                    risk_scale_multiplier);
 
    SOpExecutionResult execution;
    const bool execution_ok = g_execution_bridge.Execute(decision.signal,
@@ -1257,6 +1551,14 @@ int OnInit()
    string telemetry_reason = "";
    if(!g_telemetry.RecordLifecycle("init_start", InpExplorationLabel, telemetry_reason))
       return FailInit(telemetry_reason);
+
+   string probability_bin_veto_reason = "";
+   if(!g_probability_bin_veto.Configure(InpProbabilityBinVetoEnabled,
+                                        InpProbabilityBinVetoPFlatEdges,
+                                        InpProbabilityBinVetoShortLongGapEdges,
+                                        InpProbabilityBinVetoRules,
+                                        probability_bin_veto_reason))
+      return FailInit("probability_bin_veto_config_failed:" + probability_bin_veto_reason);
 
    if(InpEnforceM5 && InpTimeframe != PERIOD_M5)
       return FailInit("timeframe_must_be_period_m5");

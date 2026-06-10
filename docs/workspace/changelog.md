@@ -6523,3 +6523,303 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 <!-- run364CL__run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1 -->
 - 2026-06-04T22:14:49Z `run364CL_materialize_h17_bad_month_source_balance_repair_inputs_without_db_v1` materialized CK package rejection(CK 패키지 거절) into `16` CM repair scout rows(CM 수리 정찰 행); next `run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CM__run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1 -->
+- 2026-06-06T01:02:42Z `run364CM_train_h17_bad_month_source_balance_repair_scout_without_db_v1` completed CM proxy repair scout(CM 프록시 수리 정찰 완료); selected `cm04_cj09_month08_12_pair_guard` with bad_month_count `0`; next `run364CN_review_h17_bad_month_source_balance_repair_scout_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CN__run364CN_review_h17_bad_month_source_balance_repair_scout_without_db_v1 -->
+- 2026-06-06T01:14:34Z `run364CN_review_h17_bad_month_source_balance_repair_scout_without_db_v1` reviewed CM proxy candidate(CM 프록시 후보 검토); opened `run364CO_materialize_h17_bad_month_source_balance_repair_mt5_runtime_probe_inputs_without_db_v1` for MT5 probe input materialization(MT5 탐침 입력 구체화); no authority claim(권위 주장 없음).
+
+<!-- run364CO__run364CO_materialize_h17_bad_month_source_balance_repair_mt5_runtime_probe_inputs_without_db_v1 -->
+- 2026-06-06T01:27:12Z `run364CO_materialize_h17_bad_month_source_balance_repair_mt5_runtime_probe_inputs_without_db_v1` packaged CM04 MT5 runtime probe(CM04 MT5 런타임 탐침 패키지); next `run364CP_execute_h17_bad_month_source_balance_repair_mt5_runtime_probe_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CP__run364CP_execute_h17_bad_month_source_balance_repair_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T01:44:23Z `run364CP_execute_h17_bad_month_source_balance_repair_mt5_runtime_probe_without_db_v1` attempted MT5 runtime probe(MT5 런타임 탐침 시도); judgment `mt5_runtime_probe_outputs_available_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+
+<!-- run364CQ__run364CQ_review_h17_bad_month_source_balance_repair_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T02:15:15Z `run364CQ_review_h17_bad_month_source_balance_repair_mt5_runtime_probe_without_db_v1` reviewed CM04 MT5 runtime probe(CM04 MT5 런타임 탐침 검토); next `run364CR_materialize_h17_month12_long_equity_drawdown_repair_inputs_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CR__run364CR_materialize_h17_month12_long_equity_drawdown_repair_inputs_without_db_v1 -->
+- 2026-06-06T02:21:13Z `run364CR_materialize_h17_month12_long_equity_drawdown_repair_inputs_without_db_v1` materialized month12/equity DD repair inputs(12월/수익곡선 낙폭 수리 입력); next `run364CS_train_h17_month12_long_equity_drawdown_repair_scout_without_db_v1`.
+
+<!-- run364CS__run364CS_train_h17_month12_long_equity_drawdown_repair_scout_without_db_v1 -->
+- 2026-06-06T02:36:34Z `run364CS_train_h17_month12_long_equity_drawdown_repair_scout_without_db_v1` completed CS proxy scout(CS 프록시 정찰 완료); selected `cr04_month12_long_hours17_20_floor002`; next `run364CT_review_h17_month12_long_equity_drawdown_repair_scout_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CT__run364CT_review_h17_month12_long_equity_drawdown_repair_scout_without_db_v1 -->
+- 2026-06-06T02:46:53Z `run364CT_review_h17_month12_long_equity_drawdown_repair_scout_without_db_v1` completed CT review(CT 검토 완료); cr04 requires secondary month margin guard(보조 월 마진 가드 필요); next `run364CU_implement_h17_month12_secondary_month_margin_guard_runtime_package_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CU__run364CU_implement_h17_month12_secondary_month_margin_guard_runtime_package_without_db_v1 -->
+- 2026-06-06T03:00:35Z `run364CU_implement_h17_month12_secondary_month_margin_guard_runtime_package_without_db_v1` packaged cr04 secondary month guard(cr04 보조 월 가드 패키지); next `run364CV_execute_h17_month12_secondary_month_guard_mt5_runtime_probe_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CV__run364CV_execute_h17_month12_secondary_month_guard_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T03:17:10Z `run364CV_execute_h17_month12_secondary_month_guard_mt5_runtime_probe_without_db_v1` attempted MT5 runtime probe(MT5 런타임 탐침 시도); judgment `mt5_runtime_probe_outputs_available_cr04_secondary_guard_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+
+<!-- run364CW__run364CW_review_h17_month12_secondary_month_guard_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T03:34:17Z `run364CW_review_h17_month12_secondary_month_guard_mt5_runtime_probe_without_db_v1` reviewed cr04 MT5 runtime probe(cr04 MT5 런타임 탐침 검토); next `run364CX_materialize_h17_equity_drawdown_side_balance_stress_repair_inputs_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364CX__run364CX_materialize_h17_equity_drawdown_side_balance_stress_repair_inputs_without_db_v1 -->
+- 2026-06-06T03:44:05Z `run364CX_materialize_h17_equity_drawdown_side_balance_stress_repair_inputs_without_db_v1` materialized equity DD/side balance/proxy gap repair inputs(수익곡선 낙폭/방향 균형/프록시 차이 수리 입력); next `run364CY_train_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1`.
+
+<!-- run364CY__run364CY_train_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1 -->
+- 2026-06-06T03:56:09Z `run364CY_train_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1` completed risk-scale proxy scout(위험비율 프록시 정찰); selected `cx05_high_quality_short_boost110_h17_20`; next `run364CZ_review_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1`.
+
+<!-- run364CZ__run364CZ_review_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1 -->
+- 2026-06-06T04:11:41Z `run364CZ_review_h17_equity_drawdown_side_balance_stress_repair_scout_without_db_v1` completed CZ review(CZ 검토 완료); cx05 requires short quality risk-scale overlay(숏 품질 위험비율 오버레이 필요); next `run364DA_implement_h17_short_quality_risk_scale_runtime_package_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364DA__run364DA_implement_h17_short_quality_risk_scale_runtime_package_without_db_v1 -->
+- 2026-06-06T04:21:55Z `run364DA_implement_h17_short_quality_risk_scale_runtime_package_without_db_v1` packaged cx05 short-quality risk-scale(cx05 숏 품질 위험비율 패키지); next `run364DB_execute_h17_short_quality_risk_scale_mt5_runtime_probe_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364DB__run364DB_execute_h17_short_quality_risk_scale_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T04:50:10Z `run364DB_execute_h17_short_quality_risk_scale_mt5_runtime_probe_without_db_v1` attempted cx05 short-quality risk-scale MT5 runtime probe(cx05 숏 품질 위험비율 MT5 런타임 탐침); judgment `mt5_runtime_probe_outputs_available_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+
+<!-- run364DC__run364DC_review_h17_short_quality_risk_scale_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T04:55:57Z `run364DC_review_h17_short_quality_risk_scale_mt5_runtime_probe_without_db_v1` reviewed DB MT5 probe(DB MT5 탐침 검토); judgment `positive_runtime_probe_clue_short_risk_scale_transfer_real_side_balance_unresolved_no_authority`; next `run364DD_train_h17_short_source_expansion_runtime_positive_scout_without_db_v1`; no authority claim(권위 주장 없음).
+
+<!-- run364DD__run364DD_train_h17_short_source_expansion_runtime_positive_scout_without_db_v1 -->
+- 2026-06-06T05:23:02Z `run364DD_train_h17_short_source_expansion_runtime_positive_scout_without_db_v1` completed short-source expansion proxy scout(숏 원천 확장 프록시 탐색); selected `dd05_h17_21_short_source_m050_ex_aug`; next `run364DE_review_h17_short_source_expansion_runtime_positive_scout_without_db_v1`.
+
+<!-- run364DE__run364DE_review_h17_short_source_expansion_runtime_positive_scout_without_db_v1 -->
+- 2026-06-06T05:32:45Z `run364DE_review_h17_short_source_expansion_runtime_positive_scout_without_db_v1` completed DD runtime representation review(DD 런타임 표현 검토); repair `InpSyntheticShortSourceMarginVsFlatMin`; next `run364DF_implement_h17_short_source_expansion_runtime_package_without_db_v1`.
+
+<!-- run364DF__run364DF_implement_h17_short_source_expansion_runtime_package_without_db_v1 -->
+- 2026-06-06T05:40:14Z `run364DF_implement_h17_short_source_expansion_runtime_package_without_db_v1` completed DD05 runtime package(DD05 런타임 패키지); next `run364DG_execute_h17_short_source_expansion_mt5_runtime_probe_without_db_v1`.
+<!-- run364DG__run364DG_execute_h17_short_source_expansion_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T05:59:30Z `run364DG_execute_h17_short_source_expansion_mt5_runtime_probe_without_db_v1` attempted DD05 short-source expansion MT5 runtime probe(DD05 숏 원천 확장 MT5 런타임 탐침); judgment `mt5_runtime_probe_outputs_available_dd05_short_source_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+<!-- run364DH__run364DH_review_h17_short_source_expansion_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T06:07:33Z `run364DH_review_h17_short_source_expansion_mt5_runtime_probe_without_db_v1` reviewed DD05 MT5 probe(DD05 MT5 탐침 검토); judgment `positive_runtime_probe_clue_short_source_added_density_but_profit_retreated_side_balance_unresolved_no_authority`; next `run364DI_train_h17_short_source_profit_recovery_scout_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DI__run364DI_train_h17_short_source_profit_recovery_scout_without_db_v1 -->
+- 2026-06-06T06:23:05Z `run364DI_train_h17_short_source_profit_recovery_scout_without_db_v1` completed short-source profit recovery proxy scout(숏 원천 수익 회복 프록시 스카우트); selected `di02_h17_18_20_21_no19_m050`; next `run364DJ_review_h17_short_source_profit_recovery_scout_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DJ__run364DJ_review_h17_short_source_profit_recovery_scout_without_db_v1 -->
+- 2026-06-06T06:27:16Z `run364DJ_review_h17_short_source_profit_recovery_scout_without_db_v1` reviewed DI candidate(DI 후보 검토); next `run364DK_implement_h17_short_source_profit_recovery_runtime_package_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DK__run364DK_implement_h17_short_source_profit_recovery_runtime_package_without_db_v1 -->
+- 2026-06-06T07:53:01Z `run364DK_implement_h17_short_source_profit_recovery_runtime_package_without_db_v1` completed DI02 runtime package(DI02 런타임 패키지); next `run364DL_execute_h17_short_source_profit_recovery_mt5_runtime_probe_without_db_v1`.
+<!-- run364DL__run364DL_execute_h17_short_source_profit_recovery_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T08:06:35Z `run364DL_execute_h17_short_source_profit_recovery_mt5_runtime_probe_without_db_v1` attempted DI02 no19 short-source profit recovery MT5 runtime probe(DI02 19시 배제 숏 원천 수익 회복 MT5 런타임 탐침); judgment `mt5_runtime_probe_outputs_available_di02_no19_short_source_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+<!-- run364DM__run364DM_review_h17_short_source_profit_recovery_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T08:13:05Z `run364DM_review_h17_short_source_profit_recovery_mt5_runtime_probe_without_db_v1` reviewed DI02 no19 MT5 probe(DI02 no19 MT5 탐침 검토); judgment `positive_runtime_probe_clue_profit_recovered_near_db_short_lift_preserved_pf_slightly_below_db_no_authority`; next `run364DN_train_h17_short_source_pf_balance_polish_scout_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DN__run364DN_train_h17_short_source_pf_balance_polish_scout_without_db_v1 -->
+- 2026-06-06T08:48:46Z `run364DN_train_h17_short_source_pf_balance_polish_scout_without_db_v1` completed PF/net polish proxy scout(PF/순수익 다듬기 프록시 스카우트); selected `dn04_risk_mult125_all_h17_20`; next `run364DO_review_h17_short_source_pf_balance_polish_scout_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DO__run364DO_review_h17_short_source_pf_balance_polish_scout_without_db_v1 -->
+- 2026-06-06T08:55:57Z `run364DO_review_h17_short_source_pf_balance_polish_scout_without_db_v1` reviewed DN PF/net polish(DN PF/순수익 다듬기); strict pass 0; package not opened(패키지 열지 않음); next `run364DP_train_h17_short_source_model_label_offensive_reseed_without_db_v1`.
+<!-- run364DP__run364DP_train_h17_short_source_model_label_offensive_reseed_without_db_v1 -->
+- 2026-06-06T09:18:33Z `run364DP_train_h17_short_source_model_label_offensive_reseed_without_db_v1` completed short-source model/label reseed(숏 원천 모델/라벨 재시드); selected `short_h3_m2__full58(전체_58)__et6_l80_n96(엑스트라트리6_잎80_96)`; strict candidates `0`; next `run364DQ_review_h17_short_source_model_label_offensive_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DQ__run364DQ_review_h17_short_source_model_label_offensive_reseed_without_db_v1 -->
+- 2026-06-06T09:23:59Z `run364DQ_review_h17_short_source_model_label_offensive_reseed_without_db_v1` reviewed DP ONNX seed(DP ONNX 씨앗); package not opened(패키지 열지 않음); next `run364DR_train_h17_short_source_density_pf_bridge_reseed_without_db_v1`.
+<!-- run364DR__run364DR_train_h17_short_source_density_pf_bridge_reseed_without_db_v1 -->
+- 2026-06-06T10:18:07Z `run364DR_train_h17_short_source_density_pf_bridge_reseed_without_db_v1` completed density/PF bridge reseed(밀도/PF 브리지 재시드); strict candidates `0`; next `run364DS_review_h17_short_source_density_pf_bridge_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DS__run364DS_review_h17_short_source_density_pf_bridge_reseed_without_db_v1 -->
+- 2026-06-06T10:27:54Z `run364DS_review_h17_short_source_density_pf_bridge_reseed_without_db_v1` reviewed DR density/PF bridge(밀도/PF 브리지 검토); package rejected(패키지 거절); next `run364DT_train_h17_density_failure_regime_behavior_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DT__run364DT_train_h17_density_failure_regime_behavior_reseed_without_db_v1 -->
+- 2026-06-06T10:47:36Z `run364DT_train_h17_density_failure_regime_behavior_reseed_without_db_v1` completed regime/behavior model reseed(국면/현상 모델 재시드); strict candidates `0`; next `run364DU_review_h17_density_failure_regime_behavior_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DU__run364DU_review_h17_density_failure_regime_behavior_reseed_without_db_v1 -->
+- 2026-06-06T10:59:25Z `run364DU_review_h17_density_failure_regime_behavior_reseed_without_db_v1` reviewed DT regime/behavior reseed(국면/현상 재시드); package rejected(패키지 거절); next `run364DV_train_h17_validation_stability_regime_source_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DV__run364DV_train_h17_validation_stability_regime_source_reseed_without_db_v1 -->
+- 2026-06-06T11:14:36Z `run364DV_train_h17_validation_stability_regime_source_reseed_without_db_v1` completed validation-stability reseed(검증 안정성 재시드); strict candidates `0`; next `run364DW_review_h17_validation_stability_regime_source_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DW__run364DW_review_h17_validation_stability_regime_source_reseed_without_db_v1 -->
+- 2026-06-06T11:19:19Z `run364DW_review_h17_validation_stability_regime_source_reseed_without_db_v1` reviewed DV validation-stability reseed(검증 안정성 재시드); package rejected(패키지 거절); next `run364DX_train_h17_validation_stability_density_recovery_reseed_without_db_v1`.
+<!-- run364DX__run364DX_train_h17_validation_stability_density_recovery_reseed_without_db_v1 -->
+- 2026-06-06T11:30:42Z `run364DX_train_h17_validation_stability_density_recovery_reseed_without_db_v1` completed density recovery reseed(밀도 회복 재시드); strict candidates `0`; next `run364DY_review_h17_validation_stability_density_recovery_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364DY__run364DY_review_h17_validation_stability_density_recovery_reseed_without_db_v1 -->
+- 2026-06-06T11:35:13Z `run364DY_review_h17_validation_stability_density_recovery_reseed_without_db_v1` reviewed DX density recovery(밀도 회복); package rejected(패키지 거절); next `run364DZ_train_h17_density_pf_balance_reseed_without_db_v1`.
+<!-- run364DZ__run364DZ_train_h17_density_pf_balance_reseed_without_db_v1 -->
+- 2026-06-06T11:52:54Z `run364DZ_train_h17_density_pf_balance_reseed_without_db_v1` completed density/PF balance reseed(밀도/PF 균형 재시드); strict candidates `0`; next `run364EA_review_h17_density_pf_balance_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EA__run364EA_review_h17_density_pf_balance_reseed_without_db_v1 -->
+- 2026-06-06T12:00:16Z `run364EA_review_h17_density_pf_balance_reseed_without_db_v1` reviewed DZ density/PF balance(밀도/PF 균형); package rejected(패키지 거절); next `run364EB_train_h17_validation_pf_floor_density_recovery_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EB__run364EB_train_h17_validation_pf_floor_density_recovery_reseed_without_db_v1 -->
+- 2026-06-06T12:17:59Z `run364EB_train_h17_validation_pf_floor_density_recovery_reseed_without_db_v1` completed validation PF floor density recovery reseed(검증 PF 바닥 밀도 회복 재시드); strict candidates `0`; next `run364EC_review_h17_validation_pf_floor_density_recovery_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EC__run364EC_review_h17_validation_pf_floor_density_recovery_reseed_without_db_v1 -->
+- 2026-06-06T12:32:38Z `run364EC_review_h17_validation_pf_floor_density_recovery_reseed_without_db_v1` reviewed EB validation PF floor(검증 PF 바닥); package rejected(패키지 거절); next `run364ED_train_h17_dual_pf_floor_bridge_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364ED__run364ED_train_h17_dual_pf_floor_bridge_reseed_without_db_v1 -->
+- 2026-06-06T13:16:28Z `run364ED_train_h17_dual_pf_floor_bridge_reseed_without_db_v1` completed dual PF floor bridge reseed(양쪽 PF 바닥 연결 재시드); min_pf `1.0219124076`; strict candidates `0`; next `run364EE_review_h17_dual_pf_floor_bridge_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EE__run364EE_review_h17_dual_pf_floor_bridge_reseed_without_db_v1 -->
+- 2026-06-06T13:23:09Z `run364EE_review_h17_dual_pf_floor_bridge_reseed_without_db_v1` reviewed ED dual PF floor bridge(ED 양쪽 PF 바닥 연결); package rejected(패키지 거절); next `run364EF_train_h17_validation_source_rotation_density_recovery_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EF__run364EF_train_h17_validation_source_rotation_density_recovery_without_db_v1 -->
+- 2026-06-06T13:40:53Z `run364EF_train_h17_validation_source_rotation_density_recovery_without_db_v1` completed validation source rotation density recovery(검증 원천 회전 밀도 회복); min_pf `1.0474042816`; pf110_count `0`; next `run364EG_review_h17_validation_source_rotation_density_recovery_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EG__run364EG_review_h17_validation_source_rotation_density_recovery_without_db_v1 -->
+- 2026-06-06T13:45:38Z `run364EG_review_h17_validation_source_rotation_density_recovery_without_db_v1` reviewed EF validation source rotation(검증 원천 회전); package rejected(패키지 거절); next `run364EH_train_h17_oos_pf108_bridge_density_preserve_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EH__run364EH_train_h17_oos_pf108_bridge_density_preserve_without_db_v1 -->
+- 2026-06-06T13:58:24Z `run364EH_train_h17_oos_pf108_bridge_density_preserve_without_db_v1` completed OOS PF108 bridge density preserve(표본외 PF108 연결 밀도 보존); oos108_count `0`; pf108_count `0`; next `run364EI_review_h17_oos_pf108_bridge_density_preserve_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EI__run364EI_review_h17_oos_pf108_bridge_density_preserve_without_db_v1 -->
+- 2026-06-06T14:03:22Z `run364EI_review_h17_oos_pf108_bridge_density_preserve_without_db_v1` reviewed EH OOS PF108 bridge(표본외 PF108 연결); package rejected(패키지 거절); next `run364EJ_train_h17_density_floor_oos_pf_salvage_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EJ__run364EJ_train_h17_density_floor_oos_pf_salvage_without_db_v1 -->
+- 2026-06-06T14:27:53Z `run364EJ_train_h17_density_floor_oos_pf_salvage_without_db_v1` completed density floor OOS PF salvage(밀도 바닥 표본외 PF 회수); oos112_count `0`; pf110_count `0`; next `run364EK_review_h17_density_floor_oos_pf_salvage_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EK__run364EK_review_h17_density_floor_oos_pf_salvage_without_db_v1 -->
+- 2026-06-06T14:33:39Z `run364EK_review_h17_density_floor_oos_pf_salvage_without_db_v1` reviewed EJ density floor OOS PF salvage(밀도 바닥 표본외 PF 회수); package rejected(패키지 거절); next `run364EL_train_h17_oos108_validation_floor_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EL__run364EL_train_h17_oos108_validation_floor_bridge_without_db_v1 -->
+- 2026-06-06T15:02:12Z `run364EL_train_h17_oos108_validation_floor_bridge_without_db_v1` completed OOS108 validation floor bridge(표본외108 검증 바닥 연결); bridge_count `322`; pf108_count `84`; next `run364EM_review_h17_oos108_validation_floor_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EM__run364EM_review_h17_oos108_validation_floor_bridge_without_db_v1 -->
+- 2026-06-06T15:11:22Z `run364EM_review_h17_oos108_validation_floor_bridge_without_db_v1` reviewed EL OOS108 validation floor bridge(표본외108 검증 바닥 연결); package eligible(패키지 가능); next `run364EN_materialize_h17_oos108_validation_floor_bridge_runtime_package_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EN__run364EN_materialize_h17_oos108_validation_floor_bridge_runtime_package_without_db_v1 -->
+- 2026-06-06T15:32:32Z `run364EN_materialize_h17_oos108_validation_floor_bridge_runtime_package_without_db_v1` completed OOS108 runtime package(OOS108 런타임 패키지); next `run364EO_execute_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EO__run364EO_execute_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T15:59:22Z `run364EO_execute_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1` attempted MT5 runtime probe(MT5 런타임 탐침 시도); judgment `mt5_runtime_probe_outputs_available_oos108_validation_floor_bridge_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+<!-- run364EP__run364EP_review_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-06T16:38:54Z `run364EP_review_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1` reviewed EO OOS108 MT5 probe(EO OOS108 MT5 탐침 검토); judgment `positive_runtime_probe_clue_scope_adjusted_mt5_net_density_pf_pass_short_heavy_cost_stress_repair_required_no_authority`; next `run364EQ_train_h17_oos108_scope_aligned_cost_side_repair_scout_without_db_v1`; no authority claim(권위 주장 없음).
+## 2026-06-06T16:58:58Z run364EQ scope-aligned cost/side repair scout(범위 정렬 비용/방향 수리 정찰)
+
+- strict operational proxy pass(엄격 운영 프록시 통과): `0`.
+- next action(다음 행동): `run364ER_train_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1`.
+- effect(효과): 기존 표면 미세탐색 반복 대신 모델/라벨/피처 재시드로 전환합니다.
+## 2026-06-06T17:01:37Z run364EQ scope-aligned cost/side repair scout(범위 정렬 비용/방향 수리 정찰)
+
+- strict operational proxy pass(엄격 운영 프록시 통과): `0`.
+- next action(다음 행동): `run364ER_train_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1`.
+- effect(효과): 기존 표면 미세탐색 반복 대신 모델/라벨/피처 재시드로 전환합니다.
+<!-- run364ER__run364ER_train_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1 -->
+- 2026-06-06T17:18:01Z `run364ER_train_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1` completed cost/side model-label-feature reseed(비용/방향 모델-라벨-피처 재시드); strict candidates `0`; selected `costside_dir_h2_m3__costside_all72__et8_l45_n160`; next `run364ES_review_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364ES__run364ES_review_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1 -->
+- 2026-06-06T17:37:51Z `run364ES_review_h17_oos108_cost_side_model_label_feature_reseed_without_db_v1` reviewed ER cost/side reseed(ER 비용/방향 재시드); package rejected(패키지 거절); next `run364ET_train_h17_oos108_density_cost_short_balance_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364ET__run364ET_train_h17_oos108_density_cost_short_balance_reseed_without_db_v1 -->
+- 2026-06-06T17:52:15Z `run364ET_train_h17_oos108_density_cost_short_balance_reseed_without_db_v1` completed density/cost/short balance reseed(밀도/비용/숏 균형 재시드); strict candidates `0`; selected `densecost_sym_h2_m2p5__et_all72__rf9_l45_n144`; next `run364EU_review_h17_oos108_density_cost_short_balance_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EU__run364EU_review_h17_oos108_density_cost_short_balance_reseed_without_db_v1 -->
+- 2026-06-06T18:05:58Z `run364EU_review_h17_oos108_density_cost_short_balance_reseed_without_db_v1` reviewed ET density/cost/short balance reseed(ET 밀도/비용/숏 균형 재시드); package rejected(패키지 거절); next `run364EV_train_h17_oos108_cost09_density_edge_recovery_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EV__run364EV_train_h17_oos108_cost09_density_edge_recovery_without_db_v1 -->
+- 2026-06-06T23:14:23Z `run364EV_train_h17_oos108_cost09_density_edge_recovery_without_db_v1` completed cost09/density edge recovery(비용0.9/밀도 엣지 회복); strict candidates `0`; selected `ev_asym_h2_l2_s3__ev_all72__rf8_l44_n96`; next `run364EW_review_h17_oos108_cost09_density_edge_recovery_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EW__run364EW_review_h17_oos108_cost09_density_edge_recovery_without_db_v1 -->
+- 2026-06-06T23:20:13Z `run364EW_review_h17_oos108_cost09_density_edge_recovery_without_db_v1` reviewed EV cost09/density edge recovery(비용0.9/밀도 엣지 회복); package rejected(패키지 거절); next `run364EX_train_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EX__run364EX_train_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1 -->
+- 2026-06-07T01:26:11Z `run364EX_train_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1` completed OOS preserve cost09/short rebalance(표본외 보존 비용0.9/숏 재균형); strict candidates `0`; selected `ex_sym_h2_m2__ex_all72__rf8_l48_n112`; next `run364EY_review_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EY__run364EY_review_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1 -->
+- 2026-06-07T01:33:36Z `run364EY_review_h17_oos108_oos_preserve_cost09_short_rebalance_without_db_v1` reviewed EX OOS preserve cost09/short rebalance(표본외 보존 비용0.9/숏 재균형); package rejected(패키지 거절); next `run364EZ_train_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364EZ__run364EZ_train_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1 -->
+- 2026-06-07T01:47:58Z `run364EZ_train_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1` completed OOS PF125 cost09 gap repair(표본외 PF 1.25 비용0.9 간격 수리); strict candidates `0`; selected `ez_sym_h3_m3p5__ez_all72__et9_l32_n112`; next `run364FA_review_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FA__run364FA_review_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1 -->
+- 2026-06-07T01:57:31Z `run364FA_review_h17_oos108_oos_pf125_cost09_gap_repair_without_db_v1` reviewed EZ OOS PF125 cost09 gap repair(표본외 PF 1.25 비용0.9 간격 수리); package rejected(패키지 거절); next `run364FB_train_h17_oos108_pf125_density_bridge_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FB__run364FB_train_h17_oos108_pf125_density_bridge_repair_without_db_v1 -->
+- 2026-06-07T02:22:02Z `run364FB_train_h17_oos108_pf125_density_bridge_repair_without_db_v1` completed PF125 density bridge repair(PF125 밀도 연결 수리); strict candidates `0`; selected `fb_asym_h3_l2p5_s3p5__fb_all72__et8_l24_n128`; next `run364FC_review_h17_oos108_pf125_density_bridge_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FC__run364FC_review_h17_oos108_pf125_density_bridge_repair_without_db_v1 -->
+- 2026-06-07T02:27:59Z `run364FC_review_h17_oos108_pf125_density_bridge_repair_without_db_v1` reviewed FB PF125 density bridge repair(PF125 밀도 연결 수리); package rejected(패키지 거절); next `run364FD_train_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FD__run364FD_train_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1 -->
+- 2026-06-07T02:42:35Z `run364FD_train_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1` completed PF125 short/cost09 balance repair(PF125 숏/비용0.9 균형 수리); strict candidates `0`; selected `fd_sym_h3_m3__fd_session_macro_stack__et9_l36_n128`; next `run364FE_review_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FE__run364FE_review_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1 -->
+- 2026-06-07T02:50:09Z `run364FE_review_h17_oos108_pf125_short_cost09_balance_repair_without_db_v1` reviewed FD PF125 short/cost09 balance repair(PF125 숏/비용0.9 균형 수리); package rejected(패키지 거절); next `run364FF_train_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FF__run364FF_train_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1 -->
+- 2026-06-07T03:24:09Z `run364FF_train_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1` completed PF125 density rejoin cost09 short guard(PF125 밀도 재결합 비용0.9 숏 가드); strict candidates `0`; selected `ff_sym_h2_m2p25__ff_all72__et8_l24_n128`; next `run364FG_review_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FG__run364FG_review_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1 -->
+- 2026-06-07T03:31:44Z `run364FG_review_h17_oos108_pf125_density_rejoin_cost09_short_guard_without_db_v1` reviewed FF PF125 density rejoin cost09 short guard(PF125 밀도 재결합 비용0.9 숏 가드); package rejected(패키지 거절); next `run364FH_train_h17_oos108_pf125_validation_density_profit_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FH__run364FH_train_h17_oos108_pf125_validation_density_profit_repair_without_db_v1 -->
+- 2026-06-07T03:45:51Z `run364FH_train_h17_oos108_pf125_validation_density_profit_repair_without_db_v1` completed validation density profit repair(검증 밀도 수익 수리); strict candidates `0`; selected `fh_sym_h2_m1p75__fh_session_macro_profit__et7_l18_n128`; next `run364FI_review_h17_oos108_pf125_validation_density_profit_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FI__run364FI_review_h17_oos108_pf125_validation_density_profit_repair_without_db_v1 -->
+- 2026-06-07T03:54:29Z `run364FI_review_h17_oos108_pf125_validation_density_profit_repair_without_db_v1` reviewed FH validation density profit repair(검증 밀도 수익 수리); package rejected(패키지 거절); next `run364FJ_train_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FJ__run364FJ_train_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1 -->
+- 2026-06-07T04:09:47Z `run364FJ_train_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1` completed OOS density preserve repair(표본외 밀도 보존 수리); strict candidates `0`; selected `fj_sym_h2_m1p75__fj_behavior_density_cost__et8_l18_n160`; next `run364FK_review_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FK__run364FK_review_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1 -->
+- 2026-06-07T04:14:58Z `run364FK_review_h17_oos108_pf125_oos_density_preserve_repair_without_db_v1` reviewed FJ OOS density preserve repair(표본외 밀도 보존 수리); package rejected(패키지 거절); next `run364FL_train_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FL__run364FL_train_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1 -->
+- 2026-06-07T04:29:38Z `run364FL_train_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1` completed dual density OOS cost bridge(양쪽 밀도 표본외 비용 연결); strict candidates `0`; selected `fl_sym_h2_m1p75__fl_oos_cost_session_macro__rf8_l24_n160`; next `run364FM_review_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FM__run364FM_review_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1 -->
+- 2026-06-07T04:34:42Z `run364FM_review_h17_oos108_pf125_dual_density_oos_cost_bridge_without_db_v1` reviewed FL dual density OOS cost bridge(양쪽 밀도 표본외 비용 연결); package rejected(패키지 거절); next `run364FN_train_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FN__run364FN_train_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1 -->
+- 2026-06-07T04:50:34Z `run364FN_train_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1` completed density cost decoupled bridge(밀도 비용 분리 연결); strict candidates `0`; selected `fn_sym_h2_m1p25__fn_cost_leg__rf9_l18_n192`; next `run364FO_review_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FO__run364FO_review_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1 -->
+- 2026-06-07T04:57:56Z `run364FO_review_h17_oos108_pf125_density_cost_decoupled_bridge_without_db_v1` reviewed FN density cost decoupled bridge(밀도 비용 분리 연결); package rejected(패키지 거절); next `run364FP_train_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FP__run364FP_train_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1 -->
+- 2026-06-07T05:26:18Z `run364FP_train_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1` completed positive density floor reseed(양수 밀도 바닥 재시드); strict candidates `0`; selected `fp_sym_h2_m1p75__fp_validation_stability__rf8_l22_n176`; next `run364FQ_review_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FQ__run364FQ_review_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1 -->
+- 2026-06-07T05:32:29Z `run364FQ_review_h17_oos108_pf125_positive_density_floor_reseed_without_db_v1` reviewed FP positive density floor reseed(양수 밀도 바닥 재시드); package rejected(패키지 거절); next `run364FR_train_h17_oos108_pf125_density3_regime_split_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FR__run364FR_train_h17_oos108_pf125_density3_regime_split_repair_without_db_v1 -->
+- 2026-06-07T05:55:17Z `run364FR_train_h17_oos108_pf125_density3_regime_split_repair_without_db_v1` completed density3 regime split repair(밀도3 국면 분할 수리); strict candidates `0`; selected `fr_sym_h2_m1p5__fr_regime_macro__rf8_l20_n160`; next `run364FS_review_h17_oos108_pf125_density3_regime_split_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FS__run364FS_review_h17_oos108_pf125_density3_regime_split_repair_without_db_v1 -->
+- 2026-06-07T06:02:58Z `run364FS_review_h17_oos108_pf125_density3_regime_split_repair_without_db_v1` reviewed FR density3 regime split repair(밀도3 국면 분할 수리); package rejected(패키지 거절); next `run364FT_train_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FT__run364FT_train_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1 -->
+- 2026-06-07T06:37:12Z `run364FT_train_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1` completed regime profit density reexpand(국면 수익 밀도 재확장); strict candidates `0`; selected `ft_sym_h1_m0p75__ft_session_regime_broad__rf8_l24_n176`; next `run364FU_review_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FU__run364FU_review_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1 -->
+- 2026-06-07T06:45:50Z `run364FU_review_h17_oos108_pf125_regime_profit_density_reexpand_without_db_v1` reviewed regime profit density reexpand(국면 수익 밀도 재확장); density3 rows `246`; valpos/oospos density3 `0`; package rejected(패키지 거절); next `run364FV_train_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FV__run364FV_train_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1 -->
+- 2026-06-07T07:08:28Z `run364FV_train_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1` completed density3 OOS profit bridge(밀도3 표본외 수익 연결); strict candidates `0`; selected `fv_sym_h1_m0p75__fv_all72__rf8_l24_n144`; next `run364FW_review_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FW__run364FW_review_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1 -->
+- 2026-06-07T07:16:28Z `run364FW_review_h17_oos108_pf125_density3_oos_profit_bridge_without_db_v1` reviewed density3 OOS profit bridge(밀도3 표본외 수익 연결); selected OOS net `34.163`; density3 rows `0`; package rejected(패키지 거절); next `run364FX_train_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FX__run364FX_train_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1 -->
+- 2026-06-07T07:44:56Z `run364FX_train_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1` completed profit density dual anchor rejoin(수익 밀도 이중 앵커 재결합); strict candidates `0`; selected `fx_sym_h1_m0p75__fx_profit_density_dual__et8_l18_n132`; next `run364FY_review_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FY__run364FY_review_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1 -->
+- 2026-06-07T07:52:38Z `run364FY_review_h17_oos108_pf125_profit_density_dual_anchor_rejoin_without_db_v1` reviewed profit density dual anchor rejoin(수익 밀도 이중 앵커 재결합); selected OOS net `-77.441`; density3 rows `162`; package rejected(패키지 거절); next `run364FZ_train_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364FZ__run364FZ_train_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1 -->
+- 2026-06-07T08:23:52Z `run364FZ_train_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1` completed density profit conflict reblend(밀도 수익 충돌 재혼합); strict candidates(엄격 후보) `0`; selected(선택) `fz_sym_h1_m0p65__fz_all72__rf8_l18_n132`; next(다음) `run364GA_review_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GA__run364GA_review_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1 -->
+- 2026-06-07T08:30:58Z `run364GA_review_h17_oos108_pf125_density_profit_conflict_reblend_without_db_v1` reviewed density profit conflict reblend(밀도 수익 충돌 재혼합); selected OOS net(선택 표본외 순수익) `-107.009`; selected density(선택 밀도) `2.7103825137/2.786259542/2.7420382166`; package rejected(패키지 거절); next `run364GB_train_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GB__run364GB_train_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1 -->
+- 2026-06-07T08:52:32Z `run364GB_train_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1` completed session side loss veto rescue(세션 방향 손실 차단 회수); strict candidates(엄격 후보) `0`; selected(선택) `gb_sym_h1_m0p60__gb_oos_profit_regime__rf8_l20_n132`; next(다음) `run364GC_review_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GC__run364GC_review_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1 -->
+- 2026-06-07T09:00:30Z `run364GC_review_h17_oos108_pf125_session_side_loss_veto_rescue_without_db_v1` reviewed session side loss veto rescue(세션 방향 손실 차단 회수); selected OOS net(선택 표본외 순수익) `60.74`; selected density(선택 밀도) `2.5464480874/2.106870229/2.3630573248`; package rejected(패키지 거절); next `run364GD_train_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GD__run364GD_train_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1 -->
+- 2026-06-07T09:26:35Z `run364GD_train_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1` completed profit preserving density recovery(수익 보존 밀도 회복); strict candidates(엄격 후보) `0`; selected(선택) `gd_sym_h1_m0p65__gd_all72__rf8_l18_n132`; next(다음) `run364GE_review_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GE__run364GE_review_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1 -->
+- 2026-06-07T09:32:51Z `run364GE_review_h17_oos108_pf125_profit_preserving_density_recovery_without_db_v1` reviewed profit preserving density recovery(수익 보존 밀도 회복); selected OOS net(선택 표본외 순수익) `83.737`; selected density(선택 밀도) `2.0546448087/2.0458015267/2.050955414`; package rejected(패키지 거절); next `run364GF_train_h17_oos108_pf125_profit_floor_density_lift_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GF__run364GF_train_h17_oos108_pf125_profit_floor_density_lift_without_db_v1 -->
+- 2026-06-07T10:05:31Z `run364GF_train_h17_oos108_pf125_profit_floor_density_lift_without_db_v1` completed profit-floor density lift(수익 바닥 밀도 상승); strict candidates(엄격 후보) `0`; selected(선택) `gf_sym_h1_m0p50__gf_profit_density_blend__rf8_l18_n132`; next(다음) `run364GG_review_h17_oos108_pf125_profit_floor_density_lift_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GG__run364GG_review_h17_oos108_pf125_profit_floor_density_lift_without_db_v1 -->
+- 2026-06-07T10:15:13Z `run364GG_review_h17_oos108_pf125_profit_floor_density_lift_without_db_v1` reviewed profit-floor density lift(수익 바닥 밀도 상승); validation net(검증 순수익) `78.008`; OOS PF(표본외 수익 팩터) `1.2040677568`; selected density(선택 밀도) `2.2568306011/1.9694656489/2.1369426752`; package rejected(패키지 거절); next `run364GH_train_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GH__run364GH_train_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1 -->
+- 2026-06-07T10:44:30Z `run364GH_train_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1` completed density3 profit-floor repair(밀도3 수익 바닥 수리); strict candidates(엄격 후보) `0`; selected(선택) `gh_sym_h1_m0p35__gh_all72__rf8_l18_n132`; next(다음) `run364GI_review_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GI__run364GI_review_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1 -->
+- 2026-06-07T10:51:28Z `run364GI_review_h17_oos108_pf125_density3_profit_floor_repair_without_db_v1` reviewed density3 profit-floor repair(밀도3 수익 바닥 수리); selected density(선택 밀도) `2.7103825137/2.6870229008/2.7006369427`; OOS cost0.6(표본외 비용0.6) `-23.483`; package rejected(패키지 거절); next `run364GJ_train_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GK__run364GK_review_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1 -->
+- 2026-06-07T11:25:04Z `run364GK_review_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1` reviewed density-cost floor rejoin(밀도-비용 바닥 재결합); selected OOS cost0.6(선택 표본외 비용0.6) `25.124`; combined density(합산 밀도) `1.6369426752`; package rejected(패키지 거절); next `run364GL_train_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GJ__run364GJ_train_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1 -->
+- 2026-06-07T11:19:15Z `run364GJ_train_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1` completed density-cost floor rejoin(밀도-비용 바닥 재결합); strict candidates(엄격 후보) `0`; selected(선택) `gj_sym_h2_m0p35__gj_session_regime_cost__et7_l12_n132`; next(다음) `run364GK_review_h17_oos108_pf125_density_cost_floor_rejoin_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GL__run364GL_train_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1 -->
+- 2026-06-07T11:50:48Z `run364GL_train_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1` completed cost-repaired density reexpand(비용 수리 후 밀도 재확장); strict candidates(엄격 후보) `0`; selected(선택) `gl_sym_h1_m0p40__gl_density_cost_blend__rf8_l18_n132`; next(다음) `run364GM_review_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GM__run364GM_review_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1 -->
+- 2026-06-07T11:55:57Z `run364GM_review_h17_oos108_pf125_cost_repaired_density_reexpand_without_db_v1` reviewed cost-repaired density reexpand(비용 수리 후 밀도 재확장); selected density(선택 밀도) `2.4713375796`; OOS cost0.6(표본외 비용0.6) `-79.072`; package rejected(패키지 거절); next `run364GN_train_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GN__run364GN_train_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1 -->
+- 2026-06-07T12:23:48Z `run364GN_train_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1` completed density-cost dual-anchor router(밀도-비용 이중 앵커 라우터); strict candidates(엄격 후보) `0`; selected(선택) `gn_density_h1_m0p40__gn_gl_density_anchor__et7_l12_n132`; next(다음) `run364GO_review_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GO__run364GO_review_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1 -->
+- 2026-06-07T12:31:05Z `run364GO_review_h17_oos108_pf125_density_cost_dual_anchor_router_without_db_v1` rejected GN sparse PF999 selector(GN 희소 PF999 선택기); next(다음) `run364GP_train_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GP__run364GP_train_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1 -->
+- 2026-06-07T12:51:17Z `run364GP_train_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1` completed density-floor PF-capped router(밀도 바닥 PF 캡 라우터); strict candidates(엄격 후보) `0`; selected(선택) `gp_density_h1_m0p40__gp_gl_density_anchor__rf8_l20_n132`; next(다음) `run364GQ_review_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GQ__run364GQ_review_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1 -->
+- 2026-06-07T12:58:21Z `run364GQ_review_h17_oos108_pf125_density_floor_pf_capped_router_without_db_v1` rejected GP cost-density incomplete selector(GP 비용-밀도 미완 선택기); next(다음) `run364GR_train_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GR__run364GR_train_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1 -->
+- 2026-06-07T13:30:03Z `run364GR_train_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1` completed cost-near density floor router(비용 근접 밀도 바닥 라우터); strict candidates(엄격 후보) `0`; selected(선택) `gr_cost_h2_m0p35__gr_gp_density_anchor__rf8_l20_n132`; next(다음) `run364GS_review_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GS__run364GS_review_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1 -->
+- 2026-06-07T13:35:42Z `run364GS_review_h17_oos108_pf125_cost_near_density_floor_router_without_db_v1` rejected GR package(GR 패키지 거절); combined cost0.9 `-108.053`; OOS cost0.6 `-22.809`; next `run364GT_train_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GT__run364GT_train_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1 -->
+- 2026-06-07T13:57:29Z `run364GT_train_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1` completed cost-near density lift router(비용 근접 밀도 상승 라우터); strict candidates(엄격 후보) `0`; selected(선택) `gt_cost_h2_m0p30__gt_gr_cost_anchor__rf8_l20_n132`; next(다음) `run364GU_review_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GU__run364GU_review_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1 -->
+- 2026-06-07T14:06:49Z `run364GU_review_h17_oos108_pf125_cost_near_density_lift_router_without_db_v1` rejected GT package(GT 패키지 거절); OOS density(표본외 밀도) `1.4427480916`; OOS cost0.6(표본외 비용0.6) `-29.212`; next `run364GV_train_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GV__run364GV_train_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1 -->
+- 2026-06-07T14:35:25Z `run364GV_train_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1` completed OOS cost0.6 density preserve router(표본외 비용0.6 밀도 보존 라우터); strict candidates(엄격 후보) `0`; selected(선택) `gv_cost_h2_m0p32__gv_cost_side_behavior_anchor__rf9_l22_n144`; next(다음) `run364GW_review_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GW__run364GW_review_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1 -->
+- 2026-06-07T14:40:40Z `run364GW_review_h17_oos108_pf125_oos_cost06_density_preserve_router_without_db_v1` rejected GV package(GV 패키지 거절); OOS cost0.6(표본외 비용0.6) `-12.85`; OOS density(표본외 밀도) `1.2900763359`; next `run364GX_train_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GX__run364GX_train_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1 -->
+- 2026-06-07T15:01:40Z `run364GX_train_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1` completed density recover cost0.6 hold router(밀도 회복 비용0.6 유지 라우터); strict candidates(엄격 후보) `0`; selected(선택) `gx_cost_h2_m0p30__gx_cost_hold_behavior_anchor__rf9_l22_n160`; next(다음) `run364GY_review_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GY__run364GY_review_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1 -->
+- 2026-06-07T15:07:03Z `run364GY_review_h17_oos108_pf125_density_recover_cost06_hold_router_without_db_v1` rejected GX package(GX 패키지 거절); OOS net/PF/cost0.6(표본외 순수익/수익 팩터/비용0.6) `78.765`/`1.2405860936`/`27.465`; density failed(밀도 실패); next `run364GZ_train_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364GZ__run364GZ_train_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1 -->
+- 2026-06-07T15:31:13Z `run364GZ_train_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1` completed cost-density joint frontier router(비용-밀도 공동 경계 라우터); strict candidates(엄격 후보) `0`; selected(선택) `gz_cost_h2_m0p32__gz_joint_frontier_blend__rf9_l20_n176`; next(다음) `run364HA_review_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HA__run364HA_review_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1 -->
+- 2026-06-07T15:37:02Z `run364HA_review_h17_oos108_pf125_cost_density_joint_frontier_router_without_db_v1` rejected GZ package(GZ 패키지 거절); OOS density/combined cost0.9(표본외 밀도/합산 비용0.9) `1.3816793893`/`-86.331`; next `run364HB_train_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HB__run364HB_train_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1 -->
+- 2026-06-07T16:08:10Z `run364HB_train_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1` completed OOS profit-density rebalance cost floor router(표본외 수익-밀도 재균형 비용 바닥 라우터); strict candidates(엄격 후보) `0`; selected(선택) `hb_rebalance_h2_m0p26__hb_oos_profit_density_bridge__rf9_l20_n192`; next(다음) `run364HC_review_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HC__run364HC_review_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1 -->
+- 2026-06-07T16:14:20Z `run364HC_review_h17_oos108_pf125_oos_profit_density_rebalance_cost_floor_router_without_db_v1` rejected HB package(HB 패키지 거절); combined cost0.9(합산 비용0.9) `-24.605` but OOS density/profit(표본외 밀도/수익) `1.2977099237`/`40.598`; next(다음) `run364HD_train_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HD__run364HD_train_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1 -->
+- 2026-06-08T10:52:17Z `run364HD_train_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1` completed dual-surface density-profit switch router(이중 표면 밀도-수익 전환 라우터); strict candidates(엄격 후보) `0`; selected(선택) `hd002__score_plus_0p02_점수_0_02_추가___hb_rebalance_h2_m0p26__hb_oos_profit_density_bridge__rf9_l20_n192`; next(다음) `run364HE_review_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HE__run364HE_review_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1 -->
+- 2026-06-08T10:58:05Z `run364HE_review_h17_oos108_pf125_dual_surface_density_profit_switch_router_without_db_v1` reviewed HD dual-surface router(HD 이중 표면 라우터); positive clue(긍정 단서) but no package(패키지 없음); next(다음) `run364HF_train_h17_oos108_pf125_near_miss_profit_pf_lift_switch_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HF__run364HF_train_h17_oos108_pf125_near_miss_profit_pf_lift_switch_router_without_db_v1 -->
+- 2026-06-08T11:27:05Z `run364HF_train_h17_oos108_pf125_near_miss_profit_pf_lift_switch_router_without_db_v1` completed near-miss profit/PF lift switch router(근접 실패 수익/PF 리프트 전환 라우터); strict candidates(엄격 후보) `216`; selected(선택) `hf__veto_open_hour_pflat_sl_gap__mc2__sfm18p0__hd002__score_plus_0p02_점수_0_02_추가___hb_rebalance_h2_m0p26__hb_oos_profit_density_bridge__rf9_l20_n192`; next(다음) `run364HG_review_h17_oos108_pf125_near_miss_profit_pf_lift_switch_router_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HG__run364HG_review_h17_oos108_pf125_near_miss_profit_pf_lift_switch_router_without_db_v1 -->
+- 2026-06-08T11:33:21Z `run364HG_review_h17_oos108_pf125_near_miss_profit_pf_lift_switch_router_without_db_v1` reviewed HF strict proxy(HF 엄격 프록시); package(패키지) not opened(열지 않음); next(다음) `run364HH_materialize_h17_oos108_pf125_near_miss_profit_pf_lift_runtime_capability_inputs_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HH__run364HH_materialize_h17_oos108_pf125_near_miss_profit_pf_lift_runtime_capability_inputs_without_db_v1 -->
+- 2026-06-08T11:50:27Z `run364HH_materialize_h17_oos108_pf125_near_miss_profit_pf_lift_runtime_capability_inputs_without_db_v1` materialized runtime capability inputs(런타임 기능 입력 물질화); next(다음) `run364HI_implement_h17_oos108_pf125_probability_bin_veto_runtime_support_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HI__run364HI_implement_h17_oos108_pf125_probability_bin_veto_runtime_support_without_db_v1 -->
+- 2026-06-08T12:05:44Z `run364HI_implement_h17_oos108_pf125_probability_bin_veto_runtime_support_without_db_v1` implemented probability-bin veto runtime support(확률 구간 차단 런타임 지원) and MetaEditor compile(메타에디터 컴파일) status `completed`; next(다음) `run364HJ_materialize_h17_oos108_pf125_probability_bin_veto_runtime_package_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HJ__run364HJ_materialize_h17_oos108_pf125_probability_bin_veto_runtime_package_without_db_v1 -->
+- 2026-06-08T12:28:58Z `run364HJ_materialize_h17_oos108_pf125_probability_bin_veto_runtime_package_without_db_v1` completed probability-bin veto runtime package(확률 구간 거부 런타임 패키지); next `run364HK_execute_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HK__run364HK_execute_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-08T12:54:56Z `run364HK_execute_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1` attempted probability-bin veto MT5 runtime probe(확률 구간 거부 MT5 런타임 탐침 시도); judgment `mt5_runtime_probe_outputs_available_probability_bin_veto_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+<!-- run364HL__run364HL_review_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-08T13:06:21Z `run364HL_review_h17_oos108_pf125_probability_bin_veto_mt5_runtime_probe_without_db_v1` reviewed probability-bin veto MT5 probe(확률 구간 거부 MT5 탐침 검토); judgment `positive_runtime_probe_clue_mt5_net_pf_pass_trade_density_below_goal_short_heavy_cost_stress_and_route_parity_repair_required_no_authority`; next `run364HM_train_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HM__run364HM_train_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1 -->
+- 2026-06-09T11:54:24Z `run364HM_train_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1` completed density/side/cost repair scout(밀도/방향/비용 수리 탐색); selected `fj_sym_h2_m1p75__fj_behavior_density_cost__et8_l18_n160`; scaled density estimate `3.055518353`; next `run364HN_review_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HN__run364HN_review_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1 -->
+- 2026-06-09T12:10:08Z `run364HN_review_h17_oos108_pf125_probability_bin_veto_mt5_density_side_cost_repair_scout_without_db_v1` reviewed HM selected FJ seed(HM 선택 FJ 씨앗 검토); judgment `positive_package_readiness_clue_scaled_density_seed_single_source_mt5_package_required_no_authority`; next `run364HO_materialize_h17_oos108_pf125_single_source_probability_bin_veto_runtime_package_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HO__run364HO_materialize_h17_oos108_pf125_single_source_probability_bin_veto_runtime_package_without_db_v1 -->
+- 2026-06-09T12:24:15Z `run364HO_materialize_h17_oos108_pf125_single_source_probability_bin_veto_runtime_package_without_db_v1` completed single-source probability-bin veto runtime package(단일 원천 확률 구간 거부 런타임 패키지); next `run364HO_materialize_h17_oos108_pf125_single_source_probability_bin_veto_runtime_package_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HP__run364HP_execute_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-09T12:54:10Z `run364HP_execute_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1` attempted single-source probability-bin veto MT5 runtime probe(단일 원천 확률 구간 거부 MT5 런타임 탐침 시도); judgment(판정) `mt5_runtime_probe_outputs_available_single_source_probability_bin_veto_proxy_diff_review_required_no_authority`; no authority claim(권위 주장 없음).
+<!-- run364HQ__run364HQ_review_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1 -->
+- 2026-06-09T13:03:20Z `run364HQ_review_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1` reviewed single-source probability-bin veto MT5 probe(단일 원천 확률 구간 거부 MT5 탐침 검토); judgment `valid_negative_runtime_probe_review_net_positive_but_pf_expectancy_drawdown_and_density_boundary_failed_repair_required_no_authority`; next `run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`; no authority claim(권위 주장 없음).
+<!-- run364HR__run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1 -->
+- 2026-06-10T12:45:43Z `run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1` completed trade-quality density repair scout(거래 품질 밀도 수리 탐색); strict pass `0`; next `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`; no authority claim(권위 주장 없음).

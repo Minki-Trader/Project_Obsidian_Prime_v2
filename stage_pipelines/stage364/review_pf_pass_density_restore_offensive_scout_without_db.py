@@ -997,25 +997,17 @@ def write_manifest(final: Mapping[str, Any]) -> None:
 def repair_run_registry_line_endings(run_id: str) -> None:
     current_text = RUN_REGISTRY.read_text(encoding="utf-8-sig", newline="")
     current_rows = list(csv.DictReader(io.StringIO(current_text)))
+    current_reader = csv.DictReader(io.StringIO(current_text))
+    fieldnames = list(current_reader.fieldnames or [])
     matching = [row for row in current_rows if row.get("run_id") == run_id]
     if len(matching) != 1:
         return
-    new_row = matching[0]
-    import subprocess
-
-    registry_ref = RUN_REGISTRY.relative_to(ROOT).as_posix()
-    head_bytes = subprocess.check_output(["git", "show", f"HEAD:{registry_ref}"], cwd=ROOT)
-    head_text = head_bytes.decode("utf-8-sig")
-    reader = csv.DictReader(io.StringIO(head_text))
-    fieldnames = list(reader.fieldnames or [])
-    head_rows = [{name: row.get(name, "") for name in fieldnames} for row in reader if row.get("run_id") != run_id]
-    head_rows.append({name: new_row.get(name, "") for name in fieldnames})
-    line_ending = "\r\n" if "\r\n" in head_text else "\n"
+    line_ending = "\r\n" if "\r\n" in current_text else "\n"
     out = io.StringIO()
     writer = csv.DictWriter(out, fieldnames=fieldnames, lineterminator=line_ending, extrasaction="ignore")
     writer.writeheader()
-    writer.writerows(head_rows)
-    RUN_REGISTRY.write_text(out.getvalue(), encoding="utf-8", newline="")
+    writer.writerows([{name: row.get(name, "") for name in fieldnames} for row in current_rows])
+    RUN_REGISTRY.write_text(out.getvalue(), encoding="utf-8-sig", newline="")
 
 
 def main() -> None:
