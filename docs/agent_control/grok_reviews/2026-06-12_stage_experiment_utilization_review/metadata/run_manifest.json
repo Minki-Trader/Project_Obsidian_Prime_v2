@@ -1,0 +1,31 @@
+﻿{
+    "run_id":  "2026-06-12_stage_experiment_utilization_review",
+    "created_at_local":  "2026-06-12T01:59:07+09:00",
+    "grok_model":  "grok-build",
+    "grok_effort":  "max",
+    "input_snapshot":  "inputs/stage_experiment_utilization_snapshot.md",
+    "prompt":  "prompts/grok_stage_experiment_utilization_prompt.md",
+    "output":  "outputs/grok_stage_experiment_utilization_report.md",
+    "stderr_log":  "logs/grok_stage_experiment_utilization_stderr.log",
+    "boundary":  "snapshot_only_research_usefulness_review_no_operating_claims",
+    "stage_rows":  399,
+    "total_run_union_sum":  2095,
+    "missing_stage_ledgers":  [
+                                  "266_adapter_research__late_segment_stability_repair_after_stage265_review",
+                                  "326_onnx_candidate_campaign__cp322a_frozen_forward_robustness_gate"
+                              ],
+    "input_snapshot_v2":  "inputs/stage_experiment_utilization_snapshot_v2.md",
+    "prompt_v2":  "prompts/grok_stage_experiment_utilization_prompt_v2.md",
+    "output_v2":  "outputs/grok_stage_experiment_utilization_report_v2.md",
+    "stderr_log_v2":  "logs/grok_stage_experiment_utilization_stderr_v2.log",
+    "v2_fix":  "fixed compact all-stage table stage_id formatting",
+    "final_output":  "outputs/grok_stage_experiment_utilization_report_v2.md",
+    "final_input_snapshot":  "inputs/stage_experiment_utilization_snapshot_v2.md",
+    "final_prompt":  "prompts/grok_stage_experiment_utilization_prompt_v2.md",
+    "final_exit_code":  0,
+    "final_output_bytes":  13972,
+    "final_stderr_bytes":  17303,
+    "attempt1_note":  "attempt1 retained as nonfinal; compact all-stage table formatting bug in input snapshot",
+    "final_stderr_boundary":  "nonfatal_mcp_init_warnings_codex_atlassian_no_read_file_tool_error_seen_in_tail",
+    "completed_at_local":  "2026-06-12T02:06:08+09:00"
+}

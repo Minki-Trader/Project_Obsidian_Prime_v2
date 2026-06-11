@@ -1,12 +1,12 @@
 ﻿# 364_source_regime_label_pivot__dense_cost_recovery
 
-Current run(현재 실행): `run364CO_materialize_h17_bad_month_source_balance_repair_mt5_runtime_probe_inputs_without_db_v1`
+Current run(현재 실행): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`
 
-Latest completed run(최근 완료 실행): `run364CN_review_h17_bad_month_source_balance_repair_scout_without_db_v1`
+Latest completed run(최근 완료 실행): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`
 
-Current truth(현재 진실): run364CN(364CN 실행)이 `cm04_cj09_month08_12_pair_guard`를 MT5 probe input(MT5 탐침 입력) 구체화 대상으로 열었습니다. Proxy KPI(프록시 핵심 성과 지표)는 net `1036.46`, PF `1.4281838362`, density `3.1050955414`, shorts `100`, bad months `0`입니다.
+Current truth(현재 진실): Stage364(364단계)는 closed(마감됨)입니다. `run364HS`는 새 experiment run(실험 실행)이 아니라 `run364HR` strict_joint_pass_count(엄격 동시 통과 수) `0`을 근거로 Stage364(364단계)를 negative memory(부정 기억)와 preserved clue(보존 단서)로 닫은 review-only closeout(검토 전용 마감)입니다.
 
-Next action(다음 행동): `run364CO_materialize_h17_bad_month_source_balance_repair_mt5_runtime_probe_inputs_without_db_v1`에서 EA/set/model/tester handoff(EA/설정/모델/테스터 인계)를 구체화합니다.
+Next action(다음 행동): `not_applicable_stage364_closed_no_next_stage_claim`. Runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), Goal Achieve(목표 달성)는 모두 not claimed(주장 안 함)입니다.
 
 ## run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1
 

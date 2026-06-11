@@ -1,0 +1,61 @@
+{
+  "stage_id": "364_source_regime_label_pivot__dense_cost_recovery",
+  "run_id": "run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1",
+  "run_number": "run364HS",
+  "created_at_utc": "2026-06-11T17:28:21Z",
+  "run_type": "review_only_stage_closeout",
+  "work_family": "publish_handoff",
+  "primary_family": "publish_handoff",
+  "primary_skill": "obsidian-stage-transition",
+  "support_skills": [
+    "obsidian-artifact-lineage",
+    "obsidian-claim-discipline",
+    "obsidian-answer-clarity",
+    "obsidian-reentry-read",
+    "obsidian-result-judgment"
+  ],
+  "parent_run_id": "run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1",
+  "inputs": [
+    {
+      "role": "source_report",
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364HR_single_source_probability_bin_veto_trade_quality_density_repair_scout.md"
+    },
+    {
+      "role": "source_artifact",
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364HR/runtime_replay_variant_surface.csv"
+    },
+    {
+      "role": "source_final_decision",
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364HR/final_decision.json"
+    },
+    {
+      "role": "source_gate_audit",
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364HR/required_gate_coverage_audit.csv"
+    }
+  ],
+  "outputs": [
+    {
+      "role": "closeout_report",
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364HS_stage364_closeout_no_next_stage.md"
+    },
+    {
+      "role": "final_decision",
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364HS/final_decision.json"
+    },
+    {
+      "role": "required_gate_audit",
+      "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364HS/required_gate_coverage_audit.csv"
+    }
+  ],
+  "kpi_summary": {
+    "validation_level": "Python proxy validation",
+    "new_mt5_runtime_validation": "not_applicable_no_new_mt5_execution",
+    "strict_joint_pass_count": 0,
+    "best_preserved_clue": "hold4_margin_0.01",
+    "selected_net_profit": 462.0071630903,
+    "selected_profit_factor": 1.2257899553,
+    "selected_trade_density": 2.1178343949
+  },
+  "claim_boundary": "stage_closeout_review_only_negative_memory_preserved_clues_no_next_stage_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim",
+  "next_run_id": "not_applicable_stage364_closed_no_next_stage_claim"
+}

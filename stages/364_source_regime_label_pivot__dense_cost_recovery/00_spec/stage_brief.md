@@ -2,11 +2,11 @@
 
 - canonical_stage_id(정식 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
 - current_run_id(현재 실행 ID): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`
 - source_stage_id(원천 단계 ID): `363_lower_floor_rank_surface__q05_long_density_recovery`
 - source_run_id(원천 실행 ID): `run363C_review_q05_lower_floor_rank_surface_without_db_v1`
-- selection_status(선택 상태): `completed_stage364HR_trade_quality_density_repair_scout_no_strict_joint_pass_review_required_no_authority`
-- claim_boundary(주장 경계): `research_development_proxy_replay_scout_only_single_source_probability_bin_veto_trade_quality_density_repair_no_new_mt5_execution_no_runtime_package_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
+- selection_status(선택 상태): `closed_stage364_dense_cost_recovery_no_strict_joint_pass_no_next_stage_no_authority`
+- claim_boundary(주장 경계): `stage_closeout_review_only_negative_memory_preserved_clues_no_next_stage_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
 
@@ -17,6 +17,14 @@ Can timestamp-safe source/regime/label context(시점 안전 원천/국면/라�
 - source_failure(원천 실패): Stage363B(363B 실행)는 passing_cross_split_rows(교차 분할 통과 행) `0`.
 - preserved_clue(보존 단서): sparse cost-positive variants(희소 비용 양수 변형)와 open-hour clue(진입 시간 단서)는 남았다.
 - no_selection_boundary(선택 없음 경계): candidate selection(후보 선택), MT5 execution(MT5 실행), operating promotion(운영 승격) 없음.
+
+## Stage Closeout(단계 마감)
+
+Action(행동): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`에서 Stage364(364단계)를 close(마감)했다.
+
+Effect(효과): `run364HR` strict_joint_pass_count(엄격 동시 통과 수) `0`을 근거로 Stage364(364단계)는 negative memory(부정 기억)와 preserved clue(보존 단서)로 닫혔다. `hold4_margin_0.01` net/PF/density(순수익/수익 팩터/밀도) `462.0071630903` / `1.2257899553` / `2.1178343949`는 보존 단서일 뿐 operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선)이 아니다.
+
+Next action(다음 행동): `not_applicable_stage364_closed_no_next_stage_claim`.
 
 ## Scope(범위)
 
