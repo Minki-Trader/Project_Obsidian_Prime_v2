@@ -46,6 +46,22 @@ class OpsInstructionAuditTests(unittest.TestCase):
         self.assertEqual(result.status, "blocked")
         self.assertIn("ops_instruction::code_edit::obsidian-code-quality::missing_receipt_schema", {finding.check_id for finding in result.findings})
 
+    def test_trigger_overlay_without_receipt_schema_blocks(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = _copy_ops_fixture(Path(temp_dir))
+            path = root / "docs/agent_control/skill_receipt_schema.yaml"
+            payload = yaml.safe_load(path.read_text(encoding="utf-8-sig"))
+            payload["schemas"].pop("obsidian-grok-collaboration")
+            path.write_text(yaml.safe_dump(payload, sort_keys=False, allow_unicode=True), encoding="utf-8")
+
+            result = audit_ops_instructions(root)
+
+        self.assertEqual(result.status, "blocked")
+        self.assertIn(
+            "ops_instruction::trigger_overlay::grok_external_review::obsidian-grok-collaboration::missing_receipt_schema",
+            {finding.check_id for finding in result.findings},
+        )
+
 
 def _copy_ops_fixture(root: Path) -> Path:
     shutil.copytree(

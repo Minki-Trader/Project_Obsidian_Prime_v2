@@ -11,6 +11,8 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 - 영어 표현(English expression, 영어 표현)을 쓸 때는 같은 문맥 안에 한국어 표기를 함께 쓴다.
 - 행동(action, 행동)을 설명할 때는 그 행동의 효과(effect, 효과)도 같이 설명한다.
 - 설명은 짧고 쉽게 쓴다.
+- 사용자 협업 스타일(user collaboration style, 사용자 협업 스타일)은 co-pilot(공동 조종자, 협업 동반자)처럼 둔다. 실행 가능한 선택지와 근거를 짧게 말하고, 확신이 없으면 claim boundary(주장 경계)를 낮춘다.
+- 효과(effect, 효과)는 사용자가 규칙 해석 부담을 떠안지 않고, Codex(코덱스)가 현재 작업에서 무엇을 할 수 있고 무엇을 아직 말하면 안 되는지 먼저 정리하게 하는 것이다.
 
 ## Codex 작업 생명주기(Codex Work Lifecycle, 코덱스 작업 생명주기)
 
@@ -25,6 +27,27 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 효과(effect, 효과)는 Stage 5부터 미래 Stage 50+까지 작업 내용은 달라져도, 스킬 선택(skill selection, 스킬 선택), receipt(영수증), gate(게이트), claim boundary(주장 경계)가 같은 방식으로 작동하게 하는 것이다.
 
 gate(게이트)가 실패하면 `docs/agent_control/self_correction_policy.yaml`의 기본값인 `plan_only` 흐름으로 실패 원인과 repair plan(수정 계획)을 먼저 남긴다. 자동 수정은 allowlist(허용 목록) 안의 packet/closeout 배선 보정으로만 제한하며, gate 완화, threshold 완화, test skip, runtime/model logic 변경은 금지한다.
+
+## Grok 협업 규칙(Grok Collaboration Rule, 그록 협업 규칙)
+
+사용자 요청(user request, 사용자 요청)이나 `/goal(목표)`에 Grok 검토(Grok review, 그록 검토), 외부 리뷰(external review, 외부 리뷰), 2차 의견(second opinion, 2차 의견), stage close(단계 마감)마다 비판 검토(adversarial review, 비판 검토), agent/skill consulting(에이전트/스킬 상담), 또는 Codex 혼자 판단 금지(no solo Codex judgment, 코덱스 단독 판단 금지)가 있으면 `obsidian-grok-collaboration(그록 협업)` 스킬을 필수로 쓴다.
+
+Grok(Grok, 그록)은 external second opinion(외부 2차 의견)일 뿐이다. Codex(코덱스)가 direction(방향), bounded evidence(제한 근거), local verification(로컬 검증), final claim(최종 주장)을 계속 소유한다.
+
+필수 순서(required order, 필수 순서)는 다음이다.
+
+1. Codex(코덱스)가 current truth(현재 진실), proposed direction(제안 방향), success criteria(성공 기준), claim boundary(주장 경계), review size(검토 크기)를 먼저 적는다.
+2. Grok(Grok, 그록)에는 필요한 bounded evidence(제한 근거)만 보낸다. whole repo dump(전체 저장소 투입)는 기본값이 아니다.
+3. Grok(Grok, 그록) 답변은 `accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)`로 분류한다.
+4. Codex(코덱스)가 로컬 장부(register, 등록부), 파일시스템(filesystem, 파일시스템), hash(해시), MT5 output(MT5 출력), git status(깃 상태)로 재검증한 뒤에만 행동한다.
+
+효과(effect, 효과)는 Grok(Grok, 그록)을 쓰더라도 연구 방향이 산으로 가거나, 외부 조언이 자동 실행되는 일을 막는 것이다. Grok 의견은 운영 승격(operating promotion, 운영 승격), 런타임 권위(runtime authority, 런타임 권위), 실거래 준비(live readiness, 실거래 준비), selected baseline(선택 기준선), Goal Achieve(목표 달성)를 직접 만들 수 없다.
+
+검토 크기(review size, 검토 크기)는 세 단계로 쓴다. small review(소규모 검토)는 좁은 질문 하나, medium review(중간 검토)는 제한 스냅샷(bounded snapshot, 제한 스냅샷) 하나와 집중 질문 하나, large review(대규모 검토)는 architecture/evidence/runtime/policy(구조/근거/런타임/정책)처럼 여러 narrow pass(좁은 회차)로 나눈다.
+
+Grok 호출(call, 호출)은 가능하면 `foundation/control_plane/grok_review_wrapper.py` wrapper(래퍼)를 쓴다. 효과(effect, 효과)는 prompt quoting(프롬프트 인용), timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), noise stripping(잡음 제거), top-level scratch artifact detection(최상위 임시 산출물 감지)을 같은 방식으로 처리하는 것이다. wrapper(래퍼)는 Grok 내용(content, 내용)을 판단하지 않는다.
+
+기본 기록 위치(default record location, 기본 기록 위치)는 `docs/agent_control/grok_reviews/`다. 다만 사용자가 이번 작업처럼 patch work material(패치 작업물)을 프로젝트 폴더에 남기지 말라고 명시하면, 새 Grok 패킷(packet, 묶음)을 만들지 않고 기존 산출물(existing artifacts, 기존 산출물), 대화 기록(conversation record, 대화 기록), 또는 프로젝트 밖 임시 경로(temp path, 임시 경로)만 쓴다. 효과(effect, 효과)는 운영 규칙을 지키면서도 사용자가 금지한 임시 산출물을 남기지 않는 것이다.
 
 ## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)
 

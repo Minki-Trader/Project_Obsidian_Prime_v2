@@ -46,6 +46,14 @@ REQUIRED_SKILL_ROUTING_FIELDS = (
     "required_skill_receipts",
     "required_gates",
 )
+REQUIRED_TRIGGER_OVERLAY_KEYS = (
+    "description",
+    "trigger_skill",
+    "appends_required_skill",
+    "appends_required_gate",
+    "allowed_families",
+    "claim_rule",
+)
 
 
 def audit_ops_instructions(root: Path | str = Path(".")) -> AuditResult:
@@ -59,6 +67,7 @@ def audit_ops_instructions(root: Path | str = Path(".")) -> AuditResult:
     agents = _read_text(root_path / DEFAULT_AGENTS)
 
     routing_contract = _mapping(family_registry.get("routing_contract"))
+    trigger_overlays = _mapping(family_registry.get("trigger_overlays"))
     families = _mapping(family_registry.get("families"))
     schemas = _mapping(receipt_schema.get("schemas"))
     default_support_limit = _int_value(routing_contract.get("support_skill_limit_default"), fallback=3)
@@ -66,6 +75,7 @@ def audit_ops_instructions(root: Path | str = Path(".")) -> AuditResult:
 
     _check_routing_contract(routing_contract, findings)
     _check_families(root_path, families, schemas, default_support_limit, max_required, findings)
+    _check_trigger_overlays(root_path, trigger_overlays, families, schemas, findings)
     _check_policy_surfaces(agent_policy, agents, work_packet_schema, findings)
 
     status = "blocked" if any(finding.is_blocking for finding in findings) else "pass"
@@ -75,6 +85,7 @@ def audit_ops_instructions(root: Path | str = Path(".")) -> AuditResult:
         findings=tuple(findings),
         counts={
             "family_count": len(families),
+            "trigger_overlay_count": len(trigger_overlays),
             "explicit_skill_schema_count": max(0, len(schemas) - (1 if "default" in schemas else 0)),
             "default_support_skill_limit": default_support_limit,
             "max_required_skills_per_family": max_required,
@@ -208,6 +219,46 @@ def _check_families(
 
         for skill in required:
             _check_skill_available(root, family_name=str(family_name), skill=skill, schemas=schemas, findings=findings)
+
+
+def _check_trigger_overlays(
+    root: Path,
+    trigger_overlays: Mapping[str, Any],
+    families: Mapping[str, Any],
+    schemas: Mapping[str, Any],
+    findings: list[AuditFinding],
+) -> None:
+    for overlay_name, raw_overlay in trigger_overlays.items():
+        overlay = _mapping(raw_overlay)
+        for key in REQUIRED_TRIGGER_OVERLAY_KEYS:
+            if _is_missing(overlay.get(key)):
+                findings.append(
+                    AuditFinding(
+                        check_id=f"ops_instruction::trigger_overlay::{overlay_name}::missing::{key}",
+                        message="Trigger overlay is missing a required routing field.",
+                        details={"trigger_overlay": overlay_name, "missing": key},
+                    )
+                )
+        trigger_skill = str(overlay.get("trigger_skill", "")).strip()
+        if trigger_skill:
+            _check_skill_available(
+                root,
+                family_name=f"trigger_overlay::{overlay_name}",
+                skill=trigger_skill,
+                schemas=schemas,
+                findings=findings,
+            )
+        allowed_families = overlay.get("allowed_families")
+        if allowed_families != "all":
+            missing_families = [family for family in _string_list(allowed_families) if family not in families]
+            if missing_families:
+                findings.append(
+                    AuditFinding(
+                        check_id=f"ops_instruction::trigger_overlay::{overlay_name}::unknown_allowed_family",
+                        message="Trigger overlay references an unknown work family.",
+                        details={"trigger_overlay": overlay_name, "missing_families": missing_families},
+                    )
+                )
 
 
 def _check_skill_available(

@@ -29,6 +29,21 @@ schemas:
       - required_gates
       - skills_not_used
       - routing_reason
+  obsidian-grok-collaboration:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - trigger_reason
+      - review_size
+      - direction_before_grok
+      - bounded_evidence
+      - prompt_identity
+      - grok_output_identity
+      - advice_classification
+      - local_verification
+      - forbidden_claim_check
+      - final_codex_direction
   obsidian-workflow-drift-guard:
     required_fields:
       - packet_id

@@ -30,6 +30,36 @@
 
 이 규칙의 효과는 스킬을 줄이는 것이 아니라, 필요한 스킬이 조언 문서로 흐르지 않고 실행 계약으로 작동하게 만드는 것이다.
 
+## Grok 협업 트리거(Grok Collaboration Trigger, 그록 협업 트리거)
+
+`obsidian-grok-collaboration(그록 협업)`은 새 work family(작업군)가 아니라 trigger overlay(트리거 오버레이, 추가 조건)다. 사용자가 명시했거나 `/goal(목표)`에 들어 있을 때 현재 primary_family(주 작업군)에 Grok receipt(그록 영수증)와 external_review_packet(외부 검토 묶음) gate(게이트)를 덧붙인다.
+
+필수 트리거(required triggers, 필수 트리거):
+
+- Grok 호출(Grok call, 그록 호출)을 현재 요청에서 명시함
+- `/goal(목표)`에 Grok 검토(Grok review, 그록 검토) 조건이 있음
+- `Stage 종료 후마다 Grok 검토`
+- `closeout 전에 외부 리뷰`
+- `Grok에게 연구방향 점검받기`
+- `Codex 혼자 판단하지 말고 Grok 2차 의견`
+- `stage close(단계 마감)마다 비판 검토`
+- agent/skill consulting(에이전트/스킬 상담)
+- 방향성 제시(direction proposal, 방향성 제시) 뒤 Grok 2차 토론(second discussion, 2차 토론)을 요구함
+
+필수 순서(required order, 필수 순서)는 Codex(코덱스)가 먼저 current truth(현재 진실), direction(방향성), success criteria(성공 기준), claim boundary(주장 경계), review size(검토 크기)를 제시하고, bounded evidence(제한 근거)를 만든 뒤 Grok을 호출하고, Grok 조언을 accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)로 분리한 다음 진행하는 것이다.
+
+기본 기록 위치(default record location, 기본 기록 위치)는 `docs/agent_control/grok_reviews/` 아래 snapshot/prompt/output/metadata(스냅샷/프롬프트/출력/메타데이터)다. 사용자가 프로젝트 폴더에 patch work material(패치 작업물)을 남기지 말라고 명시하면 새 review packet(검토 묶음)을 만들지 않고, 기존 산출물(existing artifacts, 기존 산출물)이나 프로젝트 밖 임시 경로(temp path, 임시 경로)를 쓴 뒤 final report(최종 보고)에 그 제한을 적는다.
+
+검토 크기(review size, 검토 크기)는 다음 기본값을 따른다.
+
+- small review(소규모 검토): 좁은 질문 하나와 compact prompt(압축 프롬프트) 하나.
+- medium review(중간 검토): bounded snapshot(제한 스냅샷) 하나와 focused question(집중 질문) 하나.
+- large review(대규모 검토): architecture/evidence/runtime/policy(구조/근거/런타임/정책)처럼 여러 narrow pass(좁은 회차)로 나누고, 마지막 판단은 Codex synthesis(Codex 종합)로만 닫는다.
+
+가능하면 `foundation/control_plane/grok_review_wrapper.py` wrapper(래퍼)를 쓴다. wrapper(래퍼)는 prompt quoting(프롬프트 인용), timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), deterministic noise stripping(결정적 잡음 제거), unexpected top-level artifact detection(예상 밖 최상위 산출물 감지)을 담당한다. wrapper(래퍼)는 Grok content(Grok 내용)를 해석하거나 수용/거절하지 않는다.
+
+효과(effect, 효과)는 외부 2차 의견을 쓰되, 연구 방향이 산으로 가거나 stage drift(단계 드리프트)가 생기지 않게 하고, 대규모 검토에서도 같은 capture/verify/classify(캡처/검증/분류) 흐름을 유지하는 것이다.
+
 ## 라우팅 소스
 
 라우팅의 진실 원천(source of truth)은 `docs/agent_control/work_family_registry.yaml`이다.
@@ -98,6 +128,7 @@ Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다
 - `obsidian-stage-transition`: active stage(활성 단계), handoff(인계), closeout(마감), current run(현재 실행)을 같은 회차에 동기화한다.
 - `obsidian-work-packet-router`: work family(작업군), primary skill(주 스킬), support skills(보조 스킬), required gates(필수 제한문)를 고른다.
 - `obsidian-workflow-drift-guard`: blocker(차단 지점), missing material(빠진 재료), recovery action(복구 행동)을 정리한다.
+- `obsidian-grok-collaboration`: Grok(Grok)을 외부 2차 의견(second opinion, 2차 의견)으로 호출하고, 방향성 제시(direction proposal, 방향성 제시), 2차 토론(second discussion, 2차 토론), 로컬 재검증(local verification, 로컬 검증)을 하나의 패킷(packet, 묶음)으로 관리한다.
 
 ## Receipt 규칙
 
