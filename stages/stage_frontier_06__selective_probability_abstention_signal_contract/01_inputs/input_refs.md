@@ -1,0 +1,6 @@
+﻿# Frontier06 Input References(전선06 입력 참조)
+
+- model input dataset(모델 입력 데이터셋): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet` sha256 `c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f`
+- feature order(피처 순서): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt` sha256 `18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb`
+- Frontier04 closeout(전선04 마감): `stages/stage_frontier_04__path_aware_cost_dd_event_labeling/03_reviews/frontier04E_stage_closeout_v1_report.md` sha256 `fdcb53e084da4c0825a9c81f43cfced2e4caa2a1c42ac7c17adc35828cac7e12`
+- Frontier05 closeout(전선05 마감): `stages/stage_frontier_05__closed_bar_path_precursor_feature_surface/03_reviews/frontier05C_stage_closeout_v1_report.md` sha256 `b8a9c3d7b14e65b9cbe95dd4e2cdc558005ab2a8fe21d5fa880782aba55bf975`

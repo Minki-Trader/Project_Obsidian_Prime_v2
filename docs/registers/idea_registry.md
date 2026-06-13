@@ -1513,3 +1513,9 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier05B_closed_bar_path_precursor_feature_scout_v1`: closed-bar path precursor feature scout(확정봉 경로 선행 피처 탐색) recorded `0` improvement pass rows(개선 통과 행). Effect(효과): feature bottleneck(피처 병목) 여부를 기준/증강 비교로 기록했습니다.
 <!-- frontier05C_stage_closeout_v1 -->
 - `IDEA-FR05-CLOSED-BAR-PATH-PRECURSOR-FEATURE-SURFACE`: closed as negative_memory(부정 기억). Effect(효과): simple closed-bar OHLC precursor expansion(단순 확정봉 OHLC 선행 피처 확장)을 다음 가설로 상속하지 않습니다.
+<!-- frontier06A_stage_open_selective_probability_abstention_signal_contract_v1 -->
+- `IDEA-FR06-SELECTIVE-PROBABILITY-ABSTENTION-SIGNAL-CONTRACT`: Frontier06(전선06) opens selective probability abstention signal contract(선택적 확률 기권 신호 계약). Effect(효과): label/feature repair loop(라벨/피처 수리 반복) 대신 output-to-trade contract(출력-거래 계약)을 시험합니다.
+<!-- frontier06B_selective_probability_abstention_signal_scout_v1 -->
+- `frontier06B_selective_probability_abstention_signal_scout_v1`: selective probability abstention signal scout(선택적 확률 기권 신호 탐색) recorded `0` strict scout clue rows(엄격 탐색 단서 행). Effect(효과): output-to-trade contract(출력-거래 계약)의 가치 여부를 기록했습니다.
+<!-- frontier06C_stage_closeout_v1 -->
+- `IDEA-FR06-SELECTIVE-PROBABILITY-ABSTENTION-SIGNAL-CONTRACT`: closed as negative_memory(부정 기억)+preserved_clue(보존 단서). Effect(효과): output-to-trade threshold retry(출력-거래 임계값 재시도)는 더 이어가지 않고 새 축으로 넘깁니다.

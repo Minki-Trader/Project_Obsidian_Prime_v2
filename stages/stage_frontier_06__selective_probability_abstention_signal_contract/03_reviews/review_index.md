@@ -1,0 +1,5 @@
+﻿# Review Index(검토 색인)
+
+- `frontier06A_stage_open_selective_probability_abstention_signal_contract_v1`: `stages/stage_frontier_06__selective_probability_abstention_signal_contract/03_reviews/frontier06A_stage_open_selective_probability_abstention_signal_contract_v1_report.md`
+- `frontier06B_selective_probability_abstention_signal_scout_v1`: `stages/stage_frontier_06__selective_probability_abstention_signal_contract/03_reviews/frontier06B_selective_probability_abstention_signal_scout_v1_report.md`
+- `frontier06C_stage_closeout_v1`: `stages/stage_frontier_06__selective_probability_abstention_signal_contract/03_reviews/frontier06C_stage_closeout_v1_report.md` - `negative_memory(부정 기억)+preserved_clue(보존 단서)`

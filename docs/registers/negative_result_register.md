@@ -995,3 +995,7 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - `frontier05B_closed_bar_path_precursor_feature_scout_v1`: closed-bar precursor augmentation did not pass controlled improvement criteria(확정봉 선행 피처 증강이 통제 개선 기준을 통과하지 못함). Effect(효과): label threshold sweep(라벨 임계값 탐색) 없이 repair/closeout decision(수리/마감 결정)으로 넘깁니다.
 <!-- frontier05C_stage_closeout_v1 -->
 - `frontier05C_stage_closeout_v1`: Frontier05(전선05) closed as negative_memory(부정 기억): handcrafted closed-bar OHLC precursors did not improve feature_set_v2 path-label transfer(수제 확정봉 OHLC 선행 피처가 피처 세트 v2 경로 라벨 전달을 개선하지 못함). Effect(효과): next frontier(다음 전선)는 feature micro-expansion(피처 미세 확장)이 아니라 새 signal/validation hypothesis(신호/검증 가설)를 열어야 합니다.
+<!-- frontier06B_selective_probability_abstention_signal_scout_v1 -->
+- `frontier06B_selective_probability_abstention_signal_scout_v1`: selective abstention signal contract did not produce strict validation+OOS scout clue(선택적 기권 신호 계약이 검증+표본밖 엄격 탐색 단서를 만들지 못함). Effect(효과): unbounded threshold micro-search(무제한 임계값 미세탐색)를 막고 closeout decision(마감 결정)으로 넘깁니다.
+<!-- frontier06C_stage_closeout_v1 -->
+- `frontier06C_stage_closeout_v1`: selective probability abstention signal contract(선택적 확률 기권 신호 계약) did not produce validation+OOS strict scout clue(검증+표본밖 엄격 탐색 단서 없음). Effect(효과): density/PF clue(밀도/수익 팩터 단서)는 보존하되 Frontier06(전선06)은 마감합니다.

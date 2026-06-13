@@ -1,0 +1,35 @@
+You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier06 stage-open(전선06 단계 개방) proposal.
+
+Current truth(현재 진실):
+- Frontier04(전선04) preserved clue(보존 단서): path-aware event labels can create a clean oracle seed surface(경로 이벤트 라벨은 깨끗한 오라클 씨앗 표면을 만들 수 있음).
+- Frontier04 negative memory(부정 기억): feature_set_v2 plus small fixed models did not transfer the oracle surface into usable ONNX metrics(피처 세트 v2와 작은 고정 모델은 오라클 표면을 쓸만한 온엑스 지표로 전달하지 못함).
+- Frontier05(전선05) negative memory(부정 기억): handcrafted closed-bar OHLC precursor features did not improve feature_set_v2 path-label transfer(수제 확정봉 OHLC 선행 피처가 피처 세트 v2 경로 라벨 전달을 개선하지 못함).
+- Frontier05 closeout(전선05 마감) explicitly proposed next frontier(다음 전선) should change signal contract or validation philosophy(신호 계약 또는 검증 철학), not feature micro-expansion(피처 미세 확장).
+- No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) is claimed.
+
+Codex proposed direction before Grok(그록 전 코덱스 제안 방향):
+- Open Frontier06(전선06) as `selective probability abstention signal contract(선택적 확률 기권 신호 계약)`.
+- Hypothesis(가설): The path-label models may contain useful ranking information(순위 정보) even when argmax(최대 확률) overtrades. A no-trade abstention contract(무거래 기권 계약) that trades only high-confidence directional probability/margin bins(고신뢰 방향 확률/마진 구간) may bring density(밀도) toward 5-10/day while reducing PF/DD failure(수익 팩터/손실폭 실패).
+- Novelty delta(신규성 차이): changed variable(변경 변수)은 label(라벨)이나 feature(피처)가 아니라 output-to-trade signal contract(출력에서 거래로 가는 신호 계약)입니다. Feature order(피처 순서), rows(행), split(분할), locked path target(고정 경로 목표), and model families(모델군)는 fixed controls(고정 통제)로 둡니다.
+- First scout(첫 탐색): Frontier06B(전선06B)는 train-only calibrated thresholds(학습 분할 전용 보정 임계값) and broad signal rules(넓은 신호 규칙)을 test on validation/OOS(검증/표본밖)합니다. No WFO/MT5(워크포워드/메타트레이더5 없음), no operating claim(운영 주장 없음).
+- Candidate rule families(후보 규칙군): max directional probability threshold(최대 방향 확률 임계값), side margin threshold(방향 마진 임계값), flat probability veto(플랫 확률 차단), and train-target density calibration(학습 목표 밀도 보정).
+- Success for scout clue(탐색 단서 성공): validation and OOS(검증과 표본밖) both move closer to four axes(네 축) than argmax baseline(최대 확률 기준), especially density 5-10/day, PF above 1.2 as scout floor(탐색 바닥), DD under 10% if possible.
+- Stop condition(중지 조건): if selective abstention only creates low-density cherry-picks(저밀도 선별) or OOS DD/PF collapse(표본밖 손실폭/수익 팩터 붕괴), close as negative memory(부정 기억) rather than threshold micro-search(임계값 미세탐색).
+
+Bounded evidence(제한 근거):
+- Frontier04 closeout report(전선04 마감 보고서): `stages/stage_frontier_04__path_aware_cost_dd_event_labeling/03_reviews/frontier04E_stage_closeout_v1_report.md` sha256 `fdcb53e084da4c0825a9c81f43cfced2e4caa2a1c42ac7c17adc35828cac7e12`
+- Frontier05 closeout report(전선05 마감 보고서): `stages/stage_frontier_05__closed_bar_path_precursor_feature_surface/03_reviews/frontier05C_stage_closeout_v1_report.md` sha256 `b8a9c3d7b14e65b9cbe95dd4e2cdc558005ab2a8fe21d5fa880782aba55bf975`
+- Frontier05 gate audit(전선05 게이트 감사): `stages/stage_frontier_05__closed_bar_path_precursor_feature_surface/03_reviews/required_gate_coverage_audit.md` sha256 `ecec627aa91d924759d1b6663fa8f3806eee384a1e3ef5d22ffe8267d678c48f`
+- Model input dataset(모델 입력 데이터셋): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet` sha256 `c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f`
+- Feature order(피처 순서): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt` sha256 `18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb`
+
+Focused question(집중 질문):
+Should Codex(코덱스) open Frontier06(전선06) with selective probability abstention signal contract(선택적 확률 기권 신호 계약), or is this too close to Stage364 probability-bin/veto repair(확률 구간/차단 수리) and should a different hypothesis be chosen?
+
+Please answer in this structure:
+1. Recommendation(권고): open_frontier06(전선06 개방) / revise_direction(방향 수정) / do_not_open(개방 금지)
+2. Reasoning(근거)
+3. Required bounds for Frontier06B(전선06B 필수 경계)
+4. Risks(위험)
+5. Do-not-claim boundary(주장 금지 경계)
+

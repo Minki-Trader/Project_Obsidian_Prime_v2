@@ -6869,3 +6869,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-13T19:39:22Z: `frontier05B_closed_bar_path_precursor_feature_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): next run(다음 실행)은 `frontier05C_feature_surface_repair_or_closeout_decision_v1`입니다.
 <!-- frontier05C_stage_closeout_v1 -->
 - 2026-06-13T19:45:29Z: `frontier05C_stage_closeout_v1` closed Frontier05(전선05 마감) as negative_memory(부정 기억). Effect(효과): next frontier(다음 전선)은 `frontier06A_stage_open_new_hypothesis_design_v1`입니다.
+<!-- frontier06A_stage_open_selective_probability_abstention_signal_contract_v1 -->
+- 2026-06-13T19:53:49Z: `frontier06A_stage_open_selective_probability_abstention_signal_contract_v1` opened Frontier06(전선06 개방). Effect(효과): next run(다음 실행)은 `frontier06B_selective_probability_abstention_signal_scout_v1`입니다.
+<!-- frontier06B_selective_probability_abstention_signal_scout_v1 -->
+- 2026-06-13T20:01:51Z: `frontier06B_selective_probability_abstention_signal_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): next run(다음 실행)은 `frontier06C_signal_contract_closeout_decision_v1`입니다.
+<!-- frontier06C_stage_closeout_v1 -->
+- 2026-06-13T20:09:43Z: `frontier06C_stage_closeout_v1` closed Frontier06(전선06 마감) as negative_memory(부정 기억)+preserved_clue(보존 단서). Effect(효과): next frontier(다음 전선)는 `frontier07A_stage_open_new_hypothesis_design_v1`입니다.
