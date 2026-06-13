@@ -1,0 +1,454 @@
+{
+  "audit_name": "artifact_lineage_audit",
+  "status": "pass",
+  "passed": true,
+  "source_inputs": {
+    "model_input_dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "parent_manifest_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/run_manifest.json",
+    "parent_top_seed_surfaces_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv",
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    }
+  },
+  "produced_artifacts": {
+    "model_training_summary": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_training_summary.csv",
+      "sha256": "92492672648f08af9da7f92b9971c5b67ddff34031c8a04d74677295f74f33c1"
+    },
+    "teacher_signal_audit": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/teacher_signal_audit.csv",
+      "sha256": "392cb809b00088dcbbf9f9425bfa5bda161115a55065ff1417a671dd548716f3"
+    },
+    "classifier_metrics": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/classifier_metrics.csv",
+      "sha256": "d848207a6a296b5991738b1b51d9866418e084229856fa887909e1164273bbe6"
+    },
+    "decision_surface_metrics": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_metrics.csv",
+      "sha256": "ebfd020bcb283da546754b433a20a6b099e9d1a5749208394a482c541e7eb73a"
+    },
+    "decision_surface_summary": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_summary.csv",
+      "sha256": "38946e3c8781261d29ab0e3c3aa3d5f51dec8ecdb3ddfdd5f25ed4858e790d8c"
+    },
+    "top_onnx_seed_surfaces": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_onnx_seed_surfaces.csv",
+      "sha256": "498f33ba13323922a5c01bd47dc85332583fbe7ed75a68b9b93eec15079a114a"
+    },
+    "top_decision_signal_replay": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+      "sha256": "f1077d8a96839583336ccb017cb4e7cb074730e5a6a07ba671a3d0f9ebded4ab"
+    },
+    "model_export_records": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_export_records.json",
+      "sha256": "6882157f75accfc0fe249cb9cbab7e1217b1eafd3c7dd2fc76a66f5ebcf6910e"
+    },
+    "onnx_parity_audit": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/onnx_parity_audit.json",
+      "sha256": "486dc2b7863019ff785d96a56c1002ea9d3223de4fa675755d0ff32f82648960"
+    },
+    "trainable_seed_surface_spec": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/trainable_seed_surface_spec.json",
+      "sha256": "1e3a240b3ee776f9b62ff10703e51f61b2548adcd8df239775f3953f1237cc9d"
+    },
+    "input_integrity_audit": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/input_integrity_audit.json",
+      "sha256": "948a3da191057d6735aca28afc7a8cb1427d12c2904b62ceaa883d7d8370f507"
+    },
+    "onnx_model__frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx",
+      "sha256": "79d5458222cf5c26ad84362a385cf38ed2296f3b2bd1cfcbbe11e7777c70a49c"
+    },
+    "onnx_model__frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx",
+      "sha256": "d757bce65cf6eb4b1d4599945528bf923d837555f806a952f2de3b2e25b39c4e"
+    },
+    "onnx_model__frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx",
+      "sha256": "4374052583d3aa09f938190fece5a615eded46bac8c1cd54b607ac21e31c132a"
+    },
+    "onnx_model__frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx",
+      "sha256": "14a629d6e85eca8ba444bda50cdcb9a10231c0a82478b1dcf800af750ed1dd1a"
+    },
+    "onnx_model__frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx",
+      "sha256": "6ccf47d7c5fefdf61a9423d5ca370608894d66af581c250b4ac357dd44bf7f90"
+    },
+    "onnx_model__frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx",
+      "sha256": "ffa54e957ee310096183acf618a2b1fe98fde4ebac824314506c06761cdd4e69"
+    }
+  },
+  "onnx_exports": [
+    {
+      "candidate_model_id": "frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6",
+      "teacher_candidate_id": "trend_follow_joint__all_cash__both__q70__cd6",
+      "model_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.pkl",
+      "model_sha256": "d1fb356fc98794d7f08ac79c057a1ada440c75a965cbef470b40069e7eb9f9b8",
+      "onnx_export": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx",
+        "sha256": "79d5458222cf5c26ad84362a385cf38ed2296f3b2bd1cfcbbe11e7777c70a49c",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "onnx_parity": {
+        "passed": true,
+        "rows": 2048,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 1e-05,
+        "max_abs_diff": 2.143792924180765e-06,
+        "mean_abs_diff": 4.220157053054344e-07,
+        "onnx_row_sum_max_abs_error": 1.0134772310266271e-07,
+        "input_name": "float_input",
+        "output_names": [
+          "probabilities"
+        ]
+      }
+    },
+    {
+      "candidate_model_id": "frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6",
+      "teacher_candidate_id": "macro_confirmation_joint__normal_vol__both__q70__cd6",
+      "model_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.pkl",
+      "model_sha256": "d4927658011537c05d75c9c23d2f8295d485c777449577f4bdebdcdad72d4c96",
+      "onnx_export": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx",
+        "sha256": "d757bce65cf6eb4b1d4599945528bf923d837555f806a952f2de3b2e25b39c4e",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "onnx_parity": {
+        "passed": true,
+        "rows": 2048,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 1e-05,
+        "max_abs_diff": 3.4293108034377795e-06,
+        "mean_abs_diff": 7.37451158807682e-07,
+        "onnx_row_sum_max_abs_error": 1.1482916306704283e-07,
+        "input_name": "float_input",
+        "output_names": [
+          "probabilities"
+        ]
+      }
+    },
+    {
+      "candidate_model_id": "frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6",
+      "teacher_candidate_id": "squeeze_breakout_joint__mid_cash__both__q75__cd6",
+      "model_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.pkl",
+      "model_sha256": "e074c12bdab4f9b71c1565966369708a73e64fc8321d7bd7437f599f03740a68",
+      "onnx_export": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx",
+        "sha256": "4374052583d3aa09f938190fece5a615eded46bac8c1cd54b607ac21e31c132a",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "onnx_parity": {
+        "passed": true,
+        "rows": 2048,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 1e-05,
+        "max_abs_diff": 4.854141689158986e-06,
+        "mean_abs_diff": 6.302005777489947e-07,
+        "onnx_row_sum_max_abs_error": 1.142725523095578e-07,
+        "input_name": "float_input",
+        "output_names": [
+          "probabilities"
+        ]
+      }
+    },
+    {
+      "candidate_model_id": "frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18",
+      "teacher_candidate_id": "macro_confirmation_joint__mid_cash__both__q70__cd18",
+      "model_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.pkl",
+      "model_sha256": "89eb69767f76e7c7aeb0cecd40da16cfca31ff163f4f5164adb4f76f0f3e8185",
+      "onnx_export": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx",
+        "sha256": "14a629d6e85eca8ba444bda50cdcb9a10231c0a82478b1dcf800af750ed1dd1a",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "onnx_parity": {
+        "passed": true,
+        "rows": 2048,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 1e-05,
+        "max_abs_diff": 3.2132754105296257e-06,
+        "mean_abs_diff": 3.942618891803442e-07,
+        "onnx_row_sum_max_abs_error": 1.1013810308213579e-07,
+        "input_name": "float_input",
+        "output_names": [
+          "probabilities"
+        ]
+      }
+    },
+    {
+      "candidate_model_id": "frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18",
+      "teacher_candidate_id": "macro_confirmation_joint__mid_cash__both__q75__cd18",
+      "model_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.pkl",
+      "model_sha256": "60d75673b015da55ab9bf5c163b9224da45726d283e43bfad3e0d4e39f570467",
+      "onnx_export": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx",
+        "sha256": "6ccf47d7c5fefdf61a9423d5ca370608894d66af581c250b4ac357dd44bf7f90",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "onnx_parity": {
+        "passed": true,
+        "rows": 2048,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 1e-05,
+        "max_abs_diff": 3.7849607058548784e-06,
+        "mean_abs_diff": 4.121310317818172e-07,
+        "onnx_row_sum_max_abs_error": 1.1609520811362017e-07,
+        "input_name": "float_input",
+        "output_names": [
+          "probabilities"
+        ]
+      }
+    },
+    {
+      "candidate_model_id": "frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6",
+      "teacher_candidate_id": "trend_follow_joint__mid_cash__both__q70__cd6",
+      "model_path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.pkl",
+      "model_sha256": "03fbcece1a48d9e50fe98526809162214c97a44d20f21306803dbe641685adff",
+      "onnx_export": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx",
+        "sha256": "ffa54e957ee310096183acf618a2b1fe98fde4ebac824314506c06761cdd4e69",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "onnx_parity": {
+        "passed": true,
+        "rows": 2048,
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 1e-05,
+        "max_abs_diff": 2.7631268997296843e-06,
+        "mean_abs_diff": 6.196107793521861e-07,
+        "onnx_row_sum_max_abs_error": 9.685754776000977e-08,
+        "input_name": "float_input",
+        "output_names": [
+          "probabilities"
+        ]
+      }
+    }
+  ],
+  "manifest": {
+    "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json",
+    "sha256": "b241147985a3b8b49b02f03a322077ffadf969d88cca1780f898bc1350a7365b"
+  },
+  "report": {
+    "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md",
+    "sha256": "0bad125f966ca7ceccef34d724c6ea9d1d860642be591161cef60cc7bc298852"
+  },
+  "lineage_boundary": "trainable ONNX seed smoke only(학습 가능 온엑스 씨앗 스모크 전용)"
+}

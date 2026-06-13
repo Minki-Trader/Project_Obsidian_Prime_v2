@@ -1,0 +1,93 @@
+{
+  "audit_name": "artifact_lineage_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "checked": [
+      {
+        "label": "closeout_summary",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/closeout_summary.json",
+        "exists": true,
+        "expected_sha256": "bf2b5551ab30985b73d20e7d3db725041254643b1c4439b33781cb778c1f9674",
+        "actual_sha256": "bf2b5551ab30985b73d20e7d3db725041254643b1c4439b33781cb778c1f9674"
+      },
+      {
+        "label": "local_closeout_verification",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/local_closeout_verification.json",
+        "exists": true,
+        "expected_sha256": "23cf220d27d795223b16fe6f4b4d7e0e1db626678957caf92e03b4712473b4a6",
+        "actual_sha256": "23cf220d27d795223b16fe6f4b4d7e0e1db626678957caf92e03b4712473b4a6"
+      },
+      {
+        "label": "grok_closeout_classification",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/grok_closeout_classification.json",
+        "exists": true,
+        "expected_sha256": "03f1e26161abed61593df5f5901023fde34018f8712a6f128f9b6425aeec4dd6",
+        "actual_sha256": "03f1e26161abed61593df5f5901023fde34018f8712a6f128f9b6425aeec4dd6"
+      },
+      {
+        "label": "closeout_report",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md",
+        "exists": true,
+        "expected_sha256": "d2e9eb19770f174b6dfbe9380cf631ec069a9dddf6d5f35aba5743457621fec3",
+        "actual_sha256": "d2e9eb19770f174b6dfbe9380cf631ec069a9dddf6d5f35aba5743457621fec3"
+      },
+      {
+        "label": "input::frontier02b_report",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md",
+        "exists": true,
+        "expected_sha256": "aec5dacf485f2b383e958668d8faa9265dfc7e8f37773d1e3ae277aa7051c6bb",
+        "actual_sha256": "aec5dacf485f2b383e958668d8faa9265dfc7e8f37773d1e3ae277aa7051c6bb"
+      },
+      {
+        "label": "input::frontier02c_report",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md",
+        "exists": true,
+        "expected_sha256": "8014d4ec920b9a84233d6d950db3d8fe8ad48ebfa35903b949fc24f513d46068",
+        "actual_sha256": "8014d4ec920b9a84233d6d950db3d8fe8ad48ebfa35903b949fc24f513d46068"
+      },
+      {
+        "label": "input::frontier02d_report",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02D_review_and_repair_onnx_seed_surface_v1_report.md",
+        "exists": true,
+        "expected_sha256": "a1bd7af6d93d369e2b1eb57051a6cd31e691ed52cb5a8f9911b2a7426610d326",
+        "actual_sha256": "a1bd7af6d93d369e2b1eb57051a6cd31e691ed52cb5a8f9911b2a7426610d326"
+      },
+      {
+        "label": "input::frontier02e_report",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md",
+        "exists": true,
+        "expected_sha256": "bfeefe73b1b6e11ec45ae54c5fddcdb110979f57a0a2e1d7db3c631ab2eecf37",
+        "actual_sha256": "bfeefe73b1b6e11ec45ae54c5fddcdb110979f57a0a2e1d7db3c631ab2eecf37"
+      },
+      {
+        "label": "input::frontier02e_manifest",
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/run_manifest.json",
+        "exists": true,
+        "expected_sha256": "cf5b98c7b2a918947ee9ef875f65cf00894354ced95ac1d4db29b0a24324623d",
+        "actual_sha256": "cf5b98c7b2a918947ee9ef875f65cf00894354ced95ac1d4db29b0a24324623d"
+      },
+      {
+        "label": "input::grok_closeout_output",
+        "path": "docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md",
+        "exists": true,
+        "expected_sha256": "397b135a3d2e4677400f1cea85f35df944352c6a79b83a08c693c7acc829cfaa",
+        "actual_sha256": "397b135a3d2e4677400f1cea85f35df944352c6a79b83a08c693c7acc829cfaa"
+      },
+      {
+        "label": "script",
+        "path": "stage_pipelines/stage_frontier_02/materialize_frontier02f_stage_closeout.py",
+        "exists": true,
+        "expected_sha256": "c7dd8340601074c1fd1cc42341108c6dd31e886b4707f4ff9c2f30264b0933d2",
+        "actual_sha256": "c7dd8340601074c1fd1cc42341108c6dd31e886b4707f4ff9c2f30264b0933d2"
+      }
+    ],
+    "artifact_count": 11
+  },
+  "allowed_claims": [
+    "artifact_lineage_recorded"
+  ],
+  "forbidden_claims": []
+}

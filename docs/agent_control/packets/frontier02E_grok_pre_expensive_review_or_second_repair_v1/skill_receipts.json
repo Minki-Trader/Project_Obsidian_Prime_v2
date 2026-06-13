@@ -1,0 +1,312 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "skill": "obsidian-run-evidence-system",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02E_pre_expensive_review/medium_review/clean_output.md"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/go_rule_rows.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/loss_attribution.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/local_verification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/grok_advice_classification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md"
+      ],
+      "ledger_rows": [
+        "frontier02E_grok_pre_expensive_review_or_second_repair_v1__tier_a_separate_decision_layer_diagnostic",
+        "frontier02E_grok_pre_expensive_review_or_second_repair_v1__tier_b_separate_missing_required",
+        "frontier02E_grok_pre_expensive_review_or_second_repair_v1__tier_ab_combined_out_of_scope"
+      ],
+      "missing_evidence": [
+        "Tier B partial-context artifact(티어 B 부분 문맥 산출물)",
+        "MT5 fills(MT5 체결)",
+        "WFO validation(WFO 검증)"
+      ],
+      "allowed_claims": [
+        "frozen_decision_layer_diagnostic_completed(고정 결정층 진단 완료)",
+        "no_go_decision_layer_diagnostic_no_authority(결정층 진단 진행조건 없음, 권위 없음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "skill": "obsidian-experiment-design",
+      "triggered": true,
+      "status": "executed",
+      "hypothesis": "A frozen frontier02C decision layer(고정 전선02C 결정층) might recover PF/DD(수익 팩터/손실폭) without retraining(재학습 없음) before expensive validation(비싼 검증).",
+      "baseline": "frontier02C seed observation(전선02C 씨앗 관찰); no selected baseline(선택 기준선 없음).",
+      "changed_variables": [
+        "score_mode(점수 방식)",
+        "probability_threshold(확률 임계값)",
+        "probability_margin(확률 마진)",
+        "cooldown_bars(쿨다운 봉)"
+      ],
+      "invalid_conditions": [
+        "new ONNX produced(새 온엑스 생성)",
+        "retraining performed(재학습 수행)",
+        "OOS used as selector(표본외를 선택기로 사용)",
+        "Grok advice accepted without local verification(로컬 검증 없는 그록 조언 수용)"
+      ],
+      "evidence_plan": [
+        "Grok output(그록 출력)",
+        "diagnostic_summary.csv",
+        "go_rule_rows.csv",
+        "local_verification.json",
+        "run_manifest.json",
+        "ledger rows(장부 행)",
+        "gate audits(게이트 감사)"
+      ]
+    },
+    {
+      "packet_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "skill": "obsidian-data-integrity",
+      "triggered": true,
+      "status": "executed",
+      "data_sources_checked": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+      ],
+      "time_axis_boundary": "timestamp UTC(UTC 타임스탬프) alignment(정렬) checked by replay alignment(재생 정렬).",
+      "split_boundary": "train/validation/oos(학습/검증/표본외) from existing model input dataset(기존 모델 입력 데이터셋); OOS not used as selector(표본외 선택기 사용 없음).",
+      "leakage_checks": [
+        "calibration fit uses validation only(보정 적합은 검증만 사용)",
+        "frozen probabilities reused(고정 확률 재사용)",
+        "no target relabeling(목표 재라벨링 없음)"
+      ],
+      "missing_data_boundary": "Tier B separate(티어 B 분리) missing_required(필수 누락); no combined routed total(합산 라우팅 전체 없음)."
+    },
+    {
+      "packet_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "skill": "obsidian-model-validation",
+      "triggered": true,
+      "status": "executed",
+      "model_or_threshold_surface": "frozen frontier02C probability decision layer(고정 전선02C 확률 결정층)",
+      "validation_split": "validation rank(검증 순위) orders diagnostics; OOS(표본외) checks go/no-go only(진행/중단만 확인).",
+      "overfit_checks": [
+        "no retraining(재학습 없음)",
+        "go rule requires OOS PF/density/DD/net(표본외 수익 팩터/밀도/손실폭/순수익)",
+        "go_rule_rows=0 means no expensive validation(진행 규칙 행 0개로 비싼 검증 없음)"
+      ],
+      "selection_metric_boundary": "best validation rank(검증 순위 1위) is diagnostic read(진단 판독), not selected candidate(선택 후보 아님).",
+      "allowed_claims": [
+        "decision_layer_diagnostic_read(결정층 진단 판독)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02E_pre_expensive_review/medium_review/clean_output.md"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/go_rule_rows.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/loss_attribution.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/local_verification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/grok_advice_classification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md"
+      ],
+      "raw_evidence": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02E_pre_expensive_review/medium_review/clean_output.md"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/go_rule_rows.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/loss_attribution.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/local_verification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/grok_advice_classification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/run_manifest.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "diagnostic_metrics": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_metrics.csv",
+          "sha256": "b04e2baada56c5058c33e1569fb33359eb46d7ebbc4b2ed2ac8bfea6028be4a6"
+        },
+        "diagnostic_summary": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_summary.csv",
+          "sha256": "773b69f4b3baf71b419091091069aa437f9381bcc5a239e5aefea75ef2f258e1"
+        },
+        "go_rule_rows": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/go_rule_rows.csv",
+          "sha256": "4054a21a245b4aea80ed64747bc165c60515ce8a7144da847520637611b6fd12"
+        },
+        "loss_attribution": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/loss_attribution.csv",
+          "sha256": "812c122b4899726b0cfac5aee536e1a2579c70510ddc69a3bccebac1b4403ecd"
+        },
+        "local_verification": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/local_verification.json",
+          "sha256": "221e8afab04e14a469e2eeb1fc099ddb8d5092887f112d73cd9ac8fd82a57c4f"
+        },
+        "grok_advice_classification": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/grok_advice_classification.json",
+          "sha256": "a8cec743310d42551c10effb6771a0f207b5e4710b6e6d4d0676344a2e2a10c9"
+        },
+        "report": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md",
+          "sha256": "bfeefe73b1b6e11ec45ae54c5fddcdb110979f57a0a2e1d7db3c631ab2eecf37"
+        },
+        "run_manifest": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/run_manifest.json",
+          "sha256": "cf5b98c7b2a918947ee9ef875f65cf00894354ced95ac1d4db29b0a24324623d"
+        },
+        "script": {
+          "path": "stage_pipelines/stage_frontier_02/frontier02e_frozen_02c_decision_layer_diagnostic.py",
+          "sha256": "160f066bd3eecd45fdfd8b7116c153fec71f66e5193e85bd420ee720d0c13d5d"
+        }
+      },
+      "lineage_boundary": "diagnostic artifacts derive from frozen 02C replay(고정 02C 재생) and Grok review(그록 검토); no new ONNX(새 온엑스 없음)."
+    },
+    {
+      "packet_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "goal requires Grok second opinion before expensive WFO/MT5(목표가 비싼 WFO/MT5 전 그록 2차 의견을 요구)",
+      "review_size": "medium",
+      "direction_before_grok": "Codex proposed no expensive WFO/MT5 yet(코덱스가 아직 비싼 WFO/MT5 보류 제안) and either capped repair(상한 수리) or closeout decision(마감 결정).",
+      "bounded_evidence": [
+        "frontier02B/C/D KPI snapshot(frontier02B/C/D KPI 스냅샷)",
+        "Tier boundary(티어 경계)",
+        "claim boundary(주장 경계)"
+      ],
+      "prompt_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-14_frontier02E_pre_expensive_review/medium_review/prompt.md",
+        "sha256": "da2691627174bb4e86d0fa11920a35e918c1488d30e5a0ccc449bcc93d05c3e4"
+      },
+      "grok_output_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-14_frontier02E_pre_expensive_review/medium_review/clean_output.md",
+        "sha256": "f1cf7cd9e8738d027024efdc1101d4ce776154bc1e61d434e07061b9c5d508d4"
+      },
+      "advice_classification": {
+        "accepted": [
+          "Do not run WFO/MT5 yet(WFO/MT5 아직 실행 금지)",
+          "Run frozen frontier02C decision-layer diagnostic(고정 frontier02C 결정층 진단 실행)",
+          "Keep frontier02C as seed observation only(frontier02C는 씨앗 관찰로만 유지)",
+          "Keep frontier02D as negative repair memory(frontier02D는 부정 수리 기억으로 유지)"
+        ],
+        "rejected": [
+          "All 14 frontier02D repair observation rows are below frontier02C on both PF and density(14개 수리 관찰 행 모두 PF와 밀도에서 C보다 낮다는 주장)"
+        ],
+        "needs_local_verification": [
+          "Go/no-go rule after diagnostic(진단 후 진행/중단 규칙)",
+          "Loss attribution bucket interpretation(손실 귀속 버킷 해석)"
+        ]
+      },
+      "local_verification": {
+        "kpi_number_parity": {
+          "frontier02c_oos_net": 0.0464936226624384,
+          "frontier02d_oos_net": -0.0028185199583211,
+          "frontier02c_report_sha256": "0bad125f966ca7ceccef34d724c6ea9d1d860642be591161cef60cc7bc298852",
+          "frontier02d_report_sha256": "58a08544bbb72962d27ec1891572815409154e2329ef9f5ac5b8e24a99d0436a"
+        },
+        "grok_degradation_claim_check": {
+          "all_14_repair_rows_below_c_pf_and_density": false,
+          "repair_observation_rows": 14,
+          "repair_rows_above_c_validation_pf": 1,
+          "repair_rows_above_c_validation_density": 0,
+          "classification": "reject_overbroad_degradation_claim"
+        },
+        "repair_axis_identity": {
+          "frontier02d_label_id": "ret_m1c",
+          "frontier02d_axis": "label_training_repair",
+          "frontier02e_axis": "frozen_02c_decision_layer_no_new_onnx",
+          "classification": "accepted_new_information_axis"
+        },
+        "replay_infrastructure": {
+          "frontier02c_top_replay_exists": true,
+          "frontier02d_top_replay_exists": true,
+          "frontier02c_replay_rows": 46650,
+          "frontier02d_replay_rows": 46650,
+          "frontier02c_decision_rows": 576,
+          "frontier02d_decision_rows": 576
+        },
+        "diagnostic_result": {
+          "decision_rows": 720,
+          "go_rule_rows": 0,
+          "next_condition": "prepare_stage_closeout"
+        },
+        "claim_boundary": {
+          "completion": "not_claimed",
+          "selected_baseline": "not_claimed",
+          "operating_promotion": "not_claimed",
+          "runtime_authority": "not_claimed",
+          "live_readiness": "not_claimed",
+          "goal_achieve": "not_claimed"
+        }
+      },
+      "forbidden_claim_check": {
+        "completion": "not_claimed",
+        "selected_baseline": "not_claimed",
+        "operating_promotion": "not_claimed",
+        "runtime_authority": "not_claimed",
+        "live_readiness": "not_claimed",
+        "goal_achieve": "not_claimed"
+      },
+      "final_codex_direction": "prepare_stage_closeout"
+    },
+    {
+      "packet_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "skill": "obsidian-result-judgment",
+      "triggered": true,
+      "status": "executed",
+      "judgment_boundary": "no_go_decision_layer_diagnostic_prepare_stage_closeout_no_authority",
+      "allowed_claims": [
+        "no_go_decision_layer_diagnostic_no_authority(결정층 진단 진행조건 없음, 권위 없음)",
+        "prepare_stage_closeout(단계 마감 준비)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ],
+      "evidence_used": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/diagnostic_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/go_rule_rows.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1/local_verification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md"
+      ]
+    }
+  ]
+}

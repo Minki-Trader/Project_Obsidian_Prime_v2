@@ -1,0 +1,110 @@
+{
+  "audit_name": "onnx_parity_audit",
+  "status": "pass",
+  "passed": true,
+  "records": [
+    {
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 2.143792924180765e-06,
+      "mean_abs_diff": 4.220157053054344e-07,
+      "onnx_row_sum_max_abs_error": 1.0134772310266271e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 3.4293108034377795e-06,
+      "mean_abs_diff": 7.37451158807682e-07,
+      "onnx_row_sum_max_abs_error": 1.1482916306704283e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 4.854141689158986e-06,
+      "mean_abs_diff": 6.302005777489947e-07,
+      "onnx_row_sum_max_abs_error": 1.142725523095578e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 3.2132754105296257e-06,
+      "mean_abs_diff": 3.942618891803442e-07,
+      "onnx_row_sum_max_abs_error": 1.1013810308213579e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 3.7849607058548784e-06,
+      "mean_abs_diff": 4.121310317818172e-07,
+      "onnx_row_sum_max_abs_error": 1.1609520811362017e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 2.7631268997296843e-06,
+      "mean_abs_diff": 6.196107793521861e-07,
+      "onnx_row_sum_max_abs_error": 9.685754776000977e-08,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    }
+  ],
+  "boundary": "parity means sklearn-vs-ONNX probability match(동등성은 sklearn-온엑스 확률 일치만 뜻함), not runtime authority(런타임 권위 아님)."
+}

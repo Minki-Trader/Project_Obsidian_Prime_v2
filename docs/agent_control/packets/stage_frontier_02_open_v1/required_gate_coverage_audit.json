@@ -1,0 +1,38 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "required_gates": [
+    "state_sync_audit",
+    "external_review_packet",
+    "artifact_lineage_audit",
+    "work_packet_schema_lint",
+    "skill_receipt_schema_lint",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "executed_gates": [
+    "state_sync_audit",
+    "external_review_packet",
+    "artifact_lineage_audit",
+    "work_packet_schema_lint",
+    "skill_receipt_schema_lint",
+    "required_gate_coverage_audit",
+    "final_claim_guard"
+  ],
+  "gate_status": {
+    "state_sync_audit": true,
+    "artifact_lineage_audit": true,
+    "external_review_packet": true,
+    "work_packet_schema_lint": true,
+    "skill_receipt_schema_lint": true,
+    "final_claim_guard": true,
+    "required_gate_coverage_audit": true
+  },
+  "not_applicable_with_reason": {
+    "kpi_contract_audit": "No trading KPI(거래 KPI 없음) in stage-open design packet(단계 개방 설계 작업 묶음).",
+    "mt5_runtime_evidence_gate": "No MT5 execution(MT5 실행 없음).",
+    "model_training_gate": "No model training(모델 학습 없음)."
+  },
+  "findings": []
+}

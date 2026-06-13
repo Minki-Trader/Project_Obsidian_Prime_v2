@@ -1,0 +1,248 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier02C_trainable_onnx_seed_surface_design_v1",
+      "skill": "obsidian-run-evidence-system",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_training_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/teacher_signal_audit.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/classifier_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_onnx_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_export_records.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/onnx_parity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/trainable_seed_surface_spec.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md"
+      ],
+      "ledger_rows": [
+        "frontier02C_trainable_onnx_seed_surface_design_v1__tier_a_separate_onnx_seed_smoke",
+        "frontier02C_trainable_onnx_seed_surface_design_v1__tier_b_separate_missing_required",
+        "frontier02C_trainable_onnx_seed_surface_design_v1__tier_ab_combined_out_of_scope"
+      ],
+      "missing_evidence": [
+        "Tier B partial-context artifact(부분 문맥 Tier B 산출물)",
+        "MT5 fills(MT5 체결)",
+        "WFO validation(워크포워드 검증)"
+      ],
+      "allowed_claims": [
+        "trainable_onnx_seed_smoke_completed(학습 가능 온엑스 씨앗 스모크 완료)",
+        "onnx_seed_observation_exists(온엑스 씨앗 관찰 있음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02C_trainable_onnx_seed_surface_design_v1",
+      "skill": "obsidian-experiment-design",
+      "triggered": true,
+      "status": "executed",
+      "hypothesis": "frontier02B proxy seed surfaces(프록시 씨앗 표면)를 trainable ONNX(학습 가능 온엑스) teacher model(교사 모델)로 바꾸면 다음 repair/review(수리/검토)에 쓸 seed observation(씨앗 관찰)을 만들 수 있다.",
+      "baseline": "no selected baseline(선택 기준선 없음); Stage12-364 reference only(참조 전용)",
+      "changed_variables": [
+        "teacher candidate(교사 후보)",
+        "probability threshold(확률 임계값)",
+        "probability margin(확률 마진)",
+        "cooldown bars(쿨다운 봉수)",
+        "runtime filter(런타임 필터)"
+      ],
+      "invalid_conditions": [
+        "feature order mismatch(피처 순서 불일치)",
+        "missing 3-class train labels(3클래스 학습 라벨 누락)",
+        "ONNX parity failure(온엑스 동등성 실패)",
+        "OOS selector leakage(OOS 선택기 누수)"
+      ],
+      "evidence_plan": [
+        "model_training_summary.csv",
+        "onnx_parity_audit.json",
+        "decision_surface_summary.csv",
+        "run_manifest.json",
+        "ledger rows(장부 행)",
+        "gate audits(게이트 감사)"
+      ]
+    },
+    {
+      "packet_id": "frontier02C_trainable_onnx_seed_surface_design_v1",
+      "skill": "obsidian-data-integrity",
+      "triggered": true,
+      "status": "executed",
+      "data_sources_checked": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "model_input_feature_order.txt",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv"
+      ],
+      "time_axis_boundary": "timestamp UTC(UTC 타임스탬프)를 America/New_York date(뉴욕 날짜)로 scope days(범위 일수) 계산에만 사용.",
+      "split_boundary": "train fit(학습 적합), validation rank(검증 순위), OOS diagnostic only(표본외 진단 전용).",
+      "leakage_checks": [
+        "feature hash matched(피처 해시 일치)",
+        "dataset hash matched parent(부모 데이터셋 해시 일치)",
+        "OOS not used for rank(표본외 순위 미사용)"
+      ],
+      "missing_data_boundary": "Tier B partial-context dataset(부분 문맥 Tier B 데이터셋)은 이번 실행에서 materialized(물질화)하지 않음."
+    },
+    {
+      "packet_id": "frontier02C_trainable_onnx_seed_surface_design_v1",
+      "skill": "obsidian-model-validation",
+      "triggered": true,
+      "status": "executed",
+      "model_or_threshold_surface": "3-class logistic teacher-distillation ONNX seed surfaces(3클래스 로지스틱 교사 증류 온엑스 씨앗 표면).",
+      "validation_split": "validation ranking only(검증 순위 전용); OOS diagnostic only(표본외 진단 전용).",
+      "overfit_checks": [
+        "model fitted on train only(모델 학습 구간만 적합)",
+        "validation ranking only(검증 순위만)",
+        "OOS not selector(OOS 선택기 아님)",
+        "ONNX parity checked(온엑스 동등성 확인)"
+      ],
+      "selection_metric_boundary": "aspiration_distance_score(목표 거리 점수)는 seed observation comparison(씨앗 관찰 비교) 전용.",
+      "allowed_claims": [
+        "onnx_seed_observation_exists(온엑스 씨앗 관찰 있음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02C_trainable_onnx_seed_surface_design_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_training_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/teacher_signal_audit.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/classifier_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_onnx_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_export_records.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/onnx_parity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/trainable_seed_surface_spec.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx"
+      ],
+      "raw_evidence": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_training_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/teacher_signal_audit.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/classifier_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_onnx_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_export_records.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/onnx_parity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/trainable_seed_surface_spec.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "model_training_summary": "92492672648f08af9da7f92b9971c5b67ddff34031c8a04d74677295f74f33c1",
+        "teacher_signal_audit": "392cb809b00088dcbbf9f9425bfa5bda161115a55065ff1417a671dd548716f3",
+        "classifier_metrics": "d848207a6a296b5991738b1b51d9866418e084229856fa887909e1164273bbe6",
+        "decision_surface_metrics": "ebfd020bcb283da546754b433a20a6b099e9d1a5749208394a482c541e7eb73a",
+        "decision_surface_summary": "38946e3c8781261d29ab0e3c3aa3d5f51dec8ecdb3ddfdd5f25ed4858e790d8c",
+        "top_onnx_seed_surfaces": "498f33ba13323922a5c01bd47dc85332583fbe7ed75a68b9b93eec15079a114a",
+        "top_decision_signal_replay": "f1077d8a96839583336ccb017cb4e7cb074730e5a6a07ba671a3d0f9ebded4ab",
+        "model_export_records": "6882157f75accfc0fe249cb9cbab7e1217b1eafd3c7dd2fc76a66f5ebcf6910e",
+        "onnx_parity_audit": "486dc2b7863019ff785d96a56c1002ea9d3223de4fa675755d0ff32f82648960",
+        "trainable_seed_surface_spec": "1e3a240b3ee776f9b62ff10703e51f61b2548adcd8df239775f3953f1237cc9d",
+        "input_integrity_audit": "948a3da191057d6735aca28afc7a8cb1427d12c2904b62ceaa883d7d8370f507",
+        "onnx_model__frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6": "79d5458222cf5c26ad84362a385cf38ed2296f3b2bd1cfcbbe11e7777c70a49c",
+        "onnx_model__frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6": "d757bce65cf6eb4b1d4599945528bf923d837555f806a952f2de3b2e25b39c4e",
+        "onnx_model__frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6": "4374052583d3aa09f938190fece5a615eded46bac8c1cd54b607ac21e31c132a",
+        "onnx_model__frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18": "14a629d6e85eca8ba444bda50cdcb9a10231c0a82478b1dcf800af750ed1dd1a",
+        "onnx_model__frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18": "6ccf47d7c5fefdf61a9423d5ca370608894d66af581c250b4ac357dd44bf7f90",
+        "onnx_model__frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6": "ffa54e957ee310096183acf618a2b1fe98fde4ebac824314506c06761cdd4e69"
+      },
+      "lineage_boundary": "cheap ONNX smoke only(저비용 온엑스 스모크 전용); no MT5 artifact(MT5 산출물 없음)."
+    },
+    {
+      "packet_id": "frontier02C_trainable_onnx_seed_surface_design_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "persistent goal(지속 목표) requires Grok at stage open/pre-expensive/closeout; this run is cheap ONNX smoke(저비용 온엑스 스모크).",
+      "review_size": "not_called_this_run_existing_stage_open_review_applies(이번 실행 새 호출 없음, 기존 단계 개방 검토 적용)",
+      "direction_before_grok": "stage-open direction already reviewed(단계 개방 방향은 이미 검토됨); execute cheap trainable ONNX smoke(저비용 학습 가능 온엑스 스모크 실행).",
+      "bounded_evidence": [
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/clean_output.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md"
+      ],
+      "prompt_identity": "not_created_this_run_no_new_grok_call(이번 실행 새 그록 호출 없음)",
+      "grok_output_identity": "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/clean_output.md",
+      "advice_classification": {
+        "accepted": [
+          "four-axis wording(네 축 표현)",
+          "avoid density-only framing(밀도 단독 표현 회피)"
+        ],
+        "rejected": [],
+        "needs_local_verification": []
+      },
+      "local_verification": "frontier02C did not start WFO/MT5(워크포워드/MT5 미시작); pre-expensive Grok review(비싼 검증 전 그록 검토)는 next serious validation(다음 진지 검증) 전에 필요.",
+      "forbidden_claim_check": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ],
+      "final_codex_direction": "use ONNX output as seed observation only(온엑스 출력을 씨앗 관찰로만 사용)."
+    }
+  ]
+}

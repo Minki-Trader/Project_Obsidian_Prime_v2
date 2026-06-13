@@ -1,0 +1,247 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier02D_review_and_repair_onnx_seed_surface_v1",
+      "skill": "obsidian-run-evidence-system",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_training_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_classifier_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repaired_onnx_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repair_signal_replay.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_export_records.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_onnx_parity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_seed_surface_spec.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_native_lr_c050.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_ret_m1c_lr_c050.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02D_review_and_repair_onnx_seed_surface_v1_report.md"
+      ],
+      "ledger_rows": [
+        "frontier02D_review_and_repair_onnx_seed_surface_v1__tier_a_separate_onnx_repair_scout",
+        "frontier02D_review_and_repair_onnx_seed_surface_v1__tier_b_separate_missing_required",
+        "frontier02D_review_and_repair_onnx_seed_surface_v1__tier_ab_combined_out_of_scope"
+      ],
+      "missing_evidence": [
+        "Tier B partial-context artifact(티어 B 부분 문맥 산출물)",
+        "MT5 fills(MT5 체결)",
+        "WFO validation(워크포워드 검증)"
+      ],
+      "allowed_claims": [
+        "onnx_seed_repair_scout_completed(온엑스 씨앗 수리 탐색 완료)",
+        "negative_repair_scout_no_authority(부정 수리 탐색, 권위 없음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02D_review_and_repair_onnx_seed_surface_v1",
+      "skill": "obsidian-experiment-design",
+      "triggered": true,
+      "status": "executed",
+      "hypothesis": "Changing the ONNX label surface(온엑스 라벨 표면 변경) and narrowing filters(필터 축소) may repair PF/density/DD together(PF/밀도/DD를 함께 수리할 수 있음).",
+      "baseline": "frontier02C seed smoke(전선02C 씨앗 스모크); no selected baseline(선택 기준선 없음).",
+      "changed_variables": [
+        "label_id(라벨 ID)",
+        "filter_name(필터 이름)",
+        "probability_threshold(확률 임계값)",
+        "probability_margin(확률 마진)",
+        "cooldown_bars(쿨다운 봉 수)"
+      ],
+      "invalid_conditions": [
+        "ONNX parity failure(온엑스 동등성 실패)",
+        "OOS used as selector(표본외 선택기 사용)",
+        "missing required output(필수 출력 누락)"
+      ],
+      "evidence_plan": [
+        "repair_model_training_summary.csv",
+        "repair_onnx_parity_audit.json",
+        "repair_decision_surface_summary.csv",
+        "run_manifest.json",
+        "ledger rows(장부 행)",
+        "gate audits(게이트 감사)"
+      ]
+    },
+    {
+      "packet_id": "frontier02D_review_and_repair_onnx_seed_surface_v1",
+      "skill": "obsidian-data-integrity",
+      "triggered": true,
+      "status": "executed",
+      "data_sources_checked": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json"
+      ],
+      "time_axis_boundary": "timestamp UTC(UTC 타임스탬프) is used only for split/day density accounting(분할/일별 밀도 계산).",
+      "split_boundary": "train fit(학습 적합), validation rank(검증 순위), OOS diagnostic only(표본외 진단 전용).",
+      "leakage_checks": [
+        "feature order hash checked(피처 순서 해시 확인)",
+        "parent manifest used as input identity(부모 manifest를 입력 정체성으로 사용)",
+        "OOS not used for rank(표본외 순위 미사용)"
+      ],
+      "missing_data_boundary": "Tier B partial-context dataset(티어 B 부분 문맥 데이터셋)은 이번 실행에서 materialized(물질화)하지 않음."
+    },
+    {
+      "packet_id": "frontier02D_review_and_repair_onnx_seed_surface_v1",
+      "skill": "obsidian-model-validation",
+      "triggered": true,
+      "status": "executed",
+      "model_or_threshold_surface": "two logistic repair ONNX models(로지스틱 수리 온엑스 모델 2개) and 576 decision rows(결정 행 576개).",
+      "validation_split": "validation ranking only(검증 순위 전용); OOS diagnostic only(표본외 진단 전용).",
+      "overfit_checks": [
+        "train/validation/OOS metrics separated(학습/검증/표본외 분리)",
+        "repair observation rows counted separately(수리 관찰 행 별도 집계)",
+        "best validation row has negative OOS net(검증 1위의 표본외 순수익 음수)"
+      ],
+      "selection_metric_boundary": "No candidate selection(후보 선택 없음); next run decides Grok pre-expensive review or bounded second repair(다음 실행에서 그록 검토 또는 제한 수리 판단).",
+      "allowed_claims": [
+        "negative_repair_scout_no_authority(부정 수리 탐색, 권위 없음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02D_review_and_repair_onnx_seed_surface_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_training_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_classifier_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repaired_onnx_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repair_signal_replay.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_export_records.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_onnx_parity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_seed_surface_spec.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_native_lr_c050.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_ret_m1c_lr_c050.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02D_review_and_repair_onnx_seed_surface_v1_report.md"
+      ],
+      "raw_evidence": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_training_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_classifier_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repaired_onnx_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repair_signal_replay.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_export_records.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_onnx_parity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_seed_surface_spec.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_native_lr_c050.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_ret_m1c_lr_c050.onnx",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/run_manifest.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02D_review_and_repair_onnx_seed_surface_v1_report.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "repair_model_training_summary": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_training_summary.csv",
+          "sha256": "8e100f5a58e8495026e353fdaaf1d934990cef8fbef3bccc8faecfc1889a5738"
+        },
+        "repair_classifier_metrics": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_classifier_metrics.csv",
+          "sha256": "250ad0ecf9d9f1d3502780fe6ddd6961c58a4c3227d41eee10401242a2105502"
+        },
+        "repair_decision_surface_metrics": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_metrics.csv",
+          "sha256": "997c175af9f7d839b480a0dc446f9817b79d31897072085ecf391b9566468d94"
+        },
+        "repair_decision_surface_summary": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_decision_surface_summary.csv",
+          "sha256": "1aa23a45839bf6f9aed7f9b269b28b34cc972eda6b3d6142a029c291220e75ed"
+        },
+        "top_repaired_onnx_seed_surfaces": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repaired_onnx_seed_surfaces.csv",
+          "sha256": "2a15c42b8b3b162ef545aa68f62d54f07b809f7c98667878203148ab28a9026e"
+        },
+        "top_repair_signal_replay": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/top_repair_signal_replay.csv",
+          "sha256": "44651ec53b5d45ffd0c7cf254b6f7d7b35a6d94d947ce97deb416ca603e7efd3"
+        },
+        "repair_model_export_records": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_model_export_records.json",
+          "sha256": "1292880bf3c613733f9ede1eddcd31de2ff08431ea47f6bd59c40df937352cec"
+        },
+        "repair_onnx_parity_audit": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_onnx_parity_audit.json",
+          "sha256": "1e9f261b4971e5eca6147960df576d28f6e1870bdef0d47f822bcc653c07934a"
+        },
+        "repair_seed_surface_spec": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/repair_seed_surface_spec.json",
+          "sha256": "bc356cb799ec50c25bdb1d6376f00ef51e51ed755312ef6fe181b85f03aeec43"
+        },
+        "input_integrity_audit": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/input_integrity_audit.json",
+          "sha256": "fb59c89873d8f98589984325550d1417de4a86635aea29fe82a134dd214bb5d9"
+        },
+        "onnx_model__f02d_native_lr_c050": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_native_lr_c050.onnx",
+          "sha256": "2496b1e9f1cdc456aa08f36829d400a7eb36c7fad9c4b2dfbe8e25141f9b9f92"
+        },
+        "onnx_model__f02d_ret_m1c_lr_c050": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/models/f02d_ret_m1c_lr_c050.onnx",
+          "sha256": "6c35efb10d399b0b943bfc6ea1ac49276c65ff72ccd60951f9046b32f247087c"
+        },
+        "report": {
+          "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02D_review_and_repair_onnx_seed_surface_v1_report.md",
+          "sha256": "58a08544bbb72962d27ec1891572815409154e2329ef9f5ac5b8e24a99d0436a"
+        }
+      },
+      "lineage_boundary": "frontier02D artifacts(전선02D 산출물) descend from frontier02C parent manifest(전선02C 부모 manifest); no Stage12-364 inheritance(Stage12-364 상속 없음)."
+    },
+    {
+      "packet_id": "frontier02D_review_and_repair_onnx_seed_surface_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "Frontier lifecycle(전선 생명주기) requires Grok before expensive WFO/MT5(비싼 워크포워드/MT5 전 그록 필요); this run is cheap repair scout(이번 실행은 저비용 수리 탐색).",
+      "review_size": "none_new_existing_stage_open_review_applied(새 호출 없음, 기존 단계 개방 검토 적용)",
+      "direction_before_grok": "Do not escalate frontier02D to authority(전선02D를 권위로 올리지 않음); keep WFO/MT5 blocked until pre-expensive review(비싼 검증 전 검토까지 WFO/MT5 보류).",
+      "bounded_evidence": [
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/clean_output.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02D_review_and_repair_onnx_seed_surface_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02D_review_and_repair_onnx_seed_surface_v1_report.md"
+      ],
+      "prompt_identity": "existing_frontier02_stage_open_grok_review(기존 전선02 단계 개방 그록 검토)",
+      "grok_output_identity": "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/clean_output.md",
+      "advice_classification": "accepted_for_stage_open_constraints_no_new_repair_advice(단계 개방 제약 수용, 새 수리 조언 없음)",
+      "local_verification": "local manifest/report/gates confirm cheap repair scout only(로컬 manifest/보고/gate가 저비용 수리 탐색만 확인).",
+      "forbidden_claim_check": "No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve claim(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 주장 없음).",
+      "final_codex_direction": "Proceed to frontier02E Grok pre-expensive review or bounded second repair(전선02E 그록 사전 검토 또는 제한 2차 수리로 진행)."
+    }
+  ]
+}

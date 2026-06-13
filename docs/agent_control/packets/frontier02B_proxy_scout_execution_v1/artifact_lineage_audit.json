@@ -1,0 +1,113 @@
+{
+  "audit_name": "artifact_lineage_audit",
+  "status": "pass",
+  "passed": true,
+  "source_inputs": {
+    "model_input_dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    }
+  },
+  "produced_artifacts": {
+    "candidate_surface_metrics": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_metrics.csv",
+      "sha256": "231e74ef172597a4c90b419400f86746286e97e6c77d1acd24f839ba6b7f5433"
+    },
+    "candidate_surface_summary": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_summary.csv",
+      "sha256": "1b4a2b3f74dc8b1aacf15cbbec0541adde3a610222a711c3bd6b0bcfedd8163f"
+    },
+    "top_seed_surfaces": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv",
+      "sha256": "b976e425c4d70ee539cd9f83d016f28232878b1a6a70050f2ef31b7f82ebce36"
+    },
+    "input_integrity_audit": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/input_integrity_audit.json",
+      "sha256": "c4d96ed1e52f14aae71c1c8a73c310054d9e65fa9c28944e80a332c8a3d309ec"
+    },
+    "score_contract": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/score_contract.json",
+      "sha256": "a55884f798688d110a3bda5f79dbdaf995b07380286e4cdf151cb82c7dcaf5a8"
+    }
+  },
+  "manifest": {
+    "run_id": "frontier02B_proxy_scout_execution_v1",
+    "run_number": "frontier02B",
+    "stage_id": "stage_frontier_02__four_axis_joint_onnx_proxy_scout",
+    "exploration_label": "stage_frontier_02__four_axis_joint_onnx_proxy_scout",
+    "status": "completed_proxy_scout_no_authority",
+    "created_at_utc": "2026-06-13T15:45:47Z",
+    "script_path": "stage_pipelines/stage_frontier_02/four_axis_proxy_scout.py",
+    "script_sha256": "beb569af854fb35a11a9c5274000579825e4e1386727361f5fb41a2bc3b1e5eb",
+    "inputs": {
+      "model_input_dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "rows": 46650,
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      }
+    },
+    "proxy_contract": {
+      "rough_cost_log_return": 5e-05,
+      "hold_bars": 12,
+      "density_target_trades_per_day": [
+        5.0,
+        10.0
+      ],
+      "profit_factor_target_low": 2.0,
+      "drawdown_target_percent": 10.0,
+      "selector_scope": "validation_only",
+      "oos_use": "diagnostic_only"
+    },
+    "outputs": {
+      "candidate_surface_metrics": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_metrics.csv",
+        "sha256": "231e74ef172597a4c90b419400f86746286e97e6c77d1acd24f839ba6b7f5433"
+      },
+      "candidate_surface_summary": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_summary.csv",
+        "sha256": "1b4a2b3f74dc8b1aacf15cbbec0541adde3a610222a711c3bd6b0bcfedd8163f"
+      },
+      "top_seed_surfaces": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv",
+        "sha256": "b976e425c4d70ee539cd9f83d016f28232878b1a6a70050f2ef31b7f82ebce36"
+      },
+      "input_integrity_audit": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/input_integrity_audit.json",
+        "sha256": "c4d96ed1e52f14aae71c1c8a73c310054d9e65fa9c28944e80a332c8a3d309ec"
+      },
+      "score_contract": {
+        "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/score_contract.json",
+        "sha256": "a55884f798688d110a3bda5f79dbdaf995b07380286e4cdf151cb82c7dcaf5a8"
+      }
+    },
+    "report": {
+      "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md",
+      "sha256": "b407aa1299d113f2205e1f4b36780a4b27f2148376572a01ff3e37e45aa1d7ae"
+    },
+    "external_verification_status": "out_of_scope_by_claim_no_mt5",
+    "forbidden_claims": [
+      "completion",
+      "selected_baseline",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness",
+      "goal_achieve"
+    ]
+  },
+  "report": {
+    "path": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md",
+    "sha256": "b407aa1299d113f2205e1f4b36780a4b27f2148376572a01ff3e37e45aa1d7ae"
+  },
+  "lineage_boundary": "proxy scout only(프록시 탐색 전용)"
+}

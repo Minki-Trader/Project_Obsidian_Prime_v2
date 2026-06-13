@@ -1,0 +1,28 @@
+{
+  "audit_name": "final_claim_guard",
+  "status": "pass",
+  "passed": true,
+  "allowed_claims": [
+    "stage_opened",
+    "grok_stage_open_review_captured",
+    "proxy_score_spec_ready",
+    "no_authority_claimed"
+  ],
+  "forbidden_claims_checked": [
+    "completion",
+    "baseline",
+    "promotion",
+    "runtime_authority",
+    "operating_promotion",
+    "live_readiness",
+    "goal_achieve",
+    "selected_candidate"
+  ],
+  "authority_state": {
+    "runtime_authority": "not_claimed",
+    "operating_promotion": "not_claimed",
+    "goal_achieve": "not_claimed"
+  },
+  "completed_forbidden": false,
+  "findings": []
+}

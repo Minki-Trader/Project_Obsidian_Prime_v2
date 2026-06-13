@@ -1,0 +1,267 @@
+version: work_packet_schema_v2
+packet_id: frontier02C_trainable_onnx_seed_surface_design_v1
+created_at_utc: '2026-06-13T16:15:22Z'
+user_request:
+  user_quote: 'persistent_goal(지속 목표): build a genuinely strong US100 M5 ONNX(온엑스) through frontier hypothesis lifecycle(전선
+    가설 생명주기).'
+  requested_action: execute_frontier02C_trainable_onnx_seed_surface_smoke
+  requested_count: one_trainable_seed_smoke_run(학습 가능 씨앗 스모크 실행 1회)
+  ambiguous_terms: []
+current_truth:
+  active_stage_before: stage_frontier_02__four_axis_joint_onnx_proxy_scout
+  active_stage_after: stage_frontier_02__four_axis_joint_onnx_proxy_scout
+  current_run_before: frontier02B_proxy_scout_execution_v1
+  current_run_after: frontier02C_trainable_onnx_seed_surface_design_v1
+  latest_completed_run_before: frontier02B_proxy_scout_execution_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/04_selected/selection_status.md
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/run_manifest.json
+work_classification:
+  primary_family: experiment_execution
+  detected_families:
+  - experiment_execution
+  - kpi_evidence
+  - artifact_lineage
+  - state_sync
+  touched_surfaces:
+  - stage_pipelines/stage_frontier_02/trainable_onnx_seed_surface.py
+  - stage_pipelines/stage_frontier_02/materialize_frontier02c_control_packet.py
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout
+  - docs/registers
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+  - proxy_teacher_is_not_mt5_fill(프록시 교사는 MT5 체결이 아님)
+  - ONNX parity does not imply runtime authority(온엑스 동등성은 런타임 권위가 아님)
+  - OOS diagnostic must not become selector(OOS 진단을 선택기로 쓰면 안 됨)
+  - Tier B artifact missing in this run(Tier B 산출물 이번 실행 누락)
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - model_training_audit
+  - onnx_parity_audit
+  - artifact_lineage_audit
+  - external_review_packet
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+decision_lock:
+  mode: reasonable_assumption_execute_with_smoke_boundary(합리적 가정으로 스모크 경계 내 실행)
+  assumptions:
+  - cheap ONNX smoke training(저비용 온엑스 스모크 학습)는 WFO/MT5(워크포워드/MT5) 전 Grok call(그록 호출) 없이 가능
+  - validation rank(검증 순위)만 selector(선택기)이고 OOS(표본외)는 diagnostic(진단)이다
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_execution
+  target_surfaces:
+  - trainable_onnx_seed_surface(학습 가능 온엑스 씨앗 표면)
+  - proxy_teacher_distillation(프록시 교사 증류)
+  - onnx_probability_parity(온엑스 확률 동등성)
+  scope_units:
+  - code_module
+  - model_artifact
+  - onnx_artifact
+  - run
+  - report
+  - ledger
+  - gate
+  execution_layers:
+  - code_edit
+  - python_execution
+  - onnx_export
+  - parity_check
+  - ledger_update
+  - document_edit
+  mutation_policy: stage_local_adapter_and_run_artifacts_only(단계 전용 어댑터와 실행 산출물만)
+  evidence_layers:
+  - run_manifest
+  - model_training_summary
+  - onnx_parity_audit
+  - decision_surface_summary
+  - stage_report
+  - ledger_rows
+  - gate_audits
+  reduction_policy: top_validation_rank_seed_for_next_repair_review(다음 수리/검토용 검증 순위 씨앗만 축약)
+  claim_boundary: onnx_seed_observation_only_no_authority(온엑스 씨앗 관찰까지만, 권위 없음)
+acceptance_criteria:
+- id: AC-001
+  text: stage-local training script(단계 전용 학습 스크립트)가 실행된다.
+  expected_artifact: stage_pipelines/stage_frontier_02/trainable_onnx_seed_surface.py
+  verification_method: py_compile_and_run
+  required: true
+- id: AC-002
+  text: ONNX model artifacts(온엑스 모델 산출물)와 parity audit(동등성 감사)가 생성된다.
+  expected_artifact: stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/onnx_parity_audit.json
+  verification_method: file_hash_and_parity_pass
+  required: true
+- id: AC-003
+  text: decision surface metrics(결정 표면 측정값)가 생성된다.
+  expected_artifact: stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_summary.csv
+  verification_method: file_hash_and_row_count
+  required: true
+- id: AC-004
+  text: Tier A/B/combined ledger rows(티어 A/B/합산 장부 행)가 기록된다.
+  expected_artifact: stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/stage_run_ledger.csv
+  verification_method: ledger_row_presence
+  required: true
+- id: AC-005
+  text: final forbidden claims(최종 금지 주장)을 하지 않는다.
+  expected_artifact: docs/agent_control/packets/frontier02C_trainable_onnx_seed_surface_design_v1/final_claim_guard.json
+  verification_method: claim_guard
+  required: true
+work_plan:
+  phases:
+  - input_audit(입력 감사)
+  - teacher_signal_materialization(교사 신호 물질화)
+  - model_training(모델 학습)
+  - onnx_export_parity(온엑스 내보내기 동등성)
+  - decision_surface_replay(결정 표면 재생)
+  - ledger_sync(장부 동기화)
+  - gate_audit(게이트 감사)
+  expected_outputs:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_training_summary.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/teacher_signal_audit.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/classifier_metrics.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_metrics.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_summary.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_onnx_seed_surfaces.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_export_records.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/onnx_parity_audit.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/trainable_seed_surface_spec.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/input_integrity_audit.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md
+  stop_conditions:
+  - input_hash_mismatch(입력 해시 불일치)
+  - feature_order_mismatch(피처 순서 불일치)
+  - no_trainable_teacher_models(학습 가능 교사 모델 없음)
+  - onnx_parity_failure(온엑스 동등성 실패)
+  - gate_failure(게이트 실패)
+skill_routing:
+  primary_family: experiment_execution
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  skills_considered:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-grok-collaboration
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  skills_selected:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-grok-collaboration
+  skills_not_used:
+    obsidian-runtime-parity:
+      not_selected_reason: No MT5 runtime execution(MT5 런타임 실행 없음).
+    obsidian-backtest-forensics:
+      not_selected_reason: No Strategy Tester output(전략 테스터 출력 없음).
+    obsidian-result-judgment:
+      not_selected_reason: Run report(실행 보고)는 seed observation boundary(씨앗 관찰 경계)만 쓰며 stage closeout judgment(단계 마감 판정)이 아님.
+  required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-grok-collaboration
+  required_gates:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - model_training_audit
+  - onnx_parity_audit
+  - artifact_lineage_audit
+  - external_review_packet
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv
+  machine_readable:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_training_summary.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/teacher_signal_audit.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/classifier_metrics.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_metrics.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/decision_surface_summary.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_onnx_seed_surfaces.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/top_decision_signal_replay.csv
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/model_export_records.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/onnx_parity_audit.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/trainable_seed_surface_spec.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/input_integrity_audit.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__all_cash__both__q70__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__normal_vol__both__q70__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__squeeze_breakout_joint__mid_cash__both__q75__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q70__cd18.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__macro_confirmation_joint__mid_cash__both__q75__cd18.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/models/frontier02c_logreg_teacher__trend_follow_joint__mid_cash__both__q70__cd6.onnx
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02C_trainable_onnx_seed_surface_design_v1/run_manifest.json
+  human_readable:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md
+gates:
+  required:
+  - scope_completion_gate
+  - kpi_contract_audit
+  - model_training_audit
+  - onnx_parity_audit
+  - artifact_lineage_audit
+  - external_review_packet
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    mt5_runtime_evidence_gate: No MT5 execution(MT5 실행 없음); claim lowered to ONNX smoke seed observation(온엑스 스모크 씨앗 관찰로 주장
+      축소).
+    wfo_gate: No WFO execution(워크포워드 실행 없음); not a validation candidate(검증 후보 아님).
+final_claim_policy:
+  allowed_claims:
+  - trainable_onnx_seed_smoke_completed(학습 가능 온엑스 씨앗 스모크 완료)
+  - onnx_parity_passed(온엑스 동등성 통과)
+  - onnx_seed_observation_exists(온엑스 씨앗 관찰 있음)
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

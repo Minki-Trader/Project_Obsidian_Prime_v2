@@ -1,0 +1,379 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier02F_stage_closeout_preserved_clue_negative_memory_v1",
+      "skill": "obsidian-reentry-read",
+      "triggered": true,
+      "status": "executed",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/04_selected/selection_status.md"
+      ],
+      "active_stage": "stage_frontier_02__four_axis_joint_onnx_proxy_scout",
+      "current_run": "frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+      "detected_conflicts": [
+        "none_detected(감지된 충돌 없음)"
+      ],
+      "allowed_claims": [
+        "stage_closeout(단계 마감)",
+        "preserved_clue(보존 단서)",
+        "negative_memory(부정 기억)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02F_stage_closeout_preserved_clue_negative_memory_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "Goal requires Grok stage closeout review(목표가 그록 단계 마감 검토를 요구).",
+      "review_size": "medium",
+      "direction_before_grok": "Close Frontier 02 as preserved clue + negative memory(전선 02를 보존 단서 + 부정 기억으로 마감).",
+      "bounded_evidence": [
+        "frontier02B/C/D/E KPI snapshot(KPI 스냅샷)",
+        "Tier boundary(티어 경계)",
+        "claim boundary(주장 경계)",
+        "E gate status(E 게이트 상태)"
+      ],
+      "prompt_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/prompt.md",
+        "sha256": "402bd517335816e6aa5a9edff671001c743364eeae9461655afe3d20b05aaa34"
+      },
+      "grok_output_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md",
+        "sha256": "397b135a3d2e4677400f1cea85f35df944352c6a79b83a08c693c7acc829cfaa"
+      },
+      "advice_classification": {
+        "accepted": [
+          "Close Frontier 02 now as preserved clue + negative memory(전선 02를 보존 단서 + 부정 기억으로 지금 마감)",
+          "Do not run another local non-expensive diagnostic before closeout(마감 전 추가 저비용 로컬 진단 금지)",
+          "Preserve frontier02B/02C as clue only(frontier02B/02C를 단서로만 보존)",
+          "Record frontier02D/02E as negative memory(frontier02D/02E를 부정 기억으로 기록)",
+          "Use regime-conditioned asymmetric ONNX labeling/modeling as next-frontier proposal(레짐 조건 비대칭 온엑스 라벨/모델링을 다음 전선 제안으로 사용)"
+        ],
+        "rejected": [],
+        "needs_local_verification": [
+          "go_rule_artifact_recount(진행 규칙 산출물 재집계)",
+          "frontier02E_equals_frontier02C_metric_parity(전선02E와 전선02C 수치 동일성)",
+          "frontier02D_corrected_negative_memory_wording(전선02D 보정 부정 기억 문구)",
+          "tier_honesty(티어 정직성)",
+          "loss_attribution_inclusion(손실 귀속 포함)",
+          "gate_lineage_receipts(게이트/계보 영수증)"
+        ]
+      },
+      "local_verification": {
+        "go_rule_recount": {
+          "count": 0,
+          "expected": 0,
+          "status": "pass",
+          "rule": "OOS PF >= 1.2, OOS density pass, OOS DD pass, OOS net > 0"
+        },
+        "metric_parity_02e_02c": {
+          "status": "pass",
+          "checks": [
+            {
+              "field": "validation_net_profit",
+              "frontier02c": 0.2363142300959255,
+              "frontier02e": 0.2363142300959255,
+              "abs_diff": 0.0,
+              "pass": true
+            },
+            {
+              "field": "validation_profit_factor",
+              "frontier02c": 1.203397667851076,
+              "frontier02e": 1.203397667851076,
+              "abs_diff": 0.0,
+              "pass": true
+            },
+            {
+              "field": "validation_trades_per_day",
+              "frontier02c": 4.295081967213115,
+              "frontier02e": 4.295081967213115,
+              "abs_diff": 0.0,
+              "pass": true
+            },
+            {
+              "field": "validation_max_drawdown_percent",
+              "frontier02c": 9.884359276161735,
+              "frontier02e": 9.884359276161735,
+              "abs_diff": 0.0,
+              "pass": true
+            },
+            {
+              "field": "oos_net_profit",
+              "frontier02c": 0.0464936226624384,
+              "frontier02e": 0.0464936226624384,
+              "abs_diff": 0.0,
+              "pass": true
+            },
+            {
+              "field": "oos_profit_factor",
+              "frontier02c": 1.054330295992362,
+              "frontier02e": 1.054330295992362,
+              "abs_diff": 0.0,
+              "pass": true
+            },
+            {
+              "field": "oos_trades_per_day",
+              "frontier02c": 5.030534351145038,
+              "frontier02e": 5.030534351145038,
+              "abs_diff": 0.0,
+              "pass": true
+            },
+            {
+              "field": "oos_max_drawdown_percent",
+              "frontier02c": 10.335610250759364,
+              "frontier02e": 10.335610250759364,
+              "abs_diff": 0.0,
+              "pass": true
+            }
+          ]
+        },
+        "frontier02d_corrected_negative_memory": {
+          "repair_observation_rows": 14,
+          "repair_rows_above_c_validation_pf": 1,
+          "repair_rows_above_c_validation_density": 0,
+          "status": "pass",
+          "wording": "Use top-row regression and label-repair failure; reject all-14-below-C overbroad wording."
+        },
+        "tier_honesty": {
+          "status": "pass",
+          "rows": [
+            {
+              "ledger_row_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1__tier_a_separate_decision_layer_diagnostic",
+              "alpha_ledger_present": true,
+              "stage_ledger_present": true
+            },
+            {
+              "ledger_row_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1__tier_b_separate_missing_required",
+              "alpha_ledger_present": true,
+              "stage_ledger_present": true
+            },
+            {
+              "ledger_row_id": "frontier02E_grok_pre_expensive_review_or_second_repair_v1__tier_ab_combined_out_of_scope",
+              "alpha_ledger_present": true,
+              "stage_ledger_present": true
+            }
+          ]
+        },
+        "loss_attribution_inclusion": {
+          "status": "pass",
+          "worst_oos_buckets": [
+            {
+              "bucket_type": "atr_ratio_bucket",
+              "bucket_value": "(1.14, 1.389]",
+              "trade_count": 219,
+              "net_profit": -0.089892265445,
+              "profit_factor": 0.7478751829596498
+            },
+            {
+              "bucket_type": "vix_bucket",
+              "bucket_value": "(-0.973, 0.954]",
+              "trade_count": 219,
+              "net_profit": -0.0696116955879999,
+              "profit_factor": 0.7653731349705497
+            },
+            {
+              "bucket_type": "confidence_decile",
+              "bucket_value": "(0.806, 0.873]",
+              "trade_count": 65,
+              "net_profit": -0.0190853828589999,
+              "profit_factor": 0.8028594470620678
+            },
+            {
+              "bucket_type": "confidence_decile",
+              "bucket_value": "(0.55, 0.612]",
+              "trade_count": 66,
+              "net_profit": -0.0168310228199999,
+              "profit_factor": 0.8508294041568644
+            },
+            {
+              "bucket_type": "confidence_decile",
+              "bucket_value": "(0.612, 0.674]",
+              "trade_count": 66,
+              "net_profit": -0.01024197349,
+              "profit_factor": 0.8543680781153751
+            }
+          ]
+        },
+        "gate_lineage_receipts": {
+          "frontier02e_gate_status": "pass",
+          "frontier02e_report_sha256": "bfeefe73b1b6e11ec45ae54c5fddcdb110979f57a0a2e1d7db3c631ab2eecf37",
+          "frontier02e_manifest_sha256": "cf5b98c7b2a918947ee9ef875f65cf00894354ced95ac1d4db29b0a24324623d",
+          "status": "pass"
+        },
+        "forbidden_claims": {
+          "completion": "not_claimed",
+          "selected_baseline": "not_claimed",
+          "operating_promotion": "not_claimed",
+          "runtime_authority": "not_claimed",
+          "live_readiness": "not_claimed",
+          "goal_achieve": "not_claimed"
+        }
+      },
+      "forbidden_claim_check": {
+        "completion": "not_claimed",
+        "selected_baseline": "not_claimed",
+        "operating_promotion": "not_claimed",
+        "runtime_authority": "not_claimed",
+        "live_readiness": "not_claimed",
+        "goal_achieve": "not_claimed"
+      },
+      "final_codex_direction": "close_frontier02_as_preserved_clue_negative_memory"
+    },
+    {
+      "packet_id": "frontier02F_stage_closeout_preserved_clue_negative_memory_v1",
+      "skill": "obsidian-result-judgment",
+      "triggered": true,
+      "status": "executed",
+      "judgment_boundary": "stage_closeout_preserved_clue_negative_memory_no_authority",
+      "allowed_claims": [
+        "preserved_clue(보존 단서)",
+        "negative_memory(부정 기억)",
+        "stage_closed_no_authority(단계 마감 권위 없음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ],
+      "evidence_used": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/closeout_summary.json",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md"
+      ]
+    },
+    {
+      "packet_id": "frontier02F_stage_closeout_preserved_clue_negative_memory_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02C_trainable_onnx_seed_surface_design_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02D_review_and_repair_onnx_seed_surface_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/closeout_summary.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/local_closeout_verification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/grok_closeout_classification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/run_manifest.json"
+      ],
+      "raw_evidence": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/closeout_summary.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/local_closeout_verification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/grok_closeout_classification.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "closeout_summary": "bf2b5551ab30985b73d20e7d3db725041254643b1c4439b33781cb778c1f9674",
+        "local_closeout_verification": "23cf220d27d795223b16fe6f4b4d7e0e1db626678957caf92e03b4712473b4a6",
+        "grok_closeout_classification": "03f1e26161abed61593df5f5901023fde34018f8712a6f128f9b6425aeec4dd6",
+        "closeout_report": "d2e9eb19770f174b6dfbe9380cf631ec069a9dddf6d5f35aba5743457621fec3"
+      },
+      "lineage_boundary": "connected_with_boundary(경계 있는 연결): closeout evidence only(마감 근거 전용), no runtime authority(런타임 권위 없음)."
+    },
+    {
+      "packet_id": "frontier02F_stage_closeout_preserved_clue_negative_memory_v1",
+      "skill": "obsidian-exploration-mandate",
+      "triggered": true,
+      "status": "executed",
+      "exploration_lane": "frontier_hypothesis_lifecycle(전선 가설 생명주기)",
+      "idea_boundary": "IDEA-FR02-FOUR-AXIS-JOINT-ONNX-PROXY-SCOUT",
+      "negative_memory_effect": "Blocks same-family threshold/calibration repair loop(같은 계열 임계값/보정 수리 반복 차단).",
+      "operating_claim_boundary": "No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).",
+      "idea_id": "IDEA-FR02-FOUR-AXIS-JOINT-ONNX-PROXY-SCOUT",
+      "hypothesis": "four-axis joint ONNX proxy scout(네 축 동시 온엑스 프록시 탐색)",
+      "legacy_relation": "prior_evidence_only(이전 근거 전용)",
+      "tier_scope": "Tier A materialized, Tier B missing_required, Tier A+B out_of_scope(티어 A 물질화, 티어 B 필수 누락, 합산 범위 밖)",
+      "broad_sweep": "frontier02B proxy sweep, frontier02C trainable ONNX smoke, frontier02D repair, frontier02E decision diagnostic(전선02B~02E)",
+      "extreme_sweep": "threshold/calibration/cooldown variants in B/C/D/E(임계값/보정/쿨다운 변형)",
+      "micro_search_gate": "new source/label/model family/regime split/runtime representation required before micro-search(미세탐색 전 신규 축 필요)",
+      "wfo_plan": "not opened because go-rule rows are zero(WFO 미개방: 진행 규칙 행 0개)",
+      "failure_memory": {
+        "frontier02D": {
+          "candidate_id": "f02d_ret_m1c_lr_c050__mid_cash__both__p34__m0__cd12",
+          "validation_pf": 1.1003488458627464,
+          "validation_density": 3.191256830601093,
+          "validation_dd": 8.326270116593603,
+          "oos_pf": 0.9954831411646232,
+          "oos_density": 3.480916030534351,
+          "oos_dd": 9.460803715203705,
+          "boundary": "label repair worsened OOS net/PF/density versus 02C; do not use overbroad all-14-below-C wording."
+        },
+        "frontier02E": {
+          "candidate_id": "f02e_raw_prob__p30__m0__cd6",
+          "validation_pf": 1.203397667851076,
+          "validation_density": 4.295081967213115,
+          "validation_dd": 9.884359276161735,
+          "oos_pf": 1.054330295992362,
+          "oos_density": 5.030534351145038,
+          "oos_dd": 10.335610250759364,
+          "go_rule_rows": 0,
+          "boundary": "frozen decision-layer repair produced zero go-rule rows and no uplift over 02C."
+        },
+        "loss_attribution": [
+          {
+            "bucket_type": "atr_ratio_bucket",
+            "bucket_value": "(1.14, 1.389]",
+            "trade_count": 219,
+            "net_profit": -0.089892265445,
+            "profit_factor": 0.7478751829596498
+          },
+          {
+            "bucket_type": "vix_bucket",
+            "bucket_value": "(-0.973, 0.954]",
+            "trade_count": 219,
+            "net_profit": -0.0696116955879999,
+            "profit_factor": 0.7653731349705497
+          },
+          {
+            "bucket_type": "confidence_decile",
+            "bucket_value": "(0.806, 0.873]",
+            "trade_count": 65,
+            "net_profit": -0.0190853828589999,
+            "profit_factor": 0.8028594470620678
+          },
+          {
+            "bucket_type": "confidence_decile",
+            "bucket_value": "(0.55, 0.612]",
+            "trade_count": 66,
+            "net_profit": -0.0168310228199999,
+            "profit_factor": 0.8508294041568644
+          },
+          {
+            "bucket_type": "confidence_decile",
+            "bucket_value": "(0.612, 0.674]",
+            "trade_count": 66,
+            "net_profit": -0.01024197349,
+            "profit_factor": 0.8543680781153751
+          }
+        ]
+      },
+      "evidence_boundary": "preserved_clue_plus_negative_memory_no_authority(보존 단서 + 부정 기억, 권위 없음)"
+    }
+  ]
+}

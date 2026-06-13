@@ -1,0 +1,43 @@
+{
+  "packet_id": "stage_frontier_02_open_v1",
+  "trigger_reason": "/goal requires Grok review(그록 검토) at stage open(단계 개방).",
+  "review_size": "medium(중간)",
+  "direction_before_grok": "Open Frontier 02(전선 02)를 four-axis joint ONNX proxy scout(네 축 동시 온엑스 프록시 탐색)로 연다.",
+  "prompt_identity": {
+    "path": "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/prompt.md",
+    "prompt_hash": "6eac77be4955fefe15b6ae6674a826f53e7251ab4e4833f8fb78dabece9826c6"
+  },
+  "grok_output_identity": {
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/metadata.json",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/raw_diagnostics.json",
+    "success": true
+  },
+  "advice_classification": {
+    "accepted": [
+      "Stage id independence(단계 ID 독립성) accepted with reference-not-inheritance(참조이지 상속 아님) boundary.",
+      "Stage-open contract(단계 개방 계약) accepted: thesis, prior scan, DNR, exit rule, claim boundary first.",
+      "First packet scope(첫 작업 묶음 범위) accepted as proxy design/scout only(프록시 설계/탐색 전용)."
+    ],
+    "rejected": [
+      "Do not treat four-axis joint objective(네 축 동시 목적) as novelty unless proxy/training/selection-time joint objective(프록시/학습/선택 시점 동시 목적) is explicit.",
+      "Do not use preserved clues(보존 단서) as threshold or hold anchors(임계값 또는 보유 앵커).",
+      "Do not use density-only wording(밀도 전용 표현); stage id adjusted to four_axis_joint_onnx_proxy_scout.",
+      "Do not put model training(모델 학습) in the stage-open packet(단계 개방 작업 묶음)."
+    ],
+    "needs_local_verification": [
+      "Write novelty_delta(신규성 차이) explicitly.",
+      "Create proxy_score_plan.md(프록시 점수 계획).",
+      "Link prior_stage_scan(이전 단계 점검) to paths and limits(경로와 한계).",
+      "Verify state sync(상태 동기), authority not_claimed(권위 주장 안 함), Grok output saved(그록 출력 저장)."
+    ]
+  },
+  "local_verification": [
+    "Stage id(단계 ID) adjusted based on Grok rejection(그록 거절 조언).",
+    "proxy_score_plan.md contains strict_sample_floor, pf999_sparse, joint_pass_count, and scout/serious boundary(엄격 표본 바닥/희소 PF999/동시 통과 수/탐색-진지 경계).",
+    "workspace_state/current_working_state/selection_status(작업공간 상태/현재 작업 상태/선택 상태) point to Frontier 02(전선 02).",
+    "No authority columns(권위 열) claim runtime authority or promotion(런타임 권위 또는 승격)."
+  ],
+  "forbidden_claim_check": "pass(통과)",
+  "final_codex_direction": "Open Frontier 02(전선 02)를 proxy score specification(프록시 점수 규격)까지 열고, next packet(다음 작업 묶음)은 proxy scout execution(프록시 탐색 실행)으로 둔다."
+}

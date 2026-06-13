@@ -1,0 +1,44 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "required_gates": [
+      "artifact_lineage_audit",
+      "external_review_packet",
+      "final_claim_guard",
+      "kpi_contract_audit",
+      "model_training_audit",
+      "onnx_parity_audit",
+      "required_gate_coverage_audit",
+      "scope_completion_gate",
+      "skill_receipt_lint",
+      "skill_receipt_schema_lint",
+      "work_packet_schema_lint"
+    ],
+    "executed_audits": [
+      "artifact_lineage_audit",
+      "external_review_packet",
+      "final_claim_guard",
+      "kpi_contract_audit",
+      "model_training_audit",
+      "onnx_parity_audit",
+      "required_gate_coverage_audit",
+      "scope_completion_gate",
+      "skill_receipt_lint",
+      "skill_receipt_schema_lint",
+      "work_packet_schema_lint"
+    ],
+    "not_applicable_with_reason": {
+      "mt5_runtime_evidence_gate": "No MT5 execution(MT5 실행 없음); claim lowered to ONNX smoke seed observation(온엑스 스모크 씨앗 관찰로 주장 축소).",
+      "wfo_gate": "No WFO execution(워크포워드 실행 없음); not a validation candidate(검증 후보 아님)."
+    },
+    "declared_not_implemented": {}
+  },
+  "allowed_claims": [
+    "gate_coverage_complete"
+  ],
+  "forbidden_claims": []
+}

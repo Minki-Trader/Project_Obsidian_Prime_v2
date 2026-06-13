@@ -1,0 +1,190 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier02B_proxy_scout_execution_v1",
+      "skill": "obsidian-run-evidence-system",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/01_inputs/proxy_score_plan.md"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/score_contract.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md"
+      ],
+      "ledger_rows": [
+        "frontier02B_proxy_scout_execution_v1__tier_a_separate_proxy_scout",
+        "frontier02B_proxy_scout_execution_v1__tier_b_separate_missing_required",
+        "frontier02B_proxy_scout_execution_v1__tier_ab_combined_out_of_scope"
+      ],
+      "missing_evidence": [
+        "Tier B partial-context artifact(부분 문맥 Tier B 산출물)",
+        "MT5 fills(MT5 체결)",
+        "ONNX model artifact(온엑스 모델 산출물)"
+      ],
+      "allowed_claims": [
+        "proxy_scout_completed(프록시 탐색 완료)",
+        "scout_clue_exists(탐색 단서 있음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02B_proxy_scout_execution_v1",
+      "skill": "obsidian-experiment-design",
+      "triggered": true,
+      "status": "executed",
+      "hypothesis": "four-axis joint proxy objective(네 축 동시 프록시 목적)가 one-axis repair loop(한 축 수리 반복)를 줄일 수 있는지 탐색한다.",
+      "baseline": "no selected baseline(선택 기준선 없음); Stage12-364 reference only(참조 전용)",
+      "changed_variables": [
+        "surface score components(표면 점수 구성)",
+        "threshold quantile(임계값 분위수)",
+        "cooldown bars(쿨다운 봉수)",
+        "side mode(방향 모드)",
+        "rough cost proxy(거친 비용 프록시)"
+      ],
+      "invalid_conditions": [
+        "feature order mismatch(피처 순서 불일치)",
+        "split contamination(분할 오염)",
+        "OOS selector leakage(OOS 선택기 누수)",
+        "missing source artifact(원천 산출물 누락)"
+      ],
+      "evidence_plan": [
+        "candidate_surface_metrics.csv",
+        "candidate_surface_summary.csv",
+        "run_manifest.json",
+        "ledger rows(장부 행)",
+        "gate audits(게이트 감사)"
+      ]
+    },
+    {
+      "packet_id": "frontier02B_proxy_scout_execution_v1",
+      "skill": "obsidian-data-integrity",
+      "triggered": true,
+      "status": "executed",
+      "data_sources_checked": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "model_input_feature_order.txt"
+      ],
+      "time_axis_boundary": "timestamp UTC(UTC 타임스탬프)를 America/New_York date(뉴욕 날짜)로 scope days(범위 일수) 계산에만 사용.",
+      "split_boundary": "train thresholds(학습 임계값), validation rank(검증 순위), OOS diagnostic only(표본외 진단 전용).",
+      "leakage_checks": [
+        "feature hash matched(피처 해시 일치)",
+        "timestamp duplicates absent(중복 타임스탬프 없음)",
+        "OOS not used for rank(표본외 순위 미사용)"
+      ],
+      "missing_data_boundary": "Tier B partial-context dataset(부분 문맥 Tier B 데이터셋)은 이번 실행에서 materialized(물질화)하지 않음."
+    },
+    {
+      "packet_id": "frontier02B_proxy_scout_execution_v1",
+      "skill": "obsidian-model-validation",
+      "triggered": true,
+      "status": "executed",
+      "model_or_threshold_surface": "score replay threshold surfaces(점수 재생 임계값 표면), no trained ONNX(학습된 온엑스 없음).",
+      "validation_split": "validation 2025-01-02 to 2025-09-30; OOS 2025-10-01 to 2026-04-13 diagnostic(진단).",
+      "overfit_checks": [
+        "thresholds from train only(임계값 학습 구간 산출)",
+        "validation ranking only(검증 순위만)",
+        "OOS not selector(OOS 선택기 아님)"
+      ],
+      "selection_metric_boundary": "aspiration_distance_score(목표 거리 점수)는 scout comparison(탐색 비교) 전용.",
+      "allowed_claims": [
+        "seed_surface_for_training_design(학습 설계용 씨앗 표면)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier02B_proxy_scout_execution_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/01_inputs/proxy_score_plan.md"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/score_contract.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/run_manifest.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md"
+      ],
+      "raw_evidence": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_metrics.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/candidate_surface_summary.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/top_seed_surfaces.csv",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/input_integrity_audit.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/score_contract.json",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02B_proxy_scout_execution_v1/run_manifest.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02B_proxy_scout_execution_v1_report.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "candidate_surface_metrics": "231e74ef172597a4c90b419400f86746286e97e6c77d1acd24f839ba6b7f5433",
+        "candidate_surface_summary": "1b4a2b3f74dc8b1aacf15cbbec0541adde3a610222a711c3bd6b0bcfedd8163f",
+        "top_seed_surfaces": "b976e425c4d70ee539cd9f83d016f28232878b1a6a70050f2ef31b7f82ebce36",
+        "input_integrity_audit": "c4d96ed1e52f14aae71c1c8a73c310054d9e65fa9c28944e80a332c8a3d309ec",
+        "score_contract": "a55884f798688d110a3bda5f79dbdaf995b07380286e4cdf151cb82c7dcaf5a8"
+      },
+      "lineage_boundary": "proxy replay only(프록시 재생 전용); no model artifact(모델 산출물 없음), no MT5 artifact(MT5 산출물 없음)."
+    },
+    {
+      "packet_id": "frontier02B_proxy_scout_execution_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "persistent goal(지속 목표) requires Grok at stage open/pre-expensive/closeout; this run is cheap proxy replay(저비용 프록시 재생).",
+      "review_size": "not_called_this_run_existing_stage_open_review_applies(이번 실행 새 호출 없음, 기존 단계 개방 검토 적용)",
+      "direction_before_grok": "stage-open direction already reviewed(단계 개방 방향은 이미 검토됨); execute cheap proxy scout(저비용 프록시 탐색 실행).",
+      "bounded_evidence": [
+        "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/clean_output.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/01_inputs/proxy_score_plan.md"
+      ],
+      "prompt_identity": "not_created_this_run_no_new_grok_call(이번 실행 새 그록 호출 없음)",
+      "grok_output_identity": "docs/agent_control/grok_reviews/2026-06-14_frontier02_stage_open/medium_review/clean_output.md",
+      "advice_classification": {
+        "accepted": [
+          "four-axis wording(네 축 표현)",
+          "avoid density-only framing(밀도 단독 표현 회피)"
+        ],
+        "rejected": [],
+        "needs_local_verification": []
+      },
+      "local_verification": "frontier02B did not start WFO/MT5(워크포워드/MT5 미시작); pre-expensive Grok review(비싼 검증 전 그록 검토)는 next serious validation(다음 진지 검증) 전에 필요.",
+      "forbidden_claim_check": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ],
+      "final_codex_direction": "use proxy scout output as seed surface clues only(프록시 탐색 출력을 씨앗 표면 단서로만 사용)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "audit_name": "kpi_contract_audit",
+  "status": "pass",
+  "passed": true,
+  "scoreboard_lane": "structural_scout(구조 탐색)",
+  "tier_records": {
+    "tier_a_separate": "materialized(물질화)",
+    "tier_b_separate": "missing_required(필수 누락)",
+    "tier_ab_combined": "out_of_scope_by_claim(주장 범위 밖)"
+  },
+  "axis_counts": {
+    "validation_density_pass_rows": 4,
+    "validation_pf_pass_rows": 0,
+    "validation_dd_pass_rows": 917,
+    "validation_smoothness_pass_rows": 7,
+    "oos_density_pass_rows": 7,
+    "oos_pf_pass_rows": 0,
+    "oos_dd_pass_rows": 1120,
+    "oos_smoothness_pass_rows": 1
+  },
+  "boundary": "proxy KPI(프록시 KPI) only; not MT5 trading KPI(MT5 거래 KPI 아님)."
+}

@@ -1,0 +1,222 @@
+version: work_packet_schema_v2
+packet_id: frontier02F_stage_closeout_preserved_clue_negative_memory_v1
+created_at_utc: '2026-06-13T17:34:02Z'
+user_request:
+  user_quote: 'Persistent goal(지속 목표): close each frontier stage(각 전선 단계) honestly with Grok review(그록 검토), commit(커밋), and
+    push(원격 반영), while continuing toward a strong US100 M5 ONNX(온엑스).'
+  requested_action: close_frontier02_preserved_clue_negative_memory
+  requested_count: one stage closeout(단계 마감 1개)
+  ambiguous_terms: []
+current_truth:
+  active_stage_before: stage_frontier_02__four_axis_joint_onnx_proxy_scout
+  active_stage_after: stage_frontier_02__four_axis_joint_onnx_proxy_scout
+  current_run_before: frontier02E_grok_pre_expensive_review_or_second_repair_v1
+  current_run_after: frontier02F_stage_closeout_preserved_clue_negative_memory_v1
+  latest_completed_run_before: frontier02E_grok_pre_expensive_review_or_second_repair_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/04_selected/selection_status.md
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/00_spec/stage_brief.md
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02E_grok_pre_expensive_review_or_second_repair_v1_report.md
+  - docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md
+work_classification:
+  primary_family: kpi_evidence
+  detected_families:
+  - kpi_evidence
+  - artifact_lineage
+  - state_sync
+  - external_review
+  touched_surfaces:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout
+  - docs/registers
+  - docs/workspace
+  - docs/agent_control/packets
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+  - Stage closeout(단계 마감) may be mistaken for completion(완성) if claim boundary(주장 경계) is loose.
+  - Tier B missing_required(티어 B 필수 누락) limits full-context interpretation(전체 문맥 해석 제한).
+  - No MT5/WFO(워크포워드/MT5 없음), so no runtime authority(런타임 권위 없음).
+  hard_stop_risks: []
+  required_decision_locks:
+  - grok_stage_closeout_review
+  - local_bookkeeping_verification
+  required_gates:
+  - state_sync_audit
+  - closeout_judgment_audit
+  - artifact_lineage_audit
+  - external_review_packet
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+decision_lock:
+  mode: closeout_after_grok_and_local_verification(그록과 로컬 검증 뒤 마감)
+  assumptions:
+  - No more same-axis diagnostic(같은 축 추가 진단 없음)
+  - Next frontier is proposal only(다음 전선은 제안만)
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - kpi_evidence
+  target_surfaces:
+  - stage closeout(단계 마감)
+  - preserved clue(보존 단서)
+  - negative memory(부정 기억)
+  - next frontier proposal(다음 전선 제안)
+  scope_units:
+  - report
+  - manifest
+  - ledger
+  - register
+  - gate
+  - git_handoff
+  execution_layers:
+  - local_recount
+  - grok_review_capture
+  - ledger_update
+  - document_edit
+  mutation_policy: state and evidence records only(상태와 근거 기록만)
+  evidence_layers:
+  - closeout_summary
+  - local_closeout_verification
+  - grok_closeout
+  - stage_report
+  - ledger_rows
+  - gate_audits
+  reduction_policy: closeout label only(마감 라벨만), no selected candidate(선택 후보 없음)
+  claim_boundary: stage_closeout_preserved_clue_negative_memory_no_authority
+acceptance_criteria:
+- id: AC-001
+  text: Grok stage closeout review(그록 단계 마감 검토)가 captured(기록)된다.
+  expected_artifact: docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md
+  verification_method: metadata_success_and_hash
+  required: true
+- id: AC-002
+  text: Go-rule recount(진행 규칙 재집계) and 02E=02C metric parity(수치 동일성)가 pass(통과)한다.
+  expected_artifact: stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/local_closeout_verification.json
+  verification_method: local_recount
+  required: true
+- id: AC-003
+  text: Closeout report(마감 보고서) and manifest(실행 목록)가 written(작성)된다.
+  expected_artifact: stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md
+  verification_method: hash_and_presence
+  required: true
+- id: AC-004
+  text: Run registry and ledgers(실행 등록부와 장부)가 closeout row(마감 행)를 가진다.
+  expected_artifact: docs/registers/run_registry.csv
+  verification_method: ledger_row_presence
+  required: true
+- id: AC-005
+  text: Forbidden claims(금지 주장)를 피한다.
+  expected_artifact: docs/agent_control/packets/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/final_claim_guard.json
+  verification_method: claim_guard
+  required: true
+work_plan:
+  phases:
+  - grok_closeout_review
+  - local_verification
+  - closeout_report
+  - ledger_state_sync
+  - gate_audit
+  - git_commit_push
+  expected_outputs:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/closeout_summary.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/local_closeout_verification.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/grok_closeout_classification.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md
+  stop_conditions:
+  - grok_transport_failure
+  - verification_mismatch
+  - gate_failure
+  - git_push_rejection
+skill_routing:
+  primary_family: kpi_evidence
+  primary_skill: obsidian-result-judgment
+  support_skills:
+  - obsidian-reentry-read
+  - obsidian-grok-collaboration
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  skills_considered:
+  - obsidian-reentry-read
+  - obsidian-grok-collaboration
+  - obsidian-result-judgment
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  skills_selected:
+  - obsidian-reentry-read
+  - obsidian-grok-collaboration
+  - obsidian-result-judgment
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  skills_not_used: {}
+  required_skill_receipts:
+  - obsidian-reentry-read
+  - obsidian-grok-collaboration
+  - obsidian-result-judgment
+  - obsidian-artifact-lineage
+  - obsidian-exploration-mandate
+  required_gates:
+  - state_sync_audit
+  - closeout_judgment_audit
+  - artifact_lineage_audit
+  - external_review_packet
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02E_grok_pre_expensive_review_or_second_repair_v1
+  - docs/agent_control/grok_reviews/2026-06-14_frontier02F_stage_closeout/medium_review/clean_output.md
+  machine_readable:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/closeout_summary.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/local_closeout_verification.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/02_runs/frontier02F_stage_closeout_preserved_clue_negative_memory_v1/grok_closeout_classification.json
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md
+  human_readable:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md
+gates:
+  required:
+  - state_sync_audit
+  - closeout_judgment_audit
+  - artifact_lineage_audit
+  - external_review_packet
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    mt5_runtime_evidence_gate: Claim is lowered to stage closeout(단계 마감) and does not require MT5(MT5 불필요).
+    wfo_gate: No WFO claim(워크포워드 주장 없음); closeout is negative/preserved clue(부정/보존 단서 마감).
+final_claim_policy:
+  allowed_claims:
+  - preserved_clue(보존 단서)
+  - negative_memory(부정 기억)
+  - next_frontier_proposal(다음 전선 제안)
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml
+closeout_snapshot:
+  judgment: stage_closeout_preserved_clue_negative_memory_no_authority
+  go_rule_recount: 0
+  grok_direction: close_frontier02_as_preserved_clue_negative_memory
+  next_run_id: frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1

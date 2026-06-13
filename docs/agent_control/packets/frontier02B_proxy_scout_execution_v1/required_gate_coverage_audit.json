@@ -1,0 +1,40 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "required_gates": [
+      "artifact_lineage_audit",
+      "external_review_packet",
+      "final_claim_guard",
+      "kpi_contract_audit",
+      "required_gate_coverage_audit",
+      "scope_completion_gate",
+      "skill_receipt_lint",
+      "skill_receipt_schema_lint",
+      "work_packet_schema_lint"
+    ],
+    "executed_audits": [
+      "artifact_lineage_audit",
+      "external_review_packet",
+      "final_claim_guard",
+      "kpi_contract_audit",
+      "required_gate_coverage_audit",
+      "scope_completion_gate",
+      "skill_receipt_lint",
+      "skill_receipt_schema_lint",
+      "work_packet_schema_lint"
+    ],
+    "not_applicable_with_reason": {
+      "mt5_runtime_evidence_gate": "No MT5 execution(MT5 실행 없음); claim lowered to proxy scout(프록시 탐색으로 주장 축소).",
+      "model_training_gate": "No ONNX/model training(온엑스/모델 학습 없음); surfaces are score replays(점수 재생)."
+    },
+    "declared_not_implemented": {}
+  },
+  "allowed_claims": [
+    "gate_coverage_complete"
+  ],
+  "forbidden_claims": []
+}
