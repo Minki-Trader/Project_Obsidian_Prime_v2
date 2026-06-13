@@ -1536,3 +1536,11 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier08C_sample_weight_capped_repair_scout_v1`: sample weighting(표본 가중)은 strict scout clue(엄격 탐색 단서)를 만들지 못했지만 `4` preserved clue rows(보존 단서 행)를 남겼습니다. Effect(효과): 다음 판단은 repair/closeout decision(수리/마감 결정)으로 제한합니다.
 <!-- frontier08D_stage_closeout_sample_weight_objective_v1__IDEA-FR08-MULTI-OBJECTIVE-SAMPLE-WEIGHTING -->
 - `IDEA-FR08-MULTI-OBJECTIVE-SAMPLE-WEIGHTING` closeout(마감): `closed_preserved_clue_negative_memory_no_authority`. Effect(효과): sample weighting(표본 가중)은 preserved clue(보존 단서)로만 남기고 completion candidate(완성 후보)나 runtime authority(런타임 권위)로 올리지 않습니다.
+<!-- frontier09A_stage_open_drawdown_clean_path_labeling_v1__IDEA-FR09-DRAWDOWN-NORMALIZED-CLEAN-PATH-LABELING -->
+- `IDEA-FR09-DRAWDOWN-NORMALIZED-CLEAN-PATH-LABELING`: Frontier09(전선09) opens drawdown-normalized clean path labeling(손실폭 정규화 깨끗한 경로 라벨링). Effect(효과): F08(전선08) weight-only(가중 단독) 반복을 피하고 DD/curve quality(손실폭/곡선 품질)를 target representation(목표 표현)에 직접 넣습니다.
+<!-- frontier09B_drawdown_clean_path_label_proxy_scout_v1 -->
+- `frontier09B_drawdown_clean_path_label_proxy_scout_v1`: drawdown-normalized clean path label proxy scout(손실폭 정규화 깨끗한 경로 라벨 프록시 탐색)를 기록했습니다. Effect(효과): 목표 표현 변경이 Frontier07 reference(전선07 참조)보다 나은지 분리 판독하게 했습니다.
+<!-- frontier09C_clean_path_density_bridge_repair_v1 -->
+- `frontier09C_clean_path_density_bridge_repair_v1`: clean path density bridge repair(깨끗한 경로 밀도 브리지 수리)를 실행했습니다. Effect(효과): 임계값 탐색 없이 라벨 후보의 밀도/손실폭 수리 가능성을 확인했습니다.
+<!-- frontier09D_stage_closeout_drawdown_clean_path_labeling_v1 -->
+- `frontier09D_stage_closeout_drawdown_clean_path_labeling_v1`: Frontier09 drawdown-normalized clean path labeling(전선09 손실폭 정규화 깨끗한 경로 라벨링)은 preserved clue + negative memory(보존 단서 + 부정 기억)로 닫혔습니다. Effect(효과): payoff/adverse ratio(수익/불리 이동 비율)는 참조 전용 단서로, validation DD failure(검증 손실폭 실패)는 반복 금지 기억으로 남깁니다.

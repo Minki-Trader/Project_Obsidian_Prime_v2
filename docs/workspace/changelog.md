@@ -6894,3 +6894,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-13T21:28:49Z: `frontier08C_sample_weight_capped_repair_scout_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `4`, next run(다음 실행) `frontier08D_stage_closeout_sample_weight_objective_v1`.
 <!-- frontier08D_stage_closeout_sample_weight_objective_v1 -->
 - 2026-06-13T21:36:05Z: `frontier08D_stage_closeout_sample_weight_objective_v1` closed Frontier08(전선08) as `closed_preserved_clue_negative_memory_no_authority`. Effect(효과): next run(다음 실행) `frontier09A_stage_open_new_hypothesis_design_v1` starts a new hypothesis lifecycle(새 가설 생명주기) without inheriting winner/baseline/promotion/runtime authority(승자/기준선/승격/런타임 권위).
+<!-- frontier09A_stage_open_drawdown_clean_path_labeling_v1 -->
+- 2026-06-13T21:55:07Z: `frontier09A_stage_open_drawdown_clean_path_labeling_v1` opened Frontier09(전선09) with Grok accepted(그록 수용). Effect(효과): next run(다음 실행) `frontier09B_drawdown_clean_path_label_proxy_scout_v1` can test clean-path labels(깨끗한 경로 라벨) without completion/baseline/promotion/runtime claims(완성/기준선/승격/런타임 주장 없이).
+<!-- frontier09B_drawdown_clean_path_label_proxy_scout_v1 -->
+- 2026-06-13T22:03:06Z: `frontier09B_drawdown_clean_path_label_proxy_scout_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `18`, next run(다음 실행) `frontier09C_drawdown_clean_path_repair_or_closeout_decision_v1`.
+<!-- frontier09C_clean_path_density_bridge_repair_v1 -->
+- 2026-06-13T22:09:03Z: `frontier09C_clean_path_density_bridge_repair_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `16`, next run(다음 실행) `frontier09D_stage_closeout_drawdown_clean_path_labeling_v1`.
+<!-- frontier09D_stage_closeout_drawdown_clean_path_labeling_v1 -->
+- 2026-06-13T22:22:05Z: `frontier09D_stage_closeout_drawdown_clean_path_labeling_v1` preserved_clue_negative_memory_no_authority. Effect(효과): Frontier09 closed(전선09 마감), next run(다음 실행) `frontier10A_stage_open_new_hypothesis_design_v1`.
