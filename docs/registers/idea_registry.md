@@ -1547,3 +1547,5 @@ Register ideas when they become durable work, not for every passing thought.
 <!-- frontier10A_stage_open_split_consistent_utility_distillation_v1__IDEA-FR10-SPLIT-CONSISTENT-UTILITY-DISTILLATION -->
 <!-- frontier10A_stage_open_split_consistent_utility_distillation_v1__IDEA-FR10-SPLIT-CONSISTENT-UTILITY-DISTILLATION -->
 - `IDEA-FR10-SPLIT-CONSISTENT-UTILITY-DISTILLATION`: Frontier10(전선10) opens split-consistent utility distillation(분할 일관 효용 증류). Effect(효과): Frontier09(전선09) bridge repair(브리지 수리)를 반복하지 않고 train subwindow utility consensus(학습 하위구간 효용 합의)를 새 supervision axis(감독 축)로 시험합니다.
+<!-- frontier10B_utility_distillation_proxy_scout_v1 -->
+- `frontier10B_utility_distillation_proxy_scout_v1`: split-consistent utility distillation proxy scout(분할 일관 효용 증류 프록시 탐색)을 기록했습니다. Effect(효과): Frontier08/09(전선08/09)를 상속하지 않고 reference-only(참조 전용)로 비교합니다.
