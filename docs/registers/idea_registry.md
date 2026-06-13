@@ -1501,3 +1501,9 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier03F_grok_stage_closeout_review_v1`: Grok stage closeout review(그록 단계 마감 검토) captured(기록). Effect(효과): Frontier03 closeout(전선03 마감)을 preserved clue/negative memory(보존 단서/부정 기억) 경계로 좁혔습니다.
 <!-- frontier03G_stage_closeout_v1 -->
 - `frontier03G_stage_closeout_v1`: Frontier03(전선03) closeout(마감). Preserved clue(보존 단서)는 `f03e_repair__f03b_v04_trend_easy_chop_strict__both__p40__m4__cd6`이고, negative memory(부정 기억)는 oracle-to-ONNX transfer gap(오라클에서 온엑스 전달 격차)입니다. Effect(효과): 다음 frontier(전선)는 reference only(참조 전용)로만 사용할 수 있습니다.
+<!-- frontier04A_stage_open_path_aware_cost_dd_event_labeling_v1 -->
+- `IDEA-FR04-PATH-AWARE-COST-DD-EVENT-LABELING`: Frontier04(전선04) opens path-aware cost/DD event labeling(경로 인식 비용/손실폭 이벤트 라벨링). Effect(효과): Frontier03(전선03) 단서를 상속하지 않고 label outcome(라벨 결과)을 새 축으로 시험합니다.
+<!-- frontier04B_path_aware_label_proxy_scout_v1 -->
+- `frontier04B_path_aware_label_proxy_scout_v1`: path-aware label proxy scout(경로 인식 라벨 프록시 탐색) recorded `1` joint path rows(동시 경로 행). Effect(효과): trainable transfer(학습 가능 전달) 전 Grok review(그록 검토)로 넘길 근거를 만들었습니다.
+<!-- frontier04E_stage_closeout_v1 -->
+- `frontier04E_stage_closeout_v1`: Frontier04(전선04) closed as negative_memory plus preserved_clue(부정 기억 + 보존 단서). Effect(효과): path-aware oracle seed(경로 인식 오라클 씨앗)는 보존하지만 trainable transfer(학습 전달)는 상속하지 않습니다.
