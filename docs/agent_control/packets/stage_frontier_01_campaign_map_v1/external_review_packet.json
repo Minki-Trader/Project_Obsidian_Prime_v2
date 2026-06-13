@@ -1,0 +1,43 @@
+{
+  "audit_name": "external_review_packet",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "trigger_reason": "/goal requires Grok review(그록 검토) at stage closeout(단계 마감).",
+    "review_size": "medium(중간)",
+    "prompt_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/prompt.md",
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/clean_output.md",
+    "metadata_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/metadata.json",
+    "raw_diagnostics_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/raw_diagnostics.json",
+    "prompt_hash": "d318a67d5d3f8f9401a93f0c8024b678c082ac145e5ed9d41bf1c6c8fc29c58b",
+    "advice_classification": {
+      "accepted": [
+        "Stage Frontier 01 closeout(전선 01단계 마감)은 preserved archive interface(보존 보관소 접점)로 유효하다.",
+        "Forbidden inheritance(금지 상속) 누수는 보이지 않는다.",
+        "Next frontier proposal(다음 전선 제안)은 four-axis joint objective(네 축 동시 목적)라 신규성이 있다."
+      ],
+      "rejected": [
+        "Preserved clue(보존 단서)를 Frontier 02 seed inheritance(전선02 씨앗 상속)로 직접 쓰지 않는다.",
+        "Frontier 02(전선02)를 stage-open Grok review(단계 개방 그록 검토) 없이 즉시 실험으로 열지 않는다."
+      ],
+      "needs_local_verification": [
+        "archive counts(보관소 집계 수치)",
+        "Stage364 preserved clue KPI(보존 단서 KPI)",
+        "state sync(상태 동기)",
+        "authority columns(권위 열)",
+        "UTF-8 BOM encoding(UTF-8 BOM 인코딩)"
+      ]
+    },
+    "local_verification": [
+      "Local gates(로컬 게이트) will verify files, ledgers, state sync, and claim boundary(주장 경계).",
+      "No Grok advice(그록 조언) creates runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성)."
+    ]
+  },
+  "allowed_claims": [
+    "external_review_captured",
+    "grok_closeout_review_captured"
+  ],
+  "forbidden_claims": []
+}

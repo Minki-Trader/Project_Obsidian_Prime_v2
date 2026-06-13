@@ -1,0 +1,512 @@
+{
+  "packet_id": "stage_frontier_01_campaign_map_v1",
+  "status": "pass",
+  "completed_forbidden": false,
+  "audits": [
+    {
+      "audit_name": "scope_completion_gate",
+      "status": "complete",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "stage_ledger_rows": {
+          "expected": 2,
+          "actual": 2,
+          "evidence_label": "stage_frontier_01_stage_run_ledger",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        },
+        "campaign_outputs": {
+          "expected": 4,
+          "actual": 4,
+          "evidence_label": "campaign_map_dnr_artifact_index_next_proposal",
+          "required": true,
+          "has_user_scope_reduction_quote": false
+        }
+      },
+      "allowed_claims": [
+        "completed",
+        "verified"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-artifact-lineage",
+          "obsidian-environment-reproducibility",
+          "obsidian-grok-collaboration"
+        ],
+        "receipt_count": 3
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2",
+        "has_v2_fields": true
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 3,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "agent_control_contracts",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "file::docs/agent_control/codex_operating_format.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/codex_operating_format.yaml"
+        },
+        "file::docs/agent_control/work_packet.schema.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/work_packet.schema.yaml"
+        },
+        "file::docs/agent_control/code_surface_baseline.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/code_surface_baseline.yaml"
+        },
+        "file::docs/agent_control/n_a_reason_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/n_a_reason_registry.yaml"
+        },
+        "file::docs/agent_control/claim_vocabulary.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/claim_vocabulary.yaml"
+        },
+        "file::docs/agent_control/kpi_source_authority.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/kpi_source_authority.yaml"
+        },
+        "file::docs/agent_control/row_grain_contract.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/row_grain_contract.yaml"
+        },
+        "file::docs/agent_control/work_family_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/work_family_registry.yaml"
+        },
+        "file::docs/agent_control/self_correction_policy.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/self_correction_policy.yaml"
+        },
+        "file::docs/agent_control/surface_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/surface_registry.yaml"
+        },
+        "file::docs/agent_control/risk_flag_registry.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/risk_flag_registry.yaml"
+        },
+        "file::docs/agent_control/skill_receipt_schema.yaml": {
+          "exists": true,
+          "path": "docs/agent_control/skill_receipt_schema.yaml"
+        },
+        "file::docs/templates/work_packet.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/work_packet.template.yaml"
+        },
+        "file::docs/templates/run_plan.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/run_plan.template.yaml"
+        },
+        "file::docs/templates/work_plan.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/work_plan.template.yaml"
+        },
+        "file::docs/templates/closeout_report.template.yaml": {
+          "exists": true,
+          "path": "docs/templates/closeout_report.template.yaml"
+        },
+        "file::docs/templates/closeout_report.template.md": {
+          "exists": true,
+          "path": "docs/templates/closeout_report.template.md"
+        },
+        "file::docs/templates/kpi_record_normalized.template.json": {
+          "exists": true,
+          "path": "docs/templates/kpi_record_normalized.template.json"
+        }
+      },
+      "allowed_claims": [
+        "contracts_ready"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "ops_instruction_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "family_count": 12,
+        "trigger_overlay_count": 1,
+        "explicit_skill_schema_count": 24,
+        "default_support_skill_limit": 3,
+        "max_required_skills_per_family": 5
+      },
+      "allowed_claims": [
+        "ops_instructions_stable"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "active_stage": "stage_frontier_01__archive_synthesis_and_new_axis_lock",
+        "workspace_active_branch": "",
+        "actual_git_branch": "main",
+        "current_run_values": {
+          "workspace_state": "frontier01B_build_stage12_364_campaign_map_v1",
+          "current_working_state": "frontier01B_build_stage12_364_campaign_map_v1",
+          "selection_status": "frontier01B_build_stage12_364_campaign_map_v1"
+        },
+        "stage_brief_boundary": "",
+        "registry_has_current_run": true,
+        "stage_ledger_has_current_run": true,
+        "source_paths": {
+          "workspace_state": "docs/workspace/workspace_state.yaml",
+          "current_working_state": "docs/context/current_working_state.md",
+          "selection_status": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/selection_status.md",
+          "stage_brief": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/00_spec/stage_brief.md",
+          "run_registry": "docs/registers/run_registry.csv",
+          "stage_ledger": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/stage_run_ledger.csv"
+        }
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "stage_folder_count_12_364": 355,
+        "run_registry_rows_12_364": 1953,
+        "alpha_run_ledger_rows_12_364": 12327,
+        "onnx_alpha_rows_12_364": 1215,
+        "frontier01B_run_registry_rows": 1,
+        "frontier01B_stage_ledger_rows": 1,
+        "stage364_key_row_counts": {
+          "run364HL": 3,
+          "run364HM": 3,
+          "run364HQ": 3,
+          "run364HS": 3
+        },
+        "preserved_clue_checks": {
+          "run364HL_actual_total": true,
+          "run364HM_scaled_seed": true,
+          "run364HQ_dd_fail": true,
+          "run364HS_strict_zero": true
+        },
+        "artifact_hashes": [
+          {
+            "path": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/stage12_364_campaign_map.md",
+            "exists": true,
+            "sha256": "772c4c6b68d02613054c13d51c1a704ca9460eaa1acf9526a413da4241c59e50",
+            "utf8_bom": true
+          },
+          {
+            "path": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/do_not_repeat_list.md",
+            "exists": true,
+            "sha256": "98816a900846b3f1fb055a750ec478bacd99c0a0628feec58a814e4ab8d278bf",
+            "utf8_bom": true
+          },
+          {
+            "path": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/reusable_artifact_index.md",
+            "exists": true,
+            "sha256": "c43c0cc961cc4eeef3e179e7533f949f5edf91fe26e6671c6a3ee99b4fe96e90",
+            "utf8_bom": true
+          },
+          {
+            "path": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/next_frontier_proposal.md",
+            "exists": true,
+            "sha256": "786aab30c94335855e8c33a69b5c995daf6b6687e8b8d22cc7126115d493b570",
+            "utf8_bom": true
+          },
+          {
+            "path": "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/frontier01B_campaign_map_review.md",
+            "exists": true,
+            "sha256": "40d6db8b37d8ccfce5e57789f20414c2778c471345f4bc31f224ba2ae9d3e879",
+            "utf8_bom": true
+          },
+          {
+            "path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/prompt.md",
+            "exists": true,
+            "sha256": "a2253335ad15e61718264e62d91708797fdca0b3dd2c73beda4ba8d318fcea20",
+            "utf8_bom": true
+          },
+          {
+            "path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/clean_output.md",
+            "exists": true,
+            "sha256": "19d388ad153522b1fec30cdccf5be4f0b3cb695954e6a51d8d51a9bf29fc4483",
+            "utf8_bom": true
+          },
+          {
+            "path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/metadata.json",
+            "exists": true,
+            "sha256": "e94ad8482f79f79db8271ce636d84a12dfdc34ae65c61b22b94533ffb577f395",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/raw_diagnostics.json",
+            "exists": true,
+            "sha256": "f8560cc72348030d2101f8ce17ff20131d52b903b22549f47907c40b45342585",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/work_packet.yaml",
+            "exists": true,
+            "sha256": "c279c10edf967682146e0ba372beca552b62f367e8e64cd9e2c5519cc884c529",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/skill_receipts.json",
+            "exists": true,
+            "sha256": "88139644b61b4b179938695033638f1d507a49a7ecf304906f64875eeba6ee7d",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/external_review_packet.json",
+            "exists": true,
+            "sha256": "cd1e9aca897a7775a4fc64705dc9a35384044aa4836cef7bf0d9c77b3dfb5f0e",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/closeout_report.md",
+            "exists": true,
+            "sha256": "cb9c6d671e92347e3a71c0f7831999166b7bd2f71afa263ec3c52adc247bf2b6",
+            "utf8_bom": true
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/work_packet_schema_lint.json",
+            "exists": true,
+            "sha256": "78a8c2dab66614b5369bb7d5ceabb856f46c7d84bd98242250e86db2fd38ab4d",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/skill_receipt_schema_lint.json",
+            "exists": true,
+            "sha256": "406449af1c2f4c7342ac33f0d7787a164004dd885c0fd4248b23c59cabfaabad",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/state_sync_audit.json",
+            "exists": true,
+            "sha256": "2ee8fa2c90fbfa494c2c962c4eef9a60041138742a3385e817b2414746fb987e",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/agent_control_contracts.json",
+            "exists": true,
+            "sha256": "a7c9b95b9f76b81ee27b3684253a121fec6e2ec11a13151740452b8c75c0329e",
+            "utf8_bom": null
+          },
+          {
+            "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/ops_instruction_audit.json",
+            "exists": true,
+            "sha256": "5790b5c355099698a6c12f1d4f4b81c65d4f34873305643bb7e94f5241485b35",
+            "utf8_bom": null
+          }
+        ],
+        "markdown_bom_paths_checked": [
+          "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/stage12_364_campaign_map.md",
+          "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/do_not_repeat_list.md",
+          "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/reusable_artifact_index.md",
+          "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/next_frontier_proposal.md",
+          "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/frontier01B_campaign_map_review.md",
+          "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/prompt.md",
+          "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/clean_output.md",
+          "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/closeout_report.md"
+        ]
+      },
+      "allowed_claims": [
+        "archive_interface_preserved",
+        "artifact_lineage_verified"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "external_review_packet",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "trigger_reason": "/goal requires Grok review(그록 검토) at stage closeout(단계 마감).",
+        "review_size": "medium(중간)",
+        "prompt_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/prompt.md",
+        "clean_output_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/clean_output.md",
+        "metadata_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/metadata.json",
+        "raw_diagnostics_path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/raw_diagnostics.json",
+        "prompt_hash": "d318a67d5d3f8f9401a93f0c8024b678c082ac145e5ed9d41bf1c6c8fc29c58b",
+        "advice_classification": {
+          "accepted": [
+            "Stage Frontier 01 closeout(전선 01단계 마감)은 preserved archive interface(보존 보관소 접점)로 유효하다.",
+            "Forbidden inheritance(금지 상속) 누수는 보이지 않는다.",
+            "Next frontier proposal(다음 전선 제안)은 four-axis joint objective(네 축 동시 목적)라 신규성이 있다."
+          ],
+          "rejected": [
+            "Preserved clue(보존 단서)를 Frontier 02 seed inheritance(전선02 씨앗 상속)로 직접 쓰지 않는다.",
+            "Frontier 02(전선02)를 stage-open Grok review(단계 개방 그록 검토) 없이 즉시 실험으로 열지 않는다."
+          ],
+          "needs_local_verification": [
+            "archive counts(보관소 집계 수치)",
+            "Stage364 preserved clue KPI(보존 단서 KPI)",
+            "state sync(상태 동기)",
+            "authority columns(권위 열)",
+            "UTF-8 BOM encoding(UTF-8 BOM 인코딩)"
+          ]
+        },
+        "local_verification": [
+          "Local gates(로컬 게이트) will verify files, ledgers, state sync, and claim boundary(주장 경계).",
+          "No Grok advice(그록 조언) creates runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성)."
+        ]
+      },
+      "allowed_claims": [
+        "external_review_captured",
+        "grok_closeout_review_captured"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "closeout_report_check",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "path": "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/closeout_report.md",
+        "required_headings": [
+          "Conclusion",
+          "What changed",
+          "What gates passed",
+          "What gates were not applicable",
+          "What is still not enforced",
+          "Allowed claims",
+          "Forbidden claims",
+          "Next hardening step"
+        ]
+      },
+      "allowed_claims": [
+        "human_closeout_available"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "artifact_lineage_audit",
+          "external_review_packet",
+          "final_claim_guard",
+          "required_gate_coverage_audit",
+          "state_sync_audit"
+        ],
+        "executed_audits": [
+          "agent_control_contracts",
+          "artifact_lineage_audit",
+          "closeout_report_check",
+          "external_review_packet",
+          "final_claim_guard",
+          "ops_instruction_audit",
+          "required_gate_coverage_audit",
+          "scope_completion_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {
+          "kpi_contract_audit": "No new trading KPI(새 거래 KPI 없음).",
+          "mt5_runtime_evidence_gate": "No MT5 execution(MT5 실행 없음).",
+          "model_validation_gate": "No model training or threshold selection(모델 학습 또는 임계값 선택 없음)."
+        },
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "archive_interface_preserved",
+        "grok_closeout_review_captured",
+        "no_authority_claimed"
+      ],
+      "source_audits": [
+        "scope_completion_gate",
+        "skill_receipt_lint",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "agent_control_contracts",
+        "ops_instruction_audit",
+        "state_sync_audit",
+        "artifact_lineage_audit",
+        "external_review_packet",
+        "closeout_report_check",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "archive_interface_preserved",
+      "grok_closeout_review_captured",
+      "no_authority_claimed"
+    ],
+    "forbidden_claims": []
+  }
+}

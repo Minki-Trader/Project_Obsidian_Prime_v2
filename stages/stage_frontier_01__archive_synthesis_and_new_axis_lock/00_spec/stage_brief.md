@@ -1,11 +1,11 @@
 ﻿# Stage Frontier 01 Brief(전선 01단계 개요): Archive Synthesis And New Axis Lock(보관소 종합과 새 축 잠금)
 
 - canonical_stage_id(정식 단계 ID): `stage_frontier_01__archive_synthesis_and_new_axis_lock`
-- current_run_id(현재 실행 ID): `frontier01A_foundation_governance_scaffold_grok_review_v1`
-- latest_completed_run_id(최근 완료 실행 ID): `frontier01A_foundation_governance_scaffold_grok_review_v1`
+- current_run_id(현재 실행 ID): `frontier01B_build_stage12_364_campaign_map_v1`
+- latest_completed_run_id(최근 완료 실행 ID): `frontier01B_build_stage12_364_campaign_map_v1`
 - source_stage_id(원천 단계 ID): `364_source_regime_label_pivot__dense_cost_recovery`
 - source_run_id(원천 실행 ID): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`
-- selection_status(선택 상태): `opened_frontier01_foundation_scaffold_grok_reviewed_no_authority`
+- selection_status(선택 상태): `closed_frontier01_archive_map_grok_reviewed_no_authority`
 - claim_boundary(주장 경계): `governance_foundation_only_no_experiment_run_no_candidate_selection_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## Question(질문)
@@ -58,3 +58,9 @@ This frontier stage(전선 단계)는 아래를 만들면 닫을 수 있다.
 - do-not-repeat list(반복 금지 목록)
 - reusable artifact index(재사용 산출물 색인)
 - next frontier proposal(다음 전선 제안) 또는 blocked retry condition(차단 재시도 조건)
+
+## Exit Status(종료 상태)
+
+`frontier01B_build_stage12_364_campaign_map_v1` created the required archive outputs(필수 보관소 산출물)를 만들었다.
+
+Effect(효과): `stage_frontier_01(전선 01단계)`은 preserved archive interface(보존 보관소 접점)로 닫고, 다음 행동(action, 행동)은 `stage_frontier_02_open_joint_objective_onnx_hypothesis_pending_grok_review`이다.

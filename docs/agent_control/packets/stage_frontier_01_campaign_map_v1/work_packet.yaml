@@ -1,0 +1,280 @@
+version: work_packet_schema_v2
+packet_id: stage_frontier_01_campaign_map_v1
+created_at_utc: "2026-06-13T13:40:00Z"
+user_request:
+  user_quote: "/goal: Stage12~364 reference only(참조 전용), reference not inheritance(참조이지 상속 아님), one frontier stage(전선 단계)는 one hypothesis lifecycle(가설 생명주기), Grok(그록)은 second opinion(2차 의견)"
+  requested_action: frontier01B_build_stage12_364_campaign_map
+  requested_count:
+    value: null
+    n_a_reason: not_counted_scope
+  ambiguous_terms: []
+current_truth:
+  active_stage: "stage_frontier_01__archive_synthesis_and_new_axis_lock"
+  current_run: "frontier01B_build_stage12_364_campaign_map_v1"
+  latest_completed_run: "frontier01A_foundation_governance_scaffold_grok_review_v1"
+  source_documents:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/00_spec/stage_brief.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/selection_status.md
+work_classification:
+  primary_family: artifact_lineage
+  detected_families:
+    - artifact_lineage
+    - state_sync
+    - publish_handoff
+  touched_surfaces:
+    - docs/registers/run_registry.csv
+    - docs/registers/alpha_run_ledger.csv
+    - docs/registers/negative_result_register.md
+    - docs/registers/idea_registry.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    archive_inheritance_risk: high
+    claim_boundary_risk: high
+    state_sync_risk: medium
+    grok_advice_laundering_risk: medium
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+    - artifact_lineage_audit
+    - external_review_packet
+    - state_sync_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+decision_lock:
+  mode: user_goal_instruction
+  assumptions:
+    close_frontier01_after_archive_outputs: true
+    no_model_training: true
+    no_mt5_execution: true
+    next_frontier_is_proposal_only: true
+  questions: []
+  required_user_decisions: []
+preflight:
+  needs_clarification: false
+  selected_option_id: archive_map_before_first_independent_hypothesis
+  selected_option_user_quote: "Stage12~364 reference only(참조 전용), reference not inheritance(참조이지 상속 아님)."
+  blocked_until_answer: false
+interpreted_scope:
+  work_families:
+    - artifact_lineage
+  target_surfaces:
+    - campaign_map
+    - do_not_repeat_list
+    - reusable_artifact_index
+    - next_frontier_proposal
+    - current_truth_docs
+  scope_units:
+    - document
+    - stage
+    - ledger
+    - artifact
+    - report
+  execution_layers:
+    - read_only
+    - document_edit
+    - python_execution
+    - ledger_update
+    - publish
+  mutation_policy:
+    allowed: true
+    user_quote: "Codex(코덱스)가 실행한다."
+  evidence_layers:
+    - archive_counts
+    - campaign_map
+    - dnr_list
+    - reusable_artifact_index
+    - grok_closeout_review
+    - local_gate_outputs
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: true
+  claim_boundary:
+    allowed_claims:
+      - archive_interface_preserved
+      - grok_closeout_review_captured
+      - no_authority_claimed
+    forbidden_claims:
+      - completion
+      - selected_baseline
+      - operating_promotion
+      - runtime_authority
+      - live_readiness
+      - goal_achieve
+  variants_requested:
+    value: null
+    n_a_reason: no_experiment_variants
+  verification_layers:
+    - local_file_check
+    - artifact_hash_check
+    - grok_closeout_review
+    - state_sync_audit
+    - required_gate_coverage_audit
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+  - id: AC-001
+    text: "Stage12~364 campaign map(Stage12~364 캠페인 지도) exists."
+    expected_artifact: stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/stage12_364_campaign_map.md
+    verification_method: local_file_check
+    required: true
+  - id: AC-002
+    text: "DNR list(반복 금지 목록) exists."
+    expected_artifact: stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/do_not_repeat_list.md
+    verification_method: local_file_check
+    required: true
+  - id: AC-003
+    text: "Reusable artifact index(재사용 산출물 색인) exists."
+    expected_artifact: stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/reusable_artifact_index.md
+    verification_method: local_file_check
+    required: true
+  - id: AC-004
+    text: "Next frontier proposal(다음 전선 제안) exists."
+    expected_artifact: stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/next_frontier_proposal.md
+    verification_method: local_file_check
+    required: true
+work_plan:
+  phases:
+    - id: archive_aggregation
+      actions:
+        - count_stage_folders
+        - count_run_registry_rows
+        - count_alpha_ledger_rows
+        - identify_stage364_key_clues
+    - id: archive_documents
+      actions:
+        - write_campaign_map
+        - write_dnr_list
+        - write_reusable_artifact_index
+        - write_next_frontier_proposal
+    - id: closeout_review
+      actions:
+        - run_bounded_grok_closeout_review
+        - classify_grok_advice
+        - run_local_gates
+  expected_outputs:
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/stage12_364_campaign_map.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/do_not_repeat_list.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/reusable_artifact_index.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/next_frontier_proposal.md
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1/closeout_report.md
+  stop_conditions:
+    - grok_transport_blocked
+    - state_sync_conflict
+    - gate_failure_plan_only
+row_grain:
+  reference: docs/agent_control/row_grain_contract.yaml
+  normalized_row_key:
+    - run_id
+    - subrun_id
+    - record_view
+    - tier_scope
+kpi_contract:
+  kpi_standard_version: not_applicable_archive_synthesis_only
+  normalized_record_path: stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/stage_run_ledger.csv
+  source_authority_reference: docs/agent_control/kpi_source_authority.yaml
+  n_a_reason_reference: docs/agent_control/n_a_reason_registry.yaml
+artifact_contract:
+  raw_evidence:
+    - docs/registers/run_registry.csv
+    - docs/registers/alpha_run_ledger.csv
+    - docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/raw_diagnostics.json
+  machine_readable:
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1/work_packet.yaml
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1/skill_receipts.json
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1/artifact_lineage_audit.json
+  human_readable:
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/stage12_364_campaign_map.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/do_not_repeat_list.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/reusable_artifact_index.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/next_frontier_proposal.md
+  external_artifacts: []
+evidence_contract:
+  raw_evidence:
+    - docs/registers/run_registry.csv
+    - docs/registers/alpha_run_ledger.csv
+    - docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/raw_diagnostics.json
+  machine_readable:
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1/work_packet.yaml
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1/skill_receipts.json
+  human_readable:
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/frontier01B_campaign_map_review.md
+    - docs/agent_control/packets/stage_frontier_01_campaign_map_v1/closeout_report.md
+skill_routing:
+  primary_family: artifact_lineage
+  primary_skill: obsidian-artifact-lineage
+  support_skills:
+    - obsidian-environment-reproducibility
+    - obsidian-grok-collaboration
+  skills_considered:
+    - obsidian-reentry-read
+    - obsidian-session-intake
+    - obsidian-work-packet-router
+    - obsidian-artifact-lineage
+    - obsidian-environment-reproducibility
+    - obsidian-exploration-mandate
+    - obsidian-grok-collaboration
+    - obsidian-prime-ml
+  skills_selected:
+    - obsidian-artifact-lineage
+    - obsidian-environment-reproducibility
+    - obsidian-grok-collaboration
+  skills_not_used:
+    obsidian-experiment-design:
+      not_selected_reason: "No new experiment design(새 실험 설계 없음); next frontier proposal(다음 전선 제안) only."
+    obsidian-runtime-parity:
+      not_selected_reason: "No MT5 runtime change(MT5 런타임 변경 없음)."
+    obsidian-model-validation:
+      not_selected_reason: "No model or threshold selection(모델 또는 임계값 선택 없음)."
+  required_skill_receipts:
+    - obsidian-artifact-lineage
+    - obsidian-environment-reproducibility
+    - obsidian-grok-collaboration
+  required_gates:
+    - artifact_lineage_audit
+    - external_review_packet
+    - state_sync_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+gates:
+  scope_completion_gate: pending
+  skill_receipt_lint: pending
+  kpi_contract_audit: not_applicable_no_trading_kpi
+  artifact_lineage_audit: pending
+  final_claim_guard: pending
+  required:
+    - artifact_lineage_audit
+    - external_review_packet
+    - state_sync_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+  not_applicable_with_reason:
+    kpi_contract_audit: "No new trading KPI(새 거래 KPI 없음)."
+    mt5_runtime_evidence_gate: "No MT5 execution(MT5 실행 없음)."
+    model_validation_gate: "No model training or threshold selection(모델 학습 또는 임계값 선택 없음)."
+final_claim_policy:
+  allowed_claims:
+    - archive_interface_preserved
+    - grok_closeout_review_captured
+    - no_authority_claimed
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

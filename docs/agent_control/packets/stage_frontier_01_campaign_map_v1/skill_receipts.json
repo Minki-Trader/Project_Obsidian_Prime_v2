@@ -1,0 +1,154 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage_frontier_01_campaign_map_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "primary_family": "artifact_lineage(산출물 계보)",
+      "primary_skill": "obsidian-artifact-lineage(산출물 계보)",
+      "support_skills": [
+        "obsidian-environment-reproducibility(환경 재현성)",
+        "obsidian-grok-collaboration(그록 협업)"
+      ],
+      "required_gates": [
+        "artifact_lineage_audit",
+        "external_review_packet",
+        "state_sync_audit",
+        "required_gate_coverage_audit",
+        "final_claim_guard"
+      ],
+      "routing_reason": "frontier01B(전선01B)는 Stage12~364 archive artifacts(보관소 산출물)를 campaign map(캠페인 지도), DNR list(반복 금지 목록), reusable artifact index(재사용 산출물 색인)로 연결하는 작업이다.",
+      "source_inputs": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/registers/idea_registry.md",
+        "docs/registers/negative_result_register.md",
+        "stages/364_source_regime_label_pivot__dense_cost_recovery/03_reviews/run364HS_stage364_closeout_no_next_stage.md"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/stage12_364_campaign_map.md",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/do_not_repeat_list.md",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/reusable_artifact_index.md",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/next_frontier_proposal.md",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/frontier01B_campaign_map_review.md"
+      ],
+      "raw_evidence": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/raw_diagnostics.json"
+      ],
+      "machine_readable": [
+        "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/work_packet.yaml",
+        "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/artifact_lineage_audit.json",
+        "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/external_review_packet.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/stage12_364_campaign_map.md",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/do_not_repeat_list.md",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/reusable_artifact_index.md",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/04_selected/next_frontier_proposal.md",
+        "docs/agent_control/packets/stage_frontier_01_campaign_map_v1/closeout_report.md"
+      ],
+      "hashes_or_missing_reasons": "Recorded in artifact_lineage_audit.json(artifact_lineage_audit.json에 기록).",
+      "lineage_boundary": "과거 산출물(path, 경로)을 winner(승자)나 baseline(기준선)으로 상속하지 않고 bounded reference(제한 참조)로만 남겼다."
+    },
+    {
+      "packet_id": "stage_frontier_01_campaign_map_v1",
+      "skill": "obsidian-environment-reproducibility",
+      "triggered": true,
+      "status": "executed",
+      "execution_environment": {
+        "os": "Windows local workspace(윈도우 로컬 작업공간)",
+        "python": "local python from shell(셸의 로컬 파이썬)",
+        "mt5": "not used(사용 안 함)",
+        "broker_terminal": "not used(사용 안 함)"
+      },
+      "dependency_surface": [
+        "Python stdlib csv/json/pathlib/re(파이썬 표준 라이브러리 csv/json/pathlib/re)",
+        "PowerShell(파워셸)",
+        "git(깃)"
+      ],
+      "entry_command": "python inline ledger aggregation(파이썬 인라인 장부 집계) from repository root(저장소 루트)",
+      "local_assumptions": [
+        "workspace path(작업공간 경로): C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2",
+        "No MT5 terminal execution(MT5 터미널 실행 없음)",
+        "Existing local ledgers(기존 로컬 장부) are present under docs/registers"
+      ],
+      "clean_checkout_status": "reproducible_with_setup(설정 후 재현 가능)",
+      "recovery_instruction": "Run from repo root(저장소 루트에서 실행) with Python available(파이썬 사용 가능 상태) and existing ledgers checked out(기존 장부 체크아웃).",
+      "reproducibility_judgment": "reproducible_with_setup(설정 후 재현 가능)"
+      ,
+      "environment_assumptions": [
+        "Windows local workspace(윈도우 로컬 작업공간)",
+        "Repository root(저장소 루트) is the current working directory(현재 작업 디렉터리)",
+        "No MT5 terminal execution(MT5 터미널 실행 없음)"
+      ],
+      "dependency_or_runtime_surface": [
+        "Python stdlib csv/json/pathlib/re(파이썬 표준 라이브러리 csv/json/pathlib/re)",
+        "PowerShell(파워셸)",
+        "git(깃)"
+      ],
+      "clean_checkout_boundary": "Expected reproducible with setup(설정 후 재현 가능 예상) if docs/registers ledgers(장부) are checked out and Python(파이썬) is available.",
+      "reproducibility_gaps": [
+        "Grok executable(그록 실행 파일)은 local external tool(로컬 외부 도구)이다.",
+        "MT5 Common Files(MT5 공용 파일)는 이번 작업에서 사용하지 않았다."
+      ]
+    },
+    {
+      "packet_id": "stage_frontier_01_campaign_map_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "/goal requires Grok review(그록 검토) at stage closeout(단계 마감).",
+      "review_size": "medium(중간)",
+      "direction_before_grok": "Close Stage Frontier 01(전선01 단계)를 archive interface(보관소 접점)로 닫고 Stage Frontier 02(전선02 단계) proposal(제안)만 남긴다.",
+      "bounded_evidence": [
+        "campaign map(캠페인 지도)",
+        "DNR list(반복 금지 목록)",
+        "reusable artifact index(재사용 산출물 색인)",
+        "next frontier proposal(다음 전선 제안)"
+      ],
+      "advice_classification": {
+        "accepted": [
+          "Stage Frontier 01 closeout(전선 01단계 마감)은 preserved archive interface(보존 보관소 접점)로 유효하다.",
+          "Forbidden inheritance(금지 상속) 누수는 보이지 않는다.",
+          "Next frontier proposal(다음 전선 제안)은 four-axis joint objective(네 축 동시 목적)라 충분히 신규이고 경계가 맞다.",
+          "Stage folder count(단계 폴더 수) 355는 로컬 재집계와 일치한다."
+        ],
+        "rejected": [
+          "Grok clean_output(그록 정리 출력)이 없으면 review captured(검토 기록됨)라고 말할 수 없다는 조건은 현재 파일 생성 후 해소됐다.",
+          "Preserved clue(보존 단서)를 Frontier 02 seed inheritance(전선02 씨앗 상속)로 직접 쓰는 흐름은 거절한다.",
+          "Frontier 02(전선02)를 stage-open Grok review(단계 개방 그록 검토) 없이 즉시 실험 개방하는 흐름은 거절한다."
+        ],
+        "needs_local_verification": [
+          "archive counts(보관소 집계 수치) 재확인",
+          "Stage364 preserved clue KPI(보존 단서 KPI) 원천 경로 재확인",
+          "state documents(상태 문서) 동기화 확인",
+          "authority columns(권위 열) not_claimed(주장 안 함) 확인",
+          "Korean markdown encoding(한국어 마크다운 인코딩) UTF-8 BOM(UTF-8 BOM 포함) 확인"
+        ]
+      },
+      "grok_output_identity": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/clean_output.md",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/metadata.json",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/raw_diagnostics.json",
+        "prompt_hash": "d318a67d5d3f8f9401a93f0c8024b678c082ac145e5ed9d41bf1c6c8fc29c58b"
+      },
+      "prompt_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-13_frontier01_campaign_map_closeout/medium_review/prompt.md",
+        "prompt_hash": "d318a67d5d3f8f9401a93f0c8024b678c082ac145e5ed9d41bf1c6c8fc29c58b"
+      },
+      "local_verification": [
+        "artifact_lineage_audit(산출물 계보 감사) passed with Stage12~364 counts(집계) 355/1953/12327/1215.",
+        "Stage364 preserved clue checks(보존 단서 확인) passed for run364HL/run364HM/run364HQ/run364HS.",
+        "state_sync_audit(상태 동기 감사) passed for workspace_state/current_working_state/selection_status(작업공간 상태/현재 작업 상태/선택 상태).",
+        "authority columns(권위 열) remain not_claimed(주장 안 함).",
+        "Korean markdown files(한국어 마크다운 파일) were converted to UTF-8 BOM(UTF-8 BOM 포함)."
+      ],
+      "forbidden_claim_check": "pass(통과)",
+      "final_codex_direction": "Close Stage Frontier 01(전선 01단계)을 archive_interface_preserved(보관소 접점 보존)로만 닫고, Stage Frontier 02(전선02)는 stage-open Grok review(단계 개방 그록 검토) 뒤에 연다."
+    }
+  ]
+}
