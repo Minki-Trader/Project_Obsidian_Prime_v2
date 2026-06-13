@@ -1,0 +1,145 @@
+{
+  "receipts": [
+    {
+      "packet_id": "stage_frontier_01_foundation_v1",
+      "skill": "obsidian-work-packet-router",
+      "triggered": true,
+      "status": "executed",
+      "primary_family": "policy_skill_governance(정책/스킬 운영)",
+      "primary_skill": "obsidian-work-packet-router(작업 묶음 라우터)",
+      "support_skills": [
+        "obsidian-architecture-guard(구조 보호)",
+        "obsidian-claim-discipline(주장 규율)",
+        "obsidian-grok-collaboration(그록 협업)"
+      ],
+      "required_gates": [
+        "agent_control_contracts",
+        "ops_instruction_audit",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "external_review_packet",
+        "state_sync_audit",
+        "final_claim_guard"
+      ],
+      "skills_not_used": {
+        "obsidian-artifact-lineage": {
+          "not_selected_reason": "artifact lineage(산출물 계보)는 이번 작업에서 파일 경로와 검토 묶음 정체성만 다루므로 support skill(보조 스킬)로 승격하지 않았다."
+        },
+        "obsidian-experiment-design": {
+          "not_selected_reason": "실험 설계(experiment design, 실험 설계)가 아니라 governance foundation(운영 기반) 구축이다."
+        }
+      },
+      "routing_reason": "User requested foundation setup(기초 구축) and Grok review(그록 검토). Primary work(주 작업)는 policy and control-plane governance(정책 및 제어면 운영)다."
+    },
+    {
+      "packet_id": "stage_frontier_01_foundation_v1",
+      "skill": "obsidian-architecture-guard",
+      "triggered": true,
+      "status": "executed",
+      "touched_surfaces": [
+        "AGENTS.md",
+        "docs/policies/frontier_governance.md",
+        "docs/policies/stage_structure.md",
+        "docs/policies/reentry_order.md",
+        "docs/policies/architecture_invariants.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "docs/registers/run_registry.csv",
+        "stages/stage_frontier_01__archive_synthesis_and_new_axis_lock"
+      ],
+      "invariant_checks": [
+        "Frontier folders(전선 폴더)는 새 top-level scratch folder(최상위 임시 폴더)를 만들지 않고 stages/* 아래에 둔다.",
+        "Prior stages(이전 단계)는 reference archive(참고 보관소)로만 읽고 winner/baseline/authority(승자/기준선/권위)를 상속하지 않는다.",
+        "Repair work(수리 작업)는 기본적으로 같은 frontier stage(전선 단계)의 work packet(작업 묶음)으로 둔다.",
+        "Reusable code(재사용 코드)와 runtime logic(런타임 로직)은 이번 작업에서 변경하지 않았다."
+      ],
+      "placement_boundary": "stage_frontier_*(전선 단계)는 stages/* 아래 stage-local artifact(단계 로컬 산출물)이며 새 frontiers/ root(전선 최상위 폴더)를 만들지 않는다.",
+      "architecture_debt_effect": "First frontier orchestration(첫 전선 실행 지휘)이 필요할 때 stage_pipelines naming(이름 규칙)을 로컬 검증해야 한다. 이번 governance scaffold(운영 뼈대)는 실행 어댑터를 만들지 않았다.",
+      "allowed_claims": [
+        "governance_foundation_scaffolded",
+        "frontier_folder_boundary_documented",
+        "no_authority_claimed"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion",
+        "live_readiness",
+        "selected_baseline",
+        "goal_achieve",
+        "experiment_result"
+      ]
+    },
+    {
+      "packet_id": "stage_frontier_01_foundation_v1",
+      "skill": "obsidian-claim-discipline",
+      "triggered": true,
+      "status": "executed",
+      "requested_claims": [
+        "governance_foundation_scaffolded",
+        "grok_review_captured",
+        "no_authority_claimed"
+      ],
+      "allowed_claims": [
+        "governance_foundation_scaffolded",
+        "grok_review_captured",
+        "no_authority_claimed"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion",
+        "live_readiness",
+        "selected_baseline",
+        "goal_achieve",
+        "experiment_result"
+      ],
+      "final_status": "low_boundary_completion_claim_only(낮은 주장 경계 완료 주장만 허용)"
+    },
+    {
+      "packet_id": "stage_frontier_01_foundation_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "User explicitly requested Grok review(그록 검토).",
+      "review_size": "small(소규모)",
+      "direction_before_grok": "Create stage_frontier_01 foundation(전선01 기초), keep folders under stages/*, enforce reference-not-inheritance(참조이지 상속 아님), and avoid authority claims(권위 주장 없음).",
+      "bounded_evidence": [
+        "Stage364 closed no next-stage claim(다음 단계 주장 없음)",
+        "frontier_governance.md scaffold(전선 운영 규칙 뼈대)",
+        "stage_frontier_01 folder scaffold(전선01 폴더 뼈대)",
+        "workspace_state.yaml current truth(현재 진실)"
+      ],
+      "prompt_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/prompt.md",
+        "prompt_hash": "7ae196706ba24cf55935eafa3ac6d81180cd2143098a2d810b699d7be4ac0f41"
+      },
+      "grok_output_identity": {
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/clean_output.md",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/metadata.json",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/raw_diagnostics.json"
+      },
+      "advice_classification": {
+        "accepted": [
+          "governance scaffold sufficient for closeout(운영 뼈대 마감 충분)",
+          "frontier folders under stages/*(전선 폴더는 stages/* 아래)",
+          "repair as subordinate packets by default(수리는 기본적으로 하위 작업 묶음)",
+          "decision-weight checklist(결정 무게 점검표)",
+          "repair packet minimum fields(수리 작업 묶음 최소 필드)"
+        ],
+        "rejected": [
+          "separate repair_frontier lane now(지금 별도 수리 전선 노선)"
+        ],
+        "needs_local_verification": [
+          "stage_pipelines naming when first frontier orchestration is needed(첫 전선 실행 지휘가 필요할 때 stage_pipelines 이름 규칙)",
+          "campaign map and full DNR in frontier01B(frontier01B에서 캠페인 지도와 전체 반복 금지 목록)"
+        ]
+      },
+      "local_verification": [
+        "Folder layout(폴더 배치)은 stages/stage_frontier_01__archive_synthesis_and_new_axis_lock 아래로 확인했다.",
+        "Architecture invariants(구조 불변 규칙)에 stage_frontier_* placement(배치)를 추가했다.",
+        "Repair packet fields(수리 작업 묶음 필드)와 decision-weight checklist(결정 무게 점검표)를 frontier_governance.md에 반영했다."
+      ],
+      "forbidden_claim_check": "pass(통과). No runtime authority(런타임 권위 없음), operating promotion(운영 승격 없음), live readiness(실거래 준비 없음), selected baseline(선택 기준선 없음), Goal Achieve(목표 달성 없음), experiment result(실험 결과 없음).",
+      "final_codex_direction": "Close frontier01A as governance foundation scaffolded(운영 기반 뼈대 완료) and open next work toward campaign map(캠페인 지도)."
+    }
+  ]
+}

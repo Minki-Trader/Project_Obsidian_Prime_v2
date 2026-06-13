@@ -1,0 +1,292 @@
+version: work_packet_schema_v2
+packet_id: stage_frontier_01_foundation_v1
+created_at_utc: "2026-06-13T12:32:08Z"
+user_request:
+  user_quote: "오케이 기초 구축먼저 진행하자 그록 검토도 받아줘"
+  requested_action: frontier_governance_foundation_and_grok_review
+  requested_count:
+    value: null
+    n_a_reason: not_counted_scope
+  ambiguous_terms:
+    - "기초 구축"
+current_truth:
+  active_stage: "stage_frontier_01__archive_synthesis_and_new_axis_lock"
+  current_run: "frontier01A_foundation_governance_scaffold_grok_review_v1"
+  latest_completed_run: "frontier01A_foundation_governance_scaffold_grok_review_v1"
+  source_documents:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/364_source_regime_label_pivot__dense_cost_recovery/04_selected/selection_status.md
+    - docs/decisions/2026-06-12_stage364_closeout_no_next_stage.md
+work_classification:
+  primary_family: policy_skill_governance
+  detected_families:
+    - policy_skill_governance
+    - state_sync
+    - artifact_lineage
+  touched_surfaces:
+    - AGENTS.md
+    - docs/policies/architecture_invariants.md
+    - docs/policies/stage_structure.md
+    - docs/policies/reentry_order.md
+    - docs/policies/frontier_governance.md
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock
+    - docs/agent_control/grok_reviews
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    state_sync_risk: medium
+    policy_drift_risk: medium
+    archive_inheritance_risk: high
+    claim_boundary_risk: high
+    grok_advice_laundering_risk: medium
+  hard_stop_risks: []
+  required_decision_locks: []
+  required_gates:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - external_review_packet
+    - state_sync_audit
+    - final_claim_guard
+  forbidden_claims:
+    - runtime_authority
+    - operating_promotion
+    - live_readiness
+    - selected_baseline
+    - goal_achieve
+    - experiment_result
+decision_lock:
+  mode: user_explicit_instruction
+  assumptions:
+    create_frontier_policy: true
+    create_stage_frontier_01_scaffold: true
+    keep_frontier_under_stages: true
+    run_grok_review: true
+    no_mt5_execution: true
+    no_model_training: true
+  questions: []
+  required_user_decisions: []
+preflight:
+  needs_clarification: false
+  selected_option_id: user_approved_foundation_first
+  selected_option_user_quote: "오케이 기초 구축먼저 진행하자 그록 검토도 받아줘"
+  blocked_until_answer: false
+interpreted_scope:
+  work_families:
+    - policy_skill_governance
+    - state_sync
+    - artifact_lineage
+  target_surfaces:
+    - frontier_governance_policy
+    - frontier_stage_scaffold
+    - current_truth_docs
+    - grok_review_packet
+  scope_units:
+    - policy
+    - document
+    - stage
+    - artifact
+    - report
+  execution_layers:
+    - document_edit
+    - python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: "진행하자"
+  evidence_layers:
+    - frontier_governance_policy
+    - stage_frontier_01_scaffold
+    - grok_review_packet
+    - local_gate_outputs
+    - local_gate_outputs
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: true
+  claim_boundary:
+    allowed_claims:
+      - governance_foundation_scaffolded
+      - grok_review_captured
+      - no_authority_claimed
+    forbidden_claims:
+      - runtime_authority
+      - operating_promotion
+      - live_readiness
+      - selected_baseline
+      - goal_achieve
+      - experiment_result
+  variants_requested:
+    value: null
+    n_a_reason: no_experiment_variants
+  verification_layers:
+    - local_file_check
+    - grok_review
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+  - id: AC-001
+    text: "frontier_governance policy exists and defines reference-not-inheritance."
+    expected_artifact: docs/policies/frontier_governance.md
+    verification_method: local_file_check
+    required: true
+  - id: AC-002
+    text: "stage_frontier_01 scaffold exists under stages with required folders and status docs."
+    expected_artifact: stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/
+    verification_method: local_file_check
+    required: true
+  - id: AC-003
+    text: "current truth documents point to stage_frontier_01 without authority claims."
+    expected_artifact: docs/workspace/workspace_state.yaml
+    verification_method: state_sync_check
+    required: true
+  - id: AC-004
+    text: "Grok second-opinion review is captured and classified."
+    expected_artifact: docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/
+    verification_method: grok_wrapper_metadata_and_codex_classification
+    required: true
+work_plan:
+  phases:
+    - id: frontier_policy_scaffold
+      actions:
+        - create_frontier_governance_policy
+        - update_stage_structure_and_reentry_order
+        - update_agents_frontier_rule
+    - id: frontier_stage_scaffold
+      actions:
+        - create_stage_frontier_01_required_folders
+        - create_stage_brief_prior_scan_review_index_selection_status
+        - update_workspace_state_and_current_working_state
+    - id: grok_review
+      actions:
+        - run_bounded_grok_review
+        - classify_grok_advice
+        - apply_local_fixes_if_needed
+    - id: closeout
+      actions:
+        - write_skill_receipts
+        - run_local_schema_and_instruction_audits
+        - write_frontier01A_review
+  expected_outputs:
+    - docs/policies/frontier_governance.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/00_spec/stage_brief.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/prior_stage_scan.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/frontier01A_foundation_governance_scaffold_grok_review.md
+    - docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/clean_output.md
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/closeout_report.md
+  stop_conditions:
+    - grok_transport_blocked
+    - state_sync_conflict
+    - policy_gate_failure_requires_plan_only_repair
+row_grain:
+  reference: docs/agent_control/row_grain_contract.yaml
+  normalized_row_key:
+    - run_id
+    - subrun_id
+    - record_view
+    - tier_scope
+kpi_contract:
+  kpi_standard_version: not_applicable_governance_only
+  normalized_record_path: stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/stage_run_ledger.csv
+  source_authority_reference: docs/agent_control/kpi_source_authority.yaml
+  n_a_reason_reference: docs/agent_control/n_a_reason_registry.yaml
+artifact_contract:
+  raw_evidence:
+    - docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/raw_diagnostics.json
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/agent_control_contracts.json
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/ops_instruction_audit.json
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/work_packet_schema_lint.json
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/skill_receipt_schema_lint.json
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/state_sync_audit.json
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/closeout_gate.json
+  machine_readable:
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/work_packet.yaml
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/skill_receipts.json
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/stage_run_ledger.csv
+  human_readable:
+    - docs/policies/frontier_governance.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/00_spec/stage_brief.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/01_inputs/prior_stage_scan.md
+  external_artifacts: []
+evidence_contract:
+  raw_evidence:
+    - docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/raw_diagnostics.json
+  machine_readable:
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/work_packet.yaml
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/skill_receipts.json
+  human_readable:
+    - docs/policies/frontier_governance.md
+    - stages/stage_frontier_01__archive_synthesis_and_new_axis_lock/03_reviews/frontier01A_foundation_governance_scaffold_grok_review.md
+    - docs/agent_control/packets/stage_frontier_01_foundation_v1/closeout_report.md
+skill_routing:
+  primary_family: policy_skill_governance
+  primary_skill: obsidian-work-packet-router
+  support_skills:
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+    - obsidian-grok-collaboration
+  skills_considered:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+    - obsidian-reentry-read
+    - obsidian-exploration-mandate
+    - obsidian-grok-collaboration
+    - obsidian-artifact-lineage
+  skills_selected:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+    - obsidian-grok-collaboration
+  skills_not_used:
+    obsidian-artifact-lineage:
+      not_selected_reason: artifact_lineage_is_limited_to_file_paths_and_review_packet_identity_this_turn
+    obsidian-exploration-mandate:
+      not_selected_reason: used_as_policy_context_not_primary_family_skill
+    obsidian-reentry-read:
+      not_selected_reason: used_as_reentry_context_not_family_required_skill
+  required_skill_receipts:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-claim-discipline
+    - obsidian-grok-collaboration
+  required_gates:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - external_review_packet
+    - state_sync_audit
+    - final_claim_guard
+gates:
+  required:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - external_review_packet
+    - state_sync_audit
+    - final_claim_guard
+  not_applicable_with_reason:
+    kpi_contract_audit: "No KPI measurement or trading result is created; stage_run_ledger only records governance scaffold status."
+    mt5_runtime_evidence_gate: "No MT5 terminal, Strategy Tester, EA, set file, or runtime handoff is changed."
+    model_validation_gate: "No model or threshold surface is trained or selected."
+final_claim_policy:
+  allowed_claims:
+    - governance_foundation_scaffolded
+    - grok_review_captured
+    - no_authority_claimed
+  forbidden_claims:
+    - runtime_authority
+    - operating_promotion
+    - live_readiness
+    - selected_baseline
+    - goal_achieve
+    - experiment_result
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

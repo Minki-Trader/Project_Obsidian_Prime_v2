@@ -95,6 +95,18 @@ MT5(`MetaTrader 5`, 메타트레이더5) routed run(라우팅 실행)에서 사�
 
 모델 학습(model training, 모델 학습)과 검증(validation, 검증)이 실제로 가능해지는 순간부터 알파 탐색(alpha research, 알파 탐색)을 시작할 수 있다. 고정된 단계 번호에 묶지 않는다.
 
+## 전선 단계 규칙(Frontier Stage Rule, 전선 단계 규칙)
+
+Stage364(364단계) 이후 새 큰 연구 단위(research unit, 연구 단위)는 `stage_frontier_NN__specific_question(전선 단계 번호와 구체 질문)` 형식을 쓸 수 있다.
+
+`stage_frontier_NN(전선 단계 번호)`은 Stage365(365단계) continuation(연속)이 아니다. independent frontier campaign(독립 전선 캠페인)이다.
+
+핵심 규칙(core rule, 핵심 규칙)은 `reference, not inheritance(참조이지 상속 아님)`이다. Stage12~364(12~364단계)는 prior-stage archive(이전 단계 보관소)로 읽고, preserved clue(보존 단서), negative memory(부정 기억), reusable artifact(재사용 산출물), do-not-repeat note(반복 금지 메모)만 가져온다.
+
+winner(승자), selected baseline(선택 기준선), promotion history(승격 이력), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 prior stage(이전 단계)에서 가져오지 않는다.
+
+Frontier stage(전선 단계)는 새 최상위 `frontiers/` folder(폴더)를 만들지 않고 기존 `stages/*` 아래에 둔다. 세부 운영 규칙(source of truth, 진실 원천)은 `docs/policies/frontier_governance.md`다.
+
 ## 알파 탐색 단계 규칙(Alpha Exploration Stage Rule, 알파 탐색 단계 규칙)
 
 Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫히는 단계(stage, 단계)까지는 탐색 라벨(exploration label, 탐색 라벨)과 실행 번호(run number, 실행 번호) 규칙을 쓴다.

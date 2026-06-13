@@ -1,0 +1,40 @@
+{
+  "audit_name": "external_review_packet",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "trigger_reason": "/goal includes Grok review(Grok review, 그록 검토) and the packet opened a frontier governance stage(frontier governance stage, 전선 운영 단계).",
+    "review_size": "small(small review, 소규모 검토)",
+    "prompt_path": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/prompt.md",
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/clean_output.md",
+    "metadata_path": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/metadata.json",
+    "raw_diagnostics_path": "docs/agent_control/grok_reviews/2026-06-13_frontier_foundation_setup/small_review/raw_diagnostics.json",
+    "advice_classification": {
+      "accepted": [
+        "governance scaffold(governance scaffold, 운영 뼈대) sufficient for closeout(closeout, 마감)",
+        "frontier folders(frontier folders, 전선 폴더) under stages/*",
+        "decision-weight checklist(decision-weight checklist, 결정 무게 점검표)",
+        "repair packet fields(repair packet fields, 수리 작업 묶음 필드)"
+      ],
+      "rejected": [
+        "separate repair_frontier lane(repair frontier lane, 수리 전선 노선) now"
+      ],
+      "needs_local_verification": [
+        "stage_pipelines naming(stage_pipelines naming, 단계 파이프라인 이름 규칙) when first frontier orchestration(frontier orchestration, 전선 실행 지휘) is needed",
+        "campaign map(campaign map, 캠페인 지도) and full DNR list(do-not-repeat list, 반복 금지 목록) in frontier01B"
+      ]
+    },
+    "local_verification": [
+      "Grok output(Grok output, 그록 출력) was captured under docs/agent_control/grok_reviews.",
+      "Codex classification(Codex classification, 코덱스 분류) is recorded in skill_receipts.json and the frontier01A review report.",
+      "Forbidden authority claims(forbidden authority claims, 금지 권위 주장) remain not claimed(not claimed, 주장 안 함)."
+    ]
+  },
+  "allowed_claims": [
+    "external_review_captured",
+    "grok_review_captured"
+  ],
+  "forbidden_claims": []
+}

@@ -10,6 +10,16 @@
 
 예시(example, 예시)는 정책(policy, 정책)이 아니다. 실제 단계 이름(stage name, 단계 이름)은 현재 질문(current question, 현재 질문)을 설명해야 한다.
 
+## 전선 단계 규칙(Frontier Stage Rule, 전선 단계 규칙)
+
+Stage364(364단계) 이후 새 큰 연구 단위는 `stage_frontier_NN__specific_question(전선 단계 번호와 구체 질문)` 형식을 쓸 수 있다.
+
+효과(effect, 효과)는 Stage365(365단계)처럼 이전 수리 연쇄(repair chain, 수리 연쇄)를 자동으로 이어가지 않고, independent frontier campaign(독립 전선 캠페인)으로 새 질문을 여는 것이다.
+
+세부 운영 규칙(source of truth, 진실 원천)은 `docs/policies/frontier_governance.md`다.
+
+Frontier stage(전선 단계)는 기존 `stages/*` 구조와 필수 폴더(required folders, 필수 폴더)를 그대로 쓴다. 새 최상위 `frontiers/` folder(폴더)는 만들지 않는다.
+
 ## 필수 폴더(Required Stage Folders, 필수 단계 폴더)
 
 - `00_spec/`: 단계 목적(stage purpose, 단계 목적)과 범위(scope, 범위)
