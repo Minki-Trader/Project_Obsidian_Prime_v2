@@ -1,0 +1,3 @@
+﻿# Review Index(검토 색인)
+
+- `frontier07A_stage_open_adverse_excursion_risk_shaped_labeling_v1`: `stages/stage_frontier_07__adverse_excursion_risk_shaped_labeling/03_reviews/frontier07A_stage_open_adverse_excursion_risk_shaped_labeling_v1_report.md` - `stage_opened_after_grok_review_no_authority`

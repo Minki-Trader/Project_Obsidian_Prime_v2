@@ -6875,3 +6875,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-13T20:01:51Z: `frontier06B_selective_probability_abstention_signal_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): next run(다음 실행)은 `frontier06C_signal_contract_closeout_decision_v1`입니다.
 <!-- frontier06C_stage_closeout_v1 -->
 - 2026-06-13T20:09:43Z: `frontier06C_stage_closeout_v1` closed Frontier06(전선06 마감) as negative_memory(부정 기억)+preserved_clue(보존 단서). Effect(효과): next frontier(다음 전선)는 `frontier07A_stage_open_new_hypothesis_design_v1`입니다.
+<!-- frontier07A_stage_open_adverse_excursion_risk_shaped_labeling_v1 -->
+- 2026-06-13T20:26:41Z: `frontier07A_stage_open_adverse_excursion_risk_shaped_labeling_v1` opened Frontier07(전선07 개방). Effect(효과): next run(다음 실행)은 `frontier07B_adverse_excursion_risk_label_proxy_scout_v1`입니다.
+<!-- frontier07B_adverse_excursion_risk_label_proxy_scout_v1 -->
+- 2026-06-13T20:43:32Z: `frontier07B_adverse_excursion_risk_label_proxy_scout_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, next run(다음 실행) `frontier07C_risk_label_repair_or_closeout_decision_v1`.
+<!-- frontier07C_class_prior_density_bridge_repair_v1 -->
+- 2026-06-13T20:49:31Z: `frontier07C_class_prior_density_bridge_repair_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, next run(다음 실행) `frontier07D_stage_closeout_decision_v1`.
+<!-- frontier07D_stage_closeout_decision_v1 -->
+- 2026-06-13T20:54:21Z: `frontier07D_stage_closeout_decision_v1` closed Frontier07(전선07 마감) as preserved clue + negative memory(보존 단서+부정 기억). Effect(효과): next frontier(다음 전선)는 `frontier08A_stage_open_new_hypothesis_design_v1`입니다.

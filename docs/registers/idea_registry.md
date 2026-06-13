@@ -1519,3 +1519,9 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier06B_selective_probability_abstention_signal_scout_v1`: selective probability abstention signal scout(선택적 확률 기권 신호 탐색) recorded `0` strict scout clue rows(엄격 탐색 단서 행). Effect(효과): output-to-trade contract(출력-거래 계약)의 가치 여부를 기록했습니다.
 <!-- frontier06C_stage_closeout_v1 -->
 - `IDEA-FR06-SELECTIVE-PROBABILITY-ABSTENTION-SIGNAL-CONTRACT`: closed as negative_memory(부정 기억)+preserved_clue(보존 단서). Effect(효과): output-to-trade threshold retry(출력-거래 임계값 재시도)는 더 이어가지 않고 새 축으로 넘깁니다.
+<!-- frontier07A_stage_open_adverse_excursion_risk_shaped_labeling_v1 -->
+- `IDEA-FR07-ADVERSE-EXCURSION-RISK-SHAPED-LABELING`: Frontier07(전선07) opens adverse excursion risk-shaped labeling(불리한 이동 위험 형성 라벨링). Effect(효과): Frontier06(전선06)의 density/PF clue(밀도/수익 팩터 단서)를 threshold retry(임계값 재시도)가 아니라 DD-targeted label utility(손실폭 겨냥 라벨 효용)로 전환합니다.
+<!-- frontier07B_adverse_excursion_risk_label_proxy_scout_v1 -->
+- `frontier07B_adverse_excursion_risk_label_proxy_scout_v1`: adverse excursion risk-shaped label proxy scout(불리한 이동 위험 형성 라벨 프록시 탐색) recorded strict rows(엄격 행) `0` and preserved rows(보존 행) `21`. Effect(효과): DD-targeted label utility(손실폭 겨냥 라벨 효용)의 학습 가능성을 기록했습니다.
+<!-- frontier07D_stage_closeout_decision_v1 -->
+- `frontier07D_stage_closeout_decision_v1`: Frontier07(전선07) preserved adverse-excursion label clues(불리한 이동 라벨 단서) but closed without strict scout clue(엄격 탐색 단서 없음). Effect(효과): next hypothesis(다음 가설)는 이 단서를 참조 전용으로만 사용합니다.

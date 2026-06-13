@@ -1,0 +1,10 @@
+﻿# Frontier07 Input References(전선07 입력 참조)
+
+- model input dataset(모델 입력 데이터셋): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet` sha256 `c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f`
+- feature order(피처 순서): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt` sha256 `18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb`
+- Frontier04 closeout(전선04 마감): `stages/stage_frontier_04__path_aware_cost_dd_event_labeling/03_reviews/frontier04E_stage_closeout_v1_report.md` sha256 `fdcb53e084da4c0825a9c81f43cfced2e4caa2a1c42ac7c17adc35828cac7e12`
+- Frontier05 closeout(전선05 마감): `stages/stage_frontier_05__closed_bar_path_precursor_feature_surface/03_reviews/frontier05C_stage_closeout_v1_report.md` sha256 `b8a9c3d7b14e65b9cbe95dd4e2cdc558005ab2a8fe21d5fa880782aba55bf975`
+- Frontier06B scout(전선06B 탐색): `stages/stage_frontier_06__selective_probability_abstention_signal_contract/03_reviews/frontier06B_selective_probability_abstention_signal_scout_v1_report.md` sha256 `573b460b0c1f02e054681c8b68e7e19a0fcb698aa4c1b1cb4123d98d16113e7d`
+- Frontier06C closeout(전선06C 마감): `stages/stage_frontier_06__selective_probability_abstention_signal_contract/03_reviews/frontier06C_stage_closeout_v1_report.md` sha256 `cac6627b2d8068093f6ce39dc7a843433d52b92e0d062a78ae53fdcc3ef74c93`
+
+Effect(효과): Frontier07B(전선07B)는 prior frontier(이전 전선)를 baseline inheritance(기준선 상속)가 아니라 comparison reference(비교 참조)로만 사용합니다.
