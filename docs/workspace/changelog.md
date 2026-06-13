@@ -6883,3 +6883,14 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-13T20:49:31Z: `frontier07C_class_prior_density_bridge_repair_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, next run(다음 실행) `frontier07D_stage_closeout_decision_v1`.
 <!-- frontier07D_stage_closeout_decision_v1 -->
 - 2026-06-13T20:54:21Z: `frontier07D_stage_closeout_decision_v1` closed Frontier07(전선07 마감) as preserved clue + negative memory(보존 단서+부정 기억). Effect(효과): next frontier(다음 전선)는 `frontier08A_stage_open_new_hypothesis_design_v1`입니다.
+<!-- <!-- frontier08A_stage_open_sample_weight_objective_v1 --> -->
+<!-- frontier08A_stage_open_sample_weight_objective_v1 -->
+- 2026-06-13T21:13:59Z: `frontier08A_stage_open_sample_weight_objective_v1` opened Frontier08(전선08) with Grok review(그록 검토). Effect(효과): next run(다음 실행) `frontier08B_sample_weight_proxy_scout_v1` can test sample weighting(표본 가중) without completion/baseline/promotion/runtime claims(완성/기준선/승격/런타임 주장 없이).
+<!-- <!-- frontier08B_sample_weight_proxy_scout_v1 --> -->
+<!-- frontier08B_sample_weight_proxy_scout_v1 -->
+- 2026-06-13T21:19:54Z: `frontier08B_sample_weight_proxy_scout_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `27`, next run(다음 실행) `frontier08C_sample_weight_repair_or_closeout_decision_v1`.
+<!-- <!-- frontier08C_sample_weight_capped_repair_scout_v1 --> -->
+<!-- frontier08C_sample_weight_capped_repair_scout_v1 -->
+- 2026-06-13T21:28:49Z: `frontier08C_sample_weight_capped_repair_scout_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `4`, next run(다음 실행) `frontier08D_stage_closeout_sample_weight_objective_v1`.
+<!-- frontier08D_stage_closeout_sample_weight_objective_v1 -->
+- 2026-06-13T21:36:05Z: `frontier08D_stage_closeout_sample_weight_objective_v1` closed Frontier08(전선08) as `closed_preserved_clue_negative_memory_no_authority`. Effect(효과): next run(다음 실행) `frontier09A_stage_open_new_hypothesis_design_v1` starts a new hypothesis lifecycle(새 가설 생명주기) without inheriting winner/baseline/promotion/runtime authority(승자/기준선/승격/런타임 권위).

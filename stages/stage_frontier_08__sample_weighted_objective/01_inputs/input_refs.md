@@ -1,0 +1,11 @@
+﻿# Input References(입력 참조)
+
+- `stages/stage_frontier_06__selective_probability_abstention_signal_contract/03_reviews/frontier06B_selective_probability_abstention_signal_scout_v1_report.md`: present(존재), sha256 `573b460b0c1f02e054681c8b68e7e19a0fcb698aa4c1b1cb4123d98d16113e7d`
+- `stages/stage_frontier_06__selective_probability_abstention_signal_contract/03_reviews/frontier06C_stage_closeout_v1_report.md`: present(존재), sha256 `cac6627b2d8068093f6ce39dc7a843433d52b92e0d062a78ae53fdcc3ef74c93`
+- `stages/stage_frontier_07__adverse_excursion_risk_shaped_labeling/03_reviews/frontier07B_adverse_excursion_risk_label_proxy_scout_v1_report.md`: present(존재), sha256 `6010f1f8262310d169bf69bf81b6dc75c8396788f89f91c698dff09a005736ad`
+- `stages/stage_frontier_07__adverse_excursion_risk_shaped_labeling/03_reviews/frontier07C_class_prior_density_bridge_repair_v1_report.md`: present(존재), sha256 `f79659aa22eb0402d05ec57db07e9c54f38172491eb97f1b310a7b79a57cbf58`
+- `stages/stage_frontier_07__adverse_excursion_risk_shaped_labeling/03_reviews/frontier07D_stage_closeout_decision_v1_report.md`: present(존재), sha256 `d9fab0a862ded8cabada189578e915daabed2a4b46365b6a9a868e0de55fa03e`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet`: present(존재), sha256 `c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt`: present(존재), sha256 `18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb`
+- `docs/agent_control/grok_reviews/2026-06-14_frontier08_stage_open/medium_review/prompt.md`: present(존재), sha256 `a652beb76e5d142996ffa6c0a875437631021b96315f0fac51d490e33da633f8`
+- `docs/agent_control/grok_reviews/2026-06-14_frontier08_stage_open/medium_review/clean_output.md`: present(존재), sha256 `14ef7d2cf1d06af09baccc3bd3c4267df253fd68497655bdbb4658a7f92cd6fc`

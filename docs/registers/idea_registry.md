@@ -1525,3 +1525,14 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier07B_adverse_excursion_risk_label_proxy_scout_v1`: adverse excursion risk-shaped label proxy scout(불리한 이동 위험 형성 라벨 프록시 탐색) recorded strict rows(엄격 행) `0` and preserved rows(보존 행) `21`. Effect(효과): DD-targeted label utility(손실폭 겨냥 라벨 효용)의 학습 가능성을 기록했습니다.
 <!-- frontier07D_stage_closeout_decision_v1 -->
 - `frontier07D_stage_closeout_decision_v1`: Frontier07(전선07) preserved adverse-excursion label clues(불리한 이동 라벨 단서) but closed without strict scout clue(엄격 탐색 단서 없음). Effect(효과): next hypothesis(다음 가설)는 이 단서를 참조 전용으로만 사용합니다.
+<!-- <!-- frontier08A_stage_open_sample_weight_objective_v1__IDEA-FR08-MULTI-OBJECTIVE-SAMPLE-WEIGHTING --> -->
+<!-- frontier08A_stage_open_sample_weight_objective_v1__IDEA-FR08-MULTI-OBJECTIVE-SAMPLE-WEIGHTING -->
+- `IDEA-FR08-MULTI-OBJECTIVE-SAMPLE-WEIGHTING`: Frontier08(전선08) opens multi-objective sample weighting(다중목적 표본 가중) as a new hypothesis lifecycle(새 가설 생명주기). Effect(효과): Frontier07(전선07) label/class-prior repair(라벨/클래스 사전분포 수리)를 반복하지 않고 train loss geometry(학습 손실 구조)를 시험합니다.
+<!-- <!-- frontier08B_sample_weight_proxy_scout_v1 --> -->
+<!-- frontier08B_sample_weight_proxy_scout_v1 -->
+- `frontier08B_sample_weight_proxy_scout_v1`: sample weighting(표본 가중)은 strict scout clue(엄격 탐색 단서)를 만들지 못했지만 `27` preserved clue rows(보존 단서 행)를 남겼습니다. Effect(효과): 다음 판단은 repair/closeout decision(수리/마감 결정)으로 제한합니다.
+<!-- <!-- frontier08C_sample_weight_capped_repair_scout_v1 --> -->
+<!-- frontier08C_sample_weight_capped_repair_scout_v1 -->
+- `frontier08C_sample_weight_capped_repair_scout_v1`: sample weighting(표본 가중)은 strict scout clue(엄격 탐색 단서)를 만들지 못했지만 `4` preserved clue rows(보존 단서 행)를 남겼습니다. Effect(효과): 다음 판단은 repair/closeout decision(수리/마감 결정)으로 제한합니다.
+<!-- frontier08D_stage_closeout_sample_weight_objective_v1__IDEA-FR08-MULTI-OBJECTIVE-SAMPLE-WEIGHTING -->
+- `IDEA-FR08-MULTI-OBJECTIVE-SAMPLE-WEIGHTING` closeout(마감): `closed_preserved_clue_negative_memory_no_authority`. Effect(효과): sample weighting(표본 가중)은 preserved clue(보존 단서)로만 남기고 completion candidate(완성 후보)나 runtime authority(런타임 권위)로 올리지 않습니다.

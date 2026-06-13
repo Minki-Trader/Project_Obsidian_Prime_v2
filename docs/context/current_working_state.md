@@ -1,17 +1,21 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-13T20:54:43Z
+Updated(갱신): 2026-06-13T21:36:05Z
 
-Active stage(활성 단계): `stage_frontier_07__adverse_excursion_risk_shaped_labeling`
+## Active Boundary(현재 경계)
 
-Current run(현재 실행): `frontier07D_stage_closeout_decision_v1`
+- latest closed stage(최근 마감 단계): `stage_frontier_08__sample_weighted_objective`
+- latest completed run(최근 완료 실행): `frontier08D_stage_closeout_sample_weight_objective_v1`
+- status(상태): `closed_preserved_clue_negative_memory_no_authority`
+- judgment(판정): `preserved_clue_negative_memory(보존 단서 + 부정 기억)`
+- next run(다음 실행): `frontier09A_stage_open_new_hypothesis_design_v1`
 
-Latest completed run(최근 완료 실행): `frontier07D_stage_closeout_decision_v1`
+## Current Truth(현재 진실)
 
-Current truth(현재 진실): Frontier07(전선07)은 preserved_clue_with_negative_memory_no_authority(보존 단서+부정 기억, 권위 없음)로 마감되었습니다.
+Action(행동): Frontier08(전선08)은 sample weighting(표본 가중) 가설을 proxy scout(프록시 탐색)와 capped repair(상한 수리)까지 밀고 마감했습니다.
 
-Judgment(판정): `preserved_clue_with_negative_memory(보존 단서+부정 기억)`
+Effect(효과): preserved clue(보존 단서)는 남기되, strict scout clue(엄격 탐색 단서)가 없으므로 WFO/MT5(WFO/MT5), completion candidate(완성 후보), runtime authority(런타임 권위)는 열지 않습니다.
 
-Next action(다음 행동): `frontier08A_stage_open_new_hypothesis_design_v1`. Action(행동)은 새 hypothesis(가설)로 다음 frontier stage(전선 단계)를 여는 것입니다. Effect(효과)는 Frontier07(전선07) 결과를 winner/baseline(승자/기준선)으로 상속하지 않는 것입니다.
+## Next Work(다음 작업)
 
-Operating boundary(운영 경계): completion(완성), selected baseline(선택 기준선), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 모두 not_claimed(주장 없음)입니다.
+`frontier09A_stage_open_new_hypothesis_design_v1` opens a new hypothesis lifecycle(새 가설 생명주기). Reference, not inheritance(참조이지 상속 아님): Frontier08(전선08)의 winner/baseline/promotion/runtime authority(승자/기준선/승격/런타임 권위)는 없습니다.
