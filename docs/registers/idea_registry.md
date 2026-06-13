@@ -1544,3 +1544,6 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier09C_clean_path_density_bridge_repair_v1`: clean path density bridge repair(깨끗한 경로 밀도 브리지 수리)를 실행했습니다. Effect(효과): 임계값 탐색 없이 라벨 후보의 밀도/손실폭 수리 가능성을 확인했습니다.
 <!-- frontier09D_stage_closeout_drawdown_clean_path_labeling_v1 -->
 - `frontier09D_stage_closeout_drawdown_clean_path_labeling_v1`: Frontier09 drawdown-normalized clean path labeling(전선09 손실폭 정규화 깨끗한 경로 라벨링)은 preserved clue + negative memory(보존 단서 + 부정 기억)로 닫혔습니다. Effect(효과): payoff/adverse ratio(수익/불리 이동 비율)는 참조 전용 단서로, validation DD failure(검증 손실폭 실패)는 반복 금지 기억으로 남깁니다.
+<!-- frontier10A_stage_open_split_consistent_utility_distillation_v1__IDEA-FR10-SPLIT-CONSISTENT-UTILITY-DISTILLATION -->
+<!-- frontier10A_stage_open_split_consistent_utility_distillation_v1__IDEA-FR10-SPLIT-CONSISTENT-UTILITY-DISTILLATION -->
+- `IDEA-FR10-SPLIT-CONSISTENT-UTILITY-DISTILLATION`: Frontier10(전선10) opens split-consistent utility distillation(분할 일관 효용 증류). Effect(효과): Frontier09(전선09) bridge repair(브리지 수리)를 반복하지 않고 train subwindow utility consensus(학습 하위구간 효용 합의)를 새 supervision axis(감독 축)로 시험합니다.
