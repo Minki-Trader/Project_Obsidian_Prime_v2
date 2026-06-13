@@ -1,0 +1,454 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-stage-transition",
+      "triggered": true,
+      "status": "executed",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/04_selected/selection_status.md"
+      ],
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/04_selected/selection_status.md",
+        "docs/registers/run_registry.csv",
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/03_reviews/stage_run_ledger.csv"
+      ],
+      "detected_conflicts": [
+        "none_detected(감지된 충돌 없음)"
+      ],
+      "canonical_state_after": {
+        "active_stage": "stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling",
+        "current_run": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+        "next_run": "frontier03B_regime_asymmetric_label_proxy_scout_v1"
+      },
+      "allowed_claims": [
+        "stage_opened(단계 개방)",
+        "grok_stage_open_review_captured(그록 단계 개방 검토 기록)",
+        "proxy_design_ready(프록시 설계 준비)",
+        "no_authority_claimed(권위 주장 없음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-reentry-read",
+      "triggered": true,
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/04_selected/selection_status.md"
+      ],
+      "active_stage": "stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling",
+      "current_run": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "detected_conflicts": [
+        "none_detected(감지된 충돌 없음)"
+      ],
+      "allowed_claims": [
+        "stage_opened(단계 개방)",
+        "proxy_design_ready(프록시 설계 준비)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-artifact-lineage",
+      "triggered": true,
+      "status": "executed",
+      "source_inputs": [
+        "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/prompt.md",
+        "docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/clean_output.md",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stage_pipelines/stage41/directional_asymmetric_label_horizon_probe.py",
+        "stage_pipelines/stage347/design_cash_open_asymmetric_long_short_source_without_db.py",
+        "stage_pipelines/stage364/train_timestamp_context_cost_filter_model_without_db.py",
+        "foundation/labels/directional_asymmetric.py"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/02_runs/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1/stage_open_summary.json",
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/02_runs/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1/local_stage_open_verification.json",
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/02_runs/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1/grok_stage_open_classification.json",
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/03_reviews/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1_report.md",
+        "docs/agent_control/packets/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1/work_packet.yaml",
+        "docs/agent_control/packets/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1/skill_receipts.json"
+      ],
+      "raw_evidence": [
+        "docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/raw_diagnostics.json",
+        "docs/registers/run_registry.csv"
+      ],
+      "machine_readable": [
+        "docs\\agent_control\\packets\\frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1\\work_packet.yaml",
+        "docs\\agent_control\\packets\\frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1\\external_review_packet.json",
+        "stages\\stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling\\02_runs\\frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1\\stage_open_summary.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/03_reviews/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1_report.md",
+        "stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/01_inputs/experiment_design.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "stage_open_summary": "f07c513fe5e6e834f3357cb32b2087a7921633817d4ffbf641f7f2568b0e0543",
+        "local_stage_open_verification": "45671706b9df710d11d0e600292760744db42520662d225956eab705e7b39711",
+        "grok_stage_open_classification": "9243d33d5bf914eef7759494b7866f56a2faad8e908cc6dbe900acd1c41fa800",
+        "stage_open_report": "e584eda484d91e071bd5b89cb23cf649d22e960079bd3f20cd9b90467d1dc731"
+      },
+      "lineage_boundary": "connected_with_boundary(경계 있는 연결): stage-open design only(단계 개방 설계 전용), no model artifact(모델 산출물 없음)."
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-claim-discipline",
+      "triggered": true,
+      "status": "executed",
+      "requested_claims": [
+        "stage_opened",
+        "grok_stage_open_review_captured",
+        "proxy_design_ready"
+      ],
+      "allowed_claims": [
+        "stage_opened(단계 개방)",
+        "grok_stage_open_review_captured(그록 단계 개방 검토 기록)",
+        "proxy_design_ready(프록시 설계 준비)",
+        "no_authority_claimed(권위 주장 없음)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "selected_candidate"
+      ],
+      "final_status": "no forbidden authority claim(금지 권위 주장 없음)"
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-grok-collaboration",
+      "triggered": true,
+      "status": "executed",
+      "trigger_reason": "/goal requires Grok review(그록 검토) at stage open(단계 개방).",
+      "review_size": "medium(중간)",
+      "direction_before_grok": "Open Frontier03 as regime-conditioned asymmetric ONNX labeling/modeling(전선03을 레짐 조건 비대칭 온엑스 라벨/모델링으로 개방).",
+      "bounded_evidence": [
+        "Frontier02 closeout(전선02 마감)",
+        "02C preserved clue(02C 보존 단서)",
+        "02E negative memory(02E 부정 기억)",
+        "proposed Frontier03 thesis(전선03 제안 가설)"
+      ],
+      "prompt_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/prompt.md",
+        "sha256": "ba3cfa015d61465d49b977c78cf97772ad7f27d3eca7398cbeb371ef5fd0a8de"
+      },
+      "grok_output_identity": {
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/clean_output.md",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/metadata.json",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/raw_diagnostics.json",
+        "clean_output_sha256": "7bed41589bd4aeea7bbb0c7e356c4b99c8c30278f412cdb9100b9c7897f947a2",
+        "success": true,
+        "returncode": 0,
+        "timed_out": false
+      },
+      "advice_classification": {
+        "accepted": [
+          "Open Frontier03 as a separate hypothesis lifecycle(전선03을 별도 가설 생명주기로 개방).",
+          "Keep Frontier02 as preserved clue plus negative memory only(전선02는 보존 단서와 부정 기억으로만 사용).",
+          "Use a narrow first proxy scout around regime-conditioned asymmetric labels(레짐 조건 비대칭 라벨의 좁은 첫 프록시 탐색).",
+          "Keep the first scout fixed to fwd12 and feature_set_v2(첫 탐색은 fwd12와 feature_set_v2로 고정).",
+          "Use one regime definition and cap label variants at 12(레짐 정의 하나와 라벨 변형 12개 이하로 제한).",
+          "Treat Frontier03B as label-proxy replay only, with no ONNX/WFO/MT5(Frontier03B는 라벨 프록시 재생 전용이며 온엑스/WFO/MT5 없음)."
+        ],
+        "rejected": [
+          "No 02C baseline/winner/promotion inheritance(02C 기준선/승자/승격 상속 없음).",
+          "No same-family threshold-only repair as the next action(같은 계열 임계값만 수리하는 다음 행동 없음).",
+          "No WFO/MT5 claim in stage-open design(WFO/MT5 주장을 단계 개방 설계에 넣지 않음).",
+          "No broad source/label redesign before the narrow replay scout(좁은 재생 탐색 전 넓은 원천/라벨 재설계 없음).",
+          "No model-first ONNX work in Frontier03B(Frontier03B에서 모델 우선 온엑스 작업 없음)."
+        ],
+        "needs_local_verification": [
+          "State sync(상태 동기화): workspace_state/current_working_state/selection_status must point to Frontier03.",
+          "Data identity(데이터 정체성): model input dataset path and feature order hash must be named before proxy scout.",
+          "Archive cross-reference(보관 참조): Stage41/Stage347/Stage364 paths must be cited as reference only.",
+          "Reusable code path(재사용 코드 경로): foundation directional-asymmetric label helper must be checked before adding stage-local logic.",
+          "Tier honesty(티어 정직성): Tier B remains missing_required until materialized.",
+          "Claim guard(주장 보호): completion/baseline/promotion/runtime/live/goal claims remain forbidden."
+        ]
+      },
+      "local_verification": {
+        "state_before": {
+          "workspace_state_mentions_parent": false,
+          "current_working_state_mentions_next": true,
+          "previous_selection_mentions_next": true
+        },
+        "grok_transport": {
+          "metadata_success": true,
+          "timed_out": false,
+          "returncode": 0
+        },
+        "data_identity": {
+          "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+          "dataset_exists": true,
+          "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+          "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+          "feature_order_exists": true,
+          "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+        },
+        "prior_evidence_identity": {
+          "frontier02_closeout_report": "stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md",
+          "frontier02_closeout_report_exists": true,
+          "frontier02_closeout_report_sha256": "d2e9eb19770f174b6dfbe9380cf631ec069a9dddf6d5f35aba5743457621fec3"
+        },
+        "archive_cross_reference": {
+          "status": "pass",
+          "reference_only_rule": "reference_not_inheritance(참조이지 상속 아님)",
+          "stage41_directional_asymmetric": {
+            "stage_brief": {
+              "path": "stages/41_label_horizon__directional_asymmetric_return_target_rebuild/00_spec/stage_brief.md",
+              "exists": true,
+              "sha256": "b68c2338aa635cd02128ab194a91d16fb4334d46885f30090437c47bcad33b1d"
+            },
+            "pipeline": {
+              "path": "stage_pipelines/stage41/directional_asymmetric_label_horizon_probe.py",
+              "exists": true,
+              "sha256": "ae9a4ddbf15cd5a9e0dd3504cf091e79e9d9e7d37fda24ee3e4c65041d135150"
+            },
+            "use_limit": "label-construction clue only(라벨 구성 단서 전용)"
+          },
+          "stage347_cash_open_asymmetric_source": {
+            "stage_brief": {
+              "path": "stages/347_cash_open_asymmetric_source__long_short_head_design/00_spec/stage_brief.md",
+              "exists": true,
+              "sha256": "783b0cf2bb0114f5d6529dba2c8600a7f324d5795972fd8a762c6a98b2815636"
+            },
+            "pipeline": {
+              "path": "stage_pipelines/stage347/design_cash_open_asymmetric_long_short_source_without_db.py",
+              "exists": true,
+              "sha256": "b814b560d0e1bd9503489ed41ea94fe461d6822e16eb9760212bc044e97a6c2c"
+            },
+            "use_limit": "source/head design warning only(원천/헤드 설계 경고 전용)"
+          },
+          "stage364_evaluation_time_runtime_boundary": {
+            "stage_brief": {
+              "path": "stages/364_source_regime_label_pivot__dense_cost_recovery/00_spec/stage_brief.md",
+              "exists": true,
+              "sha256": "805134fc1afd825a84f3d65d7b44024d290e2be2607dd25ac24817f823c4d5c0"
+            },
+            "pipeline": {
+              "path": "stage_pipelines/stage364/train_timestamp_context_cost_filter_model_without_db.py",
+              "exists": true,
+              "sha256": "697a1c0292aeb7b1d79b540dd7ffa4df018ec55e2ab1cf2ba4072c0fda8c6fcc"
+            },
+            "use_limit": "evaluation-time/runtime boundary only(평가 시점/런타임 경계 전용)"
+          }
+        },
+        "reusable_code_path": {
+          "status": "pass",
+          "directional_asymmetric_module": {
+            "path": "foundation/labels/directional_asymmetric.py",
+            "exists": true,
+            "sha256": "684551dde5520cc90bc73bc7d8928e2f41e00694ddb153e60ffeb78a8b2a6879"
+          },
+          "effect": "Prefer reusable helper before stage-local duplicate logic(단계 로컬 중복 로직 전에 재사용 헬퍼 우선)."
+        },
+        "tier_honesty": {
+          "tier_a": "available_for_design_reference(설계 참조 가능)",
+          "tier_b": "missing_required(필수 누락)",
+          "tier_ab": "out_of_scope_by_claim(주장 범위 밖)"
+        },
+        "forbidden_claims": {
+          "completion": "not_claimed(주장 없음)",
+          "selected_baseline": "not_claimed(주장 없음)",
+          "operating_promotion": "not_claimed(주장 없음)",
+          "runtime_authority": "not_claimed(주장 없음)",
+          "live_readiness": "not_claimed(주장 없음)",
+          "goal_achieve": "not_claimed(주장 없음)"
+        },
+        "status": "pass"
+      },
+      "forbidden_claim_check": {
+        "status": "pass",
+        "forbidden_claims_adopted": [],
+        "note": "Mentions of forbidden terms are allowed only as forbidden boundary(금지 경계로만 허용)."
+      },
+      "final_codex_direction": "Open Frontier03 as stage-open design(단계 개방 설계) and route next work to frontier03B_regime_asymmetric_label_proxy_scout_v1 as label-proxy replay(라벨 프록시 재생); no ONNX/WFO/MT5 and no authority claim(온엑스/WFO/MT5 없음, 권위 주장 없음)."
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-experiment-design",
+      "triggered": true,
+      "status": "executed",
+      "hypothesis": "Regime-conditioned asymmetric ONNX labeling/modeling(레짐 조건 비대칭 온엑스 라벨/모델링)이 Frontier02 density clue(전선02 밀도 단서)를 보존하면서 PF/DD/smoothness(수익 팩터/손실폭/매끄러움)를 개선할 수 있는지 시험합니다.",
+      "baseline": "no-trade baseline(무거래 기준) and Frontier02 preserved clue(전선02 보존 단서), reference only(참조 전용).",
+      "decision_use": "Decide whether to run Frontier03B proxy scout(전선03B 프록시 탐색 실행 여부 결정).",
+      "comparison_baseline": "Frontier02C seed observation(전선02C 씨앗 관찰), not baseline(기준선 아님).",
+      "control_variables": [
+        "US100 M5",
+        "train/validation/OOS split",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet"
+      ],
+      "changed_variables": [
+        "label-proxy replay before model work(모델 작업 전 라벨 프록시 재생)",
+        "fixed fwd12 and feature_set_v2 first(먼저 fwd12와 feature_set_v2 고정)",
+        "long/short asymmetric payoff targets(롱/숏 비대칭 손익 목표)",
+        "one regime-conditioned neutral band axis(레짐 조건 중립 구간 축 하나)",
+        "variant cap 12 for Frontier03B(Frontier03B 변형 12개 이하)",
+        "not same-family threshold repair(같은 계열 임계값 수리 아님)"
+      ],
+      "sample_scope": "Tier A first; Tier B missing_required; Tier A+B out_of_scope.",
+      "success_criteria": "Target-distance improvement across PF/density/DD/smoothness(수익 팩터/밀도/손실폭/매끄러움 목표 거리 개선).",
+      "failure_criteria": "No go-rule rows or no novelty over threshold repair(진행 규칙 행 없음 또는 임계값 수리 대비 신규성 없음).",
+      "invalid_conditions": [
+        "future leakage",
+        "split contamination",
+        "feature order mismatch"
+      ],
+      "stop_conditions": [
+        "capped repair if novelty repeats(신규성 반복 시 상한 수리)"
+      ],
+      "evidence_plan": [
+        "Frontier03A packet",
+        "Frontier03B run_manifest",
+        "Tier paired ledger rows"
+      ]
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-data-integrity",
+      "triggered": true,
+      "status": "executed",
+      "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data_sources_checked": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+      ],
+      "time_axis": "Existing model input timestamp(기존 모델 입력 타임스탬프) with train/validation/OOS split.",
+      "time_axis_boundary": "Use existing closed-bar feature contract(기존 확정봉 피처 계약 사용).",
+      "sample_scope": "US100 M5 Tier A full-context model input(US100 M5 티어 A 전체 문맥 모델 입력).",
+      "missing_or_duplicate_check": "Deferred to Frontier03B proxy scout(전선03B 프록시 탐색에서 재검사).",
+      "feature_label_boundary": "Labels must use future return only after feature timestamp(피처 시각 이후 미래 수익만 라벨에 사용).",
+      "split_boundary": "Existing time ordered train/validation/OOS(기존 시간순 학습/검증/표본외).",
+      "leakage_checks": [
+        "no validation/OOS label fitting",
+        "no future feature in regime definition"
+      ],
+      "leakage_risk": "Regime-conditioned labels may accidentally use future return in regime assignment(레짐 배정에 미래 수익 누수 위험).",
+      "missing_data_boundary": "Stage open only; row-level audit required in Frontier03B(단계 개방 전용; 행 단위 감사는 전선03B 필요).",
+      "data_hash_or_identity": {
+        "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "dataset_exists": true,
+        "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+        "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "feature_order_exists": true,
+        "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+      },
+      "integrity_judgment": "usable_with_boundary(경계 있는 사용 가능)"
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-model-validation",
+      "triggered": true,
+      "status": "executed",
+      "model_family": "ONNX-ready tabular classifier planned(온엑스 준비 표형 분류기 계획).",
+      "target_and_label": "Regime-conditioned asymmetric long/short labels planned(레짐 조건 비대칭 롱/숏 라벨 계획).",
+      "split_method": "train/validation/OOS now; WFO later(현재 학습/검증/표본외; WFO는 나중).",
+      "selection_metric": "four-axis target-distance score(네 축 목표 거리 점수).",
+      "secondary_metrics": [
+        "PF",
+        "density",
+        "DD",
+        "smoothness",
+        "side mix"
+      ],
+      "threshold_policy": "proxy scout will search bounded label/threshold surfaces(프록시 탐색에서 제한된 라벨/임계값 표면 검색).",
+      "overfit_risk": "label-regime combinatorics(라벨-레짐 조합 폭).",
+      "calibration_risk": "Scores are scout ranks, not calibrated probabilities(점수는 탐색 순위, 보정 확률 아님).",
+      "comparison_baseline": "Frontier02C seed observation(전선02C 씨앗 관찰).",
+      "model_or_threshold_surface": "No model selected(모델 선택 없음); label/model design only(라벨/모델 설계 전용).",
+      "validation_split": "train/validation/OOS design boundary(학습/검증/표본외 설계 경계).",
+      "overfit_checks": [
+        "limit first proxy axes",
+        "hold OOS as readout",
+        "no WFO before Grok pre-expensive review"
+      ],
+      "selection_metric_boundary": "scout target-distance only(탐색 목표 거리 전용), not candidate selection(후보 선택 아님).",
+      "validation_judgment": "exploratory(탐색)",
+      "allowed_claims": [
+        "exploratory_design_only(탐색 설계 전용)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-exploration-mandate",
+      "triggered": true,
+      "status": "executed",
+      "exploration_lane": "frontier_hypothesis_lifecycle(전선 가설 생명주기)",
+      "idea_boundary": "IDEA-FR03-REGIME-CONDITIONED-ASYMMETRIC-ONNX-LABELING",
+      "hypothesis": "Regime-conditioned asymmetric ONNX labeling/modeling(레짐 조건 비대칭 온엑스 라벨/모델링)이 Frontier02 density clue(전선02 밀도 단서)를 보존하면서 PF/DD/smoothness(수익 팩터/손실폭/매끄러움)를 개선할 수 있는지 시험합니다.",
+      "legacy_relation": "prior_evidence_only(이전 근거 전용)",
+      "tier_scope": "Tier A first; Tier B missing_required; combined out_of_scope_by_claim.",
+      "broad_sweep": "regime x side-asymmetric label x horizon(레짐 x 방향 비대칭 라벨 x 보유기간)",
+      "extreme_sweep": "wide neutral bands and side-specific payoff thresholds(넓은 중립 구간과 방향별 손익 임계값)",
+      "micro_search_gate": "At least one validation/OOS target-distance improvement before micro search(검증/표본외 목표 거리 개선 후 미세 탐색).",
+      "wfo_plan": "WFO planned only after proxy survivor and Grok pre-expensive review(프록시 생존자와 그록 검토 후 WFO).",
+      "failure_memory": "If label/regime axis gives no improvement, record negative memory and do not repeat threshold repair.",
+      "evidence_boundary": "stage_open_design_only(단계 개방 설계 전용)",
+      "negative_memory_effect": "Frontier02 same-surface repair loop is blocked(전선02 같은 표면 수리 반복 차단).",
+      "operating_claim_boundary": "No completion/baseline/promotion/runtime/live/goal claim(완성/기준선/승격/런타임/실거래/목표 주장 없음)."
+    },
+    {
+      "packet_id": "frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1",
+      "skill": "obsidian-answer-clarity",
+      "triggered": true,
+      "status": "executed",
+      "plain_conclusion": "Frontier03(전선03)을 새 라벨/레짐 가설로 열었습니다.",
+      "confirmed": [
+        "Grok review captured(그록 검토 기록)",
+        "stage docs written(단계 문서 작성)",
+        "no authority claim(권위 주장 없음)"
+      ],
+      "not_yet_confirmed": [
+        "model training",
+        "WFO",
+        "MT5",
+        "completion"
+      ],
+      "why_it_matters": "The project stops repeating Frontier02 threshold repair and tests a new axis(새 축 시험).",
+      "next_action": "frontier03B_regime_asymmetric_label_proxy_scout_v1",
+      "forbidden_claims_avoided": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    }
+  ]
+}

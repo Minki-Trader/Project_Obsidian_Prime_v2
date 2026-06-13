@@ -1485,3 +1485,19 @@ Register ideas when they become durable work, not for every passing thought.
 - `run364HQ_review_h17_oos108_pf125_single_source_probability_bin_veto_mt5_runtime_probe_without_db_v1`: MT5 net/PF/trades/density(MT5 순수익/수익 팩터/거래수/밀도) `113.38/1.05/932/2.9681528662`. Effect(효과): positive net(양수 순수익)은 보존하지만 PF/DD/density(PF/낙폭/밀도) 수리 조건으로 전환합니다.
 <!-- run364HR__run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1 -->
 - `run364HR_train_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`: HP MT5 telemetry(HP MT5 런타임 기록)를 replay(재생)해 hold/reversal/margin/pflat/session-side(보유/반전/마진/평탄 확률/세션-방향) 수리 표면을 만들었습니다. Effect(효과): 품질 수리와 밀도 수리의 충돌을 HS 검토 입력으로 바꿉니다.
+<!-- frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1__IDEA-FR03-REGIME-CONDITIONED-ASYMMETRIC-ONNX-LABELING -->
+- `IDEA-FR03-REGIME-CONDITIONED-ASYMMETRIC-ONNX-LABELING`: Frontier03(전선03) opens regime-conditioned asymmetric ONNX labeling/modeling(레짐 조건 비대칭 온엑스 라벨/모델링) as a new hypothesis lifecycle(새 가설 생명주기). Effect(효과): Frontier02(전선02)를 baseline(기준선)으로 상속하지 않고 label/regime axis(라벨/레짐 축)를 시험합니다.
+<!-- frontier03B_regime_asymmetric_label_proxy_scout_v1 -->
+- `frontier03B_regime_asymmetric_label_proxy_scout_v1`: regime/asymmetric label proxy scout(레짐/비대칭 라벨 프록시 탐색) completed(완료). Effect(효과): label axis(라벨 축)의 scout clue(탐색 단서) 여부를 기록했습니다.
+<!-- frontier03C_regime_asymmetric_label_micro_search_v1 -->
+- `frontier03C_regime_asymmetric_label_micro_search_v1`: trainable ONNX smoke(학습 가능 온엑스 스모크) completed(완료). Effect(효과): oracle label clue(오라클 라벨 단서)의 예측 가능성을 확인했습니다.
+<!-- frontier03D_grok_pre_expensive_wfo_mt5_review_v1 -->
+- `frontier03D_grok_pre_expensive_wfo_mt5_review_v1`: Grok pre-expensive review(비싼 검증 전 그록 검토) accepted repair_first(수리 우선). Effect(효과): ONNX seed observation(온엑스 씨앗 관찰)을 WFO/MT5로 과장하지 않습니다.
+<!-- frontier03D_regime_asymmetric_label_model_repair_v1 -->
+- `frontier03D_regime_asymmetric_label_model_repair_v1`: decision surface repair(결정 표면 수리) completed(완료). Effect(효과): density/PF/DD(밀도/수익 팩터/손실폭) 공동 수리 여부를 확인했습니다.
+<!-- frontier03E_bounded_two_teacher_density_repair_v1 -->
+- `frontier03E_bounded_two_teacher_density_repair_v1`: bounded two-teacher repair(상한 있는 두 교사 수리) completed(완료). Effect(효과): Grok(그록)이 허용한 repair cap(수리 상한) 안에서 ONNX density/PF/DD(온엑스 밀도/수익 팩터/손실폭)를 다시 확인했습니다.
+<!-- frontier03F_grok_stage_closeout_review_v1 -->
+- `frontier03F_grok_stage_closeout_review_v1`: Grok stage closeout review(그록 단계 마감 검토) captured(기록). Effect(효과): Frontier03 closeout(전선03 마감)을 preserved clue/negative memory(보존 단서/부정 기억) 경계로 좁혔습니다.
+<!-- frontier03G_stage_closeout_v1 -->
+- `frontier03G_stage_closeout_v1`: Frontier03(전선03) closeout(마감). Preserved clue(보존 단서)는 `f03e_repair__f03b_v04_trend_easy_chop_strict__both__p40__m4__cd6`이고, negative memory(부정 기억)는 oracle-to-ONNX transfer gap(오라클에서 온엑스 전달 격차)입니다. Effect(효과): 다음 frontier(전선)는 reference only(참조 전용)로만 사용할 수 있습니다.

@@ -1,0 +1,33 @@
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 pre-expensive decision(비싼 검증 전 결정).
+
+Current truth(현재 진실):
+- Stage(단계): `stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling`
+- Parent run(부모 실행): `frontier03C_regime_asymmetric_label_micro_search_v1`
+- Frontier03B(전선03B) label-proxy replay(라벨 프록시 재생) found oracle-style scout clue(오라클 방식 탐색 단서), but it is not a tradable signal(거래 가능 신호 아님).
+- Frontier03C(전선03C) trained one LogisticRegression ONNX(로지스틱 회귀 온엑스) from the best Frontier03B label variant(라벨 변형).
+- ONNX parity(온엑스 동등성): `True`
+- Best Frontier03C OOS net/PF/density/DD(전선03C 표본외 순수익/수익 팩터/밀도/손실폭): `0.12545054475876388` / `1.1717208862933575` / `3.33587786259542/day` / `7.248950562478895%`
+- Best Frontier03C validation net/PF/density/DD(전선03C 검증 순수익/수익 팩터/밀도/손실폭): `0.13914756174931184` / `1.123626116360375` / `2.901639344262295/day` / `9.588322679173778%`
+- Observation rows(관찰 행): `23`
+- Frontier03B go rows(전선03B 진행 행): `12`, but oracle-bound(오라클 경계) and not runtime-bound(런타임 경계 아님).
+
+Evidence paths(근거 경로):
+- Frontier03B report(전선03B 보고서): `stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/03_reviews/frontier03B_regime_asymmetric_label_proxy_scout_v1_report.md` sha256 `2b229b3eb0518c4251a1e46741515930bafb982fc8d8f73ce0738c7421cf8b06`
+- Frontier03B manifest(전선03B 실행 목록): `stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/02_runs/frontier03B_regime_asymmetric_label_proxy_scout_v1/run_manifest.json` sha256 `bf0510e6fee290c95a3ca6bda56e7f0ee18daa7bfdce3cc5e657a759195d76b0`
+- Frontier03C report(전선03C 보고서): `stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/03_reviews/frontier03C_regime_asymmetric_label_micro_search_v1_report.md` sha256 `e13e1253a026d9b8825458cf9802b116bb780d85786ccc5b0d7428d842fae1c1`
+- Frontier03C manifest(전선03C 실행 목록): `stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/02_runs/frontier03C_regime_asymmetric_label_micro_search_v1/run_manifest.json` sha256 `96186e430197b8d89bdc2a63d3ce5ad1dec5427efb2ebda8fedd5a3b2200f523`
+
+Codex proposed direction before Grok(그록 전 코덱스 제안 방향):
+- Do not claim completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 주장 금지).
+- Because Frontier03C has ONNX parity and positive validation/OOS net(검증/표본외 양수 순수익), consider a narrow WFO/stress precheck(좁은 워크포워드/스트레스 사전 확인) only if Grok agrees the density gap(밀도 부족) is not a hard stop at this exploratory stage(탐색 단계).
+- Alternative repair path(대안 수리 경로): avoid WFO/MT5 and first repair density from 3.34/day toward 5/day without destroying DD(손실폭) and PF(수익 팩터).
+
+Focused question(집중 질문):
+Should Codex(코덱스) proceed to narrow WFO/stress/MT5 precheck(좁은 워크포워드/스트레스/MT5 사전 확인), or should it repair the ONNX decision surface(온엑스 결정 표면) first because density(밀도) is below 5/day and PF(수익 팩터) is only 1.17?
+
+Please answer in this structure:
+1. Recommendation(권고): proceed_to_precheck(사전 확인 진행) / repair_first(수리 우선) / closeout_negative_memory(부정 기억 마감)
+2. Reasoning(근거)
+3. Risks(위험)
+4. Narrow next experiment(좁은 다음 실험)
+5. Do-not-claim boundary(주장 금지 경계)

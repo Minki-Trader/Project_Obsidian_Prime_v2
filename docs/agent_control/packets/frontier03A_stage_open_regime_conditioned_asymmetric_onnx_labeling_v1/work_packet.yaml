@@ -1,0 +1,199 @@
+version: work_packet_schema_v2
+packet_id: frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1
+created_at_utc: '2026-06-13T17:55:43Z'
+user_request:
+  requested_action: open_frontier03_regime_conditioned_asymmetric_onnx_labeling
+  source: persistent_goal(지속 목표)
+current_truth:
+  active_stage_before: stage_frontier_02__four_axis_joint_onnx_proxy_scout
+  active_stage_after: stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling
+  current_run: frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1
+  latest_completed_run_before: frontier02F_stage_closeout_preserved_clue_negative_memory_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/04_selected/selection_status.md
+work_classification:
+  work_packet_lifecycle: stage_open_to_experiment_design_to_report(단계 개방-실험 설계-보고)
+  primary_family: state_sync
+  detected_families:
+  - state_sync
+  - experiment_design
+  - artifact_lineage
+  mutation_intent: true
+  execution_intent: false
+  branch_worktree_fit: main branch(메인 브랜치), clean pre-change(변경 전 깨끗함)
+risk_vector_scan:
+  required_gates:
+  - state_sync_audit
+  - external_review_packet
+  - artifact_lineage_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+  risk_vectors:
+  - stage_drift(단계 드리프트)
+  - baseline_inheritance(기준선 상속)
+  - threshold_repair_loop(임계값 수리 반복)
+  - authority_overclaim(권위 과장)
+decision_lock:
+  locked_decision: open_new_frontier_stage_design_only(새 전선 단계 설계 전용 개방)
+  may_mutate: true
+  forbidden_mutations:
+  - runtime_authority_claim
+  - baseline_selection
+  - promotion_claim
+interpreted_scope:
+  work_families:
+  - state_sync
+  - experiment_design
+  - artifact_lineage
+  target_surfaces:
+  - stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling
+  - frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1
+  scope_units:
+  - stage_docs
+  - grok_review
+  - control_packet
+  - ledgers
+  - current_truth
+  execution_layers:
+  - design_only_no_model_training_no_wfo_no_mt5
+  mutation_policy: create_stage_open_docs_and_sync_state(단계 개방 문서 생성 및 상태 동기화)
+  evidence_layers:
+  - grok_review
+  - local_verification
+  - state_sync
+  - artifact_lineage
+  reduction_policy: claim_boundary_lowered_to_stage_open_design(주장 경계는 단계 개방 설계로 낮춤)
+  claim_boundary:
+    allowed:
+    - stage_opened(단계 개방)
+    - grok_stage_open_review_captured(그록 단계 개방 검토 기록)
+    - proxy_design_ready(프록시 설계 준비)
+    - no_authority_claimed(권위 주장 없음)
+    forbidden:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+acceptance_criteria:
+- id: AC-001
+  text: Frontier03 stage docs exist(전선03 단계 문서 존재).
+  expected_artifact: stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/00_spec/stage_brief.md
+- id: AC-002
+  text: Grok stage-open review captured(그록 단계 개방 검토 기록).
+  expected_artifact: docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/clean_output.md
+- id: AC-003
+  text: Current truth synced to Frontier03(현재 진실이 전선03으로 동기화).
+  expected_artifact: docs/workspace/workspace_state.yaml
+work_plan:
+- Create bounded Grok prompt(제한 그록 프롬프트 생성)
+- Classify Grok advice(그록 조언 분류)
+- Write stage-open docs and packet(단계 개방 문서와 묶음 작성)
+- Run local gates(로컬 게이트 실행)
+skill_routing:
+  primary_family: state_sync
+  primary_skill: obsidian-stage-transition
+  support_skills:
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  skills_considered:
+  - obsidian-stage-transition
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  - obsidian-grok-collaboration
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-exploration-mandate
+  - obsidian-answer-clarity
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  skills_selected:
+  - obsidian-stage-transition
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  - obsidian-grok-collaboration
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-exploration-mandate
+  - obsidian-answer-clarity
+  skills_not_used:
+    obsidian-runtime-parity:
+      not_selected_reason: No MT5/runtime execution(MT5/런타임 실행 없음).
+    obsidian-backtest-forensics:
+      not_selected_reason: No Strategy Tester output(전략 테스터 출력 없음).
+  required_skill_receipts:
+  - obsidian-stage-transition
+  - obsidian-reentry-read
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  - obsidian-grok-collaboration
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-exploration-mandate
+  - obsidian-answer-clarity
+  required_gates:
+  - state_sync_audit
+  - external_review_packet
+  - artifact_lineage_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  source_inputs:
+  - stages/stage_frontier_02__four_axis_joint_onnx_proxy_scout/03_reviews/frontier02F_stage_closeout_preserved_clue_negative_memory_v1_report.md
+  - docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/prompt.md
+  - docs/agent_control/grok_reviews/2026-06-14_frontier03_stage_open/medium_review/clean_output.md
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - stage_pipelines/stage41/directional_asymmetric_label_horizon_probe.py
+  - stage_pipelines/stage347/design_cash_open_asymmetric_long_short_source_without_db.py
+  - stage_pipelines/stage364/train_timestamp_context_cost_filter_model_without_db.py
+  - foundation/labels/directional_asymmetric.py
+  produced_artifacts:
+  - stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/03_reviews/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1_report.md
+  - stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/00_spec/stage_brief.md
+  - stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/01_inputs/experiment_design.md
+  - stages/stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling/04_selected/selection_status.md
+  - docs/agent_control/packets/frontier03A_stage_open_regime_conditioned_asymmetric_onnx_labeling_v1/work_packet.yaml
+  external_verification_status: out_of_scope_by_claim(주장 범위 밖)
+gates:
+  required:
+  - state_sync_audit
+  - external_review_packet
+  - artifact_lineage_audit
+  - work_packet_schema_lint
+  - skill_receipt_lint
+  - skill_receipt_schema_lint
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    kpi_contract_audit: No trading KPI(거래 KPI 없음) in stage-open design packet(단계 개방
+      설계 묶음).
+    mt5_runtime_evidence_gate: No MT5 execution(MT5 실행 없음).
+    model_training_gate: No model training(모델 학습 없음).
+final_claim_policy:
+  allowed_claims:
+  - stage_opened(단계 개방)
+  - grok_stage_open_review_captured(그록 단계 개방 검토 기록)
+  - proxy_design_ready(프록시 설계 준비)
+  - no_authority_claimed(권위 주장 없음)
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
