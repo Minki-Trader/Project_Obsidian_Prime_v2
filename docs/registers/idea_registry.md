@@ -1507,3 +1507,9 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier04B_path_aware_label_proxy_scout_v1`: path-aware label proxy scout(경로 인식 라벨 프록시 탐색) recorded `1` joint path rows(동시 경로 행). Effect(효과): trainable transfer(학습 가능 전달) 전 Grok review(그록 검토)로 넘길 근거를 만들었습니다.
 <!-- frontier04E_stage_closeout_v1 -->
 - `frontier04E_stage_closeout_v1`: Frontier04(전선04) closed as negative_memory plus preserved_clue(부정 기억 + 보존 단서). Effect(효과): path-aware oracle seed(경로 인식 오라클 씨앗)는 보존하지만 trainable transfer(학습 전달)는 상속하지 않습니다.
+<!-- frontier05A_stage_open_closed_bar_path_precursor_feature_surface_v1 -->
+- `IDEA-FR05-CLOSED-BAR-PATH-PRECURSOR-FEATURE-SURFACE`: Frontier05(전선05) opens closed-bar path precursor feature surface(확정봉 경로 선행 피처 표면). Effect(효과): Frontier04(전선04)의 라벨 단서를 상속하지 않고 learnability bottleneck(학습 가능성 병목)을 새 축으로 시험합니다.
+<!-- frontier05B_closed_bar_path_precursor_feature_scout_v1 -->
+- `frontier05B_closed_bar_path_precursor_feature_scout_v1`: closed-bar path precursor feature scout(확정봉 경로 선행 피처 탐색) recorded `0` improvement pass rows(개선 통과 행). Effect(효과): feature bottleneck(피처 병목) 여부를 기준/증강 비교로 기록했습니다.
+<!-- frontier05C_stage_closeout_v1 -->
+- `IDEA-FR05-CLOSED-BAR-PATH-PRECURSOR-FEATURE-SURFACE`: closed as negative_memory(부정 기억). Effect(효과): simple closed-bar OHLC precursor expansion(단순 확정봉 OHLC 선행 피처 확장)을 다음 가설로 상속하지 않습니다.

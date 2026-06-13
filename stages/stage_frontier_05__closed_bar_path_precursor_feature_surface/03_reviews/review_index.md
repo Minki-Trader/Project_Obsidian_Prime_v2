@@ -1,0 +1,5 @@
+﻿# Review Index(검토 색인)
+
+- `frontier05A_stage_open_closed_bar_path_precursor_feature_surface_v1`: `stages/stage_frontier_05__closed_bar_path_precursor_feature_surface/03_reviews/frontier05A_stage_open_closed_bar_path_precursor_feature_surface_v1_report.md`
+- `frontier05B_closed_bar_path_precursor_feature_scout_v1`: `stages/stage_frontier_05__closed_bar_path_precursor_feature_surface/03_reviews/frontier05B_closed_bar_path_precursor_feature_scout_v1_report.md`
+- `frontier05C_stage_closeout_v1`: `stages/stage_frontier_05__closed_bar_path_precursor_feature_surface/03_reviews/frontier05C_stage_closeout_v1_report.md` - `negative_memory(부정 기억)`
