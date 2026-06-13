@@ -1549,3 +1549,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR10-SPLIT-CONSISTENT-UTILITY-DISTILLATION`: Frontier10(전선10) opens split-consistent utility distillation(분할 일관 효용 증류). Effect(효과): Frontier09(전선09) bridge repair(브리지 수리)를 반복하지 않고 train subwindow utility consensus(학습 하위구간 효용 합의)를 새 supervision axis(감독 축)로 시험합니다.
 <!-- frontier10B_utility_distillation_proxy_scout_v1 -->
 - `frontier10B_utility_distillation_proxy_scout_v1`: split-consistent utility distillation proxy scout(분할 일관 효용 증류 프록시 탐색)을 기록했습니다. Effect(효과): Frontier08/09(전선08/09)를 상속하지 않고 reference-only(참조 전용)로 비교합니다.
+<!-- frontier10C_utility_distillation_capped_repair_scout_v1 -->
+- `frontier10C_utility_distillation_capped_repair_scout_v1`: utility distillation capped repair scout(효용 증류 상한 수리 탐색)를 기록했습니다. Effect(효과): post-hoc bridge(사후 브리지) 없이 density cliff(밀도 절벽)를 한 번 시험했습니다.
+<!-- frontier10D_stage_closeout_split_consistent_utility_distillation_v1 -->
+- `frontier10D_stage_closeout_split_consistent_utility_distillation_v1`: Frontier10 split-consistent utility distillation(전선10 분할 일관 효용 증류)은 preserved clue + negative memory(보존 단서 + 부정 기억)로 닫혔습니다. Effect(효과): utility-margin/side-weight clue(효용 마진/방향 가중 단서)는 참조 전용으로, validation DD failure(검증 손실폭 실패)와 same-family repair loop(같은 계열 수리 반복)는 부정 기억으로 남깁니다.
