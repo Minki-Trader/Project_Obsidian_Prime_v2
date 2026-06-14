@@ -1,0 +1,120 @@
+﻿{
+  "best_candidate": {
+    "candidate_id": "f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+    "target_id": "f17b_firewall_h10_ddq75_contq65",
+    "model_id": "logreg_l2_c0p5_plain_argmax",
+    "model_instance_id": "f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+    "strict_scout_clue_pass": false,
+    "seed_surface_pass": false,
+    "preserved_clue_pass": true,
+    "loss_cluster_score": 5.83701299202768,
+    "validation_profit_factor": 1.303382531010458,
+    "validation_trades_per_day": 3.9726775956284155,
+    "validation_dd_risk_percent": 13.43836637055238,
+    "validation_net_profit": 0.34806402954922844,
+    "validation_equity_trend_r2": 0.7022111256104763,
+    "oos_profit_factor": 1.1367413264202848,
+    "oos_trades_per_day": 5.091603053435114,
+    "oos_dd_risk_percent": 12.764709407251251,
+    "oos_net_profit": 0.1038255750263368,
+    "oos_equity_trend_r2": 0.2698889759290999,
+    "validation_oos_subperiod_worst_dd_risk_percent": 12.764709407251317,
+    "validation_oos_negative_subperiod_fraction": 0.45454545454545453,
+    "validation_oos_subperiod_min_trades_per_day": 1.9047619047619047,
+    "parity_passed": true,
+    "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.onnx",
+    "onnx_sha256": "d81388069483a1fb707af99111d7b9caea83699ceb7f2ca2b9f17f8f409484c8",
+    "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.joblib",
+    "joblib_sha256": "dec779d5a46a09e09cd05de5d7543abb6cb96cd28da4ec3f115571183c05d1b9",
+    "validation_macro_f1": 0.39797009876204137,
+    "oos_macro_f1": 0.40415041265742474,
+    "f16b_pf_axis_not_regressed": true,
+    "f16d_runtime_pf_axis_not_regressed": true,
+    "density_floor_validation_oos": true,
+    "oos_dd_improved_vs_f16": true,
+    "validation_dd_contained": true,
+    "signal_contract": "argmax_short_or_long_and_current_adverse_veto_false_no_score_rank_density_calibration(최대확률 숏/롱과 현재 불리 배제 false, 점수 순위 빈도 보정 없음)"
+  },
+  "frontier17b_status": "loss_cluster_firewall_preserved_clue_no_authority",
+  "source_integrity": {
+    "data_source": {
+      "model_input_dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "raw_us100": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "raw_manifest": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+    },
+    "time_axis": "model timestamp(모델 타임스탬프) is matched to raw time_close_unix as broker_clock_close_key(브로커 시계 종가 키); timezone_status remains unresolved, so this is not a direct UTC market-session claim(직접 UTC 세션 주장 아님).",
+    "sample_scope": {
+      "symbol": "US100",
+      "timeframe": "M5",
+      "model_rows": 46650,
+      "raw_rows": 261345,
+      "start_timestamp": "2022-09-01 16:40:00+00:00",
+      "end_timestamp": "2026-04-13 22:00:00+00:00",
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "tier_a": "model input rows plus raw US100 OHLC(모델 입력 행 + 원천 US100 OHLC)",
+      "tier_b": "missing_required(필수 누락)"
+    },
+    "missing_or_duplicate_check": {
+      "model_duplicate_timestamps": 0,
+      "raw_duplicate_close_keys": 0,
+      "missing_raw_matches": 0,
+      "missing_future_paths": {
+        "h12": 0,
+        "h18": 0
+      }
+    },
+    "feature_label_boundary": "labels use only raw future OHLC after the current closed bar(현재 종료봉 이후 원천 미래 OHLC만 사용); feature_set_v2 columns are not loaded into label construction(피처 컬럼은 라벨 생성에 로드하지 않음).",
+    "split_boundary": "train split(학습 분할) only supplies the p90 scale; validation/OOS(검증/표본밖)는 평가 전용입니다.",
+    "leakage_risk": "path labels are oracle labels(미래 경로를 아는 라벨) and cannot be interpreted as runtime signals(런타임 신호). current bar high/low is excluded by starting at t+1(현재 봉 고저는 t+1 시작으로 제외).",
+    "data_hash_or_identity": {
+      "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "raw_manifest_sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "fwd12_max_abs_diff_vs_model": 3.0035138820494467e-09,
+      "fwd12_p99_abs_diff_vs_model": 3.888873045809762e-10
+    },
+    "integrity_judgment": "usable_with_boundary(경계부 사용 가능)"
+  },
+  "split_rows": {
+    "validation_is": {
+      "attempt_name": "frontier17c_tier_a_validation_is",
+      "split": "validation_is",
+      "rows": 9844,
+      "days_in_scope": 183,
+      "decision_mode": "argmax_probe_plus_runtime_veto_tape",
+      "signal_count": 727,
+      "long_count": 415,
+      "short_count": 312,
+      "flat_count": 9117,
+      "raw_signal_count": 759,
+      "runtime_veto_count": 2196,
+      "blocked_pred_trade_count": 32,
+      "expected_density_per_day": 3.9726775956284155,
+      "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+      "effect": "Python expected signal counts(파이썬 예상 신호 수)를 MT5 summary(MT5 요약)와 비교합니다."
+    },
+    "oos": {
+      "attempt_name": "frontier17c_tier_a_oos",
+      "split": "oos",
+      "rows": 7584,
+      "days_in_scope": 131,
+      "decision_mode": "argmax_probe_plus_runtime_veto_tape",
+      "signal_count": 667,
+      "long_count": 411,
+      "short_count": 256,
+      "flat_count": 6917,
+      "raw_signal_count": 680,
+      "runtime_veto_count": 1737,
+      "blocked_pred_trade_count": 13,
+      "expected_density_per_day": 5.091603053435114,
+      "probability_row_sum_max_abs_error": 2.220446049250313e-16,
+      "effect": "Python expected signal counts(파이썬 예상 신호 수)를 MT5 summary(MT5 요약)와 비교합니다."
+    }
+  },
+  "effect": "F17B source truth(전선17B 원천 진실)를 runtime probe(런타임 탐침)에 고정합니다."
+}

@@ -1584,3 +1584,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier16D_runtime_probe_supplement_v1`: Frontier16(전선16) runtime probe supplement(런타임 탐침 보강). Effect(효과): stage-level MT5 probe habit(단계별 MT5 탐침 습관)을 강제하고 다음 frontier(다음 전선)는 새 가설로 진행합니다.
 <!-- frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1 -->
 - `IDEA-FR17-LOSS-CLUSTER-FIREWALL-PROFIT-PERSISTENCE-ONNX-SCOUT`: `frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1` opens loss-cluster firewall profit-persistence ONNX scout(손실 군집 방화벽 수익 지속성 ONNX 탐색). Effect(효과): F15/F16(전선15/16)의 density-first threshold/edge-margin(빈도 우선 임계값/엣지 마진) 반복 없이 DD-first hazard firewall(손실폭 우선 위험 방화벽)을 시험합니다.
+<!-- frontier17C_loss_cluster_firewall_runtime_probe_v1 -->
+- `frontier17C_loss_cluster_firewall_runtime_probe_v1`: Frontier17(전선17) runtime probe(런타임 탐침). Effect(효과): loss-cluster firewall(손실 군집 방화벽)의 MT5 handoff(인계) 가능성을 확인합니다.
+<!-- frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1 -->
+- `frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1`: loss-cluster firewall profit persistence(손실 군집 방화벽 수익 지속) closed as negative memory(부정 기억). Effect(효과): native MT5 economics/DD(MT5 실행 경제성/손실폭) 실패를 반복 금지 단서로 남깁니다.

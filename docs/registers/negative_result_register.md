@@ -1031,3 +1031,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - observation(관찰): validation_is: status=completed/completed, PF=1.37, DD=12.2, trades=229, signal_diff=0 | oos: status=completed/completed, PF=0.87, DD=47.17, trades=164, signal_diff=0
 - boundary(경계): F16C negative memory(부정 기억)는 유지. completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 not_claimed(주장 없음).
 - report(보고서): `stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/frontier16D_runtime_probe_supplement_v1_report.md`
+<!-- frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1 -->
+<!-- frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1 -->
+## frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1 Frontier17 Negative Memory(전선17 부정 기억)
+
+- judgment(판정): `negative_memory(부정 기억)`
+- negative memory(부정 기억): `loss_cluster_firewall_profit_persistence_failed_native_mt5_economics_and_dd(손실 군집 방화벽 수익 지속 가설은 MT5 실행 경제성과 손실폭에서 실패)`
+- preserved clue(보존 단서): `runtime_veto_tape_handoff_preserved_for_future_closed_bar_veto_runtime_probe(종료봉 차단 런타임 탐침을 위한 런타임 차단 테이프 인계 단서 보존)`
+- runtime observation(런타임 관찰): validation_is: PF=1.13, DD=35.45%, trades=317, signal_diff=0 | oos: PF=0.92, DD=47.5%, trades=254, signal_diff=0
+- boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 not_claimed(주장 없음).
+- report(보고서): `stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1_report.md`

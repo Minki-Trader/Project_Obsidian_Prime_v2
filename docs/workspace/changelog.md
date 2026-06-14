@@ -6952,3 +6952,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T03:01:02Z: `frontier16D_runtime_probe_supplement_v1` added MT5 runtime probe supplement(MT5 런타임 탐침 보강) for Frontier16(전선16). Effect(효과): F16 negative memory(부정 기억)는 유지하고 runtime observation(런타임 관찰)만 기록합니다.
 <!-- frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1 -->
 - 2026-06-14T03:21:46Z: `frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1` opened Frontier17(전선17) after Grok stage-open accepted(그록 단계 개방 수용). Effect(효과): next run(다음 실행) `frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1` will test 3 firewall profiles(방화벽 프로필 3개) with definition locks(정의 고정) and MT5 runtime probe obligation(MT5 런타임 탐침 의무), no authority claims(권위 주장 없음).
+<!-- frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1 -->
+- 2026-06-14T03:44:41Z: `frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1` preserved_clue_candidate(보존 단서 후보). Effect(효과): strict=0, seed=0, preserved=3, next `frontier17C_grok_pre_expensive_loss_cluster_firewall_review_v1`.
+<!-- frontier17C_loss_cluster_firewall_runtime_probe_v1 -->
+- 2026-06-14T04:04:18Z: `frontier17C_loss_cluster_firewall_runtime_probe_v1` added MT5 runtime probe(MT5 런타임 탐침) for Frontier17(전선17). Effect(효과): F17B preserved clue(보존 단서)를 runtime observation(런타임 관찰)로 확인합니다.
+<!-- frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1 -->
+- 2026-06-14T04:11:15Z: `frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1` closed Frontier17(전선17) as negative memory(부정 기억). Effect(효과): runtime handoff clue(런타임 인계 단서)는 보존하고 next run(다음 실행)은 `frontier18A_stage_open_new_hypothesis_design_v1`입니다.

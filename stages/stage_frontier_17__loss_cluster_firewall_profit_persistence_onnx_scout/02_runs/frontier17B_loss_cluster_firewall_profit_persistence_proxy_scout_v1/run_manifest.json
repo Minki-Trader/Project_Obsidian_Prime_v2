@@ -1,0 +1,365 @@
+﻿{
+  "created_at_utc": "2026-06-14T03:44:41Z",
+  "stage_id": "stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout",
+  "run_id": "frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1",
+  "run_number": "frontier17B",
+  "parent_run_id": "frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1",
+  "next_run_id": "frontier17C_grok_pre_expensive_loss_cluster_firewall_review_v1",
+  "status": "loss_cluster_firewall_preserved_clue_no_authority",
+  "judgment": "preserved_clue_candidate(보존 단서 후보)",
+  "strict_scout_clue_rows": 0,
+  "seed_surface_rows": 0,
+  "preserved_clue_rows": 3,
+  "candidate_row_count": 9,
+  "best_candidate_row": {
+    "candidate_id": "f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+    "target_id": "f17b_firewall_h10_ddq75_contq65",
+    "model_id": "logreg_l2_c0p5_plain_argmax",
+    "model_instance_id": "f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+    "strict_scout_clue_pass": false,
+    "seed_surface_pass": false,
+    "preserved_clue_pass": true,
+    "loss_cluster_score": 5.83701299202768,
+    "validation_profit_factor": 1.303382531010458,
+    "validation_trades_per_day": 3.9726775956284155,
+    "validation_dd_risk_percent": 13.43836637055238,
+    "validation_net_profit": 0.34806402954922844,
+    "validation_equity_trend_r2": 0.7022111256104763,
+    "oos_profit_factor": 1.1367413264202848,
+    "oos_trades_per_day": 5.091603053435114,
+    "oos_dd_risk_percent": 12.764709407251251,
+    "oos_net_profit": 0.1038255750263368,
+    "oos_equity_trend_r2": 0.2698889759290999,
+    "validation_oos_subperiod_worst_dd_risk_percent": 12.764709407251317,
+    "validation_oos_negative_subperiod_fraction": 0.45454545454545453,
+    "validation_oos_subperiod_min_trades_per_day": 1.9047619047619047,
+    "parity_passed": true,
+    "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.onnx",
+    "onnx_sha256": "d81388069483a1fb707af99111d7b9caea83699ceb7f2ca2b9f17f8f409484c8",
+    "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.joblib",
+    "joblib_sha256": "dec779d5a46a09e09cd05de5d7543abb6cb96cd28da4ec3f115571183c05d1b9",
+    "validation_macro_f1": 0.39797009876204137,
+    "oos_macro_f1": 0.40415041265742474,
+    "f16b_pf_axis_not_regressed": true,
+    "f16d_runtime_pf_axis_not_regressed": true,
+    "density_floor_validation_oos": true,
+    "oos_dd_improved_vs_f16": true,
+    "validation_dd_contained": true,
+    "signal_contract": "argmax_short_or_long_and_current_adverse_veto_false_no_score_rank_density_calibration(최대확률 숏/롱과 현재 불리 배제 false, 점수 순위 빈도 보정 없음)"
+  },
+  "profile_count": 3,
+  "model_count": 3,
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "source_integrity": {
+    "data_source": {
+      "model_input_dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "raw_us100": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "raw_manifest": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+    },
+    "time_axis": "model timestamp(모델 타임스탬프) is matched to raw time_close_unix as broker_clock_close_key(브로커 시계 종가 키); timezone_status remains unresolved, so this is not a direct UTC market-session claim(직접 UTC 세션 주장 아님).",
+    "sample_scope": {
+      "symbol": "US100",
+      "timeframe": "M5",
+      "model_rows": 46650,
+      "raw_rows": 261345,
+      "start_timestamp": "2022-09-01 16:40:00+00:00",
+      "end_timestamp": "2026-04-13 22:00:00+00:00",
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "tier_a": "model input rows plus raw US100 OHLC(모델 입력 행 + 원천 US100 OHLC)",
+      "tier_b": "missing_required(필수 누락)"
+    },
+    "missing_or_duplicate_check": {
+      "model_duplicate_timestamps": 0,
+      "raw_duplicate_close_keys": 0,
+      "missing_raw_matches": 0,
+      "missing_future_paths": {
+        "h12": 0,
+        "h18": 0
+      }
+    },
+    "feature_label_boundary": "labels use only raw future OHLC after the current closed bar(현재 종료봉 이후 원천 미래 OHLC만 사용); feature_set_v2 columns are not loaded into label construction(피처 컬럼은 라벨 생성에 로드하지 않음).",
+    "split_boundary": "train split(학습 분할) only supplies the p90 scale; validation/OOS(검증/표본밖)는 평가 전용입니다.",
+    "leakage_risk": "path labels are oracle labels(미래 경로를 아는 라벨) and cannot be interpreted as runtime signals(런타임 신호). current bar high/low is excluded by starting at t+1(현재 봉 고저는 t+1 시작으로 제외).",
+    "data_hash_or_identity": {
+      "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "raw_manifest_sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "fwd12_max_abs_diff_vs_model": 3.0035138820494467e-09,
+      "fwd12_p99_abs_diff_vs_model": 3.888873045809762e-10
+    },
+    "integrity_judgment": "usable_with_boundary(경계부 사용 가능)"
+  },
+  "stage_context": {
+    "stage_brief": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/00_spec/stage_brief.md",
+      "sha256": "8a06f6270b500e61d1ecbae31f3066467b384b496c04ef506aee11283e1c3b0b"
+    },
+    "profile_spec": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/00_spec/firewall_profile_spec.md",
+      "sha256": "05b95b93c39780b1d98f22a46f3c73f7204ae125926aca61fb1a1abb7c155786"
+    },
+    "definition_locks": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/00_spec/definition_locks.md",
+      "sha256": "0925b783fcb9ee9a48d5e09782131bb31d3bc029247358d9400cdf2d709302b1"
+    },
+    "do_not_repeat": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/00_spec/do_not_repeat.md",
+      "sha256": "7c67d2366bb4fd5b9209c6e25f723808187735d0e4a9c840d1eb175adc9405ad"
+    },
+    "frontier17a_report": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1_report.md",
+      "sha256": "a0c623e6f1e4036ae6e7a93d26464130773f1364f27e058d1959cbe9dff3200f"
+    },
+    "grok_stage_open_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-14_frontier17_stage_open/small_review/clean_output.md",
+      "sha256": "fe7ac7bca3baf76647d9b3d20186c26ae529621c536218c157d93c1459c332db"
+    },
+    "checks": {
+      "workspace_current_stage_matches": true,
+      "workspace_next_run_matches": true,
+      "profile_count_locked_to_three": true,
+      "profile_ids_in_spec": true,
+      "definition_locks_present": true,
+      "no_f16_edge_margin_guard_present": true,
+      "runtime_probe_guard_present": true,
+      "stage_open_grok_available": true
+    },
+    "stage_open_artifact_boundary": "tracked_stage_docs_used_because_02_runs_is_gitignored(02_runs는 gitignore 대상이라 추적 단계 문서를 사용)"
+  },
+  "data_integrity": {
+    "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "time_axis": "US100 M5 closed-bar timestamps, UTC storage, New York calendar only for period grouping(US100 M5 종료봉 타임스탬프, UTC 저장, 기간 묶음만 뉴욕 달력)",
+    "sample_scope": "Tier A full-context model input rows, train/validation/OOS fixed split(Tier A 전체 문맥 모델 입력 행, 학습/검증/표본밖 고정 분할)",
+    "missing_or_duplicate_check": "usable_with_boundary(경계부 사용 가능)",
+    "feature_label_boundary": "features are closed-bar; continuation quality uses future return only as training label, not as runtime feature(피처는 종료봉, 지속 품질은 학습 라벨에만 미래 수익 사용)",
+    "split_boundary": "all thresholds and quantiles fit on train only(모든 임계값과 분위수는 학습 구간에서만 적합)",
+    "leakage_risk": "direction and loss-pressure state are current-bar features; continuation label is future and separated into target(방향과 손실 압력은 현재봉 피처, 지속 라벨은 미래 목표로 분리)",
+    "data_hash_or_identity": {
+      "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+    },
+    "integrity_judgment": "usable_with_boundary(경계부 사용 가능)"
+  },
+  "model_validation": {
+    "model_family": "fixed sklearn-to-ONNX class probability models(고정 sklearn-to-ONNX 분류 확률 모델)",
+    "target_and_label": "loss-pressure firewall plus realized continuation label(손실 압력 방화벽과 실현 지속 라벨)",
+    "split_method": "fixed train/validation/OOS split, no WFO yet(고정 학습/검증/표본밖 분할, WFO 아직 없음)",
+    "selection_metric": "strict clue, seed surface, preserved clue, then loss-cluster score(탐색 단서, 씨앗 표면, 보존 단서, 손실 군집 점수 순)",
+    "secondary_metrics": "PF, density, DD, subperiod DD, negative subperiod fraction, ONNX parity(PF, 빈도, 손실폭, 하위기간 손실폭, 부정 하위기간 비율, ONNX 동등성)",
+    "threshold_policy": "three pre-registered train-only profile quantiles; no score-rank density calibration(사전 등록 3개 학습 전용 프로필 분위수, 점수 순위 빈도 보정 없음)",
+    "overfit_risk": "single proxy pass without WFO; next expensive check requires Grok review(WFO 없는 단일 프록시 회차, 다음 비싼 검증 전 그록 검토 필요)",
+    "calibration_risk": "classifier outputs are class scores for argmax, not economic probabilities(분류기 출력은 최대확률용 점수, 경제 확률 아님)",
+    "comparison_baseline": "F16B proxy and F16D runtime observation are reference-only(F16B 프록시와 F16D 런타임 관찰은 참조 전용)",
+    "validation_judgment": "exploratory_scout_only(탐색 전용)",
+    "best_candidate": "f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation"
+  },
+  "artifact_lineage": {
+    "source_inputs": [
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/00_spec/stage_brief.md",
+      "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/00_spec/firewall_profile_spec.md",
+      "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/00_spec/definition_locks.md",
+      "docs/agent_control/grok_reviews/2026-06-14_frontier17_stage_open/small_review/clean_output.md"
+    ],
+    "producer": "stage_pipelines/stage_frontier_17/frontier17b_loss_cluster_firewall_profit_persistence_proxy_scout.py",
+    "consumer": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1_report.md",
+    "artifact_paths": [
+      "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1",
+      "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1_report.md"
+    ],
+    "artifact_hashes": "run_manifest records small evidence and generated model hashes(실행 목록이 작은 근거와 생성 모델 해시를 기록)",
+    "registry_links": [
+      "docs/registers/run_registry.csv",
+      "docs/registers/alpha_run_ledger.csv",
+      "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/stage_run_ledger.csv"
+    ],
+    "availability": "small_evidence_force_trackable_models_ignored_with_manifest(작은 근거는 강제 추적 가능, 모델은 목록으로 추적)",
+    "lineage_judgment": "connected_with_boundary(경계 포함 연결)"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  },
+  "wfo_status": "not_run_requires_grok_pre_expensive_before_wfo_or_mt5(WFO/MT5 전 그록 검토 필요)",
+  "mt5_status": "not_run_proxy_only_runtime_probe_required_before_closeout(프록시 전용, 마감 전 런타임 탐침 필요)",
+  "script_path": "stage_pipelines/stage_frontier_17/frontier17b_loss_cluster_firewall_profit_persistence_proxy_scout.py",
+  "script_sha256": "675fe291f00cc1a3ef6e7a7d3ab9255f93e93354cff933ccdda77a14e2dcbf8c",
+  "dataset": {
+    "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+  },
+  "feature_order": {
+    "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+  },
+  "artifacts": {
+    "profile_manifest": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/profile_manifest.csv",
+    "label_distribution": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/label_distribution.csv",
+    "oracle_metrics": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/oracle_metrics.csv",
+    "model_metrics": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/model_metrics.csv",
+    "subperiod_metrics": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/subperiod_metrics.csv",
+    "classification_metrics": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/classification_metrics.csv",
+    "onnx_parity": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/onnx_parity.csv",
+    "firewall_transfer_audit": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/firewall_transfer_audit.csv",
+    "candidate_summary": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/candidate_summary.csv",
+    "target_diagnostics": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/target_diagnostics.json",
+    "skipped": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/skipped.csv",
+    "final_decision": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/final_decision.json",
+    "run_manifest": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/run_manifest.json"
+  },
+  "artifact_identities": {
+    "profile_manifest": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/profile_manifest.csv",
+      "sha256": "43a27edfd591e93a624e6e84ab0cac4bcf2b046c4c31a2f3c51b3adc8f6e61fa"
+    },
+    "label_distribution": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/label_distribution.csv",
+      "sha256": "ee5cdd6e50f114b573452ec9e65c2541d9248baab88d737d3bad8ac9ee3c92b8"
+    },
+    "oracle_metrics": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/oracle_metrics.csv",
+      "sha256": "eed36983ad3850f813b9bcdf365c627881b0763a6c2c9434c61bf45f58554b9a"
+    },
+    "model_metrics": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/model_metrics.csv",
+      "sha256": "c7173df55f512c4ef23112282fd776179fa993a4178f418d321928d1c276e17f"
+    },
+    "subperiod_metrics": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/subperiod_metrics.csv",
+      "sha256": "90430fdb6dd344024455215aeb47a0690fd6f12408e7cefd9704d233c6620681"
+    },
+    "classification_metrics": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/classification_metrics.csv",
+      "sha256": "6e8299211172dbd4ad357808c36236ff3758ed0fd5eb7f61bcb0f25c18a7a1fc"
+    },
+    "onnx_parity": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/onnx_parity.csv",
+      "sha256": "cdbb1c78b4b4085699caceb79b7fbd040541c2847da165ed5495f2d26bd95244"
+    },
+    "firewall_transfer_audit": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/firewall_transfer_audit.csv",
+      "sha256": "918b628b315064ceb00dc5afb3bf57d8faed1a25163c4da9af36992657c8b893"
+    },
+    "candidate_summary": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/candidate_summary.csv",
+      "sha256": "3d2467b252111f4b5933d83ba8ca99b392f17e20c6d326a5922655b3ae7dbc8c"
+    },
+    "target_diagnostics": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/target_diagnostics.json",
+      "sha256": "65bc5357b798b03ee64cda2b9a0ecd1752b074bc1397d74d312f19410587e19e"
+    },
+    "skipped": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/skipped.csv",
+      "sha256": "b42f2099187886def637d6aa840022266e05cb6c987a9394e708e23cd505eb46"
+    },
+    "final_decision": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/final_decision.json",
+      "sha256": "27181c2c9da746f9e3112feac24d1695b44ca826b92c234142e1d97785bfa6e7"
+    }
+  },
+  "model_artifacts": [
+    {
+      "candidate_id": "f17b_firewall_h8_ddq70_contq60__lr_plain__firewall_continuation",
+      "model_id": "logreg_l2_c0p5_plain_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h8_ddq70_contq60__lr_plain__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h8_ddq70_contq60/f17b_f17b_firewall_h8_ddq70_contq60__lr_plain__firewall_continuation.joblib",
+      "joblib_sha256": "fe8736fa3932b8257d8e8dab6c082bb1ed69e1d1c986f5df778b9757d41ecc91",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h8_ddq70_contq60/f17b_f17b_firewall_h8_ddq70_contq60__lr_plain__firewall_continuation.onnx",
+      "onnx_sha256": "fb78876fcaddc6986db9c15df4597fe105639e2e020c1c1826537d2ef84c1f59",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h8_ddq70_contq60__lr_bal__firewall_continuation",
+      "model_id": "logreg_l2_c0p5_balanced_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h8_ddq70_contq60__lr_bal__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h8_ddq70_contq60/f17b_f17b_firewall_h8_ddq70_contq60__lr_bal__firewall_continuation.joblib",
+      "joblib_sha256": "f0f2cdd2f427de54e5e5e8024d980b1b518e12488265ecedd40a54b441220050",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h8_ddq70_contq60/f17b_f17b_firewall_h8_ddq70_contq60__lr_bal__firewall_continuation.onnx",
+      "onnx_sha256": "c8b490c72b3c52d5ebfcccf0348dea44455e9efd97f55156e5c2e5f4e5fd24b9",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h8_ddq70_contq60__rf_bal__firewall_continuation",
+      "model_id": "rf_depth5_leaf80_balanced_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h8_ddq70_contq60__rf_bal__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h8_ddq70_contq60/f17b_f17b_firewall_h8_ddq70_contq60__rf_bal__firewall_continuation.joblib",
+      "joblib_sha256": "df97e39a70d2ba9e4515f923b56e108803332885e83fc72812b74c807724e40b",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h8_ddq70_contq60/f17b_f17b_firewall_h8_ddq70_contq60__rf_bal__firewall_continuation.onnx",
+      "onnx_sha256": "410fd6be73c1d79c2eebf15e6cae3f43ca5b8cee25c0df1771f80d6fcce50623",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+      "model_id": "logreg_l2_c0p5_plain_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.joblib",
+      "joblib_sha256": "dec779d5a46a09e09cd05de5d7543abb6cb96cd28da4ec3f115571183c05d1b9",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.onnx",
+      "onnx_sha256": "d81388069483a1fb707af99111d7b9caea83699ceb7f2ca2b9f17f8f409484c8",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h10_ddq75_contq65__lr_bal__firewall_continuation",
+      "model_id": "logreg_l2_c0p5_balanced_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h10_ddq75_contq65__lr_bal__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_bal__firewall_continuation.joblib",
+      "joblib_sha256": "6b7cfe5d717a4889d35151d09a436863fd281c5a146fa39829803046a3e24406",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_bal__firewall_continuation.onnx",
+      "onnx_sha256": "ddfc3bf76520afdd025e3f6dc41f85dcedf97958e260635fd05ef50d51d82dff",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h10_ddq75_contq65__rf_bal__firewall_continuation",
+      "model_id": "rf_depth5_leaf80_balanced_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h10_ddq75_contq65__rf_bal__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__rf_bal__firewall_continuation.joblib",
+      "joblib_sha256": "5b9a076c6c0eac61d7596facfd7182fd0fc64b78c8f60a9689af3ef12e39b27a",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__rf_bal__firewall_continuation.onnx",
+      "onnx_sha256": "327f15398b59b77d7f3f20b4d9e098fa62481ca0aff5a13ac09da105acf30bcc",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h12_ddq80_contq70__lr_plain__firewall_continuation",
+      "model_id": "logreg_l2_c0p5_plain_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h12_ddq80_contq70__lr_plain__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h12_ddq80_contq70/f17b_f17b_firewall_h12_ddq80_contq70__lr_plain__firewall_continuation.joblib",
+      "joblib_sha256": "bfe43356bdd374c940c3dfdf4ef700a7f11f06b0b0ede1facbef10655a544efa",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h12_ddq80_contq70/f17b_f17b_firewall_h12_ddq80_contq70__lr_plain__firewall_continuation.onnx",
+      "onnx_sha256": "40109fd9bc2013adf69155df1555d2f987a988f0622e991903d637ccb2c5681f",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h12_ddq80_contq70__lr_bal__firewall_continuation",
+      "model_id": "logreg_l2_c0p5_balanced_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h12_ddq80_contq70__lr_bal__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h12_ddq80_contq70/f17b_f17b_firewall_h12_ddq80_contq70__lr_bal__firewall_continuation.joblib",
+      "joblib_sha256": "53c992376b75235975e4ab48225940ead21fff1fedda65ae7c82f333acf557b4",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h12_ddq80_contq70/f17b_f17b_firewall_h12_ddq80_contq70__lr_bal__firewall_continuation.onnx",
+      "onnx_sha256": "883696a91ce65527a1f73d09cc2c68e1440797bac5cfe085e466041cffe4fb5b",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    },
+    {
+      "candidate_id": "f17b_firewall_h12_ddq80_contq70__rf_bal__firewall_continuation",
+      "model_id": "rf_depth5_leaf80_balanced_argmax",
+      "model_instance_id": "f17b_f17b_firewall_h12_ddq80_contq70__rf_bal__firewall_continuation",
+      "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h12_ddq80_contq70/f17b_f17b_firewall_h12_ddq80_contq70__rf_bal__firewall_continuation.joblib",
+      "joblib_sha256": "2beb5b5f14c9d15282b1d37095875912d31d1c37d7c88afdb0869bc9507ad232",
+      "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h12_ddq80_contq70/f17b_f17b_firewall_h12_ddq80_contq70__rf_bal__firewall_continuation.onnx",
+      "onnx_sha256": "44b369d68c73539b87ed64f158723ed14e0471ce02c4a97aad1d421d86215158",
+      "availability": "generated_ignored_with_manifest(생성됨, 목록으로 추적)"
+    }
+  ],
+  "regeneration_command": "python stage_pipelines/stage_frontier_17/frontier17b_loss_cluster_firewall_profit_persistence_proxy_scout.py"
+}

@@ -6,6 +6,7 @@
 #include "include/ObsidianPrime/EbmTableRuntime.mqh"
 #include "include/ObsidianPrime/DecisionSurface.mqh"
 #include "include/ObsidianPrime/ProbabilityBinVeto.mqh"
+#include "include/ObsidianPrime/RuntimeVetoTape.mqh"
 #include "include/ObsidianPrime/ExecutionBridge.mqh"
 #include "include/ObsidianPrime/RuntimeTelemetry.mqh"
 
@@ -82,6 +83,10 @@ input bool            InpProbabilityBinVetoEnabled = false;
 input string          InpProbabilityBinVetoPFlatEdges = "";
 input string          InpProbabilityBinVetoShortLongGapEdges = "";
 input string          InpProbabilityBinVetoRules = "";
+input bool            InpRuntimeVetoTapeEnabled = false;
+input string          InpRuntimeVetoTapePath = "Project_Obsidian_Prime_v2/runtime_probe/default/runtime_veto_tape.csv";
+input bool            InpRuntimeVetoTapeUseCommonFiles = true;
+input string          InpRuntimeVetoTapeDelimiter = ",";
 input bool            InpTimeMarginGuardEnabled = false;
 input string          InpTimeMarginGuardSide = "long";
 input int             InpTimeMarginGuardStartHour = 0;
@@ -170,6 +175,7 @@ COpEbmTableRuntime   g_fallback_ebm_table_runtime;
 COpDecisionSurface   g_decision_surface;
 COpDecisionSurface   g_fallback_decision_surface;
 COpProbabilityBinVeto g_probability_bin_veto;
+COpRuntimeVetoTape   g_runtime_veto_tape;
 COpExecutionBridge   g_execution_bridge;
 COpRuntimeTelemetry  g_telemetry;
 
@@ -1427,6 +1433,7 @@ void ProcessClosedBar()
    ApplySyntheticShortSourceOverlay(target_time, p_short, p_flat, p_long, decision);
    ApplyRuntimeTimeFilters(target_time, p_short, p_flat, p_long, decision);
    g_probability_bin_veto.Apply(target_time, p_short, p_flat, p_long, decision);
+   g_runtime_veto_tape.Apply(target_time, decision);
 
    const int routed_signal_before_entry_gate = decision.signal;
    const double routed_confidence_before_entry_gate = decision.confidence;
@@ -1559,6 +1566,14 @@ int OnInit()
                                         InpProbabilityBinVetoRules,
                                         probability_bin_veto_reason))
       return FailInit("probability_bin_veto_config_failed:" + probability_bin_veto_reason);
+
+   string runtime_veto_tape_reason = "";
+   if(!g_runtime_veto_tape.Configure(InpRuntimeVetoTapeEnabled,
+                                     InpRuntimeVetoTapePath,
+                                     InpRuntimeVetoTapeUseCommonFiles,
+                                     InpRuntimeVetoTapeDelimiter,
+                                     runtime_veto_tape_reason))
+      return FailInit("runtime_veto_tape_config_failed:" + runtime_veto_tape_reason);
 
    if(InpEnforceM5 && InpTimeframe != PERIOD_M5)
       return FailInit("timeframe_must_be_period_m5");

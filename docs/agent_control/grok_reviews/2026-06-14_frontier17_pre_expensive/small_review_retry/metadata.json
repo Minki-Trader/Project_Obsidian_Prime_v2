@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "2afe889545080f35172b241d95ff0c750dd9c7969e5f45f2bfe1e396c42a0fde",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "You are Grok acting only as an external second-opinion reviewer. Do not read files, do not create files, do not call tools. Use only the bounded evidence below and answer directly.\n\nOutput exactly these sections:\n1. Classification: accepted, rejected, or needs_local_verification.\n2. Recommendation: narrow MT5 runtime probe now, or repair/closeout without MT5.\n3. Main failure risks.\n4. Local verification Codex must do before acting.\n5. Forbidden claim check.\n\nBounded evidence:\n- Stage: Frontier17 loss-cluster firewall profit-persistence ONNX scout.\n- F17A guard: Grok before expensive WFO/MT5; one narrow MT5 runtime probe before closeout unless exactly blocked.\n- F17B result is preserved_clue_candidate only. No strict scout clue. No seed surface. No authority.\n- Best candidate: f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.\n- validation: PF 1.303383, density 3.972678/day, DD 13.438366%, equity R2 0.714384.\n- OOS: PF 1.136741, density 5.091603/day, DD 12.764709%, equity R2 0.270242.\n- worst validation/OOS subperiod DD: 12.764709%.\n- negative subperiod fraction: 0.454545.\n- ONNX parity passed.\n- F16B proxy reference only: validation PF 1.06795 density 5.65574 DD 12.9599; OOS PF 0.942216 density 5.45802 DD 12.8032.\n- F16D runtime reference only: validation PF 1.37 DD 12.2 trades 229 signal diff 0; OOS PF 0.87 DD 47.17 trades 164 signal diff 0.\n- Codex proposed direction: treat as preserved clue, do not run broad WFO, consider one narrow MT5 runtime probe because closeout requires it and OOS DD/PF are weakly better than F16B/F16D reference.\n- Claim boundary: no completion, baseline, promotion, runtime authority, live readiness, Goal Achieve.\n\nQuestion:\nShould Codex proceed to one narrow MT5 runtime probe for this best preserved clue before closeout, or should it repair/close out without MT5? Be critical.\n"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 25.212712,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier17_pre_expensive/small_review_retry/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier17_pre_expensive/small_review_retry/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier17_pre_expensive/small_review_retry/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier17_pre_expensive/small_review_retry/metadata.json"
+  }
+}

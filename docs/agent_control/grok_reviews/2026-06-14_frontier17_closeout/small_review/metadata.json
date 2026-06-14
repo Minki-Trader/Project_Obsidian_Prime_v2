@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "526cdf4e8fdf337e59b3fa69afb0d884f10c36c3f153f5ea177f5aa9d2b2cf6b",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "You are Grok acting only as an external second-opinion reviewer. Do not read files, do not create files, do not call tools. Use only the bounded evidence below and answer directly.\n\nOutput exactly these sections:\n1. Classification: accepted, rejected, or needs_local_verification.\n2. Recommendation: close as negative memory, preserve clue with repair, or run one more narrow repair.\n3. Main failure risks.\n4. Local verification Codex must do before acting.\n5. Forbidden claim check.\n\nBounded evidence:\n- Stage: Frontier17 loss-cluster firewall profit-persistence ONNX scout.\n- Goal hard gates are final completion review only: 5-10 trades/day, PF 2-3+, any zoom DD <10%, smooth rising balance/equity.\n- F17A guard: no inherited winner/baseline/runtime authority; Grok before closeout; MT5 runtime probe before closeout unless blocked.\n- F17B proxy result: preserved_clue_candidate only, no strict scout clue, no seed surface, no authority.\n- F17B best: f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.\n- F17B proxy validation: PF 1.303383, density 3.972678/day, DD 13.438366%.\n- F17B proxy OOS: PF 1.136741, density 5.091603/day, DD 12.764709%.\n- F17B signal contract: argmax short/long and current adverse_veto false, no score-rank density calibration.\n- F17C repair/handoff: added runtime veto tape to reproduce current adverse_veto in MT5. ONNX parity passed. MT5 runtime signal parity matched 2/2.\n- F17C MT5 validation_is: runtime completed, signal diff 0, expected signals 727, MT5 trades 317, PF 1.13, DD 35.45%.\n- F17C MT5 OOS: runtime completed, signal diff 0, expected signals 667, MT5 trades 254, PF 0.92, DD 47.50%.\n- Tier B and combined runtime records are missing_required by scope; no authority claimed.\n- F16D reference only: signal diff 0 but OOS PF 0.87, DD 47.17, showing exact signal parity can still fail runtime economics.\n- Codex proposed closeout: classify F17 as negative memory with preserved technical clue: runtime veto tape handoff works, but loss-cluster firewall profit persistence fails native MT5 execution economics and DD. No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve.\n\nQuestion:\nShould Codex close Frontier17 as negative memory with preserved runtime handoff clue, or run one more narrow repair before closeout? Be critical about novelty, overfitting, and claim boundaries."
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 31.686584,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier17_closeout/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier17_closeout/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier17_closeout/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier17_closeout/small_review/metadata.json"
+  }
+}

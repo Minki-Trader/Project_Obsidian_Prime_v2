@@ -1,5 +1,9 @@
 ﻿# Frontier17 Review Index(전선17 검토 색인)
 
-Updated(갱신): 2026-06-14T03:25:15Z
+Updated(갱신): 2026-06-14T04:12:00Z
 
-- `frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1`: stage open(단계 개방), Grok accepted(그록 수용), definition locks(정의 고정), guard manifest(가드 목록), runtime probe obligation(런타임 탐침 의무) recorded(기록됨).
+Closed run(마감 실행): `frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1`
+
+Status(상태): `closed_negative_memory_loss_cluster_firewall_runtime_economics_failed_no_authority`
+
+Reports(보고서): `stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1_report.md`, `stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17C_loss_cluster_firewall_runtime_probe_v1_report.md`, `stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1_report.md`

@@ -1,0 +1,327 @@
+﻿{
+  "created_at_utc": "2026-06-14T04:04:18Z",
+  "stage_id": "stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout",
+  "run_id": "frontier17C_loss_cluster_firewall_runtime_probe_v1",
+  "run_number": "frontier17C",
+  "parent_run_id": "frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1",
+  "source_run_id": "frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1",
+  "next_run_id": "frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1",
+  "status": "runtime_probe_observation_completed_signal_matched_no_authority",
+  "judgment": "runtime_probe_observation(런타임 탐침 관찰)",
+  "runtime_attempts": 2,
+  "runtime_completed_attempts": 2,
+  "signal_parity_matches": 2,
+  "best_candidate_row": {
+    "candidate_id": "f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+    "target_id": "f17b_firewall_h10_ddq75_contq65",
+    "model_id": "logreg_l2_c0p5_plain_argmax",
+    "model_instance_id": "f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation",
+    "strict_scout_clue_pass": false,
+    "seed_surface_pass": false,
+    "preserved_clue_pass": true,
+    "loss_cluster_score": 5.83701299202768,
+    "validation_profit_factor": 1.303382531010458,
+    "validation_trades_per_day": 3.9726775956284155,
+    "validation_dd_risk_percent": 13.43836637055238,
+    "validation_net_profit": 0.34806402954922844,
+    "validation_equity_trend_r2": 0.7022111256104763,
+    "oos_profit_factor": 1.1367413264202848,
+    "oos_trades_per_day": 5.091603053435114,
+    "oos_dd_risk_percent": 12.764709407251251,
+    "oos_net_profit": 0.1038255750263368,
+    "oos_equity_trend_r2": 0.2698889759290999,
+    "validation_oos_subperiod_worst_dd_risk_percent": 12.764709407251317,
+    "validation_oos_negative_subperiod_fraction": 0.45454545454545453,
+    "validation_oos_subperiod_min_trades_per_day": 1.9047619047619047,
+    "parity_passed": true,
+    "onnx_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.onnx",
+    "onnx_sha256": "d81388069483a1fb707af99111d7b9caea83699ceb7f2ca2b9f17f8f409484c8",
+    "joblib_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.joblib",
+    "joblib_sha256": "dec779d5a46a09e09cd05de5d7543abb6cb96cd28da4ec3f115571183c05d1b9",
+    "validation_macro_f1": 0.39797009876204137,
+    "oos_macro_f1": 0.40415041265742474,
+    "f16b_pf_axis_not_regressed": true,
+    "f16d_runtime_pf_axis_not_regressed": true,
+    "density_floor_validation_oos": true,
+    "oos_dd_improved_vs_f16": true,
+    "validation_dd_contained": true,
+    "signal_contract": "argmax_short_or_long_and_current_adverse_veto_false_no_score_rank_density_calibration(최대확률 숏/롱과 현재 불리 배제 false, 점수 순위 빈도 보정 없음)"
+  },
+  "frontier17b_status": "loss_cluster_firewall_preserved_clue_no_authority",
+  "runtime_probe_observation": "validation_is: status=completed/completed, PF=1.13, DD=35.45, trades=317, signal_diff=0 | oos: status=completed/completed, PF=0.92, DD=47.5, trades=254, signal_diff=0",
+  "execution_payload_paths": {
+    "mt5_execution_result": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5_execution_result.json",
+    "mt5_probe_summary": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5_runtime_probe_summary.csv",
+    "signal_diff": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/runtime_signal_expected_vs_mt5_summary.csv",
+    "strategy_tester_reports": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/strategy_tester_report_records.json"
+  },
+  "grok_packet": "docs/agent_control/grok_reviews/2026-06-14_frontier17_pre_expensive/small_review_retry",
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  },
+  "runtime_authority": "not_claimed",
+  "operating_promotion": "not_claimed",
+  "live_readiness": "not_claimed",
+  "goal_achieve": "not_claimed",
+  "receipts": {
+    "runtime_parity_receipt": {
+      "created_at_utc": "2026-06-14T04:04:18Z",
+      "research_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stage_pipelines/stage_frontier_17/frontier17c_loss_cluster_firewall_runtime_probe.py",
+      "runtime_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1",
+      "shared_contract": "F17B ONNX argmax plus current adverse veto tape(F17B ONNX 최대확률 + 현재 불리 차단 테이프)",
+      "known_differences": "MT5 execution cost/slippage and tester data are native runtime observations(MT5 비용/슬리피지/테스터 데이터는 런타임 관찰)",
+      "parity_check": "signal_matches=2/2; runtime_completed=2/2",
+      "parity_identity": {
+        "onnx_sha256": "d81388069483a1fb707af99111d7b9caea83699ceb7f2ca2b9f17f8f409484c8",
+        "compile_status": "completed",
+        "portable_ea_ex5_sha256": "395a93cb5c4922564d4276ab23d9578817b5a9ae6fe5a26f7c16e0debf874ca3",
+        "veto_tapes": {
+          "validation_is": "b052d62aa1c18e5127f4c2f6c1ea98f2abd18d9408f459f7f3178e9756d25907",
+          "oos": "d41725b41f882cf2b3c721416502529633a3712d5d8d9e518dc0236668c198c6"
+        },
+        "module_hashes": [
+          {
+            "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+            "status": "present",
+            "sha256": "322772eb36777c9570f3fe7a6f0c808b3c929a62d2cae96c44e7d2c08b8a9180"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+            "status": "present",
+            "sha256": "73c3f1f93ee04b441c1ef50ec209d52d961211d71bc4e0b206b22de2d2953eaa"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+            "status": "present",
+            "sha256": "49cc0bf61d6feccc52c47d9246804c99991bb0df7d7cc49dc6398d02f52bc597"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+            "status": "present",
+            "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+            "status": "present",
+            "sha256": "314193b3d713d5ee96a89088a33935b2bb203c4ed006f7f4254b119c294a2e00"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+            "status": "present",
+            "sha256": "115f79936493a0d944484ffb619d6120a3f49a8b044c509ec5f4753267373637"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/ProbabilityBinVeto.mqh",
+            "status": "present",
+            "sha256": "3bb2efebb54c0493d08e2e114ddcd8702abef5aa070fb6cecd18a36856d2380a"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+            "status": "present",
+            "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+          },
+          {
+            "path": "foundation/mt5/include/ObsidianPrime/RuntimeVetoTape.mqh",
+            "status": "present",
+            "sha256": "a9e4fcfbbe21734b7af4d66b3544a91dfb5a9e3e30596d6e47ea10b3f5afd7f2"
+          }
+        ]
+      },
+      "runtime_claim_boundary": "runtime_probe_observation_only(런타임 탐침 관찰 전용)"
+    },
+    "backtest_forensics_receipt": {
+      "created_at_utc": "2026-06-14T04:04:18Z",
+      "tester_identity": "portable MT5 US100 M5, validation_is/OOS date range(휴대용 MT5 US100 5분봉 검증/표본밖 날짜 범위)",
+      "ea_identity": "395a93cb5c4922564d4276ab23d9578817b5a9ae6fe5a26f7c16e0debf874ca3",
+      "report_identity": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5/reports",
+      "trade_evidence": "runtime_completed=2/2",
+      "forensic_checks": [
+        "compile result(컴파일 결과)",
+        "telemetry summary(텔레메트리 요약)",
+        "strategy report(전략 보고서)",
+        "Common Files handoff(공용 파일 인계)"
+      ],
+      "backtest_judgment": "usable_with_boundary(경계 포함 사용 가능)"
+    },
+    "artifact_lineage_receipt": {
+      "created_at_utc": "2026-06-14T04:04:18Z",
+      "source_inputs": [
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/final_decision.json",
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.onnx",
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17B_loss_cluster_firewall_profit_persistence_proxy_scout_v1/models/f17b_firewall_h10_ddq75_contq65/f17b_f17b_firewall_h10_ddq75_contq65__lr_plain__firewall_continuation.joblib"
+      ],
+      "producer": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stage_pipelines/stage_frontier_17/frontier17c_loss_cluster_firewall_runtime_probe.py",
+      "consumer": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17C_loss_cluster_firewall_runtime_probe_v1_report.md",
+      "artifact_paths": [
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1",
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17C_loss_cluster_firewall_runtime_probe_v1_report.md"
+      ],
+      "registry_links": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/stage_run_ledger.csv"
+      ],
+      "availability": "tracked_review_and_ledger_plus_generated_runtime_artifacts(검토 장부 추적 + 생성 런타임 산출물)",
+      "lineage_judgment": "connected_with_boundary(경계 포함 연결)"
+    },
+    "result_judgment_receipt": {
+      "created_at_utc": "2026-06-14T04:04:18Z",
+      "result_subject": "frontier17C_loss_cluster_firewall_runtime_probe_v1",
+      "evidence_available": [
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5_runtime_probe_summary.csv",
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/runtime_signal_expected_vs_mt5_summary.csv",
+        "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/onnx_probability_parity.json"
+      ],
+      "evidence_missing": [
+        "Tier B separate(티어 B 분리)",
+        "Tier A+B combined(티어 A+B 합산)",
+        "full WFO stress(전체 WFO 스트레스)"
+      ],
+      "judgment_label": "runtime_probe_observation(런타임 탐침 관찰)",
+      "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+      "next_condition": "frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1"
+    },
+    "claim_boundary_receipt": {
+      "created_at_utc": "2026-06-14T04:04:18Z",
+      "forbidden_claims": {
+        "completion": "not_claimed(주장 없음)",
+        "selected_baseline": "not_claimed(주장 없음)",
+        "operating_promotion": "not_claimed(주장 없음)",
+        "runtime_authority": "not_claimed(주장 없음)",
+        "live_readiness": "not_claimed(주장 없음)",
+        "goal_achieve": "not_claimed(주장 없음)"
+      },
+      "effect": "F17C는 runtime probe observation(런타임 탐침 관찰)만 남기고 authority(권위)를 만들지 않습니다."
+    }
+  },
+  "gate_audit_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/required_gate_coverage_audit.csv",
+  "script_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stage_pipelines/stage_frontier_17/frontier17c_loss_cluster_firewall_runtime_probe.py",
+  "script_sha256": "c5d5800cdd6f7e72e785808ade786927b812c57edf6ac046a089768fa7ea3ee0",
+  "gate_rows": [
+    {
+      "gate_name": "external_review_packet(외부 검토 묶음)",
+      "status": "passed_with_local_verification(로컬 검증 포함 통과)",
+      "evidence_path": "docs/agent_control/grok_reviews/2026-06-14_frontier17_pre_expensive/small_review_retry/clean_output.md",
+      "effect": "Grok second opinion(그록 2차 의견)을 자동 실행하지 않고 로컬 검증 후 반영했습니다."
+    },
+    {
+      "gate_name": "source_identity_gate(원천 정체성 게이트)",
+      "status": "passed(통과)",
+      "evidence_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/input_manifest.csv",
+      "effect": "F17B preserved clue ONNX/model(전선17B 보존 단서 ONNX/모델) 해시를 고정했습니다."
+    },
+    {
+      "gate_name": "onnx_probability_parity_gate(ONNX 확률 동등성 게이트)",
+      "status": "passed(통과)",
+      "evidence_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/onnx_probability_parity.json",
+      "effect": "Python sklearn(파이썬 sklearn)과 ONNX probability(확률) 출력을 비교했습니다."
+    },
+    {
+      "gate_name": "runtime_veto_tape_handoff_gate(런타임 차단 테이프 인계 게이트)",
+      "status": "passed(통과)",
+      "evidence_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/runtime_veto_tape_manifest.csv",
+      "effect": "F17B current adverse veto(현재 불리 차단)를 MT5 runtime probe(MT5 런타임 탐침)에 전달했습니다."
+    },
+    {
+      "gate_name": "mt5_runtime_execution_gate(MT5 런타임 실행 게이트)",
+      "status": "passed_with_observation(관찰 포함 통과)",
+      "evidence_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5_runtime_probe_summary.csv",
+      "effect": "runtime_completed=2/2; MT5 native tester(MT5 네이티브 테스터) 출력물을 확인합니다."
+    },
+    {
+      "gate_name": "runtime_signal_parity_gate(런타임 신호 동등성 게이트)",
+      "status": "passed(통과)",
+      "evidence_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/runtime_signal_expected_vs_mt5_summary.csv",
+      "effect": "expected signal count(예상 신호 수)와 MT5 summary(요약)를 비교했습니다."
+    },
+    {
+      "gate_name": "paired_tier_scope_gate(쌍 티어 범위 게이트)",
+      "status": "passed_with_missing_required_boundary(필수 누락 경계 포함 통과)",
+      "evidence_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/stage_run_ledger.csv",
+      "effect": "Tier A runtime probe(티어 A 런타임 탐침)만 실행하고 Tier B/combined(티어 B/합산)는 missing_required(필수 누락)로 기록합니다."
+    },
+    {
+      "gate_name": "final_claim_guard(최종 주장 보호)",
+      "status": "passed_no_authority_claim(권위 주장 없음 통과)",
+      "evidence_path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/claim_boundary_receipt.json",
+      "effect": "completion/baseline/promotion/runtime/live/Goal(완성/기준선/승격/런타임/실거래/목표) 주장을 막습니다."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/input_manifest.csv",
+      "exists": true,
+      "sha256": "623bedaeb8e78d9247c10f6e1fd292aff0adce6c22ba7b6d484f75009b865f8f"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/runtime_feature_matrix_manifest.csv",
+      "exists": true,
+      "sha256": "36c32442d9492d51e7d978a3f02917019d871ede7c5d7b84c7ade0884453ed49"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/runtime_veto_tape_manifest.csv",
+      "exists": true,
+      "sha256": "96cb0b27c8697e4ffea09db9ae2520d57eec4f209d2b4499e567437d57ef6cd8"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/expected_signal_summary.csv",
+      "exists": true,
+      "sha256": "05cb7a8aea82e42499b9bd73717fab8f837e677bbde0a84baddf5223eae6e87b"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/expected/expected_probability_tape.csv",
+      "exists": true,
+      "sha256": "1f84c3649bb363097cf6d602e4cb92b210e84bcc2065230630115c8c17d23c90"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/onnx_probability_parity.json",
+      "exists": true,
+      "sha256": "78c4b5a9ed829116cd627a9e85e20bbfa71f270f5222b47a4a331839a099a3fc"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/common_files_sync.csv",
+      "exists": true,
+      "sha256": "c03c8655a0dd5b47897421717010d6a2a312f45115a1a4c321fae616ef880b19"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5_runtime_probe_attempt_package.csv",
+      "exists": true,
+      "sha256": "6e509e0af69ab4b85eca472337cf7dde6a906978b5a922a54e2d48ba5ee76c37"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5_execution_result.json",
+      "exists": true,
+      "sha256": "f1319ef6b7f8bb66f0a83d7fd90ba91cf0fffd9302f2ba629f27bf64479de71b"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/mt5_runtime_probe_summary.csv",
+      "exists": true,
+      "sha256": "80fb9e134bc8947698cf780752bc19a5964adfd4f77b4aa2443d59dd8f1b2d65"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/runtime_signal_expected_vs_mt5_summary.csv",
+      "exists": true,
+      "sha256": "8577400550906f43c56bea2d306ac943d11a56c6fbf612a5486e56c363ac3bb1"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/required_gate_coverage_audit.csv",
+      "exists": true,
+      "sha256": "1eba03d9ba6a53c57c83ce3845a2ff3ca59bc94a30511f17ce9c2e14abb4a3ab"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/02_runs/frontier17C_loss_cluster_firewall_runtime_probe_v1/final_decision.json",
+      "exists": true,
+      "sha256": "79fbfd83c4c02ca7b721d2ec65ee077fefcb5925c5ebfab6b2330159abd4c571"
+    },
+    {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17C_loss_cluster_firewall_runtime_probe_v1_report.md",
+      "exists": true,
+      "sha256": "84ef195ec3ed46834c387b34728f68e349103b038a956c783e54b4aa71ff064a"
+    }
+  ]
+}
