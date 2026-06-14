@@ -1,0 +1,143 @@
+{
+  "stage_id": "stage_frontier_46__short_pf_edge_event_sequence_context_pivot_after_f45_event_classifier_memory",
+  "hypothesis": "train_only_lagged_short_event_sequence_context",
+  "idea_id": "IDEA-FR46-SHORT-EVENT-SEQUENCE-CONTEXT",
+  "decision_use": "scout_seed_runtime_candidate_screening_only",
+  "comparison_baseline": "F45 best and nonwinner rows are reference-only clues, not inherited baseline",
+  "control_variables": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "side": "short",
+    "feature_order_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "split": "train_2022-09-01_2024-12-31_validation_2025-01-01_2025-09-30_oos_2025-10-01_2026-02-28",
+    "path_proxy": "executable_first_hit_sl_tp_from_raw_us100_path"
+  },
+  "changed_variables": {
+    "sequence_context": "lagged_frozen_event_score_rolls_cooldown_and_horizon_embargoed_past_outcome_tape",
+    "model_family": "class_weighted_sequence_context_classifier",
+    "threshold_policy": "train_split_sequence_probability_quantiles_only"
+  },
+  "sample_scope": {
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "raw_rows": 261345,
+    "short_path_valid_rows": 46650
+  },
+  "success_criteria": {
+    "scout_clue": {
+      "forward_min_pf": 1.05,
+      "density": "4_to_12_per_day",
+      "forward_max_dd": 18.0
+    },
+    "seed_surface": {
+      "forward_min_pf": 1.2,
+      "density": "5_to_10_per_day",
+      "forward_max_dd": 12.0
+    },
+    "runtime_probe_candidate": {
+      "forward_min_pf": 1.5,
+      "forward_max_dd": 10.0
+    }
+  },
+  "invalid_conditions": [
+    "validation_oos_used_for_label_threshold_model_sl_tp_or_rank",
+    "past_outcome_tape_uses_labels_newer_than_horizon_plus_one_bars",
+    "f45_same_bar_event_classifier_threshold_only_repair",
+    "f44_continuous_regression_or_f42_f43_f38_f39_primary_lever_reopened"
+  ],
+  "evidence_plan": [
+    "stage_open_grok_receipt",
+    "event_sequence_context_model_audit",
+    "candidate_ledger",
+    "split_metrics",
+    "candidate_summary",
+    "stage_run_ledger",
+    "project_alpha_ledger_rows",
+    "stage_closeout_grok_receipt"
+  ],
+  "input_artifacts": {
+    "prev_selection": {
+      "path": "stages/stage_frontier_45__short_pf_edge_event_utility_model_pivot_after_f44_label_model_memory/04_selected/selection_status.json",
+      "sha256": "d08395a2003864ea41078606ffac89b045ac5cfa242aba6933326bb9d7c28799"
+    },
+    "prev_preserved_clue": {
+      "path": "stages/stage_frontier_45__short_pf_edge_event_utility_model_pivot_after_f44_label_model_memory/04_selected/preserved_clue.md",
+      "sha256": "0e067062e80442000edebb6f327710ad78c3dc4b454d90323a93fe07c94b8661"
+    },
+    "prev_negative_memory": {
+      "path": "stages/stage_frontier_45__short_pf_edge_event_utility_model_pivot_after_f44_label_model_memory/04_selected/negative_memory.md",
+      "sha256": "a9d748490529b30bdaeca0a2453ac5c62bd407fdf55f6fd266a62a7029bb2a61"
+    },
+    "grok_open_clean_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-15_frontier46_stage_open/small_review/clean_output.md",
+      "sha256": "2ea40f137198aafc8e49caea2273845548e85526c9c66ef72101c6138b890650"
+    }
+  },
+  "open_review": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-15_frontier46_stage_open/small_review",
+    "metadata": {
+      "review_size": "small",
+      "prompt_hash": "2baee283a0929d6d9cdb584beb7e0741293e2cd35ba5d2841c1d8169f6ae81fc",
+      "command": [
+        "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+        "--no-memory",
+        "--disable-web-search",
+        "--max-turns",
+        "1",
+        "-p",
+        "# Frontier46 stage-open Grok review(그록 단계 개방 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nDo not claim operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\nDo not inspect files, call tools, or request more repository context(파일/도구/추가 저장소 문맥을 사용하지 말 것). Answer only from bounded evidence(제한 근거) below.\n\nCurrent truth(현재 진실):\n- F45 closed as `negative_memory(부정 기억)`.\n- F45 runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_scout_seed_or_runtime_candidate_after_f45_event_classifier_proxy`.\n- F45 scout/seed/runtime counts(탐색/씨앗/런타임 수): `0/0/0`.\n- F45 best train-ranked row(학습 순위 최상 행): `f45b_0001`, event `event_mfe65_mae35_loss_contained`, model `extratrees_cls_d5_leaf240`, train PF 1.17, validation PF 0.90, OOS PF 0.95, forward DD 12.39.\n- F45 nonwinner forward observation(비승자 전진 관찰): `f45c_0077`, event `event_mfe65_mae35_loss_contained`, model `logreg_balanced_l2_c0p25`, forward min PF 1.003, density 6.16..8.67/day, forward DD 10.70. This is clue only(단서 전용), not winner/baseline/promotion(승자/기준선/승격 아님).\n\nCodex proposed F46 direction(코덱스 제안 방향):\n- stage_id(단계 ID): `stage_frontier_46__short_pf_edge_event_sequence_context_pivot_after_f45_event_classifier_memory`\n- run_id(실행 ID): `frontier46A_stage_open_short_pf_edge_event_sequence_context_hypothesis_design_v1`\n- hypothesis(가설): A short event sequence context model(숏 이벤트 순서 문맥 모델) can improve the weak F45 event surface by using only closed-bar, entry-known lagged context(닫힌 봉/진입시점에 아는 지연 문맥): prior event-score rolling mean/slope, high-score cooldown, and fully-known past outcome tape with an embargo at least equal to the path horizon.\n- decision_use(결정 용도): scout clue(탐색 단서), seed surface(씨앗 표면), or runtime probe candidate(런타임 탐침 후보) classification only.\n- novelty_delta(신규성 차이): F46 changes the source from same-bar event classifier score(동일 봉 이벤트 분류 점수) to sequence context(순서 문맥). It must not repeat F45 by only changing score quantiles or class weights.\n- comparison_baseline(비교 기준): F45 is reference-only(참조 전용). It is not a baseline(기준선) or winner(승자).\n- control_variables(고정 변수): US100 M5, frozen 58 feature order(고정 58개 피처 순서), train/validation/OOS chronological split(시간순 분할), short-only(숏 전용), first-hit SL/TP path proxy(첫 터치 손익절 경로 프록시), validation/OOS read-only(검증/표본외 읽기 전용).\n- changed_variables(변경 변수): lagged sequence context feature construction(지연 순서 문맥 피처 구성), sequence-context model family(순서 문맥 모델 계열), train-only score/risk thresholds(학습 전용 점수/위험 임계값).\n\nProposed guardrails(제안 보호선):\n- Train-split-only construction lock(학습 분할 전용 구성 잠금): sequence feature definitions, event labels, class weights, probability thresholds, SL/TP caps, candidate rank, and repair choices are selected from train split only.\n- Past outcome tape(과거 결과 테이프)는 current row(현재 행)보다 at least horizon+1 bars older(최소 예측수평선+1봉 이전)인 fully known labels(완전히 알려진 라벨)만 쓴다.\n- Validation/OOS(검증/표본외)는 read-only evaluation(읽기 전용 평가)이다.\n- Runtime boundary(런타임 경계): if no runtime candidate appears, MT5 runtime probe(메타트레이더5 런타임 탐침)는 ineligible(부적격)로 기록한다. If runtime candidate appears, stop before expensive WFO/MT5 and run pre-expensive Grok review(비싼 검증 전 그록 검토)를 먼저 한다.\n\nSuccess criteria(성공 기준):\n- scout clue(탐색 단서): forward validation/OOS both positive(검증/표본외 둘 다 양수), forward min PF >= 1.05, density 4..12/day, forward max DD <= 18%.\n- seed surface(씨앗 표면): forward min PF >= 1.20, density 5..10/day, forward max DD <= 12%.\n- runtime probe candidate(런타임 탐침 후보): seed surface plus forward min PF >= 1.50 and forward max DD <= 10%.\n\nFailure/invalid conditions(실패/무효 조건):\n- negative memory(부정 기억): capped proxy+repair does not create scout/seed/runtime candidate.\n- preserved clue(보존 단서): sequence context improves one or more axes but fails seed/runtime.\n- invalid setup(무효 설정): validation/OOS leakage, using not-yet-known future outcome labels as current features, same F45 threshold-only repair, or claiming runtime/ONNX authority without external validation.\n\nQuestion(질문):\nIs this F46 stage-open design honest, novel enough after F45, and properly guarded against leakage and overclaiming?\n\nReturn only:\n1. verdict: accepted, rejected, or needs_local_verification(수용/거절/로컬 검증 필요)\n2. main_guardrail(주 보호선)\n3. one do_not_repeat(반복 금지) warning\n4. one concrete improvement(구체 개선) if needed\n5. claim_boundary_ok: yes/no(예/아니오)\n"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "success": true,
+      "duration_seconds": 20.542667,
+      "stripped_noise_lines": [],
+      "preflight_warnings": [
+        "prompt_length_exceeds_small_limit"
+      ],
+      "unexpected_top_level_artifacts": [],
+      "packet_paths": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier46_stage_open/small_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier46_stage_open/small_review/clean_output.md",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier46_stage_open/small_review/raw_diagnostics.json",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier46_stage_open/small_review/metadata.json"
+      }
+    },
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-15_frontier46_stage_open/small_review/clean_output.md",
+    "classification": "accepted_stage_open_train_split_only_event_lock",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "claim_boundary_ok": true,
+    "forbidden_claim_seen": false,
+    "clean_excerpt": "**1. verdict:** `accepted`\n\n**2. main_guardrail:** Train-split-only construction lock(학습 분할 전용 구성 잠금) — sequence feature definitions(순서 피처 정의), labels(라벨), thresholds(임계값), and past-outcome tape(과거 결과 테이프) must be built only from train data, with past labels at least `horizon+1` bars older than the current row; validation/OOS stay read-only evaluation(읽기 전용 평가) only.\n\n**3. one do_not_repeat:** Do not reopen F45 as a same-bar event-classifier score surface(동일 봉 이벤트 분류 점수 표면) with quantile, class-weight, or threshold-only repairs(분위/가중치/임계값만 수리) — that path already closed as `negative_memory(부정 기억)` with `0/0/0` scout/seed/runtime.\n\n**4. one concrete improvement:** Lock the lagged event-score inputs(지연 이벤트 점수 입력) to a train-fitted, frozen scorer(학습 적합·고정 채점기) applied causally bar-by-bar(봉 단위 인과 적용); do not let validation/OOS refits, rolling recalibration(롤링 재보정), or same-bar score leakage(동일 봉 점수 누수) sneak back in under “sequence context.”\n\n**5. claim_boundary_ok:** `yes`"
+  },
+  "checks": {
+    "checks": {
+      "workspace_points_to_f46": true,
+      "prev_selection_next_matches": true,
+      "prev_selection_json_exists": true,
+      "prev_preserved_clue_exists": true,
+      "prev_negative_memory_exists": true,
+      "open_grok_accepted": true,
+      "feature_hash_matches_contract": true,
+      "required_splits_present": true,
+      "raw_path_alignment_available": true,
+      "short_path_valid_rows_positive": true,
+      "train_split_only_construction_lock": true
+    },
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "short_valid_rows": 46650
+  }
+}
