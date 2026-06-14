@@ -1,0 +1,48 @@
+{
+  "trigger_reason": "stage_open_required_by_goal(목표상 단계 개방 그록 검토 필요)",
+  "review_size": "small(소규모)",
+  "direction_before_grok": "open F22 PF source scout(전선22 수익 팩터 원천 탐색 개방)",
+  "bounded_evidence": [
+    "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/04_selected/selection_status.md",
+    "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/04_selected/negative_memory.md",
+    "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/04_selected/selection_status.md",
+    "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/03_reviews/frontier21D_lifecycle_repair_or_closeout_decision_v1_report.md"
+  ],
+  "prompt_identity": {
+    "path": "docs/agent_control/grok_reviews/2026-06-14_frontier22_stage_open/small_review/prompt.md",
+    "hash": "a56b5ee8704add0c0caebc6ea2ae48e3e12b8da749042d48cb2678473345f52b"
+  },
+  "grok_output_identity": {
+    "path": "docs/agent_control/grok_reviews/2026-06-14_frontier22_stage_open/small_review/clean_output.md",
+    "classification": "accepted_with_adjustments(조정 수용)"
+  },
+  "advice_classification": "accepted_with_adjustments(조정 수용)",
+  "local_verification": {
+    "judgment": "pass_open_ready_with_adjusted_locks(조정 잠금 반영 후 개방 가능)",
+    "checks": {
+      "workspace_current_stage_frontier21_closed": true,
+      "workspace_next_run_frontier22a": true,
+      "f20_negative_memory_present": true,
+      "f20_no_authority_present": true,
+      "f21_negative_memory_present": true,
+      "feature_hash_matches_contract": true,
+      "feature_count_is_58": true,
+      "bucket_features_exist": true,
+      "dataset_exists": true,
+      "grok_transport_success": true,
+      "grok_adjustment_accepted": true,
+      "no_unexpected_top_level_artifacts": true
+    },
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_count": 58
+  },
+  "forbidden_claim_check": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  },
+  "final_codex_direction": "apply shock-anchored cross-family contract and F20 duplicate guard(충격 고정 교차군 계약과 F20 중복 가드 반영)"
+}

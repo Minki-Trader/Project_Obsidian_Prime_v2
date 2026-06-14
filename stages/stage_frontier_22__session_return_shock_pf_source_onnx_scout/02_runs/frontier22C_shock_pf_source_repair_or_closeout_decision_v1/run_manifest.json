@@ -1,0 +1,101 @@
+{
+  "identity": {
+    "stage_id": "stage_frontier_22__session_return_shock_pf_source_onnx_scout",
+    "run_id": "frontier22C_shock_pf_source_repair_or_closeout_decision_v1",
+    "parent_run_id": "frontier22B_session_return_shock_pf_source_proxy_scout_v1",
+    "next_run_id": "frontier22D_stage_closeout_shock_pf_source_v1",
+    "created_at_utc": "2026-06-14T06:55:12Z"
+  },
+  "artifacts": [
+    {
+      "path": "stage_pipelines/stage_frontier_22/frontier22c_shock_pf_source_lifecycle_repair_scout.py",
+      "sha256": "e32864d26056b99b39dbde9aa08f1879785f559daa05b04cbea947ccf44a7450"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1/shock_pf_source_lock.json",
+      "sha256": "82f1bffb754f6589e63e7270fd2aa8f8d83e1708937d93d300e40a9a0c84f2bf"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/final_summary.json",
+      "sha256": "88a9ae4029191dce41f39585d234aae40a82372998c55275de2076d2b85b021c"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/candidate_summary.csv",
+      "sha256": "8b5741f4ef3173048c5e6d8ba0a63c6b88c1c93495a07c99b976145ad9dec4a8"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22C_shock_pf_source_repair_or_closeout_decision_v1/final_summary.json",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22C_shock_pf_source_repair_or_closeout_decision_v1/repair_candidate_summary.csv",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22C_shock_pf_source_repair_or_closeout_decision_v1/metrics_by_split.csv",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22C_shock_pf_source_repair_or_closeout_decision_v1/subperiod_metrics.csv",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22C_shock_pf_source_repair_or_closeout_decision_v1/trade_log.csv",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22C_shock_pf_source_repair_or_closeout_decision_v1_report.md",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22C_shock_pf_source_repair_or_closeout_decision_v1_gate_audit.md",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    }
+  ],
+  "feature_schema": {
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+  },
+  "runtime_snapshot": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "entry_timing": "closed_bar_signal_next_bar_open_proxy(종료봉 신호 다음 봉 시가 프록시)",
+    "max_concurrent_positions": 1,
+    "cost_behavior": "rough_log_return_cost_proxy_only(거친 로그수익 비용 프록시 전용)"
+  },
+  "rule_stack": {
+    "entry": "top_f22b_shock_context_candidates(상위 F22B 충격/문맥 후보)",
+    "position_exit": "capped_lifecycle_repair_grid(상한 생명주기 수리 격자)"
+  },
+  "results": {
+    "by_split": {
+      "proxy": "metrics_by_split.csv"
+    },
+    "cross_split": {
+      "scout_clue_rows": 1,
+      "seed_surface_rows": 0,
+      "handoff_candidate_rows": 0,
+      "best_profile_id": "f22b_0263__hold2_atr0p8_tp1p6_cd0"
+    },
+    "report_refs": [
+      {
+        "role": "repair_report",
+        "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22C_shock_pf_source_repair_or_closeout_decision_v1_report.md"
+      }
+    ]
+  },
+  "compatibility": {
+    "schema_version": "frontier22c_lifecycle_repair_proxy_v1",
+    "mismatch_policy": "fail_fast(빠른 실패)",
+    "required_output_schema": "not_applicable_no_onnx_export_yet(ONNX 내보내기 전이라 해당 없음)"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "stage_id": "stage_frontier_22__session_return_shock_pf_source_onnx_scout",
+    "run_id": "frontier22D_stage_closeout_shock_pf_source_v1",
+    "parent_run_id": "frontier22C_shock_pf_source_repair_or_closeout_decision_v1",
+    "next_run_id": "frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1",
+    "created_at_utc": "2026-06-14T07:05:21Z"
+  },
+  "artifacts": [
+    {
+      "path": "stage_pipelines/stage_frontier_22/frontier22d_stage_closeout.py",
+      "sha256": "152dc2309ea9d0529c497485dc78772b82de43326c5e2929d944e928352e2f0d"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/final_summary.json",
+      "sha256": "88a9ae4029191dce41f39585d234aae40a82372998c55275de2076d2b85b021c"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/candidate_summary.csv",
+      "sha256": "8b5741f4ef3173048c5e6d8ba0a63c6b88c1c93495a07c99b976145ad9dec4a8"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22C_shock_pf_source_repair_or_closeout_decision_v1/final_summary.json",
+      "sha256": "13a21a8ba49eb64f6337d1a64afe6c88479f0d2d5c26b98e0d8ad8ec557a58b1"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22C_shock_pf_source_repair_or_closeout_decision_v1/repair_candidate_summary.csv",
+      "sha256": "aa4afc29b93fe47a572ae5988385c3568f1a063d7d1a1f5bf550493265b361e4"
+    },
+    {
+      "path": "docs/agent_control/grok_reviews/2026-06-14_frontier22_closeout/small_review/clean_output.md",
+      "sha256": "188bff9e887b80e42725974274c783e8c0227f5622b594eed822454ccae78c17"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22D_stage_closeout_shock_pf_source_v1_report.md",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22D_stage_closeout_shock_pf_source_v1_grok_closeout_receipt.md",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22D_stage_closeout_shock_pf_source_v1_gate_audit.md",
+      "sha256": "pending_or_missing(대기 또는 누락)"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/required_gate_coverage_audit.md",
+      "sha256": "dd37239e0d1f93b3601d1b659935bcd6da9aead1e55cec820ffda38f06f48b8b"
+    }
+  ],
+  "results": {
+    "cross_split": {
+      "closeout": "preserved_clue_negative_memory(보존 단서+부정 기억)",
+      "f22b_scout_seed_handoff": [
+        35,
+        0,
+        0
+      ],
+      "f22c_scout_seed_handoff": [
+        1,
+        0,
+        0
+      ],
+      "runtime_blocker": "runtime_probe_ineligible_no_handoff_candidate_after_f22_capped_repair(전선22 상한 수리 뒤 인계 후보가 없어 런타임 탐침 부적격)",
+      "onnx_blocker": "onnx_branch_unattempted_no_seed_or_handoff_candidate(씨앗 또는 인계 후보가 없어 ONNX 분기 미개시)"
+    },
+    "report_refs": [
+      {
+        "role": "stage_closeout_report",
+        "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22D_stage_closeout_shock_pf_source_v1_report.md"
+      }
+    ]
+  },
+  "compatibility": {
+    "schema_version": "frontier22d_closeout_v1",
+    "mismatch_policy": "fail_fast(빠른 실패)"
+  }
+}

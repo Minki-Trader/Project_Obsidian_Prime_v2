@@ -1,0 +1,15 @@
+﻿Project Obsidian Prime v2 bounded Grok review.
+
+Review size: small review(소규모 검토). Give Decision: accept / adjust / reject.
+
+Current truth(현재 진실): Frontier21 closed as preserved clue + negative memory(보존 단서 + 부정 기억). Best low-DD density repair profile had validation PF/density/DD = 1.16656 / 5.54135 per day / 2.29961%, OOS = 1.07900 / 6.36957 per day / 3.23393%. Seed/handoff rows were 0/0, so ONNX and MT5 runtime probe were ineligible. Negative memory: lifecycle DD/density repair alone does not create PF edge or handoff.
+
+Proposed Frontier22 direction(제안 방향): open a new hypothesis lifecycle named stage_frontier_22__session_return_shock_pf_source_onnx_scout. Hypothesis: PF edge may come from entry-quality states where US100 M5 return shock, volatility, trend/chop, session age, and mega-cap breadth combine to create favorable payoff asymmetry. This is not F21 lifecycle retuning; exits will use a fixed simple next-bar/horizon proxy for first read, and lifecycle is only a later repair if PF source appears.
+
+Controls(통제): use feature_set_v2 58 features, train-only thresholds for rule construction, validation/OOS read-only diagnostics, no winner/baseline/promotion/runtime authority inheritance, Tier A separate plus Tier B missing/out-of-scope rows if no Tier B source exists.
+
+Success criteria(성공 기준): scout clue if validation and OOS are positive with density moving toward 5-10/day and DD not worse than prior high-DD sources; seed surface if PF >= 1.2 both validation/OOS, density 5-10/day, DD <= 25%; handoff candidate only if PF >= 1.5 both, density 5-10/day, DD <= 15%, smoothness improves, then pre-expensive Grok before MT5/ONNX handoff.
+
+Claim boundary(주장 경계): scout-only stage open. No completion, baseline, promotion, runtime authority, live readiness, or Goal Achieve.
+
+Question(질문): Is this a valid new Frontier22 hypothesis, or is it too close to prior feature-state rule atlas / threshold search? What adjustments are required before Codex opens and runs the proxy scout?

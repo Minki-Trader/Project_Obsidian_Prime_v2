@@ -1,0 +1,207 @@
+{
+  "created_at_utc": "2026-06-14T06:55:12Z",
+  "stage_id": "stage_frontier_22__session_return_shock_pf_source_onnx_scout",
+  "run_id": "frontier22C_shock_pf_source_repair_or_closeout_decision_v1",
+  "run_number": "frontier22C",
+  "parent_run_id": "frontier22B_session_return_shock_pf_source_proxy_scout_v1",
+  "next_run_id": "frontier22D_stage_closeout_shock_pf_source_v1",
+  "status": "shock_lifecycle_repair_scout_clue_proxy_no_authority",
+  "judgment": "preserved_clue_requires_closeout_no_authority",
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "source_integrity": {
+    "data_source": {
+      "model_input_dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "raw_us100": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "raw_manifest": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+    },
+    "time_axis": "model timestamp(모델 타임스탬프) is matched to raw time_close_unix as broker_clock_close_key(브로커 시계 종가 키); timezone_status remains unresolved, so this is not a direct UTC market-session claim(직접 UTC 세션 주장 아님).",
+    "sample_scope": {
+      "symbol": "US100",
+      "timeframe": "M5",
+      "model_rows": 46650,
+      "raw_rows": 261345,
+      "start_timestamp": "2022-09-01 16:40:00+00:00",
+      "end_timestamp": "2026-04-13 22:00:00+00:00",
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "tier_a": "model input rows plus raw US100 OHLC(모델 입력 행 + 원천 US100 OHLC)",
+      "tier_b": "missing_required(필수 누락)"
+    },
+    "missing_or_duplicate_check": {
+      "model_duplicate_timestamps": 0,
+      "raw_duplicate_close_keys": 0,
+      "missing_raw_matches": 0,
+      "missing_future_paths": {
+        "h12": 0,
+        "h18": 0
+      }
+    },
+    "feature_label_boundary": "labels use only raw future OHLC after the current closed bar(현재 종료봉 이후 원천 미래 OHLC만 사용); feature_set_v2 columns are not loaded into label construction(피처 컬럼은 라벨 생성에 로드하지 않음).",
+    "split_boundary": "train split(학습 분할) only supplies the p90 scale; validation/OOS(검증/표본밖)는 평가 전용입니다.",
+    "leakage_risk": "path labels are oracle labels(미래 경로를 아는 라벨) and cannot be interpreted as runtime signals(런타임 신호). current bar high/low is excluded by starting at t+1(현재 봉 고저는 t+1 시작으로 제외).",
+    "data_hash_or_identity": {
+      "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "raw_manifest_sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "fwd12_max_abs_diff_vs_model": 3.0035138820494467e-09,
+      "fwd12_p99_abs_diff_vs_model": 3.888873045809762e-10
+    },
+    "integrity_judgment": "usable_with_boundary(경계부 사용 가능)"
+  },
+  "context": {
+    "checks": {
+      "workspace_current_stage_frontier22": true,
+      "workspace_next_run_frontier22c": true,
+      "f22b_parent_matches": true,
+      "f22b_has_scout_no_seed": true,
+      "lock_forbids_first_proxy_lifecycle_only": true,
+      "feature_order_hash_matches_contract": true,
+      "raw_index_available": true
+    }
+  },
+  "lock": {
+    "stage_id": "stage_frontier_22__session_return_shock_pf_source_onnx_scout",
+    "run_id": "frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1",
+    "next_run_id": "frontier22B_session_return_shock_pf_source_proxy_scout_v1",
+    "buckets": {
+      "shock": [
+        "return_zscore_20",
+        "log_return_1",
+        "return_1_over_atr_14",
+        "gap_percent",
+        "close_prev_close_ratio"
+      ],
+      "volatility": [
+        "atr_14_over_atr_50",
+        "historical_vol_5_over_20",
+        "vix_zscore_20",
+        "hl_zscore_50"
+      ],
+      "trend_chop": [
+        "adx_14",
+        "ema20_ema50_diff",
+        "ema20_ema50_spread_zscore_50",
+        "bb_squeeze"
+      ],
+      "session_age": [
+        "minutes_from_cash_open",
+        "is_first_30m_after_open",
+        "is_last_30m_before_cash_close",
+        "is_us_cash_open"
+      ],
+      "breadth": [
+        "mega8_pos_breadth_1",
+        "mega8_dispersion_5",
+        "us100_minus_mega8_equal_return_1",
+        "us100_minus_top3_weighted_return_1"
+      ]
+    },
+    "locks": {
+      "novelty_delta": "shock-anchored cross-family entry states(충격 고정 교차군 진입 상태)",
+      "mandatory_rule_shape": "one shock condition plus one non-shock context condition(충격 조건 1개와 비충격 문맥 조건 1개)",
+      "search_cap": "family_condition_cap<=8, pair_depth=2, max_candidates<=200(군별 조건 8개 이하, 깊이 2, 후보 200개 이하)",
+      "side_hypothesis": "two locked lanes: shock_continuation and shock_fade(고정 2개 방향: 충격 지속과 충격 되돌림)",
+      "exit_proxy": "future_log_return_12 minus rough proxy cost only(12봉 미래 수익률에서 거친 비용만 차감)",
+      "f20_duplicate_guard": "F20 vix_zscore_20+close_ema50_ratio duplicate cannot be scout clue(F20 중복은 탐색 단서 금지)",
+      "f21_guard": "no lifecycle repair in first proxy(F22B 첫 프록시에는 생명주기 수리 금지)"
+    },
+    "search_caps": {
+      "family_condition_cap": 8,
+      "pair_depth": 2,
+      "max_candidates": 200
+    },
+    "side_lanes": [
+      "shock_continuation(충격 지속)",
+      "shock_fade(충격 되돌림)"
+    ],
+    "claim_boundary": {
+      "completion": "not_claimed(주장 없음)",
+      "selected_baseline": "not_claimed(주장 없음)",
+      "operating_promotion": "not_claimed(주장 없음)",
+      "runtime_authority": "not_claimed(주장 없음)",
+      "live_readiness": "not_claimed(주장 없음)",
+      "goal_achieve": "not_claimed(주장 없음)"
+    }
+  },
+  "f22b_summary": {
+    "status": "shock_pf_source_scout_clue_proxy_no_runtime_no_authority",
+    "scout_clue_rows": 35,
+    "seed_surface_rows": 0,
+    "handoff_candidate_rows": 0,
+    "best_candidate_id": "f22b_0379"
+  },
+  "source_candidate_count": 8,
+  "profile_count": 4,
+  "metric_rows": 96,
+  "subperiod_metric_rows": 1920,
+  "trade_rows": 103394,
+  "scout_clue_rows": 1,
+  "seed_surface_rows": 0,
+  "handoff_candidate_rows": 0,
+  "best_profile_id": "f22b_0263__hold2_atr0p8_tp1p6_cd0",
+  "best_profile": {
+    "profile_id": "f22b_0263__hold2_atr0p8_tp1p6_cd0",
+    "source_candidate_id": "f22b_0263",
+    "source_lane": "shock_continuation",
+    "source_rule_definition": "return_1_over_atr_14 >= q70 & ema20_ema50_diff >= q70 [shock_continuation]",
+    "source_shock_feature": "return_1_over_atr_14",
+    "source_context_feature": "ema20_ema50_diff",
+    "max_hold_bars": 2,
+    "atr_stop_multiplier": 0.8,
+    "atr_take_profit_multiplier": 1.6,
+    "cooldown_bars": 0,
+    "source_validation_pf": 1.2559954551479,
+    "source_oos_pf": 1.1642564401894258,
+    "source_validation_dd": 20.35365928161236,
+    "source_oos_dd": 14.409321463091718,
+    "train_trade_count": 1864,
+    "train_trades_per_day": 5.38728323699422,
+    "train_net_profit": 0.08980085456623638,
+    "train_profit_factor": 1.0904482012815326,
+    "train_expectancy": 4.817642412351737e-05,
+    "train_win_rate": 0.48819742489270385,
+    "train_dd_risk_percent": 6.91471544073382,
+    "train_underwater_ratio": 0.9163090128755365,
+    "train_max_loss_streak": 16,
+    "train_equity_trend_r2": 0.5477178833543268,
+    "validation_trade_count": 724,
+    "validation_trades_per_day": 5.700787401574803,
+    "validation_net_profit": 0.02287475396707444,
+    "validation_profit_factor": 1.0557901966673586,
+    "validation_expectancy": 3.1594964042920494e-05,
+    "validation_win_rate": 0.46408839779005523,
+    "validation_dd_risk_percent": 3.641711408480397,
+    "validation_underwater_ratio": 0.988950276243094,
+    "validation_max_loss_streak": 7,
+    "validation_equity_trend_r2": 0.6299156593056051,
+    "oos_trade_count": 595,
+    "oos_trades_per_day": 7.083333333333333,
+    "oos_net_profit": 0.026800667150126807,
+    "oos_profit_factor": 1.105251295774317,
+    "oos_expectancy": 4.504313806744001e-05,
+    "oos_win_rate": 0.5058823529411764,
+    "oos_dd_risk_percent": 2.518220471155941,
+    "oos_underwater_ratio": 0.9260504201680673,
+    "oos_max_loss_streak": 10,
+    "oos_equity_trend_r2": 0.7357079029388168,
+    "scout_clue_flag": true,
+    "seed_surface_flag": false,
+    "handoff_candidate_flag": false,
+    "repair_score": 5.103527747191842
+  },
+  "result_boundary": "capped_repair_proxy_no_wfo_no_mt5_no_runtime_authority(상한 수리 프록시, WFO/MT5/런타임 권위 없음)",
+  "runtime_probe_status": "out_of_scope_by_claim_no_handoff_candidate(인계 후보 없어 주장 범위 밖)",
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

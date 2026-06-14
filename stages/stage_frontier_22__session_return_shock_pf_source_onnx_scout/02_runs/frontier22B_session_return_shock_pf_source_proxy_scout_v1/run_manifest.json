@@ -1,0 +1,105 @@
+{
+  "identity": {
+    "stage_id": "stage_frontier_22__session_return_shock_pf_source_onnx_scout",
+    "run_id": "frontier22B_session_return_shock_pf_source_proxy_scout_v1",
+    "parent_run_id": "frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1",
+    "next_run_id": "frontier22C_shock_pf_source_repair_or_closeout_decision_v1",
+    "created_at_utc": "2026-06-14T06:46:04Z"
+  },
+  "artifacts": [
+    {
+      "path": "stage_pipelines/stage_frontier_22/frontier22b_session_return_shock_pf_source_proxy_scout.py",
+      "sha256": "8363f3db8654d3907bcd6a0fcc254cb61b64f6b8eb1442ad53980e8210f5d360"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1/stage_open_summary.json",
+      "sha256": "6401aef4a307d5de33b3df9e33935964c8fd85c68b2f567975db257d3a15f942"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1/shock_pf_source_lock.json",
+      "sha256": "82f1bffb754f6589e63e7270fd2aa8f8d83e1708937d93d300e40a9a0c84f2bf"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/condition_pool.csv",
+      "sha256": "758279313e6541fc8a1181e6fd06e92540269bfd4148a925e51a668404f5f01f"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/train_ranked_candidates.csv",
+      "sha256": "f4c3b35163cb498f5044253633f43de21a1313082598fa6d467075afaa894625"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/proxy_metrics_by_split.csv",
+      "sha256": "f2cc31889bd20eac0b041a950e02b7b07a030f10af32e268a6c57fb8f07bc9bc"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/candidate_summary.csv",
+      "sha256": "8b5741f4ef3173048c5e6d8ba0a63c6b88c1c93495a07c99b976145ad9dec4a8"
+    },
+    {
+      "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/top_forward_readonly_diagnostic.csv",
+      "sha256": "683bea32d70e3ce49379144e44b68e039b531fe889567e7c6289c0d76dd52d1f"
+    }
+  ],
+  "feature_schema": {
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+  },
+  "data_snapshot": {
+    "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "split_names": [
+      "train",
+      "validation",
+      "oos"
+    ]
+  },
+  "runtime_snapshot": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "entry_timing": "closed_bar_signal_horizon_proxy(종료봉 신호 예측수평선 프록시)",
+    "cost_behavior": "rough_log_return_cost_proxy_only(거친 로그수익 비용 프록시 전용)"
+  },
+  "rule_stack": {
+    "entry": "shock_plus_one_context_condition(충격 조건과 문맥 조건 1개)",
+    "exit": "future_log_return_12_proxy(12봉 미래 수익률 프록시)",
+    "side": "locked_shock_continuation_or_fade(고정 충격 지속 또는 되돌림)"
+  },
+  "results": {
+    "by_split": {
+      "metrics_path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/02_runs/frontier22B_session_return_shock_pf_source_proxy_scout_v1/proxy_metrics_by_split.csv"
+    },
+    "cross_split": {
+      "scout_clue_rows": 35,
+      "seed_surface_rows": 0,
+      "handoff_candidate_rows": 0,
+      "best_candidate_id": "f22b_0379"
+    },
+    "report_refs": [
+      {
+        "role": "proxy_report",
+        "path": "stages/stage_frontier_22__session_return_shock_pf_source_onnx_scout/03_reviews/frontier22B_session_return_shock_pf_source_proxy_scout_v1_report.md"
+      }
+    ]
+  },
+  "compatibility": {
+    "schema_version": "frontier22b_proxy_v1",
+    "mismatch_policy": "fail_fast(빠른 실패)",
+    "required_output_schema": "not_applicable_no_onnx_export_yet(ONNX 내보내기 전이라 해당 없음)"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

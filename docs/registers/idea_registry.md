@@ -1612,3 +1612,11 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR21-F20-SEED-LIFECYCLE-DD-CONTAINMENT-ONNX-SCOUT`: `frontier21C_lifecycle_density_repair_scout_v1` found low-DD density repair scout clue(낮은 손실폭 빈도 수리 탐색 단서) but no seed/handoff(씨앗/인계 없음). Effect(효과): final closeout must separate preserved DD clue(보존 손실폭 단서) from PF shortfall(수익 팩터 부족).
 <!-- frontier21D_lifecycle_repair_or_closeout_decision_v1 -->
 - `IDEA-FR21-F20-SEED-LIFECYCLE-DD-CONTAINMENT-ONNX-SCOUT`: `frontier21D_lifecycle_repair_or_closeout_decision_v1` closes Frontier21(전선21) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): low-DD lifecycle(낮은 손실폭 생명주기)은 보존하되 PF edge(수익 팩터 우위) 부족을 반복하지 않습니다.
+<!-- frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1 -->
+- `IDEA-FR22-SESSION-RETURN-SHOCK-PF-SOURCE-ONNX-SCOUT`: `frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1` opens shock-anchored cross-family PF source scout(충격 고정 교차군 수익 팩터 원천 탐색). Effect(효과): F21의 생명주기 수리 반복을 멈추고 PF edge(수익 팩터 우위) 원천을 진입 상태에서 찾습니다.
+<!-- frontier22B_session_return_shock_pf_source_proxy_scout_v1 -->
+- `IDEA-FR22-SESSION-RETURN-SHOCK-PF-SOURCE-ONNX-SCOUT`: `frontier22B_session_return_shock_pf_source_proxy_scout_v1` tested shock+context entry states(충격+문맥 진입 상태). Effect(효과): best candidate `f22b_0379` remains proxy-only(프록시 전용) and no authority(권위 없음).
+<!-- frontier22C_shock_pf_source_repair_or_closeout_decision_v1 -->
+- `IDEA-FR22-SESSION-RETURN-SHOCK-PF-SOURCE-ONNX-SCOUT`: `frontier22C_shock_pf_source_repair_or_closeout_decision_v1` applied capped lifecycle repair(상한 생명주기 수리) to F22B shock clues(F22B 충격 단서). Effect(효과): best repair `f22b_0263__hold2_atr0p8_tp1p6_cd0` remains no-authority(권위 없음) until closeout or pre-expensive review.
+<!-- frontier22D_stage_closeout_shock_pf_source_v1 -->
+- `IDEA-FR22-SESSION-RETURN-SHOCK-PF-SOURCE-ONNX-SCOUT`: `frontier22D_stage_closeout_shock_pf_source_v1` closes Frontier22(전선22) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): shock+trend low-DD density clue(충격+추세 낮은 손실폭 빈도 단서)는 보존하되 PF source(수익 팩터 원천) 부족을 반복하지 않습니다.

@@ -1,0 +1,91 @@
+{
+  "created_at_utc": "2026-06-14T07:05:21Z",
+  "stage_id": "stage_frontier_22__session_return_shock_pf_source_onnx_scout",
+  "run_id": "frontier22D_stage_closeout_shock_pf_source_v1",
+  "run_number": "frontier22D",
+  "parent_run_id": "frontier22C_shock_pf_source_repair_or_closeout_decision_v1",
+  "next_run_id": "frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1",
+  "status": "closed_preserved_clue_negative_memory_shock_lifecycle_low_dd_density_weak_pf_no_handoff",
+  "judgment": "preserved_clue_negative_memory(보존 단서+부정 기억)",
+  "preserved_clue": "f22_shock_trend_hold2_low_dd_density_reference_only(전선22 충격+추세 hold2 낮은 손실폭/목표 빈도 참고 단서 전용)",
+  "negative_memory": "shock_anchored_cross_family_pf_source_did_not_create_seed_or_handoff(충격 고정 교차군 수익 팩터 원천은 씨앗/인계를 만들지 못함)",
+  "runtime_blocker": "runtime_probe_ineligible_no_handoff_candidate_after_f22_capped_repair(전선22 상한 수리 뒤 인계 후보가 없어 런타임 탐침 부적격)",
+  "onnx_blocker": "onnx_branch_unattempted_no_seed_or_handoff_candidate(씨앗 또는 인계 후보가 없어 ONNX 분기 미개시)",
+  "tier_boundary": "Tier A proxy only; Tier B missing_required; Tier A+B out_of_scope_by_claim(Tier A 프록시 전용, Tier B 필수 누락, Tier A+B 주장 범위 밖)",
+  "data_boundary": "proxy/oracle-label research only; no verified MT5 session-shock runtime semantics(프록시/오라클 라벨 연구 전용, 검증된 MT5 세션-충격 런타임 의미 없음)",
+  "f22b_proxy_detail": {
+    "candidate_id": "f22b_0379",
+    "rule_definition": "close_prev_close_ratio >= q70 & ema20_ema50_diff >= q70 [shock_continuation]",
+    "validation_profit_factor": 1.455651805685552,
+    "validation_trades_per_day": 5.48087431693989,
+    "validation_dd_risk": 17.957116428485854,
+    "oos_profit_factor": 1.169103538976637,
+    "oos_trades_per_day": 6.114503816793893,
+    "oos_dd_risk": 15.559235648566972,
+    "meaning": "near_seed_proxy_but_oos_pf_below_seed_floor_and_no_handoff(근접 씨앗 프록시지만 표본외 수익 팩터가 씨앗 바닥 미만이고 인계 없음)"
+  },
+  "f22c_lifecycle_detail": {
+    "profile_id": "f22b_0263__hold2_atr0p8_tp1p6_cd0",
+    "source_candidate_id": "f22b_0263",
+    "rule_definition": "return_1_over_atr_14 >= q70 & ema20_ema50_diff >= q70 [shock_continuation]",
+    "validation_profit_factor": 1.0557901966673586,
+    "validation_trades_per_day": 5.700787401574803,
+    "validation_dd_risk_percent": 3.641711408480397,
+    "validation_equity_trend_r2": 0.6299156593056051,
+    "oos_profit_factor": 1.105251295774317,
+    "oos_trades_per_day": 7.083333333333333,
+    "oos_dd_risk_percent": 2.518220471155941,
+    "oos_equity_trend_r2": 0.7357079029388168,
+    "meaning": "density_low_dd_smoothness_clue_but_pf_weak(빈도/낮은 손실폭/매끄러움 단서이나 수익 팩터 약함)"
+  },
+  "f22b_scout_clue_rows": 35,
+  "f22b_seed_surface_rows": 0,
+  "f22b_handoff_candidate_rows": 0,
+  "f22c_scout_clue_rows": 1,
+  "f22c_seed_surface_rows": 0,
+  "f22c_handoff_candidate_rows": 0,
+  "grok_closeout": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier22_closeout/small_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier22_closeout/small_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier22_closeout/small_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier22_closeout/small_review/metadata.json",
+    "prompt_hash": "e9d75c2a4c3d6dcc4922331e34fa4b37ad84dd7802e65a0b9be2e3d5a03d5369",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "unexpected_top_level_artifacts": [],
+    "classification": "accepted_with_local_verification(로컬 검증 조건부 수용)",
+    "output_excerpt": "Frontier22 마감 경계를 검토합니다. 먼저 Grok 협업 스킬과 로컬 근거를 대조해 Codex 제안이 증거와 맞는지 확인합니다.\n## accepted(수용)\n\n- **Closeout class(마감 분류)** `preserved clue + negative memory(보존 단서 + 부정 기억)` is correct. F22B/F22C both show `seed_surface_rows=0`, `handoff_candidate_rows=0`, and `runtime_probe_status=out_of_scope_by_claim_*` in `final_summary.json`; no completion, baseline, promotion, runtime authority, live readiness, or Goal Achieve is warranted.\n- **Negative memory core(부정 기억 핵심)** is fair: shock-anchored cross-family search produced scout clues only; capped lifecycle repair did not recover PF to seed/handoff gates; ONNX branch, WFO, and MT5 were never reached.\n- **Preserved clue (narrow)(보존 단서, 좁게)** for F22C `f22b_0263__hold2_atr0p8_tp1p6_cd0` is supported: density ~5.7–7.1/day, DD ~2.5–3.6%, equity-trend R² ~0.63–0.74, but PF ~1.05–1.11 (barely above 1).\n- **Next-stage direction(다음 단계 방향)** — seek a stronger PF source, do not repeat F22 shock+trend + hold2/ATR micro-tuning — is correct.\n- **Stage-open locks(단계 개방 잠금)** held: shock+non-shock context shape, no lifecycle in F22B first proxy, F20 duplicate guard at zero pressure rows.\n\n## needs_local_verification(로컬 검증 필요)\n\n- **F22B seed count(씨앗 수)** — Before closeout, reconcile `seed_surface_rows=0` with best `f22b_0379` (val PF 1.456, OOS PF 1.169, density in band, max DD 17.96% ≤ 25% seed cap). Required evidence: re-run or audit `seed_surface_flag` logic in `candidate_summary.csv`; if any row should be seed, negative memory must say “near-seed proxy, no handoff,” not “no seed surface.”\n- **Tier B gap(티어 B 공백)** — Ledger records `tier_b_missing_required` and `tier_ab_combined_out_of_scope` for B and C. Closeout text must explicitly state Tier A-only; do not let preserved clue read as full-context alpha.\n- **Evaluation-surface split(평가면 분리)** — F22B best (`f22b_0379`, 12-bar proxy, val PF 1.456) ≠ F22C best (`f22b_0263`, lifecycle repair, val PF 1.056). Preserved clue must label lifecycle surface separately from proxy scout surface.\n- **Search-cap accounting(탐색 상한 회계)** — `candidate_pool_rows=464` vs lock `max_candidates<=200`. Required evidence: one-line proof that 464 is pre-cap enumeration or cap was applied at selection, not a lock breach.\n- **ONNX scope miss(온엑스 범위 미달)** — Stage title promises ONNX scout; zero ONNX/model artifacts exist. Closeout negative memory should name this explicit scope non-delivery.\n- **Data boundary(데이터 경계)** — F22C notes `timezone_status unresolved` and oracle path labels. Preserved clue must not imply verified session-shock runtime semantics.\n\n## rejected(거절)\n\n- **Reject upgrading F22C to seed/promotion** — OOS PF 1.105 < 1.20 seed floor; validation PF 1.056 < 1.20; no handoff candidate. Lifecycle repair traded PF for DD; that is archive material, not a candidate surface.\n- **Reject “PF source found” framing** — Even F22B’s best proxy fails handoff (OOS PF 1.169 < 1.50; `smoothness_pass=false`). At most: weak proxy read, not PF-edge source closure.\n- **Reject repeating F22 as primary next hypothesis** — 464→156 proxy sweep plus repair on 8 sources still yielded 0 seed / 0 handoff. Another lifecycle pass on the same shock+trend family is negative-memory repetition, not explorati"
+  },
+  "local_verification": {
+    "judgment": "pass_closeout_ready(마감 준비 통과)",
+    "checks": {
+      "f22b_seed_zero_summary_and_csv": true,
+      "f22b_best_not_seed_due_oos_pf": true,
+      "f22b_best_smoothness_false": true,
+      "f22b_search_cap_applied_after_enumeration": true,
+      "f22b_f20_duplicate_guard_zero": true,
+      "f22c_scout_one_seed_zero_handoff_zero": true,
+      "f22c_best_pf_below_seed_floor": true,
+      "f22c_best_density_and_dd_preserved": true,
+      "tier_boundary_recorded": true,
+      "onnx_scope_miss_recorded": true,
+      "grok_success": true,
+      "grok_accepts_closeout_boundary": true,
+      "grok_no_unexpected_artifacts": true
+    },
+    "notes": {
+      "f22b_seed_zero_reason": "f22b_0379 OOS PF 1.16910 is below seed floor 1.20 and smoothness pass is false(f22b_0379 표본외 수익 팩터 1.16910은 씨앗 바닥 1.20 미만이고 매끄러움 통과도 거짓)",
+      "search_cap_reason": "candidate_pool_rows 464 is pre-cap enumeration; selected_candidate_rows 156 is below max_candidates 200(후보 464행은 상한 전 열거이고 선택 후보 156행은 최대 200 미만)",
+      "tier_boundary_reason": "Tier B is missing_required and Tier A+B is out_of_scope_by_claim(티어 B는 필수 누락, 티어 A+B는 주장 범위 밖)"
+    }
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

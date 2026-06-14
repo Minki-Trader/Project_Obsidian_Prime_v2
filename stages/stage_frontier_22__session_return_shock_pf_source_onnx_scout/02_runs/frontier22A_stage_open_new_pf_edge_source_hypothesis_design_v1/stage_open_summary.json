@@ -1,0 +1,149 @@
+{
+  "created_at_utc": "2026-06-14T06:45:50Z",
+  "stage_id": "stage_frontier_22__session_return_shock_pf_source_onnx_scout",
+  "run_id": "frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1",
+  "run_number": "frontier22A",
+  "parent_run_id": "frontier21D_lifecycle_repair_or_closeout_decision_v1",
+  "next_run_id": "frontier22B_session_return_shock_pf_source_proxy_scout_v1",
+  "status": "opened_frontier22_session_return_shock_pf_source_no_authority",
+  "judgment": "stage_opened_after_grok_adjusted_shock_cross_family_contract",
+  "primary_family": "experiment_execution(실험 실행)",
+  "primary_skill": "obsidian-run-evidence-system(실행 근거 시스템)",
+  "support_skills": [
+    "obsidian-experiment-design(실험 설계)",
+    "obsidian-data-integrity(데이터 무결성)",
+    "obsidian-model-validation(모델 검증)",
+    "obsidian-artifact-lineage(산출물 계보)",
+    "obsidian-grok-collaboration(그록 협업)",
+    "obsidian-claim-discipline(주장 규율)"
+  ],
+  "frontier_thesis": "A new PF edge source(새 수익 팩터 우위 원천) may exist in shock-anchored cross-family entry states(충격 고정 교차군 진입 상태), not in more lifecycle repair(추가 생명주기 수리).",
+  "hypothesis": "US100 M5 return shock(수익률 충격) combined with exactly one context family(문맥군) can isolate favorable payoff asymmetry(유리한 보상 비대칭) before any lifecycle repair(생명주기 수리 전).",
+  "decision_use": "Open F22B proxy scout(F22B 프록시 탐색)를 shock+context locked rule shape(충격+문맥 잠금 규칙 형태)로 실행합니다.",
+  "comparison_baseline": "F20/F21 are reference-only(참조 전용) and no selected baseline(선택 기준선 없음).",
+  "control_variables": [
+    "feature_set_v2 fixed 58 features(고정 58개 피처)",
+    "future_log_return_12 fixed proxy(고정 12봉 미래 수익률 프록시)",
+    "train-only thresholds(학습 전용 임계값)",
+    "validation/OOS read-only diagnostics(검증/표본외 읽기 전용 진단)"
+  ],
+  "changed_variables": [
+    "shock feature family(충격 피처군)",
+    "one context condition(문맥 조건 1개)",
+    "locked shock continuation/fade lane(고정 충격 지속/되돌림 방향)"
+  ],
+  "sample_scope": "Tier A separate only(티어 A 분리 전용); Tier B missing_required(티어 B 필수 누락); Tier A+B out_of_scope_by_claim(티어 A+B 주장 범위 밖).",
+  "success_criteria": {
+    "scout_clue": "shock present, not F20 duplicate, validation/OOS net positive, PF>=1.05, density 3-12/day(충격 포함, F20 중복 아님, 검증/표본외 양수)",
+    "seed_surface": "PF>=1.2 both, density 5-10/day, DD<=25%(양쪽 수익 팩터 1.2 이상, 빈도 5-10, 손실폭 25% 이하)",
+    "handoff_candidate": "PF>=1.5 both, density 5-10/day, DD<=15%, smoothness pass, then Grok before MT5/ONNX(양쪽 수익 팩터 1.5 이상 뒤 비싼 검증 전 그록)"
+  },
+  "failure_criteria": [
+    "best rule is F20 duplicate pressure(F20 중복 압력)",
+    "no validation/OOS positive PF clue(검증/표본외 양수 수익 팩터 단서 없음)",
+    "density/PF/DD cannot coexist(빈도/수익 팩터/손실폭 공존 실패)"
+  ],
+  "invalid_conditions": [
+    "candidate without shock feature(충격 피처 없는 후보)",
+    "candidate with more than one context condition(문맥 조건 1개 초과 후보)",
+    "validation/OOS threshold selection(검증/표본외 임계값 선택)",
+    "lifecycle repair inside F22B(F22B 안 생명주기 수리)"
+  ],
+  "stop_conditions": [
+    "max candidate cap reached(후보 상한 도달)",
+    "handoff-like candidate appears and pre-expensive Grok is required(인계형 후보 발생 후 비싼 검증 전 그록 필요)",
+    "no scout/seed clue after capped proxy(상한 프록시 뒤 단서 없음)"
+  ],
+  "evidence_plan": [
+    "stage_open_summary.json(단계 개방 요약)",
+    "shock_pf_source_lock.json(충격 수익 팩터 원천 잠금)",
+    "condition_pool.csv(조건 풀)",
+    "candidate_summary.csv(후보 요약)",
+    "proxy_metrics_by_split.csv(분할별 프록시 지표)",
+    "stage_run_ledger.csv(단계 실행 장부)"
+  ],
+  "buckets": {
+    "shock": [
+      "return_zscore_20",
+      "log_return_1",
+      "return_1_over_atr_14",
+      "gap_percent",
+      "close_prev_close_ratio"
+    ],
+    "volatility": [
+      "atr_14_over_atr_50",
+      "historical_vol_5_over_20",
+      "vix_zscore_20",
+      "hl_zscore_50"
+    ],
+    "trend_chop": [
+      "adx_14",
+      "ema20_ema50_diff",
+      "ema20_ema50_spread_zscore_50",
+      "bb_squeeze"
+    ],
+    "session_age": [
+      "minutes_from_cash_open",
+      "is_first_30m_after_open",
+      "is_last_30m_before_cash_close",
+      "is_us_cash_open"
+    ],
+    "breadth": [
+      "mega8_pos_breadth_1",
+      "mega8_dispersion_5",
+      "us100_minus_mega8_equal_return_1",
+      "us100_minus_top3_weighted_return_1"
+    ]
+  },
+  "locks": {
+    "novelty_delta": "shock-anchored cross-family entry states(충격 고정 교차군 진입 상태)",
+    "mandatory_rule_shape": "one shock condition plus one non-shock context condition(충격 조건 1개와 비충격 문맥 조건 1개)",
+    "search_cap": "family_condition_cap<=8, pair_depth=2, max_candidates<=200(군별 조건 8개 이하, 깊이 2, 후보 200개 이하)",
+    "side_hypothesis": "two locked lanes: shock_continuation and shock_fade(고정 2개 방향: 충격 지속과 충격 되돌림)",
+    "exit_proxy": "future_log_return_12 minus rough proxy cost only(12봉 미래 수익률에서 거친 비용만 차감)",
+    "f20_duplicate_guard": "F20 vix_zscore_20+close_ema50_ratio duplicate cannot be scout clue(F20 중복은 탐색 단서 금지)",
+    "f21_guard": "no lifecycle repair in first proxy(F22B 첫 프록시에는 생명주기 수리 금지)"
+  },
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "grok": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier22_stage_open/small_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier22_stage_open/small_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier22_stage_open/small_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier22_stage_open/small_review/metadata.json",
+    "prompt_hash": "a56b5ee8704add0c0caebc6ea2ae48e3e12b8da749042d48cb2678473345f52b",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "unexpected_top_level_artifacts": [],
+    "classification": "accepted_with_adjustments(조정 수용)",
+    "output_excerpt": "Bounded Grok review(제한 그록 검토)를 위해 협업 스킬과 Frontier21·유사 선행 작업 근거를 먼저 확인합니다.\n## Bounded Grok Review — Frontier22 Stage Open\n\n**Review size:** small review(소규모 검토)  \n**Decision:** **adjust** (조정 후 진행; pure accept 아님, reject 아님)\n\n---\n\n### Plain read (쉬운 요약)\n\nFrontier21(전선21)은 “청산·빈도·손실폭 수리”만으로는 PF edge(수익 팩터 우위)가 안 나온다고 닫혔습니다. 그래서 Frontier22에서 **진입 품질(entry quality, 진입 품질)** 쪽을 새로 보자는 방향은 맞습니다.\n\n다만 지금 문장 그대로 열면, Frontier20(전선20)이 이미 한 **58피처 전체 규칙 지도(rule atlas, 규칙 지도)** 와 너무 가깝습니다. F20 최상 씨앗이 `vix_zscore_20 + close_ema50_ratio`(변동성 + 추세/위치)였고, F22가 말하는 volatility/trend/chop/session/breadth는 그 안에 이미 들어 있습니다.\n\n그래서 **가설 방향은 유효**하지만, **열기 전에 잠금(lock, 잠금) 6~8개**를 넣어야 F20 재탐색이 아닌 새 전선이 됩니다.\n\n---\n\n### Local verification (로컬 검증)\n\n| Check | Result |\n|---|---|\n| F21 closed as stated | **pass** — `workspace_state.yaml`, F21D closeout report 일치 |\n| F20 rule-atlas negative memory | **pass** — depth-2 train-only atlas, 533 candidates, best `f20b_pair_0359` |\n| F22 stage folder exists | **pass (none yet)** — 아직 미개방, 설계 단계 적합 |\n| Forbidden claims in proposal | **pass** — scout-only, no promotion/runtime authority |\n\n---\n\n### Answer to the narrow question\n\n**Is this a valid new Frontier22 hypothesis?**  \n**Yes, directionally** — F21이 “lifecycle alone(생명주기 단독)”을 부정했으니, PF source(수익 팩터 원천)를 entry-state(진입 상태)로 옮기는 건 논리적으로 맞습니다. Stage308의 `session/breadth/volatility/trend` 축과도 맞습니다.\n\n**Is it too close to F20 feature-state rule atlas / threshold search?**  \n**Yes, unless adjusted** — 같은 `feature_set_v2` 58피처, 같은 train quantile thresholds(학습 분위 임계값), 같은 `future_log_return_12` 고정 프록시를 쓰면 **F20의 부분 재실행**이 됩니다. 특히 F20이 이미 volatility+trend 조합에서 PF≈1.2 seed를 냈기 때문에, “context만 바꿔 다시 훑기”는 novelty(신규성)가 약합니다.\n\n**What must change before Codex opens and runs proxy scout?**  \n아래 **Required adjustments(필수 조정)** 를 stage-open contract(단계 개방 계약)에 박아 넣어야 합니다.\n\n---\n\n### Required adjustments before open (필수 조정)\n\n1. **Novelty delta contract (신규성 차이 계약)**  \n   - Changed variable(변경 변수) = **shock-anchored entry states(충격 고정 진입 상태)**  \n   - Fixed variable(고정 변수) = `fwd12` horizon proxy, no lifecycle, no F20 seed inheritance  \n   - Do-not-repeat(반복 금지): F20 global depth-2 atlas, F21 lifecycle/density repair, "
+  },
+  "local_verification": {
+    "judgment": "pass_open_ready_with_adjusted_locks(조정 잠금 반영 후 개방 가능)",
+    "checks": {
+      "workspace_current_stage_frontier21_closed": true,
+      "workspace_next_run_frontier22a": true,
+      "f20_negative_memory_present": true,
+      "f20_no_authority_present": true,
+      "f21_negative_memory_present": true,
+      "feature_hash_matches_contract": true,
+      "feature_count_is_58": true,
+      "bucket_features_exist": true,
+      "dataset_exists": true,
+      "grok_transport_success": true,
+      "grok_adjustment_accepted": true,
+      "no_unexpected_top_level_artifacts": true
+    },
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_count": 58
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

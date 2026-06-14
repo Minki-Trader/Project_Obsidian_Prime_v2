@@ -6984,3 +6984,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T06:23:30Z: `frontier21C_lifecycle_density_repair_scout_v1` ran capped density repair(상한 빈도 수리). Effect(효과): scout/seed/handoff(탐색/씨앗/인계) counts are 3/0/0.
 <!-- frontier21D_lifecycle_repair_or_closeout_decision_v1 -->
 - 2026-06-14T06:29:15Z: `frontier21D_lifecycle_repair_or_closeout_decision_v1` closed Frontier21(전선21) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): next frontier(다음 전선) starts at `frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1` with no baseline/promotion/runtime authority(기준선/승격/런타임 권위 없음).
+<!-- frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1 -->
+- 2026-06-14T06:45:50Z: `frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1` opened Frontier22(전선22) after Grok adjusted review(그록 조정 검토). Effect(효과): next run(다음 실행) `frontier22B_session_return_shock_pf_source_proxy_scout_v1` is locked to shock+context PF source scout(충격+문맥 수익 팩터 원천 탐색).
+<!-- frontier22B_session_return_shock_pf_source_proxy_scout_v1 -->
+- 2026-06-14T06:46:04Z: `frontier22B_session_return_shock_pf_source_proxy_scout_v1` ran shock PF source proxy scout(충격 수익 팩터 원천 프록시 탐색). Effect(효과): scout/seed/handoff(탐색/씨앗/인계) counts are 35/0/0 and next run(다음 실행) is `frontier22C_shock_pf_source_repair_or_closeout_decision_v1`.
+<!-- frontier22C_shock_pf_source_repair_or_closeout_decision_v1 -->
+- 2026-06-14T06:55:12Z: `frontier22C_shock_pf_source_repair_or_closeout_decision_v1` ran capped lifecycle repair on F22B shock clues(F22B 충격 단서 상한 생명주기 수리). Effect(효과): scout/seed/handoff(탐색/씨앗/인계) counts are 1/0/0 and next run(다음 실행) is `frontier22D_stage_closeout_shock_pf_source_v1`.
+<!-- frontier22D_stage_closeout_shock_pf_source_v1 -->
+- 2026-06-14T07:05:21Z: `frontier22D_stage_closeout_shock_pf_source_v1` closed Frontier22(전선22) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): next frontier(다음 전선) starts at `frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1` with no baseline/promotion/runtime authority(기준선/승격/런타임 권위 없음).
