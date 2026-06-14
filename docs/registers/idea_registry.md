@@ -1568,3 +1568,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR13-REGIME-NORMALIZED-TRADE-SHAPE-ONNX-SCOUT`: Frontier13(프론티어13) opens regime-normalized trade-shape ONNX scout(레짐 정규화 거래 형상 온엑스 탐색). Effect(효과): F12(프론티어12)의 global label knob(전역 라벨 파라미터) 반복 없이 train-only regime scale(학습 전용 레짐 척도)을 시험합니다.
 <!-- frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1 -->
 - `frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1`: Frontier13(프론티어13) closed as negative_memory(부정 기억). Effect(효과): regime-normalized trade-shape labels(국면 정규화 거래 형상 라벨)은 sparse seed surface(희소 씨앗 표면)만 남기고 completion/baseline/promotion/runtime authority(완성/기준선/승격/런타임 권위)는 만들지 않습니다.
+<!-- frontier14A_stage_open_daily_session_opportunity_budget_onnx_scout_v1 -->
+- `IDEA-FR14-DAILY-SESSION-OPPORTUNITY-BUDGET-ONNX-SCOUT`: Frontier14(프론티어14) opens daily/session opportunity budget ONNX scout(일별/세션별 기회 예산 온엑스 탐색). Effect(효과): F12/F13(프론티어12/13)의 label wrapping(라벨 감싸기)을 반복하지 않고 upstream entry opportunity generation(상류 진입 기회 생성)을 시험합니다.
+<!-- frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1 -->
+- `frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1`: Frontier14(프론티어14) closed as preserved_clue_negative_memory(보존 단서와 부정 기억). Effect(효과): cash-session q8 h8 sparse ONNX surface(현금장 q8 h8 희소 온엑스 표면)는 reference-only clue(참조 전용 단서)로 남기고, daily/session quota density-transfer failure(일/세션 할당량 밀도 전달 실패)는 반복 금지로 남겼습니다.

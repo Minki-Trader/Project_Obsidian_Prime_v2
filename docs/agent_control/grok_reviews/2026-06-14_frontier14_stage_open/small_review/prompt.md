@@ -1,0 +1,29 @@
+﻿Frontier14 stage-open review(프론티어14 단계 개방 검토)입니다.
+
+Please answer in this response only(이 응답 안에서만 답하세요). Do not say you will write a file(파일을 쓰겠다고 말하지 마세요).
+
+Current truth(현재 진실):
+- Frontier13(프론티어13)은 `closed_negative_memory_no_authority`로 닫혔습니다.
+- Frontier13 negative memory(프론티어13 부정 기억): regime-normalized trade-shape labels(국면 정규화 거래 형상 라벨)은 PF/density/DD(수익 팩터/빈도/손실폭)를 동시에 맞추지 못했습니다. Sparse LR plain(희소 로지스틱 평범) 표면은 OOS PF/DD(표본밖 수익 팩터/손실폭)가 좋아도 OOS density(표본밖 빈도)가 0.412/day로 너무 낮고, balanced variants(균형 변형)는 density(빈도)를 올렸지만 DD(손실폭)를 크게 악화했습니다.
+- Forbidden imports(금지 반입): winner/baseline/promotion/runtime authority/live readiness/Goal Achieve(승자/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 상속하지 않습니다.
+
+Codex proposed direction(코덱스 제안 방향):
+- Open Frontier14(프론티어14) as `stage_frontier_14__daily_session_opportunity_budget_onnx_scout`.
+- Hypothesis(가설): US100 M5 fixed 3-class ONNX(US100 5분봉 고정 3클래스 온엑스)는 label wrapping(라벨 감싸기)보다 upstream entry opportunity generation(상류 진입 기회 생성)을 바꾸면 density/PF/DD(빈도/수익 팩터/손실폭) 균형에 가까워질 수 있습니다.
+- Label source(라벨 원천): future path utility(미래 경로 효용)를 daily/session bucket(일별/세션별 버킷) 안에서 pre-registered quota(사전 등록 할당량)로 rank(순위화)합니다. 예: `day_q6_h8`, `cash_q8_h8`, `cash_q10_h12`.
+- Intended effect(의도 효과): label target(라벨 표적) 자체가 roughly 5~10 opportunities/day(대략 일 5~10회 기회)를 갖게 해서 post-fit threshold search(적합 후 임계값 탐색) 없이 fixed argmax ONNX(고정 최대확률 온엑스)가 거래 빈도 축을 학습할 수 있는지 봅니다.
+- Controls(통제): same Tier A dataset(동일 티어 A 데이터), same feature order(동일 피처 순서), same fixed model specs(동일 고정 모델 규격), no post-fit selector(적합 후 선택기 없음), no threshold micro-search(임계값 미세 탐색 없음), no class-weight ladder beyond fixed existing specs(기존 고정 규격 밖 클래스 가중 사다리 없음).
+- Changed variable(변경 변수): label construction(라벨 구성) only: daily/session quota opportunity labels(일별/세션별 할당 기회 라벨).
+- Success criteria(성공 기준): strict scout clue(엄격 탐색 단서)는 validation and OOS(검증과 표본밖)가 both positive net/PF>=1.2/density 5~10/day/DD<=15%(양수 순수익/수익 팩터 1.2 이상/일 5~10회/손실폭 15% 이하)이고 subperiod DD(하위기간 손실폭)가 controlled(통제됨)일 때만 말합니다.
+- Failure criteria(실패 기준): label quota(라벨 할당량)는 맞지만 model argmax(모델 최대확률)가 density cliff(빈도 절벽)나 DD explosion(손실폭 폭발)을 만들면 negative memory(부정 기억)로 닫습니다.
+- Claim boundary(주장 경계): scout clue/seed surface/preserved clue/negative memory/invalid setup/blocked(탐색 단서/씨앗 표면/보존 단서/부정 기억/무효 설정/차단)만 말합니다. completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 forbidden(금지)입니다.
+
+Review question(검토 질문):
+Is this a valid new frontier hypothesis(유효한 새 프론티어 가설) rather than a repeat of Frontier12/13 label knob repair(프론티어12/13 라벨 파라미터 수리 반복)? Identify leakage/overfit/hidden-threshold risks(누수/과적합/숨은 임계값 위험) and required records(필수 기록).
+
+Required output(필수 출력):
+1. Classification(분류): accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요).
+2. One-sentence reason(한 문장 이유).
+3. Required local checks before execution(실행 전 필수 로컬 확인).
+4. Required do-not-repeat notes(필수 반복 금지 메모).
+5. Forbidden claims check(금지 주장 확인): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성).

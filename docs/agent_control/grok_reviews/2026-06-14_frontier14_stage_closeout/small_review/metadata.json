@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "8e28e08e60e39c2201b49f7a178f0238ea323f3404634f51de5fad388f58fa43",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "# Frontier14 Stage Closeout Review(프론티어14 단계 마감 검토)\n\nYou are Grok acting as external second opinion(외부 2차 의견). Return one classification: accepted(수용), rejected(거절), or needs_local_verification(로컬 검증 필요).\n\n## Current Truth(현재 진실)\n\nCodex(코덱스) opened Frontier14(프론티어14) as a new hypothesis(가설): daily/session opportunity budget labels(일/세션별 기회 예산 라벨)이 fixed 3-class ONNX(고정 3클래스 온엑스)의 trade density(거래 밀도), PF(profit factor, 수익 팩터), DD(drawdown, 손실폭)를 더 잘 맞출 수 있는지 본다.\n\nStage12~364 are reference only(참조 전용), not inheritance(상속 아님). No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) is claimed.\n\n## Evidence(근거)\n\nF14B proxy scout(프록시 탐색):\n- strict scout clue rows(엄격 탐색 단서 행): 0\n- preserved clue rows(보존 단서 행): 2\n- best: f14b_cash_q8_h8__lr_plain\n- validation PF/density/DD(검증 수익 팩터/밀도/손실폭): 0.709064 / 0.098361/day / 6.754780%\n- OOS PF/density/DD(표본밖 수익 팩터/밀도/손실폭): 3.356730 / 0.068702/day / 0.388877%\n- label opportunity density(라벨 기회 밀도): about 8/day, but model density(모델 밀도): about 0.07~0.10/day.\n\nF14C capped repair(상한 있는 수리):\n- repair changed only training subset(학습 부분 표본) using safest flat rows(가장 안전한 평면 행); quota/hold/argmax/threshold(할당량/보유기간/최대확률/임계값)는 unchanged(유지).\n- model family(모델 계열): plain logistic ONNX(평범 로지스틱 온엑스) only, to avoid repeating class-weight density forcing(클래스 가중치 밀도 강제 반복 방지).\n- strict scout clue rows(엄격 탐색 단서 행): 0\n- preserved clue rows(보존 단서 행): 5\n- best: f14b_cash_q8_h8__flat8x_safest__lr_plain\n- validation PF/density/DD(검증 수익 팩터/밀도/손실폭): 0.709064 / 0.098361/day / 6.754780%\n- OOS PF/density/DD(표본밖 수익 팩터/밀도/손실폭): 3.356730 / 0.068702/day / 0.388877%\n- worst subperiod DD(최악 하위기간 손실폭): 6.724185%\n- negative subperiod fraction(음수 하위기간 비율): 0.818182\n- flat4x repair(4배 평면 수리)는 density(밀도)를 0.273/0.260 per day까지 올렸지만 validation PF(검증 수익 팩터) 0.647629, validation DD(검증 손실폭) 13.370410%로 strict(엄격) 불합격.\n\n## Proposed Codex Judgment(제안 판정)\n\nClose Frontier14(프론티어14) as preserved_clue_no_authority(보존 단서, 권위 없음), with negative memory(부정 기억) that daily/session quota labels created label-side density(라벨 쪽 밀도) but did not transfer to model-side trade density(모델 쪽 거래 밀도) without damaging PF/DD(수익 팩터/손실폭).\n\nSkip WFO/MT5(워크포워드/메타트레이더5) for this stage because no strict scout clue(엄격 탐색 단서) exists, best validation net(검증 순수익) is negative, and density remains far below 5~10/day. This is a claim-boundary skip(주장 경계에 따른 생략), not a positive runtime statement(긍정 런타임 주장).\n\n## Review Questions(검토 질문)\n\n1. Is preserved_clue_no_authority(보존 단서, 권위 없음) a fair closeout label, or should this be negative_memory(부정 기억)?\n2. Is skipping WFO/MT5(워크포워드/메타트레이더5) justified by the proxy evidence(프록시 근거)?\n3. Any specific local verification(로컬 검증) Codex(코덱스) must do before writing the closeout?\n"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 77.17293,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier14_stage_closeout/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier14_stage_closeout/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier14_stage_closeout/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier14_stage_closeout/small_review/metadata.json"
+  }
+}

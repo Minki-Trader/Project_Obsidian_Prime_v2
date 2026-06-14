@@ -6928,3 +6928,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T00:52:20Z: `frontier13B_regime_normalized_trade_shape_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict rows(엄격 행) `0`, preserved rows(보존 행) `0`, next run(다음 실행) `frontier13C_regime_normalized_repair_or_closeout_decision_v1`.
 <!-- frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1 -->
 - 2026-06-14T00:59:45Z: `frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1` closed Frontier13(프론티어13) as negative memory(부정 기억) after Grok closeout accepted(그록 마감 수용). Effect(효과): next frontier(다음 프론티어) `frontier14A_stage_open_new_hypothesis_design_v1` starts a new upstream-frequency hypothesis(상류 빈도 가설) without authority claims(권위 주장 없음).
+<!-- frontier14A_stage_open_daily_session_opportunity_budget_onnx_scout_v1 -->
+- 2026-06-14T01:11:39Z: `frontier14A_stage_open_daily_session_opportunity_budget_onnx_scout_v1` opened Frontier14(프론티어14) after Grok stage-open accepted(그록 단계 개방 수용). Effect(효과): next run(다음 실행) `frontier14B_daily_session_opportunity_budget_proxy_scout_v1` will test pre-registered quota labels(사전 등록 할당 라벨) with no authority claims(권위 주장 없음).
+<!-- frontier14B_daily_session_opportunity_budget_proxy_scout_v1 -->
+- 2026-06-14T01:16:44Z: `frontier14B_daily_session_opportunity_budget_proxy_scout_v1` preserved_clue_candidate(보존 단서 후보). Effect(효과): strict rows(엄격 행) `0`, preserved rows(보존 행) `2`, next run(다음 실행) `frontier14C_daily_session_opportunity_budget_repair_or_closeout_decision_v1`.
+<!-- frontier14C_contrastive_flat_budget_density_transfer_repair_v1 -->
+- 2026-06-14T01:26:27Z: `frontier14C_contrastive_flat_budget_density_transfer_repair_v1` preserved_clue_candidate(보존 단서 후보). Effect(효과): strict rows(엄격 행) `0`, preserved rows(보존 행) `5`, next run(다음 실행) `frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1`.
+<!-- frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1 -->
+- 2026-06-14T01:33:49Z: `frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1` closed Frontier14(프론티어14) as preserved clue plus negative memory(보존 단서와 부정 기억) after Grok closeout accepted(그록 마감 수용). Effect(효과): next frontier(다음 프론티어) `frontier15A_stage_open_new_hypothesis_design_v1` starts a new hypothesis(새 가설) without authority claims(권위 주장 없음).
