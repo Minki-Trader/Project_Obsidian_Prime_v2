@@ -6910,3 +6910,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-13T23:09:46Z: `frontier10C_utility_distillation_capped_repair_scout_v1` preserved_clue(보존 단서). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `14`, next run(다음 실행) `frontier10D_grok_stage_closeout_review_v1`.
 <!-- frontier10D_stage_closeout_split_consistent_utility_distillation_v1 -->
 - 2026-06-13T23:20:46Z: `frontier10D_stage_closeout_split_consistent_utility_distillation_v1` preserved_clue_negative_memory_no_authority. Effect(효과): Frontier10 closed(전선10 마감), next run(다음 실행) `frontier11A_stage_open_new_hypothesis_design_v1`.
+<!-- frontier11A_stage_open_subperiod_stability_first_onnx_scout_v1 -->
+- 2026-06-13T23:36:50Z: `frontier11A_stage_open_subperiod_stability_first_onnx_scout_v1` opened Frontier11(전선11) with Grok retry accepted(그록 재시도 수용) and Stage171/273 archive boundary verified(171/273단계 보관소 경계 검증). Effect(효과): next run(다음 실행) `frontier11B_subperiod_stability_proxy_scout_v1` can test subperiod stability-first selection(하위기간 안정성 우선 선택) without authority claims(권위 주장 없이).
+<!-- frontier11B_subperiod_stability_proxy_scout_v1 -->
+- 2026-06-13T23:49:57Z: `frontier11B_subperiod_stability_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `0`, next run(다음 실행) `frontier11C_stability_selector_repair_or_closeout_decision_v1`.
+<!-- frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1 -->
+- 2026-06-13T23:58:13Z: `frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1` closed Frontier11(전선11) as negative memory(부정 기억). Effect(효과): next run(다음 실행) `frontier12A_stage_open_new_hypothesis_design_v1` starts a new hypothesis lifecycle(새 가설 생명주기).

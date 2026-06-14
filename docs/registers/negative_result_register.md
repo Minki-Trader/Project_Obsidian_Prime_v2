@@ -1007,3 +1007,5 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - `frontier09D_stage_closeout_drawdown_clean_path_labeling_v1`: validation DD(검증 손실폭)가 56~64%로 남아 strict scout clue(엄격 탐색 단서)가 없었습니다. Effect(효과): 같은 clean path density bridge repair(깨끗한 경로 밀도 브리지 수리)를 반복하지 않습니다.
 <!-- frontier10D_stage_closeout_split_consistent_utility_distillation_v1 -->
 - `frontier10D_stage_closeout_split_consistent_utility_distillation_v1`: validation DD(검증 손실폭)가 56~60%로 남고 best preserved repair(최상 보존 수리)도 OOS DD(표본밖 손실폭)를 악화했습니다. Effect(효과): 같은 side-class-weight ladder/density bridge/threshold micro-search(방향 클래스 가중 사다리/밀도 브리지/임계값 미세 탐색)를 Frontier10 안에서 반복하지 않습니다.
+<!-- frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1 -->
+- `frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1`: Frontier11(전선11) negative memory(부정 기억). Action(행동): post-fit subperiod stability selector(적합 후 하위기간 안정성 선택기)를 F10C(전선10C) 후보군에 적용했지만 strict/preserved rows(엄격/보존 행)가 0이었습니다. Effect(효과): same-pool selector weight tweak(같은 후보군 선택기 가중 미세조정)은 반복 수리로 보고 다음 전선으로 넘깁니다.

@@ -1553,3 +1553,10 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier10C_utility_distillation_capped_repair_scout_v1`: utility distillation capped repair scout(효용 증류 상한 수리 탐색)를 기록했습니다. Effect(효과): post-hoc bridge(사후 브리지) 없이 density cliff(밀도 절벽)를 한 번 시험했습니다.
 <!-- frontier10D_stage_closeout_split_consistent_utility_distillation_v1 -->
 - `frontier10D_stage_closeout_split_consistent_utility_distillation_v1`: Frontier10 split-consistent utility distillation(전선10 분할 일관 효용 증류)은 preserved clue + negative memory(보존 단서 + 부정 기억)로 닫혔습니다. Effect(효과): utility-margin/side-weight clue(효용 마진/방향 가중 단서)는 참조 전용으로, validation DD failure(검증 손실폭 실패)와 same-family repair loop(같은 계열 수리 반복)는 부정 기억으로 남깁니다.
+<!-- frontier11A_stage_open_subperiod_stability_first_onnx_scout_v1__IDEA-FR11-SUBPERIOD-STABILITY-FIRST-ONNX-SCOUT -->
+<!-- frontier11A_stage_open_subperiod_stability_first_onnx_scout_v1__IDEA-FR11-SUBPERIOD-STABILITY-FIRST-ONNX-SCOUT -->
+- `IDEA-FR11-SUBPERIOD-STABILITY-FIRST-ONNX-SCOUT`: Frontier11(전선11) opens subperiod stability-first ONNX scout(하위기간 안정성 우선 ONNX 탐색). Effect(효과): Frontier10(전선10)의 label/objective/weight/bridge(라벨/목적/가중/브리지) 수리를 반복하지 않고 validation philosophy(검증 철학)를 새 축으로 시험합니다.
+<!-- frontier11B_subperiod_stability_proxy_scout_v1 -->
+- `frontier11B_subperiod_stability_proxy_scout_v1`: subperiod stability-first selector scout(하위기간 안정성 우선 선택기 탐색)를 기록했습니다. Effect(효과): 기존 F10C(전선10C) 후보군을 재학습하지 않고 안정성 선택 표면만 비교합니다.
+<!-- frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1 -->
+- `frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1`: Frontier11(전선11) closed negative memory(부정 기억 마감). Effect(효과): subperiod stability selector(하위기간 안정성 선택기)는 reference-only diagnostic pattern(참조 전용 진단 패턴)으로만 남깁니다.
