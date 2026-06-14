@@ -1716,3 +1716,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR35-PF-SOURCE-LIFT-ONNX-SCOUT`: `frontier35A_stage_open_dd_compressed_short_state_pf_source_lift_hypothesis_design_v1` opened train-only PF source lift(학습 전용 수익 팩터 원천 상승). Effect(효과): F34 DD compression clue(전선34 손실폭 압축 단서)를 reference-only(참조 전용)로 사용합니다.
 <!-- frontier35D_stage_closeout_pf_source_lift_v1 -->
 - `IDEA-FR35-PF-SOURCE-LIFT-ONNX-SCOUT`: `frontier35D_stage_closeout_pf_source_lift_v1` closed as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): 다음 질문은 same scaffold filter stacking(같은 발판 필터 누적)이 아니라 source change or label pivot(원천 변경 또는 라벨 전환)입니다.
+<!-- frontier36A_stage_open_short_pf_lift_source_change_or_label_pivot_hypothesis_design_v1 -->
+- `IDEA-FR36-SHORT-SOURCE-UTILITY-LABEL-PIVOT-ONNX-SCOUT`: `frontier36A_stage_open_short_pf_lift_source_change_or_label_pivot_hypothesis_design_v1` opened short-only source utility and exit label pivot(숏 전용 원천 유틸리티와 청산 라벨 전환). Effect(효과): F35 scaffold filter stacking(전선35 발판 필터 중첩)을 반복하지 않습니다.
+<!-- frontier36D_stage_closeout_short_source_utility_label_pivot_v1 -->
+- `IDEA-FR36-SHORT-SOURCE-UTILITY-LABEL-PIVOT-ONNX-SCOUT`: `frontier36D_stage_closeout_short_source_utility_label_pivot_v1` closed as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): 다음 질문은 stronger PF edge label family pivot(더 강한 수익 팩터 우위 라벨군 전환)입니다.

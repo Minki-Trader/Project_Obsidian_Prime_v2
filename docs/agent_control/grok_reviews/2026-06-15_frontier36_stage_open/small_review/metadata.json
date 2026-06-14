@@ -1,0 +1,26 @@
+{
+  "review_size": "small",
+  "prompt_hash": "92952e850b181f8b7e00c1bcb38cd896e7d8fdb0f0fbcb3baea875c547c25333",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "--no-memory",
+    "--disable-web-search",
+    "--max-turns",
+    "1",
+    "-p",
+    "# Frontier36 Stage Open Small Review\n\nYou are Grok reviewing Project Obsidian Prime v2 as an external second opinion only.\n\nCurrent truth:\n- F35 closed as `preserved_clue_negative_memory`.\n- F35B train-only PF source lift proxy produced scout `21`, near-seed `1`, seed/runtime `0/0`.\n- F35C DD repair after PF lift produced candidates `4`, scout/seed/runtime `0/0`.\n- F35 negative memory: adding single feature filters to the F34/F35 scaffold did not survive DD and density constraints.\n- No baseline, promotion, runtime authority, live readiness, or Goal Achieve is inherited or claimed.\n\nProposed Frontier36 hypothesis:\nStop stacking more filters on the F34/F35 scaffold. Rebuild the short path-native source selection itself with a train-only utility scoring pivot: rank source candidates by PF, density, DD, path quality, stop/take balance, and ambiguity penalties before any validation/OOS readout. Then test whether the changed source selection can create a seed surface closer to validation/OOS PF >= 1.20, density 5-10/day, DD <= 12%.\n\nChanged variable:\n- Source scoring / label-selection philosophy changes.\n- Exit simulator, raw path data, feature set, splits, and read-only validation/OOS policy stay fixed.\n\nQuestion:\nIs this a valid new frontier hypothesis under reference-not-inheritance, or is it still just repeating F34/F35 filter stacking?\n\nReturn exactly five lines:\nverdict: accepted / rejected / needs_local_verification\nnovelty_ok: yes/no\nmain_leakage_or_overfit_risk: <one sentence>\nmust_not_repeat: <one sentence>\nruntime_claim_boundary_ok: yes/no\n"
+  ],
+  "returncode": 1,
+  "timed_out": false,
+  "success": false,
+  "duration_seconds": 19.720351,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier36_stage_open/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier36_stage_open/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier36_stage_open/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier36_stage_open/small_review/metadata.json"
+  }
+}
