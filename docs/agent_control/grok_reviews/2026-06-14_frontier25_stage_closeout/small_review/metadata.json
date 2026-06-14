@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "2e61f8b849c7e1c0f676c3363bd6d0a1814e8f3952f507bcff4b935764cb1a3b",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "# Frontier25 closeout review request(전선25 마감 검토 요청)\n\nRole(역할): external second opinion(외부 2차 의견). Do not create runtime authority(런타임 권위), baseline(기준선), promotion(승격), live readiness(실거래 준비), or Goal Achieve(목표 달성).\n\nCurrent truth(현재 진실): Stage(단계) `stage_frontier_25__bridge_archetype_preselection_onnx_scout` tested a new hypothesis(새 가설): F24 failed by density-first then DD repair(빈도 우선 뒤 손실폭 수리), so F25 flipped to train-only DD-headroom-first bridge archetype preselection(학습 전용 손실폭 여유 우선 연결 원형 사전 선택). F24 is reference-only(참조 전용), not inherited baseline(상속 기준선 아님).\n\nLocked rules(잠금 규칙): train-only selection(학습 전용 선택); validation/OOS read-only(검증/표본외 읽기 전용); no repair in F25B primary path(F25B 기본 경로 수리 없음); unchanged scout/seed/handoff gates(탐색/씨앗/인계 게이트 유지); no ONNX/MT5/runtime probe(ONNX/MT5/런타임 탐침) until `handoff_candidate_rows > 0`.\n\nEvidence(근거):\n- Grok stage-open classification(그록 단계 개방 분류): accepted, acceptable_new_hypothesis(수용, 허용 가능한 새 가설).\n- F25B proxy(프록시): eligible micro rows(적격 미세 행) 16; archetype candidates(원형 후보) 26; density/scout/seed/handoff rows(빈도/탐색/씨앗/인계 행) = 24/17/0/0; F24B top10 overlap(F24B 상위10 중복) = 0.\n- Best F25B forward-read row(전방 읽기 행): `f25b_0022` validation PF/density/DD(검증 수익 팩터/빈도/손실폭) = 1.23272 / 5.60656/day / 20.1588%; OOS PF/density/DD(표본외 수익 팩터/빈도/손실폭) = 1.24574 / 6.16031/day / 14.2862%.\n- Closest seed-gap row(씨앗 간격 최저): `f25b_0001`, forward min PF(전방 최소 수익 팩터) 1.21646 but forward max DD(전방 최대 손실폭) 19.7857%, so DD gap to seed cap(씨앗 손실폭 간격) 1.7857%.\n- F25C audit(감사): PF-ready/DD-blocked rows(수익 팩터 충족/손실폭 차단 행) = 4; DD-ready/PF-blocked rows(손실폭 충족/수익 팩터 차단 행) = 1; seed/handoff(씨앗/인계) still 0.\n- F25C decision(결정): do not run a new capped filter repair(상한 필터 수리) because it would target validation/OOS bottlenecks(검증/표본외 병목), creating leakage/data-mining risk(누수/데이터마이닝 위험).\n\nProposed closeout(제안 마감): close as preserved_clue + negative_memory(보존 단서 + 부정 기억), not completion(완성 아님). Preserved clue(보존 단서): `f25_dd_headroom_first_archetype_nonrepeat_scout_clue_reference_only`. Negative memory(부정 기억): `under_f25_locked_proxy_dd_headroom_first_preselection_did_not_break_seed_tradeoff`. Runtime/ONNX(런타임/ONNX): ineligible/unattempted(부적격/미시도) because no handoff candidate(인계 후보 없음).\n\nReview questions(검토 질문):\n1. verdict(판정): accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)?\n2. Is the proposed closeout class(마감 분류) honest under the evidence?\n3. Is skipping MT5 runtime probe(런타임 탐침 생략) correct here?\n4. Any must-fix issue before closeout commit/push(커밋/푸시)?\n5. Suggest one next hypothesis clue(다음 가설 단서) without claiming baseline/promotion/runtime authority(기준선/승격/런타임 권위).\n"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 121.189972,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier25_stage_closeout/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier25_stage_closeout/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier25_stage_closeout/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier25_stage_closeout/small_review/metadata.json"
+  }
+}
