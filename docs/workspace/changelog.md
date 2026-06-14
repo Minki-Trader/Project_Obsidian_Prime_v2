@@ -6970,3 +6970,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T05:16:49Z: `frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1` completed Frontier19B boosted backbone proxy scout(전선19B 부스팅 백본 프록시 탐색). Effect(효과): status(상태) `boosted_backbone_no_forward_clue_no_authority`, next run(다음 실행) `frontier19C_boosted_backbone_repair_or_closeout_decision_v1`.
 <!-- frontier19C_boosted_backbone_repair_or_closeout_decision_v1 -->
 - 2026-06-14T05:22:31Z: `frontier19C_boosted_backbone_repair_or_closeout_decision_v1` closed Frontier19(전선19) as negative memory(부정 기억). Effect(효과): next run(다음 실행) `frontier20A_stage_open_new_hypothesis_design_v1` starts a new hypothesis(새 가설).
+<!-- frontier20A_stage_open_train_only_feature_state_rule_atlas_onnx_scout_v1 -->
+- 2026-06-14T05:46:11Z: `frontier20A_stage_open_train_only_feature_state_rule_atlas_onnx_scout_v1` opened Frontier20(전선20) after Grok adjusted review(그록 조정 검토). Effect(효과): next run(다음 실행) `frontier20B_feature_state_rule_atlas_proxy_scout_v1` is locked to train-only rule atlas(학습 전용 규칙 지도) with no threshold/backbone/lifecycle repair(임계값/백본/생명주기 수리 없음).
+<!-- frontier20B_feature_state_rule_atlas_proxy_scout_v1 -->
+- 2026-06-14T05:50:31Z: `frontier20B_feature_state_rule_atlas_proxy_scout_v1` completed train-only feature-state rule atlas proxy scout(학습 전용 피처 상태 규칙 지도 프록시 탐색). Effect(효과): strict/seed/handoff(엄격/씨앗/인계) counts `0/19/0` and next run(다음 실행) `frontier20C_rule_atlas_repair_or_closeout_decision_v1` recorded(기록됨).
+<!-- frontier20C_rule_atlas_repair_or_closeout_decision_v1 -->
+- 2026-06-14T05:57:16Z: `frontier20C_rule_atlas_repair_or_closeout_decision_v1` closed Frontier20(전선20) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): next frontier(다음 전선) starts at `frontier21A_stage_open_new_hypothesis_design_v1` without inheriting baseline/promotion/runtime authority(기준선/승격/런타임 권위 상속 없음).

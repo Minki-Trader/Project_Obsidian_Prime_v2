@@ -1,0 +1,181 @@
+{
+  "created_at_utc": "2026-06-14T05:46:11Z",
+  "stage_id": "stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout",
+  "run_id": "frontier20A_stage_open_train_only_feature_state_rule_atlas_onnx_scout_v1",
+  "run_number": "frontier20A",
+  "parent_run_id": "frontier19C_boosted_backbone_repair_or_closeout_decision_v1",
+  "next_run_id": "frontier20B_feature_state_rule_atlas_proxy_scout_v1",
+  "status": "opened_frontier20_train_only_feature_state_rule_atlas_onnx_scout_no_authority",
+  "judgment": "stage_opened_after_grok_adjusted_review_with_train_only_rule_atlas_locks_no_authority",
+  "primary_family": "experiment_design(실험 설계)",
+  "primary_skill": "obsidian-experiment-design",
+  "support_skills": [
+    "obsidian-reentry-read",
+    "obsidian-exploration-mandate",
+    "obsidian-model-validation",
+    "obsidian-grok-collaboration",
+    "obsidian-result-judgment"
+  ],
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "frontier_thesis": "Train-only feature-state rule atlas(학습 전용 피처 상태 규칙 지도)이 model probability/backbone(모델 확률/백본) 접근이 흐린 직접 alpha surface(직접 알파 표면)를 드러낼 수 있는가?",
+  "hypothesis": "Sparse closed-bar feature-state conjunctions(희소 확정봉 피처 상태 결합)를 train split(학습 분할)에서만 선택하면 validation/OOS(검증/표본외)에서 5~10 trades/day(일 5~10회), PF improvement(수익 팩터 개선), lower DD(낮은 손실폭), smoother curve(더 매끄러운 곡선)에 가까워지는 seed surface(씨앗 표면)를 찾을 수 있다.",
+  "novelty_delta": "F20(전선20)은 new features(새 피처), probability thresholds(확률 임계값), boosted backbone(부스팅 백본), lifecycle/quota/firewall repair(생명주기/할당량/방화벽 수리)를 쓰지 않고, fixed 58 feature states(고정 58 피처 상태)의 train-only direct rule surface(학습 전용 직접 규칙 표면)를 시험합니다.",
+  "decision_use": "Open F20A stage(전선20A 단계)를 계획/잠금 상태로 열고 F20B proxy scout(전선20B 프록시 탐색) 범위를 고정합니다. Completion/baseline/promotion/runtime authority(완성/기준선/승격/런타임 권위)는 만들지 않습니다.",
+  "comparison_baseline": "Recent negative memories(최근 부정 기억) F05/F15/F16/F18/F19 and reference-only Stage12~364 archive(참조 전용 12~364단계 보관소).",
+  "control_variables": [
+    "US100 M5 FPMarkets v2 dataset(US100 5분봉 FPMarkets v2 데이터셋)",
+    "label_v1 fwd12 split(라벨 v1 12봉 전방 분할)",
+    "58 feature order hash(58 피처 순서 해시)",
+    "closed-bar only inference boundary(확정봉 전용 추론 경계)",
+    "no validation/OOS rule selection(검증/표본외 규칙 선택 없음)"
+  ],
+  "changed_variables": [
+    "feature-state rule definitions(피처 상태 규칙 정의)",
+    "train-only rule side(학습 전용 규칙 방향)",
+    "rule atlas ranking on train only(학습 전용 규칙 지도 순위)"
+  ],
+  "sample_scope": "Tier A separate(티어 A 분리) is materialized from the 58-feature model input. Tier B separate(티어 B 분리) and Tier A+B combined(티어 A+B 합산) are required record views and may be missing_required/out_of_scope_by_claim(필수 누락/주장 범위 밖) if no Tier B source exists.",
+  "success_criteria": [
+    "scout clue(탐색 단서): validation/OOS PF(검증/표본외 수익 팩터)가 1.5+ toward target(목표 방향)으로 움직이고 density(빈도)가 5~10/day 근처입니다.",
+    "seed surface(씨앗 표면): PF/density/DD/smoothness(수익 팩터/빈도/손실폭/매끄러움) 중 하나 이상이 악화 없이 의미 있게 좋아집니다.",
+    "runtime probe observation(런타임 탐침 관찰): handoff candidate(인계 후보)가 생기면 MT5 runtime probe(MT5 런타임 탐침)를 시도합니다."
+  ],
+  "failure_criteria": [
+    "Train-only rules(학습 전용 규칙)이 validation/OOS(검증/표본외)에서 PF 1.1~1.3, high DD(높은 손실폭)에 머물러 F19와 같은 no-forward-clue(전진 단서 없음)로 끝납니다.",
+    "Useful-looking surface(좋아 보이는 표면)가 validation/OOS guided filtering(검증/표본외 유도 필터링)을 요구합니다.",
+    "No strict/seed/preserved/handoff row(엄격/씨앗/보존/인계 행)가 남지 않습니다."
+  ],
+  "invalid_conditions": [
+    "New feature engineering(새 피처 설계)",
+    "Probability threshold search(확률 임계값 탐색)",
+    "Validation/OOS selection(검증/표본외 선택)",
+    "Boosted backbone rerun(부스팅 백본 재실행)",
+    "Lifecycle/quota/firewall/veto repair inside F20B(F20B 내부 생명주기/할당량/방화벽/배제 수리)"
+  ],
+  "stop_conditions": [
+    "strict/seed/handoff surface(엄격/씨앗/인계 표면)가 생기면 Grok pre-expensive review(비싼 실행 전 그록 검토)로 멈춥니다.",
+    "locked atlas(고정 지도)에서 0/0/0/0이면 repair_or_closeout decision(수리/마감 결정)으로 넘깁니다.",
+    "MT5 claim(MT5 주장)이 필요하면 runtime probe(런타임 탐침) 또는 exact blocker(정확한 차단 사유)를 남깁니다."
+  ],
+  "evidence_plan": [
+    "stage_open_summary.json(단계 개방 요약)",
+    "rule_atlas_lock.json(규칙 지도 잠금)",
+    "grok_stage_open_receipt.md(그록 단계 개방 영수증)",
+    "F20B metrics by split(F20B 분할별 지표)",
+    "Tier A/Tier B/Tier A+B ledger rows(티어 A/B/합산 장부 행)",
+    "runtime probe report or blocker(런타임 탐침 보고 또는 차단 사유)"
+  ],
+  "locks": [
+    {
+      "lock_id": "existing_58_contract_features_only",
+      "rule": "Use only existing 58 contract features(기존 58개 계약 피처만 사용). No new feature engineering(새 피처 설계 없음)."
+    },
+    {
+      "lock_id": "fixed_train_quantile_grid",
+      "rule": "Fit q10/q20/q30/q70/q80/q90 only on train split(학습 분할에서만 고정 분위수 적합)."
+    },
+    {
+      "lock_id": "max_conjunction_depth_two",
+      "rule": "Rule atlas(규칙 지도)는 single or pair conjunction(단일 또는 쌍 결합)까지만 허용합니다."
+    },
+    {
+      "lock_id": "train_only_side_selection",
+      "rule": "Long/short side(롱/숏 방향)는 train split(학습 분할) 성과로만 고릅니다."
+    },
+    {
+      "lock_id": "validation_oos_read_only",
+      "rule": "Validation/OOS(검증/표본외)는 평가 전용이며 rule selection(규칙 선택)에 쓰지 않습니다."
+    },
+    {
+      "lock_id": "no_probability_threshold_or_backbone",
+      "rule": "No probability threshold(확률 임계값 없음), no boosted backbone(부스팅 백본 없음)."
+    },
+    {
+      "lock_id": "no_overlay_repair_stack",
+      "rule": "No lifecycle/quota/firewall/veto repair(생명주기/할당량/방화벽/배제 수리 없음)."
+    },
+    {
+      "lock_id": "tier_paired_record_slots",
+      "rule": "Stage run ledger(단계 실행 장부)는 Tier A/Tier B/Tier A+B 기록 슬롯을 반드시 엽니다."
+    },
+    {
+      "lock_id": "runtime_probe_obligation",
+      "rule": "If a handoff candidate(인계 후보)가 있으면 MT5 runtime probe(MT5 런타임 탐침)를 시도하고, 없으면 exact blocker(정확한 차단 사유)를 기록합니다."
+    },
+    {
+      "lock_id": "claim_boundary_lock",
+      "rule": "Only scout clue/seed surface/runtime probe observation/preserved clue/negative memory/invalid setup/blocked(탐색 단서/씨앗 표면/런타임 탐침 관찰/보존 단서/부정 기억/무효 설정/차단) language is allowed."
+    }
+  ],
+  "train_quantiles": [
+    "q10",
+    "q20",
+    "q30",
+    "q70",
+    "q80",
+    "q90"
+  ],
+  "mandatory_record_views": [
+    "Tier A separate(티어 A 분리)",
+    "Tier B separate(티어 B 분리)",
+    "Tier A+B combined(티어 A+B 합산)"
+  ],
+  "grok_initial": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review/metadata.json",
+    "prompt_hash": "5e6eee3275e62f627e69e6499343b738c4ed27984a48f6050497de2f358c53ee",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 130.77061,
+    "preflight_warnings": [],
+    "unexpected_top_level_artifacts": [],
+    "classification": "rejected_no_actionable_review(실행 가능한 검토 없음으로 거절)",
+    "output_excerpt": "Bounded Grok review requested — I'll read the collaboration skill and gather local Frontier19/F20 context before forming the review.\nGrok 프롬프트를 작성하고 래퍼로 실행한 뒤, 로컬 검증도 함께 진행합니다.\n"
+  },
+  "grok_adjusted": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review/metadata.json",
+    "prompt_hash": "c86bcf51e40420f5ddf19b1ecbcd08bc01cb8a20e90dac8325164e175f1c434b",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 20.177435,
+    "preflight_warnings": [],
+    "unexpected_top_level_artifacts": [],
+    "classification": "accepted_with_adjustments(조정 수용)",
+    "output_excerpt": "**decision:** `adjust` — F20(전선20) stage-open(단계 개방)은 **탐색용 가설 생명주기(exploration hypothesis lifecycle, 탐색 가설 생명주기)** 로는 허용하되, 완성·승격·런타임 주장 경계는 열지 말 것.\n\n**why(이유):**\n- F19(전선19) negative_memory(부정 기억)은 ONNX(온엑스) 유효성이 아니라 **strict/seed/preserved/handoff(엄격/씨앗/보존/인계) 생명주기 행 전멸**이 핵심 실패라, F20의 train-only rule atlas(학습 전용 규칙 지도) + no-threshold(무임계값) + no-boosted-backbone(부스팅 백본 없음) 축은 **반복 금지(do-not-repeat, 반복 금지)를 피한 의미 있는 축 전환**이다.\n- pre-open probe(개방 전 탐침)의 validation/OOS PF(검증/표본외 수익 팩터)는 **seed surface(씨앗 표면)** 수준의 탐색 동기만 주며, high DD(큰 손실폭) 때문에 **accept-as-completion(완성으로 수용)** 근거는 아니다.\n- F18 lifecycle repair(생명주기 수리) 실패 이력과 맞게, F20이 repair(수리) 없이 scout(정찰)만 한다는 설계는 맞지만, 그래서 **운영 생명주기(operating lifecycle, 운영 생명주기) 개방 주장은 금지**해야 한다.\n\n**mandatory locks(필수 잠금):**\n- **58 contract features only(58 계약 피처만)**, fixed train quantiles(고정 학습 분위수), **max depth 2(결합 깊이 2)**, **train-only side(방향 학습 전용)**, **validation/OOS read-only(검증/표본외 읽기 전용)** — 범위 밖 확장 금지.\n- **no new feature engineering(새 피처 설계 없음)**, **no probability thresholds(확률 임계값 없음)**, **no boosted backbone(부스팅 백본 없음)**, **no lifecycle/quota/firewall repair(생명주기/할당량/방화벽 수리 없음)** — F05/F15/F16/F18/F19 재시도 금지.\n- ONNX encode/distill(온엑스 인코딩/증류)는 **surviving surface(생존 표면) 이후 후행 단계**로만; F20 open(개방) 자체를 ONNX 성공으로 해석 금지.\n- probe 결과는 **in-memory only(메모리 내 전용)**; F20A 첫 run(첫 실행) 전 **재현 가능한 stage-local evidence(단계 로컬 근거)** 없이 carry-forward(이월) 금지.\n\n**local verification before F20A(전선20A 전 로컬 검증):**\n- F20 packet(작업 묶음)에 **Tier A separate / Tier B separate / Tier A+B combined(티어 A 분리·티어 B 분리·합산)** 기록 슬롯이 실제로 열려 있는지 확인.\n- train-only q"
+  },
+  "local_verification": {
+    "judgment": "pass_with_adjusted_locks(조정 잠금 포함 통과)",
+    "checks": {
+      "workspace_current_stage_frontier19": true,
+      "workspace_next_run_frontier20a": true,
+      "f19_closed_negative_memory": true,
+      "f18_lifecycle_negative_memory_seen": true,
+      "feature_order_hash_matches_contract": true,
+      "feature_count_is_58": true,
+      "dataset_exists": true,
+      "grok_initial_rejected_as_non_actionable": true,
+      "grok_adjusted_usable": true,
+      "grok_no_unexpected_top_level_artifacts": true,
+      "f20_stage_root_was_not_preexisting": true,
+      "mandatory_record_views_declared": true
+    },
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

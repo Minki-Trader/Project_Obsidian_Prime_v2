@@ -1,0 +1,72 @@
+{
+  "trigger_reason": "Goal requires Grok second opinion at stage open(목표가 단계 개방 시 그록 2차 의견을 요구)",
+  "review_size": "small review(소규모 검토)",
+  "direction_before_grok": "Train-only feature-state rule atlas(학습 전용 피처 상태 규칙 지도)이 model probability/backbone(모델 확률/백본) 접근이 흐린 직접 alpha surface(직접 알파 표면)를 드러낼 수 있는가?",
+  "bounded_evidence": [
+    "F19 closeout negative memory(F19 부정 기억 마감)",
+    "F05/F15/F16/F18/F19 do-not-repeat list(반복 금지 목록)",
+    "pre-open in-memory probe summary(개방 전 메모리 탐침 요약)"
+  ],
+  "initial_packet": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/small_review/metadata.json",
+    "prompt_hash": "5e6eee3275e62f627e69e6499343b738c4ed27984a48f6050497de2f358c53ee",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 130.77061,
+    "preflight_warnings": [],
+    "unexpected_top_level_artifacts": [],
+    "classification": "rejected_no_actionable_review(실행 가능한 검토 없음으로 거절)",
+    "output_excerpt": "Bounded Grok review requested — I'll read the collaboration skill and gather local Frontier19/F20 context before forming the review.\nGrok 프롬프트를 작성하고 래퍼로 실행한 뒤, 로컬 검증도 함께 진행합니다.\n"
+  },
+  "adjusted_packet": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review/metadata.json",
+    "prompt_hash": "c86bcf51e40420f5ddf19b1ecbcd08bc01cb8a20e90dac8325164e175f1c434b",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 20.177435,
+    "preflight_warnings": [],
+    "unexpected_top_level_artifacts": [],
+    "classification": "accepted_with_adjustments(조정 수용)",
+    "output_excerpt": "**decision:** `adjust` — F20(전선20) stage-open(단계 개방)은 **탐색용 가설 생명주기(exploration hypothesis lifecycle, 탐색 가설 생명주기)** 로는 허용하되, 완성·승격·런타임 주장 경계는 열지 말 것.\n\n**why(이유):**\n- F19(전선19) negative_memory(부정 기억)은 ONNX(온엑스) 유효성이 아니라 **strict/seed/preserved/handoff(엄격/씨앗/보존/인계) 생명주기 행 전멸**이 핵심 실패라, F20의 train-only rule atlas(학습 전용 규칙 지도) + no-threshold(무임계값) + no-boosted-backbone(부스팅 백본 없음) 축은 **반복 금지(do-not-repeat, 반복 금지)를 피한 의미 있는 축 전환**이다.\n- pre-open probe(개방 전 탐침)의 validation/OOS PF(검증/표본외 수익 팩터)는 **seed surface(씨앗 표면)** 수준의 탐색 동기만 주며, high DD(큰 손실폭) 때문에 **accept-as-completion(완성으로 수용)** 근거는 아니다.\n- F18 lifecycle repair(생명주기 수리) 실패 이력과 맞게, F20이 repair(수리) 없이 scout(정찰)만 한다는 설계는 맞지만, 그래서 **운영 생명주기(operating lifecycle, 운영 생명주기) 개방 주장은 금지**해야 한다.\n\n**mandatory locks(필수 잠금):**\n- **58 contract features only(58 계약 피처만)**, fixed train quantiles(고정 학습 분위수), **max depth 2(결합 깊이 2)**, **train-only side(방향 학습 전용)**, **validation/OOS read-only(검증/표본외 읽기 전용)** — 범위 밖 확장 금지.\n- **no new feature engineering(새 피처 설계 없음)**, **no probability thresholds(확률 임계값 없음)**, **no boosted backbone(부스팅 백본 없음)**, **no lifecycle/quota/firewall repair(생명주기/할당량/방화벽 수리 없음)** — F05/F15/F16/F18/F19 재시도 금지.\n- ONNX encode/distill(온엑스 인코딩/증류)는 **surviving surface(생존 표면) 이후 후행 단계**로만; F20 open(개방) 자체를 ONNX 성공으로 해석 금지.\n- probe 결과는 **in-memory only(메모리 내 전용)**; F20A 첫 run(첫 실행) 전 **재현 가능한 stage-local evidence(단계 로컬 근거)** 없이 carry-forward(이월) 금지.\n\n**local verification before F20A(전선20A 전 로컬 검증):**\n- F20 packet(작업 묶음)에 **Tier A separate / Tier B separate / Tier A+B combined(티어 A 분리·티어 B 분리·합산)** 기록 슬롯이 실제로 열려 있는지 확인.\n- train-only q"
+  },
+  "advice_classification": {
+    "initial": "rejected_no_actionable_review(실행 가능한 검토 없음으로 거절)",
+    "adjusted": "accepted_with_adjustments(조정 수용)"
+  },
+  "local_verification": {
+    "judgment": "pass_with_adjusted_locks(조정 잠금 포함 통과)",
+    "checks": {
+      "workspace_current_stage_frontier19": true,
+      "workspace_next_run_frontier20a": true,
+      "f19_closed_negative_memory": true,
+      "f18_lifecycle_negative_memory_seen": true,
+      "feature_order_hash_matches_contract": true,
+      "feature_count_is_58": true,
+      "dataset_exists": true,
+      "grok_initial_rejected_as_non_actionable": true,
+      "grok_adjusted_usable": true,
+      "grok_no_unexpected_top_level_artifacts": true,
+      "f20_stage_root_was_not_preexisting": true,
+      "mandatory_record_views_declared": true
+    },
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+  },
+  "forbidden_claim_check": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  },
+  "final_codex_direction": "Open F20A with adjusted locks(조정 잠금으로 F20A 개방)"
+}

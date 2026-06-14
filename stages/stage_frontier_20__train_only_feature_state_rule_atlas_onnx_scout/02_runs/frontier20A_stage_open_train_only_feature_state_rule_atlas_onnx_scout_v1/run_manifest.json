@@ -1,0 +1,109 @@
+{
+  "identity": {
+    "stage_id": "stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout",
+    "run_id": "frontier20A_stage_open_train_only_feature_state_rule_atlas_onnx_scout_v1",
+    "parent_run_id": "frontier19C_boosted_backbone_repair_or_closeout_decision_v1",
+    "next_run_id": "frontier20B_feature_state_rule_atlas_proxy_scout_v1",
+    "created_at_utc": "2026-06-14T05:46:11Z"
+  },
+  "artifacts": [
+    {
+      "path": "stage_pipelines/stage_frontier_20/materialize_frontier20a_stage_open.py",
+      "sha256": "7e5fe53b00adb27638c90225762b66e681f36862b55c819b8b190854a26b7ae8"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    },
+    {
+      "path": "docs/agent_control/grok_reviews/2026-06-14_frontier20_stage_open/adjusted_review/clean_output.md",
+      "sha256": "82b1175fbbab3d6fe181f6bf2446edd6aabb026ddf40cca4958fcbcf8e14bbf4"
+    }
+  ],
+  "feature_schema": {
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+  },
+  "rule_stack": {
+    "entry": [
+      {
+        "lock_id": "existing_58_contract_features_only",
+        "rule": "Use only existing 58 contract features(기존 58개 계약 피처만 사용). No new feature engineering(새 피처 설계 없음)."
+      },
+      {
+        "lock_id": "fixed_train_quantile_grid",
+        "rule": "Fit q10/q20/q30/q70/q80/q90 only on train split(학습 분할에서만 고정 분위수 적합)."
+      },
+      {
+        "lock_id": "max_conjunction_depth_two",
+        "rule": "Rule atlas(규칙 지도)는 single or pair conjunction(단일 또는 쌍 결합)까지만 허용합니다."
+      },
+      {
+        "lock_id": "train_only_side_selection",
+        "rule": "Long/short side(롱/숏 방향)는 train split(학습 분할) 성과로만 고릅니다."
+      },
+      {
+        "lock_id": "validation_oos_read_only",
+        "rule": "Validation/OOS(검증/표본외)는 평가 전용이며 rule selection(규칙 선택)에 쓰지 않습니다."
+      },
+      {
+        "lock_id": "no_probability_threshold_or_backbone",
+        "rule": "No probability threshold(확률 임계값 없음), no boosted backbone(부스팅 백본 없음)."
+      },
+      {
+        "lock_id": "no_overlay_repair_stack",
+        "rule": "No lifecycle/quota/firewall/veto repair(생명주기/할당량/방화벽/배제 수리 없음)."
+      },
+      {
+        "lock_id": "tier_paired_record_slots",
+        "rule": "Stage run ledger(단계 실행 장부)는 Tier A/Tier B/Tier A+B 기록 슬롯을 반드시 엽니다."
+      },
+      {
+        "lock_id": "runtime_probe_obligation",
+        "rule": "If a handoff candidate(인계 후보)가 있으면 MT5 runtime probe(MT5 런타임 탐침)를 시도하고, 없으면 exact blocker(정확한 차단 사유)를 기록합니다."
+      },
+      {
+        "lock_id": "claim_boundary_lock",
+        "rule": "Only scout clue/seed surface/runtime probe observation/preserved clue/negative memory/invalid setup/blocked(탐색 단서/씨앗 표면/런타임 탐침 관찰/보존 단서/부정 기억/무효 설정/차단) language is allowed."
+      }
+    ],
+    "filters": [
+      "validation_oos_read_only(검증/표본외 읽기 전용)"
+    ],
+    "position": [
+      "not_applicable_stage_open(단계 개방에는 해당 없음)"
+    ],
+    "exit": [
+      "not_applicable_stage_open(단계 개방에는 해당 없음)"
+    ]
+  },
+  "results": {
+    "by_split": {},
+    "cross_split": {
+      "stage_open": "planning_only_no_trading_kpi(계획 전용, 거래 KPI 없음)"
+    },
+    "report_refs": [
+      {
+        "role": "stage_open_report",
+        "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/03_reviews/frontier20A_stage_open_train_only_feature_state_rule_atlas_onnx_scout_v1_report.md"
+      }
+    ]
+  },
+  "compatibility": {
+    "mismatch_policy": "fail_fast(즉시 실패)",
+    "required_output_schema": "[p_short,p_flat,p_long](숏/중립/롱 확률 순서) if ONNX is later materialized(나중에 ONNX가 물질화될 경우)"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

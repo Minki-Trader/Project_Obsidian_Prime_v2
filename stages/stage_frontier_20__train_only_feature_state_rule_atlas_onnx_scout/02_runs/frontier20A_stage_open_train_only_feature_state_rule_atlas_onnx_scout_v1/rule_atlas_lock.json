@@ -1,0 +1,25 @@
+{
+  "feature_policy": "existing_58_contract_features_only(기존 58 계약 피처만)",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "quantiles": [
+    "q10",
+    "q20",
+    "q30",
+    "q70",
+    "q80",
+    "q90"
+  ],
+  "max_conjunction_depth": 2,
+  "selection_partition": "train_only(학습 전용)",
+  "evaluation_partitions": [
+    "validation_read_only(검증 읽기 전용)",
+    "oos_read_only(표본외 읽기 전용)"
+  ],
+  "forbidden_repairs": [
+    "probability_threshold_search(확률 임계값 탐색)",
+    "boosted_backbone_rerun(부스팅 백본 재실행)",
+    "lifecycle_repair(생명주기 수리)",
+    "quota_repair(할당량 수리)",
+    "firewall_or_veto_repair(방화벽 또는 배제 수리)"
+  ]
+}

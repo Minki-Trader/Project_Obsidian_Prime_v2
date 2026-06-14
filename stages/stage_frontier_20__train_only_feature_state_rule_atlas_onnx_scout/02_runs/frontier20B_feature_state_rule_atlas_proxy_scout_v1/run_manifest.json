@@ -1,0 +1,76 @@
+{
+  "identity": {
+    "stage_id": "stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout",
+    "run_id": "frontier20B_feature_state_rule_atlas_proxy_scout_v1",
+    "parent_run_id": "frontier20A_stage_open_train_only_feature_state_rule_atlas_onnx_scout_v1",
+    "next_run_id": "frontier20C_rule_atlas_repair_or_closeout_decision_v1",
+    "created_at_utc": "2026-06-14T05:50:31Z"
+  },
+  "artifacts": [
+    {
+      "path": "stage_pipelines/stage_frontier_20/frontier20b_feature_state_rule_atlas_proxy_scout.py",
+      "sha256": "74ac6c186094905055ecd1d20ed37dcff2d8a3337e1c2de36db0e01301ac2ba7"
+    },
+    {
+      "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/condition_pool.csv",
+      "sha256": "a70b9c7c71e6c4e232e1f4b227fd09cbabeb01ec7725b39f96c118243d64c470"
+    },
+    {
+      "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/train_ranked_candidates.csv",
+      "sha256": "ab9d5458a644d1016778a8131373cd864096c75ce61bef8fbec7acc694b59e48"
+    },
+    {
+      "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/proxy_metrics_by_split.csv",
+      "sha256": "6b3f68c9b25b8e4e1acdac455911df48e76be76fd7c17fcbfbe3ce5366538aca"
+    },
+    {
+      "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/candidate_summary.csv",
+      "sha256": "4c59548da39db61ee5f7d94f3387c6c3451d6a4004bf780fdd9045ad19500951"
+    },
+    {
+      "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/top_forward_readonly_diagnostic.csv",
+      "sha256": "1869ad7377ae071087494efc239458f9356ea1381b0289ee0dcc7bfce8a1fc18"
+    }
+  ],
+  "feature_schema": {
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+  },
+  "data_snapshot": {
+    "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "split_names": [
+      "train",
+      "validation",
+      "oos"
+    ]
+  },
+  "results": {
+    "by_split": {
+      "metrics_path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/proxy_metrics_by_split.csv"
+    },
+    "cross_split": {
+      "strict_count": 0,
+      "seed_count": 19,
+      "handoff_candidate_count": 0
+    },
+    "report_refs": [
+      {
+        "role": "frontier20b_proxy_report",
+        "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/03_reviews/frontier20B_feature_state_rule_atlas_proxy_scout_v1_report.md"
+      }
+    ]
+  },
+  "compatibility": {
+    "mismatch_policy": "fail_fast(즉시 실패)",
+    "runtime_handoff": "not_materialized(물질화 없음)"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

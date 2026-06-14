@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "38c0ac1bc7711d8fd2bc7e739e80f8d3fda7b848b187bf29477cdcc4eeaa2356",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "You are Grok(Grok, 그록) acting only as an external reviewer(외부 검토자). Do not inspect files(파일 검사 금지). Use only bounded evidence(제한 근거). Answer directly in <=10 bullets.\n\nCloseout question(마감 질문): Should Frontier20(전선20) close as preserved clue(보존 단서), negative memory(부정 기억), invalid setup(무효 설정), blocked(차단), or completion candidate(완성 후보)?\n\nCurrent stage(현재 단계): `stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout`.\n\nF20A stage-open(단계 개방): Grok adjusted decision(그록 조정 결정) was `adjust(조정)`, accepted by Codex with locks(잠금 포함 수용). Locks(잠금): existing 58 features only(기존 58 피처만), train-only quantiles q10/q20/q30/q70/q80/q90(학습 전용 분위수), max depth 2(최대 깊이 2), side/rank train-only(방향/순위 학습 전용), validation/OOS read-only(검증/표본외 읽기 전용), no probability thresholds(확률 임계값 없음), no boosted backbone(부스팅 백본 없음), no lifecycle/quota/firewall repair(생명주기/할당량/방화벽 수리 없음).\n\nF20B proxy evidence(프록시 근거): condition pool(조건 풀) 45, train-ranked candidates(학습 순위 후보) 533, metric rows(지표 행) 1599. Strict/seed/handoff counts(엄격/씨앗/인계 수): 0 / 19 / 0. No WFO/MT5(워크포워드/메타트레이더 없음). No runtime authority(런타임 권위 없음).\n\nBest seed surface(최상 씨앗 표면): `vix_zscore_20 <= q30 & close_ema50_ratio >= q70`, long(롱). Validation PF/density/DD(검증 수익 팩터/빈도/손실폭): 1.32666 / 8.579/day / 31.7443%. OOS PF/density/DD(표본외 수익 팩터/빈도/손실폭): 1.22065 / 9.908/day / 20.7766%.\n\nOther clue(다른 단서): low-VIX plus momentum/price-position long rules(낮은 VIX + 모멘텀/가격 위치 롱 규칙) repeatedly gave density(빈도) 5~10/day and PF 1.20~1.43, but DD remained about 14~33%. Handoff candidate(인계 후보)는 0 because PF/DD/smoothness(수익 팩터/손실폭/매끄러움) did not jointly pass.\n\nCapped repair check(상한 수리 확인): train-only risk rerank(학습 전용 위험 재순위) pool had 4 rows, but forward read(전진 판독) worsened: best OOS PF(표본외 수익 팩터) 0.9088~0.9208, validation density(검증 빈도) below 5/day. So repair does not create handoff(인계) and should not be repeated.\n\nCodex proposed closeout(코덱스 제안 마감): close as preserved clue(보존 단서) with negative memory note(부정 기억 메모). Preserved clue(보존 단서): low-VIX momentum/price-position long feature-state surface(낮은 VIX 모멘텀/가격 위치 롱 피처 상태 표면) can create density-aligned PF~1.2 seed surface(빈도 정렬 PF 약 1.2 씨앗 표면). Negative memory(부정 기억): train-only depth-2 rule atlas alone does not reduce DD enough and creates no runtime handoff(런타임 인계 없음). Runtime probe blocker(런타임 탐침 차단 사유): no handoff candidate under F20 locks(F20 잠금 아래 인계 후보 없음).\n\nQuestion(질문): accept/reject/adjust(수용/거절/조정) this closeout and name mandatory final claim boundary(최종 주장 경계).\n"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 23.906492,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier20_closeout/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier20_closeout/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier20_closeout/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier20_closeout/small_review/metadata.json"
+  }
+}
