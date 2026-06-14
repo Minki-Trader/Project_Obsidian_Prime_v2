@@ -1,0 +1,9 @@
+﻿# Frontier19 Do Not Repeat(전선19 반복 금지)
+
+- `primary_variable_backbone_only`: Only model backbone variants change(모델 백본 변형만 변경). No threshold/veto/firewall/lifecycle/quota repair(임계값/배제/방화벽/생명주기/쿼터 수리 없음).
+- `variant_cap_max_four`: Exactly four variants are fixed before Frontier19B metrics(전선19B 지표 전 변형 4개 고정).
+- `stability_audit_not_selector`: Subperiod stability is audit/tie-break only(하위기간 안정성은 감사/동률 처리 전용). It cannot select or mutate validation/OOS outcomes(검증/표본외 결과 선택/변경 금지).
+- `single_execution_surface`: Use one fixed entry/exit surface(단일 진입/청산 표면). No lifecycle sweep(생명주기 스윕 없음), no daily quota(일일 쿼터 없음), no threshold search(임계값 탐색 없음).
+- `archive_reference_only`: Stage17/18 archive XGBoost/CatBoost runs are reference only(17/18단계 보관소 부스팅 실행은 참조 전용). No selected variant, threshold, hold, baseline, or handoff is inherited(선택 변형/임계값/보유/기준선/인계 상속 없음).
+- `runtime_probe_before_closeout`: Before closeout run a narrow MT5 runtime probe if a handoff candidate exists, otherwise record exact blocker(마감 전 인계 후보가 있으면 좁은 MT5 런타임 탐침, 없으면 정확한 차단 사유 기록).
+- `claim_boundary_lock`: Only scout clue/seed surface/runtime probe observation/preserved clue/negative memory/invalid setup/blocked may be claimed(탐색 단서/씨앗 표면/런타임 탐침 관찰/보존 단서/부정 기억/무효 설정/차단만 주장 가능).

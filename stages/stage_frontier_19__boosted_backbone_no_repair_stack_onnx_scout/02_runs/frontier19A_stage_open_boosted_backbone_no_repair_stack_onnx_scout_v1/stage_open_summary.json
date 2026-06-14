@@ -1,0 +1,191 @@
+{
+  "created_at_utc": "2026-06-14T05:10:06Z",
+  "stage_id": "stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout",
+  "run_id": "frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1",
+  "run_number": "frontier19A",
+  "parent_run_id": "frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1",
+  "next_run_id": "frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1",
+  "status": "opened_frontier19_boosted_backbone_no_repair_stack_onnx_scout_no_authority",
+  "judgment": "stage_opened_after_grok_adjusted_review_with_backbone_only_locks_no_authority",
+  "primary_family": "experiment_design(실험 설계)",
+  "primary_skill": "obsidian-experiment-design",
+  "support_skills": [
+    "obsidian-reentry-read",
+    "obsidian-data-integrity",
+    "obsidian-model-validation",
+    "obsidian-grok-collaboration"
+  ],
+  "hypothesis": "A capped boosted-tree backbone-only scout(상한 있는 부스팅 트리 백본 단독 탐색) under the fixed US100 M5 58-feature closed-bar ONNX contract(고정 US100 5분봉 58피처 닫힌 봉 ONNX 계약) can create a scout clue(탐색 단서) without reusing failed threshold/veto/firewall/lifecycle/quota/stability-selector repairs(실패한 임계값/배제/방화벽/생명주기/쿼터/안정성 선택기 수리 재사용 없음).",
+  "decision_use": "Open Frontier19A(전선19A 개방) and lock Frontier19B proxy scope(전선19B 프록시 범위 고정), not a completion or authority claim(완성 또는 권위 주장 아님).",
+  "comparison_baseline": "F15~F18 recent negative memories and archive Stage17/18 model-family runs are reference only(최근 부정 기억과 17/18단계 모델 계열 실행은 참조 전용).",
+  "control_variables": [
+    "US100 M5 FPMarkets data contract(US100 5분봉 FPMarkets 데이터 계약)",
+    "label_v1 fwd12 split discipline(label_v1 fwd12 분할 규율)",
+    "58-feature order hash(58피처 순서 해시)",
+    "fixed output schema [p_short,p_flat,p_long](고정 출력 스키마)",
+    "single entry/exit surface(단일 진입/청산 표면)"
+  ],
+  "changed_variables": [
+    "boosted-tree backbone variant(부스팅 트리 백본 변형)"
+  ],
+  "sample_scope": "Tier A separate first(티어 A 분리 우선), Tier B/Tier A+B explicit missing_required if unavailable(티어 B/합산 불가 시 필수 누락 명시).",
+  "success_criteria": {
+    "scout_clue": "Validation/OOS PF moves toward 2+, density near 5~10/day, DD toward <=10~15%, and smoothness improves without repair stacking(검증/표본외 PF 2+ 방향, 빈도 5~10/day 근처, 손실폭 10~15% 방향, 수리 중첩 없이 매끄러움 개선).",
+    "seed_surface": "One backbone improves a major axis without breaking the other three axes(한 백본이 다른 세 축을 깨지 않고 주요 축 하나를 개선).",
+    "runtime_probe_observation": "If a handoff candidate exists, a narrow MT5 probe is attempted before closeout(인계 후보가 있으면 마감 전 좁은 MT5 탐침 시도)."
+  },
+  "failure_criteria": [
+    "Boosted backbone repeats archive Stage17/18 inconclusive economics(부스팅 백본이 17/18단계 보관소의 불충분 경제성을 반복)",
+    "Backbone-only path needs threshold/veto/lifecycle/quota repair to look usable(백본 단독 경로가 쓸만해 보이려면 임계값/배제/생명주기/쿼터 수리가 필요)",
+    "ONNX parity fails for all pre-registered variants(사전 등록 변형 전체 ONNX 동등성 실패)"
+  ],
+  "invalid_conditions": [
+    "Validation/OOS threshold search(검증/표본외 임계값 탐색)",
+    "Subperiod stability as primary selector(하위기간 안정성을 1차 선택기로 사용)",
+    "Archive selected variant, q-threshold, hold, or MT5 KPI inherited as baseline(보관소 선택 변형/분위 임계값/보유/MT5 KPI를 기준선으로 상속)",
+    "Lifecycle sweep or daily quota repair inside Frontier19B(전선19B 안 생명주기 스윕 또는 일일 쿼터 수리)"
+  ],
+  "stop_conditions": [
+    "Strict scout clue or seed surface found, then Grok before expensive WFO/MT5(엄격 탐색 단서 또는 씨앗 표면 발견 시 비싼 WFO/MT5 전 Grok 검토)",
+    "No forward clue under locked variants, then repair/closeout decision(고정 변형 아래 전진 단서 없으면 수리/마감 결정)",
+    "Runtime claim needed, then MT5 probe or exact blocker(런타임 주장이 필요하면 MT5 탐침 또는 정확한 차단 사유)"
+  ],
+  "evidence_plan": [
+    "F19A stage-open summary and locks(전선19A 단계 개방 요약과 잠금)",
+    "F19B model variant metrics by split(전선19B 모델 변형 분할별 지표)",
+    "ONNX export and onnxruntime parity receipts(ONNX 내보내기와 런타임 동등성 영수증)",
+    "Tier A/Tier B/Tier A+B ledger rows or missing_required(티어 A/B/합산 장부 행 또는 필수 누락)",
+    "Runtime probe report or exact blocker before closeout(마감 전 런타임 탐침 보고 또는 정확한 차단 사유)"
+  ],
+  "model_variants": [
+    {
+      "variant_id": "f19b_xgb_depth2_l2_backbone_control",
+      "family": "xgboost(XGBoost, 엑스지부스트)",
+      "source_helper": "foundation/models/xgboost_boosting.py",
+      "basis": "v01_depth2_l2_subsample",
+      "role": "shallow_regularized_backbone_control(얕은 정규화 백본 대조군)"
+    },
+    {
+      "variant_id": "f19b_xgb_depth3_balanced_l2_backbone",
+      "family": "xgboost(XGBoost, 엑스지부스트)",
+      "source_helper": "foundation/models/xgboost_boosting.py",
+      "basis": "v02_depth3_balanced_l2",
+      "role": "balanced_depth_regularized_backbone(균형 깊이 정규화 백본)"
+    },
+    {
+      "variant_id": "f19b_cat_ordered_depth3_backbone",
+      "family": "catboost(CatBoost, 캣부스트)",
+      "source_helper": "foundation/models/catboost_ordered.py",
+      "basis": "v01_ordered_depth3_bayesian",
+      "role": "ordered_boosting_backbone(순서 부스팅 백본)"
+    },
+    {
+      "variant_id": "f19b_cat_plain_depth3_backbone_control",
+      "family": "catboost(CatBoost, 캣부스트)",
+      "source_helper": "foundation/models/catboost_ordered.py",
+      "basis": "v05_plain_depth3_control",
+      "role": "plain_boosting_backbone_control(일반 부스팅 백본 대조군)"
+    }
+  ],
+  "execution_surface": {
+    "decision_policy": "argmax_nonflat_control(최대확률 비중립 대조)",
+    "threshold_policy": "no_validation_oos_threshold_search(검증/표본외 임계값 탐색 없음)",
+    "exit_policy": "fixed_fwd12_proxy_then_single_runtime_surface_if_handoff_exists(프록시는 고정 fwd12, 인계 후보가 있으면 단일 런타임 표면)",
+    "density_policy": "observe_density_no_daily_quota_repair(빈도 관찰, 일일 쿼터 수리 없음)",
+    "stability_policy": "audit_and_tie_break_only(감사와 동률 처리 전용)"
+  },
+  "locks": [
+    {
+      "lock_id": "primary_variable_backbone_only",
+      "rule": "Only model backbone variants change(모델 백본 변형만 변경). No threshold/veto/firewall/lifecycle/quota repair(임계값/배제/방화벽/생명주기/쿼터 수리 없음)."
+    },
+    {
+      "lock_id": "variant_cap_max_four",
+      "rule": "Exactly four variants are fixed before Frontier19B metrics(전선19B 지표 전 변형 4개 고정)."
+    },
+    {
+      "lock_id": "stability_audit_not_selector",
+      "rule": "Subperiod stability is audit/tie-break only(하위기간 안정성은 감사/동률 처리 전용). It cannot select or mutate validation/OOS outcomes(검증/표본외 결과 선택/변경 금지)."
+    },
+    {
+      "lock_id": "single_execution_surface",
+      "rule": "Use one fixed entry/exit surface(단일 진입/청산 표면). No lifecycle sweep(생명주기 스윕 없음), no daily quota(일일 쿼터 없음), no threshold search(임계값 탐색 없음)."
+    },
+    {
+      "lock_id": "archive_reference_only",
+      "rule": "Stage17/18 archive XGBoost/CatBoost runs are reference only(17/18단계 보관소 부스팅 실행은 참조 전용). No selected variant, threshold, hold, baseline, or handoff is inherited(선택 변형/임계값/보유/기준선/인계 상속 없음)."
+    },
+    {
+      "lock_id": "runtime_probe_before_closeout",
+      "rule": "Before closeout run a narrow MT5 runtime probe if a handoff candidate exists, otherwise record exact blocker(마감 전 인계 후보가 있으면 좁은 MT5 런타임 탐침, 없으면 정확한 차단 사유 기록)."
+    },
+    {
+      "lock_id": "claim_boundary_lock",
+      "rule": "Only scout clue/seed surface/runtime probe observation/preserved clue/negative memory/invalid setup/blocked may be claimed(탐색 단서/씨앗 표면/런타임 탐침 관찰/보존 단서/부정 기억/무효 설정/차단만 주장 가능)."
+    }
+  ],
+  "grok_initial": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review/metadata.json",
+    "prompt_hash": "392d11dfa6ec12216bf535c9aec57b6df089309e8c2869d0d18645a25fc3e8a1",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 101.9225,
+    "preflight_warnings": [],
+    "unexpected_top_level_artifacts": [],
+    "classification": "needs_local_verification(로컬 검증 필요)",
+    "output_excerpt": "Grok 외부 2차 검토로 답하기 전에, 협업 스킬과 F18·F19 관련 제한 근거를 먼저 확인합니다.\n**Classification:** `needs_local_verification`\n\nF19는 **모델 계열(model family, 모델 계열) 축**으로는 새 전선 가설 생명주기(frontier hypothesis lifecycle, 전선 가설 생명주기)에 가깝습니다. F15–F18(전선15–18)은 모두 `lr_plain` 위에 threshold/veto/firewall/lifecycle 수리(repair, 수리)를 쌓았고, F18은 lifecycle 수리까지 0/0/0으로 닫혔습니다. 그래서 “얕은 모델 한계”를 다음 1차 변수로 바꾸는 건 방향 자체는 타당합니다.\n\n다만 **“boosted tree + temporal stability selection(시간 안정성 선택)”**을 한 묶음으로 열면, 이미 실패한 수리 축을 다시 섞는 형태에 가깝습니다. F11(전선11)은 subperiod stability-first selection(하위기간 안정성 우선 선택)이 aggregate top(합계 최상위)을 바꾸지 못했고 DD floor(손실폭 바닥)도 못 깼다는 negative memory(부정 기억)로 닫혔습니다. Archive Stage17/18(17/18단계)도 XGBoost/CatBoost를 이미 시험했습니다. 그래서 “새 가설”이라기보다 **실패한 선택기 + 실패한 스캐폴드(ONNX scout ladder, ONNX 탐색 사다리) + 다른 백본** 조합으로 보일 수 있고, F19A stage-open 전에 novelty_delta(신규성 차이)와 do_not_repeat(반복 금지)를 문서로 고정하지 않으면 F19B는 invalid setup(무효 설정) 위험이 큽니다.\n\n또 F17/F18 실패는 shallow-model(얕은 모델) 단독 실패로 읽기 어렵습니다. F17 proxy는 validation PF ~1.30까지 갔지만 MT5 DD가 붕괴했고, F18은 DD는 낮지만 OOS PF ~1.0입니다. 즉 bottleneck(병목)이 **신호 품질·실행 경제성(signal quality / execution economics, 신호 품질·실행 경제성)** 쪽일 수 있어, boosted tree만으로 PF/density/DD/smoothness를 동시에 올린다는 가설은 아직 검증 전 주장입니다"
+  },
+  "grok_adjusted": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted/metadata.json",
+    "prompt_hash": "30e3403d417274265777d88a93f33c6d443973a58fa7ddba4714f2dbba860e2e",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 132.853663,
+    "preflight_warnings": [],
+    "unexpected_top_level_artifacts": [],
+    "classification": "accepted(수용)",
+    "output_excerpt": "Grok 외부 2차 의견으로 F19 개방 타당성을 판단하기 위해, 관련 스킬·정책·전선/보관소 근거를 먼저 확인합니다.\n**Classification:** `accepted`\n\n**Reason:**\n- F15–F18(전선15–18)은 `lr_plain` 위 decision-overlay 수리(threshold/veto/firewall/lifecycle)를 끝까지 쌓아 0/0/0으로 닫혔습니다. 수정된 F19는 그 수리 연쇄를 끊고 **capped backbone-only scout(상한 있는 백본 단독 탐색)**만 1차 변수로 두므로, archive repetition(보관소 반복)이 아니라 **repair-stack exhaustion 이후의 축 전환(axis pivot, 축 전환)**으로 읽는 것이 맞습니다.\n- 이전 Grok `needs_local_verification`의 핵심 차단점이었던 **stability selector(안정성 선택기) 번들**이 제거됐습니다. stability = audit/tie-break only, single fixed entry/exit, max 4 pre-registered variants, no threshold/lifecycle/quota sweep — 이 조합이면 frontier opening contract(전선 개방 계약)의 `novelty_delta(신규성 차이)`와 `do_not_repeat(반복 금지)` 요건을 충족합니다. Stage17/18 XGBoost/CatBoost inconclusive MT5 probes(런타임 탐침)는 ONNX/export lesson reference(참조)로만 쓰고, 같은 KPI batch(배치) 재현은 아닙니다.\n\n**Must-not-repeat locks:**\n- F15–F18 negative memory(부정 기억) 축 재사용 금지: threshold search, veto, firewall, lifecycle profile sweep, daily quota label repair.\n- F11 negative memory(부정 기억) 축 재사용 금지: subperiod stability-first selector, validation/OOS selector mutation, stability-as-primary-variable.\n- Stage17/18 archive inheritance(상속) 금지: CatBoost/X"
+  },
+  "local_verification": {
+    "judgment": "pass_with_locks(잠금 포함 통과)",
+    "checks": {
+      "workspace_points_to_frontier19A": true,
+      "f18_closed_negative_memory": true,
+      "f11_negative_memory_confirmed": true,
+      "archive_xgb_stage_exists": true,
+      "archive_catboost_stage_exists": true,
+      "run_registry_xgb_archive_reference_found": true,
+      "run_registry_catboost_archive_reference_found": true,
+      "xgb_helper_exists": true,
+      "catboost_helper_exists": true,
+      "onnx_export_helpers_exist": true,
+      "feature_order_hash_matches_contract": true,
+      "model_variant_cap_is_four": true,
+      "required_lock_ids_present": true,
+      "ea_single_surface_inputs_available": true,
+      "initial_grok_success": true,
+      "initial_grok_needs_local_verification": true,
+      "adjusted_grok_success": true,
+      "adjusted_grok_accepted": true,
+      "grok_no_unexpected_top_level_artifacts": true
+    },
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

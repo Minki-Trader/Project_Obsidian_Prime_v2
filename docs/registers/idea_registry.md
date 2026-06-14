@@ -1592,3 +1592,9 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR18-ASYMMETRIC-EXIT-LIFECYCLE-PROFIT-LOCK-ONNX-SCOUT`: `frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1` opens asymmetric exit lifecycle profit-lock ONNX scout(비대칭 청산 생명주기 수익 잠금 ONNX 탐색). Effect(효과): F17(전선17)의 entry firewall(진입 방화벽)을 반복하지 않고 lifecycle/execution surface(생명주기/실행 표면)를 새 가설로 시험합니다.
 <!-- frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1 -->
 - `frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1`: asymmetric exit lifecycle/profit lock(비대칭 청산 생명주기/수익 잠금) closed as negative memory(부정 기억). Effect(효과): same lifecycle parameter retuning(동일 생명주기 파라미터 재조정)을 반복하지 않습니다.
+<!-- frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1 -->
+- `IDEA-FR19-BOOSTED-BACKBONE-NO-REPAIR-STACK-ONNX-SCOUT`: `frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1` opens backbone-only boosted-tree scout(백본 단독 부스팅 트리 탐색). Effect(효과): F15~F18 repair stack(수리 중첩)을 반복하지 않고 model backbone(모델 백본) 축만 시험합니다.
+<!-- frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1 -->
+- `frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1`: boosted backbone no-repair-stack proxy scout(부스팅 백본 수리 중첩 없는 프록시 탐색) evaluated `4` models. Effect(효과): best candidate(최상 후보) `f19b_cat_ordered_depth3_backbone__argmax_nonflat_backbone_only` and runtime boundary(런타임 경계) `no_runtime_handoff_candidate_from_frontier19b_proxy(전선19B 프록시에서 런타임 인계 후보 없음)` recorded.
+<!-- frontier19C_boosted_backbone_repair_or_closeout_decision_v1 -->
+- `frontier19C_boosted_backbone_repair_or_closeout_decision_v1`: Frontier19(전선19) closed as negative memory(부정 기억). Effect(효과): ONNX export/parity(ONNX 내보내기/동등성)는 재사용 산출물 메모로만 남기고, 다음 전선은 새 가설로 시작합니다.

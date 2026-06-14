@@ -1,0 +1,82 @@
+{
+  "run_id": "frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1",
+  "stage_id": "stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout",
+  "run_number": "frontier19A",
+  "parent_run_id": "frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1",
+  "next_run_id": "frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1",
+  "status": "opened_frontier19_boosted_backbone_no_repair_stack_onnx_scout_no_authority",
+  "judgment": "stage_opened_after_grok_adjusted_review_with_backbone_only_locks_no_authority",
+  "script": {
+    "path": "stage_pipelines/stage_frontier_19/materialize_frontier19a_stage_open.py",
+    "sha256": "6ab7ef533c6c51e92cd6c5803558a8f743f2a94ceddeec1b9bb34cc6584d97ac"
+  },
+  "report": {
+    "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/03_reviews/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1_report.md",
+    "sha256": "missing(누락)"
+  },
+  "decision": {
+    "path": "docs/decisions/2026-06-14_stage_frontier_19_boosted_backbone_no_repair_stack_onnx_scout_open.md"
+  },
+  "inputs": {
+    "dataset": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    "feature_order": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    },
+    "f18_selection": {
+      "path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/04_selected/selection_status.md",
+      "sha256": "6d42530b9d0ce53b05ee8e1ec3373dccf202f32ccf4e2d56b7be41e1cce9b783"
+    },
+    "f11_selection": {
+      "path": "stages/stage_frontier_11__subperiod_stability_first_onnx_scout/04_selected/selection_status.md",
+      "sha256": "851fcd2a0ac0f32f8c9b2f702f6c0f6843dd767f0c05e17df9b49cdbe65be7fc"
+    },
+    "grok_initial": {
+      "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review",
+      "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review/prompt.md",
+      "output": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review/clean_output.md",
+      "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review/metadata.json",
+      "prompt_hash": "392d11dfa6ec12216bf535c9aec57b6df089309e8c2869d0d18645a25fc3e8a1",
+      "success": true,
+      "returncode": 0,
+      "timed_out": false,
+      "duration_seconds": 101.9225,
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "classification": "needs_local_verification(로컬 검증 필요)",
+      "output_excerpt": "Grok 외부 2차 검토로 답하기 전에, 협업 스킬과 F18·F19 관련 제한 근거를 먼저 확인합니다.\n**Classification:** `needs_local_verification`\n\nF19는 **모델 계열(model family, 모델 계열) 축**으로는 새 전선 가설 생명주기(frontier hypothesis lifecycle, 전선 가설 생명주기)에 가깝습니다. F15–F18(전선15–18)은 모두 `lr_plain` 위에 threshold/veto/firewall/lifecycle 수리(repair, 수리)를 쌓았고, F18은 lifecycle 수리까지 0/0/0으로 닫혔습니다. 그래서 “얕은 모델 한계”를 다음 1차 변수로 바꾸는 건 방향 자체는 타당합니다.\n\n다만 **“boosted tree + temporal stability selection(시간 안정성 선택)”**을 한 묶음으로 열면, 이미 실패한 수리 축을 다시 섞는 형태에 가깝습니다. F11(전선11)은 subperiod stability-first selection(하위기간 안정성 우선 선택)이 aggregate top(합계 최상위)을 바꾸지 못했고 DD floor(손실폭 바닥)도 못 깼다는 negative memory(부정 기억)로 닫혔습니다. Archive Stage17/18(17/18단계)도 XGBoost/CatBoost를 이미 시험했습니다. 그래서 “새 가설”이라기보다 **실패한 선택기 + 실패한 스캐폴드(ONNX scout ladder, ONNX 탐색 사다리) + 다른 백본** 조합으로 보일 수 있고, F19A stage-open 전에 novelty_delta(신규성 차이)와 do_not_repeat(반복 금지)를 문서로 고정하지 않으면 F19B는 invalid setup(무효 설정) 위험이 큽니다.\n\n또 F17/F18 실패는 shallow-model(얕은 모델) 단독 실패로 읽기 어렵습니다. F17 proxy는 validation PF ~1.30까지 갔지만 MT5 DD가 붕괴했고, F18은 DD는 낮지만 OOS PF ~1.0입니다. 즉 bottleneck(병목)이 **신호 품질·실행 경제성(signal quality / execution economics, 신호 품질·실행 경제성)** 쪽일 수 있어, boosted tree만으로 PF/density/DD/smoothness를 동시에 올린다는 가설은 아직 검증 전 주장입니다"
+    },
+    "grok_adjusted": {
+      "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted",
+      "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted/prompt.md",
+      "output": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted/clean_output.md",
+      "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier19_stage_open/small_review_adjusted/metadata.json",
+      "prompt_hash": "30e3403d417274265777d88a93f33c6d443973a58fa7ddba4714f2dbba860e2e",
+      "success": true,
+      "returncode": 0,
+      "timed_out": false,
+      "duration_seconds": 132.853663,
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "classification": "accepted(수용)",
+      "output_excerpt": "Grok 외부 2차 의견으로 F19 개방 타당성을 판단하기 위해, 관련 스킬·정책·전선/보관소 근거를 먼저 확인합니다.\n**Classification:** `accepted`\n\n**Reason:**\n- F15–F18(전선15–18)은 `lr_plain` 위 decision-overlay 수리(threshold/veto/firewall/lifecycle)를 끝까지 쌓아 0/0/0으로 닫혔습니다. 수정된 F19는 그 수리 연쇄를 끊고 **capped backbone-only scout(상한 있는 백본 단독 탐색)**만 1차 변수로 두므로, archive repetition(보관소 반복)이 아니라 **repair-stack exhaustion 이후의 축 전환(axis pivot, 축 전환)**으로 읽는 것이 맞습니다.\n- 이전 Grok `needs_local_verification`의 핵심 차단점이었던 **stability selector(안정성 선택기) 번들**이 제거됐습니다. stability = audit/tie-break only, single fixed entry/exit, max 4 pre-registered variants, no threshold/lifecycle/quota sweep — 이 조합이면 frontier opening contract(전선 개방 계약)의 `novelty_delta(신규성 차이)`와 `do_not_repeat(반복 금지)` 요건을 충족합니다. Stage17/18 XGBoost/CatBoost inconclusive MT5 probes(런타임 탐침)는 ONNX/export lesson reference(참조)로만 쓰고, 같은 KPI batch(배치) 재현은 아닙니다.\n\n**Must-not-repeat locks:**\n- F15–F18 negative memory(부정 기억) 축 재사용 금지: threshold search, veto, firewall, lifecycle profile sweep, daily quota label repair.\n- F11 negative memory(부정 기억) 축 재사용 금지: subperiod stability-first selector, validation/OOS selector mutation, stability-as-primary-variable.\n- Stage17/18 archive inheritance(상속) 금지: CatBoost/X"
+    }
+  },
+  "outputs": {
+    "stage_open_summary": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1/stage_open_summary.json",
+    "model_variant_lock": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1/model_variant_lock.json",
+    "execution_surface_lock": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1/execution_surface_lock.json",
+    "guard_manifest": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1/guard_manifest.json"
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve"
+  ]
+}

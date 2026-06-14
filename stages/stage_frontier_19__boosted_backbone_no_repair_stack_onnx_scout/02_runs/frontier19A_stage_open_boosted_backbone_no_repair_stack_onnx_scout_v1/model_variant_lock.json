@@ -1,0 +1,32 @@
+{
+  "variants": [
+    {
+      "variant_id": "f19b_xgb_depth2_l2_backbone_control",
+      "family": "xgboost(XGBoost, 엑스지부스트)",
+      "source_helper": "foundation/models/xgboost_boosting.py",
+      "basis": "v01_depth2_l2_subsample",
+      "role": "shallow_regularized_backbone_control(얕은 정규화 백본 대조군)"
+    },
+    {
+      "variant_id": "f19b_xgb_depth3_balanced_l2_backbone",
+      "family": "xgboost(XGBoost, 엑스지부스트)",
+      "source_helper": "foundation/models/xgboost_boosting.py",
+      "basis": "v02_depth3_balanced_l2",
+      "role": "balanced_depth_regularized_backbone(균형 깊이 정규화 백본)"
+    },
+    {
+      "variant_id": "f19b_cat_ordered_depth3_backbone",
+      "family": "catboost(CatBoost, 캣부스트)",
+      "source_helper": "foundation/models/catboost_ordered.py",
+      "basis": "v01_ordered_depth3_bayesian",
+      "role": "ordered_boosting_backbone(순서 부스팅 백본)"
+    },
+    {
+      "variant_id": "f19b_cat_plain_depth3_backbone_control",
+      "family": "catboost(CatBoost, 캣부스트)",
+      "source_helper": "foundation/models/catboost_ordered.py",
+      "basis": "v05_plain_depth3_control",
+      "role": "plain_boosting_backbone_control(일반 부스팅 백본 대조군)"
+    }
+  ]
+}

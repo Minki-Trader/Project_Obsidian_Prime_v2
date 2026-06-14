@@ -1,0 +1,107 @@
+{
+  "run_id": "frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1",
+  "stage_id": "stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout",
+  "status": "boosted_backbone_no_forward_clue_no_authority",
+  "judgment": "negative_memory_candidate(부정 기억 후보)",
+  "script": {
+    "path": "stage_pipelines/stage_frontier_19/frontier19b_boosted_backbone_no_repair_stack_proxy_scout.py",
+    "sha256": "e72816f109a2b739bf1a828fdec110e58bea36a7f2537887918028dbaa66b2be"
+  },
+  "inputs": {
+    "stage_open_summary": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1/stage_open_summary.json",
+      "sha256": "e27205d7b4d5cfefb3c200557aba374919bda56ae33959f1cdfd6018a0d6490f"
+    },
+    "model_variant_lock": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1/model_variant_lock.json",
+      "sha256": "e0b790bc59924d367188e20dca712565b3823d96a620ce508eb8011794230b37"
+    },
+    "execution_surface_lock": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19A_stage_open_boosted_backbone_no_repair_stack_onnx_scout_v1/execution_surface_lock.json",
+      "sha256": "d2f389102675c91a1b1dbbcb0b6b9463c74d90956e930f1bd1b6b10f9b560568"
+    },
+    "dataset": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    "feature_order": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    }
+  },
+  "outputs": {
+    "model_export_parity_audit": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/model_export_parity_audit.csv",
+      "sha256": "e9151878d941e7b28bbb527b5f4bdc12ab2d73678dedbef141f40d2bfd5ad1e0"
+    },
+    "proxy_split_metrics": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/proxy_split_metrics.csv",
+      "sha256": "d8852f4ff1f7d244b45013563e52296916b5fb395cbbc1b457fb677181dcef29"
+    },
+    "subperiod_stability_audit": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/subperiod_stability_audit.csv",
+      "sha256": "989454db47adccf93af3ca014f166349deeb5e75138e86a27b8283b6a066bd52"
+    },
+    "candidate_summary": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/candidate_summary.csv",
+      "sha256": "b23e8e9f86000d266d47ed0c0335827e092bb00026d17fc4e438cfed885816be"
+    },
+    "top_candidates": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/top_candidates.csv",
+      "sha256": "b23e8e9f86000d266d47ed0c0335827e092bb00026d17fc4e438cfed885816be"
+    },
+    "final_summary": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/final_summary.json",
+      "sha256": "b03bd84d3a107868c6eb356604b0ac43fa6b0681cbeda9ca71a0927d15ba35c1"
+    },
+    "report": {
+      "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/03_reviews/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1_report.md",
+      "sha256": "missing(누락)"
+    },
+    "probabilities": [
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/probabilities/f19b_xgb_depth2_l2_backbone_control_probabilities.parquet",
+        "sha256": "6f8be89e45e6616de1693228983b21da0034d5fc7c30f14896dfad968d558f44"
+      },
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/probabilities/f19b_xgb_depth3_balanced_l2_backbone_probabilities.parquet",
+        "sha256": "a2403da088b75137a6880eacd748bb2dd89796596a7dac937b06871198462233"
+      },
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/probabilities/f19b_cat_ordered_depth3_backbone_probabilities.parquet",
+        "sha256": "8216fe1f09ebeeeb1f6f3c3c5d5faafd371cdcef92ec44b81cc3f65a45940871"
+      },
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/probabilities/f19b_cat_plain_depth3_backbone_control_probabilities.parquet",
+        "sha256": "bfd14b04036346a957d592af12d04b646be9f2e2a057ce9b03a2fc2f8d5d0486"
+      }
+    ],
+    "feature_importance": [
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/feature_importance/f19b_xgb_depth2_l2_backbone_control_feature_importance.csv",
+        "sha256": "79e742860d294c6c201459bfb12f89610a44f7447f4caa0fe8ec109c06472858"
+      },
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/feature_importance/f19b_xgb_depth3_balanced_l2_backbone_feature_importance.csv",
+        "sha256": "752524444cc1e79d7f3213691efabea8705cc9f61adf66ad3176f6aef058ed94"
+      },
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/feature_importance/f19b_cat_ordered_depth3_backbone_feature_importance.csv",
+        "sha256": "2fb7783bcc91bc12357ba4034673cd1bb99ea32df038d24a7d481bb4f8b6cf5b"
+      },
+      {
+        "path": "stages/stage_frontier_19__boosted_backbone_no_repair_stack_onnx_scout/02_runs/frontier19B_boosted_backbone_no_repair_stack_proxy_scout_v1/feature_importance/f19b_cat_plain_depth3_backbone_control_feature_importance.csv",
+        "sha256": "f8f740612d85c8c3bf4dba8c954169cbf0babc2dfcb6ab0274a3d1b755c2f051"
+      }
+    ]
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve"
+  ],
+  "runtime_probe_boundary": "no_runtime_handoff_candidate_from_frontier19b_proxy(전선19B 프록시에서 런타임 인계 후보 없음)"
+}

@@ -1,0 +1,7 @@
+{
+  "decision_policy": "argmax_nonflat_control(최대확률 비중립 대조)",
+  "threshold_policy": "no_validation_oos_threshold_search(검증/표본외 임계값 탐색 없음)",
+  "exit_policy": "fixed_fwd12_proxy_then_single_runtime_surface_if_handoff_exists(프록시는 고정 fwd12, 인계 후보가 있으면 단일 런타임 표면)",
+  "density_policy": "observe_density_no_daily_quota_repair(빈도 관찰, 일일 쿼터 수리 없음)",
+  "stability_policy": "audit_and_tie_break_only(감사와 동률 처리 전용)"
+}
