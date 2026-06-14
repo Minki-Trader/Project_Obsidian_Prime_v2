@@ -1088,3 +1088,5 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - `frontier35D_stage_closeout_pf_source_lift_v1`: f35_train_only_pf_lift_overlay_did_not_survive_dd_compression_into_seed_or_runtime_candidate. Evidence(근거): F35B/F35C seed/runtime(전선35B/35C 씨앗/런타임) 0/0 and 0/0. Effect(효과): F34/F35 scaffold(전선34/35 발판)에 단일 피처 필터를 더 얹는 반복을 금지합니다.
 <!-- frontier36D_stage_closeout_short_source_utility_label_pivot_v1 -->
 - `frontier36D_stage_closeout_short_source_utility_label_pivot_v1`: f36_short_source_selection_and_exit_label_pivot_did_not_create_seed_or_runtime_candidate. Evidence(근거): F36B/F36C seed/runtime(전선36B/36C 씨앗/런타임) 0/0 and 0/0. Effect(효과): short source selection(숏 원천 선택)과 same-mask exit label pivot(같은 마스크 청산 라벨 전환)만 반복하지 않습니다.
+<!-- frontier37D_stage_closeout_payoff_label_family_pivot_v1 -->
+- `frontier37D_stage_closeout_payoff_label_family_pivot_v1`: f37_train_only_payoff_dominance_and_balanced_label_family_pivot_did_not_create_seed_or_runtime_candidate. Evidence(근거): F37B/F37C seed/runtime(전선37B/37C 씨앗/런타임) 0/0 and 0/0. Effect(효과): same payoff-dominance label family(같은 수익 우위 라벨 계열)만 반복하지 않습니다.

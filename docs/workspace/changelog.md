@@ -7086,3 +7086,5 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T15:37:29Z: `frontier35D_stage_closeout_pf_source_lift_v1` closed Frontier35 PF source lift(전선35 수익 팩터 원천 상승). Effect(효과): proxy_scout=21, proxy_near_seed=1, repair_seed=0, next=`frontier36A_stage_open_short_pf_lift_source_change_or_label_pivot_hypothesis_design_v1`.
 <!-- frontier36D_stage_closeout_short_source_utility_label_pivot_v1 -->
 - 2026-06-14T16:23:28Z: `frontier36D_stage_closeout_short_source_utility_label_pivot_v1` closed Frontier36 short source utility(전선36 숏 원천 유틸리티). Effect(효과): proxy_scout=73, repair_scout=132, seed=0, next=`frontier37A_stage_open_short_pf_edge_label_family_pivot_hypothesis_design_v1`.
+<!-- frontier37D_stage_closeout_payoff_label_family_pivot_v1 -->
+- 2026-06-14T17:05:10Z: `frontier37D_stage_closeout_payoff_label_family_pivot_v1` closed Frontier37 payoff label family(전선37 수익 라벨 계열). Effect(효과): proxy_scout=1, repair_scout=18, seed=0, next=`frontier38A_stage_open_short_pf_edge_source_family_or_model_pivot_hypothesis_design_v1`.
