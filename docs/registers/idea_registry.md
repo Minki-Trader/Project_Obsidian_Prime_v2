@@ -1582,3 +1582,5 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier16C_edge_quality_risk_repair_or_closeout_decision_v1`: Frontier16(프론티어16) closed as negative_memory_no_forward_clue(전진 단서 없는 부정 기억). Effect(효과): locked edge_margin target8(고정 엣지 마진 목표8) with broad risk-quality labels(넓은 위험 품질 라벨)는 PF and split stability(수익 팩터와 분할 안정성)를 만들지 못했습니다.
 <!-- frontier16D_runtime_probe_supplement_v1 -->
 - `frontier16D_runtime_probe_supplement_v1`: Frontier16(전선16) runtime probe supplement(런타임 탐침 보강). Effect(효과): stage-level MT5 probe habit(단계별 MT5 탐침 습관)을 강제하고 다음 frontier(다음 전선)는 새 가설로 진행합니다.
+<!-- frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1 -->
+- `IDEA-FR17-LOSS-CLUSTER-FIREWALL-PROFIT-PERSISTENCE-ONNX-SCOUT`: `frontier17A_stage_open_loss_cluster_firewall_profit_persistence_onnx_scout_v1` opens loss-cluster firewall profit-persistence ONNX scout(손실 군집 방화벽 수익 지속성 ONNX 탐색). Effect(효과): F15/F16(전선15/16)의 density-first threshold/edge-margin(빈도 우선 임계값/엣지 마진) 반복 없이 DD-first hazard firewall(손실폭 우선 위험 방화벽)을 시험합니다.
