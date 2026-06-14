@@ -101,9 +101,9 @@ Stage 04(4단계)의 정식 58 feature(58개 피처) 경로는 `MT5 price-proxy 
 
 ## Frontier Pointer(전선 포인터)
 
-- last_closed_stage(마지막 종료 단계): `stage_frontier_43__short_pf_edge_trade_shape_source_pivot_after_f42_timing_negative`
-- last_closed_run(마지막 종료 실행): `frontier43D_stage_closeout_trade_shape_source_v1`
-- next_stage(다음 단계): `stage_frontier_44__short_pf_edge_label_model_pivot_after_f43_trade_shape_negative`
-- next_run(다음 실행): `frontier44A_stage_open_short_pf_edge_label_model_source_hypothesis_design_v1`
+- last_closed_stage(마지막 종료 단계): `stage_frontier_44__short_pf_edge_label_model_pivot_after_f43_trade_shape_negative`
+- last_closed_run(마지막 종료 실행): `frontier44D_stage_closeout_label_model_pivot_v1`
+- next_stage(다음 단계): `stage_frontier_45__short_pf_edge_event_utility_model_pivot_after_f44_label_model_memory`
+- next_run(다음 실행): `frontier45A_stage_open_short_pf_edge_event_utility_model_hypothesis_design_v1`
 
-F43 carry-forward(이월) 기록은 entry-known trade-shape source(진입시점 거래 형태 원천)가 PF/DD/density(수익 팩터/손실폭/밀도)를 네 축 목표까지 끌어올렸는지와 seed/runtime(씨앗/런타임) 후보가 생겼는지 여부다.
+F44 carry-forward(이월) 기록은 train-only short path-utility label model(학습 전용 숏 경로 효용 라벨 모델)이 PF/DD/density(수익 팩터/손실폭/밀도)를 네 축 목표까지 끌어올렸는지와 seed/runtime(씨앗/런타임) 후보가 생겼는지 여부다.

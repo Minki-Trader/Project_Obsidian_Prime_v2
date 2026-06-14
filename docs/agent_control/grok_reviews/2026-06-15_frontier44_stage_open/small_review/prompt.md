@@ -1,0 +1,42 @@
+﻿# Frontier44 stage-open Grok review(그록 단계 개방 검토)
+
+Role(역할): external second opinion(외부 2차 의견) only.
+
+Do not claim operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).
+Do not inspect files, call tools, or request more repository context(파일/도구/추가 저장소 문맥을 사용하지 말 것). Answer only from bounded evidence(제한 근거) below.
+
+Current truth(현재 진실):
+- F43 closeout(마감): negative_memory(부정 기억)
+- F43 runtime probe status(런타임 탐침 상태): runtime_probe_ineligible_no_scout_seed_or_runtime_candidate_after_f43_trade_shape_proxy
+- F43 best observed row(최상 관찰 행): amzn_xnas_log_return_1 <= q15, forward_min_pf 1.0067, forward_density about 7.6/day, forward_max_dd 8.34, but scout/seed/runtime all false.
+- Prior frontier rule(전선 규칙): Stage12~364 and Frontier1~43 are reference only(참조 전용), not inheritance(상속 아님).
+
+Codex proposed Frontier44 direction(코덱스 제안 방향):
+- stage_id(단계 ID): stage_frontier_44__short_pf_edge_label_model_pivot_after_f43_trade_shape_negative
+- hypothesis(가설): A train-only short path-utility label model(학습 전용 숏 경로 효용 라벨 모델) can separate PF edge(수익 팩터 우위) better than F43 entry-known trade-shape source mining(진입시점 거래 형태 원천 채굴).
+- novelty_delta(신규성 차이): switch primary lever(주 레버)를 source thresholds(원천 임계값)에서 continuous path-utility labels(연속 경로 효용 라벨) plus simple ONNX-friendly score models(온엑스 친화 점수 모델)로 바꾼다.
+- comparison_baseline(비교 기준): F43 best row is reference-only(참조 전용) near-clue, not baseline/winner(기준선/승자 아님).
+- control_variables(고정 변수): US100 M5, frozen 58 feature order(고정 58 피처 순서), frozen chronological split(고정 시간순 분할), short-only(숏 전용), closed-bar features(닫힌 봉 피처).
+- changed_variables(변경 변수): target label(목표 라벨), model family(모델 계열), score thresholding(점수 임계값), train-only path utility objective(학습 전용 경로 효용 목적).
+- planned proxy(예정 프록시): train models only on train split(학습 분할만), derive score thresholds/SL/TP caps from train only(학습 전용), evaluate validation/OOS(검증/표본외)는 read-only(읽기 전용).
+- planned repair(예정 수리): capped label/model repair(상한 라벨/모델 수리) only if no seed/runtime candidate(씨앗/런타임 후보 없음).
+
+Success criteria for scout/seed/runtime(탐색/씨앗/런타임 성공 기준):
+- scout clue(탐색 단서): train path lane passes(학습 경로 통과), forward_min_pf >= 1.05, forward density 4~12/day, forward_max_dd <= 18%.
+- seed surface(씨앗 표면): forward_min_pf >= 1.20, density 5~10/day, forward_max_dd <= 12%.
+- runtime probe candidate(런타임 탐침 후보): seed plus forward_min_pf >= 1.50 and forward_max_dd <= 10%.
+- final completion gates(최종 완성 게이트) are not applied in this early proxy(초기 프록시).
+
+Invalid/do-not-repeat conditions(무효/반복 금지 조건):
+- Do not use validation/OOS labels or outcomes(검증/표본외 라벨/결과) to build labels, thresholds, or select model variants.
+- Do not reopen F42 timing gate(타이밍 게이트), F43 trade-shape source(거래 형태 원천), F38 shallow score quantile repair(얕은 점수 분위수 수리), or F39 regime bucket overlay(체제 버킷 덧씌움) as primary lever.
+- Do not claim ONNX completion(온엑스 완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), or live readiness(실거래 준비).
+
+Question(질문):
+Is this a valid next hypothesis lifecycle(다음 가설 생명주기) and what is the main guardrail Codex must enforce before running the proxy(프록시)?
+
+Return only:
+1. verdict: accepted, rejected, or needs_local_verification(수용/거절/로컬 검증 필요)
+2. main_guardrail(주 보호선)
+3. do_not_repeat(반복 금지)
+4. claim_boundary_ok: yes/no(예/아니오)
