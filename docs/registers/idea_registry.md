@@ -1580,3 +1580,5 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR16-EDGE-QUALITY-RISK-VETO-DENSITY-TRANSFER-ONNX-SCOUT`: `frontier16A_stage_open_edge_quality_risk_veto_density_transfer_onnx_scout_v1` opens edge-quality risk-veto density-transfer ONNX scout(엣지 품질 위험 배제 빈도 전이 온엑스 탐색). Effect(효과): F15(프론티어15)의 density transfer(빈도 전이)를 calibration clue(보정 단서)로만 쓰고 edge-quality label(엣지 품질 라벨)을 시험합니다.
 <!-- frontier16C_edge_quality_risk_repair_or_closeout_decision_v1 -->
 - `frontier16C_edge_quality_risk_repair_or_closeout_decision_v1`: Frontier16(프론티어16) closed as negative_memory_no_forward_clue(전진 단서 없는 부정 기억). Effect(효과): locked edge_margin target8(고정 엣지 마진 목표8) with broad risk-quality labels(넓은 위험 품질 라벨)는 PF and split stability(수익 팩터와 분할 안정성)를 만들지 못했습니다.
+<!-- frontier16D_runtime_probe_supplement_v1 -->
+- `frontier16D_runtime_probe_supplement_v1`: Frontier16(전선16) runtime probe supplement(런타임 탐침 보강). Effect(효과): stage-level MT5 probe habit(단계별 MT5 탐침 습관)을 강제하고 다음 frontier(다음 전선)는 새 가설로 진행합니다.

@@ -1,0 +1,122 @@
+﻿{
+  "best_candidate": {
+    "candidate_id": "f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal__edge_margin__target8",
+    "target_id": "f16b_edge_h8_t0p30_cap0p45_early0p25",
+    "model_id": "rf_depth5_leaf80_balanced_argmax",
+    "model_instance_id": "f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal",
+    "strict_scout_clue_pass": false,
+    "preserved_clue_pass": false,
+    "shape_duration_score": 5.566047865232147,
+    "validation_profit_factor": 1.0679456646837444,
+    "validation_trades_per_day": 5.655737704918033,
+    "validation_dd_risk_percent": 12.959867694031935,
+    "validation_net_profit": 0.061936840574445234,
+    "validation_equity_trend_r2": 0.6741742738496999,
+    "oos_profit_factor": 0.9422158642461601,
+    "oos_trades_per_day": 5.458015267175573,
+    "oos_dd_risk_percent": 12.803154000549078,
+    "oos_net_profit": -0.030421976477263725,
+    "oos_equity_trend_r2": 0.5675554712092992,
+    "validation_oos_subperiod_worst_dd_risk_percent": 11.305644076925002,
+    "validation_oos_negative_subperiod_fraction": 0.5,
+    "validation_oos_subperiod_min_trades_per_day": 2.761904761904762,
+    "parity_passed": true,
+    "onnx_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16B_edge_quality_risk_veto_proxy_scout_v1/models/f16b_edge_h8_t0p30_cap0p45_early0p25/f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal.onnx",
+    "onnx_sha256": "5e0e84e028100575cd1806b77a9915fce22023da5ecef4ebfcf19cda2f8b1907",
+    "joblib_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16B_edge_quality_risk_veto_proxy_scout_v1/models/f16b_edge_h8_t0p30_cap0p45_early0p25/f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal.joblib",
+    "joblib_sha256": "59e623dd8fa60a817a16164d30481cd0d11456d33c98337c55b1f98335d85c6f",
+    "validation_macro_f1": 0.3830236084731717,
+    "oos_macro_f1": 0.37406715022352355,
+    "signal_contract": "locked_edge_margin_target8_train_only(학습 전용 고정 엣지 마진 목표8)",
+    "score_contract_id": "edge_margin",
+    "cell_id": "edge_margin__target8",
+    "target_density_per_day": 8,
+    "is_primary_cell": true,
+    "threshold_value": 0.05512609121593004,
+    "actual_train_selected_density_per_day": 8.0,
+    "target_train_trade_count": 4584,
+    "actual_train_selected_count": 4584,
+    "density_controlled_validation_oos": true,
+    "pf_axis_improved_vs_f15_primary": false,
+    "dd_axis_improved_vs_f15_primary": false,
+    "raw_strict_scout_clue_pass": false,
+    "strict_scout_clue_pass_for_forward": false
+  },
+  "frontier16b_status": "edge_quality_risk_veto_no_strict_clue_no_authority",
+  "frontier16c_status": "closed_negative_memory_no_forward_clue_edge_quality_risk_veto_no_authority",
+  "source_integrity": {
+    "data_source": {
+      "model_input_dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "raw_us100": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "raw_manifest": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+    },
+    "time_axis": "model timestamp(모델 타임스탬프) is matched to raw time_close_unix as broker_clock_close_key(브로커 시계 종가 키); timezone_status remains unresolved, so this is not a direct UTC market-session claim(직접 UTC 세션 주장 아님).",
+    "sample_scope": {
+      "symbol": "US100",
+      "timeframe": "M5",
+      "model_rows": 46650,
+      "raw_rows": 261345,
+      "start_timestamp": "2022-09-01 16:40:00+00:00",
+      "end_timestamp": "2026-04-13 22:00:00+00:00",
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "tier_a": "model input rows plus raw US100 OHLC(모델 입력 행 + 원천 US100 OHLC)",
+      "tier_b": "missing_required(필수 누락)"
+    },
+    "missing_or_duplicate_check": {
+      "model_duplicate_timestamps": 0,
+      "raw_duplicate_close_keys": 0,
+      "missing_raw_matches": 0,
+      "missing_future_paths": {
+        "h12": 0,
+        "h18": 0
+      }
+    },
+    "feature_label_boundary": "labels use only raw future OHLC after the current closed bar(현재 종료봉 이후 원천 미래 OHLC만 사용); feature_set_v2 columns are not loaded into label construction(피처 컬럼은 라벨 생성에 로드하지 않음).",
+    "split_boundary": "train split(학습 분할) only supplies the p90 scale; validation/OOS(검증/표본밖)는 평가 전용입니다.",
+    "leakage_risk": "path labels are oracle labels(미래 경로를 아는 라벨) and cannot be interpreted as runtime signals(런타임 신호). current bar high/low is excluded by starting at t+1(현재 봉 고저는 t+1 시작으로 제외).",
+    "data_hash_or_identity": {
+      "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "raw_manifest_sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "fwd12_max_abs_diff_vs_model": 3.0035138820494467e-09,
+      "fwd12_p99_abs_diff_vs_model": 3.888873045809762e-10
+    },
+    "integrity_judgment": "usable_with_boundary(경계부 사용 가능)"
+  },
+  "split_rows": {
+    "validation_is": {
+      "attempt_name": "frontier16d_tier_a_validation_is",
+      "split": "validation_is",
+      "rows": 9844,
+      "days_in_scope": 183,
+      "threshold_value": 0.05512609121593004,
+      "decision_mode": "edge_margin",
+      "signal_count": 1035,
+      "long_count": 643,
+      "short_count": 392,
+      "flat_count": 8809,
+      "expected_density_per_day": 5.655737704918033,
+      "effect": "Python expected signal counts(파이썬 기대 신호 수)을 MT5 summary(요약)와 비교합니다."
+    },
+    "oos": {
+      "attempt_name": "frontier16d_tier_a_oos",
+      "split": "oos",
+      "rows": 7584,
+      "days_in_scope": 131,
+      "threshold_value": 0.05512609121593004,
+      "decision_mode": "edge_margin",
+      "signal_count": 715,
+      "long_count": 485,
+      "short_count": 230,
+      "flat_count": 6869,
+      "expected_density_per_day": 5.458015267175573,
+      "effect": "Python expected signal counts(파이썬 기대 신호 수)을 MT5 summary(요약)와 비교합니다."
+    }
+  },
+  "effect": "F16B/F16C source truth(F16B/F16C 현재 진실)를 runtime probe(런타임 탐침)에 고정합니다."
+}

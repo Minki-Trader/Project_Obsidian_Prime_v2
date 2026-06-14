@@ -1,0 +1,275 @@
+﻿{
+  "created_at_utc": "2026-06-14T03:01:02Z",
+  "stage_id": "stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout",
+  "run_id": "frontier16D_runtime_probe_supplement_v1",
+  "run_number": "frontier16D",
+  "parent_run_id": "frontier16C_edge_quality_risk_repair_or_closeout_decision_v1",
+  "source_run_id": "frontier16B_edge_quality_risk_veto_proxy_scout_v1",
+  "next_run_id": "frontier17A_stage_open_new_hypothesis_design_v1",
+  "status": "closed_negative_memory_with_frontier16d_runtime_probe_observation_no_authority",
+  "judgment": "runtime_probe_observation_negative_memory_unchanged(런타임 탐침 관찰, 부정 기억 유지)",
+  "runtime_attempts": 2,
+  "runtime_completed_attempts": 2,
+  "signal_parity_matches": 2,
+  "best_candidate_row": {
+    "candidate_id": "f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal__edge_margin__target8",
+    "target_id": "f16b_edge_h8_t0p30_cap0p45_early0p25",
+    "model_id": "rf_depth5_leaf80_balanced_argmax",
+    "model_instance_id": "f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal",
+    "strict_scout_clue_pass": false,
+    "preserved_clue_pass": false,
+    "shape_duration_score": 5.566047865232147,
+    "validation_profit_factor": 1.0679456646837444,
+    "validation_trades_per_day": 5.655737704918033,
+    "validation_dd_risk_percent": 12.959867694031935,
+    "validation_net_profit": 0.061936840574445234,
+    "validation_equity_trend_r2": 0.6741742738496999,
+    "oos_profit_factor": 0.9422158642461601,
+    "oos_trades_per_day": 5.458015267175573,
+    "oos_dd_risk_percent": 12.803154000549078,
+    "oos_net_profit": -0.030421976477263725,
+    "oos_equity_trend_r2": 0.5675554712092992,
+    "validation_oos_subperiod_worst_dd_risk_percent": 11.305644076925002,
+    "validation_oos_negative_subperiod_fraction": 0.5,
+    "validation_oos_subperiod_min_trades_per_day": 2.761904761904762,
+    "parity_passed": true,
+    "onnx_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16B_edge_quality_risk_veto_proxy_scout_v1/models/f16b_edge_h8_t0p30_cap0p45_early0p25/f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal.onnx",
+    "onnx_sha256": "5e0e84e028100575cd1806b77a9915fce22023da5ecef4ebfcf19cda2f8b1907",
+    "joblib_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16B_edge_quality_risk_veto_proxy_scout_v1/models/f16b_edge_h8_t0p30_cap0p45_early0p25/f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal.joblib",
+    "joblib_sha256": "59e623dd8fa60a817a16164d30481cd0d11456d33c98337c55b1f98335d85c6f",
+    "validation_macro_f1": 0.3830236084731717,
+    "oos_macro_f1": 0.37406715022352355,
+    "signal_contract": "locked_edge_margin_target8_train_only(학습 전용 고정 엣지 마진 목표8)",
+    "score_contract_id": "edge_margin",
+    "cell_id": "edge_margin__target8",
+    "target_density_per_day": 8,
+    "is_primary_cell": true,
+    "threshold_value": 0.05512609121593004,
+    "actual_train_selected_density_per_day": 8.0,
+    "target_train_trade_count": 4584,
+    "actual_train_selected_count": 4584,
+    "density_controlled_validation_oos": true,
+    "pf_axis_improved_vs_f15_primary": false,
+    "dd_axis_improved_vs_f15_primary": false,
+    "raw_strict_scout_clue_pass": false,
+    "strict_scout_clue_pass_for_forward": false
+  },
+  "frontier16b_status": "edge_quality_risk_veto_no_strict_clue_no_authority",
+  "frontier16c_status": "closed_negative_memory_no_forward_clue_edge_quality_risk_veto_no_authority",
+  "negative_memory_unchanged": true,
+  "runtime_probe_observation": "validation_is: status=completed/completed, PF=1.37, DD=12.2, trades=229, signal_diff=0 | oos: status=completed/completed, PF=0.87, DD=47.17, trades=164, signal_diff=0",
+  "execution_payload_paths": {
+    "mt5_execution_result": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5_execution_result.json",
+    "mt5_probe_summary": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5_runtime_probe_summary.csv",
+    "signal_diff": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/runtime_signal_expected_vs_mt5_summary.csv",
+    "strategy_tester_reports": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/strategy_tester_report_records.json"
+  },
+  "grok_packet": "docs/agent_control/grok_reviews/2026-06-14_frontier16_runtime_probe_supplement/small_review",
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  },
+  "runtime_authority": "not_claimed",
+  "operating_promotion": "not_claimed",
+  "live_readiness": "not_claimed",
+  "goal_achieve": "not_claimed",
+  "receipts": {
+    "runtime_parity_receipt": {
+      "created_at_utc": "2026-06-14T03:01:02Z",
+      "research_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stage_pipelines/stage_frontier_16/frontier16d_runtime_probe_supplement.py",
+      "runtime_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1",
+      "shared_contract": "F16B ONNX + edge_margin decision mode(F16B ONNX + 엣지 마진 결정 모드)",
+      "known_differences": "MT5 execution cost/slippage and tester data are native runtime observations(MT5 비용/슬리피지/테스터 데이터는 런타임 관찰)",
+      "parity_check": "signal_matches=2/2; runtime_completed=2/2",
+      "parity_identity": {
+        "onnx_sha256": "5e0e84e028100575cd1806b77a9915fce22023da5ecef4ebfcf19cda2f8b1907",
+        "compile_status": "completed",
+        "portable_ea_ex5_sha256": "2a17ec8739464883b1af70324010cae6c8d11a07b006c5d331f57d085356206b"
+      },
+      "runtime_claim_boundary": "runtime_probe_observation_only(런타임 탐침 관찰 전용)"
+    },
+    "backtest_forensics_receipt": {
+      "created_at_utc": "2026-06-14T03:01:02Z",
+      "tester_identity": "portable MT5 US100 M5, validation_is/OOS date range(휴대용 MT5 US100 5분봉 검증/표본밖 날짜 범위)",
+      "ea_identity": "2a17ec8739464883b1af70324010cae6c8d11a07b006c5d331f57d085356206b",
+      "report_identity": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5/reports",
+      "trade_evidence": "runtime_completed=2/2",
+      "forensic_checks": [
+        "compile result(컴파일 결과)",
+        "telemetry summary(텔레메트리 요약)",
+        "strategy report(전략 보고서)",
+        "Common Files handoff(공용 파일 인계)"
+      ],
+      "backtest_judgment": "usable_with_boundary(경계 포함 사용 가능)"
+    },
+    "artifact_lineage_receipt": {
+      "created_at_utc": "2026-06-14T03:01:02Z",
+      "source_inputs": [
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16B_edge_quality_risk_veto_proxy_scout_v1/final_decision.json",
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16C_edge_quality_risk_repair_or_closeout_decision_v1/closeout_summary.json",
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16B_edge_quality_risk_veto_proxy_scout_v1/models/f16b_edge_h8_t0p30_cap0p45_early0p25/f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal.onnx",
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16B_edge_quality_risk_veto_proxy_scout_v1/models/f16b_edge_h8_t0p30_cap0p45_early0p25/f16b_f16b_edge_h8_t0p30_cap0p45_early0p25__rf_bal.joblib"
+      ],
+      "producer": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stage_pipelines/stage_frontier_16/frontier16d_runtime_probe_supplement.py",
+      "consumer": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/frontier16D_runtime_probe_supplement_v1_report.md",
+      "artifact_paths": [
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1",
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/frontier16D_runtime_probe_supplement_v1_report.md"
+      ],
+      "registry_links": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/stage_run_ledger.csv"
+      ],
+      "availability": "tracked_review_and_ledger_plus_generated_runtime_artifacts(검토/장부 추적 + 생성 런타임 산출물)",
+      "lineage_judgment": "connected_with_boundary(경계 포함 연결)"
+    },
+    "result_judgment_receipt": {
+      "created_at_utc": "2026-06-14T03:01:02Z",
+      "result_subject": "frontier16D_runtime_probe_supplement_v1",
+      "evidence_available": [
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5_runtime_probe_summary.csv",
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/runtime_signal_expected_vs_mt5_summary.csv",
+        "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/onnx_probability_parity.json"
+      ],
+      "evidence_missing": [
+        "Tier B separate(티어 B 분리)",
+        "Tier A+B combined(티어 A+B 합산)",
+        "full WFO stress(전체 WFO 스트레스)"
+      ],
+      "judgment_label": "runtime_probe_observation(런타임 탐침 관찰)",
+      "claim_boundary": "runtime_probe_supplement_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+      "next_condition": "frontier17A_stage_open_new_hypothesis_design_v1"
+    },
+    "claim_boundary_receipt": {
+      "created_at_utc": "2026-06-14T03:01:02Z",
+      "forbidden_claims": {
+        "completion": "not_claimed(주장 없음)",
+        "selected_baseline": "not_claimed(주장 없음)",
+        "operating_promotion": "not_claimed(주장 없음)",
+        "runtime_authority": "not_claimed(주장 없음)",
+        "live_readiness": "not_claimed(주장 없음)",
+        "goal_achieve": "not_claimed(주장 없음)"
+      },
+      "effect": "F16D는 runtime probe observation(런타임 탐침 관찰)만 남기고 authority(권위)를 만들지 않습니다."
+    }
+  },
+  "gate_audit_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/required_gate_coverage_audit.csv",
+  "script_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stage_pipelines/stage_frontier_16/frontier16d_runtime_probe_supplement.py",
+  "script_sha256": "637de4b85cb1d38186cb970d628146dd01cf436ba2adb3309aead87b9b595f44",
+  "gate_rows": [
+    {
+      "gate_name": "external_review_packet(외부 검토 묶음)",
+      "status": "passed_with_local_verification(로컬 검증 포함 통과)",
+      "evidence_path": "docs/agent_control/grok_reviews/2026-06-14_frontier16_runtime_probe_supplement/small_review/metadata.json",
+      "effect": "Grok second opinion(그록 2차 의견)을 자동 실행하지 않고 로컬 검증 후 반영했습니다."
+    },
+    {
+      "gate_name": "source_identity_gate(원천 정체성 게이트)",
+      "status": "passed(통과)",
+      "evidence_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/input_manifest.csv",
+      "effect": "F16B best ONNX/model(최선 온엑스/모델) 해시를 고정했습니다."
+    },
+    {
+      "gate_name": "onnx_probability_parity_gate(ONNX 확률 동등성 게이트)",
+      "status": "passed(통과)",
+      "evidence_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/onnx_probability_parity.json",
+      "effect": "Python sklearn(파이썬 sklearn)과 ONNX probability(확률) 출력을 비교했습니다."
+    },
+    {
+      "gate_name": "mt5_runtime_execution_gate(MT5 런타임 실행 게이트)",
+      "status": "passed_with_observation(관찰 포함 통과)",
+      "evidence_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5_runtime_probe_summary.csv",
+      "effect": "runtime_completed=2/2; MT5 native tester(MT5 네이티브 테스터) 산출물을 확인합니다."
+    },
+    {
+      "gate_name": "runtime_signal_parity_gate(런타임 신호 동등성 게이트)",
+      "status": "passed(통과)",
+      "evidence_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/runtime_signal_expected_vs_mt5_summary.csv",
+      "effect": "expected signal count(기대 신호 수)와 MT5 summary(요약)를 비교했습니다."
+    },
+    {
+      "gate_name": "paired_tier_scope_gate(쌍 티어 범위 게이트)",
+      "status": "passed_with_missing_required_boundary(필수 누락 경계 포함 통과)",
+      "evidence_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/stage_run_ledger.csv",
+      "effect": "Tier A runtime probe(티어 A 런타임 탐침)만 실행하고 Tier B/combined(티어 B/합산)은 missing_required(필수 누락)로 기록합니다."
+    },
+    {
+      "gate_name": "final_claim_guard(최종 주장 보호)",
+      "status": "passed_no_authority_claim(권위 주장 없음 통과)",
+      "evidence_path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/claim_boundary_receipt.json",
+      "effect": "completion/baseline/promotion/runtime/live/Goal(완성/기준선/승격/런타임/실거래/목표) 주장을 막습니다."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/input_manifest.csv",
+      "exists": true,
+      "sha256": "3cce7175820036f994be13b3cc4cd2cbe5476c7f79a0cb292dda0f70f7d06a1c"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/runtime_feature_matrix_manifest.csv",
+      "exists": true,
+      "sha256": "ee6722266b10ee46ab30a3b2b815c29fc8d0af06e57d5dfe5fdd236b71a56075"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/expected_signal_summary.csv",
+      "exists": true,
+      "sha256": "83e79f446822460d1a49272b4e4805748a8800926ade646ed91d5a5ac236d8bc"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/expected/expected_probability_tape.csv",
+      "exists": true,
+      "sha256": "4d4db2e82dc46b611a7f4f323f550b025de344872d3e2c68104ed4976bc9dc71"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/onnx_probability_parity.json",
+      "exists": true,
+      "sha256": "c7700ba4f797c78d65fb7c38ef7d5576a2632ae99a5c55cb34774e407a33e1b6"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/common_files_sync.csv",
+      "exists": true,
+      "sha256": "7128e7807a855323a0caf3be7aa4c21f44c120a67dd765998685d44ccaa08f3b"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5_runtime_probe_attempt_package.csv",
+      "exists": true,
+      "sha256": "e04ff734a13c6f7fedf81e9c3bf7433d273d9ca2cf5aae66b3b787ef34b6600b"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5_execution_result.json",
+      "exists": true,
+      "sha256": "928aa28f118c81dcd8286a8b99f7244acee2c65c2351e6b024eb815a09fd0fc4"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/mt5_runtime_probe_summary.csv",
+      "exists": true,
+      "sha256": "d7d7204740f84da497cd2a2be84b9e2957994050a89edfd34b917d630142fe2d"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/runtime_signal_expected_vs_mt5_summary.csv",
+      "exists": true,
+      "sha256": "174f082793d34ba43a5c1ecacc157d51a07b76a797a500aa2aa548b0ca3ae592"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/required_gate_coverage_audit.csv",
+      "exists": true,
+      "sha256": "2919bd01589470bbeca9a8feee079bd472fb3ecaf22129e3b88f6b44911a42ab"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/02_runs/frontier16D_runtime_probe_supplement_v1/final_decision.json",
+      "exists": true,
+      "sha256": "fa924d2e4ddb12adaaf35a6bc91f4430cef33457b1b6015e0c7ee18277e3088d"
+    },
+    {
+      "path": "stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/frontier16D_runtime_probe_supplement_v1_report.md",
+      "exists": false,
+      "sha256": ""
+    }
+  ]
+}

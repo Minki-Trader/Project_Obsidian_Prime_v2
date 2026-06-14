@@ -6948,3 +6948,5 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T02:25:50Z: `frontier16B_edge_quality_risk_veto_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict rows(엄격 행) `0`, preserved rows(보존 행) `0`, next run(다음 실행) `frontier16C_edge_quality_risk_repair_or_closeout_decision_v1`.
 <!-- frontier16C_edge_quality_risk_repair_or_closeout_decision_v1 -->
 - 2026-06-14T02:32:03Z: `frontier16C_edge_quality_risk_repair_or_closeout_decision_v1` closed Frontier16(프론티어16) as negative memory with no forward clue(전진 단서 없는 부정 기억) after Grok closeout accepted(그록 마감 수용). Effect(효과): next frontier(다음 프론티어) `frontier17A_stage_open_new_hypothesis_design_v1` must use a new hypothesis(새 가설) and must not preserve the RF near miss(랜덤포레스트 근접 실패 보존 금지).
+<!-- frontier16D_runtime_probe_supplement_v1 -->
+- 2026-06-14T03:01:02Z: `frontier16D_runtime_probe_supplement_v1` added MT5 runtime probe supplement(MT5 런타임 탐침 보강) for Frontier16(전선16). Effect(효과): F16 negative memory(부정 기억)는 유지하고 runtime observation(런타임 관찰)만 기록합니다.

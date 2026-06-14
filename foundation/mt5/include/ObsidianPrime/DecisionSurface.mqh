@@ -38,12 +38,19 @@ private:
          return "threshold_margin";
       if(text == "argmax" || text == "argmax_probe" || text == "three_class_argmax")
          return "argmax_probe";
+      if(text == "edge_margin" || text == "edge_margin_probe" || text == "max_direction_vs_flat")
+         return "edge_margin";
       return "threshold_margin";
      }
 
    bool IsArgmaxProbeMode()
      {
       return (m_decision_mode == "argmax_probe");
+     }
+
+   bool IsEdgeMarginMode()
+     {
+      return (m_decision_mode == "edge_margin");
      }
 
    void EvaluateArgmax(const double p_short,
@@ -93,6 +100,43 @@ private:
       result.reason = reason;
       result.confidence = confidence;
       result.margin = margin;
+     }
+
+   void EvaluateEdgeMargin(const double p_short,
+                           const double p_flat,
+                           const double p_long,
+                           SOpDecisionResult &result)
+     {
+      const bool short_side = (p_short >= p_long);
+      const double direction_probability = short_side ? p_short : p_long;
+      const double edge_margin = direction_probability - p_flat;
+      const double threshold = short_side ? m_short_threshold : m_long_threshold;
+
+      if(direction_probability < threshold || edge_margin < m_min_margin)
+        {
+         result.signal = OP_DECISION_FLAT;
+         result.label = "flat";
+         result.reason = "edge_margin_not_met";
+         result.confidence = p_flat;
+         result.margin = edge_margin;
+         return;
+        }
+
+      if(short_side)
+        {
+         result.signal = m_invert_signal ? OP_DECISION_LONG : OP_DECISION_SHORT;
+         result.label = m_invert_signal ? "long" : "short";
+         result.reason = m_invert_signal ? "inverse_edge_margin_short" : "edge_margin_short";
+         result.confidence = p_short;
+         result.margin = edge_margin;
+         return;
+        }
+
+      result.signal = m_invert_signal ? OP_DECISION_SHORT : OP_DECISION_LONG;
+      result.label = m_invert_signal ? "short" : "long";
+      result.reason = m_invert_signal ? "inverse_edge_margin_long" : "edge_margin_long";
+      result.confidence = p_long;
+      result.margin = edge_margin;
      }
 
 public:
@@ -146,6 +190,12 @@ public:
       if(IsArgmaxProbeMode())
         {
          EvaluateArgmax(p_short, p_flat, p_long, result);
+         return;
+        }
+
+      if(IsEdgeMarginMode())
+        {
+         EvaluateEdgeMargin(p_short, p_flat, p_long, result);
          return;
         }
 

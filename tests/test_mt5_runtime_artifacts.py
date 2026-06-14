@@ -8,8 +8,29 @@ from foundation.control_plane.mt5_tier_balance_completion import attempt_payload
 from foundation.mt5.runtime_support import TIER_A
 from foundation.mt5.runtime_artifacts import attach_mt5_report_metrics
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
 
 class Mt5RuntimeArtifactTests(unittest.TestCase):
+    def test_decision_surface_exposes_edge_margin_without_changing_default(self) -> None:
+        surface = (
+            REPO_ROOT
+            / "foundation"
+            / "mt5"
+            / "include"
+            / "ObsidianPrime"
+            / "DecisionSurface.mqh"
+        ).read_text(encoding="utf-8")
+        ea = (REPO_ROOT / "foundation" / "mt5" / "ObsidianPrimeV2_RuntimeProbeEA.mq5").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn('m_decision_mode = "threshold_margin";', surface)
+        self.assertIn('InpDecisionMode = "threshold_margin"', ea)
+        self.assertIn('return "edge_margin";', surface)
+        self.assertIn("EvaluateEdgeMargin", surface)
+        self.assertIn("edge_margin_short", surface)
+
     def test_attach_metrics_prefers_attempt_name_over_tier_split(self) -> None:
         execution_results = [
             {"status": "completed", "tier": "Tier A full-context", "split": "oos", "attempt_name": "long_only_oos"},

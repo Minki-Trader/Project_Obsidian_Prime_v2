@@ -1023,3 +1023,11 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - do_not_repeat(반복 금지): same 3 labels plus locked edge_margin target8(같은 3개 라벨 + 고정 엣지 마진 목표8), density/DD near miss as preserved clue(빈도/손실폭 근접 실패를 보존 단서로 승격)
 - reopen_condition(재개 조건): new hypothesis(새 가설)가 PF and split stability(수익 팩터와 분할 안정성)를 직접 설계할 때만 재개
 - report(보고서): `stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/frontier16C_edge_quality_risk_repair_or_closeout_decision_v1_report.md`
+<!-- frontier16D_runtime_probe_supplement_v1__runtime_probe_observation -->
+<!-- frontier16D_runtime_probe_supplement_v1__runtime_probe_observation -->
+## frontier16D_runtime_probe_supplement_v1 Frontier16 runtime probe observation(전선16 런타임 탐침 관찰)
+
+- judgment(판정): `runtime_probe_observation_negative_memory_unchanged(런타임 탐침 관찰, 부정 기억 유지)`
+- observation(관찰): validation_is: status=completed/completed, PF=1.37, DD=12.2, trades=229, signal_diff=0 | oos: status=completed/completed, PF=0.87, DD=47.17, trades=164, signal_diff=0
+- boundary(경계): F16C negative memory(부정 기억)는 유지. completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 not_claimed(주장 없음).
+- report(보고서): `stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/frontier16D_runtime_probe_supplement_v1_report.md`

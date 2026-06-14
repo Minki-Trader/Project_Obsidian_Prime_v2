@@ -1,0 +1,14 @@
+﻿{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "Get-CimInstance Win32_Process -Filter \"name = 'terminal64.exe'\" | Select-Object ProcessId,ExecutablePath,CommandLine | ConvertTo-Json -Compress"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "processes": [],
+  "status": "no_terminal64_process",
+  "effect": "terminal64 process(터미널 프로세스) 충돌 여부를 확인해 tester run(테스터 실행) 고립성을 지킵니다."
+}
