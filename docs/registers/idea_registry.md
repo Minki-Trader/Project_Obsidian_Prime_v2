@@ -1563,3 +1563,8 @@ Register ideas when they become durable work, not for every passing thought.
 <!-- frontier12A_stage_open_trade_shape_duration_controlled_onnx_scout_v1__IDEA-FR12-TRADE-SHAPE-DURATION-CONTROLLED-ONNX-SCOUT -->
 <!-- frontier12A_stage_open_trade_shape_duration_controlled_onnx_scout_v1__IDEA-FR12-TRADE-SHAPE-DURATION-CONTROLLED-ONNX-SCOUT -->
 - `IDEA-FR12-TRADE-SHAPE-DURATION-CONTROLLED-ONNX-SCOUT`: Frontier12(프론티어12) opens trade-shape duration-controlled ONNX scout(거래 형상과 보유 기간 통제 온엑스 탐색). Effect(효과): 같은 후보군 선택기 반복이 아니라 label source(라벨 원천)를 새 축으로 시험합니다.
+<!-- frontier13A_stage_open_regime_normalized_trade_shape_onnx_scout_v1__IDEA-FR13-REGIME-NORMALIZED-TRADE-SHAPE-ONNX-SCOUT -->
+<!-- frontier13A_stage_open_regime_normalized_trade_shape_onnx_scout_v1__IDEA-FR13-REGIME-NORMALIZED-TRADE-SHAPE-ONNX-SCOUT -->
+- `IDEA-FR13-REGIME-NORMALIZED-TRADE-SHAPE-ONNX-SCOUT`: Frontier13(프론티어13) opens regime-normalized trade-shape ONNX scout(레짐 정규화 거래 형상 온엑스 탐색). Effect(효과): F12(프론티어12)의 global label knob(전역 라벨 파라미터) 반복 없이 train-only regime scale(학습 전용 레짐 척도)을 시험합니다.
+<!-- frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1 -->
+- `frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1`: Frontier13(프론티어13) closed as negative_memory(부정 기억). Effect(효과): regime-normalized trade-shape labels(국면 정규화 거래 형상 라벨)은 sparse seed surface(희소 씨앗 표면)만 남기고 completion/baseline/promotion/runtime authority(완성/기준선/승격/런타임 권위)는 만들지 않습니다.

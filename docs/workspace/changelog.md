@@ -6922,3 +6922,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T00:24:46Z: `frontier12B_trade_shape_duration_label_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict rows(엄격 행) `0`, preserved rows(보존 행) `0`, next run(다음 실행) `frontier12C_trade_shape_duration_repair_or_closeout_decision_v1`.
 <!-- frontier12C_stage_closeout_trade_shape_duration_controlled_onnx_scout_v1 -->
 - 2026-06-14T00:32:01Z: `frontier12C_stage_closeout_trade_shape_duration_controlled_onnx_scout_v1` closed Frontier12(프론티어12) as negative memory(부정 기억) after Grok closeout accepted(그록 마감 수용). Effect(효과): next frontier(다음 프론티어) `frontier13A_stage_open_new_hypothesis_design_v1` starts a new hypothesis(새 가설) without authority claims(권위 주장 없음).
+<!-- frontier13A_stage_open_regime_normalized_trade_shape_onnx_scout_v1 -->
+- 2026-06-14T00:44:17Z: `frontier13A_stage_open_regime_normalized_trade_shape_onnx_scout_v1` opened Frontier13(프론티어13) with Grok accepted(그록 수용). Effect(효과): next run(다음 실행) `frontier13B_regime_normalized_trade_shape_proxy_scout_v1` can test regime-normalized labels(레짐 정규화 라벨) without authority claims(권위 주장 없음).
+<!-- frontier13B_regime_normalized_trade_shape_proxy_scout_v1 -->
+- 2026-06-14T00:52:20Z: `frontier13B_regime_normalized_trade_shape_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict rows(엄격 행) `0`, preserved rows(보존 행) `0`, next run(다음 실행) `frontier13C_regime_normalized_repair_or_closeout_decision_v1`.
+<!-- frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1 -->
+- 2026-06-14T00:59:45Z: `frontier13C_stage_closeout_regime_normalized_trade_shape_onnx_scout_v1` closed Frontier13(프론티어13) as negative memory(부정 기억) after Grok closeout accepted(그록 마감 수용). Effect(효과): next frontier(다음 프론티어) `frontier14A_stage_open_new_hypothesis_design_v1` starts a new upstream-frequency hypothesis(상류 빈도 가설) without authority claims(권위 주장 없음).

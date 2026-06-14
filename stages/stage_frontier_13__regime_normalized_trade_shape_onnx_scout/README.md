@@ -1,0 +1,7 @@
+﻿# stage_frontier_13__regime_normalized_trade_shape_onnx_scout
+
+Status(상태): `opened_frontier13_regime_normalized_trade_shape_onnx_scout_no_authority`
+
+Latest run(최근 실행): `frontier13A_stage_open_regime_normalized_trade_shape_onnx_scout_v1`
+
+Next run(다음 실행): `frontier13B_regime_normalized_trade_shape_proxy_scout_v1`
