@@ -1,0 +1,436 @@
+{
+  "stage_id": "stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative",
+  "source_stage_id": "stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout",
+  "hypothesis": "Entry-known timing gates may isolate train-positive short source slices from F40/F41 raw pockets.",
+  "claim_boundary": "scout/seed/runtime-probe-candidate only; no completion/baseline/promotion/runtime authority/live readiness.",
+  "grok_stage_open": {
+    "packet_path": "docs/agent_control/grok_reviews/2026-06-15_frontier42_stage_open/small_review",
+    "metadata_exists": true,
+    "clean_output_exists": true,
+    "classification": "needs_local_verification",
+    "accepted_after_local_verification": true,
+    "timing_sweep_budget_seen": true,
+    "source_lock_seen": true,
+    "exit_subordinate_seen": true,
+    "runtime_boundary_seen": true,
+    "leakage_guard_requires_local_verification": true,
+    "metadata_success": true,
+    "metadata_returncode": 0
+  },
+  "local_checks": {
+    "workspace_state_exists": true,
+    "f41_selection_status_exists": true,
+    "f41_entry_manifest_exists": true,
+    "f41_preserved_clue_exists": true,
+    "f41_negative_memory_exists": true,
+    "f40_condition_pool_exists": true,
+    "dataset_exists": true,
+    "feature_order_exists": true,
+    "raw_path_exists": true,
+    "feature_count": 58,
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_hash_matches_contract": true,
+    "required_timing_columns_present": true,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "required_splits_present": true,
+    "frame_rows": 46650,
+    "raw_rows": 261345
+  },
+  "artifacts": {
+    "f41_entry_manifest": {
+      "path": "stages/stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout/01_inputs/entry_freeze_manifest.json",
+      "sha256": "d92f6697fce6f0eb78b79e75ce0f622b4971bae2ebe915a028fb55428223083a"
+    },
+    "f41_selection_status": {
+      "path": "stages/stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout/04_selected/selection_status.md",
+      "sha256": "64cc96518a3e6e6aa26b4d26628734ae1c032f854c33f0a0b98129993497f95e"
+    },
+    "f40_condition_pool": {
+      "path": "stages/stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative/02_runs/frontier40B_raw_feature_state_pocket_proxy_v1/raw_feature_condition_pool.csv",
+      "sha256": "c311cbdc7289c3ee464b9d1d29465579fa382e901b68d58922ce9113983ec950"
+    },
+    "dataset": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    "feature_order": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    },
+    "raw_path": {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+    }
+  },
+  "source_lock": {
+    "source_count": 12,
+    "all_sources_pass": true,
+    "sources": [
+      {
+        "source_rank": 1,
+        "candidate_id": "f40b_0001",
+        "condition_ids": [
+          "f40cond_0002",
+          "f40cond_0014"
+        ],
+        "rule_definition": "vix_zscore_20 >= q75 & ppo_hist_12_26_9 <= q25",
+        "split_counts": {
+          "train": 3813,
+          "validation": 1329,
+          "oos": 1046
+        },
+        "expected_split_hashes": {
+          "train": "3e5af59e5591d22e24175cbd5ed8eb24f2153837e7d53bc5bf5683673e561998",
+          "validation": "3e61409a64abe425c49b727a3cf49005313e02443acaa09c4ae5d783ccad3dce",
+          "oos": "275e2d2140734991b2424062cc46e3fb06e7d95ec03ab905d50b49b6c7bf21fa"
+        },
+        "observed_split_hashes": {
+          "train": "3e5af59e5591d22e24175cbd5ed8eb24f2153837e7d53bc5bf5683673e561998",
+          "validation": "3e61409a64abe425c49b727a3cf49005313e02443acaa09c4ae5d783ccad3dce",
+          "oos": "275e2d2140734991b2424062cc46e3fb06e7d95ec03ab905d50b49b6c7bf21fa"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 2,
+        "candidate_id": "f40b_0007",
+        "condition_ids": [
+          "f40cond_0013",
+          "f40cond_0014"
+        ],
+        "rule_definition": "vix_zscore_20 >= q85 & ppo_hist_12_26_9 <= q25",
+        "split_counts": {
+          "train": 2598,
+          "validation": 898,
+          "oos": 693
+        },
+        "expected_split_hashes": {
+          "train": "206db9f5961c6a0417fbb3b2102352443d625e8f6eb4b69cb28c6739e5bfae10",
+          "validation": "313cdb2e8123d7b72f6a53f056f3f3463b92ced5c62953196298c0a9da5c487c",
+          "oos": "dfc0e062fcd594a0a8aeb3d1bf6b21f27ba3a36c1adb38942a7944ec9168d599"
+        },
+        "observed_split_hashes": {
+          "train": "206db9f5961c6a0417fbb3b2102352443d625e8f6eb4b69cb28c6739e5bfae10",
+          "validation": "313cdb2e8123d7b72f6a53f056f3f3463b92ced5c62953196298c0a9da5c487c",
+          "oos": "dfc0e062fcd594a0a8aeb3d1bf6b21f27ba3a36c1adb38942a7944ec9168d599"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 3,
+        "candidate_id": "f40b_0009",
+        "condition_ids": [
+          "f40cond_0019",
+          "f40cond_0021"
+        ],
+        "rule_definition": "bb_position_20 <= q25 & rsi_14_slope_3 <= q15",
+        "split_counts": {
+          "train": 2294,
+          "validation": 801,
+          "oos": 541
+        },
+        "expected_split_hashes": {
+          "train": "061e0999fc616a1b711523dcc18c765770a3747a739c42cb8a54a1316c25bc64",
+          "validation": "59e01987bf22053bbf4964a38ced8e84c0f8d1bb4190ed7611b9955e53144cc4",
+          "oos": "ad62ecea839e73f77dbf8be0d5f9f2d8f63a8073f8179e26222b4ee4c19b9d00"
+        },
+        "observed_split_hashes": {
+          "train": "061e0999fc616a1b711523dcc18c765770a3747a739c42cb8a54a1316c25bc64",
+          "validation": "59e01987bf22053bbf4964a38ced8e84c0f8d1bb4190ed7611b9955e53144cc4",
+          "oos": "ad62ecea839e73f77dbf8be0d5f9f2d8f63a8073f8179e26222b4ee4c19b9d00"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 4,
+        "candidate_id": "f40b_0010",
+        "condition_ids": [
+          "f40cond_0021"
+        ],
+        "rule_definition": "rsi_14_slope_3 <= q15",
+        "split_counts": {
+          "train": 4384,
+          "validation": 1470,
+          "oos": 1032
+        },
+        "expected_split_hashes": {
+          "train": "662b23736305003b8e03666139585f8cb092c8c0862708d95cdc2efc53058564",
+          "validation": "78015839a34825ad45bdd8d3c5eebcf194d23a66b11aab320744f5c5278ea79f",
+          "oos": "89d805f39a9dd577364363ac49c6b2883389687d6df1e0c3b22ddc20ee009a60"
+        },
+        "observed_split_hashes": {
+          "train": "662b23736305003b8e03666139585f8cb092c8c0862708d95cdc2efc53058564",
+          "validation": "78015839a34825ad45bdd8d3c5eebcf194d23a66b11aab320744f5c5278ea79f",
+          "oos": "89d805f39a9dd577364363ac49c6b2883389687d6df1e0c3b22ddc20ee009a60"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 5,
+        "candidate_id": "f40b_0011",
+        "condition_ids": [
+          "f40cond_0002",
+          "f40cond_0010"
+        ],
+        "rule_definition": "vix_zscore_20 >= q75 & rsi_14 <= q15",
+        "split_counts": {
+          "train": 3071,
+          "validation": 1044,
+          "oos": 822
+        },
+        "expected_split_hashes": {
+          "train": "834c3c7625484c18f7f26774b46b0dfb51ad714f9c605717b7723c566f13fb18",
+          "validation": "acf51933a44f5efc252e34f8b780b3b4d916e6994e33722538ebe4225749a731",
+          "oos": "08aa42edb5fa3742afd93b035b62405cc227d067a5811cb2e696528a6cd05c1c"
+        },
+        "observed_split_hashes": {
+          "train": "834c3c7625484c18f7f26774b46b0dfb51ad714f9c605717b7723c566f13fb18",
+          "validation": "acf51933a44f5efc252e34f8b780b3b4d916e6994e33722538ebe4225749a731",
+          "oos": "08aa42edb5fa3742afd93b035b62405cc227d067a5811cb2e696528a6cd05c1c"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 6,
+        "candidate_id": "f40b_0012",
+        "condition_ids": [
+          "f40cond_0002",
+          "f40cond_0011"
+        ],
+        "rule_definition": "vix_zscore_20 >= q75 & rsi_14_minus_50 <= q15",
+        "split_counts": {
+          "train": 3071,
+          "validation": 1044,
+          "oos": 822
+        },
+        "expected_split_hashes": {
+          "train": "834c3c7625484c18f7f26774b46b0dfb51ad714f9c605717b7723c566f13fb18",
+          "validation": "acf51933a44f5efc252e34f8b780b3b4d916e6994e33722538ebe4225749a731",
+          "oos": "08aa42edb5fa3742afd93b035b62405cc227d067a5811cb2e696528a6cd05c1c"
+        },
+        "observed_split_hashes": {
+          "train": "834c3c7625484c18f7f26774b46b0dfb51ad714f9c605717b7723c566f13fb18",
+          "validation": "acf51933a44f5efc252e34f8b780b3b4d916e6994e33722538ebe4225749a731",
+          "oos": "08aa42edb5fa3742afd93b035b62405cc227d067a5811cb2e696528a6cd05c1c"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 7,
+        "candidate_id": "f40b_0013",
+        "condition_ids": [
+          "f40cond_0001"
+        ],
+        "rule_definition": "ppo_hist_12_26_9 <= q15",
+        "split_counts": {
+          "train": 4384,
+          "validation": 1360,
+          "oos": 941
+        },
+        "expected_split_hashes": {
+          "train": "7b49a3c1ba47ca4ae28c58b0534ad78992e36dc9ecf71c21faaa9d8f54bfa28e",
+          "validation": "a5692cf52b72cfc665185fe7eba2b4bf2290f4502d0004004ca171462916f69c",
+          "oos": "20bd9192344ceb17c557b2b9a5735ac71cd58c10d3742382e334fc9caaaab3f2"
+        },
+        "observed_split_hashes": {
+          "train": "7b49a3c1ba47ca4ae28c58b0534ad78992e36dc9ecf71c21faaa9d8f54bfa28e",
+          "validation": "a5692cf52b72cfc665185fe7eba2b4bf2290f4502d0004004ca171462916f69c",
+          "oos": "20bd9192344ceb17c557b2b9a5735ac71cd58c10d3742382e334fc9caaaab3f2"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 8,
+        "candidate_id": "f40b_0019",
+        "condition_ids": [
+          "f40cond_0012",
+          "f40cond_0015"
+        ],
+        "rule_definition": "di_spread_14 <= q25 & roc_12 <= q25",
+        "split_counts": {
+          "train": 5196,
+          "validation": 1607,
+          "oos": 1223
+        },
+        "expected_split_hashes": {
+          "train": "b5b415d442da53aa4f3129694cff50950cd8918e74a734d007a7a9458e5db8c8",
+          "validation": "40c6dda55b2c8a11be34ac006459a72613793b0793088c4fe89685ff67bf8636",
+          "oos": "e2f1e5f8f7cbc15cf59e3f7d0553724ddf5c5894f389deebe11614971d4041b2"
+        },
+        "observed_split_hashes": {
+          "train": "b5b415d442da53aa4f3129694cff50950cd8918e74a734d007a7a9458e5db8c8",
+          "validation": "40c6dda55b2c8a11be34ac006459a72613793b0793088c4fe89685ff67bf8636",
+          "oos": "e2f1e5f8f7cbc15cf59e3f7d0553724ddf5c5894f389deebe11614971d4041b2"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 9,
+        "candidate_id": "f40b_0020",
+        "condition_ids": [
+          "f40cond_0001",
+          "f40cond_0012"
+        ],
+        "rule_definition": "ppo_hist_12_26_9 <= q15 & di_spread_14 <= q25",
+        "split_counts": {
+          "train": 2887,
+          "validation": 903,
+          "oos": 668
+        },
+        "expected_split_hashes": {
+          "train": "299041f519ad10f97fad901c2ed4c8e6248d181176accf74d3af65eb7a8484a7",
+          "validation": "41ca504e456a2754427702fe66b8e2a2628758166a6154ac9b762622ba0bc87d",
+          "oos": "8b69c0fddfc575341753d556e3169fdf02aefb66674522566891ca81c4781e84"
+        },
+        "observed_split_hashes": {
+          "train": "299041f519ad10f97fad901c2ed4c8e6248d181176accf74d3af65eb7a8484a7",
+          "validation": "41ca504e456a2754427702fe66b8e2a2628758166a6154ac9b762622ba0bc87d",
+          "oos": "8b69c0fddfc575341753d556e3169fdf02aefb66674522566891ca81c4781e84"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 10,
+        "candidate_id": "f40b_0021",
+        "condition_ids": [
+          "f40cond_0002",
+          "f40cond_0015"
+        ],
+        "rule_definition": "vix_zscore_20 >= q75 & roc_12 <= q25",
+        "split_counts": {
+          "train": 4214,
+          "validation": 1382,
+          "oos": 1111
+        },
+        "expected_split_hashes": {
+          "train": "fb904396dd0d488f6ff18c599e492f7ac76c7bb42021a67e3439cfc151d08637",
+          "validation": "9e7c2b4b54bc90382577a715d30910e473365114407e94d0c65c46caea34f6f3",
+          "oos": "61908ab9df7827eb392aa5d45f7529c4874a5377eb541dc35013199ce37b0b3a"
+        },
+        "observed_split_hashes": {
+          "train": "fb904396dd0d488f6ff18c599e492f7ac76c7bb42021a67e3439cfc151d08637",
+          "validation": "9e7c2b4b54bc90382577a715d30910e473365114407e94d0c65c46caea34f6f3",
+          "oos": "61908ab9df7827eb392aa5d45f7529c4874a5377eb541dc35013199ce37b0b3a"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 11,
+        "candidate_id": "f40b_0022",
+        "condition_ids": [
+          "f40cond_0002",
+          "f40cond_0012"
+        ],
+        "rule_definition": "vix_zscore_20 >= q75 & di_spread_14 <= q25",
+        "split_counts": {
+          "train": 4173,
+          "validation": 1388,
+          "oos": 1106
+        },
+        "expected_split_hashes": {
+          "train": "e67de7ba9f7ca28dc2423078d37e2aa6358ecd6a1bcc3888e0071e55830731c2",
+          "validation": "127c556c912c5c81de0eed15b491c6df7970d0a6f47d947a706c94195fdd9e4b",
+          "oos": "ac3c198274e69c708008bfc117bef8e8c5e03953b30c33ee434bfaaf836a5362"
+        },
+        "observed_split_hashes": {
+          "train": "e67de7ba9f7ca28dc2423078d37e2aa6358ecd6a1bcc3888e0071e55830731c2",
+          "validation": "127c556c912c5c81de0eed15b491c6df7970d0a6f47d947a706c94195fdd9e4b",
+          "oos": "ac3c198274e69c708008bfc117bef8e8c5e03953b30c33ee434bfaaf836a5362"
+        },
+        "source_lock_pass": true
+      },
+      {
+        "source_rank": 12,
+        "candidate_id": "f40b_0032",
+        "condition_ids": [
+          "f40cond_0002",
+          "f40cond_0016"
+        ],
+        "rule_definition": "vix_zscore_20 >= q75 & vortex_indicator <= q25",
+        "split_counts": {
+          "train": 4044,
+          "validation": 1348,
+          "oos": 1081
+        },
+        "expected_split_hashes": {
+          "train": "d5636efc9ff96d308e4b3550ae61bfaff0bf5aa28d63789eec9c62cb8f7f570c",
+          "validation": "ba4932462c2eb61f29d2872bc70156b581c2621e874867cda37a806d6efa14b9",
+          "oos": "e229f1c669caef698a4206708930cdd20c387a2a278910f2bc9fa3c7b8496938"
+        },
+        "observed_split_hashes": {
+          "train": "d5636efc9ff96d308e4b3550ae61bfaff0bf5aa28d63789eec9c62cb8f7f570c",
+          "validation": "ba4932462c2eb61f29d2872bc70156b581c2621e874867cda37a806d6efa14b9",
+          "oos": "e229f1c669caef698a4206708930cdd20c387a2a278910f2bc9fa3c7b8496938"
+        },
+        "source_lock_pass": true
+      }
+    ]
+  },
+  "timing_sweep_budget": {
+    "initial_gate_count": 8,
+    "repair_gate_count": 5,
+    "exit_holds": [
+      4,
+      6,
+      8,
+      12
+    ],
+    "bracket_holds": [
+      4,
+      8,
+      12
+    ],
+    "bracket_pairs": [
+      [
+        0.18,
+        0.86
+      ],
+      [
+        0.26,
+        0.7
+      ]
+    ],
+    "initial_gate_ids": [
+      "session_full_reference",
+      "session_core_30_300",
+      "session_morning_5_120",
+      "session_mid_90_240",
+      "session_late_210_330",
+      "session_post_open_35_180",
+      "session_pre_close_180_330",
+      "session_not_first_or_last_30"
+    ],
+    "repair_gate_ids": [
+      "broker_hour_16_18",
+      "broker_hour_18_20",
+      "broker_hour_20_22",
+      "dow_mon_to_wed",
+      "dow_thu_fri"
+    ]
+  },
+  "source_manifest_snapshot": {
+    "source_stage_id": "stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout",
+    "source_artifacts": {
+      "f40_top_forward": {
+        "path": "stages/stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative/02_runs/frontier40D_stage_closeout_non_score_source_v1/top_forward_diagnostic.csv",
+        "sha256": "a59f1c561453d4d4074d8a560a374ddb6195f8e0f955d7657d94a99f20efe155"
+      },
+      "f40_condition_pool": {
+        "path": "stages/stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative/02_runs/frontier40B_raw_feature_state_pocket_proxy_v1/raw_feature_condition_pool.csv",
+        "sha256": "c311cbdc7289c3ee464b9d1d29465579fa382e901b68d58922ce9113983ec950"
+      },
+      "dataset": {
+        "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+      },
+      "feature_order": {
+        "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+      }
+    }
+  }
+}

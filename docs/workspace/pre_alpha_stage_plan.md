@@ -101,9 +101,9 @@ Stage 04(4단계)의 정식 58 feature(58개 피처) 경로는 `MT5 price-proxy 
 
 ## Frontier Pointer(전선 포인터)
 
-- last_closed_stage(마지막 종료 단계): `stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout`
-- last_closed_run(마지막 종료 실행): `frontier41D_stage_closeout_exit_shape_source_v1`
-- next_stage(다음 단계): `stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative`
-- next_run(다음 실행): `frontier42A_stage_open_short_pf_edge_timing_source_hypothesis_design_v1`
+- last_closed_stage(마지막 종료 단계): `stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative`
+- last_closed_run(마지막 종료 실행): `frontier42D_stage_closeout_timing_source_v1`
+- next_stage(다음 단계): `stage_frontier_43__short_pf_edge_trade_shape_source_pivot_after_f42_timing_negative`
+- next_run(다음 실행): `frontier43A_stage_open_short_pf_edge_trade_shape_source_hypothesis_design_v1`
 
-F41 preserved clue/negative memory(보존 단서/부정 기억)는 F40 entry(진입)를 고정한 상태에서 exit shape(청산 형태)만으로 final gate(최종 게이트)에 충분히 가까워지지 않았다는 점이다.
+F42 carry-forward(이월) 기록은 timing source(타이밍 원천)가 PF/DD/density(수익 팩터/손실폭/밀도)를 네 축 목표까지 끌어올렸는지 여부와 train-positive lane(학습 양수 경로)의 유지 여부다.
