@@ -1110,3 +1110,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Action(행동): paired ablation(쌍대 소거)에서 regime gate(체제 게이트)가 ungated score(무게이트 점수)보다 validation/OOS both(검증/표본밖 둘 다) +0.05 PF lift(수익 팩터 상승)를 만들지 못한 결과를 기록했다.
 - Effect(효과): 같은 shallow score(얕은 점수)에 regime bucket(체제 버킷)만 추가하는 반복을 금지한다.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`
+<!-- frontier40D_stage_closeout_non_score_source_v1 -->
+
+
+## frontier40D_stage_closeout_non_score_source_v1
+
+- Stage(단계): `stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative`
+- Negative memory(부정 기억): `f40_raw_feature_state_pockets_did_not_create_seed_or_runtime_candidate`
+- Preserved clue(보존 단서): `f40_raw_feature_pair_pockets_create_density_matched_short_scout_edge_reference_only`
+- Evidence(근거): candidate/scout/seed/runtime rows(후보/탐색/씨앗/런타임 행) `521` / `181` / `0` / `0`
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair`
+- Effect(효과): 같은 raw feature threshold mining(원천 피처 임계값 채굴)을 반복하지 않고, 다음에는 exit shape source(청산 형태 원천)를 새 가설로 다룬다.

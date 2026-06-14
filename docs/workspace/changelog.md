@@ -7106,3 +7106,5 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - Effect(효과): scout clue(탐색 단서)는 보존하고, matched PF lift(동일 조건 수익 팩터 상승) 실패는 negative memory(부정 기억)로 남긴다.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`
 - Next(다음): `frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1`
+<!-- frontier40D_stage_closeout_non_score_source_v1 -->
+- 2026-06-14T18:49:38Z `frontier40D_stage_closeout_non_score_source_v1` closed `stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative` as `preserved_clue_negative_memory`. Best `f40b_0001` validation/OOS PF-density-DD 1.154/7.262/11.867 and 1.158/7.985/13.517; runtime `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair`.

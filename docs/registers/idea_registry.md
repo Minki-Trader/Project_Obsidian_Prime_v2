@@ -1762,3 +1762,24 @@ Register ideas when they become durable work, not for every passing thought.
 - Negative memory(부정 기억): `f39_regime_gate_did_not_lift_pf_over_ungated_score_at_matched_density`
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`
 - Next(다음): `frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1`
+<!-- frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1 -->
+
+
+## frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1
+
+- Idea(아이디어): raw_feature_state_pocket_non_score_source(원천 피처 상태 포켓 비점수 원천)
+- Hypothesis(가설): train-only raw feature thresholds(학습 전용 원천 피처 임계값)가 short-side path-native PF edge(숏 경로 기반 수익 팩터 우위)를 만들 수 있다.
+- Legacy relation(레거시 관계): reference_only(참조 전용)
+- Tier scope(티어 범위): Tier A separate with Tier B missing_required/Tier A+B out_of_scope_by_claim(Tier A 분리, Tier B 필수 누락, 합산 주장 범위 밖)
+- Evidence boundary(근거 경계): scout-only until seed/runtime candidate(씨앗/런타임 후보 전까지 탐색 전용)
+<!-- frontier40D_stage_closeout_non_score_source_v1 -->
+
+
+## frontier40D_stage_closeout_non_score_source_v1
+
+- Result(결과): `preserved_clue_negative_memory`
+- Best candidate(최상 후보): `f40b_0001`
+- Preserved clue(보존 단서): `f40_raw_feature_pair_pockets_create_density_matched_short_scout_edge_reference_only`
+- Negative memory(부정 기억): `f40_raw_feature_state_pockets_did_not_create_seed_or_runtime_candidate`
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair`
+- Next condition(다음 조건): exit shape source(청산 형태 원천) or label/runtime representation pivot(라벨/런타임 표현 전환)

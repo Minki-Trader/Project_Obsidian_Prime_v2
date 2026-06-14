@@ -1,0 +1,26 @@
+{
+  "review_size": "small",
+  "prompt_hash": "2eaded9d2ce0b1f847ffe1601b2dd4dd843d0c6f97c20db522c4ea4926753a0e",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "--no-memory",
+    "--disable-web-search",
+    "--max-turns",
+    "1",
+    "-p",
+    "# Grok small review - Frontier40 stage open\n\nYou are giving a bounded second opinion for Project Obsidian Prime v2.\n\nDo not browse the web. Do not inspect files. Use only the evidence in this prompt.\n\nReturn a compact verdict with these fields:\n\n- verdict: accepted / rejected / needs_local_verification\n- novelty_ok: yes / no\n- leakage_guard_ok: yes / no\n- runtime_claim_boundary_ok: yes / no\n- mandatory_guardrail\n- biggest_risk\n- suggested_stop_rule\n\n## Current truth\n\n- Current closed stage: `stage_frontier_39__short_pf_edge_regime_conditioned_score_after_f38_scout_only`\n- F39 closeout class: `preserved_clue_negative_memory`\n- F39 best candidate: `f39b_0001`\n- F39 best B validation/OOS PF-density-DD: `1.125 / 4.301 / 8.342` and `1.284 / 4.328 / 4.607`\n- F39 ablation pass rows: `0`\n- F39 seed/runtime rows: `0 / 0`\n- F39 runtime status: `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`\n- F39 preserved clue: `f39_regime_gate_can_reduce_density_dd_and_keep_scout_pf_but_not_matched_seed_edge`\n- F39 negative memory: `f39_regime_gate_did_not_lift_pf_over_ungated_score_at_matched_density`\n\n## Proposed new stage\n\n- stage_id: `stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative`\n- run_id: `frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1`\n- hypothesis: a train-only raw feature state pocket can create a short-side path-native PF edge without using model score, score quantile, or score-conditioned regime gates.\n- novelty delta: F38/F39 searched model score source and regime-before-score conditioning. F40 searches entry-known raw feature states directly as the source.\n- decision use: decide whether non-score feature state pockets deserve repair, WFO/stress, or runtime probe packaging.\n\n## Proposed proxy\n\nUse the existing US100 M5 58-feature dataset and F33 path-native first-hit replay.\n\nFixed variables:\n\n- symbol/timeframe: US100 M5\n- feature order hash: existing 58-feature contract\n- split method: chronological train / validation / OOS\n- label/execution proxy: short-side first-hit MFE/MAE path replay, validation/OOS read-only\n- train-only fitting: all feature thresholds and stop/take thresholds are derived from train split only\n\nChanged variables:\n\n- source family: raw feature state pockets instead of model score\n- candidate forms: single-feature threshold, two-feature AND, and bounded OR-union of top train-only pockets\n- allowed features: entry-known closed-bar features from the 58-feature contract, especially volatility, trend, breadth, relative-strength, and session-clock features\n\nProposed comparison:\n\n- A: unfiltered short path replay with train-derived stop/take thresholds\n- B: raw feature state pocket with the same train-only stop/take threshold family\n- F39 best is reference only, not inherited baseline\n\nProposed scout/seed/runtime thresholds:\n\n- scout clue: validation and OOS PF >= 1.03, density 4-12 trades/day, DD <= 18\n- seed surface: validation and OOS PF >= 1.20, density 5-10 trades/day, DD <= 12\n- runtime candidate: validation and OOS PF >= 1.50, density 5-10 trades/day, DD <= 10\n\nProposed repair rule:\n\n- If broad raw-feature pockets create scout but no seed, allow one capped repair that tests bounded OR-union of train-only selected pockets.\n- If no scout or no lift versus unfiltered A, close negative memory.\n- If seed/runtime candidate appears, stop before expensive WFO/MT5 and run a pre-expensive Grok review.\n\n## Claim boundary\n\nExploration only. No completion, no baseline, no promotion, no runtime authority, no live readiness, no Goal Achieve.\n\n## Review question\n\nIs this a valid Frontier40 stage-open direction after F39, and what mandatory local guardrail should Codex enforce before any WFO/MT5/runtime work?\n"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 23.196621,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier40_stage_open/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier40_stage_open/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier40_stage_open/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier40_stage_open/small_review/metadata.json"
+  }
+}
