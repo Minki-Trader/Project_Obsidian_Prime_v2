@@ -1743,3 +1743,22 @@ Register ideas when they become durable work, not for every passing thought.
 - Negative memory(부정 기억): `f38_shallow_model_score_source_family_did_not_create_seed_or_runtime_candidate`
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f38c_model_score_repair`
 - Next(다음): `frontier39A_stage_open_short_pf_edge_model_score_or_regime_pivot_hypothesis_design_v1`
+<!-- frontier39A_stage_open_short_pf_edge_regime_conditioned_score_hypothesis_design_v1 -->
+
+
+### frontier39A_stage_open_short_pf_edge_regime_conditioned_score_hypothesis_design_v1
+
+- Stage(단계): `stage_frontier_39__short_pf_edge_regime_conditioned_score_after_f38_scout_only`
+- Idea(아이디어): train-only regime gate(학습 전용 체제 게이트)가 F38 score source(F38 점수 원천)의 PF(수익 팩터)를 동일 조건에서 올리는지 본다.
+- Effect(효과): F38 shallow score family(얕은 점수 패밀리)를 새 기준선으로 상속하지 않고, paired ablation(쌍대 소거)으로 신규성만 검증한다.
+<!-- frontier39D_stage_closeout_regime_conditioned_score_v1 -->
+
+
+### frontier39D_stage_closeout_regime_conditioned_score_v1
+
+- Stage(단계): `stage_frontier_39__short_pf_edge_regime_conditioned_score_after_f38_scout_only`
+- Closeout(마감): `preserved_clue_negative_memory`
+- Preserved clue(보존 단서): `f39_regime_gate_can_reduce_density_dd_and_keep_scout_pf_but_not_matched_seed_edge`
+- Negative memory(부정 기억): `f39_regime_gate_did_not_lift_pf_over_ungated_score_at_matched_density`
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`
+- Next(다음): `frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1`

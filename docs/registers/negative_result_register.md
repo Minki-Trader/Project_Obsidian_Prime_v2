@@ -1100,3 +1100,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Action(행동): shallow model score source(얕은 모델 점수 소스) proxy/repair(프록시/수리)가 seed/runtime candidate(씨앗/런타임 후보)를 만들지 못한 결과를 기록했다.
 - Effect(효과): 같은 score quantile repair(점수 분위수 수리)를 신규성 없이 반복하지 않는다.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f38c_model_score_repair`
+<!-- frontier39D_stage_closeout_regime_conditioned_score_v1 -->
+
+
+### frontier39D_stage_closeout_regime_conditioned_score_v1
+
+- Stage(단계): `stage_frontier_39__short_pf_edge_regime_conditioned_score_after_f38_scout_only`
+- Negative memory(부정 기억): `f39_regime_gate_did_not_lift_pf_over_ungated_score_at_matched_density`
+- Action(행동): paired ablation(쌍대 소거)에서 regime gate(체제 게이트)가 ungated score(무게이트 점수)보다 validation/OOS both(검증/표본밖 둘 다) +0.05 PF lift(수익 팩터 상승)를 만들지 못한 결과를 기록했다.
+- Effect(효과): 같은 shallow score(얕은 점수)에 regime bucket(체제 버킷)만 추가하는 반복을 금지한다.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`

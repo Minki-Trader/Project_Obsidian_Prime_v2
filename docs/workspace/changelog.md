@@ -7097,3 +7097,12 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - Effect(효과): scout clue(탐색 단서)는 보존하고 seed/runtime authority(씨앗/런타임 권위)는 주장하지 않는다.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f38c_model_score_repair`
 - Next(다음): `frontier39A_stage_open_short_pf_edge_model_score_or_regime_pivot_hypothesis_design_v1`
+<!-- frontier39D_stage_closeout_regime_conditioned_score_v1 -->
+
+
+## frontier39D_stage_closeout_regime_conditioned_score_v1
+
+- Action(행동): F39 train-only regime-conditioned score(학습 전용 체제 조건화 점수) paired ablation(쌍대 소거)을 기록했다.
+- Effect(효과): scout clue(탐색 단서)는 보존하고, matched PF lift(동일 조건 수익 팩터 상승) 실패는 negative memory(부정 기억)로 남긴다.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`
+- Next(다음): `frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1`

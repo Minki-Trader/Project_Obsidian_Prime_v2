@@ -1,0 +1,26 @@
+{
+  "review_size": "small",
+  "prompt_hash": "f625f56869f49aa68250a2060989965f6769cbb116834fc0f08e1d1ca7ac881d",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "--no-memory",
+    "--disable-web-search",
+    "--max-turns",
+    "1",
+    "-p",
+    "# Grok small review - Frontier39 closeout\n\nYou are giving a bounded second opinion for Project Obsidian Prime v2.\n\nDo not browse the web. Do not inspect files. Use only the evidence in this prompt.\n\nReturn a compact verdict with these fields:\n\n- verdict: accepted / rejected / needs_local_verification\n- closeout_ok: yes / no\n- runtime_boundary_ok: yes / no\n- biggest_risk\n- must_not_repeat\n- next_stage_hint\n\n## Current stage\n\n- stage_id: `stage_frontier_39__short_pf_edge_regime_conditioned_score_after_f38_scout_only`\n- hypothesis: train-only regime conditioning before score thresholding may lift short-side PF without losing required trade density and drawdown shape.\n- claim boundary: exploration closeout only. No completion, no baseline, no promotion, no runtime authority, no live readiness.\n\n## Prior reference, not inheritance\n\n- F38 preserved clue: `f38_train_only_model_score_source_restored_density_dd_scout_surface_but_pf_below_seed`\n- F38 negative memory: `f38_shallow_model_score_source_family_did_not_create_seed_or_runtime_candidate`\n- F38 best validation/OOS PF-density-DD: `1.121 / 8.475 / 7.791` and `1.138 / 10.733 / 8.290`\n- F38 runtime probe status: ineligible, because no seed/runtime candidate existed.\n\n## Stage-open Grok result\n\nStage-open Grok verdict was `needs_local_verification`.\n\nIts required guardrail was a mandatory paired ablation:\n\n- A: F38-equivalent ungated high-score short mask\n- B: same score cut plus train-only regime gate\n- Continue only if B beats A on validation and OOS, with at least +0.05 absolute PF lift versus A, density 4-12/day, and DD not worsening by more than 1.0% absolute.\n- If the guardrail fails, close as `regime_gate_did_not_lift_pf_over_ungated_score_at_matched_density` and do no further regime bucket expansion.\n\nCodex locally implemented that guardrail before any expensive WFO/MT5 work.\n\n## Official proxy result\n\n- candidate rows: 335\n- scout rows: 335\n- ablation pass rows: 0\n- seed rows: 0\n- runtime rows: 0\n\nBest candidate:\n\n- candidate_id: `f39b_0001`\n- model: `logreg_C0.03`\n- regime gate: `session_early_0_120`\n- B validation PF-density-DD: `1.125 / 4.301 / 8.342`\n- B OOS PF-density-DD: `1.284 / 4.328 / 4.607`\n- minimum PF lift versus A: `0.032`\n- ablation pass: false\n- seed pass: false\n\nInterpretation:\n\n- The regime gate reduced density and DD and kept a scout PF surface.\n- It did not meet the paired ablation lift guardrail.\n- It did not create a seed or runtime candidate.\n- Further regime expansion was skipped under the stage-open guardrail.\n\n## Runtime probe boundary\n\nCodex proposes this runtime status:\n\n`runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f39_ablation_guardrail_fail`\n\nNo MT5 Strategy Tester run is proposed for this closeout because there is no seed/runtime candidate to hand off.\n\n## Proposed closeout\n\n- closeout_class: `preserved_clue_negative_memory`\n- preserved clue: `f39_regime_gate_can_reduce_density_dd_and_keep_scout_pf_but_not_matched_seed_edge`\n- negative memory: `f39_regime_gate_did_not_lift_pf_over_ungated_score_at_matched_density`\n- next stage: `stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative`\n- next run: `frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1`\n\n## Review question\n\nIs this an honest Frontier39 closeout without MT5 runtime execution, given the seed/runtime count is zero and the stage-open ablation guardrail failed?\n"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 27.09208,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier39_stage_closeout/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier39_stage_closeout/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier39_stage_closeout/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier39_stage_closeout/small_review/metadata.json"
+  }
+}
