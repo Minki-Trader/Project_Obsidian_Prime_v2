@@ -7056,3 +7056,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T12:21:24Z: `frontier30C_density_preserving_preselector_repair_or_closeout_decision_v1` rejected F30 repair(전선30 수리 거절). Effect(효과): scout=5, seed=0, handoff=0, valid_repair=0, next=`frontier30D_stage_closeout_density_preserving_preselector_v1`.
 <!-- frontier30D_stage_closeout_density_preserving_preselector_v1 -->
 - 2026-06-14T12:28:05Z: `frontier30D_stage_closeout_density_preserving_preselector_v1` closed Frontier30 density-preserving preselector scout(전선30 밀도 보존 사전 선택기 탐색 마감). Effect(효과): scout=5, seed=0, handoff=0, next=`frontier31A_stage_open_exit_shape_pivot_for_density_preserved_source_scout_pf_lift_hypothesis_design_v1`.
+<!-- frontier31A_stage_open_exit_shape_pivot_for_density_preserved_source_scout_pf_lift_hypothesis_design_v1 -->
+- 2026-06-14T12:50:09Z: `frontier31A_stage_open_exit_shape_pivot_for_density_preserved_source_scout_pf_lift_hypothesis_design_v1` opened Frontier31 return-space exit-shape pivot(전선31 수익률 공간 청산 형태 전환). Effect(효과): fixed_scout_rows=5, next=`frontier31B_return_space_exit_shape_proxy_scout_v1`, no authority(권위 없음).
+<!-- frontier31B_return_space_exit_shape_proxy_scout_v1 -->
+- 2026-06-14T12:50:26Z: `frontier31B_return_space_exit_shape_proxy_scout_v1` ran return-space exit-shape proxy(수익률 공간 청산 형태 프록시). Effect(효과): variants=85, scout=78, seed=62, handoff=16, next=`frontier31C_return_space_exit_shape_repair_or_closeout_decision_v1`.
+<!-- frontier31C_return_space_exit_shape_repair_or_closeout_decision_v1 -->
+- 2026-06-14T12:58:34Z: `frontier31C_return_space_exit_shape_repair_or_closeout_decision_v1` queued executable mapping repair(실행 매핑 수리 큐). Effect(효과): handoff=16, realistic=16, executable=0, queue=16, next=`frontier31D_stage_closeout_return_space_exit_shape_v1`.
+<!-- frontier31D_stage_closeout_return_space_exit_shape_v1 -->
+- 2026-06-14T13:04:29Z: `frontier31D_stage_closeout_return_space_exit_shape_v1` closed Frontier31 return-space exit-shape scout(전선31 수익률 공간 청산 형태 탐색 마감). Effect(효과): handoff=16, realistic=16, executable=0, next=`frontier32A_stage_open_executable_sl_tp_mapping_for_return_space_exit_shape_handoff_surface_hypothesis_design_v1`.
