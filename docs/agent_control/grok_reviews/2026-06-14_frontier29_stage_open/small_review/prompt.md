@@ -1,0 +1,47 @@
+﻿# Frontier29 Stage Open Review Request(전선29 단계 개방 검토 요청)
+
+You are Grok(그록), external second opinion(외부 2차 의견) only. Codex(코덱스) owns local verification(로컬 검증), execution(실행), and final claim boundary(최종 주장 경계).
+
+Review size(검토 크기): small review(소규모 검토).
+
+## Codex Current Truth(코덱스 현재 진실)
+
+- Current closed stage(현재 닫힌 단계): `stage_frontier_28__train_only_stability_gap_penalty_for_pf_dd_balance_onnx_scout`
+- Current closed run(현재 닫힌 실행): `frontier28D_stage_closeout_stability_gap_penalty_v1`
+- F28 closeout class(F28 마감 분류): preserved clue + negative memory(보존 단서 + 부정 기억)
+- F28 result(F28 결과): reference/stability/density/scout/seed/handoff(참조/안정성/빈도/탐색/씨앗/인계) = `234/234/189/19/0/0`
+- F28 repair audit(F28 수리 감사): near_seed_under_dd_rows(손실폭 충족 근접 씨앗 행) `6`, pf_ready_dd_blocked_rows(PF 준비/손실폭 차단 행) `2`, valid_train_chunk_repair_opportunity_rows(유효 학습 조각 수리 기회 행) `0`
+- F28 runtime/ONNX boundary(F28 런타임/온엑스 경계): no handoff candidate(인계 후보 없음), so MT5/ONNX unattempted(미시도)
+
+## Proposed Frontier29(제안 전선29)
+
+- stage(단계): `stage_frontier_29__train_only_loss_concentration_veto_for_pf_dd_balance_onnx_scout`
+- first run(첫 실행): `frontier29A_stage_open_train_only_loss_concentration_veto_pf_dd_balance_hypothesis_design_v1`
+- hypothesis(가설): F28 near rows(근접 행)는 train chunk stability(학습 조각 안정성)는 이미 좋아서 ranking repair(순위 수리) 표적이 없었다. A train-only loss concentration veto(학습 전용 손실 집중 차단)가 each union surface(각 합집합 표면)의 worst train loss pockets(최악 학습 손실 구간)를 제거하면 validation/OOS PF/DD balance(검증/표본외 수익 팩터/손실폭 균형)가 개선될 수 있다.
+- changed variable(변경 변수): train-loss-conditioned veto mask(학습 손실 조건 차단 마스크). Not stability rank weight/threshold(안정성 순위 가중치/임계값 아님).
+- source surface(원천 표면): F28/F27 234 union surface as reference-only input(참조 전용 입력), not winner/baseline/promotion(승자/기준선/승격 아님).
+- selection boundary(선택 경계): veto candidates are scored only on train trade losses(학습 거래 손실만). validation/OOS(검증/표본외)는 read-only(읽기 전용).
+- success boundary(성공 경계): scout clue(탐색 단서) if forward read-only PF/DD/density improves; seed surface(씨앗 표면) only if validation and OOS both meet PF >= 1.20, DD <= 18, density 5~10/day. handoff candidate(인계 후보) only if stronger PF/DD/smoothness appears. No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+- runtime rule(런타임 규칙): record runtime probe status(런타임 탐침 상태 기록) every stage(단계마다). Execute MT5 only after handoff candidate(인계 후보) and pre-expensive Grok review(비싼 검증 전 그록 검토).
+
+## Questions(질문)
+
+1. Is this sufficiently novel relative to F28 stability ranking(안정성 순위)?
+2. Is leakage risk(누수 위험) low if veto candidates are selected only from train losses(학습 손실) and validation/OOS are read-only(읽기 전용)?
+3. Is this a valid next frontier(다음 전선) rather than capped repair(상한 수리) inside F28?
+4. What must Codex(코덱스) watch to avoid invalid setup(무효 설정)?
+
+## Required Output Shape(필수 출력 형식)
+
+Use exact keys(정확한 키 사용):
+
+verdict: accepted | rejected | needs_local_verification
+novelty_ok: yes/no
+leakage_risk: low/medium/high
+frontier_boundary_ok: yes/no
+must_watch:
+- ...
+advice_classification:
+- accepted(수용): ...
+- rejected(거절): ...
+- needs_local_verification(로컬 검증 필요): ...

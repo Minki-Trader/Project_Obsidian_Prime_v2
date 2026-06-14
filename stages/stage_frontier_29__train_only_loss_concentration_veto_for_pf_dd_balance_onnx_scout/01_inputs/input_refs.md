@@ -1,0 +1,12 @@
+﻿# Frontier29 Input References(전선29 입력 참조)
+
+- dataset(데이터셋): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet`
+- feature order(피처 순서): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt`
+- feature hash(피처 해시): `fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2`
+- F28 selection(F28 선택 상태): `stages/stage_frontier_28__train_only_stability_gap_penalty_for_pf_dd_balance_onnx_scout/04_selected/selection_status.md`
+- F28 closeout(F28 마감): `stages/stage_frontier_28__train_only_stability_gap_penalty_for_pf_dd_balance_onnx_scout/03_reviews/frontier28D_stage_closeout_stability_gap_penalty_v1_report.md`
+- F28D summary(F28D 요약): `stages/stage_frontier_28__train_only_stability_gap_penalty_for_pf_dd_balance_onnx_scout/02_runs/frontier28D_stage_closeout_stability_gap_penalty_v1/final_closeout_summary.json`
+- F28B candidate surface(F28B 후보 표면): `stages/stage_frontier_28__train_only_stability_gap_penalty_for_pf_dd_balance_onnx_scout/02_runs/frontier28B_train_only_stability_gap_penalty_proxy_scout_v1/stability_gap_candidate_summary.csv`
+- F28B chunk metrics(F28B 조각 지표): `stages/stage_frontier_28__train_only_stability_gap_penalty_for_pf_dd_balance_onnx_scout/02_runs/frontier28B_train_only_stability_gap_penalty_proxy_scout_v1/stability_gap_chunk_metrics.csv`
+- F28C repair audit(F28C 수리 감사): `stages/stage_frontier_28__train_only_stability_gap_penalty_for_pf_dd_balance_onnx_scout/02_runs/frontier28C_stability_gap_repair_or_closeout_decision_v1/repair_rejection_audit.csv`
+- Grok packet(그록 묶음): `docs/agent_control/grok_reviews/2026-06-14_frontier29_stage_open/small_review`
