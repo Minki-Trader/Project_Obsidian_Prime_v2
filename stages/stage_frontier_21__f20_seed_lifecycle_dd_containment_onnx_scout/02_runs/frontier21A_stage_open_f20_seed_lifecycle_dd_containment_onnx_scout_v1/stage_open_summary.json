@@ -1,0 +1,201 @@
+{
+  "created_at_utc": "2026-06-14T06:13:42Z",
+  "stage_id": "stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout",
+  "run_id": "frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1",
+  "run_number": "frontier21A",
+  "parent_run_id": "frontier20C_rule_atlas_repair_or_closeout_decision_v1",
+  "next_run_id": "frontier21B_f20_seed_lifecycle_proxy_scout_v1",
+  "status": "opened_frontier21_f20_seed_lifecycle_dd_containment_no_authority",
+  "judgment": "stage_opened_after_grok_adjusted_review_with_entry_lock_and_lifecycle_dd_contract",
+  "primary_family": "experiment_execution(실험 실행)",
+  "primary_skill": "obsidian-run-evidence-system(실행 근거 시스템)",
+  "support_skills": [
+    "obsidian-experiment-design(실험 설계)",
+    "obsidian-data-integrity(데이터 무결성)",
+    "obsidian-model-validation(모델 검증)",
+    "obsidian-artifact-lineage(산출물 계보)",
+    "obsidian-grok-collaboration(그록 협업)",
+    "obsidian-result-judgment(결과 판정)",
+    "obsidian-claim-discipline(주장 규율)"
+  ],
+  "required_gates": [
+    "external_review_packet(외부 검토 묶음)",
+    "kpi_contract_audit(KPI 계약 감사)",
+    "required_gate_coverage_audit(필수 게이트 커버리지 감사)",
+    "final_claim_guard(최종 주장 방지)"
+  ],
+  "frontier_thesis": "A fixed F20 low-VIX price-position long seed(F20 낮은 VIX 가격 위치 롱 씨앗) may become a better ONNX scout surface(ONNX 탐색 표면) only if a runtime-representable lifecycle/risk stack(런타임 표현 가능한 생명주기/위험 묶음) materially reduces DD(손실폭).",
+  "hypothesis": "With F20 entry fixed(F20 진입 고정), next-bar-open entry(다음 봉 시가 진입), ATR stop/take-profit(ATR 손절/익절), max-hold(최대 보유), cooldown(쿨다운), and optional early-adverse-exit(선택적 초기 불리 이동 청산) can reduce DD(손실폭) toward the final goal without validation/OOS reselecting the entry(검증/표본외 진입 재선택 없이 최종 목표 쪽으로 이동).",
+  "decision_use": "Open F21A(전선21A)를 tracked stage open(추적 단계 개방)으로 만들고 F21B proxy(전선21B 프록시)의 fixed entry/lifecycle grid(고정 진입/생명주기 격자)를 잠급니다.",
+  "comparison_baseline": "F20 seed as reported(F20 보고 씨앗) plus F21 same-simulator parity baseline row(F21 동일 시뮬레이터 비교 행). This is not a selected baseline(선택 기준선 아님).",
+  "control_variables": [
+    "US100 M5 FPMarkets v2 model input dataset(US100 5분 FPMarkets v2 모델 입력 데이터셋)",
+    "feature_set_v2 58 features(피처 세트 v2 58개 피처)",
+    "label_v1 fwd12 split(라벨 v1 12봉 전방 분할)",
+    "F20 entry rule and side fixed(F20 진입 규칙과 방향 고정)",
+    "validation/OOS read-only diagnostics(검증/표본외 읽기 전용 진단)"
+  ],
+  "changed_variables": [
+    "lifecycle profile(생명주기 프로필)",
+    "ATR stop/take-profit multipliers(ATR 손절/익절 배수)",
+    "max-hold bars(최대 보유 봉)",
+    "cooldown bars(쿨다운 봉)",
+    "early adverse exit flag(초기 불리 이동 청산 플래그)"
+  ],
+  "sample_scope": "Tier A separate(티어 A 분리)는 58-feature model input(58개 피처 모델 입력)과 raw OHLC alignment(원천 OHLC 정렬)로 실행합니다. Tier B separate(티어 B 분리)와 Tier A+B combined(티어 A+B 합산)는 원천이 없으면 missing_required/out_of_scope_by_claim(필수 누락/주장 범위 밖)으로 기록합니다.",
+  "success_criteria": {
+    "scout_clue": "validation/OOS positive(검증/표본외 양수), density near 5~10/day(일 5~10회 근처), DD clearly below F20 seed(F20 씨앗보다 명확히 낮은 손실폭)",
+    "seed_surface": "PF around 1.2+(수익 팩터 약 1.2 이상), density 5~10/day(일 5~10회), validation DD <25% and OOS DD <18%(검증 손실폭 25% 미만 및 표본외 손실폭 18% 미만)",
+    "handoff_candidate": "PF >=1.5, density 5~10/day, DD <=15%, smoothness improved, then pre-expensive Grok review before MT5(PF 1.5 이상/빈도 일 5~10회/DD 15% 이하/매끄러움 개선 뒤 MT5 전 그록 검토)"
+  },
+  "failure_criteria": [
+    "No profile materially lowers DD versus F20 seed(F20 씨앗 대비 손실폭을 유의미하게 낮춘 프로필 없음)",
+    "OOS PF below 1.0(표본외 수익 팩터 1.0 미만)",
+    "Density leaves target band while only DD improves(손실폭만 개선되고 빈도가 목표 대역 이탈)",
+    "Entry rule, quantile, or side changes(진입 규칙/분위수/방향 변경)"
+  ],
+  "invalid_conditions": [
+    "new feature engineering(새 피처 설계)",
+    "new entry rule search(새 진입 규칙 탐색)",
+    "validation/OOS retuning(검증/표본외 재조정)",
+    "MT5 claim without pre-expensive Grok review(MT5 전 그록 검토 없는 MT5 주장)"
+  ],
+  "stop_conditions": [
+    "capped lifecycle sweep complete with no DD reduction(상한 생명주기 훑기 완료, 손실폭 감소 없음)",
+    "profile count cap exceeded(프로필 수 상한 초과)",
+    "handoff-like row appears and pre-expensive review is needed(인계 비슷한 행이 나타나 비싼 실행 전 검토 필요)"
+  ],
+  "evidence_plan": [
+    "stage_open_summary.json(단계 개방 요약)",
+    "lifecycle_lock.json(생명주기 잠금)",
+    "F21B proxy metrics by split(F21B 분할별 프록시 지표)",
+    "trade_log.csv(거래 기록)",
+    "Tier A/Tier B/Tier A+B ledger rows(티어 A/B/합산 장부 행)",
+    "runtime probe report or blocker(런타임 탐침 보고서 또는 차단 사유)"
+  ],
+  "entry_lock": {
+    "rule_id": "f20_fixed_low_vix_price_position_long",
+    "side": "long(롱)",
+    "definition": "vix_zscore_20 <= q30 & close_ema50_ratio >= q70",
+    "source_boundary": "F20 preserved clue only(F20 보존 단서 전용)",
+    "selection_boundary": "fixed_before_f21_no_validation_oos_reselection(F21 전 고정, 검증/표본외 재선택 없음)"
+  },
+  "lifecycle_grid": [
+    {
+      "profile_id": "f21b_sim_baseline_hold12_no_stop",
+      "role": "parity_baseline_row(동등성 비교 행)",
+      "max_hold_bars": 12,
+      "atr_stop_multiplier": 0.0,
+      "atr_take_profit_multiplier": 0.0,
+      "cooldown_bars": 0,
+      "early_adverse_exit_enabled": false
+    },
+    {
+      "profile_id": "f21b_hold4_atr0p8_tp1p6_cd2_early",
+      "role": "dd_containment_profile(손실폭 억제 프로필)",
+      "max_hold_bars": 4,
+      "atr_stop_multiplier": 0.8,
+      "atr_take_profit_multiplier": 1.6,
+      "cooldown_bars": 2,
+      "early_adverse_exit_enabled": true
+    },
+    {
+      "profile_id": "f21b_hold6_atr1p0_tp2p0_cd3",
+      "role": "balanced_profile(균형 프로필)",
+      "max_hold_bars": 6,
+      "atr_stop_multiplier": 1.0,
+      "atr_take_profit_multiplier": 2.0,
+      "cooldown_bars": 3,
+      "early_adverse_exit_enabled": false
+    },
+    {
+      "profile_id": "f21b_hold8_atr1p2_tp2p4_cd4_early",
+      "role": "wide_profile_with_early_exit(넓은 프로필+초기 청산)",
+      "max_hold_bars": 8,
+      "atr_stop_multiplier": 1.2,
+      "atr_take_profit_multiplier": 2.4,
+      "cooldown_bars": 4,
+      "early_adverse_exit_enabled": true
+    },
+    {
+      "profile_id": "f21b_hold10_atr1p5_tp3p0_cd6",
+      "role": "loose_profile(느슨한 프로필)",
+      "max_hold_bars": 10,
+      "atr_stop_multiplier": 1.5,
+      "atr_take_profit_multiplier": 3.0,
+      "cooldown_bars": 6,
+      "early_adverse_exit_enabled": false
+    }
+  ],
+  "locks": [
+    "F20 entry surface is fixed(F20 진입 표면 고정)",
+    "No new rule-atlas rerank(새 규칙 지도 재순위 없음)",
+    "No side flip(방향 전환 없음)",
+    "No boosted backbone(부스팅 백본 없음)",
+    "No probability threshold search(확률 임계값 탐색 없음)",
+    "No new feature engineering(새 피처 설계 없음)",
+    "Lifecycle grid is capped and pre-registered(생명주기 격자는 상한 있고 사전 등록됨)",
+    "Validation/OOS are read-only diagnostics(검증/표본외는 읽기 전용 진단)",
+    "Pre-expensive Grok review before any MT5/runtime work(비싼 MT5/런타임 전 그록 검토)"
+  ],
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "grok": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-14_frontier21_stage_open/small_review",
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier21_stage_open/small_review/prompt.md",
+    "output": "docs/agent_control/grok_reviews/2026-06-14_frontier21_stage_open/small_review/clean_output.md",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier21_stage_open/small_review/metadata.json",
+    "prompt_hash": "3dbb2a66106f7246e8b06e531a06156299217b9531b97ee714fb6a33990c555f",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "unexpected_top_level_artifacts": [],
+    "classification": "accepted_with_adjustments(조정 수용)",
+    "output_excerpt": "Frontier21 개방 검토를 위해 Grok 협업 스킬과 전선20·관련 전선 기록을 먼저 확인합니다.\nF17·F18·F20 기록과 기존 Grok 검토 패킷을 대조해 독립 검토를 진행합니다.\n# Grok Review — Frontier21 Stage Open(전선21 단계 개방 검토)\n\n**Review size(검토 크기):** small review(소규모 검토), bounded snapshot only(제한 스냅샷만)\n\n**Local cross-check(로컬 대조):** F20 `preserved_clue.md`, `negative_memory.md`, `run_registry.csv`의 수치·종료 라벨은 제안 스냅샷과 일치합니다. F20 negative memory의 reopen condition(재개 조건)은 “DD containment mechanism(손실폭 억제 메커니즘) 또는 runtime representation(런타임 표현)이 바뀌는 새 가설”입니다. F21은 그 조건에 맞습니다.\n\n---\n\n## Decision(결정): **adjust(조정)**\n\nF21은 **유효한 새 전선 가설(valid new frontier hypothesis, 유효한 새 전선 가설)** 이고 F20 금지 반복(forbidden repetition, 금지 반복)은 **아닙니다**. 다만 F18 negative memory(부정 기억)와 겹치는 생명주기 축 때문에 **개방 전 계약 조정(mandatory opening-contract adjustment, 필수 개방 계약 조정)** 이 필요합니다. 그래서 bare accept(그대로 수용)가 아니라 adjust입니다.\n\n**Why not reject(거절이 아닌 이유):**\n- F20이 막은 것은 train-only depth-2 rule atlas rerank(학습 전용 깊이2 규칙 지도 재순위)입니다. F21은 진입 표면을 **고정 참조 단서(fixed reference clue, 고정 참조 단서)** 로 두고 변경 변수를 lifecycle/risk stack(생명주기/위험 규칙 묶음)으로 둡니다.\n- F20 preserved clue(보존 단서)는 PF·density는 괜찮지만 DD가 큰 씨앗입니다. “rule-seed + bar-level lifecycle(규칙 씨앗 + 봉 단위 생명주기)”는 F20 negative memory가 허용한 **새 메커니즘 축**입니다.\n- F17(loss-cluster firewall, 손실 군집 방화벽)과 F18(model/backbone lifecycle sweep, 모델/백본 생명주기 훑기)과는 질문 구조가 다릅니다.\n\n**Why not bare accept(그대로 수용이 아닌 이유):**\n- F18은 이미 ATR stop/take(손절/익절), max-hold(최대 보유), asymmetric exit(비대칭 청산) 등 bar-level lifecycle(봉 단위 생명주기)를 ONNX 진입 신호에 씌웠고 **negative memory(부정 기억)** 로 닫혔습니다(strict/seed/preserved 0/0/0).\n- F21도 같은 도구 집합을 쓰므로, **F20 씨앗 진입이 계약상 고정(lock, 잠금)** 되지 않으면 F18 재시도로 읽힙니다.\n\n---\n\n## Main risk(주요 위험)\n\n1. **F18 lifecycle prior(전선18 생명주기 선행 실패)**  \n   F18 best row는 density는 맞았지만 OOS PF ≈ 1.0, forward clue 0입니다. F21이 “lifecycle alone purifies DD(생명주기만으로 손실폭 정화)”를 증명하지 못하면 같은 negative memory(부정 기억)로 닫힐 가능성이 큽니다.\n\n2. **Execution-assumption mismatch(실행 가정 불일치)**  \n   F20 seed metrics(씨앗 지표)는 proxy atlas(프록시 지도) 기준입니다. F21이 next-bar-open + stop/take/hold(다음 봉 시가 + 손절/익절/보유)를 넣으면 PF·density·DD가 같이 바뀝니다. **같은 실행 가정 없이 F20 대비 DD 개선을 주장하면 착시**가 납니다.\n\n3. **DD–density–PF trilemma(손실폭–빈도–수익팩터 삼각 딜레마)**  \n   Hypothesis의 “DD toward under 10%(손실폭 10% 미만 지향)”는 scout 단계에서 density 5~10/day와 충돌하기 쉽습니다. F20은 PF는 괜찮지만 DD가 큰 씨앗이었습니다. DD만 줄이면 **invalid setup(무효 설정)** 으로 갈 수 있습니다.\n\n4. **Hidden entry drift(숨은 진입 표면 드리프트)**  \n   Lifecycle sweep(생명주기 스윕) 안에서 quantile(분위수)"
+  },
+  "f20_context": {
+    "selection_text": "# Frontier20 Selection Status(전선20 선택 상태)\n\nUpdated(갱신): 2026-06-14T05:57:16Z\n\nSelection(선택): no selected baseline/completion candidate/promotion/runtime authority(선택 기준선/완성 후보/승격/런타임 권위 없음).\n\nCloseout(마감): `preserved_clue + negative_memory(보존 단서 + 부정 기억)`\n\nPreserved clue(보존 단서): `low_vix_momentum_price_position_long_feature_state_surface_density_aligned_pf12_seed(낮은 VIX 모멘텀/가격 위치 롱 피처 상태 표면은 빈도 정렬 PF 약 1.2 씨앗 표면)`\n\nNegative memory(부정 기억): `train_only_depth2_rule_atlas_alone_does_not_reduce_dd_or_create_runtime_handoff(학습 전용 깊이2 규칙 지도 단독은 손실폭을 충분히 줄이거나 런타임 인계를 만들지 못함)`\n\nRuntime probe blocker(런타임 탐침 차단 사유): `runtime_probe_ineligible_under_f20_locks_no_handoff_candidate(F20 잠금 아래 인계 후보가 없어 런타임 탐침 부적격)`\n\nNext action(다음 행동): `frontier21A_stage_open_new_hypothesis_design_v1`\n",
+    "preserved_text": "# Frontier20 Preserved Clue(전선20 보존 단서)\n\nClue(단서): `low_vix_momentum_price_position_long_feature_state_surface_density_aligned_pf12_seed(낮은 VIX 모멘텀/가격 위치 롱 피처 상태 표면은 빈도 정렬 PF 약 1.2 씨앗 표면)`\n\nEvidence(근거): seed rows(씨앗 행) `19`, best seed(최상 씨앗) `f20b_pair_0359` with validation/OOS PF-density-DD(검증/표본외 수익 팩터-빈도-손실폭) `1.32666`/`8.57923`/`31.7443` and `1.22065`/`9.9084`/`20.7766`.\n\nBoundary(경계): reference surface(참고 표면) only(전용). No handoff candidate(인계 후보 없음), no runtime authority(런타임 권위 없음).\n",
+    "negative_text": "# Frontier20 Negative Memory(전선20 부정 기억)\n\nNegative memory(부정 기억): `train_only_depth2_rule_atlas_alone_does_not_reduce_dd_or_create_runtime_handoff(학습 전용 깊이2 규칙 지도 단독은 손실폭을 충분히 줄이거나 런타임 인계를 만들지 못함)`\n\nWhy failed(실패 이유): strict/handoff(엄격/인계) count is `0/0`, DD(손실폭)는 약 14~33% 범위로 남았고 capped train-risk rerank(상한 학습 위험 재순위)는 OOS PF(표본외 수익 팩터)를 1 미만으로 악화했습니다.\n\nDo not repeat(반복 금지): same train-only depth-2 atlas rerank(같은 학습 전용 깊이2 지도 재순위)를 F20 안에서 반복하지 않습니다.\n\nReopen condition(재개 조건): DD containment mechanism(손실폭 억제 메커니즘)이나 runtime representation(런타임 표현)이 바뀌는 새 가설에서만 참고합니다.\n",
+    "summary_path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/final_summary.json",
+    "best_candidate_id": "f20b_pair_0359",
+    "best_rule": "vix_zscore_20 <= q30 & close_ema50_ratio >= q70",
+    "best_side": "long(롱)",
+    "validation_profit_factor": 1.3266614376938166,
+    "validation_trades_per_day": 8.579234972677595,
+    "validation_dd_risk": 31.744253285360656,
+    "oos_profit_factor": 1.220645208969599,
+    "oos_trades_per_day": 9.908396946564885,
+    "oos_dd_risk": 20.776566454978163
+  },
+  "local_verification": {
+    "judgment": "pass_open_ready_with_adjustments(조정 반영 후 개방 준비 통과)",
+    "checks": {
+      "workspace_current_stage_frontier20_closed": true,
+      "workspace_next_run_frontier21a": true,
+      "f20_best_rule_matches_entry_lock": true,
+      "f20_best_side_long": true,
+      "f20_preserved_clue_present": true,
+      "f20_negative_memory_present": true,
+      "f18_negative_memory_present": true,
+      "feature_order_hash_matches_contract": true,
+      "feature_count_is_58": true,
+      "dataset_exists": true,
+      "grok_transport_success": true,
+      "grok_adjustment_accepted_locally": true,
+      "grok_no_unexpected_top_level_artifacts": true,
+      "lifecycle_profile_cap_is_five": true,
+      "parity_baseline_row_registered": true
+    },
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_count": 58
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

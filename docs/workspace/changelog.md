@@ -6976,3 +6976,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T05:50:31Z: `frontier20B_feature_state_rule_atlas_proxy_scout_v1` completed train-only feature-state rule atlas proxy scout(학습 전용 피처 상태 규칙 지도 프록시 탐색). Effect(효과): strict/seed/handoff(엄격/씨앗/인계) counts `0/19/0` and next run(다음 실행) `frontier20C_rule_atlas_repair_or_closeout_decision_v1` recorded(기록됨).
 <!-- frontier20C_rule_atlas_repair_or_closeout_decision_v1 -->
 - 2026-06-14T05:57:16Z: `frontier20C_rule_atlas_repair_or_closeout_decision_v1` closed Frontier20(전선20) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): next frontier(다음 전선) starts at `frontier21A_stage_open_new_hypothesis_design_v1` without inheriting baseline/promotion/runtime authority(기준선/승격/런타임 권위 상속 없음).
+<!-- frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1 -->
+- 2026-06-14T06:13:42Z: `frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1` opened Frontier21(전선21) after Grok adjusted review(그록 조정 검토). Effect(효과): next run(다음 실행) `frontier21B_f20_seed_lifecycle_proxy_scout_v1` is locked to fixed F20 entry(고정 F20 진입) plus capped lifecycle grid(상한 생명주기 격자).
+<!-- frontier21B_f20_seed_lifecycle_proxy_scout_v1 -->
+- 2026-06-14T06:18:48Z: `frontier21B_f20_seed_lifecycle_proxy_scout_v1` ran fixed F20 seed lifecycle proxy scout(고정 F20 씨앗 생명주기 프록시 탐색). Effect(효과): scout/seed/handoff(탐색/씨앗/인계) counts are 0/0/0 and next run(다음 실행) is `frontier21C_lifecycle_repair_or_closeout_decision_v1`.
+<!-- frontier21C_lifecycle_density_repair_scout_v1 -->
+- 2026-06-14T06:23:30Z: `frontier21C_lifecycle_density_repair_scout_v1` ran capped density repair(상한 빈도 수리). Effect(효과): scout/seed/handoff(탐색/씨앗/인계) counts are 3/0/0.
+<!-- frontier21D_lifecycle_repair_or_closeout_decision_v1 -->
+- 2026-06-14T06:29:15Z: `frontier21D_lifecycle_repair_or_closeout_decision_v1` closed Frontier21(전선21) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): next frontier(다음 전선) starts at `frontier22A_stage_open_new_pf_edge_source_hypothesis_design_v1` with no baseline/promotion/runtime authority(기준선/승격/런타임 권위 없음).

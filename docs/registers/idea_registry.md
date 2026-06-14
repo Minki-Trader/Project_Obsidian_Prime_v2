@@ -1604,3 +1604,11 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier20B_feature_state_rule_atlas_proxy_scout_v1`: Frontier20(전선20) train-only rule atlas proxy scout(학습 전용 규칙 지도 프록시 탐색) evaluated `533` train-ranked candidates(학습 순위 후보). Effect(효과): validation/OOS(검증/표본외)는 read-only forward diagnostic(읽기 전용 전진 진단)으로만 사용했습니다.
 <!-- frontier20C_rule_atlas_repair_or_closeout_decision_v1 -->
 - `IDEA-FR20-TRAIN-ONLY-FEATURE-STATE-RULE-ATLAS-ONNX-SCOUT`: Frontier20(전선20) closed as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): `low_vix_momentum_price_position_long_feature_state_surface_density_aligned_pf12_seed(낮은 VIX 모멘텀/가격 위치 롱 피처 상태 표면은 빈도 정렬 PF 약 1.2 씨앗 표면)` is reference-only(참조 전용) and `train_only_depth2_rule_atlas_alone_does_not_reduce_dd_or_create_runtime_handoff(학습 전용 깊이2 규칙 지도 단독은 손실폭을 충분히 줄이거나 런타임 인계를 만들지 못함)` is do-not-repeat(반복 금지) memory.
+<!-- frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1 -->
+- `IDEA-FR21-F20-SEED-LIFECYCLE-DD-CONTAINMENT-ONNX-SCOUT`: `frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1` opens fixed F20 seed lifecycle DD containment scout(고정 F20 씨앗 생명주기 손실폭 억제 탐색). Effect(효과): F20의 low-VIX long seed(낮은 VIX 롱 씨앗)를 진입으로만 고정하고, F18/F17 반복 없이 lifecycle/risk stack(생명주기/위험 묶음)의 DD 억제력을 봅니다.
+<!-- frontier21B_f20_seed_lifecycle_proxy_scout_v1 -->
+- `IDEA-FR21-F20-SEED-LIFECYCLE-DD-CONTAINMENT-ONNX-SCOUT`: `frontier21B_f20_seed_lifecycle_proxy_scout_v1` tested capped lifecycle profiles(상한 생명주기 프로필) on the fixed F20 seed(고정 F20 씨앗). Effect(효과): best profile `f21b_hold10_atr1p5_tp3p0_cd6` is proxy-only(프록시 전용) and not authority(권위 아님).
+<!-- frontier21C_lifecycle_density_repair_scout_v1 -->
+- `IDEA-FR21-F20-SEED-LIFECYCLE-DD-CONTAINMENT-ONNX-SCOUT`: `frontier21C_lifecycle_density_repair_scout_v1` found low-DD density repair scout clue(낮은 손실폭 빈도 수리 탐색 단서) but no seed/handoff(씨앗/인계 없음). Effect(효과): final closeout must separate preserved DD clue(보존 손실폭 단서) from PF shortfall(수익 팩터 부족).
+<!-- frontier21D_lifecycle_repair_or_closeout_decision_v1 -->
+- `IDEA-FR21-F20-SEED-LIFECYCLE-DD-CONTAINMENT-ONNX-SCOUT`: `frontier21D_lifecycle_repair_or_closeout_decision_v1` closes Frontier21(전선21) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): low-DD lifecycle(낮은 손실폭 생명주기)은 보존하되 PF edge(수익 팩터 우위) 부족을 반복하지 않습니다.

@@ -1,0 +1,78 @@
+{
+  "stage_id": "stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout",
+  "run_id": "frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1",
+  "entry_lock": {
+    "rule_id": "f20_fixed_low_vix_price_position_long",
+    "side": "long(롱)",
+    "definition": "vix_zscore_20 <= q30 & close_ema50_ratio >= q70",
+    "source_boundary": "F20 preserved clue only(F20 보존 단서 전용)",
+    "selection_boundary": "fixed_before_f21_no_validation_oos_reselection(F21 전 고정, 검증/표본외 재선택 없음)"
+  },
+  "lifecycle_grid": [
+    {
+      "profile_id": "f21b_sim_baseline_hold12_no_stop",
+      "role": "parity_baseline_row(동등성 비교 행)",
+      "max_hold_bars": 12,
+      "atr_stop_multiplier": 0.0,
+      "atr_take_profit_multiplier": 0.0,
+      "cooldown_bars": 0,
+      "early_adverse_exit_enabled": false
+    },
+    {
+      "profile_id": "f21b_hold4_atr0p8_tp1p6_cd2_early",
+      "role": "dd_containment_profile(손실폭 억제 프로필)",
+      "max_hold_bars": 4,
+      "atr_stop_multiplier": 0.8,
+      "atr_take_profit_multiplier": 1.6,
+      "cooldown_bars": 2,
+      "early_adverse_exit_enabled": true
+    },
+    {
+      "profile_id": "f21b_hold6_atr1p0_tp2p0_cd3",
+      "role": "balanced_profile(균형 프로필)",
+      "max_hold_bars": 6,
+      "atr_stop_multiplier": 1.0,
+      "atr_take_profit_multiplier": 2.0,
+      "cooldown_bars": 3,
+      "early_adverse_exit_enabled": false
+    },
+    {
+      "profile_id": "f21b_hold8_atr1p2_tp2p4_cd4_early",
+      "role": "wide_profile_with_early_exit(넓은 프로필+초기 청산)",
+      "max_hold_bars": 8,
+      "atr_stop_multiplier": 1.2,
+      "atr_take_profit_multiplier": 2.4,
+      "cooldown_bars": 4,
+      "early_adverse_exit_enabled": true
+    },
+    {
+      "profile_id": "f21b_hold10_atr1p5_tp3p0_cd6",
+      "role": "loose_profile(느슨한 프로필)",
+      "max_hold_bars": 10,
+      "atr_stop_multiplier": 1.5,
+      "atr_take_profit_multiplier": 3.0,
+      "cooldown_bars": 6,
+      "early_adverse_exit_enabled": false
+    }
+  ],
+  "locks": [
+    "F20 entry surface is fixed(F20 진입 표면 고정)",
+    "No new rule-atlas rerank(새 규칙 지도 재순위 없음)",
+    "No side flip(방향 전환 없음)",
+    "No boosted backbone(부스팅 백본 없음)",
+    "No probability threshold search(확률 임계값 탐색 없음)",
+    "No new feature engineering(새 피처 설계 없음)",
+    "Lifecycle grid is capped and pre-registered(생명주기 격자는 상한 있고 사전 등록됨)",
+    "Validation/OOS are read-only diagnostics(검증/표본외는 읽기 전용 진단)",
+    "Pre-expensive Grok review before any MT5/runtime work(비싼 MT5/런타임 전 그록 검토)"
+  ],
+  "selection_boundary": "entry_fixed_lifecycle_only_train_selection_then_validation_oos_readonly(진입 고정, 생명주기만 학습 선택 뒤 검증/표본외 읽기 전용)",
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

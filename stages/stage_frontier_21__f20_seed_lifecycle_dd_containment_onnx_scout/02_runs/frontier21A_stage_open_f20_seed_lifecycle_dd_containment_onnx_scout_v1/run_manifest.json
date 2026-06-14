@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "stage_id": "stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout",
+    "run_id": "frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1",
+    "parent_run_id": "frontier20C_rule_atlas_repair_or_closeout_decision_v1",
+    "next_run_id": "frontier21B_f20_seed_lifecycle_proxy_scout_v1",
+    "created_at_utc": "2026-06-14T06:13:42Z"
+  },
+  "artifacts": [
+    {
+      "path": "stage_pipelines/stage_frontier_21/materialize_frontier21a_stage_open.py",
+      "sha256": "5baa08e993aa82ec91a9967fe9f4cf3bdc57addc5c450d48d4766fcabd828c70"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    },
+    {
+      "path": "docs/agent_control/grok_reviews/2026-06-14_frontier21_stage_open/small_review/clean_output.md",
+      "sha256": "ee3e893bcf29e2c7bec317927989adb58261f80fa24c6d02d2b36cefc7cc4753"
+    },
+    {
+      "path": "stages/stage_frontier_20__train_only_feature_state_rule_atlas_onnx_scout/02_runs/frontier20B_feature_state_rule_atlas_proxy_scout_v1/final_summary.json",
+      "sha256": "4dc7ad71f4f17b7c6b6435d0e19662f41a1c765acf946e0927cf67dd606a11cb"
+    }
+  ],
+  "feature_schema": {
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+  },
+  "runtime_snapshot": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "entry_timing": "next_bar_open_proxy(다음 봉 시가 프록시)",
+    "position_management": "pre_registered_lifecycle_grid(사전 등록 생명주기 격자)",
+    "cost_behavior": "rough_log_return_cost_proxy_only(거친 로그수익률 비용 프록시 전용)"
+  },
+  "rule_stack": {
+    "entry": [
+      {
+        "rule_id": "f20_fixed_low_vix_price_position_long",
+        "side": "long(롱)",
+        "definition": "vix_zscore_20 <= q30 & close_ema50_ratio >= q70",
+        "source_boundary": "F20 preserved clue only(F20 보존 단서 전용)",
+        "selection_boundary": "fixed_before_f21_no_validation_oos_reselection(F21 전 고정, 검증/표본외 재선택 없음)"
+      }
+    ],
+    "position": [
+      {
+        "profile_id": "f21b_sim_baseline_hold12_no_stop",
+        "role": "parity_baseline_row(동등성 비교 행)",
+        "max_hold_bars": 12,
+        "atr_stop_multiplier": 0.0,
+        "atr_take_profit_multiplier": 0.0,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": false
+      },
+      {
+        "profile_id": "f21b_hold4_atr0p8_tp1p6_cd2_early",
+        "role": "dd_containment_profile(손실폭 억제 프로필)",
+        "max_hold_bars": 4,
+        "atr_stop_multiplier": 0.8,
+        "atr_take_profit_multiplier": 1.6,
+        "cooldown_bars": 2,
+        "early_adverse_exit_enabled": true
+      },
+      {
+        "profile_id": "f21b_hold6_atr1p0_tp2p0_cd3",
+        "role": "balanced_profile(균형 프로필)",
+        "max_hold_bars": 6,
+        "atr_stop_multiplier": 1.0,
+        "atr_take_profit_multiplier": 2.0,
+        "cooldown_bars": 3,
+        "early_adverse_exit_enabled": false
+      },
+      {
+        "profile_id": "f21b_hold8_atr1p2_tp2p4_cd4_early",
+        "role": "wide_profile_with_early_exit(넓은 프로필+초기 청산)",
+        "max_hold_bars": 8,
+        "atr_stop_multiplier": 1.2,
+        "atr_take_profit_multiplier": 2.4,
+        "cooldown_bars": 4,
+        "early_adverse_exit_enabled": true
+      },
+      {
+        "profile_id": "f21b_hold10_atr1p5_tp3p0_cd6",
+        "role": "loose_profile(느슨한 프로필)",
+        "max_hold_bars": 10,
+        "atr_stop_multiplier": 1.5,
+        "atr_take_profit_multiplier": 3.0,
+        "cooldown_bars": 6,
+        "early_adverse_exit_enabled": false
+      }
+    ],
+    "filters": [
+      "F20 entry surface is fixed(F20 진입 표면 고정)",
+      "No new rule-atlas rerank(새 규칙 지도 재순위 없음)",
+      "No side flip(방향 전환 없음)",
+      "No boosted backbone(부스팅 백본 없음)",
+      "No probability threshold search(확률 임계값 탐색 없음)",
+      "No new feature engineering(새 피처 설계 없음)",
+      "Lifecycle grid is capped and pre-registered(생명주기 격자는 상한 있고 사전 등록됨)",
+      "Validation/OOS are read-only diagnostics(검증/표본외는 읽기 전용 진단)",
+      "Pre-expensive Grok review before any MT5/runtime work(비싼 MT5/런타임 전 그록 검토)"
+    ],
+    "exit": "ATR stop/take + max-hold + optional early-adverse-exit(ATR 손절/익절 + 최대 보유 + 선택적 초기 불리 청산)"
+  },
+  "results": {
+    "by_split": {},
+    "cross_split": {
+      "stage_open": "planning_only_no_trading_kpi(계획 전용, 거래 KPI 없음)"
+    },
+    "report_refs": [
+      {
+        "role": "stage_open_report",
+        "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/03_reviews/frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1_report.md"
+      }
+    ]
+  },
+  "compatibility": {
+    "schema_version": "frontier21_stage_open_v1",
+    "mismatch_policy": "fail_fast(빠른 실패)",
+    "required_output_schema": "not_applicable_stage_open(단계 개방에는 해당 없음)"
+  }
+}

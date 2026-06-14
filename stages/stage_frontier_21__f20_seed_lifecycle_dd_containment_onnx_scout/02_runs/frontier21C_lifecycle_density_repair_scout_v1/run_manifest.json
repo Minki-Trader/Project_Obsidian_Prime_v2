@@ -1,0 +1,143 @@
+{
+  "identity": {
+    "stage_id": "stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout",
+    "run_id": "frontier21C_lifecycle_density_repair_scout_v1",
+    "parent_run_id": "frontier21B_f20_seed_lifecycle_proxy_scout_v1",
+    "next_run_id": "frontier21D_lifecycle_repair_or_closeout_decision_v1",
+    "created_at_utc": "2026-06-14T06:23:30Z"
+  },
+  "artifacts": [
+    {
+      "path": "stage_pipelines/stage_frontier_21/frontier21c_lifecycle_density_repair_scout.py",
+      "sha256": "34655f528205fb20d2e07c8f11b6db9a27663edeadd9fd6645fa1cd1808079d6"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/02_runs/frontier21B_f20_seed_lifecycle_proxy_scout_v1/final_summary.json",
+      "sha256": "5d484701583154f1025b8d57b897164055ef3a1e10004ac2d5844941b601a7b2"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/02_runs/frontier21A_stage_open_f20_seed_lifecycle_dd_containment_onnx_scout_v1/lifecycle_lock.json",
+      "sha256": "1974039bc1e49a694953212c5c44ae067d5f75fa447eea4ee7355ebb2b0f055b"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/02_runs/frontier21C_lifecycle_density_repair_scout_v1/final_summary.json",
+      "sha256": "cb845d527924a94c641be4dc42fc6602971b3afb4f9904f0750395b2ce6c9188"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/02_runs/frontier21C_lifecycle_density_repair_scout_v1/candidate_summary.csv",
+      "sha256": "01705eb13dcc81e8848fb539f317484de43f6d25dc461f72c3e777ab5e9d8269"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/02_runs/frontier21C_lifecycle_density_repair_scout_v1/metrics_by_split.csv",
+      "sha256": "09ab15b25fda4a8fefcdfa8256b510c6ec3fa8f8941d11f00d2a72fd70c032d9"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/02_runs/frontier21C_lifecycle_density_repair_scout_v1/subperiod_metrics.csv",
+      "sha256": "fbb88bb2ff623887e7005b1807ba8801ed004018cc530b312c0c68bb8b5b47d6"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/02_runs/frontier21C_lifecycle_density_repair_scout_v1/trade_log.csv",
+      "sha256": "d0359432b18dd7b8c6aa0d0f94a2431477ae2ab9d73a930a0c126dbaca3bab0a"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/03_reviews/frontier21C_lifecycle_density_repair_scout_v1_report.md",
+      "sha256": "b7cd0653994753d2dbaf3aa05c4cf7f96090c00e77a742835898dfbed61f563c"
+    },
+    {
+      "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/03_reviews/frontier21C_lifecycle_density_repair_scout_v1_gate_audit.md",
+      "sha256": "d94e968fe9d463f3bef317386e831c5abd80897c69af278f5141fc5295431308"
+    }
+  ],
+  "rule_stack": {
+    "entry": {
+      "left_threshold": -1.037143588066101,
+      "right_threshold": 1.0016655921936035,
+      "definition": "vix_zscore_20 <= q30 & close_ema50_ratio >= q70",
+      "side": "long(롱)",
+      "selection_boundary": "train_quantiles_from_fixed_F20_rule_then_forward_read_only(F20 고정 규칙의 학습 분위수, 이후 전진 읽기 전용)"
+    },
+    "repair_profiles": [
+      {
+        "profile_id": "f21b_sim_baseline_hold12_no_stop",
+        "role": "repair_reference_baseline(수리 참조 비교 행)",
+        "max_hold_bars": 12,
+        "atr_stop_multiplier": 0.0,
+        "atr_take_profit_multiplier": 0.0,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": false
+      },
+      {
+        "profile_id": "f21c_hold1_atr0p6_tp1p0_cd0_early",
+        "role": "density_repair(빈도 수리)",
+        "max_hold_bars": 1,
+        "atr_stop_multiplier": 0.6,
+        "atr_take_profit_multiplier": 1.0,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": true
+      },
+      {
+        "profile_id": "f21c_hold1_atr0p8_tp1p2_cd0",
+        "role": "density_repair(빈도 수리)",
+        "max_hold_bars": 1,
+        "atr_stop_multiplier": 0.8,
+        "atr_take_profit_multiplier": 1.2,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": false
+      },
+      {
+        "profile_id": "f21c_hold2_atr0p6_tp1p2_cd0_early",
+        "role": "density_repair(빈도 수리)",
+        "max_hold_bars": 2,
+        "atr_stop_multiplier": 0.6,
+        "atr_take_profit_multiplier": 1.2,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": true
+      },
+      {
+        "profile_id": "f21c_hold2_atr0p8_tp1p6_cd0",
+        "role": "density_repair(빈도 수리)",
+        "max_hold_bars": 2,
+        "atr_stop_multiplier": 0.8,
+        "atr_take_profit_multiplier": 1.6,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": false
+      },
+      {
+        "profile_id": "f21c_hold3_atr0p8_tp1p6_cd0_early",
+        "role": "density_repair(빈도 수리)",
+        "max_hold_bars": 3,
+        "atr_stop_multiplier": 0.8,
+        "atr_take_profit_multiplier": 1.6,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": true
+      },
+      {
+        "profile_id": "f21c_hold3_atr1p0_tp2p0_cd0",
+        "role": "density_repair(빈도 수리)",
+        "max_hold_bars": 3,
+        "atr_stop_multiplier": 1.0,
+        "atr_take_profit_multiplier": 2.0,
+        "cooldown_bars": 0,
+        "early_adverse_exit_enabled": false
+      }
+    ]
+  },
+  "results": {
+    "cross_split": {
+      "scout_clue_rows": 3,
+      "seed_surface_rows": 0,
+      "handoff_candidate_rows": 0,
+      "best_profile_id": "f21c_hold2_atr0p8_tp1p6_cd0"
+    },
+    "report_refs": [
+      {
+        "role": "density_repair_report",
+        "path": "stages/stage_frontier_21__f20_seed_lifecycle_dd_containment_onnx_scout/03_reviews/frontier21C_lifecycle_density_repair_scout_v1_report.md"
+      }
+    ]
+  },
+  "compatibility": {
+    "schema_version": "frontier21c_density_repair_v1",
+    "mismatch_policy": "fail_fast(빠른 실패)"
+  }
+}
