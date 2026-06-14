@@ -6958,3 +6958,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T04:04:18Z: `frontier17C_loss_cluster_firewall_runtime_probe_v1` added MT5 runtime probe(MT5 런타임 탐침) for Frontier17(전선17). Effect(효과): F17B preserved clue(보존 단서)를 runtime observation(런타임 관찰)로 확인합니다.
 <!-- frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1 -->
 - 2026-06-14T04:11:15Z: `frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1` closed Frontier17(전선17) as negative memory(부정 기억). Effect(효과): runtime handoff clue(런타임 인계 단서)는 보존하고 next run(다음 실행)은 `frontier18A_stage_open_new_hypothesis_design_v1`입니다.
+<!-- frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1 -->
+- 2026-06-14T04:28:55Z: `frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1` opened Frontier18(전선18) after Grok stage-open accepted(그록 단계 개방 수용). Effect(효과): next run(다음 실행) `frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1` will test 3 lifecycle profiles(생명주기 프로필 3개) with no authority claims(권위 주장 없음).
+<!-- frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1 -->
+- 2026-06-14T04:42:17Z: `frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict=0, seed=0, preserved=0, next `frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1`.
+<!-- frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1 -->
+- 2026-06-14T04:50:02Z: `frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1` closed Frontier18(전선18) as negative memory(부정 기억). Effect(효과): runtime blocker(런타임 차단 사유) `no_forward_clue_rows_0_0_0_and_no_runtime_handoff_candidate_under_pre_registered_profile_lock(전진 단서 0/0/0이고 사전 등록 프로필 고정 아래 런타임 인계 후보 없음)` recorded and next run(다음 실행) is `frontier19A_stage_open_new_hypothesis_design_v1`.

@@ -1041,3 +1041,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - runtime observation(런타임 관찰): validation_is: PF=1.13, DD=35.45%, trades=317, signal_diff=0 | oos: PF=0.92, DD=47.5%, trades=254, signal_diff=0
 - boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 not_claimed(주장 없음).
 - report(보고서): `stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1_report.md`
+<!-- frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1 -->
+<!-- frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1 -->
+## frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1 Frontier18 Negative Memory(전선18 부정 기억)
+
+- judgment(판정): `negative_memory(부정 기억)`
+- negative memory(부정 기억): `asymmetric_exit_lifecycle_profit_lock_failed_pf_density_smoothness_under_pre_registered_profiles(사전 등록 프로필 아래 비대칭 청산 생명주기 수익 잠금은 PF/빈도/매끄러움에서 실패)`
+- preserved clue(보존 단서): `low_dd_lifecycle_shapes_preserved_as_dd_containment_clue_only(낮은 손실폭 생명주기 모양은 손실폭 억제 단서로만 보존)`
+- runtime probe blocker(런타임 탐침 차단 사유): `no_forward_clue_rows_0_0_0_and_no_runtime_handoff_candidate_under_pre_registered_profile_lock(전진 단서 0/0/0이고 사전 등록 프로필 고정 아래 런타임 인계 후보 없음)`
+- best proxy(최선 프록시): best=f18b_hold6_reverse_atr1p5_tp3p0__lr_plain__lifecycle;val_pf=1.03878;val_density=9.42697;val_dd=8.87262;oos_pf=0.99953;oos_density=10.5873;oos_dd=7.60684;neg_subperiod=0.409091;strict_seed_preserved=0_0_0
+- boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 not_claimed(주장 없음).
+- report(보고서): `stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/03_reviews/frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1_report.md`

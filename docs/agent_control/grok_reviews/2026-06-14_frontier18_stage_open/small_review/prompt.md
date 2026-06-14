@@ -1,0 +1,57 @@
+﻿# Frontier18 Stage Open Small Review(전선18 단계 개방 소규모 검토)
+
+You are Grok(Grok, 그록), an external second opinion(외부 2차 의견) for Project Obsidian Prime v2.
+
+## Required Response Format(필수 응답 형식)
+
+Return only:
+
+- classification(분류): accepted(수용), rejected(거절), or needs_local_verification(로컬 검증 필요)
+- reason(이유): 3 short bullets(짧은 항목 3개)
+- must_keep(반드시 유지): concrete guardrails(구체 가드레일)
+- change_request(변경 요청): only if rejected(거절) or needs_local_verification(로컬 검증 필요)
+
+Do not claim completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).
+
+## Current Truth(현재 진실)
+
+- Frontier17(전선17) is closed as negative memory(부정 기억).
+- F17B proxy(전선17B 프록시) best candidate: validation PF 1.30338, density 3.97268/day, DD 13.4384%; OOS(표본외) PF 1.13674, density 5.0916/day, DD 12.7647%.
+- F17C MT5 runtime probe(전선17C MT5 런타임 탐침): validation PF 1.13, DD 35.45%, trades 317, signal_diff 0; OOS PF 0.92, DD 47.50%, trades 254, signal_diff 0.
+- F17D closeout(전선17D 마감): loss-cluster firewall profit persistence(손실 군집 방화벽 수익 지속) failed native MT5 economics/DD(MT5 실행 경제성/손실폭). RuntimeVetoTape(런타임 차단 테이프) handoff(인계) is preserved clue(보존 단서) only.
+- No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) is claimed.
+
+## Codex Proposed Direction(Codex 제안 방향)
+
+Open Frontier18(전선18) as:
+
+`stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout`
+
+Question(질문): Can an asymmetric exit lifecycle(비대칭 청산 생명주기) and profit-lock policy(수익 잠금 정책) convert moderate ONNX entry signals(중간 품질 ONNX 진입 신호) into better PF/DD/smoothness(수익 팩터/손실폭/매끄러움), without reusing F17's loss-cluster firewall alpha(손실 군집 방화벽 알파)?
+
+Frontier thesis(전선 가설): F17 proved signal handoff parity(신호 인계 동등성) but failed MT5 trade economics(거래 경제성). The next new hypothesis should change position lifecycle(포지션 생명주기), not keep adding entry vetoes(진입 차단). F18 will test train-only lifecycle profiles(학습 전용 생명주기 프로필): short max-hold(짧은 최대 보유), ATR stop/take-profit(ATR 손절/익절), close-on-flat/opposite-signal(중립/반대 신호 청산), and entry-known exit-risk overlay(진입 시점에 아는 청산 위험 덧씌움) where available.
+
+Novelty delta(신규성 차이): This is not F15 score threshold(점수 임계값), F16 edge-margin risk-veto(엣지 마진 위험 배제), or F17 loss-cluster firewall(손실 군집 방화벽). The changed variable(변경 변수) is lifecycle/execution surface(생명주기/실행 표면), using existing MT5 runtime capabilities(기존 MT5 런타임 기능).
+
+Runtime feasibility(런타임 가능성): `ObsidianPrimeV2_RuntimeProbeEA.mq5` already has `InpMaxHoldBars`, `InpReverseOnOppositeSignal`, `InpCloseOnlyOnOppositeSignal`, `InpExitRiskOverlayEnabled`, `InpAtrStopMultiplier`, and `InpAtrTakeProfitMultiplier`. Therefore F18 can end with a narrow MT5 runtime probe(좁은 MT5 런타임 탐침) before closeout(마감), or a precise blocked reason(정확한 차단 사유).
+
+## Proposed Guardrails(제안 가드레일)
+
+- Reference, not inheritance(참조이지 상속 아님): do not import winners/baselines/promotions/runtime authority(승자/기준선/승격/런타임 권위) from old stages.
+- Do not repeat F17 alpha(전선17 알파 반복 금지): RuntimeVetoTape(런타임 차단 테이프) may be reused as handoff infrastructure(인계 인프라) only, not as the main hypothesis.
+- No validation/OOS retuning(검증/표본외 재조정 금지): lifecycle profiles(생명주기 프로필) must be pre-registered or train-only.
+- Paired tier records(티어 쌍 기록): Tier A separate(티어 A 분리), Tier B separate(티어 B 분리), Tier A+B combined(티어 A+B 합산) or explicit missing_required(필수 누락).
+- Runtime probe before closeout(마감 전 런타임 탐침): best-or-seed candidate(최선 또는 씨앗 후보) gets one narrow MT5 probe(MT5 탐침), unless exactly blocked(정확히 차단).
+- Claim boundary(주장 경계): only scout clue(탐색 단서), seed surface(씨앗 표면), runtime probe observation(런타임 탐침 관찰), preserved clue(보존 단서), negative memory(부정 기억), invalid setup(무효 설정), or blocked(차단).
+
+## Success/Failure Boundary(성공/실패 경계)
+
+Scout clue(탐색 단서): validation/OOS(검증/표본외) PF improves toward 2+, density stays near 5~10/day, DD improves toward below 10~15%, curve smoothness(곡선 매끄러움) improves, and ONNX parity(ONNX 동등성) is available.
+
+Seed surface(씨앗 표면): one lifecycle profile(생명주기 프로필) clearly reduces MT5/proxy DD or smoothness damage without collapsing density below 3/day.
+
+Negative memory(부정 기억): lifecycle-only repair(생명주기 단독 수리) creates density/PF/DD tradeoff(빈도/수익 팩터/손실폭 상충) or repeats F17's MT5 DD collapse(MT5 손실폭 붕괴).
+
+## Narrow Question(좁은 질문)
+
+Is this a valid new frontier hypothesis(새 전선 가설) after F17, or is it too close to prior lifecycle repair(기존 생명주기 수리) and should Codex open a different axis?

@@ -1588,3 +1588,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier17C_loss_cluster_firewall_runtime_probe_v1`: Frontier17(전선17) runtime probe(런타임 탐침). Effect(효과): loss-cluster firewall(손실 군집 방화벽)의 MT5 handoff(인계) 가능성을 확인합니다.
 <!-- frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1 -->
 - `frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1`: loss-cluster firewall profit persistence(손실 군집 방화벽 수익 지속) closed as negative memory(부정 기억). Effect(효과): native MT5 economics/DD(MT5 실행 경제성/손실폭) 실패를 반복 금지 단서로 남깁니다.
+<!-- frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1 -->
+- `IDEA-FR18-ASYMMETRIC-EXIT-LIFECYCLE-PROFIT-LOCK-ONNX-SCOUT`: `frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1` opens asymmetric exit lifecycle profit-lock ONNX scout(비대칭 청산 생명주기 수익 잠금 ONNX 탐색). Effect(효과): F17(전선17)의 entry firewall(진입 방화벽)을 반복하지 않고 lifecycle/execution surface(생명주기/실행 표면)를 새 가설로 시험합니다.
+<!-- frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1 -->
+- `frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1`: asymmetric exit lifecycle/profit lock(비대칭 청산 생명주기/수익 잠금) closed as negative memory(부정 기억). Effect(효과): same lifecycle parameter retuning(동일 생명주기 파라미터 재조정)을 반복하지 않습니다.

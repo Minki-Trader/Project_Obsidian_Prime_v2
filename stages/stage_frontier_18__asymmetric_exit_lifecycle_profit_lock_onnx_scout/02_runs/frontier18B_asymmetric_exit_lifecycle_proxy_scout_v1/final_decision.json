@@ -1,0 +1,194 @@
+﻿{
+  "created_at_utc": "2026-06-14T04:42:17Z",
+  "stage_id": "stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout",
+  "run_id": "frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1",
+  "run_number": "frontier18B",
+  "parent_run_id": "frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1",
+  "next_run_id": "frontier18C_asymmetric_exit_lifecycle_repair_or_closeout_decision_v1",
+  "status": "asymmetric_exit_lifecycle_no_forward_clue_no_authority",
+  "judgment": "negative_memory_candidate(부정 기억 후보)",
+  "strict_scout_clue_rows": 0,
+  "seed_surface_rows": 0,
+  "preserved_clue_rows": 0,
+  "candidate_row_count": 9,
+  "best_candidate_row": {
+    "candidate_id": "f18b_hold6_reverse_atr1p5_tp3p0__lr_plain__lifecycle",
+    "target_id": "f18b_hold6_reverse_atr1p5_tp3p0",
+    "model_id": "logreg_l2_c0p5_plain_argmax",
+    "model_instance_id": "f18b_entry_lr_plain",
+    "strict_scout_clue_pass": false,
+    "seed_surface_pass": false,
+    "preserved_clue_pass": false,
+    "lifecycle_score": 7.902311493958715,
+    "validation_profit_factor": 1.0387833995729927,
+    "validation_trades_per_day": 9.426966292134832,
+    "validation_dd_risk_percent": 8.872623279528657,
+    "validation_net_profit": 0.0781215684663134,
+    "validation_equity_trend_r2": 0.6700355248022569,
+    "oos_profit_factor": 0.9995299338454778,
+    "oos_trades_per_day": 10.587301587301587,
+    "oos_dd_risk_percent": 7.6068409523916465,
+    "oos_net_profit": -0.0006355617333938992,
+    "oos_equity_trend_r2": 0.24741843222147522,
+    "validation_oos_subperiod_worst_dd_risk_percent": 8.872623279528657,
+    "validation_oos_negative_subperiod_fraction": 0.4090909090909091,
+    "validation_oos_subperiod_min_trades_per_day": 4.157894736842105,
+    "parity_passed": true,
+    "onnx_path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/02_runs/frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1/models/f18b_entry_lr_plain/f18b_entry_lr_plain.onnx",
+    "onnx_sha256": "3a6dfda58440f9df260510dac93c78bfcdf5a10025c2c577aa2a7c5a6ebd159b",
+    "joblib_path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/02_runs/frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1/models/f18b_entry_lr_plain/f18b_entry_lr_plain.joblib",
+    "joblib_sha256": "612844949e6bf3cf494c82cf028ffbd54753cca934c5108ab0d740d681628ce4",
+    "validation_macro_f1": 0.4279358517610492,
+    "oos_macro_f1": 0.43391212292646325,
+    "pf_not_below_f17c_runtime_reference": false,
+    "dd_better_than_f17c_runtime_reference": true,
+    "signal_contract": "fixed_fwd12_argmax_entry_plus_pre_registered_lifecycle_exit(고정 fwd12 최대확률 진입과 사전 등록 생명주기 청산)"
+  },
+  "profile_count": 3,
+  "model_count": 3,
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "source_integrity": {
+    "data_source": {
+      "model_input_dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "raw_us100": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "raw_manifest": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+    },
+    "time_axis": "model timestamp(모델 타임스탬프) is matched to raw time_close_unix as broker_clock_close_key(브로커 시계 종가 키); timezone_status remains unresolved, so this is not a direct UTC market-session claim(직접 UTC 세션 주장 아님).",
+    "sample_scope": {
+      "symbol": "US100",
+      "timeframe": "M5",
+      "model_rows": 46650,
+      "raw_rows": 261345,
+      "start_timestamp": "2022-09-01 16:40:00+00:00",
+      "end_timestamp": "2026-04-13 22:00:00+00:00",
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "tier_a": "model input rows plus raw US100 OHLC(모델 입력 행 + 원천 US100 OHLC)",
+      "tier_b": "missing_required(필수 누락)"
+    },
+    "missing_or_duplicate_check": {
+      "model_duplicate_timestamps": 0,
+      "raw_duplicate_close_keys": 0,
+      "missing_raw_matches": 0,
+      "missing_future_paths": {
+        "h12": 0,
+        "h18": 0
+      }
+    },
+    "feature_label_boundary": "labels use only raw future OHLC after the current closed bar(현재 종료봉 이후 원천 미래 OHLC만 사용); feature_set_v2 columns are not loaded into label construction(피처 컬럼은 라벨 생성에 로드하지 않음).",
+    "split_boundary": "train split(학습 분할) only supplies the p90 scale; validation/OOS(검증/표본밖)는 평가 전용입니다.",
+    "leakage_risk": "path labels are oracle labels(미래 경로를 아는 라벨) and cannot be interpreted as runtime signals(런타임 신호). current bar high/low is excluded by starting at t+1(현재 봉 고저는 t+1 시작으로 제외).",
+    "data_hash_or_identity": {
+      "model_input_dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "raw_manifest_sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "fwd12_max_abs_diff_vs_model": 3.0035138820494467e-09,
+      "fwd12_p99_abs_diff_vs_model": 3.888873045809762e-10
+    },
+    "integrity_judgment": "usable_with_boundary(경계부 사용 가능)"
+  },
+  "stage_context": {
+    "stage_brief": {
+      "path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/00_spec/stage_brief.md",
+      "sha256": "1c93cec34dea2f8281e4995c7aba8b1275b58132af339cf84311359495271a98"
+    },
+    "profile_spec": {
+      "path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/00_spec/lifecycle_profile_spec.md",
+      "sha256": "63228b1fdc2614772a4c5febaa109a8c93aa78407a405b0bf215100b65165fdc"
+    },
+    "do_not_repeat": {
+      "path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/00_spec/do_not_repeat.md",
+      "sha256": "710c92ffde61e36cb6b5cba187a0a7eea5ead2be21141fef237d4778cbf2748d"
+    },
+    "frontier18a_report": {
+      "path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/03_reviews/frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1_report.md",
+      "sha256": "af912174998f945b0c0af19705036481c4c738194ef5713ea45b5c795dc5af44"
+    },
+    "frontier18a_summary": {
+      "path": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/02_runs/frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1/stage_open_summary.json",
+      "sha256": "cabe7ba69e5fb4c1147297eae66204762ef289f1e1465a05b88a446aa549f6bd"
+    },
+    "grok_stage_open_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-14_frontier18_stage_open/small_review/clean_output.md",
+      "sha256": "1815b4e5750f21894f9909f69e0fe546032927c1fe922350e887f11e39de9ceb"
+    },
+    "checks": {
+      "workspace_current_stage_matches": true,
+      "workspace_next_run_matches": true,
+      "profile_count_locked_to_three": true,
+      "profile_ids_in_spec": true,
+      "stage344_negative_memory_disclosed": true,
+      "stage337_negative_memory_disclosed": true,
+      "runtime_probe_guard_present": true,
+      "stage_open_grok_available": true
+    },
+    "stage_open_artifact_boundary": "tracked_stage_docs_plus_stage_open_summary_if_available(추적 단계 문서와 가능하면 단계 개방 요약 사용)"
+  },
+  "data_integrity": {
+    "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "time_axis": "US100 M5 closed-bar timestamps, UTC storage, New York calendar for grouping(US100 M5 종료봉 타임스탬프, UTC 저장, 뉴욕 달력 그룹)",
+    "sample_scope": "Tier A full-context fixed train/validation/OOS split(티어 A 전체 문맥 고정 학습/검증/표본외 분할)",
+    "missing_or_duplicate_check": "usable_with_boundary(경계부 사용 가능)",
+    "feature_label_boundary": "features closed at signal bar; lifecycle proxy uses future raw OHLC only for evaluation(피처는 신호봉 종료 기준, 생명주기 프록시는 평가용 미래 OHLC 사용)",
+    "split_boundary": "models fit train only; lifecycle profiles pre-registered before proxy result(모델은 학습 구간만 적합, 생명주기 프로필은 결과 전 사전 등록)",
+    "leakage_risk": "proxy exit path is evaluation path, not model input(프록시 청산 경로는 평가 경로이지 모델 입력 아님)",
+    "data_hash_or_identity": {
+      "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+    },
+    "integrity_judgment": "usable_with_proxy_boundary(프록시 경계 포함 사용 가능)"
+  },
+  "model_validation": {
+    "model_family": "fixed sklearn-to-ONNX class probability models(고정 sklearn-to-ONNX 분류 확률 모델)",
+    "target_and_label": "existing fwd12 label_class used only for entry seed(기존 fwd12 label_class를 진입 씨앗에만 사용)",
+    "split_method": "fixed train/validation/OOS split, no WFO yet(고정 학습/검증/표본외 분할, WFO 아직 없음)",
+    "selection_metric": "strict clue, seed surface, preserved clue, then lifecycle score(엄격 단서, 씨앗 표면, 보존 단서, 생명주기 점수 순)",
+    "secondary_metrics": "PF, density, DD, subperiod DD, negative subperiod fraction, ONNX parity(PF, 빈도, 손실폭, 하위기간 손실폭, 부정 하위기간 비율, ONNX 동등성)",
+    "threshold_policy": "argmax entry only; no score-rank density calibration(최대확률 진입만 사용, 점수 순위 빈도 보정 없음)",
+    "overfit_risk": "single proxy pass without WFO; next expensive check requires Grok review(WFO 없는 단일 프록시 회차, 비싼 검증 전 Grok 검토 필요)",
+    "runtime_risk": "Python lifecycle simulation is not MT5 runtime parity(파이썬 생명주기 시뮬레이션은 MT5 런타임 동등성 아님)",
+    "comparison_baseline": "F17 proxy/runtime observations are reference-only(F17 프록시/런타임 관찰은 참조 전용)",
+    "validation_judgment": "exploratory_scout_only(탐색 전용)",
+    "best_candidate": "f18b_hold6_reverse_atr1p5_tp3p0__lr_plain__lifecycle"
+  },
+  "artifact_lineage": {
+    "source_inputs": [
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/00_spec/stage_brief.md",
+      "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/00_spec/lifecycle_profile_spec.md",
+      "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/00_spec/do_not_repeat.md",
+      "docs/agent_control/grok_reviews/2026-06-14_frontier18_stage_open/small_review/clean_output.md"
+    ],
+    "producer": "stage_pipelines/stage_frontier_18/frontier18b_asymmetric_exit_lifecycle_proxy_scout.py",
+    "consumer": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/03_reviews/frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1_report.md",
+    "artifact_paths": [
+      "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/02_runs/frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1",
+      "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/03_reviews/frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1_report.md"
+    ],
+    "artifact_hashes": "run_manifest records evidence and generated model hashes(실행 목록이 근거와 생성 모델 해시를 기록)",
+    "registry_links": [
+      "docs/registers/run_registry.csv",
+      "docs/registers/alpha_run_ledger.csv",
+      "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/03_reviews/stage_run_ledger.csv"
+    ],
+    "availability": "small_evidence_force_trackable_models_ignored_with_manifest(작은 근거는 강제 추적 가능, 모델은 목록으로 추적)",
+    "lineage_judgment": "connected_with_boundary(경계 포함 연결)"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  },
+  "wfo_status": "not_run_requires_grok_pre_expensive_before_wfo_or_mt5(WFO/MT5 전 Grok 검토 필요)",
+  "mt5_status": "not_run_proxy_only_runtime_probe_required_before_closeout(프록시 전용, 마감 전 런타임 탐침 필요)"
+}

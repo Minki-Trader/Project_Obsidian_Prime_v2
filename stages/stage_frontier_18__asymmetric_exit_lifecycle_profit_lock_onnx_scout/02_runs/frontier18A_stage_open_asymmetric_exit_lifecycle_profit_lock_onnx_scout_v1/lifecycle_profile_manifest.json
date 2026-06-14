@@ -1,0 +1,31 @@
+﻿{
+  "profiles": [
+    {
+      "profile_id": "f18b_hold4_flat_close_atr1p2_tp2p4",
+      "max_hold_bars": 4,
+      "close_on_flat": true,
+      "reverse_on_opposite": false,
+      "atr_stop_multiplier": 1.2,
+      "atr_take_profit_multiplier": 2.4,
+      "intent": "short lifecycle with explicit profit lock(짧은 생명주기와 명시적 수익 잠금)"
+    },
+    {
+      "profile_id": "f18b_hold6_reverse_atr1p5_tp3p0",
+      "max_hold_bars": 6,
+      "close_on_flat": false,
+      "reverse_on_opposite": true,
+      "atr_stop_multiplier": 1.5,
+      "atr_take_profit_multiplier": 3.0,
+      "intent": "balanced lifecycle with opposite signal transition(균형 생명주기와 반대 신호 전환)"
+    },
+    {
+      "profile_id": "f18b_hold8_exit_risk_overlay_atr1p0_tp2p0",
+      "max_hold_bars": 8,
+      "close_on_flat": true,
+      "reverse_on_opposite": false,
+      "atr_stop_multiplier": 1.0,
+      "atr_take_profit_multiplier": 2.0,
+      "intent": "exit-risk overlay lane for early damage control(초기 손상 제어를 위한 청산 위험 덧씌움 축)"
+    }
+  ]
+}

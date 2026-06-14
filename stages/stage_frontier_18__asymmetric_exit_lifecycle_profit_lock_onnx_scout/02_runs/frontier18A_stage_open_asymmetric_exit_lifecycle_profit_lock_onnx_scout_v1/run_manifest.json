@@ -1,0 +1,219 @@
+﻿{
+  "created_at_utc": "2026-06-14T04:30:42Z",
+  "stage_id": "stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout",
+  "run_id": "frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1",
+  "run_number": "frontier18A",
+  "parent_run_id": "frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1",
+  "next_run_id": "frontier18B_asymmetric_exit_lifecycle_proxy_scout_v1",
+  "status": "opened_frontier18_asymmetric_exit_lifecycle_profit_lock_onnx_scout_no_authority",
+  "judgment": "stage_opened_after_grok_review_with_lifecycle_profile_locks_and_runtime_probe_obligation_no_authority",
+  "hypothesis": "Asymmetric exit lifecycle(비대칭 청산 생명주기) and profit-lock policy(수익 잠금 정책) can improve PF/DD/smoothness(수익 팩터/손실폭/매끄러움) for moderate ONNX entry signals(중간 품질 ONNX 진입 신호) without reusing F17 loss-cluster firewall alpha(전선17 손실 군집 방화벽 알파).",
+  "decision_use": "Open a bounded proxy scout(제한된 프록시 탐색) for lifecycle profiles(생명주기 프로필), not a completion or runtime authority claim(완성 또는 런타임 권위 주장 아님).",
+  "comparison_baseline": "F17B proxy and F17C MT5 runtime observation(전선17B 프록시와 전선17C MT5 런타임 관찰), reference only(참조 전용).",
+  "control_variables": [
+    "US100 M5 FPMarkets data contract(US100 5분봉 FPMarkets 데이터 계약)",
+    "closed-bar inference(닫힌 봉 추론)",
+    "58-feature order contract(58개 피처 순서 계약)",
+    "one concurrent position max(동시 포지션 1개)",
+    "fixed 0.1 lot for scout runtime probe(탐색 런타임 탐침 고정 0.1랏)"
+  ],
+  "changed_variables": [
+    "max hold bars(최대 보유 봉)",
+    "flat/opposite exit behavior(중립/반대 신호 청산 동작)",
+    "ATR stop/take-profit bracket(ATR 손절/익절 괄호)",
+    "entry-known exit-risk overlay when available(가능하면 진입 시점에 아는 청산 위험 덧씌움)"
+  ],
+  "sample_scope": "Tier A full-context sample first(티어 A 전체 문맥 표본 우선), Tier B and combined records explicit if missing(티어 B와 합산은 누락 시 명시).",
+  "success_criteria": {
+    "scout_clue": "validation/OOS PF moves toward 2+, density stays near 5~10/day, DD improves toward 10~15%, and smoothness improves(검증/표본외 수익 팩터 2+ 방향, 일 5~10회 근처, 손실폭 10~15% 방향, 매끄러움 개선).",
+    "seed_surface": "a lifecycle profile reduces proxy or MT5 DD/smoothness damage without density below 3/day(생명주기 프로필이 밀도 3/day 미만 붕괴 없이 프록시 또는 MT5 손실폭/매끄러움 손상을 줄임).",
+    "runtime_probe_obligation": "one narrow MT5 runtime probe before closeout or exact blocked reason(마감 전 좁은 MT5 런타임 탐침 1회 또는 정확한 차단 사유)."
+  },
+  "failure_criteria": [
+    "global exit repair damages net/PF/expectancy like Stage344(전역 청산 수리가 344단계처럼 순수익/수익 팩터/기대값 훼손)",
+    "lifecycle-aware proxy clears parity but cost/direction failure remains like Stage337(생명주기 인식 프록시가 동등성은 맞지만 337단계처럼 비용/방향 실패 유지)",
+    "density/PF/DD tradeoff repeats F17 MT5 collapse(빈도/수익 팩터/손실폭 상충이 전선17 MT5 붕괴 반복)"
+  ],
+  "invalid_conditions": [
+    "validation/OOS lifecycle retuning(검증/표본외 생명주기 재조정)",
+    "F17 loss-cluster firewall alpha reused as main hypothesis(전선17 손실 군집 방화벽 알파를 주 가설로 재사용)",
+    "current-bar or future outcome leakage(현재봉 또는 미래 결과 누수)"
+  ],
+  "stop_conditions": [
+    "strict scout clue or seed surface found, then pre-expensive Grok review before MT5(WFO/MT5 전 그록 검토)",
+    "no seed after pre-registered profiles, then repair/closeout decision(사전 등록 프로필 후 씨앗 없음이면 수리/마감 결정)",
+    "runtime claim would be needed, then MT5 probe attempted or exact blocked reason recorded(런타임 주장이 필요하면 MT5 탐침 시도 또는 정확한 차단 기록)"
+  ],
+  "evidence_plan": [
+    "stage open summary and manifests(단계 개방 요약과 목록)",
+    "proxy profile metrics by split(분할별 프록시 프로필 지표)",
+    "Tier A/B/combined ledger rows(티어 A/B/합산 장부 행)",
+    "ONNX parity when a model artifact is created(모델 산출물 생성 시 ONNX 동등성)",
+    "MT5 runtime probe report before closeout(마감 전 MT5 런타임 탐침 보고서)"
+  ],
+  "data_integrity": {
+    "data_source": "existing FPMarkets v2 US100 M5 model input dataset(기존 FPMarkets v2 US100 5분봉 모델 입력 데이터셋)",
+    "time_axis": "closed-bar broker-clock alignment plus project time-axis policy(닫힌 봉 브로커 시계 정렬과 프로젝트 시간축 정책)",
+    "feature_label_boundary": "lifecycle parameters are train-only or pre-registered; no future outcome in runtime rules(생명주기 파라미터는 학습 전용 또는 사전 등록, 런타임 규칙에 미래 결과 없음)",
+    "split_boundary": "train/validation/OOS chronological split(시간순 학습/검증/표본외 분할)",
+    "integrity_judgment": "usable_with_boundary(경계 포함 사용 가능)"
+  },
+  "model_validation": {
+    "model_family": "existing ONNX-compatible classifier family to be chosen in Frontier18B(전선18B에서 선택할 ONNX 호환 분류기 계열)",
+    "target_and_label": "entry signal unchanged at stage open; lifecycle decision surface changed(단계 개방에서는 진입 신호 유지, 생명주기 결정 표면 변경)",
+    "selection_metric": "joint PF/DD/density/smoothness proxy, not single metric(수익 팩터/손실폭/빈도/매끄러움 동시 프록시, 단일 지표 아님)",
+    "threshold_policy": "pre-registered or train-only(사전 등록 또는 학습 전용)",
+    "validation_judgment": "exploratory_stage_open(탐색 단계 개방)"
+  },
+  "lifecycle_profiles": [
+    {
+      "profile_id": "f18b_hold4_flat_close_atr1p2_tp2p4",
+      "max_hold_bars": 4,
+      "close_on_flat": true,
+      "reverse_on_opposite": false,
+      "atr_stop_multiplier": 1.2,
+      "atr_take_profit_multiplier": 2.4,
+      "intent": "short lifecycle with explicit profit lock(짧은 생명주기와 명시적 수익 잠금)"
+    },
+    {
+      "profile_id": "f18b_hold6_reverse_atr1p5_tp3p0",
+      "max_hold_bars": 6,
+      "close_on_flat": false,
+      "reverse_on_opposite": true,
+      "atr_stop_multiplier": 1.5,
+      "atr_take_profit_multiplier": 3.0,
+      "intent": "balanced lifecycle with opposite signal transition(균형 생명주기와 반대 신호 전환)"
+    },
+    {
+      "profile_id": "f18b_hold8_exit_risk_overlay_atr1p0_tp2p0",
+      "max_hold_bars": 8,
+      "close_on_flat": true,
+      "reverse_on_opposite": false,
+      "atr_stop_multiplier": 1.0,
+      "atr_take_profit_multiplier": 2.0,
+      "intent": "exit-risk overlay lane for early damage control(초기 손상 제어를 위한 청산 위험 덧씌움 축)"
+    }
+  ],
+  "guards": [
+    {
+      "guard_id": "reference_not_inheritance",
+      "rule": "No old winner, baseline, promotion, runtime authority, live readiness, or Goal Achieve is imported(이전 승자/기준선/승격/런타임 권위/실거래 준비/목표 달성 반입 금지)."
+    },
+    {
+      "guard_id": "no_f17_alpha_reuse",
+      "rule": "RuntimeVetoTape may be infrastructure only; loss-cluster firewall alpha is not the main hypothesis(RuntimeVetoTape는 인프라만, 손실 군집 방화벽 알파는 주 가설 금지)."
+    },
+    {
+      "guard_id": "profile_cap_exactly_three",
+      "rule": "Exactly three lifecycle profiles before Frontier18B metrics(전선18B 지표 전 생명주기 프로필 3개 고정)."
+    },
+    {
+      "guard_id": "train_only_profile_policy",
+      "rule": "No validation/OOS retuning of lifecycle parameters(검증/표본외 생명주기 파라미터 재조정 금지)."
+    },
+    {
+      "guard_id": "stage344_exit_overlay_disclosure",
+      "rule": "Stage344 exit-overlay failure is prior evidence only and must be disclosed(344단계 청산 오버레이 실패는 이전 근거 전용으로 공개)."
+    },
+    {
+      "guard_id": "stage337_lifecycle_failure_disclosure",
+      "rule": "Stage337 lifecycle-aware MT5 probe and cost2 failure are prior evidence only(337단계 생명주기 인식 MT5 탐침과 비용2 실패는 이전 근거 전용)."
+    },
+    {
+      "guard_id": "tier_paired_records",
+      "rule": "Record Tier A, Tier B, and Tier A+B or explicit missing_required(티어 A, 티어 B, 티어 A+B 또는 명시적 필수 누락 기록)."
+    },
+    {
+      "guard_id": "runtime_probe_before_closeout",
+      "rule": "Run one narrow MT5 runtime probe before closeout or record exact blocker(마감 전 좁은 MT5 런타임 탐침 1회 또는 정확한 차단 기록)."
+    },
+    {
+      "guard_id": "claim_boundary_lock",
+      "rule": "Only scout clue, seed surface, runtime probe observation, preserved clue, negative memory, invalid setup, or blocked may be claimed(탐색 단서/씨앗 표면/런타임 탐침 관찰/보존 단서/부정 기억/무효 설정/차단만 주장)."
+    }
+  ],
+  "grok_packet": "docs/agent_control/grok_reviews/2026-06-14_frontier18_stage_open/small_review",
+  "grok_output": "docs/agent_control/grok_reviews/2026-06-14_frontier18_stage_open/small_review/clean_output.md",
+  "grok_prompt_hash": "348296cecd16b21b7eba9cc8b637624c1fc2a0f66579fa94fee39c9b22322c65",
+  "grok_duration_seconds": 93.647015,
+  "grok_classification": "accepted(수용)",
+  "local_verification": {
+    "checks": {
+      "workspace_points_to_frontier18A": true,
+      "f17_closed_negative_memory": true,
+      "f17_runtime_signal_matched_but_dd_failed": true,
+      "f17c_runtime_probe_completed": true,
+      "stage344_exit_overlay_memory_found": true,
+      "stage337_lifecycle_memory_found": true,
+      "ea_lifecycle_inputs_available": true,
+      "grok_success": true,
+      "grok_accepted": true,
+      "grok_axis_supported": true,
+      "grok_stage344_requirement_supported": true,
+      "grok_runtime_probe_supported": true,
+      "grok_no_unexpected_top_level_artifacts": true,
+      "grok_forbidden_claim_clean": true,
+      "profile_cap_is_three": true,
+      "required_guard_ids_present": true
+    },
+    "preflight_warnings": [
+      "prompt_length_exceeds_small_limit"
+    ],
+    "judgment": "pass_with_boundary(경계 포함 통과)"
+  },
+  "claim_boundary": {
+    "completion": "not_claimed(주장 없음)",
+    "selected_baseline": "not_claimed(주장 없음)",
+    "operating_promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  },
+  "script_path": "stage_pipelines/stage_frontier_18/materialize_frontier18a_stage_open.py",
+  "script_sha256": "c5c25c39c2444cba529e0076937e74dc46b10abf2e90e02f95338178186cfb08",
+  "inputs": {
+    "frontier17_selection": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/04_selected/selection_status.md",
+      "sha256": "3341fbe14eb0bdff0b2358359e4b61d49a9960a48b3edaa3cf34dca72145b0ff"
+    },
+    "frontier17c_runtime_report": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17C_loss_cluster_firewall_runtime_probe_v1_report.md",
+      "sha256": "61c6aea07a40eae2ec55313d6ef1dd369e42d04756690dd5fcd1bb5aa4676444"
+    },
+    "frontier17d_closeout_report": {
+      "path": "stages/stage_frontier_17__loss_cluster_firewall_profit_persistence_onnx_scout/03_reviews/frontier17D_loss_cluster_firewall_repair_or_closeout_decision_v1_report.md",
+      "sha256": "4aaba61d823c349872e4ace3639fa2eb5461f70c3c22ef7591a4847f20be51ff"
+    },
+    "negative_result_register": {
+      "path": "docs/registers/negative_result_register.md",
+      "sha256": "35ecb8d4e3f7c6c565a070d15522dacdfcb4b44ea3c348a627c56fc60478c681"
+    },
+    "idea_register": {
+      "path": "docs/registers/idea_registry.md",
+      "sha256": "766c055f46cdc9e1f75d917cfc9dd21aa5c10b36959a919f1180421080faac32"
+    },
+    "alpha_run_ledger": {
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "sha256": "54f811939bb4b0eb8137976fcbecf8a61a92dbf3e0a4d2533ad4a45fd125b2d2"
+    },
+    "run_registry": {
+      "path": "docs/registers/run_registry.csv",
+      "sha256": "047de56cff7548486536e2d773536fb6f0a11b8ff2f028cc6f958bbe73ee42e7"
+    },
+    "ea_entrypoint": {
+      "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "sha256": "322772eb36777c9570f3fe7a6f0c808b3c929a62d2cae96c44e7d2c08b8a9180"
+    },
+    "grok_stage_open_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-14_frontier18_stage_open/small_review/clean_output.md",
+      "sha256": "1815b4e5750f21894f9909f69e0fe546032927c1fe922350e887f11e39de9ceb"
+    }
+  },
+  "outputs": {
+    "stage_open_summary": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/02_runs/frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1/stage_open_summary.json",
+    "lifecycle_profile_manifest": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/02_runs/frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1/lifecycle_profile_manifest.json",
+    "guard_manifest": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/02_runs/frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1/guard_manifest.json",
+    "report": "stages/stage_frontier_18__asymmetric_exit_lifecycle_profit_lock_onnx_scout/03_reviews/frontier18A_stage_open_asymmetric_exit_lifecycle_profit_lock_onnx_scout_v1_report.md",
+    "decision": "docs/decisions/2026-06-14_stage_frontier_18_asymmetric_exit_lifecycle_profit_lock_onnx_scout_open.md"
+  }
+}
