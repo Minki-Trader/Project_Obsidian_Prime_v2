@@ -98,3 +98,12 @@ Stage 04(4단계)의 정식 58 feature(58개 피처) 경로는 `MT5 price-proxy 
 - Stage 09(9단계) handoff packet(인계 묶음)을 alpha result(알파 결과)로 말하지 않는다.
 - Stage 10(10단계)이 active(활성)라고 해서 alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격)을 주장하지 않는다.
 - Stage 11(11단계) scaffold(뼈대)를 Stage 11 run result(실행 결과), alpha quality(알파 품질), runtime authority(런타임 권위), operating promotion(운영 승격)으로 말하지 않는다.
+
+## Frontier Pointer(전선 포인터)
+
+- last_closed_stage(마지막 종료 단계): `stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout`
+- last_closed_run(마지막 종료 실행): `frontier41D_stage_closeout_exit_shape_source_v1`
+- next_stage(다음 단계): `stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative`
+- next_run(다음 실행): `frontier42A_stage_open_short_pf_edge_timing_source_hypothesis_design_v1`
+
+F41 preserved clue/negative memory(보존 단서/부정 기억)는 F40 entry(진입)를 고정한 상태에서 exit shape(청산 형태)만으로 final gate(최종 게이트)에 충분히 가까워지지 않았다는 점이다.

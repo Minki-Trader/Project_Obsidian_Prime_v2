@@ -1,0 +1,410 @@
+{
+  "stage_id": "stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout",
+  "source_stage_id": "stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative",
+  "entry_source_limit": 12,
+  "mutation_policy": "entry masks are frozen from F40 scout rows; F41 may vary exit shape only.",
+  "same_entry_attribution_lock": "every exit arm keeps the same timestamp hashes for each source and split.",
+  "artifacts": {
+    "f40_top_forward": {
+      "path": "stages/stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative/02_runs/frontier40D_stage_closeout_non_score_source_v1/top_forward_diagnostic.csv",
+      "sha256": "a59f1c561453d4d4074d8a560a374ddb6195f8e0f955d7657d94a99f20efe155"
+    },
+    "f40_condition_pool": {
+      "path": "stages/stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative/02_runs/frontier40B_raw_feature_state_pocket_proxy_v1/raw_feature_condition_pool.csv",
+      "sha256": "c311cbdc7289c3ee464b9d1d29465579fa382e901b68d58922ce9113983ec950"
+    },
+    "dataset": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    "feature_order": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    }
+  },
+  "frame_rows": 46650,
+  "sources": [
+    {
+      "source_rank": 1,
+      "candidate_id": "f40b_0001",
+      "condition_ids": [
+        "f40cond_0002",
+        "f40cond_0014"
+      ],
+      "rule_definition": "vix_zscore_20 >= q75 & ppo_hist_12_26_9 <= q25",
+      "features": "vix_zscore_20|ppo_hist_12_26_9",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 3813,
+        "validation": 1329,
+        "oos": 1046
+      },
+      "entry_hash_by_split": {
+        "train": "3e5af59e5591d22e24175cbd5ed8eb24f2153837e7d53bc5bf5683673e561998",
+        "validation": "3e61409a64abe425c49b727a3cf49005313e02443acaa09c4ae5d783ccad3dce",
+        "oos": "275e2d2140734991b2424062cc46e3fb06e7d95ec03ab905d50b49b6c7bf21fa"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.1535181385579727,
+        "oos_profit_factor": 1.158108543633008,
+        "validation_trades_per_day": 7.262295081967213,
+        "oos_trades_per_day": 7.984732824427481,
+        "validation_dd_risk": 11.866723092387376,
+        "oos_dd_risk": 13.517069933948711,
+        "stop_cap_log_return": 0.0015595155628677,
+        "take_cap_log_return": 0.0052994884799248
+      }
+    },
+    {
+      "source_rank": 2,
+      "candidate_id": "f40b_0007",
+      "condition_ids": [
+        "f40cond_0013",
+        "f40cond_0014"
+      ],
+      "rule_definition": "vix_zscore_20 >= q85 & ppo_hist_12_26_9 <= q25",
+      "features": "vix_zscore_20|ppo_hist_12_26_9",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 2598,
+        "validation": 898,
+        "oos": 693
+      },
+      "entry_hash_by_split": {
+        "train": "206db9f5961c6a0417fbb3b2102352443d625e8f6eb4b69cb28c6739e5bfae10",
+        "validation": "313cdb2e8123d7b72f6a53f056f3f3463b92ced5c62953196298c0a9da5c487c",
+        "oos": "dfc0e062fcd594a0a8aeb3d1bf6b21f27ba3a36c1adb38942a7944ec9168d599"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.170706868930472,
+        "oos_profit_factor": 1.2556394069839114,
+        "validation_trades_per_day": 4.907103825136612,
+        "oos_trades_per_day": 5.290076335877862,
+        "validation_dd_risk": 9.68285561225698,
+        "oos_dd_risk": 9.50894936489678,
+        "stop_cap_log_return": 0.0014326036463533,
+        "take_cap_log_return": 0.0052685386333285
+      }
+    },
+    {
+      "source_rank": 3,
+      "candidate_id": "f40b_0009",
+      "condition_ids": [
+        "f40cond_0019",
+        "f40cond_0021"
+      ],
+      "rule_definition": "bb_position_20 <= q25 & rsi_14_slope_3 <= q15",
+      "features": "bb_position_20|rsi_14_slope_3",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 2294,
+        "validation": 801,
+        "oos": 541
+      },
+      "entry_hash_by_split": {
+        "train": "061e0999fc616a1b711523dcc18c765770a3747a739c42cb8a54a1316c25bc64",
+        "validation": "59e01987bf22053bbf4964a38ced8e84c0f8d1bb4190ed7611b9955e53144cc4",
+        "oos": "ad62ecea839e73f77dbf8be0d5f9f2d8f63a8073f8179e26222b4ee4c19b9d00"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.2775188056187268,
+        "oos_profit_factor": 1.2102840492100426,
+        "validation_trades_per_day": 4.377049180327869,
+        "oos_trades_per_day": 4.129770992366412,
+        "validation_dd_risk": 6.204044612899118,
+        "oos_dd_risk": 3.690091656383898,
+        "stop_cap_log_return": 0.0014481622394596,
+        "take_cap_log_return": 0.0049696340202065
+      }
+    },
+    {
+      "source_rank": 4,
+      "candidate_id": "f40b_0010",
+      "condition_ids": [
+        "f40cond_0021"
+      ],
+      "rule_definition": "rsi_14_slope_3 <= q15",
+      "features": "rsi_14_slope_3",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 4384,
+        "validation": 1470,
+        "oos": 1032
+      },
+      "entry_hash_by_split": {
+        "train": "662b23736305003b8e03666139585f8cb092c8c0862708d95cdc2efc53058564",
+        "validation": "78015839a34825ad45bdd8d3c5eebcf194d23a66b11aab320744f5c5278ea79f",
+        "oos": "89d805f39a9dd577364363ac49c6b2883389687d6df1e0c3b22ddc20ee009a60"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.125717658938985,
+        "oos_profit_factor": 1.0318450740054657,
+        "validation_trades_per_day": 8.032786885245901,
+        "oos_trades_per_day": 7.877862595419847,
+        "validation_dd_risk": 6.5006078879217615,
+        "oos_dd_risk": 6.665210984244519,
+        "stop_cap_log_return": 0.0010697253988393,
+        "take_cap_log_return": 0.0062303662752721
+      }
+    },
+    {
+      "source_rank": 5,
+      "candidate_id": "f40b_0011",
+      "condition_ids": [
+        "f40cond_0002",
+        "f40cond_0010"
+      ],
+      "rule_definition": "vix_zscore_20 >= q75 & rsi_14 <= q15",
+      "features": "vix_zscore_20|rsi_14",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 3071,
+        "validation": 1044,
+        "oos": 822
+      },
+      "entry_hash_by_split": {
+        "train": "834c3c7625484c18f7f26774b46b0dfb51ad714f9c605717b7723c566f13fb18",
+        "validation": "acf51933a44f5efc252e34f8b780b3b4d916e6994e33722538ebe4225749a731",
+        "oos": "08aa42edb5fa3742afd93b035b62405cc227d067a5811cb2e696528a6cd05c1c"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.1147781996077208,
+        "oos_profit_factor": 1.2053870007686915,
+        "validation_trades_per_day": 5.704918032786885,
+        "oos_trades_per_day": 6.274809160305344,
+        "validation_dd_risk": 17.09880725372832,
+        "oos_dd_risk": 7.856351801640072,
+        "stop_cap_log_return": 0.0015486183141266,
+        "take_cap_log_return": 0.0062659287056518
+      }
+    },
+    {
+      "source_rank": 6,
+      "candidate_id": "f40b_0012",
+      "condition_ids": [
+        "f40cond_0002",
+        "f40cond_0011"
+      ],
+      "rule_definition": "vix_zscore_20 >= q75 & rsi_14_minus_50 <= q15",
+      "features": "vix_zscore_20|rsi_14_minus_50",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 3071,
+        "validation": 1044,
+        "oos": 822
+      },
+      "entry_hash_by_split": {
+        "train": "834c3c7625484c18f7f26774b46b0dfb51ad714f9c605717b7723c566f13fb18",
+        "validation": "acf51933a44f5efc252e34f8b780b3b4d916e6994e33722538ebe4225749a731",
+        "oos": "08aa42edb5fa3742afd93b035b62405cc227d067a5811cb2e696528a6cd05c1c"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.1147781996077208,
+        "oos_profit_factor": 1.2053870007686915,
+        "validation_trades_per_day": 5.704918032786885,
+        "oos_trades_per_day": 6.274809160305344,
+        "validation_dd_risk": 17.09880725372832,
+        "oos_dd_risk": 7.856351801640072,
+        "stop_cap_log_return": 0.0015486183141266,
+        "take_cap_log_return": 0.0062659287056518
+      }
+    },
+    {
+      "source_rank": 7,
+      "candidate_id": "f40b_0013",
+      "condition_ids": [
+        "f40cond_0001"
+      ],
+      "rule_definition": "ppo_hist_12_26_9 <= q15",
+      "features": "ppo_hist_12_26_9",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 4384,
+        "validation": 1360,
+        "oos": 941
+      },
+      "entry_hash_by_split": {
+        "train": "7b49a3c1ba47ca4ae28c58b0534ad78992e36dc9ecf71c21faaa9d8f54bfa28e",
+        "validation": "a5692cf52b72cfc665185fe7eba2b4bf2290f4502d0004004ca171462916f69c",
+        "oos": "20bd9192344ceb17c557b2b9a5735ac71cd58c10d3742382e334fc9caaaab3f2"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.0686158135016084,
+        "oos_profit_factor": 1.0761338525311208,
+        "validation_trades_per_day": 7.4316939890710385,
+        "oos_trades_per_day": 7.183206106870229,
+        "validation_dd_risk": 9.04132990862091,
+        "oos_dd_risk": 9.864730251568387,
+        "stop_cap_log_return": 0.0010909878610911,
+        "take_cap_log_return": 0.0072042764429323
+      }
+    },
+    {
+      "source_rank": 8,
+      "candidate_id": "f40b_0019",
+      "condition_ids": [
+        "f40cond_0012",
+        "f40cond_0015"
+      ],
+      "rule_definition": "di_spread_14 <= q25 & roc_12 <= q25",
+      "features": "di_spread_14|roc_12",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 5196,
+        "validation": 1607,
+        "oos": 1223
+      },
+      "entry_hash_by_split": {
+        "train": "b5b415d442da53aa4f3129694cff50950cd8918e74a734d007a7a9458e5db8c8",
+        "validation": "40c6dda55b2c8a11be34ac006459a72613793b0793088c4fe89685ff67bf8636",
+        "oos": "e2f1e5f8f7cbc15cf59e3f7d0553724ddf5c5894f389deebe11614971d4041b2"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.0513907077910565,
+        "oos_profit_factor": 1.2015204234983654,
+        "validation_trades_per_day": 8.781420765027322,
+        "oos_trades_per_day": 9.33587786259542,
+        "validation_dd_risk": 9.594134493277007,
+        "oos_dd_risk": 8.461591245554423,
+        "stop_cap_log_return": 0.0013626028127885,
+        "take_cap_log_return": 0.0041197585888679
+      }
+    },
+    {
+      "source_rank": 9,
+      "candidate_id": "f40b_0020",
+      "condition_ids": [
+        "f40cond_0001",
+        "f40cond_0012"
+      ],
+      "rule_definition": "ppo_hist_12_26_9 <= q15 & di_spread_14 <= q25",
+      "features": "ppo_hist_12_26_9|di_spread_14",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 2887,
+        "validation": 903,
+        "oos": 668
+      },
+      "entry_hash_by_split": {
+        "train": "299041f519ad10f97fad901c2ed4c8e6248d181176accf74d3af65eb7a8484a7",
+        "validation": "41ca504e456a2754427702fe66b8e2a2628758166a6154ac9b762622ba0bc87d",
+        "oos": "8b69c0fddfc575341753d556e3169fdf02aefb66674522566891ca81c4781e84"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.0652931931395242,
+        "oos_profit_factor": 1.2033836382070917,
+        "validation_trades_per_day": 4.934426229508197,
+        "oos_trades_per_day": 5.099236641221374,
+        "validation_dd_risk": 7.161847404037092,
+        "oos_dd_risk": 5.101050544355501,
+        "stop_cap_log_return": 0.001427336603137,
+        "take_cap_log_return": 0.0047696416321314
+      }
+    },
+    {
+      "source_rank": 10,
+      "candidate_id": "f40b_0021",
+      "condition_ids": [
+        "f40cond_0002",
+        "f40cond_0015"
+      ],
+      "rule_definition": "vix_zscore_20 >= q75 & roc_12 <= q25",
+      "features": "vix_zscore_20|roc_12",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 4214,
+        "validation": 1382,
+        "oos": 1111
+      },
+      "entry_hash_by_split": {
+        "train": "fb904396dd0d488f6ff18c599e492f7ac76c7bb42021a67e3439cfc151d08637",
+        "validation": "9e7c2b4b54bc90382577a715d30910e473365114407e94d0c65c46caea34f6f3",
+        "oos": "61908ab9df7827eb392aa5d45f7529c4874a5377eb541dc35013199ce37b0b3a"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.1020648599788303,
+        "oos_profit_factor": 1.0821602619739137,
+        "validation_trades_per_day": 7.551912568306011,
+        "oos_trades_per_day": 8.48091603053435,
+        "validation_dd_risk": 9.181598654162126,
+        "oos_dd_risk": 12.79785012828466,
+        "stop_cap_log_return": 0.001549321851509,
+        "take_cap_log_return": 0.0063935183063974
+      }
+    },
+    {
+      "source_rank": 11,
+      "candidate_id": "f40b_0022",
+      "condition_ids": [
+        "f40cond_0002",
+        "f40cond_0012"
+      ],
+      "rule_definition": "vix_zscore_20 >= q75 & di_spread_14 <= q25",
+      "features": "vix_zscore_20|di_spread_14",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 4173,
+        "validation": 1388,
+        "oos": 1106
+      },
+      "entry_hash_by_split": {
+        "train": "e67de7ba9f7ca28dc2423078d37e2aa6358ecd6a1bcc3888e0071e55830731c2",
+        "validation": "127c556c912c5c81de0eed15b491c6df7970d0a6f47d947a706c94195fdd9e4b",
+        "oos": "ac3c198274e69c708008bfc117bef8e8c5e03953b30c33ee434bfaaf836a5362"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.1098204177507038,
+        "oos_profit_factor": 1.0379972888629665,
+        "validation_trades_per_day": 7.584699453551913,
+        "oos_trades_per_day": 8.442748091603054,
+        "validation_dd_risk": 6.591343588123822,
+        "oos_dd_risk": 8.063546866026417,
+        "stop_cap_log_return": 0.0011324108423181,
+        "take_cap_log_return": 0.0040030177818826
+      }
+    },
+    {
+      "source_rank": 12,
+      "candidate_id": "f40b_0032",
+      "condition_ids": [
+        "f40cond_0002",
+        "f40cond_0016"
+      ],
+      "rule_definition": "vix_zscore_20 >= q75 & vortex_indicator <= q25",
+      "features": "vix_zscore_20|vortex_indicator",
+      "side": "short",
+      "side_value": -1,
+      "split_counts": {
+        "train": 4044,
+        "validation": 1348,
+        "oos": 1081
+      },
+      "entry_hash_by_split": {
+        "train": "d5636efc9ff96d308e4b3550ae61bfaff0bf5aa28d63789eec9c62cb8f7f570c",
+        "validation": "ba4932462c2eb61f29d2872bc70156b581c2621e874867cda37a806d6efa14b9",
+        "oos": "e229f1c669caef698a4206708930cdd20c387a2a278910f2bc9fa3c7b8496938"
+      },
+      "f40_reference": {
+        "validation_profit_factor": 1.0892388888052775,
+        "oos_profit_factor": 1.0578806865303,
+        "validation_trades_per_day": 7.366120218579235,
+        "oos_trades_per_day": 8.251908396946565,
+        "validation_dd_risk": 7.364459881923491,
+        "oos_dd_risk": 8.61452464525858,
+        "stop_cap_log_return": 0.0011313382539969,
+        "take_cap_log_return": 0.0040822499146848
+      }
+    }
+  ]
+}

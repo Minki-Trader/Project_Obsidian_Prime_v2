@@ -1,11 +1,10 @@
-﻿# Current Working State(현재 작업 상태)
-
-Frontier41(F41, 전선 41단계)이 `preserved_clue_negative_memory`로 닫혔다.
+﻿# Selection Status(선택 상태)
 
 - stage(단계): `stage_frontier_41__short_pf_edge_exit_shape_source_pivot_after_f40_raw_pocket_scout`
 - run(실행): `frontier41D_stage_closeout_exit_shape_source_v1`
+- closeout_class(마감 분류): `preserved_clue_negative_memory`
 - runtime_probe_status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f41_exit_shape_proxy`
 - next_stage(다음 단계): `stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative`
 - next_run(다음 실행): `frontier42A_stage_open_short_pf_edge_timing_source_hypothesis_design_v1`
 
-Claim boundary(주장 경계): completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)를 주장하지 않는다.
+No completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), or live readiness(실거래 준비) is claimed.
