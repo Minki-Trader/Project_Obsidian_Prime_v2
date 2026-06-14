@@ -1013,3 +1013,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - `frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1__density_transfer_negative_memory`: Daily/session opportunity-budget labels(일/세션별 기회 예산 라벨)은 label-side density(라벨 쪽 밀도)를 만들었지만 plain argmax ONNX(평범 최대확률 온엑스)로 model-side density(모델 쪽 밀도)를 전달하지 못했습니다. Effect(효과): 같은 quota/flat subset repair(할당량/평면 부분 표본 수리)를 반복하지 않습니다.
 <!-- frontier15C_score_threshold_density_repair_or_closeout_decision_v1__score_threshold_edge_quality_negative_memory -->
 - `frontier15C_score_threshold_density_repair_or_closeout_decision_v1__score_threshold_edge_quality_negative_memory`: Probability score threshold(확률 점수 임계값) alone(단독) did not create joint edge quality/PF/DD/subperiod stability(엣지 품질/수익 팩터/손실폭/하위기간 안정성). Effect(효과): 같은 9-cell threshold grid(9칸 임계값 격자) 확장이나 validation-guided filtering(검증 유도 필터링)을 반복하지 않습니다. Reopen condition(재개 조건): 새 edge-quality/risk mechanism(엣지 품질/위험 메커니즘)이 density transfer(빈도 전이)를 입력 단서로만 사용할 때.
+<!-- frontier16C_edge_quality_risk_repair_or_closeout_decision_v1__edge_quality_risk_veto_negative_memory -->
+<!-- frontier16C_edge_quality_risk_repair_or_closeout_decision_v1__edge_quality_risk_veto_negative_memory -->
+## frontier16C_edge_quality_risk_repair_or_closeout_decision_v1 Frontier16 edge-quality risk-veto negative memory(프론티어16 엣지 품질 위험 배제 부정 기억)
+
+- subject(대상): locked edge_margin target8(고정 엣지 마진 목표8) + 3 risk-quality labels(위험 품질 라벨 3개)
+- judgment(판정): `negative_memory_no_forward_clue(전진 단서 없는 부정 기억)`
+- evidence(근거): best RF validation/OOS PF-density-DD(최고 랜덤포레스트 검증/표본밖 수익 팩터-빈도-손실폭) `1.06795/5.65574/12.9599%` and `0.942216/5.45802/12.8032%`
+- do_not_repeat(반복 금지): same 3 labels plus locked edge_margin target8(같은 3개 라벨 + 고정 엣지 마진 목표8), density/DD near miss as preserved clue(빈도/손실폭 근접 실패를 보존 단서로 승격)
+- reopen_condition(재개 조건): new hypothesis(새 가설)가 PF and split stability(수익 팩터와 분할 안정성)를 직접 설계할 때만 재개
+- report(보고서): `stages/stage_frontier_16__edge_quality_risk_veto_density_transfer_onnx_scout/03_reviews/frontier16C_edge_quality_risk_repair_or_closeout_decision_v1_report.md`
