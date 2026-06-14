@@ -7064,3 +7064,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T12:58:34Z: `frontier31C_return_space_exit_shape_repair_or_closeout_decision_v1` queued executable mapping repair(실행 매핑 수리 큐). Effect(효과): handoff=16, realistic=16, executable=0, queue=16, next=`frontier31D_stage_closeout_return_space_exit_shape_v1`.
 <!-- frontier31D_stage_closeout_return_space_exit_shape_v1 -->
 - 2026-06-14T13:04:29Z: `frontier31D_stage_closeout_return_space_exit_shape_v1` closed Frontier31 return-space exit-shape scout(전선31 수익률 공간 청산 형태 탐색 마감). Effect(효과): handoff=16, realistic=16, executable=0, next=`frontier32A_stage_open_executable_sl_tp_mapping_for_return_space_exit_shape_handoff_surface_hypothesis_design_v1`.
+<!-- frontier32A_stage_open_executable_sl_tp_mapping_for_return_space_exit_shape_handoff_surface_hypothesis_design_v1 -->
+- 2026-06-14T13:15:38Z: `frontier32A_stage_open_executable_sl_tp_mapping_for_return_space_exit_shape_handoff_surface_hypothesis_design_v1` opened Frontier32 executable SL/TP mapping(전선32 실행 가능한 손절/익절 매핑). Effect(효과): queue=16, alignment_p99=0.000151, next=`frontier32B_executable_sl_tp_path_proxy_scout_v1`, no authority(권위 없음).
+<!-- frontier32B_executable_sl_tp_path_proxy_scout_v1 -->
+- 2026-06-14T13:21:30Z: `frontier32B_executable_sl_tp_path_proxy_scout_v1` ran executable SL/TP path proxy(실행 가능한 손절/익절 경로 프록시). Effect(효과): path_scout=0, seed=0, runtime_candidate=0, next=`frontier32C_executable_sl_tp_mapping_repair_or_closeout_decision_v1`.
+<!-- frontier32C_executable_sl_tp_mapping_repair_or_closeout_decision_v1 -->
+- 2026-06-14T13:30:17Z: `frontier32C_executable_sl_tp_mapping_repair_or_closeout_decision_v1` queued Frontier32 closeout decision(전선32 마감 결정). Effect(효과): path_scout=0, seed=0, runtime_candidate=0, next=`frontier32D_stage_closeout_executable_sl_tp_mapping_v1`.
+<!-- frontier32D_stage_closeout_executable_sl_tp_mapping_v1 -->
+- 2026-06-14T13:33:07Z: `frontier32D_stage_closeout_executable_sl_tp_mapping_v1` closed Frontier32 executable SL/TP mapping(전선32 실행 가능한 손절/익절 매핑). Effect(효과): path_scout=0, seed=0, runtime_candidate=0, next=`frontier33A_stage_open_path_native_exit_label_or_mfe_mae_surface_hypothesis_design_v1`.
