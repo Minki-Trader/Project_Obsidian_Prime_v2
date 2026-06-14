@@ -6992,3 +6992,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T06:55:12Z: `frontier22C_shock_pf_source_repair_or_closeout_decision_v1` ran capped lifecycle repair on F22B shock clues(F22B 충격 단서 상한 생명주기 수리). Effect(효과): scout/seed/handoff(탐색/씨앗/인계) counts are 1/0/0 and next run(다음 실행) is `frontier22D_stage_closeout_shock_pf_source_v1`.
 <!-- frontier22D_stage_closeout_shock_pf_source_v1 -->
 - 2026-06-14T07:05:21Z: `frontier22D_stage_closeout_shock_pf_source_v1` closed Frontier22(전선22) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): next frontier(다음 전선) starts at `frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1` with no baseline/promotion/runtime authority(기준선/승격/런타임 권위 없음).
+<!-- frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1 -->
+- 2026-06-14T07:20:43Z: `frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1` opened Frontier23(전선23) after Grok adjusted review(그록 조정 검토). Effect(효과): next run(다음 실행) `frontier23B_payoff_asymmetry_pf_source_proxy_scout_v1` must pass train-only payoff sanity gate(학습 전용 보상 건전성 게이트).
+<!-- frontier23B_payoff_asymmetry_pf_source_proxy_scout_v1 -->
+- 2026-06-14T07:25:45Z: `frontier23B_payoff_asymmetry_pf_source_proxy_scout_v1` ran payoff asymmetry proxy scout(보상 비대칭 프록시 탐색). Effect(효과): sanity/scout/seed/handoff(건전성/탐색/씨앗/인계) are True/23/0/0 and next run(다음 실행) is `frontier23C_payoff_asymmetry_repair_or_closeout_decision_v1`.
+<!-- frontier23C_payoff_asymmetry_repair_or_closeout_decision_v1 -->
+- 2026-06-14T07:30:54Z: `frontier23C_payoff_asymmetry_repair_or_closeout_decision_v1` ran capped entry-filter repair(상한 진입 필터 수리). Effect(효과): scout/seed/handoff(탐색/씨앗/인계) counts are 77/0/0 and next run(다음 실행) is `frontier23D_stage_closeout_payoff_asymmetry_pf_source_v1`.
+<!-- frontier23D_stage_closeout_payoff_asymmetry_pf_source_v1 -->
+- 2026-06-14T07:42:56Z: `frontier23D_stage_closeout_payoff_asymmetry_pf_source_v1` closed Frontier23(전선23) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): next frontier(다음 전선) starts at `frontier24A_stage_open_density_bridge_payoff_pockets_hypothesis_design_v1` with no baseline/promotion/runtime authority(기준선/승격/런타임 권위 없음).

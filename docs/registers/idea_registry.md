@@ -1620,3 +1620,11 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR22-SESSION-RETURN-SHOCK-PF-SOURCE-ONNX-SCOUT`: `frontier22C_shock_pf_source_repair_or_closeout_decision_v1` applied capped lifecycle repair(상한 생명주기 수리) to F22B shock clues(F22B 충격 단서). Effect(효과): best repair `f22b_0263__hold2_atr0p8_tp1p6_cd0` remains no-authority(권위 없음) until closeout or pre-expensive review.
 <!-- frontier22D_stage_closeout_shock_pf_source_v1 -->
 - `IDEA-FR22-SESSION-RETURN-SHOCK-PF-SOURCE-ONNX-SCOUT`: `frontier22D_stage_closeout_shock_pf_source_v1` closes Frontier22(전선22) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): shock+trend low-DD density clue(충격+추세 낮은 손실폭 빈도 단서)는 보존하되 PF source(수익 팩터 원천) 부족을 반복하지 않습니다.
+<!-- frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1 -->
+- `IDEA-FR23-PAYOFF-ASYMMETRY-PF-SOURCE-ONNX-SCOUT`: `frontier23A_stage_open_payoff_asymmetry_pf_source_hypothesis_design_v1` opens payoff asymmetry PF source scout(보상 비대칭 수익 팩터 원천 탐색). Effect(효과): F22 충격/생명주기 반복 대신 학습 전용 손익 분포 비대칭을 먼저 시험합니다.
+<!-- frontier23B_payoff_asymmetry_pf_source_proxy_scout_v1 -->
+- `IDEA-FR23-PAYOFF-ASYMMETRY-PF-SOURCE-ONNX-SCOUT`: `frontier23B_payoff_asymmetry_pf_source_proxy_scout_v1` tested train-only payoff asymmetry(학습 전용 보상 비대칭). Effect(효과): best candidate `f23b_0333` remains proxy-only(프록시 전용) with no authority(권위 없음).
+<!-- frontier23C_payoff_asymmetry_repair_or_closeout_decision_v1 -->
+- `IDEA-FR23-PAYOFF-ASYMMETRY-PF-SOURCE-ONNX-SCOUT`: `frontier23C_payoff_asymmetry_repair_or_closeout_decision_v1` applied capped entry-known include/veto repair(상한 진입시점 포함/제외 수리). Effect(효과): best repair `f23c_0123` remains no-authority(권위 없음) until closeout or pre-expensive review.
+<!-- frontier23D_stage_closeout_payoff_asymmetry_pf_source_v1 -->
+- `IDEA-FR23-PAYOFF-ASYMMETRY-PF-SOURCE-ONNX-SCOUT`: `frontier23D_stage_closeout_payoff_asymmetry_pf_source_v1` closes Frontier23(전선23) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): PF-positive pocket(PF 양수 구간)은 보존하지만 seed/handoff(씨앗/인계) 없음으로 ONNX(온엑스)와 MT5 runtime probe(MT5 런타임 탐침)는 열지 않습니다.
