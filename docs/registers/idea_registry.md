@@ -1572,3 +1572,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR14-DAILY-SESSION-OPPORTUNITY-BUDGET-ONNX-SCOUT`: Frontier14(프론티어14) opens daily/session opportunity budget ONNX scout(일별/세션별 기회 예산 온엑스 탐색). Effect(효과): F12/F13(프론티어12/13)의 label wrapping(라벨 감싸기)을 반복하지 않고 upstream entry opportunity generation(상류 진입 기회 생성)을 시험합니다.
 <!-- frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1 -->
 - `frontier14D_stage_closeout_daily_session_opportunity_budget_onnx_scout_v1`: Frontier14(프론티어14) closed as preserved_clue_negative_memory(보존 단서와 부정 기억). Effect(효과): cash-session q8 h8 sparse ONNX surface(현금장 q8 h8 희소 온엑스 표면)는 reference-only clue(참조 전용 단서)로 남기고, daily/session quota density-transfer failure(일/세션 할당량 밀도 전달 실패)는 반복 금지로 남겼습니다.
+<!-- frontier15A_stage_open_score_threshold_density_controlled_onnx_scout_v1 -->
+- `IDEA-FR15-SCORE-THRESHOLD-DENSITY-CONTROLLED-ONNX-SCOUT`: `frontier15A_stage_open_score_threshold_density_controlled_onnx_scout_v1` opens score threshold density controlled ONNX scout(점수 임계값 빈도 통제 온엑스 탐색). Effect(효과): F14(프론티어14)의 argmax density cliff(최대확률 빈도 절벽)를 runtime decision contract(런타임 결정 계약)로 검증합니다.
+<!-- frontier15C_score_threshold_density_repair_or_closeout_decision_v1 -->
+- `frontier15C_score_threshold_density_repair_or_closeout_decision_v1`: Frontier15(프론티어15) closed as negative_memory_with_preserved_density_transfer_clue(부정 기억 + 빈도 전이 보존 단서). Effect(효과): train-only score threshold(학습 전용 점수 임계값)는 density transfer(빈도 전이) 단서로만 남기고, edge/PF/DD/smoothness(엣지/수익 팩터/손실폭/매끄러움)는 새 가설로 넘깁니다.

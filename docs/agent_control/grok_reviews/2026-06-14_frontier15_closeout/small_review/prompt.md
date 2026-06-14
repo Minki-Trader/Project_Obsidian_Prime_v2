@@ -1,0 +1,65 @@
+﻿Frontier15 closeout review(프론티어15 마감 검토)를 요청합니다.
+
+Codex current truth(코덱스 현재 진실):
+
+- Stage(단계): `stage_frontier_15__score_threshold_density_controlled_onnx_scout`
+- Hypothesis(가설): F14(프론티어14)의 argmax density cliff(최대확률 빈도 절벽)를 label retuning(라벨 재조정)이 아니라 ONNX probability score threshold(온엑스 확률 점수 임계값) decision contract(결정 계약)로 고칠 수 있는가.
+- Frozen grid(고정 격자): 3 score contracts(점수 계약) x 3 density targets(빈도 목표) = 9 cells(9칸).
+- Primary cell(1순위 칸): `edge_margin__target8`.
+- Threshold fit(임계값 적합): train probability scores + train calendar only(학습 확률 점수 + 학습 달력만 사용). validation/OOS calibration(검증/표본밖 보정) 없음.
+- Required baseline(필수 기준행): F14-matched argmax baseline(F14 대응 최대확률 기준행)을 별도 기록.
+
+Bounded evidence(제한 근거):
+
+1. Frontier15B run(프론티어15B 실행) result:
+   - status(상태): `score_threshold_no_strict_clue_no_authority`
+   - judgment(판정): `negative_memory_candidate(부정 기억 후보)`
+   - primary strict rows(1순위 엄격 행): `0`
+   - secondary strict-like rows(보조 엄격 유사 행): `0`
+   - preserved clue rows(보존 단서 행): `0`
+   - candidate rows(후보 행): `81`
+
+2. Best overall row(전체 최고 행):
+   - candidate(후보): `f14b_day_q6_h8__lr_plain__utility_tilt__target5`
+   - validation PF/density/DD(검증 수익 팩터/빈도/손실폭): `1.006366 / 5.978142/day / 17.505990%`
+   - OOS PF/density/DD(표본밖 수익 팩터/빈도/손실폭): `1.046561 / 5.587786/day / 18.866839%`
+   - worst subperiod DD(최악 하위기간 손실폭): `13.695732%`
+   - negative subperiod fraction(음수 하위기간 비율): `0.363636`
+
+3. Best primary cell row(최고 1순위 칸 행):
+   - candidate(후보): `f14b_cash_q10_h12__rf_bal__edge_margin__target8`
+   - validation PF/density/DD(검증 수익 팩터/빈도/손실폭): `0.895191 / 7.114754/day / 21.830578%`
+   - OOS PF/density/DD(표본밖 수익 팩터/빈도/손실폭): `1.071237 / 6.251908/day / 11.834035%`
+   - worst subperiod DD(최악 하위기간 손실폭): `16.784423%`
+   - negative subperiod fraction(음수 하위기간 비율): `0.500000`
+
+4. Density transfer observation(빈도 전이 관찰):
+   - Train threshold density(학습 임계값 빈도)는 every score-target cell(모든 점수-목표 칸)에서 exactly target(목표와 정확히 일치): 5/8/10 per day(일 5/8/10회).
+   - Validation/OOS density(검증/표본밖 빈도)는 target(목표) 주변으로 전이됨. Example(예): `edge_margin__target8` validation mean `8.629/day`, OOS mean `8.063/day`.
+   - But PF/DD/smoothness(수익 팩터/손실폭/매끄러움)가 같이 통과하지 못함.
+
+5. Argmax baseline observation(최대확률 기준 관찰):
+   - Plain logistic argmax(일반 로지스틱 최대확률)는 F14-style sparse density(F14식 희소 빈도)를 유지함. Example(예): `f14b_cash_q8_h8__lr_plain__argmax_baseline` validation `PF 0.709064 / 0.098361/day / DD 6.754780%`, OOS `PF 3.356730 / 0.068702/day / DD 0.388877%`.
+   - Some balanced argmax rows(균형 가중 최대확률 행)는 high density(높은 빈도)를 만들지만 stage selection(단계 선택)에 쓰지 않음.
+
+Codex proposed closeout(코덱스 제안 마감):
+
+- Close Frontier15(프론티어15)를 `negative_memory(부정 기억)`로 닫는다.
+- Preserve clue(보존 단서)는 좁게만 남긴다: train-only score thresholds(학습 전용 점수 임계값)는 density target(빈도 목표)을 transfer(전이)할 수 있다.
+- Negative memory(부정 기억): probability score threshold(확률 점수 임계값)만으로는 edge quality(엣지 품질), PF/DD(수익 팩터/손실폭), subperiod stability(하위기간 안정성)를 같이 만들지 못했다.
+- Do not run another in-stage repair(같은 단계 안 추가 수리 금지): 다음 수리는 new frontier hypothesis(새 프론티어 가설)로 열어야 한다. 이유(reason, 이유)는 F15 repair가 score contract/grid expansion(점수 계약/격자 확장), validation-guided filtering(검증 유도 필터링), or label retuning(라벨 재조정)으로 쉽게 흘러 F14/F15 금지 반복이 되기 때문이다.
+
+Review questions(검토 질문):
+
+1. Is `negative_memory` closeout(부정 기억 마감)이 appropriate(적절)한가?
+2. Is the density-transfer clue(빈도 전이 단서)를 preserved clue(보존 단서)로 narrowly keep(좁게 보존)해도 되는가?
+3. Is there any required repair(필수 수리)가 F15 안에서 남아 있는가, or should it be next frontier stage(다음 프론티어 단계)로 분리되어야 하는가?
+
+Forbidden claims check(금지 주장 확인):
+
+- completion(완성): not_claimed(주장 없음)
+- baseline(기준선): not_claimed(주장 없음)
+- promotion(승격): not_claimed(주장 없음)
+- runtime authority(런타임 권위): not_claimed(주장 없음)
+- live readiness(실거래 준비): not_claimed(주장 없음)
+- Goal Achieve(목표 달성): not_claimed(주장 없음)
