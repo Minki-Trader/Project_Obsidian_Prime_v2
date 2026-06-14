@@ -1628,3 +1628,11 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR23-PAYOFF-ASYMMETRY-PF-SOURCE-ONNX-SCOUT`: `frontier23C_payoff_asymmetry_repair_or_closeout_decision_v1` applied capped entry-known include/veto repair(상한 진입시점 포함/제외 수리). Effect(효과): best repair `f23c_0123` remains no-authority(권위 없음) until closeout or pre-expensive review.
 <!-- frontier23D_stage_closeout_payoff_asymmetry_pf_source_v1 -->
 - `IDEA-FR23-PAYOFF-ASYMMETRY-PF-SOURCE-ONNX-SCOUT`: `frontier23D_stage_closeout_payoff_asymmetry_pf_source_v1` closes Frontier23(전선23) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): PF-positive pocket(PF 양수 구간)은 보존하지만 seed/handoff(씨앗/인계) 없음으로 ONNX(온엑스)와 MT5 runtime probe(MT5 런타임 탐침)는 열지 않습니다.
+<!-- frontier24A_stage_open_density_bridge_payoff_pockets_hypothesis_design_v1 -->
+- `IDEA-FR24-DENSITY-BRIDGE-PAYOFF-POCKETS-ONNX-SCOUT`: `frontier24A_stage_open_density_bridge_payoff_pockets_hypothesis_design_v1` opens density bridge payoff pockets scout(빈도 연결 보상 구간 탐색). Effect(효과): F23 단일 구간 수리 반복 대신 다중 미세 구간 OR 합집합으로 빈도 회복을 시험합니다.
+<!-- frontier24B_density_bridge_payoff_pockets_proxy_scout_v1 -->
+- `IDEA-FR24-DENSITY-BRIDGE-PAYOFF-POCKETS-ONNX-SCOUT`: `frontier24B_density_bridge_payoff_pockets_proxy_scout_v1` tested same-side OR-union density bridge(같은 방향 OR 합집합 빈도 연결). Effect(효과): best bridge `f24b_0174` remains proxy-only(프록시 전용) with no authority(권위 없음).
+<!-- frontier24C_density_bridge_repair_or_closeout_decision_v1 -->
+- `IDEA-FR24-DENSITY-BRIDGE-PAYOFF-POCKETS-ONNX-SCOUT`: `frontier24C_density_bridge_repair_or_closeout_decision_v1` applied capped DD normalization repair(상한 있는 손실폭 정규화 수리). Effect(효과): best repair `f24c_0105` remains proxy-only(프록시 전용) with no authority(권위 없음).
+<!-- frontier24D_stage_closeout_density_bridge_payoff_pockets_v1 -->
+- `IDEA-FR24-DENSITY-BRIDGE-PAYOFF-POCKETS-ONNX-SCOUT`: `frontier24D_stage_closeout_density_bridge_payoff_pockets_v1` closes Frontier24(전선24) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): density bridge(빈도 연결)는 단서로 보존하지만 seed/handoff(씨앗/인계) 없음으로 ONNX(온엑스)와 MT5 runtime probe(MT5 런타임 탐침)는 열지 않습니다.

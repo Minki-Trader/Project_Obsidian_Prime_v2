@@ -1,0 +1,36 @@
+﻿Role(역할): external second opinion(외부 2차 의견) for Project Obsidian Prime v2(프로젝트 옵시디언 프라임 v2).
+
+Task(과업): Review proposed Stage Frontier24(전선24 단계) opening direction only. Do not create operating promotion(운영 승격), runtime authority(런타임 권위), selected baseline(선택 기준선), live readiness(실거래 준비), or Goal Achieve(목표 달성).
+
+Current truth(현재 진실):
+- Latest closed stage(최근 마감 단계): stage_frontier_23__payoff_asymmetry_pf_source_onnx_scout.
+- F23 closeout(전선23 마감): preserved clue + negative memory(보존 단서 + 부정 기억).
+- F23B/F23C seed/handoff(전선23B/C 씨앗/인계): 0/0.
+- Runtime status(런타임 상태): runtime_probe_ineligible_no_handoff_candidate_after_f23_capped_repair(전선23 상한 수리 뒤 인계 후보가 없어 런타임 탐침 부적격).
+- ONNX status(ONNX 상태): onnx_branch_unattempted_no_handoff_candidate_after_f23_capped_repair(전선23 상한 수리 뒤 인계 후보가 없어 ONNX 분기 미개시).
+- Claim boundary(주장 경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) all not_claimed(모두 주장 없음).
+
+F23 preserved clues(전선23 보존 단서):
+1. Density-aligned weak-OOS-PF(빈도 맞음, 표본외 PF 약함): f23c_0123, validation/OOS PF-density-DD(검증/표본외 수익 팩터-빈도-손실폭) 1.27966/7.57377/19.1095 and 1.08388/8.17557/15.3161.
+2. High-PF low-density(고 PF, 저 빈도): f23c_0071, validation/OOS PF-density-DD(검증/표본외 수익 팩터-빈도-손실폭) 1.59163/3.89617/14.4954 and 1.23302/4.06870/12.3693.
+3. PF-density but DD fail(PF-빈도 가능, 손실폭 실패): f23c_0233, validation/OOS PF-density-DD(검증/표본외 수익 팩터-빈도-손실폭) 1.32742/7.08743/29.5503 and 1.27317/6.86260/12.3762.
+
+Proposed Frontier24(전선24 제안):
+- Stage id(단계 ID): stage_frontier_24__density_bridge_payoff_pockets_onnx_scout.
+- Run open(개방 실행): frontier24A_stage_open_density_bridge_payoff_pockets_hypothesis_design_v1.
+- Hypothesis(가설): PF-positive low-density payoff pockets(PF 양수 저빈도 보상 구간) can be bridged by a train-only OR-union assembly(학습 전용 OR 합집합 조립) of multiple micro-pockets(미세 구간) to reach 5~10 trades/day(일 5~10회) without losing too much PF or DD control(손실폭 통제).
+- Novelty delta(신규성 차이): F23 used single pocket + entry-known include/veto repair(단일 구간 + 진입시점 포함/제외 수리). F24 changes the structural unit to multi-pocket density bridge(다중 구간 빈도 연결), with compatibility/diversity guards(호환성/다양성 보호) and read-only forward splits(읽기 전용 전진 분할).
+- Selection(선택): train-only(학습 전용) ranking by PF floor, payoff ratio, tail ratio, density contribution, DD penalty, and feature-family diversity(피처군 다양성).
+- Forward use(전진 사용): validation/OOS(검증/표본외)는 read-only diagnostic(읽기 전용 진단) only.
+- Success criteria(성공 기준): scout clue(탐색 단서) if validation/OOS PF >= 1.10, density 5~10/day, DD <= 25%; seed surface(씨앗 표면) if PF >= 1.20, density 5~10/day, DD <= 18%; handoff candidate(인계 후보) only if PF >= 1.50 and DD <= 12% with reasonable smoothness(매끄러움).
+- Stop condition(중단 조건): if union bridge raises density but collapses OOS PF below 1.10 or DD stays above 25%, close as negative memory(부정 기억) or preserved clue(보존 단서) after capped repair.
+- Forbidden(금지): no lifecycle repair(생명주기 수리 없음), no ONNX/model training(ONNX/모델 학습 없음), no MT5 runtime probe(MT5 런타임 탐침 없음) until handoff candidate exists(인계 후보가 있을 때까지).
+- Tier boundary(티어 경계): Tier A proxy only initially; Tier B missing_required and Tier A+B out_of_scope_by_claim unless a paired source exists.
+
+Review questions(검토 질문):
+1. Is this a valid new hypothesis lifecycle(새 가설 생명주기) rather than repeating F23 repair(전선23 수리 반복)?
+2. Should F24 prioritize density bridge(빈도 연결) first, DD normalization(손실폭 정규화) first, or a two-step design(2단계 설계)?
+3. Are the success/seed/handoff criteria too loose or too strict for early proxy exploration(초기 프록시 탐색)?
+4. What local verification(로컬 검증) should Codex require before materializing F24A(전선24A 물질화)?
+
+Return(반환): accepted(수용), rejected(거절), or needs_local_verification(로컬 검증 필요), with concise critique(간결한 비판).
