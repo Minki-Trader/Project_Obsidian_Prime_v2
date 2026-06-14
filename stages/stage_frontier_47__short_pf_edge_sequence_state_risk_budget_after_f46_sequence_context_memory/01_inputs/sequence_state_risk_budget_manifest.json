@@ -1,0 +1,143 @@
+{
+  "stage_id": "stage_frontier_47__short_pf_edge_sequence_state_risk_budget_after_f46_sequence_context_memory",
+  "hypothesis": "train_only_sequence_state_risk_budget_on_f46_loss_contained_clue",
+  "idea_id": "IDEA-FR47-SHORT-SEQUENCE-STATE-RISK-BUDGET",
+  "decision_use": "scout_seed_runtime_candidate_screening_only",
+  "comparison_baseline": "F46 best and preserved nonwinner rows are reference-only clues, not inherited baseline",
+  "control_variables": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "side": "short",
+    "feature_order_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "split": "train_2022-09-01_2024-12-31_validation_2025-01-01_2025-09-30_oos_2025-10-01_2026-02-28",
+    "path_proxy": "executable_first_hit_sl_tp_from_raw_us100_path"
+  },
+  "changed_variables": {
+    "sequence_context": "lagged_frozen_event_score_rolls_and_horizon_embargoed_past_outcome_tape",
+    "risk_budget": "train_only_loss_cluster_volatility_and_cooldown_state_caps",
+    "novelty_line": "risk_budget_blocks_entries_it_does_not_rescore_or_repair_the_model",
+    "model_family": "class_weighted_sequence_context_classifier_with_state_budget_overlay",
+    "threshold_policy": "train_split_sequence_probability_and_risk_budget_quantiles_only"
+  },
+  "sample_scope": {
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "raw_rows": 261345,
+    "short_path_valid_rows": 46650
+  },
+  "success_criteria": {
+    "scout_clue": {
+      "forward_min_pf": 1.05,
+      "density": "4_to_12_per_day",
+      "forward_max_dd": 18.0
+    },
+    "seed_surface": {
+      "forward_min_pf": 1.2,
+      "density": "5_to_10_per_day",
+      "forward_max_dd": 12.0
+    },
+    "runtime_probe_candidate": {
+      "forward_min_pf": 1.5,
+      "forward_max_dd": 10.0
+    }
+  },
+  "invalid_conditions": [
+    "validation_oos_used_for_label_threshold_model_sl_tp_or_rank",
+    "past_outcome_tape_uses_labels_newer_than_horizon_plus_one_bars",
+    "f46_sequence_context_score_quantile_only_repair_without_state_budget",
+    "f44_continuous_regression_or_f42_f43_f38_f39_primary_lever_reopened"
+  ],
+  "evidence_plan": [
+    "stage_open_grok_receipt",
+    "sequence_state_risk_budget_model_audit",
+    "candidate_ledger",
+    "split_metrics",
+    "candidate_summary",
+    "stage_run_ledger",
+    "project_alpha_ledger_rows",
+    "stage_closeout_grok_receipt"
+  ],
+  "input_artifacts": {
+    "prev_selection": {
+      "path": "stages/stage_frontier_46__short_pf_edge_event_sequence_context_pivot_after_f45_event_classifier_memory/04_selected/selection_status.json",
+      "sha256": "11b7c569f36e9451b1f85970fa835c0e653829650a406696b14316d23d92f5f5"
+    },
+    "prev_preserved_clue": {
+      "path": "stages/stage_frontier_46__short_pf_edge_event_sequence_context_pivot_after_f45_event_classifier_memory/04_selected/preserved_clue.md",
+      "sha256": "404a316bfef2392f0da39aa0e9163ad40e84c4e1e5be68860952eacea81ab650"
+    },
+    "prev_negative_memory": {
+      "path": "stages/stage_frontier_46__short_pf_edge_event_sequence_context_pivot_after_f45_event_classifier_memory/04_selected/negative_memory.md",
+      "sha256": "fc68723248f4b2a80bdcf75d72c25f15fe8f106e7364f6bc43adfd468f4b44fb"
+    },
+    "grok_open_clean_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-15_frontier47_stage_open/small_review/clean_output.md",
+      "sha256": "abd3d2136d22f181d85e1d33ca1b01d42a56281cb02c1267896e47b57ccb48f7"
+    }
+  },
+  "open_review": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-15_frontier47_stage_open/small_review",
+    "metadata": {
+      "review_size": "small",
+      "prompt_hash": "c9377d18327fc0cd12ae8a3aa9354edef27093d604aa57b7fdc7cad082e83f02",
+      "command": [
+        "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+        "--no-memory",
+        "--disable-web-search",
+        "--max-turns",
+        "2",
+        "-p",
+        "# Frontier47 stage-open Grok review(단계 개방 그록 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nDo not claim completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\nDo not inspect files, call tools, or request whole repo context(전체 저장소 맥락). Answer only from bounded evidence(제한 근거) below.\n\n## Current truth(현재 진실)\n- Current closed stage(현재 종료 단계): F46, `negative_memory(부정 기억)`.\n- F46 runtime_probe_status(런타임 탐침 상태): `runtime_probe_ineligible_no_scout_seed_or_runtime_candidate_after_f46_sequence_context_proxy`.\n- F46 best observed row(최상 관찰 행): `f46b_0001`, event=`event_mfe75_mae50_ratio70`, model=`extratrees_cls_d5_leaf240__base_logreg_c0p25__lagged_score_outcome_q86_w12_36`, train PF=1.3546, forward min PF=0.8051, density=7.38..8.89/day, DD=24.59.\n- F46 preserved nonwinner clue(보존 비승자 단서): `f46b_0004`, event=`event_mfe65_mae35_loss_contained`, model=`logreg_balanced_l2_c0p25__base_extratrees_d3_leaf220__lagged_score_outcome_q86_w12_36`, forward min PF=1.0050, density=6.28..7.02/day, forward DD=11.70.\n- Boundary(경계): F46 rows are reference-only clue(참조 전용 단서), not winner/baseline/promotion(승자/기준선/승격 아님).\n\n## Codex proposed F47 direction(코덱스 제안 방향)\nHypothesis(가설): Apply train-only sequence state risk budget(학습 전용 순서 상태 위험 예산) to the F46 loss-contained event clue(손실 제한 이벤트 단서). The risk budget uses only entry-known closed-bar features(진입 시점에 알려진 닫힌 봉 피처) and horizon+1 embargoed past outcome tape(예측수평선+1 유예 과거 결과 테이프).\n\nChanged variables(변경 변수):\n- loss cluster budget(손실 군집 예산): cap `seq_past_bad_event_rate_fast/slow`.\n- volatility state budget(변동성 상태 예산): cap `atr_14_over_atr_50`, `historical_vol_5_over_20`, and optionally `bb_squeeze`.\n- cooldown state(휴식 상태): require minimum bars since high score(고점 점수 이후 최소 봉 수).\n- score and budget thresholds(점수/예산 임계값): train split only(학습 분할 전용).\n\nControls(고정 변수):\n- US100 M5 short-only(숏 전용).\n- Frozen split(고정 분할): train/validation/OOS(학습/검증/표본외).\n- Feature order(피처 순서): closed-bar 58-feature contract(닫힌 봉 58피처 계약).\n- Validation/OOS(검증/표본외): read-only evaluation(읽기 전용 평가).\n\nStop conditions(중지 조건):\n- runtime candidate(런타임 후보)가 나오면 pre-expensive Grok review(비싼 검증 전 그록 검토) 후 MT5 runtime probe(MT5 런타임 탐침)를 준비한다.\n- seed/scout only(씨앗/탐색만)면 preserved clue(보존 단서) 또는 negative memory(부정 기억)로 닫는다.\n- no scout(탐색 단서 없음)이면 negative memory(부정 기억)로 닫는다.\n\nInvalid conditions(무효 조건):\n- validation/OOS(검증/표본외)를 label/model/threshold/SLTP/rank/risk budget/repair(라벨/모델/임계값/손익절/순위/위험 예산/수리)에 쓰는 경우.\n- F46 sequence-context score-only repair(순서 문맥 점수 전용 수리)를 반복하는 경우.\n- F45 same-bar threshold-only repair(동일 봉 임계값 전용 수리), F44 continuous regression(연속 회귀), F42 timing gate(타이밍 게이트), F43 trade-shape source(거래 형태 원천)를 primary lever(주 레버)로 되살리는 경우.\n\n## Success criteria for exploration(탐색 성공 기준)\n- Scout clue(탐색 단서): forward min PF >= 1.05, density 4..12/day, forward max DD <= 18.\n- Seed surface(씨앗 표면): forward min PF >= 1.20, density 5..10/day, forward max DD <= 12.\n- Runtime candidate(런타임 후보): seed plus forward min PF >= 1.50 and forward max DD <= 10.\n- Final goal hard gate(최종 목표 강제 게이트)는 final completion review(최종 완성 검토)에서만 적용한다.\n\n## Question(질문)\nIs this F47 stage-open plan honest and novel enough under reference-not-inheritance(참조이지 상속 아님), train-split-only construction lock(학습 분할 전용 구성 잠금), and claim boundary(주장 경계)?\n\nReturn only:\n1. verdict: accepted, rejected, or needs_local_verification(수용/거절/로컬 검증 필요)\n2. train_split_only_construction_lock: yes/no(학습 분할 전용 구성 잠금 예/아니오)\n3. claim_boundary_ok: yes/no(예/아니오)\n4. one risk(위험) if any\n5. one concrete adjustment(구체 조정) if any\n"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "success": true,
+      "duration_seconds": 19.432568,
+      "stripped_noise_lines": [],
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "packet_paths": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier47_stage_open/small_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier47_stage_open/small_review/clean_output.md",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier47_stage_open/small_review/raw_diagnostics.json",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier47_stage_open/small_review/metadata.json"
+      }
+    },
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-15_frontier47_stage_open/small_review/clean_output.md",
+    "classification": "accepted_stage_open_train_split_only_state_risk_budget_lock",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "claim_boundary_ok": true,
+    "forbidden_claim_seen": false,
+    "clean_excerpt": "**1. verdict:** `accepted` (수용)\n\n**2. train_split_only_construction_lock:** `yes` (예)\n\n**3. claim_boundary_ok:** `yes` (예)\n\n**4. one risk:** F47이 F46 `f46b_0004` loss-contained 단서 위에 risk budget(위험 예산)만 얹는 형태라, 이름은 바뀌어도 실질적으로 F46 sequence-context(순서 문맥) 레인의 score-gating(점수 게이팅) 연장처럼 보일 수 있다. embargo(유예)나 train-only(학습 전용) 잠금이 코드/실험에서 어긋나면 “새 레버”가 아니라 F46 수리 반복으로 닫힐 위험이 있다.\n\n**5. one concrete adjustment:** 첫 탐색 패스에서는 `f46b_0004`의 event(이벤트)와 base model(기본 모델)을 고정하고, train split(학습 분할)에서만 risk-budget 파라미터(`seq_past_bad_event_rate_fast/slow`, volatility caps(변동성 상한), cooldown bars(휴식 봉 수))를 조정하게 명시하라. scout clue(탐색 단서)가 나오기 전에는 event/model/threshold 재탐색을 금지하면 reference-not-inheritance(참조이지 상속 아님)와 novelty(신규성) 경계가 더 선명해진다."
+  },
+  "checks": {
+    "checks": {
+      "workspace_points_to_f47": true,
+      "prev_selection_next_matches": true,
+      "prev_selection_json_exists": true,
+      "prev_preserved_clue_exists": true,
+      "prev_negative_memory_exists": true,
+      "open_grok_accepted": true,
+      "feature_hash_matches_contract": true,
+      "required_splits_present": true,
+      "raw_path_alignment_available": true,
+      "short_path_valid_rows_positive": true,
+      "train_split_only_construction_lock": true
+    },
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "short_valid_rows": 46650
+  }
+}
