@@ -1,0 +1,258 @@
+{
+  "stage_id": "stage_frontier_43__short_pf_edge_trade_shape_source_pivot_after_f42_timing_negative",
+  "idea_id": "IDEA-FR43-ENTRY-KNOWN-TRADE-SHAPE-SOURCE-PIVOT-ONNX-SCOUT",
+  "hypothesis": "Entry-known trade-shape proxy source selection can improve short PF/DD/density without inheriting F42 timing gates.",
+  "skill_routing": {
+    "primary_family": "experiment_execution",
+    "primary_skill": "obsidian-run-evidence-system_missing_in_current_skill_list",
+    "support_skills": [
+      "obsidian-experiment-design",
+      "obsidian-data-integrity",
+      "obsidian-model-validation",
+      "obsidian-artifact-lineage",
+      "obsidian-grok-collaboration",
+      "obsidian-result-judgment"
+    ],
+    "required_gates": [
+      "scope_completion_gate",
+      "kpi_contract_audit",
+      "skill_receipt_lint",
+      "required_gate_coverage_audit",
+      "external_review_packet"
+    ]
+  },
+  "grok_stage_open": {
+    "packet_path": "docs/agent_control/grok_reviews/2026-06-15_frontier43_stage_open/small_review",
+    "metadata_exists": true,
+    "clean_output_exists": true,
+    "classification": "accepted",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "do_not_repeat_seen": true,
+    "claim_boundary_ok": true,
+    "metadata_success": true,
+    "metadata_returncode": 0
+  },
+  "data_integrity": {
+    "workspace_state_exists": true,
+    "f42_selection_status_exists": true,
+    "f42_selection_json_exists": true,
+    "f42_preserved_clue_exists": true,
+    "f42_negative_memory_exists": true,
+    "dataset_exists": true,
+    "feature_order_exists": true,
+    "raw_path_exists": true,
+    "feature_count": 58,
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_hash_matches_contract": true,
+    "required_splits_present": true,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "frame_rows": 46650,
+    "raw_rows": 261345,
+    "excluded_session_clock_features": [
+      "is_first_30m_after_open",
+      "is_last_30m_before_cash_close",
+      "is_us_cash_open",
+      "minutes_from_cash_open"
+    ]
+  },
+  "source_generation": {
+    "condition_pool_rows": 313,
+    "source_count": 168,
+    "excluded_session_clock_features": [
+      "is_first_30m_after_open",
+      "is_last_30m_before_cash_close",
+      "is_us_cash_open",
+      "minutes_from_cash_open"
+    ],
+    "source_ranking_boundary": "entry-known closed-bar shape proxy only; no validation/OOS outcome in source construction",
+    "top_conditions": [
+      {
+        "condition_id": "f43cond_0001",
+        "feature": "bb_squeeze",
+        "feature_family": "volatility_shape",
+        "operator": ">=",
+        "quantile_label": "ge0p5",
+        "threshold_value": 0.5,
+        "definition": "bb_squeeze >= ge0p5",
+        "train_coverage": 0.10930121141605639,
+        "entry_shape_proxy_score": 4.144698819002426,
+        "entry_shape_contrast": 3.204956073098187,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0002",
+        "feature": "mega8_dispersion_5",
+        "feature_family": "macro_breadth",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 0.005209250166080891,
+        "definition": "mega8_dispersion_5 >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 3.730789648779416,
+        "entry_shape_contrast": 2.4390364795537947,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0003",
+        "feature": "hl_range",
+        "feature_family": "volatility_shape",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 0.002550559851806611,
+        "definition": "hl_range >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.995947755121181,
+        "entry_shape_contrast": 1.7041945858955594,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0004",
+        "feature": "bollinger_width_20",
+        "feature_family": "volatility_shape",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 0.011534838424995541,
+        "definition": "bollinger_width_20 >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.95804096424032,
+        "entry_shape_contrast": 1.6662877950146986,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0005",
+        "feature": "adx_14",
+        "feature_family": "trend_state",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 39.636853218078606,
+        "definition": "adx_14 >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.9129010256475514,
+        "entry_shape_contrast": 1.42114785642193,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0006",
+        "feature": "sma50_sma200_ratio",
+        "feature_family": "trend_state",
+        "operator": "<=",
+        "quantile_label": "q15",
+        "threshold_value": 0.9954323947429657,
+        "definition": "sma50_sma200_ratio <= q15",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.8808626689763077,
+        "entry_shape_contrast": 1.3891094997506863,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0007",
+        "feature": "hl_zscore_50",
+        "feature_family": "volatility_shape",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 1.4169080853462215,
+        "definition": "hl_zscore_50 >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.8447488558412277,
+        "entry_shape_contrast": 1.5529956866156065,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0008",
+        "feature": "gap_percent",
+        "feature_family": "price_momentum",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 2.1671299145964435e-05,
+        "definition": "gap_percent >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.8388961047064654,
+        "entry_shape_contrast": 1.5471429354808437,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0009",
+        "feature": "historical_vol_20",
+        "feature_family": "volatility_shape",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 0.40630548894405366,
+        "definition": "historical_vol_20 >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.8327872129195932,
+        "entry_shape_contrast": 1.5410340436939718,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0010",
+        "feature": "close_ema20_ratio",
+        "feature_family": "trend_state",
+        "operator": "<=",
+        "quantile_label": "q15",
+        "threshold_value": 0.9974824875593186,
+        "definition": "close_ema20_ratio <= q15",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.798003233399929,
+        "entry_shape_contrast": 1.3062500641743078,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0011",
+        "feature": "ema9_ema20_diff",
+        "feature_family": "trend_state",
+        "operator": "<=",
+        "quantile_label": "q15",
+        "threshold_value": -18.307786750793458,
+        "definition": "ema9_ema20_diff <= q15",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.7748458059060916,
+        "entry_shape_contrast": 1.28309263668047,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      },
+      {
+        "condition_id": "f43cond_0012",
+        "feature": "atr_14",
+        "feature_family": "volatility_shape",
+        "operator": ">=",
+        "quantile_label": "q85",
+        "threshold_value": 31.65899038314819,
+        "definition": "atr_14 >= q85",
+        "train_coverage": 0.15002395455478748,
+        "entry_shape_proxy_score": 2.766605390666298,
+        "entry_shape_contrast": 1.4748522214406767,
+        "ranking_metric_boundary": "entry_known_closed_bar_shape_proxy_only_no_forward_outcome"
+      }
+    ]
+  },
+  "artifact_inputs": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+    },
+    {
+      "path": "stages/stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative/04_selected/selection_status.md",
+      "sha256": "d3a889c3df8daa738dedcc6010c4b3056d1b0f38595e859022d568cc04e5f03a"
+    },
+    {
+      "path": "stages/stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative/04_selected/preserved_clue.md",
+      "sha256": "5f6a246f5bdd9755fc01fca67d5a615ca1b507e44231e58f879f28a1a1a797a6"
+    },
+    {
+      "path": "stages/stage_frontier_42__short_pf_edge_timing_source_pivot_after_f41_exit_shape_negative/04_selected/negative_memory.md",
+      "sha256": "cccafb75a48a0ee467f59ee50db274b99b7a65fde73dabc0ce88d52519b0fb28"
+    }
+  ]
+}
