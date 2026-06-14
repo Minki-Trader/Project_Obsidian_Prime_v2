@@ -1,0 +1,13 @@
+﻿# Frontier28 Experiment Design(전선28 실험 설계)
+
+- hypothesis(가설): F27 restored a tradable-density union surface but did not create seed or handoff rows; F28 tests whether train chunk PF/DD dispersion exposes the unstable unions before validation/OOS is read(F27은 거래 빈도 합집합 표면을 복원했지만 씨앗/인계를 만들지 못했고, F28은 검증/표본외를 읽기 전에 학습 조각 PF/DD 산포가 불안정 합집합을 드러내는지 시험한다)
+- decision_use(결정 사용처): decide whether train-only stability ranking deserves proxy scout, repair, or handoff consideration(학습 전용 안정성 순위가 프록시 탐색, 수리, 인계 검토 가치가 있는지 결정)
+- comparison_baseline(비교 기준): F27 soft union surface is reference-only input, not inherited baseline or winner(F27 연성 합집합 표면은 참조 입력일 뿐 상속 기준선이나 승자가 아니다)
+- control_variables(통제 변수): US100 M5 Tier A dataset(US100 5분봉 티어 A 데이터셋), feature_set_v2 58 features(피처 세트 v2 58개), fwd12 label horizon(fwd12 라벨 예측수평선), same-side OR-union semantics(같은 방향 OR 합집합 의미), validation/OOS read-only(검증/표본외 읽기 전용)
+- changed_variables(변경 변수): train_subperiod_pf_dd_balance_stability_gap_rank(학습 하위기간 수익 팩터/손실폭 균형 안정성 격차 순위), locked four chronological train chunks(고정 시간순 학습 4조각)
+- sample_scope(표본 범위): Tier A US100 M5 model_input_dataset.parquet, frozen train/validation/oos split(티어 A US100 5분봉 고정 학습/검증/표본외 분할)
+- success_criteria(성공 기준): {"scout_clue": "validation_oos_read_only_positive_density_pf_dd_signal", "seed_surface": "forward_read_only_pf_ge_1_20_dd_le_18_density_5_to_10", "handoff_candidate": "forward_read_only_pf_ge_1_50_dd_le_12_smoothness_pass", "not_completion": "final_goal_gates_not_applicable_until_final_completion_review"}
+- failure_criteria(실패 기준): zero seed and zero handoff under locked stability ranking(잠금 안정성 순위 아래 씨앗 0, 인계 0), forward rows only improve headline PF without train stability rationale(학습 안정성 근거 없이 전진 표면 PF만 개선), top rows become implicit F27 weight retune or forward-metric selection(상위 행이 암묵적 F27 가중치 조정 또는 전진 지표 선택이 됨)
+- invalid_conditions(무효 조건): validation/OOS used for selection(검증/표본외가 선택에 사용됨), chunk boundaries edited after seeing forward results(전진 결과를 본 뒤 조각 경계 수정), F27 penalty weights retuned as primary change(F27 페널티 가중치 조정이 주 변경점이 됨), feature hash mismatch(피처 해시 불일치)
+- stop_conditions(중단 조건): handoff rows >0 triggers pre-expensive Grok before ONNX/MT5/WFO(인계 행이 0 초과면 온엑스/MT5/WFO 전 비싼 검토), seed or scout only triggers repair-or-closeout decision(씨앗 또는 탐색만 있으면 수리 또는 마감 결정), zero seed and zero handoff after capped repair closes negative memory(상한 수리 뒤 씨앗/인계 0이면 부정 기억 마감)
+- evidence_plan(근거 계획): F28B run manifest(실행 목록), stability gap audit(안정성 격차 감사), chunk metric table(조각 지표 표), read-only forward summary(읽기 전용 전진 요약), run registry(실행 등록부), stage ledger(단계 장부).
