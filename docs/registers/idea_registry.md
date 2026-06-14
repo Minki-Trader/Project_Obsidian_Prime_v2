@@ -1712,3 +1712,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR34-DD-COMPRESSION-STATE-GATE-ONNX-SCOUT`: `frontier34A_stage_open_path_native_short_scout_dd_compression_state_gate_hypothesis_design_v1` opened short-only DD compression state gate(숏 전용 손실폭 압축 상태 게이트). Effect(효과): F33 scout clue(전선33 탐색 단서)를 reference-only(참조 전용)로 사용합니다.
 <!-- frontier34D_stage_closeout_dd_compression_state_gate_v1 -->
 - `IDEA-FR34-DD-COMPRESSION-STATE-GATE-ONNX-SCOUT`: `frontier34D_stage_closeout_dd_compression_state_gate_v1` closed as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): 다음 질문은 DD-compressed short state(손실폭 압축 숏 상태)의 PF source lift(수익 팩터 원천 상승)입니다.
+<!-- frontier35A_stage_open_dd_compressed_short_state_pf_source_lift_hypothesis_design_v1 -->
+- `IDEA-FR35-PF-SOURCE-LIFT-ONNX-SCOUT`: `frontier35A_stage_open_dd_compressed_short_state_pf_source_lift_hypothesis_design_v1` opened train-only PF source lift(학습 전용 수익 팩터 원천 상승). Effect(효과): F34 DD compression clue(전선34 손실폭 압축 단서)를 reference-only(참조 전용)로 사용합니다.
+<!-- frontier35D_stage_closeout_pf_source_lift_v1 -->
+- `IDEA-FR35-PF-SOURCE-LIFT-ONNX-SCOUT`: `frontier35D_stage_closeout_pf_source_lift_v1` closed as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): 다음 질문은 same scaffold filter stacking(같은 발판 필터 누적)이 아니라 source change or label pivot(원천 변경 또는 라벨 전환)입니다.
