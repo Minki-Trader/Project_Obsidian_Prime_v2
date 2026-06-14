@@ -1724,3 +1724,22 @@ Register ideas when they become durable work, not for every passing thought.
 - `IDEA-FR37-PAYOFF-LABEL-FAMILY-ONNX-SCOUT`: `frontier37A_stage_open_short_pf_edge_label_family_pivot_hypothesis_design_v1` opened payoff-dominance label family(수익 우위 라벨 계열). Effect(효과): F36 filter/source repetition(전선36 필터/원천 반복)을 피합니다.
 <!-- frontier37D_stage_closeout_payoff_label_family_pivot_v1 -->
 - `IDEA-FR37-PAYOFF-LABEL-FAMILY-ONNX-SCOUT`: `frontier37D_stage_closeout_payoff_label_family_pivot_v1` closed as `preserved_clue_negative_memory`. Effect(효과): next question(다음 질문)은 source family or model pivot(원천 계열 또는 모델 전환)입니다.
+<!-- frontier38A_stage_open_short_pf_edge_source_family_or_model_pivot_hypothesis_design_v1 -->
+
+
+### frontier38A_stage_open_short_pf_edge_source_family_or_model_pivot_hypothesis_design_v1
+
+- Stage(단계): `stage_frontier_38__short_pf_edge_source_family_or_model_pivot_after_payoff_label_negative`
+- Idea(아이디어): train-only model score source(학습 전용 모델 점수 소스)로 short path-quality(숏 경로 품질)를 순위화한다.
+- Effect(효과): F37 payoff label family(보상 라벨 패밀리) 반복 대신 source family(소스 패밀리)를 바꾼다.
+<!-- frontier38D_stage_closeout_model_score_source_pivot_v1 -->
+
+
+### frontier38D_stage_closeout_model_score_source_pivot_v1
+
+- Stage(단계): `stage_frontier_38__short_pf_edge_source_family_or_model_pivot_after_payoff_label_negative`
+- Closeout(마감): `preserved_clue_negative_memory`
+- Preserved clue(보존 단서): `f38_train_only_model_score_source_restored_density_dd_scout_surface_but_pf_below_seed`
+- Negative memory(부정 기억): `f38_shallow_model_score_source_family_did_not_create_seed_or_runtime_candidate`
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f38c_model_score_repair`
+- Next(다음): `frontier39A_stage_open_short_pf_edge_model_score_or_regime_pivot_hypothesis_design_v1`

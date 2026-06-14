@@ -1,22 +1,27 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-14T17:14:25Z
+Updated(갱신): 2026-06-14T17:55:16Z
 
-## Active Stage(현재 단계)
+Current stage(현재 단계): `stage_frontier_38__short_pf_edge_source_family_or_model_pivot_after_payoff_label_negative`
 
-- stage(단계): `stage_frontier_37__short_pf_edge_label_family_pivot_after_source_utility_scout`
-- latest run(최근 실행): `frontier37D_stage_closeout_payoff_label_family_pivot_v1`
-- status(상태): `closed_preserved_clue_negative_memory_payoff_label_family_scout_only_no_runtime_authority`
-- judgment(판정): `preserved_clue_negative_memory(F37 payoff label family no seed/runtime)`
-- next stage(다음 단계): `stage_frontier_38__short_pf_edge_source_family_or_model_pivot_after_payoff_label_negative`
-- next run(다음 실행): `frontier38A_stage_open_short_pf_edge_source_family_or_model_pivot_hypothesis_design_v1`
+Current run(현재 실행): `frontier38D_stage_closeout_model_score_source_pivot_v1`
 
-## Current Truth(현재 진실)
+Status(상태): `closed_preserved_clue_negative_memory_model_score_source_scout_only_no_runtime_authority`
 
-Action(행동): F37(전선37)을 payoff-dominance label family + balanced repair(수익 우위 라벨 계열 + 균형 수리) lifecycle(생명주기)로 닫았습니다.
+Judgment(판정): `preserved_clue_negative_memory(F38 model score source scout only)`
 
-Effect(효과): best read-only candidate(최상 읽기 전용 후보) `f37c_0029`는 seed/runtime(씨앗/런타임)으로 충분하지 않아 MT5/ONNX(메타트레이더5/온엑스)는 열지 않았습니다.
+Action(행동): F38(전선38)을 train-only model score source(학습 전용 모델 점수 소스) lifecycle(생명주기)로 닫았다.
 
-Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f37c_balanced_payoff_label_repair`
+Effect(효과): scout clue(탐색 단서)는 보존하고, seed/runtime candidate(씨앗/런타임 후보) 부재를 negative memory(부정 기억)로 남긴다.
 
-Claim boundary(주장 경계): completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 모두 not_claimed(주장 없음)입니다.
+Best candidate(최상 후보): `f38c_0058`
+
+Best validation/OOS PF-density-DD(최상 검증/표본밖 수익 팩터-밀도-손실폭): `1.121` / `8.475` / `7.791` and `1.138` / `10.733` / `8.290`
+
+Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f38c_model_score_repair`
+
+Next stage(다음 단계): `stage_frontier_39__short_pf_edge_model_score_source_or_regime_pivot_after_f38_scout_only`
+
+Next run(다음 실행): `frontier39A_stage_open_short_pf_edge_model_score_or_regime_pivot_hypothesis_design_v1`
+
+Forbidden claims(금지 주장): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 not_claimed(주장 없음)이다.

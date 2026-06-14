@@ -1090,3 +1090,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - `frontier36D_stage_closeout_short_source_utility_label_pivot_v1`: f36_short_source_selection_and_exit_label_pivot_did_not_create_seed_or_runtime_candidate. Evidence(근거): F36B/F36C seed/runtime(전선36B/36C 씨앗/런타임) 0/0 and 0/0. Effect(효과): short source selection(숏 원천 선택)과 same-mask exit label pivot(같은 마스크 청산 라벨 전환)만 반복하지 않습니다.
 <!-- frontier37D_stage_closeout_payoff_label_family_pivot_v1 -->
 - `frontier37D_stage_closeout_payoff_label_family_pivot_v1`: f37_train_only_payoff_dominance_and_balanced_label_family_pivot_did_not_create_seed_or_runtime_candidate. Evidence(근거): F37B/F37C seed/runtime(전선37B/37C 씨앗/런타임) 0/0 and 0/0. Effect(효과): same payoff-dominance label family(같은 수익 우위 라벨 계열)만 반복하지 않습니다.
+<!-- frontier38D_stage_closeout_model_score_source_pivot_v1 -->
+
+
+### frontier38D_stage_closeout_model_score_source_pivot_v1
+
+- Stage(단계): `stage_frontier_38__short_pf_edge_source_family_or_model_pivot_after_payoff_label_negative`
+- Negative memory(부정 기억): `f38_shallow_model_score_source_family_did_not_create_seed_or_runtime_candidate`
+- Action(행동): shallow model score source(얕은 모델 점수 소스) proxy/repair(프록시/수리)가 seed/runtime candidate(씨앗/런타임 후보)를 만들지 못한 결과를 기록했다.
+- Effect(효과): 같은 score quantile repair(점수 분위수 수리)를 신규성 없이 반복하지 않는다.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f38c_model_score_repair`

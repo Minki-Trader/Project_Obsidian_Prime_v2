@@ -7088,3 +7088,12 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T16:23:28Z: `frontier36D_stage_closeout_short_source_utility_label_pivot_v1` closed Frontier36 short source utility(전선36 숏 원천 유틸리티). Effect(효과): proxy_scout=73, repair_scout=132, seed=0, next=`frontier37A_stage_open_short_pf_edge_label_family_pivot_hypothesis_design_v1`.
 <!-- frontier37D_stage_closeout_payoff_label_family_pivot_v1 -->
 - 2026-06-14T17:05:10Z: `frontier37D_stage_closeout_payoff_label_family_pivot_v1` closed Frontier37 payoff label family(전선37 수익 라벨 계열). Effect(효과): proxy_scout=1, repair_scout=18, seed=0, next=`frontier38A_stage_open_short_pf_edge_source_family_or_model_pivot_hypothesis_design_v1`.
+<!-- frontier38D_stage_closeout_model_score_source_pivot_v1 -->
+
+
+## frontier38D_stage_closeout_model_score_source_pivot_v1
+
+- Action(행동): F38 train-only model score source(학습 전용 모델 점수 소스) proxy/repair/closeout(프록시/수리/마감)을 기록했다.
+- Effect(효과): scout clue(탐색 단서)는 보존하고 seed/runtime authority(씨앗/런타임 권위)는 주장하지 않는다.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f38c_model_score_repair`
+- Next(다음): `frontier39A_stage_open_short_pf_edge_model_score_or_regime_pivot_hypothesis_design_v1`
