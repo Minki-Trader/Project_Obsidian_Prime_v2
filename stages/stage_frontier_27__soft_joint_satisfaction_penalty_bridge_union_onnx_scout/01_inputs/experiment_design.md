@@ -1,0 +1,13 @@
+﻿# Frontier27 Experiment Design(전선27 실험 설계)
+
+- hypothesis(가설): F26 failed because hard component pass/fail reduced 80 micro pockets to 3 passers; F27 keeps train-only selection but ranks the full micro source by soft penalties before union construction(F26은 경성 구성 통과/탈락이 80개 미세 구간을 3개로 줄여 실패했고, F27은 학습 전용 선택을 유지하되 전체 미세 원천을 연성 페널티로 순위화한 뒤 합집합을 구성)
+- decision_use(결정 사용처): decide whether soft penalty ranking deserves proxy repair, WFO, or runtime handoff consideration(연성 페널티 순위가 프록시 수리, WFO, 런타임 인계 검토 가치가 있는지 결정)
+- comparison_baseline(비교 기준): F24 density-first, F25 DD-headroom-first, and F26 hard joint gate are reference-only, not baselines(F24 빈도 우선, F25 손실폭 여유 우선, F26 경성 합동 게이트는 참조 전용이며 기준선 아님)
+- control_variables(통제 변수): US100 M5 Tier A dataset(US100 5분봉 티어 A 데이터셋), feature_set_v2 58 features(피처 세트 v2 58개), fwd12 label horizon(fwd12 라벨 지평), same-side OR-union semantics(같은 방향 OR 합집합 의미), validation/OOS read-only(검증/OOS 읽기 전용)
+- changed_variables(변경 변수): soft_joint_satisfaction_penalty_rank(연성 합동 충족 페널티 순위), full 80 micro source pool before union(합집합 전 전체 80 미세 원천 풀), diagnostic scout envelope, not final gate(진단용 탐색 외피, 최종 게이트 아님)
+- sample_scope(표본 범위): Tier A US100 M5 model_input_dataset.parquet, frozen train/validation/oos split(티어 A US100 5분봉 고정 분할)
+- success_criteria(성공 기준): {"scout_clue": {"pf": 1.1, "density_low": 5.0, "density_high": 10.0, "dd_cap": 25.0}, "seed_surface": {"pf": 1.2, "density_low": 5.0, "density_high": 10.0, "dd_cap": 18.0}, "handoff_candidate": {"pf": 1.5, "density_low": 5.0, "density_high": 10.0, "dd_cap": 12.0, "equity_trend_r2": 0.35}}
+- failure_criteria(실패 기준): zero valid soft-penalty unions(유효 연성 페널티 합집합 0개), top rows repeat F24/F25/F26 keys without seed-gap lift(F24/F25/F26 키 반복인데 씨앗 격차 개선 없음), all forward rows remain scout-only with seed DD blocked(모든 전방 행이 씨앗 손실폭에서 막힌 탐색 전용)
+- invalid_conditions(무효 조건): F26 hard gate numeric relaxation is primary path(F26 경성 게이트 숫자 완화가 주 경로), validation/OOS used in selection or repair(검증/OOS를 선택 또는 수리에 사용), penalty formula missing before proxy(프록시 전 페널티 공식 누락), feature hash mismatch(피처 해시 불일치)
+- stop_conditions(중단 조건): handoff rows >0 triggers Grok before WFO/MT5/ONNX(인계 행이 있으면 WFO/MT5/ONNX 전 Grok 검토), seed or scout only triggers repair-or-closeout decision(씨앗 또는 탐색만 있으면 수리 또는 마감 결정), zero union or repeat-only closes invalid_setup or negative_memory(합집합 0개 또는 반복만 있으면 무효 설정 또는 부정 기억)
+- evidence_plan(근거 계획): F27B run manifest(실행 목록), soft penalty audit(연성 페널티 감사), train-ranked union table(학습 순위 합집합 표), F24/F25/F26 top-10 non-repeat audit(상위 10 비반복 감사), split metrics(분할 지표), run registry(실행 등록부), stage ledger(단계 장부).

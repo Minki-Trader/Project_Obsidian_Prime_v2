@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "7d395725f6fb081e0ec5836e990d32006eb865166257e5790ee5004af912fe8d",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "# Frontier27 Stage-Closeout Review\n\nYou are Grok, external second opinion. Review only this bounded closeout proposal.\n\nCurrent stage:\n- stage_id: stage_frontier_27__soft_joint_satisfaction_penalty_bridge_union_onnx_scout\n- hypothesis: replace Frontier26 hard component pass/fail gate with train-only soft joint satisfaction penalty rank before same-side OR-union construction.\n- stage open Grok verdict: accepted, novelty_ok yes, forbidden_path_risk medium.\n\nEvidence:\n- Frontier27B rebuilt full F24 80 micro source surface.\n- soft_micro_pool_rows: 80\n- soft_union_candidate_rows: 234\n- broad_scout_envelope_rows: 124\n- density_bridge_rows: 189\n- scout_clue_rows: 19\n- seed_surface_rows: 0\n- handoff_candidate_rows: 0\n- top10 overlaps vs F24/F25/F26: 0 / 0 / 0\n- best soft union: f27b_0181, validation PF/density/DD 1.3099 / 5.9617 / 17.8393, OOS PF/density/DD 1.1508 / 6.6870 / 13.4162.\n- closest seed shape: some rows have DD <=18 but OOS PF under 1.2; rows with forward PF >=1.2 have validation DD around 19.8.\n\nRepair decision:\n- Allowed train-only filter scans found 0 seed and 0 handoff.\n- all-80 pair coverage probe was attempted but timed out at 300s, so no positive or negative claim is made from it.\n- validation/OOS-targeted repair rejected as invalid.\n- Frontier26 hard-gate threshold relaxation rejected as invalid.\n\nProposed closeout:\n- closeout_class: preserved_clue_negative_memory\n- preserved_clue: f27_soft_penalty_restored_union_surface_and_19_scout_rows_reference_only\n- negative_memory: under_f27_locked_soft_penalty_rank_seed_and_handoff_remained_zero\n- runtime_probe_status: runtime_probe_ineligible_no_handoff_candidate_after_f27c_repair_decision\n- onnx_status: onnx_branch_unattempted_no_handoff_candidate_after_f27c_repair_decision\n- next clue: train_only_stability_gap_penalty_for_forward_pf_dd_balance_reference_only\n- forbidden claims remain not_claimed: completion, baseline, promotion, runtime authority, live readiness, Goal Achieve.\n\nQuestion:\nIs this closeout classification honest and sufficiently bounded?\nPlease answer with:\n1. verdict: accepted / rejected / needs_local_verification\n2. closeout_class_ok: yes/no\n3. repair_rejection_ok: yes/no\n4. runtime_probe_status_ok: yes/no\n5. next_clue_ok: yes/no\n6. concise critique\n\n"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 56.940473,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-14_frontier27_stage_closeout/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-14_frontier27_stage_closeout/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-14_frontier27_stage_closeout/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-14_frontier27_stage_closeout/small_review/metadata.json"
+  }
+}
