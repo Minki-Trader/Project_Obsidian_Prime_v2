@@ -7048,3 +7048,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-14T11:51:15Z: `frontier29C_loss_concentration_veto_repair_or_closeout_decision_v1` rejected F29 loss-veto repair(전선29 손실 차단 수리 거절). Effect(효과): near/valid_repair(근접/유효 수리) counts are 9/0 and next run(다음 실행) is `frontier29D_stage_closeout_loss_concentration_veto_v1`.
 <!-- frontier29D_stage_closeout_loss_concentration_veto_v1 -->
 - 2026-06-14T11:57:01Z: `frontier29D_stage_closeout_loss_concentration_veto_v1` closed Frontier29(전선29 마감). Effect(효과): selected/scout/seed/handoff(선택/탐색/씨앗/인계) counts are 1438/0/0/0 and next run(다음 실행) is `frontier30A_stage_open_train_density_preserving_selector_or_exit_shape_pivot_hypothesis_design_v1`.
+<!-- frontier30A_stage_open_train_density_preserving_selector_or_exit_shape_pivot_hypothesis_design_v1 -->
+- 2026-06-14T12:12:05Z: `frontier30A_stage_open_train_density_preserving_selector_or_exit_shape_pivot_hypothesis_design_v1` opened Frontier30 train-only density-preserving preselector scout(전선30 학습 전용 밀도 보존 사전 선택기 탐색 개방). Effect(효과): F30B will test `frontier30B_train_density_preserving_preselector_before_loss_veto_proxy_scout_v1` with exit-shape pivot(청산 형태 전환) kept reference-only(참조 전용).
+<!-- frontier30B_train_density_preserving_preselector_before_loss_veto_proxy_scout_v1 -->
+- 2026-06-14T12:18:37Z: `frontier30B_train_density_preserving_preselector_before_loss_veto_proxy_scout_v1` ran train-only density-preserving preselector proxy(학습 전용 밀도 보존 사전 선택기 프록시). Effect(효과): candidates=245, scout=5, seed=0, handoff=0, next=`frontier30C_density_preserving_preselector_repair_or_closeout_decision_v1`.
+<!-- frontier30C_density_preserving_preselector_repair_or_closeout_decision_v1 -->
+- 2026-06-14T12:21:24Z: `frontier30C_density_preserving_preselector_repair_or_closeout_decision_v1` rejected F30 repair(전선30 수리 거절). Effect(효과): scout=5, seed=0, handoff=0, valid_repair=0, next=`frontier30D_stage_closeout_density_preserving_preselector_v1`.
+<!-- frontier30D_stage_closeout_density_preserving_preselector_v1 -->
+- 2026-06-14T12:28:05Z: `frontier30D_stage_closeout_density_preserving_preselector_v1` closed Frontier30 density-preserving preselector scout(전선30 밀도 보존 사전 선택기 탐색 마감). Effect(효과): scout=5, seed=0, handoff=0, next=`frontier31A_stage_open_exit_shape_pivot_for_density_preserved_source_scout_pf_lift_hypothesis_design_v1`.

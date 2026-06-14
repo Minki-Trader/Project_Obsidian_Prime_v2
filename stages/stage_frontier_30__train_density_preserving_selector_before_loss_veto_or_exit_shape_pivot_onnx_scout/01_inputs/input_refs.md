@@ -1,0 +1,11 @@
+﻿# Frontier30 Input References(전선30 입력 참조)
+
+- dataset(데이터셋): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet`
+- feature order(피처 순서): `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt`
+- feature hash(피처 해시): `fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2`
+- F29 selection(F29 선택 상태): `stages/stage_frontier_29__train_only_loss_concentration_veto_for_pf_dd_balance_onnx_scout/04_selected/selection_status.md`
+- F29A report(F29A 보고서): `stages/stage_frontier_29__train_only_loss_concentration_veto_for_pf_dd_balance_onnx_scout/03_reviews/frontier29A_stage_open_train_only_loss_concentration_veto_pf_dd_balance_hypothesis_design_v1_report.md`
+- F29B report(F29B 보고서): `stages/stage_frontier_29__train_only_loss_concentration_veto_for_pf_dd_balance_onnx_scout/03_reviews/frontier29B_train_only_loss_concentration_veto_proxy_scout_v1_report.md`
+- F29C report(F29C 보고서): `stages/stage_frontier_29__train_only_loss_concentration_veto_for_pf_dd_balance_onnx_scout/03_reviews/frontier29C_loss_concentration_veto_repair_or_closeout_decision_v1_report.md`
+- F29D closeout(F29D 마감): `stages/stage_frontier_29__train_only_loss_concentration_veto_for_pf_dd_balance_onnx_scout/03_reviews/frontier29D_stage_closeout_loss_concentration_veto_v1_report.md`
+- Grok packet(그록 묶음): `docs/agent_control/grok_reviews/2026-06-14_frontier30_stage_open/small_review`
