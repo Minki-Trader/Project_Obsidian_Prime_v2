@@ -1560,3 +1560,6 @@ Register ideas when they become durable work, not for every passing thought.
 - `frontier11B_subperiod_stability_proxy_scout_v1`: subperiod stability-first selector scout(하위기간 안정성 우선 선택기 탐색)를 기록했습니다. Effect(효과): 기존 F10C(전선10C) 후보군을 재학습하지 않고 안정성 선택 표면만 비교합니다.
 <!-- frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1 -->
 - `frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1`: Frontier11(전선11) closed negative memory(부정 기억 마감). Effect(효과): subperiod stability selector(하위기간 안정성 선택기)는 reference-only diagnostic pattern(참조 전용 진단 패턴)으로만 남깁니다.
+<!-- frontier12A_stage_open_trade_shape_duration_controlled_onnx_scout_v1__IDEA-FR12-TRADE-SHAPE-DURATION-CONTROLLED-ONNX-SCOUT -->
+<!-- frontier12A_stage_open_trade_shape_duration_controlled_onnx_scout_v1__IDEA-FR12-TRADE-SHAPE-DURATION-CONTROLLED-ONNX-SCOUT -->
+- `IDEA-FR12-TRADE-SHAPE-DURATION-CONTROLLED-ONNX-SCOUT`: Frontier12(프론티어12) opens trade-shape duration-controlled ONNX scout(거래 형상과 보유 기간 통제 온엑스 탐색). Effect(효과): 같은 후보군 선택기 반복이 아니라 label source(라벨 원천)를 새 축으로 시험합니다.

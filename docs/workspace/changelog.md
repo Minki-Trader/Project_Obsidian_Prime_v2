@@ -6916,3 +6916,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - 2026-06-13T23:49:57Z: `frontier11B_subperiod_stability_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict scout clue rows(엄격 탐색 단서 행) `0`, preserved clue rows(보존 단서 행) `0`, next run(다음 실행) `frontier11C_stability_selector_repair_or_closeout_decision_v1`.
 <!-- frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1 -->
 - 2026-06-13T23:58:13Z: `frontier11C_stage_closeout_subperiod_stability_first_onnx_scout_v1` closed Frontier11(전선11) as negative memory(부정 기억). Effect(효과): next run(다음 실행) `frontier12A_stage_open_new_hypothesis_design_v1` starts a new hypothesis lifecycle(새 가설 생명주기).
+<!-- frontier12A_stage_open_trade_shape_duration_controlled_onnx_scout_v1 -->
+- 2026-06-14T00:16:57Z: `frontier12A_stage_open_trade_shape_duration_controlled_onnx_scout_v1` opened Frontier12(프론티어12) with Grok retry accepted(그록 재시도 수용) and trade-shape label contract(거래 형상 라벨 계약). Effect(효과): next run(다음 실행) `frontier12B_trade_shape_duration_label_proxy_scout_v1` can run label proxy scout(라벨 프록시 탐색) without authority claims(권위 주장 없음).
+<!-- frontier12B_trade_shape_duration_label_proxy_scout_v1 -->
+- 2026-06-14T00:24:46Z: `frontier12B_trade_shape_duration_label_proxy_scout_v1` negative_memory_candidate(부정 기억 후보). Effect(효과): strict rows(엄격 행) `0`, preserved rows(보존 행) `0`, next run(다음 실행) `frontier12C_trade_shape_duration_repair_or_closeout_decision_v1`.
+<!-- frontier12C_stage_closeout_trade_shape_duration_controlled_onnx_scout_v1 -->
+- 2026-06-14T00:32:01Z: `frontier12C_stage_closeout_trade_shape_duration_controlled_onnx_scout_v1` closed Frontier12(프론티어12) as negative memory(부정 기억) after Grok closeout accepted(그록 마감 수용). Effect(효과): next frontier(다음 프론티어) `frontier13A_stage_open_new_hypothesis_design_v1` starts a new hypothesis(새 가설) without authority claims(권위 주장 없음).
