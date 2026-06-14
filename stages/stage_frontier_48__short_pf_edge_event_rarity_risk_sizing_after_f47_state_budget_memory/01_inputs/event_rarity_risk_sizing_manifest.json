@@ -1,0 +1,149 @@
+{
+  "stage_id": "stage_frontier_48__short_pf_edge_event_rarity_risk_sizing_after_f47_state_budget_memory",
+  "hypothesis": "train_only_nonpercentile_state_gate_and_risk_sizing_on_f47_event_risk_memory",
+  "idea_id": "IDEA-FR48-SHORT-EVENT-RARITY-RISK-SIZING",
+  "decision_use": "scout_seed_runtime_candidate_screening_only",
+  "comparison_baseline": "F47 best and preserved nonwinner rows are reference-only clues, not inherited baseline",
+  "control_variables": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "side": "short",
+    "feature_order_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "split": "train_2022-09-01_2024-12-31_validation_2025-01-01_2025-09-30_oos_2025-10-01_2026-02-28",
+    "path_proxy": "executable_first_hit_sl_tp_from_raw_us100_path"
+  },
+  "changed_variables": {
+    "sequence_context": "same lagged frozen event score rolls and horizon-embargoed past outcome tape as reference scaffold",
+    "state_gate": "fixed non-percentile squeeze, cooldown, bad-event-rate, volatility, and high-count gates",
+    "risk_sizing": "train-only first-hit SLTP caps with fixed score/event scaffold and non-percentile state admission",
+    "novelty_line": "state gates use fixed entry-known thresholds instead of another percentile risk-budget sweep",
+    "model_family": "class_weighted_sequence_context_classifier_with_state_budget_overlay",
+    "threshold_policy": "train_split_event_score_threshold_only; state gates are fixed absolute thresholds; validation_oos_read_only"
+  },
+  "sample_scope": {
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "raw_rows": 261345,
+    "short_path_valid_rows": 46650
+  },
+  "success_criteria": {
+    "scout_clue": {
+      "forward_min_pf": 1.05,
+      "density": "4_to_12_per_day",
+      "forward_max_dd": 18.0
+    },
+    "seed_surface": {
+      "forward_min_pf": 1.2,
+      "density": "5_to_10_per_day",
+      "forward_max_dd": 12.0
+    },
+    "runtime_probe_candidate": {
+      "forward_min_pf": 1.5,
+      "forward_max_dd": 10.0
+    }
+  },
+  "invalid_conditions": [
+    "validation_oos_used_for_label_threshold_model_sl_tp_or_rank",
+    "past_outcome_tape_uses_labels_newer_than_horizon_plus_one_bars",
+    "f47_percentile_risk_budget_sweep_repeated_as_primary_lever",
+    "f44_continuous_regression_or_f42_f43_f38_f39_primary_lever_reopened"
+  ],
+  "evidence_plan": [
+    "stage_open_grok_receipt",
+    "gate_provenance_table",
+    "event_rarity_risk_sizing_model_audit",
+    "candidate_ledger",
+    "split_metrics",
+    "candidate_summary",
+    "stage_run_ledger",
+    "project_alpha_ledger_rows",
+    "stage_closeout_grok_receipt"
+  ],
+  "input_artifacts": {
+    "prev_selection": {
+      "path": "stages/stage_frontier_47__short_pf_edge_sequence_state_risk_budget_after_f46_sequence_context_memory/04_selected/selection_status.json",
+      "sha256": "298654f548ee5d78c6b89850dc1166013770cf5f0173208b2b4bce3a1c57afa8"
+    },
+    "prev_preserved_clue": {
+      "path": "stages/stage_frontier_47__short_pf_edge_sequence_state_risk_budget_after_f46_sequence_context_memory/04_selected/preserved_clue.md",
+      "sha256": "9ea376b65c7eb1e95189e8d851ee693a9edcc3fbb759f2e624891190be9c0b1c"
+    },
+    "prev_negative_memory": {
+      "path": "stages/stage_frontier_47__short_pf_edge_sequence_state_risk_budget_after_f46_sequence_context_memory/04_selected/negative_memory.md",
+      "sha256": "f839fe362011e6173355e896b058184e22561a42f5baf8edd218204ad55a44f6"
+    },
+    "grok_open_clean_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-15_frontier48_stage_open/small_review/clean_output.md",
+      "sha256": "9b73025b99cb6a0ccb224fd68b7daf683b554ca098ef7a3a4e45027a3358c050"
+    },
+    "gate_provenance_table": {
+      "path": "stages/stage_frontier_48__short_pf_edge_event_rarity_risk_sizing_after_f47_state_budget_memory/01_inputs/gate_provenance_table.csv",
+      "sha256": "ce697c37352ca3aea54305f02b2a5e20fcc5d1865efedb4296595f08ecbb09bb"
+    }
+  },
+  "open_review": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-15_frontier48_stage_open/small_review",
+    "metadata": {
+      "review_size": "small",
+      "prompt_hash": "d051fc2b5ca54e454bddc699eb0b4512a1d0c7787577c76f741da4b02af3c4e2",
+      "command": [
+        "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+        "--no-memory",
+        "--disable-web-search",
+        "--max-turns",
+        "2",
+        "-p",
+        "# Frontier48 stage-open Grok review(그록 단계 개방 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nDo not claim operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\nDo not inspect files, call tools, or request more repository context(파일/도구/추가 저장소 문맥을 사용하지 말 것). Answer only from bounded evidence(제한 근거) below.\n\nCurrent truth(현재 진실):\n- Last closed stage(마지막 종료 단계): `stage_frontier_47__short_pf_edge_sequence_state_risk_budget_after_f46_sequence_context_memory`\n- Last closeout(마지막 마감): `negative_memory`\n- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_scout_seed_or_runtime_candidate_after_f47_state_risk_budget_proxy`\n- F47 scout/seed/runtime(탐색/씨앗/런타임): `0/0/0`\n- F47 best observed row(최상 관찰 행): `f47b_0001`, event=`event_mfe65_mae35_loss_contained`, model=`logreg_balanced_l2_c0p25__base_extratrees_d3_leaf220__lagged_score_outcome_q86_w12_36`, risk=`risk_budget_bad_fast_p72_realized_vol_p82`, train PF=1.2192, validation PF=0.9978, OOS PF=1.1039, forward density=5.09..5.57/day, forward DD=8.85.\n- F47 nonwinner forward observation(비승자 전진 관찰): `f47c_0001`, risk=`repair_risk_budget_squeeze_p80_bad_fast_p80`, validation PF=1.0219, OOS PF=1.1831, forward density=5.66..6.63/day, forward DD=11.45.\n\nCodex proposed direction(코덱스 제안 방향):\n- Open `stage_frontier_48__short_pf_edge_event_rarity_risk_sizing_after_f47_state_budget_memory`.\n- Keep F47 event/model/context/score/SLTP scaffold as reference-only(참조 전용), not winner/baseline(승자/기준선 아님).\n- Replace percentile risk-budget sweep(분위수 위험 예산 훑기) with fixed non-percentile state gates(고정 비분위수 상태 게이트): squeeze off(압축 해제), cooldown bars(휴식 봉 수), bad-event rate caps(나쁜 이벤트 비율 상한), volatility ratio caps(변동성 비율 상한), high-score crowding caps(고점수 밀집 상한).\n- Allow a capped repair(상한 수리) to vary event rarity(이벤트 희소성) narrowly, but keep validation/OOS(검증/표본외) read-only.\n- If no seed/runtime candidate(씨앗/런타임 후보) appears, close honestly as preserved clue(보존 단서), negative memory(부정 기억), invalid setup(무효 설정), or blocked(차단).\n- If runtime candidate(런타임 후보) appears, stop before expensive MT5(비싼 MT5) and run pre-expensive Grok review(사전 고비용 그록 검토).\n\nSuccess criteria(성공 기준):\n- Scout clue(탐색 단서): forward_min_pf >= 1.05, forward density 4..12/day, forward max DD <= 18.\n- Seed surface(씨앗 표면): forward_min_pf >= 1.20, forward density 5..10/day, forward max DD <= 12.\n- Runtime candidate(런타임 후보): seed surface plus forward_min_pf >= 1.50 and forward max DD <= 10.\n- Final completion hard gate(최종 완성 강제 게이트)는 not applied at this exploratory stage(이번 탐색 단계에는 적용하지 않음).\n\nClaim boundary(주장 경계):\n- No completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\n- Python proxy(파이썬 프록시) success cannot become MT5 runtime authority(MT5 런타임 권위).\n- MT5 runtime probe(MT5 런타임 탐침)는 runtime candidate(런타임 후보) or MT5-facing claim(MT5 관련 주장)이 있을 때만 actual tester run(실제 테스터 실행)로 격상한다. Otherwise runtime_probe_status(런타임 탐침 상태)를 ineligible/out_of_scope(부적격/범위 밖)로 기록한다.\n\nQuestion(질문):\nIs the F48 stage-open direction valid under reference-not-inheritance(참조이지 상속 아님), train_split_only_construction_lock(학습 분할 전용 구성 잠금), and the runtime probe boundary(런타임 탐침 경계)?\n\nReturn only:\n1. verdict: accepted, rejected, or needs_local_verification(수용/거절/로컬 검증 필요)\n2. train_split_only_construction_lock: yes/no(예/아니오)\n3. claim_boundary_ok: yes/no(예/아니오)\n4. one risk(위험) if any\n5. one repair suggestion(수리 제안) if any\n"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "success": true,
+      "duration_seconds": 21.624669,
+      "stripped_noise_lines": [],
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "packet_paths": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier48_stage_open/small_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier48_stage_open/small_review/clean_output.md",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier48_stage_open/small_review/raw_diagnostics.json",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier48_stage_open/small_review/metadata.json"
+      }
+    },
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-15_frontier48_stage_open/small_review/clean_output.md",
+    "classification": "accepted_stage_open_train_split_only_nonpercentile_state_gate_lock",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "claim_boundary_ok": true,
+    "forbidden_claim_seen": false,
+    "clean_excerpt": "**1. verdict:** `accepted`\n\n**2. train_split_only_construction_lock:** `yes`\n\n**3. claim_boundary_ok:** `yes`\n\n**4. one risk:** Fixed non-percentile state gates may still smuggle F47 percentile semantics (for example p72/p82-style cutoffs) in through reference-only tuning, so the mechanism change becomes label-only while selection pressure stays inherited.\n\n**5. one repair suggestion:** Before any sweep, write a gate provenance table: each threshold must be tagged `train_only_fit`, `fixed_design_constant`, or `archived_clue_no_selection`; anything else is blocked from the repair lane."
+  },
+  "checks": {
+    "checks": {
+      "workspace_points_to_f48": true,
+      "prev_selection_next_matches": true,
+      "prev_selection_json_exists": true,
+      "prev_preserved_clue_exists": true,
+      "prev_negative_memory_exists": true,
+      "open_grok_accepted": true,
+      "feature_hash_matches_contract": true,
+      "required_splits_present": true,
+      "raw_path_alignment_available": true,
+      "short_path_valid_rows_positive": true,
+      "train_split_only_construction_lock": true
+    },
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "short_valid_rows": 46650
+  }
+}
