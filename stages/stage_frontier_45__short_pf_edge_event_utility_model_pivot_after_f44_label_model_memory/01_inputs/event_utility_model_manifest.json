@@ -1,0 +1,140 @@
+{
+  "stage_id": "stage_frontier_45__short_pf_edge_event_utility_model_pivot_after_f44_label_model_memory",
+  "hypothesis": "train_only_short_event_utility_classifier",
+  "idea_id": "IDEA-FR45-SHORT-EVENT-UTILITY-CLASSIFIER",
+  "decision_use": "scout_seed_runtime_candidate_screening_only",
+  "comparison_baseline": "F44 best row reference-only scout clue, not inherited baseline",
+  "control_variables": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "side": "short",
+    "feature_order_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "split": "train_2022-09-01_2024-12-31_validation_2025-01-01_2025-09-30_oos_2025-10-01_2026-02-28",
+    "path_proxy": "executable_first_hit_sl_tp_from_raw_us100_path"
+  },
+  "changed_variables": {
+    "label": "binary_or_ordinal_event_utility_label",
+    "model_family": "class_weighted_event_classifier",
+    "threshold_policy": "train_split_event_probability_quantiles_only"
+  },
+  "sample_scope": {
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "raw_rows": 261345,
+    "short_path_valid_rows": 46650
+  },
+  "success_criteria": {
+    "scout_clue": {
+      "forward_min_pf": 1.05,
+      "density": "4_to_12_per_day",
+      "forward_max_dd": 18.0
+    },
+    "seed_surface": {
+      "forward_min_pf": 1.2,
+      "density": "5_to_10_per_day",
+      "forward_max_dd": 12.0
+    },
+    "runtime_probe_candidate": {
+      "forward_min_pf": 1.5,
+      "forward_max_dd": 10.0
+    }
+  },
+  "invalid_conditions": [
+    "validation_oos_used_for_label_threshold_model_sl_tp_or_rank",
+    "f44_continuous_regression_repeated_as_primary_lever",
+    "f42_f43_f38_f39_primary_lever_reopened"
+  ],
+  "evidence_plan": [
+    "stage_open_grok_receipt",
+    "event_model_audit",
+    "candidate_ledger",
+    "split_metrics",
+    "candidate_summary",
+    "stage_run_ledger",
+    "project_alpha_ledger_rows",
+    "stage_closeout_grok_receipt"
+  ],
+  "input_artifacts": {
+    "prev_selection": {
+      "path": "stages/stage_frontier_44__short_pf_edge_label_model_pivot_after_f43_trade_shape_negative/04_selected/selection_status.json",
+      "sha256": "7f604785f05f804ad949985f436039cdf04ede054b10d3235cde5c72e16ce073"
+    },
+    "prev_preserved_clue": {
+      "path": "stages/stage_frontier_44__short_pf_edge_label_model_pivot_after_f43_trade_shape_negative/04_selected/preserved_clue.md",
+      "sha256": "78a7dc99f67b0eaf2ed449a4503dee5ba986b36ac877cc7dce0eea3ccfe5e5c0"
+    },
+    "prev_negative_memory": {
+      "path": "stages/stage_frontier_44__short_pf_edge_label_model_pivot_after_f43_trade_shape_negative/04_selected/negative_memory.md",
+      "sha256": "f9cf55022be518e85b24291f5ccf459cc4fc2894428bd2eea79b6e564b2093b7"
+    },
+    "grok_open_clean_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-15_frontier45_stage_open/small_review/clean_output.md",
+      "sha256": "302bea576324d278739c93c41276fcc1c370a7bfcb71f6ffaa41440946796a70"
+    }
+  },
+  "open_review": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-15_frontier45_stage_open/small_review",
+    "metadata": {
+      "review_size": "small",
+      "prompt_hash": "a3c236ff03feaff623afc7967f25dbb1fa0a6ccec7929eeff1f802175798ffbf",
+      "command": [
+        "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+        "--no-memory",
+        "--disable-web-search",
+        "--max-turns",
+        "1",
+        "-p",
+        "# Frontier45 stage-open Grok review(그록 단계 개방 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nDo not claim operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\nDo not inspect files, call tools, or request more repository context(파일/도구/추가 저장소 문맥을 사용하지 말 것). Answer only from bounded evidence(제한 근거) below.\n\nCurrent truth(현재 진실):\n- F44 closeout(마감): preserved_clue_negative_memory(보존 단서+부정 기억).\n- F44 runtime probe status(런타임 탐침 상태): runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f44_label_model_proxy.\n- F44 best observed row(최상 관찰 행): quality_rank_mfe60_horizon60_mae75 + extratrees_reg_d3_leaf180, forward_min_pf 1.1395, density about 5.37/day, forward_max_dd 7.13, scout true but seed/runtime false.\n- Prior frontier rule(전선 규칙): Stage12~364 and Frontier1~44 are reference only(참조 전용), not inheritance(상속 아님).\n\nCodex proposed Frontier45 direction(코덱스 제안 방향):\n- stage_id(단계 ID): stage_frontier_45__short_pf_edge_event_utility_model_pivot_after_f44_label_model_memory\n- hypothesis(가설): A train-only short event-utility classifier(학습 전용 숏 이벤트 효용 분류기) can isolate rarer high-payoff/low-adverse path events(고보상/저불리 경로 이벤트) better than F44 continuous utility regression(연속 효용 회귀).\n- novelty_delta(신규성 차이): switch primary lever(주 레버)를 continuous path-utility regression target(연속 경로 효용 회귀 목표)에서 binary/ordinal event utility labels(이진/순서 이벤트 효용 라벨), class-weighted classifiers(클래스 가중 분류기), and train-only event probability thresholding(학습 전용 이벤트 확률 임계값)으로 바꾼다.\n- comparison_baseline(비교 기준): F44 best row is reference-only(참조 전용) scout clue(탐색 단서), not baseline/winner(기준선/승자 아님).\n- control_variables(고정 변수): US100 M5, frozen 58 feature order(고정 58 피처 순서), frozen chronological split(고정 시간순 분할), short-only(숏 전용), closed-bar features(닫힌 봉 피처), executable first-hit SL/TP path proxy(실행형 첫 터치 손익절 경로 프록시).\n- changed_variables(변경 변수): event label(이벤트 라벨), classifier family(분류 모델 계열), event-score thresholding(이벤트 점수 임계값), train-only SL/TP caps from event-selected rows(이벤트 선택 행 학습 손익절 상한).\n- planned proxy(예정 프록시): build event labels and probability thresholds only from train split(학습 분할만), evaluate validation/OOS(검증/표본외)는 read-only(읽기 전용).\n- planned repair(예정 수리): capped event rarity/threshold repair(상한 이벤트 희소도/임계값 수리) only if no seed/runtime candidate(씨앗/런타임 후보 없음).\n\nSuccess criteria for scout/seed/runtime(탐색/씨앗/런타임 성공 기준):\n- scout clue(탐색 단서): forward_min_pf >= 1.05, forward density 4~12/day, forward_max_dd <= 18%.\n- seed surface(씨앗 표면): forward_min_pf >= 1.20, density 5~10/day, forward_max_dd <= 12%.\n- runtime probe candidate(런타임 탐침 후보): seed plus forward_min_pf >= 1.50 and forward_max_dd <= 10%.\n- final completion gates(최종 완성 게이트) are not applied in this early proxy(초기 프록시).\n\nInvalid/do-not-repeat conditions(무효/반복 금지 조건):\n- Do not use validation/OOS labels or outcomes(검증/표본외 라벨/결과) to build labels, thresholds, model variants, SL/TP caps, or candidate rank.\n- Do not repeat F44 continuous regression target(연속 회귀 목표) as the primary lever.\n- Do not reopen F42 timing gate(타이밍 게이트), F43 trade-shape source(거래 형태 원천), F38 shallow score quantile repair(얕은 점수 분위수 수리), or F39 regime bucket overlay(체제 버킷 덧씌움) as primary lever.\n- Do not claim ONNX completion(온엑스 완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), or live readiness(실거래 준비).\n\nQuestion(질문):\nIs this a valid next hypothesis lifecycle(다음 가설 생명주기), and what is the main guardrail Codex must enforce before running the proxy(프록시)?\n\nReturn only:\n1. verdict: accepted, rejected, or needs_local_verification(수용/거절/로컬 검증 필요)\n2. main_guardrail(주 보호선)\n3. do_not_repeat(반복 금지)\n4. claim_boundary_ok: yes/no(예/아니오)\n"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "success": true,
+      "duration_seconds": 18.265931,
+      "stripped_noise_lines": [],
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "packet_paths": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier45_stage_open/small_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier45_stage_open/small_review/clean_output.md",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier45_stage_open/small_review/raw_diagnostics.json",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier45_stage_open/small_review/metadata.json"
+      }
+    },
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-15_frontier45_stage_open/small_review/clean_output.md",
+    "classification": "accepted_stage_open_train_split_only_event_lock",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "claim_boundary_ok": true,
+    "forbidden_claim_seen": true,
+    "clean_excerpt": "**1. verdict:** `accepted`\n\n**2. main_guardrail:**  \nTrain-split-only construction lock(학습 분할 전용 구성 잠금): event labels(이벤트 라벨), class weights(클래스 가중치), probability thresholds(확률 임계값), model variants(모델 변형), SL/TP caps(손익절 상한), and candidate rank(후보 순위) must be built only from the train split(학습 분할). Validation/OOS(검증/표본외) may be used only for read-only evaluation(읽기 전용 평가), never for fitting, selection, or repair decisions(적합/선택/수리 결정에 사용 금지).\n\n**3. do_not_repeat:**\n- Validation/OOS labels or outcomes(검증/표본외 라벨/결과) for label/threshold/model/SL-TP-cap/rank construction(라벨·임계값·모델·손익절 상한·순위 구성)\n- F44 continuous path-utility regression(연속 경로 효용 회귀) as the primary lever(주 레버)\n- F42 timing gate(타이밍 게이트), F43 trade-shape source(거래 형태 원천), F38 shallow score quantile repair(얕은 점수 분위수 수리), F39 regime bucket overlay(체제 버킷 덧씌움) as primary levers(주 레버)\n- ONNX completion(온엑스 완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), or live readiness(실거래 준비) claims(주장)\n\n**4. claim_boundary_ok:** `yes`"
+  },
+  "checks": {
+    "checks": {
+      "workspace_points_to_f45": true,
+      "prev_selection_next_matches": true,
+      "prev_selection_json_exists": true,
+      "prev_preserved_clue_exists": true,
+      "prev_negative_memory_exists": true,
+      "open_grok_accepted": true,
+      "feature_hash_matches_contract": true,
+      "required_splits_present": true,
+      "raw_path_alignment_available": true,
+      "short_path_valid_rows_positive": true,
+      "train_split_only_construction_lock": true
+    },
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "short_valid_rows": 46650
+  }
+}
