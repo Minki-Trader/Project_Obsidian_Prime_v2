@@ -1082,3 +1082,5 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - `frontier33C_path_native_exit_label_repair_or_closeout_decision_v1`: bounded path-native repair(상한 경로 기반 수리) did not produce runtime candidate(런타임 후보 미생성). Evidence(근거): repair_scout/seed/runtime=76/0/0. Effect(효과): closeout(마감)에서 preserved clue(보존 단서)와 negative memory(부정 기억)를 분리합니다.
 <!-- frontier33D_stage_closeout_path_native_exit_label_v1 -->
 - `frontier33D_stage_closeout_path_native_exit_label_v1`: f33_path_native_mfe_mae_first_hit_repair_failed_to_reach_seed_or_runtime_candidate_under_train_only_threshold_lock. Evidence(근거): F33C repair scout/seed/runtime(수리 탐색/씨앗/런타임) 76/0/0. Effect(효과): MFE/MAE quantile widening only(최대 유리/불리 이동 분위수 확장만)은 반복 금지입니다.
+<!-- frontier34D_stage_closeout_dd_compression_state_gate_v1 -->
+- `frontier34D_stage_closeout_dd_compression_state_gate_v1`: f34_dd_compression_state_gate_reduced_drawdown_but_did_not_create_seed_or_runtime_candidate_under_train_only_state_gate_lock. Evidence(근거): F34B/F34C seed/runtime(전선34B/34C 씨앗/런타임) 0/0 and 0/0. Effect(효과): PF source(수익 팩터 원천) 없이 상태 게이트만 더 쌓는 반복을 금지합니다.
